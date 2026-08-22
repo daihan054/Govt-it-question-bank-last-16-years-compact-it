@@ -8,6 +8,10 @@
 
 4. What is the name of Bangladesh's first deep-sea port? (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
 
+5. **স্মার্ট বাংলাদেশের মূল স্তম্ভ কোনগুলো এবং সেগুলো কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+6. **FTR এবং TIP এর পার্থক্য উল্লেখ করে এদের মধ্যে পার্থক্য কি?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -23,3 +27,5 @@
 4. Where is the headquarters of the International Monetary Fund (IMF) located? (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
 
 5. Which country has the world's longest coastline? (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
+
+6. **সবুজ গ্রিন হাউস গ্যাসের প্রভাবের LDC এর ভূমিকা কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

@@ -1,6 +1,8 @@
-## Software Testing
+## Software Testing & Evaluation
 
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]
+
+2. **ফরম্যাটিভ মূল্যায়ন (Formative Evaluation) বলতে কী বুঝায়?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 ## Software Requirements Engineering
 
@@ -15,3 +17,7 @@
 3. Critically analyze the limitations of the Waterfall model and explain how Agile methodologies address those limitations. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
 4. What is SDLC, Steps of SDLC, in which Step user acceptance assured? (BEPRC Assistant Programmer Exam: 08.08.2026)
+
+## Software Project Management & Organization
+
+1. **সংগঠনিক নির্দেশকগুলো কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

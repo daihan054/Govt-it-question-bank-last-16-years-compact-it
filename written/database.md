@@ -1,3 +1,8 @@
+## DBMS Architecture & Features
+
+1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।
+   (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
 ## SQL Commands (DDL, DML, DCL, TCL)
 
 1. Example Query of DDL, DML, DCL. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -17,6 +22,10 @@
 ## Keys in DBMS
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. (BEPRC Assistant Programmer Exam: 08.08.2026)
+
+## Indexing in DBMS
+
+1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 ## ER Diagram & Database Design
 

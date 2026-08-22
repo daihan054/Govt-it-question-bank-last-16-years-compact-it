@@ -16,9 +16,15 @@
 
 1. What is CII? How many CII organizations? Name 10 CII organization name. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
+2. **CTC কী? কী কাজে ব্যবহার হয়?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
 ## Malware & Security Threats
 
 1. Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+
+## Cyber Crime & Security
+
+1. **সাইবার অপরাধের প্রকারভেদ পরিবেশের স্থায়িত্ব বর্ণনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 ## Social Engineering & Cyber Attacks
 
@@ -27,6 +33,10 @@
 ## Authentication & Access Control
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+2. **টু-ফ্যাক্টর অথেনটিকেশন এবং ডিজিটাল সিগনেচার দিয়ে ডেটার সুরক্ষা কীভাবে করা হয়?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+3. **ডিজিটাল সিগনেচার (Digital Signature) কী? এর কার্যকারিতা ব্যাখ্যা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 ## Web Security Vulnerabilities
 

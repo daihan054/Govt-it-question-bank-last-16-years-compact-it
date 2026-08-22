@@ -2,6 +2,8 @@
 
 1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
+2. **OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -33,6 +35,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. A single-mode optical fiber communication link connects two locations 250\text{ km} apart using WDM technology with 50 channels, where each channel provides a bit rate of 10\text{ Gbps}. The refractive index of the fiber is 1.5, and data is transmitted using the Stop-and-Wait protocol. A 1\text{ GB} file is divided into suitable data frames, and after successfully receiving each frame, the receiver sends a 54-byte acknowledgment (ACK) back to the sender. Assuming no processing or queuing delay, determine the total time required to completely transfer the 1\text{ GB} file, including data transmission time, propagation delay, ACK transmission time, and the Stop-and-Wait waiting time. [BSCCPL AME 21-08-2026 (BUET)]
 
+## Error Detection & Data Communication (CRC, Throughput)
+
+1. (a) CMY color model এর উপাদানগুলো লিখুন (CMY color model এর কাজ কী?)
+   (b) CRC এর কাজ কী? (IIB CRC-16 এর ক্ষেত্র এবং প্রশ্নগুলো আলোচনা করুন)
+   (c) Data communication এর ক্ষেত্রে bandwidth এবং throughput এর মধ্যে পার্থক্য লিখুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
@@ -46,6 +54,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. Subnetting logic requires precise binary calculation. A network engineer is tasked with dividing the internal network 192.168.10.0/24 into exactly 4 equal subnets for four different bank branches. Show the mathematical calculation to determine how many bits must be borrowed to create 4 subnets, and state the new Subnet Mask in both CIDR notation and decimal format. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
 4. Network Address, Broadcast Address, Subnet Mask and Usable Host IP Range of: 10.0.0.0/30, 192.168.0.0/23, 172.16.1.0/24. (BEPRC Assistant Programmer Exam: 08.08.2026)
+
+5. (a) IP address এবং MAC/MU এর পার্থক্য লেখ।
+   (b) Classfull এবং Classless IP address এর মধ্যে পার্থক্য লেখ।
+   (c) 11000001 00001001 00001010 00010101 এই IP এর Class লিখ। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 ## IPv6 Addressing
 

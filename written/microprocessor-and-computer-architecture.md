@@ -1,3 +1,17 @@
+## Microprocessor Architecture & Functions
+
+1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+## 8085 Microprocessor & Edge Computing
+
+1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।
+   (b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+## Assembly Language & Addressing Modes
+
+1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
+   (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
 ## Pipelining
 
 1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
