@@ -1,6 +1,6 @@
 ## Output Tracing & Recursion
 
-22. Consider the following Java program and determine the integer value printed by the execution of the main() method:
+1. Consider the following Java program and determine the integer value printed by the execution of the main() method:
 ```java
 class Test {
     static int x = 5;
@@ -21,4 +21,4 @@ class Test {
 
 ## OOP Concepts (Inheritance & Polymorphism)
 
-Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

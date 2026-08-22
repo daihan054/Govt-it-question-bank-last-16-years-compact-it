@@ -1,6 +1,6 @@
 ## CPU Scheduling
 
-A system has three processes with the following arrival times and CPU burst times:
+1. A system has three processes with the following arrival times and CPU burst times:
 
 | Process | Arrival Time (ms) | Burst Time (ms) |
 |---|---|---|
