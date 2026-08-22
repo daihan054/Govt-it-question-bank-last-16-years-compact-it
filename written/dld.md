@@ -6,6 +6,8 @@
 
 Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
+Explain how any Boolean function can be implemented using only universal gates. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
 ## Combinational Circuits (MUX & DEMUX)
 
 What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
