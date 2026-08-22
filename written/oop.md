@@ -18,3 +18,7 @@ class Test {
 }
 ```
 [SO IT 25-07-2026]
+
+## OOP Concepts (Inheritance & Polymorphism)
+
+Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
