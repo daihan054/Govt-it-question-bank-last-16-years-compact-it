@@ -2,6 +2,10 @@
 
 1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
+## Application Layer & Well-Known Port Numbers
+
+1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
+
 ## Transport Layer (TCP & UDP)
 
 1. Compare TCP and UDP protocols with examples. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -40,6 +44,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. An organization has been assigned the IPv4 network address 192.168.1.0/24. As part of the network deployment, the network administrator is required to divide the address space into four equal-sized subnets to support different departments. Determine the Network Address, Subnet Mask (both CIDR and dotted-decimal notation). (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
 
 3. Subnetting logic requires precise binary calculation. A network engineer is tasked with dividing the internal network 192.168.10.0/24 into exactly 4 equal subnets for four different bank branches. Show the mathematical calculation to determine how many bits must be borrowed to create 4 subnets, and state the new Subnet Mask in both CIDR notation and decimal format. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+4. Network Address, Broadcast Address, Subnet Mask and Usable Host IP Range of: 10.0.0.0/30, 192.168.0.0/23, 172.16.1.0/24. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
 ## IPv6 Addressing
 

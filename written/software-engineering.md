@@ -13,3 +13,5 @@
 2. What are the main phases of the Software Development Life Cycle (SDLC)? Explain each phase briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
 3. Critically analyze the limitations of the Waterfall model and explain how Agile methodologies address those limitations. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
+
+4. What is SDLC, Steps of SDLC, in which Step user acceptance assured? (BEPRC Assistant Programmer Exam: 08.08.2026)

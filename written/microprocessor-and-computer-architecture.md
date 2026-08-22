@@ -13,3 +13,7 @@
 ## Secondary Storage (HDD vs SSD)
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+## RAID Architecture & Storage
+
+1. Which Level Raid is best and why? (BEPRC Assistant Programmer Exam: 08.08.2026)

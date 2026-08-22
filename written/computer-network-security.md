@@ -12,6 +12,10 @@
 
 2. What is authentication and authorization? What is the CIA triad in cyber security? How does it work? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
+## Critical Information Infrastructure (CII) & Cyber Governance
+
+1. What is CII? How many CII organizations? Name 10 CII organization name. (BEPRC Assistant Programmer Exam: 08.08.2026)
+
 ## Malware & Security Threats
 
 1. Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
