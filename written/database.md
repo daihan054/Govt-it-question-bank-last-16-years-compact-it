@@ -158,6 +158,11 @@ Write down an SQL query to display the total number of patients under each disea
 
 3. **What is Logical design database is called?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+4. **A Bank schema is given below:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1322]**
+   $$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
+   * (a) Provided and Normalize and point out Primary and Foreign Key?
+   * (b) Show that is the schema and state that why your schema is in good form.
+
 ## PL/SQL & Database Triggers
 
 1. **Explain Database Trigger with example.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

@@ -14,6 +14,8 @@
 6. **Write an essay on 'The Internet' using the hints given below:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
    *[Hints: What internet is- Great Communication tool-Various uses-Storehouse of information-Impact of the internet on our daily life- Social impact- Changing life- Uses and abuses- Conclusion.]*
 
+7. **Write short note on:** "The role of AI and machine language mitigate challenges of cyber attack on banking system" 100 to 150 Words. **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -99,3 +101,7 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 "এক কুখ্যাত চোর একটি আঙুর ক্ষেতের পাশ দিয়ে যাচ্ছিল। উঁচুতে ঝুলানো আঙুর দেখে সে তা খাওয়ার চেষ্টা করল, কিন্তু বারবার চেষ্টা করেও ব্যর্থ হলো। অবশেষে সে হতাশ হয়ে চলে গেল। যাওয়ার সময় বলল, আঙুরগুলো আসলেও টক।" (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
 
 3. **Translation English to Bangla:** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
+4. **Bengali to English:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
+   * **(a)** শনিবার হতে সে অফিসে আসছে না।
+   * **(b)** আপনার ব্যাংক একাউন্ট এর স্থিতি জানার জন্য মোবাইল ব্যাংকিং এপ্লিকেশন এ লগইন করুন

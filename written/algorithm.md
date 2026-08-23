@@ -43,6 +43,8 @@ for i in N:
 
 8. **Implementation of Insertion sort, Selection sort, Bubble sort.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1325]**
 
+9. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
+
 ## Graph Theory & Isomorphism
 
 1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1419]**

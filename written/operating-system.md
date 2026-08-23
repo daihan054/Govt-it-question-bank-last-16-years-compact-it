@@ -130,3 +130,9 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 3. **(a) Define operating system. Why resource allocation graph used for deadlock detection?** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
 
 4. **What is Deadlock? Write Conditions for Deadlock and also write Deadlock.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1434]**
+
+5. **Banker's Algorithm: 5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances).** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
+   * (a) Need matrix
+   * (b) Safe state or Unsafe
+   Snapshot at time T_0:
+The content of the matrix. Need is defined to be Max – Allocation.

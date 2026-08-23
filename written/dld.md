@@ -40,6 +40,8 @@
 
 5. **NOR গেইট এর দুটি ইনপুট a, b হলে আউটপুট x কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+6. **\bar{A}\bar{B}.(\overline{A+B}).C ; Write Truth Table.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1320]**
+
 ## Combinational Circuits (Adders, Encoders, MUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
