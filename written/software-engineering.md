@@ -22,6 +22,8 @@
 
 5. **What is SDLC? Describe the steps of SDLC.** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**
 
+6. **Why agile model is better than waterfall model?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
 ## CI/CD & DevOps Methodologies
 
 1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

@@ -36,6 +36,12 @@ JOB_HISTORY (EMPLOYEE_ID, START_DATE, END_DATE, JOB_ID, DEPARTMENT_ID)
 JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 ```
 
+5. **Database Query related problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+## PL/SQL & Database Triggers
+
+1. **Explain Database Trigger with example.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
 ## Relational Data Model & ER Relationships
 
 1. What are the different types of relationships in a relational database? Explain each with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

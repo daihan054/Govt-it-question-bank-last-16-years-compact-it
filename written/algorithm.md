@@ -27,6 +27,10 @@ for i in N:
 | Quick sort |  |  |  |
 | Heap sort |  |  |  |
 
+## Graph Traversal Algorithms (BFS & DFS)
+
+1. **Why DFS better than BFS, Explain?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
 ## Graph Algorithms (Shortest Path)
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
