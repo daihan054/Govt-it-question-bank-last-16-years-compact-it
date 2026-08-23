@@ -12,6 +12,8 @@
 
 6. **নিজে শিরোনাম তৈরি করে যুদ্ধ, শান্তি ও ক্ষুধা বিষয়ে একটি প্রবন্ধ লিখুন।** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
 
+7. **প্রকাশনার মান উন্নয়নে সু-সম্পাদিত পান্ডুলিপির ভূমিকা লিখুন।** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 312]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -68,6 +70,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 5. **বাংলায় অনুবাদ করুন:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
 > A gentleman is one who never causes pain to others. This description is short, but as far as it goes is correct. He is always polite and considerate. He carefully avoids whatever may cause even a slight shock with his associates.
+
+6. **বিদ্যালয়ের সৃজনশীলতা নিয়ে অনুবাদ** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 312]**
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 

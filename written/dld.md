@@ -42,15 +42,17 @@
 
 6. **\bar{A}\bar{B}.(\overline{A+B}).C ; Write Truth Table.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1320]**
 
+7. **Logic Circuit of Boolean algebra: Q = \bar{C} + \bar{A}B + \overline{BC(B + C)}; Where output Q and input Q(A, B, C)=(0,0,1)?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 315]**
+
 ## Combinational Circuits (Adders, Encoders, MUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
-2. **Design a three-input X-OR gate with the output function f = w1 \oplus w2 \oplus w3 using 2-to-1 multiplexers.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1436]**
+2. **Design a Full Adder circuit using basic logic gates (AND, OR, NOT). Draw the truth table, derive the Boolean expressions for the Sum (S) and Carry (C_{out}), and draw the complete circuit diagram.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1423]**
 
-3. **(a) Design a full adder circuit and draw the diagram.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1445]**
+3. **What is half adder?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
 
-4. **(b) Draw the 8-3 encoder logic diagram.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1445]**
+4. **Design a full adder using NAND gates only.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
 
 5. **Design a full adder using two half adders and an OR gate?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
 
@@ -67,6 +69,8 @@
                  |  |
                 S_1 S_0
 ```
+
+7. **Truth Table from the following circuit (2-bit input A, B full adder with carry bit C_{in}).** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 314]**
 
 ## Sequential Circuits (Latches & Flip-Flops)
 

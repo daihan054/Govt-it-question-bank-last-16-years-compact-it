@@ -30,6 +30,8 @@
 
 10. **Write a function to find minimum number from an array, return minimum value as argument.** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1430]**
 
+11. **Write a program from the following series: $e^x = 1 + \frac{x}{1} + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots$** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 316]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

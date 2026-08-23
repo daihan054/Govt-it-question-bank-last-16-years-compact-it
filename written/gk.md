@@ -56,6 +56,12 @@
 
 28. **সর্বশেষ কৃষিশুমারী কতসালে হয়?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+29. **সার্বিক অর্থনীতি, মূল্যস্ফীতি সংক্রান্ত** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 312]**
+
+30. **What is GI?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
+
+31. **Brief the work functionality of ECNEC.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -100,6 +106,10 @@
 
 16. **ভারত-চীন যুদ্ধ কত সালে হয়?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
+17. **What is the difference between a Green Economy and a Blue Economy?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
+
+18. **Concept of Westminster Government?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
+
 ## Everyday Science & Environment
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
@@ -117,3 +127,7 @@
 7. **"স্টার লিংক" কী?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
 
 8. **আর্সেনিকের পারমাণবিক ভর কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+9. **Explain the concept of Electrocardiogram (ECG) and Echocardiogram (ECHO).** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
+
+10. **Justify "Invention of Transistor changed the world."** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**

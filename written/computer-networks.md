@@ -196,6 +196,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 27. **How many bits are in a MAC address?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+28. **What is the primary motivation for classful IP address to classless IP addressing?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 316]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]

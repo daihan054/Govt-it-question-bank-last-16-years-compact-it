@@ -21,3 +21,7 @@
 ## HTML & Web Fundamentals
 
 1. **What is HTML Image tag?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+## Full Stack & Backend Web Development
+
+1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 320]**

@@ -59,3 +59,7 @@
 1. Which Level Raid is best and why? (BEPRC Assistant Programmer Exam: 08.08.2026)
 
 2. **Striping with parity is done in which level of RAID.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
+3. **Which RAID level is best and why?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
+
+4. **Concept of RAID, Relevance in Database, Uses in Database, is it possible?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**

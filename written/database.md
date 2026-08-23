@@ -7,6 +7,8 @@
 
 3. **Data about data is Called __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+4. **Difference between MSAccess and MS FoxPro in SQL.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 317]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -146,6 +148,8 @@ Write down an SQL query to display the total number of patients under each disea
 
 3. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
+4. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
+
 ## Normalization & Database Design
 
 1. **Why normalization is required in Database? Write shortly about 3NF?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
@@ -168,9 +172,19 @@ Write down an SQL query to display the total number of patients under each disea
    * (a) Provided and Normalize and point out Primary and Foreign Key?
    * (b) Show that is the schema and state that why your schema is in good form.
 
+5. **What is Normalize a database? Used containers if needed, draw an ER Diagram.** **[See WZPGCL, Assistant Engineer (CSE), Exam: 27.05.2023]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 315]**
+
 ## PL/SQL & Database Triggers
 
 1. **Explain Database Trigger with example.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+2. **Database program with base and high- level language (SQL) to find out the interest rate from the given database table.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
+
+## Database Backup & Disaster Recovery
+
+1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
+
+2. **Database Data Loss based case study type question......** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
 
 ## Indexing & Query Optimization (B-Tree, B+ Tree)
 

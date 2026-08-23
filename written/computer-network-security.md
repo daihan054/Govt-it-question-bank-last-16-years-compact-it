@@ -75,6 +75,8 @@
 
 2. **Which client is used to security cannot to a remote server?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
+3. **Ensure secure communication between a client application and the database server.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 314]**
+
 ## Web Security Vulnerabilities
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

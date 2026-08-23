@@ -31,3 +31,7 @@
 ## Quantum Computing & Emerging Technologies
 
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+## Server Hardware & Enterprise Systems
+
+1. **What should be checked before buying servers?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 318]**

@@ -16,6 +16,8 @@
 
 7. **Write short note on:** "The role of AI and machine language mitigate challenges of cyber attack on banking system" 100 to 150 Words. **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
 
+8. **Roadside tree plantation in reducing noise pollution.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 312]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
