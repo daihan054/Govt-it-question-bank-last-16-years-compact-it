@@ -2,6 +2,10 @@
 
 1. Differentiate between system software and application software. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
+## User Interfaces (CLI vs GUI)
+
+1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
+
 ## Computer Fundamentals & Acronyms
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

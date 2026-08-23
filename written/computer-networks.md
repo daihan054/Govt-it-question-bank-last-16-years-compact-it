@@ -107,6 +107,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    **(ii) The IP address valid range.**
    **(iii) The number of valid hosts.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1438]**
 
+11. **Find out the network address and Broadcast address of the address: 192.168.0.0/28** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1360]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
@@ -125,6 +127,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 | Path 4 | 200 | 65050 65060 | IGP | 20 |
 
 2. **Static route Configuration: Configure R0 to reach PC1 you can assume any Vendor, Cisco, Huawei, juniper** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**
+
+3. **What is OSPF? Briefly Explain.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
+
+## High Availability & Redundancy Protocols (VRRP, HSRP)
+
+1. **State the network protocol of VRRP?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1359]**
 
 ## Networking Devices
 

@@ -6,6 +6,8 @@
 
 3. **What is the difference between Black box and White box testing?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
 
+4. **Difference between Load Testing and Stress Testing.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1360]**
+
 ## Software Requirements Engineering
 
 1. What is the difference between functional and non-functional requirements? What is requirement validation? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]

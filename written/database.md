@@ -42,6 +42,19 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
    **(a) Find out the employees who join the same date:** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1438]**
    **(b) Find those employees whose salary greater than 8,000 and Less than 25,000** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
 
+7. **Write down the Query for the following table?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1361]**
+
+| StudentID | StudentName | Age | Department |
+|---|---|---|---|
+| 1 | Alice | 20 | CSE |
+| 2 | Bob | 22 | EEE |
+| 3 | Charlie | 21 | CSE |
+| 4 | David | 23 | BBA |
+
+* **(i) Shows only students in the CSE department.**
+* **(ii) Shows all students sorted by age (highest first).**
+* **(iii) Shows how many students are in each department.**
+
 ## PL/SQL & Database Triggers
 
 1. **Explain Database Trigger with example.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

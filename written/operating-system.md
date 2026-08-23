@@ -12,6 +12,8 @@
 
 2. **Write a Linux command to count the total number of characters and words from the first 10 lines of a file named "wasacustomers.txt".** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1437]**
 
+3. **Linux command:** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1361]**
+
 ## CPU Scheduling
 
 1. A system has three processes with the following arrival times and CPU burst times:
