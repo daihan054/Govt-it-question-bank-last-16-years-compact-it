@@ -55,3 +55,7 @@
 ## Software Project Management & Organization
 
 1. **সংগঠনিক নির্দেশকগুলো কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+## Software Design Principles (Coupling & Cohesion)
+
+1. **Write concepts of Coupling and Cohesion with Example?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**

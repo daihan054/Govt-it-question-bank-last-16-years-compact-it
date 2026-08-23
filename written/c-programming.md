@@ -28,6 +28,8 @@
 
 9. **Write a C program that accepts 10 elements in an array and finds the maximum elements from the array.** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
 
+10. **Write a function to find minimum number from an array, return minimum value as argument.** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1430]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

@@ -103,6 +103,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 3. **Question on data communication transmission and signal related math.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1441]**
 
+4. **10Mbps bandwidth, average packet length 1500 bytes what is maximum packet arrival rate support without causing congestion.** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1430]**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]

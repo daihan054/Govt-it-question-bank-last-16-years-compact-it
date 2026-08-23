@@ -162,6 +162,10 @@ Write down an SQL query to display the total number of patients under each disea
 
 1. **Explain Database Trigger with example.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
+## Indexing & Query Optimization (B-Tree, B+ Tree)
+
+1. **How indexing improve query performance?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
+
 ## Relational Data Model & ER Relationships
 
 1. What are the different types of relationships in a relational database? Explain each with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
