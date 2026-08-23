@@ -22,6 +22,8 @@
 
 1. Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
+2. **What is exfiltration?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
+
 ## Cyber Crime & Security
 
 1. **সাইবার অপরাধের প্রকারভেদ পরিবেশের স্থায়িত্ব বর্ণনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -29,6 +31,10 @@
 ## Social Engineering & Cyber Attacks
 
 1. What is a phishing attack? Explain its types and discuss methods to prevent it. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+## Firewalls & Network Defense
+
+1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
 
 ## Authentication & Access Control
 

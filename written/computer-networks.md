@@ -1,8 +1,18 @@
+## Physical Layer & Transmission Media (Cables & Wiring)
+
+1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
+
+## Network Topologies
+
+1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
+
 ## OSI & TCP/IP Reference Model
 
 1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
 2. **OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+3. **Write bottom to top OSI reference Model.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -59,6 +69,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    (b) Classfull এবং Classless IP address এর মধ্যে পার্থক্য লেখ।
    (c) 11000001 00001001 00001010 00010101 এই IP এর Class লিখ। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+6. **Given IP address 10.0.0.100 and Subnet mask 255.255.240.0 which is network address?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
@@ -93,3 +105,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 
 1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
+
+2. **Write down the DNS function.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**

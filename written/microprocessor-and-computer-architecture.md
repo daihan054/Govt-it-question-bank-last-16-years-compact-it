@@ -2,6 +2,10 @@
 
 1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+## Multi-Core & Multi-Threading
+
+1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
+
 ## 8085 Microprocessor & Edge Computing
 
 1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।
