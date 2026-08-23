@@ -2,6 +2,14 @@
 
 1. Difference Between Firmware and OS. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
+## Linux / Unix Commands & Administration
+
+1. **Write Linux command:** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**
+   (a) Give a file Read Write and Execute permission.
+   (b) IP address show.
+   (c) Delete all files in a folder.
+   (d) Show partition.
+
 ## CPU Scheduling
 
 1. A system has three processes with the following arrival times and CPU burst times:

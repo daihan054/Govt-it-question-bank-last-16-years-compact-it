@@ -2,6 +2,14 @@
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
 
+## Physical Layer & Optical Fiber (Attenuation & Power Budget)
+
+1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
+   * **Transmitter Power: 5 dBm**
+   * **Receiver Sensitivity: -14 dBm**
+   * **Fiber Attenuation: 0.35 dB/km**
+   **Calculate the maximum fiber length (D) that can be used between the OLT (Optical Line Terminal) and ONU (Optical Network Unit) while maintaining an acceptable signal level.** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1332]**
+
 ## Network Topologies
 
 1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
@@ -77,7 +85,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 2. A host is connected to an IPv6 network and needs to configure its own IPv6 address automatically using Stateless Address Autoconfiguration (SLAAC). Arrange the steps in the correct order and explain the purpose of each step. [BSCCPL AME 21-08-2026 (BUET)]
 
-## Routing Protocols (BGP, OSPF, etc.)
+## Routing Protocols & Route Configuration
 
 1. A BGP router receives multiple routes to the same destination network from different neighboring autonomous systems. The available routes are given in the following table, containing Path, LOCAL_PREF, AS_PATH, ORIGIN, and MED values. Using the standard BGP best-path selection rules, analyze the attributes in the given order and determine which path will be selected as the best route, showing the comparison and justification for each step. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -87,6 +95,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 | Path 2 | 150 | 65020 | IGP | 5 |
 | Path 3 | 200 | 65030 65040 | IGP | 10 |
 | Path 4 | 200 | 65050 65060 | IGP | 20 |
+
+2. **Static route Configuration: Configure R0 to reach PC1 you can assume any Vendor, Cisco, Huawei, juniper** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**
 
 ## Networking Devices
 
