@@ -119,6 +119,8 @@ Write down an SQL query to display the total number of patients under each disea
 
 14. **SQL OUTPUT Problem: Find Employee salary from a table where salary more than 5000.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
 
+15. **Write SQL code to get duplicate names from employee table.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

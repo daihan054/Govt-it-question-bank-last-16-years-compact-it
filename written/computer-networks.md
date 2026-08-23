@@ -36,6 +36,8 @@
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
+2. **What is the port number of DNS?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+
 ## Transport Layer (TCP & UDP)
 
 1. Compare TCP and UDP protocols with examples. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -153,6 +155,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 16. **Find the network address, subnet mask, broadcast address, and usable host IP range for the following IP address: 192.9.205.31/16.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
 
 17. **What is the CIDR Prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
+
+18. **Write down the private IP address rang for class B?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
 ## IPv6 Addressing
 
