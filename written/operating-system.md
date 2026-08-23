@@ -14,6 +14,12 @@
 
 3. **Linux command:** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1361]**
 
+4. **Write Linux command:** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1324]**
+   * **(a) Displays real-time system statistics, including CPU usage, memory usage, running processes, and system load.**
+   * **(b) Searches for a specified pattern in a file or output.**
+   * **(c) Shows disk usage for all mounted file systems.**
+   * **(d) Displays information about system memory (RAM and swap).** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1325]**
+
 ## CPU Scheduling
 
 1. A system has three processes with the following arrival times and CPU burst times:
@@ -58,6 +64,15 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 | P1 | 0 | 40 |
 | P2 | 5 | 40 |
 | P3 | 10 | 20 |
+
+5. **Calculate the average waiting time.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
+
+| Process | Burst Time |
+|---|---|
+| P1 | 21 |
+| P2 | 3 |
+| P3 | 6 |
+| P4 | 2 |
 
 ## Memory Management & Paging
 

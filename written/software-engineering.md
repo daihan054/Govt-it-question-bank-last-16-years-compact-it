@@ -16,6 +16,12 @@
 
 1. What is the difference between functional and non-functional requirements? What is requirement validation? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
+2. **Which of the following are not needed in software Requirement Specifications (SRS)?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1330]**
+   * (a) Functional Requirments
+   * (b) Non- Functional Requirments
+   * (c) Testing Requirments
+   * (d) Interface Requirments
+
 ## SDLC Phases & Models
 
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]

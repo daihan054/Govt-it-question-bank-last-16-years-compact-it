@@ -2,6 +2,8 @@
 
 1. **Explain the push and pop operations of the stack.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1448]**
 
+2. **Implementation of Stack using two Queues?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1326]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]

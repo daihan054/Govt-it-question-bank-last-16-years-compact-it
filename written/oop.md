@@ -38,6 +38,8 @@ class Test {
 
 7. **Explain the concept of polymorphism in Object-oriented Programming with example?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1336]**
 
+8. **Write down the difference between Structure and Class.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1324]**
+
 ## C++ OOP Concepts & Friend Functions
 
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1355]**
@@ -48,6 +50,10 @@ public:
     myclass (int i) {num = i;}
 };
 ```
+
+## Interfaces & Abstract Classes
+
+1. **Class/Interface implementation of code?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
 
 ## Java Programming & Methods
 

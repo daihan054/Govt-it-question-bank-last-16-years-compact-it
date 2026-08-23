@@ -32,6 +32,8 @@
 
 2. **(d) What is cache memory? Explain the concepts of (i) Cache hit and (ii) Cache miss.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
 
+3. **Write advantage and disadvantage of direct mapping and associative mapping between cache memory and main memory.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1330]**
+
 ## Memory Hierarchy & Storage
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
