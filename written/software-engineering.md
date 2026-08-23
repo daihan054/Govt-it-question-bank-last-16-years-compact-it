@@ -4,6 +4,8 @@
 
 2. **ফরম্যাটিভ মূল্যায়ন (Formative Evaluation) বলতে কী বুঝায়?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+3. **What is the difference between Black box and White box testing?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
+
 ## Software Requirements Engineering
 
 1. What is the difference between functional and non-functional requirements? What is requirement validation? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -17,6 +19,10 @@
 3. Critically analyze the limitations of the Waterfall model and explain how Agile methodologies address those limitations. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
 4. What is SDLC, Steps of SDLC, in which Step user acceptance assured? (BEPRC Assistant Programmer Exam: 08.08.2026)
+
+## CI/CD & DevOps Methodologies
+
+1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
 
 ## Software Project Management & Organization
 

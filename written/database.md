@@ -3,6 +3,10 @@
 1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।
    (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+## NoSQL, NewSQL & Modern Databases
+
+1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
+
 ## SQL Commands (DDL, DML, DCL, TCL)
 
 1. Example Query of DDL, DML, DCL. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -14,6 +18,12 @@
 2. Consider a STUDENTS table with the following attributes: StudentID, Name, Department, Marks (10 Marks)
    * **I.** Write an SQL query to display only StudentID, Name, and Marks for students scoring more than 80 marks.
    * **II.** Write an SQL query to count how many students scored more than 80 marks in each Department. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+3. **SQL Query: Find department name and Average salary form 2 table Department and Employee.......** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1334]**
+   Department table
+   Department (dept_id, dept_name)
+   Employee table
+   Employee (emp_id, emp_name, salary, dept_id)
 
 ## Relational Data Model & ER Relationships
 
