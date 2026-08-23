@@ -1,3 +1,13 @@
+## Algorithm Analysis & Asymptotic Complexity
+
+1. **Analyze the time and space complexity of the following code:**
+```python
+for i in N:
+    for j in M:
+
+```
+**(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]

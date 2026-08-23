@@ -61,6 +61,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 2. **Data communication mathematical problems.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
 
+3. **Question on data communication transmission and signal related math.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1441]**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
@@ -82,6 +84,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 6. **Given IP address 10.0.0.100 and Subnet mask 255.255.240.0 which is network address?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
 
 7. **Given IP address 10.10.0.0/16, you have divide the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the first and last usable IP addresses of third subnet.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1362]**
+
+8. **Given IP address 10.10.0.0/16, you have divide the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the first and last usable IP addresses of third subnet.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
 ## IPv6 Addressing
 
