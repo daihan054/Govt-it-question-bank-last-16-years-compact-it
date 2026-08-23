@@ -6,6 +6,8 @@
 
 3. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ বিষয়ক একটি প্রবন্ধ রচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
 
+4. **গ্রামীণ জীবন যাত্রার মান উন্নয়নে পল্লী বিদ্যুৎ ভূমিকা সম্বন্ধে রচনা লিখ?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -32,6 +34,10 @@
 3. **বাংলায় অনুবাদ করুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
 Words have a lot of power. They can help or hint, bless or curse. Unkind words do a lot of harm, Kind words do a lot of good. We can spoil a friends happiness by an unkind word, but cheer up a sad heart with a kind word, which costs nothing. A kind word is often more welcome than a costly present.
 
+## এক কথায় প্রকাশ (One Word Substitution)
+
+1. **এক কথায় প্রকাশ: ৫ টি?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
 ## বাংলা ব্যাকরণ ও সাহিত্য
 
 1. **নিচের প্রশ্নগুলোর উত্তর লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -44,3 +50,5 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 2. **আরিফ বই পড়ে। "বই" শব্দটি কোন কারক ও বিভক্তি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
 
 3. **ইঙ্গিতময়, অর্থপূর্ণ, ভাবঘন বাক্যকে সম্প্রসারিত করার নাম কী?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
+4. **‘ও’, এবং’ এর মধ্যে পার্থক্য লিখ?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**

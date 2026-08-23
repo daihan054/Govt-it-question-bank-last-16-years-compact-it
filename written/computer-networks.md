@@ -128,6 +128,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 **Calculate the network and broadcast address of this network for each building block.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1443]**
 
+13. **Check the valid IP address from the following table.** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
@@ -174,3 +176,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **Write down the DNS function.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
 
 3. **Why does the Domain Name System (DNS) primarily use UDP as its transport layer protocol instead of TCP? Describe the sequence of events that take place during the DNS name resolution process when a user enters www.companybd.com into a web browser and presses Enter.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1421]**
+
+4. **How does work DHCP?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**

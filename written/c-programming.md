@@ -12,6 +12,8 @@
 
 4. **(a) Difference between a while loop and do-while loop.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
 
+5. **Write a Program to check the Armstrong number.** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1334]**
+
 ## Command Line Arguments & Basic Programs
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**
@@ -49,6 +51,26 @@ for (int i= 5; i>=1; i--) {
 
 ```
 **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1444]**
+
+4. **Find the output of the following program:** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1334]**
+A)
+```c
+char str[20] = "Development";
+str[5] = '\0';
+int len = strlen(str);
+printf("%s", str);
+
+```
+B)
+```c
+int main() {
+    int i = 2, j = 2;
+    while (i?--i:j++)
+        printf("%d", i);
+    return 0;
+}
+
+```
 
 ## Recursion & Functions
 

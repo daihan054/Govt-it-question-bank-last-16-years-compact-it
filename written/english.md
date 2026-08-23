@@ -7,6 +7,8 @@
 3. **Write an essay on “Digital Citizenship on Social Media” using the following hints:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
 *[Introduction- Concept of Digital citizenship- Benefits of social media- Challenges and risks- Online ethics and responsible behavior- Combating fake news and misinformation- Role of digital literacy and awareness- Conclusion]*
 
+4. **Paragraph on: Three Zero theory** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -43,3 +45,5 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 2. Translate the following passage into English:
 "এক কুখ্যাত চোর একটি আঙুর ক্ষেতের পাশ দিয়ে যাচ্ছিল। উঁচুতে ঝুলানো আঙুর দেখে সে তা খাওয়ার চেষ্টা করল, কিন্তু বারবার চেষ্টা করেও ব্যর্থ হলো। অবশেষে সে হতাশ হয়ে চলে গেল। যাওয়ার সময় বলল, আঙুরগুলো আসলেও টক।" (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
+
+3. **Translation English to Bangla:** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**

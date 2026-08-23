@@ -24,6 +24,8 @@
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
 
+2. **Full meaning: ASEAN, SPARRSO, BERC** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
 ## International Affairs
 
 1. What is the name of the central bank of the United Kingdom? [SO IT 25-07-2026]

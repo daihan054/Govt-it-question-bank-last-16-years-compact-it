@@ -64,9 +64,13 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 **a) Write an SQL query to retrieve all student names, their courses, and grades.**
 **b) Write an SQL query to retrieve names of students who obtained grade 'A'.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1434]**
 
+10. **SQL Query:** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
+
+2. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
 ## PL/SQL & Database Triggers
 
