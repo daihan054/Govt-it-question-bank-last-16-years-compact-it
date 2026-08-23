@@ -15,3 +15,5 @@
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1426]**
 
 2. **What is API?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+
+3. **What is an API?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**

@@ -26,6 +26,8 @@
 
 8. **Find biggest elements in an array of 10 components.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
+9. **Write a C program that accepts 10 elements in an array and finds the maximum elements from the array.** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -94,3 +96,5 @@ int main() {
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 2. **Write a C program to find the sum of digits of an integer number using "recursion".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1338]**
+
+3. **What is recursion?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**

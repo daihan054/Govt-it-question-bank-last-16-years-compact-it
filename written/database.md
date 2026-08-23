@@ -11,6 +11,8 @@
 
 1. Example Query of DDL, DML, DCL. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
+2. **What is SQL?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
+
 ## SQL Queries
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
@@ -120,6 +122,8 @@ Write down an SQL query to display the total number of patients under each disea
 14. **SQL OUTPUT Problem: Find Employee salary from a table where salary more than 5000.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
 
 15. **Write SQL code to get duplicate names from employee table.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+
+16. **Write an SQL query to find duplicate names in the employee table.** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
 
 ## Transaction Management & ACID Properties
 

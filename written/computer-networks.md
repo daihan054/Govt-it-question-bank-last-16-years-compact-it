@@ -38,6 +38,8 @@
 
 2. **What is the port number of DNS?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
+3. **What is the port number used by DNS?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**
+
 ## Transport Layer (TCP & UDP)
 
 1. Compare TCP and UDP protocols with examples. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
