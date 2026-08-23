@@ -8,6 +8,10 @@
 
 4. **Difference between Load Testing and Stress Testing.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1360]**
 
+5. **A banking application requires users to enter a 4-digit PIN for login.**
+ * **Explain how you would test this input field to ensure that it accepts only valid 4-digit numbers and rejects invalid inputs.**
+ * **Mention a few test cases you would include and explain why such testing is important for system security and reliability.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1429]**
+
 ## Software Requirements Engineering
 
 1. What is the difference between functional and non-functional requirements? What is requirement validation? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]

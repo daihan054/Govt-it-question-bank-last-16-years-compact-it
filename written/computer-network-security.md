@@ -12,6 +12,8 @@
 
 2. What is authentication and authorization? What is the CIA triad in cyber security? How does it work? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
+3. **Describe how the principles of Confidentiality, Integrity, and Availability work together to protect organizational data, and provide one real-world example of a security breach where one or more of these principles were compromised.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1428]**
+
 ## Critical Information Infrastructure (CII) & Cyber Governance
 
 1. What is CII? How many CII organizations? Name 10 CII organization name. (BEPRC Assistant Programmer Exam: 08.08.2026)

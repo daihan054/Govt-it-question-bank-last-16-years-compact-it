@@ -27,6 +27,12 @@ for i in N:
 | Quick sort |  |  |  |
 | Heap sort |  |  |  |
 
+3. **Explain the Quick Sort algorithm with a suitable example. Under what conditions does Quick Sort exhibit its worst-case time complexity, and why does this situation occur?** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1420]**
+
+## Graph Theory & Isomorphism
+
+1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1419]**
+
 ## Graph Traversal Algorithms (BFS & DFS)
 
 1. **Why DFS better than BFS, Explain?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

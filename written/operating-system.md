@@ -47,6 +47,14 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
    **(i) How many pages are in logical address space?**
    **(ii) How many bits are used for the page number and offset?** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1437]**
 
+2. **Consider a logical address space of 512 pages, each of 2-KB page size, mapped onto a physical memory containing 128 frames.**
+   **a. How many bits are required in the logical address?**
+   **b. How many bits are required in the physical address?** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1420]**
+
+## Virtual Memory & Page Replacement (Thrashing)
+
+1. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**
+
 ## Process Synchronization & Concurrency
 
 1. Two independent applications running concurrently attempt to update the same file located at a same file location. Both applications may read and modify the file at nearly the same time, creating a possibility of race conditions, lost updates, or inconsistent data. What type of consistency problem can occur in this situation, and which synchronization technique(s) should be used to ensure that only one application can safely update the file at a time? Explain the mechanism and justify the most appropriate solution. [BSCCPL AME 21-08-2026 (BUET)]

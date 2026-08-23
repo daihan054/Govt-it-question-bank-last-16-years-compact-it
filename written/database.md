@@ -55,6 +55,14 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 * **(ii) Shows all students sorted by age (highest first).**
 * **(iii) Shows how many students are in each department.**
 
+8. **Consider the following relation:**
+
+**Write an SQL query to display the region, average sale amount, and total number of sales for each region where: The average sale amount exceeds BDT 50,000 and the total number of sales in that region is at least 5.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
+
+## Transaction Management & ACID Properties
+
+1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
+
 ## PL/SQL & Database Triggers
 
 1. **Explain Database Trigger with example.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

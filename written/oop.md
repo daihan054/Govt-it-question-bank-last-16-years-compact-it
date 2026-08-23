@@ -27,6 +27,11 @@ class Test {
 
 3. **Explain OOP Feature.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
+4. **Write a program using any object-oriented language (e.g., C++ / Java / Python) to represent a Bank Account. Your program should include:**
+ * **A class BankAccount with data members for account holder's name, account number, and balance.**
+ * **Member functions to deposit() money, withdraw() money (ensuring sufficient balance), and display() account details.**
+**Demonstrate the concept of encapsulation by keeping data member's private and providing appropriate public methods for accessing and modifying them.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1423]**
+
 ## Java Programming & Methods
 
 1. **Write a Java Code which return a value.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1334]**

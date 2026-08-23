@@ -8,6 +8,8 @@
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
+3. **Write a structured program (in C or Python) that takes an integer input n and prints the sum of all even numbers from 1 to n.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1423]**
+
 ## Command Line Arguments & Basic Programs
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**

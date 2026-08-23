@@ -16,6 +16,8 @@
 1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
    (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1424]**
+
 ## Pipelining
 
 1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
