@@ -10,6 +10,8 @@
    (c) Delete all files in a folder.
    (d) Show partition.
 
+2. **Write a Linux command to count the total number of characters and words from the first 10 lines of a file named "wasacustomers.txt".** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1437]**
+
 ## CPU Scheduling
 
 1. A system has three processes with the following arrival times and CPU burst times:
@@ -36,6 +38,12 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 (a) অ্যালগরিদম প্রতিটি সংক্ষেপ ও সারণির উত্তর লেখুন।
 (b) FCFS এবং SJF Scheduling algorithm গুলোর মধ্যে Gantt Chart এবং অপেক্ষাকৃত সুষম এবং গড়ের (average waiting time) ও টার্ন অ্যারাউন্ড (turnaround time) এর হিসাব নির্ণয় কর। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+## Memory Management & Paging
+
+1. **A system uses 16 bit logical address and a page size of 1 KB.**
+   **(i) How many pages are in logical address space?**
+   **(ii) How many bits are used for the page number and offset?** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1437]**
 
 ## Process Synchronization & Concurrency
 

@@ -20,6 +20,19 @@
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
+2. **What will be the output of following program?**
+```c
+#include <stdio.h>
+int main() {
+    int i=-1, j=-1, k=0, l=2, m;
+    m= i++ && j++ && k++ || l++;
+    printf("%d %d %d %d %d", i, j, k, l, m);
+    return 0;
+}
+
+```
+**(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1438]**
+
 ## Recursion & Functions
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।

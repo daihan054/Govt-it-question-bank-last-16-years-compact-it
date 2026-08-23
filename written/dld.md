@@ -13,3 +13,5 @@
 ## Combinational Circuits (MUX & DEMUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+
+2. **Design a three-input X-OR gate with the output function f = w1 \oplus w2 \oplus w3 using 2-to-1 multiplexers.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1436]**

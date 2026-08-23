@@ -38,6 +38,10 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 
 5. **Database Query related problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
+6. **From an Employee table. Write SQL statement according to the following question:**
+   **(a) Find out the employees who join the same date:** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1438]**
+   **(b) Find those employees whose salary greater than 8,000 and Less than 25,000** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
+
 ## PL/SQL & Database Triggers
 
 1. **Explain Database Trigger with example.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

@@ -97,6 +97,16 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 9. **Subnet mask & Total host calculation.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
+10. **Given the network 245.248.128.0/20, divide the address space among three departments as follows:**
+   **(a) Manager: half of the address space.**
+   **(b) HR: one-quarter of the address space.**
+   **(c) Admin: the remaining one-quarter.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1437]**
+
+   **For each department, determine:**
+   **(i) The network block (in CIDR notation).**
+   **(ii) The IP address valid range.**
+   **(iii) The number of valid hosts.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1438]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
