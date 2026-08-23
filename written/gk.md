@@ -12,6 +12,14 @@
 
 6. **FTR এবং TIP এর পার্থক্য উল্লেখ করে এদের মধ্যে পার্থক্য কি?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+7. **বাংলাদেশের মোট উপজেলা কতটি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
+8. **বাংলাদেশের সবচেয়ে বড় জেলা কোনটি (আয়তনের দিক থেকে)?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
+9. **বাংলাদেশের মোট স্বাক্ষরতার হার (শিক্ষিতের হার) কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
+10. **বীরশ্রেষ্ঠ মতিউর রহমান কোথায় জন্মগ্রহণ করেন?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]

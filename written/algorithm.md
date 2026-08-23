@@ -7,6 +7,20 @@
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+2. **Write the Best case, worst case and average case time complexity for the following sorting algorithms.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
+
+| Algorithms | Best Case | Worst Case | Average Case |
+|---|---|---|---|
+| Selection sort |  |  |  |
+| Insertion sort |  |  |  |
+| Merge sort |  |  |  |
+| Quick sort |  |  |  |
+| Heap sort |  |  |  |
+
+## Graph Algorithms (Shortest Path)
+
+1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
+
 ## Greedy Algorithms (Fractional Knapsack)
 
 1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।

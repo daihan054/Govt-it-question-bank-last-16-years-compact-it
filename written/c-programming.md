@@ -6,6 +6,14 @@
 
 1. C program for the number is even or odd. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
+## Command Line Arguments & Basic Programs
+
+1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**
+
+## String Manipulation & Algorithms
+
+1. **Write a C or Java program to convert string to integer without using any built-in function.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1362]**
+
 ## Recursion & Functions
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।

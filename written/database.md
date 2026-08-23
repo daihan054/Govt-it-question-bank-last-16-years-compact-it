@@ -25,6 +25,17 @@
    Employee table
    Employee (emp_id, emp_name, salary, dept_id)
 
+4. **Consider the following database schema, find out the employees whose manager's region is same as the employee working under him.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1363]**
+```sql
+REGIONS (REGION_ID, REGION_NAME)
+COUNTRIES (COUNTRY_ID, COUNTRY_NAME, REGION_ID)
+LOCATIONS (LOCATION_ID, STREET_ADDRESS, POSTAL_CODE, CITY, STATE_PROVINCE, COUNTRY_ID)
+DEPARTMENTS (DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID)
+EMPLOYEES (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID)
+JOB_HISTORY (EMPLOYEE_ID, START_DATE, END_DATE, JOB_ID, DEPARTMENT_ID)
+JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
+```
+
 ## Relational Data Model & ER Relationships
 
 1. What are the different types of relationships in a relational database? Explain each with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

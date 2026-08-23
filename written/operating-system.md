@@ -44,3 +44,5 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 ## Deadlock & Resource Allocation
 
 1. **What is Deadlock? Given a scenery and find out the process is face deadlock sitiation?** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**
+
+2. **The four conditions that are necessary for a resource deadlock to occur are mutual exclusion, hold and wait, no preemption and circular wait. Give an example to show that these conditions are not sufficient for a resource deadlock to occur.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**

@@ -35,6 +35,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 (i) The man disturbed me and said “I am sorry _____ disturbing you”. (Use a preposition)
 (j) The baby is crying. (Make it passive)
 
+2. **Fill in the blank: The scientist looked _______ the microscope.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
 ## Translation
 
 1. "কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।" — Translate the passage into English. [SO IT 25-07-2026]

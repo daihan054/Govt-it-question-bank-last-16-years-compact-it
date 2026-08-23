@@ -59,6 +59,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    (b) CRC এর কাজ কী? (IIB CRC-16 এর ক্ষেত্র এবং প্রশ্নগুলো আলোচনা করুন)
    (c) Data communication এর ক্ষেত্রে bandwidth এবং throughput এর মধ্যে পার্থক্য লিখুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+2. **Data communication mathematical problems.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
@@ -78,6 +80,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    (c) 11000001 00001001 00001010 00010101 এই IP এর Class লিখ। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 6. **Given IP address 10.0.0.100 and Subnet mask 255.255.240.0 which is network address?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
+
+7. **Given IP address 10.10.0.0/16, you have divide the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the first and last usable IP addresses of third subnet.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1362]**
 
 ## IPv6 Addressing
 

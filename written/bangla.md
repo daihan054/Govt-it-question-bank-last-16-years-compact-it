@@ -40,3 +40,7 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 (গ) শুদ্ধ বানান লিখুন: আকাক্সক্ষা, সাম্যবাস্থ
 (ঘ) নিচের বাগধারা দুটির অর্থ লিখে বাক্য রচনা করুন: তুড়parity বাঘ, কেবলা প্রাপ্তি
 (ঙ) বাক্য রূপান্তর করুন: মেয়ের হাসি, তার থেকে উচ্চারিত
+
+2. **আরিফ বই পড়ে। "বই" শব্দটি কোন কারক ও বিভক্তি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
+3. **ইঙ্গিতময়, অর্থপূর্ণ, ভাবঘন বাক্যকে সম্প্রসারিত করার নাম কী?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**

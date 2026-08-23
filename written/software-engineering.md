@@ -26,6 +26,14 @@
 
 1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
 
+## Code Smells & Refactoring
+
+1. **Give examples of the following code smells:** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1366]**
+   * **(a) Feature envy**
+   * **(b) Dead code**
+   * **(c) Duplicate Code**
+   * **(d) Shotgun surgery.**
+
 ## Software Project Management & Organization
 
 1. **সংগঠনিক নির্দেশকগুলো কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

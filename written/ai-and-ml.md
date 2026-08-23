@@ -5,3 +5,7 @@
 ## Supervised Learning (Decision Trees)
 
 1. **Decisiontree model in Machine Learning.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
+
+## Association Rule Learning (Market Basket Analysis)
+
+1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**
