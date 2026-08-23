@@ -133,6 +133,11 @@ Write down an SQL query to display the total number of patients under each disea
 
 17. **SUM, Avg, Max these function are subnet of __________ function.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
+18. **Find sname who supplies pname=“wheel” with minimum price:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
+    * **Catalog** (sid, pid, price)
+    * **Supplier** (sid, sname, address)
+    * **Product** (pid, pname, etc)
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

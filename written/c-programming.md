@@ -100,3 +100,11 @@ int main() {
 2. **Write a C program to find the sum of digits of an integer number using "recursion".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1338]**
 
 3. **What is recursion?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**
+
+4. **Write recursive way below this program:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 417]**
+```c
+for(int i=1, i<n; i++)
+    for(int j=0 ; j<i ; j ++)
+        For( int k =0; k<i ; k++)
+            X=X+1
+```

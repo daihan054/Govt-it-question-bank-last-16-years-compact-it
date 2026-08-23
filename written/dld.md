@@ -54,6 +54,20 @@
 
 5. **Design a full adder using two half adders and an OR gate?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
 
+6. **Multiplexing:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
+```
+          +-----------+
+    A ---|>|---| I_3       |
+          | I_2  4x1  |--- F(A, B, C)
+    1 --------| I_1  MUX  |
+    0 --------| I_0       |
+          +-----------+
+                 |  |
+                 B  C
+                 |  |
+                S_1 S_0
+```
+
 ## Sequential Circuits (Latches & Flip-Flops)
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**

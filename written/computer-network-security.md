@@ -40,6 +40,8 @@
 
 3. **Briefly explain phishing attack and denial-of-service (DoS) attack.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1341]**
 
+4. **How to attack DHCP server in MIMA?** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 416]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -84,6 +86,8 @@
 4. **What is SQL injection? How can you prevent SQL injection attacks?** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
 
 5. **What is CSRF and XSS?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1361]**
+
+6. **(b) Explain XSS and CSRF (how do you prevent these attacks).** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 415]**
 
 ## Cryptography & Network Security Scenarios
 

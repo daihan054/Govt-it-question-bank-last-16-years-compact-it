@@ -24,6 +24,8 @@
 
 6. **Which file is need by init to get the default run level?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
+7. **Show last 10 lines of log file which is continuously updating in Linux command?** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 417]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
@@ -136,3 +138,5 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
    * (b) Safe state or Unsafe
    Snapshot at time T_0:
 The content of the matrix. Need is defined to be Max – Allocation.
+
+6. **(a) Explain Circular wait deadlock.** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 415]**

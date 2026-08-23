@@ -26,6 +26,14 @@
 
 2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
 
+## Instruction Set Architecture (RISC vs CISC)
+
+1. **(c) Fill in the gaps RISC or CISC:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 416]**
+   * (i) Pipelining is less efficient due to instruction complexity and variability ______
+   * (ii) Emphasis on hardware simplicity and efficiency ______
+   * (iii) Complex decoding due to variable instruction length ______
+   * (iv) Each instruction typically executes in a single clock cycle ______
+
 ## Cache Memory
 
 1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
