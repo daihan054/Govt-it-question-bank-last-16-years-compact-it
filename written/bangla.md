@@ -10,6 +10,8 @@
 
 5. **প্রবন্ধ রচনা করুন : “অপার সম্ভাবনার বাংলাদেশ” ।** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
 
+6. **নিজে শিরোনাম তৈরি করে যুদ্ধ, শান্তি ও ক্ষুধা বিষয়ে একটি প্রবন্ধ লিখুন।** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -33,11 +35,23 @@
 > অম্লান স্বর্গেরে মোর করিলে বিরস
 > অকালে শুকালে মোর রূপ রস প্রাণ!
 
+3. **সারমর্ম লিখুন:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+> হে মহাজীবন, আর এ কাব্য নয়
+> এবার কঠিন, কঠোর গদ্যে আনো,
+> পদ-লালিত্য-ঝংকার মুছে যাক
+> গদ্যের কড়া হাতুড়িকে হানো!
+> প্রয়োজন নেই, কবিতার বির
+> কবিতা তোমায় দিলাম আজকে ছুটি
+> ক্ষুধার রাজ্যে পৃথিবী গদ্যময়
+> পূর্ণিমা-চাঁদ যেন ঝলসানো রুটি।
+
 ## পত্র লিখন
 
 1. **অনুকৃতিশীল নারী সমাজের জীবনে সত্যের গুরুত্ব বর্ণনা করে ছোট বোনকে একটি পত্র লিখুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
 
 2. **ছোট বোনকে স্বাবলম্বী হওয়ার অনুপ্রেরণা দিয়ে একটি পত্র লিখুন।** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+
+3. **দুর্নীতিমুক্ত সমাজ গঠনে পারিবারিক শিক্ষার ভূমিকা কতটুকু, এ নিয়ে পত্রিকায় প্রকাশের উপযোগী একটি পত্র লিখুন।** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
 
 ## Translation
 
@@ -51,6 +65,9 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 4. **বাংলায় অনুবাদ করুন:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
 > The most common causes of deforestation are cutting and burning the forestland. Though the forestlands are cut and burnt for the sake of agriculture and habitant, it has a negative effect on environment. The removal of trees causes the birds and other animals living on them to leave the place. It also causes serious damage to the soil, as trees give protection to soil as well. In the end, the soil gets sediment in the river bed and causes frequent flood.
+
+5. **বাংলায় অনুবাদ করুন:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+> A gentleman is one who never causes pain to others. This description is short, but as far as it goes is correct. He is always polite and considerate. He carefully avoids whatever may cause even a slight shock with his associates.
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 
@@ -77,3 +94,7 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
  * **গ) ব্যাসবাক্য সহ সমাসের নাম লিখুন: গায়ে হলুদ, প্রতিদিন, বিষাদসিন্ধু, উপগ্রহ**
  * **ঘ) সমার্থক শব্দ লিখুন (একটি করে): অর্ণব, আদিত্য, ময়ূখ, আত্মজা**
  * **ঙ) বাগধারা গুলোর নিহিতার্থ লিখুন: লঙ্কা কাণ্ড, টইটম্বুর, তালকানা, ঘুনাক্ষর**
+
+6. **(ক) ভাষায় উপসর্গ ও অনুসর্গ কীভাবে কাজ করে আলোচনা করুন।** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+**(খ) বানানের নিয়মসহ প্রমিত রূপে লিখুন:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+> অংক, সুসম, ইংরেজী, মনযোগ, পদাবলী।

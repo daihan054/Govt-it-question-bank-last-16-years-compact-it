@@ -141,6 +141,13 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
  * **(iv) Direct broadcast address**
  * **(v) Limited broadcast address.**
 
+15. **The IP address of a device in a network is 172.16.128.123/22. Answer the following questions:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
+   * **i) What is the network address?**
+   * **ii) What is the subnet mask for the given network?**
+   * **iii) What is the broadcast address?**
+   * **iv) What is the maximum number of devices this network can connect?**
+   * **v) What is the IP address of the first host device in the network?**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]

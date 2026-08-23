@@ -33,6 +33,10 @@ for i in N:
 
 5. **(b) What is heap sort? Build a heaptree from the following list of numbers: [44, 30, 50, 22, 60, 55, 77, 55]** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
 
+6. **a) Why is Merge Sort preferred over Quick Sort in certain applications, despite having higher space complexity?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1346]**
+
+7. **b) Suppose you have a list of items: 41, 25, 87, 57, 80, 79, 19, 36, 42, 7. Using Quick Sort algorithm sort this list. You should explain each step.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1346]**
+
 ## Graph Theory & Isomorphism
 
 1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1419]**

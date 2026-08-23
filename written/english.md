@@ -11,11 +11,16 @@
 
 5. **Write an essay on "Corruption in the ICT Sector in Bangladesh" using the hints given below: [Hints: Introduction- Types of corruption- Causes of corruption- Effects of corruption-Remedies- Conclusion]** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
 
+6. **Write an essay on 'The Internet' using the hints given below:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+   *[Hints: What internet is- Great Communication tool-Various uses-Storehouse of information-Impact of the internet on our daily life- Social impact- Changing life- Uses and abuses- Conclusion.]*
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
 
 2. **Imagine that you have purchased a laptop from a local showroom a week back. The warranty period is on and the laptop is not functioning well. Write a letter of complaint to the manager of the showroom about it. Your letter should contain information about the problem and what you want.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+
+3. **Write a letter to the officer-in-charge of your police station to provide regular police patrol in your locality to prevent crimes.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
 
 ## Reading Comprehension
 
@@ -35,6 +40,16 @@ Various kinds of nuclear weapons have been produced in the past few years by man
  * **(c) What according to the author, may befall when a youth lacks discipline?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
  * **(d) What do you think is the dominant tone of the passage prescriptive dialogic? Engaging or distant? Why do you think so?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
  * **(e) Write in brief your response to the author's take on discipline.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
+
+3. **Read the following passage and then answer the questions that follow:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+> The Change of Climate is a major concern nowadays. The worst of all the problems that affects all the flora and fauna is the climate change. There are many plants and animals that are vulnerable to climate change. As a result of increasing temperature, they are likely to be extinct from nature. The reasons of increasing temperature are multifarious. Every day many industries, mills and factories in different countries are excreting Carbon Dioxide. Besides, a significant number of vehicles ply on the roads creating smoke which emits Carbon Dioxide. In addition to these, industrially developed countries are emitting tons of Carbon on the sea, which is indirectly responsible for producing Carbon Dioxide. The more Carbon Dioxide will increase, the more the temperature will increase. Over the last century, the sea level had risen by 10-20 cm possibly in response to global warming.
+> 
+**Question:**
+ * (a) Which is the worst of the problems that affects plants and animals?
+ * (b) What may happen to plants and animals as a dire consequence of increasing temperature?
+ * (c) What are the two major reasons for increasing temperature in the world?
+ * (d) How does global warming affect the sea level?
+ * (e) What message does the passage convey?
 
 ## English Grammar
 
@@ -63,6 +78,18 @@ Various kinds of nuclear weapons have been produced in the past few years by man
  * (h) It is said that she is a spy. [Make it active]
  * (i) He said to me, "Please wait here till I return". [Turn it into indirect speech]
  * (ii) She did not listen to me. [Rewrite by using the idiom "turn a deaf ear"]
+
+4. **Rewrite the following sentences and use the idiom as directed:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+ * (a) The cost of all these articles have risen. [Correct the sentence]
+ * (b) The film is definitely worth to see. [Correct the sentence]
+ * (c) Light alternates-darkness. [Fill in the blank with an appropriate preposition] **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+ * (d) What he says is based-truth. [Fill in the gap with an appropriate preposition] **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+ * (e) I (to know) him for a long time. [Use the right form of the verb] **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+ * (f) When he (takes) his food normally? [Use the correct form of the verb] **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+ * (g) The doctor advised me to take complete rest. [Make it passive] **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+ * (h) Our goal has been achieved. [Make it active] **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+ * (i) Amzad said to me, "I shall be grateful if you help me." [Turn into indirect speech] **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+ * (j) Make a sentence with the idiom: 'in respect of' **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
 
 ## Translation
 

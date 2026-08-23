@@ -7,6 +7,8 @@
  * **(ii) Unsupervised learning**
  * **(iii) Reinforcement learning**
 
+3. **a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
+
 ## Search Algorithms (Informed vs Uninformed Search)
 
 1. **Write down the difference between informed and uninformed search algorithm.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
@@ -21,6 +23,8 @@
  * **False Positive \text{(FP)} = 60**
  * **False Negative \text{(FN)} = 50**
 **Calculate the following: (i) Accuracy (ii) Precision (iii) Recall (iv) F1 Score**
+
+3. **b) How can we validate and check reliability of a machine learning model?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
 
 ## Supervised Learning (Decision Trees)
 
@@ -41,3 +45,5 @@
 ## Generative AI & Explainable AI (XAI)
 
 1. **Imagine a government agency is developing an AI-based citizen service chatbot that can automatically generate responses, summarize documents, and provide policy information to citizens. Explain how Generative AI can be used to power such a system, and how Explainable AI (XAI) techniques can ensure that its responses are transparent, reliable, and accountable.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1428]**
+
+2. **b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1346]**

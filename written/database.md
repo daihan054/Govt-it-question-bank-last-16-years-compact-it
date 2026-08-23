@@ -76,6 +76,36 @@ company (employee_name, city)
  * **(i) Find the names of all employees who live in the city 'Dhaka'.**
  * **(ii) Find the names of all employees whose salary in greater than BDT 1,00,000.**
 
+12. **Given the following two tables (Students and Marks) in a database, write down the output of the given SQL queries and write down the SQL queries for the outputs:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1344]**
+
+| Students |  |
+|---|---|
+| StudentId | StudentName |
+| 1 | Mr. A |
+| 2 | Mr. B |
+| 3 | Mr. C |
+| 4 | Mr. D |
+
+| Marks |  |  |
+|---|---|---|
+| StudentId | Subject | Mark |
+| 1 | Math | 70 |
+| 2 | Math | 90 |
+| 3 | Math | 30 |
+| 1 | Bangali | 50 |
+| 2 | Bangali | 60 |
+| 3 | Bangali | 70 |
+| 1 | Physics | 80 |
+| 2 | Physics | 70 |
+| 3 | Physics | 60 |
+
+ * **(i) SELECT Count (*) FROM Students S LEFT JOIN Marks M;**
+ * **(ii) SELECT StudentName From Students S JOIN Marks M**
+**ON S.StudentId=M.StudentId GROUP BY S.StudentId, S.StudentName HAVING SUM (Mark)>=200;**
+ * **(iii) List all the students name and number of subjects they have completed.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
+ * **(iv) List all the students who have not completed any subject.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
+ * **(v) List all the subject names.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
