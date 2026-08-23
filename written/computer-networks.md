@@ -59,6 +59,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 3. **Show the pictorial representation of TCP 3-way handshaking protocol for establishing a connection between a server and a client.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
 
+4. **What is the deference between TCP and UDP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -158,6 +160,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 18. **Write down the private IP address rang for class B?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
+19. **Given IP address 192.168.0.0/28, determine Network address, Broadcast address, First usable IP, Last usable IP.** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+
+20. **Write range of private IP address Class A, B and C.** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
@@ -178,6 +184,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **Static route Configuration: Configure R0 to reach PC1 you can assume any Vendor, Cisco, Huawei, juniper** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**
 
 3. **What is OSPF? Briefly Explain.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
+
+4. **Which of the following is a pair of routing protocol?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+   * **(A) TCP and IP**
+   * **(B) HTTP and FTP**
+   * **(C) RIP and OSPF**
+   * **(D) ARP and RARP**
 
 ## High Availability & Redundancy Protocols (VRRP, HSRP)
 
@@ -206,3 +218,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **Why does the Domain Name System (DNS) primarily use UDP as its transport layer protocol instead of TCP? Describe the sequence of events that take place during the DNS name resolution process when a user enters www.companybd.com into a web browser and presses Enter.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1421]**
 
 4. **How does work DHCP?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
+
+5. **What is DHCP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
