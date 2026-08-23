@@ -20,6 +20,8 @@
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1362]**
 
+2. **Write a C program to check whether a string is a Palindrome.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1433]**
+
 ## Output Tracing & Control Flow
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

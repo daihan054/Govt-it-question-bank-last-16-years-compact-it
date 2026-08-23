@@ -76,3 +76,5 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 2. **The four conditions that are necessary for a resource deadlock to occur are mutual exclusion, hold and wait, no preemption and circular wait. Give an example to show that these conditions are not sufficient for a resource deadlock to occur.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**
 
 3. **(a) Define operating system. Why resource allocation graph used for deadlock detection?** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
+
+4. **What is Deadlock? Write Conditions for Deadlock and also write Deadlock.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1434]**

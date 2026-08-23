@@ -30,6 +30,8 @@
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
+2. **Difference between SRAM & DRAM also write Differences Cache Memory vs Flash Memory.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1434]**
+
 ## Secondary Storage (HDD vs SSD)
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
