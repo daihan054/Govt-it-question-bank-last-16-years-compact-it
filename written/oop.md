@@ -32,6 +32,8 @@ class Test {
  * **Member functions to deposit() money, withdraw() money (ensuring sufficient balance), and display() account details.**
 **Demonstrate the concept of encapsulation by keeping data member's private and providing appropriate public methods for accessing and modifying them.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1423]**
 
+5. **(a) Write a C++ program named 'class student' that has three attributes: name, roll, and marks. Use the get method to create two objects. Then, find the student with the highest marks and print that student's name.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1444]**
+
 ## Java Programming & Methods
 
 1. **Write a Java Code which return a value.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1334]**

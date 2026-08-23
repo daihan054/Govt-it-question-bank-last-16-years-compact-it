@@ -10,6 +10,8 @@
 
 3. **Write a structured program (in C or Python) that takes an integer input n and prints the sum of all even numbers from 1 to n.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1423]**
 
+4. **(a) Difference between a while loop and do-while loop.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
+
 ## Command Line Arguments & Basic Programs
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**
@@ -34,6 +36,17 @@ int main() {
 
 ```
 **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1438]**
+
+3. **(b) Find out the output of this program.**
+```c
+for (int i= 5; i>=1; i--) {
+    for (int j=1; j<=i; j++) {
+        printf("%3d", j);
+    }
+}
+
+```
+**(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1444]**
 
 ## Recursion & Functions
 

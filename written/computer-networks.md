@@ -16,6 +16,8 @@
 
 1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
 
+2. **(b) Define network topology and classify it.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
+
 ## OSI & TCP/IP Reference Model
 
 1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -25,6 +27,8 @@
 3. **Write bottom to top OSI reference Model.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
 
 4. **In the TCP/IP model, how is data known in the different layers?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+5. **(b) Explain the TCP/IP protocol switch layers.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1444]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -108,6 +112,17 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    **(iii) The number of valid hosts.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1438]**
 
 11. **Find out the network address and Broadcast address of the address: 192.168.0.0/28** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1360]**
+
+12. **(a) An organization wants to divide its LAN IP address 192.168.0.0/24 into 4 subnets according to buildings. The buildings IP address creiteria are given below.**
+
+| Building block | Hosts need |
+|---|---|
+| A | 110 |
+| B | 50 |
+| C | 20 |
+| D | 8 |
+
+**Calculate the network and broadcast address of this network for each building block.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1443]**
 
 ## IPv6 Addressing
 

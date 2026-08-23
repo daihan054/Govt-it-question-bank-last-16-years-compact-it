@@ -41,6 +41,16 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 (a) অ্যালগরিদম প্রতিটি সংক্ষেপ ও সারণির উত্তর লেখুন।
 (b) FCFS এবং SJF Scheduling algorithm গুলোর মধ্যে Gantt Chart এবং অপেক্ষাকৃত সুষম এবং গড়ের (average waiting time) ও টার্ন অ্যারাউন্ড (turnaround time) এর হিসাব নির্ণয় কর। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+3. **Consider the set of 3 processes whose arrival time and burst time are given below-**
+
+| Process | AT | BT |
+|---|---|---|
+| P1 | 0 | 5 |
+| P2 | 1 | 4 |
+| P3 | 2 | 2 |
+
+**If the CPU scheduling policy is round robin with time quantum=2, finds out the completion time, turnaround time, waiting time, and response time** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1447]**
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
@@ -64,3 +74,5 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 1. **What is Deadlock? Given a scenery and find out the process is face deadlock sitiation?** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**
 
 2. **The four conditions that are necessary for a resource deadlock to occur are mutual exclusion, hold and wait, no preemption and circular wait. Give an example to show that these conditions are not sufficient for a resource deadlock to occur.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**
+
+3. **(a) Define operating system. Why resource allocation graph used for deadlock detection?** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
