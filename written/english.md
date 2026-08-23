@@ -9,9 +9,13 @@
 
 4. **Paragraph on: Three Zero theory** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
+5. **Write an essay on "Corruption in the ICT Sector in Bangladesh" using the hints given below: [Hints: Introduction- Types of corruption- Causes of corruption- Effects of corruption-Remedies- Conclusion]** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
+
+2. **Imagine that you have purchased a laptop from a local showroom a week back. The warranty period is on and the laptop is not functioning well. Write a letter of complaint to the manager of the showroom about it. Your letter should contain information about the problem and what you want.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
 
 ## Reading Comprehension
 
@@ -22,6 +26,15 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 (c) What is the best way to avoid nuclear war?
 (d) What would be the appropriate title of the above passage? Justify the title in two sentences.
 (e) What is the consequence of radiation?
+
+2. **Read the following passage and answer the questions that follow:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+> I am convinced that inculcating of discipline at home and in the educational institutions is essential for the growth of every individual. It is however unfortunate that the need for discipline in the youth is not sufficiently appreciated in this country. People seem to believe that to insist on discipline is to be unkind to the young. I have a different opinion. For me, what is unkind is to let a young person indulge in whatever s/he wants to do without parental, educational and ethical guidance. Discipline does not mean illogical harshness or oppressive imposition of law. Discipline involves ethics, i.e. responsible concern for the well-being of oneself and the other. Discipline involves guidance from the outside and control from the inside (self-control). Lack of guidance and control may lead a young person to waste her/his strength because s/he is yet to experience things in full. I feel sad when I see our youth-often individuals of talent, spirit and imagination-talking, behaving and acting as if they are their own judge and have the vision of predicting the future. I consider it as a wrong trend because it is detrimental to the physical, mental and social well-being of theirs and others as well.
+> 
+ * **(a) At what points do the author's and people's beliefs are different?**
+ * **(b) How does the author perceive discipline?**
+ * **(c) What according to the author, may befall when a youth lacks discipline?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
+ * **(d) What do you think is the dominant tone of the passage prescriptive dialogic? Engaging or distant? Why do you think so?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
+ * **(e) Write in brief your response to the author's take on discipline.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
 
 ## English Grammar
 
@@ -38,6 +51,18 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 (j) The baby is crying. (Make it passive)
 
 2. **Fill in the blank: The scientist looked _______ the microscope.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
+3. **Rewrite the following sentences using the instruction given in the brackets:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
+ * (a) She explained the matter. [Correct the sentence]
+ * (b) Between the mostly popular drinks are coffee and tea. [Correct the sentence]
+ * (c) I like (cook). [Use the right form of the verb]
+ * (d) He recommended that she (write) the letter. [Use the right form of the verb in bracket]
+ * (e) He is endowed _____ talents. Fill in the gap with apre position]
+ * (f) She reached just _____ time. [Fill in the gap with a preposition]
+ * (g) He made me do the work. [Make it passive]
+ * (h) It is said that she is a spy. [Make it active]
+ * (i) He said to me, "Please wait here till I return". [Turn it into indirect speech]
+ * (ii) She did not listen to me. [Rewrite by using the idiom "turn a deaf ear"]
 
 ## Translation
 

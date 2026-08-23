@@ -26,6 +26,8 @@
 
 1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
 
+2. **(d) What is cache memory? Explain the concepts of (i) Cache hit and (ii) Cache miss.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
+
 ## Memory Hierarchy & Storage
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

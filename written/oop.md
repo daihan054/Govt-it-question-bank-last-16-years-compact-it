@@ -34,6 +34,17 @@ class Test {
 
 5. **(a) Write a C++ program named 'class student' that has three attributes: name, roll, and marks. Use the get method to create two objects. Then, find the student with the highest marks and print that student's name.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1444]**
 
+## C++ OOP Concepts & Friend Functions
+
+1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1355]**
+```cpp
+class myclass{
+    int num;
+public:
+    myclass (int i) {num = i;}
+};
+```
+
 ## Java Programming & Methods
 
 1. **Write a Java Code which return a value.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1334]**

@@ -55,6 +55,8 @@
 
 3. **ডিজিটাল সিগনেচার (Digital Signature) কী? এর কার্যকারিতা ব্যাখ্যা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+4. **(a) What is 2-factor authentication? Describe it with an example.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+
 ## Web Security Vulnerabilities
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

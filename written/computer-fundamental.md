@@ -18,6 +18,8 @@
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
 
+2. **(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading operating system.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+
 ## Quantum Computing & Emerging Technologies
 
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

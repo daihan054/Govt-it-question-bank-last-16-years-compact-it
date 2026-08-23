@@ -30,6 +30,8 @@
 
 5. **(b) Explain the TCP/IP protocol switch layers.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1444]**
 
+6. **(b) Draw the diagram of TCP/IP protocol suite and mention the name of protocols used in different layers of TCP/IP.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -60,6 +62,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## Switching Techniques (Circuit vs Packet Switching)
 
 1. **Difference between circuit switching and packet switching. Identify which of the two is predominantly used in Internet communication and justify why?** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1435]**
+
+2. **(c) Compare circuit switching and packet switching.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
 
 ## Flow Control & Data Link Layer (Stop-and-Wait)
 
@@ -129,6 +133,13 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 **Calculate the network and broadcast address of this network for each building block.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1443]**
 
 13. **Check the valid IP address from the following table.** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
+
+14. **(a) A network has been assigned the IP address 200.1.2.0/24. It has 3 subnets. Determine the following for each subnet:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
+ * **(i) Total number of IP addresses**
+ * **(ii) Range of usable IP addresses**
+ * **(iii) Network address**
+ * **(iv) Direct broadcast address**
+ * **(v) Limited broadcast address.**
 
 ## IPv6 Addressing
 

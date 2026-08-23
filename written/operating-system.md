@@ -61,9 +61,24 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
    **a. How many bits are required in the logical address?**
    **b. How many bits are required in the physical address?** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1420]**
 
+3. **(a) Consider a computer system with the following specifications:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
+ * Physical memory (RAM): 4\text{ GB}
+ * Page size: 4\text{ KB}
+ * Virtual address space: 32\text{ bits}
+ * Page table entry size: 8\text{ bytes}
+**Answer the following:**
+ * **(i) How many pages are there in the virtual address space? Explain your answer.**
+ * **(ii) What is the size of the page table? Explain your answer.**
+
 ## Virtual Memory & Page Replacement (Thrashing)
 
 1. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**
+
+## Process Management & Process States
+
+1. **(b) What is process? Describe different states of a process.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
+
+2. **(c) Define context switch with proper example.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
 
 ## Process Synchronization & Concurrency
 

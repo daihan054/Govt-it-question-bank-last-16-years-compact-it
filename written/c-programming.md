@@ -14,6 +14,14 @@
 
 5. **Write a Program to check the Armstrong number.** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1334]**
 
+6. **Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the following pattern will be printed.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1354]**
+```
+1 2 3 4
+2 3 4
+3 4
+4
+```
+
 ## Command Line Arguments & Basic Programs
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**

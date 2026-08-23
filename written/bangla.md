@@ -8,6 +8,8 @@
 
 4. **গ্রামীণ জীবন যাত্রার মান উন্নয়নে পল্লী বিদ্যুৎ ভূমিকা সম্বন্ধে রচনা লিখ?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
+5. **প্রবন্ধ রচনা করুন : “অপার সম্ভাবনার বাংলাদেশ” ।** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -20,9 +22,22 @@
 > সাঁত্রা জাতে-মানসম্বী নানা জাতি শ্রমের সম্পত্তি
 > চিরদিন বাংলাদেশে।
 
+2. **সারমর্ম লিখুন :** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+> হে দারিদ্র্য, তুমি মোরে করেছ মহান।
+> তুমি মোরে দানিয়াছ খ্রিষ্টের সম্মান
+> কণ্টক মুকুট শোভা- দিয়াছ তাপস,
+> অসংকোচ প্রকাশের দুরন্ত সাহস;
+> উদ্ধত উলঙ্গ দৃষ্টি; বাণী ক্ষুরধার,
+> বাণী মোর শাপে তব হ’ল তরবার।
+> দুঃসহ দাহনে তব হে দর্পী তাপস,
+> অম্লান স্বর্গেরে মোর করিলে বিরস
+> অকালে শুকালে মোর রূপ রস প্রাণ!
+
 ## পত্র লিখন
 
 1. **অনুকৃতিশীল নারী সমাজের জীবনে সত্যের গুরুত্ব বর্ণনা করে ছোট বোনকে একটি পত্র লিখুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
+
+2. **ছোট বোনকে স্বাবলম্বী হওয়ার অনুপ্রেরণা দিয়ে একটি পত্র লিখুন।** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
 
 ## Translation
 
@@ -33,6 +48,9 @@
 
 3. **বাংলায় অনুবাদ করুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
 Words have a lot of power. They can help or hint, bless or curse. Unkind words do a lot of harm, Kind words do a lot of good. We can spoil a friends happiness by an unkind word, but cheer up a sad heart with a kind word, which costs nothing. A kind word is often more welcome than a costly present.
+
+4. **বাংলায় অনুবাদ করুন:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+> The most common causes of deforestation are cutting and burning the forestland. Though the forestlands are cut and burnt for the sake of agriculture and habitant, it has a negative effect on environment. The removal of trees causes the birds and other animals living on them to leave the place. It also causes serious damage to the soil, as trees give protection to soil as well. In the end, the soil gets sediment in the river bed and causes frequent flood.
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 
@@ -52,3 +70,10 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 3. **ইঙ্গিতময়, অর্থপূর্ণ, ভাবঘন বাক্যকে সম্প্রসারিত করার নাম কী?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
 
 4. **‘ও’, এবং’ এর মধ্যে পার্থক্য লিখ?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
+5. **নিচের প্রশ্নগুলোর উত্তর লিখুন :** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+ * **ক) ণ-ত্ব বিধানের দুইটি নিয়ম লিখুন।**
+ * **খ) খাঁটি বাংলা উপসর্গ যোগে গঠিত চারটি শব্দ লিখুন।**
+ * **গ) ব্যাসবাক্য সহ সমাসের নাম লিখুন: গায়ে হলুদ, প্রতিদিন, বিষাদসিন্ধু, উপগ্রহ**
+ * **ঘ) সমার্থক শব্দ লিখুন (একটি করে): অর্ণব, আদিত্য, ময়ূখ, আত্মজা**
+ * **ঙ) বাগধারা গুলোর নিহিতার্থ লিখুন: লঙ্কা কাণ্ড, টইটম্বুর, তালকানা, ঘুনাক্ষর**

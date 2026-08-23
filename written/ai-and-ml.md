@@ -2,6 +2,11 @@
 
 1. **What is the difference between Supervised and Unsupervised learning?** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
+2. **(a) Describe the following terms:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
+ * **(i) Supervised learning**
+ * **(ii) Unsupervised learning**
+ * **(iii) Reinforcement learning**
+
 ## Search Algorithms (Informed vs Uninformed Search)
 
 1. **Write down the difference between informed and uninformed search algorithm.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
@@ -10,9 +15,20 @@
 
 1. **Write down the Role of Validation set in ML.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
 
+2. **(b) Given following values:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
+ * **True Positive \text{(TP)} = 560**
+ * **True Negative \text{(TN)} = 330**
+ * **False Positive \text{(FP)} = 60**
+ * **False Negative \text{(FN)} = 50**
+**Calculate the following: (i) Accuracy (ii) Precision (iii) Recall (iv) F1 Score**
+
 ## Supervised Learning (Decision Trees)
 
 1. **Decisiontree model in Machine Learning.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
+
+## Deep Learning & Neural Networks (ANN, CNN, RNN)
+
+1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
 
 ## Association Rule Learning (Market Basket Analysis)
 

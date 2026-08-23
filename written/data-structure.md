@@ -17,3 +17,7 @@
 2. In BSCPL, all branches manage their records using a preorder traversal system, while data collection follows an inorder traversal system. The branches report their management sequence as 1, 5, 7, 6, 3, 4, 2, whereas the corresponding data collection sequence is 7, 5, 6, 1, 4, 3, 2. Based on these two traversal sequences, construct the complete binary tree representing the branch hierarchy and show the tree clearly. [BSCCPL AME 21-08-2026 (BUET)]
 
 3. **You have to right the traversal order for the new algorithm which will traverse the following tree right child first, then left child and finally the root.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1363]**
+
+## Hashing & Hash Tables
+
+1. **(b) What is hash table? What are the advantages of using hash table?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**

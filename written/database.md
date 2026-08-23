@@ -66,11 +66,25 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 
 10. **SQL Query:** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
 
+11. **Consider the following database schema-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+```sql
+employee (employee_name, street, city)
+works (employee_name, company_name, salary)
+company (employee_name, city)
+```
+**Write the SQL commands to perform the following operations:**
+ * **(i) Find the names of all employees who live in the city 'Dhaka'.**
+ * **(ii) Find the names of all employees whose salary in greater than BDT 1,00,000.**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
 
 2. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
+## Normalization & Database Design
+
+1. **Why normalization is required in Database? Write shortly about 3NF?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
 
 ## PL/SQL & Database Triggers
 
@@ -93,6 +107,10 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 ## ER Diagram & Database Design
 
 1. BSCPL regularly publishes multiple job vacancies, where each Job is identified by a unique Job ID and contains information such as Job Title, Starting Salary, Job Description, and other relevant attributes. An Applicant is identified by a unique Applicant ID and has attributes such as Name, Date of Birth, Starting/Joining Date, Contact Information, and other details. An applicant can apply for only one job, while a particular job can receive applications from many applicants. Design the ER diagram for this system, showing the entities, attributes, primary keys, relationship, cardinalities, and participation constraints. [BSCCPL AME 21-08-2026 (BUET)]
+
+2. **(a) Design an ER diagram for a library management systems where-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1349]**
+   * **(i) A library has multiple books.**
+   * **(ii) Each book can have multiple copies.**
 
 ## Database Connectivity (JDBC)
 

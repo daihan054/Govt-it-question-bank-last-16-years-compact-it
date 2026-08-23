@@ -5,11 +5,24 @@
    **ii. Octal number 2671 to decimal number.**
    **iii. Octal number 756 to hexadecimal number.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1447]**
 
+2. **(b) Represent - 25 in 8 bit binary using 2's complement.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+
 ## Karnaugh Map (K-Map)
 
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
 
 2. **Simplification using K-map?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+3. **(a) Consider the following logic circuit-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+ * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
+ * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
+
+## Logic Families (TTL vs CMOS)
+
+1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
+ * **(i) Speed**
+ * **(ii) Noise**
+ * **(iii) Power consumption.**
 
 ## Logic Gates & Universal Gates
 
