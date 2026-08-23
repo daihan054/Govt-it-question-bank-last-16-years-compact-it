@@ -17,3 +17,7 @@
 2. **What is API?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
 3. **What is an API?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**
+
+## HTML & Web Fundamentals
+
+1. **What is HTML Image tag?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**

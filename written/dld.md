@@ -7,6 +7,8 @@
 
 2. **(b) Represent - 25 in 8 bit binary using 2's complement.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
 
+3. **ডেসিমেল ৬১ এর বাইনারি মান কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
 ## Karnaugh Map (K-Map)
 
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
@@ -35,6 +37,8 @@
 3. **(b) Draw the X-OR and X-NOR gate truth table diagram.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1445]**
 
 4. **Why NAND is universal gate?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+
+5. **NOR গেইট এর দুটি ইনপুট a, b হলে আউটপুট x কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 ## Combinational Circuits (Adders, Encoders, MUX)
 

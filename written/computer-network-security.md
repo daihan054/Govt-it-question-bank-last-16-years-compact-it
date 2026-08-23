@@ -6,6 +6,8 @@
 
 3. What is social engineering? What is hashing? How is it different from encryption? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
+4. **How many bits MD5 encryption?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -61,9 +63,13 @@
 
 4. **(a) What is 2-factor authentication? Describe it with an example.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
 
+5. **Write down the full form of LDAP?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## Security Protocols (SSL/TLS, HTTPS)
 
 1. **What is SSL?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+
+2. **Which client is used to security cannot to a remote server?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
 ## Web Security Vulnerabilities
 

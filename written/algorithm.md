@@ -14,6 +14,8 @@ for i in N:
 
 2. **Write down the Pseudo Code for recursive binary search algorithm. Use the following function definition: binarySearch(array, target, low, high).** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1338]**
 
+3. **What is the complexity of Binary algorithm?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## Sorting Algorithms & Complexity
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য

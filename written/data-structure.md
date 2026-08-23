@@ -8,6 +8,8 @@
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
 
+2. **FIFO is used which data structure?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
 ## Linked List
 
 1. **Explain with proper example of singly linked list.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**

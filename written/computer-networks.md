@@ -4,6 +4,10 @@
 
 2. **Which transmission medium is used in LAN? Write their maximum length and capacity (bps).** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1452]**
 
+3. **IEEE __________ Standard used Ethernet LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+4. **What is the connector name copper cable in LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
 1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
@@ -32,6 +36,10 @@
 
 6. **(b) Draw the diagram of TCP/IP protocol suite and mention the name of protocols used in different layers of TCP/IP.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
 
+7. **How many Layers of OSI?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+8. **রাউটার OSI এর কোন লেয়ারে থাকে?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -39,6 +47,10 @@
 2. **What is the port number of DNS?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
 3. **What is the port number used by DNS?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**
+
+4. **HTTPS এর পোর্ট নাম্বার কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+5. **DNS Port Number?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 ## Transport Layer (TCP & UDP)
 
@@ -170,6 +182,16 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 22. **What are the private IP Ranges for the following IP classes? Class A, Class B and Class C** **(BBA - Assistant Maintenance Engineer Exam: 12.07.2025 (BUET)) [compact it 1431]**
 
+23. **Which is Class C Default Subnet Mask?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+24. **What is the maximum number of valid hosts in a network?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+25. **Given IP address 10.2.3.20/22 find the Total valid Host address in this IP?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+26. **Mapping between MAC to IP address?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+27. **How many bits are in a MAC address?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
@@ -197,6 +219,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    * **(C) RIP and OSPF**
    * **(D) ARP and RARP**
 
+5. **BGP is __________ protocol.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## High Availability & Redundancy Protocols (VRRP, HSRP)
 
 1. **State the network protocol of VRRP?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1359]**
@@ -215,6 +239,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
    * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
+2. **Connection between Public IP to Private IP is called __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 
 1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
@@ -226,3 +252,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 4. **How does work DHCP?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
 
 5. **What is DHCP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+
+6. **Which protocol is used by the ping tools?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+7. **Which server can be used to dinamically assign IP address to the PCs is a LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**

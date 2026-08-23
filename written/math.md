@@ -11,3 +11,7 @@
 ## Permutations & Combinations
 
 1. **CARBON word permutations that vowel must occupy odd positions?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
+
+## Set Theory & Discrete Math
+
+1. **Given, n(A) = 20, n(B) = 30 and n(A \cup B) = 40 what is n(A \cap B)?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**

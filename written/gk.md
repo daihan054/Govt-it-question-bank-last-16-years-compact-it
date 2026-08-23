@@ -40,6 +40,22 @@
 
 20. **২০২৫ সালে প্রতিবাদী তারুণ্য ক্ষেত্রে "স্বাধীনতা পুরস্কার" কাকে প্রদান করা হয়?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
 
+21. **সর্বকনিষ্ঠ খেতাবপ্রাপ্ত মুক্তিযোদ্ধার নাম?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+22. **কোন বীরশ্রেষ্ঠের সমাধি রাঙামাটিতে?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+23. **বাংলাদেশের সর্ববৃহৎ জেলার নাম?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+24. **BARI কত সালে প্রতিষ্ঠিত হয়?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+25. **প্রধান উপদেষ্টা জুলাই সনদে কত তারিখে স্বাক্ষর করেন?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+26. **জাতীয় সংগীত এর প্রথম কত লাইন পরিবেশন করা হয়?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+27. **জুম এর অল্টারনেটিভ বাংলাদেশি সফটওয়্যার developed by ICT Division?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+28. **সর্বশেষ কৃষিশুমারী কতসালে হয়?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -47,6 +63,8 @@
 2. **Full meaning: ASEAN, SPARRSO, BERC** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
 3. **পূর্ণরূপ লিখুন: a) DFOF b) THAAD c) BIMSTEC** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+
+4. **NATA এর পূর্ণ রূপ কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
 ## International Affairs
 
@@ -80,6 +98,8 @@
 
 15. **“অপারেশন আয়রন সর্ডস কী?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
 
+16. **ভারত-চীন যুদ্ধ কত সালে হয়?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
 ## Everyday Science & Environment
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
@@ -95,3 +115,5 @@
 6. **পিকো সেকেন্ড বলতে কী বুঝায়?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
 
 7. **"স্টার লিংক" কী?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+
+8. **আর্সেনিকের পারমাণবিক ভর কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**

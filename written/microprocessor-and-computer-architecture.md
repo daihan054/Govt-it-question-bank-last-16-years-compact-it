@@ -49,3 +49,5 @@
 ## RAID Architecture & Storage
 
 1. Which Level Raid is best and why? (BEPRC Assistant Programmer Exam: 08.08.2026)
+
+2. **Striping with parity is done in which level of RAID.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**

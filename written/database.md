@@ -3,6 +3,10 @@
 1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।
    (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+2. **ODBC এর পূর্ণ রূপ কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+3. **Data about data is Called __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -12,6 +16,8 @@
 1. Example Query of DDL, DML, DCL. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
 2. **What is SQL?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
+
+3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 ## SQL Queries
 
@@ -125,11 +131,15 @@ Write down an SQL query to display the total number of patients under each disea
 
 16. **Write an SQL query to find duplicate names in the employee table.** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
 
+17. **SUM, Avg, Max these function are subnet of __________ function.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
 
 2. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
+3. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
 ## Normalization & Database Design
 
@@ -145,6 +155,8 @@ Write down an SQL query to display the total number of patients under each disea
 | Stronger normal form than 1NF but lesser than 3NF. | Stronger normal form than 1NF and 2NF. |
 | It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
 | The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
+
+3. **What is Logical design database is called?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 ## PL/SQL & Database Triggers
 

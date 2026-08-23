@@ -16,6 +16,12 @@
 
 4. **Provide the full form of the following terms: HTTP, SMTP, ASCII, DHCP, ICMP.** **(BBA - Assistant Maintenance Engineer Exam: 12.07.2025 (BUET)) [compact it 1432]**
 
+5. **1TB কত বাইট?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+6. **MOOC stands for __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+7. **Write down the full form of VIRUS?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

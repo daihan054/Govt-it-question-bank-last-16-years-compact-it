@@ -20,6 +20,14 @@
    * **(c) Shows disk usage for all mounted file systems.**
    * **(d) Displays information about system memory (RAM and swap).** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1325]**
 
+5. **ফাইল Rename করার Linux কমান্ড কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+6. **Which file is need by init to get the default run level?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
+## Windows & System Administration
+
+1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
 ## CPU Scheduling
 
 1. A system has three processes with the following arrival times and CPU burst times:
@@ -94,6 +102,8 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
  * **(ii) What is the size of the page table? Explain your answer.**
 
 4. **Compare “Paging” and “Segmentation” memory management technique?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+
+5. **The __________ swaps process in and out of the memory.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 ## Virtual Memory & Page Replacement (Thrashing)
 
