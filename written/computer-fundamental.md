@@ -14,6 +14,8 @@
 
 3. **Write the full meaning: HTTP, DVD, and SMTP?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
 
+4. **Provide the full form of the following terms: HTTP, SMTP, ASCII, DHCP, ICMP.** **(BBA - Assistant Maintenance Engineer Exam: 12.07.2025 (BUET)) [compact it 1432]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
