@@ -40,3 +40,7 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 ## Process Synchronization & Concurrency
 
 1. Two independent applications running concurrently attempt to update the same file located at a same file location. Both applications may read and modify the file at nearly the same time, creating a possibility of race conditions, lost updates, or inconsistent data. What type of consistency problem can occur in this situation, and which synchronization technique(s) should be used to ensure that only one application can safely update the file at a time? Explain the mechanism and justify the most appropriate solution. [BSCCPL AME 21-08-2026 (BUET)]
+
+## Deadlock & Resource Allocation
+
+1. **What is Deadlock? Given a scenery and find out the process is face deadlock sitiation?** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**

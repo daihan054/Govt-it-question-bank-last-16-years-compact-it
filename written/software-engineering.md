@@ -20,6 +20,8 @@
 
 4. What is SDLC, Steps of SDLC, in which Step user acceptance assured? (BEPRC Assistant Programmer Exam: 08.08.2026)
 
+5. **What is SDLC? Describe the steps of SDLC.** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**
+
 ## CI/CD & DevOps Methodologies
 
 1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
