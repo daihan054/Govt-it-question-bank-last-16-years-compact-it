@@ -34,6 +34,10 @@
 
 1. What is a phishing attack? Explain its types and discuss methods to prevent it. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
+2. **What is a Man-inThe Middle (MitM) attack? How can it be prevented?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1337]**
+
+3. **Briefly explain phishing attack and denial-of-service (DoS) attack.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1341]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

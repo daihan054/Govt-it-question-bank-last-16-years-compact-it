@@ -9,6 +9,8 @@
 
 3. **a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
 
+4. **Briefly explain supervised learning, unsupervised learning & reinforcement learning.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1341]**
+
 ## Search Algorithms (Informed vs Uninformed Search)
 
 1. **Write down the difference between informed and uninformed search algorithm.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**

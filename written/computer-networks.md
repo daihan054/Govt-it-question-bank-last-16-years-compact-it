@@ -55,6 +55,8 @@
 
 Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packets 6 and 7 are lost, while packet 8 arrives. The server sends a cumulative ACK for the next byte it is expecting. Find the missing values in the table.
 
+3. **Show the pictorial representation of TCP 3-way handshaking protocol for establishing a connection between a server and a client.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
+
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -147,6 +149,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    * **iii) What is the broadcast address?**
    * **iv) What is the maximum number of devices this network can connect?**
    * **v) What is the IP address of the first host device in the network?**
+
+16. **Find the network address, subnet mask, broadcast address, and usable host IP range for the following IP address: 192.9.205.31/16.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
 
 ## IPv6 Addressing
 

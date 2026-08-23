@@ -51,6 +51,14 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 **If the CPU scheduling policy is round robin with time quantum=2, finds out the completion time, turnaround time, waiting time, and response time** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1447]**
 
+4. **There are 3 tasks P1, P2, and P3. The arrival time and duration of each task is given below. Apply the round-robin scheduling algorithm with quantum size-20 to schedule the tasks in a single core machine. Calculate the turnaround time for each task. (All tasks have the same priority)** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1338]**
+
+| Task | Arrival time (ms) | Duration (ms) |
+|---|---|---|
+| P1 | 0 | 40 |
+| P2 | 5 | 40 |
+| P3 | 10 | 20 |
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
@@ -69,6 +77,8 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 **Answer the following:**
  * **(i) How many pages are there in the virtual address space? Explain your answer.**
  * **(ii) What is the size of the page table? Explain your answer.**
+
+4. **Compare “Paging” and “Segmentation” memory management technique?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
 
 ## Virtual Memory & Page Replacement (Thrashing)
 

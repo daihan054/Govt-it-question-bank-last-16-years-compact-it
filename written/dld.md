@@ -43,3 +43,5 @@
 3. **(a) Design a full adder circuit and draw the diagram.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1445]**
 
 4. **(b) Draw the 8-3 encoder logic diagram.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1445]**
+
+5. **Design a full adder using two half adders and an OR gate?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**

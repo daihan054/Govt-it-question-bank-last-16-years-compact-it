@@ -106,6 +106,17 @@ company (employee_name, city)
  * **(iv) List all the students who have not completed any subject.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
  * **(v) List all the subject names.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
 
+13. **Given a Patient table in a hospital database below.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+
+| Patient_ID | Disease_Name |
+|---|---|
+| 1 | Covid-19 |
+| 2 | Dialysis |
+| 3 | Covid-19 |
+| 4 | Dengue |
+
+Write down an SQL query to display the total number of patients under each disease category.
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -115,6 +126,17 @@ company (employee_name, city)
 ## Normalization & Database Design
 
 1. **Why normalization is required in Database? Write shortly about 3NF?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+
+2. **Explain the differences between Second Normal Form (2NF) and Third Normal Form (3NF) with examples.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+
+| 2NF(Second Normal Form) | 3NF(Third Normal Form) |
+|---|---|
+| It is already in 1NF. | It is already in 1NF as well as in 2NF also. |
+| In 2NF, non-prime attributes (attributes that are not part of any candidate key) must depend on the entire candidate key. | In 3NF non-prime attributes are only allowed to be functionally dependent on Super key of relation. |
+| No partial functional dependency of non-prime attributes on any proper subset of a candidate key is allowed. | No transitive functional dependency of non-prime attributes on any super key is allowed. |
+| Stronger normal form than 1NF but lesser than 3NF. | Stronger normal form than 1NF and 2NF. |
+| It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
+| The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
 
 ## PL/SQL & Database Triggers
 

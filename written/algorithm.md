@@ -12,6 +12,8 @@ for i in N:
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
 
+2. **Write down the Pseudo Code for recursive binary search algorithm. Use the following function definition: binarySearch(array, target, low, high).** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1338]**
+
 ## Sorting Algorithms & Complexity
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
@@ -44,6 +46,8 @@ for i in N:
 ## Graph Traversal Algorithms (BFS & DFS)
 
 1. **Why DFS better than BFS, Explain?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+2. **Write an Algorithm to detect a cycle in a directed graph.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1336]**
 
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 
