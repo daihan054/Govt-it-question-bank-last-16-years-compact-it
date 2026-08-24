@@ -46,6 +46,8 @@
    * **a. Write a program using any language to the calculate the total tax of employee.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 290]**
    * **b. From the three employee salary find the highest tax paying employee.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 290]**
 
+14. **Write a C program find prime number 1 to n.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

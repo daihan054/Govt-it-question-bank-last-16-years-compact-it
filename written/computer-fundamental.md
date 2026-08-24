@@ -22,6 +22,8 @@
 
 7. **Write down the full form of VIRUS?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+8. **Write full form of NAT, DHCP, MAC and TCP-IP** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

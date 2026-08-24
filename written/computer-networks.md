@@ -40,6 +40,10 @@
 
 8. **রাউটার OSI এর কোন লেয়ারে থাকে?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
+9. **Write the name of OSI layers.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
+
+10. **Write the name of OSI layers protocol for every layers.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -199,6 +203,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 28. **What is the primary motivation for classful IP address to classless IP addressing?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 316]**
 
 29. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 292]**
+
+30. **Given IP Address: 192.168.5.154/27, Calculate a) Network Address b) First valid host c) Last valid host d) Broadcast address e) Subnet mask** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 383]**
+
+31. **Write down the Public and Private IPv4 address for Class A, Class B and Class C.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
 
 ## IPv6 Addressing
 
