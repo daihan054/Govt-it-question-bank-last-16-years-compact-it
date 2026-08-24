@@ -16,6 +16,8 @@
 
 8. **What is Symmetric and Asymmetric Encryption? Explain with example.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 499]**
 
+9. **What is symmetric and Asymmetric key explain with example?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -96,6 +98,8 @@
 6. **Write down the full form of LDAP?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 7. **Your bank has an online banking system and this process is performed by sending OTP in mobile or OTP in mail when a customer transfers money from a mobile banking app or online. This is a secured policy. Without this biometric policy, how can you more secure your online banking? Explain your strategy.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 306]**
+
+8. **How to work two factor authentication?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 574]**
 
 ## Security Protocols (SSL/TLS, HTTPS)
 

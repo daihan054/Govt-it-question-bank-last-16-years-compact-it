@@ -18,6 +18,28 @@
 
 3. **What is Multithreading System?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1460]**
 
+4. **What is the output of the following code?** **(BAERA Assistant Engineer (CSE) Exam: 2023 (BUET)) [compact it 574]**
+```c
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+int main(int argc, char *argv[]){
+    int i;
+    for(i=0;i<4;i++){
+        int pid = fork();
+        if(pid==0){
+            printf("%d\n",i);
+            exit(0);
+        }
+    }
+    for(i=0;i<4;i++){
+        wait(NULL);
+    }
+    return 0;
+}
+```
+
 ## Linux / Unix Commands & Administration
 
 1. **Write Linux command:** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**

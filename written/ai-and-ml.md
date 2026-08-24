@@ -61,3 +61,7 @@
 2. **b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1346]**
 
 3. **LLM stands for __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+## Artificial Intelligence & Expert Systems
+
+1. **What is Artificial Intelligence?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**

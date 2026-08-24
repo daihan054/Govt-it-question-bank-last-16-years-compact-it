@@ -189,6 +189,8 @@ return 0;
 
 35. **Write a program find prime number between 1 to 100?** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 499]**
 
+36. **Write a C program sum of 1 to 100.** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 571]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

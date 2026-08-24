@@ -36,6 +36,8 @@
 
 4. **What is Network Topology? Distinguish between Bus, Ring, Tree and Star topology. Discuss how the Bus topology works.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
+5. **What is Personal Area Network? What is needed component and explain?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 572]**
+
 ## OSI & TCP/IP Reference Model
 
 1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -287,6 +289,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 44. **What is IP address? Explain the necessity of IP address in network?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
 
+45. **What is subnet mask? Why it is used?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**
+
 ## Network Services (DHCP, NAT)
 
 1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
@@ -403,3 +407,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## Wireless Networks & IoT (mmWave)
 
 1. **What is the use of mmWave in IoT?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
+
+2. **What is IoT? Brefly explain.** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 571]**
+
+3. **How to work WiMax technology?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 571]**
