@@ -30,6 +30,8 @@
 
 14. **Write an essay on 'Women's Empowerment and Gender Equality in Bangladesh' within 200 (+/- 10%) words.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
+15. **Essay on "Digital Financial Literacy"** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -151,3 +153,5 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 10. **Translation (Bangla to English)**
     **যুব উন্নয়ন বিষয়ক......** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
+11. **Bangla to English Translation (Bank, Economy Related)** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**

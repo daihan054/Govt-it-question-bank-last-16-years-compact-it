@@ -64,6 +64,8 @@
 
 1. **Max heap:** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
 
+2. **Max Heap Operation [a-j] show heap.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
+
 ## Hashing & Hash Tables
 
 1. **(b) What is hash table? What are the advantages of using hash table?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**

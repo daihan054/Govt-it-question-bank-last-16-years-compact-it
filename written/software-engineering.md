@@ -130,6 +130,13 @@
    * **c) Open Source and Modification: Buy and small modifications cost 30 lac, for large modifications cost 50 lac. Possibility is 80% for large.**
    **What way you choose and why? Explain with calculation.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 292]**
 
+2. **Given the following values, compute function point when all complexity adjustment factor (CAF) and weighting factors are average.**
+   * **User Input = 50**
+   * **User Output = 40**
+   * **User Inquiries = 35**
+   * **User Files = 6**
+   * **External Interface = 4** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 492]**
+
 ## IT Governance, Audit & Risk Management
 
 1. **Difference between: Policy, Guideline, Procedure; why auditor must focus on control as a system? Explain four types of risks auditor faces, Explain each of theme.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 310]**

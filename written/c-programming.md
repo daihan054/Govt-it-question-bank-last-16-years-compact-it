@@ -206,6 +206,8 @@ return 0;
    **B) Find average in A and B.**
    **C) Max from matrices C** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 515]**
 
+39. **Write a function to find the smallest element from an array.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 492]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

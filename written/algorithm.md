@@ -81,6 +81,10 @@ for i in N:
 
 1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1419]**
 
+## Graph Representation (Adjacency Matrix vs List)
+
+1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 495]**
+
 ## Graph Traversal Algorithms (BFS & DFS)
 
 1. **Why DFS better than BFS, Explain?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

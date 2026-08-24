@@ -40,3 +40,7 @@
 ## Full Stack & Backend Web Development
 
 1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 320]**
+
+## Web Security & Browser Same-Origin Policy (Iframe)
+
+1. **A & B two frames in a browser loaded from different origins. Why is it a reasonable security policy to allow A to navigate B to another origin base only on whether the display area of A contains dis-pare of B and A has the control over area.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 494]**

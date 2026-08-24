@@ -170,6 +170,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 7. **Two math from data communication.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
 
+8. **CRC is a redundancy error technique used to determine the error. Suppose the original data is 11100 and divisor is 1001.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 493]**
+
+9. **A telephone line normally has a bandwidth of 3000 Hz (300 to 3300 Hz) assigned for data communication. The SNR is usually 3162. What will be the capacity for this channel?** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]

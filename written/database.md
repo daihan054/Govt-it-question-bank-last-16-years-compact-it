@@ -229,6 +229,10 @@ ORDER BY average_salary DESC;
 
 33. **SQL query for employee table. (Approximate)** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
 
+34. **Suppose we have a relational database with five tables. table key Attributes S(sid, A) Sid T(tid, B) Tid U(uid, C) Uid R(sid, tid, D) sid, tid Q(tid, uid, E) tid, uid Here R implements a many-to-many relationship between the entities implemented with tables S and T, and Q implements a many-to-many relationship between the entities implemented with tables T and U.**
+   **(A) Write an SQL query that returns all records of the form sid, uid where sid is the key of an S- record and uid is the key of a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.**
+   **(B) Write an SQL query that returns records of the form A, C where the A-value is from an S- record and the C-value is from a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 496]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

@@ -105,6 +105,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
     > Global investment in green economy-related..........
     **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
+15. **English to Bangla Translation (Bank, Risk Management Related)** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
+
 ## এক কথায় প্রকাশ (One Word Substitution)
 
 1. **এক কথায় প্রকাশ: ৫ টি?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**

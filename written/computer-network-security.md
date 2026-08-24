@@ -128,6 +128,8 @@
 
 6. **What is SSL, TLS, and HTTPs?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 594]**
 
+7. **Attacker steals private key of website that uses transport layer security and remains undetected what can be done with private key?** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 493]**
+
 ## Web Security Vulnerabilities
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
