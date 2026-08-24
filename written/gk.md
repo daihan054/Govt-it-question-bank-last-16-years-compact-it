@@ -108,6 +108,8 @@
 
 54. **Who was awarded the Meril-Prothom Alo Lifetime Award 2022?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
+55. **Write Short Note: (i) About Digital Bangladesh (ii) About March Month Importance** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]

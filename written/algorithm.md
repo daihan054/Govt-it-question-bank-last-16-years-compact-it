@@ -12,6 +12,8 @@ for i in N:
 
 3. **Including Time and Space complexity....** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]**
 
+4. **What is complexity? Find the Complexity from code and explain.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]

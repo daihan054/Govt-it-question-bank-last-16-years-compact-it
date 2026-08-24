@@ -54,6 +54,12 @@
 
 2. **What is the name of molecular scale computer?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
+## Blockchain & Emerging Technologies
+
+1. **What is Blockchain technology? How it works?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 324]**
+
+2. **What is blockchain technology? Why it is more secure( Such type)** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 500]**
+
 3. **Write about Blockchain.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 506]**
 
 ## Server Hardware & Enterprise Systems

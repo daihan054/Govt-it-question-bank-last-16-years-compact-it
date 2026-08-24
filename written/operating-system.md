@@ -44,6 +44,8 @@
 
 8. **Linux Command in ownership and group permission.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 567]**
 
+9. **UNIX command with example: File move, Change Directory and search from a specific line.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 500]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**

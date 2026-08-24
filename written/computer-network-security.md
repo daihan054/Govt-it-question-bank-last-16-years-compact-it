@@ -14,6 +14,8 @@
 
 7. **Distinguish between Symmetric Encryption and Asymmetric Encryption. Give some examples of encryption algorithm. What are the different types of ciphers in cryptography? What are the factors to be considered for cryptographic strength?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 533]**
 
+8. **What is Symmetric and Asymmetric Encryption? Explain with example.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 499]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
