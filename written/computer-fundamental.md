@@ -24,6 +24,10 @@
 
 8. **Write full form of NAT, DHCP, MAC and TCP-IP** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
 
+9. **(b) What is register? What are the common register found in a basic computer?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+
+10. **What is the base of 5th generation Computer?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -39,6 +43,8 @@
 ## Quantum Computing & Emerging Technologies
 
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+2. **What is the name of molecular scale computer?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
 ## Server Hardware & Enterprise Systems
 

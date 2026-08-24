@@ -12,6 +12,8 @@
 
 2. **What is Multithreading programming? Why Multithreading used in programming?** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 296]**
 
+3. **What is Multithreading System?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1460]**
+
 ## Linux / Unix Commands & Administration
 
 1. **Write Linux command:** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**
@@ -95,7 +97,45 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 | P1 | 21 |
 | P2 | 3 |
 | P3 | 6 |
-| P4 | 2 |
+## CPU Scheduling Algorithms
+
+1. A CPU scheduling algorithm must choose a process from the ready queue to execute. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+2. **Five jobs A, B, C, D, and E arrive at a compute center at approximately the same time. Their estimated running times are 10, 6, 2, 4, and 8 minutes, respectively. Their (externally defined) priorities are 3, 5, 2, 1, and 4, respectively, with 5 being the highest priority. For each of the following scheduling algorithms, determine the mean process turnaround time. (Ignore process switching overhead.) (a) Round-robin (quantum = 2 minutes), (b) Priority scheduling, (c) First-come, first-served (run in order 10, 6, 2, 4, 8), (d) Shortest job first.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1421]**
+
+3. **Process CPU burst and Priority given. Calculate Average Waiting time using (i) Preemptive Priority (ii) Non Preemptive priority.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+4. **Calculate Average Waiting time using (i) FCFS (ii) SJF and (iii) RR (Quantum = 2) for the following:** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1443]**
+
+5. **(a) Consider the following set of process with the length of CPU burst given in milliseconds-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
+
+| Process | Burst time | Priority |
+|---|---|---|
+| P1 | 10 | 3 |
+| P2 | 1 | 1 |
+| P3 | 2 | 3 |
+| P4 | 1 | 4 |
+| P5 | 5 | 2 |
+
+All process arrived at time 0. Lower number has higher priority.
+ * (i) Draw the Gantt chart using FCFS, Non-preemptive priority, SJF and RR (Quantum = 1).
+ * (ii) What is the turnaround time of each process for each of the scheduling algorithms in (i)?
+ * (iii) What is waiting time of each process for each of the scheduling algorithms in (i)?
+ * (iv) Which algorithm resulting minimum average waiting time?
+
+6. **a) Define CPU Scheduling. Draw Gantt charts and find average waiting time for: i) FCFS, ii) SJF (Non-preemptive), iii) Preemptive Priority.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1344]**
+
+7. **Process burst time and priority given. Draw Gantt chart and find average waiting time for preemptive priority scheduling.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
+
+8. **Shortest job scheduling (SJF) is a __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+9. **Round-robin scheduling (RR) is a __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+10. **(a) FCFS and SJF Scheduling. (b) Find AWT and ATAT.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 316]**
+
+11. **Advantages of CPU Scheduling Algorithm.** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1460]**
+
+12. **What type of RR Scheduling Algorithm: Preemtive/ Non-Preemtive?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
 ## Memory Management & Paging
 
@@ -165,3 +205,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 8. **Deadlock এর চারটি শর্ত লিখ।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
 
 9. **What is deadlock? Draw its diagram.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
+
+## File Systems & Disk Management
+
+1. **NTFS stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**

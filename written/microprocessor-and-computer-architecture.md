@@ -6,6 +6,8 @@
 
 3. **What exactly is a microcontroller? What distinguishes a microprocessor from a microcontroller? Mention the differences between RISC and CISC microprocessors.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 323]**
 
+4. **GPU stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -36,6 +38,10 @@
 
 4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 299]**
 
+## RISC vs CISC Architecture
+
+1. **RISC stand for __________? Write two characteristics of it's?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
 ## Cache Memory
 
 1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
@@ -52,11 +58,17 @@
 
 2. **Difference between SRAM & DRAM also write Differences Cache Memory vs Flash Memory.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1434]**
 
+3. **DRAM stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+4. **What is stand for EEPROM?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
 ## Secondary Storage (HDD vs SSD)
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
 2. **a) Define the term "SSD". Briefly describe the working principle of "SSD".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1342]**
+
+3. **Write two SSD characteristics?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
 ## RAID Architecture & Storage
 

@@ -8,6 +8,8 @@
 
 4. **How many bits MD5 encryption?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+5. **What type of key used for decrypt message of PKI?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -27,6 +29,10 @@
 1. Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
 2. **What is exfiltration?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
+
+## Email & Messaging Security (Spam, Phishing)
+
+1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
 ## Cyber Crime & Security
 

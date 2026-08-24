@@ -67,3 +67,7 @@
 ## Comprehensive Math Problems
 
 1. **৫ টা ম্যাথ সংক্রান্ত প্রশ্নাবলি।** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+## Basic Arithmetic & Average
+
+1. **What is the Average of 1 to 49 numbers?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
