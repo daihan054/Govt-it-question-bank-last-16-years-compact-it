@@ -20,6 +20,16 @@
 
 1. **Given, n(A) = 20, n(B) = 30 and n(A \cup B) = 40 what is n(A \cap B)?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
+2. **Math: Set related (72%, 40% and both 30%)** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+
+## Percentage, Profit & Loss, Simple & Compound Interest
+
+1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+
+## Ratio, Proportion & Mixtures
+
+1. **Math : Gold purity** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+
 ## Calculus & Integration
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
@@ -31,6 +41,8 @@
 ## Geometry & Coordinate Geometry
 
 1. **একটি বৃত্তের সমীকরণ দেয়া ছিল এবং একটি বিন্দুতে স্পর্শক এর সমীকরণ চাওয়া হয়েছিল** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+2. **Math : Geometry** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
 ## Analytical Ability & Logical Reasoning
 

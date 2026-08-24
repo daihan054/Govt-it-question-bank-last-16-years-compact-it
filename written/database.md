@@ -162,6 +162,10 @@ Write down an SQL query to display the total number of patients under each disea
 
 **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 335]**
 
+20. **Database query:**
+   * **(i) Group by**
+   * **(ii) Average Salary** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -243,6 +247,8 @@ Write down an SQL query to display the total number of patients under each disea
 ## Relational Data Model & ER Relationships
 
 1. What are the different types of relationships in a relational database? Explain each with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+2. **Discuss about different types of relations in DBMS.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 297]**
 
 ## Keys in DBMS
 

@@ -59,6 +59,20 @@
    **Sample Output:**
    **Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 332]**
 
+17. **Write a Program Prime number print from 1 to n.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 294]**
+
+18. **Write a Program Floyds triangle n=5**
+```text
+1
+01
+101
+0101
+10101
+```
+**(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 295]**
+
+19. **Write a C Program Find sum of the series: 1+2+4+7+11+..........+N** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 295]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -136,4 +150,21 @@ for(int i=1, i<n; i++)
     for(int j=0 ; j<i ; j ++)
         For( int k =0; k<i ; k++)
             X=X+1
+```
+
+5. **Output find out from recursion:** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 298]**
+```c
+#include <stdio.h>
+void fun(int x){
+    if(x<0) {
+        return;
+    }
+    printf("%d\n",x--);
+    fun(--x);
+    printf("%d\n",x);
+}
+int main() {
+    fun(5);
+    return 0;
+}
 ```

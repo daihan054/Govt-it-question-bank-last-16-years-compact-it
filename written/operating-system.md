@@ -2,6 +2,12 @@
 
 1. Difference Between Firmware and OS. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
+## Concurrency, Threads & Synchronization
+
+1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
+
+2. **What is Multithreading programming? Why Multithreading used in programming?** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 296]**
+
 ## Linux / Unix Commands & Administration
 
 1. **Write Linux command:** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**

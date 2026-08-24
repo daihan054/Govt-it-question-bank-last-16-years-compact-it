@@ -20,13 +20,17 @@
 
 9. **Write an essay on 'Modern Technology and Its Effect on Student Academic Achievements' within 150 (+/- 10% ) words.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
 
+10. **Write a short composition "The Role of computer on education system in Bangladesh".** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
 
-2. **Imagine that you have purchased a laptop from a local showroom a week back. The warranty period is on and the laptop is not functioning well. Write a letter of complaint to the manager of the showroom about it. Your letter should contain information about the problem and what you want.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+2. **Write a Letter to your younger brother about Importance of professional vocational training.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
-3. **Write a letter to the officer-in-charge of your police station to provide regular police patrol in your locality to prevent crimes.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+3. **Imagine that you have purchased a laptop from a local showroom a week back. The warranty period is on and the laptop is not functioning well. Write a letter of complaint to the manager of the showroom about it. Your letter should contain information about the problem and what you want.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+
+4. **Write a letter to the officer-in-charge of your police station to provide regular police patrol in your locality to prevent crimes.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
 
 ## Reading Comprehension
 
@@ -119,3 +123,5 @@ Various kinds of nuclear weapons have been produced in the past few years by man
    * **(b)** আপনার ব্যাংক একাউন্ট এর স্থিতি জানার জন্য মোবাইল ব্যাংকিং এপ্লিকেশন এ লগইন করুন
 
 5. **Earth Day inspires green innovation through participatory and collective action and encourages the adoption of ho sustainable practices across the financial system. It, therefore, serves as an opportunity for financial institutions to engage with their stakeholders and demonstrates their commitment to sustainable practices. Thus, Earth Day carries a deep significance in proproting sustainable and responsible financing which is an example of environmentally conscious investment practices, Positive environmental outcomes will be easily achieved if all financial sectors, stakeholders and investors alike are part of a long-term plan to improve the environmental health of this planet, along with the financial and human health. We celebrate Earth Day around the world, let us reaffirm our commitment towards building a greener, more tolerant, liveable and sustainable future for our next generations.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
+
+6. **Translation Bangla to English** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**

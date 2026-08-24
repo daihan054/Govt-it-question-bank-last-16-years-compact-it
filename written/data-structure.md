@@ -6,6 +6,8 @@
 
 3. **Correct of correct parentheses if it is written proper show matched if it does not show unmatched.** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
 
+4. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 297]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
