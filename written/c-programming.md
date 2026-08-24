@@ -199,6 +199,8 @@ return 0;
 
 3. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
 
+4. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
+
 ## Command Line Arguments & Basic Programs
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**

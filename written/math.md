@@ -30,6 +30,10 @@
 
 1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
+2. **১০০ টাকার ২৫টি করে লেবু ক্রয় করে ১০০ টাকায় ২০টি করে লেবু বিক্রি করলে শতকরা কত লাভ হবে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+3. **জনাব রহিম তার সম্পদের ২৫% স্ত্রীকে, ৪৫% ছেলেকে এবং অবশিষ্ট ৭২০০০ টাকা মেয়েকে দিলেন। তার সম্পদের মোট মূল কত?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
 ## Ratio, Proportion & Mixtures
 
 1. **Math : Gold purity** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
@@ -41,6 +45,8 @@
 ## Speed, Time, Distance & Boats
 
 1. **A boat travels 15 km upstream and 22 km downstream in 5 hr. find out the speed of the stream.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+2. **A boat covers 143 km upstream in 13 hours and the same distance downstream in 11 hours. What is the speed (in km/hr) of the boat in still (without stream) water?** **(BARC Programmer Exam: 04.08.2023) [compact it 597]**
 
 ## Calculus & Integration
 
@@ -73,6 +79,8 @@
 ## Basic Arithmetic & Average
 
 1. **What is the Average of 1 to 49 numbers?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+2. **দুইটি সংখ্যার গ.সা.গু. ১১ এবং ল.সা.গু. ৭৭০০। একটি সংখ্যা ২৭৫ হলে অপর সংখ্যাটি কত?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
 ## Discrete Mathematics & Recurrence Relations
 

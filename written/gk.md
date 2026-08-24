@@ -110,6 +110,16 @@
 
 55. **Write Short Note: (i) About Digital Bangladesh (ii) About March Month Importance** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
 
+56. **বাংলাদেশ কত সালে টেস্ট ক্রিকেটের মর্যাদা পায়?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+57. **বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ রয়েছে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+58. **শেখ রাসেল দিবস কবে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+59. **অপারেশন সার্চলাইট কবে পরিচালিত হয়?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+60. **বাংলাদেশের জাতীয় পতাকার ডিজাইনার কে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]

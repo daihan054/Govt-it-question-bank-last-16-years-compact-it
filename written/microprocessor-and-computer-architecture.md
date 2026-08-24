@@ -100,6 +100,8 @@
 
 6. **Explain the purpose of RAID.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
 
+7. **What do you mean by RAID? Write the difference types of RAID level.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
+
 ## CPU Performance & Instruction Cycle
 
 1. **There was a CPU cycle math** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 400]**

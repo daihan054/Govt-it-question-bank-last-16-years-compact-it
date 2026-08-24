@@ -8,6 +8,8 @@
 
 4. **What is the name of AC current to DC current?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
 
+5. **How to AC converted into DC?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
+
 ## AC Circuits & Power Analysis
 
 1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**

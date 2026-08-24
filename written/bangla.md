@@ -144,3 +144,13 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 12. **সমাস পরিবর্তন :** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
 13. **বিপরীত শব্দ: ঈর্ষা, উহ্য** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
+14. **'লালসালু' উপন্যাসটির লেখক কে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+15. **রবীন্দ্রনাথ ঠাকুর কোন সাহিত্যকর্মের জন্য দ্য নোবেল পান?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+16. **সন্ধি বিচ্ছেদ করুন: তপোবন, প্রাতরাশ, চলচ্চিত্র, দ্যুলোক, দোলনা।** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+17. **অর্থসহ একটি করে বাক্য রচনা করুন: আট কপালে, কড়ায় গণ্ডায়।** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+18. **বিপরীত শব্দ লিখুন: উজান, আবাহন, প্রতিকূল।** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**

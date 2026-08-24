@@ -114,6 +114,8 @@
 5. **Write down the basic differences of the following:**
    **(ii) TLS 1.2 vs. 1.3** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 535]**
 
+6. **What is SSL, TLS, and HTTPs?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 594]**
+
 ## Web Security Vulnerabilities
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -133,6 +135,8 @@
 8. **Your bank wants to secure an e-banking online system and wants to configure a web server in your data center. What kind of tools and technology do you use for this?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 309]**
 
 9. **What is SQL Injection attack? How it launched?** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 588]**
+
+10. **Write the difference types of Web application attacks?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
 
 ## Cryptography & Network Security Scenarios
 

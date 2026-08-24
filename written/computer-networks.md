@@ -14,6 +14,8 @@
 
 7. **What is the main benefit of broadband transmission system compared to baseband? What is the attenuation of transmission media? Distinguish between twisted pair, co-axial cable and fiber optics in tabular form.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
+8. **Why we used straight-through and cross cable with example?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
+
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
 1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
@@ -290,6 +292,9 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 44. **What is IP address? Explain the necessity of IP address in network?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
 
 45. **What is subnet mask? Why it is used?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**
+
+46. **In HR department have 12 IP enable devices are available in our office and have a big IP block 172.16.5.0/24. To consider your HR department find a suitable IP block than also answer the following question.**
+   **i. Subnet mask; ii. Number of usable IP address; iii. First and last IP Address of that block iv. Broadcast IP address** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
 
 ## Network Services (DHCP, NAT)
 
