@@ -22,6 +22,8 @@
 
 2. **Math: Set related (72%, 40% and both 30%)** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
+3. **Find the sets X and Y if X \cup Y = \{1, 2, 3, 5, 6, 8, 9, 10\}, X \cap Y = \{1, 5\} and Y - X = \{2, 6, 9, 10\}.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 419]**
+
 ## Percentage, Profit & Loss, Simple & Compound Interest
 
 1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
@@ -45,6 +47,8 @@
 ## Probability & Statistics
 
 1. **(b)** In Bangladesh Bank, there are 6 Assistant Directors (ADs) and 4 Deputy Directors (DDs). Each AD brings a bag, while only half of the DDs bring a bag. If a bag is selected at random from all the bags, what is the probability that the chosen bag belongs to a Deputy Director (DD)? **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
+
+2. **If you throw two unbiased dice (each with six sides) together, what is the probability that the sum of two upward faces will be 7? Explain your answer.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 421]**
 
 ## Geometry & Coordinate Geometry
 

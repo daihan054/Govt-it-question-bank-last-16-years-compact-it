@@ -42,6 +42,12 @@ class Test {
 
 9. **Write down the difference between Structure and Class.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1324]**
 
+10. **Explain how encapsulation and inheritance are advantageous in object oriented programming.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 420]**
+
+## Class Design & Object-Oriented Modeling
+
+1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**
+
 ## C++ OOP Concepts & Friend Functions
 
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1355]**

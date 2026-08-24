@@ -18,6 +18,8 @@
 
 3. **Draw a class diagram for an E-commerce website where customer can view different products, can pay either by card or cash.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 401]**
 
+4. **Consider the following buy a product description. Customer browses catalog, selects items to buy and then goes to check out. Customer fills in shipping information (address, receive time). System presents full pricing information and customer fills in credit card information. System authorizes purchase, confirms sale and sends confirming email to customer. Draw a use case diagram for the above system.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 424]**
+
 ## Software Requirements Engineering
 
 1. What is the difference between functional and non-functional requirements? What is requirement validation? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]

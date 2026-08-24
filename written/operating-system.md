@@ -151,3 +151,5 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 The content of the matrix. Need is defined to be Max – Allocation.
 
 6. **(a) Explain Circular wait deadlock.** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 415]**
+
+7. **Give the necessary conditions for deadlock to occur. Is it possible to have deadlock involving only a single process? Explain your answer.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 422]**

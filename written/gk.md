@@ -82,6 +82,18 @@
 
 41. **Mention the name of the First Governor of Bangladesh Bank.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 323]**
 
+42. **Which organization was created as a result of the language movement?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 429]**
+
+43. **In which year did the first coal-fired Ultra Super Critical Thermal Power Plant start the commercial power supply to the national grid of Bangladesh?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 429]**
+
+44. **What is the name of the first Bangladeshi film at the Oscars?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
+
+45. **American poet and activist Allen Ginsberg wrote a poem, inspired by the plight of the East Bengali refugees from the 1971 Bangladesh Liberation War. What is the name of the poem?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
+
+46. **How many priority sector(s) fall under the Blue Economy for Bangladesh?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
+
+47. **As per the declaration of the government, Bangladesh will turn into 'Smart Bangladesh' by which year?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -148,6 +160,12 @@
 
 27. **Who will host the T20 World Cup 2024?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 323]**
 
+28. **UNDP works in different countries and territories to eradicate poverty while protecting the planet. The headquarters of UNDP is located in which country?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 429]**
+
+29. **On 17 November 2015, UNESCO declared International Day for Universal Access to Information. Which day is observed as International Information Day?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 429]**
+
+30. **Which campaign works toward building an international consensus and a sustained global movement of leaders and citizens to eliminate nuclear weapons?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
+
 ## Everyday Science & Environment
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
@@ -169,3 +187,5 @@
 9. **Explain the concept of Electrocardiogram (ECG) and Echocardiogram (ECHO).** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
 
 10. **Justify "Invention of Transistor changed the world."** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
+
+11. **What is the hardest substance available on earth?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**

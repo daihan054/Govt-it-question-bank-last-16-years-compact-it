@@ -16,6 +16,8 @@
 
 8. **‘তীব্র তাপদাহ হ্রাসে পরিবেশ সুরক্ষার গুরুত্ব’-এর উপর একটি রচনা লিখুন ১৫০ (+/-১০%) শব্দের মধ্যে।** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
 
+9. **Focus Writing in Bangla** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 431]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -80,6 +82,10 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 8. **Translation English to Bangla** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
 9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+10. **Translation [English to Bangla]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
+   **Translate the following passage into Bangla:**
+   > Capacity development in banking is crucial as the industry faces evolving challenges and opportunities in a rapidly changing landscape. It encompasses enhancing the knowledge, skills, and capabilities of banking professionals to effectively navigate complex financial environments. This includes training in areas such as financial literacy, risk management, regulatory compliance, and technological proficiency. As banks integrate advanced technologies, and digital banking solutions, there is a growing need for specialized expertise to harness these tools for operational efficiency and customer service enhancement. Capacity development initiatives also focus on leadership development, fostering strategic thinking and decision-making abilities among senior executives to steer banks through economic uncertainties and competitive pressures.
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 

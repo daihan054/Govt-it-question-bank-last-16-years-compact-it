@@ -24,6 +24,8 @@
 
 11. **Focus in English: “Impacts of air pollution on human health” within 150 (+-10%) word.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
 
+12. **Focus Writing in English** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 431]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -130,3 +132,5 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 7. **Bengali to English Translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
    > পরীক্ষায় ভালো করতে হলে অবশ্যই আত্মবিশ্বাস রাখতে হবে। মনে এ বিশ্বাস রাখবেন যে, আমি ভালোভাবে সব প্রশ্নের উত্তর দিতে পারব বা আমার পরীক্ষাটা অবশ্যই ভালো হবে। একজন শিক্ষার্থীর মনেই যদি আত্মবিশ্বাস না থাকে বা আত্মবিশ্বাস কম থাকে, তাহলে পরীক্ষা নিয়ে তার মনে আগেই দুর্বলতা তৈরী হয়ে যায়। এর ফলে পড়ায় মন বসে না, মনোযোগও বাড়ে না, প্রস্তুতিও ভালো হয়না। তাই মনোযোগ বাড়াতে দরকার আত্মবিশ্বাস, যেদিকে অবশ্যই খেয়াল রাখতে হবে।
+
+8. **Translation [Bangla to English]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 431]**

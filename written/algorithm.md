@@ -35,15 +35,19 @@ for i in N:
 
 4. **(b) Write down the selection sort algorithm. Find out the best case, average case, and worst case time completely.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1448]**
 
-5. **(b) What is heap sort? Build a heaptree from the following list of numbers: [44, 30, 50, 22, 60, 55, 77, 55]** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+5. Explain the **QuickSort** algorithm with an example. Analyze its best-case, average-case, and worst-case time complexities. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
 
-6. **a) Why is Merge Sort preferred over Quick Sort in certain applications, despite having higher space complexity?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1346]**
+6. **Sort the following array using Insertion sort. 14, 33, 27, 10, 35, 19, 48, 44.** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1334]**
 
-7. **b) Suppose you have a list of items: 41, 25, 87, 57, 80, 79, 19, 36, 42, 7. Using Quick Sort algorithm sort this list. You should explain each step.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1346]**
+7. **Sort this array using merge sort 12, 45, 23, 6, 80, 20.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
-8. **Implementation of Insertion sort, Selection sort, Bubble sort.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1325]**
+8. **What is the worst-case time and space complexity of quicksort? Briefly explain how this worst-case behavior can occur.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 428]**
 
-9. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
+## Heap & Priority Queue
+
+1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
+
+2. **Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 427]**
 
 ## Dynamic Programming & Greedy Algorithms
 

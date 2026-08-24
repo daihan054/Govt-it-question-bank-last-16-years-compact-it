@@ -8,6 +8,8 @@
 
 4. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 297]**
 
+5. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 420]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
@@ -17,6 +19,8 @@
 ## Linked List
 
 1. **Explain with proper example of singly linked list.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
+
+2. **Explain the difference between a singly linked list and a doubly linked list data structure.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 426]**
 
 ## Tree
 

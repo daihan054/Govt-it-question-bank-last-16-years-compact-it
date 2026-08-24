@@ -73,6 +73,8 @@
 
 19. **Write a C Program Find sum of the series: 1+2+4+7+11+..........+N** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 295]**
 
+20. **Write a function which receives an array of integers as parameter and print the numbers divisible by 3 in the array.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 428]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

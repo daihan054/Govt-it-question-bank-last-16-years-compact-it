@@ -31,3 +31,11 @@
 ## Sensor Circuits & Automated Control Systems
 
 1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
+
+## Circuit Theorems (Thevenin, Norton, Superposition)
+
+1. **Find current across 2 \Omega resistor using Thevenin Theorem:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 417]**
+
+## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)
+
+1. **You are required to convert a 12-bit digital number to an analogue voltage over the voltage range of 0 to 3.3V with a Digital-to-Analogue Converter (DAC). What is the resolution of the analogue output?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 419]**

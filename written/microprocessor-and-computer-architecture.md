@@ -44,6 +44,8 @@
 
 3. **Write advantage and disadvantage of direct mapping and associative mapping between cache memory and main memory.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1330]**
 
+4. **How many total bits are required for a direct mapped cache with 16KB of data and 4-word blocks? Assuming a 32 bit address?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 421]**
+
 ## Memory Hierarchy & Storage
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
