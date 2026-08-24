@@ -90,6 +90,8 @@
 
 3. **Name of few architecture in design pattern.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 503]**
 
+4. **What is software design pattern? What are the advantages?** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 471]**
+
 ## CI/CD & DevOps Methodologies
 
 1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

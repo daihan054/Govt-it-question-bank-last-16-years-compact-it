@@ -309,3 +309,7 @@ int main() {
 **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 522]**
 
 7. **What is function?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
+
+8. **Write a C/C++ program to calculte factorial of N using recursive function.** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
+
+9. **Write the recursive function of the below problem and find the recurrence relation of the function. F(n) = 1+2+3+..........+(n-1)+n** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**

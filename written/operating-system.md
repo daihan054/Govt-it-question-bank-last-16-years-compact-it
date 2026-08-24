@@ -68,6 +68,15 @@ int main(int argc, char *argv[]){
 
 9. **UNIX command with example: File move, Change Directory and search from a specific line.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 500]**
 
+10. **Write appropriate linux command:**
+| Questions |
+|---|
+| Show hidden files and directories |
+| Delete a directory and its file |
+| Prints last five lines of a text file |
+| Download a file from an URL |
+**(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 474]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
@@ -247,6 +256,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 9. **What is deadlock? Draw its diagram.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
 
 10. **(ক) Deadlock কী? Deadlock Handling করার বিভিন্ন উপায়সমূহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 413]**
+
+11. **What are the four necessary condition of deadlock in an operating system?** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
 
 ## File Systems & Disk Management
 

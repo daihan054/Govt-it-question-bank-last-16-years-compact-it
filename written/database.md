@@ -223,17 +223,21 @@ ORDER BY average_salary DESC;
 
 31. **SQL Query.....** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]**
 
+32. **Consider the employee tables: Create a SQL view that shows the details of Employee information who have the salary equivalent to the maximum, minimum and average salary of employee.** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 473]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
 
-2. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+2. **What are the ACID properties of transaction to ensure data reliability and integrity?** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
 
-3. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+3. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
-4. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+4. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
-5. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
+5. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+6. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
 
 ## Normalization & Database Design
 
