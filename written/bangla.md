@@ -18,6 +18,8 @@
 
 9. **Focus Writing in Bangla** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 431]**
 
+10. **শিক্ষাবিস্তারে গণমাধ্যমের ভূমিকা।** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -88,6 +90,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
    > Capacity development in banking is crucial as the industry faces evolving challenges and opportunities in a rapidly changing landscape. It encompasses enhancing the knowledge, skills, and capabilities of banking professionals to effectively navigate complex financial environments. This includes training in areas such as financial literacy, risk management, regulatory compliance, and technological proficiency. As banks integrate advanced technologies, and digital banking solutions, there is a growing need for specialized expertise to harness these tools for operational efficiency and customer service enhancement. Capacity development initiatives also focus on leadership development, fostering strategic thinking and decision-making abilities among senior executives to steer banks through economic uncertainties and competitive pressures.
 
 11. **অনুবাদ সংক্রান্ত প্রশ্নাবলি।** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+12. **English to Bangla Translation** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 

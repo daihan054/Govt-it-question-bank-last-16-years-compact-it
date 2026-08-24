@@ -54,6 +54,8 @@
 
 1. **What should be checked before buying servers?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 318]**
 
+2. **Scenario based descriptive question for server related problem ( How do you handle those problem for your company )** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+
 ## Data Center Infrastructure & Power Management
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 305]**

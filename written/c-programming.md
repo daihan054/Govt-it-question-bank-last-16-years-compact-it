@@ -141,6 +141,8 @@ int main() {
 }
 ```
 
+30. **Write a program for following sequence and analyze complexity of the program** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 522]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -240,3 +242,18 @@ int main() {
     return 0;
 }
 ```
+
+6. **Find the output of following program:**
+```c
+int F(n) {
+    if n == 0
+    return 0;
+    if n == 1
+    return 1;
+    return F(n-2)+F(n-1);
+}
+int main() {
+    result F(5);
+}
+```
+**(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 522]**

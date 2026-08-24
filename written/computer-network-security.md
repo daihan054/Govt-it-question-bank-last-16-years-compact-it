@@ -52,6 +52,8 @@
 
 5. **Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps would you take to mitigate the threats?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 332]**
 
+6. **Write down the 10 most Cyber attacks. Difference among Black Hat hacker, Grey hat hacker and white hat hacker.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 526]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -71,19 +73,23 @@
 
 5. **Different types of network firewalls. Explain NGFW compared to traditional firewall.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 301]**
 
+6. **What is Firewall? Discuss about different types of Firewall.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 528]**
+
 ## Authentication & Access Control
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
 2. **টু-ফ্যাক্টর অথেনটিকেশন এবং ডিজিটাল সিগনেচার দিয়ে ডেটার সুরক্ষা কীভাবে করা হয়?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
-3. **ডিজিটাল সিগনেচার (Digital Signature) কী? এর কার্যকারিতা ব্যাখ্যা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+3. **Difference between Digital signature and Digital certificate.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 527]**
 
-4. **(a) What is 2-factor authentication? Describe it with an example.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+4. **ডিজিটাল সিগনেচার (Digital Signature) কী? এর কার্যকারিতা ব্যাখ্যা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
-5. **Write down the full form of LDAP?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+5. **(a) What is 2-factor authentication? Describe it with an example.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
 
-6. **Your bank has an online banking system and this process is performed by sending OTP in mobile or OTP in mail when a customer transfers money from a mobile banking app or online. This is a secured policy. Without this biometric policy, how can you more secure your online banking? Explain your strategy.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 306]**
+6. **Write down the full form of LDAP?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+7. **Your bank has an online banking system and this process is performed by sending OTP in mobile or OTP in mail when a customer transfers money from a mobile banking app or online. This is a secured policy. Without this biometric policy, how can you more secure your online banking? Explain your strategy.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 306]**
 
 ## Security Protocols (SSL/TLS, HTTPS)
 

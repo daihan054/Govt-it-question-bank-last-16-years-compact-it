@@ -72,6 +72,8 @@
 
 11. **(খ) Spiral Model চিত্রসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
 
+12. **Which SDLC do you prefer between Agile and waterfall model explain with example.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 522]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

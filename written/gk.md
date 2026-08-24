@@ -94,6 +94,8 @@
 
 47. **As per the declaration of the government, Bangladesh will turn into 'Smart Bangladesh' by which year?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
 
+48. **Who got independence award 2023?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -165,6 +167,12 @@
 29. **On 17 November 2015, UNESCO declared International Day for Universal Access to Information. Which day is observed as International Information Day?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 429]**
 
 30. **Which campaign works toward building an international consensus and a sustained global movement of leaders and citizens to eliminate nuclear weapons?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
+
+31. **How many country participated in cricket world cup 2023?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+
+32. **How many goals of SDG?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+
+33. **What is the function of Global Climate Fund?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
 ## Everyday Science & Environment
 

@@ -21,6 +21,8 @@ Approach A: Deploy each service in a separate Virtual Machine.
 Approach B: Deploy each service in a separate Container.
 A submarine cable connects Bangladesh to an international data center. At the cable landing station, a server hosts 4 VMs, while another server runs 4 containers. Which one and why? [BSCCPL AME 21-08-2026 (BUET)]
 
+2. **What is Virtualization? Write down the benefits of Virtualization. Write down the top 5 virtual platform software.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+
 ## High Availability & System Redundancy
 
 1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.

@@ -46,6 +46,8 @@ class Test {
 
 11. **(খ) Function Overloading উদাহরণসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
 
+12. **Write down the advantages of OOP over traditional structured programming language** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 527]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**

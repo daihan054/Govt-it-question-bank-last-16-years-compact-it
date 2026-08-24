@@ -196,6 +196,18 @@ Write down an SQL query to display the total number of patients under each disea
 
 27. **SQL Query.....** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 592]**
 
+28. **Analize the following code:**
+```sql
+SELECT department_name, AVG(salary) as average_salary
+FROM employees
+JOIN department d ON e.department_id = d.department_id
+WHERE salary > (SELECT AVG(salary) FROM employees )
+GROUP BY department_name
+HAVING COUNT(*) > 2
+ORDER BY average_salary desc
+```
+**(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 521]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

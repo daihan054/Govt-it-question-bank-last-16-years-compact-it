@@ -10,6 +10,8 @@
 
 5. **What are the different types of transmission media used for data communication? Explain their advantages and disadvantages.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 326]**
 
+6. **Difference between Guided and Unguided media. Difference between STP and UTP. Why using benefit UTP instead of STP?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
+
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
 1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
@@ -98,6 +100,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 5. **3-way handshake protocol for TCP connection using diagram.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 403]**
 
 6. **Write a TCP/UDP used service name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+7. **Difference between TCP and UDP. Distinguish between Cat5 and Cat6. Difference among exFAT, FAT32 and NTFS.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
 
 ## Communication System & Transmission Modes
 
@@ -304,6 +308,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 7. **Which routing protocol use Dijkstra Algorithm?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
+8. **What is Routing? Explain different types of Routing? Why using benefit of an Adhoce routing? Which routing algorithm is used in shortest path algorithm?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 525]**
+
 ## High Availability & Redundancy Protocols (VRRP, HSRP)
 
 1. **State the network protocol of VRRP?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1359]**
@@ -315,6 +321,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **Briefly describe the following network devices: Repeater, Hub, Bridge, Switch and Router.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 325]**
 
 3. **How many collision domians are created when you segment a network with a 12-port switch?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+4. **Difference among Switch, Bridge and Router.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 524]**
 
 ## VLANs & Subnetting Comparison
 
