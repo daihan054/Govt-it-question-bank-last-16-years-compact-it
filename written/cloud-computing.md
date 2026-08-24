@@ -23,6 +23,8 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 2. **What is Virtualization? Write down the benefits of Virtualization. Write down the top 5 virtual platform software.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
+3. **What is Server Virtualization? Explain with example of its.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 551]**
+
 ## High Availability & System Redundancy
 
 1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.

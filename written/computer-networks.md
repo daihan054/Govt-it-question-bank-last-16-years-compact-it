@@ -115,6 +115,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 2. **How many types of modes are used in data transferring through networks? Briefly explain those modes. Differentiate between TCP vs UDP.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
 
+3. **Distinguish between Synchronous and Asynchronous transmission.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
+
 ## Switching Techniques (Circuit vs Packet Switching)
 
 1. **Difference between circuit switching and packet switching. Identify which of the two is predominantly used in Internet communication and justify why?** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1435]**
@@ -352,6 +354,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
 
+2. **What is VLAN? Difference between static and dynamic VLAN.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
+
 ## Network Address Translation (NAT)
 
 1. Network Address Translation (NAT) maps internal networks to the public internet.
@@ -361,6 +365,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **Connection between Public IP to Private IP is called __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 3. **What is NAT? Explain with topological diagram.** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 589]**
+
+4. **Explain NAT? Differenc between IPv4 and IPv6.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 
@@ -383,6 +389,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
    * (a) Mention the protocol of application layer and transport layer.
    * (b) Write down the steps of Mail transfer from Afsana to Sinthia.
+
+2. **Difference between: (i) SMTP and SNMP (ii) HTTP and HTTPs** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 

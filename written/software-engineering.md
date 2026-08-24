@@ -121,3 +121,7 @@
 ## IT Governance, Audit & Risk Management
 
 1. **Difference between: Policy, Guideline, Procedure; why auditor must focus on control as a system? Explain four types of risks auditor faces, Explain each of theme.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 310]**
+
+## Open Source Software & Licensing
+
+1. **Write down the advantages and disadvantages of Open source software with example.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
