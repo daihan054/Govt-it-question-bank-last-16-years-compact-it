@@ -34,6 +34,18 @@
 
 12. **Write a C program to find sum of: $X - \frac{X^3}{3!} + \frac{X^5}{5!} - \frac{X^7}{7!} \dots N$** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 397]**
 
+13. **Salary Range and Tax Calculation are given:**
+
+| Salary Range | Tax |
+|---|---|
+| 0-250000 | 0 |
+| 250001-5000000 | 10% |
+| 500001-100000 | 20% |
+| >10,00000 | 30% |
+
+   * **a. Write a program using any language to the calculate the total tax of employee.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 290]**
+   * **b. From the three employee salary find the highest tax paying employee.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 290]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

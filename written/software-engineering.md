@@ -65,3 +65,11 @@
 1. **Write concepts of Coupling and Cohesion with Example?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
 
 2. **Software design table matching.......** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
+
+## Software Cost Estimation & Build vs Buy Decisions
+
+1. **If you are CEO of a software company. You need to develop an ERP software from following three options (i) Buy (ii) Build (iii) Open Source Modification**
+   * **a) Buy: Buy a software with cost 50 lac.**
+   * **b) Building: Developed by developer cost 40 lac for easy process. 50 lac for hard process. Possibility is 30% to develop in easy process.**
+   * **c) Open Source and Modification: Buy and small modifications cost 30 lac, for large modifications cost 50 lac. Possibility is 80% for large.**
+   **What way you choose and why? Explain with calculation.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 292]**

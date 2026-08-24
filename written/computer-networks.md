@@ -198,6 +198,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 28. **What is the primary motivation for classful IP address to classless IP addressing?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 316]**
 
+29. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 292]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
@@ -270,3 +272,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
    * (a) Mention the protocol of application layer and transport layer.
    * (b) Write down the steps of Mail transfer from Afsana to Sinthia.
+
+## Digital Modulation & Signal Processing (BPSK, QPSK)
+
+1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
