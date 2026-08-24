@@ -89,3 +89,7 @@
 ## Sequential Circuits (Latches & Flip-Flops)
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
+
+## Finite State Machines (FSM)
+
+1. **A traffic signal cycles from RED to YELLOW, YELLOW to GREEN and GREEN to RED. In each cycle RED is turned for 100 seconds, YELLOW is turned for 40 seconds and GREEN is turned for 80 seconds. The traffic has to be implemented using FSM. The only input to this FSM is a clock of 10 second period. The minimum number of flip-flops require to implement this FSM is?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1455]**

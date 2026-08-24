@@ -347,3 +347,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 
 1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
+
+## Wireless Networks & IoT (mmWave)
+
+1. **What is the use of mmWave in IoT?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**

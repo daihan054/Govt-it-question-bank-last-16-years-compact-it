@@ -38,6 +38,8 @@
 
 7. **How to represent binary tree using array?** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 378]**
 
+8. **You are given a binary tree (a, b, c, d, e, f, g, h, i) nodes. The post order of the binary tree is: a b f c h d e g i nodes. Now draw the binary tree and show the array representation of this binary tree.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1457]**
+
 ## Binary Search Tree (BST)
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**

@@ -93,6 +93,16 @@ int main() {
 }
 ```
 
+25. **Given a code with a variable value "a=85" and finds its output a=85**
+```c
+if a>=90 point A;
+if a>=80 point B;
+if a>=70 point C;
+if a>=60 point D;
+else print F;
+```
+**(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

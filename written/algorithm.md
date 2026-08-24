@@ -47,6 +47,8 @@ for i in N:
 
 9. **Why Quick sort worst complexity in O(n^2)? Explain with example.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1458]**
 
+10. **In a quicksort algorithm taking the first element as a pivot element. Now Analyze the time complexity of the quicksort algorithm when all services of the quicks sort algorithm are already sorted.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1455]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**

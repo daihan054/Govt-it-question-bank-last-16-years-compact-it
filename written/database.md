@@ -185,6 +185,15 @@ Write down an SQL query to display the total number of patients under each disea
    * **(a) Find out the names of the manager for each employee:**
    * **(b) Sort the employees total salary of each department based on salary in descending order.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 431]**
 
+26. **Given Four table:**
+   * **Employee (empno(PK), empname, monthlysalary, deptno, mqrnd(FK))**
+   * **Department(deptno, deptname, deptlocation)**
+   * **Course(erscode(pk) erd dese, ers category, ers duration)**
+   * **Offering (of begingate, erscode fk, offeringlocation, empno fk)**
+   **Write query for:**
+   * **(a) Find Departments with Average Monthly Salary Greater than 1000.**
+   * **(b) Find Courses with More Than 2 Offerings.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1456]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

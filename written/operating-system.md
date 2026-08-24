@@ -6,6 +6,8 @@
 
 3. **Explain how can multiprogramming be achieved on a uniprocessor system?** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 379]**
 
+4. **Write the difference between shell and kernel?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]

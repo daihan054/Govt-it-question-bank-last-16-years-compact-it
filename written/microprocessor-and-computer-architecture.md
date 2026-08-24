@@ -90,6 +90,8 @@
 
 4. **Concept of RAID, Relevance in Database, Uses in Database, is it possible?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
 
+5. **How to solve drive failure in RAID?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
+
 ## CPU Performance & Instruction Cycle
 
 1. **There was a CPU cycle math** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 400]**

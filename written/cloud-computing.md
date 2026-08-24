@@ -28,3 +28,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 ## Cloud Security & Compliance
 
 1. **How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
+
+## Edge Computing & Fog Computing
+
+1. **What is the need of edge server?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1455]**
