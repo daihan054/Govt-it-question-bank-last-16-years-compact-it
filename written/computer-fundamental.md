@@ -48,6 +48,8 @@
 
 2. **What is the name of molecular scale computer?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
+3. **Write about Blockchain.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 506]**
+
 ## Server Hardware & Enterprise Systems
 
 1. **What should be checked before buying servers?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 318]**

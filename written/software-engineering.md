@@ -72,6 +72,14 @@
 
 11. **(খ) Spiral Model চিত্রসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
 
+## Software Architecture & Design Patterns (MVC)
+
+1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
+
+2. **What is MVC? Write down the MVC design pattern.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 502]**
+
+3. **Name of few architecture in design pattern.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 503]**
+
 ## CI/CD & DevOps Methodologies
 
 1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

@@ -61,6 +61,8 @@ for i in N:
 
 2. **(খ) Greedy Method ও Dynamic Algorithm এর মধ্যে পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**
 
+3. **Write down the difference between Divide and Conquer and Dynamic Programming.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 505]**
+
 ## Divide and Conquer & Matrix Multiplication
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 378]**

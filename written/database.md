@@ -232,6 +232,8 @@ Write down an SQL query to display the total number of patients under each disea
 
 6. **(ক) Normalization কী? কত প্রকার ও কী কী? ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
+7. **What is database Normalization? Write down the types of database Normalization.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 504]**
+
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
@@ -289,6 +291,8 @@ Write down an SQL query to display the total number of patients under each disea
 1. Difference Between Primary Key, Foreign Key, Candidate Key. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
 2. **(a) Define RDBMS. Explain the different key and primary key, candidate key, super key, and foreign key DBMS.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1445]**
+
+3. **Difference between primary key, foreign key? What is trigger?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 502]**
 
 ## Indexing in DBMS
 

@@ -10,6 +10,8 @@
 
 5. **What type of key used for decrypt message of PKI?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
+6. **Breifly Explain Asymmetric encryption.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
