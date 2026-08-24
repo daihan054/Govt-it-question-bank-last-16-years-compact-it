@@ -79,6 +79,9 @@
 
 22. **Write a program that take a number as input and output should be sum of digits of that number using python/C also draw its flow chart.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
 
+23. **Find the output from the following: take input and looks the output:**
+   **Suppose Input: 6789; Output: 9876** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 379]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

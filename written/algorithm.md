@@ -57,6 +57,10 @@ for i in N:
 
 1. **State the Principle of Optimality in Dynamic Programming. How does it distinguish Dynamic Programming from Greedy Algorithms?** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1420]**
 
+## Divide and Conquer & Matrix Multiplication
+
+1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 378]**
+
 ## NP-Completeness & Complexity Reduction
 
 1. **A reduces to B Polynomial time. Which is better and why?** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**

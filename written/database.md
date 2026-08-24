@@ -176,6 +176,10 @@ Write down an SQL query to display the total number of patients under each disea
 
 23. **Write SQL Query For create, insert of a table Emp (id, name, designation, Dept_name, Salary). Write SQL Query that show department wise salary of Employee.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1459]**
 
+24. **Query's: Employee & department table given-**
+   * **(i) Write the employee name who got same salary named Rahim but not same job of Rahim.**
+   * **(ii) Write the employee's name who's average salary is more than company's average salary** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 380]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
