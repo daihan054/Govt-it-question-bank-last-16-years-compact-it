@@ -26,6 +26,8 @@
 
 3. **Describe how the principles of Confidentiality, Integrity, and Availability work together to protect organizational data, and provide one real-world example of a security breach where one or more of these principles were compromised.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1428]**
 
+4. **What is CIA Triad?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
+
 ## Critical Information Infrastructure (CII) & Cyber Governance
 
 1. What is CII? How many CII organizations? Name 10 CII organization name. (BEPRC Assistant Programmer Exam: 08.08.2026)

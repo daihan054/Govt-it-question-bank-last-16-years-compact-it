@@ -34,6 +34,8 @@
 
 13. **Write down the Meaning: MIME, PNG, JPGE, OSPF** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
+14. **Full meaning of : HTTPs** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -41,6 +43,8 @@
 2. **Explain BIOS in Server. How does affect booting configuration in Hardware maintenance.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 552]**
 
 3. **(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading operating system.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+
+4. **What is BIOS?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
 ## ICT in Society & Governance
 

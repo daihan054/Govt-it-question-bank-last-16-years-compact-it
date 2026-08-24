@@ -9,6 +9,8 @@
 
 4. **Difference between MSAccess and MS FoxPro in SQL.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 317]**
 
+5. **What is Database?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
