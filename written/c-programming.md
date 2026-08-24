@@ -48,6 +48,17 @@
 
 14. **Write a C program find prime number 1 to n.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
 
+15. **Write a program in any language to find the sum of rows and columns of a m \times n matrix, where m and n is taken input from the user. Give the output in the following format:**
+   **Sample Input matrix:**
+   **Sample Output:**
+   **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 331]**
+
+16. **Write a program in any language to find the prime numbers between 1.......n, where n is taken as user input.**
+   **Sample input:**
+   **Enter value of n: 20**
+   **Sample Output:**
+   **Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 332]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

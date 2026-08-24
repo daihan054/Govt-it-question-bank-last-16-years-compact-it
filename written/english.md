@@ -18,6 +18,8 @@
 
 8. **Roadside tree plantation in reducing noise pollution.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 312]**
 
+9. **Write an essay on 'Modern Technology and Its Effect on Student Academic Achievements' within 150 (+/- 10% ) words.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -115,3 +117,5 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 4. **Bengali to English:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
    * **(a)** শনিবার হতে সে অফিসে আসছে না।
    * **(b)** আপনার ব্যাংক একাউন্ট এর স্থিতি জানার জন্য মোবাইল ব্যাংকিং এপ্লিকেশন এ লগইন করুন
+
+5. **Earth Day inspires green innovation through participatory and collective action and encourages the adoption of ho sustainable practices across the financial system. It, therefore, serves as an opportunity for financial institutions to engage with their stakeholders and demonstrates their commitment to sustainable practices. Thus, Earth Day carries a deep significance in proproting sustainable and responsible financing which is an example of environmentally conscious investment practices, Positive environmental outcomes will be easily achieved if all financial sectors, stakeholders and investors alike are part of a long-term plan to improve the environmental health of this planet, along with the financial and human health. We celebrate Earth Day around the world, let us reaffirm our commitment towards building a greener, more tolerant, liveable and sustainable future for our next generations.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**

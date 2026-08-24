@@ -32,6 +32,10 @@
 
 1. **Decisiontree model in Machine Learning.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
 
+2. **What is Machine Learning? Mention some real-life applications. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]**
+
+3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 339]**
+
 ## Deep Learning & Neural Networks (ANN, CNN, RNN)
 
 1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**

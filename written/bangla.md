@@ -14,6 +14,8 @@
 
 7. **প্রকাশনার মান উন্নয়নে সু-সম্পাদিত পান্ডুলিপির ভূমিকা লিখুন।** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 312]**
 
+8. **‘তীব্র তাপদাহ হ্রাসে পরিবেশ সুরক্ষার গুরুত্ব’-এর উপর একটি রচনা লিখুন ১৫০ (+/-১০%) শব্দের মধ্যে।** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -72,6 +74,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 > A gentleman is one who never causes pain to others. This description is short, but as far as it goes is correct. He is always polite and considerate. He carefully avoids whatever may cause even a slight shock with his associates.
 
 6. **বিদ্যালয়ের সৃজনশীলতা নিয়ে অনুবাদ** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 312]**
+
+7. **বাংলাদেশে ব্যবসাপ্রতিষ্ঠান বাসাবাড়ি ও বিভিন্ন প্রকল্পে সৌরবিদ্যুৎ তথা সোলার প্যানেলের ব্যবহার দিন দিন বাড়ছে। সূর্য থেকে সোলার প্যানেল আলো শোষণ করে বৈদ্যুতিক প্রবাহ তৈরি করে, যা দিয়ে পরবর্তী সময়ে লাইট, ফ্যান প্রভৃতি চালানো যায়। সরকারের টেকসই উন্নয়ন লক্ষ্যমাত্রায় ২০৩০ সালের মধ্যে ৪ হাজার ১০০ মেগাওয়াট বিদ্যুৎ নবায়নযোগ্য উৎস থেকে উৎপাদনের পরিকল্পনা নেয়া হয়েছে। ফলে নীতিগত ও ব্যবহারিক উভয় দিক দিয়ে দেশে সৌরবিদ্যুৎ খাতের বেশ সম্ভাবনা রয়েছে। সোলার প্যানেলের মাধ্যমে বিদ্যুৎ উৎপাদন মূলত একটি পরিবেশবান্ধব প্রক্রিয়া এবং এ প্রক্রিয়ায় বিদ্যুৎ উৎপাদন করে তা জাতীয় গ্রিডে যুক্ত করা গেলে বিদ্যুৎ খরচ ২০ শতাংশ কমবে।** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 

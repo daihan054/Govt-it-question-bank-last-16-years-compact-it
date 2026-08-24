@@ -4,6 +4,8 @@
 
 2. What is cloud computing? Mention its service models. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
+3. **What is SaaS and multi-tenant architecture? How are they related? What are the advantages and disadvantages of multi-tenancy? For a multi-vendor e-commerce application, you can choose a database architecture where you can put all the vendors in a single database or each vendor in a separate database. Which architecture will you follow and why?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 328]**
+
 ## Cloud Storage & Fundamentals
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

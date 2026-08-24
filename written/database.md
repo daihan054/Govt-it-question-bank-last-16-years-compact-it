@@ -140,6 +140,28 @@ Write down an SQL query to display the total number of patients under each disea
     * **Supplier** (sid, sname, address)
     * **Product** (pid, pname, etc)
 
+19. **Let a database has two tables, Customers and Orders. The following figure shows the partial data of these two tables. Based on this partial data, explain Inner, Left, Right and Full join. Show the result set of each join operation.**
+
+**Table: Customers**
+| ID | First name |
+|---|---|
+| 1 | Rahim |
+| 2 | Karim |
+| 3 | Belal |
+| 4 | Rony |
+| 5 | Helal |
+
+**Table: Orders**
+| Order id | Amount | Customer id |
+|---|---|---|
+| 1 | 200 | 10 |
+| 2 | 500 | 3 |
+| 3 | 300 | 6 |
+| 4 | 800 | 5 |
+| 5 | 150 | 8 |
+
+**(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 335]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -190,9 +212,33 @@ Write down an SQL query to display the total number of patients under each disea
 
 2. **Database Data Loss based case study type question......** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
 
+3. **What do you understand about the IT disaster recovery plan? Describe your approach to disaster recovery and business continuity planning for the data centre of your office.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 333]**
+
 ## Indexing & Query Optimization (B-Tree, B+ Tree)
 
 1. **How indexing improve query performance?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
+
+2. **Briefly describe primary key, foreign key and indexing in relational database and their relationship. Do you think database indexing always makes applications faster? Explain your answer.**
+
+**Table Name: STUDENT**
+| Stu_Id | Stu_Name | Stu_Age |
+|---|---|---|
+| 101 | Steve | 23 |
+| 102 | John | 24 |
+| 103 | Robert | 28 |
+| 104 | Steve | 29 |
+
+**Course_enrollment table:**
+| Course_Id | Stu_Id |
+|---|---|
+| C01 | 101 |
+| C02 | 102 |
+| C03 | 101 |
+| C05 | 102 |
+| C06 | 103 |
+| C07 | 102 |
+
+**(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 337]**
 
 ## Relational Data Model & ER Relationships
 

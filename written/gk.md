@@ -78,6 +78,10 @@
 
 39. **বাংলাদেশের বিদ্যুৎ বিতরণ কোম্পানি গুলোর নাম লিখ?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
 
+40. **What is Padma Shri Award? Mention the name of Renowned Bangladeshi singer who has recently got the Padma Shri Award.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
+
+41. **Mention the name of the First Governor of Bangladesh Bank.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 323]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -137,6 +141,12 @@
 23. **পেট্রা শহরটি কোথায় অবস্থিত এবং এটি কারা নির্মাণ করে?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
 
 24. **বাংলাদেশের কোন নাগরিক লন্ডনের মেয়র নির্বাচিত হয়েছে এবং তিনি কতবার হয়েছে?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+25. **What is BIMSTEC?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
+
+26. **Mention the day and month of celebration of International Mother's Day.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
+
+27. **Who will host the T20 World Cup 2024?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 323]**
 
 ## Everyday Science & Environment
 

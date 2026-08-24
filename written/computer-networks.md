@@ -8,6 +8,8 @@
 
 4. **What is the connector name copper cable in LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
+5. **What are the different types of transmission media used for data communication? Explain their advantages and disadvantages.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 326]**
+
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
 1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
@@ -82,6 +84,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+2. **How many types of modes are used in data transferring through networks? Briefly explain those modes. Differentiate between TCP vs UDP.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
 
 ## Switching Techniques (Circuit vs Packet Switching)
 
@@ -208,6 +212,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 31. **Write down the Public and Private IPv4 address for Class A, Class B and Class C.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
 
+32. **(b) What is a subnet? What benefits will you get using subnets for this office?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 324]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
@@ -246,6 +252,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## Networking Devices
 
 1. Describe the functions of a Switch and a Router and explain two key differences between these networking devices. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+
+2. **Briefly describe the following network devices: Repeater, Hub, Bridge, Switch and Router.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 325]**
 
 ## VLANs & Subnetting Comparison
 
