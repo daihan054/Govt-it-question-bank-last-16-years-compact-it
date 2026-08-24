@@ -93,6 +93,10 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 12. **English to Bangla Translation** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
+13. **Translate the following passage from English to Bangla:**
+    > To become a good person is the most important thing for a person. He must try to be honest, just and kind in his personal life. This is his main duty. It is not difficult to understand the reason for this. The welfare of a state or a city depends largely on the moral character of its citizens.
+    **(Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor Exam: 04.08.2023) [compact it 599]**
+
 ## এক কথায় প্রকাশ (One Word Substitution)
 
 1. **এক কথায় প্রকাশ: ৫ টি?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
