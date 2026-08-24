@@ -62,6 +62,22 @@
 
 31. **Brief the work functionality of ECNEC.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
 
+32. **৬ দফার দ্বিতীয় দফা কি ছিল?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+33. **মাথাপিছু বিদ্যুৎ শক্তির ফর্মুলা লিখুন।** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+34. **দেশে বর্তমানে মাথাপিছু বিদ্যুৎ শক্তি কত?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+35. **বাংলাদেশ থেকে কোন নদী ভারতে প্রবেশ করে পুনরায় বাংলাদেশে প্রবেশ করেছে?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+36. **এশিয়ার সর্ববৃহৎ প্রাকৃতিক মৎস্য প্রজনন কেন্দ্র কোনটি এবং এটি কোন বিভাগে অবস্থিত?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+37. **বাংলাদেশ ভারত থেকে কত মেগাওয়াট বিদ্যুৎ আমদানি করে এবং সেটি দেশে কোন দিক দিয়ে প্রবেশ করে?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+38. **দেশের সর্বোচ্চ বিদ্যুৎ উৎপাদন কত এবং সেটি কবে হয়েছে?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+39. **বাংলাদেশের বিদ্যুৎ বিতরণ কোম্পানি গুলোর নাম লিখ?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -109,6 +125,18 @@
 17. **What is the difference between a Green Economy and a Blue Economy?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
 
 18. **Concept of Westminster Government?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
+
+19. **Who was Sir David Attenborough?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+20. **2026 সালে ফিফা ফুটবল বিশ্বকাপ কোথায় হবে?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+21. **Carlos Ancelotti কোন দেশের কোন ক্লাবের ম্যানেজার?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+22. **টেস্ট ক্রিকেটে এখন পর্যন্ত কোন কোন বোলার 700 উইকেট লাভ করেছে?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+23. **পেট্রা শহরটি কোথায় অবস্থিত এবং এটি কারা নির্মাণ করে?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+24. **বাংলাদেশের কোন নাগরিক লন্ডনের মেয়র নির্বাচিত হয়েছে এবং তিনি কতবার হয়েছে?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
 
 ## Everyday Science & Environment
 

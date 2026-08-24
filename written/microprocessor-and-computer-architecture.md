@@ -63,3 +63,7 @@
 3. **Which RAID level is best and why?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
 
 4. **Concept of RAID, Relevance in Database, Uses in Database, is it possible?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
+
+## CPU Performance & Instruction Cycle
+
+1. **There was a CPU cycle math** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 400]**

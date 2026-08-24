@@ -57,6 +57,8 @@
 
 3. **Bangladesh Bank have client server and the communication with Mail Server, DNS server, Web server. Bangladesh Bank want to ensure the security using firewall on those server. Draw a diagram with the scenario.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
 
+4. **What is Demilitarized Zone (DMZ) and sandbox for security test?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 398]**
+
 ## Authentication & Access Control
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -76,6 +78,8 @@
 2. **Which client is used to security cannot to a remote server?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
 3. **Ensure secure communication between a client application and the database server.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 314]**
+
+4. **Difference between HTTP and HTTPs.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 398]**
 
 ## Web Security Vulnerabilities
 

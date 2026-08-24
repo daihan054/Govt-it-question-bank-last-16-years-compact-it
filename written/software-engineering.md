@@ -4,13 +4,17 @@
 
 2. **ফরম্যাটিভ মূল্যায়ন (Formative Evaluation) বলতে কী বুঝায়?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
-3. **What is the difference between Black box and White box testing?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
+3. **Explain Verification and Validation in Software Engineering. Discuss black-box testing and white-box testing with examples.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1426]**
 
-4. **Difference between Load Testing and Stress Testing.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1360]**
+4. **Difference between Alpha tests, Beta test, gamma test in software development.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
 
-5. **A banking application requires users to enter a 4-digit PIN for login.**
- * **Explain how you would test this input field to ensure that it accepts only valid 4-digit numbers and rejects invalid inputs.**
- * **Mention a few test cases you would include and explain why such testing is important for system security and reliability.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1429]**
+## UML Diagrams (Class, Use Case, Sequence)
+
+1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
+
+2. Draw a Use Case Diagram for an Online Banking System with two actors: Customer and Bank Admin. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+3. **Draw a class diagram for an E-commerce website where customer can view different products, can pay either by card or cash.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 401]**
 
 ## Software Requirements Engineering
 

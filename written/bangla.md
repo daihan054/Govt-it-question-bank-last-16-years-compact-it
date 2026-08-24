@@ -102,3 +102,9 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 6. **(ক) ভাষায় উপসর্গ ও অনুসর্গ কীভাবে কাজ করে আলোচনা করুন।** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
 **(খ) বানানের নিয়মসহ প্রমিত রূপে লিখুন:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
 > অংক, সুসম, ইংরেজী, মনযোগ, পদাবলী।
+
+7. **বাগধারার অর্থ : গৌরচন্দ্রিকা, দিল্লি কা লাড্ডু** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+8. **রক্তাক্ত প্রান্তরের রচয়িতা কে এবং এর প্রেক্ষাপট কি?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+9. **পাঁচটি করে প্রতিশব্দ লিখুন : ভুল, কপালরর** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
