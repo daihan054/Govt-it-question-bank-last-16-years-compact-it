@@ -24,6 +24,8 @@
 
 3. **Find the sets X and Y if X \cup Y = \{1, 2, 3, 5, 6, 8, 9, 10\}, X \cap Y = \{1, 5\} and Y - X = \{2, 6, 9, 10\}.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 419]**
 
+4. **১ থেকে ১০০ পর্যন্ত কয়টি সংখ্যা রয়েছে যা ৩ ও ৪ দ্বারা বিভাজ্য নয়?** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 382]**
+
 ## Percentage, Profit & Loss, Simple & Compound Interest
 
 1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**

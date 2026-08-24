@@ -9,6 +9,8 @@
 
 3. **ডেসিমেল ৬১ এর বাইনারি মান কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
+4. **$(\text{CDAB})_{16}$ কে অক্টাল এ রূপান্তর কর।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
+
 ## Karnaugh Map (K-Map)
 
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
@@ -75,6 +77,8 @@
 ```
 
 7. **Truth Table from the following circuit (2-bit input A, B full adder with carry bit C_{in}).** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 314]**
+
+8. **একটি 2:4 ডিকোডার ও একটি OR গেট ব্যবহার করে একটি হাফ এডার ডিজাইন কর।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 382]**
 
 ## Sequential Circuits (Latches & Flip-Flops)
 

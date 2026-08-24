@@ -223,6 +223,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 32. **(b) What is a subnet? What benefits will you get using subnets for this office?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 324]**
 
+33. **Local loopback address কি? কোন কমান্ড ব্যবহার করে কানেক্টিভিটি টেস্ট করা হয়?** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 383]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]

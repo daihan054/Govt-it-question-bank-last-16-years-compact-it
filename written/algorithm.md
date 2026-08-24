@@ -73,6 +73,8 @@ for i in N:
 
 2. **(a) Apply the Kruskal's algorithm for the following graph to find out the cost of the minimum spanning Tree (MST).** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
 
+3. **Shortest path বের করা : Dijkstra's Algorithm** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 383]**
+
 ## Greedy Algorithms (Fractional Knapsack)
 
 1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।

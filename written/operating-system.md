@@ -118,6 +118,8 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 5. **The __________ swaps process in and out of the memory.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+6. **Difference between Paging and Segmentation.** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 383]**
+
 ## Virtual Memory & Page Replacement (Thrashing)
 
 1. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**
@@ -153,3 +155,5 @@ The content of the matrix. Need is defined to be Max – Allocation.
 6. **(a) Explain Circular wait deadlock.** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 415]**
 
 7. **Give the necessary conditions for deadlock to occur. Is it possible to have deadlock involving only a single process? Explain your answer.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 422]**
+
+8. **Deadlock এর চারটি শর্ত লিখ।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**

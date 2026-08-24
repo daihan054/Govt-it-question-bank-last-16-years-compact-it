@@ -224,6 +224,8 @@ Write down an SQL query to display the total number of patients under each disea
 
 3. **What do you understand about the IT disaster recovery plan? Describe your approach to disaster recovery and business continuity planning for the data centre of your office.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 333]**
 
+4. **একটি MySQL database এর ডাটা ব্যাক আপ ও ব্যাক আপ করা ডাটা রিস্টোর করার কমান্ড লিখ।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 382]**
+
 ## Indexing & Query Optimization (B-Tree, B+ Tree)
 
 1. **How indexing improve query performance?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
