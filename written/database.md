@@ -198,11 +198,13 @@ Write down an SQL query to display the total number of patients under each disea
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
 
-2. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+2. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
-3. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+3. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
-4. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
+4. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+5. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
 
 ## Normalization & Database Design
 
@@ -227,6 +229,8 @@ Write down an SQL query to display the total number of patients under each disea
    * (b) Show that is the schema and state that why your schema is in good form.
 
 5. **What is Normalize a database? Used containers if needed, draw an ER Diagram.** **[See WZPGCL, Assistant Engineer (CSE), Exam: 27.05.2023]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 315]**
+
+6. **(ক) Normalization কী? কত প্রকার ও কী কী? ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
@@ -297,6 +301,11 @@ Write down an SQL query to display the total number of patients under each disea
 2. **(a) Design an ER diagram for a library management systems where-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1349]**
    * **(i) A library has multiple books.**
    * **(ii) Each book can have multiple copies.**
+
+3. **(খ) নিচের ডেটাবেস অনুযায়ী ER ডায়াগ্রাম তৈরি করুন :** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+   * **Worker** (Worker ID, Worker Name, Hour Rate, Skill Type)
+   * **Assignment** (Worker ID, Building ID, Start Date, Num Days)
+   * **Building** (Building ID, Address, Building Type)
 
 ## Database Connectivity (JDBC)
 

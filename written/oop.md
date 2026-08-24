@@ -44,6 +44,8 @@ class Test {
 
 10. **Explain how encapsulation and inheritance are advantageous in object oriented programming.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 420]**
 
+11. **(খ) Function Overloading উদাহরণসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**
@@ -62,6 +64,8 @@ public:
     myclass (int i) {num = i;}
 };
 ```
+
+2. **(ক) Friend Function কী? উহার সুবিধা অসুবিধাগুলো লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
 
 ## Interfaces & Abstract Classes
 

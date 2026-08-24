@@ -26,6 +26,17 @@
 
 2. **What is URL? Give an Example.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
 
+3. **(খ) নিচের টেবিলটি তৈরি করার জন্য HTML কোড লিখুন :** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 413]**
+
+| Std name | Compulsory | Optional |
+|---|---|---|
+| Hasan | Bangla | English | ICT | Math |
+| Nafis | Bangla | English | ICT | Biology |
+
+## CSS & Styling (Inline, Internal, External)
+
+1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**
+
 ## Full Stack & Backend Web Development
 
 1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 320]**

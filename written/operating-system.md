@@ -164,6 +164,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 6. **Difference between Paging and Segmentation.** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 383]**
 
+7. **(ক) Swapping কী? Internal এবং External Fragmentation এর মধ্যে পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 414]**
+
 ## Virtual Memory & Page Replacement (Thrashing)
 
 1. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**
@@ -179,6 +181,8 @@ All process arrived at time 0. Lower number has higher priority.
 1. **(b) What is process? Describe different states of a process.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
 
 2. **(c) Define context switch with proper example.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
+
+3. **(খ) Process কী? বিভিন্ন ধরনের Process state এর কাজ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 414]**
 
 ## Process Synchronization & Concurrency
 
@@ -207,6 +211,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 8. **Deadlock এর চারটি শর্ত লিখ।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
 
 9. **What is deadlock? Draw its diagram.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
+
+10. **(ক) Deadlock কী? Deadlock Handling করার বিভিন্ন উপায়সমূহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 413]**
 
 ## File Systems & Disk Management
 
