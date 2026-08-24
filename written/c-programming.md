@@ -201,6 +201,11 @@ return 0;
    ```
    **b) Write a C or C++ Program to print an array of five fruits.**
 
+38. **Write a program in any language that takes two matrices A and B as inputs ensure your code handles matrices of different dimensions—**
+   **A) Find matrices C that is multiplication A and B.**
+   **B) Find average in A and B.**
+   **C) Max from matrices C** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 515]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

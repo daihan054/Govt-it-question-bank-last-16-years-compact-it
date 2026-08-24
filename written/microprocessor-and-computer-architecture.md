@@ -22,6 +22,8 @@
 
 7. **Discuss the factors that affect the Speed of a CPU.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 541]**
 
+8. **Difference between 32 bit Microprocessor and 64 bit Microprocessor with example. What is the meaning of 2.40GHz Microprocessor? Differentiate among Core Intel i3, i5 and i7 processor. Why do you prefer SSD instead of HD?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 508]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -79,6 +81,8 @@
 5. **কম্পিউটার স্মৃতি বলতে কী বোঝায়? কম্পিউটারের স্মৃতির শ্রেণিবিভাগ আলোচনা করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 405]**
 
 6. **Write down the difference between RAM and ROM.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+
+7. **Differentiate among CPU register, Cache memory, Main memory and Secondary memory.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 510]**
 
 ## Secondary Storage (HDD vs SSD)
 

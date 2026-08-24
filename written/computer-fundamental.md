@@ -2,6 +2,8 @@
 
 1. Differentiate between system software and application software. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
+2. **What is platform independent software discuss with example?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 514]**
+
 ## User Interfaces (CLI vs GUI)
 
 1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -67,6 +69,8 @@
 2. **What is blockchain technology? Why it is more secure( Such type)** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 500]**
 
 3. **Write about Blockchain.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 506]**
+
+4. **What is Blockchain? How does work it? Mention 5 top benefits of blockchain. Write down the difference between Traditional banking and Digital banking.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 513]**
 
 ## Server Hardware & Enterprise Systems
 

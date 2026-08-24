@@ -291,6 +291,10 @@ ORDER BY average_salary DESC;
 
 4. **একটি MySQL database এর ডাটা ব্যাক আপ ও ব্যাক আপ করা ডাটা রিস্টোর করার কমান্ড লিখ।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 382]**
 
+5. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**
+
+6. **To achieve a '0-bit data loss' for its 24 x 7 x 365 banking operation, what steps or technology should an online bank employ to safeguard its data against any potential threats of data loss?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 518]**
+
 ## Indexing & Query Optimization (B-Tree, B+ Tree)
 
 1. **How indexing improve query performance?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
@@ -358,10 +362,14 @@ ORDER BY average_salary DESC;
 
 1. An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
 
-## Database Backup & Disaster Recovery
-
-1. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**
-
 ## SQL Joins & Operations
 
 1. **What are the different types of join in SQL?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 580]**
+
+## Data Warehousing, Data Mining & Business Intelligence
+
+1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 517]**
+
+2. **Discuss different tools and techniques to develop a Business Intelligence Dashboard for a bank. How can data be captured and aggregated from various sources within the bank to monitor the business performance?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 519]**
+
+3. **Software scenario question- Business Intelligence Model** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**

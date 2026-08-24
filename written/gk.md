@@ -130,6 +130,8 @@
 
 4. **NATA এর পূর্ণ রূপ কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
+5. **What Is RTGS related to?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
 ## International Affairs
 
 1. What is the name of the central bank of the United Kingdom? [SO IT 25-07-2026]
@@ -203,6 +205,14 @@
 35. **কোন প্রণালী এশিয়া আফ্রিকাকে পৃথক করেছে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
 36. **The first ODI Cricket was played on January 5, 1971 between which countries?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
+37. **Who won the Nobel Prize in Physics in 2023?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
+38. **Write down the names of new members of BRICS.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
+39. **Main Purposes of UNESCO.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
+40. **Which city of China, the Asian Olympic be held in 2023?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
 ## Everyday Science & Environment
 

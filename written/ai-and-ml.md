@@ -62,6 +62,8 @@
 
 3. **LLM stands for __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+4. **What is ChatGPT? Write down the Pros and cons of ChatGPT.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
 ## Artificial Intelligence & Expert Systems
 
 1. **What is Artificial Intelligence?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**

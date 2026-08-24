@@ -148,3 +148,6 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 8. **Translation [Bangla to English]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 431]**
 
 9. **Bangla to English Translation** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+
+10. **Translation (Bangla to English)**
+    **যুব উন্নয়ন বিষয়ক......** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**

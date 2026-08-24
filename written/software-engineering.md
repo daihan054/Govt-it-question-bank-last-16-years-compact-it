@@ -114,6 +114,8 @@
 
 2. **Which you build about real life software project? What problems you faced during that time and how to solve this?** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
+3. **Project management related question (what are the approaches)** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 520]**
+
 ## Software Design Principles (Coupling & Cohesion)
 
 1. **Write concepts of Coupling and Cohesion with Example?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**

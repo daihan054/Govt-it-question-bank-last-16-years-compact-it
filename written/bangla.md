@@ -22,6 +22,8 @@
 
 11. **"সমৃদ্ধির অগ্রযাত্রায় বাংলাদেশ" - এর উপর বাংলায় একটি রচনা লিখুন ২০০ (+/- ১০%) শব্দের মধ্যে।** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 529]**
 
+12. **বিজ্ঞানমনস্কতা - নিয়ে একটা রচনা লিখুন।** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -98,6 +100,10 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 13. **Translate the following passage from English to Bangla:**
     > To become a good person is the most important thing for a person. He must try to be honest, just and kind in his personal life. This is his main duty. It is not difficult to understand the reason for this. The welfare of a state or a city depends largely on the moral character of its citizens.
     **(Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor Exam: 04.08.2023) [compact it 599]**
+
+14. **Translation (English to Bangla)**
+    > Global investment in green economy-related..........
+    **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 

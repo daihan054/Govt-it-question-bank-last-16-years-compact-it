@@ -18,6 +18,8 @@
 
 9. **What is symmetric and Asymmetric key explain with example?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**
 
+10. **What is Cryptography? Difference between Symmetric and Asymmetric encryption with example. Draw and design public key encryption using Hash function. Draw a diagram for e-commerce online transactions.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -61,6 +63,8 @@
 5. **Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps would you take to mitigate the threats?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 332]**
 
 6. **Write down the 10 most Cyber attacks. Difference among Black Hat hacker, Grey hat hacker and white hat hacker.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 526]**
+
+7. **What is Cyber Security? Write down the top 10 cyber attack. Discuss about Ransomware and DDoS attack.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
 
 ## Firewalls & Network Defense
 

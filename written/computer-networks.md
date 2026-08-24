@@ -40,6 +40,8 @@
 
 5. **What is Personal Area Network? What is needed component and explain?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 572]**
 
+6. **What is Topology in data communication? What are differences between Bus, Ring, Tree and Star topology? Purpose of IEEE 802.11 committee.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
+
 ## OSI & TCP/IP Reference Model
 
 1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -75,6 +77,8 @@
 16. **What is the TCP/IP Model?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
 17. **What is OSI Model? Write all layer name sequence should be top to bottom or bottom to top.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+
+18. **Difference between OSI model and TCP/IP model. Relation between Data, Segment, Packet and Bit in OSI model.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 510]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -169,6 +173,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
+
+2. **Differentiate among TDM, FDM and WDM. How does working process in TDM?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 511]**
 
 ## Subnetting & IP Addressing
 
