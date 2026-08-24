@@ -12,6 +12,8 @@
 
 6. **Difference between Guided and Unguided media. Difference between STP and UTP. Why using benefit UTP instead of STP?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
 
+7. **What is the main benefit of broadband transmission system compared to baseband? What is the attenuation of transmission media? Distinguish between twisted pair, co-axial cable and fiber optics in tabular form.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
 1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
@@ -31,6 +33,8 @@
 2. **(b) Define network topology and classify it.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
 
 3. **Write 4 topology name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+4. **What is Network Topology? Distinguish between Bus, Ring, Tree and Star topology. Discuss how the Bus topology works.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
 ## OSI & TCP/IP Reference Model
 
@@ -61,6 +65,8 @@
 13. **Write down the OSI model.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
 
 14. **How many TCP/IP layer? Write its Layer name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+15. **Differentiate between OSI Model and TCP/IP Model. Draw the diagram of 4 Layers of TCP/IP Model including the main function of each layer and related protocols. List some basic functions performed at MAC layer.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -114,6 +120,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 1. **Difference between circuit switching and packet switching. Identify which of the two is predominantly used in Internet communication and justify why?** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1435]**
 
 2. **(c) Compare circuit switching and packet switching.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
+
+3. **Do you prefer packet switching compared to circuit switching in communication network? If Yes, why? How does packet switching work step by step? What applications use packet switching?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 536]**
 
 ## Flow Control & Data Link Layer (Stop-and-Wait)
 
@@ -263,6 +271,18 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 40. **An IP address subnet mask is 255.255.255.224 which is the subnet address in this block?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
+41. **Write down the basic differences of the following:**
+   **(i) Public vs Private IP address** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 534]**
+
+42. **What do you mean by Subnet and Subnet Mask? The network address of 172.16.0.0/19 provides how many subnets and hosts? What is the function of OSPF?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 536]**
+
+43. **Convert the decimal IP address 192.168.101.5 into binary IP address. Fill-up the following in tabular form:** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**
+| Address Class | First Octet Decimal Range | Example of IP Address (IPA) | Network ID of IPA | Host ID of IPA |
+|---|---|---|---|---|
+| Class A |  |  |  |  |
+| Class B |  |  |  |  |
+| Class C |  |  |  |  |
+
 ## Network Services (DHCP, NAT)
 
 1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
@@ -325,6 +345,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **How many collision domians are created when you segment a network with a 12-port switch?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
 4. **Difference among Switch, Bridge and Router.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 524]**
+
+5. **Differentiate between Collision Domain and Broadcast Domain in computer network. What is the function of DNS and DHCP?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 535]**
 
 ## VLANs & Subnetting Comparison
 

@@ -104,6 +104,10 @@
 
 52. **কোন সেক্টরের কোন নির্ধারিত কমান্ডার ছিল না?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
+53. **Who wrote the books titled Ekatturer Diary and Ekatturer Dinguli?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
+54. **Who was awarded the Meril-Prothom Alo Lifetime Award 2022?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -186,6 +190,8 @@
 
 35. **কোন প্রণালী এশিয়া আফ্রিকাকে পৃথক করেছে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
+36. **The first ODI Cricket was played on January 5, 1971 between which countries?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
 ## Everyday Science & Environment
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
@@ -209,3 +215,7 @@
 10. **Justify "Invention of Transistor changed the world."** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 313]**
 
 11. **What is the hardest substance available on earth?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
+
+12. **Write down the longest and shortest day in the planet.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
+13. **Mention the name of the largest, biggest and heaviest planet.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**

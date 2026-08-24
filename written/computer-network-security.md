@@ -12,6 +12,8 @@
 
 6. **Breifly Explain Asymmetric encryption.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]**
 
+7. **Distinguish between Symmetric Encryption and Asymmetric Encryption. Give some examples of encryption algorithm. What are the different types of ciphers in cryptography? What are the factors to be considered for cryptographic strength?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 533]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -75,6 +77,8 @@
 
 6. **What is Firewall? Discuss about different types of Firewall.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 528]**
 
+7. **Draw a diagram of LAN including network Firewall. Why is firewall important in network security? List 5 major types of network firewalls. Differentiate between Traditional Firewall and Next Generation Firewall.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 532]**
+
 ## Authentication & Access Control
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -100,6 +104,9 @@
 3. **Ensure secure communication between a client application and the database server.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 314]**
 
 4. **Difference between HTTP and HTTPs.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 398]**
+
+5. **Write down the basic differences of the following:**
+   **(ii) TLS 1.2 vs. 1.3** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 535]**
 
 ## Web Security Vulnerabilities
 

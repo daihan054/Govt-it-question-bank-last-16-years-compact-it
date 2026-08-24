@@ -162,6 +162,31 @@ int main() {
    Start
    ```
 
+34. **Find the output of the following program including time and space complexity.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 542]**
+```cpp
+#include<iostream>
+int main(){
+int n;
+std::cout <<"Enter the number of terms for the fibonacci series: ";
+std::cin >> n;
+int first = 0, second =1;
+if (n>=1){
+std::cout <<"Fibonacci Series:"<< first;
+if(n>=2){
+std::cout<< second;
+}
+for(int i=2;i<n ;i++){
+int next = first + second;
+std::cout<<","<<next;
+first = second;
+second = next;
+}
+}
+std::cout<<std::endl;
+return 0;
+}
+```
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

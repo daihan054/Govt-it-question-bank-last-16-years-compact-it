@@ -28,6 +28,8 @@
 
 13. **The role of ICT in education sector** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
+14. **Write an essay on 'Women's Empowerment and Gender Equality in Bangladesh' within 200 (+/- 10%) words.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**

@@ -20,6 +20,8 @@
 
 6. **ALU কী? এর কার্যপদ্ধতি চিত্রসহ বর্ণনা করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 405]**
 
+7. **Discuss the factors that affect the Speed of a CPU.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 541]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

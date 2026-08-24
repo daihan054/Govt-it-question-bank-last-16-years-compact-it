@@ -210,6 +210,17 @@ ORDER BY average_salary desc
 
 29. **Employee Salary sql query a. Sum b. Avg. C. Employee_Name all 2nd letter 'a'......** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
+30. **Analyze the output of the following SQL :** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 543]**
+```sql
+SELECT department_name, AVG(salary) AS average_salary
+FROM employees e
+JOIN departments d ON e.department_id=d.department_id
+WHERE salary> (SELECT AVG(salary) FROM employees WHERE department_id=d.department_id)
+GROUP BY department_name
+HAVING COUNT(*)>2
+ORDER BY average_salary DESC;
+```
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -336,3 +347,7 @@ ORDER BY average_salary desc
 ## Database Design & Data Types
 
 1. An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
+
+## Database Backup & Disaster Recovery
+
+1. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**

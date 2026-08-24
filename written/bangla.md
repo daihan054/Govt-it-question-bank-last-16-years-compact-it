@@ -20,6 +20,8 @@
 
 10. **শিক্ষাবিস্তারে গণমাধ্যমের ভূমিকা।** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
+11. **"সমৃদ্ধির অগ্রযাত্রায় বাংলাদেশ" - এর উপর বাংলায় একটি রচনা লিখুন ২০০ (+/- ১০%) শব্দের মধ্যে।** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 529]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**

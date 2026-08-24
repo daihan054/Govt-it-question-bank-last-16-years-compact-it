@@ -60,6 +60,10 @@
 
 2. **Scenario based descriptive question for server related problem ( How do you handle those problem for your company )** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
+3. **What are the key hardware components that make up a typical server, and how do they contribute to its overall performance and functionality?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 537]**
+
+4. **Discuss server maintenance best practices, including routine tasks like cleaning, monitoring, and applying security patches. How do these practices contribute to server longevity and performance?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 540]**
+
 ## Data Center Infrastructure & Power Management
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 305]**
