@@ -18,6 +18,8 @@
 | (d) Which system connects the hardware and software? | Operating System(OS) |
 | (e) Microprocessor and other peripherals are interfaced Microcontroller, with which board? | Microcontrollers, Motherboard |
 
+6. **ALU কী? এর কার্যপদ্ধতি চিত্রসহ বর্ণনা করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 405]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -71,6 +73,8 @@
 3. **DRAM stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
 4. **What is stand for EEPROM?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+5. **কম্পিউটার স্মৃতি বলতে কী বোঝায়? কম্পিউটারের স্মৃতির শ্রেণিবিভাগ আলোচনা করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 405]**
 
 ## Secondary Storage (HDD vs SSD)
 
