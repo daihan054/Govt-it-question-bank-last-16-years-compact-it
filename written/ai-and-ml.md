@@ -28,6 +28,10 @@
 
 3. **b) How can we validate and check reliability of a machine learning model?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
 
+## Overfitting, Underfitting & Model Generalization
+
+1. **In machine learning. What will happen, when a machine is highly trained up a slight trained up?** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 395]**
+
 ## Supervised Learning (Decision Trees)
 
 1. **Decisiontree model in Machine Learning.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**

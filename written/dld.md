@@ -11,6 +11,8 @@
 
 4. **$(\text{CDAB})_{16}$ কে অক্টাল এ রূপান্তর কর।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
 
+5. **Convert Decimal to Octal (423)_{10} and Decimal to Hexadecimal (3000)_{10}.** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 392]**
+
 ## Karnaugh Map (K-Map)
 
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
@@ -22,6 +24,8 @@
  * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
 
 4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
+
+5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]**
 
 ## Logic Families (TTL vs CMOS)
 

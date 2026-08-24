@@ -10,6 +10,18 @@
 
 5. **What do you understand about software quality assurance (SQA)? While purchasing a software system for your company, as a SQA team leader what aspects will you look into for a quality software.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 330]**
 
+6. **Match the table:** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 396]**
+
+| Testing method | Topic |
+|---|---|
+| (i) Unit Testing | (a) the process where you test the smallest functional unit of code. |
+| (ii) Integration Testing | (b) is a type of software testing in which the different units, modules or components of a software application are tested as a combined entity. |
+| (iii) System Testing | (c) examines every component of an application to make sure that they work as a complete and unified whole. |
+| (iv) Acceptance Testing | (d) software testing that evaluates whether a system meets its business and user requirements |
+| (v) Performance Testing | (e) a testing measure that evaluates the speed, responsiveness and stability of a computer, network, software program or device under a workload. |
+| (vi) Security Testing | (f) identifying and addressing security vulnerabilities in a software application. |
+| (vii) Usability Testing | (g) a method of testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it. |
+
 ## UML Diagrams (Class, Use Case, Sequence)
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]

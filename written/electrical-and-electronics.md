@@ -43,3 +43,5 @@
 ## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)
 
 1. **You are required to convert a 12-bit digital number to an analogue voltage over the voltage range of 0 to 3.3V with a Digital-to-Analogue Converter (DAC). What is the resolution of the analogue output?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 419]**
+
+2. **An 8 bit (Analog to Digital Converter) = 2.56v. Let the minimum analog voltage = 0v. Calculate binary data output if analog input=1.7** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]**
