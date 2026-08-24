@@ -285,6 +285,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 | Class B |  |  |  |  |
 | Class C |  |  |  |  |
 
+44. **What is IP address? Explain the necessity of IP address in network?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
+
 ## Network Services (DHCP, NAT)
 
 1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
@@ -383,6 +385,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 6. **Which protocol is used by the ping tools?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 7. **Which server can be used to dinamically assign IP address to the PCs is a LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
+8. **Explain how do DHCP work?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
 
 ## Email Architecture & Protocols (SMTP, POP3, IMAP)
 

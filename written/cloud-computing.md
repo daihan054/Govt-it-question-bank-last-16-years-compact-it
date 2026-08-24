@@ -25,6 +25,8 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 3. **What is Server Virtualization? Explain with example of its.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 551]**
 
+4. **How virtualization help physical server.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 566]**
+
 ## High Availability & System Redundancy
 
 1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.

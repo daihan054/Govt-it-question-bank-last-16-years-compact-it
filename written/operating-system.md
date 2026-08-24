@@ -42,12 +42,16 @@
 
 7. **Show last 10 lines of log file which is continuously updating in Linux command?** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 417]**
 
+8. **Linux Command in ownership and group permission.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 567]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 2. **Assume that an office has three departments and each department has 50 to 70 employees who are using computers with Windows operating systems. The office space is designed in such a way that an employee can use any computer within a department. Once an employee logs in from a computer, he/she will get access to his files from the server. Let you are planning for network and server setup for this company.**
    * **(a) What is Active Directory? Do you need an Active Directory for such an office? If yes, briefly explain its use under this circumstance.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 323]**
+
+3. **Describe the booting process in windows system.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
 
 ## CPU Scheduling
 

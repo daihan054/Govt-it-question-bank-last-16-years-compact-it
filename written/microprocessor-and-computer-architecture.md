@@ -98,6 +98,8 @@
 
 5. **How to solve drive failure in RAID?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
 
+6. **Explain the purpose of RAID.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
+
 ## CPU Performance & Instruction Cycle
 
 1. **There was a CPU cycle math** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 400]**

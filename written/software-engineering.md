@@ -28,6 +28,8 @@
 
 9. **What is Software testing? Difference between Black box testing and White box testing.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
+10. **Define test plan and Test case.** **(Pubali Bank Limited Software Quality Assurance Exam: 18.03.2023) [compact it 567]**
+
 ## UML Diagrams (Class, Use Case, Sequence)
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]

@@ -66,6 +66,8 @@
 
 4. **Discuss server maintenance best practices, including routine tasks like cleaning, monitoring, and applying security patches. How do these practices contribute to server longevity and performance?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 540]**
 
+5. **Difference between SAS and SATA. Which one is best server?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
+
 ## Data Center Infrastructure & Power Management
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 305]**
