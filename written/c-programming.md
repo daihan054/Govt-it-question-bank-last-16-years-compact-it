@@ -82,6 +82,17 @@
 23. **Find the output from the following: take input and looks the output:**
    **Suppose Input: 6789; Output: 9876** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 379]**
 
+24. **(b) Print the output:** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 433]**
+```c
+#include<stdio.h>
+int main() {
+    int a[] = {0,1,2,3,4};
+    int b[] = {10,20,30,40,50};
+    printf("%d", b[a[2]]);
+    return 0;
+}
+```
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

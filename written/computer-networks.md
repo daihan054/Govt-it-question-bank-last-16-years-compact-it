@@ -18,6 +18,10 @@
    * **Fiber Attenuation: 0.35 dB/km**
    **Calculate the maximum fiber length (D) that can be used between the OLT (Optical Line Terminal) and ONU (Optical Network Unit) while maintaining an acceptable signal level.** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1332]**
 
+2. **(a) Why fiber optic cable is used in submarine instead of satellite?** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 431]**
+
+3. **(b) Why the submarine cable is damaged under water?** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 432]**
+
 ## Network Topologies
 
 1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
@@ -248,6 +252,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 37. **Write Class A private IP range.** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
 38. **Write Command for check LAN connecte?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+39. **(a) Given 4 Network interface in a table and find which of the following network is on which network.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 433]**
 
 ## Network Services (DHCP, NAT)
 

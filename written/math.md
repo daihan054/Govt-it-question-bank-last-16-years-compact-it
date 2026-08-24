@@ -52,6 +52,8 @@
 
 2. **If you throw two unbiased dice (each with six sides) together, what is the probability that the sum of two upward faces will be 7? Explain your answer.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 421]**
 
+3. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 433]**
+
 ## Geometry & Coordinate Geometry
 
 1. **একটি বৃত্তের সমীকরণ দেয়া ছিল এবং একটি বিন্দুতে স্পর্শক এর সমীকরণ চাওয়া হয়েছিল** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**

@@ -180,6 +180,11 @@ Write down an SQL query to display the total number of patients under each disea
    * **(i) Write the employee name who got same salary named Rahim but not same job of Rahim.**
    * **(ii) Write the employee's name who's average salary is more than company's average salary** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 380]**
 
+25. **EMPLOYEES (Emp_ID, Emp_Name, Manager_ID, Dept_ID);**
+   **DEPARTMENTS (Dept ID, Salary, Dept Name, Emp_ID);**
+   * **(a) Find out the names of the manager for each employee:**
+   * **(b) Sort the employees total salary of each department based on salary in descending order.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 431]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

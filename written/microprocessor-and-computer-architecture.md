@@ -8,6 +8,16 @@
 
 4. **GPU stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
+5. **Maximum three word complete this below section:** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 431]**
+
+| Question | Answer |
+|---|---|
+| (a) Which bus transfers data between data and I/O Data Bus devices? | Data Bus |
+| (b) Which register contains the address of next instructions? | Program counter |
+| (c) Which register does the arithmetic and logical operation? | Arithmetic Logic Unit (ALU) |
+| (d) Which system connects the hardware and software? | Operating System(OS) |
+| (e) Microprocessor and other peripherals are interfaced Microcontroller, with which board? | Microcontrollers, Motherboard |
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
