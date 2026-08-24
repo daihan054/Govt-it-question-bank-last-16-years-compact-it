@@ -22,19 +22,19 @@
 
 2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1424]**
 
-## Pipelining
+## Instruction Pipelining & Hazards
 
 1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
 
-2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** **(BPSC (Ministry) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
 
-## Instruction Set Architecture (RISC vs CISC)
-
-1. **(c) Fill in the gaps RISC or CISC:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 416]**
+3. **(c) Fill in the gaps RISC or CISC:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 416]**
    * (i) Pipelining is less efficient due to instruction complexity and variability ______
    * (ii) Emphasis on hardware simplicity and efficiency ______
    * (iii) Complex decoding due to variable instruction length ______
    * (iv) Each instruction typically executes in a single clock cycle ______
+
+4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 299]**
 
 ## Cache Memory
 

@@ -30,6 +30,14 @@
 
 1. **Math : Gold purity** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
+2. **In the group of boys and girls, 4 of girls and 13 of boys are 12 years younger. If the members are girls from total members then what would be the strongest group between 12 years younger or more?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+3. **In the three jars, milk and water are mixed with the ratio 1:2, 2:3, and 3:4. If all are mixed into one jar, what will be the ratio of milk and water?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+## Speed, Time, Distance & Boats
+
+1. **A boat travels 15 km upstream and 22 km downstream in 5 hr. find out the speed of the stream.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
 ## Calculus & Integration
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
@@ -43,6 +51,8 @@
 1. **একটি বৃত্তের সমীকরণ দেয়া ছিল এবং একটি বিন্দুতে স্পর্শক এর সমীকরণ চাওয়া হয়েছিল** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
 
 2. **Math : Geometry** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+
+3. **In the figure, ABCD is a rectangle. The area of quadrilateral EBFD is one-half the area of the rectangle ABCD. Which one of the following is the value of AD?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
 
 ## Analytical Ability & Logical Reasoning
 

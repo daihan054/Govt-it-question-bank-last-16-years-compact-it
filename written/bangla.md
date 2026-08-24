@@ -79,6 +79,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 8. **Translation English to Bangla** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
+9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
 ## এক কথায় প্রকাশ (One Word Substitution)
 
 1. **এক কথায় প্রকাশ: ৫ টি?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**

@@ -61,6 +61,8 @@
 
 4. **What is Demilitarized Zone (DMZ) and sandbox for security test?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 398]**
 
+5. **Different types of network firewalls. Explain NGFW compared to traditional firewall.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 301]**
+
 ## Authentication & Access Control
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -72,6 +74,8 @@
 4. **(a) What is 2-factor authentication? Describe it with an example.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
 
 5. **Write down the full form of LDAP?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+6. **Your bank has an online banking system and this process is performed by sending OTP in mobile or OTP in mail when a customer transfers money from a mobile banking app or online. This is a secured policy. Without this biometric policy, how can you more secure your online banking? Explain your strategy.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 306]**
 
 ## Security Protocols (SSL/TLS, HTTPS)
 
@@ -87,15 +91,19 @@
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
-2. **What is Cross site script and SQL injection?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
+2. Explain the vulnerability of SQL Injection. How can it be prevented? (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
-3. **What is CSRF attack?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
+3. **What is Cross site script and SQL injection?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
 
-4. **What is SQL injection? How can you prevent SQL injection attacks?** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
+4. **What is CSRF attack?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
 
-5. **What is CSRF and XSS?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1361]**
+5. **What is SQL injection? How can you prevent SQL injection attacks?** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
 
-6. **(b) Explain XSS and CSRF (how do you prevent these attacks).** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 415]**
+6. **What is CSRF and XSS?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1361]**
+
+7. **(b) Explain XSS and CSRF (how do you prevent these attacks).** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 415]**
+
+8. **Your bank wants to secure an e-banking online system and wants to configure a web server in your data center. What kind of tools and technology do you use for this?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 309]**
 
 ## Cryptography & Network Security Scenarios
 
