@@ -161,3 +161,5 @@ The content of the matrix. Need is defined to be Max – Allocation.
 7. **Give the necessary conditions for deadlock to occur. Is it possible to have deadlock involving only a single process? Explain your answer.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 422]**
 
 8. **Deadlock এর চারটি শর্ত লিখ।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
+
+9. **What is deadlock? Draw its diagram.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**

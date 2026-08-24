@@ -8,6 +8,8 @@ for i in N:
 ```
 **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
+2. **What is complexity of Algorithm? Categorize complexity of Algorihm.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1458]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
@@ -42,6 +44,8 @@ for i in N:
 7. **Sort this array using merge sort 12, 45, 23, 6, 80, 20.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
 8. **What is the worst-case time and space complexity of quicksort? Briefly explain how this worst-case behavior can occur.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 428]**
+
+9. **Why Quick sort worst complexity in O(n^2)? Explain with example.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1458]**
 
 ## Heap & Priority Queue
 

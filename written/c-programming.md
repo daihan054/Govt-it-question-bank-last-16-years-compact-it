@@ -77,6 +77,8 @@
 
 21. **Write a C program: ax^2+bx+c=0** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 390]**
 
+22. **Write a program that take a number as input and output should be sum of digits of that number using python/C also draw its flow chart.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

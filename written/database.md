@@ -174,6 +174,8 @@ Write down an SQL query to display the total number of patients under each disea
 
 22. **How many row will return when we do i) Inner Join ii) Left Outer Join iii) Right Outer join and v) Full Outer join.** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 392]**
 
+23. **Write SQL Query For create, insert of a table Emp (id, name, designation, Dept_name, Salary). Write SQL Query that show department wise salary of Employee.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1459]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

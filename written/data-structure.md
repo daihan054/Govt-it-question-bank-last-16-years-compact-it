@@ -36,6 +36,10 @@
 
 6. **Consider the two given arrays as pre[]={1,2,4,8,9,5,3,6,7} and post[]={8,9,4,5,2,6,7,3,1}; Draw a binary tree from above array.** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 390]**
 
+## Binary Search Tree (BST)
+
+1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
+
 ## Hashing & Hash Tables
 
 1. **(b) What is hash table? What are the advantages of using hash table?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**

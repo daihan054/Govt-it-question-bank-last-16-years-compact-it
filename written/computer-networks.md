@@ -237,6 +237,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 35. **Find Network Address, Broadcast Address and Valid Host IP Range from given IP Address: 192.168.1.50 and Subnet Mask: 255.255.255.240** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 389]**
 
+36. **Given a (slash) /26 based network address. Find Subnet mask, broadcast address, number of host, Number of valid host and number of subnet.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1459]**
+
 ## Network Services (DHCP, NAT)
 
 1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**

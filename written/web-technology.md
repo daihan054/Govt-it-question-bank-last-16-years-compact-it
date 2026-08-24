@@ -18,9 +18,13 @@
 
 3. **What is an API?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**
 
+4. **Write difference between REST API and SOAP API.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1460]**
+
 ## HTML & Web Fundamentals
 
 1. **What is HTML Image tag?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+2. **What is URL? Give an Example.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
 
 ## Full Stack & Backend Web Development
 
