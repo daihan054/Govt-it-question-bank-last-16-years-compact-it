@@ -87,6 +87,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
    **Translate the following passage into Bangla:**
    > Capacity development in banking is crucial as the industry faces evolving challenges and opportunities in a rapidly changing landscape. It encompasses enhancing the knowledge, skills, and capabilities of banking professionals to effectively navigate complex financial environments. This includes training in areas such as financial literacy, risk management, regulatory compliance, and technological proficiency. As banks integrate advanced technologies, and digital banking solutions, there is a growing need for specialized expertise to harness these tools for operational efficiency and customer service enhancement. Capacity development initiatives also focus on leadership development, fostering strategic thinking and decision-making abilities among senior executives to steer banks through economic uncertainties and competitive pressures.
 
+11. **অনুবাদ সংক্রান্ত প্রশ্নাবলি।** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
 ## এক কথায় প্রকাশ (One Word Substitution)
 
 1. **এক কথায় প্রকাশ: ৫ টি?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
@@ -122,3 +124,5 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 8. **রক্তাক্ত প্রান্তরের রচয়িতা কে এবং এর প্রেক্ষাপট কি?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
 
 9. **পাঁচটি করে প্রতিশব্দ লিখুন : ভুল, কপালরর** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+10. **বাংলা ব্যাকরণ সংক্রান্ত প্রশ্নাবলি।** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**

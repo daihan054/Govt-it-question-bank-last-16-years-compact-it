@@ -50,6 +50,8 @@
 
 9. **You are asked to lead a team of software engineers to develop an application software system for your company and deploy it as fast as possible. You need to gather user requirements, design, develop, test and then deploy the system. Between Waterfall Approach and Incremental Approach, which software development approach will you take for your software project? Explain your answer.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
 
+10. **Write down the SDLC steps.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
+
 ## CI/CD & DevOps Methodologies
 
 1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

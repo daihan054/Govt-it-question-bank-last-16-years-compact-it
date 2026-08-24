@@ -48,6 +48,10 @@
 
 11. **Tabular representation of TCP/IP layer, functions of each layer, Associate protocols, device, and software in each layer. Different types of network firewalls. Explain NGFW compared to traditional firewall.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 301]**
 
+12. **Explain TCP/IP model and its protocol and device.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
+
+13. **Write down the OSI model.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -82,6 +86,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **Show the pictorial representation of TCP 3-way handshaking protocol for establishing a connection between a server and a client.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
 
 4. **What is the deference between TCP and UDP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+
+5. **3-way handshake protocol for TCP connection using diagram.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 403]**
 
 ## Communication System & Transmission Modes
 
@@ -123,6 +129,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    * **C. Parity bit check, CRC and Checksum.**
 
 6. **What is Total Latency for a 3-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 300\text{ km} and that light travels at 2 \times 10^8\text{ m/s}. Round Trip Time 50ms Queuing Time 5ms?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1320]**
+
+7. **Two math from data communication.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
 
 ## Multiplexing & Bandwidth
 
@@ -224,6 +232,14 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 32. **(b) What is a subnet? What benefits will you get using subnets for this office?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 324]**
 
 33. **Local loopback address কি? কোন কমান্ড ব্যবহার করে কানেক্টিভিটি টেস্ট করা হয়?** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 383]**
+
+34. **Given IP address 192.168. 2.0/ 24; Determine to network address and broadcast address.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+## Network Services (DHCP, NAT)
+
+1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+2. **What is the NAT in Computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
 
 ## IPv6 Addressing
 
