@@ -109,6 +109,38 @@ else print F;
 
 28. **Write a program swap two numbers without using 3rd variable.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]**
 
+29. **Find the output from this code-** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 590]**
+```c
+#include <stdio.h>
+void PrintArray(int num[], int n) {
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%d", num[i]);
+    }
+    printf("\n");
+}
+void FunctionArray(int num[], int n) {
+    int i, j, key;
+    for (i=1;i<n;i++)
+    {
+        key=num[i];
+        j--;
+        while(j>=0 && j<=n){
+            num[j] = num[j+1];
+            key=num[j];
+        }
+        num[i-1]=key;
+        PrintArray(num,n);
+    }}
+int main() {
+    int num[]={11,2,3,4,5};
+    PrintArray(num,5);
+    FunctionArray(num,5);
+    return 0;
+}
+```
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

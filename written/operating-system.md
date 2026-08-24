@@ -168,6 +168,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 7. **(ক) Swapping কী? Internal এবং External Fragmentation এর মধ্যে পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 414]**
 
+8. **Find out total number of pages, when page size 4KB and address space 32 bit.** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 588]**
+
 ## Virtual Memory & Page Replacement (Thrashing)
 
 1. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**

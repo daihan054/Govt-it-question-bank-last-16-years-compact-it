@@ -73,3 +73,7 @@
 ## Basic Arithmetic & Average
 
 1. **What is the Average of 1 to 49 numbers?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+## Discrete Mathematics & Recurrence Relations
+
+1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 592]**
