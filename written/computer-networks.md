@@ -261,6 +261,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 39. **(a) Given 4 Network interface in a table and find which of the following network is on which network.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 433]**
 
+40. **An IP address subnet mask is 255.255.255.224 which is the subnet address in this block?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
+
 ## Network Services (DHCP, NAT)
 
 1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**

@@ -147,6 +147,21 @@ int main() {
 
 32. **Write a C/C++ program for check out a leap year program.** **(Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor Exam: 04.08.2023) [compact it 599]**
 
+33. **Write a Program:** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 506]**
+   a) **Sample Output:**
+   ```text
+   1
+   1 2
+   1 2 3
+   ```
+   b) **Sample Output:**
+   ```text
+   Start
+   Start
+   Start
+   Start
+   ```
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -261,3 +276,5 @@ int main() {
 }
 ```
 **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 522]**
+
+7. **What is function?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**

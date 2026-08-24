@@ -113,6 +113,12 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 7. **Write sentence with meaning from the following phrase and idioms: Break the ice, A pain in the neck, Fit as a fiddle, Burn bridges, So far so good** **(Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor Exam: 04.08.2023) [compact it 599]**
 
+8. **Change right sentence compund, intrrogative, exclamatory** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
+9. **Preposition: 2** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
+10. **Sentence correction: 2** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
 ## English Vocabulary & Antonyms
 
 1. **What is the Opposite word of Transparent?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**

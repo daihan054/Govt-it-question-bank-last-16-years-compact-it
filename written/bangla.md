@@ -101,6 +101,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 1. **এক কথায় প্রকাশ: ৫ টি?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
+2. **এক কথায় প্রকাশ : যে নারী কখনও সূর্য দেখে নি,** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
 ## বাংলা ব্যাকরণ ও সাহিত্য
 
 1. **নিচের প্রশ্নগুলোর উত্তর লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -134,3 +136,9 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 9. **পাঁচটি করে প্রতিশব্দ লিখুন : ভুল, কপালরর** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
 
 10. **বাংলা ব্যাকরণ সংক্রান্ত প্রশ্নাবলি।** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+11. **সন্ধি : ঈদগাহ, পড়াশুনা,** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
+12. **সমাস পরিবর্তন :** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
+13. **বিপরীত শব্দ: ঈর্ষা, উহ্য** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**

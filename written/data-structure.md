@@ -50,6 +50,8 @@
 
 11. **What is Pre-order and Post order?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 502]**
 
+12. **Explain with example Post order traversal.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
 ## Binary Search Tree (BST)
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**

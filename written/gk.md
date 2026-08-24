@@ -96,6 +96,14 @@
 
 48. **Who got independence award 2023?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
+49. **স্মৃতি সৌধের স্থপতি কে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
+50. **জাতীয় যুব দিবস কবে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
+51. **জুলীয়কুরি পুরস্কার কত তারিখে পেয়েছে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
+52. **কোন সেক্টরের কোন নির্ধারিত কমান্ডার ছিল না?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -173,6 +181,10 @@
 32. **How many goals of SDG?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
 33. **What is the function of Global Climate Fund?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+
+34. **মেসোপটেমিয়া কোন দেশের সভ্যতা।** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
+35. **কোন প্রণালী এশিয়া আফ্রিকাকে পৃথক করেছে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
 ## Everyday Science & Environment
 

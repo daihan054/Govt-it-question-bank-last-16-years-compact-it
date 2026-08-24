@@ -208,6 +208,8 @@ ORDER BY average_salary desc
 ```
 **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 521]**
 
+29. **Employee Salary sql query a. Sum b. Avg. C. Employee_Name all 2nd letter 'a'......** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -307,6 +309,8 @@ ORDER BY average_salary desc
 2. **(a) Define RDBMS. Explain the different key and primary key, candidate key, super key, and foreign key DBMS.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1445]**
 
 3. **Difference between primary key, foreign key? What is trigger?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 502]**
+
+4. **Define primary key, super key, and Candidate key.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
 ## Indexing in DBMS
 

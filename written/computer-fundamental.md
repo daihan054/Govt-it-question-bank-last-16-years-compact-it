@@ -32,6 +32,8 @@
 
 12. **Write short note : SMTP, RIP, RDBMS, ITSQN** **(Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor Exam: 04.08.2023) [compact it 599]**
 
+13. **Write down the Meaning: MIME, PNG, JPGE, OSPF** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
