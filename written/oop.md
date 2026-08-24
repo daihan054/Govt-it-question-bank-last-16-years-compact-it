@@ -60,6 +60,8 @@ class Test {
 
 1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1456]**
 
+2. **Explain the various types of access specifiers.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 579]**
+
 ## Constructors & Destructors
 
 1. **What is constructor function? Write the properties of it.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 505]**

@@ -74,6 +74,8 @@
 
 16. **What is the TCP/IP Model?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
+17. **What is OSI Model? Write all layer name sequence should be top to bottom or bottom to top.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)

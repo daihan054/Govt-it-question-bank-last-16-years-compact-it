@@ -361,3 +361,7 @@ ORDER BY average_salary DESC;
 ## Database Backup & Disaster Recovery
 
 1. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**
+
+## SQL Joins & Operations
+
+1. **What are the different types of join in SQL?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 580]**

@@ -84,6 +84,8 @@
 
 15. **Write down the step of SDLC?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
+16. **What is SDLC? Write the name of 7 phase of SDLC?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

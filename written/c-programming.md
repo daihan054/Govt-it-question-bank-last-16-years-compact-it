@@ -191,6 +191,16 @@ return 0;
 
 36. **Write a C program sum of 1 to 100.** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 571]**
 
+37. **Write a Program:** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 579]**
+   **a) Sample Output:**
+   ```text
+   1
+   1 2
+   1 2 3
+   1 2 3 4
+   ```
+   **b) Write a C or C++ Program to print an array of five fruits.**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
