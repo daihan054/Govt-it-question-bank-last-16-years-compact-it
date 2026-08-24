@@ -211,6 +211,8 @@ return 0;
 
 2. **Write a C program to check whether a string is a Palindrome.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1433]**
 
+3. **Write a C program upper case to lower case conversion.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 475]**
+
 ## Output Tracing & Control Flow
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

@@ -58,6 +58,10 @@
 
 2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 590]**
 
+## Priority Queues & Heaps (Min/Max Heap)
+
+1. **Max heap:** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
+
 ## Hashing & Hash Tables
 
 1. **(b) What is hash table? What are the advantages of using hash table?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**

@@ -363,6 +363,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 5. **Differentiate between Collision Domain and Broadcast Domain in computer network. What is the function of DNS and DHCP?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 535]**
 
+6. **Write down the difference between gateway and firewall.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
+
 ## VLANs & Subnetting Comparison
 
 1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
