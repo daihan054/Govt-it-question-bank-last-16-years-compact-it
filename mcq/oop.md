@@ -256,6 +256,36 @@
    C) str1==str2
    D) All of above
 
+35. **Which of these data types is used by operating system to manage the Recursion in Java?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 220]**
+   A) Array
+   B) Stack
+   C) Queue
+   D) Tree
+
+36. **Which of the following is an incorrect statement about packages?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 220]**
+   A) Package defines a namespace in which classes are stored
+   B) A package can contain other packages within
+   C) A package can be renamed without renaming the directory, in which the classes are stored
+   D) Java uses file system directories to store packages
+
+37. **Multiple inheritances in Java can be implemented using which of the following?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 220]**
+   A) Interfaces
+   B) Multithreading
+   C) Protected methods
+   D) Private methods
+
+38. **Which component is used to compile, debug and execute in Java program?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 220]**
+   A) JVM
+   B) JDK
+   C) JIT
+   D) JRE
+
+39. **int C=10; System.out.println(C--); gives a output of-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 224]**
+   A) 10
+   B) 11
+   C) 9
+   D) 8
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -364,6 +394,12 @@
    C) 2
    D) 13
 
+14. **If same message is passed to objects of several different classes and all of those can respond in a different way, what is this feature called?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) Inheritance
+   B) Overloading
+   C) Polymorphism
+   D) Overriding
+
 ## OOP Concepts & Principles
 
 1. **Which of the following is not property of the Object Oriented Programming Concept?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -431,6 +467,18 @@
    (c) Protected
    (d) Compile time error
 
+5. **A derived class inherits attributes from a-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 220]**
+   A) Super Class
+   B) Sub Class
+   C) Inner Class
+   D) Upper Class
+
+6. **How to access the overridden method of base class from the derived class?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+   A) Using arrow operator
+   B) Using dot operator
+   C) Using scope resolution operator
+   D) Can't be accessed once overridden
+
 ## Constructors & Destructors
 
 1. **Which of the following is true regarding a constructor in Object Oriented Programming?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
@@ -450,6 +498,24 @@
    B) fields
    C) methods
    D) class
+
+4. **Which operator is used to declare the destructor in C++?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 220]**
+   A) #
+   B) ~
+   C) @
+   D) $
+
+5. **Object being passed to a copy constructor-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) Must be passed by reference
+   B) Must not be mentioned in parameter list
+   C) Must be passed with integer type
+   D) Must be passed by value
+
+6. **Does constructor overloading include different return types for constructors to be overloaded?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) Yes, if return types are different, signature becomes different
+   B) Yes, because return types can differentiate two functions
+   C) No, return type can't differentiate two functions
+   D) No, constructors don't have any return type
 
 ## Exception Handling
 
@@ -473,3 +539,15 @@
    b) reset()
    c) flush()
    d) close()
+
+5. **Which alternative can replace the throw statement in C++?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 220]**
+   A) for
+   B) break
+   C) return
+   D) exit
+
+6. **Why do you need to handle exceptions?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) To prevent abnormal termination of program
+   B) To encourage exception prone program
+   C) To avoid syntax errors
+   D) To save memory

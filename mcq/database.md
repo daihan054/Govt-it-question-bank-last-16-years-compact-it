@@ -372,6 +372,12 @@
    C) Query
    D) None of the above
 
+41. **Which of the following logical connectives is not included in SQL?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 224]**
+   A) AND
+   B) OR
+   C) NOR
+   D) NOT
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -731,6 +737,12 @@
    (c) Data Analytics
    (d) All of the above
 
+9. **Dark data represents ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+   A) Unused data
+   B) Harmful data
+   C) Highlighted data
+   D) Important data
+
 ## Relational Model & Terminology
 
 1. **What is the degree of relation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
@@ -816,6 +828,18 @@
    B) Three
    C) Four
    D) Six
+
+8. **A primary key must also be-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) Foreign key
+   B) Unique
+   C) Identical
+   D) Case sensitive
+
+9. **What represents a row in a relational database?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 224]**
+   A) variable
+   B) tuple
+   C) entity
+   D) field
 
 ## ER Diagram & Data Modeling
 

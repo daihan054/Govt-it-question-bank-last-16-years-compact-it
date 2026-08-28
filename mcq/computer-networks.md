@@ -612,6 +612,24 @@
    C) all outside
    D) both inside and authentic outsides
 
+39. **Which of the following defines the addressing capabilities of the networking?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) OSL
+   B) NAT
+   C) TCP
+   D) UDP
+
+40. **How many layers are there in the software part of networking framework?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) Three
+   B) Seven
+   C) Four
+   D) Five
+
+41. **The full form of “Wi-Fi” is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 224]**
+   A) Wireless Internet
+   B) Wireless-Fidelity
+   C) Wireless Field
+   D) Wireless Fiction
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

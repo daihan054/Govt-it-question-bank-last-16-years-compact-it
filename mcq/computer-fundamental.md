@@ -96,6 +96,12 @@
    C) Brain Sams
    D) Anderson Palimar
 
+17. **Which of the following is the smallest size in the list?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) Zettabyte
+   B) Gigabyte
+   C) Petabyte
+   D) Terabyte
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -370,6 +376,12 @@
    C) Robotics
    D) Executive dashboard
 
+13. **AR refers to which of the following environment—** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) Artificial Reality
+   B) Augmented Report
+   C) Artificial Report
+   D) Augmented Reality
+
 ## Software Types & Classification
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
@@ -545,6 +557,18 @@
    B) audio
    C) physics
    D) closure
+
+30. **Source code is a(an) ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+   A) Program
+   B) List of commands
+   C) Source of variables
+   D) Algorithm
+
+31. **All of the following are considered gaming engine except-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 224]**
+   A) Hex Editor
+   B) Unity
+   C) HTML 5
+   D) Adobe Flash
 
 ## Acronyms & Abbreviations
 

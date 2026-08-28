@@ -90,6 +90,12 @@
    C) O(n^2)
    D) O(n \log n)
 
+16. **The complexity of Binary search algorithm is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) O(n)
+   B) O(\log n)
+   C) O(n^2)
+   D) O(n \log n)
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**

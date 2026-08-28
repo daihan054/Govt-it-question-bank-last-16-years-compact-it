@@ -74,6 +74,12 @@
    C. HTPP
    D. Web
 
+13. **A nonstandard HTML extension that causes scrolling text to appear as pan of a Web page is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) DHCP
+   B) mask off
+   C) Dhrystone
+   D) marquee
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**

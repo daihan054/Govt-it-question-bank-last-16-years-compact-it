@@ -590,6 +590,12 @@
    C) Range
    D) Extraction
 
+14. **What type of reference should be used in vector arithmetic in C++?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 220]**
+   A) Dynamic
+   B) const
+   C) a and b
+   D) none of the mentioned
+
 ## Pointers & Memory Allocation
 
 1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**

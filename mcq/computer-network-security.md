@@ -218,6 +218,12 @@
    C) McAfee
    D) Symantec
 
+5. **Which of the following is not a malware?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+   A) Virus
+   B) Worm
+   C) Bug
+   D) Trojan horse
+
 ## Web Security Vulnerabilities
 
 1. **How can we prevent SQL Injection Attack?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

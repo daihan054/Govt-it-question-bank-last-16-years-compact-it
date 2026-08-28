@@ -278,6 +278,18 @@
    C) RAM
    D) Amplifier
 
+26. **A single communication system that transfers and connects the data between major components inside a computer is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) Address Bus
+   B) Data Bus
+   C) System Bus
+   D) Control Bus
+
+27. **USB stands for-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 224]**
+   A) Universal Serial Bus
+   B) Universal Series Bus
+   C) Universal Serial Bits
+   D) Universal Series Bits
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

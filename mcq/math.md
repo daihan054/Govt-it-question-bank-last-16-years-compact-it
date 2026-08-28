@@ -768,6 +768,18 @@
    c. 12
    d. 28
 
+5. **Which of the following statements is the negation of the statements “4 is odd or -9 is positive”?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 220]**
+   A) 4 is even or -9 is not negative
+   B) 4 is odd or -9 is not negative
+   C) 4 is even and -9 is negative
+   D) 4 is odd and -9 is not negative
+
+6. **If A= {1,2,3} and B= {1,2,5} then A-B=?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) {1}
+   B) {5}
+   C) {3}
+   D) {2}
+
 ## Probability & Statistics
 
 1. **The mode and mean is given by 7 and 8 respectively. Then the median is:** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**

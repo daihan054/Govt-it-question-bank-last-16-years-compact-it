@@ -401,3 +401,9 @@
    B) Lists
    C) Queue
    D) All of above
+
+14. **An array contains the following letters, Color = {E, L, E, C, T, I, O, N}. The value of the variable, E=3, Color[E] points to which value?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+   A) E
+   B) C
+   C) T
+   D) 1

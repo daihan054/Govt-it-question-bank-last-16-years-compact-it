@@ -66,6 +66,18 @@
    C) Memory
    D) Register
 
+12. **Which of the following options is suitable, if A is “10110110”, B is “11100000” and C is “10100000”?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) C=A or B
+   B) C=\bar{A}
+   C) C=\bar{B}
+   D) C=A and B
+
+13. **When two variables are logically compared, the logic gate that tests the equivalence is–** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+   A) XNOR
+   B) XOR
+   C) AND
+   D) NOR
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -389,6 +401,18 @@
    B) 2-bit
    C) 4-bit
    D) 8-bit
+
+41. **(2019)_{10} in Binary is ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) 0000011111100010
+   B) 0000001111110011
+   C) 0000001111110010
+   D) 0000011111100011
+
+42. **(11100010)_2 has a decimal value of ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+   A) 252
+   B) 225
+   C) 226
+   D) 220
 
 ## Boolean Algebra & Simplification
 

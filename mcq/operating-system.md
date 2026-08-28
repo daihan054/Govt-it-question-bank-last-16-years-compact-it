@@ -60,6 +60,12 @@
    C) CD-ROM
    D) Hard disk
 
+11. **Memory management scheme by which a computer stores and retrieves data from secondary storage for use in main memory is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) Paging
+   B) Scheduling
+   C) Batch processing
+   D) Virtual storage
+
 ## Deadlock
 
 1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
