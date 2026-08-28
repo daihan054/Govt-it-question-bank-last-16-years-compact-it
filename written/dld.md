@@ -62,6 +62,8 @@
 
 2. **AB + (A(\overline{BC}))(AC + \overline{B}C)** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
 
+3. **Simplify Y = A\bar{B} + \overline{(\bar{A} + B)}C in digital logic design.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
+
 ## Logic Gates & Universal Gates
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

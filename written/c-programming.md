@@ -298,6 +298,8 @@ return 0;
 
 8. **What is the main difference between structure and array in C programming? Explain with examples.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
 
+9. **Difference between array and structure data type.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
 ## Output Tracing & Control Flow
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
@@ -509,3 +511,9 @@ int main() {
 19. **What are the differences between call by value and call by Reference?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
 
 20. **Distinguish between Call by value and Call by referee in C/C++.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
+
+21. **Write a recursive algorithm to find the factorial of a positive integer from 1 to N.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 674]**
+
+22. **What is the difference between call by value and call by reference?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
+
+23. **What do you mean by recursion? Calculate factorial function using recursion with C programming code.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**

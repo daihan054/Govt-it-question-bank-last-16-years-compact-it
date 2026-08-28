@@ -4,6 +4,10 @@
 
 2. **(a) Difference between interpreter and compiler. Write down the phases of a compiler.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
 
+3. **Distinguish between Compiler and Interpreter with example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
+
+4. **Difference between Interpreter and Compiler.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
+
 ## Lexical Analysis & Compiler Phases
 
 1. **(a) How does a compiler handle comments in source code?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**

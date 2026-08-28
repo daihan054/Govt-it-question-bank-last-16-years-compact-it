@@ -79,6 +79,8 @@ for i in N:
 
 17. **Write down the pseudocode of quick sort algorithm through recursive algorithm. Express the arrange complexity off this algorithm.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
 
+18. **How many member of swapping is needed to sort the number sequence 5, 8, 3, 6, 2 in ascending order using bubble sort.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**

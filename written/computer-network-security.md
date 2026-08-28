@@ -163,6 +163,8 @@
 
 10. **What is digital signature? Where is it used?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
 
+11. **What is a digital signature? Describe its role in digital security?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
 ## Security Protocols (SSL/TLS, HTTPS)
 
 1. **What is SSL?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**

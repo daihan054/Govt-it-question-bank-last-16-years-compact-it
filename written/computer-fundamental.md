@@ -54,6 +54,8 @@
 
 18. **১৬. পূর্ণরূপ লিখুন: HTTP, POP, ATM, PROM** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
+19. **Write short notes on: (i) RAM (ii) ROM (iii) Primary key (iv) Foreign key (v) Data** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -69,6 +71,8 @@
 6. **Name and define the components of a computer system. Mention two optical input devices.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 663]**
 
 7. **What are the components of a Micro computer system?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
+
+8. **What do understand by the resolution of computer screen?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
 ## ICT in Society & Governance
 
@@ -121,3 +125,5 @@
 2. **Describe the most important factors of data center for banking organization.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 557]**
 
 3. **What are the challenges in optimizing energy efficiency of data centers? Explain!** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 442]**
+
+4. **What do you mean by national data center?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**

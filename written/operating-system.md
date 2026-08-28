@@ -348,6 +348,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 13. **(b) A system has P processes each needing a maximum of m resources and a total of r resources available. Which conditions must hold to make the system deadlock free?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
 
+14. **Name and define characteristics properties of the Deadlock situation in a computer system.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
+
 ## File Systems & Disk Management
 
 1. **NTFS stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**

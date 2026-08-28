@@ -4,6 +4,10 @@
 
 2. **(b) Define following terms: (i) Bandwidth (ii) Latency (iii) MAC Address (iv) IP address** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 491]**
 
+3. **Define networking and Internetworking. What are the different types of network? Explain in details.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
+
+4. **Write short note: (i) web server (ii) ISP (iii) Router (iv) Search Engine** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 680]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -40,6 +44,10 @@
 
 5. **Write down the Working principle of Optical Fibre.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
 
+6. **Define the attenuation and dispersion in an optical fiber. Draw the block diagram of a long-haul optical fiber communication system.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+7. **Define the principle of data transmission through the fiber optic cable.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
 ## Network Topologies
 
 1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
@@ -55,6 +63,8 @@
 6. **What is Topology in data communication? What are differences between Bus, Ring, Tree and Star topology? Purpose of IEEE 802.11 committee.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
 
 7. **(খ) একটি নেটওয়ার্কে n সংখ্যক ডিভাইসের জন্যে Bus, Mesh এবং Star টপোলজিতে তারের লিংকগুলোর সংখ্যা কত?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
+
+8. **What is network topology? Write the name all different topology used in computer networking with example, diagram and their activities.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
 
 ## OSI & TCP/IP Reference Model
 
@@ -125,6 +135,8 @@
 
 5. **DNS Port Number?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+6. **Write the port address of the following applications of data communications. (i) HTTP; (ii) HTTPS; (iii) FTP; (iv) SMTP; (v) POP** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
+
 ## Transport Layer (TCP & UDP)
 
 1. Compare TCP and UDP protocols with examples. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -172,6 +184,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 6. **(গ) উদাহরণসহ Simplex, half-duplex এবং duplex কমিউনিকেশন সিস্টেমের পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
 
+7. **Briefly mention the main रणनीति impairments in telecommunication channel. Considering these impairments explain which communication is better between analog and digital communication systems?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 674]**
+
+8. **Describe the data communication system with necessary diagram.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
 ## Switching Techniques (Circuit vs Packet Switching)
 
 1. **Difference between circuit switching and packet switching. Identify which of the two is predominantly used in Internet communication and justify why?** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1435]**
@@ -199,6 +215,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
 2. **Draw Delta modulation figure and math. (Approximate)** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 648]**
+
+3. **A singla-tone message signal of bandwidth 4KHZ and amplitude 10V is transmitted by \Delta-modulation with step size 2V. Determine the data rate so that slope overloading noise is the minimum.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+4. **A single-tone message signal of bandwidth 4 KHZ is sampled by using a pulse train of frequency 200% higher than the Nyquist rate of the message signal to obtain PAM signal. The duty cycle of the pulse train is 20%. By drawing the amplitude spectrum of the PAM signal, determine its bandwidth.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
 
 ## Error Detection & Data Communication (CRC, Throughput)
 
@@ -240,6 +260,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 4. **What technique allows simultaneous transmission of multiple signals across a single data link?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 5. **(খ) FDM এবং TDM এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 615]**
+
+6. **Show that the data rate of T-1 carrier is 1.544 Mbps.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+7. **Suppose you are appointed as an Assistant Engineer in a Government organization. The number of telephone connections required for the organization is 1000. The per year increment of telephone connection is 100. Considering the life time of telephone equipment is to be 15 years, design a T-carrier based TDM system for the organization.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+8. **Compare between TDM and TDMA techniques.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
 
 ## Subnetting & IP Addressing
 
@@ -581,6 +607,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 7. **A telephone line normally has a bandwidth of 3000\text{ Hz} (300\text{ to } 3300\text{ Hz}) assigned foe data communications. The signal-to-noise ratio is usually 3162. Calculate the capacity for this channel?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 656]**
 
+8. **Consider that a signal is transmitted over a channel of bandwidth 200kHz and the total path loss in the channel is found to be 60dB. The noise power per hertz at the receiver is- 100 dBm. Determine the required transmit power to achieve data rate of 40kb/s.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 
 1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
@@ -593,6 +621,26 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 5. **Amplitude Modulation related problem. (Approximate)** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 644]**
 
+6. **Compare between (i) AM and ASK and (ii) FM and FSK considering modulation scheme, bandwith requirement, noise tolerance and circuit complexity.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+7. **What are the advantages of PSK and explain why coherent detection is necessary for demodulating the PSK signal?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+8. **Draw the constellation diagram of QPSK, 8-PSK and 32-QAM. Why these multilevel signals prefereed and what are the challenges for multilevel modulation?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+## Analog Modulation & Radio Receivers
+
+1. **With appropriate figures, distinguish between homodyne and heterodyne detection processes. Draw the block diagram of a super heterodyne AM receiver.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)
+
+1. **What are the limitaions of CDMA?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+2. **Mention the basic differences between frequency-hopped spread spectrum (FHSS) and direct sequence spread spectrum (DSSS) techniques.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+## WAN Technologies (SONET/SDH, ATM, WDM)
+
+1. **White short notes on: (i) SONET/SDH; (ii) IP telephony; (iii) WDM technology; (iv) ATM network** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
 ## Wireless Networks & IoT (mmWave)
 
 1. **What is the use of mmWave in IoT?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
@@ -600,3 +648,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **What is IoT? Brefly explain.** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 571]**
 
 3. **How to work WiMax technology?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 571]**
+
+4. **Briefly describe the basis structure at a mobile cellular system with a proper figure.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
+
+5. **How can you define IoT? What are the basic components of IoT?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 680]**

@@ -122,6 +122,8 @@
 
 23. **Software engineering এ ফিজিবিলিটি স্ট্যাড্যির ৭টি ধাপ বর্ণনা কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
 
+24. **Explain software development life cycle (SDLC).** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
@@ -182,6 +184,8 @@
    * **External Interface = 4** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 492]**
 
 3. **Your company earn a contract to develop a system for a government agency. The project team is considering whether to build the system from scratch, or reuse existing partial-experience components, or buy an available software product and modify it to meet the requirement. As analyst you have made a decision tree as a figure.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
+
+4. **Which factors are to be consider as software pricing?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
 
 ## IT Governance, Audit & Risk Management
 

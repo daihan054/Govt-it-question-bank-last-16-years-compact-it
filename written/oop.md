@@ -94,11 +94,15 @@ class Test {
 
 5. **Which type of variable violates encapsulation rules?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
+6. **What are the various Access Specification in C++? Explain their purpose with are example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
+
 ## Constructors & Destructors
 
 1. **What is constructor function? Write the properties of it.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 505]**
 
 2. **Define copy constructor. What Static binding and Dynamic binding?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
+
+3. **What is the constructor invoked in OOP?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
 
 ## C++ OOP Concepts & Friend Functions
 

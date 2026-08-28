@@ -335,6 +335,8 @@ ORDER BY average_salary DESC;
 
 12. **Why Normalization is used in database? Explain 1^{\text{st}} Normal form using an example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
 
+13. **Why do you need database Normalization?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
@@ -445,6 +447,8 @@ ORDER BY average_salary DESC;
 5. **Develop an entity relationship diagram that describes data objects, relationships and attributes of the following system: -A web based order processing system for a computer store.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
 
 6. **Draw a ER diagram for BPL.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
+
+7. **How can you define the ER model in DBMS?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
 ## Database Connectivity (JDBC)
 

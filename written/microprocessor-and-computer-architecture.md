@@ -26,6 +26,10 @@
 
 9. **8086 microprocessor সম্বলিত একটি ডায়াগ্রাম বা ফিগার হতে ২টি পার্ট এর নাম উল্লেখ কর?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
 
+10. **Explain the necessary steps to communicate through a programmable peripheral interfacing device (8255 Microprocessor).** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
+
+11. **What is the function of GPU?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -76,6 +80,8 @@
 
 6. **Suppose we have a 16 KB of data in a direct mapped cache with 4 word blocks. Determine the size of the tag, index and offset fields if we are using a 32-bit architecture.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 439]**
 
+7. **What is the use of cache memory?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
 ## Memory Hierarchy & Storage
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -107,6 +113,8 @@
 2. **a) Define the term "SSD". Briefly describe the working principle of "SSD".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1342]**
 
 3. **Write two SSD characteristics?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+4. **How can you define SSD?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
 ## RAID Architecture & Storage
 

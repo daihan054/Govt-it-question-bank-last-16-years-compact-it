@@ -30,6 +30,8 @@
 
 4. **Write difference between REST API and SOAP API.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1460]**
 
+5. **What is API? Explain with example.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
 ## HTML & Web Fundamentals
 
 1. **What is HTML Image tag?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
