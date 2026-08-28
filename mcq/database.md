@@ -354,6 +354,12 @@
    C) ALTER VIEW
    D) CREATE VIEW
 
+39. **Which one is database language?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+   A) DDL
+   B) DML
+   C) Both A & B
+   D) None
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

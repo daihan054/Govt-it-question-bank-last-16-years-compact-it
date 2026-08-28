@@ -338,3 +338,9 @@
    (খ) Tower of Hanoi
    (গ) None of (ক) and (খ)
    (ঘ) Both (ক) and (খ)
+
+5. **The step-by-step instruction that solve a problem is called:** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 217]**
+   A) an algorithm
+   B) a list
+   C) a plan
+   D) a sequential structure

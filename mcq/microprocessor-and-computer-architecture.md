@@ -120,6 +120,12 @@
    C) Logical Register
    D) Controller
 
+21. **Which one can be used for read only?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+   A) RAM
+   B) ROM
+   C) Both A & B
+   D) None
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -235,6 +241,18 @@
    B) Bitwise OR
    C) Addition
    D) Division
+
+20. **A hardware device that is capable of executing a sequence of instructions is known as:** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 217]**
+   A) CPU
+   B) ALU
+   C) CU
+   D) Processor
+
+21. **What is the Address bit for an 8-bit Microprocessor?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+   A) 4
+   B) 8
+   C) 16
+   D) None
 
 ## Secondary Storage (HDD & Disk Organization)
 

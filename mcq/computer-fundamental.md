@@ -290,6 +290,12 @@
    C. Flat panel display
    D. Data projector
 
+30. **Which is the easiest component to environmentally recycle?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+   A) Motherboards
+   B) CMOS batteries
+   C) Toner cartridges
+   D) Cathode ray tubes
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -480,6 +486,18 @@
    C. MAC OS
    D. Unix
 
+24. **Which one is a Web Browser?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 217]**
+   A) Google Chorme
+   B) Mozila Firefox
+   C) Internet Explorer
+   D) All
+
+25. **Which one is used to close running document?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+   A) ctrl+W
+   B) ctrl+S
+   C) ctrl+A
+   D) None
+
 ## Acronyms & Abbreviations
 
 1. **CMP এর পূর্ণ অভিব্যক্তি হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
@@ -487,3 +505,9 @@
    (খ) Common Path Method a
    (গ) Critical Project Method
    (ঘ) Critical Path Method
+
+2. **What is the full name of LCD?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+   A) Light control diode
+   B) Light crystal display
+   C) Liquid crystal diode
+   D) Liquid crystal display

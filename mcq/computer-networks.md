@@ -245,6 +245,12 @@
    C) Telnet
    D) None of these
 
+34. **What can greatly reduce TCP/IP configuration problem?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+   A) WINS Server
+   B) WINS Power
+   C) DHCP Server
+   D) PDC
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -1126,6 +1132,12 @@
    C) analogue interface
    D) interface
 
+21. **What device separates a single network into two segments but lets the two segments appear as one to higher protocols?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+   A) Switch
+   B) Bridge
+   C) Gateway
+   D) Router
+
 ## Error Detection & Correction
 
 1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -1189,6 +1201,12 @@
    B) IP
    C) UDP
    D) None of these
+
+8. **Which layer of OSI determines the interface of the system with the user?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+   A) Network
+   B) Application
+   C) Data-link
+   D) Session
 
 ## Switching Techniques
 

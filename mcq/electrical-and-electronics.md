@@ -649,3 +649,15 @@
    b) 0.5\text{ Watt}
    c) 18\text{ Watt}
    d) 0.0631\text{ Watt}
+
+9. **সিগন্যালের পারস্পরিক রূপান্তর করে-** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+   A) মডেম
+   B) হাব
+   C) রাউটার
+   D) গেটওয়ে
+
+10. **একটি ওয়েভ এক সাইকেল এ যে দূরত্ব অতিক্রম করে তাকে বলে-** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+   A) Frequency
+   B) Cycle
+   C) Wave length
+   D) None

@@ -336,3 +336,9 @@
    B) cron
    C) date and time
    D) schedule
+
+8. **What command is used to remove files UNIX?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+   A) dm
+   B) rm
+   C) delete
+   D) erase

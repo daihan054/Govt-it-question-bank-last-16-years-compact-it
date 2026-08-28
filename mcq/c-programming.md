@@ -639,6 +639,12 @@
    C) local variable
    D) global variable
 
+9. **Which format specifier is used for typing double data?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+   A) %f
+   B) %lf
+   C) %d
+   D) %s
+
 ## Flowcharts & Algorithms
 
 1. **In flowchart what does below represent?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**

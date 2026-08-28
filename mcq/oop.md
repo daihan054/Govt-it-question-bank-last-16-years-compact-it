@@ -348,6 +348,12 @@
    C) Encapsulation
    D) Composition
 
+7. **Which one is pure object-oriented language?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+   A) C++
+   B) C+
+   C) Java
+   D) None
+
 ## Inheritance
 
 1. **When a class serves as base class for many derived classes, the situation is called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**

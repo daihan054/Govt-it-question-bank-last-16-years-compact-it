@@ -54,6 +54,18 @@
    c) \overline{ABC}
    d) \overline{A B C}
 
+10. **Write the name of the Gate:** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 217]**
+   A) NOR
+   B) OR
+   C) NAND
+   D) None
+
+11. **The OR, XOR & AND functions can be performed by ____ of the computer in a CPU.** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+   A) ALU
+   B) CU
+   C) Memory
+   D) Register
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -329,6 +341,12 @@
    B. D1C
    C. 1CD
    D. 1DC
+
+34. **A nibble is equal to:** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+   A) 4-bits
+   B) 6-bits
+   C) 8-bits
+   D) 16-bits
 
 ## Boolean Algebra & Simplification
 
