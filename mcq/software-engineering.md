@@ -20,6 +20,12 @@
    (c) Grey box testing
    (d) None of these
 
+3. **The degree of interaction between two modules is known as-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) Cohesion
+   b) Strength
+   c) Inheritance
+   d) Coupling
+
 ## Software Testing
 
 1. **Which of the following testing strategy is related to the boundary value analysis?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**

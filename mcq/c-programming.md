@@ -12,6 +12,18 @@
    (c) for (i = 0; i = 0; i--)
    (d) for (i=n-1; i>-1; i--)
 
+3. **Consider int i=0; Then which of the following is not an infinite loop?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) for(;;){}
+   b) while ( ){}
+   c) while ( ++i<0) { --i;}
+   d) do {++i; while(--i<=0);
+
+4. **Which keyword is used to skip the rest of a loop and carry on from the top of the loop again?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) Break
+   b) resume
+   c) continue
+   d) skip
+
 ## Output Tracing
 
 1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -181,6 +193,24 @@
    (C) A bog negative Number
    (D) Compiler Error
 
+12. **How many times will loop iterate?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   (a) 9
+   (b) 10
+   (c) 8
+   (d) infinite
+
+13. **What will be the output of the following “C” code fragment?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   ```c
+   x=0;
+   while (x<100)
+   x+=2;
+   print(x);
+   ```
+   a) 99
+   b) 100
+   c) 101
+   d) 98
+
 ## Storage Classes & Scope
 
 1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
@@ -201,3 +231,19 @@
    (B) Extern
    (C) Static
    (D) Register
+
+## Arrays & Functions
+
+1. **The number of values a function can return at a time?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) 1
+   b) 2
+   c) 0
+   d) more than 2
+
+## Pointers & Memory Allocation
+
+1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) Integer
+   b) Float
+   c) Character
+   d) Double

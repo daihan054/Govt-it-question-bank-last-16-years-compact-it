@@ -91,3 +91,27 @@
    (b) Comparison Operator
    (c) Insertion Operator <<
    (d) Prefix++
+
+## OOP Concepts & Principles
+
+1. **Which of the following is not property of the Object Oriented Programming Concept?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) Encapsulation
+   b) Inheritance
+   c) Exception
+   d) Abstraction
+
+## Inheritance
+
+1. **When a class serves as base class for many derived classes, the situation is called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+   a) Polymorphism
+   b) hierarchical inheritance
+   c) Hybrid inheritance
+   d) Multipath inheritance
+
+## Constructors & Destructors
+
+1. **Which of the following is true regarding a constructor in Object Oriented Programming?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) May consist of a return type
+   b) Does not consist of any return type
+   c) has some return type
+   d) None of the above

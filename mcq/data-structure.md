@@ -50,6 +50,18 @@
    (c) Arithmetic expression evaluation
    (d) All of the above
 
+3. **Which Data structure is needed to convert infix notation to postfix notation?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) Branch
+   b) Tree
+   c) Queue
+   d) Stack
+
+4. **Find the output of the following prefix expression *+2-2 \text{ } 1/4 \text{ } 2+-531** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) 2
+   b) 12
+   c) 10
+   d) 4
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -75,6 +87,24 @@
    (b) Root search
    (c) Depth first search
    (d) Breadth first search
+
+5. **Which data structure is suitable to represent hierarchical relationship between elements?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+   a) Stack
+   b) Queue
+   c) List
+   d) Tree
+
+6. **How many children does a binary tree have?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+   a) 2
+   b) 0
+   c) 0 or 1 or 2
+   d) Any number of children
+
+7. **A B* tree can contain a maximum of 7 pointers in a node. What is the minimum number keys in leaves?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+   a) 6
+   b) 3
+   c) 4
+   d) 7
 
 ## Hashing & Hash Tables
 

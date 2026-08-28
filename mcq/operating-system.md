@@ -12,6 +12,12 @@
    (c) mapping table
    (d) frame table
 
+3. **Logical Memory is broken into blocks of the same size called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) Frames
+   b) Pages
+   c) raids
+   d) Blocks
+
 ## Deadlock
 
 1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -19,6 +25,18 @@
    (b) 2
    (c) 3
    (d) 4
+
+2. **Which one of the following is the deadlock avoidance algorithm?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) banker’s algorithm
+   b) round-robin algorithm
+   c) Elevator algorithm
+   d) karn’s algorithm
+
+3. **Which of the following is not a deadlock handling strategy?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 41]**
+   a) Deadlock prevention
+   b) Timeout
+   c) Deadlock detection and recovery
+   d) Deadlock annihilation
 
 ## Process Synchronization
 
@@ -41,6 +59,12 @@
    (b) Running
    (c) Waiting (Blocked)
    (d) Terminated
+
+2. **Which of the following scheduling algorithm is non preemptive?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 37]**
+   (a) Shortest Job First
+   (b) FCFS
+   (c) Rounf Robin
+   (d) Priority Scheduling
 
 ## File Systems & Disk Management
 

@@ -62,6 +62,18 @@
    (c) UPDATE
    (d) CREATE
 
+7. **CREATE TABLE employee (name VARCHAR, id INTEGER). What type of statement is this?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+   a) DML
+   b) DDL
+   c) View
+   d) Integrity constraint
+
+8. **Which one of the followings sorts rows in SQL?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) SORT BY
+   b) ALIGN BY
+   c) ORDER BY
+   d) GROUP BY
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -84,6 +96,12 @@
    (c) Isolation
    (d) Durability
 
+3. **A transaction completes its execution is said to be-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 41]**
+   a) Committed
+   b) Aborted
+   c) Rolled back
+   d) Successful
+
 ## Indexing & Query Optimization
 
 1. **Which one make data access from a database faster?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
@@ -104,3 +122,11 @@
    (b) 8.6
    (c) 12
    (d) 9.2
+
+## SQL Joins
+
+1. **What type of join in needed when you wish to include rows that do not have matching values?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) Equal join
+   b) Natural join
+   c) Outer join
+   d) Inner join

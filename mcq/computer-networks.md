@@ -95,3 +95,17 @@
    (B) Class A, 8
    (C) Class B, 3
    (D) Class B, 32
+
+3. **What is the maximum number of IP addresses that can be assigned to be the host on a local subnet that uses the 255.255.255.224 subnet mask?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) 16
+   b) 32
+   b) 31
+   d) 30
+
+## Data Transmission & Modes
+
+1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+   a) Automatic
+   b) Half-duplex
+   c) Full-duplex
+   d) Simplex

@@ -185,6 +185,12 @@
    (c) Main facilities
    (d) Primitive man
 
+4. **Select the correct English translation of: The boy takes after his father.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) ছেলেটি তার পিতার দেখাশুনা করে
+   b) ছেলেটি তার পিতার অনুকরণ করে
+   c) ছেলেটি তার পিতার পদাঙ্ক অনুসরণ করে
+   d) ছেলেটি দেখতে তার পিতার মত
+
 ## Vocabulary, Synonyms & Antonyms
 
 1. **What is the antonym of 'famous '?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -254,3 +260,9 @@
    (b) Counterfit
    (c) Counterfiet
    (d) Counterfeit
+
+4. **Choose the correct spelling** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) Query
+   b) Quelry
+   c) Qeiry
+   d) Queery

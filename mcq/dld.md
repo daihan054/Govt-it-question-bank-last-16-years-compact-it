@@ -53,3 +53,9 @@
    (b) 10011010
    (c) 00011011
    (d) 10011100
+
+3. **A computer system needs to store 100 different symbols. In this case, how many bits of data is required for each symbol?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) 4
+   b) 5
+   c) 6
+   d) 7

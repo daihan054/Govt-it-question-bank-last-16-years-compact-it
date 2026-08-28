@@ -158,6 +158,12 @@
    (c) Chandrayaan-3
    (d) Luna-25
 
+18. **OPEC থেকে কোন দেশ নিজেকে প্রত্যাহার করে নেয়?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) নাইজেরিয়া
+   b) লিবিয়া
+   c) ভেনিজুয়েলা
+   d) কাতার
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -304,6 +310,30 @@
    (c) Bangladesh is a low-income country.
    (d) Bangladesh is a high-income country.
 
+25. **কুতুবদিয়া বাতিঘর নির্মাণ করা হয় কত সালে?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 37]**
+   (a) ১৮৫৫ সালে
+   (b) ১৮৪০ সালে
+   (c) ১৮৪৬ সালে
+   (d) ১৮৪৮ সালে
+
+26. **বাংলাদেশের একমাত্র পাহাড়ী দ্বীপ কোনটি?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 37]**
+   (a) সেন্ট মার্টিন
+   (b) মহেশখালি
+   (c) ছেড়াদ্বীপ
+   (d) নিঝুম দ্বীপ
+
+27. **তামাবিল সীমান্তের সাথে ভারতের কোন শহরটি অবস্থিত?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 37]**
+   (a) করিমগঞ্জ
+   (b) খোয়াই
+   (c) পেট্রাপোল
+   (d) ডাউকি
+
+28. **দক্ষিণ তালপট্টি কোন নদীর মোহনায় অবস্থিত?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 37]**
+   (a) নাফ
+   (b) তেতুলিয়া
+   (c) আড়িয়াল খাঁ
+   (d) হাঁড়িয়াভাঙ্গা
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -353,6 +383,12 @@
    (b) Mediterranean Sea and Red Sea
    (c) Persian Gulf and Black Sea
    (d) Black Sea and Arabian Sea
+
+9. **পেনাং কোন দেশের সমুদ্রবন্দর?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 37]**
+   (a) ইন্দোনেশিয়া
+   (b) মালয়েশিয়া
+   (c) তাইওয়ান
+   (d) ফিলিপাইন
 
 ## Sports
 

@@ -19,3 +19,31 @@
    (b) Quick sort
    (c) Heap sort
    (d) Merge sort
+
+2. **Which of the following sorting algorithms is a divide and conquer algorithm?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 41]**
+   a) merge sort
+   b) Bubble sort
+   c) Insertion sort
+   d) Counting sort
+
+## Graph Algorithms
+
+1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   (a) n(n-1)/2
+   (b) n(n+1)/2
+   (c) n(n-1)
+   (d) n(n+1)
+
+2. **What is the number of edges in a complete graph with 5 nodes?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+   a) 1
+   b) 4
+   c) 5
+   d) 10
+
+## Dynamic Programming & Greedy
+
+1. **Which of the following is an example of dynamic programming approach?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+   a) Fibonacci Series
+   b) Tower of Hanoi
+   c) Dijkstra Shortest Path
+   d) None of the above
