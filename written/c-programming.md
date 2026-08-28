@@ -226,6 +226,8 @@ return 0;
 ```
 **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 457]**
 
+43. **Write a C code that show factorial of a number.** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 561]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

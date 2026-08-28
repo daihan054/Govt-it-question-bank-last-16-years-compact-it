@@ -19,6 +19,8 @@
    c. (0+1)^*00(0+1)^* + (0+1)^*11(0+1)^*
    d. 00(0+1)^*11 + 11(0+1)^*00
 
+2. **Which one of the following regular expressions represents the language: The set of all binary strings having two consecutive 0's and two consecutive 1's? Explain why?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 561]**
+
 ## Linker & Loader
 
 1. **(b) What are the tasks of linker and loader? Describe briefly using examples.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 479]**

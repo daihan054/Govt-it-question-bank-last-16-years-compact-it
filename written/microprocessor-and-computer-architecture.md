@@ -68,6 +68,8 @@
 
 4. **How many total bits are required for a direct mapped cache with 16KB of data and 4-word blocks? Assuming a 32 bit address?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 421]**
 
+5. **Write Concept of cache memory in computer. How its change performance of computer?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 559]**
+
 ## Memory Hierarchy & Storage
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -85,6 +87,8 @@
 7. **Differentiate among CPU register, Cache memory, Main memory and Secondary memory.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 510]**
 
 8. **What do you mean by memory organization? Write the different between SRAM and DRAM.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 558]**
+
+9. **What is dual channel RAM? Difference between single In-Line and Dual In-Line Memory Module.** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 559]**
 
 ## Secondary Storage (HDD vs SSD)
 
