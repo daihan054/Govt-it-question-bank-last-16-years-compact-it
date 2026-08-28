@@ -24,6 +24,8 @@
 
 12. **বিজ্ঞানমনস্কতা - নিয়ে একটা রচনা লিখুন।** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
+13. **দশটি বাক্যে একটি অনুচ্ছেদ লিখুন: ‘শুধু শিক্ষা নয় দক্ষতাও জরুরি’** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -172,3 +174,9 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 20. **“রক্তে আঁকা ভোর” কার লেখা?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 21. **“শনিবার থেকে পরীক্ষা শুরু” বাক্যে “শনিবার থেকে” কোন কারক?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+22. **সন্ধি বিচ্ছেদ: সদৈব, পরমৌষধ, বহ্বর্থ তন্বী, লবণ।** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+
+23. **সমাস: কদর্থ, আলুসিদ্ধ, সাহিত্যসভা, তুষারশুভ্র, মনমাঝি।** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+
+24. **বাগধারা দিয়ে বাক্য রচনা: অগস্ত্য যাত্রা, আটকপালে, ইতর বিশেষ, কাঁচা পয়সা, কান পাতলা।** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**

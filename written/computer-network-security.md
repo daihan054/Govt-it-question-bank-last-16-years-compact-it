@@ -32,6 +32,8 @@
 
 16. **(খ) Plaintext ও Cipher text এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
 
+17. **What is SHA-256 and SHA-512 in network security, what is avalanche effect, is it desirable or undesirable.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 655]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -100,6 +102,8 @@
 
 11. **What is MAC flooding? How to prevent MAC flooding?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
 
+12. **What is Denial of Service (DoS) is and NAT?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -126,6 +130,8 @@
 8. **What is firewall and why it is used?** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 475]**
 
 9. **What is the function of a firewall?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
+
+10. **DMZ and firewall placement in a diagram. (Approximate)** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
 
 ## VPN & Tunneling Protocols (IPsec, SSL VPN)
 

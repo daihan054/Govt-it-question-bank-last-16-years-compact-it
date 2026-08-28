@@ -107,6 +107,8 @@ int main(int argc, char *argv[]){
    b) নতুন ডিরেক্টরি তৈরির কমান্ড।
    c) ফাইল এ্যাকসেস পারমিশন দেখানোর কমান্ড।
 
+17. **Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
@@ -231,6 +233,8 @@ All process arrived at time 0. Lower number has higher priority.
 | P3 | 3 | 6 |
 **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 467]**
 
+15. **Starvation in SJF, Starvation free scheduling algorithm name. (Question not clear)** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 654]**
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
@@ -299,6 +303,8 @@ All process arrived at time 0. Lower number has higher priority.
 5. **(ক) Process কী? একটি Process এর বিভিন্ন ধাপগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
 6. **অথবা, (ক) Process Control Block (PCB) কী? এটি একটি Process সংক্রান্ত যে যে তথ্য রাখে সেগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 624]**
+
+7. **Write down the name of four information stored in PCB (Process Control Block).** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
 
 ## Process Synchronization & Concurrency
 

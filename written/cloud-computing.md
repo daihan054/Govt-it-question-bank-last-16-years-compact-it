@@ -37,6 +37,10 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 5. **Define a virtual machine with a neat diagram, explain the working of VM. What are the benefits of a VM?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 442]**
 
+## Scalability (Horizontal & Vertical Scaling)
+
+1. **Server rack digram to draw horizontal and vertical scalling.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 655]**
+
 ## High Availability & System Redundancy
 
 1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.

@@ -37,6 +37,8 @@
 
 5. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
 
+6. **SQL query to insert data into table. (A table was given with 3 row)** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
+
 ## SQL Queries
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
@@ -389,6 +391,8 @@ ORDER BY average_salary DESC;
 
 4. **(খ) One-to-one এবং One-to-many রিলেশন উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
 
+5. **Weak Entity and strong entity difference with relation.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
+
 ## Keys in DBMS
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -451,6 +455,8 @@ ORDER BY average_salary DESC;
 1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 613]**
 
 2. **(ক) Data Fragmentation কী? ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 613]**
+
+3. **What is distributed database?** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
 
 ## Data Warehousing, Data Mining & Business Intelligence
 

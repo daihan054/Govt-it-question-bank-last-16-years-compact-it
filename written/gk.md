@@ -120,6 +120,10 @@
 
 60. **বাংলাদেশের জাতীয় পতাকার ডিজাইনার কে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
+61. **বঙ্গবন্ধুর ঐতিহাসিক ৭ই মার্চের ভাষণ ইউনেস্কো কত তারিখে মেমোরি অব দ্য ওয়ার্ল্ড ইন্টারন্যাশনাল রেজিস্টারে অন্তর্ভুক্ত করে?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+
+62. **রূপকল্প ২০৪১ বলতে কি বুঝ?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -222,6 +226,8 @@
 
 43. **Breifly explain SDG.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 644]**
 
+44. **Greenpeace বলতে কি বুঝ?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+
 ## Everyday Science & Environment
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
@@ -251,3 +257,5 @@
 13. **Mention the name of the largest, biggest and heaviest planet.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
 14. **What is the name of a technique that will be used to make multiple copies of target DNA in vitro?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 549]**
+
+15. **সুষম খাদ্যের উপাদান কয়টি?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**

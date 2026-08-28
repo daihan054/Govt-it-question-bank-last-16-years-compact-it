@@ -18,6 +18,8 @@ for i in N:
 
 6. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 606]**
 
+7. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]

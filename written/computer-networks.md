@@ -156,6 +156,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 8. **Show a 3-way handshake protocol in TCP connection established using a diagram.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
 
+9. **Differecne between TCP and UDP.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
+
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -381,6 +383,16 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 52. **What is the subnet mask in 10.2.1.3/22 network?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
 
+53. **In IPv4 show the network address and host address range of class A, B and C.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
+
+54. **Given IP Address: 192.168.5.154/26, Calculate network address and subnet mask.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
+
+55. **Mention the maximum number of networks and hosts used in Class A, B and C networks.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+
+56. **Which subnet mask would be appropriate for address range to submit for up to LANs, with each LAN contains 5 to 26 hosts?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+
+57. **Given IP Address: 192.168.19.24/29, find out the following IP Class & type, Number of Host, Network address, Broadcast address, Wildcard, and Subnet mask.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -412,6 +424,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 4. **(ক) IP Address কী? IPv4 এবং IPv6 এর মধ্যে চারটি প্রধান পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
 5. **Difference between IPv4 and IPv6.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]**
+
+6. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
 
 ## Routing Protocols & Route Configuration
 
@@ -531,6 +545,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 9. **SMTP, DNS, DHCP, NAT এর কাজ কি লিখ?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
 
+10. **What is DNS? What is forward and reverse lookup DNS?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
+
+11. **What is ICMP, SMTP, POP server, Boot loader and Clustering?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+
 ## Email Architecture & Protocols (SMTP, POP3, IMAP)
 
 1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
@@ -550,6 +568,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **One of the drawbacks of a small packet size is that a large function of link bandwidth is consumed by overhead bytes. To this end, supposed that the packet consists of P bytes and 5 bytes of header. Consider sending a digitally encoded voice source directly. Suppose the source is encoded a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the packetization delay. Determine the packetization delay for length L-1500 bytes (roughly corresponding to maximum-sized Ethernet packet).** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
 
 4. **(ক) Bandwidth এবং Through put এর মধ্যে পার্থক্য কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
+
+5. **The power of signal is 10\text{mW} and the power of the noise is 1\mu\text{W}; What are the values of \text{SNR} and \text{SNR}_{\text{dB}}?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
+
+6. **We need to send 265\text{ kbps} over a noiseless channel with a bandwidth of 20\text{kHz}. How many signal levels do we need?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 652]**
+
+7. **A telephone line normally has a bandwidth of 3000\text{ Hz} (300\text{ to } 3300\text{ Hz}) assigned foe data communications. The signal-to-noise ratio is usually 3162. Calculate the capacity for this channel?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 656]**
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 

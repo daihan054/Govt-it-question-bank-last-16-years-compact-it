@@ -238,6 +238,8 @@ return 0;
 
 48. **Write a C program: x - \frac{x^3}{3} + \frac{x^5}{5} - \dots** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 650]**
 
+49. **C program to find sum of odd numbers from 1 to n.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -249,6 +251,8 @@ return 0;
 4. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
 
 5. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
+
+6. **Write an Algorithm to check a number is Prime or not Prime.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
 
 ## Command Line Arguments & Basic Programs
 
@@ -263,6 +267,12 @@ return 0;
 3. **Write a C program upper case to lower case conversion.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 475]**
 
 4. **Write a program to reverse string without using library function.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
+
+5. **Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from string.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
+
+6. **Write a program IPv4 IP validation from given IP with valid and not valid.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
+
+7. **String reverse program but without without using the library function.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
 
 ## Pointers
 
@@ -404,6 +414,23 @@ def main():
     print (st)
 if __name__ == "__main__":
     main()
+```
+
+13. **Output Tracing:** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
+A)
+```c
+char str[20] = "Development";
+str[5] = '\0';
+int len = strlen(str);
+printf("%s", str);
+```
+B)
+```c
+int i;
+for (i=0; i<9; i++) {
+    if(i==5) continue;
+    printf ("%d\n", i);
+}
 ```
 
 ## Recursion & Functions
