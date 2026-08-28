@@ -17,52 +17,52 @@
 
 ## HTML, XML & Web Fundamentals (15)
 
-1. **Which of the following is the root tag of the HTML document?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
+1. **Which of the following is the root tag of the HTML document?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) <body>
    b) <head>
    c) <title>
    d) <html>
 
-2. **How to create an unordered list (a list with the list items in bullets) in HTML?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
+2. **How to create an unordered list (a list with the list items in bullets) in HTML?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) <ul>
    b) <ol>
    c) <li>
    d) <i>
 
-3. **What is the popular way to linking many documents?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+3. **What is the popular way to linking many documents?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** hyperlink
 
-4. **URL stands for–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+4. **URL stands for–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*
    a) Universal Resource Locator
    b) Uniform Resource Locator
    c) Unique Resource Locator
    d) None
 
-5. **XSLT processors evaluate each statement in the context of the match that has been made. That is, XSLT processors are:** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 113]**
+5. **XSLT processors evaluate each statement in the context of the match that has been made. That is, XSLT processors are:** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*
    a) Context oriented
    b) Procedural oriented
    c) Object oriented
    d) Relational oriented
 
-6. **Suppose you are using an HTML browser at a client machine C to access a static HTML webpage hosted in a HTTP server S. The page contains exactly one static embedded image which also resides at S. Assuming no web caching which of the following is correct when you load the webpage along with the embedded image?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
+6. **Suppose you are using an HTML browser at a client machine C to access a static HTML webpage hosted in a HTTP server S. The page contains exactly one static embedded image which also resides at S. Assuming no web caching which of the following is correct when you load the webpage along with the embedded image?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*
    a. C need to send at least 2 HTTP requests to S using two different TCP connection.
    b. C need to send at least 2 HTTP requests to S but a single TCP connection is sufficient.
    c. A single HTTP request is sufficient without using any TCP connection from C to S.
    d. A single HTTP request is sufficient using a single TCP connection from C to S.
 
-7. **Which one is the first search engine?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
+7. **Which one is the first search engine?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*
    A) Google
    B) Archie
    C) Alta vista
    D) WAIS
 
-8. **The newest version of HTML is:** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+8. **The newest version of HTML is:** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*
    A) WML
    B) HTML5
    C) XSL
    D) HTML3
 
-9. **When a web browser interacts with a web server, the following actions take place?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
+9. **When a web browser interacts with a web server, the following actions take place?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*
    A1: The web browser requests a webpage using HTTP.
    A2: The web browser establishes a TCP connection with the web server.
    A3: The web server sends the requested webpage using HTTP.
@@ -73,37 +73,37 @@
    c) A4, A1, A2, A3
    d) A2, A4, A1, A3
 
-10. **Which HTML attribute is used to hide characters of an input password?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
+10. **Which HTML attribute is used to hide characters of an input password?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*
    a) href
    b) type
    c) tyle
    d) src
 
-11. **Which of the followings is not a built-in HTML tag?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 157]**
+11. **Which of the followings is not a built-in HTML tag?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 157 (ET: DU)]*
    a) <script>
    b) <form>
    c) <html>
    d) All of these are valid built-in HTML tags
 
-12. **Which of the following converts the documents written by HTML?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+12. **Which of the following converts the documents written by HTML?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*
    A. Browser
    B. FTP
    C. HTPP
    D. Web
 
-13. **A nonstandard HTML extension that causes scrolling text to appear as pan of a Web page is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+13. **A nonstandard HTML extension that causes scrolling text to appear as pan of a Web page is-** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
    A) DHCP
    B) mask off
    C) Dhrystone
    D) marquee
 
-14. **Which of the following tags is used to create a paragraph in HTML?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+14. **Which of the following tags is used to create a paragraph in HTML?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*
    A) <para>content</para>
    B) <cont>para</cont>
    C) <p> content</p>
    D) <body>content</body>
 
-15. **One advantage of XML compared to HTML is ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+15. **One advantage of XML compared to HTML is ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. XML works on more platforms
    b. XML is suited to using webpage as frontend to database
    c. XML was designed for portable phone
@@ -111,61 +111,61 @@
 
 ## PHP & Server-Side (9)
 
-1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
+1. **Which is not a valid variable name in PHP?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) age
    b) _age
    c) PersonAge
    d) 1age
 
-2. **Which of the followings is a Web Framework built with PHP?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
+2. **Which of the followings is a Web Framework built with PHP?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*
    a) Laravel
    b) Django
    c) MVC
    d) Spring
 
-3. **What will be the output of the following PHP code? <?php "Hello World" ?>** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 211]**
+3. **What will be the output of the following PHP code? <?php "Hello World" ?>** *[Probashi Kallyan Bank Programmer: 2019 compact it 211 (ET: AUST)]*
    A) Error
    B) Hello World
    C) Nothing
    D) None of this
    16. What is the output of the code shown?
-   %(qty)d more %(food)s'%{'qty':1,'food':'spam'} **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 211]**
+   %(qty)d more %(food)s'%{'qty':1,'food':'spam'} *[Probashi Kallyan Bank Programmer: 2019 compact it 211 (ET: AUST)]*
    A) Error
    B) 1 more spam
    C) No output
    D) 1 more foods
 
-4. **Which is correct for concatenation in PHP?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+4. **Which is correct for concatenation in PHP?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
    A) $add = Sadd+1
    B) $add = $add +1
    C) $add = $add + Sadd
    D) $add. = +1;
 
-5. **Which is used for adding two or more string in PHP?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+5. **Which is used for adding two or more string in PHP?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
    A) +
    B) *
    C) . (dot)
    D) |
 
-6. **Which of the following function returns the number of characters in a string variable?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+6. **Which of the following function returns the number of characters in a string variable?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. count($variable)
    b. len($variable)
    c. strlen($variable)
    d. strcount($variable)
 
-7. **PHP is widely used ________ scripting language that is especially suited for web development and can be embedded into html.** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+7. **PHP is widely used ________ scripting language that is especially suited for web development and can be embedded into html.** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. Open source general purpose
    b. Proprietary general purpose
    c. Open source special purpose
    c. Proprietary special purpose
 
-8. **Which of the following is not true?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+8. **Which of the following is not true?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. PHP can be used develop applications
    b. PHP makes a website dynamic
    c. PHP applications cannot be compiled
    d. PHP cannot be embedded into html
 
-9. **How do you write a conditional statement for executing some statements only if "1" is not equal to 5?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+9. **How do you write a conditional statement for executing some statements only if "1" is not equal to 5?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. if(1<>5)
    b. if(1!=5)
    c. if(1=!5)
@@ -173,49 +173,49 @@
 
 ## Scripting & JavaScript (8)
 
-1. **Where can JavaScript code be placed in an html page?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+1. **Where can JavaScript code be placed in an html page?** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*
    A) <head>
    B) <body>
    C) both A and B
    D) none
 
-2. **What is the value of variable x after the following statement is executed in JavaScript var x2= "3" + "4" ?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+2. **What is the value of variable x after the following statement is executed in JavaScript var x2= "3" + "4" ?** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*
    A) 34
    B) 7
    C) 0
    D) undefine
 
-3. **Which is correct to open new window/tab of browser?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+3. **Which is correct to open new window/tab of browser?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
    A) <a href=[http://www.example.com](http://www.example.com) target= "_blank"> new window/tab</a>
    B) <a href=[http://www.example.com](http://www.example.com) target= "blank"> new window/tab</a>
    C) <a href=[http://www.example.com](http://www.example.com) target= "_blank“new window”> new window</a>
    D) None
 
-4. **Which is the correct variable declaration in JavaScript?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+4. **Which is the correct variable declaration in JavaScript?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
    A) var a= {'a', 'b', 'c'};
    B) var a= {'a' 'b' 'c'}
    C) var a= {“a” “b” “c”}
    D) None
 
-5. **Which one does run on client side?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+5. **Which one does run on client side?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*
    A) PHP
    B) JavaScript
    C) ASP.NET
    D) None of these
 
-6. **A script is a ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+6. **A script is a ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. Program of sequence of instructions that is interpreted or carried out by processes directly
    b. Program or sequence of instructions that is interpreted or carried out by another program
    c. Program or sequence of instructions that is interpreted or carried out by web services only
    d. None of these
 
-7. **What is the correct JavaScript syntax to view "Hello World"?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+7. **What is the correct JavaScript syntax to view "Hello World"?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. respone.write("Hellow World");
    b. document.write("Hello World")
    c. "Hello World"
    d. echo("Hello World")
 
-8. **Inside which HTML element do we put the JavaScript?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+8. **Inside which HTML element do we put the JavaScript?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. <scripting>
    b. <javascript>
    c. <script>
@@ -223,37 +223,37 @@
 
 ## Web Services & APIs (6)
 
-1. **Between a client and a web server, which of the following used for inspecting the data that is sent from the client to the web server and blocking attacks such as SQL injection?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
+1. **Between a client and a web server, which of the following used for inspecting the data that is sent from the client to the web server and blocking attacks such as SQL injection?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*
    (a) Cluster configuration
    (b) Load balancing function
    (c) SSL-VPN function
    (d) WAF
 
-2. **Which one of the following statements with respect to REST API is false?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+2. **Which one of the following statements with respect to REST API is false?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*
    (a) A REST API would use a GET request to retrieve a record
    (b) A REST API would use a DELETE request to delete a record
    (c) The operations in a REST API can be called from any HTTP client
    (d) None of the above statements is false
 
-3. **Which is the lightweight message format?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+3. **Which is the lightweight message format?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*
    a) XML
    b) JSON
    c) SQL
    d) HTML
 
-4. **Which one is modern light weight message exchange format?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+4. **Which one is modern light weight message exchange format?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*
    A) JSON
    B) XML
    C) MX
    D) HTML
 
-5. **Which one is modern lightweight message exchange format?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 224]**
+5. **Which one is modern lightweight message exchange format?** *[Combined Bank Maintenance Engineer 2018 compact it 224 (ET: N/A)]*
    A) JSON
    B) MX
    C) HTML
    D) XML
 
-6. **Which one is modern lightweight message exchange format?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+6. **Which one is modern lightweight message exchange format?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*
    A) XM
    B) MX
    C) HTML
@@ -261,31 +261,31 @@
 
 ## Full Stack & Web Servers (5)
 
-1. **Which of the following is not a web server?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+1. **Which of the following is not a web server?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*
    (a) Apache tomcat
    (b) PHP
    (c) Jetty
    (d) Tornado
 
-2. **What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+2. **What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*
    a) A Java application
    b) A Java applet
    c) A Java servlet
    d) None of the above is correct
 
-3. **Word Press can be called as ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+3. **Word Press can be called as ________** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*
    A) Static website
    B) Dynamic website
    C) Content Managed website
    D) E-Commerce website
 
-4. **What type of system is Cisco mail platform?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+4. **What type of system is Cisco mail platform?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*
    a. Linux
    b. MAC
    c. Windows
    d. Atari
 
-5. **Where the application server is installed for the web server?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 269]**
+5. **Where the application server is installed for the web server?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*
    a. Cisco MCS with cisco-based Windows operating system
    b. Cisco MCS with cisco-based Unix operating system
    c. Cisco MCS with cisco-based Linux operating system
@@ -293,31 +293,31 @@
 
 ## HTTP & Status Codes (5)
 
-1. **What does HTTP Status Code 500 indicate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+1. **What does HTTP Status Code 500 indicate?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*
    (a) Bad Request
    (b) Unauthorized Access
    (c) Internal Server Error
    (d) Not Found
 
-2. **When we browse internet, browser store some data in the computer. We are talking about-** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+2. **When we browse internet, browser store some data in the computer. We are talking about-** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)]*
    a. Session
    b. File
    c. Memory
    d. Cookie
 
-3. **While browsing, internet browser stores some data in the computer. Which is called by?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+3. **While browsing, internet browser stores some data in the computer. Which is called by?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*
    A) Session
    B) File
    C) Memory
    D) Cookie
 
-4. **Programs that is automatically loaded and operates as a part of browser ----** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+4. **Programs that is automatically loaded and operates as a part of browser ----** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*
    A) Plug in
    B) Add ones
    C) Widgets
    D) Utilities
 
-5. **Which of the following statements is true regarding Cookies?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+5. **Which of the following statements is true regarding Cookies?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*
    A) It is stored in web-client
    B) It is stored in server
    C) Each browsing time cookies become reset
@@ -325,7 +325,7 @@
 
 ## CSS & Styling (1)
 
-1. **Which CSS property is used to set the thickness or boldness of the text?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**
+1. **Which CSS property is used to set the thickness or boldness of the text?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 7 (ET: BIBM)]*
    a) font-size
    b) font-style
    c) font-weight
