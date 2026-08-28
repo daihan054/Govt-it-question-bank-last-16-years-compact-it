@@ -457,3 +457,9 @@
    B) B
    C) AB
    D) 1
+
+5. **According to Boolean algebra the value of: (A + AB) \cdot (B + AB) is-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+   A) A
+   B) B
+   C) AB
+   D) 1

@@ -80,6 +80,12 @@
    C) Dhrystone
    D) marquee
 
+14. **Which of the following tags is used to create a paragraph in HTML?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) <para>content</para>
+   B) <cont>para</cont>
+   C) <p> content</p>
+   D) <body>content</body>
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -167,6 +173,12 @@
    B) MX
    C) HTML
    D) XML
+
+6. **Which one is modern lightweight message exchange format?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+   A) XM
+   B) MX
+   C) HTML
+   D) JSON (JavaScript Object Notation)
 
 ## Scripting & JavaScript
 

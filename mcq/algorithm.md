@@ -224,6 +224,12 @@
    C) Greedy algorithm
    D) Dynamic programming
 
+20. **The complexity of Bubble sort algorithm is-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+   A) O(n)
+   B) O(\text{long } n)
+   C) O(n^2)
+   D) O(n \log n)
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -410,3 +416,9 @@
    B) A list
    C) A plan
    D) None of the above
+
+7. **The step by step instructions that solve a problem are called?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+   A) An algorithm
+   B) A list
+   C) A plan
+   D) None of them

@@ -256,6 +256,12 @@
    C) bit defender
    D) UML
 
+4. **Which tool could be used for deleting vulnerability through SQL Injection?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+   A) Nmap
+   B) Metasploit
+   C) Bitdefender
+   D) UML
+
 ## Cyber Attacks & Threats
 
 1. **An attacker sits between the sender and receiver and captures the information and retransmits to the receiver after some time without altering the information. This attack is called as ____** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 83]**
@@ -359,3 +365,9 @@
    B) NAT
    C) TCP
    D) UDP
+
+18. **Which of the following is the security equipment?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+   A) Router
+   B) IPS
+   C) Switch
+   D) Hub

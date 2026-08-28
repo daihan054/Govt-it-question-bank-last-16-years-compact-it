@@ -455,3 +455,21 @@
    B) B+ tree
    C) Stack
    D) Link List
+
+19. **The Term push and Pop is related to the** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+   A) Array
+   B) Lists
+   C) Stacks
+   D) All of the above
+
+20. **Which of the following data structure is non-linear type?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+   A) String
+   B) Lists
+   C) Stacks
+   D) None
+
+21. **The operation of processing each element in the list is known as-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+   A) Traversal
+   B) Merging
+   C) Inserting
+   D) Sorting

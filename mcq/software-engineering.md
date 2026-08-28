@@ -176,6 +176,12 @@
    C) Stress Testing
    D) Back to Back testing
 
+20. **Test case is written by-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+   A) Tester
+   B) Developer
+   C) Test Engineer
+   D) Designer
+
 ## SDLC Models
 
 1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
@@ -220,7 +226,7 @@
    c) Alpha test data
    d) System test data
 
-8. **Which of the following requires the most time in SDLC?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+8. **Which of the following requires the most time in SDLC?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
    A) Requirement Analysis
    B) Testing
    C) Deployment
@@ -255,6 +261,12 @@
    B) CPM
    C) Both A & B
    D) CMM
+
+14. **In which model prototype can be developed?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+   A) Unified Process
+   B) Waterfall Model
+   C) Evolutionary-model
+   D) All of the above
 
 ## Design Patterns
 

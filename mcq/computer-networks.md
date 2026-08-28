@@ -53,6 +53,12 @@
    C) Rolled
    D) Shielded twisted pair
 
+10. **Fiber optical cable is used for-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) LAN in an office
+   B) telephone lines
+   C) data connectivity among the branches of offices
+   D) None of the above
+
 ## Application Layer Protocols
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -353,6 +359,30 @@
    C) 127.0.0.0
    D) 127.0.0.1
 
+50. **Email is a protocol of the following layer?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+   A) Physical Layer
+   B) Datalink layer
+   C) Application Layer
+   D) TCP layer
+
+51. **Which protocol is used for secured web browsing?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+   A) WWW
+   B) RSA
+   C) https
+   D) ftp
+
+52. **How many layers Internet protocol suite?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+   A) 7
+   B) 5
+   C) 3
+   D) 4
+
+53. **POP3(Post Office Protocol V3) is a protocol for-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+   A) Email Sending
+   B) Email Receiving
+   C) Email Composing
+   D) Email Storing
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -412,7 +442,7 @@
    C) 64 bits
    D) 256 bits
 
-11. **What is not the advantage of IPv6 over IPv4?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]**
+11. **What is not the advantage of IPv6 over IPv4?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
    A) longer address
    B) Classification of traffic
    C) More real IP addresses
@@ -546,7 +576,7 @@
    C) SNMP
    D) SMTP
 
-19. **A path for carrying signals between a source and a destination is known as-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+19. **A path for carrying signals between a source and a destination is known as-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
    A) Router
    B) Channel
    C) Link
@@ -576,7 +606,7 @@
    C) Link
    D) Block
 
-24. **Which of the standard protocol for network management features?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
+24. **Which of the standard protocol for network management features?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
    A) SNMP
    B) SNA
    C) FTP
@@ -695,6 +725,48 @@
    B) identifier
    C) name
    D) process identifier
+
+44. **“The time to communicate between Bangladesh and USA is the same as that to communicate between two adjacent houses in Bangladesh,”- In which case is the above true?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+   A) Fiber optic
+   B) Satellite
+   C) Twisted pair
+   D) Radio link
+
+45. **Which of the following is not a standard synchronous communication protocol?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) SDLC
+   B) PAS
+   C) SLIP
+   D) SMTP
+
+46. **Distributed Queue Dual Bus is a standard for-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) MAN
+   B) WAN
+   C) Wireless LAN
+   D) PAN
+
+47. **Which of the following medium is used for broadband local networks?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) Coaxial
+   B) Optic fiber
+   C) CATV
+   D) UTP
+
+48. **A network that requires human intervention of route signals is called a-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) T-switched network
+   B) Bus network
+   C) Ring network
+   D) Star network
+
+49. **Which of the following is an example of a client server model?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) TELNET
+   B) FTP
+   C) DNS
+   D) All
+
+50. **A communication network which is used by large organizations over regional, national or global area is called-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) LAN
+   B) WAN
+   C) MAN
+   D) Intranet
 
 ## Multiplexing & Data Rate
 
@@ -1059,6 +1131,12 @@
    C) 255.255.255.78
    D) 255.255.255.0
 
+26. **To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask use should be-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+   A) 255.255.255.0
+   B) 255.255.255.192
+   C) 255.255.255.78
+   D) 255.255.255.240
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -1138,6 +1216,12 @@
    (b) 500 samples/S
    (c) 1000 samples/S
    (d) 1200 samples/S
+
+14. **The action of decoding a modulated signal is known as -** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+   A) Simulation
+   B) Emulation
+   C) Binary
+   D) None of the above
 
 ## Routing Protocols
 
@@ -1318,7 +1402,7 @@
    c) a(1-b)^2c
    d) a(1-(1-b)^2)c
 
-17. **How many pairs of stations can simultaneously communicate on Ethernet LAN?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+17. **How many pairs of stations can simultaneously communicate on Ethernet LAN?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
    A) 1
    B) 2
    C) 3

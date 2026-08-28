@@ -302,6 +302,18 @@
    C) instruction register
    D) program status word
 
+30. **ALU stores the computed result immediately in** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+   A) Memory Address registers
+   B) PC
+   C) General registers
+   D) Accumulator
+
+31. **Compared to CISC, RISC processors (at the same clock) are-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+   A) faster
+   B) slower
+   C) similar
+   D) undefined
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

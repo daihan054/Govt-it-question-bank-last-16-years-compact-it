@@ -6,7 +6,7 @@
    (c) Docker is a programming language, and Docker Hub is a code editor
    (d) Docker is a firewall, and Docker Hub is a security tool
 
-2. **Which software is mostly used for virtualization?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+2. **Which software is mostly used for virtualization?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
    A) VMware
    B) Oracle DBMS
    C) Windows XP
@@ -105,3 +105,9 @@
    B) Security
    C) Visualization
    D) All of above
+
+14. **The main threat of cloud-based provisioning is—** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+   A) Coast
+   B) Security
+   C) Virtualization
+   D) All of the above

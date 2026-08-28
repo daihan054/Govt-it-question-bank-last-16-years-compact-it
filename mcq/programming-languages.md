@@ -101,6 +101,12 @@
    C) Java
    D) HTML
 
+7. **Which of the following programming helps you to learn android programming?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+   A) C
+   B) SQL
+   C) Java
+   D) Python
+
 ## Visual Basic & .NET
 
 1. **.NET can be used in the following-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**

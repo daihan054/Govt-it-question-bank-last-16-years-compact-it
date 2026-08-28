@@ -408,6 +408,12 @@
    C) Group by, Having
    D) Group by, Where
 
+46. **In SQL, the ________ command is used to recompile a view.** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) COMPLTE VIEW
+   B) DEFINE VIEW
+   C) ALTER VIEW
+   D) CREATE VIEW
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -574,6 +580,24 @@
    (b) Nodes
    (c) Signals
    (d) Symbols
+
+29. **Data directory contains detail of-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) Data structure
+   B) Data flows
+   C) Data store
+   D) None
+
+30. **Which of the following terms refers to the degree to which data in a database system are accurate and correct?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) Data integrity
+   B) Data security
+   C) Data validity
+   D) None of the above
+
+31. **The following are functions of a DBMS except ________** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) creating and processing forms
+   B) creating databases
+   C) processing data
+   D) administrating databases
 
 ## Transaction Management & ACID
 

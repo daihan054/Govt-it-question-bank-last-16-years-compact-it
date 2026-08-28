@@ -316,6 +316,12 @@
    C) Static class
    D) Implement class
 
+45. **In Java, which operator is used to create an object?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) class
+   B) scanf
+   C) print
+   D) New
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -346,6 +352,12 @@
    B) encapsulation
    C) recursion
    D) polymorphism
+
+7. **In C++, the idea to hiding the details of how something is implemented is known as-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) inheritance
+   B) polymorphism
+   C) recursion
+   D) encapsulation
 
 ## Polymorphism & Overloading
 
@@ -485,6 +497,12 @@
    B) recursion
    C) encapsulation
    D) abstraction
+
+9. **Which is not a feature of object-oriented programming?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) Inheritance
+   B) Encapsulation
+   C) Recursion
+   B) Abstraction
 
 ## Inheritance
 

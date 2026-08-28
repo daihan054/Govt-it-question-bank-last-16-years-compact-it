@@ -576,6 +576,24 @@
    C) Hybrid
    D) Portal
 
+33. **Which of the following is not a type of Web search engine?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+   A) Computer-created
+   B) Human-organized
+   C) Hybrid
+   D) Portal
+
+34. **The only language understood by a digital computer is called-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+   A) Assembly language
+   B) High level language
+   C) Machine language
+   D) None of the above
+
+35. **Which video File format is used for HDTV?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) AVI
+   B) BJMPEGI
+   C) MPEG2
+   D) MPEG4
+
 ## Acronyms & Abbreviations
 
 1. **CMP এর পূর্ণ অভিব্যক্তি হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
@@ -607,3 +625,9 @@
    B) CCD
    C) CODASYL
    D) None of them
+
+6. **An acronym for conference of Data systems languages is –** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+   A) Collate
+   B) CODASYL
+   C) CCD
+   D) DASD

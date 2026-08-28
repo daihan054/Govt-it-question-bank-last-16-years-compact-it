@@ -359,6 +359,30 @@
    C) Oracle
    D) None of this
 
+12. **Which OS is recommended for real time systems?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+   A) Windows
+   B) Unix
+   C) Oracle
+   D) None of them
+
+13. **Which one loads first when you boot up your Computer?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+   A) BIOS
+   B) Operating System
+   C) Keyboard driver
+   D) None of them
+
+14. **Generally what type of server OS is chosen, where security concern is a great issue?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+   A) Windows XP
+   B) Windows Server 2000
+   C) DOS V
+   D) UNIX
+
+15. **The command password issued without an argument with change the password of –** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+   A) Root user
+   B) Current user
+   C) User with lowest user id
+   D) User with lowest group id
+
 ## Linux Commands & Administration
 
 1. **User passwords in Linux are stored as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
@@ -420,3 +444,9 @@
    B) rm
    C) delete
    D) erase
+
+9. **You need to determine whether IP information has been assigned to your Windows NT. Which utility should you use?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+   A) NBTSTAT
+   B) NETSTAT
+   C) IPCONFIG
+   D) WINTPCFG
