@@ -96,6 +96,8 @@
 
 4. **What is software design pattern? What are the advantages?** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 471]**
 
+5. **Define design pattern. Write about singleton pattern.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 469]**
+
 ## CI/CD & DevOps Methodologies
 
 1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

@@ -1,3 +1,7 @@
+## Networking Fundamentals & Terminology
+
+1. **Write short note: Network, Protocol, link, gateway, Node.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -313,6 +317,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    **i. Subnet mask; ii. Number of usable IP address; iii. First and last IP Address of that block iv. Broadcast IP address** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
 
 47. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
+
+48. **What is private IP range class A, B and C with maximum host of each class?** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
 
 ## Network Services (DHCP, NAT)
 

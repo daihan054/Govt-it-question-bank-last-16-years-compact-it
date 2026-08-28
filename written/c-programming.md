@@ -232,6 +232,8 @@ return 0;
 
 3. **Write a C program upper case to lower case conversion.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 475]**
 
+4. **Write a program to reverse string without using library function.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
+
 ## Output Tracing & Control Flow
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
@@ -278,6 +280,36 @@ int main() {
     return 0;
 }
 
+```
+
+5. **Output problem:** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
+```c
+#include<stdio.h>
+int main() {
+int i=1,j=1, k=1;
+
+cout<<++i || ++j && ++ km 101
+
+cout<<i<<j<<k;
+
+return 0;
+}
+```
+
+6. **Output problem:** **(BREB Assistant Programmer Exam: 18.02.2023)**
+```c
+#include<stdio.h>
+
+int main() {
+
+float p=10.5;
+
+int a=5*p +5.0;
+
+printf("%d", a);
+
+return 0;
+}
 ```
 
 ## Recursion & Functions
