@@ -1,3 +1,27 @@
+<!-- TOC START -->
+**Table of Contents** — 14 subtopics · 161 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Cryptography](#cryptography) | 29 |
+| 2 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks) | 26 |
+| 3 | [Firewalls & Network Defense](#firewalls--network-defense) | 16 |
+| 4 | [Authentication & Access Control](#authentication--access-control) | 16 |
+| 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities) | 16 |
+| 6 | [Malware & Security Threats](#malware--security-threats) | 15 |
+| 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https) | 11 |
+| 8 | [Cyber Crime & Security](#cyber-crime--security) | 9 |
+| 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad) | 8 |
+| 10 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn) | 6 |
+| 11 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance) | 3 |
+| 12 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios) | 3 |
+| 13 | [Email & Messaging Security (Spam, Phishing)](#email--messaging-security-spam-phishing) | 2 |
+| 14 | [Buffer Overflow & Software Vulnerabilities](#buffer-overflow--software-vulnerabilities) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Cryptography
 
 1. Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026]

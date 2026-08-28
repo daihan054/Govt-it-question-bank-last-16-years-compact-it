@@ -1,3 +1,24 @@
+<!-- TOC START -->
+**Table of Contents** — 11 subtopics · 43 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised) | 8 |
+| 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems) | 8 |
+| 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn) | 7 |
+| 4 | [Model Evaluation & Datasets](#model-evaluation--datasets) | 5 |
+| 5 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees) | 4 |
+| 6 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai) | 4 |
+| 7 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning) | 3 |
+| 8 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search) | 1 |
+| 9 | [Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization) | 1 |
+| 10 | [Association Rule Learning (Market Basket Analysis)](#association-rule-learning-market-basket-analysis) | 1 |
+| 11 | [Clustering & Unsupervised Learning (K-Means, Hierarchical)](#clustering--unsupervised-learning-k-means-hierarchical) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Machine Learning Paradigms (Supervised vs Unsupervised)
 
 1. **What is the difference between Supervised and Unsupervised learning?** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**

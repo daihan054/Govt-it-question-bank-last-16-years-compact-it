@@ -1,3 +1,27 @@
+<!-- TOC START -->
+**Table of Contents** — 14 subtopics · 112 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity) | 27 |
+| 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs) | 17 |
+| 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree) | 14 |
+| 4 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity) | 12 |
+| 5 | [Searching Algorithms](#searching-algorithms) | 11 |
+| 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms) | 7 |
+| 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism) | 6 |
+| 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack) | 6 |
+| 9 | [Dynamic Programming](#dynamic-programming) | 5 |
+| 10 | [Heap & Priority Queue](#heap--priority-queue) | 2 |
+| 11 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list) | 2 |
+| 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication) | 1 |
+| 13 | [Huffman Coding & Data Compression](#huffman-coding--data-compression) | 1 |
+| 14 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Algorithm Analysis & Asymptotic Complexity
 
 1. **Analyze the time and space complexity of the following code:**

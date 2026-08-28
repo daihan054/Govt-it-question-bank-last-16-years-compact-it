@@ -1,3 +1,21 @@
+<!-- TOC START -->
+**Table of Contents** — 8 subtopics · 37 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Electrical Circuits & Protection Devices](#electrical-circuits--protection-devices) | 12 |
+| 2 | [Transistors (BJT & FET)](#transistors-bjt--fet) | 9 |
+| 3 | [Semiconductor Devices & Diodes](#semiconductor-devices--diodes) | 4 |
+| 4 | [Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)](#digital-to-analog--analog-to-digital-converters-dacadc) | 4 |
+| 5 | [AC Circuits & Power Analysis](#ac-circuits--power-analysis) | 2 |
+| 6 | [Operational Amplifiers (Op-Amp)](#operational-amplifiers-op-amp) | 2 |
+| 7 | [Sensor Circuits & Automated Control Systems](#sensor-circuits--automated-control-systems) | 2 |
+| 8 | [Circuit Theorems (Thevenin, Norton, Superposition)](#circuit-theorems-thevenin-norton-superposition) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## Electrical Circuits & Protection Devices
 
 1. Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why? (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

@@ -1,3 +1,46 @@
+<!-- TOC START -->
+**Table of Contents** — 33 subtopics · 453 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing) | 97 |
+| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model) | 44 |
+| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology) | 23 |
+| 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https) | 20 |
+| 5 | [Multiplexing & Bandwidth](#multiplexing--bandwidth) | 18 |
+| 6 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration) | 18 |
+| 7 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp) | 17 |
+| 8 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave) | 17 |
+| 9 | [Networking Devices](#networking-devices) | 16 |
+| 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes) | 15 |
+| 11 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring) | 14 |
+| 12 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput) | 14 |
+| 13 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon) | 14 |
+| 14 | [IPv6 Addressing](#ipv6-addressing) | 13 |
+| 15 | [Network Topologies](#network-topologies) | 12 |
+| 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget) | 11 |
+| 17 | [Network Address Translation (NAT)](#network-address-translation-nat) | 11 |
+| 18 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat) | 10 |
+| 19 | [Digital Modulation & Signal Processing (BPSK, QPSK)](#digital-modulation--signal-processing-bpsk-qpsk) | 10 |
+| 20 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait) | 9 |
+| 21 | [Email Architecture & Protocols (SMTP, POP3, IMAP)](#email-architecture--protocols-smtp-pop3-imap) | 9 |
+| 22 | [Application Layer & Well-Known Port Numbers](#application-layer--well-known-port-numbers) | 8 |
+| 23 | [Switching Techniques (Circuit vs Packet Switching)](#switching-techniques-circuit-vs-packet-switching) | 5 |
+| 24 | [WAN Technologies (SONET/SDH, ATM, WDM)](#wan-technologies-sonetsdh-atm-wdm) | 5 |
+| 25 | [Pulse Code Modulation (PCM) & Signal Processing](#pulse-code-modulation-pcm--signal-processing) | 4 |
+| 26 | [Network Layer (Packet Fragmentation & Tunneling)](#network-layer-packet-fragmentation--tunneling) | 4 |
+| 27 | [Analog Modulation & Radio Receivers](#analog-modulation--radio-receivers) | 3 |
+| 28 | [Satellite Communication](#satellite-communication) | 3 |
+| 29 | [Line Coding & Digital Encoding](#line-coding--digital-encoding) | 2 |
+| 30 | [Address Resolution (ARP & RARP)](#address-resolution-arp--rarp) | 2 |
+| 31 | [VLANs & Subnetting Comparison](#vlans--subnetting-comparison) | 2 |
+| 32 | [Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)](#spread-spectrum--multiple-access-cdma-fhss-dsss) | 2 |
+| 33 | [High Availability & Redundancy Protocols (VRRP, HSRP)](#high-availability--redundancy-protocols-vrrp-hsrp) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Networking Fundamentals & Terminology
 
 1. **Write short note: Network, Protocol, link, gateway, Node.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**

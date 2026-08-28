@@ -1,3 +1,22 @@
+<!-- TOC START -->
+**Table of Contents** — 9 subtopics · 206 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements) | 88 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow) | 35 |
+| 3 | [Recursion & Functions](#recursion--functions) | 33 |
+| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts) | 17 |
+| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms) | 12 |
+| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms) | 12 |
+| 7 | [File Handling](#file-handling) | 4 |
+| 8 | [Pointers](#pointers) | 4 |
+| 9 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## File Handling
 
 1. Name Top C 5 File Management Function Name. (BEPRC Assistant Programmer Exam: 08.08.2026)

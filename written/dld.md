@@ -1,3 +1,22 @@
+<!-- TOC START -->
+**Table of Contents** — 9 subtopics · 110 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates) | 27 |
+| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions) | 19 |
+| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux) | 18 |
+| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map) | 16 |
+| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem) | 13 |
+| 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops) | 9 |
+| 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos) | 5 |
+| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic) | 2 |
+| 9 | [Finite State Machines (FSM)](#finite-state-machines-fsm) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Number Systems & Base Conversions
 
 1. **(a) Convert the following number:**

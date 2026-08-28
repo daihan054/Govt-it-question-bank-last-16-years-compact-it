@@ -1,3 +1,28 @@
+<!-- TOC START -->
+**Table of Contents** — 15 subtopics · 88 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Arithmetic & Algebra Problems](#arithmetic--algebra-problems) | 16 |
+| 2 | [Set Theory & Discrete Math](#set-theory--discrete-math) | 13 |
+| 3 | [Percentage, Profit & Loss, Simple & Compound Interest](#percentage-profit--loss-simple--compound-interest) | 12 |
+| 4 | [Basic Arithmetic & Average](#basic-arithmetic--average) | 11 |
+| 5 | [Geometry & Coordinate Geometry](#geometry--coordinate-geometry) | 10 |
+| 6 | [Permutations & Combinations](#permutations--combinations) | 5 |
+| 7 | [Ratio, Proportion & Mixtures](#ratio-proportion--mixtures) | 4 |
+| 8 | [Speed, Time, Distance & Boats](#speed-time-distance--boats) | 4 |
+| 9 | [Probability & Statistics](#probability--statistics) | 3 |
+| 10 | [Calculus & Integration](#calculus--integration) | 2 |
+| 11 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning) | 2 |
+| 12 | [Comprehensive Math Problems](#comprehensive-math-problems) | 2 |
+| 13 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations) | 2 |
+| 14 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence) | 1 |
+| 15 | [Numerical Methods & Root Finding](#numerical-methods--root-finding) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Arithmetic & Algebra Problems
 
 1. **তিন ক্রমের ম্যাজিক সংখ্যা কোনটি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**

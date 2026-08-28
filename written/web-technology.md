@@ -1,3 +1,20 @@
+<!-- TOC START -->
+**Table of Contents** — 7 subtopics · 55 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals) | 17 |
+| 2 | [HTTP Protocol](#http-protocol) | 12 |
+| 3 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation) | 8 |
+| 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest) | 7 |
+| 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development) | 5 |
+| 6 | [CSS & Styling (Inline, Internal, External)](#css--styling-inline-internal-external) | 4 |
+| 7 | [Web Security & Browser Same-Origin Policy (Iframe)](#web-security--browser-same-origin-policy-iframe) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## HTTP Protocol
 
 1. What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503 [SO IT 25-07-2026]

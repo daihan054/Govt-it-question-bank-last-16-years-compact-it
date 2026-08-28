@@ -1,3 +1,23 @@
+<!-- TOC START -->
+**Table of Contents** — 10 subtopics · 129 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms) | 50 |
+| 2 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery) | 21 |
+| 3 | [ICT in Society & Governance](#ict-in-society--governance) | 20 |
+| 4 | [Software Types & Classification](#software-types--classification) | 13 |
+| 5 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies) | 7 |
+| 6 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management) | 7 |
+| 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems) | 5 |
+| 8 | [Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies) | 3 |
+| 9 | [Digital Banking & Financial Inclusion](#digital-banking--financial-inclusion) | 2 |
+| 10 | [User Interfaces (CLI vs GUI)](#user-interfaces-cli-vs-gui) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Software Types & Classification
 
 1. Differentiate between system software and application software. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

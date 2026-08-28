@@ -1,3 +1,22 @@
+<!-- TOC START -->
+**Table of Contents** — 9 subtopics · 85 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism) | 46 |
+| 2 | [Java Programming & Methods](#java-programming--methods) | 11 |
+| 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling) | 7 |
+| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers) | 6 |
+| 5 | [Constructors & Destructors](#constructors--destructors) | 5 |
+| 6 | [Output Tracing & Recursion](#output-tracing--recursion) | 3 |
+| 7 | [Exception Handling](#exception-handling) | 3 |
+| 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions) | 2 |
+| 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## Output Tracing & Recursion
 
 1. Consider the following Java program and determine the integer value printed by the execution of the main() method:

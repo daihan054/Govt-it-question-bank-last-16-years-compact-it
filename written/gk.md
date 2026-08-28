@@ -1,3 +1,17 @@
+<!-- TOC START -->
+**Table of Contents** — 4 subtopics · 214 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Bangladesh Affairs](#bangladesh-affairs) | 114 |
+| 2 | [International Affairs](#international-affairs) | 70 |
+| 3 | [Everyday Science & Environment](#everyday-science--environment) | 22 |
+| 4 | [Banking & ICT Abbreviations](#banking--ict-abbreviations) | 8 |
+
+<!-- TOC END -->
+
+---
+
 ## Bangladesh Affairs
 
 1. Who is the architect of the National Martyrs' Memorial in Savar? [SO IT 25-07-2026]

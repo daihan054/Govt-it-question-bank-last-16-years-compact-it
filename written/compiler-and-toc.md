@@ -1,3 +1,18 @@
+<!-- TOC START -->
+**Table of Contents** — 5 subtopics · 25 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Compiler vs Interpreter](#compiler-vs-interpreter) | 9 |
+| 2 | [Regular Expressions & Finite Automata](#regular-expressions--finite-automata) | 6 |
+| 3 | [Grammar & Ambiguity](#grammar--ambiguity) | 5 |
+| 4 | [Lexical Analysis & Compiler Phases](#lexical-analysis--compiler-phases) | 4 |
+| 5 | [Linker & Loader](#linker--loader) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Compiler vs Interpreter
 
 1. Explain the difference between compiler and interpreter. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]

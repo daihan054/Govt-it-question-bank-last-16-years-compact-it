@@ -1,3 +1,18 @@
+<!-- TOC START -->
+**Table of Contents** — 5 subtopics · 7 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Computer Graphics (Vector & Raster)](#computer-graphics-vector--raster) | 3 |
+| 2 | [Color Models](#color-models) | 1 |
+| 3 | [Frequency Domain Filtering](#frequency-domain-filtering) | 1 |
+| 4 | [Edge Detection](#edge-detection) | 1 |
+| 5 | [Morphological Operations](#morphological-operations) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Computer Graphics (Vector & Raster)
 
 1. **(b) Differentiate between vector graphics and raster graphics. What are the applications of computer Graphics?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888-889]**

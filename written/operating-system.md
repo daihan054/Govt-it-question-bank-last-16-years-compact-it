@@ -1,3 +1,25 @@
+<!-- TOC START -->
+**Table of Contents** — 12 subtopics · 169 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration) | 43 |
+| 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms) | 24 |
+| 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation) | 22 |
+| 4 | [OS Concepts & System Software](#os-concepts--system-software) | 15 |
+| 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing) | 15 |
+| 6 | [Memory Management & Paging](#memory-management--paging) | 13 |
+| 7 | [Process Management & Process States](#process-management--process-states) | 10 |
+| 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization) | 9 |
+| 9 | [CPU Scheduling](#cpu-scheduling) | 6 |
+| 10 | [Windows & System Administration](#windows--system-administration) | 4 |
+| 11 | [Process Synchronization & Concurrency](#process-synchronization--concurrency) | 4 |
+| 12 | [File Systems & Disk Management](#file-systems--disk-management) | 4 |
+
+<!-- TOC END -->
+
+---
+
 ## OS Concepts & System Software
 
 1. Difference Between Firmware and OS. (BEPRC Assistant Programmer Exam: 08.08.2026)

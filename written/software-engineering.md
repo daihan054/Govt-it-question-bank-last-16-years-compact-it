@@ -1,3 +1,26 @@
+<!-- TOC START -->
+**Table of Contents** — 13 subtopics · 130 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [SDLC Phases & Models](#sdlc-phases--models) | 39 |
+| 2 | [Software Testing & Evaluation](#software-testing--evaluation) | 37 |
+| 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc) | 11 |
+| 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence) | 9 |
+| 5 | [Software Requirements Engineering](#software-requirements-engineering) | 8 |
+| 6 | [Software Project Management & Organization](#software-project-management--organization) | 7 |
+| 7 | [Software Design Principles (Coupling & Cohesion)](#software-design-principles-coupling--cohesion) | 5 |
+| 8 | [Software Cost Estimation & Build vs Buy Decisions](#software-cost-estimation--build-vs-buy-decisions) | 4 |
+| 9 | [IT Governance, Audit & Risk Management](#it-governance-audit--risk-management) | 3 |
+| 10 | [Data Flow Diagrams (DFD)](#data-flow-diagrams-dfd) | 2 |
+| 11 | [Code Smells & Refactoring](#code-smells--refactoring) | 2 |
+| 12 | [Open Source Software & Licensing](#open-source-software--licensing) | 2 |
+| 13 | [CI/CD & DevOps Methodologies](#cicd--devops-methodologies) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Software Testing & Evaluation
 
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]

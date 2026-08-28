@@ -1,3 +1,22 @@
+<!-- TOC START -->
+**Table of Contents** — 9 subtopics · 34 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Cloud Service Models](#cloud-service-models) | 12 |
+| 2 | [Cloud Storage & Fundamentals](#cloud-storage--fundamentals) | 6 |
+| 3 | [Virtualization & Containers (VM vs Container)](#virtualization--containers-vm-vs-container) | 6 |
+| 4 | [Cluster, Grid & Distributed Computing](#cluster-grid--distributed-computing) | 3 |
+| 5 | [Scalability (Horizontal & Vertical Scaling)](#scalability-horizontal--vertical-scaling) | 2 |
+| 6 | [Edge Computing & Fog Computing](#edge-computing--fog-computing) | 2 |
+| 7 | [Virtualization & Resource Allocation](#virtualization--resource-allocation) | 1 |
+| 8 | [High Availability & System Redundancy](#high-availability--system-redundancy) | 1 |
+| 9 | [Cloud Security & Compliance](#cloud-security--compliance) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Cloud Service Models
 
 1. A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service. [SO IT 25-07-2026]

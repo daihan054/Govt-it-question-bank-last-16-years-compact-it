@@ -1,3 +1,32 @@
+<!-- TOC START -->
+**Table of Contents** — 19 subtopics · 234 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [SQL Queries](#sql-queries) | 74 |
+| 2 | [DBMS Architecture & Features](#dbms-architecture--features) | 22 |
+| 3 | [ER Diagram & Database Design](#er-diagram--database-design) | 22 |
+| 4 | [Keys in DBMS](#keys-in-dbms) | 21 |
+| 5 | [Normalization & Database Design](#normalization--database-design) | 18 |
+| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl) | 14 |
+| 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties) | 12 |
+| 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships) | 11 |
+| 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery) | 8 |
+| 10 | [PL/SQL & Database Triggers](#plsql--database-triggers) | 6 |
+| 11 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree) | 6 |
+| 12 | [Distributed & Parallel Databases](#distributed--parallel-databases) | 4 |
+| 13 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence) | 4 |
+| 14 | [Database Design & Data Types](#database-design--data-types) | 3 |
+| 15 | [SQL Joins & Operations](#sql-joins--operations) | 3 |
+| 16 | [NoSQL, NewSQL & Modern Databases](#nosql-newsql--modern-databases) | 2 |
+| 17 | [Database Connectivity (JDBC)](#database-connectivity-jdbc) | 2 |
+| 18 | [Relational Keys (Candidate, Super, Primary, Foreign Key)](#relational-keys-candidate-super-primary-foreign-key) | 1 |
+| 19 | [Indexing in DBMS](#indexing-in-dbms) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## DBMS Architecture & Features
 
 1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।

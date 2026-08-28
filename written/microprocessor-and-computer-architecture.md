@@ -1,3 +1,24 @@
+<!-- TOC START -->
+**Table of Contents** — 11 subtopics · 110 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions) | 27 |
+| 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage) | 21 |
+| 3 | [RAID Architecture & Storage](#raid-architecture--storage) | 14 |
+| 4 | [Cache Memory](#cache-memory) | 13 |
+| 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd) | 11 |
+| 6 | [Multi-Core & Multi-Threading](#multi-core--multi-threading) | 5 |
+| 7 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes) | 5 |
+| 8 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards) | 5 |
+| 9 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle) | 4 |
+| 10 | [8085 Microprocessor & Edge Computing](#8085-microprocessor--edge-computing) | 3 |
+| 11 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## Microprocessor Architecture & Functions
 
 1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

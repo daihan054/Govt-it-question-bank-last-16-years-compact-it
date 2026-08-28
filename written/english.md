@@ -1,3 +1,21 @@
+<!-- TOC START -->
+**Table of Contents** — 8 subtopics · 112 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Focus Writing](#focus-writing) | 35 |
+| 2 | [English Grammar](#english-grammar) | 29 |
+| 3 | [Translation](#translation) | 19 |
+| 4 | [Idioms & Phrases](#idioms--phrases) | 9 |
+| 5 | [English Vocabulary & Antonyms](#english-vocabulary--antonyms) | 7 |
+| 6 | [Letter & Application Writing](#letter--application-writing) | 6 |
+| 7 | [Reading Comprehension](#reading-comprehension) | 6 |
+| 8 | [English Literature & Authors](#english-literature--authors) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Focus Writing
 
 1. The Importance of Digital Literacy in Expanding Cashless Transactions in Bangladesh: Discuss how digital skills influence financial inclusion, the adoption of digital payment systems, and the challenges of building a cashless economy. [SO IT 25-07-2026]

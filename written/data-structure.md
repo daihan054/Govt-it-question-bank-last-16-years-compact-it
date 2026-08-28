@@ -1,3 +1,21 @@
+<!-- TOC START -->
+**Table of Contents** — 8 subtopics · 87 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Tree](#tree) | 26 |
+| 2 | [Stack](#stack) | 20 |
+| 3 | [Linked List](#linked-list) | 14 |
+| 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap) | 7 |
+| 5 | [Queue](#queue) | 6 |
+| 6 | [Binary Search Tree (BST)](#binary-search-tree-bst) | 6 |
+| 7 | [Hashing & Hash Tables](#hashing--hash-tables) | 6 |
+| 8 | [Data Structure Fundamentals](#data-structure-fundamentals) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## Data Structure Fundamentals
 
 1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 621]**
