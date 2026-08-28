@@ -76,6 +76,20 @@
    c) Overridden
    d) Used by creating object
 
+10. **What is the result of compiling and running the following code?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   ```java
+   public class Test{
+   public static void main(String[] args) {
+   int[] a = new int[0];
+   System.out.print(a.length);
+   }
+   }
+   ```
+   (a) 0
+   (b) Compilation error, arrays cannot be initialized to zero size
+   (c) None of the above
+   (d) Compilation error, it is length () not length
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -91,6 +105,12 @@
    (b) Comparison Operator
    (c) Insertion Operator <<
    (d) Prefix++
+
+2. **Which of the following operators cannot be overloaded in C/C++ ?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 28]**
+   (a) Bitwise right shift assignment
+   (b) Address of
+   (c) Indirection
+   (d) Structure reference
 
 ## OOP Concepts & Principles
 

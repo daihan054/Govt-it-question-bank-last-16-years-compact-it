@@ -36,6 +36,12 @@
    (c) 80cm
    (d) cannot be determined
 
+7. **If the radius is increased by 100% then by how much will the area of circle be increased?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   (a) 100
+   (b) 200
+   (c) 300
+   (d) 400
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

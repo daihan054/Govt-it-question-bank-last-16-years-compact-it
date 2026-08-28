@@ -12,6 +12,12 @@
    (c) less time and space complexity
    (d) Linear search can be used irrespective of whether the array is sorted or not
 
+3. **Which of the following is not the required condition for a binary search algorithm?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
+   (a) The list must be sorted
+   (b) There should be direct access to the middle element in any sub list
+   (c) There must be a mechanism to delete and/or insert elements in the list.
+   (d) Number values should only be present
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -25,6 +31,12 @@
    b) Bubble sort
    c) Insertion sort
    d) Counting sort
+
+3. **What is the complexity of Merge sort?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
+   (a) O(n^2 \log n)
+   (b) O(n \log n)
+   (c) O(n^2)
+   (d) O(n)
 
 ## Graph Algorithms
 
@@ -47,3 +59,25 @@
    b) Tower of Hanoi
    c) Dijkstra Shortest Path
    d) None of the above
+
+2. **Which one of the following algorithm design techniques is used in finding all pairs of shortest distances in a graph?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 28]**
+   (a) Dynamic programming
+   (b) Backtracking
+   (c) Greedy
+   (d) Divide and Conquer
+
+## Complexity & Analysis
+
+1. **The time taken by NP-class sorting algorithm is-** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
+   (a) O (1)
+   (b) O (\log n)
+   (c) O(n^2)
+   (d) O(n)
+
+## Algorithm Design Paradigms
+
+1. **Which of the following belongs to the algorithm paradigm?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
+   (a) Minimum & Maximum problem
+   (b) Knapsack problem
+   (c) Selection problem
+   (d) Merge sort

@@ -62,6 +62,12 @@
    c) 10
    d) 4
 
+5. **Which data structure allows insertion and deletion of elements from both ends?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
+   (a) Deque
+   (b) Queue
+   (c) Stack
+   (d) Linked list
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -106,6 +112,18 @@
    c) 4
    d) 7
 
+8. **In a completer k-array, every internal node has exactly k children. The number of leaves in such a tree with n internal nodes is-** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
+   (a) (n-1)k+1
+   (b) nk
+   (c) n(k-1)
+   (d) n(k-1)+1
+
+9. **Access time of the symbolic table will be logarithmic if it is implemented by-** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 28]**
+   (a) Linear list
+   (b) Search tree
+   (c) Hash table
+   (d) Self organization list
+
 ## Hashing & Hash Tables
 
 1. **Given a hash table with 25 slots that stores 2000 elements, the load factor for the hash table is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -133,3 +151,11 @@
    (b) Linked List
    (c) Heap
    (d) Stack
+
+## Data Structure Basics
+
+1. **Which of the following is a non linear data structure?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
+   (a) Array
+   (b) Graph
+   (c) Queue
+   (d) Linked list

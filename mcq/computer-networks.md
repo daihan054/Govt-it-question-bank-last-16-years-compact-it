@@ -52,6 +52,12 @@
    (C) broadcast addressing
    (D) anycast addressing
 
+3. **The IPv4 is encapsulated to IPv6 which is known as ______.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   (a) Tunneling
+   (b) hashing
+   (c) NAT
+   (d) Trasversing
+
 ## Networking Fundamentals & Terminology
 
 1. **Set of rules is called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -101,6 +107,18 @@
    b) 32
    b) 31
    d) 30
+
+4. **How many address is there 200.10.10.10/20** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
+   (a) 4096
+   (b) 1024
+   (c) 2048
+   (d) 1022
+
+5. **Which is suitable subnet mask for 200 host?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
+   (a) 255.255.0.200
+   (b) 255.255.255.0
+   (c) 255.0.0.0
+   (d) 255.255.200.0
 
 ## Data Transmission & Modes
 

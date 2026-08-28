@@ -73,3 +73,11 @@
    (b) D
    (c) E
    (d) F
+
+## OS Concepts & Multiprogramming
+
+1. **The ______ system may manage a high degree of interaction between processes and is very useful for high speed and real-time processing.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
+   (a) strongly coupled and loosely cohesive
+   (b) loosely coupled and strongly cohesive
+   (c) loosely coupled and loosely cohesive
+   (d) strongly coupled and strongly cohesive

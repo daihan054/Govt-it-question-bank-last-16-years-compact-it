@@ -74,6 +74,17 @@
    c) ORDER BY
    d) GROUP BY
 
+9. **Table employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement:** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   ```sql
+   SELECT COUNT (*) FROM employee
+   WHERE SALARY > ALL(SELECT SALARY FROM EMPLOYEE);
+   ```
+   Prints:
+   (a) 10
+   (b) 9
+   (c) 5
+   (d) 0
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

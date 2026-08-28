@@ -211,6 +211,50 @@
    c) 101
    d) 98
 
+14. **Determine Output:** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
+   ```c
+   void main() {
+   int i=i++, j=j++, k=k++;
+   printf("%d %d %d", i, j, k);
+   }
+   ```
+   (a) 1 1 1
+   (b) 0 0 0
+   (c) garbage values
+   (d) Error
+
+15. **Determine Output:** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   ```c
+   void main() {
+   struct xx {
+   int x=3;
+   char name[] = "hello";
+   };
+   struct xx *s = malloc(sizeof(struct xx));
+   printf("%d", s->x);
+   printf("%s", s->name);
+   }
+   ```
+   (a) 3 hello
+   (b) Compiler Error
+   (c) Linking error
+   (d) None of these
+
+16. **Assume that the size of an integer is 4 bytes, predict the output of following program.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 28]**
+   ```c
+   #include <stdio.h>
+   int main() {
+   int i = 12;
+   int j = sizeof(i++);
+   printf("%d %d", i, j);
+   return 0;
+   }
+   ```
+   (a) 12 4
+   (b) 13 4
+   (c) Compiler Error
+   (d) 0 4
+
 ## Storage Classes & Scope
 
 1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
@@ -239,6 +283,12 @@
    b) 2
    c) 0
    d) more than 2
+
+2. **Which of the following correctly accesses the seventh element stored in arr, an array with 100 elements?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   a) arr[6]
+   b) arr[7]
+   c) arr{6}
+   d) arr{7}
 
 ## Pointers & Memory Allocation
 

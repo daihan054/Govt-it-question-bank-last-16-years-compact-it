@@ -83,3 +83,11 @@
    (b) It requires too many resources
    (c) It is inflexible and not suitable for changing requirements
    (d) It lacks proper documentation
+
+## Design Patterns
+
+1. **Design pattern for hierarchical structure is ______** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
+   (a) Structure chart
+   (b) DFD
+   (c) ERD
+   (d) UML

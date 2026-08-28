@@ -164,6 +164,12 @@
    c) ভেনিজুয়েলা
    d) কাতার
 
+19. **World environment day is celebrated on ______ of every year.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   (a) 5^{\text{th}} June
+   (b) 6^{\text{th}} June
+   (c) 2^{\text{nd}} June
+   (d) 1^{\text{st}} June
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -333,6 +339,12 @@
    (b) তেতুলিয়া
    (c) আড়িয়াল খাঁ
    (d) হাঁড়িয়াভাঙ্গা
+
+29. **When was International Mother Language Day Declaration by UNESCO?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   (a) November, 1999
+   (b) February, 2000
+   (c) February, 1999
+   (d) November, 2000
 
 ## Geography & Environment
 
