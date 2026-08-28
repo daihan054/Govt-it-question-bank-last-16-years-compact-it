@@ -8,6 +8,8 @@
 
 4. **Describe SaaS, IaaS and PaaS.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
 
+5. **Explain IaaS, PaaS, and SaaS with respect to cloud computing.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
+
 ## Cloud Storage & Fundamentals
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -28,6 +30,8 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 3. **What is Server Virtualization? Explain with example of its.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 551]**
 
 4. **How virtualization help physical server.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 566]**
+
+5. **Define a virtual machine with a neat diagram, explain the working of VM. What are the benefits of a VM?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 442]**
 
 ## High Availability & System Redundancy
 

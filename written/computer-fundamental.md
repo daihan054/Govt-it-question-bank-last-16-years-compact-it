@@ -105,3 +105,5 @@
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 305]**
 
 2. **Describe the most important factors of data center for banking organization.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 557]**
+
+3. **What are the challenges in optimizing energy efficiency of data centers? Explain!** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 442]**

@@ -207,6 +207,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 10. **Which technique is used for binary division check in network?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
+11. **Explain parity method for error detection. Write down the bit strings of “Delta” using ASCII.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
@@ -508,6 +510,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## Data Rate & Channel Capacity (Nyquist, Shannon)
 
 1. **Nyquist math: See in Data Communication & Networking Chapter** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
+
+2. **Suppose that a digitized TV picture is to be transmitted from a source that uses a matrix of 480 × 500 picture elements (pixels), where each pixel can take on one of 32 intensity values. Assume that 30 pictures are sent per second. (This digital source is roughly equivalent to broadcast TV standards that have been adopted). Find the source rate R (bps).** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
+
+3. **One of the drawbacks of a small packet size is that a large function of link bandwidth is consumed by overhead bytes. To this end, supposed that the packet consists of P bytes and 5 bytes of header. Consider sending a digitally encoded voice source directly. Suppose the source is encoded a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the packetization delay. Determine the packetization delay for length L-1500 bytes (roughly corresponding to maximum-sized Ethernet packet).** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 

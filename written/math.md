@@ -14,6 +14,8 @@
 
 7. **Students of a class are made to stand in rows. If students are extra in each row, then there would be 2 rows less. If four students are less in each row, then there would be 4 more rows. What is the number of students in the class?** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
 
+8. **\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - \frac{2+\sqrt{3}}{2-\sqrt{3}} = ?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 447]**
+
 ## Permutations & Combinations
 
 1. **CARBON word permutations that vowel must occupy odd positions?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
@@ -45,6 +47,10 @@
 4. **A scored 30% marks and failed by 15 marks. B scored 40% marks and obtained 35 marks more than those required to pass. The pass percentage is?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
 
 5. **A basketball team has won 15 games and lost 9. If these games represent 16\frac{2}{3}\% of the games to be played, then how many more games must the team win to average 75% for the season?** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
+
+6. **A father has divided his property between his two sons A and B. A invests the amount at a compound profit of 8\% p.a. B invests the amount of 10\% p.a. simple profit. At the end of 2 years, the profit received by B is Taka 1336 more than the interest received by A. Find A's share in the fathers property of Taka 25000.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 446]**
+
+7. **The percentage profit earned by selling an artical for Tk. 1920 is equal to the percentage loss incurred by selling the same artical for Tk. 1280. At what price should the artical be sold to make 25\% profit?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 447]**
 
 ## Ratio, Proportion & Mixtures
 
@@ -89,6 +95,8 @@
 4. **Two sides of a plot 32m and 24m and the angle between them a perfect right angle. The other two sides measure 25m each and the other three angles are not right angles. What is the area of the plot?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
 
 5. **In the given figure, PQT is a right triangle then what is the area of square QRST.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
+
+6. **AD is the longest side of the triangle ABD shown in the figure, what is the length of longest side of \Delta\text{ABC}?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 447]**
 
 ## Analytical Ability & Logical Reasoning
 

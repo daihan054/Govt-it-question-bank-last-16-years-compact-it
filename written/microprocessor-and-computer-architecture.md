@@ -70,6 +70,8 @@
 
 5. **Write Concept of cache memory in computer. How its change performance of computer?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 559]**
 
+6. **Suppose we have a 16 KB of data in a direct mapped cache with 4 word blocks. Determine the size of the tag, index and offset fields if we are using a 32-bit architecture.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 439]**
+
 ## Memory Hierarchy & Storage
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
