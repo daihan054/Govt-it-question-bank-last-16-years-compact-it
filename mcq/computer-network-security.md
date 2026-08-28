@@ -98,6 +98,12 @@
    (গ) e=E(M)
    (ঘ) None
 
+6. **In an asymmetric key encryption process, the key used to encrypt the data is known as a-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) Private key
+   b) Encryption key
+   c) Public key
+   d) Modulation key
+
 ## Malware & Security Threats
 
 1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
@@ -117,3 +123,9 @@
    b) Use input validation
    c) Use the user input directly
    d) Do not remove potential malicious code
+
+2. **A database can be hacked by-** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 110]**
+   a) Exploiting weak passwords
+   b) SQL Injection
+   c) Delivering a Trojan
+   d) All of the above

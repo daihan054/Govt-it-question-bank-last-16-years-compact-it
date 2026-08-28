@@ -51,3 +51,9 @@
    b) Infrastructure as a service (IaaS)
    c) Platform as a service (PaaS)
    d) Software as a service (SaaS)
+
+6. **Which of these is not a common reason businesses choose to go with a data center colocation service for disaster recovery instead of building a new data center?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 114]**
+   a) Full control of hardware
+   b) Security and location
+   c) Granular climate control
+   d) Cost of building data centers

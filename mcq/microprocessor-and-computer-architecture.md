@@ -36,6 +36,12 @@
    c) Reduction of miss penalty
    d) Decrease in miss ratio
 
+7. **Which of the following is not a nonvolatile storage device?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) Memory Stick
+   b) Hard Disk
+   c) Random Access Memory
+   d) NVRAM
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -95,6 +101,18 @@
    b) RAID Level 1
    c) RAID Level 2
    d) RAID Level 3
+
+2. **The fastest read/write time and most efficient data storage of any disk array type is:** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 114]**
+   a) RAID-0
+   b) RAID-1
+   c) RAID-2
+   d) RAID-3
+
+3. **How does RAID provide data protection?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) Using either data mirroring or parity
+   b) Using either data mirroring or striping
+   c) Using high quality disk drives
+   d) Using dedicated data protection hardware
 
 ## Assembly Language & Machine Code
 

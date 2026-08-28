@@ -96,6 +96,12 @@
    (c) 7
    (d) 8
 
+3. **Which of the following is an appropriate category of system maintenance performed for the purpose of modifying the system to cope with changes in the software environment?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 113]**
+   a) Preventive maintenance
+   b) Corrective maintenance
+   c) Adaptive maintenance
+   d) Perfective maintenance
+
 ## Design Patterns
 
 1. **Design pattern for hierarchical structure is ______** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**

@@ -90,6 +90,12 @@
    (গ) 45^\circ
    (ঘ) 90^\circ
 
+17. **The triangular base of a prism is a right triangle of sides a and b =2a. The height h of the prism is equal to 10mm and its volume is equal to 40 mm³. What will be the lengths of the sides a and b of the triangle?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) 2mm and 3mm
+   b) 1 mm and 4 mm
+   c) 2 mm and 2 mm
+   d) 2 mm and 4 mm
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -256,6 +262,12 @@
    a) (a + 1) (a - 2) (a - 3)
    b) (a - 1) (-2) (a - 3)
 
+23. **A leading library charges c cents for the first week that a book is loaned and f cents for each day over one week. What is the cost for taking out a book for days, where d is greater than 7?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) C+f(d-7)
+   b) C+fd
+   c) cd
+   d) Cd+f
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -337,6 +349,18 @@
    c) 5
    d) 10
 
+15. **A lamp is manufactured to sell for $35.00, which yields a profit of 25% of cost. If the profit is to be reduced to 15% of cost, what will be the new retail price of the lamp?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) $21.00
+   b) $28.00
+   c) $31.50
+   d) $32.20
+
+16. **A manufacturer sells three products i.e. A, B and C Product A costs 200 and sells for 250. Product B costs 150 and sells for 180, product C costs 1000 and sells for 110. On which product, he has maximum percentage of profit?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) B only
+   b) A and B both
+   c) A only
+   d) C only
+
 ## Arithmetic & Number Series
 
 1. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -417,6 +441,24 @@
    c) 6 km
    d) 6.5km
 
+4. **A floor with dimension of 20 feet to 35 feet is needed to be tiled. Two workers can tile that floor in 2 hours and 30 minutes. If they are joined by three other workers of similar ability. How many hours will it take to tile the floor?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) 1 hr
+   b) 1.25 hr
+   c) 1.5 hr
+   d) 1.75 hr
+
+5. **A train went 300 km from city X to city Y at an average speed of 100 km/h. At what speed did it travel on the way back if its average speed for the whole trip was 120 km/h.** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) 120 km/h
+   b) 125 km/h
+   c) 130 km/h
+   d) 150 km/h
+
+6. **A boat sailing against a stream of river takes 6 hours to travel 24 kms, while sailing with the stream it takes 4 hours to travel the same distance. What is the speed of the stream?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) 2.5 km/hr
+   b) 1.5 km/hr
+   c) 1 km/hr
+   d) 0.5 km / hr
+
 ## Analytical Reasoning
 
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
@@ -462,6 +504,12 @@
    c) 15
    d) 10
 
+3. **In a Group of 15, 7 can speak Spanish, 8 can speak French and 3 can speak neither. What fraction of the group can speak both French and Spanish?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) 1/5
+   b) 4/15
+   c) 1/3
+   d) 7/15
+
 ## Probability & Statistics
 
 1. **The mode and mean is given by 7 and 8 respectively. Then the median is:** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
@@ -483,3 +531,15 @@
    b) 50\frac{5}{2}
    c) 35\frac{2}{3}
    d) 40\frac{5}{3}
+
+2. **Three boys have marbles in the ration of 19:5:3. If the boy with the least number has 9 marbles, how many marbles does the boy with the highest number have?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) 23
+   b) 37
+   c) 45
+   d) 57
+
+3. **In distributing milk at a summer camp, it is found that a quart of milk will fill wither 3 large glass tumblers or 5 small glass tumblers. How many small glass tumblers can be filled with one large glass tumbler?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) 11/5
+   b) 7/5
+   c) 5/3
+   d) 7/3

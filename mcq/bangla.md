@@ -401,6 +401,36 @@
    c) কাহ্ন পা
    d) শবরী পা
 
+72. **বৈষ্ণব পদাবলির সঙ্গে কোন তথ্য সম্পর্কিত?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) সন্ধ্যাভাষা
+   b) অভিভাষা
+   c) ব্রজবুলি
+   d) সংস্কৃত ভাষা
+
+73. **‘কোন পান্থ ক্ষান্ত হও হেরি দীর্ঘ পথ’- কার লেখা?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) কৃষ্ণচন্দ্র মজুমদার
+   b) ঈশ্বরচন্দ্র গুপ্ত
+   c) কামিনী রায়
+   d) যতীন্দ্রমোহন বাগচী
+
+74. **বাংলা গদ্যের জনক কে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) ঈশ্বরচন্দ্র বিদ্যাসাগর
+   b) বঙ্কিমচন্দ্র চট্টোপাধ্যায়
+   c) উইলিয়াম কেরি
+   d) রবীন্দ্রনাথ ঠাকুর
+
+75. **বাংলা ভাষার আদি নিদর্শন চর্যাপদ আবিষ্কৃত হয় কত সালে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) ২০০৭
+   খ) ১৯০৭
+   c) ১৯০৯
+   d) ১৯১৬
+
+76. **বাংলা কথ্য ভাষার আদি গ্রন্থ কোনটি?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) প্রভু যিশুর বাণী
+   b) কৃপার শাস্ত্রের অর্থভেদ
+   c) ফুলমণি ও করুণার
+   d) শিনারি জীবন বিবরণ
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -930,6 +960,30 @@
    c) জলাশয়
    d) ঢেউ
 
+96. **তুমি আসবে বলে হে স্বাধীনতা সখিনা বিবির কপাল ভাঙল। এটি কোন বাক্য?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) সরল
+   b) মিশ্র বা জটিল
+   c) যৌগিক
+   d) সংযুক্ত
+
+97. **সমাসবদ্ধ শব্দ আনত কোন সমাসের উদাহরণ?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) বহুব্রীহি
+   b) কর্মধারয়
+   c) অব্যয়ীভাব
+   d) সবগুলো
+
+98. **সহচর শব্দের শুদ্ধ গঠন কোনটি?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) সম+চর+র্য
+   b) সহচর+ৎ ফলা
+   c) সহচর+য
+   d) কোনটি নয়
+
+99. **চৌ-হদ্দি শব্দটি কোন কোন ভাষার শব্দ মিলে হয়েছে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) বাংলা + ফারসি
+   b) সংস্কৃত + ফারসি
+   c) ফারসি + আরবি
+   d) সংস্কৃত + আরবি
+
 ## বাগধারা ও প্রবাদ
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -964,6 +1018,12 @@
    (খ) মূর্খ
    (গ) নিরেট বোকা
    (ঘ) নিষ্ক্রিয় দর্শক
+
+7. **শিব রাত্রির সলতে- বাগধারাটির অর্থ কী?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) শিবরাত্রির আলো
+   b) একমাত্র সম্বল
+   c) একমাত্র সন্তান
+   d) শিবরাত্রির গুরুত্ব
 
 ## এক কথায় প্রকাশ
 

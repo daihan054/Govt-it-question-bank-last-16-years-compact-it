@@ -127,6 +127,12 @@
 2. **Which variable violates the principle of ecvapsulation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Gobal variable
 
+3. **Which of the following is a technique for hiding the internal implementation details of an object?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   a) Encapsulation
+   b) Polymorphism
+   c) Inheritance
+   d) All of the above
+
 ## Polymorphism & Overloading
 
 1. **Which of the following operators should be preferred to overload as a global function rather than a member method?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**

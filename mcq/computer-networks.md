@@ -109,6 +109,12 @@
    c) Dynamic Host Configuration Protocol
    d) Domain Host Configuration Protocol
 
+13. **A DNS client is called a ____________** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) DNS updater
+   b) DNS resolver
+   c) DNS handler
+   d) DNS host
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -338,6 +344,12 @@
    (খ) It can manage traffic like a router
    (গ) It can ensure transport layer security
    (ঘ) None of the above
+
+6. **In a comparatively small organization if you want data forwarding among departments based on IP address which one of the following will be a better bet for networking?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   a) Using Layer-3 routers
+   b) Using Layer-3 switches
+   c) Using Unmanaged switches
+   d) Combining a and b
 
 ## Network Devices & Configuration
 

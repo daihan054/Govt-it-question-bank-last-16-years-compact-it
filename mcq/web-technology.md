@@ -21,6 +21,12 @@
    c) Unique Resource Locator
    d) None
 
+5. **XSLT processors evaluate each statement in the context of the match that has been made. That is, XSLT processors are:** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 113]**
+   a) Context oriented
+   b) Procedural oriented
+   c) Object oriented
+   d) Relational oriented
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -44,6 +50,12 @@
    (b) PHP
    (c) Jetty
    (d) Tornado
+
+2. **What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) A Java application
+   b) A Java applet
+   c) A Java servlet
+   d) None of the above is correct
 
 ## HTTP & Status Codes
 

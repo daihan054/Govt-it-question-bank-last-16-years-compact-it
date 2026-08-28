@@ -70,6 +70,12 @@
    (গ) Alfred Tennyson
    (ঘ) Mathew Arnold
 
+13. **Who did write first English dictionary?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) Boswell
+   b) Ben Jonson
+   c) Samuel Johnson
+   d) Milton
+
 ## English Grammar
 
 1. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -624,6 +630,30 @@
    c) It is time for the shop to be shut up
    d) It is time for the shop to be shuted up
 
+95. **We are waiting for the bus The underlined part is ______.** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) A noun phrase
+   b) An infinitive phrase
+   c) A prepositional phrase
+   d) A verb phrase
+
+96. **Fill in the blank with correct preposition. He is devoid ______ Commonsense.** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) Of
+   b) From
+   c) Introduction
+   d) At
+
+97. **Complete the following sentence ‘Had I known you were waiting outside, I ______** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) Had invited you to come in
+   b) Would invite you to come in
+   c) Would be inviting you to come in
+   d) Would have invited you to come in
+
+98. **Which one of the following words is masculine?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) Mare
+   b) Lad
+   c) pillow
+   d) Pony
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -707,6 +737,18 @@
    (খ) Take one to task
    (গ) Ride the high horse
    (ঘ) Give a wide berth
+
+16. **What is the meaning of “White Elephant”?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) An elephant of white color
+   b) A hoarder
+   c) A black Marketer.
+   d) A very costly or troublesome possession
+
+17. **Choose the appropriate meaning of the idiom ‘swan song’** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) First Work
+   b) Last Work
+   c) Middle Work
+   d) Early Work
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -934,6 +976,18 @@
    c) destructing / disappear
    d) destruct/disappearance
 
+40. **Love for the whole world is called ______ .** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) Philanthropy
+   b) Misogyny
+   c) Benevolence
+   d) Misanthropy
+
+41. **Misanthropist means-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) One who flirts with ladies
+   b) A person of narrow views
+   c) A hater of mankind
+   d) One who believe that God is in everything
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -997,3 +1051,9 @@
    b) hierarchy
    c) madieval
    d) posession
+
+11. **Choose the correct spelling-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) Ascertain
+   b) Ascertain
+   c) Ascertain
+   d) Asartain

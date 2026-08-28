@@ -39,6 +39,18 @@
    c) 3NF
    d) BCN
 
+8. **In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functional dependencies is not implied by the above set?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 112]**
+   a) CD=>AC
+   b) BD=>CD
+   c) BC=>CD
+   d) AC=>BC
+
+9. **Third normal form is based on the concept of ______.** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) Normal Dependency
+   b) Closure Dependency
+   c) Functional Dependency
+   d) Transitive Dependency
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -132,6 +144,50 @@
    c) select MAX(marks) from *STUDENT*
    d) select MAX(marks) from *STUDENT* WHERE marks NOT IN (select MIN(marks) from *STUDENT*
 
+14. **Which of the following is not a DDL command?** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
+   a) Create
+   b) Drop
+   c) Alter
+   d) Update
+
+15. **The SQL statement** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
+   ```sql
+   SELECT ROUND (45.926, -1) FROM DUAL;
+   ```
+   a) is illegal
+   b) prints garbage
+   c) prints 045.926
+   d) prints 50
+
+16. **When three or more AND & OR conditions are combined, it is easier to use the SQL keyword(s):** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 113]**
+   a) LIKE only
+   b) IN only
+   c) NOT IN only
+   d) Both IN and NOT IN
+
+17. **How to select all data from student table starting the name from letter 'r'?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 113]**
+   a) SELECT * FROM student WHERE name LIKE 'r%';
+   b) SELECT * FROM student WHERE name LIKE '%r%';
+   c) SELECT * FROM student WHERE name LIKE '%r';
+   d) SELECT * FROM student WHERE name LIKE '_r%';
+
+18. **Which of the following are the five built-in functions provided by SQL?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   a) COUNT, SUM, AVG, MAX, MIN
+   b) SUM, AVG, MIN, MAX, MULT
+   c) SUM, AVG, MULT, DIV, MIN
+   d) SUM, AVG, MIN, MAX, NAME
+
+19. **What does this query do?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   ```sql
+   SELECT employee_number, name FROM
+   employees AS Parent WHERE salary> (SELECT AVG (salary)
+   FROM employee WHWRE department= Parent department) ,
+   ```
+   a) Finds the name and ID of employees who get more than average
+   b) Finds the employee's name and ID of those who gets more than average salaries of all the departments' salaries.
+   c) Finds the name and ID of employees who get more than average salaries of his own department.
+   d) None
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -148,6 +204,72 @@
    b) Backing up the database
    c) Query processing
    d) User coordination
+
+4. **Assume that you want to improve database performance and willing to see the amount of swap space. Which command you can use in LINUX OS environment?** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
+   a) Lsps -a
+   b) Swapinfo -m
+   c) Swapon -s
+   d) Swap -l and Swap -s
+
+5. **In oracle to change the DB_Block_size parameter, you need to-** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
+   a) Re-create the database
+   b) Alter the database
+   c) Move database to temporary
+   d) Update the table types of the database
+
+6. **Which of the following controls the execution of application program and UI in two tier client/server architecture?** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
+   a) Modulation side
+   b) Server side
+   c) Host side
+   d) None of the above
+
+7. **LGWR process writes information into-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 112]**
+   a) Database files
+   b) Control Files
+   c) Redo log Files
+   d) All of the above
+
+8. **Data integrity problems in a DBMS is caused due to-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 114]**
+   a) Missing Data
+   b) Data inconsistency
+   c) Data Redundancy
+   d) Security constraints
+
+9. **A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 114]**
+   a) Data organization
+   b) Data Binding
+   c) Data schemas
+   d) Data models
+
+10. **Which is the oracle component that contains the memory structures and background process?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 117]**
+   a) Instance
+   b) Server
+   c) SGA
+   d) Database files
+
+11. **The three different application logic components are which of the following?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 117]**
+   a) Presentation, Client, and Storage
+   b) Presentation, Client, and Processing
+   c) Presentation, Processing, and Storage
+   d) Presentation, Processing, and Network
+
+12. **Of the functions provided by a DBMS. Which of the following is a means for achieving protection for data confidentiality?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 117]**
+   a) Checking referential constraints when the data is updated
+   b) Managing a transaction that combines a series of processes as a logical Unit.
+   c) Managing the data access rights of users.
+   d) Placing an exclusive lock on the data before it is updated
+
+13. **Oracle materialized views or SNAPSHOTS is used-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) Hiding data from users
+   b) Dynamic data replication
+   c) Table Space Reduction
+   d) Data Abstraction
+
+14. **A distributed database has which of the following advantages over a centralized database?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) Software cost
+   b) Software complexity
+   c) Slow Response
+   d) Modular growth
 
 ## Transaction Management & ACID
 
@@ -184,6 +306,36 @@
    c) Durability
    d) Quality
 
+7. **Which one of the following is a failure to a system?** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
+   a) Boot crash
+   b) Read failure
+   c) Transaction failure
+   d) All of the mentioned
+
+8. **How can your rollback a committed transaction in any DBMS?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 112]**
+   a) Using SQL rollback commands
+   b) Restoring the data from backups
+   c) Run the transaction again in Reverse order
+   d) All of the Above
+
+9. **The packaged procedure that makes data in form permanent in the Database is-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 113]**
+   a) Post
+   b) Post form
+   c) Commit form
+   d) None of the above
+
+10. **ROLLBACK command is used to undo the changes made by-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   a) DDL commands
+   b) TCL commands
+   c) DML Commands
+   d) Commit command
+
+11. **Why is set transaction used in an oracle DBMS?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 117]**
+   a) For placing a name on a transaction
+   b) For committing a transaction
+   c) For locking a transaction
+   d) To setup transaction user parameters.
+
 ## Indexing & Query Optimization
 
 1. **Which one make data access from a database faster?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
@@ -210,6 +362,24 @@
    b) Sequential file organization
    c) Hashing file organization
    d) Multi-table Clustering file organization
+
+3. **Which of the following is correct for the Create index command?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) Insert index index_name on table_name
+   b) Insert index index_name on database_name;
+   c) Create index index_name on database_name;
+   d) Create index index_name on table_name;
+
+4. **Database index speeds up-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) Select queries
+   b) Where clauses
+   c) Update query
+   d) Both a and b
+
+5. **Which of the following index is automatically created by the database server when an object is created?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) Implicit
+   b) Single column
+   c) Unique
+   d) composite
 
 ## SQL Joins
 
@@ -257,10 +427,28 @@
    (c) Pascal
    (d) Kotlin
 
+6. **Business Intelligence (BI) reporting analyses can be performed using** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
+   a) standard SQL only
+   b) extensions to SQL only
+   c) OLAP only
+   d) Both standard SQL and extensions to SQL
+
+7. **A star schema has what type of relationship between a dimension and fact table?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   a) Many-to-many
+   b) One-to-one
+   c) One-to-many
+   d) All of the above
+
 ## Relational Model & Terminology
 
 1. **What is the degree of relation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** a degree of relationship represents the number of entity types that are associated with a relationship.
+
+2. **Which one of the following is true for a tuple in a database?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) A tuple in a database represents a column
+   b) A tuple in a database represents database schema.
+   c) A tuple in a database represents a Record
+   d) A tuple in a database represents a Database topology
 
 ## Keys in DBMS
 
@@ -275,3 +463,101 @@
    (খ) Primary keys
    (গ) Unique keys
    (ঘ) Candidate keys
+
+3. **Referential integrity in a DBMS is a form of-** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
+   a) Foreign key
+   b) Primary key
+   c) Assertion
+   d) Referential constraint
+
+4. **Needing to assess the validity of assumed referential integrity constraints on foreign keys is a(n) _________ of normalization.** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 113]**
+   a) advantage
+   b) disadvantage
+   c) either an advantage or disadvantage
+   d) neither an advantage nor disadvantage
+
+5. **The maximum number of super keys for the relation schema R (E, F, G, H) with E as the key is-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) 5
+   b) 6
+   c) 7
+   d) 8
+
+## ER Diagram & Data Modeling
+
+1. **Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this situation in the relational model?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 112]**
+   a) 2
+   b) 3
+   c) 4
+   d) 5
+
+2. **Which of the following is an appropriate description of the mapping between the relational model and relational database as its implementations?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 114]**
+   a) A domain is mapped to a character type or a character string type.
+   b) A relation is mapped to a table
+   c) Attributes and columns are ordered from left to right
+   d) Neither tuples nor rows have duplicates
+
+## PL/SQL & Triggers
+
+1. **What are the different events in Triggers?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 113]**
+   a) Define, Create
+   b) Drop, Comment
+   c) Insert, Update, Delete
+   d) Select, Commit
+
+2. **How can you generate debugging output from PL/SQL?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 114]**
+   a) DBMS_SQL
+   b) DBMS_OUTPUT
+   c) DBMS_PIPE
+   d) DBMS_LOB
+
+3. **What is GET_BLOCK property?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 114]**
+   a) Restricted procedure
+   b) Unrestricted procedure
+   c) Library function
+   d) None of the above
+
+4. **Which is not the UTL_FILE function-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) FOPEN()
+   b) File_Close()
+   c) FCOPY
+   d) FFLUSH()
+
+## Database Connectivity (JDBC/ODBC)
+
+1. **Embedded SQL is which of the following?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   a) Hard-coded SQL statements in a program language such as Java.
+   b) The process of making an application capable of generating specific SQL code on the fly
+   c) Hard-coded SQL statements in a procedure.
+   d) Hard-coded SQL statements in a trigger.
+
+2. **The Application program interface in a two-tier architecture DBMS is provided by-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 117]**
+   a) Close module connectivity
+   b) Open module connectivity
+   c) Open database connectivity
+   d) Close database connectivity
+
+## Concurrency Control & Locking
+
+1. **Which of the following is not a factor in determining the concurrency control behavior of SQL Server?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 117]**
+   a) Lock level
+   b) Transaction isolation level
+   c) Cursor concurrency setting
+   d) Locking hints
+
+2. **In a DBMS, when multiple transaction programs update the same database simultaneously, which of the following is a technology that is used to prevent logical contradictions?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 117]**
+   a) Exclusive Control
+   b) Integrity constraint
+   c) Normalization
+   d) Reorganization
+
+3. **Which of the below is responsible for controlling the interaction among simultaneous transaction?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 117]**
+   a) Serializable controller
+   b) Concurrency Control Manager
+   c) Transportation management system
+   d) Multiple Access Protocol
+
+4. **In strict two phase locking protocol-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) All exclusive mode locks taken by transaction be held until transaction commit
+   b) All exclusive mode locks taken by transaction can be released before transaction commits
+   c) All locks can be released before transaction commits
+   d) None of these

@@ -24,6 +24,12 @@
    (গ) UTF-8
    (ঘ) UTF-9
 
+5. **EDSAC কম্পিউটার এ ডাটা সংরক্ষণের জন্য কি ধরণের মেমরি ব্যবহার হত?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) RAM
+   b) ROM
+   c) Mercury Delay
+   d) Registers Lines
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

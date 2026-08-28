@@ -797,6 +797,24 @@
    c) Iraq, Lebanon and Syria
    d) Thailand, Laos and Myanmar
 
+73. **স্টিফেন হকিং একজন-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) দার্শনিক
+   b) পদার্থবিদ
+   c) কবি
+   d) রসায়নবিদ
+
+74. **চীনের জিনজিয়াং প্রদেশে বসবাসকারী প্রধান মুসলিম সম্প্রদায়ের নাম কি?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) তুর্কমেন
+   b) উইঘুর
+   c) কাজখ
+   d) তাজিক
+
+75. **বিশ্বব্যাংক সংশ্লিষ্ট কোন সংস্থাটি স্বল্প আয়ের উন্নয়নশীল দেশে বেসরকারি খাতে আর্থিক সহায়তা ও উপদেশ দিয়ে থাকে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) IBRD
+   b) MIGA
+   c) IFC
+   d) ICSID
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1465,6 +1483,29 @@
    c) 1991
    d) 1992
 
+119. **বাংলাদেশে প্রথম জাতীয় সংসদের নির্বাচন কখন হয়?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) ৭ ফেব্রুয়ারী ১৯৭৩
+   b) ৭ জানুয়ারি ১৯৭৩
+   c) ৭ মার্চ ১৯৭৩
+   d) ৭ এপ্রিল ১৯৭৩
+
+120. **কত সালে আওয়ামী লীগের ৬দফা পেশ করা হয়েছিল?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) ১৯৬৬ সালে
+   b) ১৯৬৭ সালে
+   c) ১৯৬৮ সালে
+   d) ১৯৬৯ সালে
+
+121. **নির্বাহী বিভাগ থেকে বিচার বিভাগ পৃথক করার বিষয়টি সংবিধানের কোন অনুচ্ছেদে উল্লেখ রয়েছে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) অনুচ্ছেদ ২৩b) অনুচ্ছেদ ২৪
+   c) অনুচ্ছেদ ২১
+   d) অনুচ্ছেদ ২২
+
+122. **১৯৫৪ সালে পূর্ব পাকিস্তান প্রাদেশিক পরিষদ নির্বাচনে যুক্তফ্রন্টের কি প্রতীক ছিল?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) ধানের শীষ
+   b) নৌকা
+   c) লাঙ্গল
+   d) বাইসাইকেল
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1594,6 +1635,12 @@
    (d) China
    **Ans: d**
 
+22. **সলোমন দ্বীপপুঞ্জ কোন মহাসাগরে অবস্থিত?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) ভারত মহাসাগর
+   b) প্রশান্ত মহাসাগর
+   c) অ্যাটলান্টিক মহাসাগর
+   d) আকটিক মহাসাগর
+
 ## Sports
 
 1. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -1654,6 +1701,12 @@
    b) Albatross
    c) Mulligan
    d) Dimples
+
+13. **টেস্ট ক্রিকেটে বাংলাদেশের পক্ষে কে প্রথম ডাবল সেঞ্চুরি করেন?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) মুশফিক
+   b) তামিম
+   c) সাব্বির
+   d) লিটন দাস
 
 ## Power Sector & Energy (Bangladesh)
 
