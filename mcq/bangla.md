@@ -132,6 +132,12 @@
 27. **আমি কিংবদন্তীর কথা বলছি’ কবিতাটির লেখক কে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
    উত্তর: আবু জাফর ওবায়দুল্লাহ
 
+28. **‘তিতাস একটি নদীর নাম’ উপন্যাসটি রচয়িতা কে?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) তারাশংকর বন্দ্যোপাধ্যায়
+   b) বন্দে আলী মিঞা
+   c) জহির রায়হান
+   d) অদ্বৈতমল্ল বর্মন
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -391,6 +397,18 @@
 52. **ঢেক ছাঁটা কোন সমাস?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
    উত্তর: তৃতীয়া তৎপুরুষ
 
+53. **সঠিক শব্দ কোনটি?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) চলাকালীন সময়ে
+   b) চলাকালে
+   c) চলাকালের সময়ে
+   d) চলাকালীন সময়
+
+54. **সাধুভাষা থেকে চলিত বাংলায় লিখতে কোন পদযুগলের পরিবর্তন ঘটে?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) বিশেষ্য ও বিশেষণ
+   b) সর্বনাম ও ক্রিয়া
+   c) বিশেষণ ও ক্রিয়া
+   d) বিশেষ্য ও নাম
+
 ## বাগধারা ও প্রবাদ
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -407,6 +425,12 @@
 
 3. **হাতকামড়ানো বাগধারাটির অর্থ কি?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
    **Ans:** আফসোস করা
+
+4. **“ইঁদুর কপালে” - এর বিপরীত বাগধারা কোনটি?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) অদৃষ্টের পরিহাস
+   b) অন্ধকার
+   c) একাদশে বৃহস্পতি
+   d) কেউকেটা
 
 ## এক কথায় প্রকাশ
 

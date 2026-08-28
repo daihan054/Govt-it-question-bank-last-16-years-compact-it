@@ -234,6 +234,78 @@
 34. **He complied ______ my request.** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
    উত্তর: with
 
+35. **He told me that he ______ watching the movie.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 58]**
+   a) is finished
+   b) was finished
+   c) had finished
+   d) not finished
+
+36. **I haven't seen you ______ a week.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 58]**
+   a) Within
+   b) Since
+   c) for
+   d) from
+
+37. **It ______ I would not lose temper.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 58]**
+   a) I were you
+   b) I was you
+   c) I am not you
+   d) I am you
+
+38. **The price of gold as well as silver ______ risen.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 58]**
+   a) is
+   b) has
+   c) have
+   d) are
+
+39. **Shariful ______ overtime for the last two weeks.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 58]**
+   a) is working
+   b) has been working
+   c) is being working
+   d) does
+
+40. **The meeting has been ______ due to the demise of the Minister.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) called for
+   b) called off
+   c) called out
+   d) called on
+
+41. **There are ______ opportunities to learn from this excellent project.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) Plentiful
+   b) many
+   c) likely
+   d) unlikely
+
+42. **Big Ship Ltd. set up a cold storage in Rajshahi for preserving agricultural products, but so far the company ______ the clearance from the Agriculture Ministry.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) will take
+   b) never takes
+   c) has not taken
+   d) would not take
+
+43. **We hope that, by the end of this month, the cost of the maintenance of the tower ______.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) would have been estimated
+   b) would estimate
+   c) has been estimated
+   d) will be estimated
+
+44. **As ______ of the students can afford this high tuition fee, will need scholarships.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) few/most
+   b) none/nobody
+   c) some/they
+   d) few/none
+
+45. **Her proposal ______ the new ICT policy seems more suitable than any of the others.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) Irrelevant to
+   b) regarding
+   c) regardless
+   d) instead of
+
+46. **______ the forthcoming training, we able to find the skilled engineers.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) Through/were
+   b) By cannot be
+   c) Through/will be
+   d) From/could be
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -350,6 +422,30 @@
 13. **Plagiarism means- **Ans: Theft of Idea**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
 14. **Could: Rain :: Vapour : **Ans: Moistrue**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+15. **Select the pair which has the same relationship. ORTHOPEDIC: BONE** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 58]**
+   a) Psychiatry: Mind
+   b) Skin: Allergy
+   c) Antibiotics: Fever
+   d) Fracture: Plaster
+
+16. **Choose the word which is most opposite in meaning to the word EMBRACE** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 58]**
+   a) Disobey
+   b) Contradict
+   c) Reject
+   d) Obscure
+
+17. **The suitable synonym of the word honest is.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) kind
+   b) ample
+   c) Magnificent
+   d) candid
+
+18. **The suitable antonym of the word feasible is.** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) weak
+   b) bad
+   c) Small
+   d) unattainable
 
 ## Spelling
 

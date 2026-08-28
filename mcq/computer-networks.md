@@ -126,6 +126,12 @@
 2. **LTE এর পূর্ণ নাম কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
    উত্তর: Long Term Evolution
 
+3. **নিচের networking technology গুলোর মধ্যে কোনটি সাধারণত সবচেয়ে কম দূরত্বে (বা সবচেয়ে কাছাকাছি) তথ্য প্রেরণের জন্য ব্যবহৃত হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 61]**
+   a) Wimax
+   b) GSM
+   c) WiFi
+   d) Bluetooth
+
 ## Subnetting & IP Addressing
 
 1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**

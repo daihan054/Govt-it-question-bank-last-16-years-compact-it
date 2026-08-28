@@ -43,6 +43,12 @@
    (c) Peripheral Devices
    (d) None of above
 
+2. **BIOS দিয়ে কি বোঝানো হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) Basic Input / Output System
+   b) Basic Interrupt / Output System
+   c) Basic Interrupt / Outcome System
+   d) ওপরের কোনটিই নয়।
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -62,3 +68,17 @@
 
 4. **In which way blockchain data can be modifued?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Cannot Modify
+
+## Software Types & Classification
+
+1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) Chrome
+   b) Firefox
+   c) Facebook
+   d) Safari
+
+2. **নিচের কোনটি image ফাইলের extension হিসাবে ব্যবহৃত হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 61]**
+   a) .docx
+   b) .xls
+   c) .jpg
+   d) উপরের কোনটিই নয়।

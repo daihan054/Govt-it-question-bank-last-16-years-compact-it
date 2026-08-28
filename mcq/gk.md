@@ -60,6 +60,24 @@
 11. **যে সর্বোচ্চ শ্রুতি সীমার উপরে মানুষ বধির হতে পারে তা হচ্ছে-** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** ১০৫ ডিবি
 
+12. **সূর্য গ্রহণের সময় কোনটি হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) পৃথিবী সূর্য ও চাঁদের মাঝে থাকে
+   b) পূর্ণিমা তিথি
+   c) চাঁদ পৃথিবী ও সূর্যের মাঝে থাকে
+   d) চাঁদ পৃথিবী ও চাঁদের মাঝে ৯০° কোন তৈরি করে।
+
+13. **ইদানিং সুপার ফুড বলে পরিচিত খাদ্য কি বৈশিষ্ট্য বহন করে?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) অনিদ্রা দূর করে
+   b) মানসিক চাপ দূর করে
+   c) উচ্চ রক্তচাপ নিয়ন্ত্রণ করে
+   d) এটি একটি প্রাকৃতিক প্রতিবিধান
+
+14. **পৃথিবী পৃষ্ঠের গড় তাপমাত্রা কত ডিগ্রী সেলসিয়াস?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) ১৪
+   b) ২৪
+   c) ১৮
+   d) ১৫
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -582,6 +600,30 @@
 61. **বাংলাদেশ কবে SAE-ME-WE এর সদস্য হয়?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
    উত্তর: ২১ মে, ২০০৬
 
+62. **বাংলাদেশে প্রধান নির্বাচন কমিশনার নিয়োগ দেন কে?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) প্রধানমন্ত্রী
+   b) সার্চ কমিটি
+   c) রাষ্ট্রপতি
+   d) প্রধান বিচারপতি
+
+63. **বঙ্গবন্ধু শেখ মুজিবুর রহমানকে কবে জাতির জনক ঘোষণা করা হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) ০৩ ই জানুয়ারি ১৯৭২
+   b) ১৬ই ডিসেম্বর ১৯৭১
+   c) ২৬ শে মার্চ ১৯৭২
+   d) ০৩ই মার্চ ১৯৭১
+
+64. **কোনটি মায়ানমার-বাংলাদেশের অভিন্ন নদী নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) সাঙ্গু
+   b) মাতামুহুরী
+   c) নাফ
+   d) কর্ণফুলী
+
+65. **কত তারিখে বাংলাদেশের সংবিধান কার্যকর হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) ১৬ ডিসেম্বর ১৯৭১
+   b) ১৬ ডিসেম্বর ১৯৭২
+   c) ২৬ মার্চ ১৯৭২
+   d) ২৬ মার্চ ১৯৭৩
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -640,6 +682,30 @@
 
 10. **সমুদ্র স্রোত সৃষ্টির প্রধান কারণ কি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
 
+11. **সুয়েজ খাল কোন কোন মহাদেশকে বিভক্ত করেছে?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) এশিয়া ও অস্ট্রেলিয়া
+   b) আমেরিকা ও আফ্রিকা
+   c) ইউরোপ ও আমেরিকা
+   d) এশিয়া ও আফ্রিকা
+
+12. **পৃথিবীর সর্ববৃহৎ প্রবাল প্রাচীর কোনটি?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) গ্রেট ব্যারিয়ার রিফ
+   b) আমাজান রিফ
+   c) আমেরিকান রিফ
+   d) মেক্সিকো রিফ
+
+13. **আমাজন বনের মোট আয়তনের ৬০% কোন দেশে অবস্থিত?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) আর্জেন্টিনা
+   b) বলিভিয়া
+   c) পেরু
+   d) ব্রাজিল
+
+14. **পৃথিবীর বর্তমান জনসংখ্যা কত?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) প্রায় ৭০০ কোটি
+   b) প্রায় ৬০০ কোটি
+   c) প্রায় ৯০০ কোটি
+   d) প্রায় ৮০০ কোটি
+
 ## Sports
 
 1. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -688,6 +754,12 @@
 
 10. **বাংলাদেশ কবে টেস্ট ক্রিকেটের মর্যাদা লাভ করে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
    উত্তর: ২৬ জুন, ২০০০
+
+11. **কিংবদন্তি মোহাম্মদ আলি কিসের জন্য বিখ্যাত?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) অভিনয়
+   b) বক্সিং
+   c) মার্শাল আর্টস
+   d) সঙ্গীত
 
 ## Power Sector & Energy (Bangladesh)
 
