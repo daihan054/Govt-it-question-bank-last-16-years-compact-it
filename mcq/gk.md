@@ -455,6 +455,36 @@
    গ. ইথিলিন
    ঘ. পেনিসিলিন
 
+73. **What is the power required by a pump to draw 10 liters of water to a height of 10 meters, every second?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. 980J
+   B. 100 kw
+   C. 900 w
+   D. 960 kw
+
+74. **What kind of energy is stored in a stressed spring?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. Potential energy
+   B. Kinetic energy
+   C. Chemical Energy
+   D. thermal energy
+
+75. **Which time of the following properties of a body cannot be changed with an applied force?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. length
+   B. mass
+   C. shape
+   D. volume
+
+76. **How much force should be exerted on a steel wire of cross-sectional area 0.1\text{cm}^2 in order to double its length? (Y = 2 \times 10^{11}\text{ N/m}^2)** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. 2 \times 10^6\text{ N}
+   B. 2 \times 10^7\text{ N}
+   C. 2 \times 10^8\text{ N}
+   D. 2 \times 10^9\text{ N}
+
+77. **What is the angular momentum of the election in the lowest orbit of hydrogen atom?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. h
+   B. h/2
+   C. \text{h}/2\pi
+   D. 2\pi/\text{h}
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -2023,6 +2053,18 @@
    (b) 9
    (c) 11
    (d) 15
+
+174. **কোন সালে Bangladesh এ স্বয়ংক্রিয় Digital IT-Ex service শুরু করে?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. 1972
+   B. 1975
+   C. 1981
+   D. 1983
+
+175. **DNA ম্যাপিং করার জন্য কোন প্রযুক্তি ব্যবহার করা হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. বায়োমেট্রি
+   B. বায়োইনফরমেটিক্স
+   C. রোবটি
+   D. জেনেটিক্স
 
 ## Geography & Environment
 

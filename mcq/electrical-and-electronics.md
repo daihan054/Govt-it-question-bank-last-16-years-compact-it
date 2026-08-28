@@ -501,6 +501,24 @@
    c) Generator
    c) Chemical cell
 
+86. **A wire resistance is 12 ohms. If it is divided into two parts and the parts are then connected in a parallel combination what will be resistance?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. 3 ohm
+   B. 6 ohm
+   C. 12 ohm
+   D. 24 ohm
+
+87. **When there is no forbidden region between the conductance band and valence band, the substance is called.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. semiconductor
+   B. super conductor
+   C. conductor
+   D. insulator
+
+88. **In common base circuit of a transistor, current amplification factor is 0.95. Calculate the emitter current if base current is 0.2mA.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. 2mA
+   B. 4mA
+   C. 6mA
+   D. 8mA
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**

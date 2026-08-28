@@ -68,6 +68,12 @@
    c) <html>
    d) All of these are valid built-in HTML tags
 
+12. **Which of the following converts the documents written by HTML?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. Browser
+   B. FTP
+   C. HTPP
+   D. Web
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**

@@ -474,6 +474,72 @@
    C) PAS
    D) SMTP
 
+26. **Which one is an example of hybrid network?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. LAN
+   B. RAN
+   C. WAN
+   D. TAN
+
+27. **The abbreviation of bps stands for-** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. bytes per second
+   B. bit per second
+   C. bandwidth per second
+   D. baud rate per second.
+
+28. **FTP site are often called ________** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. Server
+   B. host
+   C. groups
+   D. domain
+
+29. **An email address has a user name, the @ symbol and the ________ computer's Name** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. Provider
+   B. Host
+   C. Server
+   D. Client
+
+30. **Wi-Fi stands for the Wireless ________** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. Fidelity
+   B. Final
+   C. Fidel
+   D. Field
+
+31. **Sockets and Winsock কোন ধরনের সফটওয়্যারের উদাহরণ?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. VCR
+   B. DSL
+   C. IPX
+   D. API
+
+32. **The ration of number of successful calls to the number of all call attempts is known as:** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. Call back rate (CBR)
+   B. Call completion rate (CCR)
+   C. Busy hour call rate (BHCR)
+   D. Effective call rate (ECR)
+
+33. **What is the acceptance value of dividing point between the wonder and jitter?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. 200 Hz
+   B. 50 Hz
+   C. 20 Hz
+   D. 10 Hz
+
+34. **If the voice channel is free in PSTN then what would be the maximum data rate supported by 3.1 KHz bandwidth of voice channel?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. 4000 bps
+   B. 5000 bps
+   C. 6000 bps
+   D. 8000 bps
+
+35. **Which one transfers data at the highest speed?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. UTP
+   B. STP
+   C. Co-axial-cable
+   D. Fiber optic cable
+
+36. **Which one acts as the backbone of global village?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. Hardware
+   B. Software
+   C. Networks and connectivity
+   D. Data
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

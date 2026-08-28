@@ -24,6 +24,18 @@
    c) Formula bar
    d) Standard tool bar
 
+5. **পরিসংখ্যানের বিভিন্ন পরিমাপ নির্ণয়ের জন্য নিচের কোনটি ব্যবহৃত হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 198]**
+   A. MS Word
+   B. MS Access
+   C. MS Excel
+   D. MS Power Point
+
+6. **কপি ফরমেট করার শর্টকাট কোনটি?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. Clt+C
+   B. Shift+C
+   C. Clt+Shift+C
+   D. Alt + Shift +C
+
 ## MS Word
 
 1. **What is the range of Font Size available in Font Size drop down toolbar?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**

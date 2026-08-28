@@ -126,6 +126,12 @@
    গ. 20m
    ঘ. 20sq-m
 
+23. **What is the distance between the line 8x+6y=17 and 8x+6y-37=0?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. -2
+   B. 1
+   C. 2
+   D. 6
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

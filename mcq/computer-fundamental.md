@@ -266,6 +266,30 @@
    C) Software
    D) Combination of hardware and software
 
+26. **Active matrix displays use ________ Technology.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. TGT
+   B. TFT
+   C. FTF
+   D. TCT
+
+27. **Which device converts the computer's digital data into analog signals?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. ATM
+   B. Router
+   C. Modem
+   D. Packet.
+
+28. **You can connect an electronic instrument to your computer via the ________ port.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. PS2
+   B. USB
+   C. HDX
+   D. MIDI
+
+29. **Portable computer এ কোন ধরনের Monitor সচরাচর ব্যবহৃত হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. CRT
+   B. Monochrome
+   C. Flat panel display
+   D. Data projector
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -431,6 +455,30 @@
    B) High level language
    C) Machine language
    D) None of these
+
+20. **Consist of Instructions that control the computers ________.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. Programs
+   B. List
+   C. Keyboard
+   D. File
+
+21. **Which type of Software can translate scanned text into text that one can edit?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. OCS
+   B. ORC
+   C. OCR
+   D. ORS
+
+22. **To remove a program from your computer you can it,** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. remove
+   B. delete
+   C. store
+   D. uninstall
+
+23. **সর্বাধিক ব্যবহৃত Operating system কোনটি?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. Linux
+   B. Windows
+   C. MAC OS
+   D. Unix
 
 ## Acronyms & Abbreviations
 

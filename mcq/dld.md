@@ -306,6 +306,30 @@
    C) eighteen bits
    D) six bits
 
+30. **Number systems used in the computer is known as:** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+   A. Octal System
+   B. Decimal System
+   C. Binary System
+   D. Real System
+
+31. **________ are the two symbols present in the binary number system.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+   A. 1 and 2
+   B. 0 and 1
+   C. 8 and 9
+   D. 5 and 6
+
+32. **How many unique signs could be specified by using ASCII-8?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. 128
+   B. 256
+   C. 512
+   D. 65536
+
+33. **Which one of the following is equivalent hexadecimal number of (734)_8?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. C1D
+   B. D1C
+   C. 1CD
+   D. 1DC
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

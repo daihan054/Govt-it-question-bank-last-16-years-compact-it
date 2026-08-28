@@ -509,6 +509,12 @@
    C) Data Validity
    D) None of these
 
+27. **Which one is an example of DBMS?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. MS word
+   B. MS Excel
+   C. C++
+   D. MS Access
+
 ## Transaction Management & ACID
 
 1. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
