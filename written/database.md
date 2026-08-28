@@ -372,6 +372,10 @@ ORDER BY average_salary DESC;
    * **Assignment** (Worker ID, Building ID, Start Date, Num Days)
    * **Building** (Building ID, Address, Building Type)
 
+4. **Consider the Schema employee(id, name, salary), equipment(id, name, price), hire(employee_id, equipment_id)**
+   **(i) Draw the ERD digram for the relation**
+   **(ii) Write the SQL query to show the name of employee who borrow the maximum equipment?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 462]**
+
 ## Database Connectivity (JDBC)
 
 1. What is JDBC? Explain the steps required to connect a Java application to a MySQL database. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

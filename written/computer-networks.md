@@ -414,6 +414,25 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 9. **(b) Distinguish between routing and forwarding. What are the advantages of net specific routing over host specific routing?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
 
+10. **Consider the following routing table at an IP router:** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 461]**
+| Network | Subnet mask | Outgoing Interface |
+|---|---|---|
+| 172.168.164.0 | 255.255.254.0 | Interface 0 |
+| 172.168.166.0 | 255.255.254.0 | Interface 1 |
+| 172.168.168.0 | 255.255.254.0 | Interface 2 |
+| 172.168.170.0 | 255.255.254.0 | Interface 3 |
+| 0.0.0.0 | Default | Interface 4 |
+
+   **For each IP address in Group: I indentify the correct choice of the outgoing from Group: II using the entries from the routing table above.**
+| Group: I | Group: II |
+|---|---|
+| 172.168.165.121 | Interface 0 |
+| 172.168.167.151 | Interface 1 |
+| 172.168.163.151 | Interface 2 |
+| 172.168.171.92 | Interface 3 |
+| 0.0.0.0 | Interface 4 |
+**(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 462]**
+
 ## High Availability & Redundancy Protocols (VRRP, HSRP)
 
 1. **State the network protocol of VRRP?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1359]**

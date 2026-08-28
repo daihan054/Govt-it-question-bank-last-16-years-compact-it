@@ -342,6 +342,29 @@ return 0;
 }
 ```
 
+7. **Explain following program while part in step for the input 1221 and 3456 and also write the output of the program. (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয় নি!!)** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 463]**
+
+8. **Write the function for which the output is 1 for that input.** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 463]**
+
+9. **In the below C code. Write the Output on below table based on code and left side. And also explain the line 7-11 in below code.**
+```c
+#include <stdio.h>
+int main() {
+    int n, reversed = 0, remainder, original;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    original = n;
+    while (n!= 0) {
+        remainder = n % 10;
+        reversed = reversed * 10 + remainder;
+        n /= 10;
+    }
+    if (original == reversed)
+        printf("%d is a palindrome.", original);
+
+```
+**(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 464]**
+
 ## Recursion & Functions
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।

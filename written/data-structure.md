@@ -16,6 +16,8 @@
 
 8. **Prefix Conversion A+ B * C+D expression?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
 
+9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 463]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]

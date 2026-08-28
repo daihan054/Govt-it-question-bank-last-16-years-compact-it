@@ -24,6 +24,8 @@
 
 12. **Difference between symmetric and asymetric key encryption.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
 
+13. **Identify the type of algorithm? (i) MD5 (ii) AES (iii) RSA (iv) Diffie-Hellman** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 461]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
