@@ -4,6 +4,8 @@
 
 2. Describe any two key differences between the HTTP GET and HTTP POST methods used for communication between a web browser and a web server. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
+3. **(ক) ফর্ম জমা দেয়ার পদ্ধতি GET এবং POST এর মধ্যে পার্থক্য কী, কখন কোন পদ্ধতি ব্যবহার করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
+
 ## JavaScript & jQuery (DOM & Validation)
 
 1. **Jquery for email validation** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
@@ -54,11 +56,15 @@
       - Yellow Capsicum
       - Red Capsicum
 
+10. **অথবা, নিম্নোক্ত উপাদানগুলোসহ একটি HTML page লিখুন। Hyperlink, Ordered list, Unordered list, Form (Tent box, Check box, Option Button).** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
+
 ## CSS & Styling (Inline, Internal, External)
 
 1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**
 
 2. **What is CSS? What is CSS framework? Write down 3 CSS framework name?** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+
+3. **(খ) CSS Box Model এ ‘Padding’ এবং ‘Margin’ এরিয়ার মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
 ## Full Stack & Backend Web Development
 

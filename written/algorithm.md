@@ -105,6 +105,8 @@ for i in N:
 
 2. **(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
 
+3. **(খ) দেখান যে, n সংখ্যক vertex এর একটি tree এর ঠিক n-1 সংখ্যক edge আছে।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
+
 ## Graph Representation (Adjacency Matrix vs List)
 
 1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 495]**
@@ -122,6 +124,10 @@ for i in N:
 4. **What are BFS and DFS for Binary Tree?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 464]**
 
 5. **(খ) BFS ও DFS এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
+
+6. **অথবা, (ক) BFS অ্যালগরিদম উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
+
+7. **(খ) Node A থেকে শুরু করে নিম্নোক্ত গ্রাফটির DFS Traversal লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
 
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 

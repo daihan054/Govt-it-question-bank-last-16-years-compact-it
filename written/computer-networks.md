@@ -22,6 +22,8 @@
 
 8. **Why we used straight-through and cross cable with example?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
 
+9. **(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 629]**
+
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
 1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
@@ -49,6 +51,8 @@
 5. **What is Personal Area Network? What is needed component and explain?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 572]**
 
 6. **What is Topology in data communication? What are differences between Bus, Ring, Tree and Star topology? Purpose of IEEE 802.11 committee.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
+
+7. **(খ) একটি নেটওয়ার্কে n সংখ্যক ডিভাইসের জন্যে Bus, Mesh এবং Star টপোলজিতে তারের লিংকগুলোর সংখ্যা কত?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
 
 ## OSI & TCP/IP Reference Model
 
@@ -159,6 +163,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 4. **(b) Name and define five components of Data communication system with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 487]**
 
 5. **(a) Differentiate between half-duplex and full duplex transmission.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
+
+6. **(গ) উদাহরণসহ Simplex, half-duplex এবং duplex কমিউনিকেশন সিস্টেমের পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
 
 ## Switching Techniques (Circuit vs Packet Switching)
 
@@ -521,11 +527,15 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 3. **One of the drawbacks of a small packet size is that a large function of link bandwidth is consumed by overhead bytes. To this end, supposed that the packet consists of P bytes and 5 bytes of header. Consider sending a digitally encoded voice source directly. Suppose the source is encoded a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the packetization delay. Determine the packetization delay for length L-1500 bytes (roughly corresponding to maximum-sized Ethernet packet).** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
 
+4. **(ক) Bandwidth এবং Through put এর মধ্যে পার্থক্য কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
+
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 
 1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
 
 2. **What is baseband and passband frequency?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
+
+3. **অথবা, (ক) Low-pass Channel এবং Band-pass Channel এর মধ্যে উদাহরণসহ পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
 
 ## Wireless Networks & IoT (mmWave)
 

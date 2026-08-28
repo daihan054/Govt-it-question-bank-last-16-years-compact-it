@@ -16,6 +16,8 @@
 
 8. **অথবা, (ক) Blocking এবং Buffering OS এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 610]**
 
+9. **(গ) Real Time System বলতে কী বোঝায় ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -45,6 +47,8 @@ int main(int argc, char *argv[]){
     return 0;
 }
 ```
+
+5. **অথবা, (ক) Thread এর সংজ্ঞা দিন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
 
 ## Linux / Unix Commands & Administration
 
@@ -153,6 +157,8 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 | P1 | 21 |
 | P2 | 3 |
 | P3 | 6 |
+
+6. **(খ) CPU Scheduling কী? যে যে কারণে CPU Scheduling করতে হয় সেগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 624]**
 ## CPU Scheduling Algorithms
 
 1. A CPU scheduling algorithm must choose a process from the ready queue to execute. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -247,6 +253,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 10. **(খ) Operating System-এর Memory hierarchy সচিত্র বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
 
+11. **(খ) Internal এবং External fragmentation এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
+
 ## Virtual Memory & Page Replacement (Thrashing)
 
 1. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**
@@ -275,11 +283,17 @@ All process arrived at time 0. Lower number has higher priority.
 
 4. **Explain the process state.** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
+5. **(ক) Process কী? একটি Process এর বিভিন্ন ধাপগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
+
+6. **অথবা, (ক) Process Control Block (PCB) কী? এটি একটি Process সংক্রান্ত যে যে তথ্য রাখে সেগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 624]**
+
 ## Process Synchronization & Concurrency
 
 1. Two independent applications running concurrently attempt to update the same file located at a same file location. Both applications may read and modify the file at nearly the same time, creating a possibility of race conditions, lost updates, or inconsistent data. What type of consistency problem can occur in this situation, and which synchronization technique(s) should be used to ensure that only one application can safely update the file at a time? Explain the mechanism and justify the most appropriate solution. [BSCCPL AME 21-08-2026 (BUET)]
 
 2. **What is Semaphore? How would you improve performance when using semaphores?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 504]**
+
+3. **(গ) Process Synchronization এর ক্ষেত্রে Race condition ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 624]**
 
 ## Deadlock & Resource Allocation
 

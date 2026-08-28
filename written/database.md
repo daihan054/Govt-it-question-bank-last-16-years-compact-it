@@ -15,6 +15,12 @@
 
 7. **(খ) Centralized System ও Client Server System সম্পর্কে সচিত্র বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
 
+8. **(ক) একজন ডাটাবেস এডমিন এর কাজ কী? কিছু ডাটাবেস সিস্টেম অ্যাপ্লিকেশনের নাম লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
+
+9. **(খ) ডাটাবেস ব্যবস্থাপনা সিস্টেমের তিন স্তরবিশিষ্ট আর্কিটেকচার ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
+
+10. **(ক) সাধারণ ফাইলভিত্তিক সিস্টেমের চেয়ে DBMS এর সুবিধা কী কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -28,6 +34,8 @@
 3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 4. **(ক) DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
+
+5. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
 
 ## SQL Queries
 
@@ -251,6 +259,16 @@ ORDER BY average_salary DESC;
    **Has Genre (\underline{\text{gid}, \text{mid}})**
    **Write a SQL query to return the number of movies that are romantic comedies.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 436]**
 
+38. **(গ) ডাটাবেস সিস্টেমে view কী? এটি কী কী কাজে লাগে?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
+
+39. **অথবা, নিম্নোক্ত টেবিলগুলো হতে (ক), (খ) এবং (গ) এর উত্তর দিন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
+   Restaurant (rid, rname, rcity, phone, seat-capacity)
+   Dishes (did, dname, dtype)
+   Customer (cid, cname, ccity)
+   Serves (rid, did)
+
+   **(ক) যে যে রেস্টুরেন্টগুলো ‘Burger’ পরিবেশন করে সেগুলোর নাম খুঁজে বের করার জন্য SQL Query লিখুন। (খ) ‘Ziman’ নামক একজন Customer যে যে খাবারগুলো অ্যালার্জি সংক্রান্ত সমস্যা এড়িয়ে খেতে পারেন তার তালিকা তৈরি করুন। (গ) যে যে খাবারগুলো ঢাকার সকল রেস্টুরেন্টে পাওয়া যায় তার তালিকা তৈরি করুন।**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -266,6 +284,8 @@ ORDER BY average_salary DESC;
 6. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
 
 7. **(a) What is ACID mean in database system?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
+
+8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
 
 ## Normalization & Database Design
 
@@ -300,6 +320,8 @@ ORDER BY average_salary DESC;
 9. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 10. **What in First and Second Normal form is DBMS?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+
+11. **অথবা, (ক) “BCNF is stricter than 3NF” এই উক্তিটি উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
 
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
@@ -376,6 +398,8 @@ ORDER BY average_salary DESC;
 5. **What is primary key and foreign key with example?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
 
 6. **Explain Primary key, Candidate key, and Foreign key.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 468]**
+
+7. **(খ) Primary key এবং Super key এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
 
 ## Indexing in DBMS
 

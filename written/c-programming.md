@@ -264,6 +264,8 @@ return 0;
 
 1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
 
+2. **(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
+
 ## Operators, Data Types & Language Concepts
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**
@@ -275,6 +277,10 @@ return 0;
 4. **What will occur when an array is declared without size?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 5. **(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 601]**
+
+6. **(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
+
+7. **(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
 
 ## Output Tracing & Control Flow
 
@@ -443,3 +449,11 @@ int main() {
 13. **(e) Write about the syntax of function.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
 
 14. **(ক) C প্রোগ্রামিং ল্যাঙ্গুয়েজে user defined function এবং library function এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
+
+15. **(ক) Call by Value এবং Call by Reference এর মধ্যে পার্থক্য কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
+
+16. **(ঘ) উদাহরণসহ Parameter Passing ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
+
+17. **(খ) উদাহরণসহ recursion ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
+
+18. **(ক) Tower of Hanoi সমস্যাটি সমাধানের জন্যে একটি recursive অ্যালগরিদম লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
