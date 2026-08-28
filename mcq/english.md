@@ -738,6 +738,96 @@
    c) More he gets, the more he wants
    d) The more he gets, the more he wants
 
+112. **________ opportunity comes responsibility.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. From
+   b. Before
+   c. without
+   d. With
+
+113. **________ the year 2014 and 2019, I was a student of University of Dhaka.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. From
+   b. Except
+   c. Between
+   d. Both
+
+114. **Are you sure that you ________ the killer before?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. will have seen
+   b. had seen
+   c. would have seen
+   d. must have seen
+
+115. **I have enrolled of ________ European University.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. a
+   b. an
+   c. the
+   d. no article
+
+116. **The Children were too flabbergasted ________.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. so they could not speak
+   b. that they started speaking
+   c. to speak
+   d. to stop speaking
+
+117. **Good morning, ________ see the manager, please.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. am interested to
+   b. wish I can
+   c. like to
+   d. would like to
+
+118. **There was somebody waling behind us. I thought we ________.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. were following
+   b. were being followed
+   c. were followed
+   d. have been followed by somebody
+
+119. **You have been working since morning ________. (You have) your lunch yet?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. do you have
+   b. have you
+   c. have you had
+   d. did you have
+
+120. **What is the noun form the word “defer”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. defer
+   b. deferment
+   c. deference
+   d. different
+
+121. **Choose the correct sentence.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. She disguised herself lest she be recognized
+   b. She was disguised lest she should be recognized
+   c. She disguised lest she be recognized
+   d. She disguised herself lest the can be recognized
+
+122. **What is the verb form of the word “Acquisition”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. acquiesce
+   b. acquisition
+   c. acquire
+   d. aquifer
+
+123. **Choose the correct sentence.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. No sooner he graduated he got a job
+   b. No sooner had he graduated than he got a job
+   c. No sooner had he graduated then he had got a job
+   d. No sooner he had graduated he got a job
+
+124. **Choose the correct translation of the sentence- “You should fight shy of an evil company”.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. তোমার খারাপ সংস্থা থেকে দূরে থাকা উচিত
+   b. তোমার খারাপ সংস্থার লোকদের সাথে মারামারি করা উচিত
+   c. তোমার বাজে লোকদের সাথে মারামারি করা উচিত
+   d. তোমার বাজে সঙ্গ এড়িয়ে চলা উচিত
+
+125. **I would have made sure Rana was here ______ were coming.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. if I have known you
+   b. if I knew you
+   c. if I had known you
+   d. when I had known
+
+126. **Choose the correct sentence.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. The kid likes to watch cartoons and eating chocolates
+   b. The kid likes watching cartoons and to eat chocolates
+   c. The kid likes watching cartoons and eating chocolates
+   d. The kid like watching cartoons and eating chocolates
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -833,6 +923,12 @@
    b) Last Work
    c) Middle Work
    d) Early Work
+
+18. **I am feeling under the water. What does the underlined phrase mean?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. Felling very cold
+   b. Traumatized
+   c. Showing sign of torture
+   d. Feeling slightly ill
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -1084,6 +1180,18 @@
    (c) transparent
    (d) short-lived
 
+44. **What is the antonym of “Segregate”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. isolate
+   b. combine
+   c. divide
+   d. severs
+
+45. **What is the synonym of the word “Erudite”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. knowledgeable
+   b. angry
+   c. illiterate
+   d. smart
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1153,3 +1261,15 @@
    b) Ascertain
    c) Ascertain
    d) Asartain
+
+12. **Which of the following has the similar sound of the word “won”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. own
+   b. one
+   c. on
+   d. un
+
+13. **Choose the correct spelling.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. Onomatopeia
+   b. Onamatopoeia
+   c. Onamotopoeia
+   d. Anomatopoeia

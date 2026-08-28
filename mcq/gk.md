@@ -413,6 +413,12 @@
    c) Mercury
    d) Jupiter
 
+66. **What is the noun of the extent Rover sent by NASA to the man?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Superior
+   b. Opporunity
+   c. Perseverance
+   d. Sprit
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -874,6 +880,50 @@
    b) "Global solidarity, resilient HIV services."
    c) Communities Make the Difference
    d) My health, My Right
+
+83. **Who is the new secretary General of BIMSTEC?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Saroj Chavanaviraj (Thailand)
+   b. Summit Nakandala (Sri Lanka)
+   c. M. Shohidul Islam (Bangladesh)
+   d. Tenzin Lekphel (Bhutan)
+
+84. **Who is the writer of the book named A Promise Land?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Joe Biden
+   b. Donald Trump
+   c. Bill Clinton
+   d. Barack Obama
+
+85. **According to the ‘Sustainable Development goals (SFG) Index 2020’ Bangladesh has been ranked ________** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. 153th
+   b. 109th
+   c. 104th
+   d. 123th
+
+86. **Which word is named as “Word of the year 2020” in Cambridge Dictionary?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Lockdown
+   b. Quaranitine
+   c. Pandemic
+   d. Sanitizer
+
+87. **Which of the following is the Scandinavian Country?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Norway
+   b. Sweden
+   c. Netherland
+   d. Denmark
+
+88. **Where did Leandso dis Vind draw his farmers from “The Last Supper”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Rome
+   b. Milan
+   c. Venice
+   d. Florence
+
+89. **Which of the SDG google speaks about women empowerment?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. SDG 5
+   b. SDG 3
+   c. SDG 9
+   d. SDG 8
+
+90. **What was the theme for the 6th BRICS-Youth summit 2020?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
 
 ## Bangladesh Affairs
 
@@ -1608,6 +1658,36 @@
    c) 11
    d) 8
 
+130. **Who was the first English translator of Bangladesh national anthem?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. Syed Ahsan Kabir
+   b. Kamrul Hasan
+   c. Syed Ali Ahsan
+   d. Rabindranath Tagore
+
+131. **Which one was the Naval Sector in the liberation war of Bangladesh?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. 8
+   b. 9
+   c. 10
+   d. 11
+
+132. **Which project of Bangladesh is related to the concept of “One city Two Towns”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Padma Bridge
+   b. Metro Rail
+   c. Kuril Flyover
+   d. Karnaphuli River tunnel
+
+133. **Recently HPM record award at UN for ________.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. SDG
+   b. Climate Change
+   c. MDG
+   d. Women Empowerment
+
+134. **In which district the ‘Tin Bigha Corridor’ is located?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+
+135. **Which Bangladeshi has been awarded the ‘Padma Bhushan 2020’ by the government of India?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+
+136. **According to WEF’s (World Economic forum) Global Gender Gap Report. what is the ranking of Bangladesh in South Asia?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1760,6 +1840,12 @@
    b) Paris
    c) Athens
    d) London
+
+26. **Dead sea is a ________** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Sea
+   b. River
+   c. Lake
+   d. Canal
 
 ## Sports
 

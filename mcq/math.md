@@ -102,6 +102,18 @@
    (c) 17
    (d) 19
 
+19. **You are looking at a billboard 40m away with an angle of elevation of 30⁰. At what height is the billboard?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 20
+   b. 30
+   c. 40
+   d. 80
+
+20. **A ladder against a wall that tis perpendicular to the ground. If the bottom of the ladder is 4m away from the bottom of the wall, while the tip of the ladders is at a height of 3m, what is the length of the ladder?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 7 m
+   b. 35 m
+   c. 5 m
+   d. 25 m
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -145,6 +157,12 @@
    (c) P+6
    (d) P+11
    **Ans: b**
+
+6. **5 years ago the ration of father's age to son's age was 5:1 and 2 years later father's age will be 3 times his son's age. What is the ration of their present age?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 5:2
+   b. 7:3
+   c. 10:3
+   d. 11:7
 
 ## Algebra
 
@@ -310,6 +328,36 @@
    (c) 1/3
    (d) \sqrt{3}
 
+30. **x+y=535, x+4y=4, what is the value of 4x² + 20xy + 16y²?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. 60
+   b. 40
+   c. 20
+   d. 80
+
+31. **If a² - b² = 20, a+b= 5, What is the value of a-b?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. 3
+   b. 15
+   c. 5
+   d. 4
+
+32. **What is the value of a, if 3x² + ax + a + 3 is divisible by x+2?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 12
+   b. 13
+   c. 14
+   d. 15
+
+33. **A vegetable cart sells a potato for $0.24 and a tomato for $0.76. Fred bought 12 vegetables in total. He only bought potatoes and tomatoes. If Fred paid $ 6.52 total, how many potatoes did he buy?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 2
+   b. 7
+   c. 5
+   d. 8
+
+34. **The factors of 4x⁴ + 1 is-** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. (2x² + 2x + 1) (2x² + 3x - 1)
+   b. (2x² + 3x + 1)(2x² + 3x - 1)
+   c. (2x² + 3x + 1) (2x² - 3x + 1)
+   d. (2x² + 3x + 1) (2x² - 2x + 1)
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -409,6 +457,18 @@
    (c) 60%
    (d) 70%
 
+18. **Ahmed sold a t-shirt for TK. 810, and gain 8%. How much did he purchase it for?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. Tk. 750
+   b. Tk. 875
+   c. Tk. 745
+   d. Tk. 756
+
+19. **A restaurant makes 20% profit after selling a set menu at a discount of 20%. What is the percentage increase of marked price?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. 30%
+   b. 20%
+   c. 40%
+   d. 50%
+
 ## Arithmetic & Number Series
 
 1. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -469,6 +529,18 @@
    c) 136ᵗʰ
    d) 144ᵗʰ
 
+11. **How many positive integers less than ten thousand are multiples of both eight and eighteen?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 70
+   b. 72
+   c. 138
+   d. 139
+
+12. **The H.S.F and L.C.M of two number are 12 and 288 respectively. If one of the numbers is 96, find the other.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 34
+   b. 36
+   c. 38
+   d. 40
+
 ## Time, Work & Distance
 
 1. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -512,6 +584,30 @@
    (b) 325 m
    (c) 365 m
    (d) 312 m
+
+8. **It takes 5 hours to fill a container using machine A. The same container can be filled suing Machin B in 10 hours. When the container is full, Machine C can fully empty the container in 20 containers how long will it take for the container to be completely filled?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. 1/4 hours
+   b. 4 hours
+   c. 2 hours
+   d. 15 hours
+
+9. **Two trucks 300 km away are travelling towards each other with a constant speed. Truck A is moving at a constant speed of 50 km/h. How long does it take for them to meet?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. 5 hours
+   b. 3 hours
+   c. 2.5 hours
+   d. 6 hours
+
+10. **If 12 men work on a particular task. it takes them 24 days to complete it. On the other hand, 12 women can complete the same task in 12 days. How many days it takes if the 12 men and 12 women cooperated with each other to finish to finish the same task?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. 5 days
+   b. 6 days
+   c. 8 days
+   d. 16 days
+
+11. **A train 220 m long is moving at 45km/h. The time taken by the train to cross a tunnel 260m long. Is** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 25 sec
+   b. 35 sec
+   c. 38 sec
+   d. 40 sec
 
 ## Analytical Reasoning
 
@@ -564,6 +660,12 @@
    c) 1/3
    d) 7/15
 
+4. **In a room of 36 people, 20 players play chess while 28 players play poker. How many players pay both?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 48
+   b. 20
+   c. 12
+   d. 28
+
 ## Probability & Statistics
 
 1. **The mode and mean is given by 7 and 8 respectively. Then the median is:** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
@@ -577,6 +679,18 @@
    (খ) 0.88
    (গ) 0.56
    (ঘ) 0.69
+
+3. **What is the probability of getting a sum of six if two dices are thrown at one?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 5/36
+   b. 7/36
+   c. 2/26
+   d. 1/36
+
+4. **A fair six-sided die is rolled. Find the probability of getting an odd number or a number less than 4.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 2/3
+   b. 2/4
+   c. 5/6
+   d. 1/6
 
 ## Ratio & Proportion
 
@@ -609,3 +723,9 @@
    (b) 1/4
    (c) 1/5
    (d) 1/2
+
+6. **The ratio of male students to female students in a class is 13 to 19. If there are 224 people in the class, including one teacher, one administrator, and thirty evaluators, how many people in the class are male students?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 78
+   b. 80
+   c. 91
+   d. 114

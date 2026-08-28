@@ -479,6 +479,30 @@
    গ) লুৎফর রহমান
    ঘ) প্রমথ চৌধুরী
 
+85. **‘শোকার্ত তরবারী’ কাব্যগ্রন্থের রচয়িতা কে?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. শামসুর রহমান
+   b. আল মাহমুদ
+   c. হাসান হাফিজুর রহমান
+   d. নির্মলেন্দু গুণ
+
+86. **মহাকাব্যিক উপন্যাস নয় কোনটি?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. সংশপ্তক
+   b. গায়ত্রী সন্ধ্যা
+   c. আগুন পাখি
+   d. জাহান্নাম হইতে বিদায়
+
+87. **‘বিমলা-কুমুদিনী’ কোন দুটি উপন্যাসের কেন্দ্রীয় চরিত্র?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. ঘরে-বাইরে, যোগাযোগ
+   b. চতুরঙ্গ, যোগাযোগ
+   c. ঘরে-বাইরে, শেষের কবিতা
+   d. চোখের বালি, শেষের কবিতা
+
+88. **মোহাম্মদ নাসিরউদ্দিন কোন পত্রিকা সম্পাদনা করেছিলেন?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. মোসলেম ভারত
+   b. প্রগতি
+   c. সওগাত
+   d. সমকাল
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1092,6 +1116,90 @@
    গ) উর্দু
    ঘ) ইংরেজি
 
+110. **‘ক্ষুধপিপাসা’ শব্দের সন্ধি বিচ্ছেদ কী?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. ক্ষুদ + পিপাসা
+   b. ক্ষুধ + পিপাসা
+   c. ক্ষুত্ + পিপাসা
+   d. খুদ্ + পিপাসা
+
+111. **সঠিক সন্ধি বিচ্ছেদ কোনটি?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. মনঃ + কষ্ট = মনোকষ্ট
+   b. চক্ষু + রো
+   c. পরি + কার = পরিষ্কার
+   d. ইতঃ + মধ্যে
+
+112. **‘কানে-কলম’ কোন সমাসের উদাহরণ?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. উপপদ তৎপুরুষ
+   b. অলুক দ্বন্দ্ব
+   c. প্রত্যয়ান্ত বহুব্রীহি
+   d. অলুক বহুব্রীহি
+
+113. **‘চৌরাস্তা’ কোন সমাসের উদাহরণ?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. দ্বিগু কর্মধারায়
+   b. সংখ্যাবাচক বহুব্রীহি
+   c. অলুক বহুব্রীহি
+   d. সমানাধিকরণ বহুব্রীহি
+
+114. **কারক ও বিভক্তি নির্ণয় করুন: কাননে কুসুমকলি সকলি ফুটিল।** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. কর্তায় শূন্য
+   b. কর্মে শূন্য
+   c. করণে দ্বিতীয়
+   d. অপাদানে দ্বিতীয়
+
+115. **‘প্রিয়জনে যাহা দিতে চাই তাই দিই দেবতারে’। কারক ও বিভক্তি নির্ণয় করুন।** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. কর্তায় সপ্তমী
+   b. কর্মে সপ্তমী
+   c. সম্প্রদানে ষষ্ঠী
+   d. সম্প্রদানে ষষ্ঠী
+
+116. **কোন শব্দগুচ্ছের বানান শুদ্ধ?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. রুগ্ন, শিহরণ, বাল্মীকি
+   b. অদ্যাবধি, তিরস্কার, ধরণ
+   c. দারুন, দৈন্যতা, বৈচিত্র
+   d. জাত্যাভিমান, ব্রহ্মপুত্র, প্রবেশক
+
+117. **বিদেশাগত বাংলা শব্দের ভিন্ন জাতীয় শব্দগুচ্ছ কোনটি?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. পোশাক-পছন্দ-হিসাব
+   b. আড়ু-রং-মোরগ
+   c. আলাদা-লোকসান-জেলা
+   d. দোকান-শনাক্ত-নিশান
+
+118. **‘তীক্ষ্ণ’ শব্দের যুক্তব্যঞ্জনের সঠিক বিশ্লেষণ কোনটি?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. ক+ষঞ্চ
+   b. ক্+ষ্ণ+ন
+   c. ক্+ষ+ম
+   d. ক্+হ+ণ
+
+119. **‘Graphic’ এর বাংলা পরিভাষা কী?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. নকশা
+   b. রৈখিক
+   c. কসড়া
+   d. অঙ্কন
+
+120. **কোনটি মৌলিক শব্দ?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. বাঁশি
+   b. মা
+   c. তেল
+   d. জলধি
+
+121. **বিপরীতার্থক শব্দের ক্ষেত্রে নিচের কোনটি ভুল?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. অমৃত-গরল
+   b. তস্কর-সাধু
+   c. কৃশ-মূল
+   d. আর্বাচীন-আধুনিক
+
+122. **“Every man is for himself” এর সঠিক বাংলা অনুবাদ কী?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. ইচ্ছা থাকলে উপায় হয়
+   b. চাচা আপন প্রাণ বাঁচা
+   c. প্রত্যেকে আমরা পরের তরে
+   d. সবার উপরে মানুষ সত্য
+
+123. **“যে পরিশ্রম করে, সে-ই সুখলাভ করে”। কোন ধরনের বাক্য?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+   a. মিশ্র বাক্য
+   b. সরল বাক্য
+   c. যৌগিক বাক্য
+   d. ব্যাস বাক্য
+
 ## বাগধারা ও প্রবাদ
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1133,6 +1241,12 @@
    c) একমাত্র সন্তান
    d) শিবরাত্রির গুরুত্ব
 
+8. **নিচের কোন বাগধারাটি ব্যতিক্রম?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. বিড়াল তপস্বী
+   b. বক ধার্মিক
+   c. ভিজে বিড়াল
+   d. ধর্মপুত্র যুধিষ্ঠির
+
 ## এক কথায় প্রকাশ
 
 1. **যা সহজে উত্তীর্ণ হওয়া যায় না-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1155,6 +1269,12 @@
 
 4. **এককথায় প্রকাশ করুন: যে ভবিষ্যৎ না ভেবে কাজ করে:** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
    **Ans:** অবিমৃষ্যকারী
+
+5. **এক কথায় প্রকাশ করুন: অক্ষির অভিমুখে—** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 121]**
+   a. প্রত্যক্ষ
+   b. পরোক্ষ
+   c. সমক্ষ
+   d. চাক্ষুস
 
 ## বাংলা ভাষা বিষয়ক তথ্য
 

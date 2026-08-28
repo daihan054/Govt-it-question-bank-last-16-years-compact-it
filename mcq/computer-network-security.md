@@ -128,6 +128,12 @@
    c. Mojnu's private key
    d. Laili's private key
 
+11. **“Concurrent two-factor identity verification” is a biometric identification system that would requires ________.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. finger print and national identity
+   b. facial identity and finger print
+   c. eye sightedness and blood sample
+   d. facial identity and facial motion
+
 ## Malware & Security Threats
 
 1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**

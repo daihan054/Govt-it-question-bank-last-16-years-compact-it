@@ -36,6 +36,12 @@
    (c) 1975
    (d) 1981
 
+7. **Which was the world's first electronic computer?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. ENIAC
+   b. EDVAC
+   c. UNIVAC
+   d. IBM
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -52,6 +58,12 @@
 
 3. **কি-বোর্ডের Del বাটন চাপলে কি হয়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** কার্সরের পরের শব্দ মুছে যায়।
+
+4. **In the keyboard of a computer processing F8 Key for three times selects?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. A paragraph
+   b. A sentence
+   c. Entire document
+   d. A word
 
 ## Hardware Components & Peripherals
 
