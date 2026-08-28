@@ -407,6 +407,12 @@
    (c) আয়নোস্ফিয়ার
    (d) ওজোনস্তর
 
+65. **What is the brightest planet seen from Earth?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) Venus
+   b) Mars
+   c) Mercury
+   d) Jupiter
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -844,6 +850,30 @@
    (b) পাকিস্তান ও চীন
    (c) ভূটান ও ভারত
    (d) বাংলাদেশ ও ভারত
+
+79. **The name of the parliament of USA is?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) Congress
+   b) House of Commons
+   c) White House
+   d) Capital
+
+80. **Which of the following organization is concerned for the climate change?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) OIC
+   b) MIGA
+   c) IPCC
+   d) WMO
+
+81. **The owner of the Greenland is?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) Denmark
+   b) Netherlands
+   c) Japan
+   d) Russia
+
+82. **Theme of AIDS day of 2021 is?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) "End Inequalities, End AIDS"
+   b) "Global solidarity, resilient HIV services."
+   c) Communities Make the Difference
+   d) My health, My Right
 
 ## Bangladesh Affairs
 
@@ -1566,6 +1596,18 @@
    (c) ইলিয়াস শাহ
    (d) আলাউদ্দিন হোসেন শাহ
 
+128. **Which sector has the largest contribution in GDP of Bangladesh** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   a) Garments
+   b) Man export
+   c) Agriculture
+   d) industry
+
+129. **Dhaka was the under the sector in liberation war.** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   a) 2
+   b) 4
+   c) 11
+   d) 8
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1700,6 +1742,24 @@
    b) প্রশান্ত মহাসাগর
    c) অ্যাটলান্টিক মহাসাগর
    d) আকটিক মহাসাগর
+
+23. **Niagara Falls is located in** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   a) South America
+   b) Africa
+   c) Australia
+   d) North America
+
+24. **The biggest desert of the world is** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) Great Victoria Desert
+   b) Sahara Desert
+   c) Kalahari Desert
+   d) Tabernas Desert
+
+25. **The city which is known as the city of Culture is** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) Rome
+   b) Paris
+   c) Athens
+   d) London
 
 ## Sports
 

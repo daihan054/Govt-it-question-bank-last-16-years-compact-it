@@ -76,6 +76,12 @@
    c) Samuel Johnson
    d) Milton
 
+14. **"Glimpes of world history " was written by** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   a) leo Tolstoy
+   b) Jawaharlal Nehru
+   c) A.P.J abdul kalam
+   d) Rabindranath Tagore
+
 ## English Grammar
 
 1. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**

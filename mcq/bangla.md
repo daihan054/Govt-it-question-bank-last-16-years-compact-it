@@ -467,6 +467,18 @@
    (c) ফুলমণি ও করুণার বিবরণ
    (d) মিশনারি জীবন
 
+83. **রবীন্দ্রনাথ ঠাকুর ও কাজী নজরুল ইসলামের বয়সের পার্থক্য কত?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   ক) ৩২ বছর
+   খ) ৩৮ বছর
+   গ) ৪২ বছর
+   ঘ) ৪৬ বছর
+
+84. **"সুশিক্ষিত লোক মাত্রই স্বশিক্ষিত" এই উক্তি কার?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   ক) রবীন্দ্রনাথ ঠাকুর
+   খ) কাজী আব্দুল ওদুদ
+   গ) লুৎফর রহমান
+   ঘ) প্রমথ চৌধুরী
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1061,6 +1073,24 @@
    b) দম্পতি
    c) জায়া-পতি
    d) স্বামী-স্ত্রী
+
+107. **প্রত্যেক ভাষারই তিনটি মৌলিক অংশ হলো?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   ক) ধ্বনি, শব্দ, বাক্য
+   খ) শব্দ, সন্ধি, সমাস
+   গ) ধ্বনি, শব্দ, বর্ণ
+   ঘ) অনুসর্গ, উপসর্গ, শব্দ
+
+108. **কোন বানানটি শুদ্ধ?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   ক) সমীচীন
+   খ) সমীচিন
+   গ) সমিচীন
+   ঘ) সমিচিন
+
+109. **“লা, খাস, আম " কোন ধরনের উপসর্গ?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   ক) আরবি
+   খ) ফারসি
+   গ) উর্দু
+   ঘ) ইংরেজি
 
 ## বাগধারা ও প্রবাদ
 
