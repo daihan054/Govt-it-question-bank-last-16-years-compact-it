@@ -433,3 +433,11 @@
 
 1. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** This is known as function reusability or recursion or Idempotence
+
+## Data Types & Variables
+
+1. **What is the minimum value that can be stored accurately in a 32-bit signed integer of C programming language?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 179]**
+   a) 0
+   b) -2^{31}
+   c) -2^{31}-1
+   d) -2^{32}

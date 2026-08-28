@@ -29,11 +29,17 @@
    ঘ) ৬
    **Ans: ক**
 
-6. **Which is the disadvantage of Optical Fiber?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+6. **Which is the disadvantage of Optical Fiber?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
    a) Resistance to corrosive materials
    b) Greater immunity to tapping
    c) Unidirectional light propagation
    d) None of these
+
+7. **Which one of the following have higher bandwidth?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) Shielded Twisted Pair
+   b) Unshielded Twisted Pair
+   c) Coaxial Cables
+   d) Fiber Optic Cables
 
 ## Application Layer Protocols
 
@@ -163,11 +169,27 @@
    c. Simple Mail Transfer Protocol
    d. Simple Mail Textual Protocol
 
-22. **Which protocol dynamically assigns IP addresses in a TCP/IP network?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]**
+22. **Which protocol dynamically assigns IP addresses in a TCP/IP network?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 175]**
    a. ARP
    b. RIP
    c. SMTP
    d. DHCP
+
+23. **Consider the activities A1, A2 and A3 related to email:** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
+   A1: Send an email from a mail client to a mail server
+   A2: download an email from mailbox server to a mail client
+   A3: Checking email in a web browser
+   Which is the application level protocols used in each activity?
+   a) A1: HTTP A2: SMTP A3: POP
+   b) A1: SMTP A2: FTP A3: HTTP
+   c) A1: SMTP A2: POP A3: HTTP
+   d) A1: POP A2: SMTP A3: IMAP
+
+24. **URL stands for-** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 176]**
+   a) Universal Resource Locator
+   b) Uniform Resource Locator
+   c) Unique Resource Locator
+   d) None
 
 ## IPv6 Addressing
 
@@ -295,6 +317,12 @@
    b. n-1
    c. n^2-3n+2
    d. n^2(n+1)/2
+
+12. **Handshaking procedure takes place in ________.** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 179]**
+   a) TCP
+   b) UDP
+   c) ARP
+   d) Both A and B
 
 ## Multiplexing & Data Rate
 
@@ -429,6 +457,12 @@
    b) Amplitude Modulation
    c) Phase Modulation
    d) Frequency Modulation
+
+17. **What is the current popular technology for Maintaining smooth Wi-Fi performance and throughput for gaming, video streaming, and smart home devices?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) Wi-Fi Star Network Systems
+   b) Wi-Fi Bus Network Systems
+   c) Wi-Fi Mesh Network Systems
+   d) Wi-Fi Ring Network Systems
 
 ## Subnetting & IP Addressing
 
@@ -565,6 +599,18 @@
    (c) IEEE 802.3
    (d) V.90bis
 
+5. **A sine wave is offset \frac{1}{6} cycle with respect to time 0. What is its phase in degrees and radians?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) 60^{\circ} and 1.046\text{ rad}
+   b) 30^{\circ} and 0.5236\text{ rad}
+   c) 90^{\circ} and 2.046\text{ rad}
+   d) 360^{\circ} and 6.2832\text{ rad}
+
+6. **Which one is the bandwidth for a signal transmitting at 12 Mbps for QPSK (d=0)?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) 2MHz
+   b) 4MHz
+   c) 6 MHz
+   d) None of the above
+
 ## Routing Protocols
 
 1. **Which of the following pairs is an example of intra-domain routing protocols?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
@@ -672,6 +718,35 @@
    b. RF45 connector only
    c. Switch and Hub
    d. Hub and Repeater
+
+12. **Using Loopbacks (plug) which task can be done from the given list?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 176]**
+   a) measuring voltage
+   b) Test serial and parallel port
+   c) Check series connectivity
+   d) Check resistivity
+   11. ```c
+   #include<stdio.h>
+   struct Testnode {
+   char x,yxz;
+   }
+   int main() {
+   struct Testnode node1 = {'1','2','c+3'};
+   struct Testnode node2 = &node1;
+   printf("%c,%c",*((char*)node2+1),*((char*)node2+2));
+   return 0;
+   }
+   ```
+   Which one is the output of the above program? **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 176]**
+   a) 0, f
+   b) 0, c+3
+   c) ‘0’, ‘c+6’
+   d) ‘0’, ‘f’
+
+13. **The BNC connector is a miniature quick connect/disconnect connector that is used for ________ cable.** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) Ribbon Electric
+   b) Shielded/Twisted Pair
+   c) Coaxial
+   d) Fibre Optics
 
 ## Error Detection & Correction
 

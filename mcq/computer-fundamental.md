@@ -252,6 +252,12 @@
    c. Yahoo
    d. Bing
 
+10. **Which one is the text based web browser?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) Chrome
+   b) Lynx
+   c) Safari
+   d) Microsoft Edge
+
 ## Acronyms & Abbreviations
 
 1. **CMP এর পূর্ণ অভিব্যক্তি হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**

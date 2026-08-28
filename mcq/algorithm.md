@@ -180,6 +180,12 @@
    c. Both P and Q
    d. Neither P nor Q
 
+9. **Which of the following techniques/algorithms cannot be used to detect cycles in an undirected and unweighted graph?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 179]**
+   a) Disjoint Set Data Structure
+   b) Breadth First Search
+   c) Depth First Search
+   d) Floyd-Warshall algorithm
+
 ## Dynamic Programming & Greedy
 
 1. **Which of the following is an example of dynamic programming approach?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**

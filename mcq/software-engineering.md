@@ -104,6 +104,12 @@
    c. {(False, True), (True, False)}
    d. {(False, False), (True, True)}
 
+11. **________ is the final stage of the testing process conducted before software release. This is referred as:** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 180]**
+   a) Alpha testing
+   b) Beta testing
+   c) Gamma testing
+   d) Delta testing
+
 ## SDLC Models
 
 1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**

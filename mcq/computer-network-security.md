@@ -134,6 +134,18 @@
    c. eye sightedness and blood sample
    d. facial identity and facial motion
 
+12. **Which of the following is the role of Certification Authority (CA) in electronic commerce using public key encryption?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
+   a) To manage a private key shared among the parties to the transaction.
+   b) To manage digital signatures of the parties to the transaction
+   c) To manage the passwords of the parties to the transaction
+   d) To issue a digital certificate for the public key of the parties to the transaction
+
+13. **What is/are the main operation of SSL/TLS?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 176]**
+   a) Encrypt packet in Data Link Layer
+   b) Check error in Network Layer
+   c) Ensure data security in Transport Layer
+   d) All of above
+
 ## Malware & Security Threats
 
 1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
@@ -167,3 +179,33 @@
    b. Masquerade attack
    c. Simple attack
    d. Complex attack
+
+2. **Which of the following is an attack that threatens the integrity of information?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 176]**
+   a) Falsification of web pages
+   b) Illegal copy of data stored in system
+   c) DoS attack that creates system overload
+   d) Wiretapping of communication contents
+
+3. **Which of the following is a package of unauthorized programs and tools that has functions to create a back door in a server and hide the trace of entry into the server?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 176]**
+   a) RFID
+   b) Rootkit
+   c) TKIP
+   d) web beacon
+
+4. **Which is not a type of DNS attack?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) Cache Poisoning Attack
+   b) Denial of Service Attack
+   c) DNS spoofing
+   d) CSRF attack
+
+5. **The Bangladesh Bank robbery, also known as the Bangladesh bank cyber heist, was a theft that took place in February 2016. The governor of the central bank engaged ________ to lead the security incident response, vulnerability assessment and remediation.** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) Fortinet Cyber Security
+   b) Zacco Cybersecurity Research Lab
+   c) Palo Alto Networks
+   d) World Informatix Cyber Security
+
+6. **________ is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted at its destination.** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) Cryptography Proper
+   b) Steganography
+   c) Overt Writing
+   d) Coding

@@ -132,6 +132,28 @@
    (c) Shortest Job First Scheduling
    (d) None of the above
 
+8. **A jet Aircraft employs a system for monitoring the rpm, pressure and temperature values of its engines using sensors that operate as follows:** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 179]**
+   RPM sensor (R) output = 0 only when \text{speed} < 4800\text{rpm}
+   Pressure sensor (P) output = 0 only when \text{pressure} < 220\text{ psi}
+   Temperature sensor (T) output = 0 only when \text{temperature} < 200^{\circ}\text{F}
+   Following figure shows the logic circuit that controls a cockpit warning light for certain combinations of engine conditions. Assume that a HIGH at the output W activates the warning light. What engine condition will give a warning to the pilot?
+   ```
+   Temp    T
+   sensor -----\
+   \  +---\
+   --|   \
+   Pressure       |    )--- W  *
+   sensor -- P     |   /       Warning
+   |  +- | --/        light
+   RPM    +-)| \
+   sensor ---+-)|  )o--
+   R   | /
+   ```
+   a) Temperature (T) is > 200^{\circ}\text{F} and pressure (P) > 220\text{ psi}
+   b) Temperature (T) is > 200^{\circ}\text{F} and speed (R) < 4800\text{ rpm}
+   c) Option (a) and (b)
+   d) d) None of the above
+
 ## File Systems & Disk Management
 
 1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**
@@ -203,3 +225,21 @@
    (b) chmod -R 222 progs
    (c) chmod -X a+x progs
    (d) chmod -X 222 progs
+
+5. **USER150, USER153 can do certain tasks and USER151, USER152 can also do certain tasks as depicted in the picture. For this reason, two ________ have been created.** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 179]**
+   ```
+   CREATE                    SELECT                   INSERT
+   TABLE                   ON Orders                 ON Orders
+   |                         |                         |
+   +------------+------------+------------+------------+
+   |                         |
+   Account MGR              Inventory MGR
+   |                         |
+   +---------+---------+     +---------+---------+
+   |                   |     |                   |
+   USER150             USER151 USER152             USER153
+   ```
+   a) Roles
+   b) Privileges
+   c) Functions
+   d) Stord Procedures

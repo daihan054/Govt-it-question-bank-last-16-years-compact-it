@@ -130,6 +130,20 @@
    c. Deque
    d. Binary Search Tree
 
+14. **Suppose you are implementing a Queue of size N using a non-circular linked list having a front and a rare pointer as shown in the figure. The enqueue operation inserts a new node at the front and the dequeue operation deletes a node from the rare. Which one of the following is the time complexity of the most efficient implementation of the enqueue and dequeue operations, respectively on this data structure?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 175]**
+   ```
+   +---+---+    +---+---+               +---+---+
+   -->|   | --+--->|   | --+----.........->|   | / |
+   +---+---+    +---+---+               +---+---+
+   ^                                    ^
+   |                                    |
+   head                                 tail
+   ```
+   a) \theta(1), \theta(1)
+   b) \theta(1), \theta(n)
+   c) \theta(n), \theta(1)
+   d) \theta(n), \theta(n)
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -194,6 +208,18 @@
    b. 3
    c. 4
    d. 1
+
+12. **The pre order traversal of binary tree is 40, 20, 10, 30, 60, 50, 70. Which one of the is the post-order traversal of the tree?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
+   a) 10,20,30,40,50,60,70
+   b) 10,30,20,50,70,60,40
+   c) 40,20,60,10,30,50,70
+   d) 70,50,60,30,10,20,40
+
+13. **Suppose we have a Binary Search Tree where each node has an integer value. Which of the following tree traversal techniques can give us a sorted list (in ascending order) of those integers?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 180]**
+   a) Pre-order traversal
+   b) In-order traversal
+   c) Post-order traversal
+   d) BFS traversal
 
 ## Hashing & Hash Tables
 

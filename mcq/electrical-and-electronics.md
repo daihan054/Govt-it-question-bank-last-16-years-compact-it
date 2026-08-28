@@ -489,6 +489,18 @@
    (গ) ৪০০ ওহম
    (ঘ) ৫০ ওহম
 
+84. **With zero volts on both inputs, what is the ideal output of an Operational Amplifier?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
+   a) Equal to Zero
+   b) Same as positive input voltage
+   c) None of the above
+   d) Same as negative input voltage
+
+85. **Which device converts mechanical energy into electrical energy?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 175]**
+   a) Solar cell
+   b) Motor
+   c) Generator
+   c) Chemical cell
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**

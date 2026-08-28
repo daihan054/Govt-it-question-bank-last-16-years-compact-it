@@ -42,6 +42,18 @@
    গ. OR
    ঘ. NOR
 
+8. **A technician testing a logic circuit sees that the output of a particular INVERTER is stuck LOW while its input is pulsing. Which one of the following is the possible reason for this faulty operation?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
+   a) The output of the INVERTER is internally grounded
+   b) The output of the INERTER is externally grounded
+   c) The input being driven by output of the INVERTER is internally grounded
+   d) All of the above
+
+9. **\overline{A}\overline{B}\overline{C}(\overline{A} + \overline{B} + \overline{C}) Which is the simplified form of this?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) \bar{A} + \bar{B} + \bar{C}
+   b) \bar{A}\bar{B}\bar{C}
+   c) \overline{ABC}
+   d) \overline{A B C}
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -55,6 +67,12 @@
    (b) Counter
    (c) Multiplexer
    (d) Encoder
+
+3. **How much data a flip flop can store?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) 4-bit data
+   b) 1-bit data
+   c) 3-bit data
+   d) 3-bit data
 
 ## Combinational Circuits (MUX, Decoder)
 

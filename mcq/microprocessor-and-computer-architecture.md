@@ -78,6 +78,24 @@
    C. Volatility
    D. Too Bulky
 
+14. **Which of the following memory devices is not reprogrammable?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
+   a) Flash memory
+   b) ROM
+   c) EPROM
+   d) EEPROM
+
+15. **There is a RAM issue on a PC/laptop. Which of the following symptom(s) might be an indication of RAM issue?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) PC frequently freezes, reboots
+   b) Wrong BIOS time
+   c) Function keys are not working properly
+   d) All of them
+
+16. **A solid-state drive (SSD) is a newer, faster type of device that stores data on instantly-accessible ________.** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) Ultra Magnetic Chip
+   b) Integrated Circuit
+   c) Random Access Memory
+   d) High Bandwidth memory
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

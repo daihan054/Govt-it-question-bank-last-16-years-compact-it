@@ -436,6 +436,12 @@
    c) Unique
    d) composite
 
+6. **Related records of the different relations can be stored on the same block using which file organization technique?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) Heap file organization
+   b) Sequential file organization
+   c) Hashing file organization
+   d) Clustering file organization
+
 ## SQL Joins
 
 1. **What type of join in needed when you wish to include rows that do not have matching values?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**

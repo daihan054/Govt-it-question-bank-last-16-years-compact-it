@@ -15,6 +15,12 @@
    (c) 4
    (d) Error
 
+3. **Which of the following languages causes ‘Indentation Errors’ for not using tabs properly?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 180]**
+   a) JavaScript
+   b) Python
+   c) Java
+   d) Ruby
+
 ## Mobile & Android Development
 
 1. **What is the API level of Android version 11?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
