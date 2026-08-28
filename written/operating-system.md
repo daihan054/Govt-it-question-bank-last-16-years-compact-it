@@ -123,6 +123,8 @@ int main(int argc, char *argv[]){
 
 20. **Linux Command: Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
+21. **(b) Write Linux commands to: (i) Make a directory named PSC (ii) Copy a directory with all its Contents into a directory name/home/admin.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**

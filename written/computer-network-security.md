@@ -40,6 +40,8 @@
 
 20. **(ii) Symmetric Key Encryption and Asymmetric Key Encryption ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 790]**
 
+21. **(a) What is meant by Encryption and Decryption?** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 796]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -175,6 +177,8 @@
 
 3. **What is VPN? How it is working.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 732]**
 
+4. **(a) How can VPN provide secure communication platform? Explain site-to-site VPN and remote-access VPN using necessary figures.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 800]**
+
 ## Authentication & Access Control
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -202,6 +206,10 @@
 12. **What is Digital signature? Explain shortly.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
 
 13. **(খ) Authentication বলতে কি বুঝায়? Two Factor Authenticating কি? উদাহরণসহ ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
+
+14. **(a) What is 2-factor authentication? Describe it with example.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
+
+15. **(b) Write down the purpose of Certification Authority (CA) in Digital Signature.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
 
 ## Security Protocols (SSL/TLS, HTTPS)
 

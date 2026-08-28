@@ -110,6 +110,8 @@
 
 6. **(খ) Software Requirement Specification (SRS) বলতে কি বুঝায়? Software Development এর কোন ধাপে SRS তৈরি করা হয়?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
 
+7. **Assume that you are going to implement an ecommerce site of “XYZ” company. The CEO of the company is Mr. X. You have to identify the following: (i) Stakeholder (ii) Functional requirements (iii) Non-functional requirements (iv) Deployment requirements** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
+
 ## SDLC Phases & Models
 
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
@@ -181,6 +183,8 @@
 34. **(খ) SDLC diagram সহ বর্ণনা করুন। SDLC এর মেজর phases গুলি কী?** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 779]**
 
 35. **(ii) Software development এর Agile Method সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
+
+36. **(a) What is Agile? Mentionits four values.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
 ## Software Architecture & Design Patterns (MVC)
 

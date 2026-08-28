@@ -531,6 +531,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 5. **What is DHCP Server and why it is needed in a computer network.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
 
+6. **(b) Explain the message flow between a DHCP server and client. Show necessary timing diagram.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
+
 ## IPv6 Addressing
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
@@ -651,6 +653,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 787]**
 
+8. **(b) What is NAT? Mention its advantages.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
+
+9. **(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
+
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 
 1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
@@ -678,6 +684,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 12. **Write a command how to find DNS www.egcb.gov.bd and which protocol uses?** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
 
 13. **For the following description of various IP networking protocols write down the protocol name and its full form in the following table:** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+
+14. **(a) How does a browser retrieve IP address from URL?** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
+
+15. **(d) What is DNS? “TCP/IP is used in DNS”- justify the statement.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
 
 ## Email Architecture & Protocols (SMTP, POP3, IMAP)
 
@@ -750,6 +760,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## WAN Technologies (SONET/SDH, ATM, WDM)
 
 1. **White short notes on: (i) SONET/SDH; (ii) IP telephony; (iii) WDM technology; (iv) ATM network** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+2. **(c) Explain IPTV and VOIP.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
 
 ## Satellite Communication
 

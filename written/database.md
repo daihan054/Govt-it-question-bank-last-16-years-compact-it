@@ -381,6 +381,8 @@ ORDER BY average_salary DESC;
 
 3. **(c) Define dynamic SQL and trigger with examples.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
 
+4. **(b) Describe the application of trigger in database.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
+
 ## Database Backup & Disaster Recovery
 
 1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
@@ -438,6 +440,8 @@ ORDER BY average_salary DESC;
 5. **Weak Entity and strong entity difference with relation.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
 
 6. **(b) Give example of week and strong entity sets.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
+
+7. **(a) What is referential integrity? How do you impose in your database design?** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
 
 ## Keys in DBMS
 
@@ -507,6 +511,8 @@ ORDER BY average_salary DESC;
 ## Database Design & Data Types
 
 1. An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
+
+2. **(c) Describe the difference between CHAR and VARCHAR data type.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
 
 ## SQL Joins & Operations
 

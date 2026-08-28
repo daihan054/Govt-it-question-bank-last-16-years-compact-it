@@ -12,6 +12,8 @@
 
 6. **(গ) URL কী? একটি URL ক্লিক করার পর Web Page Show করার পূর্ব পর্যন্ত যে কয়টি Step হয় সেগুলির নাম লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
 
+7. **(b) Distinguish between http and https.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
+
 ## JavaScript & jQuery (DOM & Validation)
 
 1. **Jquery for email validation** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
@@ -99,6 +101,8 @@
 2. **(খ) Client-side scripting এর তুলনায় Server-side scripting এর সুবিধাগুলো কী কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 709]**
 
 3. **(খ) PHP কি? Web Development এ Java Script এর প্রয়োজনীয়তা সম্পর্কে বিবরণ দিন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 771]**
+
+4. **(b) What are the resources you need to access a web enabled application?** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
 ## Web Security & Browser Same-Origin Policy (Iframe)
 

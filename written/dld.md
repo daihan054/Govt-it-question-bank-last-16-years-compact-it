@@ -53,6 +53,8 @@
 
 9. **Simplify using K-map with logic circuit.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
 
+10. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 798]**
+
 ## Logic Families (TTL vs CMOS)
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
@@ -73,6 +75,8 @@
 4. **X+\bar{X}Y = ?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
 5. **(ক) নিম্নলিখিত Boolean Function টি সংক্ষিপ্ত আকারে লিখুন: F(A, B, C, D) = \bar{A}\,\bar{B}\bar{C} + \bar{B}C\bar{D} + \bar{A}\bar{B}C\bar{D} + A\bar{B}\bar{C}** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 773]**
+
+6. **(b) Use Algebraic manipulation to convert the following equation to sum-of-product form: y(z + \bar{w}) + x(\bar{z} + \bar{y})\,\bar{w} + (zw)(\overline{xy})** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
 
 ## Logic Gates & Universal Gates
 
@@ -157,6 +161,8 @@
 13. **How do you design a logic circuit that has three inputs A, B, C and whose output will be high only when majority of the inputs are high. (a) Find truth table and (b) Show SOP and POS equation.** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 715]**
 
 14. **Design a 8\times 1 MUX and explain working procedure.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 720]**
+
+15. **(a) Draw the logic diagram of Half-Adder the truth table of Full-Adder and use half Adder (S) and basic gates to build a Full-Adder.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
 
 ## Sequential Circuits (Latches & Flip-Flops)
 
