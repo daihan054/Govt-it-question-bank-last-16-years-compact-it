@@ -10,6 +10,8 @@
 
 2. **Write Javascript code to check NID validity?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1359]**
 
+3. **Which tag is used to write JavaScript in html?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
 ## Web Services & APIs (SOAP vs REST)
 
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1426]**
@@ -32,6 +34,10 @@
 |---|---|---|
 | Hasan | Bangla | English | ICT | Math |
 | Nafis | Bangla | English | ICT | Biology |
+
+4. **What is the popular way of linking many documents?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+5. **Which tag is used for creating button in html?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
 ## CSS & Styling (Inline, Internal, External)
 

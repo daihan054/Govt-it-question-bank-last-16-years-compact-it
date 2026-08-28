@@ -14,6 +14,8 @@
 
 7. **Write down the difference between Stack and Queue.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
+8. **Prefix Conversion A+ B * C+D expression?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
@@ -57,6 +59,8 @@
 12. **Explain with example Post order traversal.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
 13. **(b) Draw a binary tree of 15 elements in (a) Preorder (b) In-order (c) Post order traversals.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
+
+14. **What is the minimum number of nodes in a binary tree?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]**
 
 ## Binary Search Tree (BST)
 

@@ -86,6 +86,8 @@
 
 4. **What is Blockchain? How does work it? Mention 5 top benefits of blockchain. Write down the difference between Traditional banking and Digital banking.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 513]**
 
+5. **A distributive ledger in a peer-to-peer network is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]**
+
 ## Server Hardware & Enterprise Systems
 
 1. **What should be checked before buying servers?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 318]**

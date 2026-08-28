@@ -97,6 +97,10 @@
 | Routing Information Protocol (RIP) |  |
 | User datagram protocol (UDP) |  |
 
+21. **Which layer is used to link the network support layers and user support layers?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+22. **What is the number for the Network layer and the support layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -166,6 +170,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 3. **(খ) Congestion কী? Network-এ কীভাবে Congestion নিয়ন্ত্রণ করা যায়? আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
+4. **Unit of data link layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
 ## Pulse Code Modulation (PCM) & Signal Processing
 
 1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
@@ -195,6 +201,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 9. **A telephone line normally has a bandwidth of 3000 Hz (300 to 3300 Hz) assigned for data communication. The SNR is usually 3162. What will be the capacity for this channel?** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
 
+10. **Which technique is used for binary division check in network?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
@@ -202,6 +210,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **Differentiate among TDM, FDM and WDM. How does working process in TDM?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 511]**
 
 3. **Describe the different types of Multiplexing.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
+
+4. **What technique allows simultaneous transmission of multiple signals across a single data link?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 ## Subnetting & IP Addressing
 
@@ -442,6 +452,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 4. **Explain NAT? Differenc between IPv4 and IPv6.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
 
+5. **Explain NAT? Differenc between IPv4 and IPv6.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
+
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 
 1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
@@ -467,6 +479,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    * (b) Write down the steps of Mail transfer from Afsana to Sinthia.
 
 2. **Difference between: (i) SMTP and SNMP (ii) HTTP and HTTPs** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
+
+3. **Which protocol is used for email received?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 

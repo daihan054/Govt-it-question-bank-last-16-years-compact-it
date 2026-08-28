@@ -11,6 +11,8 @@
 
 5. **What is Database?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
+6. **What is data about data?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -281,6 +283,10 @@ ORDER BY average_salary DESC;
 
 7. **What is database Normalization? Write down the types of database Normalization.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 504]**
 
+8. **Which normalization is related to functional dependency?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+9. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
@@ -337,6 +343,8 @@ ORDER BY average_salary DESC;
 
 2. **Discuss about different types of relations in DBMS.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 297]**
 
+3. **What is the degree of relation in dbms?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
 ## Keys in DBMS
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -377,6 +385,8 @@ ORDER BY average_salary DESC;
 1. **What are the different types of join in SQL?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 580]**
 
 2. **Left joning and inner joining of a table.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
+
+3. **Which join is used for including not matching all records with output?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 ## Data Warehousing, Data Mining & Business Intelligence
 

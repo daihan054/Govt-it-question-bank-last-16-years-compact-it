@@ -132,6 +132,8 @@
 
 5. **What Is RTGS related to?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
+6. **What is the full form BDCCL?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
 ## International Affairs
 
 1. What is the name of the central bank of the United Kingdom? [SO IT 25-07-2026]
@@ -214,6 +216,10 @@
 
 40. **Which city of China, the Asian Olympic be held in 2023?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
+41. **বিজ্ঞানে নোবেল বিজয়ী ২০২৩ পেয়েছে কোন বিষয়ের উপরে?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+42. **Who is the inventor of IR 4.00?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
 ## Everyday Science & Environment
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
@@ -241,3 +247,5 @@
 12. **Write down the longest and shortest day in the planet.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
 13. **Mention the name of the largest, biggest and heaviest planet.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
+14. **What is the name of a technique that will be used to make multiple copies of target DNA in vitro?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 549]**

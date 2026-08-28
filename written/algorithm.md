@@ -61,6 +61,10 @@ for i in N:
 
 13. **Sort the following data using merge sort. Also mention best and worst case of the algorithm.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
 
+14. **Which short uses divide and conquer technique?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+15. **Fastest sorting algorithms?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**

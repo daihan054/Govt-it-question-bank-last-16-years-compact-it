@@ -131,6 +131,12 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 1. **What is the Opposite word of Transparent?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
 
+2. **Antonym of “fantasy”:** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+## Idioms & Phrases
+
+1. **What is the meaning of “see eye to eye”?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
 ## Translation
 
 1. "কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।" — Translate the passage into English. [SO IT 25-07-2026]

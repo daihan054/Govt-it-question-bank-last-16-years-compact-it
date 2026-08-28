@@ -46,13 +46,19 @@
 
 2. **What is exfiltration?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
 
+3. **Software downloaded from internet and installed that is not malicious is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
 ## Email & Messaging Security (Spam, Phishing)
 
 1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
+2. **If you downloaded the email, you will be able to face the problem. Which attack do you face?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
+
 ## Cyber Crime & Security
 
 1. **সাইবার অপরাধের প্রকারভেদ পরিবেশের স্থায়িত্ব বর্ণনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+2. **Hacking a system without cracking the system, only for finding bugs and vulgarities is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
 
 ## Social Engineering & Cyber Attacks
 
@@ -99,9 +105,13 @@
 
 8. **What is firewall and why it is used?** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 475]**
 
+9. **What is the function of a firewall?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
+
 ## VPN & Tunneling Protocols (IPsec, SSL VPN)
 
 1. **What is the purpose of VPN used in computer security?** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
+
+2. **In which layer IPsec works?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
 ## Authentication & Access Control
 

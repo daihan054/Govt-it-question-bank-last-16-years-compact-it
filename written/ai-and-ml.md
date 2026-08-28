@@ -46,6 +46,8 @@
 
 1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
 
+2. **What does the axon of neural network do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
+
 ## Association Rule Learning (Market Basket Analysis)
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**
@@ -73,6 +75,12 @@
 2. **An artificial intelligence is an agent is an entity that continuously revious its enviornment.....** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 449]**
 
 3. **Write PEAS for (a) Auto taxi (b) Automatic clinical test.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 457]**
+
+4. **Intelligence can not be measured only by intelligence test because it is related to other subjects. (True or False)** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
+
+5. **Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
+
+6. **Machine learning is a subset of cloud computing that can be built AI-Based. True or False.** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical)
 

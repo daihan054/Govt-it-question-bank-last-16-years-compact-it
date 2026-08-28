@@ -164,3 +164,9 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 17. **অর্থসহ একটি করে বাক্য রচনা করুন: আট কপালে, কড়ায় গণ্ডায়।** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
 18. **বিপরীত শব্দ লিখুন: উজান, আবাহন, প্রতিকূল।** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+
+19. **বিপরীত শব্দ: গৃহী?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+20. **“রক্তে আঁকা ভোর” কার লেখা?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+21. **“শনিবার থেকে পরীক্ষা শুরু” বাক্যে “শনিবার থেকে” কোন কারক?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**

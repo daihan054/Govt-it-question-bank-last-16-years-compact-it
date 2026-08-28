@@ -258,6 +258,12 @@ return 0;
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**
 
+2. **What is the difference between Null and Void?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
+
+3. **What can be used to terminate for(;;)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+4. **What will occur when an array is declared without size?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
 ## Output Tracing & Control Flow
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
@@ -394,3 +400,5 @@ int main() {
 10. **(a) Mention two basic differences between ‘Call by Value’ and ‘Call by Reference’. Write a simple program in C to swap two integer values using ‘Call by value’.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 487]**
 
 11. **(b) Write a program in C using recursion to find the factorial of an integer.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
+
+12. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**

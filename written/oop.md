@@ -58,15 +58,25 @@ class Test {
 
 17. **What is virtual function with example?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 560]**
 
+18. **How many classes can be used in Hybrid Inheritance?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**
+
+2. **What are the built in classes?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
 
 ## Encapsulation & Access Modifiers
 
 1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1456]**
 
 2. **Explain the various types of access specifiers.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 579]**
+
+3. **Which type of variable violates encapsulation rules?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]**
+
+4. **Which members of base class cannot access to derived class?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+5. **Which type of variable violates encapsulation rules?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 ## Constructors & Destructors
 
@@ -96,3 +106,7 @@ public:
 1. **Write a Java Code which return a value.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1334]**
 
 2. **Write a Java Code....** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1334]**
+
+3. **What does run Finalization do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+4. **What syntax is used for calling static methods in class?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**

@@ -152,3 +152,5 @@
 ## Open Source Software & Licensing
 
 1. **Write down the advantages and disadvantages of Open source software with example.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
+
+2. **Write down the advantages and disadvantages of Open source software with example.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**

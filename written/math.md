@@ -94,6 +94,10 @@
 
 2. **দুইটি সংখ্যার গ.সা.গু. ১১ এবং ল.সা.গু. ৭৭০০। একটি সংখ্যা ২৭৫ হলে অপর সংখ্যাটি কত?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
+3. **What is the largest two-digit natural number (a part of the number system, which includes all positive integers from 1 to infinity)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+4. **If the average of seven consecutive even numbers is 62, then the one-fourth of twice of total of first and sixth number is?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
 ## Discrete Mathematics & Recurrence Relations
 
 1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 592]**
