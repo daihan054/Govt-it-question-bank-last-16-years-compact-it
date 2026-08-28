@@ -109,6 +109,8 @@ for i in N:
 
 24. **Insertion sort is a simple sorting algorithm. Write a program to sort some given numbers using insertion sort algorithm.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 989-990]**
 
+25. **Bubble Sort কীভাবে কাজ করে উদাহরণসহ বুঝিয়ে লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1021]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**

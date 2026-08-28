@@ -39,6 +39,10 @@
 
 19. **DBMS বলতে কী বোঝানো হয়? DBMS শ্রেণিভিন্যাস বর্ণনা করুন।** **(40th BCS Written Exam: 2020 (BPSC)) [compact it 971-972]**
 
+20. **Define View, Materialized View. Difference between View and Materialized View and Usage of two.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1012-1013]**
+
+21. **What are the roles of Database Engineer?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -72,6 +76,8 @@
 12. **ডাটাবেইজ ম্যানেজমেন্ট সিস্টেমের মধ্যে CRUD এর কাজ কি?** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
 
 13. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 988-989]**
+
+14. **How to find duplicate data in database? Explain DDL and DML.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1017-1018]**
 
 ## SQL Queries
 
@@ -379,6 +385,14 @@ SELECT count (*) FROM (
 
 68. **What is the full meaning of SQL? List of the aggregate function. Write SQL Query of a table and its output.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1002-1003]**
 
+69. **Query to find out even number from given table.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014]**
+
+70. **How to copy from Parent table to Child Table with 1 column dividing into 3 different columns?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014-1015]**
+
+71. **Design and Queries from HR schema. (i) Display details of jobs where the minimum salary is greater than 10000. (ii) Display the first name and join date of the employees who joined between 2002 and 2005. (iii) Display first name and join date of the employees who is either IT Programmer or Sales Man. (iv) Display first name, salary, commission pct, and hire date for employees with salary less than 10000. (v) Display job Title, the difference between minimum and maximum salaries for jobs with max salary in the range 10000 to 20000. (vi) Display first name, salary, and round the salary to thousands. (vii) Display employees where the first name or last name starts with S. (viii) Display details of the employees where commission percentage is null and salary in the range 5000 to 10000 and department is 30. (ix) Display first name and date of first salary of the employees. (x) Display first name and last name after converting the first letter of each name to upper case and the rest to lower case.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1016-1017]**
+
+72. **Query for retrieving UNCOMMON Name from Name column of two given tables.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1017]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -402,6 +416,8 @@ SELECT count (*) FROM (
 10. **Describe ACID properties of DBMS.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 860]**
 
 11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 984-985]**
+
+12. **Describe Database ACID properties.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1012]**
 
 ## Normalization & Database Design
 
@@ -488,6 +504,8 @@ SELECT count (*) FROM (
 
 7. **MySQL database এর ক্ষেত্রে Backup and Restore করার কমান্ড লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]**
 
+8. **Describe what are the ways for no data loss?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1015-1016]**
+
 ## Indexing & Query Optimization (B-Tree, B+ Tree)
 
 1. **How indexing improve query performance?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
@@ -520,6 +538,8 @@ SELECT count (*) FROM (
 
 5. **Construct a B+ tree index structure on emp_id for the given relation employee as shown below with n=4.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 824]**
 
+6. **What is Indexing? Write down the usages of Indexing.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1015]**
+
 ## Relational Data Model & ER Relationships
 
 1. What are the different types of relationships in a relational database? Explain each with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -541,6 +561,8 @@ SELECT count (*) FROM (
 9. **(c) What is a weak entity set? How the primary key is generated for weak entity set?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
 
 10. **(a) Write down Integrity rules in database.** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
+
+11. **What is constraints? Why use constraint? Difference between table level Cosntraint and column level Cosntraint.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1015]**
 
 ## Keys in DBMS
 
@@ -581,6 +603,8 @@ SELECT count (*) FROM (
 18. **(b) Explain the different type of database keys with examples.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
 
 19. **What is the Primary key, Candidate key and Super key?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 921]**
+
+20. **Difference between Primary key and Unique Key, Drop and Purge, Delete and Truncate.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1013-1014]**
 
 ## Indexing in DBMS
 
@@ -635,6 +659,8 @@ SELECT count (*) FROM (
 19. **Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Coach (Coach-id, Coach-name) Player (player-id, palyer-name, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result).** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 939]**
 
 20. **Draw ER diagram (Self test)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1009]**
+
+21. **E-R Diagram কী? উদাহরণসহ লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019-1020]**
 
 ## Database Connectivity (JDBC)
 

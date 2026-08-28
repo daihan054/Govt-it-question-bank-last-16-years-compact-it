@@ -54,6 +54,8 @@
 
 23. **১২. 8086 মাইক্রোপ্রসেসর এর Flag Register কত বিটের?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
 
+24. **What is Register? Write down the name of 5 CPU Register.** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1018]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -128,6 +130,8 @@
 
 11. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951-952]**
 
+12. **Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+
 ## Memory Hierarchy & Storage
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -185,6 +189,8 @@
 9. **Consider a disk pack with the following specifications- 16 surfaces, 128 tracks per surface, 256 sectors per track and 512 bytes per sector. Answer the following questions: (a) What is the capacity of disk pack? (b) If the format overhead is 32 bytes per sector, what is the formatted disk space? (c) If the disk is rotating at 3600 rpm, what is the data transfer rate?** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 924-925]**
 
 10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951]**
+
+11. **Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
 
 ## RAID Architecture & Storage
 

@@ -50,6 +50,8 @@
 
 25. **The Caesar Cipher is a type of shift cipher. Shift Ciphers work by using the modulo operator to encrypt and decrypt messages. The Shift Cipher has a key K, which is an integer from 0 to 25. How to Encrypt, How to decrypt.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1009-1010]**
 
+26. **Public key cryptography কীভাবে কাজ করে?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1020]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

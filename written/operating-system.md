@@ -460,6 +460,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 19. **A, B two resources. Two processes (P1 and P2) share these resources. When a process request for a resources, if that resource is free then it will be allocated with that resources. If the resources are not free then the process will halt. Now the scenario is:** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 973]**
 
+20. **What is Operating Systems Deadlock? কীভাবে Deadlock দূর করা যায়?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+
 ## File Systems & Disk Management
 
 1. **NTFS stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**

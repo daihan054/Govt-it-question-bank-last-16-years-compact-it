@@ -80,6 +80,8 @@
 
 35. **Testing is an activity that is performed to verify correct behavior of a program. Testing should be conducted in all the stages of program development. Describe different types of tests conducted in the implementation stage.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 980]**
 
+36. **What are the Difference between White Box and Black Box testing?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
@@ -229,6 +231,8 @@
 9. **(ii) Design the communication for the user login system for an MVC pattern framework.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
 
 10. **(i) MVC framework কী? এর সুবিধাগুলো লিখুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 960]**
+
+11. **MVC framework কী? MVC Framework এর সুবিধাসমূহ লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1021]**
 
 ## CI/CD & DevOps Methodologies
 

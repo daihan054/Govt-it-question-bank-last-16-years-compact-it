@@ -68,6 +68,8 @@
 
 12. **(ii) Propositional logic ও Predicate Logic উদাহরণসহ বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 952-953]**
 
+13. **Propositional Logic and Predicate Logic উদাহরণসহ বুঝিয়ে লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1020]**
+
 ## Percentage, Profit & Loss, Simple & Compound Interest
 
 1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**

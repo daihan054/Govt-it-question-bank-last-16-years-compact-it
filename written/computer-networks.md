@@ -33,6 +33,8 @@
 
 15. **(i) Computer network কী? বিভিন্ন প্রকার Computer network সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 955-956]**
 
+16. **What is difference between MAC Address and IP Address?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1018-1019]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -199,6 +201,8 @@
 38. **বর্তমানে Hybrid network model জনপ্রিয় একটি মডেল। এই মডেলের পাঁচটি Layer হচ্ছে, Application, Transport, Physical, Data link and Network Layer। এদের কাজ দেওয়া আছে বামপাশের কলামে, ডানপাশের কলামে কাজ অনুসারে Layer গুলোর নাম লিখুন।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975-976]**
 
 39. **Write down the functionality of OSI model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1007-1008]**
+
+40. **OSI Model এর Layer গুলো বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -625,6 +629,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 90. **(a) A IP address is 172.20.0.0/27. How many subnets and hosts per subnet?** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977]**
 
 91. **Given IP address 172.16.128.120/25 what is the subnet mask, network address, broadcast address and total usable host in this network?** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 991]**
+
+92. **Given IP address is 172.168.10.0/24, administrator wants to create 32 subnets, then find out sub netmask, number of address of each subnet, first and last address of subnet 1, first and last address of subnet 32.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1012]**
 
 ## Network Layer (Packet Fragmentation & Tunneling)
 
