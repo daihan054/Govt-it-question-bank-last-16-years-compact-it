@@ -41,3 +41,11 @@
    (b) Running
    (c) Waiting (Blocked)
    (d) Terminated
+
+## File Systems & Disk Management
+
+1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**
+   (a) C
+   (b) D
+   (c) E
+   (d) F

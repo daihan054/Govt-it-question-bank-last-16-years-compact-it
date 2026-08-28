@@ -17,3 +17,25 @@
    (b) instruction opcode
    (c) instruction register
    (d) instruction cachenss
+
+4. **Which among the following is the fastest memory in a computer that holds information?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
+   (a) Register
+   (b) Cache
+   (c) Main memory
+   (d) RAM
+
+## CPU & Registers
+
+1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
+   (a) ALU
+   (b) PC (Program counter)
+   (c) Accumulator
+   (d) IR (Instruction Register)
+
+## Secondary Storage (HDD & Disk Organization)
+
+1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
+   (a) Vectors
+   (b) Clusters
+   (c) Sectors
+   (d) None of the above

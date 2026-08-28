@@ -31,3 +31,11 @@
    B) File open
    C) Help
    D) Save
+
+## Hardware Components & Peripherals
+
+1. **The Expansion cards are inserted into ______ in a computer.** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
+   (a) Slots of CPU
+   (b) Hard Disk of CPU
+   (c) Peripheral Devices
+   (d) None of above
