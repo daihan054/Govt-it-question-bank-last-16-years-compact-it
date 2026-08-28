@@ -108,6 +108,24 @@
    c) Fork ()
    d) None of them
 
+5. **A job which is schedule to run periodically at fixed times or intervals is known as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 99]**
+   (a) Batch Job
+   (b) Cron job
+   (c) Shell Script
+   (d) None of the above
+
+6. **Which one of the following statements is true with respect to Printer Daemon process?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 103]**
+   (a) The printer daemon of Operating System runs in kernel mode.
+   (b) Jobs in the printer daemon queue cannot be removed once inserted.
+   (c) Printer daemon application runs only when it is printing.
+   (d) Printer daemon runs as a service in Operating System
+
+7. **Which of the following Process scheduling algorithm is highly improbable to be implemented?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+   (a) FCFS Scheduling
+   (b) Priority Scheduling
+   (c) Shortest Job First Scheduling
+   (d) None of the above
+
 ## File Systems & Disk Management
 
 1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**
@@ -135,3 +153,29 @@
    (খ) MS windows XP
    (গ) Windows CE
    (ঘ) Windows NET
+
+## Linux Commands & Administration
+
+1. **User passwords in Linux are stored as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
+   (a) Direct text data
+   (b) Encrypted using some sort of hashing function
+   (c) Encrypted using mono-alphabetic cipher
+   (d) Encrypted using homophonic substitution cipher
+
+2. **Which of the following Linux command has incorrect syntax?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
+   (a) cat sample.txt | grep -v a | sort - r
+   (b) chown:group3 File 1
+   (c) chmoda+rx viewer.sh
+   (d) None of the above
+
+3. **What is the maximum size of a file allowed in Linux with the following data Block Size = 4KB, inode data pointer size = 4 byte?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
+   (a) 1 TB
+   (b) Less than 4TB
+   (c) 2TB+2GB+2MB+64KB
+   (d) More than 4 TB
+
+4. **Which UNIX/Linux command is used to make all files and sub-directories in the directory "progs" executable by all users?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+   (a) chmod -R a+x progs
+   (b) chmod -R 222 progs
+   (c) chmod -X a+x progs
+   (d) chmod -X 222 progs

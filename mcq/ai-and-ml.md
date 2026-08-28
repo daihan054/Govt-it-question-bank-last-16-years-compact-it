@@ -53,3 +53,9 @@
    (খ) Putting your intelligence into computer
    (গ) Programming with you own intelligence
    (ঘ) Putting more memory into computer
+
+11. **Which of the following neural networks uses supervised learning?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
+   (a) Multilayer perceptron
+   (b) Self organizing feature map
+   (c) Hopfield network
+   (d) a and c

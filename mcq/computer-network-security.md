@@ -104,6 +104,24 @@
    c) Public key
    d) Modulation key
 
+7. **Which of the following statements is false with respect to SSL?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
+   (a) Secure Sockets Layer (SSL) is a security protocol that provides privacy, authentication, and integrity to Internet communications
+   (b) SSL evolved into Transport Layer Security (TLS)
+   (c) SSL's final version was SSL 4.0
+   (d) None of the above statements is false
+
+8. **In the ____ protocol, the symmetric key is K= G^{xy} \pmod N, where G and N are public numbers.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 103]**
+   (a) Needham-Schroeder
+   (b) Otway-Rees
+   (c) Diffie-Hellman
+   (d) Kerberos
+
+9. **Which one of the following is false with respect to cryptography?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+   (a) A symmetric key system uses only the private key
+   (b) An asymmetric key system makes use of the both the public key and the private key
+   (c) An Asymmetric key system is used as a Public Key Infrastructure, or PKI for sho
+   (d) None of the above statements is false
+
 ## Malware & Security Threats
 
 1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**

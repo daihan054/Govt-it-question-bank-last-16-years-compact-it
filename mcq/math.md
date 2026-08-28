@@ -96,6 +96,12 @@
    c) 2 mm and 2 mm
    d) 2 mm and 4 mm
 
+18. **The hypotenuse of a right triangle is 2 centimeters more than the longer side of the triangle. The shorter side of the triangle is 7 centimeters less than the longer side. Find the length of the hypotenuse.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) 13
+   (b) 15
+   (c) 17
+   (d) 19
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -268,6 +274,42 @@
    c) cd
    d) Cd+f
 
+24. **At any iteration of simplex method, if \Delta_j\ (Z_j - C_j) corresponding to any non-basic variable X_j is obtained as zero, the solution under the test is-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
+   (a) Degenerate solution
+   (b) Unbounded solution
+   (c) Alternative solution
+   (d) Optimal solution
+
+25. **The product of two positive numbers is p. If each of the numbers is increased by 2, the new product is how much greater than twice the sum of the two original numbers?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+   (a) p times
+   (b) 2p times
+   (c) (p+4) times
+   (d) (2p+3) times
+
+26. **If a, b and c are 3 consecutive integers and a>b>c, which of the following has the maximum value?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+   (a) c + \frac{b}{a}
+   (b) a + \frac{b}{c}
+   (c) b + \frac{c}{a}
+   (d) c + \frac{a}{b}
+
+27. **One dozen eggs and ten pounds of apples are currently of the same price. If the price of a dozen eggs rises by 10% and that of apples rises by 2% how much more will it cost to buy a dozen of eggs and ten pounds of apples?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+   (a) 2%
+   (b) 10%
+   (c) 6%
+   (d) 12%
+
+28. **There are n students in a school. If r % among the students are 12 years or younger, which of the following expressions represents the number of students who are older than 12?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) n(1-r)
+   (b) 100(1-r)
+   (c) n(1-r)/100
+   (d) n(100-r)/100
+
+29. **If x^3 < x^2 < x then the value of x could be** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) 0
+   (b) 1
+   (c) 1/3
+   (d) \sqrt{3}
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -360,6 +402,12 @@
    b) A and B both
    c) A only
    d) C only
+
+17. **A wholesaler sells goods to a retailer at a profit of 20%. The retailer sells to the customer, who pays 80% more than the cost of the wholesaler. What is the retailer's profit?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) 40%
+   (b) 50%
+   (c) 60%
+   (d) 70%
 
 ## Arithmetic & Number Series
 
@@ -459,6 +507,12 @@
    c) 1 km/hr
    d) 0.5 km / hr
 
+7. **Length of a train is 170 meters and speed of train is 63 km/hour. This train can pass a bridge in 30 seconds, then find the length of the bridge.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) 355 m
+   (b) 325 m
+   (c) 365 m
+   (d) 312 m
+
 ## Analytical Reasoning
 
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
@@ -543,3 +597,15 @@
    b) 7/5
    c) 5/3
    d) 7/3
+
+4. **A jar contains white, red and green marbles in the ratios 2:3:5 Six more green marbles are added to the jars, and then the ratio becomes 2:3:7. How many white marbles are there in the jar?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+   (a) 2
+   (b) 4
+   (c) 6
+   (d) 8
+
+5. **Equal amounts of water were poured into two empty jars of different capacities, which made one jar 1/4 full and the other jar 1/3 full. If the water in the jar with the lesser capacity is then poured into the jar with the greater capacity, what fraction of the larger jar will be filled with water?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) 1/3
+   (b) 1/4
+   (c) 1/5
+   (d) 1/2

@@ -654,6 +654,54 @@
    c) pillow
    d) Pony
 
+99. **The warning of the authority falls on deaf ears. Here warning does the function of-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) adverb
+   (b) adjective
+   (c) verb
+   (d) noun
+
+100. **“A rolling stone gathers no moss” The complex form of the sentence is-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) Since a stone is rolling, it gathers no moss
+   (b) Though a stone roll, it gathers no moss.
+   (c) A stone what rolls gathers no moss.
+   (d) A stone that rolls gathers no moss.
+
+101. **Which word is the determiner in the sentence “Will it take much time?”** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) Will
+   (b) take
+   (c) much
+   (d) time
+
+102. **Which is the correct sentence?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) He insisted on seeing her
+   (b) He insisted for seeing her
+   (c) He insisted in seeing her
+   (d) He insisted to be seeing her
+
+103. **If a part of a speech or writing breaks the theme, it is called-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) pomposity
+   (b) digression
+   (c) exaggeration
+   (d) anti-climax
+
+104. **Education is enlightening. Here 'enlightening' is:** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) A gerund
+   (b) A participle
+   (c) An infinitive
+   (d) A finite verb
+
+105. **The comparison of unlike things using the words like on as is known to be –** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) metaphor
+   (b) simile
+   (c) alliteration
+   (d) personification
+
+106. **In English grammar, _______ deals with formation of sentences.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) Morphology
+   (b) Etymology
+   (c) Syntax
+   (d) Semantics
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -987,6 +1035,18 @@
    b) A person of narrow views
    c) A hater of mankind
    d) One who believe that God is in everything
+
+42. **Choose the pair of words that expresses a relationship similar to that of “Harm:Damage”=** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+   (a) Sweet:Sour
+   (b) Injure:Incapacitate
+   (c) Stout:Weak
+   (d) Hook:Crook
+
+43. **Give the antonym of the word 'transitory'.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) temporary
+   (b) permanent
+   (c) transparent
+   (d) short-lived
 
 ## Spelling
 

@@ -64,3 +64,17 @@
    (b) Unauthorized Access
    (c) Internal Server Error
    (d) Not Found
+
+## Web Services & APIs
+
+1. **Between a client and a web server, which of the following used for inspecting the data that is sent from the client to the web server and blocking attacks such as SQL injection?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
+   (a) Cluster configuration
+   (b) Load balancing function
+   (c) SSL-VPN function
+   (d) WAF
+
+2. **Which one of the following statements with respect to REST API is false?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+   (a) A REST API would use a GET request to retrieve a record
+   (b) A REST API would use a DELETE request to delete a record
+   (c) The operations in a REST API can be called from any HTTP client
+   (d) None of the above statements is false

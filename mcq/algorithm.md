@@ -42,6 +42,18 @@
    c) log2n
    d) n - 1
 
+8. **The Average-case Time Complexity of the binary search algorithm is-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 104]**
+   (a) O(n/2 logn)
+   (b) O(n log n)
+   (c) O(log n)
+   (d) O(1)
+
+9. **The binary search algorithm is used to search for a given item when items are sorted. If the number of items is 1 million, which of the following is the closest to the maximum number of comparisons required to find the item.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
+   (a) 15
+   (b) 20
+   (c) 25
+   (d) 30
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**

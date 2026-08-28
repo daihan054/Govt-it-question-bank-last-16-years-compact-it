@@ -42,6 +42,30 @@
    c) Random Access Memory
    d) NVRAM
 
+8. **What is the typical speed of USB version 3.0?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+   (a) 4.8G bits per second
+   (b) 610 Mbps
+   (c) 6Gbps
+   (d) Both a and b
+
+9. **SSDs are more durable than HDDs in extreme and harsh environments because** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+   (a) They don't have actuator arms
+   (b) They use fast electronics Memory
+   (c) They do not use 0/1 as data storage unit which is prone to crash
+   (d) All of the above statements are true
+
+10. **The term LPDDR means-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
+   (a) Low-Power Discrete Data Rate
+   (b) Low-processing Double Data Rate
+   (c) Low-Programmable Double Data Rate
+   (d) None of the above
+
+11. **How many core/threads does the Intel Core i7-9700K processor have?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+   (a) 6/12
+   (b) 4/8
+   (c) 8/8
+   (d) 8/16
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -121,3 +145,17 @@
    b) Indirect mode
    c) Immediate mode
    d) Index mode
+
+2. **Consider the following program fragment in assembly language:** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+   ```assembly
+   mov ax, 0h
+   mov cx, 0A h
+   doloop:
+   dac ax
+   loop doloop
+   ```
+   What is the value of ax and cx registers after the completion of the do loop?
+   (a) ax=FFF5 h and cx=0h
+   (b) ax=FFF6 h and cx=0h
+   (c) ax=FFF7 h and cx=A h
+   (d) ax=FFF5 h and cx=0A h

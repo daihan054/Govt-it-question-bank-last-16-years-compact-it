@@ -351,6 +351,24 @@
 60. **ট্রানজিস্টরের সার্কিট সঠিকভাবে বায়াসিং করা না হলে-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    **Ans:** আউটপুট সিগন্যাল বিকৃত হতে পারে
 
+61. **_______ helps prevent power surges.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
+   (a) Surge suppressor
+   (b) Surge protector
+   (c) UPS system
+   (d) High-grade multi-meter
+
+62. **A circuit has two different voltage sources that are connected in a series-opposing form. If the sources are rated at 6V and 9V, what is the total source voltage?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+   (a) 3 V
+   (b) 16 V
+   (c) 7.5 V
+   (d) 8 V
+
+63. **In a two-level memory hierarchy, the access time of the memory is 12 nanoseconds, and the access time of the main memory is 1.5 microseconds. The hit ratio is 0.98. What is the average access time of the two-level memory system?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
+   (a) 13.5 nsec
+   (b) 42 nsec
+   (c) 7.56 nsec
+   (d) 76 nsec
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**

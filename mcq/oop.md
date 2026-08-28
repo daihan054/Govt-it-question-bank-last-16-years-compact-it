@@ -116,6 +116,12 @@
    c) 0
    d) 3
 
+16. **Java Virtual Machine is-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+   (a) Acts as a full-fledged hypervisor
+   (b) Converts bytecodes to Operating System dependent code
+   (c) Is known as the Compiler of Java programming language
+   (d) Manages system memory and provides a portable execution environment for Java-bases applications
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**

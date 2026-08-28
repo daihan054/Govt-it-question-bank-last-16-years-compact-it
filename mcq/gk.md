@@ -395,6 +395,18 @@
    (গ) ১০০০ মেগাবাইট
    (ঘ) ১০০০০ মেগাবাইট
 
+63. **When a beam of light travels through media of two different densities, if the angle of incidence is greater than the critical angle, ____ occurs.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 103]**
+   (a) Refraction
+   (b) Reflection
+   (c) Incidence
+   (d) Criticism
+
+64. **বায়ুমণ্ডলের যে স্তরে বেতার তরঙ্গ প্রতিফলিত হয়-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) স্ট্র্যাটোস্ফিয়ার
+   (b) ট্রপোস্ফিয়ার
+   (c) আয়নোস্ফিয়ার
+   (d) ওজোনস্তর
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -814,6 +826,24 @@
    b) MIGA
    c) IFC
    d) ICSID
+
+76. **সামন্তবাদ কোন ইউরোপীয় দেশে প্রথম সূত্রপাত হয়?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+   (a) ইতালি
+   (b) ইংল্যান্ড
+   (c) ফ্রান্স
+   (d) রাশিয়া
+
+77. **ধরিত্রী সম্মেলন কোথায় অনুষ্ঠিত হয়?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+   (a) আফ্রিকার জোহানেসবার্গ
+   (b) ব্রাজিলের রিওডিজেনিরোতে
+   (c) ইতালির রোমে
+   (d) যুক্তরাষ্ট্রের ওয়াশিংটন ডিসিতে
+
+78. **'কালাপানি' কোন দুই রাষ্ট্রের মধ্যে অমীমাংসিত ভূখণ্ড?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) ভারত ও নেপাল
+   (b) পাকিস্তান ও চীন
+   (c) ভূটান ও ভারত
+   (d) বাংলাদেশ ও ভারত
 
 ## Bangladesh Affairs
 
@@ -1505,6 +1535,36 @@
    b) নৌকা
    c) লাঙ্গল
    d) বাইসাইকেল
+
+123. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান প্রবর্তিত হয়-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) ১৭ এপ্রিল ১৯৭১
+   (b) ১৬ ডিসেম্বর ১৯৭২
+   (c) ৭ মার্চ ১৯৭২
+   (d) ২৬ মার্চ ১৯৭৩
+
+124. **বঙ্গবন্ধু আগরতলা ষড়যন্ত্র মামলায় মোট আসামি সংখ্যা ছিল কতজন?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) ৩৪ জন
+   (b) ৩৫ জন
+   (c) ৩৬ জন
+   (d) ৩২ জন
+
+125. **আইন প্রণয়নের ক্ষমতা-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) আইন মন্ত্রণালয়ের
+   (b) রাষ্ট্রপতির
+   (c) স্পিকারের
+   (d) জাতীয় সংসদের
+
+126. **পার্বত্য চট্টগ্রাম শান্তিচুক্তি কত সালে স্বাক্ষরিত হয়?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) ১৯৯৬
+   (b) ১৯৯৭
+   (c) ১৯৯৯
+   (d) ২০০১
+
+127. **বাংলাদেশের প্রথম স্বাধীন নবাব কে?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) নবাব সিরাজউদ্দৌলা
+   (b) মুর্শিদ কুলী খান
+   (c) ইলিয়াস শাহ
+   (d) আলাউদ্দিন হোসেন শাহ
 
 ## Geography & Environment
 

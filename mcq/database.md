@@ -188,6 +188,12 @@
    c) Finds the name and ID of employees who get more than average salaries of his own department.
    d) None
 
+20. **What will be the output of the following SQL "Select Round (232.420, -2) AS Round Value"?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 103]**
+   (a) 240
+   (b) 200
+   (c) 233
+   (d) Syntax error
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -270,6 +276,24 @@
    b) Software complexity
    c) Slow Response
    d) Modular growth
+
+15. **In Oracle DBMS, LGWR process is a-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
+   (a) Foreground Process
+   (b) Background Process
+   (c) High Priority Process
+   (d) Batch Process
+
+16. **Which one of the following is a No-SQL Database?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 103]**
+   (a) MongoDB
+   (b) CasperDB
+   (c) ZBase
+   (d) All of the above
+
+17. **Which one of the following statements is true with respect to a Database Management System?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 104]**
+   (a) Super key and candidate keys are similar
+   (b) Candidate keys and Unique Keys are similar
+   (c) Unique Keys and Primary Keys are similar
+   (d) Candidate keys and Primary keys are similar
 
 ## Transaction Management & ACID
 
@@ -439,6 +463,12 @@
    c) One-to-many
    d) All of the above
 
+8. **Finding useful pattern from the data in a database is known as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
+   (a) Data Visualization
+   (b) Data Mining
+   (c) Data Analytics
+   (d) All of the above
+
 ## Relational Model & Terminology
 
 1. **What is the degree of relation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
@@ -495,6 +525,12 @@
    b) A relation is mapped to a table
    c) Attributes and columns are ordered from left to right
    d) Neither tuples nor rows have duplicates
+
+3. **What is the min and max number of tables required to convert an ER diagram with 2 entities and 1 relationship between them with partial participation constraints of both entities?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
+   (a) Min 1 and max 2
+   (b) Min 1 and max 3
+   (c) Min 2 and max 3
+   (d) Min 2 and max 2
 
 ## PL/SQL & Triggers
 

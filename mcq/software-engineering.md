@@ -26,6 +26,18 @@
    c) Inheritance
    d) Coupling
 
+4. **In software development, value adjustment factors include the following among others:** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
+   (a) the criticality of the performance and reusability of the code
+   (b) number of lines of code in the software.
+   (c) number of technical manpower and hardware costs
+   (d) time period available and the level of user friendliness
+
+5. **Assuming the existence of a start and end nodes for a program graph (PG), the total number of Paths is equivalent to _______ set of test data required to test software.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+   (a) Minimum
+   (b) Maximum
+   (c) Optimum
+   (d) Supreme
+
 ## Software Testing
 
 1. **Which of the following testing strategy is related to the boundary value analysis?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
