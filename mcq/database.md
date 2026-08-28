@@ -348,7 +348,7 @@
    C) Entity
    D) Relation
 
-38. **In SQL, the ________ command is used to recompile a view.** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+38. **In SQL, the ________ command is used to recompile a view.** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
    A) COMPILE VIEW
    B) DEFINE VIEW
    C) ALTER VIEW
@@ -502,6 +502,12 @@
    B) decoding
    C) translating
    D) data organization
+
+26. **Which of the following term refers to the degree to which data in a database system are accurate and correct?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 217]**
+   A) Data integrity
+   B) Data security
+   C) Data Validity
+   D) None of these
 
 ## Transaction Management & ACID
 

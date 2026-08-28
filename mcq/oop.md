@@ -214,6 +214,12 @@
    C) new
    D) All of this
 
+28. **In Java, which operator is used to create an object?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
+   A) class
+   B) scanf
+   C) print
+   D) None of these
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -238,6 +244,12 @@
    d. Projection
 
 5. **Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+
+6. **In C++, the idea to hiding the details of how something is implemented is known as** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) inheritance
+   B) encapsulation
+   C) recursion
+   D) polymorphism
 
 ## Polymorphism & Overloading
 

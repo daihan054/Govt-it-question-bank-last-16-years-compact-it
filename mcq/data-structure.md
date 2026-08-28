@@ -56,6 +56,12 @@
    c. \theta(1)
    d. \theta(n^2)
 
+9. **Link list can be implement using?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) Array
+   B) Pointers
+   C) Both A & B
+   D) None of these
+
 ## Stack & Queue
 
 1. **The minimum number of stacks needed to implement a queue is** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**

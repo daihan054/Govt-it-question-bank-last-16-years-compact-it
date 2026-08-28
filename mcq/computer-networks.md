@@ -450,6 +450,30 @@
    C) CATV
    D) DUTP
 
+22. **“The time to communicate between Bangladesh and USA is the same as that to communicate between two adjacent houses is Bangladesh”- In which case is the above true?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
+   A) Satellite
+   B) Fiber Optic
+   C) Twisted Pair
+   D) Radio Link
+
+23. **A path for carrying signals between a source and destination is known as-** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
+   A) Router
+   B) Channel
+   C) Link
+   D) Block
+
+24. **Which of the standard protocol for network management features?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
+   A) SNMP
+   B) SNA
+   C) FTP
+   D) SMTP
+
+25. **Which of the following is not a standard synchronous communication protocol?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 217]**
+   A) SDLC
+   B) SLIP
+   C) PAS
+   D) SMTP
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

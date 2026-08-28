@@ -143,3 +143,9 @@
    b) JSON
    c) SQL
    d) HTML
+
+4. **Which one is modern light weight message exchange format?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) JSON
+   B) XML
+   C) MX
+   D) HTML

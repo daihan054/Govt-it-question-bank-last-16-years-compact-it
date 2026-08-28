@@ -164,6 +164,12 @@
    C) Whitebox testing
    D) Unit testing
 
+19. **Which kind of software testing strategy starts with testing the fundamental components first?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
+   A) Top-down testing
+   B) Bottom-up testing
+   C) Stress Testing
+   D) Back to Back testing
+
 ## SDLC Models
 
 1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
@@ -232,6 +238,18 @@
    C) Testing
    D) None of these
 
+12. **Method used in writing and design of a program is termed as-** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) Bottom-up method
+   B) top-down method
+   C) split method
+   D) None of these
+
+13. **Which of the following is a project scheduling method that can be applied to software development?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
+   A) PERT
+   B) CPM
+   C) Both A & B
+   D) CMM
+
 ## Design Patterns
 
 1. **Design pattern for hierarchical structure is ______** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
@@ -239,3 +257,9 @@
    (b) DFD
    (c) ERD
    (d) UML
+
+2. **Which of the following is a design pattern?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) Factory
+   B) List
+   C) Queue
+   D) All of these

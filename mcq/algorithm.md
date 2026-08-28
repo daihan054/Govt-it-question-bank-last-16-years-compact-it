@@ -176,6 +176,12 @@
    C) \text{O (n log n)}
    D) \text{O(n!)}
 
+16. **The complexity of Bubble sort algorithm is-** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 217]**
+   A) O(n)
+   B) O(\log n)
+   C) O(n^2)
+   D) O(n \log n)
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**

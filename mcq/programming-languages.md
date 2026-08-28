@@ -95,6 +95,12 @@
    C) Java
    D) Python
 
+6. **Which of the following program helps you to learn Android programming?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) C
+   B) SQL
+   C) Java
+   D) HTML
+
 ## Visual Basic & .NET
 
 1. **.NET can be used in the following-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**

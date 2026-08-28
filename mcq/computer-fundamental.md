@@ -426,6 +426,12 @@
    C) syntax error
    D) logical error
 
+19. **The only language understood by a digital computer is called ________** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) Assembly Language
+   B) High level language
+   C) Machine language
+   D) None of these
+
 ## Acronyms & Abbreviations
 
 1. **CMP এর পূর্ণ অভিব্যক্তি হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**

@@ -262,6 +262,12 @@
    C) Waiting time
    D) Seek time
 
+5. **Place where large amount of data is stored outside central processing unit is called** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) Peripherals
+   B) Control unit
+   C) AI unit
+   D) Backing store
+
 ## RAID & Storage Architecture
 
 1. **Which RAID level creates a mirror of all disks for storing data?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
