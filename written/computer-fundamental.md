@@ -60,6 +60,8 @@
 
 1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
 
+2. **(a) Define Electronic Payment System (EPS) with necessary diagram. Name 5 types of EPS.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
+
 ## Quantum Computing & Emerging Technologies
 
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

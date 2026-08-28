@@ -115,6 +115,8 @@
 
 8. **How to work two factor authentication?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 574]**
 
+9. **(b) How do you define 2 factor authentication? Give example.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
+
 ## Security Protocols (SSL/TLS, HTTPS)
 
 1. **What is SSL?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**

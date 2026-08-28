@@ -84,6 +84,8 @@
 
 18. **Difference between OSI model and TCP/IP model. Relation between Data, Segment, Packet and Bit in OSI model.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 510]**
 
+19. **(a) List down the layers of OSI model in top-down manner.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 480]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -132,6 +134,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **How many types of modes are used in data transferring through networks? Briefly explain those modes. Differentiate between TCP vs UDP.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
 
 3. **Distinguish between Synchronous and Asynchronous transmission.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
+
+4. **(b) Name and define five components of Data communication system with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 487]**
 
 ## Switching Techniques (Circuit vs Packet Switching)
 
@@ -319,6 +323,14 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 47. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
 
 48. **What is private IP range class A, B and C with maximum host of each class?** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
+
+49. **(b) Find out the default mask, network address and broadcast address of the classful IPv4 address: 172.16.99.45** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 480]**
+
+## Network Layer (Packet Fragmentation & Tunneling)
+
+1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
+
+2. **(b) Describe briefly the TCP/IP tunneling using appropriate diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 482]**
 
 ## Network Services (DHCP, NAT)
 

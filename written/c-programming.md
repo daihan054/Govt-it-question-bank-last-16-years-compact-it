@@ -234,6 +234,10 @@ return 0;
 
 4. **Write a program to reverse string without using library function.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
 
+## Operators, Data Types & Language Concepts
+
+1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**
+
 ## Output Tracing & Control Flow
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

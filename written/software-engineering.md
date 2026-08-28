@@ -86,6 +86,8 @@
 
 16. **What is SDLC? Write the name of 7 phase of SDLC?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
+17. **(a) What do you understand by Agile? Mention its four values.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

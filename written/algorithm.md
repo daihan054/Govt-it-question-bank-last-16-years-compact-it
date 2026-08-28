@@ -55,6 +55,8 @@ for i in N:
 
 11. **Write a liner algorithm two sorted item merge. Why this algorithm takes O(n) time complexity?** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 591]**
 
+12. **(a) The complexity of merge sort is T(n) = 2T\left(\frac{n}{2}\right) + n. Explain how the above equation is derived?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 479]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
@@ -68,6 +70,10 @@ for i in N:
 2. **(খ) Greedy Method ও Dynamic Algorithm এর মধ্যে পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**
 
 3. **Write down the difference between Divide and Conquer and Dynamic Programming.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 505]**
+
+4. **(a) How does dynamic programming relate with divide and conquer approach?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 484]**
+
+5. **(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
 
 ## Divide and Conquer & Matrix Multiplication
 
