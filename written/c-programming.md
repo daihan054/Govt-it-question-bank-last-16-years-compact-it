@@ -232,6 +232,10 @@ return 0;
 
 45. **Given two integers A and B as input write a program to compute the least common multiple of A and B.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 436]**
 
+46. **(খ) এমন একটি C program লিখুন যা একটি array তৈরি করে কতগুলো ডেটা রাখবে, তারপর ফলাফল হিসেবে ডেটাগুলোকে বিপরীত দিক থেকে print করবে।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
+
+47. **(খ) প্রথম দশটি Fibonacci number প্রদর্শনের জন্য একটি C program লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 601]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -256,6 +260,10 @@ return 0;
 
 4. **Write a program to reverse string without using library function.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
 
+## Pointers
+
+1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
+
 ## Operators, Data Types & Language Concepts
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**
@@ -265,6 +273,8 @@ return 0;
 3. **What can be used to terminate for(;;)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
 4. **What will occur when an array is declared without size?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+5. **(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 601]**
 
 ## Output Tracing & Control Flow
 
@@ -431,3 +441,5 @@ int main() {
 12. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 13. **(e) Write about the syntax of function.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
+
+14. **(ক) C প্রোগ্রামিং ল্যাঙ্গুয়েজে user defined function এবং library function এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**

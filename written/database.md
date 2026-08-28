@@ -13,6 +13,8 @@
 
 6. **What is data about data?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
+7. **(খ) Centralized System ও Client Server System সম্পর্কে সচিত্র বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -24,6 +26,8 @@
 2. **What is SQL?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
 
 3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+4. **(ক) DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
 
 ## SQL Queries
 
@@ -347,6 +351,8 @@ ORDER BY average_salary DESC;
 
 **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 337]**
 
+3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
+
 ## Relational Data Model & ER Relationships
 
 1. What are the different types of relationships in a relational database? Explain each with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -354,6 +360,8 @@ ORDER BY average_salary DESC;
 2. **Discuss about different types of relations in DBMS.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 297]**
 
 3. **What is the degree of relation in dbms?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+4. **(খ) One-to-one এবং One-to-many রিলেশন উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
 
 ## Keys in DBMS
 
@@ -405,6 +413,12 @@ ORDER BY average_salary DESC;
 2. **Left joning and inner joining of a table.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
 
 3. **Which join is used for including not matching all records with output?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+## Distributed & Parallel Databases
+
+1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 613]**
+
+2. **(ক) Data Fragmentation কী? ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 613]**
 
 ## Data Warehousing, Data Mining & Business Intelligence
 

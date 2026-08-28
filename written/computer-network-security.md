@@ -28,6 +28,10 @@
 
 14. **Describe RSA Algorithm and how it works?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 467]**
 
+15. **অথবা, (ক) Private key এবং Public key উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
+
+16. **(খ) Plaintext ও Cipher text এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

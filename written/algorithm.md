@@ -16,6 +16,8 @@ for i in N:
 
 5. **What is Big O and Big Omega?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
 
+6. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 606]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
@@ -27,6 +29,8 @@ for i in N:
 4. **Explain Algorithm of Binary search.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
 
 5. **Binary search using recursive function.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
+
+6. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 605]**
 
 ## Sorting Algorithms & Complexity
 
@@ -116,6 +120,8 @@ for i in N:
 3. **What are the BFS and DFS value for the Binary tree from the following figure?** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
 
 4. **What are BFS and DFS for Binary Tree?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 464]**
+
+5. **(খ) BFS ও DFS এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
 
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 

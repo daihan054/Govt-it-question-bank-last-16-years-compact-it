@@ -39,6 +39,21 @@
 
 5. **Which tag is used for creating button in html?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
+6. **(ক) HTML Element কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 607]**
+
+7. **(খ) Static ও Dynamic ওয়েবসাইটের মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 607]**
+
+8. **অথবা, (ক) উদাহরণসহ HTML webpage এর গঠন ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 608]**
+
+9. **(খ) নিচের লিস্টটি তৈরি করার জন্য HTML কোড লিখুন :** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 609]**
+   1. Fruits
+      (a) Mango
+      (b) Orange
+   2. Vagetables
+      - Green Capsicum
+      - Yellow Capsicum
+      - Red Capsicum
+
 ## CSS & Styling (Inline, Internal, External)
 
 1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**

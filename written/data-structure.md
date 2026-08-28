@@ -36,6 +36,8 @@
 
 4. **(a) Compare array and linked list with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
 
+5. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
+
 ## Tree
 
 1. Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term. [SO IT 25-07-2026]
@@ -66,17 +68,23 @@
 
 14. **What is the minimum number of nodes in a binary tree?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]**
 
+15. **(ক) B-tree data structure কী? এর প্রয়োগ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
+
 ## Binary Search Tree (BST)
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
 
 2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 590]**
 
+3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
+
 ## Priority Queues & Heaps (Min/Max Heap)
 
 1. **Max heap:** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
 
 2. **Max Heap Operation [a-j] show heap.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
+
+3. **অথবা, (ক) Heap data structure কী? কোন ক্ষেত্রে Heap ব্যবহার করা হয়?** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 606]**
 
 ## Hashing & Hash Tables
 

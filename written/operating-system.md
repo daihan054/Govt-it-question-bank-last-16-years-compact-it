@@ -14,6 +14,8 @@
 
 7. **(b) What is the difference between micro kernel and macro kernel in the context of OS?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
 
+8. **অথবা, (ক) Blocking এবং Buffering OS এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 610]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -241,6 +243,10 @@ All process arrived at time 0. Lower number has higher priority.
 
 8. **Find out total number of pages, when page size 4KB and address space 32 bit.** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 588]**
 
+9. **(ক) Paging এবং Segmentation এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 609]**
+
+10. **(খ) Operating System-এর Memory hierarchy সচিত্র বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
+
 ## Virtual Memory & Page Replacement (Thrashing)
 
 1. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**
@@ -310,3 +316,5 @@ The content of the matrix. Need is defined to be Max – Allocation.
 ## File Systems & Disk Management
 
 1. **NTFS stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 610]**

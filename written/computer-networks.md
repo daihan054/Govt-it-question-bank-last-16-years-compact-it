@@ -34,6 +34,8 @@
 
 3. **(b) Why the submarine cable is damaged under water?** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 432]**
 
+4. **(ক) ফাইবার অপটিক ক্যাবলের গঠন ও বৈশিষ্ট্য ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
+
 ## Network Topologies
 
 1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
@@ -218,6 +220,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **Describe the different types of Multiplexing.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
 
 4. **What technique allows simultaneous transmission of multiple signals across a single data link?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+5. **(খ) FDM এবং TDM এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 615]**
 
 ## Subnetting & IP Addressing
 
@@ -458,6 +462,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 7. **Write down the difference among Hub, Switch and Router.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
 8. **What is gateway? Is router and gateway have any difference?** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+
+9. **অথবা, (ক) ডেটা ট্রান্সমিশনে Router ও Gateway এর মধ্যে কোনটি অধিকতর সুবিধাজনক-মতামত ব্যক্ত করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 615]**
 
 ## VLANs & Subnetting Comparison
 

@@ -42,6 +42,8 @@
 
 3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 339]**
 
+4. **(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 605]**
+
 ## Deep Learning & Neural Networks (ANN, CNN, RNN)
 
 1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**

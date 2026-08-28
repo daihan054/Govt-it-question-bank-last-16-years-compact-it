@@ -36,6 +36,8 @@
 
 13. **What is the difference between black box and white box testing?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
 
+14. **অথবা, (ক) Software testing কী? উহার গুরুত্ব আলোচনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
+
 ## UML Diagrams (Class, Use Case, Sequence)
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
@@ -100,6 +102,10 @@
 
 18. **(a) Write down the steps of Waterfall model.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
 
+19. **(খ) Software Engineering এর ক্ষেত্রে Waterfall Model বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
+
+20. **(খ) Software maintenance এর সাথে কী কী বিষয় জড়িত, তা আলোচনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
@@ -139,6 +145,8 @@
 1. **Write concepts of Coupling and Cohesion with Example?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
 
 2. **Software design table matching.......** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
+
+3. **(ক) Modularization কী? উহার সুবিধা সম্পর্কে লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 602]**
 
 ## Software Cost Estimation & Build vs Buy Decisions
 
