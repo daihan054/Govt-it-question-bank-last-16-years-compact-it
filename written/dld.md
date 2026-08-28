@@ -157,6 +157,8 @@
 
 25. **Make NAND gate using NOR gate.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
 
+26. **(i) Logic gate কী? মৌলিক Logic gate কয়টি ও কী কী? সত্যক সারণিসহ আলোচনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 958-959]**
+
 ## Combinational Circuits (Adders, Encoders, MUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -220,6 +222,8 @@
 6. **What is the difference between latch and flip-flop?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
 7. **There are different types of clocks available in the market. What type of clock will you use to reduce the cost of SGFL Company?** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
+
+8. **(ii) R-S Flip-flop এর সত্যস্য সারণি ও বৈশিষ্ট আলোচনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 959-960]**
 
 ## Finite State Machines (FSM)
 

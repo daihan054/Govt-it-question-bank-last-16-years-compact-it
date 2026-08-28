@@ -66,6 +66,8 @@
 
 11. **(c) Using truth table finds which of the following implications are equivalent to p \to (p \lor \neg(p \land q)) is a contradiction.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 890]**
 
+12. **(ii) Propositional logic ও Predicate Logic উদাহরণসহ বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 952-953]**
+
 ## Percentage, Profit & Loss, Simple & Compound Interest
 
 1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**

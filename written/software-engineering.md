@@ -202,6 +202,8 @@
 
 37. **What is SDLC? List the stages involed in the SDLC process. Which stages ensures the user acceptance of the system?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
 
+38. **(ii) Software development এর ধাপসমূহ সংক্ষেপে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 960]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
@@ -221,6 +223,8 @@
 8. **(ক) 'ATM machine' এর Software Structure আঁকুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
 
 9. **(ii) Design the communication for the user login system for an MVC pattern framework.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
+
+10. **(i) MVC framework কী? এর সুবিধাগুলো লিখুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 960]**
 
 ## CI/CD & DevOps Methodologies
 

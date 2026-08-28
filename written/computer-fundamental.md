@@ -202,6 +202,8 @@
 
 13. **বর্তমান যুগ চতুর্থ শিল্প বিপ্লবের যুগ। BREB ও সেই যুগের সাথে তালমিলিয়ে চলছে, মানুষের দ্বারপ্রান্তে বিদ্যুৎ সেবা পৌছে দেওয়ার জন্য। BREB এর এমন ৫টি পরিকল্পনা বা উদ্যোগ লিখুন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
+14. **(ii) E-Commerce কী? E-Commerce-এর প্রকারভেদ উল্লেখ করুন। Search engine কী? এর কয়েকটি উদাহরণ দিন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 956, 958]**
+
 ## Digital Banking & Financial Inclusion
 
 1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**

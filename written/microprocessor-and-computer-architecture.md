@@ -126,6 +126,8 @@
 
 10. **Cache memory কী কাজে ব্যবহৃত হয়? Compiler and Interpreater -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 880-881]**
 
+11. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951-952]**
+
 ## Memory Hierarchy & Storage
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -181,6 +183,8 @@
 8. **Consider a magnetic disk consisting of 16 heads and 400 cylinders. This disk has four 100-cylinder zones with the cylinders in different zones containing 160, 200, 240. and 280 sectors, respectively. Assume that each sector contains 512 bytes, average seek time between adjacent cylinders is 1 msec, and the disk rotates at 7200 RPM. Calculate the (a) disk capacity (b) maximum data transfer rate.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
 
 9. **Consider a disk pack with the following specifications- 16 surfaces, 128 tracks per surface, 256 sectors per track and 512 bytes per sector. Answer the following questions: (a) What is the capacity of disk pack? (b) If the format overhead is 32 bytes per sector, what is the formatted disk space? (c) If the disk is rotating at 3600 rpm, what is the data transfer rate?** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 924-925]**
+
+10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951]**
 
 ## RAID Architecture & Storage
 

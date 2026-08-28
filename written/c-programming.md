@@ -322,6 +322,10 @@ return 0;
 
 81. **Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 948]**
 
+82. **(i) Formatted Input/Output Statement কাকে বলে? Key-Board থেকে কিভাবে input নেয়া যায়? %d এর অর্থ কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 954-955]**
+
+83. **(ii) if......else statement এর format লিখ। 1+3+5+7+\dots+n সিরিজটির যোগফল নির্ণয়ের জন্য C-language এ একটি প্রোগ্রাম লিখ।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 955]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -935,3 +939,5 @@ int main() {
 30. **Write a program in C/Java to find out the factorial of a number using recursion also write its iterative program.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
 
 31. **১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
+
+32. **(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 954]**

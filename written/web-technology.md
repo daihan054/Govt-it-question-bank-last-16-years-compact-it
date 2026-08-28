@@ -110,6 +110,8 @@
 
 13. **(ক) কোন প্রতিষ্ঠানের Web page development এ HTML এবং CSS এর ভূমিকা কি? শুধুমাত্র HTML এবং CSS ব্যবহার করে কোন ধরনের Web Page Development করা যেতে পারে?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 771]**
 
+14. **(ii) HTML ও CSS কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 950-951]**
+
 ## CSS & Styling (Inline, Internal, External)
 
 1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**

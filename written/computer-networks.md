@@ -31,6 +31,8 @@
    Unicast
    Multicast
 
+15. **(i) Computer network কী? বিভিন্ন প্রকার Computer network সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 955-956]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -310,6 +312,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 7. **Host A is sending data to Host B over a full duplex link. A and B are using the sliding window protocol for flow control. The send and receive window size are 5 packets each. Data packets (sent only from A to B) are all 1000 bytes long and transmission time for such a packet is 50\mu\text{s}. Acknowledgement packets (sent only from B to A) are very small and require negligible transmission time. The propagation delay over the link is 200\mu\text{s}. What is the maximum achievable throughput in this communication?** **(BAUST Assistant Programmer Exam: 2021) [compact it 918]**
 
 8. **What is the piggybacking and MAC Address?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 921]**
+
+9. **(i) Congestion Control কী? কী কী ভাবে Congestion Control করা যায়?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 950]**
 
 ## Line Coding & Digital Encoding
 
