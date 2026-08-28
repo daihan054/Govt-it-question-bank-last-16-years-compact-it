@@ -20,6 +20,8 @@
 
 10. **(খ) Address গুলির সংক্ষিপ্ত বর্ণনা দিন। (i) Port Number (ii) IP অ্যাড্রেস (iii) MAC অ্যাড্রেস।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 775]**
 
+11. **(i) নিচের MAC Address গুলো কোন ধরনের বের করুন। (a) 4C:23:10:4A:1A:2A (b) 45:24:56:2B:24:12 (c) FF:FF:FF:FF:FF:FF** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 788]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -41,6 +43,8 @@
 9. **(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 629]**
 
 10. **What happens when you use cables longer than the prescribed length in a network?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 732]**
+
+11. **(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
 
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
@@ -499,6 +503,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 66. **Answer the following: (i) 192.168.10.0/23, How many usable address? (ii) 192.168.10.0/23, Find subnet mask. (iii) 192.168.10.0/23, Find Broadcast Address. (iv) 192.168.10.0/23, What is last usable host?** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
 
+67. **(ii) CIDR কী? 192.168.100.9/26 IP address থেকে (a) Total subnets (b) Block size (c) Valid Hosts (d) Total hosts বের করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 788]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -619,6 +625,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 9. **অথবা, (ক) ডেটা ট্রান্সমিশনে Router ও Gateway এর মধ্যে কোনটি অধিকতর সুবিধাজনক-মতামত ব্যক্ত করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 615]**
 
+10. **(iii) Router and Gateway এর ফাংশন লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
+
 ## VLANs & Subnetting Comparison
 
 1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
@@ -640,6 +648,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 5. **What is NAT? Write down the list of private IP address.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
 
 6. **Briefly explain Network Address Translation (NAT).** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
+
+7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 787]**
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 

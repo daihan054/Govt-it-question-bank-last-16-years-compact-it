@@ -40,6 +40,8 @@ for i in N:
 
 8. **(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
 
+9. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 791]**
+
 ## Sorting Algorithms & Complexity
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
@@ -88,6 +90,8 @@ for i in N:
 18. **How many member of swapping is needed to sort the number sequence 5, 8, 3, 6, 2 in ascending order using bubble sort.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
 
 19. **(i) Bubble sort Algorithm লিখুন। এ অ্যালগরিদমটির Time Complexity বের করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 783]**
+
+20. **(a) Compaire and contrast between Quick sort and Merge sort in terms of their time and space complexity.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 793]**
 
 ## Heap & Priority Queue
 

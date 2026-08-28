@@ -38,6 +38,8 @@
 
 19. **Difference between encryption and hashing.** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
+20. **(ii) Symmetric Key Encryption and Asymmetric Key Encryption ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 790]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

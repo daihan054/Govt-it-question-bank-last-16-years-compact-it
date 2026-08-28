@@ -60,6 +60,8 @@
 
 8. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 692]**
 
+9. **(a) Computer and contrast between array and linked list.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 792]**
+
 ## Tree
 
 1. Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term. [SO IT 25-07-2026]
@@ -99,6 +101,8 @@
 18. **X = (a^2 - 5b).(7a + b^5) এক্সপ্রেশনটিকে tree stracture-এ অঙ্কন করুন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
 
 19. **Write a Pseudocode of postorder by recursion and generate postorder, preorder inorder from the tree.** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 762]**
+
+20. **(b) Draw a binary tree of 5 elements. Now list out the elements in (i) Pre-order (ii) Post order and (iii) Inorder traversal of the tree.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 792]**
 
 ## Binary Search Tree (BST)
 

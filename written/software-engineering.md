@@ -66,6 +66,8 @@
 
 28. **(গ) Unit testing, Integration testing এবং Beta testing বলতে কি বুঝায়?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
 
+29. **(i) Black Box testing and White Box testing এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
@@ -177,6 +179,8 @@
 33. **From the diagram write down the software evolution.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
 
 34. **(খ) SDLC diagram সহ বর্ণনা করুন। SDLC এর মেজর phases গুলি কী?** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 779]**
+
+35. **(ii) Software development এর Agile Method সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
 
 ## Software Architecture & Design Patterns (MVC)
 

@@ -279,6 +279,8 @@ return 0;
 
 65. **(খ) তোমার ক্লাসের ছাত্রদের তালিকা Sort করার জন্য একটি C Program লিখ।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 776]**
 
+66. **(b) Write a program in C/C++/Java to identify the largest number of given 3 numbers.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 791]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -356,6 +358,8 @@ return 0;
 11. **Write the syntax of while and do while loop.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
 12. **What is nested structure in C programming? Explain with example.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 741]**
+
+13. **(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
 
 ## Output Tracing & Control Flow
 
@@ -684,3 +688,5 @@ int main() {
     return 0;
 }
 ```
+
+28. **(b) Write down a pseudocode/program to generate all possible permutation for a given word.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 793]**

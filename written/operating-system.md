@@ -306,6 +306,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 10. **Write short note on Virtual Memory and Cache memory.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
 
+11. **(ii) Virtual Memory এর প্রয়োজনীয়তা কি ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 786]**
+
 ## Process Management & Process States
 
 1. **(b) What is process? Describe different states of a process.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
@@ -323,6 +325,8 @@ All process arrived at time 0. Lower number has higher priority.
 7. **Write down the name of four information stored in PCB (Process Control Block).** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
 
 8. **Operating System এর Process state diagram অঙ্কন করুন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
+
+9. **(i) Operating System এর Process State Transition Diagram আঁকুন ও ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 786]**
 
 ## Process Synchronization & Concurrency
 
