@@ -209,3 +209,27 @@
    b) Steganography
    c) Overt Writing
    d) Coding
+
+7. **Which one is the part of software vulnerability?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) Lack of user knowledge
+   B) Hidden bugs
+   C) Radiation of Transmission line
+   D) Passing internal information by employees
+
+8. **In computers, why is Firewall used for?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+   A) Securing the computer
+   B) Data Transmission
+   C) Authentication
+   D) Monitoring
+
+9. **In computer systems, what is ‘Trojan Horse’?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+   A) Virus
+   B) Malware
+   C) Worm
+   D) Spyware
+
+10. **Viruses that take up residence in the computer’s memory and making hard to detect is called:** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 162]**
+   A) Cluster Virus
+   B) Self-encrypting Virus
+   C) Stealth Virus
+   D) Macro Virus

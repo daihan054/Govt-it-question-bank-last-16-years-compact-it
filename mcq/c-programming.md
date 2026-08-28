@@ -386,6 +386,12 @@
    c) for(int x=10; x>=200; x=3*x)
    d) for(int x=10; x>=0; x+=2)
 
+29. **Which type of following errors is generated when the program is being execute?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) Syntax error
+   B) Semantic error
+   C) Run-time error
+   D) Linker error
+
 ## Storage Classes & Scope
 
 1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**

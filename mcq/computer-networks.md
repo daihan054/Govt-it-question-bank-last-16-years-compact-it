@@ -61,7 +61,7 @@
    c) SSH
    d) SMTP
 
-4. **Which of the following protocols is used for receiving e-mails?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**
+4. **Which of the following protocols is used for receiving e-mails?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
    a) SMTP
    b) POP3
    c) HTTP
@@ -237,6 +237,12 @@
    (b) 40 bytes long
    (c) 64 bits long
    (d) 128-bit long
+
+9. **How many bit addresses of IPv6 version?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) 24
+   B) 32
+   C) 64
+   D) 128
 
 ## Networking Fundamentals & Terminology
 
@@ -579,6 +585,12 @@
    c) 4^{32}
    d) 4^{64}
 
+18. **Class C IP address is for ________ bit network.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) 24
+   B) 32
+   C) 64
+   D) 128
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -805,6 +817,12 @@
    b. Network layer -4 times, Data link layer -6 times
    c. Network layer -2 times, Data link layer -4 times
    d. Network layer -3 times, Data link layer -4 times
+
+6. **Open System Interconnection (OSI) model has ________ layer.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
+   A) 6
+   B) 5
+   C) 9
+   D) 7
 
 ## Switching Techniques
 

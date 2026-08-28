@@ -6,6 +6,12 @@
    (c) sum=(C9:C12)
    (d) sum(C9+C12)
 
+2. **In a spreadsheet, ________ can help you make sense of a worksheet contents.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 163]**
+   A) value
+   B) Labels
+   C) formula
+   D) macros
+
 ## MS Word
 
 1. **What is the range of Font Size available in Font Size drop down toolbar?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**

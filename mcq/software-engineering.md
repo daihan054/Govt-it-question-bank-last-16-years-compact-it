@@ -130,6 +130,24 @@
    c) Adaptive maintenance
    d) Perfective maintenance
 
+4. **Programmers being roughly out the logic they will use in the ________ stage of software SDLC.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+   A) Design
+   B) Development
+   C) Implementation
+   D) Testing
+
+5. **The process of making object code form one system work on another type of system is called ________.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 162]**
+   A) Porting
+   B) Designing
+   C) Developing
+   D) Coding
+
+6. **________ is natural language statements that look like programming code.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 163]**
+   A) Source code
+   B) Object code
+   C) Pseudo code
+   D) IPO chart
+
 ## Design Patterns
 
 1. **Design pattern for hierarchical structure is ______** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**

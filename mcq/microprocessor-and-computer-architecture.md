@@ -96,6 +96,12 @@
    c) Random Access Memory
    d) High Bandwidth memory
 
+17. **Which factor is not affecting the processing speed of a computer system?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) Cache memory
+   B) Clock speed
+   C) Monitor
+   D) RAM
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -139,6 +145,12 @@
    B. IN
    C. ADD
    D. OUT
+
+8. **Which one is the 7$^{th}$ Generation intel processor?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 158]**
+   A) Intel core i7-9850HL
+   B) Intel core i5-7200U
+   C) Intel core i5-9400H
+   D) Intel core i9-10900K
 
 ## Secondary Storage (HDD & Disk Organization)
 

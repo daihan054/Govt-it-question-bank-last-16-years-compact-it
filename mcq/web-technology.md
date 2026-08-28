@@ -33,6 +33,18 @@
    c. A single HTTP request is sufficient without using any TCP connection from C to S.
    d. A single HTTP request is sufficient using a single TCP connection from C to S.
 
+7. **Which one is the first search engine?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
+   A) Google
+   B) Archie
+   C) Alta vista
+   D) WAIS
+
+8. **The newest version of HTML is:** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+   A) WML
+   B) HTML5
+   C) XSL
+   D) HTML3
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**

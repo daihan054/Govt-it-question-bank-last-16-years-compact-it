@@ -59,3 +59,21 @@
    (b) Self organizing feature map
    (c) Hopfield network
    (d) a and c
+
+12. **Which one is not part of learning phase of machine learning?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 157]**
+   A) Collect data
+   B) Training data
+   C) Algorithm
+   D) Model
+
+13. **Market basket analysis is part of:** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 157]**
+   A) Classification
+   B) Regression
+   C) Clustering
+   D) Association
+
+14. **Which programming language is used extensively for Artificial Intelligence (AI)?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
+   A) C
+   B) Java
+   C) J2EE
+   D) Prolog

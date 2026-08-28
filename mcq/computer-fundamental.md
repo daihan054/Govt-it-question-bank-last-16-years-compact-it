@@ -6,7 +6,7 @@
    গ. ১৫০
    ঘ. ২০০
 
-2. **Which one is the first high level programming language?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+2. **Which one is the first high level programming language?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
    A) C
    B) COBOL
    C) FORTRAN
@@ -56,7 +56,7 @@
    c) Ctrl + N
    d) Ctrl + Q
 
-2. **Which operation dose F1 key perform for all types of application?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+2. **Which operation dose F1 key perform for all types of application?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
    A) Windows shut down
    B) File open
    C) Help
@@ -164,6 +164,36 @@
    (গ) VDU
    (ঘ) CCTV
 
+16. **Which one is not contained in MICR code?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 158]**
+   A) Account number
+   B) Bank number
+   C) Cheque number
+   D) Country code
+
+17. **Which one is the modifier key of the keyboard?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) Shift
+   B) Backspace
+   C) Esc
+   D) F4
+
+18. **The job of ________ is to translate the array of dots into text.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 162]**
+   A) MICR
+   B) VGA
+   C) OMR
+   D) OCR
+
+19. **A barcode reader emits ________.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 162]**
+   A) sound
+   B) light
+   C) beeps
+   D) smell
+
+20. **In a plasma display, gas is electrified by grid of ________.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 162]**
+   A) electronics
+   B) phosphors
+   C) electron
+   D) electrodes
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -195,6 +225,12 @@
    (খ) Centralized social network
    (গ) Peer-to-Peer social network
    (ঘ) Distributed Ledger management
+
+7. **The study of the way people work with tools is called.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+   A) debugging
+   B) programming
+   C) ergonomics
+   D) kinetics
 
 ## Software Types & Classification
 
@@ -257,6 +293,30 @@
    b) Lynx
    c) Safari
    d) Microsoft Edge
+
+11. **Which of the following language does not need any translation?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) Machine language
+   B) 4GL
+   C) 3GL
+   D) Assembly language
+
+12. **A ________ translate file of program source code into machine language.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+   A) Cluster
+   B) Datagram
+   C) Decoding
+   D) Compiler
+
+13. **All programming languages require users to follow certain rules of ________.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 162]**
+   A) style
+   B) syntax
+   C) grammar
+   D) procedures
+
+14. **Object code is the ________ language file that tells the CPU what to do.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 163]**
+   A) programming
+   B) binary
+   C) machine
+   D) natural
 
 ## Acronyms & Abbreviations
 

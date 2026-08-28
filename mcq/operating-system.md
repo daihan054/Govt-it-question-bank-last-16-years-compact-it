@@ -233,6 +233,30 @@
    গ. Antivirus software
    ঘ. Firewall
 
+6. **Where is the Boot strapping program stored?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
+   A) ROM
+   B) Hard disk
+   C) CD
+   D) RAM
+
+7. **Which one of the first 64-bit operating system?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+   A) Windows Vista
+   B) Mac
+   C) Linux
+   D) Windows XP
+
+8. **In a computer, folder opening is denied by which of the following names?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+   A) con
+   B) com
+   C) mak
+   D) make
+
+9. **Which of the following contains configuration information of a window?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 163]**
+   A) .exe
+   B) .ini
+   C) .dill
+   D) .chm
+
 ## Linux Commands & Administration
 
 1. **User passwords in Linux are stored as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**

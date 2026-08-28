@@ -589,6 +589,30 @@
    c) 19.02
    d) 1.03
 
+4. **Which one is not unary operator in relational algebra?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 157]**
+   A) Select
+   B) Project
+   C) Union
+   D) Renames
+
+5. **Which one is an entity?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 157]**
+   A) Roll No.
+   B) Student
+   C) Passport No.
+   D) Department ID
+
+6. **Which one is TRUE for FIRD?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 158]**
+   A) Uses electromagnetic signal
+   B) Uses laser beam
+   C) Uses optical signal
+   D) Uses infrared
+
+7. **Flat file database is most useful for ________.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 163]**
+   A) Large scale users
+   B) Banking
+   C) Small-group situation.
+   D) Chain stores
+
 ## Keys in DBMS
 
 1. **The key selected from the sets of candidate keys by database design is called ______ key:** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
