@@ -254,6 +254,13 @@
 35. **World Trade Organization (WTO)- এর সদর দপ্তর কোথায় অবস্থিত?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
    **Ans:** জেনেভা
 
+36. **What is the name of Russian foreign minister?** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 73]**
+   (a) Sergey Lavrov
+   (b) Ivar Igor
+   (c) Sergei Shoigu
+   (d) Dmytro Khuleba
+   **Ans: a**
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**

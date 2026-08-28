@@ -122,6 +122,13 @@
 8. **Given, x is a real number. What is the minimim value of x^2-4x+5?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
    **Ans:** 1
 
+9. **32^{x+y} = 16^{x+y}, what is the value x?** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 73]**
+   (a) Y
+   (b) -y
+   (c) 2y
+   (d) \text{X}(2y+2)
+   **Ans: b**
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -155,6 +162,20 @@
 
 7. **যদি তেলের মূল্য ২৫% বৃদ্ধি পায় তবে তেলের ব্যবহার শতকরা কত কমালে তেল বাবদ খরচ বৃদ্ধি পাবে না?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** ২০%
+
+8. **A tank is 40% full. If 16 liters of water is added to the tank, it becomes 4/5 full. The capacity of the tank is:** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 72]**
+   (a) 32 liters
+   (b) 35liters
+   (c) 40 liters
+   (d) 42 liters
+   **Ans: c**
+
+9. **In a class of 24 students, one half of the student take higher math & one third take physics and one fourth take both. How many take neither?** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 72]**
+   (a) 14
+   (b) 15
+   (c) 10
+   (d) 8
+   **Ans: c**
 
 ## Arithmetic & Number Series
 
@@ -238,3 +259,10 @@
    (b) 90
    (c) 63
    (d) 126
+
+2. **In a class there are 4 boys and 4 girls. Two students are selected at random, what is the probability that both will be girls?** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 73]**
+   (a) \frac{1}{2}
+   (b) \frac{3}{7}
+   (c) \frac{3}{4}
+   (d) \frac{3}{14}
+   **Ans: d**

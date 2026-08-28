@@ -203,6 +203,20 @@
 28. **My doctor knew that I would eventually recover and to kind of work ______ before.** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
    **Ans:** had been doing
 
+29. **Choose the correct sentence:** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 72]**
+   (a) Rahim is as tall as mine
+   (b) Rahim is tall as mine
+   (c) Rahim is as tall as I
+   (c) Rahim is as tall as me
+   **Ans: c**
+
+30. **There is ______ on the roads today.** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 72]**
+   (a) Few traffics
+   (b) Very much traffic
+   (c) Too much traffic
+   (c) Too many traffic
+   **Ans: c**
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
