@@ -284,6 +284,8 @@
    172.16.8.1
    10.0.0.1
 
+10. **HTTPs কীভাবে একটি Website-এর সুরক্ষা দেয়? ব্লক ডায়াফ্রামের মাধ্যমে উত্তর দিন।** **(40th BCS Written Exam: 2020 (BPSC)) [compact it 971]**
+
 ## Web Security Vulnerabilities
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

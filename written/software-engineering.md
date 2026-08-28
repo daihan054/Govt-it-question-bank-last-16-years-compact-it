@@ -78,6 +78,8 @@
 
 34. **Key difference between BLACK BOX and WHITE BOX testing.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
 
+35. **Testing is an activity that is performed to verify correct behavior of a program. Testing should be conducted in all the stages of program development. Describe different types of tests conducted in the implementation stage.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 980]**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**

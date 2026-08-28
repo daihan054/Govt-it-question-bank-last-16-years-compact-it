@@ -173,6 +173,8 @@ int main(int argc, char *argv[]){
 
 41. **৩. IP Address বের করার জন্য লিনাক্স কমান্ড লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
 
+42. **Write down Linux command: i. Display current directory folder and file. ii. Create a folder name “DPDC”. iii. Remove a file like as “DPDC2”. iv. A file name is “myFile”; Rename the file name to “DPDC2.txt”. v. Give permission to a file so that anyone can read, write and executive that file.** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
@@ -306,6 +308,10 @@ All process arrived at time 0. Lower number has higher priority.
 17. **Job arrival time and execution time of Operating system tasks table is given, find out- (i) Average waiting time for FCFS (ii) Preemptive SJF (iii) Round Robin (Quantum time: 3) scheduling algorithm** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
 
 18. **Calculate The Average Waiting Time of SJF scheduling algorithm.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
+
+19. **(a) Define FCFS, SJF and RR algorithm (Quantum=20).** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977-978]**
+
+20. **(b) Turnaround time of FCFS and SJF** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 978]**
 
 ## Memory Management & Paging
 
@@ -449,6 +455,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 17. **(a) What is Artificial Intelligence (AI)? What are the necessary conditions for a deadlock in an operating system?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 890]**
 
 18. **What is Deadlock? Explain two situations where deadlock condition occurs.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938]**
+
+19. **A, B two resources. Two processes (P1 and P2) share these resources. When a process request for a resources, if that resource is free then it will be allocated with that resources. If the resources are not free then the process will halt. Now the scenario is:** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 973]**
 
 ## File Systems & Disk Management
 

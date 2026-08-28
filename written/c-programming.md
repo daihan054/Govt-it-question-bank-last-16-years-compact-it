@@ -422,6 +422,8 @@ return 0;
 
 15. **Write the difference between Structure and Array.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
 
+16. **Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Control structure in C programming (vi) Stack (vii) Debugging (viii) Increment and Decrement process in C programming (ix) Object in C++ (x) Data encapsulation** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 978-980]**
+
 ## Output Tracing & Control Flow
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
@@ -825,6 +827,8 @@ int main(){
     return 0;
 }
 ```
+
+31. **After compilation and execution, what will be output in the following code:** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 972]**
 
 ## Recursion & Functions
 

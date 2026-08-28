@@ -37,6 +37,8 @@
 
 18. **Database এর সর্বনিম্ন Unit কোনটি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
 
+19. **DBMS বলতে কী বোঝানো হয়? DBMS শ্রেণিভিন্যাস বর্ণনা করুন।** **(40th BCS Written Exam: 2020 (BPSC)) [compact it 971-972]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -367,6 +369,12 @@ SELECT count (*) FROM (
 
 64. **Write a SQL query to find those employees who report that manager whose first name is ‘abc’. Return first name, last name, employee ID and salary.** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
 
+65. **Given a database schema and worker table with fully code: Now writes SQL Query from the following questions.** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
+
+66. **(b) SQL Query: commission greater than 10%** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
+
+67. **(c) Remove duplicate data from table** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -525,6 +533,8 @@ SELECT count (*) FROM (
 8. **What is a weak entity for data modeling using the entity relationship model find out any weak entity and its identify relationship for the school database? Which of the following table? Student(student_id, student_name, admission_year) Teacher(teacher_id, teacher_name, teacher_joindate) Course(course_id, subject_name, credit)** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 814]**
 
 9. **(c) What is a weak entity set? How the primary key is generated for weak entity set?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
+
+10. **(a) Write down Integrity rules in database.** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
 
 ## Keys in DBMS
 

@@ -31,6 +31,10 @@
 
 14. **Binary Number system এর Base কত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 943]**
 
+15. **(i) (1\text{AC})_{16} = (?)_{2}\text{ and }(?)_{10}** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 974]**
+
+16. **(ii) What is the Excess-3 code of 1010?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 974]**
+
 ## 2's Complement & Binary Arithmetic
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
@@ -104,6 +108,8 @@
 10. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 890-891]**
 
 11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 935]**
+
+12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 972]**
 
 ## Logic Gates & Universal Gates
 

@@ -46,6 +46,8 @@ for i in N:
 
 9. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 791]**
 
+10. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 973-974]**
+
 ## Sorting Algorithms & Complexity
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য

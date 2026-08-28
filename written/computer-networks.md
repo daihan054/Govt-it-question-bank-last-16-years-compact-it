@@ -111,6 +111,8 @@
 
 10. **Write down the Disadvantages of Bus topology.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
 
+11. **(b) Define network topologies with features.** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977]**
+
 ## OSI & TCP/IP Reference Model
 
 1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -193,6 +195,8 @@
 36. **What is OSI and TCP/IP model and briefly explain?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870-872]**
 
 37. **TCP/IP protocol suite -এর বিভিন্ন স্তরের নাম লিখুন? HTTPs কী? এর ব্যবহারের প্রয়োজনীয়তা সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 882]**
+
+38. **বর্তমানে Hybrid network model জনপ্রিয় একটি মডেল। এই মডেলের পাঁচটি Layer হচ্ছে, Application, Transport, Physical, Data link and Network Layer। এদের কাজ দেওয়া আছে বামপাশের কলামে, ডানপাশের কলামে কাজ অনুসারে Layer গুলোর নাম লিখুন।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975-976]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -609,6 +613,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 87. **৯. ক্লাস C এর ডিফল্ট সাবনেট মাস্ক কত?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
 
 88. **১১. নিচের কোনটি লুপ ব্যাক আইপি এড্রেস?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+
+89. **A IP Address is: 172.16.128.120/25 now answers the following questions: (i) What is the network address of this IP? (ii) What is the subnet mask? (iii) What is the broadcast address? (iv) How many connection is possible in this network?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
+
+90. **(a) A IP address is 172.20.0.0/27. How many subnets and hosts per subnet?** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977]**
 
 ## Network Layer (Packet Fragmentation & Tunneling)
 
