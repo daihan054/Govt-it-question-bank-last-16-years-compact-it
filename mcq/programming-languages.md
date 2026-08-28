@@ -39,6 +39,24 @@
    c) repetitive
    d) complex
 
+7. **Which of the following function converts a string into float in Python?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) int (x [, base])
+   B) float(x)
+   C) long (x [, base])
+   D) str(x)
+
+8. **What is the output of following code? print 9//2** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) 4
+   B) 4.0
+   C) 4.5
+   D) Error
+
+9. **Which of these is not a core data type?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) Lists
+   B) Dictionary
+   C) Class
+   D) Tuples+95
+
 ## Mobile & Android Development
 
 1. **What is the API level of Android version 11?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
@@ -64,6 +82,12 @@
    b) Python
    c) Kotlin
    d) Android is not an operating system
+
+5. **Which of the following programming language helps you to learn Android programming?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 205]**
+   A) C
+   B) SQL
+   C) Java
+   D) Python
 
 ## Visual Basic & .NET
 

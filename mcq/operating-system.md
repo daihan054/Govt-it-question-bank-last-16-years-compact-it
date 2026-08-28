@@ -193,6 +193,24 @@
    c) Terminated
    d) Ready
 
+12. **The maximum number of processes that can be in ready state in computer system with n CPU's is—** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
+   A) n
+   B) \text{n}^2
+   C) 2n
+   D) independent of n
+
+13. **In UNIX, processes that have finished execution but have not yet had their status collected are known as-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 205]**
+   A) Sleeping processes
+   B) Stopped processes
+   C) Zombie processes
+   D) Orphan processes
+
+14. **Which of the following process scheduling algorithm may lead to starvation?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) FIFO
+   B) Round Robin
+   C) Shortest Job Next
+   D) None of these
+
 ## File Systems & Disk Management
 
 1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**
@@ -306,3 +324,15 @@
    b) Privileges
    c) Functions
    d) Stord Procedures
+
+6. **In UNIX, the login prompt can be changed by changing the content of the file-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 205]**
+   A) gettydefs
+   B) contrab
+   C) inittab
+   D) init
+
+7. **Which of the following UNIX commands allows scheduling a program to be executed at specifies time?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 205]**
+   A) nice
+   B) cron
+   C) date and time
+   D) schedule

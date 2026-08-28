@@ -208,6 +208,12 @@
    c) Delivering a Trojan
    d) All of the above
 
+3. **Which tool could be used for detecting vulnerability through SQL injection?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) nmap
+   B) metasploit
+   C) bit defender
+   D) UML
+
 ## Cyber Attacks & Threats
 
 1. **An attacker sits between the sender and receiver and captures the information and retransmits to the receiver after some time without altering the information. This attack is called as ____** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 83]**

@@ -341,3 +341,15 @@
    B) abc*+de-+
    C) +ab
    D) a+b-c
+
+7. **Which of the following data structure is non-linear type?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) Strings
+   B) Lists
+   C) Stacks
+   D) None of these
+
+8. **The maximum number of binary trees that can be formed with three unlabeled nodes is-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) 1
+   B) 3
+   C) 5
+   D) 4

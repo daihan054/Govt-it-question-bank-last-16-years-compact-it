@@ -202,6 +202,18 @@
    c) Static members of a class can be accessed without creating objects of that class
    d) If not specified otherwise, the initial value of an integer variable is 0
 
+26. **Find the output of following Java code line: System.out.println (math.floor (-7.4)** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) -7
+   B) -7.4
+   C) -8
+   D) -7.2
+
+27. **Which of the following is not an operator in Java?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) instanceof
+   B) sizeof
+   C) new
+   D) All of this
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -261,6 +273,30 @@
    b) Inheritance
    d) Encapsulation
    d) Method overriding
+
+7. **Which of the following is the destructor of class Vehicle?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 207]**
+   A) *Vehicle()
+   B) ~Vehicle ()
+   C) ~Vehicle (int value)
+   D) *Vehicle (int value)
+
+8. **The operator that cannot be overloaded is ________.** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 207]**
+   A) ++
+   B) ()
+   C) ~
+   D) ::
+
+9. **Which functions overloads the ">>" operator?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) gt()
+   B) more()
+   C) ge()
+   D) None of this
+
+10. **Which of the following operator functions cannot be global i.e. must be a member function?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) Conversion operator
+   B) new
+   C) delete
+   D) all of these
 
 ## OOP Concepts & Principles
 

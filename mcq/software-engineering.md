@@ -190,6 +190,12 @@
    c) Alpha test data
    d) System test data
 
+8. **Which of the following requires the most time in SDLC?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) Requirement Analysis
+   B) Testing
+   C) Deployment
+   D) Design
+
 ## Design Patterns
 
 1. **Design pattern for hierarchical structure is ______** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**

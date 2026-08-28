@@ -78,6 +78,12 @@
    c) Student data are arranged in ascending order of student numbers
    d) Student data are arranged in the order of the cell addresses of the student numbers locations.
 
+14. **The average number of key comparisons done in a successful sequential search in a list of length n, it is-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
+   A) \log n
+   B) (n+1)/2
+   C) (n-1)/2
+   D) n/2
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -151,6 +157,24 @@
    B) Selection sort
    C) Quick sort
    D) Insertion sort
+
+13. **Which of the following is not a stable sorting algorithm in its typical implementation?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
+   A) Selection Sort
+   B) Quick Sort
+   C) Marge sort
+   D) Insertion Sort
+
+14. **You have to sort 1GB of data with only 100MB of available main memory. Which sorting technique will be more appropriate?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
+   A) Heap sort
+   B) Insertion sort
+   C) Quick sort
+   D) Marge sort
+
+15. **Randomized quicksort is an extension of quicksort where the pivot is chosen randomly. What is the worst-case complexity of sorting n numbers using randomized quicksort?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
+   A) \text{O(n)}
+   B) \text{O(n}^2)
+   C) \text{O (n log n)}
+   D) \text{O(n!)}
 
 ## Graph Algorithms
 
@@ -276,6 +300,12 @@
    b) Base case
    c) Average case
    d) Worst case
+
+3. **What is time complexity of Huffman coding?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 207]**
+   A) O(n)
+   B) O(n log n)
+   C) O(n (log n)^2)
+   D) O(n^2)
 
 ## Algorithm Design Paradigms
 

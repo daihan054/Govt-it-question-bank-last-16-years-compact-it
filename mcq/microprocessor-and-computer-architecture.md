@@ -256,6 +256,12 @@
    (c) Blue Ray disk
    (d) Red Ray disk
 
+4. **Which of the following is major part of time taken when accessing data on the disk?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 205]**
+   A) Settle time
+   B) Rotational delay
+   C) Waiting time
+   D) Seek time
+
 ## RAID & Storage Architecture
 
 1. **Which RAID level creates a mirror of all disks for storing data?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**

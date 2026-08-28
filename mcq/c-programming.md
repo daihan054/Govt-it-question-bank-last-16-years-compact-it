@@ -529,6 +529,12 @@
    c. “X extends Y” is correct if X and Y are either both classes or both interfaces
    d. “X extends Y” is correct for all combinations of X and Y being classes and/or interfaces
 
+9. **An n*n array v is defined as follows: v[i, j]=i-j for all i, j; 1<=i<=n, 1<=j<=n, the sum of the element of array v is** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 207]**
+   A) 0
+   B) n-1
+   C) n^2-3n+2
+   D) n^2(n+1)/2
+
 ## Pointers & Memory Allocation
 
 1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
@@ -560,6 +566,19 @@
    b) 2*N
    c) Infinite
    d) The answer can vary depending on the initial value of N
+
+3. **Consider the following recursive function fun (x,y) . What is the value of fun (4,3) ?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
+   ```c
+   int fun (int x, int y) {
+   if(x==0)
+   return y;
+   return fun (x-1, x+y)
+   }
+   ```
+   A) 9
+   B) 10
+   C) 12
+   D) 13
 
 ## Data Types & Variables
 
@@ -599,6 +618,21 @@
    C) return
    D) for
 
+7. **Suppose a C program has floating constant 1.414, what's the best way to convert it as a float data type?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 203]**
+   A) (float)1.414
+   B) float (1.414)
+   C) 1.414f or 1.414F
+   D) None of these
+   3. Consider the following variable declarations and definitions in C:
+   (i) int var_9=1
+   (ii) int 9_var=2
+   (iii) int _=3
+   Choose the correct statement w.r.t above variables. **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 203]**
+   A) Both (i) and (ii) are valid
+   B) Only (i) is valid
+   C) Both (i) and (iii) are valid
+   D) All of these
+
 ## Flowcharts & Algorithms
 
 1. **In flowchart what does below represent?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
@@ -613,3 +647,23 @@
    b. Database
    c. Terminal
    d. Process
+
+## Operators & Expressions
+
+1. **Let x be an integer which can take a value of 0 or 1. The statement if (x==0) x=1; else x=0; is equivalent to which of the following?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 203]**
+   A) x=1+x
+   B) x=1-x
+   C) x=x-1
+   D) x=1%x
+
+2. **For a given integer, which of the following operators can be used to set and reset a particular bit respectively?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 203]**
+   A) | and &
+   B) && and ||
+   C) & and |
+   D) || and &&
+
+3. **Which of the declaration is correct?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) int length;
+   B) char int
+   C) int long;
+   D) float double;

@@ -227,6 +227,18 @@
    C) DHCP
    D) SMTP
 
+31. **POP3 is a protocol for-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) Email Sending
+   B) Email Composing
+   C) Email Receiving
+   D) Email Storing
+
+32. **Which server can you use to dynamically assign IP addresses to the PCs in a LAN?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 207]**
+   A) DHCP Server
+   B) Web Server
+   C) DNS Server
+   D) FTP Server
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -395,6 +407,24 @@
    B) BGP
    C) ARP
    D) TCP
+
+17. **Which of the following is not standard synchronous communication protocol?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 205]**
+   A) PAS
+   B) SDLC
+   C) SLIP
+   D) SMTP
+
+18. **Which of the standard protocol for network management features?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) FTP
+   B) SNA
+   C) SNMP
+   D) SMTP
+
+19. **A path for carrying signals between a source and a destination is known as-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) Router
+   B) Channel
+   C) Link
+   D) Block
 
 ## Multiplexing & Data Rate
 
@@ -711,6 +741,12 @@
    C) 1.1.1.1
    D) 172.16.5.3
 
+21. **Which of the following TCP/IP addresses constitute the loopback address?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) 1.1.1.1
+   B) 255.255.255.255
+   C) 127.0.0.0
+   D) 127.0.0.1
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -939,6 +975,12 @@
    b) ab^2c
    c) a(1-b)^2c
    d) a(1-(1-b)^2)c
+
+17. **How many pairs of stations can simultaneously communicate on Ethernet LAN?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) 1
+   B) 2
+   C) 3
+   D) Multiple
 
 ## Error Detection & Correction
 

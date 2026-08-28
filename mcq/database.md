@@ -348,6 +348,12 @@
    C) Entity
    D) Relation
 
+38. **In SQL, the ________ command is used to recompile a view.** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+   A) COMPILE VIEW
+   B) DEFINE VIEW
+   C) ALTER VIEW
+   D) CREATE VIEW
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
