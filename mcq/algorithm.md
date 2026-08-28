@@ -108,6 +108,12 @@
    C) Used all the time
    D) When the list has only a few elements and when performing a single search in an unordered list
 
+19. **Binary search worst time complexity is-** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 256]**
+   a. O(n)
+   b. O(\log n)
+   c. O(1)
+   d. O(n^2)
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -353,6 +359,12 @@
    C) Dynamic programming
    D) All the above
 
+6. **Dynamic programming approach is used to solve-** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 256]**
+   a. Dijkstra Algorithm
+   b. Kruskal’s Algorithm
+   c. Prim’s Algorithm
+   d. None of these
+
 ## Complexity & Analysis
 
 1. **The time taken by NP-class sorting algorithm is-** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
@@ -422,3 +434,9 @@
    B) A list
    C) A plan
    D) None of them
+
+8. **Divide and Conquer method is used in-** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 256]**
+   a. Merge sort
+   b. Bubble sort
+   c. Quick sort
+   d. Both a & c

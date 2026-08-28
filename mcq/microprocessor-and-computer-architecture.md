@@ -126,6 +126,12 @@
    C) Both A & B
    D) None
 
+22. **Which is the faster memory?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+   a. RAM
+   b. Secondary memory
+   c. DRAM
+   d. Cache
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

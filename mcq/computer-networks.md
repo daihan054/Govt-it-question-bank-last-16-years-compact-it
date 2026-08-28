@@ -768,6 +768,12 @@
    C) MAN
    D) Intranet
 
+51. **In client server system what does the client program?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 258]**
+   a. Share data with other computer
+   b. Serve information to others computer
+   c. control others connected computers
+   d. Asked for information
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

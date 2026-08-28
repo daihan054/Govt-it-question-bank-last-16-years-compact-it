@@ -102,6 +102,12 @@
    C) Petabyte
    D) Terabyte
 
+18. **Microprocessor is used first in which generation computers?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+   a. Second generation
+   b. Third generation
+   c. Fourth generation
+   d. Fifth generation
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -593,6 +599,12 @@
    B) BJMPEGI
    C) MPEG2
    D) MPEG4
+
+36. **Which is not Application software?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+   a. Adobe Illustrator
+   b. MS Office
+   c. Redhat Linux
+   d. Open Office
 
 ## Acronyms & Abbreviations
 

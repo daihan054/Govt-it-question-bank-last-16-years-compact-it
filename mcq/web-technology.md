@@ -142,6 +142,12 @@
    (c) Internal Server Error
    (d) Not Found
 
+2. **When we browse internet, browser store some data in the computer. We are talking about-** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+   a. Session
+   b. File
+   c. Memory
+   d. Cookie
+
 ## Web Services & APIs
 
 1. **Between a client and a web server, which of the following used for inspecting the data that is sent from the client to the web server and blocking attacks such as SQL injection?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
