@@ -6,6 +6,12 @@
    (c) Docker is a programming language, and Docker Hub is a code editor
    (d) Docker is a firewall, and Docker Hub is a security tool
 
+2. **Which software is mostly used for virtualization?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) VMware
+   B) Oracle DBMS
+   C) Windows XP
+   D) Linux
+
 ## Cloud Service Models
 
 1. **Which one of the following is related to the services provided by cloud?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**

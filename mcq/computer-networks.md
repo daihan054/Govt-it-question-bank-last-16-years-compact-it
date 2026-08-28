@@ -299,6 +299,42 @@
    C) 127.0.0.0
    D) 127.0.0.1
 
+42. **A host machine is unable to communicate with google server. Which command is the most appropriate to run at host machine to determine which intermediary device is responsible for this failure?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) telnet 192.168.1.1
+   B) ping 192.168.1.1
+   C) tracert 192.168.1.1
+   D) ftp 192.168.1.1
+
+43. **Which of the following protocols uses both TCP and UDP ports?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) SMTP
+   B) Telnet
+   C) FTP
+   D) DNS
+
+44. **Email is a protocol of following layer-** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) Physical layer
+   B) Data Link Layer
+   C) Application layer
+   D) TCP layer
+
+45. **Which protocol is used for secure web browsing?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) WWW
+   B) RSA
+   C) ftp
+   D) https
+
+46. **How many layer internet protocol suites?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) 7
+   B) 5
+   C) 3
+   D) 4
+
+47. **Domain name to IP address mapping is done by-** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+   A) Web server
+   B) Database server
+   C) DNS server
+   D) Proxy Server
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -629,6 +665,12 @@
    B) Wireless-Fidelity
    C) Wireless Field
    D) Wireless Fiction
+
+42. **Distributed Queue Dual Bus is a standard for------** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+   A) MAN
+   B) LAN
+   C) WAN
+   D) Wireless LAN
 
 ## Multiplexing & Data Rate
 
@@ -986,6 +1028,12 @@
    (b) Class B
    (c) Class C
    (d) Class D
+
+25. **To divide a class C network into a maximum of 14 subnets- each capable of having up to 14 hosts. The subnet mask used should be ____** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) 255.255.255.240
+   B) 255.255.255.192
+   C) 255.255.255.78
+   D) 255.255.255.0
 
 ## Data Transmission & Modes
 

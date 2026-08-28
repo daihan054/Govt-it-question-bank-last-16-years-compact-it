@@ -220,7 +220,7 @@
    C) print
    D) None of these
 
-29. **Which of the following produce an answer that is closest in value to a double, d, while not being greater than d?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]**
+29. **Which of the following produce an answer that is closest in value to a double, d, while not being greater than d?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 229]**
    A) (int.Math.min(d))
    B) (int.Math.max(d))
    C) int.Math.abs(d))
@@ -285,6 +285,12 @@
    B) 11
    C) 9
    D) 8
+
+40. **In java, which operator is used to create an object?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+   A) class
+   B) scanf
+   C) print
+   D) None
 
 ## Encapsulation & Access Modifiers
 
@@ -443,6 +449,12 @@
    B) C+
    C) Java
    D) None
+
+8. **Which is not feature of object-oriented programming?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) inheritance
+   B) recursion
+   C) encapsulation
+   D) abstraction
 
 ## Inheritance
 

@@ -51,6 +51,35 @@
    C) Float
    D) None of above
 
+10. **Which control statement can be executed at least once?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) While
+   B) for
+   C) do-while
+   D) All of the above
+
+11. **Which of the following correctly shows the hierarchy of algorithm operation in C?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) /*+-
+   B) *-/+
+   C) +-/*
+   D) /*+-
+   25. Consider the following code
+   ```c
+   #include<stdio.h>
+   int main (int argc, char *argv[]){
+   return 0;}
+   ```
+   What is the maximum length of character array argv in the above code? **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) 0
+   B) 1
+   C) Undefined
+   D) -1
+   26. Which is the value of “d” after this line of code has been executed?
+   double d = Math.round(2.5+math.random()); **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) 2
+   B) 2.5
+   C) 3
+   D) 4
+
 ## Output Tracing
 
 1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

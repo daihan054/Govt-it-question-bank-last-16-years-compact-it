@@ -323,6 +323,12 @@
    (c) Command
    (d) Graphical user
 
+11. **Which O/S is recommended for real time system?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) Windows
+   B) Unix
+   C) Oracle
+   D) None of this
+
 ## Linux Commands & Administration
 
 1. **User passwords in Linux are stored as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**

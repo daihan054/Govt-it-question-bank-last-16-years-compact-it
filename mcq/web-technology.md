@@ -161,3 +161,23 @@
    B) XML
    C) MX
    D) HTML
+
+5. **Which one is modern lightweight message exchange format?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 224]**
+   A) JSON
+   B) MX
+   C) HTML
+   D) XML
+
+## Scripting & JavaScript
+
+1. **Where can JavaScript code be placed in an html page?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+   A) <head>
+   B) <body>
+   C) both A and B
+   D) none
+
+2. **What is the value of variable x after the following statement is executed in JavaScript var x2= "3" + "4" ?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+   A) 34
+   B) 7
+   C) 0
+   D) undefine

@@ -290,6 +290,12 @@
    C) Universal Serial Bits
    D) Universal Series Bits
 
+28. **Compared to CISC and RISC, processors (at the same clock) are -----** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) Faster
+   B) slower
+   C) similar
+   D) undefined
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

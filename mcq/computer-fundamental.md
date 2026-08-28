@@ -570,6 +570,12 @@
    C) HTML 5
    D) Adobe Flash
 
+32. **Which one of the following is not a type of Web search engine?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) Computer-created
+   B) Human-organized
+   C) Hybrid
+   D) Portal
+
 ## Acronyms & Abbreviations
 
 1. **CMP এর পূর্ণ অভিব্যক্তি হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
@@ -589,3 +595,9 @@
    (b) Magnetic Ink Code Reader
    (c) Magnetic Ink Case Reader
    (d) None
+
+4. **An acronym for Conference/Committee on Data Systems Languages is?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) Collute
+   B) CCD
+   C) CODASYL
+   D) DASD

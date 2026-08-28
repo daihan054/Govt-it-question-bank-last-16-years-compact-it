@@ -407,3 +407,27 @@
    B) C
    C) T
    D) 1
+
+15. **The operation of processing each element in the list is known as-----** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) Sorting
+   B) Merging
+   C) Inserting
+   D) Traversal
+
+16. **Which of the following data structure are index structures?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) linear array
+   B) link list
+   C) both a and b
+   D) none
+
+17. **The term push and pop related to -** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) Array
+   B) list
+   C) stack
+   D) all of this
+
+18. **Which data structure is used for indexing?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) Binary tree
+   B) B+ tree
+   C) Stack
+   D) Link List

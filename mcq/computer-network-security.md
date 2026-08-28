@@ -224,6 +224,12 @@
    C) Bug
    D) Trojan horse
 
+6. **Trojan can be introduced through-** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) Internet browsing
+   B) Database accessing
+   C) Emails
+   D) Troubleshooting
+
 ## Web Security Vulnerabilities
 
 1. **How can we prevent SQL Injection Attack?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

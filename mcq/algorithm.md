@@ -200,6 +200,12 @@
    C) O(n \log n) Comparisons
    D) O(n) Comparisons
 
+18. **The complexity of Bubble short algorithm is-** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) O(n)
+   B) O(\log n)
+   C) O(n^2)
+   D) O(n \log n)
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -368,3 +374,9 @@
    B) a list
    C) a plan
    D) a sequential structure
+
+6. **The step by step instruction that solved a problem are called ________.** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+   A) An algorithm
+   B) A list
+   C) A plan
+   D) None of the above

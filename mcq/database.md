@@ -378,6 +378,18 @@
    C) NOR
    D) NOT
 
+42. **The result of a SQL SELECT statement is a ----** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) Report
+   B) form
+   C) file
+   D) table
+
+43. **To remove the duplicate rows from the result of an SQL Select statement, the---- qualifier specified include.** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) only
+   B) distinct
+   C) unique
+   D) single
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -941,6 +953,18 @@
    C) After
    D) All of the above
 
+6. **________ is a statement that is executed automatically by the system.** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) Trigger constraint
+   B) Assertion
+   C) Durability
+   D) Integrity
+
+7. **What does a COMMIT statement do to a CURSOR?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) Open the cursor
+   B) Fetch the cursor
+   C) Close the cursor
+   D) None of this
+
 ## Database Connectivity (JDBC/ODBC)
 
 1. **Embedded SQL is which of the following?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
@@ -992,3 +1016,9 @@
    b) All exclusive mode locks taken by transaction can be released before transaction commits
    c) All locks can be released before transaction commits
    d) None of these
+
+5. **A shared lock allows which of the following type of transaction to occur?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 224]**
+   A) Delete
+   B) Insert
+   C) Read
+   D) Update

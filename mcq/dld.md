@@ -12,7 +12,7 @@
    (c) 3
    (d) 4
 
-3. **Which one is a Universal logic gate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]**
+3. **Which one is a Universal logic gate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
    (a) NAND
    (b) AND
    (c) OR
@@ -433,3 +433,9 @@
    b. X = A.B + \bar{A}.\bar{B}
    c. X = A.\bar{B} + \bar{A}.B
    d. X = (\bar{A} + B).(A + \bar{B})
+
+4. **According to Boolean algebra the value of (A+AB). (B+AB) is---** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) A
+   B) B
+   C) AB
+   D) 1
