@@ -179,3 +179,10 @@ for fn in sorted(os.listdir(sys.argv[1])):
 ```bash
 git commit -m "<source file name>" -m "Committed by Daihan"
 ```
+
+---
+
+# Notes
+
+- Bengali headings need NFC normalization when matched against existing files.
+- The exam suggestion sheets in `Suggestion/` are derived from this bank; if the bank changes substantially, their statistics go stale.
