@@ -86,6 +86,10 @@ int main(int argc, char *argv[]){
    (b) To show 11^{\text{th}} to 15^{\text{th}} line from file name myfile.
    (c) To show permission for read, write and execution file name myfile.
 
+12. **Write down the names of the three users who can access a file on directory on Linux.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 447]**
+
+13. **You need to find the total number of linux of the .c and .h file in the current directory formulas the linux commands to display this......... (Approximate)** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 448]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**

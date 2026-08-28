@@ -38,6 +38,14 @@
 
 14. **Full meaning of : HTTPs** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
+15. **Here some idea in computer architecture. You fill the idea part of the table which describe the best? GUI, RAID, API, LRU** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 453]**
+| Term | Description |
+|---|---|
+| GUI |  |
+| RAID |  |
+| API |  |
+| LRU |  |
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

@@ -70,6 +70,8 @@
 
 1. **What is Artificial Intelligence?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**
 
+2. **An artificial intelligence is an agent is an entity that continuously revious its enviornment.....** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 449]**
+
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical)
 
 1. **Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-linkage hierarchical clustering technique.** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 473]**

@@ -100,6 +100,8 @@
 
 5. **Define design pattern. Write about singleton pattern.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 469]**
 
+6. **We are going to create a Shape interface and concrete classes implementing the Shape interface. A facade class ShapeMaker is defined as a next step. ShapeMaker class uses the concrete classes to delegate user calls to these classes. FacadePatternDemo, our demo class, will use ShapeMaker class to show the results.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 450]**
+
 ## CI/CD & DevOps Methodologies
 
 1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

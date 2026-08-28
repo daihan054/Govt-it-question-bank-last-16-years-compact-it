@@ -18,6 +18,8 @@
 
 3. **In how many ways you can distribute 3 identical green shirt and 3 identical red shirt among 6 individual persons.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
 
+4. **Suppose we have 6 hospital and 4 police station. Need to select a 4 stations for interrupted power supply. How many ways can we select where at least one hospital on the uninterrupted power supply list?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 454]**
+
 ## Set Theory & Discrete Math
 
 1. **Given, n(A) = 20, n(B) = 30 and n(A \cup B) = 40 what is n(A \cap B)?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**

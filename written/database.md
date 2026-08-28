@@ -233,6 +233,8 @@ ORDER BY average_salary DESC;
    **(A) Write an SQL query that returns all records of the form sid, uid where sid is the key of an S- record and uid is the key of a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.**
    **(B) Write an SQL query that returns records of the form A, C where the A-value is from an S- record and the C-value is from a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 496]**
 
+35. **Write following EMPLOYEE database table write an SQL query to find employee who work is a department where the average salary is lower then the average salary all the department......** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 452]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

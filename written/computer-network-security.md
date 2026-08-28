@@ -20,6 +20,8 @@
 
 10. **What is Cryptography? Difference between Symmetric and Asymmetric encryption with example. Draw and design public key encryption using Hash function. Draw a diagram for e-commerce online transactions.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
 
+11. **The high level method of DES...** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 450]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

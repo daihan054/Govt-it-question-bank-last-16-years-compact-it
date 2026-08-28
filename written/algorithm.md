@@ -121,8 +121,12 @@ for i in N:
 
 **অনুসারে প্রাপ্ত fractional knapsack সমস্যা সমাধান একটি চিত্রানুপাতে উত্তর লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
+2. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 453]**
+
 ## Dynamic Programming
 
 1. A communication link is established from Cox’s Bazar to Kuakata through a sequence of stations M_1, M_2, M_3, \dots, M_n. Each location can have at most one repeater, and the distance between consecutive locations is given by P_i > 0. For reliable communication, two selected repeater stations must be at least K kilometers apart. Using Dynamic Programming, determine the maximum number of repeaters that can be installed while maintaining the required minimum distance between any two selected stations. [BSCCPL AME 21-08-2026 (BUET)]
 
 2. **What is Dynamic programming? Explain with example.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 474]**
+
+3. **The maximum subarray is the task of finding a contiguous subarray with the largest sum within a given one dimentional array of numbers. Suppose the array is: A: [-2, 1, -3, -1, 2, 1, -5, 4]** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 448]**

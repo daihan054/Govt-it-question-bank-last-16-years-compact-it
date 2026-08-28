@@ -88,6 +88,15 @@
 
 19. **(a) List down the layers of OSI model in top-down manner.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 480]**
 
+20. **Fill up the following protocol table by work at which layer?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 452]**
+| Protocol Name | Layer |
+|---|---|
+| Carrier-Sense Multiple Access (CSMA) |  |
+| Open Shortest Path First (OSPF) |  |
+| Transmission Control Protocol (TCP) |  |
+| Routing Information Protocol (RIP) |  |
+| User datagram protocol (UDP) |  |
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)

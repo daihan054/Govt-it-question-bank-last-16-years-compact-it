@@ -210,6 +210,13 @@ return 0;
 
 40. **Suppose you have an array. The array contains elements from 0 to 10. This array also contains 0. To replace these 0s, write a program in C/C++ language.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 593]**
 
+41. **Write a function int equilibrium (int[] arr, int n); that given a sequence arr[] of size n, returns an equilibrium index (if any) or -1 if no equilibrium indexes exist. The equilibrium index of an array is an index such that the sum of elements at lower indexes is equal to the sum of elements at higher indexes. Foe example:** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 455]**
+   **Input: A[] = {-7, 1, 5, 2, -4, 3, 0}**
+   **Output: 3**
+   **3 is an equilibrium index, because: A[0] + A[1] + A[2] = A[4] + A[5] + A[6]**
+   **Input: A[] = {1, 2, 3}**
+   **Output: -1**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
