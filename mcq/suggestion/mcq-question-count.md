@@ -1,6 +1,6 @@
 # MCQ Question Count (Last 16 Years)
 
-Category and subcategory wise question count from every MCQ paper in the [`mcq/`](../../mcq/) folder.
+Category and subcategory wise question count from every MCQ paper in the [`mcq/`](../) folder.
 Sorted by count, highest first. Total **2781** questions.
 
 ## IT questions
