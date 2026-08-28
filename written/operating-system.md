@@ -113,6 +113,8 @@ int main(int argc, char *argv[]){
 
 18. **UNIX command (directory listing with hidden files).** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
 
+19. **Difference between below 3 linux command: cd, cd usr/desk/home, cd/user/desk/home** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 717]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**

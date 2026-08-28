@@ -42,6 +42,8 @@
 
 20. **Write an essay on any one of the following using the hints given below: a) Technical Education. [Hints: Introduction — What technical education is — importance — Role of the government — Conclusion.] b) Environment Pollution. [Hints: Introduction — What environment polluton is — Sources of pollution — Effects on environment — impacts of human health — How to prevent the pollution — Conclusion.]** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
+21. **Write an essay on safe Environment/ [Hints : Introduction – relation between life and environment – actions taken by the government to protect environment – individual actions to ensure safe environment – conclusion]** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -53,6 +55,8 @@
 4. **Write a letter to the officer-in-charge of your police station to provide regular police patrol in your locality to prevent crimes.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
 
 5. **(a) Write a letter to your friend condoling the death of his/her mother. Or, (b) Write an application to the Upazila Nirbahi Officer for taking steps to repair damaged road in your locality.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
+6. **Write an application to the Mayor of Dhaka south City Corporation (DSCC) to take measures against illegal chemical storages in your locality.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
 ## Reading Comprehension
 
@@ -84,6 +88,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
  * (e) What message does the passage convey?
 
 4. **Read the following passage and then answer the questions given below: War is the worst of all evils of human civilisation. It is an ancient institution which has existed for at least six thousand years. It was always wicked and usually foolish, but in the past, human race managed to live with it. Modern ingenuity has changed this drastically. Either man will abolish war or war will abolish man. In the present, it is nuclear weapons that cause the gravest danger, but bacteriological or chemical weapons may, before long, offer an even greater threat. If we succeed at any cost in abolishing nuclear weapons, our work will not be done completely. It will never be completed until we have succeeded in abolishing war for ever. To do this, we need to persuade mankind to look upon international disputes in a new intellectual and mutual way, not as contest of force or power, in which the victory goes to the side which is the most skillful in massacre, but by arbitration in accordance with agreed principles of law. It is not easy to change age-old mental habits, but this is what must be attempted. It is the destructive war that must be checked for the existence of life on earth. Questions: a) Why should we avoid war? b) Why is war more dangerous at present? c) What should we do to abolish war forever? d) How should all international problems be solved? e) Why should we check the destructive war at any cost?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
+5. **Read the following passage crefully and answer the questions below in your words : “To be good is noble, but to teach others how to be good is nobler - and no trouble” said a well known writer. This may explain why in this world there is more of preaching than of practice. We do not mean the preaching which are get in church, but that which is given freely and without stint, on buses, in the streets and even in the homes of our land. Where is the parent who does not discover himself telling his child to do just what he himself does regularly? How many people are there who are certain that they have never made anything but financial mistakes? The man who never swam a stroke feels perfectly competent to tell another how to swim. The man who can not find his way to modest livelihood pretends to know just how to save the nation from all economic ills. It is no trouble to preach. But it is a considerable trouble to carry out what we preach. This is so the man who is striving to climb the loftiest heights know just how difficult is the way. Questions: (a) What does the quoted expression mean? (b) Why is practicing more difficult than preaching? (c) What does the writer mean by preaching? (d) What do the parents tell their children to do? (e) How does the honest preacher preach to himself?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
 ## English Grammar
 
@@ -143,6 +149,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 13. **Use the correct form of verbs within brackets: (a) Medha walks fast lest she (be) late. (b) Why you (not attend) the meeting yesterday? (c) You had better (to speak) the truth. (d) The poor (to be) born to suffer. (e) The rose (call) the queen of all flowers.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
+14. **Correct the following sentence: (a) He is very popular among the villagers. (b) My father was died in 1995 (c) Give me a hot cup of tea. (d) Rifat will visit us recently. (e) My best friend had left this town last Sunday.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
 ## English Vocabulary & Antonyms
 
 1. **What is the Opposite word of Transparent?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
@@ -156,6 +164,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 2. **Make sentences with the following (any five): (a) keep pace with (b) make up one's mind (c) put up with (d) take after (e) well off (f) on the sly (g) in case of.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
 3. **অর্থসহ বাক্য রচনা করুন: A Black Sheep, Crocodile tears, Straw Vote, Bed of roses, Hard and fast.** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+4. **Make sentences with the following: (a) Play fast and loose. (b) A piece of cake. (c) Beat around the bush. (d) Back against the wall. (e) Eat like a horse.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
 ## Translation
 

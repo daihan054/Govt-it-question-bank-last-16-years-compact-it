@@ -30,6 +30,8 @@
 
 15. **১. যে-কোনো একটি বিষয়ে প্রবন্ধ লিখুন: ক. বিজ্ঞান শিক্ষা; খ. জাতির পিতা বঙ্গবন্ধু শেখ মুজিবুর রহমানের জন্ম শতবার্ষিকী; গ. আন্তর্জাতিক মাতৃভাষা দিবস; ঘ. ভাষা আন্দোলন ও মুক্তিযুদ্ধ; ঙ. তথ্য প্রযুক্তি ও বাংলাদেশ।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
+16. **১. প্রবন্ধ রচনা করুন : মুক্তিযুদ্ধের চেতনা ও আমাদের সংস্কৃতি** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -65,6 +67,8 @@
 
 4. **২. সারমর্ম লিখুন: এসেছে নতুন শিশু, তাকে ছেড়ে দিতে হবে স্থান, জীর্ণ পৃথিবীতে ব্যর্থ, মৃত আর ধ্বংস স্তূপ পিঠে চলে যেতে হবে আমাদের, চলে যাবো তবু আজ যতক্ষণ দেহে আছে জ্ঞান। প্রাণপণে পৃথিবীর সরাবো জঞ্জাল, এ বিশ্বকে এ শিশুর বাসযোগ্য করে যাবো আমি নবজাতকের কাছে এ আমার দৃঢ় অঙ্গীকার।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
+5. **৫. সারমর্ম লিখুন : শৈশবে সদুপদেশ যাহার না রোচে, জীবনে তাহারে কভু মূর্খতা না ঘোচে। চৈত্র মাসে চাষ দিয়া না বোনে বৈশাখে, কবে সেই হৈমন্তিক ধান্য পেয়ে তাকে? সময় ছাড়িয়া দিয়া করে পণ্ডশ্রম, ফল কহে সেও অতি নির্বোধ অধম। খেয়াতরী চলে গেলে বসে থাকে তীরে, কিসে পার হবে তারা না আসিলে ফিরে॥** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
+
 ## পত্র লিখন
 
 1. **অনুকৃতিশীল নারী সমাজের জীবনে সত্যের গুরুত্ব বর্ণনা করে ছোট বোনকে একটি পত্র লিখুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -74,6 +78,8 @@
 3. **দুর্নীতিমুক্ত সমাজ গঠনে পারিবারিক শিক্ষার ভূমিকা কতটুকু, এ নিয়ে পত্রিকায় প্রকাশের উপযোগী একটি পত্র লিখুন।** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
 
 4. **৩. ক. বাংলা নববর্ষ উপলক্ষ্যে একটি আমন্ত্রণপত্র লিখুন। অথবা খ. মুক্তিযুদ্ধ জাদুঘর পরিদর্শনের গুরুত্ব জানিয়ে ছোটভাইকে একটি চিঠি লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
+5. **২. তোমার এলাকায় একটি পাঠাগার স্থাপনের জন্য জেলা প্রশাসকের নিকট একটি আবেদন পত্র লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
 ## Translation
 
@@ -122,6 +128,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 17. **Translation English to Bangla.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
 
 18. **৪. বাংলা অনুবাদ করুন: Love is the crown of all virtues. It adores a man with divine qualities. It is love that strengthens our family ties and make heaven of the world. Love for god is a virtue of the highest excellence. It governs society and secures personal liberty. Love of one's own country is an inherent instinct of human nature.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
+19. **৪. বাংলায় অনুবাদ করুন: Cleanliness is a virtue. It is the habit of keeping the body and all other things free from dirts. Without a clean body one cannot have a merry mind. Cleanliness keeps health. It is also a mark of politeness. Good health keeps mind healthy.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 
@@ -198,3 +206,7 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 26. **৭. পল্লীকবি কে? বাংলা সাহিত্যে সনেটের জনক কাকে বলা হয়? “লালসালু” উপন্যাসের লেখক কে?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
 27. **অর্থসহ বাক্যরচনা করুন: কচুবনের কালাচাঁদ, কাকনিদ্রা, গোবর গণেশ, কাঠালের আমসত্ত্ব, উনপঞ্চাশ বায়ু।** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+28. **৩. (ক) অনুসর্গ ও উপসর্গের পাঁচটি পার্থক্য লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
+
+29. **(খ) ব্যাসবাক্যসহ সমাস নির্ণয় করুন : ধর্মঘট, দশানন, প্রভাত, মোহনিদ্রা, সাত-সতের** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**

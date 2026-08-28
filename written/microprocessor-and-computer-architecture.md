@@ -34,6 +34,8 @@
 
 13. **What is Microprocessor?** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
 
+14. **Explain four type of register.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -117,6 +119,8 @@
 11. **Give classification of memory. Differentiate between RAM and ROM.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 664]**
 
 12. **(গ) Primary Memory and Secondary Memory এর উদাহরণসহ তুলনামূলক আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
+
+13. **Write down the difference between SRAM and DRAM.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
 
 ## Secondary Storage (HDD vs SSD)
 

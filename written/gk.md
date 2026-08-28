@@ -138,6 +138,22 @@
 
 69. **৮. হালদা নদী কোন এলাকায় অবস্থিত? এই নদীর অর্থনৈতিক গুরুত্ব কি?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
+70. **১. কবে, কোথায় স্বাধীন বাংলাদেশ প্রতিষ্ঠার শপথ নেয়া হয়েছিল?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+71. **২. বাংলাদেশে কয়টি কঠিন শিলা খনি আছে? খনির নাম এবং কোন জেলায় অবস্থিত, লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+72. **৩. বাংলাদেশের তিনটি জনপ্রিয় পর্যটন কেন্দ্রের নাম লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+73. **৪. বরেন্দ্র ভূমি বলতে কী বোঝায়? কোন কোন এলাকাজুড়ে বরেন্দ্র ভূমি বিস্তৃত?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+74. **৫. (ক) বাংলাদেশের মুক্তিযুদ্ধে কয়টি সেক্টর ছিল?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+75. **(খ) পাকিস্তানী সেনারা কোথায় আত্মসমর্পণ করে?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+76. **(গ) বাংলাদেশের মুক্তিযুদ্ধের সর্বাধিনায়ক কে ছিলেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+77. **৬. (ক) বঙ্গবন্ধু কত সালে জাতিসংঘে বাংলায় ভাষণ দিয়েছেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -255,6 +271,10 @@
 50. **১৪. শ্রীলংকার অর্থনৈতিক বিপর্যয়ের মূল কারণ কি?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
 51. **১৫. রাশিয়া-ইউক্রেন যুদ্ধের মূল কারণ সম্পর্কে তিনটি বাক্য লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+
+52. **(খ) জাতিসংঘের প্রথম মহাসচিব কে ছিলেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+53. **(গ) জাতিসংঘের সর্বশেষ সদস্য রাষ্ট্রের নাম কি?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
 ## Everyday Science & Environment
 

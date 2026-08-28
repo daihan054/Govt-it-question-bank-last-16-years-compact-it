@@ -275,6 +275,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 11. **Explain parity method for error detection. Write down the bit strings of “Delta” using ASCII.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
 
+12. **An end system sends 50 packets per second using the User Datagram Protocol (UDP) over a full duplex 100 Mbps ethernet LAN connection. Each packet consists 1500B of ethernet frame payload data. What is the throughput, when measured at the UDP layer?** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
@@ -455,6 +457,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 62. **What is default subnet mask?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 702]**
 
+63. **Given IP: 168.20.96.63, Subnet mask: 255.255.192.0 Find network address, broadcast address and number of host.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 712]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -593,6 +597,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 5. **Explain NAT? Differenc between IPv4 and IPv6.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
 
+6. **What is NAT? Write down the list of private IP address.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
+
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 
 1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
@@ -616,6 +622,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 10. **What is DNS? What is forward and reverse lookup DNS?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
 
 11. **What is ICMP, SMTP, POP server, Boot loader and Clustering?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+
+12. **Write a command how to find DNS www.egcb.gov.bd and which protocol uses?** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
 
 ## Email Architecture & Protocols (SMTP, POP3, IMAP)
 
@@ -649,6 +657,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
+10. **What is the channel capacity for a teleprinter channel with a 300 Hz bandwidth and a signal-to-noise ratio of 3 dB?** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
+
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 
 1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
@@ -670,6 +680,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## Analog Modulation & Radio Receivers
 
 1. **With appropriate figures, distinguish between homodyne and heterodyne detection processes. Draw the block diagram of a super heterodyne AM receiver.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+2. **Difference between AM and FM. (a) Which is prefer for long distance communication? (b) Which has low distortion? (c) Which has low interference?** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
 
 ## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)
 

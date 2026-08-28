@@ -10,6 +10,8 @@
 
 5. **How to AC converted into DC?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
 
+6. **Find R and I from a circuit.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**
+
 ## AC Circuits & Power Analysis
 
 1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
@@ -53,3 +55,5 @@
 1. **You are required to convert a 12-bit digital number to an analogue voltage over the voltage range of 0 to 3.3V with a Digital-to-Analogue Converter (DAC). What is the resolution of the analogue output?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 419]**
 
 2. **An 8 bit (Analog to Digital Converter) = 2.56v. Let the minimum analog voltage = 0v. Calculate binary data output if analog input=1.7** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]**
+
+3. **Draw an ADC converter circuit which convert an analog signal to digital signal.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**

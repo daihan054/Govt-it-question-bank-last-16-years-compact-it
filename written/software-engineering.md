@@ -54,6 +54,12 @@
 
 22. **(খ) Quality Control কাকে বলে? Quality review process কীভাবে কাজ করে?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
 
+23. **What is black box testing? Consider a program which computes the square root of an input integer between 0 and 5000. Determine the equivalence class test cases. Determine the test cases using boundary value analysis also.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
+
+24. **Definition of Gray-box testing and Unit testing.** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 715]**
+
+25. **Write down the difference between Black box and white box testing.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**

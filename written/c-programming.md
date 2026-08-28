@@ -257,6 +257,10 @@ return 0;
 
 54. **ইউজার হতে 10 টি integer data input করে যে data গুলো 5 দ্বারা বিভাজ্য তাদের গড় মান নির্ণয় এর একটি program লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
 
+55. **Write a function in C/C++ that return kth largest number of an array. The function has three parameters array_name, size, k.** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 714]**
+
+56. **Write a C/C++ program to find out the prime from 1 to N.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 718]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -474,6 +478,19 @@ int main() {
     c = a++ + b;
     printf("%d %d %d", a, b, c);
     return 0;
+}
+```
+
+16. **What will be the output of the program?** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
+```c
+#include<stdio.h>
+void main() {
+    int a[5]={5,1,15,20,25};
+    int i,j,m;
+    i=++a[1];
+    j=a[1]++;
+    m=a[i++];
+    printf("%d, %d, %d",i,j,m);
 }
 ```
 

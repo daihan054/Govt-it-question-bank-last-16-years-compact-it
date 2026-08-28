@@ -20,6 +20,8 @@ for i in N:
 
 7. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
 
+8. **Recurrence equation of binary search and solve it.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
@@ -33,6 +35,8 @@ for i in N:
 5. **Binary search using recursive function.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
 
 6. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 605]**
+
+7. **Write a C/C++ program for binary search.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 712]**
 
 ## Sorting Algorithms & Complexity
 
@@ -147,6 +151,8 @@ for i in N:
 
 9. **(b) What are the main limitation of Depth First Search (DFS)? Is there any way to solve these issues?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 687]**
 
+10. **DFS complexity (Approximate)** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 718]**
+
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
@@ -158,6 +164,8 @@ for i in N:
 4. **Find the shortest path from following graph starts from:** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 394]**
 
 5. **Find the minimum spanning tree:** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 700]**
+
+6. **How to find single source shortest path from negative weighted cycle. Justify and how you find it is negative weighted graph.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
 
 ## Greedy Algorithms (Fractional Knapsack)
 

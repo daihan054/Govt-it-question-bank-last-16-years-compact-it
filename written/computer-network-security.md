@@ -114,6 +114,10 @@
 
 14. **What do you mean by a DNS poisoning attack, and how does it work?** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 685]**
 
+15. **What is MAC flooding? How to prevent MAC flooding?** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
+
+16. **Write down the difference between Active and Passive attack.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -172,6 +176,8 @@
 10. **What is digital signature? Where is it used?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
 
 11. **What is a digital signature? Describe its role in digital security?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
+12. **What is Digital signature? Explain shortly.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
 
 ## Security Protocols (SSL/TLS, HTTPS)
 
