@@ -22,6 +22,8 @@ for i in N:
 
 3. **What is the complexity of Binary algorithm?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
+4. **Explain Algorithm of Binary search.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+
 ## Sorting Algorithms & Complexity
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য

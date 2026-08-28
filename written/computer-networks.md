@@ -422,6 +422,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 7. **Write down the difference among Hub, Switch and Router.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
+8. **What is gateway? Is router and gateway have any difference?** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+
 ## VLANs & Subnetting Comparison
 
 1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]

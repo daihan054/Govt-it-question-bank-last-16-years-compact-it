@@ -22,6 +22,8 @@
 
 11. **The high level method of DES...** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 450]**
 
+12. **Difference between symmetric and asymetric key encryption.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -69,6 +71,8 @@
 7. **What is Cyber Security? Write down the top 10 cyber attack. Discuss about Ransomware and DDoS attack.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
 
 8. **What is meant by Encryption and Decryption? What is Cyber security? Write down the top 10 cyber attack.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 557]**
+
+9. **Difference between active and passive atack.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
 
 ## Firewalls & Network Defense
 

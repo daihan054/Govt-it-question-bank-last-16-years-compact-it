@@ -37,6 +37,8 @@
 
 1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**
 
+2. **What is CSS? What is CSS framework? Write down 3 CSS framework name?** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+
 ## Full Stack & Backend Web Development
 
 1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 320]**
