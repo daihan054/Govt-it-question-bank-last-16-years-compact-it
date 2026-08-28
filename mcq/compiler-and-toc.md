@@ -29,3 +29,9 @@
    b. 0*(10*1)*10*
    c. (0*10*1)*0*10*
    d. (0*10*)*1(0*10*)*
+
+6. **Which one of the following regular expressions represents the set of all binary strings with an odd number of 1's?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 185]**
+   a) ((0+1)*1(0+1)*1)*10*
+   b) (0*10*10*)*0*1
+   c) 1*+(1*01*0)*1*
+   d) None

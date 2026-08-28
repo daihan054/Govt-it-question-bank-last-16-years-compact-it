@@ -194,6 +194,12 @@
    C) electron
    D) electrodes
 
+21. **Which one is wrong statement for BIOS of a computer?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) Connect microprocessor and I/O
+   b) Manages data flow
+   c) Loads the operating system
+   d) Provide storage
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**

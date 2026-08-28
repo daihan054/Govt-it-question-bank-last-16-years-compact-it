@@ -152,6 +152,12 @@
    C) Intel core i5-9400H
    D) Intel core i9-10900K
 
+9. **Suppose, the operating clock frequency of a typical CPU is 700 MHz and the number of clocks required for execution of three different instruction types are 4, 8, and 10. If the corresponding appearance rate of the instructions are 30%, 60% and 10%, respectively, how many MIPS does this CPU perform?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 186]**
+   a) 10
+   b) 50
+   c) 70
+   d) 100
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

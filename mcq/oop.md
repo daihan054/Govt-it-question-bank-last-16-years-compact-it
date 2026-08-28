@@ -246,6 +246,12 @@
    (গ) Public
    (ঘ) Abstract
 
+3. **Which is not the feature of JAVA OOP?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 180]**
+   a) Multiple Inheritance
+   b) Multi-level inheritance
+   c) Compile time Polymorphism
+   d) Runtime Polymorphism
+
 ## Inheritance
 
 1. **When a class serves as base class for many derived classes, the situation is called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**

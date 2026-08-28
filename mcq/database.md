@@ -57,6 +57,12 @@
    c) 3NF
    d) BCNF
 
+11. **If you are assigned to remove partial dependency from a database, which technique you will use?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 180]**
+   a) 1NF
+   b) 2NF
+   c) 3NF
+   d) BCNF
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -284,6 +290,34 @@
    c) Difference
    d) Intersection
 
+32. **Consider the following Employee Table and the SQL query given:** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 185]**
+   | id | Date | Work_hour |
+   |---|---|---|
+   | 1 | 2020-10-18 | 8 |
+   | 1 | 2020-10-17 | 8 |
+   | 1 | 2020-10-16 | 9 |
+   | 2 | 2020-10-18 | 7 |
+   | 2 | 2020-10-16 | 8 |
+   | 3 | 2020-10-16 | 6 |
+   SELECT id, sum(work_hour) from Employee Where Work hour>6 Group BY ID;
+   How many rows are returned by the SQL query?
+   a) 3
+   b) 4
+   c) 2
+   d) 0
+
+33. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 185]**
+   | Product Id | Date | Quantity |
+   |---|---|---|
+   | F101 | 2020-10-17 | 3 |
+   | H201 | 2020-10-17 | 2 |
+   | F101 | 2020-10-16 | 1 |
+   | H201 | 2020-10-16 | 2 |
+   a) SELECT AVE(Quantity) FROM Delivery Record WHERE Product id='F101'
+   b) SELECT COUNT (*) FROM Delivery Record
+   c) SELECT SUM (Quantity) FROM Delivery Record WHERE Date = '2020-10-16'
+   d) SELECT MAX (Quantity) FROM Delivery Record
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -420,7 +454,7 @@
    c) Commit
    d) None of the
 
-6. **Which one is not Database Transaction property?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+6. **Which one is not Database Transaction property?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
    a) Atomicity
    b) Consistency
    c) Durability
@@ -455,6 +489,12 @@
    b) For committing a transaction
    c) For locking a transaction
    d) To setup transaction user parameters.
+
+12. **After a transaction completes successfully, the changes it has made to the database persist, even if there are system failures. This property of transaction is known as-** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 184]**
+   a) Atomicity
+   b) Consistency
+   c) Isolation
+   d) Durability
 
 ## Indexing & Query Optimization
 
@@ -685,6 +725,27 @@
    b) Two
    c) Three
    d) Two or Three
+
+6. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 184]**
+   ```
+   +------------+               +------------+
+   | instructor |               |   student  |
+   +------------+   +---------+ +------------+
+   | ID         |<--| advisor | | ID         |
+   | name       |   +---------+ | name       |
+   | salary     |               | tot_cred   |
+   +------------+               +------------+
+   ```
+   a) One
+   b) Two
+   c) Three
+   d) No definite numbers
+
+7. **Consider an Entity-relationship (ER) model where R is defined as a many-to-one relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater than the cardinality of E2, which of the following is true about R?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 184]**
+   a) Every entity in E1 is associated with exactly one entity in E2
+   b) Some entity in E1 is associated with more than one entity in E2
+   c) Every entity in E2 is associated with exactly one entity in E1
+   d) Every entity in E2 is associated with at most one entity on E1
 
 ## PL/SQL & Triggers
 

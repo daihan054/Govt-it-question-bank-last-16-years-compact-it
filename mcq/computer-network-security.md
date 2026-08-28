@@ -233,3 +233,15 @@
    B) Self-encrypting Virus
    C) Stealth Virus
    D) Macro Virus
+
+11. **How can we prevent SQL Injection Attack?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) Show the database error to the users
+   b) Do not remove potential malicious code
+   c) Use the user input directly
+   d) Use input validation
+
+12. **________ is an assault on a service from a single source that floods it with so many requests that is becomes overwhelmed and is either stopped completely or operates at a significantly reduced rate.** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 186]**
+   a) Denial-of service(DoS) attack
+   b) Spoofing attack
+   c) Cross-site scripting (XSS) attack
+   d) Buffer overflow attack

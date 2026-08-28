@@ -110,6 +110,12 @@
    c) Gamma testing
    d) Delta testing
 
+12. **Software goes through a phase in which errors are verified and studied on simulated user environments. This is referred as-** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
+   a) Alpha testing
+   b) Beta testing
+   C) Gamma testing
+   d) Delta testing
+
 ## SDLC Models
 
 1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**

@@ -150,6 +150,19 @@
    c) First-In-First Out
    d) Key indexing
 
+16. **What will be the state of a queue after executing the following operation?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   push(1), push(2), pop(), push(4), push(5), pop()
+   a) 2, 5
+   b) 2, 4
+   c) 4, 5
+   d) 1, 4
+
+17. **Suppose you want to insert n elements into an empty linked list while maintaining the shorted order. What is the worst-case time complexity?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 184]**
+   a) \theta(n)
+   b) \theta(n \log n)
+   c) \theta(1)
+   d) \theta(n^2)
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**

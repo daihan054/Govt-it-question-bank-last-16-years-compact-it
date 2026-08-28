@@ -27,7 +27,7 @@
    c) Object oriented
    d) Relational oriented
 
-6. **Suppose you are using an HTML browser at a client machine C to access a static HTML webpage hosted in a HTTP server S. The page contains exactly one static embedded image which also resides at S. Assuming no web caching which of the following is correct when you load the webpage along with the embedded image?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]**
+6. **Suppose you are using an HTML browser at a client machine C to access a static HTML webpage hosted in a HTTP server S. The page contains exactly one static embedded image which also resides at S. Assuming no web caching which of the following is correct when you load the webpage along with the embedded image?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
    a. C need to send at least 2 HTTP requests to S using two different TCP connection.
    b. C need to send at least 2 HTTP requests to S but a single TCP connection is sufficient.
    c. A single HTTP request is sufficient without using any TCP connection from C to S.
@@ -44,6 +44,17 @@
    B) HTML5
    C) XSL
    D) HTML3
+
+9. **When a web browser interacts with a web server, the following actions take place?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
+   A1: The web browser requests a webpage using HTTP.
+   A2: The web browser establishes a TCP connection with the web server.
+   A3: The web server sends the requested webpage using HTTP.
+   A4: The web browser resolves the domain name using DNS.
+   Which is the correct order of execution of the above actions?
+   a) A4, A2, A1, A3
+   b) A1, A2, A3, A4
+   c) A4, A1, A2, A3
+   d) A2, A4, A1, A3
 
 ## PHP & Server-Side
 

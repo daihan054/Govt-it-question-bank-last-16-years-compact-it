@@ -191,6 +191,24 @@
    c) Unique Resource Locator
    d) None
 
+25. **Which one of the following is the default port of HTTP?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) 23
+   b) 25
+   c) 80
+   d) 45
+
+26. **DHCP means?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) Dynamic Host Control Protocol
+   b) Domain Host Configuration Protocol
+   c) Distributed Host Configuration Protocol
+   d) Dynamic Host Configuration Protocol
+
+27. **Which of the followings is the Protocol Data Unit (PDU) for the application layer in the Internet stack?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
+   a) Segment
+   b) Datagram
+   c) Message
+   d) Frame
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -226,7 +244,7 @@
    (গ) 64 bits
    (ঘ) 132 bis
 
-7. **How many bits in IPv6?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+7. **How many bits in IPv6?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
    a) 32
    b) 64
    c)128
@@ -367,6 +385,36 @@
    b. 20 milliseconds
    c. 520 milliseconds
    d. 270 milliseconds
+
+7. **A complex bandpass signal has a bandwidth of 300kHz. What is the minimum sampling rate for this signal?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) 600,000 samples per second
+   b) 600,00 samples per second
+   c) 600kHz
+   d) None of the above
+
+8. **The human voice normally contains frequencies from 0 to 4000Hz. If bits per sample?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) 8000 samples/second
+   b) 8000kbps
+   c) 64kbps
+   d) 64 samples/second
+
+9. **Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 5 kHz between the channels to prevent interference?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) 500 kHz
+   b) 520 kHz
+   c) 540 kHz
+   d) 525 kHz
+
+10. **Assume we need to download text documents at the rate of 100 pages per sec. Each page contains an average of 24 lines with 80 characters in each line. If we assume that one character requires 8 bit, what is the required bit rate of the channel?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) 1.92 Mbps
+   b) 1.636Mbps
+   c) 1.82 Mbps
+   d) 1.56Mbps
+
+11. **Consider an extremely noisy channel in which the value of the signal-to-noise ratio is almost zero. For this channel, is the bandwidth is B then what is the channel capacity?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) 0.137B
+   b) 0
+   c) 0.137
+   d) Infinity
 
 ## Wireless & Mobile Communication
 
@@ -532,7 +580,7 @@
    c) 255.0.0.0
    d) 255.255.0.0
 
-11. **Which one is the loopback address?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+11. **Which one is the loopback address?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
    a) 255.255.255.0
    b) 127.0.0.1
    c) 255.0.0.0
@@ -550,7 +598,7 @@
    c. ABCD::100::F8FF:FE75:50DF
    d. 13.15.17.19
 
-14. **Suppose you need to assign IPv4 address to two computers of your company so that the both computers belong to the subnet. 255.255.255.240. Which of the following is a valid assignment?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+14. **Suppose you need to assign IPv4 address to two computers of your company so that the both computers belong to the subnet. 255.255.255.240. Which of the following is a valid assignment?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 185]**
    a. 172.16.5.14 and 172.16.5.17
    b. 172.16.5.17 and 172.16.5.29
    c. 172.16.5.29 and 172.16.5.33
@@ -628,6 +676,12 @@
    b) 4MHz
    c) 6 MHz
    d) None of the above
+
+7. **Which one is not the purpose of modulation in a communication system?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) To reduce antennas size
+   b) To saves energy to transmit information
+   c) To transmit signals from various sources
+   d) To make the system simpler and cost effective
 
 ## Routing Protocols
 
@@ -771,6 +825,30 @@
    b) Operates of Data Link Layer
    c) Forward the packet to intendent computer
    d) Has no memory
+
+15. **Which of the following statements about connecting device between LANs is accurate?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 184]**
+   a) Gateway converts the protocols of the first to third layers of the OSI basic reference model
+   b) Bridge relays frames based on IP address
+   c) Repeater extends transmission distance by amplifying the signal between segments of the same type
+   d) Router relays frames based on MAC address
+
+16. **A system connects a server, two clients and a printer via LAN as shown in the figure below. This system provides access to the data stored in the server from the printer based on the commands issued by a client. If the availability of the server, each of the client and the printer is a, b and c, respectively, what is the availability of the system?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 185]**
+   entire system? Note that only one of the two clients need to be in operation and the availability of the LAN is 1.
+   ```
+   +--------+
+   | Server |
+   +---+----+
+   |
+   +-------+-------+
+   |               |
+   +--+-----+   +-----+--+       +---------+
+   | Client |   | Client |       | Printer |
+   +--------+   +--------+       +----+----+
+   ```
+   a) abc
+   b) ab^2c
+   c) a(1-b)^2c
+   d) a(1-(1-b)^2)c
 
 ## Error Detection & Correction
 

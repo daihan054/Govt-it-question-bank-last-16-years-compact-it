@@ -72,6 +72,12 @@
    c. \Theta(\log*n)
    d. \Theta(1)
 
+13. **Suppose you are searching student data using student number as the key. Which of following arrangement of the student data is suited for binary search?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
+   a) Student data are arranged in the positions indicated by the student numbers hash values
+   b) Student data are arranged randomly irrespective of the student numbers
+   c) Student data are arranged in ascending order of student numbers
+   d) Student data are arranged in the order of the cell addresses of the student numbers locations.
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -200,6 +206,12 @@
    b) 4
    c) -5
    d) -\infty
+
+11. **Suppose you have a complete undirected graph with 4 nodes. What is the maximum number of minimum Spanning Tree (MST) you can from?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 180]**
+   a) 4
+   b) 8
+   c) 16
+   d) 1
 
 ## Dynamic Programming & Greedy
 

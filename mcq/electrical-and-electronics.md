@@ -625,3 +625,9 @@
    B. 476.19m
    C. 476190cm
    D. 476.19cm
+
+8. **What is the output power in watts of the following three-stage system?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 186]**
+   a) 0.431\text{ Watt}
+   b) 0.5\text{ Watt}
+   c) 18\text{ Watt}
+   d) 0.0631\text{ Watt}

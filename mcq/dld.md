@@ -74,6 +74,35 @@
    c) 3-bit data
    d) 3-bit data
 
+4. **A binary counter is being pulsed by a 256 kHz clock signal. The output frequency from the last flip flop is 2kHz. Which one of the following is the counting range?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) 0 to 255
+   b) 0 to 128
+   c) 0 to 127
+   d) None of the above
+
+5. **Which one is the output of the following digital logic circuit?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   ```
+   A ---------------------+-----------------+
+   |                 |
+   |    +-------+    |
+   +---|        |    |
+   |   AND  |----+
+   B -----------\             |        |    |
+   >-----------|        |    |   +-------+
+   C -----------/            +-------+    +---|       |
+   |                              |   OR  |----
+   |           +-------+    +---|       |
+   +----------|        |    |   +-------+
+   |   AND  |----+
+   |        |
+   -------------------------|        |
+   +-------+
+   ```
+   a) AB+A(B+C) + C(B+C)
+   b) AB+A(B+C) + B(B+C)
+   c) AC+A(B+C) + B(B+C)
+   d) BC+C(B+C) + B(B+C)
+
 ## Combinational Circuits (MUX, Decoder)
 
 1. **How many select line would be there if the inputs of a MUX are 8?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -240,6 +269,12 @@
    b) (64)_{10}
    c) (128)_{10}
    d) (256)_{10}
+
+24. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
+   a) An exclusive logical sum of N with 0Fh
+   b) A logical sum of N with 0Fh
+   c) A negative logical product of N with 0Fh
+   d) A logical product of N with 0Fh
 
 ## Boolean Algebra & Simplification
 

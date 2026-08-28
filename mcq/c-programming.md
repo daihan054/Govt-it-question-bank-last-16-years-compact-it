@@ -286,7 +286,7 @@
    c) 20 10
    d) Garbage Value
 
-20. **What is the correct output of the following C program statements?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]**
+20. **What is the correct output of the following C program statements?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 186]**
    ```c
    int array[]={6, 7, 8, 9, 0, 1, 2, 4, 5, 6}, *p=array+5;
    printf("%d\n",p[1]);
@@ -391,6 +391,17 @@
    B) Semantic error
    C) Run-time error
    D) Linker error
+
+30. **Which is the correct output?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 180]**
+   ```c
+   int i = 4;
+   printf ("%d%d", ++i, i++);
+   printf ("%d ", i++);
+   ```
+   a) 5 4 6
+   b) 5 7 8
+   c) 6 4 6
+   d) 4 5 7
 
 ## Storage Classes & Scope
 
