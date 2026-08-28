@@ -12,6 +12,8 @@
 
 6. **Write down the difference between Multitasking and Multiprocessing.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
+7. **(b) What is the difference between micro kernel and macro kernel in the context of OS?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -230,6 +232,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 7. **Difference between physical memory and virtual memory, also describe the advantages and disadvantages of virtual memory.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 553]**
 
+8. **(c) Define paging and trashing in the context of OS.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
+
 ## Process Management & Process States
 
 1. **(b) What is process? Describe different states of a process.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
@@ -273,6 +277,10 @@ The content of the matrix. Need is defined to be Max – Allocation.
 10. **(ক) Deadlock কী? Deadlock Handling করার বিভিন্ন উপায়সমূহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 413]**
 
 11. **What are the four necessary condition of deadlock in an operating system?** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
+
+12. **(a) What is deadlock in operating system (OS)? What are the four necessary and sufficient conditions behind deadlock?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
+
+13. **(b) A system has P processes each needing a maximum of m resources and a total of r resources available. Which conditions must hold to make the system deadlock free?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
 
 ## File Systems & Disk Management
 

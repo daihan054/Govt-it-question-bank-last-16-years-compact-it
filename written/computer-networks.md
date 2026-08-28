@@ -2,6 +2,8 @@
 
 1. **Write short note: Network, Protocol, link, gateway, Node.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
 
+2. **(b) Define following terms: (i) Bandwidth (ii) Latency (iii) MAC Address (iv) IP address** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 491]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -136,6 +138,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **Distinguish between Synchronous and Asynchronous transmission.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
 
 4. **(b) Name and define five components of Data communication system with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 487]**
+
+5. **(a) Differentiate between half-duplex and full duplex transmission.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
 
 ## Switching Techniques (Circuit vs Packet Switching)
 
@@ -332,6 +336,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 2. **(b) Describe briefly the TCP/IP tunneling using appropriate diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 482]**
 
+## Address Resolution (ARP & RARP)
+
+1. **(a) Discuss the main role of Address Resolution Protocol (ARP) in the network layer of TCP/IP protocol suite.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
+
 ## Network Services (DHCP, NAT)
 
 1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
@@ -380,6 +388,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 7. **Which routing protocol use Dijkstra Algorithm?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
 8. **What is Routing? Explain different types of Routing? Why using benefit of an Adhoce routing? Which routing algorithm is used in shortest path algorithm?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 525]**
+
+9. **(b) Distinguish between routing and forwarding. What are the advantages of net specific routing over host specific routing?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
 
 ## High Availability & Redundancy Protocols (VRRP, HSRP)
 

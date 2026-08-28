@@ -370,3 +370,7 @@ int main() {
 8. **Write a C/C++ program to calculte factorial of N using recursive function.** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
 
 9. **Write the recursive function of the below problem and find the recurrence relation of the function. F(n) = 1+2+3+..........+(n-1)+n** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
+
+10. **(a) Mention two basic differences between ‘Call by Value’ and ‘Call by Reference’. Write a simple program in C to swap two integer values using ‘Call by value’.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 487]**
+
+11. **(b) Write a program in C using recursion to find the factorial of an integer.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**

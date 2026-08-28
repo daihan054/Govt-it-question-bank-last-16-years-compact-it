@@ -35,6 +35,8 @@
 
 5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]**
 
+6. **(b) Simplify the following Boolean function using K-map.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
+
 ## Logic Families (TTL vs CMOS)
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
@@ -43,6 +45,10 @@
  * **(iii) Power consumption.**
 
 2. **Describe the important characteristics of digital IC's.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 556]**
+
+## Boolean Algebra & De Morgan’s Theorem
+
+1. **(a) State De-Morgan’s law with an appropriate example.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
 
 ## Logic Gates & Universal Gates
 

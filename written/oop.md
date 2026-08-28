@@ -52,6 +52,10 @@ class Test {
 
 14. **Write down the Principle of OOP. What is Polymorphism? Write the name of 3 OOP language.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
+15. **(b) What is the diamond problem of multiple inheritance in C++?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 487]**
+
+16. **(a) Define function overloading and function overriding with examples.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**

@@ -247,6 +247,8 @@ ORDER BY average_salary DESC;
 
 6. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
 
+7. **(a) What is ACID mean in database system?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
+
 ## Normalization & Database Design
 
 1. **Why normalization is required in Database? Write shortly about 3NF?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**

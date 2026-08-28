@@ -87,6 +87,8 @@ for i in N:
 
 1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1419]**
 
+2. **(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
+
 ## Graph Representation (Adjacency Matrix vs List)
 
 1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 495]**
