@@ -48,6 +48,12 @@
    গ. হাইড্রোজেন
    ঘ. এটম
 
+9. **'Thalassemia' is a hereditary disease affecting-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Lungs
+   (b) Blood
+   (c) Heart
+   (d) Kidney
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -97,6 +103,24 @@
    b) 32
    c) 30
    d) 35
+
+9. **Who is the founder of 'SpaceX'?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Elon Musk
+   (b) Eric Yuan
+   (c) Ray Tomlinson
+   (d) Larry Page
+
+10. **Martin Cooper is known for his invention of—** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Digital Camera
+   (b) X-ray
+   (c) Solar Energy
+   (d) Mobile Phone
+
+11. **What is the name of the data center that EU unveils to probe crimes in Ukraine?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Tulip
+   (b) Metro
+   (c) Game Changer
+   (d) None of these
 
 ## Bangladesh Affairs
 
@@ -214,6 +238,24 @@
    c) 8^{th}
    d) 10^{th}
 
+20. **When will Bangladesh exit from the LDC category?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 2024
+   (b) 2025
+   (c) 2026
+   (d) 2027
+
+21. **The documentary film, based on the liberation war, 'Rupali Shoikot' was directed by** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) Alamgir Kabir
+   (b) Tanvir Mokammel
+   (c) Tanvir Kabir
+   (d) Tarek Masood
+
+22. **In 1997, UNESCO declared the 'Sundarbans' as the-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 798th World Heritage Site
+   (b) 997th World Heritage Site
+   (c) 879th World Heritage Site
+   (d) 789th World Heritage Site
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -246,6 +288,18 @@
    গ. ফিলিপাইন
    ঘ. জাপান
 
+6. **The highest densely populated country of the world is –** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) Bangladesh
+   (b) China
+   (c) Monaco
+   (d) Indonesia
+
+7. **Which of the following ecosystem covers the largest area of the earth's surface?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) Desert Ecosystem
+   (b) Grassland Ecosystem
+   (c) Mountain Ecosystem
+   (d) Marine Ecosystem
+
 ## Sports
 
 1. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -253,3 +307,9 @@
    b) Usain Bolt
    c) Simone Biles
    d) Larisa Latynina
+
+2. **The 2024 Summer Olympics will be hosted in –** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) China
+   (b) France
+   (c) United Kingdom
+   (d) United States

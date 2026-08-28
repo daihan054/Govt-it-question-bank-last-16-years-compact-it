@@ -106,6 +106,34 @@
    c) What many
    d) What
 
+11. **Which underlined part of the following sentence is incorrect?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   I will always remember you standing by me and offering me encouragement.
+   (a) (b) (c) (d)
+
+12. **Pick appropriate preposition and complete: 'The man is absorbed _____ meditation.'** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) in
+   (b) by
+   (c) of
+   (d) for
+
+13. **Pick appropriate word and complete the sentence: 'We asked him why he telephoned earlier.'** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) did not
+   (b) has not
+   (c) had not
+   (d) would not
+
+14. **Fill in the blank with right option: 'I am looking forward-you.'** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) to seeing
+   (b) seeing
+   (c) to see
+   (d) to have seen
+
+15. **Select the correct sentence from the following options.** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) The man was tall who stole my bag
+   (b) The man stole my bag who was tall
+   (c) The man who stole my bag was tall
+   (d) The man was tall who is stealing my bag
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -119,6 +147,12 @@
    খ. To shine
    গ. To flourish
    ঘ. To publish
+
+3. **The phrase 'Prima facie' means-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) Primal face
+   (b) At first sight
+   (c) Main facilities
+   (d) Primitive man
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -152,6 +186,24 @@
    c) Pure
    d) Hazy
 
+6. **Which of the following resembles OATH: PROMISE?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) Contract: Agreement
+   (b) Deed: Attorney
+   (c) Title: Estate
+   (d) Job: Loyalty
+
+7. **Which of the following is the opposite of the word INGENIOUS?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) Crafty
+   (b) Inane
+   (c) Incompetent
+   (d) Skillful
+
+8. **The synonym of ENIGMA is** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) Obstruction
+   (b) Nonsense
+   (c) Flaw
+   (d) Puzzle
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -165,3 +217,9 @@
    b) rediculous
    c) ridiculus
    d) ridiculas
+
+3. **Identify the word with correct spelling from the following options.** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) Counterfet
+   (b) Counterfit
+   (c) Counterfiet
+   (d) Counterfeit

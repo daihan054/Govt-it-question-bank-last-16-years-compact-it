@@ -32,6 +32,12 @@
    c) HTTP
    d) FTP
 
+5. **Which of these is the default port number for many web servers when suing HTTPS?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
+   (a) 443
+   (b) 80
+   (c) 20
+   (d) 40
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -48,6 +54,12 @@
    c) hypertext
    d) protocol
 
+2. **In a network, the response and transit time is used to assess-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
+   (a) Reliability
+   (b) Longevity
+   (c) Performance
+   (d) Security
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -55,3 +67,11 @@
    b) 32 Mbps
    c) 32 Kbps
    d) 64 MbpS
+
+## Wireless & Mobile Communication
+
+1. **Bluetooth is a type of radio wave information transmission system that is good for about-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
+   (a) 30 feet
+   (b) 30 yards
+   (c) 30 miles
+   (d) 300 miles

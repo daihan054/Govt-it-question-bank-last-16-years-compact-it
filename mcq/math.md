@@ -18,6 +18,18 @@
    গ. ২২.৫°
    ঘ. ৩০°
 
+4. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 20 meter
+   (b) 15 meter
+   (c) 10 meter
+   (d) 100 meter
+
+5. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 9 ft
+   (b) 16 ft
+   (c) 24 ft
+   (d) 26 ft
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -34,6 +46,18 @@
    গ. ৩৫ বছর
    ঘ. ৩০ বছর
 
+2. **The average temperature for the first 4-days of a week is 40.2° C and that of the last 4-days is 41.3° C. If the average temperature for the whole week is 40.6° C, then temperature on the fourth day is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 38.5°C
+   (b) 41.8°C
+   (c) 41.3°C
+   (d) 40.8°
+
+3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) n<m<o
+   (b) m<n<o
+   (c) o<n<m
+   (d) o<m<n
+
 ## Algebra
 
 1. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -44,6 +68,24 @@
 
 2. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
 
+3. **If \frac{x}{y} = \frac{1}{3}, then the value of (x^2 + y^2)/(x^2 - y^2) is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) \frac{-10}{9}
+   (b) \frac{5}{4}
+   (c) -\frac{5}{4}
+   (d) -\frac{5}{3}
+
+4. **The total number obtained by a student in Physics, Chemistry and Mathematics together is 120 more than the marks obtained by him in Chemistry. What is the average mark obtained by him in Physics and Mathematics together?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 40
+   (b) 60
+   (c) 120
+   (d) Cannot be determined
+
+5. **In a T-20 cricket match, the number of boundaries scored was twice the number of over boundaries by a team. The team took 22 single runs, no two or three runs and could not score from 38 deliveries. How many runs did the team score?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 124
+   (b) 144
+   (c) 150
+   (d) 302
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -53,6 +95,18 @@
    ঘ. ২০০
 
 2. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+
+3. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk.360 interest @6% per annum. What was the amount heborrowed?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) Tk. 18,000
+   (b) Tk.16,000
+   (c) Tk.15,000
+   (d) None of these
+
+4. **A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 40
+   (b) 100
+   (c) 201
+   (d) 72
 
 ## Arithmetic & Number Series
 
@@ -79,6 +133,12 @@
    b) \left\{\frac{n(n+1)}{2}\right\}
    c) \frac{n(n+1)(n+2)}{6}
    d) \frac{n(n+1)(2n+1)}{6}
+
+5. **On a2 km road, a total of 201 trees are planted on the side of the road at equal distances. How many such trees will be planted on a 50 km road such that the distance between two consecutive trees is the same as that of the consecutive trees on the 2 km road?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) 501
+   (b) 1000
+   (c) 5000
+   (d) 5001
 
 ## Time, Work & Distance
 
