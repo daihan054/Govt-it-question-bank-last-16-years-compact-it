@@ -43,3 +43,9 @@
    (b) less than R2
    (c) greater than R2
    (d) greater than 2*R2
+
+4. **DC current invented by ______.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) Edison
+   (b) William Stanley Jr
+   (c) Michael Faraday
+   (d) Westinghouse

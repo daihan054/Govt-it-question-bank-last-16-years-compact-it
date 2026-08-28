@@ -41,3 +41,6 @@
    (b) Python
    (c) Java
    (d) C
+
+8. **What is ChatGPT?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   Chatboot

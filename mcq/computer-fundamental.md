@@ -50,3 +50,9 @@
    (b) A blockchain is a decentralized, distributed, digital ledger consisting of records called blocks
    (c) A blockchain is a centralized digital ledger consisting of records called blocks
    (d) None of the above
+
+2. **What is Smart Bangladesh?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) Smart Citizens>Smart Government>Smart Economy>Smart Society
+   (b) Smart Citizens>Smart Government>Smart Industry>Smart Society
+   (c) Smart Citizens>Smart People>Smart Economy>Smart Society
+   (d) Smart Citizens>Smart Government>Smart Economy>Smart Learn

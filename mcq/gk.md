@@ -203,6 +203,51 @@
 25. **ট্রাফালগার স্কয়ার কোথায় অবস্থিত?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** লন্ডন
 
+26. **Who is the name current China President?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 28]**
+   (a) Xi Jinping
+   (b) Moon Jae-in
+   (c) Yoshihide Suga
+   (d) Jiang Zemin
+
+27. **What is the name of capital city of Ukraine?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 28]**
+   (a) Kyiv
+   (b) Moscow
+   (c) Paris
+   (d) Helsinki
+
+28. **Which is the name of Sri Lanka currency?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 28]**
+   (a) Rufiyaa
+   (b) Sri Lankan rupee
+   (c) Rupee
+   (d) Dollar
+
+29. **Who is the CEO of Tesla company?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) Tim Cook
+   (b) Elon Musk
+   (c) Sundar Pichai
+   (d) Mark Zuckerberg
+
+30. **Who is not space Agency?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) JAXA
+   (b) SPACE
+   (c) CSA
+   (d) Roscosmos
+
+31. **The Summer Olympic 2024 held on ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) Paris
+   (b) Los Angeles
+   (c) Rio de Janeiro
+   (d) Brisbane
+
+32. **What's was the central place of recent Egyptian Protest?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   (a) Azadi Square
+   (b) Tahrir Square
+   (c) Taqdeer Square
+   (d) Central square
+
+33. **তুরস্ক ও সিরিয়ায় ভূমিকম্পের মাত্রা কত?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** ৭.৮
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -387,6 +432,54 @@
 
 32. **চন্দ্রদ্বীপ অঞ্চলের পূর্বনাম কি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** বরিশাল
+
+33. **Biggest district in Bangladesh ______.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) Dhaka
+   (b) Chittagong
+   (c) Rangamati
+   (d) Mymensingh
+
+34. **Which located in largest Coal Mine of Bangladesh?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) Barapukuria in the Dinajpur
+   (b) Sylhet
+   (c) Gazipur
+   (d) Rajshai
+
+35. **Name of the first Prime Minister of Bangladesh ______.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) Sheikh Mujibur Rahman
+   (b) Abu Sayeed Chowdhury
+   (c) Tajuddin Ahmad
+   (d) Humayun Rashid Choudhury
+
+36. **Who is the famous artist in Bangladesh?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) Zainul Abedin
+   (b) Kamrul
+   (c) Shabuddin
+   (d) Monirul Islam
+
+37. **ECNEC under which ministry?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) Ministry of Education
+   (b) Health
+   (c) Planning
+   (d) Foreign
+
+38. **Full meaning of GDP ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) Gross Domestic Product
+   (b) Gross Development Product
+   (c) Goal Domestic Product
+   (d) Great Domestic Product
+
+39. **Three connecting point name of padma bridge of Bangladesh.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   Louhajang Upazila of Munshiganj and Zazira Upazila of Shariatpur and a small part of Shibchar Upazila of Madaripur
+
+40. **How many sector liberation war in Bangladesh?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) 10
+   (b) 11
+   (c) 7
+   (d) 9
+
+41. **তিন বিঘা করিডোর কোথায় অবস্থিত?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** লালমনিরহাট
 
 ## Geography & Environment
 

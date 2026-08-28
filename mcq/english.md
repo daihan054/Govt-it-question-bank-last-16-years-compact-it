@@ -177,6 +177,29 @@
    (c) enshort
    (d) Shortage
 
+23. **I would ______ left the job than** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+
+24. **Indicate the correct sentence ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) An ant is the intelligent insect
+   (b) The ant is an intelligent insect
+   (c) A ant is the intelligent insect
+   (d) An ant is a intelligent insect
+
+25. **Put appropriate preposition for the sentence below:- Some writer sink ______ oblivion in course of time.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) on
+   (b) from
+   (c) under
+   (d) into
+
+26. **He said to me, “Do read the holy Quran daily.”** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) He asked to me to read the holy Quran daily.
+   (b) He asked me to read the holy Quran daily.
+   (c) He asked me to do read the holy Quran daily.
+   (d) He requested me to read the holy Quran daily.
+
+27. **BPDB look ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** some young and energetic engineer
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -202,6 +225,15 @@
    b) ছেলেটি তার পিতার অনুকরণ করে
    c) ছেলেটি তার পিতার পদাঙ্ক অনুসরণ করে
    d) ছেলেটি দেখতে তার পিতার মত
+
+5. **Prima facie ______ means.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) Primal face
+   (b) Primitive man
+   (c) Main facilities
+   (d) At first sight
+
+6. **The blow off some steam means ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** to make angry or excited
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -253,6 +285,12 @@
    (c) Flaw
    (d) Puzzle
 
+9. **Antonym of word ‘Stiff’** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) rigid
+   (b) hard
+   (c) flexible
+   (d) inflexible
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -278,3 +316,9 @@
    b) Quelry
    c) Qeiry
    d) Queery
+
+5. **Which is the correct spelling?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) Extraterrestrial
+   (b) extraterrestrial
+   (c) Extraterastrial
+   (d) extratarrestrial

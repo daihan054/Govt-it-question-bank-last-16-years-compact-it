@@ -105,6 +105,18 @@
 20. **চাচা কাহিনীর লেখক কে?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** সৈয়দ মুজতবা আলী
 
+21. **কোনদিন কর্মহীন পূর্ণ অবকাশে বসন্ত বাতাসে অতীতে র তীর হতে যে রাত্রে বহিবে দীর্ঘশ্বাস, করা বকুলের কান্না ব্যথিবে আকাশ। উপরিউক্ত চরণের রচয়িতা কে?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) শামসুর রহমান
+   (b) রবীন্দ্রনাথ ঠাকুর
+   (c) কাজী নজরুল ইসলাম
+   (d) কোনটিই নয়
+
+22. **মুখরা রমণী বশীকরণ মুনির চৌধুরীর কি ধরনের লেখা?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** অনুবাদ নাটক
+
+23. **রক্তাক্ত প্রান্তর এর বিষয়বস্তু কি?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** পানিপথের তৃতীয় যুদ্ধ
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -282,6 +294,26 @@
 
 32. **কোন শব্দটি ইংরেজি ভাষা হতে আগত-** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** এজেন্ট
+
+33. **সমাস ভাষাকে কি করে?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** সংক্ষেপন করে।
+
+34. **নিচের কোন বানানটি সঠিক?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** জিগীষা
+
+35. **শশাঙ্ক শব্দের প্রতিশব্দ-** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** সুধাংশু
+
+36. **যখন পড়বে না মোর পায়ের চিহ্ন। বাক্যে নিম্নরেখ শব্দটি কোন কারকে কোন বিভক্তি?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** করণ কারকে ষষ্ঠী
+
+37. **রেস্তোরা কোন ভাষার শব্দ?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** ফরাসি ভাষার শব্দ
+
+38. **হ্ম কোন কোন বর্ণের সমন্বয়ে তৈরি?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** হ্ + ম
+
+39. **নিচের কোনটি সরল বাক্য?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
 
 ## বাগধারা ও প্রবাদ
 

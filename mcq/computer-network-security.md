@@ -12,6 +12,12 @@
    (c) Software
    (d) All
 
+3. **Which year declared Cybersecurity act in Bangladesh?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) 2016
+   (b) 2018
+   (c) 2012
+   (d) 2008
+
 ## Security Principles (CIA Triad)
 
 1. **Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
