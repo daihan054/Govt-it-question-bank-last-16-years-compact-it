@@ -563,6 +563,13 @@
    (গ) adjective
    (ঘ) adverb
 
+85. **The Showing ______** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
+   (a) Off
+   (b) Up
+   (c) On
+   (d) in
+   **Ans: a**
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -843,3 +850,17 @@
    (খ) adolessence
    (গ) addoleseence
    (ঘ) adolescence
+
+7. **Select correct spelling?** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
+   (a) Psychology
+   (b) Sychology
+   (c) Sycholagy
+   (d) shychology
+   **Ans: a**
+
+8. **Which one is correct?** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
+   (a) Tit for tat
+   (b) Tect for tat
+   (c) Teat for tet
+   (d) Tit for teet
+   **Ans: a**

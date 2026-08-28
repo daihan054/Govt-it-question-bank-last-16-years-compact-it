@@ -110,6 +110,13 @@
    (c) 12 years ago
    (d) 4 years ago
 
+5. **If age is P times then y after 6 years x age is 17 then find the age of y with respect to p.** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
+   (a) 11p
+   (b) 11p+6
+   (c) P+6
+   (d) P+11
+   **Ans: b**
+
 ## Algebra
 
 1. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -160,6 +167,20 @@
 10. **\sqrt{-4} \times \sqrt{-4} = কত?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
    উত্তর: -4
 
+11. **If \log_4(x)=12 then find \log_2(4/x)** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
+   (a) 22
+   (b) 23
+   (c) 26
+   (d) 12
+   **Ans: a**
+
+12. **2^{30}+2^{30}+2^{30}+2^{30}= কত?** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 74]**
+   ক) 2^{120}
+   খ) 8^{30}
+   গ) 2^{32}
+   ঘ) 8^{120}
+   **Ans: গ**
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -207,6 +228,27 @@
    (c) 10
    (d) 8
    **Ans: c**
+
+10. **কোন আসল ৫ বছরে সরল সুদে বৃদ্ধি পেয়ে ১০,০০০ টাকা এবং ১০ বছরে বৃদ্ধি পেয়ে ১২,০০০ টাকা হবে?** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 74]**
+   ক) ৫০০০ টাকা
+   খ) ৬,৫০০ টাকা
+   গ) ৮০০০ টাকা
+   ঘ) ৯,৫০০ টাকা
+   **Ans: গ**
+
+11. **একটি পরীক্ষায় ৫২% শিক্ষার্থী বাংলায় এবং ৪২% শিক্ষার্থী ইংরেজীতে অকৃতকার্য হয়। উভয় বিষয়ে অকৃতকার্য শিক্ষার্থী ১৭% হলে উভয় বিষয়ে কৃতকার্য শিক্ষার্থী?** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 74]**
+   ক) ২৩%
+   খ) ২৭%
+   গ) ২৮%
+   ঘ) ৩৩%
+   **Ans: ক**
+
+12. **১০০ টাকায় ১২টি কলা ক্রয় করে, ১২০ টাকায় ১০টি কলা বিক্রয় করলে শতকরা লাভ হবে?** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 74]**
+   ক) ২২%
+   খ) ৩০%
+   গ) ৩৩%
+   ঘ) ৪৪%
+   **Ans: ঘ**
 
 ## Arithmetic & Number Series
 

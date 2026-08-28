@@ -22,6 +22,13 @@
    (গ) Twisted-pair cable
    (ঘ) Co-axial cable
 
+5. **Submarine ক্যাবল কয়টি?** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
+   ক) ২
+   খ) ৩
+   গ) 8
+   ঘ) ৬
+   **Ans: ক**
+
 ## Application Layer Protocols
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
