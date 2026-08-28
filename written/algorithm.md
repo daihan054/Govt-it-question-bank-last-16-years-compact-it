@@ -26,6 +26,8 @@ for i in N:
 
 4. **Explain Algorithm of Binary search.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
 
+5. **Binary search using recursive function.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
+
 ## Sorting Algorithms & Complexity
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য

@@ -367,6 +367,8 @@ ORDER BY average_salary DESC;
 
 5. **What is primary key and foreign key with example?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
 
+6. **Explain Primary key, Candidate key, and Foreign key.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 468]**
+
 ## Indexing in DBMS
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

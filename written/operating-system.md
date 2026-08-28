@@ -203,6 +203,15 @@ All process arrived at time 0. Lower number has higher priority.
 **Find average turnaround time using shortest job first scheduling algorithm.**
 **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 461]**
 
+14. **Find average turnaround time and average waiting time using round robin and FCFS algorithm?**
+| Process | Arrival Time | Execute Time |
+|---|---|---|
+| P0 | 0 | 5 |
+| P1 | 1 | 3 |
+| P2 | 2 | 8 |
+| P3 | 3 | 6 |
+**(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 467]**
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**

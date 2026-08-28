@@ -367,6 +367,8 @@ int main() {
 ```
 **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 464]**
 
+10. **C programming output problem.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 468]**
+
 ## Recursion & Functions
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।

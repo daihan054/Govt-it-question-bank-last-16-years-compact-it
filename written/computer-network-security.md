@@ -26,6 +26,8 @@
 
 13. **Identify the type of algorithm? (i) MD5 (ii) AES (iii) RSA (iv) Diffie-Hellman** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 461]**
 
+14. **Describe RSA Algorithm and how it works?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 467]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -37,6 +39,8 @@
 4. **What is CIA Triad?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
 5. **Preserving confidentiality integrity and availability of data is a restatement of the concern over falsification, interception, masquerade and denial of service. Explain how the first three concepts relate to the last four.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 435]**
+
+6. **What is CIA Triad?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
 
 ## Critical Information Infrastructure (CII) & Cyber Governance
 
@@ -85,6 +89,8 @@
 9. **Difference between active and passive atack.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
 
 10. **Describe a man-in the middle attack on the Diffie-Hellman key exchange protocol in which the adversary generates two public key pairs for the attack.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 434]**
+
+11. **What is MAC flooding? How to prevent MAC flooding?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
 
 ## Firewalls & Network Defense
 
