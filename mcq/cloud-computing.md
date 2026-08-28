@@ -5,3 +5,37 @@
    (b) Docker is a virtual machine software, and Docker Hub is a database
    (c) Docker is a programming language, and Docker Hub is a code editor
    (d) Docker is a firewall, and Docker Hub is a security tool
+
+## Cloud Service Models
+
+1. **Which one of the following is related to the services provided by cloud?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) Sourcing
+   (b) Ownership
+   (c) Reliability
+   (d) PaaS
+
+2. **Service that generally focuses on the hardware following which one of the following services models?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) IaaS
+   (b) PaaS
+   (c) SaaS
+   (d) Both A and B
+
+## Cloud Computing Fundamentals
+
+1. **What type of computing technology refers to services and applications that typically run on a distributed network through virtualized resources?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Distributed Computing
+   (b) Cloud Computing
+   (c) Soft Computing
+   (d) Parallel Computing
+
+2. **Cloud Computing architecture is a combination of ______.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Service-oriented architecture and grid computing
+   (b) Utility computing and event-driven architecture.
+   (c) Service-oriented architecture and event-driven architecture.
+   (d) Virtualization and event-driven architecture.
+
+3. **Which one of the following cloud concepts is related to sharing and pooling the resources?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) Virtualization
+   (b) Polymorphism
+   (c) Abstraction
+   (d) None of the avobe

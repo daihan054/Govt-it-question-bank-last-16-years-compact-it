@@ -72,6 +72,17 @@
    (c) Performance
    (d) Security
 
+3. **When a host on network A sends a message to a host on network B, which address does the router look at?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) Port
+   (b) IP
+   (c) Physical
+   (d) Subnet mask
+   Page fault occurs when (Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 25]
+   (a) When a requested page is in memory
+   (b) When a requested page is not in memory
+   (c) When a page is corrupted
+   (d) When an exception is thrown
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -120,6 +131,12 @@
    (c) 255.0.0.0
    (d) 255.255.200.0
 
+6. **Which of the following cannot be used as a public IP address?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   a. 17.0.0.1
+   b. 168.172.19.34
+   c. 172.15.29.63
+   d. 192.168.13.18
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -127,3 +144,19 @@
    b) Half-duplex
    c) Full-duplex
    d) Simplex
+
+## Routing Protocols
+
+1. **Which of the following pairs is an example of intra-domain routing protocols?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) ALOHA, RIP
+   (b) OSPF, RIP
+   (c) RIP, FTP
+   (d) BGP, SMTP
+
+## Network Devices & Configuration
+
+1. **Which command loads a new version of the Cisco IOS into a router** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   a) copy flash ftp
+   b) copy ftp flash
+   c) copy flash tftp
+   d) copy tftp flash

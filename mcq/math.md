@@ -104,6 +104,12 @@
    (c) 150
    (d) 302
 
+6. **3^{20}+3^{20}+3^{20}=?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) 3^{20}
+   (b) 9^{20}
+   (c) 9^{60}
+   (d) 3^{60}
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

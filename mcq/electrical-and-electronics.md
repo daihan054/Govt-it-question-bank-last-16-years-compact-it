@@ -37,3 +37,9 @@
    (b) 9 A
    (c) 11 A
    (d) 12 A
+
+3. **Two resistors R1 and R2 are connected in parallel with R1 < R2. Choose all correct answers below. The total resistance of the combination below is: ______.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) less than R1
+   (b) less than R2
+   (c) greater than R2
+   (d) greater than 2*R2

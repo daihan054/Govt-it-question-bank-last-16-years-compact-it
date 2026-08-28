@@ -26,6 +26,12 @@
    (c) D
    (d) T
 
+2. **A basic memory storage element in a digital system is:** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Flip-flop
+   (b) Counter
+   (c) Multiplexer
+   (d) Encoder
+
 ## Combinational Circuits (MUX, Decoder)
 
 1. **How many select line would be there if the inputs of a MUX are 8?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -59,3 +65,9 @@
    b) 5
    c) 6
    d) 7
+
+4. **The greatest negative number which can be stored in computer that has 8-bits work length and use 2's complement arithmetic is ______.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) -256
+   (b) -127
+   (c) -255
+   (d) -128

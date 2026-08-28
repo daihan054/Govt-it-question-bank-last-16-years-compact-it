@@ -85,6 +85,12 @@
    (c) 5
    (d) 0
 
+10. **Which of the following provides the ability to query information from the database and insert tuples into, delete tuples from, and modify tuples in the database?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) DML (Data Manipulation Language)
+   (b) DDL (Data Definition Language)
+   (c) Query
+   (d) Relational Schema
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -141,3 +147,29 @@
    b) Natural join
    c) Outer join
    d) Inner join
+
+## Data Warehousing & Data Mining
+
+1. **Where is data warehousing used?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) Transaction System
+   (b) Logical system
+   (c) Decision support system
+   (d) None
+
+2. **What is the use of data cleaning?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) To remove the noisy data
+   (b) Transformations to correct the wrong data
+   (c) Correct the inconsistencies in data
+   (d) All of the above
+
+3. **Small logical units where data warehouse hold large amounts of data is known as ______.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Access layers
+   (b) Data marts
+   (c) Data storage
+   (d) Data miners
+
+4. **Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Warehousing
+   (b) Data Mining
+   (c) Text Mining
+   (d) Data Selection

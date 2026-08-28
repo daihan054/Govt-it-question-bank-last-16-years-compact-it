@@ -6,6 +6,12 @@
    (c) Cyber ethics
    (d) Cyber security
 
+2. **Which of the following protected by copyright ACT?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) Intellectual property
+   (b) Original work of authorship
+   (c) Software
+   (d) All
+
 ## Security Principles (CIA Triad)
 
 1. **Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**

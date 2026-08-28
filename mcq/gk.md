@@ -170,6 +170,24 @@
    (c) 2^{\text{nd}} June
    (d) 1^{\text{st}} June
 
+20. **Which country is known as the 'Rainbow nation'?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) Chaina
+   (b) South Korea
+   (c) Japan
+   (d) South Africa
+
+21. **Which is the third largest economic country?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) United States
+   (b) Japan
+   (c) Chaina
+   (d) Kolkata
+
+22. **The lead character in the film 'The Bandit Queen' has been played by –** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) Rupa Ganguly
+   (b) Seema Biswas
+   (c) Pratiba Sinha
+   (d) Shabana Azmi
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -427,3 +445,9 @@
    (b) Sonia Akhtar
    (c) Sharifa Khatun
    (d) Shirin Akhtar
+
+5. **Who get Balon d'Or cup 2022?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Lionell Messi
+   (b) Kylian Mbappe
+   (c) Karim Benzema
+   (d) Ronaldo

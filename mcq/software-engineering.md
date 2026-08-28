@@ -84,6 +84,12 @@
    (c) It is inflexible and not suitable for changing requirements
    (d) It lacks proper documentation
 
+2. **How many steps in waterfall model?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) 5
+   (b) 6
+   (c) 7
+   (d) 8
+
 ## Design Patterns
 
 1. **Design pattern for hierarchical structure is ______** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
