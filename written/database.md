@@ -39,6 +39,8 @@
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
 
+2. **Write difference between relational database and NoSQL database.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
+
 ## SQL Commands (DDL, DML, DCL, TCL)
 
 1. Example Query of DDL, DML, DCL. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -336,6 +338,12 @@ From t;
 
 55. **Given Table: Project (Project_id, Project_name, Manager_name) Location (location_id, Location_name, project_id) Employee (Employee_id, Employee_Name, Location_id, Joning date, Salary) Write a query to show project_name, Location_name, Total_salary of each projects employee who joined before ‘January 2021’.** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 868]**
 
+56. **(i) SQL Query for finding Dept names for departments Find out the employees whose salaries are greater than the salaries of their managers.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
+
+57. **Two SQL query from given table (date and join related).** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
+
+58. **emp [e_id, e_name, dept_id, salary, DOB], dept [dept_id, city, dept_name]; প্রত্যেকটি Department এর নাম এবং ঐ Department এর employee দের গড় Salary দেখার SQL Query লিখ।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -576,6 +584,8 @@ From t;
 
 16. **Draw the ER diagram where their relation named TEAM, PLAYER, MATCH** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 880]**
 
+17. **Railway Service system ER diagram.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
+
 ## Database Connectivity (JDBC)
 
 1. What is JDBC? Explain the steps required to connect a Java application to a MySQL database. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -587,6 +597,8 @@ From t;
 1. An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
 
 2. **(c) Describe the difference between CHAR and VARCHAR data type.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
+
+3. **What is the domain in a relational database? Explain with an example. Show how you would use Alter table SQL command to add a domain on a database table.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 916]**
 
 ## SQL Joins & Operations
 

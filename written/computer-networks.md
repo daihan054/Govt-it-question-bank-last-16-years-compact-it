@@ -251,6 +251,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 14. **(c) What is purpose of routers? How congestion control works in the TCP?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886-887]**
 
+15. **What is a TCP Three-way handshaking step?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
+
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -377,6 +379,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 11. **What is Multiplexing? Write about Time division Multiplexing.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870]**
 
 12. **(a) Distinguish between Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM).** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888]**
+
+13. **TDM math: rate= 1.536 Mbps, message size= 960000, Slot=32, end to end circuit Switch time=800ms, calculate transfer time.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
 
 ## Subnetting & IP Addressing
 
@@ -568,6 +572,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 76. **(a) What is the subnet mask of 10.2.1.3/26 and What is the usable number of IP address on network that has a 26 mask?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886]**
 
+77. **172.168.128.0/20 এর Broadcast Address বের কর এবং কতগুলো Computer (Host) Connect করা যাবে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 913]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -599,6 +605,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 6. **(b) Explain the message flow between a DHCP server and client. Show necessary timing diagram.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
 
 7. **What is APIPA?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840]**
+
+8. **What do you mean by DHCP server? Explain the benefits of using dedicated DHCP server. Briefly describe the main benefits of using IPv6 protocol.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 914]**
 
 ## IPv6 Addressing
 
@@ -687,6 +695,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 16. **Cost calculation of EIGRP formula.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839]**
 
 17. **Given a totology of distance vector routing. Find the table of each node for the 1^{\text{st}} route.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859-860]**
+
+18. **What is difference between link state routing and distance vector routing?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
 
 ## High Availability & Redundancy Protocols (VRRP, HSRP)
 
@@ -784,6 +794,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 16. **(b) How is Hierarchical DNS resolution done in Domain Naming System? Give an example resolution for xyz.uv.gov.bd domain name.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
 
+17. **What is Web cashing? Why we use web cashing?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908]**
+
+18. **What is DNS Resolver?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908-909]**
+
+19. **DNS server এবং DHCP server এর কাজ কী?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
+
 ## Email Architecture & Protocols (SMTP, POP3, IMAP)
 
 1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
@@ -823,6 +839,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
 10. **What is the channel capacity for a teleprinter channel with a 300 Hz bandwidth and a signal-to-noise ratio of 3 dB?** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
+
+11. **Using the Nyquist theorem, we can sample 12 million times/sec. Four–level signals provide 2 bits per sample, for a total data rate of 24 Mbps.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 

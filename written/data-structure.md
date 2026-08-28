@@ -52,6 +52,8 @@ Output: Not Balanced
 
 3. **What is a Circular Queue? Describe its implementation.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 743]**
 
+4. **Circular Queue and Priority Queue কীভাবে কাজ করে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912-913]**
+
 ## Linked List
 
 1. **Explain with proper example of singly linked list.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -75,6 +77,8 @@ Output: Not Balanced
 10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 851-852]**
 
 11. **(a) What are the differences between linked list and array data structure?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
+
+12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
 
 ## Tree
 
@@ -119,6 +123,8 @@ Output: Not Balanced
 20. **(b) Draw a binary tree of 5 elements. Now list out the elements in (i) Pre-order (ii) Post order and (iii) Inorder traversal of the tree.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 792]**
 
 21. **Mathematically derive the maximum and minimum height of a binary tree consisting of n nodes. Note that the height of a tree with a single node is considered as 1.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 849-850]**
+
+22. **(iii) Maximum and Minimum no of Nodes for a binary tree of height 7 where the root is considered as height 0.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
 
 ## Binary Search Tree (BST)
 

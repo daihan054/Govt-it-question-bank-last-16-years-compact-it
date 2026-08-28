@@ -146,6 +146,8 @@
 
 23. **What is basic Logic gate? Which gate are called Universal gate and write down advantages of Universal gate?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 873-874]**
 
+24. **How can you Implement AND, OR and NOT gates using only NAND and NOR gates? What is the main difference between Latch and Flip-flop?** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+
 ## Combinational Circuits (Adders, Encoders, MUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

@@ -156,6 +156,10 @@
 
 18. **(b) Distinguish between phishing and pharming. Give examples to explain.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 801]**
 
+19. **What is DDoS and SQL Injection attack?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
+
+20. **Phishing attack এর মাধ্যমে কীভাবে attack করা হয়। উহার কারণে কি ক্ষতি হতে পারে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 913]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -202,6 +206,8 @@
 4. **(a) How can VPN provide secure communication platform? Explain site-to-site VPN and remote-access VPN using necessary figures.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 800]**
 
 5. **What is VPN? Difference between site to site VPN and Remote access VPN.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840]**
+
+6. **What is VPN? Why we use it?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
 
 ## Authentication & Access Control
 

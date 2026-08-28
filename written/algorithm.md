@@ -24,6 +24,8 @@ for i in N:
 
 9. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
 
+10. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
@@ -99,6 +101,8 @@ for i in N:
 
 22. **(a) How the quick sort is implemented? What is the complexity of quick sort?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892, 895]**
 
+23. **Analize and compare the Quick-sort and Merge-sort algorithms in term of their time and space complexity.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
@@ -144,6 +148,8 @@ for i in N:
 4. **(b) Define Eulerian path. What are the necessary and sufficient conditions for the Eulerian path? Expalin.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
 
 5. **(c) What is a strongly connected graph?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+
+6. **True False with explanation about Graph related (Two).** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
 
 ## Graph Representation (Adjacency Matrix vs List)
 
@@ -200,6 +206,8 @@ for i in N:
 7. **Shortest path algorithm (Djikstra's algorithm)** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 817]**
 
 8. **Find the Minimum Spanning Tree of the following graph using Kruskal's algorithm.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 847-849]**
+
+9. **Find out minimum spanning tree from a given graph using krushkal algorithm.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908]**
 
 ## Greedy Algorithms (Fractional Knapsack)
 

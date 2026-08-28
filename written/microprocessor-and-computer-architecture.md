@@ -170,6 +170,8 @@
 
 7. **Which of the following is the unit of Hard Disk Drive? (a) Megaharz (b) Kiloharz (c) Gigabyte (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
+8. **Consider a magnetic disk consisting of 16 heads and 400 cylinders. This disk has four 100-cylinder zones with the cylinders in different zones containing 160, 200, 240. and 280 sectors, respectively. Assume that each sector contains 512 bytes, average seek time between adjacent cylinders is 1 msec, and the disk rotates at 7200 RPM. Calculate the (a) disk capacity (b) maximum data transfer rate.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+
 ## RAID Architecture & Storage
 
 1. Which Level Raid is best and why? (BEPRC Assistant Programmer Exam: 08.08.2026)

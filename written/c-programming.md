@@ -289,7 +289,7 @@ return 0;
 
 69. **We are given an array of integers and a range, we need to find whether the subarray which falls in this range has values in the form of a mountain or not. All values of the subarray are said to be in the form of a mountain if either all values are increasing or decreasing or first increasing and then decreasing. Write a C/C++ Program that shows input is a Mountain sequence or Not Mountain sequence.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 833]**
 
-70. **Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 844]**
+70. **Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 844]** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908]**
 
 71. **Pattern this print using C++ program-** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
 ```text
@@ -303,6 +303,12 @@ return 0;
 72. **(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the sum of main diagonal elements of the matrix.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 884]**
 
 73. **(b) Write down a program to find sum of diagonal elements of a two dimensional matrix.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+
+74. **(i) Write a C/C++ program up to series n: \frac{1}{2\times 3} + \frac{2}{3\times 4} + \frac{3}{4\times 5} \dots\dots\dots\dots\dots** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
+
+75. **Write a C program to compute the perimeter and area of a circle with a given radius.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909-910]**
+
+76. **A হলো মিটার নং, B হলো ব্যবহৃত ইউনিট। 300 ইউনিটের বেশী তাদের মিটার নং এবং ইউনিটের যোগফল বের কর।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912]**
 
 ## Flowcharts & Algorithms
 
@@ -744,6 +750,25 @@ int main () {
 }
 ```
 
+28. **Find Output:** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911-912]**
+```c
+#include <stdio.h>
+int main() {
+    int i, sum=0, x;
+    for(i=0, x=0; i<=10; i+=2) {
+        x=i+3;
+        if(i==2)
+            continue;
+        if(i>=8)
+            break;
+        sum+=(i+x);
+        printf("i=%d x=%d sum=%d\n", i, x, sum);
+    }
+    printf("Out site loop:\n i=%d x=%d sum=%d", i, x, sum);
+    return(0);
+}
+```
+
 ## Recursion & Functions
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
@@ -853,3 +878,5 @@ int main() {
 28. **(b) Write down a pseudocode/program to generate all possible permutation for a given word.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 793]**
 
 29. **Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
+
+30. **Write a program in C/Java to find out the factorial of a number using recursion also write its iterative program.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**

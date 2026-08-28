@@ -151,6 +151,10 @@ int main(int argc, char *argv[]){
 
 30. **Linux Command: Write a code for listing home directory files with all details and human readable size got to Home directory, list directory files with 10-15 are display only 10^{\text{th}} to 15^{\text{th}} lines of words of them. Write the instructions in a way that they execute together and shows the result.** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 878]**
 
+31. **(i) Linux command for showing all files including the hidden files inside the home directory.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
+
+32. **(ii) Linux command for showing page size, disk space in a human-readable format.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**

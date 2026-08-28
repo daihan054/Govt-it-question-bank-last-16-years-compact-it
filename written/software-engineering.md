@@ -72,9 +72,13 @@
 
 31. **Software development এ Black Box Testing বলতে কি বুঝায়?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
 
+32. **Briefly describe Unit testing, Smoke testing and Stress testing in software engineering.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 914]**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
+
+2. **১ জন ব্যক্তি ১টি Bank Account খোলার জন্য একটি form fillup করেন। এরপর তাতে Manager স্বাক্ষর করেন। এবার উক্ত Account-এ ঐ ব্যক্তি কিছু টাকা Deposit করলে Account সচল হয়। এই Process টি DFD এর মাধ্যমে প্রকাশ করুন।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 913]**
 
 ## UML Diagrams (Class, Use Case, Sequence)
 
@@ -211,6 +215,8 @@
 7. **Imagine a scenario where new child classes are introduced frequently from a basic class. The method calling sequences for every child class are the same but the implementation is different among the child classes. Here which design pattern would you like to apply? Explain the reasons with examples to support your answer.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
 
 8. **(ক) 'ATM machine' এর Software Structure আঁকুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
+
+9. **(ii) Design the communication for the user login system for an MVC pattern framework.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
 
 ## CI/CD & DevOps Methodologies
 
