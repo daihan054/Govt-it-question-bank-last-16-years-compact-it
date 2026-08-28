@@ -75,3 +75,11 @@
    (b) 30 yards
    (c) 30 miles
    (d) 300 miles
+
+## Subnetting & IP Addressing
+
+1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
+   a) 255.255.255.0
+   b) 255.255.255.128
+   c) 255.255.255.192
+   d) 255.255.254.0

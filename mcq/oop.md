@@ -52,3 +52,19 @@
    (b) dive must be the name of an instance field
    (c) dive must be a method
    (d) submarine must be the name of a class
+
+## Encapsulation & Access Modifiers
+
+1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) Using private access specifier
+   (b) Using classes in object-oriented programming
+   (c) Using getter and setter methods
+   (d) Using global variables
+
+## Polymorphism & Overloading
+
+1. **Which of the following operators should be preferred to overload as a global function rather than a member method?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
+   (a) Postfix ++
+   (b) Comparison Operator
+   (c) Insertion Operator <<
+   (d) Prefix++

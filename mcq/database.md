@@ -44,6 +44,24 @@
    (c) Create
    (d) Isolation
 
+4. **Which clause is executed first in an SQL query?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) WHERE
+   (b) SELECT
+   (c) FROM
+   (d) ORDER BY
+
+5. **Which of the following is a DML (Data Manipulation Language) command?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) CREATE
+   (b) DELETE
+   (c) DROP
+   (d) ALTER
+
+6. **Which of the following is a command of Data Definition Language (DDL)?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) SELECT
+   (b) INSERT
+   (c) UPDATE
+   (d) CREATE
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -59,3 +77,30 @@
    (b) Consistency
    (c) Durability
    (d) Display
+
+2. **A to B transfer balance but not sent to B? Which property in ACID is responsible?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
+   (a) Atomicity
+   (b) Consistency
+   (c) Isolation
+   (d) Durability
+
+## Indexing & Query Optimization
+
+1. **Which one make data access from a database faster?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) Indexing
+   (b) Normalization
+   (c) Denormalization
+   (d) All of the above
+   25. Priority Scheduling (Non-Preemptive) with No Arrival Time Consider the following set of processes with their burst times and priorities:
+   | Process | Burst Time (BT) | Priority |
+   |---|---|---|
+   | P1 | 10 | 3 |
+   | P2 | 1 | 1 |
+   | P3 | 2 | 4 |
+   | P4 | 1 | 5 |
+   | P5 | 5 | 2 |
+   Using Non-Preemptive Priority Scheduling (lower number = higher priority), what is the Average Turnaround Time (TAT)? **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) 10
+   (b) 8.6
+   (c) 12
+   (d) 9.2

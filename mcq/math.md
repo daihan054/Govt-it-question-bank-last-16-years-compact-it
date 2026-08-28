@@ -58,6 +58,12 @@
    (c) o<n<m
    (d) o<m<n
 
+4. **The father's age is 36 and the son's age is 16. How many years ago was the father's age three times the son's age?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 6 years ago
+   (b) 36 years ago
+   (c) 12 years ago
+   (d) 4 years ago
+
 ## Algebra
 
 1. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -108,6 +114,12 @@
    (c) 201
    (d) 72
 
+5. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 25,000TK
+   (b) 30,000TK
+   (c) 35,000TK
+   (d) 3,000TK
+
 ## Arithmetic & Number Series
 
 1. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -147,3 +159,23 @@
    খ. ১১ মিনিট
    গ. ১৩ মিনিট
    ঘ. ১৪ মিনিট
+
+2. **A pipe can fill a tank in 4 hours, and another pipe can fill it in 6 hours. How much time will they take to fill the tank together?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 40 hours
+   (b) 4.5 hours
+   (c) 2.4 hours
+   (d) 5 hours
+
+## Analytical Reasoning
+
+1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 4.24 meters
+   (b) 5.24 meters
+   (c) 3.24 meters
+   (d) 4 meters
+
+2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 1
+   (b) 2
+   (c) 3
+   (d) 4

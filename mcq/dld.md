@@ -12,6 +12,12 @@
    (c) 3
    (d) 4
 
+3. **Which one is a Universal logic gate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
+   (a) NAND
+   (b) AND
+   (c) OR
+   (d) NOT
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -41,3 +47,9 @@
    (b) 101010
    (c) 100000
    (d) 111100
+
+2. **What is the 2's complement of (65)_{16} number?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) 10011011
+   (b) 10011010
+   (c) 00011011
+   (d) 10011100

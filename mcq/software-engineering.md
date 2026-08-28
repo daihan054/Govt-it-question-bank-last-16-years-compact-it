@@ -33,3 +33,17 @@
    (b)-functional error
    (c) interface error
    (d) coding error
+
+3. **Integration testing is the process of testing the _____ between two software units or modules.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
+   (a) Performance
+   (b) Functionality
+   (c) Interface
+   (d) Security
+
+## SDLC Models
+
+1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) It is difficult to manage
+   (b) It requires too many resources
+   (c) It is inflexible and not suitable for changing requirements
+   (d) It lacks proper documentation

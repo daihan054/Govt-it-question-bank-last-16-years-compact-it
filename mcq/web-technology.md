@@ -27,3 +27,19 @@
    b) font-style
    c) font-weight
    d) font-family
+
+## Full Stack & Web Servers
+
+1. **Which of the following is not a web server?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) Apache tomcat
+   (b) PHP
+   (c) Jetty
+   (d) Tornado
+
+## HTTP & Status Codes
+
+1. **What does HTTP Status Code 500 indicate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) Bad Request
+   (b) Unauthorized Access
+   (c) Internal Server Error
+   (d) Not Found

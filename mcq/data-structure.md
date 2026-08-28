@@ -6,6 +6,12 @@
    (c) n
    (d) \log(2*n)-1
 
+2. **What is the worst case time complexity of inserting n elements into an empty linked list, if the linked list needs to be maintained in sorted order?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) \Theta(n)
+   (b) \Theta(n \log n)
+   (c) \Theta(n^2)
+   (d) \Theta(1)
+
 ## Stack & Queue
 
 1. **The minimum number of stacks needed to implement a queue is** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -13,6 +19,12 @@
    (b) 2
    (c) 3
    (d) 4
+
+2. **Which one of the following is an application of Stack Data Structure?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) Managing function calls
+   (b) The stock span problem
+   (c) Arithmetic expression evaluation
+   (d) All of the above
 
 ## Tree & Binary Search Tree
 
@@ -53,3 +65,17 @@
    (b) Linked list
    (c) Hash table
    (d) Self-organizing list
+
+## Priority Queue & Heap
+
+1. **Which data structure is preferred for Priority Queue?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
+   (a) Heap Tree
+   (b) Graph
+   (c) Stack
+   (d) Table
+
+2. **What is the best way to implement priority queue?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) Array
+   (b) Linked List
+   (c) Heap
+   (d) Stack

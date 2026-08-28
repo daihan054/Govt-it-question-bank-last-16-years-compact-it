@@ -29,3 +29,29 @@
    (b) virus
    (c) threat
    (d) spamug
+
+2. **What kind of encryption is used for securing emails in transit?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) Symmetric Encryption
+   (b) Asymmetric Encryption
+   (c) TLS (Transport Layer Security)
+   (d) Hashing
+
+## Cryptography
+
+1. **Which algorithm is used in email security?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) AES
+   (b) RSA
+   (c) SHA
+   (d) All of the above
+
+2. **Digital Signature uses which algorithm?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) AES
+   (b) RSA
+   (c) DES
+   (d) Diffie-Hellman
+
+3. **Digital signature uses which algorithm for encryption?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
+   (a) Symmetric Key Algorithm
+   (b) Asymmetric Key Algorithm
+   (c) Hashing Algorithm only
+   (d) Stream Ciphe

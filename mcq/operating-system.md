@@ -33,3 +33,11 @@
    (b) which avoids deadlocks
    (c) where shared resources are accessed
    (d) which must be enclosed by a pair of semaphore (wait and signal) operations
+
+## Process Management & Scheduling
+
+1. **A process needs I/O operations, it switches to _____** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) Ready
+   (b) Running
+   (c) Waiting (Blocked)
+   (d) Terminated

@@ -99,3 +99,37 @@
    (b) 12
    (c) 13
    (d) 14
+
+7. **Find Output:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
+   ```cpp
+   int fun(int *p) {
+   *p = *p + 10;
+   return *p;
+   }
+   int main() {
+   int x = 5;
+   cout << fun(&x);
+   return 0;
+   }
+   ```
+   (a) 15
+   (b) 10
+   (c) 25
+   (d) 5
+
+8. **Find Output:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
+   ```cpp
+   int main() {
+   int x=3, y=2;
+   if (x==3)
+   y=2;
+   else
+   y=3;
+   cout<<x<<" "<<y<<endl;
+   return 0;
+   }
+   ```
+   (a) 3 3
+   (b) 3 2
+   (c) 2 3
+   (d) 3 1

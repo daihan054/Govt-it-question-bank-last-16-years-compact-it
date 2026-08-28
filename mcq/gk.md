@@ -122,6 +122,18 @@
    (c) Game Changer
    (d) None of these
 
+12. **Who won Nobel Peace prize in 2024?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) David Baker
+   (b) John Jumper
+   (c) Nihon Hidankyo
+   (d) Gary Ruvkun
+
+13. **Strasbourg belongs to which country?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) France
+   (b) Germany
+   (c) Canada
+   (d) Russia
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -256,6 +268,12 @@
    (c) 879th World Heritage Site
    (d) 789th World Heritage Site
 
+23. **The highest peak in Bangladesh is-** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) Saka Haphong
+   (b) Bijoy Tajingdong
+   (c) Dumlong
+   (d) Keokradong
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -300,6 +318,12 @@
    (c) Mountain Ecosystem
    (d) Marine Ecosystem
 
+8. **Which connect the two Sea in Suez Canal?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) Arabian Sea and Mediterranean Sea
+   (b) Mediterranean Sea and Red Sea
+   (c) Persian Gulf and Black Sea
+   (d) Black Sea and Arabian Sea
+
 ## Sports
 
 1. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -313,3 +337,9 @@
    (b) France
    (c) United Kingdom
    (d) United States
+
+3. **Who is first ICC ODI men's world Cup winner captain?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) Clive Lloyd
+   (b) Kapil Dev
+   (c) Alan Border
+   (d) Steve Waugh
