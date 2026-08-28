@@ -146,6 +146,12 @@
    c) Huffman Coding
    d) Red Black Tree
 
+12. **কোন Algorithm টি দ্রুত sorting করে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Bubble sort
+   B) Selection sort
+   C) Quick sort
+   D) Insertion sort
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**

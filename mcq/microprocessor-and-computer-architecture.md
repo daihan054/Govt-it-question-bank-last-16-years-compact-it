@@ -102,6 +102,24 @@
    C) Monitor
    D) RAM
 
+18. **Main Memory কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+   A) RAM
+   B) ROM
+   C) HDD
+   D) Floppy
+
+19. **নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) RAM
+   B) Hard disk
+   C) CD ROM
+   D) Cache Memory
+
+20. **Arithmetic and Logical operation এর ডাটা কাজের সময় কোথায় রাখা হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Arithmetic Register
+   B) Accumulator
+   C) Logical Register
+   D) Controller
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -193,6 +211,30 @@
    b) Cache line
    c) Cache memory
    d) All of these
+
+16. **Sequence Control Register আর কি নামে পরিচিত?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) Program Counter
+   B) Instruction Counter
+   C) Sequence Register
+   D) Controlling Register
+
+17. **Intel 8086 microprocessor এর বহিঃস্থ Address bus এর width কত bit হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) 8-bit
+   B) 16-bit
+   C) 20-bit
+   D) 32-bit
+
+18. **Microprocessor এর কোন অংশে ALU থাকে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Fetch unit
+   B) Control Unit
+   C) Processing Unit
+   D) Flags Unit
+
+19. **নিচের কোন Operation টি CPU তে দ্রুত কাজ করে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Multiplication
+   B) Bitwise OR
+   C) Addition
+   D) Division
 
 ## Secondary Storage (HDD & Disk Organization)
 

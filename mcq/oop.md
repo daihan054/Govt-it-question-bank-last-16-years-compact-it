@@ -282,6 +282,18 @@
    c) Compile time Polymorphism
    d) Runtime Polymorphism
 
+4. **Object Oriented programming এর বৈশিষ্ট্য কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+   A) Polymorphism
+   B) Friend function
+   C) Structure
+   D) Loop
+
+5. **Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 189]**
+   A) Inheritance
+   B) Abstraction
+   C) Polymorphism
+   D) Overloading
+
 ## Inheritance
 
 1. **When a class serves as base class for many derived classes, the situation is called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**

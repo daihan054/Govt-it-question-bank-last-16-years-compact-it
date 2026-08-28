@@ -330,6 +330,24 @@
    c) Update with ‘case’ provides significant time improvement.
    d) None of these above.
 
+35. **উল্লেখিত কোনটি Database aggregate এর function?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) where
+   B) sum
+   C) select
+   D) from
+
+36. **নিচের কোনটি Database তুলনা করার কাজে ব্যবহার হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) BETWEEN
+   B) ANY
+   C) IN
+   D) COMPARE
+
+37. **কোনটি দিয়ে Database Table এ uniqueness নিশ্চিত করা হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Primary Key
+   B) Foreign Key
+   C) Entity
+   D) Relation
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

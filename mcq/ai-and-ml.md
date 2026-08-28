@@ -89,3 +89,9 @@
    b) clustering
    c) association
    d) reinforcement learning
+
+17. **Hill climbing search এর প্রধান সমস্যা কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Local Maxima
+   B) Infinite loop
+   C) No Solution
+   D) Slowness

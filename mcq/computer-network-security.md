@@ -41,6 +41,12 @@
    c) Confidentiality, Integrity and Availability
    d) Privacy, Integrity and Approachability
 
+3. **ACL (Access Control List) এর দুটি প্রধান ধরন হল?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) Standard and Extended
+   B) Standard and Specialized
+   C) Extended and Specialized
+   D) Standard and IEEE
+
 ## Security Protocols
 
 1. **Which of the items listed below is the least strong security protocol?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
@@ -181,6 +187,12 @@
    (গ) হার্ডওয়্যার
    (ঘ) সিস্টেম সফটওয়্যার
    **উত্তর: ক**
+
+3. **নিচের কোনটি Antivirus নয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) Norton
+   B) MCAfee
+   C) Dr. Solomon toolkit
+   D) Security Point
 
 ## Web Security Vulnerabilities
 

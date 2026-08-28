@@ -537,6 +537,12 @@
    c) Character
    d) Double
 
+2. **Address variable রাখা যায় কোনটিতে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Break
+   B) Int
+   C) Pointer
+   D) Float
+
 ## Recursion
 
 1. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
@@ -568,6 +574,30 @@
    b) 2^{32}
    c) 2^{32}-1
    d) 2^{31}-1
+
+3. **C programming এ নিচের কোনটি Invalid variable name?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) Average
+   B) No#of-students
+   C) Xyz
+   D) y23z
+
+4. **C কী ধরনের programming language?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) Low level language
+   B) Mid-level language
+   C) High level language
+   D) None of these
+
+5. **নিচের কোনটি C ভাষার Keyword নয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) struct
+   B) int
+   C) star
+   D) float
+
+6. **C programming language এ নিচের কোনটিকে "if" দিয়ে Replace করা যায়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) switch
+   B) structure
+   C) return
+   D) for
 
 ## Flowcharts & Algorithms
 

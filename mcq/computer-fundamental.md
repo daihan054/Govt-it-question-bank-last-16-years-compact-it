@@ -254,6 +254,12 @@
    c. SCSI
    d. None
 
+25. **BIOS কী** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) Hardware
+   B) Firmware
+   C) Software
+   D) Combination of hardware and software
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**

@@ -288,6 +288,18 @@
    c) 5A
    d) 5C
 
+27. **‘b’ এর ASCII value কত?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+   A) 66
+   B) 98
+   C) 3000
+   D) 1
+
+28. **10000000 এর বাইনারী নম্বরটির 2's complement ফরম্যাটের মান কত (৮ বিট)?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) 0
+   B) 128
+   C) -128
+   D) 256
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

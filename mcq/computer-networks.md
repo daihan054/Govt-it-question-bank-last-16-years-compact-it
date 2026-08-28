@@ -209,6 +209,24 @@
    c) Message
    d) Frame
 
+28. **নিচের কোনটি E-mail protocol?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+   A) SMTP
+   B) USB
+   C) IOT
+   D) OTB
+
+29. **FTP protocol নিচের কোনটি ব্যবহার করে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) IP
+   B) TCP
+   C) UDP
+   D) SMTP
+
+30. **E-mail service এর সাথে সম্পর্কযুক্ত কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) Telnet
+   B) SSH
+   C) DHCP
+   D) SMTP
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -261,6 +279,12 @@
    B) 32
    C) 64
    D) 128
+
+10. **একটি IPv6 address এর দৈর্ঘ্য কত?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) 32 bits
+   B) 128 bits
+   C) 64 bits
+   D) 256 bits
 
 ## Networking Fundamentals & Terminology
 
@@ -353,6 +377,24 @@
    b. Advanced Research Programmed Auto Network
    c. Advanced Research Project Agency Network
    d. Advanced Research Project Authorized Network
+
+14. **কম্পিউটারকে নিম্নলিখিতভাবে Internet এর সাথে সংযুক্ত করা যায়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) Phase-line modem
+   B) DSL
+   C) Cable modem
+   D) All of these
+
+15. **কোনটি প্রথম Network?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) CNNET
+   B) NSFNET
+   C) ASPANET
+   D) ARPANET
+
+16. **IP address থেকে MAC address আনার protocol কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) RIP
+   B) BGP
+   C) ARP
+   D) TCP
 
 ## Multiplexing & Data Rate
 
@@ -663,6 +705,12 @@
    c) 14
    d) 6
 
+20. **উল্লেখিত কোনটি Private IP address?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) 192.169.10.10
+   B) 11.5.10.10
+   C) 1.1.1.1
+   D) 172.16.5.3
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -713,6 +761,12 @@
    c) Manchester
    d) AMI
 
+9. **ইন্টারনেটে নেটওয়ার্কে Media Access করার জন্য কোন পদ্ধতি ব্যবহৃত হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) CSMA/CD
+   B) CSMA/CA
+   C) Demand Priority
+   D) Polling
+
 ## Routing Protocols
 
 1. **Which of the following pairs is an example of intra-domain routing protocols?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
@@ -756,6 +810,12 @@
    b. by server
    c. with back up database
    d. by exchanging information with neighbor nodes
+
+8. **কোন Routing Protocol এ Dijkstra Algorithm ব্যবহার করা হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) ARP
+   B) OSPF
+   C) RIP
+   D) IGRP
 
 ## Network Devices & Configuration
 

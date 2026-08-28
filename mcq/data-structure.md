@@ -258,6 +258,18 @@
    c) 2^{N-1} - 1
    d) N^2
 
+17. **Max-Heap data structure এর সবচেয়ে বড় নম্বরটি কোথায় থাকে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+   A) Leaf
+   B) Internal node
+   C) Root
+   D) Outside
+
+18. **Complete Binary tree যার height n, তার মধ্যে node কতটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) n
+   B) 2^n
+   C) 2^{n-1}
+   D) 2^{n+1}-1
+
 ## Hashing & Hash Tables
 
 1. **Given a hash table with 25 slots that stores 2000 elements, the load factor for the hash table is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -305,3 +317,27 @@
    b) Binary Tree
    c) Queue
    d) Graph
+
+3. **Array data structure এ কোন ধরনের data রাখা যায়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) various type data
+   B) Only pointer type data
+   C) Classes data
+   D) Same type many data
+
+4. **LIFO data structure কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Queue
+   B) Stack
+   C) File
+   D) কোনটি নয়
+
+5. **Linked list এ ন্যূনতম দুইটি field থাকে। একটি হচ্ছে data field, তবে অন্যটি কি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Pointer to char
+   B) Node
+   C) Pointer to node
+   D) Null
+
+6. **নিচের কোনটি একটি valid postfix expression?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 189]**
+   A) a*b(c+d)
+   B) abc*+de-+
+   C) +ab
+   D) a+b-c
