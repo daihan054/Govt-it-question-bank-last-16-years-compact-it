@@ -21,6 +21,8 @@
 
 10. **(ক) সাধারণ ফাইলভিত্তিক সিস্টেমের চেয়ে DBMS এর সুবিধা কী কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
 
+11. **What is Database administrator role?** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -38,6 +40,8 @@
 5. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
 
 6. **SQL query to insert data into table. (A table was given with 3 row)** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
+
+7. **How can you Revoke permissions from a database table? Give SQL command for it.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 666]**
 
 ## SQL Queries
 
@@ -329,6 +333,8 @@ ORDER BY average_salary DESC;
 
 11. **অথবা, (ক) “BCNF is stricter than 3NF” এই উক্তিটি উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
 
+12. **Why Normalization is used in database? Explain 1^{\text{st}} Normal form using an example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
+
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
@@ -411,6 +417,10 @@ ORDER BY average_salary DESC;
 
 8. **Super key and Candidate key finding from table.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]**
 
+9. **From Functional Dependency for determine candidate key.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 661]**
+
+10. **Relation to find primary key, candidate key, super key.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 663]**
+
 ## Indexing in DBMS
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -433,6 +443,8 @@ ORDER BY average_salary DESC;
    **(ii) Write the SQL query to show the name of employee who borrow the maximum equipment?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 462]**
 
 5. **Develop an entity relationship diagram that describes data objects, relationships and attributes of the following system: -A web based order processing system for a computer store.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
+
+6. **Draw a ER diagram for BPL.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
 
 ## Database Connectivity (JDBC)
 

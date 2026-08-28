@@ -52,6 +52,8 @@
 
 17. **What is OCR? Write down the difference between OCR and OMR.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
 
+18. **১৬. পূর্ণরূপ লিখুন: HTTP, POP, ATM, PROM** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -63,6 +65,10 @@
 4. **What is BIOS?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
 5. **Write down the difference between Serial Port and Parallel Port.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+
+6. **Name and define the components of a computer system. Mention two optical input devices.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 663]**
+
+7. **What are the components of a Micro computer system?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
 
 ## ICT in Society & Governance
 

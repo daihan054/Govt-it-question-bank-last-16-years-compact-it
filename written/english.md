@@ -38,6 +38,10 @@
 
 18. **Growing use to technology in the Financial Service Industry.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
 
+19. **Focus English (Harm of durg)** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 663]**
+
+20. **Write an essay on any one of the following using the hints given below: a) Technical Education. [Hints: Introduction — What technical education is — importance — Role of the government — Conclusion.] b) Environment Pollution. [Hints: Introduction — What environment polluton is — Sources of pollution — Effects on environment — impacts of human health — How to prevent the pollution — Conclusion.]** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -47,6 +51,8 @@
 3. **Imagine that you have purchased a laptop from a local showroom a week back. The warranty period is on and the laptop is not functioning well. Write a letter of complaint to the manager of the showroom about it. Your letter should contain information about the problem and what you want.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
 
 4. **Write a letter to the officer-in-charge of your police station to provide regular police patrol in your locality to prevent crimes.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+
+5. **(a) Write a letter to your friend condoling the death of his/her mother. Or, (b) Write an application to the Upazila Nirbahi Officer for taking steps to repair damaged road in your locality.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
 ## Reading Comprehension
 
@@ -76,6 +82,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
  * (c) What are the two major reasons for increasing temperature in the world?
  * (d) How does global warming affect the sea level?
  * (e) What message does the passage convey?
+
+4. **Read the following passage and then answer the questions given below: War is the worst of all evils of human civilisation. It is an ancient institution which has existed for at least six thousand years. It was always wicked and usually foolish, but in the past, human race managed to live with it. Modern ingenuity has changed this drastically. Either man will abolish war or war will abolish man. In the present, it is nuclear weapons that cause the gravest danger, but bacteriological or chemical weapons may, before long, offer an even greater threat. If we succeed at any cost in abolishing nuclear weapons, our work will not be done completely. It will never be completed until we have succeeded in abolishing war for ever. To do this, we need to persuade mankind to look upon international disputes in a new intellectual and mutual way, not as contest of force or power, in which the victory goes to the side which is the most skillful in massacre, but by arbitration in accordance with agreed principles of law. It is not easy to change age-old mental habits, but this is what must be attempted. It is the destructive war that must be checked for the existence of life on earth. Questions: a) Why should we avoid war? b) Why is war more dangerous at present? c) What should we do to abolish war forever? d) How should all international problems be solved? e) Why should we check the destructive war at any cost?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
 ## English Grammar
 
@@ -133,6 +141,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 12. **Right forms of verb.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
 
+13. **Use the correct form of verbs within brackets: (a) Medha walks fast lest she (be) late. (b) Why you (not attend) the meeting yesterday? (c) You had better (to speak) the truth. (d) The poor (to be) born to suffer. (e) The rose (call) the queen of all flowers.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
 ## English Vocabulary & Antonyms
 
 1. **What is the Opposite word of Transparent?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
@@ -142,6 +152,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 ## Idioms & Phrases
 
 1. **What is the meaning of “see eye to eye”?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+2. **Make sentences with the following (any five): (a) keep pace with (b) make up one's mind (c) put up with (d) take after (e) well off (f) on the sly (g) in case of.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
 ## Translation
 

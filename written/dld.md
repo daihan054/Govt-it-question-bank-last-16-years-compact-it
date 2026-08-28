@@ -17,6 +17,8 @@
 
 7. **(9\text{D.AB}6)_{16} ও (306.51)_{10} যোগ করুন এবং ফলাফল বাইনারীতে প্রকাশ করুন। (110101) কোন সংখ্যা পদ্ধতির সংখ্যা হতে পারে বলে মনে করেন?** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 407]**
 
+8. **Explain Binary digits, logical levels and digital waveforms using timing diagram.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
+
 ## 2's Complement & Binary Arithmetic
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
@@ -42,6 +44,8 @@
 7. **Minimize the following function in SOP minimal form using K-map:** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
 
 8. **Show minimal function using K-Map. F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
+
+9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
 
 ## Logic Families (TTL vs CMOS)
 
@@ -87,6 +91,8 @@
 13. **$Y = A \cdot B + \overline{(A \cdot B)}$** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
 14. **Explain: NOR and NAND is a Universal gate.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
+
+15. **Define basic logical operations with examples. (AND, OR, NOT)** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
 
 ## Combinational Circuits (Adders, Encoders, MUX)
 

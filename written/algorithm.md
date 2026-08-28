@@ -77,6 +77,8 @@ for i in N:
 
 16. **Bubble sort, Quick sort and Merge sort algorithm এর Worst case complexity নির্ণয় কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
 
+17. **Write down the pseudocode of quick sort algorithm through recursive algorithm. Express the arrange complexity off this algorithm.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
@@ -168,3 +170,7 @@ for i in N:
 2. **What is Dynamic programming? Explain with example.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 474]**
 
 3. **The maximum subarray is the task of finding a contiguous subarray with the largest sum within a given one dimentional array of numbers. Suppose the array is: A: [-2, 1, -3, -1, 2, 1, -5, 4]** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 448]**
+
+4. **Write down the Algorithm for determining Fibonacci number through dynamic programming.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
+
+5. **What will be the time and space complexity of the above algorithm?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**

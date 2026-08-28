@@ -26,6 +26,10 @@
 
 13. **দশটি বাক্যে একটি অনুচ্ছেদ লিখুন: ‘শুধু শিক্ষা নয় দক্ষতাও জরুরি’** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
 
+14. **Focus: Bangla (Technology disadvantage).** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 663]**
+
+15. **১. যে-কোনো একটি বিষয়ে প্রবন্ধ লিখুন: ক. বিজ্ঞান শিক্ষা; খ. জাতির পিতা বঙ্গবন্ধু শেখ মুজিবুর রহমানের জন্ম শতবার্ষিকী; গ. আন্তর্জাতিক মাতৃভাষা দিবস; ঘ. ভাষা আন্দোলন ও মুক্তিযুদ্ধ; ঙ. তথ্য প্রযুক্তি ও বাংলাদেশ।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -59,6 +63,8 @@
 > ক্ষুধার রাজ্যে পৃথিবী গদ্যময়
 > পূর্ণিমা-চাঁদ যেন ঝলসানো রুটি।
 
+4. **২. সারমর্ম লিখুন: এসেছে নতুন শিশু, তাকে ছেড়ে দিতে হবে স্থান, জীর্ণ পৃথিবীতে ব্যর্থ, মৃত আর ধ্বংস স্তূপ পিঠে চলে যেতে হবে আমাদের, চলে যাবো তবু আজ যতক্ষণ দেহে আছে জ্ঞান। প্রাণপণে পৃথিবীর সরাবো জঞ্জাল, এ বিশ্বকে এ শিশুর বাসযোগ্য করে যাবো আমি নবজাতকের কাছে এ আমার দৃঢ় অঙ্গীকার।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
 ## পত্র লিখন
 
 1. **অনুকৃতিশীল নারী সমাজের জীবনে সত্যের গুরুত্ব বর্ণনা করে ছোট বোনকে একটি পত্র লিখুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -66,6 +72,8 @@
 2. **ছোট বোনকে স্বাবলম্বী হওয়ার অনুপ্রেরণা দিয়ে একটি পত্র লিখুন।** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
 
 3. **দুর্নীতিমুক্ত সমাজ গঠনে পারিবারিক শিক্ষার ভূমিকা কতটুকু, এ নিয়ে পত্রিকায় প্রকাশের উপযোগী একটি পত্র লিখুন।** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+
+4. **৩. ক. বাংলা নববর্ষ উপলক্ষ্যে একটি আমন্ত্রণপত্র লিখুন। অথবা খ. মুক্তিযুদ্ধ জাদুঘর পরিদর্শনের গুরুত্ব জানিয়ে ছোটভাইকে একটি চিঠি লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
 ## Translation
 
@@ -112,6 +120,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 16. **Translate English to Bangla:** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
 
 17. **Translation English to Bangla.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
+
+18. **৪. বাংলা অনুবাদ করুন: Love is the crown of all virtues. It adores a man with divine qualities. It is love that strengthens our family ties and make heaven of the world. Love for god is a virtue of the highest excellence. It governs society and secures personal liberty. Love of one's own country is an inherent instinct of human nature.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 
@@ -180,3 +190,7 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 23. **সমাস: কদর্থ, আলুসিদ্ধ, সাহিত্যসভা, তুষারশুভ্র, মনমাঝি।** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
 
 24. **বাগধারা দিয়ে বাক্য রচনা: অগস্ত্য যাত্রা, আটকপালে, ইতর বিশেষ, কাঁচা পয়সা, কান পাতলা।** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+
+25. **৫. যে-কোন দুইটি প্রশ্নের উত্তর দিন: ক. সাধু ও চলিত ভাষারীতির পাঁচটি পার্থক্য উল্লেখ করুন। খ. ণ-ত্ব বিধানের পাঁচটি নিয়ম লিখুন। গ. ‘পাকা’ শব্দের মাধ্যমে ভিন্নার্থকভাবে পাঁচটি বাক্য রচনা করুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
+26. **৭. পল্লীকবি কে? বাংলা সাহিত্যে সনেটের জনক কাকে বলা হয়? “লালসালু” উপন্যাসের লেখক কে?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**

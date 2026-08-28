@@ -124,6 +124,20 @@
 
 62. **রূপকল্প ২০৪১ বলতে কি বুঝ?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
 
+63. **১. আগরতলা ষড়যন্ত্র মামলার আসামী সংখ্যা কত ছিল?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+64. **২. প্রধান আসামী কে ছিলেন? এই মামলার বিশেষ ট্রাইব্যুনালের চেয়ারম্যান কে ছিলেন?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+65. **৩. ‘আমার দেখা নয়াচীন’, ‘মুজিবের রক্ত লাল’, ‘লক্ষ প্রাণের বিনিময়ে’- গ্রন্থগুলির লেখকের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+66. **৪. বাংলাদেশের চলমান ৪টি মেগা প্রকল্পের নাম লিখুন। দেশীয় অর্থে বাস্তবায়নাধীন ১টি মেগা প্রকল্পের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+67. **৫. গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ রয়েছে? মৌলিক অধিকারের বিষয়টি সংবিধানের কোন অনুচ্ছেদে আছে?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+68. **৬. কোন জেলায় অবস্থিত- লিখুন (ক) ষাটগম্বুজ মসজিদ; (খ) বীরশ্রেষ্ঠ ক্যাপ্টেন মহীউদ্দীন জাহাঙ্গীরের সমাধি; (গ) কান্তজীর মন্দির।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+69. **৮. হালদা নদী কোন এলাকায় অবস্থিত? এই নদীর অর্থনৈতিক গুরুত্ব কি?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -228,6 +242,20 @@
 
 44. **Greenpeace বলতে কি বুঝ?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
 
+45. **৯. পূর্ণরূপ লিখুন: UNIDO, ICJ, NATO** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+46. **১০. ডি-৮ প্রতিষ্ঠিত হয় কোন সালে? এর সদস্য সংখ্যা কত? এর সদরদপ্তর কোথায়?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+47. **১১. বাংলাদেশের সাথে মিয়ানমারের প্রধান সমস্যার উল্লেখ করত: এর সমাধানের উপায় সংক্ষেপে বর্ণনা করুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+48. **১২. ইউক্রেনের ৩টি সমুদ্রবন্দরের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+
+49. **১৩. নিম্নলিখিত দেশগুলির রাজধানীর নাম লিখুন: লিবিয়া, হন্ডুরাস, লাটভিয়া।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+
+50. **১৪. শ্রীলংকার অর্থনৈতিক বিপর্যয়ের মূল কারণ কি?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+
+51. **১৫. রাশিয়া-ইউক্রেন যুদ্ধের মূল কারণ সম্পর্কে তিনটি বাক্য লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+
 ## Everyday Science & Environment
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
@@ -259,3 +287,11 @@
 14. **What is the name of a technique that will be used to make multiple copies of target DNA in vitro?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 549]**
 
 15. **সুষম খাদ্যের উপাদান কয়টি?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+
+16. **১৭. হর্টিকালচার ও সেরিকালচার বলতে কি বুঝায়?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+
+17. **১৮. সুষমখাদ্যে শর্করা, আমিষ ও স্নেহজাতীয় খাদ্যের অনুপাত কত?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+
+18. **১৯. তিনটি যৌগমূলকের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+
+19. **২০. আইনস্টাইনকে বিংশশতাব্দীর সর্বশ্রেষ্ঠ বিজ্ঞানী বলা হয় কেন?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**

@@ -399,6 +399,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 2. **(b) Describe briefly the TCP/IP tunneling using appropriate diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 482]**
 
+3. **Why network need packet fragmentation? Define different types of packet fragmentation with necessary diagram.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 666]**
+
+4. **Suppose a 22-byte packet is to be transmitted through a network of \text{MTU} = 3\text{ byte}. The elementary fragment size is 1\text{ byte}. Show the segment numbering of the above packet. Packet number is 217.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
+
 ## Address Resolution (ARP & RARP)
 
 1. **(a) Discuss the main role of Address Resolution Protocol (ARP) in the network layer of TCP/IP protocol suite.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
@@ -412,6 +416,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **NAT Stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
 4. **Which two services are required to enable a computer to receive dynamic IP address and access internet using domain names?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 634]**
+
+5. **What is DHCP Server and why it is needed in a computer network.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
 
 ## IPv6 Addressing
 

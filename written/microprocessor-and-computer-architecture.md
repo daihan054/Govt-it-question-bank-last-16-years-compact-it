@@ -98,6 +98,8 @@
 
 10. **What is the difference between Dynamic RAM and Static RAM?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
 
+11. **Give classification of memory. Differentiate between RAM and ROM.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 664]**
+
 ## Secondary Storage (HDD vs SSD)
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

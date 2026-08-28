@@ -109,6 +109,8 @@ int main(int argc, char *argv[]){
 
 17. **Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
 
+18. **UNIX command (directory listing with hidden files).** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
