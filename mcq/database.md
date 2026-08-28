@@ -173,3 +173,9 @@
    (b) Data Mining
    (c) Text Mining
    (d) Data Selection
+
+5. **Hadoop written in which language?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) Java
+   (b) C++
+   (c) Pascal
+   (d) Kotlin

@@ -165,6 +165,18 @@
    (c) He asked them whether they would listen to such a man.
    (d) He asked them whether they will listen to such a man.
 
+21. **Which is the noun form of ‘Waste’?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   (a) Waste
+   (b) Wasting
+   (c) Wastage
+   (d) Wasteful
+
+22. **Which is the Verb form of ‘Short’?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   (a) Short
+   (b) Shorten
+   (c) enshort
+   (d) Shortage
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**

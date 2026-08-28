@@ -54,6 +54,12 @@
    (c) Heart
    (d) Kidney
 
+10. **কোন রংগুলিকে মৌলিক রং বলা হয়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** লাল, নীল, হলুদ
+
+11. **যে সর্বোচ্চ শ্রুতি সীমার উপরে মানুষ বধির হতে পারে তা হচ্ছে-** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ১০৫ ডিবি
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -187,6 +193,15 @@
    (b) Seema Biswas
    (c) Pratiba Sinha
    (d) Shabana Azmi
+
+23. **ইসলামি সংস্থা ওআইসি এর সদর দপ্তর কোথায়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** জেদ্দায়
+
+24. **পারস্য উপসাগরের আঞ্চলিক জোটের নাম কি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** জিসিসি
+
+25. **ট্রাফালগার স্কয়ার কোথায় অবস্থিত?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** লন্ডন
 
 ## Bangladesh Affairs
 
@@ -364,6 +379,15 @@
    (c) February, 1999
    (d) November, 2000
 
+30. **বাংলা একাডেমি প্রতিষ্ঠা হয় কবে?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ১৯৫৫
+
+31. **স্বাধীন বাংলাদেশের পতাকা প্রথম উত্তোলিত হয়েছিল ১৯৭১ সালের-** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ২ মার্চ
+
+32. **চন্দ্রদ্বীপ অঞ্চলের পূর্বনাম কি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** বরিশাল
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -419,6 +443,8 @@
    (b) মালয়েশিয়া
    (c) তাইওয়ান
    (d) ফিলিপাইন
+
+10. **সমুদ্র স্রোত সৃষ্টির প্রধান কারণ কি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
 
 ## Sports
 

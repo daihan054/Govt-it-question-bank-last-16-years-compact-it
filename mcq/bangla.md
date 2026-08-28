@@ -90,6 +90,21 @@
    (c) Shamsur Rahman
    (d) Rabindranath Tagore
 
+16. **ঠাকুরমার ঝুলি রবীন্দ্রনাথের কোন ধরনের রচনা?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** রূপকথা
+
+17. **আত্মঘাতী বাঙালি কার রচিত গ্রন্থ?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** নীরদ চন্দ্র চৌধুরী
+
+18. **কাজী নজরুল ইসলাম সম্পাদিত সাহিত্য পত্রিকা কোনটি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ধূমকেতু
+
+19. **বাংলা সাহিত্যের প্রথম মুসলিম কবি কে?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** শাহ মুহম্মদ সগীর
+
+20. **চাচা কাহিনীর লেখক কে?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** সৈয়দ মুজতবা আলী
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -255,6 +270,18 @@
    (b) বাহুল্য দোষে
    (c) গুরুচণ্ডালী দোষে
    (d) আঞ্চলিক দোষে
+
+29. **বাগাড়ম্বর শব্দের সন্ধি বিচ্ছেদ করুন-** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** বাক্ + আড়ম্বর
+
+30. **অনুরোধ এর বিপরীত শব্দ কোনটি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** অনুরোধ
+
+31. **জনৈক এর সন্ধি বিচ্ছেদ কোনটি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** জন+এক
+
+32. **কোন শব্দটি ইংরেজি ভাষা হতে আগত-** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** এজেন্ট
 
 ## বাগধারা ও প্রবাদ
 

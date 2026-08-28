@@ -18,6 +18,12 @@
    (c) OR
    (d) NOT
 
+4. **Universal logic gate is:** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) NAND, XOR
+   (b) NOR, XOR
+   (c) NOR, OR
+   (d) NAND, NOR
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -71,3 +77,21 @@
    (b) -127
    (c) -255
    (d) -128
+
+5. **(1111111101)_2 = (?)_{10}** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) 1511
+   (b) 1510
+   (c) 1500
+   (d) 1537
+
+6. **Find out 2's complement value of 11100101.** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) 00011011
+   (b) 00011111
+   (c) 0011001
+   (d) 00011010
+
+7. **(2023)_{10} = (?)_{16}** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   (a) 7E0
+   (b) 7D0
+   (c) 8E0
+   (d) 7E7

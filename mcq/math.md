@@ -50,6 +50,9 @@
    গ. 2/5
    ঘ. 5/2
 
+2. **একটি ৪৮ মিটার লম্বা খুঁটি ভেঙ্গে সম্পূর্ণভাবে বিচ্ছিন্ন না হয়ে ভূমির সাথে 30^\circ কোন উৎপন্ন করে। খুঁটিটি কত উচুতে ভেঙ্গে ছিল?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ১৬
+
 ## Average & Age Problems
 
 1. **মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -110,6 +113,9 @@
    (c) 9^{60}
    (d) 3^{60}
 
+7. **x+y = 7, xy = 10, (x-y)^2 এর মান কত?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** 9
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -137,6 +143,12 @@
    (b) 30,000TK
    (c) 35,000TK
    (d) 3,000TK
+
+6. **৪ টাকায় ৫ টি করে কিনে ৫ টাকায় ৪ টি করে বিক্রি করলে শতকরা কত লাভ হবে?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ৫৬.২৫%
+
+7. **যদি তেলের মূল্য ২৫% বৃদ্ধি পায় তবে তেলের ব্যবহার শতকরা কত কমালে তেল বাবদ খরচ বৃদ্ধি পাবে না?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ২০%
 
 ## Arithmetic & Number Series
 
@@ -181,6 +193,9 @@
    (b) 7
    (c) 99
    (d) 181
+
+8. **৬০ থেকে ৮০ এর মধ্যে বৃহত্তর ও ক্ষুদ্রতম মৌলিক সংখ্যার অন্তর কত?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ১৮
 
 ## Time, Work & Distance
 

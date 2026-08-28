@@ -38,6 +38,12 @@
    (c) O(n^2)
    (d) O(n)
 
+4. **Which of the following sort algorithms has execution time that is least dependent on initial ordering of the input?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) Merge Sort
+   (b) Insertion Sort
+   (c) Selection Sort
+   (d) Quick Sort
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -65,6 +71,12 @@
    (b) Backtracking
    (c) Greedy
    (d) Divide and Conquer
+
+3. **Which algorithm used in memorization?** **(BREB Assistant Programmer Exam: 2023) [compact it 31]**
+   (a) Dynamic Programming
+   (b) Backtraking
+   (c) Static Programming
+   (d) Xtreme Programming
 
 ## Complexity & Analysis
 

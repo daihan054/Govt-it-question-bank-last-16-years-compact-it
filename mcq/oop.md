@@ -128,6 +128,12 @@
    c) Hybrid inheritance
    d) Multipath inheritance
 
+2. **Which language is not support OOP four Inheritance feature?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   (a) Smaltalk
+   (b) Java
+   (c) C
+   (d) C++
+
 ## Constructors & Destructors
 
 1. **Which of the following is true regarding a constructor in Object Oriented Programming?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**

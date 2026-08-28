@@ -28,6 +28,12 @@
    (c) SSL
    (d) HTTP
 
+2. **Which protocol in data encryption of Network level?** **(BREB Assistant Programmer Exam: 2023) [compact it 31]**
+   (a) HTTPs
+   (b) DNS
+   (c) SMTP
+   (d) FTP
+
 ## Email Security & Spam
 
 1. **An unsolicited e-mail message sent to many recipients at once is a-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**

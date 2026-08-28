@@ -32,6 +32,9 @@
    C) Help
    D) Save
 
+3. **কি-বোর্ডের Del বাটন চাপলে কি হয়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** কার্সরের পরের শব্দ মুছে যায়।
+
 ## Hardware Components & Peripherals
 
 1. **The Expansion cards are inserted into ______ in a computer.** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -39,3 +42,11 @@
    (b) Hard Disk of CPU
    (c) Peripheral Devices
    (d) None of above
+
+## ICT & Emerging Technology
+
+1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) A blockchain is a centralized digital ledger consisting of records called blocks
+   (b) A blockchain is a decentralized, distributed, digital ledger consisting of records called blocks
+   (c) A blockchain is a centralized digital ledger consisting of records called blocks
+   (d) None of the above

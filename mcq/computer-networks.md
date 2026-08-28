@@ -38,6 +38,18 @@
    (c) 20
    (d) 40
 
+6. **What is the port address of Oracle Database?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) 1520
+   (b) 1521
+   (c) 1522
+   (d) 1523
+
+7. **What is the port address of FTP protocol?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   (a) 21
+   (b) 23
+   (c) 80
+   (d) 25
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -57,6 +69,12 @@
    (b) hashing
    (c) NAT
    (d) Trasversing
+
+4. **How many bits of IPv6 address?** **(BREB Assistant Programmer Exam: 2023) [compact it 31]**
+   (a) 128
+   (b) 32
+   (c) 12
+   (d) 48
 
 ## Networking Fundamentals & Terminology
 
@@ -137,6 +155,12 @@
    c. 172.15.29.63
    d. 192.168.13.18
 
+7. **Which one is Private IP address?** **(BREB Assistant Programmer Exam: 2023) [compact it 31]**
+   (a) 192.168.10.10
+   (b) 11.15.10.10
+   (c) 1.1.1.1
+   (d) 172.16.5.3
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -160,3 +184,17 @@
    b) copy ftp flash
    c) copy flash tftp
    d) copy tftp flash
+
+2. **Which device converts digital to analog signal?** **(BREB Assistant Programmer Exam: 2023) [compact it 31]**
+   (a) Router
+   (b) Switch
+   (c) Modem
+   (d) Hub
+
+## Error Detection & Correction
+
+1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) Cyclic Redundancy Check
+   (b) Cyclic Redundant Check
+   (c) Cyclic Redundancy Cycle
+   (d) Cyclic Redundancy Club

@@ -35,3 +35,9 @@
    (b) Generative Program Technology.
    (c) Generative Process Technology.
    (d) Generative Pre-trained Transformer.
+
+7. **Which language uses in AI?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) Prolog
+   (b) Python
+   (c) Java
+   (d) C
