@@ -820,6 +820,12 @@
    (d) to acquire
    **Ans: c**
 
+33. **The word ‘Imbibe’ means-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
+   (a) to learn
+   (b) to cry
+   (c) to drink
+   (d) to acquire
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**

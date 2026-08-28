@@ -375,7 +375,13 @@
 
 58. **নিউক্লিয়ার রিয়েক্টর ব্যবহৃত কন্ট্রোল রড কি দিয়ে তৈরি? ক্যাডমিয়াম** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
 
-59. **পূর্ণ অভ্যন্তরীণ প্রতিফলন ঘটে যখন আলো-** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+59. **পূর্ণ অভ্যন্তরীণ প্রতিফলন ঘটে যখন আলো-** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+
+60. **তেজস্ক্রিয়তার একক কি?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+   (ক) রনজেন
+   (খ) কুরি
+   (গ) হেনরি
+   (ঘ) রেডিয়াম
 
 ## International Affairs
 
@@ -729,6 +735,12 @@
    (গ) গ্রিক
    (ঘ) আফগানিস্তান
    **Ans: খ**
+
+65. **হরপ্পা মহেনজোদারো কোন সভ্যতার অন্তর্ভুক্ত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
+   (ক) রোমান
+   (খ) সিন্ধু
+   (গ) গ্রিক
+   (ঘ) আফগানিস্তান
 
 ## Bangladesh Affairs
 
@@ -1234,6 +1246,30 @@
    (ঘ) জাহানারা
    **Ans: ক**
 
+93. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান দিবস কত তারিখ?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
+   (ক) ৪ নভেম্বর
+   (খ) ৮ অক্টোবর
+   (গ) ৪ ডিসেম্বর
+   (ঘ) ৪ জানুয়ারী
+
+94. **বাংলাদেশ সুগারক্রপ গবেষণা ইনস্টিটিউট কোথায় অবস্থিত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
+   (ক) গাজীপুর
+   (খ) পাবনা
+   (গ) ময়মনসিংহ
+   (ঘ) রাজশাহী
+
+95. **স্বাধীন বাংলাদেশের জাতীয় সংসদের প্রথম স্পিকার কে ছিলেন?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+   (ক) আবদুল খালেক উকিল
+   (খ) আবদুল হাকিম
+   (গ) সাহাবুদ্দিন আহমদ
+   (ঘ) মোহাম্মদ উল্লাহ
+
+96. **তেভাগা আন্দোলনের নেত্রী?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+   (ক) ইলা মিত্র
+   (খ) তারামন বিবি
+   (গ) প্রীতিলতা
+   (ঘ) জাহানারা
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1349,6 +1385,12 @@
    (গ) ১০ ঘণ্টা
    (ঘ) ৫ ঘণ্টা
    **Ans: খ**
+
+20. **গ্রিনিচমান সময়ের সঙ্গে বাংলাদেশের সময়ের পার্থক্য কত ঘণ্টা?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+   (ক) ৪ ঘণ্টা
+   (খ) ৬ ঘণ্টা
+   (গ) ১০ ঘণ্টা
+   (ঘ) ৫ ঘণ্টা
 
 ## Sports
 
