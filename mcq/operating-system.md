@@ -72,6 +72,12 @@
    C) primary memory
    D) secondary memory
 
+13. **A page fault occurs ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+   a. When the page is not in the memory
+   b. When the page is in the memory
+   c. When the process inters into the blocked state
+   d. When the process is in the ready state
+
 ## Deadlock
 
 1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -309,6 +315,18 @@
    c) Disk space can be increased by sending files into recycle bin
    d) There may have multiple recycle bin
 
+3. **Which of the following file name extension suggests that the file is backup of another file?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+   a. TXT
+   b. COM
+   c. BAS
+   d. BAK
+
+4. **"INI" extension refers usually what kind of file?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+   a. Image file
+   b. System file
+   c. Hypertext file
+   d. Image Color Matching Profile file
+
 ## OS Concepts & Multiprogramming
 
 1. **The ______ system may manage a high degree of interaction between processes and is very useful for high speed and real-time processing.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
@@ -400,6 +418,12 @@
    B) Current user
    C) User with lowest user id
    D) User with lowest group id
+
+16. **Multiprogramming systems ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+   a. Are easier to develop than single programming system
+   b. Execute each job faster
+   c. Execute more jobs in the same time
+   d. Are used only on large mainframe computers.
 
 ## Linux Commands & Administration
 

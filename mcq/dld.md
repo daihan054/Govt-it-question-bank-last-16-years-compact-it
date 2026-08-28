@@ -96,6 +96,12 @@
    C) NOT
    D) OR
 
+17. **NAND gates are preferred over other because these ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+   a. Have lower function area
+   b. Can be used to make any gate
+   c. Consume least electronic power
+   d. Provide maximum density in a chip
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**

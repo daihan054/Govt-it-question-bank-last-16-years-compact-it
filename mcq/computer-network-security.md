@@ -272,6 +272,12 @@
    C) Emails
    D) Troubleshooting
 
+7. **Computer virus is a ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+   a. Animal
+   b. Hardware
+   c. Program
+   d. Machine
+
 ## Web Security Vulnerabilities
 
 1. **How can we prevent SQL Injection Attack?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

@@ -431,6 +431,18 @@
    c. Hub
    d. Laptop
 
+58. **What is SMTP?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+   a. Simple Mail Transport protocol
+   b. Simple Mailer Transport protocol
+   c. Single Mail Transfer Protocol
+   d. None of These
+
+59. **VOID stands for ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+   a. Voice Over Internet Protocol
+   b. Voice Over Instant Protocol
+   c. Variable Optical Internet Protocol
+   d. None of these
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -858,6 +870,18 @@
    c. Packet sniffing
    d. Throughput testing
 
+57. **Rules used to establish & maintain communication is called ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+   a. Dialogue
+   b. Protocol
+   c. Agenda
+   d. Constraint
+
+58. **Which of the following does not require a computer for transmission?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+   a. E-mail
+   b. Fax
+   c. Webiner
+   d. Video conferencing
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -1087,6 +1111,12 @@
    b. The wireless router needs a firmware update
    c. The wireless router is 802.11b only
    d. The Wireless router is defective
+
+24. **What medium is used to communicate by mobile phones?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+   a. Optical device
+   b. Laser device
+   c. LED source
+   d. Radio waves
 
 ## Subnetting & IP Addressing
 
@@ -1863,3 +1893,9 @@
    b) UCLA
    c) CREN
    d) ARPANET
+
+3. **The direct connection is made between sender & Receiver so data can be transmitted ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+   a. Packet switching
+   b. Circuit switching
+   c. Message switching
+   d. Data switching
