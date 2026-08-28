@@ -75,3 +75,15 @@
    B) PaaS
    C) Key board
    D) SaaS
+
+10. **Cloud computing is a ________ system and it is necessarily unidirectional in nature.** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) Stateless
+   (b) Stateful
+   (c) Reliable
+   (d) Windows
+
+11. **Which of the following cloud concept is related to pooling and sharing of resources?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
+   (a) Polymorphism
+   (b) Abstraction
+   (c) Virtualization
+   (d) Digitizing

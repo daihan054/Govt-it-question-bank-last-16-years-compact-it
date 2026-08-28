@@ -101,6 +101,12 @@
    c) Attribute has multiple value
    d) It has functional dependency
 
+6. **The request and release of resources are-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
+   (a) Command line
+   (b) Interrupts statements
+   (c) System calls
+   (d) Special program
+
 ## Process Synchronization
 
 1. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on this semaphore. The resulting value of the semaphore is___** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
@@ -217,6 +223,24 @@
    C) Shortest Job Next
    D) None of these
 
+15. **A common representation of process scheduling is -** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) Static diagram
+   (b) Scheduling queues
+   (c) Queuing diagram
+   (d) Process control block
+
+16. **The scheduling queue is generally stored as-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
+   (a) A liner array
+   (b) A stack
+   (c) A linked list
+   (d) A tree
+
+17. **To execute a program, an OS creates a number of ________, each one for, running a different program.** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
+   (a) Processors
+   (b) Threads
+   (c) Virtual processors
+   (d) Kernel
+
 ## File Systems & Disk Management
 
 1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**
@@ -286,6 +310,12 @@
    B) .ini
    C) .dill
    D) .chm
+
+10. **Who preside the interface between a process and the OS?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
+   (a) Kernel
+   (b) System calls
+   (c) Command
+   (d) Graphical user
 
 ## Linux Commands & Administration
 

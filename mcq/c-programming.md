@@ -554,6 +554,12 @@
    C) n^2-3n+2
    D) n^2(n+1)/2
 
+10. **When you pass array as an argument to a function, which actually gets passed?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+   (a) Base address of the array
+   (b) The first element of the array
+   (c) Address of the first element of the array
+   (d) Address of the last element of the array
+
 ## Pointers & Memory Allocation
 
 1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
@@ -573,6 +579,12 @@
    B) pointer
    C) char
    D) float
+
+4. **What is the following declaration for? int (*a)[10];** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) Pointer to an array of 10 integers
+   (b) Array of 10 function Pointers returning integer
+   (c) A pointer of to function returning an array to 10 integers
+   (d) Array of 10 integers pointers
 
 ## Recursion
 

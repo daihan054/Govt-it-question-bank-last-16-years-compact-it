@@ -340,6 +340,12 @@
    C) More real IP addresses
    D) Jumbo Payload
 
+12. **How long is an IPv6 address?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) 32-bits
+   (b) 128-byts
+   (c) 64-bits
+   (d) 128-bits
+
 ## Networking Fundamentals & Terminology
 
 1. **Set of rules is called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -570,6 +576,12 @@
    C. Networks and connectivity
    D. Data
 
+37. **Which one of the following is a private network based on public network?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
+   (a) Local Area Network
+   (b) Virtual Private Network
+   (c) Storage Area Network
+   (d) Enterprise Private Network
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -643,6 +655,18 @@
    b) FDM
    c) Frequency modulation
    d) Pulse modulation
+
+13. **Which multiplexing technique transmits digital signals?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) WDM
+   (b) FDM
+   (c) TDM
+   (d) All of the above
+
+14. **The bandwidth of a channel is 1MHz. The SNR for this channel is 63. What is the bit rate?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) 4 Mbps
+   (b) 6 Mbps
+   (c) 8 Mbps
+   (d) 10 Mbps
 
 ## Wireless & Mobile Communication
 
@@ -751,6 +775,12 @@
    b) Hard Roaming
    c) Soft Handoff
    d) Hard Handoff
+
+19. **LTE means -** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) Long Term Evaluation
+   (b) Long Time Evaluation
+   (c) Long Term Evolution
+   (d) Long Terminal Evolution
 
 ## Subnetting & IP Addressing
 
@@ -903,6 +933,12 @@
    C) Class C
    D) Class D
 
+24. **Which class of IP address provides a maximum of only 254 host address per network ID?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) Class A
+   (b) Class B
+   (c) Class C
+   (d) Class D
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -965,6 +1001,24 @@
    C) Protocol
    D) All of these
 
+11. **The technique that is used to digitize analog signal by a codec is called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+   (a) PCM
+   (b) Demodulation
+   (c) CDMA
+   (d) NRZ
+
+12. **Which one of the following is the source of data communication?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) Modem
+   (b) Cable
+   (c) Router
+   (d) Computer
+
+13. **If the frequency spectrum of a signal has a bandwidth of 500Hz with the highest frequency is 600Hz. What should be the sampling rate according to the Nyquist theorem?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) 200 samples/S
+   (b) 500 samples/S
+   (c) 1000 samples/S
+   (d) 1200 samples/S
+
 ## Routing Protocols
 
 1. **Which of the following pairs is an example of intra-domain routing protocols?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
@@ -1014,6 +1068,12 @@
    B) OSPF
    C) RIP
    D) IGRP
+
+9. **Routing is clearly the major issue for:** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) Transport layer
+   (b) Network layer
+   (c) Data-link layer
+   (d) Physical layer
 
 ## Network Devices & Configuration
 
@@ -1179,6 +1239,12 @@
    B) Hub
    C) Router
    D) Modem
+
+24. **Bridge is a ________ device.** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) Layer-2
+   (b) Layer-3
+   (c) Layer-1
+   (d) Layer-2 and Layer-3
 
 ## Error Detection & Correction
 

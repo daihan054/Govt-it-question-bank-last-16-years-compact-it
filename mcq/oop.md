@@ -371,6 +371,12 @@
 3. **Which type of members can't accessed in derived classes of a base class?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Private members
 
+4. **What is default level of inheritance has to be specified in C++?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
+   (a) Public
+   (b) Private
+   (c) Protected
+   (d) Compile time error
+
 ## Constructors & Destructors
 
 1. **Which of the following is true regarding a constructor in Object Oriented Programming?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
@@ -378,6 +384,12 @@
    b) Does not consist of any return type
    c) has some return type
    d) None of the above
+
+2. **A constructor is a special type of-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) Class
+   (b) Field
+   (c) Method
+   (d) Property
 
 ## Exception Handling
 

@@ -317,3 +317,9 @@
    b) Data link layer
    c) Network layer
    d) Application layer
+
+16. **To prevent we use firewall-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) Data-driven attack
+   (b) Virus attack
+   (c) Unauthorized attack
+   (d) All

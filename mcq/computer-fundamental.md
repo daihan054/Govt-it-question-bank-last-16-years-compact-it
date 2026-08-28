@@ -352,6 +352,12 @@
    C) Internet Explorer
    D) Twitter
 
+11. **Information, a combination of graphics, text, sound, video and animation is called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
+   (a) Multitask
+   (b) Multimedia
+   (c) Multiprocessor
+   (d) Multiprogramming me
+
 ## Software Types & Classification
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
@@ -504,6 +510,24 @@
    C) ctrl+A
    D) None
 
+26. **Some program exists for computers use to help it manage it task and devices, which are called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+   (a) Software
+   (b) Application software
+   (c) System software
+   (d) Firmware
+
+27. **Baidu is one kind of -** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+   (a) Search Engine
+   (b) Book store
+   (c) Payment
+   (d) Operating
+
+28. **The process of laying out a document with text, graphics, headlines and photographs is involved in:** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
+   (a) Deck Top Printing
+   (b) Desk Top Printing
+   (c) Desk Top Publishing
+   (d) Deck Top Publishing
+
 ## Acronyms & Abbreviations
 
 1. **CMP এর পূর্ণ অভিব্যক্তি হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
@@ -517,3 +541,9 @@
    B) Light crystal display
    C) Liquid crystal diode
    D) Liquid crystal display
+
+3. **MIRC Means-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
+   (a) Magnetic Ink Character Reader
+   (b) Magnetic Ink Code Reader
+   (c) Magnetic Ink Case Reader
+   (d) None

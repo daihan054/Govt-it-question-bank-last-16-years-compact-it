@@ -519,6 +519,30 @@
    C. 6mA
    D. 8mA
 
+89. **The concept of which Superposition theorem is based on-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) Reciprocity
+   (b) duality
+   (c) non-linearity
+   (d) linearity
+
+90. **At absolute zero temperature, a semiconductor behaves as a/an-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+   (a) Good conductor
+   (b) Superconductor
+   (c) Insulator
+   (d) Variable resistor
+
+91. **The fact that the conductor carries more current on the surface of core is known as-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+   (a) Permeability
+   (b) Surface tension
+   (c) Corona
+   (d) skin effect
+
+92. **A load is connected to a network. At the terminal to which the load is connected, R_{\text{th}}=10 and V_{\text{th}}=40\text{V}. The maximum possible power supplied to the load is-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+   (a) 160\text{ W}
+   (b) 80\text{ W}
+   (c) 40\text{ W}
+   (d) 1\text{ W}
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
@@ -599,6 +623,24 @@
    (গ) increasing the armature current
    (ঘ) None of the above
 
+16. **The ordinary efficiency of a given transformer is maximum when-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 189]**
+   (a) It runs at half-load
+   (b) Its nuns at full-load
+   (c) Its copper loss is equal to iron loss
+   (d) It runs slightly overload
+
+17. **If two generators are running in parallel and field of one of the generators is weakened too much then it will-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+   (a) Take the smaller shunt of the total load
+   (b) Run as the motor in the same direction
+   (c) Take a large share of the total load
+   (d) Run in the opposite direction as motor
+
+18. **The sole purpose of a commutator in a DC generator is to-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
+   (a) Increase output voltage
+   (b) Reduce sparking at brushes
+   (c) Provides smoother output
+   (d) Convert the induced AC to DC
+
 ## Signals & Systems
 
 1. **The transfer function of an LTI system is given as \frac{1}{s+2}. What is the value of its impulse response at t=0?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
@@ -661,3 +703,15 @@
    B) Cycle
    C) Wave length
    D) None
+
+11. **The unit-impulse response of a system is given by c(t) = 0.5e^{-0.5t}. Its transformer function is-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) 1/(s+2)
+   (b) 1/(1+2s)
+   (c) 2/(1+2s)
+   (d) 2/(s+2)
+
+12. **A filter having a single continuous transmission band with neither the upper nor the lower cutoff frequencies is zero or infinite is called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) Band pass filter
+   (b) Low pass filter
+   (c) High pass filter
+   (d) Band stop filter

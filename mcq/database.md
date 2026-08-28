@@ -521,6 +521,12 @@
    C. C++
    D. MS Access
 
+28. **In the hypermedia database, information bits are stored in the form of:** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
+   (a) Cubes
+   (b) Nodes
+   (c) Signals
+   (d) Symbols
+
 ## Transaction Management & ACID
 
 1. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

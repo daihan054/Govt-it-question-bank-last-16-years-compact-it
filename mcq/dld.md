@@ -366,6 +366,18 @@
    C) 01010101
    D) 11111111
 
+37. **(\text{B12})_{16} + (\text{5CA})_{16} = ?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) (10\text{DC})_{16}
+   (b) (\text{AFDC})_{16}
+   (c) (1\text{FDC})_{16}
+   (d) (\text{E1DC})_{16}
+
+38. **What is the largest decimal value that can be represented by 12 bits?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
+   (a) 1024
+   (b) 2048
+   (c) 2095
+   (d) 4095
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
