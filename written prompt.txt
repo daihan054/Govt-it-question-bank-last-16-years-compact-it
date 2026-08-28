@@ -8,5 +8,6 @@ So the flow is:
 2) extract all the questions
 3) now run the processDaihan. Commit message hobe doc file er nam ta.
 4) after processDaihan finished, move the docx file to recycle bin.
+5) continue the process until all the files done from that folder.
 
 here is the file path: '/Users/daihan/Documents/Learning projects/written ' , ekhan thekei ekta ekta docx file ....
