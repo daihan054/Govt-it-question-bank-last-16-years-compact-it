@@ -1,71 +1,71 @@
-# Bangladesh Bank — Assistant Director (ICT) 2026 : Written Suggestion
+# বাংলাদেশ ব্যাংক — Assistant Director (ICT) ২০২৬ : Written সাজেশন
 
-> Prepared **28 August 2026**, roughly four weeks before the exam.
-> Built from the full question bank in this repo: **2,726 written** + **2,781 MCQ** questions across 581 distinct exams,
-> of which **477 written questions came from bank-sector exams** and **11 from the last AD(ICT) paper (07.02.2025, conducted by DU)**.
+> তৈরি: **২৮ আগস্ট ২০২৬**, পরীক্ষার প্রায় চার সপ্তাহ আগে।
+> এই repo-র পুরো question bank থেকে তৈরি: **২,৭২৬টি written** + **২,৭৮১টি MCQ** প্রশ্ন, ৫৮১টি আলাদা পরীক্ষা থেকে।
+> এর মধ্যে **৪৭৭টি written প্রশ্ন এসেছে ব্যাংক খাতের পরীক্ষা থেকে**, আর **১১টি এসেছে গত AD(ICT) paper (০৭.০২.২০২৫, DU পরিচালিত) থেকে**।
 
 ---
 
-## 1. Exam snapshot
+## ১. পরীক্ষার কাঠামো
 
-| Paper | Marks | Time | Breakdown |
+| Paper | মার্ক | সময় | বিভাজন |
 |---|---|---|---|
-| MCQ | 100 | 10:00–11:00 am | IT 75 · Math 15 · GK 10 |
-| **Written** | **200** | **11:00 am–1:00 pm (2 hr)** | **IT 150 · Math 20 · English 30** |
+| MCQ | ১০০ | সকাল ১০:০০–১১:০০ | IT ৭৫ · Math ১৫ · GK ১০ |
+| **Written** | **২০০** | **১১:০০–১:০০ (২ ঘণ্টা)** | **IT ১৫০ · Math ২০ · English ৩০** |
 
-Three consequences you should plan around:
+যে তিনটা বিষয় মাথায় রেখে পরিকল্পনা করতে হবে:
 
-1. **The written script is only marked if you pass MCQ.** Clear that gate first — see the companion [MCQ suggestion](mcq-bb-ad-ict-suggestion.md).
-2. **200 marks in 120 minutes = 36 seconds per mark.** A 20-mark question gets 12 minutes, including the diagram. You cannot write essays. You write *structured, labelled, complete* answers, fast.
-3. **Written + Viva decide the final job.** This is the paper that actually gets you selected, so depth matters here in a way it doesn't in the MCQ.
+১. **MCQ-তে পাশ করলে তবেই written-এর খাতা দেখা হয়।** আগে সেই gate পার হও — সঙ্গের [MCQ সাজেশন](mcq-bb-ad-ict-suggestion.md) দেখো।
+২. **১২০ মিনিটে ২০০ মার্ক = প্রতি মার্কে ৩৬ সেকেন্ড।** ২০ মার্কের প্রশ্নে পাবে ১২ মিনিট, diagram-সহ। রচনা লেখার সুযোগ নেই। লিখতে হবে *গোছানো, লেবেলযুক্ত, সম্পূর্ণ* উত্তর — দ্রুত।
+৩. **Written + Viva-ই চূড়ান্তভাবে চাকরি ঠিক করে।** তাই এই paper-এ গভীরতা যতটা দরকার, MCQ-তে ততটা নয়।
 
-Note there is **no Bangla component in the written mark distribution** (IT 150 + Math 20 + English 30 = 200). Some other bank papers do carry Bangla focus writing; for this post the written language paper is English. Prepare Bangla for the MCQ general portion, not for the written.
-
----
-
-## 2. The post merger, and what it means here
-
-Bangladesh Bank used to issue separate circulars for **Assistant Programmer** (CSE) and **Assistant Maintenance Engineer** (EEE / hardware / infrastructure). These are now merged into **Assistant Director (ICT)**.
-
-In the MCQ this shows up as a burst of basic-electronics questions. In the **written** paper the merger shows up differently — as **infrastructure-flavoured IT questions**:
-
-- firewall / server-topology **diagrams** (2025 asked exactly this)
-- RAID levels and their trade-offs — 5 bank-sector written questions, 4 distinct exams
-- data-centre power, UPS, server hardware — 5 questions under *Server Hardware & Enterprise Systems*
-- HDD vs SSD selection for a banking workload, disk-pack capacity maths
-- cache/memory sizing maths
-
-So for the written paper, do not read "merged post" as "learn circuit theory". Read it as **"be able to draw and justify a bank's IT infrastructure."**
+লক্ষণীয়, written-এর মার্ক বিভাজনে **বাংলা নেই** (IT ১৫০ + Math ২০ + English ৩০ = ২০০)। অন্য কিছু ব্যাংকের paper-এ বাংলা focus writing থাকে; এই পদের written ভাষা-অংশ ইংরেজি। বাংলা তৈরি করো MCQ-র সাধারণ অংশের জন্য, written-এর জন্য নয়।
 
 ---
 
-## 3. The 2025 AD(ICT) written paper — your template
+## ২. পদ merge হওয়ার প্রভাব এখানে কী
 
-This is the single most valuable artifact available. Eleven questions are captured in this repo, tagged `Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)`:
+বাংলাদেশ ব্যাংক আগে আলাদা সার্কুলার দিত **Assistant Programmer** (CSE) আর **Assistant Maintenance Engineer** (EEE / hardware / infrastructure) পদের জন্য। এখন এগুলো merge হয়ে **Assistant Director (ICT)**।
 
-| # | Question | Area | File |
+MCQ-তে এর প্রকাশ ঘটে মৌলিক electronics প্রশ্নের ঝাঁক হিসেবে। **Written**-এ প্রকাশটা আলাদা — **infrastructure-ঘেঁষা IT প্রশ্ন** হিসেবে:
+
+- firewall / server-topology **diagram** (২০২৫-এ ঠিক এটাই এসেছে)
+- RAID level ও তাদের সুবিধা-অসুবিধা — ব্যাংক খাতের ৫টি written প্রশ্ন, ৪টি আলাদা পরীক্ষায়
+- data-centre power, UPS, server hardware — *Server Hardware & Enterprise Systems*-এ ৫টি প্রশ্ন
+- ব্যাংকিং workload-এর জন্য HDD বনাম SSD বাছাই, disk-pack ধারণক্ষমতার অঙ্ক
+- cache/memory sizing-এর অঙ্ক
+
+তাই written-এর জন্য "merged পদ" মানে "circuit theory শেখো" নয়। এর মানে — **একটা ব্যাংকের IT infrastructure এঁকে দেখাতে ও ব্যাখ্যা করতে পারা।**
+
+---
+
+## ৩. AD(ICT) ২০২৫-এর written paper — তোমার টেমপ্লেট
+
+হাতের কাছে এটাই সবচেয়ে মূল্যবান জিনিস। এগারোটা প্রশ্ন এই repo-তে আছে, tag: `Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)`:
+
+| # | প্রশ্ন | এলাকা | File |
 |---|---|---|---|
-| 1 | **Construction of Min Heap** from 12, 29, 33, 56, 66, 99, 100, 344 | Algorithm | [algorithm.md](../../written/algorithm.md) |
-| 2 | **Banker's Algorithm** — 5 processes P₀–P₄, resources A(10) B(5) C(7); find Need matrix; safe or unsafe | OS | [operating-system.md](../../written/operating-system.md) |
-| 3 | **Total latency** for a 3-kbyte e-mail at 1 Gbps, 300 km, light 2×10⁸ m/s, RTT 50 ms, queuing 5 ms | Networks | [computer-networks.md](../../written/computer-networks.md) |
-| 4 | **E-mail transfer** — (a) application & transport layer protocols (b) steps of mail transfer | Networks | [computer-networks.md](../../written/computer-networks.md) |
-| 5 | **Bank schema normalization** — `Bank(Br_Name, Br_City, Assets, Acc_name, Acc_Num, Balance)`; normalize, identify PK/FK, justify the schema | Database | [database.md](../../written/database.md) |
-| 6 | **Firewall diagram** — BB client–server with Mail, DNS and Web servers; draw the secured topology | Security | [computer-network-security.md](../../written/computer-network-security.md) |
-| 7 | **Truth table** for `Ā·B̄·(A+B)‾·C` | DLD | [dld.md](../../written/dld.md) |
-| 8 | **∫₀² (2x² + 3x) dx** | Math | [math.md](../../written/math.md) |
-| 9 | **Probability** — 6 ADs (all bring a bag), 4 DDs (half bring a bag); a bag is picked at random, P(belongs to a DD)? | Math | [math.md](../../written/math.md) |
-| 10 | **Short note (100–150 words)** — "The role of AI and machine language to mitigate challenges of cyber attack on banking system" | English | [english.md](../../written/english.md) |
-| 11 | **Bengali → English translation** — two banking sentences | English | [english.md](../../written/english.md) |
+| ১ | ১২, ২৯, ৩৩, ৫৬, ৬৬, ৯৯, ১০০, ৩৪৪ থেকে **Min Heap গঠন** | Algorithm | [algorithm.md](../../written/algorithm.md) |
+| ২ | **Banker's Algorithm** — ৫টি process P₀–P₄, resource A(10) B(5) C(7); Need matrix বের করো; safe না unsafe | OS | [operating-system.md](../../written/operating-system.md) |
+| ৩ | ৩-kbyte ই-মেইলের **Total latency**: 1 Gbps, ৩০০ কিমি, আলোর গতি 2×10⁸ m/s, RTT ৫০ ms, queuing ৫ ms | Networks | [computer-networks.md](../../written/computer-networks.md) |
+| ৪ | **ই-মেইল স্থানান্তর** — (ক) application ও transport layer-এর protocol (খ) mail transfer-এর ধাপ | Networks | [computer-networks.md](../../written/computer-networks.md) |
+| ৫ | **ব্যাংক schema-র normalization** — `Bank(Br_Name, Br_City, Assets, Acc_name, Acc_Num, Balance)`; normalize করো, PK/FK চিহ্নিত করো, schema-র যৌক্তিকতা দাও | Database | [database.md](../../written/database.md) |
+| ৬ | **Firewall diagram** — BB-র client–server, সাথে Mail, DNS ও Web server; নিরাপদ topology আঁকো | Security | [computer-network-security.md](../../written/computer-network-security.md) |
+| ৭ | `Ā·B̄·(A+B)‾·C`-এর **Truth table** | DLD | [dld.md](../../written/dld.md) |
+| ৮ | **∫₀² (2x² + 3x) dx** | Math | [math.md](../../written/math.md) |
+| ৯ | **Probability** — ৬ জন AD (সবাই ব্যাগ আনে), ৪ জন DD (অর্ধেক ব্যাগ আনে); এলোমেলোভাবে একটা ব্যাগ নিলে সেটা DD-র হওয়ার সম্ভাবনা? | Math | [math.md](../../written/math.md) |
+| ১০ | **সংক্ষিপ্ত রচনা (১০০–১৫০ শব্দ)** — "The role of AI and machine language to mitigate challenges of cyber attack on banking system" | English | [english.md](../../written/english.md) |
+| ১১ | **বাংলা → ইংরেজি অনুবাদ** — ব্যাংকিং বিষয়ক দুইটি বাক্য | English | [english.md](../../written/english.md) |
 
-Read the pattern off that list, because it repeats:
+এই তালিকা থেকে যে ধরনটা পড়ে নাও, সেটা বারবার ফিরে আসে:
 
-- **Seven IT questions ≈ 150 marks**, so roughly **20 marks each**, roughly **12 minutes each**.
-- Every single IT question is either a **computation** or a **diagram**. Not one is "write an essay on X".
-- **Banking context is deliberately woven in** — the schema is a bank schema, the firewall is Bangladesh Bank's, the probability question is about ADs and DDs. Expect this again.
-- Math is **2 questions / 20 marks**, and unlike the MCQ it *does* include calculus.
-- English is **2 questions / 30 marks** — one short note plus one translation.
+- **সাতটা IT প্রশ্ন ≈ ১৫০ মার্ক**, অর্থাৎ প্রতিটা প্রায় **২০ মার্ক**, প্রায় **১২ মিনিট**।
+- প্রতিটা IT প্রশ্নই হয় **হিসাব**, নয়তো **diagram**। একটাও "X নিয়ে রচনা লেখো" নয়।
+- **ব্যাংকিং প্রেক্ষাপট ইচ্ছাকৃতভাবে মেশানো** — schema একটা ব্যাংকের, firewall বাংলাদেশ ব্যাংকের, probability-র প্রশ্ন AD আর DD নিয়ে। এবারও এটাই আশা করো।
+- Math **২টা প্রশ্ন / ২০ মার্ক**, আর MCQ-র বিপরীতে এখানে calculus *থাকে*।
+- English **২টা প্রশ্ন / ৩০ মার্ক** — একটা সংক্ষিপ্ত রচনা, একটা অনুবাদ।
 
-Pull the whole paper with:
+পুরো paper বের করার কমান্ড:
 
 ```
 grep -rn "Assistant Director (ICT) Exam: 07.02.2025" written/
@@ -73,189 +73,189 @@ grep -rn "Assistant Director (ICT) Exam: 07.02.2025" written/
 
 ---
 
-## 4. IT-150 — topic priorities
+## ৪. IT-১৫০ — বিষয় অগ্রাধিকার
 
-Ranked by **how many distinct bank exams** have asked from each area (the reliability measure), cross-checked against the 2025 paper.
+ক্রম নির্ধারিত হয়েছে **কয়টা আলাদা ব্যাংক পরীক্ষা** কোন এলাকা থেকে প্রশ্ন করেছে তার ভিত্তিতে (নির্ভরযোগ্যতার মাপকাঠি), সাথে ২০২৫-এর paper মিলিয়ে দেখা হয়েছে।
 
-### Tier 1 — expect one question from each of these
+### Tier 1 — প্রতিটা থেকে একটা করে প্রশ্ন আশা করো
 
-**Computer Networks — 16.4 % of all bank-sector written questions, the single largest area**
+**Computer Networks — ব্যাংক খাতের সব written প্রশ্নের ১৬.৪ %, একক বৃহত্তম এলাকা**
 
-- **Subnetting & VLSM** (10 distinct exams, 12 questions). Given `192.168.10.0/24` → divide into 4 equal subnets; state borrowed bits, new mask, network/first-usable/broadcast per subnet. Also `172.16.0.0/19` → how many subnets and hosts. Practise until you can do a full VLSM table in 6 minutes.
-- **Latency / throughput maths** — total latency = propagation + transmission + queuing + RTT. The 2025 question is the canonical form; be fluent with unit conversion (km ÷ m/s, kbyte → bits, Gbps).
-- **Channel capacity** — Nyquist `C = 2B log₂L` and Shannon `C = B log₂(1+SNR)`; SNR in dB vs ratio. A recurring form: telephone line 3000 Hz, SNR 3162.
-- **Multiplexing** (7 exams) — TDM vs FDM vs WDM, pulse-stuffing TDM, frame rate and bit-rate calculations.
-- **CRC** — original data 11100, divisor 1001 → find the transmitted frame and check at the receiver.
-- **OSI / TCP-IP** (6 exams) — layer functions, protocol per layer, and the differences table.
-- **E-mail architecture** — SMTP vs POP3 vs IMAP, MTA/MUA, and the end-to-end step sequence (2025).
-- **PCM** — sampling rate, quantization levels, bit rate.
-- Routing protocols, transmission media, flow control (stop-and-wait, Go-Back-N) with efficiency maths.
+- **Subnetting ও VLSM** (১০টি আলাদা পরীক্ষা, ১২টি প্রশ্ন)। `192.168.10.0/24` → ৪টি সমান subnet-এ ভাগ করো; কয় bit ধার নিতে হবে, নতুন mask, প্রতিটি subnet-এর network/first-usable/broadcast। আরও: `172.16.0.0/19` → কয়টা subnet ও host। ৬ মিনিটে পুরো VLSM টেবিল করতে পারা পর্যন্ত অনুশীলন করো।
+- **Latency / throughput-এর অঙ্ক** — total latency = propagation + transmission + queuing + RTT। ২০২৫-এর প্রশ্নটাই আদর্শ রূপ; unit রূপান্তরে (কিমি ÷ m/s, kbyte → bit, Gbps) সাবলীল হও।
+- **Channel capacity** — Nyquist `C = 2B log₂L` ও Shannon `C = B log₂(1+SNR)`; SNR dB না অনুপাত সেটা খেয়াল রাখো। বারবার আসা রূপ: টেলিফোন লাইন ৩০০০ Hz, SNR ৩১৬২।
+- **Multiplexing** (৭টি পরীক্ষা) — TDM বনাম FDM বনাম WDM, pulse-stuffing TDM, frame rate ও bit-rate-এর হিসাব।
+- **CRC** — মূল ডেটা 11100, divisor 1001 → transmitted frame বের করো এবং receiver-এ যাচাই করো।
+- **OSI / TCP-IP** (৬টি পরীক্ষা) — layer-এর কাজ, প্রতি layer-এর protocol, এবং পার্থক্যের টেবিল।
+- **ই-মেইল architecture** — SMTP বনাম POP3 বনাম IMAP, MTA/MUA, এবং শুরু থেকে শেষ পর্যন্ত ধাপের ক্রম (২০২৫)।
+- **PCM** — sampling rate, quantization level, bit rate।
+- Routing protocol, transmission media, flow control (stop-and-wait, Go-Back-N) দক্ষতার হিসাবসহ।
 
-**Database — 10.9 %**
+**Database — ১০.৯ %**
 
-- **Normalization to 3NF/BCNF from a given schema, with PK and FK identified and the choice justified** — this is 2025's question and it is close to guaranteed. Practise on a bank schema specifically (branch, account, customer, loan, transaction).
-- **ER diagram** (8 exams) — draw for a described system. Past papers used a bank, a hospital, a student system and BPL. **Draw one for a banking system before the exam** and memorise the entity set.
-- **SQL queries** (9 exams, 12 questions) — GROUP BY with aggregate + HAVING, joins, nested queries, and "one row per department" style output.
-- ACID with a failure scenario; transaction states.
-- Backup & disaster recovery (6 questions) — full/incremental/differential, RPO/RTO, hot vs cold site. Very bank-relevant, easy marks.
-- DELETE vs TRUNCATE vs DROP; view, cursor, trigger; indexing and B+ tree.
+- **দেওয়া schema থেকে 3NF/BCNF পর্যন্ত normalization, PK ও FK চিহ্নিত করে এবং সিদ্ধান্তের যুক্তি দিয়ে** — এটাই ২০২৫-এর প্রশ্ন এবং আসা প্রায় নিশ্চিত। বিশেষ করে ব্যাংক schema (branch, account, customer, loan, transaction) নিয়ে অনুশীলন করো।
+- **ER diagram** (৮টি পরীক্ষা) — বর্ণিত সিস্টেমের জন্য আঁকো। আগের paper-এ এসেছে ব্যাংক, হাসপাতাল, student system ও BPL। **পরীক্ষার আগে ব্যাংকিং সিস্টেমের একটা ER diagram এঁকে entity set মুখস্থ করে যাও।**
+- **SQL query** (৯টি পরীক্ষা, ১২টি প্রশ্ন) — aggregate সহ GROUP BY ও HAVING, join, nested query, এবং "প্রতি department-এ এক সারি" ধরনের output।
+- ACID, failure scenario সহ; transaction state।
+- Backup ও disaster recovery (৬টি প্রশ্ন) — full/incremental/differential, RPO/RTO, hot বনাম cold site। ব্যাংকের জন্য খুবই প্রাসঙ্গিক, সহজ মার্ক।
+- DELETE বনাম TRUNCATE বনাম DROP; view, cursor, trigger; indexing ও B+ tree।
 
-**Security — 6.7 %**
+**Security — ৬.৭ %**
 
-- **Draw a secured network topology** — DMZ with Mail/DNS/Web servers, internal LAN, firewall placement, and why each server sits where it does. This is 2025's question and it is the highest-probability diagram on the paper.
-- Types of attack (7 exams) — phishing, ransomware, MITM, DoS vs DDoS, SQL injection, XSS, ARP poisoning; and the countermeasure for each.
-- **Cryptography** — symmetric vs asymmetric, RSA worked example, Caesar cipher, and **how a digital signature actually works** (hash → encrypt with sender's private key → verify with public key). Be ready to draw that flow.
-- CIA triad applied to a banking scenario.
-- Firewall types (packet filter / stateful / proxy / NGFW), IDS vs IPS.
+- **নিরাপদ network topology আঁকো** — DMZ-তে Mail/DNS/Web server, ভেতরের LAN, firewall কোথায় বসবে, এবং কোন server কেন কোথায়। এটাই ২০২৫-এর প্রশ্ন এবং paper-এর সবচেয়ে সম্ভাব্য diagram।
+- আক্রমণের ধরন (৭টি পরীক্ষা) — phishing, ransomware, MITM, DoS বনাম DDoS, SQL injection, XSS, ARP poisoning; এবং প্রতিটার প্রতিকার।
+- **Cryptography** — symmetric বনাম asymmetric, RSA-র উদাহরণসহ সমাধান, Caesar cipher, এবং **digital signature আসলে কীভাবে কাজ করে** (hash → প্রেরকের private key দিয়ে encrypt → public key দিয়ে verify)। এই প্রবাহটা আঁকতে পারতে হবে।
+- ব্যাংকিং scenario-তে প্রয়োগ করা CIA triad।
+- Firewall-এর ধরন (packet filter / stateful / proxy / NGFW), IDS বনাম IPS।
 
-**Operating System — 5.0 %**
+**Operating System — ৫.০ %**
 
-- **Banker's algorithm** (2025) — build the Need matrix, run the safety sequence, state safe/unsafe. Practise the exact 5-process / 3-resource layout; it appears twice in this bank.
-- **CPU scheduling** (6 exams) — FCFS, SJF, priority, round robin; Gantt chart plus average waiting and turnaround time. Always draw the Gantt chart, always show the per-process table.
-- Deadlock — four necessary conditions, prevention vs avoidance vs detection.
-- Page replacement — FIFO, LRU, Optimal on a given reference string; count page faults; Belady's anomaly.
-- Thrashing, virtual memory, paging vs segmentation.
-- Semaphore / mutex, producer–consumer.
-- Linux commands — file permissions (`chmod`, `chown`), directory listing with hidden files, copy/move, and writing a short shell command. A repeated favourite (3 exams).
+- **Banker's algorithm** (২০২৫) — Need matrix তৈরি, safety sequence বের করা, safe/unsafe বলা। ঠিক ৫-process / ৩-resource বিন্যাসটা অনুশীলন করো; এই bank-এ এটা দুইবার আছে।
+- **CPU scheduling** (৬টি পরীক্ষা) — FCFS, SJF, priority, round robin; Gantt chart সহ average waiting ও turnaround time। সবসময় Gantt chart আঁকো, সবসময় process-ভিত্তিক টেবিল দাও।
+- Deadlock — চারটি প্রয়োজনীয় শর্ত, prevention বনাম avoidance বনাম detection।
+- Page replacement — দেওয়া reference string-এ FIFO, LRU, Optimal; page fault গোনা; Belady's anomaly।
+- Thrashing, virtual memory, paging বনাম segmentation।
+- Semaphore / mutex, producer–consumer।
+- Linux command — file permission (`chmod`, `chown`), লুকানো ফাইলসহ directory listing, copy/move, এবং ছোট shell command লেখা। বারবার আসা প্রিয় বিষয় (৩টি পরীক্ষা)।
 
-### Tier 2 — expect one question across this whole group
+### Tier 2 — এই পুরো দল থেকে একটা প্রশ্ন আশা করো
 
-- **Algorithm** — min/max **heap construction** (2025) and heap insert cost; **MST via Kruskal** (4 exams, asked repeatedly); Dijkstra; Huffman coding; complexity analysis and recurrence relations; greedy vs DP vs divide-and-conquer distinctions.
-- **Microprocessor & Architecture** — **RAID levels** and which suits a core banking DB (5 questions, 4 exams); direct-mapped **cache sizing** (tag/index/offset bits for 16 KB, 4-word blocks, 32-bit address — appears twice); **disk-pack capacity** maths; HDD vs SSD selection for a banking workload; 8086 EU/BIU, addressing modes; pipelining and hazards; RISC vs CISC.
-- **C Programming** (12 exams, 14 questions — the most reliable non-network written topic) — write a complete program. Recurring asks: recursion (factorial, Fibonacci), string manipulation, sorting, file handling, and pointer/dynamic-memory use. Write clean, compilable, commented code.
-- **Data Structure** — stack applications and infix→postfix conversion; tree traversals and reconstruction; linked-list operations.
-- **Software Engineering** — SDLC models and when to use each; **testing types** (unit/integration/system/acceptance, black vs white box); **UML use-case or class diagram from a described scenario** — note that the question usually *describes a system* rather than saying "draw a UML diagram", so recognise it; DFD.
-- **DLD** — **K-map simplification** with the grid, loops and final SOP drawn (asked in 2024 and 2025); truth table from a Boolean expression (2025); full adder design; MUX/decoder; 7-segment display as K-map + decoder.
-- **Cloud & Virtualization** — IaaS/PaaS/SaaS choice for a described scenario with two real examples; VM vs container; Docker.
-- **Computer Fundamentals / Infrastructure** — server hardware, data-centre power and cooling, UPS sizing, disaster-recovery site design.
+- **Algorithm** — min/max **heap গঠন** (২০২৫) ও heap insert-এর খরচ; **Kruskal দিয়ে MST** (৪টি পরীক্ষা, বারবার এসেছে); Dijkstra; Huffman coding; complexity বিশ্লেষণ ও recurrence relation; greedy বনাম DP বনাম divide-and-conquer-এর পার্থক্য।
+- **Microprocessor ও Architecture** — **RAID level** এবং core banking DB-র জন্য কোনটা উপযুক্ত (৫টি প্রশ্ন, ৪টি পরীক্ষা); direct-mapped **cache sizing** (১৬ KB, ৪-word block, ৩২-bit address-এ tag/index/offset bit — দুইবার এসেছে); **disk-pack ধারণক্ষমতা**-র অঙ্ক; ব্যাংকিং workload-এ HDD বনাম SSD; 8086-এর EU/BIU, addressing mode; pipelining ও hazard; RISC বনাম CISC।
+- **C Programming** (১২টি পরীক্ষা, ১৪টি প্রশ্ন — network-এর পরে সবচেয়ে নির্ভরযোগ্য written বিষয়) — সম্পূর্ণ program লিখতে বলা হয়। বারবার আসে: recursion (factorial, Fibonacci), string manipulation, sorting, file handling, এবং pointer/dynamic memory। পরিচ্ছন্ন, compile-যোগ্য, comment করা কোড লেখো।
+- **Data Structure** — stack-এর প্রয়োগ ও infix→postfix রূপান্তর; tree traversal ও পুনর্গঠন; linked list-এর operation।
+- **Software Engineering** — SDLC model ও কখন কোনটা; **testing-এর ধরন** (unit/integration/system/acceptance, black বনাম white box); **বর্ণিত scenario থেকে UML use-case বা class diagram** — মনে রাখো, প্রশ্নে সাধারণত *সিস্টেমের বর্ণনা* দেওয়া থাকে, সরাসরি "UML diagram আঁকো" বলা থাকে না, তাই চিনতে পারা জরুরি; DFD।
+- **DLD** — **K-map simplification**, grid, loop ও চূড়ান্ত SOP এঁকে (২০২৪ ও ২০২৫ দুইবারই এসেছে); Boolean expression থেকে truth table (২০২৫); full adder ডিজাইন; MUX/decoder; ৭-segment display = K-map + decoder।
+- **Cloud ও Virtualization** — বর্ণিত scenario-তে IaaS/PaaS/SaaS বাছাই, দুইটা বাস্তব উদাহরণসহ; VM বনাম container; Docker।
+- **Computer Fundamentals / Infrastructure** — server hardware, data-centre power ও cooling, UPS sizing, disaster recovery site ডিজাইন।
 
-### Tier 3 — read once, don't drill
+### Tier 3 — একবার পড়ো, অনুশীলনে সময় দিও না
 
-AI/ML (agent types, supervised vs unsupervised, ML vs DL), compiler vs interpreter, grammar ambiguity, OOP theory (overloading vs overriding, abstraction, MVC), web technology (HTTP methods, status codes, REST).
+AI/ML (agent-এর ধরন, supervised বনাম unsupervised, ML বনাম DL), compiler বনাম interpreter, grammar ambiguity, OOP তত্ত্ব (overloading বনাম overriding, abstraction, MVC), web technology (HTTP method, status code, REST)।
 
 ---
 
-## 5. Math — 20 marks
+## ৫. Math — ২০ মার্ক
 
-Two questions, and unlike the MCQ this includes **calculus**. Historical bank-sector written distribution:
+দুইটা প্রশ্ন, এবং MCQ-র বিপরীতে এখানে **calculus** থাকে। ঐতিহাসিক ব্যাংক-খাত বণ্টন:
 
-| Topic | Count | Note |
+| বিষয় | সংখ্যা | মন্তব্য |
 |---|---|---|
-| Geometry & coordinate geometry | 5 | triangle/circle area, straight line, distance |
-| Arithmetic & algebra | 4 | equations, simplification |
-| Percentage, profit & loss, SI/CI | 4 | interest is very bank-typical |
-| Ratio, proportion & mixtures | 3 | |
-| Set theory & discrete math | 2 | Venn with three sets |
-| Speed, time & distance | 2 | boats and streams |
-| **Probability & statistics** | 2 | **2025 asked this** |
-| **Calculus & integration** | 1 | **2025 asked this** |
+| Geometry ও coordinate geometry | ৫ | ত্রিভুজ/বৃত্তের ক্ষেত্রফল, সরলরেখা, দূরত্ব |
+| Arithmetic ও algebra | ৪ | সমীকরণ, সরলীকরণ |
+| Percentage, লাভ-ক্ষতি, সরল/চক্রবৃদ্ধি সুদ | ৪ | সুদ ব্যাংকের জন্য খুবই স্বাভাবিক |
+| অনুপাত, সমানুপাত ও মিশ্রণ | ৩ | |
+| Set theory ও discrete math | ২ | তিন সেটের Venn |
+| গতি, সময় ও দূরত্ব | ২ | নৌকা ও স্রোত |
+| **Probability ও statistics** | ২ | **২০২৫-এ এসেছে** |
+| **Calculus ও integration** | ১ | **২০২৫-এ এসেছে** |
 
-Since 2025 used exactly *one integration + one probability*, prepare that pair first:
+যেহেতু ২০২৫-এ ঠিক *একটা integration + একটা probability* এসেছিল, ওই জোড়াটা আগে তৈরি করো:
 
-- Definite integration of polynomials; basic differentiation; area under a curve.
-- Probability: conditional probability, total probability, and simple counting-based selection problems (the 2025 bag problem is a total-probability question in disguise).
-- Then cover geometry, SI/CI and Venn as backup.
+- বহুপদীর নির্দিষ্ট যোগজীকরণ; মৌলিক অন্তরীকরণ; বক্ররেখার নিচের ক্ষেত্রফল।
+- Probability: শর্তাধীন সম্ভাবনা, মোট সম্ভাবনা, এবং গণনাভিত্তিক নির্বাচনের সমস্যা (২০২৫-এর ব্যাগের প্রশ্নটা আসলে ছদ্মবেশে total probability-র প্রশ্ন)।
+- তারপর backup হিসেবে geometry, সরল/চক্রবৃদ্ধি সুদ এবং Venn।
 
-## 6. English — 30 marks
+## ৬. English — ৩০ মার্ক
 
-Two questions, both predictable in *form*:
+দুইটা প্রশ্ন, দুইটারই *গঠন* অনুমানযোগ্য:
 
-**(a) Focus writing / short note — 100–200 words.** Across 35 past focus-writing prompts in this bank, the theme is consistently **technology × banking × Bangladesh development**. Recent actual prompts:
+**(ক) Focus writing / সংক্ষিপ্ত রচনা — ১০০–২০০ শব্দ।** এই bank-এর ৩৫টি পুরনো focus-writing প্রশ্নে বিষয়বস্তু ধারাবাহিকভাবে **প্রযুক্তি × ব্যাংকিং × বাংলাদেশের উন্নয়ন**। সাম্প্রতিক প্রকৃত প্রশ্ন:
 
-- "The role of AI and machine language mitigate challenges of cyber attack on banking system" (AD(ICT) 2025)
-- "The Importance of Digital Literacy in Expanding Cashless Transactions in Bangladesh" (SO IT 2026)
-- "The Role of Sustainable Banking in Achieving the UN SDGs in Bangladesh" (Officer IT 2026)
+- "The role of AI and machine language mitigate challenges of cyber attack on banking system" (AD(ICT) ২০২৫)
+- "The Importance of Digital Literacy in Expanding Cashless Transactions in Bangladesh" (SO IT ২০২৬)
+- "The Role of Sustainable Banking in Achieving the UN SDGs in Bangladesh" (Officer IT ২০২৬)
 - "Growing use of technology in the Financial Service Industry"
 - "Digital Financial Literacy", "Blockchain technology", "Edge Computing", "Digital Bangladesh"
 
-**Likely 2026 prompts** — prepare a reusable 150-word skeleton for each:
+**২০২৬-এর জন্য সম্ভাব্য বিষয়** — প্রতিটার জন্য ১৫০ শব্দের একটা পুনর্ব্যবহারযোগ্য কাঠামো তৈরি রাখো:
 
-1. AI / GenAI in banking — opportunity and risk
-2. Cybersecurity and fraud prevention in digital banking
-3. Cashless Bangladesh, **Bangla QR** and interoperable digital payments
-4. Fourth Industrial Revolution and the banking workforce
-5. CBDC / digital currency, or open banking
-6. Financial inclusion through MFS and agent banking
-7. Climate finance / green banking and LDC graduation
+১. ব্যাংকিংয়ে AI / GenAI — সম্ভাবনা ও ঝুঁকি
+২. ডিজিটাল ব্যাংকিংয়ে সাইবার নিরাপত্তা ও জালিয়াতি প্রতিরোধ
+৩. ক্যাশলেস বাংলাদেশ, **বাংলা QR** ও আন্তঃপরিচালনযোগ্য ডিজিটাল পেমেন্ট
+৪. চতুর্থ শিল্পবিপ্লব ও ব্যাংকিং জনশক্তি
+৫. CBDC / ডিজিটাল মুদ্রা, অথবা open banking
+৬. MFS ও এজেন্ট ব্যাংকিংয়ের মাধ্যমে আর্থিক অন্তর্ভুক্তি
+৭. জলবায়ু অর্থায়ন / সবুজ ব্যাংকিং এবং LDC উত্তরণ
 
-Build one flexible structure — *definition → current Bangladesh context (name a real initiative) → three benefits → two risks → two recommendations → conclusion* — and you can answer any of them.
+একটাই নমনীয় কাঠামো বানাও — *সংজ্ঞা → বাংলাদেশের বর্তমান প্রেক্ষাপট (একটা বাস্তব উদ্যোগের নাম) → তিনটা সুবিধা → দুইটা ঝুঁকি → দুইটা সুপারিশ → উপসংহার* — এতেই যেকোনোটার উত্তর দেওয়া যাবে।
 
-**(b) Translation.** Bengali→English appeared in 2025; English→Bengali also recurs (each seen in 15 distinct bank exams — the most repeated written item in the entire bank). Sentences are short and **banking-flavoured**, e.g. *"আপনার ব্যাংক একাউন্ট এর স্থিতি জানার জন্য মোবাইল ব্যাংকিং এপ্লিকেশন এ লগইন করুন"*. Drill banking vocabulary in both directions: account balance, deposit, withdrawal, remittance, interest rate, loan disbursement, branch, transaction, mobile banking application, login.
-
----
-
-## 7. Diagrams to have ready before you walk in
-
-The written paper rewards diagrams heavily, and drawing under time pressure is a skill. Practise these until each takes under four minutes:
-
-1. **Bank network with firewall + DMZ** (Mail, DNS, Web servers) ← highest probability
-2. **ER diagram for a banking system**
-3. **E-mail flow** sender → MTA → MTA → receiver, with protocol labels
-4. **Gantt chart** for CPU scheduling with the AWT/ATAT table beneath
-5. **Min/max heap** as a tree, showing each insertion step
-6. **K-map grid** with loops drawn and the SOP written out
-7. **Full adder** circuit with truth table
-8. **Process state diagram**
-9. **Use-case diagram** for a described banking scenario
-10. **OSI seven layers** with one protocol per layer
+**(খ) অনুবাদ।** ২০২৫-এ বাংলা→ইংরেজি এসেছে; ইংরেজি→বাংলাও ঘুরেফিরে আসে (প্রতিটা ১৫টি আলাদা ব্যাংক পরীক্ষায় দেখা গেছে — পুরো bank-এর সবচেয়ে বেশিবার আসা written আইটেম)। বাক্য ছোট এবং **ব্যাংকিং ঘেঁষা**, যেমন *"আপনার ব্যাংক একাউন্ট এর স্থিতি জানার জন্য মোবাইল ব্যাংকিং এপ্লিকেশন এ লগইন করুন"*। দুই দিকেই ব্যাংকিং শব্দভাণ্ডার অনুশীলন করো: account balance, deposit, withdrawal, remittance, interest rate, loan disbursement, branch, transaction, mobile banking application, login।
 
 ---
 
-## 8. Time strategy for the 2-hour paper
+## ৭. হলে ঢোকার আগে যে diagram গুলো তৈরি রাখবে
 
-| Phase | Minutes | What |
+Written paper-এ diagram-এ ভালো মার্ক আসে, আর সময়ের চাপে আঁকাটা আলাদা দক্ষতা। প্রতিটা চার মিনিটের নিচে নামা পর্যন্ত অনুশীলন করো:
+
+১. **Firewall + DMZ সহ ব্যাংক network** (Mail, DNS, Web server) ← সবচেয়ে সম্ভাব্য
+২. **ব্যাংকিং সিস্টেমের ER diagram**
+৩. **ই-মেইল প্রবাহ** প্রেরক → MTA → MTA → প্রাপক, protocol লেবেলসহ
+৪. **CPU scheduling-এর Gantt chart**, নিচে AWT/ATAT টেবিলসহ
+৫. **Min/max heap** গাছ হিসেবে, প্রতিটা insertion ধাপ দেখিয়ে
+৬. **K-map grid**, loop আঁকা ও SOP লেখা
+৭. **Full adder** circuit, truth table সহ
+৮. **Process state diagram**
+৯. বর্ণিত ব্যাংকিং scenario-র **Use-case diagram**
+১০. **OSI-র সাতটি layer**, প্রতি layer-এ একটা করে protocol
+
+---
+
+## ৮. ২ ঘণ্টার paper-এর সময় কৌশল
+
+| ধাপ | মিনিট | কী করবে |
 |---|---|---|
-| Read the whole paper, mark the ones you own | 4 | decide your order before writing anything |
-| English (short note + translation), 30 marks | 22 | do it early while your hand is fresh and your mind is uncluttered |
-| Math, 20 marks | 12 | fast, self-contained, fully scoreable |
-| IT — your four strongest, ~80 marks | 45 | diagram first, then explanation |
-| IT — remaining three, ~70 marks | 32 | partial credit is real: write the formula and the setup even if you can't finish |
-| Review, label diagrams, number answers | 5 | |
+| পুরো paper পড়ে যেগুলো ভালো পারো চিহ্নিত করা | ৪ | লেখা শুরুর আগেই ক্রম ঠিক করো |
+| English (সংক্ষিপ্ত রচনা + অনুবাদ), ৩০ মার্ক | ২২ | হাত সতেজ ও মাথা পরিষ্কার থাকতে শুরুতেই সেরে ফেলো |
+| Math, ২০ মার্ক | ১২ | দ্রুত, স্বয়ংসম্পূর্ণ, পুরো নম্বর তোলা সম্ভব |
+| IT — তোমার সবচেয়ে শক্তিশালী চারটা, ~৮০ মার্ক | ৪৫ | আগে diagram, তারপর ব্যাখ্যা |
+| IT — বাকি তিনটা, ~৭০ মার্ক | ৩২ | আংশিক নম্বর বাস্তব: শেষ করতে না পারলেও সূত্র ও setup লিখে দাও |
+| রিভিউ, diagram-এ লেবেল, উত্তরের নম্বর মেলানো | ৫ | |
 
-Guidance that consistently earns marks on these papers:
+এই ধরনের paper-এ যা ধারাবাহিকভাবে নম্বর এনে দেয়:
 
-- **Draw the diagram first, then write around it.** An unlabelled diagram scores little; a labelled diagram with three lines of explanation scores nearly full.
-- **Show the formula before substituting numbers.** In the latency and Shannon questions the formula itself carries marks.
-- **Never leave a numeric question blank.** Write the known values, the formula and the approach — partial credit on these is generous.
-- **Answer in the banking context when it is offered.** If the schema is a bank schema, name real bank entities. Examiners visibly reward it.
-
----
-
-## 9. Four-week plan
-
-**Week 1 — the recurring maths**
-- Day 1: attempt the AD(ICT) 2025 written paper cold, 2 hours, timed. This tells you where you actually stand.
-- Days 2–3: Subnetting and VLSM until fluent; then latency, Nyquist/Shannon, CRC
-- Days 4–5: Normalization + ER diagram; draw the banking ER diagram from scratch three times
-- Days 6–7: Banker's algorithm, CPU scheduling with Gantt charts, page replacement
-
-**Week 2 — diagrams and security**
-- Days 8–9: Firewall/DMZ topology, attack types and countermeasures, digital signature flow
-- Days 10–11: RAID, cache sizing, disk-pack maths, HDD vs SSD for banking
-- Days 12–13: C programs — recursion, strings, file handling, pointers; write them by hand on paper
-- Day 14: BB AP 2023 + BB AME 2023 written sections, timed
-
-**Week 3 — breadth and language**
-- Days 15–16: Algorithm (heap, Kruskal, Dijkstra, Huffman, complexity)
-- Day 17: DLD (K-map, truth tables, adder, MUX)
-- Day 18: SE (SDLC, testing, UML/DFD) + Cloud
-- Days 19–20: Math — integration, probability, geometry, SI/CI
-- Day 21: English — write three full focus-writing answers under 20-minute timing, plus ten translation sentences
-
-**Week 4 — rehearsal**
-- Days 22–23: two full 200-mark mocks under strict 2-hour timing. Score them honestly.
-- Day 24: rebuild the diagrams you drew slowly or badly
-- Days 25–26: prepare and memorise your seven focus-writing skeletons; drill banking translation vocabulary
-- Day 27: one final timed mock, weak areas only
-- Day 28: revise formulas, the diagram list, and your error log. Nothing new.
+- **আগে diagram আঁকো, তারপর তার চারপাশে লেখো।** লেবেলহীন diagram-এ নম্বর কম; লেবেলযুক্ত diagram-এর সাথে তিন লাইন ব্যাখ্যা থাকলে প্রায় পুরো নম্বর।
+- **সংখ্যা বসানোর আগে সূত্র লেখো।** latency ও Shannon-এর প্রশ্নে সূত্রটাই আলাদা নম্বর বহন করে।
+- **কোনো সংখ্যাভিত্তিক প্রশ্ন খালি রেখো না।** জানা মান, সূত্র ও পদ্ধতি লিখে দাও — এগুলোতে আংশিক নম্বর উদার হাতে দেওয়া হয়।
+- **সুযোগ থাকলে ব্যাংকিং প্রেক্ষাপটেই উত্তর দাও।** schema যদি ব্যাংকের হয়, বাস্তব ব্যাংকিং entity-র নাম ব্যবহার করো। পরীক্ষক এটা স্পষ্টভাবে পছন্দ করেন।
 
 ---
 
-### Source and honest limits
+## ৯. চার সপ্তাহের পরিকল্পনা
 
-Derived from the question bank in this repo — 2,726 written questions across 581 exam tags, filtered to the 477 from bank-sector exams, with the 2025 AD(ICT) paper weighted most heavily.
+**সপ্তাহ ১ — বারবার আসা অঙ্ক**
+- দিন ১: AD(ICT) ২০২৫-এর written paper কোনো প্রস্তুতি ছাড়াই, ২ ঘণ্টা সময় ধরে দাও। এতেই বুঝবে আসলে কোথায় দাঁড়িয়ে আছো।
+- দিন ২–৩: Subnetting ও VLSM সাবলীল হওয়া পর্যন্ত; তারপর latency, Nyquist/Shannon, CRC
+- দিন ৪–৫: Normalization + ER diagram; ব্যাংকিং ER diagram শূন্য থেকে তিনবার আঁকো
+- দিন ৬–৭: Banker's algorithm, Gantt chart সহ CPU scheduling, page replacement
 
-Two caveats stated plainly:
+**সপ্তাহ ২ — diagram ও নিরাপত্তা**
+- দিন ৮–৯: Firewall/DMZ topology, আক্রমণের ধরন ও প্রতিকার, digital signature-এর প্রবাহ
+- দিন ১০–১১: RAID, cache sizing, disk-pack-এর অঙ্ক, ব্যাংকিংয়ে HDD বনাম SSD
+- দিন ১২–১৩: C program — recursion, string, file handling, pointer; কাগজে হাতে লিখে অনুশীলন করো
+- দিন ১৪: BB AP ২০২৩ + BB AME ২০২৩-এর written অংশ, সময় ধরে
 
-- Only **11 questions** from the AD(ICT) 2025 written paper are captured here. That is enough to read the paper's *shape* — computation-and-diagram driven, banking-contextualised, roughly 20 marks per IT question — but not enough to predict specific topics with confidence. Treat section 4's tiers, which rest on 477 questions across many exams, as the more reliable guide, and the 2025 paper as the format template.
-- The 2026 conducting body is unconfirmed. 2025 was **DU**. If **BUET** conducts it instead, expect heavier calculation and more Linux/architecture content — in that case move cache sizing, pipelining, disk maths and Linux commands up into Tier 1.
+**সপ্তাহ ৩ — বিস্তার ও ভাষা**
+- দিন ১৫–১৬: Algorithm (heap, Kruskal, Dijkstra, Huffman, complexity)
+- দিন ১৭: DLD (K-map, truth table, adder, MUX)
+- দিন ১৮: SE (SDLC, testing, UML/DFD) + Cloud
+- দিন ১৯–২০: Math — integration, probability, geometry, সরল/চক্রবৃদ্ধি সুদ
+- দিন ২১: English — ২০ মিনিট সময় ধরে তিনটা পূর্ণ focus writing, সাথে দশটা অনুবাদ বাক্য
+
+**সপ্তাহ ৪ — মহড়া**
+- দিন ২২–২৩: কড়া ২ ঘণ্টা সময়ে দুইটা পূর্ণ ২০০ মার্কের mock। সৎভাবে নম্বর দাও।
+- দিন ২৪: যে diagram গুলো ধীরে বা খারাপ এঁকেছো, সেগুলো আবার তৈরি করো
+- দিন ২৫–২৬: সাতটা focus-writing কাঠামো তৈরি ও মুখস্থ করো; ব্যাংকিং অনুবাদের শব্দভাণ্ডার ঝালাই
+- দিন ২৭: শুধু দুর্বল জায়গা নিয়ে শেষ একটা সময়বদ্ধ mock
+- দিন ২৮: সূত্র, diagram-এর তালিকা ও নিজের ভুলের খাতা রিভিশন। নতুন কিছু নয়।
+
+---
+
+### উৎস ও সীমাবদ্ধতা
+
+এই repo-র question bank থেকে বের করা — ৫৮১টি exam tag জুড়ে ২,৭২৬টি written প্রশ্ন, যার মধ্যে ব্যাংক খাতের ৪৭৭টি আলাদা করা হয়েছে, এবং ২০২৫-এর AD(ICT) paper-কে সবচেয়ে বেশি গুরুত্ব দেওয়া হয়েছে।
+
+দুইটা কথা পরিষ্কার করে বলা দরকার:
+
+- AD(ICT) ২০২৫-এর written paper-এর মাত্র **১১টা প্রশ্ন** এখানে আছে। paper-এর *ধরন* বোঝার জন্য এটুকুই যথেষ্ট — হিসাব ও diagram-নির্ভর, ব্যাংকিং প্রেক্ষাপটে বসানো, প্রতি IT প্রশ্নে প্রায় ২০ মার্ক — কিন্তু নির্দিষ্ট topic আত্মবিশ্বাসের সাথে অনুমান করার জন্য যথেষ্ট নয়। তাই ৪ নম্বর অনুচ্ছেদের স্তরগুলো (যেগুলো অনেক পরীক্ষার ৪৭৭টি প্রশ্নের উপর দাঁড়ানো) বেশি নির্ভরযোগ্য নির্দেশনা হিসেবে ধরো, আর ২০২৫-এর paper-কে ধরো format-এর টেমপ্লেট হিসেবে।
+- ২০২৬-এ কে পরীক্ষা নেবে তা নিশ্চিত নয়। ২০২৫-এ ছিল **DU**। যদি **BUET** নেয়, তাহলে হিসাব ও Linux/architecture-এর অংশ বাড়বে — সেক্ষেত্রে cache sizing, pipelining, disk-এর অঙ্ক ও Linux command Tier 1-এ তুলে আনো।

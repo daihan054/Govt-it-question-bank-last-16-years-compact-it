@@ -1,278 +1,278 @@
-# Bangladesh Bank — Assistant Director (ICT) 2026 : MCQ Suggestion
+# বাংলাদেশ ব্যাংক — Assistant Director (ICT) ২০২৬ : MCQ সাজেশন
 
-> Prepared **28 August 2026**, roughly four weeks before the exam.
-> Built from the full question bank in this repo: **2,781 MCQ** + **2,726 written** questions across 581 distinct exams,
-> of which **1,361 MCQ came from bank-sector exams** and **45 MCQ from the last AD(ICT) paper (07.02.2025, conducted by DU)**.
+> তৈরি: **২৮ আগস্ট ২০২৬**, পরীক্ষার প্রায় চার সপ্তাহ আগে।
+> এই repo-র পুরো question bank থেকে তৈরি: **২,৭৮১টি MCQ** + **২,৭২৬টি written** প্রশ্ন, ৫৮১টি আলাদা পরীক্ষা থেকে।
+> এর মধ্যে **১,৩৬১টি MCQ এসেছে ব্যাংক খাতের পরীক্ষা থেকে**, আর **৪৫টি MCQ এসেছে গত AD(ICT) paper (০৭.০২.২০২৫, DU পরিচালিত) থেকে**।
 
 ---
 
-## 1. Exam snapshot
+## ১. পরীক্ষার কাঠামো
 
-| Paper | Marks | Time | Breakdown |
+| Paper | মার্ক | সময় | বিভাজন |
 |---|---|---|---|
-| **MCQ** | 100 | 10:00–11:00 am (1 hr) | **IT 75 · Math 15 · GK 10** |
-| Written | 200 | 11:00 am–1:00 pm (2 hr) | IT 150 · Math 20 · English 30 |
+| **MCQ** | ১০০ | সকাল ১০:০০–১১:০০ (১ ঘণ্টা) | **IT ৭৫ · Math ১৫ · GK ১০** |
+| Written | ২০০ | ১১:০০–১:০০ (২ ঘণ্টা) | IT ১৫০ · Math ২০ · English ৩০ |
 
-Three things that change how you should prepare:
+যে তিনটা জিনিস তোমার প্রস্তুতির ধরন বদলে দেবে:
 
-1. **MCQ is a gate.** If you don't pass MCQ, your written script is never marked. Everything below is therefore about *clearing the gate reliably*, not about scoring maximum.
-2. **60 minutes ÷ 100 questions = 36 seconds per question.** This is a speed exam. Topics you "sort of know" cost you two questions each — the one you get wrong and the one you run out of time for.
-3. Final selection weight comes from **Written + Viva**. So MCQ needs to be *passed efficiently*, not perfected.
+১. **MCQ একটা gate।** MCQ-তে পাশ না করলে written-এর খাতাই দেখা হবে না। তাই নিচের সবকিছু "সর্বোচ্চ নম্বর তোলা" নিয়ে নয় — *নিশ্চিতভাবে gate পার হওয়া* নিয়ে।
+২. **৬০ মিনিট ÷ ১০০ প্রশ্ন = প্রতি প্রশ্নে ৩৬ সেকেন্ড।** এটা speed-এর পরীক্ষা। যে topic "মোটামুটি জানো" সেটা তোমার দুইটা প্রশ্ন খায় — একটা ভুল হয়, আরেকটার সময় থাকে না।
+৩. চূড়ান্ত নির্বাচনের weight আসে **Written + Viva** থেকে। তাই MCQ-তে perfection লাগবে না, দরকার দক্ষতার সাথে পাশ করা।
 
 ---
 
-## 2. The post merger — the single biggest edge in this suggestion
+## ২. পদ দুইটা merge হওয়া — এই সাজেশনের সবচেয়ে বড় edge
 
-Bangladesh Bank previously ran **separate circulars** for *Assistant Programmer* (CSE-flavoured) and *Assistant Maintenance Engineer* (EEE / hardware-flavoured). These two posts are now **merged into Assistant Director (ICT)**.
+বাংলাদেশ ব্যাংক আগে **আলাদা সার্কুলার** দিত *Assistant Programmer* (CSE ঘেঁষা) আর *Assistant Maintenance Engineer* (EEE / hardware ঘেঁষা) পদের জন্য। এখন এই দুইটা পদ **merge হয়ে Assistant Director (ICT)** হয়েছে।
 
-The 2025 AD(ICT) paper shows exactly what that merger did to the question mix:
+২০২৫-এর AD(ICT) paper-এ এই merger-এর প্রভাব ঠিক কতটা, সেটা পরিষ্কার দেখা যায়:
 
-| | Share of pure **Electronics / EEE** questions |
+| | খাঁটি **Electronics / EEE** প্রশ্নের অংশ |
 |---|---|
-| Average across all bank-sector MCQ in this bank (mostly old AP-only papers) | **1.2 %** |
-| Actual AD(ICT) 2025 paper (DU) | **13 %** (6 of the 45 captured) |
+| এই bank-এর সব ব্যাংক খাতের MCQ-র গড় (বেশিরভাগ পুরনো AP-only paper) | **১.২ %** |
+| আসল AD(ICT) ২০২৫ paper (DU) | **১৩ %** (capture করা ৪৫টির মধ্যে ৬টি) |
 
-The six were all *first-year electronics*, not deep EEE:
+ছয়টাই ছিল *first-year electronics*, গভীর EEE নয়:
 
-- What is the work of a **Rectifier**?
-- **Zener diode** is a ______ conducting device
-- What should be true for a **Zener Diode**? (reverse breakdown region)
-- Which device converts **AC to DC**?
-- What does **inductance** depend on?
-- 10 Ω, 20 Ω, 30 Ω **in parallel** across 60 V — find total current
+- **Rectifier**-এর কাজ কী?
+- **Zener diode** কোন ধরনের conducting device?
+- **Zener Diode**-এর ক্ষেত্রে কোনটা সত্য? (reverse breakdown region-এ কাজ করে)
+- কোন device **AC থেকে DC**-তে রূপান্তর করে?
+- **Inductance** কীসের উপর নির্ভর করে?
+- ১০ Ω, ২০ Ω, ৩০ Ω **parallel**-এ, ৬০ V উৎস — মোট current কত?
 
-**Why this matters:** a CSE-background candidate typically skips this entirely. It is roughly **6–8 easy marks** that take about **six hours** to prepare. This is the highest return-per-hour item on the whole syllabus. Do not skip it.
+**এটা কেন গুরুত্বপূর্ণ:** CSE background-এর প্রার্থী সাধারণত এই অংশটা পুরোপুরি বাদ দেয়। অথচ এটা প্রায় **৬–৮টা সহজ মার্ক**, যা তৈরি করতে লাগে মাত্র **ছয় ঘণ্টার মতো**। পুরো সিলেবাসে ঘণ্টাপ্রতি সবচেয়ে বেশি লাভ এখান থেকেই আসবে। এটা বাদ দিও না।
 
-The same logic applies, less dramatically, to **hardware / peripherals / memory-hierarchy** questions, which were the AME paper's bread and butter (BB AME 2011 alone had 8 hardware-component questions).
+একই যুক্তি কিছুটা কম মাত্রায় খাটে **hardware / peripherals / memory hierarchy** প্রশ্নের ক্ষেত্রেও — এগুলো ছিল AME paper-এর মূল খোরাক (শুধু BB AME ২০১১-তেই ৮টা hardware-component প্রশ্ন ছিল)।
 
 ---
 
-## 3. Recommended mark allocation for IT-75
+## ৩. IT-৭৫-এর জন্য প্রস্তাবিত মার্ক বণ্টন
 
-Two data columns, then a recommendation. The 2025 column is a small sample (45 of 100 questions captured), so it is used to *tilt* the historical baseline, not to replace it.
+দুইটা ডেটা কলাম, তারপর সুপারিশ। ২০২৫-এর কলামটা ছোট sample (১০০টির মধ্যে ৪৫টি capture করা), তাই এটা দিয়ে historical baseline-কে *হেলানো* হয়েছে, প্রতিস্থাপন করা হয়নি।
 
-| # | Topic | Historical bank-sector share | AD(ICT) 2025 (scaled) | **Target questions** |
+| # | বিষয় | ঐতিহাসিক ব্যাংক-খাত অংশ | AD(ICT) ২০২৫ (scaled) | **লক্ষ্য প্রশ্ন** |
 |---|---|---|---|---|
-| 1 | **Computer Networks** | 19.6 % | ~2 | **12** |
-| 2 | **Database / SQL** | 14.1 % | ~11 | **10** |
-| 3 | **Electronics (EEE basics)** | 1.2 % | ~13 | **6** |
-| 4 | **Data Structure** | 5.3 % | ~9 | **5** |
-| 5 | **Security & Cryptography** | 5.3 % | ~9 | **5** |
-| 6 | **C / C++ output tracing** | 6.3 % | ~4 | **5** |
-| 7 | **OOP (Java/C++)** | 6.9 % | ~4 | **4** |
-| 8 | **Computer Fundamentals & Hardware** | 7.8 % | ~0 | **4** |
-| 9 | **Microprocessor & Architecture** | 6.1 % | ~0 | **4** |
-| 10 | **Operating System** | 5.2 % | ~4 | **4** |
-| 11 | **Digital Logic Design** | 3.6 % | ~4 | **3** |
-| 12 | **Algorithm** | 4.3 % | ~2 | **3** |
-| 13 | **Software Engineering** | 3.9 % | ~4 | **3** |
-| 14 | **Web Technology** | 3.9 % | ~4 | **2** |
-| 15 | **Cloud & Virtualization** | 1.4 % | ~2 | **2** |
-| 16 | AI/ML, MS Office, compiler, misc | 2.8 % | ~1 | **3** |
-| | | | | **75** |
+| ১ | **Computer Networks** | ১৯.৬ % | ~২ | **১২** |
+| ২ | **Database / SQL** | ১৪.১ % | ~১১ | **১০** |
+| ৩ | **Electronics (EEE basics)** | ১.২ % | ~১৩ | **৬** |
+| ৪ | **Data Structure** | ৫.৩ % | ~৯ | **৫** |
+| ৫ | **Security & Cryptography** | ৫.৩ % | ~৯ | **৫** |
+| ৬ | **C / C++ output tracing** | ৬.৩ % | ~৪ | **৫** |
+| ৭ | **OOP (Java/C++)** | ৬.৯ % | ~৪ | **৪** |
+| ৮ | **Computer Fundamentals ও Hardware** | ৭.৮ % | ~০ | **৪** |
+| ৯ | **Microprocessor ও Architecture** | ৬.১ % | ~০ | **৪** |
+| ১০ | **Operating System** | ৫.২ % | ~৪ | **৪** |
+| ১১ | **Digital Logic Design** | ৩.৬ % | ~৪ | **৩** |
+| ১২ | **Algorithm** | ৪.৩ % | ~২ | **৩** |
+| ১৩ | **Software Engineering** | ৩.৯ % | ~৪ | **৩** |
+| ১৪ | **Web Technology** | ৩.৯ % | ~৪ | **২** |
+| ১৫ | **Cloud ও Virtualization** | ১.৪ % | ~২ | **২** |
+| ১৬ | AI/ML, MS Office, compiler, বিবিধ | ২.৮ % | ~১ | **৩** |
+| | | | | **৭৫** |
 
-**Reliability check** — how many *distinct* bank exams have asked from each area (out of the bank-sector exams in this repo). This is a better signal than raw counts, because it measures *how dependably* a topic shows up:
+**নির্ভরযোগ্যতা যাচাই** — প্রতিটা এলাকা থেকে কয়টা *আলাদা* ব্যাংক পরীক্ষা প্রশ্ন করেছে (এই repo-র ব্যাংক-খাতের পরীক্ষাগুলোর মধ্যে)। এটা raw count-এর চেয়ে ভালো signal, কারণ এটা মাপে *কত নিয়মিতভাবে* একটা topic আসে:
 
-| Distinct exams | Topic |
+| আলাদা পরীক্ষা | বিষয় |
 |---|---|
-| **21** | Networking fundamentals & terminology |
-| **20** | SQL commands & queries |
-| **18** | Application layer protocols |
-| **17** | Java programming |
-| **16** | Subnetting & IP addressing |
-| **14** | CPU & registers |
-| **13** | Computer fundamentals / generations · Software types · Number systems |
-| **12** | Network devices · DBMS concepts · C output tracing · Sorting |
-| **11** | Searching · Normalization |
-| **10** | International affairs · Software testing · Stack & Queue · IPv6 |
+| **২১** | Networking fundamentals ও terminology |
+| **২০** | SQL commands ও queries |
+| **১৮** | Application layer protocols |
+| **১৭** | Java programming |
+| **১৬** | Subnetting ও IP addressing |
+| **১৪** | CPU ও registers |
+| **১৩** | Computer fundamentals / generations · Software types · Number systems |
+| **১২** | Network devices · DBMS concepts · C output tracing · Sorting |
+| **১১** | Searching · Normalization |
+| **১০** | International affairs · Software testing · Stack ও Queue · IPv6 |
 
-Anything in that table is a topic that has appeared in **more than half** of all bank IT exams. Those are non-negotiable.
+এই টেবিলের যেকোনো topic **অর্ধেকেরও বেশি** ব্যাংক IT পরীক্ষায় এসেছে। এগুলো বাদ দেওয়ার সুযোগ নেই।
 
 ---
 
-## 4. Tiered study list
+## ৪. স্তরভিত্তিক পড়ার তালিকা
 
-### Tier 1 — must be automatic (≈45 of 75 IT marks)
+### Tier 1 — চোখ বন্ধ করে পারতে হবে (IT-এর ৭৫ মার্কের মধ্যে ~৪৫)
 
-**Computer Networks (12)**
-- Subnetting & CIDR: given a host requirement → find CIDR + subnet mask; given an IP → find class, network, broadcast. *2025 asked exactly this: "192.168.3.0, need 254 usable hosts — CIDR and subnet mask?"*
-- OSI vs TCP/IP: layer order, what sits at each layer, one protocol per layer
-- Port numbers: 20/21 FTP, 22 SSH, 23 Telnet, 25 SMTP, 53 DNS, 67/68 DHCP, 80 HTTP, 110 POP3, 143 IMAP, 443 HTTPS, 3389 RDP
-- Devices: hub vs switch vs router vs bridge vs repeater vs gateway — and which OSI layer each works at
-- DNS and DHCP working steps (DORA); ARP vs RARP; NAT vs PAT
-- IPv4 vs IPv6 (header, address size, why IPv6)
-- Topologies and their failure behaviour
+**Computer Networks (১২)**
+- Subnetting ও CIDR: host-সংখ্যা দেওয়া থাকলে → CIDR + subnet mask বের করা; IP দেওয়া থাকলে → class, network, broadcast বের করা। *২০২৫-এ ঠিক এটাই এসেছিল: "192.168.3.0, ২৫৪টি usable host দরকার — CIDR ও subnet mask কত?"*
+- OSI বনাম TCP/IP: layer-এর ক্রম, কোন layer-এ কী থাকে, প্রতি layer-এ একটা করে protocol
+- Port number: 20/21 FTP, 22 SSH, 23 Telnet, 25 SMTP, 53 DNS, 67/68 DHCP, 80 HTTP, 110 POP3, 143 IMAP, 443 HTTPS, 3389 RDP
+- Device: hub vs switch vs router vs bridge vs repeater vs gateway — এবং কোনটা কোন OSI layer-এ কাজ করে
+- DNS ও DHCP-এর কাজের ধাপ (DORA); ARP vs RARP; NAT vs PAT
+- IPv4 vs IPv6 (header, address size, IPv6 কেন দরকার)
+- Topology এবং কোনটায় fault হলে কী হয়
 
-**Database (10)**
-- SQL clause **execution order**: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY. *2025 asked "which clause executes first" — answer FROM, not SELECT.*
-- DDL / DML / DCL / TCL classification — CREATE/ALTER/DROP/TRUNCATE vs INSERT/UPDATE/DELETE/SELECT vs GRANT/REVOKE vs COMMIT/ROLLBACK/SAVEPOINT
-- ACID mapped to failure scenarios. *2025: "A transfers to B but B doesn't receive — which ACID property?" → **Atomicity**.*
-- Normalization 1NF→2NF→3NF→BCNF, and which anomaly each removes
-- Keys: super, candidate, primary, foreign, composite
-- Indexing (what speeds up reads, and its write cost); clustered vs non-clustered
-- DELETE vs TRUNCATE vs DROP — a perennial favourite
-- JOIN types + basic GROUP BY/HAVING/aggregate output prediction
+**Database (১০)**
+- SQL clause-এর **execution order**: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY। *২০২৫-এ "কোন clause আগে execute হয়" এসেছিল — উত্তর FROM, SELECT নয়।*
+- DDL / DML / DCL / TCL ভাগ করা — CREATE/ALTER/DROP/TRUNCATE বনাম INSERT/UPDATE/DELETE/SELECT বনাম GRANT/REVOKE বনাম COMMIT/ROLLBACK/SAVEPOINT
+- ACID-কে failure scenario-র সাথে মেলানো। *২০২৫: "A থেকে B-তে টাকা পাঠানো হলো কিন্তু B পেল না — কোন ACID property?" → **Atomicity**।*
+- Normalization 1NF→2NF→3NF→BCNF, এবং কোন ধাপ কোন anomaly দূর করে
+- Key: super, candidate, primary, foreign, composite
+- Indexing (read দ্রুত করে, কিন্তু write-এ খরচ); clustered vs non-clustered
+- DELETE vs TRUNCATE vs DROP — চিরকালীন প্রিয় প্রশ্ন
+- JOIN-এর ধরন + সাধারণ GROUP BY/HAVING/aggregate-এর output অনুমান
 
-**Electronics — EEE basics (6)** ← *the merger topic*
+**Electronics — EEE basics (৬)** ← *merger-এর topic*
 - Diode, Zener diode (reverse breakdown, voltage regulation), LED
-- Rectifier: half-wave vs full-wave vs bridge; AC↔DC direction; inverter vs rectifier vs transformer
-- Ohm's law; series vs parallel resistance; current/voltage division
-- Capacitance and inductance — what each depends on, energy stored, behaviour in DC vs AC
-- Transistor basics: BJT vs FET, regions of operation, transistor as switch
-- Logic families: TTL vs CMOS (power, speed, noise margin)
-- Basic power: kVA vs kW, UPS, power factor (data-centre flavoured questions do appear)
+- Rectifier: half-wave vs full-wave vs bridge; AC↔DC কোন দিকে; inverter vs rectifier vs transformer
+- Ohm's law; series বনাম parallel resistance; current/voltage division
+- Capacitance ও inductance — কীসের উপর নির্ভর করে, সঞ্চিত শক্তি, DC ও AC-তে আচরণ
+- Transistor basics: BJT vs FET, operation region, switch হিসেবে transistor
+- Logic family: TTL vs CMOS (power, speed, noise margin)
+- মৌলিক power: kVA vs kW, UPS, power factor (data-centre ঘেঁষা প্রশ্ন আসে)
 
-**Data Structure (5)**
-- Time complexity table for array / linked list / stack / queue / BST / heap / hash — insert, delete, search, worst vs average
-- **Priority queue is implemented with a heap** — 2025 asked this *twice*
-- Stack applications: function calls, expression evaluation, infix→postfix, undo, backtracking
-- Tree traversals, and reconstructing a tree from (inorder + preorder) or (inorder + postorder)
-- BST vs AVL vs B-tree vs B+ tree — where each is used (B+ tree → DB indexing)
+**Data Structure (৫)**
+- array / linked list / stack / queue / BST / heap / hash-এর time complexity টেবিল — insert, delete, search, worst বনাম average
+- **Priority queue heap দিয়ে implement করা হয়** — ২০২৫-এ এটা *দুইবার* এসেছে
+- Stack-এর প্রয়োগ: function call, expression evaluation, infix→postfix, undo, backtracking
+- Tree traversal, এবং (inorder + preorder) বা (inorder + postorder) থেকে tree পুনর্গঠন
+- BST vs AVL vs B-tree vs B+ tree — কোনটা কোথায় ব্যবহৃত হয় (B+ tree → DB indexing)
 
-**Security & Cryptography (5)**
-- Symmetric vs asymmetric; AES/DES vs RSA/Diffie-Hellman; which is faster and why
-- **Digital signature uses asymmetric (RSA): sign with private key, verify with public key** — 2025 asked this twice in different wording
-- Hashing (MD5/SHA) vs encryption — hashing is one-way, no key
-- TLS/SSL for data in transit; HTTPS; what TLS actually protects
-- CIA triad mapped to scenarios
-- Attack vocabulary: phishing/spear-phishing/whaling, ransomware, MITM, DoS vs DDoS, SQL injection, XSS, CSRF, ARP poisoning, zero-day
+**Security ও Cryptography (৫)**
+- Symmetric বনাম asymmetric; AES/DES বনাম RSA/Diffie-Hellman; কোনটা দ্রুত এবং কেন
+- **Digital signature asymmetric (RSA) ব্যবহার করে: private key দিয়ে sign, public key দিয়ে verify** — ২০২৫-এ দুই রকম ভাষায় দুইবার এসেছে
+- Hashing (MD5/SHA) বনাম encryption — hashing একমুখী, key লাগে না
+- Transit-এ ডেটার জন্য TLS/SSL; HTTPS; TLS আসলে কী রক্ষা করে
+- CIA triad-কে scenario-র সাথে মেলানো
+- আক্রমণের পরিভাষা: phishing/spear-phishing/whaling, ransomware, MITM, DoS বনাম DDoS, SQL injection, XSS, CSRF, ARP poisoning, zero-day
 
-**C / C++ output tracing (5)**
-- Pointer parameters and dereferencing (`*p = *p + 10`) — 2025 asked exactly this pattern
-- `++i` vs `i++` inside expressions and printf argument lists
-- Operator precedence and integer division / type promotion
-- Static variables, scope, and recursion return values
-- Array–pointer arithmetic, string functions, `sizeof`
-- Missing braces / dangling else — 2025's second output question was a plain if-else trap
+**C / C++ output tracing (৫)**
+- Pointer parameter ও dereference (`*p = *p + 10`) — ২০২৫-এ ঠিক এই ধরনটাই এসেছে
+- Expression ও printf argument-এর ভেতরে `++i` বনাম `i++`
+- Operator precedence, integer division ও type promotion
+- Static variable, scope, এবং recursion-এর return value
+- Array–pointer arithmetic, string function, `sizeof`
+- Brace বাদ পড়া / dangling else — ২০২৫-এর দ্বিতীয় output প্রশ্নটা ছিল সাদামাটা if-else ফাঁদ
 
-### Tier 2 — solid coverage (≈22 marks)
+### Tier 2 — ভালোভাবে কভার করতে হবে (~২২ মার্ক)
 
-- **OOP (4):** encapsulation (2025: *global variables break encapsulation*), overloading vs overriding, static vs dynamic binding, abstract class vs interface, constructor/destructor order, which operators are better overloaded as global functions (2025 asked: insertion `<<`)
-- **Computer Fundamentals & Hardware (4):** generations, RAM vs ROM types, cache levels, motherboard/BIOS/CMOS, printer & storage types, units and conversions, common acronyms
-- **Microprocessor & Architecture (4):** 8085/8086 registers, EU/BIU, addressing modes, RISC vs CISC, pipelining basics, memory hierarchy speed/cost order, cache mapping types, Von Neumann vs Harvard
-- **Operating System (4):** process states (2025: *I/O request → Waiting/Blocked*), scheduling algorithms and computing AWT/ATAT (2025 had a non-preemptive priority TAT calculation), deadlock's four conditions, paging vs segmentation, page replacement (FIFO/LRU/Optimal), multiprogramming vs multitasking vs multiprocessing, common Linux commands
-- **DLD (3):** universal gates (NAND/NOR — the most repeated MCQ in this entire bank, 3 exams), number-system and 2's-complement conversion (2025: 2's complement of hex 65), K-map basics, adders, MUX/decoder, flip-flops
-- **Algorithm (3):** complexity of the standard sorts and searches, when linear search beats binary (2025 asked this — answer: works on unsorted data), greedy vs DP vs divide-and-conquer, recurrence/Master theorem basics
+- **OOP (৪):** encapsulation (২০২৫: *global variable encapsulation ভাঙে*), overloading বনাম overriding, static বনাম dynamic binding, abstract class বনাম interface, constructor/destructor-এর ক্রম, কোন operator global function হিসেবে overload করা ভালো (২০২৫-এ এসেছে: insertion `<<`)
+- **Computer Fundamentals ও Hardware (৪):** generation, RAM ও ROM-এর ধরন, cache level, motherboard/BIOS/CMOS, printer ও storage-এর ধরন, unit ও conversion, প্রচলিত acronym
+- **Microprocessor ও Architecture (৪):** 8085/8086 register, EU/BIU, addressing mode, RISC বনাম CISC, pipelining-এর মূল ধারণা, memory hierarchy-র speed/cost ক্রম, cache mapping-এর ধরন, Von Neumann বনাম Harvard
+- **Operating System (৪):** process state (২০২৫: *I/O চাইলে → Waiting/Blocked*), scheduling algorithm এবং AWT/ATAT বের করা (২০২৫-এ non-preemptive priority-র TAT হিসাব ছিল), deadlock-এর চারটি শর্ত, paging বনাম segmentation, page replacement (FIFO/LRU/Optimal), multiprogramming বনাম multitasking বনাম multiprocessing, প্রচলিত Linux command
+- **DLD (৩):** universal gate (NAND/NOR — এই পুরো bank-এর সবচেয়ে বেশিবার আসা MCQ, ৩টি পরীক্ষায়), number system ও 2's complement রূপান্তর (২০২৫: hex 65-এর 2's complement), K-map-এর মূল ধারণা, adder, MUX/decoder, flip-flop
+- **Algorithm (৩):** প্রচলিত sort ও search-এর complexity, linear search কখন binary-র চেয়ে ভালো (২০২৫-এ এসেছে — উত্তর: unsorted ডেটাতেও কাজ করে), greedy বনাম DP বনাম divide-and-conquer, recurrence ও Master theorem-এর ভিত্তি
 
-### Tier 3 — light pass, do not over-invest (≈8 marks)
+### Tier 3 — একবার চোখ বুলাও, বেশি সময় দিও না (~৮ মার্ক)
 
-- **Software Engineering (3):** SDLC models and waterfall's drawback (2025), testing types — unit / **integration = interface between modules** (2025) / system / acceptance, black vs white box, verification vs validation
-- **Web Technology (2):** HTTP status codes (2025: **500 = Internal Server Error**), GET vs POST, what is/isn't a web server (2025: PHP is not), HTML/CSS basics, REST vs SOAP
-- **Cloud (2):** IaaS/PaaS/SaaS with examples, public/private/hybrid, VM vs container, **Docker vs Docker Hub** (2025)
-- **AI/ML + misc (3):** supervised vs unsupervised vs reinforcement, ML vs DL, agent types, blockchain basics; plus stray MS Office / compiler-vs-interpreter items
+- **Software Engineering (৩):** SDLC model ও waterfall-এর দুর্বলতা (২০২৫), testing-এর ধরন — unit / **integration = দুই module-এর মধ্যে interface** (২০২৫) / system / acceptance, black বনাম white box, verification বনাম validation
+- **Web Technology (২):** HTTP status code (২০২৫: **500 = Internal Server Error**), GET বনাম POST, কোনটা web server নয় (২০২৫: PHP নয়), HTML/CSS-এর ভিত্তি, REST বনাম SOAP
+- **Cloud (২):** IaaS/PaaS/SaaS উদাহরণসহ, public/private/hybrid, VM বনাম container, **Docker বনাম Docker Hub** (২০২৫)
+- **AI/ML ও বিবিধ (৩):** supervised বনাম unsupervised বনাম reinforcement, ML বনাম DL, agent-এর ধরন, blockchain-এর ভিত্তি; সাথে ছড়ানো-ছিটানো MS Office / compiler-vs-interpreter প্রশ্ন
 
 ---
 
-## 5. Math — 15 marks
+## ৫. Math — ১৫ মার্ক
 
-Straightforward bank math, no calculus in the MCQ. Historical bank-sector distribution:
+সাধারণ ব্যাংক math, MCQ-তে calculus নেই। ঐতিহাসিক ব্যাংক-খাত বণ্টন:
 
-| Topic | Weight | What to drill |
+| বিষয় | ওজন | যা অনুশীলন করবে |
 |---|---|---|
-| Algebra | highest (18 of 62) | equations, indices, simplification |
-| Percentage, profit & loss | 8 | salary/discount/interest chains — *2025: 30 %+20 %+10 % spent, 12,000 left, find salary* |
-| Geometry | 6 | triangle, circle, area/perimeter |
-| Arithmetic & number series | 6 | series completion, LCM/HCF |
-| Time, work & distance | 6 | pipes & cisterns — *2025: 4 hr + 6 hr pipes together* |
-| Set theory | 6 | two/three-set Venn |
-| Ratio & proportion | 5 | partnership, mixture |
-| Average & age | 3 | *2025: father 36, son 16, when was father 3× son* |
-| Analytical reasoning | 2 | direction/distance and weighing puzzles — *2025 had both* |
+| Algebra | সর্বোচ্চ (৬২-এর মধ্যে ১৮) | সমীকরণ, সূচক, সরলীকরণ |
+| Percentage, লাভ-ক্ষতি | ৮ | বেতন/ছাড়/সুদের ধারাবাহিক হিসাব — *২০২৫: ৩০%+২০%+১০% খরচের পর ১২,০০০ বাকি, বেতন কত* |
+| Geometry | ৬ | ত্রিভুজ, বৃত্ত, ক্ষেত্রফল/পরিসীমা |
+| Arithmetic ও সংখ্যার ধারা | ৬ | ধারা পূরণ, ল.সা.গু/গ.সা.গু |
+| সময়, কাজ ও দূরত্ব | ৬ | পাইপ ও চৌবাচ্চা — *২০২৫: ৪ ঘণ্টা ও ৬ ঘণ্টার দুই পাইপ একসাথে* |
+| Set theory | ৬ | দুই/তিন সেটের Venn |
+| অনুপাত ও সমানুপাত | ৫ | অংশীদারি, মিশ্রণ |
+| গড় ও বয়স | ৩ | *২০২৫: বাবা ৩৬, ছেলে ১৬, কত বছর আগে বাবার বয়স ছেলের ৩ গুণ ছিল* |
+| Analytical reasoning | ২ | দিক/দূরত্ব ও ওজন মাপার ধাঁধা — *২০২৫-এ দুইটাই এসেছে* |
 
-Note that **five of the 2025 math questions map exactly onto five different rows above** — the coverage is broad but each type is standard. Drill one worked example of each type and you have the whole 15 marks.
+লক্ষণীয়, **২০২৫-এর পাঁচটা math প্রশ্ন উপরের পাঁচটা আলাদা সারিতে হুবহু পড়ে** — বিস্তার বেশি, কিন্তু প্রতিটা ধরনই মানসম্মত। প্রতিটা ধরনের একটা করে সমাধান করা অঙ্ক ভালোভাবে বুঝলেই পুরো ১৫ মার্ক তোমার।
 
-## 6. GK — 10 marks
+## ৬. GK — ১০ মার্ক
 
-Split roughly evenly between **Bangladesh Affairs (30)** and **International Affairs (30)** historically, plus sports and geography.
+ঐতিহাসিকভাবে মোটামুটি সমান ভাগ **বাংলাদেশ বিষয়াবলি (৩০)** আর **আন্তর্জাতিক বিষয়াবলি (৩০)**, সাথে খেলাধুলা ও ভূগোল।
 
-- **Current affairs of the last 6–12 months** carry the most weight. 2025 asked the 2024 Nobel Peace Prize (Nihon Hidankyo).
-- **Banking terminology** is the highest-yield GK sub-area for this specific post: NPSB, BEFTN, RTGS, BACH, MFS, CBDC, SWIFT, LC, CRR/SLR, repo/reverse repo, inflation, remittance figures, foreign-exchange reserve, Basel III.
-- Bangladesh: constitution basics, rivers/geography (2025: highest peak = Saka Haphong), liberation war, budget and current economic indicators.
-- International: UN bodies, IMF/World Bank reports, capitals/currencies, Suez/Hormuz-type geography (2025 asked Suez), major sporting firsts.
+- **গত ৬–১২ মাসের current affairs** সবচেয়ে বেশি ওজন বহন করে। ২০২৫-এ ২০২৪-এর নোবেল শান্তি পুরস্কার (Nihon Hidankyo) এসেছিল।
+- **ব্যাংকিং পরিভাষা** এই পদের জন্য GK-র সবচেয়ে লাভজনক অংশ: NPSB, BEFTN, RTGS, BACH, MFS, CBDC, SWIFT, LC, CRR/SLR, repo/reverse repo, মূল্যস্ফীতি, রেমিট্যান্স, বৈদেশিক মুদ্রার রিজার্ভ, Basel III।
+- বাংলাদেশ: সংবিধানের মৌলিক বিষয়, নদী/ভূগোল (২০২৫: সর্বোচ্চ চূড়া = সাকা হাফং), মুক্তিযুদ্ধ, বাজেট ও চলতি অর্থনৈতিক সূচক।
+- আন্তর্জাতিক: জাতিসংঘের সংস্থা, IMF/World Bank-এর প্রতিবেদন, রাজধানী/মুদ্রা, সুয়েজ/হরমুজ ধরনের ভূগোল (২০২৫-এ সুয়েজ এসেছে), বড় খেলার "প্রথম"গুলো।
 
-Bangla and English MCQ also appear inside the general portion — **বাংলা ব্যাকরণ (39)** dominates over সাহিত্য (23), and **English grammar (35)** dominates over vocabulary (13). For both, past-paper repetition is high, so revising previous years' questions is more efficient than reading a grammar book cover to cover.
+সাধারণ অংশে বাংলা ও ইংরেজি MCQ-ও আসে — **বাংলা ব্যাকরণ (৩৯)** সাহিত্যের (২৩) চেয়ে এগিয়ে, আর **English grammar (৩৫)** vocabulary-র (১৩) চেয়ে এগিয়ে। দুইটাতেই পুরনো প্রশ্নের পুনরাবৃত্তি বেশি, তাই ব্যাকরণ বই গোড়া থেকে পড়ার চেয়ে বিগত সালের প্রশ্ন রিভিশন দেওয়া অনেক বেশি কার্যকর।
 
 ---
 
-## 7. Your single best mock — the AD(ICT) 2025 (DU) paper
+## ৭. তোমার সবচেয়ে ভালো mock — AD(ICT) ২০২৫ (DU) paper
 
-This is the only paper written for *this exact post* by *the same style of examiner*. Sit it under timed conditions before you do anything else, so you can calibrate. All 45 captured questions are already in this repo, tagged `Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)`.
+এটাই একমাত্র paper যা *ঠিক এই পদের* জন্য *একই ধরনের পরীক্ষকের* হাতে তৈরি। অন্য কিছু করার আগে এটা সময় ধরে দাও, যাতে নিজের অবস্থান বুঝতে পারো। capture করা ৪৫টা প্রশ্নই এই repo-তে আছে, tag: `Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)`।
 
-Pull them with:
+বের করার কমান্ড:
 
 ```
 grep -rn "Assistant Director (ICT) Exam: 07.02.2025" mcq/
 ```
 
-Where they live:
+কোথায় কোনটা আছে:
 
-| File | Questions |
+| File | প্রশ্ন |
 |---|---|
-| [electrical-and-electronics.md](../../mcq/electrical-and-electronics.md) | 6 |
-| [database.md](../../mcq/database.md) | 6 |
-| [gk.md](../../mcq/gk.md) | 5 |
-| [math.md](../../mcq/math.md) | 5 |
-| [computer-network-security.md](../../mcq/computer-network-security.md) | 4 |
-| [data-structure.md](../../mcq/data-structure.md) | 4 |
-| [c-programming.md](../../mcq/c-programming.md) | 2 |
-| [dld.md](../../mcq/dld.md) | 2 |
-| [oop.md](../../mcq/oop.md) | 2 |
-| [software-engineering.md](../../mcq/software-engineering.md) | 2 |
-| [web-technology.md](../../mcq/web-technology.md) | 2 |
-| [operating-system.md](../../mcq/operating-system.md) | 2 |
-| [computer-networks.md](../../mcq/computer-networks.md), [cloud-computing.md](../../mcq/cloud-computing.md), [algorithm.md](../../mcq/algorithm.md) | 1 each |
+| [electrical-and-electronics.md](../../mcq/electrical-and-electronics.md) | ৬ |
+| [database.md](../../mcq/database.md) | ৬ |
+| [gk.md](../../mcq/gk.md) | ৫ |
+| [math.md](../../mcq/math.md) | ৫ |
+| [computer-network-security.md](../../mcq/computer-network-security.md) | ৪ |
+| [data-structure.md](../../mcq/data-structure.md) | ৪ |
+| [c-programming.md](../../mcq/c-programming.md) | ২ |
+| [dld.md](../../mcq/dld.md) | ২ |
+| [oop.md](../../mcq/oop.md) | ২ |
+| [software-engineering.md](../../mcq/software-engineering.md) | ২ |
+| [web-technology.md](../../mcq/web-technology.md) | ২ |
+| [operating-system.md](../../mcq/operating-system.md) | ২ |
+| [computer-networks.md](../../mcq/computer-networks.md), [cloud-computing.md](../../mcq/cloud-computing.md), [algorithm.md](../../mcq/algorithm.md) | ১ করে |
 
-**Second and third priority papers**, in order:
+**দ্বিতীয় ও তৃতীয় অগ্রাধিকারের paper**, ক্রম অনুযায়ী:
 
-1. `Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)` — 25 MCQ, the CSE half of the merged post
-2. `Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)` — 25 MCQ, the EEE/infrastructure half
-3. `Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016` — 25 MCQ, heavy on memory hierarchy and storage
-4. `Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)` — 100 questions, the largest single recent bank paper in the repo
-5. `Bangladesh Bank Senior Officer (IT), Grade-9 Exam: 2024` — 24 questions
-
----
-
-## 8. Four-week plan
-
-**Week 1 — establish the floor**
-- Day 1: sit AD(ICT) 2025 timed. Score it. Note which of the 16 topic rows you lost marks in.
-- Days 2–4: Computer Networks Tier-1 list end to end. Do 40 subnetting problems until CIDR↔mask is instant.
-- Days 5–6: Database Tier-1 list. Write out the clause-execution order and ACID-scenario mapping from memory.
-- Day 7: **Electronics crash course** — the entire Tier-1 EEE list in one sitting. It is genuinely only a few hours.
-
-**Week 2 — the middle block**
-- Days 8–9: Data Structure complexity table + heap/priority-queue + traversals
-- Days 10–11: Security & cryptography, with special attention to digital signature key direction
-- Days 12–13: C/C++ output tracing — 60 snippets minimum, mostly pointers and `++`
-- Day 14: BB AP 2023 + BB AME 2023 papers, timed
-
-**Week 3 — Tier 2 and general**
-- Days 15–16: OOP + Computer Fundamentals/Hardware
-- Days 17–18: Microprocessor/Architecture + OS
-- Day 19: DLD + Algorithm
-- Days 20–21: Math (one worked example of each of the nine types) and GK/banking terminology
-
-**Week 4 — consolidation only**
-- Days 22–24: Tier 3 light pass (SE, Web, Cloud, AI) — one day total for all four, then re-drill weak Tier-1 areas
-- Days 25–26: two full timed mocks from the priority paper list, 100 questions in 60 minutes
-- Day 27: revise your own error log only
-- Day 28: light revision of formulas, port numbers, complexity table, ACID, status codes. Sleep.
+১. `Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)` — ২৫টি MCQ, merged পদের CSE অংশ
+২. `Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)` — ২৫টি MCQ, EEE/infrastructure অংশ
+৩. `Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016` — ২৫টি MCQ, memory hierarchy ও storage-ভারী
+৪. `Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)` — ১০০টি প্রশ্ন, repo-র সবচেয়ে বড় সাম্প্রতিক ব্যাংক paper
+৫. `Bangladesh Bank Senior Officer (IT), Grade-9 Exam: 2024` — ২৪টি প্রশ্ন
 
 ---
 
-## 9. Exam-hall tactics
+## ৮. চার সপ্তাহের পরিকল্পনা
 
-- **Three passes.** Pass 1: answer everything you know instantly (~40 questions, 15 min). Pass 2: the ones needing 20–40 seconds of work (~35 questions, 25 min). Pass 3: the calculation-heavy ones (~25 questions, 20 min).
-- **Never compute subnetting or scheduling maths on the first pass.** They are worth the same one mark as "which is a universal gate", and they eat four times the time.
-- Confirm the **negative-marking rule** on the question paper before you start guessing. Bank MCQs commonly carry 0.25–0.50 penalty; if there is none, leave nothing blank.
-- Electronics and GK questions are almost always fast — sweep them early to bank easy marks.
-- Keep an eye on the clock at question 50. You should be there by minute 28.
+**সপ্তাহ ১ — ভিত্তি দাঁড় করানো**
+- দিন ১: AD(ICT) ২০২৫ সময় ধরে দাও। নম্বর দাও। ১৬টি topic সারির কোনগুলোতে মার্ক হারালে সেটা লিখে রাখো।
+- দিন ২–৪: Computer Networks-এর Tier-1 তালিকা পুরোটা। ৪০টা subnetting সমস্যা করো, যতক্ষণ না CIDR↔mask সাথে সাথে আসে।
+- দিন ৫–৬: Database-এর Tier-1 তালিকা। clause execution order আর ACID-scenario মিলকরণ মুখস্থ থেকে লিখে দেখো।
+- দিন ৭: **Electronics crash course** — পুরো Tier-1 EEE তালিকা এক বসায়। সত্যিই কয়েক ঘণ্টার ব্যাপার।
+
+**সপ্তাহ ২ — মাঝের অংশ**
+- দিন ৮–৯: Data Structure-এর complexity টেবিল + heap/priority queue + traversal
+- দিন ১০–১১: Security ও cryptography, বিশেষ করে digital signature-এ key কোন দিকে যায় সেটা
+- দিন ১২–১৩: C/C++ output tracing — কমপক্ষে ৬০টা snippet, বেশিরভাগ pointer ও `++` নিয়ে
+- দিন ১৪: BB AP ২০২৩ + BB AME ২০২৩ paper, সময় ধরে
+
+**সপ্তাহ ৩ — Tier 2 ও সাধারণ বিষয়**
+- দিন ১৫–১৬: OOP + Computer Fundamentals/Hardware
+- দিন ১৭–১৮: Microprocessor/Architecture + OS
+- দিন ১৯: DLD + Algorithm
+- দিন ২০–২১: Math (নয়টা ধরনের একটা করে সমাধান) এবং GK/ব্যাংকিং পরিভাষা
+
+**সপ্তাহ ৪ — শুধু ঝালাই**
+- দিন ২২–২৪: Tier 3 হালকা করে (SE, Web, Cloud, AI) — চারটার জন্য মোট একদিন, তারপর দুর্বল Tier-1 অংশ আবার অনুশীলন
+- দিন ২৫–২৬: অগ্রাধিকার তালিকা থেকে দুইটা পূর্ণ mock, ৬০ মিনিটে ১০০ প্রশ্ন
+- দিন ২৭: শুধু নিজের ভুলের খাতা রিভিশন
+- দিন ২৮: সূত্র, port number, complexity টেবিল, ACID, status code হালকা রিভিশন। ঘুমাও।
 
 ---
 
-### Source and honest limits
+## ৯. পরীক্ষার হলের কৌশল
 
-Everything above is derived from the question bank in this repo — 2,781 MCQ across 581 exam tags, filtered to the 1,361 from bank-sector exams. Two caveats worth stating plainly:
+- **তিনবার পাস।** ১ম পাস: যা সাথে সাথে জানো (~৪০টা প্রশ্ন, ১৫ মিনিট)। ২য় পাস: যেগুলোতে ২০–৪০ সেকেন্ড লাগবে (~৩৫টা, ২৫ মিনিট)। ৩য় পাস: হিসাবনির্ভর প্রশ্ন (~২৫টা, ২০ মিনিট)।
+- **প্রথম পাসে কখনো subnetting বা scheduling-এর অঙ্ক করো না।** "কোনটা universal gate" প্রশ্নের সমান ১ মার্ক, কিন্তু সময় খায় চার গুণ।
+- অনুমান শুরু করার আগে প্রশ্নপত্রে **negative marking-এর নিয়ম** দেখে নাও। ব্যাংকের MCQ-তে সাধারণত ০.২৫–০.৫০ কাটা যায়; না থাকলে একটাও খালি রেখো না।
+- Electronics আর GK-র প্রশ্ন প্রায় সবসময় দ্রুত হয় — শুরুতেই এগুলো সেরে সহজ মার্ক জমা করো।
+- ৫০ নম্বর প্রশ্নে ঘড়ির দিকে তাকাও। ২৮ মিনিটের মধ্যে সেখানে থাকা উচিত।
 
-- Only **45 of the 100** questions from the AD(ICT) 2025 paper are captured here. Its topic proportions happen to line up well with the official IT-75 / Math-15 / GK-10 split, which is reassuring, but a 45-question sample still carries real noise. That is exactly why the recommended allocation blends it with the historical baseline rather than following it directly.
-- The exam-conducting body for 2026 is not yet confirmed. 2025 was **DU**. If it turns out to be **BUET**, expect noticeably more calculation — shift weight toward subnetting, scheduling, cache and pipelining maths, and C output tracing.
+---
+
+### উৎস ও সীমাবদ্ধতা
+
+উপরের সবকিছু এই repo-র question bank থেকে বের করা — ৫৮১টি exam tag জুড়ে ২,৭৮১টি MCQ, যার মধ্যে ব্যাংক খাতের ১,৩৬১টি আলাদা করে নেওয়া হয়েছে। দুইটা কথা পরিষ্কার করে বলা দরকার:
+
+- AD(ICT) ২০২৫ paper-এর **১০০টির মধ্যে মাত্র ৪৫টি** প্রশ্ন এখানে আছে। এর topic-অনুপাত সরকারি IT-৭৫ / Math-১৫ / GK-১০ বিভাজনের সাথে ভালোভাবে মিলে যায়, যেটা আশ্বস্ত করার মতো — তবু ৪৫টির sample-এ প্রকৃত noise থেকেই যায়। ঠিক এই কারণেই প্রস্তাবিত বণ্টনে ২০২৫-কে সরাসরি অনুসরণ না করে historical baseline-এর সাথে মিশিয়ে নেওয়া হয়েছে।
+- ২০২৬-এ কোন প্রতিষ্ঠান পরীক্ষা নেবে তা এখনো নিশ্চিত নয়। ২০২৫-এ ছিল **DU**। যদি **BUET** হয়, তাহলে হিসাব উল্লেখযোগ্যভাবে বাড়বে — সেক্ষেত্রে subnetting, scheduling, cache ও pipelining-এর অঙ্ক এবং C output tracing-এর দিকে বেশি ওজন সরাও।
