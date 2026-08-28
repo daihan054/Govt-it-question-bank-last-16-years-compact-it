@@ -59,6 +59,30 @@
    C) data connectivity among the branches of offices
    D) None of the above
 
+11. **Which of the following wiring standards would most likely be used to connect a single network node to a switch?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. Loopback
+   b. Straight
+   c. Rollover
+   d. Crossover
+
+12. **Which of the following WAN technologies requires fiber optics?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. POTS
+   b. SONET
+   c. ADSL
+   d. PSTN
+
+13. **Which of the following WAN technology types does not use an Ethernet cable as a medium for communication and is used for long distances?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. DSL
+   b. WiMAX
+   c. E3/T3
+   d. ATM
+
+14. **Which of the following is strictly used to convert analog to digital signals?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. NIC
+   b. Modem
+   c. Repeater
+   d. Hub
+
 ## Application Layer Protocols
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -389,6 +413,24 @@
    C) Hostname Aliases
    D) All of these
 
+55. **Which of the following ports would be commonly used for FTP traffic?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. 23
+   b. 22
+   c. 21
+   d. 25
+
+56. **Which of the following is a commonly used protocol for VoIP network communication?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. SNMP
+   b. SSH
+   c. DNS
+   d. RTP
+
+57. **A reserved set of IP addresses in a DHCP scope is commonly assigned to which of the following network devices?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. Server
+   b. Workstation
+   c. Hub
+   d. Laptop
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -459,6 +501,12 @@
    (b) 128-byts
    (c) 64-bits
    (d) 128-bits
+
+13. **Which of the following is the number of bits used for IPv6?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. 128
+   b. 32
+   c. 64
+   d. 256
 
 ## Networking Fundamentals & Terminology
 
@@ -804,6 +852,12 @@
    C) LIFO
    D) Round robin
 
+56. **An administrator would like to monitor the network to evaluate which employees are using an excessive amount of bandwidth on peer to peer sharing services. Which of the following monitoring techniques would be best?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+   a. Stateful packet inspection
+   b. Load balancing
+   c. Packet sniffing
+   d. Throughput testing
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -1022,6 +1076,18 @@
    c. Long wave
    d. None
 
+22. **Which of the following wireless networks is configured without an access point?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Ad-hoc
+   b. Multiport repeating
+   c. Local
+   d. Extended
+
+23. **A small office home office (SOHO) wireless user reports their new laptop is 802.11h and 802.11g capable but with not wirelessly connect faster than 11mbps. Which of the following is the cause of the problem?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. The laptop wireless card is running on a different frequency
+   b. The wireless router needs a firmware update
+   c. The wireless router is 802.11b only
+   d. The Wireless router is defective
+
 ## Subnetting & IP Addressing
 
 1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
@@ -1191,6 +1257,48 @@
    C) 255.255.255.78
    D) 255.255.255.240
 
+27. **What is the maximum number of IP addresses that can be assigned to hosts on a local subnet that uses the 255.255.255.224 subnet mask?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. 14
+   b. 15
+   c. 16
+   d. 30
+
+28. **You need to subnet a network that has 5 subnets, each with at least 16 hosts. Which classful subnet mask you use?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. 255.255.255.192
+   b. 255.255.255.248
+   c. 255.255.255.224
+   d. 255.255.255.240
+
+29. **The network address of 172.16.0.0/19 provides how many subnets and hosts?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. 7 subnets, 30 hosts each
+   b. 8 subnets, 8190 hosts each
+   c. 8 subnets, 2046 hosts each
+   d. 7 subnets, 2046 hosts each
+
+30. **What is the subnetwork number of a host with an IP address of 172.16.66.0/21?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. 172.16.36.0
+   b. 172.16.48.0
+   c. 172.16.64.0
+   d. 172.16.0.0
+
+31. **Which of the following classes is the address 208.177.23.1?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. Class A
+   b. Class B
+   c. Class C
+   d. Class D
+
+32. **Two networks in different offices have been using DHCP set up for 192.168.00/24. After consolidating the offices networks, they have run out of IP Addresses. Which of the following is the MOST cost effect solution?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. Request another class C IP scope from the ISP
+   b. Switch to static IP addressing
+   c. Change the subnet mask to 255.255.254.0
+   d. Add a router to connect both networks
+
+33. **Which of the following subnet masks identifies 192.168.7.1 and 192.168.8.1 as being on the same subnet?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+   a. 255.255.240.0
+   b. 255.255.255.128
+   c. 255.255.255.0
+   d. 255.255.255.240
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -1344,6 +1452,30 @@
    (b) Network layer
    (c) Data-link layer
    (d) Physical layer
+
+10. **Which of the following is the metric used for OSPF?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. Latency
+   b. Cost
+   c. Bandwidth
+   d. Next hop
+
+11. **Which of the following describes a routing table that needs to be maintained manually?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+   a. Hop count based
+   b. Link state
+   c. Static
+   d. Dynamic
+
+12. **How the router makes decisions for SQL server database logs?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Call router
+   b. Response Router
+   c. Automatic Router
+   d. Static Router
+
+13. **Which of the following routing protocols uses As-path as one of the methods to build the routing table?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. OSPF
+   b. ISIS
+   c. BGP
+   d. EIGRP
 
 ## Network Devices & Configuration
 
@@ -1522,6 +1654,84 @@
    C) supercomputer
    D) Host
 
+26. **Which of the following devices can be used to break-up a broadcast domain?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 262]**
+   a. Unmanaged switch
+   b. Router
+   c. DHCP Server
+   d. Bridge
+
+27. **A media converter is also known as a-** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 262]**
+   a. transceiver
+   b. hub
+   c. modem
+   d. repeater
+
+28. **Which of the following commands can be used to find the MAC address of a connecting router?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. arp
+   b. tracer oute
+   c. ping
+   d. ping sweep
+
+29. **An administrator is troubleshooting network connectivity and would like to view the path that packets are taking from workstation A to server: 1. Which of the following command line tools is MOST appropriate to use?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. nslookup
+   b. route
+   c. traceroute
+   d. ping
+
+30. **Which of the following commands would MOST likely be used to list the status of all established TCP connections on port 80?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. netstat-p tcp
+   b. netstat-aupn
+   c. netstat-1
+   d. netstat-p top
+
+31. **A new LAN switch is installed with on fiber ports. Which of the following would a technician need on the new switch to allow compatibility to the existing fiber network?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. Router
+   b. Repeater
+   c. Media converter
+   d. Hub
+
+32. **The task of replacing hubs with switches reduces retransmissions by increasing which of the following?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+   a. Frequency domains
+   b. Broadcast domains
+   c. Domain kiting
+   d. Collision domains
+
+33. **Which of the following network components would be used to create VLANs?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Routers
+   b. Gateways
+   c. Switches
+   d. Bridges
+
+34. **Which of the following cables is used to connect multiple layer 2 switches?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Loopback
+   b. Crossover
+   c. Serial
+   d. Rollover
+
+35. **Which of the following devices will segment a network and help cut down on network congestion?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. Switch
+   b. Repeater
+   c. Gateway
+   d. Hub
+
+36. **Which of the following devices uses the IEEE 1394 standard?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. FireWire
+   b. USB 2.0
+   c. ISCSI
+   d. Parallel
+
+37. **Which of the following devices is used to extend the signal strength on network segment?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. Repeater
+   b. NIC
+   c. Transceiver
+   d. Modem
+
+38. **Which of the following will list the destination MAC addresses?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. arp
+   b. ping
+   c. dig
+   d. nbtstat
+
 ## Error Detection & Correction
 
 1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -1615,6 +1825,30 @@
    b. Transport
    c. Session
    d. Presentation
+
+13. **Which of the following BEST explains the functions of OSI layer 4?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. Connecting hosts on the same segment
+   b. Specifying signal timing and amplitude
+   c. Reliable delivery of packets
+   d. Routing packets across segments
+
+14. **Which of the following transport protocols should be used to avoid retransmitting lost packets?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+   a. UDP
+   b. TCP
+   c. ARP
+   d. IGMP
+
+15. **In Which layer basic packet filtering firewall works of OSI model?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Layer 1
+   b. Layer 3
+   c. Layer 7
+   d. Layer 4
+
+16. **Which of the following OSI layers handles the routing of data across segments?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Network
+   b. Transport
+   c. Session
+   d. Data Link
 
 ## Switching Techniques
 

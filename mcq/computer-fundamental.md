@@ -775,3 +775,21 @@
    B) Optical character recognition
    C) Optical character reading
    D) other character reading
+
+10. **What is TEST SYNC?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 269]**
+   a. A testing tool
+   b. A diagnostic tool
+   c. A tracking tool
+   d. A recovery tool
+
+11. **What is the full form ICM?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 269]**
+   a. Cisco Intelligent Contact Management
+   b. Cisco intellectual connection management
+   c. Cisco isolated contact management
+   d. Cisco recovery management
+
+12. **Cisco IOS firewall is aware of VRF. What is the full from of VRF?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 269]**
+   a. Virtual routing and forwarding
+   b. Visual route and forward
+   c. Virtual route and field
+   d. Visual field

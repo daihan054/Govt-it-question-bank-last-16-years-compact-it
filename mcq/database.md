@@ -617,6 +617,18 @@
    C) Hexadecimal
    D) Octal
 
+33. **From where the data is captured in the SQL Server Database?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. Automatic call decider
+   b. Automation call distributor
+   c. Automatic call distributor
+   d. Automatic historical data
+
+34. **What is the purpose of data logger?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. keeps historical data
+   b. keeps all the data for delivery purpose
+   c. keeps the code for the tracking
+   d. keeps automatic call distribution
+
 ## Transaction Management & ACID
 
 1. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

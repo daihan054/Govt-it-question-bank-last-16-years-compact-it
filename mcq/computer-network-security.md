@@ -88,6 +88,36 @@
    C) Hypertext Transfer Protocol Service
    D) Hypertext Transfer Protocol Sense
 
+5. **Which of the following is a secure way to transfer files from one device to another?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 262]**
+   a. SFTP
+   b. SNMPv3
+   c. TFTP
+   d. FTP
+
+6. **Which of the following standards provides port authentication?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. 802.1x
+   b. 802.11
+   c. 802.19
+   d. 802.2
+
+7. **Which of the following protocols has similar functionality to Telnet but operates more securely than Telnet?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. TFTP
+   b. SSH
+   c. SNAT
+   d. RSH
+
+8. **Which of the following protocols is the MOST secure for transferring network device configurations?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. TFTP
+   b. FTP
+   c. SCP
+   d. RCP
+
+9. **Which of the following connections methods is considered secure?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+   a. HTTP
+   b. RCP
+   c. HTTPS
+   d. TELNET
+
 ## Email Security & Spam
 
 1. **An unsolicited e-mail message sent to many recipients at once is a-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
@@ -377,3 +407,15 @@
    B) IPS
    C) Switch
    D) Hub
+
+19. **Which of the following describes an email that is sent to users with web links that direct them to malicious websites?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. Viruses
+   b. Phishing
+   c. Rogue access points
+   d. Man-in-the-middle
+
+20. **Which of the following mitigation techniques is MOST effective against a Man in the middle attack?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+   a. Authentication
+   b. Encryption
+   c. Popup blocker
+   d. ACL

@@ -152,6 +152,18 @@
    C) Content Managed website
    D) E-Commerce website
 
+4. **What type of system is Cisco mail platform?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Linux
+   b. MAC
+   c. Windows
+   d. Atari
+
+5. **Where the application server is installed for the web server?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 269]**
+   a. Cisco MCS with cisco-based Windows operating system
+   b. Cisco MCS with cisco-based Unix operating system
+   c. Cisco MCS with cisco-based Linux operating system
+   d. Cisco MCS with cisco-based MAC operating system
+
 ## HTTP & Status Codes
 
 1. **What does HTTP Status Code 500 indicate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
