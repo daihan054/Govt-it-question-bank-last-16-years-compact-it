@@ -39,6 +39,8 @@
 
 7. **Minimize the following function in SOP minimal form using K-map:** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
 
+8. **Show minimal function using K-Map. F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
+
 ## Logic Families (TTL vs CMOS)
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**

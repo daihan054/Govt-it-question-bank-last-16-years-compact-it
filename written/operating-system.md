@@ -96,6 +96,10 @@ int main(int argc, char *argv[]){
 
 13. **You need to find the total number of linux of the .c and .h file in the current directory formulas the linux commands to display this......... (Approximate)** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 448]**
 
+14. **Find the possible path to know how data on the internet treavels from your mechine to the site www.bicic.gov.bd. Write down the necessary command to accomplish this.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 633]**
+
+15. **You want to run some specific commands at some price schedules time. Which command will have to be used for this.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 633]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
@@ -272,6 +276,8 @@ All process arrived at time 0. Lower number has higher priority.
 7. **Difference between physical memory and virtual memory, also describe the advantages and disadvantages of virtual memory.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 553]**
 
 8. **(c) Define paging and trashing in the context of OS.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
+
+9. **What is page fault in computing systems? What does it occur?** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
 
 ## Process Management & Process States
 

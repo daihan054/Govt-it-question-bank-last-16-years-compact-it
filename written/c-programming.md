@@ -385,6 +385,8 @@ int main() {
 
 10. **C programming output problem.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 468]**
 
+11. **What is the output of code snippet?** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 631]**
+
 ## Recursion & Functions
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।

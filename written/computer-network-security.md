@@ -188,6 +188,8 @@
 
 10. **Write the difference types of Web application attacks?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
 
+11. **Write two differences between SQL Injection and cross site scripting (XSS).** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
+
 ## Buffer Overflow & Software Vulnerabilities
 
 1. **Explain buffer overflow attack with an example.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 592]**

@@ -152,6 +152,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 7. **Difference between TCP and UDP. Distinguish between Cat5 and Cat6. Difference among exFAT, FAT32 and NTFS.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
 
+8. **Show a 3-way handshake protocol in TCP connection established using a diagram.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
+
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -384,6 +386,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **What is the NAT in Computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
 
 3. **NAT Stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+4. **Which two services are required to enable a computer to receive dynamic IP address and access internet using domain names?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 634]**
 
 ## IPv6 Addressing
 

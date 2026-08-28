@@ -78,6 +78,8 @@
 
 16. **(গ) নিচের ছবির Tree এর Inorder, Preorder এবং Postorder Traversal লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
 
+17. **Write C++ function that will invert mirror a binary tree.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
+
 ## Binary Search Tree (BST)
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**

@@ -14,6 +14,8 @@
 
 3. **Which tag is used to write JavaScript in html?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
+4. **Write Javascript function to validate a customer number where the customer number in 3 uppercase letter and district code followed by 8 digits.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
+
 ## Web Services & APIs (SOAP vs REST)
 
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1426]**
