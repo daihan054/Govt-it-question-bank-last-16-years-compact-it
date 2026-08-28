@@ -60,6 +60,30 @@
    c) Charles Babbage
    d) None of the above
 
+11. **________ was a chess-playing computer developed by IBM?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. Bright Red
+   b. Deep Blue
+   c. Light Green
+   d. Dark Pink
+
+12. **How many bits are there in Unicode?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. 8
+   b. 12
+   c. 16
+   d. 20
+
+13. **When was first artificial satellite established?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. 1940
+   b. 1960
+   c. 1950
+   d. 1957
+
+14. **1 Terabyte ________ gigabyte in the decimal system?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. 1000
+   b. 720
+   c. 1950
+   d. 1970
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -212,6 +236,24 @@
    c) Loads the operating system
    d) Provide storage
 
+22. **Which technology has made possible to pinpoint precision to the optical storage?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. Optical fibers
+   b. Electronics guns
+   c. Magnetic heads
+   d. Laser beams
+
+23. **How many generations are an available of USB specifications?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. One
+   b. Two
+   c. Three
+   d. Four
+
+24. **Small computer system interface (SCSI) is pronounced as ________?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. Asei
+   b. Scuzzy
+   c. SCSI
+   d. None
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -353,6 +395,12 @@
    b) GNU GCC Compiler
    c) CodeBlocks C Compiler
    d) Borland C Compiler
+
+16. **Which is not a programming language below?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. Perl
+   b. Cobra
+   c. Joule
+   d. Tesla
 
 ## Acronyms & Abbreviations
 

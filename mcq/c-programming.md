@@ -568,3 +568,18 @@
    b) 2^{32}
    c) 2^{32}-1
    d) 2^{31}-1
+
+## Flowcharts & Algorithms
+
+1. **In flowchart what does below represent?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   ```
+   +-------+
+   |       |
+   (       )
+   |       |
+   +-------+
+   ```
+   a. Document
+   b. Database
+   c. Terminal
+   d. Process

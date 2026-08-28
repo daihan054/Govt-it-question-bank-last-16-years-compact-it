@@ -225,6 +225,8 @@
    c. Polymorphism
    d. Projection
 
+5. **Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+
 ## Polymorphism & Overloading
 
 1. **Which of the following operators should be preferred to overload as a global function rather than a member method?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**

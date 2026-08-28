@@ -348,6 +348,12 @@
    c) ARP
    d) Both A and B
 
+13. **ARPANET stands for-** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. Advanced Research Project Automatic Network
+   b. Advanced Research Programmed Auto Network
+   c. Advanced Research Project Agency Network
+   d. Advanced Research Project Authorized Network
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
