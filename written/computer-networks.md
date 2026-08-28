@@ -312,6 +312,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 46. **In HR department have 12 IP enable devices are available in our office and have a big IP block 172.16.5.0/24. To consider your HR department find a suitable IP block than also answer the following question.**
    **i. Subnet mask; ii. Number of usable IP address; iii. First and last IP Address of that block iv. Broadcast IP address** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
 
+47. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
+
 ## Network Services (DHCP, NAT)
 
 1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**

@@ -370,6 +370,8 @@ ORDER BY average_salary DESC;
 
 1. **What are the different types of join in SQL?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 580]**
 
+2. **Left joning and inner joining of a table.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
+
 ## Data Warehousing, Data Mining & Business Intelligence
 
 1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 517]**

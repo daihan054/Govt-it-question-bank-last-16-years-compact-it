@@ -208,6 +208,8 @@ return 0;
 
 39. **Write a function to find the smallest element from an array.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 492]**
 
+40. **Suppose you have an array. The array contains elements from 0 to 10. This array also contains 0. To replace these 0s, write a program in C/C++ language.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 593]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

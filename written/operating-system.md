@@ -79,6 +79,11 @@ int main(int argc, char *argv[]){
 | Download a file from an URL |
 **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 474]**
 
+11. **Write Linux command to find out the following question:** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 592]**
+   (a) To show current file directory.
+   (b) To show 11^{\text{th}} to 15^{\text{th}} line from file name myfile.
+   (c) To show permission for read, write and execution file name myfile.
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
