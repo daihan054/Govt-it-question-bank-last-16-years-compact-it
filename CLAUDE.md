@@ -169,29 +169,7 @@ for fn in sorted(os.listdir(sys.argv[1])):
 
 ---
 
-# RULE 2 — processDaihan (adding new questions)
-
-The recurring task. Given questions (from a docx, PDF or image), for each question:
-
-1. **Categorize** it to a topic file. If no matching file exists, create one — and a new file must be created with a TOC, per-heading counts and count-descending section order, exactly like every existing file (see Rule 1). Otherwise append to the existing file. Never create a duplicate topic file.
-2. **Subcategorize** it to a `##` subtopic inside that file. Create the subtopic if needed.
-3. **Keep the question intact** — verbatim text, options, code blocks, tables, LaTeX, Bengali. Never paraphrase or retype from memory; extract it.
-4. **Keep the exam tag**, including the page number, in the form `**(Exam Name: Date) [compact it 123]**`. If the source has no page number, keep the tag as the source gives it.
-5. **Number within the subtopic** — 1, 2, 3…; a new question gets `last_number + 1`.
-6. **Dedup:** if the same question already exists, do **not** insert it again — append the new exam tag to the end of the existing entry instead. A merge happens **only if the title and every option, including code blocks, are identical**. Anything less is a separate numbered entry. In particular, two C questions with the same title but different code are two entries.
-7. Then apply **Rule 1** and regenerate counts.
-
-## After processing
-
-- **Commit message** = the source file's name (e.g. `question part 3.docx`).
-- Move the processed source file to the **Trash**, never permanently delete:
-  ```bash
-  osascript -e "tell application \"Finder\" to delete POSIX file \"/abs/path/file.docx\""
-  ```
-
----
-
-# RULE 3 — Commits
+# RULE 2 — Commits
 
 - Commit body must say **`Committed by Daihan`**.
 - **No Claude or AI reference anywhere** — no `Co-Authored-By: Claude`, no "Generated with Claude Code". This overrides the default commit trailer.
@@ -201,11 +179,3 @@ The recurring task. Given questions (from a docx, PDF or image), for each questi
 ```bash
 git commit -m "<source file name>" -m "Committed by Daihan"
 ```
-
----
-
-# Notes
-
-- Extraction from PDF/image is done with `pdftoppm` (poppler) to render pages, then reading them visually. Most exam PDFs are scans with no text layer.
-- Bengali headings need NFC normalization when matched against existing files.
-- The exam suggestion sheets in `Suggestion/` are derived from this bank; if the bank changes substantially, their statistics go stale.
