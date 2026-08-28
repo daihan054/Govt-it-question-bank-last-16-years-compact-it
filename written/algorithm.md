@@ -209,6 +209,8 @@ for i in N:
 
 9. **Find out minimum spanning tree from a given graph using krushkal algorithm.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908]**
 
+10. **Consider the following graph: Now find the minimum spanning tree using Kruskal's algorithm.** **(BAUST Assistant Programmer Exam: 2021) [compact it 920]**
+
 ## Greedy Algorithms (Fractional Knapsack)
 
 1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।

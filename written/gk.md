@@ -172,6 +172,14 @@
 
 86. **Five General Knowledge Questions.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
 
+87. **বাংলাদেশের সশস্ত্র প্রতিরোধ কবে ও কোথায় গড়ে তোলে?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+88. **কারাগারের রোজনামচার লেখক কে ও কত তারিখে প্রকাশিত হয়?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+89. **বাংলাদেশের জাতীয় নির্বাচনের আসন সংখ্যা ও সংরক্ষিত আসন কতটি?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+90. **জাতিসংঘের সাধারণ অধিবেশনে কে সর্বপ্রথম বাংলায় ভাষণ দেয় ও কত তারিখে?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -299,6 +307,8 @@
 55. **আয়তন ও জনসংখ্যায় এশিয়া মহাদেশের ক্ষুদ্রতম দেশ কোনটি?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
 56. **একজন বিখ্যাত ব্যক্তির নাম লিখুন যিনি কৃষিতে গবেষণা করে শান্তিতে নোবেল পুরষ্কার জয় লাভ করেন?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+
+57. **জার্মানির প্রধানমন্ত্রী সমমর্যাদার পদ কোনটি ও সর্বপ্রথম মহিলার নাম কি?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
 ## Everyday Science & Environment
 

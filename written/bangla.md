@@ -147,6 +147,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 4. **এক কথায় প্রকাশ: (ক) অল্প অল্প ব্যথা। (খ) যা পূর্বে কখনো দেখা যায়নি। (গ) যার সর্বস্ব হারিয়ে গেছে। (ঘ) পরকে পালন করে যে।** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
 
+5. **এক কথায় প্রকাশ করুন। (ক) অকাল জাত কুসমান্ড (খ) অগ্র-পশ্চাত না ভেবে কাজ করে যে** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
 ## বাংলা ব্যাকরণ ও সাহিত্য
 
 1. **নিচের প্রশ্নগুলোর উত্তর লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -244,3 +246,11 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 41. **‘বীণাপাণি’ সমস্ত শব্দটির ব্যাসবাক্যসহ সমাস নির্ণয় করুন। ‘পাণি’ শব্দটির অর্থ কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 42. **‘Null and void’ - এর বাংলা পরিভাষা কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+43. **বাগধারা: অর্থসহ বাক্য গঠন করুন। (ক) আদায় কাঁচকলায় (খ) অনুরোধে ঢেঁকিগেলা** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+44. **সন্ধি বিচ্ছেদ করুন। (ক) সংসার (খ) জনৈক** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+45. **এককথায় উত্তর লিখুন। (ক) শাহনামা গ্রন্থের লেখক কে? (খ) পথের পাঁচালী উপন্যাসের লেখক কে?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+46. **শূন্যস্থান পূরণ করুন: (ক) এ জগতে হায় _____ আছে ভূরি ভূরি। (খ) শাসন করা তারই সাজে _____ করে যে।** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**

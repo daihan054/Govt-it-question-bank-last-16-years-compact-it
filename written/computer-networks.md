@@ -307,6 +307,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 6. **How STP works? Explain congestion control algorithm.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 842-843]**
 
+7. **Host A is sending data to Host B over a full duplex link. A and B are using the sliding window protocol for flow control. The send and receive window size are 5 packets each. Data packets (sent only from A to B) are all 1000 bytes long and transmission time for such a packet is 50\mu\text{s}. Acknowledgement packets (sent only from B to A) are very small and require negligible transmission time. The propagation delay over the link is 200\mu\text{s}. What is the maximum achievable throughput in this communication?** **(BAUST Assistant Programmer Exam: 2021) [compact it 918]**
+
+8. **What is the piggybacking and MAC Address?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 921]**
+
 ## Line Coding & Digital Encoding
 
 1. **Assume we want to transmit the following binary string: 01001110. Show the resulting signal on the one using the following line coding techniques: (i) NRZ-L (ii) Manchester NRZ (iii) Unipolar RZ (binary string: 11011000100)** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 638]**
@@ -354,6 +358,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 12. **An end system sends 50 packets per second using the User Datagram Protocol (UDP) over a full duplex 100 Mbps ethernet LAN connection. Each packet consists 1500B of ethernet frame payload data. What is the throughput, when measured at the UDP layer?** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
 
+13. **The message 11001001 is to be transmitted using the CRC polynomial x^3+1 to protect it from the errors. Now find out the message that should be transmitted.** **(BAUST Assistant Programmer Exam: 2021) [compact it 917-918]**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
@@ -381,6 +387,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 12. **(a) Distinguish between Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM).** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888]**
 
 13. **TDM math: rate= 1.536 Mbps, message size= 960000, Slot=32, end to end circuit Switch time=800ms, calculate transfer time.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
+
+14. **A want to send 2 files the size of each file is 500000 bit's data to B through TDM channel which has slot 16 channel bit rate 1.5 Mbps and 30 millisecond delay time, if no propagation delay; find out time to send the data.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
 
 ## Subnetting & IP Addressing
 
@@ -573,6 +581,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 76. **(a) What is the subnet mask of 10.2.1.3/26 and What is the usable number of IP address on network that has a 26 mask?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886]**
 
 77. **172.168.128.0/20 এর Broadcast Address বের কর এবং কতগুলো Computer (Host) Connect করা যাবে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 913]**
+
+78. **Suppose a network with IP address 192.16.0.0 is divided into 2 subnets, find number of hosts per subnet. Also for the first subnet, find- (i) First Subnet address (ii) First host address (iii) Last host address (iv) Broadcast address** **(BAUST Assistant Programmer Exam: 2021) [compact it 919]**
+
+79. **Find the Subnet mask from the following IP: 192.168.3.0/22** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
 
 ## Network Layer (Packet Fragmentation & Tunneling)
 
@@ -842,6 +854,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 11. **Using the Nyquist theorem, we can sample 12 million times/sec. Four–level signals provide 2 bits per sample, for a total data rate of 24 Mbps.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
 
+12. **In serial communication employing 8 data bits, a parity bit and 2 stop bits. What is the minimum band rate requested to sustain a transfer rate of 300 characters per second?** **(BAUST Assistant Programmer Exam: 2021) [compact it 918]**
+
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 
 1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
@@ -919,3 +933,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 11. **Wi-Fi, Bluetooth, Wi-Max, Cellure network এইগুলোকে দূরত্বের ক্রমানুসারে ছোট থেকে বড় এর দিক অনুসারে লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 867]**
 
 12. **(c) Difference between broadband Wi-Fi and Wi-Max communication technology.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
+
+13. **What is wireless network system? Why CSMA/CA used instead of CSMA/CD?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922-923]**

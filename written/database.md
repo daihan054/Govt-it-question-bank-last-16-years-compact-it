@@ -344,6 +344,13 @@ From t;
 
 58. **emp [e_id, e_name, dept_id, salary, DOB], dept [dept_id, city, dept_name]; প্রত্যেকটি Department এর নাম এবং ঐ Department এর employee দের গড় Salary দেখার SQL Query লিখ।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
 
+59. **Database table by name Loan Records is given below: What is the output of the following SQL query?** **(BAUST Assistant Programmer Exam: 2021) [compact it 919-920]**
+```sql
+SELECT count (*) FROM (
+(SELECT Borrower, Bank_Manager, FROM Loan_Records) AS S NATURAL JOIN
+(SELECT Bank_Manager, Loan_Amount FROM Loan_Records) AS T);
+```
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -538,6 +545,8 @@ From t;
 17. **Database Management System (DBMS) বলতে কী বোঝেন? Relational database -এ Primary key এবং Foreign key -এর ভূমিকা উদাহরণসহ সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 882]**
 
 18. **(b) Explain the different type of database keys with examples.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
+
+19. **What is the Primary key, Candidate key and Super key?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 921]**
 
 ## Indexing in DBMS
 

@@ -98,6 +98,8 @@
 
 3. **An aeroplane started 30 minutes later than the scheduled time from a place 1500 km away from its destination. To reach the destination at the scheduled time the pilot had to increase the speed by 250 km/h. What was the speed of the aeroplane per hour during the journey?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
 
+4. **নৌকার গতিবেগ ঘন্টায় ১৫কিমি ও স্রোতের গতিবেগ ঘন্টায় ৫কিমি। ৩০কিমি গিয়ে ফিরে আসতে মোট সময় কত?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
 ## Calculus & Integration
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
@@ -131,6 +133,8 @@
 7. **একটি সমদ্বিবাহু সমকোণী ত্রিভুজের অতিভুজ ১২ সেমি হলে, ত্রিভুজটির ক্ষেত্রফল কত বর্গ সেমি?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
 8. **বৃত্তস্থ চতুর্ভুজের একটি কোণ ৮০° হলে তার বিপরীত কোণের মান কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+9. **কোন বর্গক্ষেত্রের ক্ষেত্রফল ১০০ বর্গমিটার। এর বাহুর দৈর্ঘ্য ১০% বৃদ্ধি পেলে এর ক্ষেত্রফলের শতকরা বৃদ্ধির হার কত?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
 ## Analytical Ability & Logical Reasoning
 

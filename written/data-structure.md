@@ -126,6 +126,14 @@ Output: Not Balanced
 
 22. **(iii) Maximum and Minimum no of Nodes for a binary tree of height 7 where the root is considered as height 0.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
 
+23. **Construct a full binary tree from the given inorder and preorder traversal as follows:** **(BAUST Assistant Programmer Exam: 2021) [compact it 917]**
+   Inorder: B A D C F E J H K G I
+   Preorder: A B C D E F G H J K I
+
+24. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925-926]**
+   In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
+   Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
+
 ## Binary Search Tree (BST)
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**

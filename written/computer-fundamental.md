@@ -112,6 +112,8 @@
 
 40. **Write down the full meaning: DHCP, ICMP, ACNS, GARP.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 842]**
 
+41. **Write the full form: TCP/IP, DHCP, XML, PoSQL, CSMA** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 920]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -143,6 +145,8 @@
 14. **Plotter কোন ধরনের Device?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
 15. **পিক্সেল ও রেজ্যুলেশন কি ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 827]**
+
+16. **Write the difference between BIOS and CMOS?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
 
 ## ICT in Society & Governance
 

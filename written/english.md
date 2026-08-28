@@ -60,6 +60,8 @@
 
 29. **English focus: Telecommunication in Developing Economic sector.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
 
+30. **Write a short note on “Digital Bangladesh”** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -176,6 +178,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 18. **Fill in the blank: I count _____ your help.** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 19. **Write the passive voice of “Did you do the sum?”** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+20. **Filling the gaps with appropriate word: a) I started _____ Chattogram. b) She has no ability _____ painting. c) Every member of my _____ family d) They as well as he _____ wrong. e) Time and tide _____ for none.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
 ## English Vocabulary & Antonyms
 

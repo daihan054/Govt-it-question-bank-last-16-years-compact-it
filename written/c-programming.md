@@ -310,6 +310,8 @@ return 0;
 
 76. **A হলো মিটার নং, B হলো ব্যবহৃত ইউনিট। 300 ইউনিটের বেশী তাদের মিটার নং এবং ইউনিটের যোগফল বের কর।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912]**
 
+77. **Write the code for second highest maximum from given three number in c/c++.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 920-921]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -358,6 +360,12 @@ return 0;
 
 10. **(c) Write down a program to find length of a string without using any library function.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892]**
 
+11. **Write a program to read a character “lower case ” and convert it into upper case.** **(BAUST Assistant Programmer Exam: 2021) [compact it 918-919]**
+
+12. **Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 923-924]**
+   Sample Input: 192.168.0.0
+   Sample Output: Class C
+
 ## Pointers
 
 1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
@@ -397,6 +405,8 @@ return 0;
 13. **(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
 
 14. **Write some default data type in C.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
+
+15. **Write the difference between Structure and Array.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
 
 ## Output Tracing & Control Flow
 

@@ -23,6 +23,8 @@
 
 9. **(c) What are the three types of services provided by the cloud?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888]**
 
+10. **Write the three basic function of cloud services?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
+
 ## Cloud Storage & Fundamentals
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

@@ -63,6 +63,9 @@
 
 12. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 879]**
 
+13. **Draw the k-map for the equation:** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
+   F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
+
 ## Logic Families (TTL vs CMOS)
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**

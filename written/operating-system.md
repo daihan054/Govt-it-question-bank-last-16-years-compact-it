@@ -283,6 +283,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 16. **Consider the processes P1, P2, P3, P4 given in the below table, arrives for execution in the same order, with Arrival Time 0, and given Burst Time, let's find the average waiting time using the FCFS scheduling algorithm.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 856]**
 
+17. **Job arrival time and execution time of Operating system tasks table is given, find out- (i) Average waiting time for FCFS (ii) Preemptive SJF (iii) Round Robin (Quantum time: 3) scheduling algorithm** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
@@ -427,3 +429,5 @@ The content of the matrix. Need is defined to be Max – Allocation.
 2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 610]**
 
 3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
+
+4. **A file system with 300 GB uses a file descriptor with 8 direct block address, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system.** **(BAUST Assistant Programmer Exam: 2021) [compact it 917]**
