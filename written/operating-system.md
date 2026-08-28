@@ -80,7 +80,7 @@ int main(int argc, char *argv[]){
 
 2. **Write a Linux command to count the total number of characters and words from the first 10 lines of a file named "wasacustomers.txt".** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1437]**
 
-3. **Linux command:** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1361]** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 685]**
+3. **Linux command:** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1361]** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 685]** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1046]**
 
 4. **Write Linux command:** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1324]**
    * **(a) Displays real-time system statistics, including CPU usage, memory usage, running processes, and system load.**
@@ -320,6 +320,8 @@ All process arrived at time 0. Lower number has higher priority.
 21. **Operating system (OS) scheduling is the key concept of multiprogramming. List and briefly define the major types of OS scheduling.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985-986]**
 
 22. **(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1026]**
+
+23. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1047]**
 
 ## Memory Management & Paging
 

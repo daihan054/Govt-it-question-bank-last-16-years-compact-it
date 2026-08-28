@@ -178,6 +178,8 @@ Output: Not Balanced
 
 6. **Binary tree টিকে heapify করুন যেন maximum heap -এ রূপান্তরিত হয়:** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 991]**
 
+7. **Heapify the MAX heap tree.** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1043, 1045]**
+
 ## Hashing & Hash Tables
 
 1. **(b) What is hash table? What are the advantages of using hash table?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**

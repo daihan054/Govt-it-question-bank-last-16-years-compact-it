@@ -231,6 +231,8 @@ for i in N:
 
 13. **How to Determine the weighted graph has negative cycle?** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1006-1007]**
 
+14. **নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1048]**
+
 ## Greedy Algorithms (Fractional Knapsack)
 
 1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।

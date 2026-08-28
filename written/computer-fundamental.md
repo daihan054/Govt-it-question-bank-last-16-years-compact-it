@@ -136,6 +136,8 @@
 
 49. **পূর্ণরূপ লিখ: (a) LTE (b) IOT (c) RDBMS (d) FORTRAN** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947-948]**
 
+50. **Write down the full meaning: (i) DNS (ii) TCP (iii) FTP (iv) ARP (v) UDP** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1045-1046]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

@@ -248,3 +248,7 @@ Public class class B extends class A {
 8. **Where will be the most chance of the grabage collector being invoked?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 756]**
 
 9. **In Java program. Write the method in given box for the Electric bill calculation if unit is less then 100 then unit rate 4.0 take and after 100-unit rate is 5.50 and reaming unit rate is 6.00. [Bill rate 4.0 if unit<=100, Bill rate 5.50 if (unit>100 && unit<=200), Bill rate 6.00 for remaining units.]** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 816-817]**
+
+10. **C# language এর একটি প্রোগ্রাম লিখুন?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1046]**
+
+11. **Write java program for calculate electricity bill using class and object.** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1047-1048]**

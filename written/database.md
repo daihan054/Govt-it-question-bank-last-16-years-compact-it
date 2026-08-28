@@ -393,6 +393,8 @@ SELECT count (*) FROM (
 
 72. **Query for retrieving UNCOMMON Name from Name column of two given tables.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1017]**
 
+73. **Employee টেবিল থেকে যেসকল Employee এর Salary 25000 থেকে 50000 এর মধ্যে এবং Designation হচ্ছে officer এবং City হচ্ছে Dhaka তাদের দেখার জন্য SQL টেবিল দেখান।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1042]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

@@ -218,6 +218,8 @@
 
 41. **(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1028]**
 
+42. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1042-1043]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -652,6 +654,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 92. **Given IP address is 172.168.10.0/24, administrator wants to create 32 subnets, then find out sub netmask, number of address of each subnet, first and last address of subnet 1, first and last address of subnet 32.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1012]**
 
+93. **Given IP Address 180.79.35.5/24, Find the (i) Network address (ii) Broadcast address (iii) Subnet mask (iv) Total valid host (v) IP address class** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1043]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -687,6 +691,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 8. **What do you mean by DHCP server? Explain the benefits of using dedicated DHCP server. Briefly describe the main benefits of using IPv6 protocol.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 914]**
 
 9. **১৬. DHCP uses UDP port _____ for sending data to the server.** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+10. **DHCP কি? DHCP কিভাবে কাজ করে লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1043]**
 
 ## IPv6 Addressing
 

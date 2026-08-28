@@ -6,6 +6,8 @@
 
 3. **You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account, Find the highest and second highest balance of saving account.** **(NRCC Assistant Programmer Exam: 2021) [compact it 931-932]**
 
+4. **Folder থেকে একটি Image নিয়ে ঐ Image এর নামের .jpeg extention কে .png extention এ convert করার জন্য Python language এর Function লিখুন?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1046]**
+
 ## Basic Programs & Control Statements
 
 1. C program for the number is even or odd. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -849,6 +851,8 @@ int main(){
 33. **What will be the output in C and java code? (i) C program:** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1003]**
 
 34. **a) Using Pseudocode give an example of run time error.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1035-1036]**
+
+35. **Find the Output:** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1047]**
 
 ## Recursion & Functions
 
