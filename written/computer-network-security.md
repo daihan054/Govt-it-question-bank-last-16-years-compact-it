@@ -48,6 +48,8 @@
 
 24. **(b) Describe secret key and public key encryption.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
 
+25. **The Caesar Cipher is a type of shift cipher. Shift Ciphers work by using the modulo operator to encrypt and decrypt messages. The Shift Cipher has a key K, which is an integer from 0 to 25. How to Encrypt, How to decrypt.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1009-1010]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -169,6 +171,8 @@
 20. **Phishing attack এর মাধ্যমে কীভাবে attack করা হয়। উহার কারণে কি ক্ষতি হতে পারে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 913]**
 
 21. **Explain ARP Spoofing attack with diagram. Why ARP spoofing attacker used to launch Man-in-the-Middle attack.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+
+22. **Difference between spoofing and sniffing** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1002]**
 
 ## Firewalls & Network Defense
 

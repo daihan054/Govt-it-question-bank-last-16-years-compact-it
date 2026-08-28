@@ -20,6 +20,8 @@
 
 10. **It is small pieces of data stored on a user's computer by web browser while browsing a website. What are we talking about?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
 
+11. **It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?** **(Sadharan Bima Corporation Programmer/ AP/AME Written Exam: 2020 (DU)) [compact it 1002]**
+
 ## JavaScript & jQuery (DOM & Validation)
 
 1. **Jquery for email validation** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

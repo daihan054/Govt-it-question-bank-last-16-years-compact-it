@@ -377,6 +377,8 @@ SELECT count (*) FROM (
 
 67. **(c) Remove duplicate data from table** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
 
+68. **What is the full meaning of SQL? List of the aggregate function. Write SQL Query of a table and its output.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1002-1003]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -631,6 +633,8 @@ SELECT count (*) FROM (
    **(ii) Convert the ER diagram to relations (Table)** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 929-930]**
 
 19. **Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Coach (Coach-id, Coach-name) Player (player-id, palyer-name, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result).** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 939]**
+
+20. **Draw ER diagram (Self test)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1009]**
 
 ## Database Connectivity (JDBC)
 

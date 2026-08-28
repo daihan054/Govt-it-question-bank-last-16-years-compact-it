@@ -198,6 +198,8 @@
 
 38. **বর্তমানে Hybrid network model জনপ্রিয় একটি মডেল। এই মডেলের পাঁচটি Layer হচ্ছে, Application, Transport, Physical, Data link and Network Layer। এদের কাজ দেওয়া আছে বামপাশের কলামে, ডানপাশের কলামে কাজ অনুসারে Layer গুলোর নাম লিখুন।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975-976]**
 
+39. **Write down the functionality of OSI model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1007-1008]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -401,6 +403,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 14. **A want to send 2 files the size of each file is 500000 bit's data to B through TDM channel which has slot 16 channel bit rate 1.5 Mbps and 30 millisecond delay time, if no propagation delay; find out time to send the data.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
 
 15. **We have four sources, each creating 250 characters per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame. Now find- (a) the data rate of each source. (b) the duration of each character in each source.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
+16. **Figure shows synchronous TOM with a data stream for each input and one data stream for the output. The unit of data is 1bit. Find (a) the input bit duration (b) the output bit duration (c) the output bit rate and (d) the output frame rate.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1009]**
 
 ## Subnetting & IP Addressing
 

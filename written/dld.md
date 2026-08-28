@@ -74,6 +74,8 @@
 13. **Draw the k-map for the equation:** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
    F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
 
+14. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1010-1011]**
+
 ## Logic Families (TTL vs CMOS)
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**

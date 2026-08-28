@@ -106,6 +106,8 @@
 
 7. **(i) ‘Knowledge’ কী? Human Knowledge কে Computer এ প্রকাশ করার একটি flow diagram দেখান।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 952]**
 
+8. **Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?** **(Sadharan Bima Corporation Programmer/ AP/AME Written Exam: 2020 (DU)) [compact it 1002]**
+
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical)
 
 1. **Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-linkage hierarchical clustering technique.** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 473]**

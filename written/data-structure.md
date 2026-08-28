@@ -46,6 +46,8 @@ Output: Not Balanced
 
 18. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
 
+19. **Write a Program to check for balanced parenthesis in an expression.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1011]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
@@ -83,6 +85,8 @@ Output: Not Balanced
 11. **(a) What are the differences between linked list and array data structure?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
 
 12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
+
+13. **Linked list, doubly linked list and circular linked list explains with diagram.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1004-1005]**
 
 ## Tree
 

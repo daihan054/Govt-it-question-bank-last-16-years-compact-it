@@ -206,6 +206,8 @@
 
 38. **(ii) Software development এর ধাপসমূহ সংক্ষেপে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 960]**
 
+39. **What is Agile Methodology? Difference between Agile Model and Waterfall Model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1003-1004]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

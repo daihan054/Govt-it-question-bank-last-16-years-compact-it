@@ -223,6 +223,8 @@ for i in N:
 
 12. **Shortest Path Algorithm.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
 
+13. **How to Determine the weighted graph has negative cycle?** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1006-1007]**
+
 ## Greedy Algorithms (Fractional Knapsack)
 
 1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।

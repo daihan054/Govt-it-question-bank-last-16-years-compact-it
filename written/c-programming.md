@@ -330,6 +330,10 @@ return 0;
 
 85. **Write a C program: 1+2^n+3^n+4^n+\dots\dots\dots\dots+n^n (where n>0).** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 990-991]**
 
+86. **X is an integer stream of N numbers. You have to select 2 data P and Q such that A <= (P+Q) <= B. Write an algorithm / pseudo code/ C program how many ways you can select P & Q. The time complexity must be n log n.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1005-1006]**
+
+87. **Write a code in C/C++ that will output the 2nd largest number. (If N>=1)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1008-1009]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -835,6 +839,8 @@ int main(){
 31. **After compilation and execution, what will be output in the following code:** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 972]**
 
 32. **Write down the output of following program:** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 991]**
+
+33. **What will be the output in C and java code? (i) C program:** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1003]**
 
 ## Recursion & Functions
 
