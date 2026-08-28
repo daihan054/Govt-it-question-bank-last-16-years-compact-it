@@ -178,6 +178,8 @@
 
 20. **(d) Mention and discuss some fectors that affect the processing speed a computer.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1024-1025]**
 
+21. **How to solve laptop overheating problem?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1034]**
+
 ## ICT in Society & Governance
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]

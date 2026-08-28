@@ -41,6 +41,8 @@
 
 19. **(b) Define computer network. Sate some merits and demerits of a computer network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1029]**
 
+20. **b) Two IP address map to same Ethernet address. Will both of them receive packets?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -232,6 +234,8 @@
 
 7. **Describe TCP/IP protocols and its ports.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
 
+8. **A server has port number 1223. A user is requesting the server (www.example.com) but it is showing server is not reached. How can you solve this?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
+
 ## Transport Layer (TCP & UDP)
 
 1. Compare TCP and UDP protocols with examples. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -278,6 +282,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 15. **What is a TCP Three-way handshaking step?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
 
 16. **The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate packets. What are the functions performed by TCP to make a network more reliable?** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 990]**
+
+17. **a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
 
 ## Communication System & Transmission Modes
 
@@ -935,6 +941,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 12. **In serial communication employing 8 data bits, a parity bit and 2 stop bits. What is the minimum band rate requested to sustain a transfer rate of 300 characters per second?** **(BAUST Assistant Programmer Exam: 2021) [compact it 918]**
 
 13. **Find signal bit per second bound rate 1000 and 16-QAM signal.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
+14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1038]**
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 

@@ -56,6 +56,8 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 5. **Define a virtual machine with a neat diagram, explain the working of VM. What are the benefits of a VM?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 442]**
 
+6. **What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]**
+
 ## Scalability (Horizontal & Vertical Scaling)
 
 1. **Server rack digram to draw horizontal and vertical scalling.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 655]**

@@ -58,6 +58,8 @@
 
 25. **(b) What is DMA? Why it is used for high-speed I/O devices?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1025-1026]**
 
+26. **Microcontroller এবং Microprocessor এর মধ্যে Hardware Related পার্থক্য গুলো লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -87,6 +89,8 @@
 2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1424]**
 
 3. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
+
+4. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
 
 ## Instruction Pipelining & Hazards
 
@@ -229,6 +233,8 @@
 12. **What is RAID technology? Describe about the advantages of RAID technology.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820]**
 
 13. **Why necessary to use RAID? If you choose a RAID level for an organization with huge data process. Justify your answer?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 854]**
+
+14. **Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
 
 ## CPU Performance & Instruction Cycle
 

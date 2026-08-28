@@ -260,6 +260,10 @@
 
 5. **Assume you are a project manager and your job is to develop an application which is similar to what you have developed is past only larger and complex. The customer has documented the requirements clearly. What team structure would you choose in this case and why?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 759]**
 
+6. **a) What is conflict in git? How to resolve it?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
+
+7. **b) Write down the difference between Patch and Upgrade.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
+
 ## Software Design Principles (Coupling & Cohesion)
 
 1. **Write concepts of Coupling and Cohesion with Example?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
@@ -269,6 +273,8 @@
 3. **(ক) Modularization কী? উহার সুবিধা সম্পর্কে লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 602]**
 
 4. **(খ) Software interface কত প্রকার ও কী কী? Interfacing এর ক্ষেত্রে কী কী error পাওয়া যেতে পারে?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
+
+5. **What is the common mistake of UI design?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]**
 
 ## Software Cost Estimation & Build vs Buy Decisions
 

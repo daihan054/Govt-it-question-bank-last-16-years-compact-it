@@ -37,6 +37,10 @@
 
 17. **There are different number systems. i. Convert (10010.101)_2 = (?)_{10} ii. (543)_{10} = (?)_{16}** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 989]**
 
+18. **Convert (343)_{10} to binary and Hexadecimal.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1034]**
+
+19. **(1111001101011)_2 কে অক্টাল ও হেক্সাডেসিম্যালে রূপান্তর করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038]**
+
 ## 2's Complement & Binary Arithmetic
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
@@ -76,6 +80,8 @@
 
 14. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1010-1011]**
 
+15. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038-1039]**
+
 ## Logic Families (TTL vs CMOS)
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
@@ -88,6 +94,8 @@
 3. **Difference between Analog and Digital Circuit.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 873]**
 
 4. **(c) What is fan-in and fan out?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891]**
+
+5. **Sources of transient fault and permanent fault in a digital system consists of hardware and software? Example based on Hardware and software.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]**
 
 ## Boolean Algebra & De Morgan’s Theorem
 
@@ -171,6 +179,8 @@
 
 26. **(i) Logic gate কী? মৌলিক Logic gate কয়টি ও কী কী? সত্যক সারণিসহ আলোচনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 958-959]**
 
+27. **Design 3 input NAND gate and 2 input XOR gate using 2 input NAND gate.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1034]**
+
 ## Combinational Circuits (Adders, Encoders, MUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -219,6 +229,8 @@
 
 17. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 927-928]**
 
+18. **4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
+
 ## Sequential Circuits (Latches & Flip-Flops)
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
@@ -236,6 +248,8 @@
 7. **There are different types of clocks available in the market. What type of clock will you use to reduce the cost of SGFL Company?** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
 
 8. **(ii) R-S Flip-flop এর সত্যস্য সারণি ও বৈশিষ্ট আলোচনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 959-960]**
+
+9. **MOD-6 বাইনারি কাউন্টার এর Block Diagram অংকন করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1039]**
 
 ## Finite State Machines (FSM)
 

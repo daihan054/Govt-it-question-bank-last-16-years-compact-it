@@ -176,6 +176,8 @@
 
 22. **Difference between spoofing and sniffing** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1002]**
 
+23. **Which security attacks (given) occur on client side or server side?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

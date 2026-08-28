@@ -334,6 +334,8 @@ return 0;
 
 87. **Write a code in C/C++ that will output the 2nd largest number. (If N>=1)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1008-1009]**
 
+88. **0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1040-1041]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -355,6 +357,8 @@ return 0;
 9. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
 
 10. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
+
+11. **Three types of control statements and their graphical presentation using flowchart or flow graph.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1037-1038]**
 
 ## Command Line Arguments & Basic Programs
 
@@ -843,6 +847,8 @@ int main(){
 32. **Write down the output of following program:** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 991]**
 
 33. **What will be the output in C and java code? (i) C program:** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1003]**
+
+34. **a) Using Pseudocode give an example of run time error.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1035-1036]**
 
 ## Recursion & Functions
 

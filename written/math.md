@@ -42,6 +42,8 @@
 
 4. **Suppose we have 6 hospital and 4 police station. Need to select a 4 stations for interrupted power supply. How many ways can we select where at least one hospital on the uninterrupted power supply list?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 454]**
 
+5. **Reliability, Permutation related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1038]**
+
 ## Set Theory & Discrete Math
 
 1. **Given, n(A) = 20, n(B) = 30 and n(A \cup B) = 40 what is n(A \cap B)?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**

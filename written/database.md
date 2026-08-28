@@ -606,6 +606,8 @@ SELECT count (*) FROM (
 
 20. **Difference between Primary key and Unique Key, Drop and Purge, Delete and Truncate.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1013-1014]**
 
+21. **Example Foreign key in RDBMS.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1035]**
+
 ## Indexing in DBMS
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -661,6 +663,8 @@ SELECT count (*) FROM (
 20. **Draw ER diagram (Self test)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1009]**
 
 21. **E-R Diagram কী? উদাহরণসহ লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019-1020]**
+
+22. **Draw an ER diagram of a Library Management System.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036-1037]**
 
 ## Database Connectivity (JDBC)
 

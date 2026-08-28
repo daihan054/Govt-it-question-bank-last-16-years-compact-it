@@ -2,6 +2,8 @@
 
 1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 621]**
 
+2. **Linear Data Structure এবং Non Linear Data Structure বলতে কি বুঝায়?** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1040]**
+
 ## Stack
 
 1. **Explain the push and pop operations of the stack.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1448]**
@@ -48,6 +50,8 @@ Output: Not Balanced
 
 19. **Write a Program to check for balanced parenthesis in an expression.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1011]**
 
+20. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
@@ -87,6 +91,8 @@ Output: Not Balanced
 12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
 
 13. **Linked list, doubly linked list and circular linked list explains with diagram.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1004-1005]**
+
+14. **In a doubly linked list write the function of Traversing from the tail.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
 
 ## Tree
 

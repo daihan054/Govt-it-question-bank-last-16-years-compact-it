@@ -38,6 +38,8 @@
 
 4. **You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss function for this problem.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 746]**
 
+5. **Write down the difference between test set and validation set.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
+
 ## Overfitting, Underfitting & Model Generalization
 
 1. **In machine learning. What will happen, when a machine is highly trained up a slight trained up?** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 395]**
