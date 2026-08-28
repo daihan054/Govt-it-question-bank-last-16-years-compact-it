@@ -119,3 +119,31 @@
    (খ) -1
    (গ) 256
    (ঘ) 0
+
+11. **নিম্নের কোন লজিক অপারেশনটি সঠিক?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+   (ক) A+A = 1
+   (খ) AA = 0
+   (গ) A+1 = 1
+   (ঘ) A+1 = 0
+   **Ans: গ**
+
+12. **বিসিডি কোডে বিট সংখ্যা কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+   (ক) 1
+   (খ) 2
+   (গ) 8
+   (ঘ) 4
+   **Ans: ঘ**
+
+13. **বাইনারি পদ্ধতির যোগে 1+1+1 = কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+   (ক) 10
+   (খ) 11
+   (গ) 101
+   (ঘ) 111
+   **Ans: খ**
+
+14. **bit এর সংখ্যার বিচারে নিচের কোন ক্রমটি সঠিক?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+   (ক) \text{byte} > \text{GB} > \text{KB} > \text{TB}
+   (খ) \text{byte} > \text{KB} > \text{GB} > \text{TB}
+   (গ) \text{byte} > \text{KB} > \text{TB} > \text{GB}
+   (ঘ) \text{byte} > \text{TB} > \text{GB} > \text{KB}
+   **Ans: খ**

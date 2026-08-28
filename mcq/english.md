@@ -813,6 +813,13 @@
    (গ) Hymn
    (ঘ) Dirge
 
+32. **The word ‘Imbibe’ means-** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+   (a) to learn
+   (b) to cry
+   (c) to drink
+   (d) to acquire
+   **Ans: c**
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**

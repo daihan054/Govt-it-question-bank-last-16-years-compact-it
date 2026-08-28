@@ -73,6 +73,8 @@
    (ঘ) ট্রাপিজিয়াম
    **উত্তর: খ**
 
+13. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাটা ও মিনিটের কাটার মধ্যকার কোণ কত? ১২০ ডিগ্রি** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

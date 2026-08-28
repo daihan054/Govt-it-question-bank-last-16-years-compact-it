@@ -366,6 +366,8 @@
    ঘ) ১৯১০
    **Ans: ঘ**
 
+65. **ইসলামের ইতিহাস ও ঐতিহ্য কোন কাব্যের উপজীব্য? সাত সাগরের মাঝি- ফররুখ আহমদ** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**

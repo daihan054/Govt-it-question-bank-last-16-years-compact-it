@@ -182,6 +182,13 @@
    c) WiFi
    d) Bluetooth
 
+4. **VSAT বলতে বুঝায়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+   (ক) Virtual Small Aperture Satellite
+   (খ) Very Small Aperture Terminal
+   (গ) Very Small Application Terminal
+   (ঘ) Vertical Satellite
+   **Ans: খ**
+
 ## Subnetting & IP Addressing
 
 1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
