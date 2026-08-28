@@ -36,6 +36,12 @@
    c) Schottky Diode
    d) SCR
 
+7. **In which logic gate output is 1 when all inputs are zero?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. AND
+   খ. NAND
+   গ. OR
+   ঘ. NOR
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**

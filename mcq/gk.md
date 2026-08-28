@@ -437,6 +437,24 @@
    c) Proton
    d) Cation
 
+70. **'Dry Ice' is produced from;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Oxygen
+   খ. Sulphur di oxide
+   গ. Nitrogen
+   ঘ. Carbon di oxide
+
+71. **DNA is found in;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Chromosome
+   খ. Lissomes
+   গ. Ribosome
+   ঘ. Galel Complex
+
+72. **কোনটি এন্টিবায়োটিক?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. ইনসুলিন
+   খ. পেপসিন
+   গ. ইথিলিন
+   ঘ. পেনিসিলিন
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -942,6 +960,36 @@
    d. SDG 8
 
 90. **What was the theme for the 6th BRICS-Youth summit 2020?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+
+91. **Who was the director of the film “Let there be Light”?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. Zahir Raihan
+   খ. Amjad Hossain
+   গ. Khan Ataur Rohman
+   ঘ. Humayan Ahmed
+
+92. **Which country first gave recognition to Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. India
+   খ. Russia
+   গ. Bhutan
+   ঘ. Nepal
+
+93. **Omicron, the new variant of COVID-19 is originated from;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. China
+   খ. UK
+   গ. America
+   ঘ. South Africa
+
+94. **Country participated as "Observer"in "Victory Day Parade 2021";** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. USA
+   খ. Russia
+   গ. India
+   ঘ. Bhutan
+
+95. **The Nobel Laureate Adbulrazak Gurnah is from;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Turkey
+   খ. Malaysia
+   গ. Indonesia
+   ঘ. Tanzania
 
 ## Bangladesh Affairs
 
@@ -1724,6 +1772,60 @@
    c) ১৯৭২
    d) ১৯৬৯
 
+140. **How many accused were in ‘Agartala Conspiracy Case’ including Bangabandhu?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. 36
+   খ. 35
+   গ. 34
+   ঘ. 32
+
+141. **Under which sector Dhaka was during our Liberation War in 1971?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. 3
+   খ. 2
+   গ. 4
+   ঘ. 1
+
+142. **Who appoints the Chief Justice in Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Prime Minister
+   খ. Parliament
+   গ. President
+   ঘ. None
+
+143. **Who was F.R Khan?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Cancer Specialist
+   খ. Nuclear Scientist
+   গ. Computer Engineer
+   ঘ. Architect
+
+144. **Architect of national monument of Bangladesh is;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Hamidur Rahman
+   খ. Quamrul Hassan
+   গ. Sayed Mainul Hossian
+   ঘ. F.R Khan
+
+145. **What is the per capita income ($US) of Bangladesh in 2021?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. 2254
+   খ. 2454
+   গ. 2554
+   ঘ. 3054
+
+146. **How may freedom fighters have received gallantry awards for contributions in our Liberation War-1971?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. 712
+   খ. 512
+   গ. 175
+   ঘ. 676
+
+147. **Who is the Head of the State of Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. President
+   খ. Prime Minister
+   গ. Speaker
+   ঘ. None
+
+148. **Which one is not correct?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. A+0=A
+   খ. A.1=A
+   গ. A+A'=1
+   ঘ. A.A'=1
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1974,6 +2076,18 @@
    c) যুক্তরাষ্ট্র
    d) জার্মানী
 
+18. **Who scored the only goal in the final match of 2021 SAFF U-19 Women's Championship?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Shaheda Akter Ripa
+   খ. Anai Mogini
+   গ. Maria Mauda
+   ঘ. Anishka
+
+19. **Ping Pong means;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Volleyball
+   খ. Table Tennis
+   গ. Basketball
+   ঘ. Lane Tennis
+
 ## Power Sector & Energy (Bangladesh)
 
 1. **ইজিসিবি'র মোট বিদ্যুৎ ক্ষমতা প্রায় কত মেগাওয়াট (প্রায়)?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 63]**
@@ -2064,3 +2178,45 @@
    b. 7100 MW
    c. 7500 MW
    d. 8000 MW
+
+19. **Sources its produce electricity in Bangladesh;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. Mineral oil
+   খ. Natural gas
+   গ. Hilly River
+   ঘ. All of them
+
+20. **SDG-30 এর কত নম্বর Goal এ বিদ্যুতের বর্ণনা রয়েছে?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. ৭
+   খ. ৮
+   গ. ৫
+   ঘ. ৬
+
+21. **The urgency of rural electrification is described in which article of constitution?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. 8
+   খ. 10
+   গ. 15
+   ঘ. 16
+
+22. **What is the maximum operating transmission voltage (KV) in Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. 33
+   খ. 132
+   গ. 230
+   ঘ. 400
+
+23. **The nature of electricity being produced using sun rays is;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. AC
+   খ. DC
+   গ. Both AC and DC
+   ঘ. None
+
+24. **Function of distribution sub-station is to;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. step down voltage
+   খ. step up voltage
+   গ. increase power
+   ঘ. increase energy
+
+25. **BREB has about ________ consumers of the country in its load.** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. 70%
+   খ. 80%
+   গ. 85%
+   ঘ. 90%

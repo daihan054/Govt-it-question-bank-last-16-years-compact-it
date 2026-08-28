@@ -114,6 +114,18 @@
    c. 5 m
    d. 25 m
 
+21. **When base is 12 inch and height is 8inch of a triangle, its area?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 96 sq-in
+   খ. 48 sq-in
+   গ. 48 in
+   ঘ. 46 in
+
+22. **What is the perimeter of a square, if its area is 400sq-m?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 40m
+   খ. 80m
+   গ. 20m
+   ঘ. 20sq-m
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -376,6 +388,24 @@
    c) ab^2
    d) a + 2b
 
+36. **If, xy = 5, xy = 6, then x+y=?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 7
+   খ. \pm 7
+   গ. 1
+   ঘ. None
+
+37. **The solution of equations x-y=2 and x+y=4;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 3 and 1
+   খ. 4 and 3
+   গ. 5 and 1
+   ঘ. -1 and -3
+
+38. **0.1 \times 0.01 + 1 = ?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 1.01
+   খ. 1.001
+   গ. 2.01
+   ঘ. 0.001
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -487,6 +517,18 @@
    c. 40%
    d. 50%
 
+20. **If a pen is sold at taka 55 it makes a profit of 10%. What is its purchase cost?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 50
+   খ. 110
+   গ. 45
+   ঘ. 60
+
+21. **What is 3% of 0.07?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 21
+   খ. 0.21
+   গ. 0.021
+   ঘ. 0.0021
+
 ## Arithmetic & Number Series
 
 1. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -558,6 +600,24 @@
    b. 36
    c. 38
    d. 40
+
+13. **How many prime numbers are there from 1 to 10?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 10
+   খ. 5
+   গ. 4
+   ঘ. 3
+
+14. **If each of the six members of a family gives money as per their membership number, then what will be the total amount?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 216
+   খ. 125
+   গ. 100
+   ঘ. 64
+
+15. **Which one is the smallest?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 0.02
+   খ. 1/100
+   গ. 10
+   ঘ. None
 
 ## Time, Work & Distance
 

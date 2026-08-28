@@ -140,6 +140,18 @@
    c) 64 bits
    d) 16 bits
 
+13. **Which one is output device?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Microphone
+   খ. CD-Drive
+   গ. Monitor
+   ঘ. None of them
+
+14. **Data are entered into a computer through;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Software
+   খ. Output device
+   গ. Input device
+   ঘ. Memory
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**

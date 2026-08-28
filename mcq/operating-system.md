@@ -166,6 +166,12 @@
    c. To scan
    d. To turn off
 
+5. **What is LINUX?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Operating System
+   খ. Application Program
+   গ. Antivirus software
+   ঘ. Firewall
+
 ## Linux Commands & Administration
 
 1. **User passwords in Linux are stored as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**

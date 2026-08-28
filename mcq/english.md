@@ -846,6 +846,42 @@
    c) Vertex
    d) Agendam
 
+130. **Which one is masculine word?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Marc
+   খ. Lad
+   গ. Pillow
+   ঘ. Pony
+
+131. **Fill in the blank of, A seventeen years old is not ________ to vote in an electron.** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. as old enough
+   খ. enough old
+   গ. old enough
+   ঘ. enough older
+
+132. **Which word remains same in plural form?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Aircraft
+   খ. Intention
+   গ. Mouse
+   ঘ. Teach
+
+133. **Change the voice of, who is calling me?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. By whom am I called?
+   খ. By whom I am called?
+   গ. By whom I was called?
+   ঘ. By Whom am I being called?
+
+134. **What type of noun is 'Kindness'?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 142]**
+   ক. Abstract
+   খ. Proper
+   গ. Common
+   ঘ. Material
+
+135. **'Alumni' is the plural of:** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 142]**
+   ক. Aluminus
+   খ. Alumnous
+   গ. Alumnus
+   ঘ. Aluminise
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -947,6 +983,18 @@
    b. Traumatized
    c. Showing sign of torture
    d. Feeling slightly ill
+
+19. **'Enough is enough' is used to mean;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Continue
+   খ. Stop
+   গ. Continue until it is enough
+   ঘ. None
+
+20. **"Once in a blue moon" means:** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Always
+   খ. Rarely
+   গ. Very rarely
+   ঘ. Hourly
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -1257,6 +1305,18 @@
    b) Springed
    c) Spring
    d) All of these
+
+54. **Brochure means;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Opening
+   খ. Bureau
+   গ. Consor
+   ঘ. Pamphlet
+
+55. **What is the synonym of 'Incite'?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Urge
+   খ. Permit
+   গ. Instigate
+   ঘ. Deceive
 
 ## Spelling
 

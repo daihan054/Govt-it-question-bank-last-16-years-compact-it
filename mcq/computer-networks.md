@@ -151,6 +151,12 @@
    c. Decrease the sequence number
    d. Decrease the window size
 
+20. **Which symbol must remain in e-mail address?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. $
+   খ. N
+   গ. @
+   ঘ. &
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**

@@ -521,6 +521,18 @@
    c) শেখ রেহেনা
    d) সজীব ওয়াজেদ জয়
 
+92. **ছন্দের জাদুকর কোন কবি?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. সুকুমার রায়
+   খ. সত্যেন্দ্রনাথ দত্ত
+   গ. আল মাহমুদ
+   ঘ. জসীম উদ্দীন
+
+93. **শেষের কবিতা কোন ধরনের রচনা?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. কবিতা
+   খ. উপন্যাস
+   গ. গল্প
+   ঘ. নাটক
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1254,6 +1266,42 @@
    c) বিশেষণ
    d) অব্যয়
 
+130. **কোনটি সঠিক বানান?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 138]**
+   ক. সমীচীন
+   খ. সমিচীন
+   গ. সমীচিন
+   ঘ. সমিচিন
+
+131. **সর্বাঙ্গীন এর প্রকৃতি-প্রত্যয়;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. সর্বাঙ্গ+ইন
+   খ. সর্ব+অঙ্গীন
+   গ. সর্ব+ঙ্গীন
+   ঘ. সর্বাঙ্গ+ীন
+
+132. **সূর্য শব্দের সমর্থক কী?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. অর্ণব
+   খ. অর্ক
+   গ. পলব
+   ঘ. কোনটি নয়
+
+133. **বাবা শব্দটি কোন ভাষা থেকে আগত?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. সংস্কৃত
+   খ. হিন্দি
+   গ. আরবি
+   ঘ. তুর্কি
+
+134. **শব্দের মূলকে কি বলে?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. বিভক্তি
+   খ. প্রত্যয়
+   গ. অব্যয়
+   ঘ. প্রকৃতি
+
+135. **'RAPIS' শব্দটি সাজালে হয়;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. মহাসাগর
+   খ. শহর
+   গ. দেশ
+   ঘ. কোনটি নয়
+
 ## বাগধারা ও প্রবাদ
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1306,6 +1354,12 @@
    B. দুধের মাছি
    C. বসন্তের কোকিল
    D. জিলাপীর প্যাচ
+
+10. **অরণ্যে রোদন কী?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. বচন কান্না
+   খ. বনের কান্না
+   গ. পাগলের প্রলাপ
+   ঘ. নিষ্ফল আবেদন
 
 ## এক কথায় প্রকাশ
 
