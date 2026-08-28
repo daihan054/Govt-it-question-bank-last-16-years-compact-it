@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 110 questions
+**Table of Contents** — 11 subtopics · 107 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-27) | 27 |
 | 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-21) | 21 |
-| 3 | [RAID Architecture & Storage](#raid-architecture--storage-14) | 14 |
-| 4 | [Cache Memory](#cache-memory-13) | 13 |
-| 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-11) | 11 |
+| 3 | [RAID Architecture & Storage](#raid-architecture--storage-13) | 13 |
+| 4 | [Cache Memory](#cache-memory-12) | 12 |
+| 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
 | 6 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
 | 7 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-5) | 5 |
 | 8 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-5) | 5 |
@@ -127,13 +127,11 @@
 
 21. **How Maximum size of memory (RAM) is needed that can be addressed by 32-bit system.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1031]**
 
-## RAID Architecture & Storage (14)
-
-1. Which Level Raid is best and why? (BEPRC Assistant Programmer Exam: 08.08.2026)
+## RAID Architecture & Storage (13)
 
 2. **Striping with parity is done in which level of RAID.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
-3. **Which RAID level is best and why?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
+3. **Which RAID level is best and why?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]** (BEPRC Assistant Programmer Exam: 08.08.2026)
 
 4. **Concept of RAID, Relevance in Database, Uses in Database, is it possible?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
 
@@ -157,7 +155,7 @@
 
 14. **Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
 
-## Cache Memory (13)
+## Cache Memory (12)
 
 1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
 
@@ -179,13 +177,11 @@
 
 10. **Cache memory কী কাজে ব্যবহৃত হয়? Compiler and Interpreater -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 880-881]**
 
-11. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951-952]**
-
-12. **Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+11. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951-952]** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
 
 13. **6.3 Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-## Secondary Storage (HDD vs SSD) (11)
+## Secondary Storage (HDD vs SSD) (10)
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
@@ -205,9 +201,7 @@
 
 9. **Consider a disk pack with the following specifications- 16 surfaces, 128 tracks per surface, 256 sectors per track and 512 bytes per sector. Answer the following questions: (a) What is the capacity of disk pack? (b) If the format overhead is 32 bytes per sector, what is the formatted disk space? (c) If the disk is rotating at 3600 rpm, what is the data transfer rate?** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 924-925]**
 
-10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951]**
-
-11. **Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951]** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
 
 ## Multi-Core & Multi-Threading (5)
 

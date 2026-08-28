@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 169 questions
+**Table of Contents** — 12 subtopics · 168 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-43) | 43 |
+| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-42) | 42 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-22) | 22 |
 | 4 | [OS Concepts & System Software](#os-concepts--system-software-15) | 15 |
@@ -20,7 +20,7 @@
 
 ---
 
-## Linux / Unix Commands & Administration (43)
+## Linux / Unix Commands & Administration (42)
 
 1. **Write Linux command:** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**
    (a) Give a file Read Write and Execute permission.
@@ -75,13 +75,11 @@
    b) নতুন ডিরেক্টরি তৈরির কমান্ড।
    c) ফাইল এ্যাকসেস পারমিশন দেখানোর কমান্ড।
 
-17. **Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
-
 18. **UNIX command (directory listing with hidden files).** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
 
 19. **Difference between below 3 linux command: cd, cd usr/desk/home, cd/user/desk/home** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 717]**
 
-20. **Linux Command: Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+20. **Linux Command: Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
 
 21. **(b) Write Linux commands to: (i) Make a directory named PSC (ii) Copy a directory with all its Contents into a directory name/home/admin.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
 

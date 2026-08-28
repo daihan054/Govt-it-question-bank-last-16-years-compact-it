@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 87 questions
+**Table of Contents** — 8 subtopics · 86 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Tree](#tree-26) | 26 |
-| 2 | [Stack](#stack-20) | 20 |
+| 2 | [Stack](#stack-19) | 19 |
 | 3 | [Linked List](#linked-list-14) | 14 |
 | 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-7) | 7 |
 | 5 | [Queue](#queue-6) | 6 |
@@ -74,7 +74,7 @@
 
 26. **6.12 Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-## Stack (20)
+## Stack (19)
 
 1. **Explain the push and pop operations of the stack.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1448]**
 
@@ -88,13 +88,11 @@
 
 6. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 410]**
 
-7. **Write down the difference between Stack and Queue.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+7. **Write down the difference between Stack and Queue.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
 
 8. **Prefix Conversion A+ B * C+D expression?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
 
 9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 463]**
-
-10. **Difference between Stack and Queue.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
 
 11. **Expalin: Infix, Prefix, Postfix notation.** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
 

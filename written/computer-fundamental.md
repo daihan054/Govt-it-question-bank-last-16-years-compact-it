@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 129 questions
+**Table of Contents** — 10 subtopics · 127 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-50) | 50 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-49) | 49 |
 | 2 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-21) | 21 |
 | 3 | [ICT in Society & Governance](#ict-in-society--governance-20) | 20 |
-| 4 | [Software Types & Classification](#software-types--classification-13) | 13 |
+| 4 | [Software Types & Classification](#software-types--classification-12) | 12 |
 | 5 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-7) | 7 |
 | 6 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-7) | 7 |
 | 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (50)
+## Computer Fundamentals & Acronyms (49)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
@@ -27,8 +27,6 @@
 3. **Write the full meaning: HTTP, DVD, and SMTP?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
 
 4. **Provide the full form of the following terms: HTTP, SMTP, ASCII, DHCP, ICMP.** **(BBA - Assistant Maintenance Engineer Exam: 12.07.2025 (BUET)) [compact it 1432]**
-
-5. **1TB কত বাইট?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 6. **MOOC stands for __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
@@ -118,7 +116,7 @@
 
 46. **JPEG and RAID full form কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 943-944]**
 
-47. **1TB = কত বাইট?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+47. **1TB = কত বাইট?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 48. **VGA, EGA এর পূর্ণ নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
 
@@ -212,13 +210,11 @@
 
 20. **d) State the E-Government initiatives taken in health and education sectors of Bangladesh?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1031]**
 
-## Software Types & Classification (13)
-
-1. Differentiate between system software and application software. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+## Software Types & Classification (12)
 
 2. **What is platform independent software discuss with example?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 514]**
 
-3. **What is the difference between System Software and Application Software?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
+3. **What is the difference between System Software and Application Software?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]** (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
 4. **Difference between High level languages and low level language with some example?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 739]**
 

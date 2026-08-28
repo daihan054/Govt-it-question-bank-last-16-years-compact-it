@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 130 questions
+**Table of Contents** — 13 subtopics · 124 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models-39) | 39 |
-| 2 | [Software Testing & Evaluation](#software-testing--evaluation-37) | 37 |
+| 1 | [SDLC Phases & Models](#sdlc-phases--models-37) | 37 |
+| 2 | [Software Testing & Evaluation](#software-testing--evaluation-33) | 33 |
 | 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-11) | 11 |
 | 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-9) | 9 |
 | 5 | [Software Requirements Engineering](#software-requirements-engineering-8) | 8 |
@@ -21,7 +21,7 @@
 
 ---
 
-## SDLC Phases & Models (39)
+## SDLC Phases & Models (37)
 
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
 
@@ -31,7 +31,7 @@
 
 4. What is SDLC, Steps of SDLC, in which Step user acceptance assured? (BEPRC Assistant Programmer Exam: 08.08.2026)
 
-5. **What is SDLC? Describe the steps of SDLC.** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**
+5. **What is SDLC? Describe the steps of SDLC.** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 500]**
 
 6. **Why agile model is better than waterfall model?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
@@ -41,17 +41,13 @@
 
 9. **You are asked to lead a team of software engineers to develop an application software system for your company and deploy it as fast as possible. You need to gather user requirements, design, develop, test and then deploy the system. Between Waterfall Approach and Incremental Approach, which software development approach will you take for your software project? Explain your answer.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
 
-10. **Write down the SDLC steps.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
-
 11. **(খ) Spiral Model চিত্রসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
 
 12. **Which SDLC do you prefer between Agile and waterfall model explain with example.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 522]**
 
 13. **Define SDLC? Write the steps of SDLC?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
-14. **What is SDLC? Briefly explain its phase.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 500]**
-
-15. **Write down the step of SDLC?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
+15. **Write down the step of SDLC?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
 
 16. **What is SDLC? Write the name of 7 phase of SDLC?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
@@ -101,7 +97,7 @@
 
 39. **What is Agile Methodology? Difference between Agile Model and Waterfall Model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1003-1004]**
 
-## Software Testing & Evaluation (37)
+## Software Testing & Evaluation (33)
 
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]
 
@@ -133,11 +129,9 @@
 
 10. **Define test plan and Test case.** **(Pubali Bank Limited Software Quality Assurance Exam: 18.03.2023) [compact it 567]**
 
-11. **(d) What is the main difference between black box and white box testing?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
+11. **(d) What is the main difference between black box and white box testing?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
 
 12. **Verification and validation are two process areas at CMMI level 3. For both of these areas (a) provide a definition (b) a description of how you can fulfill these areas in your software testing activities.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 444]**
-
-13. **What is the difference between black box and white box testing?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
 
 14. **অথবা, (ক) Software testing কী? উহার গুরুত্ব আলোচনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
 
@@ -161,8 +155,6 @@
 
 24. **Definition of Gray-box testing and Unit testing.** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 715]**
 
-25. **Write down the difference between Black box and white box testing.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
-
 26. **Integration testing of pharmaceutical automation software?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
 27. **(ক) Software এর \alpha-version ও \beta-version কি?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
@@ -179,11 +171,7 @@
 
 33. **Write different between Alpha and Beta testing.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 933-934]**
 
-34. **Key difference between BLACK BOX and WHITE BOX testing.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
-
 35. **Testing is an activity that is performed to verify correct behavior of a program. Testing should be conducted in all the stages of program development. Describe different types of tests conducted in the implementation stage.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 980]**
-
-36. **What are the Difference between White Box and Black Box testing?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
 
 37. **6.5 Explain the difference between Unit Testing and Integration Testing.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 

@@ -1,24 +1,22 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 112 questions
+**Table of Contents** — 8 subtopics · 108 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Focus Writing](#focus-writing-35) | 35 |
+| 1 | [Focus Writing](#focus-writing-34) | 34 |
 | 2 | [English Grammar](#english-grammar-29) | 29 |
-| 3 | [Translation](#translation-19) | 19 |
+| 3 | [Translation](#translation-17) | 17 |
 | 4 | [Idioms & Phrases](#idioms--phrases-9) | 9 |
 | 5 | [English Vocabulary & Antonyms](#english-vocabulary--antonyms-7) | 7 |
 | 6 | [Letter & Application Writing](#letter--application-writing-6) | 6 |
-| 7 | [Reading Comprehension](#reading-comprehension-6) | 6 |
+| 7 | [Reading Comprehension](#reading-comprehension-5) | 5 |
 | 8 | [English Literature & Authors](#english-literature--authors-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Focus Writing (35)
-
-1. The Importance of Digital Literacy in Expanding Cashless Transactions in Bangladesh: Discuss how digital skills influence financial inclusion, the adoption of digital payment systems, and the challenges of building a cashless economy. [SO IT 25-07-2026]
+## Focus Writing (34)
 
 2. Focus Writing in English: "The Role of Sustainable Banking in Achieving the UN Sustainable Development Goals (SDGs) in Bangladesh." (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
 
@@ -182,9 +180,7 @@
 i. "He doesn't know anything about computers."
 ii. The data were collected and it were analyzed carefully.
 
-## Translation (19)
-
-1. "কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।" — Translate the passage into English. [SO IT 25-07-2026]
+## Translation (17)
 
 2. Translate the following passage into English:
 "এক কুখ্যাত চোর একটি আঙুর ক্ষেতের পাশ দিয়ে যাচ্ছিল। উঁচুতে ঝুলানো আঙুর দেখে সে তা খাওয়ার চেষ্টা করল, কিন্তু বারবার চেষ্টা করেও ব্যর্থ হলো। অবশেষে সে হতাশ হয়ে চলে গেল। যাওয়ার সময় বলল, আঙুরগুলো আসলেও টক।" (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
@@ -197,14 +193,12 @@ ii. The data were collected and it were analyzed carefully.
 
 5. **Earth Day inspires green innovation through participatory and collective action and encourages the adoption of ho sustainable practices across the financial system. It, therefore, serves as an opportunity for financial institutions to engage with their stakeholders and demonstrates their commitment to sustainable practices. Thus, Earth Day carries a deep significance in proproting sustainable and responsible financing which is an example of environmentally conscious investment practices, Positive environmental outcomes will be easily achieved if all financial sectors, stakeholders and investors alike are part of a long-term plan to improve the environmental health of this planet, along with the financial and human health. We celebrate Earth Day around the world, let us reaffirm our commitment towards building a greener, more tolerant, liveable and sustainable future for our next generations.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
 
-6. **Translation Bangla to English** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 660]** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
+6. **Translation Bangla to English** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 660]** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
 
 7. **Bengali to English Translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
    > পরীক্ষায় ভালো করতে হলে অবশ্যই আত্মবিশ্বাস রাখতে হবে। মনে এ বিশ্বাস রাখবেন যে, আমি ভালোভাবে সব প্রশ্নের উত্তর দিতে পারব বা আমার পরীক্ষাটা অবশ্যই ভালো হবে। একজন শিক্ষার্থীর মনেই যদি আত্মবিশ্বাস না থাকে বা আত্মবিশ্বাস কম থাকে, তাহলে পরীক্ষা নিয়ে তার মনে আগেই দুর্বলতা তৈরী হয়ে যায়। এর ফলে পড়ায় মন বসে না, মনোযোগও বাড়ে না, প্রস্তুতিও ভালো হয়না। তাই মনোযোগ বাড়াতে দরকার আত্মবিশ্বাস, যেদিকে অবশ্যই খেয়াল রাখতে হবে।
 
 8. **Translation [Bangla to English]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 431]**
-
-9. **Bangla to English Translation** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
 
 10. **Translation (Bangla to English)**
     **যুব উন্নয়ন বিষয়ক......** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
@@ -278,9 +272,9 @@ ii. The data were collected and it were analyzed carefully.
 
 6. **Write an application to the Mayor of Dhaka south City Corporation (DSCC) to take measures against illegal chemical storages in your locality.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
-## Reading Comprehension (6)
+## Reading Comprehension (5)
 
-1. **Read the passage and answer the questions that follow:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
+1. **Read the passage and answer the questions that follow:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
 Various kinds of nuclear weapons have been produced in the past few years by many countries. There is a new and terrible development in the history of man. Very few events can be more frightful than nuclear war. In a nuclear war, most of the world’s population will be exterminated. The few living creatures that survive will be exposed to radiation or to electrical rays harmful to life. It has been said by scientists that many new diseases will be caused by radiation. There will also be an acute shortage of food. Most of the areas on which nuclear bombs have been dropped have been ruined. Therefore, the survivors of a nuclear war will be sick, hungry and homeless. It might be better, perhaps, to be killed in a nuclear war than to survive it. It would be better still for men to learn to live in peace with one another. If this can be achieved, there will be no nuclear wars.
 (a) What is the result of a nuclear war?
 (b) How will the survivors of nuclear war survive?
@@ -310,14 +304,6 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 4. **Read the following passage and then answer the questions given below: War is the worst of all evils of human civilisation. It is an ancient institution which has existed for at least six thousand years. It was always wicked and usually foolish, but in the past, human race managed to live with it. Modern ingenuity has changed this drastically. Either man will abolish war or war will abolish man. In the present, it is nuclear weapons that cause the gravest danger, but bacteriological or chemical weapons may, before long, offer an even greater threat. If we succeed at any cost in abolishing nuclear weapons, our work will not be done completely. It will never be completed until we have succeeded in abolishing war for ever. To do this, we need to persuade mankind to look upon international disputes in a new intellectual and mutual way, not as contest of force or power, in which the victory goes to the side which is the most skillful in massacre, but by arbitration in accordance with agreed principles of law. It is not easy to change age-old mental habits, but this is what must be attempted. It is the destructive war that must be checked for the existence of life on earth. Questions: a) Why should we avoid war? b) Why is war more dangerous at present? c) What should we do to abolish war forever? d) How should all international problems be solved? e) Why should we check the destructive war at any cost?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
 5. **Read the following passage crefully and answer the questions below in your words : “To be good is noble, but to teach others how to be good is nobler - and no trouble” said a well known writer. This may explain why in this world there is more of preaching than of practice. We do not mean the preaching which are get in church, but that which is given freely and without stint, on buses, in the streets and even in the homes of our land. Where is the parent who does not discover himself telling his child to do just what he himself does regularly? How many people are there who are certain that they have never made anything but financial mistakes? The man who never swam a stroke feels perfectly competent to tell another how to swim. The man who can not find his way to modest livelihood pretends to know just how to save the nation from all economic ills. It is no trouble to preach. But it is a considerable trouble to carry out what we preach. This is so the man who is striving to climb the loftiest heights know just how difficult is the way. Questions: (a) What does the quoted expression mean? (b) Why is practicing more difficult than preaching? (c) What does the writer mean by preaching? (d) What do the parents tell their children to do? (e) How does the honest preacher preach to himself?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
-
-6. **Read the passage and answer the questions below:** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
-Various kinds of nuclear weapons have been produced in the past few years by many countries. There is a new and terrible development in the history of man. Very few events can be more frightful than nuclear war. In a nuclear war, most of the world's population will be exterminated. The few living creatures that survive will be exposed to radiation or to electrical rays harmful to life. It has been said by scientists that many new diseases will be caused by radiation. There will also be an acute shortage of food. Most of the areas on which nuclear bombs have been dropped have been ruined. Therefore, the survivors of a nuclear war will be sick, hungry and homeless. It might be better, perhaps, to be killed in a nuclear war than to survive it. It would be better still for men to learn to live in peace with one another. If this can be achieved, there will be no nuclear wars.
-(a) What is the result of a nuclear war?
-(b) How will the survivors of nuclear war survive?
-(c) What is the best way to avoid nuclear war?
-(d) What would be the appropriate title of the above passage? Justify the title in two sentences.
-(e) What is the consequence of radiation?
 
 ## English Literature & Authors (1)
 

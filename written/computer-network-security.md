@@ -1,17 +1,17 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 161 questions
+**Table of Contents** — 14 subtopics · 156 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Cryptography](#cryptography-29) | 29 |
+| 1 | [Cryptography](#cryptography-27) | 27 |
 | 2 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-26) | 26 |
 | 3 | [Firewalls & Network Defense](#firewalls--network-defense-16) | 16 |
-| 4 | [Authentication & Access Control](#authentication--access-control-16) | 16 |
-| 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-16) | 16 |
+| 4 | [Authentication & Access Control](#authentication--access-control-15) | 15 |
+| 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-15) | 15 |
 | 6 | [Malware & Security Threats](#malware--security-threats-15) | 15 |
 | 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-11) | 11 |
 | 8 | [Cyber Crime & Security](#cyber-crime--security-9) | 9 |
-| 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad-8) | 8 |
+| 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad-7) | 7 |
 | 10 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6) | 6 |
 | 11 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance-3) | 3 |
 | 12 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios-3) | 3 |
@@ -22,9 +22,9 @@
 
 ---
 
-## Cryptography (29)
+## Cryptography (27)
 
-1. Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026]
+1. Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026] **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
 2. Explain the concepts of encryption and decryption with an example. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
@@ -57,10 +57,6 @@
 16. **(খ) Plaintext ও Cipher text এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
 
 17. **What is SHA-256 and SHA-512 in network security, what is avalanche effect, is it desirable or undesirable.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 655]**
-
-18. **What is the difference between Hashing and Encryption?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
-
-19. **Difference between encryption and hashing.** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
 20. **(ii) Symmetric Key Encryption and Asymmetric Key Encryption ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 790]**
 
@@ -177,7 +173,7 @@
 
 16. **As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
-## Authentication & Access Control (16)
+## Authentication & Access Control (15)
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
@@ -187,7 +183,7 @@
 
 4. **ডিজিটাল সিগনেচার (Digital Signature) কী? এর কার্যকারিতা ব্যাখ্যা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
-5. **(a) What is 2-factor authentication? Describe it with an example.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+5. **(a) What is 2-factor authentication? Describe it with an example.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
 6. **Write down the full form of LDAP?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
@@ -205,13 +201,11 @@
 
 13. **(খ) Authentication বলতে কি বুঝায়? Two Factor Authenticating কি? উদাহরণসহ ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
 
-14. **(a) What is 2-factor authentication? Describe it with example.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
-
 15. **(b) Write down the purpose of Certification Authority (CA) in Digital Signature.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
 
 16. **১৮. পাসওয়ার্ড সুরক্ষা জন্য যে পদ্ধতি ব্যবহার করা হয় তার নাম কী?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
 
-## Web Security Vulnerabilities (16)
+## Web Security Vulnerabilities (15)
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
@@ -220,8 +214,6 @@
 3. **What is Cross site script and SQL injection?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
 
 4. **What is CSRF attack?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
-
-5. **What is SQL injection? How can you prevent SQL injection attacks?** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
 
 6. **What is CSRF and XSS?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1361]**
 
@@ -241,7 +233,7 @@
 
 14. **Write down the counter measure of SQL injection attack.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 753]**
 
-15. **What is SQL Injection? How to Prevent against SQL Injection Attacks?** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853-854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+15. **What is SQL Injection? How to Prevent against SQL Injection Attacks?** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853-854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
 
 16. **What is SQL Injection? How can we protect web Application from SQL Injection attack?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
@@ -328,7 +320,7 @@
 
 9. **Why is cyber security important? What are the common types of cyber threats? Explain cyber security measures.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
-## Security Principles (CIA Triad) (8)
+## Security Principles (CIA Triad) (7)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
@@ -336,11 +328,9 @@
 
 3. **Describe how the principles of Confidentiality, Integrity, and Availability work together to protect organizational data, and provide one real-world example of a security breach where one or more of these principles were compromised.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1428]**
 
-4. **What is CIA Triad?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
+4. **What is CIA Triad?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
 
 5. **Preserving confidentiality integrity and availability of data is a restatement of the concern over falsification, interception, masquerade and denial of service. Explain how the first three concepts relate to the last four.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 435]**
-
-6. **What is CIA Triad?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
 
 7. **Information System কী? Information Syetem -এর সুরক্ষায় প্রয়োজনীয় পদক্ষেপ সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 883-884]**
 

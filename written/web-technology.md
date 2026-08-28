@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 55 questions
+**Table of Contents** — 7 subtopics · 53 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [HTML & Web Fundamentals](#html--web-fundamentals-17) | 17 |
-| 2 | [HTTP Protocol](#http-protocol-12) | 12 |
+| 2 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 3 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-8) | 8 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-7) | 7 |
 | 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development-5) | 5 |
@@ -63,7 +63,7 @@
 
 17. **(ক) ওয়েব ডিজাইন কী? স্ট্যাটিক ও ডায়নামিক ওয়েবসাইটের পার্থক্য ব্যাখ্যা করুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-## HTTP Protocol (12)
+## HTTP Protocol (10)
 
 1. What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503 [SO IT 25-07-2026]
 
@@ -73,19 +73,15 @@
 
 4. **What is cookie? What is its purpose?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
 
-5. **What is the difference between http and https?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]**
+5. **What is the difference between http and https?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
 6. **(গ) URL কী? একটি URL ক্লিক করার পর Web Page Show করার পূর্ব পর্যন্ত যে কয়টি Step হয় সেগুলির নাম লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
-
-7. **(b) Distinguish between http and https.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
 8. **(c) Explain the difference between Stateless and Stateful protocols. Which type of protocol http is?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 885-886]**
 
 9. **What is the difference between http session and http cookies?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
 
-10. **It is small pieces of data stored on a user's computer by web browser while browsing a website. What are we talking about?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
-
-11. **It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?** **(Sadharan Bima Corporation Programmer/ AP/AME Written Exam: 2020 (DU)) [compact it 1002]**
+11. **It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?** **(Sadharan Bima Corporation Programmer/ AP/AME Written Exam: 2020 (DU)) [compact it 1002]** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
 
 12. **6.7 What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 

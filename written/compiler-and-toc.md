@@ -1,37 +1,17 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 25 questions
+**Table of Contents** — 5 subtopics · 20 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Compiler vs Interpreter](#compiler-vs-interpreter-9) | 9 |
-| 2 | [Regular Expressions & Finite Automata](#regular-expressions--finite-automata-6) | 6 |
-| 3 | [Grammar & Ambiguity](#grammar--ambiguity-5) | 5 |
+| 1 | [Regular Expressions & Finite Automata](#regular-expressions--finite-automata-6) | 6 |
+| 2 | [Grammar & Ambiguity](#grammar--ambiguity-5) | 5 |
+| 3 | [Compiler vs Interpreter](#compiler-vs-interpreter-4) | 4 |
 | 4 | [Lexical Analysis & Compiler Phases](#lexical-analysis--compiler-phases-4) | 4 |
 | 5 | [Linker & Loader](#linker--loader-1) | 1 |
 
 <!-- TOC END -->
 
 ---
-
-## Compiler vs Interpreter (9)
-
-1. Explain the difference between compiler and interpreter. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
-
-2. **(a) Difference between interpreter and compiler. Write down the phases of a compiler.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
-
-3. **Distinguish between Compiler and Interpreter with example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
-
-4. **Difference between Interpreter and Compiler.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
-
-5. **Write down the difference between compiler and interpreter.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
-
-6. **Define an Interpreted language.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
-
-7. **What is the difference between Compiler and Interpreter?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]**
-
-8. **b) Write down the difference between Interpreter and Compiler?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]**
-
-9. **What are Compilers and Interpreters? Briefly describe their role and differences. Write some key points on the advantages and disadvantages of Open Source Software.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
 ## Regular Expressions & Finite Automata (6)
 
@@ -62,6 +42,16 @@
 4. **Draw a derivation tree for the string “bab” from the CFG given by- S \to bSb \mid a \mid b** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 877-878]**
 
 5. **6.15 Consider the grammar: E \to E + E \mid E * E \mid id. Show that the grammar is ambiguous for the string: id + id * id.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+## Compiler vs Interpreter (4)
+
+2. **(a) Difference between interpreter and compiler. Write down the phases of a compiler.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
+
+6. **Define an Interpreted language.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
+
+8. **b) Write down the difference between Interpreter and Compiler?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]** (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it] **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
+
+9. **What are Compilers and Interpreters? Briefly describe their role and differences. Write some key points on the advantages and disadvantages of Open Source Software.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
 ## Lexical Analysis & Compiler Phases (4)
 

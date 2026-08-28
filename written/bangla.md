@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 125 questions
+**Table of Contents** — 6 subtopics · 120 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [বাংলা ব্যাকরণ ও সাহিত্য](#বাংলা-ব্যাকরণ-ও-সাহিত্য-61) | 61 |
-| 2 | [Focus Writing](#focus-writing-25) | 25 |
-| 3 | [Translation](#translation-21) | 21 |
+| 2 | [Focus Writing](#focus-writing-23) | 23 |
+| 3 | [Translation](#translation-18) | 18 |
 | 4 | [পত্র লিখন](#পত্র-লিখন-7) | 7 |
 | 5 | [সারমর্ম / সারাংশ](#সারমর্ম--সারাংশ-6) | 6 |
 | 6 | [এক কথায় প্রকাশ (One Word Substitution)](#এক-কথায়-প্রকাশ-one-word-substitution-5) | 5 |
@@ -155,13 +155,11 @@
 (ঘ) নিচের বাগধারা দুটির অর্থ লিখে বাক্য রচনা করুন: তুলসী বনের বাঘ, কেবলা হাকিম
 (ঙ) বাক্য সংকোচন করুন: মেঘের ধ্বনি, তালু থেকে উচ্চারিত
 
-## Focus Writing (25)
-
-1. বাংলাদেশের ব্যাংকিং খাতে চতুর্থ শিল্পবিপ্লবের (4th Industrial Revolution) প্রভাব: ডিজিটাল রূপান্তরের সম্ভাবনা, আধুনিক প্রযুক্তির ব্যবহার, গ্রাহকসেবার পরিবর্তন এবং সংশ্লিষ্ট প্রযুক্তিগত চ্যালেঞ্জসমূহ বিশ্লেষণ করুন। [SO IT 25-07-2026]
+## Focus Writing (23)
 
 2. Focus Writing in Bangla: "বাংলাদেশের অর্থনীতিতে মোবাইল ব্যাংকিং: সম্ভাবনা, বাধা ও উত্তরণের উপায়" (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
 
-3. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ বিষয়ক একটি প্রবন্ধ রচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
+3. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ বিষয়ক একটি প্রবন্ধ রচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
 4. **গ্রামীণ জীবন যাত্রার মান উন্নয়নে পল্লী বিদ্যুৎ ভূমিকা সম্বন্ধে রচনা লিখ?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
@@ -203,18 +201,14 @@
 
 23. **Bangla রচনা: সামাজিক মূল্যবোধ বৃদ্ধিতে দেশীয় সংস্কৃতি গুরুত্ব ব্যাখ্যা কর।** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
 
-24. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ শীর্ষক একটি প্রবন্ধ রচনা করুন।** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
 25. **Focus Writing in Bangla: বাংলাদেশের ব্যাংকিং খাতে চতুর্থ শিল্পবিপ্লবের (4th Industrial Revolution) প্রভাব: ডিজিটাল রূপান্তরের সম্ভাবনা, আধুনিক প্রযুক্তির ব্যবহার, গ্রাহকসেবার পরিবর্তন এবং সংশ্লিষ্ট প্রযুক্তিগত চ্যালেঞ্জসমূহ বিশ্লেষণ করুন।** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-## Translation (21)
-
-1. "He decided to pull out of the agreement at the eleventh hour. This sudden move took everyone by surprise and put the entire project at stake. Had he informed the team beforehand, we could have easily made alternative arrangements. Now, we are left with no other choice but to start everything from scratch. It just goes to show that you cannot always take people at their word." — Translate the passage into Bangla. [SO IT 25-07-2026]
+## Translation (18)
 
 2. Translate the following passage into Bangla:
 "The boy found a lost wallet on his way to school. Instead of keeping it, he looked for the owner and returned it. The owner, impressed by his honesty, offered him a reward. The boy politely refused, saying that honesty is its own reward." (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
 
-3. **বাংলায় অনুবাদ করুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
+3. **বাংলায় অনুবাদ করুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 Words have a lot of power. They can help or hint, bless or curse. Unkind words do a lot of harm, Kind words do a lot of good. We can spoil a friends happiness by an unkind word, but cheer up a sad heart with a kind word, which costs nothing. A kind word is often more welcome than a costly present.
 
 4. **বাংলায় অনুবাদ করুন:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
@@ -227,9 +221,7 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 7. **বাংলাদেশে ব্যবসাপ্রতিষ্ঠান বাসাবাড়ি ও বিভিন্ন প্রকল্পে সৌরবিদ্যুৎ তথা সোলার প্যানেলের ব্যবহার দিন দিন বাড়ছে। সূর্য থেকে সোলার প্যানেল আলো শোষণ করে বৈদ্যুতিক প্রবাহ তৈরি করে, যা দিয়ে পরবর্তী সময়ে লাইট, ফ্যান প্রভৃতি চালানো যায়। সরকারের টেকসই উন্নয়ন লক্ষ্যমাত্রায় ২০৩০ সালের মধ্যে ৪ হাজার ১০০ মেগাওয়াট বিদ্যুৎ নবায়নযোগ্য উৎস থেকে উৎপাদনের পরিকল্পনা নেয়া হয়েছে। ফলে নীতিগত ও ব্যবহারিক উভয় দিক দিয়ে দেশে সৌরবিদ্যুৎ খাতের বেশ সম্ভাবনা রয়েছে। সোলার প্যানেলের মাধ্যমে বিদ্যুৎ উৎপাদন মূলত একটি পরিবেশবান্ধব প্রক্রিয়া এবং এ প্রক্রিয়ায় বিদ্যুৎ উৎপাদন করে তা জাতীয় গ্রিডে যুক্ত করা গেলে বিদ্যুৎ খরচ ২০ শতাংশ কমবে।** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
 
-8. **Translation English to Bangla** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
-
-9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]**
+9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
 
 10. **Translation [English to Bangla]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
    **Translate the following passage into Bangla:**
@@ -254,9 +246,6 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 17. **৪. বাংলায় অনুবাদ করুন: Cleanliness is a virtue. It is the habit of keeping the body and all other things free from dirts. Without a clean body one cannot have a merry mind. Cleanliness keeps health. It is also a mark of politeness. Good health keeps mind healthy.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
 18. **English to Bangla: Global Economic debt pandemic.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
-
-19. **বাংলায় অনুবাদ করুন:** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-Words have a lot of power. They can help or hurt, bless or curse. Unkind words do a lot of harm. Kind words do a lot of good. We can spoil a friends happiness by an unkind word, but cheer up a sad heart with a kind word, which costs nothing. A kind word is often more welcome than a costly present.
 
 20. **Translate the following passage into Bangla:** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 “He decided to pull out of the agreement at the eleventh hour. This sudden move took everyone by surprise and put the entire project at stake. Had he informed the team beforehand, we could have easily made alternative arrangements. Now, we are left with no other choice but to start everything from scratch. It just goes to show that you cannot always take people at their word.”

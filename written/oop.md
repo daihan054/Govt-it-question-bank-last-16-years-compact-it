@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 85 questions
+**Table of Contents** — 9 subtopics · 84 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-46) | 46 |
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-45) | 45 |
 | 2 | [Java Programming & Methods](#java-programming--methods-11) | 11 |
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-7) | 7 |
 | 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-6) | 6 |
@@ -17,7 +17,7 @@
 
 ---
 
-## OOP Concepts (Inheritance & Polymorphism) (46)
+## OOP Concepts (Inheritance & Polymorphism) (45)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
@@ -46,15 +46,13 @@
 
 12. **Write down the advantages of OOP over traditional structured programming language** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 527]**
 
-13. **What is virtual function?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 506]**
-
 14. **Write down the Principle of OOP. What is Polymorphism? Write the name of 3 OOP language.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
 15. **(b) What is the diamond problem of multiple inheritance in C++?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 487]**
 
 16. **(a) Define function overloading and function overriding with examples.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
 
-17. **What is virtual function with example?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 560]**
+17. **What is virtual function with example?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 560]** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 506]**
 
 18. **How many classes can be used in Hybrid Inheritance?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 

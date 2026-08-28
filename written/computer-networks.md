@@ -1,30 +1,30 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 453 questions
+**Table of Contents** — 33 subtopics · 440 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-97) | 97 |
-| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-44) | 44 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-95) | 95 |
+| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-43) | 43 |
 | 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-23) | 23 |
-| 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-20) | 20 |
+| 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-19) | 19 |
 | 5 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-18) | 18 |
 | 6 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
-| 7 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-17) | 17 |
-| 8 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-17) | 17 |
-| 9 | [Networking Devices](#networking-devices-16) | 16 |
-| 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-15) | 15 |
+| 7 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-17) | 17 |
+| 8 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-15) | 15 |
+| 9 | [Networking Devices](#networking-devices-14) | 14 |
+| 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-14) | 14 |
 | 11 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-14) | 14 |
 | 12 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
 | 13 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-14) | 14 |
-| 14 | [IPv6 Addressing](#ipv6-addressing-13) | 13 |
-| 15 | [Network Topologies](#network-topologies-12) | 12 |
+| 14 | [Network Topologies](#network-topologies-12) | 12 |
+| 15 | [IPv6 Addressing](#ipv6-addressing-11) | 11 |
 | 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-11) | 11 |
 | 17 | [Network Address Translation (NAT)](#network-address-translation-nat-11) | 11 |
 | 18 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat-10) | 10 |
 | 19 | [Digital Modulation & Signal Processing (BPSK, QPSK)](#digital-modulation--signal-processing-bpsk-qpsk-10) | 10 |
 | 20 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait-9) | 9 |
 | 21 | [Email Architecture & Protocols (SMTP, POP3, IMAP)](#email-architecture--protocols-smtp-pop3-imap-9) | 9 |
-| 22 | [Application Layer & Well-Known Port Numbers](#application-layer--well-known-port-numbers-8) | 8 |
+| 22 | [Application Layer & Well-Known Port Numbers](#application-layer--well-known-port-numbers-6) | 6 |
 | 23 | [Switching Techniques (Circuit vs Packet Switching)](#switching-techniques-circuit-vs-packet-switching-5) | 5 |
 | 24 | [WAN Technologies (SONET/SDH, ATM, WDM)](#wan-technologies-sonetsdh-atm-wdm-5) | 5 |
 | 25 | [Pulse Code Modulation (PCM) & Signal Processing](#pulse-code-modulation-pcm--signal-processing-4) | 4 |
@@ -41,7 +41,7 @@
 
 ---
 
-## Subnetting & IP Addressing (97)
+## Subnetting & IP Addressing (95)
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
@@ -126,7 +126,7 @@
 
 27. **What is the primary motivation for classful IP address to classless IP addressing?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 316]**
 
-28. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 292]** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
+28. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 292]** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 389]** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 456]**
 
 29. **Given IP Address: 192.168.5.154/27, Calculate a) Network Address b) First valid host c) Last valid host d) Broadcast address e) Subnet mask** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 383]**
 
@@ -137,8 +137,6 @@
 32. **Local loopback address কি? কোন কমান্ড ব্যবহার করে কানেক্টিভিটি টেস্ট করা হয়?** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 383]**
 
 33. **Given IP address 192.168. 2.0/ 24; Determine to network address and broadcast address.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
-
-34. **Find Network Address, Broadcast Address and Valid Host IP Range from given IP Address: 192.168.1.50 and Subnet Mask: 255.255.255.240** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 389]**
 
 35. **Given a (slash) /26 based network address. Find Subnet mask, broadcast address, number of host, Number of valid host and number of subnet.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1459]**
 
@@ -172,8 +170,6 @@
 46. **What is private IP range class A, B and C with maximum host of each class?** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
 
 47. **(b) Find out the default mask, network address and broadcast address of the classful IPv4 address: 172.16.99.45** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 480]**
-
-48. **Give IP 192.168.1.50 and subnet mask 255.255.255.240; Find valid host, Network address, and Broadcast address.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 456]**
 
 49. **Identify the class, network IP address, direct broadcast address and limited broadcast address of the following IP address: (i) 1.2.3.4 (ii) 130.1.2.3 (iii) 220.15.1.10 (iv) 200.1.10.100** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
 
@@ -278,7 +274,7 @@ ii) 211.10.15.4
 
 97. **What is subnetting? For the network 192.168.1.0/22, how many usable host addresses does it have?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
-## OSI & TCP/IP Reference Model (44)
+## OSI & TCP/IP Reference Model (43)
 
 1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
@@ -309,8 +305,6 @@ ii) 211.10.15.4
 14. **How many TCP/IP layer? Write its Layer name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
 15. **Differentiate between OSI Model and TCP/IP Model. Draw the diagram of 4 Layers of TCP/IP Model including the main function of each layer and related protocols. List some basic functions performed at MAC layer.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
-
-16. **What is the TCP/IP Model?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
 17. **What is OSI Model? Write all layer name sequence should be top to bottom or bottom to top.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
@@ -355,7 +349,7 @@ ii) 211.10.15.4
 
 34. **What is OSI model? Write down the name of OSI model layer.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]**
 
-35. **What is TCP/IP model? Briefly explain TCP/IP model.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]**
+35. **What is TCP/IP model? Briefly explain TCP/IP model.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
 36. **What is OSI and TCP/IP model and briefly explain?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870-872]**
 
@@ -426,7 +420,7 @@ ii) 211.10.15.4
 
 23. **Define Computer Network. Describe different types of Computer Networks.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
-## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (20)
+## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (19)
 
 1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -434,15 +428,13 @@ ii) 211.10.15.4
 
 3. **Why does the Domain Name System (DNS) primarily use UDP as its transport layer protocol instead of TCP? Describe the sequence of events that take place during the DNS name resolution process when a user enters www.companybd.com into a web browser and presses Enter.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1421]**
 
-4. **How does work DHCP?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
-
 5. **What is DHCP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
 
 6. **Which protocol is used by the ping tools?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 7. **Which server can be used to dinamically assign IP address to the PCs is a LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
-8. **Explain how do DHCP work?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
+8. **Explain how do DHCP work?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
 
 9. **SMTP, DNS, DHCP, NAT এর কাজ কি লিখ?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
 
@@ -572,55 +564,6 @@ ii) 211.10.15.4
 
 18. **What is difference between link state routing and distance vector routing?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
 
-## Transport Layer (TCP & UDP) (17)
-
-1. Compare TCP and UDP protocols with examples. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
-
-2. A client needs to send 4000\text{ bytes} of data to a database server. The client divides the data into packets of 500\text{ bytes} each. The sequence number of the first packet is 3001. After 2500\text{ bytes} have been successfully sent, 2 packets are lost/failed. Assuming TCP cumulative ACK, complete the following table: [BSCCPL AME 21-08-2026 (BUET)]
-
-| SL | Client Packet Sequence No. | DB Server Sequence No. | ACK Sequence No. |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-
-Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packets 6 and 7 are lost, while packet 8 arrives. The server sends a cumulative ACK for the next byte it is expecting. Find the missing values in the table.
-
-3. **Show the pictorial representation of TCP 3-way handshaking protocol for establishing a connection between a server and a client.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
-
-4. **What is the deference between TCP and UDP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
-
-5. **3-way handshake protocol for TCP connection using diagram.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 403]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 876-877]**
-
-6. **Write a TCP/UDP used service name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
-
-7. **Difference between TCP and UDP. Distinguish between Cat5 and Cat6. Difference among exFAT, FAT32 and NTFS.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
-
-8. **Show a 3-way handshake protocol in TCP connection established using a diagram.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
-
-9. **Differecne between TCP and UDP.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
-
-10. **(b) Distinguish between TCP and UDP.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
-
-11. **What is UDP protocol? UDP is reliable or not? Explain why or why not?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 754]**
-
-12. **The primary function of the Transmission Control Protocol (TCP). TCP performs six basic functions. What are the basic function performing by TCP?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807-808]**
-
-13. **(b) Distinguish between TCP and UDP protocols.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886]**
-
-14. **(c) What is purpose of routers? How congestion control works in the TCP?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886-887]**
-
-15. **What is a TCP Three-way handshaking step?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
-
-16. **The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate packets. What are the functions performed by TCP to make a network more reliable?** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 990]**
-
-17. **a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
-
 ## Wireless Networks & IoT (mmWave) (17)
 
 1. **What is the use of mmWave in IoT?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
@@ -657,7 +600,52 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 17. **Describe Wi-Fi, Bluetooth, and WiMAX.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
-## Networking Devices (16)
+## Transport Layer (TCP & UDP) (15)
+
+2. A client needs to send 4000\text{ bytes} of data to a database server. The client divides the data into packets of 500\text{ bytes} each. The sequence number of the first packet is 3001. After 2500\text{ bytes} have been successfully sent, 2 packets are lost/failed. Assuming TCP cumulative ACK, complete the following table: [BSCCPL AME 21-08-2026 (BUET)]
+
+| SL | Client Packet Sequence No. | DB Server Sequence No. | ACK Sequence No. |
+|---|---|---|---|
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+| 4 | | | |
+| 5 | | | |
+| 6 | | | |
+| 7 | | | |
+| 8 | | | |
+
+Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packets 6 and 7 are lost, while packet 8 arrives. The server sends a cumulative ACK for the next byte it is expecting. Find the missing values in the table.
+
+3. **Show the pictorial representation of TCP 3-way handshaking protocol for establishing a connection between a server and a client.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
+
+4. **What is the deference between TCP and UDP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+
+5. **3-way handshake protocol for TCP connection using diagram.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 403]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 876-877]**
+
+6. **Write a TCP/UDP used service name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+7. **Difference between TCP and UDP. Distinguish between Cat5 and Cat6. Difference among exFAT, FAT32 and NTFS.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
+
+8. **Show a 3-way handshake protocol in TCP connection established using a diagram.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
+
+9. **Differecne between TCP and UDP.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
+
+11. **What is UDP protocol? UDP is reliable or not? Explain why or why not?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 754]**
+
+12. **The primary function of the Transmission Control Protocol (TCP). TCP performs six basic functions. What are the basic function performing by TCP?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807-808]**
+
+13. **(b) Distinguish between TCP and UDP protocols.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886]** (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it] **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
+
+14. **(c) What is purpose of routers? How congestion control works in the TCP?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886-887]**
+
+15. **What is a TCP Three-way handshaking step?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
+
+16. **The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate packets. What are the functions performed by TCP to make a network more reliable?** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 990]**
+
+17. **a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
+
+## Networking Devices (14)
 
 1. Describe the functions of a Switch and a Router and explain two key differences between these networking devices. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
@@ -671,8 +659,6 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 6. **Write down the difference between gateway and firewall.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
 
-7. **Write down the difference among Hub, Switch and Router.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
-
 8. **What is gateway? Is router and gateway have any difference?** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
 
 9. **অথবা, (ক) ডেটা ট্রান্সমিশনে Router ও Gateway এর মধ্যে কোনটি অধিকতর সুবিধাজনক-মতামত ব্যক্ত করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 615]**
@@ -683,21 +669,17 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 12. **Wi-Fi access point বলতে কী বুঝানো হয়? Router and Switch -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 883]**
 
-13. **Difference between Switch, Hub and Router.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
-
 14. **হাব, সুইচ ও রাউটার এর মধ্যে পার্থক্য লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
 
-15. **Write the Difference among Network Switch, Hub and Router.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
+15. **Write the Difference among Network Switch, Hub and Router.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
 
 16. **(c) Briefly describe three devices using which different LANs can be connected.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
 
-## Communication System & Transmission Modes (15)
+## Communication System & Transmission Modes (14)
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
 2. **How many types of modes are used in data transferring through networks? Briefly explain those modes. Differentiate between TCP vs UDP.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
-
-3. **Distinguish between Synchronous and Asynchronous transmission.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
 
 4. **(b) Name and define five components of Data communication system with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 487]**
 
@@ -715,7 +697,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 11. **(খ) Data Communication কত প্রকার? উদাহরণসহ সংক্ষিপ্ত বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
-12. **What is the difference between Synchronous and Asynchronous transmission?** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
+12. **What is the difference between Synchronous and Asynchronous transmission?** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
 
 13. **Define full duplex with an example.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
@@ -818,34 +800,6 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1038]**
 
-## IPv6 Addressing (13)
-
-1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
-
-2. A host is connected to an IPv6 network and needs to configure its own IPv6 address automatically using Stateless Address Autoconfiguration (SLAAC). Arrange the steps in the correct order and explain the purpose of each step. [BSCCPL AME 21-08-2026 (BUET)]
-
-3. **How many bits in IPv4 and IPv6 address? Why NAT is not required in IPv6?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 398]**
-
-4. **(ক) IP Address কী? IPv4 এবং IPv6 এর মধ্যে চারটি প্রধান পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
-
-5. **Difference between IPv4 and IPv6.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
-
-6. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
-
-7. **IPv6 address কত বিটের?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
-
-8. **What is the difference between stateful DHCPv6 and stateless DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840-841]**
-
-9. **What is DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
-
-10. **Explain IPv6 link local address and multicast address.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
-
-11. **(a) Differentiate between IPV4 and IPV6.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
-
-12. **Write difference Between IPv4 and IPv6.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
-
-13. **(a) What are the differences between IPv4 and IPv6, and why is IPv6 considered more secure?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
-
 ## Network Topologies (12)
 
 1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
@@ -871,6 +825,30 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 11. **(b) Define network topologies with features.** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977]**
 
 12. **(d) List some various types of Topologies. What are the factors to choose a topology?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
+
+## IPv6 Addressing (11)
+
+1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
+
+2. A host is connected to an IPv6 network and needs to configure its own IPv6 address automatically using Stateless Address Autoconfiguration (SLAAC). Arrange the steps in the correct order and explain the purpose of each step. [BSCCPL AME 21-08-2026 (BUET)]
+
+3. **How many bits in IPv4 and IPv6 address? Why NAT is not required in IPv6?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 398]**
+
+4. **(ক) IP Address কী? IPv4 এবং IPv6 এর মধ্যে চারটি প্রধান পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+
+6. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
+
+7. **IPv6 address কত বিটের?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+8. **What is the difference between stateful DHCPv6 and stateless DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840-841]**
+
+9. **What is DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
+
+10. **Explain IPv6 link local address and multicast address.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
+
+11. **(a) Differentiate between IPV4 and IPV6.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+
+13. **(a) What are the differences between IPv4 and IPv6, and why is IPv6 considered more secure?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget) (11)
 
@@ -1012,17 +990,13 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 9. **ই-মেইল করার ক্ষেত্রে TO, CC ও BCC কোন ব্যবহার করা হয়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
 
-## Application Layer & Well-Known Port Numbers (8)
+## Application Layer & Well-Known Port Numbers (6)
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
-2. **What is the port number of DNS?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
-
-3. **What is the port number used by DNS?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**
+3. **What is the port number used by DNS?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 4. **HTTPS এর পোর্ট নাম্বার কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-5. **DNS Port Number?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 6. **Write the port address of the following applications of data communications. (i) HTTP; (ii) HTTPS; (iii) FTP; (iv) SMTP; (v) POP** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
 

@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 234 questions
+**Table of Contents** — 19 subtopics · 229 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-74) | 74 |
+| 1 | [SQL Queries](#sql-queries-71) | 71 |
 | 2 | [DBMS Architecture & Features](#dbms-architecture--features-22) | 22 |
-| 3 | [ER Diagram & Database Design](#er-diagram--database-design-22) | 22 |
+| 3 | [ER Diagram & Database Design](#er-diagram--database-design-21) | 21 |
 | 4 | [Keys in DBMS](#keys-in-dbms-21) | 21 |
 | 5 | [Normalization & Database Design](#normalization--database-design-18) | 18 |
-| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-14) | 14 |
+| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-13) | 13 |
 | 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-12) | 12 |
 | 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-11) | 11 |
 | 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (74)
+## SQL Queries (71)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -79,8 +79,6 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 
 **a) Write an SQL query to retrieve all student names, their courses, and grades.**
 **b) Write an SQL query to retrieve names of students who obtained grade 'A'.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1434]**
-
-10. **SQL Query:** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
 
 11. **Consider the following database schema-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
 ```sql
@@ -200,7 +198,7 @@ Write down an SQL query to display the total number of patients under each disea
    * **(a) Find Departments with Average Monthly Salary Greater than 1000.**
    * **(b) Find Courses with More Than 2 Offerings.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1456]**
 
-27. **SQL Query.....** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 592]**
+27. **SQL Query.....** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 592]** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
 28. **Analize the following code:**
 ```sql
@@ -226,8 +224,6 @@ GROUP BY department_name
 HAVING COUNT(*)>2
 ORDER BY average_salary DESC;
 ```
-
-31. **SQL Query.....** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]**
 
 32. **Consider the employee tables: Create a SQL view that shows the details of Employee information who have the salary equivalent to the maximum, minimum and average salary of employee.** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 473]**
 
@@ -276,8 +272,6 @@ ORDER BY average_salary DESC;
 47. **Write a SQL query to find same salary but job not same?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
 48. **This returns the names of the staff where timestampdiff is greater than 25 so it returns total 3 rows.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
-
-49. **SQL Query:** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
 50. **(c) In a SQL query, while performing string matching when do we use operator and when we use LIKE operator? Give examples.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 803]**
 
@@ -392,7 +386,7 @@ SELECT count (*) FROM (
 
 22. **(খ) DBMS কী? দুটি সুবিধা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-## ER Diagram & Database Design (22)
+## ER Diagram & Database Design (21)
 
 1. BSCPL regularly publishes multiple job vacancies, where each Job is identified by a unique Job ID and contains information such as Job Title, Starting Salary, Job Description, and other relevant attributes. An Applicant is identified by a unique Applicant ID and has attributes such as Name, Date of Birth, Starting/Joining Date, Contact Information, and other details. An applicant can apply for only one job, while a particular job can receive applications from many applicants. Design the ER diagram for this system, showing the entities, attributes, primary keys, relationship, cardinalities, and participation constraints. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -435,10 +429,8 @@ SELECT count (*) FROM (
 
 17. **Railway Service system ER diagram.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
 
-18. **(i) Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Referee (Referee-id, Referee-name) Player (player-id, palyername, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result).** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928-929]**
+18. **(i) Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Referee (Referee-id, Referee-name) Player (player-id, palyername, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result).** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928-929]** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 939]**
    **(ii) Convert the ER diagram to relations (Table)** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 929-930]**
-
-19. **Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Coach (Coach-id, Coach-name) Player (player-id, palyer-name, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result).** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 939]**
 
 20. **Draw ER diagram (Self test)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1009]**
 
@@ -543,7 +535,7 @@ SELECT count (*) FROM (
 
 18. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
-## SQL Commands (DDL, DML, DCL, TCL) (14)
+## SQL Commands (DDL, DML, DCL, TCL) (13)
 
 1. Example Query of DDL, DML, DCL. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
@@ -551,9 +543,7 @@ SELECT count (*) FROM (
 
 3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-4. **(ক) DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
-
-5. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
+5. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
 
 6. **SQL query to insert data into table. (A table was given with 3 row)** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
 

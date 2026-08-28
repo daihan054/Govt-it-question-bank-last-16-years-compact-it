@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 206 questions
+**Table of Contents** — 9 subtopics · 202 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-88) | 88 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-86) | 86 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-35) | 35 |
-| 3 | [Recursion & Functions](#recursion--functions-33) | 33 |
+| 3 | [Recursion & Functions](#recursion--functions-32) | 32 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-17) | 17 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-12) | 12 |
-| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-12) | 12 |
+| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-11) | 11 |
 | 7 | [File Handling](#file-handling-4) | 4 |
 | 8 | [Pointers](#pointers-4) | 4 |
 | 9 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs-1) | 1 |
@@ -17,17 +17,13 @@
 
 ---
 
-## Basic Programs & Control Statements (88)
-
-1. C program for the number is even or odd. (BEPRC Assistant Programmer Exam: 08.08.2026)
+## Basic Programs & Control Statements (86)
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
 3. **Write a structured program (in C or Python) that takes an integer input n and prints the sum of all even numbers from 1 to n.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1423]**
 
 4. **(a) Difference between a while loop and do-while loop.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
-
-5. **Write a Program to check the Armstrong number.** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1334]**
 
 6. **Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the following pattern will be printed.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1354]**
 ```
@@ -298,7 +294,7 @@ return 0;
 
 67. **(b) Write down a program in C language that will find the maximum of four integer gives as inputs.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
 
-68. **Write a C program to check the number in EVEN or ODD.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
+68. **Write a C program to check the number in EVEN or ODD.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]** (BEPRC Assistant Programmer Exam: 08.08.2026)
 
 69. **We are given an array of integers and a range, we need to find whether the subarray which falls in this range has values in the form of a mountain or not. All values of the subarray are said to be in the form of a mountain if either all values are increasing or decreasing or first increasing and then decreasing. Write a C/C++ Program that shows input is a Mountain sequence or Not Mountain sequence.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 833]**
 
@@ -329,7 +325,7 @@ return 0;
 
 79. **Write a C program for prime numbers between 1 to N.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
 
-80. **Write a C/Java program to check Armstrong number or not.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+80. **Write a C/Java program to check Armstrong number or not.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1334]**
 
 81. **Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 948]**
 
@@ -761,7 +757,7 @@ int main(){
 
 35. **Find the Output:** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1047]**
 
-## Recursion & Functions (33)
+## Recursion & Functions (32)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -834,13 +830,11 @@ int main() {
 
 18. **(ক) Tower of Hanoi সমস্যাটি সমাধানের জন্যে একটি recursive অ্যালগরিদম লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
 
-19. **What are the differences between call by value and call by Reference?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
+19. **What are the differences between call by value and call by Reference?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
 
 20. **Distinguish between Call by value and Call by referee in C/C++.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
 
 21. **Write a recursive algorithm to find the factorial of a positive integer from 1 to N.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 674]**
-
-22. **What is the difference between call by value and call by reference?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
 
 23. **What do you mean by recursion? Calculate factorial function using recursion with C programming code.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
 
@@ -941,7 +935,7 @@ int main() {
 
 12. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
-## String Manipulation & Algorithms (12)
+## String Manipulation & Algorithms (11)
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1362]**
 
@@ -949,13 +943,11 @@ int main() {
 
 3. **Write a C program upper case to lower case conversion.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 475]**
 
-4. **Write a program to reverse string without using library function.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
-
 5. **Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from string.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
 
 6. **Write a program IPv4 IP validation from given IP with valid and not valid.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
 
-7. **String reverse program but without without using the library function.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
+7. **String reverse program but without without using the library function.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
 
 8. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 729]**
 
