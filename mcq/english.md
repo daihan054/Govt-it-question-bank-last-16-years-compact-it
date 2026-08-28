@@ -48,6 +48,9 @@
    গ. Samuel Butler
    ঘ. S. T. Coleridge
 
+9. **Poet of Nature এর লেখক কে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: William Wordsworth
+
 ## English Grammar
 
 1. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -228,6 +231,9 @@
 
 33. **Do not sit on a ______ chair. **Ans: broken**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
+34. **He complied ______ my request.** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: with
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -272,6 +278,9 @@
    (c) To take lead in danger
    (d) Take the initiative
    **Ans: d**
+
+9. **To bring of - অর্থ কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
+   উত্তর: Look after a child until it an adult
 
 ## Vocabulary, Synonyms & Antonyms
 

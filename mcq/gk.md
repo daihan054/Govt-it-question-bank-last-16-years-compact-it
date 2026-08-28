@@ -269,6 +269,12 @@
 
 40. **নোবেল পুরস্কার ২০২২, সাহিত্যে নোবেল কে পেয়েছেন **Ans: এনি আরনেল**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
+41. **MoTiV কোন দেশের প্রতিষ্ঠান?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: উগান্ডা
+
+42. **SDG এর Goal কয়টি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ১৭ টি
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -555,6 +561,27 @@
 
 54. **বাংলাদেশের সর্বোচ্চ বেসামরিক পুরস্কার কোনটি? **Ans: স্বাধীনতা পুরস্কার**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
+55. **বাংলাদেশের প্রথম ন্যানো স্যাটেলাইটের নাম কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ব্র্যাক অন্বেষা
+
+56. **তারামন বিবি কোন সেক্টরে যুদ্ধ করেছে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ১১ নং সেক্টর
+
+57. **পাকিস্তান কবে শেখ মুজিবুর রহমানকে কারাগার থেকে মুক্তি দেয়?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ৮জানুয়ারি, ১৯৭২
+
+58. **বঙ্গবন্ধু স্যাটেলাইট-১ কত তারিখে উৎক্ষেপন করা হয়?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ১২ই মে, ২০১৮
+
+59. **বঙ্গবন্ধু স্যাটেলাইট এর ট্রান্সপন্ডার সংখ্যা কতটি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ৪০ টি
+
+60. **MNP সার্ভিস BTRC কবে প্রণয়ন করে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ২০১৭
+
+61. **বাংলাদেশ কবে SAE-ME-WE এর সদস্য হয়?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ২১ মে, ২০০৬
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -655,6 +682,12 @@
 7. **রজার ফেদেরার মোট কয়টি উইম্বলডন জয়লাভ করেন? **Ans: ৮টি**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
 8. **টি-২০ বিশ্বকাপ ২০২২ কোথায় অনুষ্ঠিত হয়েছে? **Ans: অস্ট্রেলিয়া**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+9. **T-20 বিশ্বকাপ ২০২১ এ ম্যান অব দ্যা সিরিজ হন কে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ডেভিড ওয়ার্নার
+
+10. **বাংলাদেশ কবে টেস্ট ক্রিকেটের মর্যাদা লাভ করে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
+   উত্তর: ২৬ জুন, ২০০০
 
 ## Power Sector & Energy (Bangladesh)
 

@@ -123,6 +123,9 @@
    (c) 30 miles
    (d) 300 miles
 
+2. **LTE এর পূর্ণ নাম কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: Long Term Evolution
+
 ## Subnetting & IP Addressing
 
 1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**

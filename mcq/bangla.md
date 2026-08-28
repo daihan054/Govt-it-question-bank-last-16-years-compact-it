@@ -129,6 +129,9 @@
 
 26. **“রক্তাক্ত প্রান্তর” নাটকটির রচয়িতা কে? **Ans: মুনীর চৌধুরী**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
+27. **আমি কিংবদন্তীর কথা বলছি’ কবিতাটির লেখক কে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: আবু জাফর ওবায়দুল্লাহ
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -378,6 +381,15 @@
 48. **কোনটি যৌগিক শব্দ? **Ans: গায়ক = গৈ + অক (অক) – অর্থ : গান করে যে।**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
 49. **“কাদম্বিনী” শব্দের অর্থ কী? **Ans: মেঘ**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+50. **অহরহ শব্দের সন্ধি বিচ্ছেদ কর?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: অহঃ + অহ
+
+51. **সাপ এর সমার্থক শব্দ কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: অহি
+
+52. **ঢেক ছাঁটা কোন সমাস?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: তৃতীয়া তৎপুরুষ
 
 ## বাগধারা ও প্রবাদ
 

@@ -129,6 +129,9 @@
    (d) \text{X}(2y+2)
    **Ans: b**
 
+10. **\sqrt{-4} \times \sqrt{-4} = কত?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
+   উত্তর: -4
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
