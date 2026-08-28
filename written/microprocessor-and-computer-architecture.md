@@ -182,6 +182,12 @@
 
 12. **What is RAID technology? Describe about the advantages of RAID technology.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820]**
 
+13. **Why necessary to use RAID? If you choose a RAID level for an organization with huge data process. Justify your answer?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 854]**
+
 ## CPU Performance & Instruction Cycle
 
 1. **There was a CPU cycle math** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 400]**
+
+2. **A program (or a program task) takes 1 billion instructions to execute on a processor running at 2 GHz. Suppose also that 50% of the instructions execute in 3 clock cycles, 30% execute in 4 clock cycles, and 20% execute in 5 clock cycles. What is the execution time for the program or task?** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 847]**
+
+3. **Operating system math: clock frequency 700MHz.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 852]**

@@ -33,6 +33,8 @@
 
 4. **State diagram of DFA using binary strings having 0 with multiple of 3 on input \{0,1\}. Also showing regular expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 836-837]**
 
+5. **Draw the state diagram of deterministic Finite Automata (DFA), which accepts set of all strings over \{0, 1\} which interpreted as binary number is divisible by 4.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 851]**
+
 ## Linker & Loader
 
 1. **(b) What are the tasks of linker and loader? Describe briefly using examples.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 479]**

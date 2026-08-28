@@ -280,6 +280,8 @@
 
 14. **Write down the counter measure of SQL injection attack.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 753]**
 
+15. **What is SQL Injection? How to Prevent against SQL Injection Attacks?** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853-854]**
+
 ## Buffer Overflow & Software Vulnerabilities
 
 1. **Explain buffer overflow attack with an example.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 592]**

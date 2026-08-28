@@ -544,6 +544,8 @@ From t;
 
 12. **Draw ER diagram from a story.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 837]**
 
+13. **Draw E-R diagram of hospital management system. Hospital name “SKY Hospital Ltd.”.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
+
 ## Database Connectivity (JDBC)
 
 1. What is JDBC? Explain the steps required to connect a Java application to a MySQL database. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

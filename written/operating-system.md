@@ -60,6 +60,8 @@ int main(int argc, char *argv[]){
 
 6. **Write down the thread life cycle.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 755]**
 
+7. **What is Multi-threading and multi-tasking? Difference between Multi-threading and Multi-tasking?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 854]**
+
 ## Linux / Unix Commands & Administration
 
 1. **Write Linux command:** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**

@@ -164,6 +164,8 @@
 
 82. **Short question: General Knowledge** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]**
 
+83. **General Knowledge** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]

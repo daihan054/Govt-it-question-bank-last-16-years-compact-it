@@ -36,6 +36,14 @@
 
 16. **Write a C/C++ program to check Balanced parentheses in an Expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 830-831]**
 
+17. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 845-846]**
+```text
+Input: [0]{[00]0}
+Output: Balanced
+Input: [())
+Output: Not Balanced
+```
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
@@ -63,6 +71,8 @@
 8. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 692]**
 
 9. **(a) Computer and contrast between array and linked list.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 792]**
+
+10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 851-852]**
 
 ## Tree
 
@@ -105,6 +115,8 @@
 19. **Write a Pseudocode of postorder by recursion and generate postorder, preorder inorder from the tree.** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 762]**
 
 20. **(b) Draw a binary tree of 5 elements. Now list out the elements in (i) Pre-order (ii) Post order and (iii) Inorder traversal of the tree.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 792]**
+
+21. **Mathematically derive the maximum and minimum height of a binary tree consisting of n nodes. Note that the height of a tree with a single node is considered as 1.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 849-850]**
 
 ## Binary Search Tree (BST)
 

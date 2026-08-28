@@ -22,6 +22,8 @@ for i in N:
 
 8. **Recurrence equation of binary search and solve it.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**
 
+9. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
@@ -183,6 +185,8 @@ for i in N:
 
 7. **Shortest path algorithm (Djikstra's algorithm)** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 817]**
 
+8. **Find the Minimum Spanning Tree of the following graph using Kruskal's algorithm.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 847-849]**
+
 ## Greedy Algorithms (Fractional Knapsack)
 
 1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।
@@ -198,6 +202,10 @@ for i in N:
 2. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 453]**
 
 3. **Given n jobs starting time n[] and duration d[], print maximum number of jobs that don't overlap between each other.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 834]**
+
+4. **You are given a set of activities with their starting time s[] and finishing time f[].** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 852]**
+
+5. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
 
 ## Dynamic Programming
 
