@@ -40,6 +40,36 @@
    (c) Interface
    (d) Security
 
+4. **______ is a type of software testing where a group of individuals, usually from within the organization, use the software in a simulated or controlled environment to uncover defects.** **(Pubali Bank Limited, Software Quality Assurance Exam: 18.03.2023) [compact it 42]**
+   (a) Alpha Testing
+   (b) User Acceptance Testing
+   (c) Beta Testing
+   (d) Regression Testing
+
+5. **Which of the following testing techniques includes how well the user will understand and interact with the system?** **(Pubali Bank Limited, Software Quality Assurance Exam: 18.03.2023) [compact it 42]**
+   (a) Alpha Testing
+   (b) User Acceptance Testing
+   (c) Beta Testing
+   (d) Usability Testing
+
+6. **______ testing is a testing technique where the actual data verified in the real environment.** **(Pubali Bank Limited, Software Quality Assurance Exam: 18.03.2023) [compact it 42]**
+   (a) Regression Testing
+   (b) Alpha Testing
+   (c) Beta Testing
+   (d) None of the above
+
+7. **Which of the below testing is related to Non-functional testing?** **(Pubali Bank Limited, Software Quality Assurance Exam: 18.03.2023) [compact it 42]**
+   (a) Unit testing
+   (b) Black-box testing
+   (c) Performance testing
+   (d) None of the above
+
+8. **Which of the following testing is also called Acceptance testing?** **(Pubali Bank Limited, Software Quality Assurance Exam: 18.03.2023) [compact it 42]**
+   (a) Beta testing
+   (b) White-box testing
+   (c) Grey box testing tab
+   (d) Alpha testing
+
 ## SDLC Models
 
 1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
