@@ -180,6 +180,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 2. **Differentiate among TDM, FDM and WDM. How does working process in TDM?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 511]**
 
+3. **Describe the different types of Multiplexing.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
+
 ## Subnetting & IP Addressing
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]

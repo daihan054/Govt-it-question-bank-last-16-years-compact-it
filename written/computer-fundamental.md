@@ -56,6 +56,10 @@
 
 2. **Describe the transformative power of ICT with ten innovative applications for the online banking system.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 304]**
 
+## Digital Banking & Financial Inclusion
+
+1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
+
 ## Quantum Computing & Emerging Technologies
 
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -87,3 +91,5 @@
 ## Data Center Infrastructure & Power Management
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 305]**
+
+2. **Describe the most important factors of data center for banking organization.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 557]**

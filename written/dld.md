@@ -42,6 +42,8 @@
  * **(ii) Noise**
  * **(iii) Power consumption.**
 
+2. **Describe the important characteristics of digital IC's.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 556]**
+
 ## Logic Gates & Universal Gates
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

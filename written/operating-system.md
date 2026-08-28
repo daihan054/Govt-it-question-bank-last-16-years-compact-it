@@ -223,6 +223,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 6. **Consider page reference string 1, 3, 0, 3, 5, 6, 3 with 3 page frames. Find the number of page faults.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 493]**
 
+7. **Difference between physical memory and virtual memory, also describe the advantages and disadvantages of virtual memory.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 553]**
+
 ## Process Management & Process States
 
 1. **(b) What is process? Describe different states of a process.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**

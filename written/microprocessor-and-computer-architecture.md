@@ -84,6 +84,8 @@
 
 7. **Differentiate among CPU register, Cache memory, Main memory and Secondary memory.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 510]**
 
+8. **What do you mean by memory organization? Write the different between SRAM and DRAM.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 558]**
+
 ## Secondary Storage (HDD vs SSD)
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -107,6 +109,8 @@
 6. **Explain the purpose of RAID.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
 
 7. **What do you mean by RAID? Write the difference types of RAID level.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
+
+8. **What is RAID technology? Why it's important Server in data center?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 555]**
 
 ## CPU Performance & Instruction Cycle
 

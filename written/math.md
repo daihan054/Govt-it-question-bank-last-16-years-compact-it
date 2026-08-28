@@ -8,6 +8,8 @@
 
 4. **প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
 
+5. **A man could buy a certain number of notebooks for Rs.300. If each notebook cost is Rs.5 more, he could have bought 10 notebooks less for the same amount. Find the price of each notebook?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
+
 ## Permutations & Combinations
 
 1. **CARBON word permutations that vowel must occupy odd positions?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
@@ -48,6 +50,8 @@
 
 2. **A boat covers 143 km upstream in 13 hours and the same distance downstream in 11 hours. What is the speed (in km/hr) of the boat in still (without stream) water?** **(BARC Programmer Exam: 04.08.2023) [compact it 597]**
 
+3. **An aeroplane started 30 minutes later than the scheduled time from a place 1500 km away from its destination. To reach the destination at the scheduled time the pilot had to increase the speed by 250 km/h. What was the speed of the aeroplane per hour during the journey?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
+
 ## Calculus & Integration
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
@@ -67,6 +71,8 @@
 2. **Math : Geometry** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
 3. **In the figure, ABCD is a rectangle. The area of quadrilateral EBFD is one-half the area of the rectangle ABCD. Which one of the following is the value of AD?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+4. **Two sides of a plot 32m and 24m and the angle between them a perfect right angle. The other two sides measure 25m each and the other three angles are not right angles. What is the area of the plot?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
 
 ## Analytical Ability & Logical Reasoning
 

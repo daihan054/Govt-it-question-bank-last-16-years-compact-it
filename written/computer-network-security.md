@@ -66,6 +66,8 @@
 
 7. **What is Cyber Security? Write down the top 10 cyber attack. Discuss about Ransomware and DDoS attack.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
 
+8. **What is meant by Encryption and Decryption? What is Cyber security? Write down the top 10 cyber attack.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 557]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
