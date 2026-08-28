@@ -44,3 +44,6 @@
 
 8. **What is ChatGPT?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
    Chatboot
+
+9. **What s the axon of neural network do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** The function of the axon to transmit information to different neurons.

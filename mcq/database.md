@@ -24,6 +24,9 @@
    (c) 3NF
    (d) BCNF
 
+5. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Second Normal Form (2NF)
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -99,6 +102,9 @@
    (c) Meta Data
    (d) Warehouse
 
+2. **Which level of abstraction specifies the data and relationships between data?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Conceptual Level (Logical Level)
+
 ## Transaction Management & ACID
 
 1. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -118,6 +124,9 @@
    b) Aborted
    c) Rolled back
    d) Successful
+
+4. **What is the D in ACID property in database?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Durability
 
 ## Indexing & Query Optimization
 
@@ -179,3 +188,8 @@
    (b) C++
    (c) Pascal
    (d) Kotlin
+
+## Relational Model & Terminology
+
+1. **What is the degree of relation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** a degree of relationship represents the number of entity types that are associated with a relationship.

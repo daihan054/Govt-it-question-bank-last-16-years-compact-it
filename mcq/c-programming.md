@@ -24,6 +24,9 @@
    c) continue
    d) skip
 
+5. **What can be used to terminate for(;;)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** break statement
+
 ## Output Tracing
 
 1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -297,3 +300,8 @@
    b) Float
    c) Character
    d) Double
+
+## Recursion
+
+1. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** This is known as function reusability or recursion or Idempotence

@@ -18,6 +18,9 @@
    (c) 2012
    (d) 2008
 
+4. **What are hackers who find bugs and vulnerabilities called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** White hat hacker.
+
 ## Security Principles (CIA Triad)
 
 1. **Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
@@ -39,6 +42,9 @@
    (b) DNS
    (c) SMTP
    (d) FTP
+
+3. **In which layer IPsec works?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Network Layer
 
 ## Email Security & Spam
 
@@ -73,3 +79,8 @@
    (b) Asymmetric Key Algorithm
    (c) Hashing Algorithm only
    (d) Stream Ciphe
+
+## Malware & Security Threats
+
+1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Malware

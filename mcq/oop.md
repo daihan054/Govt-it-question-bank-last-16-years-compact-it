@@ -90,6 +90,15 @@
    (c) None of the above
    (d) Compilation error, it is length () not length
 
+11. **What are the inbuit classes?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 35]**
+   **Ans:** Predefined Method
+
+12. **What is syntax for call static method in class?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** class name, Method name
+
+13. **What does runFinalize() do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** The runFinalization() method is a part of the Runtime class, and its purpose is to trigger the execution of the finalization methods of any objects that are awaiting finalization. Its sentence structure is as follows: public void runFinalization()
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -97,6 +106,9 @@
    (b) Using classes in object-oriented programming
    (c) Using getter and setter methods
    (d) Using global variables
+
+2. **Which variable violates the principle of ecvapsulation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Gobal variable
 
 ## Polymorphism & Overloading
 
@@ -111,6 +123,9 @@
    (b) Address of
    (c) Indirection
    (d) Structure reference
+
+3. **A feature of Object oriented programming languages that allows a specific routine to use variables of different types at different times, is called OOP?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Polymorphism
 
 ## OOP Concepts & Principles
 
@@ -134,6 +149,9 @@
    (c) C
    (d) C++
 
+3. **Which type of members can't accessed in derived classes of a base class?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Private members
+
 ## Constructors & Destructors
 
 1. **Which of the following is true regarding a constructor in Object Oriented Programming?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
@@ -141,3 +159,8 @@
    b) Does not consist of any return type
    c) has some return type
    d) None of the above
+
+## Exception Handling
+
+1. **The statements that allows you to define a block of code to be tested for exceptions while it is being executed.** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Try-cache

@@ -6,6 +6,9 @@
    গ. অপবর্তন
    ঘ. অভ্যন্তরীণ প্রতিসরণ
 
+2. **An optical fiber has a signal solid dielectric cylinder knowns as the core which is surrounded by a solid dielectric ______ is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** cladding
+
 ## Application Layer Protocols
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -75,6 +78,9 @@
    (b) 32
    (c) 12
    (d) 48
+
+5. **IPv6 is how many bits?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 35]**
+   **Ans:** 128 bit
 
 ## Networking Fundamentals & Terminology
 

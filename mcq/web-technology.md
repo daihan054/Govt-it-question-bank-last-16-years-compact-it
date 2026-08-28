@@ -12,6 +12,9 @@
    c) <li>
    d) <i>
 
+3. **What is the popular way to linking many documents?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** hyperlink
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**

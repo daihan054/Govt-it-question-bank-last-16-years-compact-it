@@ -68,6 +68,12 @@
    (c) Stack
    (d) Linked list
 
+6. **In data structure use recursion?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Stack
+
+7. **What is the prefix conversion of the expression \text{A}+(\text{B}-\text{C})*\text{D}?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** +\text{A}*-\text{BCD}
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -123,6 +129,9 @@
    (b) Search tree
    (c) Hash table
    (d) Self organization list
+
+10. **What is the minimum node for binary tree?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** For a binary tree, max node = [2^{\text{h}} + 1] and min node = [2\text{h} + 1].
 
 ## Hashing & Hash Tables
 

@@ -56,3 +56,9 @@
    (b) Smart Citizens>Smart Government>Smart Industry>Smart Society
    (c) Smart Citizens>Smart People>Smart Economy>Smart Society
    (d) Smart Citizens>Smart Government>Smart Economy>Smart Learn
+
+3. **What is a distributed ledger on a peer-to-peer network called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Block Chain
+
+4. **In which way blockchain data can be modifued?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Cannot Modify
