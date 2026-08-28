@@ -1,3 +1,18 @@
+<!-- TOC START -->
+**Table of Contents** — 5 subtopics · 46 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Software Testing](#software-testing) | 20 |
+| 2 | [SDLC Models](#sdlc-models) | 14 |
+| 3 | [Software Design & Metrics](#software-design--metrics) | 8 |
+| 4 | [Design Patterns](#design-patterns) | 3 |
+| 5 | [Software Requirements Engineering](#software-requirements-engineering) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Software Requirements Engineering
 
 1. **If every requirement can be checked by a cost-effective process, then software requirement specification (SRS) is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**

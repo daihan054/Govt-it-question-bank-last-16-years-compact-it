@@ -1,3 +1,19 @@
+<!-- TOC START -->
+**Table of Contents** — 6 subtopics · 427 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Bangladesh Affairs](#bangladesh-affairs) | 175 |
+| 2 | [International Affairs](#international-affairs) | 103 |
+| 3 | [Everyday Science](#everyday-science) | 77 |
+| 4 | [Geography & Environment](#geography--environment) | 27 |
+| 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh) | 25 |
+| 6 | [Sports](#sports) | 20 |
+
+<!-- TOC END -->
+
+---
+
 ## Everyday Science
 
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

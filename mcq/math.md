@@ -1,3 +1,25 @@
+<!-- TOC START -->
+**Table of Contents** — 12 subtopics · 148 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Algebra](#algebra) | 41 |
+| 2 | [Geometry](#geometry) | 23 |
+| 3 | [Percentage, Profit & Loss](#percentage-profit--loss) | 21 |
+| 4 | [Arithmetic & Number Series](#arithmetic--number-series) | 16 |
+| 5 | [Time, Work & Distance](#time-work--distance) | 11 |
+| 6 | [Set Theory](#set-theory) | 8 |
+| 7 | [Average & Age Problems](#average--age-problems) | 6 |
+| 8 | [Ratio & Proportion](#ratio--proportion) | 6 |
+| 9 | [Permutation & Combination](#permutation--combination) | 5 |
+| 10 | [Trigonometry](#trigonometry) | 4 |
+| 11 | [Probability & Statistics](#probability--statistics) | 4 |
+| 12 | [Analytical Reasoning](#analytical-reasoning) | 3 |
+
+<!-- TOC END -->
+
+---
+
 ## Geometry
 
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

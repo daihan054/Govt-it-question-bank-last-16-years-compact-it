@@ -1,3 +1,17 @@
+<!-- TOC START -->
+**Table of Contents** — 4 subtopics · 130 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Circuits & Components](#circuits--components) | 96 |
+| 2 | [Power Systems & Generation](#power-systems--generation) | 18 |
+| 3 | [Signals & Systems](#signals--systems) | 12 |
+| 4 | [Diodes & Rectifiers](#diodes--rectifiers) | 4 |
+
+<!-- TOC END -->
+
+---
+
 ## Diodes & Rectifiers
 
 1. **What is the Work of a Rectifier?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**

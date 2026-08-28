@@ -1,3 +1,20 @@
+<!-- TOC START -->
+**Table of Contents** — 7 subtopics · 74 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Process Management & Scheduling](#process-management--scheduling) | 24 |
+| 2 | [OS Concepts & Multiprogramming](#os-concepts--multiprogramming) | 16 |
+| 3 | [Virtual Memory & Paging](#virtual-memory--paging) | 13 |
+| 4 | [Linux Commands & Administration](#linux-commands--administration) | 9 |
+| 5 | [Deadlock](#deadlock) | 6 |
+| 6 | [File Systems & Disk Management](#file-systems--disk-management) | 4 |
+| 7 | [Process Synchronization](#process-synchronization) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## Virtual Memory & Paging
 
 1. **Which of the following page replacement algorithms suffers from Belady’s anomaly?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

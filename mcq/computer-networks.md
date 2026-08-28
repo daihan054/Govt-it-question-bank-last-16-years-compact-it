@@ -1,3 +1,26 @@
+<!-- TOC START -->
+**Table of Contents** — 13 subtopics · 305 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Application Layer Protocols](#application-layer-protocols) | 59 |
+| 2 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology) | 58 |
+| 3 | [Network Devices & Configuration](#network-devices--configuration) | 38 |
+| 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing) | 33 |
+| 5 | [Wireless & Mobile Communication](#wireless--mobile-communication) | 24 |
+| 6 | [Data Transmission & Modes](#data-transmission--modes) | 16 |
+| 7 | [OSI & TCP-IP Model](#osi--tcp-ip-model) | 16 |
+| 8 | [Multiplexing & Data Rate](#multiplexing--data-rate) | 15 |
+| 9 | [Physical Layer & Transmission Media](#physical-layer--transmission-media) | 14 |
+| 10 | [IPv6 Addressing](#ipv6-addressing) | 13 |
+| 11 | [Routing Protocols](#routing-protocols) | 13 |
+| 12 | [Error Detection & Correction](#error-detection--correction) | 3 |
+| 13 | [Switching Techniques](#switching-techniques) | 3 |
+
+<!-- TOC END -->
+
+---
+
 ## Physical Layer & Transmission Media
 
 1. **অপটিক্যাল ফাইবারে আলোর কোন ঘটনাটি ঘটে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

@@ -1,3 +1,16 @@
+<!-- TOC START -->
+**Table of Contents** — 3 subtopics · 25 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Python](#python) | 10 |
+| 2 | [Mobile & Android Development](#mobile--android-development) | 8 |
+| 3 | [Visual Basic & .NET](#visual-basic--net) | 7 |
+
+<!-- TOC END -->
+
+---
+
 ## Python
 
 1. **To start Python from the command prompt, use the command _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**

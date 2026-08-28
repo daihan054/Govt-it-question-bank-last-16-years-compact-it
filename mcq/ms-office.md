@@ -1,3 +1,17 @@
+<!-- TOC START -->
+**Table of Contents** — 4 subtopics · 19 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [MS Excel](#ms-excel) | 10 |
+| 2 | [MS Word](#ms-word) | 5 |
+| 3 | [MS PowerPoint](#ms-powerpoint) | 3 |
+| 4 | [MS Access](#ms-access) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## MS Excel
 
 1. **Which is the correct Addition formula in MS Excel?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**

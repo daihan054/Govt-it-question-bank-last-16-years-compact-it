@@ -1,3 +1,26 @@
+<!-- TOC START -->
+**Table of Contents** — 13 subtopics · 178 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [SQL Commands & Queries](#sql-commands--queries) | 52 |
+| 2 | [DBMS Concepts & Architecture](#dbms-concepts--architecture) | 34 |
+| 3 | [Normalization](#normalization) | 16 |
+| 4 | [Transaction Management & ACID](#transaction-management--acid) | 14 |
+| 5 | [Keys in DBMS](#keys-in-dbms) | 11 |
+| 6 | [Data Warehousing & Data Mining](#data-warehousing--data-mining) | 9 |
+| 7 | [ER Diagram & Data Modeling](#er-diagram--data-modeling) | 9 |
+| 8 | [Relational Model & Terminology](#relational-model--terminology) | 8 |
+| 9 | [PL/SQL & Triggers](#plsql--triggers) | 7 |
+| 10 | [Indexing & Query Optimization](#indexing--query-optimization) | 6 |
+| 11 | [Database Connectivity (JDBC/ODBC)](#database-connectivity-jdbcodbc) | 5 |
+| 12 | [Concurrency Control & Locking](#concurrency-control--locking) | 5 |
+| 13 | [SQL Joins](#sql-joins) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## Normalization
 
 1. **Which normal form is considered adequate for normal relational database design?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

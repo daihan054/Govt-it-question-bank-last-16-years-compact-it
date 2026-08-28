@@ -1,3 +1,20 @@
+<!-- TOC START -->
+**Table of Contents** — 7 subtopics · 100 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Java Programming](#java-programming) | 48 |
+| 2 | [Polymorphism & Overloading](#polymorphism--overloading) | 16 |
+| 3 | [OOP Concepts & Principles](#oop-concepts--principles) | 11 |
+| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers) | 7 |
+| 5 | [Inheritance](#inheritance) | 6 |
+| 6 | [Constructors & Destructors](#constructors--destructors) | 6 |
+| 7 | [Exception Handling](#exception-handling) | 6 |
+
+<!-- TOC END -->
+
+---
+
 ## Java Programming
 
 1. **Which of the following statements about abstract classes and interfaces in Java is correct?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**

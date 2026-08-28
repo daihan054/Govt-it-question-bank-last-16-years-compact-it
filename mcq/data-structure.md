@@ -1,3 +1,19 @@
+<!-- TOC START -->
+**Table of Contents** — 6 subtopics · 83 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Data Structure Basics](#data-structure-basics) | 25 |
+| 2 | [Stack & Queue](#stack--queue) | 23 |
+| 3 | [Tree & Binary Search Tree](#tree--binary-search-tree) | 20 |
+| 4 | [Linked List](#linked-list) | 10 |
+| 5 | [Priority Queue & Heap](#priority-queue--heap) | 3 |
+| 6 | [Hashing & Hash Tables](#hashing--hash-tables) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## Linked List
 
 1. **In the worst case, the number of comparisons needed to search a singly linked list oflength n for a given element is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**

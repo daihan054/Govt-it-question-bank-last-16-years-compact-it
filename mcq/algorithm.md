@@ -1,3 +1,19 @@
+<!-- TOC START -->
+**Table of Contents** — 6 subtopics · 74 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Sorting Algorithms](#sorting-algorithms) | 21 |
+| 2 | [Searching Algorithms](#searching-algorithms) | 20 |
+| 3 | [Graph Algorithms](#graph-algorithms) | 14 |
+| 4 | [Algorithm Design Paradigms](#algorithm-design-paradigms) | 9 |
+| 5 | [Dynamic Programming & Greedy](#dynamic-programming--greedy) | 6 |
+| 6 | [Complexity & Analysis](#complexity--analysis) | 4 |
+
+<!-- TOC END -->
+
+---
+
 ## Searching Algorithms
 
 1. **Linear search is also called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

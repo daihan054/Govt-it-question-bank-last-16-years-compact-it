@@ -1,3 +1,18 @@
+<!-- TOC START -->
+**Table of Contents** — 5 subtopics · 87 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [CPU & Registers](#cpu--registers) | 36 |
+| 2 | [Memory Hierarchy](#memory-hierarchy) | 29 |
+| 3 | [Secondary Storage (HDD & Disk Organization)](#secondary-storage-hdd--disk-organization) | 13 |
+| 4 | [RAID & Storage Architecture](#raid--storage-architecture) | 5 |
+| 5 | [Assembly Language & Machine Code](#assembly-language--machine-code) | 4 |
+
+<!-- TOC END -->
+
+---
+
 ## Memory Hierarchy
 
 1. **Considering computer memory speed, which one is correct order from highest to lowest?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**

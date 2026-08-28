@@ -1,3 +1,21 @@
+<!-- TOC START -->
+**Table of Contents** — 8 subtopics · 70 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Cyber Attacks & Threats](#cyber-attacks--threats) | 20 |
+| 2 | [Cryptography](#cryptography) | 17 |
+| 3 | [Security Protocols](#security-protocols) | 9 |
+| 4 | [Malware & Security Threats](#malware--security-threats) | 7 |
+| 5 | [Cyber Ethics & Cyber Law](#cyber-ethics--cyber-law) | 6 |
+| 6 | [Security Principles (CIA Triad)](#security-principles-cia-triad) | 5 |
+| 7 | [Web Security Vulnerabilities](#web-security-vulnerabilities) | 4 |
+| 8 | [Email Security & Spam](#email-security--spam) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## Cyber Ethics & Cyber Law
 
 1. **Which of the following describes investigating moral conduct concerning the digital media landscape?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**

@@ -1,3 +1,18 @@
+<!-- TOC START -->
+**Table of Contents** — 5 subtopics · 79 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Number Systems & Binary Arithmetic](#number-systems--binary-arithmetic) | 49 |
+| 2 | [Logic Gates & Universal Gates](#logic-gates--universal-gates) | 17 |
+| 3 | [Sequential Circuits (Flip-Flops)](#sequential-circuits-flip-flops) | 6 |
+| 4 | [Boolean Algebra & Simplification](#boolean-algebra--simplification) | 5 |
+| 5 | [Combinational Circuits (MUX, Decoder)](#combinational-circuits-mux-decoder) | 2 |
+
+<!-- TOC END -->
+
+---
+
 ## Logic Gates & Universal Gates
 
 1. **3 ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট 0 হলে আউটপুট কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

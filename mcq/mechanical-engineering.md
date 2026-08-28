@@ -1,3 +1,20 @@
+<!-- TOC START -->
+**Table of Contents** — 7 subtopics · 36 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Engineering Mechanics & Strength of Materials](#engineering-mechanics--strength-of-materials) | 10 |
+| 2 | [Thermodynamics & Heat Transfer](#thermodynamics--heat-transfer) | 8 |
+| 3 | [Engineering Materials & Manufacturing](#engineering-materials--manufacturing) | 7 |
+| 4 | [Machining & Workshop Practice](#machining--workshop-practice) | 6 |
+| 5 | [Industrial & Production Engineering](#industrial--production-engineering) | 3 |
+| 6 | [Engineering Drawing](#engineering-drawing) | 1 |
+| 7 | [Fluid Mechanics](#fluid-mechanics) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Machining & Workshop Practice
 
 1. **ডিলিং মেসিন কর্তৃক কোন অপারেশন সম্পন্ন করা হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**

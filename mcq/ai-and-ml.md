@@ -1,3 +1,14 @@
+<!-- TOC START -->
+**Table of Contents** — 1 subtopics · 18 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Machine Learning & AI Concepts](#machine-learning--ai-concepts) | 18 |
+
+<!-- TOC END -->
+
+---
+
 ## Machine Learning & AI Concepts
 
 1. **Which AI application involves teaching a computer to perform a task by example,rather than through explicit programming?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**

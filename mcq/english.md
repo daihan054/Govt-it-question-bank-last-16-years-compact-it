@@ -1,3 +1,18 @@
+<!-- TOC START -->
+**Table of Contents** — 5 subtopics · 279 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [English Grammar](#english-grammar) | 163 |
+| 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms) | 58 |
+| 3 | [Idioms & Phrases](#idioms--phrases) | 24 |
+| 4 | [English Literature](#english-literature) | 17 |
+| 5 | [Spelling](#spelling) | 17 |
+
+<!-- TOC END -->
+
+---
+
 ## English Literature
 
 1. **Who is the author of the drama 'You Never Can Tell'?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**

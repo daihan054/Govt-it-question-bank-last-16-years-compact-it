@@ -1,3 +1,20 @@
+<!-- TOC START -->
+**Table of Contents** — 7 subtopics · 49 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [HTML, XML & Web Fundamentals](#html-xml--web-fundamentals) | 15 |
+| 2 | [PHP & Server-Side](#php--server-side) | 9 |
+| 3 | [Scripting & JavaScript](#scripting--javascript) | 8 |
+| 4 | [Web Services & APIs](#web-services--apis) | 6 |
+| 5 | [Full Stack & Web Servers](#full-stack--web-servers) | 5 |
+| 6 | [HTTP & Status Codes](#http--status-codes) | 5 |
+| 7 | [CSS & Styling](#css--styling) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## HTML, XML & Web Fundamentals
 
 1. **Which of the following is the root tag of the HTML document?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**

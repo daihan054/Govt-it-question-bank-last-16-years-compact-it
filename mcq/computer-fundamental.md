@@ -1,3 +1,19 @@
+<!-- TOC START -->
+**Table of Contents** — 6 subtopics · 145 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals) | 42 |
+| 2 | [Software Types & Classification](#software-types--classification) | 41 |
+| 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations) | 29 |
+| 4 | [ICT & Emerging Technology](#ict--emerging-technology) | 16 |
+| 5 | [Acronyms & Abbreviations](#acronyms--abbreviations) | 13 |
+| 6 | [Keyboard Shortcuts](#keyboard-shortcuts) | 4 |
+
+<!-- TOC END -->
+
+---
+
 ## Computer Fundamentals & Generations
 
 1. **একটি কম্পিউটারের আইকিউ কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

@@ -1,3 +1,22 @@
+<!-- TOC START -->
+**Table of Contents** — 9 subtopics · 105 questions
+
+| # | Subtopic | Questions |
+|---|---|---|
+| 1 | [Output Tracing](#output-tracing) | 36 |
+| 2 | [Control Statements & Loops](#control-statements--loops) | 16 |
+| 3 | [Arrays & Functions](#arrays--functions) | 15 |
+| 4 | [Data Types & Variables](#data-types--variables) | 14 |
+| 5 | [Operators & Expressions](#operators--expressions) | 11 |
+| 6 | [Pointers & Memory Allocation](#pointers--memory-allocation) | 5 |
+| 7 | [Recursion](#recursion) | 4 |
+| 8 | [Storage Classes & Scope](#storage-classes--scope) | 3 |
+| 9 | [Flowcharts & Algorithms](#flowcharts--algorithms) | 1 |
+
+<!-- TOC END -->
+
+---
+
 ## Control Statements & Loops
 
 1. **Which of the following statements about the "do while" loop is correct?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
