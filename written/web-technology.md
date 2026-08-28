@@ -114,6 +114,8 @@
 
 14. **(ii) HTML ও CSS কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 950-951]**
 
+15. **একটি Image ও একটি Web site URL HTML প্রদর্শন করার জন্য প্রয়োজনীয় code লিখুন?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1022]**
+
 ## CSS & Styling (Inline, Internal, External)
 
 1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**

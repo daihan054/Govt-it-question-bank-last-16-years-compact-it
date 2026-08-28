@@ -141,6 +141,10 @@ public class main{
 
 43. **Object Oriented Programming এর চারটি গুরুত্বপূর্ণ বৈশিষ্ট্য লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1020-1021]**
 
+44. **What are the difference between Structure Programming and Objest Oriented Progrmamming?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
+
+45. **Object Oriented Programming এ Method Overloading and Method Overriding এর মধ্যে পার্থক্য কী?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**

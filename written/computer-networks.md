@@ -35,6 +35,12 @@
 
 16. **What is difference between MAC Address and IP Address?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1018-1019]**
 
+17. **(b) List the factors that affect the performance of a network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1027]**
+
+18. **(a) Write a brief history of the internet. How to access to the internet?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1028-1029]**
+
+19. **(b) Define computer network. Sate some merits and demerits of a computer network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1029]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -62,6 +68,8 @@
 12. **Explain 10baseT.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839]**
 
 13. **Which media transfer data with higher bandwidth? Advantages of this media.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
+
+14. **(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1026-1027]**
 
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
@@ -114,6 +122,8 @@
 10. **Write down the Disadvantages of Bus topology.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
 
 11. **(b) Define network topologies with features.** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977]**
+
+12. **(d) List some various types of Topologies. What are the factors to choose a topology?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
 
 ## OSI & TCP/IP Reference Model
 
@@ -203,6 +213,8 @@
 39. **Write down the functionality of OSI model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1007-1008]**
 
 40. **OSI Model এর Layer গুলো বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+
+41. **(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1028]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -296,6 +308,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 13. **Define full duplex with an example.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
 14. **Which communication mode use serial communication? (a) Duplex (b) Half Duplex (c) Simplex (d) All** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+15. **(c) Illustrate a communication model in simplified form.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1027-1028]**
 
 ## Switching Techniques (Circuit vs Packet Switching)
 
@@ -794,6 +808,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 14. **হাব, সুইচ ও রাউটার এর মধ্যে পার্থক্য লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
 
+15. **Write the Difference among Network Switch, Hub and Router.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
+
+16. **(c) Briefly describe three devices using which different LANs can be connected.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
+
 ## VLANs & Subnetting Comparison
 
 1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
@@ -936,6 +954,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 8. **Draw the constellation diagram of QPSK, 8-PSK and 32-QAM. Why these multilevel signals prefereed and what are the challenges for multilevel modulation?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
 
+9. **a) What is QAM? Explain it.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
+
+10. **b) Draw diagram for 16 QAM having? (i) 3 amplitudes, 12 phases (ii) 4 amplitudes, 8 phases** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030-1031]**
+
 ## Analog Modulation & Radio Receivers
 
 1. **With appropriate figures, distinguish between homodyne and heterodyne detection processes. Draw the block diagram of a super heterodyne AM receiver.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
@@ -1001,3 +1023,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 14. **Write about 5G disadvantages: (a) Increased High Costs (b) Draining Battery of devices. (c) Increased infrastructure development cost** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928]**
 
 15. **Make a list of LTE Network elements.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 988]**
+
+16. **Explain Bluetooth, Wi-Fi and Cellular Network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**

@@ -28,6 +28,8 @@
 
 14. **Explain: Kernel, Cache, Virtual Memory and RAID.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 872-873]**
 
+15. **(a) Briefly describe the function that measure the efficiency of an operating system.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1025]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -315,6 +317,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 21. **Operating system (OS) scheduling is the key concept of multiprogramming. List and briefly define the major types of OS scheduling.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985-986]**
 
+22. **(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1026]**
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
@@ -461,6 +465,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 19. **A, B two resources. Two processes (P1 and P2) share these resources. When a process request for a resources, if that resource is free then it will be allocated with that resources. If the resources are not free then the process will halt. Now the scenario is:** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 973]**
 
 20. **What is Operating Systems Deadlock? কীভাবে Deadlock দূর করা যায়?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+
+21. **(d) Define Deadlock. Write down the necessary conditions for deadlock.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1026]**
 
 ## File Systems & Disk Management
 

@@ -176,6 +176,8 @@
 
 19. **Touch Screen কি জাতীয় ডিভাইস?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
 
+20. **(d) Mention and discuss some fectors that affect the processing speed a computer.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1024-1025]**
+
 ## ICT in Society & Governance
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
@@ -209,6 +211,14 @@
 15. **Make a list of banking software used in Bangladesh. List the essential features for successful Banking Software and Apps.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 986-987]**
 
 16. **RFID has huge applications in business, especially in supply chain management and toll collection system. Show the basic working principle of RFID in brief.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 987-988]**
+
+17. **a) What is E-Government? How can E-Government be implemented through the vision of Digital Bangladesh?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1031]**
+
+18. **b) List some factors that are needed to implement Digital Bangladesh.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1031]**
+
+19. **c) Mention some government entities that have taken E-Government initiatives. What initiatives are taken by the Bangladesh Public Service Commission?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1031]**
+
+20. **d) State the E-Government initiatives taken in health and education sectors of Bangladesh?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1031]**
 
 ## Digital Banking & Financial Inclusion
 

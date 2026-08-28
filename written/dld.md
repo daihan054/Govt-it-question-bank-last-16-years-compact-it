@@ -115,6 +115,8 @@
 
 12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 972]**
 
+13. **De-Morgans Law গুলো বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1022]**
+
 ## Logic Gates & Universal Gates
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

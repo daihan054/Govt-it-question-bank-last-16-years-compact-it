@@ -56,6 +56,8 @@
 
 24. **What is Register? Write down the name of 5 CPU Register.** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1018]**
 
+25. **(b) What is DMA? Why it is used for high-speed I/O devices?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1025-1026]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -167,6 +169,14 @@
 16. **(b) Here are given 4 types of different memory. Which memory is the faster? Write in sequence order in the following figure: Register, Hard disk, Cache, RAM.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 821]**
 
 17. **RAM and ROM difference লিখ?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
+18. **(a) Write the difference between: (i) RAM and ROM (ii) Open source software and Proproetary software.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023-1024]**
+
+19. **(b) Outline the functions performed by memory. List some factors upon which memory can be classified.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1024]**
+
+20. **(c) Given below the list of some memory devices. Identify which are semi-conductor, optical and magnetic memory. CD, RAM, Floppy Disk, Hard Disk, ROM, DVD.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1024]**
+
+21. **How Maximum size of memory (RAM) is needed that can be addressed by 32-bit system.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1031]**
 
 ## Secondary Storage (HDD vs SSD)
 
