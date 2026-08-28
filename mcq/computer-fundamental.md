@@ -49,6 +49,13 @@
    c) Basic Interrupt / Outcome System
    d) ওপরের কোনটিই নয়।
 
+3. **কোনটি আউটপুট ডিভাইস?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) মাউস
+   (খ) প্রিন্টার
+   (গ) কি বোর্ড
+   (ঘ) স্ক্যানার
+   **উত্তর: খ**
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**

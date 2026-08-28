@@ -51,6 +51,13 @@
 9. **Poet of Nature এর লেখক কে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
    উত্তর: William Wordsworth
 
+10. **The author of the story "The Luncheon" is -** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) William Shakespeare
+   (খ) William Wordsworth
+   (গ) W. S. Maugham
+   (ঘ) T. S. Eliot
+   **উত্তর: গ**
+
 ## English Grammar
 
 1. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -306,6 +313,76 @@
    c) Through/will be
    d) From/could be
 
+47. **He said to me “What a nice man you are, sir” The correct indirect speech of this sentence is:** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) He asked me what a nice man I was.
+   (খ) Respectfully he exclaimed with joy that I was a very nice man.
+   (গ) Addressing me as sir, he respectfully exclaimed with joy that I was very nice man.
+   (ঘ) He asked me what a nice man I was.
+   **উত্তর: খ**
+
+48. **The passive form of the sentence ‘He wrote a letter to me’-is-** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) A letter was written to me by him.
+   (খ) A letter is written to my by him.
+   (গ) A letter had written to me by him.
+   (ঘ) A letter had written by me to him.
+   **উত্তর: ক**
+
+49. **Choose the correct form of verb: I (watch) an English movie last night.** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) have watch
+   (খ) had watched
+   (গ) watched
+   (ঘ) have been watching
+   **উত্তর: গ**
+
+50. **Choose the appropriate preposition: Average price of food decreased ______ 13%** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) by
+   (খ) at
+   (গ) to
+   (ঘ) upto
+   **উত্তর: ঘ**
+
+51. **I know you- the correct passive form is –** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) you are known by me
+   (খ) you are known to me
+   (গ) you are knowing to me
+   (ঘ) you are known at me
+   **উত্তর: খ**
+
+52. **The verb form of the word 'deep' is-** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) depth
+   (খ) endeep
+   (গ) deepen
+   (ঘ) In depth
+   **উত্তর: গ**
+
+53. **পাখি আকাশে ওড়ে- Correct translation of this sentence is :** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) Bird fly in the sky.
+   (খ) The bird flies in the sky.
+   (গ) A bird fly in the sky.
+   (ঘ) A bird fly in sky
+   **উত্তর: খ**
+
+54. **It makes me nostalgic. Here nostalgic is a/an-** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) Verb
+   (খ) Noun
+   (গ) Adjective
+   (ঘ) Adverb
+   **উত্তর: গ**
+
+55. **Fill in the blank. His brother is – he looks.** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) Younger than
+   (খ) as young
+   (গ) Younger
+   (ঘ) Very young
+   **উত্তর: খ**
+
+56. **Choose the right preposition: Rice sells ______ 50 TK a kg.** **(BPSC- Instructor Exam: 31.10.2022) [compact it 70]**
+   (ক) over
+   (খ) in
+   (গ) at
+   (ঘ) to
+   **উত্তর: গ**
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -446,6 +523,48 @@
    b) bad
    c) Small
    d) unattainable
+
+19. **The abbreviation of a.m is –** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) Anno meridiem
+   (খ) After morning
+   (গ) Ante meridiem
+   (ঘ) Anti-meriden
+   **উত্তর: গ**
+
+20. **I could not read the words because they were too blurry. Here ‘blurry’ means :** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) small
+   (খ) unclear
+   (গ) unknown
+   (ঘ) difficult
+   **উত্তর: খ**
+
+21. **What is the meaning of the word "lately"?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) in the past
+   (খ) at this moment
+   (গ) in the recent time
+   (ঘ) one more time
+   **উত্তর: গ**
+
+22. **Which is the correct synonym of the word INDISPENSABLE?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) Trivial
+   (খ) Essential
+   (গ) Negligible
+   (ঘ) Worthy
+   **উত্তর: খ**
+
+23. **What is the opposite word of facilitate?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) encourage
+   (খ) impede
+   (গ) increase
+   (ঘ) promote
+   **উত্তর: খ**
+
+24. **IELTS stands for-** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) International English Language Teaching System
+   (খ) International English Language Testing Skill
+   (গ) International English Language Testing System
+   (ঘ) International English Language Teaching Skill
+   **উত্তর: গ**
 
 ## Spelling
 

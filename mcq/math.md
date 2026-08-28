@@ -45,6 +45,34 @@
 8. **With reference to a 2 dimensional coordinate system, the vertices of a uniform and thin triangular pate are given by (0,0), (1,4) and (-7, 8) points. The centroid of the plate is-** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
    **Ans:** (-2, 4)
 
+9. **ত্রিভুজের তিন বাহুর দৈর্ঘ্য যথাক্রমে a,b এবং c** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) a+b > c
+   (খ) a+b = c
+   (গ) a+b < c
+   (ঘ) a+b \approx c
+   **উত্তর: ক**
+
+10. **একটি কোণের পরিমাপ ১৮১° হলে তাকে কি কোণ বলে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) স্থূল কোণ
+   (খ) সমকোণ
+   (গ) সূক্ষ্ম কোণ
+   (ঘ) প্রবৃদ্ধ কোণ
+   **উত্তর: ঘ**
+
+11. **কোনটি ত্রিমাত্রিক বস্তু?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) তল
+   (খ) ঘনক
+   (গ) রেখা
+   (ঘ) বিন্দু
+   **উত্তর: খ**
+
+12. **বৃত্তস্থ সামান্তরিক কোনটি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) রম্বস
+   (খ) আয়ত
+   (গ) বর্গ
+   (ঘ) ট্রাপিজিয়াম
+   **উত্তর: খ**
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -226,6 +254,13 @@
 
 8. **৬০ থেকে ৮০ এর মধ্যে বৃহত্তর ও ক্ষুদ্রতম মৌলিক সংখ্যার অন্তর কত?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** ১৮
+
+9. **1\text{ cm}^3 কত \text{m}^3 এর সমান?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) 10^{-6}\text{ m}^3
+   (খ) 10^{-3}\text{ m}^3
+   (গ) 10^{-2}\text{ m}^3
+   (ঘ) 0.1\text{ m}^3
+   **উত্তর: ক**
 
 ## Time, Work & Distance
 

@@ -84,3 +84,10 @@
 
 1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Malware
+
+2. **এন্টি ভাইরাস কি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) সফটওয়্যার
+   (খ) ম্যালওয়্যার
+   (গ) হার্ডওয়্যার
+   (ঘ) সিস্টেম সফটওয়্যার
+   **উত্তর: ক**

@@ -9,6 +9,13 @@
 2. **An optical fiber has a signal solid dielectric cylinder knowns as the core which is surrounded by a solid dielectric ______ is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** cladding
 
+3. **অপটিক্যাল ফাইবার আলোর কোন নীতিতে কাজ করে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) প্রতিফলন
+   (খ) প্রতিসরন
+   (গ) অপবর্তন
+   (ঘ) পূর্ণ অভ্যন্তরীণ প্রতিফলন
+   **উত্তর: ঘ**
+
 ## Application Layer Protocols
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
