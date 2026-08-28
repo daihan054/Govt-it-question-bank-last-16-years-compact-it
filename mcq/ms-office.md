@@ -36,6 +36,12 @@
    C. Clt+Shift+C
    D. Alt + Shift +C
 
+7. **Which of the following is spreadsheet software?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
+   A) Adobe Acrobat
+   B) MS Excel
+   C) Fax Pro
+   D) Power Point
+
 ## MS Word
 
 1. **What is the range of Font Size available in Font Size drop down toolbar?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**

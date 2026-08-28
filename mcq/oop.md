@@ -391,6 +391,12 @@
    (c) Method
    (d) Property
 
+3. **Which part of a class is invoked when an object is initialized in java?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
+   A) constructor
+   B) fields
+   C) methods
+   D) class
+
 ## Exception Handling
 
 1. **The statements that allows you to define a block of code to be tested for exceptions while it is being executed.** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**

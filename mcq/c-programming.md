@@ -560,6 +560,12 @@
    (c) Address of the first element of the array
    (d) Address of the last element of the array
 
+11. **int number [] = {10,20,30,40,50}; number[3] =?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
+   A) 10
+   B) 20
+   C) 30
+   D) 40
+
 ## Pointers & Memory Allocation
 
 1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**

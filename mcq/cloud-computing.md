@@ -87,3 +87,9 @@
    (b) Abstraction
    (c) Virtualization
    (d) Digitizing
+
+12. **Cloud computing is ________ option for small firms.** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
+   A) poor
+   B) rigid
+   C) rental
+   D) expensive

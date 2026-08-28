@@ -50,6 +50,12 @@
    c) functionality, consistency, effectiveness, adaptability, maintainability and transportability
    d) None of them.
 
+8. **DFD stands for-** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
+   A) data file disk
+   B) data flow diagram
+   C) disk flat database
+   D) disk file database
+
 ## Software Testing
 
 1. **Which of the following testing strategy is related to the boundary value analysis?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**

@@ -378,6 +378,18 @@
    (c) 2095
    (d) 4095
 
+39. **What is the binary of (68)_{10}?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
+   A) 01000100
+   B) 10000100
+   C) 00100100
+   D) 00010100
+
+40. **1(one) nibble equal to—** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
+   A) 1 but
+   B) 2-bit
+   C) 4-bit
+   D) 8-bit
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

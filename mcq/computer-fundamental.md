@@ -90,6 +90,12 @@
    C) real numbers
    D) integers
 
+16. **Who invented QWERTY keyboard?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) Steve jobs
+   B) Christopher Latham Sholes
+   C) Brain Sams
+   D) Anderson Palimar
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -358,6 +364,12 @@
    (c) Multiprocessor
    (d) Multiprogramming me
 
+12. **Which one is not an example of disruptive technology?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) 3D printing
+   B) Internet of things
+   C) Robotics
+   D) Executive dashboard
+
 ## Software Types & Classification
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
@@ -527,6 +539,12 @@
    (b) Desk Top Printing
    (c) Desk Top Publishing
    (d) Deck Top Publishing
+
+29. **Which one of the following is not required in a game engine?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
+   A) rendering
+   B) audio
+   C) physics
+   D) closure
 
 ## Acronyms & Abbreviations
 

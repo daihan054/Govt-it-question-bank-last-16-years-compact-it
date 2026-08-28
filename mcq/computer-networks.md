@@ -582,6 +582,12 @@
    (c) Storage Area Network
    (d) Enterprise Private Network
 
+38. **Extranet allows-** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
+   A) insiders only
+   B) authorized outsides only
+   C) all outside
+   D) both inside and authentic outsides
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

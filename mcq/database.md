@@ -69,6 +69,12 @@
    c) 2NF
    d) 1NF
 
+13. **Why do we need to normalize a database?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
+   A) To remove redundancy
+   B) To make data meaningful
+   C) To make database secure
+   D) To make database consistency
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

@@ -27,6 +27,12 @@
    c) Masquerading
    d) Replaying
 
+6. **Which one of the following is the reason for “Cyberchondria”?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) excessive typing
+   B) watching for long hour
+   C) excessive anxiety due to online search
+   D) radiation
+
 ## Security Principles (CIA Triad)
 
 1. **Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
@@ -205,6 +211,12 @@
    B) MCAfee
    C) Dr. Solomon toolkit
    D) Security Point
+
+4. **Which of the following is not antivirus software?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
+   A) Win-pro
+   B) AVG
+   C) McAfee
+   D) Symantec
 
 ## Web Security Vulnerabilities
 

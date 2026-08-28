@@ -266,6 +266,12 @@
    C) Opcode
    D) ডেস্টিনেশন
 
+24. **Physical connection between Microprocessor Memory and other parts is called-** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
+   A) Address bus
+   B) Data Bus
+   C) path
+   D) Hub
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -297,6 +303,12 @@
    B) Control unit
    C) AI unit
    D) Backing store
+
+6. **Which are not performance characteristics of hard disk?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
+   A) data transfer time
+   B) response time
+   C) power consumption
+   D) shelf life
 
 ## RAID & Storage Architecture
 
