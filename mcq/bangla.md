@@ -515,6 +515,12 @@
    C. রবীন্দ্রনাথ ঠাকুর
    D. কৃষ্ণ চন্দ্র মজুমদার
 
+91. **শেখ রাসেল কে লিখেছেন?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) শেখ মুজিবুর রহমান
+   b) শেখ হাসিনা
+   c) শেখ রেহেনা
+   d) সজীব ওয়াজেদ জয়
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1223,6 +1229,30 @@
    B. বেয়াই
    C. সঙ্গী
    D. কবিরাজ
+
+126. **লক্ষন এর বানান কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) লক্ষণ
+   b) লক্ষন
+   c) লক্ষণ
+   d) লক্ষন
+
+127. **অলস এর বাগধারা কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) বালির বাঁধ
+   b) অকালকূশ্মাণ্ড
+   c) গোঁফখেজুরে
+   d) কোনটি নয়
+
+128. **Cinema, Pistol ইংরেজি কিনা?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) ইংরেজি
+   b) ফার্সি
+   c) পর্তুগীজ
+   d) ওলন্দাজ
+
+129. **না কোন পদ?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) অব্যয়
+   b) সর্বনাম
+   c) বিশেষণ
+   d) অব্যয়
 
 ## বাগধারা ও প্রবাদ
 

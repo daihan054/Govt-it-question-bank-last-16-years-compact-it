@@ -160,6 +160,12 @@
    c. Bootstrap Loader
    d. Hardware System Details
 
+4. **What is the mean of the Booting in the system?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 137]**
+   a. Restarting computer
+   b. Install the program
+   c. To scan
+   d. To turn off
+
 ## Linux Commands & Administration
 
 1. **User passwords in Linux are stored as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**

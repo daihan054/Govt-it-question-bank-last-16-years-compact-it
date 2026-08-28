@@ -357,6 +357,48 @@
    C. 17 May
    D. 21 May
 
+10. **GPRS এর পূর্ণরূপ কি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) General Packet Ratio Server
+   b) General Purpose Reduction Service
+   c) General Packet Radio Service
+   d) General Purpose Radio Server
+
+11. **কোনটা ওয়্যারলেস নেটওয়ার্ক হটস্পট?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) Wi-Fi Hotspot
+   b) Ethernet Hotspot
+   c) Fiber Hotspot
+   d) None
+
+12. **Bluetooth কোন ধরনের device?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) WAN
+   b) PAN
+   c) LAN
+   d) MAN
+
+13. **Wi-fi কোন ধরনের নেটওয়ার্ক?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) Wifi LAN
+   b) Wireless PAN
+   c) Wifi MAN
+   d) Wifi WAN
+
+14. **Wi-Fi for?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Wireless MAN
+   b) Wireless PAN
+   c) Wireless LAN
+   d) all of these
+
+15. **Group sms is ________** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Unicast
+   b) Multicast
+   c) Telecast
+   d) Broadcast
+
+16. **Which of the following modulation is used in data communication?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Pulse Modulation
+   b) Amplitude Modulation
+   c) Phase Modulation
+   d) Frequency Modulation
+
 ## Subnetting & IP Addressing
 
 1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**

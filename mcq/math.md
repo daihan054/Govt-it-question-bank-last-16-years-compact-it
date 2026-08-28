@@ -370,6 +370,12 @@
    c. (2x² + 3x + 1) (2x² - 3x + 1)
    d. (2x² + 3x + 1) (2x² - 2x + 1)
 
+35. **If \log 2 = a and \log 5 = b, then \log 50 =?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) a + b
+   b) a + b^2
+   c) ab^2
+   d) a + 2b
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

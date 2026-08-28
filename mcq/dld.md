@@ -30,6 +30,12 @@
    (গ) NOR gate
    (ঘ) OR gate
 
+6. **What is the name of the following symbol?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) FET
+   b) JFET
+   c) Schottky Diode
+   d) SCR
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -186,6 +192,12 @@
    b) One to Many
    c) Many to Many
    d) Many to One
+
+20. **Which of the following values is the correct value of this hexadecimal code 1F.01B?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 137]**
+   a. 35.0065918
+   b. 32.0065918
+   c. 31.0065918
+   d. 30.0065918
 
 ## Boolean Algebra & Simplification
 

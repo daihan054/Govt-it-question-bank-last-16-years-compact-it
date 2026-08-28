@@ -128,6 +128,18 @@
    c) Power supply
    d) Speaker
 
+11. **কি-বোর্ড একটি-** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) ট্রান্সডিউসার
+   b) ট্রান্সমিটার
+   c) চ্যানেল
+   d) সব কযটি
+
+12. **What is the word length of a personal computer?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 137]**
+   a) 32 bits
+   b) 8 bits
+   c) 64 bits
+   d) 16 bits
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**

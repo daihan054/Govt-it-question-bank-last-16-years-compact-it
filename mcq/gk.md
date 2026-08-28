@@ -431,6 +431,12 @@
    C. 400
    D. 450
 
+69. **If an atom loses an e- it will be turned into?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Neutral
+   b) Anion
+   c) Proton
+   d) Cation
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1706,6 +1712,18 @@
    C. জানুয়ারী ২৭, ২০২১
    D. জানুয়ারী ২৯, ২০২১
 
+138. **ডিজিটাল বাংলাদেশ দিবস কবে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) ১২ নভেম্বর
+   b) ১২ ডিসেম্বর
+   c) ৬ ডিসেম্বর
+   d) ৬ জুলাই
+
+139. **বঙ্গবন্ধু উপাধি পান কত সালে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) ১৯৭১
+   b) ১৯৫২
+   c) ১৯৭২
+   d) ১৯৬৯
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1938,6 +1956,24 @@
    C. মেহেদি হাসান মিরাজ
    D. তাইজুল ইসলাম
 
+15. **২০২২ ফুটবল বিশ্বকাপ কোথায় হবে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) কাতার
+   b) ব্রাজিল
+   c) মেক্সিকো
+   d) ইংল্যান্ড
+
+16. **বাংলাদেশ অস্ট্রেলিয়া সিরিজের ফলাফল কি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) ৩-২
+   b) ৪-১
+   c) ১-৪
+   d) ২-৩
+
+17. **অলিম্পিক ২০২০ এ সবচেয়ে বেশি পদকপ্রাপ্ত দেশ কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) চীন
+   b) জাপান
+   c) যুক্তরাষ্ট্র
+   d) জার্মানী
+
 ## Power Sector & Energy (Bangladesh)
 
 1. **ইজিসিবি'র মোট বিদ্যুৎ ক্ষমতা প্রায় কত মেগাওয়াট (প্রায়)?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 63]**
@@ -1998,3 +2034,33 @@
    (c) 20,000 MW
    (d) 45,000 MW
    **Ans: b**
+
+14. **বাংলাদেশের কত শতাংশ এলাকা বিদ্যুতায়িত হয়েছে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) ৯৯.৫
+   b) ৯৯
+   c) ৯৮
+   d) ১০০
+
+15. **পল্লীবিদ্যুৎ এর গ্রাহক সংখ্যা কত?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) প্রায় ৩.১৩ কোটি
+   b) প্রায় ৩.০২ কোটি
+   c) প্রায় ৩.১০ কোটি
+   d) প্রায় ৩ কোটি
+
+16. **বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড কত পার্সেন্ট বিদ্যুৎ শেয়ার করে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) 00%
+   b) 10%
+   c) 90%
+   d) 50%
+
+17. **How Many Number of 33/11KV Sub-station?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 137]**
+   a. 1136 Nos
+   b. 1150 Nos
+   c. 1166 Nos
+   d. 1200 Nos
+
+18. **What is the peak demand of BREB?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 137]**
+   a. 7000 MW
+   b. 7100 MW
+   c. 7500 MW
+   d. 8000 MW

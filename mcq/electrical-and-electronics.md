@@ -417,6 +417,72 @@
    C. হাইড্রোজেন
    D. কার্বন
 
+72. **Minimum SNR PC a pulg?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) Higher Channel Bandwidth
+   b) Lower Signal Power
+   c) Higher Signal Power
+   d) None
+
+73. **Y-Y Connection এ neutral করা হয় কেন?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) শূন্য বিদ্যুৎ প্রবাহিত করার জন্য
+   b) সম্পূর্ণ বিদ্যুৎ প্রবাহিত করার জন্য
+   c) বিদ্যুৎ প্রবাহের হার সমান রাখার জন্য
+   d) কোনটি নয়
+
+74. **কোন ধরনের ম্যাটেরিয়ালের Permeability স্পেস এর তুলনায় কম?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Ferromagnetic
+   b) Paramagnetic
+   c) Diamagnetic
+   d) Bipolar
+
+75. **Active region এ BJT এর base-emitter and base collector কোন bias এ থাকে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Forward - Reverse
+   b) Reverse - Forward
+   c) Forward -Forward
+   d) Reverse -Reverse
+
+76. **For an n-channel enhancement type MOSFET, if the source is connected at a higher potential than that of the bulk (i.e. V_{SB} > 0), the threshold voltage V_T of the MOSFET will-** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Remain unchanged
+   b) decrease
+   c) Change polarity
+   d) increase
+
+77. **Efficiency এবং power factor বাড়ালে induction motor Gi speed কি হবে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Neutral
+   b) Decrease
+   c) Increase
+   d) a&b
+
+78. **Op-amp এর ক্ষেত্রে কোনটি সত্য?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Large input impedance
+   b) Large output impedance
+   c) Small input impedance
+   d) All of these
+
+79. **Stator winding single phase motor 97 PETIT RT?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Stator এর ভিতর
+   b) Rotor এর ভিতর
+   c) Stator এর বাহিরে
+   d) Rotor এর বাহিরে
+
+80. **Which type of capacitance form in forward bias.** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Transition
+   b) Junction
+   c) Diffusion Capacitance
+   d) a & b
+
+81. **Synchronous motor run in What type of power factor at under excitation** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Unity
+   b) Lagging
+   c) Leading
+   d) None of these
+
+82. **What will be speed if pole no is increased in alternator?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Increase
+   b) Decrease
+   c) Synchronous
+   d) None of these
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**

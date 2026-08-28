@@ -828,6 +828,24 @@
    c. The kid likes watching cartoons and eating chocolates
    d. The kid like watching cartoons and eating chocolates
 
+127. **Look ________ the word in the dictionary (preposition)** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) In
+   b) up
+   c) into
+   d) at
+
+128. **Girl কোন ধরনের noun?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) Collective Noun
+   b) Proper Noun
+   c) Common Noun
+   d) Abstract Noun
+
+129. **Which is plural –** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) Formula
+   b) Memoranda
+   c) Vertex
+   d) Agendam
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -1215,6 +1233,30 @@
    B. Deferment
    C. Preemption
    D. Bed debt
+
+50. **Initiative এর বিপরীত শব্দ কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) Non Initiative
+   b) Iminitiative
+   c) Uninitiative
+   d) None of these.
+
+51. **Obligate এর adjective form কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) Obligatory
+   b) Obligative
+   c) Obligator
+   d) Obligate
+
+52. **To do away with meaning.** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) To get rid of something or stop using something
+   b) To do pass away
+   c) To remove it completely or put an end to it
+   d) all of these
+
+53. **Spring এর past form.** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Sprang
+   b) Springed
+   c) Spring
+   d) All of these
 
 ## Spelling
 
