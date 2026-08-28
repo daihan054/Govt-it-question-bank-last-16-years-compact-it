@@ -229,11 +229,17 @@
    c. A negative logical product of N with 0Fn
    d. A logical sum of N with 0Fh
 
-22. **Suppose, Y is an integer variable whose value is either 0 or 1. Which of the following is the equivalent of the statement. if(Y==0) Y=1; else Y=0;?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]**
+22. **Suppose, Y is an integer variable whose value is either 0 or 1. Which of the following is the equivalent of the statement. if(Y==0) Y=1; else Y=0;?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
    a. Y = 1+Y
    b. Y = 1-Y
    c. Y = Y-1
    d. Y = 1%Y
+
+23. **Among the following which is not a divisor of - (1001011011110000000)_2?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 166]**
+   a) (2)_{10}
+   b) (64)_{10}
+   c) (128)_{10}
+   d) (256)_{10}
 
 ## Boolean Algebra & Simplification
 

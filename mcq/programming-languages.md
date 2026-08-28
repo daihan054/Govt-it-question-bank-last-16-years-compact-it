@@ -41,6 +41,12 @@
    (c) মাইক্রোসফট
    (d) আইবিএম
 
+4. **Which language was used to build Android Operating System?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   a) Java
+   b) Python
+   c) Kotlin
+   d) Android is not an operating system
+
 ## Visual Basic & .NET
 
 1. **.NET can be used in the following-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**

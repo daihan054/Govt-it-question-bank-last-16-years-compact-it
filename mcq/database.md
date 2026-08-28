@@ -51,6 +51,12 @@
    c) Functional Dependency
    d) Transitive Dependency
 
+10. **If you are told to remove the inconsistency from the course table which normalization technique you will use-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   a) 1NF
+   b) 2NF
+   c) 3NF
+   d) BCNF
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -225,6 +231,59 @@
    c. SELECT SUM (Quantity) FROM Delivery Record WHERE data = '2021-03-16'
    d. SELECT MAX (Quantity) FROM Delivery Record
 
+24. **Which is not the steps of SQL Query processing?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 163]** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   a) Parsing
+   b) Translation
+   c) Optimization
+   d) None
+
+25. **Which one is the Data Control Language (DCL) in SQL?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   a) Insert
+   b) Create
+   c) Drop
+   d) Grant
+
+26. **We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   a) View is not visible to user
+   b) It is not a virtual table
+   c) It is not a part of the logical model
+   d) View cannot be updated
+
+27. **Consider the following “staff” table** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 166]**
+   | staff_name | staff_dep | city |
+   |---|---|---|
+   | Riaz | CSE | Dhaka |
+   | Toha | EEE | Rajshahi |
+   What should be the query to find the output like “Riaz(CSE)” from the staff table?
+   a) select staff_name || ‘(‘|| staff_dep ||’)’ FROM staff where city= ‘Dhaka’
+   b) select staff_name ‘(‘|| staff_dep ||’)’ FROM staff where city== ‘Dhaka’
+   c) select staff_name || ‘(‘|| staff_dep ’)’|| FROM staff where city= ‘Dhaka’
+   d) select staff_name || ‘(‘ staff_dep ||’)’ FROM staff where city= ‘Rajshahi’
+
+28. **What is the maximum length of the “varchar” in the database?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   a) 35000
+   b) 100
+   c) 65535
+   d) 255
+
+29. **Assume that in a table named “student” the cgpa is calculated using the all course’s gpa. What kind of attribute cgpa is?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   a) Multivalued
+   b) Derived
+   c) Simple
+   d) Composite
+
+30. **What is wrong statements for SQL?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   a) Non-procedural language
+   b) Input can be several tables
+   c) Output is always a single table
+   d) Output can be multiple table
+
+31. **The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   a) Union
+   b) Set-difference
+   c) Difference
+   d) Intersection
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -325,6 +384,12 @@
    (b) Candidate keys and Unique Keys are similar
    (c) Unique Keys and Primary Keys are similar
    (d) Candidate keys and Primary keys are similar
+
+18. **The collection of information stored in the database at a particular moment is called-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   a) Schema
+   b) Instance
+   c) Relation
+   d) Record
 
 ## Transaction Management & ACID
 
@@ -517,6 +582,13 @@
    c) A tuple in a database represents a Record
    d) A tuple in a database represents a Database topology
 
+3. **In a table an attribute named interest is defined as follows,** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   When which one is the correct format for the interest columns?
+   a) 65.2
+   b) 7.2
+   c) 19.02
+   d) 1.03
+
 ## Keys in DBMS
 
 1. **The key selected from the sets of candidate keys by database design is called ______ key:** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
@@ -574,6 +646,21 @@
    b. Some entity in E1 is associated with more than one entity in E2
    c. Every entity in E2 is associated with exactly one entity in E1
    d. Every entity in E2 is associated with at most one entity in E1
+
+5. **A relationship is given below in an ER diagram How many tables can be created (preferred) from below diagram?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   ```
+   +------------+               +-----------+
+   | instructor |               |  student  |
+   +------------+               +-----------+
+   | ID         |  /---------\  | ID        |
+   | name       |--< advisor >--| name      |
+   | salary     |  \---------/  | tot_cred  |
+   +------------+               +-----------+
+   ```
+   a) No definite numbers
+   b) Two
+   c) Three
+   d) Two or Three
 
 ## PL/SQL & Triggers
 

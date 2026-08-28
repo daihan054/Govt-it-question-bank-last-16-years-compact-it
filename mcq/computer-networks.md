@@ -573,6 +573,12 @@
    c. 3
    d. 5
 
+17. **How many IP addresses can be assigned using IPv4 techniques?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   a) 2^{32}
+   b) 2^{64}
+   c) 4^{32}
+   d) 4^{64}
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -748,6 +754,12 @@
    c) Coaxial
    d) Fibre Optics
 
+14. **Which information is wrong for Switch?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   a) Stores MAC address table
+   b) Operates of Data Link Layer
+   c) Forward the packet to intendent computer
+   d) Has no memory
+
 ## Error Detection & Correction
 
 1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -801,3 +813,9 @@
    (b) Time-division
    (c) Virtual
    (d) Packet
+
+2. **The ________ was the first wide-area packet-switching network with distributed control and one of the first networks to implement the TCP/IP protocol suite.** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 166]**
+   a) INTRANET
+   b) UCLA
+   c) CREN
+   d) ARPANET

@@ -1015,6 +1015,30 @@
    (c) Bhutan
    (d) Maldives
 
+100. **How many countries are members of Commonwealth?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) 47
+   (b) 51
+   (c) 54
+   (d) 61
+
+101. **The headquarter of World Economic Forum is situated in-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) Cologny
+   (b) Geneva
+   (c) Davos
+   (d) San Francisco
+
+102. **The term of a non-permanent member of the UN security council is-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) 2 years
+   (b) 3 years
+   (c) 5 years
+   (d) 7 years
+
+103. **Which one of the following is not an official language of United Nations?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) Arabic
+   (b) Chinese
+   (c) Portuguese
+   (d) Spanish
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1963,6 +1987,42 @@
    (b) Community Bangladesh Bank Limited
    (c) IFIC Bank
    (d) Trust Bank Bangladesh Limited
+
+168. **The total border district of Bangladesh?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) 29
+   (b) 32
+   (c) 45
+   (d) 53
+
+169. **What is the position of Bangladesh in the financial Privacy Index 2020?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) 29^{\text{th}}
+   (b) 37^{\text{th}}
+   (c) 43^{\text{th}}
+   (d) 54^{\text{th}}
+
+170. **The river Padma enters into Bangladesh through-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) Sylhet
+   (b) Rajshahi
+   (c) Mymensingh
+   (d) Pabna
+
+171. **The Constitution Drafting Committee of Bangladesh formed in 1972 had-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) 21 members
+   (b) 24 members
+   (c) 31 members
+   (d) 34 members
+
+172. **Which bank was the first to Introduce dual-currency debit card system in Bangladesh?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) Mutual Trust Bank
+   (b) City Bank
+   (c) Dutch Bangla Bank
+   (d) AB Bank
+
+173. **The number of tribes lives in the Chattogram Hill Tracts is-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) 7
+   (b) 9
+   (c) 11
+   (d) 15
 
 ## Geography & Environment
 

@@ -112,7 +112,7 @@
    (গ) Last In Last Out
    (ঘ) First in Frist Out
 
-11. **What is postfix expression of the string, a+(b-c)*d?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+11. **What is postfix expression of the string, a+(b-c)*d?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 166]**
    a) abc-d*+
    b) abcd - *+
    c) ad* bc -
@@ -143,6 +143,12 @@
    b) \theta(1), \theta(n)
    c) \theta(n), \theta(1)
    d) \theta(n), \theta(n)
+
+15. **Which one is the characteristics of Stack ADT?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   a) Sequential Index
+   b) Last-In-First Out
+   c) First-In-First Out
+   d) Key indexing
 
 ## Tree & Binary Search Tree
 
@@ -220,6 +226,18 @@
    b) In-order traversal
    c) Post-order traversal
    d) BFS traversal
+
+14. **If we represent a binary tree using array, what will be the children of node “n”-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 166]**
+   a) 2n & 2n+1
+   b) 2n & 2-n
+   c) (n+1)2
+   d) 2n & 2n-1
+
+15. **In which tree structure left to right subtree height differs not more than 1?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   a) Binary tree
+   b) BST
+   c) AVL tree
+   d) Binary Heap
 
 ## Hashing & Hash Tables
 

@@ -94,6 +94,12 @@
    (c) Sir Don Bradman
    (d) Tiger Woods
 
+17. **The quote “All the glitters is not gold” is from which play of Shakespeare?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) The Merchant of Venice
+   (b) Othello
+   (c) Romeo and Juliet
+   (d) None
+
 ## English Grammar
 
 1. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -1014,6 +1020,54 @@
    (c) didn't he
    (d) did he
 
+156. **They while their evenings with books and games. Here while is-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   (a) Noun
+   (b) Verb
+   (c) Adjective
+   (d) Adverb
+
+157. **The person with ________ you should ________ registering your complaint is the manager but he’s unavailable ________ the moment.** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   (a) which, be, for
+   (b) who, at, for
+   (c) which, who,
+   (d) whom, be, at
+
+158. **If you had come earlier, you would ________ found a good seat** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   (a) have
+   (b) had
+   (c) can
+   (d) has
+
+159. **People who pay their debts are trusted. Here who pay their debts is** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   (a) Phrase
+   (b) Clause
+   (c) Idioms
+   (d) Gerund
+
+160. **A misconception frequently held by novice writers is that sentence structure mirrors thought: the more convoluted the structure, the more ________ the ideas** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) complicated
+   (b) engaged
+   (c) essential
+   (d) fanciful
+
+161. **I’ve got a week to finish this, ________ is just about long enough** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) what
+   (b) which
+   (c) whether
+   (d) who
+
+162. **He really can’t work out, ________ he has to go to get ________ information he needs** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) what, the
+   (b) which, to
+   (c) what, to
+   (d) for, which
+
+163. **Reading is very good ________ children’s intellectual development** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) at
+   (b) on
+   (c) for
+   (d) in
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -1145,6 +1199,12 @@
    (b) Occasionally
    (c) Frequently
    (d) Regularly
+
+24. **His evidence bears out, the evidence of the first witness. Here bears out means** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   (a) confirms
+   (b) wcount
+   (c) attacks
+   (d) none
 
 ## Vocabulary, Synonyms & Antonyms
 

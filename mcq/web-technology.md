@@ -84,3 +84,9 @@
    (b) A REST API would use a DELETE request to delete a record
    (c) The operations in a REST API can be called from any HTTP client
    (d) None of the above statements is false
+
+3. **Which is the lightweight message format?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   a) XML
+   b) JSON
+   c) SQL
+   d) HTML

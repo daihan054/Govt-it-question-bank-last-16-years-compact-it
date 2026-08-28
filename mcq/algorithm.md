@@ -186,6 +186,21 @@
    c) Depth First Search
    d) Floyd-Warshall algorithm
 
+10. **In the following graph, determine the cost of the shortest path between node 1 to node 4** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   ```
+   (1)
+   2/   \3
+   v     v
+   (3)   (2)
+   |-7   |1
+   v     v
+   (4)
+   ```
+   a) 0
+   b) 4
+   c) -5
+   d) -\infty
+
 ## Dynamic Programming & Greedy
 
 1. **Which of the following is an example of dynamic programming approach?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**

@@ -617,6 +617,12 @@
    (c) শহীদ কাদরী
    (d) আল মাহমুদ
 
+108. **ভাষা আন্দোলনের পটভূমিতে কবর নাটকটি রচনা করেন-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 170]**
+   (a) কবীর চৌধুরী
+   (b) সৈয়দ শামসুল হক
+   (c) সেলিম আল দীন
+   (d) মুনীর চৌধুরী
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1439,6 +1445,60 @@
    (b) জোড়া
    (c) সমোচ্চারিত
    (d) যুক্ত
+
+145. **অবাক হয়ে ওর দিকে তাকিয়ে থাকে ওরা। এখানে ‘দিকে ’ শব্দটি-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) অনুসর্গ
+   (b) বিশেষণ
+   (c) অব্যয়
+   (d) উপসর্গ
+
+146. **‘চশমা’ শব্দটি কোন ভাষা থেকে এসেছে?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) আরবি
+   (b) ফারসি
+   (c) তুর্কি
+   (d) পর্তুগীজ
+
+147. **বৃক্ষ শব্দের সমার্থক নয় কোনটি?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) তরু
+   (b) বিটপী
+   (c) কানন
+   (d) মহীরুহ
+
+148. **‘আমি কি ডরাই সখি ভিখারি রাঘবে?’ কোন কারকে কোন বিভক্তি?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) কর্মে প্রথমা
+   (b) অপাদানে সপ্তমী
+   (c) অধিকরণে পঞ্চমী
+   (d) কর্মে সপ্তমী
+
+149. **নিচের কোনটি দেশী শব্দ?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) ডাব
+   (b) ধর্ম
+   (c) তোশক
+   (d) হাত
+
+150. **দুটি ব্যঞ্জনবর্ণের পরস্পর পরিবর্তন কে বলে-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 170]**
+   (a) স্বরসঙ্গতি
+   (b) বিষমীভবন
+   (c) ধ্বনি বিপর্যয়
+   (d) ব্যঞ্জনবিকৃতি
+
+151. **ব্রাহ্মণশব্দে ‘হ্ম’-এর বিশ্লেষিত রূপ-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 170]**
+   (a) হ্+ম
+   (b) ক্+ধ
+   (c) ক্+ষ্+ম
+   (d) ক্+ষ্+ণ
+
+152. **‘কাজটি শেষ করার জন্য সে আদা-কাঁচকলা খেয়ে নেমেছে।’ বাক্যটি কী হারিয়েছে?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 170]**
+   (a) আকাঙ্ক্ষা
+   (b) আসত্তি
+   (c) যোগ্যতা
+   (d) পদক্রম
+
+153. **নিচের কোনটি সাধু রীতির বৈশিষ্ট্য নয়?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 170]**
+   (a) তৎসম শব্দবহুল
+   (b) তদ্ভব শব্দবহুল
+   (c) সংলাপের অনুপযোগী
+   (d) শব্দবিন্যাস সুনির্দিষ্ট
 
 ## বাগধারা ও প্রবাদ
 

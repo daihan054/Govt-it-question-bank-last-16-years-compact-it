@@ -157,6 +157,29 @@
    c. Instantiation
    d. Auto boxing
 
+21. **Which information is not correct for any constructor of a java class?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 164]**
+   a) Constructor is not inherited
+   b) Constructor has no return type
+   c) Constructor can be final
+   d) Constructor can be overloaded
+
+22. **What is the output of this Java program?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   ```java
+   class Test {
+   int i;
+   }
+   public class Main {
+   public static void main(String args[]) {
+   Test t = new Test();
+   System.out.println(t.i);
+   }
+   }
+   ```
+   a) The program will cause an compile error because the object “t” was not initialized
+   b) The program will cause an runtime exception because the variable “i” was not initialized
+   c) A garbage value
+   d) 0
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**

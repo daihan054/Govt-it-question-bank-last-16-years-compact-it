@@ -276,7 +276,7 @@
    c) Error
    d) Garbage value
 
-19. **Find the correct output:** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+19. **Find the correct output:** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 166]**
    ```c
    int a = 10,b = 20; a ^= b; b ^= a; a ^= b;
    printf("%d %d", a, b);
@@ -349,6 +349,42 @@
    b. 0, c+3
    c. '0', 'c+3'
    d. '0', 'f'
+
+25. **Find the output:** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 163]**
+   ```c
+   int a= 10, c, b;
+   c = (a=99)? b = 11:20;
+   printf("%d, %d", a, c);
+   ```
+   a) 11, 99
+   b) 99, 11
+   c) 20, 11
+   d) 99, 20
+
+26. **What will be the output of following code?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 164]**
+   ```c
+   int x=5, y=5, z=5;
+   printf("%d", ++z+y-1-y+z+x++);
+   ```
+   a) 15
+   b) 17
+   c) 16
+   d) 19
+
+27. **What will be the output of the given line?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   ```c
+   printf("%d",sizeof(int));
+   ```
+   a) 2
+   b) 4
+   c) 1
+   d) 8
+
+28. **Which for loop statement is invalid?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   a) for(int x=10; k<=5; x/9)
+   b) for(int x=10; x>=2; --x)
+   c) for(int x=10; x>=200; x=3*x)
+   d) for(int x=10; x>=0; x+=2)
 
 ## Storage Classes & Scope
 

@@ -74,6 +74,21 @@
    c) P2, P0, P1
    d) P1, P0, P2
 
+5. **A computer system has 6 type drives and each process may need 3 type drives. What is the maximum number of processes than is guaranteed to be deadlock free?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 164]**
+   a) 4
+   b) 3
+   c) 2
+   d) None
+   5. Consider the following table named “Course”-
+   | Course Title | Content |
+   |---|---|
+   | Web Programming | Python, CSS, JS |
+   What is the main problem/anomalies in the Course table? **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 164]**
+   a) Attribute name is not correct
+   b) Table is larger
+   c) Attribute has multiple value
+   d) It has functional dependency
+
 ## Process Synchronization
 
 1. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on this semaphore. The resulting value of the semaphore is___** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
@@ -153,6 +168,24 @@
    b) Temperature (T) is > 200^{\circ}\text{F} and speed (R) < 4800\text{ rpm}
    c) Option (a) and (b)
    d) d) None of the above
+
+9. **What is the disadvantage of multithreading?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   a) Share the same address space
+   b) Simultaneous access to multiple application
+   c) Low cost communication
+   d) Difficulty in managing concurrency
+
+10. **The time needs from the process arrival to the completion of that process is called** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   a) Waiting time
+   b) Response time
+   c) Turnaround time
+   d) Throughput
+
+11. **Which is not the state of a process in an Operating System?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 166]**
+   a) New
+   b) Sleep
+   c) Terminated
+   d) Ready
 
 ## File Systems & Disk Management
 
