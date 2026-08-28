@@ -107,6 +107,12 @@
    C) Java
    D) Python
 
+8. **What smart phones are compatible of .apk file?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) Microsoft
+   B) IOS
+   C) Symbian
+   D) Android
+
 ## Visual Basic & .NET
 
 1. **.NET can be used in the following-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
@@ -114,3 +120,9 @@
    (b) Development of Micro services and containers
    (c) Development of Cloud Applications
    (d) All of the above statements are true
+
+2. **Microsoft .NET is ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) Open Source
+   B) Closed Source
+   C) Browser
+   D) None of these

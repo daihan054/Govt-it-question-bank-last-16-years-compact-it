@@ -146,6 +146,12 @@
    c) A Java servlet
    d) None of the above is correct
 
+3. **Word Press can be called as ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+   A) Static website
+   B) Dynamic website
+   C) Content Managed website
+   D) E-Commerce website
+
 ## HTTP & Status Codes
 
 1. **What does HTTP Status Code 500 indicate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
@@ -159,6 +165,18 @@
    b. File
    c. Memory
    d. Cookie
+
+3. **While browsing, internet browser stores some data in the computer. Which is called by?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) Session
+   B) File
+   C) Memory
+   D) Cookie
+
+4. **Programs that is automatically loaded and operates as a part of browser ----** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+   A) Plug in
+   B) Add ones
+   C) Widgets
+   D) Utilities
 
 ## Web Services & APIs
 

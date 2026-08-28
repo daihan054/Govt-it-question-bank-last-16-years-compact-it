@@ -436,6 +436,24 @@
    C) Artificial Report
    D) Augmented Reality
 
+14. **What is pipilika form www.pipilika.com?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) A Bangla Font
+   B) A Bangladeshi graphic Software
+   C) A Bangladeshi Browser
+   D) A Bangladeshi Game App
+
+15. **Which one is government base procurement website in Bangladesh?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) egp.gov.bd
+   B) eprocurement.gov.bd
+   C) procurement.gov.bd
+   D) eprocure.gov.bd
+
+16. **What kind of image is created in virtual reality?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) Three-Dimensional
+   B) Two-Dimensional
+   C) One Dimensional
+   D) Multi-Dimensional
+
 ## Software Types & Classification
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
@@ -654,6 +672,24 @@
    c. Redhat Linux
    d. Open Office
 
+37. **Which is not application software?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) Bing
+   B) Red hat Linux
+   C) MS office
+   D) Adobe
+
+38. **Which one is not operating system software?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) DOS
+   B) LINUX
+   C) Windows
+   D) Oracle
+
+39. **Which language is used to build website?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) HTML
+   B) COBOL
+   C) Python
+   D) FORTRAN
+
 ## Acronyms & Abbreviations
 
 1. **CMP এর পূর্ণ অভিব্যক্তি হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
@@ -697,3 +733,15 @@
    B) BCD
    C) EBCDIC
    D) All of them
+
+8. **What is the full meaning of SQL?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) Search and Query Language
+   B) Simulation of Query Language
+   C) Standard Query Language
+   D) Structured Query Language
+
+9. **OCR Stands for ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) Optical CPU recognition
+   B) Optical character recognition
+   C) Optical character reading
+   D) other character reading

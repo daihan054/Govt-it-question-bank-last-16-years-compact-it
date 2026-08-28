@@ -845,6 +845,12 @@
    C) Small-group situation.
    D) Chain stores
 
+8. **In database, a field is ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+   A) Label
+   B) Category of Information
+   C) Group of related records
+   D) Table of information
+
 ## Keys in DBMS
 
 1. **The key selected from the sets of candidate keys by database design is called ______ key:** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**

@@ -872,6 +872,12 @@
    (c) 8 Mbps
    (d) 10 Mbps
 
+15. **Maximum speed of voice band is ---** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) 6900 bps
+   B) 6900 kbps
+   C) 9600 bps
+   D) 9600 kbps
+
 ## Wireless & Mobile Communication
 
 1. **Bluetooth is a type of radio wave information transmission system that is good for about-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
@@ -985,6 +991,12 @@
    (b) Long Time Evaluation
    (c) Long Term Evolution
    (d) Long Terminal Evolution
+
+20. **What is hotpot?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) Special Security System
+   B) Cable connected internet system
+   C) Wireless internet system
+   D) A program
 
 ## Subnetting & IP Addressing
 

@@ -90,6 +90,12 @@
    C) Three stable state
    D) None of these
 
+16. **Which is the universal gate?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) NOR
+   B) AND
+   C) NOT
+   D) OR
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -437,6 +443,18 @@
    B) 00110100
    C) 01010101
    D) 10101001
+
+45. **How many numerical bits of ASCII -8 codes?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) 2
+   B) 4
+   C) 8
+   D) 16
+
+46. **How many bits in Unicode?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) 4
+   B) 8
+   C) 16
+   D) 32
 
 ## Boolean Algebra & Simplification
 

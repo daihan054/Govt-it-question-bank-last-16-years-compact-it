@@ -819,6 +819,12 @@
    C) both A & B
    D) None
 
+13. **Hungarian notation is used to ________.** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) Design system manual
+   B) Design user manual
+   C) Define name of the variable
+   D) All
+
 ## Flowcharts & Algorithms
 
 1. **In flowchart what does below represent?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
@@ -859,3 +865,33 @@
    B) +, -, %, *, /
    C) %, +, -, *, /
    D) %, *, /, +, -
+
+5. **Which is logical operator?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) +
+   B) >=
+   C) AND
+   D) <<
+
+6. **Which of the following will not increase the value of variable c by 1?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) c++
+   B) c = c + 1
+   C) c + 1 >= c
+   D) c += 1
+
+7. **The escape sequence “\b” in C programming is -----** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) Backspace
+   B) Next Line
+   C) Tab
+   D) None of these
+
+8. **What is not the kind of data type?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) Logical
+   B) Text
+   C) Number
+   D) Currency
+
+9. **Which keyword is used in C language?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) ing
+   B) for
+   C) select
+   D) href

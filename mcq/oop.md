@@ -322,6 +322,12 @@
    C) print
    D) New
 
+46. **Java source code is compiled into ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+   A) Source Code
+   B) Byte Code
+   C) Object
+   D) .exe
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**

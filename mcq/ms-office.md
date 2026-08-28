@@ -56,6 +56,12 @@
    C. All Pages
    D. Even Pages
 
+3. **The feature in MS word automatically connects correct spelling, typing, capitalization on grammar errors ---** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+   A) Auto fix
+   B) Auto spell
+   C) Auto mark
+   D) Auto correct
+
 ## MS PowerPoint
 
 1. **Which file format can be added to a PowerPoint show?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**

@@ -162,6 +162,18 @@
    C) ROM
    D) All of them
 
+28. **Which one is faster memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) RAM
+   B) Secondary Memory
+   C) DRAM
+   D) Cache
+
+29. **Which memory is called as primary memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) Hard Disk
+   B) Pen Drive
+   C) Rom
+   D) RAM
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
