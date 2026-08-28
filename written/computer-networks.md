@@ -598,6 +598,14 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 84. **Using the IP address 192.168.10.0/23 find out- (i) Subnet/First address (ii) Last Address (iii) Subnet mask** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
 
+85. **Consider the IP address 10.20.30.0/25 now answer the below question: (i) What is the subnet mask of the above IP address? (ii) How many host per subnet have? (iii) What is the Broadcast address of this 10.20.30.0/3 IP address?** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938]**
+
+86. **২. 192.168.10.0/28 এর জন্য সাবনেট মাস্ক হবে কোনটি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+
+87. **৯. ক্লাস C এর ডিফল্ট সাবনেট মাস্ক কত?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+
+88. **১১. নিচের কোনটি লুপ ব্যাক আইপি এড্রেস?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -631,6 +639,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 7. **What is APIPA?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840]**
 
 8. **What do you mean by DHCP server? Explain the benefits of using dedicated DHCP server. Briefly describe the main benefits of using IPv6 protocol.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 914]**
+
+9. **১৬. DHCP uses UDP port _____ for sending data to the server.** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
 
 ## IPv6 Addressing
 
@@ -828,6 +838,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 19. **DNS server এবং DHCP server এর কাজ কী?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
 
+20. **দূরবর্তী কম্পিউটার সংযোগ এর জন্য কোন প্রোটোকল ব্যবহার করা হয়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
 ## Email Architecture & Protocols (SMTP, POP3, IMAP)
 
 1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
@@ -845,6 +857,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 6. **Which of the following is correct email formate? (a) compact@webmail.com (b) compact@webmail@com (c) compact.webmail.com (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
 7. **E-mail পাঠানো এবং রিসিভ করার জন্য একটি করে প্রোটোকলের নাম লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
+
+8. **Which protocol provides e-mail facility amount different hosts?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 937]**
+
+9. **ই-মেইল করার ক্ষেত্রে TO, CC ও BCC কোন ব্যবহার করা হয়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
 
 ## Data Rate & Channel Capacity (Nyquist, Shannon)
 

@@ -64,6 +64,10 @@
 
 31. **English: Confront the Rumors of Social Media.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 930]**
 
+32. **Some people may think that long-term imprisonment is helpful in reducing crime, and some people think that there are other options to reduce crime. Discuss both vies and your opinion with an example?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
+
+33. **Write an Essay: Climate change Impact in Bangladesh.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -183,6 +187,22 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 20. **Filling the gaps with appropriate word: a) I started _____ Chattogram. b) She has no ability _____ painting. c) Every member of my _____ family d) They as well as he _____ wrong. e) Time and tide _____ for none.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
+21. **২. Which one is collective noun? (a) Boy (b) Wood (c) Herd (d) Infancy** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+22. **৫. Fill in the Gap: (a) I am sorry _____ the mistake. (b) _____ his being innocent of the crime, the judge sentenced him to one year imprison.** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+23. **৬. Fill in the Gap with appropriate articles: (a) Football is (a) _____ popular game in our country. (b) Money cannot buy (a) _____ happiness.** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+24. **২. How did you do it? (Change the Voice)** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+25. **৪. Which sentence is correct?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+26. **৭. I saw _____ one eyed man.** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+27. **৮. What's the time _____ your watch?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+28. **১০. Since we grow the locally, we need not to _____ it.** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
 ## English Vocabulary & Antonyms
 
 1. **What is the Opposite word of Transparent?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
@@ -192,6 +212,12 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 3. **When the writer uses the word “prosperous” to describe the voyage, what does he mean?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 4. **What 2 synonyms of the word “Accordingly”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+5. **১. নিচের কোনটি লেফটেনেন্ট এর সঠিক Spelling? (a) Lieutenant (b) Leptenant (c) Lieutenand (d) Lieftenant** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+6. **১. What is the synonym of Certainly?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+7. **৫. Spelling Correction: Tsunami, Commission, Laughping, hetarogineous.** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
 
 ## Idioms & Phrases
 
@@ -208,6 +234,10 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 6. **“Run with the hare and hunt with the hounds: - কথাটির বাংলা প্রবাদ কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 7. **What is the meaning of the phrase “Carry the day”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+8. **৪. অর্থসহ বাক্য রচনা কর: (a) Blue Blood (b) Baker's dozen** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+9. **৬. Phrases and Idioms : Eleventh Hours.** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
 
 ## English Literature & Authors
 
@@ -235,7 +265,7 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 8. **Translation [Bangla to English]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 431]**
 
-9. **Bangla to English Translation** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
+9. **Bangla to English Translation** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
 
 10. **Translation (Bangla to English)**
     **যুব উন্নয়ন বিষয়ক......** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
@@ -249,3 +279,7 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 14. **ইংরেজিতে অনুবাদ করুন: অভাবে স্বভাব নষ্ট, তেল এর চেয়ে পানি ভারী, তুমি আমাকে কেন এড়িয়ে চলছো?, তিনি এতোক্ষণে ঢাকায় পৌঁছে থাকবেন, আমি তাকে উপহাস করিনি।** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
 15. **Translate into English: (a) আমি যদি পরীক্ষায় প্রথম হতাম (b) পাপের ধন প্রায়শ্চিত্তে যায়। (c) আয় বুঝে ব্যয় কর। (d) যেমন বাপ, তেমন ব্যাটা।** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+
+16. **৩. অনুবাদ কর: (a) তুমি কি গাড়ী চালাতে পারো? (b) মিথ্যা বলি ওনা।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+17. **৯. মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের নাম ইংরেজিতে লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**

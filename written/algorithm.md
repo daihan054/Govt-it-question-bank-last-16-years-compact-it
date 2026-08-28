@@ -215,6 +215,8 @@ for i in N:
 
 11. **Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using the shortest path between two substations for SGFL Company.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 935-936]**
 
+12. **Shortest Path Algorithm.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
+
 ## Greedy Algorithms (Fractional Knapsack)
 
 1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।

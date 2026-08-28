@@ -29,6 +29,8 @@
 
 13. **(b) Convert the following Octal number into Decimal and Hexadecimal: (651)_8** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891]**
 
+14. **Binary Number system এর Base কত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 943]**
+
 ## 2's Complement & Binary Arithmetic
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
@@ -216,6 +218,8 @@
 5. **Given a 100MHz clock signal derive a circuit using T-flip flops of generate 50MHz and 25MHz clock signals. Draw a timing diagram for all the three clock signal.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823-824]**
 
 6. **What is the difference between latch and flip-flop?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
+
+7. **There are different types of clocks available in the market. What type of clock will you use to reduce the cost of SGFL Company?** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
 
 ## Finite State Machines (FSM)
 

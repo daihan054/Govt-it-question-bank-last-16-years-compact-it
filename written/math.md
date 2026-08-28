@@ -26,6 +26,10 @@
 
 13. **x + y = 7 এবং xy = 10 হলে এর মান কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
+14. **২. x + \frac{1}{x} = 4 হলে, x^2 + \frac{1}{x^2} এর মান কত?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+15. **২. x + \frac{1}{x} = \sqrt{3} হলে x^3 + \frac{1}{x^3} এর মান কত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
 ## Permutations & Combinations
 
 1. **CARBON word permutations that vowel must occupy odd positions?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
@@ -79,6 +83,10 @@
 8. **আগে যে টাকায় ৭ লিটার সয়াবিন তেল পাওয়া যেত, এখন সে টাকায় ৫ লিটার সয়াবিন তেল পাওয়া যায়। সয়াবিন তেলের দাম শতকরা কত ভাগ বৃদ্ধি পেল?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 9. **০.০২৫ এর শতকরা ১ অংশ কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+10. **৩. চিনির মূল্য ২০% বৃদ্ধির পাওয়ার পর চিনির ব্যবহার শতকরা কত কমালে মোট খরচের কোনো পরিবর্তন হবে না।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+11. **৪. একই হার সুদে ৩০০ টাকার ৪ বছরের সুদ এবং ৫০০ টাকার ৫ বছরের সুদ একতে ১৪৮ টাকা হলে, শতকনা বার্ষিক সুদের হার কত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
 ## Ratio, Proportion & Mixtures
 
@@ -138,6 +146,8 @@
 
 9. **কোন বর্গক্ষেত্রের ক্ষেত্রফল ১০০ বর্গমিটার। এর বাহুর দৈর্ঘ্য ১০% বৃদ্ধি পেলে এর ক্ষেত্রফলের শতকরা বৃদ্ধির হার কত?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
+10. **৫. সমকোণী ত্রিভুজের সমকোণ সংলগ্ন দুই বাহুর মান ৩ এবং ৪ হলে। ইহার অতিভুজ এর মান কত?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
 ## Analytical Ability & Logical Reasoning
 
 1. **A, B, C, D, E, F, G are sitting in a circular arrangement. Each of them wears caps of either red, blue, or green color. Conditions are (i) D sits two seats right of A. A is wearing green cap (ii) C sits two seats left of B. C is wearing blue cap (iii) E sits in between F and G. E is wearing red cap (iv) No two person sitting next to each other can have same color cap Find the cap color of everyone.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
@@ -147,6 +157,8 @@
 ## Comprehensive Math Problems
 
 1. **৫ টা ম্যাথ সংক্রান্ত প্রশ্নাবলি।** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+2. **Math: 3 \times 5 = 15 Marks** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
 
 ## Basic Arithmetic & Average
 
@@ -161,6 +173,16 @@
 5. **৯৯ + ৯৮ + ৯৭ + ------+৪০ = কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 6. **কোন ক্ষুদ্রতম সংখ্যাকে ৩, ৫ এবং ৬ দ্বারা ভাগ করলে ভাগশেষ ১ হবে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+7. **১. তিন অংকের বৃহত্তম সংখ্যা ও ক্ষুদ্রতম সংখ্যার পার্থক্য কত?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+8. **৪. দুইটি সংখ্যার গ. সা. গু ও ল. সা. গু যথাক্রমে ১২ ও ১৫। সংখ্যা দুইটির গুনফল কত?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+9. **১. ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা কয়টি ও কি কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+10. **৩. একজনন ক্রিকেটারের 10 ইনিংসে রানের গড় 44.5. 11 তম ইনিংসে কত রান করে আউট হলে, সব ইনিংস মিলিয়ে তার রানের গড় 50 হবে?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+11. **৫. দুইটি সংখ্যার গড় xy. একটি সংখ্যা x হলে অপর সংখ্যাটি কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
 ## Discrete Mathematics & Recurrence Relations
 

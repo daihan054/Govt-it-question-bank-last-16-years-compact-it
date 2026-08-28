@@ -182,6 +182,34 @@
 
 91. **Write 4 sentence about Mujib 100.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
 
+92. **২০. সাবমেরিন কেবল নেটওয়ার্কের সাথে বাংলাদেশ যুক্ত হয়েছে কত সালে?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+93. **১. আমার দেখা নয়াচীন এর লেখক কে?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+94. **২. মহান মুক্তিযুদ্ধের সর্বাধিনায়ক কাকে বলা হয়?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+95. **৩. MOWCA এর পূর্ণরূপ লিখুন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+96. **৪. সম্প্রতি প্রধানমন্ত্রী শেখ হাসিনা কি পুরস্কারে ভূষিত হয়েছেন? কারা প্রদান করেছে সেই পুরস্কার?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+97. **৫. জাতীয় শিশু দিবস কবে? ও বঙ্গবন্ধুর জন্মদিন এর সাথে ইহার সম্পর্ক কি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+98. **৬. যেকোনো ২টি মুক্তিযুদ্ধ ভিত্তিক চলচ্চিত্রের নাম লিখুন।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+99. **৭. মুক্তিযুদ্ধের পরে কত তারিখে বঙ্গবন্ধু শেখ মুজিবুর রহমান দেশে ফেরেন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+100. **৮. আগরতলা ষড়যন্ত্র মামলার আসামী কত জন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+101. **২. আজকে বাংলা তারিখ, মাস, বঙ্গাব্দ লিখুন।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+102. **৬. T-20 World Cup এ বাংলাদেশ মূল পর্বে কয়টি ম্যাচ জয়লাভ করেছে।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+103. **৮. বঙ্গবন্ধুর স্বদেশ প্রত্যাবর্তন দিবস কত তারিখে?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+104. **৯. বাংলাদেশের রাষ্ট্রপ্রধান এর নাম কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+105. **১০. আয়তনের দিক থেকে বিশ্বে বাংলাদেশের অবস্থান কততম?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -311,6 +339,18 @@
 56. **একজন বিখ্যাত ব্যক্তির নাম লিখুন যিনি কৃষিতে গবেষণা করে শান্তিতে নোবেল পুরষ্কার জয় লাভ করেন?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
 57. **জার্মানির প্রধানমন্ত্রী সমমর্যাদার পদ কোনটি ও সর্বপ্রথম মহিলার নাম কি?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+58. **Short Question: a. SWIFT full form. b. Which international organization helps Rohingya? c. Where “Golden Gate” Situated?** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
+
+59. **১. CEDAW এর পূর্ণ রূপ কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+60. **৩. আফগানিস্তান এর মুদ্রার নাম কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+61. **৪. হোয়াইট হল কোথায় অবস্থিত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+62. **৫. CIRDAP এর সদর দপ্তর কোথায়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+
+63. **৭. সোয়াজিল্যান্ড কোন মহাদেশে অবস্থিত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
 ## Everyday Science & Environment
 

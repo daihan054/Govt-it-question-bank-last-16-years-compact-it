@@ -50,6 +50,10 @@
 
 21. **Central Processing Unit (CPU) -এর প্রধান কাজ কী? একটি চিত্রের সাহায্যে CPU-এর বিভিন্ন অংশ বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 884]**
 
+22. **When does the parity bit occur in the microprocessors? What does it do?** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
+
+23. **১২. 8086 মাইক্রোপ্রসেসর এর Flag Register কত বিটের?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -59,6 +63,8 @@
 3. **What is Hyper threading? What is the use of it?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
 
 4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808]**
+
+5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
 
 ## 8085 Microprocessor & Edge Computing
 
@@ -153,6 +159,8 @@
 15. **Which of the following is non volatile memory? (a) SRAM (b) DRAM (c) ROM (d) HDD** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
 16. **(b) Here are given 4 types of different memory. Which memory is the faster? Write in sequence order in the following figure: Register, Hard disk, Cache, RAM.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 821]**
+
+17. **RAM and ROM difference লিখ?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
 
 ## Secondary Storage (HDD vs SSD)
 

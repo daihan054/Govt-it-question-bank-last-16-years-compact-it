@@ -18,6 +18,8 @@
 
 9. **What is the difference between http session and http cookies?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
 
+10. **It is small pieces of data stored on a user's computer by web browser while browsing a website. What are we talking about?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
+
 ## JavaScript & jQuery (DOM & Validation)
 
 1. **Jquery for email validation** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

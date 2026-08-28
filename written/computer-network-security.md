@@ -98,6 +98,8 @@
 
 13. **Define component of computer virus.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
 
+14. **দুটি এন্টিভাইরাস সফটওয়্যার এর নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
 ## Email & Messaging Security (Spam, Phishing)
 
 1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
@@ -246,6 +248,8 @@
 14. **(a) What is 2-factor authentication? Describe it with example.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
 15. **(b) Write down the purpose of Certification Authority (CA) in Digital Signature.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
+
+16. **১৮. পাসওয়ার্ড সুরক্ষা জন্য যে পদ্ধতি ব্যবহার করা হয় তার নাম কী?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
 
 ## Security Protocols (SSL/TLS, HTTPS)
 

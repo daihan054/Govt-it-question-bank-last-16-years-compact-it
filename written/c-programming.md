@@ -931,3 +931,5 @@ int main() {
 29. **Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
 
 30. **Write a program in C/Java to find out the factorial of a number using recursion also write its iterative program.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+
+31. **১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**

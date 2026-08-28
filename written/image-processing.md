@@ -2,6 +2,8 @@
 
 1. **(b) Differentiate between vector graphics and raster graphics. What are the applications of computer Graphics?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888-889]**
 
+2. **Raster Image কাকে বলে?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
 ## Frequency Domain Filtering
 
 1. **How does Butterworth High pass Filter works?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 674]**

@@ -37,9 +37,11 @@
 
 3. **Design a DFA to accept floating-point numbers of the form +/- n or +/- n.m, where n and m are decimal integers (non-empty strings over the digits \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}).** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 717]**
 
-4. **State diagram of DFA using binary strings having 0 with multiple of 3 on input \{0,1\}. Also showing regular expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 836-837]**
+4. **State diagram of DFA using binary strings having 0 with multiple of 3 on input \{0,1\}. Also showing regular expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 836-837]** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938]**
 
 5. **Draw the state diagram of deterministic Finite Automata (DFA), which accepts set of all strings over \{0, 1\} which interpreted as binary number is divisible by 4.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 851]**
+
+6. **Design a finite automaton for an elevator. The elevator can be at one of two floors: Ground or First. There is one button that controls the elevator, and it has two values: Up or Down. Also, there are two lights in the elevator that indicate the current floor: Red for Ground and Green for First.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
 
 ## Linker & Loader
 

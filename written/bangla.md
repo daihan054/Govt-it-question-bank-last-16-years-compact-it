@@ -44,6 +44,8 @@
 
 22. **বাংলা: স্বল্পোন্নত দেশ থেকে উন্নয়নশীল দেশে বাংলাদেশের যাত্রা।** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 930]**
 
+23. **Bangla রচনা: সামাজিক মূল্যবোধ বৃদ্ধিতে দেশীয় সংস্কৃতি গুরুত্ব ব্যাখ্যা কর।** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -93,6 +95,8 @@
 
 5. **২. তোমার এলাকায় একটি পাঠাগার স্থাপনের জন্য জেলা প্রশাসকের নিকট একটি আবেদন পত্র লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
+6. **একটি দৈনিক পত্রিকায় আপনার বিরুদ্ধে একটু মিথ্যা প্রতিবেদন করা হলে, ওই পত্রিকার সম্পাদকের কাছে এর বিপক্ষে একটি আবেদন করুন।** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
+
 ## Translation
 
 1. "He decided to pull out of the agreement at the eleventh hour. This sudden move took everyone by surprise and put the entire project at stake. Had he informed the team beforehand, we could have easily made alternative arrangements. Now, we are left with no other choice but to start everything from scratch. It just goes to show that you cannot always take people at their word." — Translate the passage into Bangla. [SO IT 25-07-2026]
@@ -138,6 +142,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 16. **৪. বাংলা অনুবাদ করুন: Love is the crown of all virtues. It adores a man with divine qualities. It is love that strengthens our family ties and make heaven of the world. Love for god is a virtue of the highest excellence. It governs society and secures personal liberty. Love of one's own country is an inherent instinct of human nature.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
 17. **৪. বাংলায় অনুবাদ করুন: Cleanliness is a virtue. It is the habit of keeping the body and all other things free from dirts. Without a clean body one cannot have a merry mind. Cleanliness keeps health. It is also a mark of politeness. Good health keeps mind healthy.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
+
+18. **English to Bangla: Global Economic debt pandemic.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 
@@ -256,3 +262,31 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 45. **এককথায় উত্তর লিখুন। (ক) শাহনামা গ্রন্থের লেখক কে? (খ) পথের পাঁচালী উপন্যাসের লেখক কে?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
 46. **শূন্যস্থান পূরণ করুন: (ক) এ জগতে হায় _____ আছে ভূরি ভূরি। (খ) শাসন করা তারই সাজে _____ করে যে।** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+47. **১. নন্দিত নরকে কার লেখা?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+48. **২. শুদ্ধ বানান লিখুন: মুমুর্ষ, সমীচিন।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+49. **৩. বিপরীত শব্দ লিখুন: প্রাচীন সৌম্য।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+50. **৪. কারক নির্ণয় করুন: টাকায় টাকা হয়, পাগলে কিনা বলে।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+51. **৫. ব্যাসবাক্য সহ সমাস নির্ণয় করুন: (ক) রাজমিস্ত্রী; (খ) চন্দ্রমূখ।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+52. **৬. অর্থ সহ বাক্য রচনা করুন: ননীর পুতুল, গোবর গণেশ।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+53. **৭. চন্দ্র শব্দের ২টি সমার্থক শব্দ লিখুন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+54. **১. আর্দ্র ও আপদ শব্দের বিপরীত শব্দ কী?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+55. **২. বাক্য সহ অর্থ লিখ: ভানুমতির খেল।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+56. **৩. সততা ও ইচ্ছা শব্দের বিশেষণ লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+57. **৪. মহিলা শব্দের ৪টি সমার্থক শব্দ লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+58. **৫. বরফ গলা নদী কার লেখা?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+59. **৬. বাক্য শুদ্ধ কর: আপনি স্ববান্ধবে আমন্ত্রিত।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+60. **৭. চক্রবাক কাব্যগ্রন্থ কার লেখা?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**

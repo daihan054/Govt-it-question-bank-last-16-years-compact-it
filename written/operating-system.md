@@ -155,6 +155,24 @@ int main(int argc, char *argv[]){
 
 32. **(ii) Linux command for showing page size, disk space in a human-readable format.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
 
+33. **A home directory called SGFL exists on your computer. Write a Linux command to create a link called “SGFL-Link” in the home directory.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
+
+34. **Write Shell command which make a folder name ‘A’ with read permission access only.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938]**
+
+35. **Write Shell command which copy folder ‘A’ all information into folder ‘P’. Folder ‘A’ and folder ‘P’s parent folder is same.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938-939]**
+
+36. **৩. লিনাক্স এর প্রিন্ট কমান্ডটি লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+
+37. **৬. ফোল্ডার রিমুভ করার জন্য নিচেরর কোনটি লিনাক্স কমান্ড হিসেবে ব্যবহৃত হয়?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+
+38. **৭. ফাইল কপি করার জন্য লিনাক্স কমান্ড কোনটি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+
+39. **ফাইল কপি করার লিনাক্স/ইউনিক্স কমান্ড কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
+40. **২. নেটওয়ার্ক কানেক্টিভিটি টেস্ট করার জন্য লিনাক্স কমান্ড লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
+
+41. **৩. IP Address বের করার জন্য লিনাক্স কমান্ড লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
@@ -163,6 +181,8 @@ int main(int argc, char *argv[]){
    * **(a) What is Active Directory? Do you need an Active Directory for such an office? If yes, briefly explain its use under this circumstance.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 323]**
 
 3. **Describe the booting process in windows system.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
+
+4. **১৯. বর্তমানে উইন্ডোজ অপারেটিং সিস্টেম এর কত তম ভার্সন বাজারজাত করা হয়েছে?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
 
 ## CPU Scheduling
 
@@ -285,6 +305,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 17. **Job arrival time and execution time of Operating system tasks table is given, find out- (i) Average waiting time for FCFS (ii) Preemptive SJF (iii) Round Robin (Quantum time: 3) scheduling algorithm** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
 
+18. **Calculate The Average Waiting Time of SJF scheduling algorithm.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
@@ -321,6 +343,8 @@ All process arrived at time 0. Lower number has higher priority.
 11. **(খ) Internal এবং External fragmentation এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
 12. **(a) What is demand paging?** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 821]**
+
+13. **In the given example, let us assume the jobs and the memory requirements as the following: Job1=90k, Job2=20k, Job3=50k, Job4=200k. Let the free pace memory allocation blocks are: Block1=50k, Block2=100k, Block3=90k, Block4=200k, Block5=50k.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 939-940]**
 
 ## Virtual Memory & Page Replacement (Thrashing)
 
@@ -423,6 +447,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 16. **Banker's Algorithm: 5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances). Snapshot at time T_0. The content of the matrix. Need is defined to be \text{Max} - \text{Allocation}. Check that \text{Request} \le \text{Available}. Executing safety algorithm shows that sequence \langle P_1, P_3, P_4, P_0, P_2 \rangle satisfies safety requirement.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 855]**
 
 17. **(a) What is Artificial Intelligence (AI)? What are the necessary conditions for a deadlock in an operating system?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 890]**
+
+18. **What is Deadlock? Explain two situations where deadlock condition occurs.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938]**
 
 ## File Systems & Disk Management
 

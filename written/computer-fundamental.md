@@ -20,6 +20,10 @@
 
 10. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** **(41th BCS Written Exam: 2021) [compact it 881]**
 
+11. **১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+12. **Graphics Design এর চারটি Software এর নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
 ## User Interfaces (CLI vs GUI)
 
 1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -114,6 +118,20 @@
 
 41. **Write the full form: TCP/IP, DHCP, XML, PoSQL, CSMA** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 920]**
 
+42. **Which It company nickname is “The Big Blue”?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
+
+43. **Whose codename was Longhorn?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
+
+44. **What does COBOL stand for?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
+
+45. **১৭. কোন প্রজন্মের কম্পিউটারে VLSI (Very Large Scale Integration) চিপ ব্যবহার শুরু হয়?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+46. **JPEG and RAID full form কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 943-944]**
+
+47. **1TB = কত বাইট?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
+48. **VGA, EGA এর পূর্ণ নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -148,6 +166,12 @@
 
 16. **Write the difference between BIOS and CMOS?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
 
+17. **গ্রাফিক্স কার্ড কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
+18. **ডট মেট্রিক্স প্রিন্টারের মূল উপাদান কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
+19. **Touch Screen কি জাতীয় ডিভাইস?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
 ## ICT in Society & Governance
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
@@ -167,6 +191,10 @@
 8. **Comparison between MIS and DSS. What is the roles of MIS in Banking sector?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 872]**
 
 9. **E-commerce and F-commerce -এর মধ্যে পার্থক্য লিখুন। নারী গোষ্ঠী দ্বারা পরিচালিত F-Commerce -এর সামাজিক প্রভাব সম্বন্ধে লিখুন।** **(41th BCS Written Exam: 2021) [compact it 883]**
+
+10. **১৪. বাংলাদেশের প্রথম ভিডিও লাইভ শেয়ারিং অ্যাপস কোনটি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+11. **৯. চতুর্থ শিল্প বিপ্লব কি? ইহার সম্পর্কে ৪ লাইন লিখুন।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
 ## Digital Banking & Financial Inclusion
 
