@@ -210,6 +210,10 @@
 
 105. **১০. আয়তনের দিক থেকে বিশ্বে বাংলাদেশের অবস্থান কততম?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
+106. **৭ জন বীরশ্রেষ্ঠের নাম লিখ।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
+
+107. **মুজিব বর্ষ জাতির পিতার সম্মানার্থে গৃহীত একটি পদক্ষেপ। জাতরি পিতার সম্মান রক্ষার্থে BREB এর নেওয়া মুজিব বর্ষের চারটি উদ্যোগ লিখুন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]

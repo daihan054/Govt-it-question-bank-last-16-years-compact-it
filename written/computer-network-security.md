@@ -100,6 +100,8 @@
 
 14. **দুটি এন্টিভাইরাস সফটওয়্যার এর নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
 
+15. **কম্পিউটার ভাইরাস, ওয়ার্ম এবং ট্রোজান হর্স এর মধ্যে পার্থক্য লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
+
 ## Email & Messaging Security (Spam, Phishing)
 
 1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
@@ -121,6 +123,8 @@
 6. **What is Vulnerability?** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
 7. **What is cyber threat intelligence database? What is the use of this in corporate office network?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 752]**
+
+8. **সাইবার অপরাধ কি? ৮টি সাইবার অপরাধ এর নাম লিখুন। সাইবার অপরাধ দূর করার জন্য ৬টি পন্থার নাম লিখুন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 948-949]**
 
 ## Social Engineering & Cyber Attacks
 
@@ -202,6 +206,8 @@
 13. **Difference between blacklisting and whitelisting. Which is more secure and why?** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
 
 14. **Write difference between Antivirus and Firewall.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
+15. **What is firewell? Draw a LAN network to showing firewall.** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
 ## VPN & Tunneling Protocols (IPsec, SSL VPN)
 

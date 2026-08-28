@@ -283,3 +283,5 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 16. **৩. অনুবাদ কর: (a) তুমি কি গাড়ী চালাতে পারো? (b) মিথ্যা বলি ওনা।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
 17. **৯. মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের নাম ইংরেজিতে লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+18. **বঙ্গবন্ধুকে নিয়ে চারটি বাংলা বাক্য ছিলো, সেগুলোর ইংরেজিতে ট্রান্সলেশন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**

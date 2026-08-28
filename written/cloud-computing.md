@@ -25,6 +25,8 @@
 
 10. **Write the three basic function of cloud services?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
 
+11. **ক্লাউড কম্পিউটিং এর সুবিধা ও অসুবিধা লিখুন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
+
 ## Cloud Storage & Fundamentals
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

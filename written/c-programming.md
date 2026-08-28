@@ -320,6 +320,8 @@ return 0;
 
 80. **Write a C/Java program to check Armstrong number or not.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
 
+81. **Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 948]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

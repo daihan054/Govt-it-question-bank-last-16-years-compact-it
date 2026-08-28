@@ -22,6 +22,8 @@
 
 11. **EEE related 3 math question.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
 
+12. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
+
 ## AC Circuits & Power Analysis
 
 1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
@@ -55,6 +57,8 @@
 7. **Describe cut off, saturation and active region of operation of a transistor with diagram. Explain the working principal of ab n-channel JFET with various values of V_{GS} and V_{DS}.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 445]**
 
 8. **(a) Draw and explain the operation of NMOS transistor.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 688]**
+
+9. **ইমিটার কারেন্টের মান 1 Amp, কালেক্টর কারেন্ট 0.95 A হলে বেইস (Base) কারেন্টের মান কত? একটি চিত্র দেওয়া ছিল!!** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
 ## Operational Amplifiers (Op-Amp)
 
