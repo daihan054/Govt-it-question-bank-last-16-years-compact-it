@@ -115,6 +115,12 @@
    c) AC+A(B+C) + B(B+C)
    d) BC+C(B+C) + B(B+C)
 
+6. **যে বর্তনী ১-বিট ডাটা সংরক্ষণ করতে পারে তা হলো-** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
+   A) রেজিস্টার
+   B) এনকোডার
+   C) ডিকোডার
+   D) ফ্লিপ-ফ্লপ
+
 ## Combinational Circuits (MUX, Decoder)
 
 1. **How many select line would be there if the inputs of a MUX are 8?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -347,6 +353,18 @@
    B) 6-bits
    C) 8-bits
    D) 16-bits
+
+35. **দশমিক পদ্ধতির সংখ্যা 300_{(10)} কে Hexadecimal এ রূপান্তর করলে কত হবে?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
+   A) \text{C}3_{(16)}
+   B) 12\text{C}_{(16)}
+   C) \text{C}2_{(16)}
+   D) \text{A}2\text{C}_{(16)}
+
+36. **10101111 ও 00110011 এর Bitwise OR এর ফলাফল কত?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
+   A) 10111111
+   B) 00100011
+   C) 01010101
+   D) 11111111
 
 ## Boolean Algebra & Simplification
 

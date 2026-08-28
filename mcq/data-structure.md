@@ -270,7 +270,7 @@
    c) 2^{N-1} - 1
    d) N^2
 
-17. **Max-Heap data structure এর সবচেয়ে বড় নম্বরটি কোথায় থাকে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+17. **Max-Heap data structure এর সবচেয়ে বড় নম্বরটি কোথায় থাকে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
    A) Leaf
    B) Internal node
    C) Root
@@ -281,6 +281,12 @@
    B) 2^n
    C) 2^{n-1}
    D) 2^{n+1}-1
+
+19. **Binary Search Tree-এর Time complexity কত?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) O(n)
+   B) O(n \log n)
+   C) O(\log n)
+   D) O(n^2)
 
 ## Hashing & Hash Tables
 
@@ -330,13 +336,13 @@
    c) Queue
    d) Graph
 
-3. **Array data structure এ কোন ধরনের data রাখা যায়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+3. **Array data structure এ কোন ধরনের data রাখা যায়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 198]**
    A) various type data
    B) Only pointer type data
    C) Classes data
    D) Same type many data
 
-4. **LIFO data structure কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+4. **LIFO data structure কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 194]**
    A) Queue
    B) Stack
    C) File
@@ -365,3 +371,9 @@
    B) 3
    C) 5
    D) 4
+
+9. **নিচের কোনটি দিয়ে Graph represent করা যায়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
+   A) Queue
+   B) Stack
+   C) Adjacency list
+   D) Pointer

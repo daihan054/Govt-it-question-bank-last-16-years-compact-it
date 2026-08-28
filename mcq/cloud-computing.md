@@ -69,3 +69,9 @@
    B) ELB
    C) SQS
    D) All of these
+
+9. **কোনটি Cloud Computing এর সাথে সম্পৃক্ত নয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 198]**
+   A) Fog Computing
+   B) PaaS
+   C) Key board
+   D) SaaS

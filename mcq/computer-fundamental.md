@@ -346,6 +346,12 @@
    c) chain
    d) nonce
 
+10. **কোনটি Social media network নয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
+   A) LinkedIn
+   B) Google+
+   C) Internet Explorer
+   D) Twitter
+
 ## Software Types & Classification
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**

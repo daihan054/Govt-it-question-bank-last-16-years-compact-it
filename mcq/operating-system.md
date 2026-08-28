@@ -54,6 +54,12 @@
    c) Flash drive
    d) Hard drive
 
+10. **Virtually memory হিসেবে RAM এর পাশাপাশি কোনটি ব্যবহার হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) Cache
+   B) CPU Register
+   C) CD-ROM
+   D) Hard disk
+
 ## Deadlock
 
 1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**

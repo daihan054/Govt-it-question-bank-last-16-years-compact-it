@@ -108,7 +108,7 @@
    C) HDD
    D) Floppy
 
-19. **নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+19. **নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
    A) RAM
    B) Hard disk
    C) CD ROM
@@ -236,7 +236,7 @@
    C) Processing Unit
    D) Flags Unit
 
-19. **নিচের কোন Operation টি CPU তে দ্রুত কাজ করে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+19. **নিচের কোন Operation টি CPU তে দ্রুত কাজ করে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
    A) Multiplication
    B) Bitwise OR
    C) Addition
@@ -253,6 +253,18 @@
    B) 8
    C) 16
    D) None
+
+22. **Intel 8086 মাইক্রোপ্রসেসর কত বিট রেজিস্টার থাকে?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 194]**
+   A) 4
+   B) 8
+   C) 14
+   D) 16
+
+23. **START:MOV AX, BX একটি assembly language instruction এখানে MOV হলো-** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
+   A) লেবেল
+   B) সোর্স
+   C) Opcode
+   D) ডেস্টিনেশন
 
 ## Secondary Storage (HDD & Disk Organization)
 

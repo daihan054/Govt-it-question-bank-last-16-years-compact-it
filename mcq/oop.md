@@ -330,7 +330,7 @@
    c) Compile time Polymorphism
    d) Runtime Polymorphism
 
-4. **Object Oriented programming এর বৈশিষ্ট্য কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+4. **Object Oriented programming এর বৈশিষ্ট্য কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 198]**
    A) Polymorphism
    B) Friend function
    C) Structure

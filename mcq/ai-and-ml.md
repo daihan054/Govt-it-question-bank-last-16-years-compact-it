@@ -95,3 +95,9 @@
    B) Infinite loop
    C) No Solution
    D) Slowness
+
+18. **নিচের কোনটি Genetic algorithm এর একটি operator?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) Mutation
+   B) Population
+   C) Gene
+   D) Individual

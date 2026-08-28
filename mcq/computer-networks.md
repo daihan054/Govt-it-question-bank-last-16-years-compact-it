@@ -209,13 +209,13 @@
    c) Message
    d) Frame
 
-28. **নিচের কোনটি E-mail protocol?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+28. **নিচের কোনটি E-mail protocol?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
    A) SMTP
    B) USB
    C) IOT
    D) OTB
 
-29. **FTP protocol নিচের কোনটি ব্যবহার করে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+29. **FTP protocol নিচের কোনটি ব্যবহার করে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
    A) IP
    B) TCP
    C) UDP
@@ -250,6 +250,30 @@
    B) WINS Power
    C) DHCP Server
    D) PDC
+
+35. **Domain Name থেকে IP-mapping করতে কোনটি কাজ করে?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
+   A) HTTP
+   B) SMTP
+   C) DNS
+   D) Telnet
+
+36. **DHCP discover message টি কোন ধরনের?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
+   A) Unicast
+   B) Multicast
+   C) Broadcast
+   D) Anycast
+
+37. **Email service এর সাথে কোনটি সম্পৃক্ত?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 198]**
+   A) Telnet
+   B) SMTP
+   C) SSH
+   D) DHCP
+
+38. **কোনটি UDP protocol use করে?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 198]**
+   A) SMTP
+   B) HTTP
+   C) DNS
+   D) FTP
 
 ## IPv6 Addressing
 
@@ -420,7 +444,7 @@
    C) ASPANET
    D) ARPANET
 
-16. **IP address থেকে MAC address আনার protocol কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+16. **IP address থেকে MAC address আনার protocol কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
    A) RIP
    B) BGP
    C) ARP
@@ -855,7 +879,7 @@
    c) 14
    d) 6
 
-20. **উল্লেখিত কোনটি Private IP address?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+20. **উল্লেখিত কোনটি Private IP address?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
    A) 192.169.10.10
    B) 11.5.10.10
    C) 1.1.1.1
@@ -872,6 +896,12 @@
    B) 255.255.255.192
    C) 255.255.255.240
    D) 255.255.255.78
+
+23. **192.168.1.100 এই IP address টি কোন class এর অন্তর্ভুক্ত?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 194]**
+   A) Class A
+   B) Class B
+   C) Class C
+   D) Class D
 
 ## Data Transmission & Modes
 
@@ -923,7 +953,7 @@
    c) Manchester
    d) AMI
 
-9. **ইন্টারনেটে নেটওয়ার্কে Media Access করার জন্য কোন পদ্ধতি ব্যবহৃত হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+9. **ইন্টারনেটে নেটওয়ার্কে Media Access করার জন্য কোন পদ্ধতি ব্যবহৃত হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
    A) CSMA/CD
    B) CSMA/CA
    C) Demand Priority
@@ -979,7 +1009,7 @@
    c. with back up database
    d. by exchanging information with neighbor nodes
 
-8. **কোন Routing Protocol এ Dijkstra Algorithm ব্যবহার করা হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+8. **কোন Routing Protocol এ Dijkstra Algorithm ব্যবহার করা হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
    A) ARP
    B) OSPF
    C) RIP
@@ -1138,6 +1168,18 @@
    C) Gateway
    D) Router
 
+22. **কোন device টি Broadcast traffic আটকাতে পারে?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
+   A) Hub
+   B) Router
+   C) Switch
+   D) RJ45
+
+23. **সাধারণত Star topology LAN এর central controller কে কি বলা হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 198]**
+   A) Node
+   B) Hub
+   C) Router
+   D) Modem
+
 ## Error Detection & Correction
 
 1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -1207,6 +1249,12 @@
    B) Application
    C) Data-link
    D) Session
+
+9. **Congestion Control কোন layer-এ করা হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) Physical
+   B) Data link
+   C) Network
+   D) Transport
 
 ## Switching Techniques
 

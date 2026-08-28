@@ -140,7 +140,7 @@
    c) Regression testing
    d) Smoke testing
 
-15. **কোন Testing দিয়ে Input-Output ঠিক আছে কিনা বুঝা যায়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+15. **কোন Testing দিয়ে Input-Output ঠিক আছে কিনা বুঝা যায়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 198]**
    A) Black-box Testing
    B) Integration Testing
    C) White-box testing

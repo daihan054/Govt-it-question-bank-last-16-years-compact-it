@@ -33,6 +33,12 @@
    c) for
    d) switch
 
+7. **C programming Language এ কোনো loop থেকে তৎক্ষণাৎ বের করার জন্য উল্লেখিত কোনটি ব্যবহৃত হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) break
+   B) switch
+   C) continue
+   D) if
+
 ## Output Tracing
 
 1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -458,6 +464,19 @@
    c) Linker Errors
    d) Logical Errors
 
+35. **Find output in C- Program:** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 198]**
+   ```c
+   #include<stdio.h>
+   int main() {
+   printf("%c", 100);
+   return 0;
+   }
+   ```
+   A) 100
+   B) one hundred
+   C) d
+   D) 0
+
 ## Storage Classes & Scope
 
 1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
@@ -549,6 +568,12 @@
    C) Pointer
    D) Float
 
+3. **C-programming এ address রাখার জন্য কোনটি সাধারণত ব্যবহৃত হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) break
+   B) pointer
+   C) char
+   D) float
+
 ## Recursion
 
 1. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
@@ -594,7 +619,7 @@
    c) 2^{32}-1
    d) 2^{31}-1
 
-3. **C programming এ নিচের কোনটি Invalid variable name?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+3. **C programming এ নিচের কোনটি Invalid variable name?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
    A) Average
    B) No#of-students
    C) Xyz
@@ -612,7 +637,7 @@
    C) star
    D) float
 
-6. **C programming language এ নিচের কোনটিকে "if" দিয়ে Replace করা যায়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+6. **C programming language এ নিচের কোনটিকে "if" দিয়ে Replace করা যায়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 198]**
    A) switch
    B) structure
    C) return
