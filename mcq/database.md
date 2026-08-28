@@ -426,6 +426,42 @@
    C) ALTER VIEW
    D) CREATE VIEW
 
+47. **What is a tuple?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. Another name for a table in an RDBMS
+   b. A row or record in a database table
+   c. An attribute attached to a record
+   d. Another name for the key linking different table in a database
+
+48. **The primary key is selected from the ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. Candidate keys
+   b. Composite keys
+   c. Determinants
+   d. Foreign keys
+
+49. **A transaction for which all committed changes are permanent is called ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. Atomic
+   b. Consistent
+   c. Isolated
+   d. Durable
+
+50. **Which of the following locks the item from access of any type?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. Implicit lock
+   b. Explicit lock
+   c. Exclusive lock
+   d. Shared lock
+
+51. **You run a SELECT statement and multiple duplicate values are retrieved. What keyword can you use to retrieve only the non-duplicate data?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. DUPLICATE
+   b. SEPARATE
+   c. DISTINCT
+   d. INDEX
+
+52. **Microsoft Access is a ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. RDBMS
+   b. OODBMS
+   c. ORDBMS
+   d. All of these
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -706,6 +742,12 @@
    c) Isolation
    d) Durability
 
+14. **Which SQL keyword is used to short the result set?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. ORDER
+   b. SORT
+   c. ORDER BY
+   d. SORT BY
+
 ## Indexing & Query Optimization
 
 1. **Which one make data access from a database faster?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
@@ -937,6 +979,12 @@
    C) Subset is a super key
    D) Each subset is a super key
 
+11. **With SQL how can you insert "Olsen" as the "LastName" in the "Persons" table?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. INSERT INTO Persons(LastName) VALUES('Olsen')
+   b. INSERT INTO Persons (Olsen) VALUES('LastName')
+   c. INSERT INTO Person ('Olsen') INTO LastName
+   d. INSERT INTO Persons (LastName= 'Olsen')
+
 ## ER Diagram & Data Modeling
 
 1. **Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this situation in the relational model?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 112]**
@@ -1080,6 +1128,12 @@
    B) SQLDirect
    C) SQLExcelDirect
    D) SQLConnect
+
+5. **In your program you want to use the JDBC-ODBC bridge drive. What code do you use?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. Class.callName("sun.jdbc.odbc.jdbcOdbcDriver")
+   b. Class.forName("sun.jdbc.odbc.jdbcOdbcDriver")
+   c. Class.callFunc("JdbcOdbcDriver")
+   d. Class.Name.init("sun.jdbc.odbc.JdbcOdbcDriver")
 
 ## Concurrency Control & Locking
 

@@ -126,3 +126,33 @@
    B) Closed Source
    C) Browser
    D) None of these
+
+3. **The reference library of Visual Basic books is called ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. MSDN library
+   b. Help library
+   c. Contents
+   d. Topic pane
+
+4. **A variable declared inside a method is called ________.** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. Static variable
+   b. Local variable
+   c. Private variable
+   d. Serial variable
+
+5. **Which of the method is used to display the form as model in VB.NET platform?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. showdialog()
+   b. activate()
+   c. loaddialog()
+   d. show()
+
+6. **The tool provided with .NET framework register assemblies for use by COM is ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. Regasm
+   b. Regsvr32
+   c. ILDASM
+   d. Regedit
+
+7. **Find any errors in the following BankAccount constructor in C#.NET public int BankAccount(){ balance=0; }** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. Name
+   b. Formal parameters
+   c. Return type
+   d. None

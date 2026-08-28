@@ -86,6 +86,12 @@
    C) <p> content</p>
    D) <body>content</body>
 
+15. **One advantage of XML compared to HTML is ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. XML works on more platforms
+   b. XML is suited to using webpage as frontend to database
+   c. XML was designed for portable phone
+   d. XML is simpler to learn than html
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -123,6 +129,30 @@
    B) *
    C) . (dot)
    D) |
+
+6. **Which of the following function returns the number of characters in a string variable?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. count($variable)
+   b. len($variable)
+   c. strlen($variable)
+   d. strcount($variable)
+
+7. **PHP is widely used ________ scripting language that is especially suited for web development and can be embedded into html.** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. Open source general purpose
+   b. Proprietary general purpose
+   c. Open source special purpose
+   c. Proprietary special purpose
+
+8. **Which of the following is not true?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. PHP can be used develop applications
+   b. PHP makes a website dynamic
+   c. PHP applications cannot be compiled
+   d. PHP cannot be embedded into html
+
+9. **How do you write a conditional statement for executing some statements only if "1" is not equal to 5?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. if(1<>5)
+   b. if(1!=5)
+   c. if(1=!5)
+   d. if<>5
 
 ## CSS & Styling
 
@@ -265,3 +295,21 @@
    B) JavaScript
    C) ASP.NET
    D) None of these
+
+6. **A script is a ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. Program of sequence of instructions that is interpreted or carried out by processes directly
+   b. Program or sequence of instructions that is interpreted or carried out by another program
+   c. Program or sequence of instructions that is interpreted or carried out by web services only
+   d. None of these
+
+7. **What is the correct JavaScript syntax to view "Hello World"?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. respone.write("Hellow World");
+   b. document.write("Hello World")
+   c. "Hello World"
+   d. echo("Hello World")
+
+8. **Inside which HTML element do we put the JavaScript?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 273]**
+   a. <scripting>
+   b. <javascript>
+   c. <script>
+   d. <js>

@@ -42,6 +42,24 @@
    C) Fax Pro
    D) Power Point
 
+8. **What is entered by the function = today()?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 274]**
+   a. The date value for the day according to system clock
+   b. The time value according to system clock
+   c. Today's date as text format
+   d. All of the above
+
+9. **What happens when you press Ctrl+X after selecting some cells in Excel?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 274]**
+   a. The cell content of selected cells disappears from cell and stored in clipboard
+   b. The cells selected are marked for cutting
+   c. The selected cells are deleted and shifted left
+   d. The selected cells are deleted and shifted up
+
+10. **What program do you use to create a spreadsheet?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 274]**
+   a. Word
+   b. Excel
+   c. Access
+   d. PowerPoint
+
 ## MS Word
 
 1. **What is the range of Font Size available in Font Size drop down toolbar?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
@@ -62,6 +80,18 @@
    C) Auto mark
    D) Auto correct
 
+4. **Where can you find the horizontal split bar on MS Word screen?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 274]**
+   a. On the left of horizontal scroll bar
+   b. On the right of horizontal scroll bar
+   c. On the top of vertical scroll bar
+   d. On the bottom of vertical scroll bar
+
+5. **You cannot close MS Word application by ________.** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 274]**
+   a. Choosing File Menu and then exit Sub Menu
+   b. From File Menu choose close Sub Menu
+   c. Click X button on title bar
+   d. Press Alt+F4
+
 ## MS PowerPoint
 
 1. **Which file format can be added to a PowerPoint show?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**
@@ -75,3 +105,17 @@
    b) F7
    c) F5
    d) F12
+
+3. **What is term used when you press and hold the left mouse key and move the mouse round the slide?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 274]**
+   a. Highlighting
+   b. Dragging
+   c. Selecting
+   d. Moving
+
+## MS Access
+
+1. **Which of the following is not a type of Microsoft Access Database object?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 274]**
+   a. Table
+   b. Form
+   c. Worksheets
+   d. Modules

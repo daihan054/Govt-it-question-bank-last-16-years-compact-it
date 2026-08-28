@@ -328,6 +328,18 @@
    C) Object
    D) .exe
 
+47. **Which one of these lists contains only Java programming language keywords?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. class, if, void, long, int, continue
+   b. goto, instanceof, native, finally, default, throws
+   c. try, virtual, throw, final, volatile, transient
+   d. strictfp, constant, super, implements, do
+
+48. **Which method must be defined by a class implementing java.lang.Runnable interface?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. void run()
+   b. public void run()
+   c. public void start()
+   d. void run(int priority)
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -453,6 +465,12 @@
    B) Method overloading
    C) Method hiding
    D) Method duplicating
+
+16. **Overloaded functions are ________** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 271]**
+   a. Very long functions that can hardly run
+   b. One function containing another one or more functions inside it
+   c. Two or more functions with same name but different number of parameter or type
+   d. None of above
 
 ## OOP Concepts & Principles
 

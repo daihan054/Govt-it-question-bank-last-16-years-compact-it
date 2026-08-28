@@ -548,6 +548,19 @@
    C) d
    D) 0
 
+36. **What will be output if you compile & and execute following C code?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   ```c
+   void main() {
+   const int i=5;
+   i++;
+   printf("%d", i);
+   }
+   ```
+   a. 5
+   b. 6
+   c. 0
+   d. Compiler Error
+
 ## Storage Classes & Scope
 
 1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
@@ -655,6 +668,12 @@
    C) a and b
    D) none of the mentioned
 
+15. **In C, if you pass an array as an argument to a function, what actually gets passed?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 271]**
+   a. Value of elements in array
+   b. First element of the array
+   c. Base address of the array
+   d. Address of the last element of the array
+
 ## Pointers & Memory Allocation
 
 1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
@@ -680,6 +699,12 @@
    (b) Array of 10 function Pointers returning integer
    (c) A pointer of to function returning an array to 10 integers
    (d) Array of 10 integers pointers
+
+5. **Which header file should be included to use functions like malloc() and calloc()?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 271]**
+   a. memory.h
+   b. stdlib.h
+   c. string.h
+   d. dos.h
 
 ## Recursion
 
@@ -825,6 +850,12 @@
    C) Define name of the variable
    D) All
 
+14. **Which of the following is not derived data type in C?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 272]**
+   a. Function
+   b. Pointer
+   c. Enumeration
+   d. Array
+
 ## Flowcharts & Algorithms
 
 1. **In flowchart what does below represent?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
@@ -895,3 +926,15 @@
    B) for
    C) select
    D) href
+
+10. **Find out the error in following block of code: if (x=100) cout<<"x is 100";** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 271]**
+   a. 100 should be enclosed in quotations
+   b. There is no semicolon at the end of first line
+   c. Equals to operator mistake
+   d. Variable x should not be inside quotation
+
+11. **Which of the following is not a logical operator?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 271]**
+   a. &
+   b. &&
+   c. ||
+   d. |
