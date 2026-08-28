@@ -351,6 +351,12 @@
    (c) Physical layer
    (d) Transport layer
 
+9. **বিশ্ব টেলিকমিউনিকেশন দিবস কবে পালিত হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 7 May
+   B. 14 May
+   C. 17 May
+   D. 21 May
+
 ## Subnetting & IP Addressing
 
 1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**

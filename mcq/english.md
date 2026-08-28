@@ -1192,6 +1192,30 @@
    c. illiterate
    d. smart
 
+46. **Our Fates Seemed Intertwined. Which one is similar to the underlined word?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+   A. Complicated
+   B. Destined
+   C. Linked
+   D. Complex
+
+47. **Find the synonym of the word Morose.** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+   A. Annoyed
+   B. Gloomy
+   C. Moody
+   D. Displeased
+
+48. **The antonym of the word Terrible is:** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+   A. Soothing
+   B. Frightening
+   C. Scaring
+   D. Horrible
+
+49. **A legal authorization of debtors to postpone payment is known as:** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+   A. Moratorium
+   B. Deferment
+   C. Preemption
+   D. Bed debt
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1273,3 +1297,9 @@
    b. Onamatopoeia
    c. Onamotopoeia
    d. Anomatopoeia
+
+14. **Find the correctly spelt word.** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+   A. Abeyence
+   B. Abayance
+   C. Abeyence
+   D. Abeyance

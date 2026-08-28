@@ -369,6 +369,54 @@
    (c) 7.56 nsec
    (d) 76 nsec
 
+64. **একটি বাল্বে 60W-220V লেখা থাকলে তার রোধ কত ওহম?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 16.36
+   B. 160.67
+   C. 280.36
+   D. 806.67
+
+65. **33 (ohm) resistor সার্কিটে 2amp তড়িৎপ্রবাহ চালিত হলে রেজিস্টারের ভোল্টেজ কত?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 33 V
+   B. 66V
+   C. 80V
+   D. 132V
+
+66. **বর্তনীতে তড়িৎ প্রবাহে সৃষ্টি করে কোনটি?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. প্রোটনের প্রবাহ
+   B. নিউট্রনের প্রবাহ
+   C. ইলেকট্রনের প্রবাহ
+   D. তাপের প্রবাহ
+
+67. **১০০ ওয়াটের একটি বৈদ্যুতিক বাতি প্রতিদিন ৭ ঘণ্টা জ্বললে ২০২০ সালের ফেব্রুয়ারী মাসে কত তড়িৎ শক্তি খরচ হবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 20.3k Wh
+   B. 203k Wh
+   C. 21.3k Wh
+   D. 290k Wh
+
+68. **নিচের কোন ইলেকট্রনিক্স যন্ত্র AC থেকে DC তৈরি করতে পারে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. Diode
+   B. Transistor
+   C. JET
+   D. FET
+
+69. **n-p-n ট্রানজিস্টরে 'P' অংশটি কী?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. নিঃসরক
+   B. সংগ্রাহক
+   C. ভিত্তি
+   D. বিাবর্ধক
+
+70. **ট্রানজিস্টরের সাথে ডায়াড বা রেজিস্টর এবং ক্যাপাসিটর দিয়ে তৈরি পূর্ণাঙ্গ সার্কিটকে কী বলে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. Motherboard
+   B. RAM
+   C. Processor
+   D. IC
+
+71. **সিলিকনের সাথে কোন পদার্থ যোগ করলে তা p-টাইপে পরিণত হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. ফসফরাস
+   B. বোরন
+   C. হাইড্রোজেন
+   D. কার্বন
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
@@ -487,3 +535,9 @@
    (খ) সিগন্যালের ফ্রিকুয়েন্সি পরিবর্তিত হয়
    (গ) ক্যারিয়ার অ্যাম্প্লিচিউড পরিবর্তিত হয়
    (ঘ) ক্যারিয়ার ফ্রিকুয়েন্সি পরিবর্তিত হয়
+
+7. **ঢাকা বেতার কেন্দ্র মিডিয়াম ওয়েভে 630Hz এ অনুষ্ঠান সম্প্রচার করে। রেডিও তরঙ্গে বেগ 3 \times 10^8\text{ ms}^{-1} হলে তরঙ্গ। দৈর্ঘ্য কত হবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 476190m
+   B. 476.19m
+   C. 476190cm
+   D. 476.19cm

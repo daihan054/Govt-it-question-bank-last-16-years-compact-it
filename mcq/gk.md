@@ -419,6 +419,18 @@
    c. Perseverance
    d. Sprit
 
+67. **3\text{N} ও 4\text{N} মানের দুটি বল লম্বভাবে ক্রিয়া করলে লব্ধির মান কত?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 2\text{N}
+   B. 3\text{N}
+   C. 5\text{N}
+   D. 7\text{N}
+
+68. **একটি তেজস্ক্রিয় মৌলের অর্ধায়ু ২০০ বছর। মৌলটির ৭৫% ক্ষয় হতে কত বছর লাগবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 150
+   B. 300
+   C. 400
+   D. 450
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1688,6 +1700,12 @@
 
 136. **According to WEF’s (World Economic forum) Global Gender Gap Report. what is the ranking of Bangladesh in South Asia?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
 
+137. **বাংলাদেশে কোন তারিখ হতে আনুষ্ঠানিকভাবে কোভিড-১৯ এর টিকাদার কর্মসূচী চালু হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. জানুয়ারী ৭, ২০২১
+   B. জানুয়ারী ১৭, ২০২১
+   C. জানুয়ারী ২৭, ২০২১
+   D. জানুয়ারী ২৯, ২০২১
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1913,6 +1931,12 @@
    b) তামিম
    c) সাব্বির
    d) লিটন দাস
+
+14. **টেস্ট ক্রিকেট বাংলাদেশের দ্রুততম উইকেটের সেঞ্চুরিয়ান বোলার কে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. সাকিব আল হাসান
+   B. মোস্তাফিজুর রহমান
+   C. মেহেদি হাসান মিরাজ
+   D. তাইজুল ইসলাম
 
 ## Power Sector & Energy (Bangladesh)
 

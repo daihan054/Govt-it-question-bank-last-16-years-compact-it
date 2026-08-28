@@ -125,6 +125,18 @@
 2. **একটি ৪৮ মিটার লম্বা খুঁটি ভেঙ্গে সম্পূর্ণভাবে বিচ্ছিন্ন না হয়ে ভূমির সাথে 30^\circ কোন উৎপন্ন করে। খুঁটিটি কত উচুতে ভেঙ্গে ছিল?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** ১৬
 
+3. **\tan A = 5/12 হলে, \sin A এর মান কত?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. \frac{5}{13}
+   B. \frac{3}{4}
+   C. \frac{5}{17}
+   D. \frac{5}{12}
+
+4. **\sin A + \cos A = \sin B + \cos B এবং A + B = ?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. \pi
+   B. 2\pi
+   C. \pi/2
+   D. \pi/4
+
 ## Average & Age Problems
 
 1. **মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -639,6 +651,18 @@
    (c) \frac{3}{4}
    (d) \frac{3}{14}
    **Ans: d**
+
+3. **১০ টি বইয়ের মধ্যে ৪টি বই কত প্রকারে বাছাই করা যায়, যাতে নির্দিষ্ট দুইটি বই সর্বদা বাদ থাকে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+   A. 210
+   B. 70
+   C. 45
+   D. 360
+
+4. **DIGITAL শব্দটি বর্ণগুলিকে কত প্রকারে সাজানো যায় যাতে স্বরবর্ণগুলি একত্রে থাকে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 320
+   B. 430
+   C. 210
+   D. 360
 
 ## Set Theory
 

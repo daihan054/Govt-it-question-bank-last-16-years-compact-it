@@ -72,6 +72,12 @@
    c. SDRAM
    d. SRAM
 
+13. **কোন বৈশিষ্ট্যের কারণে অজগ স্থায়ী স্মৃতি-স্টোরেজ হিসেবে ব্যবহার অনুপযোগী?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. Too Slow
+   B. Unreliable
+   C. Volatility
+   D. Too Bulky
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -109,6 +115,12 @@
    b) Parity Flag
    c) Zero Flag
    d) State Plag
+
+7. **In a memory-mapped I/O system, which one is not present?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. LDA
+   B. IN
+   C. ADD
+   D. OUT
 
 ## Secondary Storage (HDD & Disk Organization)
 
