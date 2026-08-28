@@ -136,6 +136,8 @@
 
 17. **What is MAC flooding attack? What is the impact of this switch?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 753]**
 
+18. **(b) Distinguish between phishing and pharming. Give examples to explain.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 801]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

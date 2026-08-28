@@ -218,6 +218,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 11. **What is UDP protocol? UDP is reliable or not? Explain why or why not?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 754]**
 
+12. **The primary function of the Transmission Control Protocol (TCP). TCP performs six basic functions. What are the basic function performing by TCP?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807-808]**
+
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -505,6 +507,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 67. **(ii) CIDR কী? 192.168.100.9/26 IP address থেকে (a) Total subnets (b) Block size (c) Valid Hosts (d) Total hosts বের করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 788]**
 
+68. **(a) What is the usable number of host IP addresses available on a network that has a /26 mask? Write down the subset mask of this network. Write down the first and the last IP address that can be assigned to host PCs if the network address is 192.168.30.128/26. What address should be used for broadcast purpose in this Network?** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 801-802]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -689,6 +693,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 15. **(d) What is DNS? “TCP/IP is used in DNS”- justify the statement.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
 
+16. **(b) How is Hierarchical DNS resolution done in Domain Naming System? Give an example resolution for xyz.uv.gov.bd domain name.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
+
 ## Email Architecture & Protocols (SMTP, POP3, IMAP)
 
 1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
@@ -763,6 +769,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 2. **(c) Explain IPTV and VOIP.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
 
+3. **Write the full form of the given technologies CX, IGW and IIG. Write feature of there technologies.** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 806]**
+
+4. **TSCM এর কাজ কী? VoIP পরিচালনায় কী কী সরঞ্জামের প্রয়োজন হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 810]**
+
 ## Satellite Communication
 
 1. **(b) Difference between active and passive satellites.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
@@ -786,3 +796,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 7. **5G প্রথম কত সালে ও কোথায় চালু হয়?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 8. **(ক) Wi-Fi Network সম্পর্কে সংক্ষিপ্ত বিবরণ দিন। Wi-Fi Sensor Network এবং Ad Hoc Network এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
+
+9. **Call Drop কী? এর কারণ গুলো উল্লেখ করুন।** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 810]**

@@ -132,6 +132,8 @@
 
 5. **E-commerce ভিত্তিক ৪টি সাইটের নাম লিখুন?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
+6. **Describe in Bangali or English on the post COVID-19 social challenge that Bangladesh may can front end the way ICT can support to overcome them.** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 809]**
+
 ## Digital Banking & Financial Inclusion
 
 1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**

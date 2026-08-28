@@ -56,6 +56,8 @@
 
 9. **(খ) যদি A-B = \{1, 5, 7, 8\}, B-A = \{2, 10\} এবং A \cap B = \{3, 6, 9\} হয়, তবে A, B Set এর মান কত?** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 779]**
 
+10. **(a) Out of ten families, six families have dogs, four have cats and two have neither cats nor dogs. Find the number of families that have both cats and dogs?** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 806]**
+
 ## Percentage, Profit & Loss, Simple & Compound Interest
 
 1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
@@ -155,3 +157,5 @@
 ## Discrete Mathematics & Recurrence Relations
 
 1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 592]**
+
+2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 806]**

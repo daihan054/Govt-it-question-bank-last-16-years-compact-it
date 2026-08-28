@@ -12,9 +12,13 @@
 
 6. **Find R and I from a circuit.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**
 
+7. **Audio Frequency ও Radio Frequency এর মধ্যেকার পার্থক্য লিখুন। ১০ ওহমের ১০টি ট্রানজিস্টর কোন সিরিজে সংযুক্ত হলে তাতে রেজিস্ট্যান্স কত হবে?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 810]**
+
 ## AC Circuits & Power Analysis
 
 1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
+
+2. **RLC সার্কিট কী? বৈদ্যুতিক সার্কিটে ট্রানজিস্টরের ভূমিকা কী?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 809-810]**
 
 ## Semiconductor Devices & Diodes
 
@@ -23,6 +27,8 @@
 2. **Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
 
 3. **What is Diode and Inductor?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+
+4. **How does LED differ from Laser Diod? What are the function of Diode?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808]**
 
 ## Transistors (BJT & FET)
 
@@ -45,6 +51,8 @@
 ## Operational Amplifiers (Op-Amp)
 
 1. **Assuming Ideal Op Amps, Find The Voltage Gain V_o/V_i of the following circuit.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+
+2. **একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 809]**
 
 ## Sensor Circuits & Automated Control Systems
 

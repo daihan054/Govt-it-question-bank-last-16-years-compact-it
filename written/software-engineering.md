@@ -68,6 +68,8 @@
 
 29. **(i) Black Box testing and White Box testing এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
 
+30. **(a) Distinguish between black box and white box testing. Give examples of both type of testing** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**

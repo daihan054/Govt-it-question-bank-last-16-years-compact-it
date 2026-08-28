@@ -33,6 +33,8 @@
 
 16. **(ii) Database এর Table and View এর মধ্যে পার্থক্য লিখুন। E-R diagram এর প্রয়োজনীয়তা লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
 
+17. **(a) Distinguish between table and view in database management system.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -309,6 +311,8 @@ ORDER BY average_salary DESC;
 
 49. **SQL Query:** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
+50. **(c) In a SQL query, while performing string matching when do we use operator and when we use LIKE operator? Give examples.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 803]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -471,6 +475,8 @@ ORDER BY average_salary DESC;
 
 13. **(খ) Relational Database Design এ Primary Key ও Foreign Key বলতে কি বুঝায়? উদাহরণসহ লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
 
+14. **(b) What are purpose of using foreign key in a database? Give suitable example.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
+
 ## Indexing in DBMS
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -501,6 +507,8 @@ ORDER BY average_salary DESC;
 8. **Draw an entity diagram Student database management systemfrom following statement: Student (data); Course (data); Report (data); Registration; Staff (data)** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 759]**
 
 9. **(ক) Entity-Relationship (ER) Diagram কেন ব্যবহার করা হয়? একটি উদাহরণের মাধ্যমে ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
+
+10. **(a) While converting E-R diagram into Tables, how is a Many-to-many relationship set between entities A and B is converted into database tables?** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
 
 ## Database Connectivity (JDBC)
 

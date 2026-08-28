@@ -126,6 +126,8 @@ class Test {
 
 4. **What is constructor?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
+5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
+
 ## C++ OOP Concepts & Friend Functions
 
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1355]**

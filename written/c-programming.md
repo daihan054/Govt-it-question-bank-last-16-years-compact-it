@@ -281,6 +281,8 @@ return 0;
 
 66. **(b) Write a program in C/C++/Java to identify the largest number of given 3 numbers.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 791]**
 
+67. **(b) Write down a program in C language that will find the maximum of four integer gives as inputs.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

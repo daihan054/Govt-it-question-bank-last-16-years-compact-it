@@ -48,6 +48,8 @@
 
 3. **What is Hyper threading? What is the use of it?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
 
+4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808]**
+
 ## 8085 Microprocessor & Edge Computing
 
 1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।
@@ -100,6 +102,8 @@
 
 7. **What is the use of cache memory?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
+8. **Some of the factors determine the performance of a computer system. Cache memory is one of them. Why cache memory is one of the factors to determine the performance of a computer system?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807]**
+
 ## Memory Hierarchy & Storage
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -141,6 +145,8 @@
 4. **How can you define SSD?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
 5. **(খ) Solid State Drives (SSD) এর কার্যপ্রণালী ও ব্যবহার লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
+
+6. **In a solid state drive data is sarved to a pool of NAND flash. NAND itself is made up of what are called floating gate transmission. How does floating gate transmission store 0 and 1?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808-809]**
 
 ## RAID Architecture & Storage
 
