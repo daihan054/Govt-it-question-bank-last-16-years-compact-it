@@ -167,6 +167,8 @@ Words have a lot of power. They can help or hurt, bless or curse. Unkind words d
 20. **Translate the following passage into Bangla:** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 “He decided to pull out of the agreement at the eleventh hour. This sudden move took everyone by surprise and put the entire project at stake. Had he informed the team beforehand, we could have easily made alternative arrangements. Now, we are left with no other choice but to start everything from scratch. It just goes to show that you cannot always take people at their word.”
 
+21. **(a) বাংলায় অনুবাদ করো: "Cybersecurity protects information systems from unauthorized access."** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
 ## এক কথায় প্রকাশ (One Word Substitution)
 
 1. **এক কথায় প্রকাশ: ৫ টি?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**

@@ -41,6 +41,8 @@
 
 5. **What is Cloud Computing? What are its characteristics? Briefly describe the types of cloud computing.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
+6. **Explain cloud computing and evaluate its advantages and disadvantages.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
 ## Virtualization & Resource Allocation
 
 1. A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ GB} storage. Calculate the maximum number of VMs that can be hosted on the server without overcommitting resources. Identify which hardware resource limits the number of VMs. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

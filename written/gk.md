@@ -244,6 +244,8 @@
 
 7. **5.1 What is the full form of NPSB in the banking sector of Bangladesh?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
+8. **(b) Write the full forms of OTP and VPN.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
 ## International Affairs
 
 1. What is the name of the central bank of the United Kingdom? [SO IT 25-07-2026]

@@ -70,6 +70,8 @@
 
 34. **Focus Writing in English: The Importance of Digital Literacy in Expanding Cashless Transactions in Bangladesh: Discuss how digital skills influence financial inclusion, the adoption of digital payment systems, and the challenges of building a cashless economy.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
+35. **(e) Write a short paragraph arguing for or against the statement "AI will eventually replace human workers in most professions."** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
@@ -212,6 +214,10 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 27. **৮. What's the time _____ your watch?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
 
 28. **১০. Since we grow the locally, we need not to _____ it.** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+29. **(d) Correct the sentence:** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+i. "He doesn't know anything about computers."
+ii. The data were collected and it were analyzed carefully.
 
 ## English Vocabulary & Antonyms
 

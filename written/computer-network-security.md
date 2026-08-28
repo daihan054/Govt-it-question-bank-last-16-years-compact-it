@@ -56,6 +56,8 @@
 
 28. **What is Encryption? What are the types? Explain the role of Encryption in security.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
+29. **Write the differences among encryption, hashing, and digital signatures. Mention their uses in cybersecurity.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -72,11 +74,15 @@
 
 7. **Information System কী? Information Syetem -এর সুরক্ষায় প্রয়োজনীয় পদক্ষেপ সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 883-884]**
 
+8. **(a) What is the CIA triad of information system? Briefly describe its each component.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
 ## Critical Information Infrastructure (CII) & Cyber Governance
 
 1. What is CII? How many CII organizations? Name 10 CII organization name. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
 2. **CTC কী? কী কাজে ব্যবহার হয়?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+3. **(c) Briefly write about the cybersecurity laws of Bangladesh.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
 ## Malware & Security Threats
 
@@ -184,6 +190,12 @@
 
 23. **Which security attacks (given) occur on client side or server side?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
 
+24. **(b) What is an ARP poisoning attack, and how does it work?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
+25. **What is a Man-in-the-Middle (MITM) attack? Describe two countermeasures to prevent it.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
+26. **What is a DoS attack? Explain the mechanism of a DDoS attack and how it differs from a simple DoS attack.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -222,6 +234,8 @@
 14. **Write difference between Antivirus and Firewall.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
 
 15. **What is firewell? Draw a LAN network to showing firewall.** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
+
+16. **As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
 ## VPN & Tunneling Protocols (IPsec, SSL VPN)
 

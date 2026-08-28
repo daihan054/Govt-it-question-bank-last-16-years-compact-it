@@ -228,6 +228,8 @@
 
 43. **What is the OSI model? Explain the functions of each layer with examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
+44. **(b) Name the OSI layers and give one example of a cyber threat at any tree of those layers.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -336,6 +338,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **Do you prefer packet switching compared to circuit switching in communication network? If Yes, why? How does packet switching work step by step? What applications use packet switching?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 536]**
 
 4. **Why is packet suiting suitable for digital data transmission?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
+
+5. **Why is packet switching more suitable for internet communication?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
 ## Flow Control & Data Link Layer (Stop-and-Wait)
 
@@ -681,6 +685,8 @@ ii) 211.10.15.4
 (b) What is the new Subnet Mask in dotted-decimal format?
 (c) Write down the Network Address, the First Usable IP, and the Broadcast Address for the second subnet created. Show your calculation.
 
+97. **What is subnetting? For the network 192.168.1.0/22, how many usable host addresses does it have?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -744,6 +750,8 @@ ii) 211.10.15.4
 11. **(a) Differentiate between IPV4 and IPV6.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
 
 12. **Write difference Between IPv4 and IPv6.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
+13. **(a) What are the differences between IPv4 and IPv6, and why is IPv6 considered more secure?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
 ## Routing Protocols & Route Configuration
 
@@ -1064,3 +1072,5 @@ ii) 211.10.15.4
 15. **Make a list of LTE Network elements.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 988]**
 
 16. **Explain Bluetooth, Wi-Fi and Cellular Network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
+
+17. **Describe Wi-Fi, Bluetooth, and WiMAX.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
