@@ -633,6 +633,12 @@
    C) Both (i) and (iii) are valid
    D) All of these
 
+8. **Variable which use same name in whole program and in its all routines thus best classified as-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 213]**
+   A) middle variable
+   B) default variable
+   C) local variable
+   D) global variable
+
 ## Flowcharts & Algorithms
 
 1. **In flowchart what does below represent?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
@@ -667,3 +673,9 @@
    B) char int
    C) int long;
    D) float double;
+
+4. **What is the precedence of arithmetic operators (from highest to lowest)?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]**
+   A) %, +, /, *, -
+   B) +, -, %, *, /
+   C) %, +, -, *, /
+   D) %, *, /, +, -

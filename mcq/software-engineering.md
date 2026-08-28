@@ -146,6 +146,24 @@
    C) White-box testing
    D) Load Testing
 
+16. **Testing of software with actual data and in actual environment is known as-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]**
+   A) Regression testing
+   B) Beta testing
+   C) Alpha testing
+   D) None of these
+
+17. **A Non-Functional Software testing is done to check if the user interface is easy to use and understand-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 212]**
+   A) Security Testing
+   B) Unit testing
+   C) Block Box Testing
+   D) Usability Testing
+
+18. **The name of the testing which is done to make sure the existing features are not affected by new changes** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 213]**
+   A) Recursive testing
+   B) Regression testing
+   C) Whitebox testing
+   D) Unit testing
+
 ## SDLC Models
 
 1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
@@ -195,6 +213,24 @@
    B) Testing
    C) Deployment
    D) Design
+
+9. **Program background, program functions and computing requirements are part of-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 212]**
+   A) decision box
+   B) statement box
+   C) operations detail
+   D) none of these
+
+10. **Waterfall model phase in which system design is prepared and this system design helps is specifying system requirements and define overall system architecture is-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
+   A) planning
+   B) modeling
+   C) construction
+   D) communication
+
+11. **Which of the following is not a Software Development Life Cycle Phase?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
+   A) Test Closure
+   B) Coding
+   C) Testing
+   D) None of these
 
 ## Design Patterns
 

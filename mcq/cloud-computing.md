@@ -57,3 +57,15 @@
    b) Security and location
    c) Granular climate control
    d) Cost of building data centers
+
+7. **Which of the following type is not supported for mobile application viewing for Google docs?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 212]**
+   A) Spreadsheets
+   B) Word processor files
+   C) Database files
+   D) All of these
+
+8. **Which of the following web service can be controlled by iAWSManager cloud app from an iPhone?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
+   A) EC2
+   B) ELB
+   C) SQS
+   D) All of these

@@ -239,6 +239,12 @@
    C) DNS Server
    D) FTP Server
 
+33. **To cheek to see of the Web server you are trying to reach is available or is down, which command line utility should you use?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 211]**
+   A) PING
+   B) ICS
+   C) Telnet
+   D) None of these
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -297,6 +303,12 @@
    B) 128 bits
    C) 64 bits
    D) 256 bits
+
+11. **What is not the advantage of IPv6 over IPv4?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]**
+   A) longer address
+   B) Classification of traffic
+   C) More real IP addresses
+   D) Jumbo Payload
 
 ## Networking Fundamentals & Terminology
 
@@ -425,6 +437,18 @@
    B) Channel
    C) Link
    D) Block
+
+20. **What type of network provides access to the regional service providers and typically span distances greater than 100 miles?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 211]**
+   A) LAN
+   B) MAN
+   C) WAN
+   D) WLAN
+
+21. **Which of the following medium is used for broadband local networks?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 213]**
+   A) Coaxial
+   B) Optic fiber
+   C) CATV
+   D) DUTP
 
 ## Multiplexing & Data Rate
 
@@ -747,6 +771,12 @@
    C) 127.0.0.0
    D) 127.0.0.1
 
+22. **To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask used should be:** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
+   A) 255.255.255.0
+   B) 255.255.255.192
+   C) 255.255.255.240
+   D) 255.255.255.78
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -802,6 +832,12 @@
    B) CSMA/CA
    C) Demand Priority
    D) Polling
+
+10. **Five components that make up a data communications system are message, sender, receiver, medium and-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
+   A) Code
+   B) Connecting device
+   C) Protocol
+   D) All of these
 
 ## Routing Protocols
 
@@ -982,6 +1018,24 @@
    C) 3
    D) Multiple
 
+18. **Device which converts digital signals into sound and sound from telephone handset into digital signals is classified as-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 211]**
+   A) digital coupler
+   B) analogue coupler
+   C) acoustic coupler
+   D) terminal coupler
+
+19. **A device that allows one of several analog or digital input signals which are to be selected and transmits input that is selected into a single medium is called-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 213]**
+   A) signal changer
+   B) multiplexer
+   C) de-multiplexer
+   D) digital transmitter
+
+20. **Any hardware or software which is used to connect two devices by enabling them to communicate is classified as-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 213]**
+   A) analogue modem
+   B) digital modem
+   C) analogue interface
+   D) interface
+
 ## Error Detection & Correction
 
 1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -995,6 +1049,12 @@
    (b) Two-dimensional parity check
    (c) CRC
    (d) a and b
+
+3. **Type of error which occurs when data is transferred from one device to another is classified as-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 212]**
+   A) transmission error
+   B) interval error
+   C) software error
+   D) discontinued error
 
 ## OSI & TCP-IP Model
 
@@ -1033,6 +1093,12 @@
    B) 5
    C) 9
    D) 7
+
+7. **________ Provides a connection oriented reliable service for sending message.** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 211]**
+   A) TCP
+   B) IP
+   C) UDP
+   D) None of these
 
 ## Switching Techniques
 

@@ -82,6 +82,18 @@
    c) MVC
    d) Spring
 
+3. **What will be the output of the following PHP code? <?php "Hello World" ?>** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 211]**
+   A) Error
+   B) Hello World
+   C) Nothing
+   D) None of this
+   16. What is the output of the code shown?
+   %(qty)d more %(food)s'%{'qty':1,'food':'spam'} **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 211]**
+   A) Error
+   B) 1 more spam
+   C) No output
+   D) 1 more foods
+
 ## CSS & Styling
 
 1. **Which CSS property is used to set the thickness or boldness of the text?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**

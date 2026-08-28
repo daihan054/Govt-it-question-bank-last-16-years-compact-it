@@ -163,6 +163,12 @@
    c) \theta(1)
    d) \theta(n^2)
 
+18. **The term push and pop are related to the-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 212]**
+   A) array
+   B) stacks
+   C) lists
+   D) All of these
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**

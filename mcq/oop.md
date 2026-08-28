@@ -330,6 +330,12 @@
    C) Polymorphism
    D) Overloading
 
+6. **Which of the following provides a programmer with the facility of using object of a class inside other classes?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
+   A) Inheritance
+   B) Abstraction
+   C) Encapsulation
+   D) Composition
+
 ## Inheritance
 
 1. **When a class serves as base class for many derived classes, the situation is called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**

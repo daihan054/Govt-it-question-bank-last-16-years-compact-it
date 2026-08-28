@@ -47,6 +47,18 @@
    C) Extended and Specialized
    D) Standard and IEEE
 
+4. **Special set of characters that computer associates with specific user identification is classified as ____.** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]**
+   A) password
+   B) identity code
+   C) inquiry code
+   D) dump code
+
+5. **Issuance of cash through terminal outside bank is an example of-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 213]**
+   A) terminals
+   B) interfaces
+   C) hardware devices
+   D) telecommunication
+
 ## Security Protocols
 
 1. **Which of the items listed below is the least strong security protocol?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**

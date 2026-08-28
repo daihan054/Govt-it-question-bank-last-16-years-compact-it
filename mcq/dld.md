@@ -300,6 +300,12 @@
    C) -128
    D) 256
 
+29. **Number of bits in 'BCD' code used in computing are-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
+   A) seven bits
+   B) twelve bits
+   C) eighteen bits
+   D) six bits
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

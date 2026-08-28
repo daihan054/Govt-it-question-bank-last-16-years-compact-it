@@ -467,6 +467,42 @@
    c) speedup
    d) Data Warehouse
 
+20. **In user facilities, copying of all records onto a main store from permanent store is considered as-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
+   A) delete file
+   B) rename file
+   C) save file
+   D) load file
+
+21. **If master and transaction file have keys in same order, then it takes____** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
+   A) less time
+   B) more time
+   C) many hours
+   D) many days
+
+22. **File used to update information in computer's master file is classified as** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]**
+   A) transaction file
+   B) direct file
+   C) order file
+   D) sequence file
+
+23. **Interleaving of records to form one file containing all records is classified as ____.** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 212]**
+   A) merging
+   B) finding
+   C) file learning
+   D) searching
+
+24. **Set of numbers used to check all groups record within limits of data is classified as-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 213]**
+   A) variable check
+   B) decimal check
+   C) type check
+   D) range check
+
+25. **Process of converting data or information in the form of which is readily available for processing is called-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
+   A) encoding
+   B) decoding
+   C) translating
+   D) data organization
+
 ## Transaction Management & ACID
 
 1. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -840,6 +876,18 @@
    b) Open module connectivity
    c) Open database connectivity
    d) Close database connectivity
+
+3. **A major challenge in mixing SQL with a general-purpose language is mismatching in the** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
+   A) Definition of data
+   B) Manipulation of data
+   C) Execution of data
+   D) Output of data
+
+4. **Once connection is set up, program can send SQL commands to database by using** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]**
+   A) SQLExcelConn
+   B) SQLDirect
+   C) SQLExcelDirect
+   D) SQLConnect
 
 ## Concurrency Control & Locking
 

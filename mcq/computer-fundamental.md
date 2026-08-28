@@ -84,6 +84,12 @@
    c. 1950
    d. 1970
 
+15. **All decimal values and integers are included in set of** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
+   A) whole numbers
+   B) natural numbers
+   C) real numbers
+   D) integers
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -407,6 +413,18 @@
    b. Cobra
    c. Joule
    d. Tesla
+
+17. **Type of software which is designed for users to customize programs is-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
+   A) freeware
+   B) shareware
+   C) macros
+   D) none of these
+
+18. **Language compilers and interpreters does not translate statements correctly when they have____** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
+   A) transcription error
+   B) base errors
+   C) syntax error
+   D) logical error
 
 ## Acronyms & Abbreviations
 

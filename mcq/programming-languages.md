@@ -57,6 +57,12 @@
    C) Class
    D) Tuples+95
 
+10. **What are the values of the following expressions? 2** (3**2), (2**3) **2, 2**3**2** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]**
+   A) 64, 512, 64
+   B) 64, 64, 64
+   C) 512, 512, 512
+   D) 512, 64, 512
+
 ## Mobile & Android Development
 
 1. **What is the API level of Android version 11?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
