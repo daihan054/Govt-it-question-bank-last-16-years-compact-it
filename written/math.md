@@ -58,6 +58,8 @@
 
 10. **(a) Out of ten families, six families have dogs, four have cats and two have neither cats nor dogs. Find the number of families that have both cats and dogs?** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 806]**
 
+11. **(c) Using truth table finds which of the following implications are equivalent to p \to (p \lor \neg(p \land q)) is a contradiction.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 890]**
+
 ## Percentage, Profit & Loss, Simple & Compound Interest
 
 1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**

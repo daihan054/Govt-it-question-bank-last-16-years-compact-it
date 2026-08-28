@@ -21,6 +21,8 @@
    Drop box
    Amazon Web Services (AWS)
 
+9. **(c) What are the three types of services provided by the cloud?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888]**
+
 ## Cloud Storage & Fundamentals
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

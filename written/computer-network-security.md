@@ -46,6 +46,8 @@
 
 23. **Write two symmetric key algorithm name.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
 
+24. **(b) Describe secret key and public key encryption.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

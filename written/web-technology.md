@@ -14,6 +14,8 @@
 
 7. **(b) Distinguish between http and https.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
+8. **(c) Explain the difference between Stateless and Stateful protocols. Which type of protocol http is?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 885-886]**
+
 ## JavaScript & jQuery (DOM & Validation)
 
 1. **Jquery for email validation** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

@@ -64,6 +64,10 @@ int main(int argc, char *argv[]){
 
 7. **What is Multi-threading and multi-tasking? Difference between Multi-threading and Multi-tasking?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 854]**
 
+8. **(c) What is thread? Give some benefits of multi-threaded programming.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 889-890]**
+
+9. **(d) Differentiate between thread and process.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891]**
+
 ## Linux / Unix Commands & Administration
 
 1. **Write Linux command:** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**
@@ -340,6 +344,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 13. **Briefly explain the concept of ‘Thrashing’ in terms of OS.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 822]**
 
+14. **(a) What do you mean by virtual memory?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+
 ## Process Management & Process States
 
 1. **(b) What is process? Describe different states of a process.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
@@ -407,6 +413,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 15. **(b) What are the conditions for deadlock situations? Explain briefly.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 688]**
 
 16. **Banker's Algorithm: 5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances). Snapshot at time T_0. The content of the matrix. Need is defined to be \text{Max} - \text{Allocation}. Check that \text{Request} \le \text{Available}. Executing safety algorithm shows that sequence \langle P_1, P_3, P_4, P_0, P_2 \rangle satisfies safety requirement.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 855]**
+
+17. **(a) What is Artificial Intelligence (AI)? What are the necessary conditions for a deadlock in an operating system?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 890]**
 
 ## File Systems & Disk Management
 

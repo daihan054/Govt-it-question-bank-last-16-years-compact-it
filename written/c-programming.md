@@ -302,6 +302,8 @@ return 0;
 
 72. **(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the sum of main diagonal elements of the matrix.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 884]**
 
+73. **(b) Write down a program to find sum of diagonal elements of a two dimensional matrix.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -348,6 +350,8 @@ return 0;
 
 9. **What is the purpose of '\0' character in C?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
 
+10. **(c) Write down a program to find length of a string without using any library function.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892]**
+
 ## Pointers
 
 1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
@@ -355,6 +359,8 @@ return 0;
 2. **(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
 
 3. **Describe Dynamic memory allocation in programming in C?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
+
+4. **(a) What is the difference between array and pointer?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891-892]**
 
 ## Operators, Data Types & Language Concepts
 

@@ -27,6 +27,8 @@
 
 12. **BCD code – এ কতগুলি বিট থাকে?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
 
+13. **(b) Convert the following Octal number into Decimal and Hexadecimal: (651)_8** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891]**
+
 ## 2's Complement & Binary Arithmetic
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
@@ -72,6 +74,8 @@
 
 3. **Difference between Analog and Digital Circuit.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 873]**
 
+4. **(c) What is fan-in and fan out?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891]**
+
 ## Boolean Algebra & De Morgan’s Theorem
 
 1. **(a) State De-Morgan’s law with an appropriate example.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
@@ -89,6 +93,10 @@
 7. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
 
 8. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 876]**
+
+9. **(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 890]**
+
+10. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 890-891]**
 
 ## Logic Gates & Universal Gates
 

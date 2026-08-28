@@ -247,6 +247,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 12. **The primary function of the Transmission Control Protocol (TCP). TCP performs six basic functions. What are the basic function performing by TCP?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807-808]**
 
+13. **(b) Distinguish between TCP and UDP protocols.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886]**
+
+14. **(c) What is purpose of routers? How congestion control works in the TCP?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886-887]**
+
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -371,6 +375,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 10. **Two channels, one with a bit rate of 190kbps and another with a bit rate 180 kbps are to be multiplexed using pulse stuffing TDM with no synchronization bits. Answer the following questions: (a) What is the size of a frame in bits? (b) What is the frame rate? (c) What is the duration of a frame? (d) What is the date rate?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
 
 11. **What is Multiplexing? Write about Time division Multiplexing.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870]**
+
+12. **(a) Distinguish between Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM).** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888]**
 
 ## Subnetting & IP Addressing
 
@@ -560,6 +566,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 75. **What is the range of class C IPv4 address? Suppose, Class C network has four subnets. How many usable PC needed each subnet?** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875-876]**
 
+76. **(a) What is the subnet mask of 10.2.1.3/26 and What is the usable number of IP address on network that has a 26 mask?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -613,6 +621,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 9. **What is DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
 
 10. **Explain IPv6 link local address and multicast address.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
+
+11. **(a) Differentiate between IPV4 and IPV6.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
 
 ## Routing Protocols & Route Configuration
 
@@ -889,3 +899,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 10. **LTE কী? এর এডভান্সড প্রযুক্তির নাম লিখুন।** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
 
 11. **Wi-Fi, Bluetooth, Wi-Max, Cellure network এইগুলোকে দূরত্বের ক্রমানুসারে ছোট থেকে বড় এর দিক অনুসারে লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 867]**
+
+12. **(c) Difference between broadband Wi-Fi and Wi-Max communication technology.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**

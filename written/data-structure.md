@@ -74,6 +74,8 @@ Output: Not Balanced
 
 10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 851-852]**
 
+11. **(a) What are the differences between linked list and array data structure?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
+
 ## Tree
 
 1. Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term. [SO IT 25-07-2026]

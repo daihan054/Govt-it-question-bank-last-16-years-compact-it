@@ -405,6 +405,8 @@ From t;
 
 15. **What is DBMS? Write down the purpose of normalization in DBMS.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
+16. **(b) What is normalization? Why is it needed?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
@@ -420,6 +422,8 @@ From t;
 4. **(b) Describe the application of trigger in database.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
 
 5. **Suppose, ‘Employee’ table (emp_id, emp_name, dept_id, salary) and ‘Department’ table (dept_id, dept_name, increment_dept). Create a tigger to increment the salary of the employee by 10% whose salary is above 30000.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
+
+6. **(a) What is the purpose of database trigger? Explain with an example.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
 
 ## Database Backup & Disaster Recovery
 
@@ -487,6 +491,8 @@ From t;
 
 8. **What is a weak entity for data modeling using the entity relationship model find out any weak entity and its identify relationship for the school database? Which of the following table? Student(student_id, student_name, admission_year) Teacher(teacher_id, teacher_name, teacher_joindate) Course(course_id, subject_name, credit)** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 814]**
 
+9. **(c) What is a weak entity set? How the primary key is generated for weak entity set?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
+
 ## Keys in DBMS
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -522,6 +528,8 @@ From t;
 16. **What is Primary key, Unique key and Forgein key.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
 17. **Database Management System (DBMS) বলতে কী বোঝেন? Relational database -এ Primary key এবং Foreign key -এর ভূমিকা উদাহরণসহ সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 882]**
+
+18. **(b) Explain the different type of database keys with examples.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
 
 ## Indexing in DBMS
 

@@ -95,6 +95,10 @@ for i in N:
 
 20. **(a) Compaire and contrast between Quick sort and Merge sort in terms of their time and space complexity.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 793]**
 
+21. **(b) Difference between Heap Sort and Merge Sort.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 885]**
+
+22. **(a) How the quick sort is implemented? What is the complexity of quick sort?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892, 895]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
@@ -139,6 +143,8 @@ for i in N:
 
 4. **(b) Define Eulerian path. What are the necessary and sufficient conditions for the Eulerian path? Expalin.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
 
+5. **(c) What is a strongly connected graph?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+
 ## Graph Representation (Adjacency Matrix vs List)
 
 1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 495]**
@@ -174,6 +180,8 @@ for i in N:
 13. **True false (DFS/ Directed graph related) [হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]**
 
 14. **Draw BFS and DFS tree starting node A-** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 878]**
+
+15. **(c) Between Depths first search (DFS) and Breath first search (BFS). Which one is faster? Which one requires more memory?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
 
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 

@@ -15,6 +15,8 @@
 
 6. **What do you mean by machine learning? Name three machine learning application in our daily life?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 680]**
 
+7. **(b) What is the difference between supervised and unsupervised learning? Explain with examples.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
+
 ## Search Algorithms (Informed vs Uninformed Search)
 
 1. **Write down the difference between informed and uninformed search algorithm.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
