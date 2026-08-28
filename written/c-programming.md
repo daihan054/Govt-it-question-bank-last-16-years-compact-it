@@ -275,6 +275,10 @@ return 0;
 
 63. **Consider int num[20][4] holds the marks of four class test(CT) of a class of 20 students. Write a program to find out the sum of best three CT marks for each student.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 748]**
 
+64. **(ক) নিচের সিরিজ টি ক্যালকুলেটর এবং প্রিন্ট করার জন্য একটি C Program লিখুন। 1 + 2 + 3 + \dots + 100** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 776]**
+
+65. **(খ) তোমার ক্লাসের ছাত্রদের তালিকা Sort করার জন্য একটি C Program লিখ।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 776]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -559,6 +563,19 @@ void main() {
     y=6+3*3/5;
     i=x*x+y;
     printf("%d", i);
+}
+```
+
+20. **(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 783]**
+```c
+include<stdio.h>
+int main{
+    int i, sum=0
+    for(i=1,i<=10,i++;{
+        sum=sum+i
+    }
+    printf(Sum of number=d, sum)
+    return 0
 }
 ```
 

@@ -18,6 +18,8 @@
 
 9. **How to works networks?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
 
+10. **(খ) Address গুলির সংক্ষিপ্ত বর্ণনা দিন। (i) Port Number (ii) IP অ্যাড্রেস (iii) MAC অ্যাড্রেস।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 775]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -65,6 +67,8 @@
 9. **Where are the low loss transmission windows of silicon based optical fiber and Which window is the most popular in communication and wave. Draw diagram of a long haul WDM Transmission system.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
 
 10. **A 1550nm fiber optic transmission Link if of 50km length without repeating with a signal mode fiber having loss of 0.2dB/km. The fiber is joined ever 2km with conductor each with 0.5dB loss. Determine the minimum average power which should be lunched in to the fiver in order to Tarantion an average optical power level of 10 micro-watts at the receiver.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 766]**
+
+11. **কোন মাধ্যমে আলোর Pulse ব্যবহৃত হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
 ## Network Topologies
 
@@ -154,6 +158,8 @@
 29. **What is PDU?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 702]**
 
 30. **(খ) Computer network এর OSI 7-Layer গুলো উদাহরণসহ লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
+
+31. **Computer Network এ OSI Model এর Layer কয়টি?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -255,6 +261,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **(খ) Congestion কী? Network-এ কীভাবে Congestion নিয়ন্ত্রণ করা যায়? আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
 4. **Unit of data link layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+5. **(ক) নেটওয়ার্কে ডাটা প্যাকেটে trailer কোথায় এবং কেন ব্যবহার করা হয়? উদাহরণ দিন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 775]**
 
 ## Line Coding & Digital Encoding
 
@@ -531,6 +539,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 6. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
 
+7. **IPv6 address কত বিটের?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
 ## Routing Protocols & Route Configuration
 
 1. A BGP router receives multiple routes to the same destination network from different neighboring autonomous systems. The available routes are given in the following table, containing Path, LOCAL_PREF, AS_PATH, ORIGIN, and MED values. Using the standard BGP best-path selection rules, analyze the attributes in the given order and determine which path will be selected as the best route, showing the comparison and justification for each step. [BSCCPL AME 21-08-2026 (BUET)]
@@ -670,6 +680,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **Which protocol is used for email received?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 4. **(a) Distinguish the purpose of SMTP and IMAP in email communication.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 688]**
+
+5. **Email এর ক্ষেত্রে CC এবং BCC এর অর্থ কি বুঝায়?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
 
 ## Data Rate & Channel Capacity (Nyquist, Shannon)
 

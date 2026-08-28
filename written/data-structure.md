@@ -32,6 +32,8 @@
 
 14. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
 
+15. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 774]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]

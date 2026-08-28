@@ -8,6 +8,10 @@
 
 4. **Difference between High level languages and low level language with some example?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 739]**
 
+5. **Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+6. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
 ## User Interfaces (CLI vs GUI)
 
 1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -74,6 +78,18 @@
 
 27. **Difference between Data and Information.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 739]**
 
+28. **পূর্ণরূপ লিখুন: BTRC, MICR, SMTP, Virus, Wimax.** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
+
+29. **Internet চালু হয় কত সালে?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+30. **আধুনিক Computer এর জনক কাকে বলা হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+31. **Unicode এর মাধ্যমে সম্ভাব্য কতগুলো চিহ্নকে নির্দিষ্ট করা যায়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+32. **Computer এর IQ কত?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+33. **Bangla font এর উদ্ভাবক কে?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -102,6 +118,8 @@
 
 13. **What is the difference between UEFI and BIOS?** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 724]**
 
+14. **Plotter কোন ধরনের Device?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
 ## ICT in Society & Governance
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
@@ -111,6 +129,8 @@
 3. **What do you mean by viral video? List three advantages of viral vedio.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
 
 4. **(ক) IR 4.0 বলতে কি বুঝায়? IR 4.0 এর গুরুত্বপূর্ণ উপাদানগুলো লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 766]**
+
+5. **E-commerce ভিত্তিক ৪টি সাইটের নাম লিখুন?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
 ## Digital Banking & Financial Inclusion
 

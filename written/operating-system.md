@@ -24,6 +24,8 @@
 
 12. **What is kernel? Write down the objectives of kernel.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 740]**
 
+13. **IBM প্রতিষ্ঠান কর্তৃক কোন Operating System প্রস্তুত করা হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -373,3 +375,5 @@ The content of the matrix. Need is defined to be Max – Allocation.
 1. **NTFS stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
 2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 610]**
+
+3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**

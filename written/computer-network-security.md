@@ -70,6 +70,10 @@
 
 5. **What is Trojan horse virus?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
+6. **Computer এর Virus কি?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
+
+7. **Trojan Horse কি?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
 ## Email & Messaging Security (Spam, Phishing)
 
 1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**

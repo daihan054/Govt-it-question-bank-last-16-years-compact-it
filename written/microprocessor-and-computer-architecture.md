@@ -36,6 +36,10 @@
 
 14. **Explain four type of register.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
 
+15. **(খ) Typical মাইক্রোকম্পিউটারে কী কী বাস থাকে। একটি মাইক্রোপ্রসেসর এর সাথে RAM, ROM এবং I/O এর কানেকশন বাস এর মাধ্যমে দেখাও।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 777]**
+
+16. **CPU এর অর্থ কি? এর কয়টি অংশ ও কি কি?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

@@ -88,6 +88,8 @@
 
 8. **How do you model the following situation with a UML class diagram the car fleet of a car rental contains multiple cars, one car belongs to exactly one car fleet.** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
+9. **(ক) Typical web-based login system এর জন্য sequence diagram আঁকুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 778]**
+
 ## Software Requirements Engineering
 
 1. What is the difference between functional and non-functional requirements? What is requirement validation? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -173,6 +175,8 @@
 32. **From the diagram write down the process of prototype development.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 758]**
 
 33. **From the diagram write down the software evolution.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
+
+34. **(খ) SDLC diagram সহ বর্ণনা করুন। SDLC এর মেজর phases গুলি কী?** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 779]**
 
 ## Software Architecture & Design Patterns (MVC)
 
