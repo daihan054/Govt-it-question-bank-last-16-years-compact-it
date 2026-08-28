@@ -518,6 +518,12 @@
    c) Wi-Fi Mesh Network Systems
    d) Wi-Fi Ring Network Systems
 
+18. **When an ongoing call or data session can communicate with two base stations at the same time, the phenomenon is known as-** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
+   a) Soft Roaming
+   b) Hard Roaming
+   c) Soft Handoff
+   d) Hard Handoff
+
 ## Subnetting & IP Addressing
 
 1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
@@ -639,6 +645,12 @@
    C) 64
    D) 128
 
+19. **Suppose, a Class C network address is 192.168.10.0 and subnet mask is 255.255.255.192. How many valid hosts per subnet can be obtainable?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
+   a) 62
+   b) 30
+   c) 14
+   d) 6
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -682,6 +694,12 @@
    b) To saves energy to transmit information
    c) To transmit signals from various sources
    d) To make the system simpler and cost effective
+
+8. **A line coding scheme of digital to digital conversion in given below. What is the name of this line coding technique?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 151]**
+   a) NRZ
+   b) RZ
+   c) Manchester
+   d) AMI
 
 ## Routing Protocols
 

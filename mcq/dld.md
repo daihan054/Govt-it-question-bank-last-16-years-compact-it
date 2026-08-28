@@ -276,6 +276,12 @@
    c) A negative logical product of N with 0Fh
    d) A logical product of N with 0Fh
 
+25. **Which one is the binary representation of (1234567)_{10}?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
+   a) 100101101011010000000
+   b) 1101011011111010001010
+   c) 1001011010110100000111
+   d) 111111111011010000110
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

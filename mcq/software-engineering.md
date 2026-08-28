@@ -38,6 +38,18 @@
    (c) Optimum
    (d) Supreme
 
+6. **________ is qualitative measure that refers to the number of connections between a ‘calling’ and a ‘called’ module and the complexity of these connections.** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
+   a) Coupling
+   b) Cohesion
+   c) Both A and B
+   d) None of them
+
+7. **ISO 9126 quality factors consist of –** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
+   a) process-ability, consistency, usefulness, adaptability, rationality and transportability
+   b) functionality, reliability, effectiveness, usability, maintainability and portability
+   c) functionality, consistency, effectiveness, adaptability, maintainability and transportability
+   d) None of them.
+
 ## Software Testing
 
 1. **Which of the following testing strategy is related to the boundary value analysis?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
@@ -115,6 +127,18 @@
    b) Beta testing
    C) Gamma testing
    d) Delta testing
+
+13. **Modified software goes through a phase where it is tested in the user’s site or live environment. This is referred as-** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
+   a) Alpha testing
+   b) Beta testing
+   c) Gamma testing
+   d) Delta testing
+
+14. **________ is an integration testing that is commonly used when software products are being developed. It is designed as a pacing mechanism for time-critical project, allowing the software team to assess its project on a frequent basis.** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 151]**
+   a) Unit testing
+   b) Function testing
+   c) Regression testing
+   d) Smoke testing
 
 ## SDLC Models
 

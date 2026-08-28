@@ -21,6 +21,12 @@
    c) Java
    d) Ruby
 
+4. **Which following code syntax shows a valid use of curly braces ‘{}’ in python?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
+   a) A={'one':1, 'two':2}
+   b) if(A>5) {print("Hello")}
+   c) A= {range(6)}
+   d) B={A=5}
+
 ## Mobile & Android Development
 
 1. **What is the API level of Android version 11?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**

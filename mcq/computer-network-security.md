@@ -35,6 +35,12 @@
    (c) Confidentiality
    (d) All of the above
 
+2. **Cyber security Triad means-** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 151]**
+   a) Confidentiality, Reliability and Availability
+   b) Confidentiality, Reliability and Accessibility
+   c) Confidentiality, Integrity and Availability
+   d) Privacy, Integrity and Approachability
+
 ## Security Protocols
 
 1. **Which of the items listed below is the least strong security protocol?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
@@ -146,6 +152,24 @@
    c) Ensure data security in Transport Layer
    d) All of above
 
+14. **In a Vigenere cipher, plaintext is *mypassword* and key is *stream*. What is the cipher text?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
+   a) d q edrdnfgf
+   b) e r g e s e o h i h
+   c) pm g pkpizoz
+   d) f s h f t f p i j i
+
+15. **Digital signature is a cryptographic method that ensures-** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
+   a) Data confidentiality, integrity, availability
+   b) Data integrity, authentication, non-repudiation
+   c) Data privacy, integrity, accessibility
+   d) Data privacy, integrity, approachability
+
+16. **Which of the followings is not a data encryption algorithm?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
+   a) MD5
+   b) SHA1
+   c) RSA
+   d) AES
+
 ## Malware & Security Threats
 
 1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
@@ -245,3 +269,9 @@
    b) Spoofing attack
    c) Cross-site scripting (XSS) attack
    d) Buffer overflow attack
+
+13. **________ a means of regaining access to a compromised system by installing software or configuring existing software to enable remote access under attacker-defined conditions.** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 151]**
+   a) Spyware
+   b) Ransomware
+   c) Cross-site scripting
+   d) Backdoor

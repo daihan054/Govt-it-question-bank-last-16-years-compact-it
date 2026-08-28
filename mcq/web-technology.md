@@ -56,6 +56,18 @@
    c) A4, A1, A2, A3
    d) A2, A4, A1, A3
 
+10. **Which HTML attribute is used to hide characters of an input password?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
+   a) href
+   b) type
+   c) tyle
+   d) src
+
+11. **Which of the followings is not a built-in HTML tag?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 157]**
+   a) <script>
+   b) <form>
+   c) <html>
+   d) All of these are valid built-in HTML tags
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -63,6 +75,12 @@
    b) _age
    c) PersonAge
    d) 1age
+
+2. **Which of the followings is a Web Framework built with PHP?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
+   a) Laravel
+   b) Django
+   c) MVC
+   d) Spring
 
 ## CSS & Styling
 

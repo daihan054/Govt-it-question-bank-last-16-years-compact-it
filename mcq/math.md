@@ -567,7 +567,7 @@
    (c) 23
    (d) 21
 
-7. **A prime number is a number that is divisible only by itself and 1. Which of the following is not a prime number?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+7. **A prime number is a number that is divisible only by itself and 1. Which of the following is not a prime number?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
    (a) 2
    (b) 7
    (c) 99

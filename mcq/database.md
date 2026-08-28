@@ -63,6 +63,12 @@
    c) 3NF
    d) BCNF
 
+12. **The table in below violates the Normal Form(s). Which normal form it violates?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 150]**
+   a) All of normal forms listed here
+   b) 3NF
+   c) 2NF
+   d) 1NF
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -318,6 +324,12 @@
    c) SELECT SUM (Quantity) FROM Delivery Record WHERE Date = '2020-10-16'
    d) SELECT MAX (Quantity) FROM Delivery Record
 
+34. **What is the advantage of using ‘case’ while doing the update operation?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 150]**
+   a) No proper sequence is required to maintain.
+   b) It is much easier to write code with ‘case’ keyword.
+   c) Update with ‘case’ provides significant time improvement.
+   d) None of these above.
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -491,6 +503,12 @@
    d) To setup transaction user parameters.
 
 12. **After a transaction completes successfully, the changes it has made to the database persist, even if there are system failures. This property of transaction is known as-** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 184]**
+   a) Atomicity
+   b) Consistency
+   c) Isolation
+   d) Durability
+
+13. **It is a necessary requirement that the transaction is guaranteed to complete or the transaction is never started, so that an inconsistent state would not be visible except during the execution of the transaction. Such a property of transaction is known as-** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 154]**
    a) Atomicity
    b) Consistency
    c) Isolation
@@ -746,6 +764,12 @@
    b) Some entity in E1 is associated with more than one entity in E2
    c) Every entity in E2 is associated with exactly one entity in E1
    d) Every entity in E2 is associated with at most one entity on E1
+
+8. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
+   a) Two
+   b) Three
+   c) Two or Three
+   d) No definite numbers
 
 ## PL/SQL & Triggers
 

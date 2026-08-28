@@ -134,6 +134,18 @@
    c. Sorted in alternate fashion
    d. Both A and B
 
+10. **Given a sequence, S= {1, 2, 3, 8, 15, 10}; which of the following algorithms will be the fasted to sort this sequence in ascending order?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
+   a) Bubble sort
+   b) Merge sort
+   c) Quick sort
+   d) Heap sort
+
+11. **Which of the following techniques is popular for Data Compression?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
+   a) Alpha-Beta pruning
+   b) Checksum
+   c) Huffman Coding
+   d) Red Black Tree
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -212,6 +224,12 @@
    b) 8
    c) 16
    d) 1
+
+12. **Which algorithm will be the most efficient to find out the shortest path between two given nodes in an undirected weighted graph?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
+   a) Breadth First Search
+   b) Depth First Search
+   c) Dijkstra’s algorithm
+   d) Floyd-Warshall algorithm
 
 ## Dynamic Programming & Greedy
 

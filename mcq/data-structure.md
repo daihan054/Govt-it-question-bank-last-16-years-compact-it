@@ -252,6 +252,12 @@
    c) AVL tree
    d) Binary Heap
 
+16. **Maximum how many nodes can be placed in a binary Tree of N levels?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 155]**
+   a) 2^N
+   b) 2^N - 1
+   c) 2^{N-1} - 1
+   d) N^2
+
 ## Hashing & Hash Tables
 
 1. **Given a hash table with 25 slots that stores 2000 elements, the load factor for the hash table is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**

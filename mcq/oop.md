@@ -53,7 +53,7 @@
    (c) dive must be a method
    (d) submarine must be the name of a class
 
-8. **What is the output of this Java program?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+8. **What is the output of this Java program?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 154]**
    ```java
    class Test{
    int i=1;
@@ -70,7 +70,7 @@
    c) 0
    d) A garbage value
 
-9. **Interfaces in Java are meant to be-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+9. **Interfaces in Java are meant to be-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 155]**
    a) Extended
    b) Implemented
    c) Overridden
@@ -179,6 +179,28 @@
    b) The program will cause an runtime exception because the variable “i” was not initialized
    c) A garbage value
    d) 0
+
+23. **Which of the following statements is/are true about Inheritance in Java?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 155]**
+   i) Private methods are final
+   ii) Protected methods are final
+   iii) Private methods cannot be overridden
+   iv) Protected members of a class are accessible by inherited classes of another package
+   a) i, iii and iv
+   b) i and iii only
+   c) ii, iii and iv
+   d) ii and iv only
+
+24. **Which of the followings can be used in a Java Server Page (JSP) page?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 155]**
+   a) HTML
+   b) AJAX
+   c) JSTL
+   d) All of the above
+
+25. **Which of the following statements is not true for Java Language?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 155]**
+   a) The number 1 can be used instead of the keyword ‘true’
+   b) Trying to store a fraction value in an ‘int’ datatype causes compile error
+   c) Static members of a class can be accessed without creating objects of that class
+   d) If not specified otherwise, the initial value of an integer variable is 0
 
 ## Encapsulation & Access Modifiers
 

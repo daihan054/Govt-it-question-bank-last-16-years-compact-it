@@ -48,6 +48,18 @@
    (গ) টিম বার্নস লি.
    (ঘ) জেফ বেজোফ
 
+9. **English scientist ________ invented the World Wide Web in 1989.** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 150]**
+   a) Vint Cerf
+   b) Robert Elliot Kahn
+   c) Alan Turing
+   d) Tim Berners-Lee
+
+10. **Who is known as the first computer programmer?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
+   a) Alan Turing
+   b) Ada Lovelace
+   c) Charles Babbage
+   d) None of the above
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -323,6 +335,12 @@
    B) binary
    C) machine
    D) natural
+
+15. **Which of the following is not standard compiler of C programming language?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 155]**
+   a) Microsoft Visual C/C++ Compiler
+   b) GNU GCC Compiler
+   c) CodeBlocks C Compiler
+   d) Borland C Compiler
 
 ## Acronyms & Abbreviations
 

@@ -403,6 +403,49 @@
    c) 6 4 6
    d) 4 5 7
 
+31. **What will happen if this C program is compiled and executed?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
+   ```c
+   #include<stdio.h>
+   int main() {
+   return 0;
+   }
+   ```
+   a) The program will show some garbage output
+   b) There will be a compile error and the program will not execute
+   c) No output (Output screen will be empty)
+   d) There will be a run-time error
+
+32. **What will be the output of this C program?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
+   ```c
+   #include<stdio.h>
+   int main() {
+   float p=10.5;
+   int a=5*p+5.0;
+   printf("%d\n",a);
+   return 0;
+   }
+   ```
+   a) 57.500000
+   b) 57
+   c) 57.000000
+   d) The program has errors and will not run.
+
+33. **What will be the output of this C program?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
+   ```c
+   #include<stdio.h>
+   int main() {
+   int i=1;
+   do{
+   printf("%d-",i++);
+   }while(i<=0);
+   return 0;
+   }
+   ```
+   a) 1-2-
+   b) 1-
+   c) No output (Output screen will be empty
+   d) The program will cause an infinite loop and has to be stopped manually
+
 ## Storage Classes & Scope
 
 1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
@@ -487,6 +530,19 @@
 1. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** This is known as function reusability or recursion or Idempotence
 
+2. **How many function calls will be performed to execute the following recursive function?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
+   ```c
+   void function(int N) {
+   if (N==0)
+   return;
+   function(N+1);
+   }
+   ```
+   a) N
+   b) 2*N
+   c) Infinite
+   d) The answer can vary depending on the initial value of N
+
 ## Data Types & Variables
 
 1. **What is the minimum value that can be stored accurately in a 32-bit signed integer of C programming language?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 179]**
@@ -494,3 +550,9 @@
    b) -2^{31}
    c) -2^{31}-1
    d) -2^{32}
+
+2. **What is the maximum value that can be stored in a 32-bit signed integer of C language?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 155]**
+   a) 10^{32}
+   b) 2^{32}
+   c) 2^{32}-1
+   d) 2^{31}-1
