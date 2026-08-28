@@ -112,6 +112,18 @@
    C) No output
    D) 1 more foods
 
+4. **Which is correct for concatenation in PHP?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+   A) $add = Sadd+1
+   B) $add = $add +1
+   C) $add = $add + Sadd
+   D) $add. = +1;
+
+5. **Which is used for adding two or more string in PHP?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+   A) +
+   B) *
+   C) . (dot)
+   D) |
+
 ## CSS & Styling
 
 1. **Which CSS property is used to set the thickness or boldness of the text?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**
@@ -199,3 +211,15 @@
    B) 7
    C) 0
    D) undefine
+
+3. **Which is correct to open new window/tab of browser?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+   A) <a href=[http://www.example.com](http://www.example.com) target= "_blank"> new window/tab</a>
+   B) <a href=[http://www.example.com](http://www.example.com) target= "blank"> new window/tab</a>
+   C) <a href=[http://www.example.com](http://www.example.com) target= "_blank“new window”> new window</a>
+   D) None
+
+4. **Which is the correct variable declaration in JavaScript?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+   A) var a= {'a', 'b', 'c'};
+   B) var a= {'a' 'b' 'c'}
+   C) var a= {“a” “b” “c”}
+   D) None

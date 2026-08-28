@@ -774,6 +774,12 @@
    c. control others connected computers
    d. Asked for information
 
+52. **Whole network will break if node is defect in which network topology?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 245]**
+   A) Star
+   B) Bus
+   C) Mesh
+   D) Hybrid
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -1456,6 +1462,12 @@
    (c) Layer-1
    (d) Layer-2 and Layer-3
 
+25. **Server machine is connected to—** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 245]**
+   A) Network
+   B) Client
+   C) supercomputer
+   D) Host
+
 ## Error Detection & Correction
 
 1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -1531,6 +1543,12 @@
    B) Data link
    C) Network
    D) Transport
+
+10. **Which is not work of Data link layer?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+   A) Error control
+   B) Adding MAC address
+   C) Cabling
+   D) None
 
 ## Switching Techniques
 

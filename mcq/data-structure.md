@@ -193,6 +193,24 @@
    C) Underflow
    D) User flow
 
+21. **Which is correct for stack?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 243]**
+   A) FIFO
+   B) LIFO
+   C) Both A, B
+   D) None
+
+22. **Find the correct arranged data after stack operation push (1), push (2), pop, push (1), push (2), pop, pop, pop, push (2), pop.** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+   A) 2 2 1 1 2
+   B) 2 2 1 2 1
+   C) 2 2 2 2 1
+   D) 2 2 2 1 2
+
+23. **Stack operations are—** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 245]**
+   A) delete, insertion
+   B) insertion, delete
+   C) push, pop
+   D) pop, push
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -473,3 +491,15 @@
    B) Merging
    C) Inserting
    D) Sorting
+
+22. **Which is correct?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 243]**
+   A) <body color= 'yello'>
+   B) <body bgcolor= 'yello'>
+   C) <body background> yellow<body>
+   D) <body background= 'yellow'>
+
+23. **Which is not linear?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 246]**
+   A) Linked list
+   B) array
+   C) graph
+   D) None

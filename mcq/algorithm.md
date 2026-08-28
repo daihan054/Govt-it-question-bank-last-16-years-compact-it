@@ -236,6 +236,12 @@
    C) O(n^2)
    D) O(n \log n)
 
+21. **Which is the slowest algorithm?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+   A) Bubble Sort
+   B) Quick sort
+   C) Heap sort
+   D) None
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**

@@ -81,6 +81,12 @@
    C) Third
    D) Fourth
 
+15. **Repeated data exist at—** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 246]**
+   A) unnormalized
+   B) 1NF
+   C) 2NF
+   D) 3NF
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

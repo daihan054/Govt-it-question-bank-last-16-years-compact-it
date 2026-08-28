@@ -104,6 +104,12 @@
    C) float name[10];
    D) double name [10];
 
+16. **Which are the keywords of structured programming?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 245]**
+   A) Keywords
+   B) Constant
+   C) volatile
+   D) Above all
+
 ## Output Tracing
 
 1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -806,6 +812,12 @@
    B) *-/+
    C) +-/*
    D) /*+-
+
+12. **The value 9.87 to 10 when use?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 246]**
+   A) floor ()
+   B) ceil ()
+   C) both A & B
+   D) None
 
 ## Flowcharts & Algorithms
 
