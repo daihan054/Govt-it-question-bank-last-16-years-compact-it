@@ -30,6 +30,24 @@
 
 7. **Display element by id in JavaScript?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 762]**
 
+8. **if-else ব্যবহার করে Javascript দিয়ে নিচের কোডটি সম্পন্ন কর, যেন Output ডান পাশের মত আসে।** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]**
+```html
+<html>
+<body>
+<script>
+    for(var x=1;x<=9; x++) {
+        if(x%2==0) {
+            console.log(x+"is an even value.");
+        }
+        else{
+            console.log(x+ "is an odd value.");
+        }
+    }
+</script>
+</body>
+</html>
+```
+
 ## Web Services & APIs (SOAP vs REST)
 
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1426]**
@@ -43,6 +61,8 @@
 5. **What is API? Explain with example.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
 
 6. **What is the two prime advantages of RESTful API?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 756]**
+
+7. **What is API?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]**
 
 ## HTML & Web Fundamentals
 
@@ -103,6 +123,8 @@
 3. **(খ) PHP কি? Web Development এ Java Script এর প্রয়োজনীয়তা সম্পর্কে বিবরণ দিন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 771]**
 
 4. **(b) What are the resources you need to access a web enabled application?** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
+
+5. **Apache কোন ধরনের Server এক কথায় লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
 
 ## Web Security & Browser Same-Origin Policy (Iframe)
 

@@ -44,6 +44,10 @@
 
 18. **8-bit microprocessor and 16-bit microprocessor write the data and address widths?** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
 
+19. **What is Microprocessor? Explain basic component of Microprocessor.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 868-869]**
+
+20. **Difference between Microprocessor and Microcontroller.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -60,6 +64,8 @@
    (b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 2. **Intel 8085 ও Intel 8086 Microprocessor-এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি কত এবং কেন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 697]**
+
+3. **What is the difference between 8-bit (8085) and 16-bit (8086) microprocessor?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865-866]**
 
 ## Assembly Language & Addressing Modes
 

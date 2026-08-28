@@ -26,6 +26,8 @@
 
 13. **IBM প্রতিষ্ঠান কর্তৃক কোন Operating System প্রস্তুত করা হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
+14. **Explain: Kernel, Cache, Virtual Memory and RAID.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 872-873]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -136,6 +138,10 @@ int main(int argc, char *argv[]){
 25. **(a) Check if the website of ‘TGTDCL’. (b) How to create folder in sub-directory?** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
 
 26. **Write a Linux command to revoke permission from no user but owner from a file “jdcl.txt”.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
+
+27. **Linux এর ক্ষেত্রে User Creation এর কমান্ড লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
+
+28. **Write Linux command for following question: a) Create a file apscl.txt in current location. b) Given permission to all read write and execute to the file apscl.txt c) Read first 7 lines from apscl.txt file d) Delete the file apscl.txt** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867-868]**
 
 ## Windows & System Administration
 

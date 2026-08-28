@@ -183,6 +183,8 @@
 
 35. **What is TCP/IP model? Briefly explain TCP/IP model.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]**
 
+36. **What is OSI and TCP/IP model and briefly explain?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870-872]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -296,6 +298,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **Assume we want to transmit the following binary string: 01001110. Show the resulting signal on the one using the following line coding techniques: (i) NRZ-L (ii) Manchester NRZ (iii) Unipolar RZ (binary string: 11011000100)** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 638]**
 
+2. **What is Line coding? What is the different line coding techniques?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 869-870]**
+
 ## Pulse Code Modulation (PCM) & Signal Processing
 
 1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
@@ -358,6 +362,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 9. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
 
 10. **Two channels, one with a bit rate of 190kbps and another with a bit rate 180 kbps are to be multiplexed using pulse stuffing TDM with no synchronization bits. Answer the following questions: (a) What is the size of a frame in bits? (b) What is the frame rate? (c) What is the duration of a frame? (d) What is the date rate?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+
+11. **What is Multiplexing? Write about Time division Multiplexing.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870]**
 
 ## Subnetting & IP Addressing
 
@@ -542,6 +548,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 72. **A network address is given 172.168.0.0/28, divide this network address into 4 subnets and find every subnet address, start address, subnet mask, broadcast address etc.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 856]**
 
 73. **In a “Class A” network total 20 subnets are needed with maximum 260 hosts per subnets. Can 255.255.255.0 subnet mask be used in this?** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
+
+74. **Find Network address, Valid Host, Subnet mask and Broadcast address from 172.16.128.120/25.** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
 
 ## Network Layer (Packet Fragmentation & Tunneling)
 
@@ -771,6 +779,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 6. **Which of the following is correct email formate? (a) compact@webmail.com (b) compact@webmail@com (c) compact.webmail.com (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
+7. **E-mail পাঠানো এবং রিসিভ করার জন্য একটি করে প্রোটোকলের নাম লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
+
 ## Data Rate & Channel Capacity (Nyquist, Shannon)
 
 1. **Nyquist math: See in Data Communication & Networking Chapter** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
@@ -866,3 +876,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 9. **Call Drop কী? এর কারণ গুলো উল্লেখ করুন।** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 810]**
 
 10. **LTE কী? এর এডভান্সড প্রযুক্তির নাম লিখুন।** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
+
+11. **Wi-Fi, Bluetooth, Wi-Max, Cellure network এইগুলোকে দূরত্বের ক্রমানুসারে ছোট থেকে বড় এর দিক অনুসারে লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 867]**

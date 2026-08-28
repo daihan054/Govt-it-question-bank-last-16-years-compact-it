@@ -674,6 +674,25 @@ int f(int *arr, int arrSize) {
 }
 ```
 
+25. **Output of the following program:** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 868]**
+```c
+#include<stdio.h>
+int recursion(int x) {
+    int static y=0;
+    if(x<=0)
+        return 1;
+    y=y+x;
+    printf("%d\n", y);
+    return recursion(x-2)+recursion(x-3);
+}
+int main() {
+    int result;
+    result = recursion(5);
+    printf("%d\n", result);
+    return 0;
+}
+```
+
 ## Recursion & Functions
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
@@ -781,3 +800,5 @@ int main() {
 ```
 
 28. **(b) Write down a pseudocode/program to generate all possible permutation for a given word.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 793]**
+
+29. **Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**

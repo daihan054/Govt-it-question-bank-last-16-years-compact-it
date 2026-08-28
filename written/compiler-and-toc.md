@@ -12,6 +12,8 @@
 
 6. **Define an Interpreted language.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
 
+7. **What is the difference between Compiler and Interpreter?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]**
+
 ## Lexical Analysis & Compiler Phases
 
 1. **(a) How does a compiler handle comments in source code?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**

@@ -68,6 +68,8 @@
 
 2. **Describe the important characteristics of digital IC's.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 556]**
 
+3. **Difference between Analog and Digital Circuit.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 873]**
+
 ## Boolean Algebra & De Morgan’s Theorem
 
 1. **(a) State De-Morgan’s law with an appropriate example.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
@@ -81,6 +83,8 @@
 5. **(ক) নিম্নলিখিত Boolean Function টি সংক্ষিপ্ত আকারে লিখুন: F(A, B, C, D) = \bar{A}\,\bar{B}\bar{C} + \bar{B}C\bar{D} + \bar{A}\bar{B}C\bar{D} + A\bar{B}\bar{C}** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 773]**
 
 6. **(b) Use Algebraic manipulation to convert the following equation to sum-of-product form: y(z + \bar{w}) + x(\bar{z} + \bar{y})\,\bar{w} + (zw)(\overline{xy})** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
+
+7. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
 
 ## Logic Gates & Universal Gates
 
@@ -127,6 +131,8 @@
 21. **What is Universal gate? NAND and NOR gate কে Universal gate বলা হয় কেন?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 827-828]**
 
 22. **Implement X-OR gate using NAND gate. Maximum 4 NAND gate are using.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
+
+23. **What is basic Logic gate? Which gate are called Universal gate and write down advantages of Universal gate?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 873-874]**
 
 ## Combinational Circuits (Adders, Encoders, MUX)
 
@@ -185,6 +191,8 @@
 4. **(খ) Combinational এবং Sequential circuit এর মধ্যে পার্থক্য ডায়াগ্রাম সহকারে লিখুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 773]**
 
 5. **Given a 100MHz clock signal derive a circuit using T-flip flops of generate 50MHz and 25MHz clock signals. Draw a timing diagram for all the three clock signal.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823-824]**
+
+6. **What is the difference between latch and flip-flop?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
 ## Finite State Machines (FSM)
 

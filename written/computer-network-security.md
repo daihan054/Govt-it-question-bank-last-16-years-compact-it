@@ -88,6 +88,8 @@
 
 10. **‘Trojan Horse’ এর একটি বৈশিষ্ট্য লিখুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
 
+11. **Explain: Worm, Botnet, Ransomware and Trojan horse.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
+
 ## Email & Messaging Security (Spam, Phishing)
 
 1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
@@ -285,6 +287,8 @@
 14. **Write down the counter measure of SQL injection attack.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 753]**
 
 15. **What is SQL Injection? How to Prevent against SQL Injection Attacks?** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853-854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+
+16. **What is SQL Injection? How can we protect web Application from SQL Injection attack?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
 ## Buffer Overflow & Software Vulnerabilities
 

@@ -130,6 +130,8 @@ Output: Not Balanced
 
 5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 692]**
 
+6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
+
 ## Priority Queues & Heaps (Min/Max Heap)
 
 1. **Max heap:** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**

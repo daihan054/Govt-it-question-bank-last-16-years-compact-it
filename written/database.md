@@ -334,6 +334,8 @@ From t;
 
 54. **DB schema: book (book_id, book_title, book_type, publication_name) author (book_name, author_name) publicher (publication_name, publication_address, est_year) copies (book_id, branch_name, no_of-copies) [database query লিখতে আসছিল]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
 
+55. **Given Table: Project (Project_id, Project_name, Manager_name) Location (location_id, Location_name, project_id) Employee (Employee_id, Employee_Name, Location_id, Joning date, Salary) Write a query to show project_name, Location_name, Total_salary of each projects employee who joined before ‘January 2021’.** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 868]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -401,6 +403,8 @@ From t;
    B \to B
    DE \to A
 
+15. **What is DBMS? Write down the purpose of normalization in DBMS.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
+
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
@@ -430,6 +434,8 @@ From t;
 5. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**
 
 6. **To achieve a '0-bit data loss' for its 24 x 7 x 365 banking operation, what steps or technology should an online bank employ to safeguard its data against any potential threats of data loss?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 518]**
+
+7. **MySQL database এর ক্ষেত্রে Backup and Restore করার কমান্ড লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]**
 
 ## Indexing & Query Optimization (B-Tree, B+ Tree)
 
@@ -512,6 +518,8 @@ From t;
 14. **(b) What are purpose of using foreign key in a database? Give suitable example.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
 
 15. **What is primary key?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
+
+16. **What is Primary key, Unique key and Forgein key.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
 ## Indexing in DBMS
 

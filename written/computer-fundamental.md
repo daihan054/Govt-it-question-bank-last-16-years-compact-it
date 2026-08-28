@@ -16,6 +16,8 @@
 
 8. **LOGO কি ধরনের প্রোগ্রাম?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
 
+9. **MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 867]**
+
 ## User Interfaces (CLI vs GUI)
 
 1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -155,6 +157,8 @@
 6. **Describe in Bangali or English on the post COVID-19 social challenge that Bangladesh may can front end the way ICT can support to overcome them.** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 809]**
 
 7. **Copyright আইন কি? এর প্রয়োজনীয়তা ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+
+8. **Comparison between MIS and DSS. What is the roles of MIS in Banking sector?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 872]**
 
 ## Digital Banking & Financial Inclusion
 
