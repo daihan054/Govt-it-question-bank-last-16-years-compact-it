@@ -78,6 +78,18 @@
    (গ) ICANN
    (ঘ) ISDN
 
+10. **In an email address "abc@xxx.bd", the portion 'xxx' indicate** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
+   (ক) Domain name
+   (খ) TCPAP layer name
+   (গ) Domain type
+   (ঘ) Protocol name
+
+11. **Which protocol assigns IP address to the client connected in the internet?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) DHCP
+   (খ) IP
+   (গ) RFC
+   (ঘ) WWW
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -106,6 +118,12 @@
 
 5. **IPv6 is how many bits?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 35]**
    **Ans:** 128 bit
+
+6. **How long is an IPv6 address?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
+   (ক) 32 bits
+   (খ) 128 bits
+   (গ) 64 bits
+   (ঘ) 132 bis
 
 ## Networking Fundamentals & Terminology
 
@@ -201,6 +219,18 @@
    (c) 1.1.1.1
    (d) 172.16.5.3
 
+8. **An organization is granted a block; one address is 2.2.2.64/20. The organization needs 10 subnets. What is the subnet prefix length?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) /20
+   (খ) /24
+   (গ) /23
+   (ঘ) /21
+
+9. **Which of the following is a private IP address?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) 12.0.0.1
+   (খ) 168.172.19.39
+   (গ) 172.15.14.36
+   (ঘ) 192.168.24.43
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -222,6 +252,24 @@
    (খ) Shortest path first
    (গ) Link state routing
    (ঘ) Hierarchical routing
+
+3. **Which of the following pairs is an example of routing protocols?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 44]**
+   (ক) ALOHA, SMTP
+   (খ) BGP, RIP
+   (গ) OSPF, FTP
+   (ঘ) FTP, SMTP
+
+4. **Which of the following pairs is an example of intra-domain routing protocols?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) ALOHA, RIP
+   (খ) OSPF, RIP
+   (গ) RIP, FTP
+   (ঘ) BGP, SMTP
+
+5. **Which of following statements is connected with managed switch?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) It can configure each port differently and make VLAN
+   (খ) It can manage traffic like a router
+   (গ) It can ensure transport layer security
+   (ঘ) None of the above
 
 ## Network Devices & Configuration
 
@@ -246,3 +294,11 @@
    (b) Cyclic Redundant Check
    (c) Cyclic Redundancy Cycle
    (d) Cyclic Redundancy Club
+
+## OSI & TCP-IP Model
+
+1. **Which of the following pairs is an example of transport layer protocols of the OSI model?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
+   (ক) IP, ICMP
+   (খ) ARP, IP
+   (গ) TCP, IP
+   (ঘ) UDP, TCP

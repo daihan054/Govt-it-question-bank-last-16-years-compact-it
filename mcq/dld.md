@@ -107,3 +107,15 @@
    (খ) 960x1000
    (গ) 960x1024
    (ঘ) 960x1024x1024
+
+9. **Which of the following numbers is the next sequence number of 77_8 in Octal number system?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 44]**
+   (ক) 88
+   (খ) 80
+   (গ) 100
+   (ঘ) 99
+
+10. **If a processor has 8-bit register, what is the value of (11111111)_2 represented in 2's complement form-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) 255
+   (খ) -1
+   (গ) 256
+   (ঘ) 0

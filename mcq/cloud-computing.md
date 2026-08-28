@@ -39,3 +39,9 @@
    (b) Polymorphism
    (c) Abstraction
    (d) None of the avobe
+
+4. **Which of the following will not be treated as a cloud service?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 44]**
+   (ক) VM rented from open stack based organization
+   (খ) A Mobile connecting to weather and map services
+   (গ) A LMS service taken from a free service provider
+   (ঘ) An web portal hosted for Public Service Commission

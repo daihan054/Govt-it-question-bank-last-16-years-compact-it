@@ -27,6 +27,12 @@
 5. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Second Normal Form (2NF)
 
+6. **"There must not be any partial dependency "Which of the following Normal Forms holds this condition?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
+   (ক) 1NF
+   (খ) 2NF
+   (গ) 3NF
+   (ঘ) BCNF
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

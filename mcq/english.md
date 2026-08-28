@@ -58,6 +58,18 @@
    (ঘ) T. S. Eliot
    **উত্তর: গ**
 
+11. **Who wrote 'arms and the Man'?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) Ben Johnson
+   (খ) T.S. Eliot
+   (গ) G.B. Shaw
+   (ঘ) Joseph Conrad
+
+12. **Who wrote "The Solitary Reaper"?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) P.B. Shelley
+   (খ) William Wordsworth
+   (গ) Alfred Tennyson
+   (ঘ) Mathew Arnold
+
 ## English Grammar
 
 1. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -467,6 +479,90 @@
    (গ) Tell me what your name
    (ঘ) Tell me what your name is.
 
+71. **Alice is one of the tallest girls (make it comparative)** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) Alice is taller than any other girl
+   (খ) Alice is taller girl
+   (গ) Alice is taller than most other girls
+   (ঘ) Alice is taller than rest of the girls
+
+72. **Which one is the correct passive form of "He has done a great job?"** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) A great job have been done by him.
+   (খ) A great job have been doing by him.
+   (গ) A great job has been done by him.
+   (ঘ) A great job has been doing by him.
+
+73. **Put the right word in the following gap: Climate is ______ of environment.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) state
+   (খ) situation
+   (গ) rank
+   (ঘ) sire
+
+74. **'Put up with' means ______.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) be excited
+   (খ) complain
+   (গ) hate
+   (ঘ) tolerate
+
+75. **Swimming is conducive ______ health.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) for
+   (খ) in
+   (গ) at
+   (ঘ) to
+
+76. **He was guilty ______ contempt of court.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) off
+   (খ) of
+   (গ) for
+   (ঘ) against
+
+77. **Which is not plural?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) Analysis
+   (খ) Flora
+   (গ) Seraphim
+   (ঘ) Oxen
+
+78. **Every man will fall a ______ to death.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) prey
+   (খ) pray
+   (গ) victim
+   (ঘ) virtual
+
+79. **The police were informed ______ the matter.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) of
+   (খ) about
+   (গ) by
+   (ঘ) into
+
+80. **First language means ______ language.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) important
+   (খ) main
+   (গ) official
+   (ঘ) natural
+
+81. **Choose the correct answer ______** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) The gold is a precious metal
+   (খ) A gold is a precious metal.
+   (গ) Gold is a precious metal.
+   (ঘ) Gold is precious metal.
+
+82. **Would you mind ______ a folk song?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) for
+   (খ) singing
+   (গ) to sing
+   (ঘ) sing
+
+83. **If I had another pen, I ______ you.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) would have helped you
+   (খ) might have helped
+   (গ) could help
+   (ঘ) should help
+
+84. **Survival is a/an ______.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) noun
+   (খ) verb
+   (গ) adjective
+   (ঘ) adverb
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -520,6 +616,18 @@
    (খ) for an uncertain period
    (গ) for a short time
    (ঘ) none
+
+11. **'A cook and bull story' means —** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) An animal story
+   (খ) A comedy
+   (গ) A story about birds
+   (ঘ) A false story
+
+12. **The phrase 'an apple of discord' means ______.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) a sour apple
+   (খ) and important matter
+   (গ) an unexpected gift
+   (ঘ) an object of quarrel
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -679,6 +787,24 @@
    (খ) pathologist
    (গ) urologist
    (ঘ) gynecologist
+
+29. **'Quarterly' শব্দের অর্থ কী?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) সাপ্তাহিক
+   (খ) পাক্ষিক
+   (গ) মাসিক
+   (ঘ) ত্রৈমাসিক
+
+30. **What is the correct antonym of 'Panic'?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) laugh
+   (খ) relaxed
+   (গ) sit
+   (ঘ) meditate
+
+31. **A song expressing grief is called ______** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) Balled
+   (খ) Elegy
+   (গ) Hymn
+   (ঘ) Dirge
 
 ## Spelling
 

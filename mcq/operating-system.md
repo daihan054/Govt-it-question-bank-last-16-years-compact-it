@@ -24,6 +24,12 @@
    (c) 15 bits
    (d) 20 bits
 
+5. **What is the relationship between Paging and Virtual memory?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) Virtual memory came before Paging
+   (খ) When pages are created in disks, it is called a virtual memory
+   (গ) Virtual memory can never be implemented without paging
+   (ঘ) Both have the same concepts
+
 ## Deadlock
 
 1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**

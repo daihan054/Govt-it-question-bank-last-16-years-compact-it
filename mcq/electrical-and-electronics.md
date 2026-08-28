@@ -104,6 +104,72 @@
    (গ) Series-parallel
    (ঘ) End to end
 
+14. **The use of a high speed circuit breaker-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
+   (ক) reduces the short circuit current
+   (খ) increases the short circuit current
+   (গ) improves system stability
+   (ঘ) decrease system stability
+
+15. **Condition of electricity transmission is-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 46]**
+   (ক) high voltage transmission
+   (খ) using heavy wire
+   (গ) using copper conductor
+   (ঘ) using bundled conductor
+
+16. **In a step down transformer, there is a change of 15A in the load current. This results in changing of supply current of -** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) Less than 15 A
+   (খ) Greater than 21 A
+   (গ) More than 15 A
+   (ঘ) None of the above
+
+17. **The emf generated in a DC generator is directly proportional to-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) Flux per pole
+   (খ) No. of poles
+   (গ) speed of armature
+   (ঘ) all of the above
+
+18. **When a step signal input is applying to an-amp integrator, the output will be-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) A ramp
+   (খ) A sinusoidal wave
+   (গ) A Rectangular Wave
+   (ঘ) A triangular wave with bc bias
+
+19. **Generally, the gain of a transistor amplifier falls at high frequency due to the** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) Internal capacitance of the device
+   (খ) coupling capacitor at the input
+   (গ) Skin effect
+   (ঘ) coupling capacitor at the output
+
+20. **Impedance and capacitance of a transmission line depend upon-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) current in the line alone
+   (খ) voltage in the line alone
+   (গ) Both (ক) and (খ)
+   (ঘ) Physical configuration of conductors in space
+
+21. **For successful operation of two single phase transformers connected in parallel, the most essential condition is that them** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) Percentage independence are equal
+   (খ) Polaritles me properly connected
+   (গ) Turns ration are exactly equal
+   (ঘ) KVA rating are equal
+
+22. **Which of the following amplifier is used in a digital to analog coverter circuit?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) Non-inverting amplifier
+   (খ) Summer circuit
+   (গ) Voltage follower circuit
+   (ঘ) Difference amplifier circuit
+
+23. **The affected parameter by shunt capacitance are ______** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) real power
+   (খ) reactive power
+   (গ) frequency
+   (ঘ) all of these
+
+24. **The applied voltage of a certain transformer is increased by 50%, while the frequency is reduced by 50%. The Maximum core flux density will.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) become three times
+   (খ) become 1.5 times
+   (গ) become half
+   (ঘ) remain the same
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
@@ -178,6 +244,12 @@
    (গ) 0.8 leading
    (ঘ) Zero
 
+15. **The speed of a DC shunt motor is required to be more than full load speed. This is possible by-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 46]**
+   (ক) reducing the field current
+   (খ) decreasing the armature current
+   (গ) increasing the armature current
+   (ঘ) None of the above
+
 ## Signals & Systems
 
 1. **The transfer function of an LTI system is given as \frac{1}{s+2}. What is the value of its impulse response at t=0?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
@@ -197,3 +269,9 @@
    (খ) 40\text{kHz}
    (গ) 18\text{kHz}
    (ঘ) DC
+
+4. **Which of the following statement holds true for the divergence of electric and magnetic flux densities?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) Both are zero
+   (খ) These are zero for static flux densities but non-zero for time-varying flux densities
+   (গ) It is zero for electric flux densities
+   (ঘ) It is zero for magnetic flux densities.

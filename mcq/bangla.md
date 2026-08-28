@@ -293,6 +293,72 @@
    (গ) রামকৃষ্ণ পরমহংস
    (ঘ) বিবেকানন্দ
 
+53. **'পদ্মাবতী' কাব্যের রচয়িতা কে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) আলাওল
+   (খ) সৈয়দ সুলতান
+   (গ) দৌলত উজির বাহরাম খান
+   (ঘ) শেখ ফয়জুল্লাহ
+
+54. **'তত্ত্ববোধিনী' পত্রিকার সম্পাদক কে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) অক্ষয় কুমার দত্ত
+   (খ) রবীন্দ্রনাথ ঠাকুর
+   (গ) মোজাম্মেল হক
+   (ঘ) ঈশ্বরচন্দ্র গুপ্ত
+
+55. **‘চর্যাপদ’ আবিষ্কৃত হয় কত সালে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) ১৯০৫ সালে
+   (খ) ১৯০৬ সালে
+   (গ) ১৯০৭ সালে
+   (ঘ) ১৯০৮ সালে
+
+56. **রবীন্দ্রনাথ ঠাকুরের ‘শেষের কবিতা’ একটি—** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) উপন্যাস
+   (খ) কাব্যগ্রন্থ
+   (গ) নাটক
+   (ঘ) গল্পগ্রন্থ
+
+57. **‘প্রাগৈতিহাসিক’ গল্পটি কার রচনা?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) শাহেদ আলী
+   (খ) রাজশেখর বসু
+   (গ) মানিক বন্দ্যোপাধ্যায়
+   (ঘ) হাসান আজিজুল হক
+
+58. **মুক্তিযুদ্ধভিত্তিক উপন্যাস কোনটি?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) আগুনের পরশমণি
+   (খ) খোয়াবনামা
+   (গ) আরেক ফাল্গুন
+   (ঘ) আর্তনাদ
+
+59. **‘আমার দেখা নয়াচীন’ গ্রন্থের রচয়িতা কে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) জামিল চৌধুরী
+   (খ) ড. মুহম্মদ শহীদুল্লাহ
+   (গ) আহমদ শরীফ
+   (ঘ) শেখ মুজিবুর রহমান
+
+60. **“মেঘদূত” কাব্যটি কার লেখা?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) দ্বিজমাধব
+   (খ) বড়ুচণ্ডীদাস
+   (গ) চণ্ডী দাস
+   (ঘ) কালিদাস
+
+61. **‘ভোরের পাখি’ কার ছদ্ম নাম?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) রবীন্দ্রনাথ ঠাকুর
+   (খ) বিহারীলাল চক্রবর্তী
+   (গ) কায়কোবাদ
+   (ঘ) সত্যেন্দ্রনাথ দত্ত
+
+62. **‘পায়ের আওয়াজ পাওয়া যায়’ নাটকটির লেখক কে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) আব্দুল্লাহ আল মামুন
+   (খ) সেলিম আল দিন
+   (গ) সৈয়দ শামসুল হক
+   (ঘ) মামুনুর রশীদ
+
+63. **কোনটি কাজী নজরুল ইসলামের রচনা?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) গৃহদাহ
+   (খ) মৃত্যুক্ষুধা
+   (গ) কাশাবনের কন্যা
+   (ঘ) কোয়ারি
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -675,6 +741,48 @@
    (গ) রূপক কর্মধারয়
    (ঘ) মধ্যপদলোপী কর্মধারয়
 
+72. **'দাতা' শব্দের বিপরীত শব্দ কোনটি?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) দাত্রী
+   (খ) দানকারী
+   (গ) গ্রহীতা
+   (ঘ) গৃহীতা
+
+73. **সঠিক কোনটি?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) চলাকালীন সময়ে
+   (খ) চলাকালে
+   (গ) চলাকালের সময়ে
+   (ঘ) চলাকালিন সময়ে
+
+74. **কোনটি বানানটি শুদ্ধ?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) দ্বন্দ
+   (খ) দন্দ
+   (গ) দ্বন্দ্ব
+   (ঘ) দন্দ্ব
+
+75. **'যে উপকারীর অপকার করে' তাকে এক কথায় বলে-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) অকৃতজ্ঞ
+   (খ) কৃতঘ্ন
+   (গ) অপকারী
+   (ঘ) শত্রুঘ্ন
+
+76. **ভাষার ক্ষুদ্রতম একক কোনটি?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) ধ্বনি
+   (খ) শব্দ
+   (গ) বর্ণ
+   (ঘ) অক্ষর
+
+77. **কোনটি ‘খবর’ শব্দের সমার্থক নয়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) সন্দেশ
+   (খ) গুজব
+   (গ) বার্তা
+   (ঘ) সংবাদ
+
+78. **‘আনারস’ শব্দটি কোন ভাষা থেকে আগত?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) ওলন্দাজ
+   (খ) তুর্কি
+   (গ) পর্তুগিজ
+   (ঘ) ফারসি
+
 ## বাগধারা ও প্রবাদ
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -697,6 +805,12 @@
    b) অন্ধকার
    c) একাদশে বৃহস্পতি
    d) কেউকেটা
+
+5. **'ঢাকের কাঠি' বাগধারাটির অর্থ কী?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) ঢাক বাজানোর কাঠি
+   (খ) কলুর বলদ
+   (গ) মো-সাহেব
+   (ঘ) বক-ধার্মিক
 
 ## এক কথায় প্রকাশ
 

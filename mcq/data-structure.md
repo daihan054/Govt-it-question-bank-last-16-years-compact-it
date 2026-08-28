@@ -74,6 +74,24 @@
 7. **What is the prefix conversion of the expression \text{A}+(\text{B}-\text{C})*\text{D}?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** +\text{A}*-\text{BCD}
 
+8. **An example of a hierarchical data structure is ______** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 46]**
+   (ক) Array
+   (খ) Link list
+   (গ) Tree
+   (ঘ) Ring
+
+9. **Which of the following data structures follows the LIFO principle?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 46]**
+   (ক) stack
+   (খ) Linked list
+   (গ) Queue
+   (ঘ) Graph
+
+10. **A stack is also called-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) Last in First Out
+   (খ) First in Last Out
+   (গ) Last In Last Out
+   (ঘ) First in Frist Out
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**

@@ -18,6 +18,12 @@
    C) Alta vista
    D) WAIS
 
+4. **Which of the following is the most commonly used encoding standard of Unicode?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 46]**
+   (ক) UTF-6
+   (খ) UTF-7
+   (গ) UTF-8
+   (ঘ) UTF-9
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -88,6 +94,12 @@
    (গ) Data retrieving and drawing
    (ঘ) Data collection
 
+6. **Which of the following is not in connection with blockchain technology?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) Peer-to-Peer digital currency
+   (খ) Centralized social network
+   (গ) Peer-to-Peer social network
+   (ঘ) Distributed Ledger management
+
 ## Software Types & Classification
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
@@ -125,3 +137,9 @@
    (খ) Converter
    (গ) Simulator
    (ঘ) Compiler
+
+7. **Which of the following pairs of statements are not treated as identical by the compiler?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) int foo(int *i); int foo(int i[])
+   (খ) a[i]=5; i[a]=5;
+   (গ) char c[10]; char *c;
+   (ঘ) void bar (int) ; void bar (int x);

@@ -342,6 +342,30 @@
    (গ) গ্রানাইট
    (ঘ) হীরা
 
+53. **গ্রিন হাউজ ইফেক্টের পরিপ্রেক্ষিতে বাংলাদেশের সবচেয়ে গুরুতর প্রত্যক্ষ ক্ষতি কী হবে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) বৃষ্টিপাত কমে যাবে
+   (খ) সাইক্লোনের প্রবণতা বাড়বে
+   (গ) উত্তাপ অনেক বেড়ে যাবে
+   (ঘ) নিম্নভূমি নিমজ্জিত হবে
+
+54. **আল্ট্রাভায়োলেট রশ্মি নিম্নের কোন রোগ সৃষ্টি করে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) এইডস
+   (খ) ব্রেন ক্যান্সার
+   (গ) ব্লাড ক্যান্সার
+   (ঘ) চর্ম ক্যান্সার
+
+55. **কোন পাখিকে 'অন্যপুষ্ট' বলা হয়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) কাক
+   (খ) কোকিল
+   (গ) কবুতর
+   (ঘ) কাকাতুয়া
+
+56. **কোলাজেন কী?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) একটি কার্বোহাইড্রেট
+   (খ) একটি প্রোটিন
+   (গ) একটি লিপিড
+   (ঘ) একটি নিউক্লিক এসিড
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -639,6 +663,54 @@
    (খ) যুক্তরাজ্য
    (গ) ডেনমার্ক
    (ঘ) ফিনল্যান্ড
+
+56. **প্লেগ মহামারী/ব্ল্যাক ডেথ শুরু হয় কোথায়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) স্পেন
+   (খ) ফ্রান্স
+   (গ) ইতালী
+   (ঘ) রাশিয়া
+
+57. **বর্তমান বিশ্বের কোন দেশটির সংবিধানকে "শান্তি সংবিধান" বলা হয়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) সুইজারল্যান্ড
+   (খ) সুইডেন
+   (গ) জার্মান
+   (ঘ) জাপান
+
+58. **বিশ্বে প্রথম দেশ হিসেবে করোনা গণটিকা প্রদান কার্যক্রম শুরু করে কোন দেশ?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) যুক্তরাজ্য
+   (খ) যুক্তরাষ্ট্র
+   (গ) জার্মানী
+   (ঘ) ইতালী
+
+59. **জনসংখ্যা বৃদ্ধির হার সর্বনিম্ন কোন দেশ?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) বুলগেরিয়া
+   (খ) সোমালিয়া
+   (গ) লাটভিয়া
+   (ঘ) লিথুনিয়া
+
+60. **এলিসি প্রাসাদ কোন দেশের প্রেসিডেন্টের বাসভবন?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) রাশিয়া
+   (খ) ফ্রান্স
+   (গ) বলিভিয়া
+   (ঘ) ব্রাজিল
+
+61. **ওয়াটার লু কোথায় অবস্থিত?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) বেলজিয়াম
+   (খ) ইংল্যান্ড
+   (গ) ইতালী
+   (ঘ) রাশিয়া
+
+62. **জাপান ও রাশিয়ার মধ্যকার বিরোধপূর্ণ দ্বীপটির নাম কী?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) কুরিল দ্বীপপুঞ্জ
+   (খ) গ্রেট বেরিয়ার দ্বীপ
+   (গ) মার্শাল দ্বীপ
+   (ঘ) দিয়াগো গর্সিয়া দ্বীপ
+
+63. **"Impossible is a word to be found in a fools dictionary" উক্তিটি কার?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) Plato
+   (খ) Nepoleon
+   (গ) Che Guevara
+   (ঘ) Einstein
 
 ## Bangladesh Affairs
 
@@ -1067,6 +1139,54 @@
    (খ) লাহোর
    (গ) চট্টগ্রাম
    (ঘ) রাজশাহী
+
+81. **বীরশ্রেষ্ঠ ক্যাপ্টেন মহিউদ্দিন জাহাঙ্গীর এর কবর কোন জেলায়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) নওগাঁ
+   (খ) নাটোর
+   (গ) জয়পুরহাট
+   (ঘ) চাঁপাইনবাবগঞ্জ
+
+82. **স্বাধীনতার সুবর্ণজয়ন্তীর লোগোর নকশা করেন কে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) রামেন্দু মজুমদার
+   (খ) প্রদীপ চক্রবর্তী
+   (গ) সব্যসাচী হাজরা
+   (ঘ) ক এবং খ উভয়টি
+
+83. **বাংলাদেশের সর্বাধিক বৈদেশিক মুদ্রা অর্জনকারী শিল্প কোনটি?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) তৈরী পোশাক
+   (খ) পাট
+   (গ) মাছ
+   (ঘ) চা
+
+84. **২০২০-২০২১ অর্থবছরে বাংলাদেশের মাথাপিছু আয় মার্কিন ডলারে কত?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) ২১২৭
+   (খ) ২২০৭
+   (গ) ২২২৭
+   (ঘ) ২০২৭
+
+85. **কাপাসিয়া মডেল কী?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) শিশু শ্রম নিরসন মডেল
+   (খ) বাল্য বিবাহ রোধ মডেল
+   (গ) মাতৃত্বমৃত্যু কমানোর সফল মডেল
+   (ঘ) গৃহকর্মী সুরক্ষা মডেল
+
+86. **বাংলাদেশে বর্তমানে বিদ্যুৎ উৎপাদন ক্ষমতা কত?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) ৩০ হাজার মেগাওয়াট
+   (খ) ২২ হাজার মেগাওয়াট
+   (গ) ১০ হাজার মেগাওয়াট
+   (ঘ) ৮ হাজার মেগাওয়াট
+
+87. **বেসরকারি বিল কাকে বলে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) সংসদ সদস্যদের উত্থাপিত বিল
+   (খ) রাষ্ট্রপতি কর্তৃক ঘোষিত কোন বিল
+   (গ) বিরোধী দলের সদস্যদের উত্থাপিত বিল
+   (ঘ) স্পীকার যে বিলকে বেসরকারি বিল বলে ঘোষণা দেন
+
+88. **২০২১ সাল থেকে বাংলাদেশ সরকার নতুন কোন পদক প্রদান করে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) বঙ্গবন্ধু আন্তর্জাতিক কৃষি পুরস্কার
+   (খ) বঙ্গমাতা বেগম ফজিলাতুন্নেছা মুজিব পুরস্কার
+   (গ) শেখ হাসিনা আন্তর্জাতিক শান্তি পুরস্কার
+   (ঘ) শেখ রাসেল আইসিটি পুরস্কার
 
 ## Geography & Environment
 

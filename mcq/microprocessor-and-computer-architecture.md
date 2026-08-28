@@ -24,6 +24,12 @@
    (c) Main memory
    (d) RAM
 
+5. **Which mode of memory access is the fastest?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) Reference
+   (খ) Pointer
+   (গ) Double pointer
+   (ঘ) DMA
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

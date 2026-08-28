@@ -47,3 +47,9 @@
 
 9. **What s the axon of neural network do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** The function of the axon to transmit information to different neurons.
+
+10. **What is Artificial Intelligence?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) Making a machine intelligent
+   (খ) Putting your intelligence into computer
+   (গ) Programming with you own intelligence
+   (ঘ) Putting more memory into computer

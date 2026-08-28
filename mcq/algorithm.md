@@ -24,6 +24,12 @@
    (গ) O(\log n)
    (ঘ) O(n^2)
 
+5. **Which of the following search algorithm requires less memory?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 44]**
+   (ক) Optimal Search
+   (খ) Breadth-First Search
+   (গ) Depth First Search
+   (ঘ) Linear Search
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -50,6 +56,12 @@
    (c) Selection Sort
    (d) Quick Sort
 
+5. **If we have a very small amount of additional memory, but a large number of items to sort, which of the following sorting algorithm should we use?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 44]**
+   (ক) Merge sort
+   (খ) Heap sort
+   (গ) Bubble sort
+   (ঘ) Bogo sort
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -63,6 +75,12 @@
    b) 4
    c) 5
    d) 10
+
+3. **In which of the following graphs can we apply topological sort?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 46]**
+   (ক) Undirected Cyclic graph
+   (খ) Directed Cyclic graph
+   (গ) Undirected Acyclic graph
+   (ঘ) Directed Acyclic graph
 
 ## Dynamic Programming & Greedy
 
@@ -105,3 +123,15 @@
    (খ) Improved binary search
    (গ) Dynamic programming
    (ঘ) Divide and conquer
+
+3. **Travelling Salesperson Problem is an example of-** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) Polynomial time
+   (খ) NP Complete
+   (গ) NP
+   (ঘ) NP-Hard
+
+4. **Which of the following algorithms can not be designed without recursion?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 46]**
+   (ক) Fibonacci series
+   (খ) Tower of Hanoi
+   (গ) None of (ক) and (খ)
+   (ঘ) Both (ক) and (খ)
