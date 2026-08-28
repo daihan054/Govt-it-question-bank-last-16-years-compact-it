@@ -36,6 +36,8 @@
 
 4. **What is CIA Triad?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
+5. **Preserving confidentiality integrity and availability of data is a restatement of the concern over falsification, interception, masquerade and denial of service. Explain how the first three concepts relate to the last four.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 435]**
+
 ## Critical Information Infrastructure (CII) & Cyber Governance
 
 1. What is CII? How many CII organizations? Name 10 CII organization name. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -81,6 +83,8 @@
 8. **What is meant by Encryption and Decryption? What is Cyber security? Write down the top 10 cyber attack.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 557]**
 
 9. **Difference between active and passive atack.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+
+10. **Describe a man-in the middle attack on the Diffie-Hellman key exchange protocol in which the adversary generates two public key pairs for the attack.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 434]**
 
 ## Firewalls & Network Defense
 

@@ -230,6 +230,8 @@ return 0;
 
 44. **Write a C Program to delete duplicate element from array.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 561]**
 
+45. **Given two integers A and B as input write a program to compute the least common multiple of A and B.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 436]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

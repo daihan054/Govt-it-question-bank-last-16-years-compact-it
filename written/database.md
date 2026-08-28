@@ -239,6 +239,14 @@ ORDER BY average_salary DESC;
 
 36. **Consider the two schema employees (id, first_name, last_name, designation, oining_date, salary, dept_id) and department (dept_id, dept_name). Where detp_id is forgeign key. Find the first_name and department name whose salary is maximum.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
 
+37. **Suppose that we have a relational database with the following table. Underlined one represent primary key**
+   **Movies (\underline{\text{mid}}, title, year)**
+   **People (\underline{\text{pid}}, name)**
+   **Genres (\underline{\text{gid}}, genre)**
+   **HasRole (\underline{\text{pid}, \text{mid}}, role)**
+   **Has Genre (\underline{\text{gid}, \text{mid}})**
+   **Write a SQL query to return the number of movies that are romantic comedies.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 436]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**

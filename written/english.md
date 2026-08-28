@@ -36,6 +36,8 @@
 
 17. **Write a composition: E-commerce in Bangladesh** **(BREB Assistant Programmer Exam: 18.02.2023)**
 
+18. **Growing use to technology in the Financial Service Industry.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -167,3 +169,5 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 11. **Bangla to English Translation (Bank, Economy Related)** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
 
 12. **Translate Bangla to English:** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
+
+13. **Translation Bangla to English.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**

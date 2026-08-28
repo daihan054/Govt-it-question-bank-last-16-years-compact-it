@@ -112,3 +112,20 @@ public:
 3. **What does run Finalization do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
 4. **What syntax is used for calling static methods in class?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+5. **Consider the following code:** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 436]**
+```java
+Public class Class A {
+    Public void m1() {}
+    Public void m2(int i) {}
+    Public void m3(int i) {}
+    Public static void m4(int i) {}
+}
+Public class class B extends class A {
+    Public static void m1(int i) {}
+    Public void m2(int i) {}
+    Public void m3(string s) {}
+    Public static void m4(int i) {}
+}
+```
+**Mention which of the methods overload, override and hied supper class methods. What about the remaining method?** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 437]**
