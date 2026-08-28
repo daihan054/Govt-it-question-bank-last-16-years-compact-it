@@ -122,6 +122,12 @@
    (c) An Asymmetric key system is used as a Public Key Infrastructure, or PKI for sho
    (d) None of the above statements is false
 
+10. **Laili digitally signs a message and sends it to Mojnu. Verification of the signature by Mojnu requires-** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
+   a. Laili's public key
+   b. Mojnu's public key
+   c. Mojnu's private key
+   d. Laili's private key
+
 ## Malware & Security Threats
 
 1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
@@ -147,3 +153,11 @@
    b) SQL Injection
    c) Delivering a Trojan
    d) All of the above
+
+## Cyber Attacks & Threats
+
+1. **An attacker sits between the sender and receiver and captures the information and retransmits to the receiver after some time without altering the information. This attack is called as ____** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 83]**
+   a. Denial of service attack
+   b. Masquerade attack
+   c. Simple attack
+   d. Complex attack

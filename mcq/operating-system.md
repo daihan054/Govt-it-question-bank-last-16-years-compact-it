@@ -154,6 +154,12 @@
    (গ) Windows CE
    (ঘ) Windows NET
 
+3. **Which initial program is called at the starting of a computer?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+   a. Computer Startup Loader
+   b. Operating System Details
+   c. Bootstrap Loader
+   d. Hardware System Details
+
 ## Linux Commands & Administration
 
 1. **User passwords in Linux are stored as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**

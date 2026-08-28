@@ -194,3 +194,15 @@
    b) AB + BC
    c) A+BC
    d) ACB
+
+2. **Which one of the following has the truth value FALSE for the variables A=TRUE and B=TRUE and C=TRUE?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+   a. A\bar{B}C + \bar{A}BC
+   b. X = A.\bar{B} + \bar{A}.B
+   c. (AC + \bar{B})(\bar{A} + (B \oplus C))
+   d. (A + B) \oplus C \oplus (B + C)
+
+3. **Which of the logic expressions is equivalent to the digital circuit shown in the figure?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
+   a. X = A.B + \overline{A}.\overline{B}
+   b. X = A.B + \bar{A}.\bar{B}
+   c. X = A.\bar{B} + \bar{A}.B
+   d. X = (\bar{A} + B).(A + \bar{B})

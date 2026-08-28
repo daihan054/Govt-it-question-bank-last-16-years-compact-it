@@ -66,6 +66,12 @@
    (c) 8/8
    (d) 8/16
 
+12. **Which of the following uses the flip-flop circuit in a memory cell?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
+   a. DRAM
+   b. EEPROM
+   c. SDRAM
+   d. SRAM
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

@@ -139,6 +139,18 @@
    (c) SSH
    (d) TELNET
 
+18. **Which protocol is used to send a destination network unknown message back to the originating host?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 76]**
+   a. TCP
+   b. ARP
+   c. ICMP
+   d. BootP
+
+19. **A receiving host has failed to receive all of the segments that is should acknowledge what can the host do the improve the reliability of this communication session?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 79]**
+   a. Send a different source port number
+   b. Restart the virtual circuit
+   c. Decrease the sequence number
+   d. Decrease the window size
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -241,6 +253,18 @@
    (c) Cache Memory is cheaper memory
    (d) All of the above statements are true
 
+9. **The combination of an IP address and a port number is known as ____.** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 79]**
+   a. Network number
+   b. Socket address
+   c. Subnet mask number
+   d. MAC address
+
+10. **The address resolution protocol (ARP) is used for-** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 79]**
+   a. Finding the IP address from the DNS
+   b. Finding the IP address of the default gateway
+   c. Finding the IP address that corresponds to a MAC address
+   d. Finding the MAC address the corresponds to an IP address
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -266,6 +290,18 @@
    (b) 800 Kbps
    (c) 1000 Kbps
    (d) 1200 Kbps
+
+5. **Suppose we want to download text documents at the rate of 100 pages per second. Assume that a page consists of an average of 24 lines with 80 characters in each line. What is the required bit rate of the channel?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
+   a. 182 kbps
+   b. 512 kbps
+   c. 1.248 Mbps
+   d. 1.536 Mbps
+
+6. **Consider a 50 Mbps satellite channel with a 500 milliseconds round top propagation delay. If the sender wants to transmit 1000 bit frames, how much time will it take for the receiver to receive the frame?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 79]**
+   a. 250 milliseconds
+   b. 20 milliseconds
+   c. 520 milliseconds
+   d. 270 milliseconds
 
 ## Wireless & Mobile Communication
 
@@ -347,7 +383,7 @@
    (c) 255.0.0.0
    (d) 255.255.200.0
 
-6. **Which of the following cannot be used as a public IP address?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+6. **Which of the following cannot be used as a public IP address?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 76]**
    a. 17.0.0.1
    b. 168.172.19.34
    c. 172.15.29.63
@@ -388,6 +424,41 @@
    (b) 8,190
    (c) 4,094
    (d) 2,046
+
+13. **Which of the following is not a valid IP address?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
+   a. 3FFE::1:200:F8FF:FE75:50DF
+   b. 10.25.26.24
+   c. ABCD::100::F8FF:FE75:50DF
+   d. 13.15.17.19
+
+14. **Suppose you need to assign IPv4 address to two computers of your company so that the both computers belong to the subnet. 255.255.255.240. Which of the following is a valid assignment?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+   a. 172.16.5.14 and 172.16.5.17
+   b. 172.16.5.17 and 172.16.5.29
+   c. 172.16.5.29 and 172.16.5.33
+   d. 172.16.5.33 and 172.16.5.4
+
+15. **Network 10.20.30.0 was assigned to the ITGod company to connect its ISP. The administrator of ITGod would like to configure one router with commands to access the internet. Which commands could be configured on the Gateway Router to allow internet access to the center network?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
+   A. Gateway(config)# ip route 0.0.0.0 0.0.0.0 10.20.30.2
+   B. Gateway(config)# router rip
+   C. Gateway(config)# network 10.20.30.0
+   D. Gateway(config)# ip default-network 10.20.30.0
+   a. A only
+   b. C only
+   c. A, B and D
+   d. A and D
+
+16. **Classless Inter Domain Routing (CIDR) receives a packet with address 131.23.151.76. The routers routing table has the following entries** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
+   | Prefix | Output Interface |
+   |---|---|
+   | 131.16.0.0/12 | 3 |
+   | 131.28.0.0/14 | 5 |
+   | 131.19.0.0/16 | 2 |
+   | 131.22.0.0/15 | 1 |
+   In which output interface the packet is forwarded to?
+   a. 1
+   b. 2
+   c. 3
+   d. 5
 
 ## Data Transmission & Modes
 
@@ -453,6 +524,12 @@
    c) Using Unmanaged switches
    d) Combining a and b
 
+7. **Distance vector routing algorithm is a dynamic routing algorithm. The routing tables in distance vector routing algorithm are updated ____.** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
+   a. automatically
+   b. by server
+   c. with back up database
+   d. by exchanging information with neighbor nodes
+
 ## Network Devices & Configuration
 
 1. **Which command loads a new version of the Cisco IOS into a router** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
@@ -499,6 +576,24 @@
    (c) A separate multicast domain
    (d) A separate collision domain
 
+9. **Which of the following statements is FALSE regarding a bridge?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
+   a. Bridge is a layer 3 device
+   b. Bridge reduces collision domain
+   c. Bridge is used to connect two or more LAN segments
+   d. Bridge reduces broadcast domain
+
+10. **Which of the following devices takes data sent from one network device and forward it to the destination node based on MAC address?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
+   a. Hub
+   b. Modem
+   c. Switch
+   d. Gateway
+
+11. **Which layer 1 devices can be used to enlarge the area covered by a single LAN segment?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+   a. Switch only
+   b. RF45 connector only
+   c. Switch and Hub
+   d. Hub and Repeater
+
 ## Error Detection & Correction
 
 1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -532,6 +627,18 @@
    (b) Node to node message delivery
    (c) Transparent transfer of data between end users
    (d) None of the above
+
+4. **In the diagram shown below. L1 is an Ethernet LAN and L2 is a Token-Ring LAN. An IP packet originates from sender S and traverses to R, as shown. The link within each ISP, and across two ISPs, are all point to point optical links. The initial value of TTL is 32. The maximum possible value of TTL field when R receives the datagram is-** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 76]**
+   a. 25
+   b. 24
+   c. 26
+   d. 28
+
+5. **Assume that Source S and Destination D are connected through an intermediate router R. How many times a packet has to visit the network layer and data link layer during a transmission from S to D?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 79]**
+   a. Network layer -4 times, Data link layer -4 times
+   b. Network layer -4 times, Data link layer -6 times
+   c. Network layer -2 times, Data link layer -4 times
+   d. Network layer -3 times, Data link layer -4 times
 
 ## Switching Techniques
 

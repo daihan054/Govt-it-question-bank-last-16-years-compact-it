@@ -197,3 +197,9 @@
    (খ) Jpeg
    (গ) avi
    (ঘ) gif
+
+9. **Which one of the following is not a search engine?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 76]**
+   a. Windows
+   b. Google
+   c. Yahoo
+   d. Bing

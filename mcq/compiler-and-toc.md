@@ -17,3 +17,9 @@
    (b) Pushod
    (c) Insert
    (d) None of these
+
+4. **Which of the following regular expressions represents the set of all the binary strings with an odd number of 1's?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
+   a. 0*+(10*1) *10*
+   b. (0*+(10*1) *)10*n
+   c. 0*+10*1*10*
+   d. (0*+10) *1*10*

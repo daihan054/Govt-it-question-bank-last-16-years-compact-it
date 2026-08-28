@@ -194,6 +194,15 @@
    (c) 233
    (d) Syntax error
 
+21. **Consider the following relational data table, Employee. Now, find the output for the following SQL Statement?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+   ```sql
+   SELECT COUNT (*) FROM Employee, Employee, Employee
+   ```
+   a. 4
+   b. 27
+   c. 32
+   d. 64
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

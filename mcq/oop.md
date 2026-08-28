@@ -139,6 +139,12 @@
    c) Inheritance
    d) All of the above
 
+4. **What is the characteristic of OOP programming that allows binding data and methods to work as a unit?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+   a. Inheritance
+   b. Encapsulation
+   c. Polymorphism
+   d. Projection
+
 ## Polymorphism & Overloading
 
 1. **Which of the following operators should be preferred to overload as a global function rather than a member method?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**

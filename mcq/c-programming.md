@@ -286,6 +286,16 @@
    c) 20 10
    d) Garbage Value
 
+20. **What is the correct output of the following C program statements?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+   ```c
+   int array[]={6, 7, 8, 9, 0, 1, 2, 4, 5, 6}, *p=array+5;
+   printf("%d\n",p[1]);
+   ```
+   a. 1
+   b. 2
+   c. 3
+   d. Compile Error
+
 ## Storage Classes & Scope
 
 1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
