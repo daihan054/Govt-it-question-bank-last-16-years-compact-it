@@ -317,6 +317,8 @@ return 0;
 
 9. **Difference between array and structure data type.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
 
+10. **Write down the types of errors which can occur the execution of a program.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
 ## Output Tracing & Control Flow
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

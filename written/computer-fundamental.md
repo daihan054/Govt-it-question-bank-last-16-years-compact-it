@@ -56,6 +56,12 @@
 
 19. **Write short notes on: (i) RAM (ii) ROM (iii) Primary key (iv) Foreign key (v) Data** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
 
+20. **Write down the full meaning of SMTP?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+21. **What is first programming language?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+22. **(ক) “Computer” এবং “Computer System' এই দুটি term এর মধ্যে পার্থক্য কি?** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 703]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -73,6 +79,14 @@
 7. **What are the components of a Micro computer system?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
 
 8. **What do understand by the resolution of computer screen?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
+9. **What is BIOS?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+10. **Pixel number 130 হলে রেজুলেশন কত হবে?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+11. **(খ) Computer System এর Components গুলির সংক্ষিপ্ত বর্ণনাসহ লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
+
+12. **(ক) কম্পিউটার সিস্টেমের কর্মক্ষমতার উপর প্রভাব রাখতে সক্ষম এরূপ ৩টি Component এর সংক্ষিপ্ত বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
 ## ICT in Society & Governance
 

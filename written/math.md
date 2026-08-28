@@ -16,6 +16,8 @@
 
 8. **\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - \frac{2+\sqrt{3}}{2-\sqrt{3}} = ?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 447]**
 
+9. **9+7+5+.......ধারাটির যোগফল -১৪৪ হলে, n = কত?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
 ## Permutations & Combinations
 
 1. **CARBON word permutations that vowel must occupy odd positions?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
@@ -37,6 +39,8 @@
 4. **১ থেকে ১০০ পর্যন্ত কয়টি সংখ্যা রয়েছে যা ৩ ও ৪ দ্বারা বিভাজ্য নয়?** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 382]**
 
 5. **Express the following statement as a logical expression, “If someone is female and is a parent, then this person is someone's mother”.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 664]**
+
+6. **(ক) p \land (\neg p \lor q) - logical expression টির জন্য Truth table প্রস্তুত করুন। যেখানে p, q- Boolean variable.** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 706]**
 
 ## Percentage, Profit & Loss, Simple & Compound Interest
 
@@ -99,6 +103,8 @@
 5. **In the given figure, PQT is a right triangle then what is the area of square QRST.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
 
 6. **AD is the longest side of the triangle ABD shown in the figure, what is the length of longest side of \Delta\text{ABC}?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 447]**
+
+7. **একটি সমদ্বিবাহু সমকোণী ত্রিভুজের অতিভুজ ১২ সেমি হলে, ত্রিভুজটির ক্ষেত্রফল কত বর্গ সেমি?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
 ## Analytical Ability & Logical Reasoning
 

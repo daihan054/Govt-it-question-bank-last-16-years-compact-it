@@ -10,6 +10,8 @@
 
 5. **What is the difference between http and https?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]**
 
+6. **(গ) URL কী? একটি URL ক্লিক করার পর Web Page Show করার পূর্ব পর্যন্ত যে কয়টি Step হয় সেগুলির নাম লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
+
 ## JavaScript & jQuery (DOM & Validation)
 
 1. **Jquery for email validation** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
@@ -66,6 +68,10 @@
 
 10. **অথবা, নিম্নোক্ত উপাদানগুলোসহ একটি HTML page লিখুন। Hyperlink, Ordered list, Unordered list, Form (Tent box, Check box, Option Button).** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
+11. **(ক) HTML এবং CSS কী? সংক্ষেপে ব্যাখ্যা করুন। শুধুমাত্র HTML এবং CSS ব্যবহার করে Web Site তৈরির ক্ষেত্রে সীমাবদ্ধতা আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
+
+12. **(খ) Static Web Page এবং Dynamic Web Page এর মধ্যে পার্থক্য আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
+
 ## CSS & Styling (Inline, Internal, External)
 
 1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**
@@ -74,9 +80,13 @@
 
 3. **(খ) CSS Box Model এ ‘Padding’ এবং ‘Margin’ এরিয়ার মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
+4. **(খ) CSS কী? কতভাবে একজন Website develop কারী তার page-এ CSS ব্যবহার করতে পারে।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 708]**
+
 ## Full Stack & Backend Web Development
 
 1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 320]**
+
+2. **(খ) Client-side scripting এর তুলনায় Server-side scripting এর সুবিধাগুলো কী কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 709]**
 
 ## Web Security & Browser Same-Origin Policy (Iframe)
 

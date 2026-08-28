@@ -8,6 +8,10 @@
 
 4. **Write short note: (i) web server (ii) ISP (iii) Router (iv) Search Engine** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 680]**
 
+5. **What is Interface protocol?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+6. **(ক) সংজ্ঞা লিখুন: WWW, URL, HTTP, IP Address, Router.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 708]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -65,6 +69,8 @@
 7. **(খ) একটি নেটওয়ার্কে n সংখ্যক ডিভাইসের জন্যে Bus, Mesh এবং Star টপোলজিতে তারের লিংকগুলোর সংখ্যা কত?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
 
 8. **What is network topology? Write the name all different topology used in computer networking with example, diagram and their activities.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
+
+9. **Write down the types of topology.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
 
 ## OSI & TCP/IP Reference Model
 
@@ -130,6 +136,8 @@
 27. **What is OSI model? Write different layers of OSI model.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
 
 28. **What is the difference between DOD and OSI model?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 700]**
+
+29. **What is PDU?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 702]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -197,6 +205,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 7. **Briefly mention the main रणनीति impairments in telecommunication channel. Considering these impairments explain which communication is better between analog and digital communication systems?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 674]**
 
 8. **Describe the data communication system with necessary diagram.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
+9. **Write down the Data Communication elements.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
+10. **(ক) Data Communication System এর পাঁচটি প্রধান Component এর চিত্রসহকারে বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
+
+11. **(খ) Data Communication কত প্রকার? উদাহরণসহ সংক্ষিপ্ত বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
 ## Switching Techniques (Circuit vs Packet Switching)
 
@@ -435,6 +449,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 59. **What is the range of IPv4 address class A, B and C?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
 
+60. **What is subnet mask? Given IP address 192.168.0.0/29 find 10^{\text{th}} and 22^{\text{th}} subnet first host address and last host address.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
+
+61. **How many bits need to identify an IP address in IPv4?** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
+62. **What is default subnet mask?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 702]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -626,6 +646,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 7. **A telephone line normally has a bandwidth of 3000\text{ Hz} (300\text{ to } 3300\text{ Hz}) assigned foe data communications. The signal-to-noise ratio is usually 3162. Calculate the capacity for this channel?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 656]**
 
 8. **Consider that a signal is transmitted over a channel of bandwidth 200kHz and the total path loss in the channel is found to be 60dB. The noise power per hertz at the receiver is- 100 dBm. Determine the required transmit power to achieve data rate of 40kb/s.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 

@@ -155,6 +155,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 2. **Make sentences with the following (any five): (a) keep pace with (b) make up one's mind (c) put up with (d) take after (e) well off (f) on the sly (g) in case of.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
+3. **অর্থসহ বাক্য রচনা করুন: A Black Sheep, Crocodile tears, Straw Vote, Bed of roses, Hard and fast.** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
 ## Translation
 
 1. "কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।" — Translate the passage into English. [SO IT 25-07-2026]
@@ -189,3 +191,5 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 13. **Translation Bangla to English.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
 
 14. **বাংলা থেকে ইংরেজিতে অনুবাদ।** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+
+15. **ইংরেজিতে অনুবাদ করুন: অভাবে স্বভাব নষ্ট, তেল এর চেয়ে পানি ভারী, তুমি আমাকে কেন এড়িয়ে চলছো?, তিনি এতোক্ষণে ঢাকায় পৌঁছে থাকবেন, আমি তাকে উপহাস করিনি।** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**

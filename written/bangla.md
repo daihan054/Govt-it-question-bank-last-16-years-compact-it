@@ -129,6 +129,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 2. **এক কথায় প্রকাশ : যে নারী কখনও সূর্য দেখে নি,** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
+3. **এক কথায় প্রকাশ করুন: অক্ষির অগোচরে, ইতিহাস রচনা করেন যিনি, উপকারীর অপকার করে যে, বিজয় করার ইচ্ছা, দিনের আলো ও সন্ধ্যার মিলনের সময়।** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
 ## বাংলা ব্যাকরণ ও সাহিত্য
 
 1. **নিচের প্রশ্নগুলোর উত্তর লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -194,3 +196,5 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 25. **৫. যে-কোন দুইটি প্রশ্নের উত্তর দিন: ক. সাধু ও চলিত ভাষারীতির পাঁচটি পার্থক্য উল্লেখ করুন। খ. ণ-ত্ব বিধানের পাঁচটি নিয়ম লিখুন। গ. ‘পাকা’ শব্দের মাধ্যমে ভিন্নার্থকভাবে পাঁচটি বাক্য রচনা করুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
 26. **৭. পল্লীকবি কে? বাংলা সাহিত্যে সনেটের জনক কাকে বলা হয়? “লালসালু” উপন্যাসের লেখক কে?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+27. **অর্থসহ বাক্যরচনা করুন: কচুবনের কালাচাঁদ, কাকনিদ্রা, গোবর গণেশ, কাঠালের আমসত্ত্ব, উনপঞ্চাশ বায়ু।** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**

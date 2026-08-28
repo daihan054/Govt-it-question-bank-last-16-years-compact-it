@@ -32,6 +32,8 @@
 
 12. **Flag Register কী? Intel 8086 Microprocessor-এর Control Flag গুলোর কাজ লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 697]**
 
+13. **What is Microprocessor?** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -114,6 +116,8 @@
 
 11. **Give classification of memory. Differentiate between RAM and ROM.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 664]**
 
+12. **(গ) Primary Memory and Secondary Memory এর উদাহরণসহ তুলনামূলক আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
+
 ## Secondary Storage (HDD vs SSD)
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -123,6 +127,8 @@
 3. **Write two SSD characteristics?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
 4. **How can you define SSD?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
+5. **(খ) Solid State Drives (SSD) এর কার্যপ্রণালী ও ব্যবহার লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
 ## RAID Architecture & Storage
 

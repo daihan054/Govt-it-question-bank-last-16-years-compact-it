@@ -34,6 +34,8 @@
 
 17. **What is SHA-256 and SHA-512 in network security, what is avalanche effect, is it desirable or undesirable.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 655]**
 
+18. **What is the difference between Hashing and Encryption?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -79,6 +81,8 @@
 3. **What is Cybercrime? Cybercrime রোধে প্রয়োজনীয় পদক্ষেপ গুলো লিখ।** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
 
 4. **What is Cyber space? Write some threats of cyber space.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
+
+5. **Write the cyber security threats.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
 
 ## Social Engineering & Cyber Attacks
 

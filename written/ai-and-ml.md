@@ -54,6 +54,8 @@
 
 3. **Write difference between machine learning and deep learning.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
 
+4. **What is Deep learning?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
 ## Association Rule Learning (Market Basket Analysis)
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**
@@ -89,6 +91,8 @@
 5. **Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
 
 6. **Machine learning is a subset of cloud computing that can be built AI-Based. True or False.** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+7. **What is the father of AI?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical)
 

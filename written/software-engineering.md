@@ -50,6 +50,14 @@
 
 20. **(b) Explain the diference between black-box and White-box testing.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 696]**
 
+21. **Software testing কত প্রকার ও কী কী? Testing এর ক্ষেত্রে Boundary Value Analysis (BVA) এবং Equivalence Partitioning কীভাবে কাজ করে?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 708]**
+
+22. **(খ) Quality Control কাকে বলে? Quality review process কীভাবে কাজ করে?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
+
+## Data Flow Diagrams (DFD)
+
+1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
+
 ## UML Diagrams (Class, Use Case, Sequence)
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
@@ -79,6 +87,8 @@
 3. **(b) Which contents shoud be consider when you setup a new system?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
 
 4. **You have been given a responsibility to elicit requirements from a customer, who tells you that he is too busy to meet with you. What should you do?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
+
+5. **(ক) Software development এর ক্ষেত্রে কত প্রকার requirements পাওয়া যায়। উদাহরণসহ requirements সমূহ লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
 
 ## SDLC Phases & Models
 
@@ -132,6 +142,12 @@
 
 25. **(b) What is SDLC? Define the activities of the design phase in SDLC.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
 
+26. **(ক) Software development এর Agile পদ্ধতির মূলনীতিগুলো লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
+
+27. **(খ) Software development এর Waterfall model এর অসুবিধাগুলো কী কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
+
+28. **(খ) System/Model Prototype বলতে কী বুঝায়? Product ও Process এর মধ্যে সম্পর্ক কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
@@ -147,6 +163,8 @@
 6. **We are going to create a Shape interface and concrete classes implementing the Shape interface. A facade class ShapeMaker is defined as a next step. ShapeMaker class uses the concrete classes to delegate user calls to these classes. FacadePatternDemo, our demo class, will use ShapeMaker class to show the results.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 450]**
 
 7. **Imagine a scenario where new child classes are introduced frequently from a basic class. The method calling sequences for every child class are the same but the implementation is different among the child classes. Here which design pattern would you like to apply? Explain the reasons with examples to support your answer.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
+
+8. **(ক) 'ATM machine' এর Software Structure আঁকুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
 
 ## CI/CD & DevOps Methodologies
 
@@ -168,6 +186,8 @@
 
 3. **Project management related question (what are the approaches)** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 520]**
 
+4. **(খ) User story ও Product backlog কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
+
 ## Software Design Principles (Coupling & Cohesion)
 
 1. **Write concepts of Coupling and Cohesion with Example?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
@@ -175,6 +195,8 @@
 2. **Software design table matching.......** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
 
 3. **(ক) Modularization কী? উহার সুবিধা সম্পর্কে লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 602]**
+
+4. **(খ) Software interface কত প্রকার ও কী কী? Interfacing এর ক্ষেত্রে কী কী error পাওয়া যেতে পারে?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
 
 ## Software Cost Estimation & Build vs Buy Decisions
 
@@ -200,6 +222,8 @@
 1. **Difference between: Policy, Guideline, Procedure; why auditor must focus on control as a system? Explain four types of risks auditor faces, Explain each of theme.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 310]**
 
 2. **A bank has association with two different service providers as their payment gateways. The bank hires Mr. X to audit the payment gateway based on risk and threat detection. Which possible scenarios Mr. X will face?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 443]**
+
+3. **(ক) Software risk কত প্রকার ও কী কী? Risk management process চিত্রের মাধ্যমে বুঝিয়ে লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 709]**
 
 ## Open Source Software & Licensing
 

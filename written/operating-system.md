@@ -20,6 +20,8 @@
 
 10. **Explain context switching in Operating System.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
 
+11. **Which Operating system is considered as an Open source?** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -317,6 +319,8 @@ All process arrived at time 0. Lower number has higher priority.
 2. **What is Semaphore? How would you improve performance when using semaphores?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 504]**
 
 3. **(গ) Process Synchronization এর ক্ষেত্রে Race condition ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 624]**
+
+4. **(ক) Critical Section Problem কী? ইহা কীভাবে সমাধান করা যায়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
 
 ## Deadlock & Resource Allocation
 

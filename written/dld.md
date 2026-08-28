@@ -19,6 +19,8 @@
 
 8. **Explain Binary digits, logical levels and digital waveforms using timing diagram.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
 
+9. **Convert: (1741)_{10} = (?)_{16}** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
+
 ## 2's Complement & Binary Arithmetic
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**

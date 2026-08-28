@@ -26,6 +26,8 @@
 
 11. **Expalin: Infix, Prefix, Postfix notation.** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
 
+12. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 706]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
