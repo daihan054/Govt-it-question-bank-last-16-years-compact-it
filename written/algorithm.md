@@ -157,6 +157,8 @@ for i in N:
 
 4. **Find the shortest path from following graph starts from:** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 394]**
 
+5. **Find the minimum spanning tree:** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 700]**
+
 ## Greedy Algorithms (Fractional Knapsack)
 
 1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।

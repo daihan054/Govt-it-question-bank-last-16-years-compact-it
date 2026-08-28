@@ -123,6 +123,14 @@
 
 24. **In order to prevent that the company decided to add end to end encryption techniques which layer of the OSI model is suitable to work in considering parameters like development time, software maintainability and development cost, Give reasons for your concepts.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 438]**
 
+25. **(a) What is OSI model? Explain how two computers can exchange information using the OSI model.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
+
+26. **TCP/IP model এর Layer গুলোর কাজ লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
+
+27. **What is OSI model? Write different layers of OSI model.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
+
+28. **What is the difference between DOD and OSI model?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 700]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -169,6 +177,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 8. **Show a 3-way handshake protocol in TCP connection established using a diagram.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
 
 9. **Differecne between TCP and UDP.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
+
+10. **(b) Distinguish between TCP and UDP.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
 
 ## Communication System & Transmission Modes
 
@@ -423,6 +433,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 58. **Find network address, subnet mask, broadcast address and IP host range of 192.168.100.128/26** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 685]**
 
+59. **What is the range of IPv4 address class A, B and C?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -647,6 +659,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **White short notes on: (i) SONET/SDH; (ii) IP telephony; (iii) WDM technology; (iv) ATM network** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
 
+## Satellite Communication
+
+1. **(b) Difference between active and passive satellites.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
+
+2. **(c) Briefly describe different types of earth orbital satellite.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
+
 ## Wireless Networks & IoT (mmWave)
 
 1. **What is the use of mmWave in IoT?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
@@ -658,3 +676,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 4. **Briefly describe the basis structure at a mobile cellular system with a proper figure.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
 
 5. **How can you define IoT? What are the basic components of IoT?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 680]**
+
+6. **(a) Write down the features of 4G wireless networks.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**

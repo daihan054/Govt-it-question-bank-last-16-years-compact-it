@@ -72,6 +72,8 @@ class Test {
 
 24. **What is Polymorphism? Java language এর আলোকে ব্যাখ্যা কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
 
+25. **(a) What is Polymorphism? Distinguish between compile time and runtime polymorphisms.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**
@@ -120,6 +122,10 @@ public:
 ## Interfaces & Abstract Classes
 
 1. **Class/Interface implementation of code?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
+
+## Exception Handling
+
+1. **(b) What is exception? Explain how it can be used for debugging a program.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
 
 ## Java Programming & Methods
 

@@ -48,6 +48,8 @@
 
 7. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 636]**
 
+8. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 692]**
+
 ## Tree
 
 1. Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term. [SO IT 25-07-2026]
@@ -84,6 +86,8 @@
 
 17. **Write C++ function that will invert mirror a binary tree.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
 
+18. **X = (a^2 - 5b).(7a + b^5) এক্সপ্রেশনটিকে tree stracture-এ অঙ্কন করুন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
+
 ## Binary Search Tree (BST)
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
@@ -93,6 +97,8 @@
 3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
 
 4. **Construct a Binary Search tree, then post order, ....... (Approximate)** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
+
+5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 692]**
 
 ## Priority Queues & Heaps (Min/Max Heap)
 

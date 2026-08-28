@@ -30,14 +30,20 @@
 
 11. **What is the function of GPU?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
+12. **Flag Register কী? Intel 8086 Microprocessor-এর Control Flag গুলোর কাজ লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 697]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
+
+2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
 
 ## 8085 Microprocessor & Edge Computing
 
 1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।
    (b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+2. **Intel 8085 ও Intel 8086 Microprocessor-এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি কত এবং কেন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 697]**
 
 ## Assembly Language & Addressing Modes
 
@@ -45,6 +51,8 @@
    (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1424]**
+
+3. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
 
 ## Instruction Pipelining & Hazards
 
@@ -133,6 +141,8 @@
 7. **What do you mean by RAID? Write the difference types of RAID level.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
 
 8. **What is RAID technology? Why it's important Server in data center?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 555]**
+
+9. **(a) Compare RAID 1 and RAID 5 levels. Which one you prefer? Why?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
 
 ## CPU Performance & Instruction Cycle
 

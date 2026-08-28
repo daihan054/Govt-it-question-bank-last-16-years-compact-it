@@ -106,6 +106,10 @@
 
 5. **A distributive ledger in a peer-to-peer network is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]**
 
+6. **(a) Write short note on (i) Blockchain technology (ii) Cloud Computing** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
+
+7. **Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 696]**
+
 ## Server Hardware & Enterprise Systems
 
 1. **What should be checked before buying servers?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 318]**

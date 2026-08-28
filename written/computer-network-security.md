@@ -78,6 +78,8 @@
 
 3. **What is Cybercrime? Cybercrime রোধে প্রয়োজনীয় পদক্ষেপ গুলো লিখ।** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
 
+4. **What is Cyber space? Write some threats of cyber space.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
+
 ## Social Engineering & Cyber Attacks
 
 1. What is a phishing attack? Explain its types and discuss methods to prevent it. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

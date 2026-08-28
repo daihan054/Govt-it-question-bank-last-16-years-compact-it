@@ -255,6 +255,8 @@ return 0;
 55555
 ```
 
+54. **ইউজার হতে 10 টি integer data input করে যে data গুলো 5 দ্বারা বিভাজ্য তাদের গড় মান নির্ণয় এর একটি program লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -447,6 +449,29 @@ int i;
 for (i=0; i<9; i++) {
     if(i==5) continue;
     printf ("%d\n", i);
+}
+```
+
+14. **Find the output of the following program:** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
+```c
+#include<stdio.h>
+int main() {
+    int a=10, b=25;
+    a = b++ + a++;
+    b = ++b + ++a;
+    printf("%d %d\n", a, b);
+    return 0;
+}
+```
+
+15. **Find the output of the following program:** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
+```c
+#include<stdio.h>
+int main() {
+    int a=2, b=5, c;
+    c = a++ + b;
+    printf("%d %d %d", a, b, c);
+    return 0;
 }
 ```
 

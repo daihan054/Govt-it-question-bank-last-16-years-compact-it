@@ -308,6 +308,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 7. **Write down the name of four information stored in PCB (Process Control Block).** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
 
+8. **Operating System এর Process state diagram অঙ্কন করুন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
+
 ## Process Synchronization & Concurrency
 
 1. Two independent applications running concurrently attempt to update the same file located at a same file location. Both applications may read and modify the file at nearly the same time, creating a possibility of race conditions, lost updates, or inconsistent data. What type of consistency problem can occur in this situation, and which synchronization technique(s) should be used to ensure that only one application can safely update the file at a time? Explain the mechanism and justify the most appropriate solution. [BSCCPL AME 21-08-2026 (BUET)]

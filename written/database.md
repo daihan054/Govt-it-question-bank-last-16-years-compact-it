@@ -27,6 +27,8 @@
 
 13. **Describe the advantages and disadvantages of DBMS-provided and application provided security.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 684]**
 
+14. **(a) What is database schema? What are dangling tuple and descriptive attribute?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -283,6 +285,8 @@ ORDER BY average_salary DESC;
 
 41. **Employee table হতে Employee_id, Employee কে খোঁজে বের করার SQL Command লিখ যাদের গড় salary 2000 উপরে।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 641]**
 
+42. **Employee Table টেবিল হতে যে সকল কর্মচারীদের বেতন 30000 টাকার বেশি তাদের নাম পদবী আলাদা করার SQLCommand লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 699]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -353,6 +357,8 @@ ORDER BY average_salary DESC;
 
 2. **Database program with base and high- level language (SQL) to find out the interest rate from the given database table.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
 
+3. **(c) Define dynamic SQL and trigger with examples.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
+
 ## Database Backup & Disaster Recovery
 
 1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
@@ -407,6 +413,8 @@ ORDER BY average_salary DESC;
 
 5. **Weak Entity and strong entity difference with relation.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
 
+6. **(b) Give example of week and strong entity sets.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
+
 ## Keys in DBMS
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -428,6 +436,8 @@ ORDER BY average_salary DESC;
 9. **From Functional Dependency for determine candidate key.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 661]**
 
 10. **Relation to find primary key, candidate key, super key.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 663]**
+
+11. **(a) Differentiate among foreign key, candidate key, and primary key.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
 
 ## Indexing in DBMS
 
@@ -459,6 +469,8 @@ ORDER BY average_salary DESC;
 ## Database Connectivity (JDBC)
 
 1. What is JDBC? Explain the steps required to connect a Java application to a MySQL database. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+
+2. **(b) Explain embedded SQL with an appropriate example.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
 
 ## Database Design & Data Types
 
