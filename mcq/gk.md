@@ -500,6 +500,41 @@
 43. **যুক্তরাষ্ট্রের নিউইয়র্কে কনসার্ট ফর বাংলাদেশ কে এরেঞ্জ করেন?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
    **Ans:** পন্ডিত রবি শংকর
 
+44. **Who was the commander in chief of the mukti bahini?** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) M.A. Rab
+   (b) M.A.G Osmani
+   (c) K.M Shafiullah
+   (d) A.K Khander
+   **Ans: b**
+
+45. **Total amount of budget of Bangladesh for FY 2022-2023 was-** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) 6,78,064 Cr, TK
+   (b) 5,23,190 Cr, TK
+   (c) 6,80,473 Cr, TK
+   (d) 7,80,064 Cr, TK
+   **Ans: a**
+
+46. **What is the current rank of Bangladesh of SDG?** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) 109
+   (b) 104
+   (c) 136
+   (d) 129
+   **Ans: b**
+
+47. **The span of the Padma bridge are-** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) 40
+   (b) 41
+   (c) 42
+   (d) 43
+   **Ans: b**
+
+48. **Install capacity of payra-** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) 1320 MW
+   (b) 1200 MW
+   (c) 600 MW
+   (d) 2400 MW
+   **Ans: a**
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -589,3 +624,10 @@
    (b) Kylian Mbappe
    (c) Karim Benzema
    (d) Ronaldo
+
+6. **Who is the most wicket taker in T20?** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) Rashid khan
+   (b) TG southee
+   (c) Shakib al hasan
+   (d) SL Malinga
+   **Ans: c**

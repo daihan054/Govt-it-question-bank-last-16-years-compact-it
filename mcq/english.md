@@ -217,6 +217,13 @@
    (c) Too many traffic
    **Ans: c**
 
+31. **Rahima carry ______ his language.** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) Out
+   (b) Down
+   (c) On
+   (d) Away
+   **Ans: d**
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -254,6 +261,13 @@
 
 7. **‘End in smoke’ means-** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 36]**
    **Ans:** end in nothing
+
+8. **What is the meaning of 'to bell the cat'?** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) Do the difficult
+   (b) Do the unpleasant
+   (c) To take lead in danger
+   (d) Take the initiative
+   **Ans: d**
 
 ## Vocabulary, Synonyms & Antonyms
 
