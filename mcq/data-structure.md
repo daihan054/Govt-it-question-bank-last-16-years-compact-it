@@ -168,17 +168,17 @@
 
 ## Stack & Queue (23)
 
-1. **The minimum number of stacks needed to implement a queue is** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
-   (a) 1
-   (b) 2
-   (c) 3
-   (d) 4
-
-2. **Which one of the following is an application of Stack Data Structure?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+1. **Which one of the following is an application of Stack Data Structure?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
    (a) Managing function calls
    (b) The stock span problem
    (c) Arithmetic expression evaluation
    (d) All of the above
+
+2. **The minimum number of stacks needed to implement a queue is** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
+   (a) 1
+   (b) 2
+   (c) 3
+   (d) 4
 
 3. **Which Data structure is needed to convert infix notation to postfix notation?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
    a) Branch
@@ -430,17 +430,17 @@
 
 ## Linked List (10)
 
-1. **In the worst case, the number of comparisons needed to search a singly linked list oflength n for a given element is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
-   (a) \log(2*n)
-   (b) \frac{n}{2}
-   (c) n
-   (d) \log(2*n)-1
-
-2. **What is the worst case time complexity of inserting n elements into an empty linked list, if the linked list needs to be maintained in sorted order?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+1. **What is the worst case time complexity of inserting n elements into an empty linked list, if the linked list needs to be maintained in sorted order?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
    (a) \Theta(n)
    (b) \Theta(n \log n)
    (c) \Theta(n^2)
    (d) \Theta(1)
+
+2. **In the worst case, the number of comparisons needed to search a singly linked list oflength n for a given element is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
+   (a) \log(2*n)
+   (b) \frac{n}{2}
+   (c) n
+   (d) \log(2*n)-1
 
 3. **Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to delete the node Q from the list?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
    (A) O(n)

@@ -237,257 +237,257 @@
 
 36. **ট্রান্সফরমারের কোন উইন্ডিং এ বেশি প্যাঁচ থাকে? সেকন্ডারি উইন্ডিং** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
 
-39. **জাংশন ফিল্ড ইফেক্ট ট্রানজিস্টর- কারেন্ট নিয়ন্ত্রিত** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+37. **জাংশন ফিল্ড ইফেক্ট ট্রানজিস্টর- কারেন্ট নিয়ন্ত্রিত** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
 
-42. **দুইটি সমান্তরাল পরিবাহী কে কোন অপরিবাহী দ্বারা পৃথক করা হলে তাকে কি বলে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+38. **দুইটি সমান্তরাল পরিবাহী কে কোন অপরিবাহী দ্বারা পৃথক করা হলে তাকে কি বলে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
 
-49. **ইন্ডাক্টরের ইন্ডাক্টেন্স নিম্নের কোনটির উপর নির্ভর করে না?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
+39. **ইন্ডাক্টরের ইন্ডাক্টেন্স নিম্নের কোনটির উপর নির্ভর করে না?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) ব্যবহৃত কোরের প্রস্থচ্ছেদের ক্ষেত্রফল
    (খ) ব্যবহৃত তারের প্যাচ সংখ্যা
    (গ) ব্যবহৃত তারের পুরুত্ব
    (ঘ) ব্যবহৃত কোরের দৈর্ঘ্য
 
-50. **নিচের কোন সেলটি শুষ্ক কিন্তু পুনরায় চার্জযোগ্য?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
+40. **নিচের কোন সেলটি শুষ্ক কিন্তু পুনরায় চার্জযোগ্য?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) নিকেল-ক্যাডমিয়াম
    (খ) মার্কারি
    (গ) লোড এসিড
    (ঘ) সোলার
 
-54. **বাইপোলার জংশন ট্রানজিস্টরের-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+41. **বাইপোলার জংশন ট্রানজিস্টরের-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) মাঝের লেয়ারটি সর্বদা N টাইপ
    (খ) ইমিটার লেয়ার সবচেয়ে বেশি প্রশস্ত
    (গ) বেস লেয়ারের ডোপিং ঘনত্ব সবচেয়ে বেশি
    (ঘ) কালেক্টর লেয়ার সবচেয়ে বেশি প্রশস্ত
 
-55. **ট্রান্সফরমারের কোন উইন্ডিং এ বেশি প্যাঁচ থাকে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+42. **ট্রান্সফরমারের কোন উইন্ডিং এ বেশি প্যাঁচ থাকে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    **Ans:** সেকেন্ডারি উইন্ডিং
 
-56. **নিম্নের কোনটি কমানোর জন্য ট্রান্সফরমারের কোর লেমিনেটিং করা হয়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+43. **নিম্নের কোনটি কমানোর জন্য ট্রান্সফরমারের কোর লেমিনেটিং করা হয়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** এডি কারেন্ট লস
 
-57. **নিম্নের কোনটি চার লেয়ার বিশিষ্ট ডিভাইস?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+44. **নিম্নের কোনটি চার লেয়ার বিশিষ্ট ডিভাইস?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** সিলিকন কন্ট্রোল রেক্টিফায়ার
 
-58. **জংশন ফিল্ড ইফেক্ট ট্রানজিস্টর-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+45. **জংশন ফিল্ড ইফেক্ট ট্রানজিস্টর-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    **Ans:** কারেন্ট নিয়ন্ত্রিত
 
-59. **ইমিটার ফলোয়ার ব্যবহারের প্রধান উদ্দেশ্য কি?-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+46. **ইমিটার ফলোয়ার ব্যবহারের প্রধান উদ্দেশ্য কি?-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** কারেন্ট গেইন
 
-60. **ট্রানজিস্টরের সার্কিট সঠিকভাবে বায়াসিং করা না হলে-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+47. **ট্রানজিস্টরের সার্কিট সঠিকভাবে বায়াসিং করা না হলে-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** আউটপুট সিগন্যাল বিকৃত হতে পারে
 
-61. **_______ helps prevent power surges.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
+48. **_______ helps prevent power surges.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
    (a) Surge suppressor
    (b) Surge protector
    (c) UPS system
    (d) High-grade multi-meter
 
-62. **A circuit has two different voltage sources that are connected in a series-opposing form. If the sources are rated at 6V and 9V, what is the total source voltage?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+49. **A circuit has two different voltage sources that are connected in a series-opposing form. If the sources are rated at 6V and 9V, what is the total source voltage?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
    (a) 3 V
    (b) 16 V
    (c) 7.5 V
    (d) 8 V
 
-63. **In a two-level memory hierarchy, the access time of the memory is 12 nanoseconds, and the access time of the main memory is 1.5 microseconds. The hit ratio is 0.98. What is the average access time of the two-level memory system?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
+50. **In a two-level memory hierarchy, the access time of the memory is 12 nanoseconds, and the access time of the main memory is 1.5 microseconds. The hit ratio is 0.98. What is the average access time of the two-level memory system?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
    (a) 13.5 nsec
    (b) 42 nsec
    (c) 7.56 nsec
    (d) 76 nsec
 
-64. **একটি বাল্বে 60W-220V লেখা থাকলে তার রোধ কত ওহম?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+51. **একটি বাল্বে 60W-220V লেখা থাকলে তার রোধ কত ওহম?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. 16.36
    B. 160.67
    C. 280.36
    D. 806.67
 
-65. **33 (ohm) resistor সার্কিটে 2amp তড়িৎপ্রবাহ চালিত হলে রেজিস্টারের ভোল্টেজ কত?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+52. **33 (ohm) resistor সার্কিটে 2amp তড়িৎপ্রবাহ চালিত হলে রেজিস্টারের ভোল্টেজ কত?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. 33 V
    B. 66V
    C. 80V
    D. 132V
 
-66. **বর্তনীতে তড়িৎ প্রবাহে সৃষ্টি করে কোনটি?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+53. **বর্তনীতে তড়িৎ প্রবাহে সৃষ্টি করে কোনটি?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. প্রোটনের প্রবাহ
    B. নিউট্রনের প্রবাহ
    C. ইলেকট্রনের প্রবাহ
    D. তাপের প্রবাহ
 
-67. **১০০ ওয়াটের একটি বৈদ্যুতিক বাতি প্রতিদিন ৭ ঘণ্টা জ্বললে ২০২০ সালের ফেব্রুয়ারী মাসে কত তড়িৎ শক্তি খরচ হবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+54. **১০০ ওয়াটের একটি বৈদ্যুতিক বাতি প্রতিদিন ৭ ঘণ্টা জ্বললে ২০২০ সালের ফেব্রুয়ারী মাসে কত তড়িৎ শক্তি খরচ হবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. 20.3k Wh
    B. 203k Wh
    C. 21.3k Wh
    D. 290k Wh
 
-68. **নিচের কোন ইলেকট্রনিক্স যন্ত্র AC থেকে DC তৈরি করতে পারে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+55. **নিচের কোন ইলেকট্রনিক্স যন্ত্র AC থেকে DC তৈরি করতে পারে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. Diode
    B. Transistor
    C. JET
    D. FET
 
-69. **n-p-n ট্রানজিস্টরে 'P' অংশটি কী?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+56. **n-p-n ট্রানজিস্টরে 'P' অংশটি কী?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. নিঃসরক
    B. সংগ্রাহক
    C. ভিত্তি
    D. বিাবর্ধক
 
-70. **ট্রানজিস্টরের সাথে ডায়াড বা রেজিস্টর এবং ক্যাপাসিটর দিয়ে তৈরি পূর্ণাঙ্গ সার্কিটকে কী বলে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+57. **ট্রানজিস্টরের সাথে ডায়াড বা রেজিস্টর এবং ক্যাপাসিটর দিয়ে তৈরি পূর্ণাঙ্গ সার্কিটকে কী বলে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. Motherboard
    B. RAM
    C. Processor
    D. IC
 
-71. **সিলিকনের সাথে কোন পদার্থ যোগ করলে তা p-টাইপে পরিণত হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+58. **সিলিকনের সাথে কোন পদার্থ যোগ করলে তা p-টাইপে পরিণত হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. ফসফরাস
    B. বোরন
    C. হাইড্রোজেন
    D. কার্বন
 
-72. **Minimum SNR PC a pulg?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+59. **Minimum SNR PC a pulg?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) Higher Channel Bandwidth
    b) Lower Signal Power
    c) Higher Signal Power
    d) None
 
-73. **Y-Y Connection এ neutral করা হয় কেন?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+60. **Y-Y Connection এ neutral করা হয় কেন?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) শূন্য বিদ্যুৎ প্রবাহিত করার জন্য
    b) সম্পূর্ণ বিদ্যুৎ প্রবাহিত করার জন্য
    c) বিদ্যুৎ প্রবাহের হার সমান রাখার জন্য
    d) কোনটি নয়
 
-74. **কোন ধরনের ম্যাটেরিয়ালের Permeability স্পেস এর তুলনায় কম?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+61. **কোন ধরনের ম্যাটেরিয়ালের Permeability স্পেস এর তুলনায় কম?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Ferromagnetic
    b) Paramagnetic
    c) Diamagnetic
    d) Bipolar
 
-75. **Active region এ BJT এর base-emitter and base collector কোন bias এ থাকে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+62. **Active region এ BJT এর base-emitter and base collector কোন bias এ থাকে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Forward - Reverse
    b) Reverse - Forward
    c) Forward -Forward
    d) Reverse -Reverse
 
-76. **For an n-channel enhancement type MOSFET, if the source is connected at a higher potential than that of the bulk (i.e. V_{SB} > 0), the threshold voltage V_T of the MOSFET will-** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+63. **For an n-channel enhancement type MOSFET, if the source is connected at a higher potential than that of the bulk (i.e. V_{SB} > 0), the threshold voltage V_T of the MOSFET will-** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Remain unchanged
    b) decrease
    c) Change polarity
    d) increase
 
-77. **Efficiency এবং power factor বাড়ালে induction motor Gi speed কি হবে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+64. **Efficiency এবং power factor বাড়ালে induction motor Gi speed কি হবে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Neutral
    b) Decrease
    c) Increase
    d) a&b
 
-78. **Op-amp এর ক্ষেত্রে কোনটি সত্য?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+65. **Op-amp এর ক্ষেত্রে কোনটি সত্য?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Large input impedance
    b) Large output impedance
    c) Small input impedance
    d) All of these
 
-79. **Stator winding single phase motor 97 PETIT RT?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+66. **Stator winding single phase motor 97 PETIT RT?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Stator এর ভিতর
    b) Rotor এর ভিতর
    c) Stator এর বাহিরে
    d) Rotor এর বাহিরে
 
-80. **Which type of capacitance form in forward bias.** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+67. **Which type of capacitance form in forward bias.** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Transition
    b) Junction
    c) Diffusion Capacitance
    d) a & b
 
-81. **Synchronous motor run in What type of power factor at under excitation** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+68. **Synchronous motor run in What type of power factor at under excitation** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Unity
    b) Lagging
    c) Leading
    d) None of these
 
-82. **What will be speed if pole no is increased in alternator?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+69. **What will be speed if pole no is increased in alternator?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Increase
    b) Decrease
    c) Synchronous
    d) None of these
 
-83. **১০০ ওয়াট ও ২০০ ভোল্ট বিশিষ্ট একটি বাতির রোধ কত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+70. **১০০ ওয়াট ও ২০০ ভোল্ট বিশিষ্ট একটি বাতির রোধ কত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
    (ক) ১০০ ওহম
    (খ) ২০০ ওহম
    (গ) ৪০০ ওহম
    (ঘ) ৫০ ওহম
 
-84. **With zero volts on both inputs, what is the ideal output of an Operational Amplifier?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
+71. **With zero volts on both inputs, what is the ideal output of an Operational Amplifier?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
    a) Equal to Zero
    b) Same as positive input voltage
    c) None of the above
    d) Same as negative input voltage
 
-85. **Which device converts mechanical energy into electrical energy?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 175]**
+72. **Which device converts mechanical energy into electrical energy?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 175]**
    a) Solar cell
    b) Motor
    c) Generator
    c) Chemical cell
 
-86. **A wire resistance is 12 ohms. If it is divided into two parts and the parts are then connected in a parallel combination what will be resistance?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+73. **A wire resistance is 12 ohms. If it is divided into two parts and the parts are then connected in a parallel combination what will be resistance?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
    A. 3 ohm
    B. 6 ohm
    C. 12 ohm
    D. 24 ohm
 
-87. **When there is no forbidden region between the conductance band and valence band, the substance is called.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+74. **When there is no forbidden region between the conductance band and valence band, the substance is called.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
    A. semiconductor
    B. super conductor
    C. conductor
    D. insulator
 
-88. **In common base circuit of a transistor, current amplification factor is 0.95. Calculate the emitter current if base current is 0.2mA.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+75. **In common base circuit of a transistor, current amplification factor is 0.95. Calculate the emitter current if base current is 0.2mA.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
    A. 2mA
    B. 4mA
    C. 6mA
    D. 8mA
 
-89. **The concept of which Superposition theorem is based on-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+76. **The concept of which Superposition theorem is based on-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
    (a) Reciprocity
    (b) duality
    (c) non-linearity
    (d) linearity
 
-90. **At absolute zero temperature, a semiconductor behaves as a/an-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+77. **At absolute zero temperature, a semiconductor behaves as a/an-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
    (a) Good conductor
    (b) Superconductor
    (c) Insulator
    (d) Variable resistor
 
-91. **The fact that the conductor carries more current on the surface of core is known as-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+78. **The fact that the conductor carries more current on the surface of core is known as-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
    (a) Permeability
    (b) Surface tension
    (c) Corona
    (d) skin effect
 
-92. **A load is connected to a network. At the terminal to which the load is connected, R_{\text{th}}=10 and V_{\text{th}}=40\text{V}. The maximum possible power supplied to the load is-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+79. **A load is connected to a network. At the terminal to which the load is connected, R_{\text{th}}=10 and V_{\text{th}}=40\text{V}. The maximum possible power supplied to the load is-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
    (a) 160\text{ W}
    (b) 80\text{ W}
    (c) 40\text{ W}
    (d) 1\text{ W}
 
-93. **A transformer transforms ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+80. **A transformer transforms ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
    a. Frequency
    b. Voltage
    c. Current
    d. Voltage and Current
 
-94. **A power system is providing 200\text{ V ac at }25\text{ A}. The phase angle between current and voltage is 25^\circ. What is the power consumed by the system?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+81. **A power system is providing 200\text{ V ac at }25\text{ A}. The phase angle between current and voltage is 25^\circ. What is the power consumed by the system?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
    a. 2113 w
    b. 4531 w
    c. 5517 w
    d. 11831 w
 
-95. **The common collector amplifier is also known as ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+82. **The common collector amplifier is also known as ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
    a. Collector follower
    b. Base follower
    c. Emitter follower
    d. Integrator
 
-96. **Negative feedback in an amplifier ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+83. **Negative feedback in an amplifier ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
    a. Reduces the gain
    b. Increases the gain
    c. Is harmful
@@ -624,37 +624,37 @@
    (ঘ) ক্যারিয়ার ফ্রিকুয়েন্সি পরিবর্তিত হয়
    **Ans: গ**
 
-7. **ঢাকা বেতার কেন্দ্র মিডিয়াম ওয়েভে 630Hz এ অনুষ্ঠান সম্প্রচার করে। রেডিও তরঙ্গে বেগ 3 \times 10^8\text{ ms}^{-1} হলে তরঙ্গ। দৈর্ঘ্য কত হবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+6. **ঢাকা বেতার কেন্দ্র মিডিয়াম ওয়েভে 630Hz এ অনুষ্ঠান সম্প্রচার করে। রেডিও তরঙ্গে বেগ 3 \times 10^8\text{ ms}^{-1} হলে তরঙ্গ। দৈর্ঘ্য কত হবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. 476190m
    B. 476.19m
    C. 476190cm
    D. 476.19cm
 
-8. **What is the output power in watts of the following three-stage system?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 186]**
+7. **What is the output power in watts of the following three-stage system?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 186]**
    a) 0.431\text{ Watt}
    b) 0.5\text{ Watt}
    c) 18\text{ Watt}
    d) 0.0631\text{ Watt}
 
-9. **সিগন্যালের পারস্পরিক রূপান্তর করে-** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+8. **সিগন্যালের পারস্পরিক রূপান্তর করে-** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
    A) মডেম
    B) হাব
    C) রাউটার
    D) গেটওয়ে
 
-10. **একটি ওয়েভ এক সাইকেল এ যে দূরত্ব অতিক্রম করে তাকে বলে-** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+9. **একটি ওয়েভ এক সাইকেল এ যে দূরত্ব অতিক্রম করে তাকে বলে-** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
    A) Frequency
    B) Cycle
    C) Wave length
    D) None
 
-11. **The unit-impulse response of a system is given by c(t) = 0.5e^{-0.5t}. Its transformer function is-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+10. **The unit-impulse response of a system is given by c(t) = 0.5e^{-0.5t}. Its transformer function is-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
    (a) 1/(s+2)
    (b) 1/(1+2s)
    (c) 2/(1+2s)
    (d) 2/(s+2)
 
-12. **A filter having a single continuous transmission band with neither the upper nor the lower cutoff frequencies is zero or infinite is called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+11. **A filter having a single continuous transmission band with neither the upper nor the lower cutoff frequencies is zero or infinite is called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
    (a) Band pass filter
    (b) Low pass filter
    (c) High pass filter

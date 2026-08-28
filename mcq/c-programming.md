@@ -19,7 +19,41 @@
 
 ## Output Tracing (36)
 
-1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
+1. **Find Output:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
+   ```cpp
+   int fun(int *p) {
+   *p = *p + 10;
+   return *p;
+   }
+   int main() {
+   int x = 5;
+   cout << fun(&x);
+   return 0;
+   }
+   ```
+   (a) 15
+   (b) 10
+   (c) 25
+   (d) 5
+
+2. **Find Output:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
+   ```cpp
+   int main() {
+   int x=3, y=2;
+   if (x==3)
+   y=2;
+   else
+   y=3;
+   cout<<x<<" "<<y<<endl;
+   return 0;
+   }
+   ```
+   (a) 3 3
+   (b) 3 2
+   (c) 2 3
+   (d) 3 1
+
+3. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
    ```c
    int main() {
    int x=20, y=10, z=5;
@@ -32,7 +66,7 @@
    (c) 0
    (d) 1
 
-2. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
+4. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
    ```c
    int main() {
    double k=0;
@@ -46,7 +80,7 @@
    (c) muli is printed twice
    (d) muli is printed thrice
 
-3. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
+5. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
    ```c
    int main() {
    int i,j, count;
@@ -64,7 +98,7 @@
    (c) 10
    (d) 25
 
-4. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
+6. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
    ```c
    int main() {
    int x = 107;
@@ -78,7 +112,7 @@
    (c) k, Q
    (d) Q, K
 
-5. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
+7. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
    ```c
    int main() {
    int data [2][3][2]={0,1,2,3,4,5,6,7,8,9,10,11};
@@ -92,7 +126,7 @@
    (c) 6
    (d) 11
 
-6. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
+8. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
    ```c
    int main() {
    int i= 11, j = 3;
@@ -104,40 +138,6 @@
    (b) 12
    (c) 13
    (d) 14
-
-7. **Find Output:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
-   ```cpp
-   int fun(int *p) {
-   *p = *p + 10;
-   return *p;
-   }
-   int main() {
-   int x = 5;
-   cout << fun(&x);
-   return 0;
-   }
-   ```
-   (a) 15
-   (b) 10
-   (c) 25
-   (d) 5
-
-8. **Find Output:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
-   ```cpp
-   int main() {
-   int x=3, y=2;
-   if (x==3)
-   y=2;
-   else
-   y=3;
-   cout<<x<<" "<<y<<endl;
-   return 0;
-   }
-   ```
-   (a) 3 3
-   (b) 3 2
-   (c) 2 3
-   (d) 3 1
 
 9. **What will be the output of this C program?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
    ```c

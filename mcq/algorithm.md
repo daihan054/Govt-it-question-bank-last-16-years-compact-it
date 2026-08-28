@@ -106,31 +106,31 @@
    C) \text{O (n log n)}
    D) \text{O(n!)}
 
+16. **The complexity of Bubble short algorithm is-** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 217]**
+   A) O(n)
+   B) O(\log n)
+   C) O(n^2)
+   D) O(n \log n)
+
 17. **Bubble sort algorithm sorts n data items using?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
    A) O(n^2) Comparisons
    B) O(n) Comparisons
    C) O(n \log n) Comparisons
    D) O(n) Comparisons
 
-18. **The complexity of Bubble short algorithm is-** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 217]**
-   A) O(n)
-   B) O(\log n)
-   C) O(n^2)
-   D) O(n \log n)
-
-19. **Quicksort can be categorized as:** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+18. **Quicksort can be categorized as:** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
    A) Brute force technique
    B) Divide and conquer
    C) Greedy algorithm
    D) Dynamic programming
 
-20. **The complexity of Bubble sort algorithm is-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+19. **The complexity of Bubble sort algorithm is-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
    A) O(n)
    B) O(\text{long } n)
    C) O(n^2)
    D) O(n \log n)
 
-21. **Which is the slowest algorithm?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
+20. **Which is the slowest algorithm?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 244]**
    A) Bubble Sort
    B) Quick sort
    C) Heap sort
@@ -138,17 +138,17 @@
 
 ## Searching Algorithms (18)
 
-1. **Linear search is also called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) Random Search
-   b) Sequential search
-   c) Perfect search
-   d) None
-
-2. **What are the advantages of Linear Search over Binary Search?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
+1. **What are the advantages of Linear Search over Binary Search?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
    (a) The array is ordered.
    (b) Less number of comparison
    (c) less time and space complexity
    (d) Linear search can be used irrespective of whether the array is sorted or not
+
+2. **Linear search is also called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) Random Search
+   b) Sequential search
+   c) Perfect search
+   d) None
 
 3. **Which of the following is not the required condition for a binary search algorithm?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
    (a) The list must be sorted
@@ -210,37 +210,37 @@
    c. \Theta(\log*n)
    d. \Theta(1)
 
-14. **The average number of key comparisons done in a successful sequential search in a list of length n, it is-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
+13. **The average number of key comparisons done in a successful sequential search in a list of length n, it is-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
    A) \log n
    B) (n+1)/2
    C) (n-1)/2
    D) n/2
 
-16. **The complexity of Binary search algorithm is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
+14. **The complexity of Binary search algorithm is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
    A) O(n)
    B) O(\log n)
    C) O(n^2)
    D) O(n \log n)
 
-17. **The time complexity of binary search is -----** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+15. **The time complexity of binary search is -----** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
    A) constant
    B) quadratic
    C) exponent
    D) logarithmic
 
-18. **When the linear search used?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
+16. **When the linear search used?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
    A) When the list has only few elements.
    B) When performing a single search in an unordered list
    C) Used all the time
    D) When the list has only a few elements and when performing a single search in an unordered list
 
-19. **Binary search worst time complexity is-** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 256]**
+17. **Binary search worst time complexity is-** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 256]**
    a. O(n)
    b. O(\log n)
    c. O(1)
    d. O(n^2)
 
-20. **For s sorted linear array, which is the fastest algorithm to find the location?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+18. **For s sorted linear array, which is the fastest algorithm to find the location?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
    a. Linear search
    b. Binary search
    c. Quick search
@@ -319,19 +319,19 @@
    c) -5
    d) -\infty
 
-12. **Which algorithm will be the most efficient to find out the shortest path between two given nodes in an undirected weighted graph?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
+11. **Which algorithm will be the most efficient to find out the shortest path between two given nodes in an undirected weighted graph?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
    a) Breadth First Search
    b) Depth First Search
    c) Dijkstra’s algorithm
    d) Floyd-Warshall algorithm
 
-13. **A graph having an edge from each vertex to every other vertex is called:** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
+12. **A graph having an edge from each vertex to every other vertex is called:** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
    A) Tightly connected
    B) Strongly connected
    C) Weakly connected
    D) Loosely connected
 
-14. **The degree of any vertex of a graph is:** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+13. **The degree of any vertex of a graph is:** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
    A) Number of Vertices in a Graph
    B) Number of vertices incident with the Vertex
    C) Number of Vertices Adjacent to The Vertex

@@ -15,61 +15,61 @@
 
 ## English Grammar (163)
 
-1. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. very few
-   খ. a little
-   গ. very little
-   ঘ. small
+1. **Fill in the blank: The scientist looked _____ the microscope.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
 
-2. **They went _____ the rain.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. Despite
-   খ. in spite
-   গ. under
-   ঘ. avoiding
-
-3. **What is the plural number of 'Ovum'?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. Ovams
-   খ. Ovames
-   গ. Ova
-   ঘ. None
-
-4. **A clause must have.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. A subject
-   খ. A verb
-   গ. Subject & predicate
-   ঘ. Subject & verb
-
-5. **Credit Tk. 6000 _____ my account.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. in
-   খ. with
-   গ. to
-   ঘ. against
-
-6. **Masculine gender of 'deer'.....** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. Buck
-   খ. Doe
-   গ. Mate
-   ঘ. Duck
-
-7. **Fill in the blank: The scientist looked _____ the microscope.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
-
-8. **The concert was cancelled _____ the heavy rain.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+2. **The concert was cancelled _____ the heavy rain.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) owing to
    b) because
    c) because of
    d) due to
 
-9. **You should not _____ back with your teachers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+3. **You should not _____ back with your teachers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) talk
    b) talks
    c) had talked
    d) had
 
-10. **_____ sugar do you want in your tea?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+4. **_____ sugar do you want in your tea?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) How much
    b) How many
    c) What many
    d) What
+
+5. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. very few
+   খ. a little
+   গ. very little
+   ঘ. small
+
+6. **They went _____ the rain.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. Despite
+   খ. in spite
+   গ. under
+   ঘ. avoiding
+
+7. **What is the plural number of 'Ovum'?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. Ovams
+   খ. Ovames
+   গ. Ova
+   ঘ. None
+
+8. **A clause must have.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. A subject
+   খ. A verb
+   গ. Subject & predicate
+   ঘ. Subject & verb
+
+9. **Credit Tk. 6000 _____ my account.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. in
+   খ. with
+   গ. to
+   ঘ. against
+
+10. **Masculine gender of 'deer'.....** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. Buck
+   খ. Doe
+   গ. Mate
+   ঘ. Duck
 
 11. **Which underlined part of the following sentence is incorrect?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
    I will always remember you standing by me and offering me encouragement.
@@ -1165,151 +1165,151 @@
    (d) to acquire
    **Ans: c**
 
-34. **Synonym of "Reverently" is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+33. **Synonym of "Reverently" is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) Adversely
    (খ) Negatively
    (গ) Disapprovingly
    (ঘ) Respectfully
 
-35. **"Proportion" means ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+34. **"Proportion" means ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) Aggregate
    (খ) ensemble
    (গ) bulk
    (ঘ) ratio
 
-36. **Which one word is closest in meaning to 'Franchise'?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+35. **Which one word is closest in meaning to 'Franchise'?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
    a) privilege
    b) superficial
    c) frankness
    d) openness
 
-37. **The people who carry a coffin at a funeral are called ________** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+36. **The people who carry a coffin at a funeral are called ________** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
    a) undertakers
    b) supporters
    c) pallbearers
    d) mourners
 
-38. **Which phrase contains words opposed to each other in meaning?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+37. **Which phrase contains words opposed to each other in meaning?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
    a) heat and dust
    b) reproduction and death
    c) hopes and aspirations
    d) emerged and advanced
 
-39. **The ________ of the forest will result in the ________ of many animal species.** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+38. **The ________ of the forest will result in the ________ of many animal species.** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
    a) destruction / disappear
    b) destruction / disappearance
    c) destructing / disappear
    d) destruct/disappearance
 
-40. **Love for the whole world is called ______ .** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+39. **Love for the whole world is called ______ .** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
    a) Philanthropy
    b) Misogyny
    c) Benevolence
    d) Misanthropy
 
-41. **Misanthropist means-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+40. **Misanthropist means-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
    a) One who flirts with ladies
    b) A person of narrow views
    c) A hater of mankind
    d) One who believe that God is in everything
 
-42. **Choose the pair of words that expresses a relationship similar to that of “Harm:Damage”=** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+41. **Choose the pair of words that expresses a relationship similar to that of “Harm:Damage”=** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
    (a) Sweet:Sour
    (b) Injure:Incapacitate
    (c) Stout:Weak
    (d) Hook:Crook
 
-43. **Give the antonym of the word 'transitory'.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+42. **Give the antonym of the word 'transitory'.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
    (a) temporary
    (b) permanent
    (c) transparent
    (d) short-lived
 
-44. **What is the antonym of “Segregate”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+43. **What is the antonym of “Segregate”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
    a. isolate
    b. combine
    c. divide
    d. severs
 
-45. **What is the synonym of the word “Erudite”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+44. **What is the synonym of the word “Erudite”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
    a. knowledgeable
    b. angry
    c. illiterate
    d. smart
 
-46. **Our Fates Seemed Intertwined. Which one is similar to the underlined word?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+45. **Our Fates Seemed Intertwined. Which one is similar to the underlined word?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
    A. Complicated
    B. Destined
    C. Linked
    D. Complex
 
-47. **Find the synonym of the word Morose.** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+46. **Find the synonym of the word Morose.** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
    A. Annoyed
    B. Gloomy
    C. Moody
    D. Displeased
 
-48. **The antonym of the word Terrible is:** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+47. **The antonym of the word Terrible is:** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
    A. Soothing
    B. Frightening
    C. Scaring
    D. Horrible
 
-49. **A legal authorization of debtors to postpone payment is known as:** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+48. **A legal authorization of debtors to postpone payment is known as:** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
    A. Moratorium
    B. Deferment
    C. Preemption
    D. Bed debt
 
-50. **Initiative এর বিপরীত শব্দ কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+49. **Initiative এর বিপরীত শব্দ কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) Non Initiative
    b) Iminitiative
    c) Uninitiative
    d) None of these.
 
-51. **Obligate এর adjective form কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+50. **Obligate এর adjective form কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) Obligatory
    b) Obligative
    c) Obligator
    d) Obligate
 
-52. **To do away with meaning.** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+51. **To do away with meaning.** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) To get rid of something or stop using something
    b) To do pass away
    c) To remove it completely or put an end to it
    d) all of these
 
-53. **Spring এর past form.** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+52. **Spring এর past form.** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Sprang
    b) Springed
    c) Spring
    d) All of these
 
-54. **Brochure means;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+53. **Brochure means;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
    ক. Opening
    খ. Bureau
    গ. Consor
    ঘ. Pamphlet
 
-55. **What is the synonym of 'Incite'?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+54. **What is the synonym of 'Incite'?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
    ক. Urge
    খ. Permit
    গ. Instigate
    ঘ. Deceive
 
-56. **What is the antonym of 'noble'?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+55. **What is the antonym of 'noble'?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
    (a) Grand
    (b) dignified
    (c) elevated
    (d) mean
 
-57. **What is the synonym of 'pardon'?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
+56. **What is the synonym of 'pardon'?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
    (a) Condemne
    (b) accuse
    (c) forgive
    (d) convict
 
-58. **Synonym of "Bargain" is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+57. **Synonym of "Bargain" is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
    (a) Dissent
    (b) Quarrel
    (c) Stipulation
@@ -1557,17 +1557,17 @@
 
 ## Spelling (17)
 
-1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. Messile
-   খ. Misile
-   গ. Missile
-   ঘ. Messilee
-
-2. **Choose the word that is correctly spelt:** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+1. **Choose the word that is correctly spelt:** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) ridiculous
    b) rediculous
    c) ridiculus
    d) ridiculas
+
+2. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. Messile
+   খ. Misile
+   গ. Missile
+   ঘ. Messilee
 
 3. **Identify the word with correct spelling from the following options.** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
    (a) Counterfet

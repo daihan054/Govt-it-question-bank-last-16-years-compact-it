@@ -15,65 +15,65 @@
 
 ## বাংলা ব্যাকরণ (153)
 
-1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
-   ক. জাপানি
-   খ. জার্মান
-   গ. পর্তুগিজ
-   ঘ. স্পেনিশ
-
-2. **বড় থেকে বড্ড কোন ধরনের পরিবর্তন?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
-   ক. বিষমীভবন
-   খ. সমীভবন
-   গ. ব্যঞ্জন বিকৃতি
-   ঘ. ব্যঞ্জনদ্বিত্ব
-
-3. **‘Lyric’ শব্দের প্রতিশব্দ-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
-   ক. সংগীত
-   খ. সুর
-   গ. গীতি কবিতা
-   ঘ. গান
-
-4. **'সপ্তাহ' কোন সমাস?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. দ্বন্দ্ব
-   খ. তৎপুরুষ
-   গ. কর্মধারয়
-   ঘ. দ্বিগু
-
-5. **কোনটি রূঢ়ি শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. হস্তী
-   খ. জলদ
-   গ. চিকামারা
-   ঘ. দৌহিত্র
-
-6. **'দেবতার ধন কে যায় ফিরায়ে লয়ে' কোন কারকে কোন বিভক্তি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. কর্তায় ষষ্ঠী
-   খ. কর্মে ষষ্ঠী
-   গ. করণে ষষ্ঠী
-   ঘ. সম্প্রদানে ষষ্ঠী
-
-7. **আরিফ বই পড়ে। "বই" শব্দটি কোন কারক ও বিভক্তি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+1. **আরিফ বই পড়ে। "বই" শব্দটি কোন কারক ও বিভক্তি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) কর্মকারকে শূন্য
    b) করণকারকে শূন্য
    c) সম্প্রদানকারকে শূন্য
    d) অধিকরণকারকে শূন্য
 
-8. **ইঙ্গিতময়, অর্থপূর্ণ, ভাবঘন বাক্যকে সম্প্রসারিত করার নাম কী?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+2. **ইঙ্গিতময়, অর্থপূর্ণ, ভাবঘন বাক্যকে সম্প্রসারিত করার নাম কী?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) সারাংশ
    b) সারমর্ম
    c) রচনা
    d) ভাব-সম্প্রসারণ
 
-9. **নিচের কোন বানানটি শুদ্ধ?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+3. **নিচের কোন বানানটি শুদ্ধ?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) নীরিহ
    b) নিরইহ
    c) নিরীহ
    d) নীরীহ
 
-10. **'জলধি' কোন শব্দ?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+4. **'জলধি' কোন শব্দ?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) যৌগিক
    b) রুঢ়ি
    c) মৌলিক
    d) যোগরূঢ়
+
+5. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
+   ক. জাপানি
+   খ. জার্মান
+   গ. পর্তুগিজ
+   ঘ. স্পেনিশ
+
+6. **বড় থেকে বড্ড কোন ধরনের পরিবর্তন?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
+   ক. বিষমীভবন
+   খ. সমীভবন
+   গ. ব্যঞ্জন বিকৃতি
+   ঘ. ব্যঞ্জনদ্বিত্ব
+
+7. **‘Lyric’ শব্দের প্রতিশব্দ-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
+   ক. সংগীত
+   খ. সুর
+   গ. গীতি কবিতা
+   ঘ. গান
+
+8. **'সপ্তাহ' কোন সমাস?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. দ্বন্দ্ব
+   খ. তৎপুরুষ
+   গ. কর্মধারয়
+   ঘ. দ্বিগু
+
+9. **কোনটি রূঢ়ি শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. হস্তী
+   খ. জলদ
+   গ. চিকামারা
+   ঘ. দৌহিত্র
+
+10. **'দেবতার ধন কে যায় ফিরায়ে লয়ে' কোন কারকে কোন বিভক্তি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. কর্তায় ষষ্ঠী
+   খ. কর্মে ষষ্ঠী
+   গ. করণে ষষ্ঠী
+   ঘ. সম্প্রদানে ষষ্ঠী
 
 11. **তন্ময় এর সন্ধি বিচ্ছেদ কি?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 9]**
    a) তদ্ + ময়
@@ -1258,256 +1258,256 @@
    ঘ) ১৯১০
    **Ans: ঘ**
 
-66. **ইসলামের ইতিহাস ও ঐতিহ্য কোন কাব্যের উপজীব্য?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+65. **ইসলামের ইতিহাস ও ঐতিহ্য কোন কাব্যের উপজীব্য?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** সাত সাগরের মাঝি- ফররুখ আহমদ
 
-67. **কোনটি জসিম উদ্দিনের নাটক?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 61]**
+66. **কোনটি জসিম উদ্দিনের নাটক?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 61]**
    (ক) রাখালী
    (খ) মাটির কান্না
    (গ) বেদের মেয়ে
    (ঘ) বোবা কাহিনী
 
-68. **‘রক্তাক্ত প্রান্তর’ নাটকের পটভূমি–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+67. **‘রক্তাক্ত প্রান্তর’ নাটকের পটভূমি–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
    a) পলাশীর যুদ্ধ
    b) ভাষা আন্দোলন
    c) পানিপথের যুদ্ধ
    d) অসহযোগ আন্দোলন
 
-69. **বাংলাদেশের নাটকে ‘কথানাট্যের’ পথিকৃৎ–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+68. **বাংলাদেশের নাটকে ‘কথানাট্যের’ পথিকৃৎ–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
    a) সেলিম আল দীন
    b) সৈয়দ শামসুল হক
    c) আব্দুল্লাহ আল মামুন
    d) মান্নান হীরা
 
-70. **‘তুমি আসবে বলে হে স্বাধীনতা’- কার রচনা?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+69. **‘তুমি আসবে বলে হে স্বাধীনতা’- কার রচনা?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
    a) আবু জাফর ওবায়দুল্লাহ
    b) আল মাহমুদ
    c) শামসুর রাহমান
    d) নির্মলেন্দু গুণ
 
-71. **চর্যাপদে কোন পদকর্তার রচনা সর্বাধিক?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+70. **চর্যাপদে কোন পদকর্তার রচনা সর্বাধিক?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
    a) লুই পা
    b) ভুসুক পা
    c) কাহ্ন পা
    d) শবরী পা
 
-72. **বৈষ্ণব পদাবলির সঙ্গে কোন তথ্য সম্পর্কিত?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+71. **বৈষ্ণব পদাবলির সঙ্গে কোন তথ্য সম্পর্কিত?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) সন্ধ্যাভাষা
    b) অভিভাষা
    c) ব্রজবুলি
    d) সংস্কৃত ভাষা
 
-73. **‘কোন পান্থ ক্ষান্ত হও হেরি দীর্ঘ পথ’- কার লেখা?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+72. **‘কোন পান্থ ক্ষান্ত হও হেরি দীর্ঘ পথ’- কার লেখা?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) কৃষ্ণচন্দ্র মজুমদার
    b) ঈশ্বরচন্দ্র গুপ্ত
    c) কামিনী রায়
    d) যতীন্দ্রমোহন বাগচী
 
-74. **বাংলা গদ্যের জনক কে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+73. **বাংলা গদ্যের জনক কে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) ঈশ্বরচন্দ্র বিদ্যাসাগর
    b) বঙ্কিমচন্দ্র চট্টোপাধ্যায়
    c) উইলিয়াম কেরি
    d) রবীন্দ্রনাথ ঠাকুর
 
-75. **বাংলা ভাষার আদি নিদর্শন চর্যাপদ আবিষ্কৃত হয় কত সালে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+74. **বাংলা ভাষার আদি নিদর্শন চর্যাপদ আবিষ্কৃত হয় কত সালে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) ২০০৭
    খ) ১৯০৭
    c) ১৯০৯
    d) ১৯১৬
 
-76. **বাংলা কথ্য ভাষার আদি গ্রন্থ কোনটি?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+75. **বাংলা কথ্য ভাষার আদি গ্রন্থ কোনটি?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) প্রভু যিশুর বাণী
    b) কৃপার শাস্ত্রের অর্থভেদ
    c) ফুলমণি ও করুণার
    d) শিনারি জীবন বিবরণ
 
-77. **মুক্তিযুদ্ধের পটভূমিতে রচিত কাব্যগ্রন্থ কোনটি?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+76. **মুক্তিযুদ্ধের পটভূমিতে রচিত কাব্যগ্রন্থ কোনটি?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
    (a) নেকড়ে অরণ্য
    (b) বন্দী শিবির থেকে
    (c) নিষিদ্ধ লোবান
    (d) প্রিয়তমা প্রিয়তম
 
-78. **কাজী নজরুল ইসলামের 'অগ্নি-বীণা' কাব্যের প্রথম কবিতা কোনটি?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+77. **কাজী নজরুল ইসলামের 'অগ্নি-বীণা' কাব্যের প্রথম কবিতা কোনটি?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
    (a) আগমনী
    (b) কোরবানী
    (c) প্রলয়োল্লাস
    (d) বিদ্রোহী
 
-79. **কোনটি রবীন্দ্রনাথ ঠাকুরের কাব্যগ্রন্থ?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+78. **কোনটি রবীন্দ্রনাথ ঠাকুরের কাব্যগ্রন্থ?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
    (a) শেষ লেখা
    (b) শেষ প্রশ্ন
    (c) শেষ কথা
    (d) শেষ দিন
 
-80. **মুনীর চৌধুরীর 'মুখরা রমণী বশীকরণ' একটি-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+79. **মুনীর চৌধুরীর 'মুখরা রমণী বশীকরণ' একটি-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
    (a) উপন্যাস
    (b) ছোটগল্প
    (c) প্রবন্ধ
    (d) অনুবাদ নাটক
 
-81. **'বিষাদ সিন্ধু' একটি-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+80. **'বিষাদ সিন্ধু' একটি-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
    (a) গবেষণা গ্রন্থ
    (b) ধর্মবিষয়ক প্রবন্ধ
    (c) ইতিহাস আশ্রয়ী উপন্যাস
    (d) আত্মজীবনীপ
 
-82. **বাংলা কথ্য ভাষার আদি গ্রন্থ কোনটি?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
+81. **বাংলা কথ্য ভাষার আদি গ্রন্থ কোনটি?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 109]**
    (a) প্রভু যিশুর বাণী
    (b) কৃপার শাস্ত্রের অর্থভেদ
    (c) ফুলমণি ও করুণার বিবরণ
    (d) মিশনারি জীবন
 
-83. **রবীন্দ্রনাথ ঠাকুর ও কাজী নজরুল ইসলামের বয়সের পার্থক্য কত?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+82. **রবীন্দ্রনাথ ঠাকুর ও কাজী নজরুল ইসলামের বয়সের পার্থক্য কত?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
    ক) ৩২ বছর
    খ) ৩৮ বছর
    গ) ৪২ বছর
    ঘ) ৪৬ বছর
 
-84. **"সুশিক্ষিত লোক মাত্রই স্বশিক্ষিত" এই উক্তি কার?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+83. **"সুশিক্ষিত লোক মাত্রই স্বশিক্ষিত" এই উক্তি কার?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
    ক) রবীন্দ্রনাথ ঠাকুর
    খ) কাজী আব্দুল ওদুদ
    গ) লুৎফর রহমান
    ঘ) প্রমথ চৌধুরী
 
-85. **‘শোকার্ত তরবারী’ কাব্যগ্রন্থের রচয়িতা কে?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+84. **‘শোকার্ত তরবারী’ কাব্যগ্রন্থের রচয়িতা কে?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
    a. শামসুর রহমান
    b. আল মাহমুদ
    c. হাসান হাফিজুর রহমান
    d. নির্মলেন্দু গুণ
 
-86. **মহাকাব্যিক উপন্যাস নয় কোনটি?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+85. **মহাকাব্যিক উপন্যাস নয় কোনটি?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
    a. সংশপ্তক
    b. গায়ত্রী সন্ধ্যা
    c. আগুন পাখি
    d. জাহান্নাম হইতে বিদায়
 
-87. **‘বিমলা-কুমুদিনী’ কোন দুটি উপন্যাসের কেন্দ্রীয় চরিত্র?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+86. **‘বিমলা-কুমুদিনী’ কোন দুটি উপন্যাসের কেন্দ্রীয় চরিত্র?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
    a. ঘরে-বাইরে, যোগাযোগ
    b. চতুরঙ্গ, যোগাযোগ
    c. ঘরে-বাইরে, শেষের কবিতা
    d. চোখের বালি, শেষের কবিতা
 
-88. **মোহাম্মদ নাসিরউদ্দিন কোন পত্রিকা সম্পাদনা করেছিলেন?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
+87. **মোহাম্মদ নাসিরউদ্দিন কোন পত্রিকা সম্পাদনা করেছিলেন?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 122]**
    a. মোসলেম ভারত
    b. প্রগতি
    c. সওগাত
    d. সমকাল
 
-89. **“যে সবে বঙ্গেতে জন্মি হিংসেই বঙ্গবাণী/ সে সব কাহার জন্ম নির্ণয় ন’ জানি।” কবিতাটি কার রচনা?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+88. **“যে সবে বঙ্গেতে জন্মি হিংসেই বঙ্গবাণী/ সে সব কাহার জন্ম নির্ণয় ন’ জানি।” কবিতাটি কার রচনা?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
    A. আলাওল
    B. আব্দুল হাকিম
    C. চণ্ডীদাস
    D. কানাইদাস
 
-90. **দ্বার বন্ধ করে ভ্রমটাকে রুধি, সত্য বলে, আমি কোথা দিয়ে ঢুকি” নীতিকবিতাংশটির রচয়িতা কে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+89. **দ্বার বন্ধ করে ভ্রমটাকে রুধি, সত্য বলে, আমি কোথা দিয়ে ঢুকি” নীতিকবিতাংশটির রচয়িতা কে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
    A. লালন শাহ
    B. মাইকেল মধুসূদন দত্ত
    C. রবীন্দ্রনাথ ঠাকুর
    D. কৃষ্ণ চন্দ্র মজুমদার
 
-91. **শেখ রাসেল কে লিখেছেন?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+90. **শেখ রাসেল কে লিখেছেন?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
    a) শেখ মুজিবুর রহমান
    b) শেখ হাসিনা
    c) শেখ রেহেনা
    d) সজীব ওয়াজেদ জয়
 
-92. **ছন্দের জাদুকর কোন কবি?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+91. **ছন্দের জাদুকর কোন কবি?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
    ক. সুকুমার রায়
    খ. সত্যেন্দ্রনাথ দত্ত
    গ. আল মাহমুদ
    ঘ. জসীম উদ্দীন
 
-93. **শেষের কবিতা কোন ধরনের রচনা?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+92. **শেষের কবিতা কোন ধরনের রচনা?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
    ক. কবিতা
    খ. উপন্যাস
    গ. গল্প
    ঘ. নাটক
 
-94. **কোনটি রবীন্দ্রনাথ ঠাকুরের কাব্য নয়?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+93. **কোনটি রবীন্দ্রনাথ ঠাকুরের কাব্য নয়?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
    (ক) মানসী
    (খ) সোনার তরী
    (গ) চোখের বালি
    (ঘ) গীতাঞ্জলি
 
-95. **পল্লী কবি জসিম উদ্দীনের জন্মস্থান-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+94. **পল্লী কবি জসিম উদ্দীনের জন্মস্থান-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
    (ক) গোপালগঞ্জ
    (খ) ফরিদপুর
    (গ) পিরোজপুর
    (ঘ) বিক্রমপুর
 
-96. **শওকত ওসমান কবে জন্ম গ্রহণ করেন?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+95. **শওকত ওসমান কবে জন্ম গ্রহণ করেন?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
    (ক) ১৯২২ সালে
    (খ) ১৯১৭ সালে
    (গ) ১৯২৫ সালে
    (ঘ) ১৯২৩ সালে
 
-97. **“নীল ময়ূরের যৌবন” উপন্যাস এর রচয়িতার নাম-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
+96. **“নীল ময়ূরের যৌবন” উপন্যাস এর রচয়িতার নাম-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
    (ক) সুফিয়া কামাল
    (খ) রাজিয়া বেগম
    (গ) রাবেয়া খাতুন
    (ঘ) সেলিনা হোসেন
 
-98. **“কাশবনের কন্যা”-উপন্যাসের নাম কি?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
+97. **“কাশবনের কন্যা”-উপন্যাসের নাম কি?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
    (ক) সৈয়দ ওয়ালিউল্লাহ
    (খ) আবু জাফর শামসুদ্দিন
    (গ) শামসুদ্দিন আবুল কালাম
    (ঘ) জসীমউদ্দিন
 
-99. **ঢাকা বিশ্ববিদ্যালয়ে কোন তারিখে রবীন্দ্রনাথ ঠাকুর তাঁর প্রথম বক্তৃতা করেন-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+98. **ঢাকা বিশ্ববিদ্যালয়ে কোন তারিখে রবীন্দ্রনাথ ঠাকুর তাঁর প্রথম বক্তৃতা করেন-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
    (ক) ১৯২৬ সালের ১০ই ফেব্রুয়ারি
    (খ) ১৯২৮ সালের ১০ই এপ্রিল
    (গ) ১৯৩০ সালের ১০ই মে
    (ঘ) ১৯৩২ সালের ১০ই আগস্ট
 
-100. **প্রমথ চৌধুরীর ছদ্মনাম কী?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+99. **প্রমথ চৌধুরীর ছদ্মনাম কী?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
    (ক) হুতোমপেঁচা
    (খ) অবধূত
    (গ) বীরবল
    (ঘ) টেকচাঁদ ঠাকুর
 
-101. **মুক্তিযুদ্ধের পটভূমিতে লেখা কাব্যগ্রন্থ কোনটি?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+100. **মুক্তিযুদ্ধের পটভূমিতে লেখা কাব্যগ্রন্থ কোনটি?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
    (ক) নিষিদ্ধ লোবান
    (খ) নেকড়ে অরণ্য
    (গ) রাত্রিশেষ
    (ঘ) বন্দী শিবির থেকে
 
-102. **বাংলাদেশের রণসংগীতের রচয়িতা কে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+101. **বাংলাদেশের রণসংগীতের রচয়িতা কে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
    (ক) ফররুখ আহমদ
    (খ) মহাদেব সাহা
    (গ) আল মাহমুদ
    (ঘ) কাজী নজরুল ইসলাম
 
-103. **বাংলা সাহিত্যে সার্থক মহাকাব্যের রচয়িতা-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+102. **বাংলা সাহিত্যে সার্থক মহাকাব্যের রচয়িতা-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
    (ক) নবীন চন্দ্র
    (খ) মাইকেল মধুসূদন দত্ত
    (গ) মীর মশাররফ হোসেন
    (ঘ) কায়কোবাদ
 
-104. **“রচনায় শিল্পগুণ” প্রবন্ধটি কার লেখা?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+103. **“রচনায় শিল্পগুণ” প্রবন্ধটি কার লেখা?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
    (ক) ঈশ্বর চন্দ্র বিদ্যাসাগর
    (খ) বঙ্কিম চন্দ্র চট্টোপাধ্যায়
    (গ) প্যারীচাঁদ মিত্র
    (ঘ) বিহারীলাল
 
-105. **“দৈনিক আজাদ” পত্রিকার সম্পাদকের নাম কী?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+104. **“দৈনিক আজাদ” পত্রিকার সম্পাদকের নাম কী?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
    (ক) মোহাম্মদ আকরাম খাঁ
    (খ) আহমদ ছফা
    (গ) সিকান্দার আবু জাফর
    (ঘ) রাহাত খান
 
-106. **“লালসালু” সৈয়দ ওয়ালিউল্লাহর কোনজাতীয় রচনা?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+105. **“লালসালু” সৈয়দ ওয়ালিউল্লাহর কোনজাতীয় রচনা?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
    (ক) উপন্যাস
    (খ) ছোটগল্প
    (গ) নাটক
    (ঘ) কাব্যগ্রন্থ
 
-107. **'দুহাতে দুই আদিম পাথর'- কার রচিত কাব্য গ্রন্থ?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+106. **'দুহাতে দুই আদিম পাথর'- কার রচিত কাব্য গ্রন্থ?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
    (a) শামসুর রাহমান
    (b) আহসান হাবীব
    (c) শহীদ কাদরী
    (d) আল মাহমুদ
 
-108. **ভাষা আন্দোলনের পটভূমিতে কবর নাটকটি রচনা করেন-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 170]**
+107. **ভাষা আন্দোলনের পটভূমিতে কবর নাটকটি রচনা করেন-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 170]**
    (a) কবীর চৌধুরী
    (b) সৈয়দ শামসুল হক
    (c) সেলিম আল দীন

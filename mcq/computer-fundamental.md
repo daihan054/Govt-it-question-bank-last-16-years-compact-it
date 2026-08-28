@@ -65,41 +65,47 @@
    c) Power down the monitor, then turn it on again to see if that corrects the problem
    d) Power down the computer, then turn it on a pain to see if that corrects the problem
 
-10. **Most PCs give a single beep on boot up to indicate that the hardware is ok. If you do not get any beep, then what will be the first thing to check?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+9. **Most PCs give a single beep on boot up to indicate that the hardware is ok. If you do not get any beep, then what will be the first thing to check?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
    a) System board
    b) RAM
    c) Power supply
    d) Speaker
 
-11. **কি-বোর্ড একটি-** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+10. **কি-বোর্ড একটি-** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) ট্রান্সডিউসার
    b) ট্রান্সমিটার
    c) চ্যানেল
    d) সব কযটি
 
-12. **What is the word length of a personal computer?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 137]**
+11. **What is the word length of a personal computer?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 137]**
    a) 32 bits
    b) 8 bits
    c) 64 bits
    d) 16 bits
 
-13. **Which one is output device?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+12. **Which one is output device?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
    ক. Microphone
    খ. CD-Drive
    গ. Monitor
    ঘ. None of them
 
-14. **Data are entered into a computer through;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+13. **Data are entered into a computer through;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
    ক. Software
    খ. Output device
    গ. Input device
    ঘ. Memory
 
-15. **কম্পিউটার মনিটরকে আরও বলা হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
+14. **কম্পিউটার মনিটরকে আরও বলা হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
    (ক) DVU
    (খ) UVD
    (গ) VDU
    (ঘ) CCTV
+
+15. **Which one is wrong statement for BIOS of a computer?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) Connect microprocessor and I/O
+   b) Manages data flow
+   c) Loads the operating system
+   d) Provide storage
 
 16. **Which one is not contained in MICR code?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 158]**
    A) Account number
@@ -131,133 +137,127 @@
    C) electron
    D) electrodes
 
-21. **Which one is wrong statement for BIOS of a computer?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
-   a) Connect microprocessor and I/O
-   b) Manages data flow
-   c) Loads the operating system
-   d) Provide storage
-
-22. **Which technology has made possible to pinpoint precision to the optical storage?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+21. **Which technology has made possible to pinpoint precision to the optical storage?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
    a. Optical fibers
    b. Electronics guns
    c. Magnetic heads
    d. Laser beams
 
-23. **How many generations are an available of USB specifications?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+22. **How many generations are an available of USB specifications?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
    a. One
    b. Two
    c. Three
    d. Four
 
-24. **Small computer system interface (SCSI) is pronounced as ________?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+23. **Small computer system interface (SCSI) is pronounced as ________?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
    a. Asei
    b. Scuzzy
    c. SCSI
    d. None
 
-25. **BIOS কী** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+24. **BIOS কী** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
    A) Hardware
    B) Firmware
    C) Software
    D) Combination of hardware and software
 
-26. **Active matrix displays use ________ Technology.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+25. **Active matrix displays use ________ Technology.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
    A. TGT
    B. TFT
    C. FTF
    D. TCT
 
-27. **Which device converts the computer's digital data into analog signals?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+26. **Which device converts the computer's digital data into analog signals?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
    A. ATM
    B. Router
    C. Modem
    D. Packet.
 
-28. **You can connect an electronic instrument to your computer via the ________ port.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+27. **You can connect an electronic instrument to your computer via the ________ port.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
    A. PS2
    B. USB
    C. HDX
    D. MIDI
 
-29. **Portable computer এ কোন ধরনের Monitor সচরাচর ব্যবহৃত হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+28. **Portable computer এ কোন ধরনের Monitor সচরাচর ব্যবহৃত হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
    A. CRT
    B. Monochrome
    C. Flat panel display
    D. Data projector
 
-30. **Which is the easiest component to environmentally recycle?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+29. **Which is the easiest component to environmentally recycle?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
    A) Motherboards
    B) CMOS batteries
    C) Toner cartridges
    D) Cathode ray tubes
 
-31. **Which of the following produces the best quality graphics reproduction?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+30. **Which of the following produces the best quality graphics reproduction?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
    A) Laser printer
    B) Inkjet printer
    C) Plotter
    D) Dot matrix printer
 
-32. **What type of device is computer keyboard?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+31. **What type of device is computer keyboard?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
    A) Memory
    B) Output
    C) Storage
    D) Input
 
-33. **To convert paper into an editable document, a scanner would employ ________ technology.** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+32. **To convert paper into an editable document, a scanner would employ ________ technology.** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
    A) UPC
    B) scanning
    C) conversion
    D) OCR
 
-34. **The resolution of a printer is measured in ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+33. **The resolution of a printer is measured in ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
    a. Megabits
    b. Dots per inch (DPI)
    c. Inches
    d. GHz
 
-35. **Which is the best choice for specification for a video card?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
+34. **Which is the best choice for specification for a video card?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
    a. AGP
    b. SCSI
    c. PGA
    d. SCASI
 
-36. **IRQ1 is commonly assigned to ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
+35. **IRQ1 is commonly assigned to ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
    a. It's usually open
    b. System timer
    c. Real time clock
    d. Keyboard
 
-37. **From what location are the 1st computer instructions available on boot up?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
+36. **From what location are the 1st computer instructions available on boot up?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
    a. ROM BIOS
    b. CPU
    c. boot.ini
    d. CONFIG.SYS
 
-38. **What is different between AT & ATX power supplies?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+37. **What is different between AT & ATX power supplies?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
    a. They are identical except their shape
    b. AT supplies use a single P1 power connector while ATX use P8 & P9
    c. AT supplies use P8 & P9 while ATX use a single P1 power connector
    d. AT power supplies run 120V AC current while ATX use 220V AC
 
-39. **CRT monitor produce image by ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+38. **CRT monitor produce image by ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
    a. Laser beam
    b. Electron beam
    c. Light beam
    d. ink jet
 
-40. **Monitor image is refreshed at least ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+39. **Monitor image is refreshed at least ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
    a. 1 times/sec
    b. 50 times/sec
    c. 60 time/sec
    d. 100 times/sec
 
-41. **What type of interface has the fastest data transfer?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+40. **What type of interface has the fastest data transfer?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
    a. Parallel
    b. Serial
    c. SCSI
    d. IDE
 
-42. **Simplifying the PC configuration means ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+41. **Simplifying the PC configuration means ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
    a. Disabling the keyboard
    b. Disabling the power supply unit
    c. Disabling the power system
@@ -457,49 +457,49 @@
    C) Hybrid
    D) Portal
 
-34. **The only language understood by a digital computer is called-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+33. **The only language understood by a digital computer is called-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
    A) Assembly language
    B) High level language
    C) Machine language
    D) None of the above
 
-35. **Which video File format is used for HDTV?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+34. **Which video File format is used for HDTV?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
    A) AVI
    B) BJMPEGI
    C) MPEG2
    D) MPEG4
 
-36. **Which is not Application software?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+35. **Which is not Application software?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
    a. Adobe Illustrator
    b. MS Office
    c. Redhat Linux
    d. Open Office
 
-37. **Which is not application software?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+36. **Which is not application software?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
    A) Bing
    B) Red hat Linux
    C) MS office
    D) Adobe
 
-38. **Which one is not operating system software?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+37. **Which one is not operating system software?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
    A) DOS
    B) LINUX
    C) Windows
    D) Oracle
 
-39. **Which language is used to build website?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+38. **Which language is used to build website?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
    A) HTML
    B) COBOL
    C) Python
    D) FORTRAN
 
-40. **What are the three main types of computer languages?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+39. **What are the three main types of computer languages?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
    A) Machine Language, assemble language and high-level language
    B) Structural language, functional language and object-oriented language
    C) Imperative Language, functional language and declarative language
    D) all of this
 
-41. **The software used to drive microprocessor based systems is called ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+40. **The software used to drive microprocessor based systems is called ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
    a. Assembly language programs
    b. Firmware
    c. BASIC interpreter instructions

@@ -22,13 +22,13 @@
 
 ## Algebra (41)
 
-1. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+
+2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
    ক. ৬
    খ. ১২
    গ. ১৮
    ঘ. ২৪
-
-2. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
 
 3. **If \frac{x}{y} = \frac{1}{3}, then the value of (x^2 + y^2)/(x^2 - y^2) is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
    (a) \frac{-10}{9}
@@ -392,31 +392,31 @@
 
 ## Percentage, Profit & Loss (21)
 
-1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+
+2. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 25,000TK
+   (b) 30,000TK
+   (c) 35,000TK
+   (d) 3,000TK
+
+3. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
    ক. ৭৪
    খ. ১১১
    গ. ১৪৮
    ঘ. ২০০
 
-2. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
-
-3. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk.360 interest @6% per annum. What was the amount heborrowed?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+4. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk.360 interest @6% per annum. What was the amount heborrowed?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) Tk. 18,000
    (b) Tk.16,000
    (c) Tk.15,000
    (d) None of these
 
-4. **A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+5. **A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) 40
    (b) 100
    (c) 201
    (d) 72
-
-5. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) 25,000TK
-   (b) 30,000TK
-   (c) 35,000TK
-   (d) 3,000TK
 
 6. **৪ টাকায় ৫ টি করে কিনে ৫ টাকায় ৪ টি করে বিক্রি করলে শতকরা কত লাভ হবে?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** ৫৬.২৫%
@@ -515,23 +515,23 @@
 
 ## Arithmetic & Number Series (16)
 
-1. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. ৩৫৫
-   খ. ৪৬৫
-   গ. ৫২৫
-   ঘ. ৬৭৫
-
-2. **তিন ক্রমের ম্যাজিক বর্গে ম্যাজিক সংখ্যা কোনটি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+1. **তিন ক্রমের ম্যাজিক বর্গে ম্যাজিক সংখ্যা কোনটি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) ১২
    b) ১৫
    c) ১৬
    d) ৩৪
 
-3. **প্রথম n সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+2. **প্রথম n সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) 2n
    b) n^2
    c) n^3
    d) \frac{n^2}{2}
+
+3. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. ৩৫৫
+   খ. ৪৬৫
+   গ. ৫২৫
+   ঘ. ৬৭৫
 
 4. **1^2 + 2^2 + 3^2 + ................ + 7^2 ধারাটির সমষ্টি কত?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 9]**
    a) \frac{n(n+1)}{2}
@@ -611,17 +611,17 @@
 
 ## Time, Work & Distance (11)
 
-1. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. ১৫ মিনিট
-   খ. ১১ মিনিট
-   গ. ১৩ মিনিট
-   ঘ. ১৪ মিনিট
-
-2. **A pipe can fill a tank in 4 hours, and another pipe can fill it in 6 hours. How much time will they take to fill the tank together?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+1. **A pipe can fill a tank in 4 hours, and another pipe can fill it in 6 hours. How much time will they take to fill the tank together?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
    (a) 40 hours
    (b) 4.5 hours
    (c) 2.4 hours
    (d) 5 hours
+
+2. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. ১৫ মিনিট
+   খ. ১১ মিনিট
+   গ. ১৩ মিনিট
+   ঘ. ১৪ মিনিট
 
 3. **If a man rows at 5km/hr in still water and 3.5 km/hr against the current, find his rate along the current.** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
    a) 4 .25 km
@@ -729,29 +729,29 @@
 
 ## Average & Age Problems (6)
 
-1. **মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+1. **The father's age is 36 and the son's age is 16. How many years ago was the father's age three times the son's age?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 6 years ago
+   (b) 36 years ago
+   (c) 12 years ago
+   (d) 4 years ago
+
+2. **মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
    ক. ৪৫ বছর
    খ. ৪০ বছর
    গ. ৩৫ বছর
    ঘ. ৩০ বছর
 
-2. **The average temperature for the first 4-days of a week is 40.2° C and that of the last 4-days is 41.3° C. If the average temperature for the whole week is 40.6° C, then temperature on the fourth day is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+3. **The average temperature for the first 4-days of a week is 40.2° C and that of the last 4-days is 41.3° C. If the average temperature for the whole week is 40.6° C, then temperature on the fourth day is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) 38.5°C
    (b) 41.8°C
    (c) 41.3°C
    (d) 40.8°
 
-3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+4. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) n<m<o
    (b) m<n<o
    (c) o<n<m
    (d) o<m<n
-
-4. **The father's age is 36 and the son's age is 16. How many years ago was the father's age three times the son's age?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) 6 years ago
-   (b) 36 years ago
-   (c) 12 years ago
-   (d) 4 years ago
 
 5. **If age is P times then y after 6 years x age is 17 then find the age of y with respect to p.** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
    (a) 11p

@@ -23,41 +23,41 @@
 
 ## SQL Commands & Queries (52)
 
-1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
-   (a) DML
-   (b) DDL
-   (c) BNF
-   (d) None of these
-
-2. **Which of the following is not a DDL statement?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
-   (a) Create
-   (b) Alter
-   (c) Drop
-   (d) Select
-
-3. **Which clause is required in an SQL query for getting information from a database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
-   (a) Update
-   (b) Select
-   (c) Create
-   (d) Isolation
-
-4. **Which clause is executed first in an SQL query?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+1. **Which clause is executed first in an SQL query?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
    (a) WHERE
    (b) SELECT
    (c) FROM
    (d) ORDER BY
 
-5. **Which of the following is a DML (Data Manipulation Language) command?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+2. **Which of the following is a DML (Data Manipulation Language) command?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
    (a) CREATE
    (b) DELETE
    (c) DROP
    (d) ALTER
 
-6. **Which of the following is a command of Data Definition Language (DDL)?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+3. **Which of the following is a command of Data Definition Language (DDL)?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
    (a) SELECT
    (b) INSERT
    (c) UPDATE
    (d) CREATE
+
+4. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
+   (a) DML
+   (b) DDL
+   (c) BNF
+   (d) None of these
+
+5. **Which of the following is not a DDL statement?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
+   (a) Create
+   (b) Alter
+   (c) Drop
+   (d) Select
+
+6. **Which clause is required in an SQL query for getting information from a database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
+   (a) Update
+   (b) Select
+   (c) Create
+   (d) Isolation
 
 7. **CREATE TABLE employee (name VARCHAR, id INTEGER). What type of statement is this?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
    a) DML
@@ -690,17 +690,17 @@
 
 ## Transaction Management & ACID (14)
 
-1. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
-   (a) Atomicity
-   (b) Consistency
-   (c) Durability
-   (d) Display
-
-2. **A to B transfer balance but not sent to B? Which property in ACID is responsible?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
+1. **A to B transfer balance but not sent to B? Which property in ACID is responsible?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
    (a) Atomicity
    (b) Consistency
    (c) Isolation
    (d) Durability
+
+2. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
+   (a) Atomicity
+   (b) Consistency
+   (c) Durability
+   (d) Display
 
 3. **A transaction completes its execution is said to be-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 41]**
    a) Committed

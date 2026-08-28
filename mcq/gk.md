@@ -16,143 +16,143 @@
 
 ## Bangladesh Affairs (171)
 
-1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. ভোলা, সদর
-   খ. ছাতক, সুনামগঞ্জ
-   গ. রশীদপুর, হবিগঞ্জ
-   ঘ. জকিগঞ্জ, সিলেট
-
-2. **বীরশ্রেষ্ঠ হামিদুর রহমানের পদবী কি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. ল্যান্স নায়েক
-   খ. সিপাহী
-   গ. ক্যাপ্টেন
-   ঘ. হাবিলদার
-
-3. **বাংলাদেশের জিডিপিতে কোন খাতের অবদান সবচেয়ে বেশি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. কৃষি
-   খ. শিল্প
-   গ. বাণিজ্য
-   ঘ. সেবা
-
-4. **বাংলাদেশে বিশেষ ক্ষমতা আইন কত সালে প্রণীত হয়েছিল?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. ১৯৭৯
-   খ. ১৯৭৪
-   গ. ১৯৭৫
-   ঘ. ১৯৭৭
-
-5. **বাংলাদেশের জাতীয় প্রতীকে কয়টি তারকা আছে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. ২ টি
-   খ. ৩ টি
-   গ. ৪ টি
-   ঘ. ৫ টি
-
-6. **ইক্ষু গবেষণা ইনস্টিটিউট কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. ঈশ্বরদী
-   খ. দিনাজপুর
-   গ. পাকশী
-   ঘ. গোপালগঞ্জ
-
-7. **বাংলাদেশের বৃহত্তম গ্রাম কোন জেলায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. নোয়াখালী
-   খ. কুষ্টিয়া
-   গ. চাঁদপুর
-   ঘ. হবিগঞ্জ
-
-8. **শহীদ আসাদ দিবস কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. ১৯ জানুয়ারি
-   খ. ২০ জানুয়ারি
-   গ. ২৫ জানুয়ারি
-   ঘ. ৩০ জানুয়ারি
-
-9. **বাংলাদেশে কোন ধরনের জ্বালানি থেকে বেশি বিদ্যুৎ উৎপাদিত হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. কয়লা
-   খ. গ্যাস
-   গ. তেল
-   ঘ. হাইড্রো
-
-10. **ওআইসি'র কততম শীর্ষ সম্মেলনে বঙ্গবন্ধু শেখ মুজিবুর রহমান অংশগ্রহণ করেন?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. ২য়
-   খ. ৩য়
-   গ. ৪র্থ
-   ঘ. ৫ম
-
-11. **বঙ্গভঙ্গের কারণে সৃষ্ট প্রদেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. পূর্ববঙ্গ ও বিহার
-   খ. পূর্ববঙ্গ ও আসাম
-   গ. পূর্ববঙ্গ ও উড়িষ্যা
-   ঘ. পূর্ববঙ্গ ও পশ্চিমবঙ্গ
-
-12. **বাংলাদেশের মোট উপজেলা কতটি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+1. **বাংলাদেশের মোট উপজেলা কতটি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) 492
    b) 595
    c) 495
    d) 498
 
-13. **বাংলাদেশের সবচেয়ে বড় জেলা কোনটি (আয়তনের দিক থেকে)?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+2. **বাংলাদেশের সবচেয়ে বড় জেলা কোনটি (আয়তনের দিক থেকে)?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) চট্টগ্রাম
    b) কক্সবাজার
    c) খুলনা
    d) রাঙ্গামাটি
 
-14. **বাংলাদেশের মোট সাক্ষরতার হার (শিক্ষিতের হার) কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+3. **বাংলাদেশের মোট সাক্ষরতার হার (শিক্ষিতের হার) কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) ৬০%
    b) ৭০%
    c) ৭৫%
    d) ৮০%
 
-15. **বীরশ্রেষ্ঠ মতিউর রহমান কোথায় জন্মগ্রহণ করেন?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+4. **বীরশ্রেষ্ঠ মতিউর রহমান কোথায় জন্মগ্রহণ করেন?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
    a) ঢাকা
    b) গাজীপুরে
    c) ব্রাহ্মণবাড়িয়া
    d) কিশোরগঞ্জ
 
-16. **Which one of the following is not a part of the local government in Bangladesh?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+5. **The highest peak in Bangladesh is-** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) Saka Haphong
+   (b) Bijoy Tajingdong
+   (c) Dumlong
+   (d) Keokradong
+
+6. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. ভোলা, সদর
+   খ. ছাতক, সুনামগঞ্জ
+   গ. রশীদপুর, হবিগঞ্জ
+   ঘ. জকিগঞ্জ, সিলেট
+
+7. **বীরশ্রেষ্ঠ হামিদুর রহমানের পদবী কি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. ল্যান্স নায়েক
+   খ. সিপাহী
+   গ. ক্যাপ্টেন
+   ঘ. হাবিলদার
+
+8. **বাংলাদেশের জিডিপিতে কোন খাতের অবদান সবচেয়ে বেশি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. কৃষি
+   খ. শিল্প
+   গ. বাণিজ্য
+   ঘ. সেবা
+
+9. **বাংলাদেশে বিশেষ ক্ষমতা আইন কত সালে প্রণীত হয়েছিল?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. ১৯৭৯
+   খ. ১৯৭৪
+   গ. ১৯৭৫
+   ঘ. ১৯৭৭
+
+10. **বাংলাদেশের জাতীয় প্রতীকে কয়টি তারকা আছে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. ২ টি
+   খ. ৩ টি
+   গ. ৪ টি
+   ঘ. ৫ টি
+
+11. **ইক্ষু গবেষণা ইনস্টিটিউট কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. ঈশ্বরদী
+   খ. দিনাজপুর
+   গ. পাকশী
+   ঘ. গোপালগঞ্জ
+
+12. **বাংলাদেশের বৃহত্তম গ্রাম কোন জেলায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. নোয়াখালী
+   খ. কুষ্টিয়া
+   গ. চাঁদপুর
+   ঘ. হবিগঞ্জ
+
+13. **শহীদ আসাদ দিবস কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. ১৯ জানুয়ারি
+   খ. ২০ জানুয়ারি
+   গ. ২৫ জানুয়ারি
+   ঘ. ৩০ জানুয়ারি
+
+14. **বাংলাদেশে কোন ধরনের জ্বালানি থেকে বেশি বিদ্যুৎ উৎপাদিত হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. কয়লা
+   খ. গ্যাস
+   গ. তেল
+   ঘ. হাইড্রো
+
+15. **ওআইসি'র কততম শীর্ষ সম্মেলনে বঙ্গবন্ধু শেখ মুজিবুর রহমান অংশগ্রহণ করেন?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. ২য়
+   খ. ৩য়
+   গ. ৪র্থ
+   ঘ. ৫ম
+
+16. **বঙ্গভঙ্গের কারণে সৃষ্ট প্রদেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. পূর্ববঙ্গ ও বিহার
+   খ. পূর্ববঙ্গ ও আসাম
+   গ. পূর্ববঙ্গ ও উড়িষ্যা
+   ঘ. পূর্ববঙ্গ ও পশ্চিমবঙ্গ
+
+17. **Which one of the following is not a part of the local government in Bangladesh?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
    a) Union Parishad
    b) Upazila Parishad
    c) Zila Parishad
    d) National Parliament
 
-17. **What is the highest temperature ever recorded in Bangladesh?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+18. **What is the highest temperature ever recorded in Bangladesh?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
    a) 42.3°C
    b) 43.2°C
    c) 44.5°C
    d) 45.1°C
 
-18. **Who received the Ekushey Padak 2024 in Social Service in Bangladesh?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+19. **Who received the Ekushey Padak 2024 in Social Service in Bangladesh?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
    a) Md Ziaul Haque and Rafique Ahmed
    b) Jalal Uddin Khan and Kalyani Ghosh
    c) Muhammad Samad and Lutfor Rahman Riton
    d) Shibli Mohammad and Dolly Johur
 
-19. **What is Bangladesh's ranking as a remittance recipient globally?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+20. **What is Bangladesh's ranking as a remittance recipient globally?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
    a) 5^{th}
    b) 7^{th}
    c) 8^{th}
    d) 10^{th}
 
-20. **When will Bangladesh exit from the LDC category?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+21. **When will Bangladesh exit from the LDC category?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) 2024
    (b) 2025
    (c) 2026
    (d) 2027
 
-21. **The documentary film, based on the liberation war, 'Rupali Shoikot' was directed by** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+22. **The documentary film, based on the liberation war, 'Rupali Shoikot' was directed by** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) Alamgir Kabir
    (b) Tanvir Mokammel
    (c) Tanvir Kabir
    (d) Tarek Masood
 
-22. **In 1997, UNESCO declared the 'Sundarbans' as the-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+23. **In 1997, UNESCO declared the 'Sundarbans' as the-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) 798th World Heritage Site
    (b) 997th World Heritage Site
    (c) 879th World Heritage Site
    (d) 789th World Heritage Site
-
-23. **The highest peak in Bangladesh is-** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) Saka Haphong
-   (b) Bijoy Tajingdong
-   (c) Dumlong
-   (d) Keokradong
 
 24. **Which one of the following is true?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
    (a) Bangladesh is a lower middle-income country.
@@ -518,55 +518,55 @@
    (ঘ) জাহানারা
    **Ans: ক**
 
-95. **স্বাধীন বাংলাদেশের জাতীয় সংসদের প্রথম স্পিকার কে ছিলেন?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+93. **স্বাধীন বাংলাদেশের জাতীয় সংসদের প্রথম স্পিকার কে ছিলেন?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) আবদুল খালেক উকিল
    (খ) আবদুল হাকিম
    (গ) সাহাবুদ্দিন আহমদ
    (ঘ) মোহাম্মদ উল্লাহ
 
-97. **When china did recognized Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+94. **When china did recognized Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
    (a) 1974
    (b) 1972
    (c) 1973
    (d) 1975
    **Ans: d**
 
-98. **What is the length and width of the National Flag of Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+95. **What is the length and width of the National Flag of Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
    (a) 5:3
    (b) 5:2
    (c) 6:3
    (d) 10:3
    **Ans: a**
 
-99. **The cabinet of Mujibnagar Government was sworn in-** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+96. **The cabinet of Mujibnagar Government was sworn in-** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
    (a) Meherpur
    (b) Dhaka
    (c) Chattagram
    (d) Kolkata
    **Ans: a**
 
-100. **During the liberation war of Bangladesh, Dhaka was under which sector?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+97. **During the liberation war of Bangladesh, Dhaka was under which sector?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
    (a) 2
    (b) 4
    (c) 5
    (d) 7
    **Ans: a**
 
-101. **The first gas field of Bangladesh was discovered in-** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+98. **The first gas field of Bangladesh was discovered in-** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
    (a) 1956
    (b) 1957
    (c) 1986
    (d) 1955
    **Ans: d**
 
-102. **The only foreigner to be awarded the title “Bir Protic” is-** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+99. **The only foreigner to be awarded the title “Bir Protic” is-** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
    (a) W.A.S Ouderland
    (b) Simon Dring
    (c) Sam manekshaw
    (d) Mark Tully
    **Ans: a**
 
-103. **What is the length and width of the National Flag of Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+100. **What is the length and width of the National Flag of Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
    (a) 5:3
    (b) 5:2
    (c) 6:3
@@ -574,414 +574,414 @@
    **Ans:**
    **(a) 5:3**
 
-104. **রাতারগুল কোন ধরণের বন?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+101. **রাতারগুল কোন ধরণের বন?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
    (ক) ম্যানগ্রোভ
    (খ) জলাবন
    (গ) হাওর
    (ঘ) হ্রদ
 
-105. **ছয়দফা কতসালে প্রস্তাব করা হয়?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+102. **ছয়দফা কতসালে প্রস্তাব করা হয়?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
    (ক) ১৯৬৯
    (খ) ১৯৭২
    (গ) ১৯৫৪
    (ঘ) ১৯৬৬
 
-106. **বাংলাদেশের দীর্ঘতম নদী কোনটি?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+103. **বাংলাদেশের দীর্ঘতম নদী কোনটি?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
    (ক) যমুনা
    (খ) ব্রহ্মপুত্র
    (গ) মেঘনা
    (ঘ) পদ্মা
 
-107. **Who is the Chairman of BCIC?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+104. **Who is the Chairman of BCIC?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) Shah Md. Imdadul Haque
    (খ) Mrs. Jasmin Nahar
    (গ) Kazi Mohammad Saiful Islam
    (ঘ) Mr. Mohammada Shaheen Kamal
 
-108. **Bangladesh Chemical Industries Corporation (BCIC), fully owned by the Gob, was established in ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+105. **Bangladesh Chemical Industries Corporation (BCIC), fully owned by the Gob, was established in ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) 1st January, 1973
    (খ) 1st January, 1976
    (গ) 1st july, 1976
    (ঘ) 1st July, 1973
 
-109. **How many enterprise under BCIC?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+106. **How many enterprise under BCIC?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) 11
    (খ) 17
    (গ) 23
    (ঘ) none of a, b and c
 
-110. **How much number of enterprise of BCIC at founded period?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+107. **How much number of enterprise of BCIC at founded period?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) 100
    ((খ) 92
    (গ) 88
    (ঘ) 8
 
-111. **Number of fertilize enterprise of BCIC is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+108. **Number of fertilize enterprise of BCIC is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) 3
    (খ) 8
    (গ) 5
    (ঘ) 10
 
-112. **The number of board of director of BCIC is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+109. **The number of board of director of BCIC is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) 5
    (খ) 6
    (গ) 8
    (ঘ) 7
 
-113. **The Most Loss making enterprise of BCIC in 2020–2021 is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+110. **The Most Loss making enterprise of BCIC in 2020–2021 is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) Shahjalal Fertilizer Project
    (খ) Ashugonj Fertilizer & Chemical Co.
    (গ) Karnophuli Paper Mills Ltd.
    (ঘ) Chittagong Urea Fertilizer Project
 
-114. **When did Bangabandhu declared historic six point programme?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+111. **When did Bangabandhu declared historic six point programme?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
    a) February 4, 1966
    b) February 5, 1966
    c) February 6, 1966
    d) February 7, 1966
 
-115. **The length of Dhaka Metro Rail will be–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+112. **The length of Dhaka Metro Rail will be–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
    a) 19.10 km
    b) 20.10 km
    c) 21.10 km
    d) 20.50 km
 
-116. **As per the latest changes in Bengali Calendar, leap year is calculated in which month?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+113. **As per the latest changes in Bengali Calendar, leap year is calculated in which month?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
    a) Boishakh
    b) Bhadro
    c) Ashwin
    d) Falgun
 
-117. **Who is the builder of the 'Sat Gumbad' (Seven-domed) mosque?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+114. **Who is the builder of the 'Sat Gumbad' (Seven-domed) mosque?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
    a) Shaesta Khan
    b) Khan Jahan Ali
    c) Isha Khan
    d) Islam Khan
 
-118. **Free Market Economy started in Bangladesh in–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+115. **Free Market Economy started in Bangladesh in–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
    a) 1989
    b) 1990
    c) 1991
    d) 1992
 
-119. **বাংলাদেশে প্রথম জাতীয় সংসদের নির্বাচন কখন হয়?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+116. **বাংলাদেশে প্রথম জাতীয় সংসদের নির্বাচন কখন হয়?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) ৭ ফেব্রুয়ারী ১৯৭৩
    b) ৭ জানুয়ারি ১৯৭৩
    c) ৭ মার্চ ১৯৭৩
    d) ৭ এপ্রিল ১৯৭৩
 
-120. **কত সালে আওয়ামী লীগের ৬দফা পেশ করা হয়েছিল?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+117. **কত সালে আওয়ামী লীগের ৬দফা পেশ করা হয়েছিল?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) ১৯৬৬ সালে
    b) ১৯৬৭ সালে
    c) ১৯৬৮ সালে
    d) ১৯৬৯ সালে
 
-121. **নির্বাহী বিভাগ থেকে বিচার বিভাগ পৃথক করার বিষয়টি সংবিধানের কোন অনুচ্ছেদে উল্লেখ রয়েছে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+118. **নির্বাহী বিভাগ থেকে বিচার বিভাগ পৃথক করার বিষয়টি সংবিধানের কোন অনুচ্ছেদে উল্লেখ রয়েছে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) অনুচ্ছেদ ২৩b) অনুচ্ছেদ ২৪
    c) অনুচ্ছেদ ২১
    d) অনুচ্ছেদ ২২
 
-122. **১৯৫৪ সালে পূর্ব পাকিস্তান প্রাদেশিক পরিষদ নির্বাচনে যুক্তফ্রন্টের কি প্রতীক ছিল?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+119. **১৯৫৪ সালে পূর্ব পাকিস্তান প্রাদেশিক পরিষদ নির্বাচনে যুক্তফ্রন্টের কি প্রতীক ছিল?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) ধানের শীষ
    b) নৌকা
    c) লাঙ্গল
    d) বাইসাইকেল
 
-123. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান প্রবর্তিত হয়-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+120. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান প্রবর্তিত হয়-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
    (a) ১৭ এপ্রিল ১৯৭১
    (b) ১৬ ডিসেম্বর ১৯৭২
    (c) ৭ মার্চ ১৯৭২
    (d) ২৬ মার্চ ১৯৭৩
 
-124. **বঙ্গবন্ধু আগরতলা ষড়যন্ত্র মামলায় মোট আসামি সংখ্যা ছিল কতজন?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+121. **বঙ্গবন্ধু আগরতলা ষড়যন্ত্র মামলায় মোট আসামি সংখ্যা ছিল কতজন?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
    (a) ৩৪ জন
    (b) ৩৫ জন
    (c) ৩৬ জন
    (d) ৩২ জন
 
-125. **আইন প্রণয়নের ক্ষমতা-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+122. **আইন প্রণয়নের ক্ষমতা-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
    (a) আইন মন্ত্রণালয়ের
    (b) রাষ্ট্রপতির
    (c) স্পিকারের
    (d) জাতীয় সংসদের
 
-126. **পার্বত্য চট্টগ্রাম শান্তিচুক্তি কত সালে স্বাক্ষরিত হয়?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+123. **পার্বত্য চট্টগ্রাম শান্তিচুক্তি কত সালে স্বাক্ষরিত হয়?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
    (a) ১৯৯৬
    (b) ১৯৯৭
    (c) ১৯৯৯
    (d) ২০০১
 
-127. **বাংলাদেশের প্রথম স্বাধীন নবাব কে?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+124. **বাংলাদেশের প্রথম স্বাধীন নবাব কে?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
    (a) নবাব সিরাজউদ্দৌলা
    (b) মুর্শিদ কুলী খান
    (c) ইলিয়াস শাহ
    (d) আলাউদ্দিন হোসেন শাহ
 
-128. **Which sector has the largest contribution in GDP of Bangladesh** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+125. **Which sector has the largest contribution in GDP of Bangladesh** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
    a) Garments
    b) Man export
    c) Agriculture
    d) industry
 
-129. **Dhaka was the under the sector in liberation war.** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+126. **Dhaka was the under the sector in liberation war.** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
    a) 2
    b) 4
    c) 11
    d) 8
 
-130. **Who was the first English translator of Bangladesh national anthem?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+127. **Who was the first English translator of Bangladesh national anthem?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
    a. Syed Ahsan Kabir
    b. Kamrul Hasan
    c. Syed Ali Ahsan
    d. Rabindranath Tagore
 
-131. **Which one was the Naval Sector in the liberation war of Bangladesh?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+128. **Which one was the Naval Sector in the liberation war of Bangladesh?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
    a. 8
    b. 9
    c. 10
    d. 11
 
-132. **Which project of Bangladesh is related to the concept of “One city Two Towns”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+129. **Which project of Bangladesh is related to the concept of “One city Two Towns”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
    a. Padma Bridge
    b. Metro Rail
    c. Kuril Flyover
    d. Karnaphuli River tunnel
 
-133. **Recently HPM record award at UN for ________.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+130. **Recently HPM record award at UN for ________.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
    a. SDG
    b. Climate Change
    c. MDG
    d. Women Empowerment
 
-134. **In which district the ‘Tin Bigha Corridor’ is located?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+131. **In which district the ‘Tin Bigha Corridor’ is located?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
 
-135. **Which Bangladeshi has been awarded the ‘Padma Bhushan 2020’ by the government of India?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+132. **Which Bangladeshi has been awarded the ‘Padma Bhushan 2020’ by the government of India?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
 
-136. **According to WEF’s (World Economic forum) Global Gender Gap Report. what is the ranking of Bangladesh in South Asia?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+133. **According to WEF’s (World Economic forum) Global Gender Gap Report. what is the ranking of Bangladesh in South Asia?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
 
-137. **বাংলাদেশে কোন তারিখ হতে আনুষ্ঠানিকভাবে কোভিড-১৯ এর টিকাদার কর্মসূচী চালু হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+134. **বাংলাদেশে কোন তারিখ হতে আনুষ্ঠানিকভাবে কোভিড-১৯ এর টিকাদার কর্মসূচী চালু হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. জানুয়ারী ৭, ২০২১
    B. জানুয়ারী ১৭, ২০২১
    C. জানুয়ারী ২৭, ২০২১
    D. জানুয়ারী ২৯, ২০২১
 
-138. **ডিজিটাল বাংলাদেশ দিবস কবে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+135. **ডিজিটাল বাংলাদেশ দিবস কবে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
    a) ১২ নভেম্বর
    b) ১২ ডিসেম্বর
    c) ৬ ডিসেম্বর
    d) ৬ জুলাই
 
-139. **বঙ্গবন্ধু উপাধি পান কত সালে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+136. **বঙ্গবন্ধু উপাধি পান কত সালে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
    a) ১৯৭১
    b) ১৯৫২
    c) ১৯৭২
    d) ১৯৬৯
 
-140. **How many accused were in ‘Agartala Conspiracy Case’ including Bangabandhu?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+137. **How many accused were in ‘Agartala Conspiracy Case’ including Bangabandhu?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
    ক. 36
    খ. 35
    গ. 34
    ঘ. 32
 
-141. **Under which sector Dhaka was during our Liberation War in 1971?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+138. **Under which sector Dhaka was during our Liberation War in 1971?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
    ক. 3
    খ. 2
    গ. 4
    ঘ. 1
 
-142. **Who appoints the Chief Justice in Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+139. **Who appoints the Chief Justice in Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
    ক. Prime Minister
    খ. Parliament
    গ. President
    ঘ. None
 
-143. **Who was F.R Khan?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+140. **Who was F.R Khan?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
    ক. Cancer Specialist
    খ. Nuclear Scientist
    গ. Computer Engineer
    ঘ. Architect
 
-144. **Architect of national monument of Bangladesh is;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+141. **Architect of national monument of Bangladesh is;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
    ক. Hamidur Rahman
    খ. Quamrul Hassan
    গ. Sayed Mainul Hossian
    ঘ. F.R Khan
 
-145. **What is the per capita income ($US) of Bangladesh in 2021?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+142. **What is the per capita income ($US) of Bangladesh in 2021?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
    ক. 2254
    খ. 2454
    গ. 2554
    ঘ. 3054
 
-146. **How may freedom fighters have received gallantry awards for contributions in our Liberation War-1971?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+143. **How may freedom fighters have received gallantry awards for contributions in our Liberation War-1971?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
    ক. 712
    খ. 512
    গ. 175
    ঘ. 676
 
-147. **Who is the Head of the State of Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+144. **Who is the Head of the State of Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
    ক. President
    খ. Prime Minister
    গ. Speaker
    ঘ. None
 
-148. **Which one is not correct?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+145. **Which one is not correct?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
    ক. A+0=A
    খ. A.1=A
    গ. A+A'=1
    ঘ. A.A'=1
 
-149. **বাংলাদেশ কোন সালে আনুষ্ঠানিকভাবে উন্নয়নশীল দেশ হিসাবে স্বীকৃতি লাভ করবে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+146. **বাংলাদেশ কোন সালে আনুষ্ঠানিকভাবে উন্নয়নশীল দেশ হিসাবে স্বীকৃতি লাভ করবে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
    (ক) ২০২৪
    (খ) ২০২৮
    (গ) ২০২৬
    (ঘ) ২০৩০
 
-150. **রাতারগুল কোন জেলায় অবস্থিত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+147. **রাতারগুল কোন জেলায় অবস্থিত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
    (ক) রাঙ্গামাটি
    (খ) সাতক্ষীরা
    (গ) সিলেট
    (ঘ) কক্সবাজার
 
-151. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ আছে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+148. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ আছে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
    (ক) ১৩৩টি
    (খ) ১৪৩টি
    (গ) ১৫৩টি
    (ঘ) ১৭৩টি
 
-152. **নির্মাণাধীন পদ্মা সেতুর স্প্যান সংখ্যা কতটি?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+149. **নির্মাণাধীন পদ্মা সেতুর স্প্যান সংখ্যা কতটি?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
    (ক) ৩৯ টি
    (খ) ৪০টি
    (গ) ৪১টি
    (ঘ) ৪২টি
 
-153. **দুই টাকার নোটে কার স্বাক্ষর থাকে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+150. **দুই টাকার নোটে কার স্বাক্ষর থাকে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
    (ক) অর্থ সচিব
    (খ) বাংলাদেশ ব্যাংকের গভর্নর
    (গ) অর্থমন্ত্রী
    (ঘ) প্রধানমন্ত্রী
 
-154. **বাংলাদেশে কোভিড ১৯ এর ভ্যাকসিন প্রথম ব্যবহৃত হয়েছে–** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+151. **বাংলাদেশে কোভিড ১৯ এর ভ্যাকসিন প্রথম ব্যবহৃত হয়েছে–** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
    (ক) অক্সফোর্ড অ্যাস্ট্রাজেনেকা-কোভিশিল্ড
    (খ) সিনোভ্যাক্স এর করোনাভ্যাক
    (গ) ফাইজারের বায়োএনটেক
    (ঘ) জনসন এন্ড জনসন-জনসেন
 
-155. **নাচোল বিদ্রোহের নেত্রির নাম কি?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+152. **নাচোল বিদ্রোহের নেত্রির নাম কি?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
    (ক) প্রীতিলতা
    (খ) লক্ষ্মীরাণী
    (গ) কাদম্বিনী
    (ঘ) ইলা মিত্র
 
-156. **বাংলাদেশের মহান মুক্তিযুদ্ধে বীর প্রতীক খেতাব প্রাপ্ত একমাত্র বিদেশি উইলিয়াম এ এস ওডারল্যান্ড কোন দেশের নাগরিক?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+153. **বাংলাদেশের মহান মুক্তিযুদ্ধে বীর প্রতীক খেতাব প্রাপ্ত একমাত্র বিদেশি উইলিয়াম এ এস ওডারল্যান্ড কোন দেশের নাগরিক?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
    (ক) ভারত
    (খ) যুক্তরাজ্য
    (গ) অস্ট্রেলিয়া
    (ঘ) জাপান
 
-157. **বাংলাদেশের সর্বপ্রথম জাদুঘর কোথায় প্রতিষ্ঠিত হয়?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+154. **বাংলাদেশের সর্বপ্রথম জাদুঘর কোথায় প্রতিষ্ঠিত হয়?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
    (ক) ঢাকা
    (খ) বরেন্দ্র
    (গ) সিলেট
    (ঘ) চট্টগ্রাম
 
-158. **ভাসানচর কোন জেলায় অবস্থিত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+155. **ভাসানচর কোন জেলায় অবস্থিত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
    (ক) চট্টগ্রাম
    (খ) ভোলা
    (গ) নোয়াখালী
    (ঘ) কক্সবাজার
 
-159. **Exclusive Economic Zone (EEZ)- এর দৈর্ঘ্য কত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+156. **Exclusive Economic Zone (EEZ)- এর দৈর্ঘ্য কত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
    (ক) ১০০ নটিকেল মাইল
    (খ) ২০০ নটিকেল মাইল
    (গ) ৪০০ নটিকেল মাইল
    (ঘ) ৩০০ নটিকেল মাইল
 
-160. **বঙ্গবন্ধু ঐতিহাসিক ছয়দফা কর্মসূচি কোথায় ঘোষণা করেছিলেন?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+157. **বঙ্গবন্ধু ঐতিহাসিক ছয়দফা কর্মসূচি কোথায় ঘোষণা করেছিলেন?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
    (ক) ইসলামাবাদ
    (খ) ঢাকা
    (গ) লাহোর
    (ঘ) করাচী
 
-161. **হালদা নদী কিসের জন্য বিখ্যাত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+158. **হালদা নদী কিসের জন্য বিখ্যাত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
    (ক) মাত্র মৎস্য ভান্ডার
    (খ) পর্যটক
    (গ) রামসা সাইট
    (ঘ) নদী বন্দর
 
-162. **মুক্তিযুদ্ধে “ক্র্যাক প্লাটুন” কোন শহরে সক্রিয় ছিল?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
+159. **মুক্তিযুদ্ধে “ক্র্যাক প্লাটুন” কোন শহরে সক্রিয় ছিল?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
    (ক) চট্টগ্রাম
    (খ) খুলনা
    (গ) ঢাকা
    (ঘ) বরিশাল
 
-163. **কোভিড ১৯ ভাইরাস বাংলাদেশে প্রথম কবে সনাক্ত হয়?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
+160. **কোভিড ১৯ ভাইরাস বাংলাদেশে প্রথম কবে সনাক্ত হয়?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
    (ক) ২০ ডিসেম্বর, ২০১৯
    (খ) ১৮ ফেব্রুয়ারি, ২০২০
    (গ) ৮ মার্চ, ২০২০
    (ঘ) ০১ এপ্রিল, ২০২০
 
-164. **Which article of the constitution of Bangladesh establishes the fundamental right of education for all?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+161. **Which article of the constitution of Bangladesh establishes the fundamental right of education for all?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
    (a) 13
    (b) 17
    (c) 21
    (d) 27
 
-165. **The total border district of Bangladesh is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+162. **The total border district of Bangladesh is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
    (a) 29
    (b) 32
    (c) 45
    (d) 53
 
-166. **Who has designed the logo of Mujib Year?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+163. **Who has designed the logo of Mujib Year?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
    (a) Qamrul Hasan
    (b) Hashem Khan
    (c) Sabyasachi Hazra
    (d) Nithun Kundu
 
-167. **Name of the bank established under Bangladesh Police Welfare Trust-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+164. **Name of the bank established under Bangladesh Police Welfare Trust-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
    (a) Mitual Trust Bank
    (b) Community Bangladesh Bank Limited
    (c) IFIC Bank
    (d) Trust Bank Bangladesh Limited
 
-169. **What is the position of Bangladesh in the financial Privacy Index 2020?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+165. **What is the position of Bangladesh in the financial Privacy Index 2020?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
    (a) 29^{\text{th}}
    (b) 37^{\text{th}}
    (c) 43^{\text{th}}
    (d) 54^{\text{th}}
 
-170. **The river Padma enters into Bangladesh through-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+166. **The river Padma enters into Bangladesh through-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
    (a) Sylhet
    (b) Rajshahi
    (c) Mymensingh
    (d) Pabna
 
-171. **The Constitution Drafting Committee of Bangladesh formed in 1972 had-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+167. **The Constitution Drafting Committee of Bangladesh formed in 1972 had-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
    (a) 21 members
    (b) 24 members
    (c) 31 members
    (d) 34 members
 
-172. **Which bank was the first to Introduce dual-currency debit card system in Bangladesh?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+168. **Which bank was the first to Introduce dual-currency debit card system in Bangladesh?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
    (a) Mutual Trust Bank
    (b) City Bank
    (c) Dutch Bangla Bank
    (d) AB Bank
 
-173. **The number of tribes lives in the Chattogram Hill Tracts is-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+169. **The number of tribes lives in the Chattogram Hill Tracts is-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
    (a) 7
    (b) 9
    (c) 11
    (d) 15
 
-174. **কোন সালে Bangladesh এ স্বয়ংক্রিয় Digital IT-Ex service শুরু করে?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+170. **কোন সালে Bangladesh এ স্বয়ংক্রিয় Digital IT-Ex service শুরু করে?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
    A. 1972
    B. 1975
    C. 1981
    D. 1983
 
-175. **DNA ম্যাপিং করার জন্য কোন প্রযুক্তি ব্যবহার করা হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+171. **DNA ম্যাপিং করার জন্য কোন প্রযুক্তি ব্যবহার করা হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
    A. বায়োমেট্রি
    B. বায়োইনফরমেটিক্স
    C. রোবটি
@@ -989,83 +989,83 @@
 
 ## International Affairs (103)
 
-1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
-   ক. লাইবেরিয়া
-   খ. নামিবিয়া
-   গ. ভূটান
-   ঘ. সিয়েরা লিওন
-
-2. **ভূমধ্যসাগরকে লোহিত সাগরের সাথে যুক্ত করেছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. পানামা খাল
-   খ. সুয়েজ খাল
-   গ. বেরিং প্রণালি
-   ঘ. পক প্রণালি
-
-3. **জাতিসংঘের দাপ্তরিক ভাষা নয় কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. রুশ
-   খ. ফরাসি
-   গ. পর্তুগিজ
-   ঘ. আরবি
-
-4. **সর্বশেষ বিশ্বশান্তি সূচকে শীর্ষ দেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. ডেনমার্ক
-   খ. ফিনল্যান্ড
-   গ. নরওয়ে
-   ঘ. আইসল্যান্ড
-
-5. **মার্কিন যুক্তরাষ্ট্রের কোন প্রেসিডেন্ট ১২ বছর ক্ষমতায় ছিলেন?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
-   ক. ফ্রাঙ্কলিন ডি রুজভেল্ট
-   খ. থিওডোর রুজভেল্ট
-   গ. উড্রো উইলসন
-   ঘ. জন এফ কেনেডি
-
-6. **Who are the Permanent members of the United Nations Security Council?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) China, Germany, Russia, United Kingdom, and United States
-   b) China, France, Japan, United Kingdom, and United States
-   c) China, France, Russia, United Kingdom, and United States
-   d) China, France, Russia, Germany, and United States
-
-7. **Who is the writer of "On Liberty"?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) Thomas Hobbes
-   b) John Stuart Mill
-   c) Jean-Jacques Rousseau
-   d) John Locke
-
-8. **How many members of NATO?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) 40
-   b) 32
-   c) 30
-   d) 35
-
-9. **Who is the founder of 'SpaceX'?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) Elon Musk
-   (b) Eric Yuan
-   (c) Ray Tomlinson
-   (d) Larry Page
-
-10. **Martin Cooper is known for his invention of—** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) Digital Camera
-   (b) X-ray
-   (c) Solar Energy
-   (d) Mobile Phone
-
-11. **What is the name of the data center that EU unveils to probe crimes in Ukraine?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) Tulip
-   (b) Metro
-   (c) Game Changer
-   (d) None of these
-
-12. **Who won Nobel Peace prize in 2024?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+1. **Who won Nobel Peace prize in 2024?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
    (a) David Baker
    (b) John Jumper
    (c) Nihon Hidankyo
    (d) Gary Ruvkun
 
-13. **Strasbourg belongs to which country?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+2. **Strasbourg belongs to which country?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
    (a) France
    (b) Germany
    (c) Canada
    (d) Russia
+
+3. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
+   ক. লাইবেরিয়া
+   খ. নামিবিয়া
+   গ. ভূটান
+   ঘ. সিয়েরা লিওন
+
+4. **ভূমধ্যসাগরকে লোহিত সাগরের সাথে যুক্ত করেছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. পানামা খাল
+   খ. সুয়েজ খাল
+   গ. বেরিং প্রণালি
+   ঘ. পক প্রণালি
+
+5. **জাতিসংঘের দাপ্তরিক ভাষা নয় কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. রুশ
+   খ. ফরাসি
+   গ. পর্তুগিজ
+   ঘ. আরবি
+
+6. **সর্বশেষ বিশ্বশান্তি সূচকে শীর্ষ দেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. ডেনমার্ক
+   খ. ফিনল্যান্ড
+   গ. নরওয়ে
+   ঘ. আইসল্যান্ড
+
+7. **মার্কিন যুক্তরাষ্ট্রের কোন প্রেসিডেন্ট ১২ বছর ক্ষমতায় ছিলেন?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
+   ক. ফ্রাঙ্কলিন ডি রুজভেল্ট
+   খ. থিওডোর রুজভেল্ট
+   গ. উড্রো উইলসন
+   ঘ. জন এফ কেনেডি
+
+8. **Who are the Permanent members of the United Nations Security Council?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) China, Germany, Russia, United Kingdom, and United States
+   b) China, France, Japan, United Kingdom, and United States
+   c) China, France, Russia, United Kingdom, and United States
+   d) China, France, Russia, Germany, and United States
+
+9. **Who is the writer of "On Liberty"?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) Thomas Hobbes
+   b) John Stuart Mill
+   c) Jean-Jacques Rousseau
+   d) John Locke
+
+10. **How many members of NATO?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) 40
+   b) 32
+   c) 30
+   d) 35
+
+11. **Who is the founder of 'SpaceX'?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Elon Musk
+   (b) Eric Yuan
+   (c) Ray Tomlinson
+   (d) Larry Page
+
+12. **Martin Cooper is known for his invention of—** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Digital Camera
+   (b) X-ray
+   (c) Solar Energy
+   (d) Mobile Phone
+
+13. **What is the name of the data center that EU unveils to probe crimes in Ukraine?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Tulip
+   (b) Metro
+   (c) Game Changer
+   (d) None of these
 
 14. **The Mona Lisa portrait was painted by Leonardo da Vinci in the-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
    (a) 15th century
@@ -2060,53 +2060,53 @@
 
 ## Geography & Environment (26)
 
-1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+1. **Which connect the two Sea in Suez Canal?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) Arabian Sea and Mediterranean Sea
+   (b) Mediterranean Sea and Red Sea
+   (c) Persian Gulf and Black Sea
+   (d) Black Sea and Arabian Sea
+
+2. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
    ক. মোহনা
    খ. দ্বীপ
    গ. ক্বীপ
    ঘ. দোয়াব
 
-2. **বিশ্বের উচ্চতম জলপ্রপাত কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+3. **বিশ্বের উচ্চতম জলপ্রপাত কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
    ক. নায়াগ্রা
    খ. ভিক্টোরিয়া
    গ. টুভেলু
    ঘ. অ্যাঙ্গেল
 
-3. **এশিয়া মহাদেশের সবচেয়ে ছোট দেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
+4. **এশিয়া মহাদেশের সবচেয়ে ছোট দেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
    ক. মালদ্বীপ
    খ. কুয়েত
    গ. ভুটান
    ঘ. ব্রুনাই
 
-4. **শীতল মরুভূমি কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
+5. **শীতল মরুভূমি কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
    ক. সাহারা
    খ. আরব মরুভূমি
    গ. লাব আলখালি
    ঘ. লাদাখ
 
-5. **পৃথিবীর সর্বাধিক দ্বীপপুঞ্জের দেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
+6. **পৃথিবীর সর্বাধিক দ্বীপপুঞ্জের দেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
    ক. ইন্দোনেশিয়া
    খ. মালদ্বীপ
    গ. ফিলিপাইন
    ঘ. জাপান
 
-6. **The highest densely populated country of the world is –** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+7. **The highest densely populated country of the world is –** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) Bangladesh
    (b) China
    (c) Monaco
    (d) Indonesia
 
-7. **Which of the following ecosystem covers the largest area of the earth's surface?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+8. **Which of the following ecosystem covers the largest area of the earth's surface?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) Desert Ecosystem
    (b) Grassland Ecosystem
    (c) Mountain Ecosystem
    (d) Marine Ecosystem
-
-8. **Which connect the two Sea in Suez Canal?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) Arabian Sea and Mediterranean Sea
-   (b) Mediterranean Sea and Red Sea
-   (c) Persian Gulf and Black Sea
-   (d) Black Sea and Arabian Sea
 
 9. **পেনাং কোন দেশের সমুদ্রবন্দর?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 37]**
    (a) ইন্দোনেশিয়া
@@ -2174,44 +2174,44 @@
    (ঘ) ৫ ঘণ্টা
    **Ans: খ**
 
-21. **Which of the following countries is the largest emitter of \text{CO}_2?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+20. **Which of the following countries is the largest emitter of \text{CO}_2?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
    (a) France
    (b) USA
    (c) India
    (d) China
    **Ans: d**
 
-22. **সলোমন দ্বীপপুঞ্জ কোন মহাসাগরে অবস্থিত?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+21. **সলোমন দ্বীপপুঞ্জ কোন মহাসাগরে অবস্থিত?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
    a) ভারত মহাসাগর
    b) প্রশান্ত মহাসাগর
    c) অ্যাটলান্টিক মহাসাগর
    d) আকটিক মহাসাগর
 
-23. **Niagara Falls is located in** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+22. **Niagara Falls is located in** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
    a) South America
    b) Africa
    c) Australia
    d) North America
 
-24. **The biggest desert of the world is** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+23. **The biggest desert of the world is** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
    a) Great Victoria Desert
    b) Sahara Desert
    c) Kalahari Desert
    d) Tabernas Desert
 
-25. **The city which is known as the city of Culture is** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+24. **The city which is known as the city of Culture is** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
    a) Rome
    b) Paris
    c) Athens
    d) London
 
-26. **Dead sea is a ________** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+25. **Dead sea is a ________** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
    a. Sea
    b. River
    c. Lake
    d. Canal
 
-27. **In the which sea would you find the Great Barrier Reef?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+26. **In the which sea would you find the Great Barrier Reef?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
    (a) Coral Sea
    (b) Black Sea
    (c) Aral Sea
@@ -2352,23 +2352,23 @@
 
 ## Sports (20)
 
-1. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+1. **Who is first ICC ODI men's world Cup winner captain?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) Clive Lloyd
+   (b) Kapil Dev
+   (c) Alan Border
+   (d) Steve Waugh
+
+2. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
    a) Michael Phelps
    b) Usain Bolt
    c) Simone Biles
    d) Larisa Latynina
 
-2. **The 2024 Summer Olympics will be hosted in –** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+3. **The 2024 Summer Olympics will be hosted in –** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
    (a) China
    (b) France
    (c) United Kingdom
    (d) United States
-
-3. **Who is first ICC ODI men's world Cup winner captain?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) Clive Lloyd
-   (b) Kapil Dev
-   (c) Alan Border
-   (d) Steve Waugh
 
 4. **Who is the fastest woman after winning 100 metre sprint titles of the 44th National Athletics Championship held in January, 2024?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
    (a) Tahmina Rahman

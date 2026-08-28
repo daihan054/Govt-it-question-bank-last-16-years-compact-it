@@ -15,17 +15,17 @@
 
 ## Number Systems & Binary Arithmetic (45)
 
-1. **What is the result of the binary sum 10101+1011?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
-   (a) 10000
-   (b) 101010
-   (c) 100000
-   (d) 111100
-
-2. **What is the 2's complement of (65)_{16} number?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+1. **What is the 2's complement of (65)_{16} number?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
    (a) 10011011
    (b) 10011010
    (c) 00011011
    (d) 10011100
+
+2. **What is the result of the binary sum 10101+1011?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
+   (a) 10000
+   (b) 101010
+   (c) 100000
+   (d) 111100
 
 3. **A computer system needs to store 100 different symbols. In this case, how many bits of data is required for each symbol?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
    a) 4
@@ -103,7 +103,7 @@
    (ঘ) \text{byte} > \text{TB} > \text{GB} > \text{KB}
    **Ans: খ**
 
-19. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+15. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
    a) An exclusive logical sum of N with 0Fh
    b) A negative logical product of N with 0Fh
    c) A logical product of N with 0Fh
@@ -118,181 +118,181 @@
    c) Many to Many
    d) Many to One
 
-20. **Which of the following values is the correct value of this hexadecimal code 1F.01B?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 137]**
+16. **Which of the following values is the correct value of this hexadecimal code 1F.01B?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 137]**
    a. 35.0065918
    b. 32.0065918
    c. 31.0065918
    d. 30.0065918
 
-21. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 89]**
+17. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 89]**
    a. An exclusive logical sum of N with 0Fh
    b. A logical product of N with 0Fn
    c. A negative logical product of N with 0Fn
    d. A logical sum of N with 0Fh
 
-22. **Suppose, Y is an integer variable whose value is either 0 or 1. Which of the following is the equivalent of the statement. if(Y==0) Y=1; else Y=0;?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+18. **Suppose, Y is an integer variable whose value is either 0 or 1. Which of the following is the equivalent of the statement. if(Y==0) Y=1; else Y=0;?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
    a. Y = 1+Y
    b. Y = 1-Y
    c. Y = Y-1
    d. Y = 1%Y
 
-23. **Among the following which is not a divisor of - (1001011011110000000)_2?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 166]**
+19. **Among the following which is not a divisor of - (1001011011110000000)_2?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 166]**
    a) (2)_{10}
    b) (64)_{10}
    c) (128)_{10}
    d) (256)_{10}
 
-24. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
+20. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
    a) An exclusive logical sum of N with 0Fh
    b) A logical sum of N with 0Fh
    c) A negative logical product of N with 0Fh
    d) A logical product of N with 0Fh
 
-25. **Which one is the binary representation of (1234567)_{10}?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
+21. **Which one is the binary representation of (1234567)_{10}?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
    a) 100101101011010000000
    b) 1101011011111010001010
    c) 1001011010110100000111
    d) 111111111011010000110
 
-26. **Convert the binary number (1011010)_2 into hexadecimal?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+22. **Convert the binary number (1011010)_2 into hexadecimal?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
    a) 5B
    b) 5F
    c) 5A
    d) 5C
 
-27. **‘b’ এর ASCII value কত?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+23. **‘b’ এর ASCII value কত?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
    A) 66
    B) 98
    C) 3000
    D) 1
 
-28. **10000000 এর বাইনারী নম্বরটির 2's complement ফরম্যাটের মান কত (৮ বিট)?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+24. **10000000 এর বাইনারী নম্বরটির 2's complement ফরম্যাটের মান কত (৮ বিট)?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
    A) 0
    B) 128
    C) -128
    D) 256
 
-29. **Number of bits in 'BCD' code used in computing are-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
+25. **Number of bits in 'BCD' code used in computing are-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
    A) seven bits
    B) twelve bits
    C) eighteen bits
    D) six bits
 
-30. **Number systems used in the computer is known as:** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+26. **Number systems used in the computer is known as:** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
    A. Octal System
    B. Decimal System
    C. Binary System
    D. Real System
 
-31. **________ are the two symbols present in the binary number system.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+27. **________ are the two symbols present in the binary number system.** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
    A. 1 and 2
    B. 0 and 1
    C. 8 and 9
    D. 5 and 6
 
-32. **How many unique signs could be specified by using ASCII-8?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+28. **How many unique signs could be specified by using ASCII-8?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
    A. 128
    B. 256
    C. 512
    D. 65536
 
-33. **Which one of the following is equivalent hexadecimal number of (734)_8?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+29. **Which one of the following is equivalent hexadecimal number of (734)_8?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
    A. C1D
    B. D1C
    C. 1CD
    D. 1DC
 
-34. **A nibble is equal to:** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+30. **A nibble is equal to:** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
    A) 4-bits
    B) 6-bits
    C) 8-bits
    D) 16-bits
 
-35. **দশমিক পদ্ধতির সংখ্যা 300_{(10)} কে Hexadecimal এ রূপান্তর করলে কত হবে?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
+31. **দশমিক পদ্ধতির সংখ্যা 300_{(10)} কে Hexadecimal এ রূপান্তর করলে কত হবে?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
    A) \text{C}3_{(16)}
    B) 12\text{C}_{(16)}
    C) \text{C}2_{(16)}
    D) \text{A}2\text{C}_{(16)}
 
-36. **10101111 ও 00110011 এর Bitwise OR এর ফলাফল কত?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
+32. **10101111 ও 00110011 এর Bitwise OR এর ফলাফল কত?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
    A) 10111111
    B) 00100011
    C) 01010101
    D) 11111111
 
-37. **(\text{B12})_{16} + (\text{5CA})_{16} = ?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+33. **(\text{B12})_{16} + (\text{5CA})_{16} = ?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
    (a) (10\text{DC})_{16}
    (b) (\text{AFDC})_{16}
    (c) (1\text{FDC})_{16}
    (d) (\text{E1DC})_{16}
 
-38. **What is the largest decimal value that can be represented by 12 bits?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
+34. **What is the largest decimal value that can be represented by 12 bits?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
    (a) 1024
    (b) 2048
    (c) 2095
    (d) 4095
 
-39. **What is the binary of (68)_{10}?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
+35. **What is the binary of (68)_{10}?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
    A) 01000100
    B) 10000100
    C) 00100100
    D) 00010100
 
-40. **1(one) nibble equal to—** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
+36. **1(one) nibble equal to—** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
    A) 1 but
    B) 2-bit
    C) 4-bit
    D) 8-bit
 
-41. **(2019)_{10} in Binary is ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+37. **(2019)_{10} in Binary is ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
    A) 0000011111100010
    B) 0000001111110011
    C) 0000001111110010
    D) 0000011111100011
 
-42. **(11100010)_2 has a decimal value of ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+38. **(11100010)_2 has a decimal value of ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
    A) 252
    B) 225
    C) 226
    D) 220
 
-43. **For some base r, the digits which are allowed in its representation are?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+39. **For some base r, the digits which are allowed in its representation are?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
    A) Digit from 1 to r
    B) Digit from 0 to r-1
    C) Digit from 1 to r-1
    D) Digit form 0 to r
 
-44. **The Ex-OR of this string 01010101 with 11111111 is ________.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 230]**
+40. **The Ex-OR of this string 01010101 with 11111111 is ________.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 230]**
    A) 10101010
    B) 00110100
    C) 01010101
    D) 10101001
 
-45. **How many numerical bits of ASCII -8 codes?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+41. **How many numerical bits of ASCII -8 codes?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
    A) 2
    B) 4
    C) 8
    D) 16
 
-46. **How many bits in Unicode?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+42. **How many bits in Unicode?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
    A) 4
    B) 8
    C) 16
    D) 32
 
-47. **On which number system computer does not work?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+43. **On which number system computer does not work?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
    A) Binary
    B) Decimal
    C) Octal
    D) Hexadecimal
 
-48. **What is the Hexadecimal form of (2016)_{10}?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
+44. **What is the Hexadecimal form of (2016)_{10}?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
    A) 5A0
    B) 7A0
    C) 5E0
    D) 7E0
 
-49. **When we subtract 3 from 2, the answer is-** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+45. **When we subtract 3 from 2, the answer is-** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
    A) 0001
    B) 1101
    C) 0101
@@ -300,23 +300,23 @@
 
 ## Logic Gates & Universal Gates (16)
 
-1. **3 ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট 0 হলে আউটপুট কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+1. **Which one is a Universal logic gate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   (a) NAND
+   (b) AND
+   (c) OR
+   (d) NOT
+
+2. **3 ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট 0 হলে আউটপুট কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
    ক. 0
    খ. 3
    গ. 1
    ঘ. কোনোটিই নয়
 
-2. **What is the lowest number of NAND gates required to make in inverter?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
+3. **What is the lowest number of NAND gates required to make in inverter?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
    (a) 1
    (b) 2
    (c) 3
    (d) 4
-
-3. **Which one is a Universal logic gate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
-   (a) NAND
-   (b) AND
-   (c) OR
-   (d) NOT
 
 4. **Universal logic gate is:** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
    (a) NAND, XOR
@@ -378,19 +378,19 @@
    C) AND
    D) NOR
 
-15. **Binary circuit elements have** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
+14. **Binary circuit elements have** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
    A) One stable state
    B) two stable state
    C) Three stable state
    D) None of these
 
-16. **Which is the universal gate?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+15. **Which is the universal gate?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
    A) NOR
    B) AND
    C) NOT
    D) OR
 
-17. **NAND gates are preferred over other because these ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+16. **NAND gates are preferred over other because these ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
    a. Have lower function area
    b. Can be used to make any gate
    c. Consume least electronic power
@@ -471,7 +471,7 @@
    c. X = A.\bar{B} + \bar{A}.B
    d. X = (\bar{A} + B).(A + \bar{B})
 
-5. **According to Boolean algebra the value of: (A + AB) \cdot (B + AB) is-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+4. **According to Boolean algebra the value of: (A + AB) \cdot (B + AB) is-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
    A) A
    B) B
    C) AB

@@ -309,67 +309,67 @@
    C) DNS server
    D) Proxy Server
 
-49. **Which of the following TCP/IP address constitute the loopback address?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+48. **Which of the following TCP/IP address constitute the loopback address?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
    A) 1.1.1.1
    B) 255.255.255.0
    C) 127.0.0.0
    D) 127.0.0.1
 
-50. **Email is a protocol of the following layer?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+49. **Email is a protocol of the following layer?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
    A) Physical Layer
    B) Datalink layer
    C) Application Layer
    D) TCP layer
 
-51. **Which protocol is used for secured web browsing?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+50. **Which protocol is used for secured web browsing?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
    A) WWW
    B) RSA
    C) https
    D) ftp
 
-52. **How many layers Internet protocol suite?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+51. **How many layers Internet protocol suite?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
    A) 7
    B) 5
    C) 3
    D) 4
 
-53. **POP3(Post Office Protocol V3) is a protocol for-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+52. **POP3(Post Office Protocol V3) is a protocol for-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
    A) Email Sending
    B) Email Receiving
    C) Email Composing
    D) Email Storing
 
-54. **What does DNS database contain?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+53. **What does DNS database contain?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
    A) Name server Records
    B) Hostname-to-address records
    C) Hostname Aliases
    D) All of these
 
-55. **Which of the following ports would be commonly used for FTP traffic?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+54. **Which of the following ports would be commonly used for FTP traffic?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
    a. 23
    b. 22
    c. 21
    d. 25
 
-56. **Which of the following is a commonly used protocol for VoIP network communication?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+55. **Which of the following is a commonly used protocol for VoIP network communication?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
    a. SNMP
    b. SSH
    c. DNS
    d. RTP
 
-57. **A reserved set of IP addresses in a DHCP scope is commonly assigned to which of the following network devices?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+56. **A reserved set of IP addresses in a DHCP scope is commonly assigned to which of the following network devices?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
    a. Server
    b. Workstation
    c. Hub
    d. Laptop
 
-58. **What is SMTP?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+57. **What is SMTP?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
    a. Simple Mail Transport protocol
    b. Simple Mailer Transport protocol
    c. Single Mail Transfer Protocol
    d. None of These
 
-59. **VOID stands for ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+58. **VOID stands for ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
    a. Voice Over Internet Protocol
    b. Voice Over Instant Protocol
    c. Variable Optical Internet Protocol
@@ -521,211 +521,211 @@
    C) Twisted Pair
    D) Radio Link
 
-24. **Which of the standard protocol for network management features?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+23. **Which of the standard protocol for network management features?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
    A) SNMP
    B) SNA
    C) FTP
    D) SMTP
 
-25. **Which of the following is not a standard synchronous communication protocol?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 217]**
+24. **Which of the following is not a standard synchronous communication protocol?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 217]**
    A) SDLC
    B) SLIP
    C) PAS
    D) SMTP
 
-26. **Which one is an example of hybrid network?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+25. **Which one is an example of hybrid network?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
    A. LAN
    B. RAN
    C. WAN
    D. TAN
 
-27. **The abbreviation of bps stands for-** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+26. **The abbreviation of bps stands for-** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
    A. bytes per second
    B. bit per second
    C. bandwidth per second
    D. baud rate per second.
 
-28. **FTP site are often called ________** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
+27. **FTP site are often called ________** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 199]**
    A. Server
    B. host
    C. groups
    D. domain
 
-29. **An email address has a user name, the @ symbol and the ________ computer's Name** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+28. **An email address has a user name, the @ symbol and the ________ computer's Name** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
    A. Provider
    B. Host
    C. Server
    D. Client
 
-30. **Wi-Fi stands for the Wireless ________** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+29. **Wi-Fi stands for the Wireless ________** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
    A. Fidelity
    B. Final
    C. Fidel
    D. Field
 
-31. **Sockets and Winsock কোন ধরনের সফটওয়্যারের উদাহরণ?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+30. **Sockets and Winsock কোন ধরনের সফটওয়্যারের উদাহরণ?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
    A. VCR
    B. DSL
    C. IPX
    D. API
 
-32. **The ration of number of successful calls to the number of all call attempts is known as:** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
+31. **The ration of number of successful calls to the number of all call attempts is known as:** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 200]**
    A. Call back rate (CBR)
    B. Call completion rate (CCR)
    C. Busy hour call rate (BHCR)
    D. Effective call rate (ECR)
 
-33. **What is the acceptance value of dividing point between the wonder and jitter?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+32. **What is the acceptance value of dividing point between the wonder and jitter?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
    A. 200 Hz
    B. 50 Hz
    C. 20 Hz
    D. 10 Hz
 
-34. **If the voice channel is free in PSTN then what would be the maximum data rate supported by 3.1 KHz bandwidth of voice channel?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+33. **If the voice channel is free in PSTN then what would be the maximum data rate supported by 3.1 KHz bandwidth of voice channel?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
    A. 4000 bps
    B. 5000 bps
    C. 6000 bps
    D. 8000 bps
 
-35. **Which one transfers data at the highest speed?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+34. **Which one transfers data at the highest speed?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
    A. UTP
    B. STP
    C. Co-axial-cable
    D. Fiber optic cable
 
-36. **Which one acts as the backbone of global village?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+35. **Which one acts as the backbone of global village?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
    A. Hardware
    B. Software
    C. Networks and connectivity
    D. Data
 
-37. **Which one of the following is a private network based on public network?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
+36. **Which one of the following is a private network based on public network?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 193]**
    (a) Local Area Network
    (b) Virtual Private Network
    (c) Storage Area Network
    (d) Enterprise Private Network
 
-38. **Extranet allows-** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
+37. **Extranet allows-** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 239]**
    A) insiders only
    B) authorized outsides only
    C) all outside
    D) both inside and authentic outsides
 
-39. **Which of the following defines the addressing capabilities of the networking?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+38. **Which of the following defines the addressing capabilities of the networking?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
    A) OSL
    B) NAT
    C) TCP
    D) UDP
 
-40. **How many layers are there in the software part of networking framework?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+39. **How many layers are there in the software part of networking framework?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
    A) Three
    B) Seven
    C) Four
    D) Five
 
-41. **The full form of “Wi-Fi” is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 224]**
+40. **The full form of “Wi-Fi” is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 224]**
    A) Wireless Internet
    B) Wireless-Fidelity
    C) Wireless Field
    D) Wireless Fiction
 
-42. **Distributed Queue Dual Bus is a standard for------** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+41. **Distributed Queue Dual Bus is a standard for------** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
    A) MAN
    B) LAN
    C) WAN
    D) Wireless LAN
 
-43. **RPC provides a(an) ________ on the client side, a separate one for each remote procedure.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+42. **RPC provides a(an) ________ on the client side, a separate one for each remote procedure.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
    A) stub
    B) identifier
    C) name
    D) process identifier
 
-44. **“The time to communicate between Bangladesh and USA is the same as that to communicate between two adjacent houses in Bangladesh,”- In which case is the above true?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+43. **“The time to communicate between Bangladesh and USA is the same as that to communicate between two adjacent houses in Bangladesh,”- In which case is the above true?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
    A) Fiber optic
    B) Satellite
    C) Twisted pair
    D) Radio link
 
-45. **Which of the following is not a standard synchronous communication protocol?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+44. **Which of the following is not a standard synchronous communication protocol?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
    A) SDLC
    B) PAS
    C) SLIP
    D) SMTP
 
-46. **Distributed Queue Dual Bus is a standard for-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+45. **Distributed Queue Dual Bus is a standard for-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
    A) MAN
    B) WAN
    C) Wireless LAN
    D) PAN
 
-47. **Which of the following medium is used for broadband local networks?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+46. **Which of the following medium is used for broadband local networks?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
    A) Coaxial
    B) Optic fiber
    C) CATV
    D) UTP
 
-48. **A network that requires human intervention of route signals is called a-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+47. **A network that requires human intervention of route signals is called a-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
    A) T-switched network
    B) Bus network
    C) Ring network
    D) Star network
 
-49. **Which of the following is an example of a client server model?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
+48. **Which of the following is an example of a client server model?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
    A) TELNET
    B) FTP
    C) DNS
    D) All
 
-50. **A communication network which is used by large organizations over regional, national or global area is called-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+49. **A communication network which is used by large organizations over regional, national or global area is called-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
    A) LAN
    B) WAN
    C) MAN
    D) Intranet
 
-51. **In client server system what does the client program?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 258]**
+50. **In client server system what does the client program?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 258]**
    a. Share data with other computer
    b. Serve information to others computer
    c. control others connected computers
    d. Asked for information
 
-52. **Whole network will break if node is defect in which network topology?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 245]**
+51. **Whole network will break if node is defect in which network topology?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 245]**
    A) Star
    B) Bus
    C) Mesh
    D) Hybrid
 
-53. **Typical data transfer rates in LAN are of the order of-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+52. **Typical data transfer rates in LAN are of the order of-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
    A) Bits per sec
    B) Kilobits per sec
    C) Megabits per sec
    D) None of them
 
-54. **What type of architecture does Skype use while conversation?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+53. **What type of architecture does Skype use while conversation?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
    A) Client Server Architecture
    B) Peer to Peer Architecture
    C) Service oriented architecture
    D) MVC architecture
 
-55. **Which approach is used in the client server model of the cluster?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+54. **Which approach is used in the client server model of the cluster?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
    A) Load configuration
    B) FIFO
    C) LIFO
    D) Round robin
 
-56. **An administrator would like to monitor the network to evaluate which employees are using an excessive amount of bandwidth on peer to peer sharing services. Which of the following monitoring techniques would be best?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+55. **An administrator would like to monitor the network to evaluate which employees are using an excessive amount of bandwidth on peer to peer sharing services. Which of the following monitoring techniques would be best?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
    a. Stateful packet inspection
    b. Load balancing
    c. Packet sniffing
    d. Throughput testing
 
-57. **Rules used to establish & maintain communication is called ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+56. **Rules used to establish & maintain communication is called ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
    a. Dialogue
    b. Protocol
    c. Agenda
    d. Constraint
 
-58. **Which of the following does not require a computer for transmission?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+57. **Which of the following does not require a computer for transmission?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
    a. E-mail
    b. Fax
    c. Webiner
@@ -1221,115 +1221,115 @@
    (ঘ) Vertical Satellite
    **Ans: খ**
 
-6. **Which one of the following is false with respect to 4G and 5G cellular network?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
+5. **Which one of the following is false with respect to 4G and 5G cellular network?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
    (a) 5G supports faster bandwidth compared to 4G.
    (b) Latency in 4G networks is much higher than 5G network.
    (c) 4G uses a narrow slice of the available spectrum from 600 MHz to 2.5 GHz
    (d) There will be data session handoff feature in 5G network which is not available in 4G network
 
-7. **What is the maximum data rate in IEEE 802.11n?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
+6. **What is the maximum data rate in IEEE 802.11n?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
    (a) 300 Mbps
    (b) 600 Mbps
    (c) 1 Gbps
    (d) 832 Mbps
 
-8. **An Access point operates in which layer of OSI model?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+7. **An Access point operates in which layer of OSI model?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
    (a) Data link Layer
    (b) Presentation layer
    (c) Physical layer
    (d) Transport layer
 
-9. **বিশ্ব টেলিকমিউনিকেশন দিবস কবে পালিত হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+8. **বিশ্ব টেলিকমিউনিকেশন দিবস কবে পালিত হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. 7 May
    B. 14 May
    C. 17 May
    D. 21 May
 
-10. **GPRS এর পূর্ণরূপ কি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+9. **GPRS এর পূর্ণরূপ কি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) General Packet Ratio Server
    b) General Purpose Reduction Service
    c) General Packet Radio Service
    d) General Purpose Radio Server
 
-11. **কোনটা ওয়্যারলেস নেটওয়ার্ক হটস্পট?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+10. **কোনটা ওয়্যারলেস নেটওয়ার্ক হটস্পট?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) Wi-Fi Hotspot
    b) Ethernet Hotspot
    c) Fiber Hotspot
    d) None
 
-12. **Bluetooth কোন ধরনের device?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+11. **Bluetooth কোন ধরনের device?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) WAN
    b) PAN
    c) LAN
    d) MAN
 
-13. **Wi-fi কোন ধরনের নেটওয়ার্ক?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+12. **Wi-fi কোন ধরনের নেটওয়ার্ক?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
    a) Wifi LAN
    b) Wireless PAN
    c) Wifi MAN
    d) Wifi WAN
 
-14. **Wi-Fi for?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+13. **Wi-Fi for?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Wireless MAN
    b) Wireless PAN
    c) Wireless LAN
    d) all of these
 
-15. **Group sms is ________** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+14. **Group sms is ________** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Unicast
    b) Multicast
    c) Telecast
    d) Broadcast
 
-16. **Which of the following modulation is used in data communication?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+15. **Which of the following modulation is used in data communication?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    a) Pulse Modulation
    b) Amplitude Modulation
    c) Phase Modulation
    d) Frequency Modulation
 
-17. **What is the current popular technology for Maintaining smooth Wi-Fi performance and throughput for gaming, video streaming, and smart home devices?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+16. **What is the current popular technology for Maintaining smooth Wi-Fi performance and throughput for gaming, video streaming, and smart home devices?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
    a) Wi-Fi Star Network Systems
    b) Wi-Fi Bus Network Systems
    c) Wi-Fi Mesh Network Systems
    d) Wi-Fi Ring Network Systems
 
-18. **When an ongoing call or data session can communicate with two base stations at the same time, the phenomenon is known as-** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
+17. **When an ongoing call or data session can communicate with two base stations at the same time, the phenomenon is known as-** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
    a) Soft Roaming
    b) Hard Roaming
    c) Soft Handoff
    d) Hard Handoff
 
-19. **LTE means -** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+18. **LTE means -** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
    (a) Long Term Evaluation
    (b) Long Time Evaluation
    (c) Long Term Evolution
    (d) Long Terminal Evolution
 
-20. **What is hotpot?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+19. **What is hotpot?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
    A) Special Security System
    B) Cable connected internet system
    C) Wireless internet system
    D) A program
 
-21. **A frequency range 1\text{ GHz to }30\text{ GHz} is referred to as ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+20. **A frequency range 1\text{ GHz to }30\text{ GHz} is referred to as ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
    a. Medium wave
    b. Micro wave
    c. Long wave
    d. None
 
-22. **Which of the following wireless networks is configured without an access point?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+21. **Which of the following wireless networks is configured without an access point?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
    a. Ad-hoc
    b. Multiport repeating
    c. Local
    d. Extended
 
-23. **A small office home office (SOHO) wireless user reports their new laptop is 802.11h and 802.11g capable but with not wirelessly connect faster than 11mbps. Which of the following is the cause of the problem?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+22. **A small office home office (SOHO) wireless user reports their new laptop is 802.11h and 802.11g capable but with not wirelessly connect faster than 11mbps. Which of the following is the cause of the problem?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
    a. The laptop wireless card is running on a different frequency
    b. The wireless router needs a firmware update
    c. The wireless router is 802.11b only
    d. The Wireless router is defective
 
-24. **What medium is used to communicate by mobile phones?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+23. **What medium is used to communicate by mobile phones?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
    a. Optical device
    b. Laser device
    c. LED source

@@ -15,23 +15,23 @@
 
 ## Software Testing (20)
 
-1. **Which of the following testing strategy is related to the boundary value analysis?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
+1. **Integration testing is the process of testing the _____ between two software units or modules.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
+   (a) Performance
+   (b) Functionality
+   (c) Interface
+   (d) Security
+
+2. **Which of the following testing strategy is related to the boundary value analysis?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
    (a) White-box testing
    (b) Black box testing
    (c) White box and black box testing
    (d) None of these
 
-2. **Objective of integration testing is to find _____** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
+3. **Objective of integration testing is to find _____** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
    (a) design error
    (b)-functional error
    (c) interface error
    (d) coding error
-
-3. **Integration testing is the process of testing the _____ between two software units or modules.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
-   (a) Performance
-   (b) Functionality
-   (c) Interface
-   (d) Security
 
 4. **______ is a type of software testing where a group of individuals, usually from within the organization, use the software in a simulated or controlled environment to uncover defects.** **(Pubali Bank Limited, Software Quality Assurance Exam: 18.03.2023) [compact it 42]**
    (a) Alpha Testing

@@ -432,14 +432,14 @@
 
 ## Email Security & Spam (2)
 
-1. **An unsolicited e-mail message sent to many recipients at once is a-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
-   (a) worm
-   (b) virus
-   (c) threat
-   (d) spamug
-
-2. **What kind of encryption is used for securing emails in transit?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+1. **What kind of encryption is used for securing emails in transit?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
    (a) Symmetric Encryption
    (b) Asymmetric Encryption
    (c) TLS (Transport Layer Security)
    (d) Hashing
+
+2. **An unsolicited e-mail message sent to many recipients at once is a-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
+   (a) worm
+   (b) virus
+   (c) threat
+   (d) spamug

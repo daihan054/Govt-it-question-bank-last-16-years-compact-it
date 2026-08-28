@@ -114,7 +114,7 @@
    C) Java
    D) HTML
 
-8. **What smart phones are compatible of .apk file?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+7. **What smart phones are compatible of .apk file?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
    A) Microsoft
    B) IOS
    C) Symbian

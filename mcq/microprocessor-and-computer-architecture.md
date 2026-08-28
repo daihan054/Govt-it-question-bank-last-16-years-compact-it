@@ -195,31 +195,31 @@
    C) General registers
    D) Accumulator
 
-32. **The word length of a computer is measured in-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+31. **The word length of a computer is measured in-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
    A) Bytes
    B) Millimeters
    C) Metes
    D) Bits
 
-33. **Central Processing Unit is combination of-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+32. **Central Processing Unit is combination of-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
    A) Control Storage
    B) Control and output unit
    C) Arithmetic Logic and Input Unit
    D) Arithmetic logic and control unit
 
-34. **The control unit of a microprocessor-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+33. **The control unit of a microprocessor-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
    A) Stores data in the memory
    B) accepts input data from keyboard
    C) Performs arithmetic/logic function
    D) None of the above
 
-35. **Which bus used to connect the monitor to the CPU?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+34. **Which bus used to connect the monitor to the CPU?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
    A) PCI bus
    B) STE bus
    C) Memory bus
    D) SCSI bus
 
-36. **At the same clock speed compared to CISC, RISC processor works ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 261]**
+35. **At the same clock speed compared to CISC, RISC processor works ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 261]**
    a. faster
    b. Slower
    c. at same speed
@@ -389,7 +389,7 @@
    C) ROM
    D) All of them
 
-29. **Which memory is called as primary memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+28. **Which memory is called as primary memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
    A) Hard Disk
    B) Pen Drive
    C) Rom
