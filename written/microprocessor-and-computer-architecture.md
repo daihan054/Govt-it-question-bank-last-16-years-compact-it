@@ -154,6 +154,8 @@
 
 9. **(a) Compare RAID 1 and RAID 5 levels. Which one you prefer? Why?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
 
+10. **What is RAID?** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
+
 ## CPU Performance & Instruction Cycle
 
 1. **There was a CPU cycle math** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 400]**

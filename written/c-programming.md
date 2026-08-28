@@ -261,6 +261,14 @@ return 0;
 
 56. **Write a C/C++ program to find out the prime from 1 to N.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 718]**
 
+57. **Write a C/C++ program to find the reverse number of a number.** **(CAAB Programmer Exam: 2022) [compact it 721]**
+
+58. **Write a C/C++ program to find the HCF.** **(CAAB Programmer Exam: 2022) [compact it 721]**
+
+59. **Write a C/C++ program to find the sum of digits.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
+
+60. **Write a program to find this is Leap year or not, using function.** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 729]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -274,6 +282,12 @@ return 0;
 5. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
 
 6. **Write an Algorithm to check a number is Prime or not Prime.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
+
+7. **Write down the algorithm and draw the flowchart of Quadratic equation.** **(CAAB Programmer Exam: 2022) [compact it 722]**
+
+8. **Draw a flowchart and write algorithm for finding Factorial value of an integer number.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
+
+9. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
 
 ## Command Line Arguments & Basic Programs
 
@@ -294,6 +308,8 @@ return 0;
 6. **Write a program IPv4 IP validation from given IP with valid and not valid.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
 
 7. **String reverse program but without without using the library function.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
+
+8. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 729]**
 
 ## Pointers
 
@@ -322,6 +338,8 @@ return 0;
 9. **Difference between array and structure data type.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
 
 10. **Write down the types of errors which can occur the execution of a program.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
+11. **Write the syntax of while and do while loop.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
 ## Output Tracing & Control Flow
 

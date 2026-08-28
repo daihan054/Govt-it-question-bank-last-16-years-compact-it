@@ -8,6 +8,8 @@
 
 4. **Difference between Interpreter and Compiler.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
 
+5. **Write down the difference between compiler and interpreter.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
+
 ## Lexical Analysis & Compiler Phases
 
 1. **(a) How does a compiler handle comments in source code?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**

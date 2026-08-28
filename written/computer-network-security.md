@@ -36,6 +36,8 @@
 
 18. **What is the difference between Hashing and Encryption?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
 
+19. **Difference between encryption and hashing.** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -66,6 +68,8 @@
 
 4. **একটি Virus ও Ransomware এর নাম লিখ?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
 
+5. **What is Trojan horse virus?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
 ## Email & Messaging Security (Spam, Phishing)
 
 1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
@@ -83,6 +87,8 @@
 4. **What is Cyber space? Write some threats of cyber space.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
 
 5. **Write the cyber security threats.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
+6. **What is Vulnerability?** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
 ## Social Engineering & Cyber Attacks
 

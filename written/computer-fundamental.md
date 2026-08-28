@@ -62,6 +62,10 @@
 
 22. **(ক) “Computer” এবং “Computer System' এই দুটি term এর মধ্যে পার্থক্য কি?** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 703]**
 
+23. **Write short answer on the following: (a) Plaintext (b) HTTP (c) Gateway used in \underline{\phantom{\text{Network}}} layer. (d) VIRUS full form (e) Who is the father of Computer? (f) What is Cyber security? (g) What is Malware? (h) Write the IEEE standards WiFi and WiMax. (i) Write two HTML empty tag.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 724]**
+
+24. **Write full form: DHCP, POP3, VSAT and LCD.** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 728]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -87,6 +91,8 @@
 11. **(খ) Computer System এর Components গুলির সংক্ষিপ্ত বর্ণনাসহ লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
 12. **(ক) কম্পিউটার সিস্টেমের কর্মক্ষমতার উপর প্রভাব রাখতে সক্ষম এরূপ ৩টি Component এর সংক্ষিপ্ত বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
+
+13. **What is the difference between UEFI and BIOS?** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 724]**
 
 ## ICT in Society & Governance
 

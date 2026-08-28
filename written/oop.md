@@ -78,6 +78,8 @@ class Test {
 
 27. **Write down the properties/function of OOP?** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 718]**
 
+28. **Write down the main feature of Object Oriented Programming (OOP).** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**
@@ -87,6 +89,8 @@ class Test {
 3. **অথবা, (ক) উদাহরণসহ Class এবং Object এর মধ্যে পার্থক্য ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 602]**
 
 4. **(খ) উদাহরণসহ ক্লাস এবং অবজেক্ট এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
+
+5. **Define Class and Object in C++ with example.** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
 ## Encapsulation & Access Modifiers
 
@@ -102,6 +106,8 @@ class Test {
 
 6. **What are the various Access Specification in C++? Explain their purpose with are example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
 
+7. **How many specifiers are used in C++ programing?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
 ## Constructors & Destructors
 
 1. **What is constructor function? Write the properties of it.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 505]**
@@ -109,6 +115,8 @@ class Test {
 2. **Define copy constructor. What Static binding and Dynamic binding?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
 3. **What is the constructor invoked in OOP?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
+
+4. **What is constructor?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
 ## C++ OOP Concepts & Friend Functions
 

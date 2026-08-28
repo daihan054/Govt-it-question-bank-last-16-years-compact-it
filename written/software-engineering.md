@@ -154,6 +154,8 @@
 
 28. **(খ) System/Model Prototype বলতে কী বুঝায়? Product ও Process এর মধ্যে সম্পর্ক কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
 
+29. **What is full meaning of SDLC?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

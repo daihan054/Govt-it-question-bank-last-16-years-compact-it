@@ -21,6 +21,8 @@
 
 9. **Convert: (1741)_{10} = (?)_{16}** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
 
+10. **Number Conversion: (i) (4673)_8 = (?)_{16} (ii) (7491)_{10} = (?)_{16}** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
+
 ## 2's Complement & Binary Arithmetic
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
@@ -68,6 +70,8 @@
 
 3. **Simplify Y = A\bar{B} + \overline{(\bar{A} + B)}C in digital logic design.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
 
+4. **X+\bar{X}Y = ?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
 ## Logic Gates & Universal Gates
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -103,6 +107,8 @@
 16. **(a) Implement the following expression using NAND gates only: F = AB\bar{C} + ABC + \bar{A}BC** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 687]**
 
 17. **NAND gate ব্যবহার করে OR gate তৈরি করার logic diagram অঙ্কন করুন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 697]**
+
+18. **What is Logic gate? Prove that NAND and NOR gate is Universal gate.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 724]**
 
 ## Combinational Circuits (Adders, Encoders, MUX)
 

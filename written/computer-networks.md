@@ -12,6 +12,12 @@
 
 6. **(ক) সংজ্ঞা লিখুন: WWW, URL, HTTP, IP Address, Router.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 708]**
 
+7. **What is computer network?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+8. **What is SDN?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
+
+9. **How to works networks?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -211,6 +217,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 10. **(ক) Data Communication System এর পাঁচটি প্রধান Component এর চিত্রসহকারে বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
 11. **(খ) Data Communication কত প্রকার? উদাহরণসহ সংক্ষিপ্ত বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
+
+12. **What is the difference between Synchronous and Asynchronous transmission?** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
+
+13. **Define full duplex with an example.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
 ## Switching Techniques (Circuit vs Packet Switching)
 
@@ -459,6 +469,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 63. **Given IP: 168.20.96.63, Subnet mask: 255.255.192.0 Find network address, broadcast address and number of host.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 712]**
 
+64. **An IP address is: 172.162.100.25/27, Find out the following: (a) Network Address (b) IP class (c) Subnet mask (d) Broadcast address (e) Hosts per subnet** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
+
+65. **What is Public and Private IP?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 728]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -598,6 +612,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 5. **Explain NAT? Differenc between IPv4 and IPv6.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
 
 6. **What is NAT? Write down the list of private IP address.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
+
+7. **Briefly explain Network Address Translation (NAT).** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 
