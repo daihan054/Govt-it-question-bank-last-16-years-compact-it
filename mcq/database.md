@@ -87,6 +87,12 @@
    C) 2NF
    D) 3NF
 
+16. **What is normalization?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+   A) To Remove Redundancy
+   B) To make Database
+   C) To make data meaningful
+   D) To make database Consistency
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -605,6 +611,12 @@
    C) processing data
    D) administrating databases
 
+32. **The ________ format is usually used to store data.** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
+   A) BCD
+   B) Decimal
+   C) Hexadecimal
+   D) Octal
+
 ## Transaction Management & ACID
 
 1. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -980,6 +992,12 @@
    b) Three
    c) Two or Three
    d) No definite numbers
+
+9. **In an Entity-Relationship diagram many-to-many relationship corresponds to a -- in actual database.** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+   A) Table
+   B) field
+   C) row
+   D) primary key
 
 ## PL/SQL & Triggers
 

@@ -380,6 +380,12 @@
    C) Performs arithmetic/logic function
    D) None of the above
 
+35. **Which bus used to connect the monitor to the CPU?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+   A) PCI bus
+   B) STE bus
+   C) Memory bus
+   D) SCSI bus
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

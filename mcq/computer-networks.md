@@ -383,6 +383,12 @@
    C) Email Composing
    D) Email Storing
 
+54. **What does DNS database contain?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+   A) Name server Records
+   B) Hostname-to-address records
+   C) Hostname Aliases
+   D) All of these
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -785,6 +791,18 @@
    B) Kilobits per sec
    C) Megabits per sec
    D) None of them
+
+54. **What type of architecture does Skype use while conversation?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+   A) Client Server Architecture
+   B) Peer to Peer Architecture
+   C) Service oriented architecture
+   D) MVC architecture
+
+55. **Which approach is used in the client server model of the cluster?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+   A) Load configuration
+   B) FIFO
+   C) LIFO
+   D) Round robin
 
 ## Multiplexing & Data Rate
 
@@ -1567,6 +1585,12 @@
    B) Adding MAC address
    C) Cabling
    D) None
+
+11. **In TCP/IP model, which one is not a valid layer?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+   A) Application Layer
+   B) Internet Layer
+   C) Transport Layer
+   D) Protocol Layer
 
 ## Switching Techniques
 

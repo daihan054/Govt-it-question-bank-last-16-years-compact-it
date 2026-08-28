@@ -66,6 +66,12 @@
    C) Batch processing
    D) Virtual storage
 
+12. **Swap space exists in ---** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
+   A) CPU
+   B) random memory
+   C) primary memory
+   D) secondary memory
+
 ## Deadlock
 
 1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -276,6 +282,18 @@
    B) file manager
    C) Directory
    D) NOS
+
+23. **The interval from the time of submission of a process to the time of completion is termed is ________.** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+   A) Waiting time
+   B) processing time
+   C) turnaround time
+   D) throughput
+
+24. **Which of the following is not the state of a process in process Control Block (PCB)?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
+   A) Old
+   B) New
+   C) waiting
+   D) Running
 
 ## File Systems & Disk Management
 

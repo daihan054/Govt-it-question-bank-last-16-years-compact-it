@@ -26,6 +26,18 @@
    (c) SaaS
    (d) Both A and B
 
+3. **Which service(s) is/are related with Cloud Computing?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+   A) SaaS
+   B) PaaS
+   C) IaaS
+   D) All of these
+
+4. **Which of the following is Cloud Platform by Microsoft?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+   A) Azure
+   B) AWS
+   C) cloudera
+   D) Openstack
+
 ## Cloud Computing Fundamentals
 
 1. **What type of computing technology refers to services and applications that typically run on a distributed network through virtualized resources?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**

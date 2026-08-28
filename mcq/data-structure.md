@@ -503,3 +503,15 @@
    B) array
    C) graph
    D) None
+
+24. **When a new data is inserted into a data structure, but there is no available space; this situation is usually called ---** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
+   A) underflow
+   B) overflow
+   C) houseful
+   D) saturated
+
+25. **To represent hierarchical relationship between element, which data Structure is suitable?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
+   A) Desuetude
+   B) Priority
+   C) Tree
+   D) Graph

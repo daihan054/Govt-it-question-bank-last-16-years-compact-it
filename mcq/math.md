@@ -810,6 +810,12 @@
    C) 4, 12
    D) 6, 12
 
+8. **Two sets are called disjoint if the ________ is an empty set.** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+   A) intersection
+   B) union
+   C) difference
+   D) complement
+
 ## Probability & Statistics
 
 1. **The mode and mean is given by 7 and 8 respectively. Then the median is:** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**

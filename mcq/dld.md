@@ -456,6 +456,24 @@
    C) 16
    D) 32
 
+47. **On which number system computer does not work?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+   A) Binary
+   B) Decimal
+   C) Octal
+   D) Hexadecimal
+
+48. **What is the Hexadecimal form of (2016)_{10}?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
+   A) 5A0
+   B) 7A0
+   C) 5E0
+   D) 7E0
+
+49. **When we subtract 3 from 2, the answer is-** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+   A) 0001
+   B) 1101
+   C) 0101
+   D) 1001
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

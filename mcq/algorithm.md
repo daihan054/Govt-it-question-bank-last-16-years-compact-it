@@ -333,6 +333,12 @@
    C) Weakly connected
    D) Loosely connected
 
+14. **The degree of any vertex of a graph is:** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+   A) Number of Vertices in a Graph
+   B) Number of vertices incident with the Vertex
+   C) Number of Vertices Adjacent to The Vertex
+   D) Number of edges incident to the vertex of the graph
+
 ## Dynamic Programming & Greedy
 
 1. **Which of the following is an example of dynamic programming approach?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**

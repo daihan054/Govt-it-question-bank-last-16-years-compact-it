@@ -510,6 +510,18 @@
    C) Recursion
    B) Abstraction
 
+10. **Which one of the following is the core property of Object-Oriented Programming?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+   A) Encapsulation, inheritance
+   B) Encapsulation, Object
+   C) polymorphism, overloading
+   D) Encapsulation, polymorphism and inheritance
+
+11. **In object Oriented Programming, a property can be accessed from ________** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
+   A) Anywhere the project
+   B) Only from its own class
+   C) Parent class
+   D) Child class
+
 ## Inheritance
 
 1. **When a class serves as base class for many derived classes, the situation is called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**

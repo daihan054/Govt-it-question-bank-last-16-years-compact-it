@@ -82,6 +82,12 @@
 3. **In which layer IPsec works?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Network Layer
 
+4. **What does https mean?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+   A) Hypertext Transfer Protocol Secure
+   B) Hypertext Transfer Protocol System
+   C) Hypertext Transfer Protocol Service
+   D) Hypertext Transfer Protocol Sense
+
 ## Email Security & Spam
 
 1. **An unsolicited e-mail message sent to many recipients at once is a-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**

@@ -178,6 +178,12 @@
    C) Widgets
    D) Utilities
 
+5. **Which of the following statements is true regarding Cookies?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+   A) It is stored in web-client
+   B) It is stored in server
+   C) Each browsing time cookies become reset
+   D) It is client-side program
+
 ## Web Services & APIs
 
 1. **Between a client and a web server, which of the following used for inspecting the data that is sent from the client to the web server and blocking attacks such as SQL injection?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
@@ -241,3 +247,9 @@
    B) var a= {'a' 'b' 'c'}
    C) var a= {“a” “b” “c”}
    D) None
+
+5. **Which one does run on client side?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+   A) PHP
+   B) JavaScript
+   C) ASP.NET
+   D) None of these

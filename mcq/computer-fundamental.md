@@ -144,6 +144,12 @@
    C) sound
    D) None of this
 
+25. **Which is equivalent is 1GB?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+   A) 1e+4B
+   B) 1e+6B
+   C) 1e+8B
+   D) 1e+9B
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -361,6 +367,12 @@
    B) Output
    C) Storage
    D) Input
+
+33. **To convert paper into an editable document, a scanner would employ ________ technology.** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+   A) UPC
+   B) scanning
+   C) conversion
+   D) OCR
 
 ## ICT & Emerging Technology
 
@@ -689,6 +701,12 @@
    B) COBOL
    C) Python
    D) FORTRAN
+
+40. **What are the three main types of computer languages?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+   A) Machine Language, assemble language and high-level language
+   B) Structural language, functional language and object-oriented language
+   C) Imperative Language, functional language and declarative language
+   D) all of this
 
 ## Acronyms & Abbreviations
 
