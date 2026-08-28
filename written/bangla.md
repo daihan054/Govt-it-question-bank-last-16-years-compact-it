@@ -46,6 +46,8 @@
 
 23. **Bangla রচনা: সামাজিক মূল্যবোধ বৃদ্ধিতে দেশীয় সংস্কৃতি গুরুত্ব ব্যাখ্যা কর।** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
 
+24. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ শীর্ষক একটি প্রবন্ধ রচনা করুন।** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -83,6 +85,16 @@
 
 5. **৫. সারমর্ম লিখুন : শৈশবে সদুপদেশ যাহার না রোচে, জীবনে তাহারে কভু মূর্খতা না ঘোচে। চৈত্র মাসে চাষ দিয়া না বোনে বৈশাখে, কবে সেই হৈমন্তিক ধান্য পেয়ে তাকে? সময় ছাড়িয়া দিয়া করে পণ্ডশ্রম, ফল কহে সেও অতি নির্বোধ অধম। খেয়াতরী চলে গেলে বসে থাকে তীরে, কিসে পার হবে তারা না আসিলে ফিরে॥** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
+6. **সারমর্ম লিখুন:** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+> বহু মিশ্র প্রাণের সংসারে
+> সেই বাংলাদেশে ছিল সহস্রের একটি কাহিনী
+> কোরানে-পুরাণে-শিল্পে, পালা-পার্বনের ঢাকে ঢোলে
+> বাউল বাউল নাচে; পুণ্যাহের সানাই রঞ্জিত
+> রোদ্দুরে আকাশতলে দেশ কারা হাটে যায়, মাঝি
+> পাল তোলে, তাঁতি বোনে, খড়ে-ছাওয়া ঘরের অঙ্গনে
+> মাঠে ঘাটে-শ্রমসঙ্গী নানা জাতি ধর্মের বসতি
+> চিরদিন বাংলাদেশ।
+
 ## পত্র লিখন
 
 1. **অনুকৃতিশীল নারী সমাজের জীবনে সত্যের গুরুত্ব বর্ণনা করে ছোট বোনকে একটি পত্র লিখুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -96,6 +108,8 @@
 5. **২. তোমার এলাকায় একটি পাঠাগার স্থাপনের জন্য জেলা প্রশাসকের নিকট একটি আবেদন পত্র লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
 6. **একটি দৈনিক পত্রিকায় আপনার বিরুদ্ধে একটু মিথ্যা প্রতিবেদন করা হলে, ওই পত্রিকার সম্পাদকের কাছে এর বিপক্ষে একটি আবেদন করুন।** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
+
+7. **আত্মনির্ভরশীল নারী হিসেবে জীবন গড়ার গুরুত্ব বর্ণনা করে ছোট বোনকে একটি পত্র লিখুন।** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
 ## Translation
 
@@ -144,6 +158,9 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 17. **৪. বাংলায় অনুবাদ করুন: Cleanliness is a virtue. It is the habit of keeping the body and all other things free from dirts. Without a clean body one cannot have a merry mind. Cleanliness keeps health. It is also a mark of politeness. Good health keeps mind healthy.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
 18. **English to Bangla: Global Economic debt pandemic.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
+
+19. **বাংলায় অনুবাদ করুন:** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+Words have a lot of power. They can help or hurt, bless or curse. Unkind words do a lot of harm. Kind words do a lot of good. We can spoil a friends happiness by an unkind word, but cheer up a sad heart with a kind word, which costs nothing. A kind word is often more welcome than a costly present.
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 
@@ -290,3 +307,10 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 59. **৬. বাক্য শুদ্ধ কর: আপনি স্ববান্ধবে আমন্ত্রিত।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
 
 60. **৭. চক্রবাক কাব্যগ্রন্থ কার লেখা?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+61. **নিচের প্রশ্নগুলোর উত্তর লিখুন:** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+(ক) উদাহরণসহ ধাতুর সংজ্ঞা লিখুন।
+(খ) বাংলা শব্দগঠনের যে কোন দুটি প্রক্রিয়ার সংজ্ঞা লিখুন।
+(গ) শুদ্ধ বানান লিখুন: আলস্যতা, সাম্যতাপ্রাপণ
+(ঘ) নিচের বাগধারা দুটির অর্থ লিখে বাক্য রচনা করুন: তুলসী বনের বাঘ, কেবলা হাকিম
+(ঙ) বাক্য সংকোচন করুন: মেঘের ধ্বনি, তালু থেকে উচ্চারিত

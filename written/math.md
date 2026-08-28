@@ -72,6 +72,10 @@
 
 13. **Propositional Logic and Predicate Logic উদাহরণসহ বুঝিয়ে লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1020]**
 
+## Propositional Logic & Logical Equivalence
+
+1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
 ## Percentage, Profit & Loss, Simple & Compound Interest
 
 1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**

@@ -43,6 +43,8 @@
 
 21. **What are the roles of Database Engineer?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014]**
 
+22. **(খ) DBMS কী? দুটি সুবিধা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**

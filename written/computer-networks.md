@@ -43,6 +43,10 @@
 
 20. **b) Two IP address map to same Ethernet address. Will both of them receive packets?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
 
+21. **(ক) IP address এবং MAC Address- এর মাঝে তুলনা করুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+22. **(ক) সংজ্ঞা লিখুন: (i) Propagation delay, (ii) Transmission delay.** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -398,6 +402,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 13. **The message 11001001 is to be transmitted using the CRC polynomial x^3+1 to protect it from the errors. Now find out the message that should be transmitted.** **(BAUST Assistant Programmer Exam: 2021) [compact it 917-918]**
 
+14. **(গ) Data communication-এর সাপেক্ষে bandwidth এবং troughput এর সংজ্ঞা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
 ## Multiplexing & Bandwidth
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
@@ -431,6 +437,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 15. **We have four sources, each creating 250 characters per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame. Now find- (a) the data rate of each source. (b) the duration of each character in each source.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
 
 16. **Figure shows synchronous TOM with a data stream for each input and one data stream for the output. The unit of data is 1bit. Find (a) the input bit duration (b) the output bit duration (c) the output bit rate and (d) the output frame rate.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1009]**
+
+17. **ব্যান্ডউইথ (Bandwidth) বলতে কী বুঝায়?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
 ## Subnetting & IP Addressing
 
@@ -655,6 +663,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 92. **Given IP address is 172.168.10.0/24, administrator wants to create 32 subnets, then find out sub netmask, number of address of each subnet, first and last address of subnet 1, first and last address of subnet 32.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1012]**
 
 93. **Given IP Address 180.79.35.5/24, Find the (i) Network address (ii) Broadcast address (iii) Subnet mask (iv) Total valid host (v) IP address class** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1043]**
+
+94. **(খ) Classful এবং Classless IP address এর পার্থক্য কী? নিচের IP গুলোর Class নির্ণয় করুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+i) 00000001 00001011 00001011 11101111
+ii) 211.10.15.4
 
 ## Network Layer (Packet Fragmentation & Tunneling)
 

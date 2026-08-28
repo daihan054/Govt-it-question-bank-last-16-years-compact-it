@@ -4,7 +4,7 @@
 
 2. Focus Writing in English: "The Role of Sustainable Banking in Achieving the UN Sustainable Development Goals (SDGs) in Bangladesh." (Officer (IT) Exam: 31 Jul 2026) [bscs 01]
 
-3. **Write an essay on “Digital Citizenship on Social Media” using the following hints:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
+3. **Write an essay on “Digital Citizenship on Social Media” using the following hints:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
 *[Introduction- Concept of Digital citizenship- Benefits of social media- Challenges and risks- Online ethics and responsible behavior- Combating fake news and misinformation- Role of digital literacy and awareness- Conclusion]*
 
 4. **Paragraph on: Three Zero theory** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
@@ -70,7 +70,7 @@
 
 ## Letter & Application Writing
 
-1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
+1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
 
 2. **Write a Letter to your younger brother about Importance of professional vocational training.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
@@ -115,9 +115,17 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 5. **Read the following passage crefully and answer the questions below in your words : “To be good is noble, but to teach others how to be good is nobler - and no trouble” said a well known writer. This may explain why in this world there is more of preaching than of practice. We do not mean the preaching which are get in church, but that which is given freely and without stint, on buses, in the streets and even in the homes of our land. Where is the parent who does not discover himself telling his child to do just what he himself does regularly? How many people are there who are certain that they have never made anything but financial mistakes? The man who never swam a stroke feels perfectly competent to tell another how to swim. The man who can not find his way to modest livelihood pretends to know just how to save the nation from all economic ills. It is no trouble to preach. But it is a considerable trouble to carry out what we preach. This is so the man who is striving to climb the loftiest heights know just how difficult is the way. Questions: (a) What does the quoted expression mean? (b) Why is practicing more difficult than preaching? (c) What does the writer mean by preaching? (d) What do the parents tell their children to do? (e) How does the honest preacher preach to himself?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
+6. **Read the passage and answer the questions below:** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
+Various kinds of nuclear weapons have been produced in the past few years by many countries. There is a new and terrible development in the history of man. Very few events can be more frightful than nuclear war. In a nuclear war, most of the world's population will be exterminated. The few living creatures that survive will be exposed to radiation or to electrical rays harmful to life. It has been said by scientists that many new diseases will be caused by radiation. There will also be an acute shortage of food. Most of the areas on which nuclear bombs have been dropped have been ruined. Therefore, the survivors of a nuclear war will be sick, hungry and homeless. It might be better, perhaps, to be killed in a nuclear war than to survive it. It would be better still for men to learn to live in peace with one another. If this can be achieved, there will be no nuclear wars.
+(a) What is the result of a nuclear war?
+(b) How will the survivors of nuclear war survive?
+(c) What is the best way to avoid nuclear war?
+(d) What would be the appropriate title of the above passage? Justify the title in two sentences.
+(e) What is the consequence of radiation?
+
 ## English Grammar
 
-1. **Answer the following questions.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
+1. **Answer the following questions.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
 (a) Rangu Mia saw Alta Begum and Bedena Begum (discuss) _____ a funny thing. [Use the right form of verb in bracket]
 (b) It was long gap since they (meet) _____ each other. [Use the right form of verb in bracket]
 (c) He uttered something in his speech and it was disappointing. (Make it complex)

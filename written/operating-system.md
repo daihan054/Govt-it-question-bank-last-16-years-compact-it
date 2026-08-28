@@ -323,6 +323,20 @@ All process arrived at time 0. Lower number has higher priority.
 
 23. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1047]**
 
+24. **(গ) নিচের সারণীটি দেখুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+| Process | Burst Time (milli second) | Priority |
+|---|---|---|
+| P₁ | 15 | 3 |
+| P₂ | 2 | 1 |
+| P₃ | 4 | 3 |
+| P₄ | 2 | 4 |
+| P₅ | 8 | 2 |
+
+সমস্ত process একই সাথে 0 সময়ে এসে পৌঁছে।
+i) FCFS এবং SJF Scheduling algorithm ব্যবহার করে Gantt Chart এর মাধ্যমে process গুলোর execution দেখান।
+ii) উপরের উভয় algorithm এর জন্য প্রত্যেকটি process এর turnaround সময় নির্ণয় করুন।
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**

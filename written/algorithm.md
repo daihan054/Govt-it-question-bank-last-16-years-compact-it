@@ -28,6 +28,8 @@ for i in N:
 
 11. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983-984]**
 
+12. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
@@ -112,6 +114,9 @@ for i in N:
 25. **Bubble Sort কীভাবে কাজ করে উদাহরণসহ বুঝিয়ে লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1021]**
 
 26. **Selection Sort টেকনিক ব্যবহার করে নিম্নোক্ত ডাটা গুলোকে সর্টিং করুন। 45, 72, 80, 65, 84, 52, 37** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1039-1040]**
+
+27. **(খ) Bubble sort algorithm ব্যবহার করে নিচের সংখ্যাগুলো sort করুন। প্রতিটি ধাপ প্রদর্শন করতে হবে।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+13, 14, 23, 4, 6
 
 ## Heap & Priority Queue
 
@@ -252,6 +257,17 @@ for i in N:
 4. **You are given a set of activities with their starting time s[] and finishing time f[].** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 852]**
 
 5. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
+
+6. **(খ) নিচের সারণীটি বিবেচনা করুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+| Item | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Value | 20 | 15 | 12 | 14 | 20 |
+| Weight | 4 | 3 | 2 | 2 | 5 |
+
+একজন ব্যক্তি fractional knapsack ব্যবহার করে একটি থলি পূর্ণ করতে চান।
+i) থলির সর্বোচ্চ ধারণক্ষমতা 25 হলে, এতে সবচেয়ে বেশি মোট কত ওজনের বস্তু (item) রাখা যাবে?
+ii) বস্তুগুলো থলিতে রাখার ক্রম কী হবে?
 
 ## Dynamic Programming
 

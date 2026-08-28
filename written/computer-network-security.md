@@ -294,6 +294,8 @@
 
 10. **HTTPs কীভাবে একটি Website-এর সুরক্ষা দেয়? ব্লক ডায়াফ্রামের মাধ্যমে উত্তর দিন।** **(40th BCS Written Exam: 2020 (BPSC)) [compact it 971]**
 
+11. **(গ) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে কোনটি কার্যকর?** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
 ## Web Security Vulnerabilities
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
