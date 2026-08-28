@@ -882,6 +882,90 @@
    গ. Alumnus
    ঘ. Aluminise
 
+136. **Use the right form of verb is the following sentence: I wish I ________ a car.** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+   (a) have
+   (b) shall have
+   (c) have had
+   (d) had
+
+137. **A barking dog seldom bites. In the sentence, 'barking' is ________** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+   (a) a gerund
+   (b) an adverb
+   (c) a verb
+   (d) an adjective
+
+138. **Choose the correct preposition for the sentence: I reminded him ________ his appointment.** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+   (a) Of
+   (b) to
+   (c) on
+   (d) has
+
+139. **Fill in the blank with the right option: The poor ________ born to suffer.** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+   (a) are
+   (b) is
+   (c) were
+   (d) has
+
+140. **Which of the following is a compound sentence?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
+   (a) Look before you leap
+   (b) Do or die
+   (c) All's well that ends well
+   (d) A drowning man catches at a straw
+
+141. **Choose the correct option: You will help me ________ you?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (a) will
+   (b) not will
+   (c) won't
+   (d) don't
+
+142. **Choose the correct preposition: Be aware ________ lies.** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (a) at
+   (b) of
+   (c) about
+   (d) to
+
+143. **Which one of the following in an incorrect sentence?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (a) I owed it to him be honest
+   (b) I know that he is an honest man
+   (c) They know that he was honest
+   (d) He know him to be honest
+
+144. **Complete the sentence: ________ is observed as the victory Day in Bangladesh.** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (a) 16th December
+   (b) 17th April
+   (c) 26th March
+   (d) 14th December
+
+145. **Choose the verb phrase:** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (a) Ought to obey
+   (b) what a pity
+   (c) at the point of
+   (d) With black eyes.
+
+146. **Choose the correct Option: ________ are present at the metting.** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (a) He, I and you
+   (b) You, he and I
+   (c) I, you and he
+   (d) He, you and I
+
+147. **Choose the correct option: Would you mind ________ the door?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (a) open
+   (b) to open
+   (c) opening.
+   (d) opened
+
+148. **Fill in the blank with the right option: River is a/an ________ noun.** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (a) Proper
+   (b) abstract
+   (c) collective
+   (d) common
+
+149. **Which one of the following is singular number?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
+   (a) Phenomenon
+   (b) lice
+   (c) mice
+   (d) crises
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -995,6 +1079,18 @@
    খ. Rarely
    গ. Very rarely
    ঘ. Hourly
+
+21. **The phrase ‘Baker’s dozen’ means ________** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+   (a) 13
+   (b) 12
+   (c) 11
+   (d) 24
+
+22. **What is the meaning of the phrase, 'of late'?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (a) long ago
+   (b) occasionally
+   (c) long since
+   (d) recently
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -1318,6 +1414,18 @@
    গ. Instigate
    ঘ. Deceive
 
+56. **What is the antonym of 'noble'?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (a) Grand
+   (b) dignified
+   (c) elevated
+   (d) mean
+
+57. **What is the synonym of 'pardon'?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
+   (a) Condemne
+   (b) accuse
+   (c) forgive
+   (d) convict
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1405,3 +1513,15 @@
    B. Abayance
    C. Abeyence
    D. Abeyance
+
+15. **Which of the following is correct spelt?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (a) Maintenance
+   (b) maintainence
+   (c) maintinance
+   (d) maintaince
+
+16. **Which one is the correct spelling?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (a) desiase
+   (b) disease
+   (c) desease
+   (d) disese

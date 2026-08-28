@@ -483,6 +483,12 @@
    c) Synchronous
    d) None of these
 
+83. **১০০ ওয়াট ও ২০০ ভোল্ট বিশিষ্ট একটি বাতির রোধ কত?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (ক) ১০০ ওহম
+   (খ) ২০০ ওহম
+   (গ) ৪০০ ওহম
+   (ঘ) ৫০ ওহম
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**

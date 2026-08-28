@@ -136,6 +136,12 @@
    c) 2²⁷ bytes
    d) 2²⁰ bytes
 
+3. **DVD এর চেয়ে বেশী Data store করা যায় কোনটিতে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (a) CD Rom
+   (b) Floppy
+   (c) Blue Ray disk
+   (d) Red Ray disk
+
 ## RAID & Storage Architecture
 
 1. **Which RAID level creates a mirror of all disks for storing data?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**

@@ -42,6 +42,12 @@
    c. UNIVAC
    d. IBM
 
+8. **WWW (World Wide Web) এর জনক কে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+   (ক) বিল গেটস
+   (খ) স্টিভ জবস
+   (গ) টিম বার্নস লি.
+   (ঘ) জেফ বেজোফ
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -152,6 +158,12 @@
    গ. Input device
    ঘ. Memory
 
+15. **কম্পিউটার মনিটরকে আরও বলা হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
+   (ক) DVU
+   (খ) UVD
+   (গ) VDU
+   (ঘ) CCTV
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -239,3 +251,11 @@
    b. Google
    c. Yahoo
    d. Bing
+
+## Acronyms & Abbreviations
+
+1. **CMP এর পূর্ণ অভিব্যক্তি হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (ক) Common Project Method
+   (খ) Common Path Method a
+   (গ) Critical Project Method
+   (ঘ) Critical Path Method
