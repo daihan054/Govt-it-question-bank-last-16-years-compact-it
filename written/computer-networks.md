@@ -62,6 +62,10 @@
 
 8. **How can you do fix the signal attenuation problems?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 734]**
 
+9. **Where are the low loss transmission windows of silicon based optical fiber and Which window is the most popular in communication and wave. Draw diagram of a long haul WDM Transmission system.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
+
+10. **A 1550nm fiber optic transmission Link if of 50km length without repeating with a signal mode fiber having loss of 0.2dB/km. The fiber is joined ever 2km with conductor each with 0.5dB loss. Determine the minimum average power which should be lunched in to the fiver in order to Tarantion an average optical power level of 10 micro-watts at the receiver.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 766]**
+
 ## Network Topologies
 
 1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
@@ -148,6 +152,8 @@
 28. **What is the difference between DOD and OSI model?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 700]**
 
 29. **What is PDU?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 702]**
+
+30. **(খ) Computer network এর OSI 7-Layer গুলো উদাহরণসহ লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -256,7 +262,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 ## Pulse Code Modulation (PCM) & Signal Processing
 
-1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
 
 2. **Draw Delta modulation figure and math. (Approximate)** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 648]**
 
@@ -313,7 +319,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 8. **Compare between TDM and TDMA techniques.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
 
-9. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+9. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
 
 ## Subnetting & IP Addressing
 
@@ -483,6 +489,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 65. **Given IP address 172.3.16.156/23 and find out the following answer: (i) Network address (ii) Subnet mask (iii) Number of host** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
 
+66. **Answer the following: (i) 192.168.10.0/23, How many usable address? (ii) 192.168.10.0/23, Find subnet mask. (iii) 192.168.10.0/23, Find Broadcast Address. (iv) 192.168.10.0/23, What is last usable host?** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -649,6 +657,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 12. **Write a command how to find DNS www.egcb.gov.bd and which protocol uses?** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
 
+13. **For the following description of various IP networking protocols write down the protocol name and its full form in the following table:** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+
 ## Email Architecture & Protocols (SMTP, POP3, IMAP)
 
 1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
@@ -740,3 +750,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 6. **(a) Write down the features of 4G wireless networks.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
 
 7. **5G প্রথম কত সালে ও কোথায় চালু হয়?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+8. **(ক) Wi-Fi Network সম্পর্কে সংক্ষিপ্ত বিবরণ দিন। Wi-Fi Sensor Network এবং Ad Hoc Network এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**

@@ -295,6 +295,8 @@ return 0;
 
 9. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
 
+10. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
+
 ## Command Line Arguments & Basic Programs
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**
@@ -646,3 +648,22 @@ int main() {
 24. **Write a program with a recursive function that shows the sum of its digits. For example, input =3426, output will be 3+4+2+6=15.** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 684]**
 
 25. **(a) Write down a recursive function to find out number of digits is an integer number (n). Draw the recursion tree when n= 5396.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
+
+26. **(খ) Recursion কি? Recursion পদ্ধতিতে একটি Integer সংখ্যার Factorial নির্ণয়ের জন্য C-Language এ একটি Program লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
+
+27. **Given an integer number the following C program finds the sum of the digits of the number using recursion. You need to complete the recursive function in the following program. So that it does the intended task.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+```c
+#include<stdio.h>
+int someDigits(int num) {
+    if(num==0)
+        return 0;
+    else
+        return num%10+sumDigits(num/10);
+}
+int main() {
+    int n;
+    scanf("%d",&n);
+    printf("%d", sumDigits(n));
+    return 0;
+}
+```

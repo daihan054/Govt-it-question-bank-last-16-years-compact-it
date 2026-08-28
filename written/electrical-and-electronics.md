@@ -42,6 +42,10 @@
 
 8. **(a) Draw and explain the operation of NMOS transistor.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 688]**
 
+## Operational Amplifiers (Op-Amp)
+
+1. **Assuming Ideal Op Amps, Find The Voltage Gain V_o/V_i of the following circuit.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+
 ## Sensor Circuits & Automated Control Systems
 
 1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**

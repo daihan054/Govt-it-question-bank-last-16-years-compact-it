@@ -12,6 +12,8 @@
 
 6. **What do you mean by multi-tenancy in the cloud? Why is it beneficial for cloud service providers?** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 749]**
 
+7. **(ক) Cloud Computing এর সার্ভিসগুলো লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
+
 ## Cloud Storage & Fundamentals
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

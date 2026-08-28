@@ -70,6 +70,8 @@
 
 4. **X+\bar{X}Y = ?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
+5. **(ক) নিম্নলিখিত Boolean Function টি সংক্ষিপ্ত আকারে লিখুন: F(A, B, C, D) = \bar{A}\,\bar{B}\bar{C} + \bar{B}C\bar{D} + \bar{A}\bar{B}C\bar{D} + A\bar{B}\bar{C}** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 773]**
+
 ## Logic Gates & Universal Gates
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -109,6 +111,8 @@
 18. **What is Logic gate? Prove that NAND and NOR gate is Universal gate.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 724]**
 
 19. **Implementation the following two Boolean functions using NAND gate only: (a) F = A + (B' + C)(D' + BE') (b) F = ((A + B) + CD)E** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 731]**
+
+20. **(গ) Universal logic gate কি? 3-input এর একটি Universal logic gate এর Logic symbol এবং Truth Table দেখান।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
 
 ## Combinational Circuits (Adders, Encoders, MUX)
 
@@ -159,6 +163,8 @@
 2. **Difference between combinational and sequential circuits.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
 
 3. **(b) Design a 4-bit ring counter using flip-flops. Write down its working principle using.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 687]**
+
+4. **(খ) Combinational এবং Sequential circuit এর মধ্যে পার্থক্য ডায়াগ্রাম সহকারে লিখুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 773]**
 
 ## Finite State Machines (FSM)
 

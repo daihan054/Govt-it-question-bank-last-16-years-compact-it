@@ -110,6 +110,8 @@
 
 3. **What do you mean by viral video? List three advantages of viral vedio.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
 
+4. **(ক) IR 4.0 বলতে কি বুঝায়? IR 4.0 এর গুরুত্বপূর্ণ উপাদানগুলো লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 766]**
+
 ## Digital Banking & Financial Inclusion
 
 1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**

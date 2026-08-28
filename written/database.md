@@ -461,6 +461,8 @@ ORDER BY average_salary DESC;
 
 12. **Explain the primary key and composite key with respect to database.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 745]**
 
+13. **(খ) Relational Database Design এ Primary Key ও Foreign Key বলতে কি বুঝায়? উদাহরণসহ লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
+
 ## Indexing in DBMS
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -489,6 +491,8 @@ ORDER BY average_salary DESC;
 7. **How can you define the ER model in DBMS?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
 8. **Draw an entity diagram Student database management systemfrom following statement: Student (data); Course (data); Report (data); Registration; Staff (data)** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 759]**
+
+9. **(ক) Entity-Relationship (ER) Diagram কেন ব্যবহার করা হয়? একটি উদাহরণের মাধ্যমে ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
 
 ## Database Connectivity (JDBC)
 
@@ -523,3 +527,5 @@ ORDER BY average_salary DESC;
 2. **Discuss different tools and techniques to develop a Business Intelligence Dashboard for a bank. How can data be captured and aggregated from various sources within the bank to monitor the business performance?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 519]**
 
 3. **Software scenario question- Business Intelligence Model** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
+4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 766]**

@@ -62,6 +62,10 @@
 
 26. **Integration testing of pharmaceutical automation software?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
+27. **(ক) Software এর \alpha-version ও \beta-version কি?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
+
+28. **(গ) Unit testing, Integration testing এবং Beta testing বলতে কি বুঝায়?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
@@ -99,6 +103,8 @@
 4. **You have been given a responsibility to elicit requirements from a customer, who tells you that he is too busy to meet with you. What should you do?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
 
 5. **(ক) Software development এর ক্ষেত্রে কত প্রকার requirements পাওয়া যায়। উদাহরণসহ requirements সমূহ লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
+
+6. **(খ) Software Requirement Specification (SRS) বলতে কি বুঝায়? Software Development এর কোন ধাপে SRS তৈরি করা হয়?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
 
 ## SDLC Phases & Models
 

@@ -195,6 +195,8 @@
 
 12. **What is Digital signature? Explain shortly.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
 
+13. **(খ) Authentication বলতে কি বুঝায়? Two Factor Authenticating কি? উদাহরণসহ ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
+
 ## Security Protocols (SSL/TLS, HTTPS)
 
 1. **What is SSL?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
