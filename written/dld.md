@@ -57,6 +57,8 @@
 
 10. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 798]**
 
+11. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
+
 ## Logic Families (TTL vs CMOS)
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
@@ -124,6 +126,8 @@
 
 21. **What is Universal gate? NAND and NOR gate কে Universal gate বলা হয় কেন?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 827-828]**
 
+22. **Implement X-OR gate using NAND gate. Maximum 4 NAND gate are using.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
+
 ## Combinational Circuits (Adders, Encoders, MUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -167,6 +171,8 @@
 14. **Design a 8\times 1 MUX and explain working procedure.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 720]**
 
 15. **(a) Draw the logic diagram of Half-Adder the truth table of Full-Adder and use half Adder (S) and basic gates to build a Full-Adder.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
+
+16. **Circuit of the following figure uses 4:1 Multiplexer, what is output of the function f?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
 
 ## Sequential Circuits (Latches & Flip-Flops)
 

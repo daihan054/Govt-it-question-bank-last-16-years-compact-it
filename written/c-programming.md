@@ -291,6 +291,15 @@ return 0;
 
 70. **Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 844]**
 
+71. **Pattern this print using C++ program-** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
+```text
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+```
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -651,6 +660,17 @@ int main(){
     scanf("%d %d", &n, &r);
     printf("%d", power(n, r));
     return 0;
+}
+```
+
+24. **Find out program output of f(\text{arr}, 2), f(\text{arr}, 3), f(\text{arr}, 5), f(\text{arr}, 8). \text{arr}[] = [0, 1, 1, 0, 1, 1, 0, 1]** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 861-862]**
+```c
+int f(int *arr, int arrSize) {
+    int r = 0;
+    for (int i = 0; i < arrSize; ++i) {
+        r = r ^ *(arr + i);
+    }
+    return r;
 }
 ```
 

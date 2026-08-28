@@ -135,6 +135,8 @@ int main(int argc, char *argv[]){
 
 25. **(a) Check if the website of ‘TGTDCL’. (b) How to create folder in sub-directory?** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
 
+26. **Write a Linux command to revoke permission from no user but owner from a file “jdcl.txt”.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
@@ -260,6 +262,8 @@ All process arrived at time 0. Lower number has higher priority.
 **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 467]**
 
 15. **Starvation in SJF, Starvation free scheduling algorithm name. (Question not clear)** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 654]**
+
+16. **Consider the processes P1, P2, P3, P4 given in the below table, arrives for execution in the same order, with Arrival Time 0, and given Burst Time, let's find the average waiting time using the FCFS scheduling algorithm.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 856]**
 
 ## Memory Management & Paging
 
@@ -391,6 +395,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 14. **Name and define characteristics properties of the Deadlock situation in a computer system.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
 
 15. **(b) What are the conditions for deadlock situations? Explain briefly.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 688]**
+
+16. **Banker's Algorithm: 5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances). Snapshot at time T_0. The content of the matrix. Need is defined to be \text{Max} - \text{Allocation}. Check that \text{Request} \le \text{Available}. Executing safety algorithm shows that sequence \langle P_1, P_3, P_4, P_0, P_2 \rangle satisfies safety requirement.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 855]**
 
 ## File Systems & Disk Management
 

@@ -127,6 +127,8 @@ public class main{
 
 36. **Explain method overloading and Method overriding with example.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 850-851]**
 
+37. **OOP problem (Inheritance related) [হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**

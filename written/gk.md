@@ -166,6 +166,8 @@
 
 83. **General Knowledge** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]**
 
+84. **General knowledge (i) Length of Metro rail (ii) Satellite-1 (iii) NFO (iv) GI register item** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]

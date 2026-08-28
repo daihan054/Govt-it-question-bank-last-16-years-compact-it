@@ -42,6 +42,8 @@
 
 17. **Microprocessor কি? এর আবিষ্কারে তথ্য ও যোগাযোগ প্রযুক্তিতে কি ধরনের অগ্রগতি সাধিত হয়েছে ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 827]**
 
+18. **8-bit microprocessor and 16-bit microprocessor write the data and address widths?** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -105,6 +107,8 @@
 7. **What is the use of cache memory?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
 8. **Some of the factors determine the performance of a computer system. Cache memory is one of them. Why cache memory is one of the factors to determine the performance of a computer system?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807]**
+
+9. **Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit. The average read access time in nanoseconds is ______.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
 
 ## Memory Hierarchy & Storage
 

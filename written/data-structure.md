@@ -140,6 +140,8 @@ Output: Not Balanced
 
 4. **Write down the properties of Max heap. Also write down the heapsort algorithm.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 686]**
 
+5. **Given an array of 6 elements: \{15, 19, 10, 7, 17, 16\}. Draw heap tree and again draw the tree after deletion of element 7 from this tree.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 863]**
+
 ## Hashing & Hash Tables
 
 1. **(b) What is hash table? What are the advantages of using hash table?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
@@ -151,3 +153,5 @@ Output: Not Balanced
 4. **Separate chaining hash function math.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 663]**
 
 5. **You are giving to store a set of objects and you want to use a data structure. Where the expected running time to search an item is O(1). Which data structure is suitable to serve your purpose?** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 815]**
+
+6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**

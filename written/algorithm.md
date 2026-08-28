@@ -169,6 +169,8 @@ for i in N:
 
 12. **Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG. Now write a C/C++ Program with the following Input and Output. Input: 5 2, 5 0, 4 0, 4 1, 2 3, 3 1 Output: 5 4 2 3 1 0** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 831-833]**
 
+13. **True false (DFS/ Directed graph related) [হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]**
+
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**

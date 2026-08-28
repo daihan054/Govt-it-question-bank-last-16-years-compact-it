@@ -44,6 +44,8 @@
 
 22. **Difference between private key and public key.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
 
+23. **Write two symmetric key algorithm name.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -179,6 +181,8 @@
 
 12. **What is DMZ in data center? Describe using diagram? Write the network devices in this system?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 756]**
 
+13. **Difference between blacklisting and whitelisting. Which is more secure and why?** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
+
 ## VPN & Tunneling Protocols (IPsec, SSL VPN)
 
 1. **What is the purpose of VPN used in computer security?** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
@@ -280,7 +284,7 @@
 
 14. **Write down the counter measure of SQL injection attack.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 753]**
 
-15. **What is SQL Injection? How to Prevent against SQL Injection Attacks?** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853-854]**
+15. **What is SQL Injection? How to Prevent against SQL Injection Attacks?** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853-854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
 
 ## Buffer Overflow & Software Vulnerabilities
 

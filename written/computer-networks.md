@@ -357,6 +357,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 9. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
 
+10. **Two channels, one with a bit rate of 190kbps and another with a bit rate 180 kbps are to be multiplexed using pulse stuffing TDM with no synchronization bits. Answer the following questions: (a) What is the size of a frame in bits? (b) What is the frame rate? (c) What is the duration of a frame? (d) What is the date rate?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+
 ## Subnetting & IP Addressing
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
@@ -537,6 +539,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 71. **A network address is given 172.18.10.0/23, divide this network address into 4 subnets and find every subnet address, start address, subnet mask, broadcast address etc.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843-844]**
 
+72. **A network address is given 172.168.0.0/28, divide this network address into 4 subnets and find every subnet address, start address, subnet mask, broadcast address etc.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 856]**
+
+73. **In a “Class A” network total 20 subnets are needed with maximum 260 hosts per subnets. Can 255.255.255.0 subnet mask be used in this?** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -652,6 +658,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 15. **What is Autonomous system? What is the difference between Link state routing protocol and Distance vector routing protocol?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 838-839]**
 
 16. **Cost calculation of EIGRP formula.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839]**
+
+17. **Given a totology of distance vector routing. Find the table of each node for the 1^{\text{st}} route.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859-860]**
 
 ## High Availability & Redundancy Protocols (VRRP, HSRP)
 

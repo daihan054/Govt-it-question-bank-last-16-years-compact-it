@@ -220,6 +220,8 @@
    * **(c) Duplicate Code**
    * **(d) Shotgun surgery.**
 
+2. **What is reverse engineering and forward engineering?** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 860-861]**
+
 ## Software Project Management & Organization
 
 1. **সংগঠনিক নির্দেশকগুলো কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

@@ -58,6 +58,8 @@
 
 1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
 
+2. **Which signal a sensor could to send the signal to microcontroller if the sensor finds any gas leakage point?** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 861]**
+
 ## Circuit Theorems (Thevenin, Norton, Superposition)
 
 1. **Find current across 2 \Omega resistor using Thevenin Theorem:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 417]**

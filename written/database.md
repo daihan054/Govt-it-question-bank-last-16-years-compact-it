@@ -332,6 +332,8 @@ From t;
 
 53. **Write SQL command from the following tables. Employee (ename, street, city) Works (ename, cname, salary, joindate) Company (cname, city) Manages (ename, mname) (a) Find name, street, city who work for First Corporation Bank and earn more than 30000 (b) Find name of all employees, who live in the same city and company for which they work. (c) Give all employees of First Century Bank 10 percent salary raise (d) Find the company with payroll less than 100000.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 835-836]**
 
+54. **DB schema: book (book_id, book_title, book_type, publication_name) author (book_name, author_name) publicher (publication_name, publication_address, est_year) copies (book_id, branch_name, no_of-copies) [database query লিখতে আসছিল]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -351,6 +353,8 @@ From t;
 8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
 
 9. **What do you mean by Rollback and Roll forward?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 682]**
+
+10. **Describe ACID properties of DBMS.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 860]**
 
 ## Normalization & Database Design
 
@@ -410,6 +414,8 @@ From t;
 3. **(c) Define dynamic SQL and trigger with examples.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
 
 4. **(b) Describe the application of trigger in database.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
+
+5. **Suppose, ‘Employee’ table (emp_id, emp_name, dept_id, salary) and ‘Department’ table (dept_id, dept_name, increment_dept). Create a tigger to increment the salary of the employee by 10% whose salary is above 30000.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
 
 ## Database Backup & Disaster Recovery
 
@@ -545,6 +551,8 @@ From t;
 12. **Draw ER diagram from a story.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 837]**
 
 13. **Draw E-R diagram of hospital management system. Hospital name “SKY Hospital Ltd.”.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
+
+14. **Draw E-R diagram of Banking Management system. Bank name “SKY Bank Ltd.”.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
 
 ## Database Connectivity (JDBC)
 
