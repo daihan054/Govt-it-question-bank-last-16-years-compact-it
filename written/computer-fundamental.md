@@ -18,6 +18,8 @@
 
 9. **MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 867]**
 
+10. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** **(41th BCS Written Exam: 2021) [compact it 881]**
+
 ## User Interfaces (CLI vs GUI)
 
 1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -159,6 +161,8 @@
 7. **Copyright আইন কি? এর প্রয়োজনীয়তা ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
 
 8. **Comparison between MIS and DSS. What is the roles of MIS in Banking sector?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 872]**
+
+9. **E-commerce and F-commerce -এর মধ্যে পার্থক্য লিখুন। নারী গোষ্ঠী দ্বারা পরিচালিত F-Commerce -এর সামাজিক প্রভাব সম্বন্ধে লিখুন।** **(41th BCS Written Exam: 2021) [compact it 883]**
 
 ## Digital Banking & Financial Inclusion
 

@@ -521,6 +521,8 @@ From t;
 
 16. **What is Primary key, Unique key and Forgein key.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
+17. **Database Management System (DBMS) বলতে কী বোঝেন? Relational database -এ Primary key এবং Foreign key -এর ভূমিকা উদাহরণসহ সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 882]**
+
 ## Indexing in DBMS
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -561,6 +563,10 @@ From t;
 13. **Draw E-R diagram of hospital management system. Hospital name “SKY Hospital Ltd.”.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
 
 14. **Draw E-R diagram of Banking Management system. Bank name “SKY Bank Ltd.”.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+
+15. **Draw ER diagram for details of gas company data described. Bakharbad gas distribution Compeny has two types of customers i.e General and Industrial. General customer has customer ID, name, DOB, age (calculated from DOB). Industrial customer has all attributes of general customer with TAX number additionally. Meter has model and producer name. Every customer has one meter.** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 877]**
+
+16. **Draw the ER diagram where their relation named TEAM, PLAYER, MATCH** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 880]**
 
 ## Database Connectivity (JDBC)
 

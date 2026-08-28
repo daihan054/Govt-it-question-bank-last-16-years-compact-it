@@ -168,6 +168,8 @@
 
 84. **General knowledge (i) Length of Metro rail (ii) Satellite-1 (iii) NFO (iv) GI register item** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]**
 
+85. **বঙ্গবন্ধু-১' স্যাটেলাইট সম্বন্ধে সংক্ষিপ্ত বর্ণনা দিন?** **(41th BCS Written Exam: 2021) [compact it 882-883]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]

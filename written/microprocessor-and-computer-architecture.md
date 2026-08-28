@@ -48,6 +48,8 @@
 
 20. **Difference between Microprocessor and Microcontroller.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870]**
 
+21. **Central Processing Unit (CPU) -এর প্রধান কাজ কী? একটি চিত্রের সাহায্যে CPU-এর বিভিন্ন অংশ বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 884]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -115,6 +117,8 @@
 8. **Some of the factors determine the performance of a computer system. Cache memory is one of them. Why cache memory is one of the factors to determine the performance of a computer system?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807]**
 
 9. **Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit. The average read access time in nanoseconds is ______.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
+
+10. **Cache memory কী কাজে ব্যবহৃত হয়? Compiler and Interpreater -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 880-881]**
 
 ## Memory Hierarchy & Storage
 

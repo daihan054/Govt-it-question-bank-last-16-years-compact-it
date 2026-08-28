@@ -300,6 +300,8 @@ return 0;
 1
 ```
 
+72. **(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the sum of main diagonal elements of the matrix.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 884]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -689,6 +691,49 @@ int main() {
     int result;
     result = recursion(5);
     printf("%d\n", result);
+    return 0;
+}
+```
+
+26. **Find the output of following program:** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]**
+```c
+int i, j, p, sum;
+sum=0;
+for(i=-1,p=0; i<=10; i=i+2) {
+    p=i*i;
+    if(i>5)
+        break;
+    sum=sum+ (i+p);
+    printf("i=%d, p=%d, sum=%d\n",i, p, sum);
+}
+printf("\n Outsite Loop, i=%d, p=%d, sum=%d\n", i, p, sum);
+return 0;
+```
+
+27. **Output of the following program:** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 878-879]**
+```c
+#include<stdio.h>
+void func(int arr[], int n) {
+    int i,j;
+    for(i=0; i<n; i++) {
+        for(j=0; j<n-i-1; j++) {
+            if(arr[j]>arr[j+1]) {
+                int temp;
+                temp=arr[j];
+                arr[j]= arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+int main () {
+    int arr[]={39,22,11,34};
+    int n,i;
+    n=sizeof(arr)/sizeof(arr[0]);
+    func(arr,n);
+    for(i=0;i<n;i++) {
+        printf("%d " ,arr[i]);
+    }
     return 0;
 }
 ```

@@ -116,6 +116,8 @@
 
 7. **Assume that you are going to implement an ecommerce site of “XYZ” company. The CEO of the company is Mr. X. You have to identify the following: (i) Stakeholder (ii) Functional requirements (iii) Non-functional requirements (iv) Deployment requirements** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
+8. **Software Requirement Specification (SRS) বলতে কী বোঝেন? Software development -এর কোন স্তরে SRS প্রস্তুত করা হয়?** **(41th BCS Written Exam: 2021) [compact it 881]**
+
 ## SDLC Phases & Models
 
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
@@ -276,3 +278,5 @@
 ## Open Source Software & Licensing
 
 1. **Write down the advantages and disadvantages of Open source software with example.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
+
+2. **Open source এবং Proprietary Software -এর মধ্যে পার্থক্য লিখুন। একটি Open source এবং একটি Proprietary Operating system এর উদাহরণ দিন।** **(41th BCS Written Exam: 2021) [compact it 881-882]**

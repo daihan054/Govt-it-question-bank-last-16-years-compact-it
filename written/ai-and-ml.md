@@ -62,6 +62,8 @@
 
 6. **Write LSTM gates name in AI.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 858]**
 
+7. **Draw the single layer of ANN.** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 880]**
+
 ## Association Rule Learning (Market Basket Analysis)
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**

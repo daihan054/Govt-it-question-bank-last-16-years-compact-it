@@ -59,6 +59,8 @@
 
 11. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
 
+12. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 879]**
+
 ## Logic Families (TTL vs CMOS)
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
@@ -85,6 +87,8 @@
 6. **(b) Use Algebraic manipulation to convert the following equation to sum-of-product form: y(z + \bar{w}) + x(\bar{z} + \bar{y})\,\bar{w} + (zw)(\overline{xy})** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
 
 7. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
+
+8. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 876]**
 
 ## Logic Gates & Universal Gates
 

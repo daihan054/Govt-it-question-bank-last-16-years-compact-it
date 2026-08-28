@@ -60,6 +60,8 @@
 
 6. **What is CIA Triad?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
 
+7. **Information System কী? Information Syetem -এর সুরক্ষায় প্রয়োজনীয় পদক্ষেপ সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 883-884]**
+
 ## Critical Information Infrastructure (CII) & Cyber Governance
 
 1. What is CII? How many CII organizations? Name 10 CII organization name. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -89,6 +91,8 @@
 10. **‘Trojan Horse’ এর একটি বৈশিষ্ট্য লিখুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
 
 11. **Explain: Worm, Botnet, Ransomware and Trojan horse.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
+
+12. **Malware বলতে কী বুঝানো হয়? উদাহরণসহ সংক্ষেপে বর্ণনা করুন।** **(41th BCS Written Exam: 2021) [compact it 883]**
 
 ## Email & Messaging Security (Spam, Phishing)
 

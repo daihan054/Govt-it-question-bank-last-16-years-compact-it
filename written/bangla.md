@@ -38,6 +38,8 @@
 
 19. **Write a composition: “ব্যাংকিং খাতে সুশাসনের প্রয়োজনীয়তা”** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]**
 
+20. **Write a Composition in Bangla: কাজের সঙ্গে শিক্ষার অমিল- শ্রমশক্তি সর্বোচ্চ ব্যবহারের অন্তরায়।** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -109,7 +111,7 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 8. **Translation English to Bangla** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
 
-9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]**
+9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]**
 
 10. **Translation [English to Bangla]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
    **Translate the following passage into Bangla:**

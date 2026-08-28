@@ -26,6 +26,11 @@
 
 13. **Short Question: a) What are the protocol for connectionless and connection oriented? b) Why UTP cable are twisted? c) What are the main requirement of optical fiber splicing? d) Why use subnet mask? e) What the major difference between multicast and broadcast?** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 816]**
 
+14. **Name of the Following figure:** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 880]**
+   Broadcast
+   Unicast
+   Multicast
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -185,6 +190,8 @@
 
 36. **What is OSI and TCP/IP model and briefly explain?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870-872]**
 
+37. **TCP/IP protocol suite -এর বিভিন্ন স্তরের নাম লিখুন? HTTPs কী? এর ব্যবহারের প্রয়োজনীয়তা সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 882]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -224,7 +231,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 4. **What is the deference between TCP and UDP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
 
-5. **3-way handshake protocol for TCP connection using diagram.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 403]**
+5. **3-way handshake protocol for TCP connection using diagram.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 403]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 876-877]**
 
 6. **Write a TCP/UDP used service name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
@@ -551,6 +558,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 74. **Find Network address, Valid Host, Subnet mask and Broadcast address from 172.16.128.120/25.** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
 
+75. **What is the range of class C IPv4 address? Suppose, Class C network has four subnets. How many usable PC needed each subnet?** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875-876]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -696,6 +705,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 10. **(iii) Router and Gateway এর ফাংশন লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
 
 11. **Write down the difference between Hub and Switch.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
+
+12. **Wi-Fi access point বলতে কী বুঝানো হয়? Router and Switch -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 883]**
 
 ## VLANs & Subnetting Comparison
 

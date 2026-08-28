@@ -115,6 +115,8 @@ for i in N:
 
 6. **Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are the difference between there two techniques?** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 813]**
 
+7. **Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 879-880]**
+
 ## Divide and Conquer & Matrix Multiplication
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 378]**
@@ -170,6 +172,8 @@ for i in N:
 12. **Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG. Now write a C/C++ Program with the following Input and Output. Input: 5 2, 5 0, 4 0, 4 1, 2 3, 3 1 Output: 5 4 2 3 1 0** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 831-833]**
 
 13. **True false (DFS/ Directed graph related) [হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]**
+
+14. **Draw BFS and DFS tree starting node A-** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 878]**
 
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 
