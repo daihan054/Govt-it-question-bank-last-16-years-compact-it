@@ -6,6 +6,8 @@
 
 3. **What is the difference between System Software and Application Software?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
 
+4. **Difference between High level languages and low level language with some example?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 739]**
+
 ## User Interfaces (CLI vs GUI)
 
 1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -65,6 +67,12 @@
 23. **Write short answer on the following: (a) Plaintext (b) HTTP (c) Gateway used in \underline{\phantom{\text{Network}}} layer. (d) VIRUS full form (e) Who is the father of Computer? (f) What is Cyber security? (g) What is Malware? (h) Write the IEEE standards WiFi and WiMax. (i) Write two HTML empty tag.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 724]**
 
 24. **Write full form: DHCP, POP3, VSAT and LCD.** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 728]**
+
+25. **বিশ্বের সবচেয়ে শক্তিশালী সুপার কম্পিউটারের নাম কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+26. **“Copy and Paste” এর উদ্ভাবক কে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+27. **Difference between Data and Information.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 739]**
 
 ## Hardware Components & BIOS (CMOS Battery)
 

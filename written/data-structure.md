@@ -28,6 +28,8 @@
 
 12. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 706]**
 
+13. **Difference between LIFO and FIFO in data structure.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 740]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]

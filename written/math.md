@@ -18,6 +18,14 @@
 
 9. **9+7+5+.......ধারাটির যোগফল -১৪৪ হলে, n = কত?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
+10. **পিতার বর্তমান বয়স পুত্রের বয়সের ৩ গুণ। ৫ বছর আগে পিতার বয়স পুত্রের বয়সের ৪ গুণ ছিল। পিতা ও পুত্রের বর্তমান বয়স কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+11. **দুইটি সংখ্যার যোগফল ১১২০ এবং বিয়োগফল বড় সংখ্যাটির ২/৩ অংশ। সংখ্যা দুইটি কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+12. **\log_3 \frac{1}{81} এর মান কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+13. **x + y = 7 এবং xy = 10 হলে এর মান কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
 ## Permutations & Combinations
 
 1. **CARBON word permutations that vowel must occupy odd positions?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
@@ -58,6 +66,10 @@
 
 7. **The percentage profit earned by selling an artical for Tk. 1920 is equal to the percentage loss incurred by selling the same artical for Tk. 1280. At what price should the artical be sold to make 25\% profit?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 447]**
 
+8. **আগে যে টাকায় ৭ লিটার সয়াবিন তেল পাওয়া যেত, এখন সে টাকায় ৫ লিটার সয়াবিন তেল পাওয়া যায়। সয়াবিন তেলের দাম শতকরা কত ভাগ বৃদ্ধি পেল?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+9. **০.০২৫ এর শতকরা ১ অংশ কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
 ## Ratio, Proportion & Mixtures
 
 1. **Math : Gold purity** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
@@ -65,6 +77,8 @@
 2. **In the group of boys and girls, 4 of girls and 13 of boys are 12 years younger. If the members are girls from total members then what would be the strongest group between 12 years younger or more?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
 
 3. **In the three jars, milk and water are mixed with the ratio 1:2, 2:3, and 3:4. If all are mixed into one jar, what will be the ratio of milk and water?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+4. **১২ জন লোক একটি কাজ ৯ দিনে করতে পারে। একই হারে কাজ করলে ১৮ জনে কাজটি কত দিনে করতে পারবে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 ## Speed, Time, Distance & Boats
 
@@ -106,6 +120,8 @@
 
 7. **একটি সমদ্বিবাহু সমকোণী ত্রিভুজের অতিভুজ ১২ সেমি হলে, ত্রিভুজটির ক্ষেত্রফল কত বর্গ সেমি?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
+8. **বৃত্তস্থ চতুর্ভুজের একটি কোণ ৮০° হলে তার বিপরীত কোণের মান কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
 ## Analytical Ability & Logical Reasoning
 
 1. **A, B, C, D, E, F, G are sitting in a circular arrangement. Each of them wears caps of either red, blue, or green color. Conditions are (i) D sits two seats right of A. A is wearing green cap (ii) C sits two seats left of B. C is wearing blue cap (iii) E sits in between F and G. E is wearing red cap (iv) No two person sitting next to each other can have same color cap Find the cap color of everyone.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
@@ -125,6 +141,10 @@
 3. **What is the largest two-digit natural number (a part of the number system, which includes all positive integers from 1 to infinity)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
 4. **If the average of seven consecutive even numbers is 62, then the one-fourth of twice of total of first and sixth number is?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+5. **৯৯ + ৯৮ + ৯৭ + ------+৪০ = কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+6. **কোন ক্ষুদ্রতম সংখ্যাকে ৩, ৫ এবং ৬ দ্বারা ভাগ করলে ভাগশেষ ১ হবে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 ## Discrete Mathematics & Recurrence Relations
 

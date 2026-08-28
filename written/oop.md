@@ -139,6 +139,10 @@ public:
 
 1. **(b) What is exception? Explain how it can be used for debugging a program.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
 
+2. **What is difference between exception and error in Java?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 737]**
+
+3. **What is exception handling? Write with an example.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
+
 ## Java Programming & Methods
 
 1. **Write a Java Code which return a value.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1334]**
@@ -167,3 +171,5 @@ Public class class B extends class A {
 **Mention which of the methods overload, override and hied supper class methods. What about the remaining method?** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 437]**
 
 6. **অথবা, (ক) ‘Static’ কীওয়ার্ডটি ব্যাখ্যা করার জন্যে Static Variable এবং Static Method ব্যবহার করে একটি প্রোগ্রাম লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 620]**
+
+7. **Write a java program to counting the vowel and consonant into a given strings.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**

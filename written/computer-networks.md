@@ -38,6 +38,8 @@
 
 9. **(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 629]**
 
+10. **What happens when you use cables longer than the prescribed length in a network?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 732]**
+
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
 1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
@@ -57,6 +59,8 @@
 6. **Define the attenuation and dispersion in an optical fiber. Draw the block diagram of a long-haul optical fiber communication system.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
 
 7. **Define the principle of data transmission through the fiber optic cable.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
+8. **How can you do fix the signal attenuation problems?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 734]**
 
 ## Network Topologies
 
@@ -473,6 +477,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 65. **What is Public and Private IP?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 728]**
 
+66. **A network IP address is 172.16.236.92/27. Find out the: (a) Subnet mask (b) Network Address (c) Broadcast Address** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 731]**
+
+67. **Given IP address 172.3.16.156/23 and find out the following answer: (i) Network address (ii) Subnet mask (iii) Number of host** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -699,6 +707,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 2. **Difference between AM and FM. (a) Which is prefer for long distance communication? (b) Which has low distortion? (c) Which has low interference?** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
 
+3. **A sinusoidal modulating waveform of amplitude 5V and frequency of 2 kHz is applied to FM generator, which has a frequency sensitivity of 40Hz/volt. Calculate the frequency deviation, modulation index and bandwidth.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 734]**
+
 ## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)
 
 1. **What are the limitaions of CDMA?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
@@ -728,3 +738,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 5. **How can you define IoT? What are the basic components of IoT?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 680]**
 
 6. **(a) Write down the features of 4G wireless networks.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
+
+7. **5G প্রথম কত সালে ও কোথায় চালু হয়?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**

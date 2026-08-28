@@ -153,11 +153,15 @@
 
 10. **DMZ and firewall placement in a diagram. (Approximate)** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
 
+11. **What is Blacklist and Whitelist? Write down the difference between Black list and White list.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 737]**
+
 ## VPN & Tunneling Protocols (IPsec, SSL VPN)
 
 1. **What is the purpose of VPN used in computer security?** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
 
 2. **In which layer IPsec works?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+3. **What is VPN? How it is working.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 732]**
 
 ## Authentication & Access Control
 
@@ -225,6 +229,10 @@
 10. **Write the difference types of Web application attacks?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
 
 11. **Write two differences between SQL Injection and cross site scripting (XSS).** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
+
+12. **What is SQL injection? How to prevent it?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
+
+13. **What is Cross site script XSS and how can fix it?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
 
 ## Buffer Overflow & Software Vulnerabilities
 

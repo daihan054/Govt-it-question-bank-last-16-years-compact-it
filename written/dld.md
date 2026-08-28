@@ -110,6 +110,8 @@
 
 18. **What is Logic gate? Prove that NAND and NOR gate is Universal gate.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 724]**
 
+19. **Implementation the following two Boolean functions using NAND gate only: (a) F = A + (B' + C)(D' + BE') (b) F = ((A + B) + CD)E** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 731]**
+
 ## Combinational Circuits (Adders, Encoders, MUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

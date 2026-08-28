@@ -154,6 +154,14 @@
 
 77. **৬. (ক) বঙ্গবন্ধু কত সালে জাতিসংঘে বাংলায় ভাষণ দিয়েছেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
+78. **কোন তারিখে মেহেরপুর জেলার সীমান্তবর্তী স্থান বৈদ্যনাথ তলায় বর্তমান মুজিবনগরে এক অনাড়ম্বর অনুষ্ঠানে আনুষ্ঠানিকভাবে স্বাধীনতার ঘোষণাপত্র পাঠ করা হয়?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+
+79. **বঙ্গবন্ধু স্যাটেলাইট-১ কোন ধরণের উপগ্রহ?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+
+80. **“বাংলাদেশ ও বঙ্গবন্ধু” গ্রন্থটির রচয়িতা কে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+
+81. **মহান মুক্তিযুদ্ধের প্রথম স্মারক ভাস্কর্যের নাম কি?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -275,6 +283,12 @@
 52. **(খ) জাতিসংঘের প্রথম মহাসচিব কে ছিলেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
 53. **(গ) জাতিসংঘের সর্বশেষ সদস্য রাষ্ট্রের নাম কি?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+54. **সুয়েজ খাল কোন ২টি সাগরকে যুক্ত করেছে।** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+
+55. **আয়তন ও জনসংখ্যায় এশিয়া মহাদেশের ক্ষুদ্রতম দেশ কোনটি?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+
+56. **একজন বিখ্যাত ব্যক্তির নাম লিখুন যিনি কৃষিতে গবেষণা করে শান্তিতে নোবেল পুরষ্কার জয় লাভ করেন?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
 ## Everyday Science & Environment
 

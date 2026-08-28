@@ -22,6 +22,8 @@
 
 11. **Which Operating system is considered as an Open source?** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
 
+12. **What is kernel? Write down the objectives of kernel.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 740]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -295,6 +297,8 @@ All process arrived at time 0. Lower number has higher priority.
 8. **(c) Define paging and trashing in the context of OS.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
 
 9. **What is page fault in computing systems? What does it occur?** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
+
+10. **Write short note on Virtual Memory and Cache memory.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
 
 ## Process Management & Process States
 

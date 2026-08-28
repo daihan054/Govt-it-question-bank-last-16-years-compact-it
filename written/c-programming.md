@@ -269,6 +269,8 @@ return 0;
 
 60. **Write a program to find this is Leap year or not, using function.** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 729]**
 
+61. **Write a C program using array, here N is the number of total students. Take the input and find the average marks. Find out the students who got the above marks or low marks according to average marks.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 732]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -316,6 +318,8 @@ return 0;
 1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
 
 2. **(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
+
+3. **Describe Dynamic memory allocation in programming in C?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
 
 ## Operators, Data Types & Language Concepts
 
@@ -509,6 +513,32 @@ void main() {
     j=a[1]++;
     m=a[i++];
     printf("%d, %d, %d",i,j,m);
+}
+```
+
+17. **What is the output of the following code?** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 731]**
+```c
+#include <stdio.h>
+int isLeapYear(int year);
+int main() {
+    int a = 1;
+    printf("%d %d %d", ++a, a, a++);
+    return 0;
+}
+```
+
+18. **Output programs:** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
+```c
+#include <stdio.h>
+int fun(int n) {
+    if (n == 4)
+        return n;
+    else
+        return 2 * fun(n + 1);
+}
+int main() {
+    printf("%d", fun(2));
+    return 0;
 }
 ```
 

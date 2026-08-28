@@ -139,6 +139,8 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 3. **এক কথায় প্রকাশ করুন: অক্ষির অগোচরে, ইতিহাস রচনা করেন যিনি, উপকারীর অপকার করে যে, বিজয় করার ইচ্ছা, দিনের আলো ও সন্ধ্যার মিলনের সময়।** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
+4. **এক কথায় প্রকাশ: (ক) অল্প অল্প ব্যথা। (খ) যা পূর্বে কখনো দেখা যায়নি। (গ) যার সর্বস্ব হারিয়ে গেছে। (ঘ) পরকে পালন করে যে।** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+
 ## বাংলা ব্যাকরণ ও সাহিত্য
 
 1. **নিচের প্রশ্নগুলোর উত্তর লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -210,3 +212,29 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 28. **৩. (ক) অনুসর্গ ও উপসর্গের পাঁচটি পার্থক্য লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
 29. **(খ) ব্যাসবাক্যসহ সমাস নির্ণয় করুন : ধর্মঘট, দশানন, প্রভাত, মোহনিদ্রা, সাত-সতের** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
+
+30. **অর্থসহ বাক্য লিখুন: (ক) উনপাজুরে (খ) আমড়াগাছি (গ) হাতির পাঁচ পা দেখা (ঘ) উনপঞ্চাশ বায়ু** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+
+31. **৩টি করে সমার্থক শব্দ লিখুন। (ক) কূল (খ) জল** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+
+32. **‘আহবান’ এর প্রকৃত উচ্চারণ লিখুন।** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+33. **‘মেধাবী’ শব্দটির সঠিক প্রকৃতি ও প্রত্যয় লিখুন।** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+34. **‘তিমির’ শব্দের বিপরীত শব্দ কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+35. **“তুমি অধম তাই বলিয়া আমি উত্তম হইবনা কেন? -প্রবাদটির রচয়িতা কে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+36. **‘পুষ্প’ শব্দের বহুবচন লিখুন?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+37. **‘রবীন্দ্র’-এর সন্ধিবিচ্ছেদ লিখুন।** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+38. **বাংলা ভাষার কোন প্রকার শব্দের মূল নির্ধারণ করা যায় না।** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+39. **বাংলা সাহিত্যে চলিত রীতির প্রবর্তক কে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+40. **“এ এক বিরাট সত্য” - বাক্যটিতে ‘সত্য’ শব্দটি কোন পদ?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+41. **‘বীণাপাণি’ সমস্ত শব্দটির ব্যাসবাক্যসহ সমাস নির্ণয় করুন। ‘পাণি’ শব্দটির অর্থ কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+42. **‘Null and void’ - এর বাংলা পরিভাষা কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**

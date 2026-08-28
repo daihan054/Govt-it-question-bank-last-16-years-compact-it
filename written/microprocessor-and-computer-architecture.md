@@ -42,6 +42,8 @@
 
 2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
 
+3. **What is Hyper threading? What is the use of it?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
+
 ## 8085 Microprocessor & Edge Computing
 
 1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।

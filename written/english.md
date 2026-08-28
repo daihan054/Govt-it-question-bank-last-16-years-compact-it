@@ -44,6 +44,8 @@
 
 21. **Write an essay on safe Environment/ [Hints : Introduction – relation between life and environment – actions taken by the government to protect environment – individual actions to ensure safe environment – conclusion]** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
+22. **Write brief paragraph on “Patience is the mother of success.”** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -151,11 +153,25 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 14. **Correct the following sentence: (a) He is very popular among the villagers. (b) My father was died in 1995 (c) Give me a hot cup of tea. (d) Rifat will visit us recently. (e) My best friend had left this town last Sunday.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
+15. **Fill in the gap with appropriate preposition: A Citizen enjoys a lot of rights in times of peace. But sometimes he has to give (a) _____ some of his rights and privileges voluntarily in order (b) _____ keep the independence of his country secure. When his country is (c) _____ war his only duty is to switch (d) _____ all his efforts to the defense of his country.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+
+16. **I had a talk with him. Write the name of 'parts of speech' of the underlined word.** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+17. **Fill in the blanks with appropriate phrase; “He refused to attend the meeting _____ his illness.** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+18. **Fill in the blank: I count _____ your help.** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+19. **Write the passive voice of “Did you do the sum?”** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
 ## English Vocabulary & Antonyms
 
 1. **What is the Opposite word of Transparent?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
 
 2. **Antonym of “fantasy”:** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+3. **When the writer uses the word “prosperous” to describe the voyage, what does he mean?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+4. **What 2 synonyms of the word “Accordingly”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 ## Idioms & Phrases
 
@@ -166,6 +182,16 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 3. **অর্থসহ বাক্য রচনা করুন: A Black Sheep, Crocodile tears, Straw Vote, Bed of roses, Hard and fast.** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
 4. **Make sentences with the following: (a) Play fast and loose. (b) A piece of cake. (c) Beat around the bush. (d) Back against the wall. (e) Eat like a horse.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+5. **Make sentence: (a) A dark horse (b) Ever and anon.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+
+6. **“Run with the hare and hunt with the hounds: - কথাটির বাংলা প্রবাদ কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+7. **What is the meaning of the phrase “Carry the day”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+## English Literature & Authors
+
+1. **Who is the writer of “Gulliver's Travels”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
 
 ## Translation
 
@@ -203,3 +229,5 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 14. **বাংলা থেকে ইংরেজিতে অনুবাদ।** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
 
 15. **ইংরেজিতে অনুবাদ করুন: অভাবে স্বভাব নষ্ট, তেল এর চেয়ে পানি ভারী, তুমি আমাকে কেন এড়িয়ে চলছো?, তিনি এতোক্ষণে ঢাকায় পৌঁছে থাকবেন, আমি তাকে উপহাস করিনি।** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+16. **Translate into English: (a) আমি যদি পরীক্ষায় প্রথম হতাম (b) পাপের ধন প্রায়শ্চিত্তে যায়। (c) আয় বুঝে ব্যয় কর। (d) যেমন বাপ, তেমন ব্যাটা।** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
