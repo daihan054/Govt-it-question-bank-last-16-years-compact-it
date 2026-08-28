@@ -80,6 +80,24 @@
    গ. উড্রো উইলসন
    ঘ. জন এফ কেনেডি
 
+6. **Who are the Permanent members of the United Nations Security Council?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) China, Germany, Russia, United Kingdom, and United States
+   b) China, France, Japan, United Kingdom, and United States
+   c) China, France, Russia, United Kingdom, and United States
+   d) China, France, Russia, Germany, and United States
+
+7. **Who is the writer of "On Liberty"?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) Thomas Hobbes
+   b) John Stuart Mill
+   c) Jean-Jacques Rousseau
+   d) John Locke
+
+8. **How many members of NATO?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) 40
+   b) 32
+   c) 30
+   d) 35
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -172,6 +190,30 @@
    c) ব্রাহ্মণবাড়িয়া
    d) কিশোরগঞ্জ
 
+16. **Which one of the following is not a part of the local government in Bangladesh?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) Union Parishad
+   b) Upazila Parishad
+   c) Zila Parishad
+   d) National Parliament
+
+17. **What is the highest temperature ever recorded in Bangladesh?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) 42.3°C
+   b) 43.2°C
+   c) 44.5°C
+   d) 45.1°C
+
+18. **Who received the Ekushey Padak 2024 in Social Service in Bangladesh?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) Md Ziaul Haque and Rafique Ahmed
+   b) Jalal Uddin Khan and Kalyani Ghosh
+   c) Muhammad Samad and Lutfor Rahman Riton
+   d) Shibli Mohammad and Dolly Johur
+
+19. **What is Bangladesh's ranking as a remittance recipient globally?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) 5^{th}
+   b) 7^{th}
+   c) 8^{th}
+   d) 10^{th}
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -203,3 +245,11 @@
    খ. মালদ্বীপ
    গ. ফিলিপাইন
    ঘ. জাপান
+
+## Sports
+
+1. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) Michael Phelps
+   b) Usain Bolt
+   c) Simone Biles
+   d) Larisa Latynina

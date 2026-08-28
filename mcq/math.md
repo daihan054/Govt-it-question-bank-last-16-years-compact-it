@@ -74,6 +74,12 @@
    c) n^3
    d) \frac{n^2}{2}
 
+4. **1^2 + 2^2 + 3^2 + ................ + 7^2 ধারাটির সমষ্টি কত?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 9]**
+   a) \frac{n(n+1)}{2}
+   b) \left\{\frac{n(n+1)}{2}\right\}
+   c) \frac{n(n+1)(n+2)}{6}
+   d) \frac{n(n+1)(2n+1)}{6}
+
 ## Time, Work & Distance
 
 1. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**

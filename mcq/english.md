@@ -140,6 +140,18 @@
    গ. importance
    ঘ. none
 
+4. **What does "Epistemology" mean?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 9]**
+   a) Epistemology is the branch of philosophy concerned with knowledge
+   b) The study of the nature and scope of knowledge.
+   c) The study of human behavior and cognition.
+   d) The study of moral principles and values.
+
+5. **What is the antonym of 'transparent'?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 9]**
+   a) Transform
+   b) Lubricant
+   c) Pure
+   d) Hazy
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
