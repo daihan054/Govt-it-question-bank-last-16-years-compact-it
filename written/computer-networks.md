@@ -101,6 +101,8 @@
 
 22. **What is the number for the Network layer and the support layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
+23. **(c) Write the all layers of OSI model.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)

@@ -402,3 +402,5 @@ int main() {
 11. **(b) Write a program in C using recursion to find the factorial of an integer.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
 
 12. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+13. **(e) Write about the syntax of function.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**

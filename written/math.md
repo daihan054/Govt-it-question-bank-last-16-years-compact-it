@@ -38,6 +38,8 @@
 
 3. **জনাব রহিম তার সম্পদের ২৫% স্ত্রীকে, ৪৫% ছেলেকে এবং অবশিষ্ট ৭২০০০ টাকা মেয়েকে দিলেন। তার সম্পদের মোট মূল কত?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
+4. **A scored 30% marks and failed by 15 marks. B scored 40% marks and obtained 35 marks more than those required to pass. The pass percentage is?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
+
 ## Ratio, Proportion & Mixtures
 
 1. **Math : Gold purity** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**

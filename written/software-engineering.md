@@ -30,6 +30,8 @@
 
 10. **Define test plan and Test case.** **(Pubali Bank Limited Software Quality Assurance Exam: 18.03.2023) [compact it 567]**
 
+11. **(d) What is the main difference between black box and white box testing?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
+
 ## UML Diagrams (Class, Use Case, Sequence)
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
@@ -51,6 +53,8 @@
    * (b) Non- Functional Requirments
    * (c) Testing Requirments
    * (d) Interface Requirments
+
+3. **(b) Which contents shoud be consider when you setup a new system?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
 
 ## SDLC Phases & Models
 
@@ -87,6 +91,8 @@
 16. **What is SDLC? Write the name of 7 phase of SDLC?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
 17. **(a) What do you understand by Agile? Mention its four values.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
+
+18. **(a) Write down the steps of Waterfall model.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
 
 ## Software Architecture & Design Patterns (MVC)
 
