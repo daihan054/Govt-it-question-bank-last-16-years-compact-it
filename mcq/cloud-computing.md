@@ -3,55 +3,15 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Cloud Computing Fundamentals](#cloud-computing-fundamentals) | 14 |
-| 2 | [Cloud Service Models](#cloud-service-models) | 4 |
-| 3 | [Containers & Virtualization](#containers--virtualization) | 2 |
+| 1 | [Cloud Computing Fundamentals](#cloud-computing-fundamentals-14) | 14 |
+| 2 | [Cloud Service Models](#cloud-service-models-4) | 4 |
+| 3 | [Containers & Virtualization](#containers--virtualization-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## Containers & Virtualization
-
-1. **What is Docker Hub and Docker?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
-   (a) Docker is a container platform, and Docker Hub is a cloud repository for Docker images
-   (b) Docker is a virtual machine software, and Docker Hub is a database
-   (c) Docker is a programming language, and Docker Hub is a code editor
-   (d) Docker is a firewall, and Docker Hub is a security tool
-
-2. **Which software is mostly used for virtualization?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
-   A) VMware
-   B) Oracle DBMS
-   C) Windows XP
-   D) Linux
-
-## Cloud Service Models
-
-1. **Which one of the following is related to the services provided by cloud?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
-   (a) Sourcing
-   (b) Ownership
-   (c) Reliability
-   (d) PaaS
-
-2. **Service that generally focuses on the hardware following which one of the following services models?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
-   (a) IaaS
-   (b) PaaS
-   (c) SaaS
-   (d) Both A and B
-
-3. **Which service(s) is/are related with Cloud Computing?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
-   A) SaaS
-   B) PaaS
-   C) IaaS
-   D) All of these
-
-4. **Which of the following is Cloud Platform by Microsoft?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
-   A) Azure
-   B) AWS
-   C) cloudera
-   D) Openstack
-
-## Cloud Computing Fundamentals
+## Cloud Computing Fundamentals (14)
 
 1. **What type of computing technology refers to services and applications that typically run on a distributed network through virtualized resources?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
    (a) Distributed Computing
@@ -136,3 +96,43 @@
    B) Security
    C) Virtualization
    D) All of the above
+
+## Cloud Service Models (4)
+
+1. **Which one of the following is related to the services provided by cloud?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) Sourcing
+   (b) Ownership
+   (c) Reliability
+   (d) PaaS
+
+2. **Service that generally focuses on the hardware following which one of the following services models?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) IaaS
+   (b) PaaS
+   (c) SaaS
+   (d) Both A and B
+
+3. **Which service(s) is/are related with Cloud Computing?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 259]**
+   A) SaaS
+   B) PaaS
+   C) IaaS
+   D) All of these
+
+4. **Which of the following is Cloud Platform by Microsoft?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+   A) Azure
+   B) AWS
+   C) cloudera
+   D) Openstack
+
+## Containers & Virtualization (2)
+
+1. **What is Docker Hub and Docker?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
+   (a) Docker is a container platform, and Docker Hub is a cloud repository for Docker images
+   (b) Docker is a virtual machine software, and Docker Hub is a database
+   (c) Docker is a programming language, and Docker Hub is a code editor
+   (d) Docker is a firewall, and Docker Hub is a security tool
+
+2. **Which software is mostly used for virtualization?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 247]**
+   A) VMware
+   B) Oracle DBMS
+   C) Windows XP
+   D) Linux

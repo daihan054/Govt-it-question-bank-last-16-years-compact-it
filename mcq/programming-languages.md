@@ -3,15 +3,15 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Python](#python) | 10 |
-| 2 | [Mobile & Android Development](#mobile--android-development) | 8 |
-| 3 | [Visual Basic & .NET](#visual-basic--net) | 7 |
+| 1 | [Python](#python-10) | 10 |
+| 2 | [Mobile & Android Development](#mobile--android-development-8) | 8 |
+| 3 | [Visual Basic & .NET](#visual-basic--net-7) | 7 |
 
 <!-- TOC END -->
 
 ---
 
-## Python
+## Python (10)
 
 1. **To start Python from the command prompt, use the command _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**
    a) execute python
@@ -76,7 +76,7 @@
    C) 512, 512, 512
    D) 512, 64, 512
 
-## Mobile & Android Development
+## Mobile & Android Development (8)
 
 1. **What is the API level of Android version 11?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
    (a) 24
@@ -126,7 +126,7 @@
    C) Symbian
    D) Android
 
-## Visual Basic & .NET
+## Visual Basic & .NET (7)
 
 1. **.NET can be used in the following-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
    (a) Development of Desktop Applications

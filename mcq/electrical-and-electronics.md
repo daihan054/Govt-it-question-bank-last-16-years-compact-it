@@ -3,42 +3,16 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Circuits & Components](#circuits--components) | 96 |
-| 2 | [Power Systems & Generation](#power-systems--generation) | 18 |
-| 3 | [Signals & Systems](#signals--systems) | 12 |
-| 4 | [Diodes & Rectifiers](#diodes--rectifiers) | 4 |
+| 1 | [Circuits & Components](#circuits--components-96) | 96 |
+| 2 | [Power Systems & Generation](#power-systems--generation-18) | 18 |
+| 3 | [Signals & Systems](#signals--systems-12) | 12 |
+| 4 | [Diodes & Rectifiers](#diodes--rectifiers-4) | 4 |
 
 <!-- TOC END -->
 
 ---
 
-## Diodes & Rectifiers
-
-1. **What is the Work of a Rectifier?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
-   (a) Converts DC to AC
-   (b) Converts AC to DC
-   (c) Stores Electrical Energy
-   (d) Increases Voltage
-
-2. **Zener diode is a _____ conducting device.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
-   (a) Unidirectional
-   (b) Bidirectional
-   (c) Multidirectional
-   (d) Tri-directional
-
-3. **What should be true for a Zener Diode?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
-   (a) Reverse bias for amplifying
-   (b) Operates in forward bias only
-   (c) Works in reverse breakdown region
-   (d) Used for rectification
-
-4. **Which device is need to converts AC to DC?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
-   (a) Transformer
-   (b) Rectifier
-   (c) Inverter
-   (d) Amplifier
-
-## Circuits & Components
+## Circuits & Components (96)
 
 1. **What does inductance depend on?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
    (a) Number of turns in the coil
@@ -581,7 +555,7 @@
    c. Is harmful
    d. Converts the amplifier into an oscillator
 
-## Power Systems & Generation
+## Power Systems & Generation (18)
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
    (ক) গ্যাস টারবাইন
@@ -679,7 +653,7 @@
    (c) Provides smoother output
    (d) Convert the induced AC to DC
 
-## Signals & Systems
+## Signals & Systems (12)
 
 1. **The transfer function of an LTI system is given as \frac{1}{s+2}. What is the value of its impulse response at t=0?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
    (ক) 0.0
@@ -753,3 +727,29 @@
    (b) Low pass filter
    (c) High pass filter
    (d) Band stop filter
+
+## Diodes & Rectifiers (4)
+
+1. **What is the Work of a Rectifier?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]**
+   (a) Converts DC to AC
+   (b) Converts AC to DC
+   (c) Stores Electrical Energy
+   (d) Increases Voltage
+
+2. **Zener diode is a _____ conducting device.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) Unidirectional
+   (b) Bidirectional
+   (c) Multidirectional
+   (d) Tri-directional
+
+3. **What should be true for a Zener Diode?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) Reverse bias for amplifying
+   (b) Operates in forward bias only
+   (c) Works in reverse breakdown region
+   (d) Used for rectification
+
+4. **Which device is need to converts AC to DC?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
+   (a) Transformer
+   (b) Rectifier
+   (c) Inverter
+   (d) Amplifier

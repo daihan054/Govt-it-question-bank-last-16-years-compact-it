@@ -3,220 +3,24 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Algebra](#algebra) | 41 |
-| 2 | [Geometry](#geometry) | 23 |
-| 3 | [Percentage, Profit & Loss](#percentage-profit--loss) | 21 |
-| 4 | [Arithmetic & Number Series](#arithmetic--number-series) | 16 |
-| 5 | [Time, Work & Distance](#time-work--distance) | 11 |
-| 6 | [Set Theory](#set-theory) | 8 |
-| 7 | [Average & Age Problems](#average--age-problems) | 6 |
-| 8 | [Ratio & Proportion](#ratio--proportion) | 6 |
-| 9 | [Permutation & Combination](#permutation--combination) | 5 |
-| 10 | [Trigonometry](#trigonometry) | 4 |
-| 11 | [Probability & Statistics](#probability--statistics) | 4 |
-| 12 | [Analytical Reasoning](#analytical-reasoning) | 3 |
+| 1 | [Algebra](#algebra-41) | 41 |
+| 2 | [Geometry](#geometry-23) | 23 |
+| 3 | [Percentage, Profit & Loss](#percentage-profit--loss-21) | 21 |
+| 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
+| 5 | [Time, Work & Distance](#time-work--distance-11) | 11 |
+| 6 | [Set Theory](#set-theory-8) | 8 |
+| 7 | [Average & Age Problems](#average--age-problems-6) | 6 |
+| 8 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
+| 9 | [Permutation & Combination](#permutation--combination-5) | 5 |
+| 10 | [Trigonometry](#trigonometry-4) | 4 |
+| 11 | [Probability & Statistics](#probability--statistics-4) | 4 |
+| 12 | [Analytical Reasoning](#analytical-reasoning-3) | 3 |
 
 <!-- TOC END -->
 
 ---
 
-## Geometry
-
-1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. ১২০°
-   খ. ১৮০°
-   গ. ২৮০°
-   ঘ. ৩৬০°
-
-2. **একটি গাড়ির ঢাকা প্রতি মিনিটে ৯০ বার ঘুরলে ১ সেকেন্ডে কত ডিগ্রি ঘুরবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. ১৮০°
-   খ. ২৭০°
-   গ. ৩৭০°
-   ঘ. ৫৪০°
-
-3. **সাড়ে ছয়টার সময় ঘণ্টা ও মিনিটের কাঁটার মধ্যে ক্ষুদ্রতম কোণের পরিমাণ কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. ৭.৫°
-   খ. ১৫°
-   গ. ২২.৫°
-   ঘ. ৩০°
-
-4. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
-   (a) 20 meter
-   (b) 15 meter
-   (c) 10 meter
-   (d) 100 meter
-
-5. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
-   (a) 9 ft
-   (b) 16 ft
-   (c) 24 ft
-   (d) 26 ft
-
-6. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm less than its length. What is the perimeter of the square?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
-   (a) 60cm
-   (b) 44cm
-   (c) 80cm
-   (d) cannot be determined
-
-7. **If the radius is increased by 100% then by how much will the area of circle be increased?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
-   (a) 100
-   (b) 200
-   (c) 300
-   (d) 400
-
-8. **With reference to a 2 dimensional coordinate system, the vertices of a uniform and thin triangular pate are given by (0,0), (1,4) and (-7, 8) points. The centroid of the plate is-** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
-   **Ans:** (-2, 4)
-
-9. **ত্রিভুজের তিন বাহুর দৈর্ঘ্য যথাক্রমে a,b এবং c** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
-   (ক) a+b > c
-   (খ) a+b = c
-   (গ) a+b < c
-   (ঘ) a+b \approx c
-   **উত্তর: ক**
-
-10. **একটি কোণের পরিমাপ ১৮১° হলে তাকে কি কোণ বলে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
-   (ক) স্থূল কোণ
-   (খ) সমকোণ
-   (গ) সূক্ষ্ম কোণ
-   (ঘ) প্রবৃদ্ধ কোণ
-   **উত্তর: ঘ**
-
-11. **কোনটি ত্রিমাত্রিক বস্তু?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
-   (ক) তল
-   (খ) ঘনক
-   (গ) রেখা
-   (ঘ) বিন্দু
-   **উত্তর: খ**
-
-12. **বৃত্তস্থ সামান্তরিক কোনটি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) রম্বস
-   (খ) আয়ত
-   (গ) বর্গ
-   (ঘ) ট্রাপিজিয়াম
-   **উত্তর: খ**
-
-13. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাটা ও মিনিটের কাটার মধ্যকার কোণ কত? ১২০ ডিগ্রি** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
-
-14. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাঁটা ও মিনিটের কাঁটার মধ্যকার কোণ কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   **Ans:** ১২০ ডিগ্রি
-
-15. **Find the area of a circle whose circumference is 22\text{ cm}?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
-   (ক) 35.2\text{ cm}^2
-   (খ) 38.5\text{ cm}^2
-   (গ) 41.7\text{ cm}^2
-   (ঘ) 47.6\text{ cm}^2
-
-16. **A pole 6\text{m} high casts a shadow 2\sqrt{3}\text{ m} long on the ground, they find the angle of elevation of sun.** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
-   (ক) 30^\circ
-   (খ) 60^\circ
-   (গ) 45^\circ
-   (ঘ) 90^\circ
-
-17. **The triangular base of a prism is a right triangle of sides a and b =2a. The height h of the prism is equal to 10mm and its volume is equal to 40 mm³. What will be the lengths of the sides a and b of the triangle?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
-   a) 2mm and 3mm
-   b) 1 mm and 4 mm
-   c) 2 mm and 2 mm
-   d) 2 mm and 4 mm
-
-18. **The hypotenuse of a right triangle is 2 centimeters more than the longer side of the triangle. The shorter side of the triangle is 7 centimeters less than the longer side. Find the length of the hypotenuse.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
-   (a) 13
-   (b) 15
-   (c) 17
-   (d) 19
-
-19. **You are looking at a billboard 40m away with an angle of elevation of 30⁰. At what height is the billboard?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
-   a. 20
-   b. 30
-   c. 40
-   d. 80
-
-20. **A ladder against a wall that tis perpendicular to the ground. If the bottom of the ladder is 4m away from the bottom of the wall, while the tip of the ladders is at a height of 3m, what is the length of the ladder?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
-   a. 7 m
-   b. 35 m
-   c. 5 m
-   d. 25 m
-
-21. **When base is 12 inch and height is 8inch of a triangle, its area?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
-   ক. 96 sq-in
-   খ. 48 sq-in
-   গ. 48 in
-   ঘ. 46 in
-
-22. **What is the perimeter of a square, if its area is 400sq-m?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
-   ক. 40m
-   খ. 80m
-   গ. 20m
-   ঘ. 20sq-m
-
-23. **What is the distance between the line 8x+6y=17 and 8x+6y-37=0?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
-   A. -2
-   B. 1
-   C. 2
-   D. 6
-
-## Trigonometry
-
-1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. 1/2
-   খ. 1/5
-   গ. 2/5
-   ঘ. 5/2
-
-2. **একটি ৪৮ মিটার লম্বা খুঁটি ভেঙ্গে সম্পূর্ণভাবে বিচ্ছিন্ন না হয়ে ভূমির সাথে 30^\circ কোন উৎপন্ন করে। খুঁটিটি কত উচুতে ভেঙ্গে ছিল?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
-   **Ans:** ১৬
-
-3. **\tan A = 5/12 হলে, \sin A এর মান কত?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
-   A. \frac{5}{13}
-   B. \frac{3}{4}
-   C. \frac{5}{17}
-   D. \frac{5}{12}
-
-4. **\sin A + \cos A = \sin B + \cos B এবং A + B = ?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
-   A. \pi
-   B. 2\pi
-   C. \pi/2
-   D. \pi/4
-
-## Average & Age Problems
-
-1. **মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. ৪৫ বছর
-   খ. ৪০ বছর
-   গ. ৩৫ বছর
-   ঘ. ৩০ বছর
-
-2. **The average temperature for the first 4-days of a week is 40.2° C and that of the last 4-days is 41.3° C. If the average temperature for the whole week is 40.6° C, then temperature on the fourth day is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
-   (a) 38.5°C
-   (b) 41.8°C
-   (c) 41.3°C
-   (d) 40.8°
-
-3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
-   (a) n<m<o
-   (b) m<n<o
-   (c) o<n<m
-   (d) o<m<n
-
-4. **The father's age is 36 and the son's age is 16. How many years ago was the father's age three times the son's age?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) 6 years ago
-   (b) 36 years ago
-   (c) 12 years ago
-   (d) 4 years ago
-
-5. **If age is P times then y after 6 years x age is 17 then find the age of y with respect to p.** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
-   (a) 11p
-   (b) 11p+6
-   (c) P+6
-   (d) P+11
-   **Ans: b**
-
-6. **5 years ago the ration of father's age to son's age was 5:1 and 2 years later father's age will be 3 times his son's age. What is the ration of their present age?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
-   a. 5:2
-   b. 7:3
-   c. 10:3
-   d. 11:7
-
-## Algebra
+## Algebra (41)
 
 1. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
    ক. ৬
@@ -452,7 +256,141 @@
    C) it is the set of natural numbers for which a function is defined
    D) Any set of positive number
 
-## Percentage, Profit & Loss
+## Geometry (23)
+
+1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. ১২০°
+   খ. ১৮০°
+   গ. ২৮০°
+   ঘ. ৩৬০°
+
+2. **একটি গাড়ির ঢাকা প্রতি মিনিটে ৯০ বার ঘুরলে ১ সেকেন্ডে কত ডিগ্রি ঘুরবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. ১৮০°
+   খ. ২৭০°
+   গ. ৩৭০°
+   ঘ. ৫৪০°
+
+3. **সাড়ে ছয়টার সময় ঘণ্টা ও মিনিটের কাঁটার মধ্যে ক্ষুদ্রতম কোণের পরিমাণ কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. ৭.৫°
+   খ. ১৫°
+   গ. ২২.৫°
+   ঘ. ৩০°
+
+4. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 20 meter
+   (b) 15 meter
+   (c) 10 meter
+   (d) 100 meter
+
+5. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 9 ft
+   (b) 16 ft
+   (c) 24 ft
+   (d) 26 ft
+
+6. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm less than its length. What is the perimeter of the square?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) 60cm
+   (b) 44cm
+   (c) 80cm
+   (d) cannot be determined
+
+7. **If the radius is increased by 100% then by how much will the area of circle be increased?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   (a) 100
+   (b) 200
+   (c) 300
+   (d) 400
+
+8. **With reference to a 2 dimensional coordinate system, the vertices of a uniform and thin triangular pate are given by (0,0), (1,4) and (-7, 8) points. The centroid of the plate is-** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** (-2, 4)
+
+9. **ত্রিভুজের তিন বাহুর দৈর্ঘ্য যথাক্রমে a,b এবং c** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) a+b > c
+   (খ) a+b = c
+   (গ) a+b < c
+   (ঘ) a+b \approx c
+   **উত্তর: ক**
+
+10. **একটি কোণের পরিমাপ ১৮১° হলে তাকে কি কোণ বলে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) স্থূল কোণ
+   (খ) সমকোণ
+   (গ) সূক্ষ্ম কোণ
+   (ঘ) প্রবৃদ্ধ কোণ
+   **উত্তর: ঘ**
+
+11. **কোনটি ত্রিমাত্রিক বস্তু?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) তল
+   (খ) ঘনক
+   (গ) রেখা
+   (ঘ) বিন্দু
+   **উত্তর: খ**
+
+12. **বৃত্তস্থ সামান্তরিক কোনটি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) রম্বস
+   (খ) আয়ত
+   (গ) বর্গ
+   (ঘ) ট্রাপিজিয়াম
+   **উত্তর: খ**
+
+13. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাটা ও মিনিটের কাটার মধ্যকার কোণ কত? ১২০ ডিগ্রি** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+
+14. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাঁটা ও মিনিটের কাঁটার মধ্যকার কোণ কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+   **Ans:** ১২০ ডিগ্রি
+
+15. **Find the area of a circle whose circumference is 22\text{ cm}?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 35.2\text{ cm}^2
+   (খ) 38.5\text{ cm}^2
+   (গ) 41.7\text{ cm}^2
+   (ঘ) 47.6\text{ cm}^2
+
+16. **A pole 6\text{m} high casts a shadow 2\sqrt{3}\text{ m} long on the ground, they find the angle of elevation of sun.** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 30^\circ
+   (খ) 60^\circ
+   (গ) 45^\circ
+   (ঘ) 90^\circ
+
+17. **The triangular base of a prism is a right triangle of sides a and b =2a. The height h of the prism is equal to 10mm and its volume is equal to 40 mm³. What will be the lengths of the sides a and b of the triangle?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) 2mm and 3mm
+   b) 1 mm and 4 mm
+   c) 2 mm and 2 mm
+   d) 2 mm and 4 mm
+
+18. **The hypotenuse of a right triangle is 2 centimeters more than the longer side of the triangle. The shorter side of the triangle is 7 centimeters less than the longer side. Find the length of the hypotenuse.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) 13
+   (b) 15
+   (c) 17
+   (d) 19
+
+19. **You are looking at a billboard 40m away with an angle of elevation of 30⁰. At what height is the billboard?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 20
+   b. 30
+   c. 40
+   d. 80
+
+20. **A ladder against a wall that tis perpendicular to the ground. If the bottom of the ladder is 4m away from the bottom of the wall, while the tip of the ladders is at a height of 3m, what is the length of the ladder?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 7 m
+   b. 35 m
+   c. 5 m
+   d. 25 m
+
+21. **When base is 12 inch and height is 8inch of a triangle, its area?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 96 sq-in
+   খ. 48 sq-in
+   গ. 48 in
+   ঘ. 46 in
+
+22. **What is the perimeter of a square, if its area is 400sq-m?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. 40m
+   খ. 80m
+   গ. 20m
+   ঘ. 20sq-m
+
+23. **What is the distance between the line 8x+6y=17 and 8x+6y-37=0?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. -2
+   B. 1
+   C. 2
+   D. 6
+
+## Percentage, Profit & Loss (21)
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
    ক. ৭৪
@@ -575,7 +513,7 @@
    গ. 0.021
    ঘ. 0.0021
 
-## Arithmetic & Number Series
+## Arithmetic & Number Series (16)
 
 1. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
    ক. ৩৫৫
@@ -671,7 +609,7 @@
    C) 15
    D) 16
 
-## Time, Work & Distance
+## Time, Work & Distance (11)
 
 1. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
    ক. ১৫ মিনিট
@@ -739,56 +677,7 @@
    c. 38 sec
    d. 40 sec
 
-## Analytical Reasoning
-
-1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) 4.24 meters
-   (b) 5.24 meters
-   (c) 3.24 meters
-   (d) 4 meters
-
-2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) 1
-   (b) 2
-   (c) 3
-   (d) 4
-
-3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
-
-## Permutation & Combination
-
-1. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
-   (a) 45
-   (b) 90
-   (c) 63
-   (d) 126
-
-2. **In a class there are 4 boys and 4 girls. Two students are selected at random, what is the probability that both will be girls?** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 73]**
-   (a) \frac{1}{2}
-   (b) \frac{3}{7}
-   (c) \frac{3}{4}
-   (d) \frac{3}{14}
-   **Ans: d**
-
-3. **১০ টি বইয়ের মধ্যে ৪টি বই কত প্রকারে বাছাই করা যায়, যাতে নির্দিষ্ট দুইটি বই সর্বদা বাদ থাকে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
-   A. 210
-   B. 70
-   C. 45
-   D. 360
-
-4. **DIGITAL শব্দটি বর্ণগুলিকে কত প্রকারে সাজানো যায় যাতে স্বরবর্ণগুলি একত্রে থাকে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
-   A. 320
-   B. 430
-   C. 210
-   D. 360
-
-5. **How many bits string of length 4 bit possible such that they contain 2 ones and 2 zeros?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
-   A) 4
-   B) 2
-   C) 5
-   D) 6
-
-## Set Theory
+## Set Theory (8)
 
 1. **Two sets are called disjoint if their ______ is an empty set.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
    (ক) Union
@@ -838,33 +727,46 @@
    C) difference
    D) complement
 
-## Probability & Statistics
+## Average & Age Problems (6)
 
-1. **The mode and mean is given by 7 and 8 respectively. Then the median is:** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
-   (ক) 1/13
-   (খ) 13/3
-   (গ) 23/3
-   (ঘ) 33
+1. **মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. ৪৫ বছর
+   খ. ৪০ বছর
+   গ. ৩৫ বছর
+   ঘ. ৩০ বছর
 
-2. **If P(A) = 0.6, P(B) = 0.4, P(B/A) = 0.2 then find P(A \cup B) = ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
-   (ক) 0.76
-   (খ) 0.88
-   (গ) 0.56
-   (ঘ) 0.69
+2. **The average temperature for the first 4-days of a week is 40.2° C and that of the last 4-days is 41.3° C. If the average temperature for the whole week is 40.6° C, then temperature on the fourth day is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) 38.5°C
+   (b) 41.8°C
+   (c) 41.3°C
+   (d) 40.8°
 
-3. **What is the probability of getting a sum of six if two dices are thrown at one?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
-   a. 5/36
-   b. 7/36
-   c. 2/26
-   d. 1/36
+3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) n<m<o
+   (b) m<n<o
+   (c) o<n<m
+   (d) o<m<n
 
-4. **A fair six-sided die is rolled. Find the probability of getting an odd number or a number less than 4.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
-   a. 2/3
-   b. 2/4
-   c. 5/6
-   d. 1/6
+4. **The father's age is 36 and the son's age is 16. How many years ago was the father's age three times the son's age?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 6 years ago
+   (b) 36 years ago
+   (c) 12 years ago
+   (d) 4 years ago
 
-## Ratio & Proportion
+5. **If age is P times then y after 6 years x age is 17 then find the age of y with respect to p.** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
+   (a) 11p
+   (b) 11p+6
+   (c) P+6
+   (d) P+11
+   **Ans: b**
+
+6. **5 years ago the ration of father's age to son's age was 5:1 and 2 years later father's age will be 3 times his son's age. What is the ration of their present age?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 5:2
+   b. 7:3
+   c. 10:3
+   d. 11:7
+
+## Ratio & Proportion (6)
 
 1. **The ratio of milk and water in 64 liters of a mixture is 5:3. What amount of water is added to make the ratio 3:5?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
    a) 42\frac{2}{3}
@@ -901,3 +803,101 @@
    b. 80
    c. 91
    d. 114
+
+## Permutation & Combination (5)
+
+1. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) 45
+   (b) 90
+   (c) 63
+   (d) 126
+
+2. **In a class there are 4 boys and 4 girls. Two students are selected at random, what is the probability that both will be girls?** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 73]**
+   (a) \frac{1}{2}
+   (b) \frac{3}{7}
+   (c) \frac{3}{4}
+   (d) \frac{3}{14}
+   **Ans: d**
+
+3. **১০ টি বইয়ের মধ্যে ৪টি বই কত প্রকারে বাছাই করা যায়, যাতে নির্দিষ্ট দুইটি বই সর্বদা বাদ থাকে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 147]**
+   A. 210
+   B. 70
+   C. 45
+   D. 360
+
+4. **DIGITAL শব্দটি বর্ণগুলিকে কত প্রকারে সাজানো যায় যাতে স্বরবর্ণগুলি একত্রে থাকে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 320
+   B. 430
+   C. 210
+   D. 360
+
+5. **How many bits string of length 4 bit possible such that they contain 2 ones and 2 zeros?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+   A) 4
+   B) 2
+   C) 5
+   D) 6
+
+## Trigonometry (4)
+
+1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. 1/2
+   খ. 1/5
+   গ. 2/5
+   ঘ. 5/2
+
+2. **একটি ৪৮ মিটার লম্বা খুঁটি ভেঙ্গে সম্পূর্ণভাবে বিচ্ছিন্ন না হয়ে ভূমির সাথে 30^\circ কোন উৎপন্ন করে। খুঁটিটি কত উচুতে ভেঙ্গে ছিল?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ১৬
+
+3. **\tan A = 5/12 হলে, \sin A এর মান কত?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. \frac{5}{13}
+   B. \frac{3}{4}
+   C. \frac{5}{17}
+   D. \frac{5}{12}
+
+4. **\sin A + \cos A = \sin B + \cos B এবং A + B = ?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. \pi
+   B. 2\pi
+   C. \pi/2
+   D. \pi/4
+
+## Probability & Statistics (4)
+
+1. **The mode and mean is given by 7 and 8 respectively. Then the median is:** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 1/13
+   (খ) 13/3
+   (গ) 23/3
+   (ঘ) 33
+
+2. **If P(A) = 0.6, P(B) = 0.4, P(B/A) = 0.2 then find P(A \cup B) = ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 0.76
+   (খ) 0.88
+   (গ) 0.56
+   (ঘ) 0.69
+
+3. **What is the probability of getting a sum of six if two dices are thrown at one?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 5/36
+   b. 7/36
+   c. 2/26
+   d. 1/36
+
+4. **A fair six-sided die is rolled. Find the probability of getting an odd number or a number less than 4.** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. 2/3
+   b. 2/4
+   c. 5/6
+   d. 1/6
+
+## Analytical Reasoning (3)
+
+1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 4.24 meters
+   (b) 5.24 meters
+   (c) 3.24 meters
+   (d) 4 meters
+
+2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) 1
+   (b) 2
+   (c) 3
+   (d) 4
+
+3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**

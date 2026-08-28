@@ -3,120 +3,25 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Commands & Queries](#sql-commands--queries) | 52 |
-| 2 | [DBMS Concepts & Architecture](#dbms-concepts--architecture) | 34 |
-| 3 | [Normalization](#normalization) | 16 |
-| 4 | [Transaction Management & ACID](#transaction-management--acid) | 14 |
-| 5 | [Keys in DBMS](#keys-in-dbms) | 11 |
-| 6 | [Data Warehousing & Data Mining](#data-warehousing--data-mining) | 9 |
-| 7 | [ER Diagram & Data Modeling](#er-diagram--data-modeling) | 9 |
-| 8 | [Relational Model & Terminology](#relational-model--terminology) | 8 |
-| 9 | [PL/SQL & Triggers](#plsql--triggers) | 7 |
-| 10 | [Indexing & Query Optimization](#indexing--query-optimization) | 6 |
-| 11 | [Database Connectivity (JDBC/ODBC)](#database-connectivity-jdbcodbc) | 5 |
-| 12 | [Concurrency Control & Locking](#concurrency-control--locking) | 5 |
-| 13 | [SQL Joins](#sql-joins) | 2 |
+| 1 | [SQL Commands & Queries](#sql-commands--queries-52) | 52 |
+| 2 | [DBMS Concepts & Architecture](#dbms-concepts--architecture-34) | 34 |
+| 3 | [Normalization](#normalization-16) | 16 |
+| 4 | [Transaction Management & ACID](#transaction-management--acid-14) | 14 |
+| 5 | [Keys in DBMS](#keys-in-dbms-11) | 11 |
+| 6 | [Data Warehousing & Data Mining](#data-warehousing--data-mining-9) | 9 |
+| 7 | [ER Diagram & Data Modeling](#er-diagram--data-modeling-9) | 9 |
+| 8 | [Relational Model & Terminology](#relational-model--terminology-8) | 8 |
+| 9 | [PL/SQL & Triggers](#plsql--triggers-7) | 7 |
+| 10 | [Indexing & Query Optimization](#indexing--query-optimization-6) | 6 |
+| 11 | [Database Connectivity (JDBC/ODBC)](#database-connectivity-jdbcodbc-5) | 5 |
+| 12 | [Concurrency Control & Locking](#concurrency-control--locking-5) | 5 |
+| 13 | [SQL Joins](#sql-joins-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## Normalization
-
-1. **Which normal form is considered adequate for normal relational database design?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) 2NF
-   b) 5NF
-   c) 4NF
-   d) 3NF
-
-2. **Which one is correct in case of normalization-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
-   (a) Normalization maximizes duplicates
-   (b) Normalization reduces duplicates
-   (c) Normalization eliminates duplicates
-   (d) Normalization increases
-
-3. **If attribute A determines both attributes B and C then, it is also true that—** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
-   (a) A \rightarrow B
-   (b) B \rightarrow A
-   (c) C \rightarrow A
-   (d) (BC) \rightarrow A
-
-4. **If a table is normalized so that all its determinants are candidate keys then, the tableis in-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
-   (a) 1NF
-   (b) 2NF
-   (c) 3NF
-   (d) BCNF
-
-5. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
-   **Ans:** Second Normal Form (2NF)
-
-6. **"There must not be any partial dependency "Which of the following Normal Forms holds this condition?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
-   (ক) 1NF
-   (খ) 2NF
-   (গ) 3NF
-   (ঘ) BCNF
-
-7. **To remove partial dependency from a database, which technique you will use?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
-   a) 1NF
-   b) 2NF
-   c) 3NF
-   d) BCN
-
-8. **In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functional dependencies is not implied by the above set?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 112]**
-   a) CD=>AC
-   b) BD=>CD
-   c) BC=>CD
-   d) AC=>BC
-
-9. **Third normal form is based on the concept of ______.** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
-   a) Normal Dependency
-   b) Closure Dependency
-   c) Functional Dependency
-   d) Transitive Dependency
-
-10. **If you are told to remove the inconsistency from the course table which normalization technique you will use-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
-   a) 1NF
-   b) 2NF
-   c) 3NF
-   d) BCNF
-
-11. **If you are assigned to remove partial dependency from a database, which technique you will use?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 180]**
-   a) 1NF
-   b) 2NF
-   c) 3NF
-   d) BCNF
-
-12. **The table in below violates the Normal Form(s). Which normal form it violates?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 150]**
-   a) All of normal forms listed here
-   b) 3NF
-   c) 2NF
-   d) 1NF
-
-13. **Why do we need to normalize a database?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
-   A) To remove redundancy
-   B) To make data meaningful
-   C) To make database secure
-   D) To make database consistency
-
-14. **In the ________ normal form, a composite attribute is converted to individual attributes.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
-   A) First
-   B) Second
-   C) Third
-   D) Fourth
-
-15. **Repeated data exist at—** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 246]**
-   A) unnormalized
-   B) 1NF
-   C) 2NF
-   D) 3NF
-
-16. **What is normalization?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
-   A) To Remove Redundancy
-   B) To make Database
-   C) To make data meaningful
-   D) To make database Consistency
-
-## SQL Commands & Queries
+## SQL Commands & Queries (52)
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
    (a) DML
@@ -485,7 +390,7 @@
    c. ORDBMS
    d. All of these
 
-## DBMS Concepts & Architecture
+## DBMS Concepts & Architecture (34)
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
    (a) Data dictionary
@@ -688,7 +593,102 @@
    c. keeps the code for the tracking
    d. keeps automatic call distribution
 
-## Transaction Management & ACID
+## Normalization (16)
+
+1. **Which normal form is considered adequate for normal relational database design?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) 2NF
+   b) 5NF
+   c) 4NF
+   d) 3NF
+
+2. **Which one is correct in case of normalization-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
+   (a) Normalization maximizes duplicates
+   (b) Normalization reduces duplicates
+   (c) Normalization eliminates duplicates
+   (d) Normalization increases
+
+3. **If attribute A determines both attributes B and C then, it is also true that—** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
+   (a) A \rightarrow B
+   (b) B \rightarrow A
+   (c) C \rightarrow A
+   (d) (BC) \rightarrow A
+
+4. **If a table is normalized so that all its determinants are candidate keys then, the tableis in-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
+   (a) 1NF
+   (b) 2NF
+   (c) 3NF
+   (d) BCNF
+
+5. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Second Normal Form (2NF)
+
+6. **"There must not be any partial dependency "Which of the following Normal Forms holds this condition?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
+   (ক) 1NF
+   (খ) 2NF
+   (গ) 3NF
+   (ঘ) BCNF
+
+7. **To remove partial dependency from a database, which technique you will use?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) 1NF
+   b) 2NF
+   c) 3NF
+   d) BCN
+
+8. **In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functional dependencies is not implied by the above set?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 112]**
+   a) CD=>AC
+   b) BD=>CD
+   c) BC=>CD
+   d) AC=>BC
+
+9. **Third normal form is based on the concept of ______.** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) Normal Dependency
+   b) Closure Dependency
+   c) Functional Dependency
+   d) Transitive Dependency
+
+10. **If you are told to remove the inconsistency from the course table which normalization technique you will use-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   a) 1NF
+   b) 2NF
+   c) 3NF
+   d) BCNF
+
+11. **If you are assigned to remove partial dependency from a database, which technique you will use?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 180]**
+   a) 1NF
+   b) 2NF
+   c) 3NF
+   d) BCNF
+
+12. **The table in below violates the Normal Form(s). Which normal form it violates?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 150]**
+   a) All of normal forms listed here
+   b) 3NF
+   c) 2NF
+   d) 1NF
+
+13. **Why do we need to normalize a database?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
+   A) To remove redundancy
+   B) To make data meaningful
+   C) To make database secure
+   D) To make database consistency
+
+14. **In the ________ normal form, a composite attribute is converted to individual attributes.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) First
+   B) Second
+   C) Third
+   D) Fourth
+
+15. **Repeated data exist at—** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 246]**
+   A) unnormalized
+   B) 1NF
+   C) 2NF
+   D) 3NF
+
+16. **What is normalization?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+   A) To Remove Redundancy
+   B) To make Database
+   C) To make data meaningful
+   D) To make database Consistency
+
+## Transaction Management & ACID (14)
 
 1. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
    (a) Atomicity
@@ -771,176 +771,7 @@
    c. ORDER BY
    d. SORT BY
 
-## Indexing & Query Optimization
-
-1. **Which one make data access from a database faster?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
-   (a) Indexing
-   (b) Normalization
-   (c) Denormalization
-   (d) All of the above
-   25. Priority Scheduling (Non-Preemptive) with No Arrival Time Consider the following set of processes with their burst times and priorities:
-   | Process | Burst Time (BT) | Priority |
-   |---|---|---|
-   | P1 | 10 | 3 |
-   | P2 | 1 | 1 |
-   | P3 | 2 | 4 |
-   | P4 | 1 | 5 |
-   | P5 | 5 | 2 |
-   Using Non-Preemptive Priority Scheduling (lower number = higher priority), what is the Average Turnaround Time (TAT)? **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
-   (a) 10
-   (b) 8.6
-   (c) 12
-   (d) 9.2
-
-2. **Related records of the different relations can be stored on the same block using which file organization technique?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
-   a) Heap file organization
-   b) Sequential file organization
-   c) Hashing file organization
-   d) Multi-table Clustering file organization
-
-3. **Which of the following is correct for the Create index command?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
-   a) Insert index index_name on table_name
-   b) Insert index index_name on database_name;
-   c) Create index index_name on database_name;
-   d) Create index index_name on table_name;
-
-4. **Database index speeds up-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
-   a) Select queries
-   b) Where clauses
-   c) Update query
-   d) Both a and b
-
-5. **Which of the following index is automatically created by the database server when an object is created?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
-   a) Implicit
-   b) Single column
-   c) Unique
-   d) composite
-
-6. **Related records of the different relations can be stored on the same block using which file organization technique?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
-   a) Heap file organization
-   b) Sequential file organization
-   c) Hashing file organization
-   d) Clustering file organization
-
-## SQL Joins
-
-1. **What type of join in needed when you wish to include rows that do not have matching values?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
-   a) Equal join
-   b) Natural join
-   c) Outer join
-   d) Inner join
-
-2. **Which type of JOIN operation in SQL command is used to returns that do not have matching values?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
-   a) Natural Join
-   b) EQUI Join
-   c) Outer Join
-   d) All of the above
-
-## Data Warehousing & Data Mining
-
-1. **Where is data warehousing used?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
-   (a) Transaction System
-   (b) Logical system
-   (c) Decision support system
-   (d) None
-
-2. **What is the use of data cleaning?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
-   (a) To remove the noisy data
-   (b) Transformations to correct the wrong data
-   (c) Correct the inconsistencies in data
-   (d) All of the above
-
-3. **Small logical units where data warehouse hold large amounts of data is known as ______.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
-   (a) Access layers
-   (b) Data marts
-   (c) Data storage
-   (d) Data miners
-
-4. **Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
-   (a) Warehousing
-   (b) Data Mining
-   (c) Text Mining
-   (d) Data Selection
-
-5. **Hadoop written in which language?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
-   (a) Java
-   (b) C++
-   (c) Pascal
-   (d) Kotlin
-
-6. **Business Intelligence (BI) reporting analyses can be performed using** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
-   a) standard SQL only
-   b) extensions to SQL only
-   c) OLAP only
-   d) Both standard SQL and extensions to SQL
-
-7. **A star schema has what type of relationship between a dimension and fact table?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
-   a) Many-to-many
-   b) One-to-one
-   c) One-to-many
-   d) All of the above
-
-8. **Finding useful pattern from the data in a database is known as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
-   (a) Data Visualization
-   (b) Data Mining
-   (c) Data Analytics
-   (d) All of the above
-
-9. **Dark data represents ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
-   A) Unused data
-   B) Harmful data
-   C) Highlighted data
-   D) Important data
-
-## Relational Model & Terminology
-
-1. **What is the degree of relation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
-   **Ans:** a degree of relationship represents the number of entity types that are associated with a relationship.
-
-2. **Which one of the following is true for a tuple in a database?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
-   a) A tuple in a database represents a column
-   b) A tuple in a database represents database schema.
-   c) A tuple in a database represents a Record
-   d) A tuple in a database represents a Database topology
-
-3. **In a table an attribute named interest is defined as follows,** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
-   When which one is the correct format for the interest columns?
-   a) 65.2
-   b) 7.2
-   c) 19.02
-   d) 1.03
-
-4. **Which one is not unary operator in relational algebra?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 157]**
-   A) Select
-   B) Project
-   C) Union
-   D) Renames
-
-5. **Which one is an entity?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 157]**
-   A) Roll No.
-   B) Student
-   C) Passport No.
-   D) Department ID
-
-6. **Which one is TRUE for FIRD?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 158]**
-   A) Uses electromagnetic signal
-   B) Uses laser beam
-   C) Uses optical signal
-   D) Uses infrared
-
-7. **Flat file database is most useful for ________.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 163]**
-   A) Large scale users
-   B) Banking
-   C) Small-group situation.
-   D) Chain stores
-
-8. **In database, a field is ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
-   A) Label
-   B) Category of Information
-   C) Group of related records
-   D) Table of information
-
-## Keys in DBMS
+## Keys in DBMS (11)
 
 1. **The key selected from the sets of candidate keys by database design is called ______ key:** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
    (ক) Candidate
@@ -1008,7 +839,63 @@
    c. INSERT INTO Person ('Olsen') INTO LastName
    d. INSERT INTO Persons (LastName= 'Olsen')
 
-## ER Diagram & Data Modeling
+## Data Warehousing & Data Mining (9)
+
+1. **Where is data warehousing used?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) Transaction System
+   (b) Logical system
+   (c) Decision support system
+   (d) None
+
+2. **What is the use of data cleaning?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) To remove the noisy data
+   (b) Transformations to correct the wrong data
+   (c) Correct the inconsistencies in data
+   (d) All of the above
+
+3. **Small logical units where data warehouse hold large amounts of data is known as ______.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Access layers
+   (b) Data marts
+   (c) Data storage
+   (d) Data miners
+
+4. **Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Warehousing
+   (b) Data Mining
+   (c) Text Mining
+   (d) Data Selection
+
+5. **Hadoop written in which language?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) Java
+   (b) C++
+   (c) Pascal
+   (d) Kotlin
+
+6. **Business Intelligence (BI) reporting analyses can be performed using** **(Sonali and Janata Bank Assistant Database Administrator Exam: 25.09.2021) [compact it 111]**
+   a) standard SQL only
+   b) extensions to SQL only
+   c) OLAP only
+   d) Both standard SQL and extensions to SQL
+
+7. **A star schema has what type of relationship between a dimension and fact table?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   a) Many-to-many
+   b) One-to-one
+   c) One-to-many
+   d) All of the above
+
+8. **Finding useful pattern from the data in a database is known as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
+   (a) Data Visualization
+   (b) Data Mining
+   (c) Data Analytics
+   (d) All of the above
+
+9. **Dark data represents ________.** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+   A) Unused data
+   B) Harmful data
+   C) Highlighted data
+   D) Important data
+
+## ER Diagram & Data Modeling (9)
 
 1. **Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this situation in the relational model?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 112]**
    a) 2
@@ -1082,7 +969,55 @@
    C) row
    D) primary key
 
-## PL/SQL & Triggers
+## Relational Model & Terminology (8)
+
+1. **What is the degree of relation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** a degree of relationship represents the number of entity types that are associated with a relationship.
+
+2. **Which one of the following is true for a tuple in a database?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) A tuple in a database represents a column
+   b) A tuple in a database represents database schema.
+   c) A tuple in a database represents a Record
+   d) A tuple in a database represents a Database topology
+
+3. **In a table an attribute named interest is defined as follows,** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 165]**
+   When which one is the correct format for the interest columns?
+   a) 65.2
+   b) 7.2
+   c) 19.02
+   d) 1.03
+
+4. **Which one is not unary operator in relational algebra?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 157]**
+   A) Select
+   B) Project
+   C) Union
+   D) Renames
+
+5. **Which one is an entity?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 157]**
+   A) Roll No.
+   B) Student
+   C) Passport No.
+   D) Department ID
+
+6. **Which one is TRUE for FIRD?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 158]**
+   A) Uses electromagnetic signal
+   B) Uses laser beam
+   C) Uses optical signal
+   D) Uses infrared
+
+7. **Flat file database is most useful for ________.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 163]**
+   A) Large scale users
+   B) Banking
+   C) Small-group situation.
+   D) Chain stores
+
+8. **In database, a field is ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+   A) Label
+   B) Category of Information
+   C) Group of related records
+   D) Table of information
+
+## PL/SQL & Triggers (7)
 
 1. **What are the different events in Triggers?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 113]**
    a) Define, Create
@@ -1126,7 +1061,58 @@
    C) Close the cursor
    D) None of this
 
-## Database Connectivity (JDBC/ODBC)
+## Indexing & Query Optimization (6)
+
+1. **Which one make data access from a database faster?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) Indexing
+   (b) Normalization
+   (c) Denormalization
+   (d) All of the above
+   25. Priority Scheduling (Non-Preemptive) with No Arrival Time Consider the following set of processes with their burst times and priorities:
+   | Process | Burst Time (BT) | Priority |
+   |---|---|---|
+   | P1 | 10 | 3 |
+   | P2 | 1 | 1 |
+   | P3 | 2 | 4 |
+   | P4 | 1 | 5 |
+   | P5 | 5 | 2 |
+   Using Non-Preemptive Priority Scheduling (lower number = higher priority), what is the Average Turnaround Time (TAT)? **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) 10
+   (b) 8.6
+   (c) 12
+   (d) 9.2
+
+2. **Related records of the different relations can be stored on the same block using which file organization technique?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) Heap file organization
+   b) Sequential file organization
+   c) Hashing file organization
+   d) Multi-table Clustering file organization
+
+3. **Which of the following is correct for the Create index command?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) Insert index index_name on table_name
+   b) Insert index index_name on database_name;
+   c) Create index index_name on database_name;
+   d) Create index index_name on table_name;
+
+4. **Database index speeds up-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) Select queries
+   b) Where clauses
+   c) Update query
+   d) Both a and b
+
+5. **Which of the following index is automatically created by the database server when an object is created?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) Implicit
+   b) Single column
+   c) Unique
+   d) composite
+
+6. **Related records of the different relations can be stored on the same block using which file organization technique?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) Heap file organization
+   b) Sequential file organization
+   c) Hashing file organization
+   d) Clustering file organization
+
+## Database Connectivity (JDBC/ODBC) (5)
 
 1. **Embedded SQL is which of the following?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
    a) Hard-coded SQL statements in a program language such as Java.
@@ -1158,7 +1144,7 @@
    c. Class.callFunc("JdbcOdbcDriver")
    d. Class.Name.init("sun.jdbc.odbc.JdbcOdbcDriver")
 
-## Concurrency Control & Locking
+## Concurrency Control & Locking (5)
 
 1. **Which of the following is not a factor in determining the concurrency control behavior of SQL Server?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 117]**
    a) Lock level
@@ -1189,3 +1175,17 @@
    B) Insert
    C) Read
    D) Update
+
+## SQL Joins (2)
+
+1. **What type of join in needed when you wish to include rows that do not have matching values?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) Equal join
+   b) Natural join
+   c) Outer join
+   d) Inner join
+
+2. **Which type of JOIN operation in SQL command is used to returns that do not have matching values?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
+   a) Natural Join
+   b) EQUI Join
+   c) Outer Join
+   d) All of the above

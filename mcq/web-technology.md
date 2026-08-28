@@ -3,19 +3,19 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML, XML & Web Fundamentals](#html-xml--web-fundamentals) | 15 |
-| 2 | [PHP & Server-Side](#php--server-side) | 9 |
-| 3 | [Scripting & JavaScript](#scripting--javascript) | 8 |
-| 4 | [Web Services & APIs](#web-services--apis) | 6 |
-| 5 | [Full Stack & Web Servers](#full-stack--web-servers) | 5 |
-| 6 | [HTTP & Status Codes](#http--status-codes) | 5 |
-| 7 | [CSS & Styling](#css--styling) | 1 |
+| 1 | [HTML, XML & Web Fundamentals](#html-xml--web-fundamentals-15) | 15 |
+| 2 | [PHP & Server-Side](#php--server-side-9) | 9 |
+| 3 | [Scripting & JavaScript](#scripting--javascript-8) | 8 |
+| 4 | [Web Services & APIs](#web-services--apis-6) | 6 |
+| 5 | [Full Stack & Web Servers](#full-stack--web-servers-5) | 5 |
+| 6 | [HTTP & Status Codes](#http--status-codes-5) | 5 |
+| 7 | [CSS & Styling](#css--styling-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## HTML, XML & Web Fundamentals
+## HTML, XML & Web Fundamentals (15)
 
 1. **Which of the following is the root tag of the HTML document?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
    a) <body>
@@ -109,7 +109,7 @@
    c. XML was designed for portable phone
    d. XML is simpler to learn than html
 
-## PHP & Server-Side
+## PHP & Server-Side (9)
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
    a) age
@@ -171,117 +171,7 @@
    c. if(1=!5)
    d. if<>5
 
-## CSS & Styling
-
-1. **Which CSS property is used to set the thickness or boldness of the text?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**
-   a) font-size
-   b) font-style
-   c) font-weight
-   d) font-family
-
-## Full Stack & Web Servers
-
-1. **Which of the following is not a web server?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
-   (a) Apache tomcat
-   (b) PHP
-   (c) Jetty
-   (d) Tornado
-
-2. **What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
-   a) A Java application
-   b) A Java applet
-   c) A Java servlet
-   d) None of the above is correct
-
-3. **Word Press can be called as ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
-   A) Static website
-   B) Dynamic website
-   C) Content Managed website
-   D) E-Commerce website
-
-4. **What type of system is Cisco mail platform?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
-   a. Linux
-   b. MAC
-   c. Windows
-   d. Atari
-
-5. **Where the application server is installed for the web server?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 269]**
-   a. Cisco MCS with cisco-based Windows operating system
-   b. Cisco MCS with cisco-based Unix operating system
-   c. Cisco MCS with cisco-based Linux operating system
-   d. Cisco MCS with cisco-based MAC operating system
-
-## HTTP & Status Codes
-
-1. **What does HTTP Status Code 500 indicate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
-   (a) Bad Request
-   (b) Unauthorized Access
-   (c) Internal Server Error
-   (d) Not Found
-
-2. **When we browse internet, browser store some data in the computer. We are talking about-** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
-   a. Session
-   b. File
-   c. Memory
-   d. Cookie
-
-3. **While browsing, internet browser stores some data in the computer. Which is called by?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
-   A) Session
-   B) File
-   C) Memory
-   D) Cookie
-
-4. **Programs that is automatically loaded and operates as a part of browser ----** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
-   A) Plug in
-   B) Add ones
-   C) Widgets
-   D) Utilities
-
-5. **Which of the following statements is true regarding Cookies?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
-   A) It is stored in web-client
-   B) It is stored in server
-   C) Each browsing time cookies become reset
-   D) It is client-side program
-
-## Web Services & APIs
-
-1. **Between a client and a web server, which of the following used for inspecting the data that is sent from the client to the web server and blocking attacks such as SQL injection?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
-   (a) Cluster configuration
-   (b) Load balancing function
-   (c) SSL-VPN function
-   (d) WAF
-
-2. **Which one of the following statements with respect to REST API is false?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
-   (a) A REST API would use a GET request to retrieve a record
-   (b) A REST API would use a DELETE request to delete a record
-   (c) The operations in a REST API can be called from any HTTP client
-   (d) None of the above statements is false
-
-3. **Which is the lightweight message format?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
-   a) XML
-   b) JSON
-   c) SQL
-   d) HTML
-
-4. **Which one is modern light weight message exchange format?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
-   A) JSON
-   B) XML
-   C) MX
-   D) HTML
-
-5. **Which one is modern lightweight message exchange format?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 224]**
-   A) JSON
-   B) MX
-   C) HTML
-   D) XML
-
-6. **Which one is modern lightweight message exchange format?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
-   A) XM
-   B) MX
-   C) HTML
-   D) JSON (JavaScript Object Notation)
-
-## Scripting & JavaScript
+## Scripting & JavaScript (8)
 
 1. **Where can JavaScript code be placed in an html page?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
    A) <head>
@@ -330,3 +220,113 @@
    b. <javascript>
    c. <script>
    d. <js>
+
+## Web Services & APIs (6)
+
+1. **Between a client and a web server, which of the following used for inspecting the data that is sent from the client to the web server and blocking attacks such as SQL injection?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
+   (a) Cluster configuration
+   (b) Load balancing function
+   (c) SSL-VPN function
+   (d) WAF
+
+2. **Which one of the following statements with respect to REST API is false?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+   (a) A REST API would use a GET request to retrieve a record
+   (b) A REST API would use a DELETE request to delete a record
+   (c) The operations in a REST API can be called from any HTTP client
+   (d) None of the above statements is false
+
+3. **Which is the lightweight message format?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   a) XML
+   b) JSON
+   c) SQL
+   d) HTML
+
+4. **Which one is modern light weight message exchange format?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) JSON
+   B) XML
+   C) MX
+   D) HTML
+
+5. **Which one is modern lightweight message exchange format?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 224]**
+   A) JSON
+   B) MX
+   C) HTML
+   D) XML
+
+6. **Which one is modern lightweight message exchange format?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+   A) XM
+   B) MX
+   C) HTML
+   D) JSON (JavaScript Object Notation)
+
+## Full Stack & Web Servers (5)
+
+1. **Which of the following is not a web server?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) Apache tomcat
+   (b) PHP
+   (c) Jetty
+   (d) Tornado
+
+2. **What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) A Java application
+   b) A Java applet
+   c) A Java servlet
+   d) None of the above is correct
+
+3. **Word Press can be called as ________** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+   A) Static website
+   B) Dynamic website
+   C) Content Managed website
+   D) E-Commerce website
+
+4. **What type of system is Cisco mail platform?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Linux
+   b. MAC
+   c. Windows
+   d. Atari
+
+5. **Where the application server is installed for the web server?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 269]**
+   a. Cisco MCS with cisco-based Windows operating system
+   b. Cisco MCS with cisco-based Unix operating system
+   c. Cisco MCS with cisco-based Linux operating system
+   d. Cisco MCS with cisco-based MAC operating system
+
+## HTTP & Status Codes (5)
+
+1. **What does HTTP Status Code 500 indicate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
+   (a) Bad Request
+   (b) Unauthorized Access
+   (c) Internal Server Error
+   (d) Not Found
+
+2. **When we browse internet, browser store some data in the computer. We are talking about-** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+   a. Session
+   b. File
+   c. Memory
+   d. Cookie
+
+3. **While browsing, internet browser stores some data in the computer. Which is called by?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) Session
+   B) File
+   C) Memory
+   D) Cookie
+
+4. **Programs that is automatically loaded and operates as a part of browser ----** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 256]**
+   A) Plug in
+   B) Add ones
+   C) Widgets
+   D) Utilities
+
+5. **Which of the following statements is true regarding Cookies?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 258]**
+   A) It is stored in web-client
+   B) It is stored in server
+   C) Each browsing time cookies become reset
+   D) It is client-side program
+
+## CSS & Styling (1)
+
+1. **Which CSS property is used to set the thickness or boldness of the text?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**
+   a) font-size
+   b) font-style
+   c) font-weight
+   d) font-family

@@ -3,16 +3,16 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [MS Excel](#ms-excel) | 10 |
-| 2 | [MS Word](#ms-word) | 5 |
-| 3 | [MS PowerPoint](#ms-powerpoint) | 3 |
-| 4 | [MS Access](#ms-access) | 1 |
+| 1 | [MS Excel](#ms-excel-10) | 10 |
+| 2 | [MS Word](#ms-word-5) | 5 |
+| 3 | [MS PowerPoint](#ms-powerpoint-3) | 3 |
+| 4 | [MS Access](#ms-access-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## MS Excel
+## MS Excel (10)
 
 1. **Which is the correct Addition formula in MS Excel?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
    (a) sum(C9:C12)
@@ -74,7 +74,7 @@
    c. Access
    d. PowerPoint
 
-## MS Word
+## MS Word (5)
 
 1. **What is the range of Font Size available in Font Size drop down toolbar?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
    A. From 10 to Large 70
@@ -106,7 +106,7 @@
    c. Click X button on title bar
    d. Press Alt+F4
 
-## MS PowerPoint
+## MS PowerPoint (3)
 
 1. **Which file format can be added to a PowerPoint show?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**
    a) .jpg
@@ -126,7 +126,7 @@
    c. Selecting
    d. Moving
 
-## MS Access
+## MS Access (1)
 
 1. **Which of the following is not a type of Microsoft Access Database object?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 274]**
    a. Table

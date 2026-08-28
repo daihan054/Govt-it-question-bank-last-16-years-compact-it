@@ -3,19 +3,19 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Java Programming](#java-programming) | 48 |
-| 2 | [Polymorphism & Overloading](#polymorphism--overloading) | 16 |
-| 3 | [OOP Concepts & Principles](#oop-concepts--principles) | 11 |
-| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers) | 7 |
-| 5 | [Inheritance](#inheritance) | 6 |
-| 6 | [Constructors & Destructors](#constructors--destructors) | 6 |
-| 7 | [Exception Handling](#exception-handling) | 6 |
+| 1 | [Java Programming](#java-programming-48) | 48 |
+| 2 | [Polymorphism & Overloading](#polymorphism--overloading-16) | 16 |
+| 3 | [OOP Concepts & Principles](#oop-concepts--principles-11) | 11 |
+| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
+| 5 | [Inheritance](#inheritance-6) | 6 |
+| 6 | [Constructors & Destructors](#constructors--destructors-6) | 6 |
+| 7 | [Exception Handling](#exception-handling-6) | 6 |
 
 <!-- TOC END -->
 
 ---
 
-## Java Programming
+## Java Programming (48)
 
 1. **Which of the following statements about abstract classes and interfaces in Java is correct?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 7]**
    a) An abstract class can implement multiple interfaces.
@@ -357,44 +357,7 @@
    c. public void start()
    d. void run(int priority)
 
-## Encapsulation & Access Modifiers
-
-1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
-   (a) Using private access specifier
-   (b) Using classes in object-oriented programming
-   (c) Using getter and setter methods
-   (d) Using global variables
-
-2. **Which variable violates the principle of ecvapsulation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
-   **Ans:** Gobal variable
-
-3. **Which of the following is a technique for hiding the internal implementation details of an object?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
-   a) Encapsulation
-   b) Polymorphism
-   c) Inheritance
-   d) All of the above
-
-4. **What is the characteristic of OOP programming that allows binding data and methods to work as a unit?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
-   a. Inheritance
-   b. Encapsulation
-   c. Polymorphism
-   d. Projection
-
-5. **Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
-
-6. **In C++, the idea to hiding the details of how something is implemented is known as** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
-   A) inheritance
-   B) encapsulation
-   C) recursion
-   D) polymorphism
-
-7. **In C++, the idea to hiding the details of how something is implemented is known as-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
-   A) inheritance
-   B) polymorphism
-   C) recursion
-   D) encapsulation
-
-## Polymorphism & Overloading
+## Polymorphism & Overloading (16)
 
 1. **Which of the following operators should be preferred to overload as a global function rather than a member method?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
    (a) Postfix ++
@@ -489,7 +452,7 @@
    c. Two or more functions with same name but different number of parameter or type
    d. None of above
 
-## OOP Concepts & Principles
+## OOP Concepts & Principles (11)
 
 1. **Which of the following is not property of the Object Oriented Programming Concept?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
    a) Encapsulation
@@ -557,7 +520,44 @@
    C) Parent class
    D) Child class
 
-## Inheritance
+## Encapsulation & Access Modifiers (7)
+
+1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
+   (a) Using private access specifier
+   (b) Using classes in object-oriented programming
+   (c) Using getter and setter methods
+   (d) Using global variables
+
+2. **Which variable violates the principle of ecvapsulation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Gobal variable
+
+3. **Which of the following is a technique for hiding the internal implementation details of an object?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   a) Encapsulation
+   b) Polymorphism
+   c) Inheritance
+   d) All of the above
+
+4. **What is the characteristic of OOP programming that allows binding data and methods to work as a unit?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+   a. Inheritance
+   b. Encapsulation
+   c. Polymorphism
+   d. Projection
+
+5. **Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+
+6. **In C++, the idea to hiding the details of how something is implemented is known as** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 215]**
+   A) inheritance
+   B) encapsulation
+   C) recursion
+   D) polymorphism
+
+7. **In C++, the idea to hiding the details of how something is implemented is known as-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) inheritance
+   B) polymorphism
+   C) recursion
+   D) encapsulation
+
+## Inheritance (6)
 
 1. **When a class serves as base class for many derived classes, the situation is called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
    a) Polymorphism
@@ -592,7 +592,7 @@
    C) Using scope resolution operator
    D) Can't be accessed once overridden
 
-## Constructors & Destructors
+## Constructors & Destructors (6)
 
 1. **Which of the following is true regarding a constructor in Object Oriented Programming?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
    a) May consist of a return type
@@ -630,7 +630,7 @@
    C) No, return type can't differentiate two functions
    D) No, constructors don't have any return type
 
-## Exception Handling
+## Exception Handling (6)
 
 1. **The statements that allows you to define a block of code to be tested for exceptions while it is being executed.** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Try-cache

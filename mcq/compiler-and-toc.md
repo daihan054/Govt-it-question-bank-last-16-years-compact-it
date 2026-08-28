@@ -3,13 +3,13 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Automata & Formal Languages](#automata--formal-languages) | 6 |
+| 1 | [Automata & Formal Languages](#automata--formal-languages-6) | 6 |
 
 <!-- TOC END -->
 
 ---
 
-## Automata & Formal Languages
+## Automata & Formal Languages (6)
 
 1. **Complement of a regular set is-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
    (a) CFG

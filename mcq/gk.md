@@ -3,1089 +3,18 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Bangladesh Affairs](#bangladesh-affairs) | 175 |
-| 2 | [International Affairs](#international-affairs) | 103 |
-| 3 | [Everyday Science](#everyday-science) | 77 |
-| 4 | [Geography & Environment](#geography--environment) | 27 |
-| 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh) | 25 |
-| 6 | [Sports](#sports) | 20 |
+| 1 | [Bangladesh Affairs](#bangladesh-affairs-175) | 175 |
+| 2 | [International Affairs](#international-affairs-103) | 103 |
+| 3 | [Everyday Science](#everyday-science-77) | 77 |
+| 4 | [Geography & Environment](#geography--environment-27) | 27 |
+| 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
+| 6 | [Sports](#sports-20) | 20 |
 
 <!-- TOC END -->
 
 ---
 
-## Everyday Science
-
-1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. সিলভার ব্রোমাইড
-   খ. সিলভার ফ্লোরাইড
-   গ. সিলভার ক্লোরাইড
-   ঘ. অ্যামোনিয়াম ক্লোরাইড
-
-2. **কোন রঙের কাপে চা তাড়াতাড়ি ঠান্ডা হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. সাদা
-   খ. কালো
-   গ. লাল
-   ঘ. বেগুনি
-
-3. **কাঁদানে গ্যাসের অপর নাম কী?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. মিথেন
-   খ. ইথেন
-   গ. নাইট্রোজেন
-   ঘ. ক্লোরোপিকরিন
-
-4. **ওজোন স্তর বায়ুমণ্ডলের কোন স্তরে অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. ট্রপোমণ্ডল
-   খ. স্ট্র্যাটোমণ্ডল
-   গ. মেসোমণ্ডল
-   ঘ. তাপমণ্ডল
-
-5. **বিশ্বব্রহ্মাণ্ডে সবচেয়ে বেশি প্রাপ্ত গ্যাস কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. নাইট্রোজেন
-   খ. অক্সিজেন
-   গ. হাইড্রোজেন
-   ঘ. কার্বন ডাই-অক্সাইড
-
-6. **কোন যৌগটি কাপড়ের দাগ তুলতে সাহায্য করে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
-   ক. সোডিয়াম কার্বনেট
-   খ. সোডিয়াম বাই কার্বনেট
-   গ. ক্যালসিয়াম কার্বনেট
-   ঘ. ক্যালসিয়াম বাই কার্বনেট
-
-7. **রঙিন টেলিভিশন থেকে যে ক্ষতিকর রশি বের হয় তার নাম?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
-   ক. গামা রশি
-   খ. রঞ্জন রশ্মি
-   গ. বিটা রশ্মি
-   ঘ. কসমিক রশ্মি
-
-8. **কোন বোমায় মানুষ মরে, কিন্তু কোনো স্থাপনার ক্ষতি হয় না?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
-   ক. নাপাম
-   খ. নিউট্রন
-   গ. হাইড্রোজেন
-   ঘ. এটম
-
-9. **'Thalassemia' is a hereditary disease affecting-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) Lungs
-   (b) Blood
-   (c) Heart
-   (d) Kidney
-
-10. **কোন রংগুলিকে মৌলিক রং বলা হয়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
-   **Ans:** লাল, নীল, হলুদ
-
-11. **যে সর্বোচ্চ শ্রুতি সীমার উপরে মানুষ বধির হতে পারে তা হচ্ছে-** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
-   **Ans:** ১০৫ ডিবি
-
-12. **সূর্য গ্রহণের সময় কোনটি হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
-   a) পৃথিবী সূর্য ও চাঁদের মাঝে থাকে
-   b) পূর্ণিমা তিথি
-   c) চাঁদ পৃথিবী ও সূর্যের মাঝে থাকে
-   d) চাঁদ পৃথিবী ও চাঁদের মাঝে ৯০° কোন তৈরি করে।
-
-13. **ইদানিং সুপার ফুড বলে পরিচিত খাদ্য কি বৈশিষ্ট্য বহন করে?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
-   a) অনিদ্রা দূর করে
-   b) মানসিক চাপ দূর করে
-   c) উচ্চ রক্তচাপ নিয়ন্ত্রণ করে
-   d) এটি একটি প্রাকৃতিক প্রতিবিধান
-
-14. **পৃথিবী পৃষ্ঠের গড় তাপমাত্রা কত ডিগ্রী সেলসিয়াস?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
-   a) ১৪
-   b) ২৪
-   c) ১৮
-   d) ১৫
-
-15. **মহাবিশ্বে মৌলিক বল কয়টি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
-   (ক) ৩ টি
-   (খ) ৪ টি
-   (গ) ৫ টি
-   (ঘ) ৬ টি
-   **উত্তর: ক**
-
-16. **কোন রশ্মির ভেদন ক্ষমতা বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
-   (ক) আলফা
-   (খ) বিটা
-   (গ) গামা
-   (ঘ) সমগুলিরসমান
-   **উত্তর: গ**
-
-17. **পৃথিবীর কেন্দ্রে অভিকর্ষক ত্বরনের মান কত?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
-   (ক) শূন্য
-   (খ) 9.8\text{ m/s}^2
-   (গ) 4.9\text{ m/s}^2
-   (ঘ) অসীম
-   **উত্তর: ক**
-
-18. **কোনটি গ্রীন হাউজ গ্যাস নয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
-   (ক) \text{O}_2
-   (খ) \text{O}_3
-   (গ) \text{CO}_3
-   (ঘ) Water Vapor
-   **উত্তর: গ**
-
-19. **লেন্সের ক্ষমতার একক কী?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
-   (ক) ডায়াপটার
-   (খ) ডেসিবেল
-   (গ) ওয়াট
-   (ঘ) মিটার
-   **উত্তর: ক**
-
-20. **কোন বস্তুকে ভূ-পৃষ্ঠ হতে 19.6\text{m} উপর থেকে ছেড়ে পৌঁছাতে বস্তুটি কত সময় লাগবে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
-   (ক) 2\text{ sec}
-   (খ) 1\text{ sec}
-   (গ) \frac{1}{2}\text{ sec}
-   (ঘ) 9\text{ sec}
-   **উত্তর: ক**
-
-21. **কোনটি মুদ্রা ধাতু নয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
-   (ক) কপার
-   (খ) সিলভার
-   (গ) গোল্ড
-   (ঘ) রন্টজেনিয়াম
-   **উত্তর: ঘ**
-
-22. **CNG এর মূল উপাদান কী?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
-   (ক) অক্সিজেন
-   (খ) মিথেন
-   (গ) ইথেন
-   (ঘ) অকটেন
-   **উত্তর: খ**
-
-23. **তাপমাত্রা বাড়লে পরিবাহীর রোধ ---** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
-   (ক) বাড়ে
-   (খ) কমে
-   (গ) অপরিবর্তিত থাকে
-   (ঘ) শূন্যহয়
-   **উত্তর: খ**
-
-24. **কোন ধাতু কক্ষ তাপমাত্রার তরল থাকে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
-   (ক) রেডিয়াম
-   (খ) জিং
-   (গ) প্রোটনিয়াম
-   (ঘ) মারকারী
-   **উত্তর: ঘ**
-
-25. **পাকস্থলীতে কোন এসিড উৎপন্ন হয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
-   (ক) \text{HClO}
-   (খ) \text{HClO}_4
-   (গ) \text{HCl}
-   (ঘ) \text{HNO}_3
-   **উত্তর: গ**
-
-26. **কোন পদার্থ আন্তকণা আকর্ষণ বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
-   (ক) চিনি
-   (খ) পানি
-   (গ) তেল
-   (ঘ) অক্সিজেন
-   **উত্তর: ক**
-
-27. **কোনটির তরঙ্গ দৈর্ঘ্য বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
-   (ক) লাল আলো
-   (খ) নীল আলো
-   (গ) মাইক্রোওয়েভ
-   (ঘ) রেডিও ওয়েভ
-   **উত্তর: ক**
-
-28. **শুষ্ক বাতাসের তুলনায় ঘনত্ব :** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
-   (ক) বেশি
-   (খ) কম
-   (গ) সমান
-   (ঘ) কোন সম্পর্ক নেই
-   **উত্তর: ক**
-
-29. **স্থিতি শক্তি আছে কোন পদার্থের?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) তরল
-   (খ) বায়বীয়
-   (গ) অষ্ট্রীয়
-   (ঘ) কঠিন
-   **উত্তর: ঘ**
-
-30. **নীচের কোনটি মৃদু তড়িৎ বিশ্লেষ্য?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) \text{NaCl}
-   (খ) \text{H}_2\text{O}
-   (গ) \text{CaSO}_4
-   (ঘ) \text{H}_2\text{SO}_4
-   **উত্তর: ক**
-
-31. **২২ ক্যারেট স্বর্ণে কতভাগ স্বর্ণ থাকে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) 100%
-   (খ) 95.37%
-   (গ) 91.67%
-   (ঘ) 75%
-   **উত্তর: গ**
-
-32. **\text{H}_2\text{SO}_4-এ সালফারের জারণ সংখ্যা কত?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) +2
-   (খ) +4
-   (গ) +6
-   (ঘ) 0
-   **উত্তর: গ**
-
-33. **কোনটি শব্দের তীব্রতা লেভেল পরিমাপের একক?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) হার্টজ
-   (খ) ডেসিবেল
-   (গ) প্যাসকেল
-   (ঘ) টেসলা
-   **উত্তর: খ**
-
-34. **ক্রোমোসমের গঠন কি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) DNA
-   (খ) প্রোটিন
-   (গ) RAN
-   (ঘ) DNA এবং প্রোটিন
-   **উত্তর: ঘ**
-
-35. **Knot কিসের একক?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) গতিবেগ
-   (খ) দূরত্ব
-   (গ) গভীর
-   (ঘ) ত্বরণ
-   **উত্তর: ক**
-
-36. **পরম শূন্য তাপমাত্রায় অর্ধপরিবাহী কিসের মত আচরণ করে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) পরিবাহী
-   (খ) অপরিবাহী
-   (গ) অর্ধপরিবাহী
-   (ঘ) কোনটিই নয়
-   **উত্তর: গ**
-
-37. **রক্ত কোষের ক্যান্সারকে কি বলে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) লিওকেমিয়া
-   (খ) এনিমিয়া
-   (গ) Blood Clotting
-   (ঘ) অ্যানজিনা
-   **উত্তর: ক**
-
-38. **কোন কারণে শব্দের প্রতিধ্বনি সৃষ্টি হয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
-   (ক) প্রতিফলন
-   (খ) প্রতিসরণ
-   (গ) উপরিপাতন
-   (ঘ) সমপাতন
-   **উত্তর: ক**
-
-39. **সমতল দর্পণ ব্যবহৃত হয় কোন যন্ত্র তৈরিতে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
-   (ক) পেরিস্কোপ
-   (খ) টেলিস্কোপ
-   (গ) ক্যামেরা
-   (ঘ) মাইক্রোস্কোপ
-   **উত্তর: ক**
-
-40. **ব্রোঞ্জ কোন দুটি ধাতুর সংকর?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
-   (ক) অ্যালুমিনিয়াম ও টিন
-   (খ) কপার ও টিন
-   (গ) কপার ও গোল্ড
-   (ঘ) কপার ও সিলভার
-   **উত্তর: খ**
-
-41. **কোনটি পদার্থের জড়তা পরিমাপকের একক?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
-   (ক) ভর
-   (খ) গতিবেগ
-   (গ) তাপমাত্রা
-   (ঘ) কৌনিকবেগ
-   **উত্তর: ক**
-
-42. **১ লিটার বিশুদ্ধ পানিতে H এর পরিমাণ কত?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
-   (ক) 10^{-7}\text{ মোল}
-   (খ) 10^7\text{ মোল}
-   (গ) 10^{-6}\text{ মোল}
-   (ঘ) 10^{-5}\text{ মোল}
-   **উত্তর: ক**
-
-43. **কোনটি ক্ষার?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) \text{NH}_3
-   (খ) \text{NaSO}_4
-   (গ) \text{NaCl}
-   (ঘ) \text{HNO}_2
-   **উত্তর: ক**
-
-44. **কোন গ্যাসের ব্যাপন হার বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) \text{N}_2
-   (খ) \text{O}_2
-   (গ) \text{CO}_2
-   (ঘ) \text{H}_2
-   **উত্তর: ঘ**
-
-45. **কোনটি ভেক্টর রাশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) চাপ
-   (খ) ভরবেগ
-   (গ) কাজ
-   (ঘ) বল
-   **উত্তর: খ**
-
-46. **কোন পদার্থের আপেক্ষিক তাপ সর্বাধিক?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) বায়ু
-   (খ) পানি
-   (গ) লোহা
-   (ঘ) তামা
-   **উত্তর: খ**
-
-47. **প্রকৃতিতে প্রাপ্ত হাইড্রোজেনের আইসোটোপ কয়টি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) ২টি
-   (খ) ৩টি
-   (গ) ৪টি
-   (ঘ) ৫টি
-   **উত্তর: খ**
-
-48. **কত তাপমাত্রায় পানির ঘনত্ব বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) 10^\circ\text{C}
-   (খ) 4^\circ\text{C}
-   (গ) 85^\circ\text{C}
-   (ঘ) 100^\circ\text{C}
-   **উত্তর: খ**
-
-49. **ব্লিচিং পাউডারের সংকেত কোনটি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) \text{Ca(OCI)Cl}
-   (খ) \text{C}_6\text{H}_6\text{O}
-   (গ) \text{CaCO}_3
-   (ঘ) \text{HCl}
-   **উত্তর: ক**
-
-50. **কোন আলোতে সালোক সংশ্লেষণ ভালো হয় না?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) লাল
-   (খ) নীল
-   (গ) কমলা
-   (ঘ) হলুদ
-   **উত্তর: ঘ**
-
-51. **সূর্যের আলো পৃথিবীতে আসতে সময় লাগে প্রায়—** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
-   (ক) ১০ মিনিট
-   (খ) ৮ মিনিট
-   (গ) ১২ মিনিট
-   (ঘ) ১৪ মিনিট
-
-52. **প্রকৃতিতে সবচেয়ে শক্ত পদার্থ কোনটি?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
-   (ক) পিতল
-   (খ) ইস্পাত
-   (গ) গ্রানাইট
-   (ঘ) হীরা
-
-53. **গ্রিন হাউজ ইফেক্টের পরিপ্রেক্ষিতে বাংলাদেশের সবচেয়ে গুরুতর প্রত্যক্ষ ক্ষতি কী হবে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
-   (ক) বৃষ্টিপাত কমে যাবে
-   (খ) সাইক্লোনের প্রবণতা বাড়বে
-   (গ) উত্তাপ অনেক বেড়ে যাবে
-   (ঘ) নিম্নভূমি নিমজ্জিত হবে
-
-54. **আল্ট্রাভায়োলেট রশ্মি নিম্নের কোন রোগ সৃষ্টি করে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
-   (ক) এইডস
-   (খ) ব্রেন ক্যান্সার
-   (গ) ব্লাড ক্যান্সার
-   (ঘ) চর্ম ক্যান্সার
-
-55. **কোন পাখিকে 'অন্যপুষ্ট' বলা হয়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
-   (ক) কাক
-   (খ) কোকিল
-   (গ) কবুতর
-   (ঘ) কাকাতুয়া
-
-56. **কোলাজেন কী?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
-   (ক) একটি কার্বোহাইড্রেট
-   (খ) একটি প্রোটিন
-   (গ) একটি লিপিড
-   (ঘ) একটি নিউক্লিক এসিড
-
-57. **তেজস্ক্রিয়তার একক কি?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
-   (ক) রন্টজেন
-   (খ) কুরি
-   (গ) হেনরি
-   (ঘ) রেডিয়াম
-   **Ans: খ**
-
-58. **নিউক্লিয়ার রিয়েক্টর ব্যবহৃত কন্ট্রোল রড কি দিয়ে তৈরি? ক্যাডমিয়াম** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
-
-59. **পূর্ণ অভ্যন্তরীণ প্রতিফলন ঘটে যখন আলো-** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-
-60. **তেজস্ক্রিয়তার একক কি?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   (ক) রনজেন
-   (খ) কুরি
-   (গ) হেনরি
-   (ঘ) রেডিয়াম
-
-61. **Oncology কিসের সাথে জড়িত?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 61]**
-   (ক) চোখের গবেষণায়
-   (খ) ক্যান্সার গবেষণায়
-   (গ) হাড়ের সাথে জড়িত
-   (ঘ) হার্টের সাথে সম্পর্কিত
-
-62. **নিচের কোনটি সর্বোচ্চ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
-   (ক) ১ গিগাবাইট
-   (খ) ১০০ মেগাবাইট
-   (গ) ১০০০ মেগাবাইট
-   (ঘ) ১০০০০ মেগাবাইট
-
-63. **When a beam of light travels through media of two different densities, if the angle of incidence is greater than the critical angle, ____ occurs.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 103]**
-   (a) Refraction
-   (b) Reflection
-   (c) Incidence
-   (d) Criticism
-
-64. **বায়ুমণ্ডলের যে স্তরে বেতার তরঙ্গ প্রতিফলিত হয়-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
-   (a) স্ট্র্যাটোস্ফিয়ার
-   (b) ট্রপোস্ফিয়ার
-   (c) আয়নোস্ফিয়ার
-   (d) ওজোনস্তর
-
-65. **What is the brightest planet seen from Earth?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
-   a) Venus
-   b) Mars
-   c) Mercury
-   d) Jupiter
-
-66. **What is the noun of the extent Rover sent by NASA to the man?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-   a. Superior
-   b. Opporunity
-   c. Perseverance
-   d. Sprit
-
-67. **3\text{N} ও 4\text{N} মানের দুটি বল লম্বভাবে ক্রিয়া করলে লব্ধির মান কত?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
-   A. 2\text{N}
-   B. 3\text{N}
-   C. 5\text{N}
-   D. 7\text{N}
-
-68. **একটি তেজস্ক্রিয় মৌলের অর্ধায়ু ২০০ বছর। মৌলটির ৭৫% ক্ষয় হতে কত বছর লাগবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
-   A. 150
-   B. 300
-   C. 400
-   D. 450
-
-69. **If an atom loses an e- it will be turned into?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
-   a) Neutral
-   b) Anion
-   c) Proton
-   d) Cation
-
-70. **'Dry Ice' is produced from;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
-   ক. Oxygen
-   খ. Sulphur di oxide
-   গ. Nitrogen
-   ঘ. Carbon di oxide
-
-71. **DNA is found in;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
-   ক. Chromosome
-   খ. Lissomes
-   গ. Ribosome
-   ঘ. Galel Complex
-
-72. **কোনটি এন্টিবায়োটিক?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
-   ক. ইনসুলিন
-   খ. পেপসিন
-   গ. ইথিলিন
-   ঘ. পেনিসিলিন
-
-73. **What is the power required by a pump to draw 10 liters of water to a height of 10 meters, every second?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
-   A. 980J
-   B. 100 kw
-   C. 900 w
-   D. 960 kw
-
-74. **What kind of energy is stored in a stressed spring?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
-   A. Potential energy
-   B. Kinetic energy
-   C. Chemical Energy
-   D. thermal energy
-
-75. **Which time of the following properties of a body cannot be changed with an applied force?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
-   A. length
-   B. mass
-   C. shape
-   D. volume
-
-76. **How much force should be exerted on a steel wire of cross-sectional area 0.1\text{cm}^2 in order to double its length? (Y = 2 \times 10^{11}\text{ N/m}^2)** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
-   A. 2 \times 10^6\text{ N}
-   B. 2 \times 10^7\text{ N}
-   C. 2 \times 10^8\text{ N}
-   D. 2 \times 10^9\text{ N}
-
-77. **What is the angular momentum of the election in the lowest orbit of hydrogen atom?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
-   A. h
-   B. h/2
-   C. \text{h}/2\pi
-   D. 2\pi/\text{h}
-
-## International Affairs
-
-1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
-   ক. লাইবেরিয়া
-   খ. নামিবিয়া
-   গ. ভূটান
-   ঘ. সিয়েরা লিওন
-
-2. **ভূমধ্যসাগরকে লোহিত সাগরের সাথে যুক্ত করেছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. পানামা খাল
-   খ. সুয়েজ খাল
-   গ. বেরিং প্রণালি
-   ঘ. পক প্রণালি
-
-3. **জাতিসংঘের দাপ্তরিক ভাষা নয় কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. রুশ
-   খ. ফরাসি
-   গ. পর্তুগিজ
-   ঘ. আরবি
-
-4. **সর্বশেষ বিশ্বশান্তি সূচকে শীর্ষ দেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
-   ক. ডেনমার্ক
-   খ. ফিনল্যান্ড
-   গ. নরওয়ে
-   ঘ. আইসল্যান্ড
-
-5. **মার্কিন যুক্তরাষ্ট্রের কোন প্রেসিডেন্ট ১২ বছর ক্ষমতায় ছিলেন?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
-   ক. ফ্রাঙ্কলিন ডি রুজভেল্ট
-   খ. থিওডোর রুজভেল্ট
-   গ. উড্রো উইলসন
-   ঘ. জন এফ কেনেডি
-
-6. **Who are the Permanent members of the United Nations Security Council?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) China, Germany, Russia, United Kingdom, and United States
-   b) China, France, Japan, United Kingdom, and United States
-   c) China, France, Russia, United Kingdom, and United States
-   d) China, France, Russia, Germany, and United States
-
-7. **Who is the writer of "On Liberty"?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) Thomas Hobbes
-   b) John Stuart Mill
-   c) Jean-Jacques Rousseau
-   d) John Locke
-
-8. **How many members of NATO?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) 40
-   b) 32
-   c) 30
-   d) 35
-
-9. **Who is the founder of 'SpaceX'?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) Elon Musk
-   (b) Eric Yuan
-   (c) Ray Tomlinson
-   (d) Larry Page
-
-10. **Martin Cooper is known for his invention of—** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) Digital Camera
-   (b) X-ray
-   (c) Solar Energy
-   (d) Mobile Phone
-
-11. **What is the name of the data center that EU unveils to probe crimes in Ukraine?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) Tulip
-   (b) Metro
-   (c) Game Changer
-   (d) None of these
-
-12. **Who won Nobel Peace prize in 2024?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) David Baker
-   (b) John Jumper
-   (c) Nihon Hidankyo
-   (d) Gary Ruvkun
-
-13. **Strasbourg belongs to which country?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) France
-   (b) Germany
-   (c) Canada
-   (d) Russia
-
-14. **The Mona Lisa portrait was painted by Leonardo da Vinci in the-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
-   (a) 15th century
-   (b) 14th century
-   (c) 16th century
-   (d) 17th century
-
-15. **Who wrote the book 'Politics'?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
-   a) Aristotle
-   (b) Socrates
-   (c) Plato
-   (d) Pythagoras
-
-16. **Pythagoras was a Greek-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
-   (a) Philosopher
-   (b) Mathematician
-   (c) Accountant
-   (d) a & b
-
-17. **What is the name of American built spacecraft landed in the lunar's southern polar region of February 22, 2024?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
-   (a) Apollo-17
-   (b) Odysseus
-   (c) Chandrayaan-3
-   (d) Luna-25
-
-18. **OPEC থেকে কোন দেশ নিজেকে প্রত্যাহার করে নেয়?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
-   a) নাইজেরিয়া
-   b) লিবিয়া
-   c) ভেনিজুয়েলা
-   d) কাতার
-
-19. **World environment day is celebrated on ______ of every year.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
-   (a) 5^{\text{th}} June
-   (b) 6^{\text{th}} June
-   (c) 2^{\text{nd}} June
-   (d) 1^{\text{st}} June
-
-20. **Which country is known as the 'Rainbow nation'?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
-   (a) Chaina
-   (b) South Korea
-   (c) Japan
-   (d) South Africa
-
-21. **Which is the third largest economic country?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
-   (a) United States
-   (b) Japan
-   (c) Chaina
-   (d) Kolkata
-
-22. **The lead character in the film 'The Bandit Queen' has been played by –** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
-   (a) Rupa Ganguly
-   (b) Seema Biswas
-   (c) Pratiba Sinha
-   (d) Shabana Azmi
-
-23. **ইসলামি সংস্থা ওআইসি এর সদর দপ্তর কোথায়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
-   **Ans:** জেদ্দায়
-
-24. **পারস্য উপসাগরের আঞ্চলিক জোটের নাম কি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
-   **Ans:** জিসিসি
-
-25. **ট্রাফালগার স্কয়ার কোথায় অবস্থিত?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
-   **Ans:** লন্ডন
-
-26. **Who is the name current China President?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 28]**
-   (a) Xi Jinping
-   (b) Moon Jae-in
-   (c) Yoshihide Suga
-   (d) Jiang Zemin
-
-27. **What is the name of capital city of Ukraine?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 28]**
-   (a) Kyiv
-   (b) Moscow
-   (c) Paris
-   (d) Helsinki
-
-28. **Which is the name of Sri Lanka currency?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 28]**
-   (a) Rufiyaa
-   (b) Sri Lankan rupee
-   (c) Rupee
-   (d) Dollar
-
-29. **Who is the CEO of Tesla company?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
-   (a) Tim Cook
-   (b) Elon Musk
-   (c) Sundar Pichai
-   (d) Mark Zuckerberg
-
-30. **Who is not space Agency?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
-   (a) JAXA
-   (b) SPACE
-   (c) CSA
-   (d) Roscosmos
-
-31. **The Summer Olympic 2024 held on ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
-   (a) Paris
-   (b) Los Angeles
-   (c) Rio de Janeiro
-   (d) Brisbane
-
-32. **What's was the central place of recent Egyptian Protest?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
-   (a) Azadi Square
-   (b) Tahrir Square
-   (c) Taqdeer Square
-   (d) Central square
-
-33. **তুরস্ক ও সিরিয়ায় ভূমিকম্পের মাত্রা কত?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
-   **Ans:** ৭.৮
-
-34. **ন্যাশনাল কংগ্রেস কত সালে গঠিত হয়?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
-   **Ans:** ১৮৮৫ সালে
-
-35. **World Trade Organization (WTO)- এর সদর দপ্তর কোথায় অবস্থিত?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
-   **Ans:** জেনেভা
-
-36. **What is the name of Russian foreign minister?** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 73]**
-   (a) Sergey Lavrov
-   (b) Ivar Igor
-   (c) Sergei Shoigu
-   (d) Dmytro Khuleba
-   **Ans: a**
-
-37. **দক্ষিণ এশিয়ার দীর্ঘতম টাওয়ার কোথায় অবস্থিত? **Ans: কলম্বো**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 71]**
-
-38. **International Day for Total Elimination of Nuclear Weapons 2022? **Ans: ২৬ সেপ্টেম্বর**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
-
-39. **আন্তর্জাতিক ট্রান্সলেশন দিবসের থিম কি? **Ans: A world without Barriers**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
-
-40. **নোবেল পুরস্কার ২০২২, সাহিত্যে নোবেল কে পেয়েছেন **Ans: এনি আরনেল**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
-
-41. **MoTiV কোন দেশের প্রতিষ্ঠান?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
-   উত্তর: উগান্ডা
-
-42. **SDG এর Goal কয়টি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
-   উত্তর: ১৭ টি
-
-43. **NATO কোন বছর প্রতিষ্ঠিত হয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
-   (ক) ১৯৪৯
-   (খ) ১৯৫৪
-   (গ) ১৯৫৫
-   (ঘ) ১৯৫৬
-   **উত্তর: ক**
-
-44. **কোন দেশটির ভেটো ক্ষমতা নেই?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
-   (ক) যুক্তরাষ্ট্র
-   (খ) যুক্তরাজ্য
-   (গ) রাশিয়া
-   (ঘ) জার্মানি
-   **উত্তর: ঘ**
-
-45. **কোন দেশটি Group of Seven (G-7) এর সদস্য নয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) কানাডা
-   (খ) ইতালি
-   (গ) সুইডেন
-   (ঘ) জাপান
-   **উত্তর: গ**
-
-46. **এশীয় উন্নয়ন ব্যাংক এর সদর দপ্তর কোথায়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
-   (ক) হংকং
-   (খ) সিঙ্গাপুর
-   (গ) ম্যানিলা
-   (ঘ) ব্যাংকক
-   **উত্তর: গ**
-
-47. **জনসংখ্যার ভিত্তিতে সবচেয়ে বড় মুসলিম দেশ কোনটি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 70]**
-   (ক) বাংলাদেশ
-   (খ) ইন্দোনেশিয়া
-   (গ) মালয়েশিয়া
-   (ঘ) সৌদি আরব
-   **উত্তর: খ**
-
-48. **ভারতের কোন রাজ্য Seven Sisters এর অন্তর্ভুক্ত নয়?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
-   (ক) হিমাচল
-   (খ) অরুণাচল
-   (গ) নাগাল্যান্ড
-   (ঘ) সিকিম
-
-49. **CIRDAP এর সদর দপ্তর কোথায় অবস্থিত?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
-   (ক) ব্যাংকক
-   (খ) রাওয়ালপিন্ডি
-   (গ) ঢাকা
-   (ঘ) নয়াদিল্লী
-
-50. **মানব উন্নয়ন সূচক (HDI) কোন সংস্থা প্রকাশ করে?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
-   (ক) UNDP
-   (খ) ILO
-   (গ) UNEPA
-   (ঘ) ICJ
-
-51. **পৃথিবীর সর্বাপেক্ষা জ্বালানি তেল উৎপাদনকারী দেশ কোনটি?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
-   (ক) সৌদি আরব
-   (খ) যুক্তরাষ্ট্র
-   (গ) সংযুক্ত আরব আমিরাত
-   (ঘ) ইরান
-
-52. **জাতিসংঘের কোন অঙ্গ সংস্থা কোনো দেশের LDC থেকে Developing Country এবং Developing Country থেকে Developed Country এর বিষয়টি নির্ধারণ করে?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
-   (ক) সাধারণ পরিষদ
-   (খ) নিরাপত্তা পরিষদ
-   (গ) জাতিসংঘ
-   (ঘ) অর্থনৈতিক ও সামাজিক পরিষদ
-
-53. **ফ্রান্সের সম্রাট নেপোলিয়ান মারা যান কোথায়?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
-   (ক) ওয়াটার লু-তে
-   (খ) ভার্সাইন নগরীতে
-   (গ) সেন্ট হেলেনা দ্বীপে
-   (ঘ) দ্বীপ এলবাইতে
-
-54. **গুড ফ্রাইডে চুক্তি কোন দেশের শান্তির জন্য হয়েছিল?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 58]**
-   (ক) ডেনমার্ক
-   (খ) নরওয়ে
-   (গ) আয়ারল্যান্ড
-   (ঘ) উত্তর কোরিয়া
-
-55. **গ্রীনল্যান্ড কোন দেশ দ্বারা শাসিত অথবা নিয়ন্ত্রিত?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 58]**
-   (ক) যুক্তরাষ্ট্র
-   (খ) যুক্তরাজ্য
-   (গ) ডেনমার্ক
-   (ঘ) ফিনল্যান্ড
-
-56. **প্লেগ মহামারী/ব্ল্যাক ডেথ শুরু হয় কোথায়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
-   (ক) স্পেন
-   (খ) ফ্রান্স
-   (গ) ইতালী
-   (ঘ) রাশিয়া
-
-57. **বর্তমান বিশ্বের কোন দেশটির সংবিধানকে "শান্তি সংবিধান" বলা হয়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
-   (ক) সুইজারল্যান্ড
-   (খ) সুইডেন
-   (গ) জার্মান
-   (ঘ) জাপান
-
-58. **বিশ্বে প্রথম দেশ হিসেবে করোনা গণটিকা প্রদান কার্যক্রম শুরু করে কোন দেশ?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
-   (ক) যুক্তরাজ্য
-   (খ) যুক্তরাষ্ট্র
-   (গ) জার্মানী
-   (ঘ) ইতালী
-
-59. **জনসংখ্যা বৃদ্ধির হার সর্বনিম্ন কোন দেশ?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
-   (ক) বুলগেরিয়া
-   (খ) সোমালিয়া
-   (গ) লাটভিয়া
-   (ঘ) লিথুনিয়া
-
-60. **এলিসি প্রাসাদ কোন দেশের প্রেসিডেন্টের বাসভবন?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
-   (ক) রাশিয়া
-   (খ) ফ্রান্স
-   (গ) বলিভিয়া
-   (ঘ) ব্রাজিল
-
-61. **ওয়াটার লু কোথায় অবস্থিত?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
-   (ক) বেলজিয়াম
-   (খ) ইংল্যান্ড
-   (গ) ইতালী
-   (ঘ) রাশিয়া
-
-62. **জাপান ও রাশিয়ার মধ্যকার বিরোধপূর্ণ দ্বীপটির নাম কী?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
-   (ক) কুরিল দ্বীপপুঞ্জ
-   (খ) গ্রেট বেরিয়ার দ্বীপ
-   (গ) মার্শাল দ্বীপ
-   (ঘ) দিয়াগো গর্সিয়া দ্বীপ
-
-63. **"Impossible is a word to be found in a fools dictionary" উক্তিটি কার?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
-   (ক) Plato
-   (খ) Nepoleon
-   (গ) Che Guevara
-   (ঘ) Einstein
-
-64. **মহেঞ্জোদারো কোন সভ্যতার অন্তর্ভুক্ত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
-   (ক) রোমান
-   (খ) সিন্ধু
-   (গ) গ্রিক
-   (ঘ) আফগানিস্তান
-   **Ans: খ**
-
-65. **হরপ্পা মহেনজোদারো কোন সভ্যতার অন্তর্ভুক্ত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) রোমান
-   (খ) সিন্ধু
-   (গ) গ্রিক
-   (ঘ) আফগানিস্তান
-
-66. **Which country has Bengali as official language in Africa?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
-   (a) South Africa
-   (b) Sierra leone
-   (c) Ghana
-   (d) Somalia
-   **Ans: b**
-
-67. **ISO কিসের সাথে সম্পর্কিত?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
-   (ক) অ্যাপল
-   (খ) এনড্রয়েড
-   (গ) নোকিয়া
-   (ঘ) গুগল
-
-68. **জাতিসংঘের কোন সংস্থাটি রিফিউজি নিয়ে কাজ করে?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
-   (ক) WHO
-   (খ) UNDP
-   (গ) UNHCR
-   (ঘ) UNFCC
-
-69. **Nassau is the capital city of–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
-   a) The Bahamas
-   b) The Nicobar Islands
-   c) Madagascar
-   d) The Cubies
-
-70. **Which country gave the 'Statue of Liberty to the United States of America as a gift?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
-   a) France
-   b) Great Britain
-   c) Germany
-   d) Russia
-
-71. **When is the ‘International Day of the Victims of Enforced Disappearances’ observed?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
-   a) August 15
-   b) August 30
-   c) September 15
-   d) September 30
-
-72. **Which countries are jointly called the 'Golden Crescent'?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
-   a) Afghanistan, Iran and Pakistan
-   b) Afghanistan, India and Pakistan
-   c) Iraq, Lebanon and Syria
-   d) Thailand, Laos and Myanmar
-
-73. **স্টিফেন হকিং একজন-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
-   a) দার্শনিক
-   b) পদার্থবিদ
-   c) কবি
-   d) রসায়নবিদ
-
-74. **চীনের জিনজিয়াং প্রদেশে বসবাসকারী প্রধান মুসলিম সম্প্রদায়ের নাম কি?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
-   a) তুর্কমেন
-   b) উইঘুর
-   c) কাজখ
-   d) তাজিক
-
-75. **বিশ্বব্যাংক সংশ্লিষ্ট কোন সংস্থাটি স্বল্প আয়ের উন্নয়নশীল দেশে বেসরকারি খাতে আর্থিক সহায়তা ও উপদেশ দিয়ে থাকে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
-   a) IBRD
-   b) MIGA
-   c) IFC
-   d) ICSID
-
-76. **সামন্তবাদ কোন ইউরোপীয় দেশে প্রথম সূত্রপাত হয়?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
-   (a) ইতালি
-   (b) ইংল্যান্ড
-   (c) ফ্রান্স
-   (d) রাশিয়া
-
-77. **ধরিত্রী সম্মেলন কোথায় অনুষ্ঠিত হয়?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
-   (a) আফ্রিকার জোহানেসবার্গ
-   (b) ব্রাজিলের রিওডিজেনিরোতে
-   (c) ইতালির রোমে
-   (d) যুক্তরাষ্ট্রের ওয়াশিংটন ডিসিতে
-
-78. **'কালাপানি' কোন দুই রাষ্ট্রের মধ্যে অমীমাংসিত ভূখণ্ড?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
-   (a) ভারত ও নেপাল
-   (b) পাকিস্তান ও চীন
-   (c) ভূটান ও ভারত
-   (d) বাংলাদেশ ও ভারত
-
-79. **The name of the parliament of USA is?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
-   a) Congress
-   b) House of Commons
-   c) White House
-   d) Capital
-
-80. **Which of the following organization is concerned for the climate change?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
-   a) OIC
-   b) MIGA
-   c) IPCC
-   d) WMO
-
-81. **The owner of the Greenland is?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
-   a) Denmark
-   b) Netherlands
-   c) Japan
-   d) Russia
-
-82. **Theme of AIDS day of 2021 is?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
-   a) "End Inequalities, End AIDS"
-   b) "Global solidarity, resilient HIV services."
-   c) Communities Make the Difference
-   d) My health, My Right
-
-83. **Who is the new secretary General of BIMSTEC?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-   a. Saroj Chavanaviraj (Thailand)
-   b. Summit Nakandala (Sri Lanka)
-   c. M. Shohidul Islam (Bangladesh)
-   d. Tenzin Lekphel (Bhutan)
-
-84. **Who is the writer of the book named A Promise Land?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-   a. Joe Biden
-   b. Donald Trump
-   c. Bill Clinton
-   d. Barack Obama
-
-85. **According to the ‘Sustainable Development goals (SFG) Index 2020’ Bangladesh has been ranked ________** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-   a. 153th
-   b. 109th
-   c. 104th
-   d. 123th
-
-86. **Which word is named as “Word of the year 2020” in Cambridge Dictionary?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-   a. Lockdown
-   b. Quaranitine
-   c. Pandemic
-   d. Sanitizer
-
-87. **Which of the following is the Scandinavian Country?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-   a. Norway
-   b. Sweden
-   c. Netherland
-   d. Denmark
-
-88. **Where did Leandso dis Vind draw his farmers from “The Last Supper”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-   a. Rome
-   b. Milan
-   c. Venice
-   d. Florence
-
-89. **Which of the SDG google speaks about women empowerment?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-   a. SDG 5
-   b. SDG 3
-   c. SDG 9
-   d. SDG 8
-
-90. **What was the theme for the 6th BRICS-Youth summit 2020?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-
-91. **Who was the director of the film “Let there be Light”?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
-   ক. Zahir Raihan
-   খ. Amjad Hossain
-   গ. Khan Ataur Rohman
-   ঘ. Humayan Ahmed
-
-92. **Which country first gave recognition to Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
-   ক. India
-   খ. Russia
-   গ. Bhutan
-   ঘ. Nepal
-
-93. **Omicron, the new variant of COVID-19 is originated from;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
-   ক. China
-   খ. UK
-   গ. America
-   ঘ. South Africa
-
-94. **Country participated as "Observer"in "Victory Day Parade 2021";** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
-   ক. USA
-   খ. Russia
-   গ. India
-   ঘ. Bhutan
-
-95. **The Nobel Laureate Adbulrazak Gurnah is from;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
-   ক. Turkey
-   খ. Malaysia
-   গ. Indonesia
-   ঘ. Tanzania
-
-96. **২০২০ সালে শান্তিতে নোবেল পুরস্কার লাভ করে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
-   (ক) ইউনেস্কো
-   (খ) বিশ্ব খাদ্য কর্মসূচি
-   (গ) ইউনিসেফ
-   (ঘ) নিরাপত্তা পরিষদ
-
-97. **বিশ্বস্বাস্থ্য সংস্থার (WHO) সদর দপ্তর কোথায়?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
-   (ক) রোম
-   (খ) প্যারিস
-   (গ) হেগ
-   (ঘ) জেনেভা
-
-98. **রাখাইনের পূর্ব নাম কী?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
-   (ক) রেঙ্গুন
-   (খ) আরাকান
-   (গ) কাচিন
-   (ঘ) শান
-
-99. **Which country is called "Thunderbolt of Asia"?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
-   (a) Nepal
-   (b) Sri Lanka
-   (c) Bhutan
-   (d) Maldives
-
-100. **How many countries are members of Commonwealth?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
-   (a) 47
-   (b) 51
-   (c) 54
-   (d) 61
-
-101. **The headquarter of World Economic Forum is situated in-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
-   (a) Cologny
-   (b) Geneva
-   (c) Davos
-   (d) San Francisco
-
-102. **The term of a non-permanent member of the UN security council is-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
-   (a) 2 years
-   (b) 3 years
-   (c) 5 years
-   (d) 7 years
-
-103. **Which one of the following is not an official language of United Nations?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
-   (a) Arabic
-   (b) Chinese
-   (c) Portuguese
-   (d) Spanish
-
-## Bangladesh Affairs
+## Bangladesh Affairs (175)
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
    ক. ভোলা, সদর
@@ -2082,7 +1011,1078 @@
    C. রোবটি
    D. জেনেটিক্স
 
-## Geography & Environment
+## International Affairs (103)
+
+1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
+   ক. লাইবেরিয়া
+   খ. নামিবিয়া
+   গ. ভূটান
+   ঘ. সিয়েরা লিওন
+
+2. **ভূমধ্যসাগরকে লোহিত সাগরের সাথে যুক্ত করেছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. পানামা খাল
+   খ. সুয়েজ খাল
+   গ. বেরিং প্রণালি
+   ঘ. পক প্রণালি
+
+3. **জাতিসংঘের দাপ্তরিক ভাষা নয় কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. রুশ
+   খ. ফরাসি
+   গ. পর্তুগিজ
+   ঘ. আরবি
+
+4. **সর্বশেষ বিশ্বশান্তি সূচকে শীর্ষ দেশ কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
+   ক. ডেনমার্ক
+   খ. ফিনল্যান্ড
+   গ. নরওয়ে
+   ঘ. আইসল্যান্ড
+
+5. **মার্কিন যুক্তরাষ্ট্রের কোন প্রেসিডেন্ট ১২ বছর ক্ষমতায় ছিলেন?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 6]**
+   ক. ফ্রাঙ্কলিন ডি রুজভেল্ট
+   খ. থিওডোর রুজভেল্ট
+   গ. উড্রো উইলসন
+   ঘ. জন এফ কেনেডি
+
+6. **Who are the Permanent members of the United Nations Security Council?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) China, Germany, Russia, United Kingdom, and United States
+   b) China, France, Japan, United Kingdom, and United States
+   c) China, France, Russia, United Kingdom, and United States
+   d) China, France, Russia, Germany, and United States
+
+7. **Who is the writer of "On Liberty"?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) Thomas Hobbes
+   b) John Stuart Mill
+   c) Jean-Jacques Rousseau
+   d) John Locke
+
+8. **How many members of NATO?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) 40
+   b) 32
+   c) 30
+   d) 35
+
+9. **Who is the founder of 'SpaceX'?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Elon Musk
+   (b) Eric Yuan
+   (c) Ray Tomlinson
+   (d) Larry Page
+
+10. **Martin Cooper is known for his invention of—** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Digital Camera
+   (b) X-ray
+   (c) Solar Energy
+   (d) Mobile Phone
+
+11. **What is the name of the data center that EU unveils to probe crimes in Ukraine?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Tulip
+   (b) Metro
+   (c) Game Changer
+   (d) None of these
+
+12. **Who won Nobel Peace prize in 2024?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) David Baker
+   (b) John Jumper
+   (c) Nihon Hidankyo
+   (d) Gary Ruvkun
+
+13. **Strasbourg belongs to which country?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) France
+   (b) Germany
+   (c) Canada
+   (d) Russia
+
+14. **The Mona Lisa portrait was painted by Leonardo da Vinci in the-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) 15th century
+   (b) 14th century
+   (c) 16th century
+   (d) 17th century
+
+15. **Who wrote the book 'Politics'?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   a) Aristotle
+   (b) Socrates
+   (c) Plato
+   (d) Pythagoras
+
+16. **Pythagoras was a Greek-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) Philosopher
+   (b) Mathematician
+   (c) Accountant
+   (d) a & b
+
+17. **What is the name of American built spacecraft landed in the lunar's southern polar region of February 22, 2024?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) Apollo-17
+   (b) Odysseus
+   (c) Chandrayaan-3
+   (d) Luna-25
+
+18. **OPEC থেকে কোন দেশ নিজেকে প্রত্যাহার করে নেয়?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) নাইজেরিয়া
+   b) লিবিয়া
+   c) ভেনিজুয়েলা
+   d) কাতার
+
+19. **World environment day is celebrated on ______ of every year.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   (a) 5^{\text{th}} June
+   (b) 6^{\text{th}} June
+   (c) 2^{\text{nd}} June
+   (d) 1^{\text{st}} June
+
+20. **Which country is known as the 'Rainbow nation'?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) Chaina
+   (b) South Korea
+   (c) Japan
+   (d) South Africa
+
+21. **Which is the third largest economic country?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 22]**
+   (a) United States
+   (b) Japan
+   (c) Chaina
+   (d) Kolkata
+
+22. **The lead character in the film 'The Bandit Queen' has been played by –** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) Rupa Ganguly
+   (b) Seema Biswas
+   (c) Pratiba Sinha
+   (d) Shabana Azmi
+
+23. **ইসলামি সংস্থা ওআইসি এর সদর দপ্তর কোথায়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** জেদ্দায়
+
+24. **পারস্য উপসাগরের আঞ্চলিক জোটের নাম কি?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** জিসিসি
+
+25. **ট্রাফালগার স্কয়ার কোথায় অবস্থিত?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** লন্ডন
+
+26. **Who is the name current China President?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 28]**
+   (a) Xi Jinping
+   (b) Moon Jae-in
+   (c) Yoshihide Suga
+   (d) Jiang Zemin
+
+27. **What is the name of capital city of Ukraine?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 28]**
+   (a) Kyiv
+   (b) Moscow
+   (c) Paris
+   (d) Helsinki
+
+28. **Which is the name of Sri Lanka currency?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 28]**
+   (a) Rufiyaa
+   (b) Sri Lankan rupee
+   (c) Rupee
+   (d) Dollar
+
+29. **Who is the CEO of Tesla company?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) Tim Cook
+   (b) Elon Musk
+   (c) Sundar Pichai
+   (d) Mark Zuckerberg
+
+30. **Who is not space Agency?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) JAXA
+   (b) SPACE
+   (c) CSA
+   (d) Roscosmos
+
+31. **The Summer Olympic 2024 held on ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) Paris
+   (b) Los Angeles
+   (c) Rio de Janeiro
+   (d) Brisbane
+
+32. **What's was the central place of recent Egyptian Protest?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   (a) Azadi Square
+   (b) Tahrir Square
+   (c) Taqdeer Square
+   (d) Central square
+
+33. **তুরস্ক ও সিরিয়ায় ভূমিকম্পের মাত্রা কত?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** ৭.৮
+
+34. **ন্যাশনাল কংগ্রেস কত সালে গঠিত হয়?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** ১৮৮৫ সালে
+
+35. **World Trade Organization (WTO)- এর সদর দপ্তর কোথায় অবস্থিত?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** জেনেভা
+
+36. **What is the name of Russian foreign minister?** **(Petrobangla; Assistant Engineer Exam: 16/12/2022) [compact it 73]**
+   (a) Sergey Lavrov
+   (b) Ivar Igor
+   (c) Sergei Shoigu
+   (d) Dmytro Khuleba
+   **Ans: a**
+
+37. **দক্ষিণ এশিয়ার দীর্ঘতম টাওয়ার কোথায় অবস্থিত? **Ans: কলম্বো**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 71]**
+
+38. **International Day for Total Elimination of Nuclear Weapons 2022? **Ans: ২৬ সেপ্টেম্বর**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+39. **আন্তর্জাতিক ট্রান্সলেশন দিবসের থিম কি? **Ans: A world without Barriers**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+40. **নোবেল পুরস্কার ২০২২, সাহিত্যে নোবেল কে পেয়েছেন **Ans: এনি আরনেল**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+41. **MoTiV কোন দেশের প্রতিষ্ঠান?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: উগান্ডা
+
+42. **SDG এর Goal কয়টি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ১৭ টি
+
+43. **NATO কোন বছর প্রতিষ্ঠিত হয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) ১৯৪৯
+   (খ) ১৯৫৪
+   (গ) ১৯৫৫
+   (ঘ) ১৯৫৬
+   **উত্তর: ক**
+
+44. **কোন দেশটির ভেটো ক্ষমতা নেই?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) যুক্তরাষ্ট্র
+   (খ) যুক্তরাজ্য
+   (গ) রাশিয়া
+   (ঘ) জার্মানি
+   **উত্তর: ঘ**
+
+45. **কোন দেশটি Group of Seven (G-7) এর সদস্য নয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) কানাডা
+   (খ) ইতালি
+   (গ) সুইডেন
+   (ঘ) জাপান
+   **উত্তর: গ**
+
+46. **এশীয় উন্নয়ন ব্যাংক এর সদর দপ্তর কোথায়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) হংকং
+   (খ) সিঙ্গাপুর
+   (গ) ম্যানিলা
+   (ঘ) ব্যাংকক
+   **উত্তর: গ**
+
+47. **জনসংখ্যার ভিত্তিতে সবচেয়ে বড় মুসলিম দেশ কোনটি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 70]**
+   (ক) বাংলাদেশ
+   (খ) ইন্দোনেশিয়া
+   (গ) মালয়েশিয়া
+   (ঘ) সৌদি আরব
+   **উত্তর: খ**
+
+48. **ভারতের কোন রাজ্য Seven Sisters এর অন্তর্ভুক্ত নয়?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) হিমাচল
+   (খ) অরুণাচল
+   (গ) নাগাল্যান্ড
+   (ঘ) সিকিম
+
+49. **CIRDAP এর সদর দপ্তর কোথায় অবস্থিত?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) ব্যাংকক
+   (খ) রাওয়ালপিন্ডি
+   (গ) ঢাকা
+   (ঘ) নয়াদিল্লী
+
+50. **মানব উন্নয়ন সূচক (HDI) কোন সংস্থা প্রকাশ করে?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) UNDP
+   (খ) ILO
+   (গ) UNEPA
+   (ঘ) ICJ
+
+51. **পৃথিবীর সর্বাপেক্ষা জ্বালানি তেল উৎপাদনকারী দেশ কোনটি?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) সৌদি আরব
+   (খ) যুক্তরাষ্ট্র
+   (গ) সংযুক্ত আরব আমিরাত
+   (ঘ) ইরান
+
+52. **জাতিসংঘের কোন অঙ্গ সংস্থা কোনো দেশের LDC থেকে Developing Country এবং Developing Country থেকে Developed Country এর বিষয়টি নির্ধারণ করে?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) সাধারণ পরিষদ
+   (খ) নিরাপত্তা পরিষদ
+   (গ) জাতিসংঘ
+   (ঘ) অর্থনৈতিক ও সামাজিক পরিষদ
+
+53. **ফ্রান্সের সম্রাট নেপোলিয়ান মারা যান কোথায়?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) ওয়াটার লু-তে
+   (খ) ভার্সাইন নগরীতে
+   (গ) সেন্ট হেলেনা দ্বীপে
+   (ঘ) দ্বীপ এলবাইতে
+
+54. **গুড ফ্রাইডে চুক্তি কোন দেশের শান্তির জন্য হয়েছিল?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 58]**
+   (ক) ডেনমার্ক
+   (খ) নরওয়ে
+   (গ) আয়ারল্যান্ড
+   (ঘ) উত্তর কোরিয়া
+
+55. **গ্রীনল্যান্ড কোন দেশ দ্বারা শাসিত অথবা নিয়ন্ত্রিত?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 58]**
+   (ক) যুক্তরাষ্ট্র
+   (খ) যুক্তরাজ্য
+   (গ) ডেনমার্ক
+   (ঘ) ফিনল্যান্ড
+
+56. **প্লেগ মহামারী/ব্ল্যাক ডেথ শুরু হয় কোথায়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) স্পেন
+   (খ) ফ্রান্স
+   (গ) ইতালী
+   (ঘ) রাশিয়া
+
+57. **বর্তমান বিশ্বের কোন দেশটির সংবিধানকে "শান্তি সংবিধান" বলা হয়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) সুইজারল্যান্ড
+   (খ) সুইডেন
+   (গ) জার্মান
+   (ঘ) জাপান
+
+58. **বিশ্বে প্রথম দেশ হিসেবে করোনা গণটিকা প্রদান কার্যক্রম শুরু করে কোন দেশ?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) যুক্তরাজ্য
+   (খ) যুক্তরাষ্ট্র
+   (গ) জার্মানী
+   (ঘ) ইতালী
+
+59. **জনসংখ্যা বৃদ্ধির হার সর্বনিম্ন কোন দেশ?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) বুলগেরিয়া
+   (খ) সোমালিয়া
+   (গ) লাটভিয়া
+   (ঘ) লিথুনিয়া
+
+60. **এলিসি প্রাসাদ কোন দেশের প্রেসিডেন্টের বাসভবন?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) রাশিয়া
+   (খ) ফ্রান্স
+   (গ) বলিভিয়া
+   (ঘ) ব্রাজিল
+
+61. **ওয়াটার লু কোথায় অবস্থিত?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) বেলজিয়াম
+   (খ) ইংল্যান্ড
+   (গ) ইতালী
+   (ঘ) রাশিয়া
+
+62. **জাপান ও রাশিয়ার মধ্যকার বিরোধপূর্ণ দ্বীপটির নাম কী?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) কুরিল দ্বীপপুঞ্জ
+   (খ) গ্রেট বেরিয়ার দ্বীপ
+   (গ) মার্শাল দ্বীপ
+   (ঘ) দিয়াগো গর্সিয়া দ্বীপ
+
+63. **"Impossible is a word to be found in a fools dictionary" উক্তিটি কার?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) Plato
+   (খ) Nepoleon
+   (গ) Che Guevara
+   (ঘ) Einstein
+
+64. **মহেঞ্জোদারো কোন সভ্যতার অন্তর্ভুক্ত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+   (ক) রোমান
+   (খ) সিন্ধু
+   (গ) গ্রিক
+   (ঘ) আফগানিস্তান
+   **Ans: খ**
+
+65. **হরপ্পা মহেনজোদারো কোন সভ্যতার অন্তর্ভুক্ত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
+   (ক) রোমান
+   (খ) সিন্ধু
+   (গ) গ্রিক
+   (ঘ) আফগানিস্তান
+
+66. **Which country has Bengali as official language in Africa?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) South Africa
+   (b) Sierra leone
+   (c) Ghana
+   (d) Somalia
+   **Ans: b**
+
+67. **ISO কিসের সাথে সম্পর্কিত?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) অ্যাপল
+   (খ) এনড্রয়েড
+   (গ) নোকিয়া
+   (ঘ) গুগল
+
+68. **জাতিসংঘের কোন সংস্থাটি রিফিউজি নিয়ে কাজ করে?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) WHO
+   (খ) UNDP
+   (গ) UNHCR
+   (ঘ) UNFCC
+
+69. **Nassau is the capital city of–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) The Bahamas
+   b) The Nicobar Islands
+   c) Madagascar
+   d) The Cubies
+
+70. **Which country gave the 'Statue of Liberty to the United States of America as a gift?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) France
+   b) Great Britain
+   c) Germany
+   d) Russia
+
+71. **When is the ‘International Day of the Victims of Enforced Disappearances’ observed?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) August 15
+   b) August 30
+   c) September 15
+   d) September 30
+
+72. **Which countries are jointly called the 'Golden Crescent'?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) Afghanistan, Iran and Pakistan
+   b) Afghanistan, India and Pakistan
+   c) Iraq, Lebanon and Syria
+   d) Thailand, Laos and Myanmar
+
+73. **স্টিফেন হকিং একজন-** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) দার্শনিক
+   b) পদার্থবিদ
+   c) কবি
+   d) রসায়নবিদ
+
+74. **চীনের জিনজিয়াং প্রদেশে বসবাসকারী প্রধান মুসলিম সম্প্রদায়ের নাম কি?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) তুর্কমেন
+   b) উইঘুর
+   c) কাজখ
+   d) তাজিক
+
+75. **বিশ্বব্যাংক সংশ্লিষ্ট কোন সংস্থাটি স্বল্প আয়ের উন্নয়নশীল দেশে বেসরকারি খাতে আর্থিক সহায়তা ও উপদেশ দিয়ে থাকে?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) IBRD
+   b) MIGA
+   c) IFC
+   d) ICSID
+
+76. **সামন্তবাদ কোন ইউরোপীয় দেশে প্রথম সূত্রপাত হয়?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+   (a) ইতালি
+   (b) ইংল্যান্ড
+   (c) ফ্রান্স
+   (d) রাশিয়া
+
+77. **ধরিত্রী সম্মেলন কোথায় অনুষ্ঠিত হয়?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 108]**
+   (a) আফ্রিকার জোহানেসবার্গ
+   (b) ব্রাজিলের রিওডিজেনিরোতে
+   (c) ইতালির রোমে
+   (d) যুক্তরাষ্ট্রের ওয়াশিংটন ডিসিতে
+
+78. **'কালাপানি' কোন দুই রাষ্ট্রের মধ্যে অমীমাংসিত ভূখণ্ড?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) ভারত ও নেপাল
+   (b) পাকিস্তান ও চীন
+   (c) ভূটান ও ভারত
+   (d) বাংলাদেশ ও ভারত
+
+79. **The name of the parliament of USA is?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) Congress
+   b) House of Commons
+   c) White House
+   d) Capital
+
+80. **Which of the following organization is concerned for the climate change?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) OIC
+   b) MIGA
+   c) IPCC
+   d) WMO
+
+81. **The owner of the Greenland is?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) Denmark
+   b) Netherlands
+   c) Japan
+   d) Russia
+
+82. **Theme of AIDS day of 2021 is?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) "End Inequalities, End AIDS"
+   b) "Global solidarity, resilient HIV services."
+   c) Communities Make the Difference
+   d) My health, My Right
+
+83. **Who is the new secretary General of BIMSTEC?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Saroj Chavanaviraj (Thailand)
+   b. Summit Nakandala (Sri Lanka)
+   c. M. Shohidul Islam (Bangladesh)
+   d. Tenzin Lekphel (Bhutan)
+
+84. **Who is the writer of the book named A Promise Land?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Joe Biden
+   b. Donald Trump
+   c. Bill Clinton
+   d. Barack Obama
+
+85. **According to the ‘Sustainable Development goals (SFG) Index 2020’ Bangladesh has been ranked ________** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. 153th
+   b. 109th
+   c. 104th
+   d. 123th
+
+86. **Which word is named as “Word of the year 2020” in Cambridge Dictionary?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Lockdown
+   b. Quaranitine
+   c. Pandemic
+   d. Sanitizer
+
+87. **Which of the following is the Scandinavian Country?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Norway
+   b. Sweden
+   c. Netherland
+   d. Denmark
+
+88. **Where did Leandso dis Vind draw his farmers from “The Last Supper”?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Rome
+   b. Milan
+   c. Venice
+   d. Florence
+
+89. **Which of the SDG google speaks about women empowerment?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. SDG 5
+   b. SDG 3
+   c. SDG 9
+   d. SDG 8
+
+90. **What was the theme for the 6th BRICS-Youth summit 2020?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+
+91. **Who was the director of the film “Let there be Light”?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. Zahir Raihan
+   খ. Amjad Hossain
+   গ. Khan Ataur Rohman
+   ঘ. Humayan Ahmed
+
+92. **Which country first gave recognition to Bangladesh?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 139]**
+   ক. India
+   খ. Russia
+   গ. Bhutan
+   ঘ. Nepal
+
+93. **Omicron, the new variant of COVID-19 is originated from;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. China
+   খ. UK
+   গ. America
+   ঘ. South Africa
+
+94. **Country participated as "Observer"in "Victory Day Parade 2021";** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. USA
+   খ. Russia
+   গ. India
+   ঘ. Bhutan
+
+95. **The Nobel Laureate Adbulrazak Gurnah is from;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Turkey
+   খ. Malaysia
+   গ. Indonesia
+   ঘ. Tanzania
+
+96. **২০২০ সালে শান্তিতে নোবেল পুরস্কার লাভ করে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
+   (ক) ইউনেস্কো
+   (খ) বিশ্ব খাদ্য কর্মসূচি
+   (গ) ইউনিসেফ
+   (ঘ) নিরাপত্তা পরিষদ
+
+97. **বিশ্বস্বাস্থ্য সংস্থার (WHO) সদর দপ্তর কোথায়?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (ক) রোম
+   (খ) প্যারিস
+   (গ) হেগ
+   (ঘ) জেনেভা
+
+98. **রাখাইনের পূর্ব নাম কী?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (ক) রেঙ্গুন
+   (খ) আরাকান
+   (গ) কাচিন
+   (ঘ) শান
+
+99. **Which country is called "Thunderbolt of Asia"?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+   (a) Nepal
+   (b) Sri Lanka
+   (c) Bhutan
+   (d) Maldives
+
+100. **How many countries are members of Commonwealth?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) 47
+   (b) 51
+   (c) 54
+   (d) 61
+
+101. **The headquarter of World Economic Forum is situated in-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) Cologny
+   (b) Geneva
+   (c) Davos
+   (d) San Francisco
+
+102. **The term of a non-permanent member of the UN security council is-** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) 2 years
+   (b) 3 years
+   (c) 5 years
+   (d) 7 years
+
+103. **Which one of the following is not an official language of United Nations?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) Arabic
+   (b) Chinese
+   (c) Portuguese
+   (d) Spanish
+
+## Everyday Science (77)
+
+1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. সিলভার ব্রোমাইড
+   খ. সিলভার ফ্লোরাইড
+   গ. সিলভার ক্লোরাইড
+   ঘ. অ্যামোনিয়াম ক্লোরাইড
+
+2. **কোন রঙের কাপে চা তাড়াতাড়ি ঠান্ডা হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. সাদা
+   খ. কালো
+   গ. লাল
+   ঘ. বেগুনি
+
+3. **কাঁদানে গ্যাসের অপর নাম কী?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. মিথেন
+   খ. ইথেন
+   গ. নাইট্রোজেন
+   ঘ. ক্লোরোপিকরিন
+
+4. **ওজোন স্তর বায়ুমণ্ডলের কোন স্তরে অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. ট্রপোমণ্ডল
+   খ. স্ট্র্যাটোমণ্ডল
+   গ. মেসোমণ্ডল
+   ঘ. তাপমণ্ডল
+
+5. **বিশ্বব্রহ্মাণ্ডে সবচেয়ে বেশি প্রাপ্ত গ্যাস কোনটি?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. নাইট্রোজেন
+   খ. অক্সিজেন
+   গ. হাইড্রোজেন
+   ঘ. কার্বন ডাই-অক্সাইড
+
+6. **কোন যৌগটি কাপড়ের দাগ তুলতে সাহায্য করে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
+   ক. সোডিয়াম কার্বনেট
+   খ. সোডিয়াম বাই কার্বনেট
+   গ. ক্যালসিয়াম কার্বনেট
+   ঘ. ক্যালসিয়াম বাই কার্বনেট
+
+7. **রঙিন টেলিভিশন থেকে যে ক্ষতিকর রশি বের হয় তার নাম?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
+   ক. গামা রশি
+   খ. রঞ্জন রশ্মি
+   গ. বিটা রশ্মি
+   ঘ. কসমিক রশ্মি
+
+8. **কোন বোমায় মানুষ মরে, কিন্তু কোনো স্থাপনার ক্ষতি হয় না?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
+   ক. নাপাম
+   খ. নিউট্রন
+   গ. হাইড্রোজেন
+   ঘ. এটম
+
+9. **'Thalassemia' is a hereditary disease affecting-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Lungs
+   (b) Blood
+   (c) Heart
+   (d) Kidney
+
+10. **কোন রংগুলিকে মৌলিক রং বলা হয়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** লাল, নীল, হলুদ
+
+11. **যে সর্বোচ্চ শ্রুতি সীমার উপরে মানুষ বধির হতে পারে তা হচ্ছে-** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** ১০৫ ডিবি
+
+12. **সূর্য গ্রহণের সময় কোনটি হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) পৃথিবী সূর্য ও চাঁদের মাঝে থাকে
+   b) পূর্ণিমা তিথি
+   c) চাঁদ পৃথিবী ও সূর্যের মাঝে থাকে
+   d) চাঁদ পৃথিবী ও চাঁদের মাঝে ৯০° কোন তৈরি করে।
+
+13. **ইদানিং সুপার ফুড বলে পরিচিত খাদ্য কি বৈশিষ্ট্য বহন করে?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) অনিদ্রা দূর করে
+   b) মানসিক চাপ দূর করে
+   c) উচ্চ রক্তচাপ নিয়ন্ত্রণ করে
+   d) এটি একটি প্রাকৃতিক প্রতিবিধান
+
+14. **পৃথিবী পৃষ্ঠের গড় তাপমাত্রা কত ডিগ্রী সেলসিয়াস?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
+   a) ১৪
+   b) ২৪
+   c) ১৮
+   d) ১৫
+
+15. **মহাবিশ্বে মৌলিক বল কয়টি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) ৩ টি
+   (খ) ৪ টি
+   (গ) ৫ টি
+   (ঘ) ৬ টি
+   **উত্তর: ক**
+
+16. **কোন রশ্মির ভেদন ক্ষমতা বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) আলফা
+   (খ) বিটা
+   (গ) গামা
+   (ঘ) সমগুলিরসমান
+   **উত্তর: গ**
+
+17. **পৃথিবীর কেন্দ্রে অভিকর্ষক ত্বরনের মান কত?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) শূন্য
+   (খ) 9.8\text{ m/s}^2
+   (গ) 4.9\text{ m/s}^2
+   (ঘ) অসীম
+   **উত্তর: ক**
+
+18. **কোনটি গ্রীন হাউজ গ্যাস নয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) \text{O}_2
+   (খ) \text{O}_3
+   (গ) \text{CO}_3
+   (ঘ) Water Vapor
+   **উত্তর: গ**
+
+19. **লেন্সের ক্ষমতার একক কী?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) ডায়াপটার
+   (খ) ডেসিবেল
+   (গ) ওয়াট
+   (ঘ) মিটার
+   **উত্তর: ক**
+
+20. **কোন বস্তুকে ভূ-পৃষ্ঠ হতে 19.6\text{m} উপর থেকে ছেড়ে পৌঁছাতে বস্তুটি কত সময় লাগবে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) 2\text{ sec}
+   (খ) 1\text{ sec}
+   (গ) \frac{1}{2}\text{ sec}
+   (ঘ) 9\text{ sec}
+   **উত্তর: ক**
+
+21. **কোনটি মুদ্রা ধাতু নয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 65]**
+   (ক) কপার
+   (খ) সিলভার
+   (গ) গোল্ড
+   (ঘ) রন্টজেনিয়াম
+   **উত্তর: ঘ**
+
+22. **CNG এর মূল উপাদান কী?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) অক্সিজেন
+   (খ) মিথেন
+   (গ) ইথেন
+   (ঘ) অকটেন
+   **উত্তর: খ**
+
+23. **তাপমাত্রা বাড়লে পরিবাহীর রোধ ---** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) বাড়ে
+   (খ) কমে
+   (গ) অপরিবর্তিত থাকে
+   (ঘ) শূন্যহয়
+   **উত্তর: খ**
+
+24. **কোন ধাতু কক্ষ তাপমাত্রার তরল থাকে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) রেডিয়াম
+   (খ) জিং
+   (গ) প্রোটনিয়াম
+   (ঘ) মারকারী
+   **উত্তর: ঘ**
+
+25. **পাকস্থলীতে কোন এসিড উৎপন্ন হয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) \text{HClO}
+   (খ) \text{HClO}_4
+   (গ) \text{HCl}
+   (ঘ) \text{HNO}_3
+   **উত্তর: গ**
+
+26. **কোন পদার্থ আন্তকণা আকর্ষণ বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) চিনি
+   (খ) পানি
+   (গ) তেল
+   (ঘ) অক্সিজেন
+   **উত্তর: ক**
+
+27. **কোনটির তরঙ্গ দৈর্ঘ্য বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) লাল আলো
+   (খ) নীল আলো
+   (গ) মাইক্রোওয়েভ
+   (ঘ) রেডিও ওয়েভ
+   **উত্তর: ক**
+
+28. **শুষ্ক বাতাসের তুলনায় ঘনত্ব :** **(BPSC- Instructor Exam: 31.10.2022) [compact it 66]**
+   (ক) বেশি
+   (খ) কম
+   (গ) সমান
+   (ঘ) কোন সম্পর্ক নেই
+   **উত্তর: ক**
+
+29. **স্থিতি শক্তি আছে কোন পদার্থের?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) তরল
+   (খ) বায়বীয়
+   (গ) অষ্ট্রীয়
+   (ঘ) কঠিন
+   **উত্তর: ঘ**
+
+30. **নীচের কোনটি মৃদু তড়িৎ বিশ্লেষ্য?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) \text{NaCl}
+   (খ) \text{H}_2\text{O}
+   (গ) \text{CaSO}_4
+   (ঘ) \text{H}_2\text{SO}_4
+   **উত্তর: ক**
+
+31. **২২ ক্যারেট স্বর্ণে কতভাগ স্বর্ণ থাকে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) 100%
+   (খ) 95.37%
+   (গ) 91.67%
+   (ঘ) 75%
+   **উত্তর: গ**
+
+32. **\text{H}_2\text{SO}_4-এ সালফারের জারণ সংখ্যা কত?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) +2
+   (খ) +4
+   (গ) +6
+   (ঘ) 0
+   **উত্তর: গ**
+
+33. **কোনটি শব্দের তীব্রতা লেভেল পরিমাপের একক?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) হার্টজ
+   (খ) ডেসিবেল
+   (গ) প্যাসকেল
+   (ঘ) টেসলা
+   **উত্তর: খ**
+
+34. **ক্রোমোসমের গঠন কি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) DNA
+   (খ) প্রোটিন
+   (গ) RAN
+   (ঘ) DNA এবং প্রোটিন
+   **উত্তর: ঘ**
+
+35. **Knot কিসের একক?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) গতিবেগ
+   (খ) দূরত্ব
+   (গ) গভীর
+   (ঘ) ত্বরণ
+   **উত্তর: ক**
+
+36. **পরম শূন্য তাপমাত্রায় অর্ধপরিবাহী কিসের মত আচরণ করে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) পরিবাহী
+   (খ) অপরিবাহী
+   (গ) অর্ধপরিবাহী
+   (ঘ) কোনটিই নয়
+   **উত্তর: গ**
+
+37. **রক্ত কোষের ক্যান্সারকে কি বলে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) লিওকেমিয়া
+   (খ) এনিমিয়া
+   (গ) Blood Clotting
+   (ঘ) অ্যানজিনা
+   **উত্তর: ক**
+
+38. **কোন কারণে শব্দের প্রতিধ্বনি সৃষ্টি হয়?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 67]**
+   (ক) প্রতিফলন
+   (খ) প্রতিসরণ
+   (গ) উপরিপাতন
+   (ঘ) সমপাতন
+   **উত্তর: ক**
+
+39. **সমতল দর্পণ ব্যবহৃত হয় কোন যন্ত্র তৈরিতে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) পেরিস্কোপ
+   (খ) টেলিস্কোপ
+   (গ) ক্যামেরা
+   (ঘ) মাইক্রোস্কোপ
+   **উত্তর: ক**
+
+40. **ব্রোঞ্জ কোন দুটি ধাতুর সংকর?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) অ্যালুমিনিয়াম ও টিন
+   (খ) কপার ও টিন
+   (গ) কপার ও গোল্ড
+   (ঘ) কপার ও সিলভার
+   **উত্তর: খ**
+
+41. **কোনটি পদার্থের জড়তা পরিমাপকের একক?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) ভর
+   (খ) গতিবেগ
+   (গ) তাপমাত্রা
+   (ঘ) কৌনিকবেগ
+   **উত্তর: ক**
+
+42. **১ লিটার বিশুদ্ধ পানিতে H এর পরিমাণ কত?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) 10^{-7}\text{ মোল}
+   (খ) 10^7\text{ মোল}
+   (গ) 10^{-6}\text{ মোল}
+   (ঘ) 10^{-5}\text{ মোল}
+   **উত্তর: ক**
+
+43. **কোনটি ক্ষার?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) \text{NH}_3
+   (খ) \text{NaSO}_4
+   (গ) \text{NaCl}
+   (ঘ) \text{HNO}_2
+   **উত্তর: ক**
+
+44. **কোন গ্যাসের ব্যাপন হার বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) \text{N}_2
+   (খ) \text{O}_2
+   (গ) \text{CO}_2
+   (ঘ) \text{H}_2
+   **উত্তর: ঘ**
+
+45. **কোনটি ভেক্টর রাশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) চাপ
+   (খ) ভরবেগ
+   (গ) কাজ
+   (ঘ) বল
+   **উত্তর: খ**
+
+46. **কোন পদার্থের আপেক্ষিক তাপ সর্বাধিক?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) বায়ু
+   (খ) পানি
+   (গ) লোহা
+   (ঘ) তামা
+   **উত্তর: খ**
+
+47. **প্রকৃতিতে প্রাপ্ত হাইড্রোজেনের আইসোটোপ কয়টি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) ২টি
+   (খ) ৩টি
+   (গ) ৪টি
+   (ঘ) ৫টি
+   **উত্তর: খ**
+
+48. **কত তাপমাত্রায় পানির ঘনত্ব বেশি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) 10^\circ\text{C}
+   (খ) 4^\circ\text{C}
+   (গ) 85^\circ\text{C}
+   (ঘ) 100^\circ\text{C}
+   **উত্তর: খ**
+
+49. **ব্লিচিং পাউডারের সংকেত কোনটি?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) \text{Ca(OCI)Cl}
+   (খ) \text{C}_6\text{H}_6\text{O}
+   (গ) \text{CaCO}_3
+   (ঘ) \text{HCl}
+   **উত্তর: ক**
+
+50. **কোন আলোতে সালোক সংশ্লেষণ ভালো হয় না?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 69]**
+   (ক) লাল
+   (খ) নীল
+   (গ) কমলা
+   (ঘ) হলুদ
+   **উত্তর: ঘ**
+
+51. **সূর্যের আলো পৃথিবীতে আসতে সময় লাগে প্রায়—** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) ১০ মিনিট
+   (খ) ৮ মিনিট
+   (গ) ১২ মিনিট
+   (ঘ) ১৪ মিনিট
+
+52. **প্রকৃতিতে সবচেয়ে শক্ত পদার্থ কোনটি?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) পিতল
+   (খ) ইস্পাত
+   (গ) গ্রানাইট
+   (ঘ) হীরা
+
+53. **গ্রিন হাউজ ইফেক্টের পরিপ্রেক্ষিতে বাংলাদেশের সবচেয়ে গুরুতর প্রত্যক্ষ ক্ষতি কী হবে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) বৃষ্টিপাত কমে যাবে
+   (খ) সাইক্লোনের প্রবণতা বাড়বে
+   (গ) উত্তাপ অনেক বেড়ে যাবে
+   (ঘ) নিম্নভূমি নিমজ্জিত হবে
+
+54. **আল্ট্রাভায়োলেট রশ্মি নিম্নের কোন রোগ সৃষ্টি করে?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) এইডস
+   (খ) ব্রেন ক্যান্সার
+   (গ) ব্লাড ক্যান্সার
+   (ঘ) চর্ম ক্যান্সার
+
+55. **কোন পাখিকে 'অন্যপুষ্ট' বলা হয়?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) কাক
+   (খ) কোকিল
+   (গ) কবুতর
+   (ঘ) কাকাতুয়া
+
+56. **কোলাজেন কী?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 51]**
+   (ক) একটি কার্বোহাইড্রেট
+   (খ) একটি প্রোটিন
+   (গ) একটি লিপিড
+   (ঘ) একটি নিউক্লিক এসিড
+
+57. **তেজস্ক্রিয়তার একক কি?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+   (ক) রন্টজেন
+   (খ) কুরি
+   (গ) হেনরি
+   (ঘ) রেডিয়াম
+   **Ans: খ**
+
+58. **নিউক্লিয়ার রিয়েক্টর ব্যবহৃত কন্ট্রোল রড কি দিয়ে তৈরি? ক্যাডমিয়াম** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+
+59. **পূর্ণ অভ্যন্তরীণ প্রতিফলন ঘটে যখন আলো-** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+
+60. **তেজস্ক্রিয়তার একক কি?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+   (ক) রনজেন
+   (খ) কুরি
+   (গ) হেনরি
+   (ঘ) রেডিয়াম
+
+61. **Oncology কিসের সাথে জড়িত?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 61]**
+   (ক) চোখের গবেষণায়
+   (খ) ক্যান্সার গবেষণায়
+   (গ) হাড়ের সাথে জড়িত
+   (ঘ) হার্টের সাথে সম্পর্কিত
+
+62. **নিচের কোনটি সর্বোচ্চ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) ১ গিগাবাইট
+   (খ) ১০০ মেগাবাইট
+   (গ) ১০০০ মেগাবাইট
+   (ঘ) ১০০০০ মেগাবাইট
+
+63. **When a beam of light travels through media of two different densities, if the angle of incidence is greater than the critical angle, ____ occurs.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 103]**
+   (a) Refraction
+   (b) Reflection
+   (c) Incidence
+   (d) Criticism
+
+64. **বায়ুমণ্ডলের যে স্তরে বেতার তরঙ্গ প্রতিফলিত হয়-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 110]**
+   (a) স্ট্র্যাটোস্ফিয়ার
+   (b) ট্রপোস্ফিয়ার
+   (c) আয়নোস্ফিয়ার
+   (d) ওজোনস্তর
+
+65. **What is the brightest planet seen from Earth?** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 138]**
+   a) Venus
+   b) Mars
+   c) Mercury
+   d) Jupiter
+
+66. **What is the noun of the extent Rover sent by NASA to the man?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. Superior
+   b. Opporunity
+   c. Perseverance
+   d. Sprit
+
+67. **3\text{N} ও 4\text{N} মানের দুটি বল লম্বভাবে ক্রিয়া করলে লব্ধির মান কত?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 2\text{N}
+   B. 3\text{N}
+   C. 5\text{N}
+   D. 7\text{N}
+
+68. **একটি তেজস্ক্রিয় মৌলের অর্ধায়ু ২০০ বছর। মৌলটির ৭৫% ক্ষয় হতে কত বছর লাগবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 150
+   B. 300
+   C. 400
+   D. 450
+
+69. **If an atom loses an e- it will be turned into?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Neutral
+   b) Anion
+   c) Proton
+   d) Cation
+
+70. **'Dry Ice' is produced from;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Oxygen
+   খ. Sulphur di oxide
+   গ. Nitrogen
+   ঘ. Carbon di oxide
+
+71. **DNA is found in;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Chromosome
+   খ. Lissomes
+   গ. Ribosome
+   ঘ. Galel Complex
+
+72. **কোনটি এন্টিবায়োটিক?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. ইনসুলিন
+   খ. পেপসিন
+   গ. ইথিলিন
+   ঘ. পেনিসিলিন
+
+73. **What is the power required by a pump to draw 10 liters of water to a height of 10 meters, every second?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. 980J
+   B. 100 kw
+   C. 900 w
+   D. 960 kw
+
+74. **What kind of energy is stored in a stressed spring?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 201]**
+   A. Potential energy
+   B. Kinetic energy
+   C. Chemical Energy
+   D. thermal energy
+
+75. **Which time of the following properties of a body cannot be changed with an applied force?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. length
+   B. mass
+   C. shape
+   D. volume
+
+76. **How much force should be exerted on a steel wire of cross-sectional area 0.1\text{cm}^2 in order to double its length? (Y = 2 \times 10^{11}\text{ N/m}^2)** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. 2 \times 10^6\text{ N}
+   B. 2 \times 10^7\text{ N}
+   C. 2 \times 10^8\text{ N}
+   D. 2 \times 10^9\text{ N}
+
+77. **What is the angular momentum of the election in the lowest orbit of hydrogen atom?** **(BTRC Sub-Assistant Director (Technical) Exam: 2019 (IBA)) [compact it 202]**
+   A. h
+   B. h/2
+   C. \text{h}/2\pi
+   D. 2\pi/\text{h}
+
+## Geography & Environment (27)
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
    ক. মোহনা
@@ -2247,116 +2247,7 @@
    (c) Aral Sea
    (d) Dead Sea
 
-## Sports
-
-1. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) Michael Phelps
-   b) Usain Bolt
-   c) Simone Biles
-   d) Larisa Latynina
-
-2. **The 2024 Summer Olympics will be hosted in –** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
-   (a) China
-   (b) France
-   (c) United Kingdom
-   (d) United States
-
-3. **Who is first ICC ODI men's world Cup winner captain?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
-   (a) Clive Lloyd
-   (b) Kapil Dev
-   (c) Alan Border
-   (d) Steve Waugh
-
-4. **Who is the fastest woman after winning 100 metre sprint titles of the 44th National Athletics Championship held in January, 2024?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
-   (a) Tahmina Rahman
-   (b) Sonia Akhtar
-   (c) Sharifa Khatun
-   (d) Shirin Akhtar
-
-5. **Who get Balon d'Or cup 2022?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
-   (a) Lionell Messi
-   (b) Kylian Mbappe
-   (c) Karim Benzema
-   (d) Ronaldo
-
-6. **Who is the most wicket taker in T20?** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
-   (a) Rashid khan
-   (b) TG southee
-   (c) Shakib al hasan
-   (d) SL Malinga
-   **Ans: c**
-
-7. **রজার ফেদেরার মোট কয়টি উইম্বলডন জয়লাভ করেন? **Ans: ৮টি**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
-
-8. **টি-২০ বিশ্বকাপ ২০২২ কোথায় অনুষ্ঠিত হয়েছে? **Ans: অস্ট্রেলিয়া**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
-
-9. **T-20 বিশ্বকাপ ২০২১ এ ম্যান অব দ্যা সিরিজ হন কে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
-   উত্তর: ডেভিড ওয়ার্নার
-
-10. **বাংলাদেশ কবে টেস্ট ক্রিকেটের মর্যাদা লাভ করে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
-   উত্তর: ২৬ জুন, ২০০০
-
-11. **কিংবদন্তি মোহাম্মদ আলি কিসের জন্য বিখ্যাত?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
-   a) অভিনয়
-   b) বক্সিং
-   c) মার্শাল আর্টস
-   d) সঙ্গীত
-
-12. **What are the small indentations on a golf ball called?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
-   a) Birdie
-   b) Albatross
-   c) Mulligan
-   d) Dimples
-
-13. **টেস্ট ক্রিকেটে বাংলাদেশের পক্ষে কে প্রথম ডাবল সেঞ্চুরি করেন?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
-   a) মুশফিক
-   b) তামিম
-   c) সাব্বির
-   d) লিটন দাস
-
-14. **টেস্ট ক্রিকেট বাংলাদেশের দ্রুততম উইকেটের সেঞ্চুরিয়ান বোলার কে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
-   A. সাকিব আল হাসান
-   B. মোস্তাফিজুর রহমান
-   C. মেহেদি হাসান মিরাজ
-   D. তাইজুল ইসলাম
-
-15. **২০২২ ফুটবল বিশ্বকাপ কোথায় হবে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
-   a) কাতার
-   b) ব্রাজিল
-   c) মেক্সিকো
-   d) ইংল্যান্ড
-
-16. **বাংলাদেশ অস্ট্রেলিয়া সিরিজের ফলাফল কি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
-   a) ৩-২
-   b) ৪-১
-   c) ১-৪
-   d) ২-৩
-
-17. **অলিম্পিক ২০২০ এ সবচেয়ে বেশি পদকপ্রাপ্ত দেশ কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
-   a) চীন
-   b) জাপান
-   c) যুক্তরাষ্ট্র
-   d) জার্মানী
-
-18. **Who scored the only goal in the final match of 2021 SAFF U-19 Women's Championship?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
-   ক. Shaheda Akter Ripa
-   খ. Anai Mogini
-   গ. Maria Mauda
-   ঘ. Anishka
-
-19. **Ping Pong means;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
-   ক. Volleyball
-   খ. Table Tennis
-   গ. Basketball
-   ঘ. Lane Tennis
-
-20. **বঙ্গবন্ধু টি-২০ কাপ ২০২০ মোট কয়টি দল অংশ নিয়েছিল?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
-   (ক) ৬টি
-   (খ) ৭টি
-   (গ) ৪টি
-   (ঘ) ৫টি
-
-## Power Sector & Energy (Bangladesh)
+## Power Sector & Energy (Bangladesh) (25)
 
 1. **ইজিসিবি'র মোট বিদ্যুৎ ক্ষমতা প্রায় কত মেগাওয়াট (প্রায়)?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 63]**
    (ক) ৮৫০ মে: ও:
@@ -2488,3 +2379,112 @@
    খ. 80%
    গ. 85%
    ঘ. 90%
+
+## Sports (20)
+
+1. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) Michael Phelps
+   b) Usain Bolt
+   c) Simone Biles
+   d) Larisa Latynina
+
+2. **The 2024 Summer Olympics will be hosted in –** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 11]**
+   (a) China
+   (b) France
+   (c) United Kingdom
+   (d) United States
+
+3. **Who is first ICC ODI men's world Cup winner captain?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
+   (a) Clive Lloyd
+   (b) Kapil Dev
+   (c) Alan Border
+   (d) Steve Waugh
+
+4. **Who is the fastest woman after winning 100 metre sprint titles of the 44th National Athletics Championship held in January, 2024?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) Tahmina Rahman
+   (b) Sonia Akhtar
+   (c) Sharifa Khatun
+   (d) Shirin Akhtar
+
+5. **Who get Balon d'Or cup 2022?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Lionell Messi
+   (b) Kylian Mbappe
+   (c) Karim Benzema
+   (d) Ronaldo
+
+6. **Who is the most wicket taker in T20?** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) Rashid khan
+   (b) TG southee
+   (c) Shakib al hasan
+   (d) SL Malinga
+   **Ans: c**
+
+7. **রজার ফেদেরার মোট কয়টি উইম্বলডন জয়লাভ করেন? **Ans: ৮টি**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+8. **টি-২০ বিশ্বকাপ ২০২২ কোথায় অনুষ্ঠিত হয়েছে? **Ans: অস্ট্রেলিয়া**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+9. **T-20 বিশ্বকাপ ২০২১ এ ম্যান অব দ্যা সিরিজ হন কে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: ডেভিড ওয়ার্নার
+
+10. **বাংলাদেশ কবে টেস্ট ক্রিকেটের মর্যাদা লাভ করে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
+   উত্তর: ২৬ জুন, ২০০০
+
+11. **কিংবদন্তি মোহাম্মদ আলি কিসের জন্য বিখ্যাত?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 59]**
+   a) অভিনয়
+   b) বক্সিং
+   c) মার্শাল আর্টস
+   d) সঙ্গীত
+
+12. **What are the small indentations on a golf ball called?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) Birdie
+   b) Albatross
+   c) Mulligan
+   d) Dimples
+
+13. **টেস্ট ক্রিকেটে বাংলাদেশের পক্ষে কে প্রথম ডাবল সেঞ্চুরি করেন?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) মুশফিক
+   b) তামিম
+   c) সাব্বির
+   d) লিটন দাস
+
+14. **টেস্ট ক্রিকেট বাংলাদেশের দ্রুততম উইকেটের সেঞ্চুরিয়ান বোলার কে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. সাকিব আল হাসান
+   B. মোস্তাফিজুর রহমান
+   C. মেহেদি হাসান মিরাজ
+   D. তাইজুল ইসলাম
+
+15. **২০২২ ফুটবল বিশ্বকাপ কোথায় হবে?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) কাতার
+   b) ব্রাজিল
+   c) মেক্সিকো
+   d) ইংল্যান্ড
+
+16. **বাংলাদেশ অস্ট্রেলিয়া সিরিজের ফলাফল কি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) ৩-২
+   b) ৪-১
+   c) ১-৪
+   d) ২-৩
+
+17. **অলিম্পিক ২০২০ এ সবচেয়ে বেশি পদকপ্রাপ্ত দেশ কোনটি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 134]**
+   a) চীন
+   b) জাপান
+   c) যুক্তরাষ্ট্র
+   d) জার্মানী
+
+18. **Who scored the only goal in the final match of 2021 SAFF U-19 Women's Championship?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Shaheda Akter Ripa
+   খ. Anai Mogini
+   গ. Maria Mauda
+   ঘ. Anishka
+
+19. **Ping Pong means;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 140]**
+   ক. Volleyball
+   খ. Table Tennis
+   গ. Basketball
+   ঘ. Lane Tennis
+
+20. **বঙ্গবন্ধু টি-২০ কাপ ২০২০ মোট কয়টি দল অংশ নিয়েছিল?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
+   (ক) ৬টি
+   (খ) ৭টি
+   (গ) ৪টি
+   (ঘ) ৫টি

@@ -3,217 +3,18 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals) | 42 |
-| 2 | [Software Types & Classification](#software-types--classification) | 41 |
-| 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations) | 29 |
-| 4 | [ICT & Emerging Technology](#ict--emerging-technology) | 16 |
-| 5 | [Acronyms & Abbreviations](#acronyms--abbreviations) | 13 |
-| 6 | [Keyboard Shortcuts](#keyboard-shortcuts) | 4 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-42) | 42 |
+| 2 | [Software Types & Classification](#software-types--classification-41) | 41 |
+| 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
+| 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
+| 5 | [Acronyms & Abbreviations](#acronyms--abbreviations-13) | 13 |
+| 6 | [Keyboard Shortcuts](#keyboard-shortcuts-4) | 4 |
 
 <!-- TOC END -->
 
 ---
 
-## Computer Fundamentals & Generations
-
-1. **একটি কম্পিউটারের আইকিউ কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. ০
-   খ. ১০০
-   গ. ১৫০
-   ঘ. ২০০
-
-2. **Which one is the first high level programming language?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
-   A) C
-   B) COBOL
-   C) FORTRAN
-   D) C++
-
-3. **Which one is the first search engine?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
-   A) Google
-   B) Archie
-   C) Alta vista
-   D) WAIS
-
-4. **Which of the following is the most commonly used encoding standard of Unicode?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 46]**
-   (ক) UTF-6
-   (খ) UTF-7
-   (গ) UTF-8
-   (ঘ) UTF-9
-
-5. **EDSAC কম্পিউটার এ ডাটা সংরক্ষণের জন্য কি ধরণের মেমরি ব্যবহার হত?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
-   a) RAM
-   b) ROM
-   c) Mercury Delay
-   d) Registers Lines
-
-6. **In which year were chips used inside the computer for the first time?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
-   (a) 1964
-   (b) 1974
-   (c) 1975
-   (d) 1981
-
-7. **Which was the world's first electronic computer?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
-   a. ENIAC
-   b. EDVAC
-   c. UNIVAC
-   d. IBM
-
-8. **WWW (World Wide Web) এর জনক কে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
-   (ক) বিল গেটস
-   (খ) স্টিভ জবস
-   (গ) টিম বার্নস লি.
-   (ঘ) জেফ বেজোফ
-
-9. **English scientist ________ invented the World Wide Web in 1989.** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 150]**
-   a) Vint Cerf
-   b) Robert Elliot Kahn
-   c) Alan Turing
-   d) Tim Berners-Lee
-
-10. **Who is known as the first computer programmer?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
-   a) Alan Turing
-   b) Ada Lovelace
-   c) Charles Babbage
-   d) None of the above
-
-11. **________ was a chess-playing computer developed by IBM?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
-   a. Bright Red
-   b. Deep Blue
-   c. Light Green
-   d. Dark Pink
-
-12. **How many bits are there in Unicode?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
-   a. 8
-   b. 12
-   c. 16
-   d. 20
-
-13. **When was first artificial satellite established?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
-   a. 1940
-   b. 1960
-   c. 1950
-   d. 1957
-
-14. **1 Terabyte ________ gigabyte in the decimal system?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
-   a. 1000
-   b. 720
-   c. 1950
-   d. 1970
-
-15. **All decimal values and integers are included in set of** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
-   A) whole numbers
-   B) natural numbers
-   C) real numbers
-   D) integers
-
-16. **Who invented QWERTY keyboard?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
-   A) Steve jobs
-   B) Christopher Latham Sholes
-   C) Brain Sams
-   D) Anderson Palimar
-
-17. **Which of the following is the smallest size in the list?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
-   A) Zettabyte
-   B) Gigabyte
-   C) Petabyte
-   D) Terabyte
-
-18. **Microprocessor is used first in which generation computers?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
-   a. Second generation
-   b. Third generation
-   c. Fourth generation
-   d. Fifth generation
-
-19. **On which aspect the analog computers are better than digital?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
-   A) Speed
-   B) Accuracy
-   C) Reliability
-   D) Automatic
-
-20. **How many numbers could ENIAC store in its internal memory?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
-   A) 100
-   B) 20
-   C) 80
-   D) 40
-
-21. **Which of the following is a class of computers based on model?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
-   A) Digital Computers
-   B) Hybrid Computers
-   C) Analog Computers
-   D) AT Computers
-
-22. **Which of the following is not true?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
-   A) Transistors are much smaller
-   B) Transistors produce low heat
-   C) Transistors were less reliable
-   D) Transistors were used in radios and other electronic devices
-
-23. **Which was the most popular first-generation computer?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
-   A) IBM 1650
-   B) IBM 360
-   C) IBM 1130
-   D) IBM 650
-
-24. **Which of the following is not a form of data?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
-   A) Numbers and characters
-   B) images
-   C) sound
-   D) None of this
-
-25. **Which is equivalent is 1GB?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
-   A) 1e+4B
-   B) 1e+6B
-   C) 1e+8B
-   D) 1e+9B
-
-26. **CPU, ________ are the basic components of a computer system.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 261]**
-   a. Keyboard and monitor
-   b. Main memory and I/O devices
-   c. Keyboard and I/O devices
-   d. Main memory and monitor
-
-27. **Who among the following is associated with the invention of computer?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
-   a. Edison
-   b. Babbage
-   c. Mac Millen
-   d. Rangabhashyam
-
-28. **What are the four key functions of a computer system?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
-   a. input, processing, output & storage
-   b. keyboard, display, memory & disk drive
-   c. bits, bytes, words & OSI
-   d. word processing, spreadsheets & database
-
-29. **This is the smallest unit of data in a computer ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
-   a. Bit
-   b. Byte
-   c. Nibble
-   d. Word
-
-## Keyboard Shortcuts
-
-1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) Ctrl + T
-   b) Ctrl + W
-   c) Ctrl + N
-   d) Ctrl + Q
-
-2. **Which operation dose F1 key perform for all types of application?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
-   A) Windows shut down
-   B) File open
-   C) Help
-   D) Save
-
-3. **কি-বোর্ডের Del বাটন চাপলে কি হয়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
-   **Ans:** কার্সরের পরের শব্দ মুছে যায়।
-
-4. **In the keyboard of a computer processing F8 Key for three times selects?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
-   a. A paragraph
-   b. A sentence
-   c. Entire document
-   d. A word
-
-## Hardware Components & Peripherals
+## Hardware Components & Peripherals (42)
 
 1. **The Expansion cards are inserted into ______ in a computer.** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
    (a) Slots of CPU
@@ -468,99 +269,7 @@
    c. Disabling the power system
    d. Disabling some of driver software
 
-## ICT & Emerging Technology
-
-1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
-   (a) A blockchain is a centralized digital ledger consisting of records called blocks
-   (b) A blockchain is a decentralized, distributed, digital ledger consisting of records called blocks
-   (c) A blockchain is a centralized digital ledger consisting of records called blocks
-   (d) None of the above
-
-2. **What is Smart Bangladesh?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
-   (a) Smart Citizens>Smart Government>Smart Economy>Smart Society
-   (b) Smart Citizens>Smart Government>Smart Industry>Smart Society
-   (c) Smart Citizens>Smart People>Smart Economy>Smart Society
-   (d) Smart Citizens>Smart Government>Smart Economy>Smart Learn
-
-3. **What is a distributed ledger on a peer-to-peer network called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
-   **Ans:** Block Chain
-
-4. **In which way blockchain data can be modifued?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
-   **Ans:** Cannot Modify
-
-5. **Which one of the following process is the main task for the computer in mapping the geographical data?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
-   (ক) Data storage
-   (খ) Data visualization
-   (গ) Data retrieving and drawing
-   (ঘ) Data collection
-
-6. **Which of the following is not in connection with blockchain technology?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
-   (ক) Peer-to-Peer digital currency
-   (খ) Centralized social network
-   (গ) Peer-to-Peer social network
-   (ঘ) Distributed Ledger management
-
-7. **The study of the way people work with tools is called.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
-   A) debugging
-   B) programming
-   C) ergonomics
-   D) kinetics
-
-8. **Smallest unit of bit coin is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
-   a) unit coin
-   b) satoshis
-   c) etherum
-   d) litecoin
-
-9. **In a block chain, a bundle of transaction is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
-   a) node
-   b) block
-   c) chain
-   d) nonce
-
-10. **কোনটি Social media network নয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
-   A) LinkedIn
-   B) Google+
-   C) Internet Explorer
-   D) Twitter
-
-11. **Information, a combination of graphics, text, sound, video and animation is called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
-   (a) Multitask
-   (b) Multimedia
-   (c) Multiprocessor
-   (d) Multiprogramming me
-
-12. **Which one is not an example of disruptive technology?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
-   A) 3D printing
-   B) Internet of things
-   C) Robotics
-   D) Executive dashboard
-
-13. **AR refers to which of the following environment—** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
-   A) Artificial Reality
-   B) Augmented Report
-   C) Artificial Report
-   D) Augmented Reality
-
-14. **What is pipilika form www.pipilika.com?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
-   A) A Bangla Font
-   B) A Bangladeshi graphic Software
-   C) A Bangladeshi Browser
-   D) A Bangladeshi Game App
-
-15. **Which one is government base procurement website in Bangladesh?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
-   A) egp.gov.bd
-   B) eprocurement.gov.bd
-   C) procurement.gov.bd
-   D) eprocure.gov.bd
-
-16. **What kind of image is created in virtual reality?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
-   A) Three-Dimensional
-   B) Two-Dimensional
-   C) One Dimensional
-   D) Multi-Dimensional
-
-## Software Types & Classification
+## Software Types & Classification (41)
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
    a) Chrome
@@ -808,7 +517,275 @@
    c. BASIC interpreter instructions
    d. Flowchart instructions
 
-## Acronyms & Abbreviations
+## Computer Fundamentals & Generations (29)
+
+1. **একটি কম্পিউটারের আইকিউ কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. ০
+   খ. ১০০
+   গ. ১৫০
+   ঘ. ২০০
+
+2. **Which one is the first high level programming language?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
+   A) C
+   B) COBOL
+   C) FORTRAN
+   D) C++
+
+3. **Which one is the first search engine?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+   A) Google
+   B) Archie
+   C) Alta vista
+   D) WAIS
+
+4. **Which of the following is the most commonly used encoding standard of Unicode?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 46]**
+   (ক) UTF-6
+   (খ) UTF-7
+   (গ) UTF-8
+   (ঘ) UTF-9
+
+5. **EDSAC কম্পিউটার এ ডাটা সংরক্ষণের জন্য কি ধরণের মেমরি ব্যবহার হত?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 120]**
+   a) RAM
+   b) ROM
+   c) Mercury Delay
+   d) Registers Lines
+
+6. **In which year were chips used inside the computer for the first time?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+   (a) 1964
+   (b) 1974
+   (c) 1975
+   (d) 1981
+
+7. **Which was the world's first electronic computer?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 124]**
+   a. ENIAC
+   b. EDVAC
+   c. UNIVAC
+   d. IBM
+
+8. **WWW (World Wide Web) এর জনক কে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+   (ক) বিল গেটস
+   (খ) স্টিভ জবস
+   (গ) টিম বার্নস লি.
+   (ঘ) জেফ বেজোফ
+
+9. **English scientist ________ invented the World Wide Web in 1989.** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 150]**
+   a) Vint Cerf
+   b) Robert Elliot Kahn
+   c) Alan Turing
+   d) Tim Berners-Lee
+
+10. **Who is known as the first computer programmer?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
+   a) Alan Turing
+   b) Ada Lovelace
+   c) Charles Babbage
+   d) None of the above
+
+11. **________ was a chess-playing computer developed by IBM?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. Bright Red
+   b. Deep Blue
+   c. Light Green
+   d. Dark Pink
+
+12. **How many bits are there in Unicode?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. 8
+   b. 12
+   c. 16
+   d. 20
+
+13. **When was first artificial satellite established?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. 1940
+   b. 1960
+   c. 1950
+   d. 1957
+
+14. **1 Terabyte ________ gigabyte in the decimal system?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   a. 1000
+   b. 720
+   c. 1950
+   d. 1970
+
+15. **All decimal values and integers are included in set of** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
+   A) whole numbers
+   B) natural numbers
+   C) real numbers
+   D) integers
+
+16. **Who invented QWERTY keyboard?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) Steve jobs
+   B) Christopher Latham Sholes
+   C) Brain Sams
+   D) Anderson Palimar
+
+17. **Which of the following is the smallest size in the list?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) Zettabyte
+   B) Gigabyte
+   C) Petabyte
+   D) Terabyte
+
+18. **Microprocessor is used first in which generation computers?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+   a. Second generation
+   b. Third generation
+   c. Fourth generation
+   d. Fifth generation
+
+19. **On which aspect the analog computers are better than digital?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
+   A) Speed
+   B) Accuracy
+   C) Reliability
+   D) Automatic
+
+20. **How many numbers could ENIAC store in its internal memory?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
+   A) 100
+   B) 20
+   C) 80
+   D) 40
+
+21. **Which of the following is a class of computers based on model?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Digital Computers
+   B) Hybrid Computers
+   C) Analog Computers
+   D) AT Computers
+
+22. **Which of the following is not true?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+   A) Transistors are much smaller
+   B) Transistors produce low heat
+   C) Transistors were less reliable
+   D) Transistors were used in radios and other electronic devices
+
+23. **Which was the most popular first-generation computer?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+   A) IBM 1650
+   B) IBM 360
+   C) IBM 1130
+   D) IBM 650
+
+24. **Which of the following is not a form of data?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+   A) Numbers and characters
+   B) images
+   C) sound
+   D) None of this
+
+25. **Which is equivalent is 1GB?** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 261]**
+   A) 1e+4B
+   B) 1e+6B
+   C) 1e+8B
+   D) 1e+9B
+
+26. **CPU, ________ are the basic components of a computer system.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 261]**
+   a. Keyboard and monitor
+   b. Main memory and I/O devices
+   c. Keyboard and I/O devices
+   d. Main memory and monitor
+
+27. **Who among the following is associated with the invention of computer?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
+   a. Edison
+   b. Babbage
+   c. Mac Millen
+   d. Rangabhashyam
+
+28. **What are the four key functions of a computer system?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 269]**
+   a. input, processing, output & storage
+   b. keyboard, display, memory & disk drive
+   c. bits, bytes, words & OSI
+   d. word processing, spreadsheets & database
+
+29. **This is the smallest unit of data in a computer ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+   a. Bit
+   b. Byte
+   c. Nibble
+   d. Word
+
+## ICT & Emerging Technology (16)
+
+1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) A blockchain is a centralized digital ledger consisting of records called blocks
+   (b) A blockchain is a decentralized, distributed, digital ledger consisting of records called blocks
+   (c) A blockchain is a centralized digital ledger consisting of records called blocks
+   (d) None of the above
+
+2. **What is Smart Bangladesh?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 29]**
+   (a) Smart Citizens>Smart Government>Smart Economy>Smart Society
+   (b) Smart Citizens>Smart Government>Smart Industry>Smart Society
+   (c) Smart Citizens>Smart People>Smart Economy>Smart Society
+   (d) Smart Citizens>Smart Government>Smart Economy>Smart Learn
+
+3. **What is a distributed ledger on a peer-to-peer network called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Block Chain
+
+4. **In which way blockchain data can be modifued?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** Cannot Modify
+
+5. **Which one of the following process is the main task for the computer in mapping the geographical data?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) Data storage
+   (খ) Data visualization
+   (গ) Data retrieving and drawing
+   (ঘ) Data collection
+
+6. **Which of the following is not in connection with blockchain technology?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) Peer-to-Peer digital currency
+   (খ) Centralized social network
+   (গ) Peer-to-Peer social network
+   (ঘ) Distributed Ledger management
+
+7. **The study of the way people work with tools is called.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 161]**
+   A) debugging
+   B) programming
+   C) ergonomics
+   D) kinetics
+
+8. **Smallest unit of bit coin is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) unit coin
+   b) satoshis
+   c) etherum
+   d) litecoin
+
+9. **In a block chain, a bundle of transaction is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) node
+   b) block
+   c) chain
+   d) nonce
+
+10. **কোনটি Social media network নয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
+   A) LinkedIn
+   B) Google+
+   C) Internet Explorer
+   D) Twitter
+
+11. **Information, a combination of graphics, text, sound, video and animation is called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
+   (a) Multitask
+   (b) Multimedia
+   (c) Multiprocessor
+   (d) Multiprogramming me
+
+12. **Which one is not an example of disruptive technology?** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) 3D printing
+   B) Internet of things
+   C) Robotics
+   D) Executive dashboard
+
+13. **AR refers to which of the following environment—** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) Artificial Reality
+   B) Augmented Report
+   C) Artificial Report
+   D) Augmented Reality
+
+14. **What is pipilika form www.pipilika.com?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) A Bangla Font
+   B) A Bangladeshi graphic Software
+   C) A Bangladeshi Browser
+   D) A Bangladeshi Game App
+
+15. **Which one is government base procurement website in Bangladesh?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) egp.gov.bd
+   B) eprocurement.gov.bd
+   C) procurement.gov.bd
+   D) eprocure.gov.bd
+
+16. **What kind of image is created in virtual reality?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) Three-Dimensional
+   B) Two-Dimensional
+   C) One Dimensional
+   D) Multi-Dimensional
+
+## Acronyms & Abbreviations (13)
 
 1. **CMP এর পূর্ণ অভিব্যক্তি হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
    (ক) Common Project Method
@@ -887,3 +864,26 @@
    b. Dual Inline Package
    c. Durable Iclonic Plastic
    d. Dual Independent
+
+## Keyboard Shortcuts (4)
+
+1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) Ctrl + T
+   b) Ctrl + W
+   c) Ctrl + N
+   d) Ctrl + Q
+
+2. **Which operation dose F1 key perform for all types of application?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 160]**
+   A) Windows shut down
+   B) File open
+   C) Help
+   D) Save
+
+3. **কি-বোর্ডের Del বাটন চাপলে কি হয়?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
+   **Ans:** কার্সরের পরের শব্দ মুছে যায়।
+
+4. **In the keyboard of a computer processing F8 Key for three times selects?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 125]**
+   a. A paragraph
+   b. A sentence
+   c. Entire document
+   d. A word

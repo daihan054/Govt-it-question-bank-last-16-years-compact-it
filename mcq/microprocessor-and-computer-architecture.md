@@ -3,193 +3,17 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [CPU & Registers](#cpu--registers) | 36 |
-| 2 | [Memory Hierarchy](#memory-hierarchy) | 29 |
-| 3 | [Secondary Storage (HDD & Disk Organization)](#secondary-storage-hdd--disk-organization) | 13 |
-| 4 | [RAID & Storage Architecture](#raid--storage-architecture) | 5 |
-| 5 | [Assembly Language & Machine Code](#assembly-language--machine-code) | 4 |
+| 1 | [CPU & Registers](#cpu--registers-36) | 36 |
+| 2 | [Memory Hierarchy](#memory-hierarchy-29) | 29 |
+| 3 | [Secondary Storage (HDD & Disk Organization)](#secondary-storage-hdd--disk-organization-13) | 13 |
+| 4 | [RAID & Storage Architecture](#raid--storage-architecture-5) | 5 |
+| 5 | [Assembly Language & Machine Code](#assembly-language--machine-code-4) | 4 |
 
 <!-- TOC END -->
 
 ---
 
-## Memory Hierarchy
-
-1. **Considering computer memory speed, which one is correct order from highest to lowest?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) RAM>Cache>Register SSD HDD
-   (b) Cache RAM>SSD>HDD>Register
-   (c) RAM>SSD>Cache>HDD>Register
-   (d) Register>Cache>RAM>SSD HDD
-
-2. **An increase in a computer's RAM leads to a typical improvement in performance because:** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
-   (a) Virtual memory increases
-   (b) Fewer segmentation faults occur
-   (c) A larger RAM is faster
-   (d) Fewer page faults occur
-
-3. **Out of all the following, which one isn't a form of memory?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
-   (a) translation lookaside buffer
-   (b) instruction opcode
-   (c) instruction register
-   (d) instruction cachenss
-
-4. **Which among the following is the fastest memory in a computer that holds information?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
-   (a) Register
-   (b) Cache
-   (c) Main memory
-   (d) RAM
-
-5. **Which mode of memory access is the fastest?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
-   (ক) Reference
-   (খ) Pointer
-   (গ) Double pointer
-   (ঘ) DMA
-
-6. **Which of the following causes the average memory access time to increase in a memory system with cache memory?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
-   a) Reduction of access time to cache memory
-   b) Decrease in hit ratio
-   c) Reduction of miss penalty
-   d) Decrease in miss ratio
-
-7. **Which of the following is not a nonvolatile storage device?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
-   a) Memory Stick
-   b) Hard Disk
-   c) Random Access Memory
-   d) NVRAM
-
-8. **What is the typical speed of USB version 3.0?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
-   (a) 4.8G bits per second
-   (b) 610 Mbps
-   (c) 6Gbps
-   (d) Both a and b
-
-9. **SSDs are more durable than HDDs in extreme and harsh environments because** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
-   (a) They don't have actuator arms
-   (b) They use fast electronics Memory
-   (c) They do not use 0/1 as data storage unit which is prone to crash
-   (d) All of the above statements are true
-
-10. **The term LPDDR means-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
-   (a) Low-Power Discrete Data Rate
-   (b) Low-processing Double Data Rate
-   (c) Low-Programmable Double Data Rate
-   (d) None of the above
-
-11. **How many core/threads does the Intel Core i7-9700K processor have?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
-   (a) 6/12
-   (b) 4/8
-   (c) 8/8
-   (d) 8/16
-
-12. **Which of the following uses the flip-flop circuit in a memory cell?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
-   a. DRAM
-   b. EEPROM
-   c. SDRAM
-   d. SRAM
-
-13. **কোন বৈশিষ্ট্যের কারণে অজগ স্থায়ী স্মৃতি-স্টোরেজ হিসেবে ব্যবহার অনুপযোগী?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
-   A. Too Slow
-   B. Unreliable
-   C. Volatility
-   D. Too Bulky
-
-14. **Which of the following memory devices is not reprogrammable?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
-   a) Flash memory
-   b) ROM
-   c) EPROM
-   d) EEPROM
-
-15. **There is a RAM issue on a PC/laptop. Which of the following symptom(s) might be an indication of RAM issue?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
-   a) PC frequently freezes, reboots
-   b) Wrong BIOS time
-   c) Function keys are not working properly
-   d) All of them
-
-16. **A solid-state drive (SSD) is a newer, faster type of device that stores data on instantly-accessible ________.** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
-   a) Ultra Magnetic Chip
-   b) Integrated Circuit
-   c) Random Access Memory
-   d) High Bandwidth memory
-
-17. **Which factor is not affecting the processing speed of a computer system?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
-   A) Cache memory
-   B) Clock speed
-   C) Monitor
-   D) RAM
-
-18. **Main Memory কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
-   A) RAM
-   B) ROM
-   C) HDD
-   D) Floppy
-
-19. **নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
-   A) RAM
-   B) Hard disk
-   C) CD ROM
-   D) Cache Memory
-
-20. **Arithmetic and Logical operation এর ডাটা কাজের সময় কোথায় রাখা হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
-   A) Arithmetic Register
-   B) Accumulator
-   C) Logical Register
-   D) Controller
-
-21. **Which one can be used for read only?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
-   A) RAM
-   B) ROM
-   C) Both A & B
-   D) None
-
-22. **Which is the faster memory?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
-   a. RAM
-   b. Secondary memory
-   c. DRAM
-   d. Cache
-
-23. **Which of the following terms is the most closely related to main memory?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
-   A) Non-volatile
-   B) Permanent
-   C) Control unit
-   D) Temporary
-
-24. **Which unit holds data permanently?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
-   A) Input unit
-   B) Secondary storage unit
-   C) Output unit
-   D) Primary Memory unit
-
-25. **Magnetic tape can serve as—** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
-   A) Secondary storage media
-   B) Output media
-   C) Input media
-   D) All of them
-
-26. **Which of the following is internal memory?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
-   A) Disks
-   B) Pen Drives
-   C) RAM
-   D) CDs
-
-27. **Which of the following memories needs refreshing?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
-   A) SRAM
-   B) DRAM
-   C) ROM
-   D) All of them
-
-28. **Which one is faster memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
-   A) RAM
-   B) Secondary Memory
-   C) DRAM
-   D) Cache
-
-29. **Which memory is called as primary memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
-   A) Hard Disk
-   B) Pen Drive
-   C) Rom
-   D) RAM
-
-## CPU & Registers
+## CPU & Registers (36)
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
    (a) ALU
@@ -407,7 +231,183 @@
    c. at same speed
    d. none
 
-## Secondary Storage (HDD & Disk Organization)
+## Memory Hierarchy (29)
+
+1. **Considering computer memory speed, which one is correct order from highest to lowest?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) RAM>Cache>Register SSD HDD
+   (b) Cache RAM>SSD>HDD>Register
+   (c) RAM>SSD>Cache>HDD>Register
+   (d) Register>Cache>RAM>SSD HDD
+
+2. **An increase in a computer's RAM leads to a typical improvement in performance because:** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
+   (a) Virtual memory increases
+   (b) Fewer segmentation faults occur
+   (c) A larger RAM is faster
+   (d) Fewer page faults occur
+
+3. **Out of all the following, which one isn't a form of memory?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
+   (a) translation lookaside buffer
+   (b) instruction opcode
+   (c) instruction register
+   (d) instruction cachenss
+
+4. **Which among the following is the fastest memory in a computer that holds information?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
+   (a) Register
+   (b) Cache
+   (c) Main memory
+   (d) RAM
+
+5. **Which mode of memory access is the fastest?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 47]**
+   (ক) Reference
+   (খ) Pointer
+   (গ) Double pointer
+   (ঘ) DMA
+
+6. **Which of the following causes the average memory access time to increase in a memory system with cache memory?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) Reduction of access time to cache memory
+   b) Decrease in hit ratio
+   c) Reduction of miss penalty
+   d) Decrease in miss ratio
+
+7. **Which of the following is not a nonvolatile storage device?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 116]**
+   a) Memory Stick
+   b) Hard Disk
+   c) Random Access Memory
+   d) NVRAM
+
+8. **What is the typical speed of USB version 3.0?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+   (a) 4.8G bits per second
+   (b) 610 Mbps
+   (c) 6Gbps
+   (d) Both a and b
+
+9. **SSDs are more durable than HDDs in extreme and harsh environments because** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+   (a) They don't have actuator arms
+   (b) They use fast electronics Memory
+   (c) They do not use 0/1 as data storage unit which is prone to crash
+   (d) All of the above statements are true
+
+10. **The term LPDDR means-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
+   (a) Low-Power Discrete Data Rate
+   (b) Low-processing Double Data Rate
+   (c) Low-Programmable Double Data Rate
+   (d) None of the above
+
+11. **How many core/threads does the Intel Core i7-9700K processor have?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+   (a) 6/12
+   (b) 4/8
+   (c) 8/8
+   (d) 8/16
+
+12. **Which of the following uses the flip-flop circuit in a memory cell?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
+   a. DRAM
+   b. EEPROM
+   c. SDRAM
+   d. SRAM
+
+13. **কোন বৈশিষ্ট্যের কারণে অজগ স্থায়ী স্মৃতি-স্টোরেজ হিসেবে ব্যবহার অনুপযোগী?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. Too Slow
+   B. Unreliable
+   C. Volatility
+   D. Too Bulky
+
+14. **Which of the following memory devices is not reprogrammable?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
+   a) Flash memory
+   b) ROM
+   c) EPROM
+   d) EEPROM
+
+15. **There is a RAM issue on a PC/laptop. Which of the following symptom(s) might be an indication of RAM issue?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) PC frequently freezes, reboots
+   b) Wrong BIOS time
+   c) Function keys are not working properly
+   d) All of them
+
+16. **A solid-state drive (SSD) is a newer, faster type of device that stores data on instantly-accessible ________.** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) Ultra Magnetic Chip
+   b) Integrated Circuit
+   c) Random Access Memory
+   d) High Bandwidth memory
+
+17. **Which factor is not affecting the processing speed of a computer system?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) Cache memory
+   B) Clock speed
+   C) Monitor
+   D) RAM
+
+18. **Main Memory কোনটি?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 186]**
+   A) RAM
+   B) ROM
+   C) HDD
+   D) Floppy
+
+19. **নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
+   A) RAM
+   B) Hard disk
+   C) CD ROM
+   D) Cache Memory
+
+20. **Arithmetic and Logical operation এর ডাটা কাজের সময় কোথায় রাখা হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Arithmetic Register
+   B) Accumulator
+   C) Logical Register
+   D) Controller
+
+21. **Which one can be used for read only?** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 218]**
+   A) RAM
+   B) ROM
+   C) Both A & B
+   D) None
+
+22. **Which is the faster memory?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+   a. RAM
+   b. Secondary memory
+   c. DRAM
+   d. Cache
+
+23. **Which of the following terms is the most closely related to main memory?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
+   A) Non-volatile
+   B) Permanent
+   C) Control unit
+   D) Temporary
+
+24. **Which unit holds data permanently?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Input unit
+   B) Secondary storage unit
+   C) Output unit
+   D) Primary Memory unit
+
+25. **Magnetic tape can serve as—** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Secondary storage media
+   B) Output media
+   C) Input media
+   D) All of them
+
+26. **Which of the following is internal memory?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+   A) Disks
+   B) Pen Drives
+   C) RAM
+   D) CDs
+
+27. **Which of the following memories needs refreshing?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+   A) SRAM
+   B) DRAM
+   C) ROM
+   D) All of them
+
+28. **Which one is faster memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) RAM
+   B) Secondary Memory
+   C) DRAM
+   D) Cache
+
+29. **Which memory is called as primary memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
+   A) Hard Disk
+   B) Pen Drive
+   C) Rom
+   D) RAM
+
+## Secondary Storage (HDD & Disk Organization) (13)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
    (a) Vectors
@@ -487,7 +487,7 @@
    c. Vectors
    d. Heads
 
-## RAID & Storage Architecture
+## RAID & Storage Architecture (5)
 
 1. **Which RAID level creates a mirror of all disks for storing data?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
    a) RAID Level 0
@@ -519,7 +519,7 @@
    c) RAID 01
    d) RAID 10
 
-## Assembly Language & Machine Code
+## Assembly Language & Machine Code (4)
 
 1. **In which addressing mode, the effective address of the operand is generated by adding a constant value to the contents of the register?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
    a) Absolute mode

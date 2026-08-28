@@ -3,107 +3,19 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Engineering Mechanics & Strength of Materials](#engineering-mechanics--strength-of-materials) | 10 |
-| 2 | [Thermodynamics & Heat Transfer](#thermodynamics--heat-transfer) | 8 |
-| 3 | [Engineering Materials & Manufacturing](#engineering-materials--manufacturing) | 7 |
-| 4 | [Machining & Workshop Practice](#machining--workshop-practice) | 6 |
-| 5 | [Industrial & Production Engineering](#industrial--production-engineering) | 3 |
-| 6 | [Engineering Drawing](#engineering-drawing) | 1 |
-| 7 | [Fluid Mechanics](#fluid-mechanics) | 1 |
+| 1 | [Engineering Mechanics & Strength of Materials](#engineering-mechanics--strength-of-materials-10) | 10 |
+| 2 | [Thermodynamics & Heat Transfer](#thermodynamics--heat-transfer-8) | 8 |
+| 3 | [Engineering Materials & Manufacturing](#engineering-materials--manufacturing-7) | 7 |
+| 4 | [Machining & Workshop Practice](#machining--workshop-practice-6) | 6 |
+| 5 | [Industrial & Production Engineering](#industrial--production-engineering-3) | 3 |
+| 6 | [Engineering Drawing](#engineering-drawing-1) | 1 |
+| 7 | [Fluid Mechanics](#fluid-mechanics-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Machining & Workshop Practice
-
-1. **ডিলিং মেসিন কর্তৃক কোন অপারেশন সম্পন্ন করা হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
-   (ক) Spot facing
-   (খ) Reaming
-   (গ) Boring
-   (ঘ) সবকটি
-
-2. **টুল ম্যাটেরিয়াল হিসেবে ব্যবহৃত হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
-   (ক) টুল স্টিল
-   (খ) কার্বন স্টিল
-   (গ) সিরামিক স্টিল
-   (ঘ) ডায়মন্ড স্টিল
-
-3. **Screw thread Gi Major Dia. I Minor dia. এর পার্থক্য-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
-   (ক) Depth of thread
-   (খ) Depth of teeth
-   (গ) Pitch
-   (ঘ) Whole depth
-
-4. **Planer Machine এ কার্যবস্তু-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
-   (ক) স্থির থাকে
-   (খ) চলমান থাকে
-   (গ) উভয়ই চলমান থাকে
-   (ঘ) Tool চলমান থাকে
-
-5. **নাট ও বোল্ট কর্তৃক গঠিত জোড়া হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
-   (ক) টার্নিং জোড়া
-   (খ) রোলিং জোড়া
-   (গ) স্ক্রু জোড়া
-   (ঘ) স্ফেরিক্যাল জোড়া
-
-6. **Dead centre কোন মেশিনে থাকে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
-   (a) Lathe
-   (b) Shaper
-   (c) Milling
-   (d) Drill
-
-## Thermodynamics & Heat Transfer
-
-1. **একটি হিমায়ন চক্রের হিমায়ক কর্তৃক তাপ শোষিত হয়** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
-   (ক) কন্ডেন্সারে
-   (খ) ইভাপোরেটরে
-   (গ) কম্প্রেসরে
-   (ঘ) থ্রোটল ভালবে
-
-2. **এক বায়ুমন্ডলীয় চাপ সমান-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
-   (ক) ১৪.৭ কেজি/সে.মি
-   (খ) ১ কেজি/মি.
-   (গ) ১.০৩৩ কেজি/সে.মি
-   (ঘ) ১.০৩৩ কেজি/মি
-
-3. **IC ইঞ্জিনের জ্বালানী দহন ঘটে-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
-   (ক) সিলিন্ডারের বাইরে
-   (খ) সিলিন্ডারের অভ্যন্তরে
-   (গ) কোথাও দহন ঘটে না
-   (ঘ) উপরের কোনটি নয়।
-
-4. **যে কোন মুহূর্তে বয়লারের পানির সঠিক লেভেল জানা যায় যে যন্ত্রের সাহায্যে সেটি হল-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
-   (ক) ওয়াটার লেভেল ইন্ডিকেটর
-   (খ) ফিড চেক ভালব
-   (গ) ব্লো অফ-কক
-   (ঘ) স্টপ ভালব
-
-5. **ডোমেস্টিক রেফ্রিজারেটরের কো-এফিসিয়েন্ট অফ পারফরমেন্স (COP) হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
-   (ক) ১.০ এর সমান
-   (খ) ১.০ কম
-   (গ) ১.০ এর বেশি
-   (ঘ) ক, খ, গ এর যে কোন মান
-
-6. **কোনটি নন-পজিটিভ ডিসপ্লেসমেন্ট কম্প্রেসর** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
-   (ক) রেসিপ্রোকেটিং কম্প্রেসর
-   (খ) সেন্ট্রিফিউগাল কম্প্রেসর
-   (গ) এক্সিয়াল কম্প্রেসর
-   (ঘ) খ ও গ উভয়টি সঠিক
-
-7. **থার্মোডাইনামিক্স এর প্রথম সূত্রটি কোন সমীকরণ দ্বারা প্রকাশ করা হয়।** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
-   (ক) W = JH
-   (খ) H = JW
-   (গ) W = J + H
-   (ঘ) H = J + W
-
-8. **একটি গ্যাসের রুদ্ধতাপীয় প্রসারণ কোন সূত্র দ্বারা প্রকাশ করা হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
-   (a) \text{PV} = \text{constant}
-   (b) \text{PV}^\gamma = \text{constant}
-   (c) \text{PV}^\alpha = \text{constant}
-   (d) \text{PV}^\circ = \text{constant}
-
-## Engineering Mechanics & Strength of Materials
+## Engineering Mechanics & Strength of Materials (10)
 
 1. **Moment of Inertia এর একক হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
    (ক) \text{mm}^4
@@ -165,7 +77,57 @@
    (গ) সর্বনিম্ন
    (ঘ) সর্বনিম্ন অথবা সর্বোচ্চ
 
-## Engineering Materials & Manufacturing
+## Thermodynamics & Heat Transfer (8)
+
+1. **একটি হিমায়ন চক্রের হিমায়ক কর্তৃক তাপ শোষিত হয়** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+   (ক) কন্ডেন্সারে
+   (খ) ইভাপোরেটরে
+   (গ) কম্প্রেসরে
+   (ঘ) থ্রোটল ভালবে
+
+2. **এক বায়ুমন্ডলীয় চাপ সমান-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+   (ক) ১৪.৭ কেজি/সে.মি
+   (খ) ১ কেজি/মি.
+   (গ) ১.০৩৩ কেজি/সে.মি
+   (ঘ) ১.০৩৩ কেজি/মি
+
+3. **IC ইঞ্জিনের জ্বালানী দহন ঘটে-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+   (ক) সিলিন্ডারের বাইরে
+   (খ) সিলিন্ডারের অভ্যন্তরে
+   (গ) কোথাও দহন ঘটে না
+   (ঘ) উপরের কোনটি নয়।
+
+4. **যে কোন মুহূর্তে বয়লারের পানির সঠিক লেভেল জানা যায় যে যন্ত্রের সাহায্যে সেটি হল-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+   (ক) ওয়াটার লেভেল ইন্ডিকেটর
+   (খ) ফিড চেক ভালব
+   (গ) ব্লো অফ-কক
+   (ঘ) স্টপ ভালব
+
+5. **ডোমেস্টিক রেফ্রিজারেটরের কো-এফিসিয়েন্ট অফ পারফরমেন্স (COP) হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+   (ক) ১.০ এর সমান
+   (খ) ১.০ কম
+   (গ) ১.০ এর বেশি
+   (ঘ) ক, খ, গ এর যে কোন মান
+
+6. **কোনটি নন-পজিটিভ ডিসপ্লেসমেন্ট কম্প্রেসর** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
+   (ক) রেসিপ্রোকেটিং কম্প্রেসর
+   (খ) সেন্ট্রিফিউগাল কম্প্রেসর
+   (গ) এক্সিয়াল কম্প্রেসর
+   (ঘ) খ ও গ উভয়টি সঠিক
+
+7. **থার্মোডাইনামিক্স এর প্রথম সূত্রটি কোন সমীকরণ দ্বারা প্রকাশ করা হয়।** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (ক) W = JH
+   (খ) H = JW
+   (গ) W = J + H
+   (ঘ) H = J + W
+
+8. **একটি গ্যাসের রুদ্ধতাপীয় প্রসারণ কোন সূত্র দ্বারা প্রকাশ করা হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
+   (a) \text{PV} = \text{constant}
+   (b) \text{PV}^\gamma = \text{constant}
+   (c) \text{PV}^\alpha = \text{constant}
+   (d) \text{PV}^\circ = \text{constant}
+
+## Engineering Materials & Manufacturing (7)
 
 1. **গিয়ার তৈরিতে সাধারণত ব্যবহৃত হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
    (ক) Cast Iron
@@ -209,15 +171,45 @@
    (গ) Hardness
    (ঘ) Porosity
 
-## Engineering Drawing
+## Machining & Workshop Practice (6)
 
-1. **কোন Technical drawing এর ক্ষেত্রে উর্ধ্বরিহম এ দৈর্ঘ্য ও বস্তুর প্রকৃত দৈর্ঘ্যের অনুপাতকে বলে-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
-   (ক) Representative fraction
-   (খ) Scale
-   (গ) Dimension ratio
-   (ঘ) Distance fraction
+1. **ডিলিং মেসিন কর্তৃক কোন অপারেশন সম্পন্ন করা হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+   (ক) Spot facing
+   (খ) Reaming
+   (গ) Boring
+   (ঘ) সবকটি
 
-## Industrial & Production Engineering
+2. **টুল ম্যাটেরিয়াল হিসেবে ব্যবহৃত হয়-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+   (ক) টুল স্টিল
+   (খ) কার্বন স্টিল
+   (গ) সিরামিক স্টিল
+   (ঘ) ডায়মন্ড স্টিল
+
+3. **Screw thread Gi Major Dia. I Minor dia. এর পার্থক্য-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
+   (ক) Depth of thread
+   (খ) Depth of teeth
+   (গ) Pitch
+   (ঘ) Whole depth
+
+4. **Planer Machine এ কার্যবস্তু-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (ক) স্থির থাকে
+   (খ) চলমান থাকে
+   (গ) উভয়ই চলমান থাকে
+   (ঘ) Tool চলমান থাকে
+
+5. **নাট ও বোল্ট কর্তৃক গঠিত জোড়া হলো-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
+   (ক) টার্নিং জোড়া
+   (খ) রোলিং জোড়া
+   (গ) স্ক্রু জোড়া
+   (ঘ) স্ফেরিক্যাল জোড়া
+
+6. **Dead centre কোন মেশিনে থাকে?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 147]**
+   (a) Lathe
+   (b) Shaper
+   (c) Milling
+   (d) Drill
+
+## Industrial & Production Engineering (3)
 
 1. **Motion study chart I Therbligs symbol হল-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 144]**
    (ক) ২১টি
@@ -237,7 +229,15 @@
    (গ) Production rate
    (ঘ) Effectiveness
 
-## Fluid Mechanics
+## Engineering Drawing (1)
+
+1. **কোন Technical drawing এর ক্ষেত্রে উর্ধ্বরিহম এ দৈর্ঘ্য ও বস্তুর প্রকৃত দৈর্ঘ্যের অনুপাতকে বলে-** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 142]**
+   (ক) Representative fraction
+   (খ) Scale
+   (গ) Dimension ratio
+   (ঘ) Distance fraction
+
+## Fluid Mechanics (1)
 
 1. **স্থির তরলের ক্ষেত্রে শেয়ার পীড়ন হল:** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 145]**
    (ক) সর্বোচ্চ

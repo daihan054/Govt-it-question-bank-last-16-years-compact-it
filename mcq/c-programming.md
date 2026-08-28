@@ -3,133 +3,21 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Output Tracing](#output-tracing) | 36 |
-| 2 | [Control Statements & Loops](#control-statements--loops) | 16 |
-| 3 | [Arrays & Functions](#arrays--functions) | 15 |
-| 4 | [Data Types & Variables](#data-types--variables) | 14 |
-| 5 | [Operators & Expressions](#operators--expressions) | 11 |
-| 6 | [Pointers & Memory Allocation](#pointers--memory-allocation) | 5 |
-| 7 | [Recursion](#recursion) | 4 |
-| 8 | [Storage Classes & Scope](#storage-classes--scope) | 3 |
-| 9 | [Flowcharts & Algorithms](#flowcharts--algorithms) | 1 |
+| 1 | [Output Tracing](#output-tracing-36) | 36 |
+| 2 | [Control Statements & Loops](#control-statements--loops-16) | 16 |
+| 3 | [Arrays & Functions](#arrays--functions-15) | 15 |
+| 4 | [Data Types & Variables](#data-types--variables-14) | 14 |
+| 5 | [Operators & Expressions](#operators--expressions-11) | 11 |
+| 6 | [Pointers & Memory Allocation](#pointers--memory-allocation-5) | 5 |
+| 7 | [Recursion](#recursion-4) | 4 |
+| 8 | [Storage Classes & Scope](#storage-classes--scope-3) | 3 |
+| 9 | [Flowcharts & Algorithms](#flowcharts--algorithms-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Control Statements & Loops
-
-1. **Which of the following statements about the "do while" loop is correct?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
-   a) The condition is checked before the loop body is executed for the first time.
-   b) The loop body is guaranteed to execute at least once.
-   c) The loop condition must always be false for the loop to execute.
-   d) The "do while" loop and "while" loop have identical behavior in all cases.
-
-2. **Which for loop has range of similar indexes of 'i' used in for (i = 0; i < n; i++)?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
-   (a) for (i= n; i>0; i--)
-   (b) for (i=n-1; i>0; i--)
-   (c) for (i = 0; i = 0; i--)
-   (d) for (i=n-1; i>-1; i--)
-
-3. **Consider int i=0; Then which of the following is not an infinite loop?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
-   a) for(;;){}
-   b) while ( ){}
-   c) while ( ++i<0) { --i;}
-   d) do {++i; while(--i<=0);
-
-4. **Which keyword is used to skip the rest of a loop and carry on from the top of the loop again?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
-   a) Break
-   b) resume
-   c) continue
-   d) skip
-
-5. **What can be used to terminate for(;;)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
-   **Ans:** break statement
-
-6. **The ________ loop is especially useful when you process a menu selection?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**
-   a) while
-   b) do-while
-   c) for
-   d) switch
-
-7. **C programming Language এ কোনো loop থেকে তৎক্ষণাৎ বের করার জন্য উল্লেখিত কোনটি ব্যবহৃত হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
-   A) break
-   B) switch
-   C) continue
-   D) if
-
-8. **Which Control statement can be executed at least once?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
-   A) While
-   B) For
-   C) do-while
-   D) None of the above
-
-9. **Which of the following cannot be checked in a switch-case statement?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
-   A) Character
-   B) Integer
-   C) Float
-   D) None of above
-
-10. **Which control statement can be executed at least once?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
-   A) While
-   B) for
-   C) do-while
-   D) All of the above
-
-11. **Which of the following correctly shows the hierarchy of algorithm operation in C?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
-   A) /*+-
-   B) *-/+
-   C) +-/*
-   D) /*+-
-   25. Consider the following code
-   ```c
-   #include<stdio.h>
-   int main (int argc, char *argv[]){
-   return 0;}
-   ```
-   What is the maximum length of character array argv in the above code? **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
-   A) 0
-   B) 1
-   C) Undefined
-   D) -1
-   26. Which is the value of “d” after this line of code has been executed?
-   double d = Math.round(2.5+math.random()); **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
-   A) 2
-   B) 2.5
-   C) 3
-   D) 4
-
-12. **What is an example of iteration in C?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
-   A) for
-   B) while
-   C) do-while
-   D) all of the above
-
-13. **Which of the following format is a correct format for declaration of function?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
-   A) return-type function-name (argument type);
-   B) return-type function-name (argument type) {}
-   C) return-type (argument type) function-name;
-   D) return-type {} function-name
-
-14. **What are the final values of a and c in the following C statement? (initialize value a=2, c=1) c=c? c=2:a=0;** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
-   A) a=0, c=0
-   B) a=2, c=2
-   C) a=2, c=2
-   D) a=1, c=2
-
-15. **Which of the following doesn’t require an ‘&’ for the input in scanf ( ) ?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
-   A) char name [10];
-   B) int name [10];
-   C) float name[10];
-   D) double name [10];
-
-16. **Which are the keywords of structured programming?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 245]**
-   A) Keywords
-   B) Constant
-   C) volatile
-   D) Above all
-
-## Output Tracing
+## Output Tracing (36)
 
 1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
    ```c
@@ -580,28 +468,119 @@
    c. 0
    d. Compiler Error
 
-## Storage Classes & Scope
+## Control Statements & Loops (16)
 
-1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
-   (A) auto
-   (B) register
-   (C) static
-   (D) extern
-   (E) volatile
+1. **Which of the following statements about the "do while" loop is correct?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
+   a) The condition is checked before the loop body is executed for the first time.
+   b) The loop body is guaranteed to execute at least once.
+   c) The loop condition must always be false for the loop to execute.
+   d) The "do while" loop and "while" loop have identical behavior in all cases.
 
-2. **In C, static storage class cannot be used with:** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
-   (A) Global variabl
-   (B) Function parameter
-   (C) Function name
-   (D) Local variable
+2. **Which for loop has range of similar indexes of 'i' used in for (i = 0; i < n; i++)?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
+   (a) for (i= n; i>0; i--)
+   (b) for (i=n-1; i>0; i--)
+   (c) for (i = 0; i = 0; i--)
+   (d) for (i=n-1; i>-1; i--)
 
-3. **Which of the following storage classes have global visibility in C/C++?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
-   (A) Auto
-   (B) Extern
-   (C) Static
-   (D) Register
+3. **Consider int i=0; Then which of the following is not an infinite loop?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) for(;;){}
+   b) while ( ){}
+   c) while ( ++i<0) { --i;}
+   d) do {++i; while(--i<=0);
 
-## Arrays & Functions
+4. **Which keyword is used to skip the rest of a loop and carry on from the top of the loop again?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) Break
+   b) resume
+   c) continue
+   d) skip
+
+5. **What can be used to terminate for(;;)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** break statement
+
+6. **The ________ loop is especially useful when you process a menu selection?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**
+   a) while
+   b) do-while
+   c) for
+   d) switch
+
+7. **C programming Language এ কোনো loop থেকে তৎক্ষণাৎ বের করার জন্য উল্লেখিত কোনটি ব্যবহৃত হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) break
+   B) switch
+   C) continue
+   D) if
+
+8. **Which Control statement can be executed at least once?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
+   A) While
+   B) For
+   C) do-while
+   D) None of the above
+
+9. **Which of the following cannot be checked in a switch-case statement?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) Character
+   B) Integer
+   C) Float
+   D) None of above
+
+10. **Which control statement can be executed at least once?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 226]**
+   A) While
+   B) for
+   C) do-while
+   D) All of the above
+
+11. **Which of the following correctly shows the hierarchy of algorithm operation in C?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) /*+-
+   B) *-/+
+   C) +-/*
+   D) /*+-
+   25. Consider the following code
+   ```c
+   #include<stdio.h>
+   int main (int argc, char *argv[]){
+   return 0;}
+   ```
+   What is the maximum length of character array argv in the above code? **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) 0
+   B) 1
+   C) Undefined
+   D) -1
+   26. Which is the value of “d” after this line of code has been executed?
+   double d = Math.round(2.5+math.random()); **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+   A) 2
+   B) 2.5
+   C) 3
+   D) 4
+
+12. **What is an example of iteration in C?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+   A) for
+   B) while
+   C) do-while
+   D) all of the above
+
+13. **Which of the following format is a correct format for declaration of function?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) return-type function-name (argument type);
+   B) return-type function-name (argument type) {}
+   C) return-type (argument type) function-name;
+   D) return-type {} function-name
+
+14. **What are the final values of a and c in the following C statement? (initialize value a=2, c=1) c=c? c=2:a=0;** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
+   A) a=0, c=0
+   B) a=2, c=2
+   C) a=2, c=2
+   D) a=1, c=2
+
+15. **Which of the following doesn’t require an ‘&’ for the input in scanf ( ) ?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
+   A) char name [10];
+   B) int name [10];
+   C) float name[10];
+   D) double name [10];
+
+16. **Which are the keywords of structured programming?** **(Bangladesh Bank Assistant Programmer Preliminary Exam: 2016) [compact it 245]**
+   A) Keywords
+   B) Constant
+   C) volatile
+   D) Above all
+
+## Arrays & Functions (15)
 
 1. **The number of values a function can return at a time?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
    a) 1
@@ -693,76 +672,7 @@
    c. Base address of the array
    d. Address of the last element of the array
 
-## Pointers & Memory Allocation
-
-1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
-   a) Integer
-   b) Float
-   c) Character
-   d) Double
-
-2. **Address variable রাখা যায় কোনটিতে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
-   A) Break
-   B) Int
-   C) Pointer
-   D) Float
-
-3. **C-programming এ address রাখার জন্য কোনটি সাধারণত ব্যবহৃত হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
-   A) break
-   B) pointer
-   C) char
-   D) float
-
-4. **What is the following declaration for? int (*a)[10];** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
-   (a) Pointer to an array of 10 integers
-   (b) Array of 10 function Pointers returning integer
-   (c) A pointer of to function returning an array to 10 integers
-   (d) Array of 10 integers pointers
-
-5. **Which header file should be included to use functions like malloc() and calloc()?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 271]**
-   a. memory.h
-   b. stdlib.h
-   c. string.h
-   d. dos.h
-
-## Recursion
-
-1. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
-   **Ans:** This is known as function reusability or recursion or Idempotence
-
-2. **How many function calls will be performed to execute the following recursive function?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
-   ```c
-   void function(int N) {
-   if (N==0)
-   return;
-   function(N+1);
-   }
-   ```
-   a) N
-   b) 2*N
-   c) Infinite
-   d) The answer can vary depending on the initial value of N
-
-3. **Consider the following recursive function fun (x,y) . What is the value of fun (4,3) ?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
-   ```c
-   int fun (int x, int y) {
-   if(x==0)
-   return y;
-   return fun (x-1, x+y)
-   }
-   ```
-   A) 9
-   B) 10
-   C) 12
-   D) 13
-
-4. **An algorithm that calls itself directly or indirectly is known as?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
-   A) Sub Algorithm
-   B) Recursion
-   C) Polish Notation
-   D) Traversal algorithm
-
-## Data Types & Variables
+## Data Types & Variables (14)
 
 1. **What is the minimum value that can be stored accurately in a 32-bit signed integer of C programming language?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 179]**
    a) 0
@@ -875,22 +785,7 @@
    c. Enumeration
    d. Array
 
-## Flowcharts & Algorithms
-
-1. **In flowchart what does below represent?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
-   ```
-   +-------+
-   |       |
-   (       )
-   |       |
-   +-------+
-   ```
-   a. Document
-   b. Database
-   c. Terminal
-   d. Process
-
-## Operators & Expressions
+## Operators & Expressions (11)
 
 1. **Let x be an integer which can take a value of 0 or 1. The statement if (x==0) x=1; else x=0; is equivalent to which of the following?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 203]**
    A) x=1+x
@@ -957,3 +852,108 @@
    b. &&
    c. ||
    d. |
+
+## Pointers & Memory Allocation (5)
+
+1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) Integer
+   b) Float
+   c) Character
+   d) Double
+
+2. **Address variable রাখা যায় কোনটিতে?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]**
+   A) Break
+   B) Int
+   C) Pointer
+   D) Float
+
+3. **C-programming এ address রাখার জন্য কোনটি সাধারণত ব্যবহৃত হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) break
+   B) pointer
+   C) char
+   D) float
+
+4. **What is the following declaration for? int (*a)[10];** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) Pointer to an array of 10 integers
+   (b) Array of 10 function Pointers returning integer
+   (c) A pointer of to function returning an array to 10 integers
+   (d) Array of 10 integers pointers
+
+5. **Which header file should be included to use functions like malloc() and calloc()?** **(Bangladesh Bank Assistant Programmer Exam: 2011) [compact it 271]**
+   a. memory.h
+   b. stdlib.h
+   c. string.h
+   d. dos.h
+
+## Recursion (4)
+
+1. **When a function is called more than one time that is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** This is known as function reusability or recursion or Idempotence
+
+2. **How many function calls will be performed to execute the following recursive function?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
+   ```c
+   void function(int N) {
+   if (N==0)
+   return;
+   function(N+1);
+   }
+   ```
+   a) N
+   b) 2*N
+   c) Infinite
+   d) The answer can vary depending on the initial value of N
+
+3. **Consider the following recursive function fun (x,y) . What is the value of fun (4,3) ?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
+   ```c
+   int fun (int x, int y) {
+   if(x==0)
+   return y;
+   return fun (x-1, x+y)
+   }
+   ```
+   A) 9
+   B) 10
+   C) 12
+   D) 13
+
+4. **An algorithm that calls itself directly or indirectly is known as?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) Sub Algorithm
+   B) Recursion
+   C) Polish Notation
+   D) Traversal algorithm
+
+## Storage Classes & Scope (3)
+
+1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) auto
+   (B) register
+   (C) static
+   (D) extern
+   (E) volatile
+
+2. **In C, static storage class cannot be used with:** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) Global variabl
+   (B) Function parameter
+   (C) Function name
+   (D) Local variable
+
+3. **Which of the following storage classes have global visibility in C/C++?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) Auto
+   (B) Extern
+   (C) Static
+   (D) Register
+
+## Flowcharts & Algorithms (1)
+
+1. **In flowchart what does below represent?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
+   ```
+   +-------+
+   |       |
+   (       )
+   |       |
+   +-------+
+   ```
+   a. Document
+   b. Database
+   c. Terminal
+   d. Process

@@ -3,110 +3,25 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Application Layer Protocols](#application-layer-protocols) | 59 |
-| 2 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology) | 58 |
-| 3 | [Network Devices & Configuration](#network-devices--configuration) | 38 |
-| 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing) | 33 |
-| 5 | [Wireless & Mobile Communication](#wireless--mobile-communication) | 24 |
-| 6 | [Data Transmission & Modes](#data-transmission--modes) | 16 |
-| 7 | [OSI & TCP-IP Model](#osi--tcp-ip-model) | 16 |
-| 8 | [Multiplexing & Data Rate](#multiplexing--data-rate) | 15 |
-| 9 | [Physical Layer & Transmission Media](#physical-layer--transmission-media) | 14 |
-| 10 | [IPv6 Addressing](#ipv6-addressing) | 13 |
-| 11 | [Routing Protocols](#routing-protocols) | 13 |
-| 12 | [Error Detection & Correction](#error-detection--correction) | 3 |
-| 13 | [Switching Techniques](#switching-techniques) | 3 |
+| 1 | [Application Layer Protocols](#application-layer-protocols-59) | 59 |
+| 2 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-58) | 58 |
+| 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
+| 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
+| 5 | [Wireless & Mobile Communication](#wireless--mobile-communication-24) | 24 |
+| 6 | [Data Transmission & Modes](#data-transmission--modes-16) | 16 |
+| 7 | [OSI & TCP-IP Model](#osi--tcp-ip-model-16) | 16 |
+| 8 | [Multiplexing & Data Rate](#multiplexing--data-rate-15) | 15 |
+| 9 | [Physical Layer & Transmission Media](#physical-layer--transmission-media-14) | 14 |
+| 10 | [IPv6 Addressing](#ipv6-addressing-13) | 13 |
+| 11 | [Routing Protocols](#routing-protocols-13) | 13 |
+| 12 | [Error Detection & Correction](#error-detection--correction-3) | 3 |
+| 13 | [Switching Techniques](#switching-techniques-3) | 3 |
 
 <!-- TOC END -->
 
 ---
 
-## Physical Layer & Transmission Media
-
-1. **অপটিক্যাল ফাইবারে আলোর কোন ঘটনাটি ঘটে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. প্রতিসরণ
-   খ. বিচ্ছুরণ
-   গ. অপবর্তন
-   ঘ. অভ্যন্তরীণ প্রতিসরণ
-
-2. **An optical fiber has a signal solid dielectric cylinder knowns as the core which is surrounded by a solid dielectric ______ is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
-   **Ans:** cladding
-
-3. **অপটিক্যাল ফাইবার আলোর কোন নীতিতে কাজ করে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
-   (ক) প্রতিফলন
-   (খ) প্রতিসরন
-   (গ) অপবর্তন
-   (ঘ) পূর্ণ অভ্যন্তরীণ প্রতিফলন
-   **উত্তর: ঘ**
-
-4. **Which of the following communication medium requires ‘line-of-sight’?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
-   (ক) Micro wate
-   (খ) Fiber optic cable
-   (গ) Twisted-pair cable
-   (ঘ) Co-axial cable
-
-5. **Submarine ক্যাবল কয়টি?** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
-   ক) ২
-   খ) ৩
-   গ) 8
-   ঘ) ৬
-   **Ans: ক**
-
-6. **Which is the disadvantage of Optical Fiber?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
-   a) Resistance to corrosive materials
-   b) Greater immunity to tapping
-   c) Unidirectional light propagation
-   d) None of these
-
-7. **Which one of the following have higher bandwidth?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
-   a) Shielded Twisted Pair
-   b) Unshielded Twisted Pair
-   c) Coaxial Cables
-   d) Fiber Optic Cables
-
-8. **Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
-   A) Crossover
-   B) Straight through
-   C) Rolled
-   D) Shield twisted pair
-
-9. **Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
-   A) Crossover
-   B) Straight-through
-   C) Rolled
-   D) Shielded twisted pair
-
-10. **Fiber optical cable is used for-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
-   A) LAN in an office
-   B) telephone lines
-   C) data connectivity among the branches of offices
-   D) None of the above
-
-11. **Which of the following wiring standards would most likely be used to connect a single network node to a switch?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
-   a. Loopback
-   b. Straight
-   c. Rollover
-   d. Crossover
-
-12. **Which of the following WAN technologies requires fiber optics?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
-   a. POTS
-   b. SONET
-   c. ADSL
-   d. PSTN
-
-13. **Which of the following WAN technology types does not use an Ethernet cable as a medium for communication and is used for long distances?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
-   a. DSL
-   b. WiMAX
-   c. E3/T3
-   d. ATM
-
-14. **Which of the following is strictly used to convert analog to digital signals?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
-   a. NIC
-   b. Modem
-   c. Repeater
-   d. Hub
-
-## Application Layer Protocols
+## Application Layer Protocols (59)
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
    a) Fine Transfer Protocol
@@ -466,84 +381,7 @@
    c. Variable Optical Internet Protocol
    d. None of these
 
-## IPv6 Addressing
-
-1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
-   a) 32 bits
-   b) 128 bits
-   c) 64 bits
-   d) 132 bits
-
-2. **IPv6 does not support which of the following addressing modes?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
-   (A) unicast addressing
-   (B) multicast addressing
-   (C) broadcast addressing
-   (D) anycast addressing
-
-3. **The IPv4 is encapsulated to IPv6 which is known as ______.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
-   (a) Tunneling
-   (b) hashing
-   (c) NAT
-   (d) Trasversing
-
-4. **How many bits of IPv6 address?** **(BREB Assistant Programmer Exam: 2023) [compact it 31]**
-   (a) 128
-   (b) 32
-   (c) 12
-   (d) 48
-
-5. **IPv6 is how many bits?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 35]**
-   **Ans:** 128 bit
-
-6. **How long is an IPv6 address?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
-   (ক) 32 bits
-   (খ) 128 bits
-   (গ) 64 bits
-   (ঘ) 132 bis
-
-7. **How many bits in IPv6?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
-   a) 32
-   b) 64
-   c)128
-   d) 156
-
-8. **An IPv6 basic header is fixed as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
-   (a) 32 bytes long
-   (b) 40 bytes long
-   (c) 64 bits long
-   (d) 128-bit long
-
-9. **How many bit addresses of IPv6 version?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
-   A) 24
-   B) 32
-   C) 64
-   D) 128
-
-10. **একটি IPv6 address এর দৈর্ঘ্য কত?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
-   A) 32 bits
-   B) 128 bits
-   C) 64 bits
-   D) 256 bits
-
-11. **What is not the advantage of IPv6 over IPv4?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
-   A) longer address
-   B) Classification of traffic
-   C) More real IP addresses
-   D) Jumbo Payload
-
-12. **How long is an IPv6 address?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
-   (a) 32-bits
-   (b) 128-byts
-   (c) 64-bits
-   (d) 128-bits
-
-13. **Which of the following is the number of bits used for IPv6?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
-   a. 128
-   b. 32
-   c. 64
-   d. 256
-
-## Networking Fundamentals & Terminology
+## Networking Fundamentals & Terminology (58)
 
 1. **Set of rules is called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
    a) domain
@@ -905,632 +743,7 @@
    c. Webiner
    d. Video conferencing
 
-## Multiplexing & Data Rate
-
-1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) 64 Kbps
-   b) 32 Mbps
-   c) 32 Kbps
-   d) 64 MbpS
-
-2. **Assume we need to download text documents at the rate of 100 pages per second. A page is an average of 24 lines with 80 characters in each line and one character requires 8 bits. What is the required bit rate of the channel?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
-   a) 25600 bps
-   b) 25800 bps
-   c) 4000 bps
-   d) 10000 bps
-
-3. **What is the propagation time for a 2.5-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 12,000 km and that light travels at 2.4 \times 10^8\text{ m/s}.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
-   (a) 50ms
-   (b) 0.020ms
-   (c) 100ms
-   (d) 0.040ms
-
-4. **What is the maximum data rate of a channel with a bandwidth of 200 KHz if we use four levels of digital signaling?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
-   (a) 400 Kbps
-   (b) 800 Kbps
-   (c) 1000 Kbps
-   (d) 1200 Kbps
-
-5. **Suppose we want to download text documents at the rate of 100 pages per second. Assume that a page consists of an average of 24 lines with 80 characters in each line. What is the required bit rate of the channel?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
-   a. 182 kbps
-   b. 512 kbps
-   c. 1.248 Mbps
-   d. 1.536 Mbps
-
-6. **Consider a 50 Mbps satellite channel with a 500 milliseconds round top propagation delay. If the sender wants to transmit 1000 bit frames, how much time will it take for the receiver to receive the frame?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 79]**
-   a. 250 milliseconds
-   b. 20 milliseconds
-   c. 520 milliseconds
-   d. 270 milliseconds
-
-7. **A complex bandpass signal has a bandwidth of 300kHz. What is the minimum sampling rate for this signal?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
-   a) 600,000 samples per second
-   b) 600,00 samples per second
-   c) 600kHz
-   d) None of the above
-
-8. **The human voice normally contains frequencies from 0 to 4000Hz. If bits per sample?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
-   a) 8000 samples/second
-   b) 8000kbps
-   c) 64kbps
-   d) 64 samples/second
-
-9. **Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 5 kHz between the channels to prevent interference?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
-   a) 500 kHz
-   b) 520 kHz
-   c) 540 kHz
-   d) 525 kHz
-
-10. **Assume we need to download text documents at the rate of 100 pages per sec. Each page contains an average of 24 lines with 80 characters in each line. If we assume that one character requires 8 bit, what is the required bit rate of the channel?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
-   a) 1.92 Mbps
-   b) 1.636Mbps
-   c) 1.82 Mbps
-   d) 1.56Mbps
-
-11. **Consider an extremely noisy channel in which the value of the signal-to-noise ratio is almost zero. For this channel, is the bandwidth is B then what is the channel capacity?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
-   a) 0.137B
-   b) 0
-   c) 0.137
-   d) Infinity
-
-12. **A number of signal can be carried simultaneously if each signal is modulated that a different carried frequency called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
-   a) TDM
-   b) FDM
-   c) Frequency modulation
-   d) Pulse modulation
-
-13. **Which multiplexing technique transmits digital signals?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
-   (a) WDM
-   (b) FDM
-   (c) TDM
-   (d) All of the above
-
-14. **The bandwidth of a channel is 1MHz. The SNR for this channel is 63. What is the bit rate?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
-   (a) 4 Mbps
-   (b) 6 Mbps
-   (c) 8 Mbps
-   (d) 10 Mbps
-
-15. **Maximum speed of voice band is ---** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
-   A) 6900 bps
-   B) 6900 kbps
-   C) 9600 bps
-   D) 9600 kbps
-
-## Wireless & Mobile Communication
-
-1. **Bluetooth is a type of radio wave information transmission system that is good for about-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
-   (a) 30 feet
-   (b) 30 yards
-   (c) 30 miles
-   (d) 300 miles
-
-2. **LTE এর পূর্ণ নাম কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
-   উত্তর: Long Term Evolution
-
-3. **নিচের networking technology গুলোর মধ্যে কোনটি সাধারণত সবচেয়ে কম দূরত্বে (বা সবচেয়ে কাছাকাছি) তথ্য প্রেরণের জন্য ব্যবহৃত হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 61]**
-   a) Wimax
-   b) GSM
-   c) WiFi
-   d) Bluetooth
-
-4. **VSAT বলতে বুঝায়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
-   (ক) Virtual Small Aperture Satellite
-   (খ) Very Small Aperture Terminal
-   (গ) Very Small Application Terminal
-   (ঘ) Vertical Satellite
-   **Ans: খ**
-
-5. **VSAT বলতে বুঝায়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   (ক) Virtual Small Aperture Satellite
-   (খ) Very Small Aperture Terminal
-   (গ) Very Small Application Terminal
-   (ঘ) Vertical Satellite
-
-6. **Which one of the following is false with respect to 4G and 5G cellular network?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
-   (a) 5G supports faster bandwidth compared to 4G.
-   (b) Latency in 4G networks is much higher than 5G network.
-   (c) 4G uses a narrow slice of the available spectrum from 600 MHz to 2.5 GHz
-   (d) There will be data session handoff feature in 5G network which is not available in 4G network
-
-7. **What is the maximum data rate in IEEE 802.11n?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
-   (a) 300 Mbps
-   (b) 600 Mbps
-   (c) 1 Gbps
-   (d) 832 Mbps
-
-8. **An Access point operates in which layer of OSI model?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
-   (a) Data link Layer
-   (b) Presentation layer
-   (c) Physical layer
-   (d) Transport layer
-
-9. **বিশ্ব টেলিকমিউনিকেশন দিবস কবে পালিত হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
-   A. 7 May
-   B. 14 May
-   C. 17 May
-   D. 21 May
-
-10. **GPRS এর পূর্ণরূপ কি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
-   a) General Packet Ratio Server
-   b) General Purpose Reduction Service
-   c) General Packet Radio Service
-   d) General Purpose Radio Server
-
-11. **কোনটা ওয়্যারলেস নেটওয়ার্ক হটস্পট?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
-   a) Wi-Fi Hotspot
-   b) Ethernet Hotspot
-   c) Fiber Hotspot
-   d) None
-
-12. **Bluetooth কোন ধরনের device?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
-   a) WAN
-   b) PAN
-   c) LAN
-   d) MAN
-
-13. **Wi-fi কোন ধরনের নেটওয়ার্ক?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
-   a) Wifi LAN
-   b) Wireless PAN
-   c) Wifi MAN
-   d) Wifi WAN
-
-14. **Wi-Fi for?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
-   a) Wireless MAN
-   b) Wireless PAN
-   c) Wireless LAN
-   d) all of these
-
-15. **Group sms is ________** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
-   a) Unicast
-   b) Multicast
-   c) Telecast
-   d) Broadcast
-
-16. **Which of the following modulation is used in data communication?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
-   a) Pulse Modulation
-   b) Amplitude Modulation
-   c) Phase Modulation
-   d) Frequency Modulation
-
-17. **What is the current popular technology for Maintaining smooth Wi-Fi performance and throughput for gaming, video streaming, and smart home devices?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
-   a) Wi-Fi Star Network Systems
-   b) Wi-Fi Bus Network Systems
-   c) Wi-Fi Mesh Network Systems
-   d) Wi-Fi Ring Network Systems
-
-18. **When an ongoing call or data session can communicate with two base stations at the same time, the phenomenon is known as-** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
-   a) Soft Roaming
-   b) Hard Roaming
-   c) Soft Handoff
-   d) Hard Handoff
-
-19. **LTE means -** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
-   (a) Long Term Evaluation
-   (b) Long Time Evaluation
-   (c) Long Term Evolution
-   (d) Long Terminal Evolution
-
-20. **What is hotpot?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
-   A) Special Security System
-   B) Cable connected internet system
-   C) Wireless internet system
-   D) A program
-
-21. **A frequency range 1\text{ GHz to }30\text{ GHz} is referred to as ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
-   a. Medium wave
-   b. Micro wave
-   c. Long wave
-   d. None
-
-22. **Which of the following wireless networks is configured without an access point?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
-   a. Ad-hoc
-   b. Multiport repeating
-   c. Local
-   d. Extended
-
-23. **A small office home office (SOHO) wireless user reports their new laptop is 802.11h and 802.11g capable but with not wirelessly connect faster than 11mbps. Which of the following is the cause of the problem?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
-   a. The laptop wireless card is running on a different frequency
-   b. The wireless router needs a firmware update
-   c. The wireless router is 802.11b only
-   d. The Wireless router is defective
-
-24. **What medium is used to communicate by mobile phones?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
-   a. Optical device
-   b. Laser device
-   c. LED source
-   d. Radio waves
-
-## Subnetting & IP Addressing
-
-1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
-   a) 255.255.255.0
-   b) 255.255.255.128
-   c) 255.255.255.192
-   d) 255.255.254.0
-
-2. **What is IP class and number of sub-networks if the subnet mask is 255.224.0.0?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
-   (A) Class A, 3
-   (B) Class A, 8
-   (C) Class B, 3
-   (D) Class B, 32
-
-3. **What is the maximum number of IP addresses that can be assigned to be the host on a local subnet that uses the 255.255.255.224 subnet mask?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
-   a) 16
-   b) 32
-   b) 31
-   d) 30
-
-4. **How many address is there 200.10.10.10/20** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
-   (a) 4096
-   (b) 1024
-   (c) 2048
-   (d) 1022
-
-5. **Which is suitable subnet mask for 200 host?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
-   (a) 255.255.0.200
-   (b) 255.255.255.0
-   (c) 255.0.0.0
-   (d) 255.255.200.0
-
-6. **Which of the following cannot be used as a public IP address?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 76]**
-   a. 17.0.0.1
-   b. 168.172.19.34
-   c. 172.15.29.63
-   d. 192.168.13.18
-
-7. **Which one is Private IP address?** **(BREB Assistant Programmer Exam: 2023) [compact it 31]**
-   (a) 192.168.10.10
-   (b) 11.15.10.10
-   (c) 1.1.1.1
-   (d) 172.16.5.3
-
-8. **An organization is granted a block; one address is 2.2.2.64/20. The organization needs 10 subnets. What is the subnet prefix length?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
-   (ক) /20
-   (খ) /24
-   (গ) /23
-   (ঘ) /21
-
-9. **Which of the following is a private IP address?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
-   (ক) 12.0.0.1
-   (খ) 168.172.19.39
-   (গ) 172.15.14.36
-   (ঘ) 192.168.24.43
-
-10. **What is the network address for the IP address 178.112.13.10/8?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
-   a) 178.0.0.0
-   b) 178.112.0.0
-   c) 255.0.0.0
-   d) 255.255.0.0
-
-11. **Which one is the loopback address?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
-   a) 255.255.255.0
-   b) 127.0.0.1
-   c) 255.0.0.0
-   d) 127.127.127.0
-
-12. **On a class B network, how many hosts are available at each site with subnet mask of 248?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
-   (a) 16,382
-   (b) 8,190
-   (c) 4,094
-   (d) 2,046
-
-13. **Which of the following is not a valid IP address?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
-   a. 3FFE::1:200:F8FF:FE75:50DF
-   b. 10.25.26.24
-   c. ABCD::100::F8FF:FE75:50DF
-   d. 13.15.17.19
-
-14. **Suppose you need to assign IPv4 address to two computers of your company so that the both computers belong to the subnet. 255.255.255.240. Which of the following is a valid assignment?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 185]**
-   a. 172.16.5.14 and 172.16.5.17
-   b. 172.16.5.17 and 172.16.5.29
-   c. 172.16.5.29 and 172.16.5.33
-   d. 172.16.5.33 and 172.16.5.4
-
-15. **Network 10.20.30.0 was assigned to the ITGod company to connect its ISP. The administrator of ITGod would like to configure one router with commands to access the internet. Which commands could be configured on the Gateway Router to allow internet access to the center network?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
-   A. Gateway(config)# ip route 0.0.0.0 0.0.0.0 10.20.30.2
-   B. Gateway(config)# router rip
-   C. Gateway(config)# network 10.20.30.0
-   D. Gateway(config)# ip default-network 10.20.30.0
-   a. A only
-   b. C only
-   c. A, B and D
-   d. A and D
-
-16. **Classless Inter Domain Routing (CIDR) receives a packet with address 131.23.151.76. The routers routing table has the following entries** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
-   | Prefix | Output Interface |
-   |---|---|
-   | 131.16.0.0/12 | 3 |
-   | 131.28.0.0/14 | 5 |
-   | 131.19.0.0/16 | 2 |
-   | 131.22.0.0/15 | 1 |
-   In which output interface the packet is forwarded to?
-   a. 1
-   b. 2
-   c. 3
-   d. 5
-
-17. **How many IP addresses can be assigned using IPv4 techniques?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
-   a) 2^{32}
-   b) 2^{64}
-   c) 4^{32}
-   d) 4^{64}
-
-18. **Class C IP address is for ________ bit network.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
-   A) 24
-   B) 32
-   C) 64
-   D) 128
-
-19. **Suppose, a Class C network address is 192.168.10.0 and subnet mask is 255.255.255.192. How many valid hosts per subnet can be obtainable?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
-   a) 62
-   b) 30
-   c) 14
-   d) 6
-
-20. **উল্লেখিত কোনটি Private IP address?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
-   A) 192.169.10.10
-   B) 11.5.10.10
-   C) 1.1.1.1
-   D) 172.16.5.3
-
-21. **Which of the following TCP/IP addresses constitute the loopback address?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
-   A) 1.1.1.1
-   B) 255.255.255.255
-   C) 127.0.0.0
-   D) 127.0.0.1
-
-22. **To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask used should be:** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
-   A) 255.255.255.0
-   B) 255.255.255.192
-   C) 255.255.255.240
-   D) 255.255.255.78
-
-23. **192.168.1.100 এই IP address টি কোন class এর অন্তর্ভুক্ত?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 194]**
-   A) Class A
-   B) Class B
-   C) Class C
-   D) Class D
-
-24. **Which class of IP address provides a maximum of only 254 host address per network ID?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
-   (a) Class A
-   (b) Class B
-   (c) Class C
-   (d) Class D
-
-25. **To divide a class C network into a maximum of 14 subnets- each capable of having up to 14 hosts. The subnet mask used should be ____** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
-   A) 255.255.255.240
-   B) 255.255.255.192
-   C) 255.255.255.78
-   D) 255.255.255.0
-
-26. **To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask use should be-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
-   A) 255.255.255.0
-   B) 255.255.255.192
-   C) 255.255.255.78
-   D) 255.255.255.240
-
-27. **What is the maximum number of IP addresses that can be assigned to hosts on a local subnet that uses the 255.255.255.224 subnet mask?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
-   a. 14
-   b. 15
-   c. 16
-   d. 30
-
-28. **You need to subnet a network that has 5 subnets, each with at least 16 hosts. Which classful subnet mask you use?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
-   a. 255.255.255.192
-   b. 255.255.255.248
-   c. 255.255.255.224
-   d. 255.255.255.240
-
-29. **The network address of 172.16.0.0/19 provides how many subnets and hosts?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
-   a. 7 subnets, 30 hosts each
-   b. 8 subnets, 8190 hosts each
-   c. 8 subnets, 2046 hosts each
-   d. 7 subnets, 2046 hosts each
-
-30. **What is the subnetwork number of a host with an IP address of 172.16.66.0/21?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
-   a. 172.16.36.0
-   b. 172.16.48.0
-   c. 172.16.64.0
-   d. 172.16.0.0
-
-31. **Which of the following classes is the address 208.177.23.1?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
-   a. Class A
-   b. Class B
-   c. Class C
-   d. Class D
-
-32. **Two networks in different offices have been using DHCP set up for 192.168.00/24. After consolidating the offices networks, they have run out of IP Addresses. Which of the following is the MOST cost effect solution?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
-   a. Request another class C IP scope from the ISP
-   b. Switch to static IP addressing
-   c. Change the subnet mask to 255.255.254.0
-   d. Add a router to connect both networks
-
-33. **Which of the following subnet masks identifies 192.168.7.1 and 192.168.8.1 as being on the same subnet?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
-   a. 255.255.240.0
-   b. 255.255.255.128
-   c. 255.255.255.0
-   d. 255.255.255.240
-
-## Data Transmission & Modes
-
-1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
-   a) Automatic
-   b) Half-duplex
-   c) Full-duplex
-   d) Simplex
-
-2. **The _______ is an HFC network device installed inside the distribution hub that receives data from the internet and passes them to the combiner.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
-   (a) CM
-   (b) CMTS
-   (c) DOCSIS
-   (d) MCNS
-
-3. **If the end office receives two bursts of analog signals with frequencies of 697 and 1477 Hz, then the number ____ has been punched.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 103]**
-   (a) 1
-   (b) 2
-   (c) 3
-   (d) 4
-
-4. **_______ is a standard to allow telephones on the public telephone network to talk to computers connected to the Internet.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
-   (a) SIP
-   (b) H.323
-   (c) IEEE 802.3
-   (d) V.90bis
-
-5. **A sine wave is offset \frac{1}{6} cycle with respect to time 0. What is its phase in degrees and radians?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
-   a) 60^{\circ} and 1.046\text{ rad}
-   b) 30^{\circ} and 0.5236\text{ rad}
-   c) 90^{\circ} and 2.046\text{ rad}
-   d) 360^{\circ} and 6.2832\text{ rad}
-
-6. **Which one is the bandwidth for a signal transmitting at 12 Mbps for QPSK (d=0)?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
-   a) 2MHz
-   b) 4MHz
-   c) 6 MHz
-   d) None of the above
-
-7. **Which one is not the purpose of modulation in a communication system?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
-   a) To reduce antennas size
-   b) To saves energy to transmit information
-   c) To transmit signals from various sources
-   d) To make the system simpler and cost effective
-
-8. **A line coding scheme of digital to digital conversion in given below. What is the name of this line coding technique?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 151]**
-   a) NRZ
-   b) RZ
-   c) Manchester
-   d) AMI
-
-9. **ইন্টারনেটে নেটওয়ার্কে Media Access করার জন্য কোন পদ্ধতি ব্যবহৃত হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
-   A) CSMA/CD
-   B) CSMA/CA
-   C) Demand Priority
-   D) Polling
-
-10. **Five components that make up a data communications system are message, sender, receiver, medium and-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
-   A) Code
-   B) Connecting device
-   C) Protocol
-   D) All of these
-
-11. **The technique that is used to digitize analog signal by a codec is called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
-   (a) PCM
-   (b) Demodulation
-   (c) CDMA
-   (d) NRZ
-
-12. **Which one of the following is the source of data communication?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
-   (a) Modem
-   (b) Cable
-   (c) Router
-   (d) Computer
-
-13. **If the frequency spectrum of a signal has a bandwidth of 500Hz with the highest frequency is 600Hz. What should be the sampling rate according to the Nyquist theorem?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
-   (a) 200 samples/S
-   (b) 500 samples/S
-   (c) 1000 samples/S
-   (d) 1200 samples/S
-
-14. **The action of decoding a modulated signal is known as -** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
-   A) Simulation
-   B) Emulation
-   C) Binary
-   D) None of the above
-
-15. **Which of the following is a digital modulation technique?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
-   a. DM
-   b. PCM
-   c. PSK
-   d. All
-
-16. **A The three major components of a communication system are ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
-   a. Source, data rate and response time
-   b. Source, Link and receiver
-   c. Transmitter, link and receiver
-   d. Source, link and detector
-
-## Routing Protocols
-
-1. **Which of the following pairs is an example of intra-domain routing protocols?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
-   (a) ALOHA, RIP
-   (b) OSPF, RIP
-   (c) RIP, FTP
-   (d) BGP, SMTP
-
-2. **Count-to-infinity problem occurs in ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
-   (ক) Distance vector routing
-   (খ) Shortest path first
-   (গ) Link state routing
-   (ঘ) Hierarchical routing
-
-3. **Which of the following pairs is an example of routing protocols?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 44]**
-   (ক) ALOHA, SMTP
-   (খ) BGP, RIP
-   (গ) OSPF, FTP
-   (ঘ) FTP, SMTP
-
-4. **Which of the following pairs is an example of intra-domain routing protocols?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
-   (ক) ALOHA, RIP
-   (খ) OSPF, RIP
-   (গ) RIP, FTP
-   (ঘ) BGP, SMTP
-
-5. **Which of following statements is connected with managed switch?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
-   (ক) It can configure each port differently and make VLAN
-   (খ) It can manage traffic like a router
-   (গ) It can ensure transport layer security
-   (ঘ) None of the above
-
-6. **In a comparatively small organization if you want data forwarding among departments based on IP address which one of the following will be a better bet for networking?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
-   a) Using Layer-3 routers
-   b) Using Layer-3 switches
-   c) Using Unmanaged switches
-   d) Combining a and b
-
-7. **Distance vector routing algorithm is a dynamic routing algorithm. The routing tables in distance vector routing algorithm are updated ____.** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
-   a. automatically
-   b. by server
-   c. with back up database
-   d. by exchanging information with neighbor nodes
-
-8. **কোন Routing Protocol এ Dijkstra Algorithm ব্যবহার করা হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
-   A) ARP
-   B) OSPF
-   C) RIP
-   D) IGRP
-
-9. **Routing is clearly the major issue for:** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
-   (a) Transport layer
-   (b) Network layer
-   (c) Data-link layer
-   (d) Physical layer
-
-10. **Which of the following is the metric used for OSPF?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
-   a. Latency
-   b. Cost
-   c. Bandwidth
-   d. Next hop
-
-11. **Which of the following describes a routing table that needs to be maintained manually?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
-   a. Hop count based
-   b. Link state
-   c. Static
-   d. Dynamic
-
-12. **How the router makes decisions for SQL server database logs?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
-   a. Call router
-   b. Response Router
-   c. Automatic Router
-   d. Static Router
-
-13. **Which of the following routing protocols uses As-path as one of the methods to build the routing table?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
-   a. OSPF
-   b. ISIS
-   c. BGP
-   d. EIGRP
-
-## Network Devices & Configuration
+## Network Devices & Configuration (38)
 
 1. **Which command loads a new version of the Cisco IOS into a router** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
    a) copy flash ftp
@@ -1785,27 +998,460 @@
    c. dig
    d. nbtstat
 
-## Error Detection & Correction
+## Subnetting & IP Addressing (33)
 
-1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
-   (a) Cyclic Redundancy Check
-   (b) Cyclic Redundant Check
-   (c) Cyclic Redundancy Cycle
-   (d) Cyclic Redundancy Club
+1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
+   a) 255.255.255.0
+   b) 255.255.255.128
+   c) 255.255.255.192
+   d) 255.255.254.0
 
-2. **Which error detection method involves the use of parity bits?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 104]**
-   (a) Simple parity check
-   (b) Two-dimensional parity check
-   (c) CRC
-   (d) a and b
+2. **What is IP class and number of sub-networks if the subnet mask is 255.224.0.0?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) Class A, 3
+   (B) Class A, 8
+   (C) Class B, 3
+   (D) Class B, 32
 
-3. **Type of error which occurs when data is transferred from one device to another is classified as-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 212]**
-   A) transmission error
-   B) interval error
-   C) software error
-   D) discontinued error
+3. **What is the maximum number of IP addresses that can be assigned to be the host on a local subnet that uses the 255.255.255.224 subnet mask?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) 16
+   b) 32
+   b) 31
+   d) 30
 
-## OSI & TCP-IP Model
+4. **How many address is there 200.10.10.10/20** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
+   (a) 4096
+   (b) 1024
+   (c) 2048
+   (d) 1022
+
+5. **Which is suitable subnet mask for 200 host?** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
+   (a) 255.255.0.200
+   (b) 255.255.255.0
+   (c) 255.0.0.0
+   (d) 255.255.200.0
+
+6. **Which of the following cannot be used as a public IP address?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 76]**
+   a. 17.0.0.1
+   b. 168.172.19.34
+   c. 172.15.29.63
+   d. 192.168.13.18
+
+7. **Which one is Private IP address?** **(BREB Assistant Programmer Exam: 2023) [compact it 31]**
+   (a) 192.168.10.10
+   (b) 11.15.10.10
+   (c) 1.1.1.1
+   (d) 172.16.5.3
+
+8. **An organization is granted a block; one address is 2.2.2.64/20. The organization needs 10 subnets. What is the subnet prefix length?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) /20
+   (খ) /24
+   (গ) /23
+   (ঘ) /21
+
+9. **Which of the following is a private IP address?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) 12.0.0.1
+   (খ) 168.172.19.39
+   (গ) 172.15.14.36
+   (ঘ) 192.168.24.43
+
+10. **What is the network address for the IP address 178.112.13.10/8?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
+   a) 178.0.0.0
+   b) 178.112.0.0
+   c) 255.0.0.0
+   d) 255.255.0.0
+
+11. **Which one is the loopback address?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) 255.255.255.0
+   b) 127.0.0.1
+   c) 255.0.0.0
+   d) 127.127.127.0
+
+12. **On a class B network, how many hosts are available at each site with subnet mask of 248?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
+   (a) 16,382
+   (b) 8,190
+   (c) 4,094
+   (d) 2,046
+
+13. **Which of the following is not a valid IP address?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
+   a. 3FFE::1:200:F8FF:FE75:50DF
+   b. 10.25.26.24
+   c. ABCD::100::F8FF:FE75:50DF
+   d. 13.15.17.19
+
+14. **Suppose you need to assign IPv4 address to two computers of your company so that the both computers belong to the subnet. 255.255.255.240. Which of the following is a valid assignment?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 185]**
+   a. 172.16.5.14 and 172.16.5.17
+   b. 172.16.5.17 and 172.16.5.29
+   c. 172.16.5.29 and 172.16.5.33
+   d. 172.16.5.33 and 172.16.5.4
+
+15. **Network 10.20.30.0 was assigned to the ITGod company to connect its ISP. The administrator of ITGod would like to configure one router with commands to access the internet. Which commands could be configured on the Gateway Router to allow internet access to the center network?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
+   A. Gateway(config)# ip route 0.0.0.0 0.0.0.0 10.20.30.2
+   B. Gateway(config)# router rip
+   C. Gateway(config)# network 10.20.30.0
+   D. Gateway(config)# ip default-network 10.20.30.0
+   a. A only
+   b. C only
+   c. A, B and D
+   d. A and D
+
+16. **Classless Inter Domain Routing (CIDR) receives a packet with address 131.23.151.76. The routers routing table has the following entries** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 82]**
+   | Prefix | Output Interface |
+   |---|---|
+   | 131.16.0.0/12 | 3 |
+   | 131.28.0.0/14 | 5 |
+   | 131.19.0.0/16 | 2 |
+   | 131.22.0.0/15 | 1 |
+   In which output interface the packet is forwarded to?
+   a. 1
+   b. 2
+   c. 3
+   d. 5
+
+17. **How many IP addresses can be assigned using IPv4 techniques?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 167]**
+   a) 2^{32}
+   b) 2^{64}
+   c) 4^{32}
+   d) 4^{64}
+
+18. **Class C IP address is for ________ bit network.** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) 24
+   B) 32
+   C) 64
+   D) 128
+
+19. **Suppose, a Class C network address is 192.168.10.0 and subnet mask is 255.255.255.192. How many valid hosts per subnet can be obtainable?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 153]**
+   a) 62
+   b) 30
+   c) 14
+   d) 6
+
+20. **উল্লেখিত কোনটি Private IP address?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 197]**
+   A) 192.169.10.10
+   B) 11.5.10.10
+   C) 1.1.1.1
+   D) 172.16.5.3
+
+21. **Which of the following TCP/IP addresses constitute the loopback address?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 208]**
+   A) 1.1.1.1
+   B) 255.255.255.255
+   C) 127.0.0.0
+   D) 127.0.0.1
+
+22. **To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask used should be:** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 209]**
+   A) 255.255.255.0
+   B) 255.255.255.192
+   C) 255.255.255.240
+   D) 255.255.255.78
+
+23. **192.168.1.100 এই IP address টি কোন class এর অন্তর্ভুক্ত?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 194]**
+   A) Class A
+   B) Class B
+   C) Class C
+   D) Class D
+
+24. **Which class of IP address provides a maximum of only 254 host address per network ID?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) Class A
+   (b) Class B
+   (c) Class C
+   (d) Class D
+
+25. **To divide a class C network into a maximum of 14 subnets- each capable of having up to 14 hosts. The subnet mask used should be ____** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+   A) 255.255.255.240
+   B) 255.255.255.192
+   C) 255.255.255.78
+   D) 255.255.255.0
+
+26. **To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask use should be-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
+   A) 255.255.255.0
+   B) 255.255.255.192
+   C) 255.255.255.78
+   D) 255.255.255.240
+
+27. **What is the maximum number of IP addresses that can be assigned to hosts on a local subnet that uses the 255.255.255.224 subnet mask?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. 14
+   b. 15
+   c. 16
+   d. 30
+
+28. **You need to subnet a network that has 5 subnets, each with at least 16 hosts. Which classful subnet mask you use?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. 255.255.255.192
+   b. 255.255.255.248
+   c. 255.255.255.224
+   d. 255.255.255.240
+
+29. **The network address of 172.16.0.0/19 provides how many subnets and hosts?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. 7 subnets, 30 hosts each
+   b. 8 subnets, 8190 hosts each
+   c. 8 subnets, 2046 hosts each
+   d. 7 subnets, 2046 hosts each
+
+30. **What is the subnetwork number of a host with an IP address of 172.16.66.0/21?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. 172.16.36.0
+   b. 172.16.48.0
+   c. 172.16.64.0
+   d. 172.16.0.0
+
+31. **Which of the following classes is the address 208.177.23.1?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. Class A
+   b. Class B
+   c. Class C
+   d. Class D
+
+32. **Two networks in different offices have been using DHCP set up for 192.168.00/24. After consolidating the offices networks, they have run out of IP Addresses. Which of the following is the MOST cost effect solution?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. Request another class C IP scope from the ISP
+   b. Switch to static IP addressing
+   c. Change the subnet mask to 255.255.254.0
+   d. Add a router to connect both networks
+
+33. **Which of the following subnet masks identifies 192.168.7.1 and 192.168.8.1 as being on the same subnet?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+   a. 255.255.240.0
+   b. 255.255.255.128
+   c. 255.255.255.0
+   d. 255.255.255.240
+
+## Wireless & Mobile Communication (24)
+
+1. **Bluetooth is a type of radio wave information transmission system that is good for about-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
+   (a) 30 feet
+   (b) 30 yards
+   (c) 30 miles
+   (d) 300 miles
+
+2. **LTE এর পূর্ণ নাম কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: Long Term Evolution
+
+3. **নিচের networking technology গুলোর মধ্যে কোনটি সাধারণত সবচেয়ে কম দূরত্বে (বা সবচেয়ে কাছাকাছি) তথ্য প্রেরণের জন্য ব্যবহৃত হয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 61]**
+   a) Wimax
+   b) GSM
+   c) WiFi
+   d) Bluetooth
+
+4. **VSAT বলতে বুঝায়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+   (ক) Virtual Small Aperture Satellite
+   (খ) Very Small Aperture Terminal
+   (গ) Very Small Application Terminal
+   (ঘ) Vertical Satellite
+   **Ans: খ**
+
+5. **VSAT বলতে বুঝায়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+   (ক) Virtual Small Aperture Satellite
+   (খ) Very Small Aperture Terminal
+   (গ) Very Small Application Terminal
+   (ঘ) Vertical Satellite
+
+6. **Which one of the following is false with respect to 4G and 5G cellular network?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
+   (a) 5G supports faster bandwidth compared to 4G.
+   (b) Latency in 4G networks is much higher than 5G network.
+   (c) 4G uses a narrow slice of the available spectrum from 600 MHz to 2.5 GHz
+   (d) There will be data session handoff feature in 5G network which is not available in 4G network
+
+7. **What is the maximum data rate in IEEE 802.11n?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
+   (a) 300 Mbps
+   (b) 600 Mbps
+   (c) 1 Gbps
+   (d) 832 Mbps
+
+8. **An Access point operates in which layer of OSI model?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+   (a) Data link Layer
+   (b) Presentation layer
+   (c) Physical layer
+   (d) Transport layer
+
+9. **বিশ্ব টেলিকমিউনিকেশন দিবস কবে পালিত হয়?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
+   A. 7 May
+   B. 14 May
+   C. 17 May
+   D. 21 May
+
+10. **GPRS এর পূর্ণরূপ কি?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) General Packet Ratio Server
+   b) General Purpose Reduction Service
+   c) General Packet Radio Service
+   d) General Purpose Radio Server
+
+11. **কোনটা ওয়্যারলেস নেটওয়ার্ক হটস্পট?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) Wi-Fi Hotspot
+   b) Ethernet Hotspot
+   c) Fiber Hotspot
+   d) None
+
+12. **Bluetooth কোন ধরনের device?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) WAN
+   b) PAN
+   c) LAN
+   d) MAN
+
+13. **Wi-fi কোন ধরনের নেটওয়ার্ক?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 135]**
+   a) Wifi LAN
+   b) Wireless PAN
+   c) Wifi MAN
+   d) Wifi WAN
+
+14. **Wi-Fi for?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Wireless MAN
+   b) Wireless PAN
+   c) Wireless LAN
+   d) all of these
+
+15. **Group sms is ________** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Unicast
+   b) Multicast
+   c) Telecast
+   d) Broadcast
+
+16. **Which of the following modulation is used in data communication?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) Pulse Modulation
+   b) Amplitude Modulation
+   c) Phase Modulation
+   d) Frequency Modulation
+
+17. **What is the current popular technology for Maintaining smooth Wi-Fi performance and throughput for gaming, video streaming, and smart home devices?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) Wi-Fi Star Network Systems
+   b) Wi-Fi Bus Network Systems
+   c) Wi-Fi Mesh Network Systems
+   d) Wi-Fi Ring Network Systems
+
+18. **When an ongoing call or data session can communicate with two base stations at the same time, the phenomenon is known as-** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
+   a) Soft Roaming
+   b) Hard Roaming
+   c) Soft Handoff
+   d) Hard Handoff
+
+19. **LTE means -** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) Long Term Evaluation
+   (b) Long Time Evaluation
+   (c) Long Term Evolution
+   (d) Long Terminal Evolution
+
+20. **What is hotpot?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) Special Security System
+   B) Cable connected internet system
+   C) Wireless internet system
+   D) A program
+
+21. **A frequency range 1\text{ GHz to }30\text{ GHz} is referred to as ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Medium wave
+   b. Micro wave
+   c. Long wave
+   d. None
+
+22. **Which of the following wireless networks is configured without an access point?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Ad-hoc
+   b. Multiport repeating
+   c. Local
+   d. Extended
+
+23. **A small office home office (SOHO) wireless user reports their new laptop is 802.11h and 802.11g capable but with not wirelessly connect faster than 11mbps. Which of the following is the cause of the problem?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. The laptop wireless card is running on a different frequency
+   b. The wireless router needs a firmware update
+   c. The wireless router is 802.11b only
+   d. The Wireless router is defective
+
+24. **What medium is used to communicate by mobile phones?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+   a. Optical device
+   b. Laser device
+   c. LED source
+   d. Radio waves
+
+## Data Transmission & Modes (16)
+
+1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+   a) Automatic
+   b) Half-duplex
+   c) Full-duplex
+   d) Simplex
+
+2. **The _______ is an HFC network device installed inside the distribution hub that receives data from the internet and passes them to the combiner.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
+   (a) CM
+   (b) CMTS
+   (c) DOCSIS
+   (d) MCNS
+
+3. **If the end office receives two bursts of analog signals with frequencies of 697 and 1477 Hz, then the number ____ has been punched.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 103]**
+   (a) 1
+   (b) 2
+   (c) 3
+   (d) 4
+
+4. **_______ is a standard to allow telephones on the public telephone network to talk to computers connected to the Internet.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
+   (a) SIP
+   (b) H.323
+   (c) IEEE 802.3
+   (d) V.90bis
+
+5. **A sine wave is offset \frac{1}{6} cycle with respect to time 0. What is its phase in degrees and radians?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) 60^{\circ} and 1.046\text{ rad}
+   b) 30^{\circ} and 0.5236\text{ rad}
+   c) 90^{\circ} and 2.046\text{ rad}
+   d) 360^{\circ} and 6.2832\text{ rad}
+
+6. **Which one is the bandwidth for a signal transmitting at 12 Mbps for QPSK (d=0)?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 178]**
+   a) 2MHz
+   b) 4MHz
+   c) 6 MHz
+   d) None of the above
+
+7. **Which one is not the purpose of modulation in a communication system?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) To reduce antennas size
+   b) To saves energy to transmit information
+   c) To transmit signals from various sources
+   d) To make the system simpler and cost effective
+
+8. **A line coding scheme of digital to digital conversion in given below. What is the name of this line coding technique?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 151]**
+   a) NRZ
+   b) RZ
+   c) Manchester
+   d) AMI
+
+9. **ইন্টারনেটে নেটওয়ার্কে Media Access করার জন্য কোন পদ্ধতি ব্যবহৃত হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) CSMA/CD
+   B) CSMA/CA
+   C) Demand Priority
+   D) Polling
+
+10. **Five components that make up a data communications system are message, sender, receiver, medium and-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 214]**
+   A) Code
+   B) Connecting device
+   C) Protocol
+   D) All of these
+
+11. **The technique that is used to digitize analog signal by a codec is called-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 191]**
+   (a) PCM
+   (b) Demodulation
+   (c) CDMA
+   (d) NRZ
+
+12. **Which one of the following is the source of data communication?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) Modem
+   (b) Cable
+   (c) Router
+   (d) Computer
+
+13. **If the frequency spectrum of a signal has a bandwidth of 500Hz with the highest frequency is 600Hz. What should be the sampling rate according to the Nyquist theorem?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) 200 samples/S
+   (b) 500 samples/S
+   (c) 1000 samples/S
+   (d) 1200 samples/S
+
+14. **The action of decoding a modulated signal is known as -** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+   A) Simulation
+   B) Emulation
+   C) Binary
+   D) None of the above
+
+15. **Which of the following is a digital modulation technique?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. DM
+   b. PCM
+   c. PSK
+   d. All
+
+16. **A The three major components of a communication system are ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Source, data rate and response time
+   b. Source, Link and receiver
+   c. Transmitter, link and receiver
+   d. Source, link and detector
+
+## OSI & TCP-IP Model (16)
 
 1. **Which of the following pairs is an example of transport layer protocols of the OSI model?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
    (ক) IP, ICMP
@@ -1903,7 +1549,361 @@
    c. Session
    d. Data Link
 
-## Switching Techniques
+## Multiplexing & Data Rate (15)
+
+1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) 64 Kbps
+   b) 32 Mbps
+   c) 32 Kbps
+   d) 64 MbpS
+
+2. **Assume we need to download text documents at the rate of 100 pages per second. A page is an average of 24 lines with 80 characters in each line and one character requires 8 bits. What is the required bit rate of the channel?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) 25600 bps
+   b) 25800 bps
+   c) 4000 bps
+   d) 10000 bps
+
+3. **What is the propagation time for a 2.5-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 12,000 km and that light travels at 2.4 \times 10^8\text{ m/s}.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
+   (a) 50ms
+   (b) 0.020ms
+   (c) 100ms
+   (d) 0.040ms
+
+4. **What is the maximum data rate of a channel with a bandwidth of 200 KHz if we use four levels of digital signaling?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
+   (a) 400 Kbps
+   (b) 800 Kbps
+   (c) 1000 Kbps
+   (d) 1200 Kbps
+
+5. **Suppose we want to download text documents at the rate of 100 pages per second. Assume that a page consists of an average of 24 lines with 80 characters in each line. What is the required bit rate of the channel?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
+   a. 182 kbps
+   b. 512 kbps
+   c. 1.248 Mbps
+   d. 1.536 Mbps
+
+6. **Consider a 50 Mbps satellite channel with a 500 milliseconds round top propagation delay. If the sender wants to transmit 1000 bit frames, how much time will it take for the receiver to receive the frame?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 79]**
+   a. 250 milliseconds
+   b. 20 milliseconds
+   c. 520 milliseconds
+   d. 270 milliseconds
+
+7. **A complex bandpass signal has a bandwidth of 300kHz. What is the minimum sampling rate for this signal?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) 600,000 samples per second
+   b) 600,00 samples per second
+   c) 600kHz
+   d) None of the above
+
+8. **The human voice normally contains frequencies from 0 to 4000Hz. If bits per sample?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) 8000 samples/second
+   b) 8000kbps
+   c) 64kbps
+   d) 64 samples/second
+
+9. **Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 5 kHz between the channels to prevent interference?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) 500 kHz
+   b) 520 kHz
+   c) 540 kHz
+   d) 525 kHz
+
+10. **Assume we need to download text documents at the rate of 100 pages per sec. Each page contains an average of 24 lines with 80 characters in each line. If we assume that one character requires 8 bit, what is the required bit rate of the channel?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) 1.92 Mbps
+   b) 1.636Mbps
+   c) 1.82 Mbps
+   d) 1.56Mbps
+
+11. **Consider an extremely noisy channel in which the value of the signal-to-noise ratio is almost zero. For this channel, is the bandwidth is B then what is the channel capacity?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) 0.137B
+   b) 0
+   c) 0.137
+   d) Infinity
+
+12. **A number of signal can be carried simultaneously if each signal is modulated that a different carried frequency called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) TDM
+   b) FDM
+   c) Frequency modulation
+   d) Pulse modulation
+
+13. **Which multiplexing technique transmits digital signals?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) WDM
+   (b) FDM
+   (c) TDM
+   (d) All of the above
+
+14. **The bandwidth of a channel is 1MHz. The SNR for this channel is 63. What is the bit rate?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) 4 Mbps
+   (b) 6 Mbps
+   (c) 8 Mbps
+   (d) 10 Mbps
+
+15. **Maximum speed of voice band is ---** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
+   A) 6900 bps
+   B) 6900 kbps
+   C) 9600 bps
+   D) 9600 kbps
+
+## Physical Layer & Transmission Media (14)
+
+1. **অপটিক্যাল ফাইবারে আলোর কোন ঘটনাটি ঘটে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. প্রতিসরণ
+   খ. বিচ্ছুরণ
+   গ. অপবর্তন
+   ঘ. অভ্যন্তরীণ প্রতিসরণ
+
+2. **An optical fiber has a signal solid dielectric cylinder knowns as the core which is surrounded by a solid dielectric ______ is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
+   **Ans:** cladding
+
+3. **অপটিক্যাল ফাইবার আলোর কোন নীতিতে কাজ করে?** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) প্রতিফলন
+   (খ) প্রতিসরন
+   (গ) অপবর্তন
+   (ঘ) পূর্ণ অভ্যন্তরীণ প্রতিফলন
+   **উত্তর: ঘ**
+
+4. **Which of the following communication medium requires ‘line-of-sight’?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) Micro wate
+   (খ) Fiber optic cable
+   (গ) Twisted-pair cable
+   (ঘ) Co-axial cable
+
+5. **Submarine ক্যাবল কয়টি?** **(BDCCL; Assistant Manager (Cloud) Exam: 14/10/2022) [compact it 73]**
+   ক) ২
+   খ) ৩
+   গ) 8
+   ঘ) ৬
+   **Ans: ক**
+
+6. **Which is the disadvantage of Optical Fiber?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) Resistance to corrosive materials
+   b) Greater immunity to tapping
+   c) Unidirectional light propagation
+   d) None of these
+
+7. **Which one of the following have higher bandwidth?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) Shielded Twisted Pair
+   b) Unshielded Twisted Pair
+   c) Coaxial Cables
+   d) Fiber Optic Cables
+
+8. **Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+   A) Crossover
+   B) Straight through
+   C) Rolled
+   D) Shield twisted pair
+
+9. **Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) Crossover
+   B) Straight-through
+   C) Rolled
+   D) Shielded twisted pair
+
+10. **Fiber optical cable is used for-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) LAN in an office
+   B) telephone lines
+   C) data connectivity among the branches of offices
+   D) None of the above
+
+11. **Which of the following wiring standards would most likely be used to connect a single network node to a switch?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. Loopback
+   b. Straight
+   c. Rollover
+   d. Crossover
+
+12. **Which of the following WAN technologies requires fiber optics?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 263]**
+   a. POTS
+   b. SONET
+   c. ADSL
+   d. PSTN
+
+13. **Which of the following WAN technology types does not use an Ethernet cable as a medium for communication and is used for long distances?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 265]**
+   a. DSL
+   b. WiMAX
+   c. E3/T3
+   d. ATM
+
+14. **Which of the following is strictly used to convert analog to digital signals?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. NIC
+   b. Modem
+   c. Repeater
+   d. Hub
+
+## IPv6 Addressing (13)
+
+1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
+   a) 32 bits
+   b) 128 bits
+   c) 64 bits
+   d) 132 bits
+
+2. **IPv6 does not support which of the following addressing modes?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) unicast addressing
+   (B) multicast addressing
+   (C) broadcast addressing
+   (D) anycast addressing
+
+3. **The IPv4 is encapsulated to IPv6 which is known as ______.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 27]**
+   (a) Tunneling
+   (b) hashing
+   (c) NAT
+   (d) Trasversing
+
+4. **How many bits of IPv6 address?** **(BREB Assistant Programmer Exam: 2023) [compact it 31]**
+   (a) 128
+   (b) 32
+   (c) 12
+   (d) 48
+
+5. **IPv6 is how many bits?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 35]**
+   **Ans:** 128 bit
+
+6. **How long is an IPv6 address?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 43]**
+   (ক) 32 bits
+   (খ) 128 bits
+   (গ) 64 bits
+   (ঘ) 132 bis
+
+7. **How many bits in IPv6?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+   a) 32
+   b) 64
+   c)128
+   d) 156
+
+8. **An IPv6 basic header is fixed as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 105]**
+   (a) 32 bytes long
+   (b) 40 bytes long
+   (c) 64 bits long
+   (d) 128-bit long
+
+9. **How many bit addresses of IPv6 version?** **(Sonali & Janata Bank Ltd. Officer (IT) Exam: 2020) [compact it 159]**
+   A) 24
+   B) 32
+   C) 64
+   D) 128
+
+10. **একটি IPv6 address এর দৈর্ঘ্য কত?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 187]**
+   A) 32 bits
+   B) 128 bits
+   C) 64 bits
+   D) 256 bits
+
+11. **What is not the advantage of IPv6 over IPv4?** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 210]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 251]**
+   A) longer address
+   B) Classification of traffic
+   C) More real IP addresses
+   D) Jumbo Payload
+
+12. **How long is an IPv6 address?** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 192]**
+   (a) 32-bits
+   (b) 128-byts
+   (c) 64-bits
+   (d) 128-bits
+
+13. **Which of the following is the number of bits used for IPv6?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. 128
+   b. 32
+   c. 64
+   d. 256
+
+## Routing Protocols (13)
+
+1. **Which of the following pairs is an example of intra-domain routing protocols?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) ALOHA, RIP
+   (b) OSPF, RIP
+   (c) RIP, FTP
+   (d) BGP, SMTP
+
+2. **Count-to-infinity problem occurs in ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) Distance vector routing
+   (খ) Shortest path first
+   (গ) Link state routing
+   (ঘ) Hierarchical routing
+
+3. **Which of the following pairs is an example of routing protocols?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 44]**
+   (ক) ALOHA, SMTP
+   (খ) BGP, RIP
+   (গ) OSPF, FTP
+   (ঘ) FTP, SMTP
+
+4. **Which of the following pairs is an example of intra-domain routing protocols?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) ALOHA, RIP
+   (খ) OSPF, RIP
+   (গ) RIP, FTP
+   (ঘ) BGP, SMTP
+
+5. **Which of following statements is connected with managed switch?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) It can configure each port differently and make VLAN
+   (খ) It can manage traffic like a router
+   (গ) It can ensure transport layer security
+   (ঘ) None of the above
+
+6. **In a comparatively small organization if you want data forwarding among departments based on IP address which one of the following will be a better bet for networking?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 115]**
+   a) Using Layer-3 routers
+   b) Using Layer-3 switches
+   c) Using Unmanaged switches
+   d) Combining a and b
+
+7. **Distance vector routing algorithm is a dynamic routing algorithm. The routing tables in distance vector routing algorithm are updated ____.** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 77]**
+   a. automatically
+   b. by server
+   c. with back up database
+   d. by exchanging information with neighbor nodes
+
+8. **কোন Routing Protocol এ Dijkstra Algorithm ব্যবহার করা হয়?** **(BPSC Assistant Programmer (Dept. of ICT) Exam: 2020) [compact it 188]** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) ARP
+   B) OSPF
+   C) RIP
+   D) IGRP
+
+9. **Routing is clearly the major issue for:** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 190]**
+   (a) Transport layer
+   (b) Network layer
+   (c) Data-link layer
+   (d) Physical layer
+
+10. **Which of the following is the metric used for OSPF?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 264]**
+   a. Latency
+   b. Cost
+   c. Bandwidth
+   d. Next hop
+
+11. **Which of the following describes a routing table that needs to be maintained manually?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 266]**
+   a. Hop count based
+   b. Link state
+   c. Static
+   d. Dynamic
+
+12. **How the router makes decisions for SQL server database logs?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 267]**
+   a. Call router
+   b. Response Router
+   c. Automatic Router
+   d. Static Router
+
+13. **Which of the following routing protocols uses As-path as one of the methods to build the routing table?** **(Pubali Bank Limited Officer (IT) Preliminary Exam: 2012) [compact it 268]**
+   a. OSPF
+   b. ISIS
+   c. BGP
+   d. EIGRP
+
+## Error Detection & Correction (3)
+
+1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) Cyclic Redundancy Check
+   (b) Cyclic Redundant Check
+   (c) Cyclic Redundancy Cycle
+   (d) Cyclic Redundancy Club
+
+2. **Which error detection method involves the use of parity bits?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 104]**
+   (a) Simple parity check
+   (b) Two-dimensional parity check
+   (c) CRC
+   (d) a and b
+
+3. **Type of error which occurs when data is transferred from one device to another is classified as-** **(Probashi Kallyan Bank Programmer: 2019 Exam Taker: AUST) [compact it 212]**
+   A) transmission error
+   B) interval error
+   C) software error
+   D) discontinued error
+
+## Switching Techniques (3)
 
 1. **In which type of circuit switching, delivery of data is delayed because data must be stored and retrieved from RAM.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 102]**
    (a) Space-division

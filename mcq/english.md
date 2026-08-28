@@ -3,119 +3,17 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [English Grammar](#english-grammar) | 163 |
-| 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms) | 58 |
-| 3 | [Idioms & Phrases](#idioms--phrases) | 24 |
-| 4 | [English Literature](#english-literature) | 17 |
-| 5 | [Spelling](#spelling) | 17 |
+| 1 | [English Grammar](#english-grammar-163) | 163 |
+| 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-58) | 58 |
+| 3 | [Idioms & Phrases](#idioms--phrases-24) | 24 |
+| 4 | [English Literature](#english-literature-17) | 17 |
+| 5 | [Spelling](#spelling-17) | 17 |
 
 <!-- TOC END -->
 
 ---
 
-## English Literature
-
-1. **Who is the author of the drama 'You Never Can Tell'?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. William Shakespeare
-   খ. George Bernard Shaw
-   গ. Ben Jonson
-   ঘ. Christopher Marlowe
-
-2. **Shakespeare was born in the year-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. 1616
-   খ. 1664
-   গ. 1493
-   ঘ. 1564
-
-3. **Romantic period of English literature-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. 1660-1798
-   খ. 1798-1832
-   গ. 1832-1901
-   ঘ. 1649-1660
-
-4. **'The Sun Also Rises' is written by-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. Charles Dickens
-   খ. Hermanne Melvile
-   গ. Earnest Hemingway
-   ঘ. Thomas Hardy
-
-5. **What is an Epic?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. A romance
-   খ. A novel
-   গ. A long poem
-   ঘ. A long prose
-
-6. **Who is 'Poet of Nature'?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. John Milton
-   খ. John Keats
-   গ. S.T. Coleridge
-   ঘ. William Wordsworth
-
-7. **Who was both a poet & painter?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. John Keats
-   খ. John Donne
-   গ. William Blake
-   ঘ. Mark Spenser
-
-8. **The very first English Dictionary was complied by-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. Izaak Walton
-   খ. Samuel Johnson
-   গ. Samuel Butler
-   ঘ. S. T. Coleridge
-
-9. **Poet of Nature এর লেখক কে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
-   উত্তর: William Wordsworth
-
-10. **The author of the story "The Luncheon" is -** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
-   (ক) William Shakespeare
-   (খ) William Wordsworth
-   (গ) W. S. Maugham
-   (ঘ) T. S. Eliot
-   **উত্তর: গ**
-
-11. **Who wrote 'arms and the Man'?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
-   (ক) Ben Johnson
-   (খ) T.S. Eliot
-   (গ) G.B. Shaw
-   (ঘ) Joseph Conrad
-
-12. **Who wrote "The Solitary Reaper"?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
-   (ক) P.B. Shelley
-   (খ) William Wordsworth
-   (গ) Alfred Tennyson
-   (ঘ) Mathew Arnold
-
-13. **Who did write first English dictionary?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
-   a) Boswell
-   b) Ben Jonson
-   c) Samuel Johnson
-   d) Milton
-
-14. **"Glimpes of world history " was written by** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
-   a) leo Tolstoy
-   b) Jawaharlal Nehru
-   c) A.P.J abdul kalam
-   d) Rabindranath Tagore
-
-15. **The famous quote "It matters not what someone is born but what they grow to be" was written in novel by the author-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
-   (a) J.K Rowling
-   (b) J.R.R Tolkein
-   (c) Dr. Seus
-   (d) W. B. Yeats
-
-16. **'Playing It My Way' is written by-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
-   (a) Sohaib Akhter
-   (b) Sachin Tendulkar
-   (c) Sir Don Bradman
-   (d) Tiger Woods
-
-17. **The quote “All the glitters is not gold” is from which play of Shakespeare?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
-   (a) The Merchant of Venice
-   (b) Othello
-   (c) Romeo and Juliet
-   (d) None
-
-## English Grammar
+## English Grammar (163)
 
 1. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
    ক. very few
@@ -1083,145 +981,7 @@
    (c) for
    (d) in
 
-## Idioms & Phrases
-
-1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. Humorous
-   খ. Fixed
-   গ. Breif
-   ঘ. Secret
-
-2. **'Come to light' means?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
-   ক. Lighting
-   খ. To shine
-   গ. To flourish
-   ঘ. To publish
-
-3. **The phrase 'Prima facie' means-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
-   (a) Primal face
-   (b) At first sight
-   (c) Main facilities
-   (d) Primitive man
-
-4. **Select the correct English translation of: The boy takes after his father.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
-   a) ছেলেটি তার পিতার দেখাশুনা করে
-   b) ছেলেটি তার পিতার অনুকরণ করে
-   c) ছেলেটি তার পিতার পদাঙ্ক অনুসরণ করে
-   d) ছেলেটি দেখতে তার পিতার মত
-
-5. **Prima facie ______ means.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
-   (a) Primal face
-   (b) Primitive man
-   (c) Main facilities
-   (d) At first sight
-
-6. **The blow off some steam means ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
-   **Ans:** to make angry or excited
-
-7. **‘End in smoke’ means-** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 36]**
-   **Ans:** end in nothing
-
-8. **What is the meaning of 'to bell the cat'?** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
-   (a) Do the difficult
-   (b) Do the unpleasant
-   (c) To take lead in danger
-   (d) Take the initiative
-   **Ans: d**
-
-9. **To bring of - অর্থ কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
-   উত্তর: Look after a child until it an adult
-
-10. **What is the meaning of the phrase ‘sine die’?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
-   (ক) for a certain period
-   (খ) for an uncertain period
-   (গ) for a short time
-   (ঘ) none
-
-11. **'A cook and bull story' means —** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
-   (ক) An animal story
-   (খ) A comedy
-   (গ) A story about birds
-   (ঘ) A false story
-
-12. **The phrase 'an apple of discord' means ______.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
-   (ক) a sour apple
-   (খ) and important matter
-   (গ) an unexpected gift
-   (ঘ) an object of quarrel
-
-13. **The visit his mother off and on. Here "off and on" means?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
-   (ক) Regularly
-   (খ) Hourly
-   (গ) Occasionally
-   (ঘ) Consistently
-
-14. **Leaders should not only make speeches they should also be prepared to bell the cat.** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
-   (ক) To take lead in danger
-   (খ) To tie bell to a cat's neck
-   (গ) To be alert of the enemy
-   (ঘ) to make noise
-
-15. **Which Idiom means 'try every possible course of action in order to achieve something'?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
-   (ক) Leave no stone unturned
-   (খ) Take one to task
-   (গ) Ride the high horse
-   (ঘ) Give a wide berth
-
-16. **What is the meaning of “White Elephant”?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
-   a) An elephant of white color
-   b) A hoarder
-   c) A black Marketer.
-   d) A very costly or troublesome possession
-
-17. **Choose the appropriate meaning of the idiom ‘swan song’** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
-   a) First Work
-   b) Last Work
-   c) Middle Work
-   d) Early Work
-
-18. **I am feeling under the water. What does the underlined phrase mean?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
-   a. Felling very cold
-   b. Traumatized
-   c. Showing sign of torture
-   d. Feeling slightly ill
-
-19. **'Enough is enough' is used to mean;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
-   ক. Continue
-   খ. Stop
-   গ. Continue until it is enough
-   ঘ. None
-
-20. **"Once in a blue moon" means:** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
-   ক. Always
-   খ. Rarely
-   গ. Very rarely
-   ঘ. Hourly
-
-21. **The phrase ‘Baker’s dozen’ means ________** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
-   (a) 13
-   (b) 12
-   (c) 11
-   (d) 24
-
-22. **What is the meaning of the phrase, 'of late'?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
-   (a) long ago
-   (b) occasionally
-   (c) long since
-   (d) recently
-
-23. **'Every now and then' means-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
-   (a) Rarely
-   (b) Occasionally
-   (c) Frequently
-   (d) Regularly
-
-24. **His evidence bears out, the evidence of the first witness. Here bears out means** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
-   (a) confirms
-   (b) wcount
-   (c) attacks
-   (d) none
-
-## Vocabulary, Synonyms & Antonyms
+## Vocabulary, Synonyms & Antonyms (58)
 
 1. **What is the antonym of 'famous '?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
    ক. Opeque
@@ -1561,7 +1321,247 @@
    (c) Stipulation
    (d) Confrontations
 
-## Spelling
+## Idioms & Phrases (24)
+
+1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. Humorous
+   খ. Fixed
+   গ. Breif
+   ঘ. Secret
+
+2. **'Come to light' means?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. Lighting
+   খ. To shine
+   গ. To flourish
+   ঘ. To publish
+
+3. **The phrase 'Prima facie' means-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 10]**
+   (a) Primal face
+   (b) At first sight
+   (c) Main facilities
+   (d) Primitive man
+
+4. **Select the correct English translation of: The boy takes after his father.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) ছেলেটি তার পিতার দেখাশুনা করে
+   b) ছেলেটি তার পিতার অনুকরণ করে
+   c) ছেলেটি তার পিতার পদাঙ্ক অনুসরণ করে
+   d) ছেলেটি দেখতে তার পিতার মত
+
+5. **Prima facie ______ means.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 30]**
+   (a) Primal face
+   (b) Primitive man
+   (c) Main facilities
+   (d) At first sight
+
+6. **The blow off some steam means ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
+   **Ans:** to make angry or excited
+
+7. **‘End in smoke’ means-** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 36]**
+   **Ans:** end in nothing
+
+8. **What is the meaning of 'to bell the cat'?** **(NPCBL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) Do the difficult
+   (b) Do the unpleasant
+   (c) To take lead in danger
+   (d) Take the initiative
+   **Ans: d**
+
+9. **To bring of - অর্থ কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
+   উত্তর: Look after a child until it an adult
+
+10. **What is the meaning of the phrase ‘sine die’?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) for a certain period
+   (খ) for an uncertain period
+   (গ) for a short time
+   (ঘ) none
+
+11. **'A cook and bull story' means —** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) An animal story
+   (খ) A comedy
+   (গ) A story about birds
+   (ঘ) A false story
+
+12. **The phrase 'an apple of discord' means ______.** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 50]**
+   (ক) a sour apple
+   (খ) and important matter
+   (গ) an unexpected gift
+   (ঘ) an object of quarrel
+
+13. **The visit his mother off and on. Here "off and on" means?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) Regularly
+   (খ) Hourly
+   (গ) Occasionally
+   (ঘ) Consistently
+
+14. **Leaders should not only make speeches they should also be prepared to bell the cat.** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) To take lead in danger
+   (খ) To tie bell to a cat's neck
+   (গ) To be alert of the enemy
+   (ঘ) to make noise
+
+15. **Which Idiom means 'try every possible course of action in order to achieve something'?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) Leave no stone unturned
+   (খ) Take one to task
+   (গ) Ride the high horse
+   (ঘ) Give a wide berth
+
+16. **What is the meaning of “White Elephant”?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 118]**
+   a) An elephant of white color
+   b) A hoarder
+   c) A black Marketer.
+   d) A very costly or troublesome possession
+
+17. **Choose the appropriate meaning of the idiom ‘swan song’** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) First Work
+   b) Last Work
+   c) Middle Work
+   d) Early Work
+
+18. **I am feeling under the water. What does the underlined phrase mean?** **(National Security Intelligence (NSI) Assistant Programmer 08.10.2021) [compact it 123]**
+   a. Felling very cold
+   b. Traumatized
+   c. Showing sign of torture
+   d. Feeling slightly ill
+
+19. **'Enough is enough' is used to mean;** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Continue
+   খ. Stop
+   গ. Continue until it is enough
+   ঘ. None
+
+20. **"Once in a blue moon" means:** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. Always
+   খ. Rarely
+   গ. Very rarely
+   ঘ. Hourly
+
+21. **The phrase ‘Baker’s dozen’ means ________** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 143]**
+   (a) 13
+   (b) 12
+   (c) 11
+   (d) 24
+
+22. **What is the meaning of the phrase, 'of late'?** **(BPSC Senior Instructor (MEW) Exam: 2021) [compact it 146]**
+   (a) long ago
+   (b) occasionally
+   (c) long since
+   (d) recently
+
+23. **'Every now and then' means-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) Rarely
+   (b) Occasionally
+   (c) Frequently
+   (d) Regularly
+
+24. **His evidence bears out, the evidence of the first witness. Here bears out means** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 168]**
+   (a) confirms
+   (b) wcount
+   (c) attacks
+   (d) none
+
+## English Literature (17)
+
+1. **Who is the author of the drama 'You Never Can Tell'?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. William Shakespeare
+   খ. George Bernard Shaw
+   গ. Ben Jonson
+   ঘ. Christopher Marlowe
+
+2. **Shakespeare was born in the year-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. 1616
+   খ. 1664
+   গ. 1493
+   ঘ. 1564
+
+3. **Romantic period of English literature-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. 1660-1798
+   খ. 1798-1832
+   গ. 1832-1901
+   ঘ. 1649-1660
+
+4. **'The Sun Also Rises' is written by-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. Charles Dickens
+   খ. Hermanne Melvile
+   গ. Earnest Hemingway
+   ঘ. Thomas Hardy
+
+5. **What is an Epic?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. A romance
+   খ. A novel
+   গ. A long poem
+   ঘ. A long prose
+
+6. **Who is 'Poet of Nature'?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. John Milton
+   খ. John Keats
+   গ. S.T. Coleridge
+   ঘ. William Wordsworth
+
+7. **Who was both a poet & painter?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. John Keats
+   খ. John Donne
+   গ. William Blake
+   ঘ. Mark Spenser
+
+8. **The very first English Dictionary was complied by-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
+   ক. Izaak Walton
+   খ. Samuel Johnson
+   গ. Samuel Butler
+   ঘ. S. T. Coleridge
+
+9. **Poet of Nature এর লেখক কে?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 64]**
+   উত্তর: William Wordsworth
+
+10. **The author of the story "The Luncheon" is -** **(BPSC- Instructor Exam: 31.10.2022) [compact it 68]**
+   (ক) William Shakespeare
+   (খ) William Wordsworth
+   (গ) W. S. Maugham
+   (ঘ) T. S. Eliot
+   **উত্তর: গ**
+
+11. **Who wrote 'arms and the Man'?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 48]**
+   (ক) Ben Johnson
+   (খ) T.S. Eliot
+   (গ) G.B. Shaw
+   (ঘ) Joseph Conrad
+
+12. **Who wrote "The Solitary Reaper"?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 49]**
+   (ক) P.B. Shelley
+   (খ) William Wordsworth
+   (গ) Alfred Tennyson
+   (ঘ) Mathew Arnold
+
+13. **Who did write first English dictionary?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 119]**
+   a) Boswell
+   b) Ben Jonson
+   c) Samuel Johnson
+   d) Milton
+
+14. **"Glimpes of world history " was written by** **(Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) Exam: 2021 (BUET)) [compact it 137]**
+   a) leo Tolstoy
+   b) Jawaharlal Nehru
+   c) A.P.J abdul kalam
+   d) Rabindranath Tagore
+
+15. **The famous quote "It matters not what someone is born but what they grow to be" was written in novel by the author-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) J.K Rowling
+   (b) J.R.R Tolkein
+   (c) Dr. Seus
+   (d) W. B. Yeats
+
+16. **'Playing It My Way' is written by-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+   (a) Sohaib Akhter
+   (b) Sachin Tendulkar
+   (c) Sir Don Bradman
+   (d) Tiger Woods
+
+17. **The quote “All the glitters is not gold” is from which play of Shakespeare?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
+   (a) The Merchant of Venice
+   (b) Othello
+   (c) Romeo and Juliet
+   (d) None
+
+## Spelling (17)
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
    ক. Messile

@@ -3,75 +3,17 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Software Testing](#software-testing) | 20 |
-| 2 | [SDLC Models](#sdlc-models) | 14 |
-| 3 | [Software Design & Metrics](#software-design--metrics) | 8 |
-| 4 | [Design Patterns](#design-patterns) | 3 |
-| 5 | [Software Requirements Engineering](#software-requirements-engineering) | 1 |
+| 1 | [Software Testing](#software-testing-20) | 20 |
+| 2 | [SDLC Models](#sdlc-models-14) | 14 |
+| 3 | [Software Design & Metrics](#software-design--metrics-8) | 8 |
+| 4 | [Design Patterns](#design-patterns-3) | 3 |
+| 5 | [Software Requirements Engineering](#software-requirements-engineering-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Software Requirements Engineering
-
-1. **If every requirement can be checked by a cost-effective process, then software requirement specification (SRS) is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
-   (a) Complete
-   (b) Traceable
-   (c) Verifiable
-   (d) Modifiable
-
-## Software Design & Metrics
-
-1. **In a class definition with 10 methods, to make the class maximally cohesive number ofconnections required among the methods are-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
-   (a) 90
-   (b) 100
-   (c) 10
-   (d) 45
-
-2. **Cyclomatic complexity is a software metric used in _____** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
-   (a) White box testing
-   (b) Black box testing
-   (c) Grey box testing
-   (d) None of these
-
-3. **The degree of interaction between two modules is known as-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
-   a) Cohesion
-   b) Strength
-   c) Inheritance
-   d) Coupling
-
-4. **In software development, value adjustment factors include the following among others:** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
-   (a) the criticality of the performance and reusability of the code
-   (b) number of lines of code in the software.
-   (c) number of technical manpower and hardware costs
-   (d) time period available and the level of user friendliness
-
-5. **Assuming the existence of a start and end nodes for a program graph (PG), the total number of Paths is equivalent to _______ set of test data required to test software.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
-   (a) Minimum
-   (b) Maximum
-   (c) Optimum
-   (d) Supreme
-
-6. **________ is qualitative measure that refers to the number of connections between a ‘calling’ and a ‘called’ module and the complexity of these connections.** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
-   a) Coupling
-   b) Cohesion
-   c) Both A and B
-   d) None of them
-
-7. **ISO 9126 quality factors consist of –** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
-   a) process-ability, consistency, usefulness, adaptability, rationality and transportability
-   b) functionality, reliability, effectiveness, usability, maintainability and portability
-   c) functionality, consistency, effectiveness, adaptability, maintainability and transportability
-   d) None of them.
-
-8. **DFD stands for-** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
-   A) data file disk
-   B) data flow diagram
-   C) disk flat database
-   D) disk file database
-
-## Software Testing
+## Software Testing (20)
 
 1. **Which of the following testing strategy is related to the boundary value analysis?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
    (a) White-box testing
@@ -197,7 +139,7 @@
    C) Test Engineer
    D) Designer
 
-## SDLC Models
+## SDLC Models (14)
 
 1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**
    (a) It is difficult to manage
@@ -283,7 +225,57 @@
    C) Evolutionary-model
    D) All of the above
 
-## Design Patterns
+## Software Design & Metrics (8)
+
+1. **In a class definition with 10 methods, to make the class maximally cohesive number ofconnections required among the methods are-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
+   (a) 90
+   (b) 100
+   (c) 10
+   (d) 45
+
+2. **Cyclomatic complexity is a software metric used in _____** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
+   (a) White box testing
+   (b) Black box testing
+   (c) Grey box testing
+   (d) None of these
+
+3. **The degree of interaction between two modules is known as-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) Cohesion
+   b) Strength
+   c) Inheritance
+   d) Coupling
+
+4. **In software development, value adjustment factors include the following among others:** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 106]**
+   (a) the criticality of the performance and reusability of the code
+   (b) number of lines of code in the software.
+   (c) number of technical manpower and hardware costs
+   (d) time period available and the level of user friendliness
+
+5. **Assuming the existence of a start and end nodes for a program graph (PG), the total number of Paths is equivalent to _______ set of test data required to test software.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 107]**
+   (a) Minimum
+   (b) Maximum
+   (c) Optimum
+   (d) Supreme
+
+6. **________ is qualitative measure that refers to the number of connections between a ‘calling’ and a ‘called’ module and the complexity of these connections.** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 149]**
+   a) Coupling
+   b) Cohesion
+   c) Both A and B
+   d) None of them
+
+7. **ISO 9126 quality factors consist of –** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 152]**
+   a) process-ability, consistency, usefulness, adaptability, rationality and transportability
+   b) functionality, reliability, effectiveness, usability, maintainability and portability
+   c) functionality, consistency, effectiveness, adaptability, maintainability and transportability
+   d) None of them.
+
+8. **DFD stands for-** **(Sonali & Janata Bank Assistant Programmer Preliminary Exam: 2018) [compact it 240]**
+   A) data file disk
+   B) data flow diagram
+   C) disk flat database
+   D) disk file database
+
+## Design Patterns (3)
 
 1. **Design pattern for hierarchical structure is ______** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**
    (a) Structure chart
@@ -302,3 +294,11 @@
    B) Queue
    C) Factory
    D) All of above
+
+## Software Requirements Engineering (1)
+
+1. **If every requirement can be checked by a cost-effective process, then software requirement specification (SRS) is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 14]**
+   (a) Complete
+   (b) Traceable
+   (c) Verifiable
+   (d) Modifiable

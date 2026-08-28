@@ -3,190 +3,17 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Number Systems & Binary Arithmetic](#number-systems--binary-arithmetic) | 49 |
-| 2 | [Logic Gates & Universal Gates](#logic-gates--universal-gates) | 17 |
-| 3 | [Sequential Circuits (Flip-Flops)](#sequential-circuits-flip-flops) | 6 |
-| 4 | [Boolean Algebra & Simplification](#boolean-algebra--simplification) | 5 |
-| 5 | [Combinational Circuits (MUX, Decoder)](#combinational-circuits-mux-decoder) | 2 |
+| 1 | [Number Systems & Binary Arithmetic](#number-systems--binary-arithmetic-49) | 49 |
+| 2 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-17) | 17 |
+| 3 | [Sequential Circuits (Flip-Flops)](#sequential-circuits-flip-flops-6) | 6 |
+| 4 | [Boolean Algebra & Simplification](#boolean-algebra--simplification-5) | 5 |
+| 5 | [Combinational Circuits (MUX, Decoder)](#combinational-circuits-mux-decoder-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## Logic Gates & Universal Gates
-
-1. **3 ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট 0 হলে আউটপুট কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
-   ক. 0
-   খ. 3
-   গ. 1
-   ঘ. কোনোটিই নয়
-
-2. **What is the lowest number of NAND gates required to make in inverter?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
-   (a) 1
-   (b) 2
-   (c) 3
-   (d) 4
-
-3. **Which one is a Universal logic gate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
-   (a) NAND
-   (b) AND
-   (c) OR
-   (d) NOT
-
-4. **Universal logic gate is:** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
-   (a) NAND, XOR
-   (b) NOR, XOR
-   (c) NOR, OR
-   (d) NAND, NOR
-
-5. **The logic gate that will have a Low output then any one of its inputs is High is ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
-   (ক) NAND gate
-   (খ) AND gate
-   (গ) NOR gate
-   (ঘ) OR gate
-
-6. **What is the name of the following symbol?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
-   a) FET
-   b) JFET
-   c) Schottky Diode
-   d) SCR
-
-7. **In which logic gate output is 1 when all inputs are zero?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
-   ক. AND
-   খ. NAND
-   গ. OR
-   ঘ. NOR
-
-8. **A technician testing a logic circuit sees that the output of a particular INVERTER is stuck LOW while its input is pulsing. Which one of the following is the possible reason for this faulty operation?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
-   a) The output of the INVERTER is internally grounded
-   b) The output of the INERTER is externally grounded
-   c) The input being driven by output of the INVERTER is internally grounded
-   d) All of the above
-
-9. **\overline{A}\overline{B}\overline{C}(\overline{A} + \overline{B} + \overline{C}) Which is the simplified form of this?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
-   a) \bar{A} + \bar{B} + \bar{C}
-   b) \bar{A}\bar{B}\bar{C}
-   c) \overline{ABC}
-   d) \overline{A B C}
-
-10. **Write the name of the Gate:** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 217]**
-   A) NOR
-   B) OR
-   C) NAND
-   D) None
-
-11. **The OR, XOR & AND functions can be performed by ____ of the computer in a CPU.** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
-   A) ALU
-   B) CU
-   C) Memory
-   D) Register
-
-12. **Which of the following options is suitable, if A is “10110110”, B is “11100000” and C is “10100000”?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
-   A) C=A or B
-   B) C=\bar{A}
-   C) C=\bar{B}
-   D) C=A and B
-
-13. **When two variables are logically compared, the logic gate that tests the equivalence is–** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
-   A) XNOR
-   B) XOR
-   C) AND
-   D) NOR
-
-14. **Which one is universal logic gate?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
-   A) NAND
-   B) AND
-   C) OR
-   D) NOT
-
-15. **Binary circuit elements have** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
-   A) One stable state
-   B) two stable state
-   C) Three stable state
-   D) None of these
-
-16. **Which is the universal gate?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
-   A) NOR
-   B) AND
-   C) NOT
-   D) OR
-
-17. **NAND gates are preferred over other because these ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
-   a. Have lower function area
-   b. Can be used to make any gate
-   c. Consume least electronic power
-   d. Provide maximum density in a chip
-
-## Sequential Circuits (Flip-Flops)
-
-1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) S-R
-   (b) J-K
-   (c) D
-   (d) T
-
-2. **A basic memory storage element in a digital system is:** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
-   (a) Flip-flop
-   (b) Counter
-   (c) Multiplexer
-   (d) Encoder
-
-3. **How much data a flip flop can store?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
-   a) 4-bit data
-   b) 1-bit data
-   c) 3-bit data
-   d) 3-bit data
-
-4. **A binary counter is being pulsed by a 256 kHz clock signal. The output frequency from the last flip flop is 2kHz. Which one of the following is the counting range?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
-   a) 0 to 255
-   b) 0 to 128
-   c) 0 to 127
-   d) None of the above
-
-5. **Which one is the output of the following digital logic circuit?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
-   ```
-   A ---------------------+-----------------+
-   |                 |
-   |    +-------+    |
-   +---|        |    |
-   |   AND  |----+
-   B -----------\             |        |    |
-   >-----------|        |    |   +-------+
-   C -----------/            +-------+    +---|       |
-   |                              |   OR  |----
-   |           +-------+    +---|       |
-   +----------|        |    |   +-------+
-   |   AND  |----+
-   |        |
-   -------------------------|        |
-   +-------+
-   ```
-   a) AB+A(B+C) + C(B+C)
-   b) AB+A(B+C) + B(B+C)
-   c) AC+A(B+C) + B(B+C)
-   d) BC+C(B+C) + B(B+C)
-
-6. **যে বর্তনী ১-বিট ডাটা সংরক্ষণ করতে পারে তা হলো-** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
-   A) রেজিস্টার
-   B) এনকোডার
-   C) ডিকোডার
-   D) ফ্লিপ-ফ্লপ
-
-## Combinational Circuits (MUX, Decoder)
-
-1. **How many select line would be there if the inputs of a MUX are 8?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
-   (a) 2
-   (b) 3
-   (c) 4
-   (d) 5
-
-2. **A decoder has four input lines. How many output lines will be there?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
-   (a) 4
-   (b) 8
-   (c) 16
-   (d) 32
-
-## Number Systems & Binary Arithmetic
+## Number Systems & Binary Arithmetic (49)
 
 1. **What is the result of the binary sum 10101+1011?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
    (a) 10000
@@ -495,7 +322,166 @@
    C) 0101
    D) 1001
 
-## Boolean Algebra & Simplification
+## Logic Gates & Universal Gates (17)
+
+1. **3 ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট 0 হলে আউটপুট কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
+   ক. 0
+   খ. 3
+   গ. 1
+   ঘ. কোনোটিই নয়
+
+2. **What is the lowest number of NAND gates required to make in inverter?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
+   (a) 1
+   (b) 2
+   (c) 3
+   (d) 4
+
+3. **Which one is a Universal logic gate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+   (a) NAND
+   (b) AND
+   (c) OR
+   (d) NOT
+
+4. **Universal logic gate is:** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
+   (a) NAND, XOR
+   (b) NOR, XOR
+   (c) NOR, OR
+   (d) NAND, NOR
+
+5. **The logic gate that will have a Low output then any one of its inputs is High is ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) NAND gate
+   (খ) AND gate
+   (গ) NOR gate
+   (ঘ) OR gate
+
+6. **What is the name of the following symbol?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
+   a) FET
+   b) JFET
+   c) Schottky Diode
+   d) SCR
+
+7. **In which logic gate output is 1 when all inputs are zero?** **(BREB Assistant Enforcement Coordinator Exam: 2021) [compact it 141]**
+   ক. AND
+   খ. NAND
+   গ. OR
+   ঘ. NOR
+
+8. **A technician testing a logic circuit sees that the output of a particular INVERTER is stuck LOW while its input is pulsing. Which one of the following is the possible reason for this faulty operation?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 174]**
+   a) The output of the INVERTER is internally grounded
+   b) The output of the INERTER is externally grounded
+   c) The input being driven by output of the INVERTER is internally grounded
+   d) All of the above
+
+9. **\overline{A}\overline{B}\overline{C}(\overline{A} + \overline{B} + \overline{C}) Which is the simplified form of this?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) \bar{A} + \bar{B} + \bar{C}
+   b) \bar{A}\bar{B}\bar{C}
+   c) \overline{ABC}
+   d) \overline{A B C}
+
+10. **Write the name of the Gate:** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 217]**
+   A) NOR
+   B) OR
+   C) NAND
+   D) None
+
+11. **The OR, XOR & AND functions can be performed by ____ of the computer in a CPU.** **(BREB Assistant Junior Engineer (IT) Exam: 2019) [compact it 219]**
+   A) ALU
+   B) CU
+   C) Memory
+   D) Register
+
+12. **Which of the following options is suitable, if A is “10110110”, B is “11100000” and C is “10100000”?** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+   A) C=A or B
+   B) C=\bar{A}
+   C) C=\bar{B}
+   D) C=A and B
+
+13. **When two variables are logically compared, the logic gate that tests the equivalence is–** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 222]**
+   A) XNOR
+   B) XOR
+   C) AND
+   D) NOR
+
+14. **Which one is universal logic gate?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) NAND
+   B) AND
+   C) OR
+   D) NOT
+
+15. **Binary circuit elements have** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
+   A) One stable state
+   B) two stable state
+   C) Three stable state
+   D) None of these
+
+16. **Which is the universal gate?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 255]**
+   A) NOR
+   B) AND
+   C) NOT
+   D) OR
+
+17. **NAND gates are preferred over other because these ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 271]**
+   a. Have lower function area
+   b. Can be used to make any gate
+   c. Consume least electronic power
+   d. Provide maximum density in a chip
+
+## Sequential Circuits (Flip-Flops) (6)
+
+1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) S-R
+   (b) J-K
+   (c) D
+   (d) T
+
+2. **A basic memory storage element in a digital system is:** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 23]**
+   (a) Flip-flop
+   (b) Counter
+   (c) Multiplexer
+   (d) Encoder
+
+3. **How much data a flip flop can store?** **(Sonali, Janata and RAKUB AE (IT)/ AHME/ AME Exam: 2020) [compact it 177]**
+   a) 4-bit data
+   b) 1-bit data
+   c) 3-bit data
+   d) 3-bit data
+
+4. **A binary counter is being pulsed by a 256 kHz clock signal. The output frequency from the last flip flop is 2kHz. Which one of the following is the counting range?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   a) 0 to 255
+   b) 0 to 128
+   c) 0 to 127
+   d) None of the above
+
+5. **Which one is the output of the following digital logic circuit?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 182]**
+   ```
+   A ---------------------+-----------------+
+   |                 |
+   |    +-------+    |
+   +---|        |    |
+   |   AND  |----+
+   B -----------\             |        |    |
+   >-----------|        |    |   +-------+
+   C -----------/            +-------+    +---|       |
+   |                              |   OR  |----
+   |           +-------+    +---|       |
+   +----------|        |    |   +-------+
+   |   AND  |----+
+   |        |
+   -------------------------|        |
+   +-------+
+   ```
+   a) AB+A(B+C) + C(B+C)
+   b) AB+A(B+C) + B(B+C)
+   c) AC+A(B+C) + B(B+C)
+   d) BC+C(B+C) + B(B+C)
+
+6. **যে বর্তনী ১-বিট ডাটা সংরক্ষণ করতে পারে তা হলো-** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 195]**
+   A) রেজিস্টার
+   B) এনকোডার
+   C) ডিকোডার
+   D) ফ্লিপ-ফ্লপ
+
+## Boolean Algebra & Simplification (5)
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
    a) A + B + C
@@ -526,3 +512,17 @@
    B) B
    C) AB
    D) 1
+
+## Combinational Circuits (MUX, Decoder) (2)
+
+1. **How many select line would be there if the inputs of a MUX are 8?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
+   (a) 2
+   (b) 3
+   (c) 4
+   (d) 5
+
+2. **A decoder has four input lines. How many output lines will be there?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
+   (a) 4
+   (b) 8
+   (c) 16
+   (d) 32

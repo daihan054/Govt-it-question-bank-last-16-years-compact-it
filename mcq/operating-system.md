@@ -3,160 +3,19 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Process Management & Scheduling](#process-management--scheduling) | 24 |
-| 2 | [OS Concepts & Multiprogramming](#os-concepts--multiprogramming) | 16 |
-| 3 | [Virtual Memory & Paging](#virtual-memory--paging) | 13 |
-| 4 | [Linux Commands & Administration](#linux-commands--administration) | 9 |
-| 5 | [Deadlock](#deadlock) | 6 |
-| 6 | [File Systems & Disk Management](#file-systems--disk-management) | 4 |
-| 7 | [Process Synchronization](#process-synchronization) | 2 |
+| 1 | [Process Management & Scheduling](#process-management--scheduling-24) | 24 |
+| 2 | [OS Concepts & Multiprogramming](#os-concepts--multiprogramming-16) | 16 |
+| 3 | [Virtual Memory & Paging](#virtual-memory--paging-13) | 13 |
+| 4 | [Linux Commands & Administration](#linux-commands--administration-9) | 9 |
+| 5 | [Deadlock](#deadlock-6) | 6 |
+| 6 | [File Systems & Disk Management](#file-systems--disk-management-4) | 4 |
+| 7 | [Process Synchronization](#process-synchronization-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## Virtual Memory & Paging
-
-1. **Which of the following page replacement algorithms suffers from Belady’s anomaly?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
-   a) FIFO
-   b) LRU
-   c) Optimal Page Replacement
-   d) Both LRU and FIFO
-
-2. **To keep track of how many frames have been allocated, how many are there, and how many are available, operating system maintain a—** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) Memory table
-   (b) Page table
-   (c) mapping table
-   (d) frame table
-
-3. **Logical Memory is broken into blocks of the same size called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
-   a) Frames
-   b) Pages
-   c) raids
-   d) Blocks
-
-4. **A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page table entries and is 4-way set associative. The minimum size of the TLB tag is:** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
-   (a) 11 bits
-   (b) 13 bits
-   (c) 15 bits
-   (d) 20 bits
-
-5. **What is the relationship between Paging and Virtual memory?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
-   (ক) Virtual memory came before Paging
-   (খ) When pages are created in disks, it is called a virtual memory
-   (গ) Virtual memory can never be implemented without paging
-   (ঘ) Both have the same concepts
-
-6. **Consider a virtual memory system with FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory will–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
-   a) Always decrease the number of page faults
-   b) Always increase the number of page faults
-   c) Sometimes increase the number of page faults
-   d) Never affect the number of page faults
-
-7. **Applying the LRU page replacement to the reference string 1 2 4 5 2 1 2 4. The main memory can accommodate pages and it already has pages and 2. Pape I came in before page 2 How many page faults will court?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 128]**
-   a) 3
-   b) 4
-   c) 5
-   d) 6
-
-8. **Consider a virtual memory system where three pages are allocated for real memory. If the page replacement algorithm used is FIFO, how many page replacements take place for the access sequence: 1, 3, 2, 1, 4, 5, 2, 3, 4, 5?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]**
-   a. 2
-   b. 3
-   c. 4
-   d. 6
-
-9. **Virtual memory located on:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 171]**
-   a) RAM
-   b) CPU
-   c) Flash drive
-   d) Hard drive
-
-10. **Virtually memory হিসেবে RAM এর পাশাপাশি কোনটি ব্যবহার হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
-   A) Cache
-   B) CPU Register
-   C) CD-ROM
-   D) Hard disk
-
-11. **Memory management scheme by which a computer stores and retrieves data from secondary storage for use in main memory is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
-   A) Paging
-   B) Scheduling
-   C) Batch processing
-   D) Virtual storage
-
-12. **Swap space exists in ---** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
-   A) CPU
-   B) random memory
-   C) primary memory
-   D) secondary memory
-
-13. **A page fault occurs ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
-   a. When the page is not in the memory
-   b. When the page is in the memory
-   c. When the process inters into the blocked state
-   d. When the process is in the ready state
-
-## Deadlock
-
-1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
-   (a) 1
-   (b) 2
-   (c) 3
-   (d) 4
-
-2. **Which one of the following is the deadlock avoidance algorithm?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
-   a) banker’s algorithm
-   b) round-robin algorithm
-   c) Elevator algorithm
-   d) karn’s algorithm
-
-3. **Which of the following is not a deadlock handling strategy?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 41]**
-   a) Deadlock prevention
-   b) Timeout
-   c) Deadlock detection and recovery
-   d) Deadlock annihilation
-
-4. **A system has 12 magnetic tape drives and 3 processes: PO, PI, and P2. Process PO requires 10 tape drives, P1 requires 4 and P2 requires 9 tape drives. The current allocation tape drives of processes P0, PI and P2 is 5, 2, 2, respectively. Which of the following sequence is a safe sequence?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
-   a) P0, PI, P2
-   b) P1, P2, P0
-   c) P2, P0, P1
-   d) P1, P0, P2
-
-5. **A computer system has 6 type drives and each process may need 3 type drives. What is the maximum number of processes than is guaranteed to be deadlock free?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 164]**
-   a) 4
-   b) 3
-   c) 2
-   d) None
-   5. Consider the following table named “Course”-
-   | Course Title | Content |
-   |---|---|
-   | Web Programming | Python, CSS, JS |
-   What is the main problem/anomalies in the Course table? **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 164]**
-   a) Attribute name is not correct
-   b) Table is larger
-   c) Attribute has multiple value
-   d) It has functional dependency
-
-6. **The request and release of resources are-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
-   (a) Command line
-   (b) Interrupts statements
-   (c) System calls
-   (d) Special program
-
-## Process Synchronization
-
-1. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on this semaphore. The resulting value of the semaphore is___** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
-   (a) 0
-   (b) 10
-   (c) 8
-   (d) 12
-
-2. **A critical section is a program segment-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
-   (a) which should run in a certain specified amount of time
-   (b) which avoids deadlocks
-   (c) where shared resources are accessed
-   (d) which must be enclosed by a pair of semaphore (wait and signal) operations
-
-## Process Management & Scheduling
+## Process Management & Scheduling (24)
 
 1. **A process needs I/O operations, it switches to _____** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
    (a) Ready
@@ -318,33 +177,7 @@
    C) waiting
    D) Running
 
-## File Systems & Disk Management
-
-1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**
-   (a) C
-   (b) D
-   (c) E
-   (d) F
-
-2. **Which of the following is not a true statement?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
-   a) Deleted files can be found in recycle bin
-   b) Deleted files in recycle bin can be restored
-   c) Disk space can be increased by sending files into recycle bin
-   d) There may have multiple recycle bin
-
-3. **Which of the following file name extension suggests that the file is backup of another file?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
-   a. TXT
-   b. COM
-   c. BAS
-   d. BAK
-
-4. **"INI" extension refers usually what kind of file?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
-   a. Image file
-   b. System file
-   c. Hypertext file
-   d. Image Color Matching Profile file
-
-## OS Concepts & Multiprogramming
+## OS Concepts & Multiprogramming (16)
 
 1. **The ______ system may manage a high degree of interaction between processes and is very useful for high speed and real-time processing.** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
    (a) strongly coupled and loosely cohesive
@@ -442,7 +275,87 @@
    c. Execute more jobs in the same time
    d. Are used only on large mainframe computers.
 
-## Linux Commands & Administration
+## Virtual Memory & Paging (13)
+
+1. **Which of the following page replacement algorithms suffers from Belady’s anomaly?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
+   a) FIFO
+   b) LRU
+   c) Optimal Page Replacement
+   d) Both LRU and FIFO
+
+2. **To keep track of how many frames have been allocated, how many are there, and how many are available, operating system maintain a—** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) Memory table
+   (b) Page table
+   (c) mapping table
+   (d) frame table
+
+3. **Logical Memory is broken into blocks of the same size called-** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
+   a) Frames
+   b) Pages
+   c) raids
+   d) Blocks
+
+4. **A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page table entries and is 4-way set associative. The minimum size of the TLB tag is:** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 24]**
+   (a) 11 bits
+   (b) 13 bits
+   (c) 15 bits
+   (d) 20 bits
+
+5. **What is the relationship between Paging and Virtual memory?** **(BPSC (Ministry) Assistant Maintenance Engineer Exam: 2022) [compact it 45]**
+   (ক) Virtual memory came before Paging
+   (খ) When pages are created in disks, it is called a virtual memory
+   (গ) Virtual memory can never be implemented without paging
+   (ঘ) Both have the same concepts
+
+6. **Consider a virtual memory system with FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory will–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) Always decrease the number of page faults
+   b) Always increase the number of page faults
+   c) Sometimes increase the number of page faults
+   d) Never affect the number of page faults
+
+7. **Applying the LRU page replacement to the reference string 1 2 4 5 2 1 2 4. The main memory can accommodate pages and it already has pages and 2. Pape I came in before page 2 How many page faults will court?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 128]**
+   a) 3
+   b) 4
+   c) 5
+   d) 6
+
+8. **Consider a virtual memory system where three pages are allocated for real memory. If the page replacement algorithm used is FIFO, how many page replacements take place for the access sequence: 1, 3, 2, 1, 4, 5, 2, 3, 4, 5?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]**
+   a. 2
+   b. 3
+   c. 4
+   d. 6
+
+9. **Virtual memory located on:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 171]**
+   a) RAM
+   b) CPU
+   c) Flash drive
+   d) Hard drive
+
+10. **Virtually memory হিসেবে RAM এর পাশাপাশি কোনটি ব্যবহার হয়?** **(BPSC Assistant Network Engineer Exam: 2019) [compact it 196]**
+   A) Cache
+   B) CPU Register
+   C) CD-ROM
+   D) Hard disk
+
+11. **Memory management scheme by which a computer stores and retrieves data from secondary storage for use in main memory is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 223]**
+   A) Paging
+   B) Scheduling
+   C) Batch processing
+   D) Virtual storage
+
+12. **Swap space exists in ---** **(Janata Bank Limited Assistant Engineer (IT) Preliminary Exam: 2015) [compact it 260]**
+   A) CPU
+   B) random memory
+   C) primary memory
+   D) secondary memory
+
+13. **A page fault occurs ________** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+   a. When the page is not in the memory
+   b. When the page is in the memory
+   c. When the process inters into the blocked state
+   d. When the process is in the ready state
+
+## Linux Commands & Administration (9)
 
 1. **User passwords in Linux are stored as-** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
    (a) Direct text data
@@ -509,3 +422,90 @@
    B) NETSTAT
    C) IPCONFIG
    D) WINTPCFG
+
+## Deadlock (6)
+
+1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
+   (a) 1
+   (b) 2
+   (c) 3
+   (d) 4
+
+2. **Which one of the following is the deadlock avoidance algorithm?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
+   a) banker’s algorithm
+   b) round-robin algorithm
+   c) Elevator algorithm
+   d) karn’s algorithm
+
+3. **Which of the following is not a deadlock handling strategy?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 41]**
+   a) Deadlock prevention
+   b) Timeout
+   c) Deadlock detection and recovery
+   d) Deadlock annihilation
+
+4. **A system has 12 magnetic tape drives and 3 processes: PO, PI, and P2. Process PO requires 10 tape drives, P1 requires 4 and P2 requires 9 tape drives. The current allocation tape drives of processes P0, PI and P2 is 5, 2, 2, respectively. Which of the following sequence is a safe sequence?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
+   a) P0, PI, P2
+   b) P1, P2, P0
+   c) P2, P0, P1
+   d) P1, P0, P2
+
+5. **A computer system has 6 type drives and each process may need 3 type drives. What is the maximum number of processes than is guaranteed to be deadlock free?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 164]**
+   a) 4
+   b) 3
+   c) 2
+   d) None
+   5. Consider the following table named “Course”-
+   | Course Title | Content |
+   |---|---|
+   | Web Programming | Python, CSS, JS |
+   What is the main problem/anomalies in the Course table? **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 164]**
+   a) Attribute name is not correct
+   b) Table is larger
+   c) Attribute has multiple value
+   d) It has functional dependency
+
+6. **The request and release of resources are-** **(BPSC Assistant Maintenance Engineer Exam: 2019) [compact it 194]**
+   (a) Command line
+   (b) Interrupts statements
+   (c) System calls
+   (d) Special program
+
+## File Systems & Disk Management (4)
+
+1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**
+   (a) C
+   (b) D
+   (c) E
+   (d) F
+
+2. **Which of the following is not a true statement?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) Deleted files can be found in recycle bin
+   b) Deleted files in recycle bin can be restored
+   c) Disk space can be increased by sending files into recycle bin
+   d) There may have multiple recycle bin
+
+3. **Which of the following file name extension suggests that the file is backup of another file?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+   a. TXT
+   b. COM
+   c. BAS
+   d. BAK
+
+4. **"INI" extension refers usually what kind of file?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2011) [compact it 270]**
+   a. Image file
+   b. System file
+   c. Hypertext file
+   d. Image Color Matching Profile file
+
+## Process Synchronization (2)
+
+1. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on this semaphore. The resulting value of the semaphore is___** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
+   (a) 0
+   (b) 10
+   (c) 8
+   (d) 12
+
+2. **A critical section is a program segment-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
+   (a) which should run in a certain specified amount of time
+   (b) which avoids deadlocks
+   (c) where shared resources are accessed
+   (d) which must be enclosed by a pair of semaphore (wait and signal) operations
