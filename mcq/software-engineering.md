@@ -178,6 +178,12 @@
    C) Pseudo code
    D) IPO chart
 
+7. **A branch office, location or other data processing centers, where a newly developed system is used under normal operating conditions for several months, to test it, is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) Beta test data
+   b) String test data
+   c) Alpha test data
+   d) System test data
+
 ## Design Patterns
 
 1. **Design pattern for hierarchical structure is ______** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 26]**

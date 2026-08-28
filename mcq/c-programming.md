@@ -27,6 +27,12 @@
 5. **What can be used to terminate for(;;)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** break statement
 
+6. **The ________ loop is especially useful when you process a menu selection?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**
+   a) while
+   b) do-while
+   c) for
+   d) switch
+
 ## Output Tracing
 
 1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -445,6 +451,12 @@
    b) 1-
    c) No output (Output screen will be empty
    d) The program will cause an infinite loop and has to be stopped manually
+
+34. **If any error occurs due to violation of programming rule is ________.** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) Syntax error
+   b) Run-time Errors
+   c) Linker Errors
+   d) Logical Errors
 
 ## Storage Classes & Scope
 

@@ -437,6 +437,12 @@
    c) Relation
    d) Record
 
+19. **Running the given task in less time by increasing the degree of parallelism in DBMS is called ________.** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 174]**
+   a) scale up
+   b) roll up
+   c) speedup
+   d) Data Warehouse
+
 ## Transaction Management & ACID
 
 1. **Which one of these is not included in acid property of database?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

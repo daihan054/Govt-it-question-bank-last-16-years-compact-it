@@ -254,6 +254,12 @@
    c. Over functioning
    d. Overriding
 
+6. **The most common use of ________ in OOP occurs when a parent class reference is used to refer to a child class object.** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 174]**
+   a) Polymorphism
+   b) Inheritance
+   d) Encapsulation
+   d) Method overriding
+
 ## OOP Concepts & Principles
 
 1. **Which of the following is not property of the Object Oriented Programming Concept?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -303,3 +309,21 @@
 
 1. **The statements that allows you to define a block of code to be tested for exceptions while it is being executed.** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Try-cache
+
+2. **The ________ block used to execute a given set of the statement whether the exception is thrown or not.** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 171]**
+   a) try
+   b) tryif
+   c) finally
+   d) thrown
+
+3. **Java uses a keyword ________ to preface a block of code that is likely to cause an error condition and ‘throw’ an exception.** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 171]**
+   a) throw
+   b) catch
+   c) finally
+   d) try
+
+4. **Which of the following method(s) not included in InputStream class?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 171]**
+   a) available()
+   b) reset()
+   c) flush()
+   d) close()

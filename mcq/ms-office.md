@@ -12,6 +12,18 @@
    C) formula
    D) macros
 
+3. **Multiple calculation can be made in a single formula using.** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**
+   a) Standard Formula
+   b) Array Formula
+   c) Complex Formula
+   d) Smart Formula
+
+4. **Which area in an excel window allow entering values and formulas?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 171]**
+   a) Title bar
+   b) Menu bar
+   c) Formula bar
+   d) Standard tool bar
+
 ## MS Word
 
 1. **What is the range of Font Size available in Font Size drop down toolbar?** **(BREB Assistant General Manager (O&M/E&C) Exam: 2021) [compact it 136]**
@@ -25,3 +37,17 @@
    B. Last Page
    C. All Pages
    D. Even Pages
+
+## MS PowerPoint
+
+1. **Which file format can be added to a PowerPoint show?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**
+   a) .jpg
+   b) .gif
+   c) .wav
+   d) All of the above
+
+2. **Which shortcut key on the keyboard can be used to view slide show?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**
+   a) F1
+   b) F7
+   c) F5
+   d) F12

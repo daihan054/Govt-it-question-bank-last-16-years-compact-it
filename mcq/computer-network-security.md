@@ -275,3 +275,15 @@
    b) Ransomware
    c) Cross-site scripting
    d) Backdoor
+
+14. **Which of the following is not a web server attack type?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 170]**
+   a) DOS attack
+   b) Website Defacement using SQLi
+   c) Directory Traversal
+   d) Password guessing
+
+15. **A proxy firewall filters at ________.** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 171]**
+   a) Physical layer
+   b) Data link layer
+   c) Network layer
+   d) Application layer

@@ -299,3 +299,9 @@
    (b) Graph
    (c) Queue
    (d) Linked list
+
+2. **Which of the data structure is linear type?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) Tree
+   b) Binary Tree
+   c) Queue
+   d) Graph

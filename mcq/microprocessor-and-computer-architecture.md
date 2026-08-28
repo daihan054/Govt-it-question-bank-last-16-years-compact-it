@@ -158,6 +158,42 @@
    c) 70
    d) 100
 
+10. **Communication path between a computer microprocessor and main memory is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) System bus
+   b) ISA bus
+   c) PCI bus
+   d) Local bus
+
+11. **Ice Lake CPU is intel’s code name for the processor of:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) 11^{\text{th}} generation
+   b) 8^{\text{th}} generation
+   c) 9^{\text{th}} generation
+   d) 10^{\text{th}} generation
+
+12. **In core i7-8650U processor, here U means:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) Ultra low power
+   b) Ultra high power
+   c) Upgrade version
+   d) Upgrade processor
+
+13. **Which is not pipeline hazard?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) Resource hazard
+   b) Control hazard
+   c) Address hazard
+   d) Data hazard
+
+14. **The processor reads an instruction from memory is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) Interpret instruction
+   b) Fetch instruction
+   c) Read instruction
+   d) Fetch data
+
+15. **Microprocessor reference that are available in the cache are called ________:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) Cache hits
+   b) Cache line
+   c) Cache memory
+   d) All of these
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

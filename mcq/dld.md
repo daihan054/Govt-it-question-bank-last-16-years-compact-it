@@ -282,6 +282,12 @@
    c) 1001011010110100000111
    d) 111111111011010000110
 
+26. **Convert the binary number (1011010)_2 into hexadecimal?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) 5B
+   b) 5F
+   c) 5A
+   d) 5C
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

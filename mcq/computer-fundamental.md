@@ -250,6 +250,18 @@
    C) ergonomics
    D) kinetics
 
+8. **Smallest unit of bit coin is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) unit coin
+   b) satoshis
+   c) etherum
+   d) litecoin
+
+9. **In a block chain, a bundle of transaction is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 173]**
+   a) node
+   b) block
+   c) chain
+   d) nonce
+
 ## Software Types & Classification
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**

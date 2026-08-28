@@ -48,6 +48,12 @@
    c. 4
    d. 6
 
+9. **Virtual memory located on:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 171]**
+   a) RAM
+   b) CPU
+   c) Flash drive
+   d) Hard drive
+
 ## Deadlock
 
 1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**

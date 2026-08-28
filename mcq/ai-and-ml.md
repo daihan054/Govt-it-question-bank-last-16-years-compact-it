@@ -77,3 +77,15 @@
    B) Java
    C) J2EE
    D) Prolog
+
+15. **K nearest neighbor algorithm is part of:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) Clustering algorithm
+   b) classification algorithm
+   c) association algorithm
+   d) None of these
+
+16. **If the class levels of training data set are unknown in machine learning, then it is called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) classification
+   b) clustering
+   c) association
+   d) reinforcement learning

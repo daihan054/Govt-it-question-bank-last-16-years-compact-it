@@ -27,6 +27,18 @@
    c) A= {range(6)}
    d) B={A=5}
 
+5. **If List= [1,2,3,4,5] and write List[3] = List[1] then what will be List[3]?** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) 1
+   b) 3
+   c) 2
+   d) 4
+
+6. **In programming language DRY principle makes the code.** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) reusable
+   b) loop forever
+   c) repetitive
+   d) complex
+
 ## Mobile & Android Development
 
 1. **What is the API level of Android version 11?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**

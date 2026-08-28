@@ -416,6 +416,12 @@
    c) 0.137
    d) Infinity
 
+12. **A number of signal can be carried simultaneously if each signal is modulated that a different carried frequency called:** **(Combined 2 Banks Senior Officer (IT) Exam: 2020) [compact it 172]**
+   a) TDM
+   b) FDM
+   c) Frequency modulation
+   d) Pulse modulation
+
 ## Wireless & Mobile Communication
 
 1. **Bluetooth is a type of radio wave information transmission system that is good for about-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
