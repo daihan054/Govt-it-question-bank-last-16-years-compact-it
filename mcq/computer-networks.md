@@ -197,6 +197,8 @@
    (c) Modem
    (d) Hub
 
+3. **নিচের কোনটি নেটওয়ার্ক ডিভাইস নয়? **Ans: Wi-Fi**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
 ## Error Detection & Correction
 
 1. **Full meaning of CRC is-** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**

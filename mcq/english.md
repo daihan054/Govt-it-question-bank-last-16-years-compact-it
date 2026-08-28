@@ -224,6 +224,10 @@
    (d) Away
    **Ans: d**
 
+32. **The tiger fell ______ prey. **Ans: Upon**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+33. **Do not sit on a ______ chair. **Ans: broken**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -333,6 +337,10 @@
 
 12. **Synonym of ‘EXTRANEOUS’** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
    **Ans:** Irrelevant
+
+13. **Plagiarism means- **Ans: Theft of Idea**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+14. **Could: Rain :: Vapour : **Ans: Moistrue**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
 ## Spelling
 

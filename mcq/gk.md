@@ -261,6 +261,14 @@
    (d) Dmytro Khuleba
    **Ans: a**
 
+37. **দক্ষিণ এশিয়ার দীর্ঘতম টাওয়ার কোথায় অবস্থিত? **Ans: কলম্বো**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 71]**
+
+38. **International Day for Total Elimination of Nuclear Weapons 2022? **Ans: ২৬ সেপ্টেম্বর**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+39. **আন্তর্জাতিক ট্রান্সলেশন দিবসের থিম কি? **Ans: A world without Barriers**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+40. **নোবেল পুরস্কার ২০২২, সাহিত্যে নোবেল কে পেয়েছেন **Ans: এনি আরনেল**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -535,6 +543,18 @@
    (d) 2400 MW
    **Ans: a**
 
+49. **একুশে ফেব্রুয়ারিকে কখন আন্তর্জাতিক মাতৃভাষা দিবস হিসেবে ঘোষণা করা হয়? **Ans: ১৯৯৯ সারে**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 71]**
+
+50. **বাংলাদেশের ও মায়ানমার পৃথককারী নদী কোনটি? **Ans: নাফ**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+51. **বীরশ্রেষ্ঠ মতিউর রহমানের দেহাবশেষ কখন পাকিস্তান থেকে বাংলাদেশ ফিরিয়ে আনা হয়? **Ans: ২০০৬ সালে**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+52. **বাংলাদেশকে কোন আরব দেশ প্রথম স্বীকৃতি দেয়? **Ans: ইরাক**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+53. **২০২১ সালে GDP প্রবৃদ্ধির হার কত? **Ans: ৬.৯৪%**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+54. **বাংলাদেশের সর্বোচ্চ বেসামরিক পুরস্কার কোনটি? **Ans: স্বাধীনতা পুরস্কার**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -632,6 +652,10 @@
    (d) SL Malinga
    **Ans: c**
 
+7. **রজার ফেদেরার মোট কয়টি উইম্বলডন জয়লাভ করেন? **Ans: ৮টি**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+8. **টি-২০ বিশ্বকাপ ২০২২ কোথায় অনুষ্ঠিত হয়েছে? **Ans: অস্ট্রেলিয়া**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
 ## Power Sector & Energy (Bangladesh)
 
 1. **ইজিসিবি'র মোট বিদ্যুৎ ক্ষমতা প্রায় কত মেগাওয়াট (প্রায়)?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 63]**
@@ -675,3 +699,13 @@
    (খ) নির্বাহী প্রকৌশলী
    (গ) সিস্টেম ইঞ্জিনিয়ার
    (ঘ) চীপ ইঞ্জিনিয়ার
+
+8. **পিজিসিবি এর ক্ষমতা কত? **Ans: 950MW**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+9. **ইজিসিবি কোন ধরনের কোম্পানী? **Ans: পাবলিক**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+10. **নিচের কোনটি সর্বশেষ প্রতিষ্ঠিত হয়েছে? **Ans: NESCO (2016)**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+11. **সর্বশেষ কোথায় গ্রীড বিপর্যয় হয়? **Ans: Eastern**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+12. **পিক আওয়ার কখন ঘটে? **Ans: 5pm**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**

@@ -127,6 +127,8 @@
    ঘ) রিজিয়া রহমান
    **Ans: গ**
 
+26. **“রক্তাক্ত প্রান্তর” নাটকটির রচয়িতা কে? **Ans: মুনীর চৌধুরী**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -372,6 +374,10 @@
    গ) সর্বনাম
    ঘ) বিশেষণের বিশেষণ
    **Ans: ক**
+
+48. **কোনটি যৌগিক শব্দ? **Ans: গায়ক = গৈ + অক (অক) – অর্থ : গান করে যে।**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+49. **“কাদম্বিনী” শব্দের অর্থ কী? **Ans: মেঘ**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
 ## বাগধারা ও প্রবাদ
 

@@ -252,6 +252,8 @@
    (c) 3
    (d) 4
 
+3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
 ## Permutation & Combination
 
 1. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
