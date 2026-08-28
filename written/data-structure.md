@@ -102,6 +102,8 @@
 
 3. **অথবা, (ক) Heap data structure কী? কোন ক্ষেত্রে Heap ব্যবহার করা হয়?** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 606]**
 
+4. **Write down the properties of Max heap. Also write down the heapsort algorithm.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 686]**
+
 ## Hashing & Hash Tables
 
 1. **(b) What is hash table? What are the advantages of using hash table?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**

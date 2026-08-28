@@ -119,6 +119,8 @@ for i in N:
 
 3. **(খ) দেখান যে, n সংখ্যক vertex এর একটি tree এর ঠিক n-1 সংখ্যক edge আছে।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
+4. **(b) Define Eulerian path. What are the necessary and sufficient conditions for the Eulerian path? Expalin.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
+
 ## Graph Representation (Adjacency Matrix vs List)
 
 1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 495]**
@@ -140,6 +142,10 @@ for i in N:
 6. **অথবা, (ক) BFS অ্যালগরিদম উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
 
 7. **(খ) Node A থেকে শুরু করে নিম্নোক্ত গ্রাফটির DFS Traversal লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
+
+8. **Difference between depth first and breadth first search.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 682]**
+
+9. **(b) What are the main limitation of Depth First Search (DFS)? Is there any way to solve these issues?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 687]**
 
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 

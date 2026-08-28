@@ -240,6 +240,21 @@ return 0;
 
 49. **C program to find sum of odd numbers from 1 to n.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
 
+50. **Determine whwther a given number is prime or not?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 682]**
+
+51. **Find the most significant number in an array of N elements.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 683]**
+
+52. **Determine even or odd numbers.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 684]**
+
+53. **Print the following matrix using for loop.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 682]**
+```text
+1
+22
+333
+4444
+55555
+```
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -517,3 +532,7 @@ int main() {
 22. **What is the difference between call by value and call by reference?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
 
 23. **What do you mean by recursion? Calculate factorial function using recursion with C programming code.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
+24. **Write a program with a recursive function that shows the sum of its digits. For example, input =3426, output will be 3+4+2+6=15.** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 684]**
+
+25. **(a) Write down a recursive function to find out number of digits is an integer number (n). Draw the recursion tree when n= 5396.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**

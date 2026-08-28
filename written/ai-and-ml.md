@@ -52,6 +52,8 @@
 
 2. **What does the axon of neural network do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
 
+3. **Write difference between machine learning and deep learning.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
+
 ## Association Rule Learning (Market Basket Analysis)
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**
@@ -61,6 +63,8 @@
 1. **Explain the concepts of Reinforcement Learning (RL), Deep Learning (DL), and Federated Learning (FL) in the context of Machine Learning. Briefly describe how each approach differs in its learning mechanism, data usage, and real-world applications.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1427]**
 
 2. **Explain reinforcement learning in the field of Machine Learning?** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 593]**
+
+3. **Weak and strong learner ensemble learning in Machine learning.** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 686]**
 
 ## Generative AI & Explainable AI (XAI)
 

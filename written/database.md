@@ -23,6 +23,10 @@
 
 11. **What is Database administrator role?** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
 
+12. **Explain difference between Data Administrator and Database Administrator.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
+
+13. **Describe the advantages and disadvantages of DBMS-provided and application provided security.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 684]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -296,6 +300,8 @@ ORDER BY average_salary DESC;
 7. **(a) What is ACID mean in database system?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
 
 8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
+
+9. **What do you mean by Rollback and Roll forward?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 682]**
 
 ## Normalization & Database Design
 

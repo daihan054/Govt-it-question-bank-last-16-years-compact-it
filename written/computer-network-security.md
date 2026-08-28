@@ -106,6 +106,8 @@
 
 13. **What do you understand by DOS attack and Man-in-the-middle attack? Please explain how it can be occurred?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
 
+14. **What do you mean by a DNS poisoning attack, and how does it work?** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 685]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

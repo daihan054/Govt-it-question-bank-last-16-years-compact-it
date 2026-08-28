@@ -96,6 +96,8 @@
 
 15. **Define basic logical operations with examples. (AND, OR, NOT)** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
 
+16. **(a) Implement the following expression using NAND gates only: F = AB\bar{C} + ABC + \bar{A}BC** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 687]**
+
 ## Combinational Circuits (Adders, Encoders, MUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -130,11 +132,15 @@
 
 10. **What is Half Adder circuit? Expalin with block diagram with logic circuit.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 497]**
 
+11. **Desugn a logic circuit that counts the number of 1s in 3 inputs (A, B, C) and outputs a two-bit binary number representing that count of 1s?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 683]**
+
 ## Sequential Circuits (Latches & Flip-Flops)
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
 
 2. **Difference between combinational and sequential circuits.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+
+3. **(b) Design a 4-bit ring counter using flip-flops. Write down its working principle using.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 687]**
 
 ## Finite State Machines (FSM)
 

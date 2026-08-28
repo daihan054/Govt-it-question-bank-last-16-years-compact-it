@@ -196,6 +196,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 3. **Do you prefer packet switching compared to circuit switching in communication network? If Yes, why? How does packet switching work step by step? What applications use packet switching?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 536]**
 
+4. **Why is packet suiting suitable for digital data transmission?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
+
 ## Flow Control & Data Link Layer (Stop-and-Wait)
 
 1. A single-mode optical fiber communication link connects two locations 250\text{ km} apart using WDM technology with 50 channels, where each channel provides a bit rate of 10\text{ Gbps}. The refractive index of the fiber is 1.5, and data is transmitted using the Stop-and-Wait protocol. A 1\text{ GB} file is divided into suitable data frames, and after successfully receiving each frame, the receiver sends a 54-byte acknowledgment (ACK) back to the sender. Assuming no processing or queuing delay, determine the total time required to completely transfer the 1\text{ GB} file, including data transmission time, propagation delay, ACK transmission time, and the Stop-and-Wait waiting time. [BSCCPL AME 21-08-2026 (BUET)]
@@ -419,6 +421,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 57. **Given IP Address: 192.168.19.24/29, find out the following IP Class & type, Number of Host, Network address, Broadcast address, Wildcard, and Subnet mask.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
 
+58. **Find network address, subnet mask, broadcast address and IP host range of 192.168.100.128/26** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 685]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -590,6 +594,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **Difference between: (i) SMTP and SNMP (ii) HTTP and HTTPs** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
 
 3. **Which protocol is used for email received?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+4. **(a) Distinguish the purpose of SMTP and IMAP in email communication.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 688]**
 
 ## Data Rate & Channel Capacity (Nyquist, Shannon)
 
