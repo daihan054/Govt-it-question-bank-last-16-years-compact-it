@@ -16,6 +16,8 @@
 
 8. **b) Write down the difference between Interpreter and Compiler?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]**
 
+9. **What are Compilers and Interpreters? Briefly describe their role and differences. Write some key points on the advantages and disadvantages of Open Source Software.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+
 ## Lexical Analysis & Compiler Phases
 
 1. **(a) How does a compiler handle comments in source code?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**

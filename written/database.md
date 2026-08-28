@@ -476,6 +476,8 @@ SELECT count (*) FROM (
 
 17. **(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 953-954]**
 
+18. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**

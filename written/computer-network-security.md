@@ -54,6 +54,8 @@
 
 27. **6.2 Explain the operational difference between Hashing and Encryption.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
+28. **What is Encryption? What are the types? Explain the role of Encryption in security.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -131,6 +133,8 @@
 7. **What is cyber threat intelligence database? What is the use of this in corporate office network?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 752]**
 
 8. **সাইবার অপরাধ কি? ৮টি সাইবার অপরাধ এর নাম লিখুন। সাইবার অপরাধ দূর করার জন্য ৬টি পন্থার নাম লিখুন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 948-949]**
+
+9. **Why is cyber security important? What are the common types of cyber threats? Explain cyber security measures.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
 ## Social Engineering & Cyber Attacks
 

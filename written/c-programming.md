@@ -362,6 +362,8 @@ return 0;
 
 11. **Three types of control statements and their graphical presentation using flowchart or flow graph.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1037-1038]**
 
+12. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+
 ## Command Line Arguments & Basic Programs
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**

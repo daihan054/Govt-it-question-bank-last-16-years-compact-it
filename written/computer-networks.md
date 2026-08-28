@@ -47,6 +47,8 @@
 
 22. **(ক) সংজ্ঞা লিখুন: (i) Propagation delay, (ii) Transmission delay.** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
+23. **Define Computer Network. Describe different types of Computer Networks.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -223,6 +225,8 @@
 41. **(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1028]**
 
 42. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1042-1043]**
+
+43. **What is the OSI model? Explain the functions of each layer with examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
 ## Application Layer & Well-Known Port Numbers
 
@@ -671,6 +675,11 @@ i) 00000001 00001011 00001011 11101111
 ii) 211.10.15.4
 
 95. **6.10 An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+96. **A bank has the network block 192.168.10.0/24. The IT manager wants to divide this into 4 equal subnets.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+(a) How many bits do you need to borrow to make 4 subnets?
+(b) What is the new Subnet Mask in dotted-decimal format?
+(c) Write down the Network Address, the First Usable IP, and the Broadcast Address for the second subnet created. Show your calculation.
 
 ## Network Layer (Packet Fragmentation & Tunneling)
 
