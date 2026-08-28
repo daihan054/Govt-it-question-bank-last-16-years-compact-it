@@ -90,11 +90,9 @@
 
 4. **Intelligence can not be measured only by intelligence test because it is related to other subjects. (True or False)** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
 
-5. **Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
+5. **Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
-6. **Machine learning is a subset of cloud computing that can be built AI-Based. True or False.** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-7. **What is the father of AI?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+6. **What is the father of AI?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical)
 

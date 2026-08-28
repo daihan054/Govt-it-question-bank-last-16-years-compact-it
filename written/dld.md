@@ -41,17 +41,15 @@
 
 4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
 
-5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]**
+5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
 
 6. **(b) Simplify the following Boolean function using K-map.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
 
 7. **Minimize the following function in SOP minimal form using K-map:** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
 
-8. **Show minimal function using K-Map. F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
+8. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
 
-9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
-
-10. **Simplify using K-map with logic circuit.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
+9. **Simplify using K-map with logic circuit.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
 
 ## Logic Families (TTL vs CMOS)
 

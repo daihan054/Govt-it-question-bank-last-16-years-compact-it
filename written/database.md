@@ -297,6 +297,14 @@ ORDER BY average_salary DESC;
 
 45. **Write down the SQL command into the following two: (a) Find out the all information of employees from emp_info table. Where employee's salary is more than 20,000 and city is Dhaka. (b) Update employee name ‘Mr.X’ in emp_info, whose epm_id is 2.** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 730]**
 
+46. **Write down the equivalent SQL from following relational algebra. [full question not collected]** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
+
+47. **Write a SQL query to find same salary but job not same?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+
+48. **This returns the names of the staff where timestampdiff is greater than 25 so it returns total 3 rows.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+
+49. **SQL Query:** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -479,6 +487,8 @@ ORDER BY average_salary DESC;
 6. **Draw a ER diagram for BPL.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
 
 7. **How can you define the ER model in DBMS?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
+8. **Draw an entity diagram Student database management systemfrom following statement: Student (data); Course (data); Report (data); Registration; Staff (data)** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 759]**
 
 ## Database Connectivity (JDBC)
 

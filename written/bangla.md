@@ -101,9 +101,9 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 7. **বাংলাদেশে ব্যবসাপ্রতিষ্ঠান বাসাবাড়ি ও বিভিন্ন প্রকল্পে সৌরবিদ্যুৎ তথা সোলার প্যানেলের ব্যবহার দিন দিন বাড়ছে। সূর্য থেকে সোলার প্যানেল আলো শোষণ করে বৈদ্যুতিক প্রবাহ তৈরি করে, যা দিয়ে পরবর্তী সময়ে লাইট, ফ্যান প্রভৃতি চালানো যায়। সরকারের টেকসই উন্নয়ন লক্ষ্যমাত্রায় ২০৩০ সালের মধ্যে ৪ হাজার ১০০ মেগাওয়াট বিদ্যুৎ নবায়নযোগ্য উৎস থেকে উৎপাদনের পরিকল্পনা নেয়া হয়েছে। ফলে নীতিগত ও ব্যবহারিক উভয় দিক দিয়ে দেশে সৌরবিদ্যুৎ খাতের বেশ সম্ভাবনা রয়েছে। সোলার প্যানেলের মাধ্যমে বিদ্যুৎ উৎপাদন মূলত একটি পরিবেশবান্ধব প্রক্রিয়া এবং এ প্রক্রিয়ায় বিদ্যুৎ উৎপাদন করে তা জাতীয় গ্রিডে যুক্ত করা গেলে বিদ্যুৎ খরচ ২০ শতাংশ কমবে।** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
 
-8. **Translation English to Bangla** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+8. **Translation English to Bangla** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
 
-9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
 10. **Translation [English to Bangla]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
    **Translate the following passage into Bangla:**
@@ -111,25 +111,21 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 11. **অনুবাদ সংক্রান্ত প্রশ্নাবলি।** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
 
-12. **English to Bangla Translation** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
-
-13. **Translate the following passage from English to Bangla:**
+12. **Translate the following passage from English to Bangla:**
     > To become a good person is the most important thing for a person. He must try to be honest, just and kind in his personal life. This is his main duty. It is not difficult to understand the reason for this. The welfare of a state or a city depends largely on the moral character of its citizens.
     **(Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor Exam: 04.08.2023) [compact it 599]**
 
-14. **Translation (English to Bangla)**
+13. **Translation (English to Bangla)**
     > Global investment in green economy-related..........
     **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
-15. **English to Bangla Translation (Bank, Risk Management Related)** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
+14. **English to Bangla Translation (Bank, Risk Management Related)** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
 
-16. **Translate English to Bangla:** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
+15. **Translate English to Bangla:** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
 
-17. **Translation English to Bangla.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
+16. **৪. বাংলা অনুবাদ করুন: Love is the crown of all virtues. It adores a man with divine qualities. It is love that strengthens our family ties and make heaven of the world. Love for god is a virtue of the highest excellence. It governs society and secures personal liberty. Love of one's own country is an inherent instinct of human nature.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
 
-18. **৪. বাংলা অনুবাদ করুন: Love is the crown of all virtues. It adores a man with divine qualities. It is love that strengthens our family ties and make heaven of the world. Love for god is a virtue of the highest excellence. It governs society and secures personal liberty. Love of one's own country is an inherent instinct of human nature.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
-
-19. **৪. বাংলায় অনুবাদ করুন: Cleanliness is a virtue. It is the habit of keeping the body and all other things free from dirts. Without a clean body one cannot have a merry mind. Cleanliness keeps health. It is also a mark of politeness. Good health keeps mind healthy.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
+17. **৪. বাংলায় অনুবাদ করুন: Cleanliness is a virtue. It is the habit of keeping the body and all other things free from dirts. Without a clean body one cannot have a merry mind. Cleanliness keeps health. It is also a mark of politeness. Good health keeps mind healthy.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 

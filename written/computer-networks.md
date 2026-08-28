@@ -200,6 +200,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 10. **(b) Distinguish between TCP and UDP.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
 
+11. **What is UDP protocol? UDP is reliable or not? Explain why or why not?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 754]**
+
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -311,7 +313,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 8. **Compare between TDM and TDMA techniques.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
 
-9. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
+9. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
 ## Subnetting & IP Addressing
 
@@ -329,13 +331,11 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 6. **Given IP address 10.0.0.100 and Subnet mask 255.255.240.0 which is network address?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
 
-7. **Given IP address 10.10.0.0/16, you have divide the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the first and last usable IP addresses of third subnet.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1362]**
+7. **Given IP address 10.10.0.0/16, you have divide the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the first and last usable IP addresses of third subnet.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1362]** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
-8. **Given IP address 10.10.0.0/16, you have divide the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the first and last usable IP addresses of third subnet.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
+8. **Subnet mask & Total host calculation.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
-9. **Subnet mask & Total host calculation.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
-
-10. **Given the network 245.248.128.0/20, divide the address space among three departments as follows:**
+9. **Given the network 245.248.128.0/20, divide the address space among three departments as follows:**
    **(a) Manager: half of the address space.**
    **(b) HR: one-quarter of the address space.**
    **(c) Admin: the remaining one-quarter.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1437]**
@@ -345,9 +345,9 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    **(ii) The IP address valid range.**
    **(iii) The number of valid hosts.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1438]**
 
-11. **Find out the network address and Broadcast address of the address: 192.168.0.0/28** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1360]**
+10. **Find out the network address and Broadcast address of the address: 192.168.0.0/28** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1360]**
 
-12. **(a) An organization wants to divide its LAN IP address 192.168.0.0/24 into 4 subnets according to buildings. The buildings IP address creiteria are given below.**
+11. **(a) An organization wants to divide its LAN IP address 192.168.0.0/24 into 4 subnets according to buildings. The buildings IP address creiteria are given below.**
 
 | Building block | Hosts need |
 |---|---|
@@ -358,132 +358,130 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 **Calculate the network and broadcast address of this network for each building block.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1443]**
 
-13. **Check the valid IP address from the following table.** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
+12. **Check the valid IP address from the following table.** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
 
-14. **(a) A network has been assigned the IP address 200.1.2.0/24. It has 3 subnets. Determine the following for each subnet:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
+13. **(a) A network has been assigned the IP address 200.1.2.0/24. It has 3 subnets. Determine the following for each subnet:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
  * **(i) Total number of IP addresses**
  * **(ii) Range of usable IP addresses**
  * **(iii) Network address**
  * **(iv) Direct broadcast address**
  * **(v) Limited broadcast address.**
 
-15. **The IP address of a device in a network is 172.16.128.123/22. Answer the following questions:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
+14. **The IP address of a device in a network is 172.16.128.123/22. Answer the following questions:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
    * **i) What is the network address?**
    * **ii) What is the subnet mask for the given network?**
    * **iii) What is the broadcast address?**
    * **iv) What is the maximum number of devices this network can connect?**
    * **v) What is the IP address of the first host device in the network?**
 
-16. **Find the network address, subnet mask, broadcast address, and usable host IP range for the following IP address: 192.9.205.31/16.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
+15. **Find the network address, subnet mask, broadcast address, and usable host IP range for the following IP address: 192.9.205.31/16.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
 
-17. **What is the CIDR Prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
+16. **What is the CIDR Prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
 
-18. **Write down the private IP address rang for class B?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+17. **Write down the private IP address rang for class B?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
-19. **Given IP address 192.168.0.0/28, determine Network address, Broadcast address, First usable IP, Last usable IP.** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+18. **Given IP address 192.168.0.0/28, determine Network address, Broadcast address, First usable IP, Last usable IP.** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
 
-20. **Write range of private IP address Class A, B and C.** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+19. **Write range of private IP address Class A, B and C.** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
 
-21. **Given an IP address 192.168.111.169/28. Then Determine the (i) Network address (ii) Broadcast address (iii) First usable Host (iv) Last usable Host.** **(BBA - Assistant Maintenance Engineer Exam: 12.07.2025 (BUET)) [compact it 1431]**
+20. **Given an IP address 192.168.111.169/28. Then Determine the (i) Network address (ii) Broadcast address (iii) First usable Host (iv) Last usable Host.** **(BBA - Assistant Maintenance Engineer Exam: 12.07.2025 (BUET)) [compact it 1431]**
 
-22. **What are the private IP Ranges for the following IP classes? Class A, Class B and Class C** **(BBA - Assistant Maintenance Engineer Exam: 12.07.2025 (BUET)) [compact it 1431]**
+21. **What are the private IP Ranges for the following IP classes? Class A, Class B and Class C** **(BBA - Assistant Maintenance Engineer Exam: 12.07.2025 (BUET)) [compact it 1431]**
 
-23. **Which is Class C Default Subnet Mask?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+22. **Which is Class C Default Subnet Mask?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-24. **What is the maximum number of valid hosts in a network?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+23. **What is the maximum number of valid hosts in a network?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-25. **Given IP address 10.2.3.20/22 find the Total valid Host address in this IP?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+24. **Given IP address 10.2.3.20/22 find the Total valid Host address in this IP?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-26. **Mapping between MAC to IP address?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+25. **Mapping between MAC to IP address?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-27. **How many bits are in a MAC address?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+26. **How many bits are in a MAC address?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-28. **What is the primary motivation for classful IP address to classless IP addressing?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 316]**
+27. **What is the primary motivation for classful IP address to classless IP addressing?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 316]**
 
-29. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 292]**
+28. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 292]** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
 
-30. **Given IP Address: 192.168.5.154/27, Calculate a) Network Address b) First valid host c) Last valid host d) Broadcast address e) Subnet mask** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 383]**
+29. **Given IP Address: 192.168.5.154/27, Calculate a) Network Address b) First valid host c) Last valid host d) Broadcast address e) Subnet mask** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 383]**
 
-31. **Write down the Public and Private IPv4 address for Class A, Class B and Class C.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
+30. **Write down the Public and Private IPv4 address for Class A, Class B and Class C.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
 
-32. **(b) What is a subnet? What benefits will you get using subnets for this office?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 324]**
+31. **(b) What is a subnet? What benefits will you get using subnets for this office?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 324]**
 
-33. **Local loopback address কি? কোন কমান্ড ব্যবহার করে কানেক্টিভিটি টেস্ট করা হয়?** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 383]**
+32. **Local loopback address কি? কোন কমান্ড ব্যবহার করে কানেক্টিভিটি টেস্ট করা হয়?** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 383]**
 
-34. **Given IP address 192.168. 2.0/ 24; Determine to network address and broadcast address.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+33. **Given IP address 192.168. 2.0/ 24; Determine to network address and broadcast address.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
 
-35. **Find Network Address, Broadcast Address and Valid Host IP Range from given IP Address: 192.168.1.50 and Subnet Mask: 255.255.255.240** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 389]**
+34. **Find Network Address, Broadcast Address and Valid Host IP Range from given IP Address: 192.168.1.50 and Subnet Mask: 255.255.255.240** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 389]**
 
-36. **Given a (slash) /26 based network address. Find Subnet mask, broadcast address, number of host, Number of valid host and number of subnet.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1459]**
+35. **Given a (slash) /26 based network address. Find Subnet mask, broadcast address, number of host, Number of valid host and number of subnet.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1459]**
 
-37. **Write Class A private IP range.** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+36. **Write Class A private IP range.** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
-38. **Write Command for check LAN connecte?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+37. **Write Command for check LAN connecte?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
-39. **(a) Given 4 Network interface in a table and find which of the following network is on which network.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 433]**
+38. **(a) Given 4 Network interface in a table and find which of the following network is on which network.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 433]**
 
-40. **An IP address subnet mask is 255.255.255.224 which is the subnet address in this block?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
+39. **An IP address subnet mask is 255.255.255.224 which is the subnet address in this block?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
-41. **Write down the basic differences of the following:**
+40. **Write down the basic differences of the following:**
    **(i) Public vs Private IP address** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 534]**
 
-42. **What do you mean by Subnet and Subnet Mask? The network address of 172.16.0.0/19 provides how many subnets and hosts? What is the function of OSPF?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 536]**
+41. **What do you mean by Subnet and Subnet Mask? The network address of 172.16.0.0/19 provides how many subnets and hosts? What is the function of OSPF?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 536]**
 
-43. **Convert the decimal IP address 192.168.101.5 into binary IP address. Fill-up the following in tabular form:** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**
+42. **Convert the decimal IP address 192.168.101.5 into binary IP address. Fill-up the following in tabular form:** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**
 | Address Class | First Octet Decimal Range | Example of IP Address (IPA) | Network ID of IPA | Host ID of IPA |
 |---|---|---|---|---|
 | Class A |  |  |  |  |
 | Class B |  |  |  |  |
 | Class C |  |  |  |  |
 
-44. **What is IP address? Explain the necessity of IP address in network?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
+43. **What is IP address? Explain the necessity of IP address in network?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
 
-45. **What is subnet mask? Why it is used?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**
+44. **What is subnet mask? Why it is used?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**
 
-46. **In HR department have 12 IP enable devices are available in our office and have a big IP block 172.16.5.0/24. To consider your HR department find a suitable IP block than also answer the following question.**
+45. **In HR department have 12 IP enable devices are available in our office and have a big IP block 172.16.5.0/24. To consider your HR department find a suitable IP block than also answer the following question.**
    **i. Subnet mask; ii. Number of usable IP address; iii. First and last IP Address of that block iv. Broadcast IP address** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
 
-47. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
+46. **What is private IP range class A, B and C with maximum host of each class?** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
 
-48. **What is private IP range class A, B and C with maximum host of each class?** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
+47. **(b) Find out the default mask, network address and broadcast address of the classful IPv4 address: 172.16.99.45** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 480]**
 
-49. **(b) Find out the default mask, network address and broadcast address of the classful IPv4 address: 172.16.99.45** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 480]**
+48. **Give IP 192.168.1.50 and subnet mask 255.255.255.240; Find valid host, Network address, and Broadcast address.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 456]**
 
-50. **Give IP 192.168.1.50 and subnet mask 255.255.255.240; Find valid host, Network address, and Broadcast address.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 456]**
+49. **Identify the class, network IP address, direct broadcast address and limited broadcast address of the following IP address: (i) 1.2.3.4 (ii) 130.1.2.3 (iii) 220.15.1.10 (iv) 200.1.10.100** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
 
-51. **Identify the class, network IP address, direct broadcast address and limited broadcast address of the following IP address: (i) 1.2.3.4 (ii) 130.1.2.3 (iii) 220.15.1.10 (iv) 200.1.10.100** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
+50. **What is the subnet mask in 10.2.1.3/22 network?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
 
-52. **What is the subnet mask in 10.2.1.3/22 network?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
+51. **In IPv4 show the network address and host address range of class A, B and C.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
 
-53. **In IPv4 show the network address and host address range of class A, B and C.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
+52. **Given IP Address: 192.168.5.154/26, Calculate network address and subnet mask.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
 
-54. **Given IP Address: 192.168.5.154/26, Calculate network address and subnet mask.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
+53. **Mention the maximum number of networks and hosts used in Class A, B and C networks.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
 
-55. **Mention the maximum number of networks and hosts used in Class A, B and C networks.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+54. **Which subnet mask would be appropriate for address range to submit for up to LANs, with each LAN contains 5 to 26 hosts?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
 
-56. **Which subnet mask would be appropriate for address range to submit for up to LANs, with each LAN contains 5 to 26 hosts?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+55. **Given IP Address: 192.168.19.24/29, find out the following IP Class & type, Number of Host, Network address, Broadcast address, Wildcard, and Subnet mask.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
 
-57. **Given IP Address: 192.168.19.24/29, find out the following IP Class & type, Number of Host, Network address, Broadcast address, Wildcard, and Subnet mask.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+56. **Find network address, subnet mask, broadcast address and IP host range of 192.168.100.128/26** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 685]**
 
-58. **Find network address, subnet mask, broadcast address and IP host range of 192.168.100.128/26** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 685]**
+57. **What is the range of IPv4 address class A, B and C?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
 
-59. **What is the range of IPv4 address class A, B and C?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
+58. **What is subnet mask? Given IP address 192.168.0.0/29 find 10^{\text{th}} and 22^{\text{th}} subnet first host address and last host address.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
 
-60. **What is subnet mask? Given IP address 192.168.0.0/29 find 10^{\text{th}} and 22^{\text{th}} subnet first host address and last host address.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
+59. **How many bits need to identify an IP address in IPv4?** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
 
-61. **How many bits need to identify an IP address in IPv4?** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+60. **What is default subnet mask?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 702]**
 
-62. **What is default subnet mask?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 702]**
+61. **Given IP: 168.20.96.63, Subnet mask: 255.255.192.0 Find network address, broadcast address and number of host.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 712]**
 
-63. **Given IP: 168.20.96.63, Subnet mask: 255.255.192.0 Find network address, broadcast address and number of host.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 712]**
+62. **An IP address is: 172.162.100.25/27, Find out the following: (a) Network Address (b) IP class (c) Subnet mask (d) Broadcast address (e) Hosts per subnet** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
 
-64. **An IP address is: 172.162.100.25/27, Find out the following: (a) Network Address (b) IP class (c) Subnet mask (d) Broadcast address (e) Hosts per subnet** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
+63. **What is Public and Private IP?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 728]**
 
-65. **What is Public and Private IP?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 728]**
+64. **A network IP address is 172.16.236.92/27. Find out the: (a) Subnet mask (b) Network Address (c) Broadcast Address** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 731]**
 
-66. **A network IP address is 172.16.236.92/27. Find out the: (a) Subnet mask (b) Network Address (c) Broadcast Address** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 731]**
-
-67. **Given IP address 172.3.16.156/23 and find out the following answer: (i) Network address (ii) Subnet mask (iii) Number of host** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
+65. **Given IP address 172.3.16.156/23 and find out the following answer: (i) Network address (ii) Subnet mask (iii) Number of host** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
 
 ## Network Layer (Packet Fragmentation & Tunneling)
 
@@ -621,11 +619,9 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 4. **Explain NAT? Differenc between IPv4 and IPv6.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
 
-5. **Explain NAT? Differenc between IPv4 and IPv6.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
+5. **What is NAT? Write down the list of private IP address.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
 
-6. **What is NAT? Write down the list of private IP address.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
-
-7. **Briefly explain Network Address Translation (NAT).** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
+6. **Briefly explain Network Address Translation (NAT).** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 

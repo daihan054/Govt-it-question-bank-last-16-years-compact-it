@@ -60,6 +60,8 @@
 
 25. **Write down the difference between Black box and white box testing.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
 
+26. **Integration testing of pharmaceutical automation software?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
@@ -79,6 +81,8 @@
 6. **Draw A class diagram. A token-ring based local area network (LAN) is a network consisting of nodes in which network packets are sent around. Every node has a unique name within the network, and refers to its next node. Different kinds of nodes exist: Workstations are originators of messages; servers and printers are network nodes that can receive messages. Packets contain an originator a destination and content, and are sent around on a network. A LAN is a circular configuration of nodes.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 438]**
 
 7. **(খ) একটি লাইব্রেরি ব্যবস্থাপনা সিস্টেম এর জন্যে Use Case Diagram অঙ্কন করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 621]**
+
+8. **How do you model the following situation with a UML class diagram the car fleet of a car rental contains multiple cars, one car belongs to exactly one car fleet.** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
 ## Software Requirements Engineering
 
@@ -158,6 +162,12 @@
 
 30. **Difference between Waterfall Model and Spiral Model.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 741]**
 
+31. **What is the principles of agile method?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 757]**
+
+32. **From the diagram write down the process of prototype development.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 758]**
+
+33. **From the diagram write down the software evolution.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
@@ -197,6 +207,8 @@
 3. **Project management related question (what are the approaches)** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 520]**
 
 4. **(খ) User story ও Product backlog কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
+
+5. **Assume you are a project manager and your job is to develop an application which is similar to what you have developed is past only larger and complex. The customer has documented the requirements clearly. What team structure would you choose in this case and why?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 759]**
 
 ## Software Design Principles (Coupling & Cohesion)
 
@@ -238,5 +250,3 @@
 ## Open Source Software & Licensing
 
 1. **Write down the advantages and disadvantages of Open source software with example.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
-
-2. **Write down the advantages and disadvantages of Open source software with example.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**

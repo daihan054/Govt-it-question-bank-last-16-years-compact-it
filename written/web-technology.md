@@ -24,6 +24,10 @@
 
 5. **Write HTML and Javascript code of following box.** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
 
+6. **Explain hoisting in JavaScript?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 761]**
+
+7. **Display element by id in JavaScript?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 762]**
+
 ## Web Services & APIs (SOAP vs REST)
 
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1426]**
@@ -35,6 +39,8 @@
 4. **Write difference between REST API and SOAP API.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1460]**
 
 5. **What is API? Explain with example.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
+6. **What is the two prime advantages of RESTful API?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 756]**
 
 ## HTML & Web Fundamentals
 
@@ -93,3 +99,5 @@
 ## Web Security & Browser Same-Origin Policy (Iframe)
 
 1. **A & B two frames in a browser loaded from different origins. Why is it a reasonable security policy to allow A to navigate B to another origin base only on whether the display area of A contains dis-pare of B and A has the control over area.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 494]**
+
+2. **What is CORS in web development?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 761]**

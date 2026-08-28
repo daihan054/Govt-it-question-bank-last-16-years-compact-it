@@ -163,3 +163,5 @@
 5. **What is DCIM in a data center?** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 745]**
 
 6. **What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 750]**
+
+7. **What do you mean by dynamic capacity provisioning? Why it is essential for data center?** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 751]**

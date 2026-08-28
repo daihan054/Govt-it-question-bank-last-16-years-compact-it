@@ -94,6 +94,8 @@
 
 18. **X = (a^2 - 5b).(7a + b^5) এক্সপ্রেশনটিকে tree stracture-এ অঙ্কন করুন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
 
+19. **Write a Pseudocode of postorder by recursion and generate postorder, preorder inorder from the tree.** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 762]**
+
 ## Binary Search Tree (BST)
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**

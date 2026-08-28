@@ -80,6 +80,8 @@ class Test {
 
 28. **Write down the main feature of Object Oriented Programming (OOP).** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
+29. **Write a Java code with a case where you have to mentioned functionalities with override method.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 757]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**
@@ -92,21 +94,21 @@ class Test {
 
 5. **Define Class and Object in C++ with example.** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
+6. **What are the common activities on OOP design process?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 756]**
+
 ## Encapsulation & Access Modifiers
 
 1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1456]**
 
 2. **Explain the various types of access specifiers.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 579]**
 
-3. **Which type of variable violates encapsulation rules?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]**
+3. **Which type of variable violates encapsulation rules?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
 4. **Which members of base class cannot access to derived class?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
-5. **Which type of variable violates encapsulation rules?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+5. **What are the various Access Specification in C++? Explain their purpose with are example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
 
-6. **What are the various Access Specification in C++? Explain their purpose with are example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
-
-7. **How many specifiers are used in C++ programing?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+6. **How many specifiers are used in C++ programing?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
 ## Constructors & Destructors
 
@@ -173,3 +175,5 @@ Public class class B extends class A {
 6. **অথবা, (ক) ‘Static’ কীওয়ার্ডটি ব্যাখ্যা করার জন্যে Static Variable এবং Static Method ব্যবহার করে একটি প্রোগ্রাম লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 620]**
 
 7. **Write a java program to counting the vowel and consonant into a given strings.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+
+8. **Where will be the most chance of the grabage collector being invoked?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 756]**

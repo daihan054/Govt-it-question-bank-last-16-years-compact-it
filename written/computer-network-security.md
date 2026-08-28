@@ -90,6 +90,8 @@
 
 6. **What is Vulnerability?** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
+7. **What is cyber threat intelligence database? What is the use of this in corporate office network?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 752]**
+
 ## Social Engineering & Cyber Attacks
 
 1. What is a phishing attack? Explain its types and discuss methods to prevent it. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -112,7 +114,7 @@
 
 10. **Describe a man-in the middle attack on the Diffie-Hellman key exchange protocol in which the adversary generates two public key pairs for the attack.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 434]**
 
-11. **What is MAC flooding? How to prevent MAC flooding?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
+11. **What is MAC flooding? How to prevent MAC flooding?** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
 
 12. **What is Denial of Service (DoS) is and NAT?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
 
@@ -120,9 +122,11 @@
 
 14. **What do you mean by a DNS poisoning attack, and how does it work?** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 685]**
 
-15. **What is MAC flooding? How to prevent MAC flooding?** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
+15. **Write down the difference between Active and Passive attack.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
 
-16. **Write down the difference between Active and Passive attack.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
+16. **What is DHCP starvation and how DHCP starvation work with diagram? Write down the related attack introduced by DHCP starvation?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 753]**
+
+17. **What is MAC flooding attack? What is the impact of this switch?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 753]**
 
 ## Firewalls & Network Defense
 
@@ -154,6 +158,8 @@
 10. **DMZ and firewall placement in a diagram. (Approximate)** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
 
 11. **What is Blacklist and Whitelist? Write down the difference between Black list and White list.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 737]**
+
+12. **What is DMZ in data center? Describe using diagram? Write the network devices in this system?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 756]**
 
 ## VPN & Tunneling Protocols (IPsec, SSL VPN)
 
@@ -234,6 +240,8 @@
 
 13. **What is Cross site script XSS and how can fix it?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
 
+14. **Write down the counter measure of SQL injection attack.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 753]**
+
 ## Buffer Overflow & Software Vulnerabilities
 
 1. **Explain buffer overflow attack with an example.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 592]**
@@ -243,3 +251,5 @@
 1. Cryptography and Network Security Scenario: [BSCCPL AME 21-08-2026 (BUET)] Cox's Bazar wants to send confidential information to Kuakata through an insecure network. Cox's Bazar first generates a hash value using a Hash Function (H). The message, hash value, and routing data are combined and encrypted using Kuakata's Public Key (Ku). The encrypted ciphertext is transmitted through the network. During transmission, an attacker positioned between Cox's Bazar and Kuakata intercepts the encrypted data. The attacker captures the ciphertext and deliberately blocks it so that Kuakata never receives the message. However, the attacker is unable to read or decrypt the original message because Kuakata's Private Key (\text{Ku}^{-1}) is not available to the attacker. Kuakata is expected to decrypt the received ciphertext using its Private Key (\text{Ku}^{-1}) and verify the integrity of the message using the hash value whenever the message is successfully delivered. Questions: (a) Is there any digital signature? (b) Identify attack. (c) How to identify origin of the? (d) How to manage the attack. (e) Does the described communication provide a Digital Signature? Give reasons. If not, explain how Cox's Bazar can add a Digital Signature using Cox's Bazar's Private Key (\text{Kc}^{-1}) and verification using Cox's Bazar's Public Key (\text{Kc}). (f) Which security services are provided by the system among Confidentiality, Integrity, Authentication, Non-repudiation, and Availability? (g) Suggest suitable techniques or mechanisms to protect the communication against the attack identified in question (b). (h) Draw a complete communication diagram showing \text{Message} \to \text{Hash} \to \text{Routing Data} \to \text{Encryption with Ku} \to \text{Attacker} \to \text{Kuakata} \to \text{Decryption with } \text{Ku}^{-1}, and indicate the keys used in each stage.
 
 2. **Explain Cyber Attack Scenario-** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1441]**
+
+3. **Imagine yu should design a secure transmission protocol for sending data from one node to another node. You should divide the message in the multiple packets and this packets will be using different path so that any one cannot decrypt the message.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 756]**

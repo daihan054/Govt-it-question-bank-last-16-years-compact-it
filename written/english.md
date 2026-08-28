@@ -208,7 +208,7 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 5. **Earth Day inspires green innovation through participatory and collective action and encourages the adoption of ho sustainable practices across the financial system. It, therefore, serves as an opportunity for financial institutions to engage with their stakeholders and demonstrates their commitment to sustainable practices. Thus, Earth Day carries a deep significance in proproting sustainable and responsible financing which is an example of environmentally conscious investment practices, Positive environmental outcomes will be easily achieved if all financial sectors, stakeholders and investors alike are part of a long-term plan to improve the environmental health of this planet, along with the financial and human health. We celebrate Earth Day around the world, let us reaffirm our commitment towards building a greener, more tolerant, liveable and sustainable future for our next generations.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 322]**
 
-6. **Translation Bangla to English** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 660]**
+6. **Translation Bangla to English** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 660]** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
 
 7. **Bengali to English Translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
    > পরীক্ষায় ভালো করতে হলে অবশ্যই আত্মবিশ্বাস রাখতে হবে। মনে এ বিশ্বাস রাখবেন যে, আমি ভালোভাবে সব প্রশ্নের উত্তর দিতে পারব বা আমার পরীক্ষাটা অবশ্যই ভালো হবে। একজন শিক্ষার্থীর মনেই যদি আত্মবিশ্বাস না থাকে বা আত্মবিশ্বাস কম থাকে, তাহলে পরীক্ষা নিয়ে তার মনে আগেই দুর্বলতা তৈরী হয়ে যায়। এর ফলে পড়ায় মন বসে না, মনোযোগও বাড়ে না, প্রস্তুতিও ভালো হয়না। তাই মনোযোগ বাড়াতে দরকার আত্মবিশ্বাস, যেদিকে অবশ্যই খেয়াল রাখতে হবে।
@@ -224,10 +224,8 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 12. **Translate Bangla to English:** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
 
-13. **Translation Bangla to English.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
+13. **বাংলা থেকে ইংরেজিতে অনুবাদ।** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
 
-14. **বাংলা থেকে ইংরেজিতে অনুবাদ।** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+14. **ইংরেজিতে অনুবাদ করুন: অভাবে স্বভাব নষ্ট, তেল এর চেয়ে পানি ভারী, তুমি আমাকে কেন এড়িয়ে চলছো?, তিনি এতোক্ষণে ঢাকায় পৌঁছে থাকবেন, আমি তাকে উপহাস করিনি।** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
 
-15. **ইংরেজিতে অনুবাদ করুন: অভাবে স্বভাব নষ্ট, তেল এর চেয়ে পানি ভারী, তুমি আমাকে কেন এড়িয়ে চলছো?, তিনি এতোক্ষণে ঢাকায় পৌঁছে থাকবেন, আমি তাকে উপহাস করিনি।** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
-
-16. **Translate into English: (a) আমি যদি পরীক্ষায় প্রথম হতাম (b) পাপের ধন প্রায়শ্চিত্তে যায়। (c) আয় বুঝে ব্যয় কর। (d) যেমন বাপ, তেমন ব্যাটা।** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+15. **Translate into English: (a) আমি যদি পরীক্ষায় প্রথম হতাম (b) পাপের ধন প্রায়শ্চিত্তে যায়। (c) আয় বুঝে ব্যয় কর। (d) যেমন বাপ, তেমন ব্যাটা।** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**

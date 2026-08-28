@@ -533,7 +533,7 @@ int main() {
 }
 ```
 
-18. **Output programs:** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
+18. **Output programs:** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 ```c
 #include <stdio.h>
 int fun(int n) {
@@ -545,6 +545,18 @@ int fun(int n) {
 int main() {
     printf("%d", fun(2));
     return 0;
+}
+```
+
+19. **Write down the output from following statement:** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 758]**
+```c
+#include <stdio.h>
+#define x 9+2/4*3-2*4+(5-4)*3
+void main() {
+    int i,y;
+    y=6+3*3/5;
+    i=x*x+y;
+    printf("%d", i);
 }
 ```
 

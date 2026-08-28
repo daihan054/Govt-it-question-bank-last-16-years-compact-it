@@ -56,6 +56,8 @@ int main(int argc, char *argv[]){
 
 5. **অথবা, (ক) Thread এর সংজ্ঞা দিন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
 
+6. **Write down the thread life cycle.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 755]**
+
 ## Linux / Unix Commands & Administration
 
 1. **Write Linux command:** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1331]**
@@ -116,6 +118,8 @@ int main(int argc, char *argv[]){
 18. **UNIX command (directory listing with hidden files).** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
 
 19. **Difference between below 3 linux command: cd, cd usr/desk/home, cd/user/desk/home** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 717]**
+
+20. **Linux Command: Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
 ## Windows & System Administration
 

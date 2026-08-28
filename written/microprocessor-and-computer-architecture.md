@@ -158,6 +158,8 @@
 
 10. **What is RAID?** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
+11. **What is RAID? What is the classification of RAIDs? Difference between RAID 1 and RAID 5 using illustration.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 755]**
+
 ## CPU Performance & Instruction Cycle
 
 1. **There was a CPU cycle math** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 400]**

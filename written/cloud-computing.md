@@ -59,6 +59,8 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **Difference between cluster computing and grid computing.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 750]**
 
+2. **Imagine data in a system is green, red, yellow and blue in the system using distributed server in parallel. Design the system using reduce map.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 755]**
+
 ## Edge Computing & Fog Computing
 
 1. **What is the need of edge server?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1455]**
