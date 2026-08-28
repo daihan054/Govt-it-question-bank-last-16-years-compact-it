@@ -742,6 +742,13 @@
    (গ) গ্রিক
    (ঘ) আফগানিস্তান
 
+66. **Which country has Bengali as official language in Africa?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) South Africa
+   (b) Sierra leone
+   (c) Ghana
+   (d) Somalia
+   **Ans: b**
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1270,6 +1277,56 @@
    (গ) প্রীতিলতা
    (ঘ) জাহানারা
 
+97. **When china did recognized Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+   (a) 1974
+   (b) 1972
+   (c) 1973
+   (d) 1975
+   **Ans: d**
+
+98. **What is the length and width of the National Flag of Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+   (a) 5:3
+   (b) 5:2
+   (c) 6:3
+   (d) 10:3
+   **Ans: a**
+
+99. **The cabinet of Mujibnagar Government was sworn in-** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) Meherpur
+   (b) Dhaka
+   (c) Chattagram
+   (d) Kolkata
+   **Ans: a**
+
+100. **During the liberation war of Bangladesh, Dhaka was under which sector?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+   (a) 2
+   (b) 4
+   (c) 5
+   (d) 7
+   **Ans: a**
+
+101. **The first gas field of Bangladesh was discovered in-** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+   (a) 1956
+   (b) 1957
+   (c) 1986
+   (d) 1955
+   **Ans: d**
+
+102. **The only foreigner to be awarded the title “Bir Protic” is-** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+   (a) W.A.S Ouderland
+   (b) Simon Dring
+   (c) Sam manekshaw
+   (d) Mark Tully
+   **Ans: a**
+
+103. **What is the length and width of the National Flag of Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+   (a) 5:3
+   (b) 5:2
+   (c) 6:3
+   (d) 10:3
+   **Ans:**
+   **(a) 5:3**
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1392,6 +1449,13 @@
    (গ) ১০ ঘণ্টা
    (ঘ) ৫ ঘণ্টা
 
+21. **Which of the following countries is the largest emitter of \text{CO}_2?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
+   (a) France
+   (b) USA
+   (c) India
+   (d) China
+   **Ans: d**
+
 ## Sports
 
 1. **Who has won the most gold medals at a single Olympics-** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -1500,3 +1564,10 @@
 11. **সর্বশেষ কোথায় গ্রীড বিপর্যয় হয়? **Ans: Eastern**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
 
 12. **পিক আওয়ার কখন ঘটে? **Ans: 5pm**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+13. **What will be the generation capacity target by 2041 in Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 75]**
+   (a) 40,000 MW
+   (b) 60,000 MW
+   (c) 20,000 MW
+   (d) 45,000 MW
+   **Ans: b**
