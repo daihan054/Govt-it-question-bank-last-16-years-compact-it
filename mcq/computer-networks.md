@@ -672,6 +672,12 @@
    C) WAN
    D) Wireless LAN
 
+43. **RPC provides a(an) ________ on the client side, a separate one for each remote procedure.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+   A) stub
+   B) identifier
+   C) name
+   D) process identifier
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**

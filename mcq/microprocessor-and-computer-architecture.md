@@ -296,6 +296,12 @@
    C) similar
    D) undefined
 
+29. **CPU fetches the instruction from memory according to value of-** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+   A) Program counter
+   B) status register
+   C) instruction register
+   D) program status word
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

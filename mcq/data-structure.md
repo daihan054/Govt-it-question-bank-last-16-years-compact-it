@@ -62,6 +62,12 @@
    C) Both A & B
    D) None of these
 
+10. **What is the time complexity to count the number of elements in the linked list?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+   A) O(1)
+   B) O(n)
+   C) O(\log n)
+   D) O(n \log n)
+
 ## Stack & Queue
 
 1. **The minimum number of stacks needed to implement a queue is** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -175,6 +181,18 @@
    C) lists
    D) All of these
 
+19. **The data structure required to check whether an expression contains balanced parenthesis is-** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+   A) Stack
+   B) Queue
+   C) Array
+   D) Tree
+
+20. **Pushing an element into stack already having five elements and stack size of 5 then stack becomes-** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
+   A) Overflow
+   B) Crash
+   C) Underflow
+   D) User flow
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -287,6 +305,12 @@
    B) O(n \log n)
    C) O(\log n)
    D) O(n^2)
+
+20. **Which of the following is false about a binary search tree?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) The left child is always lesser than its parent
+   B) The right child is always greater than its parent
+   C) The left and right subtrees should also be binary search trees
+   D) In order sequence gives decreasing order of elements
 
 ## Hashing & Hash Tables
 

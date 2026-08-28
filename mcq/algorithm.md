@@ -96,6 +96,18 @@
    C) O(n^2)
    D) O(n \log n)
 
+17. **The time complexity of binary search is -----** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+   A) constant
+   B) quadratic
+   C) exponent
+   D) logarithmic
+
+18. **When the linear search used?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
+   A) When the list has only few elements.
+   B) When performing a single search in an unordered list
+   C) Used all the time
+   D) When the list has only a few elements and when performing a single search in an unordered list
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -206,6 +218,12 @@
    C) O(n^2)
    D) O(n \log n)
 
+19. **Quicksort can be categorized as:** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+   A) Brute force technique
+   B) Divide and conquer
+   C) Greedy algorithm
+   D) Dynamic programming
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -291,6 +309,12 @@
    c) Dijkstra’s algorithm
    d) Floyd-Warshall algorithm
 
+13. **A graph having an edge from each vertex to every other vertex is called:** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
+   A) Tightly connected
+   B) Strongly connected
+   C) Weakly connected
+   D) Loosely connected
+
 ## Dynamic Programming & Greedy
 
 1. **Which of the following is an example of dynamic programming approach?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -316,6 +340,12 @@
    b) Dynamic Programming
    c) Divide and Conquer approach
    d) None of them
+
+5. **An algorithm which is use previous step for calculation-** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 230]**
+   A) Brute force
+   B) divide and conquer
+   C) Dynamic programming
+   D) All the above
 
 ## Complexity & Analysis
 

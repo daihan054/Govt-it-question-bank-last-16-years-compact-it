@@ -75,6 +75,12 @@
    C) To make database secure
    D) To make database consistency
 
+14. **In the ________ normal form, a composite attribute is converted to individual attributes.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) First
+   B) Second
+   C) Third
+   D) Fourth
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -113,7 +119,7 @@
    (c) UPDATE
    (d) CREATE
 
-7. **CREATE TABLE employee (name VARCHAR, id INTEGER). What type of statement is this?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
+7. **CREATE TABLE employee (name VARCHAR, id INTEGER). What type of statement is this?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
    a) DML
    b) DDL
    c) View
@@ -389,6 +395,18 @@
    B) distinct
    C) unique
    D) single
+
+44. **The ________ clause is used to list the attributes desired in the result of a query.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 230]**
+   A) Where
+   B) Select
+   C) From
+   D) Distinct
+
+45. **In SQL, aggregate functions can be used in the select list or the ________ clause of a select statement or subquery. They cannot be used in a ________ clause.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) Where, having
+   B) Having, where
+   C) Group by, Having
+   D) Group by, Where
 
 ## DBMS Concepts & Architecture
 
@@ -852,6 +870,12 @@
    B) tuple
    C) entity
    D) field
+
+10. **The subset of super key is a candidate key under what condition?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+   A) No proper subset is a super key
+   B) All subsets are super keys
+   C) Subset is a super key
+   D) Each subset is a super key
 
 ## ER Diagram & Data Modeling
 

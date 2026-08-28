@@ -247,6 +247,36 @@
    (c) Virtual processors
    (d) Kernel
 
+18. **What is long term scheduling?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 230]**
+   A) It selects which process has to be brought into the ready queue
+   B) It selects which process has to be executed next and allocates CPU
+   C) It selects which process to remove from memory by swapping
+   D) It selects which process needs to be killed next
+
+19. **Multi-Threaded programs are-** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 230]**
+   A) Lesser prone to deadlocks
+   B) more prone to deadlocks
+   C) not at all prone to deadlock
+   D) always results in deadlocks
+
+20. **When there is a large logical address space, the best way of paging would be ________.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+   A) Not to page
+   B) a two-level paging algorithm
+   C) not all prone to deadlock
+   D) all of the above
+
+21. **What is the mounting of file system?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+   A) creating of a file system
+   B) deleting a file system
+   C) attaching portion of the file system into a directory structure
+   D) removing portion of the file system into a directory structure
+
+22. **The main program in an operating system is called:** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) kernel
+   B) file manager
+   C) Directory
+   D) NOS
+
 ## File Systems & Disk Management
 
 1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**

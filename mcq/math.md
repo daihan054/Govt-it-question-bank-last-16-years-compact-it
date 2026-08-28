@@ -418,6 +418,18 @@
    C) 3k
    D) 4k
 
+40. **If for a square matrix A, A^2 = A then such a matrix known as-** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+   A) Idempotent matrix
+   B) Orthogonal Matrix
+   C) Null Matrix
+   D) Identity matrix
+
+41. **Domain of a function is-** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 230]**
+   A) the maximal set of numbers for which function is defined
+   B) the maximal set of numbers which a function can take value.
+   C) it is the set of natural numbers for which a function is defined
+   D) Any set of positive number
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -631,6 +643,12 @@
    গ. 10
    ঘ. None
 
+16. **In the given AP series find the number of items 5,8,11,14,17,20, .......,50** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+   A) 11
+   B) 13
+   C) 15
+   D) 16
+
 ## Time, Work & Distance
 
 1. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -742,6 +760,12 @@
    C. 210
    D. 360
 
+5. **How many bits string of length 4 bit possible such that they contain 2 ones and 2 zeros?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+   A) 4
+   B) 2
+   C) 5
+   D) 6
+
 ## Set Theory
 
 1. **Two sets are called disjoint if their ______ is an empty set.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
@@ -779,6 +803,12 @@
    B) {5}
    C) {3}
    D) {2}
+
+7. **If A has 4 elements and B has 8 elements, then the minimum and maximum number of elements is A \cup B respectively?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+   A) 4, 8
+   B) 8, 12
+   C) 4, 12
+   D) 6, 12
 
 ## Probability & Statistics
 

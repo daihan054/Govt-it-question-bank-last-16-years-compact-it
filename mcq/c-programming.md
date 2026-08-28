@@ -80,6 +80,30 @@
    C) 3
    D) 4
 
+12. **What is an example of iteration in C?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 231]**
+   A) for
+   B) while
+   C) do-while
+   D) all of the above
+
+13. **Which of the following format is a correct format for declaration of function?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) return-type function-name (argument type);
+   B) return-type function-name (argument type) {}
+   C) return-type (argument type) function-name;
+   D) return-type {} function-name
+
+14. **What are the final values of a and c in the following C statement? (initialize value a=2, c=1) c=c? c=2:a=0;** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
+   A) a=0, c=0
+   B) a=2, c=2
+   C) a=2, c=2
+   D) a=1, c=2
+
+15. **Which of the following doesn’t require an ‘&’ for the input in scanf ( ) ?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 233]**
+   A) char name [10];
+   B) int name [10];
+   C) float name[10];
+   D) double name [10];
+
 ## Output Tracing
 
 1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**

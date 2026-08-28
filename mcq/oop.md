@@ -292,6 +292,18 @@
    C) print
    D) None
 
+41. **Which of the keywords can be used in a subclass to call the constructor of superclass?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 230]**
+   A) Extent
+   B) Extends
+   C) Super
+   D) This
+
+42. **Which of the following is a valid declaration of an object of class Box?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) Box obj = new Box();
+   B) Box obj = new Box;
+   C) obj = new Box();
+   D) new Box obj;
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -405,6 +417,12 @@
    B) Overloading
    C) Polymorphism
    D) Overriding
+
+15. **What is the process of defining two or more methods within the same class that have same name but different parameters declaration?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) Method overriding
+   B) Method overloading
+   C) Method hiding
+   D) Method duplicating
 
 ## OOP Concepts & Principles
 

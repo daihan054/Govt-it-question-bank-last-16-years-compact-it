@@ -347,3 +347,9 @@
    (b) Virus attack
    (c) Unauthorized attack
    (d) All
+
+17. **Which of the following sends data packets over unprotected system?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 232]**
+   A) OSL
+   B) NAT
+   C) TCP
+   D) UDP

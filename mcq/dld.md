@@ -414,6 +414,18 @@
    C) 226
    D) 220
 
+43. **For some base r, the digits which are allowed in its representation are?** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 229]**
+   A) Digit from 1 to r
+   B) Digit from 0 to r-1
+   C) Digit from 1 to r-1
+   D) Digit form 0 to r
+
+44. **The Ex-OR of this string 01010101 with 11111111 is ________.** **(Combined 3 Bank Assistant Programmer MCQ Test: 2018) [compact it 230]**
+   A) 10101010
+   B) 00110100
+   C) 01010101
+   D) 10101001
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
