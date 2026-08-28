@@ -503,9 +503,15 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 3. **Which protocol is used for email received?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
+## Data Rate & Channel Capacity (Nyquist, Shannon)
+
+1. **Nyquist math: See in Data Communication & Networking Chapter** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
+
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 
 1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
+
+2. **What is baseband and passband frequency?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
 
 ## Wireless Networks & IoT (mmWave)
 

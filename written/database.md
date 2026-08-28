@@ -287,6 +287,8 @@ ORDER BY average_salary DESC;
 
 9. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
+10. **What in First and Second Normal form is DBMS?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+
 ## Relational Keys (Candidate, Super, Primary, Foreign Key)
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
@@ -354,6 +356,8 @@ ORDER BY average_salary DESC;
 3. **Difference between primary key, foreign key? What is trigger?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 502]**
 
 4. **Define primary key, super key, and Candidate key.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
+
+5. **What is primary key and foreign key with example?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
 
 ## Indexing in DBMS
 

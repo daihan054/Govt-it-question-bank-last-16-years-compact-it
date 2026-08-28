@@ -18,6 +18,8 @@
 
 9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 463]**
 
+10. **Difference between Stack and Queue.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]

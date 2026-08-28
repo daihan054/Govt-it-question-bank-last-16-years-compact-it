@@ -20,6 +20,8 @@
 
 2. **Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
 
+3. **What is Diode and Inductor?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+
 ## Transistors (BJT & FET)
 
 1. **What does BJT stand for?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

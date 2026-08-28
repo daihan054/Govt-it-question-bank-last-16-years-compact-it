@@ -14,6 +14,8 @@ for i in N:
 
 4. **What is complexity? Find the Complexity from code and explain.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
 
+5. **What is Big O and Big Omega?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]

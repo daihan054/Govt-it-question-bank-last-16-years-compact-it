@@ -110,9 +110,13 @@
 
 9. **Design 6 \times 1 MUX by using 2 \times 1 MUX** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 460]**
 
+10. **What is Half Adder circuit? Expalin with block diagram with logic circuit.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 497]**
+
 ## Sequential Circuits (Latches & Flip-Flops)
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
+
+2. **Difference between combinational and sequential circuits.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
 
 ## Finite State Machines (FSM)
 
