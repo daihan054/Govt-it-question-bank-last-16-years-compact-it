@@ -171,3 +171,26 @@
    (খ) \text{byte}>\text{KB}>\text{GB}>\text{TB}
    (গ) \text{byte}>\text{KB}>\text{TB}>\text{GB}
    (ঘ) \text{byte}>\text{TB}>\text{GB}>\text{KB}
+
+19. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) An exclusive logical sum of N with 0Fh
+   b) A negative logical product of N with 0Fh
+   c) A logical product of N with 0Fh
+   d) A logical sum of N with 0Fh
+   60. Consider the following relational database–
+   *Order (OrderNumber, OrderDate, Promised Date)*
+   *Orderline (OrderNumber, ProductID, QuantityOrdered)*
+   *Product (Product ID Description, Price)*
+   What types of relationship exists in the following Order line table? **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) One to One
+   b) One to Many
+   c) Many to Many
+   d) Many to One
+
+## Boolean Algebra & Simplification
+
+1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) A + B + C
+   b) AB + BC
+   c) A+BC
+   d) ACB

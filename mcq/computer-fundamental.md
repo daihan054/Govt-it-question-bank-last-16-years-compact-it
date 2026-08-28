@@ -74,6 +74,36 @@
    (গ) মনিটর
    (ঘ) জয়স্টিক
 
+6. **How can you clear CMOS password?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) Changing motherboard's jumper setting
+   b) Formatting the system
+   c) Removing BIOS battery
+   d) None of the above
+
+7. **What is the best way to protect your hard drive data?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) Regular Backup
+   b) Run a regular diagnosis
+   c) Periodically defrag it
+   d) Run scandisk at least once a week
+
+8. **Which would you do first when troubleshooting a faulty monitor?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) Check its connections to the computer and power source
+   b) Use a meter to check the CRT and internal circuitry for continuity
+   c) Power down the monitor, then turn it on again to see if that corrects the problem
+   d) Power down the computer, then turn it on a pain to see if that corrects the problem
+
+9. **Which is wrong statement for BIOS of a computer?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) Connect microprocessor and I/O
+   b) Manages data flow
+   c) Loads the operating system
+   d) Provide storage
+
+10. **Most PCs give a single beep on boot up to indicate that the hardware is ok. If you do not get any beep, then what will be the first thing to check?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) System board
+   b) RAM
+   c) Power supply
+   d) Speaker
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**

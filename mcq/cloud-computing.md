@@ -45,3 +45,9 @@
    (খ) A Mobile connecting to weather and map services
    (গ) A LMS service taken from a free service provider
    (ঘ) An web portal hosted for Public Service Commission
+
+5. **Which one is not a layer of cloud computing?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) Computing as a service (CaaS)
+   b) Infrastructure as a service (IaaS)
+   c) Platform as a service (PaaS)
+   d) Software as a service (SaaS)

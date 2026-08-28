@@ -21,6 +21,12 @@
 4. **What are hackers who find bugs and vulnerabilities called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** White hat hacker.
 
+5. **A student breaks the door of a professor's office to obtain a copy of the next day's examination. Define the type of security attack in this case.** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 128]**
+   a) Snooping
+   b) Repudiation
+   c) Masquerading
+   d) Replaying
+
 ## Security Principles (CIA Triad)
 
 1. **Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 13]**
@@ -103,3 +109,11 @@
    (গ) হার্ডওয়্যার
    (ঘ) সিস্টেম সফটওয়্যার
    **উত্তর: ক**
+
+## Web Security Vulnerabilities
+
+1. **How can we prevent SQL Injection Attack?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) Show the database error to the users
+   b) Use input validation
+   c) Use the user input directly
+   d) Do not remove potential malicious code

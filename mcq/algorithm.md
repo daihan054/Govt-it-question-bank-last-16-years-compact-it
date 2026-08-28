@@ -30,6 +30,18 @@
    (গ) Depth First Search
    (ঘ) Linear Search
 
+6. **Which searching algorithm can take O (1) time to find a data from a list?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) Tree search
+   b) Linear Search
+   c) Binary Search
+   d) Hashing
+
+7. **In binary search, what is the average number of comparison required for search an element in a list is the element number is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) 2/n
+   b) n
+   c) log2n
+   d) n - 1
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -62,6 +74,18 @@
    (গ) Bubble sort
    (ঘ) Bogo sort
 
+6. **Which is correct characteristic of Selection Sort?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) Time complexity O(n)
+   b) Not Comparison-based sorting algorithm
+   c) Time complexity O(n²)
+   d) It is not in place sort
+
+7. **Which is correct for Merge sort–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) Time complexity, O(n²)
+   b) Time complexity, O (n log n)
+   c) Time complexity, O (log n)
+   d) Not stable sort
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -81,6 +105,12 @@
    (খ) Directed Cyclic graph
    (গ) Undirected Acyclic graph
    (ঘ) Directed Acyclic graph
+
+4. **Suppose you have a complete undirected graph with 4 nodes. What is the maximum number of Minimum Spanning Tree (MST) you can form?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) 4
+   b) 8
+   c) 16
+   d) 1
 
 ## Dynamic Programming & Greedy
 
@@ -102,6 +132,12 @@
    (c) Static Programming
    (d) Xtreme Programming
 
+4. **Which of the following technique uses memorizations?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) Greedy algorithms
+   b) Dynamic Programming
+   c) Divide and Conquer approach
+   d) None of them
+
 ## Complexity & Analysis
 
 1. **The time taken by NP-class sorting algorithm is-** **(Bangladesh Bank Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 25]**
@@ -109,6 +145,12 @@
    (b) O (\log n)
    (c) O(n^2)
    (d) O(n)
+
+2. **The \Theta notation in asymptotic evaluation represents—** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) Best case
+   b) Base case
+   c) Average case
+   d) Worst case
 
 ## Algorithm Design Paradigms
 

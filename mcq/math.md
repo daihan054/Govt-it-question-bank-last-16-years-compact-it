@@ -234,6 +234,28 @@
    (গ) 15
    (ঘ) -15
 
+19. **If 5x+4y=22, 3x+3y-21, what is the value of x and y?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) x=2, y=3
+   b) x=2, y=-4
+   c) x=3, y=7
+   d) x=2, y=-3
+
+20. **If 3x+5y =14 and x-y = 6 then what is the average of x and y?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) 1
+   b) 1.25
+   c) 2
+   d) 2.5
+
+21. **If a = \sqrt{3} + \sqrt{2} then value of a^3 + \frac{1}{a^3} = ?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) 10\sqrt{3}
+   b) 12\sqrt{3}
+   c) 12\sqrt{3}
+   d) 18\sqrt{3}
+
+22. **Factorize a^3 - 70a - 6** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) (a + 1) (a - 2) (a - 3)
+   b) (a - 1) (-2) (a - 3)
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -303,6 +325,18 @@
    ঘ) ৪৪%
    **Ans: ঘ**
 
+13. **Alom sold a radio at the cost of 1950 taka at a loss of 25%. At what cost will he have to sell it to get a profit of 30%?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) 4000
+   b) 3380
+   c) 3580
+   d) 3400
+
+14. **The loss is 30% when 10 lemons are sold per taka. How many lemons are to be sold per taka to make a profit of 40%?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) 2
+   b) 6
+   c) 5
+   d) 10
+
 ## Arithmetic & Number Series
 
 1. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -357,6 +391,12 @@
    (ঘ) 0.1\text{ m}^3
    **উত্তর: ক**
 
+10. **Of the series 5+8+11+14 ________ which term is 383?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) 122ᵗʰ
+   b) 127ᵗʰ
+   c) 136ᵗʰ
+   d) 144ᵗʰ
+
 ## Time, Work & Distance
 
 1. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -370,6 +410,12 @@
    (b) 4.5 hours
    (c) 2.4 hours
    (d) 5 hours
+
+3. **If a man rows at 5km/hr in still water and 3.5 km/hr against the current, find his rate along the current.** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) 4 .25 km
+   b) 4.5 km
+   c) 6 km
+   d) 6.5km
 
 ## Analytical Reasoning
 
@@ -410,6 +456,12 @@
    (গ) Intersection
    (ঘ) Complement
 
+2. **Of 100 students 90 passed in Bangla, 85 in Mathematics and 80 in both subjects. How many students fasted in both subjects?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) 7
+   b) 5
+   c) 15
+   d) 10
+
 ## Probability & Statistics
 
 1. **The mode and mean is given by 7 and 8 respectively. Then the median is:** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
@@ -423,3 +475,11 @@
    (খ) 0.88
    (গ) 0.56
    (ঘ) 0.69
+
+## Ratio & Proportion
+
+1. **The ratio of milk and water in 64 liters of a mixture is 5:3. What amount of water is added to make the ratio 3:5?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) 42\frac{2}{3}
+   b) 50\frac{5}{2}
+   c) 35\frac{2}{3}
+   d) 40\frac{5}{3}

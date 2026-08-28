@@ -76,6 +76,12 @@
    (c) Grey box testing tab
    (d) Alpha testing
 
+9. **Which is the correct definition of BUG?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) A difficult syntax error in a program
+   b) A logical error in a program
+   c) Documenting programs
+   d) All of the above
+
 ## SDLC Models
 
 1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**

@@ -377,6 +377,30 @@
    (গ) বেদের মেয়ে
    (ঘ) বোবা কাহিনী
 
+68. **‘রক্তাক্ত প্রান্তর’ নাটকের পটভূমি–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) পলাশীর যুদ্ধ
+   b) ভাষা আন্দোলন
+   c) পানিপথের যুদ্ধ
+   d) অসহযোগ আন্দোলন
+
+69. **বাংলাদেশের নাটকে ‘কথানাট্যের’ পথিকৃৎ–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) সেলিম আল দীন
+   b) সৈয়দ শামসুল হক
+   c) আব্দুল্লাহ আল মামুন
+   d) মান্নান হীরা
+
+70. **‘তুমি আসবে বলে হে স্বাধীনতা’- কার রচনা?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) আবু জাফর ওবায়দুল্লাহ
+   b) আল মাহমুদ
+   c) শামসুর রাহমান
+   d) নির্মলেন্দু গুণ
+
+71. **চর্যাপদে কোন পদকর্তার রচনা সর্বাধিক?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) লুই পা
+   b) ভুসুক পা
+   c) কাহ্ন পা
+   d) শবরী পা
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -869,6 +893,42 @@
    (খ) আ, ঔ
    (গ) ই, ও
    (ঘ) ঐ, ঔ
+
+90. **‘সন্ধি’ ব্যাকরণের কোন অংশে আলোচিত হয়?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) ধ্বনিতত্ত্ব
+   b) অর্থতত্ত্ব
+   c) বাক্যতত্ত্ব
+   d) রূপতত্ত্ব
+
+91. **বিভক্তিহীন নাম শব্দকে কী বলে?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) প্রকৃতি
+   b) উপধা
+   c) ধাতু
+   d) প্রাতিপদিক
+
+92. **সঠিক সন্ধি বিচ্ছেদ কোনটি?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) বন + পতি = বনস্পতি
+   b) অহঃ + রহ = অহরহ
+   c) সং + সার = সংসার
+   d) ছেলে + মি = ছেলেমি
+
+93. **নিচের কোনটি মৌলিক শব্দ নয়?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) গোলাপ
+   b) গায়ক
+   c) হাত
+   d) ফুল
+
+94. **‘ঠিক’, তুমি সত্য বলেছ।’–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) সিদ্ধান্ত আবেগ
+   b) প্রশংসা আবেগ
+   c) অলংকার আবেগ
+   d) সম্বোধন আবেগ
+
+95. **‘অর্ণব’ শব্দের অর্থ কী?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) সাগর
+   b) নদী
+   c) জলাশয়
+   d) ঢেউ
 
 ## বাগধারা ও প্রবাদ
 

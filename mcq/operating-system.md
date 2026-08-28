@@ -30,6 +30,18 @@
    (গ) Virtual memory can never be implemented without paging
    (ঘ) Both have the same concepts
 
+6. **Consider a virtual memory system with FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory will–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) Always decrease the number of page faults
+   b) Always increase the number of page faults
+   c) Sometimes increase the number of page faults
+   d) Never affect the number of page faults
+
+7. **Applying the LRU page replacement to the reference string 1 2 4 5 2 1 2 4. The main memory can accommodate pages and it already has pages and 2. Pape I came in before page 2 How many page faults will court?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 128]**
+   a) 3
+   b) 4
+   c) 5
+   d) 6
+
 ## Deadlock
 
 1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -49,6 +61,12 @@
    b) Timeout
    c) Deadlock detection and recovery
    d) Deadlock annihilation
+
+4. **A system has 12 magnetic tape drives and 3 processes: PO, PI, and P2. Process PO requires 10 tape drives, P1 requires 4 and P2 requires 9 tape drives. The current allocation tape drives of processes P0, PI and P2 is 5, 2, 2, respectively. Which of the following sequence is a safe sequence?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
+   a) P0, PI, P2
+   b) P1, P2, P0
+   c) P2, P0, P1
+   d) P1, P0, P2
 
 ## Process Synchronization
 
@@ -84,6 +102,12 @@
    (গ) Execution time
    (ঘ) Process time
 
+4. **In Unix operating system, which system call is used for creating a new process?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
+   a) Exec()
+   b) Create Process ()
+   c) Fork ()
+   d) None of them
+
 ## File Systems & Disk Management
 
 1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**
@@ -91,6 +115,12 @@
    (b) D
    (c) E
    (d) F
+
+2. **Which of the following is not a true statement?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) Deleted files can be found in recycle bin
+   b) Deleted files in recycle bin can be restored
+   c) Disk space can be increased by sending files into recycle bin
+   d) There may have multiple recycle bin
 
 ## OS Concepts & Multiprogramming
 

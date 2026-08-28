@@ -99,6 +99,23 @@
 13. **What does runFinalize() do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** The runFinalization() method is a part of the Runtime class, and its purpose is to trigger the execution of the finalization methods of any objects that are awaiting finalization. Its sentence structure is as follows: public void runFinalization()
 
+14. **Find the correct output: System.out.print('D' + 'E'+ 'F');** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) 137
+   b) DEF
+   c) 207
+   d) DEF
+
+15. **Find the output of the following code:** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   ```java
+   int a=15, b=15;
+   if((a-100) == (b-a)) System.out.print(b+a) ;
+   else System.out.print(b-a) ;
+   ```
+   a) 100
+   b) 200
+   c) 0
+   d) 3
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**

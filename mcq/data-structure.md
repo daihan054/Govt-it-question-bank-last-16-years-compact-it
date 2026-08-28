@@ -92,6 +92,12 @@
    (গ) Last In Last Out
    (ঘ) First in Frist Out
 
+11. **What is postfix expression of the string, a+(b-c)*d?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) abc-d*+
+   b) abcd - *+
+   c) ad* bc -
+   d) abc – d+*
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -178,6 +184,12 @@
    (b) Linked List
    (c) Heap
    (d) Stack
+
+3. **In the priority queue, insertion and deletion take place at –** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
+   a) Front and rear end
+   b) Only at the front end
+   c) Only at the rear end
+   d) Any position
 
 ## Data Structure Basics
 

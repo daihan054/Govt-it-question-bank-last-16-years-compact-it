@@ -594,6 +594,36 @@
    (গ) Making
    (ঘ) Doing
 
+90. **The complex form of 'A rolling stone gathers no moss' is** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) Though a stone roll, it gathers no moss
+   b) A stone what rolls gathers no moss
+   c) Since a stone is rolling it gathers no moss
+   d) A stone that rolls gathers no moss
+
+91. **While living in poverty, the poet had to a great deal of suffering.** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) see through
+   b) put up with
+   c) pass by
+   d) full back
+
+92. **Which statement is correct?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) Mumbai is the seaport near to Europe
+   b) Mumbai is the seaport next to Europe
+   c) Mumbai is the seaport nearest to Europe
+   d) Mumbai is the seaport nearer to Europe
+
+93. **I differ ____ you ____ this question.** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) against, about
+   b) from, on
+   c) to, for
+   d) with, on
+
+94. **It is time to shut up the shop. (Passive)** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) It is time to the shop the be shuted up
+   b) It is time for the shop to shut up
+   c) It is time for the shop to be shut up
+   d) It is time for the shop to be shuted up
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -880,6 +910,30 @@
    (গ) bulk
    (ঘ) ratio
 
+36. **Which one word is closest in meaning to 'Franchise'?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) privilege
+   b) superficial
+   c) frankness
+   d) openness
+
+37. **The people who carry a coffin at a funeral are called ________** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) undertakers
+   b) supporters
+   c) pallbearers
+   d) mourners
+
+38. **Which phrase contains words opposed to each other in meaning?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) heat and dust
+   b) reproduction and death
+   c) hopes and aspirations
+   d) emerged and advanced
+
+39. **The ________ of the forest will result in the ________ of many animal species.** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 133]**
+   a) destruction / disappear
+   b) destruction / disappearance
+   c) destructing / disappear
+   d) destruct/disappearance
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -937,3 +991,9 @@
    (খ) Encyclopedia Britannica
    (গ) Enciclopadia Britannica
    (ঘ) Enciclopedia Britannica
+
+10. **Which word is spelt correctly?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 132]**
+   a) concensus
+   b) hierarchy
+   c) madieval
+   d) posession

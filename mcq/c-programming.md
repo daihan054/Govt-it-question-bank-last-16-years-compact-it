@@ -258,6 +258,34 @@
    (c) Compiler Error
    (d) 0 4
 
+17. **Which is the correct output?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   ```c
+   int i = 4; printf("%d %d", +1,i++); printf("%d", i++);
+   ```
+   a) 4 5 6
+   b) 5 7 8
+   c) 6 4 6
+   d) 1 4 5
+
+18. **Which is correct output?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   ```c
+   int a = 100; int *p = &a +2; *p = 22; printf("%d", a);
+   ```
+   a) 100
+   b) 22
+   c) Error
+   d) Garbage value
+
+19. **Find the correct output:** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   ```c
+   int a = 10,b = 20; a ^= b; b ^= a; a ^= b;
+   printf("%d %d", a, b);
+   ```
+   a) 20 30
+   b) 10 30
+   c) 20 10
+   d) Garbage Value
+
 ## Storage Classes & Scope
 
 1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**

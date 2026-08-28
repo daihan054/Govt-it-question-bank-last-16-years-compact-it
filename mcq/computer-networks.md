@@ -29,6 +29,12 @@
    ঘ) ৬
    **Ans: ক**
 
+6. **Which is the disadvantage of Optical Fiber?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) Resistance to corrosive materials
+   b) Greater immunity to tapping
+   c) Unidirectional light propagation
+   d) None of these
+
 ## Application Layer Protocols
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -97,6 +103,12 @@
    (গ) RFC
    (ঘ) WWW
 
+12. **DHCP is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) Dynamic Host Control Protocol
+   b) Distributed Host Configuration Protocol
+   c) Dynamic Host Configuration Protocol
+   d) Domain Host Configuration Protocol
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -132,6 +144,12 @@
    (গ) 64 bits
    (ঘ) 132 bis
 
+7. **How many bits in IPv6?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) 32
+   b) 64
+   c)128
+   d) 156
+
 ## Networking Fundamentals & Terminology
 
 1. **Set of rules is called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -157,6 +175,18 @@
    (c) When a page is corrupted
    (d) When an exception is thrown
 
+4. **Mapping of a known IP address to a MAC layer address is done by which of the following protocols?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 128]**
+   a) Dynamic Host Control Protocol (DHCP)
+   b) Open Shorts Path First (OSP) Protocol
+   c) Address Resolution Protocol (ARP)
+   d) Network Address Translation (NAT)
+
+5. **A workstation has just been installed on an Ethernet LAN, but cannot communicate with the network. What should you check first?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) Reinstall the network protocols
+   b) Reinstall the network interface card driver
+   c) Verify the IP configuration on the workstation
+   d) Verify the link status on the computer's network card
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -164,6 +194,12 @@
    b) 32 Mbps
    c) 32 Kbps
    d) 64 MbpS
+
+2. **Assume we need to download text documents at the rate of 100 pages per second. A page is an average of 24 lines with 80 characters in each line and one character requires 8 bits. What is the required bit rate of the channel?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) 25600 bps
+   b) 25800 bps
+   c) 4000 bps
+   d) 10000 bps
 
 ## Wireless & Mobile Communication
 
@@ -251,6 +287,18 @@
    (গ) 172.15.14.36
    (ঘ) 192.168.24.43
 
+10. **What is the network address for the IP address 178.112.13.10/8?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
+   a) 178.0.0.0
+   b) 178.112.0.0
+   c) 255.0.0.0
+   d) 255.255.0.0
+
+11. **Which one is the loopback address?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) 255.255.255.0
+   b) 127.0.0.1
+   c) 255.0.0.0
+   d) 127.127.127.0
+
 ## Data Transmission & Modes
 
 1. **Communication between a computer and a keyboard involves ______ transmission.** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 39]**
@@ -306,6 +354,24 @@
    (d) Hub
 
 3. **নিচের কোনটি নেটওয়ার্ক ডিভাইস নয়? **Ans: Wi-Fi**** **(EGCB Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 72]**
+
+4. **NIC Stands for–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
+   a) Network Interface Card
+   b) Network Interface Circuit
+   c) Network Internal Card
+   d) Network Input Card
+
+5. **Which of the following is a device that is used to connect a number of LANs?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 127]**
+   a) Bridge
+   b) Switch
+   c) Router
+   d) Repeater
+
+6. **A proxy server is used as the computer–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 128]**
+   a) With external access
+   b) Acting as a backup
+   c) Performing file handling
+   d) Accessing user permissions
 
 ## Error Detection & Correction
 

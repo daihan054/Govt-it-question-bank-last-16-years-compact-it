@@ -15,6 +15,12 @@
 3. **What is the popular way to linking many documents?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** hyperlink
 
+4. **URL stands for–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) Universal Resource Locator
+   b) Uniform Resource Locator
+   c) Unique Resource Locator
+   d) None
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**

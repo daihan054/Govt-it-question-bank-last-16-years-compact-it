@@ -33,6 +33,12 @@
    (গ) 3NF
    (ঘ) BCNF
 
+7. **To remove partial dependency from a database, which technique you will use?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) 1NF
+   b) 2NF
+   c) 3NF
+   d) BCN
+
 ## SQL Commands & Queries
 
 1. **Which statements are used to create the database structure?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -106,6 +112,26 @@
    (গ) Remove
    (ঘ) Drop
 
+12. **Which of the following command is a type of Data Definition language command?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 128]**
+   a) Create
+   b) Update
+   c) Deleted
+   d) Select
+   24. Let transaction T1 has obtained a shared mode lock S on data item Q and transaction T2 has obtained an exclusive mode lock X on data item R. Consider the following statement.
+   I: T1 can read Q but cannot write Q.
+   II: T2 can read R but cannot write R.
+   Which of the above statements is / are valid? **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 128]**
+   a) Only I
+   b) Only II
+   c) Both I and II
+   d) Neither I nor II
+
+13. **Which one is the correct SQL statement to find the second highest mark from STUDENT database contains the marks of all students?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) Select MAX(marks) from *STUDENT* WHERE marks NOT IN (select MAX(marks) from *STUDENT*
+   b) Select MAX(marks) from *STUDENT* WHERE marks IN (select MAX(marks) from *STUDENT*
+   c) select MAX(marks) from *STUDENT*
+   d) select MAX(marks) from *STUDENT* WHERE marks NOT IN (select MIN(marks) from *STUDENT*
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -116,6 +142,12 @@
 
 2. **Which level of abstraction specifies the data and relationships between data?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Conceptual Level (Logical Level)
+
+3. **Which of the following is not a function of a database administrator?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
+   a) Database the design
+   b) Backing up the database
+   c) Query processing
+   d) User coordination
 
 ## Transaction Management & ACID
 
@@ -140,6 +172,18 @@
 4. **What is the D in ACID property in database?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Durability
 
+5. **Which one of the following commands is used to restore the database to the last committed state?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+   a) Save point
+   b) Rollback
+   c) Commit
+   d) None of the
+
+6. **Which one is not Database Transaction property?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) Atomicity
+   b) Consistency
+   c) Durability
+   d) Quality
+
 ## Indexing & Query Optimization
 
 1. **Which one make data access from a database faster?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xx]**
@@ -161,6 +205,12 @@
    (c) 12
    (d) 9.2
 
+2. **Related records of the different relations can be stored on the same block using which file organization technique?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
+   a) Heap file organization
+   b) Sequential file organization
+   c) Hashing file organization
+   d) Multi-table Clustering file organization
+
 ## SQL Joins
 
 1. **What type of join in needed when you wish to include rows that do not have matching values?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
@@ -168,6 +218,12 @@
    b) Natural join
    c) Outer join
    d) Inner join
+
+2. **Which type of JOIN operation in SQL command is used to returns that do not have matching values?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 126]**
+   a) Natural Join
+   b) EQUI Join
+   c) Outer Join
+   d) All of the above
 
 ## Data Warehousing & Data Mining
 

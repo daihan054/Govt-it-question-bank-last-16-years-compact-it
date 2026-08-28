@@ -773,6 +773,30 @@
    (গ) UNHCR
    (ঘ) UNFCC
 
+69. **Nassau is the capital city of–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) The Bahamas
+   b) The Nicobar Islands
+   c) Madagascar
+   d) The Cubies
+
+70. **Which country gave the 'Statue of Liberty to the United States of America as a gift?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) France
+   b) Great Britain
+   c) Germany
+   d) Russia
+
+71. **When is the ‘International Day of the Victims of Enforced Disappearances’ observed?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) August 15
+   b) August 30
+   c) September 15
+   d) September 30
+
+72. **Which countries are jointly called the 'Golden Crescent'?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) Afghanistan, Iran and Pakistan
+   b) Afghanistan, India and Pakistan
+   c) Iraq, Lebanon and Syria
+   d) Thailand, Laos and Myanmar
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1411,6 +1435,36 @@
    (গ) Karnophuli Paper Mills Ltd.
    (ঘ) Chittagong Urea Fertilizer Project
 
+114. **When did Bangabandhu declared historic six point programme?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) February 4, 1966
+   b) February 5, 1966
+   c) February 6, 1966
+   d) February 7, 1966
+
+115. **The length of Dhaka Metro Rail will be–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) 19.10 km
+   b) 20.10 km
+   c) 21.10 km
+   d) 20.50 km
+
+116. **As per the latest changes in Bengali Calendar, leap year is calculated in which month?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) Boishakh
+   b) Bhadro
+   c) Ashwin
+   d) Falgun
+
+117. **Who is the builder of the 'Sat Gumbad' (Seven-domed) mosque?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) Shaesta Khan
+   b) Khan Jahan Ali
+   c) Isha Khan
+   d) Islam Khan
+
+118. **Free Market Economy started in Bangladesh in–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) 1989
+   b) 1990
+   c) 1991
+   d) 1992
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1594,6 +1648,12 @@
    b) বক্সিং
    c) মার্শাল আর্টস
    d) সঙ্গীত
+
+12. **What are the small indentations on a golf ball called?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 134]**
+   a) Birdie
+   b) Albatross
+   c) Mulligan
+   d) Dimples
 
 ## Power Sector & Energy (Bangladesh)
 
