@@ -135,3 +135,5 @@
 3. **অথবা, Hashing বলতে কী বোঝায়? Hash ফাংশন গঠনের জন্যে যে কোনো তিনটি পদ্ধতি বিস্তারিত লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
 4. **Separate chaining hash function math.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 663]**
+
+5. **You are giving to store a set of objects and you want to use a data structure. Where the expected running time to search an item is O(1). Which data structure is suitable to serve your purpose?** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 815]**

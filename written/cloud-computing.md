@@ -14,6 +14,13 @@
 
 7. **(ক) Cloud Computing এর সার্ভিসগুলো লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
 
+8. **Software as a Service is SaaS, Platform as a Service is PaaS and Infrastructure as a Service is IaaS. Those are three types of Cloud services. In the following table, there are some Cloud services. Write the category of those:** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 819-820]**
+   Search engine for a web server
+   Google Docs
+   Microsoft Azure
+   Drop box
+   Amazon Web Services (AWS)
+
 ## Cloud Storage & Fundamentals
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

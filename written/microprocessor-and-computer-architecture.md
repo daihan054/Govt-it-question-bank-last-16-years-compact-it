@@ -134,6 +134,10 @@
 
 14. **(ক) Data transfer rate এর ভিত্তিতে নিম্নোক্ত memory/storage device গুলোকে বেশী থেকে কম ক্রমানুসারে সাজান। (i) Flash drive (ii) SSD (iii) Cache memory (iv) DVD (v) RAM (vi) Magnetic HD** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
 
+15. **Which of the following is non volatile memory? (a) SRAM (b) DRAM (c) ROM (d) HDD** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+16. **(b) Here are given 4 types of different memory. Which memory is the faster? Write in sequence order in the following figure: Register, Hard disk, Cache, RAM.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 821]**
+
 ## Secondary Storage (HDD vs SSD)
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -147,6 +151,8 @@
 5. **(খ) Solid State Drives (SSD) এর কার্যপ্রণালী ও ব্যবহার লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
 
 6. **In a solid state drive data is sarved to a pool of NAND flash. NAND itself is made up of what are called floating gate transmission. How does floating gate transmission store 0 and 1?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808-809]**
+
+7. **Which of the following is the unit of Hard Disk Drive? (a) Megaharz (b) Kiloharz (c) Gigabyte (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
 ## RAID Architecture & Storage
 
@@ -171,6 +177,8 @@
 10. **What is RAID?** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
 11. **What is RAID? What is the classification of RAIDs? Difference between RAID 1 and RAID 5 using illustration.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 755]**
+
+12. **What is RAID technology? Describe about the advantages of RAID technology.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820]**
 
 ## CPU Performance & Instruction Cycle
 

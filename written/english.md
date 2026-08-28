@@ -46,6 +46,8 @@
 
 22. **Write brief paragraph on “Patience is the mother of success.”** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
 
+23. **Write an eassy on the “Role of Telecommunications in supporting economic and business activities during three Covid-19 pandemic situations.”** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**

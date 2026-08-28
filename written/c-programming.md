@@ -2,6 +2,8 @@
 
 1. Name Top C 5 File Management Function Name. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
+2. **Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 814]**
+
 ## Basic Programs & Control Statements
 
 1. C program for the number is even or odd. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -582,6 +584,63 @@ int main{
     }
     printf(Sum of number=d, sum)
     return 0
+}
+```
+
+21. **Find the Output of following C Program:** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+```c
+#include<stdio.h>
+int function(int x[],int i){
+    int s=x[i];
+    if(i>0){
+        s+=function(x,i-1);
+    }
+    printf("%d",s);
+    return s;
+}
+int main(){
+    int y[]={1,3,2,8};
+    function(y,2);
+    return 0;
+}
+```
+
+22. **Write Output from below code:** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 819]**
+```c
+#include<stdio.h>
+int main() {
+    int i;
+    char s[]="Bangladesh Industrial and Technical Assistant Center";
+    char*s1;
+    s1=s;
+    for(i=0; i<10; i++) {
+        printf("%c", s[i]);
+        ++s1;
+    }
+    printf("\n");
+    for(i=0; i<10; i++) {
+        printf("%c", s1[i]);
+        ++s1;
+    }
+    return 0;
+}
+```
+
+23. **Fill in the gape and find output of the following program:** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
+```c
+#include<stdio.h>
+int power(int n, int r){
+    int sum, i;
+    sum=1;
+    for(i=1; i<=r; i++)
+        sum*=n;
+    return sum;
+}
+int main(){
+    int n, r;
+    scanf("%d %d", &n, &r);
+    printf("%d", power(n, r));
+    return 0;
 }
 ```
 

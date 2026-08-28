@@ -125,6 +125,14 @@ int main(int argc, char *argv[]){
 
 21. **(b) Write Linux commands to: (i) Make a directory named PSC (ii) Copy a directory with all its Contents into a directory name/home/admin.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
 
+22. **In Linux, History is a very useful command to show you all of the last commands that have been recently used. Grep is a Linux command-line tool used to search for a string of characters in a specified file. Write grep and history command to find previous commands in Linux.** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 813]**
+
+23. **Write down a shell script program that would add the line “This is my file” at the top of each file having the extention ‘txt’ in the current directory. Note that all the other contents of the .txt file(s) would remain unchanged and start from the second line.** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 818]**
+
+24. **Write the following UNIX command with example: (a) ls (b) grep (c) ssh** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820]**
+
+25. **(a) Check if the website of ‘TGTDCL’. (b) How to create folder in sub-directory?** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
+
 ## Windows & System Administration
 
 1. **How to check the IP address in the Windows Command Prompt?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
@@ -286,6 +294,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 11. **(খ) Internal এবং External fragmentation এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
+12. **(a) What is demand paging?** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 821]**
+
 ## Virtual Memory & Page Replacement (Thrashing)
 
 1. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**
@@ -309,6 +319,10 @@ All process arrived at time 0. Lower number has higher priority.
 10. **Write short note on Virtual Memory and Cache memory.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
 
 11. **(ii) Virtual Memory এর প্রয়োজনীয়তা কি ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 786]**
+
+12. **A system uses 3 page frames for storing process pages in main memory. It uses the Least Recently Used (LRU) page replacement policy. Assume that all the page frames are initially empty. What is the total number of page faults that will occur while processing the page reference string given below? 4, 7, 6, 1, 7, 6, 1, 2, 7, 2.** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 817]**
+
+13. **Briefly explain the concept of ‘Thrashing’ in terms of OS.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 822]**
 
 ## Process Management & Process States
 

@@ -111,6 +111,8 @@ for i in N:
 
 5. **(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
 
+6. **Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are the difference between there two techniques?** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 813]**
+
 ## Divide and Conquer & Matrix Multiplication
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 378]**
@@ -161,6 +163,8 @@ for i in N:
 
 10. **DFS complexity (Approximate)** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 718]**
 
+11. **Follow alphabetical ordering while considering the order of nodes traversed. (Find BFS and DFS)** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
+
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
@@ -174,6 +178,8 @@ for i in N:
 5. **Find the minimum spanning tree:** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 700]**
 
 6. **How to find single source shortest path from negative weighted cycle. Justify and how you find it is negative weighted graph.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
+
+7. **Shortest path algorithm (Djikstra's algorithm)** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 817]**
 
 ## Greedy Algorithms (Fractional Knapsack)
 

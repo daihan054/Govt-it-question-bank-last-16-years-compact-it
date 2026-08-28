@@ -78,6 +78,10 @@
 
 7. **Trojan Horse কি?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
+8. **What is QR code? What is Rootkit and bootkit?** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820-821]**
+
+9. **Suppose your computer system is attack by a VIRUS and it's also copy into the six neighbor computer. Then it encrypts your all data in your all data in your system so that you can’t detect your data. What is the name of the VIRUS, how can you detect it?** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 821]**
+
 ## Email & Messaging Security (Spam, Phishing)
 
 1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
@@ -229,6 +233,16 @@
 6. **What is SSL, TLS, and HTTPs?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 594]**
 
 7. **Attacker steals private key of website that uses transport layer security and remains undetected what can be done with private key?** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 493]**
+
+8. **(a) Write the full form of those: (i) SSL (ii) TSL** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 819]**
+
+9. **(b) Which IP address may have secured via SSL and publicly by the Certificate Authority(CA). If secured Write Yes or otherwise No.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 819]**
+   1.1.1.1
+   8.8.4.1
+   192.168.10.2
+   8.8.8.8
+   172.16.8.1
+   10.0.0.1
 
 ## Web Security Vulnerabilities
 

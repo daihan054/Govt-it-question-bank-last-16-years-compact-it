@@ -88,6 +88,39 @@ class Test {
 
 32. **(i) Object Oriented Programming এ Static binding and Dynamic binding কি? ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
 
+33. **Complete the following java program.** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 814]**
+```java
+class A{
+    int alpha;
+    int beta;
+    public A(int alpha, int beta){
+        this.alpha = alpha;
+        this.beta = beta;
+    }
+    public void display(){
+        System.out.println("Alpha"+alpha+ "\nBeta"+beta);
+    }
+}
+class Gamma extends A{
+    int gamma;
+    public Gamma(int alpha, int beta, int gamma){
+        super(alpha, beta);
+        this.gamma = gamma;
+    }
+    @Override
+    public void display(){
+        super.display();
+        System.out.println("Gamma"+gamma);
+    }
+}
+public class main{
+    public static void main(String[]args){
+        Gamma g = new Gamma(3,30,10);
+        g.display();
+    }
+}
+```
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**
@@ -185,3 +218,5 @@ Public class class B extends class A {
 7. **Write a java program to counting the vowel and consonant into a given strings.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
 
 8. **Where will be the most chance of the grabage collector being invoked?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 756]**
+
+9. **In Java program. Write the method in given box for the Electric bill calculation if unit is less then 100 then unit rate 4.0 take and after 100-unit rate is 5.50 and reaming unit rate is 6.00. [Bill rate 4.0 if unit<=100, Bill rate 5.50 if (unit>100 && unit<=200), Bill rate 6.00 for remaining units.]** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 816-817]**

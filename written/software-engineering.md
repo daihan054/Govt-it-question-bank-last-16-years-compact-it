@@ -188,6 +188,8 @@
 
 36. **(a) What is Agile? Mentionits four values.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
+37. **What is SDLC? List the stages involed in the SDLC process. Which stages ensures the user acceptance of the system?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

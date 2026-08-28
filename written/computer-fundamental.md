@@ -12,6 +12,8 @@
 
 6. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
+7. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
 ## User Interfaces (CLI vs GUI)
 
 1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -89,6 +91,14 @@
 32. **Computer এর IQ কত?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
 33. **Bangla font এর উদ্ভাবক কে?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+34. **How many bit is use of Unicode digit? (a) 8 (b) 16 (c) 20 (d) 24** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 811]**
+
+35. **Which year gmail is started? (a) 1998 (b) 1988 (c) 2004 (d) 2021** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+36. **Meaning of the GPS system? (a) Global Pointing System (b) Global Positioning System (c) Global Partion System (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+37. **Write the correct Answer: (i) If x=2+3*7\%4/2-3 compile the result x is? (ii) Which of the following algorithms are based on the divide and conquar aproach? (iii) The Internetworking protocol is known as _____. (iv) Locking protocols are used in database management system for _____. (v) File permission is given rwxrw---x, if change the permission with chmod 701 then the permission is _____. (vi) Which is the true? a. adjacency matrix is better then dense graph b. adjacency matrix is better then sparse graph c. both a and b d. none (vii) If the resources are always preempted from the same process _____ can occur. (same type) (viii) What is invoked to create an object in Java? (ix) In the architecture of a database system the external level is the _____. (x) Check sum is used in communication for _____ error detection.** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 815-816]**
 
 ## Hardware Components & BIOS (CMOS Battery)
 

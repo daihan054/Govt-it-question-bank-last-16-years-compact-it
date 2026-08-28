@@ -10,6 +10,8 @@
 
 5. **Write down the difference between compiler and interpreter.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
 
+6. **Define an Interpreted language.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
+
 ## Lexical Analysis & Compiler Phases
 
 1. **(a) How does a compiler handle comments in source code?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**

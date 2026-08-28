@@ -22,6 +22,10 @@
 
 11. **(i) নিচের MAC Address গুলো কোন ধরনের বের করুন। (a) 4C:23:10:4A:1A:2A (b) 45:24:56:2B:24:12 (c) FF:FF:FF:FF:FF:FF** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 788]**
 
+12. **If you have a company of two branch in the same city and they are connected. Which connection is used between then? (a) LAN (b) MAN (c) WAN (d) NONE** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 811]**
+
+13. **Short Question: a) What are the protocol for connectionless and connection oriented? b) Why UTP cable are twisted? c) What are the main requirement of optical fiber splicing? d) Why use subnet mask? e) What the major difference between multicast and broadcast?** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 816]**
+
 ## Physical Layer & Transmission Media (Cables & Wiring)
 
 1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
@@ -165,6 +169,10 @@
 
 31. **Computer Network এ OSI Model এর Layer কয়টি?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
+32. **OSI Model এর কাজ কী? এর লেয়ারসমূহ কী কী?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
+
+33. **Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -247,6 +255,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 12. **What is the difference between Synchronous and Asynchronous transmission?** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
 
 13. **Define full duplex with an example.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+14. **Which communication mode use serial communication? (a) Duplex (b) Half Duplex (c) Simplex (d) All** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
 ## Switching Techniques (Circuit vs Packet Switching)
 
@@ -509,6 +519,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 68. **(a) What is the usable number of host IP addresses available on a network that has a /26 mask? Write down the subset mask of this network. Write down the first and the last IP address that can be assigned to host PCs if the network address is 192.168.30.128/26. What address should be used for broadcast purpose in this Network?** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 801-802]**
 
+69. **Answer the following: (i) 192.168.10.2/28, Find subnet mask. (ii) 192.168.10.2/28, Find Network Address. (iii) 192.168.10.2/28, Find IP Address of the first host? (iv) 192.168.10.2/28, Find IP Address of the last host? (v) 192.168.10.2/28, Find Broadcast Address.** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+70. **Select the correct answer: (i) Which cannot IP address 172.16.28.0/16- (a) .0 (b) .1 (c) .255 (d) All (ii) Which at the follow Dynamically Assign Protocol? (a) DHCP (b) ARP (c) ICMP (d) TCP (iii) Which one is Private IP address? (a) 10.10.10.10 (b) 172.172.172.172 (c) 192.192.192.192 (d) All (iv) SSH Protocol port number is _____. (v) Which is the name of Symmetric key encryption algorithm? (a) AES (b) 3DES (c) Re4 (d) None** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 824]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -709,6 +723,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 5. **Email এর ক্ষেত্রে CC এবং BCC এর অর্থ কি বুঝায়?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
 
+6. **Which of the following is correct email formate? (a) compact@webmail.com (b) compact@webmail@com (c) compact.webmail.com (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
 ## Data Rate & Channel Capacity (Nyquist, Shannon)
 
 1. **Nyquist math: See in Data Communication & Networking Chapter** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
@@ -798,3 +814,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 8. **(ক) Wi-Fi Network সম্পর্কে সংক্ষিপ্ত বিবরণ দিন। Wi-Fi Sensor Network এবং Ad Hoc Network এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
 
 9. **Call Drop কী? এর কারণ গুলো উল্লেখ করুন।** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 810]**
+
+10. **LTE কী? এর এডভান্সড প্রযুক্তির নাম লিখুন।** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
