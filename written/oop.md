@@ -123,6 +123,8 @@ public class main{
 
 34. **Write a C/C++ Program that has a Class Account, Subclass Savings Account, Current Account etc with related hierarchy way.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 834]**
 
+35. **Write the definition of Inheritance, Polymorphism with coding example.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 835]**
+
 ## Class Design & Object-Oriented Modeling
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**

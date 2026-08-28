@@ -189,6 +189,8 @@
 
 4. **(a) How can VPN provide secure communication platform? Explain site-to-site VPN and remote-access VPN using necessary figures.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 800]**
 
+5. **What is VPN? Difference between site to site VPN and Remote access VPN.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840]**
+
 ## Authentication & Access Control
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

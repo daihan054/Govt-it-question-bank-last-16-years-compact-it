@@ -162,6 +162,8 @@
 
 81. **মহান মুক্তিযুদ্ধের প্রথম স্মারক ভাস্কর্যের নাম কি?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
+82. **Short question: General Knowledge** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]

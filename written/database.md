@@ -330,6 +330,8 @@ SELECT count(Distinct val) val_count
 From t;
 ```
 
+53. **Write SQL command from the following tables. Employee (ename, street, city) Works (ename, cname, salary, joindate) Company (cname, city) Manages (ename, mname) (a) Find name, street, city who work for First Corporation Bank and earn more than 30000 (b) Find name of all employees, who live in the same city and company for which they work. (c) Give all employees of First Century Bank 10 percent salary raise (d) Find the company with payroll less than 100000.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 835-836]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -539,6 +541,8 @@ From t;
 10. **(a) While converting E-R diagram into Tables, how is a Many-to-many relationship set between entities A and B is converted into database tables?** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
 
 11. **Draw ER diagram for Titas Gas Transmission and Distribution Company limited. Relation between customer and meter. (full question টা পাওয়া যায়নি।)** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 824]**
+
+12. **Draw ER diagram from a story.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 837]**
 
 ## Database Connectivity (JDBC)
 

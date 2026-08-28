@@ -32,6 +32,8 @@
 
 16. **১. প্রবন্ধ রচনা করুন : মুক্তিযুদ্ধের চেতনা ও আমাদের সংস্কৃতি** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
 
+17. **Composition: Bangla** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -103,7 +105,7 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 8. **Translation English to Bangla** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
 
-9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+9. **English to Bangla translation:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]**
 
 10. **Translation [English to Bangla]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
    **Translate the following passage into Bangla:**

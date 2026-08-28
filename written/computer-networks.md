@@ -50,6 +50,10 @@
 
 11. **(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
 
+12. **Explain 10baseT.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839]**
+
+13. **Which media transfer data with higher bandwidth? Advantages of this media.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
+
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget)
 
 1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
@@ -175,6 +179,10 @@
 
 33. **Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
+34. **What is OSI model? Write down the name of OSI model layer.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]**
+
+35. **What is TCP/IP model? Briefly explain TCP/IP model.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]**
+
 ## Application Layer & Well-Known Port Numbers
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -281,6 +289,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 4. **Unit of data link layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
 5. **(ক) নেটওয়ার্কে ডাটা প্যাকেটে trailer কোথায় এবং কেন ব্যবহার করা হয়? উদাহরণ দিন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 775]**
+
+6. **How STP works? Explain congestion control algorithm.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 842-843]**
 
 ## Line Coding & Digital Encoding
 
@@ -525,6 +535,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 70. **Select the correct answer: (i) Which cannot IP address 172.16.28.0/16- (a) .0 (b) .1 (c) .255 (d) All (ii) Which at the follow Dynamically Assign Protocol? (a) DHCP (b) ARP (c) ICMP (d) TCP (iii) Which one is Private IP address? (a) 10.10.10.10 (b) 172.172.172.172 (c) 192.192.192.192 (d) All (iv) SSH Protocol port number is _____. (v) Which is the name of Symmetric key encryption algorithm? (a) AES (b) 3DES (c) Re4 (d) None** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 824]**
 
+71. **A network address is given 172.18.10.0/23, divide this network address into 4 subnets and find every subnet address, start address, subnet mask, broadcast address etc.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843-844]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -539,6 +551,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **(a) Discuss the main role of Address Resolution Protocol (ARP) in the network layer of TCP/IP protocol suite.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
 
+2. **What is ARP? Briefly explain ARP.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841-842]**
+
 ## Network Services (DHCP, NAT)
 
 1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
@@ -552,6 +566,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 5. **What is DHCP Server and why it is needed in a computer network.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
 
 6. **(b) Explain the message flow between a DHCP server and client. Show necessary timing diagram.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
+
+7. **What is APIPA?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840]**
 
 ## IPv6 Addressing
 
@@ -568,6 +584,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 6. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
 
 7. **IPv6 address কত বিটের?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+8. **What is the difference between stateful DHCPv6 and stateless DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840-841]**
+
+9. **What is DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
+
+10. **Explain IPv6 link local address and multicast address.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
 
 ## Routing Protocols & Route Configuration
 
@@ -622,6 +644,14 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 11. **Define distance Vector and Link state routing protocols.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
 
 12. **What are static and dynamic routing? Given their relative advantages.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
+
+13. **What is Routing? Write down the difference between static routing and dynamic routing.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837-838]**
+
+14. **Name of the Algorithm RIP, OSPF and EIGRP routing protocol.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 838]**
+
+15. **What is Autonomous system? What is the difference between Link state routing protocol and Distance vector routing protocol?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 838-839]**
+
+16. **Cost calculation of EIGRP formula.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839]**
 
 ## High Availability & Redundancy Protocols (VRRP, HSRP)
 
@@ -678,6 +708,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 8. **(b) What is NAT? Mention its advantages.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
 
 9. **(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
+
+10. **Why do we need NAT? Draw a topology diagram to explain NAT.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
+
+11. **What is PAT? How does a network PAT work?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 
@@ -792,6 +826,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 3. **Write the full form of the given technologies CX, IGW and IIG. Write feature of there technologies.** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 806]**
 
 4. **TSCM এর কাজ কী? VoIP পরিচালনায় কী কী সরঞ্জামের প্রয়োজন হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 810]**
+
+5. **Write down the difference between IPoE and PPPoE.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839-840]**
 
 ## Satellite Communication
 

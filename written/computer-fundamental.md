@@ -106,6 +106,8 @@
 
 39. **Write the full form of: VIRUS, BIOS, DoS attack, OSPF, DVD, WiFi.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
 
+40. **Write down the full meaning: DHCP, ICMP, ACNS, GARP.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 842]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**

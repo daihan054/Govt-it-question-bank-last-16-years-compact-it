@@ -31,6 +31,8 @@
 
 3. **Design a DFA to accept floating-point numbers of the form +/- n or +/- n.m, where n and m are decimal integers (non-empty strings over the digits \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}).** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 717]**
 
+4. **State diagram of DFA using binary strings having 0 with multiple of 3 on input \{0,1\}. Also showing regular expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 836-837]**
+
 ## Linker & Loader
 
 1. **(b) What are the tasks of linker and loader? Describe briefly using examples.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 479]**

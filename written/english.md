@@ -48,6 +48,10 @@
 
 23. **Write an eassy on the “Role of Telecommunications in supporting economic and business activities during three Covid-19 pandemic situations.”** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
 
+24. **English Focus: Bhasan Char- A Safe Home for Rohingya Refugees.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 837]**
+
+25. **Composition: English** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -217,7 +221,7 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 
 8. **Translation [Bangla to English]** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 431]**
 
-9. **Bangla to English Translation** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+9. **Bangla to English Translation** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]**
 
 10. **Translation (Bangla to English)**
     **যুব উন্নয়ন বিষয়ক......** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
