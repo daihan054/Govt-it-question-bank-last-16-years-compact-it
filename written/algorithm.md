@@ -26,6 +26,8 @@ for i in N:
 
 10. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
 
+11. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983-984]**
+
 ## Searching Algorithms
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
@@ -104,6 +106,8 @@ for i in N:
 22. **(a) How the quick sort is implemented? What is the complexity of quick sort?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892, 895]**
 
 23. **Analize and compare the Quick-sort and Merge-sort algorithms in term of their time and space complexity.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+
+24. **Insertion sort is a simple sorting algorithm. Write a program to sort some given numbers using insertion sort algorithm.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 989-990]**
 
 ## Heap & Priority Queue
 

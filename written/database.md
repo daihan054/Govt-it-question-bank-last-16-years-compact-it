@@ -71,6 +71,8 @@
 
 12. **ডাটাবেইজ ম্যানেজমেন্ট সিস্টেমের মধ্যে CRUD এর কাজ কি?** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
 
+13. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 988-989]**
+
 ## SQL Queries
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
@@ -396,6 +398,8 @@ SELECT count (*) FROM (
 9. **What do you mean by Rollback and Roll forward?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 682]**
 
 10. **Describe ACID properties of DBMS.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 860]**
+
+11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 984-985]**
 
 ## Normalization & Database Design
 

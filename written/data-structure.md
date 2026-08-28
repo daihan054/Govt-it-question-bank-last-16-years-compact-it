@@ -56,6 +56,8 @@ Output: Not Balanced
 
 4. **Circular Queue and Priority Queue কীভাবে কাজ করে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912-913]**
 
+5. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983]**
+
 ## Linked List
 
 1. **Explain with proper example of singly linked list.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -163,6 +165,8 @@ Output: Not Balanced
 4. **Write down the properties of Max heap. Also write down the heapsort algorithm.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 686]**
 
 5. **Given an array of 6 elements: \{15, 19, 10, 7, 17, 16\}. Draw heap tree and again draw the tree after deletion of element 7 from this tree.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 863]**
+
+6. **Binary tree টিকে heapify করুন যেন maximum heap -এ রূপান্তরিত হয়:** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 991]**
 
 ## Hashing & Hash Tables
 

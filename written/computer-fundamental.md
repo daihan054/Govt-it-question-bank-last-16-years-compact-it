@@ -206,6 +206,10 @@
 
 14. **(ii) E-Commerce কী? E-Commerce-এর প্রকারভেদ উল্লেখ করুন। Search engine কী? এর কয়েকটি উদাহরণ দিন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 956, 958]**
 
+15. **Make a list of banking software used in Bangladesh. List the essential features for successful Banking Software and Apps.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 986-987]**
+
+16. **RFID has huge applications in business, especially in supply chain management and toll collection system. Show the basic working principle of RFID in brief.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 987-988]**
+
 ## Digital Banking & Financial Inclusion
 
 1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**

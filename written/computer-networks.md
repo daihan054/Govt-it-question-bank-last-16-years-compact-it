@@ -259,6 +259,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 15. **What is a TCP Three-way handshaking step?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
 
+16. **The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate packets. What are the functions performed by TCP to make a network more reliable?** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 990]**
+
 ## Communication System & Transmission Modes
 
 1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -617,6 +619,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 89. **A IP Address is: 172.16.128.120/25 now answers the following questions: (i) What is the network address of this IP? (ii) What is the subnet mask? (iii) What is the broadcast address? (iv) How many connection is possible in this network?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
 
 90. **(a) A IP address is 172.20.0.0/27. How many subnets and hosts per subnet?** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977]**
+
+91. **Given IP address 172.16.128.120/25 what is the subnet mask, network address, broadcast address and total usable host in this network?** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 991]**
 
 ## Network Layer (Packet Fragmentation & Tunneling)
 
@@ -985,3 +989,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 13. **What is wireless network system? Why CSMA/CA used instead of CSMA/CD?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922-923]**
 
 14. **Write about 5G disadvantages: (a) Increased High Costs (b) Draining Battery of devices. (c) Increased infrastructure development cost** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928]**
+
+15. **Make a list of LTE Network elements.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 988]**

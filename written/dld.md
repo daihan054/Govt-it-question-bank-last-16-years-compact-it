@@ -35,6 +35,8 @@
 
 16. **(ii) What is the Excess-3 code of 1010?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 974]**
 
+17. **There are different number systems. i. Convert (10010.101)_2 = (?)_{10} ii. (543)_{10} = (?)_{16}** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 989]**
+
 ## 2's Complement & Binary Arithmetic
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**

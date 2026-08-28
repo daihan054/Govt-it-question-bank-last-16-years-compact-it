@@ -313,6 +313,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 20. **(b) Turnaround time of FCFS and SJF** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 978]**
 
+21. **Operating system (OS) scheduling is the key concept of multiprogramming. List and briefly define the major types of OS scheduling.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985-986]**
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**

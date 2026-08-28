@@ -326,6 +326,10 @@ return 0;
 
 83. **(ii) if......else statement এর format লিখ। 1+3+5+7+\dots+n সিরিজটির যোগফল নির্ণয়ের জন্য C-language এ একটি প্রোগ্রাম লিখ।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 955]**
 
+84. **An employee’s total weekly pay is calculated by multiplying the hourly wage and number of regular hours plus any overtime pays which in turn is calculated as total overtime hours multiplied by 1.5 times the hourly wage. Write a program that takes as inputs the hourly wage, total regular hours, and total overtime hours and prints an employee’s total weekly pay.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985]**
+
+85. **Write a C program: 1+2^n+3^n+4^n+\dots\dots\dots\dots+n^n (where n>0).** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 990-991]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -830,6 +834,8 @@ int main(){
 
 31. **After compilation and execution, what will be output in the following code:** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 972]**
 
+32. **Write down the output of following program:** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 991]**
+
 ## Recursion & Functions
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
@@ -945,3 +951,5 @@ int main() {
 31. **১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
 
 32. **(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 954]**
+
+33. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985]**
