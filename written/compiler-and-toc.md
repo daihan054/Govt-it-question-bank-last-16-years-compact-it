@@ -23,6 +23,8 @@
 
 3. **Why we optimize algorithm when it runs in compile time?** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 858]**
 
+4. **Explain Semantic Error in a context of Compiler.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 935]**
+
 ## Regular Expressions & Finite Automata
 
 1. **Which one of the following regular expressions represents the language: the set of all binary strings having two consecutive 0s and two consecutive 1s?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 448]**

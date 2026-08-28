@@ -42,6 +42,8 @@
 
 21. **Bangla focus: “দক্ষ মানবসম্পদ যুগোপযোগী তৈরীতে শিক্ষাব্যবস্থার প্রয়োজনীয়তা”** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
 
+22. **বাংলা: স্বল্পোন্নত দেশ থেকে উন্নয়নশীল দেশে বাংলাদেশের যাত্রা।** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 930]**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**

@@ -17,6 +17,8 @@
 
 7. **(b) What is the difference between supervised and unsupervised learning? Explain with examples.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
 
+8. **Key difference between supervised Learning and Unsupervised learning.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+
 ## Search Algorithms (Informed vs Uninformed Search)
 
 1. **Write down the difference between informed and uninformed search algorithm.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**

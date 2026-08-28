@@ -352,6 +352,8 @@ All process arrived at time 0. Lower number has higher priority.
 
 14. **(a) What do you mean by virtual memory?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
 
+15. **A system uses 8 page frames to store process pages in main memory. It uses the minimum page replacement policy. Assume that all page frames are initially blank. 64 separate pages were inserted and then the pages were inserted reverse order. How many pages will be miss?** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+
 ## Process Management & Process States
 
 1. **(b) What is process? Describe different states of a process.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**

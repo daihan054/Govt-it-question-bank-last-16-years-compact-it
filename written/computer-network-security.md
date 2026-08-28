@@ -96,6 +96,8 @@
 
 12. **Malware বলতে কী বুঝানো হয়? উদাহরণসহ সংক্ষেপে বর্ণনা করুন।** **(41th BCS Written Exam: 2021) [compact it 883]**
 
+13. **Define component of computer virus.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
 ## Email & Messaging Security (Spam, Phishing)
 
 1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
@@ -160,6 +162,8 @@
 
 20. **Phishing attack এর মাধ্যমে কীভাবে attack করা হয়। উহার কারণে কি ক্ষতি হতে পারে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 913]**
 
+21. **Explain ARP Spoofing attack with diagram. Why ARP spoofing attacker used to launch Man-in-the-Middle attack.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+
 ## Firewalls & Network Defense
 
 1. **What is Packet Filter of Firewall?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -194,6 +198,8 @@
 12. **What is DMZ in data center? Describe using diagram? Write the network devices in this system?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 756]**
 
 13. **Difference between blacklisting and whitelisting. Which is more secure and why?** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
+
+14. **Write difference between Antivirus and Firewall.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
 
 ## VPN & Tunneling Protocols (IPsec, SSL VPN)
 

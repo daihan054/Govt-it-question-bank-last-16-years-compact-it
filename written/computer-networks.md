@@ -390,6 +390,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 14. **A want to send 2 files the size of each file is 500000 bit's data to B through TDM channel which has slot 16 channel bit rate 1.5 Mbps and 30 millisecond delay time, if no propagation delay; find out time to send the data.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
 
+15. **We have four sources, each creating 250 characters per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame. Now find- (a) the data rate of each source. (b) the duration of each character in each source.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
 ## Subnetting & IP Addressing
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
@@ -586,6 +588,16 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 79. **Find the Subnet mask from the following IP: 192.168.3.0/22** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
 
+80. **VLSM Subnetting. Given an IP address, 192.168.0.0/20 For creating 4 subnets department of A, B, C, D with 2000, 1000, 6000 and 8000 hosts, find out every department first and last IP address. Also write the subnet mask of q.x.y.z/notation.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 927]**
+
+81. **You are given a IP address 172.16.20.0/25 have four subnets. For each department find the following information. (CSE, EEE, IPE, PME)** **(NRCC Assistant Programmer Exam: 2021) [compact it 931]**
+
+82. **Define IP 127.0.0.1, what is localhost?** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+
+83. **What is static IP Address and dynamic IP Address?** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+
+84. **Using the IP address 192.168.10.0/23 find out- (i) Subnet/First address (ii) Last Address (iii) Subnet mask** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -630,7 +642,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 4. **(ক) IP Address কী? IPv4 এবং IPv6 এর মধ্যে চারটি প্রধান পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
-5. **Difference between IPv4 and IPv6.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]**
+5. **Difference between IPv4 and IPv6.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
 
 6. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
 
@@ -643,6 +655,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 10. **Explain IPv6 link local address and multicast address.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
 
 11. **(a) Differentiate between IPV4 and IPV6.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
+
+12. **Write difference Between IPv4 and IPv6.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
 
 ## Routing Protocols & Route Configuration
 
@@ -739,6 +753,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 11. **Write down the difference between Hub and Switch.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
 
 12. **Wi-Fi access point বলতে কী বুঝানো হয়? Router and Switch -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 883]**
+
+13. **Difference between Switch, Hub and Router.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
 
 ## VLANs & Subnetting Comparison
 
@@ -856,6 +872,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 12. **In serial communication employing 8 data bits, a parity bit and 2 stop bits. What is the minimum band rate requested to sustain a transfer rate of 300 characters per second?** **(BAUST Assistant Programmer Exam: 2021) [compact it 918]**
 
+13. **Find signal bit per second bound rate 1000 and 16-QAM signal.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
 ## Digital Modulation & Signal Processing (BPSK, QPSK)
 
 1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
@@ -935,3 +953,5 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 12. **(c) Difference between broadband Wi-Fi and Wi-Max communication technology.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
 
 13. **What is wireless network system? Why CSMA/CA used instead of CSMA/CD?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922-923]**
+
+14. **Write about 5G disadvantages: (a) Increased High Costs (b) Draining Battery of devices. (c) Increased infrastructure development cost** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928]**

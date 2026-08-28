@@ -189,6 +189,8 @@ for i in N:
 
 15. **(c) Between Depths first search (DFS) and Breath first search (BFS). Which one is faster? Which one requires more memory?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
 
+16. **Find the time and space complexity of BFS which has branch 4 branch and the target at level 5? If cpu can explore 10000 nodes per second find the time required and if the memory 1KB find the required memory.** **(NRCC Assistant Programmer Exam: 2021) [compact it 931]**
+
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
@@ -210,6 +212,8 @@ for i in N:
 9. **Find out minimum spanning tree from a given graph using krushkal algorithm.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908]**
 
 10. **Consider the following graph: Now find the minimum spanning tree using Kruskal's algorithm.** **(BAUST Assistant Programmer Exam: 2021) [compact it 920]**
+
+11. **Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using the shortest path between two substations for SGFL Company.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 935-936]**
 
 ## Greedy Algorithms (Fractional Knapsack)
 

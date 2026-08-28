@@ -351,6 +351,12 @@ SELECT count (*) FROM (
 (SELECT Bank_Manager, Loan_Amount FROM Loan_Records) AS T);
 ```
 
+60. **Below tables are given, Employee (employee_id, name, salary, department) Leave (employee_id, date, reason, no_leaves) Holiday (Date, description) (i) Write mapping cardinality between 'Employee' and 'Holiday' table. (ii) Write query to show all employee's leave count. (iii) Write query to show employees who are in 'HR' department and have taken at least 5 leaves.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928]**
+
+61. **Find the Query for the Instructor table a. Find the average salary of instructors in each department. b. Find the names and average salaries of all departments whose average salary is greater than 42000. c. Find names of instructors with salary greater than that of some (at least one) instructor in the CSE department.** **(NRCC Assistant Programmer Exam: 2021) [compact it 930]**
+
+62. **Consider the following relational database schema consisting of the four relation schemas: passenger (pid, ppname, pgender, pcity) agency (aid, aname, acity) flight (fid, fdate, time, src, dest) booking (pid, aid, fid, fdate) a) Get the complete details of all flights to New Delhi b) Get the details about all flights from Chennai to New Delhi.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -594,6 +600,9 @@ SELECT count (*) FROM (
 16. **Draw the ER diagram where their relation named TEAM, PLAYER, MATCH** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 880]**
 
 17. **Railway Service system ER diagram.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
+
+18. **(i) Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Referee (Referee-id, Referee-name) Player (player-id, palyername, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result).** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928-929]**
+   **(ii) Convert the ER diagram to relations (Table)** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 929-930]**
 
 ## Database Connectivity (JDBC)
 

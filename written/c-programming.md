@@ -4,6 +4,8 @@
 
 2. **Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 814]**
 
+3. **You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account, Find the highest and second highest balance of saving account.** **(NRCC Assistant Programmer Exam: 2021) [compact it 931-932]**
+
 ## Basic Programs & Control Statements
 
 1. C program for the number is even or odd. (BEPRC Assistant Programmer Exam: 08.08.2026)
@@ -311,6 +313,12 @@ return 0;
 76. **A হলো মিটার নং, B হলো ব্যবহৃত ইউনিট। 300 ইউনিটের বেশী তাদের মিটার নং এবং ইউনিটের যোগফল বের কর।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912]**
 
 77. **Write the code for second highest maximum from given three number in c/c++.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 920-921]**
+
+78. **Write a simple output C program to check odd-even number.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+
+79. **Write a C program for prime numbers between 1 to N.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+
+80. **Write a C/Java program to check Armstrong number or not.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
 
 ## Flowcharts & Algorithms
 
@@ -776,6 +784,39 @@ int main() {
     }
     printf("Out site loop:\n i=%d x=%d sum=%d", i, x, sum);
     return(0);
+}
+```
+
+29. **Find the output of the following program. You must show each staps.** **(NRCC Assistant Programmer Exam: 2021) [compact it 931]**
+```c
+#include<stdio.h>
+int main(){
+    int i=0, j=5, x=0, count=0;
+    while(j>i){
+        if(i==7)
+            break;
+        x=x+i+count;
+        count=count+2;
+        i++;
+    }
+    printf("i=%d, count=%d", i, count);
+    printf("j=%d, x=%d", i, x);
+    return 0;
+}
+```
+
+30. **Find out the output of the following program.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 935]**
+```c
+#include<stdlib.h>
+#include<string.h>
+int main(){
+    int i=0, length;
+    char string[] = "Hello\0 World!!";
+    length = strlen(string);
+    char*s = string;
+    for(i=0; i<length; ++i)
+        printf("%c", *++s);
+    return 0;
 }
 ```
 

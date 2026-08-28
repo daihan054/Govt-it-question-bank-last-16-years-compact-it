@@ -134,6 +134,8 @@ Output: Not Balanced
    In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
    Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
 
+25. **Making binary a tree from the given expression: 3 + ((5+9)*2)** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+
 ## Binary Search Tree (BST)
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**

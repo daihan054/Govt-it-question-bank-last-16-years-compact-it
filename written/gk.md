@@ -180,6 +180,8 @@
 
 90. **জাতিসংঘের সাধারণ অধিবেশনে কে সর্বপ্রথম বাংলায় ভাষণ দেয় ও কত তারিখে?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
+91. **Write 4 sentence about Mujib 100.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]

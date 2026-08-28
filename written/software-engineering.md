@@ -74,6 +74,10 @@
 
 32. **Briefly describe Unit testing, Smoke testing and Stress testing in software engineering.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 914]**
 
+33. **Write different between Alpha and Beta testing.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 933-934]**
+
+34. **Key difference between BLACK BOX and WHITE BOX testing.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**

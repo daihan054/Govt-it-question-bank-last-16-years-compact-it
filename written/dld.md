@@ -101,6 +101,8 @@
 
 10. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 890-891]**
 
+11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 935]**
+
 ## Logic Gates & Universal Gates
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -151,6 +153,8 @@
 
 24. **How can you Implement AND, OR and NOT gates using only NAND and NOR gates? What is the main difference between Latch and Flip-flop?** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
 
+25. **Make NAND gate using NOR gate.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
+
 ## Combinational Circuits (Adders, Encoders, MUX)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -196,6 +200,8 @@
 15. **(a) Draw the logic diagram of Half-Adder the truth table of Full-Adder and use half Adder (S) and basic gates to build a Full-Adder.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
 
 16. **Circuit of the following figure uses 4:1 Multiplexer, what is output of the function f?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+
+17. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 927-928]**
 
 ## Sequential Circuits (Latches & Flip-Flops)
 

@@ -16,6 +16,12 @@
 
 8. **Write down the function of Relay, Fuse and Circuit Breaker.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
+9. **Find the Value of I.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
+
+10. **BREB power transmission interrupt related.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
+
+11. **EEE related 3 math question.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
+
 ## AC Circuits & Power Analysis
 
 1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
@@ -65,6 +71,8 @@
 ## Circuit Theorems (Thevenin, Norton, Superposition)
 
 1. **Find current across 2 \Omega resistor using Thevenin Theorem:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 417]**
+
+2. **Find the Value of I_{ab} using Norton's Theorem.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
 
 ## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)
 
