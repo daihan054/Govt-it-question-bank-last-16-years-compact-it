@@ -108,6 +108,42 @@
    c. Fourth generation
    d. Fifth generation
 
+19. **On which aspect the analog computers are better than digital?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
+   A) Speed
+   B) Accuracy
+   C) Reliability
+   D) Automatic
+
+20. **How many numbers could ENIAC store in its internal memory?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
+   A) 100
+   B) 20
+   C) 80
+   D) 40
+
+21. **Which of the following is a class of computers based on model?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Digital Computers
+   B) Hybrid Computers
+   C) Analog Computers
+   D) AT Computers
+
+22. **Which of the following is not true?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+   A) Transistors are much smaller
+   B) Transistors produce low heat
+   C) Transistors were less reliable
+   D) Transistors were used in radios and other electronic devices
+
+23. **Which was the most popular first-generation computer?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+   A) IBM 1650
+   B) IBM 360
+   C) IBM 1130
+   D) IBM 650
+
+24. **Which of the following is not a form of data?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+   A) Numbers and characters
+   B) images
+   C) sound
+   D) None of this
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -313,6 +349,18 @@
    B) CMOS batteries
    C) Toner cartridges
    D) Cathode ray tubes
+
+31. **Which of the following produces the best quality graphics reproduction?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Laser printer
+   B) Inkjet printer
+   C) Plotter
+   D) Dot matrix printer
+
+32. **What type of device is computer keyboard?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+   A) Memory
+   B) Output
+   C) Storage
+   D) Input
 
 ## ICT & Emerging Technology
 
@@ -643,3 +691,9 @@
    B) CODASYL
    C) CCD
    D) DASD
+
+7. **The computer code of the interchange of information between terminals is—** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+   A) ASCII
+   B) BCD
+   C) EBCDIC
+   D) All of them

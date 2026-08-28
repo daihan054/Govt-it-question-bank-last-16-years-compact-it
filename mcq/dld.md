@@ -84,6 +84,12 @@
    C) OR
    D) NOT
 
+15. **Binary circuit elements have** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
+   A) One stable state
+   B) two stable state
+   C) Three stable state
+   D) None of these
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**

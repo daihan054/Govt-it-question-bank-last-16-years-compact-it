@@ -132,6 +132,36 @@
    c. DRAM
    d. Cache
 
+23. **Which of the following terms is the most closely related to main memory?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
+   A) Non-volatile
+   B) Permanent
+   C) Control unit
+   D) Temporary
+
+24. **Which unit holds data permanently?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Input unit
+   B) Secondary storage unit
+   C) Output unit
+   D) Primary Memory unit
+
+25. **Magnetic tape can serve as—** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Secondary storage media
+   B) Output media
+   C) Input media
+   D) All of them
+
+26. **Which of the following is internal memory?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+   A) Disks
+   B) Pen Drives
+   C) RAM
+   D) CDs
+
+27. **Which of the following memories needs refreshing?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+   A) SRAM
+   B) DRAM
+   C) ROM
+   D) All of them
+
 ## CPU & Registers
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -320,6 +350,24 @@
    C) similar
    D) undefined
 
+32. **The word length of a computer is measured in-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Bytes
+   B) Millimeters
+   C) Metes
+   D) Bits
+
+33. **Central Processing Unit is combination of-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+   A) Control Storage
+   B) Control and output unit
+   C) Arithmetic Logic and Input Unit
+   D) Arithmetic logic and control unit
+
+34. **The control unit of a microprocessor-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 243]**
+   A) Stores data in the memory
+   B) accepts input data from keyboard
+   C) Performs arithmetic/logic function
+   D) None of the above
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
@@ -357,6 +405,42 @@
    B) response time
    C) power consumption
    D) shelf life
+
+7. **Which of the following is used for manufacturing chips?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Control bus
+   B) Control unit
+   C) Parity unit
+   D) Semiconductor
+
+8. **Before a disk can be used to store data, it must be-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Formatted
+   B) Reformatted
+   C) Addressed
+   D) None
+
+9. **Which technology is used in Compact disks?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Mechanical
+   B) Electrical
+   C) Electromagnetic
+   D) Laser
+
+10. **Which of the following is a storage device?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
+   A) Tape
+   B) Hard Disk
+   C) Floppy Disk
+   D) All of them
+
+11. **What does the disk drive of computer do?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+   A) Rotate the Disk
+   B) Read the disk
+   C) Load a program form the disk into the memory
+   D) Both B and C
+
+12. **Which of the items below are considered removable storage media?** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+   A) Removable hard disk cartridges
+   B) (Magneto-optical) disk
+   C) Flexible disks cartridges
+   D) All of them
 
 ## RAID & Storage Architecture
 

@@ -780,6 +780,12 @@
    C) Mesh
    D) Hybrid
 
+53. **Typical data transfer rates in LAN are of the order of-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 242]**
+   A) Bits per sec
+   B) Kilobits per sec
+   C) Megabits per sec
+   D) None of them
+
 ## Multiplexing & Data Rate
 
 1. **If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
