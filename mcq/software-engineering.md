@@ -269,3 +269,9 @@
    B) List
    C) Queue
    D) All of these
+
+3. **Which of the following is a design pattern?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) List
+   B) Queue
+   C) Factory
+   D) All of above

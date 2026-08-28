@@ -220,6 +220,42 @@
    C) print
    D) None of these
 
+29. **Which of the following produce an answer that is closest in value to a double, d, while not being greater than d?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]**
+   A) (int.Math.min(d))
+   B) (int.Math.max(d))
+   C) int.Math.abs(d))
+   D) (int).Math.floor(d))
+
+30. **Which keyword must be used to inherit class in java?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]**
+   A) extends
+   B) super
+   C) this
+   D) extend
+
+31. **A class that is inherited in java is called a ________.** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]**
+   A) sub class
+   B) super class
+   C) state class
+   D) implement class
+
+32. **Which one of these interfaces is implemented by thread class?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]**
+   A) Set
+   B) Connections
+   C) Runnable
+   D) None of above
+
+33. **In java, which operator is used to create an object?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]**
+   A) class
+   B) scanf
+   C) print
+   D) None of above
+
+34. **In java, which one will be used for comprising whether the two String object str1 and str2 are same?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) str1=str2
+   B) str1.equalsIgnoreCase(str2)
+   C) str1==str2
+   D) All of above
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -309,6 +345,24 @@
    B) new
    C) delete
    D) all of these
+
+11. **Which of the following is the destructor for class “vehicle”?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]**
+   A) *vehicle()
+   B) *vehicle (int value)
+   C) ~vehicle()
+   D) ~vehicle (int value)
+
+12. **Which operator that can be overloaded is?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]**
+   A) ++
+   B) ::
+   C) . (dot)
+   D) 0
+
+13. **How many instances of an abstract can be created?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]**
+   A) 0
+   B) 1
+   C) 2
+   D) 13
 
 ## OOP Concepts & Principles
 

@@ -377,3 +377,27 @@
    B) Stack
    C) Adjacency list
    D) Pointer
+
+10. **Which one is less costly for insertion at a particular position?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]**
+   A) Array
+   B) Queue
+   C) Link List
+   D) Stack
+
+11. **Which data structure required evaluating a postfix expression is?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]**
+   A) Queue
+   B) Stack
+   C) Link List
+   D) Array
+
+12. **Link List can be implemented by using?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) Array
+   B) Pointer
+   C) Both A and B
+   D) None of above
+
+13. **Which following data structure is linear type?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) Strings
+   B) Lists
+   C) Queue
+   D) All of above

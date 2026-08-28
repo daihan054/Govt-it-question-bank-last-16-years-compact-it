@@ -41,6 +41,12 @@
    c) Coaxial Cables
    d) Fiber Optic Cables
 
+8. **Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+   A) Crossover
+   B) Straight through
+   C) Rolled
+   D) Shield twisted pair
+
 ## Application Layer Protocols
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -274,6 +280,24 @@
    B) HTTP
    C) DNS
    D) FTP
+
+39. **Which protocol can cause overload on a CPU of a managed device?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 233]**
+   A) Net flow
+   B) WCCP
+   C) IP SLA
+   D) SNMP
+
+40. **Which of the following protocol used TCP and UDP ports?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+   A) FTP
+   B) SMTP
+   C) Telnet
+   D) DNS
+
+41. **Which of the following TCP/IP address constitute the loopback address?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]**
+   A) 1.1.1.1
+   B) 255.255.255.255
+   C) 127.0.0.0
+   D) 127.0.0.1
 
 ## IPv6 Addressing
 

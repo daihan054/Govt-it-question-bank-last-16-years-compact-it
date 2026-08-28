@@ -366,6 +366,12 @@
    C) Both A & B
    D) None
 
+40. **The SQL statement that requires or reads data from the table is-** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+   A) Select
+   B) Read
+   C) Query
+   D) None of the above
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -799,6 +805,18 @@
    c) 7
    d) 8
 
+6. **Which of the following is a group of one or more attributes that uniquely identifies a row?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+   A) Key
+   B) Determinant
+   C) Tuple
+   D) Relation
+
+7. **For every relationship, how many possible sets of minimum cardinalities are there?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
+   A) Two
+   B) Three
+   C) Four
+   D) Six
+
 ## ER Diagram & Data Modeling
 
 1. **Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this situation in the relational model?** **(Sonali and Janata Bank Assistant Database Administrator 25-09-2021) [compact it 112]**
@@ -892,6 +910,12 @@
    b) File_Close()
    c) FCOPY
    d) FFLUSH()
+
+5. **Which of the following protocol is an SQL trigger support by oracle?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+   A) Before
+   B) Instead of
+   C) After
+   D) All of the above
 
 ## Database Connectivity (JDBC/ODBC)
 

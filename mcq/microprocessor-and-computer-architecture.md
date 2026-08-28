@@ -272,6 +272,12 @@
    C) path
    D) Hub
 
+25. **Register circuit is not use in-** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]**
+   A) Digital clocks
+   B) Components
+   C) RAM
+   D) Amplifier
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

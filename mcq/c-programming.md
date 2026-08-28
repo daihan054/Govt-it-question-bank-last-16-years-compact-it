@@ -39,6 +39,18 @@
    C) continue
    D) if
 
+8. **Which Control statement can be executed at least once?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
+   A) While
+   B) For
+   C) do-while
+   D) None of the above
+
+9. **Which of the following cannot be checked in a switch-case statement?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) Character
+   B) Integer
+   C) Float
+   D) None of above
+
 ## Output Tracing
 
 1. **What will be the output of the following C code?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -566,6 +578,18 @@
    C) 30
    D) 40
 
+12. **Two dimensional arrays are also called?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+   A) table array
+   B) matrix array
+   C) both A and B
+   D) none of the above
+
+13. **The smallest element of array index is called it-** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
+   A) Lower Bound
+   B) Upper Bound
+   C) Range
+   D) Extraction
+
 ## Pointers & Memory Allocation
 
 1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**
@@ -622,6 +646,12 @@
    B) 10
    C) 12
    D) 13
+
+4. **An algorithm that calls itself directly or indirectly is known as?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+   A) Sub Algorithm
+   B) Recursion
+   C) Polish Notation
+   D) Traversal algorithm
 
 ## Data Types & Variables
 
@@ -688,6 +718,36 @@
    C) %d
    D) %s
 
+10. **Which one of the following is not a valid identifier?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
+   A) _compact
+   B) compact
+   C) com-pact
+   D) com_pact
+   17. Consider the following code
+   ```c
+   #include<stdio.h>
+   int main (int argc, char *argv[]){
+   return 0;
+   }
+   ```
+   What is the maximum length of character array argv in the above code? **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]**
+   A) 0
+   B) 1
+   C) Undefined
+   D) -1
+   18. Which is the value of “d” after this line of code has been executed?
+   double d=Math.round(2.5+Math.random()); **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]**
+   A) 2
+   B) 2.5
+   C) 3
+   D) 4
+
+11. **Which of the following correctly shows the hierarchy of algorithm operation in C?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 236]**
+   A) /*+-
+   B) *-/+
+   C) +-/*
+   D) /*+-
+
 ## Flowcharts & Algorithms
 
 1. **In flowchart what does below represent?** **(Bangladesh Bank Data Entry Operator (IT) Exam: 2020) [compact it 189]**
@@ -717,7 +777,7 @@
    C) & and |
    D) || and &&
 
-3. **Which of the declaration is correct?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]**
+3. **Which of the declaration is correct?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]**
    A) int length;
    B) char int
    C) int long;

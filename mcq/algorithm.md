@@ -84,6 +84,12 @@
    C) (n-1)/2
    D) n/2
 
+15. **The complexity of binary search is-** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
+   A) O(n)
+   B) O(\log n)
+   C) O(n^2)
+   D) O(n \log n)
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -181,6 +187,12 @@
    B) O(\log n)
    C) O(n^2)
    D) O(n \log n)
+
+17. **Bubble sort algorithm sorts n data items using?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
+   A) O(n^2) Comparisons
+   B) O(n) Comparisons
+   C) O(n \log n) Comparisons
+   D) O(n) Comparisons
 
 ## Graph Algorithms
 
@@ -312,6 +324,12 @@
    B) O(n log n)
    C) O(n (log n)^2)
    D) O(n^2)
+
+4. **Two main measures for the efficiency of an algorithm are?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
+   A) Processor and memory
+   B) complexity and capacity
+   C) Time and space
+   D) Data and space
 
 ## Algorithm Design Paradigms
 

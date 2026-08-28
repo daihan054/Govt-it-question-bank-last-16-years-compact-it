@@ -93,3 +93,9 @@
    B) rigid
    C) rental
    D) expensive
+
+13. **The main thread of cloud-based provisioning is-?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 238]**
+   A) Cost
+   B) Security
+   C) Visualization
+   D) All of above

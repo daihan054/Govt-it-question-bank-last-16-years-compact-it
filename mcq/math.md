@@ -412,6 +412,12 @@
    গ. 2.01
    ঘ. 0.001
 
+39. **K iteration by Newton-Raphson of a following square root of a number increases accuracy in number of digits?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+   A) k
+   B) 2k
+   C) 3k
+   D) 4k
+
 ## Percentage, Profit & Loss
 
 1. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
