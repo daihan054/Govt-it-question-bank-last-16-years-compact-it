@@ -1009,6 +1009,12 @@
    (গ) কাচিন
    (ঘ) শান
 
+99. **Which country is called "Thunderbolt of Asia"?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+   (a) Nepal
+   (b) Sri Lanka
+   (c) Bhutan
+   (d) Maldives
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1934,6 +1940,30 @@
    (গ) ৮ মার্চ, ২০২০
    (ঘ) ০১ এপ্রিল, ২০২০
 
+164. **Which article of the constitution of Bangladesh establishes the fundamental right of education for all?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+   (a) 13
+   (b) 17
+   (c) 21
+   (d) 27
+
+165. **The total border district of Bangladesh is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+   (a) 29
+   (b) 32
+   (c) 45
+   (d) 53
+
+166. **Who has designed the logo of Mujib Year?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+   (a) Qamrul Hasan
+   (b) Hashem Khan
+   (c) Sabyasachi Hazra
+   (d) Nithun Kundu
+
+167. **Name of the bank established under Bangladesh Police Welfare Trust-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+   (a) Mitual Trust Bank
+   (b) Community Bangladesh Bank Limited
+   (c) IFIC Bank
+   (d) Trust Bank Bangladesh Limited
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -2092,6 +2122,12 @@
    b. River
    c. Lake
    d. Canal
+
+27. **In the which sea would you find the Great Barrier Reef?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+   (a) Coral Sea
+   (b) Black Sea
+   (c) Aral Sea
+   (d) Dead Sea
 
 ## Sports
 

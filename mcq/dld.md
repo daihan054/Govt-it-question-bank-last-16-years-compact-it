@@ -205,6 +205,18 @@
    c. 31.0065918
    d. 30.0065918
 
+21. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 89]**
+   a. An exclusive logical sum of N with 0Fh
+   b. A logical product of N with 0Fn
+   c. A negative logical product of N with 0Fn
+   d. A logical sum of N with 0Fh
+
+22. **Suppose, Y is an integer variable whose value is either 0 or 1. Which of the following is the equivalent of the statement. if(Y==0) Y=1; else Y=0;?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]**
+   a. Y = 1+Y
+   b. Y = 1-Y
+   c. Y = Y-1
+   d. Y = 1%Y
+
 ## Boolean Algebra & Simplification
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**

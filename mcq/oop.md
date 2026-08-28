@@ -122,6 +122,41 @@
    (c) Is known as the Compiler of Java programming language
    (d) Manages system memory and provides a portable execution environment for Java-bases applications
 
+17. **Which of the following is not a method of the Thread class?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 84]**
+   a. sleep (long msec)
+   b. stop()
+   c. go()
+   d. yield()
+
+18. **Which of the following statements is correct regarding abstract classes?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 84]**
+   a. An abstract class cannot be extended
+   b. A subclass of a non-abstract superclass cannot be abstract
+   c. A subclass can override a concreate method in a superclass to declare it abstract
+   d. An abstract class cannot be used as a data type
+
+19. **What is the output of this Java program?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]**
+   ```java
+   class Test {
+   int i;
+   }
+   class Main {
+   public static void main(String args[]) {
+   Test t;
+   System.out.println(t.i);
+   }
+   }
+   ```
+   a. 0
+   b. A garbage value
+   c. compiler error
+   d. runtime error
+
+20. **Converting a primitive type data into its corresponding wrapper class object instance is called-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 86]**
+   a. Boxing
+   b. Wrapping
+   c. Instantiation
+   d. Auto boxing
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
@@ -167,6 +202,12 @@
    (খ) Prototype
    (গ) Overloaded
    (ঘ) Polymorphism
+
+5. **The feature in object-oriented programming that allows the same operation to be carried out differently, depending on the object, is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]**
+   a. Inheritance
+   b. Polymorphism
+   c. Over functioning
+   d. Overriding
 
 ## OOP Concepts & Principles
 

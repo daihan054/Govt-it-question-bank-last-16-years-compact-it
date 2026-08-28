@@ -54,6 +54,24 @@
    (c) 25
    (d) 30
 
+10. **Suppose you searching student data using student number as the key. Which of following arrangement of the student data is suited for binary search?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]**
+   a. Student data are arranged in the positions indicated by the student numbers hash values.
+   b. Student data are arranged randomly irrespective of the student numbers.
+   c. Student data are arranged in ascending order of student numbers.
+   d. Student data are arranged in the order of the cell addresses of the student numbers' locations.
+
+11. **Which of the following operations is not O(1) for an array of sorted data. You may assume that array elements are distinct.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]**
+   a. Find the ith largest element
+   b. Delete an element
+   c. Find the ith smallest element
+   d. All of the above
+
+12. **The minimum number of comparisons required to determine if an integer appears more than n/2 times in a sorted array of n integers is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 89]**
+   a. \Theta(n)
+   b. \Theta(\log n)
+   c. \Theta(\log*n)
+   d. \Theta(1)
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -98,6 +116,18 @@
    c) Time complexity, O (log n)
    d) Not stable sort
 
+8. **Which of the following is not an in-place algorithm?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 87]**
+   a. Insertion sort
+   b. Selection sort
+   c. Merge sort
+   d. Heap sort
+
+9. **An inversion in a an array A[] is a pair (A[i], A[j] such that A[i]>A[j} and i<j. An array will have maximum number of inversions if it is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 87]**
+   a. Sorted in increasing order
+   b. Sorted in decreasing order
+   c. Sorted in alternate fashion
+   d. Both A and B
+
 ## Graph Algorithms
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -123,6 +153,32 @@
    b) 8
    c) 16
    d) 1
+
+5. **Which of the following data structures is more suitable for graph representation in Floyd Warshall Algorithm?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 84]**
+   a. Adjacency Matrix
+   b. Adjacency List
+   c. Incidence Matrix
+   d. Incidence List
+
+6. **In the following graph, determine the cost of the shortest path between node 1 to node 4.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]**
+   a. 0
+   b. 4
+   c. -5
+   d. \infty
+
+7. **To implement Dijkstra's shortest path algorithm on unweighted graphs so that it runs in linear time, the data structure to be used is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 86]**
+   a. Queue
+   b. Stack
+   c. Heap
+   d. B-Tree
+
+8. **Which of the following statements is/are TRUE for an undirected graph?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 87]**
+   P: Number of odd degree vertices is even
+   Q: Sum of degrees of all vertices is even
+   a. P Only
+   b. Q Only
+   c. Both P and Q
+   d. Neither P nor Q
 
 ## Dynamic Programming & Greedy
 

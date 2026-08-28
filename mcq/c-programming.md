@@ -286,7 +286,7 @@
    c) 20 10
    d) Garbage Value
 
-20. **What is the correct output of the following C program statements?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]**
+20. **What is the correct output of the following C program statements?** **(Rupali Bank Ltd. Assistant Network Engineer (ANE) Exam: 2021) [compact it 81]** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]**
    ```c
    int array[]={6, 7, 8, 9, 0, 1, 2, 4, 5, 6}, *p=array+5;
    printf("%d\n",p[1]);
@@ -295,6 +295,60 @@
    b. 2
    c. 3
    d. Compile Error
+
+21. **What is the output for the following C code segment?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 84]**
+   ```c
+   int i;
+   if(printf("0")) i = 5;
+   else i = 3;
+   printf("%d",i);
+   ```
+   a. 3
+   b. 5
+   c. 03
+   d. 05
+
+22. **Consider the function fun (x, y) below. That is the value of fun (4, 3)?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 87]**
+   ```c
+   int fun(int x, int y) {
+   if (x == 0)
+   return y;
+   return fun(x - 1, x + y);
+   }
+   ```
+   a. 13
+   b. 12
+   c. 9
+   d. 10
+
+23. **What does the following function do?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 87]**
+   ```c
+   int fun(int x, int y) {
+   if (y == 0) return 0;
+   return (x + fun(x, y-1));
+   }
+   ```
+   a. x+y
+   b. x+x*y
+   c. x*y
+   d. xy
+
+24. **Find Output:** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]**
+   ```c
+   #include<stdio.h>
+   struct Testnode(char x, y, z;);
+   int main() {
+   struct Trstnode node1 = {'1', '2', 'c'+3};
+   struct Testnode *node2 = &node1;
+   printf("%c, %c", *((char*)node2+1),*((char*)node2+2));
+   return 0;
+   }
+   ```
+   Which one is the output of the above program?
+   a. 0, f
+   b. 0, c+3
+   c. '0', 'c+3'
+   d. '0', 'f'
 
 ## Storage Classes & Scope
 
@@ -348,6 +402,24 @@
    (খ) a loop in which it occurs
    (গ) a function in which it occurs
    (ঘ) a program in which it occurs
+
+6. **Which of the following is correct to initialize arrays in C?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 83]**
+   a. int array = (1, 2, 3, 4, 5)
+   b. int array = {1, 2, 3, 4, 5}
+   c. int array() = (1, 2, 3, 4, 5)
+   d. int array[5] = {1, 2, 3, 4, 5}
+
+7. **What is the access methodology in array?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 83]**
+   a. Sequential
+   b. Random
+   c. Rational
+   d. Stochastic
+
+8. **Which of the following is correct?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 84]**
+   a. “X extends Y” is correct if and only if X is a class and Y is an interface
+   b. “X extends Y” is correct if and only if X is an interface and Y is a class
+   c. “X extends Y” is correct if X and Y are either both classes or both interfaces
+   d. “X extends Y” is correct for all combinations of X and Y being classes and/or interfaces
 
 ## Pointers & Memory Allocation
 

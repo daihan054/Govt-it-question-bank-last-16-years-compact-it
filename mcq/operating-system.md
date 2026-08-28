@@ -42,6 +42,12 @@
    c) 5
    d) 6
 
+8. **Consider a virtual memory system where three pages are allocated for real memory. If the page replacement algorithm used is FIFO, how many page replacements take place for the access sequence: 1, 3, 2, 1, 4, 5, 2, 3, 4, 5?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]**
+   a. 2
+   b. 3
+   c. 4
+   d. 6
+
 ## Deadlock
 
 1. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**

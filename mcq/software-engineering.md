@@ -94,6 +94,16 @@
    c) Documenting programs
    d) All of the above
 
+10. **Which of the following is the appropriate set of test cases, (A, B) when the part of a program shown is tested by decision condition coverage (branch coverage)?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 89]**
+   ```c
+   if(A OR B) X = X+1;
+   else X = X-1;
+   ```
+   a. {(False, True)}
+   b. {(False, True), (*True, False), (True, True)}
+   c. {(False, True), (True, False)}
+   d. {(False, False), (True, True)}
+
 ## SDLC Models
 
 1. **What is the major drawback of waterfall Model?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxi]**

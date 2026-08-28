@@ -82,6 +82,18 @@
    c) A.P.J abdul kalam
    d) Rabindranath Tagore
 
+15. **The famous quote "It matters not what someone is born but what they grow to be" was written in novel by the author-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) J.K Rowling
+   (b) J.R.R Tolkein
+   (c) Dr. Seus
+   (d) W. B. Yeats
+
+16. **'Playing It My Way' is written by-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+   (a) Sohaib Akhter
+   (b) Sachin Tendulkar
+   (c) Sir Don Bradman
+   (d) Tiger Woods
+
 ## English Grammar
 
 1. **There is _____ milk in the bottle.** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -966,6 +978,42 @@
    (c) mice
    (d) crises
 
+150. **I said "If I were you, I wouldn't go". The indirect speech should be ____?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) I told him not to go
+   (b) I said him do not go
+   (c) I advised him not to go
+   (d) I requested him not to go
+
+151. **____ sun came out right after ____ rain and there was ____ beautiful rainbow in ____ sky.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) The/the/the/a
+   (b) The/a/the/the
+   (c) A/a/the/a
+   (d) The/the/a/the
+
+152. **Please come in. Here 'in' is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) Preposition
+   (b) Adverb
+   (c) Verb
+   (d) None of above
+
+153. **What is the Active voice of – "What she thinks was known to us"** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) We knew what she thinks
+   (b) We have known about her thinking
+   (c) We knew what she is thinks
+   (d) We know what she thinks
+
+154. **"Why do you always buy five loaves, no ____ and ____?"** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) more/less
+   (b) less/fewer
+   (c) more/much
+   (d) many/little
+
+155. **He never thought what might come out of it, ____?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) does he
+   (b) hasn't he
+   (c) didn't he
+   (d) did he
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -1091,6 +1139,12 @@
    (b) occasionally
    (c) long since
    (d) recently
+
+23. **'Every now and then' means-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) Rarely
+   (b) Occasionally
+   (c) Frequently
+   (d) Regularly
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -1426,6 +1480,12 @@
    (c) forgive
    (d) convict
 
+58. **Synonym of "Bargain" is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) Dissent
+   (b) Quarrel
+   (c) Stipulation
+   (d) Confrontations
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -1525,3 +1585,9 @@
    (b) disease
    (c) desease
    (d) disese
+
+17. **The correct spelling is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) Innagurate
+   (b) Inaugurate
+   (c) Inagorate
+   (d) Inagurate

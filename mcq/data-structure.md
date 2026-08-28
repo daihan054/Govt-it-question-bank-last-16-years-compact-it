@@ -36,6 +36,26 @@
    (C) 3
    (D) 4
 
+7. **What does following function do for a given Linked List with first node as head?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]**
+   ```c
+   void fun1(struct node* head) {
+   if (head == NULL)
+   return;
+   fun1(head->next);
+   printf("%d",head->data);
+   }
+   ```
+   a. Prints all nodes of linked lists
+   b. Prints all nodes of linked list in reverse order
+   c. Prints alternate nodes of Linked List
+   d. Prints alternate nodes in reverse order
+
+8. **Suppose you want to insert n elements into an empty linked list while maintaining the sorted order. What is the worst-case time complexity?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]**
+   a. \theta(n)
+   b. \theta(n\log n)
+   c. \theta(1)
+   d. \theta(n^2)
+
 ## Stack & Queue
 
 1. **The minimum number of stacks needed to implement a queue is** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -98,6 +118,18 @@
    c) ad* bc -
    d) abc – d+*
 
+12. **In a shop, customers are provided the service as a first come first serve policy. But some special customers can be served at any time based on their importance. Which data structure most fits this scenario?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 84]**
+   a. Stack
+   b. Queue
+   c. Priority Queue
+   d. Dequeue
+
+13. **Which of the following data structures can be used both as Stack and Queue?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 87]**
+   a. Vector
+   b. Hash Table
+   c. Deque
+   d. Binary Search Tree
+
 ## Tree & Binary Search Tree
 
 1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
@@ -156,6 +188,12 @@
 
 10. **What is the minimum node for binary tree?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** For a binary tree, max node = [2^{\text{h}} + 1] and min node = [2\text{h} + 1].
+
+11. **The Post-order traversal of a binary tree is 8, 9, 6, 7, 4, 5, 2, 3, 1, The In-order traversal of the same tree is 8, 6, 9, 4, 7, 2, 5, 1, 3. What is the height of the above binary tree?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 89]**
+   a. 2
+   b. 3
+   c. 4
+   d. 1
 
 ## Hashing & Hash Tables
 

@@ -157,6 +157,18 @@
    গ. @
    ঘ. &
 
+21. **What is the full form of SMTP?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 87]**
+   a. Single Mail Text Protocol
+   b. Single Mail Transfer Problem
+   c. Simple Mail Transfer Protocol
+   d. Simple Mail Textual Protocol
+
+22. **Which protocol dynamically assigns IP addresses in a TCP/IP network?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]**
+   a. ARP
+   b. RIP
+   c. SMTP
+   d. DHCP
+
 ## IPv6 Addressing
 
 1. **How long is an IPv6 address?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -270,6 +282,19 @@
    b. Finding the IP address of the default gateway
    c. Finding the IP address that corresponds to a MAC address
    d. Finding the MAC address the corresponds to an IP address
+
+11. **The combination of an IP address and a port number is known as ____.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 86]**
+   a. network number
+   b. socket address
+   c. subnet mask number
+   d. MAC address
+   16. An n x n array v is- defined as follows;
+   v[i, j]=i-j for all i, j, 1<=i <=n, 1<=j <=n
+   The sum of the elements of the array v is- **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 86]**
+   a. 0
+   b. n-1
+   c. n^2-3n+2
+   d. n^2(n+1)/2
 
 ## Multiplexing & Data Rate
 

@@ -23,3 +23,9 @@
    b. (0*+(10*1) *)10*n
    c. 0*+10*1*10*
    d. (0*+10) *1*10*
+
+5. **Which of the following is the regular expression to represent all the binary strings with odd number of 1's?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]**
+   a. 0*(10*1)*11
+   b. 0*(10*1)*10*
+   c. (0*10*1)*0*10*
+   d. (0*10*)*1(0*10*)*

@@ -27,6 +27,12 @@
    c) Object oriented
    d) Relational oriented
 
+6. **Suppose you are using an HTML browser at a client machine C to access a static HTML webpage hosted in a HTTP server S. The page contains exactly one static embedded image which also resides at S. Assuming no web caching which of the following is correct when you load the webpage along with the embedded image?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]**
+   a. C need to send at least 2 HTTP requests to S using two different TCP connection.
+   b. C need to send at least 2 HTTP requests to S but a single TCP connection is sufficient.
+   c. A single HTTP request is sufficient without using any TCP connection from C to S.
+   d. A single HTTP request is sufficient using a single TCP connection from C to S.
+
 ## PHP & Server-Side
 
 1. **Which is not a valid variable name in PHP?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**

@@ -611,6 +611,12 @@
    (গ) নাটক
    (ঘ) কাব্যগ্রন্থ
 
+107. **'দুহাতে দুই আদিম পাথর'- কার রচিত কাব্য গ্রন্থ?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) শামসুর রাহমান
+   (b) আহসান হাবীব
+   (c) শহীদ কাদরী
+   (d) আল মাহমুদ
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1422,6 +1428,18 @@
    (গ) শব্দ
    (ঘ) বাক্য
 
+143. **নিচের কোন বিপরীত শব্দগুচ্ছ সঠিক নয়?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) উৎকৃষ্ট-অপকৃষ্ট
+   (b) উত্তল-অবোতল
+   (c) অর্বাচীন-প্রাচীন
+   (d) আগ্রহ-নিগ্রহ
+
+144. **দ্বন্দ্ব সমাসে দ্বন্দ্ব শব্দের অর্থ হল-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) যুদ্ধ
+   (b) জোড়া
+   (c) সমোচ্চারিত
+   (d) যুক্ত
+
 ## বাগধারা ও প্রবাদ
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -1480,6 +1498,12 @@
    খ. বনের কান্না
    গ. পাগলের প্রলাপ
    ঘ. নিষ্ফল আবেদন
+
+11. **'কেতাদুরস্ত' বাগধারাটির অর্থ-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   (a) পরিপাটি
+   (b) অতি চালাক
+   (c) অত্যন্ত অলস
+   (d) অসাবধান
 
 ## এক কথায় প্রকাশ
 

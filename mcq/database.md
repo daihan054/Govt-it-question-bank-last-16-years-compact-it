@@ -203,6 +203,28 @@
    c. 32
    d. 64
 
+22. **Table Employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 88]**
+   ```sql
+   SELECT COUNT(*) FROM Employee WHERE SALARY > ANY (SELECT SALARY FROM EMPLOYEE);
+   ```
+   prints
+   a. 0
+   b. 5
+   c. 9
+   d. 10
+
+23. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 91]**
+   | Product ID | Delivery Data | Quantity |
+   |---|---|---|
+   | F101 | 2021-03-17 | 3 |
+   | H201 | 2021-03-17 | 2 |
+   | F101 | 2021-03-16 | 1 |
+   | H201 | 2021-03-16 | 2 |
+   a. SELECT AVE(Quantity) FROM Delivery Record WHERE Product No. = 'F101'
+   b. SELECT COUNT (*) FROM Delivery Record
+   c. SELECT SUM (Quantity) FROM Delivery Record WHERE data = '2021-03-16'
+   d. SELECT MAX (Quantity) FROM Delivery Record
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -540,6 +562,12 @@
    (b) Min 1 and max 3
    (c) Min 2 and max 3
    (d) Min 2 and max 2
+
+4. **Consider an Entity-relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater that the cardinality of E2. Which of the following is true about R?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 90]**
+   a. Every entity in E1 is associated with exactly one entity in E2
+   b. Some entity in E1 is associated with more than one entity in E2
+   c. Every entity in E2 is associated with exactly one entity in E1
+   d. Every entity in E2 is associated with at most one entity in E1
 
 ## PL/SQL & Triggers
 
