@@ -148,6 +148,30 @@
    গ. পূর্ববঙ্গ ও উড়িষ্যা
    ঘ. পূর্ববঙ্গ ও পশ্চিমবঙ্গ
 
+12. **বাংলাদেশের মোট উপজেলা কতটি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+   a) 492
+   b) 595
+   c) 495
+   d) 498
+
+13. **বাংলাদেশের সবচেয়ে বড় জেলা কোনটি (আয়তনের দিক থেকে)?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+   a) চট্টগ্রাম
+   b) কক্সবাজার
+   c) খুলনা
+   d) রাঙ্গামাটি
+
+14. **বাংলাদেশের মোট সাক্ষরতার হার (শিক্ষিতের হার) কত?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+   a) ৬০%
+   b) ৭০%
+   c) ৭৫%
+   d) ৮০%
+
+15. **বীরশ্রেষ্ঠ মতিউর রহমান কোথায় জন্মগ্রহণ করেন?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+   a) ঢাকা
+   b) গাজীপুরে
+   c) ব্রাহ্মণবাড়িয়া
+   d) কিশোরগঞ্জ
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**

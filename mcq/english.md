@@ -86,6 +86,26 @@
    গ. Mate
    ঘ. Duck
 
+7. **Fill in the blank: The scientist looked _____ the microscope.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+
+8. **The concert was cancelled _____ the heavy rain.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+   a) owing to
+   b) because
+   c) because of
+   d) due to
+
+9. **You should not _____ back with your teachers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+   a) talk
+   b) talks
+   c) had talked
+   d) had
+
+10. **_____ sugar do you want in your tea?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+   a) How much
+   b) How many
+   c) What many
+   d) What
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -127,3 +147,9 @@
    খ. Misile
    গ. Missile
    ঘ. Messilee
+
+2. **Choose the word that is correctly spelt:** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1]**
+   a) ridiculous
+   b) rediculous
+   c) ridiculus
+   d) ridiculas
