@@ -631,3 +631,47 @@
    (c) Shakib al hasan
    (d) SL Malinga
    **Ans: c**
+
+## Power Sector & Energy (Bangladesh)
+
+1. **ইজিসিবি'র মোট বিদ্যুৎ ক্ষমতা প্রায় কত মেগাওয়াট (প্রায়)?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 63]**
+   (ক) ৮৫০ মে: ও:
+   (খ) ৯০০ মে: ও:
+   (গ) ৯৫০ মে: ও:
+   (ঘ) ১০০০০ মে: ও:
+
+2. **সর্বশেষ কোন বিদ্যুৎ বিতরণ প্রতিষ্ঠানের আত্মপ্রকাশ ঘটে?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
+   (ক) NESCO
+   (খ) WZPGCL
+   (গ) DESCO
+   (ঘ) BREB
+
+3. **দেশে সর্বশেষ বিদ্যুৎ বিপর্যয় ঘটে কোন অঞ্চলে?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
+   (ক) পূর্বাঞ্চল
+   (খ) উত্তরাঞ্চল
+   (গ) পশ্চিমাঞ্চল
+   (ঘ) পূর্বাঞ্চল
+
+4. **ইজিসিবি'র পাওয়ার প্লান্ট কোথায় আছে?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
+   (ক) হরিপুর
+   (খ) মাতারবাড়ি
+   (গ) মহেশখালি
+   (ঘ) পায়রা
+
+5. **ইজিসিবি'র কোন ধরণের কোম্পানী?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
+   (ক) সরকারী
+   (খ) পাবলিক
+   (গ) স্বায়ত্তশাসিত
+   (ঘ) গ্রুপ
+
+6. **বাংলাদেশে সর্বোচ্চ বিদ্যুৎ পিক আওয়ার কোন সময়কে ধরা হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
+   (ক) সন্ধ্যা ৭ টায়
+   (খ) রাহ ৯ টায়
+   (গ) দুপুর ১২ টায়
+   (ঘ) বিকাল ৫ টায়
+
+7. **একটি পল্লি বিদ্যুৎ সমিতির অফিস প্রধানের পদবী কী?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
+   (ক) জেনারেল ম্যানেজার
+   (খ) নির্বাহী প্রকৌশলী
+   (গ) সিস্টেম ইঞ্জিনিয়ার
+   (ঘ) চীপ ইঞ্জিনিয়ার

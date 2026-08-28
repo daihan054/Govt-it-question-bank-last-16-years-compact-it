@@ -49,3 +49,23 @@
    (b) William Stanley Jr
    (c) Michael Faraday
    (d) Westinghouse
+
+## Power Systems & Generation
+
+1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
+   (ক) গ্যাস টারবাইন
+   (খ) স্টিম টারবাইন
+   (গ) কোল টারবাইন
+   (ঘ) হাইড্রো টারবাই
+
+2. **নিউক্লিয়ার পাওয়ার প্লান্টের পাওয়ার ট্রান্সমিশনের জন্য সর্বোচ্চ কত ট্রান্সমিশন ভোল্টেজ ব্যবহার করা হবে?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
+   (ক) ১৩৩ কেভি
+   (খ) ৩৩ কেভি
+   (গ) ২৩০ কেভি
+   (ঘ) ৪০০ কেভি
+
+3. **নিউক্লিয়ার পাওয়ার প্লান্টের পাওয়ার ইউনিটের আয়ুষ্কাল কত?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
+   (ক) ৪০ বছর
+   (খ) ৫০ বছর
+   (গ) ৬০ বছর
+   (ঘ) ৭০ বছর।
