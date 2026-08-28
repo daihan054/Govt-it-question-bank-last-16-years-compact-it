@@ -200,6 +200,9 @@
 27. **BPDB look ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
    **Ans:** some young and energetic engineer
 
+28. **My doctor knew that I would eventually recover and to kind of work ______ before.** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** had been doing
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -234,6 +237,9 @@
 
 6. **The blow off some steam means ______** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
    **Ans:** to make angry or excited
+
+7. **‘End in smoke’ means-** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 36]**
+   **Ans:** end in nothing
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -290,6 +296,15 @@
    (b) hard
    (c) flexible
    (d) inflexible
+
+10. **Write is related to reader in the same way as producer is related to ______** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** Consumer
+
+11. **Nearest meaning of ‘AUGUST’** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** Dignified
+
+12. **Synonym of ‘EXTRANEOUS’** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** Irrelevant
 
 ## Spelling
 

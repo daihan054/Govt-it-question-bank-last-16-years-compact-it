@@ -42,6 +42,9 @@
    (c) 300
    (d) 400
 
+8. **With reference to a 2 dimensional coordinate system, the vertices of a uniform and thin triangular pate are given by (0,0), (1,4) and (-7, 8) points. The centroid of the plate is-** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** (-2, 4)
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -115,6 +118,9 @@
 
 7. **x+y = 7, xy = 10, (x-y)^2 এর মান কত?** **(BREB Assistant Programmer Exam: 2023) [compact it 33]**
    **Ans:** 9
+
+8. **Given, x is a real number. What is the minimim value of x^2-4x+5?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** 1
 
 ## Percentage, Profit & Loss
 

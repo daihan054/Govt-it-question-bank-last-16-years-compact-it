@@ -248,6 +248,12 @@
 33. **তুরস্ক ও সিরিয়ায় ভূমিকম্পের মাত্রা কত?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
    **Ans:** ৭.৮
 
+34. **ন্যাশনাল কংগ্রেস কত সালে গঠিত হয়?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** ১৮৮৫ সালে
+
+35. **World Trade Organization (WTO)- এর সদর দপ্তর কোথায় অবস্থিত?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** জেনেভা
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -480,6 +486,12 @@
 
 41. **তিন বিঘা করিডোর কোথায় অবস্থিত?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
    **Ans:** লালমনিরহাট
+
+42. **When established Bangladesh Rapid Action Battalion (RAB)?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 36]**
+   **Ans:** 2004
+
+43. **যুক্তরাষ্ট্রের নিউইয়র্কে কনসার্ট ফর বাংলাদেশ কে এরেঞ্জ করেন?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** পন্ডিত রবি শংকর
 
 ## Geography & Environment
 

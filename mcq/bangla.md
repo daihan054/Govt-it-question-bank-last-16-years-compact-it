@@ -117,6 +117,9 @@
 23. **রক্তাক্ত প্রান্তর এর বিষয়বস্তু কি?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
    **Ans:** পানিপথের তৃতীয় যুদ্ধ
 
+24. **কাজী নজরুল ইসলামের অগ্নিবীণা কাব্যের প্রথম কবিতা কোনটি?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** প্রলয়োল্লাস
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -315,6 +318,12 @@
 
 39. **নিচের কোনটি সরল বাক্য?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 31]**
 
+40. **বৃক্ষ শব্দের সমার্থক শব্দ কোনটি?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** বিটপী
+
+41. **পুষ্পসৌরভ কোন সমাস?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** তৎপুরুষ সমাস
+
 ## বাগধারা ও প্রবাদ
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -328,6 +337,9 @@
    খ. নির্দয়
    গ. অর্থের কুপ্রভাব
    ঘ. তামা থেকে উৎপন্ন বিষ
+
+3. **হাতকামড়ানো বাগধারাটির অর্থ কি?** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** আফসোস করা
 
 ## এক কথায় প্রকাশ
 
@@ -348,6 +360,9 @@
    (b) ফিকে
    (c) পান্ডুর
    (d) বাসন্তি
+
+4. **এককথায় প্রকাশ করুন: যে ভবিষ্যৎ না ভেবে কাজ করে:** **(RPGCL Assistant Engineer Exam: 2022 (MIST)) [compact it 37]**
+   **Ans:** অবিমৃষ্যকারী
 
 ## বাংলা ভাষা বিষয়ক তথ্য
 
