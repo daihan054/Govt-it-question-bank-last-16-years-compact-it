@@ -165,6 +165,8 @@ for i in N:
 
 11. **Follow alphabetical ordering while considering the order of nodes traversed. (Find BFS and DFS)** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
 
+12. **Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG. Now write a C/C++ Program with the following Input and Output. Input: 5 2, 5 0, 4 0, 4 1, 2 3, 3 1 Output: 5 4 2 3 1 0** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 831-833]**
+
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
@@ -194,6 +196,8 @@ for i in N:
 **অনুসারে প্রাপ্ত fractional knapsack সমস্যা সমাধান একটি চিত্রানুপাতে উত্তর লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 2. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 453]**
+
+3. **Given n jobs starting time n[] and duration d[], print maximum number of jobs that don't overlap between each other.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 834]**
 
 ## Dynamic Programming
 

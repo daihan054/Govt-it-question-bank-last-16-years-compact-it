@@ -34,6 +34,8 @@
 
 15. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 774]**
 
+16. **Write a C/C++ program to check Balanced parentheses in an Expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 830-831]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]

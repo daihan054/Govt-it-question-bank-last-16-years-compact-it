@@ -59,6 +59,8 @@
 
 9. **(i) নিচের Table টি তৈরি করার SQL কমান্ড লিখুন। student_info (std_id, name, department, phone_number) (a) Table তে ২টি record (insert) প্রবেশ করার SQL কমান্ড লিখুন। (b) Table টি থেকে CSE বিভাগের ছাত্র/ছাত্রীদের নামের তালিকা বের করার SQL command লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
 
+10. **Write the create table command for the ‘Employee’ table with the following column: Emp_ID, Emp_Name, Date_of_Birth.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
+
 ## SQL Queries
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
@@ -500,6 +502,8 @@ From t;
 13. **(খ) Relational Database Design এ Primary Key ও Foreign Key বলতে কি বুঝায়? উদাহরণসহ লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
 
 14. **(b) What are purpose of using foreign key in a database? Give suitable example.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
+
+15. **What is primary key?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
 
 ## Indexing in DBMS
 

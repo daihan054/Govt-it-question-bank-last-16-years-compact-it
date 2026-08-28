@@ -98,6 +98,8 @@
 
 9. **Write down the types of topology.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
 
+10. **Write down the Disadvantages of Bus topology.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
+
 ## OSI & TCP/IP Reference Model
 
 1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -647,6 +649,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 10. **(iii) Router and Gateway এর ফাংশন লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
 
+11. **Write down the difference between Hub and Switch.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
+
 ## VLANs & Subnetting Comparison
 
 1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
@@ -794,6 +798,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 1. **(b) Difference between active and passive satellites.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
 
 2. **(c) Briefly describe different types of earth orbital satellite.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
+
+3. **Satellite ভিত্তিক যোগাযোগের একটি অসুবিধা লিখুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
 
 ## Wireless Networks & IoT (mmWave)
 

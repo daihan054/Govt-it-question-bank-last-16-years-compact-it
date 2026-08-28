@@ -285,6 +285,10 @@ return 0;
 
 67. **(b) Write down a program in C language that will find the maximum of four integer gives as inputs.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
 
+68. **Write a C program to check the number in EVEN or ODD.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
+
+69. **We are given an array of integers and a range, we need to find whether the subarray which falls in this range has values in the form of a mountain or not. All values of the subarray are said to be in the form of a mountain if either all values are increasing or decreasing or first increasing and then decreasing. Write a C/C++ Program that shows input is a Mountain sequence or Not Mountain sequence.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 833]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -329,6 +333,8 @@ return 0;
 
 8. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 729]**
 
+9. **What is the purpose of '\0' character in C?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
+
 ## Pointers
 
 1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
@@ -364,6 +370,8 @@ return 0;
 12. **What is nested structure in C programming? Explain with example.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 741]**
 
 13. **(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
+
+14. **Write some default data type in C.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
 
 ## Output Tracing & Control Flow
 

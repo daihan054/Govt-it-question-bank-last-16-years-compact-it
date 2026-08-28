@@ -14,6 +14,8 @@
 
 7. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
+8. **LOGO কি ধরনের প্রোগ্রাম?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+
 ## User Interfaces (CLI vs GUI)
 
 1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -100,6 +102,10 @@
 
 37. **Write the correct Answer: (i) If x=2+3*7\%4/2-3 compile the result x is? (ii) Which of the following algorithms are based on the divide and conquar aproach? (iii) The Internetworking protocol is known as _____. (iv) Locking protocols are used in database management system for _____. (v) File permission is given rwxrw---x, if change the permission with chmod 701 then the permission is _____. (vi) Which is the true? a. adjacency matrix is better then dense graph b. adjacency matrix is better then sparse graph c. both a and b d. none (vii) If the resources are always preempted from the same process _____ can occur. (same type) (viii) What is invoked to create an object in Java? (ix) In the architecture of a database system the external level is the _____. (x) Check sum is used in communication for _____ error detection.** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 815-816]**
 
+38. **Facebook এর জনক কে?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+
+39. **Write the full form of: VIRUS, BIOS, DoS attack, OSPF, DVD, WiFi.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -130,6 +136,8 @@
 
 14. **Plotter কোন ধরনের Device?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
+15. **পিক্সেল ও রেজ্যুলেশন কি ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 827]**
+
 ## ICT in Society & Governance
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
@@ -144,6 +152,8 @@
 
 6. **Describe in Bangali or English on the post COVID-19 social challenge that Bangladesh may can front end the way ICT can support to overcome them.** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 809]**
 
+7. **Copyright আইন কি? এর প্রয়োজনীয়তা ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+
 ## Digital Banking & Financial Inclusion
 
 1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
@@ -155,6 +165,8 @@
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 2. **What is the name of molecular scale computer?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+3. **Virtual Reality বলতে কি বুঝায় ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
 
 ## Blockchain & Emerging Technologies
 

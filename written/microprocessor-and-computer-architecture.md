@@ -40,6 +40,8 @@
 
 16. **CPU এর অর্থ কি? এর কয়টি অংশ ও কি কি?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
 
+17. **Microprocessor কি? এর আবিষ্কারে তথ্য ও যোগাযোগ প্রযুক্তিতে কি ধরনের অগ্রগতি সাধিত হয়েছে ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 827]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -116,7 +118,7 @@
 
 5. **কম্পিউটার স্মৃতি বলতে কী বোঝায়? কম্পিউটারের স্মৃতির শ্রেণিবিভাগ আলোচনা করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 405]**
 
-6. **Write down the difference between RAM and ROM.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+6. **Write down the difference between RAM and ROM.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
 
 7. **Differentiate among CPU register, Cache memory, Main memory and Secondary memory.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 510]**
 

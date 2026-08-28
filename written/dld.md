@@ -25,6 +25,8 @@
 
 11. **Computer এর Binary পদ্ধতি কোন সংখ্যার উপর প্রতিষ্ঠিত?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
+12. **BCD code – এ কতগুলি বিট থাকে?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+
 ## 2's Complement & Binary Arithmetic
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
@@ -119,6 +121,8 @@
 19. **Implementation the following two Boolean functions using NAND gate only: (a) F = A + (B' + C)(D' + BE') (b) F = ((A + B) + CD)E** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 731]**
 
 20. **(গ) Universal logic gate কি? 3-input এর একটি Universal logic gate এর Logic symbol এবং Truth Table দেখান।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
+
+21. **What is Universal gate? NAND and NOR gate কে Universal gate বলা হয় কেন?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 827-828]**
 
 ## Combinational Circuits (Adders, Encoders, MUX)
 

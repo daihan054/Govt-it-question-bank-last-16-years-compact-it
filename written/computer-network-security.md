@@ -42,6 +42,8 @@
 
 21. **(a) What is meant by Encryption and Decryption?** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 796]**
 
+22. **Difference between private key and public key.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -81,6 +83,8 @@
 8. **What is QR code? What is Rootkit and bootkit?** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820-821]**
 
 9. **Suppose your computer system is attack by a VIRUS and it's also copy into the six neighbor computer. Then it encrypts your all data in your all data in your system so that you can’t detect your data. What is the name of the VIRUS, how can you detect it?** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 821]**
+
+10. **‘Trojan Horse’ এর একটি বৈশিষ্ট্য লিখুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
 
 ## Email & Messaging Security (Spam, Phishing)
 
