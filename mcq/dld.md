@@ -78,6 +78,12 @@
    C) AND
    D) NOR
 
+14. **Which one is universal logic gate?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) NAND
+   B) AND
+   C) OR
+   D) NOT
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**

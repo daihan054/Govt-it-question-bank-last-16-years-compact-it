@@ -706,7 +706,7 @@
    C) 12
    D) 13
 
-4. **An algorithm that calls itself directly or indirectly is known as?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]**
+4. **An algorithm that calls itself directly or indirectly is known as?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 234]** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
    A) Sub Algorithm
    B) Recursion
    C) Polish Notation

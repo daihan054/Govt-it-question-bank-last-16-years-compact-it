@@ -47,6 +47,12 @@
    C) Rolled
    D) Shield twisted pair
 
+9. **Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) Crossover
+   B) Straight-through
+   C) Rolled
+   D) Shielded twisted pair
+
 ## Application Layer Protocols
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -281,7 +287,7 @@
    C) DNS
    D) FTP
 
-39. **Which protocol can cause overload on a CPU of a managed device?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 233]**
+39. **Which protocol can cause overload on a CPU of a managed device?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 233]** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
    A) Net flow
    B) WCCP
    C) IP SLA
@@ -334,6 +340,18 @@
    B) Database server
    C) DNS server
    D) Proxy Server
+
+48. **Which of the following protocol uses both TCP and UDP ports?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) SMTP
+   B) telnet
+   C) FTP
+   D) DNS
+
+49. **Which of the following TCP/IP address constitute the loopback address?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) 1.1.1.1
+   B) 255.255.255.0
+   C) 127.0.0.0
+   D) 127.0.0.1
 
 ## IPv6 Addressing
 

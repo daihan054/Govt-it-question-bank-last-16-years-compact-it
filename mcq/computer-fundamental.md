@@ -601,3 +601,9 @@
    B) CCD
    C) CODASYL
    D) DASD
+
+5. **An acronym for Conference/Committee on Data Systems Languages is?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) DASD
+   B) CCD
+   C) CODASYL
+   D) None of them

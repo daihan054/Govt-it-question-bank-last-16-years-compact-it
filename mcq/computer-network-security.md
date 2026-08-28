@@ -194,6 +194,12 @@
    c) RSA
    d) AES
 
+17. **The transformation of a message into an encoded from is known as ________** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) Memories
+   B) Encoding
+   C) Decoding
+   D) None of them
+
 ## Malware & Security Threats
 
 1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**

@@ -304,6 +304,18 @@
    C) obj = new Box();
    D) new Box obj;
 
+43. **In Java, which operator is used to create an object-** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) Class
+   B) scanf
+   C) Print
+   D) none of them
+
+44. **A class that is inherited in java is called a ________.** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
+   A) Subclass
+   B) Super class
+   C) Static class
+   D) Implement class
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
