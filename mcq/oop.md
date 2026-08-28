@@ -127,6 +127,12 @@
 3. **A feature of Object oriented programming languages that allows a specific routine to use variables of different types at different times, is called OOP?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Polymorphism
 
+4. **A function having more than one distinct meaning is called ______ function** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) Parameter
+   (খ) Prototype
+   (গ) Overloaded
+   (ঘ) Polymorphism
+
 ## OOP Concepts & Principles
 
 1. **Which of the following is not property of the Object Oriented Programming Concept?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
@@ -134,6 +140,12 @@
    b) Inheritance
    c) Exception
    d) Abstraction
+
+2. **Which of the following modifiers cannot be applied to a method in C++?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) Protected
+   (খ) Private
+   (গ) Public
+   (ঘ) Abstract
 
 ## Inheritance
 

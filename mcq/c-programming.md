@@ -293,6 +293,24 @@
    c) arr{6}
    d) arr{7}
 
+3. **Which of the following do not return any value?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) Constructor function
+   (খ) Friend function
+   (গ) In line Function
+   (ঘ) Member Functions
+
+4. **Assuming an int is of 4 bytes, What is the size of “int array[15]”?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 55]**
+   (ক) 15
+   (খ) 19
+   (গ) 11
+   (ঘ) 60
+
+5. **In C++, The library function exit() causes an exit from-** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) a block of statements
+   (খ) a loop in which it occurs
+   (গ) a function in which it occurs
+   (ঘ) a program in which it occurs
+
 ## Pointers & Memory Allocation
 
 1. **Address stored in the pointer variable is of type ______** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 40]**

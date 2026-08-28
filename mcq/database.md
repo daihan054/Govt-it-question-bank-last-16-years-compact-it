@@ -94,6 +94,12 @@
    (c) Query
    (d) Relational Schema
 
+11. **To remove a relational table from SQL database, we use ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 55]**
+   (ক) Delete
+   (খ) Purge
+   (গ) Remove
+   (ঘ) Drop
+
 ## DBMS Concepts & Architecture
 
 1. **Data about data is called-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 16]**
@@ -193,3 +199,17 @@
 
 1. **What is the degree of relation?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** a degree of relationship represents the number of entity types that are associated with a relationship.
+
+## Keys in DBMS
+
+1. **The key selected from the sets of candidate keys by database design is called ______ key:** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) Candidate
+   (খ) Primary
+   (গ) Super
+   (ঘ) Foreign
+
+2. **Which of the following types of table constraints prevents the entry of duplicate rows?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 58]**
+   (ক) Foreign keys
+   (খ) Primary keys
+   (গ) Unique keys
+   (ঘ) Candidate keys

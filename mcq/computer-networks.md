@@ -16,6 +16,12 @@
    (ঘ) পূর্ণ অভ্যন্তরীণ প্রতিফলন
    **উত্তর: ঘ**
 
+4. **Which of the following communication medium requires ‘line-of-sight’?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) Micro wate
+   (খ) Fiber optic cable
+   (গ) Twisted-pair cable
+   (ঘ) Co-axial cable
+
 ## Application Layer Protocols
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -59,6 +65,18 @@
    (b) 23
    (c) 80
    (d) 25
+
+8. **DNS port number is:** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) 63
+   (খ) 21
+   (গ) 53
+   (ঘ) 24
+
+9. **Who is controlling "Domain" in the world?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) CCNA
+   (খ) WWW3
+   (গ) ICANN
+   (ঘ) ISDN
 
 ## IPv6 Addressing
 
@@ -198,6 +216,12 @@
    (b) OSPF, RIP
    (c) RIP, FTP
    (d) BGP, SMTP
+
+2. **Count-to-infinity problem occurs in ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) Distance vector routing
+   (খ) Shortest path first
+   (গ) Link state routing
+   (ঘ) Hierarchical routing
 
 ## Network Devices & Configuration
 

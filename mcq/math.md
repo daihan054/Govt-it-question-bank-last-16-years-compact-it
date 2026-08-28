@@ -306,3 +306,11 @@
    (c) \frac{3}{4}
    (d) \frac{3}{14}
    **Ans: d**
+
+## Set Theory
+
+1. **Two sets are called disjoint if their ______ is an empty set.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) Union
+   (খ) Difference
+   (গ) Intersection
+   (ঘ) Complement

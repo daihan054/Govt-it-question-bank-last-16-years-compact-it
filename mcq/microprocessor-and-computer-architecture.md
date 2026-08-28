@@ -32,6 +32,12 @@
    (c) Accumulator
    (d) IR (Instruction Register)
 
+2. **______ are used to quickly accept, store and transfer data and instructions that are being used immediately by the CPU.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) Graphics
+   (খ) RAMs
+   (গ) Caches
+   (ঘ) Registers
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**

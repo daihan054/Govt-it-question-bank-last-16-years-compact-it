@@ -24,6 +24,12 @@
    (c) NOR, OR
    (d) NAND, NOR
 
+5. **The logic gate that will have a Low output then any one of its inputs is High is ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) NAND gate
+   (খ) AND gate
+   (গ) NOR gate
+   (ঘ) OR gate
+
 ## Sequential Circuits (Flip-Flops)
 
 1. **In which flip flop the present input will be the next output?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
@@ -95,3 +101,9 @@
    (b) 7D0
    (c) 8E0
    (d) 7E7
+
+8. **A computer has main memory of 960 Kb. What is the exact number of bytes contained in this memory?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) 960x8
+   (খ) 960x1000
+   (গ) 960x1024
+   (ঘ) 960x1024x1024

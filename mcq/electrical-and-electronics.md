@@ -74,6 +74,36 @@
    c) পোরসেলিন
    d) এলুমিনিয়াম
 
+9. **The total charge entering a terminal is given by q=5t\sin 4\mu t\text{ mC}. What is the current at t=0.5\text{ S}?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) 3.142\text{ mA}
+   (খ) 31.42\text{ mA}
+   (গ) 28.37\text{ mA}
+   (ঘ) 8.34\text{ mA}
+
+10. **The rating of fuse is expressed as ______** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) Ampere-hours
+   (খ) Ampere-volts
+   (গ) KWH
+   (ঘ) Ampers
+
+11. **A certain amount of water is boiled by inserting a current carrying resistor in water. The heat energy required to boil the water is 99kJ. The current taken by the resistor is 5A at 220V. What is the time required to boil water?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) 120\text{s}
+   (খ) 180\text{s}
+   (গ) 90\text{s}
+   (ঘ) 70\text{s}
+
+12. **Which configuration of Bipolar Junction Transistor is known as voltage follower?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 55]**
+   (ক) Common collector
+   (খ) Common base
+   (গ) Common emitter
+   (ঘ) None of them
+
+13. **Bulbs in street lighting are connected in ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) Parallel
+   (খ) Series
+   (গ) Series-parallel
+   (ঘ) End to end
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**
@@ -123,3 +153,47 @@
    b) 1
    c) 2
    d) 3
+
+11. **For the protection of transformer, harmonic restraint is used to guard against ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) Magnetizing inrush current
+   (খ) Unbalanced operation
+   (গ) Lightning
+   (ঘ) Switching over voltage
+
+12. **A 4-pole 50Hz induction motor running at 1300 rpm. The speed of stator magnetic field with respect to rotor is ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) 1500\text{rpm}
+   (খ) 200\text{ rpm}
+   (গ) 1300\text{ rpm}
+   (ঘ) 300\text{ rpm}
+
+13. **A nuclear power plant is invariably used as a ______ plant.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 55]**
+   (ক) Peak load
+   (খ) Base load
+   (গ) Standby
+   (ঘ) Spinning reserve
+
+14. **In a 3-phase power measurement by two-wattmeters method, both wattmeters have identical reading. The power factor of the load is ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) Unity
+   (খ) 0.8 lagging
+   (গ) 0.8 leading
+   (ঘ) Zero
+
+## Signals & Systems
+
+1. **The transfer function of an LTI system is given as \frac{1}{s+2}. What is the value of its impulse response at t=0?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) 0.0
+   (খ) 0.689
+   (গ) 1.0
+   (ঘ) 1.5
+
+2. **A loss-less transmission line has L=8.5\text{ nH/m} and C=300\text{ pF/m}. What is the characteristic impedance of the line?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) 50\Omega
+   (খ) 5.32\Omega
+   (গ) 8.92\Omega
+   (ঘ) 4.32\Omega
+
+3. **A voltage source supplies a signal of constant amplitude from 0 to 40kHz to a RC filter (low-pass). The load resistor experiences the maximum voltage at ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) 10\text{kHz}
+   (খ) 40\text{kHz}
+   (গ) 18\text{kHz}
+   (ঘ) DC

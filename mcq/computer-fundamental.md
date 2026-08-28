@@ -56,6 +56,12 @@
    (ঘ) স্ক্যানার
    **উত্তর: খ**
 
+4. **Which technology is used in Compact Disk (CD)?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 55]**
+   (ক) Mechanical
+   (খ) Laser
+   (গ) Electrical
+   (ঘ) Electro magnetic
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -76,6 +82,12 @@
 4. **In which way blockchain data can be modifued?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**
    **Ans:** Cannot Modify
 
+5. **Which one of the following process is the main task for the computer in mapping the geographical data?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) Data storage
+   (খ) Data visualization
+   (গ) Data retrieving and drawing
+   (ঘ) Data collection
+
 ## Software Types & Classification
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
@@ -89,3 +101,27 @@
    b) .xls
    c) .jpg
    d) উপরের কোনটিই নয়।
+
+3. **Which of the following file format is not a Video file format?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) AVI
+   (খ) MOV
+   (গ) MPEG
+   (ঘ) JPG
+
+4. **Which one of the following is not a web browser?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) Firefox
+   (খ) Facebook
+   (গ) Chrome
+   (ঘ) Safari
+
+5. **Which language is directly understood by the Computer without translating?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) Machine language
+   (খ) Assemble
+   (গ) High level language
+   (ঘ) None
+
+6. **A computer program that converts an entire program into machine language is called a/an:** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 58]**
+   (ক) Interpreter
+   (খ) Converter
+   (গ) Simulator
+   (ঘ) Compiler

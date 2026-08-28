@@ -18,6 +18,12 @@
    (c) There must be a mechanism to delete and/or insert elements in the list.
    (d) Number values should only be present
 
+4. **What is the worst case time complexity of linear search algorithm?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 55]**
+   (ক) O(1)
+   (খ) O(n)
+   (গ) O(\log n)
+   (ঘ) O(n^2)
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -93,3 +99,9 @@
    (b) Knapsack problem
    (c) Selection problem
    (d) Merge sort
+
+2. **Quick sort algorithm is an example of –** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) Greedy approach
+   (খ) Improved binary search
+   (গ) Dynamic programming
+   (ঘ) Divide and conquer

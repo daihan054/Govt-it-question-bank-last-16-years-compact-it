@@ -383,6 +383,90 @@
    (ঘ) to
    **উত্তর: গ**
 
+57. **Choose the right option: ‘The engineer insists on ______ good materials.’** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) use
+   (খ) using
+   (গ) to use
+   (ঘ) the use
+
+58. **Fill the blank: No Sooner had I reached the station ______ the train left** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) then
+   (খ) than
+   (গ) before
+   (ঘ) after
+
+59. **Fill in the blank: ‘Smita was so sound asleep that it was most difficult to ______ her.’** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) rise
+   (খ) arise
+   (গ) rouse
+   (ঘ) raise
+
+60. **Which of the following has no plural form?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) analysis
+   (খ) crisis
+   (গ) louse
+   (ঘ) soap
+
+61. **‘Look before you leap.’ Here, before ‘ is used as a/an —** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) adverb
+   (খ) preposition
+   (গ) conjunction
+   (ঘ) interjection
+
+62. **‘The door opened automatically.’ The verb in this sentence is –** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) transitive
+   (খ) intransitive
+   (গ) linking
+   (ঘ) modal
+
+63. **Which is the correct article? metre is ______ unit of length.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 55]**
+   (ক) an
+   (খ) a
+   (গ) the
+   (ঘ) no article required
+
+64. **Fill in the blank with appropriate preposition: ‘Don't worry ______ me. i'll be alright.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 55]**
+   (ক) to
+   (খ) with
+   (গ) about
+   (ঘ) at
+
+65. **Choose the right determined: ‘You can park on ______ side of the street’.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 55]**
+   (ক) both
+   (খ) many
+   (গ) either
+   (ঘ) these
+
+66. **Identify the feminine gender.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) peer
+   (খ) parent
+   (গ) spinster
+   (ঘ) boar
+
+67. **Add correct question tag to it: 'He excelled in sports ______?'** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) won't he
+   (খ) don't he
+   (গ) doesn't he
+   (ঘ) didn't he
+
+68. **'Do you enjoy teaching?' Here 'teaching' is a/an-** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) gerund
+   (খ) adjective
+   (গ) infinitive
+   (ঘ) participle
+
+69. **Find out the correct indirect speech of the following sentence: He said to me, “Thank you.”** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 58]**
+   (ক) He thanked me
+   (খ) He had thanked me
+   (গ) He told me that thank you
+   (ঘ) He wished thank to me.
+
+70. **Choose the correct sentence:** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 58]**
+   (ক) Tell me what is your name
+   (খ) Tell me what the name you dear
+   (গ) Tell me what your name
+   (ঘ) Tell me what your name is.
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -430,6 +514,12 @@
 
 9. **To bring of - অর্থ কি?** **(BTRC Assistant Director (Technical) Exam: 2022 (MIST)) [compact it 65]**
    উত্তর: Look after a child until it an adult
+
+10. **What is the meaning of the phrase ‘sine die’?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) for a certain period
+   (খ) for an uncertain period
+   (গ) for a short time
+   (ঘ) none
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -566,6 +656,30 @@
    (ঘ) International English Language Teaching Skill
    **উত্তর: গ**
 
+25. **The antonym of the word copious’ is ______** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) plenty
+   (খ) abundant
+   (গ) brave
+   (ঘ) scanty
+
+26. **The Synonym of the word 'docile' is-** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 53]**
+   (ক) obedient
+   (খ) disobedient
+   (গ) hostile
+   (ঘ) friendly
+
+27. **A large building in which aircraft are kept is called –** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 54]**
+   (ক) terminal
+   (খ) harbour
+   (গ) hanger
+   (ঘ) hangar
+
+28. **A doctor who treats kidney patients is known as a/an ______.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) oncologist
+   (খ) pathologist
+   (গ) urologist
+   (ঘ) gynecologist
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -597,3 +711,9 @@
    (b) extraterrestrial
    (c) Extraterastrial
    (d) extratarrestrial
+
+6. **Find out the correct spelling.** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) adolescence
+   (খ) adolessence
+   (গ) addoleseence
+   (ঘ) adolescence

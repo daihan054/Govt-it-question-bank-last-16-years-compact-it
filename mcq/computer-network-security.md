@@ -80,6 +80,18 @@
    (c) Hashing Algorithm only
    (d) Stream Ciphe
 
+4. **In cryptography, RSA is-** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) Symmetric key based
+   (খ) Block-chain based
+   (গ) Asymmetric key based
+   (ঘ) None
+
+5. **Which one is an encryption function?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 57]**
+   (ক) c=E(M,K)
+   (খ) N=D(e,K)
+   (গ) e=E(M)
+   (ঘ) None
+
 ## Malware & Security Threats
 
 1. **Software downloaded from internet and installed that is malicious is called-** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 36]**

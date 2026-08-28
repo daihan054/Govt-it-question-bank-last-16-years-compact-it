@@ -72,6 +72,12 @@
    (c) Rounf Robin
    (d) Priority Scheduling
 
+3. **Time during which a job is processed by the Computer is:** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 56]**
+   (ক) Delay time
+   (খ) Real time
+   (গ) Execution time
+   (ঘ) Process time
+
 ## File Systems & Disk Management
 
 1. **A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the second drive?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 42]**
@@ -87,3 +93,9 @@
    (b) loosely coupled and strongly cohesive
    (c) loosely coupled and loosely cohesive
    (d) strongly coupled and strongly cohesive
+
+2. **Which one is an embedded operating system?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
+   (ক) UNIX
+   (খ) MS windows XP
+   (গ) Windows CE
+   (ঘ) Windows NET
