@@ -29,6 +29,8 @@
 
 14. **(a) What is database schema? What are dangling tuple and descriptive attribute?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
 
+15. **What is data Independence? How many types of data independence?** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
+
 ## NoSQL, NewSQL & Modern Databases
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
@@ -409,6 +411,8 @@ ORDER BY average_salary DESC;
 
 3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
 
+4. **How does index tuning help in improving query performance?** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 747]**
+
 ## Relational Data Model & ER Relationships
 
 1. What are the different types of relationships in a relational database? Explain each with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -446,6 +450,8 @@ ORDER BY average_salary DESC;
 10. **Relation to find primary key, candidate key, super key.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 663]**
 
 11. **(a) Differentiate among foreign key, candidate key, and primary key.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
+
+12. **Explain the primary key and composite key with respect to database.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 745]**
 
 ## Indexing in DBMS
 

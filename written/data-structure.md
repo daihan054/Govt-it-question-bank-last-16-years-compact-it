@@ -36,6 +36,8 @@
 
 2. **FIFO is used which data structure?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
+3. **What is a Circular Queue? Describe its implementation.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 743]**
+
 ## Linked List
 
 1. **Explain with proper example of singly linked list.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**

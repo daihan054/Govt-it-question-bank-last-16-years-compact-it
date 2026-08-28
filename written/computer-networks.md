@@ -163,6 +163,8 @@
 
 6. **Write the port address of the following applications of data communications. (i) HTTP; (ii) HTTPS; (iii) FTP; (iv) SMTP; (v) POP** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
 
+7. **Describe TCP/IP protocols and its ports.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
+
 ## Transport Layer (TCP & UDP)
 
 1. Compare TCP and UDP protocols with examples. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -308,6 +310,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 7. **Suppose you are appointed as an Assistant Engineer in a Government organization. The number of telephone connections required for the organization is 1000. The per year increment of telephone connection is 100. Considering the life time of telephone equipment is to be 15 years, design a T-carrier based TDM system for the organization.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
 
 8. **Compare between TDM and TDMA techniques.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
+
+9. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
 
 ## Subnetting & IP Addressing
 

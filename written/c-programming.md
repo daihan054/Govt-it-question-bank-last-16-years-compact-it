@@ -271,6 +271,10 @@ return 0;
 
 61. **Write a C program using array, here N is the number of total students. Take the input and find the average marks. Find out the students who got the above marks or low marks according to average marks.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 732]**
 
+62. **Write down a function int reverse (int n) that takes a positive integer as input parameter and returns the reverse of the given integer. For example, if input integer N=2579, then reversed output is= 9752** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 748]**
+
+63. **Consider int num[20][4] holds the marks of four class test(CT) of a class of 20 students. Write a program to find out the sum of best three CT marks for each student.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 748]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -344,6 +348,8 @@ return 0;
 10. **Write down the types of errors which can occur the execution of a program.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
 
 11. **Write the syntax of while and do while loop.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+12. **What is nested structure in C programming? Explain with example.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 741]**
 
 ## Output Tracing & Control Flow
 

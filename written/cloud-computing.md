@@ -10,6 +10,8 @@
 
 5. **Explain IaaS, PaaS, and SaaS with respect to cloud computing.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
 
+6. **What do you mean by multi-tenancy in the cloud? Why is it beneficial for cloud service providers?** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 749]**
+
 ## Cloud Storage & Fundamentals
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
@@ -43,6 +45,8 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **Server rack digram to draw horizontal and vertical scalling.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 655]**
 
+2. **Difference between elasticity and scalability of resources in the cloud.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 749]**
+
 ## High Availability & System Redundancy
 
 1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.
@@ -50,6 +54,10 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 ## Cloud Security & Compliance
 
 1. **How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
+
+## Cluster, Grid & Distributed Computing
+
+1. **Difference between cluster computing and grid computing.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 750]**
 
 ## Edge Computing & Fog Computing
 

@@ -159,3 +159,7 @@
 3. **What are the challenges in optimizing energy efficiency of data centers? Explain!** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 442]**
 
 4. **What do you mean by national data center?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
+
+5. **What is DCIM in a data center?** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 745]**
+
+6. **What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 750]**
