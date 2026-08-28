@@ -322,3 +322,9 @@
    (খ) ARP, IP
    (গ) TCP, IP
    (ঘ) UDP, TCP
+
+2. **TCP দিয়ে কোনটি বোঝানো হয়?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 61]**
+   (ক) প্রোগ্রাম
+   (খ) প্রোটোকল
+   (গ) প্রোগ্রামিং
+   (ঘ) ফ্লোচার্ট

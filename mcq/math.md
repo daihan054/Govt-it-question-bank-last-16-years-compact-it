@@ -78,6 +78,18 @@
 14. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাঁটা ও মিনিটের কাঁটার মধ্যকার কোণ কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    **Ans:** ১২০ ডিগ্রি
 
+15. **Find the area of a circle whose circumference is 22\text{ cm}?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 35.2\text{ cm}^2
+   (খ) 38.5\text{ cm}^2
+   (গ) 41.7\text{ cm}^2
+   (ঘ) 47.6\text{ cm}^2
+
+16. **A pole 6\text{m} high casts a shadow 2\sqrt{3}\text{ m} long on the ground, they find the angle of elevation of sun.** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 30^\circ
+   (খ) 60^\circ
+   (গ) 45^\circ
+   (ঘ) 90^\circ
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -185,6 +197,42 @@
    গ) 2^{32}
    ঘ) 8^{120}
    **Ans: গ**
+
+13. **The function f(x)=x+\cos x is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) Always increasing
+   (খ) always decreasing
+   (গ) Increasing for a certain range of x
+   (ঘ) none of these
+
+14. **If 6\sin^{-1}(x^2-6x+8.5) = \pi, then the value of x is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 1
+   (খ) 2
+   (গ) 3
+   (ঘ) 5
+
+15. **If \log_4 x = 12, then \log_2 \frac{x}{4} = ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 11
+   (খ) 22
+   (গ) 44
+   (ঘ) 2
+
+16. **Value for k, for which A = \begin{bmatrix} k & 8 \\ 4 & 2k \end{bmatrix} is a singular matrix is---?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) -4
+   (খ) 4
+   (গ) +4
+   (ঘ) 0
+
+17. **A fraction becomes 1/3 when 1 is subtracted from the numerator and it becomes 1/4 when 8 is added to its denominator. Find the fraction.** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 5/12
+   (খ) 3/32
+   (গ) 12/5
+   (ঘ) 8
+
+18. **The scalar product of 5\hat{i}+\hat{j}-3\hat{k} and 3\hat{i}-4\hat{j}+7\hat{k} is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 10
+   (খ) -10
+   (গ) 15
+   (ঘ) -15
 
 ## Percentage, Profit & Loss
 
@@ -361,3 +409,17 @@
    (খ) Difference
    (গ) Intersection
    (ঘ) Complement
+
+## Probability & Statistics
+
+1. **The mode and mean is given by 7 and 8 respectively. Then the median is:** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 1/13
+   (খ) 13/3
+   (গ) 23/3
+   (ঘ) 33
+
+2. **If P(A) = 0.6, P(B) = 0.4, P(B/A) = 0.2 then find P(A \cup B) = ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) 0.76
+   (খ) 0.88
+   (গ) 0.56
+   (ঘ) 0.69

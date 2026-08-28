@@ -570,6 +570,30 @@
    (d) in
    **Ans: a**
 
+86. **BCIC is looking ______ engineers for recruitment.** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) at
+   (খ) for
+   (গ) on
+   (ঘ) after
+
+87. **After see that he told, ______ for tat."** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) tot
+   (খ) tut
+   (গ) tit
+   (ঘ) tet
+
+88. **Karim memorizing carry ______ the holy Quran?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) on
+   (খ) out
+   (গ) off
+   (ঘ) for
+
+89. **It works hard, we are ______ progress.** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) Taking
+   (খ) Having
+   (গ) Making
+   (ঘ) Doing
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
@@ -635,6 +659,24 @@
    (খ) and important matter
    (গ) an unexpected gift
    (ঘ) an object of quarrel
+
+13. **The visit his mother off and on. Here "off and on" means?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) Regularly
+   (খ) Hourly
+   (গ) Occasionally
+   (ঘ) Consistently
+
+14. **Leaders should not only make speeches they should also be prepared to bell the cat.** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) To take lead in danger
+   (খ) To tie bell to a cat's neck
+   (গ) To be alert of the enemy
+   (ঘ) to make noise
+
+15. **Which Idiom means 'try every possible course of action in order to achieve something'?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) Leave no stone unturned
+   (খ) Take one to task
+   (গ) Ride the high horse
+   (ঘ) Give a wide berth
 
 ## Vocabulary, Synonyms & Antonyms
 
@@ -826,6 +868,18 @@
    (c) to drink
    (d) to acquire
 
+34. **Synonym of "Reverently" is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) Adversely
+   (খ) Negatively
+   (গ) Disapprovingly
+   (ঘ) Respectfully
+
+35. **"Proportion" means ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) Aggregate
+   (খ) ensemble
+   (গ) bulk
+   (ঘ) ratio
+
 ## Spelling
 
 1. **Which one is correct?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -877,3 +931,9 @@
    (c) Teat for tet
    (d) Tit for teet
    **Ans: a**
+
+9. **Which spell is correct word (s)?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) Encyclopedia Britannica
+   (খ) Encyclopedia Britannica
+   (গ) Enciclopadia Britannica
+   (ঘ) Enciclopedia Britannica

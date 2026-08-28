@@ -383,6 +383,18 @@
    (গ) হেনরি
    (ঘ) রেডিয়াম
 
+61. **Oncology কিসের সাথে জড়িত?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 61]**
+   (ক) চোখের গবেষণায়
+   (খ) ক্যান্সার গবেষণায়
+   (গ) হাড়ের সাথে জড়িত
+   (ঘ) হার্টের সাথে সম্পর্কিত
+
+62. **নিচের কোনটি সর্বোচ্চ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) ১ গিগাবাইট
+   (খ) ১০০ মেগাবাইট
+   (গ) ১০০০ মেগাবাইট
+   (ঘ) ১০০০০ মেগাবাইট
+
 ## International Affairs
 
 1. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -748,6 +760,18 @@
    (c) Ghana
    (d) Somalia
    **Ans: b**
+
+67. **ISO কিসের সাথে সম্পর্কিত?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) অ্যাপল
+   (খ) এনড্রয়েড
+   (গ) নোকিয়া
+   (ঘ) গুগল
+
+68. **জাতিসংঘের কোন সংস্থাটি রিফিউজি নিয়ে কাজ করে?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) WHO
+   (খ) UNDP
+   (গ) UNHCR
+   (ঘ) UNFCC
 
 ## Bangladesh Affairs
 
@@ -1326,6 +1350,66 @@
    (d) 10:3
    **Ans:**
    **(a) 5:3**
+
+104. **রাতারগুল কোন ধরণের বন?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) ম্যানগ্রোভ
+   (খ) জলাবন
+   (গ) হাওর
+   (ঘ) হ্রদ
+
+105. **ছয়দফা কতসালে প্রস্তাব করা হয়?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) ১৯৬৯
+   (খ) ১৯৭২
+   (গ) ১৯৫৪
+   (ঘ) ১৯৬৬
+
+106. **বাংলাদেশের দীর্ঘতম নদী কোনটি?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 62]**
+   (ক) যমুনা
+   (খ) ব্রহ্মপুত্র
+   (গ) মেঘনা
+   (ঘ) পদ্মা
+
+107. **Who is the Chairman of BCIC?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) Shah Md. Imdadul Haque
+   (খ) Mrs. Jasmin Nahar
+   (গ) Kazi Mohammad Saiful Islam
+   (ঘ) Mr. Mohammada Shaheen Kamal
+
+108. **Bangladesh Chemical Industries Corporation (BCIC), fully owned by the Gob, was established in ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) 1st January, 1973
+   (খ) 1st January, 1976
+   (গ) 1st july, 1976
+   (ঘ) 1st July, 1973
+
+109. **How many enterprise under BCIC?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) 11
+   (খ) 17
+   (গ) 23
+   (ঘ) none of a, b and c
+
+110. **How much number of enterprise of BCIC at founded period?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) 100
+   ((খ) 92
+   (গ) 88
+   (ঘ) 8
+
+111. **Number of fertilize enterprise of BCIC is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) 3
+   (খ) 8
+   (গ) 5
+   (ঘ) 10
+
+112. **The number of board of director of BCIC is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) 5
+   (খ) 6
+   (গ) 8
+   (ঘ) 7
+
+113. **The Most Loss making enterprise of BCIC in 2020–2021 is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
+   (ক) Shahjalal Fertilizer Project
+   (খ) Ashugonj Fertilizer & Chemical Co.
+   (গ) Karnophuli Paper Mills Ltd.
+   (ঘ) Chittagong Urea Fertilizer Project
 
 ## Geography & Environment
 

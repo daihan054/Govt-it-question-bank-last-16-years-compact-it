@@ -68,6 +68,12 @@
    (গ) Electrical
    (ঘ) Electro magnetic
 
+5. **নিচের কোনটি ইনপুট ডিভাইস নয়?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 61]**
+   (ক) মাউস
+   (খ) কীবোর্ড
+   (গ) মনিটর
+   (ঘ) জয়স্টিক
+
 ## ICT & Emerging Technology
 
 1. **What does a block in a Blockchain?** **(BREB Assistant Programmer Exam: 2023) [compact it 32]**
@@ -143,3 +149,9 @@
    (খ) a[i]=5; i[a]=5;
    (গ) char c[10]; char *c;
    (ঘ) void bar (int) ; void bar (int x);
+
+8. **কোনটি ইমেজ ফাইল এক্সটেনশন নয়?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 61]**
+   (ক) Png
+   (খ) Jpeg
+   (গ) avi
+   (ঘ) gif
