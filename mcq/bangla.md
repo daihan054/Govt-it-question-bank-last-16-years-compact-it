@@ -1044,6 +1044,24 @@
    (c) চেয়ে
    (d) দ্বারা
 
+104. **নিচের কোনটি সঠিক বানান?** **(PGCB Sub-Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 138]**
+   a) সাম্বত
+   b) শাশ্বত
+   c) শ্বাশত
+   d) শাশ্বত
+
+105. **Civil Society এর পারিভাষিক শব্দ কোনটি?** **(PGCB Sub-Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 138]**
+   a) সভ্য সমাজ
+   b) সুশীল সমাজ
+   c) বেসামরিক সমাজ
+   d) অসামাজিক সমাজ
+
+106. **জায়া ও পতি এর সমাস করলে কি হবে?** **(PGCB Sub-Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 138]**
+   a) পতি-পত্নী
+   b) দম্পতি
+   c) জায়া-পতি
+   d) স্বামী-স্ত্রী
+
 ## বাগধারা ও প্রবাদ
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**

@@ -702,6 +702,36 @@
    (c) Syntax
    (d) Semantics
 
+107. **I wish you ________ the problem.** **(PGCB Sub-Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 138]**
+   a) Can Solve
+   b) Could Solve
+   c) Would
+   d) Would Solve
+
+108. **The word “beautiful” is ________?** **(PGCB Sub-Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 138]**
+   a) a noun
+   b) a verb
+   c) a verb
+   d) an adjective
+
+109. **The plural form of index is?** **(PGCB Sub-Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 138]**
+   a) Indices
+   b) Indexes
+   c) Indexis
+   d) Indicess
+
+110. **He speaks as if he ________ a leader.** **(PGCB Sub-Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 138]**
+   a) as
+   b) was
+   c) were
+   d) is
+
+111. **Choose the right sentence.** **(PGCB Sub-Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 138]**
+   a) More he gets, more he wants
+   b) The more he gets, more he wants
+   c) More he gets, the more he wants
+   d) The more he gets, the more he wants
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
