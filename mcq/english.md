@@ -134,6 +134,37 @@
    (c) The man who stole my bag was tall
    (d) The man was tall who is stealing my bag
 
+16. **Who taught her such things?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) Who was she taught such things by?
+   (b) She was taught such things by who?
+   (c) By whom she was taught such things?
+   (d) By whom was she taught such things?
+
+17. **We hope that we shall win the match.** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) The match is hoped to be won.
+   (b) Match winning is our hope.
+   (c) It is hoped that the match will be won by us.
+   (d) Winning the match is hoped by us.
+   *In each of the following questions, a sentence has been given in Direct Speech. Out of the four alternatives suggested select the one which best expresses the same sentence in Indirect Speech.*
+
+18. **The Manager said, "Well, what can I do for you?"** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) The Manager asked what he could do for him.
+   (b) The Manager wondered what he could do for him.
+   (c) The Manager wanted to know what he could do for him.
+   (d) The Manager said that he couldn't do anything for him.
+
+19. **He said, "Can you sing?" And I said, "No"** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) He asked me that could I sing and I refused.
+   (b) He asked me if I could sing and I said that I could't.
+   (c) I denied, when he asked me if I could sing.
+   (d) He asked me if I could sing and I said no.
+
+20. **He said, "Will you listen to such a man?"** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) He asked them will you listen to such a man.
+   (b) He asked them are you listening to such a man.
+   (c) He asked them whether they would listen to such a man.
+   (d) He asked them whether they will listen to such a man.
+
 ## Idioms & Phrases
 
 1. **'Cut and dry' means:** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**

@@ -134,6 +134,30 @@
    (c) Canada
    (d) Russia
 
+14. **The Mona Lisa portrait was painted by Leonardo da Vinci in the-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) 15th century
+   (b) 14th century
+   (c) 16th century
+   (d) 17th century
+
+15. **Who wrote the book 'Politics'?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   a) Aristotle
+   (b) Socrates
+   (c) Plato
+   (d) Pythagoras
+
+16. **Pythagoras was a Greek-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) Philosopher
+   (b) Mathematician
+   (c) Accountant
+   (d) a & b
+
+17. **What is the name of American built spacecraft landed in the lunar's southern polar region of February 22, 2024?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) Apollo-17
+   (b) Odysseus
+   (c) Chandrayaan-3
+   (d) Luna-25
+
 ## Bangladesh Affairs
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -274,6 +298,12 @@
    (c) Dumlong
    (d) Keokradong
 
+24. **Which one of the following is true?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) Bangladesh is a lower middle-income country.
+   (b) Bangladesh is an upper middle-income country.
+   (c) Bangladesh is a low-income country.
+   (d) Bangladesh is a high-income country.
+
 ## Geography & Environment
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
@@ -343,3 +373,9 @@
    (b) Kapil Dev
    (c) Alan Border
    (d) Steve Waugh
+
+4. **Who is the fastest woman after winning 100 metre sprint titles of the 44th National Athletics Championship held in January, 2024?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) Tahmina Rahman
+   (b) Sonia Akhtar
+   (c) Sharifa Khatun
+   (d) Shirin Akhtar

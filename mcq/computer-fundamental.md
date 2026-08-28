@@ -6,6 +6,18 @@
    গ. ১৫০
    ঘ. ২০০
 
+2. **Which one is the first high level programming language?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+   A) C
+   B) COBOL
+   C) FORTRAN
+   D) C++
+
+3. **Which one is the first search engine?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+   A) Google
+   B) Archie
+   C) Alta vista
+   D) WAIS
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -13,3 +25,9 @@
    b) Ctrl + W
    c) Ctrl + N
    d) Ctrl + Q
+
+2. **Which operation dose F1 key perform for all types of application?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+   A) Windows shut down
+   B) File open
+   C) Help
+   D) Save

@@ -29,3 +29,9 @@
    (b) Parameter that define the structure of the model
    (c) Parameter used to make prediction
    (d) Parameter related to the loss function
+
+6. **GPT stands for-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) General Pre-trained Transformer.
+   (b) Generative Program Technology.
+   (c) Generative Process Technology.
+   (d) Generative Pre-trained Transformer.

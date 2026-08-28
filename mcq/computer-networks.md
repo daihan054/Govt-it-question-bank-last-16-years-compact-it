@@ -46,6 +46,12 @@
    c) 64 bits
    d) 132 bits
 
+2. **IPv6 does not support which of the following addressing modes?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) unicast addressing
+   (B) multicast addressing
+   (C) broadcast addressing
+   (D) anycast addressing
+
 ## Networking Fundamentals & Terminology
 
 1. **Set of rules is called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
@@ -83,3 +89,9 @@
    b) 255.255.255.128
    c) 255.255.255.192
    d) 255.255.254.0
+
+2. **What is IP class and number of sub-networks if the subnet mask is 255.224.0.0?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) Class A, 3
+   (B) Class A, 8
+   (C) Class B, 3
+   (D) Class B, 32

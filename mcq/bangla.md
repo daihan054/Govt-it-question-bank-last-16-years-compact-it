@@ -72,6 +72,24 @@
    (c) কল্লোল
    (d) নবযুগ
 
+13. **কোনটি বাংলা একাডেমি থেকে প্রকাশিত মাসিক পত্রিকা?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) ধান শালিকের দেশ
+   (b) লাঙল
+   (c) বার্তা
+   (d) উত্তরাধিকার
+
+14. **'জীবন আমার বোন' কোন ধরনের সাহিত্যকর্ম?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) নাটক
+   (b) প্রবন্ধ
+   (c) উপন্যাস
+   (d) কবিতা
+
+15. **The poem 'Shadhinota Tumi' is written by-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) Kazi Nazrul Islam
+   (b) Ahmed Sofa
+   (c) Shamsur Rahman
+   (d) Rabindranath Tagore
+
 ## বাংলা ব্যাকরণ
 
 1. **'কিন্ডারগার্টেন' কোন ভাষার শব্দ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -202,6 +220,30 @@
    (c) আমি সন্তোষ হইলাম
    (d) তুমি নির্দোষীন
 
+23. **'আপন পাঠেতে করহ নিবেশ', বাক্যে 'পাঠাতে' শব্দটি কোন কারকে কোন বিভক্তি?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) কর্মকারকে তৃতীয়া
+   (b) করণ কারকে পঞ্চমী
+   (c) অধিকরণ কারকে সপ্তমী
+   (d) অপাদান কারকে সপ্তমী
+
+24. **একাধিক স্বাধীন বাক্যকে একটি বাক্যে লিখলে সেগুলোর মাঝখানে কোন চিহ্ন বসে?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) হাইফেন
+   (b) সেমিকোলন
+   (c) ড্যাশ
+   (d) কমা
+
+25. **কোনটি অস্তিবাচক বাক্য-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) সে কিছুতেই সন্তুষ্ট নয়
+   (b) দুবারের বেশী ফোন করিনি
+   (c) আমি অন্য কোথাও যাব না
+   (d) আপনি আমায় অবিশ্বাস করেছেন
+
+26. **'আবির্ভাব' শব্দটি গঠিত হয়েছে-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) প্রত্যয় দ্বারা
+   (b) উপসর্গ দ্বারা
+   (c) সন্ধি দ্বারা
+   (d) বিভক্তি দ্বারা
+
 ## বাগধারা ও প্রবাদ
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
@@ -229,6 +271,12 @@
    খ. প্রবাসী
    গ. প্রোষিতভর্তৃকা
    ঘ. প্রষিতভর্তৃকা
+
+3. **সাদাতে হলুদ বর্ণকে কী বলা হয়?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 18]**
+   (a) হলদেটে
+   (b) ফিকে
+   (c) পান্ডুর
+   (d) বাসন্তি
 
 ## বাংলা ভাষা বিষয়ক তথ্য
 

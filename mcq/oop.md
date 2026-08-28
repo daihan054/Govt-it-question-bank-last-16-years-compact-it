@@ -53,6 +53,29 @@
    (c) dive must be a method
    (d) submarine must be the name of a class
 
+8. **What is the output of this Java program?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+   ```java
+   class Test{
+   int i=1;
+   }
+   public class main{
+   public static void main(String args[]) {
+   Test t;
+   System.out.println(t.i);
+   }
+   }
+   ```
+   a) The program will cause an runtime exception because the variable 'i' was not initialized
+   b) The program will cause an compile error because the object 't' was not initialized
+   c) 0
+   d) A garbage value
+
+9. **Interfaces in Java are meant to be-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+   a) Extended
+   b) Implemented
+   c) Overridden
+   d) Used by creating object
+
 ## Encapsulation & Access Modifiers
 
 1. **Which of the following does NOT achieve encapsulation?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**

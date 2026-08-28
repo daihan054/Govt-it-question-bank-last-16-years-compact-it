@@ -133,3 +133,71 @@
    (b) 3 2
    (c) 2 3
    (d) 3 1
+
+9. **What will be the output of this C program?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   ```c
+   #include<stdio.h>
+   ```c
+   int main() {
+   float p=10.5;
+   int a=5*p+5.0;
+   printf("%d\n",a);
+   return 0;
+   }
+   ```
+   a) 57.500000
+   b) 57
+   c) 57.000000
+   d) The program has errors and will not run.
+
+10. **Which of the following Output of this program?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   ```c
+   #include <stdio.h>
+   int main() {
+   static int i=5;
+   if (--i) {
+   printf("%d ",i);
+   main() ;
+   }
+   }
+   ```
+   (A) 4 3 2 1
+   (B) 1 2 3 4
+   (C) 4 4 4 4
+   (D) 0 0 0 0
+
+11. **Given Output:** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   ```c
+   #include <stdio.h>
+   int main() {
+   int y = 0;
+   int x = (y != 0);
+   printf("%d", x);
+   return 0;
+   }
+   ```
+   (A) 0
+   (B) 1
+   (C) A bog negative Number
+   (D) Compiler Error
+
+## Storage Classes & Scope
+
+1. **Which of the following is not a storage class specifier in C?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) auto
+   (B) register
+   (C) static
+   (D) extern
+   (E) volatile
+
+2. **In C, static storage class cannot be used with:** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) Global variabl
+   (B) Function parameter
+   (C) Function name
+   (D) Local variable
+
+3. **Which of the following storage classes have global visibility in C/C++?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) Auto
+   (B) Extern
+   (C) Static
+   (D) Register

@@ -30,6 +30,12 @@
    (c) 24 ft
    (d) 26 ft
 
+6. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm less than its length. What is the perimeter of the square?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) 60cm
+   (b) 44cm
+   (c) 80cm
+   (d) cannot be determined
+
 ## Trigonometry
 
 1. **\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -152,6 +158,18 @@
    (c) 5000
    (d) 5001
 
+6. **The number 3 divides 'a' with a result of 'b' and a reminder of 2. The number 3 divides 'b' with a result of 2 and 'a' reminder of 1. What is the value of 'a'?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) 13
+   (b) 17
+   (c) 23
+   (d) 21
+
+7. **A prime number is a number that is divisible only by itself and 1. Which of the following is not a prime number?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) 2
+   (b) 7
+   (c) 99
+   (d) 181
+
 ## Time, Work & Distance
 
 1. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
@@ -179,3 +197,11 @@
    (b) 2
    (c) 3
    (d) 4
+
+## Permutation & Combination
+
+1. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 19]**
+   (a) 45
+   (b) 90
+   (c) 63
+   (d) 126

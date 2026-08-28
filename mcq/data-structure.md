@@ -12,6 +12,30 @@
    (c) \Theta(n^2)
    (d) \Theta(1)
 
+3. **Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to delete the node Q from the list?** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+   (A) O(n)
+   (B) O(log2 n)
+   (C) O(logn)
+   (D) O(1)
+
+4. **In a doubly linked list, the number of pointers affected for an insertion operation will be-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+   (A) 5
+   (B) 0
+   (C) 1
+   (D) None of these
+
+5. **The time required to search an element in a linked list of length n is-** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
+   (A) O (log n)
+   (B) O (n)
+   (C) O (1)
+   (D) O (n^2)
+
+6. **The minimum number of fields with each node of doubly linked list is** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 21]**
+   (A) 1
+   (B) 2
+   (C) 3
+   (D) 4
+
 ## Stack & Queue
 
 1. **The minimum number of stacks needed to implement a queue is** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
