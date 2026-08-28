@@ -73,6 +73,8 @@ for i in N:
 
 15. **Fastest sorting algorithms?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
+16. **Bubble sort, Quick sort and Merge sort algorithm এর Worst case complexity নির্ণয় কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
@@ -94,6 +96,10 @@ for i in N:
 ## Divide and Conquer & Matrix Multiplication
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 378]**
+
+## Huffman Coding & Data Compression
+
+1. **Huffman encoding draw huffman tree. Given word “CONNECTION”.** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 645]**
 
 ## NP-Completeness & Complexity Reduction
 

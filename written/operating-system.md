@@ -18,6 +18,8 @@
 
 9. **(গ) Real Time System বলতে কী বোঝায় ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
 
+10. **Explain context switching in Operating System.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
+
 ## Concurrency, Threads & Synchronization
 
 1. Multi-threaded processing and distributed computing have become essential. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
@@ -99,6 +101,11 @@ int main(int argc, char *argv[]){
 14. **Find the possible path to know how data on the internet treavels from your mechine to the site www.bicic.gov.bd. Write down the necessary command to accomplish this.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 633]**
 
 15. **You want to run some specific commands at some price schedules time. Which command will have to be used for this.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 633]**
+
+16. **Linux Command লিখ:** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+   a) একটি ফোল্ডারের সকল ফাইল দেখানোর কমান্ড।
+   b) নতুন ডিরেক্টরি তৈরির কমান্ড।
+   c) ফাইল এ্যাকসেস পারমিশন দেখানোর কমান্ড।
 
 ## Windows & System Administration
 

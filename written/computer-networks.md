@@ -38,6 +38,8 @@
 
 4. **(ক) ফাইবার অপটিক ক্যাবলের গঠন ও বৈশিষ্ট্য ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
 
+5. **Write down the Working principle of Optical Fibre.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
+
 ## Network Topologies
 
 1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
@@ -186,9 +188,15 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 4. **Unit of data link layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
+## Line Coding & Digital Encoding
+
+1. **Assume we want to transmit the following binary string: 01001110. Show the resulting signal on the one using the following line coding techniques: (i) NRZ-L (ii) Manchester NRZ (iii) Unipolar RZ (binary string: 11011000100)** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 638]**
+
 ## Pulse Code Modulation (PCM) & Signal Processing
 
 1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+2. **Draw Delta modulation figure and math. (Approximate)** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 648]**
 
 ## Error Detection & Data Communication (CRC, Throughput)
 
@@ -369,6 +377,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 50. **Give IP 192.168.1.50 and subnet mask 255.255.255.240; Find valid host, Network address, and Broadcast address.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 456]**
 
+51. **Identify the class, network IP address, direct broadcast address and limited broadcast address of the following IP address: (i) 1.2.3.4 (ii) 130.1.2.3 (iii) 220.15.1.10 (iv) 200.1.10.100** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
+
+52. **What is the subnet mask in 10.2.1.3/22 network?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
@@ -451,6 +463,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 | 0.0.0.0 | Interface 4 |
 **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 462]**
 
+11. **Define distance Vector and Link state routing protocols.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
+
+12. **What are static and dynamic routing? Given their relative advantages.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
+
 ## High Availability & Redundancy Protocols (VRRP, HSRP)
 
 1. **State the network protocol of VRRP?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1359]**
@@ -513,6 +529,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 8. **Explain how do DHCP work?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
 
+9. **SMTP, DNS, DHCP, NAT এর কাজ কি লিখ?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
+
 ## Email Architecture & Protocols (SMTP, POP3, IMAP)
 
 1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
@@ -540,6 +558,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **What is baseband and passband frequency?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
 
 3. **অথবা, (ক) Low-pass Channel এবং Band-pass Channel এর মধ্যে উদাহরণসহ পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
+
+4. **What is modulation? Why is it necessary?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
+
+5. **Amplitude Modulation related problem. (Approximate)** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 644]**
 
 ## Wireless Networks & IoT (mmWave)
 

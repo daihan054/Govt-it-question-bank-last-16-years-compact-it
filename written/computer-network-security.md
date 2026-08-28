@@ -60,6 +60,8 @@
 
 3. **Software downloaded from internet and installed that is not malicious is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
+4. **একটি Virus ও Ransomware এর নাম লিখ?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+
 ## Email & Messaging Security (Spam, Phishing)
 
 1. **Unsoliciated email is called?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
@@ -71,6 +73,8 @@
 1. **সাইবার অপরাধের প্রকারভেদ পরিবেশের স্থায়িত্ব বর্ণনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
 2. **Hacking a system without cracking the system, only for finding bugs and vulgarities is called?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
+
+3. **What is Cybercrime? Cybercrime রোধে প্রয়োজনীয় পদক্ষেপ গুলো লিখ।** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
 
 ## Social Engineering & Cyber Attacks
 
@@ -148,6 +152,8 @@
 8. **How to work two factor authentication?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 574]**
 
 9. **(b) How do you define 2 factor authentication? Give example.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
+
+10. **What is digital signature? Where is it used?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
 
 ## Security Protocols (SSL/TLS, HTTPS)
 

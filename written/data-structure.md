@@ -24,6 +24,8 @@
 
 10. **Difference between Stack and Queue.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
 
+11. **Expalin: Infix, Prefix, Postfix notation.** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
+
 ## Queue
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
@@ -43,6 +45,8 @@
 5. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
 
 6. **(খ) উদাহরণসহ Array এবং Linked List এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
+
+7. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 636]**
 
 ## Tree
 
@@ -87,6 +91,8 @@
 2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 590]**
 
 3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
+
+4. **Construct a Binary Search tree, then post order, ....... (Approximate)** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
 
 ## Priority Queues & Heaps (Min/Max Heap)
 

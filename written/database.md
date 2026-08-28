@@ -271,6 +271,8 @@ ORDER BY average_salary DESC;
 
 40. **SQL query from a given table.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 634]**
 
+41. **Employee table হতে Employee_id, Employee কে খোঁজে বের করার SQL Command লিখ যাদের গড় salary 2000 উপরে।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 641]**
+
 ## Transaction Management & ACID Properties
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
@@ -403,6 +405,8 @@ ORDER BY average_salary DESC;
 
 7. **(খ) Primary key এবং Super key এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
 
+8. **Super key and Candidate key finding from table.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]**
+
 ## Indexing in DBMS
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -423,6 +427,8 @@ ORDER BY average_salary DESC;
 4. **Consider the Schema employee(id, name, salary), equipment(id, name, price), hire(employee_id, equipment_id)**
    **(i) Draw the ERD digram for the relation**
    **(ii) Write the SQL query to show the name of employee who borrow the maximum equipment?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 462]**
+
+5. **Develop an entity relationship diagram that describes data objects, relationships and attributes of the following system: -A web based order processing system for a computer store.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
 
 ## Database Connectivity (JDBC)
 

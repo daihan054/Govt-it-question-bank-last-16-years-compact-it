@@ -6,6 +6,10 @@
 
 3. **(ক) ফর্ম জমা দেয়ার পদ্ধতি GET এবং POST এর মধ্যে পার্থক্য কী, কখন কোন পদ্ধতি ব্যবহার করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
+4. **What is cookie? What is its purpose?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
+
+5. **What is the difference between http and https?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]**
+
 ## JavaScript & jQuery (DOM & Validation)
 
 1. **Jquery for email validation** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

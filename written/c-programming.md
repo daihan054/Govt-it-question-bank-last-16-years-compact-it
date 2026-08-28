@@ -236,6 +236,8 @@ return 0;
 
 47. **(খ) প্রথম দশটি Fibonacci number প্রদর্শনের জন্য একটি C program লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 601]**
 
+48. **Write a C program: x - \frac{x^3}{3} + \frac{x^5}{5} - \dots** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 650]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
@@ -245,6 +247,8 @@ return 0;
 3. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
 
 4. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
+
+5. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
 
 ## Command Line Arguments & Basic Programs
 
@@ -281,6 +285,8 @@ return 0;
 6. **(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
 
 7. **(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
+
+8. **What is the main difference between structure and array in C programming? Explain with examples.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
 
 ## Output Tracing & Control Flow
 
@@ -386,6 +392,19 @@ int main() {
 10. **C programming output problem.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 468]**
 
 11. **What is the output of code snippet?** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 631]**
+
+12. **নিচের পাইথন program এর Output বের কর:** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 641]**
+```python
+def main():
+    x, y = 8, 4
+    if(x < y):
+        st= "x is less than y"
+    else:
+        st= "x is greater than y"
+    print (st)
+if __name__ == "__main__":
+    main()
+```
 
 ## Recursion & Functions
 

@@ -21,6 +21,8 @@
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
 
+2. **BCD Addition: 00010011 + 00100110** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 644]**
+
 ## Karnaugh Map (K-Map)
 
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
@@ -54,6 +56,8 @@
 
 1. **(a) State De-Morgan’s law with an appropriate example.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
 
+2. **AB + (A(\overline{BC}))(AC + \overline{B}C)** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
+
 ## Logic Gates & Universal Gates
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
@@ -81,6 +85,8 @@
 12. **X = \bar{A}BC + A\bar{B}C + AB\bar{C} + ABC সমীকরণটির সরলীকৃত মান NAND এবং NOR গেইট দ্বারা বাস্তবায়ন করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 407]**
 
 13. **$Y = A \cdot B + \overline{(A \cdot B)}$** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
+
+14. **Explain: NOR and NAND is a Universal gate.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
 
 ## Combinational Circuits (Adders, Encoders, MUX)
 

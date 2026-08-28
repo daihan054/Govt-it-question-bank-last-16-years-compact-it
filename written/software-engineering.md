@@ -40,6 +40,8 @@
 
 15. **অথবা, (ক) Black-box এবং White-box testing এর মধ্যে পার্থক্যগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 621]**
 
+16. **What is software testing? Discuss effective and exhaustive testing.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
+
 ## UML Diagrams (Class, Use Case, Sequence)
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
@@ -67,6 +69,8 @@
    * (d) Interface Requirments
 
 3. **(b) Which contents shoud be consider when you setup a new system?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
+
+4. **You have been given a responsibility to elicit requirements from a customer, who tells you that he is too busy to meet with you. What should you do?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
 
 ## SDLC Phases & Models
 
@@ -114,6 +118,8 @@
 
 22. **How does agile methodology used in software development differ from that of waterfall methodology? Explain in brief.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
 
+23. **Software engineering এ ফিজিবিলিটি স্ট্যাড্যির ৭টি ধাপ বর্ণনা কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+
 ## Software Architecture & Design Patterns (MVC)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
@@ -127,6 +133,8 @@
 5. **Define design pattern. Write about singleton pattern.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 469]**
 
 6. **We are going to create a Shape interface and concrete classes implementing the Shape interface. A facade class ShapeMaker is defined as a next step. ShapeMaker class uses the concrete classes to delegate user calls to these classes. FacadePatternDemo, our demo class, will use ShapeMaker class to show the results.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 450]**
+
+7. **Imagine a scenario where new child classes are introduced frequently from a basic class. The method calling sequences for every child class are the same but the implementation is different among the child classes. Here which design pattern would you like to apply? Explain the reasons with examples to support your answer.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
 
 ## CI/CD & DevOps Methodologies
 

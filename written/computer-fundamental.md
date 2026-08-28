@@ -4,6 +4,8 @@
 
 2. **What is platform independent software discuss with example?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 514]**
 
+3. **What is the difference between System Software and Application Software?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
+
 ## User Interfaces (CLI vs GUI)
 
 1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -46,6 +48,10 @@
 | API |  |
 | LRU |  |
 
+16. **Image file এর extension নিচের কোনটি?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+
+17. **What is OCR? Write down the difference between OCR and OMR.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
+
 ## Hardware Components & BIOS (CMOS Battery)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -63,6 +69,8 @@
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
 
 2. **Describe the transformative power of ICT with ten innovative applications for the online banking system.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 304]**
+
+3. **What do you mean by viral video? List three advantages of viral vedio.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
 
 ## Digital Banking & Financial Inclusion
 

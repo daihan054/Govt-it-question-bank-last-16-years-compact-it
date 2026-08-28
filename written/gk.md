@@ -220,6 +220,8 @@
 
 42. **Who is the inventor of IR 4.00?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
+43. **Breifly explain SDG.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 644]**
+
 ## Everyday Science & Environment
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**

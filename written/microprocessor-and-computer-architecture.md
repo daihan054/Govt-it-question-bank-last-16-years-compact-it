@@ -24,6 +24,8 @@
 
 8. **Difference between 32 bit Microprocessor and 64 bit Microprocessor with example. What is the meaning of 2.40GHz Microprocessor? Differentiate among Core Intel i3, i5 and i7 processor. Why do you prefer SSD instead of HD?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 508]**
 
+9. **8086 microprocessor সম্বলিত একটি ডায়াগ্রাম বা ফিগার হতে ২টি পার্ট এর নাম উল্লেখ কর?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+
 ## Multi-Core & Multi-Threading
 
 1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
@@ -58,6 +60,8 @@
 
 1. **RISC stand for __________? Write two characteristics of it's?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
+2. **Difference between RISC and CISC.** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 644]**
+
 ## Cache Memory
 
 1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
@@ -91,6 +95,8 @@
 8. **What do you mean by memory organization? Write the different between SRAM and DRAM.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 558]**
 
 9. **What is dual channel RAM? Difference between single In-Line and Dual In-Line Memory Module.** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 559]**
+
+10. **What is the difference between Dynamic RAM and Static RAM?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
 
 ## Secondary Storage (HDD vs SSD)
 
