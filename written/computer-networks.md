@@ -3,497 +3,45 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing) | 97 |
-| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model) | 44 |
-| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology) | 23 |
-| 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https) | 20 |
-| 5 | [Multiplexing & Bandwidth](#multiplexing--bandwidth) | 18 |
-| 6 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration) | 18 |
-| 7 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp) | 17 |
-| 8 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave) | 17 |
-| 9 | [Networking Devices](#networking-devices) | 16 |
-| 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes) | 15 |
-| 11 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring) | 14 |
-| 12 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput) | 14 |
-| 13 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon) | 14 |
-| 14 | [IPv6 Addressing](#ipv6-addressing) | 13 |
-| 15 | [Network Topologies](#network-topologies) | 12 |
-| 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget) | 11 |
-| 17 | [Network Address Translation (NAT)](#network-address-translation-nat) | 11 |
-| 18 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat) | 10 |
-| 19 | [Digital Modulation & Signal Processing (BPSK, QPSK)](#digital-modulation--signal-processing-bpsk-qpsk) | 10 |
-| 20 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait) | 9 |
-| 21 | [Email Architecture & Protocols (SMTP, POP3, IMAP)](#email-architecture--protocols-smtp-pop3-imap) | 9 |
-| 22 | [Application Layer & Well-Known Port Numbers](#application-layer--well-known-port-numbers) | 8 |
-| 23 | [Switching Techniques (Circuit vs Packet Switching)](#switching-techniques-circuit-vs-packet-switching) | 5 |
-| 24 | [WAN Technologies (SONET/SDH, ATM, WDM)](#wan-technologies-sonetsdh-atm-wdm) | 5 |
-| 25 | [Pulse Code Modulation (PCM) & Signal Processing](#pulse-code-modulation-pcm--signal-processing) | 4 |
-| 26 | [Network Layer (Packet Fragmentation & Tunneling)](#network-layer-packet-fragmentation--tunneling) | 4 |
-| 27 | [Analog Modulation & Radio Receivers](#analog-modulation--radio-receivers) | 3 |
-| 28 | [Satellite Communication](#satellite-communication) | 3 |
-| 29 | [Line Coding & Digital Encoding](#line-coding--digital-encoding) | 2 |
-| 30 | [Address Resolution (ARP & RARP)](#address-resolution-arp--rarp) | 2 |
-| 31 | [VLANs & Subnetting Comparison](#vlans--subnetting-comparison) | 2 |
-| 32 | [Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)](#spread-spectrum--multiple-access-cdma-fhss-dsss) | 2 |
-| 33 | [High Availability & Redundancy Protocols (VRRP, HSRP)](#high-availability--redundancy-protocols-vrrp-hsrp) | 1 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-97) | 97 |
+| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-44) | 44 |
+| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-23) | 23 |
+| 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-20) | 20 |
+| 5 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-18) | 18 |
+| 6 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
+| 7 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-17) | 17 |
+| 8 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-17) | 17 |
+| 9 | [Networking Devices](#networking-devices-16) | 16 |
+| 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-15) | 15 |
+| 11 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-14) | 14 |
+| 12 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
+| 13 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-14) | 14 |
+| 14 | [IPv6 Addressing](#ipv6-addressing-13) | 13 |
+| 15 | [Network Topologies](#network-topologies-12) | 12 |
+| 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-11) | 11 |
+| 17 | [Network Address Translation (NAT)](#network-address-translation-nat-11) | 11 |
+| 18 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat-10) | 10 |
+| 19 | [Digital Modulation & Signal Processing (BPSK, QPSK)](#digital-modulation--signal-processing-bpsk-qpsk-10) | 10 |
+| 20 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait-9) | 9 |
+| 21 | [Email Architecture & Protocols (SMTP, POP3, IMAP)](#email-architecture--protocols-smtp-pop3-imap-9) | 9 |
+| 22 | [Application Layer & Well-Known Port Numbers](#application-layer--well-known-port-numbers-8) | 8 |
+| 23 | [Switching Techniques (Circuit vs Packet Switching)](#switching-techniques-circuit-vs-packet-switching-5) | 5 |
+| 24 | [WAN Technologies (SONET/SDH, ATM, WDM)](#wan-technologies-sonetsdh-atm-wdm-5) | 5 |
+| 25 | [Pulse Code Modulation (PCM) & Signal Processing](#pulse-code-modulation-pcm--signal-processing-4) | 4 |
+| 26 | [Network Layer (Packet Fragmentation & Tunneling)](#network-layer-packet-fragmentation--tunneling-4) | 4 |
+| 27 | [Analog Modulation & Radio Receivers](#analog-modulation--radio-receivers-3) | 3 |
+| 28 | [Satellite Communication](#satellite-communication-3) | 3 |
+| 29 | [Line Coding & Digital Encoding](#line-coding--digital-encoding-2) | 2 |
+| 30 | [Address Resolution (ARP & RARP)](#address-resolution-arp--rarp-2) | 2 |
+| 31 | [VLANs & Subnetting Comparison](#vlans--subnetting-comparison-2) | 2 |
+| 32 | [Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)](#spread-spectrum--multiple-access-cdma-fhss-dsss-2) | 2 |
+| 33 | [High Availability & Redundancy Protocols (VRRP, HSRP)](#high-availability--redundancy-protocols-vrrp-hsrp-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Networking Fundamentals & Terminology
-
-1. **Write short note: Network, Protocol, link, gateway, Node.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
-
-2. **(b) Define following terms: (i) Bandwidth (ii) Latency (iii) MAC Address (iv) IP address** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 491]**
-
-3. **Define networking and Internetworking. What are the different types of network? Explain in details.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
-
-4. **Write short note: (i) web server (ii) ISP (iii) Router (iv) Search Engine** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 680]**
-
-5. **What is Interface protocol?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
-
-6. **(ক) সংজ্ঞা লিখুন: WWW, URL, HTTP, IP Address, Router.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 708]**
-
-7. **What is computer network?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
-
-8. **What is SDN?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
-
-9. **How to works networks?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
-
-10. **(খ) Address গুলির সংক্ষিপ্ত বর্ণনা দিন। (i) Port Number (ii) IP অ্যাড্রেস (iii) MAC অ্যাড্রেস।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 775]**
-
-11. **(i) নিচের MAC Address গুলো কোন ধরনের বের করুন। (a) 4C:23:10:4A:1A:2A (b) 45:24:56:2B:24:12 (c) FF:FF:FF:FF:FF:FF** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 788]**
-
-12. **If you have a company of two branch in the same city and they are connected. Which connection is used between then? (a) LAN (b) MAN (c) WAN (d) NONE** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 811]**
-
-13. **Short Question: a) What are the protocol for connectionless and connection oriented? b) Why UTP cable are twisted? c) What are the main requirement of optical fiber splicing? d) Why use subnet mask? e) What the major difference between multicast and broadcast?** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 816]**
-
-14. **Name of the Following figure:** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 880]**
-   Broadcast
-   Unicast
-   Multicast
-
-15. **(i) Computer network কী? বিভিন্ন প্রকার Computer network সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 955-956]**
-
-16. **What is difference between MAC Address and IP Address?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1018-1019]**
-
-17. **(b) List the factors that affect the performance of a network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1027]**
-
-18. **(a) Write a brief history of the internet. How to access to the internet?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1028-1029]**
-
-19. **(b) Define computer network. Sate some merits and demerits of a computer network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1029]**
-
-20. **b) Two IP address map to same Ethernet address. Will both of them receive packets?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
-
-21. **(ক) IP address এবং MAC Address- এর মাঝে তুলনা করুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
-22. **(ক) সংজ্ঞা লিখুন: (i) Propagation delay, (ii) Transmission delay.** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
-23. **Define Computer Network. Describe different types of Computer Networks.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
-
-## Physical Layer & Transmission Media (Cables & Wiring)
-
-1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
-
-2. **Which transmission medium is used in LAN? Write their maximum length and capacity (bps).** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1452]**
-
-3. **IEEE __________ Standard used Ethernet LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-4. **What is the connector name copper cable in LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
-
-5. **What are the different types of transmission media used for data communication? Explain their advantages and disadvantages.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 326]**
-
-6. **Difference between Guided and Unguided media. Difference between STP and UTP. Why using benefit UTP instead of STP?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
-
-7. **What is the main benefit of broadband transmission system compared to baseband? What is the attenuation of transmission media? Distinguish between twisted pair, co-axial cable and fiber optics in tabular form.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
-
-8. **Why we used straight-through and cross cable with example?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
-
-9. **(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 629]**
-
-10. **What happens when you use cables longer than the prescribed length in a network?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 732]**
-
-11. **(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
-
-12. **Explain 10baseT.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839]**
-
-13. **Which media transfer data with higher bandwidth? Advantages of this media.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
-
-14. **(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1026-1027]**
-
-## Physical Layer & Optical Fiber (Attenuation & Power Budget)
-
-1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
-   * **Transmitter Power: 5 dBm**
-   * **Receiver Sensitivity: -14 dBm**
-   * **Fiber Attenuation: 0.35 dB/km**
-   **Calculate the maximum fiber length (D) that can be used between the OLT (Optical Line Terminal) and ONU (Optical Network Unit) while maintaining an acceptable signal level.** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1332]**
-
-2. **(a) Why fiber optic cable is used in submarine instead of satellite?** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 431]**
-
-3. **(b) Why the submarine cable is damaged under water?** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 432]**
-
-4. **(ক) ফাইবার অপটিক ক্যাবলের গঠন ও বৈশিষ্ট্য ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
-
-5. **Write down the Working principle of Optical Fibre.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
-
-6. **Define the attenuation and dispersion in an optical fiber. Draw the block diagram of a long-haul optical fiber communication system.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-7. **Define the principle of data transmission through the fiber optic cable.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
-
-8. **How can you do fix the signal attenuation problems?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 734]**
-
-9. **Where are the low loss transmission windows of silicon based optical fiber and Which window is the most popular in communication and wave. Draw diagram of a long haul WDM Transmission system.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
-
-10. **A 1550nm fiber optic transmission Link if of 50km length without repeating with a signal mode fiber having loss of 0.2dB/km. The fiber is joined ever 2km with conductor each with 0.5dB loss. Determine the minimum average power which should be lunched in to the fiver in order to Tarantion an average optical power level of 10 micro-watts at the receiver.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 766]**
-
-11. **কোন মাধ্যমে আলোর Pulse ব্যবহৃত হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
-
-## Network Topologies
-
-1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
-
-2. **(b) Define network topology and classify it.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
-
-3. **Write 4 topology name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
-
-4. **What is Network Topology? Distinguish between Bus, Ring, Tree and Star topology. Discuss how the Bus topology works.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
-
-5. **What is Personal Area Network? What is needed component and explain?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 572]**
-
-6. **What is Topology in data communication? What are differences between Bus, Ring, Tree and Star topology? Purpose of IEEE 802.11 committee.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
-
-7. **(খ) একটি নেটওয়ার্কে n সংখ্যক ডিভাইসের জন্যে Bus, Mesh এবং Star টপোলজিতে তারের লিংকগুলোর সংখ্যা কত?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
-
-8. **What is network topology? Write the name all different topology used in computer networking with example, diagram and their activities.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
-
-9. **Write down the types of topology.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
-
-10. **Write down the Disadvantages of Bus topology.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
-
-11. **(b) Define network topologies with features.** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977]**
-
-12. **(d) List some various types of Topologies. What are the factors to choose a topology?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
-
-## OSI & TCP/IP Reference Model
-
-1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
-
-2. **OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
-
-3. **Write bottom to top OSI reference Model.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
-
-4. **In the TCP/IP model, how is data known in the different layers?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
-
-5. **(b) Explain the TCP/IP protocol switch layers.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1444]**
-
-6. **(b) Draw the diagram of TCP/IP protocol suite and mention the name of protocols used in different layers of TCP/IP.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
-
-7. **How many Layers of OSI?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
-
-8. **রাউটার OSI এর কোন লেয়ারে থাকে?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
-
-9. **Write the name of OSI layers.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
-
-10. **Write the name of OSI layers protocol for every layers.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
-
-11. **Tabular representation of TCP/IP layer, functions of each layer, Associate protocols, device, and software in each layer. Different types of network firewalls. Explain NGFW compared to traditional firewall.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 301]**
-
-12. **Explain TCP/IP model and its protocol and device.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
-
-13. **Write down the OSI model.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
-
-14. **How many TCP/IP layer? Write its Layer name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
-
-15. **Differentiate between OSI Model and TCP/IP Model. Draw the diagram of 4 Layers of TCP/IP Model including the main function of each layer and related protocols. List some basic functions performed at MAC layer.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
-
-16. **What is the TCP/IP Model?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
-
-17. **What is OSI Model? Write all layer name sequence should be top to bottom or bottom to top.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
-
-18. **Difference between OSI model and TCP/IP model. Relation between Data, Segment, Packet and Bit in OSI model.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 510]**
-
-19. **(a) List down the layers of OSI model in top-down manner.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 480]**
-
-20. **Fill up the following protocol table by work at which layer?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 452]**
-| Protocol Name | Layer |
-|---|---|
-| Carrier-Sense Multiple Access (CSMA) |  |
-| Open Shortest Path First (OSPF) |  |
-| Transmission Control Protocol (TCP) |  |
-| Routing Information Protocol (RIP) |  |
-| User datagram protocol (UDP) |  |
-
-21. **Which layer is used to link the network support layers and user support layers?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
-
-22. **What is the number for the Network layer and the support layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-23. **(c) Write the all layers of OSI model.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
-
-24. **In order to prevent that the company decided to add end to end encryption techniques which layer of the OSI model is suitable to work in considering parameters like development time, software maintainability and development cost, Give reasons for your concepts.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 438]**
-
-25. **(a) What is OSI model? Explain how two computers can exchange information using the OSI model.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
-
-26. **TCP/IP model এর Layer গুলোর কাজ লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
-
-27. **What is OSI model? Write different layers of OSI model.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
-
-28. **What is the difference between DOD and OSI model?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 700]**
-
-29. **What is PDU?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 702]**
-
-30. **(খ) Computer network এর OSI 7-Layer গুলো উদাহরণসহ লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
-
-31. **Computer Network এ OSI Model এর Layer কয়টি?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
-
-32. **OSI Model এর কাজ কী? এর লেয়ারসমূহ কী কী?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
-
-33. **Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
-
-34. **What is OSI model? Write down the name of OSI model layer.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]**
-
-35. **What is TCP/IP model? Briefly explain TCP/IP model.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]**
-
-36. **What is OSI and TCP/IP model and briefly explain?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870-872]**
-
-37. **TCP/IP protocol suite -এর বিভিন্ন স্তরের নাম লিখুন? HTTPs কী? এর ব্যবহারের প্রয়োজনীয়তা সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 882]**
-
-38. **বর্তমানে Hybrid network model জনপ্রিয় একটি মডেল। এই মডেলের পাঁচটি Layer হচ্ছে, Application, Transport, Physical, Data link and Network Layer। এদের কাজ দেওয়া আছে বামপাশের কলামে, ডানপাশের কলামে কাজ অনুসারে Layer গুলোর নাম লিখুন।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975-976]**
-
-39. **Write down the functionality of OSI model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1007-1008]**
-
-40. **OSI Model এর Layer গুলো বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
-
-41. **(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1028]**
-
-42. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1042-1043]**
-
-43. **What is the OSI model? Explain the functions of each layer with examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
-
-44. **(b) Name the OSI layers and give one example of a cyber threat at any tree of those layers.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
-
-## Application Layer & Well-Known Port Numbers
-
-1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
-
-2. **What is the port number of DNS?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
-
-3. **What is the port number used by DNS?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**
-
-4. **HTTPS এর পোর্ট নাম্বার কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-5. **DNS Port Number?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-6. **Write the port address of the following applications of data communications. (i) HTTP; (ii) HTTPS; (iii) FTP; (iv) SMTP; (v) POP** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
-
-7. **Describe TCP/IP protocols and its ports.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
-
-8. **A server has port number 1223. A user is requesting the server (www.example.com) but it is showing server is not reached. How can you solve this?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
-
-## Transport Layer (TCP & UDP)
-
-1. Compare TCP and UDP protocols with examples. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
-
-2. A client needs to send 4000\text{ bytes} of data to a database server. The client divides the data into packets of 500\text{ bytes} each. The sequence number of the first packet is 3001. After 2500\text{ bytes} have been successfully sent, 2 packets are lost/failed. Assuming TCP cumulative ACK, complete the following table: [BSCCPL AME 21-08-2026 (BUET)]
-
-| SL | Client Packet Sequence No. | DB Server Sequence No. | ACK Sequence No. |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-
-Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packets 6 and 7 are lost, while packet 8 arrives. The server sends a cumulative ACK for the next byte it is expecting. Find the missing values in the table.
-
-3. **Show the pictorial representation of TCP 3-way handshaking protocol for establishing a connection between a server and a client.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
-
-4. **What is the deference between TCP and UDP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
-
-5. **3-way handshake protocol for TCP connection using diagram.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 403]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 876-877]**
-
-6. **Write a TCP/UDP used service name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
-
-7. **Difference between TCP and UDP. Distinguish between Cat5 and Cat6. Difference among exFAT, FAT32 and NTFS.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
-
-8. **Show a 3-way handshake protocol in TCP connection established using a diagram.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
-
-9. **Differecne between TCP and UDP.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
-
-10. **(b) Distinguish between TCP and UDP.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
-
-11. **What is UDP protocol? UDP is reliable or not? Explain why or why not?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 754]**
-
-12. **The primary function of the Transmission Control Protocol (TCP). TCP performs six basic functions. What are the basic function performing by TCP?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807-808]**
-
-13. **(b) Distinguish between TCP and UDP protocols.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886]**
-
-14. **(c) What is purpose of routers? How congestion control works in the TCP?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886-887]**
-
-15. **What is a TCP Three-way handshaking step?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
-
-16. **The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate packets. What are the functions performed by TCP to make a network more reliable?** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 990]**
-
-17. **a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
-
-## Communication System & Transmission Modes
-
-1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
-
-2. **How many types of modes are used in data transferring through networks? Briefly explain those modes. Differentiate between TCP vs UDP.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
-
-3. **Distinguish between Synchronous and Asynchronous transmission.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
-
-4. **(b) Name and define five components of Data communication system with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 487]**
-
-5. **(a) Differentiate between half-duplex and full duplex transmission.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
-
-6. **(গ) উদাহরণসহ Simplex, half-duplex এবং duplex কমিউনিকেশন সিস্টেমের পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
-
-7. **Briefly mention the main रणनीति impairments in telecommunication channel. Considering these impairments explain which communication is better between analog and digital communication systems?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 674]**
-
-8. **Describe the data communication system with necessary diagram.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
-
-9. **Write down the Data Communication elements.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
-
-10. **(ক) Data Communication System এর পাঁচটি প্রধান Component এর চিত্রসহকারে বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
-
-11. **(খ) Data Communication কত প্রকার? উদাহরণসহ সংক্ষিপ্ত বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
-
-12. **What is the difference between Synchronous and Asynchronous transmission?** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
-
-13. **Define full duplex with an example.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
-
-14. **Which communication mode use serial communication? (a) Duplex (b) Half Duplex (c) Simplex (d) All** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
-
-15. **(c) Illustrate a communication model in simplified form.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1027-1028]**
-
-## Switching Techniques (Circuit vs Packet Switching)
-
-1. **Difference between circuit switching and packet switching. Identify which of the two is predominantly used in Internet communication and justify why?** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1435]**
-
-2. **(c) Compare circuit switching and packet switching.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
-
-3. **Do you prefer packet switching compared to circuit switching in communication network? If Yes, why? How does packet switching work step by step? What applications use packet switching?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 536]**
-
-4. **Why is packet suiting suitable for digital data transmission?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
-
-5. **Why is packet switching more suitable for internet communication?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
-
-## Flow Control & Data Link Layer (Stop-and-Wait)
-
-1. A single-mode optical fiber communication link connects two locations 250\text{ km} apart using WDM technology with 50 channels, where each channel provides a bit rate of 10\text{ Gbps}. The refractive index of the fiber is 1.5, and data is transmitted using the Stop-and-Wait protocol. A 1\text{ GB} file is divided into suitable data frames, and after successfully receiving each frame, the receiver sends a 54-byte acknowledgment (ACK) back to the sender. Assuming no processing or queuing delay, determine the total time required to completely transfer the 1\text{ GB} file, including data transmission time, propagation delay, ACK transmission time, and the Stop-and-Wait waiting time. [BSCCPL AME 21-08-2026 (BUET)]
-
-2. **Using an explanation of the difference between flow-control and congestion control, discuss the impact of a stable end-to-end latency.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 424]**
-
-3. **(খ) Congestion কী? Network-এ কীভাবে Congestion নিয়ন্ত্রণ করা যায়? আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
-
-4. **Unit of data link layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
-
-5. **(ক) নেটওয়ার্কে ডাটা প্যাকেটে trailer কোথায় এবং কেন ব্যবহার করা হয়? উদাহরণ দিন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 775]**
-
-6. **How STP works? Explain congestion control algorithm.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 842-843]**
-
-7. **Host A is sending data to Host B over a full duplex link. A and B are using the sliding window protocol for flow control. The send and receive window size are 5 packets each. Data packets (sent only from A to B) are all 1000 bytes long and transmission time for such a packet is 50\mu\text{s}. Acknowledgement packets (sent only from B to A) are very small and require negligible transmission time. The propagation delay over the link is 200\mu\text{s}. What is the maximum achievable throughput in this communication?** **(BAUST Assistant Programmer Exam: 2021) [compact it 918]**
-
-8. **What is the piggybacking and MAC Address?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 921]**
-
-9. **(i) Congestion Control কী? কী কী ভাবে Congestion Control করা যায়?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 950]**
-
-## Line Coding & Digital Encoding
-
-1. **Assume we want to transmit the following binary string: 01001110. Show the resulting signal on the one using the following line coding techniques: (i) NRZ-L (ii) Manchester NRZ (iii) Unipolar RZ (binary string: 11011000100)** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 638]**
-
-2. **What is Line coding? What is the different line coding techniques?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 869-870]**
-
-## Pulse Code Modulation (PCM) & Signal Processing
-
-1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
-
-2. **Draw Delta modulation figure and math. (Approximate)** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 648]**
-
-3. **A singla-tone message signal of bandwidth 4KHZ and amplitude 10V is transmitted by \Delta-modulation with step size 2V. Determine the data rate so that slope overloading noise is the minimum.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-4. **A single-tone message signal of bandwidth 4 KHZ is sampled by using a pulse train of frequency 200% higher than the Nyquist rate of the message signal to obtain PAM signal. The duty cycle of the pulse train is 20%. By drawing the amplitude spectrum of the PAM signal, determine its bandwidth.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
-
-## Error Detection & Data Communication (CRC, Throughput)
-
-1. (a) CMY color model এর উপাদানগুলো লিখুন (CMY color model এর কাজ কী?)
-   (b) CRC এর কাজ কী? (IIB CRC-16 এর ক্ষেত্র এবং প্রশ্নগুলো আলোচনা করুন)
-   (c) Data communication এর ক্ষেত্রে bandwidth এবং throughput এর মধ্যে পার্থক্য লিখুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
-
-2. **Data communication mathematical problems.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
-
-3. **Question on data communication transmission and signal related math.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1441]**
-
-4. **10Mbps bandwidth, average packet length 1500 bytes what is maximum packet arrival rate support without causing congestion.** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1430]**
-
-5. **Differentiate the following terms in tabular form:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 300]**
-   * **A. CSMA/CD and CSMA/CA.**
-   * **B. Optical Communication and Satellite Communication.**
-   * **C. Parity bit check, CRC and Checksum.**
-
-6. **What is Total Latency for a 3-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 300\text{ km} and that light travels at 2 \times 10^8\text{ m/s}. Round Trip Time 50ms Queuing Time 5ms?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1320]**
-
-7. **Two math from data communication.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
-
-8. **CRC is a redundancy error technique used to determine the error. Suppose the original data is 11100 and divisor is 1001.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 493]**
-
-9. **A telephone line normally has a bandwidth of 3000 Hz (300 to 3300 Hz) assigned for data communication. The SNR is usually 3162. What will be the capacity for this channel?** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
-
-10. **Which technique is used for binary division check in network?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-11. **Explain parity method for error detection. Write down the bit strings of “Delta” using ASCII.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
-
-12. **An end system sends 50 packets per second using the User Datagram Protocol (UDP) over a full duplex 100 Mbps ethernet LAN connection. Each packet consists 1500B of ethernet frame payload data. What is the throughput, when measured at the UDP layer?** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
-
-13. **The message 11001001 is to be transmitted using the CRC polynomial x^3+1 to protect it from the errors. Now find out the message that should be transmitted.** **(BAUST Assistant Programmer Exam: 2021) [compact it 917-918]**
-
-14. **(গ) Data communication-এর সাপেক্ষে bandwidth এবং troughput এর সংজ্ঞা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
-## Multiplexing & Bandwidth
-
-1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
-
-2. **Differentiate among TDM, FDM and WDM. How does working process in TDM?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 511]**
-
-3. **Describe the different types of Multiplexing.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
-
-4. **What technique allows simultaneous transmission of multiple signals across a single data link?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-5. **(খ) FDM এবং TDM এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 615]**
-
-6. **Show that the data rate of T-1 carrier is 1.544 Mbps.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-7. **Suppose you are appointed as an Assistant Engineer in a Government organization. The number of telephone connections required for the organization is 1000. The per year increment of telephone connection is 100. Considering the life time of telephone equipment is to be 15 years, design a T-carrier based TDM system for the organization.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-8. **Compare between TDM and TDMA techniques.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
-
-9. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
-
-10. **Two channels, one with a bit rate of 190kbps and another with a bit rate 180 kbps are to be multiplexed using pulse stuffing TDM with no synchronization bits. Answer the following questions: (a) What is the size of a frame in bits? (b) What is the frame rate? (c) What is the duration of a frame? (d) What is the date rate?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
-
-11. **What is Multiplexing? Write about Time division Multiplexing.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870]**
-
-12. **(a) Distinguish between Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM).** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888]**
-
-13. **TDM math: rate= 1.536 Mbps, message size= 960000, Slot=32, end to end circuit Switch time=800ms, calculate transfer time.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
-
-14. **A want to send 2 files the size of each file is 500000 bit's data to B through TDM channel which has slot 16 channel bit rate 1.5 Mbps and 30 millisecond delay time, if no propagation delay; find out time to send the data.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
-
-15. **We have four sources, each creating 250 characters per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame. Now find- (a) the data rate of each source. (b) the duration of each character in each source.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
-
-16. **Figure shows synchronous TOM with a data stream for each input and one data stream for the output. The unit of data is 1bit. Find (a) the input bit duration (b) the output bit duration (c) the output bit rate and (d) the output frame rate.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1009]**
-
-17. **ব্যান্ডউইথ (Bandwidth) বলতে কী বুঝায়?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
-18. **6.9 Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
-
-## Subnetting & IP Addressing
+## Subnetting & IP Addressing (97)
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
@@ -730,73 +278,235 @@ ii) 211.10.15.4
 
 97. **What is subnetting? For the network 192.168.1.0/22, how many usable host addresses does it have?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
-## Network Layer (Packet Fragmentation & Tunneling)
+## OSI & TCP/IP Reference Model (44)
 
-1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
+1. Mention the layers of the OSI Model and the function of each layer. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
-2. **(b) Describe briefly the TCP/IP tunneling using appropriate diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 482]**
+2. **OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
-3. **Why network need packet fragmentation? Define different types of packet fragmentation with necessary diagram.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 666]**
+3. **Write bottom to top OSI reference Model.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
 
-4. **Suppose a 22-byte packet is to be transmitted through a network of \text{MTU} = 3\text{ byte}. The elementary fragment size is 1\text{ byte}. Show the segment numbering of the above packet. Packet number is 217.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
+4. **In the TCP/IP model, how is data known in the different layers?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
-## Address Resolution (ARP & RARP)
+5. **(b) Explain the TCP/IP protocol switch layers.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1444]**
 
-1. **(a) Discuss the main role of Address Resolution Protocol (ARP) in the network layer of TCP/IP protocol suite.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
+6. **(b) Draw the diagram of TCP/IP protocol suite and mention the name of protocols used in different layers of TCP/IP.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
 
-2. **What is ARP? Briefly explain ARP.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841-842]**
+7. **How many Layers of OSI?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
-## Network Services (DHCP, NAT)
+8. **রাউটার OSI এর কোন লেয়ারে থাকে?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
-1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+9. **Write the name of OSI layers.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
 
-2. **What is the NAT in Computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+10. **Write the name of OSI layers protocol for every layers.** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
 
-3. **NAT Stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+11. **Tabular representation of TCP/IP layer, functions of each layer, Associate protocols, device, and software in each layer. Different types of network firewalls. Explain NGFW compared to traditional firewall.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 301]**
 
-4. **Which two services are required to enable a computer to receive dynamic IP address and access internet using domain names?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 634]**
+12. **Explain TCP/IP model and its protocol and device.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
 
-5. **What is DHCP Server and why it is needed in a computer network.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
+13. **Write down the OSI model.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
 
-6. **(b) Explain the message flow between a DHCP server and client. Show necessary timing diagram.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
+14. **How many TCP/IP layer? Write its Layer name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
-7. **What is APIPA?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840]**
+15. **Differentiate between OSI Model and TCP/IP Model. Draw the diagram of 4 Layers of TCP/IP Model including the main function of each layer and related protocols. List some basic functions performed at MAC layer.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
-8. **What do you mean by DHCP server? Explain the benefits of using dedicated DHCP server. Briefly describe the main benefits of using IPv6 protocol.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 914]**
+16. **What is the TCP/IP Model?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
-9. **১৬. DHCP uses UDP port _____ for sending data to the server.** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+17. **What is OSI Model? Write all layer name sequence should be top to bottom or bottom to top.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
-10. **DHCP কি? DHCP কিভাবে কাজ করে লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1043]**
+18. **Difference between OSI model and TCP/IP model. Relation between Data, Segment, Packet and Bit in OSI model.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 510]**
 
-## IPv6 Addressing
+19. **(a) List down the layers of OSI model in top-down manner.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 480]**
 
-1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
+20. **Fill up the following protocol table by work at which layer?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 452]**
+| Protocol Name | Layer |
+|---|---|
+| Carrier-Sense Multiple Access (CSMA) |  |
+| Open Shortest Path First (OSPF) |  |
+| Transmission Control Protocol (TCP) |  |
+| Routing Information Protocol (RIP) |  |
+| User datagram protocol (UDP) |  |
 
-2. A host is connected to an IPv6 network and needs to configure its own IPv6 address automatically using Stateless Address Autoconfiguration (SLAAC). Arrange the steps in the correct order and explain the purpose of each step. [BSCCPL AME 21-08-2026 (BUET)]
+21. **Which layer is used to link the network support layers and user support layers?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
-3. **How many bits in IPv4 and IPv6 address? Why NAT is not required in IPv6?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 398]**
+22. **What is the number for the Network layer and the support layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
-4. **(ক) IP Address কী? IPv4 এবং IPv6 এর মধ্যে চারটি প্রধান পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+23. **(c) Write the all layers of OSI model.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
 
-5. **Difference between IPv4 and IPv6.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+24. **In order to prevent that the company decided to add end to end encryption techniques which layer of the OSI model is suitable to work in considering parameters like development time, software maintainability and development cost, Give reasons for your concepts.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 438]**
 
-6. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
+25. **(a) What is OSI model? Explain how two computers can exchange information using the OSI model.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
 
-7. **IPv6 address কত বিটের?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+26. **TCP/IP model এর Layer গুলোর কাজ লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
 
-8. **What is the difference between stateful DHCPv6 and stateless DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840-841]**
+27. **What is OSI model? Write different layers of OSI model.** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 699]**
 
-9. **What is DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
+28. **What is the difference between DOD and OSI model?** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 700]**
 
-10. **Explain IPv6 link local address and multicast address.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
+29. **What is PDU?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 702]**
 
-11. **(a) Differentiate between IPV4 and IPV6.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
+30. **(খ) Computer network এর OSI 7-Layer গুলো উদাহরণসহ লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
 
-12. **Write difference Between IPv4 and IPv6.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+31. **Computer Network এ OSI Model এর Layer কয়টি?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
-13. **(a) What are the differences between IPv4 and IPv6, and why is IPv6 considered more secure?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+32. **OSI Model এর কাজ কী? এর লেয়ারসমূহ কী কী?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
 
-## Routing Protocols & Route Configuration
+33. **Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+34. **What is OSI model? Write down the name of OSI model layer.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]**
+
+35. **What is TCP/IP model? Briefly explain TCP/IP model.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 837]**
+
+36. **What is OSI and TCP/IP model and briefly explain?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870-872]**
+
+37. **TCP/IP protocol suite -এর বিভিন্ন স্তরের নাম লিখুন? HTTPs কী? এর ব্যবহারের প্রয়োজনীয়তা সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 882]**
+
+38. **বর্তমানে Hybrid network model জনপ্রিয় একটি মডেল। এই মডেলের পাঁচটি Layer হচ্ছে, Application, Transport, Physical, Data link and Network Layer। এদের কাজ দেওয়া আছে বামপাশের কলামে, ডানপাশের কলামে কাজ অনুসারে Layer গুলোর নাম লিখুন।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975-976]**
+
+39. **Write down the functionality of OSI model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1007-1008]**
+
+40. **OSI Model এর Layer গুলো বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+
+41. **(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1028]**
+
+42. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1042-1043]**
+
+43. **What is the OSI model? Explain the functions of each layer with examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+
+44. **(b) Name the OSI layers and give one example of a cyber threat at any tree of those layers.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
+## Networking Fundamentals & Terminology (23)
+
+1. **Write short note: Network, Protocol, link, gateway, Node.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 470]**
+
+2. **(b) Define following terms: (i) Bandwidth (ii) Latency (iii) MAC Address (iv) IP address** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 491]**
+
+3. **Define networking and Internetworking. What are the different types of network? Explain in details.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
+
+4. **Write short note: (i) web server (ii) ISP (iii) Router (iv) Search Engine** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 680]**
+
+5. **What is Interface protocol?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+6. **(ক) সংজ্ঞা লিখুন: WWW, URL, HTTP, IP Address, Router.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 708]**
+
+7. **What is computer network?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+8. **What is SDN?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
+
+9. **How to works networks?** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
+
+10. **(খ) Address গুলির সংক্ষিপ্ত বর্ণনা দিন। (i) Port Number (ii) IP অ্যাড্রেস (iii) MAC অ্যাড্রেস।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 775]**
+
+11. **(i) নিচের MAC Address গুলো কোন ধরনের বের করুন। (a) 4C:23:10:4A:1A:2A (b) 45:24:56:2B:24:12 (c) FF:FF:FF:FF:FF:FF** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 788]**
+
+12. **If you have a company of two branch in the same city and they are connected. Which connection is used between then? (a) LAN (b) MAN (c) WAN (d) NONE** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 811]**
+
+13. **Short Question: a) What are the protocol for connectionless and connection oriented? b) Why UTP cable are twisted? c) What are the main requirement of optical fiber splicing? d) Why use subnet mask? e) What the major difference between multicast and broadcast?** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 816]**
+
+14. **Name of the Following figure:** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 880]**
+   Broadcast
+   Unicast
+   Multicast
+
+15. **(i) Computer network কী? বিভিন্ন প্রকার Computer network সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 955-956]**
+
+16. **What is difference between MAC Address and IP Address?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1018-1019]**
+
+17. **(b) List the factors that affect the performance of a network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1027]**
+
+18. **(a) Write a brief history of the internet. How to access to the internet?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1028-1029]**
+
+19. **(b) Define computer network. Sate some merits and demerits of a computer network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1029]**
+
+20. **b) Two IP address map to same Ethernet address. Will both of them receive packets?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
+
+21. **(ক) IP address এবং MAC Address- এর মাঝে তুলনা করুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+22. **(ক) সংজ্ঞা লিখুন: (i) Propagation delay, (ii) Transmission delay.** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+23. **Define Computer Network. Describe different types of Computer Networks.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+
+## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (20)
+
+1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
+
+2. **Write down the DNS function.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
+
+3. **Why does the Domain Name System (DNS) primarily use UDP as its transport layer protocol instead of TCP? Describe the sequence of events that take place during the DNS name resolution process when a user enters www.companybd.com into a web browser and presses Enter.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1421]**
+
+4. **How does work DHCP?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
+
+5. **What is DHCP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
+
+6. **Which protocol is used by the ping tools?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+7. **Which server can be used to dinamically assign IP address to the PCs is a LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
+8. **Explain how do DHCP work?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
+
+9. **SMTP, DNS, DHCP, NAT এর কাজ কি লিখ?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
+
+10. **What is DNS? What is forward and reverse lookup DNS?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
+
+11. **What is ICMP, SMTP, POP server, Boot loader and Clustering?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
+
+12. **Write a command how to find DNS www.egcb.gov.bd and which protocol uses?** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
+
+13. **For the following description of various IP networking protocols write down the protocol name and its full form in the following table:** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+
+14. **(a) How does a browser retrieve IP address from URL?** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
+
+15. **(d) What is DNS? “TCP/IP is used in DNS”- justify the statement.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
+
+16. **(b) How is Hierarchical DNS resolution done in Domain Naming System? Give an example resolution for xyz.uv.gov.bd domain name.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
+
+17. **What is Web cashing? Why we use web cashing?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908]**
+
+18. **What is DNS Resolver?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908-909]**
+
+19. **DNS server এবং DHCP server এর কাজ কী?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
+
+20. **দূরবর্তী কম্পিউটার সংযোগ এর জন্য কোন প্রোটোকল ব্যবহার করা হয়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
+## Multiplexing & Bandwidth (18)
+
+1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
+
+2. **Differentiate among TDM, FDM and WDM. How does working process in TDM?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 511]**
+
+3. **Describe the different types of Multiplexing.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
+
+4. **What technique allows simultaneous transmission of multiple signals across a single data link?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+5. **(খ) FDM এবং TDM এর পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 615]**
+
+6. **Show that the data rate of T-1 carrier is 1.544 Mbps.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+7. **Suppose you are appointed as an Assistant Engineer in a Government organization. The number of telephone connections required for the organization is 1000. The per year increment of telephone connection is 100. Considering the life time of telephone equipment is to be 15 years, design a T-carrier based TDM system for the organization.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+8. **Compare between TDM and TDMA techniques.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
+
+9. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
+
+10. **Two channels, one with a bit rate of 190kbps and another with a bit rate 180 kbps are to be multiplexed using pulse stuffing TDM with no synchronization bits. Answer the following questions: (a) What is the size of a frame in bits? (b) What is the frame rate? (c) What is the duration of a frame? (d) What is the date rate?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+
+11. **What is Multiplexing? Write about Time division Multiplexing.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870]**
+
+12. **(a) Distinguish between Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM).** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888]**
+
+13. **TDM math: rate= 1.536 Mbps, message size= 960000, Slot=32, end to end circuit Switch time=800ms, calculate transfer time.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
+
+14. **A want to send 2 files the size of each file is 500000 bit's data to B through TDM channel which has slot 16 channel bit rate 1.5 Mbps and 30 millisecond delay time, if no propagation delay; find out time to send the data.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
+
+15. **We have four sources, each creating 250 characters per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame. Now find- (a) the data rate of each source. (b) the duration of each character in each source.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
+16. **Figure shows synchronous TOM with a data stream for each input and one data stream for the output. The unit of data is 1bit. Find (a) the input bit duration (b) the output bit duration (c) the output bit rate and (d) the output frame rate.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1009]**
+
+17. **ব্যান্ডউইথ (Bandwidth) বলতে কী বুঝায়?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+18. **6.9 Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+## Routing Protocols & Route Configuration (18)
 
 1. A BGP router receives multiple routes to the same destination network from different neighboring autonomous systems. The available routes are given in the following table, containing Path, LOCAL_PREF, AS_PATH, ORIGIN, and MED values. Using the standard BGP best-path selection rules, analyze the attributes in the given order and determine which path will be selected as the best route, showing the comparison and justification for each step. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -862,227 +572,56 @@ ii) 211.10.15.4
 
 18. **What is difference between link state routing and distance vector routing?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
 
-## High Availability & Redundancy Protocols (VRRP, HSRP)
+## Transport Layer (TCP & UDP) (17)
 
-1. **State the network protocol of VRRP?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1359]**
+1. Compare TCP and UDP protocols with examples. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
 
-## Networking Devices
+2. A client needs to send 4000\text{ bytes} of data to a database server. The client divides the data into packets of 500\text{ bytes} each. The sequence number of the first packet is 3001. After 2500\text{ bytes} have been successfully sent, 2 packets are lost/failed. Assuming TCP cumulative ACK, complete the following table: [BSCCPL AME 21-08-2026 (BUET)]
 
-1. Describe the functions of a Switch and a Router and explain two key differences between these networking devices. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+| SL | Client Packet Sequence No. | DB Server Sequence No. | ACK Sequence No. |
+|---|---|---|---|
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+| 4 | | | |
+| 5 | | | |
+| 6 | | | |
+| 7 | | | |
+| 8 | | | |
 
-2. **Briefly describe the following network devices: Repeater, Hub, Bridge, Switch and Router.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 325]**
+Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packets 6 and 7 are lost, while packet 8 arrives. The server sends a cumulative ACK for the next byte it is expecting. Find the missing values in the table.
 
-3. **How many collision domians are created when you segment a network with a 12-port switch?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+3. **Show the pictorial representation of TCP 3-way handshaking protocol for establishing a connection between a server and a client.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1339]**
 
-4. **Difference among Switch, Bridge and Router.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 524]**
+4. **What is the deference between TCP and UDP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
 
-5. **Differentiate between Collision Domain and Broadcast Domain in computer network. What is the function of DNS and DHCP?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 535]**
+5. **3-way handshake protocol for TCP connection using diagram.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 403]** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 876-877]**
 
-6. **Write down the difference between gateway and firewall.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
+6. **Write a TCP/UDP used service name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
-7. **Write down the difference among Hub, Switch and Router.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+7. **Difference between TCP and UDP. Distinguish between Cat5 and Cat6. Difference among exFAT, FAT32 and NTFS.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
 
-8. **What is gateway? Is router and gateway have any difference?** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+8. **Show a 3-way handshake protocol in TCP connection established using a diagram.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
 
-9. **অথবা, (ক) ডেটা ট্রান্সমিশনে Router ও Gateway এর মধ্যে কোনটি অধিকতর সুবিধাজনক-মতামত ব্যক্ত করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 615]**
+9. **Differecne between TCP and UDP.** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
 
-10. **(iii) Router and Gateway এর ফাংশন লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
+10. **(b) Distinguish between TCP and UDP.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
 
-11. **Write down the difference between Hub and Switch.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
+11. **What is UDP protocol? UDP is reliable or not? Explain why or why not?** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 754]**
 
-12. **Wi-Fi access point বলতে কী বুঝানো হয়? Router and Switch -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 883]**
+12. **The primary function of the Transmission Control Protocol (TCP). TCP performs six basic functions. What are the basic function performing by TCP?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807-808]**
 
-13. **Difference between Switch, Hub and Router.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
+13. **(b) Distinguish between TCP and UDP protocols.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886]**
 
-14. **হাব, সুইচ ও রাউটার এর মধ্যে পার্থক্য লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
+14. **(c) What is purpose of routers? How congestion control works in the TCP?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 886-887]**
 
-15. **Write the Difference among Network Switch, Hub and Router.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
+15. **What is a TCP Three-way handshaking step?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
 
-16. **(c) Briefly describe three devices using which different LANs can be connected.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
+16. **The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate packets. What are the functions performed by TCP to make a network more reliable?** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 990]**
 
-## VLANs & Subnetting Comparison
+17. **a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
 
-1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
-
-2. **What is VLAN? Difference between static and dynamic VLAN.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
-
-## Network Address Translation (NAT)
-
-1. Network Address Translation (NAT) maps internal networks to the public internet.
-   * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
-   * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
-
-2. **Connection between Public IP to Private IP is called __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-3. **What is NAT? Explain with topological diagram.** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 589]**
-
-4. **Explain NAT? Differenc between IPv4 and IPv6.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
-
-5. **What is NAT? Write down the list of private IP address.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
-
-6. **Briefly explain Network Address Translation (NAT).** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
-
-7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 787]**
-
-8. **(b) What is NAT? Mention its advantages.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
-
-9. **(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
-
-10. **Why do we need NAT? Draw a topology diagram to explain NAT.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
-
-11. **What is PAT? How does a network PAT work?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
-
-## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
-
-1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
-
-2. **Write down the DNS function.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
-
-3. **Why does the Domain Name System (DNS) primarily use UDP as its transport layer protocol instead of TCP? Describe the sequence of events that take place during the DNS name resolution process when a user enters www.companybd.com into a web browser and presses Enter.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1421]**
-
-4. **How does work DHCP?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]**
-
-5. **What is DHCP?** **(BCC - Assistant Network Engineer Exam: 18.10.2025 (BCC)) [compact it 1441]**
-
-6. **Which protocol is used by the ping tools?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-7. **Which server can be used to dinamically assign IP address to the PCs is a LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
-
-8. **Explain how do DHCP work?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
-
-9. **SMTP, DNS, DHCP, NAT এর কাজ কি লিখ?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
-
-10. **What is DNS? What is forward and reverse lookup DNS?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 658]**
-
-11. **What is ICMP, SMTP, POP server, Boot loader and Clustering?** **(NSDA Assistant Maintenance Engineer Exam Date: 04-03-2022) [compact it 659]**
-
-12. **Write a command how to find DNS www.egcb.gov.bd and which protocol uses?** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
-
-13. **For the following description of various IP networking protocols write down the protocol name and its full form in the following table:** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
-
-14. **(a) How does a browser retrieve IP address from URL?** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
-
-15. **(d) What is DNS? “TCP/IP is used in DNS”- justify the statement.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
-
-16. **(b) How is Hierarchical DNS resolution done in Domain Naming System? Give an example resolution for xyz.uv.gov.bd domain name.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
-
-17. **What is Web cashing? Why we use web cashing?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908]**
-
-18. **What is DNS Resolver?** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908-909]**
-
-19. **DNS server এবং DHCP server এর কাজ কী?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
-
-20. **দূরবর্তী কম্পিউটার সংযোগ এর জন্য কোন প্রোটোকল ব্যবহার করা হয়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
-
-## Email Architecture & Protocols (SMTP, POP3, IMAP)
-
-1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
-   * (a) Mention the protocol of application layer and transport layer.
-   * (b) Write down the steps of Mail transfer from Afsana to Sinthia.
-
-2. **Difference between: (i) SMTP and SNMP (ii) HTTP and HTTPs** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
-
-3. **Which protocol is used for email received?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-4. **(a) Distinguish the purpose of SMTP and IMAP in email communication.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 688]**
-
-5. **Email এর ক্ষেত্রে CC এবং BCC এর অর্থ কি বুঝায়?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
-
-6. **Which of the following is correct email formate? (a) compact@webmail.com (b) compact@webmail@com (c) compact.webmail.com (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
-
-7. **E-mail পাঠানো এবং রিসিভ করার জন্য একটি করে প্রোটোকলের নাম লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
-
-8. **Which protocol provides e-mail facility amount different hosts?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 937]**
-
-9. **ই-মেইল করার ক্ষেত্রে TO, CC ও BCC কোন ব্যবহার করা হয়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
-
-## Data Rate & Channel Capacity (Nyquist, Shannon)
-
-1. **Nyquist math: See in Data Communication & Networking Chapter** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
-
-2. **Suppose that a digitized TV picture is to be transmitted from a source that uses a matrix of 480 × 500 picture elements (pixels), where each pixel can take on one of 32 intensity values. Assume that 30 pictures are sent per second. (This digital source is roughly equivalent to broadcast TV standards that have been adopted). Find the source rate R (bps).** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
-
-3. **One of the drawbacks of a small packet size is that a large function of link bandwidth is consumed by overhead bytes. To this end, supposed that the packet consists of P bytes and 5 bytes of header. Consider sending a digitally encoded voice source directly. Suppose the source is encoded a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the packetization delay. Determine the packetization delay for length L-1500 bytes (roughly corresponding to maximum-sized Ethernet packet).** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
-
-4. **(ক) Bandwidth এবং Through put এর মধ্যে পার্থক্য কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
-
-5. **The power of signal is 10\text{mW} and the power of the noise is 1\mu\text{W}; What are the values of \text{SNR} and \text{SNR}_{\text{dB}}?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
-
-6. **We need to send 265\text{ kbps} over a noiseless channel with a bandwidth of 20\text{kHz}. How many signal levels do we need?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 652]**
-
-7. **A telephone line normally has a bandwidth of 3000\text{ Hz} (300\text{ to } 3300\text{ Hz}) assigned foe data communications. The signal-to-noise ratio is usually 3162. Calculate the capacity for this channel?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 656]**
-
-8. **Consider that a signal is transmitted over a channel of bandwidth 200kHz and the total path loss in the channel is found to be 60dB. The noise power per hertz at the receiver is- 100 dBm. Determine the required transmit power to achieve data rate of 40kb/s.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
-
-10. **What is the channel capacity for a teleprinter channel with a 300 Hz bandwidth and a signal-to-noise ratio of 3 dB?** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
-
-11. **Using the Nyquist theorem, we can sample 12 million times/sec. Four–level signals provide 2 bits per sample, for a total data rate of 24 Mbps.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
-
-12. **In serial communication employing 8 data bits, a parity bit and 2 stop bits. What is the minimum band rate requested to sustain a transfer rate of 300 characters per second?** **(BAUST Assistant Programmer Exam: 2021) [compact it 918]**
-
-13. **Find signal bit per second bound rate 1000 and 16-QAM signal.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
-
-14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1038]**
-
-## Digital Modulation & Signal Processing (BPSK, QPSK)
-
-1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
-
-2. **What is baseband and passband frequency?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
-
-3. **অথবা, (ক) Low-pass Channel এবং Band-pass Channel এর মধ্যে উদাহরণসহ পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
-
-4. **What is modulation? Why is it necessary?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
-
-5. **Amplitude Modulation related problem. (Approximate)** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 644]**
-
-6. **Compare between (i) AM and ASK and (ii) FM and FSK considering modulation scheme, bandwith requirement, noise tolerance and circuit complexity.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-7. **What are the advantages of PSK and explain why coherent detection is necessary for demodulating the PSK signal?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-8. **Draw the constellation diagram of QPSK, 8-PSK and 32-QAM. Why these multilevel signals prefereed and what are the challenges for multilevel modulation?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-9. **a) What is QAM? Explain it.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
-
-10. **b) Draw diagram for 16 QAM having? (i) 3 amplitudes, 12 phases (ii) 4 amplitudes, 8 phases** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030-1031]**
-
-## Analog Modulation & Radio Receivers
-
-1. **With appropriate figures, distinguish between homodyne and heterodyne detection processes. Draw the block diagram of a super heterodyne AM receiver.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-2. **Difference between AM and FM. (a) Which is prefer for long distance communication? (b) Which has low distortion? (c) Which has low interference?** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
-
-3. **A sinusoidal modulating waveform of amplitude 5V and frequency of 2 kHz is applied to FM generator, which has a frequency sensitivity of 40Hz/volt. Calculate the frequency deviation, modulation index and bandwidth.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 734]**
-
-## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)
-
-1. **What are the limitaions of CDMA?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-2. **Mention the basic differences between frequency-hopped spread spectrum (FHSS) and direct sequence spread spectrum (DSSS) techniques.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-## WAN Technologies (SONET/SDH, ATM, WDM)
-
-1. **White short notes on: (i) SONET/SDH; (ii) IP telephony; (iii) WDM technology; (iv) ATM network** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
-
-2. **(c) Explain IPTV and VOIP.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
-
-3. **Write the full form of the given technologies CX, IGW and IIG. Write feature of there technologies.** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 806]**
-
-4. **TSCM এর কাজ কী? VoIP পরিচালনায় কী কী সরঞ্জামের প্রয়োজন হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 810]**
-
-5. **Write down the difference between IPoE and PPPoE.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839-840]**
-
-## Satellite Communication
-
-1. **(b) Difference between active and passive satellites.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
-
-2. **(c) Briefly describe different types of earth orbital satellite.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
-
-3. **Satellite ভিত্তিক যোগাযোগের একটি অসুবিধা লিখুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
-
-## Wireless Networks & IoT (mmWave)
+## Wireless Networks & IoT (mmWave) (17)
 
 1. **What is the use of mmWave in IoT?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
 
@@ -1117,3 +656,464 @@ ii) 211.10.15.4
 16. **Explain Bluetooth, Wi-Fi and Cellular Network.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
 
 17. **Describe Wi-Fi, Bluetooth, and WiMAX.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
+## Networking Devices (16)
+
+1. Describe the functions of a Switch and a Router and explain two key differences between these networking devices. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+
+2. **Briefly describe the following network devices: Repeater, Hub, Bridge, Switch and Router.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 325]**
+
+3. **How many collision domians are created when you segment a network with a 12-port switch?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+4. **Difference among Switch, Bridge and Router.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 524]**
+
+5. **Differentiate between Collision Domain and Broadcast Domain in computer network. What is the function of DNS and DHCP?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 535]**
+
+6. **Write down the difference between gateway and firewall.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
+
+7. **Write down the difference among Hub, Switch and Router.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+
+8. **What is gateway? Is router and gateway have any difference?** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+
+9. **অথবা, (ক) ডেটা ট্রান্সমিশনে Router ও Gateway এর মধ্যে কোনটি অধিকতর সুবিধাজনক-মতামত ব্যক্ত করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 615]**
+
+10. **(iii) Router and Gateway এর ফাংশন লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
+
+11. **Write down the difference between Hub and Switch.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
+
+12. **Wi-Fi access point বলতে কী বুঝানো হয়? Router and Switch -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 883]**
+
+13. **Difference between Switch, Hub and Router.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
+
+14. **হাব, সুইচ ও রাউটার এর মধ্যে পার্থক্য লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
+
+15. **Write the Difference among Network Switch, Hub and Router.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
+
+16. **(c) Briefly describe three devices using which different LANs can be connected.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
+
+## Communication System & Transmission Modes (15)
+
+1. What is a communication system? Describe the different types of transmission modes with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+2. **How many types of modes are used in data transferring through networks? Briefly explain those modes. Differentiate between TCP vs UDP.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
+
+3. **Distinguish between Synchronous and Asynchronous transmission.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
+
+4. **(b) Name and define five components of Data communication system with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 487]**
+
+5. **(a) Differentiate between half-duplex and full duplex transmission.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
+
+6. **(গ) উদাহরণসহ Simplex, half-duplex এবং duplex কমিউনিকেশন সিস্টেমের পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
+
+7. **Briefly mention the main रणनीति impairments in telecommunication channel. Considering these impairments explain which communication is better between analog and digital communication systems?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 674]**
+
+8. **Describe the data communication system with necessary diagram.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
+9. **Write down the Data Communication elements.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
+10. **(ক) Data Communication System এর পাঁচটি প্রধান Component এর চিত্রসহকারে বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
+
+11. **(খ) Data Communication কত প্রকার? উদাহরণসহ সংক্ষিপ্ত বর্ণনা দিন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
+
+12. **What is the difference between Synchronous and Asynchronous transmission?** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
+
+13. **Define full duplex with an example.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+14. **Which communication mode use serial communication? (a) Duplex (b) Half Duplex (c) Simplex (d) All** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+15. **(c) Illustrate a communication model in simplified form.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1027-1028]**
+
+## Physical Layer & Transmission Media (Cables & Wiring) (14)
+
+1. **Straight through connection vs Crossover connection.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
+
+2. **Which transmission medium is used in LAN? Write their maximum length and capacity (bps).** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1452]**
+
+3. **IEEE __________ Standard used Ethernet LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+4. **What is the connector name copper cable in LAN?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
+5. **What are the different types of transmission media used for data communication? Explain their advantages and disadvantages.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 326]**
+
+6. **Difference between Guided and Unguided media. Difference between STP and UTP. Why using benefit UTP instead of STP?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 523]**
+
+7. **What is the main benefit of broadband transmission system compared to baseband? What is the attenuation of transmission media? Distinguish between twisted pair, co-axial cable and fiber optics in tabular form.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
+8. **Why we used straight-through and cross cable with example?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
+
+9. **(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 629]**
+
+10. **What happens when you use cables longer than the prescribed length in a network?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 732]**
+
+11. **(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 789]**
+
+12. **Explain 10baseT.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839]**
+
+13. **Which media transfer data with higher bandwidth? Advantages of this media.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
+
+14. **(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1026-1027]**
+
+## Error Detection & Data Communication (CRC, Throughput) (14)
+
+1. (a) CMY color model এর উপাদানগুলো লিখুন (CMY color model এর কাজ কী?)
+   (b) CRC এর কাজ কী? (IIB CRC-16 এর ক্ষেত্র এবং প্রশ্নগুলো আলোচনা করুন)
+   (c) Data communication এর ক্ষেত্রে bandwidth এবং throughput এর মধ্যে পার্থক্য লিখুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+2. **Data communication mathematical problems.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
+
+3. **Question on data communication transmission and signal related math.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1441]**
+
+4. **10Mbps bandwidth, average packet length 1500 bytes what is maximum packet arrival rate support without causing congestion.** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1430]**
+
+5. **Differentiate the following terms in tabular form:** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 300]**
+   * **A. CSMA/CD and CSMA/CA.**
+   * **B. Optical Communication and Satellite Communication.**
+   * **C. Parity bit check, CRC and Checksum.**
+
+6. **What is Total Latency for a 3-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 300\text{ km} and that light travels at 2 \times 10^8\text{ m/s}. Round Trip Time 50ms Queuing Time 5ms?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1320]**
+
+7. **Two math from data communication.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+8. **CRC is a redundancy error technique used to determine the error. Suppose the original data is 11100 and divisor is 1001.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 493]**
+
+9. **A telephone line normally has a bandwidth of 3000 Hz (300 to 3300 Hz) assigned for data communication. The SNR is usually 3162. What will be the capacity for this channel?** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 497]**
+
+10. **Which technique is used for binary division check in network?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+11. **Explain parity method for error detection. Write down the bit strings of “Delta” using ASCII.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
+
+12. **An end system sends 50 packets per second using the User Datagram Protocol (UDP) over a full duplex 100 Mbps ethernet LAN connection. Each packet consists 1500B of ethernet frame payload data. What is the throughput, when measured at the UDP layer?** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]**
+
+13. **The message 11001001 is to be transmitted using the CRC polynomial x^3+1 to protect it from the errors. Now find out the message that should be transmitted.** **(BAUST Assistant Programmer Exam: 2021) [compact it 917-918]**
+
+14. **(গ) Data communication-এর সাপেক্ষে bandwidth এবং troughput এর সংজ্ঞা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+## Data Rate & Channel Capacity (Nyquist, Shannon) (14)
+
+1. **Nyquist math: See in Data Communication & Networking Chapter** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
+
+2. **Suppose that a digitized TV picture is to be transmitted from a source that uses a matrix of 480 × 500 picture elements (pixels), where each pixel can take on one of 32 intensity values. Assume that 30 pictures are sent per second. (This digital source is roughly equivalent to broadcast TV standards that have been adopted). Find the source rate R (bps).** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
+
+3. **One of the drawbacks of a small packet size is that a large function of link bandwidth is consumed by overhead bytes. To this end, supposed that the packet consists of P bytes and 5 bytes of header. Consider sending a digitally encoded voice source directly. Suppose the source is encoded a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the packetization delay. Determine the packetization delay for length L-1500 bytes (roughly corresponding to maximum-sized Ethernet packet).** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM))**
+
+4. **(ক) Bandwidth এবং Through put এর মধ্যে পার্থক্য কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
+
+5. **The power of signal is 10\text{mW} and the power of the noise is 1\mu\text{W}; What are the values of \text{SNR} and \text{SNR}_{\text{dB}}?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
+
+6. **We need to send 265\text{ kbps} over a noiseless channel with a bandwidth of 20\text{kHz}. How many signal levels do we need?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 652]**
+
+7. **A telephone line normally has a bandwidth of 3000\text{ Hz} (300\text{ to } 3300\text{ Hz}) assigned foe data communications. The signal-to-noise ratio is usually 3162. Calculate the capacity for this channel?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 656]**
+
+8. **Consider that a signal is transmitted over a channel of bandwidth 200kHz and the total path loss in the channel is found to be 60dB. The noise power per hertz at the receiver is- 100 dBm. Determine the required transmit power to achieve data rate of 40kb/s.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
+
+10. **What is the channel capacity for a teleprinter channel with a 300 Hz bandwidth and a signal-to-noise ratio of 3 dB?** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
+
+11. **Using the Nyquist theorem, we can sample 12 million times/sec. Four–level signals provide 2 bits per sample, for a total data rate of 24 Mbps.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
+
+12. **In serial communication employing 8 data bits, a parity bit and 2 stop bits. What is the minimum band rate requested to sustain a transfer rate of 300 characters per second?** **(BAUST Assistant Programmer Exam: 2021) [compact it 918]**
+
+13. **Find signal bit per second bound rate 1000 and 16-QAM signal.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
+14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1038]**
+
+## IPv6 Addressing (13)
+
+1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
+
+2. A host is connected to an IPv6 network and needs to configure its own IPv6 address automatically using Stateless Address Autoconfiguration (SLAAC). Arrange the steps in the correct order and explain the purpose of each step. [BSCCPL AME 21-08-2026 (BUET)]
+
+3. **How many bits in IPv4 and IPv6 address? Why NAT is not required in IPv6?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 398]**
+
+4. **(ক) IP Address কী? IPv4 এবং IPv6 এর মধ্যে চারটি প্রধান পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+
+5. **Difference between IPv4 and IPv6.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+
+6. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
+
+7. **IPv6 address কত বিটের?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+8. **What is the difference between stateful DHCPv6 and stateless DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840-841]**
+
+9. **What is DHCPv6?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
+
+10. **Explain IPv6 link local address and multicast address.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 843]**
+
+11. **(a) Differentiate between IPV4 and IPV6.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
+
+12. **Write difference Between IPv4 and IPv6.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]**
+
+13. **(a) What are the differences between IPv4 and IPv6, and why is IPv6 considered more secure?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
+## Network Topologies (12)
+
+1. **What is Star vs Mesh Topology?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1449]**
+
+2. **(b) Define network topology and classify it.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
+
+3. **Write 4 topology name?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+4. **What is Network Topology? Distinguish between Bus, Ring, Tree and Star topology. Discuss how the Bus topology works.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+
+5. **What is Personal Area Network? What is needed component and explain?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 572]**
+
+6. **What is Topology in data communication? What are differences between Bus, Ring, Tree and Star topology? Purpose of IEEE 802.11 committee.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 512]**
+
+7. **(খ) একটি নেটওয়ার্কে n সংখ্যক ডিভাইসের জন্যে Bus, Mesh এবং Star টপোলজিতে তারের লিংকগুলোর সংখ্যা কত?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
+
+8. **What is network topology? Write the name all different topology used in computer networking with example, diagram and their activities.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
+
+9. **Write down the types of topology.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
+10. **Write down the Disadvantages of Bus topology.** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
+
+11. **(b) Define network topologies with features.** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977]**
+
+12. **(d) List some various types of Topologies. What are the factors to choose a topology?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
+
+## Physical Layer & Optical Fiber (Attenuation & Power Budget) (11)
+
+1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
+   * **Transmitter Power: 5 dBm**
+   * **Receiver Sensitivity: -14 dBm**
+   * **Fiber Attenuation: 0.35 dB/km**
+   **Calculate the maximum fiber length (D) that can be used between the OLT (Optical Line Terminal) and ONU (Optical Network Unit) while maintaining an acceptable signal level.** **(Islami Bank PLC Senior Officer (Network/System) Exam: 14.03.2025 (BUET)) [compact it 1332]**
+
+2. **(a) Why fiber optic cable is used in submarine instead of satellite?** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 431]**
+
+3. **(b) Why the submarine cable is damaged under water?** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 432]**
+
+4. **(ক) ফাইবার অপটিক ক্যাবলের গঠন ও বৈশিষ্ট্য ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
+
+5. **Write down the Working principle of Optical Fibre.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
+
+6. **Define the attenuation and dispersion in an optical fiber. Draw the block diagram of a long-haul optical fiber communication system.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+7. **Define the principle of data transmission through the fiber optic cable.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
+8. **How can you do fix the signal attenuation problems?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 734]**
+
+9. **Where are the low loss transmission windows of silicon based optical fiber and Which window is the most popular in communication and wave. Draw diagram of a long haul WDM Transmission system.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
+
+10. **A 1550nm fiber optic transmission Link if of 50km length without repeating with a signal mode fiber having loss of 0.2dB/km. The fiber is joined ever 2km with conductor each with 0.5dB loss. Determine the minimum average power which should be lunched in to the fiver in order to Tarantion an average optical power level of 10 micro-watts at the receiver.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 766]**
+
+11. **কোন মাধ্যমে আলোর Pulse ব্যবহৃত হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+## Network Address Translation (NAT) (11)
+
+1. Network Address Translation (NAT) maps internal networks to the public internet.
+   * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
+   * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+2. **Connection between Public IP to Private IP is called __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+3. **What is NAT? Explain with topological diagram.** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 589]**
+
+4. **Explain NAT? Differenc between IPv4 and IPv6.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
+
+5. **What is NAT? Write down the list of private IP address.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 717]**
+
+6. **Briefly explain Network Address Translation (NAT).** **(IDRA Assistant Network Administrator Exam: 2022) [compact it 727]**
+
+7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 787]**
+
+8. **(b) What is NAT? Mention its advantages.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
+
+9. **(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
+
+10. **Why do we need NAT? Draw a topology diagram to explain NAT.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
+
+11. **What is PAT? How does a network PAT work?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841]**
+
+## Network Services (DHCP, NAT) (10)
+
+1. **What is the DHCP in computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+2. **What is the NAT in Computer networking?** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+3. **NAT Stands for __________?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
+
+4. **Which two services are required to enable a computer to receive dynamic IP address and access internet using domain names?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 634]**
+
+5. **What is DHCP Server and why it is needed in a computer network.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 670]**
+
+6. **(b) Explain the message flow between a DHCP server and client. Show necessary timing diagram.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
+
+7. **What is APIPA?** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 840]**
+
+8. **What do you mean by DHCP server? Explain the benefits of using dedicated DHCP server. Briefly describe the main benefits of using IPv6 protocol.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 914]**
+
+9. **১৬. DHCP uses UDP port _____ for sending data to the server.** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+10. **DHCP কি? DHCP কিভাবে কাজ করে লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1043]**
+
+## Digital Modulation & Signal Processing (BPSK, QPSK) (10)
+
+1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** **(NWPGCL - Assistant Manager (ICT) Exam: 12.01.2024 (BUET)) [compact it 293]**
+
+2. **What is baseband and passband frequency?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
+
+3. **অথবা, (ক) Low-pass Channel এবং Band-pass Channel এর মধ্যে উদাহরণসহ পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 628]**
+
+4. **What is modulation? Why is it necessary?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
+
+5. **Amplitude Modulation related problem. (Approximate)** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 644]**
+
+6. **Compare between (i) AM and ASK and (ii) FM and FSK considering modulation scheme, bandwith requirement, noise tolerance and circuit complexity.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+7. **What are the advantages of PSK and explain why coherent detection is necessary for demodulating the PSK signal?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+8. **Draw the constellation diagram of QPSK, 8-PSK and 32-QAM. Why these multilevel signals prefereed and what are the challenges for multilevel modulation?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+9. **a) What is QAM? Explain it.** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030]**
+
+10. **b) Draw diagram for 16 QAM having? (i) 3 amplitudes, 12 phases (ii) 4 amplitudes, 8 phases** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1030-1031]**
+
+## Flow Control & Data Link Layer (Stop-and-Wait) (9)
+
+1. A single-mode optical fiber communication link connects two locations 250\text{ km} apart using WDM technology with 50 channels, where each channel provides a bit rate of 10\text{ Gbps}. The refractive index of the fiber is 1.5, and data is transmitted using the Stop-and-Wait protocol. A 1\text{ GB} file is divided into suitable data frames, and after successfully receiving each frame, the receiver sends a 54-byte acknowledgment (ACK) back to the sender. Assuming no processing or queuing delay, determine the total time required to completely transfer the 1\text{ GB} file, including data transmission time, propagation delay, ACK transmission time, and the Stop-and-Wait waiting time. [BSCCPL AME 21-08-2026 (BUET)]
+
+2. **Using an explanation of the difference between flow-control and congestion control, discuss the impact of a stable end-to-end latency.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 424]**
+
+3. **(খ) Congestion কী? Network-এ কীভাবে Congestion নিয়ন্ত্রণ করা যায়? আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+
+4. **Unit of data link layer?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+5. **(ক) নেটওয়ার্কে ডাটা প্যাকেটে trailer কোথায় এবং কেন ব্যবহার করা হয়? উদাহরণ দিন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 775]**
+
+6. **How STP works? Explain congestion control algorithm.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 842-843]**
+
+7. **Host A is sending data to Host B over a full duplex link. A and B are using the sliding window protocol for flow control. The send and receive window size are 5 packets each. Data packets (sent only from A to B) are all 1000 bytes long and transmission time for such a packet is 50\mu\text{s}. Acknowledgement packets (sent only from B to A) are very small and require negligible transmission time. The propagation delay over the link is 200\mu\text{s}. What is the maximum achievable throughput in this communication?** **(BAUST Assistant Programmer Exam: 2021) [compact it 918]**
+
+8. **What is the piggybacking and MAC Address?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 921]**
+
+9. **(i) Congestion Control কী? কী কী ভাবে Congestion Control করা যায়?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 950]**
+
+## Email Architecture & Protocols (SMTP, POP3, IMAP) (9)
+
+1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1323]**
+   * (a) Mention the protocol of application layer and transport layer.
+   * (b) Write down the steps of Mail transfer from Afsana to Sinthia.
+
+2. **Difference between: (i) SMTP and SNMP (ii) HTTP and HTTPs** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
+
+3. **Which protocol is used for email received?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+4. **(a) Distinguish the purpose of SMTP and IMAP in email communication.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 688]**
+
+5. **Email এর ক্ষেত্রে CC এবং BCC এর অর্থ কি বুঝায়?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
+
+6. **Which of the following is correct email formate? (a) compact@webmail.com (b) compact@webmail@com (c) compact.webmail.com (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+7. **E-mail পাঠানো এবং রিসিভ করার জন্য একটি করে প্রোটোকলের নাম লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
+
+8. **Which protocol provides e-mail facility amount different hosts?** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 937]**
+
+9. **ই-মেইল করার ক্ষেত্রে TO, CC ও BCC কোন ব্যবহার করা হয়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+## Application Layer & Well-Known Port Numbers (8)
+
+1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. (BEPRC Assistant Programmer Exam: 08.08.2026)
+
+2. **What is the port number of DNS?** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+
+3. **What is the port number used by DNS?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1432]**
+
+4. **HTTPS এর পোর্ট নাম্বার কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+5. **DNS Port Number?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+6. **Write the port address of the following applications of data communications. (i) HTTP; (ii) HTTPS; (iii) FTP; (iv) SMTP; (v) POP** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
+
+7. **Describe TCP/IP protocols and its ports.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
+
+8. **A server has port number 1223. A user is requesting the server (www.example.com) but it is showing server is not reached. How can you solve this?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
+
+## Switching Techniques (Circuit vs Packet Switching) (5)
+
+1. **Difference between circuit switching and packet switching. Identify which of the two is predominantly used in Internet communication and justify why?** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1435]**
+
+2. **(c) Compare circuit switching and packet switching.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
+
+3. **Do you prefer packet switching compared to circuit switching in communication network? If Yes, why? How does packet switching work step by step? What applications use packet switching?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 536]**
+
+4. **Why is packet suiting suitable for digital data transmission?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
+
+5. **Why is packet switching more suitable for internet communication?** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+
+## WAN Technologies (SONET/SDH, ATM, WDM) (5)
+
+1. **White short notes on: (i) SONET/SDH; (ii) IP telephony; (iii) WDM technology; (iv) ATM network** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+2. **(c) Explain IPTV and VOIP.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 794]**
+
+3. **Write the full form of the given technologies CX, IGW and IIG. Write feature of there technologies.** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 806]**
+
+4. **TSCM এর কাজ কী? VoIP পরিচালনায় কী কী সরঞ্জামের প্রয়োজন হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 810]**
+
+5. **Write down the difference between IPoE and PPPoE.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 839-840]**
+
+## Pulse Code Modulation (PCM) & Signal Processing (4)
+
+1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 765]**
+
+2. **Draw Delta modulation figure and math. (Approximate)** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 648]**
+
+3. **A singla-tone message signal of bandwidth 4KHZ and amplitude 10V is transmitted by \Delta-modulation with step size 2V. Determine the data rate so that slope overloading noise is the minimum.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+4. **A single-tone message signal of bandwidth 4 KHZ is sampled by using a pulse train of frequency 200% higher than the Nyquist rate of the message signal to obtain PAM signal. The duty cycle of the pulse train is 20%. By drawing the amplitude spectrum of the PAM signal, determine its bandwidth.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 676]**
+
+## Network Layer (Packet Fragmentation & Tunneling) (4)
+
+1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**
+
+2. **(b) Describe briefly the TCP/IP tunneling using appropriate diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 482]**
+
+3. **Why network need packet fragmentation? Define different types of packet fragmentation with necessary diagram.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 666]**
+
+4. **Suppose a 22-byte packet is to be transmitted through a network of \text{MTU} = 3\text{ byte}. The elementary fragment size is 1\text{ byte}. Show the segment numbering of the above packet. Packet number is 217.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
+
+## Analog Modulation & Radio Receivers (3)
+
+1. **With appropriate figures, distinguish between homodyne and heterodyne detection processes. Draw the block diagram of a super heterodyne AM receiver.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+2. **Difference between AM and FM. (a) Which is prefer for long distance communication? (b) Which has low distortion? (c) Which has low interference?** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 716]**
+
+3. **A sinusoidal modulating waveform of amplitude 5V and frequency of 2 kHz is applied to FM generator, which has a frequency sensitivity of 40Hz/volt. Calculate the frequency deviation, modulation index and bandwidth.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 734]**
+
+## Satellite Communication (3)
+
+1. **(b) Difference between active and passive satellites.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
+
+2. **(c) Briefly describe different types of earth orbital satellite.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
+
+3. **Satellite ভিত্তিক যোগাযোগের একটি অসুবিধা লিখুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 825]**
+
+## Line Coding & Digital Encoding (2)
+
+1. **Assume we want to transmit the following binary string: 01001110. Show the resulting signal on the one using the following line coding techniques: (i) NRZ-L (ii) Manchester NRZ (iii) Unipolar RZ (binary string: 11011000100)** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 638]**
+
+2. **What is Line coding? What is the different line coding techniques?** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 869-870]**
+
+## Address Resolution (ARP & RARP) (2)
+
+1. **(a) Discuss the main role of Address Resolution Protocol (ARP) in the network layer of TCP/IP protocol suite.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 490]**
+
+2. **What is ARP? Briefly explain ARP.** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 841-842]**
+
+## VLANs & Subnetting Comparison (2)
+
+1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
+
+2. **What is VLAN? Difference between static and dynamic VLAN.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 550]**
+
+## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (2)
+
+1. **What are the limitaions of CDMA?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+2. **Mention the basic differences between frequency-hopped spread spectrum (FHSS) and direct sequence spread spectrum (DSSS) techniques.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 675]**
+
+## High Availability & Redundancy Protocols (VRRP, HSRP) (1)
+
+1. **State the network protocol of VRRP?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1359]**

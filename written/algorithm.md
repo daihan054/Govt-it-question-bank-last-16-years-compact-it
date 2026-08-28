@@ -3,82 +3,26 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity) | 27 |
-| 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs) | 17 |
-| 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree) | 14 |
-| 4 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity) | 12 |
-| 5 | [Searching Algorithms](#searching-algorithms) | 11 |
-| 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms) | 7 |
-| 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism) | 6 |
-| 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack) | 6 |
-| 9 | [Dynamic Programming](#dynamic-programming) | 5 |
-| 10 | [Heap & Priority Queue](#heap--priority-queue) | 2 |
-| 11 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list) | 2 |
-| 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication) | 1 |
-| 13 | [Huffman Coding & Data Compression](#huffman-coding--data-compression) | 1 |
-| 14 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction) | 1 |
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-27) | 27 |
+| 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
+| 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-14) | 14 |
+| 4 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-12) | 12 |
+| 5 | [Searching Algorithms](#searching-algorithms-11) | 11 |
+| 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms-7) | 7 |
+| 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-6) | 6 |
+| 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
+| 9 | [Dynamic Programming](#dynamic-programming-5) | 5 |
+| 10 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
+| 11 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-2) | 2 |
+| 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-1) | 1 |
+| 13 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
+| 14 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Algorithm Analysis & Asymptotic Complexity
-
-1. **Analyze the time and space complexity of the following code:**
-```python
-for i in N:
-    for j in M:
-
-```
-**(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
-
-2. **What is complexity of Algorithm? Categorize complexity of Algorihm.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1458]**
-
-3. **Including Time and Space complexity....** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]**
-
-4. **What is complexity? Find the Complexity from code and explain.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
-
-5. **What is Big O and Big Omega?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
-
-6. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 606]**
-
-7. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
-
-8. **Recurrence equation of binary search and solve it.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**
-
-9. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
-
-10. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
-
-11. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983-984]**
-
-12. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
-## Searching Algorithms
-
-1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
-
-2. **Write down the Pseudo Code for recursive binary search algorithm. Use the following function definition: binarySearch(array, target, low, high).** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1338]**
-
-3. **What is the complexity of Binary algorithm?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-4. **Explain Algorithm of Binary search.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
-
-5. **Binary search using recursive function.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
-
-6. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 605]**
-
-7. **Write a C/C++ program for binary search.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 712]**
-
-8. **(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
-
-9. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 791]**
-
-10. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 973-974]**
-
-11. **6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
-
-## Sorting Algorithms & Complexity
+## Sorting Algorithms & Complexity (27)
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -144,61 +88,7 @@ for i in N:
 27. **(খ) Bubble sort algorithm ব্যবহার করে নিচের সংখ্যাগুলো sort করুন। প্রতিটি ধাপ প্রদর্শন করতে হবে।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 13, 14, 23, 4, 6
 
-## Heap & Priority Queue
-
-1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
-
-2. **Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 427]**
-
-## Dynamic Programming & Greedy Algorithms
-
-1. **State the Principle of Optimality in Dynamic Programming. How does it distinguish Dynamic Programming from Greedy Algorithms?** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1420]**
-
-2. **(খ) Greedy Method ও Dynamic Algorithm এর মধ্যে পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**
-
-3. **Write down the difference between Divide and Conquer and Dynamic Programming.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 505]**
-
-4. **(a) How does dynamic programming relate with divide and conquer approach?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 484]**
-
-5. **(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
-
-6. **Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are the difference between there two techniques?** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 813]**
-
-7. **Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 879-880]**
-
-## Divide and Conquer & Matrix Multiplication
-
-1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 378]**
-
-## Huffman Coding & Data Compression
-
-1. **Huffman encoding draw huffman tree. Given word “CONNECTION”.** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 645]**
-
-## NP-Completeness & Complexity Reduction
-
-1. **A reduces to B Polynomial time. Which is better and why?** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
-
-## Graph Theory & Isomorphism
-
-1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1419]**
-
-2. **(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
-
-3. **(খ) দেখান যে, n সংখ্যক vertex এর একটি tree এর ঠিক n-1 সংখ্যক edge আছে।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
-
-4. **(b) Define Eulerian path. What are the necessary and sufficient conditions for the Eulerian path? Expalin.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
-
-5. **(c) What is a strongly connected graph?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
-
-6. **True False with explanation about Graph related (Two).** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
-
-## Graph Representation (Adjacency Matrix vs List)
-
-1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 495]**
-
-2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 437]**
-
-## Graph Traversal Algorithms (BFS & DFS)
+## Graph Traversal Algorithms (BFS & DFS) (17)
 
 1. **Why DFS better than BFS, Explain?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
@@ -234,7 +124,7 @@ for i in N:
 
 17. **Run the BFS algorithm from vertex 1 and draw the BFS tree.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033-1034]**
 
-## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
+## Graph Algorithms (Shortest Path & Minimum Spanning Tree) (14)
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
 
@@ -264,7 +154,93 @@ for i in N:
 
 14. **নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1048]**
 
-## Greedy Algorithms (Fractional Knapsack)
+## Algorithm Analysis & Asymptotic Complexity (12)
+
+1. **Analyze the time and space complexity of the following code:**
+```python
+for i in N:
+    for j in M:
+
+```
+**(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
+
+2. **What is complexity of Algorithm? Categorize complexity of Algorihm.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1458]**
+
+3. **Including Time and Space complexity....** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]**
+
+4. **What is complexity? Find the Complexity from code and explain.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
+
+5. **What is Big O and Big Omega?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+
+6. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 606]**
+
+7. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
+
+8. **Recurrence equation of binary search and solve it.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**
+
+9. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
+
+10. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+
+11. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983-984]**
+
+12. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+## Searching Algorithms (11)
+
+1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
+
+2. **Write down the Pseudo Code for recursive binary search algorithm. Use the following function definition: binarySearch(array, target, low, high).** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1338]**
+
+3. **What is the complexity of Binary algorithm?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+4. **Explain Algorithm of Binary search.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+
+5. **Binary search using recursive function.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
+
+6. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 605]**
+
+7. **Write a C/C++ program for binary search.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 712]**
+
+8. **(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
+
+9. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 791]**
+
+10. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 973-974]**
+
+11. **6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+## Dynamic Programming & Greedy Algorithms (7)
+
+1. **State the Principle of Optimality in Dynamic Programming. How does it distinguish Dynamic Programming from Greedy Algorithms?** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1420]**
+
+2. **(খ) Greedy Method ও Dynamic Algorithm এর মধ্যে পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 411]**
+
+3. **Write down the difference between Divide and Conquer and Dynamic Programming.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 505]**
+
+4. **(a) How does dynamic programming relate with divide and conquer approach?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 484]**
+
+5. **(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
+
+6. **Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are the difference between there two techniques?** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 813]**
+
+7. **Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 879-880]**
+
+## Graph Theory & Isomorphism (6)
+
+1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1419]**
+
+2. **(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
+
+3. **(খ) দেখান যে, n সংখ্যক vertex এর একটি tree এর ঠিক n-1 সংখ্যক edge আছে।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
+
+4. **(b) Define Eulerian path. What are the necessary and sufficient conditions for the Eulerian path? Expalin.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
+
+5. **(c) What is a strongly connected graph?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+
+6. **True False with explanation about Graph related (Two).** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
+
+## Greedy Algorithms (Fractional Knapsack) (6)
 
 1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।
    (b)
@@ -295,7 +271,7 @@ for i in N:
 i) থলির সর্বোচ্চ ধারণক্ষমতা 25 হলে, এতে সবচেয়ে বেশি মোট কত ওজনের বস্তু (item) রাখা যাবে?
 ii) বস্তুগুলো থলিতে রাখার ক্রম কী হবে?
 
-## Dynamic Programming
+## Dynamic Programming (5)
 
 1. A communication link is established from Cox’s Bazar to Kuakata through a sequence of stations M_1, M_2, M_3, \dots, M_n. Each location can have at most one repeater, and the distance between consecutive locations is given by P_i > 0. For reliable communication, two selected repeater stations must be at least K kilometers apart. Using Dynamic Programming, determine the maximum number of repeaters that can be installed while maintaining the required minimum distance between any two selected stations. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -306,3 +282,27 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 4. **Write down the Algorithm for determining Fibonacci number through dynamic programming.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
 
 5. **What will be the time and space complexity of the above algorithm?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
+
+## Heap & Priority Queue (2)
+
+1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
+
+2. **Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 427]**
+
+## Graph Representation (Adjacency Matrix vs List) (2)
+
+1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 495]**
+
+2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 437]**
+
+## Divide and Conquer & Matrix Multiplication (1)
+
+1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 378]**
+
+## Huffman Coding & Data Compression (1)
+
+1. **Huffman encoding draw huffman tree. Given word “CONNECTION”.** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 645]**
+
+## NP-Completeness & Complexity Reduction (1)
+
+1. **A reduces to B Polynomial time. Which is better and why?** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**

@@ -3,114 +3,31 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries) | 74 |
-| 2 | [DBMS Architecture & Features](#dbms-architecture--features) | 22 |
-| 3 | [ER Diagram & Database Design](#er-diagram--database-design) | 22 |
-| 4 | [Keys in DBMS](#keys-in-dbms) | 21 |
-| 5 | [Normalization & Database Design](#normalization--database-design) | 18 |
-| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl) | 14 |
-| 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties) | 12 |
-| 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships) | 11 |
-| 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery) | 8 |
-| 10 | [PL/SQL & Database Triggers](#plsql--database-triggers) | 6 |
-| 11 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree) | 6 |
-| 12 | [Distributed & Parallel Databases](#distributed--parallel-databases) | 4 |
-| 13 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence) | 4 |
-| 14 | [Database Design & Data Types](#database-design--data-types) | 3 |
-| 15 | [SQL Joins & Operations](#sql-joins--operations) | 3 |
-| 16 | [NoSQL, NewSQL & Modern Databases](#nosql-newsql--modern-databases) | 2 |
-| 17 | [Database Connectivity (JDBC)](#database-connectivity-jdbc) | 2 |
-| 18 | [Relational Keys (Candidate, Super, Primary, Foreign Key)](#relational-keys-candidate-super-primary-foreign-key) | 1 |
-| 19 | [Indexing in DBMS](#indexing-in-dbms) | 1 |
+| 1 | [SQL Queries](#sql-queries-74) | 74 |
+| 2 | [DBMS Architecture & Features](#dbms-architecture--features-22) | 22 |
+| 3 | [ER Diagram & Database Design](#er-diagram--database-design-22) | 22 |
+| 4 | [Keys in DBMS](#keys-in-dbms-21) | 21 |
+| 5 | [Normalization & Database Design](#normalization--database-design-18) | 18 |
+| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-14) | 14 |
+| 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-12) | 12 |
+| 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-11) | 11 |
+| 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
+| 10 | [PL/SQL & Database Triggers](#plsql--database-triggers-6) | 6 |
+| 11 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-6) | 6 |
+| 12 | [Distributed & Parallel Databases](#distributed--parallel-databases-4) | 4 |
+| 13 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-4) | 4 |
+| 14 | [Database Design & Data Types](#database-design--data-types-3) | 3 |
+| 15 | [SQL Joins & Operations](#sql-joins--operations-3) | 3 |
+| 16 | [NoSQL, NewSQL & Modern Databases](#nosql-newsql--modern-databases-2) | 2 |
+| 17 | [Database Connectivity (JDBC)](#database-connectivity-jdbc-2) | 2 |
+| 18 | [Relational Keys (Candidate, Super, Primary, Foreign Key)](#relational-keys-candidate-super-primary-foreign-key-1) | 1 |
+| 19 | [Indexing in DBMS](#indexing-in-dbms-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## DBMS Architecture & Features
-
-1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।
-   (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
-
-2. **ODBC এর পূর্ণ রূপ কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-3. **Data about data is Called __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-4. **Difference between MSAccess and MS FoxPro in SQL.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 317]**
-
-5. **What is Database?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
-
-6. **What is data about data?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
-
-7. **(খ) Centralized System ও Client Server System সম্পর্কে সচিত্র বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
-
-8. **(ক) একজন ডাটাবেস এডমিন এর কাজ কী? কিছু ডাটাবেস সিস্টেম অ্যাপ্লিকেশনের নাম লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
-
-9. **(খ) ডাটাবেস ব্যবস্থাপনা সিস্টেমের তিন স্তরবিশিষ্ট আর্কিটেকচার ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
-
-10. **(ক) সাধারণ ফাইলভিত্তিক সিস্টেমের চেয়ে DBMS এর সুবিধা কী কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
-
-11. **What is Database administrator role?** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
-
-12. **Explain difference between Data Administrator and Database Administrator.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
-
-13. **Describe the advantages and disadvantages of DBMS-provided and application provided security.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 684]**
-
-14. **(a) What is database schema? What are dangling tuple and descriptive attribute?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
-
-15. **What is data Independence? How many types of data independence?** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
-
-16. **(ii) Database এর Table and View এর মধ্যে পার্থক্য লিখুন। E-R diagram এর প্রয়োজনীয়তা লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
-
-17. **(a) Distinguish between table and view in database management system.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
-
-18. **Database এর সর্বনিম্ন Unit কোনটি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
-
-19. **DBMS বলতে কী বোঝানো হয়? DBMS শ্রেণিভিন্যাস বর্ণনা করুন।** **(40th BCS Written Exam: 2020 (BPSC)) [compact it 971-972]**
-
-20. **Define View, Materialized View. Difference between View and Materialized View and Usage of two.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1012-1013]**
-
-21. **What are the roles of Database Engineer?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014]**
-
-22. **(খ) DBMS কী? দুটি সুবিধা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
-## NoSQL, NewSQL & Modern Databases
-
-1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
-
-2. **Write difference between relational database and NoSQL database.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
-
-## SQL Commands (DDL, DML, DCL, TCL)
-
-1. Example Query of DDL, DML, DCL. (BEPRC Assistant Programmer Exam: 08.08.2026)
-
-2. **What is SQL?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
-
-3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-4. **(ক) DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
-
-5. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
-
-6. **SQL query to insert data into table. (A table was given with 3 row)** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
-
-7. **How can you Revoke permissions from a database table? Give SQL command for it.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 666]**
-
-8. **What is DDL and DML?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
-
-9. **(i) নিচের Table টি তৈরি করার SQL কমান্ড লিখুন। student_info (std_id, name, department, phone_number) (a) Table তে ২টি record (insert) প্রবেশ করার SQL কমান্ড লিখুন। (b) Table টি থেকে CSE বিভাগের ছাত্র/ছাত্রীদের নামের তালিকা বের করার SQL command লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
-
-10. **Write the create table command for the ‘Employee’ table with the following column: Emp_ID, Emp_Name, Date_of_Birth.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
-
-11. **৪. ডাটাবেইজে টেবিল ডিলেট করার কমান্ড লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
-
-12. **ডাটাবেইজ ম্যানেজমেন্ট সিস্টেমের মধ্যে CRUD এর কাজ কি?** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
-
-13. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 988-989]**
-
-14. **How to find duplicate data in database? Explain DDL and DML.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1017-1018]**
-
-## SQL Queries
+## SQL Queries (74)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -428,228 +345,54 @@ SELECT count (*) FROM (
 
 74. **6.4 Consider the following relation: Employee(EmpID, Name, Department, Salary). Write an SQL query to retrieve the Department, the total number of employees, and the average salary for each department. The output should display one record for each department.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-## Transaction Management & ACID Properties
+## DBMS Architecture & Features (22)
 
-1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
+1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।
+   (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
-2. **What are the ACID properties of transaction to ensure data reliability and integrity?** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
+2. **ODBC এর পূর্ণ রূপ কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-3. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+3. **Data about data is Called __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-4. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+4. **Difference between MSAccess and MS FoxPro in SQL.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 317]**
 
-5. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+5. **What is Database?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
-6. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
+6. **What is data about data?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
-7. **(a) What is ACID mean in database system?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
+7. **(খ) Centralized System ও Client Server System সম্পর্কে সচিত্র বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
 
-8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
+8. **(ক) একজন ডাটাবেস এডমিন এর কাজ কী? কিছু ডাটাবেস সিস্টেম অ্যাপ্লিকেশনের নাম লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
 
-9. **What do you mean by Rollback and Roll forward?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 682]**
+9. **(খ) ডাটাবেস ব্যবস্থাপনা সিস্টেমের তিন স্তরবিশিষ্ট আর্কিটেকচার ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
 
-10. **Describe ACID properties of DBMS.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 860]**
+10. **(ক) সাধারণ ফাইলভিত্তিক সিস্টেমের চেয়ে DBMS এর সুবিধা কী কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
 
-11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 984-985]**
+11. **What is Database administrator role?** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
 
-12. **Describe Database ACID properties.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1012]**
+12. **Explain difference between Data Administrator and Database Administrator.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
 
-## Normalization & Database Design
+13. **Describe the advantages and disadvantages of DBMS-provided and application provided security.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 684]**
 
-1. **Why normalization is required in Database? Write shortly about 3NF?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+14. **(a) What is database schema? What are dangling tuple and descriptive attribute?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
 
-2. **Explain the differences between Second Normal Form (2NF) and Third Normal Form (3NF) with examples.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+15. **What is data Independence? How many types of data independence?** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
 
-| 2NF(Second Normal Form) | 3NF(Third Normal Form) |
-|---|---|
-| It is already in 1NF. | It is already in 1NF as well as in 2NF also. |
-| In 2NF, non-prime attributes (attributes that are not part of any candidate key) must depend on the entire candidate key. | In 3NF non-prime attributes are only allowed to be functionally dependent on Super key of relation. |
-| No partial functional dependency of non-prime attributes on any proper subset of a candidate key is allowed. | No transitive functional dependency of non-prime attributes on any super key is allowed. |
-| Stronger normal form than 1NF but lesser than 3NF. | Stronger normal form than 1NF and 2NF. |
-| It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
-| The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
+16. **(ii) Database এর Table and View এর মধ্যে পার্থক্য লিখুন। E-R diagram এর প্রয়োজনীয়তা লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
 
-3. **What is Logical design database is called?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+17. **(a) Distinguish between table and view in database management system.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
 
-4. **A Bank schema is given below:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1322]**
-   $$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
-   * (a) Provided and Normalize and point out Primary and Foreign Key?
-   * (b) Show that is the schema and state that why your schema is in good form.
+18. **Database এর সর্বনিম্ন Unit কোনটি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
 
-5. **What is Normalize a database? Used containers if needed, draw an ER Diagram.** **[See WZPGCL, Assistant Engineer (CSE), Exam: 27.05.2023]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 315]**
+19. **DBMS বলতে কী বোঝানো হয়? DBMS শ্রেণিভিন্যাস বর্ণনা করুন।** **(40th BCS Written Exam: 2020 (BPSC)) [compact it 971-972]**
 
-6. **(ক) Normalization কী? কত প্রকার ও কী কী? ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+20. **Define View, Materialized View. Difference between View and Materialized View and Usage of two.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1012-1013]**
 
-7. **What is database Normalization? Write down the types of database Normalization.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 504]**
+21. **What are the roles of Database Engineer?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014]**
 
-8. **Which normalization is related to functional dependency?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+22. **(খ) DBMS কী? দুটি সুবিধা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-9. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-10. **What in First and Second Normal form is DBMS?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
-
-11. **অথবা, (ক) “BCNF is stricter than 3NF” এই উক্তিটি উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
-
-12. **Why Normalization is used in database? Explain 1^{\text{st}} Normal form using an example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
-
-13. **Why do you need database Normalization?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
-
-14. **Let a relational function is R(A, B, C, D, E), Write Yes or No based on those are the follow n functional dependency.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 822]**
-   AB \to C
-   B \to B
-   DE \to A
-
-15. **What is DBMS? Write down the purpose of normalization in DBMS.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
-
-16. **(b) What is normalization? Why is it needed?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
-
-17. **(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 953-954]**
-
-18. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
-
-## Relational Keys (Candidate, Super, Primary, Foreign Key)
-
-1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
-
-## PL/SQL & Database Triggers
-
-1. **Explain Database Trigger with example.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
-
-2. **Database program with base and high- level language (SQL) to find out the interest rate from the given database table.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
-
-3. **(c) Define dynamic SQL and trigger with examples.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
-
-4. **(b) Describe the application of trigger in database.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
-
-5. **Suppose, ‘Employee’ table (emp_id, emp_name, dept_id, salary) and ‘Department’ table (dept_id, dept_name, increment_dept). Create a tigger to increment the salary of the employee by 10% whose salary is above 30000.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
-
-6. **(a) What is the purpose of database trigger? Explain with an example.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
-
-## Database Backup & Disaster Recovery
-
-1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
-
-2. **Database Data Loss based case study type question......** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
-
-3. **What do you understand about the IT disaster recovery plan? Describe your approach to disaster recovery and business continuity planning for the data centre of your office.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 333]**
-
-4. **একটি MySQL database এর ডাটা ব্যাক আপ ও ব্যাক আপ করা ডাটা রিস্টোর করার কমান্ড লিখ।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 382]**
-
-5. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**
-
-6. **To achieve a '0-bit data loss' for its 24 x 7 x 365 banking operation, what steps or technology should an online bank employ to safeguard its data against any potential threats of data loss?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 518]**
-
-7. **MySQL database এর ক্ষেত্রে Backup and Restore করার কমান্ড লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]**
-
-8. **Describe what are the ways for no data loss?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1015-1016]**
-
-## Indexing & Query Optimization (B-Tree, B+ Tree)
-
-1. **How indexing improve query performance?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
-
-2. **Briefly describe primary key, foreign key and indexing in relational database and their relationship. Do you think database indexing always makes applications faster? Explain your answer.**
-
-**Table Name: STUDENT**
-| Stu_Id | Stu_Name | Stu_Age |
-|---|---|---|
-| 101 | Steve | 23 |
-| 102 | John | 24 |
-| 103 | Robert | 28 |
-| 104 | Steve | 29 |
-
-**Course_enrollment table:**
-| Course_Id | Stu_Id |
-|---|---|
-| C01 | 101 |
-| C02 | 102 |
-| C03 | 101 |
-| C05 | 102 |
-| C06 | 103 |
-| C07 | 102 |
-
-**(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 337]**
-
-3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
-
-4. **How does index tuning help in improving query performance?** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 747]**
-
-5. **Construct a B+ tree index structure on emp_id for the given relation employee as shown below with n=4.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 824]**
-
-6. **What is Indexing? Write down the usages of Indexing.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1015]**
-
-## Relational Data Model & ER Relationships
-
-1. What are the different types of relationships in a relational database? Explain each with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
-
-2. **Discuss about different types of relations in DBMS.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 297]**
-
-3. **What is the degree of relation in dbms?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
-
-4. **(খ) One-to-one এবং One-to-many রিলেশন উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
-
-5. **Weak Entity and strong entity difference with relation.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
-
-6. **(b) Give example of week and strong entity sets.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
-
-7. **(a) What is referential integrity? How do you impose in your database design?** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
-
-8. **What is a weak entity for data modeling using the entity relationship model find out any weak entity and its identify relationship for the school database? Which of the following table? Student(student_id, student_name, admission_year) Teacher(teacher_id, teacher_name, teacher_joindate) Course(course_id, subject_name, credit)** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 814]**
-
-9. **(c) What is a weak entity set? How the primary key is generated for weak entity set?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
-
-10. **(a) Write down Integrity rules in database.** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
-
-11. **What is constraints? Why use constraint? Difference between table level Cosntraint and column level Cosntraint.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1015]**
-
-## Keys in DBMS
-
-1. Difference Between Primary Key, Foreign Key, Candidate Key. (BEPRC Assistant Programmer Exam: 08.08.2026)
-
-2. **(a) Define RDBMS. Explain the different key and primary key, candidate key, super key, and foreign key DBMS.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1445]**
-
-3. **Difference between primary key, foreign key? What is trigger?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 502]**
-
-4. **Define primary key, super key, and Candidate key.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
-
-5. **What is primary key and foreign key with example?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
-
-6. **Explain Primary key, Candidate key, and Foreign key.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 468]**
-
-7. **(খ) Primary key এবং Super key এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
-
-8. **Super key and Candidate key finding from table.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]**
-
-9. **From Functional Dependency for determine candidate key.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 661]**
-
-10. **Relation to find primary key, candidate key, super key.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 663]**
-
-11. **(a) Differentiate among foreign key, candidate key, and primary key.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
-
-12. **Explain the primary key and composite key with respect to database.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 745]**
-
-13. **(খ) Relational Database Design এ Primary Key ও Foreign Key বলতে কি বুঝায়? উদাহরণসহ লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
-
-14. **(b) What are purpose of using foreign key in a database? Give suitable example.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
-
-15. **What is primary key?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
-
-16. **What is Primary key, Unique key and Forgein key.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
-
-17. **Database Management System (DBMS) বলতে কী বোঝেন? Relational database -এ Primary key এবং Foreign key -এর ভূমিকা উদাহরণসহ সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 882]**
-
-18. **(b) Explain the different type of database keys with examples.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
-
-19. **What is the Primary key, Candidate key and Super key?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 921]**
-
-20. **Difference between Primary key and Unique Key, Drop and Purge, Delete and Truncate.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1013-1014]**
-
-21. **Example Foreign key in RDBMS.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1035]**
-
-## Indexing in DBMS
-
-1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
-
-## ER Diagram & Database Design
+## ER Diagram & Database Design (22)
 
 1. BSCPL regularly publishes multiple job vacancies, where each Job is identified by a unique Job ID and contains information such as Job Title, Starting Salary, Job Description, and other relevant attributes. An Applicant is identified by a unique Applicant ID and has attributes such as Name, Date of Birth, Starting/Joining Date, Contact Information, and other details. An applicant can apply for only one job, while a particular job can receive applications from many applicants. Design the ER diagram for this system, showing the entities, attributes, primary keys, relationship, cardinalities, and participation constraints. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -703,29 +446,250 @@ SELECT count (*) FROM (
 
 22. **Draw an ER diagram of a Library Management System.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036-1037]**
 
-## Database Connectivity (JDBC)
+## Keys in DBMS (21)
 
-1. What is JDBC? Explain the steps required to connect a Java application to a MySQL database. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+1. Difference Between Primary Key, Foreign Key, Candidate Key. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
-2. **(b) Explain embedded SQL with an appropriate example.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
+2. **(a) Define RDBMS. Explain the different key and primary key, candidate key, super key, and foreign key DBMS.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1445]**
 
-## Database Design & Data Types
+3. **Difference between primary key, foreign key? What is trigger?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 502]**
 
-1. An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
+4. **Define primary key, super key, and Candidate key.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
-2. **(c) Describe the difference between CHAR and VARCHAR data type.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
+5. **What is primary key and foreign key with example?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
 
-3. **What is the domain in a relational database? Explain with an example. Show how you would use Alter table SQL command to add a domain on a database table.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 916]**
+6. **Explain Primary key, Candidate key, and Foreign key.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 468]**
 
-## SQL Joins & Operations
+7. **(খ) Primary key এবং Super key এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
 
-1. **What are the different types of join in SQL?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 580]**
+8. **Super key and Candidate key finding from table.** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]**
 
-2. **Left joning and inner joining of a table.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
+9. **From Functional Dependency for determine candidate key.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 661]**
 
-3. **Which join is used for including not matching all records with output?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+10. **Relation to find primary key, candidate key, super key.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 663]**
 
-## Distributed & Parallel Databases
+11. **(a) Differentiate among foreign key, candidate key, and primary key.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
+
+12. **Explain the primary key and composite key with respect to database.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 745]**
+
+13. **(খ) Relational Database Design এ Primary Key ও Foreign Key বলতে কি বুঝায়? উদাহরণসহ লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 769]**
+
+14. **(b) What are purpose of using foreign key in a database? Give suitable example.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
+
+15. **What is primary key?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
+
+16. **What is Primary key, Unique key and Forgein key.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
+
+17. **Database Management System (DBMS) বলতে কী বোঝেন? Relational database -এ Primary key এবং Foreign key -এর ভূমিকা উদাহরণসহ সংক্ষেপে বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 882]**
+
+18. **(b) Explain the different type of database keys with examples.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
+
+19. **What is the Primary key, Candidate key and Super key?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 921]**
+
+20. **Difference between Primary key and Unique Key, Drop and Purge, Delete and Truncate.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1013-1014]**
+
+21. **Example Foreign key in RDBMS.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1035]**
+
+## Normalization & Database Design (18)
+
+1. **Why normalization is required in Database? Write shortly about 3NF?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+
+2. **Explain the differences between Second Normal Form (2NF) and Third Normal Form (3NF) with examples.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+
+| 2NF(Second Normal Form) | 3NF(Third Normal Form) |
+|---|---|
+| It is already in 1NF. | It is already in 1NF as well as in 2NF also. |
+| In 2NF, non-prime attributes (attributes that are not part of any candidate key) must depend on the entire candidate key. | In 3NF non-prime attributes are only allowed to be functionally dependent on Super key of relation. |
+| No partial functional dependency of non-prime attributes on any proper subset of a candidate key is allowed. | No transitive functional dependency of non-prime attributes on any super key is allowed. |
+| Stronger normal form than 1NF but lesser than 3NF. | Stronger normal form than 1NF and 2NF. |
+| It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
+| The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
+
+3. **What is Logical design database is called?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+4. **A Bank schema is given below:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1322]**
+   $$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
+   * (a) Provided and Normalize and point out Primary and Foreign Key?
+   * (b) Show that is the schema and state that why your schema is in good form.
+
+5. **What is Normalize a database? Used containers if needed, draw an ER Diagram.** **[See WZPGCL, Assistant Engineer (CSE), Exam: 27.05.2023]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 315]**
+
+6. **(ক) Normalization কী? কত প্রকার ও কী কী? ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+
+7. **What is database Normalization? Write down the types of database Normalization.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 504]**
+
+8. **Which normalization is related to functional dependency?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+9. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+10. **What in First and Second Normal form is DBMS?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+
+11. **অথবা, (ক) “BCNF is stricter than 3NF” এই উক্তিটি উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
+
+12. **Why Normalization is used in database? Explain 1^{\text{st}} Normal form using an example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
+
+13. **Why do you need database Normalization?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
+14. **Let a relational function is R(A, B, C, D, E), Write Yes or No based on those are the follow n functional dependency.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 822]**
+   AB \to C
+   B \to B
+   DE \to A
+
+15. **What is DBMS? Write down the purpose of normalization in DBMS.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
+
+16. **(b) What is normalization? Why is it needed?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+
+17. **(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 953-954]**
+
+18. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+
+## SQL Commands (DDL, DML, DCL, TCL) (14)
+
+1. Example Query of DDL, DML, DCL. (BEPRC Assistant Programmer Exam: 08.08.2026)
+
+2. **What is SQL?** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
+
+3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+4. **(ক) DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
+
+5. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
+
+6. **SQL query to insert data into table. (A table was given with 3 row)** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
+
+7. **How can you Revoke permissions from a database table? Give SQL command for it.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 666]**
+
+8. **What is DDL and DML?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+9. **(i) নিচের Table টি তৈরি করার SQL কমান্ড লিখুন। student_info (std_id, name, department, phone_number) (a) Table তে ২টি record (insert) প্রবেশ করার SQL কমান্ড লিখুন। (b) Table টি থেকে CSE বিভাগের ছাত্র/ছাত্রীদের নামের তালিকা বের করার SQL command লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
+
+10. **Write the create table command for the ‘Employee’ table with the following column: Emp_ID, Emp_Name, Date_of_Birth.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
+
+11. **৪. ডাটাবেইজে টেবিল ডিলেট করার কমান্ড লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+
+12. **ডাটাবেইজ ম্যানেজমেন্ট সিস্টেমের মধ্যে CRUD এর কাজ কি?** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
+
+13. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 988-989]**
+
+14. **How to find duplicate data in database? Explain DDL and DML.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1017-1018]**
+
+## Transaction Management & ACID Properties (12)
+
+1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
+
+2. **What are the ACID properties of transaction to ensure data reliability and integrity?** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
+
+3. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+
+4. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
+5. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+6. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
+
+7. **(a) What is ACID mean in database system?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
+
+8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
+
+9. **What do you mean by Rollback and Roll forward?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 682]**
+
+10. **Describe ACID properties of DBMS.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 860]**
+
+11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 984-985]**
+
+12. **Describe Database ACID properties.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1012]**
+
+## Relational Data Model & ER Relationships (11)
+
+1. What are the different types of relationships in a relational database? Explain each with examples. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+2. **Discuss about different types of relations in DBMS.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 297]**
+
+3. **What is the degree of relation in dbms?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+4. **(খ) One-to-one এবং One-to-many রিলেশন উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 614]**
+
+5. **Weak Entity and strong entity difference with relation.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
+
+6. **(b) Give example of week and strong entity sets.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 694]**
+
+7. **(a) What is referential integrity? How do you impose in your database design?** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
+
+8. **What is a weak entity for data modeling using the entity relationship model find out any weak entity and its identify relationship for the school database? Which of the following table? Student(student_id, student_name, admission_year) Teacher(teacher_id, teacher_name, teacher_joindate) Course(course_id, subject_name, credit)** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 814]**
+
+9. **(c) What is a weak entity set? How the primary key is generated for weak entity set?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 896]**
+
+10. **(a) Write down Integrity rules in database.** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
+
+11. **What is constraints? Why use constraint? Difference between table level Cosntraint and column level Cosntraint.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1015]**
+
+## Database Backup & Disaster Recovery (8)
+
+1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
+
+2. **Database Data Loss based case study type question......** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
+
+3. **What do you understand about the IT disaster recovery plan? Describe your approach to disaster recovery and business continuity planning for the data centre of your office.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 333]**
+
+4. **একটি MySQL database এর ডাটা ব্যাক আপ ও ব্যাক আপ করা ডাটা রিস্টোর করার কমান্ড লিখ।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 382]**
+
+5. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 539]**
+
+6. **To achieve a '0-bit data loss' for its 24 x 7 x 365 banking operation, what steps or technology should an online bank employ to safeguard its data against any potential threats of data loss?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 518]**
+
+7. **MySQL database এর ক্ষেত্রে Backup and Restore করার কমান্ড লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]**
+
+8. **Describe what are the ways for no data loss?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1015-1016]**
+
+## PL/SQL & Database Triggers (6)
+
+1. **Explain Database Trigger with example.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+2. **Database program with base and high- level language (SQL) to find out the interest rate from the given database table.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
+
+3. **(c) Define dynamic SQL and trigger with examples.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
+
+4. **(b) Describe the application of trigger in database.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
+
+5. **Suppose, ‘Employee’ table (emp_id, emp_name, dept_id, salary) and ‘Department’ table (dept_id, dept_name, increment_dept). Create a tigger to increment the salary of the employee by 10% whose salary is above 30000.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
+
+6. **(a) What is the purpose of database trigger? Explain with an example.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
+
+## Indexing & Query Optimization (B-Tree, B+ Tree) (6)
+
+1. **How indexing improve query performance?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
+
+2. **Briefly describe primary key, foreign key and indexing in relational database and their relationship. Do you think database indexing always makes applications faster? Explain your answer.**
+
+**Table Name: STUDENT**
+| Stu_Id | Stu_Name | Stu_Age |
+|---|---|---|
+| 101 | Steve | 23 |
+| 102 | John | 24 |
+| 103 | Robert | 28 |
+| 104 | Steve | 29 |
+
+**Course_enrollment table:**
+| Course_Id | Stu_Id |
+|---|---|
+| C01 | 101 |
+| C02 | 102 |
+| C03 | 101 |
+| C05 | 102 |
+| C06 | 103 |
+| C07 | 102 |
+
+**(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 337]**
+
+3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
+
+4. **How does index tuning help in improving query performance?** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 747]**
+
+5. **Construct a B+ tree index structure on emp_id for the given relation employee as shown below with n=4.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 824]**
+
+6. **What is Indexing? Write down the usages of Indexing.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1015]**
+
+## Distributed & Parallel Databases (4)
 
 1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 613]**
 
@@ -735,7 +699,7 @@ SELECT count (*) FROM (
 
 4. **Which of the following distributed database system over centralized database system? (a) Software cost (b) Software complexity (c) Slow response (d) Modular growth** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
-## Data Warehousing, Data Mining & Business Intelligence
+## Data Warehousing, Data Mining & Business Intelligence (4)
 
 1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 517]**
 
@@ -744,3 +708,39 @@ SELECT count (*) FROM (
 3. **Software scenario question- Business Intelligence Model** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
 4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 766]**
+
+## Database Design & Data Types (3)
+
+1. An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
+
+2. **(c) Describe the difference between CHAR and VARCHAR data type.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 795]**
+
+3. **What is the domain in a relational database? Explain with an example. Show how you would use Alter table SQL command to add a domain on a database table.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 916]**
+
+## SQL Joins & Operations (3)
+
+1. **What are the different types of join in SQL?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 580]**
+
+2. **Left joning and inner joining of a table.** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 594]**
+
+3. **Which join is used for including not matching all records with output?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+## NoSQL, NewSQL & Modern Databases (2)
+
+1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1332]**
+
+2. **Write difference between relational database and NoSQL database.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909]**
+
+## Database Connectivity (JDBC) (2)
+
+1. What is JDBC? Explain the steps required to connect a Java application to a MySQL database. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+
+2. **(b) Explain embedded SQL with an appropriate example.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
+
+## Relational Keys (Candidate, Super, Primary, Foreign Key) (1)
+
+1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 399]**
+
+## Indexing in DBMS (1)
+
+1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**

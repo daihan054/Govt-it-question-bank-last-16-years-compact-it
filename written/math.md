@@ -3,27 +3,27 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Arithmetic & Algebra Problems](#arithmetic--algebra-problems) | 16 |
-| 2 | [Set Theory & Discrete Math](#set-theory--discrete-math) | 13 |
-| 3 | [Percentage, Profit & Loss, Simple & Compound Interest](#percentage-profit--loss-simple--compound-interest) | 12 |
-| 4 | [Basic Arithmetic & Average](#basic-arithmetic--average) | 11 |
-| 5 | [Geometry & Coordinate Geometry](#geometry--coordinate-geometry) | 10 |
-| 6 | [Permutations & Combinations](#permutations--combinations) | 5 |
-| 7 | [Ratio, Proportion & Mixtures](#ratio-proportion--mixtures) | 4 |
-| 8 | [Speed, Time, Distance & Boats](#speed-time-distance--boats) | 4 |
-| 9 | [Probability & Statistics](#probability--statistics) | 3 |
-| 10 | [Calculus & Integration](#calculus--integration) | 2 |
-| 11 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning) | 2 |
-| 12 | [Comprehensive Math Problems](#comprehensive-math-problems) | 2 |
-| 13 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations) | 2 |
-| 14 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence) | 1 |
-| 15 | [Numerical Methods & Root Finding](#numerical-methods--root-finding) | 1 |
+| 1 | [Arithmetic & Algebra Problems](#arithmetic--algebra-problems-16) | 16 |
+| 2 | [Set Theory & Discrete Math](#set-theory--discrete-math-13) | 13 |
+| 3 | [Percentage, Profit & Loss, Simple & Compound Interest](#percentage-profit--loss-simple--compound-interest-12) | 12 |
+| 4 | [Basic Arithmetic & Average](#basic-arithmetic--average-11) | 11 |
+| 5 | [Geometry & Coordinate Geometry](#geometry--coordinate-geometry-10) | 10 |
+| 6 | [Permutations & Combinations](#permutations--combinations-5) | 5 |
+| 7 | [Ratio, Proportion & Mixtures](#ratio-proportion--mixtures-4) | 4 |
+| 8 | [Speed, Time, Distance & Boats](#speed-time-distance--boats-4) | 4 |
+| 9 | [Probability & Statistics](#probability--statistics-3) | 3 |
+| 10 | [Calculus & Integration](#calculus--integration-2) | 2 |
+| 11 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-2) | 2 |
+| 12 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
+| 13 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations-2) | 2 |
+| 14 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-1) | 1 |
+| 15 | [Numerical Methods & Root Finding](#numerical-methods--root-finding-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Arithmetic & Algebra Problems
+## Arithmetic & Algebra Problems (16)
 
 1. **তিন ক্রমের ম্যাজিক সংখ্যা কোনটি?** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1368]**
 
@@ -57,19 +57,7 @@
 
 16. **M^0 + \sqrt[3]{8} + \text{Logs}_5{125} + (0100)^2 + 5** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
-## Permutations & Combinations
-
-1. **CARBON word permutations that vowel must occupy odd positions?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
-
-2. **PROBLEMS শব্দটির P ও S কে প্রথমে এবং শেষে যথাক্রমে রেখে কতগুলো শব্দ গঠন করা যায়?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
-
-3. **In how many ways you can distribute 3 identical green shirt and 3 identical red shirt among 6 individual persons.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
-
-4. **Suppose we have 6 hospital and 4 police station. Need to select a 4 stations for interrupted power supply. How many ways can we select where at least one hospital on the uninterrupted power supply list?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 454]**
-
-5. **Reliability, Permutation related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1038]**
-
-## Set Theory & Discrete Math
+## Set Theory & Discrete Math (13)
 
 1. **Given, n(A) = 20, n(B) = 30 and n(A \cup B) = 40 what is n(A \cap B)?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
@@ -97,11 +85,7 @@
 
 13. **Propositional Logic and Predicate Logic উদাহরণসহ বুঝিয়ে লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1020]**
 
-## Propositional Logic & Logical Equivalence
-
-1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
-## Percentage, Profit & Loss, Simple & Compound Interest
+## Percentage, Profit & Loss, Simple & Compound Interest (12)
 
 1. **Math: Interest realated** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
 
@@ -127,79 +111,7 @@
 
 12. **মিঃ কবির সাহেব তার স্ত্রীকে ৫৮%, ছেলেকে ১২% সম্পত্তি দান করেন। দান করার পর তার কাছে অবশিষ্ট সম্পত্তির পরিমাণ ৭২,০০০ টাকা। তার মোট সম্পত্তির পরিমান কত?** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
-## Ratio, Proportion & Mixtures
-
-1. **Math : Gold purity** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
-
-2. **In the group of boys and girls, 4 of girls and 13 of boys are 12 years younger. If the members are girls from total members then what would be the strongest group between 12 years younger or more?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
-
-3. **In the three jars, milk and water are mixed with the ratio 1:2, 2:3, and 3:4. If all are mixed into one jar, what will be the ratio of milk and water?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
-
-4. **১২ জন লোক একটি কাজ ৯ দিনে করতে পারে। একই হারে কাজ করলে ১৮ জনে কাজটি কত দিনে করতে পারবে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
-
-## Speed, Time, Distance & Boats
-
-1. **A boat travels 15 km upstream and 22 km downstream in 5 hr. find out the speed of the stream.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
-
-2. **A boat covers 143 km upstream in 13 hours and the same distance downstream in 11 hours. What is the speed (in km/hr) of the boat in still (without stream) water?** **(BARC Programmer Exam: 04.08.2023) [compact it 597]**
-
-3. **An aeroplane started 30 minutes later than the scheduled time from a place 1500 km away from its destination. To reach the destination at the scheduled time the pilot had to increase the speed by 250 km/h. What was the speed of the aeroplane per hour during the journey?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
-
-4. **নৌকার গতিবেগ ঘন্টায় ১৫কিমি ও স্রোতের গতিবেগ ঘন্টায় ৫কিমি। ৩০কিমি গিয়ে ফিরে আসতে মোট সময় কত?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
-
-## Calculus & Integration
-
-1. **(a)** $\int_0^2 (2x^2+3x)dx$ **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
-
-2. **Solve the problem: \int e^x \cos x\,dx** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
-
-## Numerical Methods & Root Finding
-
-1. **Determine the root of the given equation x^2 - 3 = 0 for x \in [1, 2]** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 458]**
-
-## Probability & Statistics
-
-1. **(b)** In Bangladesh Bank, there are 6 Assistant Directors (ADs) and 4 Deputy Directors (DDs). Each AD brings a bag, while only half of the DDs bring a bag. If a bag is selected at random from all the bags, what is the probability that the chosen bag belongs to a Deputy Director (DD)? **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
-
-2. **If you throw two unbiased dice (each with six sides) together, what is the probability that the sum of two upward faces will be 7? Explain your answer.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 421]**
-
-3. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 433]**
-
-## Geometry & Coordinate Geometry
-
-1. **একটি বৃত্তের সমীকরণ দেয়া ছিল এবং একটি বিন্দুতে স্পর্শক এর সমীকরণ চাওয়া হয়েছিল** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
-
-2. **Math : Geometry** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
-
-3. **In the figure, ABCD is a rectangle. The area of quadrilateral EBFD is one-half the area of the rectangle ABCD. Which one of the following is the value of AD?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
-
-4. **Two sides of a plot 32m and 24m and the angle between them a perfect right angle. The other two sides measure 25m each and the other three angles are not right angles. What is the area of the plot?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
-
-5. **In the given figure, PQT is a right triangle then what is the area of square QRST.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
-
-6. **AD is the longest side of the triangle ABD shown in the figure, what is the length of longest side of \Delta\text{ABC}?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 447]**
-
-7. **একটি সমদ্বিবাহু সমকোণী ত্রিভুজের অতিভুজ ১২ সেমি হলে, ত্রিভুজটির ক্ষেত্রফল কত বর্গ সেমি?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
-
-8. **বৃত্তস্থ চতুর্ভুজের একটি কোণ ৮০° হলে তার বিপরীত কোণের মান কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
-
-9. **কোন বর্গক্ষেত্রের ক্ষেত্রফল ১০০ বর্গমিটার। এর বাহুর দৈর্ঘ্য ১০% বৃদ্ধি পেলে এর ক্ষেত্রফলের শতকরা বৃদ্ধির হার কত?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
-
-10. **৫. সমকোণী ত্রিভুজের সমকোণ সংলগ্ন দুই বাহুর মান ৩ এবং ৪ হলে। ইহার অতিভুজ এর মান কত?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
-
-## Analytical Ability & Logical Reasoning
-
-1. **A, B, C, D, E, F, G are sitting in a circular arrangement. Each of them wears caps of either red, blue, or green color. Conditions are (i) D sits two seats right of A. A is wearing green cap (ii) C sits two seats left of B. C is wearing blue cap (iii) E sits in between F and G. E is wearing red cap (iv) No two person sitting next to each other can have same color cap Find the cap color of everyone.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
-
-2. **Explain knight knave problem.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
-
-## Comprehensive Math Problems
-
-1. **৫ টা ম্যাথ সংক্রান্ত প্রশ্নাবলি।** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
-
-2. **Math: 3 \times 5 = 15 Marks** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
-
-## Basic Arithmetic & Average
+## Basic Arithmetic & Average (11)
 
 1. **What is the Average of 1 to 49 numbers?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
 
@@ -223,8 +135,96 @@
 
 11. **৫. দুইটি সংখ্যার গড় xy. একটি সংখ্যা x হলে অপর সংখ্যাটি কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-## Discrete Mathematics & Recurrence Relations
+## Geometry & Coordinate Geometry (10)
+
+1. **একটি বৃত্তের সমীকরণ দেয়া ছিল এবং একটি বিন্দুতে স্পর্শক এর সমীকরণ চাওয়া হয়েছিল** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+2. **Math : Geometry** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+
+3. **In the figure, ABCD is a rectangle. The area of quadrilateral EBFD is one-half the area of the rectangle ABCD. Which one of the following is the value of AD?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+4. **Two sides of a plot 32m and 24m and the angle between them a perfect right angle. The other two sides measure 25m each and the other three angles are not right angles. What is the area of the plot?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
+
+5. **In the given figure, PQT is a right triangle then what is the area of square QRST.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 439]**
+
+6. **AD is the longest side of the triangle ABD shown in the figure, what is the length of longest side of \Delta\text{ABC}?** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 447]**
+
+7. **একটি সমদ্বিবাহু সমকোণী ত্রিভুজের অতিভুজ ১২ সেমি হলে, ত্রিভুজটির ক্ষেত্রফল কত বর্গ সেমি?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+8. **বৃত্তস্থ চতুর্ভুজের একটি কোণ ৮০° হলে তার বিপরীত কোণের মান কত?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+9. **কোন বর্গক্ষেত্রের ক্ষেত্রফল ১০০ বর্গমিটার। এর বাহুর দৈর্ঘ্য ১০% বৃদ্ধি পেলে এর ক্ষেত্রফলের শতকরা বৃদ্ধির হার কত?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+10. **৫. সমকোণী ত্রিভুজের সমকোণ সংলগ্ন দুই বাহুর মান ৩ এবং ৪ হলে। ইহার অতিভুজ এর মান কত?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+## Permutations & Combinations (5)
+
+1. **CARBON word permutations that vowel must occupy odd positions?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
+
+2. **PROBLEMS শব্দটির P ও S কে প্রথমে এবং শেষে যথাক্রমে রেখে কতগুলো শব্দ গঠন করা যায়?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+3. **In how many ways you can distribute 3 identical green shirt and 3 identical red shirt among 6 individual persons.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+4. **Suppose we have 6 hospital and 4 police station. Need to select a 4 stations for interrupted power supply. How many ways can we select where at least one hospital on the uninterrupted power supply list?** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 454]**
+
+5. **Reliability, Permutation related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1038]**
+
+## Ratio, Proportion & Mixtures (4)
+
+1. **Math : Gold purity** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+
+2. **In the group of boys and girls, 4 of girls and 13 of boys are 12 years younger. If the members are girls from total members then what would be the strongest group between 12 years younger or more?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+3. **In the three jars, milk and water are mixed with the ratio 1:2, 2:3, and 3:4. If all are mixed into one jar, what will be the ratio of milk and water?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+4. **১২ জন লোক একটি কাজ ৯ দিনে করতে পারে। একই হারে কাজ করলে ১৮ জনে কাজটি কত দিনে করতে পারবে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+## Speed, Time, Distance & Boats (4)
+
+1. **A boat travels 15 km upstream and 22 km downstream in 5 hr. find out the speed of the stream.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 312]**
+
+2. **A boat covers 143 km upstream in 13 hours and the same distance downstream in 11 hours. What is the speed (in km/hr) of the boat in still (without stream) water?** **(BARC Programmer Exam: 04.08.2023) [compact it 597]**
+
+3. **An aeroplane started 30 minutes later than the scheduled time from a place 1500 km away from its destination. To reach the destination at the scheduled time the pilot had to increase the speed by 250 km/h. What was the speed of the aeroplane per hour during the journey?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 559]**
+
+4. **নৌকার গতিবেগ ঘন্টায় ১৫কিমি ও স্রোতের গতিবেগ ঘন্টায় ৫কিমি। ৩০কিমি গিয়ে ফিরে আসতে মোট সময় কত?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+
+## Probability & Statistics (3)
+
+1. **(b)** In Bangladesh Bank, there are 6 Assistant Directors (ADs) and 4 Deputy Directors (DDs). Each AD brings a bag, while only half of the DDs bring a bag. If a bag is selected at random from all the bags, what is the probability that the chosen bag belongs to a Deputy Director (DD)? **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
+
+2. **If you throw two unbiased dice (each with six sides) together, what is the probability that the sum of two upward faces will be 7? Explain your answer.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 421]**
+
+3. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 433]**
+
+## Calculus & Integration (2)
+
+1. **(a)** $\int_0^2 (2x^2+3x)dx$ **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
+
+2. **Solve the problem: \int e^x \cos x\,dx** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
+
+## Analytical Ability & Logical Reasoning (2)
+
+1. **A, B, C, D, E, F, G are sitting in a circular arrangement. Each of them wears caps of either red, blue, or green color. Conditions are (i) D sits two seats right of A. A is wearing green cap (ii) C sits two seats left of B. C is wearing blue cap (iii) E sits in between F and G. E is wearing red cap (iv) No two person sitting next to each other can have same color cap Find the cap color of everyone.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+2. **Explain knight knave problem.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
+
+## Comprehensive Math Problems (2)
+
+1. **৫ টা ম্যাথ সংক্রান্ত প্রশ্নাবলি।** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 405]**
+
+2. **Math: 3 \times 5 = 15 Marks** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
+
+## Discrete Mathematics & Recurrence Relations (2)
 
 1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 592]**
 
 2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 806]**
+
+## Propositional Logic & Logical Equivalence (1)
+
+1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+## Numerical Methods & Root Finding (1)
+
+1. **Determine the root of the given equation x^2 - 3 = 0 for x \in [1, 2]** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 458]**

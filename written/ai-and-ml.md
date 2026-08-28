@@ -3,23 +3,23 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised) | 8 |
-| 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems) | 8 |
-| 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn) | 7 |
-| 4 | [Model Evaluation & Datasets](#model-evaluation--datasets) | 5 |
-| 5 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees) | 4 |
-| 6 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai) | 4 |
-| 7 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning) | 3 |
-| 8 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search) | 1 |
-| 9 | [Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization) | 1 |
-| 10 | [Association Rule Learning (Market Basket Analysis)](#association-rule-learning-market-basket-analysis) | 1 |
-| 11 | [Clustering & Unsupervised Learning (K-Means, Hierarchical)](#clustering--unsupervised-learning-k-means-hierarchical) | 1 |
+| 1 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-8) | 8 |
+| 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
+| 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-7) | 7 |
+| 4 | [Model Evaluation & Datasets](#model-evaluation--datasets-5) | 5 |
+| 5 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees-4) | 4 |
+| 6 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai-4) | 4 |
+| 7 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3) | 3 |
+| 8 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search-1) | 1 |
+| 9 | [Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization-1) | 1 |
+| 10 | [Association Rule Learning (Market Basket Analysis)](#association-rule-learning-market-basket-analysis-1) | 1 |
+| 11 | [Clustering & Unsupervised Learning (K-Means, Hierarchical)](#clustering--unsupervised-learning-k-means-hierarchical-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Machine Learning Paradigms (Supervised vs Unsupervised)
+## Machine Learning Paradigms (Supervised vs Unsupervised) (8)
 
 1. **What is the difference between Supervised and Unsupervised learning?** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
@@ -40,80 +40,7 @@
 
 8. **Key difference between supervised Learning and Unsupervised learning.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
 
-## Search Algorithms (Informed vs Uninformed Search)
-
-1. **Write down the difference between informed and uninformed search algorithm.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
-
-## Model Evaluation & Datasets
-
-1. **Write down the Role of Validation set in ML.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
-
-2. **(b) Given following values:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
- * **True Positive \text{(TP)} = 560**
- * **True Negative \text{(TN)} = 330**
- * **False Positive \text{(FP)} = 60**
- * **False Negative \text{(FN)} = 50**
-**Calculate the following: (i) Accuracy (ii) Precision (iii) Recall (iv) F1 Score**
-
-3. **b) How can we validate and check reliability of a machine learning model?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
-
-4. **You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss function for this problem.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 746]**
-
-5. **Write down the difference between test set and validation set.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
-
-## Overfitting, Underfitting & Model Generalization
-
-1. **In machine learning. What will happen, when a machine is highly trained up a slight trained up?** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 395]**
-
-## Supervised Learning (Decision Trees)
-
-1. **Decisiontree model in Machine Learning.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
-
-2. **What is Machine Learning? Mention some real-life applications. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]**
-
-3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 339]**
-
-4. **(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 605]**
-
-## Deep Learning & Neural Networks (ANN, CNN, RNN)
-
-1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
-
-2. **What does the axon of neural network do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
-
-3. **Write difference between machine learning and deep learning.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
-
-4. **What is Deep learning?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
-
-5. **What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 856]**
-
-6. **Write LSTM gates name in AI.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 858]**
-
-7. **Draw the single layer of ANN.** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 880]**
-
-## Association Rule Learning (Market Basket Analysis)
-
-1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**
-
-## Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)
-
-1. **Explain the concepts of Reinforcement Learning (RL), Deep Learning (DL), and Federated Learning (FL) in the context of Machine Learning. Briefly describe how each approach differs in its learning mechanism, data usage, and real-world applications.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1427]**
-
-2. **Explain reinforcement learning in the field of Machine Learning?** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 593]**
-
-3. **Weak and strong learner ensemble learning in Machine learning.** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 686]**
-
-## Generative AI & Explainable AI (XAI)
-
-1. **Imagine a government agency is developing an AI-based citizen service chatbot that can automatically generate responses, summarize documents, and provide policy information to citizens. Explain how Generative AI can be used to power such a system, and how Explainable AI (XAI) techniques can ensure that its responses are transparent, reliable, and accountable.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1428]**
-
-2. **b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1346]**
-
-3. **LLM stands for __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
-
-4. **What is ChatGPT? Write down the Pros and cons of ChatGPT.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
-
-## Artificial Intelligence & Expert Systems
+## Artificial Intelligence & Expert Systems (8)
 
 1. **What is Artificial Intelligence?** **(Mongla Port Authority Assistant Programmer Exam: 2023) [compact it 573]**
 
@@ -131,6 +58,79 @@
 
 8. **Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?** **(Sadharan Bima Corporation Programmer/ AP/AME Written Exam: 2020 (DU)) [compact it 1002]**
 
-## Clustering & Unsupervised Learning (K-Means, Hierarchical)
+## Deep Learning & Neural Networks (ANN, CNN, RNN) (7)
+
+1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
+
+2. **What does the axon of neural network do?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
+
+3. **Write difference between machine learning and deep learning.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
+
+4. **What is Deep learning?** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+5. **What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 856]**
+
+6. **Write LSTM gates name in AI.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 858]**
+
+7. **Draw the single layer of ANN.** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 880]**
+
+## Model Evaluation & Datasets (5)
+
+1. **Write down the Role of Validation set in ML.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
+
+2. **(b) Given following values:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
+ * **True Positive \text{(TP)} = 560**
+ * **True Negative \text{(TN)} = 330**
+ * **False Positive \text{(FP)} = 60**
+ * **False Negative \text{(FN)} = 50**
+**Calculate the following: (i) Accuracy (ii) Precision (iii) Recall (iv) F1 Score**
+
+3. **b) How can we validate and check reliability of a machine learning model?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
+
+4. **You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss function for this problem.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 746]**
+
+5. **Write down the difference between test set and validation set.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1033]**
+
+## Supervised Learning (Decision Trees) (4)
+
+1. **Decisiontree model in Machine Learning.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
+
+2. **What is Machine Learning? Mention some real-life applications. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]**
+
+3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 339]**
+
+4. **(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 605]**
+
+## Generative AI & Explainable AI (XAI) (4)
+
+1. **Imagine a government agency is developing an AI-based citizen service chatbot that can automatically generate responses, summarize documents, and provide policy information to citizens. Explain how Generative AI can be used to power such a system, and how Explainable AI (XAI) techniques can ensure that its responses are transparent, reliable, and accountable.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1428]**
+
+2. **b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1346]**
+
+3. **LLM stands for __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+4. **What is ChatGPT? Write down the Pros and cons of ChatGPT.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
+## Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)
+
+1. **Explain the concepts of Reinforcement Learning (RL), Deep Learning (DL), and Federated Learning (FL) in the context of Machine Learning. Briefly describe how each approach differs in its learning mechanism, data usage, and real-world applications.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1427]**
+
+2. **Explain reinforcement learning in the field of Machine Learning?** **(BTCL Assistant Manager (Technical) Exam: 2023 (BUET)) [compact it 593]**
+
+3. **Weak and strong learner ensemble learning in Machine learning.** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 686]**
+
+## Search Algorithms (Informed vs Uninformed Search) (1)
+
+1. **Write down the difference between informed and uninformed search algorithm.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
+
+## Overfitting, Underfitting & Model Generalization (1)
+
+1. **In machine learning. What will happen, when a machine is highly trained up a slight trained up?** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 395]**
+
+## Association Rule Learning (Market Basket Analysis) (1)
+
+1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1364]**
+
+## Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
 1. **Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-linkage hierarchical clustering technique.** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 473]**

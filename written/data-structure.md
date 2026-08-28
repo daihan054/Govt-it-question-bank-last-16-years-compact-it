@@ -3,118 +3,20 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Tree](#tree) | 26 |
-| 2 | [Stack](#stack) | 20 |
-| 3 | [Linked List](#linked-list) | 14 |
-| 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap) | 7 |
-| 5 | [Queue](#queue) | 6 |
-| 6 | [Binary Search Tree (BST)](#binary-search-tree-bst) | 6 |
-| 7 | [Hashing & Hash Tables](#hashing--hash-tables) | 6 |
-| 8 | [Data Structure Fundamentals](#data-structure-fundamentals) | 2 |
+| 1 | [Tree](#tree-26) | 26 |
+| 2 | [Stack](#stack-20) | 20 |
+| 3 | [Linked List](#linked-list-14) | 14 |
+| 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-7) | 7 |
+| 5 | [Queue](#queue-6) | 6 |
+| 6 | [Binary Search Tree (BST)](#binary-search-tree-bst-6) | 6 |
+| 7 | [Hashing & Hash Tables](#hashing--hash-tables-6) | 6 |
+| 8 | [Data Structure Fundamentals](#data-structure-fundamentals-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## Data Structure Fundamentals
-
-1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 621]**
-
-2. **Linear Data Structure এবং Non Linear Data Structure বলতে কি বুঝায়?** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1040]**
-
-## Stack
-
-1. **Explain the push and pop operations of the stack.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1448]**
-
-2. **Implementation of Stack using two Queues?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1326]**
-
-3. **Correct of correct parentheses if it is written proper show matched if it does not show unmatched.** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
-
-4. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 297]**
-
-5. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 420]**
-
-6. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 410]**
-
-7. **Write down the difference between Stack and Queue.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
-
-8. **Prefix Conversion A+ B * C+D expression?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
-
-9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 463]**
-
-10. **Difference between Stack and Queue.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
-
-11. **Expalin: Infix, Prefix, Postfix notation.** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
-
-12. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 706]**
-
-13. **Difference between LIFO and FIFO in data structure.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 740]**
-
-14. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
-
-15. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 774]**
-
-16. **Write a C/C++ program to check Balanced parentheses in an Expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 830-831]**
-
-17. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 845-846]**
-```text
-Input: [0]{[00]0}
-Output: Balanced
-Input: [())
-Output: Not Balanced
-```
-
-18. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
-
-19. **Write a Program to check for balanced parenthesis in an expression.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1011]**
-
-20. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038]**
-
-## Queue
-
-1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
-
-2. **FIFO is used which data structure?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
-
-3. **What is a Circular Queue? Describe its implementation.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 743]**
-
-4. **Circular Queue and Priority Queue কীভাবে কাজ করে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912-913]**
-
-5. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983]**
-
-6. **6.6 Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
-
-## Linked List
-
-1. **Explain with proper example of singly linked list.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
-
-2. **Explain the difference between a singly linked list and a doubly linked list data structure.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 426]**
-
-3. **(ক) Linked list কী? উহার প্রকারভেদ চিত্রসহ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
-
-4. **(a) Compare array and linked list with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
-
-5. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
-
-6. **(খ) উদাহরণসহ Array এবং Linked List এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
-
-7. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 636]**
-
-8. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 692]**
-
-9. **(a) Computer and contrast between array and linked list.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 792]**
-
-10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 851-852]**
-
-11. **(a) What are the differences between linked list and array data structure?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
-
-12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
-
-13. **Linked list, doubly linked list and circular linked list explains with diagram.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1004-1005]**
-
-14. **In a doubly linked list write the function of Traversing from the tail.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
-
-## Tree
+## Tree (26)
 
 1. Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term. [SO IT 25-07-2026]
 
@@ -172,21 +74,85 @@ Output: Not Balanced
 
 26. **6.12 Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-## Binary Search Tree (BST)
+## Stack (20)
 
-1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
+1. **Explain the push and pop operations of the stack.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1448]**
 
-2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 590]**
+2. **Implementation of Stack using two Queues?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1326]**
 
-3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
+3. **Correct of correct parentheses if it is written proper show matched if it does not show unmatched.** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
 
-4. **Construct a Binary Search tree, then post order, ....... (Approximate)** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
+4. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 297]**
 
-5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 692]**
+5. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 420]**
 
-6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
+6. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 410]**
 
-## Priority Queues & Heaps (Min/Max Heap)
+7. **Write down the difference between Stack and Queue.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+
+8. **Prefix Conversion A+ B * C+D expression?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 545]**
+
+9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 463]**
+
+10. **Difference between Stack and Queue.** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 499]**
+
+11. **Expalin: Infix, Prefix, Postfix notation.** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
+
+12. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 706]**
+
+13. **Difference between LIFO and FIFO in data structure.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 740]**
+
+14. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
+
+15. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 774]**
+
+16. **Write a C/C++ program to check Balanced parentheses in an Expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 830-831]**
+
+17. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 845-846]**
+```text
+Input: [0]{[00]0}
+Output: Balanced
+Input: [())
+Output: Not Balanced
+```
+
+18. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+
+19. **Write a Program to check for balanced parenthesis in an expression.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1011]**
+
+20. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038]**
+
+## Linked List (14)
+
+1. **Explain with proper example of singly linked list.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
+
+2. **Explain the difference between a singly linked list and a doubly linked list data structure.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 426]**
+
+3. **(ক) Linked list কী? উহার প্রকারভেদ চিত্রসহ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
+
+4. **(a) Compare array and linked list with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
+
+5. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
+
+6. **(খ) উদাহরণসহ Array এবং Linked List এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
+
+7. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 636]**
+
+8. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 692]**
+
+9. **(a) Computer and contrast between array and linked list.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 792]**
+
+10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 851-852]**
+
+11. **(a) What are the differences between linked list and array data structure?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]**
+
+12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
+
+13. **Linked list, doubly linked list and circular linked list explains with diagram.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1004-1005]**
+
+14. **In a doubly linked list write the function of Traversing from the tail.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
+
+## Priority Queues & Heaps (Min/Max Heap) (7)
 
 1. **Max heap:** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
 
@@ -202,7 +168,35 @@ Output: Not Balanced
 
 7. **Heapify the MAX heap tree.** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1043, 1045]**
 
-## Hashing & Hash Tables
+## Queue (6)
+
+1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
+
+2. **FIFO is used which data structure?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
+3. **What is a Circular Queue? Describe its implementation.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 743]**
+
+4. **Circular Queue and Priority Queue কীভাবে কাজ করে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912-913]**
+
+5. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983]**
+
+6. **6.6 Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+## Binary Search Tree (BST) (6)
+
+1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1457]**
+
+2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 590]**
+
+3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
+
+4. **Construct a Binary Search tree, then post order, ....... (Approximate)** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 649]**
+
+5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 692]**
+
+6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
+
+## Hashing & Hash Tables (6)
 
 1. **(b) What is hash table? What are the advantages of using hash table?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
 
@@ -215,3 +209,9 @@ Output: Not Balanced
 5. **You are giving to store a set of objects and you want to use a data structure. Where the expected running time to search an item is O(1). Which data structure is suitable to serve your purpose?** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 815]**
 
 6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
+
+## Data Structure Fundamentals (2)
+
+1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 621]**
+
+2. **Linear Data Structure এবং Non Linear Data Structure বলতে কি বুঝায়?** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1040]**

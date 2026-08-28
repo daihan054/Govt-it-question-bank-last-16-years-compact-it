@@ -3,54 +3,22 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms) | 50 |
-| 2 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery) | 21 |
-| 3 | [ICT in Society & Governance](#ict-in-society--governance) | 20 |
-| 4 | [Software Types & Classification](#software-types--classification) | 13 |
-| 5 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies) | 7 |
-| 6 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management) | 7 |
-| 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems) | 5 |
-| 8 | [Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies) | 3 |
-| 9 | [Digital Banking & Financial Inclusion](#digital-banking--financial-inclusion) | 2 |
-| 10 | [User Interfaces (CLI vs GUI)](#user-interfaces-cli-vs-gui) | 1 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-50) | 50 |
+| 2 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-21) | 21 |
+| 3 | [ICT in Society & Governance](#ict-in-society--governance-20) | 20 |
+| 4 | [Software Types & Classification](#software-types--classification-13) | 13 |
+| 5 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-7) | 7 |
+| 6 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-7) | 7 |
+| 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
+| 8 | [Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies-3) | 3 |
+| 9 | [Digital Banking & Financial Inclusion](#digital-banking--financial-inclusion-2) | 2 |
+| 10 | [User Interfaces (CLI vs GUI)](#user-interfaces-cli-vs-gui-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Software Types & Classification
-
-1. Differentiate between system software and application software. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
-
-2. **What is platform independent software discuss with example?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 514]**
-
-3. **What is the difference between System Software and Application Software?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
-
-4. **Difference between High level languages and low level language with some example?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 739]**
-
-5. **Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
-
-6. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
-
-7. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
-
-8. **LOGO কি ধরনের প্রোগ্রাম?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
-
-9. **MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 867]**
-
-10. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** **(41th BCS Written Exam: 2021) [compact it 881]**
-
-11. **১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
-
-12. **Graphics Design এর চারটি Software এর নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
-
-13. **Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadsheet এর একেকটা ঘরকে _____ বলে? (iv) Storage device এর মূল folder এর নাম _____? (v) Database এর data file গুলোর তালিকাকে _____ বলা হয়?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
-
-## User Interfaces (CLI vs GUI)
-
-1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
-
-## Computer Fundamentals & Acronyms
+## Computer Fundamentals & Acronyms (50)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
@@ -158,7 +126,7 @@
 
 50. **Write down the full meaning: (i) DNS (ii) TCP (iii) FTP (iv) ARP (v) UDP** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1045-1046]**
 
-## Hardware Components & BIOS (CMOS Battery)
+## Hardware Components & BIOS (CMOS Battery) (21)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
 
@@ -202,7 +170,7 @@
 
 21. **How to solve laptop overheating problem?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1034]**
 
-## ICT in Society & Governance
+## ICT in Society & Governance (20)
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
 
@@ -244,21 +212,35 @@
 
 20. **d) State the E-Government initiatives taken in health and education sectors of Bangladesh?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1031]**
 
-## Digital Banking & Financial Inclusion
+## Software Types & Classification (13)
 
-1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
+1. Differentiate between system software and application software. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
-2. **(a) Define Electronic Payment System (EPS) with necessary diagram. Name 5 types of EPS.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
+2. **What is platform independent software discuss with example?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 514]**
 
-## Quantum Computing & Emerging Technologies
+3. **What is the difference between System Software and Application Software?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]**
 
-1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+4. **Difference between High level languages and low level language with some example?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 739]**
 
-2. **What is the name of molecular scale computer?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+5. **Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
-3. **Virtual Reality বলতে কি বুঝায় ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+6. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
-## Blockchain & Emerging Technologies
+7. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+8. **LOGO কি ধরনের প্রোগ্রাম?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+
+9. **MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 867]**
+
+10. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** **(41th BCS Written Exam: 2021) [compact it 881]**
+
+11. **১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+12. **Graphics Design এর চারটি Software এর নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+
+13. **Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadsheet এর একেকটা ঘরকে _____ বলে? (iv) Storage device এর মূল folder এর নাম _____? (v) Database এর data file গুলোর তালিকাকে _____ বলা হয়?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
+
+## Blockchain & Emerging Technologies (7)
 
 1. **What is Blockchain technology? How it works?** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 324]**
 
@@ -274,19 +256,7 @@
 
 7. **Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 696]**
 
-## Server Hardware & Enterprise Systems
-
-1. **What should be checked before buying servers?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 318]**
-
-2. **Scenario based descriptive question for server related problem ( How do you handle those problem for your company )** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
-
-3. **What are the key hardware components that make up a typical server, and how do they contribute to its overall performance and functionality?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 537]**
-
-4. **Discuss server maintenance best practices, including routine tasks like cleaning, monitoring, and applying security patches. How do these practices contribute to server longevity and performance?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 540]**
-
-5. **Difference between SAS and SATA. Which one is best server?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
-
-## Data Center Infrastructure & Power Management
+## Data Center Infrastructure & Power Management (7)
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 305]**
 
@@ -301,3 +271,33 @@
 6. **What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 750]**
 
 7. **What do you mean by dynamic capacity provisioning? Why it is essential for data center?** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 751]**
+
+## Server Hardware & Enterprise Systems (5)
+
+1. **What should be checked before buying servers?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 318]**
+
+2. **Scenario based descriptive question for server related problem ( How do you handle those problem for your company )** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+
+3. **What are the key hardware components that make up a typical server, and how do they contribute to its overall performance and functionality?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 537]**
+
+4. **Discuss server maintenance best practices, including routine tasks like cleaning, monitoring, and applying security patches. How do these practices contribute to server longevity and performance?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 540]**
+
+5. **Difference between SAS and SATA. Which one is best server?** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 565]**
+
+## Quantum Computing & Emerging Technologies (3)
+
+1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+2. **What is the name of molecular scale computer?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+3. **Virtual Reality বলতে কি বুঝায় ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+
+## Digital Banking & Financial Inclusion (2)
+
+1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 554]**
+
+2. **(a) Define Electronic Payment System (EPS) with necessary diagram. Name 5 types of EPS.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
+
+## User Interfaces (CLI vs GUI) (1)
+
+1. **What is CLI?** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**

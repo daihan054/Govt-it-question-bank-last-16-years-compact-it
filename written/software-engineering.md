@@ -3,25 +3,105 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models) | 39 |
-| 2 | [Software Testing & Evaluation](#software-testing--evaluation) | 37 |
-| 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc) | 11 |
-| 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence) | 9 |
-| 5 | [Software Requirements Engineering](#software-requirements-engineering) | 8 |
-| 6 | [Software Project Management & Organization](#software-project-management--organization) | 7 |
-| 7 | [Software Design Principles (Coupling & Cohesion)](#software-design-principles-coupling--cohesion) | 5 |
-| 8 | [Software Cost Estimation & Build vs Buy Decisions](#software-cost-estimation--build-vs-buy-decisions) | 4 |
-| 9 | [IT Governance, Audit & Risk Management](#it-governance-audit--risk-management) | 3 |
-| 10 | [Data Flow Diagrams (DFD)](#data-flow-diagrams-dfd) | 2 |
-| 11 | [Code Smells & Refactoring](#code-smells--refactoring) | 2 |
-| 12 | [Open Source Software & Licensing](#open-source-software--licensing) | 2 |
-| 13 | [CI/CD & DevOps Methodologies](#cicd--devops-methodologies) | 1 |
+| 1 | [SDLC Phases & Models](#sdlc-phases--models-39) | 39 |
+| 2 | [Software Testing & Evaluation](#software-testing--evaluation-37) | 37 |
+| 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-11) | 11 |
+| 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-9) | 9 |
+| 5 | [Software Requirements Engineering](#software-requirements-engineering-8) | 8 |
+| 6 | [Software Project Management & Organization](#software-project-management--organization-7) | 7 |
+| 7 | [Software Design Principles (Coupling & Cohesion)](#software-design-principles-coupling--cohesion-5) | 5 |
+| 8 | [Software Cost Estimation & Build vs Buy Decisions](#software-cost-estimation--build-vs-buy-decisions-4) | 4 |
+| 9 | [IT Governance, Audit & Risk Management](#it-governance-audit--risk-management-3) | 3 |
+| 10 | [Data Flow Diagrams (DFD)](#data-flow-diagrams-dfd-2) | 2 |
+| 11 | [Code Smells & Refactoring](#code-smells--refactoring-2) | 2 |
+| 12 | [Open Source Software & Licensing](#open-source-software--licensing-2) | 2 |
+| 13 | [CI/CD & DevOps Methodologies](#cicd--devops-methodologies-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Software Testing & Evaluation
+## SDLC Phases & Models (39)
+
+1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
+
+2. What are the main phases of the Software Development Life Cycle (SDLC)? Explain each phase briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+3. Critically analyze the limitations of the Waterfall model and explain how Agile methodologies address those limitations. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
+
+4. What is SDLC, Steps of SDLC, in which Step user acceptance assured? (BEPRC Assistant Programmer Exam: 08.08.2026)
+
+5. **What is SDLC? Describe the steps of SDLC.** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**
+
+6. **Why agile model is better than waterfall model?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+7. **a) What are the advantages and disadvantages of the Agile Model compared to the Waterfall Model in software development?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
+
+8. **Write down the differences between Agile model and Waterfall model in Software development. What is white box testing?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+
+9. **You are asked to lead a team of software engineers to develop an application software system for your company and deploy it as fast as possible. You need to gather user requirements, design, develop, test and then deploy the system. Between Waterfall Approach and Incremental Approach, which software development approach will you take for your software project? Explain your answer.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
+
+10. **Write down the SDLC steps.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
+
+11. **(খ) Spiral Model চিত্রসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
+
+12. **Which SDLC do you prefer between Agile and waterfall model explain with example.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 522]**
+
+13. **Define SDLC? Write the steps of SDLC?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
+
+14. **What is SDLC? Briefly explain its phase.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 500]**
+
+15. **Write down the step of SDLC?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
+
+16. **What is SDLC? Write the name of 7 phase of SDLC?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+
+17. **(a) What do you understand by Agile? Mention its four values.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
+
+18. **(a) Write down the steps of Waterfall model.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
+
+19. **(খ) Software Engineering এর ক্ষেত্রে Waterfall Model বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
+
+20. **(খ) Software maintenance এর সাথে কী কী বিষয় জড়িত, তা আলোচনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
+
+21. **(ক) Waterfall model বিস্তারিত বর্ণনা করুন। এই model এর সুবিধা এবং সীমাবদ্ধতাগুলো উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 620]**
+
+22. **How does agile methodology used in software development differ from that of waterfall methodology? Explain in brief.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
+
+23. **Software engineering এ ফিজিবিলিটি স্ট্যাড্যির ৭টি ধাপ বর্ণনা কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+
+24. **Explain software development life cycle (SDLC).** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
+
+25. **(b) What is SDLC? Define the activities of the design phase in SDLC.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
+
+26. **(ক) Software development এর Agile পদ্ধতির মূলনীতিগুলো লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
+
+27. **(খ) Software development এর Waterfall model এর অসুবিধাগুলো কী কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
+
+28. **(খ) System/Model Prototype বলতে কী বুঝায়? Product ও Process এর মধ্যে সম্পর্ক কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
+
+29. **What is full meaning of SDLC?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+30. **Difference between Waterfall Model and Spiral Model.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 741]**
+
+31. **What is the principles of agile method?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 757]**
+
+32. **From the diagram write down the process of prototype development.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 758]**
+
+33. **From the diagram write down the software evolution.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
+
+34. **(খ) SDLC diagram সহ বর্ণনা করুন। SDLC এর মেজর phases গুলি কী?** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 779]**
+
+35. **(ii) Software development এর Agile Method সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
+
+36. **(a) What is Agile? Mentionits four values.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
+
+37. **What is SDLC? List the stages involed in the SDLC process. Which stages ensures the user acceptance of the system?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
+
+38. **(ii) Software development এর ধাপসমূহ সংক্ষেপে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 960]**
+
+39. **What is Agile Methodology? Difference between Agile Model and Waterfall Model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1003-1004]**
+
+## Software Testing & Evaluation (37)
 
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]
 
@@ -107,135 +187,7 @@
 
 37. **6.5 Explain the difference between Unit Testing and Integration Testing.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-## Data Flow Diagrams (DFD)
-
-1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
-
-2. **১ জন ব্যক্তি ১টি Bank Account খোলার জন্য একটি form fillup করেন। এরপর তাতে Manager স্বাক্ষর করেন। এবার উক্ত Account-এ ঐ ব্যক্তি কিছু টাকা Deposit করলে Account সচল হয়। এই Process টি DFD এর মাধ্যমে প্রকাশ করুন।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 913]**
-
-## UML Diagrams (Class, Use Case, Sequence)
-
-1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
-
-2. Draw a Use Case Diagram for an Online Banking System with two actors: Customer and Bank Admin. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
-
-3. **Draw a class diagram for an E-commerce website where customer can view different products, can pay either by card or cash.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 401]**
-
-4. **Consider the following buy a product description. Customer browses catalog, selects items to buy and then goes to check out. Customer fills in shipping information (address, receive time). System presents full pricing information and customer fills in credit card information. System authorizes purchase, confirms sale and sends confirming email to customer. Draw a use case diagram for the above system.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 424]**
-
-5. **Library management class diagram:** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 380]**
-
-6. **Draw A class diagram. A token-ring based local area network (LAN) is a network consisting of nodes in which network packets are sent around. Every node has a unique name within the network, and refers to its next node. Different kinds of nodes exist: Workstations are originators of messages; servers and printers are network nodes that can receive messages. Packets contain an originator a destination and content, and are sent around on a network. A LAN is a circular configuration of nodes.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 438]**
-
-7. **(খ) একটি লাইব্রেরি ব্যবস্থাপনা সিস্টেম এর জন্যে Use Case Diagram অঙ্কন করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 621]**
-
-8. **How do you model the following situation with a UML class diagram the car fleet of a car rental contains multiple cars, one car belongs to exactly one car fleet.** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
-
-9. **(ক) Typical web-based login system এর জন্য sequence diagram আঁকুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 778]**
-
-## Software Requirements Engineering
-
-1. What is the difference between functional and non-functional requirements? What is requirement validation? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
-
-2. **Which of the following are not needed in software Requirement Specifications (SRS)?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1330]**
-   * (a) Functional Requirments
-   * (b) Non- Functional Requirments
-   * (c) Testing Requirments
-   * (d) Interface Requirments
-
-3. **(b) Which contents shoud be consider when you setup a new system?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
-
-4. **You have been given a responsibility to elicit requirements from a customer, who tells you that he is too busy to meet with you. What should you do?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
-
-5. **(ক) Software development এর ক্ষেত্রে কত প্রকার requirements পাওয়া যায়। উদাহরণসহ requirements সমূহ লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
-
-6. **(খ) Software Requirement Specification (SRS) বলতে কি বুঝায়? Software Development এর কোন ধাপে SRS তৈরি করা হয়?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
-
-7. **Assume that you are going to implement an ecommerce site of “XYZ” company. The CEO of the company is Mr. X. You have to identify the following: (i) Stakeholder (ii) Functional requirements (iii) Non-functional requirements (iv) Deployment requirements** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
-
-8. **Software Requirement Specification (SRS) বলতে কী বোঝেন? Software development -এর কোন স্তরে SRS প্রস্তুত করা হয়?** **(41th BCS Written Exam: 2021) [compact it 881]**
-
-## SDLC Phases & Models
-
-1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
-
-2. What are the main phases of the Software Development Life Cycle (SDLC)? Explain each phase briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
-
-3. Critically analyze the limitations of the Waterfall model and explain how Agile methodologies address those limitations. (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
-
-4. What is SDLC, Steps of SDLC, in which Step user acceptance assured? (BEPRC Assistant Programmer Exam: 08.08.2026)
-
-5. **What is SDLC? Describe the steps of SDLC.** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**
-
-6. **Why agile model is better than waterfall model?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
-
-7. **a) What are the advantages and disadvantages of the Agile Model compared to the Waterfall Model in software development?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
-
-8. **Write down the differences between Agile model and Waterfall model in Software development. What is white box testing?** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
-
-9. **You are asked to lead a team of software engineers to develop an application software system for your company and deploy it as fast as possible. You need to gather user requirements, design, develop, test and then deploy the system. Between Waterfall Approach and Incremental Approach, which software development approach will you take for your software project? Explain your answer.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
-
-10. **Write down the SDLC steps.** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
-
-11. **(খ) Spiral Model চিত্রসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
-
-12. **Which SDLC do you prefer between Agile and waterfall model explain with example.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 522]**
-
-13. **Define SDLC? Write the steps of SDLC?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
-
-14. **What is SDLC? Briefly explain its phase.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 500]**
-
-15. **Write down the step of SDLC?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
-
-16. **What is SDLC? Write the name of 7 phase of SDLC?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
-
-17. **(a) What do you understand by Agile? Mention its four values.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
-
-18. **(a) Write down the steps of Waterfall model.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
-
-19. **(খ) Software Engineering এর ক্ষেত্রে Waterfall Model বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
-
-20. **(খ) Software maintenance এর সাথে কী কী বিষয় জড়িত, তা আলোচনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
-
-21. **(ক) Waterfall model বিস্তারিত বর্ণনা করুন। এই model এর সুবিধা এবং সীমাবদ্ধতাগুলো উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 620]**
-
-22. **How does agile methodology used in software development differ from that of waterfall methodology? Explain in brief.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
-
-23. **Software engineering এ ফিজিবিলিটি স্ট্যাড্যির ৭টি ধাপ বর্ণনা কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
-
-24. **Explain software development life cycle (SDLC).** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
-
-25. **(b) What is SDLC? Define the activities of the design phase in SDLC.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
-
-26. **(ক) Software development এর Agile পদ্ধতির মূলনীতিগুলো লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
-
-27. **(খ) Software development এর Waterfall model এর অসুবিধাগুলো কী কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
-
-28. **(খ) System/Model Prototype বলতে কী বুঝায়? Product ও Process এর মধ্যে সম্পর্ক কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
-
-29. **What is full meaning of SDLC?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
-
-30. **Difference between Waterfall Model and Spiral Model.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 741]**
-
-31. **What is the principles of agile method?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 757]**
-
-32. **From the diagram write down the process of prototype development.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 758]**
-
-33. **From the diagram write down the software evolution.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
-
-34. **(খ) SDLC diagram সহ বর্ণনা করুন। SDLC এর মেজর phases গুলি কী?** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 779]**
-
-35. **(ii) Software development এর Agile Method সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
-
-36. **(a) What is Agile? Mentionits four values.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
-
-37. **What is SDLC? List the stages involed in the SDLC process. Which stages ensures the user acceptance of the system?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
-
-38. **(ii) Software development এর ধাপসমূহ সংক্ষেপে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 960]**
-
-39. **What is Agile Methodology? Difference between Agile Model and Waterfall Model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1003-1004]**
-
-## Software Architecture & Design Patterns (MVC)
+## Software Architecture & Design Patterns (MVC) (11)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
 
@@ -259,21 +211,49 @@
 
 11. **MVC framework কী? MVC Framework এর সুবিধাসমূহ লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1021]**
 
-## CI/CD & DevOps Methodologies
+## UML Diagrams (Class, Use Case, Sequence) (9)
 
-1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**
+1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
 
-## Code Smells & Refactoring
+2. Draw a Use Case Diagram for an Online Banking System with two actors: Customer and Bank Admin. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
-1. **Give examples of the following code smells:** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1366]**
-   * **(a) Feature envy**
-   * **(b) Dead code**
-   * **(c) Duplicate Code**
-   * **(d) Shotgun surgery.**
+3. **Draw a class diagram for an E-commerce website where customer can view different products, can pay either by card or cash.** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 401]**
 
-2. **What is reverse engineering and forward engineering?** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 860-861]**
+4. **Consider the following buy a product description. Customer browses catalog, selects items to buy and then goes to check out. Customer fills in shipping information (address, receive time). System presents full pricing information and customer fills in credit card information. System authorizes purchase, confirms sale and sends confirming email to customer. Draw a use case diagram for the above system.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 424]**
 
-## Software Project Management & Organization
+5. **Library management class diagram:** **(BGDCL - Assistant Manager (CSE) Exam: 15.03.2024 (BUET)) [compact it 380]**
+
+6. **Draw A class diagram. A token-ring based local area network (LAN) is a network consisting of nodes in which network packets are sent around. Every node has a unique name within the network, and refers to its next node. Different kinds of nodes exist: Workstations are originators of messages; servers and printers are network nodes that can receive messages. Packets contain an originator a destination and content, and are sent around on a network. A LAN is a circular configuration of nodes.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 438]**
+
+7. **(খ) একটি লাইব্রেরি ব্যবস্থাপনা সিস্টেম এর জন্যে Use Case Diagram অঙ্কন করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 621]**
+
+8. **How do you model the following situation with a UML class diagram the car fleet of a car rental contains multiple cars, one car belongs to exactly one car fleet.** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+
+9. **(ক) Typical web-based login system এর জন্য sequence diagram আঁকুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 778]**
+
+## Software Requirements Engineering (8)
+
+1. What is the difference between functional and non-functional requirements? What is requirement validation? (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it]
+
+2. **Which of the following are not needed in software Requirement Specifications (SRS)?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1330]**
+   * (a) Functional Requirments
+   * (b) Non- Functional Requirments
+   * (c) Testing Requirments
+   * (d) Interface Requirments
+
+3. **(b) Which contents shoud be consider when you setup a new system?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
+
+4. **You have been given a responsibility to elicit requirements from a customer, who tells you that he is too busy to meet with you. What should you do?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 639]**
+
+5. **(ক) Software development এর ক্ষেত্রে কত প্রকার requirements পাওয়া যায়। উদাহরণসহ requirements সমূহ লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
+
+6. **(খ) Software Requirement Specification (SRS) বলতে কি বুঝায়? Software Development এর কোন ধাপে SRS তৈরি করা হয়?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
+
+7. **Assume that you are going to implement an ecommerce site of “XYZ” company. The CEO of the company is Mr. X. You have to identify the following: (i) Stakeholder (ii) Functional requirements (iii) Non-functional requirements (iv) Deployment requirements** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
+
+8. **Software Requirement Specification (SRS) বলতে কী বোঝেন? Software development -এর কোন স্তরে SRS প্রস্তুত করা হয়?** **(41th BCS Written Exam: 2021) [compact it 881]**
+
+## Software Project Management & Organization (7)
 
 1. **সংগঠনিক নির্দেশকগুলো কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
@@ -289,7 +269,7 @@
 
 7. **b) Write down the difference between Patch and Upgrade.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
 
-## Software Design Principles (Coupling & Cohesion)
+## Software Design Principles (Coupling & Cohesion) (5)
 
 1. **Write concepts of Coupling and Cohesion with Example?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
 
@@ -301,7 +281,7 @@
 
 5. **What is the common mistake of UI design?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]**
 
-## Software Cost Estimation & Build vs Buy Decisions
+## Software Cost Estimation & Build vs Buy Decisions (4)
 
 1. **If you are CEO of a software company. You need to develop an ERP software from following three options (i) Buy (ii) Build (iii) Open Source Modification**
    * **a) Buy: Buy a software with cost 50 lac.**
@@ -320,7 +300,7 @@
 
 4. **Which factors are to be consider as software pricing?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
 
-## IT Governance, Audit & Risk Management
+## IT Governance, Audit & Risk Management (3)
 
 1. **Difference between: Policy, Guideline, Procedure; why auditor must focus on control as a system? Explain four types of risks auditor faces, Explain each of theme.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 310]**
 
@@ -328,8 +308,28 @@
 
 3. **(ক) Software risk কত প্রকার ও কী কী? Risk management process চিত্রের মাধ্যমে বুঝিয়ে লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 709]**
 
-## Open Source Software & Licensing
+## Data Flow Diagrams (DFD) (2)
+
+1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**
+
+2. **১ জন ব্যক্তি ১টি Bank Account খোলার জন্য একটি form fillup করেন। এরপর তাতে Manager স্বাক্ষর করেন। এবার উক্ত Account-এ ঐ ব্যক্তি কিছু টাকা Deposit করলে Account সচল হয়। এই Process টি DFD এর মাধ্যমে প্রকাশ করুন।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 913]**
+
+## Code Smells & Refactoring (2)
+
+1. **Give examples of the following code smells:** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1366]**
+   * **(a) Feature envy**
+   * **(b) Dead code**
+   * **(c) Duplicate Code**
+   * **(d) Shotgun surgery.**
+
+2. **What is reverse engineering and forward engineering?** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 860-861]**
+
+## Open Source Software & Licensing (2)
 
 1. **Write down the advantages and disadvantages of Open source software with example.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 549]**
 
 2. **Open source এবং Proprietary Software -এর মধ্যে পার্থক্য লিখুন। একটি Open source এবং একটি Proprietary Operating system এর উদাহরণ দিন।** **(41th BCS Written Exam: 2021) [compact it 881-882]**
+
+## CI/CD & DevOps Methodologies (1)
+
+1. **What is CI/DI development model?** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1333]**

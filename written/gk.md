@@ -3,16 +3,16 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Bangladesh Affairs](#bangladesh-affairs) | 114 |
-| 2 | [International Affairs](#international-affairs) | 70 |
-| 3 | [Everyday Science & Environment](#everyday-science--environment) | 22 |
-| 4 | [Banking & ICT Abbreviations](#banking--ict-abbreviations) | 8 |
+| 1 | [Bangladesh Affairs](#bangladesh-affairs-114) | 114 |
+| 2 | [International Affairs](#international-affairs-70) | 70 |
+| 3 | [Everyday Science & Environment](#everyday-science--environment-22) | 22 |
+| 4 | [Banking & ICT Abbreviations](#banking--ict-abbreviations-8) | 8 |
 
 <!-- TOC END -->
 
 ---
 
-## Bangladesh Affairs
+## Bangladesh Affairs (114)
 
 1. Who is the architect of the National Martyrs' Memorial in Savar? [SO IT 25-07-2026]
 
@@ -242,25 +242,7 @@
 
 114. **5.5 What is the name of the first submarine communications cable system that Bangladesh is connected to?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-## Banking & ICT Abbreviations
-
-1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
-
-2. **Full meaning: ASEAN, SPARRSO, BERC** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
-
-3. **পূর্ণরূপ লিখুন: a) DFOF b) THAAD c) BIMSTEC** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
-
-4. **NATA এর পূর্ণ রূপ কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
-
-5. **What Is RTGS related to?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
-
-6. **What is the full form BDCCL?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
-
-7. **5.1 What is the full form of NPSB in the banking sector of Bangladesh?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
-
-8. **(b) Write the full forms of OTP and VPN.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
-
-## International Affairs
+## International Affairs (70)
 
 1. What is the name of the central bank of the United Kingdom? [SO IT 25-07-2026]
 
@@ -402,7 +384,7 @@
 
 70. **5.4 Which international organization publishes the "World Economic Outlook" report?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-## Everyday Science & Environment
+## Everyday Science & Environment (22)
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
 
@@ -447,3 +429,21 @@
 21. **“জেনেটিক ইঞ্জিনিয়ারিং” কী?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
 22. **CFC কী? কী কাজে ব্যবহৃত হয়?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+## Banking & ICT Abbreviations (8)
+
+1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
+
+2. **Full meaning: ASEAN, SPARRSO, BERC** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+
+3. **পূর্ণরূপ লিখুন: a) DFOF b) THAAD c) BIMSTEC** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+
+4. **NATA এর পূর্ণ রূপ কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+5. **What Is RTGS related to?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+
+6. **What is the full form BDCCL?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+7. **5.1 What is the full form of NPSB in the banking sector of Bangladesh?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+8. **(b) Write the full forms of OTP and VPN.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**

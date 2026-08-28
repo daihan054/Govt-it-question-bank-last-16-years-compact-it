@@ -3,20 +3,20 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Focus Writing](#focus-writing) | 35 |
-| 2 | [English Grammar](#english-grammar) | 29 |
-| 3 | [Translation](#translation) | 19 |
-| 4 | [Idioms & Phrases](#idioms--phrases) | 9 |
-| 5 | [English Vocabulary & Antonyms](#english-vocabulary--antonyms) | 7 |
-| 6 | [Letter & Application Writing](#letter--application-writing) | 6 |
-| 7 | [Reading Comprehension](#reading-comprehension) | 6 |
-| 8 | [English Literature & Authors](#english-literature--authors) | 1 |
+| 1 | [Focus Writing](#focus-writing-35) | 35 |
+| 2 | [English Grammar](#english-grammar-29) | 29 |
+| 3 | [Translation](#translation-19) | 19 |
+| 4 | [Idioms & Phrases](#idioms--phrases-9) | 9 |
+| 5 | [English Vocabulary & Antonyms](#english-vocabulary--antonyms-7) | 7 |
+| 6 | [Letter & Application Writing](#letter--application-writing-6) | 6 |
+| 7 | [Reading Comprehension](#reading-comprehension-6) | 6 |
+| 8 | [English Literature & Authors](#english-literature--authors-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Focus Writing
+## Focus Writing (35)
 
 1. The Importance of Digital Literacy in Expanding Cashless Transactions in Bangladesh: Discuss how digital skills influence financial inclusion, the adoption of digital payment systems, and the challenges of building a cashless economy. [SO IT 25-07-2026]
 
@@ -90,62 +90,7 @@
 
 35. **(e) Write a short paragraph arguing for or against the statement "AI will eventually replace human workers in most professions."** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
-## Letter & Application Writing
-
-1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
-
-2. **Write a Letter to your younger brother about Importance of professional vocational training.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
-
-3. **Imagine that you have purchased a laptop from a local showroom a week back. The warranty period is on and the laptop is not functioning well. Write a letter of complaint to the manager of the showroom about it. Your letter should contain information about the problem and what you want.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
-
-4. **Write a letter to the officer-in-charge of your police station to provide regular police patrol in your locality to prevent crimes.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
-
-5. **(a) Write a letter to your friend condoling the death of his/her mother. Or, (b) Write an application to the Upazila Nirbahi Officer for taking steps to repair damaged road in your locality.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
-
-6. **Write an application to the Mayor of Dhaka south City Corporation (DSCC) to take measures against illegal chemical storages in your locality.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
-
-## Reading Comprehension
-
-1. **Read the passage and answer the questions that follow:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
-Various kinds of nuclear weapons have been produced in the past few years by many countries. There is a new and terrible development in the history of man. Very few events can be more frightful than nuclear war. In a nuclear war, most of the world’s population will be exterminated. The few living creatures that survive will be exposed to radiation or to electrical rays harmful to life. It has been said by scientists that many new diseases will be caused by radiation. There will also be an acute shortage of food. Most of the areas on which nuclear bombs have been dropped have been ruined. Therefore, the survivors of a nuclear war will be sick, hungry and homeless. It might be better, perhaps, to be killed in a nuclear war than to survive it. It would be better still for men to learn to live in peace with one another. If this can be achieved, there will be no nuclear wars.
-(a) What is the result of a nuclear war?
-(b) How will the survivors of nuclear war survive?
-(c) What is the best way to avoid nuclear war?
-(d) What would be the appropriate title of the above passage? Justify the title in two sentences.
-(e) What is the consequence of radiation?
-
-2. **Read the following passage and answer the questions that follow:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
-> I am convinced that inculcating of discipline at home and in the educational institutions is essential for the growth of every individual. It is however unfortunate that the need for discipline in the youth is not sufficiently appreciated in this country. People seem to believe that to insist on discipline is to be unkind to the young. I have a different opinion. For me, what is unkind is to let a young person indulge in whatever s/he wants to do without parental, educational and ethical guidance. Discipline does not mean illogical harshness or oppressive imposition of law. Discipline involves ethics, i.e. responsible concern for the well-being of oneself and the other. Discipline involves guidance from the outside and control from the inside (self-control). Lack of guidance and control may lead a young person to waste her/his strength because s/he is yet to experience things in full. I feel sad when I see our youth-often individuals of talent, spirit and imagination-talking, behaving and acting as if they are their own judge and have the vision of predicting the future. I consider it as a wrong trend because it is detrimental to the physical, mental and social well-being of theirs and others as well.
-> 
- * **(a) At what points do the author's and people's beliefs are different?**
- * **(b) How does the author perceive discipline?**
- * **(c) What according to the author, may befall when a youth lacks discipline?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
- * **(d) What do you think is the dominant tone of the passage prescriptive dialogic? Engaging or distant? Why do you think so?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
- * **(e) Write in brief your response to the author's take on discipline.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
-
-3. **Read the following passage and then answer the questions that follow:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
-> The Change of Climate is a major concern nowadays. The worst of all the problems that affects all the flora and fauna is the climate change. There are many plants and animals that are vulnerable to climate change. As a result of increasing temperature, they are likely to be extinct from nature. The reasons of increasing temperature are multifarious. Every day many industries, mills and factories in different countries are excreting Carbon Dioxide. Besides, a significant number of vehicles ply on the roads creating smoke which emits Carbon Dioxide. In addition to these, industrially developed countries are emitting tons of Carbon on the sea, which is indirectly responsible for producing Carbon Dioxide. The more Carbon Dioxide will increase, the more the temperature will increase. Over the last century, the sea level had risen by 10-20 cm possibly in response to global warming.
-> 
-**Question:**
- * (a) Which is the worst of the problems that affects plants and animals?
- * (b) What may happen to plants and animals as a dire consequence of increasing temperature?
- * (c) What are the two major reasons for increasing temperature in the world?
- * (d) How does global warming affect the sea level?
- * (e) What message does the passage convey?
-
-4. **Read the following passage and then answer the questions given below: War is the worst of all evils of human civilisation. It is an ancient institution which has existed for at least six thousand years. It was always wicked and usually foolish, but in the past, human race managed to live with it. Modern ingenuity has changed this drastically. Either man will abolish war or war will abolish man. In the present, it is nuclear weapons that cause the gravest danger, but bacteriological or chemical weapons may, before long, offer an even greater threat. If we succeed at any cost in abolishing nuclear weapons, our work will not be done completely. It will never be completed until we have succeeded in abolishing war for ever. To do this, we need to persuade mankind to look upon international disputes in a new intellectual and mutual way, not as contest of force or power, in which the victory goes to the side which is the most skillful in massacre, but by arbitration in accordance with agreed principles of law. It is not easy to change age-old mental habits, but this is what must be attempted. It is the destructive war that must be checked for the existence of life on earth. Questions: a) Why should we avoid war? b) Why is war more dangerous at present? c) What should we do to abolish war forever? d) How should all international problems be solved? e) Why should we check the destructive war at any cost?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
-
-5. **Read the following passage crefully and answer the questions below in your words : “To be good is noble, but to teach others how to be good is nobler - and no trouble” said a well known writer. This may explain why in this world there is more of preaching than of practice. We do not mean the preaching which are get in church, but that which is given freely and without stint, on buses, in the streets and even in the homes of our land. Where is the parent who does not discover himself telling his child to do just what he himself does regularly? How many people are there who are certain that they have never made anything but financial mistakes? The man who never swam a stroke feels perfectly competent to tell another how to swim. The man who can not find his way to modest livelihood pretends to know just how to save the nation from all economic ills. It is no trouble to preach. But it is a considerable trouble to carry out what we preach. This is so the man who is striving to climb the loftiest heights know just how difficult is the way. Questions: (a) What does the quoted expression mean? (b) Why is practicing more difficult than preaching? (c) What does the writer mean by preaching? (d) What do the parents tell their children to do? (e) How does the honest preacher preach to himself?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
-
-6. **Read the passage and answer the questions below:** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
-Various kinds of nuclear weapons have been produced in the past few years by many countries. There is a new and terrible development in the history of man. Very few events can be more frightful than nuclear war. In a nuclear war, most of the world's population will be exterminated. The few living creatures that survive will be exposed to radiation or to electrical rays harmful to life. It has been said by scientists that many new diseases will be caused by radiation. There will also be an acute shortage of food. Most of the areas on which nuclear bombs have been dropped have been ruined. Therefore, the survivors of a nuclear war will be sick, hungry and homeless. It might be better, perhaps, to be killed in a nuclear war than to survive it. It would be better still for men to learn to live in peace with one another. If this can be achieved, there will be no nuclear wars.
-(a) What is the result of a nuclear war?
-(b) How will the survivors of nuclear war survive?
-(c) What is the best way to avoid nuclear war?
-(d) What would be the appropriate title of the above passage? Justify the title in two sentences.
-(e) What is the consequence of radiation?
-
-## English Grammar
+## English Grammar (29)
 
 1. **Answer the following questions.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
 (a) Rangu Mia saw Alta Begum and Bedena Begum (discuss) _____ a funny thing. [Use the right form of verb in bracket]
@@ -237,47 +182,7 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 i. "He doesn't know anything about computers."
 ii. The data were collected and it were analyzed carefully.
 
-## English Vocabulary & Antonyms
-
-1. **What is the Opposite word of Transparent?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
-
-2. **Antonym of “fantasy”:** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
-
-3. **When the writer uses the word “prosperous” to describe the voyage, what does he mean?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
-
-4. **What 2 synonyms of the word “Accordingly”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
-
-5. **১. নিচের কোনটি লেফটেনেন্ট এর সঠিক Spelling? (a) Lieutenant (b) Leptenant (c) Lieutenand (d) Lieftenant** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
-
-6. **১. What is the synonym of Certainly?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
-
-7. **৫. Spelling Correction: Tsunami, Commission, Laughping, hetarogineous.** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
-
-## Idioms & Phrases
-
-1. **What is the meaning of “see eye to eye”?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-2. **Make sentences with the following (any five): (a) keep pace with (b) make up one's mind (c) put up with (d) take after (e) well off (f) on the sly (g) in case of.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
-
-3. **অর্থসহ বাক্য রচনা করুন: A Black Sheep, Crocodile tears, Straw Vote, Bed of roses, Hard and fast.** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
-
-4. **Make sentences with the following: (a) Play fast and loose. (b) A piece of cake. (c) Beat around the bush. (d) Back against the wall. (e) Eat like a horse.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
-
-5. **Make sentence: (a) A dark horse (b) Ever and anon.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
-
-6. **“Run with the hare and hunt with the hounds: - কথাটির বাংলা প্রবাদ কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
-
-7. **What is the meaning of the phrase “Carry the day”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
-
-8. **৪. অর্থসহ বাক্য রচনা কর: (a) Blue Blood (b) Baker's dozen** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
-
-9. **৬. Phrases and Idioms : Eleventh Hours.** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
-
-## English Literature & Authors
-
-1. **Who is the writer of “Gulliver's Travels”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
-
-## Translation
+## Translation (19)
 
 1. "কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।" — Translate the passage into English. [SO IT 25-07-2026]
 
@@ -322,3 +227,98 @@ ii. The data were collected and it were analyzed carefully.
 
 19. **Translate the following passage into English:** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 “কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।”
+
+## Idioms & Phrases (9)
+
+1. **What is the meaning of “see eye to eye”?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+2. **Make sentences with the following (any five): (a) keep pace with (b) make up one's mind (c) put up with (d) take after (e) well off (f) on the sly (g) in case of.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+
+3. **অর্থসহ বাক্য রচনা করুন: A Black Sheep, Crocodile tears, Straw Vote, Bed of roses, Hard and fast.** **(BARC Data Entry Officer Exam: 10.09.2022) [compact it 703]**
+
+4. **Make sentences with the following: (a) Play fast and loose. (b) A piece of cake. (c) Beat around the bush. (d) Back against the wall. (e) Eat like a horse.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+
+5. **Make sentence: (a) A dark horse (b) Ever and anon.** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 735]**
+
+6. **“Run with the hare and hunt with the hounds: - কথাটির বাংলা প্রবাদ কী?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+7. **What is the meaning of the phrase “Carry the day”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+8. **৪. অর্থসহ বাক্য রচনা কর: (a) Blue Blood (b) Baker's dozen** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+
+9. **৬. Phrases and Idioms : Eleventh Hours.** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+## English Vocabulary & Antonyms (7)
+
+1. **What is the Opposite word of Transparent?** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 402]**
+
+2. **Antonym of “fantasy”:** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+3. **When the writer uses the word “prosperous” to describe the voyage, what does he mean?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+4. **What 2 synonyms of the word “Accordingly”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**
+
+5. **১. নিচের কোনটি লেফটেনেন্ট এর সঠিক Spelling? (a) Lieutenant (b) Leptenant (c) Lieutenand (d) Lieftenant** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+6. **১. What is the synonym of Certainly?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+7. **৫. Spelling Correction: Tsunami, Commission, Laughping, hetarogineous.** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
+
+## Letter & Application Writing (6)
+
+1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
+
+2. **Write a Letter to your younger brother about Importance of professional vocational training.** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 299]**
+
+3. **Imagine that you have purchased a laptop from a local showroom a week back. The warranty period is on and the laptop is not functioning well. Write a letter of complaint to the manager of the showroom about it. Your letter should contain information about the problem and what you want.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+
+4. **Write a letter to the officer-in-charge of your police station to provide regular police patrol in your locality to prevent crimes.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+
+5. **(a) Write a letter to your friend condoling the death of his/her mother. Or, (b) Write an application to the Upazila Nirbahi Officer for taking steps to repair damaged road in your locality.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
+6. **Write an application to the Mayor of Dhaka south City Corporation (DSCC) to take measures against illegal chemical storages in your locality.** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
+
+## Reading Comprehension (6)
+
+1. **Read the passage and answer the questions that follow:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
+Various kinds of nuclear weapons have been produced in the past few years by many countries. There is a new and terrible development in the history of man. Very few events can be more frightful than nuclear war. In a nuclear war, most of the world’s population will be exterminated. The few living creatures that survive will be exposed to radiation or to electrical rays harmful to life. It has been said by scientists that many new diseases will be caused by radiation. There will also be an acute shortage of food. Most of the areas on which nuclear bombs have been dropped have been ruined. Therefore, the survivors of a nuclear war will be sick, hungry and homeless. It might be better, perhaps, to be killed in a nuclear war than to survive it. It would be better still for men to learn to live in peace with one another. If this can be achieved, there will be no nuclear wars.
+(a) What is the result of a nuclear war?
+(b) How will the survivors of nuclear war survive?
+(c) What is the best way to avoid nuclear war?
+(d) What would be the appropriate title of the above passage? Justify the title in two sentences.
+(e) What is the consequence of radiation?
+
+2. **Read the following passage and answer the questions that follow:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1357]**
+> I am convinced that inculcating of discipline at home and in the educational institutions is essential for the growth of every individual. It is however unfortunate that the need for discipline in the youth is not sufficiently appreciated in this country. People seem to believe that to insist on discipline is to be unkind to the young. I have a different opinion. For me, what is unkind is to let a young person indulge in whatever s/he wants to do without parental, educational and ethical guidance. Discipline does not mean illogical harshness or oppressive imposition of law. Discipline involves ethics, i.e. responsible concern for the well-being of oneself and the other. Discipline involves guidance from the outside and control from the inside (self-control). Lack of guidance and control may lead a young person to waste her/his strength because s/he is yet to experience things in full. I feel sad when I see our youth-often individuals of talent, spirit and imagination-talking, behaving and acting as if they are their own judge and have the vision of predicting the future. I consider it as a wrong trend because it is detrimental to the physical, mental and social well-being of theirs and others as well.
+> 
+ * **(a) At what points do the author's and people's beliefs are different?**
+ * **(b) How does the author perceive discipline?**
+ * **(c) What according to the author, may befall when a youth lacks discipline?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
+ * **(d) What do you think is the dominant tone of the passage prescriptive dialogic? Engaging or distant? Why do you think so?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
+ * **(e) Write in brief your response to the author's take on discipline.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1358]**
+
+3. **Read the following passage and then answer the questions that follow:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1348]**
+> The Change of Climate is a major concern nowadays. The worst of all the problems that affects all the flora and fauna is the climate change. There are many plants and animals that are vulnerable to climate change. As a result of increasing temperature, they are likely to be extinct from nature. The reasons of increasing temperature are multifarious. Every day many industries, mills and factories in different countries are excreting Carbon Dioxide. Besides, a significant number of vehicles ply on the roads creating smoke which emits Carbon Dioxide. In addition to these, industrially developed countries are emitting tons of Carbon on the sea, which is indirectly responsible for producing Carbon Dioxide. The more Carbon Dioxide will increase, the more the temperature will increase. Over the last century, the sea level had risen by 10-20 cm possibly in response to global warming.
+> 
+**Question:**
+ * (a) Which is the worst of the problems that affects plants and animals?
+ * (b) What may happen to plants and animals as a dire consequence of increasing temperature?
+ * (c) What are the two major reasons for increasing temperature in the world?
+ * (d) How does global warming affect the sea level?
+ * (e) What message does the passage convey?
+
+4. **Read the following passage and then answer the questions given below: War is the worst of all evils of human civilisation. It is an ancient institution which has existed for at least six thousand years. It was always wicked and usually foolish, but in the past, human race managed to live with it. Modern ingenuity has changed this drastically. Either man will abolish war or war will abolish man. In the present, it is nuclear weapons that cause the gravest danger, but bacteriological or chemical weapons may, before long, offer an even greater threat. If we succeed at any cost in abolishing nuclear weapons, our work will not be done completely. It will never be completed until we have succeeded in abolishing war for ever. To do this, we need to persuade mankind to look upon international disputes in a new intellectual and mutual way, not as contest of force or power, in which the victory goes to the side which is the most skillful in massacre, but by arbitration in accordance with agreed principles of law. It is not easy to change age-old mental habits, but this is what must be attempted. It is the destructive war that must be checked for the existence of life on earth. Questions: a) Why should we avoid war? b) Why is war more dangerous at present? c) What should we do to abolish war forever? d) How should all international problems be solved? e) Why should we check the destructive war at any cost?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 668]**
+
+5. **Read the following passage crefully and answer the questions below in your words : “To be good is noble, but to teach others how to be good is nobler - and no trouble” said a well known writer. This may explain why in this world there is more of preaching than of practice. We do not mean the preaching which are get in church, but that which is given freely and without stint, on buses, in the streets and even in the homes of our land. Where is the parent who does not discover himself telling his child to do just what he himself does regularly? How many people are there who are certain that they have never made anything but financial mistakes? The man who never swam a stroke feels perfectly competent to tell another how to swim. The man who can not find his way to modest livelihood pretends to know just how to save the nation from all economic ills. It is no trouble to preach. But it is a considerable trouble to carry out what we preach. This is so the man who is striving to climb the loftiest heights know just how difficult is the way. Questions: (a) What does the quoted expression mean? (b) Why is practicing more difficult than preaching? (c) What does the writer mean by preaching? (d) What do the parents tell their children to do? (e) How does the honest preacher preach to himself?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 711]**
+
+6. **Read the passage and answer the questions below:** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
+Various kinds of nuclear weapons have been produced in the past few years by many countries. There is a new and terrible development in the history of man. Very few events can be more frightful than nuclear war. In a nuclear war, most of the world's population will be exterminated. The few living creatures that survive will be exposed to radiation or to electrical rays harmful to life. It has been said by scientists that many new diseases will be caused by radiation. There will also be an acute shortage of food. Most of the areas on which nuclear bombs have been dropped have been ruined. Therefore, the survivors of a nuclear war will be sick, hungry and homeless. It might be better, perhaps, to be killed in a nuclear war than to survive it. It would be better still for men to learn to live in peace with one another. If this can be achieved, there will be no nuclear wars.
+(a) What is the result of a nuclear war?
+(b) How will the survivors of nuclear war survive?
+(c) What is the best way to avoid nuclear war?
+(d) What would be the appropriate title of the above passage? Justify the title in two sentences.
+(e) What is the consequence of radiation?
+
+## English Literature & Authors (1)
+
+1. **Who is the writer of “Gulliver's Travels”?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 736]**

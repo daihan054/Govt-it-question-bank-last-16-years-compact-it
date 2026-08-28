@@ -3,31 +3,21 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements) | 88 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow) | 35 |
-| 3 | [Recursion & Functions](#recursion--functions) | 33 |
-| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts) | 17 |
-| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms) | 12 |
-| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms) | 12 |
-| 7 | [File Handling](#file-handling) | 4 |
-| 8 | [Pointers](#pointers) | 4 |
-| 9 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs) | 1 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-88) | 88 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-35) | 35 |
+| 3 | [Recursion & Functions](#recursion--functions-33) | 33 |
+| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-17) | 17 |
+| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-12) | 12 |
+| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-12) | 12 |
+| 7 | [File Handling](#file-handling-4) | 4 |
+| 8 | [Pointers](#pointers-4) | 4 |
+| 9 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## File Handling
-
-1. Name Top C 5 File Management Function Name. (BEPRC Assistant Programmer Exam: 08.08.2026)
-
-2. **Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 814]**
-
-3. **You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account, Find the highest and second highest balance of saving account.** **(NRCC Assistant Programmer Exam: 2021) [compact it 931-932]**
-
-4. **Folder থেকে একটি Image নিয়ে ঐ Image এর নামের .jpeg extention কে .png extention এ convert করার জন্য Python language এর Function লিখুন?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1046]**
-
-## Basic Programs & Control Statements
+## Basic Programs & Control Statements (88)
 
 1. C program for the number is even or odd. (BEPRC Assistant Programmer Exam: 08.08.2026)
 
@@ -357,111 +347,7 @@ return 0;
 
 88. **0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1040-1041]**
 
-## Flowcharts & Algorithms
-
-1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
-
-2. **১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
-
-3. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
-
-4. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
-
-5. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
-
-6. **Write an Algorithm to check a number is Prime or not Prime.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
-
-7. **Write down the algorithm and draw the flowchart of Quadratic equation.** **(CAAB Programmer Exam: 2022) [compact it 722]**
-
-8. **Draw a flowchart and write algorithm for finding Factorial value of an integer number.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
-
-9. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
-
-10. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
-
-11. **Three types of control statements and their graphical presentation using flowchart or flow graph.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1037-1038]**
-
-12. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
-
-## Command Line Arguments & Basic Programs
-
-1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**
-
-## String Manipulation & Algorithms
-
-1. **Write a C or Java program to convert string to integer without using any built-in function.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1362]**
-
-2. **Write a C program to check whether a string is a Palindrome.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1433]**
-
-3. **Write a C program upper case to lower case conversion.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 475]**
-
-4. **Write a program to reverse string without using library function.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
-
-5. **Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from string.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
-
-6. **Write a program IPv4 IP validation from given IP with valid and not valid.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
-
-7. **String reverse program but without without using the library function.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
-
-8. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 729]**
-
-9. **What is the purpose of '\0' character in C?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
-
-10. **(c) Write down a program to find length of a string without using any library function.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892]**
-
-11. **Write a program to read a character “lower case ” and convert it into upper case.** **(BAUST Assistant Programmer Exam: 2021) [compact it 918-919]**
-
-12. **Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 923-924]**
-   Sample Input: 192.168.0.0
-   Sample Output: Class C
-
-## Pointers
-
-1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
-
-2. **(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
-
-3. **Describe Dynamic memory allocation in programming in C?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
-
-4. **(a) What is the difference between array and pointer?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891-892]**
-
-## Operators, Data Types & Language Concepts
-
-1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**
-
-2. **What is the difference between Null and Void?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
-
-3. **What can be used to terminate for(;;)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
-
-4. **What will occur when an array is declared without size?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-5. **(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 601]**
-
-6. **(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
-
-7. **(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
-
-8. **What is the main difference between structure and array in C programming? Explain with examples.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
-
-9. **Difference between array and structure data type.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
-
-10. **Write down the types of errors which can occur the execution of a program.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
-
-11. **Write the syntax of while and do while loop.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
-
-12. **What is nested structure in C programming? Explain with example.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 741]**
-
-13. **(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
-
-14. **Write some default data type in C.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
-
-15. **Write the difference between Structure and Array.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
-
-16. **Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Control structure in C programming (vi) Stack (vii) Debugging (viii) Increment and Decrement process in C programming (ix) Object in C++ (x) Data encapsulation** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 978-980]**
-
-17. **নিচের if-else কে switch case এ পরিনত করুন। if(ch== 'A':: ch== 'E' :: ch== 'I' :: ch == 'O':: ch== 'U')** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1021]**
-
-## Output Tracing & Control Flow
+## Output Tracing & Control Flow (35)
 
 1. **C output problem.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
@@ -875,7 +761,7 @@ int main(){
 
 35. **Find the Output:** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1047]**
 
-## Recursion & Functions
+## Recursion & Functions (33)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
@@ -992,3 +878,117 @@ int main() {
 32. **(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 954]**
 
 33. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985]**
+
+## Operators, Data Types & Language Concepts (17)
+
+1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 483]**
+
+2. **What is the difference between Null and Void?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
+
+3. **What can be used to terminate for(;;)?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+4. **What will occur when an array is declared without size?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+5. **(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 601]**
+
+6. **(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
+
+7. **(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 617]**
+
+8. **What is the main difference between structure and array in C programming? Explain with examples.** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 635]**
+
+9. **Difference between array and structure data type.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+
+10. **Write down the types of errors which can occur the execution of a program.** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+
+11. **Write the syntax of while and do while loop.** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+12. **What is nested structure in C programming? Explain with example.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 741]**
+
+13. **(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
+
+14. **Write some default data type in C.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
+
+15. **Write the difference between Structure and Array.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
+
+16. **Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Control structure in C programming (vi) Stack (vii) Debugging (viii) Increment and Decrement process in C programming (ix) Object in C++ (x) Data encapsulation** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 978-980]**
+
+17. **নিচের if-else কে switch case এ পরিনত করুন। if(ch== 'A':: ch== 'E' :: ch== 'I' :: ch == 'O':: ch== 'U')** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1021]**
+
+## Flowcharts & Algorithms (12)
+
+1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+
+2. **১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
+
+3. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
+
+4. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
+
+5. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
+
+6. **Write an Algorithm to check a number is Prime or not Prime.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
+
+7. **Write down the algorithm and draw the flowchart of Quadratic equation.** **(CAAB Programmer Exam: 2022) [compact it 722]**
+
+8. **Draw a flowchart and write algorithm for finding Factorial value of an integer number.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
+
+9. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
+
+10. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
+
+11. **Three types of control statements and their graphical presentation using flowchart or flow graph.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1037-1038]**
+
+12. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+
+## String Manipulation & Algorithms (12)
+
+1. **Write a C or Java program to convert string to integer without using any built-in function.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1362]**
+
+2. **Write a C program to check whether a string is a Palindrome.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1433]**
+
+3. **Write a C program upper case to lower case conversion.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 475]**
+
+4. **Write a program to reverse string without using library function.** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
+
+5. **Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from string.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
+
+6. **Write a program IPv4 IP validation from given IP with valid and not valid.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
+
+7. **String reverse program but without without using the library function.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]**
+
+8. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 729]**
+
+9. **What is the purpose of '\0' character in C?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
+
+10. **(c) Write down a program to find length of a string without using any library function.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892]**
+
+11. **Write a program to read a character “lower case ” and convert it into upper case.** **(BAUST Assistant Programmer Exam: 2021) [compact it 918-919]**
+
+12. **Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 923-924]**
+   Sample Input: 192.168.0.0
+   Sample Output: Class C
+
+## File Handling (4)
+
+1. Name Top C 5 File Management Function Name. (BEPRC Assistant Programmer Exam: 08.08.2026)
+
+2. **Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 814]**
+
+3. **You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account, Find the highest and second highest balance of saving account.** **(NRCC Assistant Programmer Exam: 2021) [compact it 931-932]**
+
+4. **Folder থেকে একটি Image নিয়ে ঐ Image এর নামের .jpeg extention কে .png extention এ convert করার জন্য Python language এর Function লিখুন?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1046]**
+
+## Pointers (4)
+
+1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 600]**
+
+2. **(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
+
+3. **Describe Dynamic memory allocation in programming in C?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
+
+4. **(a) What is the difference between array and pointer?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891-892]**
+
+## Command Line Arguments & Basic Programs (1)
+
+1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1361]**

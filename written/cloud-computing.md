@@ -3,21 +3,21 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Cloud Service Models](#cloud-service-models) | 12 |
-| 2 | [Cloud Storage & Fundamentals](#cloud-storage--fundamentals) | 6 |
-| 3 | [Virtualization & Containers (VM vs Container)](#virtualization--containers-vm-vs-container) | 6 |
-| 4 | [Cluster, Grid & Distributed Computing](#cluster-grid--distributed-computing) | 3 |
-| 5 | [Scalability (Horizontal & Vertical Scaling)](#scalability-horizontal--vertical-scaling) | 2 |
-| 6 | [Edge Computing & Fog Computing](#edge-computing--fog-computing) | 2 |
-| 7 | [Virtualization & Resource Allocation](#virtualization--resource-allocation) | 1 |
-| 8 | [High Availability & System Redundancy](#high-availability--system-redundancy) | 1 |
-| 9 | [Cloud Security & Compliance](#cloud-security--compliance) | 1 |
+| 1 | [Cloud Service Models](#cloud-service-models-12) | 12 |
+| 2 | [Cloud Storage & Fundamentals](#cloud-storage--fundamentals-6) | 6 |
+| 3 | [Virtualization & Containers (VM vs Container)](#virtualization--containers-vm-vs-container-6) | 6 |
+| 4 | [Cluster, Grid & Distributed Computing](#cluster-grid--distributed-computing-3) | 3 |
+| 5 | [Scalability (Horizontal & Vertical Scaling)](#scalability-horizontal--vertical-scaling-2) | 2 |
+| 6 | [Edge Computing & Fog Computing](#edge-computing--fog-computing-2) | 2 |
+| 7 | [Virtualization & Resource Allocation](#virtualization--resource-allocation-1) | 1 |
+| 8 | [High Availability & System Redundancy](#high-availability--system-redundancy-1) | 1 |
+| 9 | [Cloud Security & Compliance](#cloud-security--compliance-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Cloud Service Models
+## Cloud Service Models (12)
 
 1. A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service. [SO IT 25-07-2026]
 
@@ -48,7 +48,7 @@
 
 12. **6.11 A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-## Cloud Storage & Fundamentals
+## Cloud Storage & Fundamentals (6)
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
@@ -62,11 +62,7 @@
 
 6. **Explain cloud computing and evaluate its advantages and disadvantages.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
-## Virtualization & Resource Allocation
-
-1. A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ GB} storage. Calculate the maximum number of VMs that can be hosted on the server without overcommitting resources. Identify which hardware resource limits the number of VMs. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
-
-## Virtualization & Containers (VM vs Container)
+## Virtualization & Containers (VM vs Container) (6)
 
 1. VM vs Container in Submarine Cable Network: [BSCCPL AME 21-08-2026 (BUET)] A national submarine cable landing station provides international connectivity to several organizations. The organization wants to deploy DNS, Web, Database, Monitoring, and Network Management services on a shared physical server. The network administrator is considering two approaches:
 Approach A: Deploy each service in a separate Virtual Machine.
@@ -83,21 +79,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 6. **What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]**
 
-## Scalability (Horizontal & Vertical Scaling)
-
-1. **Server rack digram to draw horizontal and vertical scalling.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 655]**
-
-2. **Difference between elasticity and scalability of resources in the cloud.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 749]**
-
-## High Availability & System Redundancy
-
-1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.
-
-## Cloud Security & Compliance
-
-1. **How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**
-
-## Cluster, Grid & Distributed Computing
+## Cluster, Grid & Distributed Computing (3)
 
 1. **Difference between cluster computing and grid computing.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 750]**
 
@@ -105,8 +87,26 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 3. **(ক) উদাহরণসহ distributed এবং centralized computing -এর সংজ্ঞা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-## Edge Computing & Fog Computing
+## Scalability (Horizontal & Vertical Scaling) (2)
+
+1. **Server rack digram to draw horizontal and vertical scalling.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 655]**
+
+2. **Difference between elasticity and scalability of resources in the cloud.** **(BDCCL Assistant Manager (Cloud) Exam: 14.10.2022) [compact it 749]**
+
+## Edge Computing & Fog Computing (2)
 
 1. **What is the need of edge server?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1455]**
 
 2. **(গ) Edge Computing এর ধারণা সংক্ষেপে উপস্থাপন করুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+## Virtualization & Resource Allocation (1)
+
+1. A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ GB} storage. Calculate the maximum number of VMs that can be hosted on the server without overcommitting resources. Identify which hardware resource limits the number of VMs. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
+
+## High Availability & System Redundancy (1)
+
+1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.
+
+## Cloud Security & Compliance (1)
+
+1. **How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1431]**

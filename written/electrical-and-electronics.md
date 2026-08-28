@@ -3,20 +3,20 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Electrical Circuits & Protection Devices](#electrical-circuits--protection-devices) | 12 |
-| 2 | [Transistors (BJT & FET)](#transistors-bjt--fet) | 9 |
-| 3 | [Semiconductor Devices & Diodes](#semiconductor-devices--diodes) | 4 |
-| 4 | [Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)](#digital-to-analog--analog-to-digital-converters-dacadc) | 4 |
-| 5 | [AC Circuits & Power Analysis](#ac-circuits--power-analysis) | 2 |
-| 6 | [Operational Amplifiers (Op-Amp)](#operational-amplifiers-op-amp) | 2 |
-| 7 | [Sensor Circuits & Automated Control Systems](#sensor-circuits--automated-control-systems) | 2 |
-| 8 | [Circuit Theorems (Thevenin, Norton, Superposition)](#circuit-theorems-thevenin-norton-superposition) | 2 |
+| 1 | [Electrical Circuits & Protection Devices](#electrical-circuits--protection-devices-12) | 12 |
+| 2 | [Transistors (BJT & FET)](#transistors-bjt--fet-9) | 9 |
+| 3 | [Semiconductor Devices & Diodes](#semiconductor-devices--diodes-4) | 4 |
+| 4 | [Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)](#digital-to-analog--analog-to-digital-converters-dacadc-4) | 4 |
+| 5 | [AC Circuits & Power Analysis](#ac-circuits--power-analysis-2) | 2 |
+| 6 | [Operational Amplifiers (Op-Amp)](#operational-amplifiers-op-amp-2) | 2 |
+| 7 | [Sensor Circuits & Automated Control Systems](#sensor-circuits--automated-control-systems-2) | 2 |
+| 8 | [Circuit Theorems (Thevenin, Norton, Superposition)](#circuit-theorems-thevenin-norton-superposition-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## Electrical Circuits & Protection Devices
+## Electrical Circuits & Protection Devices (12)
 
 1. Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why? (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
@@ -42,23 +42,7 @@
 
 12. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
-## AC Circuits & Power Analysis
-
-1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
-
-2. **RLC সার্কিট কী? বৈদ্যুতিক সার্কিটে ট্রানজিস্টরের ভূমিকা কী?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 809-810]**
-
-## Semiconductor Devices & Diodes
-
-1. Explain the working principle of a PN junction diode. Draw its symbol and describe the difference between forward bias and reverse bias. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
-
-2. **Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
-
-3. **What is Diode and Inductor?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
-
-4. **How does LED differ from Laser Diod? What are the function of Diode?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808]**
-
-## Transistors (BJT & FET)
+## Transistors (BJT & FET) (9)
 
 1. **What does BJT stand for?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
 
@@ -78,25 +62,17 @@
 
 9. **ইমিটার কারেন্টের মান 1 Amp, কালেক্টর কারেন্ট 0.95 A হলে বেইস (Base) কারেন্টের মান কত? একটি চিত্র দেওয়া ছিল!!** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
-## Operational Amplifiers (Op-Amp)
+## Semiconductor Devices & Diodes (4)
 
-1. **Assuming Ideal Op Amps, Find The Voltage Gain V_o/V_i of the following circuit.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+1. Explain the working principle of a PN junction diode. Draw its symbol and describe the difference between forward bias and reverse bias. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
-2. **একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 809]**
+2. **Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
 
-## Sensor Circuits & Automated Control Systems
+3. **What is Diode and Inductor?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
 
-1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
+4. **How does LED differ from Laser Diod? What are the function of Diode?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808]**
 
-2. **Which signal a sensor could to send the signal to microcontroller if the sensor finds any gas leakage point?** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 861]**
-
-## Circuit Theorems (Thevenin, Norton, Superposition)
-
-1. **Find current across 2 \Omega resistor using Thevenin Theorem:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 417]**
-
-2. **Find the Value of I_{ab} using Norton's Theorem.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**
-
-## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)
+## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)
 
 1. **You are required to convert a 12-bit digital number to an analogue voltage over the voltage range of 0 to 3.3V with a Digital-to-Analogue Converter (DAC). What is the resolution of the analogue output?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 419]**
 
@@ -105,3 +81,27 @@
 3. **Draw an ADC converter circuit which convert an analog signal to digital signal.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**
 
 4. **(ক) A/D Converter দ্বারা কিভাবে একটি Analog signal Digital signal এ রূপান্তরিত করা হয়। ডায়াগ্রাম সহ লিখুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 776]**
+
+## AC Circuits & Power Analysis (2)
+
+1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** **(Dhaka WASA - Assistant Maintenance Engineer (Network) Exam: 04.07.2025 (BUET)) [compact it 1439]**
+
+2. **RLC সার্কিট কী? বৈদ্যুতিক সার্কিটে ট্রানজিস্টরের ভূমিকা কী?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 809-810]**
+
+## Operational Amplifiers (Op-Amp) (2)
+
+1. **Assuming Ideal Op Amps, Find The Voltage Gain V_o/V_i of the following circuit.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+
+2. **একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 809]**
+
+## Sensor Circuits & Automated Control Systems (2)
+
+1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
+
+2. **Which signal a sensor could to send the signal to microcontroller if the sensor finds any gas leakage point?** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 861]**
+
+## Circuit Theorems (Thevenin, Norton, Superposition) (2)
+
+1. **Find current across 2 \Omega resistor using Thevenin Theorem:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 417]**
+
+2. **Find the Value of I_{ab} using Norton's Theorem.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 933]**

@@ -3,23 +3,23 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions) | 27 |
-| 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage) | 21 |
-| 3 | [RAID Architecture & Storage](#raid-architecture--storage) | 14 |
-| 4 | [Cache Memory](#cache-memory) | 13 |
-| 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd) | 11 |
-| 6 | [Multi-Core & Multi-Threading](#multi-core--multi-threading) | 5 |
-| 7 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes) | 5 |
-| 8 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards) | 5 |
-| 9 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle) | 4 |
-| 10 | [8085 Microprocessor & Edge Computing](#8085-microprocessor--edge-computing) | 3 |
-| 11 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture) | 2 |
+| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-27) | 27 |
+| 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-21) | 21 |
+| 3 | [RAID Architecture & Storage](#raid-architecture--storage-14) | 14 |
+| 4 | [Cache Memory](#cache-memory-13) | 13 |
+| 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-11) | 11 |
+| 6 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
+| 7 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-5) | 5 |
+| 8 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-5) | 5 |
+| 9 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-4) | 4 |
+| 10 | [8085 Microprocessor & Edge Computing](#8085-microprocessor--edge-computing-3) | 3 |
+| 11 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## Microprocessor Architecture & Functions
+## Microprocessor Architecture & Functions (27)
 
 1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
@@ -83,92 +83,7 @@
 
 27. **(ক) Microprocessor এবং Microcontroller এর মাঝে দুইটি পার্থক্য লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-## Multi-Core & Multi-Threading
-
-1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
-
-2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
-
-3. **What is Hyper threading? What is the use of it?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
-
-4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808]**
-
-5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
-
-## 8085 Microprocessor & Edge Computing
-
-1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।
-   (b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
-
-2. **Intel 8085 ও Intel 8086 Microprocessor-এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি কত এবং কেন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 697]**
-
-3. **What is the difference between 8-bit (8085) and 16-bit (8086) microprocessor?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865-866]**
-
-## Assembly Language & Addressing Modes
-
-1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
-   (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
-
-2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1424]**
-
-3. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
-
-4. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
-
-5. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-MOV AX, A534H এবং MOV AX, [A534H]
-
-## Instruction Pipelining & Hazards
-
-1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
-
-2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** **(BPSC (Ministry) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
-
-3. **(c) Fill in the gaps RISC or CISC:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 416]**
-   * (i) Pipelining is less efficient due to instruction complexity and variability ______
-   * (ii) Emphasis on hardware simplicity and efficiency ______
-   * (iii) Complex decoding due to variable instruction length ______
-   * (iv) Each instruction typically executes in a single clock cycle ______
-
-4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 299]**
-
-5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
-
-## RISC vs CISC Architecture
-
-1. **RISC stand for __________? Write two characteristics of it's?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
-
-2. **Difference between RISC and CISC.** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 644]**
-
-## Cache Memory
-
-1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
-
-2. **(d) What is cache memory? Explain the concepts of (i) Cache hit and (ii) Cache miss.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
-
-3. **Write advantage and disadvantage of direct mapping and associative mapping between cache memory and main memory.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1330]**
-
-4. **How many total bits are required for a direct mapped cache with 16KB of data and 4-word blocks? Assuming a 32 bit address?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 421]**
-
-5. **Write Concept of cache memory in computer. How its change performance of computer?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 559]**
-
-6. **Suppose we have a 16 KB of data in a direct mapped cache with 4 word blocks. Determine the size of the tag, index and offset fields if we are using a 32-bit architecture.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 439]**
-
-7. **What is the use of cache memory?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
-
-8. **Some of the factors determine the performance of a computer system. Cache memory is one of them. Why cache memory is one of the factors to determine the performance of a computer system?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807]**
-
-9. **Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit. The average read access time in nanoseconds is ______.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
-
-10. **Cache memory কী কাজে ব্যবহৃত হয়? Compiler and Interpreater -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 880-881]**
-
-11. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951-952]**
-
-12. **Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
-
-13. **6.3 Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
-
-## Memory Hierarchy & Storage
+## Memory Hierarchy & Storage (21)
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
 
@@ -212,31 +127,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 21. **How Maximum size of memory (RAM) is needed that can be addressed by 32-bit system.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1031]**
 
-## Secondary Storage (HDD vs SSD)
-
-1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
-
-2. **a) Define the term "SSD". Briefly describe the working principle of "SSD".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1342]**
-
-3. **Write two SSD characteristics?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
-
-4. **How can you define SSD?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
-
-5. **(খ) Solid State Drives (SSD) এর কার্যপ্রণালী ও ব্যবহার লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
-
-6. **In a solid state drive data is sarved to a pool of NAND flash. NAND itself is made up of what are called floating gate transmission. How does floating gate transmission store 0 and 1?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808-809]**
-
-7. **Which of the following is the unit of Hard Disk Drive? (a) Megaharz (b) Kiloharz (c) Gigabyte (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
-
-8. **Consider a magnetic disk consisting of 16 heads and 400 cylinders. This disk has four 100-cylinder zones with the cylinders in different zones containing 160, 200, 240. and 280 sectors, respectively. Assume that each sector contains 512 bytes, average seek time between adjacent cylinders is 1 msec, and the disk rotates at 7200 RPM. Calculate the (a) disk capacity (b) maximum data transfer rate.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
-
-9. **Consider a disk pack with the following specifications- 16 surfaces, 128 tracks per surface, 256 sectors per track and 512 bytes per sector. Answer the following questions: (a) What is the capacity of disk pack? (b) If the format overhead is 32 bytes per sector, what is the formatted disk space? (c) If the disk is rotating at 3600 rpm, what is the data transfer rate?** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 924-925]**
-
-10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951]**
-
-11. **Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
-
-## RAID Architecture & Storage
+## RAID Architecture & Storage (14)
 
 1. Which Level Raid is best and why? (BEPRC Assistant Programmer Exam: 08.08.2026)
 
@@ -266,7 +157,101 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 14. **Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
 
-## CPU Performance & Instruction Cycle
+## Cache Memory (13)
+
+1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
+
+2. **(d) What is cache memory? Explain the concepts of (i) Cache hit and (ii) Cache miss.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1352]**
+
+3. **Write advantage and disadvantage of direct mapping and associative mapping between cache memory and main memory.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1330]**
+
+4. **How many total bits are required for a direct mapped cache with 16KB of data and 4-word blocks? Assuming a 32 bit address?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 421]**
+
+5. **Write Concept of cache memory in computer. How its change performance of computer?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 559]**
+
+6. **Suppose we have a 16 KB of data in a direct mapped cache with 4 word blocks. Determine the size of the tag, index and offset fields if we are using a 32-bit architecture.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 439]**
+
+7. **What is the use of cache memory?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
+8. **Some of the factors determine the performance of a computer system. Cache memory is one of them. Why cache memory is one of the factors to determine the performance of a computer system?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807]**
+
+9. **Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit. The average read access time in nanoseconds is ______.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
+
+10. **Cache memory কী কাজে ব্যবহৃত হয়? Compiler and Interpreater -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 880-881]**
+
+11. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951-952]**
+
+12. **Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+
+13. **6.3 Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+## Secondary Storage (HDD vs SSD) (11)
+
+1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
+2. **a) Define the term "SSD". Briefly describe the working principle of "SSD".** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1342]**
+
+3. **Write two SSD characteristics?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+4. **How can you define SSD?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+
+5. **(খ) Solid State Drives (SSD) এর কার্যপ্রণালী ও ব্যবহার লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 704]**
+
+6. **In a solid state drive data is sarved to a pool of NAND flash. NAND itself is made up of what are called floating gate transmission. How does floating gate transmission store 0 and 1?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808-809]**
+
+7. **Which of the following is the unit of Hard Disk Drive? (a) Megaharz (b) Kiloharz (c) Gigabyte (d) None** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+
+8. **Consider a magnetic disk consisting of 16 heads and 400 cylinders. This disk has four 100-cylinder zones with the cylinders in different zones containing 160, 200, 240. and 280 sectors, respectively. Assume that each sector contains 512 bytes, average seek time between adjacent cylinders is 1 msec, and the disk rotates at 7200 RPM. Calculate the (a) disk capacity (b) maximum data transfer rate.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+
+9. **Consider a disk pack with the following specifications- 16 surfaces, 128 tracks per surface, 256 sectors per track and 512 bytes per sector. Answer the following questions: (a) What is the capacity of disk pack? (b) If the format overhead is 32 bytes per sector, what is the formatted disk space? (c) If the disk is rotating at 3600 rpm, what is the data transfer rate?** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 924-925]**
+
+10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951]**
+
+11. **Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+
+## Multi-Core & Multi-Threading (5)
+
+1. **Core vs thread in networking?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
+
+2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
+
+3. **What is Hyper threading? What is the use of it?** **(BOF Assistant Programmer Exam: 2022 (MIST)) [compact it 733]**
+
+4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 808]**
+
+5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+
+## Assembly Language & Addressing Modes (5)
+
+1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
+   (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1424]**
+
+3. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
+
+4. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
+
+5. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+MOV AX, A534H এবং MOV AX, [A534H]
+
+## Instruction Pipelining & Hazards (5)
+
+1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
+
+2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** **(BPSC (Ministry) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+
+3. **(c) Fill in the gaps RISC or CISC:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 416]**
+   * (i) Pipelining is less efficient due to instruction complexity and variability ______
+   * (ii) Emphasis on hardware simplicity and efficiency ______
+   * (iii) Complex decoding due to variable instruction length ______
+   * (iv) Each instruction typically executes in a single clock cycle ______
+
+4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 299]**
+
+5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+## CPU Performance & Instruction Cycle (4)
 
 1. **There was a CPU cycle math** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 400]**
 
@@ -275,3 +260,18 @@ MOV AX, A534H এবং MOV AX, [A534H]
 3. **Operating system math: clock frequency 700MHz.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 852]**
 
 4. **(খ) Clock cycle কী? একটি মাইক্রো-প্রসেসরের speed 3.5 GHz বলতে কী বোঝায়?** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+## 8085 Microprocessor & Edge Computing (3)
+
+1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।
+   (b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
+
+2. **Intel 8085 ও Intel 8086 Microprocessor-এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি কত এবং কেন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 697]**
+
+3. **What is the difference between 8-bit (8085) and 16-bit (8086) microprocessor?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865-866]**
+
+## RISC vs CISC Architecture (2)
+
+1. **RISC stand for __________? Write two characteristics of it's?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
+
+2. **Difference between RISC and CISC.** **(NPCBL Executive Trainee (IT) Exam: 2022 (BUET)) [compact it 644]**

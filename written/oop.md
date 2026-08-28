@@ -3,61 +3,21 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism) | 46 |
-| 2 | [Java Programming & Methods](#java-programming--methods) | 11 |
-| 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling) | 7 |
-| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers) | 6 |
-| 5 | [Constructors & Destructors](#constructors--destructors) | 5 |
-| 6 | [Output Tracing & Recursion](#output-tracing--recursion) | 3 |
-| 7 | [Exception Handling](#exception-handling) | 3 |
-| 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions) | 2 |
-| 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes) | 2 |
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-46) | 46 |
+| 2 | [Java Programming & Methods](#java-programming--methods-11) | 11 |
+| 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-7) | 7 |
+| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-6) | 6 |
+| 5 | [Constructors & Destructors](#constructors--destructors-5) | 5 |
+| 6 | [Output Tracing & Recursion](#output-tracing--recursion-3) | 3 |
+| 7 | [Exception Handling](#exception-handling-3) | 3 |
+| 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-2) | 2 |
+| 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## Output Tracing & Recursion
-
-1. Consider the following Java program and determine the integer value printed by the execution of the main() method:
-```java
-class Test {
-    static int x = 5;
-    public static int fun(int n) {
-        if (n <= 1) {
-            return 1;
-        }
-        x = x + 2;
-        return fun(n - 1) + x;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(fun(3));
-    }
-}
-```
-[SO IT 25-07-2026]
-
-2. **(খ) কোন object-oriented programming language ব্যবহার করে একটি program লিখুন, যা recursive function ব্যবহার করে Fibonacci series প্রদান করবে।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
-3. **6.13 Consider the following Java program and determine the integer value printed by the execution of the main() method:** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
-```java
-class Test {
-    static int x = 5;
-    public static int fun(int n) {
-        if (n <= 1) {
-            return 1;
-        }
-        x = x + 2;
-        return fun(n - 1) + x;
-    }
-    public static void main(String[] args) {
-        System.out.println(fun(3));
-    }
-}
-```
-
-## OOP Concepts (Inheritance & Polymorphism)
+## OOP Concepts (Inheritance & Polymorphism) (46)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
@@ -185,76 +145,7 @@ public class main{
 
 46. **What is Object-Oriented Programming (OOP)? What are the main principles of OOP? What is the difference between Method Overloading and Method Overriding?** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
-## Class Design & Object-Oriented Modeling
-
-1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**
-
-2. **What are the built in classes?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
-
-3. **অথবা, (ক) উদাহরণসহ Class এবং Object এর মধ্যে পার্থক্য ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 602]**
-
-4. **(খ) উদাহরণসহ ক্লাস এবং অবজেক্ট এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
-
-5. **Define Class and Object in C++ with example.** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
-
-6. **What are the common activities on OOP design process?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 756]**
-
-7. **Write a programme to create an object of type batsman and calculate the average runs scored by the player.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 846-847]**
-
-## Encapsulation & Access Modifiers
-
-1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1456]**
-
-2. **Explain the various types of access specifiers.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 579]**
-
-3. **Which type of variable violates encapsulation rules?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-4. **Which members of base class cannot access to derived class?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
-
-5. **What are the various Access Specification in C++? Explain their purpose with are example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
-
-6. **How many specifiers are used in C++ programing?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
-
-## Constructors & Destructors
-
-1. **What is constructor function? Write the properties of it.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 505]**
-
-2. **Define copy constructor. What Static binding and Dynamic binding?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
-
-3. **What is the constructor invoked in OOP?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
-
-4. **What is constructor?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
-
-5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
-
-## C++ OOP Concepts & Friend Functions
-
-1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1355]**
-```cpp
-class myclass{
-    int num;
-public:
-    myclass (int i) {num = i;}
-};
-```
-
-2. **(ক) Friend Function কী? উহার সুবিধা অসুবিধাগুলো লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
-
-## Interfaces & Abstract Classes
-
-1. **Class/Interface implementation of code?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
-
-2. **An Abstract class Player with two sub classes Bowler and Batsman, Abstract class has one abstract method average, also have constructor and a string function that display name bowler or batsman. Batsman class implement abstract function average and display result, Batsman class have run and number match data. Now write a Java Program and show Batsman average run.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
-
-## Exception Handling
-
-1. **(b) What is exception? Explain how it can be used for debugging a program.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
-
-2. **What is difference between exception and error in Java?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 737]**
-
-3. **What is exception handling? Write with an example.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
-
-## Java Programming & Methods
+## Java Programming & Methods (11)
 
 1. **Write a Java Code which return a value.** **(Islami Bank PLC Quality Assurance (QA) Engineer Exam: 14.03.2025 (BUET)) [compact it 1334]**
 
@@ -292,3 +183,112 @@ Public class class B extends class A {
 10. **C# language এর একটি প্রোগ্রাম লিখুন?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1046]**
 
 11. **Write java program for calculate electricity bill using class and object.** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1047-1048]**
+
+## Class Design & Object-Oriented Modeling (7)
+
+1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 425]**
+
+2. **What are the built in classes?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 546]**
+
+3. **অথবা, (ক) উদাহরণসহ Class এবং Object এর মধ্যে পার্থক্য ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 602]**
+
+4. **(খ) উদাহরণসহ ক্লাস এবং অবজেক্ট এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 619]**
+
+5. **Define Class and Object in C++ with example.** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
+
+6. **What are the common activities on OOP design process?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 756]**
+
+7. **Write a programme to create an object of type batsman and calculate the average runs scored by the player.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 846-847]**
+
+## Encapsulation & Access Modifiers (6)
+
+1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1456]**
+
+2. **Explain the various types of access specifiers.** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 579]**
+
+3. **Which type of variable violates encapsulation rules?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+4. **Which members of base class cannot access to derived class?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+5. **What are the various Access Specification in C++? Explain their purpose with are example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 673]**
+
+6. **How many specifiers are used in C++ programing?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+## Constructors & Destructors (5)
+
+1. **What is constructor function? Write the properties of it.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 505]**
+
+2. **Define copy constructor. What Static binding and Dynamic binding?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
+
+3. **What is the constructor invoked in OOP?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 677]**
+
+4. **What is constructor?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
+
+## Output Tracing & Recursion (3)
+
+1. Consider the following Java program and determine the integer value printed by the execution of the main() method:
+```java
+class Test {
+    static int x = 5;
+    public static int fun(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        x = x + 2;
+        return fun(n - 1) + x;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fun(3));
+    }
+}
+```
+[SO IT 25-07-2026]
+
+2. **(খ) কোন object-oriented programming language ব্যবহার করে একটি program লিখুন, যা recursive function ব্যবহার করে Fibonacci series প্রদান করবে।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+3. **6.13 Consider the following Java program and determine the integer value printed by the execution of the main() method:** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+```java
+class Test {
+    static int x = 5;
+    public static int fun(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        x = x + 2;
+        return fun(n - 1) + x;
+    }
+    public static void main(String[] args) {
+        System.out.println(fun(3));
+    }
+}
+```
+
+## Exception Handling (3)
+
+1. **(b) What is exception? Explain how it can be used for debugging a program.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 695]**
+
+2. **What is difference between exception and error in Java?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 737]**
+
+3. **What is exception handling? Write with an example.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 738]**
+
+## C++ OOP Concepts & Friend Functions (2)
+
+1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1355]**
+```cpp
+class myclass{
+    int num;
+public:
+    myclass (int i) {num = i;}
+};
+```
+
+2. **(ক) Friend Function কী? উহার সুবিধা অসুবিধাগুলো লিখুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
+
+## Interfaces & Abstract Classes (2)
+
+1. **Class/Interface implementation of code?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1329]**
+
+2. **An Abstract class Player with two sub classes Bowler and Batsman, Abstract class has one abstract method average, also have constructor and a string function that display name bowler or batsman. Batsman class implement abstract function average and display result, Batsman class have run and number match data. Now write a Java Program and show Batsman average run.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**

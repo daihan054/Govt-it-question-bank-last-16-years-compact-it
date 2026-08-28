@@ -3,150 +3,21 @@
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates) | 27 |
-| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions) | 19 |
-| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux) | 18 |
-| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map) | 16 |
-| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem) | 13 |
-| 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops) | 9 |
-| 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos) | 5 |
-| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic) | 2 |
-| 9 | [Finite State Machines (FSM)](#finite-state-machines-fsm) | 1 |
+| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-27) | 27 |
+| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-19) | 19 |
+| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-18) | 18 |
+| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-16) | 16 |
+| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-13) | 13 |
+| 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-9) | 9 |
+| 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-5) | 5 |
+| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-2) | 2 |
+| 9 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Number Systems & Base Conversions
-
-1. **(a) Convert the following number:**
-   **i. Decimal number 9 to binary number.**
-   **ii. Octal number 2671 to decimal number.**
-   **iii. Octal number 756 to hexadecimal number.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1447]**
-
-2. **(b) Represent - 25 in 8 bit binary using 2's complement.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
-
-3. **ডেসিমেল ৬১ এর বাইনারি মান কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
-
-4. **$(\text{CDAB})_{16}$ কে অক্টাল এ রূপান্তর কর।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
-
-5. **Convert Decimal to Octal (423)_{10} and Decimal to Hexadecimal (3000)_{10}.** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 392]**
-
-6. **কোড কী? BCD এবং Binary কোডের মধ্যে পার্থক্য লিখুন। তিনভিত্তিক সংখ্যা পদ্ধতি সম্পর্কে ব্যাখ্যা করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 407]**
-
-7. **(9\text{D.AB}6)_{16} ও (306.51)_{10} যোগ করুন এবং ফলাফল বাইনারীতে প্রকাশ করুন। (110101) কোন সংখ্যা পদ্ধতির সংখ্যা হতে পারে বলে মনে করেন?** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 407]**
-
-8. **Explain Binary digits, logical levels and digital waveforms using timing diagram.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
-
-9. **Convert: (1741)_{10} = (?)_{16}** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
-
-10. **Number Conversion: (i) (4673)_8 = (?)_{16} (ii) (7491)_{10} = (?)_{16}** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
-
-11. **Computer এর Binary পদ্ধতি কোন সংখ্যার উপর প্রতিষ্ঠিত?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
-
-12. **BCD code – এ কতগুলি বিট থাকে?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
-
-13. **(b) Convert the following Octal number into Decimal and Hexadecimal: (651)_8** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891]**
-
-14. **Binary Number system এর Base কত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 943]**
-
-15. **(i) (1\text{AC})_{16} = (?)_{2}\text{ and }(?)_{10}** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 974]**
-
-16. **(ii) What is the Excess-3 code of 1010?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 974]**
-
-17. **There are different number systems. i. Convert (10010.101)_2 = (?)_{10} ii. (543)_{10} = (?)_{16}** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 989]**
-
-18. **Convert (343)_{10} to binary and Hexadecimal.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1034]**
-
-19. **(1111001101011)_2 কে অক্টাল ও হেক্সাডেসিম্যালে রূপান্তর করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038]**
-
-## 2's Complement & Binary Arithmetic
-
-1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
-
-2. **BCD Addition: 00010011 + 00100110** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 644]**
-
-## Karnaugh Map (K-Map)
-
-1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
-
-2. **Simplification using K-map?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
-
-3. **(a) Consider the following logic circuit-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
- * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
- * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
-
-4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
-
-5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
-
-6. **(b) Simplify the following Boolean function using K-map.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
-
-7. **Minimize the following function in SOP minimal form using K-map:** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
-
-8. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
-
-9. **Simplify using K-map with logic circuit.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
-
-10. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 798]**
-
-11. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
-
-12. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 879]**
-
-13. **Draw the k-map for the equation:** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
-   F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
-
-14. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1010-1011]**
-
-15. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038-1039]**
-
-16. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
-
-## Logic Families (TTL vs CMOS)
-
-1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
- * **(i) Speed**
- * **(ii) Noise**
- * **(iii) Power consumption.**
-
-2. **Describe the important characteristics of digital IC's.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 556]**
-
-3. **Difference between Analog and Digital Circuit.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 873]**
-
-4. **(c) What is fan-in and fan out?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891]**
-
-5. **Sources of transient fault and permanent fault in a digital system consists of hardware and software? Example based on Hardware and software.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]**
-
-## Boolean Algebra & De Morgan’s Theorem
-
-1. **(a) State De-Morgan’s law with an appropriate example.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
-
-2. **AB + (A(\overline{BC}))(AC + \overline{B}C)** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
-
-3. **Simplify Y = A\bar{B} + \overline{(\bar{A} + B)}C in digital logic design.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
-
-4. **X+\bar{X}Y = ?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
-
-5. **(ক) নিম্নলিখিত Boolean Function টি সংক্ষিপ্ত আকারে লিখুন: F(A, B, C, D) = \bar{A}\,\bar{B}\bar{C} + \bar{B}C\bar{D} + \bar{A}\bar{B}C\bar{D} + A\bar{B}\bar{C}** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 773]**
-
-6. **(b) Use Algebraic manipulation to convert the following equation to sum-of-product form: y(z + \bar{w}) + x(\bar{z} + \bar{y})\,\bar{w} + (zw)(\overline{xy})** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
-
-7. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
-
-8. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 876]**
-
-9. **(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 890]**
-
-10. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 890-891]**
-
-11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 935]**
-
-12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 972]**
-
-13. **De-Morgans Law গুলো বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1022]**
-
-## Logic Gates & Universal Gates
+## Logic Gates & Universal Gates (27)
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
@@ -202,7 +73,50 @@
 
 27. **Design 3 input NAND gate and 2 input XOR gate using 2 input NAND gate.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1034]**
 
-## Combinational Circuits (Adders, Encoders, MUX)
+## Number Systems & Base Conversions (19)
+
+1. **(a) Convert the following number:**
+   **i. Decimal number 9 to binary number.**
+   **ii. Octal number 2671 to decimal number.**
+   **iii. Octal number 756 to hexadecimal number.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1447]**
+
+2. **(b) Represent - 25 in 8 bit binary using 2's complement.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+
+3. **ডেসিমেল ৬১ এর বাইনারি মান কত?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+
+4. **$(\text{CDAB})_{16}$ কে অক্টাল এ রূপান্তর কর।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
+
+5. **Convert Decimal to Octal (423)_{10} and Decimal to Hexadecimal (3000)_{10}.** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 392]**
+
+6. **কোড কী? BCD এবং Binary কোডের মধ্যে পার্থক্য লিখুন। তিনভিত্তিক সংখ্যা পদ্ধতি সম্পর্কে ব্যাখ্যা করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 407]**
+
+7. **(9\text{D.AB}6)_{16} ও (306.51)_{10} যোগ করুন এবং ফলাফল বাইনারীতে প্রকাশ করুন। (110101) কোন সংখ্যা পদ্ধতির সংখ্যা হতে পারে বলে মনে করেন?** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 407]**
+
+8. **Explain Binary digits, logical levels and digital waveforms using timing diagram.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
+
+9. **Convert: (1741)_{10} = (?)_{16}** **(DESCO Assistant Engineer (CSE) Exam: 10.09.2022 (BUET)) [compact it 701]**
+
+10. **Number Conversion: (i) (4673)_8 = (?)_{16} (ii) (7491)_{10} = (?)_{16}** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
+
+11. **Computer এর Binary পদ্ধতি কোন সংখ্যার উপর প্রতিষ্ঠিত?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+
+12. **BCD code – এ কতগুলি বিট থাকে?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+
+13. **(b) Convert the following Octal number into Decimal and Hexadecimal: (651)_8** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891]**
+
+14. **Binary Number system এর Base কত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 943]**
+
+15. **(i) (1\text{AC})_{16} = (?)_{2}\text{ and }(?)_{10}** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 974]**
+
+16. **(ii) What is the Excess-3 code of 1010?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 974]**
+
+17. **There are different number systems. i. Convert (10010.101)_2 = (?)_{10} ii. (543)_{10} = (?)_{16}** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 989]**
+
+18. **Convert (343)_{10} to binary and Hexadecimal.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1034]**
+
+19. **(1111001101011)_2 কে অক্টাল ও হেক্সাডেসিম্যালে রূপান্তর করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038]**
+
+## Combinational Circuits (Adders, Encoders, MUX) (18)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
@@ -252,7 +166,72 @@
 
 18. **4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
 
-## Sequential Circuits (Latches & Flip-Flops)
+## Karnaugh Map (K-Map) (16)
+
+1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
+
+2. **Simplification using K-map?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
+
+3. **(a) Consider the following logic circuit-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+ * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
+ * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
+
+4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
+
+5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
+
+6. **(b) Simplify the following Boolean function using K-map.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
+
+7. **Minimize the following function in SOP minimal form using K-map:** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
+
+8. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
+
+9. **Simplify using K-map with logic circuit.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
+
+10. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 798]**
+
+11. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
+
+12. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 879]**
+
+13. **Draw the k-map for the equation:** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
+   F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
+
+14. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1010-1011]**
+
+15. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038-1039]**
+
+16. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+## Boolean Algebra & De Morgan’s Theorem (13)
+
+1. **(a) State De-Morgan’s law with an appropriate example.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
+
+2. **AB + (A(\overline{BC}))(AC + \overline{B}C)** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
+
+3. **Simplify Y = A\bar{B} + \overline{(\bar{A} + B)}C in digital logic design.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 671]**
+
+4. **X+\bar{X}Y = ?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+
+5. **(ক) নিম্নলিখিত Boolean Function টি সংক্ষিপ্ত আকারে লিখুন: F(A, B, C, D) = \bar{A}\,\bar{B}\bar{C} + \bar{B}C\bar{D} + \bar{A}\bar{B}C\bar{D} + A\bar{B}\bar{C}** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 773]**
+
+6. **(b) Use Algebraic manipulation to convert the following equation to sum-of-product form: y(z + \bar{w}) + x(\bar{z} + \bar{y})\,\bar{w} + (zw)(\overline{xy})** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 797]**
+
+7. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867]**
+
+8. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 876]**
+
+9. **(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 890]**
+
+10. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 890-891]**
+
+11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 935]**
+
+12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 972]**
+
+13. **De-Morgans Law গুলো বর্ণনা করুন।** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1022]**
+
+## Sequential Circuits (Latches & Flip-Flops) (9)
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
 
@@ -272,6 +251,27 @@
 
 9. **MOD-6 বাইনারি কাউন্টার এর Block Diagram অংকন করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1039]**
 
-## Finite State Machines (FSM)
+## Logic Families (TTL vs CMOS) (5)
+
+1. **(c) Compare TTL and CMOS logic family in terms of-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1351]**
+ * **(i) Speed**
+ * **(ii) Noise**
+ * **(iii) Power consumption.**
+
+2. **Describe the important characteristics of digital IC's.** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 556]**
+
+3. **Difference between Analog and Digital Circuit.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 873]**
+
+4. **(c) What is fan-in and fan out?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 891]**
+
+5. **Sources of transient fault and permanent fault in a digital system consists of hardware and software? Example based on Hardware and software.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]**
+
+## 2's Complement & Binary Arithmetic (2)
+
+1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
+
+2. **BCD Addition: 00010011 + 00100110** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 644]**
+
+## Finite State Machines (FSM) (1)
 
 1. **A traffic signal cycles from RED to YELLOW, YELLOW to GREEN and GREEN to RED. In each cycle RED is turned for 100 seconds, YELLOW is turned for 40 seconds and GREEN is turned for 80 seconds. The traffic has to be implemented using FSM. The only input to this FSM is a clock of 10 second period. The minimum number of flip-flops require to implement this FSM is?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1455]**
