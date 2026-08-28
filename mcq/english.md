@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 279 questions
+**Table of Contents** — 5 subtopics · 278 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [English Grammar](#english-grammar-163) | 163 |
-| 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-58) | 58 |
+| 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-57) | 57 |
 | 3 | [Idioms & Phrases](#idioms--phrases-24) | 24 |
 | 4 | [English Literature](#english-literature-17) | 17 |
 | 5 | [Spelling](#spelling-17) | 17 |
@@ -981,7 +981,7 @@
    (c) for
    (d) in
 
-## Vocabulary, Synonyms & Antonyms (58)
+## Vocabulary, Synonyms & Antonyms (57)
 
 1. **What is the antonym of 'famous '?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 4]**
    ক. Opeque
@@ -1158,18 +1158,12 @@
    (গ) Hymn
    (ঘ) Dirge
 
-32. **The word ‘Imbibe’ means-** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+32. **The word ‘Imbibe’ means-** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (a) to learn
    (b) to cry
    (c) to drink
    (d) to acquire
    **Ans: c**
-
-33. **The word ‘Imbibe’ means-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (a) to learn
-   (b) to cry
-   (c) to drink
-   (d) to acquire
 
 34. **Synonym of "Reverently" is ______ ?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 63]**
    (ক) Adversely

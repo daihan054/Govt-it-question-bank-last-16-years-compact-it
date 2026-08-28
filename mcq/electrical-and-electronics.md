@@ -1,18 +1,18 @@
 <!-- TOC START -->
-**Table of Contents** — 4 subtopics · 130 questions
+**Table of Contents** — 4 subtopics · 116 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Circuits & Components](#circuits--components-96) | 96 |
+| 1 | [Circuits & Components](#circuits--components-83) | 83 |
 | 2 | [Power Systems & Generation](#power-systems--generation-18) | 18 |
-| 3 | [Signals & Systems](#signals--systems-12) | 12 |
+| 3 | [Signals & Systems](#signals--systems-11) | 11 |
 | 4 | [Diodes & Rectifiers](#diodes--rectifiers-4) | 4 |
 
 <!-- TOC END -->
 
 ---
 
-## Circuits & Components (96)
+## Circuits & Components (83)
 
 1. **What does inductance depend on?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xix]**
    (a) Number of turns in the coil
@@ -158,42 +158,42 @@
    (গ) become half
    (ঘ) remain the same
 
-25. **কোন পরিবাহীর তারের ব্যাস দ্বিগুণ এবং দৈর্ঘ্য চারগুণ করা হলে উহার রোধ কত হবে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+25. **কোন পরিবাহীর তারের ব্যাস দ্বিগুণ এবং দৈর্ঘ্য চারগুণ করা হলে উহার রোধ কত হবে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) অর্ধেক
    (খ) দ্বিগুণ
    (গ) চারগুণ
    (ঘ) একই থাকবে
    **Ans: গ**
 
-26. **একটি সূষম সাইন তরঙ্গের পিক-টু-পিক ভোল্টেজ ২০ ভোল্ট হলে-** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+26. **একটি সূষম সাইন তরঙ্গের পিক-টু-পিক ভোল্টেজ ২০ ভোল্ট হলে-** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) তরঙ্গটির গড়মান ১০ ভোল্ট
    (খ) তরঙ্গটির গড়মান ৭.০৭ ভোল্ট
    (গ) তরঙ্গটির আর.এম.এস মান ৬.৩৭ ভোল্ট
    (ঘ) তরঙ্গটির আর.এম.এস মান ১৪.১৪ ভোল্ট
    **Ans: ঘ**
 
-27. **নন-ইনভারটিং অপারেশনাল অ্যাম্প্লিফায়ারের ইনপুট রেজিস্টেন্স ১০ কিলো ওহম এবং ফিডব্যাক রেজিস্টেন্স ২০ কিলো ওহম হলে ক্লোজড-লুপ গেইন কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+27. **নন-ইনভারটিং অপারেশনাল অ্যাম্প্লিফায়ারের ইনপুট রেজিস্টেন্স ১০ কিলো ওহম এবং ফিডব্যাক রেজিস্টেন্স ২০ কিলো ওহম হলে ক্লোজড-লুপ গেইন কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) ১
    (খ) ২
    (গ) ৩
    (ঘ) ৪
    **Ans: গ**
 
-28. **১ পিকো ফ্যারাডে = কত ফ্যারাডে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+28. **১ পিকো ফ্যারাডে = কত ফ্যারাডে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) 10^{-9}
    (খ) 10^{-10}
    (গ) 10^{-11}
    (ঘ) 10^{-12}
    **Ans: ঘ**
 
-29. **পাইজোইলেক্ট্রিক ইফেক্টও কারণ কি?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+29. **পাইজোইলেক্ট্রিক ইফেক্টও কারণ কি?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) ক্রিস্টাল উপর ম্যাগনেটিক ফিল্ডের প্রভাব
    (খ) দুটি ক্রিস্টালের সংযোগস্থলে তাপ প্রভাব
    (গ) ক্রিস্টালের উপর চাপ প্রয়োগ
    (ঘ) ক্রিস্টালের সাথে ভেজাল মিশ্রণ
    **Ans: গ**
 
-30. **একটি তরঙ্গের পিরিয়ড ১০ মিলি সেকেন্ড হলে এটির ফ্রিকুয়েন্সি কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+30. **একটি তরঙ্গের পিরিয়ড ১০ মিলি সেকেন্ড হলে এটির ফ্রিকুয়েন্সি কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) ১০ হার্টজ
    (খ) ২০ হার্টজ
    (গ) ৫০ হার্টজ
@@ -214,21 +214,21 @@
    (ঘ) সোলার
    **Ans: ক**
 
-33. **একটি ডায়োডে ডিপলেশন লেয়ার কখন তৈরি হয়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+33. **একটি ডায়োডে ডিপলেশন লেয়ার কখন তৈরি হয়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) ফরওয়ার্ড বায়াস করলে
    (খ) রিভার্স বায়াস করলে
    (গ) ডায়োড তৈরির সময়
    (ঘ) তাপমাত্রা বাড়লে
    **Ans: গ**
 
-34. **ব্রেকডাউন ঘটলে জিনার ডায়োডের ক্ষেত্রে কোনটি প্রায় অপরিবর্তিত থাকে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+34. **ব্রেকডাউন ঘটলে জিনার ডায়োডের ক্ষেত্রে কোনটি প্রায় অপরিবর্তিত থাকে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) ভোল্টেজ
    (খ) কারেন্ট
    (গ) ইম্পিডেন্স
    (ঘ) ক্যাপাসিটেন্স
    **Ans: ক**
 
-35. **ফুল-ওয়েভ রেক্টিফায়ারের কর্মদক্ষতা কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+35. **ফুল-ওয়েভ রেক্টিফায়ারের কর্মদক্ষতা কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) ৪০.৬%
    (খ) ৮১.২%
    (গ) ৯১.৬%
@@ -237,53 +237,9 @@
 
 36. **ট্রান্সফরমারের কোন উইন্ডিং এ বেশি প্যাঁচ থাকে? সেকন্ডারি উইন্ডিং** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
 
-37. **নিম্নের কোনটি কমানোর জন্য ট্রান্সফরমারের কোর লেমিনেটিং করা হয়? এডি কারেন্ট লস** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
-
-38. **নিম্নের কোনটি চার লেয়ার বিশিষ্ট ডিভাইস? সিলিকন কন্ট্রোল রেক্টিফায়ার** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
-
 39. **জাংশন ফিল্ড ইফেক্ট ট্রানজিস্টর- কারেন্ট নিয়ন্ত্রিত** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
 
-40. **ইমিটার ফলোয়ার ব্যবহারের প্রধান উদ্দেশ্য কি?- কারেন্ট গেইন** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
-
-41. **ট্রানজিস্টরের সার্কিট সঠিকভাবে বায়াসিং করা না হলে- আউটপুট সিগন্যাল বিকৃত হতে পারে** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
-
 42. **দুইটি সমান্তরাল পরিবাহী কে কোন অপরিবাহী দ্বারা পৃথক করা হলে তাকে কি বলে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-
-43. **কোন পরিবাহীর তারের ব্যাস দ্বিগুণ এবং দৈর্ঘ্য চারগুণ করা হলে উহার রোধ কত হবে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) অর্ধেক
-   (খ) দ্বিগুণ
-   (গ) চারগুণ
-   (ঘ) একই থাকবে
-
-44. **একটি সুষম সাইন তরঙ্গের পিক-টু-পিক ভোল্টেজ ২০ ভোল্ট হলে-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) তরঙ্গটির গড়মান ১০ ভোল্ট
-   (খ) তরঙ্গটির গড়মান ৭.০৭ ভোল্ট
-   (গ) তরঙ্গটির আর.এম.এস মান ৬.৩৭ ভোল্ট
-   (ঘ) তরঙ্গটির আর.এম.এস মান ১৪.১৪ ভোল্ট
-
-45. **নন-ইনভারটিং অপারেশনাল অ্যাম্প্লিফায়ারের ইনপুট রেজিস্টেন্স ১০ কিলো ওহম এবং ফিডব্যাক রেজিস্টেন্স ২০ কিলো ওহম হলে ক্লোজড-লুপ গেইন কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) ১
-   (খ) ২
-   (গ) ৩
-   (ঘ) ৪
-
-46. **১ পিকো ফ্যারাডে = কত ফ্যারাডে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) 10^{-9}
-   (খ) 10^{-10}
-   (গ) 10^{-11}
-   (ঘ) 10^{-12}
-
-47. **পাইজোইলেকট্রিক ইফেক্টও কারণ কি?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) ক্রিস্টাল উপর ম্যাগনেটিক ফিল্ডের প্রভাব
-   (খ) দুটি ক্রিস্টালের সংযোগস্থলে তাপ প্রভাব
-   (গ) ক্রিস্টালের উপর চাপ প্রয়োগ
-   (ঘ) ক্রিস্টালের সাথে ভেজাল মিশ্রণ
-
-48. **একটি তরঙ্গের পিরিয়ড ১০ মিলি সেকেন্ড হলে এটির ফ্রিকুয়েন্সি কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) ১০ হার্টজ
-   (খ) ২০ হার্টজ
-   (গ) ৫০ হার্টজ
-   (ঘ) ১০০ হার্টজ
 
 49. **ইন্ডাক্টরের ইন্ডাক্টেন্স নিম্নের কোনটির উপর নির্ভর করে না?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) ব্যবহৃত কোরের প্রস্থচ্ছেদের ক্ষেত্রফল
@@ -297,24 +253,6 @@
    (গ) লোড এসিড
    (ঘ) সোলার
 
-51. **একটি ডায়োডে ডিপলেশন লেয়ার কখন তৈরি হয়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   (ক) ফরওয়ার্ড বায়াস করলে
-   (খ) রিভার্স বায়াস করলে
-   (গ) ডায়োড তৈরির সময়
-   (ঘ) তাপমাত্রা বাড়লে
-
-52. **ব্রেকডাউন ঘটলে জিনার ডায়োডের ক্ষেত্রে কোনটি প্রায় অপরিবর্তিত থাকে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   (ক) ভোল্টেজ
-   (খ) কারেন্ট
-   (গ) ইম্পিডেন্স
-   (ঘ) ক্যাপাসিটেন্স
-
-53. **ফুল-ওয়েভ রেক্টিফায়ারের কর্মদক্ষতা কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   (ক) ৪০.৬%
-   (খ) ৮১.২%
-   (গ) ৯১.৬%
-   (ঘ) ১০০%
-
 54. **বাইপোলার জংশন ট্রানজিস্টরের-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) মাঝের লেয়ারটি সর্বদা N টাইপ
    (খ) ইমিটার লেয়ার সবচেয়ে বেশি প্রশস্ত
@@ -324,19 +262,19 @@
 55. **ট্রান্সফরমারের কোন উইন্ডিং এ বেশি প্যাঁচ থাকে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    **Ans:** সেকেন্ডারি উইন্ডিং
 
-56. **নিম্নের কোনটি কমানোর জন্য ট্রান্সফরমারের কোর লেমিনেটিং করা হয়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+56. **নিম্নের কোনটি কমানোর জন্য ট্রান্সফরমারের কোর লেমিনেটিং করা হয়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** এডি কারেন্ট লস
 
-57. **নিম্নের কোনটি চার লেয়ার বিশিষ্ট ডিভাইস?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+57. **নিম্নের কোনটি চার লেয়ার বিশিষ্ট ডিভাইস?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** সিলিকন কন্ট্রোল রেক্টিফায়ার
 
 58. **জংশন ফিল্ড ইফেক্ট ট্রানজিস্টর-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    **Ans:** কারেন্ট নিয়ন্ত্রিত
 
-59. **ইমিটার ফলোয়ার ব্যবহারের প্রধান উদ্দেশ্য কি?-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+59. **ইমিটার ফলোয়ার ব্যবহারের প্রধান উদ্দেশ্য কি?-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** কারেন্ট গেইন
 
-60. **ট্রানজিস্টরের সার্কিট সঠিকভাবে বায়াসিং করা না হলে-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+60. **ট্রানজিস্টরের সার্কিট সঠিকভাবে বায়াসিং করা না হলে-** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** আউটপুট সিগন্যাল বিকৃত হতে পারে
 
 61. **_______ helps prevent power surges.** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
@@ -653,7 +591,7 @@
    (c) Provides smoother output
    (d) Convert the induced AC to DC
 
-## Signals & Systems (12)
+## Signals & Systems (11)
 
 1. **The transfer function of an LTI system is given as \frac{1}{s+2}. What is the value of its impulse response at t=0?** **(BPSC (Ministry) Assistant Programmer Exam: 21.09.2022) [compact it 52]**
    (ক) 0.0
@@ -679,18 +617,12 @@
    (গ) It is zero for electric flux densities
    (ঘ) It is zero for magnetic flux densities.
 
-5. **অ্যাম্প্লিচিউড মডুলেশনে কি ঘটে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+5. **অ্যাম্প্লিচিউড মডুলেশনে কি ঘটে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) সিগন্যালের অ্যাম্প্লিচিউড পরিবর্তিত হয়
    (খ) সিগন্যালের ফ্রিকুয়েন্সি পরিবর্তিত হয়
    (গ) ক্যারিয়ার অ্যাম্প্লিচিউড পরিবর্তিত হয়
    (ঘ) ক্যারিয়ার ফ্রিকুয়েন্সি পরিবর্তিত হয়
    **Ans: গ**
-
-6. **অ্যাম্প্লিচিউড মডুলেশনে কি ঘটে?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) সিগন্যালের অ্যাম্প্লিচিউড পরিবর্তিত হয়
-   (খ) সিগন্যালের ফ্রিকুয়েন্সি পরিবর্তিত হয়
-   (গ) ক্যারিয়ার অ্যাম্প্লিচিউড পরিবর্তিত হয়
-   (ঘ) ক্যারিয়ার ফ্রিকুয়েন্সি পরিবর্তিত হয়
 
 7. **ঢাকা বেতার কেন্দ্র মিডিয়াম ওয়েভে 630Hz এ অনুষ্ঠান সম্প্রচার করে। রেডিও তরঙ্গে বেগ 3 \times 10^8\text{ ms}^{-1} হলে তরঙ্গ। দৈর্ঘ্য কত হবে?** **(BTRC Sub-Assistant Director (Tech.) Exam: 2021 (IBA)) [compact it 148]**
    A. 476190m

@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 145 questions
+**Table of Contents** — 6 subtopics · 143 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-42) | 42 |
-| 2 | [Software Types & Classification](#software-types--classification-41) | 41 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-41) | 41 |
+| 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
 | 5 | [Acronyms & Abbreviations](#acronyms--abbreviations-13) | 13 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (42)
+## Hardware Components & Peripherals (41)
 
 1. **The Expansion cards are inserted into ______ in a computer.** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
    (a) Slots of CPU
@@ -64,12 +64,6 @@
    b) Use a meter to check the CRT and internal circuitry for continuity
    c) Power down the monitor, then turn it on again to see if that corrects the problem
    d) Power down the computer, then turn it on a pain to see if that corrects the problem
-
-9. **Which is wrong statement for BIOS of a computer?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
-   a) Connect microprocessor and I/O
-   b) Manages data flow
-   c) Loads the operating system
-   d) Provide storage
 
 10. **Most PCs give a single beep on boot up to indicate that the hardware is ok. If you do not get any beep, then what will be the first thing to check?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
    a) System board
@@ -137,7 +131,7 @@
    C) electron
    D) electrodes
 
-21. **Which one is wrong statement for BIOS of a computer?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]**
+21. **Which one is wrong statement for BIOS of a computer?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 181]** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 130]**
    a) Connect microprocessor and I/O
    b) Manages data flow
    c) Loads the operating system
@@ -269,7 +263,7 @@
    c. Disabling the power system
    d. Disabling some of driver software
 
-## Software Types & Classification (41)
+## Software Types & Classification (40)
 
 1. **নিচের কোনটি Browser নয়?** **(BTCL Junior Assistant Manager (JAM) Exam: 2022 (BUET)) [compact it 60]**
    a) Chrome
@@ -457,13 +451,7 @@
    C) HTML 5
    D) Adobe Flash
 
-32. **Which one of the following is not a type of Web search engine?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
-   A) Computer-created
-   B) Human-organized
-   C) Hybrid
-   D) Portal
-
-33. **Which of the following is not a type of Web search engine?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+32. **Which one of the following is not a type of Web search engine?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
    A) Computer-created
    B) Human-organized
    C) Hybrid

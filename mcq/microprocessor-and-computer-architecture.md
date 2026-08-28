@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 87 questions
+**Table of Contents** — 5 subtopics · 85 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [CPU & Registers](#cpu--registers-36) | 36 |
-| 2 | [Memory Hierarchy](#memory-hierarchy-29) | 29 |
+| 1 | [CPU & Registers](#cpu--registers-35) | 35 |
+| 2 | [Memory Hierarchy](#memory-hierarchy-28) | 28 |
 | 3 | [Secondary Storage (HDD & Disk Organization)](#secondary-storage-hdd--disk-organization-13) | 13 |
 | 4 | [RAID & Storage Architecture](#raid--storage-architecture-5) | 5 |
 | 5 | [Assembly Language & Machine Code](#assembly-language--machine-code-4) | 4 |
@@ -13,7 +13,7 @@
 
 ---
 
-## CPU & Registers (36)
+## CPU & Registers (35)
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
    (a) ALU
@@ -177,7 +177,7 @@
    C) Universal Serial Bits
    D) Universal Series Bits
 
-28. **Compared to CISC and RISC, processors (at the same clock) are -----** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
+28. **Compared to CISC and RISC, processors (at the same clock) are -----** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
    A) Faster
    B) slower
    C) similar
@@ -194,12 +194,6 @@
    B) PC
    C) General registers
    D) Accumulator
-
-31. **Compared to CISC, RISC processors (at the same clock) are-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
-   A) faster
-   B) slower
-   C) similar
-   D) undefined
 
 32. **The word length of a computer is measured in-** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 241]**
    A) Bytes
@@ -231,7 +225,7 @@
    c. at same speed
    d. none
 
-## Memory Hierarchy (29)
+## Memory Hierarchy (28)
 
 1. **Considering computer memory speed, which one is correct order from highest to lowest?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 12]**
    (a) RAM>Cache>Register SSD HDD
@@ -359,7 +353,7 @@
    C) Both A & B
    D) None
 
-22. **Which is the faster memory?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]**
+22. **Which is the faster memory?** **(DESCO Assistant Engineer (CSE) Exam: 2016) [compact it 257]** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
    a. RAM
    b. Secondary memory
    c. DRAM
@@ -394,12 +388,6 @@
    B) DRAM
    C) ROM
    D) All of them
-
-28. **Which one is faster memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 253]**
-   A) RAM
-   B) Secondary Memory
-   C) DRAM
-   D) Cache
 
 29. **Which memory is called as primary memory?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
    A) Hard Disk

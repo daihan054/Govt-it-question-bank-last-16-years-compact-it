@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 305 questions
+**Table of Contents** — 13 subtopics · 302 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Application Layer Protocols](#application-layer-protocols-59) | 59 |
-| 2 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-58) | 58 |
+| 1 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
+| 2 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-57) | 57 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
-| 5 | [Wireless & Mobile Communication](#wireless--mobile-communication-24) | 24 |
+| 5 | [Wireless & Mobile Communication](#wireless--mobile-communication-23) | 23 |
 | 6 | [Data Transmission & Modes](#data-transmission--modes-16) | 16 |
 | 7 | [OSI & TCP-IP Model](#osi--tcp-ip-model-16) | 16 |
 | 8 | [Multiplexing & Data Rate](#multiplexing--data-rate-15) | 15 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Application Layer Protocols (59)
+## Application Layer Protocols (58)
 
 1. **Expansion of FTP is _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
    a) Fine Transfer Protocol
@@ -279,7 +279,7 @@
    C) tracert 192.168.1.1
    D) ftp 192.168.1.1
 
-43. **Which of the following protocols uses both TCP and UDP ports?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+43. **Which of the following protocols uses both TCP and UDP ports?** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
    A) SMTP
    B) Telnet
    C) FTP
@@ -308,12 +308,6 @@
    B) Database server
    C) DNS server
    D) Proxy Server
-
-48. **Which of the following protocol uses both TCP and UDP ports?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
-   A) SMTP
-   B) telnet
-   C) FTP
-   D) DNS
 
 49. **Which of the following TCP/IP address constitute the loopback address?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
    A) 1.1.1.1
@@ -381,7 +375,7 @@
    c. Variable Optical Internet Protocol
    d. None of these
 
-## Networking Fundamentals & Terminology (58)
+## Networking Fundamentals & Terminology (57)
 
 1. **Set of rules is called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 6]**
    a) domain
@@ -503,7 +497,7 @@
    C) SNMP
    D) SMTP
 
-19. **A path for carrying signals between a source and a destination is known as-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]**
+19. **A path for carrying signals between a source and a destination is known as-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 206]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 248]** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
    A) Router
    B) Channel
    C) Link
@@ -526,12 +520,6 @@
    B) Fiber Optic
    C) Twisted Pair
    D) Radio Link
-
-23. **A path for carrying signals between a source and destination is known as-** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]**
-   A) Router
-   B) Channel
-   C) Link
-   D) Block
 
 24. **Which of the standard protocol for network management features?** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 216]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 250]**
    A) SNMP
@@ -1209,7 +1197,7 @@
    c. 255.255.255.0
    d. 255.255.255.240
 
-## Wireless & Mobile Communication (24)
+## Wireless & Mobile Communication (23)
 
 1. **Bluetooth is a type of radio wave information transmission system that is good for about-** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 17]**
    (a) 30 feet
@@ -1226,18 +1214,12 @@
    c) WiFi
    d) Bluetooth
 
-4. **VSAT বলতে বুঝায়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+4. **VSAT বলতে বুঝায়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) Virtual Small Aperture Satellite
    (খ) Very Small Aperture Terminal
    (গ) Very Small Application Terminal
    (ঘ) Vertical Satellite
    **Ans: খ**
-
-5. **VSAT বলতে বুঝায়?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   (ক) Virtual Small Aperture Satellite
-   (খ) Very Small Aperture Terminal
-   (গ) Very Small Application Terminal
-   (ঘ) Vertical Satellite
 
 6. **Which one of the following is false with respect to 4G and 5G cellular network?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 100]**
    (a) 5G supports faster bandwidth compared to 4G.

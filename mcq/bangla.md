@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 278 questions
+**Table of Contents** — 5 subtopics · 277 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [বাংলা ব্যাকরণ](#বাংলা-ব্যাকরণ-153) | 153 |
-| 2 | [বাংলা সাহিত্য](#বাংলা-সাহিত্য-108) | 108 |
+| 2 | [বাংলা সাহিত্য](#বাংলা-সাহিত্য-107) | 107 |
 | 3 | [বাগধারা ও প্রবাদ](#বাগধারা-ও-প্রবাদ-11) | 11 |
 | 4 | [এক কথায় প্রকাশ](#এক-কথায়-প্রকাশ-5) | 5 |
 | 5 | [বাংলা ভাষা বিষয়ক তথ্য](#বাংলা-ভাষা-বিষয়ক-তথ্য-1) | 1 |
@@ -890,7 +890,7 @@
    (c) সংলাপের অনুপযোগী
    (d) শব্দবিন্যাস সুনির্দিষ্ট
 
-## বাংলা সাহিত্য (108)
+## বাংলা সাহিত্য (107)
 
 1. **মীর মশাররফ হোসেনের “বিষাদ সিন্ধু” একটি-** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 3]**
    ক. কাব্যগ্রন্থ
@@ -1258,9 +1258,7 @@
    ঘ) ১৯১০
    **Ans: ঘ**
 
-65. **ইসলামের ইতিহাস ও ঐতিহ্য কোন কাব্যের উপজীব্য? সাত সাগরের মাঝি- ফররুখ আহমদ** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
-
-66. **ইসলামের ইতিহাস ও ঐতিহ্য কোন কাব্যের উপজীব্য?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
+66. **ইসলামের ইতিহাস ও ঐতিহ্য কোন কাব্যের উপজীব্য?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
    **Ans:** সাত সাগরের মাঝি- ফররুখ আহমদ
 
 67. **কোনটি জসিম উদ্দিনের নাটক?** **(BCIC Assistant Programmer Exam: 2022 (BUET)) [compact it 61]**

@@ -1,20 +1,20 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every MCQ paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2781** questions.
+Sorted by count, highest first. Total **2742** questions.
 
 ## IT questions
 
-Total: **1649** questions.
+Total: **1617** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **305** |
-| | Application Layer Protocols | 59 |
-| | Networking Fundamentals & Terminology | 58 |
+| **Computer Networks** | **— all subcategories —** | **302** |
+| | Application Layer Protocols | 58 |
+| | Networking Fundamentals & Terminology | 57 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
-| | Wireless & Mobile Communication | 24 |
+| | Wireless & Mobile Communication | 23 |
 | | Data Transmission & Modes | 16 |
 | | OSI & TCP-IP Model | 16 |
 | | Multiplexing & Data Rate | 15 |
@@ -37,17 +37,17 @@ Total: **1649** questions.
 | | Concurrency Control & Locking | 5 |
 | | Database Connectivity (JDBC/ODBC) | 5 |
 | | SQL Joins | 2 |
-| **Computer Fundamentals** | **— all subcategories —** | **145** |
-| | Hardware Components & Peripherals | 42 |
-| | Software Types & Classification | 41 |
+| **Computer Fundamentals** | **— all subcategories —** | **143** |
+| | Hardware Components & Peripherals | 41 |
+| | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
 | | Acronyms & Abbreviations | 13 |
 | | Keyboard Shortcuts | 4 |
-| **Electrical & Electronics** | **— all subcategories —** | **130** |
-| | Circuits & Components | 96 |
+| **Electrical & Electronics** | **— all subcategories —** | **116** |
+| | Circuits & Components | 83 |
 | | Power Systems & Generation | 18 |
-| | Signals & Systems | 12 |
+| | Signals & Systems | 11 |
 | | Diodes & Rectifiers | 4 |
 | **C Programming** | **— all subcategories —** | **105** |
 | | Output Tracing | 36 |
@@ -67,9 +67,9 @@ Total: **1649** questions.
 | | Constructors & Destructors | 6 |
 | | Exception Handling | 6 |
 | | Inheritance | 6 |
-| **Microprocessor & Computer Architecture** | **— all subcategories —** | **87** |
-| | CPU & Registers | 36 |
-| | Memory Hierarchy | 29 |
+| **Microprocessor & Computer Architecture** | **— all subcategories —** | **85** |
+| | CPU & Registers | 35 |
+| | Memory Hierarchy | 28 |
 | | Secondary Storage (HDD & Disk Organization) | 13 |
 | | RAID & Storage Architecture | 5 |
 | | Assembly Language & Machine Code | 4 |
@@ -80,19 +80,6 @@ Total: **1649** questions.
 | | Linked List | 10 |
 | | Priority Queue & Heap | 3 |
 | | Hashing & Hash Tables | 2 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **79** |
-| | Number Systems & Binary Arithmetic | 49 |
-| | Logic Gates & Universal Gates | 17 |
-| | Sequential Circuits (Flip-Flops) | 6 |
-| | Boolean Algebra & Simplification | 5 |
-| | Combinational Circuits (MUX, Decoder) | 2 |
-| **Algorithm** | **— all subcategories —** | **74** |
-| | Sorting Algorithms | 21 |
-| | Searching Algorithms | 20 |
-| | Graph Algorithms | 14 |
-| | Algorithm Design Paradigms | 9 |
-| | Dynamic Programming & Greedy | 6 |
-| | Complexity & Analysis | 4 |
 | **Operating System** | **— all subcategories —** | **74** |
 | | Process Management & Scheduling | 24 |
 | | OS Concepts & Multiprogramming | 16 |
@@ -101,6 +88,19 @@ Total: **1649** questions.
 | | Deadlock | 6 |
 | | File Systems & Disk Management | 4 |
 | | Process Synchronization | 2 |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **73** |
+| | Number Systems & Binary Arithmetic | 45 |
+| | Logic Gates & Universal Gates | 16 |
+| | Sequential Circuits (Flip-Flops) | 6 |
+| | Boolean Algebra & Simplification | 4 |
+| | Combinational Circuits (MUX, Decoder) | 2 |
+| **Algorithm** | **— all subcategories —** | **70** |
+| | Sorting Algorithms | 20 |
+| | Searching Algorithms | 18 |
+| | Graph Algorithms | 13 |
+| | Algorithm Design Paradigms | 9 |
+| | Dynamic Programming & Greedy | 6 |
+| | Complexity & Analysis | 4 |
 | **Computer & Network Security** | **— all subcategories —** | **70** |
 | | Cyber Attacks & Threats | 20 |
 | | Cryptography | 17 |
@@ -132,9 +132,9 @@ Total: **1649** questions.
 | | Industrial & Production Engineering | 3 |
 | | Engineering Drawing | 1 |
 | | Fluid Mechanics | 1 |
-| **Programming Languages** | **— all subcategories —** | **25** |
+| **Programming Languages** | **— all subcategories —** | **24** |
 | | Python | 10 |
-| | Mobile & Android Development | 8 |
+| | Mobile & Android Development | 7 |
 | | Visual Basic & .NET | 7 |
 | **Cloud Computing** | **— all subcategories —** | **20** |
 | | Cloud Computing Fundamentals | 14 |
@@ -152,26 +152,26 @@ Total: **1649** questions.
 
 ## General Questions
 
-Total: **1132** questions.
+Total: **1125** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **427** |
-| | Bangladesh Affairs | 175 |
+| **General Knowledge** | **— all subcategories —** | **422** |
+| | Bangladesh Affairs | 171 |
 | | International Affairs | 103 |
 | | Everyday Science | 77 |
-| | Geography & Environment | 27 |
+| | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
-| **English** | **— all subcategories —** | **279** |
+| **English** | **— all subcategories —** | **278** |
 | | English Grammar | 163 |
-| | Vocabulary, Synonyms & Antonyms | 58 |
+| | Vocabulary, Synonyms & Antonyms | 57 |
 | | Idioms & Phrases | 24 |
 | | English Literature | 17 |
 | | Spelling | 17 |
-| **Bangla** | **— all subcategories —** | **278** |
+| **Bangla** | **— all subcategories —** | **277** |
 | | বাংলা ব্যাকরণ | 153 |
-| | বাংলা সাহিত্য | 108 |
+| | বাংলা সাহিত্য | 107 |
 | | বাগধারা ও প্রবাদ | 11 |
 | | এক কথায় প্রকাশ | 5 |
 | | বাংলা ভাষা বিষয়ক তথ্য | 1 |

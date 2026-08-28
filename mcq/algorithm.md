@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 74 questions
+**Table of Contents** — 6 subtopics · 70 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms](#sorting-algorithms-21) | 21 |
-| 2 | [Searching Algorithms](#searching-algorithms-20) | 20 |
-| 3 | [Graph Algorithms](#graph-algorithms-14) | 14 |
+| 1 | [Sorting Algorithms](#sorting-algorithms-20) | 20 |
+| 2 | [Searching Algorithms](#searching-algorithms-18) | 18 |
+| 3 | [Graph Algorithms](#graph-algorithms-13) | 13 |
 | 4 | [Algorithm Design Paradigms](#algorithm-design-paradigms-9) | 9 |
 | 5 | [Dynamic Programming & Greedy](#dynamic-programming--greedy-6) | 6 |
 | 6 | [Complexity & Analysis](#complexity--analysis-4) | 4 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Sorting Algorithms (21)
+## Sorting Algorithms (20)
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
    (a) Insertion sort
@@ -106,19 +106,13 @@
    C) \text{O (n log n)}
    D) \text{O(n!)}
 
-16. **The complexity of Bubble sort algorithm is-** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 217]**
-   A) O(n)
-   B) O(\log n)
-   C) O(n^2)
-   D) O(n \log n)
-
 17. **Bubble sort algorithm sorts n data items using?** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
    A) O(n^2) Comparisons
    B) O(n) Comparisons
    C) O(n \log n) Comparisons
    D) O(n) Comparisons
 
-18. **The complexity of Bubble short algorithm is-** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]**
+18. **The complexity of Bubble short algorithm is-** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 225]** **(Probashi Kallyan Bank Assistant Programmer: 2019 Exam Taker: AUST) [compact it 217]**
    A) O(n)
    B) O(\log n)
    C) O(n^2)
@@ -142,7 +136,7 @@
    C) Heap sort
    D) None
 
-## Searching Algorithms (20)
+## Searching Algorithms (18)
 
 1. **Linear search is also called _____** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
    a) Random Search
@@ -198,7 +192,7 @@
    (c) 25
    (d) 30
 
-10. **Suppose you searching student data using student number as the key. Which of following arrangement of the student data is suited for binary search?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]**
+10. **Suppose you searching student data using student number as the key. Which of following arrangement of the student data is suited for binary search?** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 85]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
    a. Student data are arranged in the positions indicated by the student numbers hash values.
    b. Student data are arranged randomly irrespective of the student numbers.
    c. Student data are arranged in ascending order of student numbers.
@@ -216,25 +210,13 @@
    c. \Theta(\log*n)
    d. \Theta(1)
 
-13. **Suppose you are searching student data using student number as the key. Which of following arrangement of the student data is suited for binary search?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 183]**
-   a) Student data are arranged in the positions indicated by the student numbers hash values
-   b) Student data are arranged randomly irrespective of the student numbers
-   c) Student data are arranged in ascending order of student numbers
-   d) Student data are arranged in the order of the cell addresses of the student numbers locations.
-
 14. **The average number of key comparisons done in a successful sequential search in a list of length n, it is-** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 204]**
    A) \log n
    B) (n+1)/2
    C) (n-1)/2
    D) n/2
 
-15. **The complexity of binary search is-** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
-   A) O(n)
-   B) O(\log n)
-   C) O(n^2)
-   D) O(n \log n)
-
-16. **The complexity of Binary search algorithm is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]**
+16. **The complexity of Binary search algorithm is-** **(Combined Bank Senior Officer (IT) Exam: 2018 Exam Taker: DU) [compact it 221]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 235]**
    A) O(n)
    B) O(\log n)
    C) O(n^2)
@@ -264,7 +246,7 @@
    c. Quick search
    d. Selection search
 
-## Graph Algorithms (14)
+## Graph Algorithms (13)
 
 1. **What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?** **(NPCBL Executive Trainee (Software) Exam: 2023) [compact it 38]**
    (a) n(n-1)/2
@@ -284,7 +266,7 @@
    (গ) Undirected Acyclic graph
    (ঘ) Directed Acyclic graph
 
-4. **Suppose you have a complete undirected graph with 4 nodes. What is the maximum number of Minimum Spanning Tree (MST) you can form?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]**
+4. **Suppose you have a complete undirected graph with 4 nodes. What is the maximum number of Minimum Spanning Tree (MST) you can form?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 129]** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 180]**
    a) 4
    b) 8
    c) 16
@@ -336,12 +318,6 @@
    b) 4
    c) -5
    d) -\infty
-
-11. **Suppose you have a complete undirected graph with 4 nodes. What is the maximum number of minimum Spanning Tree (MST) you can from?** **(Janata Bank Ltd. Assistant Network Engineer (SO) Exam: 2020) [compact it 180]**
-   a) 4
-   b) 8
-   c) 16
-   d) 1
 
 12. **Which algorithm will be the most efficient to find out the shortest path between two given nodes in an undirected weighted graph?** **(Combined 4 Bank Assistant Programmer (AP) Exam: 2020 (DU)) [compact it 156]**
    a) Breadth First Search

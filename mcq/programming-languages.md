@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 3 subtopics · 25 questions
+**Table of Contents** — 3 subtopics · 24 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Python](#python-10) | 10 |
-| 2 | [Mobile & Android Development](#mobile--android-development-8) | 8 |
+| 2 | [Mobile & Android Development](#mobile--android-development-7) | 7 |
 | 3 | [Visual Basic & .NET](#visual-basic--net-7) | 7 |
 
 <!-- TOC END -->
@@ -76,7 +76,7 @@
    C) 512, 512, 512
    D) 512, 64, 512
 
-## Mobile & Android Development (8)
+## Mobile & Android Development (7)
 
 1. **What is the API level of Android version 11?** **(Sonali Bank and BDBL Senior Officer (IT) Exam: 25.09.2021) [compact it 101]**
    (a) 24
@@ -102,7 +102,7 @@
    c) Kotlin
    d) Android is not an operating system
 
-5. **Which of the following programming language helps you to learn Android programming?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 205]**
+5. **Which of the following programming language helps you to learn Android programming?** **(Sonali & Janata Bank Officer (IT/ICT)-2019 Exam Taker: AUST) [compact it 205]** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
    A) C
    B) SQL
    C) Java
@@ -113,12 +113,6 @@
    B) SQL
    C) Java
    D) HTML
-
-7. **Which of the following programming helps you to learn android programming?** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 246]**
-   A) C
-   B) SQL
-   C) Java
-   D) Python
 
 8. **What smart phones are compatible of .apk file?** **(BREB Assistant General Manager (IT) Preliminary Exam: 2016) [compact it 254]**
    A) Microsoft

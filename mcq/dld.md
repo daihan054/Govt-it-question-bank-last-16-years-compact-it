@@ -1,19 +1,19 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 79 questions
+**Table of Contents** — 5 subtopics · 73 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Number Systems & Binary Arithmetic](#number-systems--binary-arithmetic-49) | 49 |
-| 2 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-17) | 17 |
+| 1 | [Number Systems & Binary Arithmetic](#number-systems--binary-arithmetic-45) | 45 |
+| 2 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-16) | 16 |
 | 3 | [Sequential Circuits (Flip-Flops)](#sequential-circuits-flip-flops-6) | 6 |
-| 4 | [Boolean Algebra & Simplification](#boolean-algebra--simplification-5) | 5 |
+| 4 | [Boolean Algebra & Simplification](#boolean-algebra--simplification-4) | 4 |
 | 5 | [Combinational Circuits (MUX, Decoder)](#combinational-circuits-mux-decoder-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## Number Systems & Binary Arithmetic (49)
+## Number Systems & Binary Arithmetic (45)
 
 1. **What is the result of the binary sum 10101+1011?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]**
    (a) 10000
@@ -75,57 +75,33 @@
    (গ) 256
    (ঘ) 0
 
-11. **নিম্নের কোন লজিক অপারেশনটি সঠিক?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+11. **নিম্নের কোন লজিক অপারেশনটি সঠিক?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) A+A = 1
    (খ) AA = 0
    (গ) A+1 = 1
    (ঘ) A+1 = 0
    **Ans: গ**
 
-12. **বিসিডি কোডে বিট সংখ্যা কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+12. **বিসিডি কোডে বিট সংখ্যা কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) 1
    (খ) 2
    (গ) 8
    (ঘ) 4
    **Ans: ঘ**
 
-13. **বাইনারি পদ্ধতির যোগে 1+1+1 = কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+13. **বাইনারি পদ্ধতির যোগে 1+1+1 = কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) 10
    (খ) 11
    (গ) 101
    (ঘ) 111
    **Ans: খ**
 
-14. **bit এর সংখ্যার বিচারে নিচের কোন ক্রমটি সঠিক?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+14. **bit এর সংখ্যার বিচারে নিচের কোন ক্রমটি সঠিক?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) \text{byte} > \text{GB} > \text{KB} > \text{TB}
    (খ) \text{byte} > \text{KB} > \text{GB} > \text{TB}
    (গ) \text{byte} > \text{KB} > \text{TB} > \text{GB}
    (ঘ) \text{byte} > \text{TB} > \text{GB} > \text{KB}
    **Ans: খ**
-
-15. **নিম্নের কোন লজিক অপারেশনটি সঠিক?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) A+A = 1
-   (খ) AA = 0
-   (গ) A+1 = 1
-   (ঘ) A+1 = 0
-
-16. **বিসিডি কোডে বিট সংখ্যা কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) 1
-   (খ) 2
-   (গ) 8
-   (ঘ) 4
-
-17. **বাইনারি পদ্ধতির যোগে 1+1+1 = কত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) 10
-   (খ) 11
-   (গ) 101
-   (ঘ) 111
-
-18. **bit এর সংখ্যার বিচারে নিচের কোন ক্রমটি সঠিক?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   (ক) \text{byte}>\text{GB}>\text{KB}>\text{TB}
-   (খ) \text{byte}>\text{KB}>\text{GB}>\text{TB}
-   (গ) \text{byte}>\text{KB}>\text{TB}>\text{GB}
-   (ঘ) \text{byte}>\text{TB}>\text{GB}>\text{KB}
 
 19. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
    a) An exclusive logical sum of N with 0Fh
@@ -322,7 +298,7 @@
    C) 0101
    D) 1001
 
-## Logic Gates & Universal Gates (17)
+## Logic Gates & Universal Gates (16)
 
 1. **3 ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট 0 হলে আউটপুট কত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 2]**
    ক. 0
@@ -336,7 +312,7 @@
    (c) 3
    (d) 4
 
-3. **Which one is a Universal logic gate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]**
+3. **Which one is a Universal logic gate?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xviii]** **(Probashi Kallyan Bank Assistant Programmer Preliminary Exam: 2018) [compact it 237]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 228]** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
    (a) NAND
    (b) AND
    (c) OR
@@ -401,12 +377,6 @@
    B) XOR
    C) AND
    D) NOR
-
-14. **Which one is universal logic gate?** **(Sonali Bank Limited Assistant Programmer Preliminary Exam: 2016) [compact it 252]**
-   A) NAND
-   B) AND
-   C) OR
-   D) NOT
 
 15. **Binary circuit elements have** **(Bangladesh Bank Assistant Director (IT) Preliminary Exam: 2016) [compact it 240]**
    A) One stable state
@@ -481,7 +451,7 @@
    C) ডিকোডার
    D) ফ্লিপ-ফ্লপ
 
-## Boolean Algebra & Simplification (5)
+## Boolean Algebra & Simplification (4)
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** **(Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021) [compact it 131]**
    a) A + B + C
@@ -501,13 +471,7 @@
    c. X = A.\bar{B} + \bar{A}.B
    d. X = (\bar{A} + B).(A + \bar{B})
 
-4. **According to Boolean algebra the value of (A+AB). (B+AB) is---** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
-   A) A
-   B) B
-   C) AB
-   D) 1
-
-5. **According to Boolean algebra the value of: (A + AB) \cdot (B + AB) is-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]**
+5. **According to Boolean algebra the value of: (A + AB) \cdot (B + AB) is-** **(Sonali Bank Limited Assistant Engineer (IT) Preliminary Exam: 2016) [compact it 249]** **(Combined Bank Maintenance Engineer MCQ Test: 2018) [compact it 227]**
    A) A
    B) B
    C) AB

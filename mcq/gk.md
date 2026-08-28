@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 427 questions
+**Table of Contents** — 6 subtopics · 422 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Bangladesh Affairs](#bangladesh-affairs-175) | 175 |
+| 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
 | 2 | [International Affairs](#international-affairs-103) | 103 |
 | 3 | [Everyday Science](#everyday-science-77) | 77 |
-| 4 | [Geography & Environment](#geography--environment-27) | 27 |
+| 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
 
@@ -14,7 +14,7 @@
 
 ---
 
-## Bangladesh Affairs (175)
+## Bangladesh Affairs (171)
 
 1. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
    ক. ভোলা, সদর
@@ -490,14 +490,14 @@
    (গ) শেখ হাসিনা আন্তর্জাতিক শান্তি পুরস্কার
    (ঘ) শেখ রাসেল আইসিটি পুরস্কার
 
-89. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান দিবস কত তারিখ?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+89. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান দিবস কত তারিখ?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) ৪ নভেম্বর
    (খ) ৮ অক্টোবর
    (গ) ৪ ডিসেম্বর
    (ঘ) ৪ জানুয়ারী
    **Ans: ক**
 
-90. **বাংলাদেশ সুগারক্রপ গবেষণা ইনস্টিটিউট কোথায় অবস্থিত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]**
+90. **বাংলাদেশ সুগারক্রপ গবেষণা ইনস্টিটিউট কোথায় অবস্থিত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 70]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
    (ক) গাজীপুর
    (খ) পাবনা
    (গ) ময়মনসিংহ
@@ -511,36 +511,18 @@
    (ঘ) মোহাম্মদ উল্লাহ
    **Ans: ঘ**
 
-92. **তেভাগা আন্দোলনের নেত্রী?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+92. **তেভাগা আন্দোলনের নেত্রী?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) ইলা মিত্র
    (খ) তারামন বিবি
    (গ) প্রীতিলতা
    (ঘ) জাহানারা
    **Ans: ক**
 
-93. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান দিবস কত তারিখ?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) ৪ নভেম্বর
-   (খ) ৮ অক্টোবর
-   (গ) ৪ ডিসেম্বর
-   (ঘ) ৪ জানুয়ারী
-
-94. **বাংলাদেশ সুগারক্রপ গবেষণা ইনস্টিটিউট কোথায় অবস্থিত?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 34]**
-   (ক) গাজীপুর
-   (খ) পাবনা
-   (গ) ময়মনসিংহ
-   (ঘ) রাজশাহী
-
 95. **স্বাধীন বাংলাদেশের জাতীয় সংসদের প্রথম স্পিকার কে ছিলেন?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) আবদুল খালেক উকিল
    (খ) আবদুল হাকিম
    (গ) সাহাবুদ্দিন আহমদ
    (ঘ) মোহাম্মদ উল্লাহ
-
-96. **তেভাগা আন্দোলনের নেত্রী?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   (ক) ইলা মিত্র
-   (খ) তারামন বিবি
-   (গ) প্রীতিলতা
-   (ঘ) জাহানারা
 
 97. **When china did recognized Bangladesh?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
    (a) 1974
@@ -945,7 +927,7 @@
    (c) 21
    (d) 27
 
-165. **The total border district of Bangladesh is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]**
+165. **The total border district of Bangladesh is-** **(6 Banks & Financial Institutions Assistant Programmer Exam: 18.03.2021) [compact it 93]** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
    (a) 29
    (b) 32
    (c) 45
@@ -962,12 +944,6 @@
    (b) Community Bangladesh Bank Limited
    (c) IFIC Bank
    (d) Trust Bank Bangladesh Limited
-
-168. **The total border district of Bangladesh?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
-   (a) 29
-   (b) 32
-   (c) 45
-   (d) 53
 
 169. **What is the position of Bangladesh in the financial Privacy Index 2020?** **(Sonali Bank Ltd. Assistant Database Administrator Exam: 2020) [compact it 169]**
    (a) 29^{\text{th}}
@@ -2082,7 +2058,7 @@
    C. \text{h}/2\pi
    D. 2\pi/\text{h}
 
-## Geography & Environment (27)
+## Geography & Environment (26)
 
 1. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** **(PGCB Assistant Engineer (CSE) Exam: 05.04.2024 (BUET)) [compact it 5]**
    ক. মোহনা
@@ -2191,18 +2167,12 @@
    (গ) উত্তর আমেরিকা
    (ঘ) ইউরোপ
 
-19. **গ্রিনিচমান সময়ের সঙ্গে বাংলাদেশের সময়ের পার্থক্য কত ঘণ্টা?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]**
+19. **গ্রিনিচমান সময়ের সঙ্গে বাংলাদেশের সময়ের পার্থক্য কত ঘণ্টা?** **(BDCCL Assistant Manager (Transmission) Exam: 2022) [compact it 71]** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
    (ক) ৪ ঘণ্টা
    (খ) ৬ ঘণ্টা
    (গ) ১০ ঘণ্টা
    (ঘ) ৫ ঘণ্টা
    **Ans: খ**
-
-20. **গ্রিনিচমান সময়ের সঙ্গে বাংলাদেশের সময়ের পার্থক্য কত ঘণ্টা?** **(BDCCL Assistant Manager (Transmission) Exam: 2022 (BUET)) [compact it 35]**
-   (ক) ৪ ঘণ্টা
-   (খ) ৬ ঘণ্টা
-   (গ) ১০ ঘণ্টা
-   (ঘ) ৫ ঘণ্টা
 
 21. **Which of the following countries is the largest emitter of \text{CO}_2?** **(BCPCL Assistant Engineer Exam: 07/01/2022) [compact it 74]**
    (a) France
