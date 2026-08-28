@@ -143,6 +143,8 @@
    * **User Files = 6**
    * **External Interface = 4** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 492]**
 
+3. **Your company earn a contract to develop a system for a government agency. The project team is considering whether to build the system from scratch, or reuse existing partial-experience components, or buy an available software product and modify it to meet the requirement. As analyst you have made a decision tree as a figure.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
+
 ## IT Governance, Audit & Risk Management
 
 1. **Difference between: Policy, Guideline, Procedure; why auditor must focus on control as a system? Explain four types of risks auditor faces, Explain each of theme.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 310]**

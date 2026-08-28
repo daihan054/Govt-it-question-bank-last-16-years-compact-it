@@ -58,6 +58,10 @@
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**
 
+## Numerical Methods & Root Finding
+
+1. **Determine the root of the given equation x^2 - 3 = 0 for x \in [1, 2]** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 458]**
+
 ## Probability & Statistics
 
 1. **(b)** In Bangladesh Bank, there are 6 Assistant Directors (ADs) and 4 Deputy Directors (DDs). Each AD brings a bag, while only half of the DDs bring a bag. If a bag is selected at random from all the bags, what is the probability that the chosen bag belongs to a Deputy Director (DD)? **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1324]**

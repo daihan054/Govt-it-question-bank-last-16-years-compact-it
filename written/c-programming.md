@@ -217,6 +217,15 @@ return 0;
    **Input: A[] = {1, 2, 3}**
    **Output: -1**
 
+42. **Write a C program to print the following pattern:**
+```text
+0
+010
+01010
+
+```
+**(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 457]**
+
 ## Flowcharts & Algorithms
 
 1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**

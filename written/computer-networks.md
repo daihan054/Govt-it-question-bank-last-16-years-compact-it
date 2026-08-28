@@ -339,6 +339,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 49. **(b) Find out the default mask, network address and broadcast address of the classful IPv4 address: 172.16.99.45** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 480]**
 
+50. **Give IP 192.168.1.50 and subnet mask 255.255.255.240; Find valid host, Network address, and Broadcast address.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 456]**
+
 ## Network Layer (Packet Fragmentation & Tunneling)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 481]**

@@ -191,6 +191,18 @@ All process arrived at time 0. Lower number has higher priority.
 
 12. **What type of RR Scheduling Algorithm: Preemtive/ Non-Preemtive?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
+13. **Consider the following six processes each having its own unique processing time and arrival time.**
+| Processes | Arrival time | Processing time |
+|---|---|---|
+| P1 | 0 | 8 |
+| P2 | 0 | 4 |
+| P3 | 0 | 5 |
+| P4 | 1 | 9 |
+| P5 | 1 | 7 |
+| P6 | 0 | 1 |
+**Find average turnaround time using shortest job first scheduling algorithm.**
+**(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 461]**
+
 ## Memory Management & Paging
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**

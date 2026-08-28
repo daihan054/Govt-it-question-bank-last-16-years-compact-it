@@ -57,6 +57,8 @@ for i in N:
 
 12. **(a) The complexity of merge sort is T(n) = 2T\left(\frac{n}{2}\right) + n. Explain how the above equation is derived?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 479]**
 
+13. **Sort the following data using merge sort. Also mention best and worst case of the algorithm.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
+
 ## Heap & Priority Queue
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1321]**
@@ -98,6 +100,8 @@ for i in N:
 1. **Why DFS better than BFS, Explain?** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
 2. **Write an Algorithm to detect a cycle in a directed graph.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1336]**
+
+3. **What are the BFS and DFS value for the Binary tree from the following figure?** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
 
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
 

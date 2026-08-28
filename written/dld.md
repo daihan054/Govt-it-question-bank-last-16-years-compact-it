@@ -108,6 +108,8 @@
 
 8. **একটি 2:4 ডিকোডার ও একটি OR গেট ব্যবহার করে একটি হাফ এডার ডিজাইন কর।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 382]**
 
+9. **Design 6 \times 1 MUX by using 2 \times 1 MUX** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 460]**
+
 ## Sequential Circuits (Latches & Flip-Flops)
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
