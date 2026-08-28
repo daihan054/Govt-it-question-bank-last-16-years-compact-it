@@ -27,6 +27,8 @@
 
 11. **ক্লাউড কম্পিউটিং এর সুবিধা ও অসুবিধা লিখুন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
+12. **6.11 A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## Cloud Storage & Fundamentals
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

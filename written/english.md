@@ -68,6 +68,8 @@
 
 33. **Write an Essay: Climate change Impact in Bangladesh.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
 
+34. **Focus Writing in English: The Importance of Digital Literacy in Expanding Cashless Transactions in Bangladesh: Discuss how digital skills influence financial inclusion, the adoption of digital payment systems, and the challenges of building a cashless economy.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## Letter & Application Writing
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]** **(ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer Exam: 2024)**
@@ -293,3 +295,6 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 17. **৯. মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের নাম ইংরেজিতে লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 945]**
 
 18. **বঙ্গবন্ধুকে নিয়ে চারটি বাংলা বাক্য ছিলো, সেগুলোর ইংরেজিতে ট্রান্সলেশন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
+
+19. **Translate the following passage into English:** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+“কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।”

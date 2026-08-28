@@ -82,6 +82,8 @@
 
 36. **What are the Difference between White Box and Black Box testing?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
 
+37. **6.5 Explain the difference between Unit Testing and Integration Testing.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## Data Flow Diagrams (DFD)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 707]**

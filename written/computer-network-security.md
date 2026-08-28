@@ -52,6 +52,8 @@
 
 26. **Public key cryptography কীভাবে কাজ করে?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1020]**
 
+27. **6.2 Explain the operational difference between Hashing and Encryption.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## Security Principles (CIA Triad)
 
 1. What does CIA stand for in information security? Explain each component briefly. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]

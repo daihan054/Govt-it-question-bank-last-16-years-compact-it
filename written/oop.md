@@ -21,6 +21,23 @@ class Test {
 
 2. **(খ) কোন object-oriented programming language ব্যবহার করে একটি program লিখুন, যা recursive function ব্যবহার করে Fibonacci series প্রদান করবে।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
+3. **6.13 Consider the following Java program and determine the integer value printed by the execution of the main() method:** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+```java
+class Test {
+    static int x = 5;
+    public static int fun(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        x = x + 2;
+        return fun(n - 1) + x;
+    }
+    public static void main(String[] args) {
+        System.out.println(fun(3));
+    }
+}
+```
+
 ## OOP Concepts (Inheritance & Polymorphism)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]

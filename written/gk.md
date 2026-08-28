@@ -224,6 +224,10 @@
 
 112. **ভূরাজনৈতিক দৃষ্টিকোণ থেকে সেন্ট মার্টিন দ্বীপের গুরুত্ব ব্যাখ্যা করুন।** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
+113. **5.2 Who is the architect of the National Martyrs' Memorial in Savar?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+114. **5.5 What is the name of the first submarine communications cable system that Bangladesh is connected to?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## Banking & ICT Abbreviations
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
@@ -237,6 +241,8 @@
 5. **What Is RTGS related to?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
 6. **What is the full form BDCCL?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+
+7. **5.1 What is the full form of NPSB in the banking sector of Bangladesh?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
 ## International Affairs
 
@@ -375,6 +381,10 @@
 67. **জলবায়ু পরিবর্তন সমস্যা মোকাবেলায় G-7 এর ভূমিকা কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
 68. **FTA এবং PTA এর পূর্ণরূপ লিখুন এবং এদের মধ্যে পার্থক্য কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+
+69. **5.3 What is the name of the central bank of the United Kingdom?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
+70. **5.4 Which international organization publishes the "World Economic Outlook" report?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
 ## Everyday Science & Environment
 

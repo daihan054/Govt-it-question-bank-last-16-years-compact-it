@@ -58,3 +58,5 @@
 3. **Context free Grammar: (like as....)** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
 
 4. **Draw a derivation tree for the string “bab” from the CFG given by- S \to bSb \mid a \mid b** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 877-878]**
+
+5. **6.15 Consider the grammar: E \to E + E \mid E * E \mid id. Show that the grammar is ambiguous for the string: id + id * id.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**

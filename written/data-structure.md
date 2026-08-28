@@ -64,6 +64,8 @@ Output: Not Balanced
 
 5. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983]**
 
+6. **6.6 Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## Linked List
 
 1. **Explain with proper example of singly linked list.** **(DESCO Sub-Assistant Engineer Exam: 20.06.2025 (BUET)) [compact it 1358]**
@@ -149,6 +151,8 @@ Output: Not Balanced
    Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
 
 25. **Making binary a tree from the given expression: 3 + ((5+9)*2)** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+
+26. **6.12 Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
 ## Binary Search Tree (BST)
 

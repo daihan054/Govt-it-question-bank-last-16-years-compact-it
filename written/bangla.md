@@ -48,6 +48,8 @@
 
 24. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ শীর্ষক একটি প্রবন্ধ রচনা করুন।** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
+25. **Focus Writing in Bangla: বাংলাদেশের ব্যাংকিং খাতে চতুর্থ শিল্পবিপ্লবের (4th Industrial Revolution) প্রভাব: ডিজিটাল রূপান্তরের সম্ভাবনা, আধুনিক প্রযুক্তির ব্যবহার, গ্রাহকসেবার পরিবর্তন এবং সংশ্লিষ্ট প্রযুক্তিগত চ্যালেঞ্জসমূহ বিশ্লেষণ করুন।** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## সারমর্ম / সারাংশ
 
 1. **সারমর্ম লিখুন:** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1463]**
@@ -161,6 +163,9 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 19. **বাংলায় অনুবাদ করুন:** **(বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 Words have a lot of power. They can help or hurt, bless or curse. Unkind words do a lot of harm. Kind words do a lot of good. We can spoil a friends happiness by an unkind word, but cheer up a sad heart with a kind word, which costs nothing. A kind word is often more welcome than a costly present.
+
+20. **Translate the following passage into Bangla:** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+“He decided to pull out of the agreement at the eleventh hour. This sudden move took everyone by surprise and put the entire project at stake. Had he informed the team beforehand, we could have easily made alternative arrangements. Now, we are left with no other choice but to start everything from scratch. It just goes to show that you cannot always take people at their word.”
 
 ## এক কথায় প্রকাশ (One Word Substitution)
 

@@ -22,6 +22,8 @@
 
 11. **It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?** **(Sadharan Bima Corporation Programmer/ AP/AME Written Exam: 2020 (DU)) [compact it 1002]**
 
+12. **6.7 What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## JavaScript & jQuery (DOM & Validation)
 
 1. **Jquery for email validation** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**

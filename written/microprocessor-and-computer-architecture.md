@@ -111,6 +111,8 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** **(Combined Bank - Assistant Maintenance Engineer/ Assistant Engineer (IT) Exam: 24.02.2024 (BIBM)) [compact it 299]**
 
+5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## RISC vs CISC Architecture
 
 1. **RISC stand for __________? Write two characteristics of it's?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1462]**
@@ -142,6 +144,8 @@ MOV AX, A534H এবং MOV AX, [A534H]
 11. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951-952]**
 
 12. **Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+
+13. **6.3 Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
 ## Memory Hierarchy & Storage
 

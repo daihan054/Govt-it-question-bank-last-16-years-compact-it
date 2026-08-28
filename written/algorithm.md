@@ -52,6 +52,8 @@ for i in N:
 
 10. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 973-974]**
 
+11. **6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+
 ## Sorting Algorithms & Complexity
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
