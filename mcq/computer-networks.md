@@ -1016,6 +1016,12 @@
    C) Wireless internet system
    D) A program
 
+21. **A frequency range 1\text{ GHz to }30\text{ GHz} is referred to as ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Medium wave
+   b. Micro wave
+   c. Long wave
+   d. None
+
 ## Subnetting & IP Addressing
 
 1. **An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it xxii]**
@@ -1270,6 +1276,18 @@
    B) Emulation
    C) Binary
    D) None of the above
+
+15. **Which of the following is a digital modulation technique?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. DM
+   b. PCM
+   c. PSK
+   d. All
+
+16. **A The three major components of a communication system are ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Source, data rate and response time
+   b. Source, Link and receiver
+   c. Transmitter, link and receiver
+   d. Source, link and detector
 
 ## Routing Protocols
 
@@ -1591,6 +1609,12 @@
    B) Internet Layer
    C) Transport Layer
    D) Protocol Layer
+
+12. **The end-to-end delivery of the entire message is the responsibility of the ________ layer.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Network
+   b. Transport
+   c. Session
+   d. Presentation
 
 ## Switching Techniques
 

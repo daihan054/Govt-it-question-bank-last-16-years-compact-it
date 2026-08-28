@@ -543,6 +543,30 @@
    (c) 40\text{ W}
    (d) 1\text{ W}
 
+93. **A transformer transforms ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Frequency
+   b. Voltage
+   c. Current
+   d. Voltage and Current
+
+94. **A power system is providing 200\text{ V ac at }25\text{ A}. The phase angle between current and voltage is 25^\circ. What is the power consumed by the system?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. 2113 w
+   b. 4531 w
+   c. 5517 w
+   d. 11831 w
+
+95. **The common collector amplifier is also known as ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Collector follower
+   b. Base follower
+   c. Emitter follower
+   d. Integrator
+
+96. **Negative feedback in an amplifier ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Reduces the gain
+   b. Increases the gain
+   c. Is harmful
+   d. Converts the amplifier into an oscillator
+
 ## Power Systems & Generation
 
 1. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?** **(EGCB Sub-Assistant Engineer (ICT) Exam: 2022 (BUET)) [compact it 64]**

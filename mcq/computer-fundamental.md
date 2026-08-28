@@ -150,6 +150,12 @@
    C) 1e+8B
    D) 1e+9B
 
+26. **CPU, ________ are the basic components of a computer system.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 261]**
+   a. Keyboard and monitor
+   b. Main memory and I/O devices
+   c. Keyboard and I/O devices
+   d. Main memory and monitor
+
 ## Keyboard Shortcuts
 
 1. **Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?** **(Combined Bank Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 8]**
@@ -373,6 +379,12 @@
    B) scanning
    C) conversion
    D) OCR
+
+34. **The resolution of a printer is measured in ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Megabits
+   b. Dots per inch (DPI)
+   c. Inches
+   d. GHz
 
 ## ICT & Emerging Technology
 

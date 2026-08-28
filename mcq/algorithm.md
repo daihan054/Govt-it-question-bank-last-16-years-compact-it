@@ -114,6 +114,12 @@
    c. O(1)
    d. O(n^2)
 
+20. **For s sorted linear array, which is the fastest algorithm to find the location?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Linear search
+   b. Binary search
+   c. Quick search
+   d. Selection search
+
 ## Sorting Algorithms
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** **(Combined Bank Officer (IT) Exam: 04.10.2024 (BIBM)) [compact it 15]** **(Combined Bank Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 20]**
@@ -452,3 +458,9 @@
    b. Bubble sort
    c. Quick sort
    d. Both a & c
+
+9. **What is the name given to the sequence of steps which a computer follows?** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 262]**
+   a. Instructions
+   b. Algorithms
+   c. Flowcharts
+   d. Debugging

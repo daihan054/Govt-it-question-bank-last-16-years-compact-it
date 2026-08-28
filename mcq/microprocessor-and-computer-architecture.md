@@ -386,6 +386,12 @@
    C) Memory bus
    D) SCSI bus
 
+36. **At the same clock speed compared to CISC, RISC processor works ________.** **(Bangladesh Bank Assistant Maintenance Engineer Exam: 2013) [compact it 261]**
+   a. faster
+   b. Slower
+   c. at same speed
+   d. none
+
 ## Secondary Storage (HDD & Disk Organization)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** **(Pubali Bank Limited, Hardware Engineer Exam: 18.03.2023) [compact it 41]**
