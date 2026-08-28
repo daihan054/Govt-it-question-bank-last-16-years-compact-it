@@ -28,17 +28,21 @@
 | Hasan | Bangla | English | ICT | Math |
 | Nafis | Bangla | English | ICT | Biology |
 
-4. **What is the popular way of linking many documents?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+4. **একটি ওয়েবসাইটের (Website) কয়টি অংশ থাকে এবং কী কী?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-5. **Which tag is used for creating button in html?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+5. **(ক) ওয়েব ডিজাইন কী? স্ট্যাটিক ও ডায়নামিক ওয়েবসাইটের পার্থক্য ব্যাখ্যা করুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-6. **(ক) HTML Element কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 607]**
+6. **What is the popular way of linking many documents?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
-7. **(খ) Static ও Dynamic ওয়েবসাইটের মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 607]**
+7. **Which tag is used for creating button in html?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
-8. **অথবা, (ক) উদাহরণসহ HTML webpage এর গঠন ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 608]**
+8. **(ক) HTML Element কী? উদাহরণসহ বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 607]**
 
-9. **(খ) নিচের লিস্টটি তৈরি করার জন্য HTML কোড লিখুন :** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 609]**
+9. **(খ) Static ও Dynamic ওয়েবসাইটের মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 607]**
+
+10. **অথবা, (ক) উদাহরণসহ HTML webpage এর গঠন ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 608]**
+
+11. **(খ) নিচের লিস্টটি তৈরি করার জন্য HTML কোড লিখুন :** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 609]**
    1. Fruits
       (a) Mango
       (b) Orange
@@ -47,21 +51,17 @@
       - Yellow Capsicum
       - Red Capsicum
 
-10. **অথবা, নিম্নোক্ত উপাদানগুলোসহ একটি HTML page লিখুন। Hyperlink, Ordered list, Unordered list, Form (Tent box, Check box, Option Button).** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
+12. **অথবা, নিম্নোক্ত উপাদানগুলোসহ একটি HTML page লিখুন। Hyperlink, Ordered list, Unordered list, Form (Tent box, Check box, Option Button).** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
-11. **(ক) HTML এবং CSS কী? সংক্ষেপে ব্যাখ্যা করুন। শুধুমাত্র HTML এবং CSS ব্যবহার করে Web Site তৈরির ক্ষেত্রে সীমাবদ্ধতা আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
+13. **(ক) HTML এবং CSS কী? সংক্ষেপে ব্যাখ্যা করুন। শুধুমাত্র HTML এবং CSS ব্যবহার করে Web Site তৈরির ক্ষেত্রে সীমাবদ্ধতা আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
 
-12. **(খ) Static Web Page এবং Dynamic Web Page এর মধ্যে পার্থক্য আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
+14. **(খ) Static Web Page এবং Dynamic Web Page এর মধ্যে পার্থক্য আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
 
-13. **(ক) কোন প্রতিষ্ঠানের Web page development এ HTML এবং CSS এর ভূমিকা কি? শুধুমাত্র HTML এবং CSS ব্যবহার করে কোন ধরনের Web Page Development করা যেতে পারে?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 771]**
+15. **(ক) কোন প্রতিষ্ঠানের Web page development এ HTML এবং CSS এর ভূমিকা কি? শুধুমাত্র HTML এবং CSS ব্যবহার করে কোন ধরনের Web Page Development করা যেতে পারে?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 771]**
 
-14. **(ii) HTML ও CSS কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 950-951]**
+16. **(ii) HTML ও CSS কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 950-951]**
 
-15. **একটি Image ও একটি Web site URL HTML প্রদর্শন করার জন্য প্রয়োজনীয় code লিখুন?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1022]**
-
-16. **একটি ওয়েবসাইটের (Website) কয়টি অংশ থাকে এবং কী কী?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
-
-17. **(ক) ওয়েব ডিজাইন কী? স্ট্যাটিক ও ডায়নামিক ওয়েবসাইটের পার্থক্য ব্যাখ্যা করুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+17. **একটি Image ও একটি Web site URL HTML প্রদর্শন করার জন্য প্রয়োজনীয় code লিখুন?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1022]**
 
 ## HTTP Protocol (10)
 
@@ -69,21 +69,21 @@
 
 2. Describe any two key differences between the HTTP GET and HTTP POST methods used for communication between a web browser and a web server. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
-3. **(ক) ফর্ম জমা দেয়ার পদ্ধতি GET এবং POST এর মধ্যে পার্থক্য কী, কখন কোন পদ্ধতি ব্যবহার করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
+3. **6.7 What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-4. **What is cookie? What is its purpose?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
+4. **(ক) ফর্ম জমা দেয়ার পদ্ধতি GET এবং POST এর মধ্যে পার্থক্য কী, কখন কোন পদ্ধতি ব্যবহার করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 623]**
 
-5. **What is the difference between http and https?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
+5. **What is cookie? What is its purpose?** **(BPSC (Ministry of Home Affairs) Assistant Engineer Exam: 17.05.2022) [compact it 637]**
 
-6. **(গ) URL কী? একটি URL ক্লিক করার পর Web Page Show করার পূর্ব পর্যন্ত যে কয়টি Step হয় সেগুলির নাম লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
+6. **What is the difference between http and https?** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 648]** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
+
+7. **(গ) URL কী? একটি URL ক্লিক করার পর Web Page Show করার পূর্ব পর্যন্ত যে কয়টি Step হয় সেগুলির নাম লিখুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 705]**
 
 8. **(c) Explain the difference between Stateless and Stateful protocols. Which type of protocol http is?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 885-886]**
 
 9. **What is the difference between http session and http cookies?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
 
-11. **It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?** **(Sadharan Bima Corporation Programmer/ AP/AME Written Exam: 2020 (DU)) [compact it 1002]** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
-
-12. **6.7 What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+10. **It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?** **(Sadharan Bima Corporation Programmer/ AP/AME Written Exam: 2020 (DU)) [compact it 1002]** **(BSEC Assistant Director (MIS) Exam: 2021 (IBA)) [compact it 938]**
 
 ## JavaScript & jQuery (DOM & Validation) (8)
 

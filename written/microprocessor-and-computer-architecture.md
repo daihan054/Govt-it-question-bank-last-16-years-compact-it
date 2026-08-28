@@ -41,47 +41,47 @@
 
 6. **ALU কী? এর কার্যপদ্ধতি চিত্রসহ বর্ণনা করুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 405]**
 
-7. **Discuss the factors that affect the Speed of a CPU.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 541]**
+7. **(ক) Microprocessor এবং Microcontroller এর মাঝে দুইটি পার্থক্য লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-8. **Difference between 32 bit Microprocessor and 64 bit Microprocessor with example. What is the meaning of 2.40GHz Microprocessor? Differentiate among Core Intel i3, i5 and i7 processor. Why do you prefer SSD instead of HD?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 508]**
+8. **Discuss the factors that affect the Speed of a CPU.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 541]**
 
-9. **8086 microprocessor সম্বলিত একটি ডায়াগ্রাম বা ফিগার হতে ২টি পার্ট এর নাম উল্লেখ কর?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+9. **Difference between 32 bit Microprocessor and 64 bit Microprocessor with example. What is the meaning of 2.40GHz Microprocessor? Differentiate among Core Intel i3, i5 and i7 processor. Why do you prefer SSD instead of HD?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 508]**
 
-10. **Explain the necessary steps to communicate through a programmable peripheral interfacing device (8255 Microprocessor).** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
+10. **8086 microprocessor সম্বলিত একটি ডায়াগ্রাম বা ফিগার হতে ২টি পার্ট এর নাম উল্লেখ কর?** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
 
-11. **What is the function of GPU?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+11. **Explain the necessary steps to communicate through a programmable peripheral interfacing device (8255 Microprocessor).** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
 
-12. **Flag Register কী? Intel 8086 Microprocessor-এর Control Flag গুলোর কাজ লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 697]**
+12. **What is the function of GPU?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
-13. **What is Microprocessor?** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
+13. **Flag Register কী? Intel 8086 Microprocessor-এর Control Flag গুলোর কাজ লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 697]**
 
-14. **Explain four type of register.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
+14. **What is Microprocessor?** **(BARI Assistant Maintenance Engineer Exam: 26.08.2022) [compact it 702]**
 
-15. **(খ) Typical মাইক্রোকম্পিউটারে কী কী বাস থাকে। একটি মাইক্রোপ্রসেসর এর সাথে RAM, ROM এবং I/O এর কানেকশন বাস এর মাধ্যমে দেখাও।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 777]**
+15. **Explain four type of register.** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 719]**
 
-16. **CPU এর অর্থ কি? এর কয়টি অংশ ও কি কি?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
+16. **(খ) Typical মাইক্রোকম্পিউটারে কী কী বাস থাকে। একটি মাইক্রোপ্রসেসর এর সাথে RAM, ROM এবং I/O এর কানেকশন বাস এর মাধ্যমে দেখাও।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 777]**
 
-17. **Microprocessor কি? এর আবিষ্কারে তথ্য ও যোগাযোগ প্রযুক্তিতে কি ধরনের অগ্রগতি সাধিত হয়েছে ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 827]**
+17. **CPU এর অর্থ কি? এর কয়টি অংশ ও কি কি?** **(BPSC Computer Operator Exam: 2021) [compact it 780]**
 
-18. **8-bit microprocessor and 16-bit microprocessor write the data and address widths?** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
+18. **Microprocessor কি? এর আবিষ্কারে তথ্য ও যোগাযোগ প্রযুক্তিতে কি ধরনের অগ্রগতি সাধিত হয়েছে ব্যাখ্যা করুন।** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 827]**
 
-19. **What is Microprocessor? Explain basic component of Microprocessor.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 868-869]**
+19. **8-bit microprocessor and 16-bit microprocessor write the data and address widths?** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
 
-20. **Difference between Microprocessor and Microcontroller.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870]**
+20. **What is Microprocessor? Explain basic component of Microprocessor.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 868-869]**
 
-21. **Central Processing Unit (CPU) -এর প্রধান কাজ কী? একটি চিত্রের সাহায্যে CPU-এর বিভিন্ন অংশ বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 884]**
+21. **Difference between Microprocessor and Microcontroller.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 870]**
 
-22. **When does the parity bit occur in the microprocessors? What does it do?** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
+22. **Central Processing Unit (CPU) -এর প্রধান কাজ কী? একটি চিত্রের সাহায্যে CPU-এর বিভিন্ন অংশ বর্ণনা করুন?** **(41th BCS Written Exam: 2021) [compact it 884]**
 
-23. **১২. 8086 মাইক্রোপ্রসেসর এর Flag Register কত বিটের?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+23. **When does the parity bit occur in the microprocessors? What does it do?** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
 
-24. **What is Register? Write down the name of 5 CPU Register.** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1018]**
+24. **১২. 8086 মাইক্রোপ্রসেসর এর Flag Register কত বিটের?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
 
-25. **(b) What is DMA? Why it is used for high-speed I/O devices?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1025-1026]**
+25. **What is Register? Write down the name of 5 CPU Register.** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1018]**
 
-26. **Microcontroller এবং Microprocessor এর মধ্যে Hardware Related পার্থক্য গুলো লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
+26. **(b) What is DMA? Why it is used for high-speed I/O devices?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1025-1026]**
 
-27. **(ক) Microprocessor এবং Microcontroller এর মাঝে দুইটি পার্থক্য লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+27. **Microcontroller এবং Microprocessor এর মধ্যে Hardware Related পার্থক্য গুলো লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
 
 ## Memory Hierarchy & Storage (21)
 
@@ -129,31 +129,31 @@
 
 ## RAID Architecture & Storage (13)
 
+1. **Which RAID level is best and why?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]** (BEPRC Assistant Programmer Exam: 08.08.2026)
+
 2. **Striping with parity is done in which level of RAID.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
-3. **Which RAID level is best and why?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]** (BEPRC Assistant Programmer Exam: 08.08.2026)
+3. **Concept of RAID, Relevance in Database, Uses in Database, is it possible?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
 
-4. **Concept of RAID, Relevance in Database, Uses in Database, is it possible?** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 319]**
+4. **How to solve drive failure in RAID?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
 
-5. **How to solve drive failure in RAID?** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1454]**
+5. **Explain the purpose of RAID.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
 
-6. **Explain the purpose of RAID.** **(Pubali Bank Limited Hardware Engineer Exam: 18.03.2023) [compact it 564]**
+6. **What do you mean by RAID? Write the difference types of RAID level.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
 
-7. **What do you mean by RAID? Write the difference types of RAID level.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 595]**
+7. **What is RAID technology? Why it's important Server in data center?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 555]**
 
-8. **What is RAID technology? Why it's important Server in data center?** **(Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer Exam: 23.11.2023 (BIBM)) [compact it 555]**
+8. **(a) Compare RAID 1 and RAID 5 levels. Which one you prefer? Why?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
 
-9. **(a) Compare RAID 1 and RAID 5 levels. Which one you prefer? Why?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
+9. **What is RAID?** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
 
-10. **What is RAID?** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 730]**
+10. **What is RAID? What is the classification of RAIDs? Difference between RAID 1 and RAID 5 using illustration.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 755]**
 
-11. **What is RAID? What is the classification of RAIDs? Difference between RAID 1 and RAID 5 using illustration.** **(BDCCL Assistant Manager (Cyber Security) Exam: 14.10.2022) [compact it 755]**
+11. **What is RAID technology? Describe about the advantages of RAID technology.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820]**
 
-12. **What is RAID technology? Describe about the advantages of RAID technology.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820]**
+12. **Why necessary to use RAID? If you choose a RAID level for an organization with huge data process. Justify your answer?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 854]**
 
-13. **Why necessary to use RAID? If you choose a RAID level for an organization with huge data process. Justify your answer?** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 854]**
-
-14. **Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
+13. **Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1032]**
 
 ## Cache Memory (12)
 
@@ -165,21 +165,21 @@
 
 4. **How many total bits are required for a direct mapped cache with 16KB of data and 4-word blocks? Assuming a 32 bit address?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 421]**
 
-5. **Write Concept of cache memory in computer. How its change performance of computer?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 559]**
+5. **6.3 Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-6. **Suppose we have a 16 KB of data in a direct mapped cache with 4 word blocks. Determine the size of the tag, index and offset fields if we are using a 32-bit architecture.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 439]**
+6. **Write Concept of cache memory in computer. How its change performance of computer?** **(BITAC Assistant Programmer Exam: 27.10.2023 (BUTEX)) [compact it 559]**
 
-7. **What is the use of cache memory?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+7. **Suppose we have a 16 KB of data in a direct mapped cache with 4 word blocks. Determine the size of the tag, index and offset fields if we are using a 32-bit architecture.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 439]**
 
-8. **Some of the factors determine the performance of a computer system. Cache memory is one of them. Why cache memory is one of the factors to determine the performance of a computer system?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807]**
+8. **What is the use of cache memory?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
-9. **Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit. The average read access time in nanoseconds is ______.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
+9. **Some of the factors determine the performance of a computer system. Cache memory is one of them. Why cache memory is one of the factors to determine the performance of a computer system?** **(BTRC Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 807]**
 
-10. **Cache memory কী কাজে ব্যবহৃত হয়? Compiler and Interpreater -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 880-881]**
+10. **Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit. The average read access time in nanoseconds is ______.** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
 
-11. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951-952]** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
+11. **Cache memory কী কাজে ব্যবহৃত হয়? Compiler and Interpreater -এর মধ্যে পার্থক্য লিখুন।** **(41th BCS Written Exam: 2021) [compact it 880-881]**
 
-13. **6.3 Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+12. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 951-952]** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]**
 
 ## Secondary Storage (HDD vs SSD) (10)
 
@@ -222,12 +222,12 @@
 
 2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1424]**
 
-3. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
-
-4. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
-
-5. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+3. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 MOV AX, A534H এবং MOV AX, [A534H]
+
+4. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 691]**
+
+5. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1041]**
 
 ## Instruction Pipelining & Hazards (5)
 
@@ -249,11 +249,11 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 1. **There was a CPU cycle math** **(PGCB - Assistant Engineer (CSE) Exam: 17.05.2024 (BUET)) [compact it 400]**
 
-2. **A program (or a program task) takes 1 billion instructions to execute on a processor running at 2 GHz. Suppose also that 50% of the instructions execute in 3 clock cycles, 30% execute in 4 clock cycles, and 20% execute in 5 clock cycles. What is the execution time for the program or task?** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 847]**
+2. **(খ) Clock cycle কী? একটি মাইক্রো-প্রসেসরের speed 3.5 GHz বলতে কী বোঝায়?** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-3. **Operating system math: clock frequency 700MHz.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 852]**
+3. **A program (or a program task) takes 1 billion instructions to execute on a processor running at 2 GHz. Suppose also that 50% of the instructions execute in 3 clock cycles, 30% execute in 4 clock cycles, and 20% execute in 5 clock cycles. What is the execution time for the program or task?** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 847]**
 
-4. **(খ) Clock cycle কী? একটি মাইক্রো-প্রসেসরের speed 3.5 GHz বলতে কী বোঝায়?** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+4. **Operating system math: clock frequency 700MHz.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 852]**
 
 ## 8085 Microprocessor & Edge Computing (3)
 

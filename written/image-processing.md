@@ -15,11 +15,11 @@
 
 ## Computer Graphics (Vector & Raster) (3)
 
-1. **(b) Differentiate between vector graphics and raster graphics. What are the applications of computer Graphics?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888-889]**
+1. **(ক) Vector এবং Raster graphics- এর সংজ্ঞাসহ পার্থক্য লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-2. **Raster Image কাকে বলে?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+2. **(b) Differentiate between vector graphics and raster graphics. What are the applications of computer Graphics?** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 888-889]**
 
-3. **(ক) Vector এবং Raster graphics- এর সংজ্ঞাসহ পার্থক্য লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+3. **Raster Image কাকে বলে?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
 
 ## Color Models (1)
 

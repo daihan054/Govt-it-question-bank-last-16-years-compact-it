@@ -27,7 +27,9 @@
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
-2. **Write the Best case, worst case and average case time complexity for the following sorting algorithms.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
+2. Explain the **QuickSort** algorithm with an example. Analyze its best-case, average-case, and worst-case time complexities. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
+
+3. **Write the Best case, worst case and average case time complexity for the following sorting algorithms.** **(DPDC Assistant Manager (ICT) Exam: 27.06.2025 (BUET)) [compact it 1365]**
 
 | Algorithms | Best Case | Worst Case | Average Case |
 |---|---|---|---|
@@ -37,11 +39,9 @@
 | Quick sort |  |  |  |
 | Heap sort |  |  |  |
 
-3. **Explain the Quick Sort algorithm with a suitable example. Under what conditions does Quick Sort exhibit its worst-case time complexity, and why does this situation occur?** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1420]**
+4. **Explain the Quick Sort algorithm with a suitable example. Under what conditions does Quick Sort exhibit its worst-case time complexity, and why does this situation occur?** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1420]**
 
-4. **(b) Write down the selection sort algorithm. Find out the best case, average case, and worst case time completely.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1448]**
-
-5. Explain the **QuickSort** algorithm with an example. Analyze its best-case, average-case, and worst-case time complexities. (Officer (IT) Exam: 31 Jul 2026) [bscs 03]
+5. **(b) Write down the selection sort algorithm. Find out the best case, average case, and worst case time completely.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1448]**
 
 6. **Sort the following array using Insertion sort. 14, 33, 27, 10, 35, 19, 48, 44.** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1334]**
 
@@ -53,40 +53,40 @@
 
 10. **In a quicksort algorithm taking the first element as a pivot element. Now Analyze the time complexity of the quicksort algorithm when all services of the quicks sort algorithm are already sorted.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1455]**
 
-11. **Write a liner algorithm two sorted item merge. Why this algorithm takes O(n) time complexity?** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 591]**
-
-12. **(a) The complexity of merge sort is T(n) = 2T\left(\frac{n}{2}\right) + n. Explain how the above equation is derived?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 479]**
-
-13. **Sort the following data using merge sort. Also mention best and worst case of the algorithm.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
-
-14. **Which short uses divide and conquer technique?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-15. **Fastest sorting algorithms?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
-
-16. **Bubble sort, Quick sort and Merge sort algorithm এর Worst case complexity নির্ণয় কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
-
-17. **Write down the pseudocode of quick sort algorithm through recursive algorithm. Express the arrange complexity off this algorithm.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
-
-18. **How many member of swapping is needed to sort the number sequence 5, 8, 3, 6, 2 in ascending order using bubble sort.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
-
-19. **(i) Bubble sort Algorithm লিখুন। এ অ্যালগরিদমটির Time Complexity বের করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 783]**
-
-20. **(a) Compaire and contrast between Quick sort and Merge sort in terms of their time and space complexity.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 793]**
-
-21. **(b) Difference between Heap Sort and Merge Sort.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 885]**
-
-22. **(a) How the quick sort is implemented? What is the complexity of quick sort?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892, 895]**
-
-23. **Analize and compare the Quick-sort and Merge-sort algorithms in term of their time and space complexity.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
-
-24. **Insertion sort is a simple sorting algorithm. Write a program to sort some given numbers using insertion sort algorithm.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 989-990]**
-
-25. **Bubble Sort কীভাবে কাজ করে উদাহরণসহ বুঝিয়ে লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1021]**
-
-26. **Selection Sort টেকনিক ব্যবহার করে নিম্নোক্ত ডাটা গুলোকে সর্টিং করুন। 45, 72, 80, 65, 84, 52, 37** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1039-1040]**
-
-27. **(খ) Bubble sort algorithm ব্যবহার করে নিচের সংখ্যাগুলো sort করুন। প্রতিটি ধাপ প্রদর্শন করতে হবে।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+11. **(খ) Bubble sort algorithm ব্যবহার করে নিচের সংখ্যাগুলো sort করুন। প্রতিটি ধাপ প্রদর্শন করতে হবে।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 13, 14, 23, 4, 6
+
+12. **Write a liner algorithm two sorted item merge. Why this algorithm takes O(n) time complexity?** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 591]**
+
+13. **(a) The complexity of merge sort is T(n) = 2T\left(\frac{n}{2}\right) + n. Explain how the above equation is derived?** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 479]**
+
+14. **Sort the following data using merge sort. Also mention best and worst case of the algorithm.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
+
+15. **Which short uses divide and conquer technique?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+16. **Fastest sorting algorithms?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+
+17. **Bubble sort, Quick sort and Merge sort algorithm এর Worst case complexity নির্ণয় কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+
+18. **Write down the pseudocode of quick sort algorithm through recursive algorithm. Express the arrange complexity off this algorithm.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
+
+19. **How many member of swapping is needed to sort the number sequence 5, 8, 3, 6, 2 in ascending order using bubble sort.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]**
+
+20. **(i) Bubble sort Algorithm লিখুন। এ অ্যালগরিদমটির Time Complexity বের করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 783]**
+
+21. **(a) Compaire and contrast between Quick sort and Merge sort in terms of their time and space complexity.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 793]**
+
+22. **(b) Difference between Heap Sort and Merge Sort.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 885]**
+
+23. **(a) How the quick sort is implemented? What is the complexity of quick sort?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892, 895]**
+
+24. **Analize and compare the Quick-sort and Merge-sort algorithms in term of their time and space complexity.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+
+25. **Insertion sort is a simple sorting algorithm. Write a program to sort some given numbers using insertion sort algorithm.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 989-990]**
+
+26. **Bubble Sort কীভাবে কাজ করে উদাহরণসহ বুঝিয়ে লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1021]**
+
+27. **Selection Sort টেকনিক ব্যবহার করে নিম্নোক্ত ডাটা গুলোকে সর্টিং করুন। 45, 72, 80, 65, 84, 52, 37** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1039-1040]**
 
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 
@@ -166,25 +166,25 @@ for i in N:
 
 2. **What is complexity of Algorithm? Categorize complexity of Algorihm.** **(BKSP - Assistant Programmer Exam: 13.07.2024) [compact it 1458]**
 
-3. **Including Time and Space complexity....** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]**
+3. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-4. **What is complexity? Find the Complexity from code and explain.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
+4. **Including Time and Space complexity....** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]**
 
-5. **What is Big O and Big Omega?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+5. **What is complexity? Find the Complexity from code and explain.** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
 
-6. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 606]**
+6. **What is Big O and Big Omega?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
 
-7. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
+7. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 606]**
 
-8. **Recurrence equation of binary search and solve it.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**
+8. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
 
-9. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
+9. **Recurrence equation of binary search and solve it.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 714]**
 
-10. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+10. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
 
-11. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983-984]**
+11. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
 
-12. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+12. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983-984]**
 
 ## Searching Algorithms (11)
 
@@ -194,21 +194,21 @@ for i in N:
 
 3. **What is the complexity of Binary algorithm?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-4. **Explain Algorithm of Binary search.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
+4. **6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-5. **Binary search using recursive function.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
+5. **Explain Algorithm of Binary search.** **(BEPZA Programmer Exam: 03.11.2023) [compact it 562]**
 
-6. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 605]**
+6. **Binary search using recursive function.** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]**
 
-7. **Write a C/C++ program for binary search.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 712]**
+7. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 605]**
 
-8. **(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
+8. **Write a C/C++ program for binary search.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 712]**
 
-9. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 791]**
+9. **(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
 
-10. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 973-974]**
+10. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 791]**
 
-11. **6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+11. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 973-974]**
 
 ## Dynamic Programming & Greedy Algorithms (7)
 
@@ -252,15 +252,7 @@ for i in N:
 
 **অনুসারে প্রাপ্ত fractional knapsack সমস্যা সমাধান একটি চিত্রানুপাতে উত্তর লেখ।** **(Assistant Programmer - Department of Immigration & Passports Exam: 15.07.2026) [compact it 1464]**
 
-2. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 453]**
-
-3. **Given n jobs starting time n[] and duration d[], print maximum number of jobs that don't overlap between each other.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 834]**
-
-4. **You are given a set of activities with their starting time s[] and finishing time f[].** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 852]**
-
-5. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
-
-6. **(খ) নিচের সারণীটি বিবেচনা করুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+2. **(খ) নিচের সারণীটি বিবেচনা করুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
 | Item | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|
@@ -270,6 +262,14 @@ for i in N:
 একজন ব্যক্তি fractional knapsack ব্যবহার করে একটি থলি পূর্ণ করতে চান।
 i) থলির সর্বোচ্চ ধারণক্ষমতা 25 হলে, এতে সবচেয়ে বেশি মোট কত ওজনের বস্তু (item) রাখা যাবে?
 ii) বস্তুগুলো থলিতে রাখার ক্রম কী হবে?
+
+3. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 453]**
+
+4. **Given n jobs starting time n[] and duration d[], print maximum number of jobs that don't overlap between each other.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 834]**
+
+5. **You are given a set of activities with their starting time s[] and finishing time f[].** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 852]**
+
+6. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 853]**
 
 ## Dynamic Programming (5)
 

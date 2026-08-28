@@ -80,7 +80,7 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 **a) Write an SQL query to retrieve all student names, their courses, and grades.**
 **b) Write an SQL query to retrieve names of students who obtained grade 'A'.** **(BUET - Assistant Programmer Exam: 21.06.2025 (BUET)) [compact it 1434]**
 
-11. **Consider the following database schema-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+10. **Consider the following database schema-** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
 ```sql
 employee (employee_name, street, city)
 works (employee_name, company_name, salary)
@@ -90,7 +90,7 @@ company (employee_name, city)
  * **(i) Find the names of all employees who live in the city 'Dhaka'.**
  * **(ii) Find the names of all employees whose salary in greater than BDT 1,00,000.**
 
-12. **Given the following two tables (Students and Marks) in a database, write down the output of the given SQL queries and write down the SQL queries for the outputs:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1344]**
+11. **Given the following two tables (Students and Marks) in a database, write down the output of the given SQL queries and write down the SQL queries for the outputs:** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1344]**
 
 | Students |  |
 |---|---|
@@ -120,7 +120,7 @@ company (employee_name, city)
  * **(iv) List all the students who have not completed any subject.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
  * **(v) List all the subject names.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
 
-13. **Given a Patient table in a hospital database below.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+12. **Given a Patient table in a hospital database below.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
 
 | Patient_ID | Disease_Name |
 |---|---|
@@ -131,13 +131,15 @@ company (employee_name, city)
 
 Write down an SQL query to display the total number of patients under each disease category.
 
-14. **SQL OUTPUT Problem: Find Employee salary from a table where salary more than 5000.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
+13. **SQL OUTPUT Problem: Find Employee salary from a table where salary more than 5000.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1328]**
 
-15. **Write SQL code to get duplicate names from employee table.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+14. **Write SQL code to get duplicate names from employee table.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
-16. **Write an SQL query to find duplicate names in the employee table.** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
+15. **Write an SQL query to find duplicate names in the employee table.** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
 
-17. **SUM, Avg, Max these function are subnet of __________ function.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+16. **SUM, Avg, Max these function are subnet of __________ function.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
+
+17. **SQL Query.....** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 592]** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
 18. **Find sname who supplies pname=“wheel” with minimum price:** **(Titas Gas - Assistant Engineer (CSE) Exam: 24.05.2024 (BUET)) [compact it 418]**
     * **Catalog** (sid, pid, price)
@@ -198,7 +200,7 @@ Write down an SQL query to display the total number of patients under each disea
    * **(a) Find Departments with Average Monthly Salary Greater than 1000.**
    * **(b) Find Courses with More Than 2 Offerings.** **(Bangladesh Oil Gas Mineral Corporation (PetroBangla) - Assistant Manager (CSE/IT) Exam: 31.06.2024 (BUET)) [compact it 1456]**
 
-27. **SQL Query.....** **(Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) Exam: 2023 (BUET)) [compact it 592]** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 553]** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1335]** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+27. **6.4 Consider the following relation: Employee(EmpID, Name, Department, Salary). Write an SQL query to retrieve the Department, the total number of employees, and the average salary for each department. The output should display one record for each department.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
 28. **Analize the following code:**
 ```sql
@@ -225,19 +227,19 @@ HAVING COUNT(*)>2
 ORDER BY average_salary DESC;
 ```
 
-32. **Consider the employee tables: Create a SQL view that shows the details of Employee information who have the salary equivalent to the maximum, minimum and average salary of employee.** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 473]**
+31. **Consider the employee tables: Create a SQL view that shows the details of Employee information who have the salary equivalent to the maximum, minimum and average salary of employee.** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 473]**
 
-33. **SQL query for employee table. (Approximate)** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
+32. **SQL query for employee table. (Approximate)** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 476]**
 
-34. **Suppose we have a relational database with five tables. table key Attributes S(sid, A) Sid T(tid, B) Tid U(uid, C) Uid R(sid, tid, D) sid, tid Q(tid, uid, E) tid, uid Here R implements a many-to-many relationship between the entities implemented with tables S and T, and Q implements a many-to-many relationship between the entities implemented with tables T and U.**
+33. **Suppose we have a relational database with five tables. table key Attributes S(sid, A) Sid T(tid, B) Tid U(uid, C) Uid R(sid, tid, D) sid, tid Q(tid, uid, E) tid, uid Here R implements a many-to-many relationship between the entities implemented with tables S and T, and Q implements a many-to-many relationship between the entities implemented with tables T and U.**
    **(A) Write an SQL query that returns all records of the form sid, uid where sid is the key of an S- record and uid is the key of a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.**
    **(B) Write an SQL query that returns records of the form A, C where the A-value is from an S- record and the C-value is from a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.** **(Combined Bank Assistant Programmer Exam: 09.06.2023) [compact it 496]**
 
-35. **Write following EMPLOYEE database table write an SQL query to find employee who work is a department where the average salary is lower then the average salary all the department......** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 452]**
+34. **Write following EMPLOYEE database table write an SQL query to find employee who work is a department where the average salary is lower then the average salary all the department......** **(BPDB Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 452]**
 
-36. **Consider the two schema employees (id, first_name, last_name, designation, oining_date, salary, dept_id) and department (dept_id, dept_name). Where detp_id is forgeign key. Find the first_name and department name whose salary is maximum.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
+35. **Consider the two schema employees (id, first_name, last_name, designation, oining_date, salary, dept_id) and department (dept_id, dept_name). Where detp_id is forgeign key. Find the first_name and department name whose salary is maximum.** **(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 459]**
 
-37. **Suppose that we have a relational database with the following table. Underlined one represent primary key**
+36. **Suppose that we have a relational database with the following table. Underlined one represent primary key**
    **Movies (\underline{\text{mid}}, title, year)**
    **People (\underline{\text{pid}}, name)**
    **Genres (\underline{\text{gid}}, genre)**
@@ -245,9 +247,9 @@ ORDER BY average_salary DESC;
    **Has Genre (\underline{\text{gid}, \text{mid}})**
    **Write a SQL query to return the number of movies that are romantic comedies.** **(Bangladesh Bank - Assistant Programmer Exam: 03.02.2023 (BIBM)) [compact it 436]**
 
-38. **(গ) ডাটাবেস সিস্টেমে view কী? এটি কী কী কাজে লাগে?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
+37. **(গ) ডাটাবেস সিস্টেমে view কী? এটি কী কী কাজে লাগে?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
 
-39. **অথবা, নিম্নোক্ত টেবিলগুলো হতে (ক), (খ) এবং (গ) এর উত্তর দিন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
+38. **অথবা, নিম্নোক্ত টেবিলগুলো হতে (ক), (খ) এবং (গ) এর উত্তর দিন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
    Restaurant (rid, rname, rcity, phone, seat-capacity)
    Dishes (did, dname, dtype)
    Customer (cid, cname, ccity)
@@ -255,29 +257,29 @@ ORDER BY average_salary DESC;
 
    **(ক) যে যে রেস্টুরেন্টগুলো ‘Burger’ পরিবেশন করে সেগুলোর নাম খুঁজে বের করার জন্য SQL Query লিখুন। (খ) ‘Ziman’ নামক একজন Customer যে যে খাবারগুলো অ্যালার্জি সংক্রান্ত সমস্যা এড়িয়ে খেতে পারেন তার তালিকা তৈরি করুন। (গ) যে যে খাবারগুলো ঢাকার সকল রেস্টুরেন্টে পাওয়া যায় তার তালিকা তৈরি করুন।**
 
-40. **SQL query from a given table.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 634]**
+39. **SQL query from a given table.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 634]**
 
-41. **Employee table হতে Employee_id, Employee কে খোঁজে বের করার SQL Command লিখ যাদের গড় salary 2000 উপরে।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 641]**
+40. **Employee table হতে Employee_id, Employee কে খোঁজে বের করার SQL Command লিখ যাদের গড় salary 2000 উপরে।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 641]**
 
-42. **Employee Table টেবিল হতে যে সকল কর্মচারীদের বেতন 30000 টাকার বেশি তাদের নাম পদবী আলাদা করার SQLCommand লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 699]**
+41. **Employee Table টেবিল হতে যে সকল কর্মচারীদের বেতন 30000 টাকার বেশি তাদের নাম পদবী আলাদা করার SQLCommand লিখুন।** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 699]**
 
-43. **There are two tables like Employees (Employee_ID, First_name, Last_name, Email, Phone_number, Hire_date, Job_Id) and Departments (Department_Id, Department_name, Manager_Id, Location_Id). Now, write a query to find the name (first_name, last_name), Department Id and name of all the employees.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 718]**
+42. **There are two tables like Employees (Employee_ID, First_name, Last_name, Email, Phone_number, Hire_date, Job_Id) and Departments (Department_Id, Department_name, Manager_Id, Location_Id). Now, write a query to find the name (first_name, last_name), Department Id and name of all the employees.** **(Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer Exam: 2022) [compact it 718]**
 
-44. **For employee table: (a) Write a SQL query to find those employees who earn more than the average salary. Return employee ID, first name, last name. (b) Write a SQL query to find those employees who earn the highest salary in a department. Return department ID, employee name, and salary.** **(CAAB Programmer Exam: 2022) [compact it 722]**
+43. **For employee table: (a) Write a SQL query to find those employees who earn more than the average salary. Return employee ID, first name, last name. (b) Write a SQL query to find those employees who earn the highest salary in a department. Return department ID, employee name, and salary.** **(CAAB Programmer Exam: 2022) [compact it 722]**
 
-45. **Write down the SQL command into the following two: (a) Find out the all information of employees from emp_info table. Where employee's salary is more than 20,000 and city is Dhaka. (b) Update employee name ‘Mr.X’ in emp_info, whose epm_id is 2.** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 730]**
+44. **Write down the SQL command into the following two: (a) Find out the all information of employees from emp_info table. Where employee's salary is more than 20,000 and city is Dhaka. (b) Update employee name ‘Mr.X’ in emp_info, whose epm_id is 2.** **(NWPGCL Junior Assistant Manager (IT) Exam: 2022) [compact it 730]**
 
-46. **Write down the equivalent SQL from following relational algebra. [full question not collected]** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
+45. **Write down the equivalent SQL from following relational algebra. [full question not collected]** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
 
-47. **Write a SQL query to find same salary but job not same?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+46. **Write a SQL query to find same salary but job not same?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
-48. **This returns the names of the staff where timestampdiff is greater than 25 so it returns total 3 rows.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+47. **This returns the names of the staff where timestampdiff is greater than 25 so it returns total 3 rows.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
-50. **(c) In a SQL query, while performing string matching when do we use operator and when we use LIKE operator? Give examples.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 803]**
+48. **(c) In a SQL query, while performing string matching when do we use operator and when we use LIKE operator? Give examples.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 803]**
 
-51. **Consider the Electrical Powr company database which has the following tables: Powerplant(Powerplant_ID, location, type, capacity.unit_price) Customer(Customer_ID, name, address, DoB, monthly_demand) Customer_usage_profile(ID, month_name, Customer_ID, Powrplant_ID) The powerplant relation has attributes powerplan_ID, loation, Type{Thrmal power, hydro power, nuclear power, nuclear power, capacity, and unit_price of power generated by the powerplant. The customer relation has attributes Customer_ID, name, address, date of birth(DoB) and monthly_demand of electrical power. The customer_usesge_profile relation stores the user profile of a customer. A customer more usage hydropower during the rainy season and thermal or nuclear power during the dry season. Write the relational algebra expressions for the following queries: (i) List the customers with a yearly bill of more than taka 5,000. (ii) List the customers who uses nuclear power during December and has a monthly bill less then 500 in December.** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 818]**
+49. **Consider the Electrical Powr company database which has the following tables: Powerplant(Powerplant_ID, location, type, capacity.unit_price) Customer(Customer_ID, name, address, DoB, monthly_demand) Customer_usage_profile(ID, month_name, Customer_ID, Powrplant_ID) The powerplant relation has attributes powerplan_ID, loation, Type{Thrmal power, hydro power, nuclear power, nuclear power, capacity, and unit_price of power generated by the powerplant. The customer relation has attributes Customer_ID, name, address, date of birth(DoB) and monthly_demand of electrical power. The customer_usesge_profile relation stores the user profile of a customer. A customer more usage hydropower during the rainy season and thermal or nuclear power during the dry season. Write the relational algebra expressions for the following queries: (i) List the customers with a yearly bill of more than taka 5,000. (ii) List the customers who uses nuclear power during December and has a monthly bill less then 500 in December.** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 818]**
 
-52. **What will be the output after running all the following queries?** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 813]**
+50. **What will be the output after running all the following queries?** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 813]**
 ```sql
 CREATE Table t(
 val INT
@@ -290,54 +292,52 @@ SELECT count(Distinct val) val_count
 From t;
 ```
 
-53. **Write SQL command from the following tables. Employee (ename, street, city) Works (ename, cname, salary, joindate) Company (cname, city) Manages (ename, mname) (a) Find name, street, city who work for First Corporation Bank and earn more than 30000 (b) Find name of all employees, who live in the same city and company for which they work. (c) Give all employees of First Century Bank 10 percent salary raise (d) Find the company with payroll less than 100000.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 835-836]**
+51. **Write SQL command from the following tables. Employee (ename, street, city) Works (ename, cname, salary, joindate) Company (cname, city) Manages (ename, mname) (a) Find name, street, city who work for First Corporation Bank and earn more than 30000 (b) Find name of all employees, who live in the same city and company for which they work. (c) Give all employees of First Century Bank 10 percent salary raise (d) Find the company with payroll less than 100000.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 835-836]**
 
-54. **DB schema: book (book_id, book_title, book_type, publication_name) author (book_name, author_name) publicher (publication_name, publication_address, est_year) copies (book_id, branch_name, no_of-copies) [database query লিখতে আসছিল]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
+52. **DB schema: book (book_id, book_title, book_type, publication_name) author (book_name, author_name) publicher (publication_name, publication_address, est_year) copies (book_id, branch_name, no_of-copies) [database query লিখতে আসছিল]** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 857]**
 
-55. **Given Table: Project (Project_id, Project_name, Manager_name) Location (location_id, Location_name, project_id) Employee (Employee_id, Employee_Name, Location_id, Joning date, Salary) Write a query to show project_name, Location_name, Total_salary of each projects employee who joined before ‘January 2021’.** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 868]**
+53. **Given Table: Project (Project_id, Project_name, Manager_name) Location (location_id, Location_name, project_id) Employee (Employee_id, Employee_Name, Location_id, Joning date, Salary) Write a query to show project_name, Location_name, Total_salary of each projects employee who joined before ‘January 2021’.** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 868]**
 
-56. **(i) SQL Query for finding Dept names for departments Find out the employees whose salaries are greater than the salaries of their managers.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
+54. **(i) SQL Query for finding Dept names for departments Find out the employees whose salaries are greater than the salaries of their managers.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
 
-57. **Two SQL query from given table (date and join related).** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
+55. **Two SQL query from given table (date and join related).** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
 
-58. **emp [e_id, e_name, dept_id, salary, DOB], dept [dept_id, city, dept_name]; প্রত্যেকটি Department এর নাম এবং ঐ Department এর employee দের গড় Salary দেখার SQL Query লিখ।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
+56. **emp [e_id, e_name, dept_id, salary, DOB], dept [dept_id, city, dept_name]; প্রত্যেকটি Department এর নাম এবং ঐ Department এর employee দের গড় Salary দেখার SQL Query লিখ।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 911]**
 
-59. **Database table by name Loan Records is given below: What is the output of the following SQL query?** **(BAUST Assistant Programmer Exam: 2021) [compact it 919-920]**
+57. **Database table by name Loan Records is given below: What is the output of the following SQL query?** **(BAUST Assistant Programmer Exam: 2021) [compact it 919-920]**
 ```sql
 SELECT count (*) FROM (
 (SELECT Borrower, Bank_Manager, FROM Loan_Records) AS S NATURAL JOIN
 (SELECT Bank_Manager, Loan_Amount FROM Loan_Records) AS T);
 ```
 
-60. **Below tables are given, Employee (employee_id, name, salary, department) Leave (employee_id, date, reason, no_leaves) Holiday (Date, description) (i) Write mapping cardinality between 'Employee' and 'Holiday' table. (ii) Write query to show all employee's leave count. (iii) Write query to show employees who are in 'HR' department and have taken at least 5 leaves.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928]**
+58. **Below tables are given, Employee (employee_id, name, salary, department) Leave (employee_id, date, reason, no_leaves) Holiday (Date, description) (i) Write mapping cardinality between 'Employee' and 'Holiday' table. (ii) Write query to show all employee's leave count. (iii) Write query to show employees who are in 'HR' department and have taken at least 5 leaves.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928]**
 
-61. **Find the Query for the Instructor table a. Find the average salary of instructors in each department. b. Find the names and average salaries of all departments whose average salary is greater than 42000. c. Find names of instructors with salary greater than that of some (at least one) instructor in the CSE department.** **(NRCC Assistant Programmer Exam: 2021) [compact it 930]**
+59. **Find the Query for the Instructor table a. Find the average salary of instructors in each department. b. Find the names and average salaries of all departments whose average salary is greater than 42000. c. Find names of instructors with salary greater than that of some (at least one) instructor in the CSE department.** **(NRCC Assistant Programmer Exam: 2021) [compact it 930]**
 
-62. **Consider the following relational database schema consisting of the four relation schemas: passenger (pid, ppname, pgender, pcity) agency (aid, aname, acity) flight (fid, fdate, time, src, dest) booking (pid, aid, fid, fdate) a) Get the complete details of all flights to New Delhi b) Get the details about all flights from Chennai to New Delhi.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+60. **Consider the following relational database schema consisting of the four relation schemas: passenger (pid, ppname, pgender, pcity) agency (aid, aname, acity) flight (fid, fdate, time, src, dest) booking (pid, aid, fid, fdate) a) Get the complete details of all flights to New Delhi b) Get the details about all flights from Chennai to New Delhi.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
 
-63. **৫. সম্পূর্ণ টেবিলের ডেটা প্রদর্শন এর জন্য কোনটি ব্যবহার করা হয়?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+61. **৫. সম্পূর্ণ টেবিলের ডেটা প্রদর্শন এর জন্য কোনটি ব্যবহার করা হয়?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
 
-64. **Write a SQL query to find those employees who report that manager whose first name is ‘abc’. Return first name, last name, employee ID and salary.** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
+62. **Write a SQL query to find those employees who report that manager whose first name is ‘abc’. Return first name, last name, employee ID and salary.** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
 
-65. **Given a database schema and worker table with fully code: Now writes SQL Query from the following questions.** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
+63. **Given a database schema and worker table with fully code: Now writes SQL Query from the following questions.** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
 
-66. **(b) SQL Query: commission greater than 10%** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
+64. **(b) SQL Query: commission greater than 10%** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
 
-67. **(c) Remove duplicate data from table** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
+65. **(c) Remove duplicate data from table** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 976]**
 
-68. **What is the full meaning of SQL? List of the aggregate function. Write SQL Query of a table and its output.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1002-1003]**
+66. **What is the full meaning of SQL? List of the aggregate function. Write SQL Query of a table and its output.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1002-1003]**
 
-69. **Query to find out even number from given table.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014]**
+67. **Query to find out even number from given table.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014]**
 
-70. **How to copy from Parent table to Child Table with 1 column dividing into 3 different columns?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014-1015]**
+68. **How to copy from Parent table to Child Table with 1 column dividing into 3 different columns?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014-1015]**
 
-71. **Design and Queries from HR schema. (i) Display details of jobs where the minimum salary is greater than 10000. (ii) Display the first name and join date of the employees who joined between 2002 and 2005. (iii) Display first name and join date of the employees who is either IT Programmer or Sales Man. (iv) Display first name, salary, commission pct, and hire date for employees with salary less than 10000. (v) Display job Title, the difference between minimum and maximum salaries for jobs with max salary in the range 10000 to 20000. (vi) Display first name, salary, and round the salary to thousands. (vii) Display employees where the first name or last name starts with S. (viii) Display details of the employees where commission percentage is null and salary in the range 5000 to 10000 and department is 30. (ix) Display first name and date of first salary of the employees. (x) Display first name and last name after converting the first letter of each name to upper case and the rest to lower case.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1016-1017]**
+69. **Design and Queries from HR schema. (i) Display details of jobs where the minimum salary is greater than 10000. (ii) Display the first name and join date of the employees who joined between 2002 and 2005. (iii) Display first name and join date of the employees who is either IT Programmer or Sales Man. (iv) Display first name, salary, commission pct, and hire date for employees with salary less than 10000. (v) Display job Title, the difference between minimum and maximum salaries for jobs with max salary in the range 10000 to 20000. (vi) Display first name, salary, and round the salary to thousands. (vii) Display employees where the first name or last name starts with S. (viii) Display details of the employees where commission percentage is null and salary in the range 5000 to 10000 and department is 30. (ix) Display first name and date of first salary of the employees. (x) Display first name and last name after converting the first letter of each name to upper case and the rest to lower case.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1016-1017]**
 
-72. **Query for retrieving UNCOMMON Name from Name column of two given tables.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1017]**
+70. **Query for retrieving UNCOMMON Name from Name column of two given tables.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1017]**
 
-73. **Employee টেবিল থেকে যেসকল Employee এর Salary 25000 থেকে 50000 এর মধ্যে এবং Designation হচ্ছে officer এবং City হচ্ছে Dhaka তাদের দেখার জন্য SQL টেবিল দেখান।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1042]**
-
-74. **6.4 Consider the following relation: Employee(EmpID, Name, Department, Salary). Write an SQL query to retrieve the Department, the total number of employees, and the average salary for each department. The output should display one record for each department.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+71. **Employee টেবিল থেকে যেসকল Employee এর Salary 25000 থেকে 50000 এর মধ্যে এবং Designation হচ্ছে officer এবং City হচ্ছে Dhaka তাদের দেখার জন্য SQL টেবিল দেখান।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1042]**
 
 ## DBMS Architecture & Features (22)
 
@@ -350,41 +350,41 @@ SELECT count (*) FROM (
 
 4. **Difference between MSAccess and MS FoxPro in SQL.** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 317]**
 
-5. **What is Database?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
+5. **(খ) DBMS কী? দুটি সুবিধা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-6. **What is data about data?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+6. **What is Database?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
-7. **(খ) Centralized System ও Client Server System সম্পর্কে সচিত্র বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
+7. **What is data about data?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
-8. **(ক) একজন ডাটাবেস এডমিন এর কাজ কী? কিছু ডাটাবেস সিস্টেম অ্যাপ্লিকেশনের নাম লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
+8. **(খ) Centralized System ও Client Server System সম্পর্কে সচিত্র বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 612]**
 
-9. **(খ) ডাটাবেস ব্যবস্থাপনা সিস্টেমের তিন স্তরবিশিষ্ট আর্কিটেকচার ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
+9. **(ক) একজন ডাটাবেস এডমিন এর কাজ কী? কিছু ডাটাবেস সিস্টেম অ্যাপ্লিকেশনের নাম লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 625]**
 
-10. **(ক) সাধারণ ফাইলভিত্তিক সিস্টেমের চেয়ে DBMS এর সুবিধা কী কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
+10. **(খ) ডাটাবেস ব্যবস্থাপনা সিস্টেমের তিন স্তরবিশিষ্ট আর্কিটেকচার ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
 
-11. **What is Database administrator role?** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
+11. **(ক) সাধারণ ফাইলভিত্তিক সিস্টেমের চেয়ে DBMS এর সুবিধা কী কী?** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]**
 
-12. **Explain difference between Data Administrator and Database Administrator.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
+12. **What is Database administrator role?** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
 
-13. **Describe the advantages and disadvantages of DBMS-provided and application provided security.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 684]**
+13. **Explain difference between Data Administrator and Database Administrator.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 681]**
 
-14. **(a) What is database schema? What are dangling tuple and descriptive attribute?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
+14. **Describe the advantages and disadvantages of DBMS-provided and application provided security.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 684]**
 
-15. **What is data Independence? How many types of data independence?** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
+15. **(a) What is database schema? What are dangling tuple and descriptive attribute?** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (ICT)) [compact it 693]**
 
-16. **(ii) Database এর Table and View এর মধ্যে পার্থক্য লিখুন। E-R diagram এর প্রয়োজনীয়তা লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
+16. **What is data Independence? How many types of data independence?** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 742]**
 
-17. **(a) Distinguish between table and view in database management system.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
+17. **(ii) Database এর Table and View এর মধ্যে পার্থক্য লিখুন। E-R diagram এর প্রয়োজনীয়তা লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
 
-18. **Database এর সর্বনিম্ন Unit কোনটি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+18. **(a) Distinguish between table and view in database management system.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 802]**
 
-19. **DBMS বলতে কী বোঝানো হয়? DBMS শ্রেণিভিন্যাস বর্ণনা করুন।** **(40th BCS Written Exam: 2020 (BPSC)) [compact it 971-972]**
+19. **Database এর সর্বনিম্ন Unit কোনটি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
 
-20. **Define View, Materialized View. Difference between View and Materialized View and Usage of two.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1012-1013]**
+20. **DBMS বলতে কী বোঝানো হয়? DBMS শ্রেণিভিন্যাস বর্ণনা করুন।** **(40th BCS Written Exam: 2020 (BPSC)) [compact it 971-972]**
 
-21. **What are the roles of Database Engineer?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014]**
+21. **Define View, Materialized View. Difference between View and Materialized View and Usage of two.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1012-1013]**
 
-22. **(খ) DBMS কী? দুটি সুবিধা লিখুন।** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+22. **What are the roles of Database Engineer?** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1014]**
 
 ## ER Diagram & Database Design (21)
 
@@ -432,11 +432,11 @@ SELECT count (*) FROM (
 18. **(i) Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Referee (Referee-id, Referee-name) Player (player-id, palyername, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result).** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 928-929]** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 939]**
    **(ii) Convert the ER diagram to relations (Table)** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 929-930]**
 
-20. **Draw ER diagram (Self test)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1009]**
+19. **Draw ER diagram (Self test)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1009]**
 
-21. **E-R Diagram কী? উদাহরণসহ লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019-1020]**
+20. **E-R Diagram কী? উদাহরণসহ লিখুন?** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019-1020]**
 
-22. **Draw an ER diagram of a Library Management System.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036-1037]**
+21. **Draw an ER diagram of a Library Management System.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036-1037]**
 
 ## Keys in DBMS (21)
 
@@ -484,9 +484,11 @@ SELECT count (*) FROM (
 
 ## Normalization & Database Design (18)
 
-1. **Why normalization is required in Database? Write shortly about 3NF?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+1. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
-2. **Explain the differences between Second Normal Form (2NF) and Third Normal Form (3NF) with examples.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
+2. **Why normalization is required in Database? Write shortly about 3NF?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1350]**
+
+3. **Explain the differences between Second Normal Form (2NF) and Third Normal Form (3NF) with examples.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1340]**
 
 | 2NF(Second Normal Form) | 3NF(Third Normal Form) |
 |---|---|
@@ -497,43 +499,41 @@ SELECT count (*) FROM (
 | It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
 | The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
 
-3. **What is Logical design database is called?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+4. **What is Logical design database is called?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-4. **A Bank schema is given below:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1322]**
+5. **A Bank schema is given below:** **(Bangladesh Bank Assistant Director (ICT) Exam: 07.02.2025 (DU)) [compact it 1322]**
    $$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
    * (a) Provided and Normalize and point out Primary and Foreign Key?
    * (b) Show that is the schema and state that why your schema is in good form.
 
-5. **What is Normalize a database? Used containers if needed, draw an ER Diagram.** **[See WZPGCL, Assistant Engineer (CSE), Exam: 27.05.2023]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 315]**
+6. **What is Normalize a database? Used containers if needed, draw an ER Diagram.** **[See WZPGCL, Assistant Engineer (CSE), Exam: 27.05.2023]** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 315]**
 
-6. **(ক) Normalization কী? কত প্রকার ও কী কী? ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+7. **(ক) Normalization কী? কত প্রকার ও কী কী? ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
-7. **What is database Normalization? Write down the types of database Normalization.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 504]**
+8. **What is database Normalization? Write down the types of database Normalization.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 504]**
 
-8. **Which normalization is related to functional dependency?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+9. **Which normalization is related to functional dependency?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
-9. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+10. **Functional dependency use in which normalizations?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
-10. **What in First and Second Normal form is DBMS?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
+11. **What in First and Second Normal form is DBMS?** **(Bangladesh Livestock Research Institute Assistant Maintenance Engineer Exam: 20.05.2023) [compact it 498]**
 
-11. **অথবা, (ক) “BCNF is stricter than 3NF” এই উক্তিটি উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
+12. **অথবা, (ক) “BCNF is stricter than 3NF” এই উক্তিটি উদাহরণসহ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 626]**
 
-12. **Why Normalization is used in database? Explain 1^{\text{st}} Normal form using an example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
+13. **Why Normalization is used in database? Explain 1^{\text{st}} Normal form using an example.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 665]**
 
-13. **Why do you need database Normalization?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
+14. **Why do you need database Normalization?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 676]**
 
-14. **Let a relational function is R(A, B, C, D, E), Write Yes or No based on those are the follow n functional dependency.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 822]**
+15. **Let a relational function is R(A, B, C, D, E), Write Yes or No based on those are the follow n functional dependency.** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 822]**
    AB \to C
    B \to B
    DE \to A
 
-15. **What is DBMS? Write down the purpose of normalization in DBMS.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
+16. **What is DBMS? Write down the purpose of normalization in DBMS.** **(SPCBL Assistant Maintenance Engineer Exam: 20.11.2021) [compact it 874]**
 
-16. **(b) What is normalization? Why is it needed?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+17. **(b) What is normalization? Why is it needed?** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
 
-17. **(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 953-954]**
-
-18. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+18. **(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 953-954]**
 
 ## SQL Commands (DDL, DML, DCL, TCL) (13)
 
@@ -543,39 +543,39 @@ SELECT count (*) FROM (
 
 3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-5. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
+4. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 627]** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 611]**
 
-6. **SQL query to insert data into table. (A table was given with 3 row)** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
+5. **SQL query to insert data into table. (A table was given with 3 row)** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 657]**
 
-7. **How can you Revoke permissions from a database table? Give SQL command for it.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 666]**
+6. **How can you Revoke permissions from a database table? Give SQL command for it.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 666]**
 
-8. **What is DDL and DML?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+7. **What is DDL and DML?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
-9. **(i) নিচের Table টি তৈরি করার SQL কমান্ড লিখুন। student_info (std_id, name, department, phone_number) (a) Table তে ২টি record (insert) প্রবেশ করার SQL কমান্ড লিখুন। (b) Table টি থেকে CSE বিভাগের ছাত্র/ছাত্রীদের নামের তালিকা বের করার SQL command লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
+8. **(i) নিচের Table টি তৈরি করার SQL কমান্ড লিখুন। student_info (std_id, name, department, phone_number) (a) Table তে ২টি record (insert) প্রবেশ করার SQL কমান্ড লিখুন। (b) Table টি থেকে CSE বিভাগের ছাত্র/ছাত্রীদের নামের তালিকা বের করার SQL command লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 785]**
 
-10. **Write the create table command for the ‘Employee’ table with the following column: Emp_ID, Emp_Name, Date_of_Birth.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
+9. **Write the create table command for the ‘Employee’ table with the following column: Emp_ID, Emp_Name, Date_of_Birth.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 829]**
 
-11. **৪. ডাটাবেইজে টেবিল ডিলেট করার কমান্ড লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+10. **৪. ডাটাবেইজে টেবিল ডিলেট করার কমান্ড লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
 
-12. **ডাটাবেইজ ম্যানেজমেন্ট সিস্টেমের মধ্যে CRUD এর কাজ কি?** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
+11. **ডাটাবেইজ ম্যানেজমেন্ট সিস্টেমের মধ্যে CRUD এর কাজ কি?** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947]**
 
-13. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 988-989]**
+12. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 988-989]**
 
-14. **How to find duplicate data in database? Explain DDL and DML.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1017-1018]**
+13. **How to find duplicate data in database? Explain DDL and DML.** **(RAKUB Assistant Database Administrator Written Exam: 2020 (E-Zone)) [compact it 1017-1018]**
 
 ## Transaction Management & ACID Properties (12)
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1425]**
 
-2. **What are the ACID properties of transaction to ensure data reliability and integrity?** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
+2. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
-3. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
+3. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
-4. **How many process of Transaction complete?** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+4. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 415]**
 
-5. **ACID এর প্রোপার্টি কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+5. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
 
-6. **Case Study type Database-related problem (Solve: ACID)** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 321]**
+6. **What are the ACID properties of transaction to ensure data reliability and integrity?** **(Milk Vita Assistant Manager (CSE/MIS) Exam: 2023) [compact it 472]**
 
 7. **(a) What is ACID mean in database system?** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 492]**
 

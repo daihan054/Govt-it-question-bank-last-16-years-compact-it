@@ -180,28 +180,28 @@
 
 5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
 
-6. **(b) Simplify the following Boolean function using K-map.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
+6. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-7. **Minimize the following function in SOP minimal form using K-map:** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
+7. **(b) Simplify the following Boolean function using K-map.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 489]**
 
-8. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
+8. **Minimize the following function in SOP minimal form using K-map:** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 465]**
 
-9. **Simplify using K-map with logic circuit.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
+9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 667]**
 
-10. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 798]**
+10. **Simplify using K-map with logic circuit.** **(Petrobangla Assistant Manager (IT) Exam: 16.09.2022 (BUET)) [compact it 713]**
 
-11. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
+11. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 798]**
 
-12. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 879]**
+12. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
 
-13. **Draw the k-map for the equation:** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
+13. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** **(NWPGCL Assistant Engineer (IT) Exam: 03.12.2021 (BUET)) [compact it 879]**
+
+14. **Draw the k-map for the equation:** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 922]**
    F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
 
-14. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1010-1011]**
+15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1010-1011]**
 
-15. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038-1039]**
-
-16. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+16. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038-1039]**
 
 ## Boolean Algebra & De Morgan’s Theorem (13)
 

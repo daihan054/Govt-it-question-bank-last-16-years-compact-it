@@ -75,57 +75,57 @@
    b) নতুন ডিরেক্টরি তৈরির কমান্ড।
    c) ফাইল এ্যাকসেস পারমিশন দেখানোর কমান্ড।
 
-18. **UNIX command (directory listing with hidden files).** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
+17. **UNIX command (directory listing with hidden files).** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 662]**
 
-19. **Difference between below 3 linux command: cd, cd usr/desk/home, cd/user/desk/home** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 717]**
+18. **Difference between below 3 linux command: cd, cd usr/desk/home, cd/user/desk/home** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 717]**
 
-20. **Linux Command: Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
+19. **Linux Command: Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** **(Water Supply and Sewerage Authority (WASA); Assistant Programmer Exam: 25.11.2022) [compact it 763]** **(MGMCL Assistant Manager (ICT) Exam: 20.05.2022 (BUET)) [compact it 651]**
 
-21. **(b) Write Linux commands to: (i) Make a directory named PSC (ii) Copy a directory with all its Contents into a directory name/home/admin.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
+20. **(b) Write Linux commands to: (i) Make a directory named PSC (ii) Copy a directory with all its Contents into a directory name/home/admin.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 799]**
 
-22. **In Linux, History is a very useful command to show you all of the last commands that have been recently used. Grep is a Linux command-line tool used to search for a string of characters in a specified file. Write grep and history command to find previous commands in Linux.** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 813]**
+21. **In Linux, History is a very useful command to show you all of the last commands that have been recently used. Grep is a Linux command-line tool used to search for a string of characters in a specified file. Write grep and history command to find previous commands in Linux.** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 813]**
 
-23. **Write down a shell script program that would add the line “This is my file” at the top of each file having the extention ‘txt’ in the current directory. Note that all the other contents of the .txt file(s) would remain unchanged and start from the second line.** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 818]**
+22. **Write down a shell script program that would add the line “This is my file” at the top of each file having the extention ‘txt’ in the current directory. Note that all the other contents of the .txt file(s) would remain unchanged and start from the second line.** **(BPDB Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 818]**
 
-24. **Write the following UNIX command with example: (a) ls (b) grep (c) ssh** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820]**
+23. **Write the following UNIX command with example: (a) ls (b) grep (c) ssh** **(BITAC Assistant Maintenance Engineer (ICT) Exam: 2021 (BUET)) [compact it 820]**
 
-25. **(a) Check if the website of ‘TGTDCL’. (b) How to create folder in sub-directory?** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
+24. **(a) Check if the website of ‘TGTDCL’. (b) How to create folder in sub-directory?** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
 
-26. **Write a Linux command to revoke permission from no user but owner from a file “jdcl.txt”.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
+25. **Write a Linux command to revoke permission from no user but owner from a file “jdcl.txt”.** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 859]**
 
-27. **Linux এর ক্ষেত্রে User Creation এর কমান্ড লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
+26. **Linux এর ক্ষেত্রে User Creation এর কমান্ড লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
 
-28. **Write Linux command for following question: a) Create a file apscl.txt in current location. b) Given permission to all read write and execute to the file apscl.txt c) Read first 7 lines from apscl.txt file d) Delete the file apscl.txt** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867-868]**
+27. **Write Linux command for following question: a) Create a file apscl.txt in current location. b) Given permission to all read write and execute to the file apscl.txt c) Read first 7 lines from apscl.txt file d) Delete the file apscl.txt** **(APSCL Assistant Engineer (ICT/MIS) Exam: 12.11.2021 (BUET)) [compact it 867-868]**
 
-29. **How do you define bash?** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]**
+28. **How do you define bash?** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 875]**
 
-30. **Linux Command: Write a code for listing home directory files with all details and human readable size got to Home directory, list directory files with 10-15 are display only 10^{\text{th}} to 15^{\text{th}} lines of words of them. Write the instructions in a way that they execute together and shows the result.** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 878]**
+29. **Linux Command: Write a code for listing home directory files with all details and human readable size got to Home directory, list directory files with 10-15 are display only 10^{\text{th}} to 15^{\text{th}} lines of words of them. Write the instructions in a way that they execute together and shows the result.** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 878]**
 
-31. **(i) Linux command for showing all files including the hidden files inside the home directory.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
+30. **(i) Linux command for showing all files including the hidden files inside the home directory.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
 
-32. **(ii) Linux command for showing page size, disk space in a human-readable format.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
+31. **(ii) Linux command for showing page size, disk space in a human-readable format.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
 
-33. **A home directory called SGFL exists on your computer. Write a Linux command to create a link called “SGFL-Link” in the home directory.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
+32. **A home directory called SGFL exists on your computer. Write a Linux command to create a link called “SGFL-Link” in the home directory.** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 937]**
 
-34. **Write Shell command which make a folder name ‘A’ with read permission access only.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938]**
+33. **Write Shell command which make a folder name ‘A’ with read permission access only.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938]**
 
-35. **Write Shell command which copy folder ‘A’ all information into folder ‘P’. Folder ‘A’ and folder ‘P’s parent folder is same.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938-939]**
+34. **Write Shell command which copy folder ‘A’ all information into folder ‘P’. Folder ‘A’ and folder ‘P’s parent folder is same.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 938-939]**
 
-36. **৩. লিনাক্স এর প্রিন্ট কমান্ডটি লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+35. **৩. লিনাক্স এর প্রিন্ট কমান্ডটি লিখ?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
 
-37. **৬. ফোল্ডার রিমুভ করার জন্য নিচেরর কোনটি লিনাক্স কমান্ড হিসেবে ব্যবহৃত হয়?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+36. **৬. ফোল্ডার রিমুভ করার জন্য নিচেরর কোনটি লিনাক্স কমান্ড হিসেবে ব্যবহৃত হয়?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
 
-38. **৭. ফাইল কপি করার জন্য লিনাক্স কমান্ড কোনটি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+37. **৭. ফাইল কপি করার জন্য লিনাক্স কমান্ড কোনটি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
 
-39. **ফাইল কপি করার লিনাক্স/ইউনিক্স কমান্ড কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+38. **ফাইল কপি করার লিনাক্স/ইউনিক্স কমান্ড কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
 
-40. **২. নেটওয়ার্ক কানেক্টিভিটি টেস্ট করার জন্য লিনাক্স কমান্ড লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
+39. **২. নেটওয়ার্ক কানেক্টিভিটি টেস্ট করার জন্য লিনাক্স কমান্ড লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
 
-41. **৩. IP Address বের করার জন্য লিনাক্স কমান্ড লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
+40. **৩. IP Address বের করার জন্য লিনাক্স কমান্ড লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
 
-42. **Write down Linux command: i. Display current directory folder and file. ii. Create a folder name “DPDC”. iii. Remove a file like as “DPDC2”. iv. A file name is “myFile”; Rename the file name to “DPDC2.txt”. v. Give permission to a file so that anyone can read, write and executive that file.** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
+41. **Write down Linux command: i. Display current directory folder and file. ii. Create a folder name “DPDC”. iii. Remove a file like as “DPDC2”. iv. A file name is “myFile”; Rename the file name to “DPDC2.txt”. v. Give permission to a file so that anyone can read, write and executive that file.** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
 
-43. **A bash shell script using for loop to give output of given pattern:** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1035]**
+42. **A bash shell script using for loop to give output of given pattern:** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1035]**
 
 ## CPU Scheduling Algorithms (24)
 
@@ -167,46 +167,7 @@ All process arrived at time 0. Lower number has higher priority.
 
 12. **What type of RR Scheduling Algorithm: Preemtive/ Non-Preemtive?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
-13. **Consider the following six processes each having its own unique processing time and arrival time.**
-| Processes | Arrival time | Processing time |
-|---|---|---|
-| P1 | 0 | 8 |
-| P2 | 0 | 4 |
-| P3 | 0 | 5 |
-| P4 | 1 | 9 |
-| P5 | 1 | 7 |
-| P6 | 0 | 1 |
-**Find average turnaround time using shortest job first scheduling algorithm.**
-**(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 461]**
-
-14. **Find average turnaround time and average waiting time using round robin and FCFS algorithm?**
-| Process | Arrival Time | Execute Time |
-|---|---|---|
-| P0 | 0 | 5 |
-| P1 | 1 | 3 |
-| P2 | 2 | 8 |
-| P3 | 3 | 6 |
-**(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 467]**
-
-15. **Starvation in SJF, Starvation free scheduling algorithm name. (Question not clear)** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 654]**
-
-16. **Consider the processes P1, P2, P3, P4 given in the below table, arrives for execution in the same order, with Arrival Time 0, and given Burst Time, let's find the average waiting time using the FCFS scheduling algorithm.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 856]**
-
-17. **Job arrival time and execution time of Operating system tasks table is given, find out- (i) Average waiting time for FCFS (ii) Preemptive SJF (iii) Round Robin (Quantum time: 3) scheduling algorithm** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
-
-18. **Calculate The Average Waiting Time of SJF scheduling algorithm.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
-
-19. **(a) Define FCFS, SJF and RR algorithm (Quantum=20).** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977-978]**
-
-20. **(b) Turnaround time of FCFS and SJF** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 978]**
-
-21. **Operating system (OS) scheduling is the key concept of multiprogramming. List and briefly define the major types of OS scheduling.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985-986]**
-
-22. **(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1026]**
-
-23. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1047]**
-
-24. **(গ) নিচের সারণীটি দেখুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+13. **(গ) নিচের সারণীটি দেখুন:** **(প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
 | Process | Burst Time (milli second) | Priority |
 |---|---|---|
@@ -219,6 +180,45 @@ All process arrived at time 0. Lower number has higher priority.
 সমস্ত process একই সাথে 0 সময়ে এসে পৌঁছে।
 i) FCFS এবং SJF Scheduling algorithm ব্যবহার করে Gantt Chart এর মাধ্যমে process গুলোর execution দেখান।
 ii) উপরের উভয় algorithm এর জন্য প্রত্যেকটি process এর turnaround সময় নির্ণয় করুন।
+
+14. **Consider the following six processes each having its own unique processing time and arrival time.**
+| Processes | Arrival time | Processing time |
+|---|---|---|
+| P1 | 0 | 8 |
+| P2 | 0 | 4 |
+| P3 | 0 | 5 |
+| P4 | 1 | 9 |
+| P5 | 1 | 7 |
+| P6 | 0 | 1 |
+**Find average turnaround time using shortest job first scheduling algorithm.**
+**(BIWTA Assistant Engineer (CSE) Exam: 24.02.2023 (BUET)) [compact it 461]**
+
+15. **Find average turnaround time and average waiting time using round robin and FCFS algorithm?**
+| Process | Arrival Time | Execute Time |
+|---|---|---|
+| P0 | 0 | 5 |
+| P1 | 1 | 3 |
+| P2 | 2 | 8 |
+| P3 | 3 | 6 |
+**(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 467]**
+
+16. **Starvation in SJF, Starvation free scheduling algorithm name. (Question not clear)** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 654]**
+
+17. **Consider the processes P1, P2, P3, P4 given in the below table, arrives for execution in the same order, with Arrival Time 0, and given Burst Time, let's find the average waiting time using the FCFS scheduling algorithm.** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 856]**
+
+18. **Job arrival time and execution time of Operating system tasks table is given, find out- (i) Average waiting time for FCFS (ii) Preemptive SJF (iii) Round Robin (Quantum time: 3) scheduling algorithm** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925]**
+
+19. **Calculate The Average Waiting Time of SJF scheduling algorithm.** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
+
+20. **(a) Define FCFS, SJF and RR algorithm (Quantum=20).** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 977-978]**
+
+21. **(b) Turnaround time of FCFS and SJF** **(National University Assistant Programmer Exam: 2020 (DU)) [compact it 978]**
+
+22. **Operating system (OS) scheduling is the key concept of multiprogramming. List and briefly define the major types of OS scheduling.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985-986]**
+
+23. **(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1026]**
+
+24. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** **(Sundharban Gas Assistant Programmer Exam: 2020) [compact it 1047]**
 
 ## Deadlock & Resource Allocation (22)
 
@@ -304,11 +304,11 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 ## Virtual Memory & Page Replacement (Thrashing) (15)
 
-1. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**
+1. Consider the following page reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1. Assuming a system with 3 page frames initially empty, calculate the number of page faults using the following page replacement algorithms: (i) FIFO (First-In, First-Out), (ii) LRU (Least Recently Used), and (iii) Optimal Page Replacement. [BSCCPL AME 21-08-2026 (BUET)]
 
-2. **a) Write about notes on i) Virtual memory, and ii) Cache memory.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
+2. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1422]**
 
-3. Consider the following page reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1. Assuming a system with 3 page frames initially empty, calculate the number of page faults using the following page replacement algorithms: (i) FIFO (First-In, First-Out), (ii) LRU (Least Recently Used), and (iii) Optimal Page Replacement. [BSCCPL AME 21-08-2026 (BUET)]
+3. **a) Write about notes on i) Virtual memory, and ii) Cache memory.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
 
 4. **Consider a reference string 4,7,6,1,2,7,2 the number of frames in the memory is 3. Using page Replacement Algorithm (LRU), find the number of page fault.** **(BPDB - Assistant Engineer (CSE) Exam: 10.05.2024 (BUET)) [compact it 391]**
 

@@ -55,20 +55,20 @@
 
 ## Machine Learning Paradigms (Supervised vs Unsupervised) (6)
 
-2. **(a) Describe the following terms:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
+1. **(a) Describe the following terms:** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1353]**
  * **(i) Supervised learning**
  * **(ii) Unsupervised learning**
  * **(iii) Reinforcement learning**
 
-3. **a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
+2. **a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1345]**
 
-4. **Briefly explain supervised learning, unsupervised learning & reinforcement learning.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1341]**
+3. **Briefly explain supervised learning, unsupervised learning & reinforcement learning.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (CSE)) [compact it 1341]**
+
+4. **(b) What is the difference between supervised and unsupervised learning? Explain with examples.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
 5. **Given some features of diabetic patient dataset with some labeled data. From this it can be predict whether this patient is diabetic or not. Is this supervised learning or unsupervised learning problem. Explain in one sentence.** **(Bangladesh Submarine Cables PLC (BSCPLC) - Assistant Manager (Engineering) Exam: 13.12.2024 (BUET)) [compact it 433]**
 
 6. **What do you mean by machine learning? Name three machine learning application in our daily life?** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 680]**
-
-7. **(b) What is the difference between supervised and unsupervised learning? Explain with examples.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 887]** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
 ## Model Evaluation & Datasets (5)
 
@@ -89,9 +89,9 @@
 
 ## Supervised Learning (Decision Trees) (4)
 
-1. **Decisiontree model in Machine Learning.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
+1. **What is Machine Learning? Mention some real-life applications. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]**
 
-2. **What is Machine Learning? Mention some real-life applications. (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]**
+2. **Decisiontree model in Machine Learning.** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1448]**
 
 3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 339]**
 

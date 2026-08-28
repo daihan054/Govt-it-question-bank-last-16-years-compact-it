@@ -108,139 +108,139 @@
 
 47. **As per the declaration of the government, Bangladesh will turn into 'Smart Bangladesh' by which year?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
 
-48. **Who got independence award 2023?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+48. **বাংলাদেশের উপর দিয়ে কোন গুরুত্বপূর্ণ ভৌগোলিক রেখা অতিক্রম করেছে? বাংলাদেশের জলবায়ুতে এর গুরুত্ব কী?** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-49. **স্মৃতি সৌধের স্থপতি কে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+49. **প্রতিষ্ঠানগুলোর পূর্ণরূপ লিখুন- BADC, BARI, BARC, BLRI, FRI, BRRI** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-50. **জাতীয় যুব দিবস কবে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+50. **বাংলাদেশের সংবিধানে বর্ণিত রাষ্ট্র পরিচালনার মূলনীতিগুলো কী কী? সংক্ষিপ্ত আলোচনা করুন।** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-51. **জুলীয়কুরি পুরস্কার কত তারিখে পেয়েছে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+51. **সুনীল অর্থনীতি অথবা সমুদ্র অর্থনীতি কী? এই সমুদ্র অর্থনীতির ভিত্তি কী?** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-52. **কোন সেক্টরের কোন নির্ধারিত কমান্ডার ছিল না?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+52. **ভূরাজনৈতিক দৃষ্টিকোণ থেকে সেন্ট মার্টিন দ্বীপের গুরুত্ব ব্যাখ্যা করুন।** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-53. **Who wrote the books titled Ekatturer Diary and Ekatturer Dinguli?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+53. **5.2 Who is the architect of the National Martyrs' Memorial in Savar?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-54. **Who was awarded the Meril-Prothom Alo Lifetime Award 2022?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+54. **5.5 What is the name of the first submarine communications cable system that Bangladesh is connected to?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-55. **Write Short Note: (i) About Digital Bangladesh (ii) About March Month Importance** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
+55. **Who got independence award 2023?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
-56. **বাংলাদেশ কত সালে টেস্ট ক্রিকেটের মর্যাদা পায়?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+56. **স্মৃতি সৌধের স্থপতি কে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
-57. **বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ রয়েছে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+57. **জাতীয় যুব দিবস কবে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
-58. **শেখ রাসেল দিবস কবে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+58. **জুলীয়কুরি পুরস্কার কত তারিখে পেয়েছে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
-59. **অপারেশন সার্চলাইট কবে পরিচালিত হয়?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+59. **কোন সেক্টরের কোন নির্ধারিত কমান্ডার ছিল না?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
-60. **বাংলাদেশের জাতীয় পতাকার ডিজাইনার কে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
+60. **Who wrote the books titled Ekatturer Diary and Ekatturer Dinguli?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
-61. **বঙ্গবন্ধুর ঐতিহাসিক ৭ই মার্চের ভাষণ ইউনেস্কো কত তারিখে মেমোরি অব দ্য ওয়ার্ল্ড ইন্টারন্যাশনাল রেজিস্টারে অন্তর্ভুক্ত করে?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+61. **Who was awarded the Meril-Prothom Alo Lifetime Award 2022?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
-62. **রূপকল্প ২০৪১ বলতে কি বুঝ?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+62. **Write Short Note: (i) About Digital Bangladesh (ii) About March Month Importance** **(NPCBL Executive Trainee (Software) Exam: 26.05.2023 (IBA)) [compact it 501]**
 
-63. **১. আগরতলা ষড়যন্ত্র মামলার আসামী সংখ্যা কত ছিল?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+63. **বাংলাদেশ কত সালে টেস্ট ক্রিকেটের মর্যাদা পায়?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
-64. **২. প্রধান আসামী কে ছিলেন? এই মামলার বিশেষ ট্রাইব্যুনালের চেয়ারম্যান কে ছিলেন?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+64. **বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ রয়েছে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
-65. **৩. ‘আমার দেখা নয়াচীন’, ‘মুজিবের রক্ত লাল’, ‘লক্ষ প্রাণের বিনিময়ে’- গ্রন্থগুলির লেখকের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+65. **শেখ রাসেল দিবস কবে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
-66. **৪. বাংলাদেশের চলমান ৪টি মেগা প্রকল্পের নাম লিখুন। দেশীয় অর্থে বাস্তবায়নাধীন ১টি মেগা প্রকল্পের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+66. **অপারেশন সার্চলাইট কবে পরিচালিত হয়?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
-67. **৫. গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ রয়েছে? মৌলিক অধিকারের বিষয়টি সংবিধানের কোন অনুচ্ছেদে আছে?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+67. **বাংলাদেশের জাতীয় পতাকার ডিজাইনার কে?** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 597]**
 
-68. **৬. কোন জেলায় অবস্থিত- লিখুন (ক) ষাটগম্বুজ মসজিদ; (খ) বীরশ্রেষ্ঠ ক্যাপ্টেন মহীউদ্দীন জাহাঙ্গীরের সমাধি; (গ) কান্তজীর মন্দির।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+68. **বঙ্গবন্ধুর ঐতিহাসিক ৭ই মার্চের ভাষণ ইউনেস্কো কত তারিখে মেমোরি অব দ্য ওয়ার্ল্ড ইন্টারন্যাশনাল রেজিস্টারে অন্তর্ভুক্ত করে?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
 
-69. **৮. হালদা নদী কোন এলাকায় অবস্থিত? এই নদীর অর্থনৈতিক গুরুত্ব কি?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+69. **রূপকল্প ২০৪১ বলতে কি বুঝ?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
 
-70. **১. কবে, কোথায় স্বাধীন বাংলাদেশ প্রতিষ্ঠার শপথ নেয়া হয়েছিল?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+70. **১. আগরতলা ষড়যন্ত্র মামলার আসামী সংখ্যা কত ছিল?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-71. **২. বাংলাদেশে কয়টি কঠিন শিলা খনি আছে? খনির নাম এবং কোন জেলায় অবস্থিত, লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+71. **২. প্রধান আসামী কে ছিলেন? এই মামলার বিশেষ ট্রাইব্যুনালের চেয়ারম্যান কে ছিলেন?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-72. **৩. বাংলাদেশের তিনটি জনপ্রিয় পর্যটন কেন্দ্রের নাম লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+72. **৩. ‘আমার দেখা নয়াচীন’, ‘মুজিবের রক্ত লাল’, ‘লক্ষ প্রাণের বিনিময়ে’- গ্রন্থগুলির লেখকের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-73. **৪. বরেন্দ্র ভূমি বলতে কী বোঝায়? কোন কোন এলাকাজুড়ে বরেন্দ্র ভূমি বিস্তৃত?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+73. **৪. বাংলাদেশের চলমান ৪টি মেগা প্রকল্পের নাম লিখুন। দেশীয় অর্থে বাস্তবায়নাধীন ১টি মেগা প্রকল্পের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-74. **৫. (ক) বাংলাদেশের মুক্তিযুদ্ধে কয়টি সেক্টর ছিল?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+74. **৫. গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ রয়েছে? মৌলিক অধিকারের বিষয়টি সংবিধানের কোন অনুচ্ছেদে আছে?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-75. **(খ) পাকিস্তানী সেনারা কোথায় আত্মসমর্পণ করে?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+75. **৬. কোন জেলায় অবস্থিত- লিখুন (ক) ষাটগম্বুজ মসজিদ; (খ) বীরশ্রেষ্ঠ ক্যাপ্টেন মহীউদ্দীন জাহাঙ্গীরের সমাধি; (গ) কান্তজীর মন্দির।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-76. **(গ) বাংলাদেশের মুক্তিযুদ্ধের সর্বাধিনায়ক কে ছিলেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+76. **৮. হালদা নদী কোন এলাকায় অবস্থিত? এই নদীর অর্থনৈতিক গুরুত্ব কি?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-77. **৬. (ক) বঙ্গবন্ধু কত সালে জাতিসংঘে বাংলায় ভাষণ দিয়েছেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+77. **১. কবে, কোথায় স্বাধীন বাংলাদেশ প্রতিষ্ঠার শপথ নেয়া হয়েছিল?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-78. **কোন তারিখে মেহেরপুর জেলার সীমান্তবর্তী স্থান বৈদ্যনাথ তলায় বর্তমান মুজিবনগরে এক অনাড়ম্বর অনুষ্ঠানে আনুষ্ঠানিকভাবে স্বাধীনতার ঘোষণাপত্র পাঠ করা হয়?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+78. **২. বাংলাদেশে কয়টি কঠিন শিলা খনি আছে? খনির নাম এবং কোন জেলায় অবস্থিত, লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-79. **বঙ্গবন্ধু স্যাটেলাইট-১ কোন ধরণের উপগ্রহ?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+79. **৩. বাংলাদেশের তিনটি জনপ্রিয় পর্যটন কেন্দ্রের নাম লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-80. **“বাংলাদেশ ও বঙ্গবন্ধু” গ্রন্থটির রচয়িতা কে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+80. **৪. বরেন্দ্র ভূমি বলতে কী বোঝায়? কোন কোন এলাকাজুড়ে বরেন্দ্র ভূমি বিস্তৃত?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-81. **মহান মুক্তিযুদ্ধের প্রথম স্মারক ভাস্কর্যের নাম কি?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+81. **৫. (ক) বাংলাদেশের মুক্তিযুদ্ধে কয়টি সেক্টর ছিল?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-82. **Short question: General Knowledge** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]**
+82. **(খ) পাকিস্তানী সেনারা কোথায় আত্মসমর্পণ করে?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-83. **General Knowledge** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]**
+83. **(গ) বাংলাদেশের মুক্তিযুদ্ধের সর্বাধিনায়ক কে ছিলেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-84. **General knowledge (i) Length of Metro rail (ii) Satellite-1 (iii) NFO (iv) GI register item** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]**
+84. **৬. (ক) বঙ্গবন্ধু কত সালে জাতিসংঘে বাংলায় ভাষণ দিয়েছেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-85. **বঙ্গবন্ধু-১' স্যাটেলাইট সম্বন্ধে সংক্ষিপ্ত বর্ণনা দিন?** **(41th BCS Written Exam: 2021) [compact it 882-883]**
+85. **কোন তারিখে মেহেরপুর জেলার সীমান্তবর্তী স্থান বৈদ্যনাথ তলায় বর্তমান মুজিবনগরে এক অনাড়ম্বর অনুষ্ঠানে আনুষ্ঠানিকভাবে স্বাধীনতার ঘোষণাপত্র পাঠ করা হয়?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
-86. **Five General Knowledge Questions.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
+86. **বঙ্গবন্ধু স্যাটেলাইট-১ কোন ধরণের উপগ্রহ?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
-87. **বাংলাদেশের সশস্ত্র প্রতিরোধ কবে ও কোথায় গড়ে তোলে?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+87. **“বাংলাদেশ ও বঙ্গবন্ধু” গ্রন্থটির রচয়িতা কে?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
-88. **কারাগারের রোজনামচার লেখক কে ও কত তারিখে প্রকাশিত হয়?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+88. **মহান মুক্তিযুদ্ধের প্রথম স্মারক ভাস্কর্যের নাম কি?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
-89. **বাংলাদেশের জাতীয় নির্বাচনের আসন সংখ্যা ও সংরক্ষিত আসন কতটি?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+89. **Short question: General Knowledge** **(RAKUB Network System Engineer (PO) Exam: 10.10.2021) [compact it 844]**
 
-90. **জাতিসংঘের সাধারণ অধিবেশনে কে সর্বপ্রথম বাংলায় ভাষণ দেয় ও কত তারিখে?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+90. **General Knowledge** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 854]**
 
-91. **Write 4 sentence about Mujib 100.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
+91. **General knowledge (i) Length of Metro rail (ii) Satellite-1 (iii) NFO (iv) GI register item** **(RAKUB Maintenance Engineer (PO) Exam: 05.10.2021) [compact it 858]**
 
-92. **২০. সাবমেরিন কেবল নেটওয়ার্কের সাথে বাংলাদেশ যুক্ত হয়েছে কত সালে?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+92. **বঙ্গবন্ধু-১' স্যাটেলাইট সম্বন্ধে সংক্ষিপ্ত বর্ণনা দিন?** **(41th BCS Written Exam: 2021) [compact it 882-883]**
 
-93. **১. আমার দেখা নয়াচীন এর লেখক কে?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+93. **Five General Knowledge Questions.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 910]**
 
-94. **২. মহান মুক্তিযুদ্ধের সর্বাধিনায়ক কাকে বলা হয়?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+94. **বাংলাদেশের সশস্ত্র প্রতিরোধ কবে ও কোথায় গড়ে তোলে?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
-95. **৩. MOWCA এর পূর্ণরূপ লিখুন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+95. **কারাগারের রোজনামচার লেখক কে ও কত তারিখে প্রকাশিত হয়?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
-96. **৪. সম্প্রতি প্রধানমন্ত্রী শেখ হাসিনা কি পুরস্কারে ভূষিত হয়েছেন? কারা প্রদান করেছে সেই পুরস্কার?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+96. **বাংলাদেশের জাতীয় নির্বাচনের আসন সংখ্যা ও সংরক্ষিত আসন কতটি?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
-97. **৫. জাতীয় শিশু দিবস কবে? ও বঙ্গবন্ধুর জন্মদিন এর সাথে ইহার সম্পর্ক কি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+97. **জাতিসংঘের সাধারণ অধিবেশনে কে সর্বপ্রথম বাংলায় ভাষণ দেয় ও কত তারিখে?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
-98. **৬. যেকোনো ২টি মুক্তিযুদ্ধ ভিত্তিক চলচ্চিত্রের নাম লিখুন।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+98. **Write 4 sentence about Mujib 100.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 935]**
 
-99. **৭. মুক্তিযুদ্ধের পরে কত তারিখে বঙ্গবন্ধু শেখ মুজিবুর রহমান দেশে ফেরেন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+99. **২০. সাবমেরিন কেবল নেটওয়ার্কের সাথে বাংলাদেশ যুক্ত হয়েছে কত সালে?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
 
-100. **৮. আগরতলা ষড়যন্ত্র মামলার আসামী কত জন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
+100. **১. আমার দেখা নয়াচীন এর লেখক কে?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
-101. **২. আজকে বাংলা তারিখ, মাস, বঙ্গাব্দ লিখুন।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+101. **২. মহান মুক্তিযুদ্ধের সর্বাধিনায়ক কাকে বলা হয়?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
-102. **৬. T-20 World Cup এ বাংলাদেশ মূল পর্বে কয়টি ম্যাচ জয়লাভ করেছে।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+102. **৩. MOWCA এর পূর্ণরূপ লিখুন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
-103. **৮. বঙ্গবন্ধুর স্বদেশ প্রত্যাবর্তন দিবস কত তারিখে?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+103. **৪. সম্প্রতি প্রধানমন্ত্রী শেখ হাসিনা কি পুরস্কারে ভূষিত হয়েছেন? কারা প্রদান করেছে সেই পুরস্কার?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
-104. **৯. বাংলাদেশের রাষ্ট্রপ্রধান এর নাম কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+104. **৫. জাতীয় শিশু দিবস কবে? ও বঙ্গবন্ধুর জন্মদিন এর সাথে ইহার সম্পর্ক কি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
-105. **১০. আয়তনের দিক থেকে বিশ্বে বাংলাদেশের অবস্থান কততম?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+105. **৬. যেকোনো ২টি মুক্তিযুদ্ধ ভিত্তিক চলচ্চিত্রের নাম লিখুন।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
-106. **৭ জন বীরশ্রেষ্ঠের নাম লিখ।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
+106. **৭. মুক্তিযুদ্ধের পরে কত তারিখে বঙ্গবন্ধু শেখ মুজিবুর রহমান দেশে ফেরেন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
-107. **মুজিব বর্ষ জাতির পিতার সম্মানার্থে গৃহীত একটি পদক্ষেপ। জাতরি পিতার সম্মান রক্ষার্থে BREB এর নেওয়া মুজিব বর্ষের চারটি উদ্যোগ লিখুন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
+107. **৮. আগরতলা ষড়যন্ত্র মামলার আসামী কত জন?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 943]**
 
-108. **বাংলাদেশের উপর দিয়ে কোন গুরুত্বপূর্ণ ভৌগোলিক রেখা অতিক্রম করেছে? বাংলাদেশের জলবায়ুতে এর গুরুত্ব কী?** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+108. **২. আজকে বাংলা তারিখ, মাস, বঙ্গাব্দ লিখুন।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-109. **প্রতিষ্ঠানগুলোর পূর্ণরূপ লিখুন- BADC, BARI, BARC, BLRI, FRI, BRRI** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+109. **৬. T-20 World Cup এ বাংলাদেশ মূল পর্বে কয়টি ম্যাচ জয়লাভ করেছে।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-110. **বাংলাদেশের সংবিধানে বর্ণিত রাষ্ট্র পরিচালনার মূলনীতিগুলো কী কী? সংক্ষিপ্ত আলোচনা করুন।** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+110. **৮. বঙ্গবন্ধুর স্বদেশ প্রত্যাবর্তন দিবস কত তারিখে?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-111. **সুনীল অর্থনীতি অথবা সমুদ্র অর্থনীতি কী? এই সমুদ্র অর্থনীতির ভিত্তি কী?** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+111. **৯. বাংলাদেশের রাষ্ট্রপ্রধান এর নাম কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-112. **ভূরাজনৈতিক দৃষ্টিকোণ থেকে সেন্ট মার্টিন দ্বীপের গুরুত্ব ব্যাখ্যা করুন।** **(সাধারণ জ্ঞান: বাংলাদেশ বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+112. **১০. আয়তনের দিক থেকে বিশ্বে বাংলাদেশের অবস্থান কততম?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-113. **5.2 Who is the architect of the National Martyrs' Memorial in Savar?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+113. **৭ জন বীরশ্রেষ্ঠের নাম লিখ।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
-114. **5.5 What is the name of the first submarine communications cable system that Bangladesh is connected to?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+114. **মুজিব বর্ষ জাতির পিতার সম্মানার্থে গৃহীত একটি পদক্ষেপ। জাতরি পিতার সম্মান রক্ষার্থে BREB এর নেওয়া মুজিব বর্ষের চারটি উদ্যোগ লিখুন।** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 949]**
 
 ## International Affairs (70)
 
@@ -304,85 +304,85 @@
 
 30. **Which campaign works toward building an international consensus and a sustained global movement of leaders and citizens to eliminate nuclear weapons?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
 
-31. **How many country participated in cricket world cup 2023?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+31. **জাতিসংঘের নিরাপত্তা পরিষদের দায়িত্ব বর্ণনা করুন।** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-32. **How many goals of SDG?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+32. **বিশ্ব অর্থনীতিতে হরমুজ প্রণালির গুরুত্ব কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-33. **What is the function of Global Climate Fund?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
+33. **অর্থনৈতিক কূটনীতি (Economic Diplomacy) কী? বাংলাদেশের অর্থনৈতিক কূটনীতি (Economic Diplomacy) এর চ্যালেঞ্জসমূহ কী কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-34. **মেসোপটেমিয়া কোন দেশের সভ্যতা।** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+34. **জলবায়ু পরিবর্তন সমস্যা মোকাবেলায় G-7 এর ভূমিকা কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-35. **কোন প্রণালী এশিয়া আফ্রিকাকে পৃথক করেছে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+35. **FTA এবং PTA এর পূর্ণরূপ লিখুন এবং এদের মধ্যে পার্থক্য কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-36. **The first ODI Cricket was played on January 5, 1971 between which countries?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+36. **5.3 What is the name of the central bank of the United Kingdom?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-37. **Who won the Nobel Prize in Physics in 2023?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+37. **5.4 Which international organization publishes the "World Economic Outlook" report?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-38. **Write down the names of new members of BRICS.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+38. **How many country participated in cricket world cup 2023?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
-39. **Main Purposes of UNESCO.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+39. **How many goals of SDG?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
-40. **Which city of China, the Asian Olympic be held in 2023?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+40. **What is the function of Global Climate Fund?** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 529]**
 
-41. **বিজ্ঞানে নোবেল বিজয়ী ২০২৩ পেয়েছে কোন বিষয়ের উপরে?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+41. **মেসোপটেমিয়া কোন দেশের সভ্যতা।** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
-42. **Who is the inventor of IR 4.00?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
+42. **কোন প্রণালী এশিয়া আফ্রিকাকে পৃথক করেছে?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
-43. **Breifly explain SDG.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 644]**
+43. **The first ODI Cricket was played on January 5, 1971 between which countries?** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
-44. **Greenpeace বলতে কি বুঝ?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+44. **Who won the Nobel Prize in Physics in 2023?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
-45. **৯. পূর্ণরূপ লিখুন: UNIDO, ICJ, NATO** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+45. **Write down the names of new members of BRICS.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
-46. **১০. ডি-৮ প্রতিষ্ঠিত হয় কোন সালে? এর সদস্য সংখ্যা কত? এর সদরদপ্তর কোথায়?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+46. **Main Purposes of UNESCO.** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
-47. **১১. বাংলাদেশের সাথে মিয়ানমারের প্রধান সমস্যার উল্লেখ করত: এর সমাধানের উপায় সংক্ষেপে বর্ণনা করুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
+47. **Which city of China, the Asian Olympic be held in 2023?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
-48. **১২. ইউক্রেনের ৩টি সমুদ্রবন্দরের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+48. **বিজ্ঞানে নোবেল বিজয়ী ২০২৩ পেয়েছে কোন বিষয়ের উপরে?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
 
-49. **১৩. নিম্নলিখিত দেশগুলির রাজধানীর নাম লিখুন: লিবিয়া, হন্ডুরাস, লাটভিয়া।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+49. **Who is the inventor of IR 4.00?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 548]**
 
-50. **১৪. শ্রীলংকার অর্থনৈতিক বিপর্যয়ের মূল কারণ কি?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+50. **Breifly explain SDG.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 644]**
 
-51. **১৫. রাশিয়া-ইউক্রেন যুদ্ধের মূল কারণ সম্পর্কে তিনটি বাক্য লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+51. **Greenpeace বলতে কি বুঝ?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
 
-52. **(খ) জাতিসংঘের প্রথম মহাসচিব কে ছিলেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+52. **৯. পূর্ণরূপ লিখুন: UNIDO, ICJ, NATO** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-53. **(গ) জাতিসংঘের সর্বশেষ সদস্য রাষ্ট্রের নাম কি?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
+53. **১০. ডি-৮ প্রতিষ্ঠিত হয় কোন সালে? এর সদস্য সংখ্যা কত? এর সদরদপ্তর কোথায়?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-54. **সুয়েজ খাল কোন ২টি সাগরকে যুক্ত করেছে।** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+54. **১১. বাংলাদেশের সাথে মিয়ানমারের প্রধান সমস্যার উল্লেখ করত: এর সমাধানের উপায় সংক্ষেপে বর্ণনা করুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 669]**
 
-55. **আয়তন ও জনসংখ্যায় এশিয়া মহাদেশের ক্ষুদ্রতম দেশ কোনটি?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+55. **১২. ইউক্রেনের ৩টি সমুদ্রবন্দরের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
-56. **একজন বিখ্যাত ব্যক্তির নাম লিখুন যিনি কৃষিতে গবেষণা করে শান্তিতে নোবেল পুরষ্কার জয় লাভ করেন?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
+56. **১৩. নিম্নলিখিত দেশগুলির রাজধানীর নাম লিখুন: লিবিয়া, হন্ডুরাস, লাটভিয়া।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
-57. **জার্মানির প্রধানমন্ত্রী সমমর্যাদার পদ কোনটি ও সর্বপ্রথম মহিলার নাম কি?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
+57. **১৪. শ্রীলংকার অর্থনৈতিক বিপর্যয়ের মূল কারণ কি?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
-58. **Short Question: a. SWIFT full form. b. Which international organization helps Rohingya? c. Where “Golden Gate” Situated?** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
+58. **১৫. রাশিয়া-ইউক্রেন যুদ্ধের মূল কারণ সম্পর্কে তিনটি বাক্য লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
-59. **১. CEDAW এর পূর্ণ রূপ কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+59. **(খ) জাতিসংঘের প্রথম মহাসচিব কে ছিলেন?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-60. **৩. আফগানিস্তান এর মুদ্রার নাম কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+60. **(গ) জাতিসংঘের সর্বশেষ সদস্য রাষ্ট্রের নাম কি?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 712]**
 
-61. **৪. হোয়াইট হল কোথায় অবস্থিত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+61. **সুয়েজ খাল কোন ২টি সাগরকে যুক্ত করেছে।** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
-62. **৫. CIRDAP এর সদর দপ্তর কোথায়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+62. **আয়তন ও জনসংখ্যায় এশিয়া মহাদেশের ক্ষুদ্রতম দেশ কোনটি?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
-63. **৭. সোয়াজিল্যান্ড কোন মহাদেশে অবস্থিত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
+63. **একজন বিখ্যাত ব্যক্তির নাম লিখুন যিনি কৃষিতে গবেষণা করে শান্তিতে নোবেল পুরষ্কার জয় লাভ করেন?** **(BWMRI Assistant Maintenance Engineer Exam: 2022) [compact it 737]**
 
-64. **জাতিসংঘের নিরাপত্তা পরিষদের দায়িত্ব বর্ণনা করুন।** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+64. **জার্মানির প্রধানমন্ত্রী সমমর্যাদার পদ কোনটি ও সর্বপ্রথম মহিলার নাম কি?** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 923]**
 
-65. **বিশ্ব অর্থনীতিতে হরমুজ প্রণালির গুরুত্ব কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+65. **Short Question: a. SWIFT full form. b. Which international organization helps Rohingya? c. Where “Golden Gate” Situated?** **(Janata Bank Assistant System Administrator Exam: 2021) [compact it 940]**
 
-66. **অর্থনৈতিক কূটনীতি (Economic Diplomacy) কী? বাংলাদেশের অর্থনৈতিক কূটনীতি (Economic Diplomacy) এর চ্যালেঞ্জসমূহ কী কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+66. **১. CEDAW এর পূর্ণ রূপ কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-67. **জলবায়ু পরিবর্তন সমস্যা মোকাবেলায় G-7 এর ভূমিকা কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+67. **৩. আফগানিস্তান এর মুদ্রার নাম কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-68. **FTA এবং PTA এর পূর্ণরূপ লিখুন এবং এদের মধ্যে পার্থক্য কী?** **(সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+68. **৪. হোয়াইট হল কোথায় অবস্থিত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-69. **5.3 What is the name of the central bank of the United Kingdom?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+69. **৫. CIRDAP এর সদর দপ্তর কোথায়?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
-70. **5.4 Which international organization publishes the "World Economic Outlook" report?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+70. **৭. সোয়াজিল্যান্ড কোন মহাদেশে অবস্থিত?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 946]**
 
 ## Everyday Science & Environment (22)
 
@@ -408,42 +408,42 @@
 
 11. **What is the hardest substance available on earth?** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 430]**
 
-12. **Write down the longest and shortest day in the planet.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+12. **আলোক বর্ষ কী? আলোক বর্ষের দূরত্ব কিলোমিটারে প্রকাশ করুন।** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-13. **Mention the name of the largest, biggest and heaviest planet.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
+13. **“জেনেটিক ইঞ্জিনিয়ারিং” কী?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-14. **What is the name of a technique that will be used to make multiple copies of target DNA in vitro?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 549]**
+14. **CFC কী? কী কাজে ব্যবহৃত হয়?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
 
-15. **সুষম খাদ্যের উপাদান কয়টি?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
+15. **Write down the longest and shortest day in the planet.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
-16. **১৭. হর্টিকালচার ও সেরিকালচার বলতে কি বুঝায়?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+16. **Mention the name of the largest, biggest and heaviest planet.** **(Rupali Bank Ltd. Assistant Network Engineer Exam: 04.11.2023 (MIST)) [compact it 530]**
 
-17. **১৮. সুষমখাদ্যে শর্করা, আমিষ ও স্নেহজাতীয় খাদ্যের অনুপাত কত?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+17. **What is the name of a technique that will be used to make multiple copies of target DNA in vitro?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 549]**
 
-18. **১৯. তিনটি যৌগমূলকের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+18. **সুষম খাদ্যের উপাদান কয়টি?** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 658]**
 
-19. **২০. আইনস্টাইনকে বিংশশতাব্দীর সর্বশ্রেষ্ঠ বিজ্ঞানী বলা হয় কেন?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
+19. **১৭. হর্টিকালচার ও সেরিকালচার বলতে কি বুঝায়?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
-20. **আলোক বর্ষ কী? আলোক বর্ষের দূরত্ব কিলোমিটারে প্রকাশ করুন।** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+20. **১৮. সুষমখাদ্যে শর্করা, আমিষ ও স্নেহজাতীয় খাদ্যের অনুপাত কত?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
-21. **“জেনেটিক ইঞ্জিনিয়ারিং” কী?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+21. **১৯. তিনটি যৌগমূলকের নাম লিখুন।** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
-22. **CFC কী? কী কাজে ব্যবহৃত হয়?** **(সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪)**
+22. **২০. আইনস্টাইনকে বিংশশতাব্দীর সর্বশ্রেষ্ঠ বিজ্ঞানী বলা হয় কেন?** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (CSE)) [compact it 670]**
 
 ## Banking & ICT Abbreviations (8)
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
 
-2. **Full meaning: ASEAN, SPARRSO, BERC** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
+2. **(b) Write the full forms of OTP and VPN.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
 
-3. **পূর্ণরূপ লিখুন: a) DFOF b) THAAD c) BIMSTEC** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
+3. **Full meaning: ASEAN, SPARRSO, BERC** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1336]**
 
-4. **NATA এর পূর্ণ রূপ কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
+4. **পূর্ণরূপ লিখুন: a) DFOF b) THAAD c) BIMSTEC** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1349]**
 
-5. **What Is RTGS related to?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
+5. **NATA এর পূর্ণ রূপ কি?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1450]**
 
-6. **What is the full form BDCCL?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**
+6. **5.1 What is the full form of NPSB in the banking sector of Bangladesh?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-7. **5.1 What is the full form of NPSB in the banking sector of Bangladesh?** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+7. **What Is RTGS related to?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 521]**
 
-8. **(b) Write the full forms of OTP and VPN.** **(NPCBL Sub Assistant Engineer: Cyber Security Analyst Exam Date: 11 July 2026)**
+8. **What is the full form BDCCL?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 547]**

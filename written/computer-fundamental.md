@@ -28,13 +28,15 @@
 
 4. **Provide the full form of the following terms: HTTP, SMTP, ASCII, DHCP, ICMP.** **(BBA - Assistant Maintenance Engineer Exam: 12.07.2025 (BUET)) [compact it 1432]**
 
-6. **MOOC stands for __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+5. **MOOC stands for __________.** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-7. **Write down the full form of VIRUS?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+6. **Write down the full form of VIRUS?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
-8. **Write full form of NAT, DHCP, MAC and TCP-IP** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
+7. **(b) What is register? What are the common register found in a basic computer?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
 
-9. **(b) What is register? What are the common register found in a basic computer?** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+8. **1TB = কত বাইট?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+
+9. **Write full form of NAT, DHCP, MAC and TCP-IP** **(NSDA - Assistant Maintenance Engineer Written Exam: 11.05.2024) [compact it 384]**
 
 10. **What is the base of 5th generation Computer?** **(BARI - Assistant Maintenance Engineer Exam: 10.05.2024) [compact it 1461]**
 
@@ -116,21 +118,19 @@
 
 46. **JPEG and RAID full form কি?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 943-944]**
 
-47. **1TB = কত বাইট?** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+47. **VGA, EGA এর পূর্ণ নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
 
-48. **VGA, EGA এর পূর্ণ নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
+48. **পূর্ণরূপ লিখ: (a) LTE (b) IOT (c) RDBMS (d) FORTRAN** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947-948]**
 
-49. **পূর্ণরূপ লিখ: (a) LTE (b) IOT (c) RDBMS (d) FORTRAN** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 947-948]**
-
-50. **Write down the full meaning: (i) DNS (ii) TCP (iii) FTP (iv) ARP (v) UDP** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1045-1046]**
+49. **Write down the full meaning: (i) DNS (ii) TCP (iii) FTP (iv) ARP (v) UDP** **(PGCB Sub-Assistant Engineer (CSE) Exam: 2020 (BUET)) [compact it 1045-1046]**
 
 ## Hardware Components & BIOS (CMOS Battery) (21)
 
 1. **Performance of CMOS battery?** **(National Legal Aid Services Organization - Assistant Maintenance Engineer Exam: 18.10.2025) [compact it 1450]**
 
-2. **Explain BIOS in Server. How does affect booting configuration in Hardware maintenance.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 552]**
+2. **(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading operating system.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
 
-3. **(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading operating system.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1356]**
+3. **Explain BIOS in Server. How does affect booting configuration in Hardware maintenance.** **(RAKUB Assistant Network System Engineer Exam: 03.11.2023 (BIBM)) [compact it 552]**
 
 4. **What is BIOS?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]**
 
@@ -212,29 +212,29 @@
 
 ## Software Types & Classification (12)
 
+1. **What is the difference between System Software and Application Software?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]** (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+
 2. **What is platform independent software discuss with example?** **(Combined Bank Senior Officer (IT) Exam: 13.10.2023 (MIST)) [compact it 514]**
 
-3. **What is the difference between System Software and Application Software?** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 642]** (Combined Bank Officer (IT) Exam: 09.05.2026) [debug it]
+3. **Difference between High level languages and low level language with some example?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 739]**
 
-4. **Difference between High level languages and low level language with some example?** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 739]**
+4. **Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
-5. **Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+5. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
 
-6. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** **(BPSC Computer Operator Exam: 2021) [compact it 781]**
+6. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
 
-7. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** **(BCC Assistant Programmer Exam: 12.02.2021 (BUET)) [compact it 812]**
+7. **LOGO কি ধরনের প্রোগ্রাম?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
 
-8. **LOGO কি ধরনের প্রোগ্রাম?** **(DMLC Assistant Teacher (ICT) Exam: 2021) [compact it 826]**
+8. **MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 867]**
 
-9. **MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 867]**
+9. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** **(41th BCS Written Exam: 2021) [compact it 881]**
 
-10. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** **(41th BCS Written Exam: 2021) [compact it 881]**
+10. **১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
 
-11. **১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 942]**
+11. **Graphics Design এর চারটি Software এর নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
 
-12. **Graphics Design এর চারটি Software এর নাম লিখ।** **(BPSC Ministry of Women and Children Affairs Computer Trainer Exam: 2021) [compact it 944]**
-
-13. **Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadsheet এর একেকটা ঘরকে _____ বলে? (iv) Storage device এর মূল folder এর নাম _____? (v) Database এর data file গুলোর তালিকাকে _____ বলা হয়?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
+12. **Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadsheet এর একেকটা ঘরকে _____ বলে? (iv) Storage device এর মূল folder এর নাম _____? (v) Database এর data file গুলোর তালিকাকে _____ বলা হয়?** **(DPDC (Technical part) JAM (ICT) Written Exam: 2020 (BUET)) [compact it 975]**
 
 ## Blockchain & Emerging Technologies (7)
 

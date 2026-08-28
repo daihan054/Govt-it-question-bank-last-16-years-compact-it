@@ -41,61 +41,61 @@
 
 9. **You are asked to lead a team of software engineers to develop an application software system for your company and deploy it as fast as possible. You need to gather user requirements, design, develop, test and then deploy the system. Between Waterfall Approach and Incremental Approach, which software development approach will you take for your software project? Explain your answer.** **(Combined Bank - Senior Officer (IT) Exam: 17.05.2024 (BIBM)) [compact it 338]**
 
-11. **(খ) Spiral Model চিত্রসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
+10. **(খ) Spiral Model চিত্রসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
+
+11. **Write down the step of SDLC?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
 
 12. **Which SDLC do you prefer between Agile and waterfall model explain with example.** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 522]**
 
 13. **Define SDLC? Write the steps of SDLC?** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
-15. **Write down the step of SDLC?** **(EGCB Sub-Divisional Engineer (ICT) Exam: 28.01.2023 (BUET)) [compact it 563]** **(BRiCM - Assistant Maintenance Engineer Exam: 24.02.2024) [compact it 404]**
+14. **What is SDLC? Write the name of 7 phase of SDLC?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
-16. **What is SDLC? Write the name of 7 phase of SDLC?** **(DESCO Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
+15. **(a) What do you understand by Agile? Mention its four values.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
 
-17. **(a) What do you understand by Agile? Mention its four values.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 486]**
+16. **(a) Write down the steps of Waterfall model.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
 
-18. **(a) Write down the steps of Waterfall model.** **(BARC Programmer Exam: 04.08.2023) [compact it 598]**
+17. **(খ) Software Engineering এর ক্ষেত্রে Waterfall Model বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
 
-19. **(খ) Software Engineering এর ক্ষেত্রে Waterfall Model বর্ণনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
+18. **(খ) Software maintenance এর সাথে কী কী বিষয় জড়িত, তা আলোচনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
 
-20. **(খ) Software maintenance এর সাথে কী কী বিষয় জড়িত, তা আলোচনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
+19. **(ক) Waterfall model বিস্তারিত বর্ণনা করুন। এই model এর সুবিধা এবং সীমাবদ্ধতাগুলো উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 620]**
 
-21. **(ক) Waterfall model বিস্তারিত বর্ণনা করুন। এই model এর সুবিধা এবং সীমাবদ্ধতাগুলো উল্লেখ করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 620]**
+20. **How does agile methodology used in software development differ from that of waterfall methodology? Explain in brief.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
 
-22. **How does agile methodology used in software development differ from that of waterfall methodology? Explain in brief.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 632]**
+21. **Software engineering এ ফিজিবিলিটি স্ট্যাড্যির ৭টি ধাপ বর্ণনা কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
 
-23. **Software engineering এ ফিজিবিলিটি স্ট্যাড্যির ৭টি ধাপ বর্ণনা কর।** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 640]**
+22. **Explain software development life cycle (SDLC).** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
 
-24. **Explain software development life cycle (SDLC).** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
+23. **(b) What is SDLC? Define the activities of the design phase in SDLC.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
 
-25. **(b) What is SDLC? Define the activities of the design phase in SDLC.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
+24. **(ক) Software development এর Agile পদ্ধতির মূলনীতিগুলো লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
 
-26. **(ক) Software development এর Agile পদ্ধতির মূলনীতিগুলো লিখুন।** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
+25. **(খ) Software development এর Waterfall model এর অসুবিধাগুলো কী কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
 
-27. **(খ) Software development এর Waterfall model এর অসুবিধাগুলো কী কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 706]**
+26. **(খ) System/Model Prototype বলতে কী বুঝায়? Product ও Process এর মধ্যে সম্পর্ক কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
 
-28. **(খ) System/Model Prototype বলতে কী বুঝায়? Product ও Process এর মধ্যে সম্পর্ক কী?** **(Software Assistant Programmer Exam: 13.10.2022) [compact it 710]**
+27. **What is full meaning of SDLC?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
 
-29. **What is full meaning of SDLC?** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 726]**
+28. **Difference between Waterfall Model and Spiral Model.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 741]**
 
-30. **Difference between Waterfall Model and Spiral Model.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 741]**
+29. **What is the principles of agile method?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 757]**
 
-31. **What is the principles of agile method?** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 757]**
+30. **From the diagram write down the process of prototype development.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 758]**
 
-32. **From the diagram write down the process of prototype development.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 758]**
+31. **From the diagram write down the software evolution.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
 
-33. **From the diagram write down the software evolution.** **(Pubali Bank Limited; Assistant Engineer (SD) Exam: 2022) [compact it 760]**
+32. **(খ) SDLC diagram সহ বর্ণনা করুন। SDLC এর মেজর phases গুলি কী?** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 779]**
 
-34. **(খ) SDLC diagram সহ বর্ণনা করুন। SDLC এর মেজর phases গুলি কী?** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 779]**
+33. **(ii) Software development এর Agile Method সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
 
-35. **(ii) Software development এর Agile Method সম্পর্কে আলোচনা করুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
+34. **(a) What is Agile? Mentionits four values.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
 
-36. **(a) What is Agile? Mentionits four values.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 796]**
+35. **What is SDLC? List the stages involed in the SDLC process. Which stages ensures the user acceptance of the system?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
 
-37. **What is SDLC? List the stages involed in the SDLC process. Which stages ensures the user acceptance of the system?** **(BTRC Sub-Assistant Director (Technical) Exam: 2021 (IBA)) [compact it 811]**
+36. **(ii) Software development এর ধাপসমূহ সংক্ষেপে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 960]**
 
-38. **(ii) Software development এর ধাপসমূহ সংক্ষেপে বর্ণনা করুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 960]**
-
-39. **What is Agile Methodology? Difference between Agile Model and Waterfall Model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1003-1004]**
+37. **What is Agile Methodology? Difference between Agile Model and Waterfall Model.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1003-1004]**
 
 ## Software Testing & Evaluation (33)
 
@@ -125,13 +125,15 @@
 
 8. **(ক) Software Quality Assurance বলতে কী বোঝায়? উহার Attribute গুলো আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
 
-9. **What is Software testing? Difference between Black box testing and White box testing.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
+9. **6.5 Explain the difference between Unit Testing and Integration Testing.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-10. **Define test plan and Test case.** **(Pubali Bank Limited Software Quality Assurance Exam: 18.03.2023) [compact it 567]**
+10. **What is Software testing? Difference between Black box testing and White box testing.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 507]**
 
-11. **(d) What is the main difference between black box and white box testing?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+11. **Define test plan and Test case.** **(Pubali Bank Limited Software Quality Assurance Exam: 18.03.2023) [compact it 567]**
 
-12. **Verification and validation are two process areas at CMMI level 3. For both of these areas (a) provide a definition (b) a description of how you can fulfill these areas in your software testing activities.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 444]**
+12. **(d) What is the main difference between black box and white box testing?** **(BARC Programmer Exam: 04.08.2023) [compact it 598]** **(Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer Exam: 2022) [compact it 718]** **(BPSC Assistant Maintenance Engineer (CSE) Exam: 2020) [compact it 1019]** **(Teletalk Assistant Manager (IT) Exam: 2023) [compact it 466]** **(SGFL Assistant General Engineer Exam: 2021 (BUET)) [compact it 936]**
+
+13. **Verification and validation are two process areas at CMMI level 3. For both of these areas (a) provide a definition (b) a description of how you can fulfill these areas in your software testing activities.** **(Bangladesh Bank - Assistant Maintenance Engineer Exam: 04.02.2023 (BIBM)) [compact it 444]**
 
 14. **অথবা, (ক) Software testing কী? উহার গুরুত্ব আলোচনা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 603]**
 
@@ -155,25 +157,23 @@
 
 24. **Definition of Gray-box testing and Unit testing.** **(EGCB Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 715]**
 
-26. **Integration testing of pharmaceutical automation software?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
+25. **Integration testing of pharmaceutical automation software?** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 763]**
 
-27. **(ক) Software এর \alpha-version ও \beta-version কি?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
+26. **(ক) Software এর \alpha-version ও \beta-version কি?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
 
-28. **(গ) Unit testing, Integration testing এবং Beta testing বলতে কি বুঝায়?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
+27. **(গ) Unit testing, Integration testing এবং Beta testing বলতে কি বুঝায়?** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 768]**
 
-29. **(i) Black Box testing and White Box testing এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
+28. **(i) Black Box testing and White Box testing এর মধ্যে পার্থক্য লিখুন।** **(BPSC Assistant Programmer (Ministry of Commerce) Exam: 2021) [compact it 784]**
 
-30. **(a) Distinguish between black box and white box testing. Give examples of both type of testing** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
+29. **(a) Distinguish between black box and white box testing. Give examples of both type of testing** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
 
-31. **Software development এ Black Box Testing বলতে কি বুঝায়?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
+30. **Software development এ Black Box Testing বলতে কি বুঝায়?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
 
-32. **Briefly describe Unit testing, Smoke testing and Stress testing in software engineering.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 914]**
+31. **Briefly describe Unit testing, Smoke testing and Stress testing in software engineering.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 914]**
 
-33. **Write different between Alpha and Beta testing.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 933-934]**
+32. **Write different between Alpha and Beta testing.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 933-934]**
 
-35. **Testing is an activity that is performed to verify correct behavior of a program. Testing should be conducted in all the stages of program development. Describe different types of tests conducted in the implementation stage.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 980]**
-
-37. **6.5 Explain the difference between Unit Testing and Integration Testing.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+33. **Testing is an activity that is performed to verify correct behavior of a program. Testing should be conducted in all the stages of program development. Describe different types of tests conducted in the implementation stage.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 980]**
 
 ## Software Architecture & Design Patterns (MVC) (11)
 

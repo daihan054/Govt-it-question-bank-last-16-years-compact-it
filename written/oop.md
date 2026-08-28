@@ -21,11 +21,11 @@
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. (Officer (IT) Exam: 31 Jul 2026) [bscs 02]
 
-2. **What is runtime polymorphism and compile time polymorphism? Explain it's with example.** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**
+2. **What is Object-Oriented Programming (OOP)? What are the main principles of OOP? What is the difference between Method Overloading and Method Overriding?** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
-3. **What is polymorphism?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
+3. **What is runtime polymorphism and compile time polymorphism? Explain it's with example.** **(IFIC Bank - Officer IT Exam: 2025 (IFIC)) [compact it 1448]**
 
-4. **What is Polymorphism? Discuss about different types of Polymorphism with example?** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 296]**
+4. **What is polymorphism?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1451]**
 
 5. **Explain OOP Feature.** **(DPDC - Assistant Engineer (CSE) Exam: 17.10.2025) [compact it 1453]**
 
@@ -40,11 +40,13 @@
 
 9. **Write down the difference between Structure and Class.** **(BCIC Assistant Programmer Exam: 14.02.2025 (BUET)) [compact it 1324]**
 
-10. **Explain how encapsulation and inheritance are advantageous in object oriented programming.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 420]**
+10. **What is Polymorphism? Discuss about different types of Polymorphism with example?** **(Combined Bank - Assistant Programmer Exam: 09.02.2024 (BIBM)) [compact it 296]**
 
-11. **(খ) Function Overloading উদাহরণসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
+11. **Explain how encapsulation and inheritance are advantageous in object oriented programming.** **(Combined 2 Bank (Sonali & Janata) - Officer IT Exam: 04.10.2024 (BIBM)) [compact it 420]**
 
-12. **Write down the advantages of OOP over traditional structured programming language** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 527]**
+12. **(খ) Function Overloading উদাহরণসহ ব্যাখ্যা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 408]**
+
+13. **Write down the advantages of OOP over traditional structured programming language** **(Sonali & Janata Bank Officer (IT) Exam: 14.10.2023 (MIST)) [compact it 527]**
 
 14. **Write down the Principle of OOP. What is Polymorphism? Write the name of 3 OOP language.** **(DESCO Sub-Assistant Engineer Exam: 20.05.2023 (DESCO)) [compact it 581]**
 
@@ -140,8 +142,6 @@ public class main{
 44. **What are the difference between Structure Programming and Objest Oriented Progrmamming?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
 
 45. **Object Oriented Programming এ Method Overloading and Method Overriding এর মধ্যে পার্থক্য কী?** **(BPSC Assistant Maintenance Engineer (ICT) Exam: 2020) [compact it 1023]**
-
-46. **What is Object-Oriented Programming (OOP)? What are the main principles of OOP? What is the difference between Method Overloading and Method Overriding?** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
 ## Java Programming & Methods (11)
 

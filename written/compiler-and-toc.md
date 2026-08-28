@@ -35,23 +35,23 @@
 
 1. Consider the grammar: E -> E + E | E * E | id. Show that the grammar is ambiguous for the string: id + id * id. [SO IT 25-07-2026]
 
-2. **How CFG to represent a palindrome number?** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 858]**
+2. **6.15 Consider the grammar: E \to E + E \mid E * E \mid id. Show that the grammar is ambiguous for the string: id + id * id.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-3. **Context free Grammar: (like as....)** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
+3. **How CFG to represent a palindrome number?** **(JGTDSL Assistant Engineer (CSE) Exam: 08.10.2021) [compact it 858]**
 
-4. **Draw a derivation tree for the string “bab” from the CFG given by- S \to bSb \mid a \mid b** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 877-878]**
+4. **Context free Grammar: (like as....)** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 864]**
 
-5. **6.15 Consider the grammar: E \to E + E \mid E * E \mid id. Show that the grammar is ambiguous for the string: id + id * id.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+5. **Draw a derivation tree for the string “bab” from the CFG given by- S \to bSb \mid a \mid b** **(BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) Exam: 19.11.2021 (BUET)) [compact it 877-878]**
 
 ## Compiler vs Interpreter (4)
 
-2. **(a) Difference between interpreter and compiler. Write down the phases of a compiler.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
+1. **b) Write down the difference between Interpreter and Compiler?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]** (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it] **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
 
-6. **Define an Interpreted language.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
+2. **What are Compilers and Interpreters? Briefly describe their role and differences. Write some key points on the advantages and disadvantages of Open Source Software.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
-8. **b) Write down the difference between Interpreter and Compiler?** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1036]** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 672]** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 865]** (Combined Bank Officer (IT) Exam: 03.01.2026) [debug it] **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 678]**
+3. **(a) Difference between interpreter and compiler. Write down the phases of a compiler.** **(BPSC (Multiple Ministry) Assistant Programmer (ICT) Exam: 19.07.2023) [compact it 488]**
 
-9. **What are Compilers and Interpreters? Briefly describe their role and differences. Write some key points on the advantages and disadvantages of Open Source Software.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+4. **Define an Interpreted language.** **(Titas Gas Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 823]**
 
 ## Lexical Analysis & Compiler Phases (4)
 

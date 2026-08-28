@@ -36,43 +36,43 @@
 
 9. **(ক) Binary Tree কী? Binary Tree Traversing এর পদ্ধতিসমূহ আলোচনা করুন।** **(18th NTRCA - College Lecturer (ICT) Exam: 13.07.2024) [compact it 410]**
 
-10. **Explain binary tree with example.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]**
+10. **6.12 Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-11. **What is Pre-order and Post order?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 502]**
+11. **Explain binary tree with example.** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 501]**
 
-12. **Explain with example Post order traversal.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
+12. **What is Pre-order and Post order?** **(WZPGCL Assistant Engineer (CSE) Exam: 27.05.2023) [compact it 502]**
 
-13. **(b) Draw a binary tree of 15 elements in (a) Preorder (b) In-order (c) Post order traversals.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
+13. **Explain with example Post order traversal.** **(Sheikh Hasina National Institute of Youth Development Instructor ICT Exam: 20.05.2023) [compact it 508]**
 
-14. **What is the minimum number of nodes in a binary tree?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]**
+14. **(b) Draw a binary tree of 15 elements in (a) Preorder (b) In-order (c) Post order traversals.** **(BPSC (Multiple Ministry) Assistant Programmer (CSE) Exam: 19.07.2023) [compact it 485]**
 
-15. **(ক) B-tree data structure কী? এর প্রয়োগ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
+15. **What is the minimum number of nodes in a binary tree?** **(BCC Assistant Programmer Exam: 11.11.2023) [compact it 544]**
 
-16. **(গ) নিচের ছবির Tree এর Inorder, Preorder এবং Postorder Traversal লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
+16. **(ক) B-tree data structure কী? এর প্রয়োগ ব্যাখ্যা করুন।** **(17th NTRCA Lecturer (ICT) Written Exam (CSE): 2023) [compact it 604]**
 
-17. **Write C++ function that will invert mirror a binary tree.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
+17. **(গ) নিচের ছবির Tree এর Inorder, Preorder এবং Postorder Traversal লিখুন।** **(17th NTRCA Lecturer (ICT) Written Exam (ICT): 2023) [compact it 622]**
 
-18. **X = (a^2 - 5b).(7a + b^5) এক্সপ্রেশনটিকে tree stracture-এ অঙ্কন করুন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
+18. **Write C++ function that will invert mirror a binary tree.** **(BICIC Assistant Programmer Exam: 2022 (BUET)) [compact it 630]**
 
-19. **Write a Pseudocode of postorder by recursion and generate postorder, preorder inorder from the tree.** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 762]**
+19. **X = (a^2 - 5b).(7a + b^5) এক্সপ্রেশনটিকে tree stracture-এ অঙ্কন করুন?** **(DESCO Sub-Assistant Engineer (CSE) Exam: 16.09.2022 (DPI)) [compact it 698]**
 
-20. **(b) Draw a binary tree of 5 elements. Now list out the elements in (i) Pre-order (ii) Post order and (iii) Inorder traversal of the tree.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 792]**
+20. **Write a Pseudocode of postorder by recursion and generate postorder, preorder inorder from the tree.** **(BIWTA; Assistant Programmer Exam: 25.11.2022) [compact it 762]**
 
-21. **Mathematically derive the maximum and minimum height of a binary tree consisting of n nodes. Note that the height of a tree with a single node is considered as 1.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 849-850]**
+21. **(b) Draw a binary tree of 5 elements. Now list out the elements in (i) Pre-order (ii) Post order and (iii) Inorder traversal of the tree.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 792]**
 
-22. **(iii) Maximum and Minimum no of Nodes for a binary tree of height 7 where the root is considered as height 0.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
+22. **Mathematically derive the maximum and minimum height of a binary tree consisting of n nodes. Note that the height of a tree with a single node is considered as 1.** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 849-850]**
 
-23. **Construct a full binary tree from the given inorder and preorder traversal as follows:** **(BAUST Assistant Programmer Exam: 2021) [compact it 917]**
+23. **(iii) Maximum and Minimum no of Nodes for a binary tree of height 7 where the root is considered as height 0.** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 908]**
+
+24. **Construct a full binary tree from the given inorder and preorder traversal as follows:** **(BAUST Assistant Programmer Exam: 2021) [compact it 917]**
    Inorder: B A D C F E J H K G I
    Preorder: A B C D E F G H J K I
 
-24. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925-926]**
+25. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 925-926]**
    In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
    Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
 
-25. **Making binary a tree from the given expression: 3 + ((5+9)*2)** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
-
-26. **6.12 Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+26. **Making binary a tree from the given expression: 3 + ((5+9)*2)** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
 
 ## Stack (19)
 
@@ -94,19 +94,19 @@
 
 9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** **(BAPEX Assistant General Manager (ICT) Exam: 20.01.2023 (BUET)) [compact it 463]**
 
-11. **Expalin: Infix, Prefix, Postfix notation.** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
+10. **Expalin: Infix, Prefix, Postfix notation.** **(BTCL Junior Assistant Manager Exam: 2022 (BUET)) [compact it 639]**
 
-12. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 706]**
+11. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** **(BPSC Sub-Assistant Maintenance Engineer Exam: 13.10.2022) [compact it 706]**
 
-13. **Difference between LIFO and FIFO in data structure.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 740]**
+12. **Difference between LIFO and FIFO in data structure.** **(SPCB Sub-Assistant Programmer Exam: 2022) [compact it 740]**
 
-14. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
+13. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 772]**
 
-15. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 774]**
+14. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** **(BPSC Sub-Assistant Engineer (Ministry of Food) Exam: 2021) [compact it 774]**
 
-16. **Write a C/C++ program to check Balanced parentheses in an Expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 830-831]**
+15. **Write a C/C++ program to check Balanced parentheses in an Expression.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 830-831]**
 
-17. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 845-846]**
+16. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 845-846]**
 ```text
 Input: [0]{[00]0}
 Output: Balanced
@@ -114,11 +114,11 @@ Input: [())
 Output: Not Balanced
 ```
 
-18. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
+17. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** **(BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) Exam: 2021) [compact it 941]**
 
-19. **Write a Program to check for balanced parenthesis in an expression.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1011]**
+18. **Write a Program to check for balanced parenthesis in an expression.** **(Janata Bank Ltd SO (Assistant Network Engineer) Written Exam: 2020) [compact it 1011]**
 
-20. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038]**
+19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1038]**
 
 ## Linked List (14)
 
@@ -172,13 +172,13 @@ Output: Not Balanced
 
 2. **FIFO is used which data structure?** **(BARI - Assistant Maintenance Engineer Exam: 15.11.2025) [compact it 1452]**
 
-3. **What is a Circular Queue? Describe its implementation.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 743]**
+3. **6.6 Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
 
-4. **Circular Queue and Priority Queue কীভাবে কাজ করে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912-913]**
+4. **What is a Circular Queue? Describe its implementation.** **(BDCCL Assistant Engineer (Network) Exam: 2022) [compact it 743]**
 
-5. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983]**
+5. **Circular Queue and Priority Queue কীভাবে কাজ করে?** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912-913]**
 
-6. **6.6 Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** **(Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) Exam: 2024)**
+6. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 983]**
 
 ## Binary Search Tree (BST) (6)
 

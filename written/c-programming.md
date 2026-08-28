@@ -19,13 +19,15 @@
 
 ## Basic Programs & Control Statements (86)
 
+1. **Write a C program to check the number in EVEN or ODD.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]** (BEPRC Assistant Programmer Exam: 08.08.2026)
+
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** **(DPDC - Junior Assistant Manager (JAM) Exam: 27.06.2025 (BUET)) [compact it 1440]**
 
 3. **Write a structured program (in C or Python) that takes an integer input n and prints the sum of all even numbers from 1 to n.** **(Combined Bank Senior Officer (IT) Exam: 17.10.2025 (E-Zone)) [compact it 1423]**
 
 4. **(a) Difference between a while loop and do-while loop.** **(Cadet College (Combined) - Lecturer ICT Exam: 11.05.2025) [compact it 1446]**
 
-6. **Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the following pattern will be printed.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1354]**
+5. **Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the following pattern will be printed.** **(BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) Exam: 29.05.2025 (CS/CSE)) [compact it 1354]**
 ```
 1 2 3 4
 2 3 4
@@ -33,13 +35,15 @@
 4
 ```
 
-7. **a) Suppose you are working with an array of size 10. It contains all the numbers from 1 to 10 exactly once in a random order. But accidentally, one of the numbers in the array got replaced by a zero (0). Write a C/C++ programme using functions, to restore the lost number.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
+6. **a) Suppose you are working with an array of size 10. It contains all the numbers from 1 to 10 exactly once in a random order. But accidentally, one of the numbers in the array got replaced by a zero (0). Write a C/C++ programme using functions, to restore the lost number.** **(BPSC (Ministry of Food) Network/Website Manager Exam: 21.05.2025 (ICT)) [compact it 1343]**
 
-8. **Find biggest elements in an array of 10 components.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+7. **Find biggest elements in an array of 10 components.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
-9. **Write a C program that accepts 10 elements in an array and finds the maximum elements from the array.** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
+8. **Write a C program that accepts 10 elements in an array and finds the maximum elements from the array.** **(BBA - Assistant Programmer Exam: 12.07.2025 (BUET)) [compact it 1433]**
 
-10. **Write a function to find minimum number from an array, return minimum value as argument.** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1430]**
+9. **Write a function to find minimum number from an array, return minimum value as argument.** **(Bangladesh Satellite Company Limited - Assistant Engineer (CSE) Exam: 23.08.2025 (BUET)) [compact it 1430]**
+
+10. **Write a C/Java program to check Armstrong number or not.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1334]**
 
 11. **Write a program from the following series: $e^x = 1 + \frac{x}{1} + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots$** **(Sonali Bank PLC - Assistant Database Administrator Written Exam: 23.02.2024) [compact it 316]**
 
@@ -294,13 +298,11 @@ return 0;
 
 67. **(b) Write down a program in C language that will find the maximum of four integer gives as inputs.** **(BPSC Sub-Assistant Engineer (Ministry of Agriculture) Exam: 2021) [compact it 804]**
 
-68. **Write a C program to check the number in EVEN or ODD.** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]** (BEPRC Assistant Programmer Exam: 08.08.2026)
+68. **We are given an array of integers and a range, we need to find whether the subarray which falls in this range has values in the form of a mountain or not. All values of the subarray are said to be in the form of a mountain if either all values are increasing or decreasing or first increasing and then decreasing. Write a C/C++ Program that shows input is a Mountain sequence or Not Mountain sequence.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 833]**
 
-69. **We are given an array of integers and a range, we need to find whether the subarray which falls in this range has values in the form of a mountain or not. All values of the subarray are said to be in the form of a mountain if either all values are increasing or decreasing or first increasing and then decreasing. Write a C/C++ Program that shows input is a Mountain sequence or Not Mountain sequence.** **(6 Banks & Financial Institutions Assistant Programmer Exam: 2021) [compact it 833]**
+69. **Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 844]** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908]**
 
-70. **Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6** **(RAKUB Programmer (PO) Exam: 12.10.2021) [compact it 844]** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 908]**
-
-71. **Pattern this print using C++ program-** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
+70. **Pattern this print using C++ program-** **(PGCB Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 862]**
 ```text
 1 2 3 4 5
 1 2 3 4
@@ -309,39 +311,37 @@ return 0;
 1
 ```
 
-72. **(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the sum of main diagonal elements of the matrix.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 884]**
+71. **(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the sum of main diagonal elements of the matrix.** **(BPSC (Security Services Division) Assistant Programmer Written Exam: 13.12.2021) [compact it 884]**
 
-73. **(b) Write down a program to find sum of diagonal elements of a two dimensional matrix.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
+72. **(b) Write down a program to find sum of diagonal elements of a two dimensional matrix.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 895]**
 
-74. **(i) Write a C/C++ program up to series n: \frac{1}{2\times 3} + \frac{2}{3\times 4} + \frac{3}{4\times 5} \dots\dots\dots\dots\dots** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
+73. **(i) Write a C/C++ program up to series n: \frac{1}{2\times 3} + \frac{2}{3\times 4} + \frac{3}{4\times 5} \dots\dots\dots\dots\dots** **(NESCO Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 907]**
 
-75. **Write a C program to compute the perimeter and area of a circle with a given radius.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909-910]**
+74. **Write a C program to compute the perimeter and area of a circle with a given radius.** **(Sonali Bank Ltd. Officer IT Exam: 2021) [compact it 909-910]**
 
-76. **A হলো মিটার নং, B হলো ব্যবহৃত ইউনিট। 300 ইউনিটের বেশী তাদের মিটার নং এবং ইউনিটের যোগফল বের কর।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912]**
+75. **A হলো মিটার নং, B হলো ব্যবহৃত ইউনিট। 300 ইউনিটের বেশী তাদের মিটার নং এবং ইউনিটের যোগফল বের কর।** **(NESCO Junior Assistant Manager (ICT) Exam: 2021 (BUET)) [compact it 912]**
 
-77. **Write the code for second highest maximum from given three number in c/c++.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 920-921]**
+76. **Write the code for second highest maximum from given three number in c/c++.** **(BOF Assistant Engineer (EEE/ME/CSE) Exam: 2021) [compact it 920-921]**
 
-78. **Write a simple output C program to check odd-even number.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+77. **Write a simple output C program to check odd-even number.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
 
-79. **Write a C program for prime numbers between 1 to N.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
+78. **Write a C program for prime numbers between 1 to N.** **(BMA Signal Assistant Engineer (Computer) Exam: 2021 (BUET)) [compact it 932]**
 
-80. **Write a C/Java program to check Armstrong number or not.** **(BREB Assistant General Manager (IT) Exam: 2021) [compact it 934]** **(BREB Assistant Programmer (AP) Exam: 21.02.2025) [compact it 1334]**
+79. **Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 948]**
 
-81. **Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2** **(BREB Junior Assistant Manager (ICT) Exam: 2021) [compact it 948]**
+80. **(i) Formatted Input/Output Statement কাকে বলে? Key-Board থেকে কিভাবে input নেয়া যায়? %d এর অর্থ কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 954-955]**
 
-82. **(i) Formatted Input/Output Statement কাকে বলে? Key-Board থেকে কিভাবে input নেয়া যায়? %d এর অর্থ কী?** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 954-955]**
+81. **(ii) if......else statement এর format লিখ। 1+3+5+7+\dots+n সিরিজটির যোগফল নির্ণয়ের জন্য C-language এ একটি প্রোগ্রাম লিখ।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 955]**
 
-83. **(ii) if......else statement এর format লিখ। 1+3+5+7+\dots+n সিরিজটির যোগফল নির্ণয়ের জন্য C-language এ একটি প্রোগ্রাম লিখ।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 955]**
+82. **An employee’s total weekly pay is calculated by multiplying the hourly wage and number of regular hours plus any overtime pays which in turn is calculated as total overtime hours multiplied by 1.5 times the hourly wage. Write a program that takes as inputs the hourly wage, total regular hours, and total overtime hours and prints an employee’s total weekly pay.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985]**
 
-84. **An employee’s total weekly pay is calculated by multiplying the hourly wage and number of regular hours plus any overtime pays which in turn is calculated as total overtime hours multiplied by 1.5 times the hourly wage. Write a program that takes as inputs the hourly wage, total regular hours, and total overtime hours and prints an employee’s total weekly pay.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985]**
+83. **Write a C program: 1+2^n+3^n+4^n+\dots\dots\dots\dots+n^n (where n>0).** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 990-991]**
 
-85. **Write a C program: 1+2^n+3^n+4^n+\dots\dots\dots\dots+n^n (where n>0).** **(NACTAR Assistant Instructor (ICT) Written Exam: 2020) [compact it 990-991]**
+84. **X is an integer stream of N numbers. You have to select 2 data P and Q such that A <= (P+Q) <= B. Write an algorithm / pseudo code/ C program how many ways you can select P & Q. The time complexity must be n log n.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1005-1006]**
 
-86. **X is an integer stream of N numbers. You have to select 2 data P and Q such that A <= (P+Q) <= B. Write an algorithm / pseudo code/ C program how many ways you can select P & Q. The time complexity must be n log n.** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1005-1006]**
+85. **Write a code in C/C++ that will output the 2nd largest number. (If N>=1)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1008-1009]**
 
-87. **Write a code in C/C++ that will output the 2nd largest number. (If N>=1)** **(Combined 4 Banks Assistant Programmer Written Exam: 2020 (DU)) [compact it 1008-1009]**
-
-88. **0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1040-1041]**
+86. **0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।** **(NWPGCL Assistant Manager(ICT) Exam: 2020 (DPI)) [compact it 1040-1041]**
 
 ## Output Tracing & Control Flow (35)
 
@@ -836,15 +836,15 @@ int main() {
 
 21. **Write a recursive algorithm to find the factorial of a positive integer from 1 to N.** **(BPSC (Ministry of Home Affairs) Assistant Database Administrator Exam: 2022 (ICT)) [compact it 674]**
 
-23. **What do you mean by recursion? Calculate factorial function using recursion with C programming code.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
+22. **What do you mean by recursion? Calculate factorial function using recursion with C programming code.** **(BPSC (Ministry of Agriculture) Assistant Programmer Exam: 15.02.2022) [compact it 679]**
 
-24. **Write a program with a recursive function that shows the sum of its digits. For example, input =3426, output will be 3+4+2+6=15.** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 684]**
+23. **Write a program with a recursive function that shows the sum of its digits. For example, input =3426, output will be 3+4+2+6=15.** **(GTCL Assistant Engineer (CSE) Exam: 2022 (BUET)) [compact it 684]**
 
-25. **(a) Write down a recursive function to find out number of digits is an integer number (n). Draw the recursion tree when n= 5396.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
+24. **(a) Write down a recursive function to find out number of digits is an integer number (n). Draw the recursion tree when n= 5396.** **(BPSC (Ministry of Home Affairs) Senior Computer Operator Exam: 13.09.2022 (CSE)) [compact it 690]**
 
-26. **(খ) Recursion কি? Recursion পদ্ধতিতে একটি Integer সংখ্যার Factorial নির্ণয়ের জন্য C-Language এ একটি Program লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
+25. **(খ) Recursion কি? Recursion পদ্ধতিতে একটি Integer সংখ্যার Factorial নির্ণয়ের জন্য C-Language এ একটি Program লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 767]**
 
-27. **Given an integer number the following C program finds the sum of the digits of the number using recursion. You need to complete the recursive function in the following program. So that it does the intended task.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
+26. **Given an integer number the following C program finds the sum of the digits of the number using recursion. You need to complete the recursive function in the following program. So that it does the intended task.** **(BTCL Assistant Manager (Technical) Exam: 2021 (BUET)) [compact it 764]**
 ```c
 #include<stdio.h>
 int someDigits(int num) {
@@ -861,17 +861,17 @@ int main() {
 }
 ```
 
-28. **(b) Write down a pseudocode/program to generate all possible permutation for a given word.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 793]**
+27. **(b) Write down a pseudocode/program to generate all possible permutation for a given word.** **(BPSC Workshop Maintenance Engineer (CSE) Exam: 2021) [compact it 793]**
 
-29. **Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
+28. **Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?** **(PGCB Sub-Assistant Engineer (CSE) Exam: 30.09.2021 (BUET)) [compact it 866]**
 
-30. **Write a program in C/Java to find out the factorial of a number using recursion also write its iterative program.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
+29. **Write a program in C/Java to find out the factorial of a number using recursion also write its iterative program.** **(BPSC Assistant Programmer (Ministry of Health) Exam: 2021) [compact it 915]**
 
-31. **১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
+30. **১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।** **(PGCL Sub Assistant Engineer (CSE) Exam: 2021 (BUET)) [compact it 946]**
 
-32. **(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 954]**
+31. **(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।** **(BPSC Assistant Network Engineer Written Exam: 2020) [compact it 954]**
 
-33. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985]**
+32. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** **(Sonali & Janata Bank Officer (IT) Written Exam: 2020 (DU)) [compact it 985]**
 
 ## Operators, Data Types & Language Concepts (17)
 
@@ -911,29 +911,29 @@ int main() {
 
 ## Flowcharts & Algorithms (12)
 
-1. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
+1. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
 
-2. **১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
+2. **Draw a Flow chart for print odd number for 1 to N.** **(BCC - Assistant Programmer Exam: 18.10.2025 (BCC)) [compact it 1442]**
 
-3. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
+3. **১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।** **(BTCL - JAM (Technical) Exam: 05.04.2024 (BUET)) [compact it 381]**
 
-4. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
+4. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** **(18th NTRCA - Assistant Teacher (ICT) Exam: 12.07.2024) [compact it 406]**
 
-5. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
+5. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** **(Ministry of Land Assistant Maintenance Engineer Exam: 2023) [compact it 596]**
 
-6. **Write an Algorithm to check a number is Prime or not Prime.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
+6. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** **(NPCBL Junior Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 643]**
 
-7. **Write down the algorithm and draw the flowchart of Quadratic equation.** **(CAAB Programmer Exam: 2022) [compact it 722]**
+7. **Write an Algorithm to check a number is Prime or not Prime.** **(NSDA Assistant Programmer Exam Date: 04-03-2022) [compact it 656]**
 
-8. **Draw a flowchart and write algorithm for finding Factorial value of an integer number.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
+8. **Write down the algorithm and draw the flowchart of Quadratic equation.** **(CAAB Programmer Exam: 2022) [compact it 722]**
 
-9. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
+9. **Draw a flowchart and write algorithm for finding Factorial value of an integer number.** **(CAAB Assistant Maintenance Engineer (AME) Exam: 2022) [compact it 723]**
 
-10. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
+10. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** **(CAAB Assistant Programmer (AP) Exam: 2022) [compact it 725]**
 
-11. **Three types of control statements and their graphical presentation using flowchart or flow graph.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1037-1038]**
+11. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** **(BPSC Assistant Programmer (ICT Ministry) Exam: 2021) [compact it 770]**
 
-12. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** **(Senior Officer IT (Job ID: 10225) Exam Date: 22-05-2026)**
+12. **Three types of control statements and their graphical presentation using flowchart or flow graph.** **(Microcredit Regulatory Authority Assistant Maintenance Engineer Exam: 2020 (BUET)) [compact it 1037-1038]**
 
 ## String Manipulation & Algorithms (11)
 
@@ -943,21 +943,21 @@ int main() {
 
 3. **Write a C program upper case to lower case conversion.** **(Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) Exam: 27.01.2023) [compact it 475]**
 
+4. **String reverse program but without without using the library function.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
+
 5. **Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from string.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 652]**
 
 6. **Write a program IPv4 IP validation from given IP with valid and not valid.** **(RPGCL Assistant Manager (ICT) Exam: 2022 (BUET)) [compact it 653]**
 
-7. **String reverse program but without without using the library function.** **(Sonali & Janata Bank Ltd. Assistant Database Administrator Exam: 2022) [compact it 660]** **(BREB Assistant Programmer Exam: 18.02.2023) [compact it 468]**
+7. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 729]**
 
-8. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** **(BKSP Assistant Programmer Exam: 03.12.2022) [compact it 729]**
+8. **What is the purpose of '\0' character in C?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
 
-9. **What is the purpose of '\0' character in C?** **(BCC CA Monitoring System Project Exam: 2021) [compact it 830]**
+9. **(c) Write down a program to find length of a string without using any library function.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892]**
 
-10. **(c) Write down a program to find length of a string without using any library function.** **(BPSC (Security Services Division) Assistant Maintenance Engineer Written Exam: 15.12.2021) [compact it 892]**
+10. **Write a program to read a character “lower case ” and convert it into upper case.** **(BAUST Assistant Programmer Exam: 2021) [compact it 918-919]**
 
-11. **Write a program to read a character “lower case ” and convert it into upper case.** **(BAUST Assistant Programmer Exam: 2021) [compact it 918-919]**
-
-12. **Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 923-924]**
+11. **Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.** **(Rupali Bank Limited Assistant Network Engineer (ANE) Exam: 2021 (CTI)) [compact it 923-924]**
    Sample Input: 192.168.0.0
    Sample Output: Class C
 
