@@ -270,6 +270,14 @@
 
 1. **Write down the Role of Validation set in ML.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
+   Answer: The validation set is a part of the data kept aside from training, used to tune the model and check its performance before the final test.
+
+   - It is used to select hyperparameters such as learning rate, tree depth or number of hidden layers.
+   - It detects overfitting early, because training accuracy keeps rising while validation accuracy starts falling.
+   - It is used for model selection when several candidate models are compared.
+   - It is used for early stopping, where training is halted once validation error stops improving.
+   - It keeps the test set untouched, so the final reported accuracy stays unbiased.
+
 2. **(b) Given following values:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
  * **True Positive \text{(TP)} = 560**
  * **True Negative \text{(TN)} = 330**
@@ -277,11 +285,85 @@
  * **False Negative \text{(FN)} = 50**
 **Calculate the following: (i) Accuracy (ii) Precision (iii) Recall (iv) F1 Score**
 
+   Answer:
+
+   Given: TP = 560, TN = 330, FP = 60, FN = 50, total = 560 + 330 + 60 + 50 = 1000
+
+   (i) Accuracy
+   - Formula: Accuracy = (TP + TN) / (TP + TN + FP + FN)
+   - = (560 + 330) / 1000
+   - = 890 / 1000
+   - = 0.89 or 89%
+
+   (ii) Precision
+   - Formula: Precision = TP / (TP + FP)
+   - = 560 / (560 + 60)
+   - = 560 / 620
+   - = 0.9032 or 90.32%
+
+   (iii) Recall
+   - Formula: Recall = TP / (TP + FN)
+   - = 560 / (560 + 50)
+   - = 560 / 610
+   - = 0.9180 or 91.80%
+
+   (iv) F1 Score
+   - Formula: F1 = 2 × (Precision × Recall) / (Precision + Recall)
+   - = 2 × (0.9032 × 0.9180) / (0.9032 + 0.9180)
+   - = 2 × 0.8291 / 1.8212
+   - = 1.6582 / 1.8212
+   - = 0.9105 or 91.05%
+
+   Final answer: Accuracy = 89%, Precision = 90.32%, Recall = 91.80%, F1 Score = 91.05%
+
 3. **b) How can we validate and check reliability of a machine learning model?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
+
+   Answer: A model is validated by testing it on data it has never seen during training, and by measuring the right metrics for the problem.
+
+   Validation methods:
+   - Train-validation-test split, commonly 70:15:15, where the test set is used only once at the end.
+   - K-fold cross validation, where the data is divided into k parts and the model is trained k times, each time using a different part as validation. The average score is reported.
+   - Stratified k-fold, which keeps the class ratio the same in every fold, needed for imbalanced data.
+   - Hold-out validation on a completely separate dataset collected later.
+
+   Reliability checks:
+   - Compare training and validation error. A large gap means overfitting, and both being high means underfitting.
+   - Use the correct metric: accuracy for balanced data, but precision, recall, F1 and ROC-AUC for imbalanced data such as fraud detection.
+   - Check the confusion matrix to see which class is being confused.
+   - Test on fresh production data periodically, because data drift reduces accuracy over time.
+   - Check stability by running with different random seeds and different data splits.
 
 4. **You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss function for this problem.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 746 (ET: N/A)]*
 
+   Answer:
+
+   Model: for binary classification with three features, logistic regression is used.
+   - Linear part: z = w1·f1 + w2·f2 + w3·f3 + b
+   - Prediction: ŷ = σ(z) = 1 / (1 + e^(−z)), which gives a probability between 0 and 1.
+   - Decision: class 1 if ŷ ≥ 0.5, otherwise class 0.
+
+   Loss function (binary cross entropy) for a single sample:
+   - L = −[ y·log(ŷ) + (1 − y)·log(1 − ŷ) ]
+   - If the true label y = 1, the loss becomes −log(ŷ), so the loss is small only when ŷ is close to 1.
+   - If y = 0, the loss becomes −log(1 − ŷ), so the loss is small only when ŷ is close to 0.
+
+   Objective function over the whole dataset of n samples:
+   - J(w, b) = −(1/n) × Σ [ yi·log(ŷi) + (1 − yi)·log(1 − ŷi) ]
+   - With L2 regularisation: J(w, b) = −(1/n) × Σ [ ... ] + (λ/2n) × Σ wj²
+
+   Objective: minimise J(w, b) with respect to w1, w2, w3 and b, normally by gradient descent, where each weight is updated as wj = wj − α·(∂J/∂wj).
+
 5. **Write down the difference between test set and validation set.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+
+   Answer:
+
+   | Point | Validation Set | Test Set |
+   |---|---|---|
+   | Purpose | Tune hyperparameters and select the model | Give the final unbiased performance estimate |
+   | Used during | The training and tuning phase | Only once, after everything is fixed |
+   | Frequency of use | Many times | A single time |
+   | Effect on the model | Indirectly influences the model, since choices are made from it | No influence at all |
+   | Risk | Repeated use can leak information and cause overfitting to it | Stays clean, so the reported score is trustworthy |
 
 ## Supervised Learning (Decision Trees) (4)
 
