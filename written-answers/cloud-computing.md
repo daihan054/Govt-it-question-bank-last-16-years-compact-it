@@ -631,30 +631,296 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **(ক) উদাহরণসহ distributed এবং centralized computing -এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer:
+
+   Centralized computing:
+   - Ekti kendrio computer ba server-e shob processing, storage ar niyontron thake; byabaharkari-ra terminal ba client diye shudhu tar sathe jukto hoy.
+   - Boishishtho: ek jaigay data, ek jaigay niyontron, sohoj babosthapona ar backup, kintu oi ekti machine-i single point of failure.
+   - Udahoron: purono mainframe babostha, ekti bank-er shakhar shob terminal ekti kendrio server-er sathe jukto, ba ekti office-er ekti file server.
+
+   Distributed computing:
+   - Onek swadhin computer network-e jukto hoye ekshathe kaj kore, ar byabaharkari-r kache ta ekti-i babostha mone hoy. Kaj ar data onek node-e bhag kore deoa hoy.
+   - Boishishtho: kono single point of failure nei, horizontal scaling somvob, ekti node noshto hole baki gulo cholte thake, kintu synchronization, consistency ar network delay-er somossa toiri hoy.
+   - Udahoron: Internet nijei, Google-er search infrastructure, Hadoop ar Spark cluster, blockchain, ar DNS.
+
+   | Bishoy | Centralized | Distributed |
+   |---|---|---|
+   | Processing | Ek jaigay | Onek node-e bhag kora |
+   | Failure | Single point of failure | Fault tolerant |
+   | Scalability | Vertical, mane boro machine kena | Horizontal, mane aro node jog kora |
+   | Khoroch | Prathomik boro machine dami | Sadharon hardware onek gulo, tai kom |
+   | Babosthapona | Sohoj | Jotil, synchronization lage |
+   | Latency | Kom, ek jaigay | Beshi hote pare, network-er upor nirbhorshil |
 2. **Difference between cluster computing and grid computing.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Cluster computing | Grid computing |
+   |---|---|---|
+   | Composition | Homogeneous nodes, same hardware and OS | Heterogeneous nodes, different hardware, OS and owners |
+   | Location | All nodes in one place, in one LAN or one data centre | Geographically distributed, connected over a WAN or the Internet |
+   | Ownership and administration | A single organisation, one administrative domain | Many organisations, many administrative domains |
+   | Coupling | Tightly coupled, high speed low latency interconnect | Loosely coupled, ordinary Internet links |
+   | Resource sharing | Dedicated nodes, always available to the cluster | Volunteer or spare capacity, nodes join and leave freely |
+   | Scheduling | Centralised scheduler in the cluster | Distributed grid middleware negotiating across domains |
+   | Task type | Suits tightly coupled parallel work with heavy inter-node communication | Suits independent, embarrassingly parallel tasks |
+   | Appearance | Behaves as one single powerful machine | Behaves as a shared pool of resources |
+   | Failure handling | A node failure is handled by the cluster manager | Nodes are expected to disappear; work is simply reassigned |
+   | Examples | A web server farm, a database cluster, a Beowulf HPC cluster | SETI@home, Folding@home, the CERN Worldwide LHC Computing Grid |
+
+   - In one sentence: a cluster is many machines in one room acting as one computer, while a grid is many computers in many places lending their spare capacity to a common task.
 3. **Imagine data in a system is green, red, yellow and blue in the system using distributed server in parallel. Design the system using reduce map.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
+
+
+   Answer: MapReduce is used to count the four colours in parallel across the distributed servers.
+
+   ```mermaid
+   graph LR
+       A["Input data split into blocks"] --> B["Mapper 1"]
+       A --> C["Mapper 2"]
+       A --> D["Mapper 3"]
+       B --> E["Shuffle and Sort by key: colour"]
+       C --> E
+       D --> E
+       E --> F["Reducer: green"]
+       E --> G["Reducer: red"]
+       E --> H["Reducer: yellow"]
+       E --> I["Reducer: blue"]
+       F --> J["Final output"]
+       G --> J
+       H --> J
+       I --> J
+   ```
+
+   Step 1, Input split:
+   - The dataset is divided into blocks, typically 128 MB each, and the blocks are distributed across the servers of the cluster. Each block is processed by a mapper running on the server that already holds the data, which is the principle of data locality: move the computation to the data, not the data to the computation.
+
+   Step 2, Map phase:
+   - Each mapper reads its block record by record and emits a key value pair for every item, where the key is the colour and the value is 1.
+   - Mapper 1 might emit (green, 1), (red, 1), (green, 1); mapper 2 might emit (blue, 1), (yellow, 1), (red, 1), and so on. The mappers run completely in parallel and never talk to each other.
+
+   Step 3, Combiner, an optional local optimisation:
+   - Before the data leaves the node, a combiner performs a local sum, so mapper 1 sends (green, 2), (red, 1) instead of three separate pairs. This greatly reduces the network traffic in the next phase.
+
+   Step 4, Shuffle and Sort:
+   - The framework groups all the values belonging to the same key and sends each group to a single reducer, so that all the green counts from every mapper arrive at the same reducer. With four colours there are four keys, so four reducers can be used.
+
+   Step 5, Reduce phase:
+   - Each reducer receives one colour and the list of counts for it, adds them, and emits the total: (green, 4500), (red, 3200), (yellow, 2100), (blue, 1900).
+
+   Step 6, Output:
+   - The four results are written to the distributed file system as the final output.
+
+   Pseudocode:
+
+   ```
+   map(key, record):
+       for each item in record:
+           emit(item.colour, 1)
+
+   combine(colour, counts):        # runs locally on each mapper node
+       emit(colour, sum(counts))
+
+   reduce(colour, counts):
+       emit(colour, sum(counts))
+   ```
+
+   Why this design is correct:
+   - The work is embarrassingly parallel, so throughput scales almost linearly with the number of servers.
+   - The number of reducers is chosen as the number of distinct keys, here four, so each reducer does an equal share.
+   - If one node fails, the framework simply re-runs its task elsewhere, since the map function is deterministic and has no side effects.
+   - The combiner keeps the shuffle traffic small, which is normally the bottleneck of a MapReduce job.
+   - One risk worth stating: if one colour dominates the data, its reducer becomes a hotspot. This is data skew, and it is handled by adding a random salt to the key and running a second reduce pass.
 
 ## Scalability (Horizontal & Vertical Scaling) (2)
 
 1. **Server rack digram to draw horizontal and vertical scalling.** *[RPGCL Assistant Manager (ICT) 2022 compact it 655 (ET: BUET)]*
 
+
+   Answer:
+
+   Vertical scaling, that is scaling up, means making one server more powerful. Horizontal scaling, that is scaling out, means adding more servers.
+
+   ```
+   VERTICAL SCALING (scale up)          HORIZONTAL SCALING (scale out)
+   one rack slot, a bigger server       more rack slots, more servers
+
+   +---------------------------+        +----------+ +----------+ +----------+
+   |  Server 1                 |        | Server 1 | | Server 2 | | Server 3 |
+   |  4 CPU  -> 32 CPU         |        | 4 CPU    | | 4 CPU    | | 4 CPU    |
+   |  16 GB  -> 256 GB         |        | 16 GB    | | 16 GB    | | 16 GB    |
+   |  1 TB   -> 20 TB          |        | 1 TB     | | 1 TB     | | 1 TB     |
+   +---------------------------+        +----------+ +----------+ +----------+
+        the same one machine                    \        |        /
+        grows in capacity                        +-------------------+
+                                                 |   Load Balancer   |
+                                                 +-------------------+
+   ```
+
+   | Point | Vertical scaling, scale up | Horizontal scaling, scale out |
+   |---|---|---|
+   | Method | Add CPU, RAM or disk to the existing server | Add more servers to the pool |
+   | Limit | Hard: there is a maximum size of machine that can be bought | Practically unlimited |
+   | Downtime | Usually needed, the server must be shut down to be upgraded | None, a new node is simply added |
+   | Cost curve | Rises steeply; high end hardware is disproportionately expensive | Linear; ordinary commodity servers are added |
+   | Fault tolerance | None, still a single point of failure | High, the load balancer routes around a failed node |
+   | Complexity | Simple, the application does not change | Complex: needs a load balancer, session handling and data consistency |
+   | Application requirement | Works with any application | The application must be stateless or share its state |
+   | Typical use | Relational databases, legacy monolithic applications | Web servers, microservices, NoSQL databases, cloud native applications |
+
+   - Cloud practice: horizontal scaling is preferred, because it is elastic, fault tolerant and cheap, and auto-scaling groups add and remove nodes automatically according to load. Vertical scaling is still used for the database tier, which is hardest to distribute.
 2. **Difference between elasticity and scalability of resources in the cloud.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 749 (ET: N/A)]*
+
+
+   Answer:
+
+   | Point | Scalability | Elasticity |
+   |---|---|---|
+   | Meaning | The ability of a system to handle a growing workload by adding resources | The ability to add and remove resources automatically, in real time, as demand changes |
+   | Direction | Growth, generally one way and planned | Both ways, expanding and contracting continuously |
+   | Timescale | Long term, planned in advance by the architect | Short term, minute by minute and automatic |
+   | Trigger | A human decision or a capacity plan | An automatic rule, for example CPU above 70 percent for 5 minutes |
+   | Purpose | To meet a predicted long term increase in demand | To match unpredictable short term fluctuations and to avoid paying for idle capacity |
+   | Cost effect | Capacity is provisioned for the expected peak and paid for continuously | Cost follows actual usage, so nothing is paid for unused capacity |
+   | Applies to | Both on-premises and cloud systems | Essentially a cloud property; it needs pooled resources and pay per use billing |
+   | Example | Designing an e-commerce platform so that servers can be added as the business grows over three years | The same platform automatically adding twenty servers during an Eid sale and removing them the next morning |
+
+   - Relationship: elasticity is not possible without scalability, but scalability alone is not elasticity. A system may be highly scalable yet require a week and a purchase order to grow, in which case it is scalable but not elastic.
+   - Types of scalability: vertical, that is a bigger machine, and horizontal, that is more machines. Elasticity in practice is nearly always horizontal, implemented by auto-scaling groups with a load balancer.
 
 ## Edge Computing & Fog Computing (2)
 
 1. **What is the need of edge server?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
 
+
+   Answer: An edge server is needed because processing data close to where it is produced overcomes the limits of sending everything to a distant central cloud.
+
+   The need for edge servers:
+   - Latency: a round trip to a central cloud may take 50 to 200 ms, which is far too slow for an autonomous vehicle, an industrial robot, a video analytics camera or an augmented reality headset. An edge server a few kilometres away answers in single digit milliseconds.
+   - Bandwidth cost and capacity: a single high definition camera produces several Mbps continuously. Sending the raw stream of hundreds of cameras to the cloud is neither affordable nor physically possible, particularly where international bandwidth is expensive. The edge server processes the video locally and sends only the events that matter.
+   - Data volume from IoT: millions of sensors generate far more data than is worth transporting. Filtering and aggregating at the edge reduces the volume by orders of magnitude.
+   - Reliability and offline operation: a factory, a hospital or a remote site must keep functioning when the WAN link fails. An edge server keeps the local service running and synchronises later.
+   - Privacy, security and compliance: sensitive data such as patient records, faces or national data can be processed locally and never leave the country or the building, which satisfies data residency laws.
+   - Real time decisions: safety critical control, such as stopping a machine when a person enters a danger zone, cannot depend on a network link at all.
+   - Content delivery: a CDN edge server caches web content, video and software updates near the users, so pages load faster and the origin server and the international link are relieved.
+   - Scalability: distributing the processing across many edge nodes removes the central bottleneck and lets the system grow geographically.
+
+   - Typical deployments: CDN points of presence, 5G multi-access edge computing at the base station, smart factories, retail stores, and cable landing or telecom exchange sites.
 2. **(গ) Edge Computing এর ধারণা সংক্ষেপে উপস্থাপন করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+
+   Answer:
+
+   Edge Computing ki:
+   - Edge Computing holo emon ekti computing model jekhane data jekhane toiri hoy tar kachakachi-i processing kora hoy, dur-er kono kendrio cloud data centre-e na pathiye.
+   - "Edge" mane network-er prantobhag — mane sensor, camera, IoT device, ba tader kachakachi thaka choto server ba gateway.
+
+   Kivabe kaj kore:
+   - Device ba edge server sthaniyo bhabe data songroho kore, filter kore, bishleshon kore ar sathe sathe siddhanto ney.
+   - Shudhu joruri ba songkhipto phalafol cloud-e pathano hoy, dirghomeyadi songrokkhon ar boro bishleshon-er jonno.
+
+   Keno dorkar:
+   - Kom latency: cloud-e jete-aste 50 theke 200 ms lage, ja self-driving car, industrial robot ba real-time video analytics-er jonno onek beshi. Edge-e uttor ashe koyek millisecond-e.
+   - Bandwidth bachano: shoto shoto HD camera-r kancha video cloud-e pathano ashombhob ar khub dami; edge-e process kore shudhu ghotona pathano hoy.
+   - Nirbhorjogyota: Internet link gele-o sthaniyo babostha cholte thake ebong pore sync kore.
+   - Gopaniyota ar ain: rogi-r tothyo ba mukhomondol-er chobi sthaniyo bhabe process kore desher bhitorei rakha jay.
+   - Real-time nirapotta siddhanto, jemon bipojjonok elakay manush dhukle machine bondho kora — eta network-er upor nirbhor korte pare na.
+
+   Udahoron:
+   - CDN-er edge server, 5G-r Multi-access Edge Computing, smart factory-r local controller, smart city-r traffic camera, ar smartwatch-er sthaniyo health analysis.
+
+   Fog Computing-er sathe somporko:
+   - Fog Computing edge ar cloud-er majhkhaner ekti star, jekhane gateway ba router porjaye processing hoy. Edge shob theke kache, Fog majhkhane, ar Cloud shob theke dure.
 
 ## Virtualization & Resource Allocation (1)
 
 1. A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ GB} storage. Calculate the maximum number of VMs that can be hosted on the server without overcommitting resources. Identify which hardware resource limits the number of VMs. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - Physical server: 32 CPU cores, 96 GB RAM, 4 TB storage.
+   - Each VM: 4 CPU cores, 16 GB RAM, 500 GB storage.
+
+   Step 1, maximum VMs allowed by each resource:
+   - By CPU: 32 ÷ 4 = 8 VMs
+   - By RAM: 96 ÷ 16 = 6 VMs
+   - By storage: 4 TB ÷ 500 GB = 4096 GB ÷ 500 GB = 8.19, so 8 VMs
+
+   Step 2, take the minimum, since every VM needs all three resources at once:
+   - Minimum of 8, 6 and 8 = 6
+
+   Final answer: a maximum of 6 virtual machines can be hosted without overcommitting any resource.
+
+   Limiting resource:
+   - RAM is the limiting resource, because it allows only 6 VMs while CPU and storage would each allow 8.
+
+   Leftover capacity with 6 VMs:
+   - CPU used = 6 × 4 = 24 cores, leaving 8 cores idle.
+   - RAM used = 6 × 16 = 96 GB, leaving 0 GB, which is the bottleneck.
+   - Storage used = 6 × 500 GB = 3000 GB, leaving about 1 TB free.
+
+   - Practical note the examiner values: memory is the resource that most often limits virtual machine density in real deployments, because CPU can be safely overcommitted, since VMs rarely peak together, whereas RAM cannot be overcommitted without severe swapping. Adding 32 GB of RAM here would raise the limit to 8 VMs and use the CPU and storage fully. A further reservation of about 4 to 8 GB for the hypervisor itself should also be made in a real design, which would reduce the count to 5.
+
 ## High Availability & System Redundancy (1)
 
 1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.
 
+
+   Answer: The DNS service must survive the loss of any single component, so redundancy is needed at three levels: the service, the server and the network.
+
+   Where VM or container technology helps:
+   - Rapid recovery: if a physical host fails, its VMs are automatically restarted on another host in the cluster within a minute or two, so the DNS service returns without any manual rebuild.
+   - Live migration: a running DNS VM can be moved to another host with no downtime while the original server is patched or repaired, which removes planned outages entirely.
+   - Multiple instances: two or more DNS VMs or containers are run on different physical hosts, with an anti-affinity rule forcing the hypervisor to keep them apart, so one host failure never takes both down.
+   - Fast rebuild from an image: a DNS container starts in seconds from a known good image, so a corrupted instance is replaced rather than repaired.
+   - Snapshots and rollback: a bad configuration or a bad zone file is reverted instantly.
+   - Efficient use of hardware: the standby instance does not need a whole dedicated physical server, so real redundancy becomes affordable.
+   - Orchestration: Kubernetes or a similar platform health checks the containers and restarts or reschedules an unhealthy one automatically, and keeps the desired number of replicas running at all times.
+
+   Where network redundancy is required, and why virtualisation alone is not enough:
+   - Virtualisation protects against server and software failure, but it cannot help if the path to the server is broken. If the single switch, the single uplink or the single power feed fails, every VM on that host becomes unreachable even though it is running perfectly.
+   - Dual network interfaces on each host, teamed or bonded, connected to two different switches, so a NIC or a cable failure is survived.
+   - Redundant switches with MLAG or stacking, and Spanning Tree or a loop free fabric, so a switch failure does not isolate the servers.
+   - Redundant routers with VRRP or HSRP, so the default gateway address survives the loss of a router.
+   - Diverse WAN and upstream paths: at a cable landing station this means separate submarine cable systems and separate terrestrial routes, so one cable cut does not remove connectivity.
+   - Anycast for the DNS service address: the same IP is advertised by BGP from several sites, so resolvers are drawn automatically to the nearest healthy instance and a failed site simply withdraws its route. This is how the DNS root servers achieve availability, and it is the single most important measure for DNS specifically.
+   - Redundant power, dual feeds, UPS and generator, and redundant cooling.
+   - Geographic redundancy: a second DNS instance in a physically separate site, so a fire, a flood or a power failure at one location does not remove the service.
+
+   Recommended combined design:
+   - Two physical hosts, each running a DNS VM or container, kept apart by an anti-affinity rule.
+   - Each host dual homed to two switches, and the switches connected to two routers running VRRP.
+   - The DNS service address advertised by anycast from both the primary site and a geographically separate secondary site.
+   - Health checks that withdraw the route from an instance that stops answering queries, plus monitoring and alerting.
+   - In one sentence: virtualisation gives redundancy of the service, and network redundancy gives redundancy of the path; a highly available DNS needs both, because either one alone leaves a single point of failure.
+
 ## Cloud Security & Compliance (1)
 
 1. **How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
+
+
+   Answer: Assessment and audit reports are the evidence base of cloud security posture management: an assessment finds what is wrong, and an audit proves what is in place.
+
+   How they help detect vulnerabilities:
+   - Configuration assessment: automated scanning against benchmarks such as CIS finds the misconfigurations that cause most cloud breaches — a publicly readable storage bucket, a security group open to 0.0.0.0/0, an unencrypted database, disabled logging, or a default password left in place.
+   - Vulnerability scanning: workloads, container images and functions are scanned for unpatched software and known CVEs, and the findings are ranked by severity so the most dangerous are fixed first.
+   - Identity and access review: audit reports expose over-privileged roles, unused access keys, accounts without multi-factor authentication and orphaned accounts of former staff, which is where privilege escalation begins.
+   - Log and activity analysis: reviewing CloudTrail or equivalent logs reveals unusual API calls, access from unexpected countries, and privilege changes made outside the change window.
+   - Penetration testing and red team reports: these show whether the vulnerabilities found are actually exploitable in combination, which a scanner cannot judge.
+   - Drift detection: comparing the running environment with the approved infrastructure as code baseline shows every change made outside the process, which is a common source of silent exposure.
+   - Trend analysis: comparing successive reports shows whether the posture is improving or degrading, and whether fixes are actually being completed rather than repeatedly deferred.
+
+   How they ensure compliance:
+   - Mapping controls to frameworks: the report maps the technical findings to the requirements of ISO 27001, PCI DSS, SOC 2, GDPR or the local regulator's guideline, so gaps are expressed in the language the regulator uses.
+   - Evidence for auditors and regulators: dated reports, logs and remediation records constitute the documentary proof that controls existed and operated throughout the period, which is what an external audit actually tests.
+   - Shared responsibility clarity: the provider's own SOC 2 and ISO certificates cover the infrastructure, while the customer's assessment covers configuration, identity and data. Together they show the whole picture, and they make clear which failures belong to whom.
+   - Data residency and encryption verification: reports confirm where data is physically stored and that encryption at rest and in transit is actually enabled, which matters directly for banking and government data in Bangladesh.
+   - Continuous compliance: cloud posture management tools evaluate the environment continuously rather than once a year, so a violation is detected within minutes instead of at the next audit.
+   - Accountability and governance: findings are assigned owners and deadlines, and management reporting makes residual risk a conscious business decision rather than an accident.
+   - Third party and vendor assurance: audit reports of the provider and of SaaS vendors support the due diligence required before a service is approved.
+
+   - The practical cycle is: assess, prioritise by risk, remediate, verify, and report — repeated continuously, because a cloud environment changes daily and a posture verified last month proves nothing about today.
