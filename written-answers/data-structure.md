@@ -1202,34 +1202,561 @@
 
 1. **Explain the push and pop operations of the stack.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1448 (ET: N/A)]*
 
+
+   Answer: A stack is a linear data structure that follows the LIFO principle, Last In First Out, in which insertion and deletion both take place at one end called the top.
+
+   Push operation:
+   - Push inserts an element at the top of the stack.
+   - Steps: first check whether the stack is full, which is called the overflow condition; if it is full, report overflow and stop; otherwise increment the top pointer by one and place the new element at that position.
+
+   ```
+   PUSH(stack, item):
+       if top == MAX - 1:
+           print "Stack Overflow"
+           return
+       top = top + 1
+       stack[top] = item
+   ```
+
+   Pop operation:
+   - Pop removes and returns the element at the top of the stack.
+   - Steps: first check whether the stack is empty, which is called the underflow condition; if it is empty, report underflow and stop; otherwise take the element at the top position and decrement the top pointer by one.
+
+   ```
+   POP(stack):
+       if top == -1:
+           print "Stack Underflow"
+           return NULL
+       item = stack[top]
+       top = top - 1
+       return item
+   ```
+
+   Example, starting from an empty stack with top = −1:
+
+   | Operation | Stack contents, bottom to top | top | Returned |
+   |---|---|---|---|
+   | Push(10) | 10 | 0 | — |
+   | Push(20) | 10, 20 | 1 | — |
+   | Push(30) | 10, 20, 30 | 2 | — |
+   | Pop() | 10, 20 | 1 | 30 |
+   | Pop() | 10 | 0 | 20 |
+   | Push(40) | 10, 40 | 1 | — |
+   | Pop() | 10 | 0 | 40 |
+
+   - Note that the element removed is always the one most recently inserted, which is the LIFO property.
+
+   Other operations: peek or top, which returns the top element without removing it; isEmpty, which tests whether top equals −1; and isFull, which tests whether top equals MAX − 1.
+
+   Complexity: both push and pop are O(1), since neither involves any searching or shifting.
+
+   Applications: the function call stack and recursion, undo in an editor, the browser back button, conversion and evaluation of expressions, balanced parenthesis checking, backtracking algorithms and depth first search.
 2. **Implementation of Stack using two Queues?** *[BCIC Assistant Programmer 14.02.2025 compact it 1326 (ET: BUET)]*
 
+
+   Answer: A stack can be built from two queues by making one of the two operations expensive, since a queue reverses nothing by itself. There are two standard approaches.
+
+   Approach 1, push is costly and pop is O(1):
+   - Keep two queues, q1 and q2, with q1 always holding the elements in stack order, that is with the most recently pushed element at the front.
+   - Push(x): enqueue x into the empty q2; then dequeue everything from q1 and enqueue it into q2; then swap the names of q1 and q2. The new element is now at the front of q1.
+   - Pop(): simply dequeue from q1, which returns the most recently pushed element.
+
+   ```
+   PUSH(x):
+       enqueue(q2, x)
+       while q1 is not empty:
+           enqueue(q2, dequeue(q1))
+       swap(q1, q2)
+
+   POP():
+       if q1 is empty: report underflow
+       return dequeue(q1)
+
+   TOP():
+       return front(q1)
+   ```
+
+   - Complexity: push is O(n), pop is O(1), top is O(1).
+
+   Approach 2, push is O(1) and pop is costly:
+   - Push(x): simply enqueue x into q1.
+   - Pop(): move all but the last element from q1 into q2, so the single element left in q1 is the most recently pushed; dequeue and return it; then swap q1 and q2.
+
+   ```
+   PUSH(x):
+       enqueue(q1, x)
+
+   POP():
+       if q1 is empty: report underflow
+       while size(q1) > 1:
+           enqueue(q2, dequeue(q1))
+       item = dequeue(q1)
+       swap(q1, q2)
+       return item
+   ```
+
+   - Complexity: push is O(1), pop is O(n), top is O(n).
+
+   Trace of approach 1 with Push(1), Push(2), Push(3), then Pop():
+   - Push(1): q2 = [1]; q1 is empty; swap → q1 = [1]
+   - Push(2): q2 = [2]; move 1 across → q2 = [2, 1]; swap → q1 = [2, 1]
+   - Push(3): q2 = [3]; move 2 and 1 across → q2 = [3, 2, 1]; swap → q1 = [3, 2, 1]
+   - Pop(): dequeue from q1 returns 3, which is the last element pushed. Correct LIFO behaviour.
+
+   Which to choose:
+   - Approach 2 is generally preferred, because in most uses pushes and pops occur in roughly equal numbers and the amortised cost is the same, while approach 2 keeps the simpler operation cheap.
+   - A single queue also suffices: push x, then rotate the queue by dequeuing and re-enqueuing the preceding n − 1 elements, which brings x to the front. This gives O(n) push and O(1) pop with only one queue.
+   - The reverse exercise, implementing a queue with two stacks, is more efficient, because there the amortised cost per operation is O(1).
 3. **Correct of correct parentheses if it is written proper show matched if it does not show unmatched.** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
 
+
+   Answer: Checking whether the parentheses of an expression are correctly matched is the classic application of a stack.
+
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+   #include <string.h>
+
+   #define MAX 1000
+
+   char stack[MAX];
+   int top = -1;
+
+   void push(char c) { stack[++top] = c; }
+   char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
+   int isEmpty(void) { return top == -1; }
+
+   int isMatchingPair(char open, char close) {
+       return (open == '(' && close == ')') ||
+              (open == '[' && close == ']') ||
+              (open == '{' && close == '}');
+   }
+
+   int isBalanced(char expr[]) {
+       top = -1;                                  /* reset the stack */
+       for (int i = 0; expr[i] != '\0'; i++) {
+           char c = expr[i];
+           if (c == '(' || c == '[' || c == '{') {
+               push(c);                           /* opening: push it */
+           }
+           else if (c == ')' || c == ']' || c == '}') {
+               if (isEmpty())                     /* closing with nothing open */
+                   return 0;
+               if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
+                   return 0;
+           }
+           /* any other character is simply ignored */
+       }
+       return isEmpty();                          /* balanced only if nothing is left open */
+   }
+
+   int main(void) {
+       char expr[MAX];
+       printf("Input: ");
+       if (fgets(expr, MAX, stdin) == NULL) return 0;
+       expr[strcspn(expr, "\n")] = '\0';
+
+       printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
+       return 0;
+   }
+   ```
+
+   How the algorithm works:
+   - Scan the expression from left to right.
+   - Every opening bracket is pushed onto the stack.
+   - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
+   - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
+   - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
+
+   Trace of the sample inputs:
+   - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
+   - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
+
+   Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
 4. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
 
+
+   Answer:
+
+   Difference between stack and queue:
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Principle | LIFO, Last In First Out | FIFO, First In First Out |
+   | Insertion | Push, at the top only | Enqueue, at the rear only |
+   | Deletion | Pop, from the top only | Dequeue, from the front only |
+   | Ends used | One end, the top | Two ends, the front and the rear |
+   | Pointers needed | One, the top | Two, the front and the rear |
+   | Order of removal | Reverse of the order of insertion | Same as the order of insertion |
+   | Operations | push, pop, peek or top, isEmpty, isFull | enqueue, dequeue, front, rear, isEmpty, isFull |
+   | Variants | — | Circular queue, priority queue, double ended queue |
+   | Real world analogy | A stack of plates: the last plate placed is the first taken | A queue at a ticket counter: the first to arrive is the first served |
+   | Applications | Function call stack, recursion, undo, expression conversion and evaluation, backtracking, depth first search, balanced parenthesis checking, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, call centre waiting, message queues |
+   | Complexity | O(1) for both push and pop | O(1) for both enqueue and dequeue |
+
+   Two problems solved by a stack:
+   - Balanced parenthesis checking, and more generally syntax checking in a compiler. Scanning the expression, every opening bracket is pushed and every closing bracket must match the bracket on top of the stack. If a mismatch occurs, or if the stack is not empty at the end, the expression is invalid. The stack is the correct structure because the most recently opened bracket must be the first one closed, which is exactly LIFO.
+   - Expression conversion and evaluation. An infix expression is converted to postfix with an operator stack, and the postfix form is then evaluated with an operand stack: push each operand, and on meeting an operator pop the required operands, apply it and push the result. The related problem of function calls and recursion also depends on a stack, since the most recently called function must return first, and each activation record holds the local variables and the return address.
+
+   Two problems solved by a queue:
+   - CPU scheduling and print spooling. Processes or print jobs are served in the order in which they arrive, which is precisely FIFO, so a queue guarantees fairness and prevents starvation. The ready queue of a First Come First Served scheduler is literally a queue.
+   - Breadth first search of a graph or a tree. The starting node is enqueued; then repeatedly a node is dequeued, visited, and its unvisited neighbours are enqueued. Because a queue preserves arrival order, all the nodes at distance 1 are processed before any at distance 2, which is what makes breadth first search find the shortest path in an unweighted graph. Buffering between a fast producer and a slow consumer, such as a keyboard buffer or a network packet buffer, is the other everyday example.
 5. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 420 (ET: BIBM)]*
 
+
+   Answer:
+
+   Given: P = 12 / (7 − 3) + 2
+
+   Step 1, convert to postfix using the shunting yard method. Scan left to right; output operands immediately; push operators according to precedence.
+
+   | Symbol | Action | Operator stack | Output so far |
+   |---|---|---|---|
+   | 12 | operand, output it | empty | 12 |
+   | / | push | / | 12 |
+   | ( | push | / ( | 12 |
+   | 7 | operand, output it | / ( | 12 7 |
+   | − | push, since ( is on top | / ( − | 12 7 |
+   | 3 | operand, output it | / ( − | 12 7 3 |
+   | ) | pop until ( is removed | / | 12 7 3 − |
+   | + | / has higher precedence, so pop it, then push + | + | 12 7 3 − / |
+   | 2 | operand, output it | + | 12 7 3 − / 2 |
+   | end | pop the remaining operators | empty | 12 7 3 − / 2 + |
+
+   Postfix expression: 12 7 3 − / 2 +
+
+   Step 2, evaluate the postfix expression with a stack. Push every operand; on an operator, pop the two operands, apply it in the correct order and push the result.
+
+   | Symbol | Action | Stack after |
+   |---|---|---|
+   | 12 | push | 12 |
+   | 7 | push | 12, 7 |
+   | 3 | push | 12, 7, 3 |
+   | − | pop 3 and 7, compute 7 − 3 = 4, push | 12, 4 |
+   | / | pop 4 and 12, compute 12 / 4 = 3, push | 3 |
+   | 2 | push | 3, 2 |
+   | + | pop 2 and 3, compute 3 + 2 = 5, push | 5 |
+
+   Final answer: the postfix expression is 12 7 3 − / 2 + and its value is 5.
+
+   Verification against the original infix expression: 12 / (7 − 3) + 2 = 12 / 4 + 2 = 3 + 2 = 5. Correct.
+
+   - Note the order of the operands: when an operator is met, the first value popped is the right operand and the second is the left. Ignoring this gives 3 − 7 and 4 / 12, which is why the rule must be stated explicitly for subtraction and division.
 6. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Principle | LIFO, Last In First Out | FIFO, First In First Out |
+   | Insertion | Push, at the top only | Enqueue, at the rear only |
+   | Deletion | Pop, from the top only | Dequeue, from the front only |
+   | Ends used | One end, the top | Two ends, the front and the rear |
+   | Pointers needed | One, the top | Two, the front and the rear |
+   | Order of removal | Reverse of the order of insertion | Same as the order of insertion |
+   | Operations | push, pop, peek or top, isEmpty, isFull | enqueue, dequeue, front, rear, isEmpty, isFull |
+   | Variants | — | Circular queue, priority queue, double ended queue |
+   | Real world analogy | A stack of plates: the last plate placed is the first taken | A queue at a ticket counter: the first to arrive is the first served |
+   | Applications | Function call stack, recursion, undo, expression conversion and evaluation, backtracking, depth first search, balanced parenthesis checking, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, call centre waiting, message queues |
+   | Complexity | O(1) for both push and pop | O(1) for both enqueue and dequeue |
 7. **Write down the difference between Stack and Queue.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Principle | LIFO, Last In First Out | FIFO, First In First Out |
+   | Insertion | Push, at the top only | Enqueue, at the rear only |
+   | Deletion | Pop, from the top only | Dequeue, from the front only |
+   | Ends used | One end, the top | Two ends, the front and the rear |
+   | Pointers needed | One, the top | Two, the front and the rear |
+   | Order of removal | Reverse of the order of insertion | Same as the order of insertion |
+   | Operations | push, pop, peek or top, isEmpty, isFull | enqueue, dequeue, front, rear, isEmpty, isFull |
+   | Variants | — | Circular queue, priority queue, double ended queue |
+   | Real world analogy | A stack of plates: the last plate placed is the first taken | A queue at a ticket counter: the first to arrive is the first served |
+   | Applications | Function call stack, recursion, undo, expression conversion and evaluation, backtracking, depth first search, balanced parenthesis checking, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, call centre waiting, message queues |
+   | Complexity | O(1) for both push and pop | O(1) for both enqueue and dequeue |
 8. **Prefix Conversion A+ B * C+D expression?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: A + B * C + D
+
+   Step 1, apply precedence and associativity to insert the implicit brackets.
+   - Multiplication binds more tightly than addition, so B * C is grouped first: A + (B * C) + D
+   - Addition is left associative, so the left addition is performed before the right: ((A + (B * C)) + D)
+
+   Step 2, convert to prefix, in which every operator is written before its two operands.
+   - Work outward from the innermost group.
+   - (B * C) becomes * B C
+   - (A + (B * C)) becomes + A * B C
+   - ((A + (B * C)) + D) becomes + + A * B C D
+
+   Prefix expression: + + A * B C D
+
+   Verification by rebuilding the expression tree:
+
+   ```
+                  +
+                /   \
+               +     D
+             /   \
+            A     ×
+                /   \
+               B     C
+   ```
+
+   - Preorder of this tree, which is Root Left Right, gives + + A × B C D, confirming the prefix form.
+   - Inorder gives A + B × C + D, which is the original infix expression.
+   - Postorder gives A B C × + D +, which is the postfix form.
+
+   Systematic method used, the reverse scan technique:
+   - Reverse the infix string, swapping every opening bracket for a closing one and vice versa.
+   - Convert the reversed string to postfix by the ordinary shunting yard algorithm.
+   - Reverse the result, which gives the prefix expression.
+
+   - Final answer: + + A * B C D
 9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
+
+   Answer:
+
+   Given operations: Push(200), Push(500), Push(100), S = Pop()
+
+   Trace, with the stack written from bottom to top:
+
+   | Operation | Stack after the operation | Value returned |
+   |---|---|---|
+   | Initially | empty | — |
+   | Push(200) | 200 | — |
+   | Push(500) | 200, 500 | — |
+   | Push(100) | 200, 500, 100 | — |
+   | S = Pop() | 200, 500 | 100 |
+
+   Final answer: S = 100
+
+   Reasoning:
+   - A stack follows LIFO, Last In First Out. The element removed by a pop is always the one most recently pushed.
+   - 100 was the last value pushed, so it lies at the top and is the value returned.
+   - After the pop, the stack contains 200 at the bottom and 500 at the top, so a second pop would return 500 and a third would return 200.
 10. **Expalin: Infix, Prefix, Postfix notation.** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
 
+
+   Answer:
+
+   - Infix notation: the operator is written between its two operands, as in A + B. This is the form people write and read naturally, but it requires precedence rules and brackets to be unambiguous, so a machine cannot evaluate it in a single left to right pass.
+   - Prefix notation, also called Polish notation: the operator is written before its operands, as in + A B. No brackets are ever needed, because the position of the operator determines its operands unambiguously. It is evaluated by scanning from right to left.
+   - Postfix notation, also called Reverse Polish notation: the operator is written after its operands, as in A B +. Again no brackets are needed, and it is evaluated by scanning from left to right with a single stack, which is why compilers convert to it.
+
+   | Infix | Prefix | Postfix |
+   |---|---|---|
+   | A + B | + A B | A B + |
+   | A + B × C | + A × B C | A B C × + |
+   | (A + B) × C | × + A B C | A B + C × |
+   | A + B × C − D | − + A × B C D | A B C × + D − |
+   | (A + B) × (C − D) | × + A B − C D | A B + C D − × |
+
+   Why postfix is used in practice:
+   - Evaluation needs only one stack and one left to right scan: push every operand; on meeting an operator, pop the required operands, apply it, and push the result. The final value is the single item left on the stack.
+   - No precedence rules and no brackets are needed at run time, because the order is already fixed by the notation.
+   - Postorder traversal of an expression tree produces postfix directly, and preorder produces prefix, which is why compilers build an expression tree and then walk it.
+
+   Conversion from infix to postfix, the shunting yard method:
+   - Scan the infix expression from left to right.
+   - Output an operand immediately.
+   - On an opening bracket, push it.
+   - On a closing bracket, pop and output until the matching opening bracket is removed.
+   - On an operator, pop and output every operator on the stack of higher or equal precedence, except for a right associative operator such as exponentiation where only higher precedence is popped; then push the current operator.
+   - At the end, pop and output whatever remains on the stack.
 11. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
 
+
+   Answer: Stack and Queue are both linear data structures, and they differ in the end at which insertion and deletion take place.
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Principle | LIFO, Last In First Out | FIFO, First In First Out |
+   | Insertion | Push, at the top only | Enqueue, at the rear only |
+   | Deletion | Pop, from the top only | Dequeue, from the front only |
+   | Ends used | One end, the top | Two ends, the front and the rear |
+   | Pointers needed | One, the top | Two, the front and the rear |
+   | Order of removal | Reverse of the order of insertion | Same as the order of insertion |
+   | Operations | push, pop, peek or top, isEmpty, isFull | enqueue, dequeue, front, rear, isEmpty, isFull |
+   | Variants | — | Circular queue, priority queue, double ended queue |
+   | Real world analogy | A stack of plates: the last plate placed is the first taken | A queue at a ticket counter: the first to arrive is the first served |
+   | Applications | Function call stack, recursion, undo, expression conversion and evaluation, backtracking, depth first search, balanced parenthesis checking, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, call centre waiting, message queues |
+   | Complexity | O(1) for both push and pop | O(1) for both enqueue and dequeue |
+
+   Similarities worth noting:
+   - Both are linear data structures with elements arranged in sequence.
+   - Both can be implemented with either an array or a linked list.
+   - Both support insertion and deletion in O(1) time.
+   - Both have overflow and underflow conditions that must be checked.
+   - Both are abstract data types, that is they are defined by their operations rather than by their implementation.
+
+   - The choice between them is determined entirely by the order in which the data must be processed: a stack when the most recent item must be handled first, as in recursion and undo; a queue when the earliest item must be handled first, as in scheduling and buffering.
 12. **Difference between LIFO and FIFO in data structure.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | LIFO | FIFO |
+   |---|---|---|
+   | Full form | Last In First Out | First In First Out |
+   | Data structure | Stack | Queue |
+   | Principle | The element inserted most recently is removed first | The element inserted earliest is removed first |
+   | Ends used | One end only, the top | Two ends: rear for insertion, front for removal |
+   | Operations | push and pop | enqueue and dequeue |
+   | Pointers needed | One, the top | Two, the front and the rear |
+   | Order of output | The reverse of the order of input | The same as the order of input |
+   | Fairness | Not fair; an early element may wait indefinitely, which is starvation | Fair; every element is served in turn |
+   | Real world analogy | A stack of plates, or a pile of books | A queue at a ticket counter |
+   | Applications | Function call stack, recursion, undo, expression evaluation, backtracking, depth first search, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, message queues |
+   | Effect on data | Reverses the order | Preserves the order |
+
+   Example with the input sequence 1, 2, 3:
+   - LIFO: pushing 1, 2, 3 and then popping gives 3, 2, 1, that is the reverse.
+   - FIFO: enqueuing 1, 2, 3 and then dequeuing gives 1, 2, 3, that is the same order.
+
+   - Beyond data structures, the same two terms are used in inventory accounting, where LIFO and FIFO describe which stock is deemed to have been sold first, and in cache and page replacement policies, where FIFO is one of the simplest algorithms.
 13. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
+
+   Answer: A stack is a linear data structure following the LIFO principle, in which insertion and deletion both occur at one end called the top. Its operations are as follows.
+
+   - Push: inserts an element at the top of the stack. Before inserting, the overflow condition top = MAX − 1 must be checked; if the stack is full, overflow is reported. Otherwise top is incremented and the element is stored at that position. Complexity O(1).
+   - Pop: removes and returns the element at the top. Before removing, the underflow condition top = −1 must be checked; if the stack is empty, underflow is reported. Otherwise the element at top is taken and top is decremented. Complexity O(1).
+   - Peek, also called Top: returns the element at the top without removing it, so the stack is unchanged. Underflow must still be checked. Complexity O(1).
+   - isEmpty: returns true if top = −1, that is if the stack contains no elements. It is used before every pop and peek.
+   - isFull: returns true if top = MAX − 1 in an array implementation. It is used before every push. In a linked list implementation the stack is full only when memory is exhausted.
+   - Size or Count: returns the number of elements, which is top + 1 in the array implementation.
+   - Display or Traverse: prints the elements from the top downwards, which is O(n) and is used only for inspection.
+
+   Pseudocode of the two essential operations:
+
+   ```
+   PUSH(item):                          POP():
+       if top == MAX - 1:                   if top == -1:
+           print "Overflow"; return             print "Underflow"; return NULL
+       top = top + 1                        item = stack[top]
+       stack[top] = item                    top = top - 1
+                                            return item
+   ```
+
+   Example, starting empty with top = −1:
+   - Push(10) gives 10, with top = 0.
+   - Push(20) gives 10, 20 with top = 1.
+   - Peek returns 20 and leaves the stack unchanged.
+   - Pop returns 20, leaving 10 with top = 0.
+   - Pop returns 10, leaving the stack empty with top = −1.
+   - A further Pop reports underflow.
+
+   Implementation: an array, which is simple and cache friendly but of fixed size; or a linked list, which grows dynamically at the cost of a pointer per node, where push is an insertion at the head and pop a deletion from the head.
+
+   Applications: the function call stack and recursion, undo and redo, the browser back button, infix to postfix conversion and postfix evaluation, balanced parenthesis checking, backtracking and depth first search.
 14. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
 
+
+   Answer: The expression given is in postfix, that is Reverse Polish, notation, and it is evaluated with a stack scanned from left to right.
+
+   Expression: 3 2 * 2 ↑ 5 3 − 8 4 / * −
+
+   Rule: push every operand. On meeting an operator, pop the top two values, apply the operator with the second value popped as the left operand and the first as the right, and push the result.
+
+   | Symbol | Action | Stack after the step |
+   |---|---|---|
+   | 3 | push | 3 |
+   | 2 | push | 3, 2 |
+   | * | pop 2 and 3, compute 3 × 2 = 6, push | 6 |
+   | 2 | push | 6, 2 |
+   | ↑ | pop 2 and 6, compute 6² = 36, push | 36 |
+   | 5 | push | 36, 5 |
+   | 3 | push | 36, 5, 3 |
+   | − | pop 3 and 5, compute 5 − 3 = 2, push | 36, 2 |
+   | 8 | push | 36, 2, 8 |
+   | 4 | push | 36, 2, 8, 4 |
+   | / | pop 4 and 8, compute 8 / 4 = 2, push | 36, 2, 2 |
+   | * | pop 2 and 2, compute 2 × 2 = 4, push | 36, 4 |
+   | − | pop 4 and 36, compute 36 − 4 = 32, push | 32 |
+
+   Final answer: the value of the expression is 32.
+
+   Verification by writing the equivalent infix expression:
+   - The postfix corresponds to ((3 × 2) ↑ 2) − ((5 − 3) × (8 / 4))
+   - = (6 ↑ 2) − (2 × 2)
+   - = 36 − 4
+   - = 32. Correct.
+
+   - The point to state: the order of the operands matters for the non-commutative operators. When an operator is met, the first value popped is the right operand and the second is the left. Reversing them would give 3 − 5 and 4 / 8, which is wrong.
 15. **Write a C/C++ program to check Balanced parentheses in an Expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 830-831 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+   #include <string.h>
+
+   #define MAX 1000
+
+   char stack[MAX];
+   int top = -1;
+
+   void push(char c) { stack[++top] = c; }
+   char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
+   int isEmpty(void) { return top == -1; }
+
+   int isMatchingPair(char open, char close) {
+       return (open == '(' && close == ')') ||
+              (open == '[' && close == ']') ||
+              (open == '{' && close == '}');
+   }
+
+   int isBalanced(char expr[]) {
+       top = -1;                                  /* reset the stack */
+       for (int i = 0; expr[i] != '\0'; i++) {
+           char c = expr[i];
+           if (c == '(' || c == '[' || c == '{') {
+               push(c);                           /* opening: push it */
+           }
+           else if (c == ')' || c == ']' || c == '}') {
+               if (isEmpty())                     /* closing with nothing open */
+                   return 0;
+               if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
+                   return 0;
+           }
+           /* any other character is simply ignored */
+       }
+       return isEmpty();                          /* balanced only if nothing is left open */
+   }
+
+   int main(void) {
+       char expr[MAX];
+       printf("Input: ");
+       if (fgets(expr, MAX, stdin) == NULL) return 0;
+       expr[strcspn(expr, "\n")] = '\0';
+
+       printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
+       return 0;
+   }
+   ```
+
+   How the algorithm works:
+   - Scan the expression from left to right.
+   - Every opening bracket is pushed onto the stack.
+   - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
+   - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
+   - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
+
+   Trace of the sample inputs:
+   - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
+   - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
+
+   Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
 16. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** *[RAKUB Programmer (PO) 12.10.2021 compact it 845-846 (ET: N/A)]*
 ```text
 Input: [0]{[00]0}
@@ -1238,10 +1765,150 @@ Input: [())
 Output: Not Balanced
 ```
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+   #include <string.h>
+
+   #define MAX 1000
+
+   char stack[MAX];
+   int top = -1;
+
+   void push(char c) { stack[++top] = c; }
+   char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
+   int isEmpty(void) { return top == -1; }
+
+   int isMatchingPair(char open, char close) {
+       return (open == '(' && close == ')') ||
+              (open == '[' && close == ']') ||
+              (open == '{' && close == '}');
+   }
+
+   int isBalanced(char expr[]) {
+       top = -1;                                  /* reset the stack */
+       for (int i = 0; expr[i] != '\0'; i++) {
+           char c = expr[i];
+           if (c == '(' || c == '[' || c == '{') {
+               push(c);                           /* opening: push it */
+           }
+           else if (c == ')' || c == ']' || c == '}') {
+               if (isEmpty())                     /* closing with nothing open */
+                   return 0;
+               if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
+                   return 0;
+           }
+           /* any other character is simply ignored */
+       }
+       return isEmpty();                          /* balanced only if nothing is left open */
+   }
+
+   int main(void) {
+       char expr[MAX];
+       printf("Input: ");
+       if (fgets(expr, MAX, stdin) == NULL) return 0;
+       expr[strcspn(expr, "\n")] = '\0';
+
+       printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
+       return 0;
+   }
+   ```
+
+   How the algorithm works:
+   - Scan the expression from left to right.
+   - Every opening bracket is pushed onto the stack.
+   - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
+   - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
+   - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
+
+   Trace of the sample inputs:
+   - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
+   - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
+
+   Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
 17. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
+
+   Answer: The structure in which insertion and deletion of items occur at the same end is the Stack.
+
+   - A stack follows the LIFO principle, Last In First Out. Both operations take place at a single end called the top: push inserts at the top, and pop removes from the top.
+   - Because both operations use the same end, only one pointer, the top, is required.
+   - The consequence is that the element removed is always the one most recently inserted, so the output order is the reverse of the input order.
+   - Real world analogy: a stack of plates, where the last plate placed on the pile is the first one taken off.
+   - Applications: the function call stack and recursion, undo in an editor, the browser back button, infix to postfix conversion and postfix evaluation, balanced parenthesis checking, backtracking and depth first search.
+
+   By contrast:
+   - A queue uses two different ends: insertion at the rear and deletion at the front, following FIFO.
+   - A double ended queue, or deque, allows insertion and deletion at both ends, so it can behave as either a stack or a queue.
 18. **Write a Program to check for balanced parenthesis in an expression.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1011 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+   #include <string.h>
+
+   #define MAX 1000
+
+   char stack[MAX];
+   int top = -1;
+
+   void push(char c) { stack[++top] = c; }
+   char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
+   int isEmpty(void) { return top == -1; }
+
+   int isMatchingPair(char open, char close) {
+       return (open == '(' && close == ')') ||
+              (open == '[' && close == ']') ||
+              (open == '{' && close == '}');
+   }
+
+   int isBalanced(char expr[]) {
+       top = -1;                                  /* reset the stack */
+       for (int i = 0; expr[i] != '\0'; i++) {
+           char c = expr[i];
+           if (c == '(' || c == '[' || c == '{') {
+               push(c);                           /* opening: push it */
+           }
+           else if (c == ')' || c == ']' || c == '}') {
+               if (isEmpty())                     /* closing with nothing open */
+                   return 0;
+               if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
+                   return 0;
+           }
+           /* any other character is simply ignored */
+       }
+       return isEmpty();                          /* balanced only if nothing is left open */
+   }
+
+   int main(void) {
+       char expr[MAX];
+       printf("Input: ");
+       if (fgets(expr, MAX, stdin) == NULL) return 0;
+       expr[strcspn(expr, "\n")] = '\0';
+
+       printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
+       return 0;
+   }
+   ```
+
+   How the algorithm works:
+   - Scan the expression from left to right.
+   - Every opening bracket is pushed onto the stack.
+   - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
+   - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
+   - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
+
+   Trace of the sample inputs:
+   - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
+   - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
+
+   Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
 19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
 ## Linked List (14)
