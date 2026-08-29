@@ -923,23 +923,431 @@
 
 1. What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503 [SO IT 25-07-2026]
 
+
+   Answer: The three status codes and their exact standard reason phrases.
+
+   (a) 200 — OK
+   (b) 403 — Forbidden
+   (c) 503 — Service Unavailable
+
+   | Code | Standard reason phrase | Meaning |
+   |---|---|---|
+   | 200 | OK | The request succeeded. The response body contains the requested resource. This is the normal reply to a successful GET. |
+   | 403 | Forbidden | The server understood the request but refuses to fulfil it. The client's identity is known; it simply does not have permission. Repeating the request with the same credentials will not help. |
+   | 503 | Service Unavailable | The server is temporarily unable to handle the request, because it is overloaded or is down for maintenance. The condition is temporary, and the server may send a `Retry-After` header saying when to try again. |
+
+   Points that distinguish these from the codes they are confused with:
+   - 403 Forbidden against 401 Unauthorized: 401 means the client has not authenticated, so sending credentials may succeed; 403 means the client is authenticated but not permitted, so credentials will not help.
+   - 403 against 404 Not Found: 404 says the resource does not exist; 403 says it exists but access is denied. Some servers deliberately return 404 instead of 403 to avoid revealing that a protected resource exists.
+   - 503 against 500 Internal Server Error: 500 means the server hit an unexpected fault while processing; 503 means the server is deliberately not serving right now and expects to recover.
+   - 503 against 502 Bad Gateway and 504 Gateway Timeout: 502 means an upstream server sent an invalid response; 504 means the upstream server did not answer in time.
+
+   The five classes of HTTP status code:
+
+   | Class | Meaning | Common examples |
+   |---|---|---|
+   | 1xx | Informational | 100 Continue, 101 Switching Protocols |
+   | 2xx | Success | 200 OK, 201 Created, 204 No Content |
+   | 3xx | Redirection | 301 Moved Permanently, 302 Found, 304 Not Modified |
+   | 4xx | Client error | 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests |
+   | 5xx | Server error | 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable, 504 Gateway Timeout |
 2. Describe any two key differences between the HTTP GET and HTTP POST methods used for communication between a web browser and a web server. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+
+   Answer: Two key differences between HTTP GET and HTTP POST.
+
+   1. Where the data is carried, and therefore whether it is visible. GET appends the data to the URL as a query string, so it appears in the address bar, in the browser history, in the server access log and in any proxy log along the way. POST places the data in the body of the request, so it does not appear in the URL or in those logs. This is why a login form must use POST: with GET the password would be written into the address bar and stored in the browser history.
+
+   2. Whether the request changes anything on the server, that is safety and idempotence. GET is defined as a safe method: it only reads, and it must never change server state. Because of that it is also idempotent, so repeating it any number of times gives the same result, and browsers and proxies are free to cache it and to repeat it automatically. POST is neither safe nor idempotent: it is meant to change state, and repeating it may create a second record. This is why pressing reload after a POST makes the browser warn that the data will be resubmitted, and why a payment submitted with GET could be charged twice by a simple page refresh.
+
+   The full comparison:
+
+   | Point | GET | POST |
+   |---|---|---|
+   | Purpose | Retrieve data from the server | Send data to the server to create or change something |
+   | Where the data goes | Appended to the URL as a query string, `page.php?name=Karim&id=5` | Placed in the body of the HTTP request |
+   | Visibility | Visible in the address bar, browser history, server logs and proxy logs | Not visible in the address bar |
+   | Length limit | Limited by the maximum URL length, about 2,048 characters in practice | No practical limit; large files can be sent |
+   | Data type | ASCII text only | Text and binary; supports file upload with `enctype="multipart/form-data"` |
+   | Bookmark and share | Can be bookmarked and shared, because the whole request is in the URL | Cannot be bookmarked |
+   | Caching | Can be cached by browsers and proxies | Not cached by default |
+   | Back button and reload | Harmless; the page simply reloads | The browser warns that the data will be resubmitted |
+   | Idempotent | Yes; repeating it produces the same result | No; repeating it may create a duplicate record |
+   | Safe | Yes; it must not change server state | No; it changes server state |
+   | Security | Unsuitable for passwords or sensitive data | Better, though only HTTPS actually protects the data in transit |
+   | Typical use | Search results, filters, pagination, reading a page | Login, registration, payment, file upload, posting a comment |
+
+   Examples:
+
+   ```html
+   <!-- GET: a search, which only reads -->
+   <form action="/search" method="get">
+     <input type="text" name="q">
+     <input type="submit" value="Search">
+   </form>
+   <!-- produces:  GET /search?q=laptop  -->
+
+   <!-- POST: a login, which must not expose the password -->
+   <form action="/login" method="post">
+     <input type="text" name="username">
+     <input type="password" name="password">
+     <input type="submit" value="Login">
+   </form>
+   <!-- produces:  POST /login   with username and password in the body -->
+   ```
 3. **6.7 What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+   Answer: The three status codes and their exact standard reason phrases.
+
+   (a) 200 — OK
+   (b) 403 — Forbidden
+   (c) 503 — Service Unavailable
+
+   | Code | Standard reason phrase | Meaning |
+   |---|---|---|
+   | 200 | OK | The request succeeded. The response body contains the requested resource. This is the normal reply to a successful GET. |
+   | 403 | Forbidden | The server understood the request but refuses to fulfil it. The client's identity is known; it simply does not have permission. Repeating the request with the same credentials will not help. |
+   | 503 | Service Unavailable | The server is temporarily unable to handle the request, because it is overloaded or is down for maintenance. The condition is temporary, and the server may send a `Retry-After` header saying when to try again. |
+
+   Points that distinguish these from the codes they are confused with:
+   - 403 Forbidden against 401 Unauthorized: 401 means the client has not authenticated, so sending credentials may succeed; 403 means the client is authenticated but not permitted, so credentials will not help.
+   - 403 against 404 Not Found: 404 says the resource does not exist; 403 says it exists but access is denied. Some servers deliberately return 404 instead of 403 to avoid revealing that a protected resource exists.
+   - 503 against 500 Internal Server Error: 500 means the server hit an unexpected fault while processing; 503 means the server is deliberately not serving right now and expects to recover.
+   - 503 against 502 Bad Gateway and 504 Gateway Timeout: 502 means an upstream server sent an invalid response; 504 means the upstream server did not answer in time.
+
+   The five classes of HTTP status code:
+
+   | Class | Meaning | Common examples |
+   |---|---|---|
+   | 1xx | Informational | 100 Continue, 101 Switching Protocols |
+   | 2xx | Success | 200 OK, 201 Created, 204 No Content |
+   | 3xx | Redirection | 301 Moved Permanently, 302 Found, 304 Not Modified |
+   | 4xx | Client error | 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests |
+   | 5xx | Server error | 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable, 504 Gateway Timeout |
 4. **(ক) ফর্ম জমা দেয়ার পদ্ধতি GET এবং POST এর মধ্যে পার্থক্য কী, কখন কোন পদ্ধতি ব্যবহার করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+
+   Answer: GET ও POST — ফর্মের তথ্য সার্ভারে পাঠানোর দুটি পদ্ধতি, যা HTML ফর্মের `method` attribute দিয়ে নির্ধারণ করা হয়।
+
+   | Point | GET | POST |
+   |---|---|---|
+   | Purpose | Retrieve data from the server | Send data to the server to create or change something |
+   | Where the data goes | Appended to the URL as a query string, `page.php?name=Karim&id=5` | Placed in the body of the HTTP request |
+   | Visibility | Visible in the address bar, browser history, server logs and proxy logs | Not visible in the address bar |
+   | Length limit | Limited by the maximum URL length, about 2,048 characters in practice | No practical limit; large files can be sent |
+   | Data type | ASCII text only | Text and binary; supports file upload with `enctype="multipart/form-data"` |
+   | Bookmark and share | Can be bookmarked and shared, because the whole request is in the URL | Cannot be bookmarked |
+   | Caching | Can be cached by browsers and proxies | Not cached by default |
+   | Back button and reload | Harmless; the page simply reloads | The browser warns that the data will be resubmitted |
+   | Idempotent | Yes; repeating it produces the same result | No; repeating it may create a duplicate record |
+   | Safe | Yes; it must not change server state | No; it changes server state |
+   | Security | Unsuitable for passwords or sensitive data | Better, though only HTTPS actually protects the data in transit |
+   | Typical use | Search results, filters, pagination, reading a page | Login, registration, payment, file upload, posting a comment |
+
+   উদাহরণ — GET পদ্ধতি:
+
+   ```html
+   <form action="search.php" method="get">
+     <input type="text" name="keyword">
+     <input type="text" name="category">
+     <input type="submit" value="খুঁজুন">
+   </form>
+   ```
+
+   ব্যবহারকারী keyword এ "laptop" ও category তে "electronics" লিখে জমা দিলে ব্রাউজার যায়:
+
+   ```
+   http://example.com/search.php?keyword=laptop&category=electronics
+   ```
+
+   উদাহরণ — POST পদ্ধতি:
+
+   ```html
+   <form action="login.php" method="post">
+     <input type="text" name="username">
+     <input type="password" name="password">
+     <input type="submit" value="প্রবেশ">
+   </form>
+   ```
+
+   এখানে ঠিকানার ঘরে কেবল `http://example.com/login.php` দেখা যাবে; ব্যবহারকারীর নাম ও পাসওয়ার্ড অনুরোধের শরীরে যাবে।
+
+   কখন কোনটি ব্যবহার করতে হবে:
+
+   GET ব্যবহার করুন যখন —
+   - কেবল তথ্য পড়া হচ্ছে, সার্ভারে কিছু বদলাচ্ছে না। যেমন অনুসন্ধান, ছাঁকনি, পৃষ্ঠা নম্বর।
+   - ফলাফলের পৃষ্ঠাটি bookmark করা বা লিঙ্ক হিসেবে অন্যকে পাঠানো দরকার।
+   - পাঠানো তথ্য অল্প ও গোপন নয়।
+   - উদাহরণ: `results.php?roll=123456` — পরীক্ষার ফল দেখা, যা লিঙ্ক আকারে ভাগ করা যায়।
+
+   POST ব্যবহার করুন যখন —
+   - সার্ভারে কিছু তৈরি বা পরিবর্তন হচ্ছে — নিবন্ধন, লগইন, মন্তব্য, অর্ডার, টাকা পরিশোধ।
+   - পাসওয়ার্ড, জাতীয় পরিচয়পত্র নম্বর, কার্ডের তথ্যের মতো সংবেদনশীল ডেটা পাঠানো হচ্ছে।
+   - বড় পরিমাণ তথ্য বা ফাইল আপলোড করা হচ্ছে।
+   - একই কাজ দুইবার হয়ে গেলে ক্ষতি হবে, যেমন দুইবার টাকা কাটা।
+
+   একটি গুরুত্বপূর্ণ সতর্কতা: POST ব্যবহার করলেই তথ্য নিরাপদ হয় না। POST এর ডেটাও সাধারণ HTTP তে খোলা অবস্থায় নেটওয়ার্কে যায় এবং যে কেউ ধরে ফেলতে পারে। প্রকৃত নিরাপত্তার জন্য HTTPS ব্যবহার করা বাধ্যতামূলক। POST কেবল ঠিকানার ঘর ও ব্রাউজারের ইতিহাস থেকে তথ্য আড়াল করে।
+
+   আরেকটি বিষয়: POST করার পর সরাসরি পৃষ্ঠা না দেখিয়ে একটি redirect পাঠানো উচিত, একে বলে Post/Redirect/Get প্যাটার্ন। এতে ব্যবহারকারী পৃষ্ঠাটি refresh করলেও ফর্মটি দ্বিতীয়বার জমা হয় না।
 5. **What is cookie? What is its purpose?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
 
+
+   Answer: A cookie is a small piece of text data, normally not more than about 4 KB, that a web server sends to the browser, and that the browser stores on the user's computer and sends back with every subsequent request to the same site.
+
+   How it works:
+   - The server includes a `Set-Cookie` header in its response: `Set-Cookie: sessionId=abc123; Path=/; HttpOnly; Secure; SameSite=Strict`
+   - The browser stores it.
+   - On every later request to that site the browser automatically adds: `Cookie: sessionId=abc123`
+   - The server therefore recognises the returning visitor.
+
+   Why cookies exist: HTTP is a stateless protocol, so the server has no memory of a previous request. Cookies are the mechanism that adds state on top of a stateless protocol.
+
+   Purposes of cookies:
+
+   - Session management. The commonest use. After a successful login the server creates a session and stores its identifier in a cookie, so the user stays logged in as he moves from page to page. Shopping carts, form progress across several pages and game scores work the same way.
+
+   - Personalisation. Remembering the user's chosen language, theme, currency, font size and region, so the site looks the same on the next visit.
+
+   - Tracking and analytics. Recording which pages a visitor viewed, how long the visit lasted and whether the visitor has been here before. Google Analytics uses cookies for this.
+
+   - Advertising. Third-party cookies set by an advertising network follow a user across many sites to build an interest profile and show targeted advertisements. This is the use that has caused most privacy concern, and browsers are now blocking it.
+
+   - Security. Storing a CSRF token, and remembering that a device has already passed two-factor authentication.
+
+   Types of cookie:
+
+   | Type | Description |
+   |---|---|
+   | Session cookie | Has no expiry date; deleted when the browser closes |
+   | Persistent cookie | Has an `Expires` or `Max-Age`; survives until that date |
+   | First-party cookie | Set by the site the user is visiting |
+   | Third-party cookie | Set by another domain, typically an advertiser, embedded in the page |
+   | Secure cookie | Sent only over HTTPS |
+   | HttpOnly cookie | Cannot be read by JavaScript, which protects it from XSS |
+   | SameSite cookie | Restricts sending on cross-site requests, which protects against CSRF |
+
+   Important attributes: `Expires` or `Max-Age` for lifetime, `Domain` and `Path` for scope, `Secure`, `HttpOnly` and `SameSite` for protection.
+
+   Limitations and concerns: about 4 KB per cookie and roughly 50 cookies per domain; they are stored in plain text on the user's machine, so no sensitive data such as a password should ever be placed in one; the user can delete or block them; they add to the size of every request; and their use for tracking is now regulated, which is why sites display a cookie consent notice.
+
+   Related storage that must be distinguished: `localStorage` holds about 5 to 10 MB, has no expiry and is never sent to the server automatically; `sessionStorage` is the same but cleared when the tab closes. Both are read by JavaScript and are unsuitable for authentication tokens for the same reason.
 6. **What is the difference between http and https?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 648 (ET: BUET)], [BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
 
+
+   Answer: Difference between HTTP and HTTPS.
+
+   | Point | HTTP | HTTPS |
+   |---|---|---|
+   | Full form | HyperText Transfer Protocol | HyperText Transfer Protocol Secure |
+   | Security | None; data travels as plain text | Encrypted with SSL/TLS |
+   | Default port | 80 | 443 |
+   | URL prefix | `http://` | `https://` |
+   | Certificate | Not needed | Requires an SSL/TLS certificate issued by a Certificate Authority |
+   | Browser indication | Marked "Not secure" | Padlock icon shown |
+   | Data integrity | None; data can be altered in transit without detection | Guaranteed by a message authentication code |
+   | Server authentication | None; the client cannot verify who it is talking to | The certificate proves the server's identity |
+   | Vulnerable to eavesdropping | Yes; anyone on the path can read the traffic | No; the traffic is unreadable |
+   | Vulnerable to man-in-the-middle | Yes | Protected, provided the certificate is validated |
+   | Speed | Marginally faster, since there is no handshake or encryption | Slightly slower on the first connection; negligible afterwards, and HTTP/2 over TLS is usually faster overall |
+   | SEO | Ranked lower | Ranked higher; Google treats HTTPS as a ranking signal |
+   | Cost | Free | Certificates can be free through Let's Encrypt, or paid |
+   | Suitable for | Nothing in modern practice | All websites |
+
+   The three guarantees HTTPS provides, which is the point worth stating clearly:
+   - Confidentiality: an eavesdropper on the network, on public Wi-Fi for example, sees only ciphertext.
+   - Integrity: any alteration of the data in transit is detected and the connection is dropped.
+   - Authentication: the certificate, signed by a trusted Certificate Authority, proves that the server really is the one named in the URL.
+
+   How HTTPS works, in outline: HTTPS is simply HTTP running inside a TLS tunnel. During the TLS handshake the client and server agree on a cipher suite, the server presents its certificate, the client verifies it against its store of trusted authorities, and the two sides establish a shared symmetric session key using asymmetric cryptography. All the HTTP messages that follow are encrypted with that symmetric key, because symmetric encryption is far faster.
+
+   ```mermaid
+   sequenceDiagram
+     participant C as Client
+     participant S as Server
+     C->>S: ClientHello (supported cipher suites)
+     S-->>C: ServerHello + Certificate (public key)
+     C->>C: Verify certificate against trusted CAs
+     C->>S: Key exchange, encrypted with server's public key
+     C->>S: Finished (now encrypted)
+     S-->>C: Finished (now encrypted)
+     Note over C,S: All HTTP traffic now encrypted with the session key
+   ```
+
+   Practical note: HTTPS protects data while it travels. It says nothing about whether the site itself is honest — a phishing site can also hold a valid certificate. The padlock means the connection is private, not that the owner is trustworthy.
 7. **(গ) URL কী? একটি URL ক্লিক করার পর Web Page Show করার পূর্ব পর্যন্ত যে কয়টি Step হয় সেগুলির নাম লিখুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 705 (ET: N/A)]*
 
+
+   Answer: URL হলো Uniform Resource Locator — ইন্টারনেটে কোনো সম্পদের সম্পূর্ণ ঠিকানা, যা বলে দেয় কোন protocol ব্যবহার করে, কোন সার্ভারে গিয়ে, কোন ফাইলটি চাইতে হবে।
+
+   একটি URL এর অংশ:
+
+   ```
+   https://www.example.com:443/products/laptop.html?id=45#specs
+   |____|  |_____________| |_| |__________________| |____| |___|
+   scheme      host       port        path          query fragment
+   ```
+
+   URL এ ক্লিক করার পর ওয়েব পৃষ্ঠা দেখানো পর্যন্ত যেসব ধাপ ঘটে:
+
+   ১. URL parsing: ব্রাউজার URL টিকে ভেঙে protocol, domain, port, path ও query আলাদা করে নেয় এবং বৈধতা যাচাই করে।
+
+   ২. DNS resolution: domain নামটিকে IP ঠিকানায় রূপান্তর করা হয়। ব্রাউজার ক্রমে খোঁজে — নিজের DNS cache, অপারেটিং সিস্টেমের cache, hosts ফাইল, তারপর ISP এর DNS resolver। না পেলে resolver ধারাবাহিকভাবে root server, TLD server ও authoritative name server কে জিজ্ঞাসা করে IP ঠিকানাটি নিয়ে আসে।
+
+   ৩. TCP connection: প্রাপ্ত IP ঠিকানার ৮০ বা ৪৪৩ নম্বর port এ three-way handshake করে সংযোগ স্থাপন করা হয় — SYN, SYN-ACK, ACK।
+
+   ৪. TLS handshake, যদি HTTPS হয়: সার্ভার তার certificate দেখায়, ব্রাউজার তা যাচাই করে, এবং দুই পক্ষ একটি গোপন session key তৈরি করে। এরপর থেকে সব যোগাযোগ এনক্রিপ্ট হয়।
+
+   ৫. HTTP request: ব্রাউজার অনুরোধ পাঠায়, যেমন —
+
+   ```
+   GET /products/laptop.html HTTP/1.1
+   Host: www.example.com
+   User-Agent: Mozilla/5.0 ...
+   Accept: text/html
+   Cookie: sessionId=abc123
+   ```
+
+   ৬. Server processing: ওয়েব সার্ভার অনুরোধটি গ্রহণ করে। Static ফাইল হলে সরাসরি পড়ে নেয়; dynamic হলে PHP বা Node.js এর মতো application চালায়, প্রয়োজনে database এ query করে এবং HTML তৈরি করে।
+
+   ৭. HTTP response: সার্ভার status line, header ও body সহ উত্তর পাঠায় —
+
+   ```
+   HTTP/1.1 200 OK
+   Content-Type: text/html; charset=UTF-8
+   Content-Length: 5120
+
+   <!DOCTYPE html> ...
+   ```
+
+   ৮. HTML parsing ও DOM নির্মাণ: ব্রাউজার HTML পড়ে DOM tree তৈরি করে।
+
+   ৯. অতিরিক্ত সম্পদ আনা: HTML এর ভেতরে থাকা CSS, JavaScript, ছবি, ফন্ট ইত্যাদির জন্য আলাদা আলাদা অনুরোধ পাঠানো হয়। এগুলো সমান্তরালে আসে।
+
+   ১০. CSSOM নির্মাণ ও Render tree তৈরি: CSS পড়ে CSSOM তৈরি হয়, তারপর DOM ও CSSOM মিলিয়ে render tree তৈরি হয়, যাতে কেবল দৃশ্যমান উপাদানগুলো থাকে।
+
+   ১১. Layout বা reflow: প্রতিটি উপাদানের সঠিক আকার ও অবস্থান হিসাব করা হয়।
+
+   ১২. Painting ও Compositing: পিক্সেল আঁকা হয় এবং স্তরগুলো একত্র করে পর্দায় দেখানো হয়।
+
+   ১৩. JavaScript execution: script চলে, যা DOM পরিবর্তন করতে পারে এবং প্রয়োজনে নতুন layout ও paint ঘটায়।
+
+   ১৪. সংযোগ বন্ধ বা পুনঃব্যবহার: keep-alive থাকলে একই TCP সংযোগ পরবর্তী অনুরোধের জন্য ব্যবহৃত হয়, নইলে চার ধাপের handshake দিয়ে সংযোগ বন্ধ হয়।
+
+   ```mermaid
+   flowchart TD
+     A[URL এ ক্লিক] --> B[URL parsing]
+     B --> C[DNS resolution → IP]
+     C --> D[TCP three-way handshake]
+     D --> E{HTTPS?}
+     E -->|হ্যাঁ| F[TLS handshake]
+     E -->|না| G[HTTP request]
+     F --> G
+     G --> H[Server processing + DB query]
+     H --> I[HTTP response]
+     I --> J[HTML parse → DOM]
+     J --> K[CSS, JS, images আনা]
+     K --> L[CSSOM + Render tree]
+     L --> M[Layout]
+     M --> N[Paint & Composite]
+     N --> O[পৃষ্ঠা দৃশ্যমান]
+   ```
 8. **(c) Explain the difference between Stateless and Stateful protocols. Which type of protocol http is?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 885-886 (ET: N/A)]*
 
+
+   Answer: Stateless and stateful protocols, and which one HTTP is.
+
+   A stateless protocol is one in which the server keeps no information about previous requests. Every request must carry all the information needed to understand and process it, and the server treats each request as completely independent of every other.
+
+   A stateful protocol is one in which the server maintains information about the ongoing interaction across several requests. The meaning of a request may depend on what came before it.
+
+   | Point | Stateless | Stateful |
+   |---|---|---|
+   | Server memory of past requests | None | Maintained for the whole session |
+   | Independence of requests | Each request is complete in itself | A request may depend on earlier ones |
+   | Server resources | Low; nothing stored per client | High; memory held for every connected client |
+   | Scalability | Excellent; any server can handle any request, so load balancing is trivial | Poor; the client must return to the same server, or state must be shared |
+   | Recovery after a crash | Simple; the client just repeats the request | Difficult; the session state is lost |
+   | Complexity of design | Simple | Complex |
+   | Overhead per request | Higher, because context is resent every time | Lower, because context is already known |
+   | Examples | HTTP, UDP, DNS, IP | FTP, TCP, Telnet, SSH, SMTP |
+
+   HTTP is a stateless protocol.
+
+   Each HTTP request is self-contained. When a browser asks for page2.html, the server has no recollection that the same browser asked for page1.html a second earlier. That is why the request must carry its own headers, cookies and authentication every time.
+
+   Why HTTP was designed to be stateless:
+   - Simplicity: the server does not have to track millions of clients.
+   - Scalability: any one of a hundred servers behind a load balancer can serve any request, because none of them holds state that the others lack. This is what allows the web to scale.
+   - Reliability: if a server fails, the client simply retries; nothing has been lost.
+   - Low memory use: no per-client structures are held between requests.
+
+   How state is added on top of a stateless HTTP, since real applications need to remember users:
+   - Cookies: the server sends a small piece of data that the browser returns with every later request.
+   - Sessions: the server keeps the actual data and gives the browser only a session identifier in a cookie.
+   - URL rewriting: the session identifier is appended to every link. Rarely used now.
+   - Hidden form fields: state carried inside the form.
+   - Tokens such as JWT: the state itself is signed and carried by the client, which preserves statelessness on the server.
+   - Client-side storage: `localStorage` and `sessionStorage`.
+
+   Two clarifications that are commonly confused:
+   - HTTP is stateless, but it runs over TCP, which is a stateful, connection-oriented protocol. Statelessness at the application layer does not imply statelessness at the transport layer.
+   - HTTP keep-alive, which reuses one TCP connection for several requests, does not make HTTP stateful. It reuses the connection; the server still remembers nothing about the earlier requests.
+
+   REST, the architectural style used for web APIs, deliberately keeps this statelessness as one of its constraints, for exactly the scalability reason given above.
 9. **What is the difference between http session and http cookies?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 911 (ET: BUET)]*
 
+
+   Answer: Difference between an HTTP session and HTTP cookies.
+
+   | Point | Cookie | Session |
+   |---|---|---|
+   | Where the data is stored | On the client, in the browser | On the server, in memory, a file or a database |
+   | What the client holds | The actual data | Only the session identifier, itself usually kept in a cookie |
+   | Size limit | About 4 KB per cookie, roughly 50 per domain | Limited only by server storage; can hold large objects |
+   | Security | Lower; stored in plain text on the user's machine, and the user can read and alter it | Higher; the data never leaves the server, and the client sees only an opaque identifier |
+   | Lifetime | Set by `Expires` or `Max-Age`; a persistent cookie can survive for years | Ends when the browser closes or after an inactivity timeout, typically 20 to 30 minutes |
+   | Survives browser restart | Yes, if persistent | No, normally |
+   | Sent over the network | Sent with every request to the domain, adding to each request | Only the small identifier is sent |
+   | Server resources | None | Consumes memory for every active user |
+   | Accessible to JavaScript | Yes, unless marked HttpOnly | No |
+   | Depends on the other | Works on its own | Normally depends on a cookie to carry its identifier |
+   | Typical use | Language preference, theme, "remember me", analytics identifiers | Logged-in user identity, shopping cart, permissions, form wizard progress |
+
+   How the two work together, which is the point of the question:
+
+   ```mermaid
+   sequenceDiagram
+     participant B as Browser
+     participant S as Server
+     B->>S: POST /login (username, password)
+     S->>S: Verify credentials, create session object in server memory
+     S-->>B: Set-Cookie: PHPSESSID=x9f2k7; HttpOnly; Secure
+     Note over S: Server stores: x9f2k7 → {userId: 501, role: admin, cart: [...]}
+     B->>S: GET /dashboard  (Cookie: PHPSESSID=x9f2k7)
+     S->>S: Look up x9f2k7, find the user
+     S-->>B: Dashboard page for that user
+   ```
+
+   The session holds the real data on the server; the cookie only carries the key to it. This is why a session is the correct place for anything sensitive, and a cookie is not.
+
+   A concrete illustration of the security difference: storing `role=admin` in a cookie is a serious flaw, because the user can simply edit the cookie in the browser and become an administrator. Storing the role in the session is safe, because the browser holds only the meaningless identifier `x9f2k7` and cannot change what that identifier maps to on the server.
+
+   Session hijacking is the corresponding risk: if an attacker steals the session identifier, from an unencrypted connection, from an XSS flaw, or from a shared computer, he becomes that user. The defences are HTTPS everywhere, the `HttpOnly` and `Secure` and `SameSite` cookie flags, regenerating the session identifier immediately after login to prevent session fixation, a short inactivity timeout, and binding the session loosely to the client's characteristics.
+
+   A third approach worth mentioning: token-based authentication with a JWT, where the signed token carries the user's identity and is verified by signature rather than looked up in server storage. It gives the scalability of cookies with much of the safety of sessions, at the cost of not being revocable until it expires.
 10. **It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?** *[Sadharan Bima Corporation Programmer/ AP/AME 2020 compact it 1002 (ET: DU)], [BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
+
+
+    Answer: A cookie, more precisely an HTTP cookie, also called a web cookie or a browser cookie.
+
+    Definition: a small piece of data, up to about 4 KB, that a website sends to the browser, and that the browser stores on the user's computer and sends back with every later request to that site.
+
+    Why it exists: HTTP is stateless, so the server has no memory of earlier requests. The cookie is the mechanism that lets a website recognise a returning visitor and so maintain state.
+
+    Main uses: keeping a user logged in through a session identifier, holding a shopping cart, remembering preferences such as language and theme, and tracking visits for analytics and advertising.
+
+    Types: session cookies, which are deleted when the browser closes; persistent cookies, which have an expiry date; first-party cookies, set by the site being visited; and third-party cookies, set by another domain such as an advertising network.
 
 ## JavaScript & jQuery (DOM & Validation) (8)
 
