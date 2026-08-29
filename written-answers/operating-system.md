@@ -7322,29 +7322,711 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 1. **How to check the IP address in the Windows Command Prompt?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: To check the IP address in the Windows Command Prompt:
+
+   ```
+   ipconfig
+   ```
+
+   This prints the IP address, the subnet mask and the default gateway of every network adapter.
+
+   More detailed forms:
+   ```
+   ipconfig /all              show everything, including the MAC address, DHCP and DNS servers
+   ipconfig /release          release the current DHCP lease
+   ipconfig /renew            obtain a new address from the DHCP server
+   ipconfig /flushdns         clear the DNS resolver cache
+   ipconfig /displaydns       show the contents of the DNS cache
+   ```
+
+   Sample output:
+   ```
+   C:\> ipconfig
+
+   Windows IP Configuration
+
+   Ethernet adapter Ethernet:
+
+      Connection-specific DNS Suffix  . : local
+      IPv4 Address. . . . . . . . . . . : 192.168.1.105
+      Subnet Mask . . . . . . . . . . . : 255.255.255.0
+      Default Gateway . . . . . . . . . : 192.168.1.1
+   ```
+
+   Other commands that give the same or related information:
+   ```
+   netsh interface ip show config       full configuration of every interface
+   getmac                               the MAC address of each adapter
+   nslookup myip.opendns.com resolver1.opendns.com    the public IP address
+   ping hostname                        test connectivity
+   tracert hostname                     show the route to a destination
+   netstat -an                          all connections and listening ports
+   arp -a                               the ARP table
+   ```
+
+   In PowerShell:
+   ```
+   Get-NetIPAddress
+   Get-NetIPConfiguration
+   (Invoke-WebRequest ifconfig.me/ip).Content.Trim()     the public IP address
+   ```
+
+   The Linux equivalents, for comparison: ip addr show or the older ifconfig, and hostname -I for the addresses alone.
+
+   Distinction worth stating: ipconfig shows the private address assigned within the local network, typically in the ranges 192.168.x.x, 10.x.x.x or 172.16-31.x.x. The public address seen by the internet is the one on the router's WAN side, which is why many devices at home appear to the outside world as a single address; this is network address translation.
 2. **Assume that an office has three departments and each department has 50 to 70 employees who are using computers with Windows operating systems. The office space is designed in such a way that an employee can use any computer within a department. Once an employee logs in from a computer, he/she will get access to his files from the server. Let you are planning for network and server setup for this company.**
    * **(a) What is Active Directory? Do you need an Active Directory for such an office? If yes, briefly explain its use under this circumstance.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 323 (ET: BIBM)]*
 
+
+   Answer: The requirement is that any employee may sit at any computer within their department, log in, and immediately have access to their own files held on a server. This is the classic case for a centrally managed Windows domain.
+
+   Recommended design:
+
+   1. Active Directory Domain Services (AD DS)
+   - Install Windows Server and promote it to a domain controller, creating a domain such as office.local.
+   - Every user is given one domain account, and every computer is joined to the domain. The user then logs in with the same account at any machine, and authentication is performed by the domain controller rather than by the local machine. This is exactly what the requirement asks for.
+   - Create three Organisational Units, one per department, so that policy can be applied per department.
+   - Create security groups per department, and grant file permissions to groups rather than to individual users, so that a transfer between departments requires only a change of group membership.
+
+   2. Roaming profiles and folder redirection
+   - A roaming profile stores the user's desktop, settings and documents on the server, and they follow the user to whichever machine they log in from.
+   - Folder redirection is the better modern practice: redirect Documents, Desktop and Favourites to a network share, so that only the files actually opened are transferred, instead of copying an entire profile at every login. This makes logins fast, which matters when 150 to 210 users log in each morning.
+   - Set disk quotas so that no single user can fill the volume.
+
+   3. File server and shares
+   - Create a home directory share, for example \\FS01\Users\%username%, mapped automatically to a drive letter by a group policy or a login script. NTFS permissions give each user full control of their own folder and no access to others'.
+   - Create a departmental share for each department, accessible only to that department's group.
+   - Create an organisation-wide read-only share for common forms and notices.
+   - Use NTFS permissions for the real security and keep share permissions simple, because the effective permission is the more restrictive of the two.
+
+   4. Servers required
+   - Two domain controllers, so that a failure of one does not prevent anyone from logging in. Each also runs DNS, which Active Directory requires, and one runs DHCP with a reservation scope per department.
+   - One file server, with RAID storage.
+   - Optionally a print server, and a WSUS server for controlled Windows updates.
+   - Virtualise these roles on two physical hosts with Hyper-V, so that hardware is used efficiently and a host failure can be survived.
+
+   5. Storage
+   - RAID 10 for the file volume if performance matters, or RAID 6 for capacity, with a hot spare in either case.
+   - Shadow Copies (Volume Shadow Copy Service) enabled on the share, so that users can restore a previous version of a file themselves without troubling the administrator.
+
+   6. Network
+   - A managed switch in each department, uplinked to a core switch.
+   - Separate VLANs per department, with routing between them controlled by access lists, so that a problem in one department does not affect the others and traffic is contained.
+   - Gigabit to the desktop and, if possible, a faster uplink to the server, since 150 to 210 users share it.
+   - A firewall between the office network and the internet.
+
+   7. Group Policy
+   - Map the home drive and departmental drive automatically at login.
+   - Deploy printers by department.
+   - Enforce a password policy, screen lock, and restrictions on installing software.
+   - Deploy antivirus and configure Windows Update.
+
+   8. Backup and recovery
+   - Daily incremental and weekly full backups of the file server and the system state of the domain controllers.
+   - Follow the 3-2-1 rule: three copies, on two kinds of media, with one copy off site.
+   - Test a restore periodically; a backup that has never been restored cannot be relied on.
+   - Note that RAID is not a backup; it protects against a disk failure only, not against deletion, corruption or ransomware.
+
+   9. Sizing
+   - Users: 3 departments x 50 to 70 = 150 to 210 users.
+   - File server storage: allowing 20 GB per user gives 3 to 4.2 TB of user data, so provision about 8 TB usable after RAID, to allow for growth and for shadow copies.
+   - Domain controller: modest, since authentication is light.
+   - Plan for peak load at the start of the working day, when nearly all users log in within a few minutes.
+
+   10. Security
+   - Least privilege: users are ordinary users, not local administrators.
+   - Account lockout after repeated failed logins.
+   - Auditing of file access on sensitive shares.
+   - Encryption of backups and of any laptop, using BitLocker.
+
+   Summary of why this design meets the requirement: because authentication is centralised in Active Directory and the user's files live on the server rather than on any particular workstation, an employee can sit at any computer in the department, log in with the same credentials, and see exactly the same files. Replacing a failed workstation then requires no data recovery at all, since nothing of value is stored on it.
 3. **Describe the booting process in windows system.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)]*
 
+
+   Answer: The booting process is the sequence of steps by which a computer starts from power-on to a usable operating system. The Windows sequence is described below in both the modern UEFI and the older BIOS form.
+
+   Step 1 - Power-on and POST
+   - When power is applied, the power supply sends a Power Good signal and the processor begins executing firmware code from a fixed address.
+   - The firmware runs the Power-On Self Test (POST), which checks the processor, memory, keyboard, display adapter and other essential hardware. A failure at this stage is reported by beep codes or by a diagnostic display, because the video system may not yet be available.
+
+   Step 2 - Firmware initialisation and boot device selection
+   - BIOS systems: the BIOS reads the boot order from CMOS, loads the first 512-byte sector of the chosen disk, the Master Boot Record, into memory and executes it.
+   - UEFI systems: the firmware reads the boot entries from NVRAM, mounts the EFI System Partition, which is a small FAT32 partition, and loads the boot manager file directly, without needing a Master Boot Record. UEFI also supports Secure Boot, which verifies the digital signature of the boot loader before running it.
+
+   Step 3 - Boot loader
+   - BIOS path: the MBR code locates the active partition and loads its boot sector, which loads bootmgr.
+   - UEFI path: the firmware loads bootmgfw.efi from the EFI System Partition.
+   - The Windows Boot Manager reads the Boot Configuration Data store, which lists the installed operating systems. If more than one is present, it displays the menu.
+
+   Step 4 - Windows Boot Loader
+   - The boot manager launches winload.exe (or winload.efi on UEFI).
+   - This loads the kernel, ntoskrnl.exe, the hardware abstraction layer hal.dll, and the SYSTEM registry hive.
+   - It also loads the boot-class drivers, that is the minimum drivers needed to reach the disk, and their order is taken from the registry.
+   - If the machine is resuming from hibernation, winresume.exe restores the saved memory image instead, and the remaining steps are skipped.
+
+   Step 5 - Kernel initialisation
+   - The kernel initialises the memory manager, the process and thread manager, the object manager, the security reference monitor and the input-output manager.
+   - The hardware abstraction layer isolates the rest of the kernel from the particular hardware platform.
+   - The Plug and Play manager detects devices and loads the rest of the drivers.
+   - The kernel then starts the Session Manager, smss.exe.
+
+   Step 6 - Session Manager and subsystems
+   - smss.exe creates the paging file, completes the registry initialisation and starts the environment subsystems.
+   - It launches csrss.exe, the Client-Server Runtime Subsystem, and wininit.exe for session 0, the system session.
+   - wininit.exe starts services.exe, the Service Control Manager, which starts all the services marked automatic, and lsass.exe, the Local Security Authority, which handles authentication.
+
+   Step 7 - Logon
+   - winlogon.exe presents the logon screen through LogonUI.
+   - Credentials are verified by lsass.exe, against the local SAM database or, on a domain-joined machine, against a domain controller.
+   - On success, the user's registry hive and profile are loaded and the shell, explorer.exe, is started.
+   - Startup programs listed in the registry and in the Startup folder are launched, and the desktop appears.
+
+   Diagram of the sequence:
+   ```
+   Power on
+      |
+      v
+   POST (firmware self-test)
+      |
+      v
+   BIOS/UEFI selects the boot device
+      |
+      v
+   MBR + bootmgr        or       bootmgfw.efi from the EFI System Partition
+      |
+      v
+   Boot Configuration Data read; menu shown if needed
+      |
+      v
+   winload.exe loads ntoskrnl.exe, hal.dll, SYSTEM hive, boot drivers
+      |
+      v
+   Kernel initialises; Plug and Play loads remaining drivers
+      |
+      v
+   smss.exe -> csrss.exe, wininit.exe -> services.exe, lsass.exe
+      |
+      v
+   winlogon.exe -> logon -> explorer.exe -> desktop ready
+   ```
+
+   Two useful distinctions:
+   - Cold boot means starting from a powered-off state; warm boot means restarting an already running machine, which skips part of the POST.
+   - Fast Startup in Windows 10 and 11 is a hybrid: on shutdown the kernel session is hibernated to disk, so the next start restores it instead of initialising it, which is much faster but means that a shutdown does not fully reset the system. A restart does.
+
+   Troubleshooting points worth mentioning: Safe Mode loads only the minimum drivers; Last Known Good Configuration restores the previous working registry control set; and bootrec /fixmbr, /fixboot and /rebuildbcd repair a damaged boot configuration from the recovery environment.
 4. **১৯. বর্তমানে উইন্ডোজ অপারেটিং সিস্টেম এর কত তম ভার্সন বাজারজাত করা হয়েছে?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+
+   Answer: মাইক্রোসফট উইন্ডোজ অপারেটিং সিস্টেমের বর্তমান সর্বশেষ প্রধান সংস্করণ Windows 11, যা ২০২১ সালের ৫ অক্টোবর বাজারে আসে।
+
+   প্রধান সংস্করণগুলোর ধারাবাহিকতা:
+
+   | সংস্করণ | প্রকাশের বছর |
+   |---|---|
+   | Windows 1.0 | ১৯৮৫ |
+   | Windows 3.1 | ১৯৯২ |
+   | Windows 95 | ১৯৯৫ |
+   | Windows 98 | ১৯৯৮ |
+   | Windows 2000 | ২০০০ |
+   | Windows XP | ২০০১ |
+   | Windows Vista | ২০০৭ |
+   | Windows 7 | ২০০৯ |
+   | Windows 8 | ২০১২ |
+   | Windows 8.1 | ২০১৩ |
+   | Windows 10 | ২০১৫ |
+   | Windows 11 | ২০২১ |
+
+   Windows 11 এর উল্লেখযোগ্য বৈশিষ্ট্য:
+   - কেন্দ্রে সরানো স্টার্ট মেনু ও টাস্কবার এবং সম্পূর্ণ নতুন নকশা।
+   - Snap Layouts ও Snap Groups, যা একাধিক জানালা সাজাতে সাহায্য করে।
+   - Microsoft Teams সরাসরি অন্তর্ভুক্ত।
+   - Android অ্যাপ চালানোর সুবিধা (নির্দিষ্ট অঞ্চলে)।
+   - Windows Subsystem for Linux এর উন্নত সংস্করণ।
+   - DirectStorage ও Auto HDR এর মাধ্যমে গেমিংয়ে উন্নতি।
+   - Copilot নামে কৃত্রিম বুদ্ধিমত্তাভিত্তিক সহায়ক।
+
+   হার্ডওয়্যার শর্ত: Windows 11 চালাতে TPM 2.0 চিপ, Secure Boot সমর্থন, ৬৪ বিট প্রসেসর, ৪ গিগাবাইট RAM ও ৬৪ গিগাবাইট স্টোরেজ প্রয়োজন। TPM 2.0 এর বাধ্যবাধকতা বহু পুরোনো কম্পিউটারকে অযোগ্য করে দিয়েছে, যা এই সংস্করণের সবচেয়ে আলোচিত দিক।
+
+   উল্লেখযোগ্য: মাইক্রোসফট Windows 10 এর জন্য মূলধারার সহায়তা ২০২৫ সালের ১৪ অক্টোবর পর্যন্ত ঘোষণা করেছিল, তাই এখন Windows 11 ই সমর্থিত সর্বশেষ সংস্করণ। সার্ভার শ্রেণিতে সর্বশেষ সংস্করণ Windows Server 2022। সংস্করণ পরিবর্তনশীল বিষয়, তাই পরীক্ষার সময় সর্বশেষ তথ্য যাচাই করে নেওয়া উচিত। <!-- verify -->
 
 ## Process Synchronization & Concurrency (4)
 
 1. Two independent applications running concurrently attempt to update the same file located at a same file location. Both applications may read and modify the file at nearly the same time, creating a possibility of race conditions, lost updates, or inconsistent data. What type of consistency problem can occur in this situation, and which synchronization technique(s) should be used to ensure that only one application can safely update the file at a time? Explain the mechanism and justify the most appropriate solution. [BSCCPL AME 21-08-2026 (BUET)]
 
+
+   Answer: Two independent applications reading and writing the same file at nearly the same time create a classic concurrency problem.
+
+   The consistency problems that can occur:
+
+   - Race condition: the final state of the file depends on the exact interleaving of the two applications' operations, which is not controlled by either of them and varies from run to run. The same sequence of user actions can produce different results.
+
+   - Lost update: application A reads the file, application B reads the same file, A writes its modified version, and then B writes its own version, which was computed from the value it read before A's change. A's update is silently overwritten and lost. This is the most common and most damaging form.
+
+   - Dirty read (reading uncommitted data): B reads the file while A is half-way through writing it, so B sees a file that is internally inconsistent, for example with a header updated but the body not yet.
+
+   - Inconsistent or partial write: if the write is not atomic and the process is interrupted, the file is left corrupted and may not be readable at all.
+
+   - Non-repeatable read: A reads a value, and later in the same operation reads it again and finds it changed by B in the meantime, so A's own computation is based on two different versions of the truth.
+
+   Worked illustration of a lost update, on a counter stored in a file:
+   ```
+   Initial value in file: 100
+
+   Time   Application A               Application B
+   t1     read file -> 100
+   t2                                 read file -> 100
+   t3     compute 100 + 50 = 150
+   t4                                 compute 100 + 30 = 130
+   t5     write 150 to file
+   t6                                 write 130 to file
+
+   Final value: 130.  Correct value: 180.  A's update of 50 has been lost.
+   ```
+
+   Synchronisation techniques that solve it:
+
+   1. File locking, which is the most appropriate solution here.
+   - An advisory or mandatory lock is taken on the file before it is read or written and released afterwards, so that only one application can be inside the critical section at a time.
+   - Two kinds of lock are used: a shared (read) lock, which several readers may hold at once, and an exclusive (write) lock, which only one holder may have and which excludes all readers. This is the readers-writer lock, and it allows concurrent reading while still serialising writing.
+   - On Linux the system calls are flock() and fcntl(); on Windows it is LockFileEx(). In Java, FileChannel.lock() provides the same.
+   - Example:
+   ```c
+   int fd = open("data.txt", O_RDWR);
+   flock(fd, LOCK_EX);        /* blocks until the exclusive lock is granted */
+   /* critical section: read, modify, write */
+   flock(fd, LOCK_UN);        /* release */
+   close(fd);
+   ```
+
+   2. Mutex or binary semaphore, if the two applications are threads or processes on the same machine that can share a named synchronisation object.
+   - wait() or lock() before the critical section, signal() or unlock() after it.
+   - This guarantees mutual exclusion, but it works only among parties that agree to use the same mutex.
+
+   3. Atomic write through rename, which is the standard robust technique for files.
+   - Write the new content to a temporary file in the same directory, flush it to disk, then rename it over the original. On POSIX systems rename() within a file system is atomic, so a reader sees either the whole old file or the whole new file, never a half-written one.
+   ```bash
+   write to data.txt.tmp
+   fsync(data.txt.tmp)
+   rename("data.txt.tmp", "data.txt")   # atomic
+   ```
+
+   4. Optimistic concurrency control with a version number or timestamp.
+   - Each writer records the version it read. Before writing, it checks that the version on disk is unchanged. If it has changed, the write is rejected and the operation is retried on the new data. This detects the lost update rather than preventing it, and is efficient when conflicts are rare.
+
+   5. Use a database instead of a file, when the data is genuinely shared.
+   - A database management system already provides transactions with the ACID properties, row-level locking, isolation levels and automatic deadlock detection and rollback. Re-implementing all of that on top of a flat file is difficult and rarely done correctly.
+
+   Justification of the most appropriate solution:
+
+   For two independent applications sharing one file, exclusive file locking combined with the write-to-temporary-and-rename pattern is the right answer.
+
+   - File locking is the only mechanism that both applications can use without being redesigned as threads of one program, since a lock on the file is visible to any process that opens it.
+   - An exclusive lock held across the whole read-modify-write sequence, not merely around the write, is what prevents the lost update. Locking only the write would not help, because both applications would still have read the same stale value.
+   - A readers-writer lock is preferable to a plain mutex when reads are frequent, because it allows several readers to proceed concurrently and only serialises writers.
+   - The atomic rename protects against the second failure mode, a crash or interruption in the middle of writing, which locking alone does not address.
+   - The three requirements of any correct solution to the critical section problem are satisfied: mutual exclusion, because only one writer holds the exclusive lock; progress, because the lock is released as soon as the section ends; and bounded waiting, because the operating system queues waiters in order.
+
+   If the data is more than a simple file, for example if several records must be updated together, the correct answer is to move it into a database and use a transaction, so that the update is atomic, consistent, isolated and durable.
 2. **What is Semaphore? How would you improve performance when using semaphores?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 504 (ET: N/A)]*
 
+
+   Answer: A semaphore is an integer variable, shared among processes or threads, that is used for synchronisation and is accessed only through two atomic operations, traditionally called wait (P, or down) and signal (V, or up). It was introduced by Edsger Dijkstra in 1965.
+
+   The two operations:
+   ```
+   wait(S):                    signal(S):
+       while (S <= 0);             S = S + 1;
+       S = S - 1;
+   ```
+   Both must be executed atomically, that is without interruption, which the operating system guarantees by disabling interrupts briefly or by using a hardware instruction such as test-and-set or compare-and-swap.
+
+   Types:
+   - Binary semaphore, whose value is 0 or 1. It behaves like a lock and provides mutual exclusion. It is close to a mutex, though a mutex additionally has an owner and can only be released by the thread that took it.
+   - Counting semaphore, whose value can be any non-negative integer. It controls access to a resource of which there are several identical instances, for example five printers, and is initialised to that number.
+
+   Use for mutual exclusion:
+   ```c
+   semaphore mutex = 1;
+
+   /* each process */
+   wait(mutex);
+       /* critical section */
+   signal(mutex);
+   ```
+
+   Use for the producer-consumer problem with a bounded buffer:
+   ```c
+   semaphore empty = N;      /* number of free slots */
+   semaphore full  = 0;      /* number of filled slots */
+   semaphore mutex = 1;      /* protects the buffer */
+
+   Producer:                        Consumer:
+     wait(empty);                     wait(full);
+     wait(mutex);                     wait(mutex);
+       add item to buffer;              remove item from buffer;
+     signal(mutex);                   signal(mutex);
+     signal(full);                    signal(empty);
+   ```
+   Note the order: the counting semaphore must be taken before the mutex. Reversing them causes deadlock, because a producer could hold the mutex while waiting for a free slot that only a consumer, which needs the mutex, could create.
+
+   How to improve performance when using semaphores:
+
+   - Avoid busy waiting. The naive implementation given above spins in a while loop, wasting the whole time quantum. The correct implementation blocks the process instead: on wait, if the value is negative, the process is placed on a waiting queue associated with the semaphore and its state is changed to waiting; on signal, one waiting process is moved back to the ready queue. This turns a spinning loop into a scheduling operation.
+
+   - Keep the critical section as short as possible. Only the code that genuinely touches the shared data should be inside it. Reading a file, formatting output or allocating memory should be done outside the lock. The length of the critical section is the single largest determinant of contention.
+
+   - Use fine-grained rather than coarse-grained locking. One semaphore per record, or per bucket of a hash table, allows far more concurrency than one semaphore for the whole structure. The cost is more complex code and a greater risk of deadlock, so a balance is needed.
+
+   - Use a readers-writer lock where reads dominate. Many readers may hold the lock at once, and only writers are serialised. For a data structure that is read a thousand times for every write, this is an enormous improvement over a plain mutex.
+
+   - Prefer a spinlock only for very short critical sections on a multiprocessor. If the expected wait is shorter than the cost of two context switches, spinning is cheaper than blocking. An adaptive mutex, which spins briefly and then blocks, gives the best of both.
+
+   - Reduce the number of lock acquisitions. Batch several operations into one critical section instead of taking and releasing the lock repeatedly in a loop.
+
+   - Avoid holding a lock across a blocking operation. Never perform disk or network input-output while holding a semaphore, because every other process is then blocked for milliseconds.
+
+   - Impose a strict lock ordering when several semaphores are used, so that circular wait, and therefore deadlock, is impossible.
+
+   - Consider lock-free techniques for simple shared variables. An atomic increment with compare-and-swap avoids the semaphore entirely for a counter.
+
+   - Use per-thread or per-core data where possible, and combine the results at the end, so that no lock is needed at all for most of the work. This is the most effective optimisation of all.
+
+   - Avoid the thundering herd: signalling all waiters when only one can proceed wastes work. Wake exactly one where the semantics allow it.
+
+   - Beware of priority inversion, in which a high-priority process waits on a semaphore held by a low-priority one that has itself been preempted. The remedy is priority inheritance, in which the holder temporarily takes the priority of the highest waiter.
+
+   Problems that misuse of semaphores causes: deadlock, if two processes take two semaphores in opposite orders; starvation, if the waiting queue is LIFO rather than FIFO; and violation of mutual exclusion, if a programmer forgets a wait or a signal, which is precisely why higher-level constructs such as monitors and the synchronized keyword were introduced.
 3. **(গ) Process Synchronization এর ক্ষেত্রে Race condition ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
 
+
+   Answer: Race condition (রেস কন্ডিশন) হলো এমন একটি পরিস্থিতি, যেখানে একাধিক প্রসেস বা থ্রেড একই সঙ্গে একই ভাগ করা তথ্য পড়তে ও লিখতে চায়, এবং চূড়ান্ত ফলাফল নির্ভর করে তারা ঠিক কোন ক্রমে চলেছে তার ওপর। এই ক্রম অপারেটিং সিস্টেমের শিডিউলার নির্ধারণ করে, প্রোগ্রাম নয়; তাই একই প্রোগ্রাম একই ইনপুট নিয়ে বিভিন্ন বার চালালে বিভিন্ন ফল দিতে পারে।
+
+   কেন ঘটে: উচ্চস্তরের ভাষায় যে বিবৃতিটি একটিমাত্র লাইন মনে হয়, যন্ত্রস্তরে তা একাধিক নির্দেশে ভাগ হয়ে যায়, এবং যেকোনো দুই নির্দেশের মাঝখানে প্রসেসটিকে থামিয়ে দেওয়া যেতে পারে।
+
+   উদাহরণ: counter++ বিবৃতিটি যন্ত্রস্তরে তিনটি ধাপে হয়:
+   ```
+   register = counter      ; মেমোরি থেকে পড়া
+   register = register + 1 ; বৃদ্ধি করা
+   counter = register      ; মেমোরিতে ফেরত লেখা
+   ```
+
+   দুইটি থ্রেড T1 ও T2 একই counter (প্রাথমিক মান ৫) বাড়াতে চাইলে:
+
+   | সময় | T1 | T2 | counter এর মান |
+   |---|---|---|---|
+   | t1 | register1 = counter (৫ পড়ল) | | ৫ |
+   | t2 | | register2 = counter (৫ পড়ল) | ৫ |
+   | t3 | register1 = ৫ + ১ = ৬ | | ৫ |
+   | t4 | | register2 = ৫ + ১ = ৬ | ৫ |
+   | t5 | counter = ৬ | | ৬ |
+   | t6 | | counter = ৬ | ৬ |
+
+   দুইবার বাড়ানোর পর মান হওয়ার কথা ছিল ৭, কিন্তু হলো ৬। একটি বৃদ্ধি হারিয়ে গেল। একেই বলে lost update, যা race condition এর সবচেয়ে সাধারণ রূপ।
+
+   বাস্তব উদাহরণ: একই ব্যাংক হিসাব থেকে দুটি এটিএম থেকে একই মুহূর্তে টাকা তোলা হলে, উভয় লেনদেন একই প্রারম্ভিক ব্যালেন্স পড়ে ফেলতে পারে এবং ফলে হিসাবে টাকার চেয়ে বেশি তোলা সম্ভব হয়ে যায়।
+
+   বৈশিষ্ট্য:
+   - ফলাফল অনির্ধারিত ও অপুনরাবৃত্তিযোগ্য (non-deterministic), তাই ডিবাগ করা অত্যন্ত কঠিন।
+   - বেশির ভাগ সময় ঠিকঠাক চলে, কেবল নির্দিষ্ট সময়-সমাপতনে ভুল হয়। এ ধরনের ত্রুটিকে Heisenbug বলা হয়, কারণ পর্যবেক্ষণ করতে গেলেই সময়ের বিন্যাস বদলে যায় এবং ত্রুটি অদৃশ্য হয়ে যায়।
+   - বহু-কোর প্রসেসরে প্রকৃত সমান্তরাল নির্বাহের কারণে এর সম্ভাবনা আরও বেশি।
+
+   সমাধান: যে কোড অংশটি ভাগ করা তথ্য ব্যবহার করে, তাকে বলা হয় critical section। নিশ্চিত করতে হবে যে একই সময়ে কেবল একটি প্রসেস সেখানে থাকতে পারে, অর্থাৎ mutual exclusion প্রতিষ্ঠা করতে হবে।
+
+   - Mutex বা binary semaphore:
+   ```c
+   wait(mutex);
+       counter++;        /* critical section */
+   signal(mutex);
+   ```
+   - Monitor: জাভার synchronized কীওয়ার্ড, যা স্বয়ংক্রিয়ভাবে লক নেয় ও ছাড়ে।
+   - Atomic operation: হার্ডওয়্যারের test-and-set বা compare-and-swap নির্দেশ, যা পুরো পড়া-বাড়ানো-লেখা কাজটি অবিভাজ্যভাবে সম্পন্ন করে। জাভায় AtomicInteger এবং C++ এ std::atomic।
+   - Peterson's solution ও Dekker's algorithm: কেবল সফটওয়্যার দিয়ে দুই প্রসেসের জন্য সমাধান, তাত্ত্বিকভাবে গুরুত্বপূর্ণ।
+   - ভাগ করা তথ্য এড়িয়ে চলা: প্রতিটি থ্রেডকে নিজস্ব কপি দিয়ে শেষে ফলাফল একত্র করা। এটিই সবচেয়ে নিরাপদ পদ্ধতি।
+
+   সঠিক সমাধানের তিনটি শর্ত:
+   - Mutual Exclusion: একসঙ্গে একটির বেশি প্রসেস critical section এ থাকতে পারবে না।
+   - Progress: কোনো প্রসেস critical section এ না থাকলে, প্রবেশে ইচ্ছুক প্রসেসগুলোর মধ্য থেকে সিদ্ধান্ত অনির্দিষ্টকাল ঝুলিয়ে রাখা যাবে না।
+   - Bounded Waiting: একটি প্রসেস অনুরোধ করার পর অন্য প্রসেসগুলো কতবার প্রবেশ করতে পারবে তার একটি নির্দিষ্ট সীমা থাকতে হবে, যাতে starvation না হয়।
 4. **(ক) Critical Section Problem কী? ইহা কীভাবে সমাধান করা যায়?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
+
+
+   Answer: Critical Section Problem কী:
+
+   Critical section হলো একটি প্রোগ্রামের সেই অংশ, যেখানে প্রসেস বা থ্রেডটি ভাগ করা সম্পদ ব্যবহার করে — যেমন ভাগ করা ভেরিয়েবল, ফাইল, ডেটাবেজের রেকর্ড বা কোনো যন্ত্র। Critical section problem হলো এমন একটি প্রোটোকল নকশা করার সমস্যা, যাতে নিশ্চিত করা যায় যে একই সময়ে একটির বেশি প্রসেস তার critical section এ থাকতে পারবে না।
+
+   প্রতিটি প্রসেসের সাধারণ কাঠামো:
+   ```c
+   do {
+       entry section;        /* অনুমতি চাওয়া */
+           critical section; /* ভাগ করা সম্পদ ব্যবহার */
+       exit section;         /* অনুমতি ছেড়ে দেওয়া */
+           remainder section;/* বাকি কাজ */
+   } while (true);
+   ```
+
+   সমস্যাটি কেন গুরুত্বপূর্ণ: সুরক্ষা না থাকলে race condition ঘটে। যেমন counter++ যন্ত্রস্তরে তিনটি ধাপে হয় — পড়া, বাড়ানো, লেখা। দুটি থ্রেড একই সঙ্গে ৫ পড়ে, উভয়েই ৬ লিখলে দুইবার বাড়ানোর পরও মান হয় ৬, ৭ নয়। একটি বৃদ্ধি হারিয়ে যায়।
+
+   একটি সঠিক সমাধানের তিনটি আবশ্যিক শর্ত:
+
+   - Mutual Exclusion (পারস্পরিক বর্জন): কোনো প্রসেস তার critical section এ থাকলে অন্য কোনো প্রসেস তার critical section এ ঢুকতে পারবে না।
+
+   - Progress (অগ্রগতি): কোনো প্রসেস critical section এ না থাকলে এবং কিছু প্রসেস ঢুকতে চাইলে, কে ঢুকবে সেই সিদ্ধান্ত কেবল ইচ্ছুক প্রসেসগুলোর মধ্যেই হবে এবং তা অনির্দিষ্টকাল স্থগিত রাখা যাবে না। অর্থাৎ যে প্রসেস ঢুকতেই চায় না, সে অন্যকে আটকাতে পারবে না।
+
+   - Bounded Waiting (সীমিত অপেক্ষা): একটি প্রসেস অনুরোধ করার পর অন্য প্রসেসগুলো সর্বোচ্চ কতবার critical section এ ঢুকতে পারবে, তার একটি নির্দিষ্ট সীমা থাকতে হবে। এটি starvation প্রতিরোধ করে।
+
+   সমাধানের উপায়সমূহ:
+
+   ১. সফটওয়্যারভিত্তিক সমাধান:
+   - Peterson's Solution: দুটি প্রসেসের জন্য, দুটি ভাগ করা ভেরিয়েবল flag[2] ও turn ব্যবহার করে। এটি তিনটি শর্তই পূরণ করে এবং কেবল সফটওয়্যার দিয়ে কাজ করে।
+   ```c
+   /* প্রসেস i এর জন্য */
+   flag[i] = true;
+   turn = j;
+   while (flag[j] && turn == j);   /* অপেক্ষা */
+       critical section;
+   flag[i] = false;
+       remainder section;
+   ```
+   - Dekker's Algorithm: প্রথম সঠিক সফটওয়্যার সমাধান।
+   - সীমাবদ্ধতা: আধুনিক প্রসেসরে নির্দেশ পুনর্বিন্যাস (instruction reordering) হয় বলে এগুলো memory barrier ছাড়া নির্ভরযোগ্য নয়, এবং এতে busy waiting হয়।
+
+   ২. হার্ডওয়্যারভিত্তিক সমাধান:
+   - Interrupt নিষ্ক্রিয় করা: critical section চলাকালে ইন্টারাপ্ট বন্ধ রাখা। একক প্রসেসরে কাজ করে, কিন্তু বহু-প্রসেসরে নয় এবং এটি বিপজ্জনক।
+   - Test-and-Set নির্দেশ: একটি অবিভাজ্য নির্দেশ, যা একই সঙ্গে মান পড়ে ও সেট করে।
+   ```c
+   while (TestAndSet(&lock));     /* লক না পাওয়া পর্যন্ত অপেক্ষা */
+       critical section;
+   lock = false;
+   ```
+   - Compare-and-Swap: আধুনিক প্রসেসরের মূল সিঙ্ক্রোনাইজেশন নির্দেশ, যার ওপর প্রায় সব উচ্চস্তরের লক নির্মিত।
+
+   ৩. অপারেটিং সিস্টেম ও ভাষাভিত্তিক সমাধান:
+   - Mutex lock: acquire() ও release() দিয়ে সরল পারস্পরিক বর্জন।
+   - Semaphore: wait() ও signal() দিয়ে; binary semaphore মিউটেক্সের মতো, counting semaphore একাধিক ইনস্ট্যান্সের সম্পদের জন্য।
+   ```c
+   semaphore mutex = 1;
+   wait(mutex);
+       critical section;
+   signal(mutex);
+   ```
+   - Monitor: একটি উচ্চস্তরের নির্মাণ, যেখানে ভাগ করা তথ্য ও তার ওপর কাজ করা পদ্ধতিগুলো একসঙ্গে আবদ্ধ থাকে এবং একসঙ্গে কেবল একটি প্রসেস ভেতরে থাকতে পারে। জাভার synchronized কীওয়ার্ড এরই বাস্তবায়ন।
+   ```java
+   public synchronized void increment() {
+       counter++;
+   }
+   ```
+   - Condition variable: wait() ও signal() দিয়ে নির্দিষ্ট শর্ত পূরণের অপেক্ষা করা।
+
+   ৪. আরও উন্নত পদ্ধতি:
+   - Readers-writer lock: বহু পাঠক একসঙ্গে ঢুকতে পারে, কিন্তু লেখক একা।
+   - Atomic variable: গণনার মতো সরল কাজে লক ছাড়াই কাজ চালানো, যেমন জাভার AtomicInteger।
+   - ভাগ করা তথ্য সম্পূর্ণ এড়িয়ে চলা: প্রতিটি থ্রেডকে নিজস্ব কপি দেওয়া, যা সবচেয়ে নিরাপদ ও দ্রুততম পদ্ধতি।
+
+   কার্যকারিতা বাড়ানোর নিয়ম: critical section যতটা সম্ভব ছোট রাখা, লক ধরে রেখে ইনপুট-আউটপুট না করা, একাধিক লক ব্যবহার করলে সবসময় একই ক্রমে নেওয়া (যাতে deadlock না হয়), এবং busy waiting এর বদলে ব্লকিং ব্যবহার করা।
 
 ## File Systems & Disk Management (4)
 
 1. **NTFS stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+
+   Answer: NTFS stands for New Technology File System.
+
+   It is the standard file system of the Windows NT family, which includes Windows 2000, XP, Vista, 7, 8, 10 and 11, and all versions of Windows Server. It was introduced in 1993 with Windows NT 3.1, replacing FAT.
+
+   Main features:
+   - Journaling: every change to the file system metadata is recorded in a log before it is applied, so that an interrupted operation can be completed or undone after a crash. This is why NTFS recovers quickly and rarely loses the directory structure.
+   - Security: access control lists give per-user and per-group permissions on every file and folder, with inheritance from parent folders. FAT has no permissions at all.
+   - Large volumes and files: a maximum volume size of 256 TB and a maximum file size limited in practice by the volume, against FAT32's limit of 4 GB per file and 32 GB per volume as formatted by Windows.
+   - Compression, transparently per file or per folder.
+   - Encryption through the Encrypting File System (EFS).
+   - Disk quotas per user.
+   - Sparse files, so that a large mostly empty file occupies little space.
+   - Hard links, symbolic links and junction points.
+   - Shadow copies, allowing previous versions of a file to be restored.
+   - Long file names of up to 255 characters, in Unicode.
+   - Cluster sizes from 512 bytes to 64 KB, chosen at format time.
+   - Bad cluster remapping, done automatically.
+
+   Comparison with the other Windows file systems:
+
+   | Point | FAT32 | NTFS | exFAT |
+   |---|---|---|---|
+   | Maximum file size | 4 GB | Practically unlimited | Practically unlimited |
+   | Maximum volume | 32 GB as formatted by Windows | 256 TB | 128 PB |
+   | Journaling | No | Yes | No |
+   | Permissions | No | Yes | No |
+   | Compression and encryption | No | Yes | No |
+   | Compatibility | Universal | Windows; read-only on macOS without extra software | Wide, and designed for flash media |
+   | Best used for | Small removable media, boot partitions on old systems | Windows system and data drives | Large USB drives and memory cards shared between systems |
+
+   Practical guidance: use NTFS for internal Windows drives, exFAT for large removable media that must work on both Windows and macOS, and FAT32 only where compatibility with very old devices is required.
+
+   Comparable file systems on other operating systems: ext4, XFS and Btrfs on Linux, and APFS on macOS.
 2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
 
+
+   Answer: ইউনিক্স ফাইল সিস্টেমে সবকিছুকেই ফাইল হিসেবে দেখা হয়, এমনকি যন্ত্রপাতি ও প্রসেসকেও। ফাইলগুলো প্রধানত সাতটি ধরনের।
+
+   ১. সাধারণ ফাইল (Regular / Ordinary File):
+   - সবচেয়ে সাধারণ ধরন। এতে টেক্সট, প্রোগ্রাম, ছবি, ভিডিও বা যেকোনো তথ্য থাকতে পারে।
+   - ls -l এ প্রথম অক্ষর: -
+   - উদাহরণ: report.txt, program.c, photo.jpg
+
+   ২. ডিরেক্টরি ফাইল (Directory):
+   - অন্যান্য ফাইল ও ডিরেক্টরির নাম এবং তাদের inode নম্বরের তালিকা ধারণ করে। এটি নিজেও একটি ফাইল।
+   - ls -l এ প্রথম অক্ষর: d
+   - উদাহরণ: /home, /etc, /usr
+
+   ৩. ক্যারেক্টার ডিভাইস ফাইল (Character Special File):
+   - এমন যন্ত্রকে প্রতিনিধিত্ব করে যা একটি একটি করে অক্ষর আদান-প্রদান করে, যেমন কীবোর্ড, মাউস, টার্মিনাল ও প্রিন্টার।
+   - ls -l এ প্রথম অক্ষর: c
+   - উদাহরণ: /dev/tty, /dev/null, /dev/random
+
+   ৪. ব্লক ডিভাইস ফাইল (Block Special File):
+   - এমন যন্ত্রকে প্রতিনিধিত্ব করে যা নির্দিষ্ট আকারের ব্লক ধরে তথ্য আদান-প্রদান করে, যেমন হার্ড ডিস্ক, এসএসডি, সিডি-রম ও পেন ড্রাইভ।
+   - ls -l এ প্রথম অক্ষর: b
+   - উদাহরণ: /dev/sda, /dev/sda1
+
+   ৫. লিংক (Symbolic Link):
+   - অন্য একটি ফাইলের পথ ধারণকারী ছোট ফাইল, যা শর্টকাটের মতো কাজ করে।
+   - ls -l এ প্রথম অক্ষর: l
+   - তৈরি করার কমান্ড: ln -s target linkname
+   - হার্ড লিংকের আলাদা কোনো চিহ্ন নেই, কারণ সেটি একই inode এর দ্বিতীয় নাম মাত্র।
+
+   ৬. নেমড পাইপ বা FIFO (Named Pipe):
+   - দুটি প্রসেসের মধ্যে একমুখী যোগাযোগের জন্য ব্যবহৃত হয়। একটি প্রসেস লেখে, আরেকটি পড়ে।
+   - ls -l এ প্রথম অক্ষর: p
+   - তৈরি করার কমান্ড: mkfifo mypipe
+
+   ৭. সকেট (Socket):
+   - প্রসেসের মধ্যে দ্বিমুখী যোগাযোগের জন্য, এবং নেটওয়ার্ক যোগাযোগেও ব্যবহৃত হয়।
+   - ls -l এ প্রথম অক্ষর: s
+   - উদাহরণ: /var/run/docker.sock
+
+   সারণি:
+
+   | ধরন | চিহ্ন | উদাহরণ |
+   |---|---|---|
+   | সাধারণ ফাইল | - | report.txt |
+   | ডিরেক্টরি | d | /home |
+   | ক্যারেক্টার ডিভাইস | c | /dev/tty |
+   | ব্লক ডিভাইস | b | /dev/sda |
+   | সিম্বলিক লিংক | l | /bin -> /usr/bin |
+   | নেমড পাইপ | p | mypipe |
+   | সকেট | s | /var/run/docker.sock |
+
+   ফাইলের ধরন জানার কমান্ড:
+   ```bash
+   ls -l filename        # প্রথম অক্ষর দেখে
+   file filename         # বিষয়বস্তু বিশ্লেষণ করে
+   stat filename         # বিস্তারিত তথ্য
+   ```
+
+   ইউনিক্স ফাইল সিস্টেমের কাঠামো: একটি ফাইল সিস্টেম চারটি অংশে বিভক্ত — Boot block (বুট লোডার), Super block (ফাইল সিস্টেমের বিবরণ ও মুক্ত ব্লকের তালিকা), Inode list (প্রতিটি ফাইলের মেটাডেটা: অনুমতি, মালিক, আকার, সময় ও ডেটা ব্লকের ঠিকানা) এবং Data blocks (প্রকৃত বিষয়বস্তু)।
+
+   উল্লেখযোগ্য: ফাইলের নাম inode এ রাখা হয় না; নাম থাকে ডিরেক্টরিতে, যা নামকে inode নম্বরের সঙ্গে যুক্ত করে। এ কারণেই একই ফাইলের একাধিক নাম (হার্ড লিংক) থাকতে পারে।
+
+   ফাইল সিস্টেমের প্রকারভেদ (অন্য অর্থে): ext2, ext3, ext4, XFS, Btrfs, ZFS, UFS, NFS (নেটওয়ার্ক ফাইল সিস্টেম), tmpfs (মেমোরিভিত্তিক) এবং procfs ও sysfs (কার্নেলের তথ্য প্রকাশকারী ভার্চুয়াল ফাইল সিস্টেম)।
 3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
 
+
+   Answer:
+
+   'My Documents' কোন ড্রাইভে রাখা হয়:
+
+   উইন্ডোজে 'My Documents' বা 'Documents' ফোল্ডারটি ডিফল্টভাবে সি ড্রাইভে (C:) রাখা হয়, ব্যবহারকারীর প্রোফাইল ফোল্ডারের ভেতরে।
+
+   - সম্পূর্ণ পথ: C:\Users\<username>\Documents
+   - পুরোনো সংস্করণে (Windows XP): C:\Documents and Settings\<username>\My Documents
+
+   কারণ: C: ড্রাইভ হলো সিস্টেম ড্রাইভ, যেখানে উইন্ডোজ ইনস্টল করা থাকে এবং প্রতিটি ব্যবহারকারীর প্রোফাইল সংরক্ষিত হয়।
+
+   গুরুত্বপূর্ণ পরামর্শ: ব্যক্তিগত নথি সি ড্রাইভে রাখা ঝুঁকিপূর্ণ, কারণ উইন্ডোজ পুনরায় ইনস্টল করলে বা সিস্টেম নষ্ট হলে সেগুলো হারিয়ে যেতে পারে। তাই Documents ফোল্ডারটি অন্য ড্রাইভে (যেমন D:) সরিয়ে নেওয়া উত্তম। পদ্ধতি: Documents ফোল্ডারে ডান ক্লিক → Properties → Location → Move → নতুন স্থান নির্বাচন। প্রতিষ্ঠানে এই কাজটি Group Policy এর Folder Redirection দিয়ে কেন্দ্রীয়ভাবে করা হয়, যাতে নথি সার্ভারে থাকে এবং ব্যবহারকারী যেকোনো কম্পিউটার থেকে সেগুলো পান।
+
+   NTFS কী:
+
+   NTFS এর পূর্ণরূপ New Technology File System। এটি উইন্ডোজ এনটি পরিবারের (Windows 2000, XP, Vista, 7, 8, 10, 11 এবং সব সার্ভার সংস্করণ) আদর্শ ফাইল সিস্টেম, যা ১৯৯৩ সালে Windows NT 3.1 এর সঙ্গে চালু হয় এবং FAT এর স্থান নেয়।
+
+   প্রধান বৈশিষ্ট্য:
+   - Journaling: ফাইল সিস্টেমের প্রতিটি পরিবর্তন প্রয়োগের আগে একটি লগে লিখে রাখা হয়, ফলে বিদ্যুৎ চলে গেলে বা সিস্টেম ক্র্যাশ করলেও ফাইল সিস্টেম দ্রুত ও নিরাপদে পুনরুদ্ধার হয়।
+   - নিরাপত্তা: প্রতিটি ফাইল ও ফোল্ডারে ব্যবহারকারী ও গ্রুপভিত্তিক অনুমতি (Access Control List) দেওয়া যায়, যা FAT এ একেবারেই নেই।
+   - বড় ফাইল ও ভলিউম: সর্বোচ্চ ভলিউম ২৫৬ টেরাবাইট এবং ফাইলের আকার কার্যত সীমাহীন। FAT32 এ একটি ফাইল সর্বোচ্চ ৪ গিগাবাইট হতে পারে।
+   - সংকোচন (Compression) ও এনক্রিপশন (EFS) — ফাইল বা ফোল্ডার ভিত্তিতে।
+   - Disk Quota: প্রতিটি ব্যবহারকারীর জন্য সর্বোচ্চ জায়গার সীমা নির্ধারণ।
+   - Shadow Copy: ফাইলের পূর্ববর্তী সংস্করণ পুনরুদ্ধারের সুযোগ।
+   - Hard link, symbolic link ও junction point এর সমর্থন।
+   - Sparse file, যাতে বড় কিন্তু বেশিরভাগ ফাঁকা ফাইল কম জায়গা নেয়।
+   - ২৫৫ অক্ষর পর্যন্ত ইউনিকোড ফাইলনাম।
+   - নষ্ট ক্লাস্টার স্বয়ংক্রিয়ভাবে চিহ্নিত ও এড়িয়ে যাওয়া।
+
+   FAT32 ও exFAT এর সঙ্গে তুলনা:
+
+   | বিষয় | FAT32 | NTFS | exFAT |
+   |---|---|---|---|
+   | সর্বোচ্চ ফাইল আকার | ৪ গিগাবাইট | কার্যত সীমাহীন | কার্যত সীমাহীন |
+   | সর্বোচ্চ ভলিউম | ৩২ গিগাবাইট (উইন্ডোজে ফরম্যাট করলে) | ২৫৬ টেরাবাইট | ১২৮ পেটাবাইট |
+   | Journaling | নেই | আছে | নেই |
+   | অনুমতি ব্যবস্থা | নেই | আছে | নেই |
+   | সামঞ্জস্য | সর্বত্র | মূলত উইন্ডোজ | ব্যাপক, ফ্ল্যাশ মিডিয়ার জন্য |
+   | উপযুক্ত ব্যবহার | পুরোনো ছোট যন্ত্র | উইন্ডোজের সিস্টেম ও ডেটা ড্রাইভ | বড় পেন ড্রাইভ ও মেমোরি কার্ড |
 4. **A file system with 300 GB uses a file descriptor with 8 direct block address, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system.** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
+
+
+   Answer: Given:
+   - 8 direct block addresses
+   - 1 single indirect block address
+   - 1 double indirect block address
+   - Disk block size = 128 bytes
+   - Disk block address size = 8 bytes
+
+   Step 1 - how many addresses fit in one block:
+   - Addresses per block = block size / address size
+   - = 128 / 8
+   - = 16 addresses per block
+
+   Step 2 - blocks reachable through the direct pointers:
+   - Each direct pointer names one data block.
+   - Direct blocks = 8
+
+   Step 3 - blocks reachable through the single indirect pointer:
+   - The single indirect pointer names one block that contains addresses, and that block holds 16 addresses, each naming a data block.
+   - Single indirect blocks = 16
+
+   Step 4 - blocks reachable through the double indirect pointer:
+   - The double indirect pointer names one block of 16 addresses.
+   - Each of those 16 addresses names another block, which itself holds 16 addresses of data blocks.
+   - Double indirect blocks = 16 x 16 = 256
+
+   Step 5 - total number of data blocks:
+   - Total = 8 + 16 + 256
+   - = 280 blocks
+
+   Step 6 - maximum file size:
+   - Maximum file size = total blocks x block size
+   - = 280 x 128 bytes
+   - = 35,840 bytes
+
+   Step 7 - express in convenient units:
+   - 35,840 / 1024 = 35 KB
+
+   Final answer: the maximum possible file size is 35,840 bytes, that is 35 KB.
+
+   Summary table:
+
+   | Pointer type | Number of pointers | Data blocks reached | Bytes |
+   |---|---|---|---|
+   | Direct | 8 | 8 | 1,024 |
+   | Single indirect | 1 | 16 | 2,048 |
+   | Double indirect | 1 | 256 | 32,768 |
+   | Total | | 280 | 35,840 = 35 KB |
+
+   Points worth stating:
+   - The 300 GB size of the file system given in the question is a distractor. The maximum file size depends only on the structure of the file descriptor (the inode), not on the size of the volume.
+   - The double indirect pointer contributes by far the most, 256 of the 280 blocks, which shows why indirection is used at all.
+   - If a triple indirect pointer were added, it would contribute 16 x 16 x 16 = 4,096 further blocks, raising the total to 4,376 blocks, that is 560,128 bytes or about 547 KB.
+   - The general formula, with d direct pointers and k = block size / address size addresses per block, for an inode with single, double and triple indirection, is:
+     Maximum file size = (d + k + k^2 + k^3) x block size
+   - Real systems use much larger blocks. With a 4 KB block and 4-byte addresses, k = 1024, and the same structure would allow (12 + 1024 + 1024^2 + 1024^3) x 4 KB, which is about 4 TB. This is the classic Unix inode arrangement.
+   - The design is deliberately asymmetric: small files, which are the great majority, are reached entirely through the direct pointers with no extra disk access, while large files remain possible through indirection at the cost of one or two additional reads.
