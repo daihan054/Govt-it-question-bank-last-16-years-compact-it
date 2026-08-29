@@ -2454,6 +2454,60 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Huffman encoding draw huffman tree. Given word “CONNECTION”.** *[NPCBL Executive Trainee (IT) 2022 compact it 645 (ET: BUET)]*
 
+   Answer: Huffman coding is a greedy lossless compression method that gives shorter binary codes to more frequent characters and longer codes to rarer ones.
+
+   Step 1: count the frequency of each character in CONNECTION, which has 10 characters.
+   - C = 2
+   - O = 2
+   - N = 3
+   - E = 1
+   - T = 1
+   - I = 1
+   - Total = 2 + 2 + 3 + 1 + 1 + 1 = 10
+
+   Step 2: build the tree by repeatedly combining the two smallest frequencies.
+   - Nodes available: E(1), I(1), T(1), C(2), O(2), N(3)
+   - Combine E(1) and I(1) into node X(2). Now: T(1), C(2), O(2), X(2), N(3)
+   - Combine T(1) and C(2) into node Y(3). Now: O(2), X(2), N(3), Y(3)
+   - Combine O(2) and X(2) into node Z(4). Now: N(3), Y(3), Z(4)
+   - Combine N(3) and Y(3) into node W(6). Now: Z(4), W(6)
+   - Combine Z(4) and W(6) into the root R(10). The tree is complete.
+
+   Step 3: assign 0 to every left branch and 1 to every right branch.
+
+   ```mermaid
+   graph TD
+       R["Root 10"] --> Z["Z 4"]
+       R --> W["W 6"]
+       Z --> O(("O 2"))
+       Z --> X["X 2"]
+       X --> E(("E 1"))
+       X --> I(("I 1"))
+       W --> N(("N 3"))
+       W --> Y["Y 3"]
+       Y --> T(("T 1"))
+       Y --> C(("C 2"))
+   ```
+
+   Step 4: read the codes from the root to each leaf.
+
+   | Character | Frequency | Code | Code length | Bits used |
+   |---|---|---|---|---|
+   | N | 3 | 10 | 2 | 6 |
+   | O | 2 | 01 | 2 | 4 |
+   | C | 2 | 111 | 3 | 6 |
+   | E | 1 | 000 | 3 | 3 |
+   | I | 1 | 001 | 3 | 3 |
+   | T | 1 | 110 | 3 | 3 |
+
+   Step 5: calculate the compression.
+   - Total bits with Huffman coding = 6 + 4 + 6 + 3 + 3 + 3 = 25 bits
+   - With a fixed length code, 6 distinct characters need 3 bits each, so 10 × 3 = 30 bits
+   - Saving = 30 − 25 = 5 bits, that is about 16.7 percent
+
+   - No code is a prefix of another code, which is the prefix property that makes decoding unambiguous.
+   - Time complexity of building the tree is O(n log n) using a min heap.
+
 ## NP-Completeness & Complexity Reduction (1)
 
 1. **A reduces to B Polynomial time. Which is better and why?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*

@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 24/239 subtopics · 163/2673 answers**
+**Overall: 25/239 subtopics · 164/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -19,7 +19,7 @@ Commit unit: one `##` subtopic.
 - [x] Association Rule Learning (Market Basket Analysis) (1)
 - [x] Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
-## algorithm.md — 12/14 sections, 111/113 answers
+## algorithm.md — 13/14 sections, 112/113 answers
 
 - [x] Sorting Algorithms & Complexity (27)
 - [x] Graph Traversal Algorithms (BFS & DFS) (17)
@@ -33,7 +33,7 @@ Commit unit: one `##` subtopic.
 - [x] Heap & Priority Queue (2)
 - [x] Graph Representation (Adjacency Matrix vs List) (2)
 - [x] Divide and Conquer & Matrix Multiplication (1)
-- [ ] Huffman Coding & Data Compression (1)
+- [x] Huffman Coding & Data Compression (1)
 - [ ] NP-Completeness & Complexity Reduction (1)
 
 ## bangla.md — 0/6 sections, 0/123 answers
