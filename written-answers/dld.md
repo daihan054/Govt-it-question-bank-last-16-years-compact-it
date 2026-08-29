@@ -3980,29 +3980,289 @@
 
 1. **(a) State De-Morgan’s law with an appropriate example.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
+
+   Answer: De Morgan's theorem gives the rule for complementing a whole AND or OR expression. It is the bridge that lets any circuit be built from NAND gates only or NOR gates only. (A' means complement of A.)
+
+   Law 1 (break the OR):
+   - (A + B)' = A' . B'
+   - The complement of a sum equals the product of the complements.
+
+   Law 2 (break the AND):
+   - (A . B)' = A' + B'
+   - The complement of a product equals the sum of the complements.
+
+   Memory rule: break the bar, change the sign (OR becomes AND, AND becomes OR).
+
+   Proof of Law 1 by truth table:
+
+   | A | B | A+B | (A+B)' | A' | B' | A'.B' |
+   |---|---|-----|--------|----|----|-------|
+   | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+   | 0 | 1 | 1 | 0 | 1 | 0 | 0 |
+   | 1 | 0 | 1 | 0 | 0 | 1 | 0 |
+   | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+
+   Columns (A+B)' and A'.B' are identical, so the law holds. Law 2 is proved the same way.
+
+   Example: a motor runs only when neither the stop switch S nor the fault flag F is active, that is M = (S + F)'. By De Morgan this equals S'.F', so instead of one OR followed by a NOT, the circuit is built as two NOT gates feeding one AND gate. Both circuits give the same output but the second one uses gates already available on the board.
+
+   Extension to more variables: (A + B + C)' = A'.B'.C' and (A.B.C)' = A' + B' + C'.
 2. **AB + (A(\overline{BC}))(AC + \overline{B}C)** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
 
+
+   Answer: Expression: AB + (A.(BC)').(AC + B'C)
+
+   Step 1 - expand (BC)' by De Morgan: (BC)' = B' + C'
+   So the second term = A(B' + C')(AC + B'C)
+
+   Step 2 - multiply A into the bracket: (AB' + AC')(AC + B'C)
+
+   Step 3 - multiply the two brackets term by term:
+   - AB' . AC = AB'C  (A.A = A)
+   - AB' . B'C = AB'C  (B'.B' = B')
+   - AC' . AC = 0  (C.C' = 0)
+   - AC' . B'C = 0  (C.C' = 0)
+
+   So the second term reduces to AB'C.
+
+   Step 4 - put it back: Y = AB + AB'C
+
+   Step 5 - factor A: Y = A(B + B'C)
+   By the absorption identity B + B'C = B + C:
+   Y = A(B + C)
+
+   Final answer: Y = AB + AC = A(B + C)
+
+   Check: the function is 1 only for ABC = 101, 110, 111, which matches A(B + C).
 3. **Simplify Y = A\bar{B} + \overline{(\bar{A} + B)}C in digital logic design.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 671 (ET: N/A)]*
 
+
+   Answer: Y = AB' + (A' + B)'C
+
+   Step 1 - apply De Morgan to the complemented bracket:
+   (A' + B)' = (A')' . B' = A.B'
+
+   Step 2 - substitute:
+   Y = AB' + AB'C
+
+   Step 3 - factor AB':
+   Y = AB'(1 + C)
+
+   Step 4 - since 1 + C = 1:
+   Y = AB'
+
+   Final answer: Y = AB'
+
+   The circuit therefore needs only one NOT gate and one AND gate; the input C is redundant.
 4. **X+\bar{X}Y = ?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+
+   Answer: X + X'Y = X + Y  (this is the absorption or redundancy law).
+
+   Proof by algebra:
+   - X + X'Y
+   - = (X + X')(X + Y)   [distributive law: X + AB = (X + A)(X + B)]
+   - = 1 . (X + Y)        [X + X' = 1]
+   - = X + Y
+
+   Proof by truth table:
+
+   | X | Y | X'Y | X + X'Y | X + Y |
+   |---|---|-----|---------|-------|
+   | 0 | 0 | 0 | 0 | 0 |
+   | 0 | 1 | 1 | 1 | 1 |
+   | 1 | 0 | 0 | 1 | 1 |
+   | 1 | 1 | 0 | 1 | 1 |
+
+   The last two columns match, so X + X'Y = X + Y.
+
+   Reasoning in words: if X = 1 the output is already 1; if X = 0 the output follows Y. So the output is 1 whenever X or Y is 1.
+
+   Dual form: X(X' + Y) = XY.
 5. **(ক) নিম্নলিখিত Boolean Function টি সংক্ষিপ্ত আকারে লিখুন: F(A, B, C, D) = \bar{A}\,\bar{B}\bar{C} + \bar{B}C\bar{D} + \bar{A}\bar{B}C\bar{D} + A\bar{B}\bar{C}** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 773 (ET: N/A)]*
 
+
+   Answer: F(A, B, C, D) = A'B'C' + B'CD' + A'B'CD' + AB'C'
+
+   Step 1 - remove the redundant term. A'B'CD' is fully contained in B'CD' (absorption), so it is dropped:
+   F = A'B'C' + B'CD' + AB'C'
+
+   Step 2 - combine the first and third terms (they differ only in A):
+   A'B'C' + AB'C' = B'C'(A' + A) = B'C'
+
+   So F = B'C' + B'CD'
+
+   Step 3 - factor B':
+   F = B'(C' + CD')
+
+   Step 4 - apply the absorption identity C' + CD' = C' + D':
+   F = B'(C' + D')
+
+   Final answer: F = B'C' + B'D' = B'(C' + D')
+
+   Verification by minterms: the original expression is 1 for ABCD = 0000, 0001, 0010, 1000, 1001, 1010, and B'(C' + D') is 1 for exactly the same six combinations.
 6. **(b) Use Algebraic manipulation to convert the following equation to sum-of-product form: y(z + \bar{w}) + x(\bar{z} + \bar{y})\,\bar{w} + (zw)(\overline{xy})** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
 
+
+   Answer: y(z + w') + x(z' + y')w' + (zw)(xy)'
+
+   Sum-of-product (SOP) form means a plain OR of AND terms with no bars over a bracket, so every bracket must be multiplied out and every complemented group broken by De Morgan.
+
+   Step 1 - expand the first term:
+   y(z + w') = yz + yw'
+
+   Step 2 - expand the second term:
+   x(z' + y')w' = xz'w' + xy'w'
+
+   Step 3 - break the complemented product in the third term by De Morgan:
+   (xy)' = x' + y'
+   so (zw)(xy)' = zw(x' + y') = x'zw + y'zw
+
+   Step 4 - collect all the product terms:
+   Y = yz + yw' + xw'z' + xw'y' + x'zw + y'zw
+
+   Final answer (SOP form): Y = yz + yw' + xy'w' + xz'w' + x'zw + y'zw
+
+   Every term is now a simple AND of literals and the terms are ORed together, which is the required sum-of-product form.
 7. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
 
+
+   Answer: Y = ABC'D + ABCD + A'BD
+
+   Step 1 - the first two terms differ only in C, so combine them:
+   ABC'D + ABCD = ABD(C' + C) = ABD.1 = ABD
+
+   Step 2 - now Y = ABD + A'BD
+
+   Step 3 - these two differ only in A, so combine again:
+   ABD + A'BD = BD(A + A') = BD.1 = BD
+
+   Final answer: Y = BD
+
+   The output depends only on B and D; the variables A and C are redundant, so one 2-input AND gate is enough.
 8. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 876 (ET: BUET)]*
 
+
+   Answer: Y = ABC'D + A'B'C'D + ABCD + A'B'CD + ABCD' + A'B'CD'
+
+   Step 1 - group the terms in pairs that share the same C, D part:
+   - (ABC'D + A'B'C'D) = C'D(AB + A'B')
+   - (ABCD + A'B'CD) = CD(AB + A'B')
+   - (ABCD' + A'B'CD') = CD'(AB + A'B')
+
+   Step 2 - take the common factor (AB + A'B') outside:
+   Y = (AB + A'B')(C'D + CD + CD')
+
+   Step 3 - simplify the second bracket:
+   - CD + CD' = C(D + D') = C
+   - so C'D + C = C + D  (absorption: C + C'D = C + D)
+
+   Step 4 - note that AB + A'B' is the XNOR of A and B, written (A XOR B)'.
+
+   Final answer: Y = (AB + A'B')(C + D) = (A XOR B)' . (C + D)
+
+   In words: the output is 1 when A and B are equal AND at least one of C, D is 1. The circuit needs one XNOR gate, one OR gate and one AND gate.
 9. **(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
 
+
+   Answer: Y = x'y'z + x'yz + xy'
+
+   Step 1 - the first two terms differ only in y, so combine them:
+   x'y'z + x'yz = x'z(y' + y) = x'z.1 = x'z
+
+   Step 2 - substitute back:
+   Y = x'z + xy'
+
+   Step 3 - no further reduction is possible: the two remaining terms share no variable in the same form (one has x', the other x), and neither is contained in the other.
+
+   Final answer: Y = x'z + xy'
+
+   Verification: the original expression is 1 for xyz = 001, 011, 100, 101, and x'z + xy' is 1 for exactly the same four combinations.
 10. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 890-891 (ET: N/A)]*
 
+
+   Answer: Y = (x + y + xy)(x + z)
+
+   Step 1 - simplify the first bracket by absorption (x + xy = x):
+   x + y + xy = (x + xy) + y = x + y
+
+   So Y = (x + y)(x + z)
+
+   Step 2 - apply the distributive law x + AB = (x + A)(x + B) in reverse:
+   (x + y)(x + z) = x + yz
+
+   Step 3 - the same result by direct multiplication:
+   - (x + y)(x + z) = xx + xz + xy + yz
+   - = x + xz + xy + yz   (xx = x)
+   - = x(1 + z + y) + yz  = x.1 + yz
+   - = x + yz
+
+   Final answer: Y = x + yz
+
+   The circuit reduces to one AND gate (y and z) followed by one OR gate with x.
 11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 
+
+    Answer: Y = ABC'D + A'BD + ABCD
+
+   Minimum literal form means the expression with the fewest total literals (variable appearances).
+
+   Step 1 - combine the two terms that differ only in C:
+   ABC'D + ABCD = ABD(C' + C) = ABD
+
+   Step 2 - now Y = ABD + A'BD
+
+   Step 3 - combine the two terms that differ only in A:
+   ABD + A'BD = BD(A + A') = BD
+
+   Final answer: Y = BD (2 literals, reduced from 11 literals)
+
+   The output is HIGH only when B and D are both HIGH; A and C have no effect on the result.
 12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
 
+
+    Answer: Y = ABCD + A'BD + ABC'D
+
+   Step 1 - combine the terms that differ only in C:
+   ABCD + ABC'D = ABD(C + C') = ABD
+
+   Step 2 - now Y = ABD + A'BD
+
+   Step 3 - combine the terms that differ only in A:
+   ABD + A'BD = BD(A + A') = BD
+
+   Final answer: Y = BD
+
+   Verification: the original expression is 1 for ABCD = 0101, 0111, 1101, 1111, which is exactly the set where B = 1 and D = 1.
 13. **De-Morgans Law গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
+
+
+   Answer: De Morgan's theorem gives the rule for complementing a whole AND or OR expression. It is the bridge that lets any circuit be built from NAND gates only or NOR gates only. (A' means complement of A.)
+
+   Law 1 (break the OR):
+   - (A + B)' = A' . B'
+   - The complement of a sum equals the product of the complements.
+
+   Law 2 (break the AND):
+   - (A . B)' = A' + B'
+   - The complement of a product equals the sum of the complements.
+
+   Memory rule: break the bar, change the sign (OR becomes AND, AND becomes OR).
+
+   Proof of Law 1 by truth table:
+
+   | A | B | A+B | (A+B)' | A' | B' | A'.B' |
+   |---|---|-----|--------|----|----|-------|
+   | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+   | 0 | 1 | 1 | 0 | 1 | 0 | 0 |
+   | 1 | 0 | 1 | 0 | 0 | 1 | 0 |
+   | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+
+   Columns (A+B)' and A'.B' are identical, so the law holds. Law 2 is proved the same way.
+
+   Example: a motor runs only when neither the stop switch S nor the fault flag F is active, that is M = (S + F)'. By De Morgan this equals S'.F', so instead of one OR followed by a NOT, the circuit is built as two NOT gates feeding one AND gate. Both circuits give the same output but the second one uses gates already available on the board.
+
+   Extension to more variables: (A + B + C)' = A'.B'.C' and (A.B.C)' = A' + B' + C'.
 
 ## Sequential Circuits (Latches & Flip-Flops) (9)
 
