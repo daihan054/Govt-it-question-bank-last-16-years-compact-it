@@ -1144,39 +1144,261 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+
+   Answer:
+
+   | Protocol | Full form | Port |
+   |---|---|---|
+   | SSH | Secure Shell | 22 (TCP) |
+   | FTP | File Transfer Protocol | 21 control, 20 data (TCP) |
+   | SMTP | Simple Mail Transfer Protocol | 25 (TCP) |
+   | DNS | Domain Name System | 53 (both TCP and UDP) |
+   | IMAP | Internet Message Access Protocol | 143 (TCP), 993 for IMAPS |
 2. **What is the port number used by DNS?** *[BBA Assistant Programmer 12.07.2025 compact it 1432 (ET: BUET)], [BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)], [BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: DNS uses port number 53.
+
+   - It uses UDP port 53 for ordinary queries and responses, because UDP is fast and the messages are small.
+   - It uses TCP port 53 when the response is larger than 512 bytes and for zone transfers between DNS servers.
+   - This is why DNS is the standard example of a protocol that uses both TCP and UDP on the same port number.
 3. **HTTPS এর পোর্ট নাম্বার কত?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: HTTPS uses port number 443.
+
+   - HTTP uses port 80 and HTTPS uses port 443 over TCP.
+   - HTTPS is HTTP running inside a TLS encrypted session, which provides confidentiality, integrity and server authentication.
 4. **Write the port address of the following applications of data communications. (i) HTTP; (ii) HTTPS; (iii) FTP; (iv) SMTP; (v) POP** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 671 (ET: N/A)]*
 
+
+   Answer:
+
+   | Application | Port |
+   |---|---|
+   | HTTP | 80 (TCP) |
+   | HTTPS | 443 (TCP) |
+   | FTP | 21 control, 20 data (TCP) |
+   | SMTP | 25 (TCP), also 587 for submission |
+   | Telnet | 23 (TCP) |
+   | DNS | 53 (TCP and UDP) |
+   | POP3 | 110 (TCP) |
+   | IMAP | 143 (TCP) |
+   | DHCP | 67 server, 68 client (UDP) |
+   | SNMP | 161, and 162 for traps (UDP) |
 5. **Describe TCP/IP protocols and its ports.** *[BDCCL Assistant Engineer (Network) 2022 compact it 742 (ET: N/A)]*
 
+
+   Answer: The TCP/IP protocol suite is the four layer model on which the Internet runs.
+
+   Application layer:
+   - Provides services directly to the user and includes HTTP (80), HTTPS (443), FTP (21 and 20), SMTP (25), POP3 (110), IMAP (143), DNS (53), DHCP (67 and 68), SNMP (161), Telnet (23) and SSH (22).
+
+   Transport layer:
+   - TCP is connection oriented, reliable and ordered, using a three way handshake, sequence numbers, acknowledgements and flow control. It suits file transfer, email and web browsing.
+   - UDP is connectionless and unreliable but has very low overhead, so it suits DNS queries, video streaming, VoIP and online gaming.
+   - Both identify the application using a 16 bit port number, so 65,536 ports exist per protocol.
+
+   Internet layer:
+   - IP provides logical addressing and routing. Supporting protocols are ICMP for error reporting and ping, ARP for address resolution, and IGMP for multicast group management.
+
+   Network access layer:
+   - Handles the physical transmission and framing, for example Ethernet, Wi-Fi and PPP.
+
+   - Port ranges: 0 to 1023 are well known, 1024 to 49151 are registered, and 49152 to 65535 are dynamic or private ports.
 6. **A server has port number 1223. A user is requesting the server (www.example.com) but it is showing server is not reached. How can you solve this?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+
+   Answer: The problem is that port 1223 is not the port a web browser uses by default.
+
+   Reason:
+   - A browser requesting `www.example.com` automatically connects to port 80 for HTTP or port 443 for HTTPS.
+   - If the web service is actually listening on port 1223, the browser's request to port 80 finds nothing, so the connection is refused and the page does not load.
+
+   Solutions:
+   - Access the server by writing the port explicitly in the URL, for example `http://www.example.com:1223`.
+   - Or configure the web server to listen on the standard port 80 or 443 instead.
+   - Or put a reverse proxy in front, which listens on port 80 and forwards to 1223 internally.
+   - Or configure port forwarding on the router so that traffic arriving on port 80 is redirected to 1223.
+
+   Other points to check:
+   - The firewall must allow inbound traffic on port 1223.
+   - The DNS record for the domain must resolve to the correct IP address, which can be checked with `nslookup` or `ping`.
+   - `telnet www.example.com 1223` confirms whether the port is actually reachable and open.
 
 ## Switching Techniques (Circuit vs Packet Switching) (5)
 
 1. **Why is packet switching more suitable for internet communication?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer: Packet switching suits Internet communication because Internet traffic is bursty and the network must serve a very large number of users on shared links.
+
+   - Efficient use of bandwidth: a link is occupied only when a packet is actually being sent, so many users share the same line through statistical multiplexing. Circuit switching would hold a line idle during the pauses in a web session.
+   - No setup delay: a packet can be sent immediately, whereas circuit switching must first establish a path end to end.
+   - Fault tolerance: if a router or link fails, later packets are simply routed along another path, so the session survives. In circuit switching the whole connection breaks.
+   - Scalability: millions of simultaneous flows can share the backbone, since no resources are reserved per flow.
+   - Cost: fewer physical resources are needed for the same number of users.
+   - It also fits the store and forward model, allowing error checking at each hop.
+
+   - The cost of this flexibility is variable delay and possible out of order arrival, which TCP handles at the transport layer.
 2. **Difference between circuit switching and packet switching. Identify which of the two is predominantly used in Internet communication and justify why?** *[BUET Assistant Programmer 21.06.2025 compact it 1435 (ET: BUET)]*
 
+
+   Answer:
+
+   | Point | Circuit Switching | Packet Switching |
+   |---|---|---|
+   | Path | A dedicated physical path is set up before data flows | No dedicated path, each packet is routed independently |
+   | Setup | Connection setup phase is required | No setup needed |
+   | Bandwidth | Reserved for the whole session, wasted when idle | Shared, used only when data is actually sent |
+   | Efficiency | Low for bursty data | High, links are statistically multiplexed |
+   | Delay | Fixed after setup, so no jitter | Variable, packets may face queuing delay |
+   | Reliability on failure | The whole call drops if a link fails | Packets simply take another route |
+   | Order of arrival | Always in order | May arrive out of order and need reordering |
+   | Example | Traditional telephone network | The Internet |
+
+   - Packet switching is predominantly used in Internet communication, because Internet traffic is bursty and packet switching uses the shared bandwidth far more efficiently.
 3. **(c) Compare circuit switching and packet switching.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Circuit Switching | Packet Switching |
+   |---|---|---|
+   | Path | A dedicated physical path is set up before data flows | No dedicated path, each packet is routed independently |
+   | Setup | Connection setup phase is required | No setup needed |
+   | Bandwidth | Reserved for the whole session, wasted when idle | Shared, used only when data is actually sent |
+   | Efficiency | Low for bursty data | High, links are statistically multiplexed |
+   | Delay | Fixed after setup, so no jitter | Variable, packets may face queuing delay |
+   | Reliability on failure | The whole call drops if a link fails | Packets simply take another route |
+   | Order of arrival | Always in order | May arrive out of order and need reordering |
+   | Example | Traditional telephone network | The Internet |
 4. **Do you prefer packet switching compared to circuit switching in communication network? If Yes, why? How does packet switching work step by step? What applications use packet switching?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 536 (ET: MIST)]*
 
+
+   Answer: Yes, packet switching is preferred for a data communication network.
+
+   Reasons:
+   - Data traffic is bursty, so a reserved circuit would stay idle most of the time and waste bandwidth.
+   - Many users can share the same link through statistical multiplexing, which lowers cost.
+   - There is no connection setup delay before sending.
+   - If a link fails, packets are rerouted automatically, so the network is resilient.
+
+   How packet switching works:
+   - The message is divided into small units called packets, each carrying a header with the source and destination address and a sequence number.
+   - Each packet is forwarded independently, hop by hop, using the routing table at every router. This is the store and forward principle.
+   - Because packets may take different routes, they can arrive out of order or with different delays.
+   - The destination uses the sequence numbers to reorder the packets and reassemble the original message, and requests retransmission of anything missing.
+
+   - Two modes exist: datagram, where every packet is routed independently as in IP, and virtual circuit, where a logical path is fixed first as in Frame Relay and ATM.
 5. **Why is packet suiting suitable for digital data transmission?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
+
+
+   Answer: Packet switching suits digital data transmission for the following reasons.
+
+   - Digital data is bursty rather than continuous, so reserving a fixed circuit would leave the line idle for long periods.
+   - Bandwidth is shared dynamically, so the same physical link serves many users, which raises utilisation and lowers cost.
+   - Store and forward at each node allows error checking on every hop, and a corrupted packet can be retransmitted alone instead of the whole message.
+   - Different packets can take different routes, so congestion and link failure are handled automatically.
+   - Speed and code conversion is possible, since sender and receiver need not operate at the same data rate.
+   - Priority can be given to important packets, which is the basis of quality of service.
 
 ## WAN Technologies (SONET/SDH, ATM, WDM) (5)
 
 1. **White short notes on: (i) SONET/SDH; (ii) IP telephony; (iii) WDM technology; (iv) ATM network** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   (i) SONET/SDH
+   - SONET is the Synchronous Optical Network standard used in North America and SDH is the equivalent Synchronous Digital Hierarchy used elsewhere.
+   - They carry multiple digital streams over optical fibre using synchronous time division multiplexing.
+   - The base rate is STS-1 at 51.84 Mbps, and higher rates are exact multiples, for example OC-3 at 155.52 Mbps and OC-48 at 2.5 Gbps.
+   - Ring topology with automatic protection switching gives recovery within 50 ms.
+
+   (ii) IP telephony
+   - Also called VoIP, it carries voice as IP packets over a data network instead of over a dedicated telephone circuit.
+   - The voice is digitised, compressed by a codec such as G.729, packetised and sent using RTP over UDP.
+   - Signalling is handled by SIP or H.323.
+   - Advantages are much lower call cost and integration with data services; the challenge is maintaining quality of service.
+
+   (iii) WDM technology
+   - Wavelength Division Multiplexing sends several optical signals on one fibre by giving each a different wavelength, that is a different colour of light.
+   - CWDM uses a few widely spaced channels, while DWDM packs 40 to 160 channels closely and is used in long haul backbones.
+   - It multiplies the capacity of an existing fibre without laying new cable.
+
+   (iv) ATM network
+   - Asynchronous Transfer Mode is a connection oriented, cell based switching technology.
+   - It uses a fixed cell of 53 bytes, made of a 5 byte header and 48 byte payload, which makes hardware switching fast and predictable.
+   - It supports guaranteed quality of service classes such as CBR, VBR and ABR, so voice, video and data can share one network.
+   - It has largely been replaced by IP over Ethernet and MPLS.
 2. **(c) Explain IPTV and VOIP.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
 
+
+   Answer:
+
+   IPTV, Internet Protocol Television:
+   - Television content delivered over an IP network instead of by terrestrial, satellite or cable broadcast.
+   - The video is encoded, compressed and streamed as IP packets, usually over a managed network rather than the open Internet.
+   - Three main services: live television using multicast, video on demand using unicast, and time shifted television such as catch up TV.
+   - Advantages: interactivity, personalised content, and use of the same infrastructure as Internet and telephone in a triple play package.
+
+   VoIP, Voice over Internet Protocol:
+   - Voice conversation carried as IP packets over a data network.
+   - Steps: the analogue voice is sampled and digitised, compressed by a codec, packetised, and carried by RTP over UDP; SIP handles call setup and teardown.
+   - Advantages: very low call cost especially for international calls, and easy integration with video and messaging.
+   - Challenges: it needs quality of service control, because delay above 150 ms, jitter and packet loss noticeably degrade the call.
 3. **Write the full form of the given technologies CX, IGW and IIG. Write feature of there technologies.** *[BTRC Assistant Director (Technical) 2021 compact it 806 (ET: IBA)]*
 
+
+   Answer:
+
+   Full forms:
+   - CX — Carrier Exchange
+   - IGW — International Gateway
+   - IIG — International Internet Gateway
+
+   Features:
+   - IGW, International Gateway: it is the licensed gateway through which all international voice calls enter and leave the country. It handles call routing, billing and lawful interception, and connects national operators to foreign carriers.
+   - IIG, International Internet Gateway: it is the gateway that carries international Internet data traffic. It connects the country's ISPs to the global Internet through submarine cable or terrestrial links, and provides bandwidth to ISPs.
+   - CX, Carrier Exchange: it sits between the IGW operators and the mobile or fixed line operators, switching and routing calls between them so that every operator does not need a direct link with every IGW.
+
+   - Together these form the licensed layered structure of international telecommunication in Bangladesh, regulated by BTRC. <!-- verify -->
 4. **TSCM এর কাজ কী? VoIP পরিচালনায় কী কী সরঞ্জামের প্রয়োজন হয়?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
 
+
+   Answer:
+
+   Work of TSCM:
+   - TSCM stands for Technical Surveillance Counter Measures.
+   - It is the process of detecting and neutralising hidden eavesdropping devices such as bugs, hidden microphones, hidden cameras and unauthorised wiretaps.
+   - The work includes physical inspection of the premises, radio frequency spectrum analysis to find hidden transmitters, checking telephone and network lines for taps, and thermal or non-linear junction detection to find hidden electronics.
+   - It is used to protect sensitive meeting rooms in government offices, banks and corporate houses. <!-- verify -->
+
+   Equipment needed to run VoIP:
+   - Broadband Internet connection with sufficient and stable bandwidth.
+   - IP phone, or an ordinary analogue phone with an ATA (Analogue Telephone Adapter), or a softphone application on a computer or mobile.
+   - Router and switch with quality of service support so that voice packets get priority.
+   - VoIP gateway to connect the IP network with the traditional PSTN.
+   - IP PBX or a SIP server to handle call setup, routing and extensions.
+   - Headset or microphone, and an uninterrupted power supply since IP phones do not draw power from the telephone line.
 5. **Write down the difference between IPoE and PPPoE.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 839-840 (ET: N/A)]*
+
+
+   Answer:
+
+   | Point | IPoE | PPPoE |
+   |---|---|---|
+   | Full form | Internet Protocol over Ethernet | Point to Point Protocol over Ethernet |
+   | Authentication | No username or password; the device is identified by MAC address or option 82 | Username and password required at every connection |
+   | IP assignment | Through DHCP | Negotiated during the PPP session |
+   | Overhead | Lower, no extra PPP header | Higher, 8 bytes of PPP overhead so the usable MTU falls to 1492 |
+   | Session concept | Sessionless, always on | Session based, established and torn down |
+   | Configuration effort | Simpler for the user, plug and play | The user or router must store credentials |
+   | Accounting | Harder, based on IP or MAC | Easy, per session accounting per subscriber |
+   | Typical use | Modern fibre and IPTV deployments | Traditional DSL broadband |
+
+   - PPPoE is preferred where per subscriber authentication and billing matter, while IPoE is simpler and more efficient for managed fibre networks.
 
 ## Pulse Code Modulation (PCM) & Signal Processing (4)
 
