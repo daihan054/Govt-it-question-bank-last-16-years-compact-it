@@ -194,12 +194,11 @@
    - The corresponding obligations on the provider are strong tenant isolation, protection against the noisy neighbour effect through quotas and throttling, and clear data segregation guarantees in the service level agreement.
 8. **(ক) Cloud Computing এর সার্ভিসগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
+   Answer: The three main service models of cloud computing:
 
-   Answer: Cloud Computing-er tinti prodhan service model:
-
-   - SaaS, Software as a Service: sompurno toiri software Internet-er madhome byabohar kora jay. Byabaharkari kichu install ba maintain kore na, shudhu nijer data ar setting-i dekhe. Udahoron: Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom.
-   - PaaS, Platform as a Service: operating system, runtime, database ar development tool shoho ekti toiri platform deoa hoy, jekhane developer shudhu nijer code deploy kore. Udahoron: Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service.
-   - IaaS, Infrastructure as a Service: virtual machine, storage ar network — mane kancha infrastructure vara deoa hoy. Grahok nije OS theke shuru kore shob kichu boshay ar niyontron kore. Udahoron: AWS EC2, Google Compute Engine, Azure VM, DigitalOcean.
+   - SaaS, Software as a Service: a complete ready made application used over the Internet. The user installs and maintains nothing and manages only its own data and settings. Examples: Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom.
+   - PaaS, Platform as a Service: a ready platform including the operating system, runtime, database and development tools, onto which the developer deploys only its own code. Examples: Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service.
+   - IaaS, Infrastructure as a Service: virtual machines, storage and networking, that is raw infrastructure, rented on demand. The customer installs and controls everything from the operating system upwards. Examples: AWS EC2, Google Compute Engine, Azure VM, DigitalOcean.
 
    | Point | IaaS | PaaS | SaaS |
    |---|---|---|---|
@@ -211,12 +210,12 @@
    | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
    | Analogy, using a car | Renting a car and driving it yourself | Hiring a car with a driver | Taking a taxi ride |
 
-   Onnanno service jegulo ekhon alada bhabe bola hoy:
-   - FaaS ba Function as a Service, jake Serverless-o bola hoy — shudhu ekti function likhe deoa hoy, server-er kotha bhabte-i hoy na. Udahoron: AWS Lambda.
-   - DaaS, Database ba Desktop as a Service; STaaS, Storage as a Service; ar NaaS, Network as a Service.
+   Other services now named separately:
+   - FaaS, Function as a Service, also called Serverless: only a function is written and deployed, and there is no need to think about servers at all. Example: AWS Lambda.
+   - DaaS for Database or Desktop as a Service, STaaS for Storage as a Service, and NaaS for Network as a Service.
 
-   Deployment model:
-   - Public cloud, Private cloud, Hybrid cloud ar Community cloud.
+   Deployment models:
+   - Public cloud, private cloud, hybrid cloud and community cloud.
 9. **Software as a Service is SaaS, Platform as a Service is PaaS and Infrastructure as a Service is IaaS. Those are three types of Cloud services. In the following table, there are some Cloud services. Write the category of those:** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819-820 (ET: BUET)]*
    Search engine for a web server
    Google Docs
@@ -267,28 +266,27 @@
    - In terms of underlying functions rather than models, the three things every cloud service delivers are computing power, storage, and networking, all pooled, virtualised and metered.
 12. **ক্লাউড কম্পিউটিং এর সুবিধা ও অসুবিধা লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-
    Answer:
 
-   Cloud computing-er shubidha:
-   - Prathomik khoroch khub kom: nijer server, data centre, cooling ba power-e boro binoyog lage na; khoroch masik operating expense hoye jay.
-   - Scalability ar elasticity: chahida onujayi kichukhon-er modhye resource barano ba komano jay, tai hothat traffic barleo site chalu thake ar chahida kome gele baroti taka dite hoy na.
-   - Je kono jaiga theke access: Internet thakle je kono device theke kaj kora jay, tai remote kaj sohoj hoy.
-   - Nirbhorjogyota ar disaster recovery: provider ekadhik availability zone ar region-e data replicate kore rakhe ebong 99.9 percent porjonto SLA dey.
-   - Automatic update ar maintenance: patch, hardware bodol ar upgrade — shob provider-er dayitto.
-   - Druto deployment: je server age kinte koyek soptaho lagto, ekhon koyek minute-e chalu hoy.
-   - Sohojogita: onek byabaharkari ekoi document ba dataset-e ekshathe kaj korte pare.
-   - Machine learning, big data analytics ar CDN-er moto unnoto seba pawa jay, ja choto protishthan nije kokhono banate parto na.
+   Advantages of cloud computing:
+   - Almost no initial capital investment is required; the cost becomes a monthly operating expense.
+   - Scalability and elasticity: resources can be increased or reduced within minutes to match demand, so a site survives a sudden surge in traffic and pays nothing extra when demand falls.
+   - Accessible from anywhere: with an Internet connection the service can be used from any device, which supports remote working.
+   - Reliability and disaster recovery: the provider replicates data across several availability zones and regions and offers service level agreements of up to 99.9 percent.
+   - Automatic updates and maintenance: patching, hardware replacement and upgrades are all the provider's responsibility.
+   - Rapid deployment: a server that once took weeks to procure now runs within minutes.
+   - Collaboration: many users can work on the same document or dataset at the same time.
+   - Advanced services such as machine learning, big data analytics and content delivery networks become available, which a small organisation could never have built for itself.
 
-   Cloud computing-er oshubidha:
-   - Internet-er upor sompurno nirbhorota: connection gele kono kaj hoy na. Jekhane bandwidth dami ba oniyomito, sekhane eta boro somossa.
-   - Nirapotta ar gopaniyota: data onner hardware-e thake, tai gopaniyota provider-er niyontron ar grahok-er thik configuration-er upor nirbhor kore.
-   - Data sovereignty ar ain: onek desh, jemon Bangladesh-e banking data, nirdisto data desher bhitore rakhte bare.
-   - Sīmito niyontron ar customization, bishesh kore SaaS-e, jekhane software-er achoron bodlano jay na.
-   - Vendor lock-in: proprietary service ar data transfer charge-er karone pore onno provider-e jaoa kothin ar bhoyongkor dami.
-   - Dirghomeyade khoroch: sthir ar oporiborton-shil workload-er jonno koyek bochor por nijer hardware-i shosta hote pare.
-   - Downtime-er jhuki: provider-er ekti outage ekshathe shob grahok-ke prabhabito kore, ar grahok-er kichu-i korar thake na.
-   - Lukono charge, bishesh kore outbound data transfer-e, ar notun dokkhota-sompanno lok-er proyojon.
+   Disadvantages of cloud computing:
+   - Complete dependence on the Internet: if the connection fails, nothing works. Where bandwidth is expensive or unreliable this is a serious problem.
+   - Security and privacy: the data resides on someone else's hardware, so confidentiality depends on the provider's controls and on the customer configuring the service correctly.
+   - Data sovereignty and law: many countries, and in Bangladesh the rules governing banking data, require certain data to remain within the national boundary.
+   - Limited control and customisation, especially in SaaS, where the behaviour of the software cannot be changed.
+   - Vendor lock-in: proprietary services and data transfer charges make it difficult and expensive to move to another provider later.
+   - Long term cost: for a steady and predictable workload, owning the hardware may be cheaper after a few years.
+   - Downtime risk: a single outage at the provider affects every customer at once, and the customer can do nothing but wait.
+   - Hidden charges, particularly for outbound data transfer, and the need for staff with new skills.
 
 ## Cloud Storage & Fundamentals (6)
 
@@ -381,33 +379,32 @@
    - Evaluation: for a startup or for any workload with variable demand, the advantages are decisive, because the cost and the delay of owning hardware would be prohibitive. For a large organisation with a steady workload and strict data residency rules, such as a central bank, a private or hybrid cloud is the more sensible choice, keeping regulated data in-house while using the public cloud for elastic and non-sensitive work.
 4. **(খ) Cloud computing কী? উহার বৈশিষ্ট্য ও সুবিধা বর্ণনা করুন ।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 616 (ET: N/A)]*
 
-
    Answer:
 
-   Cloud computing ki:
-   - Cloud computing holo Internet-er madhome computing seba — server, storage, database, networking, software ar analytics — chahida onujayi bhara neoa, nijer physical hardware kene chalanor poribote.
-   - Jotota byabohar kora hoy totota-i taka deoa hoy, tai eta pay as you go model.
+   What cloud computing is:
+   - Cloud computing is the renting of computing services over the Internet on demand — servers, storage, databases, networking, software and analytics — instead of buying and running one's own physical hardware.
+   - Payment is made only for what is actually used, which is why it is called a pay as you go model.
 
-   Boishishtho (characteristics):
-   - On demand self service: byabaharkari nijei portal ba API diye resource nite pare, provider-er kono lok-er dorkar hoy na.
-   - Broad network access: je kono standard device theke network-er madhome pawa jay.
-   - Resource pooling: provider-er resource multi-tenant model-e onek grahok-er modhye bhag kore deoa hoy ebong chahida onujayi punorbonton hoy.
-   - Rapid elasticity: kichukhon-er modhye khomota barano ba komano jay, ar grahok-er kache resource oshim mone hoy.
-   - Measured service: byabohar mapa hoy ar sei onujayi bill hoy, tai duipokkher jonoi ta sposhto.
-   - Ei sathe virtualization, uchcho nirbhorjogyota, automation ar bhougolik bistar.
+   Characteristics:
+   - On demand self service: the user obtains resources through a portal or an API without any intervention by the provider's staff.
+   - Broad network access: the service is reachable over the network from any standard device.
+   - Resource pooling: the provider's resources are pooled in a multi-tenant model and reallocated dynamically according to demand.
+   - Rapid elasticity: capacity can be increased or decreased within minutes, and to the customer the available resources appear unlimited.
+   - Measured service: usage is metered and billed accordingly, so it is transparent to both sides.
+   - In addition: virtualisation, high availability, automation and geographic distribution.
 
-   Shubidha:
-   - Prathomik binoyog prayo lage na; khoroch masik operating expense hoye jay.
-   - Chahida onujayi kichukhon-er modhye resource barano-komano jay.
-   - Je kono jaiga theke, je kono device theke access kora jay.
-   - Provider ekadhik region-e data replicate kore, tai backup ar disaster recovery built-in.
-   - Patch, upgrade ar hardware maintenance provider-er dayitto.
-   - Druto deployment — koyek minute-e server chalu.
-   - Onek byabaharkari ekoi file-e ekshathe kaj korte pare.
-   - Machine learning ar big data analytics-er moto unnoto seba sohoje pawa jay.
+   Advantages:
+   - Almost no initial investment is required; the cost becomes a monthly operating expense.
+   - Resources can be increased or reduced within minutes according to demand.
+   - The service can be used from anywhere and from any device.
+   - The provider replicates data across several regions, so backup and disaster recovery are built in.
+   - Patching, upgrades and hardware maintenance are the provider's responsibility.
+   - Deployment is rapid; a server runs within minutes.
+   - Many users can work on the same file at the same time.
+   - Advanced services such as machine learning and big data analytics are readily available.
 
-   Oshubidha, jeta uttor-e ullekh korle bhalo:
-   - Internet-er upor sompurno nirbhorota, nirapotta ar data sovereignty niye udbeg, sīmito niyontron, vendor lock-in, ar dirghomeyade khoroch beshi hote para.
+   Disadvantages, which should also be mentioned in the answer:
+   - Complete dependence on the Internet, concerns about security and data sovereignty, limited control, vendor lock-in, and a higher total cost over the long term.
 5. **What is Cloud Computing? Write its adventages and Disadventages?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
 
@@ -631,27 +628,26 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **(ক) উদাহরণসহ distributed এবং centralized computing -এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-
    Answer:
 
    Centralized computing:
-   - Ekti kendrio computer ba server-e shob processing, storage ar niyontron thake; byabaharkari-ra terminal ba client diye shudhu tar sathe jukto hoy.
-   - Boishishtho: ek jaigay data, ek jaigay niyontron, sohoj babosthapona ar backup, kintu oi ekti machine-i single point of failure.
-   - Udahoron: purono mainframe babostha, ekti bank-er shakhar shob terminal ekti kendrio server-er sathe jukto, ba ekti office-er ekti file server.
+   - All the processing, the storage and the control reside on a single central computer or server, and users connect to it through terminals or clients.
+   - Characteristics: the data and the control are in one place, so administration and backup are simple, but that single machine is also a single point of failure.
+   - Examples: the old mainframe systems, all the terminals of a bank branch connected to one central server, and a single file server in an office.
 
    Distributed computing:
-   - Onek swadhin computer network-e jukto hoye ekshathe kaj kore, ar byabaharkari-r kache ta ekti-i babostha mone hoy. Kaj ar data onek node-e bhag kore deoa hoy.
-   - Boishishtho: kono single point of failure nei, horizontal scaling somvob, ekti node noshto hole baki gulo cholte thake, kintu synchronization, consistency ar network delay-er somossa toiri hoy.
-   - Udahoron: Internet nijei, Google-er search infrastructure, Hadoop ar Spark cluster, blockchain, ar DNS.
+   - Many independent computers connected by a network work together, and to the user the whole thing appears as one system. The work and the data are divided among many nodes.
+   - Characteristics: there is no single point of failure, horizontal scaling is possible, and the system keeps running when one node fails, but synchronisation, consistency and network delay become problems.
+   - Examples: the Internet itself, Google's search infrastructure, Hadoop and Spark clusters, blockchain, and DNS.
 
-   | Bishoy | Centralized | Distributed |
+   | Point | Centralized | Distributed |
    |---|---|---|
-   | Processing | Ek jaigay | Onek node-e bhag kora |
+   | Processing | In one place | Divided among many nodes |
    | Failure | Single point of failure | Fault tolerant |
-   | Scalability | Vertical, mane boro machine kena | Horizontal, mane aro node jog kora |
-   | Khoroch | Prathomik boro machine dami | Sadharon hardware onek gulo, tai kom |
-   | Babosthapona | Sohoj | Jotil, synchronization lage |
-   | Latency | Kom, ek jaigay | Beshi hote pare, network-er upor nirbhorshil |
+   | Scalability | Vertical, that is buying a bigger machine | Horizontal, that is adding more nodes |
+   | Cost | A large machine is expensive up front | Many ordinary machines, so cheaper |
+   | Management | Simple | Complex, synchronisation is required |
+   | Latency | Low, everything is in one place | Possibly higher, since it depends on the network |
 2. **Difference between cluster computing and grid computing.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
 
 
@@ -810,29 +806,28 @@ A submarine cable connects Bangladesh to an international data center. At the ca
    - Typical deployments: CDN points of presence, 5G multi-access edge computing at the base station, smart factories, retail stores, and cable landing or telecom exchange sites.
 2. **(গ) Edge Computing এর ধারণা সংক্ষেপে উপস্থাপন করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-
    Answer:
 
-   Edge Computing ki:
-   - Edge Computing holo emon ekti computing model jekhane data jekhane toiri hoy tar kachakachi-i processing kora hoy, dur-er kono kendrio cloud data centre-e na pathiye.
-   - "Edge" mane network-er prantobhag — mane sensor, camera, IoT device, ba tader kachakachi thaka choto server ba gateway.
+   What edge computing is:
+   - Edge computing is a computing model in which data is processed close to where it is produced, instead of being sent to a distant central cloud data centre.
+   - The edge means the outer boundary of the network, that is the sensors, cameras and IoT devices themselves, or a small server or gateway near them.
 
-   Kivabe kaj kore:
-   - Device ba edge server sthaniyo bhabe data songroho kore, filter kore, bishleshon kore ar sathe sathe siddhanto ney.
-   - Shudhu joruri ba songkhipto phalafol cloud-e pathano hoy, dirghomeyadi songrokkhon ar boro bishleshon-er jonno.
+   How it works:
+   - The device or the edge server collects the data locally, filters it, analyses it and takes a decision immediately.
+   - Only the important or summarised results are sent to the cloud, for long term storage and larger scale analysis.
 
-   Keno dorkar:
-   - Kom latency: cloud-e jete-aste 50 theke 200 ms lage, ja self-driving car, industrial robot ba real-time video analytics-er jonno onek beshi. Edge-e uttor ashe koyek millisecond-e.
-   - Bandwidth bachano: shoto shoto HD camera-r kancha video cloud-e pathano ashombhob ar khub dami; edge-e process kore shudhu ghotona pathano hoy.
-   - Nirbhorjogyota: Internet link gele-o sthaniyo babostha cholte thake ebong pore sync kore.
-   - Gopaniyota ar ain: rogi-r tothyo ba mukhomondol-er chobi sthaniyo bhabe process kore desher bhitorei rakha jay.
-   - Real-time nirapotta siddhanto, jemon bipojjonok elakay manush dhukle machine bondho kora — eta network-er upor nirbhor korte pare na.
+   Why it is needed:
+   - Low latency: a round trip to the cloud takes 50 to 200 ms, which is far too long for a self driving car, an industrial robot or real time video analytics. At the edge the answer comes back within a few milliseconds.
+   - Saving bandwidth: sending the raw video of hundreds of HD cameras to the cloud is impossible and very expensive, so the edge processes it and sends only the events.
+   - Reliability: even when the Internet link fails, the local system keeps working and synchronises later.
+   - Privacy and law: patient records or facial images can be processed locally and kept inside the country.
+   - Real time safety decisions, such as stopping a machine when a person enters a dangerous area, cannot depend on a network link at all.
 
-   Udahoron:
-   - CDN-er edge server, 5G-r Multi-access Edge Computing, smart factory-r local controller, smart city-r traffic camera, ar smartwatch-er sthaniyo health analysis.
+   Examples:
+   - CDN edge servers, Multi-access Edge Computing in 5G, local controllers in a smart factory, traffic cameras in a smart city, and local health analysis on a smartwatch.
 
-   Fog Computing-er sathe somporko:
-   - Fog Computing edge ar cloud-er majhkhaner ekti star, jekhane gateway ba router porjaye processing hoy. Edge shob theke kache, Fog majhkhane, ar Cloud shob theke dure.
+   Relationship with fog computing:
+   - Fog computing is an intermediate layer between the edge and the cloud, where the processing happens at the gateway or router level. The edge is closest, the fog is in between, and the cloud is furthest away.
 
 ## Virtualization & Resource Allocation (1)
 
