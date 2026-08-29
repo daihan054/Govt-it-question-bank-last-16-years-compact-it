@@ -5713,13 +5713,251 @@
 
 1. **Write concepts of Coupling and Cohesion with Example?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
 
+
+   Answer: Coupling and cohesion are the two measures of the quality of a modular design. The goal of good design is low coupling and high cohesion.
+
+   Cohesion is the degree to which the elements inside a single module belong together, that is how focused the module is on one task. High cohesion is good.
+
+   Types of cohesion, from worst to best:
+   - Coincidental: elements are grouped for no reason at all, for example a module called Utility holding a date formatter, a password checker and a printer driver.
+   - Logical: elements do similar kinds of things and one is chosen by a flag, for example a single function handleInput(type) that reads from keyboard, file or network depending on the argument.
+   - Temporal: elements are grouped because they run at the same time, for example an init() routine that opens a file, clears a buffer and initialises a counter.
+   - Procedural: elements follow a fixed sequence of execution.
+   - Communicational: elements operate on the same data, for example a module that reads a student record and both prints it and computes its average.
+   - Sequential: the output of one element is the input of the next, for example read record, then validate record, then format record.
+   - Functional: every element contributes to exactly one well-defined task. This is the best. Example: a module computeIncomeTax(salary) that does nothing but compute tax.
+
+   Coupling is the degree of interdependence between two modules, that is how much one module must know about the internals of another. Low coupling is good.
+
+   Types of coupling, from worst to best:
+   - Content coupling: one module directly modifies or relies on the internal data of another, for example module A changes a local variable inside module B, or jumps into the middle of B. Worst possible.
+   - Common coupling: several modules share the same global variable. A change by one silently affects all the others.
+   - External coupling: modules share an externally imposed data format, protocol or device interface.
+   - Control coupling: one module passes a flag that tells the other what to do, for example process(data, 1) where 1 means sort and 2 means print. The caller must know the callee's internal logic.
+   - Stamp coupling: a whole data structure is passed when only a part is needed, for example passing the entire Employee object to a function that needs only the salary.
+   - Data coupling: only the simple data items actually needed are passed, for example computeTax(salary, allowance). This is the best form of coupling that still allows communication.
+   - No coupling: the modules are independent.
+
+   Example showing the difference:
+
+   ```java
+   // BAD: low cohesion + high (control + common) coupling
+   int totalSalary;                       // global, shared everywhere
+
+   void doEverything(Employee e, int mode) {
+       if (mode == 1) { totalSalary += e.basic; }
+       else if (mode == 2) { System.out.println(e.name); }
+       else { saveToDatabase(e); }
+   }
+   ```
+
+   The module does three unrelated things chosen by a flag, so it is logically cohesive, and it is control coupled through mode and common coupled through the global totalSalary.
+
+   ```java
+   // GOOD: high (functional) cohesion + low (data) coupling
+   double calculateTax(double salary, double allowance) {
+       double taxable = salary - allowance;
+       return taxable * RATE;
+   }
+
+   void printEmployeeName(String name) { System.out.println(name); }
+
+   void saveEmployee(Employee e) { repository.save(e); }
+   ```
+
+   Each function performs exactly one task and receives only the data it needs.
+
+   Why the goal is low coupling with high cohesion:
+   - A change inside a highly cohesive, loosely coupled module does not ripple through the system, so maintenance is cheap and safe.
+   - Such a module can be understood, tested and reused on its own.
+   - Faults are easier to localise, because a symptom points to one module.
+   - Modules can be developed in parallel by different people.
+
+   The relationship between the two is not accidental: raising cohesion normally lowers coupling. When each module does one thing, it needs less from its neighbours.
 2. **Software design table matching.......** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
 
+
+   Answer: Matching of software design terms with their meanings.
+
+   | Term | Matching description |
+   |---|---|
+   | Cohesion | Degree to which the elements within a single module belong together; should be high |
+   | Coupling | Degree of interdependence between two modules; should be low |
+   | Abstraction | Showing only the essential features and hiding the details |
+   | Information hiding | Keeping the internal data and implementation of a module inaccessible to other modules |
+   | Modularity | Dividing the system into separately named, addressable components |
+   | Refinement | Progressively elaborating a high-level statement into detailed steps, that is top-down design |
+   | Architecture | The overall structure of the system: its components and the relationships among them |
+   | Refactoring | Changing internal structure without changing external behaviour |
+   | Encapsulation | Binding data and the operations on that data into a single unit |
+   | Design pattern | A reusable, proven solution to a commonly recurring design problem |
+
+   Cohesion levels matched to their definitions, worst first:
+
+   | Cohesion type | Description |
+   |---|---|
+   | Coincidental | Elements are grouped arbitrarily, with no relationship |
+   | Logical | Elements perform similar kinds of operations, selected by a flag |
+   | Temporal | Elements are grouped because they execute at the same time |
+   | Procedural | Elements must execute in a particular order |
+   | Communicational | Elements operate on the same input or output data |
+   | Sequential | Output of one element is the input of the next |
+   | Functional | All elements contribute to a single well-defined task; the best |
+
+   Coupling levels matched to their definitions, worst first:
+
+   | Coupling type | Description |
+   |---|---|
+   | Content | One module modifies or depends on the internal working of another |
+   | Common | Several modules share global data |
+   | External | Modules share an externally imposed format, protocol or device |
+   | Control | One module controls the logic of another by passing a flag |
+   | Stamp | A whole data structure is passed when only part of it is needed |
+   | Data | Only the simple data items needed are passed; the best form of communication |
+
+   Design principles matched to their statements:
+
+   | Principle | Statement |
+   |---|---|
+   | Single Responsibility | A class should have only one reason to change |
+   | Open-Closed | Open for extension, closed for modification |
+   | Liskov Substitution | A subclass object must be usable wherever the superclass is expected |
+   | Interface Segregation | Many small specific interfaces are better than one large general one |
+   | Dependency Inversion | Depend on abstractions, not on concrete implementations |
 3. **(ক) Modularization কী? উহার সুবিধা সম্পর্কে লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 602 (ET: N/A)]*
 
+
+   Answer: Modularization হলো একটি বড় সফটওয়্যার সিস্টেমকে ছোট ছোট স্বতন্ত্র, নামযুক্ত ও পৃথকভাবে সম্বোধনযোগ্য অংশে ভাগ করার প্রক্রিয়া। প্রতিটি অংশকে বলা হয় module, এবং প্রতিটি module একটি নির্দিষ্ট কাজ সম্পাদন করে ও সুনির্দিষ্ট interface এর মাধ্যমে অন্যদের সঙ্গে যোগাযোগ করে।
+
+   একটি module এর তিনটি বৈশিষ্ট্য থাকে:
+   - এর নিজস্ব একটি সুনির্দিষ্ট দায়িত্ব থাকে।
+   - এর অভ্যন্তরীণ বিবরণ বাইরে থেকে দেখা যায় না, একে বলে information hiding।
+   - এর সঙ্গে যোগাযোগ হয় কেবল একটি প্রকাশিত interface এর মাধ্যমে।
+
+   উদাহরণ: একটি ব্যাংকিং সফটওয়্যারকে ভাগ করা যায় Authentication, Account Management, Transaction Processing, Loan Management, Report Generation ও Notification module এ।
+
+   ```mermaid
+   flowchart TD
+     M[Banking System] --> A[Authentication Module]
+     M --> B[Account Management Module]
+     M --> C[Transaction Module]
+     M --> D[Loan Module]
+     M --> E[Reporting Module]
+     C --> C1[Deposit]
+     C --> C2[Withdraw]
+     C --> C3[Transfer]
+   ```
+
+   Modularization এর সুবিধাসমূহ:
+
+   - জটিলতা হ্রাস: মানুষের মনে একসঙ্গে সীমিত পরিমাণ তথ্য ধারণ করা যায়। একটি ১০,০০০ লাইনের প্রোগ্রাম একবারে বোঝা অসম্ভব, কিন্তু ৫০০ লাইনের বিশটি module আলাদাভাবে বোঝা সহজ। একে বলা হয় divide and conquer নীতি।
+
+   - সমান্তরাল উন্নয়ন: বিভিন্ন module বিভিন্ন ডেভেলপার বা দল একই সময়ে তৈরি করতে পারে, ফলে প্রকল্প দ্রুত শেষ হয়।
+
+   - সহজ রক্ষণাবেক্ষণ: কোনো ত্রুটি দেখা দিলে তা কোন module এ তা দ্রুত নির্ণয় করা যায়, এবং সংশোধন সেই module এর মধ্যেই সীমাবদ্ধ থাকে। পরিবর্তনের প্রভাব সারা সিস্টেমে ছড়ায় না।
+
+   - পুনর্ব্যবহারযোগ্যতা: একটি ভালোভাবে লেখা module, যেমন তারিখ যাচাইকরণ বা লগইন module, অন্য প্রকল্পেও ব্যবহার করা যায়। এতে সময় ও খরচ দুটোই বাঁচে।
+
+   - সহজ পরীক্ষা: প্রতিটি module আলাদাভাবে unit test করা যায়। ছোট অংশে ত্রুটি খুঁজে পাওয়া অনেক সহজ।
+
+   - Abstraction ও information hiding: ব্যবহারকারী module জানে কেবল কী কাজ হয়, কীভাবে হয় তা নয়। ফলে ভেতরের বাস্তবায়ন পরিবর্তন করলেও বাইরের কোড অপরিবর্তিত থাকে।
+
+   - স্বতন্ত্র সংকলন ও স্থাপন: প্রয়োজনে একটি module আলাদা করে সংকলন ও হালনাগাদ করা যায়।
+
+   - দলের বিশেষায়ন: প্রতিটি দল নিজের ক্ষেত্রে দক্ষ হতে পারে — যেমন একটি দল কেবল নিরাপত্তা module নিয়ে কাজ করে।
+
+   - উন্নত নথিপত্র ও পাঠযোগ্যতা: প্রতিটি module এর নাম ও দায়িত্ব স্পষ্ট থাকায় কোড পড়ে বোঝা সহজ।
+
+   সীমাবদ্ধতা, যা উল্লেখ করা উচিত:
+   - অতিরিক্ত বিভাজন করলে module এর সংখ্যা বেড়ে যায় এবং তাদের মধ্যে যোগাযোগের খরচ ও জটিলতা বাড়ে।
+   - Interface নকশা ভুল হলে module গুলোর মধ্যে coupling বেড়ে যায়, তখন modularization এর সব সুবিধা নষ্ট হয়।
+   - সঠিক ভারসাম্যের নীতি: প্রতিটি module এর ভেতরে cohesion উচ্চ রাখতে হবে এবং module গুলোর মধ্যে coupling নিম্ন রাখতে হবে।
 4. **(খ) Software interface কত প্রকার ও কী কী? Interfacing এর ক্ষেত্রে কী কী error পাওয়া যেতে পারে?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
 
+
+   Answer: Software interface এর প্রকারভেদ এবং interfacing এ সম্ভাব্য ত্রুটিসমূহ।
+
+   Interface হলো দুটি অংশের মধ্যে যোগাযোগের সীমারেখা, যেখানে তথ্য আদান-প্রদান হয়। সফটওয়্যার প্রকৌশলে interface প্রধানত তিন প্রকার:
+
+   ১. User Interface (UI): সফটওয়্যার ও মানুষের মধ্যে যোগাযোগের মাধ্যম।
+   - Graphical User Interface (GUI): জানালা, বোতাম, মেনু ও আইকনভিত্তিক।
+   - Command Line Interface (CLI): লিখিত নির্দেশভিত্তিক, যেমন Linux shell।
+   - Menu-driven interface: বিকল্পের তালিকা থেকে নির্বাচন।
+   - Form-based interface: ঘর পূরণ করে তথ্য প্রদান।
+   - Natural language ও voice interface: কথ্য বা লিখিত স্বাভাবিক ভাষায় নির্দেশ।
+   - Touch ও gesture interface।
+
+   ২. Hardware Interface: সফটওয়্যার ও যন্ত্রাংশের মধ্যে যোগাযোগ — device driver, port, bus, সংকেতের বিন্যাস ইত্যাদি। যেমন প্রিন্টার ড্রাইভার, USB interface।
+
+   ৩. Software Interface: দুটি সফটওয়্যার উপাদানের মধ্যে যোগাযোগ।
+   - Application Programming Interface (API): অন্য প্রোগ্রামের জন্য প্রকাশিত ফাংশনের সমষ্টি, যেমন REST API, SOAP।
+   - Module বা component interface: এক module অন্য module কে যেভাবে ডাকে।
+   - Database interface: ODBC, JDBC এর মাধ্যমে ডেটাবেজের সঙ্গে সংযোগ।
+   - Operating system interface: system call।
+   - Communication বা protocol interface: TCP/IP, HTTP।
+
+   Module interfacing এর তিনটি কৌশল, যা প্রায়ই আলাদা প্রকার হিসেবে দেখানো হয়:
+   - Parameter passing: কল করার সময় প্রয়োজনীয় তথ্য যুক্তি হিসেবে পাঠানো। সবচেয়ে নিরাপদ।
+   - Shared memory বা global data: একাধিক module একই ডেটা এলাকা ব্যবহার করে। ঝুঁকিপূর্ণ, কারণ এতে common coupling সৃষ্টি হয়।
+   - Message passing: বার্তার মাধ্যমে যোগাযোগ, যা বিতরণকৃত সিস্টেমে ব্যবহৃত হয়।
+
+   Interfacing এ যেসব ত্রুটি পাওয়া যেতে পারে:
+
+   - Interface misuse: কল করা module ভুলভাবে interface ব্যবহার করে — যুক্তির সংখ্যা ভুল, ক্রম ভুল, বা ভুল ধরনের যুক্তি পাঠানো। যেমন calculate(rate, amount) এর জায়গায় calculate(amount, rate) লেখা; সংকলক ধরতে পারে না, কারণ দুটোই সংখ্যা।
+
+   - Interface misunderstanding: কল করা module ডাকা module এর আচরণ সম্পর্কে ভুল ধারণা করে। যেমন একটি binary search রুটিনকে অসাজানো array দিয়ে ডাকা, যেখানে রুটিনটি ধরে নিয়েছে array সাজানো আছে।
+
+   - Timing error: বাস্তব সময়ের সিস্টেমে প্রেরক ও গ্রাহক ভিন্ন গতিতে চলে; একজন পুরনো তথ্য পড়ে বা তথ্য হারিয়ে যায়। Race condition এখানেই ঘটে।
+
+   - Data type mismatch: এক পাশে int, অন্য পাশে long বা float; বা এক পাশে স্বাক্ষরিত, অন্য পাশে অস্বাক্ষরিত সংখ্যা। ফলে মান কেটে যায় বা ভুল হয়।
+
+   - Unit ও format mismatch: এক module মিটারে পাঠায়, অন্যটি ফুট ধরে নেয়; বা তারিখের বিন্যাস DD-MM-YYYY বনাম MM-DD-YYYY। মঙ্গল অভিযানের একটি নভোযান এই কারণেই ধ্বংস হয়েছিল।
+
+   - Null বা invalid reference: খালি বা অবৈধ নির্দেশক পাঠানো, যা গ্রাহক module যাচাই করে না।
+
+   - Buffer size mismatch: প্রেরক গ্রাহকের ধারণক্ষমতার চেয়ে বড় তথ্য পাঠায়, ফলে buffer overflow ঘটে।
+
+   - Error handling mismatch: ডাকা module ত্রুটি জানায় বিশেষ ফেরত মান দিয়ে, কিন্তু কল করা module তা পরীক্ষা করে না; বা একপাশে exception ছোড়া হয়, অন্যপাশে ধরা হয় না।
+
+   - Protocol বা version mismatch: API এর নতুন সংস্করণে ক্ষেত্রের নাম বদলেছে, কিন্তু গ্রাহক পুরনো নামই খুঁজছে।
+
+   - Character encoding mismatch: এক পাশে UTF-8, অন্য পাশে ASCII — বাংলা লেখা বিকৃত হয়ে যায়।
+
+   প্রতিরোধের উপায়: interface সুস্পষ্টভাবে নথিভুক্ত করা, প্রতিটি প্যারামিটারের ধরন, একক, বৈধ পরিসর ও পূর্বশর্ত লিখে রাখা; interface এ প্রবেশের মুখেই যাচাইকরণ করা; শক্তিশালী ধরনভিত্তিক ভাষা ব্যবহার করা; এবং integration testing এর অংশ হিসেবে interface testing করা, যেখানে বিশেষভাবে সীমান্তের মান, শূন্য মান ও ভুল ক্রমের যুক্তি দিয়ে পরীক্ষা করা হয়।
 5. **What is the common mistake of UI design?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
+
+
+   Answer: Common mistakes in user interface design.
+
+   - Inconsistency: the same action looks or behaves differently on different screens. The Save button is at the bottom right on one page and at the top left on another; the same concept is called Client on one screen and Customer on another. Consistency in layout, terminology, colour and behaviour is the first rule of interface design.
+
+   - Cluttered and overloaded screens: too many controls, options and colours on one page. The user cannot find what matters. Every element added reduces the visibility of every other element.
+
+   - No feedback: the user clicks a button and nothing visibly happens, so the button is clicked again and the order is placed twice. Every action must produce a visible response within a fraction of a second, and any operation longer than about a second must show a progress indicator.
+
+   - Poor error messages: technical, blaming, or useless. "Error 0x8007045D" or "Invalid input" tells the user nothing. A good message states what went wrong in plain language, why, and what to do about it: "The date of birth cannot be in the future. Please enter a date before today."
+
+   - No undo and no confirmation for destructive actions: a single mis-click deletes a year of data with no way back. Destructive operations need a confirmation, and better still an undo.
+
+   - Forcing the user to remember rather than recognise: requiring an account number to be remembered from a previous screen, or hiding options in unlabelled icons. Recognition is easier than recall.
+
+   - Ignoring the user's mental model and using developer jargon: labels such as "Commit transaction", "Flush cache" or "Null record" mean nothing to a clerk.
+
+   - Bad form design: no indication of which fields are compulsory, validation only after the whole form is submitted, clearing every field when one entry is wrong, no sensible defaults, and no tab order. These are among the most common and most irritating faults.
+
+   - Poor accessibility: low contrast text, small unreadable fonts, colour used as the only way of conveying meaning, so colour-blind users lose the information, no keyboard navigation, and no labels for screen readers.
+
+   - No provision for different levels of user: no shortcuts or bulk operations for the expert who uses the system all day, and no guidance for the beginner.
+
+   - Not responsive: a layout designed only for a wide desktop screen, unusable on a mobile phone, where most users now are.
+
+   - Slow response and blocking the interface: the whole window freezes while a report is generated.
+
+   - Not testing with real users: the designer knows where everything is, so everything seems obvious. Only a real user finds the problem.
+
+   - Ignoring the platform conventions: placing the buttons in the Windows order in an application running on Android, or inventing a new gesture where a standard one exists.
+
+   The design principles that these mistakes violate, usually stated as Shneiderman's eight golden rules: strive for consistency, enable frequent users to use shortcuts, offer informative feedback, design dialogues to yield closure, offer simple error handling, permit easy reversal of actions, support internal locus of control so the user feels in charge, and reduce short-term memory load.
 
 ## Software Cost Estimation & Build vs Buy Decisions (4)
 

@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 225/239 subtopics · 2601/2673 answers**
+**Overall: 226/239 subtopics · 2606/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -284,7 +284,7 @@ Commit unit: one `##` subtopic.
 - [x] Process Synchronization & Concurrency (4)
 - [x] File Systems & Disk Management (4)
 
-## software-engineering.md — 6/13 sections, 105/124 answers
+## software-engineering.md — 7/13 sections, 110/124 answers
 
 - [x] SDLC Phases & Models (37)
 - [x] Software Testing & Evaluation (33)
@@ -292,7 +292,7 @@ Commit unit: one `##` subtopic.
 - [x] UML Diagrams (Class, Use Case, Sequence) (9)
 - [x] Software Requirements Engineering (8)
 - [x] Software Project Management & Organization (7)
-- [ ] Software Design Principles (Coupling & Cohesion) (5)
+- [x] Software Design Principles (Coupling & Cohesion) (5)
 - [ ] Software Cost Estimation & Build vs Buy Decisions (4)
 - [ ] IT Governance, Audit & Risk Management (3)
 - [ ] Data Flow Diagrams (DFD) (2)
