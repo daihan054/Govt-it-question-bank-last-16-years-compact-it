@@ -606,6 +606,24 @@
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1364 (ET: BUET)]*
 
+   Answer: The Apriori algorithm, an association rule learning method under unsupervised learning, is suitable for Market Basket Analysis. FP-Growth is a faster alternative for very large datasets.
+
+   Three measures used:
+   - Support: how often an itemset appears. Support(A) = transactions containing A / total transactions.
+   - Confidence: how often B is bought when A is bought. Confidence(A→B) = Support(A∪B) / Support(A).
+   - Lift: how much more likely B is with A than by chance. Lift(A→B) = Confidence(A→B) / Support(B). A lift above 1 means a real positive association.
+
+   Steps of the Apriori algorithm:
+   - Set a minimum support and a minimum confidence threshold.
+   - Scan the transaction database and count the support of every single item, giving the 1-itemsets.
+   - Remove the items whose support is below the minimum, keeping only the frequent 1-itemsets.
+   - Join the frequent 1-itemsets to form candidate 2-itemsets, count their support and prune the infrequent ones.
+   - Repeat this join and prune step for 3-itemsets, 4-itemsets and so on, until no new frequent itemset is found. This uses the Apriori property, that any subset of a frequent itemset must also be frequent.
+   - From each frequent itemset, generate all possible association rules.
+   - Keep only the rules whose confidence is above the minimum threshold, and rank them by lift.
+
+   Example: if the rule {bread, butter} → {milk} has support 20%, confidence 70% and lift 1.5, the shop can place milk near bread and butter, or offer a combined discount.
+
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
 1. **Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-linkage hierarchical clustering technique.** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 473 (ET: N/A)]*
