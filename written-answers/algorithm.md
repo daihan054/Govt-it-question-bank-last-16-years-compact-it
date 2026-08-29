@@ -1450,25 +1450,244 @@ for i in N:
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
 
+   Answer: Binary search is chosen, because the array is already sorted.
+
+   Justification:
+   - Binary search works only on sorted data, and the condition is already satisfied here, so no sorting cost is added.
+   - It repeatedly compares the target with the middle element and discards half of the remaining range each time.
+   - For n = 1,000,000 the number of comparisons is at most log₂(1,000,000) ≈ 20.
+   - Linear search would need up to 1,000,000 comparisons in the worst case, so binary search is about 50,000 times faster here.
+   - Space complexity is O(1) for the iterative version, so no extra memory is needed.
+
+   Note: if the same array is searched millions of times, a hash table giving O(1) average lookup could be considered, but it costs O(n) extra memory and loses the sorted order, so for a single sorted array binary search is the correct choice.
+
 2. **Write down the Pseudo Code for recursive binary search algorithm. Use the following function definition: binarySearch(array, target, low, high).** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1338 (ET: N/A)]*
+
+   Answer:
+
+   ```
+   binarySearch(array, target, low, high)
+       if low > high
+           return -1                       // target not present
+
+       mid = low + (high - low) / 2        // avoids overflow
+
+       if array[mid] == target
+           return mid                      // found
+       else if array[mid] > target
+           return binarySearch(array, target, low, mid - 1)   // search left half
+       else
+           return binarySearch(array, target, mid + 1, high)  // search right half
+   ```
+
+   - The first call is made as binarySearch(array, target, 0, n − 1).
+   - Base case: low greater than high means the range is empty, so the target does not exist.
+   - Recurrence: T(n) = T(n/2) + O(1), which solves to O(log n).
+   - Space complexity is O(log n) because of the recursion stack, whereas the iterative version needs only O(1).
 
 3. **What is the complexity of Binary algorithm?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: The time complexity of binary search is O(log n) in the worst and average case, and O(1) in the best case when the target is the middle element on the first comparison. Space complexity is O(1) for the iterative version and O(log n) for the recursive version.
+
 4. **6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+   Answer: Binary search should be chosen.
+
+   Justification:
+   - The precondition of binary search, that the data must be sorted, is already met.
+   - Each comparison removes half of the remaining elements, so the worst case is log₂n comparisons.
+   - For one million elements that is about 20 comparisons, against up to 1,000,000 for linear search.
+   - It works in place with O(1) extra memory in the iterative form.
+   - Since the data is a plain sorted array, no extra structure such as a tree or hash table needs to be built.
 
 5. **Explain Algorithm of Binary search.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
+   Answer: Binary search finds an element in a sorted array by repeatedly halving the search range.
+
+   Steps:
+   - Set low = 0 and high = n − 1.
+   - Repeat while low is less than or equal to high.
+   - Compute mid = low + (high − low) / 2.
+   - If array[mid] equals the target, return mid, because the element is found.
+   - If array[mid] is greater than the target, the element must lie on the left, so set high = mid − 1.
+   - If array[mid] is smaller than the target, the element must lie on the right, so set low = mid + 1.
+   - If the loop ends without a match, the element is not present, so return −1.
+
+   Example: search 23 in 2, 5, 8, 12, 16, 23, 38, 56, 72, 91
+   - low = 0, high = 9, mid = 4, array[4] = 16, which is less than 23, so low = 5.
+   - low = 5, high = 9, mid = 7, array[7] = 56, which is greater than 23, so high = 6.
+   - low = 5, high = 6, mid = 5, array[5] = 23, which matches, so return index 5.
+   - Only three comparisons were needed instead of six for linear search.
+
+   Time complexity is O(log n) and space complexity is O(1).
+
 6. **Binary search using recursive function.** *[Teletalk Assistant Manager (IT) 2023 compact it 466 (ET: N/A)]*
+
+   Answer:
+
+   ```c
+   int binarySearch(int a[], int low, int high, int key) {
+       if (low > high)
+           return -1;
+
+       int mid = low + (high - low) / 2;
+
+       if (a[mid] == key)
+           return mid;
+       else if (a[mid] > key)
+           return binarySearch(a, low, mid - 1, key);
+       else
+           return binarySearch(a, mid + 1, high, key);
+   }
+   ```
+
+   - The function calls itself on a half sized range each time, so the problem shrinks quickly.
+   - Base case is low greater than high, which means the key is absent.
+   - Recurrence T(n) = T(n/2) + O(1) gives O(log n) time.
+   - Space complexity is O(log n) due to the recursion stack depth.
 
 7. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Linear Search | Binary Search |
+   |---|---|---|
+   | Data requirement | Works on sorted or unsorted data | Data must be sorted |
+   | Method | Checks elements one by one from the start | Compares with the middle and discards half |
+   | Best case | O(1), the first element matches | O(1), the middle element matches |
+   | Worst case | O(n) | O(log n) |
+   | Comparisons for n = 1000 | up to 1000 | about 10 |
+   | Data structure | Array or linked list | Array with random access only |
+   | Implementation | Very simple | Slightly more complex |
+   | Suitable for | Small or unsorted data | Large sorted data |
+
 8. **Write a C/C++ program for binary search.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 712 (ET: BUET)]*
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       int n, i, key, low, high, mid, found = 0;
+       int a[100];
+
+       printf("Enter number of elements: ");
+       scanf("%d", &n);
+
+       printf("Enter %d sorted numbers: ", n);
+       for (i = 0; i < n; i++)
+           scanf("%d", &a[i]);
+
+       printf("Enter the number to search: ");
+       scanf("%d", &key);
+
+       low = 0;
+       high = n - 1;
+
+       while (low <= high) {
+           mid = low + (high - low) / 2;
+           if (a[mid] == key) {
+               printf("Element found at position %d\n", mid + 1);
+               found = 1;
+               break;
+           }
+           else if (a[mid] < key)
+               low = mid + 1;
+           else
+               high = mid - 1;
+       }
+
+       if (found == 0)
+           printf("Element not found\n");
+
+       return 0;
+   }
+   ```
+
+   - The array must be entered in sorted order, otherwise the result is undefined.
+   - Time complexity is O(log n) and space complexity is O(1).
 
 9. **(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
+   Answer: Linear search, also called sequential search, checks each element of the list one after another from the beginning until the target is found or the list ends. It does not require the data to be sorted.
+
+   Algorithm:
+   - Start from index 0.
+   - Compare the element at the current index with the target.
+   - If they match, return that index.
+   - Otherwise move to the next index and repeat.
+   - If the end is reached without a match, return −1.
+
+   Best case complexity:
+   - O(1), when the target is the very first element, because only one comparison is needed.
+
+   Worst case complexity:
+   - O(n), when the target is the last element or is not present at all, because all n elements must be compared.
+
+   Average case is O(n/2), which is still O(n). Space complexity is O(1). The advantage of linear search is that it works on unsorted data and on linked lists, where binary search cannot be applied.
+
 10. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 791 (ET: N/A)]*
 
+    Answer:
+
+    ```java
+    import java.util.Scanner;
+
+    public class BinarySearch {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter number of elements: ");
+            int n = sc.nextInt();
+            int[] a = new int[n];
+
+            System.out.println("Enter " + n + " sorted integers:");
+            for (int i = 0; i < n; i++)
+                a[i] = sc.nextInt();
+
+            System.out.print("Enter the key to search: ");
+            int key = sc.nextInt();
+
+            int low = 0, high = n - 1, pos = -1;
+
+            while (low <= high) {
+                int mid = low + (high - low) / 2;
+                if (a[mid] == key) { pos = mid; break; }
+                else if (a[mid] < key) low = mid + 1;
+                else high = mid - 1;
+            }
+
+            if (pos != -1)
+                System.out.println("Found at index " + pos);
+            else
+                System.out.println("Not found");
+        }
+    }
+    ```
+
+    - The list must already be sorted in ascending order.
+    - Each iteration halves the range, so the loop runs at most log₂n times.
+    - Time complexity O(log n), space complexity O(1).
+
 11. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 973-974 (ET: BUET)]*
+
+    Answer:
+
+    Array taken: 10, 20, 30, 40, 50, 60, 70 with n = 7. Target key = 60.
+
+    Steps:
+    - Step 1: low = 0, high = 6. mid = (0 + 6)/2 = 3. a[3] = 40, which is less than 60, so the key lies on the right. Set low = 4.
+    - Step 2: low = 4, high = 6. mid = (4 + 6)/2 = 5. a[5] = 60, which matches the key.
+    - The element is found at index 5, that is the 6th position, using only 2 comparisons.
+
+    Time complexity derivation:
+    - Each comparison removes half of the remaining elements.
+    - After 1 comparison n/2 elements remain, after 2 comparisons n/4, and after k comparisons n/2ᵏ.
+    - The search ends when n/2ᵏ = 1, which gives 2ᵏ = n, so k = log₂n.
+    - Therefore the worst case time complexity is O(log n).
+    - For this array log₂7 ≈ 2.8, so at most 3 comparisons are ever needed.
+    - Best case is O(1) when the key is the middle element, and space complexity is O(1).
 
 ## Dynamic Programming & Greedy Algorithms (7)
 
