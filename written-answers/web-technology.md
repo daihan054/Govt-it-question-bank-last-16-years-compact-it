@@ -1353,18 +1353,602 @@
 
 1. **Jquery for email validation** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+
+   Answer: Email validation with jQuery.
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Email Validation</title>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <style>
+       .error { color: red; font-size: 13px; }
+       .ok    { color: green; font-size: 13px; }
+     </style>
+   </head>
+   <body>
+
+     <form id="myForm">
+       <label for="email">Email:</label>
+       <input type="text" id="email" name="email">
+       <span id="msg"></span>
+       <br><br>
+       <input type="submit" value="Submit">
+     </form>
+
+     <script>
+     $(document).ready(function () {
+
+         // regular expression for a valid email address
+         var pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+         function validateEmail() {
+             var email = $.trim($("#email").val());
+
+             if (email === "") {
+                 $("#msg").removeClass("ok").addClass("error").text("Email is required");
+                 return false;
+             }
+             if (!pattern.test(email)) {
+                 $("#msg").removeClass("ok").addClass("error").text("Invalid email address");
+                 return false;
+             }
+             $("#msg").removeClass("error").addClass("ok").text("Valid email");
+             return true;
+         }
+
+         // validate while the user types
+         $("#email").on("keyup blur", validateEmail);
+
+         // validate again on submit
+         $("#myForm").on("submit", function (e) {
+             if (!validateEmail()) {
+                 e.preventDefault();   // stop the form from being submitted
+             }
+         });
+     });
+     </script>
+
+   </body>
+   </html>
+   ```
+
+   Explanation of the regular expression `/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/`:
+
+   | Part | Meaning |
+   |---|---|
+   | `^` | Start of the string |
+   | `[a-zA-Z0-9._%+-]+` | One or more letters, digits, dot, underscore, percent, plus or hyphen — the local part before the @ |
+   | `@` | A literal at sign, exactly one |
+   | `[a-zA-Z0-9.-]+` | The domain name: letters, digits, dots and hyphens |
+   | `\.` | A literal dot; the backslash escapes it, because an unescaped dot matches any character |
+   | `[a-zA-Z]{2,}` | The top-level domain: at least two letters, such as com, org, bd |
+   | `$` | End of the string |
+
+   Test results with this pattern:
+
+   | Input | Result |
+   |---|---|
+   | `karim@example.com` | valid |
+   | `a.b_c+d@mail.co.uk` | valid |
+   | `karim@example` | invalid, no top-level domain |
+   | `karim.example.com` | invalid, no @ |
+   | `@example.com` | invalid, no local part |
+   | `karim@@example.com` | invalid, two @ signs |
+
+   The same thing using the jQuery Validation plugin, which is shorter:
+
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+   <script>
+   $(document).ready(function () {
+       $("#myForm").validate({
+           rules: {
+               email: { required: true, email: true }
+           },
+           messages: {
+               email: {
+                   required: "Please enter your email",
+                   email: "Please enter a valid email address"
+               }
+           }
+       });
+   });
+   </script>
+   ```
+
+   Essential note: client-side validation is for the user's convenience, not for security. Anyone can disable JavaScript or send the request directly, so the email must be validated again on the server before it is stored.
 2. **Write Javascript code to check NID validity?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1359 (ET: BUET)]*
 
+
+   Answer: JavaScript code to check the validity of a Bangladeshi National ID (NID) number.
+
+   Rules used: a Bangladeshi NID number is 10, 13 or 17 digits. The 17-digit form begins with a 4-digit year of birth, which must be a sensible year. The 13-digit form is the old 17-digit number without the year prefix. The 10-digit form is the current smart card number.
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>NID Validation</title>
+   </head>
+   <body>
+
+     <label for="nid">NID Number:</label>
+     <input type="text" id="nid" maxlength="17">
+     <button onclick="checkNID()">Check</button>
+     <p id="result"></p>
+
+     <script>
+     function validateNID(nid) {
+         // remove spaces and hyphens the user may have typed
+         nid = nid.replace(/[\s-]/g, "");
+
+         if (nid === "") {
+             return { valid: false, message: "NID number is required" };
+         }
+
+         // must contain digits only
+         if (!/^[0-9]+$/.test(nid)) {
+             return { valid: false, message: "NID must contain digits only" };
+         }
+
+         // length must be 10, 13 or 17
+         if (nid.length !== 10 && nid.length !== 13 && nid.length !== 17) {
+             return { valid: false, message: "NID must be 10, 13 or 17 digits" };
+         }
+
+         // for the 17-digit form, the first 4 digits are the birth year
+         if (nid.length === 17) {
+             var year = parseInt(nid.substring(0, 4), 10);
+             var thisYear = new Date().getFullYear();
+             if (year < 1900 || year > thisYear) {
+                 return { valid: false, message: "Invalid birth year in NID" };
+             }
+         }
+
+         // the number must not be all the same digit
+         if (/^(\d)\1+$/.test(nid)) {
+             return { valid: false, message: "NID cannot be all the same digit" };
+         }
+
+         return { valid: true, message: "Valid NID number (" + nid.length + " digits)" };
+     }
+
+     function checkNID() {
+         var value  = document.getElementById("nid").value;
+         var result = validateNID(value);
+         var out    = document.getElementById("result");
+
+         out.textContent = result.message;
+         out.style.color = result.valid ? "green" : "red";
+     }
+     </script>
+
+   </body>
+   </html>
+   ```
+
+   Test results:
+
+   | Input | Output |
+   |---|---|
+   | `1234567890` | Valid NID number (10 digits) |
+   | `1990123456789` | Valid NID number (13 digits) |
+   | `19901234567890123` | Valid NID number (17 digits) |
+   | `12345` | NID must be 10, 13 or 17 digits |
+   | `12345abcde` | NID must contain digits only |
+   | `29901234567890123` | Invalid birth year in NID |
+   | `1111111111` | NID cannot be all the same digit |
+   | (empty) | NID number is required |
+
+   A compact version using only a regular expression, if a single expression is asked for:
+
+   ```javascript
+   function isValidNID(nid) {
+       return /^(\d{10}|\d{13}|(19|20)\d{2}\d{13})$/.test(nid.trim());
+   }
+   ```
+
+   Points worth stating:
+   - The 17-digit format is: 4 digits for the year of birth, then 13 digits made up of district, upazila, union and a serial number.
+   - Format validation only proves that the number is well formed. Whether the number actually exists and belongs to that person can be confirmed only by querying the Election Commission's verification service.
+   - This check must be repeated on the server; client-side JavaScript can be bypassed.
 3. **Which tag is used to write JavaScript in html?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: The `<script>` tag is used to write or include JavaScript in HTML.
+
+   Three ways of using it:
+
+   1. Internal JavaScript, written inside the page:
+
+   ```html
+   <script>
+     document.getElementById("demo").innerHTML = "Hello World";
+   </script>
+   ```
+
+   2. External JavaScript, kept in a separate `.js` file:
+
+   ```html
+   <script src="script.js"></script>
+   ```
+
+   3. Inline, in an event attribute. This is not the `<script>` tag, but it is a way of writing JavaScript in HTML:
+
+   ```html
+   <button onclick="alert('Clicked!')">Click Me</button>
+   ```
+
+   Where to place the `<script>` tag:
+   - Just before the closing `</body>` tag is the usual choice, so that the HTML is parsed and displayed first and the elements the script refers to already exist.
+   - In the `<head>` with the `defer` attribute is the modern preference: the file downloads in parallel with parsing but runs only after the document is ready.
+   - `async` downloads in parallel and runs as soon as it arrives, in no guaranteed order. Suitable only for independent scripts such as analytics.
+
+   ```html
+   <script src="app.js" defer></script>   <!-- runs after parsing, in order -->
+   <script src="ads.js" async></script>   <!-- runs whenever it arrives -->
+   ```
+
+   Note: the `<script>` tag always needs a closing `</script>`, even when `src` is used. Writing `<script src="a.js" />` does not work in HTML.
 4. **Write Javascript function to validate a customer number where the customer number in 3 uppercase letter and district code followed by 8 digits.** *[BICIC Assistant Programmer 2022 compact it 630 (ET: BUET)]*
 
+
+   Answer: The customer number consists of 3 uppercase letters, then a district code, then 8 digits.
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Customer Number Validation</title>
+   </head>
+   <body>
+
+     <label for="cust">Customer Number:</label>
+     <input type="text" id="cust" placeholder="ABCDHK12345678">
+     <button onclick="check()">Validate</button>
+     <p id="out"></p>
+
+     <script>
+     // list of valid district codes
+     var districtCodes = ["DHK", "CTG", "RAJ", "KHU", "BAR", "SYL", "RAN", "MYM"];
+
+     function validateCustomerNumber(cust) {
+
+         cust = cust.trim().toUpperCase();
+
+         if (cust === "") {
+             return "Customer number is required";
+         }
+
+         // 3 letters + 3 letters district code + 8 digits = 14 characters
+         var pattern = /^[A-Z]{3}([A-Z]{3})[0-9]{8}$/;
+         var match   = cust.match(pattern);
+
+         if (match === null) {
+             return "Invalid format. Required: 3 uppercase letters + district code + 8 digits";
+         }
+
+         // check that the district code is one of the recognised codes
+         var code = match[1];
+         if (districtCodes.indexOf(code) === -1) {
+             return "Unknown district code: " + code;
+         }
+
+         return "Valid customer number";
+     }
+
+     function check() {
+         var value = document.getElementById("cust").value;
+         var msg   = validateCustomerNumber(value);
+         var out   = document.getElementById("out");
+         out.textContent = msg;
+         out.style.color = (msg === "Valid customer number") ? "green" : "red";
+     }
+     </script>
+
+   </body>
+   </html>
+   ```
+
+   Explanation of the regular expression `/^[A-Z]{3}([A-Z]{3})[0-9]{8}$/`:
+
+   | Part | Meaning |
+   |---|---|
+   | `^` | Start of the string |
+   | `[A-Z]{3}` | Exactly 3 uppercase letters |
+   | `([A-Z]{3})` | Exactly 3 more uppercase letters, captured as group 1, which is the district code |
+   | `[0-9]{8}` | Exactly 8 digits |
+   | `$` | End of the string |
+
+   Test results:
+
+   | Input | Output |
+   |---|---|
+   | `ABCDHK12345678` | Valid customer number |
+   | `XYZCTG87654321` | Valid customer number |
+   | `abcdhk12345678` | Valid, because the code converts to uppercase first |
+   | `ABCXXX12345678` | Unknown district code: XXX |
+   | `ABDHK12345678` | Invalid format, only 2 leading letters |
+   | `ABCDHK1234567` | Invalid format, only 7 digits |
+   | `ABCDHK1234567A` | Invalid format, a letter among the digits |
+
+   If the district code is numeric rather than alphabetic, for example a two-digit code, the only change needed is in the pattern:
+
+   ```javascript
+   var pattern = /^[A-Z]{3}([0-9]{2})[0-9]{8}$/;
+   ```
+
+   The same validation in a form, so that submission is blocked when the value is wrong:
+
+   ```html
+   <form onsubmit="return validateCustomerNumber(this.cust.value) === 'Valid customer number';">
+     <input type="text" name="cust" pattern="[A-Za-z]{6}[0-9]{8}" required>
+     <input type="submit" value="Submit">
+   </form>
+   ```
 5. **Write HTML and Javascript code of following box.** *[EGCB Assistant Engineer (CSE) 2022 compact it 716 (ET: BUET)]*
 
+
+   Answer: A "box" in this context is an input box with a button that produces a result, which is the standard form of such a question. The code below builds a bordered box that takes two numbers and displays their sum. <!-- verify: the original figure is not reproduced in the question -->
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Input Box</title>
+     <style>
+       .box {
+         width: 300px;
+         border: 2px solid #333;
+         border-radius: 6px;
+         padding: 20px;
+         font-family: Arial, sans-serif;
+         margin: 40px auto;
+       }
+       .box h3   { margin-top: 0; text-align: center; }
+       .box label { display: inline-block; width: 90px; }
+       .box input[type="text"] { width: 150px; margin-bottom: 10px; }
+       .box button { width: 100%; padding: 8px; cursor: pointer; }
+       #answer { margin-top: 12px; font-weight: normal; text-align: center; }
+     </style>
+   </head>
+   <body>
+
+     <div class="box">
+       <h3>Addition</h3>
+
+       <label for="num1">Number 1:</label>
+       <input type="text" id="num1"><br>
+
+       <label for="num2">Number 2:</label>
+       <input type="text" id="num2"><br>
+
+       <button onclick="calculate()">Add</button>
+
+       <p id="answer"></p>
+     </div>
+
+     <script>
+     function calculate() {
+         var a = parseFloat(document.getElementById("num1").value);
+         var b = parseFloat(document.getElementById("num2").value);
+         var out = document.getElementById("answer");
+
+         if (isNaN(a) || isNaN(b)) {
+             out.style.color = "red";
+             out.textContent = "Please enter numbers in both boxes";
+             return;
+         }
+
+         out.style.color = "green";
+         out.textContent = "Result: " + (a + b);
+     }
+     </script>
+
+   </body>
+   </html>
+   ```
+
+   The three built-in dialogue boxes of JavaScript, in case the question means one of those:
+
+   ```html
+   <script>
+     // 1. Alert box: shows a message with an OK button
+     alert("Data saved successfully");
+
+     // 2. Confirm box: OK and Cancel; returns true or false
+     var yes = confirm("Do you want to delete this record?");
+     if (yes) {
+         alert("Deleted");
+     } else {
+         alert("Cancelled");
+     }
+
+     // 3. Prompt box: takes input; returns the text, or null if cancelled
+     var name = prompt("What is your name?", "");
+     if (name !== null && name !== "") {
+         document.write("Hello " + name);
+     }
+   </script>
+   ```
+
+   | Box | Buttons | Returns |
+   |---|---|---|
+   | `alert()` | OK | nothing |
+   | `confirm()` | OK, Cancel | `true` or `false` |
+   | `prompt()` | OK, Cancel | the entered string, or `null` |
+
+   All three are blocking: they stop the page until the user responds, which is why modern pages use custom modal boxes built from HTML and CSS instead.
 6. **Explain hoisting in JavaScript?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 761 (ET: N/A)]*
 
+
+   Answer: Hoisting is JavaScript's behaviour of moving the declarations of variables, functions and classes to the top of their scope before the code is executed. Only the declaration is moved; the assignment stays where it was written.
+
+   What actually happens: JavaScript executes in two phases. In the creation phase the engine scans the scope and registers every declaration in memory. In the execution phase it runs the statements line by line. Hoisting is a description of that first phase.
+
+   1. Hoisting of `var`
+
+   ```javascript
+   console.log(x);   // undefined, not an error
+   var x = 10;
+   console.log(x);   // 10
+   ```
+
+   The engine treats this as:
+
+   ```javascript
+   var x;            // declaration hoisted, initialised to undefined
+   console.log(x);   // undefined
+   x = 10;           // assignment stays in place
+   console.log(x);   // 10
+   ```
+
+   2. Hoisting of `let` and `const`
+
+   ```javascript
+   console.log(y);   // ReferenceError: Cannot access 'y' before initialization
+   let y = 20;
+   ```
+
+   `let` and `const` are hoisted too, but they are not initialised. From the top of the block until the declaration is reached they sit in what the specification calls the Temporal Dead Zone, and any access throws a ReferenceError. This is deliberate: it turns a silent `undefined` bug into a visible error.
+
+   3. Hoisting of function declarations
+
+   ```javascript
+   greet();          // "Hello" — works
+
+   function greet() {
+       console.log("Hello");
+   }
+   ```
+
+   A function declaration is hoisted completely, both its name and its body, so it can be called before the line on which it is written.
+
+   4. Function expressions and arrow functions are not hoisted as functions
+
+   ```javascript
+   sayHi();          // TypeError: sayHi is not a function
+   var sayHi = function () { console.log("Hi"); };
+
+   sayBye();         // ReferenceError: Cannot access 'sayBye' before initialization
+   const sayBye = () => console.log("Bye");
+   ```
+
+   Here only the variable is hoisted, not the function. With `var` the variable exists but holds `undefined`, and calling `undefined` gives a TypeError.
+
+   Summary
+
+   | Declaration | Hoisted | Initialised on hoist | Access before the declaration |
+   |---|---|---|---|
+   | `var` | Yes | Yes, to `undefined` | Gives `undefined` |
+   | `let` | Yes | No | ReferenceError (Temporal Dead Zone) |
+   | `const` | Yes | No | ReferenceError (Temporal Dead Zone) |
+   | Function declaration | Yes | Yes, fully | Works normally |
+   | Function expression | As a variable only | Follows `var`/`let` rules | TypeError or ReferenceError |
+   | `class` | Yes | No | ReferenceError |
+
+   A further point about scope: `var` is function-scoped, so it is hoisted to the top of the enclosing function, not the enclosing block. `let` and `const` are block-scoped.
+
+   ```javascript
+   function test() {
+       if (true) {
+           var a = 1;    // function-scoped
+           let b = 2;    // block-scoped
+       }
+       console.log(a);   // 1
+       console.log(b);   // ReferenceError: b is not defined
+   }
+   ```
+
+   Practical advice: declare variables at the top of their scope and use `let` and `const` rather than `var`. Then hoisting never surprises anyone, which is exactly why `let` and `const` were introduced.
 7. **Display element by id in JavaScript?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 762 (ET: N/A)]*
 
+
+   Answer: An element is selected by its id with `document.getElementById()`.
+
+   ```javascript
+   var element = document.getElementById("demo");
+   ```
+
+   Displaying and changing its content:
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <body>
+
+     <p id="demo">Original text</p>
+     <input type="text" id="username" value="Karim">
+     <button onclick="show()">Show</button>
+
+     <script>
+     function show() {
+         // read the element
+         var p = document.getElementById("demo");
+
+         // 1. change the HTML content
+         p.innerHTML = "<b>New bold text</b>";
+
+         // 2. change the plain text content (safer, tags are not interpreted)
+         // p.textContent = "New plain text";
+
+         // 3. read the value of an input element
+         var name = document.getElementById("username").value;
+         alert("Name is " + name);
+
+         // 4. change the style
+         p.style.color = "blue";
+         p.style.fontSize = "20px";
+
+         // 5. change an attribute
+         p.setAttribute("title", "A tooltip");
+
+         // 6. add or remove a CSS class
+         p.classList.add("highlight");
+
+         // 7. show the element itself in the console
+         console.log(p);
+     }
+     </script>
+
+   </body>
+   </html>
+   ```
+
+   Which property to use for which purpose:
+
+   | Property | Use |
+   |---|---|
+   | `innerHTML` | Read or write the content including HTML tags. Never assign untrusted user input to it, because that allows XSS |
+   | `textContent` | Read or write plain text; tags are shown literally. The safe choice |
+   | `innerText` | Like `textContent` but respects CSS visibility and is slower |
+   | `value` | The content of an input, textarea or select element |
+
+   Other ways of selecting elements:
+
+   ```javascript
+   document.getElementById("demo")            // one element, by id
+   document.getElementsByClassName("item")    // an HTMLCollection, by class
+   document.getElementsByTagName("p")         // an HTMLCollection, by tag
+   document.querySelector("#demo")            // the first match for a CSS selector
+   document.querySelectorAll(".item")         // a NodeList of all matches
+   ```
+
+   Two points that cause frequent errors:
+   - `getElementById` takes the id without a `#`; `querySelector` takes a CSS selector, so it needs the `#`.
+   - If the script runs before the element exists in the document, `getElementById` returns `null` and the next line throws "Cannot set property of null". The remedy is to place the script just before `</body>`, or to use `defer`, or to wrap the code in a `DOMContentLoaded` listener:
+
+   ```javascript
+   document.addEventListener("DOMContentLoaded", function () {
+       document.getElementById("demo").textContent = "Ready";
+   });
+   ```
 8. **if-else ব্যবহার করে Javascript দিয়ে নিচের কোডটি সম্পন্ন কর, যেন Output ডান পাশের মত আসে।** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
 ```html
 <html>
@@ -1382,6 +1966,73 @@
 </body>
 </html>
 ```
+
+
+   Answer: কোডটি ইতিমধ্যে সম্পূর্ণ — এটি ১ থেকে ৯ পর্যন্ত প্রতিটি সংখ্যা জোড় না বিজোড় তা if-else দিয়ে যাচাই করে দেখায়।
+
+   সম্পূর্ণ কোড:
+
+   ```html
+   <html>
+   <body>
+   <script>
+       for (var x = 1; x <= 9; x++) {
+           if (x % 2 == 0) {
+               document.write(x + " is an even value.<br>");
+           }
+           else {
+               document.write(x + " is an odd value.<br>");
+           }
+       }
+   </script>
+   </body>
+   </html>
+   ```
+
+   Output:
+
+   ```
+   1 is an odd value.
+   2 is an even value.
+   3 is an odd value.
+   4 is an even value.
+   5 is an odd value.
+   6 is an even value.
+   7 is an odd value.
+   8 is an even value.
+   9 is an odd value.
+   ```
+
+   কোডটির ব্যাখ্যা:
+
+   - `for (var x = 1; x <= 9; x++)` — লুপটি x এর মান ১ থেকে শুরু করে, প্রতিবার ১ করে বাড়িয়ে ৯ পর্যন্ত মোট ৯ বার চলে।
+   - `x % 2` — modulus বা ভাগশেষ operator। কোনো সংখ্যাকে ২ দিয়ে ভাগ করলে ভাগশেষ ০ হলে সংখ্যাটি জোড়, ১ হলে বিজোড়।
+   - `if (x % 2 == 0)` — শর্তটি সত্য হলে জোড়ের বার্তা, মিথ্যা হলে `else` অংশে বিজোড়ের বার্তা দেখানো হয়।
+
+   `console.log` ও `document.write` এর পার্থক্য: `console.log` ব্রাউজারের developer console এ দেখায়, যা ব্যবহারকারী সাধারণত দেখেন না; `document.write` সরাসরি পৃষ্ঠায় লেখে। পরীক্ষার খাতায় আউটপুট পৃষ্ঠায় দেখাতে চাইলে `document.write` লেখা উচিত, এবং প্রতিটি লাইন আলাদা করতে `<br>` যোগ করতে হয়।
+
+   একই কাজ আধুনিক রীতিতে, যেখানে ফলাফল একটি HTML element এ দেখানো হয়:
+
+   ```html
+   <html>
+   <body>
+     <p id="output"></p>
+     <script>
+       let result = "";
+       for (let x = 1; x <= 9; x++) {
+           if (x % 2 === 0) {
+               result += x + " is an even value.<br>";
+           } else {
+               result += x + " is an odd value.<br>";
+           }
+       }
+       document.getElementById("output").innerHTML = result;
+     </script>
+   </body>
+   </html>
+   ```
+
+   এখানে দুটি উন্নতি করা হয়েছে: `var` এর বদলে `let` ব্যবহার করা হয়েছে, যা block-scoped; এবং `==` এর বদলে `===` ব্যবহার করা হয়েছে, যা মান ও ধরন — দুটোই মিলিয়ে দেখে, ফলে অপ্রত্যাশিত রূপান্তর ঘটে না।
 
 ## Web Services & APIs (SOAP vs REST) (7)
 
