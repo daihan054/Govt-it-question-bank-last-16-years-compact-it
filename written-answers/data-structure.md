@@ -3252,29 +3252,499 @@ Output: Not Balanced
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
+
+   Answer: A postorder sequence alone determines a binary search tree uniquely, because the BST ordering property supplies the information that a second traversal would otherwise be needed for.
+
+   Key insight: for a BST, the inorder traversal is always the sorted sequence of the keys. So the inorder can be obtained simply by sorting the postorder values, and the tree can then be built from postorder together with inorder. More directly, the last element of the postorder is the root, and the remaining values split into those smaller than the root, which form the left subtree, and those larger, which form the right.
+
+   Method:
+   - Take the last element of the postorder sequence as the root.
+   - Scan the remaining elements from the left: everything less than the root belongs to the left subtree, and everything greater belongs to the right subtree.
+   - Recurse on each part.
+
+   Worked example with postorder 8, 12, 10, 16, 25, 20, 15:
+
+   Step 1: the last element 15 is the root.
+   - Values less than 15: 8, 12, 10 form the left subtree.
+   - Values greater than 15: 16, 25, 20 form the right subtree.
+
+   Step 2, left subtree with postorder 8, 12, 10:
+   - Root is 10. Values less than 10: 8. Values greater: 12.
+   - So 10 has left child 8 and right child 12.
+
+   Step 3, right subtree with postorder 16, 25, 20:
+   - Root is 20. Values less than 20: 16. Values greater: 25.
+   - So 20 has left child 16 and right child 25.
+
+   The binary search tree:
+
+   ```
+                 15
+               /    \
+             10      20
+            /  \    /  \
+           8   12  16   25
+   ```
+
+   Inorder traversal, which is Left Root Right:
+   - 8, 10, 12, 15, 16, 20, 25
+   - As expected, this is the postorder values in ascending order, which confirms the construction.
+
+   Preorder traversal, which is Root Left Right:
+   - 15, 10, 8, 12, 20, 16, 25
+
+   Verification: reading the tree in postorder, Left Right Root, gives 8, 12, 10, 16, 25, 20, 15, which is the sequence originally given.
+
+   - Note the general principle: a postorder or preorder sequence alone is not enough for an arbitrary binary tree, but it is enough for a binary search tree, because the ordering property implicitly provides the inorder sequence. <!-- verify -->
 2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 590 (ET: BUET)]*
 
+
+   Answer:
+
+   Given items: 40, 45, 80, 90, 50, 70
+
+   Binary Search Tree, built by inserting the items in the order given:
+   - 40 becomes the root.
+   - 45 > 40, so it goes to the right of 40.
+   - 80 > 40 and > 45, so it goes to the right of 45.
+   - 90 > 40, > 45 and > 80, so it goes to the right of 80.
+   - 50 > 40 and > 45 but < 80, so it goes to the left of 80.
+   - 70 > 40, > 45, < 80 and > 50, so it goes to the right of 50.
+
+   ```
+           40
+             \
+              45
+                \
+                 80
+                /  \
+              50    90
+                \
+                 70
+   ```
+
+   - Inorder traversal: 40, 45, 50, 70, 80, 90, which is ascending, confirming that the BST property holds.
+   - Note that this tree is badly skewed to the right, because the input was largely in increasing order. The height is 4, whereas a balanced tree of 6 nodes would have height 2. This is exactly the case in which a BST degrades towards O(n) and why self balancing trees such as AVL and Red-Black trees exist.
+
+   Max heap, built from the same items treated as an array 40, 45, 80, 90, 50, 70:
+   - View the array as a complete binary tree filled level by level.
+   - Heapify from the last internal node, index ⌊6/2⌋ − 1 = 2, upward.
+   - Index 2 holds 80, whose only child is 70. 80 is larger, so nothing changes.
+   - Index 1 holds 45, whose children are 90 and 50. The larger is 90, so 45 and 90 are swapped. Array: 40, 90, 80, 45, 50, 70.
+   - Index 0 holds 40, whose children are 90 and 80. The larger is 90, so they are swapped. Array: 90, 40, 80, 45, 50, 70. The value 40 is now at index 1, so heapify continues there: its children are 45 and 50, and 50 is larger, so they are swapped. Array: 90, 50, 80, 45, 40, 70.
+
+   ```
+                 90
+               /    \
+             50      80
+            /  \    /
+          45    40 70
+   ```
+
+   - Verification: 90 ≥ 50 and 90 ≥ 80; 50 ≥ 45 and 50 ≥ 40; 80 ≥ 70. The heap property holds and the tree is complete.
+
+   The essential difference between the two structures:
+   - A BST is fully ordered by the search property, so an inorder traversal is sorted and searching for a value takes O(log n) in a balanced tree. It is a search structure.
+   - A heap is only partially ordered: the root dominates everything, but siblings are unrelated and an inorder traversal is not sorted. Finding an arbitrary value takes O(n). It is a priority structure, not a search structure.
 3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
+
+   Answer: A binary search tree is a binary tree in which, for every node, all the keys in its left subtree are smaller than the node's key and all the keys in its right subtree are larger. Duplicates are normally either forbidden or placed consistently on one side.
+
+   The defining consequence: an inorder traversal of a BST produces the keys in ascending order, and every search discards half the remaining subtree at each step, which is what gives O(log n) performance on a balanced tree.
+
+   Operations on a binary search tree:
+
+   - Search: start at the root. If the key equals the node, it is found. If it is smaller, go left; if larger, go right. Repeat until the key is found or a NULL pointer is reached. O(h), which is O(log n) for a balanced tree and O(n) for a skewed one.
+
+   ```
+   SEARCH(root, key):
+       if root == NULL or root.data == key: return root
+       if key < root.data: return SEARCH(root.left, key)
+       else:               return SEARCH(root.right, key)
+   ```
+
+   - Insert: search for the key as above; when a NULL pointer is reached, that is the position, so create the node there. A new node is always inserted as a leaf. O(h).
+   - Delete: three cases.
+   - The node is a leaf: simply remove it.
+   - The node has one child: replace the node with that child.
+   - The node has two children: replace its value with its inorder successor, that is the smallest value in the right subtree, or with its inorder predecessor, that is the largest in the left subtree; then delete that successor or predecessor node, which by construction has at most one child. O(h).
+   - Find minimum: follow the left pointers to the leftmost node. Find maximum: follow the right pointers. O(h).
+   - Inorder traversal: gives the keys in ascending order, which is the defining property of a BST. O(n).
+
+   Example:
+
+   ```
+                 50
+               /    \
+             30      70
+            /  \    /  \
+          20    40 60    80
+   ```
+
+   - Searching for 40: 40 < 50 so go left to 30; 40 > 30 so go right; 40 is found. Three comparisons instead of seven.
+   - Inserting 35: 35 < 50 go left; 35 > 30 go right to 40; 35 < 40 go left, which is NULL, so 35 becomes the left child of 40.
+   - Deleting 30, which has two children: its inorder successor is 40, the smallest value in its right subtree, so 40 replaces 30 and the original 40, now a leaf, is removed.
+
+   Complexity:
+   - Search, insert and delete are all O(h), where h is the height.
+   - For a balanced tree h = O(log n), so all three are O(log n).
+   - For a skewed tree, which arises when the keys are inserted in sorted order, h = n − 1 and all three degrade to O(n), so the tree behaves as a linked list. This is the principal weakness of the plain BST, and it is why AVL trees and Red-Black trees, which rebalance automatically, are used in practice.
+
+   Applications: symbol tables in compilers, database indexing, sets and maps in standard libraries, and any application requiring ordered data with fast insertion, deletion and range queries.
 4. **Construct a Binary Search tree, then post order, ....... (Approximate)** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
 
+
+   Answer: The method is shown with a worked example, since the question does not supply the data.
+
+   Given items to insert: 50, 30, 70, 20, 40, 60, 80
+
+   Construction, inserting each item in the order given:
+   - 50 becomes the root.
+   - 30 < 50, so it goes to the left of 50.
+   - 70 > 50, so it goes to the right of 50.
+   - 20 < 50 and < 30, so it goes to the left of 30.
+   - 40 < 50 but > 30, so it goes to the right of 30.
+   - 60 > 50 but < 70, so it goes to the left of 70.
+   - 80 > 50 and > 70, so it goes to the right of 70.
+
+   ```
+                 50
+               /    \
+             30      70
+            /  \    /  \
+          20    40 60    80
+   ```
+
+   Traversals:
+   - Preorder, Root Left Right: 50, 30, 20, 40, 70, 60, 80
+   - Inorder, Left Root Right: 20, 30, 40, 50, 60, 70, 80
+   - Postorder, Left Right Root: 20, 40, 30, 60, 80, 70, 50
+   - Level order: 50, 30, 70, 20, 40, 60, 80
+
+   - The inorder sequence is in ascending order, which is the defining property of a binary search tree and the standard check that the tree has been built correctly.
+
+   Further operations on this tree:
+   - Search for 60: 60 > 50 go right to 70; 60 < 70 go left; found in three comparisons.
+   - Insert 35: 35 < 50 go left; 35 > 30 go right to 40; 35 < 40 go left, which is NULL, so 35 becomes the left child of 40.
+   - Delete 20, a leaf: simply removed.
+   - Delete 70, which has two children: its inorder successor is 80, the smallest value in its right subtree, so 80 replaces 70 and the original 80 node is removed.
+
+   - Complexity: O(h) for search, insert and delete, which is O(log n) here because the tree is balanced. Had the same values been inserted in ascending order, the tree would have degenerated into a right skewed chain of height 6 and every operation would have cost O(n).
 5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
 
+
+   Answer:
+
+   Given elements: 1, 2, 3, 4, 5, inserted in that order.
+
+   Construction:
+   - 1 becomes the root.
+   - 2 > 1, so it goes to the right of 1.
+   - 3 > 1 and > 2, so it goes to the right of 2.
+   - 4 > 1, > 2 and > 3, so it goes to the right of 3.
+   - 5 continues in the same way to the right of 4.
+
+   The binary search tree:
+
+   ```
+        1
+         \
+          2
+           \
+            3
+             \
+              4
+               \
+                5
+   ```
+
+   - Because the input is already in ascending order, every new element is larger than all its predecessors, so it always goes right. The result is a right skewed tree, which is effectively a linked list.
+
+   Traversals:
+   - Inorder, Left Root Right: 1, 2, 3, 4, 5
+   - Preorder, Root Left Right: 1, 2, 3, 4, 5
+   - Postorder, Left Right Root: 5, 4, 3, 2, 1
+
+   - Note that in a right skewed tree the preorder and the inorder are identical, and the postorder is the exact reverse. This is a useful check.
+
+   The point the question is really testing:
+   - This is the worst case for a binary search tree. The height is 4 with the root at height 0, whereas a balanced tree of 5 nodes would have height 2. Every search, insertion and deletion now costs O(n) instead of O(log n), so the tree has lost the entire advantage it was built for.
+   - Inserting sorted data into a plain BST always produces this degeneration, and it is precisely why self balancing trees such as AVL and Red-Black trees exist. Inserting the same five values in the order 3, 2, 4, 1, 5 would give a balanced tree of height 2.
 6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
+
+
+   Answer:
+
+   Given:
+   - Preorder: 1, 5, 8, 7, 4, 9, 3
+   - Inorder: 8, 5, 7, 1, 9, 4, 3
+
+   Method: the first element of the preorder is the root; locate it in the inorder to split that sequence into the left and right subtrees; then recurse on each part.
+
+   Step 1: the preorder begins with 1, so 1 is the root.
+   - Inorder: 8, 5, 7 | 1 | 9, 4, 3
+   - Left subtree = {8, 5, 7}, right subtree = {9, 4, 3}
+   - The preorder splits accordingly: left = 5, 8, 7 and right = 4, 9, 3
+
+   Step 2, left subtree with preorder 5, 8, 7 and inorder 8, 5, 7:
+   - Root is 5. In the inorder, 5 splits it into left {8} and right {7}.
+   - So 5 has left child 8 and right child 7, both leaves.
+
+   Step 3, right subtree with preorder 4, 9, 3 and inorder 9, 4, 3:
+   - Root is 4. In the inorder, 4 splits it into left {9} and right {3}.
+   - So 4 has left child 9 and right child 3, both leaves.
+
+   The tree:
+
+   ```
+                 1
+               /   \
+              5     4
+             / \   / \
+            8   7 9   3
+   ```
+
+   ```mermaid
+   graph TD
+       A["1"] --> B["5"]
+       A --> C["4"]
+       B --> D["8"]
+       B --> E["7"]
+       C --> F["9"]
+       C --> G["3"]
+   ```
+
+   Verification:
+   - Preorder, Root Left Right: 1, 5, 8, 7, 4, 9, 3. Matches.
+   - Inorder, Left Root Right: 8, 5, 7, 1, 9, 4, 3. Matches.
+   - Postorder, for completeness: 8, 7, 5, 9, 3, 4, 1.
+
+   Important observation that should be stated:
+   - The question calls for a BST, but the given data does not describe one. The inorder traversal of a genuine binary search tree must be in ascending order, and here it is 8, 5, 7, 1, 9, 4, 3, which is not sorted. The root 1 also has 8, 5 and 7 in its left subtree, all of which are larger than 1, which violates the search property directly.
+   - The tree constructed above is therefore the unique binary tree determined by the two given traversals, but it is not a binary search tree. The correct examination answer is to construct it faithfully and to point out that the data is inconsistent with the BST property. <!-- verify -->
 
 ## Hashing & Hash Tables (6)
 
 1. **(b) What is hash table? What are the advantages of using hash table?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
 
+
+   Answer:
+
+   What a hash table is:
+   - A hash table is a data structure that stores key and value pairs in an array, using a hash function to compute directly the index at which each key belongs. Instead of searching for a key, its position is calculated from the key itself.
+   - Components: the array of buckets or slots; the hash function h(k), which maps a key to an index in the range 0 to m − 1; and a collision resolution method, since two different keys may hash to the same index.
+   - Example: with a table of size 13 and h(k) = k mod 13, the key 16 is placed at index 3 because 16 mod 13 = 3.
+   - Load factor α = n / m, that is the number of entries divided by the table size, which determines how well the table performs. Once α exceeds about 0.7, the table is normally rehashed into a larger array.
+
+   Collision resolution:
+   - Separate chaining: each slot holds a linked list of all the keys that hash to it. Simple, and the table can hold more entries than it has slots.
+   - Open addressing: on a collision, another slot is probed within the same array, using linear probing, quadratic probing or double hashing. No extra memory is used, and cache performance is better, but deletion requires care and clustering can occur.
+
+   Advantages of a hash table:
+   - Average time of O(1) for search, insertion and deletion, which no comparison based structure can match. A balanced tree gives O(log n) and an array O(n).
+   - Direct computation of the position rather than repeated comparison, so the cost does not grow with the number of entries as long as the load factor is kept low.
+   - Simple and efficient implementation of associative arrays, dictionaries, sets and maps, which are among the most heavily used structures in programming.
+   - Efficient for exactly the operations that dominate real workloads: lookup by key, membership testing and counting occurrences.
+   - Flexible key types: any type can be used provided a suitable hash function exists, so strings, tuples and objects can all serve as keys.
+   - Very effective for large data sets, and its performance does not degrade with size while the load factor is controlled.
+   - Uses: symbol tables in compilers, database indexing, caches including the CPU cache and DNS cache, password storage, sets and dictionaries in every standard library, and de-duplication.
+
+   Limitations, which should also be stated:
+   - The worst case is O(n), when every key collides. A good hash function and a controlled load factor make this vanishingly unlikely, but an adversary who knows the hash function can construct such input deliberately, which is a hash flooding denial of service attack.
+   - The entries are unordered, so a hash table cannot answer range queries, find the minimum or maximum, or produce sorted output. A tree must be used for that.
+   - It wastes some memory, since the table is kept larger than the number of entries.
+   - Performance depends entirely on the quality of the hash function.
 2. **Consider a hash table of size 13 strong entries with integer keys. Suppose the hash function is h(k) = k \bmod 13. Insert in the given order entries with keys 10, 3, 6, 16, 17, 19 in to the hash table using linear probing to resolve collisions. Show all the work.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
 
+
+   Answer:
+
+   Given: table size m = 13, hash function h(k) = k mod 13, keys inserted in the order 10, 3, 6, 16, 17, 19, with linear probing for collisions.
+
+   Linear probing rule: if slot h(k) is occupied, try (h(k) + 1) mod 13, then (h(k) + 2) mod 13, and so on until a free slot is found.
+
+   Insertion step by step:
+
+   - Insert 10: h(10) = 10 mod 13 = 10. Slot 10 is free, so 10 is placed at index 10. No probe.
+   - Insert 3: h(3) = 3 mod 13 = 3. Slot 3 is free, so 3 is placed at index 3. No probe.
+   - Insert 6: h(6) = 6 mod 13 = 6. Slot 6 is free, so 6 is placed at index 6. No probe.
+   - Insert 16: h(16) = 16 mod 13 = 3. Slot 3 is occupied by 3, which is a collision. Probe index 4, which is free, so 16 is placed at index 4. One probe.
+   - Insert 17: h(17) = 17 mod 13 = 4. Slot 4 is occupied by 16, which is a collision caused by the previous insertion. Probe index 5, which is free, so 17 is placed at index 5. One probe.
+   - Insert 19: h(19) = 19 mod 13 = 6. Slot 6 is occupied by 6, a collision. Probe index 7, which is free, so 19 is placed at index 7. One probe.
+
+   Final hash table:
+
+   | Index | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+   |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+   | Key | — | — | — | 3 | 16 | 17 | 6 | 19 | — | — | 10 | — | — |
+
+   Summary of the work:
+   - Total collisions: 3, one each for the keys 16, 17 and 19.
+   - Total probes: 3.
+   - Load factor: α = 6 / 13 = 0.46, which is comfortably below the usual rehashing threshold of about 0.7.
+
+   Observation worth stating:
+   - The insertion of 17 illustrates primary clustering, which is the characteristic weakness of linear probing. The key 17 did not collide with another key of the same hash value; it collided with 16, which had itself been displaced there. Occupied slots therefore tend to form contiguous runs, and each run makes future collisions more likely and longer to resolve.
+   - Quadratic probing, which uses h(k) + i², or double hashing, which uses h1(k) + i × h2(k), spreads the probes out and avoids this clustering, at the cost of slightly worse cache behaviour.
 3. **অথবা, Hashing বলতে কী বোঝায়? Hash ফাংশন গঠনের জন্যে যে কোনো তিনটি পদ্ধতি বিস্তারিত লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+
+   Answer:
+
+   What hashing is:
+   - Hashing is the technique of converting a key of any size into a fixed size integer, called the hash value or hash code, which is used directly as an index into an array. It replaces searching by computation: instead of comparing the key against the stored entries, the position of the key is calculated from the key itself.
+   - This gives O(1) average time for search, insertion and deletion, which no comparison based structure can achieve.
+   - A collision occurs when two different keys produce the same index. Collisions are unavoidable, since the set of possible keys is far larger than the table, so every hash table needs a resolution method: separate chaining, in which each slot holds a linked list, or open addressing, in which another slot is probed.
+   - A good hash function should be fast to compute, should distribute the keys uniformly across the table, should be deterministic, and should use every part of the key.
+
+   Three methods of constructing a hash function:
+
+   Division method:
+   - h(k) = k mod m, where m is the table size.
+   - Example: with m = 13 and k = 16, h(16) = 16 mod 13 = 3.
+   - Advantages: extremely simple and fast, requiring one operation.
+   - Precaution: the choice of m matters greatly. A prime number not close to a power of 2 is chosen, because if m = 2^p the function uses only the lowest p bits of the key and ignores the rest, which clusters badly when the keys share low order patterns.
+
+   Multiplication method:
+   - h(k) = ⌊m × (k × A mod 1)⌋, where A is a constant with 0 < A < 1 and (k × A mod 1) means the fractional part of the product.
+   - Knuth recommends A = (√5 − 1)/2 ≈ 0.6180339887, the reciprocal of the golden ratio, because it distributes the keys particularly evenly.
+   - Example: with m = 100, k = 123 and A = 0.618, k × A = 76.014, the fractional part is 0.014, so h(123) = ⌊100 × 0.014⌋ = 1.
+   - Advantage: the value of m is not critical, so a power of 2 may be used, which makes the multiplication implementable with a shift.
+
+   Mid-square method:
+   - Square the key, then extract a fixed number of digits from the middle of the result and use them as the index.
+   - Example: for k = 3101, k² = 9616201; taking the middle three digits, 162, and reducing modulo the table size gives the index.
+   - Advantage: every digit of the key influences the middle digits of the square, so the whole key contributes to the result, which gives good distribution.
+   - Disadvantage: the square may overflow for large keys, and the choice of which digits to extract must be fixed in advance.
+
+   Two further methods, if more are wanted:
+   - Folding method: the key is divided into equal sized parts, the parts are added together, and the sum is reduced modulo m. For example the key 123456789 is split into 123, 456 and 789, which sum to 1368, and 1368 mod m gives the index. It is useful for very long keys such as identity numbers.
+   - Digit analysis: the digit positions that vary most across the expected set of keys are selected and combined, and the positions that are constant or nearly constant are discarded. It requires knowledge of the key distribution in advance.
+
+   - The practical rule: use the division method with a prime table size for general purposes; use the multiplication method when the table size must be a power of two; and use folding or digit analysis when the keys are long and structured, as with national identity numbers or account numbers.
 4. **Separate chaining hash function math.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
 
+
+   Answer: Separate chaining resolves collisions by making every slot of the hash table the head of a linked list, so that all the keys hashing to that slot are stored in the same list.
+
+   Method:
+   - Compute h(k) for the key.
+   - If the slot is empty, create a new node there.
+   - If it is occupied, append the new key to the linked list at that slot, or prepend it, which is O(1).
+   - To search, compute h(k) and then traverse only the list at that slot.
+   - To delete, compute h(k), find the node in that list and unlink it.
+
+   Worked example: table size m = 10, hash function h(k) = k mod 10, keys 12, 22, 35, 42, 15, 25.
+
+   - h(12) = 2 → slot 2 gets 12
+   - h(22) = 2 → collision, so 22 is chained at slot 2
+   - h(35) = 5 → slot 5 gets 35
+   - h(42) = 2 → collision, so 42 is chained at slot 2
+   - h(15) = 5 → collision, so 15 is chained at slot 5
+   - h(25) = 5 → collision, so 25 is chained at slot 5
+
+   Resulting table:
+
+   ```
+   Index
+     0  -> NULL
+     1  -> NULL
+     2  -> [12] -> [22] -> [42] -> NULL
+     3  -> NULL
+     4  -> NULL
+     5  -> [35] -> [15] -> [25] -> NULL
+     6  -> NULL
+     7  -> NULL
+     8  -> NULL
+     9  -> NULL
+   ```
+
+   Analysis:
+   - Load factor α = n / m = 6 / 10 = 0.6.
+   - Average length of a chain = α = 0.6.
+   - Average cost of an unsuccessful search = 1 + α = 1.6 comparisons.
+   - Average cost of a successful search = 1 + α/2 = 1.3 comparisons.
+   - Searching for 42 requires 3 comparisons, since it is third in the chain at slot 2.
+   - Worst case: if every key hashes to the same slot, the table degenerates into a single linked list and search becomes O(n).
+
+   Advantages of separate chaining:
+   - The number of entries may exceed the table size, since each slot holds an unbounded list, so there is no overflow and no need to rehash urgently.
+   - Deletion is simple: the node is unlinked, with no tombstone marker required as open addressing needs.
+   - Performance degrades gracefully as the load factor rises, rather than collapsing.
+   - The hash function need not be as good as open addressing demands.
+
+   Disadvantages:
+   - Extra memory for the pointers, and an allocation for every node.
+   - Poor cache performance, because the nodes are scattered in memory, whereas open addressing keeps everything in one contiguous array.
+   - Slots that receive no keys are wasted.
+   - Practical improvement used in modern libraries: when a chain exceeds a threshold, typically 8 entries, it is converted into a balanced tree, which bounds the worst case at O(log n) instead of O(n). Java's HashMap does exactly this.
 5. **You are giving to store a set of objects and you want to use a data structure. Where the expected running time to search an item is O(1). Which data structure is suitable to serve your purpose?** *[BCC Assistant Programmer 12.02.2021 compact it 815 (ET: BUET)]*
 
+
+   Answer: The suitable data structure is a hash table, also called a hash map or dictionary.
+
+   Why it meets the requirement:
+   - A hash table computes the position of an item directly from its key using a hash function, so no comparison or traversal is needed. The expected time for search, insertion and deletion is therefore O(1), independent of the number of items stored.
+   - No comparison based structure can achieve this. A balanced binary search tree gives O(log n), a sorted array gives O(log n) by binary search, and an unsorted array or linked list gives O(n).
+
+   Conditions for the O(1) expectation to hold:
+   - The hash function must distribute the keys uniformly across the table.
+   - The load factor α = n / m must be kept low, typically below about 0.7, which is achieved by rehashing into a larger table when the threshold is crossed.
+   - A collision resolution method must be in place: separate chaining, in which each slot holds a linked list, or open addressing with linear probing, quadratic probing or double hashing.
+
+   Worst case, which should be acknowledged:
+   - If every key hashes to the same slot, the structure degenerates into a linked list and search becomes O(n). With a good hash function this is extremely improbable, but an adversary who knows the hash function can construct such input deliberately, which is a hash flooding denial of service attack. Randomised or keyed hashing is used to prevent it.
+
+   Limitations that decide when a hash table is not the right choice:
+   - The entries are unordered, so a hash table cannot answer range queries, find the minimum or maximum, or produce sorted output. If any of those is required, a balanced binary search tree such as an AVL or Red-Black tree should be used instead, accepting O(log n).
+   - It uses more memory than the data alone, since the table is deliberately kept larger than the number of entries.
+
+   - Practical examples: `unordered_map` in C++, `HashMap` in Java, `dict` in Python and objects in JavaScript are all hash tables, and they are used precisely because lookup by key must be constant time.
 6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
+
+
+   Answer:
+
+   Given: hash function h(x) = x mod 11, so the table has 11 slots numbered 0 to 10. Keys are inserted in the order 22, 44, 73, 55, 18, 8, 31, 32, using linear probing for collisions.
+
+   Linear probing rule: if slot h(x) is occupied, try (h(x) + 1) mod 11, then (h(x) + 2) mod 11, and so on until a free slot is found.
+
+   Insertion step by step:
+
+   - Insert 22: h(22) = 22 mod 11 = 0. Slot 0 is free, so 22 is placed at index 0. No probe.
+   - Insert 44: h(44) = 44 mod 11 = 0. Slot 0 is occupied by 22, so probe index 1, which is free. 44 is placed at index 1. One probe.
+   - Insert 73: h(73) = 73 mod 11 = 7, since 73 = 6 × 11 + 7. Slot 7 is free, so 73 is placed at index 7. No probe.
+   - Insert 55: h(55) = 55 mod 11 = 0. Slot 0 is occupied, probe 1 which is occupied, probe 2 which is free. 55 is placed at index 2. Two probes.
+   - Insert 18: h(18) = 18 mod 11 = 7. Slot 7 is occupied by 73, so probe index 8, which is free. 18 is placed at index 8. One probe.
+   - Insert 8: h(8) = 8 mod 11 = 8. Slot 8 is occupied by 18, so probe index 9, which is free. 8 is placed at index 9. One probe.
+   - Insert 31: h(31) = 31 mod 11 = 9, since 31 = 2 × 11 + 9. Slot 9 is occupied by 8, so probe index 10, which is free. 31 is placed at index 10. One probe.
+   - Insert 32: h(32) = 32 mod 11 = 10. Slot 10 is occupied by 31. Probe (10 + 1) mod 11 = 0, occupied; probe 1, occupied; probe 2, occupied; probe 3, which is free. 32 is placed at index 3. Four probes, including the wrap around.
+
+   Final hash table:
+
+   | Index | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+   |---|---|---|---|---|---|---|---|---|---|---|---|
+   | Key | 22 | 44 | 55 | 32 | — | — | — | 73 | 18 | 8 | 31 |
+
+   Summary:
+
+   | Key | h(x) | Probes | Final slot |
+   |---|---|---|---|
+   | 22 | 0 | 0 | 0 |
+   | 44 | 0 | 1 | 1 |
+   | 73 | 7 | 0 | 7 |
+   | 55 | 0 | 2 | 2 |
+   | 18 | 7 | 1 | 8 |
+   | 8 | 8 | 1 | 9 |
+   | 31 | 9 | 1 | 10 |
+   | 32 | 10 | 4 | 3 |
+
+   - Total probes: 10. Load factor α = 8 / 11 = 0.73, which is already at the level at which rehashing into a larger table would normally be triggered.
+
+   Observation worth stating:
+   - The insertion of 32 shows both the wrap around, which is why the modulo is applied to the probe as well as to the hash, and primary clustering. Slots 7 to 10 and 0 to 3 have merged into one long occupied run, so 32 had to travel four positions from its home slot. Each such insertion lengthens the run and makes the next collision worse.
+   - Quadratic probing, using h(x) + i², or double hashing, using h1(x) + i × h2(x), breaks up these clusters and gives far better behaviour at a high load factor.
 
 ## Data Structure Fundamentals (2)
 
