@@ -1383,34 +1383,380 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    (b) CRC এর কাজ কী? (IIB CRC-16 এর ক্ষেত্র এবং প্রশ্নগুলো আলোচনা করুন)
    (c) Data communication এর ক্ষেত্রে bandwidth এবং throughput এর মধ্যে পার্থক্য লিখুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer:
+
+   (a) CMY color model
+   - Components: Cyan, Magenta and Yellow. In the practical printing version, CMYK, a fourth component Key, that is black, is added.
+   - It is a subtractive colour model: it starts from white paper and each ink subtracts, that is absorbs, one primary colour of light. Cyan absorbs red, magenta absorbs green and yellow absorbs blue.
+   - Relation to RGB: C = 1 − R, M = 1 − G, Y = 1 − B, when the values are normalised to the range 0 to 1.
+   - Work of the model: it is used for hard copy output, that is printers, plotters and all colour printing, because ink on paper works by subtracting reflected light, unlike a monitor which emits light and therefore uses the additive RGB model.
+   - K is added because mixing full C, M and Y gives a muddy dark brown rather than true black, and black ink alone is cheaper and sharper for text.
+
+   (b) Work of CRC
+   - CRC, Cyclic Redundancy Check, is an error detection method that treats the data as a binary polynomial and divides it by a fixed generator polynomial. The remainder becomes the check bits appended to the data.
+   - Sender: append n zeros to the data, where n is the degree of the generator, divide by the generator using modulo-2 division, and put the n bit remainder in place of the zeros.
+   - Receiver: divide the whole received frame by the same generator. A remainder of zero means the frame is accepted, any non-zero remainder means it is discarded.
+   - Detection power: it catches all single bit errors, all double bit errors for a suitable generator, all odd numbers of bit errors if the generator has the factor x + 1, and all burst errors shorter than or equal to the degree of the generator.
+   - CRC-16 uses the generator x¹⁶ + x¹⁵ + x² + 1, giving a 16 bit remainder that detects every burst error up to 16 bits and 99.997 percent of longer bursts. It is used in HDLC, USB and Modbus, while CRC-32 is used in Ethernet.
+   - It only detects errors, it does not correct them; correction is left to retransmission.
+
+   (c) Bandwidth vs throughput
+
+   | Point | Bandwidth | Throughput |
+   |---|---|---|
+   | Meaning | The maximum theoretical capacity of a link | The actual amount of data delivered successfully per unit time |
+   | Nature | A fixed property of the medium and the technology | A measured value that varies moment to moment |
+   | Unit | bps, Mbps, Gbps, or Hz for an analog channel | bps, Mbps, Gbps |
+   | Affected by | Medium, encoding, channel width | Congestion, errors, retransmission, protocol overhead, latency, device speed |
+   | Relation | Always the upper limit | Always less than or equal to the bandwidth |
+   | Analogy | The width of a road | The number of vehicles that actually pass per hour |
+   | Example | A 100 Mbps link | The same link may deliver only 60 Mbps of useful data |
 2. **Data communication mathematical problems.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
+
+   Answer: The standard formulas used for data communication numerical problems, with the method to apply them.
+
+   Delay and latency:
+   - Transmission time Tt = message size / bandwidth.
+   - Propagation time Tp = distance / propagation speed, where the speed is 2 × 10⁸ m/s in cable and 3 × 10⁸ m/s in air.
+   - Total latency = propagation + transmission + queuing + processing delay.
+
+   Capacity:
+   - Nyquist, for a noiseless channel: C = 2 B log2 L bps.
+   - Shannon, for a noisy channel: C = B log2(1 + SNR) bps.
+   - SNR in dB = 10 log10(Psignal / Pnoise).
+
+   Efficiency:
+   - Bandwidth delay product = bandwidth × round trip time, which is the number of bits that can be in flight.
+   - a = Tp / Tt, and link utilisation = W / (1 + 2a) for a window of W frames; for stop and wait W = 1.
+   - Throughput = useful data delivered per second, always less than the bandwidth after overhead is removed.
+
+   Method to follow in the examination:
+   - Write the formula first, then convert all units to bits and seconds, then substitute the numbers, then give the final answer with its unit on a separate line.
+   - Watch the units carefully: 1 byte is 8 bits, 1 kbps is 10³ bps in communication but 1 KB is 1024 bytes in storage.
+
+   Worked example: a 1 Mbps link of 5000 km with a 1000 bit frame.
+   - Tt = 1000 / 10⁶ = 1 ms.
+   - Tp = 5 × 10⁶ / (2 × 10⁸) = 25 ms.
+   - a = 25, so stop and wait efficiency = 1 / (1 + 50) = 1.96 percent, and effective throughput = 19.6 kbps out of 1 Mbps.
 3. **Question on data communication transmission and signal related math.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1441 (ET: BUET)]*
 
+
+   Answer: Signal and transmission numerical problems are solved with the following formulas.
+
+   Signal and bit rate:
+   - Bit rate = baud rate × log2 L, where L is the number of signal levels.
+   - Baud rate = bit rate / log2 L, that is the number of signal elements per second.
+
+   Bandwidth requirement:
+   - Nyquist noiseless capacity: C = 2 B log2 L, so the required bandwidth B = C / (2 log2 L).
+   - Shannon noisy capacity: C = B log2(1 + SNR).
+   - The practical capacity is the smaller of the two, and the number of levels needed follows from equating them.
+
+   Signal power:
+   - SNR = Psignal / Pnoise, and SNR in dB = 10 log10(SNR).
+   - Power in dBm = 10 log10(P in mW).
+   - Attenuation in dB = 10 log10(Pin / Pout); a gain is a positive dB and a loss is negative.
+
+   Time components:
+   - Transmission time = size / bandwidth, propagation time = distance / speed, and total latency is the sum of transmission, propagation, queuing and processing delays.
+
+   Worked example: a channel of 4 kHz bandwidth with SNR of 1000.
+   - Shannon: C = 4000 × log2(1001) = 4000 × 9.967 = 39,868 bps, about 39.9 kbps.
+   - Nyquist, to reach this rate: 39,868 = 2 × 4000 × log2 L, so log2 L = 4.98 and L = 31.6, so 32 levels are needed.
+   - Final answer: maximum capacity about 39.9 kbps, requiring 32 signal levels.
 4. **10Mbps bandwidth, average packet length 1500 bytes what is maximum packet arrival rate support without causing congestion.** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1430 (ET: BUET)]*
 
+
+   Answer:
+
+   Given:
+   - Bandwidth = 10 Mbps = 10 × 10⁶ bits per second.
+   - Average packet length = 1500 bytes.
+
+   Step 1, convert the packet length to bits:
+   - 1500 bytes × 8 = 12,000 bits per packet.
+
+   Step 2, maximum packet arrival rate:
+   - Rate = bandwidth / packet size in bits = 10 × 10⁶ / 12,000 = 833.33 packets per second.
+
+   Final answer: the link can support about 833 packets per second before congestion occurs.
+
+   - Note: at exactly this rate the link is 100 percent utilised, so the queue grows without limit. In practice the design target is about 70 to 80 percent, that is roughly 580 to 660 packets per second, to keep the queuing delay acceptable.
 5. **What is Total Latency for a 3-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 300\text{ km} and that light travels at 2 \times 10^8\text{ m/s}. Round Trip Time 50ms Queuing Time 5ms?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1320 (ET: DU)]*
 
+
+   Answer:
+
+   Given:
+   - Message size = 3 kbyte = 3 × 1024 × 8 = 24,576 bits.
+   - Bandwidth = 1 Gbps = 10⁹ bps.
+   - Distance = 300 km = 3 × 10⁵ m, speed of light in the medium = 2 × 10⁸ m/s.
+   - Round trip time = 50 ms, queuing time = 5 ms.
+
+   Step 1, transmission time:
+   - Tt = 24,576 / 10⁹ = 24.576 × 10⁻⁶ s = 0.0246 ms.
+
+   Step 2, propagation time:
+   - Tp = 3 × 10⁵ / 2 × 10⁸ = 1.5 × 10⁻³ s = 1.5 ms.
+
+   Step 3, total latency:
+   - Latency = RTT + queuing time + transmission time = 50 + 5 + 0.0246 = 55.02 ms.
+
+   Final answer: total latency is about 55.02 ms.
+
+   - Observation worth writing: the transmission time is only 0.0246 ms out of 55 ms, so the delay is dominated by the round trip and queuing time, not by the bandwidth. For a small message, increasing the bandwidth further would hardly help at all.
+   - If the RTT is not to be counted separately and only the one way path is asked, the latency would be Tp + Tt + queuing = 1.5 + 0.0246 + 5 = 6.52 ms.
 6. **Differentiate the following terms in tabular form:** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 300 (ET: BIBM)]*
    * **A. CSMA/CD and CSMA/CA.**
    * **B. Optical Communication and Satellite Communication.**
    * **C. Parity bit check, CRC and Checksum.**
 
+
+   Answer:
+
+   A. CSMA/CD vs CSMA/CA
+
+   | Point | CSMA/CD | CSMA/CA |
+   |---|---|---|
+   | Full form | Carrier Sense Multiple Access with Collision Detection | Carrier Sense Multiple Access with Collision Avoidance |
+   | Approach | Detects a collision after it happens and recovers | Tries to prevent a collision from happening |
+   | Medium | Wired, IEEE 802.3 Ethernet | Wireless, IEEE 802.11 Wi-Fi |
+   | Why | A wired node can transmit and listen at the same time | A radio node cannot hear a collision while transmitting, since its own signal is far stronger |
+   | On collision | Sends a jam signal, then binary exponential backoff | Waits a random backoff before transmitting at all, then uses RTS/CTS and ACK |
+   | Efficiency | Higher, the medium is used until a collision occurs | Lower, time is spent on backoff and control frames |
+   | Acknowledgement | Not used at the MAC layer | Every unicast frame is acknowledged |
+
+   B. Optical vs satellite communication
+
+   | Point | Optical communication | Satellite communication |
+   |---|---|---|
+   | Medium | Optical fibre cable | Free space radio, microwave |
+   | Bandwidth | Terabits per second with WDM | A few Gbps per satellite |
+   | Latency | Very low, a few ms over regional distances | About 250 ms one way for geostationary orbit |
+   | Coverage | Only where cable is laid, point to point | Very wide, whole continents, ships, aircraft, remote areas |
+   | Weather | Unaffected | Rain fade, atmospheric and solar interference |
+   | Cost | High to lay, very low per bit afterwards | High launch cost, expensive rented bandwidth |
+   | Security | High, a tap is detectable | Lower, the beam covers a huge area |
+   | Best use | Backbone, submarine, long haul bulk traffic | Broadcast, remote regions, disaster recovery, mobile platforms |
+
+   C. Parity bit check vs CRC vs Checksum
+
+   | Point | Parity bit | Checksum | CRC |
+   |---|---|---|---|
+   | Redundant bits | 1 bit | 8, 16 or 32 bits | 8, 16 or 32 bits |
+   | Method | Count the 1s and set the bit for even or odd parity | Add all the words, take the one's complement of the sum | Modulo-2 polynomial division, keep the remainder |
+   | Detects | Only an odd number of bit errors | Most errors, but not a reordering or a compensating pair of changes | All single and double errors, all odd errors, all bursts up to the generator degree |
+   | Strength | Weakest | Moderate | Strongest |
+   | Cost | Almost nothing | Cheap, simple addition | Higher, but implemented in hardware so it is fast |
+   | Layer used | Character transmission, memory | Transport layer, TCP, UDP, IP header | Data link layer, Ethernet, HDLC, USB |
 7. **Two math from data communication.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
+
+   Answer: Two typical data communication problems and their solutions.
+
+   Problem 1, channel capacity:
+   - A channel has a bandwidth of 4 kHz and a signal to noise ratio of 30 dB. Find the maximum data rate.
+   - SNR in linear form = 10^(30/10) = 1000.
+   - Shannon: C = B log2(1 + SNR) = 4000 × log2(1001) = 4000 × 9.967 = 39,868 bps.
+   - Final answer: about 39.9 kbps.
+
+   Problem 2, transmission and propagation delay:
+   - A 1000 bit frame is sent over a 1 Mbps link of length 2000 km, with a propagation speed of 2 × 10⁸ m/s. Find the total delay and the stop-and-wait efficiency.
+   - Transmission time Tt = 1000 / 10⁶ = 1 ms.
+   - Propagation time Tp = 2 × 10⁶ / 2 × 10⁸ = 10 ms.
+   - One way delay = Tt + Tp = 11 ms; the acknowledgement adds another 10 ms, so a full cycle is 21 ms.
+   - a = Tp / Tt = 10, so efficiency = 1 / (1 + 2a) = 1 / 21 = 4.76 percent.
+   - Effective throughput = 0.0476 × 1 Mbps = 47.6 kbps.
+   - Final answer: total delay 11 ms one way, efficiency 4.76 percent, throughput 47.6 kbps.
 8. **(গ) Data communication-এর সাপেক্ষে bandwidth এবং troughput এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer:
+
+   Bandwidth: kono link-er sorbochcho theoretical capacity, mane ek second-e sorbochcho koto bit pathano somvob. Digital channel-e eta bps, Mbps ba Gbps-e, ar analog channel-e Hz-e mapa hoy. Eta medium ar technology-r ekti nirdisto boishishtho.
+
+   Throughput: bastobe ek second-e koto bit shofolbhabe destination-e pouchay, tar mapa mullo. Eta shobshomoy bandwidth-er cheye kom hoy.
+
+   | Point | Bandwidth | Throughput |
+   |---|---|---|
+   | Meaning | The maximum theoretical capacity of a link | The actual amount of data delivered successfully per unit time |
+   | Nature | A fixed property of the medium and the technology | A measured value that varies moment to moment |
+   | Unit | bps, Mbps, Gbps, or Hz for an analog channel | bps, Mbps, Gbps |
+   | Affected by | Medium, encoding, channel width | Congestion, errors, retransmission, protocol overhead, latency, device speed |
+   | Relation | Always the upper limit | Always less than or equal to the bandwidth |
+   | Analogy | The width of a road | The number of vehicles that actually pass per hour |
+   | Example | A 100 Mbps link | The same link may deliver only 60 Mbps of useful data |
+
+   - Udahoron: ekti 100 Mbps LAN-e congestion, error, retransmission ar protocol overhead-er por bastobe hoyto 60 Mbps useful data pawa jay. Ekhane bandwidth 100 Mbps kintu throughput 60 Mbps.
 9. **CRC is a redundancy error technique used to determine the error. Suppose the original data is 11100 and divisor is 1001.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: data = 11100, divisor or generator = 1001.
+
+   Step 1, number of check bits:
+   - The divisor has 4 bits, so its degree is 3, and 3 zeros are appended to the data.
+   - Dividend = 11100 000 = 11100000.
+
+   Step 2, modulo-2 division of 11100000 by 1001:
+
+   ```
+        11100000 ÷ 1001
+        1001
+        ----
+        1010 000
+        1001
+        ----
+          11 000
+          1001
+          ----
+           101 0
+           0000
+           ----
+            1010
+            1001
+            ----
+             011  -> bring down, remainder = 111
+   ```
+
+   - Working it through step by step, the remainder is 111.
+
+   Step 3, transmitted codeword:
+   - Codeword = data + CRC = 11100 + 111 = 11100111.
+
+   Final answer: the CRC is 111 and the transmitted frame is 11100111.
+
+   Step 4, verification at the receiver:
+   - Dividing 11100111 by 1001 gives a remainder of 000, so the frame is accepted. Any non-zero remainder would mean an error and the frame would be discarded.
 10. **A telephone line normally has a bandwidth of 3000 Hz (300 to 3300 Hz) assigned for data communication. The SNR is usually 3162. What will be the capacity for this channel?** *[Combined Bank Assistant Programmer 09.06.2023 compact it 497 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - Bandwidth B = 3000 Hz, from 300 Hz to 3300 Hz.
+   - SNR = 3162.
+
+   Step 1, Shannon capacity formula:
+   - C = B log2(1 + SNR)
+
+   Step 2, substitute:
+   - C = 3000 × log2(1 + 3162) = 3000 × log2(3163)
+
+   Step 3, evaluate the logarithm:
+   - log2(3163) = ln(3163) / ln(2) = 8.0593 / 0.6931 = 11.627
+
+   Step 4, capacity:
+   - C = 3000 × 11.627 = 34,881 bps
+
+   Final answer: the channel capacity is about 34,881 bps, that is roughly 34.9 kbps.
+
+   - Note: SNR = 3162 corresponds to 10 log10(3162) = 35 dB, and a useful shortcut is C ≈ B × SNR(dB) / 3, which gives 3000 × 35 / 3 = 35,000 bps, very close to the exact value. This is exactly why old telephone line modems topped out at about 33.6 kbps.
 11. **Which technique is used for binary division check in network?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: The technique used for binary division based checking in a network is CRC, the Cyclic Redundancy Check.
+
+   - The data is treated as a binary polynomial and divided by a fixed generator polynomial using modulo-2 division; the remainder is appended as the check bits.
+   - The receiver divides the received frame by the same generator, and a zero remainder means the frame is error free.
+   - It is used in Ethernet with CRC-32, and in HDLC and USB with CRC-16.
 12. **Explain parity method for error detection. Write down the bit strings of “Delta” using ASCII.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
 
+
+   Answer:
+
+   Parity method for error detection:
+   - One extra bit, the parity bit, is added to each group of data bits so that the total number of 1s becomes even or odd according to the agreed scheme.
+   - Even parity: the parity bit is set so that the count of 1s including the parity bit is even. Odd parity: the count is made odd.
+   - Sender: count the 1s in the data and set the parity bit accordingly. Receiver: count the 1s in the received unit including the parity bit; if the parity is wrong, an error has occurred and the unit is discarded.
+   - Example, data 1000100 with even parity: it has two 1s, already even, so the parity bit is 0 and the transmitted unit is 10001000.
+   - Strengths: extremely simple and cheap, needs only one bit.
+   - Weakness: it detects only an odd number of bit errors. If two bits flip, the parity is unchanged and the error passes undetected. It cannot correct anything.
+   - Two dimensional parity, that is a parity bit per row and per column, improves this and can even correct a single bit error, but CRC is used instead wherever the error rate matters.
+
+   Bit strings of "Delta" in 7 bit ASCII:
+
+   | Character | Decimal | 7 bit ASCII | With even parity as the 8th bit |
+   |---|---|---|---|
+   | D | 68 | 1000100 | 10001000 |
+   | e | 101 | 1100101 | 11001010 |
+   | l | 108 | 1101100 | 11011001 |
+   | t | 116 | 1110100 | 11101001 |
+   | a | 97 | 1100001 | 11000011 |
+
+   - Full bit string of "Delta" in 7 bit ASCII: 1000100 1100101 1101100 1110100 1100001, that is 35 bits in all.
 13. **An end system sends 50 packets per second using the User Datagram Protocol (UDP) over a full duplex 100 Mbps ethernet LAN connection. Each packet consists 1500B of ethernet frame payload data. What is the throughput, when measured at the UDP layer?** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - 50 packets per second, over a full duplex 100 Mbps Ethernet link.
+   - Each packet contains 1500 bytes of Ethernet frame payload data.
+
+   Step 1, find how much of the 1500 bytes is actual UDP application data:
+   - The Ethernet payload carries the IP packet.
+   - IP header = 20 bytes, UDP header = 8 bytes, total overhead = 28 bytes.
+   - UDP application data = 1500 − 28 = 1472 bytes.
+
+   Step 2, convert to bits:
+   - 1472 × 8 = 11,776 bits per packet.
+
+   Step 3, throughput at the UDP layer:
+   - Throughput = 50 × 11,776 = 588,800 bps.
+
+   Final answer: the throughput measured at the UDP layer is 588,800 bps, that is about 588.8 kbps or 0.589 Mbps.
+
+   - Note: measured at the Ethernet payload level it would be 50 × 1500 × 8 = 600 kbps, and the 100 Mbps link is therefore only about 0.6 percent utilised.
 14. **The message 11001001 is to be transmitted using the CRC polynomial x^3+1 to protect it from the errors. Now find out the message that should be transmitted.** *[BAUST Assistant Programmer 2021 compact it 917-918 (ET: N/A)]*
+
+
+   Answer:
+
+   Given:
+   - Message M = 11001001.
+   - Generator polynomial G(x) = x³ + 1, which in binary is 1001 since the x² term is absent.
+
+   Step 1, number of check bits:
+   - The degree of the generator is 3, so 3 zeros are appended.
+   - Dividend = 11001001 000 = 11001001000.
+
+   Step 2, modulo-2 division of 11001001000 by 1001:
+
+   ```
+   11001001000 ÷ 1001
+   1001
+   ----
+   1010 01000
+   1001
+   ----
+     11 01000
+     1001
+     ----
+      1 11000
+        1001
+        ----
+         1110 0
+         1001
+         ----
+          1110
+          1001
+          ----
+           011   remainder = 011
+   ```
+
+   - The remainder, that is the CRC, is 011.
+
+   Step 3, transmitted message:
+   - Transmitted frame = original message with the zeros replaced by the remainder = 11001001 011 = 11001001011.
+
+   Final answer: the message to be transmitted is 11001001011.
+
+   Step 4, check:
+   - Dividing 11001001011 by 1001 gives a remainder of 000, which confirms the codeword is correct.
 
 ## Data Rate & Channel Capacity (Nyquist, Shannon) (14)
 
