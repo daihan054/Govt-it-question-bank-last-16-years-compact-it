@@ -1741,17 +1741,192 @@
 
 1. **What is Blockchain technology? How it works?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 324 (ET: BIBM)]*
 
+
+   Answer:
+
+   What blockchain technology is:
+
+   - Blockchain is a distributed, decentralised digital ledger in which records, called transactions, are grouped into blocks and each block is cryptographically linked to the one before it, forming a chain. The ledger is replicated across every node of a peer to peer network, and no single party owns or controls it.
+   - Once a block has been added it cannot be altered without altering every subsequent block and gaining the agreement of the majority of the network, which is what makes the record effectively immutable.
+   - Its key properties are decentralisation, immutability, transparency, cryptographic security and consensus.
+   - Types: public and permissionless, such as Bitcoin and Ethereum, where anyone may join; private and permissioned, such as Hyperledger Fabric, where participation is controlled; and consortium chains shared by a group of organisations.
+
+   How it works:
+   - Step 1: a user initiates a transaction, which is signed with the user's private key.
+   - Step 2: the transaction is broadcast to the peer to peer network of nodes.
+   - Step 3: the nodes validate it — they check the digital signature, that the sender owns what is being transferred, and that it has not already been spent.
+   - Step 4: validated transactions are collected into a block, together with a timestamp, a nonce and the hash of the previous block.
+   - Step 5: the network reaches consensus on the new block through a consensus mechanism. Proof of Work requires miners to find a nonce that makes the block hash begin with a required number of zeros, which costs real computation; Proof of Stake instead selects a validator in proportion to the stake it has locked up, which costs far less energy. Other mechanisms are PBFT and Proof of Authority.
+   - Step 6: the accepted block is appended to the chain and the updated ledger is propagated to every node, so all copies agree.
+   - Step 7: the transaction is now permanent. Because each block stores the hash of the previous block, changing any past transaction changes that block's hash and therefore breaks every link after it, and the tampering is detected immediately.
+
+   Structure of a block: the block header holding the previous block's hash, a timestamp, the nonce and the Merkle root; and the block body holding the list of transactions. The Merkle tree lets any single transaction be verified without downloading the whole block.
+
+   Applications: cryptocurrencies, cross border payment and remittance, trade finance and letters of credit, supply chain traceability, land record registration, digital identity, health records, voting and smart contracts.
 2. **What is blockchain technology? Why it is more secure( Such type)** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 500 (ET: IBA)]*
 
+
+   Answer:
+
+   What blockchain technology is:
+
+   - Blockchain is a distributed, decentralised digital ledger in which records, called transactions, are grouped into blocks and each block is cryptographically linked to the one before it, forming a chain. The ledger is replicated across every node of a peer to peer network, and no single party owns or controls it.
+   - Once a block has been added it cannot be altered without altering every subsequent block and gaining the agreement of the majority of the network, which is what makes the record effectively immutable.
+
+   Why it is more secure than a conventional database:
+   - Cryptographic hashing: every block contains the hash of the previous block, so altering any past record changes its hash and breaks the whole chain from that point onward, which every node detects at once.
+   - Decentralisation: there is no central server to attack. To rewrite history an attacker must control more than half the network's computing power or stake, which for a large public chain is prohibitively expensive. This is the 51 percent attack.
+   - Consensus: no single node can add a block by itself; the majority must agree, so a compromised node cannot inject false transactions.
+   - Digital signatures: every transaction is signed with the sender's private key and verified with the public key, so a transaction cannot be forged or repudiated.
+   - Immutability and append-only design: records can be added but never edited or deleted, which gives a complete and permanent audit trail.
+   - Transparency: on a public chain every participant can verify the whole ledger independently, so fraud is visible.
+   - Redundancy: the ledger exists on thousands of nodes, so there is no single point of failure and no possibility of losing the data.
+
+   Limitations that should also be stated: blockchain secures the ledger, not the applications around it. Private keys can be stolen, exchanges can be hacked, smart contracts can contain bugs, and a small private chain with few nodes is far easier to attack than a large public one. Public chains are also slow and energy hungry compared with a conventional database, and data once written cannot be corrected, which conflicts with privacy laws such as the right to erasure.
 3. **Write about Blockchain.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 506 (ET: N/A)]*
 
+
+   Answer:
+
+   - Blockchain is a distributed, decentralised digital ledger in which records, called transactions, are grouped into blocks and each block is cryptographically linked to the one before it, forming a chain. The ledger is replicated across every node of a peer to peer network, and no single party owns or controls it.
+   - Once a block has been added it cannot be altered without altering every subsequent block and gaining the agreement of the majority of the network, which is what makes the record effectively immutable.
+
+   How it works:
+   - Step 1: a user initiates a transaction, which is signed with the user's private key.
+   - Step 2: the transaction is broadcast to the peer to peer network of nodes.
+   - Step 3: the nodes validate it — they check the digital signature, that the sender owns what is being transferred, and that it has not already been spent.
+   - Step 4: validated transactions are collected into a block, together with a timestamp, a nonce and the hash of the previous block.
+   - Step 5: the network reaches consensus on the new block through a consensus mechanism. Proof of Work requires miners to find a nonce that makes the block hash begin with a required number of zeros, which costs real computation; Proof of Stake instead selects a validator in proportion to the stake it has locked up, which costs far less energy. Other mechanisms are PBFT and Proof of Authority.
+   - Step 6: the accepted block is appended to the chain and the updated ledger is propagated to every node, so all copies agree.
+   - Step 7: the transaction is now permanent. Because each block stores the hash of the previous block, changing any past transaction changes that block's hash and therefore breaks every link after it, and the tampering is detected immediately.
+
+   Structure of a block: the block header holding the previous block's hash, a timestamp, the nonce and the Merkle root; and the block body holding the list of transactions. The Merkle tree lets any single transaction be verified without downloading the whole block.
+
+   Key characteristics:
+   - Decentralised: no central authority; every node holds a copy of the ledger.
+   - Immutable: once written, a record cannot be altered without breaking the chain.
+   - Transparent: on a public chain every participant can verify every transaction.
+   - Secure: protected by cryptographic hashing, digital signatures and consensus.
+   - Consensus driven: the majority must agree before anything is added.
+
+   Types of blockchain:
+   - Public and permissionless: Bitcoin and Ethereum, open to anyone.
+   - Private and permissioned: Hyperledger Fabric and Corda, controlled membership, used by enterprises.
+   - Consortium: shared and governed by a group of organisations, common in banking and trade finance.
+
+   Applications: cryptocurrency, cross border remittance, trade finance, supply chain traceability, land records, digital identity, health records, intellectual property, voting, and smart contracts, which are self executing programs stored on the chain.
+
+   Limitations: low transaction throughput compared with a conventional database; high energy consumption for Proof of Work; the difficulty of correcting an error once written; scalability and storage growth; regulatory uncertainty; and the fact that securing the ledger does not secure the applications, wallets and exchanges around it.
 4. **What is Blockchain? How does work it? Mention 5 top benefits of blockchain. Write down the difference between Traditional banking and Digital banking.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 513 (ET: MIST)]*
 
+
+   Answer:
+
+   What blockchain is:
+
+   - Blockchain is a distributed, decentralised digital ledger in which records, called transactions, are grouped into blocks and each block is cryptographically linked to the one before it, forming a chain. The ledger is replicated across every node of a peer to peer network, and no single party owns or controls it.
+   - Once a block has been added it cannot be altered without altering every subsequent block and gaining the agreement of the majority of the network, which is what makes the record effectively immutable.
+
+   How it works:
+   - Step 1: a user initiates a transaction, which is signed with the user's private key.
+   - Step 2: the transaction is broadcast to the peer to peer network of nodes.
+   - Step 3: the nodes validate it — they check the digital signature, that the sender owns what is being transferred, and that it has not already been spent.
+   - Step 4: validated transactions are collected into a block, together with a timestamp, a nonce and the hash of the previous block.
+   - Step 5: the network reaches consensus on the new block through a consensus mechanism. Proof of Work requires miners to find a nonce that makes the block hash begin with a required number of zeros, which costs real computation; Proof of Stake instead selects a validator in proportion to the stake it has locked up, which costs far less energy. Other mechanisms are PBFT and Proof of Authority.
+   - Step 6: the accepted block is appended to the chain and the updated ledger is propagated to every node, so all copies agree.
+   - Step 7: the transaction is now permanent. Because each block stores the hash of the previous block, changing any past transaction changes that block's hash and therefore breaks every link after it, and the tampering is detected immediately.
+
+   Structure of a block: the block header holding the previous block's hash, a timestamp, the nonce and the Merkle root; and the block body holding the list of transactions. The Merkle tree lets any single transaction be verified without downloading the whole block.
+
+   Five top benefits of blockchain:
+   - Security and immutability: cryptographic linking makes past records effectively impossible to alter without detection, which gives a permanent and trustworthy audit trail.
+   - Decentralisation and no single point of failure: the ledger is replicated across many nodes, so there is no central server to attack or to lose.
+   - Transparency and traceability: every participant can verify the ledger independently, and the full history of an asset can be traced, which is why it suits supply chains and trade finance.
+   - Reduced cost and elimination of intermediaries: parties transact directly without a clearing house or a correspondent bank, which cuts fees and the number of reconciliations.
+   - Speed and efficiency, especially in cross border settlement: a remittance or a letter of credit that takes days through correspondent banking can settle in minutes, and smart contracts execute automatically when their conditions are met.
+
+   Difference between traditional banking and digital banking:
+
+   | Point | Traditional banking | Digital banking |
+   |---|---|---|
+   | Channel | Physical branch, counter and cheque | Website, mobile application, ATM, agent point |
+   | Hours | Fixed banking hours on working days | 24 hours a day, every day |
+   | Location | The customer must travel to the branch | Available anywhere with a network connection |
+   | Speed | Slow; a transfer may take hours or days | Instant, through RTGS, BEFTN and mobile financial services |
+   | Paperwork | Heavy: forms, signatures, cheques, passbooks | Minimal: e-KYC, digital signature, electronic statements |
+   | Cost to the bank | High: premises, staff, cash handling | Very low cost per transaction |
+   | Cost to the customer | Travel and time | Little or none |
+   | Account opening | Visit the branch with documents and an introducer | e-KYC and NID verification, often within minutes |
+   | Reach and inclusion | Limited to where branches are viable | Reaches rural and remote customers through agent banking and mobile wallets |
+   | Personal service | Face to face relationship and advice | Chatbots and call centres, less personal |
+   | Security risk | Physical theft, forged cheque, robbery | Phishing, account takeover, malware, so it needs multi-factor authentication |
+   | Record keeping | Manual ledgers and physical vouchers | Fully digital, searchable, auditable |
+   | Dependence | On staff availability | On connectivity, electricity and system uptime |
+
+   - The two are complements rather than substitutes: digital banking handles volume and reach, while branches remain necessary for cash, complex advice and customers who are not digitally able.
 5. **A distributive ledger in a peer-to-peer network is called?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)]*
 
+
+   Answer: A distributed ledger maintained across a peer to peer network is called a blockchain, and the general category is Distributed Ledger Technology, DLT.
+
+   - Blockchain is the best known form of distributed ledger, in which the records are grouped into blocks that are cryptographically chained together.
+   - Not every distributed ledger is a blockchain: some, such as IOTA's Tangle and Hashgraph, use a directed acyclic graph rather than a chain of blocks.
+   - The defining features of a distributed ledger are that every node holds a copy, that there is no central authority, and that changes are agreed by a consensus mechanism.
 6. **(a) Write short note on (i) Blockchain technology (ii) Cloud Computing** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
+
+   Answer:
+
+   (i) Blockchain technology:
+
+   - Blockchain is a distributed, decentralised digital ledger in which records, called transactions, are grouped into blocks and each block is cryptographically linked to the one before it, forming a chain. The ledger is replicated across every node of a peer to peer network, and no single party owns or controls it.
+   - Once a block has been added it cannot be altered without altering every subsequent block and gaining the agreement of the majority of the network, which is what makes the record effectively immutable.
+   - How it works, briefly: a transaction is signed and broadcast to the network, the nodes validate it, validated transactions are grouped into a block with a timestamp and the previous block's hash, the network reaches consensus through Proof of Work or Proof of Stake, and the block is appended to every copy of the chain.
+   - Key properties: decentralisation, immutability, transparency, cryptographic security and consensus.
+   - Types: public such as Bitcoin and Ethereum, private such as Hyperledger Fabric, and consortium chains.
+   - Applications: cryptocurrency, cross border remittance, trade finance, supply chain traceability, land records, digital identity and smart contracts.
+   - Limitations: low throughput, high energy use in Proof of Work, difficulty of correcting an error once written, and regulatory uncertainty.
+
+   (ii) Cloud computing:
+
+   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - Its five essential characteristics are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+   - Service models: IaaS, which provides virtual machines, storage and networking; PaaS, which provides a ready runtime platform; and SaaS, which provides a complete finished application.
+   - Deployment models: public, private, hybrid and community cloud.
+   - Advantages: low initial cost, scalability and elasticity, access from anywhere, built in backup and disaster recovery, automatic updates and rapid deployment.
+   - Disadvantages: dependence on the Internet, security and data sovereignty concerns, limited control, vendor lock-in and possibly higher long term cost.
 7. **Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 696 (ET: N/A)]*
+
+
+   Answer:
+
+   (a) Digital Signature:
+   - A digital signature is a cryptographic mechanism that proves who created a message and that it has not been altered since.
+   - How it works: the sender computes a hash of the message and encrypts that hash with the sender's private key; the result is the signature. The receiver decrypts the signature with the sender's public key to recover the hash, computes the hash of the received message independently, and compares the two. If they match, both the sender's identity and the integrity of the message are confirmed.
+   - It provides authentication, that is proof of who sent it; integrity, that is proof that nothing was changed; and non-repudiation, that is the sender cannot later deny having sent it. It does not by itself provide confidentiality, for which the message must also be encrypted.
+   - Algorithms: RSA, DSA and ECDSA, with SHA-256 as the hash. A Certifying Authority issues the digital certificate that binds a public key to an identity, within a Public Key Infrastructure.
+   - Uses: signed email, software signing, secure government and banking documents, e-tendering, and in Bangladesh the digital signature certificates issued under the ICT Act, which give a signed electronic document the same legal validity as a handwritten signature.
+
+   (b) Cloud Computing:
+
+   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - Its five essential characteristics are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+   - Service models: IaaS, which provides virtual machines, storage and networking; PaaS, which provides a ready runtime platform; and SaaS, which provides a complete finished application.
+   - Deployment models: public, private, hybrid and community cloud.
+   - Advantages: low initial cost, scalability and elasticity, access from anywhere, built in backup and disaster recovery, automatic updates and rapid deployment.
+   - Disadvantages: dependence on the Internet, security and data sovereignty concerns, limited control, vendor lock-in and possibly higher long term cost.
+
+   (c) Block Chain:
+
+   - Blockchain is a distributed, decentralised digital ledger in which records, called transactions, are grouped into blocks and each block is cryptographically linked to the one before it, forming a chain. The ledger is replicated across every node of a peer to peer network, and no single party owns or controls it.
+   - Once a block has been added it cannot be altered without altering every subsequent block and gaining the agreement of the majority of the network, which is what makes the record effectively immutable.
+   - It works by validating a signed transaction across a peer to peer network, grouping validated transactions into a block containing the previous block's hash, agreeing that block through a consensus mechanism such as Proof of Work or Proof of Stake, and appending it to every copy of the ledger.
+   - Properties: decentralisation, immutability, transparency and cryptographic security.
+   - Applications: cryptocurrency, remittance, trade finance, supply chain traceability, land records, digital identity and smart contracts.
+
+   (d) TOT:
+   - As printed, TOT is most probably a transcription of IoT, the Internet of Things, which is the network of physical objects fitted with sensors, software and connectivity that collect data and exchange it over the Internet with little human intervention. Its components are sensors and actuators, an embedded processor, connectivity such as Wi-Fi, Zigbee, LoRaWAN or 5G, a gateway, a cloud platform, analytics and a user application. Its applications are smart metering, smart agriculture, wearable health monitors, smart traffic control and industrial predictive maintenance, and its main challenges are security, power consumption and the absence of a single common standard.
+   - If the intended term is ToT, Transfer of Technology, it means the transfer of knowledge, skills, methods and equipment from one organisation or country to another, so that the receiving party can use and eventually reproduce the technology itself. It is a common condition in development projects and in large government procurement. <!-- verify -->
 
 ## Data Center Infrastructure & Power Management (7)
 
