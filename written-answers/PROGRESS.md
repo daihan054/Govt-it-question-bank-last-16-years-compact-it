@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 53/239 subtopics · 529/2673 answers**
+**Overall: 54/239 subtopics · 538/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -107,7 +107,7 @@ Commit unit: one `##` subtopic.
 - [ ] Email & Messaging Security (Spam, Phishing) (2)
 - [ ] Buffer Overflow & Software Vulnerabilities (1)
 
-## computer-networks.md — 13/33 sections, 50/440 answers
+## computer-networks.md — 14/33 sections, 59/440 answers
 
 - [ ] Subnetting & IP Addressing (95)
 - [ ] OSI & TCP/IP Reference Model (43)
@@ -128,7 +128,7 @@ Commit unit: one `##` subtopic.
 - [x] Network Address Translation (NAT) (11)
 - [ ] Network Services (DHCP, NAT) (10)
 - [ ] Digital Modulation & Signal Processing (BPSK, QPSK) (10)
-- [ ] Flow Control & Data Link Layer (Stop-and-Wait) (9)
+- [x] Flow Control & Data Link Layer (Stop-and-Wait) (9)
 - [ ] Email Architecture & Protocols (SMTP, POP3, IMAP) (9)
 - [x] Application Layer & Well-Known Port Numbers (6)
 - [x] Switching Techniques (Circuit vs Packet Switching) (5)

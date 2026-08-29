@@ -1104,19 +1104,135 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 2. **Using an explanation of the difference between flow-control and congestion control, discuss the impact of a stable end-to-end latency.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 424 (ET: BIBM)]*
 
+
+   Answer:
+
+   | Point | Flow control | Congestion control |
+   |---|---|---|
+   | Problem addressed | A fast sender overwhelming a slow receiver | Too much traffic overwhelming the network itself |
+   | Scope | End to end, between two hosts | Global, involves routers and the whole network |
+   | Layer | Data link layer and transport layer | Mainly transport and network layer |
+   | Mechanism | Sliding window, receiver advertised window | Slow start, congestion window, AIMD, ECN |
+   | Who signals | The receiver, through the window size in the acknowledgement | The network, through packet loss, delay or ECN marks |
+
+   Impact of a stable end to end connection:
+   - When the path is stable, the round trip time stays predictable, so TCP's retransmission timer is accurate and unnecessary retransmissions are avoided.
+   - The congestion window can grow to the full bandwidth delay product and stay there, so throughput reaches its maximum.
+   - Buffer occupancy at the receiver stays steady, so the advertised window does not oscillate and the sender transmits smoothly.
+   - On an unstable path, variable delay causes spurious timeouts, the congestion window repeatedly collapses to one, and throughput drops sharply even when no real congestion exists.
 3. **(খ) Congestion কী? Network-এ কীভাবে Congestion নিয়ন্ত্রণ করা যায়? আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
 
+
+   Answer: Congestion occurs when the number of packets arriving at a part of the network exceeds what that part can handle, so router queues overflow and packets are dropped.
+
+   Symptoms: rising queue length, growing delay, packet loss, many retransmissions and falling throughput. If it is not controlled it leads to congestion collapse, where the network is busy but almost no useful data gets through.
+
+   Congestion control methods:
+   - Open loop, that is prevention: admission control, traffic shaping with leaky bucket or token bucket, and proper resource allocation before congestion occurs.
+   - Closed loop, that is reaction: the network detects congestion and feeds the information back, then the sender slows down.
+   - TCP congestion control: slow start increases the window exponentially, congestion avoidance increases it linearly after a threshold, fast retransmit resends a lost segment after three duplicate acknowledgements, and fast recovery halves the window instead of dropping to one.
+   - Choke packet: the router sends an explicit message to the source telling it to reduce its rate.
+   - Explicit Congestion Notification marks packets instead of dropping them, so the sender is warned earlier.
+   - Random Early Detection drops packets at random before the queue is completely full, which prevents global synchronisation.
+   - Load shedding: when nothing else works, the router simply discards packets, preferring to drop lower priority ones.
 4. **Unit of data link layer?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: The unit of data at the data link layer is called a frame.
+
+   - A frame consists of a header, the payload received from the network layer, and a trailer.
+   - The header carries the source and destination MAC address, and the trailer carries the error checking field, normally a CRC.
+   - For reference, the unit is a bit at the physical layer, a packet or datagram at the network layer, a segment for TCP and a datagram for UDP at the transport layer, and data or a message at the application layer.
 5. **(ক) নেটওয়ার্কে ডাটা প্যাকেটে trailer কোথায় এবং কেন ব্যবহার করা হয়? উদাহরণ দিন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 775 (ET: N/A)]*
 
+
+   Answer: The trailer is placed at the end of the data link layer frame, after the payload.
+
+   Why it is used:
+   - It carries the error detection field, normally a Cyclic Redundancy Check, computed over the header and the data.
+   - The receiver recomputes the CRC and compares it with the received value; if they differ the frame is discarded, so corrupted data never reaches the upper layer.
+   - It may also carry a frame delimiter that marks the end of the frame.
+
+   Why at the end rather than in the header:
+   - The CRC can only be computed after the whole frame content is known, so placing it at the end lets the sender calculate and transmit it on the fly without buffering the entire frame first.
+
+   Example, Ethernet frame:
+   - Header: destination MAC 6 bytes, source MAC 6 bytes, type or length 2 bytes.
+   - Payload: 46 to 1500 bytes.
+   - Trailer: Frame Check Sequence of 4 bytes, which is the CRC-32 value.
 6. **How STP works? Explain congestion control algorithm.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 842-843 (ET: N/A)]*
 
+
+   Answer:
+
+   How STP works:
+   - STP is the Spanning Tree Protocol, defined in IEEE 802.1D, and its job is to prevent switching loops in a network that has redundant links.
+   - Without it, a loop causes broadcast storms, multiple frame copies and MAC table instability, because Ethernet frames have no TTL field.
+   - Step 1: all switches exchange BPDU messages and elect a Root Bridge, which is the switch with the lowest bridge ID, that is priority followed by MAC address.
+   - Step 2: every other switch selects one Root Port, the port with the lowest path cost towards the root.
+   - Step 3: on each network segment one Designated Port is chosen, again by lowest path cost.
+   - Step 4: every remaining port is put into Blocking state, so the physical loop becomes a loop free logical tree.
+   - Port states are Blocking, Listening, Learning, Forwarding and Disabled. Convergence takes about 30 to 50 seconds, which is why Rapid STP (802.1w) is normally used today.
+   - If an active link fails, a blocked port is brought back into forwarding, so redundancy is preserved without a loop.
+
+   Congestion control methods:
+   - Open loop, that is prevention: admission control, traffic shaping with leaky bucket or token bucket, and proper resource allocation before congestion occurs.
+   - Closed loop, that is reaction: the network detects congestion and feeds the information back, then the sender slows down.
+   - TCP congestion control: slow start increases the window exponentially, congestion avoidance increases it linearly after a threshold, fast retransmit resends a lost segment after three duplicate acknowledgements, and fast recovery halves the window instead of dropping to one.
+   - Choke packet: the router sends an explicit message to the source telling it to reduce its rate.
+   - Explicit Congestion Notification marks packets instead of dropping them, so the sender is warned earlier.
+   - Random Early Detection drops packets at random before the queue is completely full, which prevents global synchronisation.
+   - Load shedding: when nothing else works, the router simply discards packets, preferring to drop lower priority ones.
 7. **Host A is sending data to Host B over a full duplex link. A and B are using the sliding window protocol for flow control. The send and receive window size are 5 packets each. Data packets (sent only from A to B) are all 1000 bytes long and transmission time for such a packet is 50\mu\text{s}. Acknowledgement packets (sent only from B to A) are very small and require negligible transmission time. The propagation delay over the link is 200\mu\text{s}. What is the maximum achievable throughput in this communication?** *[BAUST Assistant Programmer 2021 compact it 918 (ET: N/A)]*
 
+
+   Answer: In the sliding window protocol the sender may transmit a window of frames before waiting for an acknowledgement, which keeps the link busy instead of idle.
+
+   Key relations:
+   - Link utilisation = W / (1 + 2a), where W is the window size in frames and a is the ratio of propagation time to transmission time.
+   - Transmission time Tt = frame size / bandwidth.
+   - The optimum window size is W = 1 + 2a, because at that value the first acknowledgement returns exactly when the last frame of the window has been sent, so the link never goes idle.
+   - Sequence number bits needed: for Go-Back-N the window must satisfy W ≤ 2ⁿ − 1, and for Selective Repeat W ≤ 2ⁿ⁻¹.
+
+   Worked method:
+   - Compute Tt = L / B and Tp = distance / propagation speed.
+   - Compute a = Tp / Tt.
+   - Efficiency = W / (1 + 2a), and effective throughput = efficiency × bandwidth.
+   - Example: with L = 1000 bits, B = 1 Mbps and Tp = 10 ms, Tt = 1 ms so a = 10. Utilisation with W = 4 is 4/21 = 19 percent, while the optimum window 21 gives full utilisation.
+
+   - Stop and wait is the special case W = 1, which is why it performs very poorly on long or fast links.
 8. **What is the piggybacking and MAC Address?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 921 (ET: N/A)]*
 
+
+   Answer:
+
+   Piggybacking:
+   - It is the technique of carrying an acknowledgement inside an outgoing data frame instead of sending a separate acknowledgement frame.
+   - When both sides are sending data, the receiver delays its acknowledgement for a short time and attaches it to the next data frame going in the reverse direction.
+   - Advantage: fewer frames on the link, so bandwidth and processing are saved.
+   - Disadvantage: if no reverse data appears within the timer, the acknowledgement is delayed, which may cause an unnecessary retransmission at the sender.
+
+   MAC address:
+   - A Media Access Control address is the 48 bit physical address permanently burned into a network interface card, written as six hexadecimal pairs such as `00:1A:2B:3C:4D:5E`.
+   - The first 24 bits are the Organisationally Unique Identifier assigned to the manufacturer, and the last 24 bits identify the specific card.
+   - It works at the data link layer and is used for delivery within a local network, whereas the IP address works at the network layer and is used for end to end routing.
+   - A MAC address is flat and non-routable, while an IP address is hierarchical and routable.
 9. **(i) Congestion Control কী? কী কী ভাবে Congestion Control করা যায়?** *[BPSC Assistant Network Engineer 2020 compact it 950 (ET: N/A)]*
+
+
+   Answer: Congestion control means keeping the total traffic offered to the network within the capacity that the network can actually carry, so that queues do not overflow.
+
+   Why it is needed:
+   - Without it, routers drop packets, senders retransmit, the load rises further and throughput collapses. This is called congestion collapse.
+
+   Congestion control methods:
+   - Open loop, that is prevention: admission control, traffic shaping with leaky bucket or token bucket, and proper resource allocation before congestion occurs.
+   - Closed loop, that is reaction: the network detects congestion and feeds the information back, then the sender slows down.
+   - TCP congestion control: slow start increases the window exponentially, congestion avoidance increases it linearly after a threshold, fast retransmit resends a lost segment after three duplicate acknowledgements, and fast recovery halves the window instead of dropping to one.
+   - Choke packet: the router sends an explicit message to the source telling it to reduce its rate.
+   - Explicit Congestion Notification marks packets instead of dropping them, so the sender is warned earlier.
+   - Random Early Detection drops packets at random before the queue is completely full, which prevents global synchronisation.
+   - Load shedding: when nothing else works, the router simply discards packets, preferring to drop lower priority ones.
 
 ## Email Architecture & Protocols (SMTP, POP3, IMAP) (9)
 
@@ -1124,21 +1240,126 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    * (a) Mention the protocol of application layer and transport layer.
    * (b) Write down the steps of Mail transfer from Afsana to Sinthia.
 
+
+   Answer:
+
+   (a) Protocols used
+   - Application layer: SMTP is used to push the mail from Sinthia's client to her mail server and onward to Afsana's mail server. Afsana retrieves it using POP3 or IMAP.
+   - Transport layer: TCP is used, because mail delivery must be reliable and in order. SMTP uses port 25, POP3 uses 110 and IMAP uses 143.
+
+   (b) Steps of mail transfer
+
+   ```mermaid
+   sequenceDiagram
+       participant S as Sinthia (MUA)
+       participant SS as Sender Mail Server (MTA)
+       participant RS as Receiver Mail Server (MTA)
+       participant A as Afsana (MUA)
+       S->>SS: SMTP submit (port 587/25)
+       SS->>SS: DNS MX lookup for recipient domain
+       SS->>RS: SMTP transfer (port 25)
+       RS->>RS: Store in Afsana's mailbox
+       A->>RS: POP3 (110) or IMAP (143) request
+       RS->>A: Deliver the message
+   ```
+
+   - Sinthia composes the mail in her Mail User Agent and clicks send.
+   - The MUA opens a TCP connection to her own mail server and uses SMTP commands HELO, MAIL FROM, RCPT TO, DATA and QUIT.
+   - Her mail server performs a DNS MX record lookup to find the mail server of Afsana's domain.
+   - The two mail servers talk to each other over SMTP and the message is transferred and stored in Afsana's mailbox.
+   - When Afsana opens her mail client, it fetches the message using POP3, which normally downloads and deletes, or IMAP, which keeps the mail on the server and synchronises across devices.
 2. **Difference between: (i) SMTP and SNMP (ii) HTTP and HTTPs** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 550 (ET: BIBM)]*
 
+
+   Answer:
+
+   (i) SMTP vs SNMP
+
+   | Point | SMTP | SNMP |
+   |---|---|---|
+   | Full form | Simple Mail Transfer Protocol | Simple Network Management Protocol |
+   | Purpose | Sending and relaying email | Monitoring and managing network devices |
+   | Transport and port | TCP 25 | UDP 161, and 162 for traps |
+   | Components | MUA, MTA, MDA | Manager, Agent, MIB |
+   | Example use | Delivering a mail from one server to another | Reading the CPU load or interface status of a router |
+
+   (ii) HTTP vs HTTPS
+
+   | Point | HTTP | HTTPS |
+   |---|---|---|
+   | Security | Data travels in plain text | Data is encrypted with TLS |
+   | Port | 80 | 443 |
+   | Certificate | Not required | An SSL/TLS certificate is required |
+   | Protection | None against eavesdropping or tampering | Confidentiality, integrity and server authentication |
+   | Speed | Marginally faster | Slightly slower due to the handshake, but negligible today |
+   | Use | Non-sensitive public content | Login, banking, any page handling personal data |
 3. **Which protocol is used for email received?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: POP3 and IMAP are the protocols used to receive or retrieve email.
+
+   - POP3, Post Office Protocol version 3, port 110, normally downloads the mail to one device and deletes it from the server.
+   - IMAP, Internet Message Access Protocol, port 143, keeps the mail on the server and synchronises it across many devices, so it suits modern usage.
+   - SMTP, port 25, is used only for sending, not receiving.
 4. **(a) Distinguish the purpose of SMTP and IMAP in email communication.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 688 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | SMTP | IMAP |
+   |---|---|---|
+   | Purpose | Sending and relaying mail | Retrieving and managing mail |
+   | Direction | Client to server, and server to server | Server to client |
+   | Port | 25, and 587 for client submission | 143, and 993 with TLS |
+   | Storage | Does not store, it only pushes the message forward | Mail stays on the server and is synchronised |
+   | Folder support | None | Full folder, flag and search support on the server |
+   | Multi-device | Not applicable | Excellent, all devices see the same state |
+
+   - In short, SMTP is the push protocol that gets the mail out, while IMAP is the pull protocol that lets the user read and organise it.
+   - The two together, plus POP3 as an alternative to IMAP, make up the complete email architecture.
 5. **Email এর ক্ষেত্রে CC এবং BCC এর অর্থ কি বুঝায়?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
 
+
+   Answer:
+
+   - CC stands for Carbon Copy. The addresses written in CC receive a copy of the mail, and every recipient can see who was placed in the To and CC fields. It is used to keep someone informed without making them the primary recipient.
+   - BCC stands for Blind Carbon Copy. The addresses written in BCC also receive a copy, but they are hidden from all other recipients, and BCC recipients cannot see each other either.
+   - BCC is used when a mail must go to many people without exposing their addresses to one another, for example a circular, and it also protects privacy.
 6. **Which of the following is correct email formate? (a) compact@webmail.com (b) compact@webmail@com (c) compact.webmail.com (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
+
+   Answer: The correct format is (a) `compact@webmail.com`.
+
+   - A valid email address has exactly one `@` symbol, separating the local part from the domain part.
+   - Option (b) `compact@webmail@com` has two `@` symbols, which is invalid.
+   - Option (c) `compact.webmail.com` has no `@` at all, so it is a domain name, not an email address.
+   - The domain part must also contain at least one dot, for example `webmail.com`.
 7. **E-mail পাঠানো এবং রিসিভ করার জন্য একটি করে প্রোটোকলের নাম লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
 
+
+   Answer:
+
+   - Protocol for sending email: SMTP, the Simple Mail Transfer Protocol, which uses TCP port 25.
+   - Protocol for receiving email: POP3, the Post Office Protocol version 3, on TCP port 110, or IMAP, the Internet Message Access Protocol, on TCP port 143.
 8. **Which protocol provides e-mail facility amount different hosts?** *[BSEC Assistant Director (MIS) 2021 compact it 937 (ET: IBA)]*
 
+
+   Answer: SMTP, the Simple Mail Transfer Protocol, provides the email facility between different hosts.
+
+   - It is an application layer protocol that runs over TCP port 25.
+   - It is a push protocol, used to transfer mail from the sender's client to the sender's mail server and then from one mail server to another.
+   - It uses simple text commands such as HELO, MAIL FROM, RCPT TO, DATA and QUIT.
+   - For retrieving mail from the server, POP3 or IMAP is used instead.
 9. **ই-মেইল করার ক্ষেত্রে TO, CC ও BCC কোন ব্যবহার করা হয়?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+
+   Answer:
+
+   - TO: the primary recipient of the mail, that is the person the message is actually addressed to and who is expected to act on it. More than one address may be written here.
+   - CC, Carbon Copy: people who should be kept informed but are not required to act. All recipients can see the CC list.
+   - BCC, Blind Carbon Copy: people who receive a copy without any other recipient knowing. The BCC list is hidden from everyone, including the other BCC recipients.
+
+   - Practical rule: use TO for the person responsible, CC for those who need visibility, and BCC when sending to a large group so that private addresses are not exposed.
 
 ## Application Layer & Well-Known Port Numbers (6)
 
