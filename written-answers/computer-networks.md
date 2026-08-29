@@ -830,25 +830,179 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
 
+
+   Answer: Neither of the two given values is a valid IPv6 address. Both are 48 bit MAC addresses, written as six hexadecimal pairs separated by colons, whereas an IPv6 address is 128 bits written as eight groups of four hex digits.
+
+   Judged by IPv6 addressing rules:
+   - Unicast: identifies a single interface. Global unicast begins with 2000::/3, link local with FE80::/10, and unique local with FC00::/7.
+   - Multicast: identifies a group of interfaces. An IPv6 multicast address always begins with FF, that is FF00::/8, and the packet is delivered to every member of the group.
+   - Anycast: syntactically identical to unicast, delivered to the nearest member of the group.
+   - Broadcast: IPv6 has no broadcast address at all. Its function is replaced by the all-nodes multicast address FF02::1, which reaches every node on the link.
+
+   Conclusion:
+   - Since neither `4B:30:10:21:2A:1B` nor `4C:20:1B:2E:08:E7` begins with FF, neither would be multicast; and since neither is 128 bits long, neither is a valid IPv6 address of any kind.
+   - No IPv6 address can represent broadcast, because the concept does not exist in IPv6. <!-- verify -->
 2. A host is connected to an IPv6 network and needs to configure its own IPv6 address automatically using Stateless Address Autoconfiguration (SLAAC). Arrange the steps in the correct order and explain the purpose of each step. [BSCCPL AME 21-08-2026 (BUET)]
 
+
+   Answer: SLAAC lets a host build its own IPv6 address without any DHCP server.
+
+   Correct order of steps:
+   - Step 1, link local address generation. The host forms `FE80::` plus a 64 bit interface identifier, made either from the MAC address by the modified EUI-64 method or randomly for privacy. Purpose: to have a usable address for local communication before anything else.
+   - Step 2, Duplicate Address Detection. The host sends a Neighbor Solicitation for its own tentative address. If nobody replies, the address is unique and becomes valid. Purpose: to guarantee no two hosts on the link use the same address.
+   - Step 3, Router Solicitation. The host sends an RS message to the all-routers multicast address FF02::2. Purpose: to ask the routers on the link to advertise immediately instead of waiting for the periodic advertisement.
+   - Step 4, Router Advertisement. The router replies with an RA to FF02::1 carrying the /64 prefix, the default gateway, the MTU and the A, M and O flags. Purpose: to give the host the network part of its address and the route out.
+   - Step 5, global address formation. The host concatenates the advertised 64 bit prefix with its own 64 bit interface identifier to make a full 128 bit global unicast address. Purpose: to obtain a routable Internet address.
+   - Step 6, Duplicate Address Detection on the new global address, exactly as in step 2. Purpose: to confirm the global address is unique before use.
+   - Step 7, optional stateless DHCPv6. If the O flag is set in the RA, the host asks a DHCPv6 server only for extra information such as DNS and NTP servers, not for an address. Purpose: SLAAC itself does not supply DNS.
+
+   ```mermaid
+   graph TD
+       A["Link-local FE80:: + Interface ID"] --> B["DAD on link-local"]
+       B --> C["Router Solicitation to FF02::2"]
+       C --> D["Router Advertisement: prefix + gateway"]
+       D --> E["Global address = Prefix + Interface ID"]
+       E --> F["DAD on global address"]
+       F --> G["Optional stateless DHCPv6 for DNS"]
+   ```
 3. **(a) What are the differences between IPv4 and IPv6, and why is IPv6 considered more secure?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer:
+
+   Differences between IPv4 and IPv6:
+
+   | Point | IPv4 | IPv6 |
+   |---|---|---|
+   | Address size | 32 bits, about 4.3 billion addresses | 128 bits, about 3.4 × 10³⁸ addresses |
+   | Notation | Dotted decimal, 192.168.1.1 | Hexadecimal with colons, 2001:0db8::1 |
+   | Header | Variable, 20 to 60 bytes, 13 fields | Fixed 40 bytes, 8 fields, extension headers |
+   | Checksum | Present in the header | Removed, left to the link and transport layers |
+   | Fragmentation | Done by the sender and by routers | Only by the sender, using Path MTU Discovery |
+   | Configuration | Manual or DHCP | SLAAC as well as DHCPv6 |
+   | Broadcast | Present | Removed, replaced by multicast |
+   | Address resolution | ARP | Neighbor Discovery Protocol using ICMPv6 |
+   | Security | IPsec optional | IPsec designed in as part of the suite |
+   | NAT | Needed because of address shortage | Not needed |
+   | QoS | Type of Service field | Traffic Class and a 20 bit Flow Label |
+
+   Why IPv6 is considered more secure:
+   - IPsec support, that is authentication header and encapsulating security payload, is a mandatory part of the IPv6 specification, so end to end authentication, integrity and encryption are always available.
+   - The huge address space makes address scanning impractical. Scanning one /64 subnet at a million probes per second would take hundreds of thousands of years, so automated worms and reconnaissance scans become useless.
+   - No broadcast address means broadcast amplification attacks such as smurf are not possible.
+   - End to end connectivity without NAT removes the protocol breakage that NAT causes, so security mechanisms that need the real address, such as IPsec, work properly.
+   - Secure Neighbor Discovery, SEND, with cryptographically generated addresses, protects against the spoofing that plagues ARP in IPv4.
+   - A caution worth stating: IPv6 is not automatically secure. IPsec is available but often not enabled, and new attack surfaces exist in Neighbor Discovery, rogue router advertisements and tunnelling. A firewall is still needed. <!-- verify -->
 4. **How many bits in IPv4 and IPv6 address? Why NAT is not required in IPv6?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 398 (ET: BUET)]*
 
+
+   Answer:
+
+   - IPv4 is 32 bits, written as four decimal octets, giving about 4.3 × 10⁹ addresses.
+   - IPv6 is 128 bits, written as eight groups of four hexadecimal digits, giving about 3.4 × 10³⁸ addresses.
+
+   Why NAT is not required in IPv6:
+   - NAT exists only to work around the shortage of IPv4 addresses by letting many private hosts share one public address.
+   - IPv6 has so many addresses that every device, including every sensor and every phone, can be given its own globally unique address, so there is nothing to conserve.
+   - Removing NAT restores true end to end connectivity, which simplifies peer to peer applications, VoIP, online gaming and IPsec, all of which NAT breaks.
+   - Routers no longer have to keep translation state, so forwarding is simpler and faster and there is no bottleneck.
+   - Security is provided by firewalls and IPsec rather than by the accidental hiding that NAT gives.
 5. **(ক) IP Address কী? IPv4 এবং IPv6 এর মধ্যে চারটি প্রধান পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
 
+
+   Answer: IP address holo ekti network layer identifier, jeta Internet ba kono network-e juktho protita device-ke unique bhabe chinte ebong tar kache packet pathate byabohar kora hoy. Eta duti ongsho niye toiri: network part ar host part.
+
+   Four main differences between IPv4 and IPv6:
+
+   | Point | IPv4 | IPv6 |
+   |---|---|---|
+   | Address length | 32 bits, dotted decimal, 192.168.10.1 | 128 bits, hexadecimal with colons, 2001:0db8::1 |
+   | Header | Variable 20 to 60 bytes with a checksum | Fixed 40 bytes, no checksum, extension headers |
+   | Configuration and NAT | Manual or DHCP, NAT needed because addresses are scarce | SLAAC or DHCPv6, no NAT needed |
+   | Broadcast and security | Broadcast exists, IPsec optional | No broadcast, multicast instead, IPsec built in |
 6. **(a) Differentiate between IPV4 and IPV6.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)], [BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)], [WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)], [BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
+
+   Answer:
+
+   | Point | IPv4 | IPv6 |
+   |---|---|---|
+   | Address size | 32 bits, about 4.3 billion addresses | 128 bits, about 3.4 × 10³⁸ addresses |
+   | Notation | Dotted decimal, 172.16.0.1 | Hexadecimal, colon separated, 2001:db8::1 |
+   | Header size | 20 to 60 bytes, variable, 13 fields | Fixed 40 bytes, 8 fields |
+   | Header checksum | Present | Removed |
+   | Fragmentation | By sender and by intermediate routers | By the sender only, with Path MTU Discovery |
+   | Address configuration | Manual or DHCP | SLAAC, and DHCPv6 when needed |
+   | Address types | Unicast, multicast, broadcast | Unicast, multicast, anycast; no broadcast |
+   | Address resolution | ARP, a broadcast protocol | Neighbor Discovery over ICMPv6, multicast based |
+   | Security | IPsec optional | IPsec part of the specification |
+   | NAT | Required | Not required |
+   | QoS | Type of Service byte | Traffic Class plus a 20 bit Flow Label |
+   | Minimum MTU | 576 bytes | 1280 bytes |
 7. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** *[RPGCL Assistant Manager (ICT) 2022 compact it 652 (ET: BUET)]*
 
+
+   Answer:
+
+   - IPv4 uses 32 bits, IPv6 uses 128 bits.
+   - IPv4 therefore has about 4.3 billion addresses, IPv6 about 3.4 × 10³⁸.
+
+   Why NAT is not needed in IPv6:
+   - NAT was invented purely to stretch the exhausted IPv4 address space by sharing one public address among many private hosts.
+   - IPv6 gives every device a globally unique address, even a /64 subnet alone holds 1.8 × 10¹⁹ addresses, so there is no shortage to work around.
+   - Without NAT, end to end connectivity is restored, so peer to peer applications, VoIP, gaming and IPsec work without special handling or port forwarding.
+   - Routers keep no translation table, so there is less state, less delay and no single point of failure.
+   - Protection comes from stateful firewalls and IPsec instead, which is proper security rather than the accidental obscurity NAT provides.
 8. **IPv6 address কত বিটের?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+
+   Answer: IPv6 address 128 bit-er. Eta 8-ti group-e bhag kora, protita group 4-ti hexadecimal digit, colon diye alada kora, jemon 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+
+   - Prothom 64 bit sadharonoto network prefix ar shesh 64 bit interface identifier.
+   - IPv4 chilo 32 bit, tai IPv6-e address songkha 2⁹⁶ gun beshi.
 9. **What is the difference between stateful DHCPv6 and stateless DHCPv6?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 840-841 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Stateful DHCPv6 | Stateless DHCPv6 |
+   |---|---|---|
+   | Who gives the address | The DHCPv6 server assigns the IPv6 address from a pool | The host builds its own address by SLAAC from the router advertisement prefix |
+   | What the server supplies | Address, plus DNS, domain and other options | Only extra options such as DNS server, domain name, NTP, SIP server |
+   | State kept on the server | Yes, a binding table of which address went to which client | No address binding is kept |
+   | Router Advertisement flags | M flag = 1, managed | M flag = 0, O flag = 1, other configuration |
+   | Comparable to | IPv4 DHCP | SLAAC plus a small DHCP lookup for DNS |
+   | When used | When the administrator must control and log exactly which host has which address, for example in a bank or a server VLAN | When simple automatic addressing is enough but DNS still has to be handed out |
+
+   - The reason stateless DHCPv6 exists at all is that plain SLAAC gives the address and gateway but has no way to supply DNS server information in its original form, so a lightweight DHCPv6 exchange fills that gap.
 10. **What is DHCPv6?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
 
+
+   Answer: DHCPv6 is the Dynamic Host Configuration Protocol for IPv6, defined in RFC 8415, used to give IPv6 hosts their configuration automatically.
+
+   - It runs over UDP, port 546 on the client and port 547 on the server.
+   - It uses multicast rather than broadcast: the client sends to All_DHCP_Relay_Agents_and_Servers at FF02::1:2.
+   - The message exchange is SOLICIT, ADVERTISE, REQUEST, REPLY, which parallels DORA in IPv4. A fast two message exchange, SOLICIT with rapid commit and REPLY, is also possible.
+   - Clients are identified by a DUID, a DHCP Unique Identifier, instead of by the MAC address as in IPv4.
+   - Two modes: stateful, where the server assigns the address itself, and stateless, where SLAAC gives the address and DHCPv6 supplies only DNS and similar options.
+   - It also supports prefix delegation, DHCPv6-PD, where an ISP hands a whole /56 or /48 prefix to a customer router, which then subnets it internally.
 11. **Explain IPv6 link local address and multicast address.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843 (ET: N/A)]*
+
+
+   Answer:
+
+   Link local address:
+   - Range FE80::/10, in practice every link local address begins with FE80.
+   - It is created automatically on every IPv6 interface as soon as the interface comes up, by combining the FE80::/64 prefix with a 64 bit interface identifier derived from the MAC by modified EUI-64, or generated randomly.
+   - Its scope is only the local link. Routers never forward a packet whose source or destination is link local, so the same address may be reused on every link, which is why an interface must be specified, for example `ping6 fe80::1%eth0`.
+   - Uses: Neighbor Discovery, Duplicate Address Detection, router advertisements, and as the next-hop address in routing protocols such as OSPFv3, and for communication before any global address exists.
+
+   Multicast address:
+   - Range FF00::/8, so every multicast address starts with FF.
+   - Format: `FF` then 4 flag bits, then 4 scope bits, then the 112 bit group ID. Scope 1 is interface local, 2 is link local, 5 is site local and E is global.
+   - IPv6 has no broadcast at all; multicast performs that role, which is more efficient because only interested nodes process the packet.
+   - Well known groups: FF02::1 all nodes on the link, FF02::2 all routers on the link, FF02::5 all OSPF routers, FF02::9 all RIP routers, and FF02::1:FFXX:XXXX the solicited node multicast address used by Neighbor Discovery in place of ARP.
+   - The solicited node address is formed from the last 24 bits of the unicast address, so a Neighbor Solicitation disturbs only the very few hosts that share those bits, instead of every host as ARP broadcast does.
 
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget) (11)
 
@@ -1058,45 +1212,352 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **What is the DHCP in computer networking?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
+
+   Answer: DHCP, Dynamic Host Configuration Protocol, is an application layer protocol that automatically assigns IP configuration to hosts on a network.
+
+   - It supplies the IP address, subnet mask, default gateway and DNS server address, and it works over UDP, port 67 on the server and port 68 on the client.
+   - Without it every machine would have to be configured by hand, which is slow and causes duplicate address conflicts.
+   - The address is given on lease for a fixed time, and the client renews it at half the lease period.
 2. **What is the NAT in Computer networking?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
+
+   Answer: NAT, Network Address Translation, is the process by which a router rewrites the private IP address in a packet header into a public IP address, and the reverse on the way back.
+
+   - It lets many hosts on a private network, for example 192.168.0.0/16, share one or a few public addresses, which conserves the limited IPv4 space.
+   - Types are static NAT, one to one, dynamic NAT, from a pool, and PAT or NAT overload, where many hosts share one public IP and are separated by port number.
+   - It also hides the internal addressing, which gives a degree of security.
+   - Drawback: it breaks true end to end connectivity, complicates protocols that carry IP addresses in the payload such as FTP and SIP, and makes incoming connections need port forwarding.
 3. **NAT Stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+
+   Answer: NAT stands for Network Address Translation.
 4. **Which two services are required to enable a computer to receive dynamic IP address and access internet using domain names?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 634 (ET: N/A)]*
 
+
+   Answer: The two services are DHCP and DNS.
+
+   - DHCP, Dynamic Host Configuration Protocol, gives the computer a dynamic IP address along with the subnet mask, default gateway and DNS server address.
+   - DNS, Domain Name System, resolves a domain name such as `www.example.com` into the IP address needed to reach it, so the user can browse using names instead of numbers.
 5. **What is DHCP Server and why it is needed in a computer network.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 670 (ET: N/A)]*
 
+
+   Answer: A DHCP server is a server that holds a pool of IP addresses and hands out complete IP configuration to clients automatically when they join the network.
+
+   What it supplies:
+   - IP address and subnet mask.
+   - Default gateway.
+   - DNS server addresses, and optionally NTP server, domain name, TFTP or boot server for PXE.
+
+   Why it is needed:
+   - Manual configuration of hundreds of machines is slow, error prone and impossible for guests and mobile devices.
+   - It prevents duplicate IP address conflicts, because the server tracks which addresses are already leased.
+   - Addresses are reused: when a lease expires the address returns to the pool, so a small pool serves a much larger number of occasional users.
+   - Changing the DNS server or gateway for the whole network becomes a single change on the server instead of a visit to every desk.
+   - Devices can move between subnets and get a correct address automatically, which is essential for laptops and phones.
+   - Reserved or static bindings can still be made by MAC address for printers and servers, so control is not lost.
 6. **(b) Explain the message flow between a DHCP server and client. Show necessary timing diagram.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 799 (ET: N/A)]*
 
+
+   Answer: The client and server exchange four messages, remembered as DORA.
+
+   ```mermaid
+   sequenceDiagram
+       participant C as DHCP Client (port 68)
+       participant S as DHCP Server (port 67)
+       C->>S: DHCPDISCOVER (broadcast 255.255.255.255)
+       S->>C: DHCPOFFER (offers an IP, mask, gateway, DNS, lease)
+       C->>S: DHCPREQUEST (broadcast, accepts one offer)
+       S->>C: DHCPACK (confirms, lease starts)
+       Note over C,S: T1 = 50% of lease -> DHCPREQUEST to renew
+       Note over C,S: T2 = 87.5% of lease -> broadcast rebind
+       C->>S: DHCPRELEASE (when the client shuts down)
+   ```
+
+   Timing diagram of the lease:
+
+   ```
+   0%            50% (T1)        87.5% (T2)        100%
+   |---------------|-----------------|---------------|
+   ACK          RENEW to          REBIND to      lease expires,
+   lease start  the same server   any server     address released,
+                                                 client restarts DISCOVER
+   ```
+
+   - DHCPDISCOVER: the client has no address, so it broadcasts from 0.0.0.0 to 255.255.255.255 looking for any server.
+   - DHCPOFFER: each server that hears it reserves an address and offers it with the lease time and options.
+   - DHCPREQUEST: the client picks one offer and broadcasts its choice, so the other servers know to withdraw their offers.
+   - DHCPACK: the chosen server confirms and the lease clock starts. If the address is no longer available it sends DHCPNAK instead and the client starts again.
+   - If the DHCP server is on another subnet, a DHCP relay agent on the router forwards the broadcast as a unicast to the server.
 7. **What is APIPA?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 840 (ET: N/A)]*
 
+
+   Answer: APIPA is Automatic Private IP Addressing.
+
+   - When a Windows client cannot reach a DHCP server, it assigns itself an address from the range 169.254.0.1 to 169.254.255.254 with mask 255.255.0.0.
+   - Before using it, the host performs an ARP check to make sure no other machine on the link already has that address.
+   - It allows communication only within the same local link. There is no default gateway and no DNS, so the Internet is not reachable.
+   - Seeing a 169.254.x.x address on a PC is therefore a clear diagnostic sign that DHCP has failed, that the cable or switch port is faulty, or that the relay agent is misconfigured.
+   - The client keeps retrying for a DHCP server in the background, and switches to the real address as soon as one answers.
 8. **What do you mean by DHCP server? Explain the benefits of using dedicated DHCP server. Briefly describe the main benefits of using IPv6 protocol.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 914 (ET: N/A)]*
 
+
+   Answer:
+
+   DHCP server:
+   - A server that automatically leases IP addresses and related configuration, that is subnet mask, default gateway and DNS servers, to clients using the DORA exchange over UDP ports 67 and 68.
+
+   Benefits of a dedicated DHCP server:
+   - Central control: the whole address plan, the gateway and the DNS settings are managed from one place, so a change is made once instead of on every host.
+   - No duplicate addresses, because the server keeps a lease database.
+   - Efficient reuse of a limited address pool through leases, which suits guest and mobile devices.
+   - Scales to thousands of clients, which a router based DHCP service cannot do reliably.
+   - Supports reservations by MAC, multiple scopes for many VLANs, and advanced options such as PXE boot, NTP and vendor options.
+   - Better logging and auditing, since every lease is recorded with the MAC and the time.
+   - Redundancy is possible with a failover pair or split scopes, so the network keeps working if one server fails.
+
+   Main benefits of IPv6:
+   - A 128 bit address space, about 3.4 × 10³⁸ addresses, so address exhaustion and the need for NAT disappear.
+   - A simplified fixed 40 byte header with extension headers, so routers process packets faster and do not fragment in transit.
+   - Stateless Address Autoconfiguration, so a host can build its own address without a DHCP server.
+   - IPsec support is built into the design, which improves security.
+   - Better support for multicast and anycast, and broadcast is removed altogether, which reduces unnecessary traffic.
+   - Built in mobility support through Mobile IPv6, and a flow label field that makes QoS handling easier.
+   - Hierarchical addressing gives smaller and more efficient routing tables on the Internet backbone.
 9. **১৬. DHCP uses UDP port _____ for sending data to the server.** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
+
+   Answer: DHCP uses UDP port 67 for sending data to the server, and port 68 for the reply to the client.
 10. **DHCP কি? DHCP কিভাবে কাজ করে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1043 (ET: DPI)]*
+
+
+   Answer: DHCP is the Dynamic Host Configuration Protocol, which automatically supplies the IP address, subnet mask, default gateway and DNS server address to a host, so that no manual configuration is needed. It runs over UDP, port 67 on the server and 68 on the client.
+
+   How it works, the DORA process:
+   - DHCPDISCOVER: the new client has no address, so it broadcasts a discover message from 0.0.0.0 to 255.255.255.255 to find any DHCP server on the link.
+   - DHCPOFFER: every server that receives it reserves a free address from its pool and offers it back, together with the mask, the gateway, the DNS servers and the lease time.
+   - DHCPREQUEST: the client accepts one offer and broadcasts its choice, so the remaining servers release the addresses they had reserved.
+   - DHCPACK: the chosen server confirms the assignment and the lease period begins. If the address has meanwhile been taken, the server replies DHCPNAK and the client restarts.
+
+   Lease management:
+   - At 50 percent of the lease, called T1, the client unicasts a renewal request to the same server.
+   - At 87.5 percent, called T2, if there was no reply, it broadcasts a rebind request to any server.
+   - If the lease expires the client gives up the address and starts from DHCPDISCOVER again.
+   - DHCPRELEASE is sent when the client shuts down, returning the address to the pool.
+   - If the server is on another subnet, a DHCP relay agent configured on the router forwards the broadcast to the server as a unicast.
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK) (10)
 
 1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 293 (ET: BUET)]*
 
+
+   Answer: BER falls as SNR rises, and for the same Eb/N0 BPSK and QPSK give the same BER, but QPSK carries twice the bit rate in the same bandwidth.
+
+   ```
+   BER (log scale)
+   1e-1 |*
+        | \*
+   1e-2 |  \ \
+        |   \ \
+   1e-3 |    \  \
+        |     \   \
+   1e-4 |      \    \
+        |       \     \
+   1e-5 |________\______\________
+        0    4    8   12   16   20   Eb/N0 (dB)
+              BPSK = solid, QPSK = dashed (overlapping)
+   ```
+
+   - For BPSK, BER = Q(√(2Eb/N0)); for QPSK, BER = Q(√(2Eb/N0)) as well, so the two curves lie on top of each other when plotted against Eb/N0.
+   - If the curve is plotted against SNR per symbol instead of per bit, QPSK sits about 3 dB to the right of BPSK, because each QPSK symbol carries two bits.
+   - The curve is a waterfall shape: almost flat at low SNR, then falling very steeply once the SNR crosses about 8 to 10 dB.
+   - Practical reading: at Eb/N0 = 9.6 dB both schemes give a BER of about 10⁻⁵.
+   - Higher order schemes such as 8-PSK and 16-QAM shift the curve to the right, that is they need more SNR for the same BER, but give higher spectral efficiency.
 2. **What is baseband and passband frequency?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
 
+
+   Answer:
+
+   Baseband:
+   - The original signal in its own frequency range, starting from or near 0 Hz, without any modulation. Human voice at 300 to 3400 Hz and the digital output of a computer are baseband signals.
+   - Baseband transmission puts these frequencies directly onto the medium, so only one signal can occupy the medium at a time and the medium must support very low frequencies. Ethernet on a LAN cable is a baseband system.
+
+   Passband:
+   - The band of frequencies around a high carrier frequency into which the baseband signal is shifted by modulation.
+   - If the carrier is fc and the baseband bandwidth is B, the passband occupies fc − B to fc + B.
+   - Passband transmission is needed for wireless and for any medium that cannot pass low frequencies, and it allows many signals to share the medium by giving each one a different carrier, which is frequency division multiplexing.
+   - Example: an FM radio station modulates a 15 kHz audio baseband onto an 88 to 108 MHz carrier.
 3. **অথবা, (ক) Low-pass Channel এবং Band-pass Channel এর মধ্যে উদাহরণসহ পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Low-pass channel | Band-pass channel |
+   |---|---|---|
+   | Frequency range | 0 to some upper limit f, includes DC | f1 to f2, where f1 is greater than 0 |
+   | Signal it can carry | Baseband signal directly | Only a modulated signal around a carrier |
+   | Modulation | Not required | Required, the baseband must be shifted up |
+   | Bandwidth | Equal to the upper cut-off frequency | f2 − f1 |
+   | Example | Ethernet on twisted pair or coaxial LAN cable, a dedicated link | Telephone line 300 to 3400 Hz, radio, TV, mobile network |
+
+   - A low-pass channel is used when the whole medium belongs to one signal, which is why LAN cabling uses baseband.
+   - A band-pass channel is used when the medium must be shared, so each user is given a different band, and the data must first be modulated onto a carrier inside that band. A dial-up modem exists precisely because the telephone line is a band-pass channel.
 4. **What is modulation? Why is it necessary?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
 
+
+   Answer: Modulation is the process of changing a property of a high frequency carrier signal, that is its amplitude, frequency or phase, in step with the message signal that has to be transmitted.
+
+   Types:
+   - Analog: AM, FM, PM.
+   - Digital: ASK, FSK, PSK, QAM.
+
+   Why it is necessary:
+   - Antenna size: the antenna must be about one tenth to one half of the wavelength. A 3 kHz voice signal would need an antenna of tens of kilometres, but on a 100 MHz carrier the antenna is about a metre.
+   - Multiplexing: many signals can share one medium if each is placed on a different carrier frequency, so stations do not interfere with one another.
+   - Long distance transmission: high frequency signals travel further and can be reflected or refracted, so coverage improves.
+   - Noise immunity: FM and digital modulation schemes resist noise far better than a raw baseband signal.
+   - Matching the channel: a band-pass medium such as a telephone line or the air cannot carry low baseband frequencies at all, so shifting the signal up is the only way to use it.
+   - Reduced interference and better use of the available spectrum.
 5. **Amplitude Modulation related problem. (Approximate)** *[NPCBL Executive Trainee (IT) 2022 compact it 644 (ET: BUET)]*
 
+
+   Answer: Standard AM problem method, shown with a typical worked case.
+
+   Formulas:
+   - Modulation index, m = Am / Ac, or m = (Vmax − Vmin) / (Vmax + Vmin).
+   - Bandwidth, BW = 2 × fm.
+   - Total power, Pt = Pc (1 + m²/2).
+   - Power in each sideband = Pc m² / 4, and total sideband power = Pc m² / 2.
+   - Efficiency, η = m² / (2 + m²).
+
+   Worked example: a carrier of 10 kW is amplitude modulated to a depth of 60 percent by a 5 kHz tone.
+   - m = 0.6, Pc = 10 kW, fm = 5 kHz.
+   - Bandwidth = 2 × 5 = 10 kHz.
+   - Pt = 10 × (1 + 0.36/2) = 10 × 1.18 = 11.8 kW.
+   - Total sideband power = 11.8 − 10 = 1.8 kW, so each sideband carries 0.9 kW.
+   - Efficiency = 0.36 / 2.36 = 0.1525, that is 15.25 percent.
+
+   Final answer: BW = 10 kHz, total transmitted power = 11.8 kW, sideband power = 1.8 kW, efficiency = 15.25 percent.
+
+   - Note the key weakness of AM that the examiner looks for: more than 84 percent of the power sits in the carrier, which carries no information, which is why SSB and DSB-SC are used where power matters.
 6. **Compare between (i) AM and ASK and (ii) FM and FSK considering modulation scheme, bandwith requirement, noise tolerance and circuit complexity.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   (i) AM vs ASK
+
+   | Point | AM | ASK |
+   |---|---|---|
+   | Modulating signal | Analog | Digital, a bit stream |
+   | Scheme | Carrier amplitude varies continuously with the message | Carrier amplitude switches between discrete levels, typically on and off |
+   | Bandwidth | 2 fm | About (1 + d) × Nbaud, roughly equal to the bit rate |
+   | Noise tolerance | Poor, noise directly affects amplitude | Poor as well, but the receiver only has to decide between levels, so it is a little better |
+   | Circuit complexity | Simple | Simple, the simplest digital scheme |
+
+   (ii) FM vs FSK
+
+   | Point | FM | FSK |
+   |---|---|---|
+   | Modulating signal | Analog | Digital |
+   | Scheme | Carrier frequency varies continuously with the message amplitude | Carrier switches between two or more fixed frequencies, f1 for 0 and f2 for 1 |
+   | Bandwidth | Carson's rule, BW = 2(Δf + fm), much wider than AM | BW = Nbaud + Δf, wider than ASK |
+   | Noise tolerance | Very good, amplitude noise is removed by the limiter | Very good, far better than ASK |
+   | Circuit complexity | Complex, needs a VCO and a discriminator or PLL | Moderate, more complex than ASK but simpler than PSK |
+
+   - Common thread: the analog scheme and its digital counterpart use the same carrier property, so they share the same noise behaviour, but the digital version needs only a finite set of decisions at the receiver, which makes regeneration possible.
 7. **What are the advantages of PSK and explain why coherent detection is necessary for demodulating the PSK signal?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   Advantages of PSK:
+   - Better noise immunity than ASK, because the information is in the phase and amplitude noise does not directly corrupt it.
+   - Constant envelope, so the transmitter power amplifier can be run in saturation, which is efficient, and there is no amplitude distortion problem.
+   - Better bandwidth efficiency than FSK, since it does not need separate frequency slots.
+   - For the same bit error rate, BPSK needs about 3 dB less power than coherent FSK and much less than ASK.
+   - It extends easily to multilevel schemes, QPSK, 8-PSK and QAM, which raise the data rate without extra bandwidth.
+   - It suits regeneration in digital repeaters, so errors do not accumulate over long links.
+
+   Why coherent detection is necessary:
+   - In PSK the transmitted symbols differ only in phase, and phase is a relative quantity. The receiver has no absolute reference of its own.
+   - A simple envelope detector cannot be used, because the envelope is constant for every symbol, so it carries no information.
+   - Therefore the receiver must regenerate a local carrier that has exactly the same frequency and phase as the transmitted carrier, using a Costas loop or a squaring loop, and multiply the incoming signal by it. Only then does the phase difference appear as a positive or negative voltage at the integrator output.
+   - If the local carrier is offset in phase by θ, the output is reduced by cos θ, and at θ = 90 degrees the output is zero, so detection fails completely.
+   - The practical way out of the phase ambiguity is DPSK, differential PSK, where the information is put in the phase change between successive symbols, so no absolute reference is needed. The cost is about 1 dB extra power and a doubling of errors, because one wrong symbol corrupts the next.
 8. **Draw the constellation diagram of QPSK, 8-PSK and 32-QAM. Why these multilevel signals prefereed and what are the challenges for multilevel modulation?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   Constellation diagrams, plotted on the in-phase and quadrature axes:
+
+   ```
+   QPSK, 4 points          8-PSK, 8 points on a circle       32-QAM, cross shape
+        Q                            Q                              Q
+        |                            |                       . . . . . .
+    *   |   *                    *   *   *                  . . . . . . . .
+        |                          \ | /                    . . . . . . . .
+   -----+----- I               *----+----* I                . . . . . . . .
+        |                          / | \                    . . . . . . . .
+    *   |   *                    *   *   *                    . . . . . .
+        |                            |                    (32 points, 4 corners removed)
+   2 bits/symbol            3 bits/symbol                  5 bits/symbol
+   ```
+
+   - QPSK: four points at 45, 135, 225 and 315 degrees, all on one circle, one amplitude and four phases, 2 bits per symbol.
+   - 8-PSK: eight points equally spaced by 45 degrees on a single circle, one amplitude and eight phases, 3 bits per symbol.
+   - 32-QAM: a cross shaped grid of 32 points using several amplitudes and several phases, 5 bits per symbol.
+
+   Why multilevel signals are preferred:
+   - Bit rate = symbol rate × log2 M, so raising M raises the bit rate without raising the bandwidth.
+   - Spectral efficiency in bits per second per hertz increases, which matters because spectrum is scarce and licensed.
+   - The same physical channel can carry more users or a higher throughput, which is why LTE and Wi-Fi use 16-QAM, 64-QAM and 256-QAM.
+
+   Challenges:
+   - The points sit closer together, so the minimum distance shrinks and the same noise causes far more errors. Each step up needs several dB more SNR.
+   - QAM and higher order PSK need very accurate carrier phase and timing recovery.
+   - QAM has a varying envelope, so it needs a linear amplifier, which is less power efficient and needs back-off.
+   - Higher sensitivity to phase noise, I-Q imbalance, non-linear distortion and multipath fading, so equalisation is required.
+   - The receiver is more complex and more expensive.
 9. **a) What is QAM? Explain it.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030 (ET: N/A)]*
 
+
+   Answer: QAM, Quadrature Amplitude Modulation, is a modulation scheme that varies both the amplitude and the phase of the carrier at the same time, so it combines ASK and PSK.
+
+   - Two carriers of the same frequency but 90 degrees apart, cos(2πfct) and sin(2πfct), are used. These are called the in-phase (I) and quadrature (Q) carriers.
+   - The bit stream is split into two streams; one modulates the amplitude of the I carrier and the other the amplitude of the Q carrier, and the two are added.
+   - Transmitted signal: s(t) = I·cos(2πfct) − Q·sin(2πfct). Because the two carriers are orthogonal, the receiver can separate them again without interference.
+   - Each combination of I and Q values gives one point on the constellation, so M-QAM carries log2 M bits per symbol. 16-QAM carries 4 bits, 64-QAM carries 6 bits and 256-QAM carries 8 bits per symbol.
+   - Advantage: very high spectral efficiency in bits per second per hertz.
+   - Disadvantage: the envelope is not constant, so a linear amplifier is needed, and the closely spaced points demand a high SNR.
+   - Uses: cable modems, DSL, Wi-Fi, LTE and 5G, and digital TV.
 10. **b) Draw diagram for 16 QAM having? (i) 3 amplitudes, 12 phases (ii) 4 amplitudes, 8 phases** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030-1031 (ET: N/A)]*
+
+
+   Answer: Both are 16-QAM, so both carry 4 bits per symbol and have 16 constellation points, but the points are distributed differently.
+
+   (i) 3 amplitudes and 12 phases
+
+   ```
+   Ring 1 (small radius)  : 4 points at 45, 135, 225, 315 degrees
+   Ring 2 (medium radius) : 8 points at 0, 45, 90, 135, 180, 225, 270, 315 degrees
+   Ring 3 (large radius)  : 4 points at 0, 90, 180, 270 degrees
+   Total = 4 + 8 + 4 = 16 points, 3 distinct amplitudes, 12 distinct phase angles
+   ```
+
+   (ii) 4 amplitudes and 8 phases
+
+   ```
+   Ring 1 : 2 points   at 0, 180 degrees
+   Ring 2 : 6 points   at 45, 90, 135, 225, 270, 315 degrees
+   Ring 3 : 6 points   at 0, 45, 135, 180, 225, 315 degrees
+   Ring 4 : 2 points   at 90, 270 degrees
+   Total = 2 + 6 + 6 + 2 = 16 points, 4 distinct amplitudes, 8 distinct phase angles
+   ```
+
+   - In both cases each point is one symbol representing a unique 4 bit pattern, since 2⁴ = 16.
+   - The number of amplitudes is the number of distinct rings, that is distinct distances from the origin, and the number of phases is the number of distinct angles used across all rings.
+   - Design rule: for good noise performance the points should be spread as evenly as possible, which is why practical systems use the square 4 × 4 grid rather than these ring arrangements.
 
 ## Flow Control & Data Link Layer (Stop-and-Wait) (9)
 
