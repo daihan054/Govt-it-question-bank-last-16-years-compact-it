@@ -2511,3 +2511,22 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 ## NP-Completeness & Complexity Reduction (1)
 
 1. **A reduces to B Polynomial time. Which is better and why?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
+
+   Answer: The notation A ≤p B means problem A reduces to problem B in polynomial time, that is any instance of A can be converted into an instance of B in polynomial time, and the answer to B gives the answer to A.
+
+   What the reduction tells us:
+   - B is at least as hard as A. Solving B is enough to solve A, so B carries all the difficulty of A and possibly more.
+   - A is no harder than B, so A is the easier or equally easy problem.
+
+   Which one is better, and why:
+   - If the aim is to find an efficient algorithm, then having a solution for B is better, because a polynomial time algorithm for B automatically gives a polynomial time algorithm for A. One solution serves both problems.
+   - If the aim is easy solvability, then A is better, because A is the easier problem. Even if B turns out to be intractable, A may still have a fast direct algorithm.
+
+   Two standard consequences:
+   - If B is in P, then A is also in P, since the reduction plus the algorithm for B is still polynomial.
+   - If A is NP-hard, then B is also NP-hard, because a fast algorithm for B would give a fast algorithm for a known hard problem.
+
+   Example: 3-SAT reduces to the Clique problem in polynomial time. Since 3-SAT is NP-complete, this proves Clique is NP-hard as well.
+
+   Summary: the reduction A ≤p B transfers easiness downward from B to A, and hardness upward from A to B.
+
