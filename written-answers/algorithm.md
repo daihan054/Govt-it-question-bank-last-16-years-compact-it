@@ -2137,13 +2137,127 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. A communication link is established from Cox’s Bazar to Kuakata through a sequence of stations M_1, M_2, M_3, \dots, M_n. Each location can have at most one repeater, and the distance between consecutive locations is given by P_i > 0. For reliable communication, two selected repeater stations must be at least K kilometers apart. Using Dynamic Programming, determine the maximum number of repeaters that can be installed while maintaining the required minimum distance between any two selected stations. [BSCCPL AME 21-08-2026 (BUET)]
 
+   Answer:
+
+   Setting up the positions:
+   - Let pos[1] = 0 and pos[i] = pos[i−1] + P[i−1], so pos[i] is the distance of station M_i from the starting point.
+   - The condition is that for any two selected stations i and j with i < j, pos[j] − pos[i] must be at least K.
+
+   DP formulation:
+   - Let dp[i] = the maximum number of repeaters that can be installed among the first i stations, given that a repeater is installed at station i.
+   - Recurrence: dp[i] = 1 + max{ dp[j] } for all j < i such that pos[i] − pos[j] ≥ K.
+   - If no such j exists, then dp[i] = 1, because station i alone can hold a repeater.
+   - Final answer = max{ dp[i] } for i from 1 to n.
+
+   ```
+   MAX_REPEATERS(P[], n, K)
+       pos[1] = 0
+       for i = 2 to n
+           pos[i] = pos[i-1] + P[i-1]
+
+       for i = 1 to n
+           dp[i] = 1
+           for j = 1 to i - 1
+               if pos[i] - pos[j] >= K and dp[j] + 1 > dp[i]
+                   dp[i] = dp[j] + 1
+
+       answer = max of dp[1..n]
+       return answer
+   ```
+
+   Complexity:
+   - The double loop gives O(n²) time and O(n) space.
+   - Because pos[] is sorted in increasing order, the largest valid j can be found by binary search, which reduces the time to O(n log n).
+
+   Note: since the stations lie on a straight line, the greedy rule of always taking the earliest station that is at least K away from the last selected one also gives the same optimal count, and it runs in O(n).
+
 2. **What is Dynamic programming? Explain with example.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 474 (ET: N/A)]*
+
+   Answer: Dynamic Programming is a problem solving technique in which a complex problem is broken into smaller overlapping subproblems, each subproblem is solved only once, and its result is stored so that it can be reused instead of being recomputed.
+
+   Two conditions must hold:
+   - Optimal substructure: the optimal solution of the problem contains optimal solutions of its subproblems.
+   - Overlapping subproblems: the same subproblem is encountered many times during the recursion.
+
+   Two implementation styles:
+   - Top down with memoization: write the natural recursion but store each computed result in a table and return the stored value when the same call comes again.
+   - Bottom up with tabulation: fill the table starting from the smallest subproblem up to the required one, using loops instead of recursion.
+
+   Example, Fibonacci numbers:
+   - Plain recursion: fib(n) = fib(n−1) + fib(n−2). To compute fib(5) the call fib(3) happens twice and fib(2) three times, so the work grows as O(2ⁿ).
+   - Dynamic programming: keep an array F where F[0] = 0, F[1] = 1, and F[i] = F[i−1] + F[i−2] for i from 2 to n.
+   - For n = 6 the table becomes 0, 1, 1, 2, 3, 5, 8, and each entry is computed exactly once.
+   - Time drops from O(2ⁿ) to O(n), and space is O(n), which can be reduced to O(1) by keeping only the last two values.
+
+   Other classic DP problems: 0/1 Knapsack, Longest Common Subsequence, matrix chain multiplication, Floyd-Warshall and Bellman-Ford.
 
 3. **The maximum subarray is the task of finding a contiguous subarray with the largest sum within a given one dimentional array of numbers. Suppose the array is: A: [-2, 1, -3, -1, 2, 1, -5, 4]** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 448 (ET: BUET)]*
 
+   Answer: Kadane's algorithm is used. It scans the array once, keeping the best sum ending at the current position and the best sum seen so far.
+
+   Rule at each element: current = max(A[i], current + A[i]), then best = max(best, current).
+
+   Step by step on A = [−2, 1, −3, −1, 2, 1, −5, 4]:
+   - i = 0, A[0] = −2. current = −2, best = −2
+   - i = 1, A[1] = 1. current = max(1, −2 + 1 = −1) = 1, best = 1
+   - i = 2, A[2] = −3. current = max(−3, 1 − 3 = −2) = −2, best = 1
+   - i = 3, A[3] = −1. current = max(−1, −2 − 1 = −3) = −1, best = 1
+   - i = 4, A[4] = 2. current = max(2, −1 + 2 = 1) = 2, best = 2
+   - i = 5, A[5] = 1. current = max(1, 2 + 1 = 3) = 3, best = 3
+   - i = 6, A[6] = −5. current = max(−5, 3 − 5 = −2) = −2, best = 3
+   - i = 7, A[7] = 4. current = max(4, −2 + 4 = 2) = 4, best = 4
+
+   Final answer: the maximum subarray sum is 4, given by the subarray [4] at the last index.
+
+   - Note that [2, 1] gives 3 and [2, 1, −5, 4] gives 2, so 4 is indeed the maximum.
+   - Time complexity O(n) and space complexity O(1).
+
 4. **Write down the Algorithm for determining Fibonacci number through dynamic programming.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
+   Answer:
+
+   ```
+   FIBONACCI_DP(n)
+       if n <= 1
+           return n
+
+       create array F[0..n]
+       F[0] = 0
+       F[1] = 1
+
+       for i = 2 to n
+           F[i] = F[i-1] + F[i-2]
+
+       return F[n]
+   ```
+
+   ```c
+   int fib(int n) {
+       int f[100], i;
+       if (n <= 1) return n;
+       f[0] = 0; f[1] = 1;
+       for (i = 2; i <= n; i++)
+           f[i] = f[i-1] + f[i-2];
+       return f[n];
+   }
+   ```
+
+   - This is the bottom up or tabulation method. Each Fibonacci value is computed exactly once and stored, so nothing is recomputed.
+   - Trace for n = 6: F[0] = 0, F[1] = 1, F[2] = 1, F[3] = 2, F[4] = 3, F[5] = 5, F[6] = 8.
+   - Space optimised version: only the previous two values are actually needed, so two variables can replace the array.
+
 5. **What will be the time and space complexity of the above algorithm?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
+
+   Answer:
+
+   For the dynamic programming Fibonacci algorithm:
+   - Time complexity: O(n). The loop runs from 2 to n exactly once and each step performs one addition, so the number of operations grows linearly with n.
+   - Space complexity: O(n), because the array F holds n + 1 values.
+   - Optimised space: if only F[i−1] and F[i−2] are kept in two variables, the space drops to O(1) while the time stays O(n).
+
+   Comparison with plain recursion:
+   - Naive recursion takes O(2ⁿ) time and O(n) stack space, because the same subproblems are solved repeatedly.
+   - So dynamic programming reduces the time from exponential to linear, which is the main benefit of storing subproblem results.
 
 ## Heap & Priority Queue (2)
 
