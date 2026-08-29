@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 206/239 subtopics · 2326/2673 answers**
+**Overall: 207/239 subtopics · 2328/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -257,7 +257,7 @@ Commit unit: one `##` subtopic.
 - [x] 8085 Microprocessor & Edge Computing (3)
 - [x] RISC vs CISC Architecture (2)
 
-## oop.md — 8/9 sections, 82/84 answers
+## oop.md — 9/9 sections, 84/84 answers
 
 - [x] OOP Concepts (Inheritance & Polymorphism) (45)
 - [x] Java Programming & Methods (11)
@@ -267,7 +267,7 @@ Commit unit: one `##` subtopic.
 - [x] Output Tracing & Recursion (3)
 - [x] Exception Handling (3)
 - [x] C++ OOP Concepts & Friend Functions (2)
-- [ ] Interfaces & Abstract Classes (2)
+- [x] Interfaces & Abstract Classes (2)
 
 ## operating-system.md — 0/12 sections, 0/168 answers
 
