@@ -2890,12 +2890,297 @@ public class main{
 
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
+
+   Answer: A method that returns a value must declare a return type other than void, and every path through it must end in a return statement of that type.
+
+   ```java
+   public class Calculator {
+
+       // returns an int
+       public int add(int a, int b) {
+           return a + b;
+       }
+
+       // returns a double
+       public double average(int[] numbers) {
+           if (numbers == null || numbers.length == 0) {
+               return 0.0;
+           }
+           int sum = 0;
+           for (int n : numbers) {
+               sum += n;
+           }
+           return (double) sum / numbers.length;
+       }
+
+       // returns a boolean
+       public boolean isPrime(int n) {
+           if (n < 2) return false;
+           for (int i = 2; i * i <= n; i++) {
+               if (n % i == 0) return false;
+           }
+           return true;
+       }
+
+       // returns a String
+       public String grade(double marks) {
+           if (marks >= 80) return "A+";
+           else if (marks >= 70) return "A";
+           else if (marks >= 60) return "A-";
+           else if (marks >= 50) return "B";
+           else if (marks >= 40) return "C";
+           else return "F";
+       }
+
+       // returns an object
+       public int[] sortAscending(int[] arr) {
+           int[] copy = arr.clone();
+           java.util.Arrays.sort(copy);
+           return copy;
+       }
+
+       public static void main(String[] args) {
+           Calculator c = new Calculator();
+
+           int sum = c.add(15, 25);
+           System.out.println("Sum: " + sum);
+
+           int[] marks = {75, 82, 66, 91, 58};
+           System.out.println("Average: " + c.average(marks));
+
+           System.out.println("Is 17 prime? " + c.isPrime(17));
+           System.out.println("Grade for 82 marks: " + c.grade(82));
+
+           int[] sorted = c.sortAscending(marks);
+           System.out.print("Sorted: ");
+           for (int m : sorted) System.out.print(m + " ");
+           System.out.println();
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Sum: 40
+   Average: 74.4
+   Is 17 prime? true
+   Grade for 82 marks: A+
+   Sorted: 58 66 75 82 91
+   ```
+
+   Rules to remember:
+   - The return type is written before the method name, for example public int add(...).
+   - A method declared void must not return a value; a method with any other return type must return one on every path, or the code will not compile.
+   - The returned value may be a primitive, an object, an array or null (for reference types).
+   - A return statement immediately ends the method, so any code after it in the same block is unreachable and will not compile.
+   - Java allows only one value to be returned. To return several, use an array, a collection or a small class that holds them.
 2. **Write a Java Code....** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
+
+   Answer: A representative Java program that shows the main features of the language, namely a class, objects, encapsulation, a constructor, methods, an array and a loop.
+
+   ```java
+   import java.util.Scanner;
+
+   class Student {
+       // private data members: encapsulation
+       private String name;
+       private int roll;
+       private double[] marks;
+
+       // constructor
+       public Student(String name, int roll, double[] marks) {
+           this.name = name;
+           this.roll = roll;
+           this.marks = marks;
+       }
+
+       // method that returns a value
+       public double getTotal() {
+           double total = 0;
+           for (double m : marks) {
+               total += m;
+           }
+           return total;
+       }
+
+       public double getAverage() {
+           return marks.length == 0 ? 0 : getTotal() / marks.length;
+       }
+
+       public String getGrade() {
+           double avg = getAverage();
+           if (avg >= 80) return "A+";
+           else if (avg >= 70) return "A";
+           else if (avg >= 60) return "A-";
+           else if (avg >= 50) return "B";
+           else if (avg >= 40) return "C";
+           else return "F";
+       }
+
+       public void display() {
+           System.out.printf("%-15s %-8d %-10.2f %-10.2f %s%n",
+                   name, roll, getTotal(), getAverage(), getGrade());
+       }
+   }
+
+   public class StudentDemo {
+       public static void main(String[] args) {
+           Student[] students = {
+               new Student("Rahim Uddin",  101, new double[]{85, 78, 92, 88}),
+               new Student("Karim Ahmed",  102, new double[]{65, 70, 58, 72}),
+               new Student("Salma Begum",  103, new double[]{45, 52, 38, 60})
+           };
+
+           System.out.printf("%-15s %-8s %-10s %-10s %s%n",
+                   "Name", "Roll", "Total", "Average", "Grade");
+           System.out.println("--------------------------------------------------------");
+
+           for (Student s : students) {
+               s.display();
+           }
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Name            Roll     Total      Average    Grade
+   --------------------------------------------------------
+   Rahim Uddin     101      343.00     85.75      A+
+   Karim Ahmed     102      265.00     66.25      A-
+   Salma Begum     103      195.00     48.75      C
+   ```
+
+   Features demonstrated:
+   - Class and object: Student is the blueprint, and three objects are created from it.
+   - Encapsulation: the fields are private and are reached only through public methods.
+   - Constructor: it initialises each object at the moment of creation.
+   - Methods with return values: getTotal(), getAverage() and getGrade().
+   - Arrays: an array of marks inside each object, and an array of objects in main.
+   - The enhanced for loop, and formatted output with printf.
 3. **What does run Finalization do?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: runFinalization() is a method of the java.lang.System and java.lang.Runtime classes. Calling it suggests to the Java Virtual Machine that it should run the finalize() methods of any objects that have been found to be unreachable but whose finalizers have not yet been executed.
+
+   Signatures:
+   ```java
+   public static void System.runFinalization()
+   public void Runtime.getRuntime().runFinalization()
+   ```
+
+   What it does:
+   - The garbage collector identifies objects that are no longer reachable and queues them for finalization. Their finalize() methods are then run by a separate finalizer thread, but the JVM gives no guarantee about when.
+   - runFinalization() asks the JVM to make a best effort to run those pending finalizers immediately, so that resources held by discarded objects are released sooner.
+
+   Important limitations:
+   - It is only a request, not a command. The JVM may ignore it entirely, exactly as it may ignore System.gc().
+   - It does not itself collect garbage; it only runs finalizers for objects already found unreachable. To increase the chance of anything happening, System.gc() is normally called first.
+   - There is no guarantee that any particular object's finalize() will run, or that it will run before the program exits.
+
+   ```java
+   class Resource {
+       private String name;
+       Resource(String name) { this.name = name; }
+
+       @Override
+       protected void finalize() throws Throwable {
+           System.out.println("Finalizing: " + name);
+           super.finalize();
+       }
+   }
+
+   public class FinalizationDemo {
+       public static void main(String[] args) {
+           Resource r = new Resource("File handle");
+           r = null;                 // the object is now unreachable
+
+           System.gc();              // suggest garbage collection
+           System.runFinalization(); // suggest running pending finalizers
+
+           System.out.println("End of main");
+       }
+   }
+   ```
+
+   Why it should not be used in modern code:
+   - finalize() was deprecated in Java 9 and removed from the language in Java 18, because it is unpredictable, it can resurrect objects, it delays garbage collection, and an exception thrown inside it is silently ignored.
+   - The correct modern practice is deterministic resource management: implement AutoCloseable and use a try-with-resources block, or use java.lang.ref.Cleaner for a safety net.
+
+   ```java
+   class Resource implements AutoCloseable {
+       @Override
+       public void close() {
+           System.out.println("Resource released deterministically");
+       }
+   }
+
+   public class ModernDemo {
+       public static void main(String[] args) {
+           try (Resource r = new Resource()) {
+               System.out.println("Using the resource");
+           }   // close() is called automatically here, guaranteed
+       }
+   }
+   ```
+
+   In one sentence: runFinalization() requests the JVM to run pending finalizers of unreachable objects, but it guarantees nothing, and the entire finalization mechanism is now obsolete.
 4. **What syntax is used for calling static methods in class?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: A static method belongs to the class itself rather than to any object of the class, so it is called using the class name followed by the dot operator.
+
+   Syntax:
+   ```
+   ClassName.methodName(arguments);
+   ```
+
+   Example:
+
+   ```java
+   class MathUtil {
+       // static method: belongs to the class
+       public static int square(int n) {
+           return n * n;
+       }
+
+       public static double circleArea(double r) {
+           return Math.PI * r * r;
+       }
+
+       // instance method: belongs to an object
+       public int cube(int n) {
+           return n * n * n;
+       }
+   }
+
+   public class StaticCallDemo {
+       public static void main(String[] args) {
+           // calling a static method with the class name
+           System.out.println(MathUtil.square(5));          // 25
+           System.out.println(MathUtil.circleArea(3));      // 28.27...
+
+           // calling an instance method requires an object
+           MathUtil m = new MathUtil();
+           System.out.println(m.cube(3));                   // 27
+       }
+   }
+   ```
+
+   Points to note:
+   - No object is needed. MathUtil.square(5) works without ever writing new MathUtil().
+   - Calling it through an object reference, as in m.square(5), is legal but is bad practice; the compiler issues a warning because it hides the fact that the method is static.
+   - Inside the same class the class name may be omitted, so square(5) is enough.
+   - Well-known examples from the standard library: Math.sqrt(), Math.max(), Integer.parseInt(), String.valueOf(), Arrays.sort() and System.out.println(), where out is a static field of System.
+
+   Rules for static methods:
+   - They cannot use the keywords this or super, because there is no object.
+   - They cannot access instance variables or call instance methods directly; they can only use static members, or work through an object passed to them.
+   - They cannot be overridden, only hidden. If a subclass declares a static method with the same signature, the version called is decided at compile time from the reference type.
+   - main() is declared static precisely so that the JVM can call it before any object exists.
+
+   Static variables follow the same rule: ClassName.variableName.
 5. **Consider the following code:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
 ```java
 Public class Class A {
@@ -2913,17 +3198,612 @@ Public class class B extends class A {
 ```
 **Mention which of the methods overload, override and hied supper class methods. What about the remaining method?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
 
+
+   Answer: The two classes are analysed method by method. (The code as printed has capitalisation errors such as "Public" and "class A"; in correct Java the keywords are lower case and the classes would be A and B.)
+
+   Class A declares:
+   - public void m1()
+   - public void m2(int i)
+   - public void m3(int i)
+   - public static void m4(int i)
+
+   Class B extends A and declares:
+   - public static void m1(int i)
+   - public void m2(int i)
+   - public void m3(String s)
+   - public static void m4(int i)
+
+   Classification:
+
+   | Method in B | Relationship to A | Reason |
+   |---|---|---|
+   | public static void m1(int i) | Overloads A.m1() | The name is the same but the parameter list differs: A.m1() takes no argument, B.m1(int) takes one. Different signature means overloading, not overriding. Class B therefore has two usable methods named m1: the inherited m1() and its own m1(int). |
+   | public void m2(int i) | Overrides A.m2(int) | The name, the parameter list and the return type are all identical, and both are instance methods. This is true overriding, so the call is resolved at run time. |
+   | public void m3(String s) | Overloads A.m3(int) | The parameter type differs, int against String, so the signatures differ. B therefore has both m3(int), inherited, and m3(String), its own. |
+   | public static void m4(int i) | Hides A.m4(int) | The signatures are identical and both methods are static. Static methods are never overridden; the subclass version hides the superclass version. Which one runs is decided at compile time from the declared type of the reference, not from the object. |
+
+   What about the remaining method:
+   - A.m1() is not touched by anything in B, so it is simply inherited unchanged and remains available on a B object.
+   - A.m3(int) is likewise inherited unchanged, and coexists with B's m3(String).
+
+   Complete set of methods available on an object of class B:
+   - m1() inherited from A
+   - m1(int) declared in B
+   - m2(int) the overriding version in B
+   - m3(int) inherited from A
+   - m3(String) declared in B
+   - m4(int) the hiding version in B
+
+   Demonstration of the difference between overriding and hiding:
+
+   ```java
+   A obj = new B();
+   obj.m2(5);     // runs B's m2  -> overriding, resolved at run time by the object type
+   A.m4(5);       // runs A's m4  -> hiding, resolved at compile time by the class name
+   B.m4(5);       // runs B's m4
+   ```
+
+   Key distinctions to state in an answer:
+   - Overloading: same name, different parameter list, resolved at compile time, no inheritance needed.
+   - Overriding: same name and same parameter list, instance methods, resolved at run time, inheritance required.
+   - Hiding: same name and same parameter list, but static methods, resolved at compile time from the reference type.
 6. **অথবা, (ক) ‘Static’ কীওয়ার্ডটি ব্যাখ্যা করার জন্যে Static Variable এবং Static Method ব্যবহার করে একটি প্রোগ্রাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 620 (ET: N/A)]*
 
+
+   Answer: static কীওয়ার্ডটি বোঝায় যে সংশ্লিষ্ট সদস্যটি কোনো নির্দিষ্ট অবজেক্টের নয়, বরং সম্পূর্ণ ক্লাসের।
+
+   Static Variable (ক্লাস ভেরিয়েবল):
+   - ক্লাসের সব অবজেক্ট এই একটিমাত্র কপি ভাগাভাগি করে ব্যবহার করে।
+   - ক্লাস প্রথমবার লোড হওয়ার সময় একবারই মেমোরি বরাদ্দ হয়, অবজেক্ট তৈরির সময় নয়।
+   - কোনো অবজেক্টে এর মান বদলালে সব অবজেক্টের জন্যই বদলে যায়।
+   - ব্যবহার: গণনা রাখা, ধ্রুবক সংরক্ষণ, প্রতিষ্ঠানের নামের মতো সবার জন্য অভিন্ন তথ্য।
+
+   Static Method (ক্লাস মেথড):
+   - অবজেক্ট তৈরি না করেই ক্লাসের নাম দিয়ে ডাকা যায়।
+   - কেবল static সদস্য সরাসরি ব্যবহার করতে পারে; instance ভেরিয়েবল বা this ব্যবহার করতে পারে না।
+   - ব্যবহার: ইউটিলিটি ফাংশন এবং static ভেরিয়েবল নিয়ে কাজ করা।
+
+   প্রোগ্রাম:
+
+   ```java
+   class Student {
+       // static variable: সব অবজেক্টের জন্য একটিই কপি
+       private static int studentCount = 0;
+       private static String instituteName = "Dhaka College";
+
+       // instance variable: প্রতিটি অবজেক্টের নিজস্ব কপি
+       private String name;
+       private int roll;
+
+       public Student(String name, int roll) {
+           this.name = name;
+           this.roll = roll;
+           studentCount++;            // প্রতিবার অবজেক্ট তৈরিতে বাড়ে
+       }
+
+       // static method: অবজেক্ট ছাড়াই ডাকা যায়
+       public static int getStudentCount() {
+           return studentCount;       // static সদস্য ব্যবহার করা যায়
+           // return name;            // ত্রুটি: instance ভেরিয়েবল ব্যবহার করা যায় না
+       }
+
+       public static void setInstituteName(String newName) {
+           instituteName = newName;   // পরিবর্তন সব অবজেক্টে প্রতিফলিত হয়
+       }
+
+       // instance method
+       public void display() {
+           System.out.println(name + " (Roll " + roll + ") - " + instituteName);
+       }
+   }
+
+   public class StaticDemo {
+       public static void main(String[] args) {
+
+           // কোনো অবজেক্ট তৈরির আগেই static মেথড ডাকা যাচ্ছে
+           System.out.println("Initial count: " + Student.getStudentCount());   // 0
+
+           Student s1 = new Student("Rahim", 101);
+           Student s2 = new Student("Karim", 102);
+           Student s3 = new Student("Salma", 103);
+
+           System.out.println("Total students: " + Student.getStudentCount()); // 3
+
+           s1.display();
+           s2.display();
+           s3.display();
+
+           // static ভেরিয়েবল বদলালে সব অবজেক্টে প্রভাব পড়ে
+           Student.setInstituteName("Notre Dame College");
+           System.out.println("--- After changing the institute name ---");
+           s1.display();
+           s2.display();
+           s3.display();
+       }
+   }
+   ```
+
+   আউটপুট:
+   ```
+   Initial count: 0
+   Total students: 3
+   Rahim (Roll 101) - Dhaka College
+   Karim (Roll 102) - Dhaka College
+   Salma (Roll 103) - Dhaka College
+   --- After changing the institute name ---
+   Rahim (Roll 101) - Notre Dame College
+   Karim (Roll 102) - Notre Dame College
+   Salma (Roll 103) - Notre Dame College
+   ```
+
+   ব্যাখ্যা:
+   - studentCount একটি static ভেরিয়েবল, তাই তিনটি অবজেক্ট মিলে একটিমাত্র কপি ব্যবহার করেছে এবং গণনা ৩ হয়েছে। এটি instance ভেরিয়েবল হলে প্রতিটি অবজেক্টে আলাদা কপি থাকত এবং প্রতিটির মান হতো ১।
+   - instituteName একবার বদলাতেই তিনটি অবজেক্টেই পরিবর্তন দেখা গেছে, কারণ কপি একটিই।
+   - getStudentCount() একটি static মেথড, তাই কোনো অবজেক্ট তৈরির আগেই Student.getStudentCount() লিখে ডাকা গেছে।
+   - static মেথডের ভেতরে name ব্যবহার করা যায় না, কারণ কোন অবজেক্টের name তা নির্ধারণ করার উপায় নেই।
+
+   অতিরিক্ত তথ্য: static block ক্লাস লোড হওয়ার সময় একবারই চলে এবং static ভেরিয়েবল আরম্ভ করতে ব্যবহৃত হয়। main() মেথডটিও static, কারণ JVM কোনো অবজেক্ট তৈরির আগেই একে ডাকে।
 7. **Write a java program to counting the vowel and consonant into a given strings.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
+
+   Answer: The program counts the vowels and the consonants in a string given by the user.
+
+   ```java
+   import java.util.Scanner;
+
+   public class VowelConsonantCounter {
+
+       public static void main(String[] args) {
+           Scanner sc = new Scanner(System.in);
+           System.out.print("Enter a string: ");
+           String input = sc.nextLine();
+
+           int vowels = 0, consonants = 0, digits = 0, spaces = 0, others = 0;
+
+           // convert once, so that both cases are handled
+           String str = input.toLowerCase();
+
+           for (int i = 0; i < str.length(); i++) {
+               char ch = str.charAt(i);
+
+               if (ch >= 'a' && ch <= 'z') {                 // it is a letter
+                   if (ch == 'a' || ch == 'e' || ch == 'i'
+                           || ch == 'o' || ch == 'u') {
+                       vowels++;
+                   } else {
+                       consonants++;
+                   }
+               } else if (ch >= '0' && ch <= '9') {
+                   digits++;
+               } else if (ch == ' ') {
+                   spaces++;
+               } else {
+                   others++;
+               }
+           }
+
+           System.out.println("Vowels      : " + vowels);
+           System.out.println("Consonants  : " + consonants);
+           System.out.println("Digits      : " + digits);
+           System.out.println("Spaces      : " + spaces);
+           System.out.println("Other chars : " + others);
+
+           sc.close();
+       }
+   }
+   ```
+
+   Sample run:
+   ```
+   Enter a string: Bangladesh is my country 2026
+   Vowels      : 8
+   Consonants  : 13
+   Digits      : 4
+   Spaces      : 4
+   Other chars : 0
+   ```
+
+   Explanation:
+   - The string is converted to lower case once with toLowerCase(), so that upper-case letters need not be tested separately.
+   - charAt(i) reads each character in turn, and length() gives the number of characters.
+   - A character is a letter if it lies between 'a' and 'z' after conversion. Among letters, the five vowels are tested first, and everything else is a consonant.
+   - Digits, spaces and punctuation are counted separately, so they are not wrongly counted as consonants. This is the mistake most commonly made in this problem.
+
+   Shorter version using a helper and the built-in Character class:
+
+   ```java
+   public class VowelCounterShort {
+       public static void main(String[] args) {
+           String str = "Bangladesh is my country";
+           int v = 0, c = 0;
+           for (char ch : str.toLowerCase().toCharArray()) {
+               if (!Character.isLetter(ch)) continue;
+               if ("aeiou".indexOf(ch) >= 0) v++;
+               else c++;
+           }
+           System.out.println("Vowels: " + v + ", Consonants: " + c);
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Vowels: 8, Consonants: 13
+   ```
 8. **Where will be the most chance of the grabage collector being invoked?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
 
+
+   Answer: The garbage collector is most likely to be invoked when the Java Virtual Machine is running short of free memory in the heap, in particular when an allocation request cannot be satisfied from the free space available.
+
+   The situations in which it is most likely to run:
+
+   - When the heap is nearly full and a new object must be allocated. This is by far the commonest trigger. If the young generation (the Eden space) fills, a minor collection runs; if the old generation fills, a major or full collection runs.
+   - When many objects have just become unreachable, for example after a large data structure goes out of scope or a large collection is cleared, so there is a great deal of garbage to reclaim.
+   - When a method that created many short-lived objects returns, since all of its local objects become unreachable at once. Most objects die young, which is the assumption behind generational collection.
+   - When a reference is explicitly set to null and no other reference to the object remains.
+   - When System.gc() or Runtime.getRuntime().gc() is called. This is only a request; the JVM is free to ignore it, and calling it in production code is discouraged because it can force an expensive full collection at a bad moment.
+   - Just before an OutOfMemoryError is thrown. The JVM performs a full collection as a last attempt to find memory before giving up.
+   - When the application is idle. Some collectors take the opportunity to run when the application threads are not busy.
+
+   When an object becomes eligible for collection:
+   - The reference is set to null: obj = null;
+   - The reference is reassigned to another object.
+   - The object was created inside a method and that method has returned.
+   - Island of isolation: two or more objects refer to one another but nothing outside refers to any of them, so the whole group is unreachable.
+
+   Important points to state in an answer:
+   - Garbage collection in Java is automatic and non-deterministic. The programmer cannot force it or predict exactly when it will happen.
+   - It reclaims heap memory only. Native resources such as file handles, sockets and database connections are not released by it, which is why they must be closed explicitly, ideally with try-with-resources.
+   - Memory leaks are still possible in Java, whenever an unwanted object remains reachable, for example an entry left in a static collection or a listener that is never removed.
+
+   Example:
+
+   ```java
+   public class GCDemo {
+       public static void main(String[] args) {
+           String s1 = new String("Hello");
+           s1 = null;                 // the "Hello" object is now unreachable
+
+           for (int i = 0; i < 100000; i++) {
+               new StringBuilder("temp" + i);   // each becomes garbage immediately
+           }
+           // the heap fills rapidly here, so the collector is very likely to run
+
+           System.gc();               // a request only, not a guarantee
+       }
+   }
+   ```
 9. **In Java program. Write the method in given box for the Electric bill calculation if unit is less then 100 then unit rate 4.0 take and after 100-unit rate is 5.50 and reaming unit rate is 6.00. [Bill rate 4.0 if unit<=100, Bill rate 5.50 if (unit>100 && unit<=200), Bill rate 6.00 for remaining units.]** *[BPDB Assistant Engineer (CSE) 2021 compact it 816-817 (ET: BUET)]*
 
+
+   Answer: The bill is calculated in slabs: the first 100 units are charged at Tk 4.00, the units from 101 to 200 at Tk 5.50, and every unit beyond 200 at Tk 6.00.
+
+   ```java
+   import java.util.Scanner;
+
+   class ElectricityBill {
+       private String consumerName;
+       private String meterNo;
+       private int unitsConsumed;
+
+       public ElectricityBill(String name, String meterNo, int units) {
+           this.consumerName = name;
+           this.meterNo = meterNo;
+           this.unitsConsumed = units;
+       }
+
+       // the required method
+       public double calculateBill() {
+           double bill = 0;
+
+           if (unitsConsumed <= 100) {
+               bill = unitsConsumed * 4.00;
+           } else if (unitsConsumed <= 200) {
+               bill = (100 * 4.00) + ((unitsConsumed - 100) * 5.50);
+           } else {
+               bill = (100 * 4.00) + (100 * 5.50) + ((unitsConsumed - 200) * 6.00);
+           }
+           return bill;
+       }
+
+       public void display() {
+           double bill = calculateBill();
+           double vat = bill * 0.05;          // 5 per cent VAT
+           System.out.println("=====================================");
+           System.out.println("Consumer : " + consumerName);
+           System.out.println("Meter No : " + meterNo);
+           System.out.println("Units    : " + unitsConsumed);
+           System.out.printf("Bill     : Tk %.2f%n", bill);
+           System.out.printf("VAT (5%%) : Tk %.2f%n", vat);
+           System.out.printf("Total    : Tk %.2f%n", bill + vat);
+           System.out.println("=====================================");
+       }
+   }
+
+   public class BillDemo {
+       public static void main(String[] args) {
+           ElectricityBill[] bills = {
+               new ElectricityBill("Rahim Uddin",  "M-1001", 80),
+               new ElectricityBill("Karim Ahmed",  "M-1002", 150),
+               new ElectricityBill("Salma Begum",  "M-1003", 350)
+           };
+
+           for (ElectricityBill b : bills) {
+               b.display();
+           }
+       }
+   }
+   ```
+
+   Worked calculations:
+   - 80 units: 80 x 4.00 = Tk 320.00
+   - 150 units: (100 x 4.00) + (50 x 5.50) = 400 + 275 = Tk 675.00
+   - 350 units: (100 x 4.00) + (100 x 5.50) + (150 x 6.00) = 400 + 550 + 900 = Tk 1850.00
+
+   Output:
+   ```
+   =====================================
+   Consumer : Rahim Uddin
+   Meter No : M-1001
+   Units    : 80
+   Bill     : Tk 320.00
+   VAT (5%) : Tk 16.00
+   Total    : Tk 336.00
+   =====================================
+   Consumer : Karim Ahmed
+   Meter No : M-1002
+   Units    : 150
+   Bill     : Tk 675.00
+   VAT (5%) : Tk 33.75
+   Total    : Tk 708.75
+   =====================================
+   Consumer : Salma Begum
+   Meter No : M-1003
+   Units    : 350
+   Bill     : Tk 1850.00
+   VAT (5%) : Tk 92.50
+   Total    : Tk 1942.50
+   =====================================
+   ```
+
+   Point to note: the rates are applied slab by slab, not to the whole consumption. A consumer using 150 units is not charged 150 x 5.50; the first 100 units remain at the lower rate. Applying the higher rate to the entire consumption is the commonest error in this problem, and it also produces an unfair jump in the bill at the slab boundary.
 10. **C# language এর একটি প্রোগ্রাম লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
 
+
+    Answer: নিচে C# ভাষায় একটি প্রোগ্রাম দেওয়া হলো, যা ক্লাস, অবজেক্ট, এনক্যাপসুলেশন, প্রপার্টি, কনস্ট্রাক্টর, ইনহেরিটেন্স ও পলিমরফিজম দেখায়।
+
+    ```csharp
+    using System;
+    using System.Collections.Generic;
+
+    namespace BankSystem
+    {
+        // বেস ক্লাস
+        class Account
+        {
+            // প্রাইভেট ফিল্ড: এনক্যাপসুলেশন
+            private double balance;
+
+            // প্রপার্টি: C# এর নিজস্ব গেটার-সেটার পদ্ধতি
+            public string HolderName { get; set; }
+            public string AccountNo  { get; set; }
+
+            public double Balance
+            {
+                get { return balance; }
+                private set { balance = value; }    // বাইরে থেকে লেখা যাবে না
+            }
+
+            // কনস্ট্রাক্টর
+            public Account(string name, string accNo, double initial)
+            {
+                HolderName = name;
+                AccountNo  = accNo;
+                Balance    = initial >= 0 ? initial : 0;
+            }
+
+            public void Deposit(double amount)
+            {
+                if (amount <= 0)
+                {
+                    Console.WriteLine("Deposit amount must be positive.");
+                    return;
+                }
+                Balance += amount;
+                Console.WriteLine($"Deposited Tk {amount}. Balance: Tk {Balance}");
+            }
+
+            // ভার্চুয়াল মেথড: সাবক্লাস ওভাররাইড করতে পারবে
+            public virtual void Withdraw(double amount)
+            {
+                if (amount <= 0)
+                    Console.WriteLine("Invalid amount.");
+                else if (amount > Balance)
+                    Console.WriteLine("Insufficient balance.");
+                else
+                {
+                    Balance -= amount;
+                    Console.WriteLine($"Withdrew Tk {amount}. Balance: Tk {Balance}");
+                }
+            }
+
+            public virtual string AccountType() => "General Account";
+
+            public void Display()
+            {
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine($"Type    : {AccountType()}");
+                Console.WriteLine($"Holder  : {HolderName}");
+                Console.WriteLine($"Acc No  : {AccountNo}");
+                Console.WriteLine($"Balance : Tk {Balance:F2}");
+            }
+        }
+
+        // ডেরাইভড ক্লাস
+        class SavingsAccount : Account
+        {
+            private const double MinimumBalance = 500;
+            public double InterestRate { get; set; }
+
+            public SavingsAccount(string name, string accNo, double initial, double rate)
+                : base(name, accNo, initial)
+            {
+                InterestRate = rate;
+            }
+
+            public override void Withdraw(double amount)
+            {
+                if (Balance - amount < MinimumBalance)
+                    Console.WriteLine($"Cannot withdraw. Minimum balance Tk {MinimumBalance} required.");
+                else
+                    base.Withdraw(amount);
+            }
+
+            public override string AccountType() => "Savings Account";
+        }
+
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                List<Account> accounts = new List<Account>
+                {
+                    new Account("Rahim Uddin", "GA-1001", 10000),
+                    new SavingsAccount("Karim Ahmed", "SB-2001", 8000, 5.0)
+                };
+
+                foreach (Account acc in accounts)
+                {
+                    acc.Display();
+                    acc.Deposit(2000);
+                    acc.Withdraw(9500);      // প্রতিটি নিজের নিয়ম প্রয়োগ করবে
+                    Console.WriteLine();
+                }
+            }
+        }
+    }
+    ```
+
+    আউটপুট:
+    ```
+    -------------------------------------
+    Type    : General Account
+    Holder  : Rahim Uddin
+    Acc No  : GA-1001
+    Balance : Tk 10000.00
+    Deposited Tk 2000. Balance: Tk 12000
+    Withdrew Tk 9500. Balance: Tk 2500
+
+    -------------------------------------
+    Type    : Savings Account
+    Holder  : Karim Ahmed
+    Acc No  : SB-2001
+    Balance : Tk 8000.00
+    Deposited Tk 2000. Balance: Tk 10000
+    Cannot withdraw. Minimum balance Tk 500 required.
+    ```
+
+    C# এর কয়েকটি নিজস্ব বৈশিষ্ট্য, যা এই প্রোগ্রামে দেখা যাচ্ছে:
+    - Property: get ও set ব্যবহার করে সংক্ষেপে গেটার-সেটার লেখা যায়; জাভার মতো আলাদা মেথড লিখতে হয় না।
+    - String interpolation: $"..." লিখে সরাসরি ভেরিয়েবল বসানো যায়।
+    - virtual ও override কীওয়ার্ড: জাভার বিপরীতে C# এ ওভাররাইড করতে হলে বেস মেথডকে স্পষ্টভাবে virtual ঘোষণা করতে হয় এবং সাবক্লাসে override লিখতে হয়।
+    - Expression-bodied member: => চিহ্ন দিয়ে এক লাইনের মেথড লেখা যায়।
+    - base কীওয়ার্ড: জাভার super এর সমতুল্য।
+    - namespace: কোড সংগঠিত রাখার জন্য।
 11. **Write java program for calculate electricity bill using class and object.** *[Sundharban Gas Assistant Programmer 2020 compact it 1047-1048 (ET: N/A)]*
+
+
+    Answer: The bill is calculated in slabs: the first 100 units are charged at Tk 4.00, the units from 101 to 200 at Tk 5.50, and every unit beyond 200 at Tk 6.00.
+
+    ```java
+    import java.util.Scanner;
+
+    class ElectricityBill {
+        private String consumerName;
+        private String meterNo;
+        private int unitsConsumed;
+
+        public ElectricityBill(String name, String meterNo, int units) {
+            this.consumerName = name;
+            this.meterNo = meterNo;
+            this.unitsConsumed = units;
+        }
+
+        // the required method
+        public double calculateBill() {
+            double bill = 0;
+
+            if (unitsConsumed <= 100) {
+                bill = unitsConsumed * 4.00;
+            } else if (unitsConsumed <= 200) {
+                bill = (100 * 4.00) + ((unitsConsumed - 100) * 5.50);
+            } else {
+                bill = (100 * 4.00) + (100 * 5.50) + ((unitsConsumed - 200) * 6.00);
+            }
+            return bill;
+        }
+
+        public void display() {
+            double bill = calculateBill();
+            double vat = bill * 0.05;          // 5 per cent VAT
+            System.out.println("=====================================");
+            System.out.println("Consumer : " + consumerName);
+            System.out.println("Meter No : " + meterNo);
+            System.out.println("Units    : " + unitsConsumed);
+            System.out.printf("Bill     : Tk %.2f%n", bill);
+            System.out.printf("VAT (5%%) : Tk %.2f%n", vat);
+            System.out.printf("Total    : Tk %.2f%n", bill + vat);
+            System.out.println("=====================================");
+        }
+    }
+
+    public class BillDemo {
+        public static void main(String[] args) {
+            ElectricityBill[] bills = {
+                new ElectricityBill("Rahim Uddin",  "M-1001", 80),
+                new ElectricityBill("Karim Ahmed",  "M-1002", 150),
+                new ElectricityBill("Salma Begum",  "M-1003", 350)
+            };
+
+            for (ElectricityBill b : bills) {
+                b.display();
+            }
+        }
+    }
+    ```
+
+    Worked calculations:
+    - 80 units: 80 x 4.00 = Tk 320.00
+    - 150 units: (100 x 4.00) + (50 x 5.50) = 400 + 275 = Tk 675.00
+    - 350 units: (100 x 4.00) + (100 x 5.50) + (150 x 6.00) = 400 + 550 + 900 = Tk 1850.00
+
+    Output:
+    ```
+    =====================================
+    Consumer : Rahim Uddin
+    Meter No : M-1001
+    Units    : 80
+    Bill     : Tk 320.00
+    VAT (5%) : Tk 16.00
+    Total    : Tk 336.00
+    =====================================
+    Consumer : Karim Ahmed
+    Meter No : M-1002
+    Units    : 150
+    Bill     : Tk 675.00
+    VAT (5%) : Tk 33.75
+    Total    : Tk 708.75
+    =====================================
+    Consumer : Salma Begum
+    Meter No : M-1003
+    Units    : 350
+    Bill     : Tk 1850.00
+    VAT (5%) : Tk 92.50
+    Total    : Tk 1942.50
+    =====================================
+    ```
+
+    Point to note: the rates are applied slab by slab, not to the whole consumption. A consumer using 150 units is not charged 150 x 5.50; the first 100 units remain at the lower rate. Applying the higher rate to the entire consumption is the commonest error in this problem, and it also produces an unfair jump in the bill at the slab boundary.
 
 ## Class Design & Object-Oriented Modeling (7)
 
