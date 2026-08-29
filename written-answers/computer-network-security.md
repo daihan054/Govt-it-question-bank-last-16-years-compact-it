@@ -1609,8 +1609,76 @@
 
 1. **As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer: A nuclear power plant is critical national infrastructure with an Operational Technology network controlling physical processes, so the intrusion detection strategy must protect safety and availability above all, and must never itself interfere with the control system.
+
+   Architecture and placement of IDS:
+   - Segment the network into zones and conduits following IEC 62443: the corporate IT network, a demilitarised zone, the supervisory SCADA network, the control network and the safety instrumented system, with firewalls between each level, which is the Purdue model.
+   - Deploy a network IDS at every zone boundary, particularly between IT and OT, which is the path an attacker must cross.
+   - Use passive monitoring through SPAN ports or network taps in the OT zone, so that the IDS can never inject traffic or delay a control packet. Detection, not prevention, is used inside the control network; an IPS that blocks a legitimate control command could itself cause a plant trip.
+   - Enforce a unidirectional gateway, that is a data diode, from OT to IT, so data can leave the control network for monitoring but nothing can enter.
+   - Deploy host based IDS on engineering workstations, historians and HMI servers, with file integrity monitoring.
+   - Never connect the safety instrumented system to any routable network.
+
+   Detection strategies:
+   - Signature based detection for known malware and known ICS attack tools, using rule sets specific to industrial protocols, for example Snort or Suricata with ICS rules.
+   - Anomaly and behaviour based detection, which is far more valuable in OT than in IT: a control network's traffic is highly repetitive and predictable, so a baseline can be established very accurately and any deviation is meaningful.
+   - Protocol aware deep packet inspection for Modbus, DNP3, IEC 61850, OPC UA and Profinet, checking that commands are within valid ranges and come from authorised sources. A command to open a valve from an unexpected host is detectable even if the packet is well formed.
+   - Asset discovery and inventory, passive rather than active, since active scanning can crash fragile PLCs.
+   - Physical process anomaly detection: correlate network commands with sensor readings, so that an attack which forges normal readings while altering the process, as Stuxnet did, is detected.
+   - Threat intelligence feeds specific to ICS, and rules for known ICS malware families such as Stuxnet, Industroyer, Triton and Pipedream.
+
+   Steps required to prevent cyber attacks:
+   - Governance: an information security management system, ICS specific risk assessment, and compliance with IEC 62443, NIST SP 800-82 and the IAEA nuclear security guidance.
+   - Defence in depth: layered controls so that no single failure exposes the plant.
+   - Network segmentation and strict firewall rules with default deny, and removal of any direct Internet connectivity from OT.
+   - Strict access control: least privilege, role based access, multi-factor authentication for all remote and administrative access, and privileged access management with session recording.
+   - Removable media control: USB ports disabled or whitelisted, and a scanning kiosk for any media that must enter, since Stuxnet entered by USB.
+   - Vendor and remote access: no permanent remote access; time limited, supervised, logged sessions only.
+   - Patch management adapted to OT: patches tested on a replica system first and applied in planned outage windows, with compensating controls such as virtual patching at the IDS in the meantime.
+   - Application whitelisting on HMI and engineering workstations, since the software set is small and stable.
+   - Continuous monitoring: a security operations centre with OT expertise, centralised logging and a SIEM correlating IT and OT events 24 hours a day.
+   - Incident response plan specific to OT, rehearsed with the operations team, with clear criteria for when to disconnect and when a safe shutdown is required.
+   - Backup and recovery: offline, immutable backups of PLC programs, HMI configurations and engineering files, with tested restoration.
+   - Supply chain security: vetting of vendors, verification of firmware signatures, and secure procurement requirements.
+   - Physical security integrated with cyber security, since physical access defeats every network control.
+   - Personnel: background checks, insider threat programme, separation of duties, and regular training for both IT and operations staff.
+   - Regular assessment: vulnerability assessment on a test bed rather than the live plant, red team exercises, and independent audit.
+
+   - The governing principle to state: in a nuclear plant the priority order is safety, then availability, then integrity, then confidentiality, which is the reverse of ordinary IT. Every security control must be judged first by whether it could itself cause an unsafe condition.
 2. **What is Packet Filter of Firewall?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
+
+   Answer: A packet filtering firewall is the simplest type of firewall. It examines each packet individually and decides to permit or deny it by comparing the header fields against a set of rules called an access control list.
+
+   Fields examined:
+   - Source IP address and destination IP address.
+   - Source port and destination port.
+   - Protocol, that is TCP, UDP or ICMP.
+   - The interface on which the packet arrived, and sometimes the TCP flags.
+
+   How it works:
+   - The rules are evaluated in order, from top to bottom, and the first match determines the action: permit or deny.
+   - A default deny rule at the end blocks anything not explicitly permitted, which is the correct and secure configuration.
+   - Example rules: permit TCP from any source to 203.0.113.10 on port 443; deny all traffic from a particular subnet; permit UDP to port 53 from the internal DNS resolver only.
+
+   Characteristics:
+   - It is stateless: each packet is judged entirely on its own, with no memory of the connection it belongs to. This is its defining limitation.
+   - It works at layers 3 and 4 of the OSI model.
+
+   Advantages:
+   - Very fast, since only the header is read, and it therefore adds almost no latency.
+   - Simple, cheap and available on almost every router.
+   - Transparent to users and applications, and effective at coarse blocking such as closing whole ports or subnets.
+
+   Disadvantages:
+   - No knowledge of connection state, so it cannot tell a legitimate reply from an unsolicited packet with the right port numbers. This means the return traffic of every permitted connection must be allowed by a separate rule, which widens the opening considerably.
+   - Cannot inspect the payload, so it cannot detect malware, SQL injection or any application layer attack. Malicious traffic on an allowed port passes freely.
+   - Vulnerable to IP spoofing and to fragmentation attacks.
+   - No user authentication and no logging of session context.
+   - The rule set becomes large and difficult to maintain, and rule ordering errors are a common source of unintended exposure.
+
+   - This is why stateful inspection firewalls replaced packet filters as the standard, and why next generation firewalls added application and user awareness on top of that. Packet filtering survives as the first, cheapest layer of a defence in depth design.
 3. **Write down the difference between Next-Generation Firewall (NGFW) and Web Application Firewall (WAF)?** *[Islami Bank PLC Senior Officer (Network/System) 14.03.2025 compact it 1331 (ET: BUET)]*
 
 | NGFW | WAF |
@@ -1620,31 +1688,422 @@
 | Network-based Attacks (DDoS, Malware, IPS) | Web-based Attacks (SQL Injection, XSS, CSRF) |
 | Palo Alto, Fortinet, Cisco Firepower | Cloudflare WAF, AWS WAF, Imperva WAF |
 
+
+   Answer:
+
+   | Point | NGFW, Next Generation Firewall | WAF, Web Application Firewall |
+   |---|---|---|
+   | Protects | The network as a whole, and all the hosts behind it | One specific web application or a group of them |
+   | OSI layers | 3, 4 and 7 | 7 only, and specifically HTTP and HTTPS |
+   | Scope of traffic | All protocols and all ports | Only HTTP and HTTPS requests and responses |
+   | Attacks blocked | Network and transport attacks: malware, botnets, port scans, intrusion attempts, unauthorised applications, DDoS at the network level | Application attacks: SQL injection, cross site scripting, CSRF, file inclusion, session hijacking, credential stuffing, OWASP Top 10 |
+   | Placement | At the network perimeter, between zones, and at the Internet edge | Directly in front of the web server, as a reverse proxy or as a module |
+   | Awareness | Application identity, user identity, and threat intelligence | The structure and semantics of the HTTP request: parameters, headers, cookies, body |
+   | Method | Stateful inspection with deep packet inspection, integrated IPS and TLS decryption | Signature rules plus a positive security model, that is a learned profile of normal requests |
+   | Typical products | Palo Alto, Fortinet FortiGate, Cisco Firepower, Check Point | Cloudflare WAF, AWS WAF, Imperva, F5 ASM, ModSecurity |
+   | What it cannot do | It cannot understand the logic of a web application, so it will not reliably catch a well crafted SQL injection | It cannot protect anything that is not a web application, and it sees no other protocol |
+
+   - The two are complementary, not alternatives. A bank uses an NGFW at the perimeter to control what may reach the network at all, and a WAF in front of the internet banking application to protect the application logic itself. Neither replaces the other: an NGFW will not stop SQL injection reaching a vulnerable page, and a WAF will not stop a network intrusion or malware on a workstation.
+   - Both should be treated as compensating controls rather than fixes: the correct remedy for SQL injection is parameterised queries in the code, and the WAF is the safety net while the code is being fixed.
 4. **Bangladesh Bank have client server and the communication with Mail Server, DNS server, Web server. Bangladesh Bank want to ensure the security using firewall on those server. Draw a diagram with the scenario.** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1323 (ET: DU)]*
 
+
+   Answer: The design places the publicly reachable servers in a DMZ and protects the internal client-server systems behind a second firewall, so that a compromise of any public service cannot reach the core banking network.
+
+   ```mermaid
+   graph TD
+       A["Internet"] --> B["Router / Edge"]
+       B --> C["External Firewall / NGFW"]
+       C --> D["DMZ"]
+       D --> E["Web Server: HTTPS 443"]
+       D --> F["Mail Server: SMTP 25, 587"]
+       D --> G["DNS Server: 53"]
+       C --> H["Internal Firewall"]
+       H --> I["Internal LAN: Bangladesh Bank clients"]
+       H --> J["Application Server"]
+       J --> K["Database Server: restricted zone"]
+       C -.->|"denied"| I
+       D -.->|"only specific ports"| J
+   ```
+
+   Rules that make the design work:
+   - External firewall: permit from the Internet only TCP 443 to the web server, TCP 25 and 587 to the mail server, and UDP and TCP 53 to the DNS server. Deny everything else inbound by default.
+   - No direct path from the Internet to the internal LAN or to the database. Any such rule defeats the whole design.
+   - Internal firewall: permit only the specific flows required, for example the web server to the application server on one port, and the application server to the database on one port. Default deny in both directions.
+   - DMZ to internal traffic is initiated only where unavoidable, is restricted to named hosts and ports, and is logged.
+   - Internal clients reach the Internet through a proxy in the DMZ, not directly.
+   - Management traffic uses a separate out of band network, reachable only from a jump host with multi-factor authentication.
+
+   Additional controls appropriate to a central bank:
+   - A Web Application Firewall in front of the web server, and mail filtering with SPF, DKIM and DMARC on the mail server.
+   - An intrusion detection and prevention system monitoring both the DMZ and the internal boundary.
+   - DNS split horizon: an external DNS server in the DMZ answering only public records, and a separate internal DNS server for internal names.
+   - Network segmentation of the internal LAN itself, with the database in its own protected zone.
+   - Centralised logging to a SIEM, and 24 hour monitoring.
+   - TLS everywhere, encryption of data at rest, and regular patching and vulnerability assessment.
+
+   - The principle to state: defence in depth with a screened subnet. The public servers are sacrificial; they are exposed by necessity, so they are isolated, hardened and monitored, and the second firewall ensures that their compromise is contained rather than fatal.
 5. **What is Demilitarized Zone (DMZ) and sandbox for security test?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 398 (ET: BUET)]*
 
+
+   Answer:
+
+   Demilitarized Zone, DMZ:
+   - A DMZ is a separate network segment placed between the untrusted Internet and the trusted internal network, in which the servers that must be reachable from outside are located.
+   - Its purpose is containment: a public facing server is the most likely thing to be compromised, so it is deliberately kept outside the internal network, and a second firewall stands between it and the internal systems. If the web server is taken over, the attacker has still gained nothing but a foothold in an isolated segment.
+   - Typical DMZ hosts: web server, mail server, DNS server, FTP server, reverse proxy and VPN concentrator.
+   - Two designs: a single firewall with three interfaces, that is Internet, DMZ and LAN; and the stronger dual firewall or screened subnet design, in which two separate firewalls, preferably from different vendors, stand on either side of the DMZ.
+
+   ```mermaid
+   graph LR
+       A["Internet"] --> B["External Firewall"]
+       B --> C["DMZ: Web server, Mail server, DNS server, Proxy"]
+       C --> D["Internal Firewall"]
+       D --> E["Internal LAN: workstations, database, file server"]
+       B -.->|"blocked"| E
+   ```
+
+   - The design principle: a service that must be reachable from the Internet is placed in the DMZ, never on the internal LAN. If a public server is compromised, the attacker is still separated from the internal network by the second firewall, so the damage is contained. Traffic from the DMZ to the internal LAN is denied by default and permitted only for specific, tightly controlled flows, for example the web server reaching one database port.
+
+   Sandbox for security testing:
+   - A sandbox is an isolated environment in which untrusted code, a suspicious file or a new application can be executed and observed without any risk to the real system, because it has no access to the host's file system, network or other processes.
+   - How it is used in security: a suspicious email attachment or download is detonated in the sandbox, and its behaviour is recorded — which files it writes, which registry keys it changes, which network connections it attempts, whether it tries to encrypt files or to escalate privileges. If it behaves maliciously it is blocked, even though no signature for it existed. This is how unknown and zero day malware is caught.
+   - Other uses: safely analysing malware in a reverse engineering laboratory; running browser tabs and mobile applications in isolation, which is standard in Chrome, Android and iOS; testing patches and untrusted software before deployment; and providing a safe environment for penetration testing and for training.
+   - Implementations: virtual machines, containers, dedicated appliances such as FireEye and Palo Alto WildFire, and cloud services such as Any.run and Hybrid Analysis.
+   - Limitation worth stating: sophisticated malware detects that it is in a sandbox — by checking for virtualisation artefacts, a small disk, no user activity or a short uptime — and stays dormant, so sandboxing must be combined with behavioural monitoring on the real endpoint.
 6. **Different types of network firewalls. Explain NGFW compared to traditional firewall.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 301 (ET: BIBM)]*
 
+
+   Answer:
+
+   Types of firewall:
+   - Packet filtering firewall: examines each packet's source and destination IP address, port and protocol against an access control list. It is stateless, very fast and cheap, but it has no memory of context, so it can be defeated by fragmented or spoofed packets and cannot understand a session.
+   - Stateful inspection firewall: maintains a connection table and permits a packet only if it belongs to a legitimate established session. It is far more secure than packet filtering and is the standard type today.
+   - Circuit level gateway: works at the session layer, verifying the TCP handshake before allowing the session to proceed, but it does not inspect the content of the traffic.
+   - Application level gateway, that is a proxy firewall: terminates the connection and rebuilds it, inspecting the full application content such as an HTTP request. Very secure, but slower, and a separate proxy is needed for each protocol.
+   - Next Generation Firewall, NGFW: combines stateful inspection with deep packet inspection, application awareness, user identity, integrated intrusion prevention, TLS inspection and cloud threat intelligence.
+   - Web Application Firewall, WAF: protects a web application specifically against SQL injection, cross site scripting and similar attacks by inspecting HTTP requests.
+   - By deployment: hardware appliance, software or host based firewall such as Windows Defender Firewall and iptables, and cloud firewall or firewall as a service.
+
+   NGFW compared with a traditional firewall:
+
+   | Point | Traditional firewall | Next Generation Firewall |
+   |---|---|---|
+   | Inspection depth | Header only, that is IP, port and protocol | Deep packet inspection of the payload as well |
+   | OSI layers covered | 3 and 4 | 3 to 7, including the application layer |
+   | Application awareness | None; it sees only port 443 | Identifies the actual application, so Facebook and Dropbox on the same port 443 are distinguished |
+   | User awareness | None; it sees only IP addresses | Integrates with Active Directory or LDAP, so policy can be written per user or group |
+   | Threat prevention | None built in | Integrated IPS, antivirus, anti-bot and sandboxing |
+   | Encrypted traffic | Cannot inspect it | TLS inspection: decrypt, inspect and re-encrypt |
+   | Threat intelligence | None | Cloud feeds of known malicious addresses, domains and file hashes, updated continuously |
+   | Policy style | Allow port 443 from this subnet | Allow the Finance group to use Salesforce but not file sharing |
+   | Performance cost | Very low | High, so far more processing power is required |
+   | Cost and complexity | Low | High, with subscription licences for the security services |
+
+   - In short, a traditional firewall asks where the packet is going, while an NGFW asks who is sending it, what application it is, and whether it is carrying an attack.
 7. **What is Firewall? Discuss about different types of Firewall.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 528 (ET: MIST)]*
 
+
+   Answer:
+
+   What a firewall is:
+   - A firewall is a network security device or software that monitors incoming and outgoing traffic and permits or blocks it according to a defined security policy. It stands between a trusted internal network and an untrusted external one, and it is the primary mechanism for controlling what may cross that boundary.
+   - Its default policy should be deny all, permit by exception, so that anything not explicitly allowed is blocked.
+
+   Why it is used:
+   - To block unauthorised access from outside and to prevent unauthorised traffic leaving.
+   - To enforce the organisation's security policy at a single controllable point.
+   - To hide the internal network structure, usually through NAT.
+   - To log and monitor traffic, which provides both alerting and evidence.
+   - To segment the network so that a compromise in one zone does not spread to another.
+   - To provide, in a modern firewall, intrusion prevention, content filtering, application control and VPN termination.
+
+   Types of firewall:
+   - Packet filtering firewall: examines each packet's source and destination IP address, port and protocol against an access control list. It is stateless, very fast and cheap, but it has no memory of context, so it can be defeated by fragmented or spoofed packets and cannot understand a session.
+   - Stateful inspection firewall: maintains a connection table and permits a packet only if it belongs to a legitimate established session. It is far more secure than packet filtering and is the standard type today.
+   - Circuit level gateway: works at the session layer, verifying the TCP handshake before allowing the session to proceed, but it does not inspect the content of the traffic.
+   - Application level gateway, that is a proxy firewall: terminates the connection and rebuilds it, inspecting the full application content such as an HTTP request. Very secure, but slower, and a separate proxy is needed for each protocol.
+   - Next Generation Firewall, NGFW: combines stateful inspection with deep packet inspection, application awareness, user identity, integrated intrusion prevention, TLS inspection and cloud threat intelligence.
+   - Web Application Firewall, WAF: protects a web application specifically against SQL injection, cross site scripting and similar attacks by inspecting HTTP requests.
+   - By deployment: hardware appliance, software or host based firewall such as Windows Defender Firewall and iptables, and cloud firewall or firewall as a service.
+
+   Limitations to state: a firewall cannot stop an attack that arrives through an allowed channel, such as a phishing email over permitted HTTPS; it cannot protect against an insider who is already inside; it cannot inspect encrypted traffic unless TLS inspection is configured; and it is only as good as its rule set, so a badly maintained rule base is a common cause of exposure.
 8. **Draw a diagram of LAN including network Firewall. Why is firewall important in network security? List 5 major types of network firewalls. Differentiate between Traditional Firewall and Next Generation Firewall.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 532 (ET: MIST)]*
 
+
+   Answer:
+
+   Diagram of a LAN including a network firewall:
+
+   ```mermaid
+   graph LR
+       A["Internet"] --> B["External Firewall"]
+       B --> C["DMZ: Web server, Mail server, DNS server, Proxy"]
+       C --> D["Internal Firewall"]
+       D --> E["Internal LAN: workstations, database, file server"]
+       B -.->|"blocked"| E
+   ```
+
+   - The design principle: a service that must be reachable from the Internet is placed in the DMZ, never on the internal LAN. If a public server is compromised, the attacker is still separated from the internal network by the second firewall, so the damage is contained. Traffic from the DMZ to the internal LAN is denied by default and permitted only for specific, tightly controlled flows, for example the web server reaching one database port.
+
+   Why a firewall is important in network security:
+   - It is the single controlled point at which the security policy is enforced between the trusted and untrusted networks, so a rule written once protects every host behind it.
+   - It blocks unauthorised inbound access, which prevents direct attacks on internal servers and workstations.
+   - It controls outbound traffic, which prevents data exfiltration and stops compromised machines contacting their command and control servers.
+   - It hides the internal addressing through NAT, so the internal structure is not visible from outside.
+   - It segments the network into zones, so that a compromise in one zone does not spread to another. This containment is what limits the damage of an inevitable breach.
+   - It logs traffic, which provides both real time alerting and the evidence needed for investigation and audit.
+   - It terminates VPNs, giving remote staff secure access without exposing internal services.
+   - A modern firewall adds intrusion prevention, application control, user based policy and threat intelligence, so it becomes an active defence rather than a passive filter.
+   - It is a regulatory requirement: the Bangladesh Bank ICT security guidelines, PCI DSS and ISO 27001 all require firewall controls at network boundaries.
+
+   Five major types of network firewall:
+   - Packet filtering firewall, which is stateless and inspects only the header.
+   - Stateful inspection firewall, which tracks connections and is the current standard.
+   - Circuit level gateway, which validates the session at layer 5 without inspecting content.
+   - Application level gateway, that is a proxy firewall, which terminates and rebuilds the connection and inspects the full application content.
+   - Next Generation Firewall, which combines all of these with deep packet inspection, application and user awareness and integrated threat prevention.
+
+   Traditional firewall vs Next Generation Firewall:
+
+   | Point | Traditional firewall | Next Generation Firewall |
+   |---|---|---|
+   | Inspection depth | Header only, that is IP, port and protocol | Deep packet inspection of the payload as well |
+   | OSI layers covered | 3 and 4 | 3 to 7, including the application layer |
+   | Application awareness | None; it sees only port 443 | Identifies the actual application, so Facebook and Dropbox on the same port 443 are distinguished |
+   | User awareness | None; it sees only IP addresses | Integrates with Active Directory or LDAP, so policy can be written per user or group |
+   | Threat prevention | None built in | Integrated IPS, antivirus, anti-bot and sandboxing |
+   | Encrypted traffic | Cannot inspect it | TLS inspection: decrypt, inspect and re-encrypt |
+   | Threat intelligence | None | Cloud feeds of known malicious addresses, domains and file hashes, updated continuously |
+   | Policy style | Allow port 443 from this subnet | Allow the Finance group to use Salesforce but not file sharing |
+   | Performance cost | Very low | High, so far more processing power is required |
+   | Cost and complexity | Low | High, with subscription licences for the security services |
+
+   - In short, a traditional firewall asks where the packet is going, while an NGFW asks who is sending it, what application it is, and whether it is carrying an attack.
 9. **What is firewall and why it is used?** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 475 (ET: N/A)]*
 
+
+   Answer:
+
+   What a firewall is:
+   - A firewall is a network security system, implemented in hardware, software or both, that monitors and controls incoming and outgoing network traffic according to a set of security rules. It sits at the boundary between a trusted network and an untrusted one and decides which traffic may cross.
+   - Every packet is compared against an ordered rule set, and the first matching rule determines whether it is permitted or denied. A default deny rule at the end blocks everything not explicitly allowed.
+
+   Why it is used:
+   - To block unauthorised access from the Internet into the internal network, which is its primary purpose.
+   - To control what leaves the network, which prevents data exfiltration and stops an infected machine reaching its command and control server.
+   - To enforce the organisation's security policy at one controllable point rather than on every host.
+   - To segment the network into zones, so that a compromise in one part is contained and cannot spread.
+   - To create a DMZ, in which public facing servers are isolated from the internal LAN.
+   - To hide the internal network structure through NAT.
+   - To log traffic for monitoring, alerting, investigation and audit.
+   - To terminate VPN connections, giving remote users secure access.
+   - To provide, in a next generation firewall, intrusion prevention, application control, user based policy and malware inspection.
+   - To satisfy regulatory requirements such as the Bangladesh Bank ICT security guidelines, PCI DSS and ISO 27001.
+
+   Types: packet filtering, stateful inspection, circuit level gateway, application level or proxy firewall, next generation firewall, and web application firewall.
 10. **What is the function of a firewall?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
+
+   Answer: The function of a firewall is to monitor all traffic crossing a network boundary and to permit or deny each packet according to a defined security policy.
+
+   Its specific functions:
+   - Traffic filtering: comparing each packet's source and destination address, port and protocol against an ordered rule set, and applying a default deny to anything not explicitly permitted.
+   - Access control: allowing only authorised services and hosts to communicate, in either direction.
+   - Stateful connection tracking: maintaining a table of established sessions, so that only packets belonging to a legitimate connection are accepted.
+   - Network Address Translation: hiding the internal addressing behind one or a few public addresses.
+   - Network segmentation: separating zones such as the DMZ, the user LAN, the server farm and the management network, so that a compromise is contained.
+   - Logging and alerting: recording permitted and denied traffic for monitoring, investigation and audit.
+   - VPN termination: providing encrypted remote access for staff and site to site tunnels between offices.
+   - In a next generation firewall: deep packet inspection, application identification, user based policy, integrated intrusion prevention, malware inspection, URL filtering and TLS decryption.
+
+   - What it does not do: it cannot stop an attack arriving through a permitted channel such as a phishing email over allowed HTTPS, it cannot protect against an insider already inside the perimeter, and it cannot see inside encrypted traffic unless inspection is configured. It is therefore one layer of defence in depth rather than a complete solution.
 11. **DMZ and firewall placement in a diagram. (Approximate)** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 651 (ET: BUET)]*
 
+
+   Answer: The DMZ is placed between two firewalls, so that the servers reachable from the Internet are isolated from the internal LAN.
+
+   ```mermaid
+   graph LR
+       A["Internet"] --> B["External Firewall"]
+       B --> C["DMZ: Web server, Mail server, DNS server, Proxy"]
+       C --> D["Internal Firewall"]
+       D --> E["Internal LAN: workstations, database, file server"]
+       B -.->|"blocked"| E
+   ```
+
+   - The design principle: a service that must be reachable from the Internet is placed in the DMZ, never on the internal LAN. If a public server is compromised, the attacker is still separated from the internal network by the second firewall, so the damage is contained. Traffic from the DMZ to the internal LAN is denied by default and permitted only for specific, tightly controlled flows, for example the web server reaching one database port.
+
+   Placement rules:
+   - The external firewall faces the Internet and permits only the specific public services: TCP 443 to the web server, TCP 25 and 587 to the mail server, and port 53 to the DNS server. Everything else inbound is denied.
+   - The DMZ contains only the servers that must be reachable from outside: web, mail, DNS, reverse proxy, FTP and the VPN concentrator.
+   - The internal firewall separates the DMZ from the internal LAN and denies all traffic by default. Only named flows are permitted, for example the web server reaching the application server on one specific port.
+   - There is never a direct path from the Internet to the internal LAN. Any such rule destroys the purpose of the design.
+   - Internal users reach the Internet through a proxy in the DMZ rather than directly.
+   - Management access uses a separate out of band network reachable only from a hardened jump host.
+
+   Two common designs:
+   - Single firewall with three interfaces: Internet, DMZ and LAN, each with its own security zone. Cheaper, but the whole design depends on one device.
+   - Dual firewall, the screened subnet: two separate firewalls, ideally from different manufacturers, so that a vulnerability in one does not defeat both. This is the design used by banks and by government.
+
+   - Why it matters: a public server is the most exposed asset an organisation has and must be assumed to be compromised eventually. Placing it in the DMZ means that when that happens the attacker is still separated from the internal network by a second enforcement point, and the incident is contained rather than catastrophic.
 12. **What is Blacklist and Whitelist? Write down the difference between Black list and White list.** *[SPCB Sub-Assistant Programmer 2022 compact it 737 (ET: N/A)]*
 
+
+   Answer:
+
+   Blacklist:
+   - A blacklist is a list of items that are explicitly denied, while everything else is allowed by default. It is a negative security model.
+   - Examples: antivirus signatures of known malware, spam blocklists of known bad senders, blocked IP addresses and domains, banned file extensions, and prohibited websites.
+
+   Whitelist:
+   - A whitelist is a list of items that are explicitly permitted, while everything else is denied by default. It is a positive security model.
+   - Examples: application whitelisting on a server, a list of IP addresses allowed to reach an administrative interface, approved USB device identifiers, and an approved software catalogue.
+
+   | Point | Blacklisting | Whitelisting |
+   |---|---|---|
+   | Default policy | Allow everything, deny what is on the list | Deny everything, allow only what is on the list |
+   | List contains | Known bad items | Known good items |
+   | Assumption | Everything is safe unless proved harmful | Everything is dangerous unless proved safe |
+   | Protection against unknown threats | None; a new threat is not on the list, so it is allowed | Full; anything unknown is denied by default |
+   | Maintenance effort | Constant, since the list must chase new threats | High at first, lower afterwards, but every legitimate change needs approval |
+   | Flexibility for users | High | Low, which causes friction and requests for exceptions |
+   | False positives | Few | Many at first, as legitimate items are wrongly blocked |
+   | Suitable for | Environments needing openness: general web browsing, email spam filtering | High security and fixed function environments: ATMs, SCADA systems, servers, point of sale terminals |
+   | Examples | Antivirus signatures, spam blocklists, blocked IP addresses, banned file extensions | Application whitelisting, allowed IP ranges on a management interface, permitted USB devices, approved software catalogue |
+
+   Which is more secure and why:
+   - Whitelisting is significantly more secure, and it should be stated as the answer.
+   - The decisive reason is that blacklisting can only block what is already known. A new virus, a zero day exploit or a slightly modified variant is not on the list and is therefore allowed. Attackers change a few bytes and defeat a signature. Whitelisting reverses the default: anything not explicitly approved is denied, so an unknown threat is blocked without anyone having to know about it first.
+   - Whitelisting also enforces the principle of least privilege and default deny, which is the foundation of secure design, and it produces a far smaller and more predictable attack surface.
+   - Its cost is administrative: every legitimate new application, update or address must be approved, which is burdensome in a general purpose office and causes users to demand exceptions. This is why it is used where the set of legitimate items is small and stable, such as servers, ATMs and industrial control systems, and blacklisting is used where openness is essential.
+   - In practice a layered approach is used: whitelisting at the perimeter and on critical systems, blacklisting for general user traffic, and both combined with behavioural detection that depends on neither list.
 13. **What is DMZ in data center? Describe using diagram? Write the network devices in this system?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
 
+
+   Answer:
+
+   What a DMZ in a data centre is:
+   - A DMZ, Demilitarized Zone, is a separate, isolated network segment placed between the untrusted external network and the trusted internal network, in which all the servers that must be reachable from outside are located.
+   - Its purpose is containment. A public facing server is the most likely component to be compromised, so it is deliberately kept out of the internal network and a second enforcement point stands between it and the core systems. If the web server falls, the attacker has gained an isolated segment and not the database.
+   - It is sometimes called a screened subnet or a perimeter network.
+
+   ```mermaid
+   graph LR
+       A["Internet"] --> B["External Firewall"]
+       B --> C["DMZ: Web server, Mail server, DNS server, Proxy"]
+       C --> D["Internal Firewall"]
+       D --> E["Internal LAN: workstations, database, file server"]
+       B -.->|"blocked"| E
+   ```
+
+   - The design principle: a service that must be reachable from the Internet is placed in the DMZ, never on the internal LAN. If a public server is compromised, the attacker is still separated from the internal network by the second firewall, so the damage is contained. Traffic from the DMZ to the internal LAN is denied by default and permitted only for specific, tightly controlled flows, for example the web server reaching one database port.
+
+   Rules that define it:
+   - Internet to DMZ: permitted, but only for the specific published services and ports.
+   - DMZ to internal: denied by default; only named hosts and ports where unavoidable, and every such flow logged.
+   - Internet to internal: never permitted directly.
+   - Internal to DMZ: permitted for management and for application traffic, from specific hosts only.
+   - Servers in the DMZ hold no sensitive data themselves; they query the internal database through a tightly restricted channel.
+
+   Network devices in this system:
+   - Edge router, which connects to the ISP and provides the first coarse filtering with access control lists and anti-spoofing.
+   - External firewall or NGFW, which faces the Internet and enforces the published service rules.
+   - Internal firewall, ideally from a different vendor, which separates the DMZ from the internal network. Together with the external firewall this forms the dual firewall design.
+   - Layer 2 and layer 3 switches, providing the DMZ VLAN and the internal VLANs, configured with port security, DHCP snooping and Dynamic ARP Inspection.
+   - Load balancer or reverse proxy in front of the web servers, which also terminates TLS and hides the real servers.
+   - Web Application Firewall protecting the web application specifically.
+   - Intrusion Detection and Prevention System monitoring both the DMZ and the internal boundary.
+   - VPN concentrator for remote access, terminating in the DMZ rather than inside.
+   - Mail gateway with anti-spam and anti-malware filtering, and a DNS server serving only public records.
+   - Out of band management switch and jump host, so that administration does not traverse the production path.
+   - Log collector and SIEM, receiving logs from every device for correlation and alerting.
+
+   - Single firewall variant: one firewall with three interfaces, Internet, DMZ and LAN, is cheaper but places the whole design on one device. The dual firewall design is used where the data is valuable, as in a bank.
 14. **Difference between blacklisting and whitelisting. Which is more secure and why?** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 864 (ET: BUET)]*
 
+
+   Answer:
+
+   | Point | Blacklisting | Whitelisting |
+   |---|---|---|
+   | Default policy | Allow everything, deny what is on the list | Deny everything, allow only what is on the list |
+   | List contains | Known bad items | Known good items |
+   | Assumption | Everything is safe unless proved harmful | Everything is dangerous unless proved safe |
+   | Protection against unknown threats | None; a new threat is not on the list, so it is allowed | Full; anything unknown is denied by default |
+   | Maintenance effort | Constant, since the list must chase new threats | High at first, lower afterwards, but every legitimate change needs approval |
+   | Flexibility for users | High | Low, which causes friction and requests for exceptions |
+   | False positives | Few | Many at first, as legitimate items are wrongly blocked |
+   | Suitable for | Environments needing openness: general web browsing, email spam filtering | High security and fixed function environments: ATMs, SCADA systems, servers, point of sale terminals |
+   | Examples | Antivirus signatures, spam blocklists, blocked IP addresses, banned file extensions | Application whitelisting, allowed IP ranges on a management interface, permitted USB devices, approved software catalogue |
+
+   Which is more secure and why:
+   - Whitelisting is significantly more secure, and it should be stated as the answer.
+   - The decisive reason is that blacklisting can only block what is already known. A new virus, a zero day exploit or a slightly modified variant is not on the list and is therefore allowed. Attackers change a few bytes and defeat a signature. Whitelisting reverses the default: anything not explicitly approved is denied, so an unknown threat is blocked without anyone having to know about it first.
+   - Whitelisting also enforces the principle of least privilege and default deny, which is the foundation of secure design, and it produces a far smaller and more predictable attack surface.
+   - Its cost is administrative: every legitimate new application, update or address must be approved, which is burdensome in a general purpose office and causes users to demand exceptions. This is why it is used where the set of legitimate items is small and stable, such as servers, ATMs and industrial control systems, and blacklisting is used where openness is essential.
+   - In practice a layered approach is used: whitelisting at the perimeter and on critical systems, blacklisting for general user traffic, and both combined with behavioural detection that depends on neither list.
 15. **Write difference between Antivirus and Firewall.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Antivirus | Firewall |
+   |---|---|---|
+   | Purpose | Detects, blocks and removes malicious software already on or entering the machine | Controls which network traffic may enter or leave |
+   | Works on | Files, processes, memory and storage of a host | Packets and connections crossing a network boundary |
+   | Layer | Application and host level | Network and transport level, and application level in an NGFW |
+   | Threats addressed | Viruses, worms, Trojans, ransomware, spyware, rootkits | Unauthorised access, port scanning, intrusion attempts, unwanted services, data exfiltration |
+   | Method | Signature matching, heuristic analysis, behavioural monitoring, sandboxing | Rule based filtering, stateful connection tracking, and deep packet inspection in an NGFW |
+   | Scope | Usually one host, though managed centrally | Usually the whole network behind it |
+   | Position | Installed on the endpoint or the server | Placed at the network perimeter or between zones |
+   | Acts against | A threat that has already reached the system | A threat before it reaches the system |
+   | Can it inspect file content | Yes, that is its whole purpose | Only in an NGFW with deep packet inspection |
+   | If it fails | Malware executes and spreads | Unauthorised traffic reaches the internal network |
+   | Examples | Windows Defender, Kaspersky, Bitdefender, Symantec, ClamAV | Cisco ASA, Palo Alto, FortiGate, pfSense, iptables, Windows Defender Firewall |
+
+   - The relationship: they are complementary and neither replaces the other. A firewall stops unauthorised traffic at the boundary but cannot detect a virus in a permitted email attachment; an antivirus detects that virus on the machine but cannot stop a port scan or an intrusion attempt. Both are required, together with patching, backups and user awareness, in a defence in depth design.
+   - Modern products blur the line: an NGFW performs malware inspection on traffic passing through it, and an endpoint protection platform includes a host firewall, so the two functions are often bought together.
 16. **What is firewell? Draw a LAN network to showing firewall.** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+
+   Answer:
+
+   What a firewall is:
+   - A firewall is a network security device or software that monitors and controls incoming and outgoing traffic according to a defined set of security rules, standing between a trusted internal network and an untrusted external network.
+   - Each packet is compared against an ordered rule set and the first matching rule decides whether it is permitted or denied, with a default deny at the end so that anything not explicitly allowed is blocked.
+   - Types: packet filtering, stateful inspection, circuit level gateway, application level or proxy firewall, next generation firewall, and web application firewall.
+   - Purposes: blocking unauthorised access, controlling outbound traffic, segmenting the network, hiding internal addresses through NAT, logging for audit, and terminating VPNs.
+
+   LAN network showing the firewall:
+
+   ```mermaid
+   graph LR
+       A["Internet"] --> B["External Firewall"]
+       B --> C["DMZ: Web server, Mail server, DNS server, Proxy"]
+       C --> D["Internal Firewall"]
+       D --> E["Internal LAN: workstations, database, file server"]
+       B -.->|"blocked"| E
+   ```
+
+   - The design principle: a service that must be reachable from the Internet is placed in the DMZ, never on the internal LAN. If a public server is compromised, the attacker is still separated from the internal network by the second firewall, so the damage is contained. Traffic from the DMZ to the internal LAN is denied by default and permitted only for specific, tightly controlled flows, for example the web server reaching one database port.
+
+   A simpler single firewall LAN, if that is what is wanted:
+
+   ```
+                    Internet
+                        |
+                   [ Router ]
+                        |
+                  [ FIREWALL ]  ---- DMZ: Web / Mail / DNS server
+                        |
+                   [ Switch ]
+              /         |         \
+        PC 1         PC 2        Server
+                                (file, database)
+   ```
+
+   - The firewall sits between the router and the internal switch, so that every packet entering or leaving the LAN must pass through it and be checked against the policy. Public servers are placed on a separate DMZ interface rather than on the internal switch, so that their compromise does not expose the workstations and the database.
 
 ## Authentication & Access Control (15)
 
