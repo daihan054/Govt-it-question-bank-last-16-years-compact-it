@@ -1804,21 +1804,133 @@ for i in N:
 
 1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1419 (ET: E-Zone)]*
 
+   Answer: Two graphs are isomorphic if there is a one to one mapping between their vertices that preserves adjacency, that is if two vertices are joined in one graph then their images are joined in the other.
+
+   Checks to be applied, in order:
+   - Same number of vertices.
+   - Same number of edges.
+   - Same degree sequence, that is the sorted list of vertex degrees must match.
+   - Same number of cycles of each length, for example the count of triangles.
+   - Same connectivity, that is both connected or both disconnected in the same pattern.
+   - If all these match, an actual vertex mapping must be constructed to prove isomorphism.
+
+   Justification in one sentence: if any of the above invariants differ the graphs are not isomorphic, and if a valid adjacency preserving vertex mapping can be written down then they are isomorphic.
+
+   Note: the figure was not printed in the collected question, so the test procedure is given instead of a specific verdict.
+
 2. **(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
+
+   Answer:
+
+   (i) Chromatic number
+   - It is the minimum number of colours needed to colour all vertices of a graph so that no two adjacent vertices share the same colour.
+   - It is written as χ(G).
+   - Example: for a triangle χ = 3, for any bipartite graph χ = 2, and for a complete graph Kn, χ = n.
+   - Application: exam timetabling, register allocation in compilers and mobile frequency assignment.
+
+   (ii) Bipartite graph
+   - A graph whose vertex set can be divided into two disjoint sets U and V such that every edge joins a vertex of U to a vertex of V, and no edge lies inside either set.
+   - A graph is bipartite if and only if it contains no cycle of odd length.
+   - Its chromatic number is 2.
+   - Example: students on one side and courses on the other, joined by enrolment edges.
+
+   (iii) Clique
+   - A clique is a subset of vertices in which every pair of vertices is directly connected by an edge, that is the subset forms a complete subgraph.
+   - The clique number ω(G) is the size of the largest clique in the graph.
+   - Example: in a social network, a group of people where everyone knows everyone else is a clique.
+   - Finding the maximum clique is an NP-complete problem.
 
 3. **(খ) দেখান যে, n সংখ্যক vertex এর একটি tree এর ঠিক n-1 সংখ্যক edge আছে।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+   Answer: A tree is a connected graph that contains no cycle. The claim is that a tree with n vertices has exactly n − 1 edges, and it is proved by mathematical induction on n.
+
+   Base case, n = 1:
+   - A tree with a single vertex has no edge.
+   - Number of edges = 0 = 1 − 1, so the statement holds.
+
+   Inductive hypothesis:
+   - Assume the statement is true for every tree with k vertices, that is such a tree has exactly k − 1 edges.
+
+   Inductive step, n = k + 1:
+   - Take any tree T with k + 1 vertices.
+   - Every finite tree with at least two vertices has at least one leaf, that is a vertex of degree 1. This is because if every vertex had degree 2 or more, the graph would necessarily contain a cycle, which contradicts the definition of a tree.
+   - Remove one such leaf v together with its single incident edge. Call the remaining graph T'.
+   - T' is still connected, because v was attached by only one edge and no path between the other vertices passed through v.
+   - T' still has no cycle, because removing a vertex cannot create one.
+   - So T' is a tree with k vertices, and by the hypothesis it has k − 1 edges.
+   - Adding back v and its one edge gives T, so the number of edges in T is (k − 1) + 1 = k.
+   - Since T has k + 1 vertices and k edges, the count is again (number of vertices) − 1.
+
+   Conclusion: by the principle of mathematical induction, a tree with n vertices has exactly n − 1 edges.
+
 4. **(b) Define Eulerian path. What are the necessary and sufficient conditions for the Eulerian path? Expalin.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 690 (ET: N/A)]*
+
+   Answer:
+
+   Definition: an Eulerian path is a path in a graph that uses every edge of the graph exactly once. Vertices may be repeated but no edge may be repeated. If such a path starts and ends at the same vertex it is called an Eulerian circuit.
+
+   Conditions for an undirected graph:
+   - Eulerian circuit exists if and only if the graph is connected, considering only vertices with at least one edge, and every vertex has an even degree.
+   - Eulerian path exists if and only if the graph is connected and it has exactly zero or exactly two vertices of odd degree.
+   - If there are exactly two odd degree vertices, the path must start at one of them and end at the other.
+   - If there are more than two odd degree vertices, no Eulerian path exists.
+
+   Conditions for a directed graph:
+   - Eulerian circuit exists if the graph is strongly connected and for every vertex, in-degree equals out-degree.
+   - Eulerian path exists if at most one vertex has out-degree minus in-degree equal to 1, at most one vertex has in-degree minus out-degree equal to 1, and all other vertices have equal in-degree and out-degree.
+
+   Explanation of why the degree condition works:
+   - Every time the path enters a vertex it must also leave it, consuming two edges of that vertex.
+   - So every intermediate vertex must have an even degree.
+   - Only the start and the end vertex may have an odd degree, because at the start there is one unmatched exit and at the end one unmatched entry.
+   - This is exactly the reasoning Euler used for the Seven Bridges of Königsberg problem, where all four land areas had odd degree, so no such walk was possible.
 
 5. **(c) What is a strongly connected graph?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
 
+   Answer: A directed graph is strongly connected if there is a directed path from every vertex to every other vertex, that is for any pair of vertices u and v, a path exists from u to v and also from v to u.
+
+   - The term applies only to directed graphs. For undirected graphs the equivalent term is simply connected.
+   - A strongly connected component is a maximal subgraph that is itself strongly connected.
+   - Detection algorithms: Kosaraju's algorithm and Tarjan's algorithm, both running in O(V + E).
+   - Kosaraju's method in short: run DFS and record the finish order, reverse all edges of the graph, then run DFS again in decreasing order of finish time. Each DFS tree of the second pass is one strongly connected component.
+   - A directed graph is weakly connected if it becomes connected when the direction of the edges is ignored.
+   - Application: finding mutually reachable groups in a network, and detecting deadlock cycles in resource allocation graphs.
+
 6. **True False with explanation about Graph related (Two).** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
+
+   Answer: Two commonly asked graph statements of this type, with explanation.
+
+   Statement 1: a tree with n vertices always has exactly n − 1 edges.
+   - True. A tree is connected and acyclic. Adding any extra edge would create a cycle and removing any edge would disconnect it, so the count is fixed at n − 1.
+
+   Statement 2: a directed acyclic graph can contain a back edge.
+   - False. A back edge during DFS points to a vertex that is still on the recursion stack, which means a cycle exists. Since a DAG has no cycle by definition, it can never have a back edge. It may have forward edges and cross edges.
+   - Note: the exact statements were not printed in the collected question, so the two standard statements are answered.
 
 7. **State whether the following are True or False:** *[6 Banks & Financial Institutions Assistant Programmer 2021 (ET: N/A)]*
    a) Back edge in DAG
    b) Extra edge in DAG
    c) Strongly connected component
    d) Unique path on different weight on graph
+
+   Answer:
+
+   a) A DAG contains a back edge — False.
+   - A back edge points from a vertex to one of its ancestors that is still in the DFS recursion stack, which proves a cycle exists.
+   - A Directed Acyclic Graph has no cycle by definition, so it can never have a back edge. Detecting a back edge during DFS is in fact the standard test for a cycle.
+
+   b) Adding an extra edge to a DAG keeps it a DAG — False.
+   - It depends entirely on the direction of the added edge. If the edge goes from a later vertex back to an earlier vertex in the topological order, a cycle is created and the graph stops being a DAG.
+   - Only an edge that respects the existing topological order keeps the graph acyclic.
+
+   c) A DAG can have strongly connected components of size greater than one — False.
+   - A strongly connected component of two or more vertices requires a directed path in both directions between them, which forms a cycle.
+   - Since a DAG has no cycle, every strongly connected component of a DAG is a single vertex.
+
+   d) In a weighted graph with distinct edge weights the minimum spanning tree is unique — True.
+   - If all edge weights are different, no two candidate edges ever tie during Kruskal's or Prim's selection, so the choice at every step is forced.
+   - Therefore exactly one minimum spanning tree exists. If some weights are equal, more than one MST may exist.
+   - Note that the shortest path between two vertices is not necessarily unique in the same way unless all path totals are distinct.
 
 ## Greedy Algorithms (Fractional Knapsack) (6)
 
