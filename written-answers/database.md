@@ -9591,56 +9591,56 @@ SELECT count (*) FROM (
 1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
 
 
-   Answer: Speedup and scaleup are the two measures of how well a parallel database system uses additional hardware.
+    Answer: Speedup and scaleup are the two measures of how well a parallel database system uses additional hardware.
 
-   Speedup:
-   - Speedup measures how much faster a fixed amount of work is completed when more resources are added. The problem size stays the same and the hardware grows.
-   - Formula: Speedup = time taken on the small system ÷ time taken on the large system.
-   - Linear speedup means that doubling the hardware halves the time, so the speedup equals the number of processors. This is the ideal.
-   - Example: a query that takes 100 seconds on one processor takes 50 seconds on two and 25 on four. The speedup at four processors is 4, which is linear.
+    Speedup:
+    - Speedup measures how much faster a fixed amount of work is completed when more resources are added. The problem size stays the same and the hardware grows.
+    - Formula: Speedup = time taken on the small system ÷ time taken on the large system.
+    - Linear speedup means that doubling the hardware halves the time, so the speedup equals the number of processors. This is the ideal.
+    - Example: a query that takes 100 seconds on one processor takes 50 seconds on two and 25 on four. The speedup at four processors is 4, which is linear.
 
-   ```
-   Speedup
-      |                    ideal, linear
-    4 |                  /
-      |               /
-    3 |            /  ....... actual, sublinear
-      |         /  ....
-    2 |      / ....
-      |   /....
-    1 |/..
-      +---+---+---+---+---> Number of processors
-      1   2   3   4
-   ```
+    ```
+    Speedup
+       |                    ideal, linear
+     4 |                  /
+       |               /
+     3 |            /  ....... actual, sublinear
+       |         /  ....
+     2 |      / ....
+       |   /....
+     1 |/..
+       +---+---+---+---+---> Number of processors
+       1   2   3   4
+    ```
 
-   Scaleup:
-   - Scaleup measures whether a larger problem can be handled in the same time when the resources are increased in proportion. Both the problem size and the hardware grow together.
-   - Formula: Scaleup = time on the small system with the small problem ÷ time on the large system with the proportionally larger problem.
-   - Linear scaleup means the ratio is 1: doubling both the data and the hardware leaves the response time unchanged. This is the ideal.
-   - Example: a query over 1 GB takes 100 seconds on one processor. Over 2 GB on two processors it still takes 100 seconds, so the scaleup is 1, which is linear.
+    Scaleup:
+    - Scaleup measures whether a larger problem can be handled in the same time when the resources are increased in proportion. Both the problem size and the hardware grow together.
+    - Formula: Scaleup = time on the small system with the small problem ÷ time on the large system with the proportionally larger problem.
+    - Linear scaleup means the ratio is 1: doubling both the data and the hardware leaves the response time unchanged. This is the ideal.
+    - Example: a query over 1 GB takes 100 seconds on one processor. Over 2 GB on two processors it still takes 100 seconds, so the scaleup is 1, which is linear.
 
-   ```
-   Time
-      |
-  150 |            ....... actual, sublinear scaleup
-      |        ....
-  100 |----------------------  ideal, flat: linear scaleup
-      |
-   50 |
-      +---+---+---+---+---> Problem size and processors together
-      1   2   3   4
-   ```
+    ```
+    Time
+       |
+   150 |            ....... actual, sublinear scaleup
+       |        ....
+   100 |----------------------  ideal, flat: linear scaleup
+       |
+    50 |
+       +---+---+---+---+---> Problem size and processors together
+       1   2   3   4
+    ```
 
-   Types of scaleup:
-   - Batch scaleup: the size of the database grows and the query is over the larger database.
-   - Transaction scaleup: the number of transactions per second grows, which is the case in an OLTP banking system.
+    Types of scaleup:
+    - Batch scaleup: the size of the database grows and the query is over the larger database.
+    - Transaction scaleup: the number of transactions per second grows, which is the case in an OLTP banking system.
 
-   Why linear speedup and scaleup are rarely achieved:
-   - Start-up cost: initiating a process on every one of many processors takes time that does not decrease.
-   - Interference: the processors contend for shared resources such as the bus, the disk and the locks.
-   - Skew: the work does not divide evenly, so the whole operation waits for the slowest partition. This is usually the dominant factor.
-   - Communication cost between nodes, which grows with their number.
-   - Amdahl's law: the sequential portion of the work cannot be parallelised at all, and it eventually dominates.
+    Why linear speedup and scaleup are rarely achieved:
+    - Start-up cost: initiating a process on every one of many processors takes time that does not decrease.
+    - Interference: the processors contend for shared resources such as the bus, the disk and the locks.
+    - Skew: the work does not divide evenly, so the whole operation waits for the slowest partition. This is usually the dominant factor.
+    - Communication cost between nodes, which grows with their number.
+    - Amdahl's law: the sequential portion of the work cannot be parallelised at all, and it eventually dominates.
 2. **(ক) Data Fragmentation কী? ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
 
 

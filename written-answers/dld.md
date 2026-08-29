@@ -4203,37 +4203,37 @@
 11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 
 
-    Answer: Y = ABC'D + A'BD + ABCD
+     Answer: Y = ABC'D + A'BD + ABCD
 
-   Minimum literal form means the expression with the fewest total literals (variable appearances).
+    Minimum literal form means the expression with the fewest total literals (variable appearances).
 
-   Step 1 - combine the two terms that differ only in C:
-   ABC'D + ABCD = ABD(C' + C) = ABD
+    Step 1 - combine the two terms that differ only in C:
+    ABC'D + ABCD = ABD(C' + C) = ABD
 
-   Step 2 - now Y = ABD + A'BD
+    Step 2 - now Y = ABD + A'BD
 
-   Step 3 - combine the two terms that differ only in A:
-   ABD + A'BD = BD(A + A') = BD
+    Step 3 - combine the two terms that differ only in A:
+    ABD + A'BD = BD(A + A') = BD
 
-   Final answer: Y = BD (2 literals, reduced from 11 literals)
+    Final answer: Y = BD (2 literals, reduced from 11 literals)
 
-   The output is HIGH only when B and D are both HIGH; A and C have no effect on the result.
+    The output is HIGH only when B and D are both HIGH; A and C have no effect on the result.
 12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
 
 
-    Answer: Y = ABCD + A'BD + ABC'D
+     Answer: Y = ABCD + A'BD + ABC'D
 
-   Step 1 - combine the terms that differ only in C:
-   ABCD + ABC'D = ABD(C + C') = ABD
+    Step 1 - combine the terms that differ only in C:
+    ABCD + ABC'D = ABD(C + C') = ABD
 
-   Step 2 - now Y = ABD + A'BD
+    Step 2 - now Y = ABD + A'BD
 
-   Step 3 - combine the terms that differ only in A:
-   ABD + A'BD = BD(A + A') = BD
+    Step 3 - combine the terms that differ only in A:
+    ABD + A'BD = BD(A + A') = BD
 
-   Final answer: Y = BD
+    Final answer: Y = BD
 
-   Verification: the original expression is 1 for ABCD = 0101, 0111, 1101, 1111, which is exactly the set where B = 1 and D = 1.
+    Verification: the original expression is 1 for ABCD = 0101, 0111, 1101, 1111, which is exactly the set where B = 1 and D = 1.
 13. **De-Morgans Law গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
 
 
