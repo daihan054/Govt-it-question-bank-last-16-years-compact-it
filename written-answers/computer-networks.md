@@ -804,27 +804,203 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **What is Star vs Mesh Topology?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Star topology | Mesh topology |
+   |---|---|---|
+   | Structure | Every node connects to one central hub or switch | Every node connects directly to every other node |
+   | Number of links for n nodes | n | n(n − 1)/2 for full duplex |
+   | Ports per node | 1 | n − 1 |
+   | Reliability | The central device is a single point of failure | Very high, many alternative paths |
+   | Cost and cabling | Low, easy to install | Very high, cabling grows quadratically |
+   | Fault isolation | Easy, a faulty link affects one node only | Easy, but tracing a fault in many links is laborious |
+   | Expansion | Easy, add a cable to a free port | Hard, a new node needs a link to every existing node |
+   | Typical use | Office and campus LANs, the usual Ethernet layout | Backbone links, WAN cores, military and mission critical networks |
 2. **(b) Define network topology and classify it.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1446 (ET: N/A)]*
 
+
+   Answer: Network topology is the physical or logical arrangement of the nodes and the links that connect them in a network, that is how the devices are laid out and how data flows between them.
+
+   - Physical topology is the actual cabling layout; logical topology is the path the data actually follows, and the two need not be the same. Ethernet on a switch is physically a star but logically a bus in the old hub days.
+
+   Classification:
+   - Bus: all nodes share one backbone cable with terminators at both ends.
+   - Ring: nodes form a closed loop, data travels in one direction, often with token passing.
+   - Star: every node connects to a central hub or switch.
+   - Mesh: every node connects to every other node, needing n(n − 1)/2 links.
+   - Tree or hierarchical: several star networks joined to a common backbone.
+   - Hybrid: any combination of the above, for example a star-bus or star-ring, which is what most real campus networks are.
 3. **Write 4 topology name?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+
+   Answer: Four topology names are Bus, Star, Ring and Mesh. Tree and Hybrid are the other two commonly listed.
 4. **What is Network Topology? Distinguish between Bus, Ring, Tree and Star topology. Discuss how the Bus topology works.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
+
+   Answer: Network topology is the arrangement of nodes and the links connecting them, describing how devices are physically cabled and how data logically flows.
+
+   Distinction between Bus, Ring, Tree and Star:
+
+   | Point | Bus | Ring | Star | Tree |
+   |---|---|---|---|---|
+   | Layout | All nodes tap onto one common backbone cable | Each node connects to two neighbours forming a closed loop | All nodes connect to one central hub or switch | Groups of star networks connected to a common backbone in a hierarchy |
+   | Cable needed | Least, one backbone plus n drops | n links | n links | n − 1 links |
+   | Central device | None, terminators at both ends | None | Hub or switch, mandatory | Root switch plus secondary switches |
+   | Single point of failure | The backbone cable | Any node or link breaks the ring, unless it is dual ring | The central hub | The root node and the backbone |
+   | Fault isolation | Very hard | Hard | Easy, only one node is affected | Easy within a branch |
+   | Expansion | Difficult, the backbone must be cut | Difficult, the ring must be broken | Easy, plug into a free port | Easiest, add a new branch |
+   | Data flow | Broadcast in both directions, CSMA/CD | Unidirectional, token passing | Through the central device | Down the hierarchy |
+   | Performance under load | Poor, collisions rise sharply | Predictable, no collision | Good with a switch | Good |
+   | Cost | Lowest | Moderate | Higher, hub plus more cable | Highest |
+
+   How Bus topology works:
+   - A single backbone cable, normally coaxial, runs through the whole network and every computer taps onto it through a T connector or a vampire tap.
+   - Both ends of the backbone carry a terminator, a resistor matching the cable impedance, which absorbs the signal and prevents reflection.
+   - When a node transmits, the signal travels in both directions along the backbone and reaches every node, so the bus is a broadcast medium.
+   - Every node reads the destination MAC address in the frame. The node whose address matches accepts the frame and all the others discard it.
+   - Because the medium is shared, access is controlled by CSMA/CD. A node listens first, and if the line is free it transmits. If two nodes transmit together a collision occurs, a jam signal is sent, and both back off for a random time before retrying.
+   - Performance therefore falls sharply as the number of nodes grows, and a single break in the backbone brings down the whole network. This is why bus topology, 10BASE2 and 10BASE5, has been replaced by switched star Ethernet.
 5. **What is Personal Area Network? What is needed component and explain?** *[Mongla Port Authority Assistant Programmer 2023 compact it 572 (ET: N/A)]*
 
+
+   Answer: A Personal Area Network is the smallest category of network, covering roughly 10 metres around a single person, and used to connect that person's own devices to each other.
+
+   - Examples: a phone paired with a headset and a smartwatch, a laptop with a wireless mouse and keyboard, a fitness band syncing to a phone.
+   - It may be wired, using USB or FireWire, or wireless, called WPAN, using Bluetooth, Zigbee, infrared or NFC.
+
+   Components needed:
+   - End devices: the phone, laptop, tablet, printer, headset or sensor that take part in the network.
+   - A short range transceiver in each device, that is a Bluetooth, Zigbee, NFC or infrared radio module, which does the actual sending and receiving.
+   - A master or coordinator device, usually the phone or laptop, which forms the piconet and controls the clock; in Bluetooth one master serves up to seven active slaves.
+   - The wireless medium or cable: the 2.4 GHz ISM band for Bluetooth and Zigbee, or a USB cable for a wired PAN.
+   - Protocol stack and profiles, for example the Bluetooth stack with A2DP for audio and HID for keyboards, which let two different manufacturers' devices understand one another.
+   - Security elements: pairing, a PIN or passkey, and link encryption, so that a nearby stranger cannot join.
+   - Power source, usually a small battery, which is why these standards are designed for very low power consumption.
 6. **What is Topology in data communication? What are differences between Bus, Ring, Tree and Star topology? Purpose of IEEE 802.11 committee.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 512 (ET: MIST)]*
 
+
+   Answer: Topology in data communication means the physical or logical layout of the devices and the links joining them, that is how the nodes are connected and how the data moves between them.
+
+   Differences between Bus, Ring, Tree and Star:
+
+   | Point | Bus | Ring | Star | Tree |
+   |---|---|---|---|---|
+   | Layout | All nodes tap onto one common backbone cable | Each node connects to two neighbours forming a closed loop | All nodes connect to one central hub or switch | Groups of star networks connected to a common backbone in a hierarchy |
+   | Cable needed | Least, one backbone plus n drops | n links | n links | n − 1 links |
+   | Central device | None, terminators at both ends | None | Hub or switch, mandatory | Root switch plus secondary switches |
+   | Single point of failure | The backbone cable | Any node or link breaks the ring, unless it is dual ring | The central hub | The root node and the backbone |
+   | Fault isolation | Very hard | Hard | Easy, only one node is affected | Easy within a branch |
+   | Expansion | Difficult, the backbone must be cut | Difficult, the ring must be broken | Easy, plug into a free port | Easiest, add a new branch |
+   | Data flow | Broadcast in both directions, CSMA/CD | Unidirectional, token passing | Through the central device | Down the hierarchy |
+   | Performance under load | Poor, collisions rise sharply | Predictable, no collision | Good with a switch | Good |
+   | Cost | Lowest | Moderate | Higher, hub plus more cable | Highest |
+
+   Purpose of the IEEE 802.11 committee:
+   - IEEE 802.11 is the working group that develops the standards for Wireless LAN, that is Wi-Fi.
+   - It defines the physical layer and the MAC sublayer for wireless communication in the 2.4 GHz, 5 GHz and 6 GHz bands.
+   - It specifies the CSMA/CA access method with RTS and CTS, since collision detection is not possible on a radio medium.
+   - It standardises the security framework, WEP first, then WPA, WPA2 with 802.11i and now WPA3.
+   - It ensures interoperability, so that equipment from different vendors works together, which is what the Wi-Fi Alliance certifies.
+   - Well known amendments: 802.11a, b, g, n which is Wi-Fi 4, ac which is Wi-Fi 5, ax which is Wi-Fi 6, and be which is Wi-Fi 7.
 7. **(খ) একটি নেটওয়ার্কে n সংখ্যক ডিভাইসের জন্যে Bus, Mesh এবং Star টপোলজিতে তারের লিংকগুলোর সংখ্যা কত?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
 
+
+   Answer: n-ti device-er jonno link songkha:
+
+   | Topology | Number of links | Reason |
+   |---|---|---|
+   | Bus | n links to the backbone, plus 1 backbone cable | Each device needs one drop cable onto the shared backbone |
+   | Mesh | n(n − 1)/2 for duplex links, or n(n − 1) for simplex | Every device connects to every other device, and each pair is counted once |
+   | Star | n | Each device has exactly one cable to the central hub |
+
+   - Mesh-e protita device-er port lage n − 1 ti, Star-e lage 1 ti, ar Bus-e 1 ti.
+   - Example, n = 5: Bus needs 5 drops, Mesh needs 5 × 4 / 2 = 10 links, Star needs 5 links.
+   - Ei karone Mesh-e cabling cost n²-er sathe bare, jar jonno full mesh shudhu choto ba khub critical network-e byabohar kora hoy.
 8. **What is network topology? Write the name all different topology used in computer networking with example, diagram and their activities.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 673 (ET: N/A)]*
 
+
+   Answer: Network topology is the physical or logical arrangement of nodes and links in a network.
+
+   ```
+   BUS                          STAR                    RING
+   |--+----+----+----+--|          A                     A---B
+      |    |    |    |             |                     |   |
+      A    B    C    D          B--HUB--C                 D---C
+   Terminators at both ends        |
+                                   D
+
+   MESH                         TREE
+   A-----B                          ROOT
+   |\   /|                        /      \
+   | \ / |                     SW1        SW2
+   |  X  |                    /   \      /   \
+   | / \ |                   A     B    C     D
+   D-----C
+   ```
+
+   Types, examples and activity:
+
+   - Bus: one backbone cable with terminators, all nodes tap on. Example, old 10BASE2 coaxial Ethernet. Activity: a node broadcasts, every node hears it, only the addressed node keeps it, and CSMA/CD resolves collisions. Cheap but a single break kills the network.
+   - Star: all nodes cable to a central hub or switch. Example, modern office LAN with a switch and UTP cable. Activity: every frame goes to the central device, which forwards it to the correct port. Easy to install and troubleshoot, but the hub is a single point of failure.
+   - Ring: a closed loop, data travels in one direction. Example, Token Ring and FDDI. Activity: a token circulates and only the node holding it may transmit, so there are no collisions and delay is predictable. A single break stops the ring unless a dual counter-rotating ring is used.
+   - Mesh: every node linked to every other, n(n − 1)/2 links. Example, WAN backbone and Internet core routers. Activity: traffic takes a direct path, and if one link fails another is used. Highest reliability, highest cost.
+   - Tree: a hierarchy of stars on a common backbone. Example, a campus network with a core switch, distribution switches and access switches. Activity: traffic flows up and down the hierarchy; the root is critical.
+   - Hybrid: any mixture, for example star-bus or star-ring. Example, a large corporate network. Activity: takes the strong points of each, at the cost of complex design and management.
 9. **Write down the types of topology.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
+
+   Answer: The types of topology are:
+
+   - Bus
+   - Star
+   - Ring
+   - Mesh
+   - Tree, also called hierarchical
+   - Hybrid, any combination of the above such as star-bus or star-ring
 10. **Write down the Disadvantages of Bus topology.** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
 
+
+   Answer: Disadvantages of bus topology:
+
+   - The entire network fails if the single backbone cable breaks anywhere, so it has no fault tolerance.
+   - Fault isolation is very difficult; the whole cable has to be checked to find the break.
+   - Only one node can transmit at a time, so collisions increase sharply as nodes are added and performance falls with load.
+   - Limited cable length and limited number of nodes; the signal weakens with distance and needs repeaters.
+   - Terminators are essential at both ends, and a missing or wrong terminator causes reflections that corrupt all traffic.
+   - Adding or removing a node normally disturbs the running network.
+   - Security is poor because every node receives every frame, so traffic is easy to sniff.
+   - It cannot support high speed, which is why it has been replaced by switched star Ethernet.
 11. **(b) Define network topologies with features.** *[National University Assistant Programmer 2020 compact it 977 (ET: DU)]*
 
+
+   Answer: Network topology is the physical or logical arrangement of nodes and links in a network. Physical topology is the cable layout, and logical topology is the actual path the data takes.
+
+   Topologies with their features:
+
+   - Bus: single backbone with terminators. Features are lowest cable cost, easy for a small network, broadcast medium with CSMA/CD, no central device, but a single cable fault brings down everything and performance falls with load.
+   - Star: all nodes to a central hub or switch. Features are easy installation and expansion, easy fault isolation, one faulty cable affects one node only, good performance with a switch, but the central device is a single point of failure and more cable is needed.
+   - Ring: nodes in a closed loop with unidirectional flow. Features are collision free token passing, predictable and fair delay under heavy load, equal access for all, but one break stops the ring and adding a node interrupts service.
+   - Mesh: every node linked to every other. Features are the highest reliability with many redundant paths, dedicated links so no congestion, privacy and easy fault identification, but n(n − 1)/2 links make it very costly and hard to install.
+   - Tree: hierarchy of stars on a backbone. Features are good scalability, easy segmentation and management, suits large campus networks, but the root and backbone are critical and the design is more complex.
+   - Hybrid: a mixture such as star-bus. Features are flexibility, scalability and the ability to use the best topology in each part, at the cost of complex design and higher management effort.
 12. **(d) List some various types of Topologies. What are the factors to choose a topology?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030 (ET: N/A)]*
+
+
+   Answer:
+
+   Types of topology: Bus, Star, Ring, Mesh, Tree and Hybrid.
+
+   Factors to consider when choosing a topology:
+   - Cost: the amount of cable and the number of ports and switches needed. Bus is cheapest, full mesh is the most expensive.
+   - Reliability and fault tolerance: how much of the network stops if one link or one device fails. Mesh is best, bus is worst.
+   - Scalability: how easy it is to add nodes later. Star and tree expand easily, ring and bus do not.
+   - Number of nodes and the physical distance between them, and the geography of the site, that is one floor, several floors or several buildings.
+   - Required bandwidth and traffic pattern: heavy or real time traffic rules out shared media such as bus.
+   - Ease of installation and maintenance, and how quickly a fault can be located and repaired.
+   - Availability of skilled staff and of spare equipment.
+   - Security requirements: a shared medium exposes every frame to every node.
+   - Future growth and the budget available, including cabling that will still be usable in five years.
 
 ## IPv6 Addressing (11)
 
@@ -1012,25 +1188,264 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    * **Fiber Attenuation: 0.35 dB/km**
    **Calculate the maximum fiber length (D) that can be used between the OLT (Optical Line Terminal) and ONU (Optical Network Unit) while maintaining an acceptable signal level.** *[Islami Bank PLC Senior Officer (Network/System) 14.03.2025 compact it 1332 (ET: BUET)]*
 
+
+   Answer:
+
+   Step 1, power budget available:
+   - Power budget = Transmitter power − Receiver sensitivity = 5 dBm − (−14 dBm) = 19 dB.
+
+   Step 2, fixed losses in the link:
+   - Splitter loss = 14 dB
+   - Splices = 2 × 0.1 = 0.2 dB
+   - Connectors = 2 × 0.75 = 1.5 dB
+   - Total fixed loss = 14 + 0.2 + 1.5 = 15.7 dB
+
+   Step 3, loss left for the fibre:
+   - Fibre loss allowed = 19 − 15.7 = 3.3 dB
+
+   Step 4, maximum length:
+   - D = fibre loss allowed / attenuation per km = 3.3 / 0.35 = 9.43 km
+
+   Final answer: the maximum fibre length between the OLT and the ONU is about 9.43 km.
+
+   - Note: if a system margin of 3 dB is reserved for ageing, repairs and temperature, only 0.3 dB is left for the fibre, which gives about 0.86 km, so in a real design a splitter of 14 dB and this transmitter would be used only over a very short span.
 2. **(a) Why fiber optic cable is used in submarine instead of satellite?** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 431 (ET: BUET)]*
 
+
+   Answer: Submarine communication uses fibre optic cable rather than satellite for the following reasons.
+
+   - Capacity: a single modern submarine cable carries hundreds of terabits per second using WDM, while a communication satellite transponder set carries only a few gigabits. Bulk Internet traffic simply cannot fit on satellites.
+   - Latency: a geostationary satellite is 35,786 km away, so one hop costs about 250 ms and a round trip about 500 ms. Light in fibre from Bangladesh to Singapore costs only a few tens of milliseconds. Interactive traffic, VoIP, trading and gaming need low delay.
+   - Cost per bit: once laid, a cable carries enormous traffic for 25 years, so the cost per gigabit is a small fraction of satellite cost. Satellite bandwidth is rented and expensive.
+   - Reliability and weather: fibre is unaffected by rain fade, solar interference, atmospheric absorption and sunspot outages, all of which degrade satellite links, particularly in the tropics during the monsoon.
+   - Signal quality: fibre gives a very low bit error rate and no attenuation from weather, so error correction overhead is small.
+   - Security: light in a fibre laid on the seabed is far harder to intercept than a radio beam that covers a whole continent.
+   - Scalability: the capacity of an existing cable can be raised by upgrading only the terminal equipment, without touching the cable itself.
+   - Satellite still has its place for remote islands, ships, aircraft, disaster recovery and broadcast, where laying cable is impossible.
 3. **(b) Why the submarine cable is damaged under water?** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 432 (ET: BUET)]*
 
+
+   Answer: Submarine cables are damaged under water mainly by human activity in shallow water and by natural events in deep water.
+
+   Human causes, which account for most faults:
+   - Fishing trawlers dragging bottom nets and beam trawls across the cable.
+   - Ships' anchors dropped or dragged over a cable route, especially near ports and anchorages.
+   - Dredging and sand mining, and construction of other cables or pipelines nearby.
+   - Deliberate cutting, theft of cable for the copper and the steel armour, and sabotage.
+
+   Natural causes:
+   - Undersea earthquakes and the turbidity currents and submarine landslides they trigger, which can cut several cables at once, as happened off Taiwan in 2006.
+   - Volcanic activity and seabed movement.
+   - Strong currents and tides causing abrasion where the cable rubs against rock.
+   - Marine life, notably shark bites on the shallow sections, which is why some cables carry an extra protective layer.
+   - Corrosion of the armour and water ingress through a damaged sheath over time.
+
+   Mitigation:
+   - Heavier armouring and burial one to three metres under the seabed in shallow water, cable protection zones, route surveys, awareness campaigns for fishermen, and diverse routing so that one cut does not isolate a country. Bangladesh keeps both SEA-ME-WE 4 and SEA-ME-WE 5 for exactly this reason.
 4. **(ক) ফাইবার অপটিক ক্যাবলের গঠন ও বৈশিষ্ট্য ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
 
+
+   Answer: Optical fibre cable-er gathan (structure):
+
+   ```
+   +---------------------------------------------+
+   |  Outer Jacket (PVC, protects from moisture)  |
+   |  +---------------------------------------+  |
+   |  |  Strength member (Kevlar / aramid)     |  |
+   |  |  +---------------------------------+   |  |
+   |  |  |  Buffer coating (plastic)        |  |  |
+   |  |  |  +---------------------------+   |  |  |
+   |  |  |  |  Cladding (n2, lower RI)   |  |  |  |
+   |  |  |  |  +-------------------+     |  |  |  |
+   |  |  |  |  |  Core (n1, higher) |     |  |  |  |
+   |  |  |  |  +-------------------+     |  |  |  |
+   |  |  |  +---------------------------+   |  |  |
+   |  |  +---------------------------------+   |  |
+   |  +---------------------------------------+  |
+   +---------------------------------------------+
+   ```
+
+   - Core: the central glass or silica strand that actually carries the light. Diameter is 8 to 10 micron in single mode and 50 or 62.5 micron in multimode. It has the higher refractive index, n1.
+   - Cladding: a glass layer around the core with a slightly lower refractive index, n2. The difference between n1 and n2 is what causes total internal reflection and keeps the light inside the core.
+   - Buffer coating: a plastic layer that protects the glass from moisture and physical damage.
+   - Strength member: Kevlar or aramid yarn that takes the pulling force during installation so the glass is not stretched.
+   - Outer jacket: the PVC or LSZH sheath that gives mechanical and environmental protection.
+
+   Boishishtho (characteristics):
+   - Very high bandwidth, terabits per second with WDM, far beyond copper.
+   - Very low attenuation, about 0.2 dB/km at 1550 nm, so repeaters can be 80 to 100 km apart.
+   - Complete immunity to electromagnetic and radio frequency interference, and no crosstalk.
+   - Light in weight and small in diameter compared with copper of the same capacity.
+   - No electrical conductivity, so it is safe in explosive environments and needs no earthing.
+   - High security, because tapping the fibre disturbs the light and is easily detected.
+   - Long life and no corrosion.
+   - Limitations: brittle, needs skilled splicing with expensive fusion equipment, higher installation cost, and it cannot carry power to a remote device.
 5. **Write down the Working principle of Optical Fibre.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
 
+
+   Answer: An optical fibre works on the principle of Total Internal Reflection.
+
+   Working principle:
+   - The core has refractive index n1 and the cladding has a slightly lower refractive index n2, so n1 is greater than n2.
+   - When light travels from the denser core towards the rarer cladding and strikes the boundary at an angle greater than the critical angle θc, where sin θc = n2 / n1, none of it escapes; it is entirely reflected back into the core.
+   - The ray therefore bounces along the core from one boundary to the other, and in this way it is guided along the fibre even when the cable is bent.
+   - Only rays entering within the acceptance cone are guided. The acceptance angle is given by the numerical aperture, NA = √(n1² − n2²) = sin θmax.
+
+   ```mermaid
+   graph LR
+       A["Electrical signal"] --> B["Transmitter: LED or Laser diode"]
+       B --> C["Optical pulse launched into core"]
+       C --> D["Total internal reflection along the fibre"]
+       D --> E["Receiver: PIN or APD photodetector"]
+       E --> F["Electrical signal restored"]
+   ```
+
+   - The transmitter, an LED for short distance or a laser diode for long distance, converts the electrical bits into light pulses; light on means 1 and light off means 0.
+   - The pulses travel through the core by total internal reflection with very little loss, about 0.2 dB/km at 1550 nm.
+   - At the far end a photodiode, PIN or avalanche, converts the light back into an electrical current, which is amplified and regenerated.
+   - Over long routes optical amplifiers such as EDFA boost the signal without converting it back to electrical form.
 6. **Define the attenuation and dispersion in an optical fiber. Draw the block diagram of a long-haul optical fiber communication system.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   Attenuation:
+   - Attenuation is the loss of optical power as the signal travels along the fibre, measured in dB/km.
+   - Formula: α (dB/km) = (10 / L) × log10(Pin / Pout).
+   - Causes are absorption by impurities such as OH ions and by the silica itself, Rayleigh scattering from microscopic density variations which dominates at short wavelengths, and bending losses, both macrobend and microbend.
+   - It limits how far the signal can go before a repeater or amplifier is needed. Typical values are 0.35 dB/km at 1310 nm and 0.2 dB/km at 1550 nm.
+
+   Dispersion:
+   - Dispersion is the spreading of a light pulse in time as it travels, so that adjacent pulses overlap and cause intersymbol interference.
+   - Types: modal dispersion, where different modes take different paths and so arrive at different times, which affects multimode fibre only; chromatic dispersion, where different wavelengths travel at slightly different speeds, made up of material and waveguide dispersion; and polarisation mode dispersion, which matters at very high bit rates.
+   - It limits the maximum bit rate and hence the bandwidth-distance product, expressed in MHz·km. It is corrected by using single mode fibre, narrow linewidth lasers, dispersion shifted fibre and dispersion compensating modules.
+   - In short, attenuation limits distance by weakening the signal, dispersion limits speed by blurring the pulse.
+
+   Block diagram of a long-haul optical fibre communication system:
+
+   ```mermaid
+   graph LR
+       A["Information source"] --> B["Electrical transmitter / Encoder"]
+       B --> C["Optical source: Laser diode + Modulator"]
+       C --> D["Source-to-fibre coupler"]
+       D --> E["Optical fibre cable span"]
+       E --> F["Optical amplifier EDFA / Repeater"]
+       F --> G["Optical fibre cable span"]
+       G --> H["Fibre-to-detector coupler"]
+       H --> I["Photodetector: PIN or APD"]
+       I --> J["Amplifier + Equalizer + Decoder"]
+       J --> K["Destination"]
+   ```
 7. **Define the principle of data transmission through the fiber optic cable.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
+
+   Answer: Data transmission through fibre optic cable works on the principle of Total Internal Reflection, with the data carried as pulses of light.
+
+   - The core has a higher refractive index n1 than the cladding n2.
+   - Light striking the core-cladding boundary at an angle greater than the critical angle, sin θc = n2 / n1, is reflected completely back into the core with no energy escaping.
+   - The pulse therefore zigzags along the core and is guided from one end to the other, even round bends.
+   - Only light entering within the acceptance cone is guided; this is defined by the numerical aperture NA = √(n1² − n2²).
+
+   Transmission steps:
+   - The electrical bit stream drives an LED or a laser diode, which converts it into light pulses; light present is 1, absent is 0. This is intensity modulation.
+   - The pulses travel through the core by total internal reflection with very low attenuation.
+   - A photodiode at the far end converts the light back into an electrical current, which is amplified, reshaped and retimed.
+   - For very long links, EDFA optical amplifiers boost the signal directly in the optical domain, and WDM lets many wavelengths share one fibre simultaneously.
 8. **How can you do fix the signal attenuation problems?** *[BOF Assistant Programmer 2022 compact it 734 (ET: MIST)]*
 
+
+   Answer: Signal attenuation is the weakening of the signal with distance. It is fixed by the following measures.
+
+   General measures:
+   - Use repeaters and regenerators at calculated intervals to reshape, retime and reamplify the signal.
+   - Use amplifiers, an EDFA for optical links and a line amplifier for copper, at points where the level is still above the noise floor.
+   - Shorten the cable run, or add an intermediate switch, so that no segment exceeds the standard limit, for example 100 metres for UTP Ethernet.
+   - Choose a better medium: Cat 6 or Cat 6A instead of Cat 5, or fibre instead of copper where the distance is long.
+   - Increase the transmitter power, within regulatory and eye safety limits.
+
+   For copper cabling:
+   - Use a thicker gauge conductor, which has lower resistance.
+   - Keep the cable away from motors, fluorescent lamps and power cables, and use shielded cable where interference is unavoidable.
+   - Avoid sharp bends, kinks and over-tightened cable ties, and keep the untwisted length at the connector under 13 mm.
+   - Make proper terminations, test every link with a certified cable tester, and replace any run that fails.
+
+   For fibre:
+   - Clean and inspect connectors, since dirt is the commonest cause of unexpected loss.
+   - Use fusion splices, about 0.1 dB, rather than mechanical splices or extra connectors.
+   - Respect the minimum bend radius to avoid macrobend loss.
+   - Work at 1550 nm rather than 1310 nm where the fibre loss is lower, and keep a proper power budget with a 3 dB margin.
+
+   For wireless:
+   - Use a higher gain antenna, raise the antenna height, keep the Fresnel zone clear, and add a repeater or a directional antenna.
 9. **Where are the low loss transmission windows of silicon based optical fiber and Which window is the most popular in communication and wave. Draw diagram of a long haul WDM Transmission system.** *[BTCL Assistant Manager (Technical) 2021 compact it 765 (ET: BUET)]*
 
+
+   Answer:
+
+   Low loss transmission windows of silica fibre:
+   - First window, around 850 nm, attenuation about 2 to 3 dB/km. Used with LED sources for short multimode links.
+   - Second window, around 1310 nm, attenuation about 0.35 dB/km. This is the zero dispersion wavelength of standard single mode fibre.
+   - Third window, around 1550 nm, attenuation about 0.2 dB/km, the minimum loss of silica. This is the C band, 1530 to 1565 nm.
+   - A fourth and fifth window, the L band around 1625 nm and the E band around 1400 nm, became usable after the water peak caused by OH ions was removed in low water peak fibre.
+
+   Most popular window:
+   - The 1550 nm window, the C band, is the most popular for long haul communication.
+   - Reasons: it has the lowest attenuation of any window, about 0.2 dB/km, so repeater spacing can be 80 to 100 km; the erbium doped fibre amplifier works exactly in this band; and it has the room for dense WDM with dozens of channels. Its higher chromatic dispersion is dealt with by dispersion shifted fibre or dispersion compensating modules.
+
+   Long haul WDM transmission system:
+
+   ```mermaid
+   graph LR
+       A["Tx1 lambda1"] --> M["WDM Multiplexer"]
+       B["Tx2 lambda2"] --> M
+       C["TxN lambdaN"] --> M
+       M --> P["Post amplifier / Booster EDFA"]
+       P --> F1["Fibre span 80 to 100 km"]
+       F1 --> L["In-line EDFA + Dispersion compensator"]
+       L --> F2["Fibre span 80 to 100 km"]
+       F2 --> R["Pre amplifier EDFA"]
+       R --> D["WDM Demultiplexer"]
+       D --> X["Rx1 lambda1"]
+       D --> Y["Rx2 lambda2"]
+       D --> Z["RxN lambdaN"]
+   ```
 10. **A 1550nm fiber optic transmission Link if of 50km length without repeating with a signal mode fiber having loss of 0.2dB/km. The fiber is joined ever 2km with conductor each with 0.5dB loss. Determine the minimum average power which should be lunched in to the fiver in order to Tarantion an average optical power level of 10 micro-watts at the receiver.** *[BTCL Assistant Manager (Technical) 2021 compact it 766 (ET: BUET)]*
 
+
+   Answer:
+
+   Given:
+   - Link length L = 50 km, fibre loss = 0.2 dB/km, wavelength 1550 nm, no repeater.
+   - A connector every 2 km, each with 0.5 dB loss.
+   - Required average received optical power = 10 microwatt.
+
+   Step 1, fibre loss:
+   - Fibre loss = 50 × 0.2 = 10 dB
+
+   Step 2, number of joints and joint loss:
+   - The fibre is joined every 2 km, so 50 / 2 = 25 sections and therefore 25 − 1 = 24 joints inside the link.
+   - Joint loss = 24 × 0.5 = 12 dB
+
+   Step 3, total link loss:
+   - Total loss = 10 + 12 = 22 dB
+
+   Step 4, required received power in dBm:
+   - Pr = 10 log10(10 microwatt / 1 milliwatt) = 10 log10(0.01) = −20 dBm
+
+   Step 5, launched power:
+   - Pt (dBm) = Pr (dBm) + total loss = −20 + 22 = 2 dBm
+   - In linear form, Pt = 10^(2/10) = 1.585 milliwatt
+
+   Final answer: the minimum average power that must be launched into the fibre is 2 dBm, that is about 1.59 mW.
+
+   - If a 3 dB system margin is also required, the launch power becomes 5 dBm, about 3.16 mW.
 11. **কোন মাধ্যমে আলোর Pulse ব্যবহৃত হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
+
+
+   Answer: Optical Fibre cable-e aalor pulse byabohar kora hoy.
+
+   - Ekhane data 0 ar 1 hisebe LED ba laser diode theke aalor pulse akare pathano hoy.
+   - Aalo core-er bhitor Total Internal Reflection-er madhome cholte thake ebong opor prante photodiode take abar electrical signal-e rupantorito kore.
 
 ## Network Address Translation (NAT) (11)
 
