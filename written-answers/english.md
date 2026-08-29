@@ -20,75 +20,504 @@
 
 1. Focus Writing in English: "The Role of Sustainable Banking in Achieving the UN Sustainable Development Goals (SDGs) in Bangladesh." *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+
+   Answer: The Role of Sustainable Banking in Achieving the UN Sustainable Development Goals (SDGs) in Bangladesh
+
+   Sustainable banking means directing credit and investment towards activities that protect the environment, promote social equity and remain financially sound. For Bangladesh, a country ranked among the most climate-vulnerable in the world, it is not an option but a necessity.
+
+   Bangladesh Bank has been a pioneer in this field. Its Green Banking Policy, the Sustainable Finance Department, the Green Transformation Fund and the mandatory sustainability rating of banks have pushed the whole sector towards responsible lending. Banks now finance solar home systems, effluent treatment plants, green factories and energy-efficient brick kilns.
+
+   The contribution to the SDGs is direct. Refinancing schemes for small entrepreneurs and women-led enterprises support SDG 1 and SDG 5. Agent banking and mobile financial services have brought millions of unbanked people into the formal system, advancing SDG 8 and SDG 10. Renewable energy financing serves SDG 7, and green industrial lending serves SDG 13. Bangladesh now has the largest number of LEED-certified green garment factories in the world, financed largely through this framework.
+
+   Challenges remain: greenwashing, weak monitoring, limited technical capacity to appraise green projects and the higher cost of long-term finance. Stronger disclosure rules, trained assessors and concessional refinancing can overcome them.
+
+   Sustainable banking turns the financial sector into an instrument of national development rather than a mere lender.
 2. **Write an essay on “Digital Citizenship on Social Media” using the following hints:** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer 2024 (ET: N/A)]*
 *[Introduction- Concept of Digital citizenship- Benefits of social media- Challenges and risks- Online ethics and responsible behavior- Combating fake news and misinformation- Role of digital literacy and awareness- Conclusion]*
 
+
+   Answer: Digital Citizenship on Social Media
+
+   Introduction: Social media has become the public square of the twenty-first century. Digital citizenship is the set of norms that governs how a person should behave in that space.
+
+   Concept of digital citizenship: A digital citizen is one who uses technology safely, legally, ethically and responsibly. It covers digital access, digital literacy, digital etiquette, digital rights and duties, digital security and digital wellbeing.
+
+   Benefits of social media: It gives instant communication across distance, a free platform for expression, learning resources, business opportunities for small entrepreneurs, rapid disaster response, and a voice to communities that traditional media ignore.
+
+   Challenges and risks: Cyberbullying, identity theft, phishing, privacy violation, doxxing, addiction, mental health damage from constant comparison, and the rapid spread of rumours that have caused mob violence in our own country.
+
+   Online ethics and responsible behaviour: Respect others as you would face to face, verify before sharing, credit original creators, avoid hate speech, protect your passwords, and remember that the digital footprint is permanent.
+
+   Combating fake news and misinformation: Check the source, look for the original report, use fact-checking services, do not forward unverified messages, and report false content instead of arguing with it.
+
+   Role of digital literacy and awareness: Digital literacy must be taught in schools, in workplaces and through public campaigns, so that users can evaluate information critically rather than react emotionally.
+
+   Conclusion: Technology itself is neutral. Responsible digital citizenship is what turns social media from a source of division into a tool of progress.
 3. **(e) Write a short paragraph arguing for or against the statement "AI will eventually replace human workers in most professions."** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer: Against the statement: AI will not replace human workers in most professions.
+
+   Artificial intelligence is transforming work, but the claim that it will replace humans in most professions overstates what the technology actually does. AI is a pattern-matching tool. It is superb at repetitive, data-heavy and rule-bound tasks, and weak wherever judgement, empathy, physical dexterity or accountability is required.
+
+   History supports this. The automated teller machine was expected to end the career of the bank teller, yet the number of tellers rose for two decades because branches became cheaper to run and multiplied. Spreadsheets did not end accountancy; they moved accountants from arithmetic to analysis. Technology has consistently shifted the content of jobs rather than removing them.
+
+   Most professions are bundles of tasks, not single tasks. A doctor reads scans, but also examines patients, weighs uncertain evidence, explains bad news and bears legal responsibility. AI can take over the first task and leave the rest untouched. The same applies to teachers, lawyers, engineers and nurses.
+
+   The real risk is not mass unemployment but polarisation. Routine clerical and data-entry roles will shrink sharply, and those workers need retraining, not reassurance.
+
+   The rational conclusion is that AI will replace tasks, augment workers and create new occupations, provided governments invest seriously in reskilling.
 4. **Paragraph on: Three Zero theory** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
 
+
+   Answer: The Three Zero Theory
+
+   The Three Zero theory was proposed by Nobel laureate Professor Muhammad Yunus. It sets out a vision of a civilisation built on three targets: zero poverty, zero unemployment and zero net carbon emission.
+
+   Zero poverty means that poverty is not created by poor people but by the economic system around them. If credit, skills and markets reach everyone, no one need remain poor. Microcredit, which reached millions of rural women in Bangladesh, was the first practical test of this idea.
+
+   Zero unemployment rests on the belief that every human being is born an entrepreneur, not a job seeker. Instead of waiting for employers, young people should be supported with seed capital, mentoring and social business funds so that they create jobs for themselves and others.
+
+   Zero net carbon emission demands that consumption and production stop damaging the planet. Renewable energy, recycling and responsible consumption are essential, because the poorest countries, including Bangladesh, suffer most from a crisis they did not cause.
+
+   The instrument for achieving all three is the social business: a company that is financially self-sustaining but returns no dividend, reinvesting all profit in its social mission.
+
+   For a young and densely populated country like Bangladesh, the Three Zero theory offers a practical roadmap in which growth, employment and environmental protection advance together rather than against one another.
 5. **Write an essay on "Corruption in the ICT Sector in Bangladesh" using the hints given below: [Hints: Introduction- Types of corruption- Causes of corruption- Effects of corruption-Remedies- Conclusion]** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1357 (ET: N/A)]*
 
+
+   Answer: Corruption in the ICT Sector in Bangladesh
+
+   Introduction: The ICT sector is the engine of the Digital Bangladesh programme, but it has not escaped the corruption that weakens other public services. Because ICT projects involve large budgets and highly technical specifications, they are unusually easy to manipulate.
+
+   Types of corruption: Tender manipulation and collusive bidding; specifications written around one brand so that only one supplier qualifies; over-invoicing of hardware and software licences; ghost projects that exist only on paper; bribery for licences, domain approvals and connectivity permissions; recruitment irregularities in technical posts; and misuse of public data for private gain.
+
+   Causes of corruption: Weak monitoring by non-technical supervisors, lack of transparency in procurement, absence of an independent technical audit, political influence, low accountability, poor salary structure at the lower level, and the sheer complexity of ICT products, which makes overpricing hard to detect.
+
+   Effects of corruption: Public money is wasted, systems are delivered late or never, the quality of equipment is poor, citizens lose trust in digital services, capable local firms are pushed out, cyber security suffers because substandard products are installed, and foreign investors hesitate.
+
+   Remedies: Full e-GP with published evaluation reports, independent technical committees, open-source and open-standard preference to prevent vendor lock-in, third-party audit of every large project, protection for whistle-blowers, digital tracking of every payment, and strict enforcement by the Anti-Corruption Commission.
+
+   Conclusion: Digital technology is itself one of the strongest weapons against corruption. Using it honestly within the ICT sector is the first test of the sector's own credibility.
 6. **Write an essay on 'The Internet' using the hints given below:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
    *[Hints: What internet is- Great Communication tool-Various uses-Storehouse of information-Impact of the internet on our daily life- Social impact- Changing life- Uses and abuses- Conclusion.]*
 
+
+   Answer: The Internet
+
+   What the internet is: The internet is a global network of interconnected computer networks that communicate through a common set of protocols, mainly TCP/IP. Beginning as the ARPANET research project in 1969, it now links billions of devices in every country.
+
+   A great communication tool: E-mail, instant messaging, voice and video calls, and social platforms have made distance almost irrelevant. A family separated by continents can speak daily at almost no cost.
+
+   Various uses: Education through online courses and digital libraries; commerce through e-commerce and mobile banking; governance through e-GP, online passport and NID services; health through telemedicine; and entertainment through streaming media.
+
+   A storehouse of information: Search engines, encyclopaedias, research repositories and open datasets have placed the accumulated knowledge of humanity within reach of anyone with a connection.
+
+   Impact on daily life: Bills are paid online, tickets are booked online, remittances arrive within minutes, and freelancers in small towns earn foreign currency from home.
+
+   Social impact: It has given ordinary citizens a voice, strengthened civic movements and connected diaspora communities, but it has also weakened face-to-face relationships and shortened attention spans.
+
+   Changing life: Work from home, digital classrooms and cashless payment, all accelerated by the pandemic, show how quickly the internet reshapes society.
+
+   Uses and abuses: Against its benefits stand cybercrime, fraud, pornography, rumour, addiction and privacy violation.
+
+   Conclusion: The internet is a powerful servant and a dangerous master. Digital literacy and self-discipline decide which one it becomes.
 7. **Write short note on:** "The role of AI and machine language mitigate challenges of cyber attack on banking system" 100 to 150 Words. *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
+
+   Answer: The Role of AI and Machine Learning in Mitigating Cyber Attacks on the Banking System
+
+   Banks are among the most attacked institutions in the world, and the volume of transactions has grown far beyond what human analysts can monitor. Artificial intelligence and machine learning have therefore become essential to banking security.
+
+   Their first strength is anomaly detection. A model learns the normal behaviour of each customer, such as usual amounts, locations, devices and times, and flags any transaction that deviates from that baseline. This catches card fraud and account takeover within milliseconds, before the money leaves the system.
+
+   Their second strength is speed and scale. Machine learning engines examine millions of log entries, network flows and ATM events in real time, identifying phishing sites, malware traffic and insider misuse that signature-based tools would miss.
+
+   They also support behavioural biometrics, adaptive authentication, automated incident response and the prediction of new attack patterns from global threat intelligence.
+
+   The limits must be acknowledged. Models produce false positives, they can be poisoned with bad training data, attackers now use AI themselves, and explainability is required by regulators.
+
+   Used with skilled human oversight, AI and machine learning shift bank security from reacting after a loss to preventing it.
 8. **Roadside tree plantation in reducing noise pollution.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 312 (ET: N/A)]*
 
+
+   Answer: Roadside Tree Plantation in Reducing Noise Pollution
+
+   Noise pollution has become a serious health hazard in Bangladeshi cities. Dhaka regularly records 90 to 100 decibels on its main roads, far above the 60 decibel limit set for a commercial area. Constant exposure causes hearing loss, high blood pressure, sleeplessness, irritability and poor concentration in students.
+
+   Roadside tree plantation is one of the simplest and cheapest defences. A well-designed belt of trees works in three ways. The leaves and branches absorb sound energy, especially at the higher frequencies that the ear finds most irritating. The rough surfaces of trunks and foliage scatter sound waves so that they lose energy in many directions. The soft ground and undergrowth beneath the trees absorb the ground-borne component instead of reflecting it as concrete does.
+
+   Research shows that a dense green belt of about ten metres depth can reduce noise by five to ten decibels, which the ear perceives as roughly halving the loudness. Evergreen species with broad, thick leaves and dense branching close to the ground, planted in staggered rows, give the best result.
+
+   The additional benefits are considerable: shade, dust filtration, carbon absorption, lower urban temperature and a more pleasant streetscape.
+
+   City corporations should therefore treat roadside plantation as essential infrastructure rather than decoration.
 9. **Write an essay on 'Modern Technology and Its Effect on Student Academic Achievements' within 150 (+/- 10% ) words.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 322 (ET: BIBM)]*
 
+
+   Answer: Modern Technology and Its Effect on Student Academic Achievements
+
+   Modern technology has changed how students learn more profoundly than any reform of the last century. Laptops, smartphones, projectors and reliable internet have brought the classroom and the library together on a single screen.
+
+   The benefits are clear. Students reach research papers, video lectures and open courseware that no local library could hold. Simulations make abstract ideas in physics, chemistry and mathematics visible. Learning management systems allow a lesson to be replayed until it is understood, which helps slower learners most. Online assessment gives instant feedback, and collaboration tools let students work together across distance.
+
+   The risks are equally real. The same device that delivers a lecture also delivers social media and games. Studies link heavy unstructured screen time with shorter attention spans, poorer sleep and weaker writing skills. Easy copying and, more recently, uncritical use of AI tools encourage plagiarism instead of thinking. The digital divide widens the gap between urban and rural students.
+
+   Evidence suggests that technology raises achievement when it is guided by a trained teacher and lowers it when it merely replaces one. The device is a tool, not a teacher.
+
+   Balanced, supervised and purposeful use is therefore the condition on which the academic benefit depends.
 10. **Write a short composition "The Role of computer on education system in Bangladesh".** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
+
+    Answer: The Role of the Computer in the Education System of Bangladesh
+
+    The computer has moved from being a subject of study in Bangladesh to being the medium through which every other subject is taught. Since the Digital Bangladesh programme began in 2009, the change has reached even remote upazila schools.
+
+    Its contribution appears at several levels. Multimedia classrooms, now numbering in the tens of thousands, turn a textbook chapter into an illustrated and animated lesson. The Shikkhok Batayon portal lets a teacher in Rangpur use content prepared by a colleague in Chattogram. Muktopaath and various online platforms offer free professional training. During the COVID-19 closure, computers and the internet kept education alive through online classes and televised lessons.
+
+    Administration has benefited just as much. Result processing, MPO management, student databases, online admission and public examination registration are now handled digitally, which has reduced delay and manipulation.
+
+    Serious obstacles remain: an unequal supply of devices, weak electricity and broadband in rural areas, insufficient teacher training, a shortage of quality Bangla-language content, and inadequate maintenance of the equipment already installed.
+
+    If the government continues to invest in teacher capacity and rural connectivity rather than in hardware alone, the computer can equalise educational opportunity across the whole country.
 11. **Focus in English: “Impacts of air pollution on human health” within 150 (+-10%) word.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
+
+    Answer: Impacts of Air Pollution on Human Health
+
+    Air pollution is now the leading environmental cause of death in Bangladesh. Dhaka is repeatedly ranked among the most polluted cities in the world, with fine particulate levels many times the World Health Organization guideline.
+
+    The main pollutants are PM2.5 and PM10 from brick kilns, vehicle exhaust and construction dust, together with sulphur dioxide, nitrogen oxides, carbon monoxide, ozone and lead.
+
+    The health effects are severe. Fine particles penetrate deep into the lungs and enter the bloodstream, causing asthma, chronic bronchitis, emphysema and lung cancer. They inflame blood vessels and raise the risk of heart attack and stroke. Carbon monoxide reduces the oxygen carried by the blood, producing headache, fatigue and impaired judgement. Lead damages the developing brain and permanently lowers the intelligence of children. Pregnant women exposed to polluted air are more likely to deliver underweight or premature babies. Recent research also links long-term exposure to dementia and depression.
+
+    Children, the elderly, traffic police, rickshaw pullers and street vendors suffer most because they breathe the worst air for the longest time.
+
+    Cleaner brick technology, stricter vehicle emission testing, covered construction sites and expanded urban greenery are urgent, because every year of delay costs thousands of lives.
 12. **Focus Writing in English** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 431 (ET: BIBM)]*
 
 13. **Focus Writing in English: The Importance of Digital Literacy in Expanding Cashless Transactions in Bangladesh: Discuss how digital skills influence financial inclusion, the adoption of digital payment systems, and the challenges of building a cashless economy.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+    Answer: The Importance of Digital Literacy in Expanding Cashless Transactions in Bangladesh
+
+    Bangladesh has built an impressive digital payment infrastructure. Mobile financial services carry crores of taka daily, agent banking has reached the union level, and Bangladesh Bank has introduced RTGS, BEFTN, the National Payment Switch and the interoperable Binimoy platform. Yet cash still dominates. The missing element is not technology but digital literacy.
+
+    How digital skills influence financial inclusion: A person who cannot read a transaction confirmation, set a PIN or recognise a fraudulent call will not trust a digital wallet with savings. Millions of accounts remain dormant for exactly this reason. Basic literacy in using a keypad, understanding charges and reading a statement converts an account holder into an active user.
+
+    Adoption of digital payment systems: Merchants adopt QR codes and card terminals only when they can reconcile the money themselves. Farmers, garment workers and small traders accept digital wages when they can withdraw and transfer without depending on an agent who may cheat them. Skill removes that dependence.
+
+    Challenges of building a cashless economy: Low awareness among rural and elderly users, weak network coverage, high transaction cost for small amounts, fear of fraud after well-publicised scams, the habit of cash in an informal economy, and the exclusion of people without smartphones or national identity documents.
+
+    The way forward is a national digital financial literacy campaign delivered through schools, union digital centres, employers and the agents themselves, combined with simple interfaces in Bangla, strong consumer protection and visible redress when fraud occurs.
+
+    Infrastructure makes cashless payment possible; literacy makes it happen.
 14. **The role of ICT in education sector** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
+
+    Answer: The Role of ICT in the Education Sector
+
+    Information and communication technology has changed education from a one-way transfer of notes into an interactive process of discovery.
+
+    In the classroom, multimedia content, animation and simulation make difficult concepts visible. A biology student can watch cell division; a physics student can vary the parameters of an experiment that no school laboratory could safely perform.
+
+    In access, ICT removes distance. Online courses, digital libraries, recorded lectures and open educational resources let a student in a remote upazila learn from the same material as one in the capital. During the COVID-19 pandemic, this capability kept the education system from collapsing.
+
+    In assessment, computerised testing gives immediate feedback and impartial marking, and learning analytics identify a weak student early enough for the teacher to intervene.
+
+    In administration, digital admission, result publication, attendance monitoring and record keeping have reduced delay, cost and manipulation.
+
+    For teachers, online training platforms and content-sharing portals build professional capacity continuously rather than once in a career.
+
+    The limitations are the digital divide, the cost of devices and connectivity, insufficient teacher training, a shortage of quality local-language content, and the distraction that unsupervised devices bring.
+
+    ICT is therefore best understood as a powerful amplifier: it multiplies the effect of good teaching, but it cannot substitute for it.
 15. **Write an essay on 'Women's Empowerment and Gender Equality in Bangladesh' within 200 (+/- 10%) words.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
+
+    Answer: Women's Empowerment and Gender Equality in Bangladesh
+
+    Women's empowerment means giving women real control over their own lives through education, income, health, mobility and a voice in decisions. Gender equality means that rights and opportunities do not depend on whether a person is born male or female.
+
+    Bangladesh has made progress that is recognised internationally. Gender parity has been achieved in primary and secondary school enrolment. The female stipend programme kept millions of girls in school. About four million women, roughly sixty per cent of the workforce, are employed in the ready-made garment industry, and their earnings have transformed rural households. Microcredit brought credit to women who had never entered a bank. Maternal mortality has fallen sharply, and the total fertility rate has come down to close to replacement level. Women now serve as judges, secretaries, pilots, army officers and entrepreneurs, and reserved seats guarantee their presence in Parliament and in local government.
+
+    Serious problems persist. Child marriage remains among the highest in the world. Dowry demands, domestic violence, sexual harassment and cyber harassment continue. Women's participation in the paid labour force is still only about thirty-seven per cent, they earn less than men for the same work, they carry almost all unpaid household labour, and they are poorly represented in senior management and in the ownership of land.
+
+    The remedies are strict enforcement of existing laws, safe transport and workplaces, affordable childcare, legal literacy, and above all a change in social attitude that begins inside the family.
+
+    No country can advance while half of its people are held back.
 16. **Essay on "Digital Financial Literacy"** *[Combined Bank Assistant Programmer 09.06.2023 compact it 497 (ET: N/A)]*
 
+
+    Answer: Digital Financial Literacy
+
+    Digital financial literacy is the ability to use digital financial services safely, confidently and to one's own advantage. It combines two skills: understanding money, and understanding the technology that now carries it.
+
+    It has four components. The first is knowledge of the products available, such as mobile financial services, internet banking, cards, QR payments and digital savings. The second is practical skill in using them, from registering an account to reading a statement and reversing a wrong entry. The third is awareness of risk, including phishing, fake customer-care calls, OTP fraud, SIM replacement fraud and unlicensed lending applications. The fourth is knowledge of rights, particularly where and how to complain when money is lost.
+
+    Its importance for Bangladesh is direct. The country now has more than twenty crore registered mobile financial service accounts, but a large share are dormant or are operated by an agent on the customer's behalf, which defeats the purpose. Wage payments, social safety-net allowances, remittances and merchant payments are all moving to digital channels, and a user who cannot verify a transaction is exposed to loss and to exploitation.
+
+    Building it requires coordinated action: financial education in the school curriculum, campaigns in Bangla through television and social media, training at union digital centres, simple interfaces designed for first-time users, and clear consumer protection rules enforced by the central bank.
+
+    Digital financial literacy is what turns an account number into genuine financial inclusion.
 17. **Focus writing in English: Metro Rail Equal Opportunity** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
+    Answer: Metro Rail and Equal Opportunity
+
+   The Dhaka Metro Rail, opened in December 2022, is more than a transport project. It is a rare piece of public infrastructure in which every passenger, regardless of wealth, gender or physical ability, is treated in the same way.
+
+   Equal opportunity begins with access. The fare is affordable, the schedule is fixed, and no passenger can buy priority. A garment worker and a corporate executive travel in the same coach and reach the destination at the same time, which almost never happens on the road.
+
+   For women the change is significant. Long waiting at bus stops, overcrowded vehicles and harassment while boarding have kept many women out of the labour force. Dedicated coaches for women, well-lit stations, CCTV coverage and the presence of staff have made a daily commute possible for those who previously avoided it.
+
+   For persons with disabilities and for the elderly, lifts, escalators, tactile paths, wide gates and reserved seating provide independent movement that ordinary buses never offered.
+
+   The saving of time is itself an equaliser. A journey that took ninety minutes now takes twenty, and the hours returned to a low-income worker are worth more to that worker than to anyone else.
+
+   Extending the network, integrating it with buses and keeping fares within reach will decide whether this promise of equal opportunity spreads across the whole city.
 18. **Write a composition: E-commerce in Bangladesh** *[BREB Assistant Programmer 18.02.2023 (ET: N/A)]*
 
+    Answer: E-commerce in Bangladesh
+
+   E-commerce means buying and selling goods and services over the internet. In Bangladesh it has grown from a curiosity into an industry worth several billion dollars, driven by cheap smartphones, expanding broadband, mobile financial services and a young population.
+
+   The main forms are business to consumer marketplaces, social commerce conducted through Facebook pages, business to business platforms for wholesale trade, and rapidly growing sectors such as food delivery, ride sharing, online groceries and digital ticketing. The COVID-19 pandemic accelerated adoption enormously, because home delivery became a necessity rather than a convenience.
+
+   Its benefits are substantial. Customers get wider choice, lower prices and delivery at the door. Entrepreneurs, particularly women running businesses from home, reach a national market without a shop or heavy capital. Rural producers sell directly and keep a larger share of the price. The sector has created large numbers of jobs in logistics, packaging, digital marketing and customer service.
+
+   Serious problems remain. Several large platforms collapsed after taking advance payments, destroying public trust. Product quality often differs from the advertisement, delivery outside the major cities is slow and expensive, return and refund policies are weak, and online fraud is common.
+
+   The Digital Commerce Guidelines, escrow arrangements for advance payments, a functioning consumer protection mechanism and investment in nationwide logistics are the conditions for sustainable growth.
+
+   Handled properly, e-commerce can become one of the strongest pillars of the digital economy of Bangladesh.
 19. **Growing use to technology in the Financial Service Industry.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
+    Answer: The Growing Use of Technology in the Financial Service Industry
+
+   Financial services have changed more in the last fifteen years than in the previous hundred, and technology is the reason. The branch, once the only point of contact between a bank and a customer, is now one channel among many.
+
+   The visible changes are the ATM, internet banking, mobile applications, agent banking, QR payments and mobile financial services. Behind them lie core banking systems, real-time gross settlement, automated clearing and the national payment switch, which move money between institutions within seconds.
+
+   The deeper change is in decision making. Machine learning models score credit applications using transaction history rather than collateral, detect fraudulent transactions in milliseconds, and personalise product offers. Robotic process automation handles account opening and reconciliation. Chatbots answer routine queries at any hour. Blockchain is being tested for trade finance and remittance settlement, and cloud computing has removed the need for every bank to own a data centre.
+
+   The benefits are lower cost, wider reach into rural areas, faster service, better risk control and greater transparency.
+
+   The risks grow at the same rate. Cyber attacks now target banks directly, as the Bangladesh Bank reserve heist demonstrated. Dependence on a few technology vendors, data privacy concerns, the exclusion of customers who lack digital skills, and the displacement of clerical staff all demand attention.
+
+   The institutions that succeed will be those that combine strong technology with equally strong security, regulation and customer education.
 20. **Focus English (Harm of durg)** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
 
+    Answer: The Harm of Drugs
+
+   Drug abuse is one of the gravest social problems facing Bangladesh today. Yaba, heroin, cannabis, phensedyl and a growing range of synthetic substances have spread from the border districts into every city and town, and the most affected group is young people between fifteen and thirty.
+
+   The physical harm is severe. Drugs damage the brain, liver, kidneys, heart and lungs. Injecting drug users face hepatitis and HIV infection through shared needles. Appetite, sleep and immunity collapse, and overdose kills without warning.
+
+   The mental harm is equally destructive. Addiction produces anxiety, depression, hallucination, paranoia, memory loss and, in many cases, suicide. The addict loses the ability to concentrate, so education and employment end.
+
+   The social harm spreads outwards. Families are destroyed financially and emotionally. To fund the habit, addicts turn to theft, snatching, extortion and trafficking, so drug abuse feeds street crime. Domestic violence rises. Productivity falls and the national economy loses both money and skilled manpower.
+
+   The causes are unemployment, frustration, bad company, family conflict, easy availability, curiosity and the glamorisation of drugs in media.
+
+   The remedy must combine enforcement against traffickers with treatment rather than punishment for users: rehabilitation centres, counselling, awareness campaigns in schools, sports and cultural activity for the young, and above all attentive families.
+
+   A generation lost to drugs is a nation's future lost with it.
 21. **Write an essay on any one of the following using the hints given below: a) Technical Education. [Hints: Introduction — What technical education is — importance — Role of the government — Conclusion.] b) Environment Pollution. [Hints: Introduction — What environment polluton is — Sources of pollution — Effects on environment — impacts of human health — How to prevent the pollution — Conclusion.]** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 668 (ET: N/A)]*
 
+    Answer: Environment Pollution
+
+   Introduction: Environment pollution means the contamination of air, water, soil and the acoustic environment by substances that harm living organisms. For Bangladesh, a low-lying and densely populated delta, it has become a question of survival rather than of comfort.
+
+   What environment pollution is: It is the introduction of pollutants into the natural environment at a rate faster than nature can disperse, dilute or absorb them.
+
+   Sources of pollution: Unfit vehicles and brick kilns pollute the air; industrial effluent from tanneries, dyeing units and textile mills poisons the Buriganga, Turag and Shitalakshya; untreated sewage and open dumping contaminate water and soil; excessive pesticide and chemical fertiliser degrade farmland; polythene and single-use plastic block drains and rivers; loudspeakers, hydraulic horns and construction produce noise far above safe limits.
+
+   Effects on the environment: Rivers die biologically, fish stocks disappear, soil fertility falls, groundwater is contaminated with arsenic and salinity, forests shrink and biodiversity is lost.
+
+   Impacts on human health: Respiratory disease, asthma, lung cancer, heart disease, skin disease, diarrhoea, arsenicosis, hearing loss, hypertension and low birth weight. Dhaka's air pollution alone shortens average life expectancy by several years.
+
+   How to prevent pollution: Enforce effluent treatment plants in every factory, convert brick kilns to cleaner technology, remove unfit vehicles, expand waste collection and recycling, ban single-use plastic in practice and not only on paper, plant trees on a large scale, use renewable energy, and build public awareness from the school level.
+
+   Conclusion: Development that destroys the environment is not development but borrowing from the next generation. Bangladesh must grow and stay liveable at the same time.
 22. **Write an essay on safe Environment/ [Hints : Introduction – relation between life and environment – actions taken by the government to protect environment – individual actions to ensure safe environment – conclusion]** *[Software Assistant Programmer 13.10.2022 compact it 711 (ET: N/A)]*
 
+    Answer: A Safe Environment
+
+   Introduction: A safe environment is one in which the air, water, soil and surroundings do not threaten the health of the people who live in it. It is the foundation on which every other kind of development stands.
+
+   Relation between life and environment: Human life depends entirely on the environment for oxygen, water, food, medicine and climate stability. The relationship is mutual: what we release into the environment returns to us through the air we breathe and the food we eat. Polluted rivers produce contaminated fish; polluted air produces diseased lungs.
+
+   Actions taken by the government to protect the environment: Bangladesh has the Environment Conservation Act and the Department of Environment, a ban on polythene shopping bags, mandatory effluent treatment plants for industries, a shift to cleaner brick technology, the removal of unfit vehicles, environmental courts, the Bangladesh Climate Change Trust Fund, coastal afforestation and social forestry programmes, and the Delta Plan 2100 for long-term water and land management.
+
+   Individual actions to ensure a safe environment: Refuse single-use plastic and carry a cloth bag; separate and recycle waste; plant and protect trees; save electricity and water; use public transport or a bicycle; avoid hydraulic horns and loudspeakers; do not throw waste into drains and rivers; and teach children these habits early.
+
+   Conclusion: Laws can restrain the worst offenders, but a safe environment is finally created by the daily behaviour of ordinary citizens. Every person who acts responsibly makes the task of the next generation easier.
 23. **Write brief paragraph on “Patience is the mother of success.”** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
+    Answer: Patience is the Mother of Success
+
+   Patience is the capacity to continue working steadily towards a goal without being discouraged by delay, difficulty or repeated failure. The proverb calls it the mother of success because no achievement of any value has ever been born without it.
+
+   Great work takes time. Thomas Edison failed hundreds of times before the electric lamp worked. Robert Bruce, watching a spider fall and climb again, learned to try once more and won his kingdom. A farmer sows in one season and harvests in another. A student cannot master a subject in a night, nor a doctor learn medicine in a year.
+
+   Patience is also what protects judgement. The impatient person abandons a sound plan at the first setback, takes shortcuts, and mistakes speed for progress. The patient person keeps working while others give up, and by that alone becomes the one who finishes.
+
+   Patience is not passive waiting. It is persistent, disciplined effort combined with the willingness to wait for the result. Sitting idle in hope is not patience but laziness.
+
+   In an age that promises instant results, this old truth matters more than ever. Whoever learns to wait while working steadily will find that success, though slow, is certain.
 24. **Write an eassy on the “Role of Telecommunications in supporting economic and business activities during three Covid-19 pandemic situations.”** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 811 (ET: IBA)]*
 
+    Answer: The Role of Telecommunications in Supporting Economic and Business Activities during the COVID-19 Pandemic
+
+   When the COVID-19 pandemic closed offices, factories, schools and borders, telecommunications became the only structure holding economic life together. What had been a convenience turned overnight into essential infrastructure.
+
+   Business continuity depended on it. Employees who could not enter an office worked from home through broadband and mobile data, joining meetings on video platforms and reaching company systems through virtual private networks. Whole sectors, including software, banking back offices and customer support, continued almost without interruption.
+
+   Commerce moved online. E-commerce platforms, food and grocery delivery and digital ticketing absorbed a large part of the retail trade. Small entrepreneurs who had never used a computer sold through social media pages and delivered by courier.
+
+   Money moved electronically. Mobile financial services, internet banking and card payments allowed salaries, government relief allowances to garment workers, and remittances from abroad to reach recipients without crowding at a counter.
+
+   Education and health followed. Online classes kept millions of students in touch with their institutions, and telemedicine let doctors consult patients who could not safely travel to a hospital.
+
+   The pandemic also exposed weaknesses: uneven rural coverage, high data cost, limited device ownership, congested networks and a sharp rise in cyber crime.
+
+   The lesson is permanent. Telecommunications is not a support service but a core economic sector, and investment in it is investment in national resilience.
 25. **English Focus: Bhasan Char- A Safe Home for Rohingya Refugees.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 837 (ET: N/A)]*
 
+    Answer: Bhasan Char: A Safe Home for Rohingya Refugees
+
+   Since 2017 Bangladesh has sheltered more than a million Rohingya refugees who fled violence in Myanmar. Almost all of them were placed in the camps of Ukhiya and Teknaf in Cox's Bazar, an area that quickly became one of the most densely crowded human settlements on earth.
+
+   Bhasan Char, an island in the Meghna estuary of Noakhali district, was developed by the government as a relief for that pressure. At a cost of more than three thousand crore taka, the Bangladesh Navy built accommodation for one hundred thousand people: cluster houses raised on concrete plinths, one hundred and twenty cyclone shelters, a nineteen-kilometre embankment, a modern drainage system, solar electricity, water treatment, schools, hospitals, mosques and space for farming and livestock.
+
+   Compared with the hillside camps, the advantages are visible. Families have solid rooms instead of tarpaulin and bamboo. There is no risk of landslide during the monsoon. Health care, education and vocational training are organised, and refugees are able to farm, fish and keep poultry rather than remain wholly dependent on rations.
+
+   Concerns were raised about the island's exposure to cyclones, restrictions on movement and the distance from the mainland. Since the United Nations agencies signed a memorandum of understanding with the government in 2021 and began working there, most of these concerns have been addressed.
+
+   Bhasan Char is nevertheless a temporary humanitarian arrangement. The only durable solution is the safe, voluntary and dignified repatriation of the Rohingya to their own homeland.
 26. **Composition: English** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 844 (ET: N/A)]*
 
 27. **Write a composition: Edge Computing** *[RAKUB Programmer (PO) 12.10.2021 compact it 854 (ET: N/A)]*
 
+    Answer: Edge Computing
+
+   Edge computing is a model in which data is processed close to where it is generated instead of being sent to a distant central cloud. The processing happens on the device itself, on a nearby gateway or at a small local data centre, and only summarised or important data travels onward.
+
+   The reason for its rise is the internet of things. Billions of sensors, cameras, vehicles and industrial machines now produce far more data than any network can economically carry to a central cloud, and many of them cannot tolerate the delay of a round trip.
+
+   Its advantages are direct. Latency falls from hundreds of milliseconds to a few, which is essential for autonomous vehicles, robotic surgery and industrial control where a late decision is a failed decision. Bandwidth cost drops because raw video and sensor streams are filtered locally. Privacy improves because sensitive data such as medical readings or camera footage never leaves the premises. Reliability improves because a local site keeps working when the internet link is down, and energy consumption falls.
+
+   Typical applications include smart traffic signals, video analytics on a security camera, predictive maintenance in a factory, patient monitoring in a hospital, and content delivery networks.
+
+   The difficulties are managing thousands of distributed nodes, keeping them physically secure, updating their software and maintaining consistency between them.
+
+   Edge computing does not replace the cloud. The two work together, with the edge handling immediate decisions and the cloud handling long-term storage, training and analysis. With 5G now available, this combination is becoming the standard architecture.
 28. **Write a composition: “Block chain technology”** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 858 (ET: N/A)]*
 
+    Answer: Blockchain Technology
+
+   A blockchain is a distributed digital ledger in which records are grouped into blocks and each block is cryptographically linked to the one before it. Copies of the ledger are held by every participant in the network, so no single authority controls it.
+
+   It works through four mechanisms. Each block carries the hash of the previous block, so altering an old record changes every hash after it and the tampering becomes obvious. New blocks are added only when the participants agree through a consensus algorithm such as proof of work or proof of stake. Digital signatures prove who authorised each transaction. And because every node holds the full ledger, there is no single point of failure.
+
+   Its properties are decentralisation, immutability, transparency and security.
+
+   The applications extend far beyond cryptocurrency. Supply chains use it to trace a product from farm to shelf. Banks use it for cross-border payment and trade finance, cutting settlement from days to minutes. Land registries use it to prevent forged titles, a serious problem in Bangladesh. Health systems use it for tamper-proof patient records, universities for verifiable certificates, and governments for auditable voting. Smart contracts execute an agreement automatically when its conditions are met.
+
+   The limitations are real: low transaction throughput, the enormous energy consumption of proof of work, difficulty in scaling, absence of clear regulation, and the impossibility of correcting an entry made in error.
+
+   Blockchain is best suited where several parties who do not fully trust one another must share one authoritative record.
 29. **Write a Composition in English: “Social Media Platform” are now the greatest threat to Democracy.** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875 (ET: BUET)]*
 
+    Answer: Social Media Platforms are Now the Greatest Threat to Democracy
+
+   Social media was welcomed as a democratic instrument. It gave every citizen a printing press, helped organise mass movements and broke the monopoly of state-controlled media. Two decades later the same platforms are accused of undermining the systems they once strengthened, and the accusation deserves serious examination.
+
+   The case against them rests on how they are designed. Their revenue depends on attention, and their algorithms have learned that outrage holds attention better than accuracy. False information therefore spreads faster and further than the correction. Users are shown only what confirms their existing opinion, creating echo chambers in which political opponents become enemies rather than fellow citizens. Anonymous accounts and coordinated networks manipulate public opinion, as the Cambridge Analytica affair demonstrated. In Bangladesh, rumours circulated on these platforms have repeatedly triggered communal violence and lynching. Political advertising is micro-targeted so precisely that voters see incompatible promises and no public debate takes place.
+
+   The case for them is equally strong. They exposed corruption that no newspaper would print, mobilised citizens against injustice, and gave minority voices a hearing. Authoritarian governments fear them for good reason, and the demand to control them is often a demand to silence criticism.
+
+   The honest conclusion is that social media is not the greatest threat to democracy but the greatest amplifier of whatever a society already contains. The remedy lies in algorithmic transparency, independent fact-checking, platform accountability and, above all, a digitally literate public that verifies before it believes.
 30. **English focus: Telecommunication in Developing Economic sector.** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
 
+    Answer: Telecommunication in Developing the Economic Sector
+
+   Telecommunication is the nervous system of a modern economy. Every transaction, contract, shipment and payment depends on the movement of information, and the speed of that movement now determines the competitiveness of a country.
+
+   Its contribution to the economy of Bangladesh can be seen in several directions. It has itself become a major industry, with mobile operators, internet service providers and equipment vendors contributing significantly to gross domestic product and to government revenue, and employing lakhs of people directly and indirectly.
+
+   It has enabled other sectors. The garment industry communicates with foreign buyers in real time. Farmers check market prices before selling and are no longer at the mercy of local middlemen. Fishermen receive cyclone warnings that save both lives and boats. Mobile financial services carry wages, remittances and government allowances to people who never had a bank account.
+
+   It has created entirely new sectors. Freelancing and software export earn foreign currency from small towns. E-commerce, ride sharing and delivery services exist only because of connectivity. Business process outsourcing depends on reliable bandwidth.
+
+   It has improved governance through e-GP procurement, online passport and national identity services, and digital land records, all of which reduce cost and opportunities for corruption.
+
+   The remaining obstacles are uneven rural coverage, the high cost of data relative to income, inadequate fibre backbone in some districts and weak cyber security.
+
+   Investment in telecommunication is therefore not spending on a utility but investment in every other sector of the economy at once.
 31. **Write a short note on “Digital Bangladesh”** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
+    Answer: Digital Bangladesh
+
+   Digital Bangladesh was declared as a national vision in 2008 and became the guiding programme of national development from 2009. Its aim was not merely to buy computers but to use technology to deliver services, create employment and reduce inequality.
+
+   The programme rests on four pillars: developing human resources, connecting citizens, taking government to the people, and building an ICT industry.
+
+   Its achievements are substantial. More than eight thousand union digital centres bring passport, land, birth registration and remittance services within walking distance of villagers. Optical fibre has reached the union level. Mobile financial services carry crores of taka daily to people who never entered a bank. e-GP has made public procurement transparent. National identity, birth registration, tax return, examination result and passport services are online. Software and freelancing exports earn substantial foreign currency, and Bangladesh has one of the largest freelancer populations in the world. Hi-tech parks have been established in several districts, and multimedia classrooms have changed teaching in tens of thousands of schools. The response to the COVID-19 pandemic, from online classes to digital relief distribution, would have been impossible without this foundation.
+
+   The remaining challenges are the digital divide between urban and rural areas, uneven quality of internet service, a shortage of skilled manpower, weak cyber security, and low digital literacy among older citizens.
+
+   Digital Bangladesh has moved from being a slogan to being the ordinary way in which the country works. Its next stage, Smart Bangladesh, must now focus on quality, security and inclusion rather than on numbers alone.
 32. **English: Confront the Rumors of Social Media.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 930 (ET: CTI)]*
 
+    Answer: Confronting the Rumours of Social Media
+
+   Rumour is not new, but social media has given it speed, reach and the appearance of credibility. A false message can now travel to lakhs of people before a single fact is checked, and in Bangladesh the consequences have included communal attacks on temples and villages, the lynching of innocent people accused of child abduction, panic buying during the pandemic, and refusal of vaccination.
+
+   Rumours spread for identifiable reasons. They are emotionally charged, so people share them without thinking. Platform algorithms reward engagement, and outrage generates more engagement than accuracy. Many users trust a message because a relative forwarded it. Anonymous and fake accounts spread falsehood deliberately for political or financial gain. And low digital literacy leaves most users unable to distinguish a news organisation from an imitation of one.
+
+   Confronting them requires action at several levels. Individuals must verify before sharing, check the original source, look for the same news on established outlets, and report rather than forward. Platforms must label disputed content, slow the forwarding of viral messages and remove coordinated fake networks. Government and media must respond quickly with accurate information, because silence is filled by speculation, and must use fact-checking services rather than shutting down the internet, which destroys trust further. Schools must teach media literacy as a basic subject.
+
+   The strongest defence against rumour is not censorship but an informed public that pauses before it believes.
 33. **Some people may think that long-term imprisonment is helpful in reducing crime, and some people think that there are other options to reduce crime. Discuss both vies and your opinion with an example?** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
+    Answer: Long-term imprisonment and the alternatives for reducing crime
+
+   Some people hold that long prison sentences are the most effective way to reduce crime, while others argue that different approaches work better. Both positions deserve examination.
+
+   Those who support long-term imprisonment offer three arguments. It incapacitates: an offender in custody cannot commit further crimes against the public. It deters: the prospect of losing many years of one's life discourages calculated offences such as trafficking and fraud. And it satisfies the demand for justice, particularly of victims of violent crime, which maintains public confidence in the law.
+
+   Those who oppose it point to the evidence. Crime rates have not fallen in proportion to sentence length in countries that adopted very harsh punishment. Prisons frequently function as schools of crime, where a first-time offender learns from hardened criminals. Long imprisonment destroys employability and family ties, so released prisoners often reoffend for lack of any alternative. It is extremely expensive, and prisons in South Asia, including Bangladesh, are severely overcrowded, with a large share of inmates awaiting trial rather than convicted. Deterrence, they argue, depends far more on the certainty of being caught than on the length of the sentence.
+
+   The alternatives they propose are prevention and rehabilitation: education and employment for young people, vocational training inside prison, drug treatment instead of imprisonment for addicts, community service and probation for minor offences, restorative justice that brings offender and victim together, and better policing so that offenders are actually caught.
+
+   In my opinion the two approaches should be combined rather than opposed. Long sentences are justified for violent and repeat offenders who present a real danger. For the far larger number of minor and non-violent offenders, imprisonment does more harm than good. Norway, which emphasises rehabilitation, has one of the lowest reoffending rates in the world, while several countries with the longest sentences have among the highest. The evidence favours certainty of detection and serious rehabilitation over severity alone.
 34. **Write an Essay: Climate change Impact in Bangladesh.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
+    Answer: The Impact of Climate Change on Bangladesh
+
+   Bangladesh contributes less than half a per cent of global greenhouse gas emissions, yet it is consistently ranked among the countries most vulnerable to climate change. Its geography explains why: a flat delta at the meeting point of three great rivers, with a long coastline, a dense population and an economy resting on agriculture.
+
+   The impacts are already visible. Sea level rise threatens to submerge a significant part of the coastal belt, and a one-metre rise would displace millions of people. Salinity has advanced far inland, ruining paddy land and drinking water in Khulna, Satkhira and Barguna. Cyclones such as Sidr, Aila, Amphan and Remal have grown more intense. River erosion consumes thousands of hectares each year and creates landless families overnight. Floods arrive earlier and last longer, while the northern districts suffer drought in the dry season. Erratic rainfall has disrupted the sowing calendar, and the Sundarbans, the natural shield of the coast, is degrading as salinity rises.
+
+   The human consequences follow. Crop yields fall and food security weakens. Climate migrants crowd into the slums of Dhaka and Chattogram. Waterborne disease spreads after every flood, and poor families lose in a single night the assets of a lifetime.
+
+   Bangladesh has responded with real determination: cyclone shelters and an early warning system that has cut death tolls dramatically, coastal embankments and afforestation, saline-tolerant and flood-tolerant rice varieties, the Climate Change Trust Fund financed from its own budget, and the Delta Plan 2100.
+
+   Adaptation alone, however, cannot solve a problem the country did not create. Global emission reduction and the delivery of promised climate finance remain the responsibility of the industrialised world.
 35. **Write a paragraph on “Post-corona Green Recovery Plans and Progress in Bangladesh” in English.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+    Answer: Post-Corona Green Recovery Plans and Progress in Bangladesh
+
+   The COVID-19 pandemic damaged the economy of Bangladesh severely, but it also created an opportunity. During the lockdown the air of Dhaka became clean, the rivers ran clearer and wildlife returned to places it had abandoned. The question that followed was whether recovery should simply restore the old pattern of growth or build a cleaner one.
+
+   Bangladesh chose the second path in its stated policy. The Mujib Climate Prosperity Plan set a target of forty per cent of electricity from renewable sources by 2041, and the government cancelled ten planned coal-fired power plants, a decision that attracted international attention. The Eighth Five Year Plan and the Delta Plan 2100 embedded climate resilience into national planning. Bangladesh Bank expanded its green refinancing schemes, introduced sustainability ratings for banks and required green financing targets, so that recovery credit was directed towards cleaner production.
+
+   Progress is visible in the private sector as well. Bangladesh now has the largest number of LEED-certified green garment factories in the world. Solar home systems reach millions of off-grid households, rooftop solar is spreading in industry, and cleaner brick-kiln technology is slowly replacing the worst polluters. The Dhaka Metro Rail, electric vehicle policy and improved waste management support the same direction.
+
+   The obstacles are substantial: the cost of green technology, dependence on imported fossil fuel, weak enforcement of environmental rules, and the pressure to restore employment quickly at any environmental cost.
+
+   The recovery has therefore been partly green rather than fully green. Sustained financing, strict enforcement and continued international support will decide whether the direction holds.
 
 ## English Grammar (29)
 
