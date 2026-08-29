@@ -914,24 +914,36 @@ ii. The data were collected and it were analyzed carefully.
 1. Translate the following passage into English:
 "এক কুখ্যাত চোর একটি আঙুর ক্ষেতের পাশ দিয়ে যাচ্ছিল। উঁচুতে ঝুলানো আঙুর দেখে সে তা খাওয়ার চেষ্টা করল, কিন্তু বারবার চেষ্টা করেও ব্যর্থ হলো। অবশেষে সে হতাশ হয়ে চলে গেল। যাওয়ার সময় বলল, আঙুরগুলো আসলেও টক।" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+
+   Answer: A notorious thief was passing by a vineyard. Seeing the grapes hanging high above, he tried to eat them, but he failed even after trying again and again. At last he went away in disappointment. While leaving, he said that the grapes were really sour.
 2. **Translation English to Bangla:** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
 
 3. **Bengali to English:** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
    * **(a)** শনিবার হতে সে অফিসে আসছে না।
    * **(b)** আপনার ব্যাংক একাউন্ট এর স্থিতি জানার জন্য মোবাইল ব্যাংকিং এপ্লিকেশন এ লগইন করুন
 
+
+   Answer:
+   - (a) He has not been coming to office since Saturday.
+   - (b) Log in to the mobile banking application to know the balance of your bank account.
 4. **Earth Day inspires green innovation through participatory and collective action and encourages the adoption of ho sustainable practices across the financial system. It, therefore, serves as an opportunity for financial institutions to engage with their stakeholders and demonstrates their commitment to sustainable practices. Thus, Earth Day carries a deep significance in proproting sustainable and responsible financing which is an example of environmentally conscious investment practices, Positive environmental outcomes will be easily achieved if all financial sectors, stakeholders and investors alike are part of a long-term plan to improve the environmental health of this planet, along with the financial and human health. We celebrate Earth Day around the world, let us reaffirm our commitment towards building a greener, more tolerant, liveable and sustainable future for our next generations.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 322 (ET: BIBM)]*
 
+
+   Answer: ধরিত্রী দিবস অংশগ্রহণমূলক ও সম্মিলিত কার্যক্রমের মাধ্যমে সবুজ উদ্ভাবনে অনুপ্রেরণা জোগায় এবং সমগ্র আর্থিক ব্যবস্থায় টেকসই চর্চা গ্রহণে উৎসাহিত করে। তাই এই দিবস আর্থিক প্রতিষ্ঠানগুলোর জন্য তাদের অংশীজনদের সঙ্গে সম্পৃক্ত হওয়ার একটি সুযোগ সৃষ্টি করে এবং টেকসই চর্চার প্রতি তাদের অঙ্গীকার প্রকাশ করে। এভাবে টেকসই ও দায়িত্বশীল অর্থায়ন প্রসারে ধরিত্রী দিবস গভীর তাৎপর্য বহন করে, যা পরিবেশ-সচেতন বিনিয়োগ চর্চার একটি দৃষ্টান্ত। আর্থিক ও মানবস্বাস্থ্যের পাশাপাশি এই গ্রহের পরিবেশগত স্বাস্থ্য উন্নয়নের একটি দীর্ঘমেয়াদি পরিকল্পনার অংশ যদি সকল আর্থিক খাত, অংশীজন ও বিনিয়োগকারী সমানভাবে হন, তবে পরিবেশের ইতিবাচক ফলাফল সহজেই অর্জিত হবে। আমরা সারা বিশ্বে ধরিত্রী দিবস উদযাপন করি; আসুন, আমাদের পরবর্তী প্রজন্মের জন্য আরও সবুজ, আরও সহনশীল, বাসযোগ্য ও টেকসই ভবিষ্যৎ গড়ার অঙ্গীকার আমরা পুনর্ব্যক্ত করি।
 5. **Translation Bangla to English** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)], [NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 660 (ET: N/A)], [Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)], [Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)], [Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)], [RAKUB Network System Engineer (PO) 10.10.2021 compact it 844 (ET: N/A)], [RAKUB Programmer (PO) 12.10.2021 compact it 854 (ET: N/A)], [RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 858 (ET: N/A)], [BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875 (ET: BUET)], [BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)], [Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
 6. **Bengali to English Translation:** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
    > পরীক্ষায় ভালো করতে হলে অবশ্যই আত্মবিশ্বাস রাখতে হবে। মনে এ বিশ্বাস রাখবেন যে, আমি ভালোভাবে সব প্রশ্নের উত্তর দিতে পারব বা আমার পরীক্ষাটা অবশ্যই ভালো হবে। একজন শিক্ষার্থীর মনেই যদি আত্মবিশ্বাস না থাকে বা আত্মবিশ্বাস কম থাকে, তাহলে পরীক্ষা নিয়ে তার মনে আগেই দুর্বলতা তৈরী হয়ে যায়। এর ফলে পড়ায় মন বসে না, মনোযোগও বাড়ে না, প্রস্তুতিও ভালো হয়না। তাই মনোযোগ বাড়াতে দরকার আত্মবিশ্বাস, যেদিকে অবশ্যই খেয়াল রাখতে হবে।
 
+
+   Answer: To do well in an examination one must have self-confidence. Keep this belief in mind that you will be able to answer all the questions well, or that your examination will certainly go well. If a student has no self-confidence, or has very little of it, a sense of weakness about the examination is created in his mind beforehand. As a result he cannot concentrate on his studies, his attention does not increase, and his preparation is not good either. Therefore self-confidence is needed to increase concentration, and this is a matter that must certainly be taken care of.
 7. **Translation [Bangla to English]** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 431 (ET: BIBM)]*
 
 8. **Translate the following passage into English:** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 “কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।”
 
+
+   Answer: It is said that a stitch in time saves nine. Yet we like to leave our work undone, saying that we shall do it today or tomorrow, and then to blame our fate. No one can succeed in life overnight by building castles in the air. The more hardworking a nation is, the more developed it becomes. Therefore, instead of making excuses at every step, we should set to work right now.
 9. **Translation (Bangla to English)**
     **যুব উন্নয়ন বিষয়ক......** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
@@ -943,16 +955,38 @@ ii. The data were collected and it were analyzed carefully.
 
 13. **ইংরেজিতে অনুবাদ করুন: অভাবে স্বভাব নষ্ট, তেল এর চেয়ে পানি ভারী, তুমি আমাকে কেন এড়িয়ে চলছো?, তিনি এতোক্ষণে ঢাকায় পৌঁছে থাকবেন, আমি তাকে উপহাস করিনি।** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+
+    Answer:
+    - অভাবে স্বভাব নষ্ট — Poverty spoils character.
+    - তেলের চেয়ে পানি ভারী — Water is heavier than oil.
+    - তুমি আমাকে কেন এড়িয়ে চলছো? — Why are you avoiding me?
+    - তিনি এতোক্ষণে ঢাকায় পৌঁছে থাকবেন — He must have reached Dhaka by this time.
+    - আমি তাকে উপহাস করিনি — I did not ridicule him.
 14. **Translate into English: (a) আমি যদি পরীক্ষায় প্রথম হতাম (b) পাপের ধন প্রায়শ্চিত্তে যায়। (c) আয় বুঝে ব্যয় কর। (d) যেমন বাপ, তেমন ব্যাটা।** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
+
+    Answer:
+    - (a) আমি যদি পরীক্ষায় প্রথম হতাম — Had I stood first in the examination!
+    - (b) পাপের ধন প্রায়শ্চিত্তে যায় — Ill got, ill spent.
+    - (c) আয় বুঝে ব্যয় কর — Cut your coat according to your cloth.
+    - (d) যেমন বাপ, তেমন ব্যাটা — Like father, like son.
 15. **৩. অনুবাদ কর: (a) তুমি কি গাড়ী চালাতে পারো? (b) মিথ্যা বলি ওনা।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+
+    Answer:
+    - (a) তুমি কি গাড়ী চালাতে পারো? — Can you drive a car?
+    - (b) মিথ্যা বলিও না — Do not tell a lie.
 16. **৯. মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের নাম ইংরেজিতে লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+
+    Answer: Ministry of Women and Children Affairs
 17. **বঙ্গবন্ধুকে নিয়ে চারটি বাংলা বাক্য ছিলো, সেগুলোর ইংরেজিতে ট্রান্সলেশন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
 18. **Translate the following passage into English.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 করোনার টিকা বাজারে এলে দেশের সবার জন্য তা সংগ্রহ করতে চায় সরকার। ধারণা করা হচ্ছে, সবার জন্য টিকা সংগ্রহে ১৭ হাজার কোটি টাকার প্রয়োজন হবে। এই অর্থ সংগ্রহে উন্নয়ন সহযোগীদের সহায়তা চাওয়ার সিদ্ধান্ত নিয়েছে সরকার। ধারণা করা হচ্ছে, জনপ্রতি দুই ডোজ টিকার প্রয়োজন হতে পারে। এর দাম পড়তে পারে ১০ থেকে ১২ ডলার বা কমবেশি এক হাজার টাকা। পরিসংখ্যান ব্যুরো (বিবিএস) তথ্য অনুযায়ী দেশের জনসংখ্যা এখন ১৬ কোটি ৫০ লাখ। সে হিসাবে মোট ১৭ হাজার ২০০ কোটি টাকার প্রয়োজন হবে। স্বাস্থ্য মন্ত্রণালয় থেকে প্রাথমিক এই হিসাব করা হয়েছে বলে ইতোমধ্যে সূত্র জানিয়েছে। এই অর্থের চাহিদা মাথায় রেখেই উন্নয়ন সহযোগীদের সহায়তা চাওয়া হচ্ছে।
+
+
+    Answer: The government wants to procure the coronavirus vaccine for everyone in the country once it comes on the market. It is estimated that seventeen thousand crore taka will be needed to procure the vaccine for all. The government has decided to seek the assistance of development partners in raising this money. It is assumed that two doses of the vaccine may be required per person, and the cost may be ten to twelve dollars, or about one thousand taka. According to the information of the Bureau of Statistics (BBS), the population of the country is now sixteen crore fifty lakh. On that calculation a total of seventeen thousand two hundred crore taka will be needed. Sources have already said that this preliminary estimate has been made by the Ministry of Health. It is keeping this financial requirement in mind that the assistance of development partners is being sought.
 
 ## Idioms & Phrases (9)
 
