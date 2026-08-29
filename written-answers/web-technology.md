@@ -2334,23 +2334,746 @@
 
 1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 320 (ET: N/A)]*
 
+
+   Answer: A complete login system with a client page, server-side code and a database, written in PHP with MySQL.
+
+   1. Database — create the table
+
+   ```sql
+   CREATE DATABASE bankdb;
+   USE bankdb;
+
+   CREATE TABLE users (
+       id           INT AUTO_INCREMENT PRIMARY KEY,
+       username     VARCHAR(50)  NOT NULL UNIQUE,
+       password     VARCHAR(255) NOT NULL,      -- stores a bcrypt hash, never plain text
+       full_name    VARCHAR(100),
+       email        VARCHAR(100) UNIQUE,
+       role         VARCHAR(20)  DEFAULT 'user',
+       failed_count INT          DEFAULT 0,
+       is_locked    TINYINT(1)   DEFAULT 0,
+       last_login   DATETIME,
+       created_at   TIMESTAMP    DEFAULT CURRENT_TIMESTAMP
+   );
+   ```
+
+   2. Client — the login page, `login.html`
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Login</title>
+     <style>
+       body  { font-family: Arial, sans-serif; background: #f0f0f0; }
+       .box  { width: 320px; margin: 80px auto; background: #fff;
+               padding: 25px; border-radius: 6px; box-shadow: 0 0 10px #ccc; }
+       h2    { text-align: center; }
+       input[type=text], input[type=password] {
+               width: 100%; padding: 10px; margin: 6px 0 14px 0; box-sizing: border-box; }
+       button { width: 100%; padding: 10px; background: #1a73e8;
+                color: #fff; border: none; cursor: pointer; }
+       .error { color: red; font-size: 13px; }
+     </style>
+   </head>
+   <body>
+
+     <div class="box">
+       <h2>User Login</h2>
+       <form id="loginForm" action="login.php" method="post">
+         <label for="username">Username</label>
+         <input type="text" id="username" name="username" required>
+
+         <label for="password">Password</label>
+         <input type="password" id="password" name="password" required>
+
+         <button type="submit">Login</button>
+         <p id="msg" class="error"></p>
+       </form>
+     </div>
+
+     <script>
+     document.getElementById("loginForm").addEventListener("submit", function (e) {
+         var u = document.getElementById("username").value.trim();
+         var p = document.getElementById("password").value;
+
+         if (u === "" || p === "") {
+             e.preventDefault();
+             document.getElementById("msg").textContent = "Both fields are required";
+             return;
+         }
+         if (p.length < 8) {
+             e.preventDefault();
+             document.getElementById("msg").textContent = "Password must be at least 8 characters";
+         }
+     });
+     </script>
+
+   </body>
+   </html>
+   ```
+
+   3. Server — `db.php`, the database connection
+
+   ```php
+   <?php
+   $host = "localhost";
+   $user = "root";
+   $pass = "";
+   $db   = "bankdb";
+
+   $conn = new mysqli($host, $user, $pass, $db);
+
+   if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+   }
+   $conn->set_charset("utf8mb4");
+   ?>
+   ```
+
+   4. Server — `login.php`, which checks the credentials
+
+   ```php
+   <?php
+   session_start();
+   require 'db.php';
+
+   if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+       header("Location: login.html");
+       exit();
+   }
+
+   $username = trim($_POST['username']);
+   $password = $_POST['password'];
+
+   if ($username === "" || $password === "") {
+       header("Location: login.html?error=empty");
+       exit();
+   }
+
+   // prepared statement: prevents SQL injection
+   $stmt = $conn->prepare("SELECT id, username, password, full_name, role, is_locked
+                           FROM users WHERE username = ?");
+   $stmt->bind_param("s", $username);
+   $stmt->execute();
+   $result = $stmt->get_result();
+
+   if ($result->num_rows === 1) {
+       $row = $result->fetch_assoc();
+
+       if ($row['is_locked'] == 1) {
+           header("Location: login.html?error=locked");
+           exit();
+       }
+
+       // verify the password against the stored bcrypt hash
+       if (password_verify($password, $row['password'])) {
+
+           // prevent session fixation
+           session_regenerate_id(true);
+
+           $_SESSION['user_id']   = $row['id'];
+           $_SESSION['username']  = $row['username'];
+           $_SESSION['full_name'] = $row['full_name'];
+           $_SESSION['role']      = $row['role'];
+
+           $upd = $conn->prepare("UPDATE users SET last_login = NOW(), failed_count = 0 WHERE id = ?");
+           $upd->bind_param("i", $row['id']);
+           $upd->execute();
+
+           header("Location: dashboard.php");
+           exit();
+       }
+   }
+
+   // same generic message whether the user does not exist or the password is wrong,
+   // so that an attacker cannot discover which usernames are valid
+   $upd = $conn->prepare("UPDATE users SET failed_count = failed_count + 1,
+                          is_locked = IF(failed_count + 1 >= 5, 1, 0) WHERE username = ?");
+   $upd->bind_param("s", $username);
+   $upd->execute();
+
+   header("Location: login.html?error=invalid");
+   exit();
+   ?>
+   ```
+
+   5. Server — `dashboard.php`, the protected page
+
+   ```php
+   <?php
+   session_start();
+
+   // anyone not logged in is sent back
+   if (!isset($_SESSION['user_id'])) {
+       header("Location: login.html");
+       exit();
+   }
+   ?>
+   <!DOCTYPE html>
+   <html>
+   <head><meta charset="UTF-8"><title>Dashboard</title></head>
+   <body>
+     <h2>Welcome, <?php echo htmlspecialchars($_SESSION['full_name']); ?></h2>
+     <p>Role: <?php echo htmlspecialchars($_SESSION['role']); ?></p>
+     <a href="logout.php">Logout</a>
+   </body>
+   </html>
+   ```
+
+   6. Server — `logout.php`
+
+   ```php
+   <?php
+   session_start();
+   $_SESSION = array();
+   session_destroy();
+   header("Location: login.html");
+   exit();
+   ?>
+   ```
+
+   7. Creating a user with a hashed password
+
+   ```php
+   <?php
+   require 'db.php';
+   $hash = password_hash("MyStrongPass123", PASSWORD_BCRYPT);
+   $stmt = $conn->prepare("INSERT INTO users (username, password, full_name, email)
+                           VALUES (?, ?, ?, ?)");
+   $stmt->bind_param("ssss", $u, $hash, $n, $e);
+   $u = "karim"; $n = "Karim Rahman"; $e = "karim@example.com";
+   $stmt->execute();
+   ?>
+   ```
+
+   Security measures built into this code, which must be stated in the answer:
+   - Prepared statements with bound parameters, so SQL injection is impossible. Building the query by concatenating `$_POST` values is the classic fatal error.
+   - `password_hash()` and `password_verify()` with bcrypt, so the database never holds a plain-text or reversibly encrypted password.
+   - `session_regenerate_id(true)` immediately after a successful login, which defeats session fixation.
+   - A single generic error message for both "no such user" and "wrong password", so usernames cannot be enumerated.
+   - Account lock after five failed attempts, which blocks brute force.
+   - `htmlspecialchars()` on every value printed into the page, which prevents cross-site scripting.
+   - Client-side validation for convenience, with the real validation always repeated on the server.
+   - In production, HTTPS is mandatory, and the session cookie must carry `HttpOnly`, `Secure` and `SameSite`.
 2. **(খ) Client-side scripting এর তুলনায় Server-side scripting এর সুবিধাগুলো কী কী?** *[Software Assistant Programmer 13.10.2022 compact it 709 (ET: N/A)]*
 
+
+   Answer: Server-side scripting এর সুবিধাসমূহ, client-side scripting এর তুলনায়:
+
+   - নিরাপত্তা: কোডটি সার্ভারে চলে এবং ব্যবহারকারী তা কখনো দেখতে পান না। ব্রাউজারে কেবল ফলাফল পৌঁছায়। ফলে ব্যবসায়িক যুক্তি, ডেটাবেজের গঠন, পাসওয়ার্ড ও API key গোপন থাকে। Client-side script এর সব কোড ব্যবহারকারী "View Source" দিয়ে পড়তে পারেন, তাই সেখানে কোনো গোপন তথ্য রাখা যায় না।
+
+   - Database এর সঙ্গে সরাসরি সংযোগ: কেবল সার্ভার-সাইড কোডই ডেটাবেজে সংযোগ করে তথ্য পড়তে, লিখতে ও পরিবর্তন করতে পারে। Client-side script কখনো সরাসরি ডেটাবেজে যেতে পারে না এবং যাওয়া উচিতও নয়।
+
+   - বিশ্বাসযোগ্য যাচাইকরণ: ব্যবহারকারী JavaScript বন্ধ করে দিতে পারেন, ব্রাউজারের developer tool দিয়ে কোড বদলে দিতে পারেন, বা সরাসরি অনুরোধ পাঠাতে পারেন। তাই client-side validation কেবল সুবিধার জন্য; প্রকৃত যাচাইকরণ সবসময় সার্ভারে করতে হয়।
+
+   - ব্রাউজার-নিরপেক্ষতা: সার্ভার-সাইড কোড সব ব্রাউজারে একই ফল দেয়, কারণ ব্রাউজার কেবল তৈরি করা HTML পায়। Client-side script বিভিন্ন ব্রাউজার ও সংস্করণে ভিন্ন আচরণ করতে পারে, এবং ব্যবহারকারী তা বন্ধ করে দিলে কাজ করে না।
+
+   - ব্যবহারকারীর যন্ত্রের ওপর নির্ভরতা নেই: ভারী গণনা, বড় ডেটা প্রক্রিয়াকরণ, ছবি রূপান্তর বা প্রতিবেদন তৈরি সার্ভারের শক্তিশালী হার্ডওয়্যারে হয়। পুরনো বা দুর্বল মোবাইলেও সাইটটি সমান দ্রুত চলে।
+
+   - Session ও authentication ব্যবস্থাপনা: লগইন, ব্যবহারকারীর পরিচয় ও অনুমতি নিরাপদে কেবল সার্ভারেই রাখা সম্ভব। ভূমিকা বা অধিকার client-side এ রাখলে ব্যবহারকারী তা বদলে ফেলতে পারেন।
+
+   - ফাইল ব্যবস্থাপনা: সার্ভারে ফাইল তৈরি, পড়া, লেখা, মুছে ফেলা ও আপলোড গ্রহণ কেবল সার্ভার-সাইড কোড দিয়েই সম্ভব।
+
+   - Dynamic content তৈরি: ডেটাবেজ থেকে তথ্য নিয়ে প্রতিটি ব্যবহারকারীর জন্য আলাদা পৃষ্ঠা তৈরি করা যায়।
+
+   - ইমেইল ও বাইরের সেবা: ইমেইল পাঠানো, এসএমএস গেটওয়ে, পেমেন্ট গেটওয়ে ও তৃতীয় পক্ষের API এর গোপন key ব্যবহার করে যোগাযোগ — সবই সার্ভারে করতে হয়।
+
+   - SEO সুবিধা: সার্ভারে তৈরি সম্পূর্ণ HTML search engine সহজে পড়তে পারে। কেবল JavaScript দিয়ে তৈরি বিষয়বস্তু search engine সবসময় ঠিকভাবে পড়তে পারে না।
+
+   - কেন্দ্রীভূত হালনাগাদ: সার্ভারের কোড একবার বদলালেই সব ব্যবহারকারী সঙ্গে সঙ্গে নতুন সংস্করণ পান। কোনো কিছু আবার বিতরণ করতে হয় না।
+
+   - উন্নত ত্রুটি নিয়ন্ত্রণ ও লগ: সব ত্রুটি সার্ভারে নথিভুক্ত হয় এবং ব্যবহারকারীকে কেবল সাধারণ বার্তা দেখানো হয়, যাতে ভেতরের তথ্য ফাঁস না হয়।
+
+   Client-side scripting এর যেসব সুবিধা সার্ভার-সাইডে নেই, যা তুলনার জন্য উল্লেখ করা উচিত:
+   - তাৎক্ষণিক প্রতিক্রিয়া, কারণ সার্ভারে যাওয়া-আসার বিলম্ব নেই।
+   - সার্ভারের ওপর চাপ কম।
+   - পৃষ্ঠা পুনরায় লোড না করেই অংশবিশেষ পরিবর্তন করা যায়।
+   - নেটওয়ার্কের ব্যবহার কম।
+
+   বাস্তব সিদ্ধান্ত: দুটোই একসঙ্গে ব্যবহার করা হয়। তাৎক্ষণিক প্রতিক্রিয়া ও মিথস্ক্রিয়ার জন্য client-side, আর নিরাপত্তা, ডেটা ও প্রকৃত যাচাইকরণের জন্য server-side। মূল নিয়মটি হলো — client-side যাচাইকরণ ব্যবহারকারীর সুবিধার জন্য, server-side যাচাইকরণ নিরাপত্তার জন্য; দ্বিতীয়টি কখনো বাদ দেওয়া যাবে না।
 3. **(খ) PHP কি? Web Development এ Java Script এর প্রয়োজনীয়তা সম্পর্কে বিবরণ দিন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 771 (ET: N/A)]*
 
+
+   Answer: PHP এবং Web Development এ JavaScript এর প্রয়োজনীয়তা।
+
+   PHP কী: PHP এর পূর্ণরূপ PHP: Hypertext Preprocessor, যা একটি recursive acronym; আগে এর অর্থ ছিল Personal Home Page। এটি একটি open-source server-side scripting ভাষা, যা মূলত dynamic ওয়েব পৃষ্ঠা তৈরির জন্য ব্যবহৃত হয়। ১৯৯৪ সালে Rasmus Lerdorf এটি তৈরি করেন।
+
+   PHP এর বৈশিষ্ট্য:
+   - এটি সার্ভারে চলে; ব্রাউজারে কেবল তৈরি হওয়া HTML পৌঁছায়, PHP কোড নয়।
+   - HTML এর ভেতরে সরাসরি লেখা যায়, `<?php ... ?>` চিহ্নের মধ্যে।
+   - ফাইলের বর্ধিতাংশ `.php`।
+   - এটি loosely typed — চলকের ধরন আগে ঘোষণা করতে হয় না; চলকের নাম `$` দিয়ে শুরু হয়।
+   - Open source ও বিনামূল্যে; Windows, Linux, macOS — সব প্ল্যাটফর্মে চলে।
+   - MySQL, PostgreSQL, Oracle, MongoDB — সব ডেটাবেজের সঙ্গে কাজ করে।
+   - Apache ও Nginx সার্ভারে চলে।
+
+   ```php
+   <!DOCTYPE html>
+   <html>
+   <body>
+     <h1><?php echo "Hello, World!"; ?></h1>
+     <?php
+       $name = "Karim";
+       $marks = 85;
+       if ($marks >= 80) {
+           echo "<p>$name has got grade A+</p>";
+       } else {
+           echo "<p>$name has got a lower grade</p>";
+       }
+     ?>
+   </body>
+   </html>
+   ```
+
+   PHP এর ব্যবহার: ফর্মের তথ্য গ্রহণ ও প্রক্রিয়াকরণ, ডেটাবেজের সঙ্গে কাজ, লগইন ও session ব্যবস্থাপনা, ফাইল আপলোড, ইমেইল পাঠানো, cookie নিয়ন্ত্রণ, এবং dynamic পৃষ্ঠা তৈরি। WordPress, Facebook এর প্রাথমিক সংস্করণ, Wikipedia ও Laravel — সবই PHP ভিত্তিক। জনপ্রিয় framework: Laravel, CodeIgniter, Symfony, CakePHP।
+
+   Web Development এ JavaScript এর প্রয়োজনীয়তা:
+
+   JavaScript হলো ব্রাউজারে চলা প্রধান প্রোগ্রামিং ভাষা, যা ওয়েব পৃষ্ঠাকে স্থির নথি থেকে সক্রিয় প্রয়োগে রূপান্তরিত করে। HTML গঠন দেয়, CSS সাজসজ্জা দেয়, আর JavaScript আচরণ দেয়।
+
+   - মিথস্ক্রিয়া তৈরি: বোতামে ক্লিক, মেনু খোলা, ছবি স্লাইড হওয়া, ট্যাব বদলানো, accordion খোলা-বন্ধ — সবই JavaScript দিয়ে হয়।
+
+   - DOM পরিবর্তন: পৃষ্ঠা পুনরায় লোড না করেই যেকোনো element এর লেখা, রং, আকার বা অবস্থান বদলানো যায়, নতুন element যোগ বা মুছে ফেলা যায়।
+
+   - তাৎক্ষণিক ফর্ম যাচাইকরণ: ব্যবহারকারী টাইপ করার সঙ্গে সঙ্গেই ভুল ধরিয়ে দেওয়া যায়, সার্ভারে যাওয়ার আগেই। এতে ব্যবহারকারীর সময় বাঁচে এবং সার্ভারের ওপর অপ্রয়োজনীয় চাপ কমে।
+
+   - AJAX ও Fetch API: পৃষ্ঠা পুনরায় লোড না করেই সার্ভার থেকে তথ্য এনে পৃষ্ঠার অংশবিশেষ হালনাগাদ করা যায়। লাইভ অনুসন্ধানের পরামর্শ, চ্যাট, বিজ্ঞপ্তি, অবিরাম স্ক্রল — সবই এভাবে কাজ করে।
+
+   - Single Page Application তৈরি: React, Angular ও Vue এর মাধ্যমে সম্পূর্ণ অ্যাপ্লিকেশন তৈরি করা যায়, যা ডেস্কটপ সফটওয়্যারের মতো আচরণ করে।
+
+   - Animation ও দৃশ্যগত প্রভাব: CSS এর সীমার বাইরের জটিল অ্যানিমেশন, ক্যানভাসে আঁকা ও গ্রাফ তৈরি।
+
+   - Client-side storage: `localStorage` ও `sessionStorage` তে তথ্য রেখে ব্যবহারকারীর পছন্দ মনে রাখা।
+
+   - Browser API ব্যবহার: অবস্থান নির্ণয় (Geolocation), ক্যামেরা ও মাইক্রোফোন, বিজ্ঞপ্তি, ফাইল পড়া, drag and drop।
+
+   - Server-side ব্যবহার: Node.js এর মাধ্যমে JavaScript এখন সার্ভারেও চলে, ফলে একই ভাষায় সম্পূর্ণ full-stack অ্যাপ্লিকেশন লেখা যায়।
+
+   - মোবাইল ও ডেস্কটপ অ্যাপ: React Native ও Electron দিয়ে একই কোড থেকে মোবাইল ও ডেস্কটপ অ্যাপ তৈরি করা যায়।
+
+   PHP ও JavaScript এর তুলনা:
+
+   | বিষয় | PHP | JavaScript |
+   |---|---|---|
+   | কোথায় চলে | সার্ভারে | ব্রাউজারে; Node.js হলে সার্ভারেও |
+   | ব্যবহারকারী কোড দেখতে পান | না | হ্যাঁ, ব্রাউজারে চললে |
+   | Database সংযোগ | সরাসরি | সরাসরি নয়; API এর মাধ্যমে |
+   | পৃষ্ঠা পুনরায় লোড | সাধারণত প্রয়োজন হয় | প্রয়োজন হয় না |
+   | প্রধান কাজ | ডেটা প্রক্রিয়াকরণ ও পৃষ্ঠা তৈরি | ব্যবহারকারীর সঙ্গে মিথস্ক্রিয়া |
+   | নিরাপত্তা | গোপন তথ্য রাখা নিরাপদ | কখনোই গোপন তথ্য রাখা যাবে না |
+
+   সিদ্ধান্ত: দুটি ভাষা প্রতিদ্বন্দ্বী নয়, পরিপূরক। PHP সার্ভারে তথ্য প্রক্রিয়াকরণ ও নিরাপত্তার কাজ করে; JavaScript ব্রাউজারে ব্যবহারকারীর অভিজ্ঞতা তৈরি করে। একটি আধুনিক ওয়েব অ্যাপ্লিকেশনে দুটোই প্রয়োজন।
 4. **(b) What are the resources you need to access a web enabled application?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
 
+
+   Answer: Resources needed to access a web-enabled application.
+
+   Hardware
+   - A client device: a desktop computer, laptop, tablet or smartphone, with enough processor, memory and storage to run a modern browser.
+   - A network interface: an Ethernet card, Wi-Fi adapter or mobile data modem.
+   - Input and output devices: keyboard, mouse or touch screen, and a display.
+   - For the provider: a server with adequate CPU, RAM and disk, plus a UPS and cooling.
+
+   Network connectivity
+   - An internet connection through an ISP, of sufficient bandwidth for the application. A dashboard needs little; a video application needs a great deal.
+   - For an internal application, a LAN or an intranet connection, possibly over a VPN.
+   - Networking equipment along the way: router, switch, modem, access point.
+   - A DNS service, to translate the domain name into an IP address.
+   - An IP address for the client, obtained by DHCP or set statically.
+
+   Software on the client
+   - An operating system: Windows, Linux, macOS, Android or iOS.
+   - A web browser: Chrome, Firefox, Edge or Safari, of a version the application supports.
+   - JavaScript enabled, and cookies allowed, since almost every application depends on both.
+   - Any required plug-in or runtime, such as a PDF viewer for reports.
+   - Up-to-date TLS support, so that the HTTPS connection can be established.
+
+   Server-side resources, which the provider must have
+   - A web server: Apache, Nginx or IIS.
+   - An application server or runtime: PHP, Node.js, Tomcat, .NET.
+   - A database server: MySQL, PostgreSQL, Oracle, SQL Server or MongoDB.
+   - Hosting: a physical server, a virtual private server, or cloud infrastructure.
+   - A domain name, and an SSL/TLS certificate.
+   - Backup storage and a monitoring system.
+
+   Access credentials and authorisation
+   - The URL of the application.
+   - A user account: username and password, and increasingly a second factor such as an OTP or an authenticator app.
+   - The correct role or permission, since authentication only proves identity while authorisation decides what may be done.
+   - For an internal application, being on the permitted network or connected through the VPN, and sometimes a client certificate or a registered device.
+
+   Security requirements
+   - HTTPS, so that credentials and data are encrypted in transit.
+   - Antivirus and a firewall on the client.
+   - An operating system and browser that are patched, since an out-of-date browser may be blocked by the server for lacking modern TLS.
+
+   Human and organisational resources
+   - A user who knows how to operate the application, which usually means some training.
+   - User documentation and a help desk.
+   - An administrator to create accounts and assign roles.
+   - Technical support for problems.
+
+   Summarised as the minimum a single user needs: a device, an internet connection, a modern browser, the URL, and valid credentials with the right permissions.
 5. **Apache কোন ধরনের Server এক কথায় লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
+
+
+   Answer: Apache একটি Web Server, নির্দিষ্টভাবে বললে HTTP Server।
+
+   এর সম্পূর্ণ নাম Apache HTTP Server, যা সংক্ষেপে httpd নামে পরিচিত। এটি Apache Software Foundation এর তৈরি একটি open-source, বিনামূল্যের সফটওয়্যার, যা ১৯৯৫ সালে প্রকাশিত হয় এবং দীর্ঘকাল বিশ্বের সবচেয়ে বেশি ব্যবহৃত ওয়েব সার্ভার ছিল।
+
+   কাজ: এটি ক্লায়েন্টের HTTP অনুরোধ গ্রহণ করে, প্রয়োজনীয় ফাইল বা তৈরি করা পৃষ্ঠা খুঁজে বের করে এবং HTTP response আকারে ব্রাউজারে ফেরত পাঠায়।
+
+   বৈশিষ্ট্য:
+   - Cross-platform — Linux, Windows, macOS ও Unix এ চলে।
+   - Module ভিত্তিক গঠন, যেমন `mod_rewrite` URL পুনর্লিখনের জন্য, `mod_ssl` HTTPS এর জন্য, `mod_php` PHP চালানোর জন্য।
+   - Virtual hosting — একটি সার্ভারেই একাধিক ওয়েবসাইট চালানো যায়।
+   - `.htaccess` ফাইলের মাধ্যমে ডিরেক্টরিভিত্তিক নিয়ন্ত্রণ।
+   - LAMP stack এর "A" — Linux, Apache, MySQL, PHP।
+
+   অন্যান্য ওয়েব সার্ভার: Nginx, Microsoft IIS, LiteSpeed, Caddy ও Node.js এর নিজস্ব সার্ভার।
+
+   একটি বিভ্রান্তি এড়ানো দরকার: Apache Software Foundation এর অধীনে আরও অনেক প্রকল্প আছে — Apache Tomcat একটি Java servlet container বা application server; Apache Hadoop একটি বড় ডেটা প্রক্রিয়াকরণ কাঠামো; Apache Kafka একটি বার্তা প্রবাহ ব্যবস্থা। কেবল "Apache" বললে বোঝায় Apache HTTP Server।
 
 ## CSS & Styling (Inline, Internal, External) (4)
 
 1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 411 (ET: N/A)]*
 
+
+   Answer:    CSS এর পূর্ণরূপ Cascading Style Sheets। এটি একটি style sheet ভাষা, যা দিয়ে HTML নথির উপস্থাপন ও সাজসজ্জা নির্ধারণ করা হয় — রং, ফন্ট, আকার, ব্যবধান, সীমানা, অবস্থান ও সমগ্র বিন্যাস।
+
+   HTML বলে "এটি একটি শিরোনাম"; CSS বলে "শিরোনামটি নীল রঙের, ২৪ পিক্সেল আকারের এবং মাঝখানে থাকবে"। এভাবে গঠন ও উপস্থাপন পৃথক রাখাকে বলে separation of concerns।
+
+   CSS এর গঠন:
+
+   ```
+   selector {
+       property: value;
+       property: value;
+   }
+   ```
+
+   ```css
+   h1 {
+       color: navy;
+       font-size: 28px;
+       text-align: center;
+   }
+   ```
+
+   এখানে `h1` হলো selector, `color` ও `font-size` হলো property, আর `navy` ও `28px` হলো value।
+
+   "Cascading" শব্দটির অর্থ: একই element এ একাধিক নিয়ম প্রযোজ্য হলে একটি নির্দিষ্ট অগ্রাধিকার ক্রম অনুসারে কোনটি কার্যকর হবে তা ঠিক হয়। অগ্রাধিকার, সবচেয়ে শক্তিশালী থেকে দুর্বল: `!important` → inline style → id selector (`#id`) → class, attribute ও pseudo-class selector (`.class`) → element selector (`h1`) → ব্রাউজারের নিজস্ব default। একই মাত্রার দুটি নিয়ম থাকলে পরেরটি জেতে।
+
+   CSS ব্যবহারের তিনটি পদ্ধতি:
+
+   ১. Inline CSS — সরাসরি element এর `style` attribute এ লেখা।
+
+   ```html
+   <h1 style="color: blue; text-align: center;">এটি একটি শিরোনাম</h1>
+   <p style="font-size: 16px; color: gray;">এটি একটি অনুচ্ছেদ।</p>
+   ```
+
+   - সুবিধা: দ্রুত প্রয়োগ করা যায়; কেবল একটি element এ ব্যতিক্রমী শৈলী দিতে হলে সুবিধাজনক; অগ্রাধিকার সর্বোচ্চ, তাই অন্য সব নিয়মকে ছাপিয়ে যায়।
+   - অসুবিধা: HTML ও CSS মিশে যায়, ফলে কোড অগোছালো হয়; পুনর্ব্যবহারযোগ্য নয়, প্রতিটি element এ আলাদা লিখতে হয়; ফাইলের আকার বাড়ে; রক্ষণাবেক্ষণ কঠিন — রং বদলাতে হলে প্রতিটি ট্যাগ খুঁজে বদলাতে হয়; cache হয় না।
+
+   ২. Internal বা Embedded CSS — একই HTML ফাইলের `<head>` অংশে `<style>` ট্যাগের ভেতরে লেখা।
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Internal CSS</title>
+     <style>
+       body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
+       h1   { color: navy; text-align: center; }
+       p    { font-size: 16px; line-height: 1.6; }
+       .highlight { background-color: yellow; }
+     </style>
+   </head>
+   <body>
+     <h1>শিরোনাম</h1>
+     <p class="highlight">এটি একটি অনুচ্ছেদ।</p>
+   </body>
+   </html>
+   ```
+
+   - সুবিধা: একটি পৃষ্ঠার সব element এ একসঙ্গে প্রয়োগ হয়; আলাদা ফাইল লাগে না, তাই অতিরিক্ত HTTP অনুরোধ নেই; একক পৃষ্ঠার সাইটের জন্য উপযুক্ত।
+   - অসুবিধা: কেবল ওই একটি পৃষ্ঠায় কাজ করে; একাধিক পৃষ্ঠায় একই শৈলী দিতে হলে প্রতিটিতে অনুলিপি করতে হয়; পৃথকভাবে cache হয় না, তাই প্রতিবার পুরো কোডটি ডাউনলোড হয়।
+
+   ৩. External CSS — আলাদা `.css` ফাইলে লিখে `<link>` ট্যাগ দিয়ে যুক্ত করা। এটিই সুপারিশকৃত পদ্ধতি।
+
+   ```css
+   /* style.css */
+   body { font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 0; }
+   h1   { color: navy; text-align: center; }
+   p    { font-size: 16px; line-height: 1.6; }
+   .btn { background: #1a73e8; color: #fff; padding: 10px 20px; border-radius: 4px; }
+   ```
+
+   ```html
+   <head>
+     <meta charset="UTF-8">
+     <title>External CSS</title>
+     <link rel="stylesheet" href="style.css">
+   </head>
+   ```
+
+   - সুবিধা: একটি ফাইল হাজারো পৃষ্ঠায় ব্যবহার করা যায়; একটি ফাইল বদলালেই সমগ্র সাইটের চেহারা বদলে যায়; ব্রাউজার ফাইলটি cache করে রাখে, তাই পরবর্তী পৃষ্ঠাগুলো দ্রুত লোড হয়; HTML পরিচ্ছন্ন থাকে; দলগতভাবে কাজ করা সহজ, কারণ ডিজাইনার ও ডেভেলপার আলাদা ফাইলে কাজ করতে পারেন।
+   - অসুবিধা: প্রথমবার একটি অতিরিক্ত HTTP অনুরোধ লাগে; ফাইলটি লোড হওয়ার আগমুহূর্তে পৃষ্ঠাটি সাজসজ্জাহীন দেখা যেতে পারে।
+
+   তুলনা:
+
+   | বিষয় | Inline | Internal | External |
+   |---|---|---|---|
+   | অবস্থান | element এর `style` attribute এ | `<head>` এর `<style>` ট্যাগে | আলাদা `.css` ফাইলে |
+   | পরিসর | কেবল ওই একটি element | কেবল ওই একটি পৃষ্ঠা | অসংখ্য পৃষ্ঠা |
+   | অগ্রাধিকার | সর্বোচ্চ | মধ্যম | সর্বনিম্ন |
+   | পুনর্ব্যবহার | নেই | সীমিত | পূর্ণ |
+   | Caching | হয় না | হয় না | হয় |
+   | রক্ষণাবেক্ষণ | খুব কঠিন | মাঝারি | সহজ |
+   | কখন ব্যবহার | জরুরি ব্যতিক্রম, বা ইমেইল টেমপ্লেট | একক পৃষ্ঠা বা দ্রুত পরীক্ষা | প্রকৃত ওয়েবসাইট |
+
+   চতুর্থ একটি পদ্ধতি, যা কম ব্যবহৃত — `@import`:
+
+   ```css
+   @import url("typography.css");
+   ```
+
+   এটি একটি CSS ফাইলের ভেতর থেকে আরেকটি আনে, কিন্তু ফাইলগুলো ধারাবাহিকভাবে লোড হয় বলে গতি কমে যায়। তাই `<link>` ব্যবহারই ভালো।
 2. **What is CSS? What is CSS framework? Write down 3 CSS framework name?** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
+
+   Answer: CSS and CSS frameworks.
+
+   CSS stands for Cascading Style Sheets. It is a style sheet language used to control the presentation of an HTML document: colours, fonts, sizes, spacing, borders, positioning and the whole layout. HTML defines the structure and content; CSS defines how that content looks.
+
+   Its syntax is `selector { property: value; }`:
+
+   ```css
+   h1 {
+       color: navy;
+       font-size: 28px;
+       text-align: center;
+   }
+   ```
+
+   The word "cascading" refers to the order of precedence used when several rules apply to the same element: `!important`, then inline styles, then id selectors, then class selectors, then element selectors, then the browser's own defaults.
+
+   CSS can be applied in three ways: inline, in the element's `style` attribute; internal, in a `<style>` block in the `<head>`; and external, in a separate `.css` file linked with `<link rel="stylesheet" href="style.css">`. The external form is the one used in real projects, because one file styles the whole site and the browser caches it.
+
+   What a CSS framework is
+
+   A CSS framework is a ready-made library of CSS, and often a little JavaScript, that provides a grid system, standardised typography, and pre-built components such as buttons, navigation bars, cards, forms, tables and modal dialogues. Instead of writing every rule from nothing, the developer applies the framework's class names to the HTML.
+
+   ```html
+   <!-- Bootstrap: a responsive two-column layout and a styled button -->
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6">Left column</div>
+       <div class="col-md-6">Right column</div>
+     </div>
+     <button class="btn btn-primary">Submit</button>
+   </div>
+   ```
+
+   Three CSS framework names:
+   1. Bootstrap
+   2. Tailwind CSS
+   3. Foundation
+
+   Other well-known ones: Bulma, Materialize, Semantic UI, Pure CSS, Skeleton and Ant Design.
+
+   Brief description of the three named:
+
+   | Framework | Approach | Notes |
+   |---|---|---|
+   | Bootstrap | Component-based | Developed at Twitter; the most widely used. Provides a 12-column responsive grid and a full set of ready components. Very fast to build with, but sites tend to look alike unless customised |
+   | Tailwind CSS | Utility-first | Provides small single-purpose classes such as `text-center`, `p-4`, `bg-blue-500`, which are combined in the HTML. Gives complete design freedom and very small production files, because unused classes are stripped out. The HTML becomes verbose |
+   | Foundation | Component-based | Developed by ZURB. More flexible and less opinionated than Bootstrap, with strong accessibility support and a separate version for HTML email |
+
+   Advantages of using a framework: development is much faster; the layout is responsive without extra work; the design is consistent across the site; cross-browser differences are already handled; accessibility is usually built in; and any developer who knows the framework can join the project immediately.
+
+   Disadvantages: the file is larger than hand-written CSS unless it is trimmed; many sites end up looking the same; there is a learning curve for the framework's own conventions; a great deal of unused code may be shipped; and heavy customisation can end up costing more effort than writing the CSS directly.
 3. **(খ) CSS Box Model এ ‘Padding’ এবং ‘Margin’ এরিয়ার মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+
+   Answer: CSS Box Model অনুযায়ী প্রতিটি HTML element একটি আয়তাকার বাক্স, যার চারটি স্তর — ভেতর থেকে বাইরের দিকে content, padding, border ও margin।
+
+   ```
+   +-------------------------------------------------+
+   |                    MARGIN                       |  ← স্বচ্ছ, বাইরের ফাঁক
+   |   +-----------------------------------------+   |
+   |   |                 BORDER                  |   |  ← সীমারেখা
+   |   |   +---------------------------------+   |   |
+   |   |   |            PADDING              |   |   |  ← ভেতরের ফাঁক
+   |   |   |   +-------------------------+   |   |   |
+   |   |   |   |         CONTENT         |   |   |   |  ← লেখা বা ছবি
+   |   |   |   |    (width × height)     |   |   |   |
+   |   |   |   +-------------------------+   |   |   |
+   |   |   +---------------------------------+   |   |
+   |   +-----------------------------------------+   |
+   +-------------------------------------------------+
+   ```
+
+   Padding ও Margin এর পার্থক্য:
+
+   | বিষয় | Padding | Margin |
+   |---|---|---|
+   | অবস্থান | Border এর ভেতরে, content ও border এর মাঝখানে | Border এর বাইরে, দুটি element এর মাঝখানে |
+   | কাজ | Element এর ভেতরে ফাঁকা জায়গা তৈরি করে | Element এর বাইরে ফাঁকা জায়গা তৈরি করে |
+   | Background | Element এর background রং বা ছবি padding এলাকায় দেখা যায় | সবসময় স্বচ্ছ; পেছনের বা মূল পৃষ্ঠার রং দেখা যায় |
+   | ঋণাত্মক মান | দেওয়া যায় না | দেওয়া যায়, যেমন `margin-top: -10px` |
+   | Collapsing | হয় না | হয়; দুটি element এর উল্লম্ব margin পাশাপাশি এলে বড়টিই কেবল কার্যকর হয়, যোগ হয় না |
+   | Auto মান | `padding: auto` কাজ করে না | `margin: 0 auto` দিয়ে element কে অনুভূমিকভাবে মাঝখানে আনা যায় |
+   | ক্লিকযোগ্য এলাকা | Padding এলাকায় ক্লিক করলে element এ ক্লিক হিসেবে গণ্য হয় | Margin এলাকায় ক্লিক element এ পৌঁছায় না |
+   | মোট আকারে প্রভাব | Element এর নিজের আকার বাড়ায় | Element এর আকার বাড়ায় না, কেবল সরিয়ে রাখে |
+
+   উদাহরণ:
+
+   ```css
+   .box {
+       width: 300px;
+       height: 100px;
+       padding: 20px;              /* ভেতরের ফাঁক, চারদিকে ২০px */
+       border: 5px solid black;    /* সীমারেখা */
+       margin: 30px;               /* বাইরের ফাঁক, চারদিকে ৩০px */
+       background-color: lightblue;
+   }
+   ```
+
+   এখানে হালকা নীল রংটি content ও padding — দুই এলাকাতেই দেখা যাবে, কিন্তু margin এলাকায় দেখা যাবে না। এটিই দুইয়ের সবচেয়ে সহজে দেখা যাওয়া পার্থক্য।
+
+   মোট প্রস্থের হিসাব (default `box-sizing: content-box` এ):
+
+   মোট প্রস্থ = width + বাম padding + ডান padding + বাম border + ডান border + বাম margin + ডান margin
+
+   = 300 + 20 + 20 + 5 + 5 + 30 + 30
+   = 410 পিক্সেল
+
+   এর মধ্যে element টি নিজে দখল করে = 300 + 40 + 10 = 350 পিক্সেল, এবং বাকি ৬০ পিক্সেল বাইরের ফাঁক।
+
+   `box-sizing` property এর ভূমিকা:
+
+   ```css
+   * { box-sizing: border-box; }
+   ```
+
+   - `content-box` (default): `width` কেবল content কে বোঝায়; padding ও border আলাদাভাবে যোগ হয়। ফলে ৩০০px দিতে চাইলেও প্রকৃত প্রস্থ ৩৫০px হয়ে যায়।
+   - `border-box`: `width` এর মধ্যেই padding ও border ধরা হয়। উপরের উদাহরণে element টির মোট প্রস্থ ঠিক ৩০০px থাকবে, আর content পাবে 300 − 40 − 10 = ২৫০px। প্রায় সব আধুনিক প্রকল্পে এটি ব্যবহার করা হয়, কারণ এতে হিসাব সহজ হয়।
+
+   Margin collapsing এর উদাহরণ, যা বিশেষভাবে উল্লেখযোগ্য: একটি অনুচ্ছেদের `margin-bottom: 30px` এবং পরের অনুচ্ছেদের `margin-top: 20px` হলে দুইয়ের মাঝে ফাঁক হবে ৩০px, ৫০px নয়। Padding এ এমন হয় না; সেখানে দুটি মান যোগ হয়।
+
+   কখন কোনটি ব্যবহার করবেন:
+   - Padding — একটি বোতামের লেখা ও তার সীমারেখার মাঝে ফাঁক দিতে, বা একটি কার্ডের ভেতরের বিষয়বস্তুকে প্রান্ত থেকে দূরে রাখতে।
+   - Margin — দুটি অনুচ্ছেদ বা দুটি কার্ডের মাঝে ফাঁক দিতে, বা একটি বাক্সকে পৃষ্ঠার মাঝখানে আনতে।
 4. **(খ) CSS কী? কতভাবে একজন Website develop কারী তার page-এ CSS ব্যবহার করতে পারে।** *[Software Assistant Programmer 13.10.2022 compact it 708 (ET: N/A)]*
+
+
+   Answer:    CSS এর পূর্ণরূপ Cascading Style Sheets। এটি একটি style sheet ভাষা, যা দিয়ে HTML নথির উপস্থাপন ও সাজসজ্জা নির্ধারণ করা হয় — রং, ফন্ট, আকার, ব্যবধান, সীমানা, অবস্থান ও সমগ্র বিন্যাস।
+
+   HTML বলে "এটি একটি শিরোনাম"; CSS বলে "শিরোনামটি নীল রঙের, ২৪ পিক্সেল আকারের এবং মাঝখানে থাকবে"। এভাবে গঠন ও উপস্থাপন পৃথক রাখাকে বলে separation of concerns।
+
+   CSS এর গঠন:
+
+   ```
+   selector {
+       property: value;
+       property: value;
+   }
+   ```
+
+   ```css
+   h1 {
+       color: navy;
+       font-size: 28px;
+       text-align: center;
+   }
+   ```
+
+   এখানে `h1` হলো selector, `color` ও `font-size` হলো property, আর `navy` ও `28px` হলো value।
+
+   "Cascading" শব্দটির অর্থ: একই element এ একাধিক নিয়ম প্রযোজ্য হলে একটি নির্দিষ্ট অগ্রাধিকার ক্রম অনুসারে কোনটি কার্যকর হবে তা ঠিক হয়। অগ্রাধিকার, সবচেয়ে শক্তিশালী থেকে দুর্বল: `!important` → inline style → id selector (`#id`) → class, attribute ও pseudo-class selector (`.class`) → element selector (`h1`) → ব্রাউজারের নিজস্ব default। একই মাত্রার দুটি নিয়ম থাকলে পরেরটি জেতে।
+
+   CSS ব্যবহারের তিনটি পদ্ধতি:
+
+   ১. Inline CSS — সরাসরি element এর `style` attribute এ লেখা।
+
+   ```html
+   <h1 style="color: blue; text-align: center;">এটি একটি শিরোনাম</h1>
+   <p style="font-size: 16px; color: gray;">এটি একটি অনুচ্ছেদ।</p>
+   ```
+
+   - সুবিধা: দ্রুত প্রয়োগ করা যায়; কেবল একটি element এ ব্যতিক্রমী শৈলী দিতে হলে সুবিধাজনক; অগ্রাধিকার সর্বোচ্চ, তাই অন্য সব নিয়মকে ছাপিয়ে যায়।
+   - অসুবিধা: HTML ও CSS মিশে যায়, ফলে কোড অগোছালো হয়; পুনর্ব্যবহারযোগ্য নয়, প্রতিটি element এ আলাদা লিখতে হয়; ফাইলের আকার বাড়ে; রক্ষণাবেক্ষণ কঠিন — রং বদলাতে হলে প্রতিটি ট্যাগ খুঁজে বদলাতে হয়; cache হয় না।
+
+   ২. Internal বা Embedded CSS — একই HTML ফাইলের `<head>` অংশে `<style>` ট্যাগের ভেতরে লেখা।
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Internal CSS</title>
+     <style>
+       body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
+       h1   { color: navy; text-align: center; }
+       p    { font-size: 16px; line-height: 1.6; }
+       .highlight { background-color: yellow; }
+     </style>
+   </head>
+   <body>
+     <h1>শিরোনাম</h1>
+     <p class="highlight">এটি একটি অনুচ্ছেদ।</p>
+   </body>
+   </html>
+   ```
+
+   - সুবিধা: একটি পৃষ্ঠার সব element এ একসঙ্গে প্রয়োগ হয়; আলাদা ফাইল লাগে না, তাই অতিরিক্ত HTTP অনুরোধ নেই; একক পৃষ্ঠার সাইটের জন্য উপযুক্ত।
+   - অসুবিধা: কেবল ওই একটি পৃষ্ঠায় কাজ করে; একাধিক পৃষ্ঠায় একই শৈলী দিতে হলে প্রতিটিতে অনুলিপি করতে হয়; পৃথকভাবে cache হয় না, তাই প্রতিবার পুরো কোডটি ডাউনলোড হয়।
+
+   ৩. External CSS — আলাদা `.css` ফাইলে লিখে `<link>` ট্যাগ দিয়ে যুক্ত করা। এটিই সুপারিশকৃত পদ্ধতি।
+
+   ```css
+   /* style.css */
+   body { font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 0; }
+   h1   { color: navy; text-align: center; }
+   p    { font-size: 16px; line-height: 1.6; }
+   .btn { background: #1a73e8; color: #fff; padding: 10px 20px; border-radius: 4px; }
+   ```
+
+   ```html
+   <head>
+     <meta charset="UTF-8">
+     <title>External CSS</title>
+     <link rel="stylesheet" href="style.css">
+   </head>
+   ```
+
+   - সুবিধা: একটি ফাইল হাজারো পৃষ্ঠায় ব্যবহার করা যায়; একটি ফাইল বদলালেই সমগ্র সাইটের চেহারা বদলে যায়; ব্রাউজার ফাইলটি cache করে রাখে, তাই পরবর্তী পৃষ্ঠাগুলো দ্রুত লোড হয়; HTML পরিচ্ছন্ন থাকে; দলগতভাবে কাজ করা সহজ, কারণ ডিজাইনার ও ডেভেলপার আলাদা ফাইলে কাজ করতে পারেন।
+   - অসুবিধা: প্রথমবার একটি অতিরিক্ত HTTP অনুরোধ লাগে; ফাইলটি লোড হওয়ার আগমুহূর্তে পৃষ্ঠাটি সাজসজ্জাহীন দেখা যেতে পারে।
+
+   তুলনা:
+
+   | বিষয় | Inline | Internal | External |
+   |---|---|---|---|
+   | অবস্থান | element এর `style` attribute এ | `<head>` এর `<style>` ট্যাগে | আলাদা `.css` ফাইলে |
+   | পরিসর | কেবল ওই একটি element | কেবল ওই একটি পৃষ্ঠা | অসংখ্য পৃষ্ঠা |
+   | অগ্রাধিকার | সর্বোচ্চ | মধ্যম | সর্বনিম্ন |
+   | পুনর্ব্যবহার | নেই | সীমিত | পূর্ণ |
+   | Caching | হয় না | হয় না | হয় |
+   | রক্ষণাবেক্ষণ | খুব কঠিন | মাঝারি | সহজ |
+   | কখন ব্যবহার | জরুরি ব্যতিক্রম, বা ইমেইল টেমপ্লেট | একক পৃষ্ঠা বা দ্রুত পরীক্ষা | প্রকৃত ওয়েবসাইট |
+
+   চতুর্থ একটি পদ্ধতি, যা কম ব্যবহৃত — `@import`:
+
+   ```css
+   @import url("typography.css");
+   ```
+
+   এটি একটি CSS ফাইলের ভেতর থেকে আরেকটি আনে, কিন্তু ফাইলগুলো ধারাবাহিকভাবে লোড হয় বলে গতি কমে যায়। তাই `<link>` ব্যবহারই ভালো।
 
 ## Web Security & Browser Same-Origin Policy (Iframe) (2)
 
