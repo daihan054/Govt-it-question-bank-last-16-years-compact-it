@@ -4268,21 +4268,261 @@
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
+
+   Answer: A multiplexer (MUX) is a combinational circuit that selects one of many input lines and passes it to a single output line. The choice is made by n select lines that pick among 2^n data inputs, so it works as a digital data selector or many-to-one switch. For a 4-to-1 MUX with inputs D0-D3 and select lines S1 S0:
+
+   Y = S1'S0'D0 + S1'S0 D1 + S1 S0' D2 + S1 S0 D3
+
+   Main uses: data routing, parallel-to-serial conversion, and implementing any Boolean function directly from its truth table.
+
+   Difference between D latch and D flip-flop:
+
+   | Point | D latch | D flip-flop |
+   |---|---|---|
+   | Control signal | Enable (level sensitive) | Clock (edge sensitive) |
+   | When output changes | Any time while enable = 1 | Only at the active clock edge |
+   | Transparency | Transparent, Q follows D continuously | Opaque, Q holds until the next edge |
+   | Structure | One gate-level latch | Two D latches in master-slave form |
+   | Timing safety | Output can change many times in one cycle | Output changes exactly once per cycle |
+   | Typical use | Temporary data hold, address latching | Registers, counters, shift registers, pipelines |
+
+   Both store one bit, but the flip-flop samples D at one instant, which is what makes reliable synchronous design possible.
 2. **Difference between combinational and sequential circuits.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
+
+   Answer: Difference between combinational and sequential circuits:
+
+   | Point | Combinational circuit | Sequential circuit |
+   |---|---|---|
+   | Output depends on | Present inputs only | Present inputs and past state |
+   | Memory | None | Has memory (flip-flops / latches) |
+   | Clock | Not required | Normally required (synchronous) |
+   | Feedback path | Absent | Present, output is fed back to input |
+   | Design tool | Truth table, K-map | State diagram, state table, excitation table |
+   | Speed | Faster, no clock delay | Slower, limited by clock period |
+   | Examples | Adder, MUX, decoder, encoder, comparator | Counter, shift register, RAM, FSM |
+
+   Block diagram:
+
+   ```mermaid
+   flowchart LR
+     I1[Inputs] --> C[Combinational Logic] --> O1[Outputs]
+     I2[Inputs] --> L[Combinational Logic] --> O2[Outputs]
+     L --> M[Memory Elements / Flip-Flops]
+     M -- Present State feedback --> L
+   ```
+
+   The upper path is a combinational circuit, the lower path with the feedback loop through the memory block is a sequential circuit.
 3. **(b) Design a 4-bit ring counter using flip-flops. Write down its working principle using.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
 
+
+   Answer: A ring counter is a shift register whose serial output is fed back to its serial input, so a single 1 circulates through the flip-flops. A 4-bit ring counter uses four D flip-flops (FF0 to FF3) driven by a common clock.
+
+   Circuit connection:
+   - D0 = Q3 (output of the last stage feeds the first stage)
+   - D1 = Q0, D2 = Q1, D3 = Q2
+   - All four clock inputs are tied to the same clock line
+   - FF0 has a PRESET input and FF1-FF3 have CLEAR inputs, tied to a START line, so that the counter begins at 1000
+
+   ```mermaid
+   flowchart LR
+     CLK[Clock] --> FF0
+     FF0[FF0 D Q0] --> FF1[FF1 D Q1] --> FF2[FF2 D Q2] --> FF3[FF3 D Q3]
+     FF3 -- feedback Q3 to D0 --> FF0
+   ```
+
+   Working principle:
+   - On START, FF0 is preset to 1 and the rest are cleared, so the state is Q3Q2Q1Q0 = 0001.
+   - At every clock edge each flip-flop copies the output of the flip-flop on its left, so the single 1 shifts one position.
+   - When the 1 reaches the last stage, the feedback line returns it to the first stage, so the pattern repeats.
+
+   State sequence:
+
+   | Clock pulse | Q0 | Q1 | Q2 | Q3 |
+   |---|---|---|---|---|
+   | Initial | 1 | 0 | 0 | 0 |
+   | 1 | 0 | 1 | 0 | 0 |
+   | 2 | 0 | 0 | 1 | 0 |
+   | 3 | 0 | 0 | 0 | 1 |
+   | 4 | 1 | 0 | 0 | 0 |
+
+   Key points:
+   - A 4-bit ring counter has only 4 valid states, so it is a MOD-4 counter (n flip-flops give MOD-n).
+   - No decoding gates are needed, because each output line is already active for exactly one state. This makes it ideal for sequencing and timing control.
+   - It is inefficient in flip-flop use: 4 flip-flops give 16 possible states but only 4 are used.
 4. **(খ) Combinational এবং Sequential circuit এর মধ্যে পার্থক্য ডায়াগ্রাম সহকারে লিখুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 773 (ET: N/A)]*
 
+
+   Answer: Difference between combinational and sequential circuits:
+
+   | Point | Combinational circuit | Sequential circuit |
+   |---|---|---|
+   | Output depends on | Present inputs only | Present inputs and past state |
+   | Memory | None | Has memory (flip-flops / latches) |
+   | Clock | Not required | Normally required (synchronous) |
+   | Feedback path | Absent | Present, output is fed back to input |
+   | Design tool | Truth table, K-map | State diagram, state table, excitation table |
+   | Speed | Faster, no clock delay | Slower, limited by clock period |
+   | Examples | Adder, MUX, decoder, encoder, comparator | Counter, shift register, RAM, FSM |
+
+   Block diagram:
+
+   ```mermaid
+   flowchart LR
+     I1[Inputs] --> C[Combinational Logic] --> O1[Outputs]
+     I2[Inputs] --> L[Combinational Logic] --> O2[Outputs]
+     L --> M[Memory Elements / Flip-Flops]
+     M -- Present State feedback --> L
+   ```
+
+   The upper path is a combinational circuit, the lower path with the feedback loop through the memory block is a sequential circuit.
 5. **Given a 100MHz clock signal derive a circuit using T-flip flops of generate 50MHz and 25MHz clock signals. Draw a timing diagram for all the three clock signal.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823-824 (ET: BUET)]*
 
+
+   Answer: A T flip-flop with T tied permanently to 1 toggles on every active clock edge, so its output frequency is exactly half the input frequency. This is a divide-by-2 circuit. Cascading two such stages gives divide-by-4.
+
+   Circuit:
+   - Stage 1: T1 = 1, clock input = 100 MHz. Output Q1 = 50 MHz.
+   - Stage 2: T2 = 1, clock input = Q1 (50 MHz). Output Q2 = 25 MHz.
+
+   ```mermaid
+   flowchart LR
+     CLK[Clock 100 MHz] --> FF1[T FF1 with T = 1]
+     FF1 -- Q1 = 50 MHz --> FF2[T FF2 with T = 1]
+     FF2 -- Q2 = 25 MHz --> OUT[25 MHz output]
+   ```
+
+   Frequency calculation:
+   - Input clock: f = 100 MHz, period T = 1/100 MHz = 10 ns
+   - After stage 1: f = 100/2 = 50 MHz, period = 20 ns
+   - After stage 2: f = 50/2 = 25 MHz, period = 40 ns
+
+   Timing diagram (negative-edge triggered, one division = 5 ns):
+
+   ```
+             0    10   20   30   40   50   60   70   80  ns
+             |    |    |    |    |    |    |    |    |
+   100 MHz   __--__--__--__--__--__--__--__--__--__--__--
+   CLK       (period 10 ns)
+
+   50 MHz    ____----____----____----____----____----____
+   Q1        (period 20 ns)
+
+   25 MHz    ________--------________--------________----
+   Q2        (period 40 ns)
+   ```
+
+   Points to note from the diagram:
+   - Q1 changes state at every falling edge of CLK, so one full Q1 cycle spans two CLK cycles.
+   - Q2 changes state at every falling edge of Q1, so one full Q2 cycle spans four CLK cycles.
+   - Every derived clock has an exact 50 percent duty cycle.
+   - Since the stages are cascaded (ripple), each output is delayed by one flip-flop propagation delay from the previous one.
 6. **What is the difference between latch and flip-flop?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
+
+   Answer: A latch and a flip-flop both store one bit, but they differ in how they are triggered.
+
+   | Point | Latch | Flip-flop |
+   |---|---|---|
+   | Triggering | Level triggered, active as long as enable is HIGH | Edge triggered, acts only at the rising or falling edge of the clock |
+   | Clock | Uses an enable signal, not a clock edge | Uses a clock edge |
+   | Transparency | Transparent: output follows input while enable is HIGH | Not transparent: output changes only at the edge |
+   | Building block | Basic memory element, built from gates | Built from two latches (master-slave) or an edge detector |
+   | Speed and power | Faster, fewer gates, less power | Slower, more gates, more power |
+   | Timing hazard | Prone to race-around and glitch propagation | Immune, output is sampled once per clock |
+   | Use | Asynchronous circuits, data buffering inside a cycle | Synchronous circuits, registers, counters |
+
+   In short: a latch is level triggered and transparent, a flip-flop is edge triggered and samples data only once per clock cycle.
 7. **There are different types of clocks available in the market. What type of clock will you use to reduce the cost of SGFL Company?** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
 
+
+   Answer: The cost of the clocking scheme in a digital system depends on the accuracy demanded, so the correct choice is the cheapest clock source that still meets the timing requirement of the application.
+
+   Clock options and their cost:
+
+   | Clock source | Accuracy | Relative cost | Suitable for |
+   |---|---|---|---|
+   | RC oscillator (internal to the microcontroller) | Poor, 1 to 5 percent drift | Lowest, no external part | Simple control, LED indication, relay timing |
+   | Ceramic resonator | Moderate, 0.5 percent | Low | General control and display logic |
+   | Crystal oscillator | High, 20 to 50 ppm | Medium | Serial communication, SCADA links, data logging |
+   | TCXO / OCXO (temperature or oven compensated) | Very high, under 1 ppm | Highest | Telemetry timestamping, metering, synchronisation |
+
+   Recommended approach for a gas field company such as SGFL:
+   - Use the microcontroller internal RC oscillator for non-critical local logic (indicator panels, valve interlocks, alarm latches), because it needs no external component at all and removes the crystal, two load capacitors and the board area they occupy.
+   - Use one crystal oscillator only on the boards that carry serial or Modbus communication and event timestamping, because a UART link fails if the clock drifts more than about 2 percent.
+   - Derive all other required frequencies from that single crystal using T flip-flop dividers or the on-chip PLL, instead of buying a separate oscillator for each block. One crystal plus divider logic is far cheaper than several oscillators.
+   - Lower the clock frequency wherever the process is slow. Since dynamic power is P = C.V^2.f, halving the clock halves the switching power and reduces the cost of the power supply and heat sinking.
+
+   Conclusion for cost reduction: one crystal oscillator as the master reference, internal RC oscillators for non-critical boards, and frequency division for everything else.
 8. **(ii) R-S Flip-flop এর সত্যস্য সারণি ও বৈশিষ্ট আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 959-960 (ET: N/A)]*
 
+
+   Answer: The R-S (Reset-Set) flip-flop is the most basic 1-bit memory element. It has two inputs, S (Set) and R (Reset), and two complementary outputs Q and Q'. It is built from two cross-coupled NOR gates (active HIGH inputs) or two cross-coupled NAND gates (active LOW inputs).
+
+   ```mermaid
+   flowchart LR
+     S[S input] --> N1[NOR 1]
+     R[R input] --> N2[NOR 2]
+     N1 -- Q --> OUT1[Q]
+     N2 -- Q bar --> OUT2[Q bar]
+     N1 --> N2
+     N2 --> N1
+   ```
+
+   Truth table (NOR based, active HIGH):
+
+   | S | R | Q(next) | Condition |
+   |---|---|---------|-----------|
+   | 0 | 0 | Q (no change) | Hold / memory state |
+   | 0 | 1 | 0 | Reset |
+   | 1 | 0 | 1 | Set |
+   | 1 | 1 | Invalid | Forbidden state |
+
+   Characteristic equation: Q(next) = S + R'Q, with the condition S.R = 0.
+
+   Characteristics:
+   - It stores one bit and holds it as long as power is applied, which makes it the basic cell of registers and counters.
+   - The hold state (S = 0, R = 0) is what gives the circuit memory: the cross-coupled feedback keeps the last output.
+   - S = 1 and R = 1 is forbidden, because both outputs go to 0 and Q, Q' are no longer complementary. When the inputs then return to 0-0 the final state cannot be predicted, which is called the race condition.
+   - It is asynchronous in its basic form. Adding a clock and two AND gates makes it a clocked (gated) S-R flip-flop, where the inputs act only when the clock is HIGH.
+   - The forbidden state is removed in the J-K flip-flop, where J = K = 1 is defined as toggle instead of invalid.
+   - Practical uses: switch debouncing, alarm latching, and as the master and slave cells of higher flip-flops.
 9. **MOD-6 বাইনারি কাউন্টার এর Block Diagram অংকন করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1039 (ET: DPI)]*
+
+
+   Answer: A MOD-6 counter counts 6 distinct states, from 000 to 101, and returns to 000 on the sixth clock pulse. The number of flip-flops needed is n where 2^n is greater than or equal to 6, so n = 3.
+
+   Design method: build a 3-bit asynchronous (ripple) counter with three T or J-K flip-flops, then detect the unwanted state 110 (decimal 6) with a NAND gate and use its output to clear all flip-flops back to 000.
+
+   Reset logic: the count 6 is Q2 Q1 Q0 = 110, so the clear signal is CLR = (Q2 . Q1)'. A NAND gate on Q2 and Q1 goes LOW at count 6 and drives the active-LOW CLEAR pins of all three flip-flops.
+
+   Block diagram:
+
+   ```mermaid
+   flowchart LR
+     CLK[Clock] --> FF0[FF0 J=K=1 Q0]
+     FF0 -- Q0 --> FF1[FF1 J=K=1 Q1]
+     FF1 -- Q1 --> FF2[FF2 J=K=1 Q2]
+     FF1 -- Q1 --> NAND[NAND gate]
+     FF2 -- Q2 --> NAND
+     NAND -- CLEAR active low --> FF0
+     NAND --> FF1
+     NAND --> FF2
+   ```
+
+   Count sequence:
+
+   | Clock pulse | Q2 | Q1 | Q0 | Decimal |
+   |---|---|---|---|---|
+   | 0 | 0 | 0 | 0 | 0 |
+   | 1 | 0 | 0 | 1 | 1 |
+   | 2 | 0 | 1 | 0 | 2 |
+   | 3 | 0 | 1 | 1 | 3 |
+   | 4 | 1 | 0 | 0 | 4 |
+   | 5 | 1 | 0 | 1 | 5 |
+   | 6 | 0 | 0 | 0 | back to 0 |
+
+   Note: the state 110 appears only for a few nanoseconds (the propagation delay of the NAND gate and the clear path) before the counter is forced to 000, so it is called a glitch state and does not count as a valid output.
 
 ## Logic Families (TTL vs CMOS) (5)
 
