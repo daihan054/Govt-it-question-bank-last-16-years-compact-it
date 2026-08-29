@@ -1,11 +1,11 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **2671** questions.
+Sorted by count, highest first. Total **2673** questions.
 
 ## IT questions
 
-Total: **2137** questions.
+Total: **2138** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -126,14 +126,14 @@ Total: **2137** questions.
 | | Data Flow Diagrams (DFD) | 2 |
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
-| **Algorithm** | **— all subcategories —** | **112** |
+| **Algorithm** | **— all subcategories —** | **113** |
 | | Sorting Algorithms & Complexity | 27 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 14 |
 | | Algorithm Analysis & Asymptotic Complexity | 12 |
 | | Searching Algorithms | 11 |
 | | Dynamic Programming & Greedy Algorithms | 7 |
-| | Graph Theory & Isomorphism | 6 |
+| | Graph Theory & Isomorphism | 7 |
 | | Greedy Algorithms (Fractional Knapsack) | 6 |
 | | Dynamic Programming | 5 |
 | | Graph Representation (Adjacency Matrix vs List) | 2 |
@@ -236,7 +236,7 @@ Total: **2137** questions.
 
 ## General Questions
 
-Total: **534** questions.
+Total: **535** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -245,9 +245,9 @@ Total: **534** questions.
 | | International Affairs | 70 |
 | | Everyday Science & Environment | 22 |
 | | Banking & ICT Abbreviations | 8 |
-| **Bangla** | **— all subcategories —** | **122** |
+| **Bangla** | **— all subcategories —** | **123** |
 | | বাংলা ব্যাকরণ ও সাহিত্য | 61 |
-| | Focus Writing | 24 |
+| | Focus Writing | 25 |
 | | Translation | 19 |
 | | পত্র লিখন | 7 |
 | | সারমর্ম / সারাংশ | 6 |

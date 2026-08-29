@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 122 questions
+**Table of Contents** — 6 subtopics · 123 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [বাংলা ব্যাকরণ ও সাহিত্য](#বাংলা-ব্যাকরণ-ও-সাহিত্য-61) | 61 |
-| 2 | [Focus Writing](#focus-writing-24) | 24 |
+| 2 | [Focus Writing](#focus-writing-25) | 25 |
 | 3 | [Translation](#translation-19) | 19 |
 | 4 | [পত্র লিখন](#পত্র-লিখন-7) | 7 |
 | 5 | [সারমর্ম / সারাংশ](#সারমর্ম--সারাংশ-6) | 6 |
@@ -155,7 +155,7 @@
 
 61. **৭. চক্রবাক কাব্যগ্রন্থ কার লেখা?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
-## Focus Writing (24)
+## Focus Writing (25)
 
 1. Focus Writing in Bangla: "বাংলাদেশের অর্থনীতিতে মোবাইল ব্যাংকিং: সম্ভাবনা, বাধা ও উত্তরণের উপায়" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
@@ -203,7 +203,9 @@
 
 23. **Bangla রচনা: সামাজিক মূল্যবোধ বৃদ্ধিতে দেশীয় সংস্কৃতি গুরুত্ব ব্যাখ্যা কর।** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
-24. **কোভিড-১৯ এর ক্ষতিকারক প্রভাব মোকাবেলায় তথ্য প্রযুক্তির প্রয়োগ ও ভূমিকার উপর একটি সংক্ষিপ্ত রচনা বাংলায় লিখুন।** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+24. **Focus Writing (বাংলা): বাংলা বন্ড** *[6 Banks & Financial Institutions Assistant Programmer 2021 (ET: N/A)]*
+
+25. **কোভিড-১৯ এর ক্ষতিকারক প্রভাব মোকাবেলায় তথ্য প্রযুক্তির প্রয়োগ ও ভূমিকার উপর একটি সংক্ষিপ্ত রচনা বাংলায় লিখুন।** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 ## Translation (19)
 

@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 112 questions
+**Table of Contents** — 14 subtopics · 113 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -9,7 +9,7 @@
 | 4 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-12) | 12 |
 | 5 | [Searching Algorithms](#searching-algorithms-11) | 11 |
 | 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms-7) | 7 |
-| 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-6) | 6 |
+| 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-7) | 7 |
 | 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
 | 9 | [Dynamic Programming](#dynamic-programming-5) | 5 |
 | 10 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
@@ -226,7 +226,7 @@ for i in N:
 
 7. **Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879-880 (ET: BUET)]*
 
-## Graph Theory & Isomorphism (6)
+## Graph Theory & Isomorphism (7)
 
 1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1419 (ET: E-Zone)]*
 
@@ -239,6 +239,12 @@ for i in N:
 5. **(c) What is a strongly connected graph?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
 
 6. **True False with explanation about Graph related (Two).** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
+
+7. **State whether the following are True or False:** *[6 Banks & Financial Institutions Assistant Programmer 2021 (ET: N/A)]*
+   a) Back edge in DAG
+   b) Extra edge in DAG
+   c) Strongly connected component
+   d) Unique path on different weight on graph
 
 ## Greedy Algorithms (Fractional Knapsack) (6)
 
