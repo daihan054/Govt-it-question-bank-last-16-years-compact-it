@@ -533,12 +533,34 @@
 (i) The man disturbed me and said “I am sorry _____ disturbing you”. (Use a preposition)
 (j) The baby is crying. (Make it passive)
 
+
+   Answer:
+   - (a) discussing — the pattern is see + object + present participle, so: Rangu Mia saw Alta Begum and Bedena Begum discussing a funny thing.
+   - (b) had met — a past tense clause with "since" takes the past perfect after it: It was a long gap since they had met each other.
+   - (c) He uttered something in his speech which was disappointing.
+   - (d) Why do you not like train journey as much as bus journey?
+   - (e) He is going to have his hair cut. (One does not cut one's own hair; the causative have + object + past participle is required.)
+   - (f) There is a girls' high school in my village. (Plural possessive "girls'", and "in" for a village.)
+   - (g) Give vent to (to express a strong feeling freely): She gave vent to her long-suppressed anger and left the room.
+   - (h) By leaps and bounds (very rapidly): The IT sector of Bangladesh is growing by leaps and bounds.
+   - (i) for — I am sorry for disturbing you.
+   - (j) "Cry" is used here as an intransitive verb with no object, so the sentence has no passive form. Only a transitive verb can be turned into the passive voice. If the sentence were "The baby is drinking milk", the passive would be "Milk is being drunk by the baby."
 2. **(d) Correct the sentence:** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 i. "He doesn't know anything about computers."
 ii. The data were collected and it were analyzed carefully.
 
+
+   Answer:
+   - (i) "He doesn't know anything about computers." — this sentence is already correct. A single negative with "anything" is right; the common error to avoid is the double negative "He doesn't know nothing about computers." A more formal alternative is: He knows nothing about computers.
+   - (ii) The data were collected and they were analysed carefully. — "Data" is the plural of "datum", so the pronoun referring to it must be "they", not "it".
 3. **Fill in the blank: The scientist looked _______ the microscope.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
+
+   Answer: through
+
+   The scientist looked through the microscope.
+
+   Note the difference: look at (to direct the eyes towards), look for (to search), look after (to take care of), look into (to investigate), and look through (to see by means of a lens or an opening).
 4. **Rewrite the following sentences using the instruction given in the brackets:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
  * (a) She explained the matter. [Correct the sentence]
  * (b) Between the mostly popular drinks are coffee and tea. [Correct the sentence]
@@ -551,6 +573,18 @@ ii. The data were collected and it were analyzed carefully.
  * (i) He said to me, "Please wait here till I return". [Turn it into indirect speech]
  * (ii) She did not listen to me. [Rewrite by using the idiom "turn a deaf ear"]
 
+
+   Answer:
+   - (a) The sentence "She explained the matter." is already correct. The error usually tested here is "She explained me the matter", which is wrong because "explain" cannot take an indirect object directly; it must be: She explained the matter to me.
+   - (b) Among the most popular drinks are coffee and tea. ("Between" is used for two, "among" for more than two; and the superlative is "most popular", not "mostly popular".)
+   - (c) cooking — I like cooking. ("to cook" is also acceptable after "like".)
+   - (d) write — He recommended that she write the letter. (After recommend, suggest, demand, insist and propose, the subjunctive takes the base form of the verb.)
+   - (e) with — He is endowed with talents.
+   - (f) in — She reached just in time. ("in time" means early enough; "on time" means punctually.)
+   - (g) I was made to do the work by him. (After "make" in the passive, the infinitive takes "to".)
+   - (h) People say that she is a spy.
+   - (i) He requested me to wait there till he returned.
+   - (ii) She turned a deaf ear to me.
 5. **Rewrite the following sentences and use the idiom as directed:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
  * (a) The cost of all these articles have risen. [Correct the sentence]
  * (b) The film is definitely worth to see. [Correct the sentence]
@@ -563,53 +597,317 @@ ii. The data were collected and it were analyzed carefully.
  * (i) Amzad said to me, "I shall be grateful if you help me." [Turn into indirect speech] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
  * (j) Make a sentence with the idiom: 'in respect of' *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+   Answer:
+   - (a) The cost of all these articles has risen. (The subject is "the cost", which is singular; "of all these articles" is only a modifying phrase.)
+   - (b) The film is definitely worth seeing. ("Worth" is followed by a gerund, never by an infinitive.)
+   - (c) with — Light alternates with darkness.
+   - (d) on — What he says is based on truth.
+   - (e) have known — I have known him for a long time. ("For a long time" with a present result takes the present perfect, and "know" is a stative verb, so the continuous is not used.)
+   - (f) When does he take his food normally? (An interrogative in the present indefinite takes does + base form.)
+   - (g) I was advised by the doctor to take complete rest.
+   - (h) We have achieved our goal.
+   - (i) Amzad told me that he would be grateful if I helped him.
+   - (j) In respect of (with regard to, concerning): The two candidates are equal in respect of academic qualification, but they differ widely in respect of experience.
 6. **what is the verb of habit?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 401 (ET: BUET)]*
 
+
+   Answer: The verb form of the noun "habit" is habituate (to accustom someone to something).
+
+   - Noun: habit
+   - Verb: habituate
+   - Adjective: habitual
+   - Adverb: habitually
+
+   Example: He habituated himself to rising before dawn.
+
+   Take care not to confuse it with "inhabit", which means to live in a place, and whose noun is "inhabitant".
 7. **Correct the sentence : He joined army** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+   Answer: He joined the army.
+
+   The definite article "the" is required before the names of the armed forces and other unique national bodies: the army, the navy, the air force, the police, the government.
+
+   Note also that "join" here does not take a preposition; "He joined in the army" would be wrong.
 8. **Write sentence with meaning from the following phrase and idioms: Break the ice, A pain in the neck, Fit as a fiddle, Burn bridges, So far so good** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
+
+   Answer:
+   - Break the ice — to say or do something that removes the initial awkwardness in a gathering. Sentence: The chairman began with a light joke to break the ice at the first meeting of the committee.
+   - A pain in the neck — a person or thing that is persistently annoying. Sentence: Filling in the same report every week is a real pain in the neck.
+   - Fit as a fiddle — in excellent health. Sentence: Although he is seventy-five, my grandfather is still as fit as a fiddle.
+   - Burn bridges — to destroy a relationship or an opportunity so that no return is possible. Sentence: Do not burn your bridges when you resign, because you may need that reference one day.
+   - So far so good — satisfactory up to the present moment. Sentence: We have completed the first two modules of the project and, so far so good, the client is pleased.
 9. **Change right sentence compund, intrrogative, exclamatory** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
+
+   Answer: Transformation of an assertive sentence into other forms follows fixed rules.
+
+   Simple to compound:
+   - Rule: expand the participle, phrase or infinitive into a finite clause and join with and, but, or, so.
+   - Simple: Being tired, he went to bed early.
+   - Compound: He was tired and so he went to bed early.
+
+   Compound to complex:
+   - Rule: turn one of the coordinate clauses into a subordinate clause with as, since, because, though, when.
+   - Compound: He was tired and so he went to bed early.
+   - Complex: Because he was tired, he went to bed early.
+
+   Assertive to interrogative:
+   - Rule: an affirmative assertive becomes a negative interrogative, and a negative assertive becomes an affirmative interrogative. The meaning stays the same.
+   - Assertive: Everybody wants to be happy.
+   - Interrogative: Who does not want to be happy?
+   - Assertive: He is not a fool.
+   - Interrogative: Is he a fool?
+
+   Assertive to exclamatory:
+   - Rule: begin with What a / What / How, place the subject and verb after it, and end with a note of exclamation.
+   - Assertive: It is a very beautiful garden.
+   - Exclamatory: What a beautiful garden it is!
+   - Assertive: The boy is very clever.
+   - Exclamatory: How clever the boy is!
+   - Assertive: I wish I were a bird.
+   - Exclamatory: Had I been a bird!
+
+   Assertive to imperative:
+   - Assertive: You should respect your teachers.
+   - Imperative: Respect your teachers.
 10. **Preposition: 2** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
 11. **Sentence correction: 2** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
 12. **English Transformation of Sentence (Voice change, Simple to complex, Superlative to comparative etc)** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 658 (ET: N/A)]*
 
+
+    Answer: Transformation of sentences means changing the form of a sentence without changing its meaning. The main types are given below with rules and examples.
+
+    Change of voice (active to passive):
+    - Rule: the object becomes the subject, the verb becomes be + past participle in the same tense, and the subject becomes the agent with "by".
+    - Active: The boy is eating a mango. Passive: A mango is being eaten by the boy.
+    - Active: They have finished the work. Passive: The work has been finished by them.
+    - Interrogative: Did you do the sum? Passive: Was the sum done by you?
+    - Imperative: Open the door. Passive: Let the door be opened.
+    - Only transitive verbs can be made passive.
+
+    Simple to complex:
+    - Rule: expand a participle, phrase or infinitive into a subordinate clause.
+    - Simple: In spite of his poverty, he is honest. Complex: Though he is poor, he is honest.
+    - Simple: I know his name. Complex: I know what his name is.
+
+    Complex to simple:
+    - Complex: As soon as he saw the police, he ran away. Simple: On seeing the police, he ran away.
+
+    Simple to compound:
+    - Simple: Besides being poor, he is lazy. Compound: He is poor and he is lazy as well.
+
+    Degree change (positive, comparative, superlative):
+    - Superlative: Dhaka is the biggest city in Bangladesh.
+    - Comparative: Dhaka is bigger than any other city in Bangladesh.
+    - Positive: No other city in Bangladesh is as big as Dhaka.
+    - Comparative: Rahim is taller than Karim.
+    - Positive: Karim is not as tall as Rahim.
+
+    Assertive, interrogative, exclamatory, imperative:
+    - Assertive: Everybody loves his motherland. Interrogative: Who does not love his motherland?
+    - Assertive: It is a very fine morning. Exclamatory: What a fine morning it is!
+    - Assertive: You should obey your parents. Imperative: Obey your parents.
+
+    Direct to indirect speech:
+    - Direct: He said to me, "I am ill." Indirect: He told me that he was ill.
+    - Direct: He said to me, "Where do you live?" Indirect: He asked me where I lived.
+    - Direct: He said to me, "Please help me." Indirect: He requested me to help him.
+
+    Affirmative to negative:
+    - Affirmative: He is a good man. Negative: He is not a bad man.
+    - Affirmative: Only Allah can help us. Negative: None but Allah can help us.
 13. **Right forms of verb.** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
+
+    Answer: The right form of the verb is decided by the tense marker, the subject, the auxiliary and the structure of the sentence. The main rules are given below with examples.
+
+    Rule 1 - a present indefinite verb takes s or es with a third person singular subject.
+    - He (go) to school every day. Answer: goes.
+
+    Rule 2 - words such as now, at present, look, listen indicate the present continuous.
+    - Listen, the baby (cry). Answer: is crying.
+
+    Rule 3 - since, for, already, just, yet, ever, never indicate the perfect tense.
+    - I (know) him for ten years. Answer: have known.
+
+    Rule 4 - a definite past time such as yesterday, ago, last night requires the past indefinite.
+    - He (come) here yesterday. Answer: came.
+
+    Rule 5 - when two past actions occur, the earlier one takes the past perfect.
+    - The train (leave) before we reached the station. Answer: had left.
+
+    Rule 6 - after had better, would better, rather than, let, make, see, hear the base form is used.
+    - You had better (go) home. Answer: go.
+
+    Rule 7 - lest is always followed by should + base form.
+    - Walk fast lest you (miss) the train. Answer: should miss.
+
+    Rule 8 - after it is time and it is high time, the past form is used.
+    - It is high time we (change) our habit. Answer: changed.
+
+    Rule 9 - after wish, as if and as though, "were" is used for all persons.
+    - I wish I (be) a bird. Answer: were.
+
+    Rule 10 - after recommend, suggest, propose, demand, insist and order, the base form is used.
+    - He recommended that she (write) the letter. Answer: write.
+
+    Rule 11 - the subject decides the number of the verb; a phrase between subject and verb does not.
+    - The cost of these articles (have) risen. Answer: has.
+
+    Rule 12 - "the + adjective" denotes a class and takes a plural verb.
+    - The poor (be) born to suffer. Answer: are.
+
+    Rule 13 - if the subject receives the action, the passive form is used.
+    - The rose (call) the queen of flowers. Answer: is called.
+
+    Rule 14 - in the first conditional, "if + present indefinite" is followed by "shall or will + base form"; in the second conditional, "if + past indefinite" is followed by "would + base form".
+    - If it rains, we (stay) at home. Answer: shall stay.
+    - If I were rich, I (help) the poor. Answer: would help.
 14. **Use the correct form of verbs within brackets: (a) Medha walks fast lest she (be) late. (b) Why you (not attend) the meeting yesterday? (c) You had better (to speak) the truth. (d) The poor (to be) born to suffer. (e) The rose (call) the queen of all flowers.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
 
+
+    Answer:
+    - (a) should be — Medha walks fast lest she should be late. ("Lest" is always followed by should + base form, and never by "not", because "lest" already carries the negative.)
+    - (b) did you not attend — Why did you not attend the meeting yesterday? ("Yesterday" fixes the tense as past indefinite, and the interrogative takes did + base form.)
+    - (c) speak — You had better speak the truth. ("Had better" is followed by the base form without "to".)
+    - (d) are — The poor are born to suffer. ("The + adjective" denotes a class of people and takes a plural verb.)
+    - (e) is called — The rose is called the queen of all flowers. (The subject receives the action, so the passive is required.)
 15. **Correct the following sentence: (a) He is very popular among the villagers. (b) My father was died in 1995 (c) Give me a hot cup of tea. (d) Rifat will visit us recently. (e) My best friend had left this town last Sunday.** *[Software Assistant Programmer 13.10.2022 compact it 712 (ET: N/A)]*
 
+
+    Answer:
+    - (a) He is very popular with the villagers. ("Popular with" is the correct collocation when speaking of the people who like someone.)
+    - (b) My father died in 1995. ("Die" is intransitive and cannot be used in the passive; "was died" is a common error.)
+    - (c) Give me a cup of hot tea. (It is the tea that is hot, not the cup, so the adjective must stand before "tea".)
+    - (d) Rifat will visit us soon. ("Recently" refers to the near past and cannot be used with the future tense.)
+    - (e) My best friend left this town last Sunday. ("Last Sunday" is a definite past time, which takes the past indefinite, not the past perfect.)
 16. **Fill in the gap with appropriate preposition: A Citizen enjoys a lot of rights in times of peace. But sometimes he has to give (a) _____ some of his rights and privileges voluntarily in order (b) _____ keep the independence of his country secure. When his country is (c) _____ war his only duty is to switch (d) _____ all his efforts to the defense of his country.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
+
+    Answer:
+    - (a) up — he has to give up some of his rights
+    - (b) to — in order to keep the independence of his country secure
+    - (c) at — when his country is at war
+    - (d) over — his only duty is to switch over all his efforts to the defence of his country
+
+    Complete passage: A citizen enjoys a lot of rights in times of peace. But sometimes he has to give up some of his rights and privileges voluntarily in order to keep the independence of his country secure. When his country is at war his only duty is to switch over all his efforts to the defence of his country.
 17. **I had a talk with him. Write the name of 'parts of speech' of the underlined word.** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+    Answer: In the sentence "I had a talk with him", the word "talk" is a noun.
+
+    Reason: it is preceded by the article "a" and stands as the object of the verb "had". The verb of the sentence is "had", not "talk".
+
+    Note that "talk" can also be a verb, as in "I talked to him yesterday". The part of speech is decided by the function of the word in the sentence, not by the word itself.
 18. **Fill in the blanks with appropriate phrase; “He refused to attend the meeting _____ his illness.** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+    Answer: on account of
+
+    He refused to attend the meeting on account of his illness.
+
+    Other phrases that fit equally well: because of, owing to, due to, in view of.
+
+    Note: "because of", "owing to" and "on account of" are all followed by a noun or a noun phrase, whereas "because" is followed by a full clause, as in "He refused to attend the meeting because he was ill."
 19. **Fill in the blank: I count _____ your help.** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+    Answer: on
+
+    I count on your help.
+
+    "Count on" means to rely on or depend on. Related forms: count in (to include), count out (to exclude), count up (to add together).
 20. **Write the passive voice of “Did you do the sum?”** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+    Answer: Was the sum done by you?
+
+    Steps followed:
+    - The sentence is an interrogative in the past indefinite: Did you do the sum?
+    - The object "the sum" becomes the subject.
+    - The auxiliary "did" plus the past participle "done" gives "was done", because "the sum" is singular.
+    - The subject "you" becomes "by you".
+    - The question form keeps the auxiliary before the subject: Was the sum done by you?
 21. **Filling the gaps with appropriate word: a) I started _____ Chattogram. b) She has no ability _____ painting. c) Every member of my _____ family d) They as well as he _____ wrong. e) Time and tide _____ for none.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
+
+    Answer:
+    - (a) for — I started for Chattogram. ("Start for" a destination; "start from" a place of departure.)
+    - (b) in — She has no ability in painting.
+    - (c) The gap in this sub-question is incomplete as printed. The grammatical point being tested is that "every member" is singular, so the verb must be singular: Every member of my family is present. <!-- verify -->
+    - (d) are — They as well as he are wrong. (With "as well as", the verb agrees with the first subject, which is "They".)
+    - (e) wait — Time and tide wait for none. (This is a fixed proverb, and the two subjects joined by "and" take a plural verb.)
 22. **২. Which one is collective noun? (a) Boy (b) Wood (c) Herd (d) Infancy** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
+
+    Answer: (c) Herd
+
+    A collective noun is the name of a group of persons, animals or things taken as one whole. "Herd" is the group name for cattle, so it is the collective noun here.
+
+    The other options:
+    - Boy — common noun
+    - Wood — material noun
+    - Infancy — abstract noun
+
+    Other common collective nouns: army, crowd, jury, team, flock (of sheep or birds), swarm (of bees), fleet (of ships), bunch (of keys).
 23. **৫. Fill in the Gap: (a) I am sorry _____ the mistake. (b) _____ his being innocent of the crime, the judge sentenced him to one year imprison.** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+
+    Answer:
+    - (a) for — I am sorry for the mistake.
+    - (b) In spite of — In spite of his being innocent of the crime, the judge sentenced him to one year's imprisonment.
+
+    "Despite" is equally correct in (b). Note that both "in spite of" and "despite" are followed by a noun or a gerund, never by a clause; a clause requires "although" or "though".
 24. **৬. Fill in the Gap with appropriate articles: (a) Football is (a) _____ popular game in our country. (b) Money cannot buy (a) _____ happiness.** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+
+    Answer:
+    - (a) a — Football is a popular game in our country. (Singular countable noun mentioned for the first time.)
+    - (b) no article — Money cannot buy happiness. (An abstract noun used in a general sense takes no article.)
 25. **২. How did you do it? (Change the Voice)** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+
+    Answer: How was it done by you?
+
+    Steps followed:
+    - Active: How did you do it?
+    - The object "it" becomes the subject.
+    - "did do" becomes "was done", singular to match "it".
+    - The subject "you" becomes "by you".
+    - The interrogative word "How" stays at the beginning and the auxiliary comes before the subject.
 26. **৪. Which sentence is correct?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
 27. **৭. I saw _____ one eyed man.** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+
+    Answer: a
+
+    I saw a one-eyed man.
+
+    Reason: the choice between "a" and "an" depends on the sound with which the next word begins, not on the spelling. "One" begins with the consonant sound /w/, as in "won", so it takes "a".
+
+    Similar cases: a university, a European country, a useful book, a one-taka coin; but an hour, an honest man, an MP, an MBBS doctor, where the first sound is a vowel.
 28. **৮. What's the time _____ your watch?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+
+    Answer: by
+
+    What's the time by your watch?
+
+    The preposition "by" is used for the source of a measurement or reading: by my watch, by the clock, by this scale.
 29. **১০. Since we grow the locally, we need not to _____ it.** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+
+    Answer: import
+
+    Since we grow it locally, we need not import it.
+
+    "Need not" is a modal auxiliary, so it is followed by the base form of the verb without "to". The sense of the sentence requires the opposite of growing it locally, which is buying it from abroad, that is importing it.
 
 ## Translation (18)
 
