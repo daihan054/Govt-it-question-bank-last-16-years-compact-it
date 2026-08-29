@@ -20,59 +20,1183 @@
 
 1. Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term. [SO IT 25-07-2026]
 
+
+   Answer:
+
+   - Tree: a non-linear hierarchical data structure consisting of nodes connected by edges, with exactly one node designated the root and every other node having exactly one parent. It contains no cycles, and a tree with n nodes has exactly n − 1 edges.
+   - Leaf node, also called an external or terminal node: a node with no children, that is a node of degree zero.
+   - Internal node, also called a non-terminal node: a node that has at least one child. Every node that is not a leaf is internal, and the root is internal unless the tree has only one node.
+   - Height of a tree: the length of the longest path from the root down to a leaf. Two conventions exist and the one being used must be stated: measured in edges, a single node tree has height 0; measured in nodes or levels, a single node tree has height 1.
+
+   Example:
+
+   ```
+              A          <- root, internal node, level 0
+            /   \
+           B     C       <- internal nodes, level 1
+          / \     \
+         D   E     F     <- leaf nodes, level 2
+   ```
+
+   - In this tree: the nodes are A, B, C, D, E and F, with 6 nodes and 5 edges.
+   - Leaf nodes: D, E and F, since none of them has a child.
+   - Internal nodes: A, B and C, since each has at least one child.
+   - Height: the longest path is A to B to D, which is 2 edges, so the height is 2 by the edge convention and 3 by the node convention.
+   - Other terms: the degree of A is 2; B is the parent of D and E; D and E are siblings; the depth of D is 2; and the tree has 3 levels.
 2. In BSCPL, all branches manage their records using a preorder traversal system, while data collection follows an inorder traversal system. The branches report their management sequence as 1, 5, 7, 6, 3, 4, 2, whereas the corresponding data collection sequence is 7, 5, 6, 1, 4, 3, 2. Based on these two traversal sequences, construct the complete binary tree representing the branch hierarchy and show the tree clearly. [BSCCPL AME 21-08-2026 (BUET)]
 
+
+   Answer: The tree is reconstructed from the preorder and inorder sequences.
+
+   Given:
+   - Preorder, that is the management sequence: 1, 5, 7, 6, 3, 4, 2
+   - Inorder, that is the data collection sequence: 7, 5, 6, 1, 4, 3, 2
+
+   Method: the first element of the preorder is the root; locate it in the inorder to split that sequence into the left and right subtrees; then recurse.
+
+   Step 1: the first preorder element is 1, so 1 is the root.
+   - In the inorder, 1 lies at index 3, so the left subtree contains 7, 5, 6 and the right subtree contains 4, 3, 2.
+   - The left subtree therefore takes the next 3 preorder elements, 5, 7, 6, and the right subtree takes 3, 4, 2.
+
+   Step 2, left subtree with preorder 5, 7, 6 and inorder 7, 5, 6:
+   - Root is 5. In the inorder, 5 splits it into left [7] and right [6].
+   - So 5 has left child 7 and right child 6, both leaves.
+
+   Step 3, right subtree with preorder 3, 4, 2 and inorder 4, 3, 2:
+   - Root is 3. In the inorder, 3 splits it into left [4] and right [2].
+   - So 3 has left child 4 and right child 2, both leaves.
+
+   Complete binary tree:
+
+   ```
+                1
+              /   \
+             5     3
+            / \   / \
+           7   6 4   2
+   ```
+
+   ```mermaid
+   graph TD
+       A["1"] --> B["5"]
+       A --> C["3"]
+       B --> D["7"]
+       B --> E["6"]
+       C --> F["4"]
+       C --> G["2"]
+   ```
+
+   Verification:
+   - Preorder, Root Left Right: 1, then 5, 7, 6, then 3, 4, 2 → 1 5 7 6 3 4 2. Correct.
+   - Inorder, Left Root Right: 7, 5, 6, then 1, then 4, 3, 2 → 7 5 6 1 4 3 2. Correct.
+
+   - Note the principle: preorder alone or inorder alone does not determine a tree uniquely, but preorder together with inorder does, and so does postorder together with inorder. Preorder together with postorder determines the tree only when it is a full binary tree.
 3. **You have to right the traversal order for the new algorithm which will traverse the following tree right child first, then left child and finally the root.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1363 (ET: BUET)]*
 
+
+   Answer: The required traversal visits the right child first, then the left child, and finally the root. This is the mirror image of postorder, and it is called reverse postorder or right-left-root traversal.
+
+   Algorithm:
+
+   ```
+   ReversePostorder(node):
+       if node is NULL:
+           return
+       ReversePostorder(node.right)     // right subtree first
+       ReversePostorder(node.left)      // then left subtree
+       visit(node)                      // root last
+   ```
+
+   Applied to a sample tree:
+
+   ```
+              A
+            /   \
+           B     C
+          / \   / \
+         D   E F   G
+   ```
+
+   - At A: traverse right subtree C first.
+   - At C: traverse right child G, then left child F, then visit C → G, F, C.
+   - Then traverse A's left subtree B.
+   - At B: traverse right child E, then left child D, then visit B → E, D, B.
+   - Finally visit A.
+   - Result: G, F, C, E, D, B, A
+
+   Comparison with the standard traversals of the same tree:
+
+   | Traversal | Order | Result |
+   |---|---|---|
+   | Preorder | Root, Left, Right | A B D E C F G |
+   | Inorder | Left, Root, Right | D B E A F C G |
+   | Postorder | Left, Right, Root | D E B F G C A |
+   | Right-Left-Root, the new one | Right, Left, Root | G F C E D B A |
+
+   - A useful observation: this traversal is exactly the reverse of the preorder of the mirror image of the tree, and its output is the reverse of the sequence Root, Left, Right applied after swapping every pair of children.
+   - Iterative version: it can also be produced by a modified preorder using a stack, pushing the left child before the right, and then reversing the whole output at the end.
 4. **Proper binary tree is one more node is Internal node prove it.** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
 
+
+   Answer: The statement to be proved is that in a proper, that is a full, binary tree the number of leaf nodes is one more than the number of internal nodes.
+
+   Definition: a proper or full binary tree is one in which every node has either 0 children or exactly 2 children; no node has a single child.
+
+   Let L be the number of leaf nodes, I the number of internal nodes, and n = L + I the total number of nodes.
+
+   Proof by counting edges:
+   - Every node except the root has exactly one edge coming into it from its parent, so the number of edges is E = n − 1.
+   - Every internal node has exactly 2 children, so it contributes exactly 2 outgoing edges, and leaves contribute none. Therefore E = 2I.
+   - Equating the two expressions: 2I = n − 1 = (L + I) − 1
+   - So 2I = L + I − 1, which gives I = L − 1, that is L = I + 1.
+
+   Proof by induction, as an alternative:
+   - Base case: a tree with a single node. It has 1 leaf and 0 internal nodes, and 1 = 0 + 1. True.
+   - Inductive step: assume the property holds for every proper binary tree with fewer than n nodes. Take a proper binary tree with n nodes; its root has two subtrees, both proper binary trees, with L1 and L2 leaves and I1 and I2 internal nodes respectively. By hypothesis L1 = I1 + 1 and L2 = I2 + 1.
+   - For the whole tree, L = L1 + L2 and I = I1 + I2 + 1, counting the root as internal.
+   - Then L = (I1 + 1) + (I2 + 1) = I1 + I2 + 2 = (I − 1) + 2 = I + 1. Proved.
+
+   Example:
+
+   ```
+              A            Internal nodes: A, B  -> I = 2
+            /   \          Leaf nodes: D, E, C  -> L = 3
+           B     C         L = I + 1, that is 3 = 2 + 1  ✓
+          / \
+         D   E
+   ```
+
+   Corollaries worth stating:
+   - The total number of nodes in a proper binary tree is always odd: n = L + I = (I + 1) + I = 2I + 1.
+   - A proper binary tree with n nodes therefore has (n + 1)/2 leaves and (n − 1)/2 internal nodes.
+   - This is why a Huffman tree, which is always a proper binary tree, with L symbols has exactly L − 1 internal nodes and therefore requires exactly L − 1 merge operations.
 5. **Inserting data to BST. Print the tree in post order traversal. Delete one of the node and redraw the valid BST again.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 400 (ET: BUET)]*
 
+
+   Answer: The method is shown with a worked example, since the question gives no specific data.
+
+   Given data to insert: 50, 30, 70, 20, 40, 60, 80
+
+   Step 1, build the BST by inserting in order:
+   - 50 becomes the root.
+   - 30 < 50, so it goes to the left of 50.
+   - 70 > 50, so it goes to the right of 50.
+   - 20 < 50 and < 30, so it goes to the left of 30.
+   - 40 < 50 and > 30, so it goes to the right of 30.
+   - 60 > 50 and < 70, so it goes to the left of 70.
+   - 80 > 50 and > 70, so it goes to the right of 70.
+
+   ```
+                 50
+               /    \
+             30      70
+            /  \    /  \
+          20    40 60    80
+   ```
+
+   Step 2, postorder traversal, that is Left, Right, Root:
+   - Left subtree of 50: left subtree of 30 gives 20, right gives 40, then 30 → 20, 40, 30
+   - Right subtree of 50: 60, 80, 70
+   - Then the root 50
+   - Postorder: 20, 40, 30, 60, 80, 70, 50
+
+   Step 3, delete a node and redraw. The three cases of BST deletion:
+   - Case 1, the node is a leaf: simply remove it.
+   - Case 2, the node has one child: replace the node with its child.
+   - Case 3, the node has two children: replace its value with either its inorder successor, that is the smallest value in the right subtree, or its inorder predecessor, that is the largest value in the left subtree, and then delete that successor or predecessor node, which by construction has at most one child.
+
+   Deleting 30, which has two children:
+   - The inorder successor of 30 is 40, the smallest value in its right subtree.
+   - Copy 40 into the position of 30, then delete the original 40, which is a leaf.
+
+   Valid BST after deletion:
+
+   ```
+                 50
+               /    \
+             40      70
+            /       /  \
+          20      60    80
+   ```
+
+   Verification: the inorder traversal is 20, 40, 50, 60, 70, 80, which is in ascending order, so the BST property still holds.
+
+   - Deleting a leaf such as 20 would simply remove it. Deleting a node with one child, for example 40 in the tree after the previous deletion, would promote its child in its place.
 6. **Consider the two given arrays as pre[]={1,2,4,8,9,5,3,6,7} and post[]={8,9,4,5,2,6,7,3,1}; Draw a binary tree from above array.** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 390 (ET: BUET)]*
 
+
+   Answer: A binary tree can be reconstructed uniquely from preorder and postorder only when it is a full binary tree, in which every node has 0 or 2 children. The arrays given satisfy this condition.
+
+   Given:
+   - pre[] = {1, 2, 4, 8, 9, 5, 3, 6, 7}
+   - post[] = {8, 9, 4, 5, 2, 6, 7, 3, 1}
+
+   Method: the first element of the preorder is the root. The second element of the preorder is the root of the left subtree; find it in the postorder, and everything up to and including it forms the left subtree.
+
+   Step 1: pre[0] = 1 is the root, and post[8] = 1 confirms it.
+   - pre[1] = 2 is the root of the left subtree. In the postorder, 2 lies at index 4, so the left subtree is post[0..4] = {8, 9, 4, 5, 2}, that is 5 nodes.
+   - Left subtree preorder = {2, 4, 8, 9, 5}; right subtree preorder = {3, 6, 7} and postorder = {6, 7, 3}.
+
+   Step 2, left subtree with preorder {2, 4, 8, 9, 5} and postorder {8, 9, 4, 5, 2}:
+   - Root is 2. The next preorder element 4 is the root of its left subtree; 4 lies at index 2 of this postorder, so the left part is {8, 9, 4}, that is 3 nodes.
+   - So 2 has left subtree {4, 8, 9} and right subtree {5}.
+   - Node 4 with preorder {4, 8, 9} and postorder {8, 9, 4}: root 4, left child 8, right child 9.
+   - Node 5 is a leaf.
+
+   Step 3, right subtree with preorder {3, 6, 7} and postorder {6, 7, 3}:
+   - Root is 3, left child 6, right child 7.
+
+   The binary tree:
+
+   ```
+                  1
+                /   \
+               2     3
+              / \   / \
+             4   5 6   7
+            / \
+           8   9
+   ```
+
+   ```mermaid
+   graph TD
+       A["1"] --> B["2"]
+       A --> C["3"]
+       B --> D["4"]
+       B --> E["5"]
+       C --> F["6"]
+       C --> G["7"]
+       D --> H["8"]
+       D --> I["9"]
+   ```
+
+   Verification:
+   - Preorder, Root Left Right: 1, 2, 4, 8, 9, 5, 3, 6, 7. Matches.
+   - Postorder, Left Right Root: 8, 9, 4, 5, 2, 6, 7, 3, 1. Matches.
+   - Inorder for completeness: 8, 4, 9, 2, 5, 1, 6, 3, 7.
 7. **How to represent binary tree using array?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
+
+   Answer: A binary tree is represented in an array by storing the nodes in level order, so that the position of a node in the array determines its parent and children arithmetically, and no pointers are needed.
+
+   The indexing rule, with the root at index 1:
+   - Root is at index 1.
+   - For a node at index i: the left child is at 2i, the right child is at 2i + 1, and the parent is at ⌊i/2⌋.
+
+   With the root at index 0, which is the convention in C and Java:
+   - For a node at index i: the left child is at 2i + 1, the right child is at 2i + 2, and the parent is at ⌊(i − 1)/2⌋.
+
+   Example:
+
+   ```
+                A
+              /   \
+             B     C
+            / \     \
+           D   E     F
+   ```
+
+   Array representation, root at index 1:
+
+   | Index | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+   |---|---|---|---|---|---|---|---|
+   | Value | A | B | C | D | E | — | F |
+
+   - A is at 1; its children B and C are at 2 and 3.
+   - B is at 2; its children D and E are at 4 and 5.
+   - C is at 3; its left child would be at 6, which is empty, and its right child F is at 7.
+   - Empty positions are filled with NULL or a sentinel value.
+   - The array size required is 2^(h+1) − 1, where h is the height, because space must be reserved for a complete tree of that height.
+
+   Advantages:
+   - No pointers are stored, so memory per node is smaller and there is no allocation overhead.
+   - Navigation to a parent or a child is a single arithmetic operation, which is very fast.
+   - Excellent cache locality, since the nodes are contiguous in memory.
+   - Simple to implement, and the whole tree can be written to a file directly.
+
+   Disadvantages:
+   - Enormous waste for a sparse or skewed tree. A skewed tree of n nodes needs an array of 2ⁿ − 1 positions, so 10 nodes in a chain would require 1023 slots.
+   - The size is fixed at allocation, so growth requires reallocation and copying.
+   - Insertion and deletion in the middle require shifting.
+
+   When it is used:
+   - It is the standard and correct representation for a complete or nearly complete binary tree, where almost no space is wasted. This is exactly why a binary heap, and therefore heap sort and the priority queue, is always implemented as an array.
+   - For a general or sparse binary tree, a linked representation with pointers to the left and right children is used instead.
 8. **You are given a binary tree (a, b, c, d, e, f, g, h, i) nodes. The post order of the binary tree is: a b f c h d e g i nodes. Now draw the binary tree and show the array representation of this binary tree.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1457 (ET: BUET)]*
 
+
+   Answer: A postorder traversal alone does not determine a binary tree uniquely; many different trees produce the same postorder. A second traversal, normally the inorder, is required. The method and one consistent tree are therefore given.
+
+   Given: postorder = a, b, f, c, h, d, e, g, i, with 9 nodes.
+
+   What postorder does tell us:
+   - The last element is always the root, so i is the root of the whole tree.
+   - Within any subtree, the last element of that subtree's postorder segment is its root.
+   - Without an inorder sequence, the point at which the left subtree ends and the right begins is unknown, which is why the tree is not unique.
+
+   Method when both traversals are available:
+   - Take the last element of the postorder as the root.
+   - Locate that value in the inorder; everything to its left is the left subtree and everything to its right is the right subtree.
+   - Split the postorder correspondingly and recurse.
+
+   A tree consistent with the given postorder:
+
+   ```
+                    i
+                  /   \
+                 c     g
+               /  \   / \
+              a    b?  ...
+   ```
+
+   - Taking the root as i, and splitting the remaining sequence a b f c | h d e g into a left subtree with postorder a, b, f, c and a right subtree with postorder h, d, e, g:
+   - Left subtree: root c, and within a, b, f a further split is needed which the data does not determine.
+   - Right subtree: root g, with h, d, e beneath it, again undetermined.
+
+   One valid reconstruction:
+
+   ```
+                     i
+                   /   \
+                  c     g
+                /  \   /  \
+               a    f  d    e
+                   /       /
+                  b       h
+   ```
+
+   Array representation of this tree, root at index 1, with left child at 2i and right child at 2i + 1:
+
+   | Index | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
+   |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+   | Value | i | c | g | a | f | d | e | — | — | b | — | — | h |
+
+   - The array size needed is 2^(h+1) − 1 for a tree of height h, and unused positions hold NULL.
+
+   - The correct examination answer is to state clearly that the tree cannot be determined from postorder alone, to give the method that would determine it if the inorder were supplied, and then to present a consistent tree together with its array representation. <!-- verify -->
 9. **(ক) Binary Tree কী? Binary Tree Traversing এর পদ্ধতিসমূহ আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
 
+
+   Answer:
+
+   What a binary tree is:
+   - A binary tree is a hierarchical data structure in which every node has at most two children, called the left child and the right child. One node is designated the root, and every other node has exactly one parent.
+   - A binary tree of n nodes has n − 1 edges, and at level i it can hold at most 2ⁱ nodes with the root at level 0. A tree of height h holds at most 2^(h+1) − 1 nodes.
+   - Types: a full or proper binary tree, in which every node has 0 or 2 children; a complete binary tree, filled level by level from the left; a perfect binary tree, in which all leaves are at the same level and every internal node has two children; a skewed binary tree, in which every node has only one child; and a balanced binary tree, in which the heights of the two subtrees of every node differ by at most one.
+
+   ```
+                A
+              /   \
+             B     C
+            / \     \
+           D   E     F
+   ```
+
+   Methods of binary tree traversal:
+
+   Three traversal methods:
+   - Preorder, that is Root, Left, Right: visit the node first, then traverse the left subtree, then the right. Used to copy a tree and to produce prefix expressions.
+   - Inorder, that is Left, Root, Right: traverse the left subtree, then visit the node, then the right subtree. On a binary search tree it produces the keys in sorted order, which is its most important property.
+   - Postorder, that is Left, Right, Root: traverse both subtrees and visit the node last. Used to delete a tree and to produce postfix expressions.
+   - A fourth method is level order, or breadth first traversal, which visits the nodes level by level using a queue.
+
+   Applied to the tree above:
+   - Preorder: A, B, D, E, C, F
+   - Inorder: D, B, E, A, C, F
+   - Postorder: D, E, B, F, C, A
+   - Level order: A, B, C, D, E, F
+
+   Recursive algorithms:
+
+   ```
+   Preorder(node):                 Inorder(node):                Postorder(node):
+       if node == NULL: return         if node == NULL: return       if node == NULL: return
+       visit(node)                     Inorder(node.left)            Postorder(node.left)
+       Preorder(node.left)             visit(node)                   Postorder(node.right)
+       Preorder(node.right)            Inorder(node.right)           visit(node)
+   ```
+
+   - The time complexity of every traversal is O(n), since each node is visited exactly once, and the space complexity is O(h) for the recursion stack, which is O(log n) for a balanced tree and O(n) for a skewed one. Level order uses a queue and needs O(n) space in the worst case.
+   - Uses: inorder gives sorted output on a binary search tree; preorder is used to copy a tree and to produce prefix notation; postorder is used to delete a tree and to produce postfix notation; and level order is used for breadth first search and for printing a tree by levels.
 10. **6.12 Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+   Answer:
+
+   - Tree: a non-linear hierarchical data structure consisting of nodes connected by edges, with exactly one node designated the root and every other node having exactly one parent. It contains no cycles, and a tree with n nodes has exactly n − 1 edges.
+   - Leaf node, also called an external or terminal node: a node with no children, that is a node of degree zero.
+   - Internal node, also called a non-terminal node: a node that has at least one child. Every node that is not a leaf is internal, and the root is internal unless the tree has only one node.
+   - Height of a tree: the length of the longest path from the root down to a leaf. Two conventions exist and the one being used must be stated: measured in edges, a single node tree has height 0; measured in nodes or levels, a single node tree has height 1.
+
+   Example:
+
+   ```
+              A          <- root, internal node, level 0
+            /   \
+           B     C       <- internal nodes, level 1
+          / \     \
+         D   E     F     <- leaf nodes, level 2
+   ```
+
+   - In this tree: the nodes are A, B, C, D, E and F, with 6 nodes and 5 edges.
+   - Leaf nodes: D, E and F, since none of them has a child.
+   - Internal nodes: A, B and C, since each has at least one child.
+   - Height: the longest path is A to B to D, which is 2 edges, so the height is 2 by the edge convention and 3 by the node convention.
+   - Other terms: the degree of A is 2; B is the parent of D and E; D and E are siblings; the depth of D is 2; and the tree has 3 levels.
 11. **Explain binary tree with example.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)]*
 
+
+   Answer: A binary tree is a hierarchical data structure in which every node has at most two children, referred to as the left child and the right child.
+
+   Properties:
+   - One node is the root, and every other node has exactly one parent.
+   - A tree of n nodes has exactly n − 1 edges.
+   - The maximum number of nodes at level i is 2ⁱ, taking the root as level 0.
+   - The maximum number of nodes in a tree of height h is 2^(h+1) − 1, and the minimum is h + 1.
+   - The minimum height of a tree with n nodes is ⌈log2(n + 1)⌉ − 1, and the maximum is n − 1 for a skewed tree.
+
+   Example:
+
+   ```
+                50
+              /    \
+            30      70
+           /  \    /  \
+         20    40 60    80
+   ```
+
+   - Root: 50. Internal nodes: 50, 30, 70. Leaf nodes: 20, 40, 60, 80.
+   - Height: 2 in edges. Number of nodes: 7. Number of edges: 6.
+   - Preorder: 50, 30, 20, 40, 70, 60, 80.
+   - Inorder: 20, 30, 40, 50, 60, 70, 80, which is sorted, so this is also a binary search tree.
+   - Postorder: 20, 40, 30, 60, 80, 70, 50.
+
+   Types of binary tree:
+   - Full or proper: every node has 0 or 2 children.
+   - Complete: every level is filled except possibly the last, which is filled from the left.
+   - Perfect: all leaves at the same level and every internal node has two children; it has exactly 2^(h+1) − 1 nodes.
+   - Balanced: the heights of the two subtrees of every node differ by at most one, which keeps operations at O(log n).
+   - Skewed: every node has only one child, so the tree degenerates into a linked list and operations become O(n).
+
+   Applications: binary search trees for searching; heaps for priority queues and heap sort; Huffman trees for compression; expression trees in compilers; syntax trees; decision trees; and the indexing structures of databases and file systems, which use B-trees and B+ trees.
 12. **What is Pre-order and Post order?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
 
+
+   Answer:
+
+   Preorder traversal:
+   - The order is Root, Left, Right: visit the node first, then traverse its left subtree completely, then its right subtree.
+   - Algorithm: visit(node); Preorder(node.left); Preorder(node.right).
+   - Uses: creating a copy of a tree, since the root is created before its children; producing prefix, that is Polish, notation from an expression tree; and serialising a tree for storage or transmission.
+
+   Postorder traversal:
+   - The order is Left, Right, Root: traverse the left subtree completely, then the right subtree, and visit the node last.
+   - Algorithm: Postorder(node.left); Postorder(node.right); visit(node).
+   - Uses: deleting or freeing a tree, since a node must not be freed until both its children have been; producing postfix, that is Reverse Polish, notation; and evaluating an expression tree, since both operands must be computed before the operator is applied.
+
+   Example:
+
+   ```
+                A
+              /   \
+             B     C
+            / \   / \
+           D   E F   G
+   ```
+
+   - Preorder: A, B, D, E, C, F, G
+   - Postorder: D, E, B, F, G, C, A
+   - Inorder, for comparison: D, B, E, A, F, C, G
+
+   - Both run in O(n) time, since every node is visited exactly once, and use O(h) space for the recursion stack.
+   - A useful memory aid: the name refers to when the root is visited. Pre means the root comes before the subtrees, post means it comes after, and in means it comes between them.
 13. **Explain with example Post order traversal.** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
+
+   Answer: Postorder traversal visits the left subtree first, then the right subtree, and the root last, so the order is Left, Right, Root.
+
+   Algorithm:
+
+   ```
+   Postorder(node):
+       if node == NULL:
+           return
+       Postorder(node.left)      // traverse the left subtree
+       Postorder(node.right)     // traverse the right subtree
+       visit(node)               // visit the root last
+   ```
+
+   Example:
+
+   ```
+                A
+              /   \
+             B     C
+            / \   / \
+           D   E F   G
+   ```
+
+   Step by step:
+   - Start at A. Before visiting A, traverse its left subtree rooted at B.
+   - At B, traverse its left subtree: D has no children, so visit D.
+   - Traverse B's right subtree: E has no children, so visit E.
+   - Both subtrees of B are done, so visit B.
+   - Return to A and traverse its right subtree rooted at C.
+   - At C, visit F, then G, then C.
+   - Both subtrees of A are done, so finally visit A.
+   - Postorder: D, E, B, F, G, C, A
+
+   Expression tree example, which shows why postorder matters:
+
+   ```
+                +
+              /   \
+             *     5
+            / \
+           3   4
+   ```
+
+   - Postorder: 3, 4, *, 5, + which is the postfix, or Reverse Polish, form of the expression (3 × 4) + 5.
+   - Evaluating it with a stack gives 12, then 12 + 5 = 17, which is the correct value. This is precisely why compilers convert expressions to postfix before generating code: the operands are always available before the operator is reached.
+
+   Uses of postorder:
+   - Deleting or freeing a tree, since the children must be released before the parent.
+   - Evaluating an expression tree.
+   - Producing postfix notation.
+   - Computing properties that depend on the subtrees, such as the height of each node or the size of each subtree.
+
+   - Complexity: O(n) time and O(h) space, which is O(log n) for a balanced tree and O(n) for a skewed one.
 14. **(b) Draw a binary tree of 15 elements in (a) Preorder (b) In-order (c) Post order traversals.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
 
+
+   Answer: A binary tree of 15 elements is drawn as a perfect binary tree of height 3, since 2⁴ − 1 = 15, which fills every level completely.
+
+   ```
+                          1
+                    /           \
+                   2             3
+                 /   \         /   \
+                4     5       6     7
+               / \   / \     / \   / \
+              8   9 10  11  12  13 14  15
+   ```
+
+   (a) Preorder, that is Root, Left, Right:
+   - Visit 1, then the whole left subtree rooted at 2, then the whole right subtree rooted at 3.
+   - 1, 2, 4, 8, 9, 5, 10, 11, 3, 6, 12, 13, 7, 14, 15
+
+   (b) Inorder, that is Left, Root, Right:
+   - 8, 4, 9, 2, 10, 5, 11, 1, 12, 6, 13, 3, 14, 7, 15
+
+   (c) Postorder, that is Left, Right, Root:
+   - 8, 9, 4, 10, 11, 5, 2, 12, 13, 6, 14, 15, 7, 3, 1
+
+   For completeness, level order:
+   - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, which is simply the array representation read from left to right.
+
+   Verification of the structure:
+   - Level 0 has 1 node, level 1 has 2, level 2 has 4 and level 3 has 8, giving 1 + 2 + 4 + 8 = 15.
+   - Internal nodes are 1 to 7, that is 7 of them; leaves are 8 to 15, that is 8 of them; and 8 = 7 + 1, which confirms the property of a full binary tree.
+   - Each traversal visits every node exactly once, so all three sequences contain exactly 15 elements.
 15. **What is the minimum number of nodes in a binary tree?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)]*
 
+
+   Answer: The minimum number of nodes in a binary tree depends on how the question is framed, and both conventions should be stated.
+
+   - As a general structure, a binary tree may be empty, in which case the minimum number of nodes is 0. An empty tree is a valid binary tree by the recursive definition.
+   - If the tree must be non-empty, the minimum is 1, that is the root alone.
+
+   Minimum nodes for a given height:
+   - Taking the root as height 0, a binary tree of height h has a minimum of h + 1 nodes, which occurs when the tree is skewed, that is when each level contains only a single node forming a chain.
+   - Taking the root as height 1, that is counting levels, the minimum is h nodes.
+   - Example: a binary tree of height 3 with the root at height 0 has a minimum of 4 nodes and a maximum of 2⁴ − 1 = 15 nodes.
+
+   The corresponding maxima, for contrast:
+   - Maximum nodes at level i: 2ⁱ.
+   - Maximum nodes in a tree of height h: 2^(h+1) − 1.
+
+   Related result, which is what such questions usually lead to:
+   - The minimum height of a binary tree with n nodes is ⌈log2(n + 1)⌉ − 1 with the root at height 0, which occurs when the tree is complete.
+   - The maximum height is n − 1, which occurs when the tree is skewed. This is why a skewed binary search tree degrades to O(n) search time and why self balancing trees such as AVL and Red-Black trees exist.
 16. **(ক) B-tree data structure কী? এর প্রয়োগ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
+
+   Answer:
+
+   What a B-tree is:
+   - A B-tree is a self balancing, multiway search tree in which a single node may hold many keys and have many children, and in which all the leaves lie at the same level. It was designed by Bayer and McCreight in 1972 specifically for data held on disk.
+   - Properties of a B-tree of minimum degree t, that is of order m = 2t:
+   - Every node holds between t − 1 and 2t − 1 keys, except the root, which may hold as few as 1.
+   - A node holding k keys has exactly k + 1 children.
+   - The keys within a node are kept in sorted order, and the subtree between two adjacent keys contains exactly the values lying between them.
+   - All leaves are at the same depth, so the tree is perfectly height balanced at all times.
+   - The height is O(log_t n), which for a large branching factor is very small: a few million keys typically fit within three or four levels.
+
+   Why it is designed this way:
+   - The decisive consideration is that a disk read is roughly a hundred thousand times slower than a memory access, so the cost of a search is dominated by the number of disk blocks read, not by the number of comparisons.
+   - Each B-tree node is sized to fill exactly one disk block or page, typically 4 or 8 KB, so one disk read brings in hundreds of keys at once. The high branching factor makes the tree very shallow, so a search touches only three or four blocks.
+   - A binary search tree with the same million keys would be about 20 levels deep and would require 20 disk reads, which is five times slower.
+
+   Operations:
+   - Search: descend from the root, at each node performing a search among its keys to choose the correct child. O(log n).
+   - Insertion: descend to the correct leaf and insert. If the node overflows, that is exceeds 2t − 1 keys, split it at the median, push the median key up into the parent, and repeat upward if necessary. The tree therefore grows in height only at the root, which is why all leaves remain at the same level.
+   - Deletion: remove the key, and if a node underflows, borrow a key from a sibling or merge with a sibling, propagating upward if required.
+   - All three operations are O(log n) in both the worst and the average case, and no rebalancing rotations are needed.
+
+   Applications:
+   - Database indexing: this is its principal use. Almost every relational database builds its indexes as B-trees or B+ trees, including MySQL InnoDB, PostgreSQL, Oracle and SQL Server. When a query uses an indexed column, it is a B-tree that is being searched.
+   - File systems: NTFS, HFS+, ext4 with HTree, Btrfs, XFS and ReiserFS all use B-trees for directory and metadata indexing.
+   - Key-value stores and embedded databases such as Berkeley DB and SQLite.
+   - Any application where the data is too large for memory and must be searched on disk.
+
+   B+ tree, the variant actually used in databases:
+   - All the data records are stored only in the leaves, while the internal nodes hold keys purely for navigation. This allows more keys per internal node, so the tree is even shallower.
+   - The leaves are linked together in a chain, which makes a range query or a full ordered scan extremely efficient: find the first key and then follow the leaf links.
+   - This combination of shallow depth for point lookups and linked leaves for range scans is why B+ trees, rather than plain B-trees, are the standard index structure in every major database.
 17. **(গ) নিচের ছবির Tree এর Inorder, Preorder এবং Postorder Traversal লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
+
+   Answer: The figure is not reproduced here, so the method is given together with a worked example on a standard tree.
+
+   The three traversals:
+
+   Three traversal methods:
+   - Preorder, that is Root, Left, Right: visit the node first, then traverse the left subtree, then the right. Used to copy a tree and to produce prefix expressions.
+   - Inorder, that is Left, Root, Right: traverse the left subtree, then visit the node, then the right subtree. On a binary search tree it produces the keys in sorted order, which is its most important property.
+   - Postorder, that is Left, Right, Root: traverse both subtrees and visit the node last. Used to delete a tree and to produce postfix expressions.
+   - A fourth method is level order, or breadth first traversal, which visits the nodes level by level using a queue.
+
+   Applied to this tree:
+
+   ```
+                A
+              /   \
+             B     C
+            / \   / \
+           D   E F   G
+              /
+             H
+   ```
+
+   - Inorder, Left Root Right: D, B, H, E, A, F, C, G
+   - Preorder, Root Left Right: A, B, D, E, H, C, F, G
+   - Postorder, Left Right Root: D, H, E, B, F, G, C, A
+
+   Method to apply to any given figure:
+   - Preorder: write the root, then recursively write the whole left subtree, then the whole right subtree.
+   - Inorder: recursively write the whole left subtree, then the root, then the whole right subtree.
+   - Postorder: recursively write both subtrees and write the root last.
+   - A quick manual technique: draw a loop around the whole tree starting at the left of the root and travelling anticlockwise, keeping close to the tree. For preorder, output each node as the loop passes its left side; for inorder, as the loop passes beneath it; and for postorder, as the loop passes its right side.
+
+   - Every traversal contains exactly the same set of nodes and runs in O(n) time.
+   - Checks worth performing: in preorder the first element is always the root; in postorder the last element is always the root; and in inorder the root separates the left subtree from the right. <!-- verify -->
 18. **Write C++ function that will invert mirror a binary tree.** *[BICIC Assistant Programmer 2022 compact it 630 (ET: BUET)]*
 
+
+   Answer: Inverting or mirroring a binary tree means swapping the left and right child of every node, so that the resulting tree is the mirror image of the original.
+
+   ```c
+   struct Node {
+       int data;
+       Node* left;
+       Node* right;
+       Node(int value) : data(value), left(nullptr), right(nullptr) {}
+   };
+
+   // Recursive version
+   Node* invertTree(Node* root) {
+       if (root == nullptr)
+           return nullptr;
+
+       // swap the two children
+       Node* temp = root->left;
+       root->left = root->right;
+       root->right = temp;
+
+       // recurse on both subtrees
+       invertTree(root->left);
+       invertTree(root->right);
+
+       return root;
+   }
+   ```
+
+   Iterative version using a queue, which avoids deep recursion:
+
+   ```c
+   #include <queue>
+
+   Node* invertTreeIterative(Node* root) {
+       if (root == nullptr)
+           return nullptr;
+
+       std::queue<Node*> q;
+       q.push(root);
+
+       while (!q.empty()) {
+           Node* current = q.front();
+           q.pop();
+
+           Node* temp = current->left;
+           current->left = current->right;
+           current->right = temp;
+
+           if (current->left)  q.push(current->left);
+           if (current->right) q.push(current->right);
+       }
+       return root;
+   }
+   ```
+
+   Example:
+
+   ```
+   Before:              After:
+          1                    1
+        /   \                /   \
+       2     3              3     2
+      / \   /                \   / \
+     4   5 6                  6 5   4
+   ```
+
+   - The inorder traversal before is 4, 2, 5, 1, 6, 3, and after inversion it is 3, 6, 1, 5, 2, 4, which is exactly the reverse. This is a useful check.
+
+   Complexity:
+   - Time: O(n), since every node is visited exactly once.
+   - Space: O(h) for the recursive version, where h is the height, which is O(log n) for a balanced tree and O(n) for a skewed one; O(w) for the iterative version, where w is the maximum width of the tree.
+
+   - Note: the swap may equally be performed after the recursive calls rather than before; both orders produce the same result, because every node is swapped exactly once.
 19. **X = (a^2 - 5b).(7a + b^5) এক্সপ্রেশনটিকে tree stracture-এ অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
+
+   Answer: An expression tree places every operator at an internal node and every operand at a leaf, with the subtrees as its operands. The tree is built according to operator precedence, so that the operator applied last stands at the root.
+
+   Expression: X = (a² − 5b) · (7a + b⁵)
+
+   The outermost operator is the multiplication between the two bracketed groups, so it becomes the root.
+
+   ```
+                        ×
+                   /         \
+                  −            +
+                /   \        /   \
+               ^     ×      ×     ^
+              / \   / \    / \   / \
+             a   2 5   b  7   a b   5
+   ```
+
+   ```mermaid
+   graph TD
+       R["×"] --> L["−"]
+       R --> RR["+"]
+       L --> L1["^"]
+       L --> L2["×"]
+       L1 --> A["a"]
+       L1 --> B["2"]
+       L2 --> C["5"]
+       L2 --> D["b"]
+       RR --> R1["×"]
+       RR --> R2["^"]
+       R1 --> E["7"]
+       R1 --> F["a"]
+       R2 --> G["b"]
+       R2 --> H["5"]
+   ```
+
+   Construction reasoning:
+   - The whole expression is a product of two bracketed factors, so × is the root.
+   - The left factor a² − 5b has subtraction as its main operator, since exponentiation and multiplication bind more tightly. So − is the left child, with a² on its left and 5b on its right.
+   - a² is the exponentiation of a by 2, and 5b is the multiplication of 5 by b.
+   - The right factor 7a + b⁵ has addition as its main operator, with 7a as a multiplication on the left and b⁵ as an exponentiation on the right.
+
+   Traversals of this tree:
+   - Inorder gives the infix form: a ^ 2 − 5 × b × 7 × a + b ^ 5, which needs the brackets restored to be read correctly.
+   - Preorder gives the prefix form: × − ^ a 2 × 5 b + × 7 a ^ b 5
+   - Postorder gives the postfix form: a 2 ^ 5 b × − 7 a × b 5 ^ + ×
+
+   - The postfix form is what a compiler generates, because it can be evaluated directly with a stack: every operand is pushed, and every operator pops its operands and pushes the result. The value of the whole expression appears as the single remaining item on the stack.
 20. **Write a Pseudocode of postorder by recursion and generate postorder, preorder inorder from the tree.** *[BIWTA; Assistant Programmer 25.11.2022 compact it 762 (ET: N/A)]*
 
+
+   Answer:
+
+   Pseudocode for postorder traversal by recursion:
+
+   ```
+   POSTORDER(node):
+       if node == NULL:
+           return
+       POSTORDER(node.left)       // step 1: traverse the left subtree
+       POSTORDER(node.right)      // step 2: traverse the right subtree
+       PRINT(node.data)           // step 3: visit the root last
+   ```
+
+   The other two traversals, for comparison:
+
+   ```
+   PREORDER(node):                       INORDER(node):
+       if node == NULL: return               if node == NULL: return
+       PRINT(node.data)                      INORDER(node.left)
+       PREORDER(node.left)                   PRINT(node.data)
+       PREORDER(node.right)                  INORDER(node.right)
+   ```
+
+   Generating all three traversals from a tree:
+
+   ```
+                A
+              /   \
+             B     C
+            / \   / \
+           D   E F   G
+   ```
+
+   - Preorder, Root Left Right: A, B, D, E, C, F, G
+   - Inorder, Left Root Right: D, B, E, A, F, C, G
+   - Postorder, Left Right Root: D, E, B, F, G, C, A
+
+   Trace of the postorder recursion, to show how the order arises:
+   - POSTORDER(A) calls POSTORDER(B) first.
+   - POSTORDER(B) calls POSTORDER(D). D has no children, so D is printed.
+   - POSTORDER(B) then calls POSTORDER(E), which prints E.
+   - Both subtrees of B are complete, so B is printed.
+   - POSTORDER(A) then calls POSTORDER(C), which prints F, then G, then C.
+   - Both subtrees of A are complete, so A is printed last.
+   - Output: D, E, B, F, G, C, A
+
+   Complexity:
+   - Time O(n) for each traversal, since every node is visited once.
+   - Space O(h) for the recursion stack, which is O(log n) for a balanced tree and O(n) for a skewed one.
+
+   - Iterative postorder is the hardest of the three to write, because a node must be visited only after both its subtrees. It is normally done with two stacks, or with one stack and a pointer to the last visited node.
 21. **(b) Draw a binary tree of 5 elements. Now list out the elements in (i) Pre-order (ii) Post order and (iii) Inorder traversal of the tree.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 792 (ET: N/A)]*
 
+
+   Answer: A binary tree of 5 elements:
+
+   ```
+                A
+              /   \
+             B     C
+            / \
+           D   E
+   ```
+
+   (i) Preorder, that is Root, Left, Right:
+   - Visit A, then the left subtree rooted at B, then the right subtree C.
+   - At B: visit B, then D, then E.
+   - Result: A, B, D, E, C
+
+   (ii) Postorder, that is Left, Right, Root:
+   - Traverse the left subtree of A: at B, traverse D, then E, then visit B → D, E, B
+   - Traverse the right subtree: C
+   - Then visit A.
+   - Result: D, E, B, C, A
+
+   (iii) Inorder, that is Left, Root, Right:
+   - Traverse the left subtree of A: at B, traverse D, visit B, traverse E → D, B, E
+   - Visit A.
+   - Traverse the right subtree: C
+   - Result: D, B, E, A, C
+
+   Summary:
+
+   | Traversal | Order of visiting | Result |
+   |---|---|---|
+   | Preorder | Root, Left, Right | A, B, D, E, C |
+   | Inorder | Left, Root, Right | D, B, E, A, C |
+   | Postorder | Left, Right, Root | D, E, B, C, A |
+   | Level order | Level by level | A, B, C, D, E |
+
+   - Check: each sequence contains all 5 nodes exactly once. In preorder the first element is the root, in postorder the last element is the root, and in inorder the root separates the left subtree from the right.
 22. **Mathematically derive the maximum and minimum height of a binary tree consisting of n nodes. Note that the height of a tree with a single node is considered as 1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 849-850 (ET: N/A)]*
 
+
+   Answer: The convention stated in the question is that a tree with a single node has height 1, that is the height is measured in nodes or levels rather than in edges.
+
+   Maximum height of a binary tree with n nodes:
+   - The height is greatest when the tree is as thin as possible, that is when every level contains exactly one node. Such a tree is called a skewed binary tree and it degenerates into a linked list.
+   - With one node per level, n nodes occupy n levels.
+   - Therefore h_max = n
+   - Example: n = 5 nodes arranged in a chain gives a height of 5.
+
+   ```
+       A            Every level holds one node,
+        \           so height = number of nodes = 5
+         B
+          \
+           C
+            \
+             D
+              \
+               E
+   ```
+
+   Minimum height of a binary tree with n nodes:
+   - The height is least when every level is filled as completely as possible, that is when the tree is complete.
+   - A tree of height h under this convention has levels 1 to h, and level i holds at most 2^(i−1) nodes.
+   - The maximum number of nodes in a tree of height h is therefore the geometric sum
+   - n_max = 2⁰ + 2¹ + 2² + ... + 2^(h−1) = 2^h − 1
+   - For a given n, the height must be large enough to accommodate all n nodes, so
+   - n ≤ 2^h − 1
+   - n + 1 ≤ 2^h
+   - log2(n + 1) ≤ h
+   - Since the height must be an integer, h_min = ⌈log2(n + 1)⌉
+
+   Verification:
+   - n = 1: h_min = ⌈log2 2⌉ = 1 and h_max = 1. Correct, a single node.
+   - n = 3: h_min = ⌈log2 4⌉ = 2 and h_max = 3. Correct: three nodes fit into 2 levels as a root with two children, or into 3 levels as a chain.
+   - n = 7: h_min = ⌈log2 8⌉ = 3 and h_max = 7. Correct: a perfect tree of 3 levels holds exactly 7 nodes.
+   - n = 10: h_min = ⌈log2 11⌉ = ⌈3.46⌉ = 4 and h_max = 10.
+
+   Summary:
+
+   | Quantity | Formula | Shape of the tree |
+   |---|---|---|
+   | Maximum height | n | Skewed, one node per level |
+   | Minimum height | ⌈log2(n + 1)⌉ | Complete, every level filled |
+
+   - Note on the other convention: if the height of a single node tree is taken as 0, that is if height is measured in edges, then h_max = n − 1 and h_min = ⌈log2(n + 1)⌉ − 1. The convention must always be stated.
+   - Why it matters: the search time in a binary search tree is proportional to the height. A skewed tree gives O(n) and a balanced tree gives O(log n), which for a million nodes is the difference between a million comparisons and twenty. This is the entire reason for self balancing trees such as AVL and Red-Black trees.
 23. **(iii) Maximum and Minimum no of Nodes for a binary tree of height 7 where the root is considered as height 0.** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
 
+
+   Answer: The convention here is that the root is at height 0, so a tree of height 7 has 8 levels, numbered 0 to 7.
+
+   Maximum number of nodes:
+   - Level i can hold at most 2ⁱ nodes.
+   - The maximum total is the sum over all levels: 2⁰ + 2¹ + 2² + ... + 2⁷
+   - This is a geometric series, so the total is 2⁸ − 1 = 256 − 1 = 255
+   - General formula: maximum nodes = 2^(h+1) − 1
+   - This occurs when the tree is perfect, that is when every level is completely filled.
+
+   Level by level:
+
+   | Level | Maximum nodes |
+   |---|---|
+   | 0 | 1 |
+   | 1 | 2 |
+   | 2 | 4 |
+   | 3 | 8 |
+   | 4 | 16 |
+   | 5 | 32 |
+   | 6 | 64 |
+   | 7 | 128 |
+   | Total | 255 |
+
+   Minimum number of nodes:
+   - To attain a height of 7, at least one node must exist at each of the 8 levels; any fewer and the tree would not reach that height.
+   - Minimum nodes = 8
+   - General formula: minimum nodes = h + 1
+   - This occurs when the tree is skewed, that is when each level contains exactly one node and the tree degenerates into a chain.
+
+   Final answer: for a binary tree of height 7 with the root at height 0, the maximum number of nodes is 255 and the minimum is 8.
+
+   - Note on the other convention: if the root were counted as level 1, a tree of height 7 would have 7 levels, giving a maximum of 2⁷ − 1 = 127 nodes and a minimum of 7. The convention must always be stated in the answer.
 24. **Construct a full binary tree from the given inorder and preorder traversal as follows:** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
    Inorder: B A D C F E J H K G I
    Preorder: A B C D E F G H J K I
 
+
+   Answer: A binary tree is uniquely determined by its inorder together with its preorder traversal.
+
+   Given:
+   - Inorder: B A D C F E J H K G I
+   - Preorder: A B C D E F G H J K I
+
+   Method: the first element of the preorder is the root; find it in the inorder to split that sequence into the left and right subtrees; then recurse on each part.
+
+   Step 1: preorder begins with A, so A is the root.
+   - Inorder: B | A | D C F E J H K G I
+   - Left subtree = {B}, right subtree = {D, C, F, E, J, H, K, G, I}
+   - Preorder after A: B belongs to the left subtree, and C D E F G H J K I to the right.
+
+   Step 2, left subtree: only B, so B is a leaf and is the left child of A.
+
+   Step 3, right subtree with inorder D C F E J H K G I and preorder C D E F G H J K I:
+   - Root is C. Inorder: D | C | F E J H K G I
+   - Left = {D}, right = {F, E, J, H, K, G, I}
+
+   Step 4: D is a leaf and is the left child of C.
+
+   Step 5, with inorder F E J H K G I and preorder E F G H J K I:
+   - Root is E. Inorder: F | E | J H K G I
+   - Left = {F}, right = {J, H, K, G, I}
+
+   Step 6: F is a leaf and is the left child of E.
+
+   Step 7, with inorder J H K G I and preorder G H J K I:
+   - Root is G. Inorder: J H K | G | I
+   - Left = {J, H, K}, right = {I}
+
+   Step 8, with inorder J H K and preorder H J K:
+   - Root is H, left child J, right child K.
+
+   Step 9: I is a leaf and is the right child of G.
+
+   The complete tree:
+
+   ```
+                A
+              /   \
+             B     C
+                  /  \
+                 D    E
+                     /  \
+                    F    G
+                        /  \
+                       H    I
+                      /  \
+                     J    K
+   ```
+
+   ```mermaid
+   graph TD
+       A["A"] --> B["B"]
+       A --> C["C"]
+       C --> D["D"]
+       C --> E["E"]
+       E --> F["F"]
+       E --> G["G"]
+       G --> H["H"]
+       G --> I["I"]
+       H --> J["J"]
+       H --> K["K"]
+   ```
+
+   Verification:
+   - Inorder, Left Root Right: B, A, D, C, F, E, J, H, K, G, I. Matches the given sequence.
+   - Preorder, Root Left Right: A, B, C, D, E, F, G, H, J, K, I. Matches the given sequence.
+   - Postorder, for completeness: B, D, F, J, K, H, I, G, E, C, A.
+   - Every node has 0 or 2 children, so the tree is indeed a full binary tree as the question states.
 25. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925-926 (ET: CTI)]*
    In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
    Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
 
+
+   Answer:
+
+   Given:
+   - Inorder: 20, 30, 35, 40, 45, 50, 55, 65, 70
+   - Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
+
+   Step 1: preorder begins with 50, so 50 is the root.
+   - Inorder: 20 30 35 40 45 | 50 | 55 65 70
+   - Left subtree = {20, 30, 35, 40, 45}, right subtree = {55, 65, 70}
+   - Preorder splits as left = 40, 30, 20, 35, 45 and right = 65, 55, 70
+
+   Step 2, left subtree with inorder 20 30 35 40 45 and preorder 40 30 20 35 45:
+   - Root is 40. Inorder: 20 30 35 | 40 | 45
+   - Left = {20, 30, 35}, right = {45}
+
+   Step 3, with inorder 20 30 35 and preorder 30 20 35:
+   - Root is 30, left child 20, right child 35.
+
+   Step 4: 45 is a leaf and is the right child of 40.
+
+   Step 5, right subtree with inorder 55 65 70 and preorder 65 55 70:
+   - Root is 65, left child 55, right child 70.
+
+   The binary tree:
+
+   ```
+                    50
+                  /    \
+                40      65
+               /  \    /  \
+             30    45 55    70
+            /  \
+          20    35
+   ```
+
+   - The inorder sequence is in ascending order, so this is also a binary search tree.
+
+   Procedure to find the sum of all the nodes:
+
+   ```c
+   struct Node {
+       int data;
+       Node* left;
+       Node* right;
+   };
+
+   int sumNodes(Node* root) {
+       if (root == NULL)
+           return 0;
+       return root->data + sumNodes(root->left) + sumNodes(root->right);
+   }
+   ```
+
+   - The logic is postorder in character: the sum of a tree is the value of its root plus the sum of its left subtree plus the sum of its right subtree, with the empty tree contributing zero.
+
+   Iterative version, if recursion is to be avoided:
+
+   ```c
+   int sumNodesIterative(Node* root) {
+       if (root == NULL) return 0;
+       int total = 0;
+       std::queue<Node*> q;
+       q.push(root);
+       while (!q.empty()) {
+           Node* cur = q.front(); q.pop();
+           total += cur->data;
+           if (cur->left)  q.push(cur->left);
+           if (cur->right) q.push(cur->right);
+       }
+       return total;
+   }
+   ```
+
+   Verification with the given tree:
+   - 20 + 30 + 35 + 40 + 45 + 50 + 55 + 65 + 70 = 410
+
+   - Complexity: O(n) time, since every node is visited exactly once, and O(h) space for the recursion stack, which is O(log n) here because the tree is balanced.
 26. **Making binary a tree from the given expression: 3 + ((5+9)*2)** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
+
+
+   Answer: An expression tree places every operator at an internal node and every operand at a leaf. The operator applied last becomes the root.
+
+   Expression: 3 + ((5 + 9) × 2)
+
+   Construction reasoning:
+   - The outermost operation is the addition of 3 to the whole bracketed group, so + is the root.
+   - Its left child is the operand 3.
+   - Its right child is the multiplication (5 + 9) × 2, so × is that node.
+   - The left child of × is the inner addition 5 + 9, and its right child is the operand 2.
+
+   ```
+                    +
+                  /   \
+                 3     ×
+                     /   \
+                    +     2
+                  /   \
+                 5     9
+   ```
+
+   ```mermaid
+   graph TD
+       A["+"] --> B["3"]
+       A --> C["×"]
+       C --> D["+"]
+       C --> E["2"]
+       D --> F["5"]
+       D --> G["9"]
+   ```
+
+   Traversals of this tree:
+   - Inorder, which gives the infix form: 3 + 5 + 9 × 2, which requires the brackets to be restored to be read correctly.
+   - Preorder, which gives the prefix or Polish form: + 3 × + 5 9 2
+   - Postorder, which gives the postfix or Reverse Polish form: 3 5 9 + 2 × +
+
+   Evaluating the tree, which is a postorder computation:
+   - The inner + node: 5 + 9 = 14
+   - The × node: 14 × 2 = 28
+   - The root + node: 3 + 28 = 31
+   - Value of the expression: 31
+
+   - Checking against the original expression: 3 + ((5 + 9) × 2) = 3 + (14 × 2) = 3 + 28 = 31. Correct.
+   - The practical significance: a compiler builds exactly this tree during parsing, and then walks it in postorder to generate code, because in postorder both operands of an operator are always computed before the operator itself is reached.
 
 ## Stack (19)
 
