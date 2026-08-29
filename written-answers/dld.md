@@ -4663,8 +4663,113 @@
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
+
+   Answer: 2's complement is the standard method of representing signed binary numbers, in which a negative number is stored as (complement every bit of its magnitude, then add 1). Its advantage is that subtraction becomes addition, so the same adder hardware handles both operations, and there is only one representation of zero.
+
+   Rule: A - B = A + (2's complement of B), and any carry out of the most significant bit is discarded.
+
+   Problem: subtract (+11) from (-15), that is (-15) - (+11), using 8-bit 2's complement.
+
+   Step 1 - write +15 in 8-bit binary:
+   (15) = 0000 1111
+
+   Step 2 - find -15 (2's complement of 15):
+   - 1's complement: 1111 0000
+   - add 1: 1111 0000 + 1 = 1111 0001
+   - So (-15) = 1111 0001
+
+   Step 3 - write +11 in 8-bit binary:
+   (11) = 0000 1011
+
+   Step 4 - find the 2's complement of 11 (this is -11):
+   - 1's complement: 1111 0100
+   - add 1: 1111 0100 + 1 = 1111 0101
+
+   Step 5 - add (-15) and (-11):
+
+   ```
+       1111 0001      (-15)
+     + 1111 0101      (-11)
+     -------------
+    1  1110 0110
+   ```
+
+   Step 6 - discard the carry out of the 8th bit. Result = 1110 0110.
+
+   Step 7 - the MSB is 1, so the result is negative. Find its magnitude by taking the 2's complement again:
+   - 1's complement of 1110 0110 = 0001 1001
+   - add 1: 0001 1010 = 16 + 8 + 2 = 26
+
+   Final answer: 1110 0110 in 2's complement = (-26) in decimal.
+
+   Check: (-15) - (+11) = -26. Correct.
+
+   Note on overflow: the two operands are both negative and the result is negative, so there is no overflow. Overflow would be flagged only if two numbers of the same sign produced a result of the opposite sign.
 2. **BCD Addition: 00010011 + 00100110** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 644 (ET: BUET)]*
+
+
+   Answer: BCD (Binary Coded Decimal) stores each decimal digit in its own 4-bit group, so only the codes 0000 to 1001 are legal. After adding two BCD numbers, any 4-bit group whose sum exceeds 1001 (9), or which produced a carry, must be corrected by adding 0110 (6).
+
+   Given numbers:
+   - 0001 0011 = decimal 13
+   - 0010 0110 = decimal 26
+
+   Step 1 - add the least significant (units) digits:
+
+   ```
+       0011      (3)
+     + 0110      (6)
+     --------
+       1001      (9)
+   ```
+
+   The result 1001 = 9, which is a valid BCD digit and there is no carry out, so no correction is needed.
+
+   Step 2 - add the most significant (tens) digits:
+
+   ```
+       0001      (1)
+     + 0010      (2)
+     --------
+       0011      (3)
+   ```
+
+   The result 0011 = 3 is also valid, and there is no carry to propagate, so again no correction is needed.
+
+   Step 3 - combine the two groups:
+
+   ```
+       0001 0011      (13)
+     + 0010 0110      (26)
+     ---------------
+       0011 1001      (39)
+   ```
+
+   Final answer: 0001 0011 + 0010 0110 = 0011 1001 (BCD) = 39 in decimal.
+
+   Verification: 13 + 26 = 39. Correct.
+
+   Correction rule for reference: if any 4-bit group had given a sum greater than 1001 or a carry out, 0110 would have to be added to that group and the resulting carry passed to the next higher digit. For example 0111 + 0101 = 1100, which is invalid, so 1100 + 0110 = 1 0010, giving 12 in BCD.
 
 ## Finite State Machines (FSM) (1)
 
 1. **A traffic signal cycles from RED to YELLOW, YELLOW to GREEN and GREEN to RED. In each cycle RED is turned for 100 seconds, YELLOW is turned for 40 seconds and GREEN is turned for 80 seconds. The traffic has to be implemented using FSM. The only input to this FSM is a clock of 10 second period. The minimum number of flip-flops require to implement this FSM is?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
+
+
+   Answer: The FSM must be able to distinguish every 10-second time slot in one complete traffic cycle, so the number of states equals the total cycle time divided by the clock period.
+
+   Step 1 - total cycle time:
+   - RED = 100 s, YELLOW = 40 s, GREEN = 80 s
+   - Total = 100 + 40 + 80 = 220 s
+
+   Step 2 - number of states needed. The only input is a clock of period 10 s, so the FSM advances one state every 10 seconds:
+   - Number of states = 220 / 10 = 22 states
+   - RED occupies 100/10 = 10 states, YELLOW occupies 40/10 = 4 states, GREEN occupies 80/10 = 8 states, and 10 + 4 + 8 = 22
+
+   Step 3 - number of flip-flops. n flip-flops give 2^n states, so choose the smallest n with 2^n greater than or equal to 22:
+   - 2^4 = 16, which is less than 22, so 4 flip-flops are not enough
+   - 2^5 = 32, which is greater than 22, so 5 flip-flops are enough
+
+   Final answer: 5 flip-flops.
+
+   In other words the FSM is a MOD-22 counter, and a MOD-22 counter needs ceil(log2 22) = 5 flip-flops. The remaining 32 - 22 = 10 states are unused and are handled as don't-care conditions or forced back to state 0 by reset logic.
