@@ -8530,33 +8530,736 @@ SELECT count (*) FROM (
 
 1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Incremental backup | Differential backup |
+   |---|---|---|
+   | What is copied | Only the data changed since the last backup of any kind, full or incremental | All the data changed since the last full backup |
+   | Reference point | The previous backup, whatever it was | The last full backup only |
+   | Backup size | Smallest | Grows each day until the next full backup |
+   | Backup time | Shortest | Increasingly long as the week progresses |
+   | Storage required | Least | More |
+   | Restore procedure | The full backup plus every incremental in order | The full backup plus the single latest differential |
+   | Restore time | Longest, and it grows with the number of increments | Short and predictable |
+   | Risk | If any one incremental in the chain is corrupt, every later one is unusable | Only two files are needed, so the chain risk is far lower |
+
+   Illustration, with a full backup on Sunday:
+   - Incremental: Monday holds Monday's changes; Tuesday holds Tuesday's; Wednesday holds Wednesday's. To restore Wednesday evening, four files are needed: Sunday, Monday, Tuesday and Wednesday.
+   - Differential: Monday holds Monday's changes; Tuesday holds Monday and Tuesday; Wednesday holds Monday, Tuesday and Wednesday. To restore Wednesday evening, two files are needed: Sunday and Wednesday.
+
+   Which is more suitable for a banking system:
+   - Differential backup is the more suitable of the two, and the reason is the recovery time objective rather than the storage cost.
+   - A bank's overriding requirement is to restore quickly and reliably. A differential restore needs only the full backup and one differential file, so the procedure is short, simple and far less likely to fail. An incremental restore needs the entire chain in the correct order, and a single corrupt file in that chain makes everything after it unusable, which is an unacceptable risk when the data is a ledger.
+   - Storage is comparatively cheap; downtime at a bank is not. Trading disk space for a shorter and safer restore is the correct decision.
+   - The honest answer, however, is that no bank relies on either alone. The actual practice is:
+   - A full backup weekly, differential backups daily, and continuous archiving of the transaction log every few minutes, which gives point in time recovery to within minutes rather than to the previous night.
+   - Synchronous replication to a standby database, which gives a recovery point objective of zero, that is no committed transaction is ever lost.
+   - A geographically separate disaster recovery site, with regular tested failover.
+   - Backups encrypted, with at least one copy immutable or offline so that ransomware cannot reach it, following the 3-2-1 rule.
+   - Regular restoration drills, since an untested backup is not a backup.
+   - So the answer is differential for the periodic backup strategy, combined with continuous log shipping and replication, which together are what actually meet the requirement.
 2. **Database Data Loss based case study type question......** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
 
+
+   Answer: A data loss case study is answered by working through a defined sequence: contain, assess, recover, verify and prevent.
+
+   Typical scenario: a table in the core banking database has been accidentally deleted, or the database has been corrupted, or ransomware has encrypted the files.
+
+   Step 1, contain the damage immediately:
+   - Stop further writes to the affected database, and if necessary take the application offline. Every additional write reduces the chance of recovery and may overwrite the very data needed.
+   - If the cause is ransomware or an intrusion, isolate the server from the network before anything else and preserve the evidence.
+   - Inform management, the affected business units and, where required, the regulator. Silence during an incident causes more damage than the incident.
+
+   Step 2, assess the loss:
+   - Determine exactly what was lost, when, and by what mechanism: an accidental DELETE or DROP, a failed deployment, hardware failure, corruption, or a malicious act.
+   - Determine the last known good point: the time of the last full backup, the last differential, and how far the transaction log extends.
+   - Compare that with the agreed recovery point objective, which is how much data the business has accepted it may lose, and the recovery time objective, which is how long the restoration may take.
+
+   Step 3, choose the recovery method:
+   - If the transaction has only just been committed and the database is still running, flashback or point in time recovery within the database may recover it without a restore. Oracle's FLASHBACK TABLE and SQL Server's snapshot are examples.
+   - If the loss is confined to one table, restore that table from the backup into a staging database and copy the rows back, rather than restoring everything.
+   - If the whole database is lost, restore the last full backup, apply the latest differential, then roll the transaction log forward to the moment immediately before the damaging statement. This gives point in time recovery.
+   - If a standby replica exists and is unaffected, failover to it, which is the fastest route and gives no data loss where replication was synchronous.
+   - If the backups themselves are compromised, as with ransomware, use the offline or immutable copy.
+
+   Step 4, verify:
+   - Check row counts and control totals against an independent source, such as the previous day's report.
+   - Reconcile the financial totals; in a bank the ledger must balance.
+   - Have the business users confirm that the data is correct, rather than assuming that a successful restore means correct data.
+
+   Step 5, resume and monitor:
+   - Bring the application back gradually, watch for errors, and keep the incident open until the system has run normally through a full business cycle.
+
+   Step 6, root cause analysis and prevention:
+   - Determine not only why the loss occurred but why it was not prevented and why it was not detected sooner.
+   - Preventive measures: least privilege, so that no application account can DROP a table; mandatory review and testing of any script that modifies production; a rule of running the SELECT before the DELETE; transactions with explicit COMMIT rather than autocommit for manual work; point in time recovery enabled with continuous log archiving; the 3-2-1 backup rule with one immutable or offline copy; regular restore drills; replication to a standby; and monitoring that alerts on unusual volumes of deletion.
+
+   - The single most important lesson to state: an untested backup is not a backup. The commonest cause of catastrophic data loss is not the absence of backups but the discovery, at the worst possible moment, that they cannot be restored. <!-- verify -->
 3. **What do you understand about the IT disaster recovery plan? Describe your approach to disaster recovery and business continuity planning for the data centre of your office.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 333 (ET: BIBM)]*
 
+
+   Answer:
+
+   What an IT disaster recovery plan is:
+   - A disaster recovery plan is a documented, tested set of procedures for restoring IT systems and data after a disruptive event, whether a hardware failure, a cyber attack, a fire, a flood or a prolonged power failure.
+   - It is a component of the wider Business Continuity Plan, which covers the continuation of the whole business, including people, premises and processes, whereas disaster recovery concerns the technology specifically.
+   - Its two defining parameters are:
+   - RPO, Recovery Point Objective: how much data the business can afford to lose, measured in time. An RPO of 15 minutes means at most 15 minutes of transactions may be lost.
+   - RTO, Recovery Time Objective: how long the business can afford to be without the service.
+   - These are business decisions, not technical ones, and every technical choice follows from them.
+
+   Approach to disaster recovery and business continuity for the data centre:
+
+   Step 1, business impact analysis:
+   - Identify every critical system and rank it. In a bank the core banking system, the payment switch and the ATM network come first; an internal training portal comes last.
+   - For each, agree the RPO and RTO with the business owner, and cost the downtime so that the investment can be justified.
+
+   Step 2, risk assessment:
+   - Identify the threats: hardware failure, power failure, fire, flood, earthquake, cyber attack, ransomware, human error and supplier failure. Assess likelihood and impact, and design against the credible ones.
+
+   Step 3, backup strategy:
+   - Full backup weekly, differential daily, and continuous archiving of the transaction log, which is what makes point in time recovery possible.
+   - The 3-2-1 rule: three copies, on two different media, one of them off site. Add a fourth requirement today: one copy immutable or offline, so that ransomware cannot encrypt it.
+   - Encrypt every backup, and control who can delete one.
+   - Test restoration on a schedule, not merely the backup job. An untested backup is not a backup.
+
+   Step 4, redundancy within the primary site:
+   - N+1 or 2N on power, that is dual utility feeds, UPS and generators with fuel for at least 48 hours; redundant precision cooling; redundant network paths from two providers over diverse routes; RAID and clustered servers; and no single point of failure in any tier.
+
+   Step 5, the disaster recovery site:
+   - Geographically separate, far enough to be outside the same flood plain, seismic zone and power grid, but close enough for acceptable replication latency.
+   - Choose the tier according to the RTO:
+   - Cold site: space and power only. Cheapest, recovery in days.
+   - Warm site: hardware installed and data restored periodically. Recovery in hours.
+   - Hot site: fully equipped and continuously replicated. Recovery in minutes.
+   - Active-active: both sites serving traffic simultaneously, giving near zero RTO. This is what a bank's core system requires.
+   - Replication: synchronous for zero data loss where the distance permits, asynchronous over longer distances with a small RPO.
+
+   Step 6, the plan document itself:
+   - Roles and responsibilities, with named individuals and deputies.
+   - Escalation and communication procedures, including how to reach people when the corporate email is down.
+   - Declaration criteria: who decides that a disaster has occurred and that failover should begin.
+   - Step by step recovery runbooks for each system, in the order of restoration dictated by the dependencies.
+   - Contact lists for vendors, the regulator and key customers.
+   - Failback procedure, which is often forgotten and is harder than failover.
+
+   Step 7, testing:
+   - Tabletop walkthrough quarterly, partial technical test twice a year, and a full failover at least annually.
+   - Record what failed, correct the plan, and retest. A plan that has never been exercised will not work.
+
+   Step 8, governance:
+   - Review the plan whenever the infrastructure changes, and at least annually.
+   - Comply with the Bangladesh Bank ICT security guidelines, which require both a DR site and periodic drills for scheduled banks.
+   - Report readiness to the board, since disaster recovery is ultimately a governance obligation rather than a technical one.
+
+   - The principle to state: design for the failure that will happen, not the one that should not. Assume the primary site will be lost, and ask what happens next.
 4. **একটি MySQL database এর ডাটা ব্যাক আপ ও ব্যাক আপ করা ডাটা রিস্টোর করার কমান্ড লিখ।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
 
+
+   Answer:
+
+   Backing up a MySQL database, using the `mysqldump` utility from the operating system shell, not from inside the MySQL client:
+
+   ```
+   -- One database
+   mysqldump -u root -p database_name > backup.sql
+
+   -- Specific tables only
+   mysqldump -u root -p database_name table1 table2 > backup.sql
+
+   -- All databases
+   mysqldump -u root -p --all-databases > full_backup.sql
+
+   -- Structure only, without data
+   mysqldump -u root -p --no-data database_name > schema.sql
+
+   -- Data only, without structure
+   mysqldump -u root -p --no-create-info database_name > data.sql
+
+   -- Compressed, which matters for a large database
+   mysqldump -u root -p database_name | gzip > backup.sql.gz
+
+   -- Consistent backup of an InnoDB database without locking the tables
+   mysqldump -u root -p --single-transaction --routines --triggers --events database_name > backup.sql
+   ```
+
+   Restoring:
+
+   ```
+   -- Into an existing database
+   mysql -u root -p database_name < backup.sql
+
+   -- Creating the database first
+   mysql -u root -p -e "CREATE DATABASE database_name;"
+   mysql -u root -p database_name < backup.sql
+
+   -- From a compressed file
+   gunzip < backup.sql.gz | mysql -u root -p database_name
+
+   -- From inside the MySQL client
+   mysql> USE database_name;
+   mysql> SOURCE /path/to/backup.sql;
+   ```
+
+   Points worth stating:
+   - `--single-transaction` takes a consistent snapshot of InnoDB tables without locking them, so the application keeps running during the backup. Without it, `--lock-tables` blocks writes.
+   - `--routines`, `--triggers` and `--events` must be added explicitly, otherwise stored procedures, triggers and scheduled events are silently omitted from the dump.
+   - A logical dump such as this is portable and readable but slow to restore for a very large database; a physical backup with Percona XtraBackup or a filesystem snapshot is used instead at scale.
+   - Binary logging must be enabled for point in time recovery: the dump restores the state at the time it was taken, and the binary log is then replayed to bring the database forward to the moment of failure.
+   - A backup is worthless until a restore has actually been tested.
 5. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 539 (ET: MIST)]*
 
+
+   Answer:
+
+   | Point | Data backup | Data recovery |
+   |---|---|---|
+   | Nature | A preventive measure, performed in advance | A corrective measure, performed after a loss |
+   | Timing | Before anything goes wrong, on a schedule | After data has been lost, corrupted or made inaccessible |
+   | Purpose | To create and retain a copy that can be used later | To restore data to a usable state |
+   | Frequency | Regular and planned: daily, weekly, continuous | Occasional and unplanned, only when needed |
+   | What it produces | A copy of the data in a separate location | The original working data, restored |
+   | Cost | Predictable and ongoing: storage, media, time | Unpredictable, and potentially very high in downtime |
+   | Dependence | Independent; it can always be performed | Depends entirely on a usable backup or on forensic techniques |
+   | Success rate | High, if properly configured | Uncertain; recovery without a backup often fails or is partial |
+   | Tools | mysqldump, Veeam, Acronis, native DBMS backup utilities | Restore commands, log replay, flashback, and in the worst case forensic recovery software |
+
+   Real world examples:
+
+   When backup is employed:
+   - A bank takes a full backup of its core banking database every Sunday, a differential every night, and archives the transaction log every 15 minutes. Nothing has gone wrong; this is routine insurance.
+   - A user's laptop synchronises documents to a cloud service continuously.
+   - Before applying a major software upgrade or a schema migration, a snapshot is taken so that the change can be reversed.
+   - A hospital replicates patient records to a second site every hour.
+
+   When recovery is employed:
+   - A developer runs `DELETE FROM Orders` without a WHERE clause on the production database. Recovery restores the previous night's backup and replays the transaction log to the moment immediately before the statement, which is point in time recovery.
+   - A disk fails in a server. Recovery consists of replacing the disk and rebuilding the RAID array, or restoring the volume from backup.
+   - Ransomware encrypts the file server. Recovery uses the offline, immutable backup copy, since the online copies were encrypted too.
+   - A database becomes corrupt after a power failure. Recovery uses the DBMS's own crash recovery, rolling committed transactions forward from the redo log and uncommitted ones back from the undo log.
+   - A user deletes an important file. Recovery uses the file history or the previous version stored by the backup system.
+
+   The relationship between the two:
+   - Backup is what makes recovery possible; recovery is the reason backup exists. A backup that has never been tested by an actual restore is not a backup at all, merely a hope.
+   - The measure of a backup strategy is not how often backups are taken but how quickly and completely data can be recovered, which is what the RPO and RTO express.
 6. **To achieve a '0-bit data loss' for its 24 x 7 x 365 banking operation, what steps or technology should an online bank employ to safeguard its data against any potential threats of data loss?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 518 (ET: MIST)]*
 
+
+   Answer: Zero data loss, that is an RPO of zero, for a 24 by 7 banking operation requires that no committed transaction can ever be lost, whatever fails. This is achieved by layering several technologies, since no single measure is sufficient.
+
+   Synchronous replication, which is the foundation:
+   - Every committed transaction is written to both the primary and the standby database before the commit is acknowledged to the application. If the primary is lost the standby holds every committed transaction, so the RPO is genuinely zero.
+   - Implementations: Oracle Data Guard in Maximum Protection mode, SQL Server Always On availability groups with synchronous commit, PostgreSQL synchronous streaming replication, and MySQL Group Replication or InnoDB Cluster.
+   - The cost is latency: the commit waits for the network round trip, so the standby must be near enough for that delay to be acceptable, typically within the same metropolitan area.
+
+   Three site architecture, which is what banks actually deploy:
+   - Primary site, and a near disaster recovery site within the same city, connected synchronously for zero data loss.
+   - A far disaster recovery site in another region, connected asynchronously, which protects against a regional disaster at the cost of a small RPO measured in seconds.
+   - This resolves the conflict between latency and geographic separation.
+
+   Storage level protection:
+   - RAID 1, 5, 6 or 10 so that a disk failure loses nothing.
+   - Storage array replication and consistent snapshots.
+   - Enterprise SSDs and controllers with battery or flash backed write cache, so that a write acknowledged is a write that survives a power failure.
+
+   Transaction log protection:
+   - Write ahead logging is what makes durability possible: the log record reaches non-volatile storage before the commit is acknowledged.
+   - Continuous archiving of the log to a separate location, which gives point in time recovery to any second.
+   - Multiple copies of the current log on different physical devices, called multiplexing.
+
+   Backup strategy:
+   - Full weekly, differential daily, log archived every few minutes.
+   - The 3-2-1 rule, with at least one copy immutable or air gapped so that ransomware cannot reach it.
+   - Backups encrypted, and restoration tested on a schedule rather than assumed.
+
+   Infrastructure resilience:
+   - Clustered database servers with automatic failover, so that a server failure causes an interruption of seconds rather than an outage.
+   - Redundant power with dual feeds, UPS and generators; redundant cooling; redundant network paths from two providers over diverse routes.
+   - No single point of failure in any tier, verified by design review rather than by assumption.
+
+   Data integrity and protection against logical loss:
+   - Physical redundancy does not protect against a wrong DELETE or a corrupt application release, because the mistake is replicated faithfully to the standby. Point in time recovery and flashback capability are what protect against that, and they are essential.
+   - Least privilege, so that no application account can drop a table; mandatory review of any production change; and delayed replication of one standby by an hour, so that a logical error can be caught before it reaches every copy.
+   - Checksums on pages and blocks to detect silent corruption.
+
+   Operational discipline:
+   - Regular failover drills, not merely documented procedures.
+   - Monitoring of replication lag with alerting, since a standby that has silently fallen behind provides no protection.
+   - Change management, so that untested changes never reach production.
+   - Compliance with the Bangladesh Bank ICT security guidelines, which require a DR site and periodic testing.
+
+   - The essential point to state: zero data loss is achieved by synchronous replication, and zero downtime by clustering and automatic failover; but neither protects against logical error or ransomware, so point in time recovery and immutable offline backups are equally necessary. A bank needs all four.
 7. **MySQL database এর ক্ষেত্রে Backup and Restore করার কমান্ড লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
 
+
+   Answer:
+
+   Backing up a MySQL database, using the `mysqldump` utility from the operating system shell, not from inside the MySQL client:
+
+   ```
+   -- One database
+   mysqldump -u root -p database_name > backup.sql
+
+   -- Specific tables only
+   mysqldump -u root -p database_name table1 table2 > backup.sql
+
+   -- All databases
+   mysqldump -u root -p --all-databases > full_backup.sql
+
+   -- Structure only, without data
+   mysqldump -u root -p --no-data database_name > schema.sql
+
+   -- Data only, without structure
+   mysqldump -u root -p --no-create-info database_name > data.sql
+
+   -- Compressed, which matters for a large database
+   mysqldump -u root -p database_name | gzip > backup.sql.gz
+
+   -- Consistent backup of an InnoDB database without locking the tables
+   mysqldump -u root -p --single-transaction --routines --triggers --events database_name > backup.sql
+   ```
+
+   Restoring:
+
+   ```
+   -- Into an existing database
+   mysql -u root -p database_name < backup.sql
+
+   -- Creating the database first
+   mysql -u root -p -e "CREATE DATABASE database_name;"
+   mysql -u root -p database_name < backup.sql
+
+   -- From a compressed file
+   gunzip < backup.sql.gz | mysql -u root -p database_name
+
+   -- From inside the MySQL client
+   mysql> USE database_name;
+   mysql> SOURCE /path/to/backup.sql;
+   ```
+
+   Points worth stating:
+   - `--single-transaction` takes a consistent snapshot of InnoDB tables without locking them, so the application keeps running during the backup. Without it, `--lock-tables` blocks writes.
+   - `--routines`, `--triggers` and `--events` must be added explicitly, otherwise stored procedures, triggers and scheduled events are silently omitted from the dump.
+   - A logical dump such as this is portable and readable but slow to restore for a very large database; a physical backup with Percona XtraBackup or a filesystem snapshot is used instead at scale.
+   - Binary logging must be enabled for point in time recovery: the dump restores the state at the time it was taken, and the binary log is then replayed to bring the database forward to the moment of failure.
+   - A backup is worthless until a restore has actually been tested.
 8. **Describe what are the ways for no data loss?** *[RAKUB Assistant Database Administrator 2020 compact it 1015-1016 (ET: E-Zone)]*
+
+
+   Answer: Preventing data loss requires layered measures, because each protects against a different kind of failure and none is sufficient alone.
+
+   Protection against hardware failure:
+   - RAID 1, 5, 6 or 10, so that the failure of a disk loses nothing.
+   - Redundant power supplies, UPS and generators, so that a power failure does not corrupt data in flight.
+   - Enterprise grade storage with battery or flash backed write cache, so that an acknowledged write survives a power loss.
+   - Server clustering with automatic failover.
+
+   Protection against site failure:
+   - A geographically separate disaster recovery site.
+   - Synchronous replication to a nearby standby, which gives an RPO of zero, combined with asynchronous replication to a distant site, which protects against a regional disaster.
+   - Regular tested failover, not merely a documented procedure.
+
+   Backup, which protects against everything the above does not:
+   - Full backup weekly, differential daily, transaction log archived continuously, which together give point in time recovery.
+   - The 3-2-1 rule: three copies, on two media, one off site. Add one immutable or air gapped copy, since ransomware now targets the backups first.
+   - Encrypt every backup, and restrict who may delete one.
+   - Test the restore regularly. An untested backup is not a backup.
+
+   Protection against logical error, which physical redundancy does not address:
+   - This is the case most often overlooked. A wrong DELETE or a bad deployment is replicated faithfully to every standby, so replication offers no protection at all.
+   - Point in time recovery with continuous log archiving, so the database can be rewound to the second before the mistake.
+   - Flashback capability where the DBMS provides it.
+   - A delayed standby, replaying the log an hour behind, so there is time to intervene.
+   - Least privilege: no application account should be able to DROP a table or run an unrestricted DELETE.
+   - Mandatory review and testing of any script that touches production, and the discipline of running the SELECT before the DELETE.
+   - Explicit transactions rather than autocommit for manual work, so that a mistake can be rolled back.
+
+   Protection against corruption:
+   - Page and block checksums to detect silent corruption early.
+   - Regular integrity checks, such as DBCC CHECKDB or its equivalent.
+   - ECC memory, which corrects the single bit errors that would otherwise corrupt data invisibly.
+   - Write ahead logging, which is what makes crash recovery possible.
+
+   Protection against malicious loss:
+   - Ransomware defence: immutable and offline backups, network segmentation, endpoint detection, prompt patching and least privilege.
+   - Insider threat: segregation of duties, dual authorisation for destructive operations, privileged access management with session recording, and complete audit logging.
+   - Encryption at rest, so that a stolen disk or backup tape yields nothing.
+
+   Process and governance:
+   - Documented RPO and RTO agreed with the business, since every technical choice follows from them.
+   - Monitoring with alerting on replication lag, backup failure and unusual deletion volumes.
+   - A rehearsed incident response and disaster recovery plan.
+   - Regular audit and compliance review.
+
+   - The two points that matter most in practice: first, replication protects against hardware and site failure but not against human error, so point in time recovery is indispensable; and second, the commonest cause of catastrophic loss is not the absence of backups but the discovery at the critical moment that they cannot be restored.
 
 ## PL/SQL & Database Triggers (6)
 
 1. **Explain Database Trigger with example.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+
+   Answer: A trigger is a named block of procedural code stored in the database and executed automatically by the DBMS when a specified event occurs on a specified table. It is never called explicitly by an application.
+
+   Its components:
+   - Event: `INSERT`, `UPDATE` or `DELETE`.
+   - Timing: `BEFORE`, `AFTER`, or `INSTEAD OF`, which is used on views.
+   - Level: `FOR EACH ROW`, which fires once per affected row, or statement level, which fires once per statement.
+   - Body: the code executed, with access to the pseudo-records `OLD` and `NEW` holding the values before and after the change.
+
+   Example, maintaining an audit trail of salary changes:
+
+   ```sql
+   CREATE TABLE Salary_Audit (
+       audit_id   INT AUTO_INCREMENT PRIMARY KEY,
+       emp_id     INT,
+       old_salary DECIMAL(10,2),
+       new_salary DECIMAL(10,2),
+       changed_on DATETIME,
+       changed_by VARCHAR(50)
+   );
+
+   CREATE TRIGGER trg_salary_audit
+   AFTER UPDATE ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF OLD.salary <> NEW.salary THEN
+           INSERT INTO Salary_Audit (emp_id, old_salary, new_salary, changed_on, changed_by)
+           VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW(), CURRENT_USER());
+       END IF;
+   END;
+   ```
+
+   - When any statement updates a salary, the trigger fires automatically and records who changed what and when. No application can bypass it, which is why this is the standard way of implementing an audit trail in a bank.
+
+   Second example, enforcing a business rule that a CHECK constraint cannot express:
+
+   ```sql
+   CREATE TRIGGER trg_check_balance
+   BEFORE INSERT ON Transaction
+   FOR EACH ROW
+   BEGIN
+       DECLARE current_balance DECIMAL(15,2);
+       SELECT balance INTO current_balance FROM Account WHERE acc_no = NEW.acc_no;
+       IF NEW.type = 'Withdrawal' AND NEW.amount > current_balance THEN
+           SIGNAL SQLSTATE '45000'
+           SET MESSAGE_TEXT = 'Insufficient balance';
+       END IF;
+   END;
+   ```
+
+   Uses: audit trails; enforcing complex business rules; maintaining derived or summary columns automatically; preventing invalid operations; and archiving deleted rows.
+
+   Disadvantages that should be stated: a trigger executes invisibly, so behaviour becomes hard to predict and to debug; it adds overhead to every affected statement; a chain of triggers firing one another is very difficult to trace; and triggers can make a bulk load extremely slow. For these reasons they should be used sparingly and documented carefully.
 2. **Database program with base and high- level language (SQL) to find out the interest rate from the given database table.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
 
+
+   Answer: The requirement is to compute an interest rate or an interest amount from a table, which is done either in pure SQL or in a procedural extension such as PL/SQL.
+
+   Assumed table: `Account(acc_no, acc_type, balance, open_date)` and `Interest_Rate(acc_type, rate)`.
+
+   Approach 1, plain SQL, which is preferable whenever the logic can be expressed as a query:
+
+   ```sql
+   -- Look up the rate for each account and compute the annual interest
+   SELECT a.acc_no,
+          a.acc_type,
+          a.balance,
+          r.rate,
+          ROUND(a.balance * r.rate / 100, 2) AS annual_interest
+   FROM   Account a
+   JOIN   Interest_Rate r ON a.acc_type = r.acc_type;
+   ```
+
+   ```sql
+   -- Rate decided by a rule rather than by a lookup table
+   SELECT acc_no, balance,
+          CASE
+              WHEN acc_type = 'Fixed'   AND balance >= 1000000 THEN 9.0
+              WHEN acc_type = 'Fixed'                          THEN 8.0
+              WHEN acc_type = 'Savings' AND balance >= 500000  THEN 5.0
+              WHEN acc_type = 'Savings'                        THEN 4.0
+              ELSE 0
+          END AS interest_rate
+   FROM   Account;
+   ```
+
+   Approach 2, a PL/SQL stored function, used when the logic is procedural or is needed in many places:
+
+   ```sql
+   CREATE FUNCTION get_interest_rate(p_acc_type VARCHAR(20), p_balance DECIMAL(15,2))
+   RETURNS DECIMAL(5,2)
+   DETERMINISTIC
+   BEGIN
+       DECLARE v_rate DECIMAL(5,2);
+
+       IF p_acc_type = 'Fixed' THEN
+           SET v_rate = IF(p_balance >= 1000000, 9.0, 8.0);
+       ELSEIF p_acc_type = 'Savings' THEN
+           SET v_rate = IF(p_balance >= 500000, 5.0, 4.0);
+       ELSE
+           SET v_rate = 0;
+       END IF;
+
+       RETURN v_rate;
+   END;
+   ```
+
+   Using it:
+
+   ```sql
+   SELECT acc_no, balance,
+          get_interest_rate(acc_type, balance) AS rate,
+          ROUND(balance * get_interest_rate(acc_type, balance) / 100, 2) AS interest
+   FROM   Account;
+   ```
+
+   Approach 3, a stored procedure that posts the interest, which is what a bank's month end job actually does:
+
+   ```sql
+   CREATE PROCEDURE post_monthly_interest()
+   BEGIN
+       DECLARE done INT DEFAULT 0;
+       DECLARE v_acc VARCHAR(20);
+       DECLARE v_bal DECIMAL(15,2);
+       DECLARE v_rate DECIMAL(5,2);
+       DECLARE cur CURSOR FOR SELECT acc_no, balance, acc_type FROM Account;
+       DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+
+       START TRANSACTION;
+       OPEN cur;
+       read_loop: LOOP
+           FETCH cur INTO v_acc, v_bal, v_rate;
+           IF done THEN LEAVE read_loop; END IF;
+           UPDATE Account
+           SET    balance = balance + (v_bal * v_rate / 1200)
+           WHERE  acc_no = v_acc;
+       END LOOP;
+       CLOSE cur;
+       COMMIT;
+   END;
+   ```
+
+   Points that earn marks:
+   - Prefer set based SQL to a cursor loop. A single UPDATE over the whole table is very much faster than a row by row loop, and cursors should be used only when the logic genuinely cannot be expressed as a set operation.
+   - Use `DECIMAL` for money, never `FLOAT`, because floating point introduces rounding errors that are unacceptable in financial calculation.
+   - Wrap the posting in a transaction, so that a failure part way through does not leave half the accounts credited.
+   - Monthly interest is the annual rate divided by 12, hence the division by 1200 rather than 100. <!-- verify -->
 3. **(c) Define dynamic SQL and trigger with examples.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
 
+
+   Answer:
+
+   Dynamic SQL:
+   - Dynamic SQL is SQL whose statement text is constructed at run time as a string and then compiled and executed, rather than being fixed when the program is written. Static or embedded SQL, by contrast, is fixed at compile time.
+   - It is used when the table name, the column list, the WHERE conditions or the ORDER BY clause are not known until the program runs, for example in a report builder with user selected filters, or in an administrative script that must operate on a table whose name is supplied as a parameter.
+
+   ```sql
+   -- MySQL
+   SET @table_name = 'Employee';
+   SET @sql = CONCAT('SELECT * FROM ', @table_name, ' WHERE salary > ?');
+   PREPARE stmt FROM @sql;
+   SET @min_salary = 50000;
+   EXECUTE stmt USING @min_salary;
+   DEALLOCATE PREPARE stmt;
+   ```
+
+   ```sql
+   -- Oracle PL/SQL
+   DECLARE
+       v_sql VARCHAR2(200);
+       v_count NUMBER;
+   BEGIN
+       v_sql := 'SELECT COUNT(*) FROM Employee WHERE dept_id = :d';
+       EXECUTE IMMEDIATE v_sql INTO v_count USING 10;
+       DBMS_OUTPUT.PUT_LINE(v_count);
+   END;
+   ```
+
+   Advantages: flexibility, since one routine can serve many tables or many combinations of filters, and it avoids writing a separate query for every possible case.
+   Disadvantages, which must be stated: it cannot be syntax checked at compile time, so errors appear only at run time; the query plan cannot always be cached, so performance suffers; and above all it is the principal route to SQL injection. Any value inserted into the string must be passed as a bound parameter, never concatenated, and any identifier such as a table name must be validated against a whitelist.
+
+   Trigger:
+   - A trigger is a named block of procedural code stored in the database and executed automatically by the DBMS when a defined event occurs on a defined table. It cannot be called explicitly.
+   - Its parts: the event, that is INSERT, UPDATE or DELETE; the timing, that is BEFORE, AFTER or INSTEAD OF; the level, that is FOR EACH ROW or per statement; and the body, which may refer to `OLD` and `NEW`.
+
+   ```sql
+   CREATE TRIGGER trg_audit_salary
+   AFTER UPDATE ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF OLD.salary <> NEW.salary THEN
+           INSERT INTO Salary_Audit(emp_id, old_salary, new_salary, changed_on)
+           VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW());
+       END IF;
+   END;
+   ```
+
+   - Uses: audit trails, enforcing rules a CHECK constraint cannot express, maintaining derived columns, and preventing invalid operations by raising an error in a BEFORE trigger.
+   - Disadvantages: it executes invisibly, so behaviour is hard to predict and debug; it adds overhead to every affected statement; and chains of triggers are very difficult to trace.
 4. **(b) Describe the application of trigger in database.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
 
+
+   Answer: Applications of triggers in a database:
+
+   - Audit trail: recording who changed what and when, into a separate audit table. This is the commonest application and it is a regulatory requirement in banking, because the trigger cannot be bypassed by any application or by a manual correction.
+   - Enforcing complex business rules that a CHECK constraint cannot express, particularly rules that must consult another table. Example: a withdrawal must not exceed the balance plus the overdraft limit; a discount above 20 percent requires a manager's approval; an order cannot be placed for a product that is out of stock.
+   - Maintaining derived or summary columns automatically: updating an account balance when a transaction is inserted, keeping a running total, or maintaining a count of child rows on the parent. This is a controlled denormalisation whose consistency the trigger guarantees.
+   - Enforcing referential actions beyond what CASCADE provides, for example archiving a deleted row rather than losing it.
+   - Validation and prevention: a BEFORE trigger can inspect the incoming values and raise an error, so the operation is refused rather than corrected afterwards.
+   - Automatic value generation: setting a created_on timestamp, a modified_by user, or a sequence value where the DBMS lacks a suitable default.
+   - Maintaining a history or versioning table, so that every previous version of a row is preserved.
+   - Replication and synchronisation: writing changes to a queue table for another system to consume.
+   - Enforcing security rules, such as refusing changes outside working hours or from an unexpected user.
+   - Cascading updates that the declarative constraints cannot express.
+
+   Example combining validation and audit:
+
+   ```sql
+   CREATE TRIGGER trg_before_withdrawal
+   BEFORE INSERT ON Transaction
+   FOR EACH ROW
+   BEGIN
+       DECLARE v_balance DECIMAL(15,2);
+       SELECT balance INTO v_balance FROM Account WHERE acc_no = NEW.acc_no;
+
+       IF NEW.txn_type = 'Withdrawal' AND NEW.amount > v_balance THEN
+           SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Insufficient balance';
+       END IF;
+   END;
+   ```
+
+   Disadvantages that a complete answer must mention:
+   - Triggers execute invisibly. A developer reading the application code sees no sign of them, so behaviour becomes surprising and debugging becomes difficult.
+   - They add overhead to every affected statement, and a row level trigger on a bulk load of a million rows fires a million times.
+   - A trigger that modifies a table with its own trigger creates a chain, and a cycle produces infinite recursion.
+   - They complicate replication and migration.
+   - The general rule: use a declarative constraint if one will do, and reserve triggers for auditing and for rules that genuinely cannot be expressed otherwise.
 5. **Suppose, ‘Employee’ table (emp_id, emp_name, dept_id, salary) and ‘Department’ table (dept_id, dept_name, increment_dept). Create a tigger to increment the salary of the employee by 10% whose salary is above 30000.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 
+
+   Answer:
+
+   ```sql
+   DELIMITER $$
+
+   CREATE TRIGGER trg_increment_salary
+   BEFORE INSERT ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF NEW.salary > 30000 THEN
+           SET NEW.salary = NEW.salary * 1.10;
+       END IF;
+   END$$
+
+   DELIMITER ;
+   ```
+
+   - A `BEFORE INSERT` trigger is used so that the value can be modified before it is written, which is what `SET NEW.salary` does. An `AFTER` trigger cannot change the row being inserted.
+
+   If the requirement is instead to increase the salary of existing employees, a trigger is the wrong tool and a simple UPDATE is correct:
+
+   ```sql
+   UPDATE Employee
+   SET    salary = salary * 1.10
+   WHERE  salary > 30000;
+   ```
+
+   If the increment is to be applied whenever a salary is updated:
+
+   ```sql
+   DELIMITER $$
+
+   CREATE TRIGGER trg_salary_update
+   BEFORE UPDATE ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF NEW.salary > 30000 AND NEW.salary <> OLD.salary THEN
+           SET NEW.salary = NEW.salary * 1.10;
+       END IF;
+   END$$
+
+   DELIMITER ;
+   ```
+
+   Using the increment percentage held in the Department table, which is evidently what `increment_dept` is for:
+
+   ```sql
+   DELIMITER $$
+
+   CREATE TRIGGER trg_dept_increment
+   BEFORE INSERT ON Employee
+   FOR EACH ROW
+   BEGIN
+       DECLARE v_increment DECIMAL(5,2);
+
+       SELECT increment_dept INTO v_increment
+       FROM   Department
+       WHERE  dept_id = NEW.dept_id;
+
+       IF NEW.salary > 30000 AND v_increment IS NOT NULL THEN
+           SET NEW.salary = NEW.salary * (1 + v_increment / 100);
+       END IF;
+   END$$
+
+   DELIMITER ;
+   ```
+
+   Points worth stating:
+   - `DELIMITER` must be changed before creating a multi-statement trigger in the MySQL client, because the semicolons inside the body would otherwise be read as the end of the CREATE statement.
+   - `NEW` refers to the incoming row and `OLD` to the previous version; `OLD` is available in UPDATE and DELETE triggers, and `NEW` in INSERT and UPDATE triggers.
+   - A BEFORE trigger may modify `NEW`; an AFTER trigger may not.
+   - The condition `NEW.salary <> OLD.salary` in the update version prevents the increment being re-applied when some other column is changed.
+   - Caution: a trigger that silently alters the value being inserted is surprising to anyone reading the application code, and it will apply to a bulk data migration as well. Such logic is often better placed in a stored procedure that is called deliberately.
 6. **(a) What is the purpose of database trigger? Explain with an example.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
+
+
+   Answer:
+
+   Purpose of a database trigger:
+   - A trigger exists to make the database itself react automatically to a change in the data, so that a rule is enforced or an action performed regardless of which application, tool or user made the change. Its defining virtue is that it cannot be bypassed.
+   - The specific purposes are: maintaining an audit trail; enforcing business rules that a declarative constraint cannot express; keeping derived or summary data consistent; validating and rejecting invalid operations before they take effect; generating values automatically; archiving deleted rows; and propagating changes to other tables or to a queue.
+
+   Example, an audit trail on the Employee table:
+
+   ```sql
+   CREATE TABLE Employee_Audit (
+       audit_id    INT AUTO_INCREMENT PRIMARY KEY,
+       emp_id      INT,
+       action_type VARCHAR(10),
+       old_salary  DECIMAL(10,2),
+       new_salary  DECIMAL(10,2),
+       changed_by  VARCHAR(50),
+       changed_on  DATETIME
+   );
+
+   DELIMITER $$
+
+   CREATE TRIGGER trg_employee_audit
+   AFTER UPDATE ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF OLD.salary <> NEW.salary THEN
+           INSERT INTO Employee_Audit
+               (emp_id, action_type, old_salary, new_salary, changed_by, changed_on)
+           VALUES
+               (OLD.emp_id, 'UPDATE', OLD.salary, NEW.salary, CURRENT_USER(), NOW());
+       END IF;
+   END$$
+
+   DELIMITER ;
+   ```
+
+   How it works:
+   - Any statement that changes a salary — from the payroll application, from a reporting tool, or typed by an administrator at the command line — causes the trigger to fire and write a row to the audit table.
+   - `OLD` holds the values before the change and `NEW` the values after, so both can be recorded.
+   - `AFTER` is used because the audit records what has happened; a `BEFORE` trigger would be used to validate or modify the incoming value.
+   - The condition `OLD.salary <> NEW.salary` prevents an audit row being written when some other column was changed.
+
+   Why this matters:
+   - Placing the audit logic in the application would leave it incomplete, because a direct SQL statement would bypass it entirely. In a bank, where the auditor must be able to prove that every change is recorded, only a database level mechanism is acceptable.
+
+   Disadvantages to state for balance: triggers execute invisibly, so behaviour is hard to predict and debug; they add overhead to every affected statement and can make bulk operations very slow; and chains of triggers firing one another are difficult to trace.
 
 ## Indexing & Query Optimization (B-Tree, B+ Tree) (6)
 
