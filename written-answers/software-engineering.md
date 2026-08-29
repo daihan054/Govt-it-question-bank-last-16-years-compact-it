@@ -5967,6 +5967,64 @@
    * **c) Open Source and Modification: Buy and small modifications cost 30 lac, for large modifications cost 50 lac. Possibility is 80% for large.**
    **What way you choose and why? Explain with calculation.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 292 (ET: BUET)]*
 
+
+   Answer: The decision is made by computing the expected cost of each option, where expected cost is the sum of each possible cost multiplied by its probability. The option with the lowest expected cost is chosen, and then the non-cost factors are checked.
+
+   Decision tree:
+
+   ```mermaid
+   flowchart LR
+     R[ERP Decision] --> B["Buy<br/>50 lac (certain)"]
+     R --> D[Build]
+     R --> O[Open Source + Modify]
+     D --> D1["Easy process<br/>p = 0.30 · 40 lac"]
+     D --> D2["Hard process<br/>p = 0.70 · 50 lac"]
+     O --> O1["Small modification<br/>p = 0.20 · 30 lac"]
+     O --> O2["Large modification<br/>p = 0.80 · 50 lac"]
+   ```
+
+   Option (i) Buy
+
+   The cost is fixed, so there is nothing to weight.
+
+   Expected cost = 50 lac
+
+   Option (ii) Build
+
+   Given: easy process costs 40 lac with probability 30 percent. Therefore the hard process costs 50 lac with probability 100 − 30 = 70 percent.
+
+   Expected cost = (0.30 × 40) + (0.70 × 50)
+   = 12 + 35
+
+   Final answer for build = 47 lac
+
+   Option (iii) Open source and modification
+
+   Given: large modification costs 50 lac with probability 80 percent. Therefore small modification costs 30 lac with probability 100 − 80 = 20 percent.
+
+   Expected cost = (0.20 × 30) + (0.80 × 50)
+   = 6 + 40
+
+   Final answer for open source = 46 lac
+
+   Comparison
+
+   | Option | Expected cost |
+   |---|---|
+   | Buy | 50 lac |
+   | Build | 47 lac |
+   | Open source and modification | 46 lac |
+
+   Decision: choose option (iii), open source and modification, because it has the lowest expected cost, 46 lac. It saves 4 lac against buying and 1 lac against building.
+
+   Justification beyond the arithmetic, which a CEO must also weigh:
+   - The margin between building at 47 lac and modifying open source at 46 lac is only 1 lac, about 2 percent. That is well inside the error of any software estimate, so the numbers alone do not decide it; the qualitative factors become decisive.
+   - In favour of open source modification: the source code is available, so there is no vendor lock-in and no licence fee; the base product is already tested by a large community; delivery is faster than building from nothing; the company keeps the freedom to modify further later.
+   - Risks of that option: the 80 percent probability of large modification is high, which means the team will be working deep inside somebody else's code; the quality of that code, the availability of documentation and the licence terms, particularly whether the GPL forces the company to publish its own modifications, must all be checked before committing.
+   - Building gives complete control and an exact fit to the requirement, and builds in-house expertise, but takes the longest and carries the whole maintenance burden.
+   - Buying is the most expensive and gives the least control, but it is the only option with a certain cost and no schedule risk, and it usually comes with vendor support.
+
+   Recommendation as stated in an answer: choose open source with modification on the expected value calculation, subject to a two-week technical evaluation of the candidate open source ERP, its licence and its code quality. If that evaluation shows the code base is poor, the next best option on the calculation is to build, at 47 lac.
 2. **Given the following values, compute function point when all complexity adjustment factor (CAF) and weighting factors are average.**
    * **User Input = 50**
    * **User Output = 40**
@@ -5974,9 +6032,199 @@
    * **User Files = 6**
    * **External Interface = 4** *[Combined Bank Assistant Programmer 09.06.2023 compact it 492 (ET: N/A)]*
 
+
+   Answer: Function point calculation.
+
+   Formula
+
+   FP = UFP × CAF
+
+   where UFP is the Unadjusted Function Point count and CAF is the Complexity Adjustment Factor.
+
+   UFP = Σ (count of each function type × its weighting factor)
+
+   CAF = 0.65 + 0.01 × Σ Fi, where the 14 general system characteristics Fi are each rated from 0 to 5.
+
+   Standard weighting factors
+
+   | Function type | Simple | Average | Complex |
+   |---|---|---|---|
+   | External Inputs (User Input) | 3 | 4 | 6 |
+   | External Outputs (User Output) | 4 | 5 | 7 |
+   | External Inquiries (User Inquiries) | 3 | 4 | 6 |
+   | Internal Logical Files (User Files) | 7 | 10 | 15 |
+   | External Interface Files | 5 | 7 | 10 |
+
+   All weighting factors are average, so the average column is used.
+
+   Step 1 — compute UFP
+
+   | Function type | Count | Weight (average) | Product |
+   |---|---|---|---|
+   | User Input | 50 | 4 | 200 |
+   | User Output | 40 | 5 | 200 |
+   | User Inquiries | 35 | 4 | 140 |
+   | User Files | 6 | 10 | 60 |
+   | External Interface | 4 | 7 | 28 |
+   | Total (UFP) | | | 628 |
+
+   UFP = (50 × 4) + (40 × 5) + (35 × 4) + (6 × 10) + (4 × 7)
+   = 200 + 200 + 140 + 60 + 28
+   = 628
+
+   Step 2 — compute CAF
+
+   All 14 complexity adjustment factors are average. On the 0 to 5 scale, average means 3.
+
+   Σ Fi = 14 × 3 = 42
+
+   CAF = 0.65 + 0.01 × 42
+   = 0.65 + 0.42
+   = 1.07
+
+   Step 3 — compute FP
+
+   FP = UFP × CAF
+   = 628 × 1.07
+   = 671.96
+
+   Final answer: FP ≈ 672 function points.
+
+   Note on the 14 general system characteristics that make up Σ Fi: data communication, distributed data processing, performance, heavily used configuration, transaction rate, online data entry, end-user efficiency, online update, complex processing, reusability, installation ease, operational ease, multiple sites, and facilitation of change. Each is rated 0 for no influence, 1 incidental, 2 moderate, 3 average, 4 significant, 5 essential.
 3. **Your company earn a contract to develop a system for a government agency. The project team is considering whether to build the system from scratch, or reuse existing partial-experience components, or buy an available software product and modify it to meet the requirement. As analyst you have made a decision tree as a figure.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 459 (ET: BUET)]*
 
+
+   Answer: The decision is taken by computing the expected cost at each node of the decision tree, working from the leaves back to the root, and then choosing the branch with the lowest expected cost.
+
+   The standard decision tree for this build, reuse, buy or contract problem, with the usual figures:
+
+   ```mermaid
+   flowchart LR
+     R[System X] --> B[Build]
+     R --> U[Reuse]
+     R --> Y[Buy]
+     R --> C[Contract]
+     B --> B1["Simple  p=0.30  $380K"]
+     B --> B2["Difficult  p=0.70  $450K"]
+     U --> U1["Minor changes  p=0.40  $275K"]
+     U --> U2[Major changes  p=0.60]
+     U2 --> U3["Simple  p=0.20  $310K"]
+     U2 --> U4["Complex  p=0.80  $490K"]
+     Y --> Y1["Minor changes  p=0.70  $210K"]
+     Y --> Y2["Major changes  p=0.30  $400K"]
+     C --> C1["Without changes  p=0.60  $350K"]
+     C --> C2["With changes  p=0.40  $500K"]
+   ```
+
+   Expected value at a node = Σ (probability of each path × cost of that path).
+
+   Path 1 — Build
+
+   Expected cost = (0.30 × $380K) + (0.70 × $450K)
+   = $114K + $315K
+   = $429K
+
+   Path 2 — Reuse
+
+   First the major-changes sub-node, because it must be resolved before the reuse node:
+
+   Expected cost of major changes = (0.20 × $310K) + (0.80 × $490K)
+   = $62K + $392K
+   = $454K
+
+   Then the reuse node itself:
+
+   Expected cost = (0.40 × $275K) + (0.60 × $454K)
+   = $110K + $272.4K
+   = $382.4K
+
+   Path 3 — Buy
+
+   Expected cost = (0.70 × $210K) + (0.30 × $400K)
+   = $147K + $120K
+   = $267K
+
+   Path 4 — Contract
+
+   Expected cost = (0.60 × $350K) + (0.40 × $500K)
+   = $210K + $200K
+   = $410K
+
+   Summary
+
+   | Option | Expected cost |
+   |---|---|
+   | Build | $429K |
+   | Reuse | $382.4K |
+   | Buy | $267K |
+   | Contract | $410K |
+
+   Final answer: buy the available software product and modify it, because its expected cost of $267K is the lowest of the four options. It is about $115K cheaper than reuse, $143K cheaper than contracting out and $162K cheaper than building from scratch.
+
+   Cautions that must accompany the recommendation, since a decision tree gives only the expected cost:
+   - Expected value assumes the estimates and the probabilities are reliable. Both are judgements, so a sensitivity analysis should be run: if the probability of major changes on the buy path rose from 0.30 to 0.60, the buy cost would become (0.4 × 210) + (0.6 × 400) = $324K, still the lowest, so the conclusion is robust here.
+   - Expected value ignores risk appetite. Buy has a spread from $210K to $400K; a purely certain option at a slightly higher price might be preferred by an organisation that cannot tolerate an overrun.
+   - Cost is not the only criterion. For a government agency, the decision must also weigh data sovereignty and security, vendor lock-in, availability of local support, the ability to modify the system when the law changes, and the total cost of ownership over the system's life rather than the acquisition cost alone.
+   - Buying means depending on the vendor for future changes; building keeps the knowledge in-house. For a system with frequently changing statutory rules, that argument can outweigh a $160K difference.
 4. **Which factors are to be consider as software pricing?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 678 (ET: N/A)]*
+
+
+   Answer: Factors to be considered in software pricing.
+
+   Software pricing is not simply the cost of development plus a margin. The price is a business decision, and the following factors enter into it.
+
+   Cost-based factors
+   - Development effort: the person-months of analysis, design, coding and testing, from an estimate such as COCOMO or function point analysis, multiplied by the loaded cost of a person-month.
+   - Hardware and infrastructure cost: servers, licences for development tools, cloud charges.
+   - Third-party costs: bought components, libraries, APIs, database licences and payment gateway charges.
+   - Overheads: office, management, administration, electricity, internet.
+   - Training and documentation cost.
+   - Maintenance and support cost over the expected life, which frequently exceeds the development cost.
+   - Required profit margin.
+
+   Market factors
+   - Competition: what competitors charge for a comparable product. A price far above the market must be justified by visible extra value.
+   - Market conditions and the state of the economy.
+   - The size of the market and the expected number of customers; a product sold to thousands can be priced far below one sold to three government agencies.
+   - Market opportunity: a company entering a new market may price below cost deliberately to gain a foothold and reputation, expecting to profit from later contracts.
+   - Brand reputation of the supplier.
+
+   Customer and contract factors
+   - The customer's financial position and the value of the system to the customer. Software that saves a bank 10 crore taka a year can command a far higher price than software that saves 10 lakh.
+   - The customer's budget and procurement rules, which for a government agency are fixed and public.
+   - Contractual terms: fixed price, time and materials, or cost plus. In a fixed price contract the supplier carries the risk, so the price must include a risk premium.
+   - Payment schedule and the cost of money if payment is delayed.
+   - Penalty clauses for late delivery, which are a real cost and must be priced.
+   - Long-term relationship value: a lower price may be accepted for a first contract that opens a continuing relationship.
+
+   Risk and uncertainty factors
+   - Requirements volatility: unstable requirements mean rework, which must be priced or controlled by a change-control clause.
+   - Technical risk: a novel technology or an unfamiliar domain increases the contingency.
+   - Schedule pressure: compressing a schedule increases cost more than proportionally, because more people communicating produce less per head.
+   - Estimation uncertainty: a contingency of 10 to 25 percent is normally added.
+
+   Product and licensing factors
+   - The licensing model chosen: perpetual licence, annual subscription, per user, per server, per transaction, freemium, or usage based. The same product can be priced very differently under each.
+   - Number of users or sites, and whether the source code is delivered.
+   - Whether source code, intellectual property rights and the right to resell are transferred; transferring the IPR raises the price substantially, because the supplier loses the chance of reusing the work.
+   - Level of after-sales support: response times in the service level agreement, on-site presence, and hours of coverage.
+   - Warranty period and the cost of defect correction within it.
+   - Expected number of future versions, and whether upgrades are included.
+
+   Strategic factors
+   - Requirements volatility can be turned to advantage: quoting a low initial price with charges for changes.
+   - Cost of the alternative to the customer, including the cost of doing nothing.
+   - Whether the product creates a platform that generates further revenue, for example transaction fees.
+   - Legal and regulatory costs: VAT, tax, data protection compliance and certification.
+
+   The main pricing strategies that combine these factors
+   - Cost-plus pricing: total cost plus a fixed percentage. Simple and common in government contracts.
+   - Value-based pricing: priced by the benefit to the customer, not by the cost of building.
+   - Competitive or market pricing: priced against rivals.
+   - Penetration pricing: priced low to enter a market, raised later.
+   - Skimming: priced high at launch for early adopters, then lowered.
+
+   The essential point to state: cost sets the floor below which the supplier loses money, and the value to the customer sets the ceiling above which the customer will not buy. The price is negotiated between those two limits, and where it settles is decided by competition and by the relative bargaining strength of the two sides.
 
 ## IT Governance, Audit & Risk Management (3)
 
