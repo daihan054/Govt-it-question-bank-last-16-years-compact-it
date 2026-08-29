@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 43/239 subtopics · 493/2673 answers**
+**Overall: 44/239 subtopics · 495/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -107,7 +107,7 @@ Commit unit: one `##` subtopic.
 - [ ] Email & Messaging Security (Spam, Phishing) (2)
 - [ ] Buffer Overflow & Software Vulnerabilities (1)
 
-## computer-networks.md — 3/33 sections, 14/440 answers
+## computer-networks.md — 4/33 sections, 16/440 answers
 
 - [ ] Subnetting & IP Addressing (95)
 - [ ] OSI & TCP/IP Reference Model (43)
@@ -139,7 +139,7 @@ Commit unit: one `##` subtopic.
 - [ ] Satellite Communication (3)
 - [ ] Line Coding & Digital Encoding (2)
 - [ ] Address Resolution (ARP & RARP) (2)
-- [ ] VLANs & Subnetting Comparison (2)
+- [x] VLANs & Subnetting Comparison (2)
 - [x] Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (2)
 - [x] High Availability & Redundancy Protocols (VRRP, HSRP) (1)
 
