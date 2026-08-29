@@ -278,44 +278,427 @@ ii) 211.10.15.4
 
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
+
+   Answer: The OSI model, Open Systems Interconnection, developed by ISO in 1984, divides network communication into seven layers, each providing a defined service to the layer above it.
+
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+
+   From top to bottom:
+   - 7. Application
+   - 6. Presentation
+   - 5. Session
+   - 4. Transport
+   - 3. Network
+   - 2. Data Link
+   - 1. Physical
+
+   - Mnemonic, top down: All People Seem To Need Data Processing. Bottom up: Please Do Not Throw Sausage Pizza Away.
 2. **OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer: OSI model-er 7 ti layer ar tader kaj:
+
+   | # | Layer | Kaj |
+   |---|---|---|
+   | 7 | Application | Byabaharkari-r application-ke network seba deoa: file transfer, mail, web browsing, name lookup. Protocol: HTTP, FTP, SMTP, DNS |
+   | 6 | Presentation | Data-r format rupantor, encryption ar decryption, compression. Udahoron: SSL/TLS, JPEG, MPEG, ASCII |
+   | 5 | Session | Duti application-er modhye session toiri, rokkha ar bondho kora; dialogue control ar synchronization checkpoint |
+   | 4 | Transport | Process theke process-e sompurno data pouche deoa, segmentation ar reassembly, port number, flow ar error control. Protocol: TCP, UDP |
+   | 3 | Network | Logical IP address deoa, bhinno network-er modhye routing ar path nirbachon, fragmentation. Protocol: IP, ICMP, OSPF, RIP; device: Router |
+   | 2 | Data link | Frame toiri kora, MAC address diye local delivery, CRC diye error detection, medium access control. Udahoron: Ethernet, PPP, ARP; device: Switch |
+   | 1 | Physical | Bit ke bidyut, aalo ba radio signal-e rupantor kore pathano; cable, connector, voltage ar data rate nirdharon. Device: Hub, repeater, cable |
+
+   Ei star gulor shomogrik bhumika:
+   - Jotil network jogajog-ke choto choto swadhin ongshe bhag kore, tai protita layer alada bhabe design, bujhe ar debug kora jay.
+   - Protita layer nicher layer-er seba nay ar uporer layer-ke seba dey, kintu bhitorer kajkormo lukiye rakhe. Ei abstraction-er karone kono ek layer-er projukti bodlale baki gulo bodlate hoy na — jemon copper theke fibre-e gele application-er kichu bodlay na.
+   - Bhinno prostutkarok-er equipment eke oporer sathe kaj korte pare, karon protita layer-er interface ar protocol standard kora.
+   - Troubleshooting sohoj hoy: layer 1 theke shuru kore uporer dike egole somossa kothay ta dhora pore.
+   - Data pathanor somoy protita layer nijer header jog kore, jake encapsulation bole, ar grohon-er somoy ulto kram-e khule ney.
 3. **What is the OSI model? Explain the functions of each layer with examples.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
+
+   Answer: The OSI, Open Systems Interconnection, model is a seven layer reference model developed by ISO in 1984 that describes how data moves from an application on one computer to an application on another, dividing the whole task into seven independent layers.
+
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+
+   Function of each layer with an example:
+   - Physical: sends raw bits as signals. Example, the electrical voltage on a UTP cable or the light pulse in a fibre; a hub works here.
+   - Data link: builds frames and delivers them between two directly connected devices using MAC addresses. Example, an Ethernet switch forwarding a frame to the port where 00:1A:2B:3C:4D:5E lives.
+   - Network: gives logical addresses and routes packets between different networks. Example, a router sending a packet destined for 8.8.8.8 out of its Internet interface.
+   - Transport: delivers data between processes, with ports, segmentation and reliability. Example, TCP port 443 carrying a web session and retransmitting a lost segment.
+   - Session: opens, manages and closes the conversation. Example, a remote procedure call or a database session that must be reopened after a disconnection.
+   - Presentation: translates, encrypts and compresses. Example, TLS encrypting the data, or a JPEG image being decoded into pixels.
+   - Application: gives the user's program access to the network. Example, a browser issuing an HTTP GET, or a mail client using SMTP.
+
+   - Encapsulation: as data goes down the stack each layer adds its header, Data becomes Segment, then Packet, then Frame, then Bits; at the receiver the process is reversed, which is called decapsulation.
 4. **(b) Name the OSI layers and give one example of a cyber threat at any tree of those layers.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer: The seven OSI layers, from the top: Application, Presentation, Session, Transport, Network, Data Link and Physical.
+
+   Cyber threats at three of those layers:
+   - Application layer: SQL injection, cross site scripting and an HTTP flood DDoS attack. A crafted input string reaches the database and lets the attacker read or delete data. Defence: input validation, prepared statements and a web application firewall.
+   - Transport layer: a TCP SYN flood. The attacker sends thousands of SYN packets with spoofed sources and never completes the handshake, so the server's connection table fills up and legitimate users are refused. Defence: SYN cookies, rate limiting and a firewall.
+   - Network layer: IP spoofing and ICMP based attacks such as smurf or ping of death, and route hijacking through forged BGP announcements. Defence: ingress and egress filtering, RPKI, and blocking directed broadcasts.
+   - Data link layer, if a fourth is wanted: ARP spoofing, which lets an attacker place himself in the middle of a conversation, and MAC flooding, which turns a switch into a hub. Defence: dynamic ARP inspection and port security.
+   - Physical layer: cable tapping, jamming and simple theft or destruction of equipment. Defence: locked rooms, conduit, CCTV and fibre, which shows a detectable disturbance when tapped.
 5. **Write bottom to top OSI reference Model.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
+
+   Answer: OSI reference model from bottom to top:
+
+   - 1. Physical
+   - 2. Data Link
+   - 3. Network
+   - 4. Transport
+   - 5. Session
+   - 6. Presentation
+   - 7. Application
+
+   - Mnemonic: Please Do Not Throw Sausage Pizza Away.
 6. **In the TCP/IP model, how is data known in the different layers?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+
+   Answer: In the TCP/IP model the unit of data, that is the Protocol Data Unit, has a different name at each layer.
+
+   | TCP/IP layer | Name of the data unit |
+   |---|---|
+   | Application | Data, or message |
+   | Transport | Segment for TCP, Datagram for UDP |
+   | Internet | Packet, also called an IP datagram |
+   | Network Access | Frame at the data link sublayer, and Bits at the physical sublayer |
+
+   - As the data goes down the stack, each layer adds its own header to the unit it received; this is encapsulation. At the receiving end each layer removes its header, which is decapsulation.
+   - Example: an HTTP request is Data, TCP adds a header with the ports and it becomes a Segment, IP adds a header with the addresses and it becomes a Packet, Ethernet adds a header and a CRC trailer and it becomes a Frame, and finally the NIC transmits it as Bits.
 7. **(b) Explain the TCP/IP protocol switch layers.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1444 (ET: N/A)]*
 
+
+   Answer: The TCP/IP protocol suite is organised into four layers, each with its own protocols.
+
+   | Layer | Corresponding OSI layers | Function | Protocols | Devices |
+   |---|---|---|---|---|
+   | Application | Application, Presentation, Session | Provides network services directly to the user's programs: web, mail, file transfer, name resolution | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH | Proxy server, application firewall, gateway |
+   | Transport | Transport | End to end delivery between processes, port addressing, segmentation, reliability, flow and congestion control | TCP, UDP, SCTP | Gateway, layer 4 load balancer |
+   | Internet | Network | Logical addressing, routing between networks, packet forwarding, fragmentation | IP, ICMP, IGMP, ARP, RARP, OSPF, BGP | Router, layer 3 switch |
+   | Network Access, that is Link | Data link, Physical | Framing, MAC addressing, medium access, and physical transmission of bits over the medium | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay | Switch, bridge, hub, NIC, cable, repeater |
+
+   ```mermaid
+   graph TD
+       A["Application layer: HTTP, HTTPS, FTP, SMTP, DNS, DHCP, SNMP, Telnet, SSH"] --> B["Transport layer: TCP, UDP"]
+       B --> C["Internet layer: IP, ICMP, IGMP, ARP, OSPF, BGP"]
+       C --> D["Network Access layer: Ethernet, Wi-Fi 802.11, PPP, HDLC"]
+       D --> E["Physical medium: copper, fibre, radio"]
+   ```
+
+   - The Application layer of TCP/IP absorbs the Application, Presentation and Session layers of OSI, and the Network Access layer absorbs the Data Link and Physical layers.
+   - Data is encapsulated on the way down, Data to Segment to Packet to Frame to Bits, and decapsulated on the way up.
 8. **(b) Draw the diagram of TCP/IP protocol suite and mention the name of protocols used in different layers of TCP/IP.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
 
+
+   Answer:
+
+   ```mermaid
+   graph TD
+       A["Application layer: HTTP, HTTPS, FTP, SMTP, DNS, DHCP, SNMP, Telnet, SSH"] --> B["Transport layer: TCP, UDP"]
+       B --> C["Internet layer: IP, ICMP, IGMP, ARP, OSPF, BGP"]
+       C --> D["Network Access layer: Ethernet, Wi-Fi 802.11, PPP, HDLC"]
+       D --> E["Physical medium: copper, fibre, radio"]
+   ```
+
+   Protocols used in each layer:
+
+   | Layer | Corresponding OSI layers | Function | Protocols | Devices |
+   |---|---|---|---|---|
+   | Application | Application, Presentation, Session | Provides network services directly to the user's programs: web, mail, file transfer, name resolution | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH | Proxy server, application firewall, gateway |
+   | Transport | Transport | End to end delivery between processes, port addressing, segmentation, reliability, flow and congestion control | TCP, UDP, SCTP | Gateway, layer 4 load balancer |
+   | Internet | Network | Logical addressing, routing between networks, packet forwarding, fragmentation | IP, ICMP, IGMP, ARP, RARP, OSPF, BGP | Router, layer 3 switch |
+   | Network Access, that is Link | Data link, Physical | Framing, MAC addressing, medium access, and physical transmission of bits over the medium | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay | Switch, bridge, hub, NIC, cable, repeater |
+
+   - Note on ARP: it sits between the Internet and Network Access layers, since it maps an IP address to a MAC address, and it is usually shown at the Network Access layer in the TCP/IP model.
 9. **How many Layers of OSI?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+
+   Answer: The OSI model has 7 layers.
+
+   - From bottom to top: Physical, Data Link, Network, Transport, Session, Presentation and Application.
 10. **রাউটার OSI এর কোন লেয়ারে থাকে?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+
+   Answer: Router OSI model-er Network layer, mane Layer 3-e kaj kore.
+
+   - Eta packet-er destination IP address dekhe routing table-e longest prefix match kore best next hop bachai kore.
+   - Ei sathe TTL komay, dorkar hole fragmentation kore ar broadcast block kore, tai protita interface alada broadcast domain toiri kore.
+   - Tulonar jonno: Hub o repeater Layer 1-e, Switch o Bridge Layer 2-e, Layer 3 switch o Router Layer 3-e, ar Gateway ba Firewall Layer 4 theke 7 porjonto kaj korte pare.
 11. **Write the name of OSI layers.** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
+
+   Answer: The names of the OSI layers:
+
+   From top to bottom:
+   - 7. Application
+   - 6. Presentation
+   - 5. Session
+   - 4. Transport
+   - 3. Network
+   - 2. Data Link
+   - 1. Physical
+
+   - Mnemonic, top down: All People Seem To Need Data Processing. Bottom up: Please Do Not Throw Sausage Pizza Away.
 12. **Write the name of OSI layers protocol for every layers.** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
+
+   Answer: Protocols used at each layer of the OSI model:
+
+   | Layer | Protocols |
+   |---|---|
+   | 7. Application | HTTP, HTTPS, FTP, TFTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH, NFS |
+   | 6. Presentation | SSL, TLS, JPEG, GIF, MPEG, MIME, ASCII, EBCDIC, and compression formats |
+   | 5. Session | NetBIOS, RPC, PPTP, SIP, SQL sessions, NFS session control |
+   | 4. Transport | TCP, UDP, SCTP, DCCP |
+   | 3. Network | IP, IPv6, ICMP, IGMP, IPsec, OSPF, RIP, EIGRP, BGP |
+   | 2. Data Link | Ethernet 802.3, Wi-Fi 802.11, PPP, HDLC, Frame Relay, ATM, ARP, RARP, STP, VLAN 802.1Q |
+   | 1. Physical | Ethernet physical specifications, RS-232, DSL, ISDN, USB, Bluetooth radio, SONET, and the cable and connector standards |
 13. **Tabular representation of TCP/IP layer, functions of each layer, Associate protocols, device, and software in each layer. Different types of network firewalls. Explain NGFW compared to traditional firewall.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 301 (ET: BIBM)]*
 
+
+   Answer:
+
+   TCP/IP layers, functions, protocols, devices and software:
+
+   | Layer | Corresponding OSI layers | Function | Protocols | Devices |
+   |---|---|---|---|---|
+   | Application | Application, Presentation, Session | Provides network services directly to the user's programs: web, mail, file transfer, name resolution | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH | Proxy server, application firewall, gateway |
+   | Transport | Transport | End to end delivery between processes, port addressing, segmentation, reliability, flow and congestion control | TCP, UDP, SCTP | Gateway, layer 4 load balancer |
+   | Internet | Network | Logical addressing, routing between networks, packet forwarding, fragmentation | IP, ICMP, IGMP, ARP, RARP, OSPF, BGP | Router, layer 3 switch |
+   | Network Access, that is Link | Data link, Physical | Framing, MAC addressing, medium access, and physical transmission of bits over the medium | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay | Switch, bridge, hub, NIC, cable, repeater |
+
+   Software at each layer, to complete the table: browsers, mail clients and web servers at the Application layer; the operating system's TCP/IP socket stack at the Transport and Internet layers; and the NIC driver and firmware at the Network Access layer.
+
+   Types of network firewall:
+   - Packet filtering firewall: examines each packet's source and destination IP, port and protocol against an ACL. Stateless, very fast and cheap, but it cannot see the context and is easily fooled by a fragmented or spoofed packet.
+   - Stateful inspection firewall: keeps a connection table and allows a packet only if it belongs to a legitimate existing session. Far more secure than packet filtering, and it is the standard type today.
+   - Circuit level gateway: works at the session layer, verifying the TCP handshake before allowing the session, but it does not inspect the content.
+   - Application level gateway, that is a proxy firewall: terminates the connection and rebuilds it, inspecting the full application content such as the HTTP request. Very secure but slower, and one proxy is needed per protocol.
+   - Next Generation Firewall, NGFW: combines all of the above with deep packet inspection and additional security services.
+   - Others worth naming: a host based software firewall, a Web Application Firewall for HTTP only, and a cloud or firewall-as-a-service deployment.
+
+   NGFW compared with a traditional firewall:
+
+   | Point | Traditional firewall | NGFW |
+   |---|---|---|
+   | Inspection depth | Header only, that is IP, port and protocol | Deep packet inspection of the payload as well |
+   | Layers covered | 3 and 4 | 3 to 7, including the application layer |
+   | Application awareness | None; it sees only port 443 | Identifies the actual application, so Facebook and Dropbox on the same port 443 are distinguished |
+   | User awareness | None; it sees only IP addresses | Integrates with Active Directory or LDAP, so policy can be written per user or group |
+   | Threat prevention | None built in | Integrated IPS, antivirus, anti-bot and sandboxing |
+   | Encrypted traffic | Cannot inspect it | TLS inspection, decrypt, inspect and re-encrypt |
+   | Threat intelligence | None | Cloud feeds of known bad IPs, domains and file hashes, updated continuously |
+   | Policy style | Allow port 443 from this subnet | Allow the Finance group to use Salesforce but not file sharing |
+   | Performance cost | Very low | High, so it needs far more processing power |
+   | Cost and complexity | Low | High, with subscription licences for the security services |
+
+   - In short, a traditional firewall asks where the packet is going, while an NGFW asks who is sending it, what application it is, and whether it is carrying an attack.
 14. **Explain TCP/IP model and its protocol and device.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
 
+
+   Answer: The TCP/IP model is the four layer practical architecture on which the Internet actually runs, developed by DARPA in the 1970s and named after its two principal protocols.
+
+   | Layer | Corresponding OSI layers | Function | Protocols | Devices |
+   |---|---|---|---|---|
+   | Application | Application, Presentation, Session | Provides network services directly to the user's programs: web, mail, file transfer, name resolution | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH | Proxy server, application firewall, gateway |
+   | Transport | Transport | End to end delivery between processes, port addressing, segmentation, reliability, flow and congestion control | TCP, UDP, SCTP | Gateway, layer 4 load balancer |
+   | Internet | Network | Logical addressing, routing between networks, packet forwarding, fragmentation | IP, ICMP, IGMP, ARP, RARP, OSPF, BGP | Router, layer 3 switch |
+   | Network Access, that is Link | Data link, Physical | Framing, MAC addressing, medium access, and physical transmission of bits over the medium | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay | Switch, bridge, hub, NIC, cable, repeater |
+
+   ```mermaid
+   graph TD
+       A["Application layer: HTTP, HTTPS, FTP, SMTP, DNS, DHCP, SNMP, Telnet, SSH"] --> B["Transport layer: TCP, UDP"]
+       B --> C["Internet layer: IP, ICMP, IGMP, ARP, OSPF, BGP"]
+       C --> D["Network Access layer: Ethernet, Wi-Fi 802.11, PPP, HDLC"]
+       D --> E["Physical medium: copper, fibre, radio"]
+   ```
+
+   - Encapsulation: Data at the Application layer becomes a Segment at Transport, a Packet at Internet, a Frame at Network Access, and finally Bits on the wire.
+   - Compared with OSI, TCP/IP merges Application, Presentation and Session into one Application layer, and Data Link and Physical into one Network Access layer.
 15. **Write down the OSI model.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
 
+
+   Answer: The OSI model has seven layers, each providing a defined service to the layer above.
+
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+
+   From top to bottom:
+   - 7. Application
+   - 6. Presentation
+   - 5. Session
+   - 4. Transport
+   - 3. Network
+   - 2. Data Link
+   - 1. Physical
+
+   - Mnemonic, top down: All People Seem To Need Data Processing. Bottom up: Please Do Not Throw Sausage Pizza Away.
 16. **How many TCP/IP layer? Write its Layer name?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+
+   Answer: The TCP/IP model has 4 layers.
+
+   From top to bottom:
+   - 4. Application layer
+   - 3. Transport layer
+   - 2. Internet layer
+   - 1. Network Access layer, also called the Link or Network Interface layer
+
+   - A five layer hybrid version is also taught, in which the Network Access layer is split into a separate Data Link layer and Physical layer.
 17. **Differentiate between OSI Model and TCP/IP Model. Draw the diagram of 4 Layers of TCP/IP Model including the main function of each layer and related protocols. List some basic functions performed at MAC layer.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
+
+   Answer:
+
+   OSI model vs TCP/IP model:
+
+   | Point | OSI model | TCP/IP model |
+   |---|---|---|
+   | Number of layers | 7 | 4, or 5 in the hybrid form |
+   | Developed by | ISO, in 1984 | DARPA, in the 1970s |
+   | Nature | A theoretical reference model | A practical model built from working protocols |
+   | Order of creation | The model came first, the protocols afterwards | The protocols came first, the model was described afterwards |
+   | Layer separation | Presentation and Session are separate layers | Both are merged into the Application layer |
+   | Data link and Physical | Two separate layers | Merged into one Network Access layer |
+   | Protocol dependence | Protocol independent, a generic standard | Protocol dependent, built around TCP and IP |
+   | Transport layer service | Both connection oriented and connectionless | Both, TCP and UDP |
+   | Network layer service | Both connection oriented and connectionless | Connectionless only |
+   | Usage | Used for teaching, design and troubleshooting | Used in the real Internet |
+   | Reliability of the model | More detailed and clearer, but never implemented as a whole | Less clear in its layering, but proven in practice |
+
+   - The relationship in one line: OSI is the theory used to explain and troubleshoot networks, and TCP/IP is the practice actually running on them.
+
+   Four layers of the TCP/IP model, with functions and protocols:
+
+   ```mermaid
+   graph TD
+       A["Application layer: HTTP, HTTPS, FTP, SMTP, DNS, DHCP, SNMP, Telnet, SSH"] --> B["Transport layer: TCP, UDP"]
+       B --> C["Internet layer: IP, ICMP, IGMP, ARP, OSPF, BGP"]
+       C --> D["Network Access layer: Ethernet, Wi-Fi 802.11, PPP, HDLC"]
+       D --> E["Physical medium: copper, fibre, radio"]
+   ```
+
+   | Layer | Corresponding OSI layers | Function | Protocols | Devices |
+   |---|---|---|---|---|
+   | Application | Application, Presentation, Session | Provides network services directly to the user's programs: web, mail, file transfer, name resolution | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH | Proxy server, application firewall, gateway |
+   | Transport | Transport | End to end delivery between processes, port addressing, segmentation, reliability, flow and congestion control | TCP, UDP, SCTP | Gateway, layer 4 load balancer |
+   | Internet | Network | Logical addressing, routing between networks, packet forwarding, fragmentation | IP, ICMP, IGMP, ARP, RARP, OSPF, BGP | Router, layer 3 switch |
+   | Network Access, that is Link | Data link, Physical | Framing, MAC addressing, medium access, and physical transmission of bits over the medium | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay | Switch, bridge, hub, NIC, cable, repeater |
+
+   Basic functions performed at the MAC layer:
+   - Framing: adding the header and trailer to build a frame from the packet handed down by the network layer.
+   - Physical addressing: inserting the source and destination MAC addresses so the frame reaches the right device on the local link.
+   - Medium access control: deciding which station may transmit and when, using CSMA/CD on wired Ethernet and CSMA/CA on wireless.
+   - Collision handling: detecting a collision, sending a jam signal and applying binary exponential backoff.
+   - Error detection: computing and checking the CRC in the frame trailer, and discarding a corrupted frame.
+   - Frame delimiting and synchronisation, using the preamble and the start frame delimiter.
+   - Flow control between two directly connected devices, and Ethernet PAUSE frames.
+   - Filtering and forwarding decisions in a switch, based on the learned MAC address table.
+   - VLAN tagging with 802.1Q, and quality of service marking with 802.1p.
 18. **What is OSI Model? Write all layer name sequence should be top to bottom or bottom to top.** *[DESCO Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
 
+
+   Answer: The OSI model, Open Systems Interconnection, is a seven layer reference model developed by ISO in 1984 that describes how data travels from an application on one machine to an application on another, dividing the task into seven independent layers, each serving the layer above it.
+
+   Layer names from top to bottom:
+   - 7. Application
+   - 6. Presentation
+   - 5. Session
+   - 4. Transport
+   - 3. Network
+   - 2. Data Link
+   - 1. Physical
+
+   Layer names from bottom to top:
+   - 1. Physical
+   - 2. Data Link
+   - 3. Network
+   - 4. Transport
+   - 5. Session
+   - 6. Presentation
+   - 7. Application
+
+   - Which direction to write depends on the question: data being sent travels top to bottom, and data being received travels bottom to top. Both orders are correct as long as the numbering is kept consistent.
 19. **Difference between OSI model and TCP/IP model. Relation between Data, Segment, Packet and Bit in OSI model.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 510 (ET: MIST)]*
 
+
+   Answer:
+
+   Difference between OSI and TCP/IP:
+
+   | Point | OSI model | TCP/IP model |
+   |---|---|---|
+   | Number of layers | 7 | 4, or 5 in the hybrid form |
+   | Developed by | ISO, in 1984 | DARPA, in the 1970s |
+   | Nature | A theoretical reference model | A practical model built from working protocols |
+   | Order of creation | The model came first, the protocols afterwards | The protocols came first, the model was described afterwards |
+   | Layer separation | Presentation and Session are separate layers | Both are merged into the Application layer |
+   | Data link and Physical | Two separate layers | Merged into one Network Access layer |
+   | Protocol dependence | Protocol independent, a generic standard | Protocol dependent, built around TCP and IP |
+   | Transport layer service | Both connection oriented and connectionless | Both, TCP and UDP |
+   | Network layer service | Both connection oriented and connectionless | Connectionless only |
+   | Usage | Used for teaching, design and troubleshooting | Used in the real Internet |
+   | Reliability of the model | More detailed and clearer, but never implemented as a whole | Less clear in its layering, but proven in practice |
+
+   - The relationship in one line: OSI is the theory used to explain and troubleshoot networks, and TCP/IP is the practice actually running on them.
+
+   Relation between Data, Segment, Packet and Bit:
+   - These are the Protocol Data Units of successive layers, and each is the previous one wrapped in a new header. This process is called encapsulation.
+
+   | OSI layer | PDU name |
+   |---|---|
+   | Application, Presentation, Session | Data or message |
+   | Transport | Segment for TCP, Datagram for UDP |
+   | Network | Packet, also called a datagram |
+   | Data link | Frame |
+   | Physical | Bit |
+
+   - The chain when sending: the application produces Data; the transport layer adds a TCP or UDP header with port numbers, making a Segment; the network layer adds an IP header with the addresses, making a Packet; the data link layer adds a MAC header and a CRC trailer, making a Frame; and the physical layer converts the frame into Bits, that is signals on the medium.
+   - At the receiver the reverse happens, decapsulation, each layer stripping its own header and passing the remainder upwards.
+   - So Data, Segment, Packet, Frame and Bit are not different things; they are the same user information seen at successive layers with progressively more headers attached.
 20. **(a) List down the layers of OSI model in top-down manner.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 480 (ET: N/A)]*
 
+
+   Answer: Layers of the OSI model in top-down order:
+
+   From top to bottom:
+   - 7. Application
+   - 6. Presentation
+   - 5. Session
+   - 4. Transport
+   - 3. Network
+   - 2. Data Link
+   - 1. Physical
+
+   - Mnemonic, top down: All People Seem To Need Data Processing. Bottom up: Please Do Not Throw Sausage Pizza Away.
 21. **Fill up the following protocol table by work at which layer?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 452 (ET: BUET)]*
 | Protocol Name | Layer |
 |---|---|
@@ -325,49 +708,492 @@ ii) 211.10.15.4
 | Routing Information Protocol (RIP) |  |
 | User datagram protocol (UDP) |  |
 
+
+   Answer:
+
+   | Protocol Name | Layer |
+   |---|---|
+   | Carrier-Sense Multiple Access (CSMA) | Data Link layer, layer 2, specifically the MAC sublayer |
+   | Open Shortest Path First (OSPF) | Network layer, layer 3 |
+   | Transmission Control Protocol (TCP) | Transport layer, layer 4 |
+   | Routing Information Protocol (RIP) | Network layer, layer 3 |
+   | User Datagram Protocol (UDP) | Transport layer, layer 4 |
+
+   - CSMA is a medium access method, and medium access control is the lower sublayer of the data link layer.
+   - OSPF and RIP are routing protocols, and routing is the defining function of the network layer. A fine point worth adding: OSPF is carried directly inside IP as protocol 89 while RIP is carried inside UDP on port 520, but both perform a network layer function, so layer 3 is the expected answer for both.
+   - TCP and UDP provide end to end delivery between processes using port numbers, which is the transport layer.
 22. **Which layer is used to link the network support layers and user support layers?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: The Transport layer, layer 4, links the network support layers to the user support layers.
+
+   - The network support layers are Physical, Data Link and Network, layers 1 to 3, which are concerned with moving bits from one machine to another.
+   - The user support layers are Session, Presentation and Application, layers 5 to 7, which are concerned with the interoperability of software.
+   - The Transport layer sits between them and makes sure that the message delivered by the lower layers arrives complete, in order and at the correct process, so that the upper layers can work with it. This is why it is described as the bridge between the two groups.
 23. **What is the number for the Network layer and the support layer?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer:
+
+   - The Network layer is layer 3 of the OSI model.
+   - The network support layers are layers 1, 2 and 3, that is Physical, Data Link and Network.
+   - The user support layers are layers 5, 6 and 7, that is Session, Presentation and Application.
+   - Layer 4, the Transport layer, links the two groups together.
 24. **(c) Write the all layers of OSI model.** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
 
+
+   Answer: All the layers of the OSI model:
+
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
 25. **In order to prevent that the company decided to add end to end encryption techniques which layer of the OSI model is suitable to work in considering parameters like development time, software maintainability and development cost, Give reasons for your concepts.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 438 (ET: BIBM)]*
 
+
+   Answer: The Presentation layer, layer 6, is the suitable place for end to end encryption.
+
+   Reasons:
+   - The Presentation layer exists precisely for data representation, that is translation, compression and encryption and decryption. Putting encryption there matches the model's own design intent, so the design is clean rather than a workaround.
+   - True end to end protection: the data is encrypted before it leaves the sending host and decrypted only at the receiving host, so every intermediate router, switch and ISP sees only ciphertext. Encrypting at layer 2 or 3 would protect only one hop or one tunnel segment.
+   - Development time: mature standard libraries already exist at this layer, notably SSL and TLS, so the team implements a well tested library rather than writing cryptography itself. This is the fastest route to a working, reviewed solution.
+   - Software maintainability: encryption is written once at this layer and every application above it inherits the protection, so a change of algorithm or a key rotation is a single change in one place. If it were built into each application at layer 7, every application would have to be modified separately, and any application that was missed would leak plaintext.
+   - Development cost: one shared implementation is far cheaper than either writing cryptography into every application or buying and operating dedicated hardware encryptors for the network layer.
+   - Independence from the network: because it sits above the transport layer, it works unchanged over Ethernet, Wi-Fi, a leased line or the Internet, so no network equipment has to be replaced.
+   - Comparison with the alternatives worth stating: IPsec at layer 3 is strong and transparent to applications but is a network wide project, needs router support and is harder to configure and troubleshoot; link encryption at layer 2 protects only a single link and leaves the data exposed at each intermediate node; and application layer encryption gives the finest control but multiplies development and maintenance cost across every application.
+   - Practical note: in real systems TLS is described as sitting between the transport and application layers, and it is the concrete implementation of exactly this Presentation layer role, which is why HTTPS is the standard answer in practice.
 26. **What is TCP/IP model? Briefly explain TCP/IP model.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 837 (ET: N/A)], [EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
+
+   Answer: The TCP/IP model, also called the Internet protocol suite or the DoD model, is the four layer architecture on which the Internet actually operates. It was developed by DARPA in the 1970s and named after its two core protocols, TCP and IP.
+
+   | Layer | Corresponding OSI layers | Function | Protocols | Devices |
+   |---|---|---|---|---|
+   | Application | Application, Presentation, Session | Provides network services directly to the user's programs: web, mail, file transfer, name resolution | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH | Proxy server, application firewall, gateway |
+   | Transport | Transport | End to end delivery between processes, port addressing, segmentation, reliability, flow and congestion control | TCP, UDP, SCTP | Gateway, layer 4 load balancer |
+   | Internet | Network | Logical addressing, routing between networks, packet forwarding, fragmentation | IP, ICMP, IGMP, ARP, RARP, OSPF, BGP | Router, layer 3 switch |
+   | Network Access, that is Link | Data link, Physical | Framing, MAC addressing, medium access, and physical transmission of bits over the medium | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay | Switch, bridge, hub, NIC, cable, repeater |
+
+   ```mermaid
+   graph TD
+       A["Application layer: HTTP, HTTPS, FTP, SMTP, DNS, DHCP, SNMP, Telnet, SSH"] --> B["Transport layer: TCP, UDP"]
+       B --> C["Internet layer: IP, ICMP, IGMP, ARP, OSPF, BGP"]
+       C --> D["Network Access layer: Ethernet, Wi-Fi 802.11, PPP, HDLC"]
+       D --> E["Physical medium: copper, fibre, radio"]
+   ```
+
+   Brief explanation of each layer:
+   - Application layer: gives the user's programs direct access to network services. It combines the OSI Application, Presentation and Session layers, so formatting, encryption and session control are handled here too. Example: a browser issuing an HTTP GET.
+   - Transport layer: delivers data from process to process using port numbers. TCP provides a reliable, ordered, connection oriented byte stream with flow and congestion control; UDP provides a fast connectionless datagram service with no guarantee.
+   - Internet layer: gives every host a logical IP address and routes packets across different networks, choosing the path with the routing table and handling fragmentation and TTL.
+   - Network Access layer: puts the packet into a frame with MAC addresses, controls access to the medium and finally transmits the bits as signals. It combines the OSI Data Link and Physical layers.
+   - Encapsulation: Data becomes a Segment, then a Packet, then a Frame, then Bits, and the reverse at the receiver.
 27. **(a) What is OSI model? Explain how two computers can exchange information using the OSI model.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
 
+
+   Answer: The OSI model, Open Systems Interconnection, is a seven layer reference model published by ISO in 1984 which describes how communication between two systems is divided into seven independent layers, each providing a defined service to the layer above and using the service of the layer below.
+
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+
+   How two computers exchange information using the OSI model:
+   - The process is called encapsulation on the way down and decapsulation on the way up. Each layer on the sending machine talks logically to the same layer on the receiving machine, which is called peer to peer communication, but physically the data travels down the stack, across the medium and back up.
+   - At the sender, the application produces Data. The Presentation layer encrypts and formats it. The Session layer opens and marks the session.
+   - The Transport layer breaks it into Segments, adds source and destination port numbers, sequence numbers and a checksum.
+   - The Network layer adds the source and destination IP addresses, making a Packet, and decides the route.
+   - The Data Link layer adds the source and destination MAC addresses of the next hop and a CRC trailer, making a Frame.
+   - The Physical layer converts the frame into Bits and transmits them as electrical, optical or radio signals.
+   - Along the way, a switch reads only the frame's MAC header, and a router strips the frame, reads the IP header, chooses the next hop, and builds a new frame. So intermediate devices work only up to their own layer.
+   - At the receiver everything is reversed: the Physical layer recovers the bits, the Data Link layer checks the CRC and removes the frame header, the Network layer confirms the destination IP and removes the packet header, the Transport layer reorders the segments, acknowledges them and removes its header, and the Session, Presentation and Application layers restore the session, decrypt and finally hand the original Data to the receiving program.
+
+   ```mermaid
+   graph TD
+       A["Sender: Application -> Presentation -> Session"] --> B["Transport: adds ports, makes Segment"]
+       B --> C["Network: adds IP addresses, makes Packet"]
+       C --> D["Data Link: adds MAC and CRC, makes Frame"]
+       D --> E["Physical: transmits Bits over the medium"]
+       E --> F["Receiver: Physical -> Data Link -> Network"]
+       F --> G["Transport -> Session -> Presentation -> Application"]
+   ```
 28. **TCP/IP model এর Layer গুলোর কাজ লিখুন।** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
+
+   Answer: TCP/IP model-er char ti layer ar tader kaj:
+
+   | Layer | Kaj | Protocol |
+   |---|---|---|
+   | Application | Byabaharkari-r program-ke network seba deoa: web browsing, email, file transfer, name resolution. OSI-r Application, Presentation ar Session — ei tin ti layer-er kaj ekhane ekshathe hoy | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH |
+   | Transport | Ek process theke aar ek process-e data pouche deoa; port number diye application chena, boro data ke segment-e bhaga ar abar jora, error o flow control | TCP (nirbhorjoggo, connection-oriented), UDP (druto, connectionless) |
+   | Internet | Logical IP address deoa, bhinno network-er modhye routing kore best path bachai kora, fragmentation ar TTL babosthapona | IP, ICMP, IGMP, ARP, OSPF, RIP, BGP |
+   | Network Access | Packet ke frame-e mure MAC address boshano, medium access niyontron, CRC diye error dhora, ar sesh porjonto bit ke signal hisebe medium-e pathano | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay |
+
+   ```mermaid
+   graph TD
+       A["Application layer: HTTP, HTTPS, FTP, SMTP, DNS, DHCP, SNMP, Telnet, SSH"] --> B["Transport layer: TCP, UDP"]
+       B --> C["Internet layer: IP, ICMP, IGMP, ARP, OSPF, BGP"]
+       C --> D["Network Access layer: Ethernet, Wi-Fi 802.11, PPP, HDLC"]
+       D --> E["Physical medium: copper, fibre, radio"]
+   ```
+
+   - Encapsulation: Application-e Data, Transport-e Segment, Internet-e Packet, Network Access-e Frame, ar sesh-e Bit. Grohonkari prante thik ulto kram-e khola hoy.
 29. **What is OSI model? Write different layers of OSI model.** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 
+
+   Answer: The OSI model, Open Systems Interconnection, is a seven layer reference model developed by ISO in 1984. It divides the whole task of network communication into seven layers, each performing a specific function and serving the layer above it, so that systems from different vendors can interoperate.
+
+   Different layers of the OSI model:
+
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+
+   From top to bottom:
+   - 7. Application
+   - 6. Presentation
+   - 5. Session
+   - 4. Transport
+   - 3. Network
+   - 2. Data Link
+   - 1. Physical
+
+   - Mnemonic, top down: All People Seem To Need Data Processing. Bottom up: Please Do Not Throw Sausage Pizza Away.
 30. **What is the difference between DOD and OSI model?** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 700 (ET: BUET)]*
 
+
+   Answer: The DoD model is another name for the TCP/IP model, since it was developed by the United States Department of Defense through DARPA. So this question is the comparison between the TCP/IP and OSI models.
+
+   | Point | OSI model | TCP/IP model |
+   |---|---|---|
+   | Number of layers | 7 | 4, or 5 in the hybrid form |
+   | Developed by | ISO, in 1984 | DARPA, in the 1970s |
+   | Nature | A theoretical reference model | A practical model built from working protocols |
+   | Order of creation | The model came first, the protocols afterwards | The protocols came first, the model was described afterwards |
+   | Layer separation | Presentation and Session are separate layers | Both are merged into the Application layer |
+   | Data link and Physical | Two separate layers | Merged into one Network Access layer |
+   | Protocol dependence | Protocol independent, a generic standard | Protocol dependent, built around TCP and IP |
+   | Transport layer service | Both connection oriented and connectionless | Both, TCP and UDP |
+   | Network layer service | Both connection oriented and connectionless | Connectionless only |
+   | Usage | Used for teaching, design and troubleshooting | Used in the real Internet |
+   | Reliability of the model | More detailed and clearer, but never implemented as a whole | Less clear in its layering, but proven in practice |
+
+   - The relationship in one line: OSI is the theory used to explain and troubleshoot networks, and TCP/IP is the practice actually running on them.
+
+   Layer mapping between the two:
+
+   | OSI layers | DoD, that is TCP/IP layer |
+   |---|---|
+   | 7 Application, 6 Presentation, 5 Session | Application, sometimes called Process |
+   | 4 Transport | Transport, sometimes called Host-to-Host |
+   | 3 Network | Internet |
+   | 2 Data Link, 1 Physical | Network Access, sometimes called Link |
 31. **What is PDU?** *[BARC Data Entry Officer 10.09.2022 compact it 702 (ET: N/A)]*
 
+
+   Answer: PDU stands for Protocol Data Unit. It is the name given to the unit of data handled at a particular layer of the protocol stack, that is the payload received from the layer above together with the header added by that layer.
+
+   | OSI layer | PDU name |
+   |---|---|
+   | Application, Presentation, Session | Data or message |
+   | Transport | Segment for TCP, Datagram for UDP |
+   | Network | Packet, also called a datagram |
+   | Data link | Frame |
+   | Physical | Bit |
+
+   - Each layer treats the whole PDU it receives from above as data and wraps it in its own header, which is called encapsulation. At the receiver each layer removes its own header, which is decapsulation.
+   - A PDU generally has three parts: the header with control information, the payload or Service Data Unit received from above, and in some cases a trailer, as in the Ethernet CRC.
+   - Knowing the PDU names matters in practice, because it tells you which device works where: a switch handles Frames, a router handles Packets, and a firewall may inspect Segments and Data.
 32. **(খ) Computer network এর OSI 7-Layer গুলো উদাহরণসহ লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 767 (ET: N/A)]*
 
+
+   Answer: OSI model-er 7 ti layer, udahoron shoho:
+
+   | # | Layer | Kaj |
+   |---|---|---|
+   | 7 | Application | Byabaharkari-r application-ke network seba deoa: file transfer, mail, web browsing, name lookup. Protocol: HTTP, FTP, SMTP, DNS |
+   | 6 | Presentation | Data-r format rupantor, encryption ar decryption, compression. Udahoron: SSL/TLS, JPEG, MPEG, ASCII |
+   | 5 | Session | Duti application-er modhye session toiri, rokkha ar bondho kora; dialogue control ar synchronization checkpoint |
+   | 4 | Transport | Process theke process-e sompurno data pouche deoa, segmentation ar reassembly, port number, flow ar error control. Protocol: TCP, UDP |
+   | 3 | Network | Logical IP address deoa, bhinno network-er modhye routing ar path nirbachon, fragmentation. Protocol: IP, ICMP, OSPF, RIP; device: Router |
+   | 2 | Data link | Frame toiri kora, MAC address diye local delivery, CRC diye error detection, medium access control. Udahoron: Ethernet, PPP, ARP; device: Switch |
+   | 1 | Physical | Bit ke bidyut, aalo ba radio signal-e rupantor kore pathano; cable, connector, voltage ar data rate nirdharon. Device: Hub, repeater, cable |
+
+   Protita layer-er udahoron:
+   - Physical: UTP cable-e voltage, fibre-e aalor pulse, Wi-Fi-r radio signal. Device: hub, repeater.
+   - Data link: Ethernet switch je frame-ti 00:1A:2B:3C:4D:5E ache shei port-e pathay; ARP diye IP theke MAC ber kora hoy.
+   - Network: router 8.8.8.8-er jonno packet-ti Internet interface diye pathay; `ping` command ICMP byabohar kore.
+   - Transport: TCP port 443-e ekti web session, jekhane hariye jaoa segment abar pathano hoy; DNS query-te UDP port 53.
+   - Session: database-er sathe ekti session, ba RPC call, ja bicched hole abar chalu korte hoy.
+   - Presentation: TLS diye data encrypt kora, JPEG image decode kora, ZIP compression.
+   - Application: browser-er HTTP GET request, mail client-er SMTP diye mail pathano, FTP diye file transfer.
 33. **Computer Network এ OSI Model এর Layer কয়টি?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+
+   Answer: Computer network-e OSI Model-er layer songkha 7 ti.
+
+   - Niche theke upore: Physical, Data Link, Network, Transport, Session, Presentation ar Application.
+   - Tulonay TCP/IP model-e 4 ti layer: Network Access, Internet, Transport ar Application.
 34. **OSI Model এর কাজ কী? এর লেয়ারসমূহ কী কী?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 811 (ET: IBA)]*
 
+
+   Answer:
+
+   OSI Model-er kaj:
+   - Duti bhinno system-er modhye jogajog kivabe hobe tar ekti standard reference kathamo deoa, jate bhinno prostutkarok-er equipment eke oporer sathe kaj korte pare.
+   - Jotil jogajog process-ke 7 ti swadhin ongshe bhag kora, tai protita ongsho alada bhabe design, tairi ar update kora jay.
+   - Protita layer nicher layer-er seba nay ar uporer layer-ke seba dey, kintu bhitorer kajkormo lukiye rakhe — ei abstraction-er karone ek layer bodlale onno layer bodlate hoy na.
+   - Troubleshooting-er ekti kathamo deoa: layer 1 theke shuru kore uporer dike egole somossa kothay ta thik korte pare.
+   - Encapsulation ar decapsulation-er niyom nirdharon kora, mane data pathanor somoy protita layer nijer header jog kore ar grohon-er somoy khule ney.
+   - Shikkha ar alochonar jonno ekti common bhasha deoa — "eta layer 3-er somossa" bolle shobai ekoi jinish bojhe.
+
+   Er layer shomuho:
+
+   | # | Layer | Kaj |
+   |---|---|---|
+   | 7 | Application | Byabaharkari-r application-ke network seba deoa: file transfer, mail, web browsing, name lookup. Protocol: HTTP, FTP, SMTP, DNS |
+   | 6 | Presentation | Data-r format rupantor, encryption ar decryption, compression. Udahoron: SSL/TLS, JPEG, MPEG, ASCII |
+   | 5 | Session | Duti application-er modhye session toiri, rokkha ar bondho kora; dialogue control ar synchronization checkpoint |
+   | 4 | Transport | Process theke process-e sompurno data pouche deoa, segmentation ar reassembly, port number, flow ar error control. Protocol: TCP, UDP |
+   | 3 | Network | Logical IP address deoa, bhinno network-er modhye routing ar path nirbachon, fragmentation. Protocol: IP, ICMP, OSPF, RIP; device: Router |
+   | 2 | Data link | Frame toiri kora, MAC address diye local delivery, CRC diye error detection, medium access control. Udahoron: Ethernet, PPP, ARP; device: Switch |
+   | 1 | Physical | Bit ke bidyut, aalo ba radio signal-e rupantor kore pathano; cable, connector, voltage ar data rate nirdharon. Device: Hub, repeater, cable |
 35. **Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
+
+   Answer: The correct option is (c) Transport layer.
+
+   - The Transport layer, layer 4, adds the source and destination port numbers to the segment, and it is the port number that identifies which application or process the data belongs to at the destination.
+   - TCP and UDP both carry a 16 bit source port and a 16 bit destination port in their headers, so a value from 0 to 65535 is possible.
+   - The Network layer, layer 3, deals with IP addresses, which identify the host, not the process. The Data Link layer deals with MAC addresses, which identify the interface on the local link.
+   - The combination of IP address and port number is called a socket, for example 192.168.1.10:443.
 36. **What is OSI model? Write down the name of OSI model layer.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 837 (ET: N/A)]*
 
+
+   Answer: The OSI model, Open Systems Interconnection, is a seven layer reference model published by ISO in 1984 which standardises how two different systems communicate, dividing the task into seven layers so that equipment from different vendors can interoperate.
+
+   Names of the OSI model layers:
+
+   From top to bottom:
+   - 7. Application
+   - 6. Presentation
+   - 5. Session
+   - 4. Transport
+   - 3. Network
+   - 2. Data Link
+   - 1. Physical
+
+   - Mnemonic, top down: All People Seem To Need Data Processing. Bottom up: Please Do Not Throw Sausage Pizza Away.
+
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
 37. **What is OSI and TCP/IP model and briefly explain?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 870-872 (ET: N/A)]*
 
+
+   Answer:
+
+   OSI model:
+   - The Open Systems Interconnection model, published by ISO in 1984, is a seven layer theoretical reference model describing how communication should be divided between two systems. It was designed before its protocols, and it is used mainly for teaching, design and troubleshooting.
+
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+
+   TCP/IP model:
+   - The Internet protocol suite, developed by DARPA in the 1970s, is a four layer practical model built from protocols that already worked. It is what the Internet actually runs on.
+
+   | Layer | Corresponding OSI layers | Function | Protocols | Devices |
+   |---|---|---|---|---|
+   | Application | Application, Presentation, Session | Provides network services directly to the user's programs: web, mail, file transfer, name resolution | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH | Proxy server, application firewall, gateway |
+   | Transport | Transport | End to end delivery between processes, port addressing, segmentation, reliability, flow and congestion control | TCP, UDP, SCTP | Gateway, layer 4 load balancer |
+   | Internet | Network | Logical addressing, routing between networks, packet forwarding, fragmentation | IP, ICMP, IGMP, ARP, RARP, OSPF, BGP | Router, layer 3 switch |
+   | Network Access, that is Link | Data link, Physical | Framing, MAC addressing, medium access, and physical transmission of bits over the medium | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay | Switch, bridge, hub, NIC, cable, repeater |
+
+   Comparison:
+
+   | Point | OSI model | TCP/IP model |
+   |---|---|---|
+   | Number of layers | 7 | 4, or 5 in the hybrid form |
+   | Developed by | ISO, in 1984 | DARPA, in the 1970s |
+   | Nature | A theoretical reference model | A practical model built from working protocols |
+   | Order of creation | The model came first, the protocols afterwards | The protocols came first, the model was described afterwards |
+   | Layer separation | Presentation and Session are separate layers | Both are merged into the Application layer |
+   | Data link and Physical | Two separate layers | Merged into one Network Access layer |
+   | Protocol dependence | Protocol independent, a generic standard | Protocol dependent, built around TCP and IP |
+   | Transport layer service | Both connection oriented and connectionless | Both, TCP and UDP |
+   | Network layer service | Both connection oriented and connectionless | Connectionless only |
+   | Usage | Used for teaching, design and troubleshooting | Used in the real Internet |
+   | Reliability of the model | More detailed and clearer, but never implemented as a whole | Less clear in its layering, but proven in practice |
+
+   - The relationship in one line: OSI is the theory used to explain and troubleshoot networks, and TCP/IP is the practice actually running on them.
 38. **TCP/IP protocol suite -এর বিভিন্ন স্তরের নাম লিখুন? HTTPs কী? এর ব্যবহারের প্রয়োজনীয়তা সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 882 (ET: N/A)]*
 
+
+   Answer:
+
+   TCP/IP protocol suite-er star gulor nam:
+   - Application layer
+   - Transport layer
+   - Internet layer
+   - Network Access layer, jake Link ba Network Interface layer-o bola hoy
+
+   HTTPS ki:
+   - HTTPS mane HyperText Transfer Protocol Secure. Eta sadharon HTTP-r sathe SSL/TLS encryption jog kora rup. Eta TCP port 443-e chole, jekhane HTTP chole port 80-e.
+   - Browser prothome server-er sathe TLS handshake kore: server-er digital certificate jachai kore, tarpor ekti session key toiri kore, ar erpor shob data oi key diye encrypt kore pathay.
+
+   Er byabohar-er proyojoniyota:
+   - Gopaniyota: password, credit card number, NID ba byaktigato tothyo encrypt hoye jay, tai majhkhane keu pathkorte pare na.
+   - Ontonihitota (integrity): data majhpothe bodle deoa hole TLS ta dhore fele, tai page ba transaction tampering thekano jay.
+   - Server-er porichoy jachai: certificate proman kore je apni asol bank-er site-ei acchen, kono nokol site-e non. Ei karone phishing ar man-in-the-middle attack kothin hoye jay.
+   - Public Wi-Fi-te nirapotta: khola network-e HTTP-r shob tothyo shohoje dhora jay, HTTPS-e jay na.
+   - Ain o compliance: online payment-er jonno PCI DSS ar byaktigato tothyo-r ain HTTPS baddhotamulok kore.
+   - Byabaharkari-r bishwas ar SEO: browser HTTP site-ke "Not Secure" dekhay, ar search engine HTTPS site-ke egiye rakhe.
+   - HTTP/2 ar HTTP/3-er moto notun ar druto protocol bastobe shudhu HTTPS-er upor-i chole.
 39. **বর্তমানে Hybrid network model জনপ্রিয় একটি মডেল। এই মডেলের পাঁচটি Layer হচ্ছে, Application, Transport, Physical, Data link and Network Layer। এদের কাজ দেওয়া আছে বামপাশের কলামে, ডানপাশের কলামে কাজ অনুসারে Layer গুলোর নাম লিখুন।** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975-976 (ET: BUET)]*
 
+
+   Answer: The five layers of the hybrid model, with the function that belongs to each.
+
+   | Function described | Layer |
+   |---|---|
+   | Transmits raw bits as electrical, optical or radio signals; defines cable, connector, voltage and data rate | Physical |
+   | Builds frames, adds MAC addresses, detects errors with CRC, controls access to the shared medium, hop to hop delivery | Data Link |
+   | Assigns logical IP addresses, routes packets between different networks, selects the path, performs fragmentation | Network |
+   | Process to process delivery using port numbers, segmentation and reassembly, reliability, flow and congestion control | Transport |
+   | Provides network services directly to the user's programs, and handles formatting, encryption and session control | Application |
+
+   Summary of the five layer hybrid model, from bottom to top:
+   - Physical: bits on the medium. Devices: hub, repeater, cable.
+   - Data Link: frames, MAC addressing, CRC. Protocols: Ethernet, PPP, ARP. Device: switch.
+   - Network: packets, IP addressing, routing. Protocols: IP, ICMP, OSPF. Device: router.
+   - Transport: segments, ports, reliability. Protocols: TCP, UDP.
+   - Application: data, user services. Protocols: HTTP, FTP, SMTP, DNS.
+
+   - This model is popular because it keeps the useful separation of Physical and Data Link from OSI while avoiding the Presentation and Session layers, which in practice are always implemented inside the application.
 40. **Write down the functionality of OSI model.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1007-1008 (ET: DU)]*
 
+
+   Answer: The functionality of the OSI model, layer by layer.
+
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+
+   Overall functionality of the model itself:
+   - It provides a standard framework so that equipment and software from different vendors can interoperate.
+   - It breaks a complex problem into seven manageable parts, so each can be designed, built and upgraded independently.
+   - Each layer hides its internal working from the others and offers only a defined service interface, so a change of technology in one layer, for example copper to fibre, does not disturb the rest.
+   - It defines encapsulation and decapsulation: each layer adds its header when sending and removes it when receiving.
+   - It gives a systematic method of troubleshooting, working upward from layer 1, and a common vocabulary for engineers.
 41. **OSI Model এর Layer গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
+
+   Answer: OSI Model-er layer gulo:
+
+   | # | Layer | Kaj |
+   |---|---|---|
+   | 7 | Application | Byabaharkari-r application-ke network seba deoa: file transfer, mail, web browsing, name lookup. Protocol: HTTP, FTP, SMTP, DNS |
+   | 6 | Presentation | Data-r format rupantor, encryption ar decryption, compression. Udahoron: SSL/TLS, JPEG, MPEG, ASCII |
+   | 5 | Session | Duti application-er modhye session toiri, rokkha ar bondho kora; dialogue control ar synchronization checkpoint |
+   | 4 | Transport | Process theke process-e sompurno data pouche deoa, segmentation ar reassembly, port number, flow ar error control. Protocol: TCP, UDP |
+   | 3 | Network | Logical IP address deoa, bhinno network-er modhye routing ar path nirbachon, fragmentation. Protocol: IP, ICMP, OSPF, RIP; device: Router |
+   | 2 | Data link | Frame toiri kora, MAC address diye local delivery, CRC diye error detection, medium access control. Udahoron: Ethernet, PPP, ARP; device: Switch |
+   | 1 | Physical | Bit ke bidyut, aalo ba radio signal-e rupantor kore pathano; cable, connector, voltage ar data rate nirdharon. Device: Hub, repeater, cable |
+
+   Alada kore protita layer-er borno:
+   - Physical layer: bit ke bidyut, aalo ba radio signal-e rupantor kore medium-e pathay. Cable-er dhoron, connector, voltage level, data rate ar topology ekhane nirdharito hoy. Device: hub, repeater, cable.
+   - Data link layer: packet ke frame-e mure source ar destination MAC address boshay, CRC diye error dhore, ar shared medium-e ke kokhon pathabe ta niyontron kore. Device: switch, bridge, NIC.
+   - Network layer: logical IP address dey ebong bhinno network-er modhye routing kore best path bachai kore. Fragmentation ar TTL-o ekhane. Device: router.
+   - Transport layer: ek process theke aar ek process-e sompurno data pouchay, port number dey, boro data ke segment kore, ar TCP-r khetre nirbhorjoggo delivery, flow ar congestion control dey.
+   - Session layer: duti application-er modhye session toiri, rokkha ar bondho kore; dialogue control ar checkpoint dey jate bicched hole abar shuru kora jay.
+   - Presentation layer: data-r format rupantor, encryption-decryption ar compression kore. Ekhane-i SSL/TLS, JPEG, MPEG.
+   - Application layer: byabaharkari-r program-ke network-er seba dey — web, mail, file transfer, name lookup.
 42. **(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1028 (ET: N/A)]*
 
+
+   Answer:
+
+   Network protocol:
+   - A network protocol is an agreed set of rules that governs how two devices communicate over a network. Without a shared protocol two devices cannot understand each other even when they are physically connected.
+   - It has three key elements: syntax, that is the format and structure of the data and the order of the fields; semantics, that is the meaning of each field and what action to take on it; and timing, that is when data may be sent and how fast.
+   - Protocols are arranged in layers, each using the services of the one below, and the whole set is called a protocol suite, for example TCP/IP.
+   - Examples: TCP, IP, HTTP, FTP, SMTP, DNS, ARP and OSPF.
+
+   Comparison of the TCP/IP suite and the OSI reference model:
+
+   | Point | OSI model | TCP/IP model |
+   |---|---|---|
+   | Number of layers | 7 | 4, or 5 in the hybrid form |
+   | Developed by | ISO, in 1984 | DARPA, in the 1970s |
+   | Nature | A theoretical reference model | A practical model built from working protocols |
+   | Order of creation | The model came first, the protocols afterwards | The protocols came first, the model was described afterwards |
+   | Layer separation | Presentation and Session are separate layers | Both are merged into the Application layer |
+   | Data link and Physical | Two separate layers | Merged into one Network Access layer |
+   | Protocol dependence | Protocol independent, a generic standard | Protocol dependent, built around TCP and IP |
+   | Transport layer service | Both connection oriented and connectionless | Both, TCP and UDP |
+   | Network layer service | Both connection oriented and connectionless | Connectionless only |
+   | Usage | Used for teaching, design and troubleshooting | Used in the real Internet |
+   | Reliability of the model | More detailed and clearer, but never implemented as a whole | Less clear in its layering, but proven in practice |
+
+   - The relationship in one line: OSI is the theory used to explain and troubleshoot networks, and TCP/IP is the practice actually running on them.
+
+   Layer mapping:
+
+   | OSI layers | TCP/IP layer |
+   |---|---|
+   | 7 Application, 6 Presentation, 5 Session | Application |
+   | 4 Transport | Transport |
+   | 3 Network | Internet |
+   | 2 Data Link, 1 Physical | Network Access |
 43. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1042-1043 (ET: DPI)]*
+
+
+   Answer: TCP/IP model-er char ti layer ar tader kaj sonkhipte:
+
+   - Application layer: byabaharkari-r program-ke seruashroy network seba dey — web browsing, email, file transfer, name resolution. OSI-r Application, Presentation ar Session — ei tin ti layer-er kaj ekhane ek-i shathe hoy, tai data-r format, encryption ar session niyontron-o ekhanei. Protocol: HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH.
+
+   - Transport layer: ek computer-er ekti process theke onno computer-er ekti process porjonto data pouche dey. Port number diye kon application ta bujhe ney, boro data ke segment-e bhag kore ar opor prante abar jora lagay. TCP nirbhorjoggo ar connection-oriented, sequence number, acknowledgement, retransmission, flow ar congestion control dey; UDP druto ar connectionless, kono nishchoyota dey na kintu overhead khub kom.
+
+   - Internet layer: protita host-ke logical IP address dey ebong bhinno network-er modhye packet routing kore best path bachai kore. Routing table-e longest prefix match, TTL komano, ar dorkar hole fragmentation ei layer-er kaj. Protocol: IP, ICMP, IGMP, ARP, OSPF, RIP, BGP; device: router.
+
+   - Network Access layer: packet ke frame-e mure source ar destination MAC address boshay, CRC diye error dhore, shared medium-e ke kokhon pathabe ta niyontron kore, ar sesh porjonto bit ke bidyut, aalo ba radio signal-e rupantor kore pathay. OSI-r Data Link ar Physical — dui layer-er kaj ekhane ek shathe. Udahoron: Ethernet, Wi-Fi 802.11, PPP, HDLC; device: switch, NIC, cable.
+
+   - Encapsulation: Application-e Data, Transport-e Segment, Internet-e Packet, Network Access-e Frame, ar medium-e Bit.
 
 ## Networking Fundamentals & Terminology (23)
 
