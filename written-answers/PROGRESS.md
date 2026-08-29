@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 17/239 subtopics · 133/2673 answers**
+**Overall: 18/239 subtopics · 140/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -19,14 +19,14 @@ Commit unit: one `##` subtopic.
 - [x] Association Rule Learning (Market Basket Analysis) (1)
 - [x] Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
-## algorithm.md — 5/14 sections, 81/113 answers
+## algorithm.md — 6/14 sections, 88/113 answers
 
 - [x] Sorting Algorithms & Complexity (27)
 - [x] Graph Traversal Algorithms (BFS & DFS) (17)
 - [x] Graph Algorithms (Shortest Path & Minimum Spanning Tree) (14)
 - [x] Algorithm Analysis & Asymptotic Complexity (12)
 - [x] Searching Algorithms (11)
-- [ ] Dynamic Programming & Greedy Algorithms (7)
+- [x] Dynamic Programming & Greedy Algorithms (7)
 - [ ] Graph Theory & Isomorphism (7)
 - [ ] Greedy Algorithms (Fractional Knapsack) (6)
 - [ ] Dynamic Programming (5)
