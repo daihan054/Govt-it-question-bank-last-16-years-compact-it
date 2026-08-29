@@ -891,31 +891,240 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. What is a communication system? Describe the different types of transmission modes with examples. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+
+   Answer: A communication system is the complete set of hardware, software and rules that carries information from a source to a destination over a medium.
+
+   Its five components are the message, the sender, the receiver, the transmission medium and the protocol. Noise is always present on the medium and the system must be designed to resist it.
+
+   Types of transmission mode, that is the direction of data flow:
+
+   - Simplex: data flows in one direction only. The sender can only send and the receiver can only receive, so the whole channel capacity is used in that one direction. Examples: keyboard to computer, computer to monitor, radio and TV broadcast, a public address system.
+   - Half duplex: data flows in both directions but only one direction at a time. The devices take turns, so there is a turnaround delay. Examples: walkie-talkie, CB radio, a hub based Ethernet segment using CSMA/CD.
+   - Full duplex: data flows in both directions simultaneously, so the capacity is shared between the two directions or two separate channels are used. Examples: telephone, mobile phone conversation, modern switched Ethernet, most Internet connections.
+
+   - A useful comparison: simplex uses the full capacity in one direction, half duplex uses the full capacity but alternately, and full duplex divides the capacity or the medium between two simultaneous directions.
 2. **How many types of modes are used in data transferring through networks? Briefly explain those modes. Differentiate between TCP vs UDP.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 338 (ET: BIBM)]*
 
+
+   Answer: Three modes of data transfer are used, based on the direction of flow.
+
+   - Simplex: data flows in one direction only. The sender can only send and the receiver can only receive, so the whole channel capacity is used in that one direction. Examples: keyboard to computer, computer to monitor, radio and TV broadcast, a public address system.
+   - Half duplex: data flows in both directions but only one direction at a time. The devices take turns, so there is a turnaround delay. Examples: walkie-talkie, CB radio, a hub based Ethernet segment using CSMA/CD.
+   - Full duplex: data flows in both directions simultaneously, so the capacity is shared between the two directions or two separate channels are used. Examples: telephone, mobile phone conversation, modern switched Ethernet, most Internet connections.
+
+   TCP vs UDP:
+
+   | Point | TCP | UDP |
+   |---|---|---|
+   | Connection | Connection oriented, three way handshake first | Connectionless, sends immediately |
+   | Reliability | Reliable, acknowledgements and retransmission | Unreliable, no acknowledgement |
+   | Ordering | Delivers in order using sequence numbers | No ordering, packets may arrive out of order |
+   | Header size | 20 to 60 bytes | 8 bytes |
+   | Flow and congestion control | Both present, sliding window and AIMD | Neither |
+   | Speed | Slower, more overhead | Faster, minimal overhead |
+   | Error handling | Checksum plus retransmission | Checksum only, corrupt packets are discarded |
+   | Broadcast and multicast | Not supported | Supported |
+   | Typical use | HTTP, HTTPS, FTP, SMTP, SSH, email, file transfer | DNS, DHCP, TFTP, SNMP, VoIP, video streaming, online gaming |
 3. **(b) Name and define five components of Data communication system with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 487 (ET: N/A)]*
 
+
+   Answer: A data communication system has five components.
+
+   - Message: the actual information to be communicated, that is text, number, image, audio or video.
+   - Sender: the device that originates and transmits the message, for example a computer, a phone or a camera.
+   - Receiver: the device that receives the message, for example a computer, a phone or a television.
+   - Transmission medium: the physical path over which the message travels, either guided such as twisted pair, coaxial or fibre, or unguided such as radio, microwave or infrared.
+   - Protocol: the set of rules that governs the communication, covering syntax, semantics and timing. Without a shared protocol the two devices cannot understand each other even if they are physically connected.
+
+   ```mermaid
+   graph LR
+       A["Sender / Source"] --> B["Transmitter / Encoder"]
+       B --> C["Transmission medium: guided or unguided"]
+       C --> D["Receiver / Decoder"]
+       D --> E["Destination"]
+       F["Protocol: rules of syntax, semantics and timing"] -.-> C
+       G["Noise"] -.-> C
+   ```
 4. **(a) Differentiate between half-duplex and full duplex transmission.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 489 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Half duplex | Full duplex |
+   |---|---|---|
+   | Direction | Both directions, but only one at a time | Both directions at the same time |
+   | Channel use | The whole capacity is used by whichever side is sending | The capacity is shared, or two separate channels are used |
+   | Turnaround delay | Present, the line must be reversed before the other side can send | None |
+   | Efficiency and throughput | Lower | Higher, up to double |
+   | Collision | Possible, so CSMA/CD is needed on shared media | Not possible on a dedicated link |
+   | Cost and complexity | Simpler and cheaper | More complex, needs two paths or echo cancellation |
+   | Examples | Walkie-talkie, CB radio, hub based Ethernet | Telephone, mobile call, switched Ethernet |
 5. **(গ) উদাহরণসহ Simplex, half-duplex এবং duplex কমিউনিকেশন সিস্টেমের পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
 
+
+   Answer:
+
+   | Bishoy | Simplex | Half duplex | Full duplex |
+   |---|---|---|---|
+   | Direction | Ek dike matro | Duidike, kintu ekbare ek dike | Duidike ekshathe |
+   | Channel capacity | Purota ek dike | Purota, kintu palakrome | Duidike bhag kore, ba duti alada channel |
+   | Turnaround delay | Prayojon nei | Ache | Nei |
+   | Performance | Shob theke kom nomonio | Moddhom | Shob theke bhalo |
+   | Cost | Shob theke kom | Moddhom | Shob theke beshi |
+   | Udahoron | Keyboard theke computer, monitor, radio o TV broadcast | Walkie-talkie, CB radio, hub bhittik Ethernet | Telephone, mobile call, switched Ethernet |
+
+   - Simplex-e receiver kokhono uttor dite pare na, tai eta shudhu one-way broadcast-er jonno.
+   - Half duplex-e ek pokkho sesh na kora porjonto onno pokkho opekkha kore, tai shared medium-e CSMA/CD lage.
+   - Full duplex-e duti alada path ba echo cancellation byabohar kore ekshathe pathano o grohon kora jay, tai throughput dwigun hote pare.
 6. **What is the difference between Synchronous and Asynchronous transmission?** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 723 (ET: N/A)], [RAKUB Assistant Network System Engineer 03.11.2023 compact it 550 (ET: BIBM)]*
 
+
+   Answer:
+
+   | Point | Synchronous transmission | Asynchronous transmission |
+   |---|---|---|
+   | Unit sent | A continuous block or frame of many characters | One character at a time, typically 8 bits |
+   | Start and stop bits | Not used | Each character is framed by a start bit and one or two stop bits |
+   | Timing | The sender and receiver clocks are synchronised, using a common clock or an embedded clock in the line coding | No common clock; the receiver resynchronises on every start bit |
+   | Gaps | No gap between characters; the block is sent as one stream | Variable gaps allowed between characters |
+   | Overhead | Low, only the frame header and trailer | High, about 20 to 25 percent extra for start and stop bits |
+   | Speed | Fast, suitable for high data rates | Slower |
+   | Cost and complexity | Costlier, needs clock recovery circuitry | Cheap and simple |
+   | Error handling | CRC over the whole frame | Parity bit per character |
+   | Examples | Ethernet, SONET, ATM, USB bulk transfer, ISDN | RS-232 serial port, keyboard to computer, old modems, UART |
+
+   - In short, asynchronous transmission suits slow and bursty traffic where simplicity matters, while synchronous transmission suits large continuous volumes of data where efficiency matters.
 7. **Briefly mention the main रणनीति impairments in telecommunication channel. Considering these impairments explain which communication is better between analog and digital communication systems?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
+
+   Answer: The main impairments in a telecommunication channel are the following.
+
+   - Attenuation: the signal loses strength with distance, since energy is absorbed by the medium. It is measured in dB, and it is also frequency dependent, so different components of the signal fade unequally. Amplifiers and repeaters correct it.
+   - Distortion: different frequency components travel at different speeds, so the shape of the signal changes and pulses spread out, causing intersymbol interference. Equalisers correct it.
+   - Noise: unwanted energy added to the signal. Thermal noise from random electron motion, intermodulation noise from non-linearity, crosstalk from a neighbouring pair, and impulse noise from lightning or switching spikes.
+   - Delay distortion and jitter: variation in propagation delay across frequencies and in time.
+   - Fading and multipath, particularly on wireless links, and echo on long copper circuits.
+
+   Which is better, analog or digital, considering these impairments:
+   - Digital communication is clearly better.
+   - In an analog system every amplifier boosts the noise together with the signal, so noise accumulates over every hop and the quality falls steadily along the route; it can never be recovered.
+   - In a digital system a regenerative repeater only has to decide whether the received symbol is a 0 or a 1. As long as the noise is below the decision threshold, a clean new pulse is produced and the noise is removed completely, so quality does not degrade with distance.
+   - Digital transmission can add error detection and correction such as CRC and Hamming or Reed-Solomon codes, which analog cannot.
+   - Digital signals can be encrypted, compressed, multiplexed by TDM and processed by cheap integrated circuits, and different kinds of traffic, voice, video and data, can share the same channel.
+   - The cost is a wider bandwidth requirement and the need for analog to digital conversion, but the benefits far outweigh this, which is why all modern networks are digital.
 8. **Describe the data communication system with necessary diagram.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
+
+   Answer: A data communication system is an arrangement of hardware and software that exchanges data between two devices through a transmission medium according to an agreed protocol.
+
+   Its five components:
+
+   - Message: the actual information to be communicated, that is text, number, image, audio or video.
+   - Sender: the device that originates and transmits the message, for example a computer, a phone or a camera.
+   - Receiver: the device that receives the message, for example a computer, a phone or a television.
+   - Transmission medium: the physical path over which the message travels, either guided such as twisted pair, coaxial or fibre, or unguided such as radio, microwave or infrared.
+   - Protocol: the set of rules that governs the communication, covering syntax, semantics and timing. Without a shared protocol the two devices cannot understand each other even if they are physically connected.
+
+   ```mermaid
+   graph LR
+       A["Sender / Source"] --> B["Transmitter / Encoder"]
+       B --> C["Transmission medium: guided or unguided"]
+       C --> D["Receiver / Decoder"]
+       D --> E["Destination"]
+       F["Protocol: rules of syntax, semantics and timing"] -.-> C
+       G["Noise"] -.-> C
+   ```
+
+   Characteristics that decide how effective the system is:
+   - Delivery: the data must reach the correct destination and only that destination.
+   - Accuracy: the data must arrive without alteration; errors must be detected and corrected.
+   - Timeliness: data must arrive in time, which is critical for real time traffic such as voice and video.
+   - Jitter: the variation in packet arrival time must be small, otherwise playback is uneven.
 9. **Write down the Data Communication elements.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
+
+   Answer: The elements of data communication are:
+
+   - Message: the actual information to be communicated, that is text, number, image, audio or video.
+   - Sender: the device that originates and transmits the message, for example a computer, a phone or a camera.
+   - Receiver: the device that receives the message, for example a computer, a phone or a television.
+   - Transmission medium: the physical path over which the message travels, either guided such as twisted pair, coaxial or fibre, or unguided such as radio, microwave or infrared.
+   - Protocol: the set of rules that governs the communication, covering syntax, semantics and timing. Without a shared protocol the two devices cannot understand each other even if they are physically connected.
 10. **(ক) Data Communication System এর পাঁচটি প্রধান Component এর চিত্রসহকারে বর্ণনা দিন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+
+   Answer: Data Communication System-er panchti prodhan component:
+
+   - Message: the actual information to be communicated, that is text, number, image, audio or video.
+   - Sender: the device that originates and transmits the message, for example a computer, a phone or a camera.
+   - Receiver: the device that receives the message, for example a computer, a phone or a television.
+   - Transmission medium: the physical path over which the message travels, either guided such as twisted pair, coaxial or fibre, or unguided such as radio, microwave or infrared.
+   - Protocol: the set of rules that governs the communication, covering syntax, semantics and timing. Without a shared protocol the two devices cannot understand each other even if they are physically connected.
+
+   ```mermaid
+   graph LR
+       A["Sender / Source"] --> B["Transmitter / Encoder"]
+       B --> C["Transmission medium: guided or unguided"]
+       C --> D["Receiver / Decoder"]
+       D --> E["Destination"]
+       F["Protocol: rules of syntax, semantics and timing"] -.-> C
+       G["Noise"] -.-> C
+   ```
+
+   - Ei panchti-r modhye ekti-o na thakle jogajog somvob noy: message na thakle pathanor kichu nei, sender ba receiver na thakle prante keu nei, medium na thakle path nei, ar protocol na thakle duti device eke oporer bhasha bujhbe na.
 11. **(খ) Data Communication কত প্রকার? উদাহরণসহ সংক্ষিপ্ত বর্ণনা দিন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+
+   Answer: Data communication ke sadharonoto duti drishtikon theke bhag kora hoy.
+
+   Data flow-er dik onujayi tin prokar:
+   - Simplex: shudhu ek dike data jay. Udahoron: keyboard theke computer, computer theke monitor, radio o TV broadcast.
+   - Half duplex: duidike jay kintu ekbare ek dike. Udahoron: walkie-talkie, CB radio, hub bhittik Ethernet.
+   - Full duplex: duidike ekshathe jay. Udahoron: telephone, mobile call, switched Ethernet.
+
+   Signal-er dhoron onujayi dui prokar:
+   - Analog data communication: signal ekaditkrome poriborton hoy, jemon purono telephone line ba AM/FM radio.
+   - Digital data communication: signal discrete 0 ar 1 hisebe jay, jemon computer network. Eta noise-er birudhdhe onek beshi shokto, karon repeater signal ke notun kore toiri korte pare.
+
+   Synchronization-er dhoron onujayi dui prokar:
+   - Asynchronous: ek ekti character alada kore, start ar stop bit shoho pathano hoy. Udahoron: RS-232 serial port.
+   - Synchronous: ekti boro block ekshathe, common clock diye pathano hoy. Udahoron: Ethernet, SONET.
 12. **Define full duplex with an example.** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+
+   Answer: Full duplex is a transmission mode in which data flows in both directions at the same time, so each device can send and receive simultaneously.
+
+   - This is achieved either by using two separate physical channels, one for each direction, or by dividing the capacity of a single channel between the two directions, or by echo cancellation.
+   - Example: a telephone conversation, where both people can speak and hear at the same instant. Another example is modern switched Ethernet, where a device uses one pair of wires to transmit and another pair to receive, so there are no collisions and CSMA/CD is unnecessary.
 13. **Which communication mode use serial communication? (a) Duplex (b) Half Duplex (c) Simplex (d) All** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
+
+   Answer: The correct option is (d) All.
+
+   - Serial communication means the bits are sent one after another over a single line, and this is independent of the direction of flow.
+   - Simplex, half duplex and full duplex all describe the direction of the data, not the way the bits are placed on the wire, so all three modes can and do use serial communication.
+   - Almost all long distance and network communication is serial, because parallel transmission suffers from crosstalk, clock skew and high cable cost over distance.
 14. **(c) Illustrate a communication model in simplified form.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1027-1028 (ET: N/A)]*
+
+
+   Answer: A simplified communication model has five parts: the source, the transmitter, the transmission system, the receiver and the destination.
+
+   ```mermaid
+   graph LR
+       A["Source: e.g. computer"] --> B["Transmitter: e.g. modem"]
+       B --> C["Transmission System: e.g. public telephone network"]
+       C --> D["Receiver: e.g. modem"]
+       D --> E["Destination: e.g. server"]
+       N["Noise"] -.-> C
+   ```
+
+   - Source: generates the data to be transmitted, for example a computer producing a bit stream.
+   - Transmitter: converts and encodes that data into a signal suitable for the medium, for example a modem turning a digital bit stream into an analog signal.
+   - Transmission system: the path carrying the signal, from a single link to a complex network, and this is where attenuation, distortion and noise act on the signal.
+   - Receiver: converts the received signal back into a form the destination can handle, for example a modem recovering the bit stream.
+   - Destination: takes the incoming data from the receiver and uses it.
+
+   - Example flow: a workstation sends a file, its modem modulates the bits onto the telephone line, the network carries the signal, the modem at the far end demodulates it, and the server stores the file.
 
 ## Physical Layer & Transmission Media (Cables & Wiring) (14)
 
