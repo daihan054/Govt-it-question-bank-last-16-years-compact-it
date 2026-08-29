@@ -3809,53 +3809,1649 @@ SELECT count (*) FROM (
 
 1. BSCPL regularly publishes multiple job vacancies, where each Job is identified by a unique Job ID and contains information such as Job Title, Starting Salary, Job Description, and other relevant attributes. An Applicant is identified by a unique Applicant ID and has attributes such as Name, Date of Birth, Starting/Joining Date, Contact Information, and other details. An applicant can apply for only one job, while a particular job can receive applications from many applicants. Design the ER diagram for this system, showing the entities, attributes, primary keys, relationship, cardinalities, and participation constraints. [BSCCPL AME 21-08-2026 (BUET)]
 
+
+   Answer:
+
+   Entities and attributes:
+   - Job: Job_ID as the primary key, Job_Title, Starting_Salary, Job_Description, Posting_Date, Closing_Date.
+   - Applicant: Applicant_ID as the primary key, Name as a composite attribute of First_Name and Last_Name, Date_of_Birth, Age as a derived attribute computed from the date of birth, Joining_Date, Contact_Information as a composite attribute of Phone, Email and Address, and Qualification.
+
+   Relationship and constraints:
+   - The relationship is APPLIES_FOR between Applicant and Job.
+   - Cardinality: an applicant may apply for only one job, and one job may receive applications from many applicants. This is therefore many to one from Applicant to Job, or equivalently one to many from Job to Applicant.
+   - Participation: Applicant has total participation, shown by a double line, since an applicant exists only in order to apply for a job. Job has partial participation, since a job may be advertised and receive no application at all.
+   - The relationship may carry a descriptive attribute, Application_Date.
+
+   E-R diagram:
+
+   ```
+        Job_ID          Job_Title      Starting_Salary   Job_Description
+           |                |                |                 |
+           +----------------+-------+--------+-----------------+
+                                    |
+                              +-----------+
+                              |    JOB    |
+                              +-----------+
+                                    |
+                                    | 1
+                              <APPLIES_FOR>-------- Application_Date
+                                    |
+                                    | M   (double line: total participation of Applicant)
+                              +-------------+
+                              |  APPLICANT  |
+                              +-------------+
+                                    |
+        +---------------+-----------+-----------+----------------+
+        |               |           |           |                |
+   Applicant_ID       Name    Date_of_Birth  Joining_Date   Contact_Info
+     (key)         (composite)                              (composite)
+                   /      \                                  /   |   \
+             First_Name  Last_Name                      Phone  Email  Address
+   ```
+
+   ```mermaid
+   erDiagram
+       JOB ||--o{ APPLICANT : "receives applications from"
+       JOB {
+           int Job_ID PK
+           string Job_Title
+           decimal Starting_Salary
+           string Job_Description
+       }
+       APPLICANT {
+           int Applicant_ID PK
+           string First_Name
+           string Last_Name
+           date Date_of_Birth
+           date Joining_Date
+           string Contact_Info
+           int Job_ID FK
+       }
+   ```
+
+   Conversion to relational tables:
+   - Since the relationship is one to many, no junction table is required. The foreign key is placed on the "many" side, that is in Applicant.
+
+   ```sql
+   CREATE TABLE Job (
+       Job_ID          INT PRIMARY KEY,
+       Job_Title       VARCHAR(100) NOT NULL,
+       Starting_Salary DECIMAL(10,2),
+       Job_Description TEXT
+   );
+
+   CREATE TABLE Applicant (
+       Applicant_ID     INT PRIMARY KEY,
+       First_Name       VARCHAR(50) NOT NULL,
+       Last_Name        VARCHAR(50),
+       Date_of_Birth    DATE,
+       Joining_Date     DATE,
+       Phone            VARCHAR(20),
+       Email            VARCHAR(100),
+       Address          VARCHAR(200),
+       Application_Date DATE,
+       Job_ID           INT NOT NULL,
+       FOREIGN KEY (Job_ID) REFERENCES Job(Job_ID)
+   );
+   ```
+
+   - `Job_ID NOT NULL` in Applicant enforces the total participation constraint: an applicant must be associated with a job.
+   - Age is not stored, since it is a derived attribute; it is computed from Date_of_Birth when required.
+   - Note that the constraint "an applicant can apply for only one job" is unusual in practice; if it were relaxed to many to many, a junction table `Application(Applicant_ID, Job_ID, Application_Date)` would be required instead.
 2. **(a) Design an ER diagram for a library management systems where-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1349 (ET: N/A)]*
    * **(i) A library has multiple books.**
    * **(ii) Each book can have multiple copies.**
 
+
+   Answer:
+
+   Entities and attributes for a library management system:
+   - Library: Library_ID as primary key, Library_Name, Address, Phone.
+   - Book: ISBN as primary key, Title, Author, Publisher, Edition, Subject, Price.
+   - Book_Copy, a weak entity: Copy_ID as a partial key together with the ISBN of the owning book, Shelf_Location, Status which is Available, Issued or Damaged, Acquisition_Date.
+   - Member: Member_ID as primary key, Name, Address, Phone, Membership_Type, Join_Date.
+   - Issue, the relationship between Member and Book_Copy, carrying Issue_Date, Due_Date, Return_Date and Fine.
+
+   Relationships and cardinalities:
+   - Library HAS Book: one to many, since a library holds many books.
+   - Book HAS Book_Copy: one to many, since each book may exist in several physical copies. Book_Copy is a weak entity, because a copy has no identity independent of the book it is a copy of, so it is drawn with a double rectangle and its identifying relationship with a double diamond.
+   - Member BORROWS Book_Copy: many to many over time, since a member borrows many copies and a copy is borrowed by many members at different times. It carries the descriptive attributes of the loan.
+
+   ```mermaid
+   erDiagram
+       LIBRARY ||--o{ BOOK : "holds"
+       BOOK ||--o{ BOOK_COPY : "has copies"
+       MEMBER ||--o{ ISSUE : "borrows"
+       BOOK_COPY ||--o{ ISSUE : "is issued in"
+       LIBRARY {
+           int Library_ID PK
+           string Library_Name
+           string Address
+       }
+       BOOK {
+           string ISBN PK
+           string Title
+           string Author
+           string Publisher
+           int Library_ID FK
+       }
+       BOOK_COPY {
+           int Copy_ID PK
+           string ISBN FK
+           string Shelf_Location
+           string Status
+       }
+       MEMBER {
+           int Member_ID PK
+           string Name
+           string Phone
+           string Membership_Type
+       }
+       ISSUE {
+           int Issue_ID PK
+           int Copy_ID FK
+           int Member_ID FK
+           date Issue_Date
+           date Due_Date
+           date Return_Date
+           decimal Fine
+       }
+   ```
+
+   Conversion to tables:
+
+   ```sql
+   CREATE TABLE Library (
+       Library_ID   INT PRIMARY KEY,
+       Library_Name VARCHAR(100),
+       Address      VARCHAR(200)
+   );
+
+   CREATE TABLE Book (
+       ISBN       VARCHAR(20) PRIMARY KEY,
+       Title      VARCHAR(200) NOT NULL,
+       Author     VARCHAR(100),
+       Publisher  VARCHAR(100),
+       Library_ID INT REFERENCES Library(Library_ID)
+   );
+
+   CREATE TABLE Book_Copy (
+       Copy_ID        INT,
+       ISBN           VARCHAR(20),
+       Shelf_Location VARCHAR(50),
+       Status         VARCHAR(20) DEFAULT 'Available',
+       PRIMARY KEY (Copy_ID, ISBN),
+       FOREIGN KEY (ISBN) REFERENCES Book(ISBN)
+   );
+
+   CREATE TABLE Member (
+       Member_ID INT PRIMARY KEY,
+       Name      VARCHAR(100) NOT NULL,
+       Phone     VARCHAR(20)
+   );
+
+   CREATE TABLE Issue (
+       Issue_ID    INT PRIMARY KEY,
+       Copy_ID     INT,
+       ISBN        VARCHAR(20),
+       Member_ID   INT REFERENCES Member(Member_ID),
+       Issue_Date  DATE NOT NULL,
+       Due_Date    DATE,
+       Return_Date DATE,
+       Fine        DECIMAL(8,2) DEFAULT 0,
+       FOREIGN KEY (Copy_ID, ISBN) REFERENCES Book_Copy(Copy_ID, ISBN)
+   );
+   ```
+
+   - The essential design point is the separation of Book from Book_Copy. The Book table holds the bibliographic information once, and the Book_Copy table holds one row per physical volume. Without this separation, the title, author and publisher would be repeated for every copy, which is exactly the redundancy that normalisation exists to remove.
 3. **(খ) নিচের ডেটাবেস অনুযায়ী ER ডায়াগ্রাম তৈরি করুন :** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
    * **Worker** (Worker ID, Worker Name, Hour Rate, Skill Type)
    * **Assignment** (Worker ID, Building ID, Start Date, Num Days)
    * **Building** (Building ID, Address, Building Type)
 
+
+   Answer:
+
+   Entities and attributes, read from the given relations:
+   - Worker: Worker_ID as primary key, Worker_Name, Hour_Rate, Skill_Type.
+   - Building: Building_ID as primary key, Address, Building_Type.
+   - Assignment: this is not an entity in its own right but the junction table implementing the many to many relationship between Worker and Building. Its key is the combination (Worker_ID, Building_ID), and it carries the descriptive attributes Start_Date and Num_Days.
+
+   Relationship:
+   - Worker IS_ASSIGNED_TO Building, many to many: one worker may be assigned to many buildings, and one building may have many workers assigned to it.
+   - Start_Date and Num_Days are descriptive attributes of the relationship, not of either entity: a start date is meaningless without knowing both which worker and which building it refers to. This is exactly why the relationship must become its own table.
+
+   E-R diagram:
+
+   ```
+    Worker_ID   Worker_Name   Hour_Rate   Skill_Type
+        |            |            |           |
+        +------------+-----+------+-----------+
+                           |
+                     +-----------+
+                     |  WORKER   |
+                     +-----------+
+                           |
+                           | M
+                    <ASSIGNMENT>------- Start_Date
+                           |      \---- Num_Days
+                           | N
+                     +-----------+
+                     | BUILDING  |
+                     +-----------+
+                           |
+              +------------+------------+
+              |            |            |
+        Building_ID     Address    Building_Type
+   ```
+
+   ```mermaid
+   erDiagram
+       WORKER ||--o{ ASSIGNMENT : "is assigned"
+       BUILDING ||--o{ ASSIGNMENT : "receives"
+       WORKER {
+           int Worker_ID PK
+           string Worker_Name
+           decimal Hour_Rate
+           string Skill_Type
+       }
+       BUILDING {
+           int Building_ID PK
+           string Address
+           string Building_Type
+       }
+       ASSIGNMENT {
+           int Worker_ID PK
+           int Building_ID PK
+           date Start_Date
+           int Num_Days
+       }
+   ```
+
+   Relational schema:
+
+   ```sql
+   CREATE TABLE Worker (
+       Worker_ID   INT PRIMARY KEY,
+       Worker_Name VARCHAR(100) NOT NULL,
+       Hour_Rate   DECIMAL(8,2),
+       Skill_Type  VARCHAR(50)
+   );
+
+   CREATE TABLE Building (
+       Building_ID   INT PRIMARY KEY,
+       Address       VARCHAR(200),
+       Building_Type VARCHAR(50)
+   );
+
+   CREATE TABLE Assignment (
+       Worker_ID   INT,
+       Building_ID INT,
+       Start_Date  DATE,
+       Num_Days    INT,
+       PRIMARY KEY (Worker_ID, Building_ID),
+       FOREIGN KEY (Worker_ID)   REFERENCES Worker(Worker_ID),
+       FOREIGN KEY (Building_ID) REFERENCES Building(Building_ID)
+   );
+   ```
+
+   - If a worker could be assigned to the same building more than once at different times, the composite key would have to include Start_Date as well, giving `PRIMARY KEY (Worker_ID, Building_ID, Start_Date)`.
 4. **Consider the Schema employee(id, name, salary), equipment(id, name, price), hire(employee_id, equipment_id)**
    **(i) Draw the ERD digram for the relation**
    **(ii) Write the SQL query to show the name of employee who borrow the maximum equipment?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 462 (ET: BUET)]*
 
+
+   Answer:
+
+   (i) E-R diagram for the schema `employee(id, name, salary)`, `equipment(id, name, price)`, `hire(employee_id, equipment_id)`:
+
+   - Entities: Employee with id as primary key, name and salary; Equipment with id as primary key, name and price.
+   - Relationship: HIRE, many to many, since one employee may hire many pieces of equipment and one piece of equipment may be hired by many employees at different times.
+   - The `hire` relation is the junction table implementing that relationship, with the composite primary key (employee_id, equipment_id).
+
+   ```
+      id      name     salary                    id      name      price
+       |        |         |                       |        |         |
+       +--------+---------+                       +--------+---------+
+                |                                          |
+          +-----------+          M       N          +-------------+
+          | EMPLOYEE  |------< HIRE >--------------| EQUIPMENT   |
+          +-----------+                            +-------------+
+   ```
+
+   ```mermaid
+   erDiagram
+       EMPLOYEE ||--o{ HIRE : "hires"
+       EQUIPMENT ||--o{ HIRE : "is hired in"
+       EMPLOYEE {
+           int id PK
+           string name
+           decimal salary
+       }
+       EQUIPMENT {
+           int id PK
+           string name
+           decimal price
+       }
+       HIRE {
+           int employee_id PK
+           int equipment_id PK
+       }
+   ```
+
+   - A many to many relationship cannot be represented by a foreign key in either entity table; it requires the separate junction table, which is what `hire` is.
+
+   (ii) SQL query for the employee who borrowed the maximum amount of equipment:
+
+   ```sql
+   SELECT e.name, COUNT(*) AS equipment_count
+   FROM   employee e
+   JOIN   hire h ON e.id = h.employee_id
+   GROUP  BY e.id, e.name
+   HAVING COUNT(*) = (
+              SELECT MAX(cnt)
+              FROM   (SELECT COUNT(*) AS cnt
+                      FROM   hire
+                      GROUP  BY employee_id) AS t
+          );
+   ```
+
+   - The inner derived table counts the equipment hired by each employee, and `MAX(cnt)` finds the largest of those counts. The outer query returns every employee whose count equals that maximum, so a tie returns all the tied employees.
+
+   Simpler alternative, which returns only one employee even in the event of a tie:
+
+   ```sql
+   SELECT e.name, COUNT(*) AS equipment_count
+   FROM   employee e
+   JOIN   hire h ON e.id = h.employee_id
+   GROUP  BY e.id, e.name
+   ORDER  BY equipment_count DESC
+   LIMIT  1;
+   ```
+
+   - The first form should be preferred in an examination, since it handles ties correctly and uses only standard SQL.
 5. **Develop an entity relationship diagram that describes data objects, relationships and attributes of the following system: -A web based order processing system for a computer store.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 639 (ET: N/A)]*
 
+
+   Answer: The system is a web based order processing system for a computer store.
+
+   Entities and attributes:
+   - Customer: Customer_ID as primary key, Name, Email, Phone, Address, Registration_Date.
+   - Product: Product_ID as primary key, Product_Name, Category, Description, Unit_Price, Stock_Quantity.
+   - Order: Order_ID as primary key, Order_Date, Order_Status, Total_Amount, Shipping_Address.
+   - Order_Item: the junction entity between Order and Product, with the composite key (Order_ID, Product_ID) and the descriptive attributes Quantity, Unit_Price at the time of sale and Subtotal.
+   - Payment: Payment_ID as primary key, Payment_Date, Amount, Payment_Method, Payment_Status, Transaction_Reference.
+   - Shipment: Shipment_ID as primary key, Dispatch_Date, Delivery_Date, Courier, Tracking_Number, Status.
+   - Category and Supplier may be added if the model is to be fuller.
+
+   Relationships and cardinalities:
+   - Customer PLACES Order: one to many. A customer may place many orders; each order belongs to exactly one customer, which is total participation on the Order side.
+   - Order CONTAINS Product: many to many, resolved by the Order_Item junction entity. An order contains many products and a product appears in many orders.
+   - Order HAS Payment: one to one in the simple case, or one to many if part payments are allowed.
+   - Order GENERATES Shipment: one to one, or one to many if an order may be dispatched in several consignments.
+
+   ```mermaid
+   erDiagram
+       CUSTOMER ||--o{ ORDERS : "places"
+       ORDERS ||--|{ ORDER_ITEM : "contains"
+       PRODUCT ||--o{ ORDER_ITEM : "appears in"
+       ORDERS ||--|| PAYMENT : "is paid by"
+       ORDERS ||--o| SHIPMENT : "is dispatched as"
+       CUSTOMER {
+           int Customer_ID PK
+           string Name
+           string Email
+           string Phone
+           string Address
+       }
+       PRODUCT {
+           int Product_ID PK
+           string Product_Name
+           string Category
+           decimal Unit_Price
+           int Stock_Quantity
+       }
+       ORDERS {
+           int Order_ID PK
+           int Customer_ID FK
+           date Order_Date
+           string Order_Status
+           decimal Total_Amount
+       }
+       ORDER_ITEM {
+           int Order_ID PK
+           int Product_ID PK
+           int Quantity
+           decimal Unit_Price
+           decimal Subtotal
+       }
+       PAYMENT {
+           int Payment_ID PK
+           int Order_ID FK
+           date Payment_Date
+           decimal Amount
+           string Payment_Method
+       }
+       SHIPMENT {
+           int Shipment_ID PK
+           int Order_ID FK
+           date Dispatch_Date
+           string Tracking_Number
+       }
+   ```
+
+   Two design points worth stating:
+   - `Unit_Price` appears both in Product and in Order_Item. This is not a normalisation error but a deliberate decision: the price in Product is the current price, whereas the price in Order_Item is the price at the moment of sale, which must not change when the catalogue price is later revised. Historical accuracy requires the duplication.
+   - Order_Item exists because the relationship carries descriptive attributes, namely the quantity and the price, which belong to neither Order nor Product alone.
 6. **Draw a ER diagram for BPL.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 662 (ET: N/A)]*
 
+
+   Answer: BPL is taken here as the Bangladesh Premier League, a Twenty20 cricket competition.
+
+   Entities and attributes:
+   - Team: Team_ID as primary key, Team_Name, Owner, Home_Ground, Coach_Name, Year_Established.
+   - Player: Player_ID as primary key, Player_Name, Date_of_Birth, Nationality, Playing_Role which is Batsman, Bowler, All-rounder or Wicketkeeper, Batting_Style, Bowling_Style, Base_Price.
+   - Match: Match_ID as primary key, Match_Date, Venue, Result, Winning_Team_ID, Man_of_the_Match.
+   - Stadium: Stadium_ID as primary key, Stadium_Name, City, Capacity.
+   - Umpire: Umpire_ID as primary key, Umpire_Name, Nationality.
+   - Performance: the junction entity between Player and Match, carrying Runs_Scored, Balls_Faced, Wickets_Taken, Overs_Bowled, Runs_Conceded and Catches.
+   - Season: Season_ID as primary key, Year, Start_Date, End_Date.
+
+   Relationships and cardinalities:
+   - Team HAS Player: one to many in a given season, since a player belongs to one team at a time and a team has many players. Across seasons it becomes many to many and would require a Contract junction entity.
+   - Team PLAYS Match: many to many, since each match involves two teams and each team plays many matches. In practice this is often modelled with two foreign keys in Match, Team1_ID and Team2_ID.
+   - Match HELD_AT Stadium: many to one, since many matches are played at one stadium.
+   - Player PERFORMS_IN Match: many to many, resolved by the Performance junction entity, which carries all the statistics of that player in that match.
+   - Umpire OFFICIATES Match: many to many, since a match has several umpires and an umpire officiates many matches.
+
+   ```mermaid
+   erDiagram
+       TEAM ||--o{ PLAYER : "has"
+       TEAM ||--o{ MATCH : "plays in"
+       STADIUM ||--o{ MATCH : "hosts"
+       PLAYER ||--o{ PERFORMANCE : "records"
+       MATCH ||--o{ PERFORMANCE : "contains"
+       UMPIRE ||--o{ MATCH : "officiates"
+       SEASON ||--o{ MATCH : "includes"
+       TEAM {
+           int Team_ID PK
+           string Team_Name
+           string Owner
+           string Coach_Name
+       }
+       PLAYER {
+           int Player_ID PK
+           string Player_Name
+           date Date_of_Birth
+           string Nationality
+           string Playing_Role
+           int Team_ID FK
+       }
+       MATCH {
+           int Match_ID PK
+           date Match_Date
+           int Stadium_ID FK
+           int Season_ID FK
+           string Result
+       }
+       STADIUM {
+           int Stadium_ID PK
+           string Stadium_Name
+           string City
+           int Capacity
+       }
+       PERFORMANCE {
+           int Player_ID PK
+           int Match_ID PK
+           int Runs_Scored
+           int Wickets_Taken
+           int Catches
+       }
+       UMPIRE {
+           int Umpire_ID PK
+           string Umpire_Name
+           string Nationality
+       }
+   ```
+
+   - The Performance entity is the important design decision: runs scored and wickets taken belong to neither the player alone nor the match alone, but to the combination of the two, so they are descriptive attributes of a many to many relationship and must be held in their own table.
 7. **How can you define the ER model in DBMS?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
+
+   Answer: The Entity Relationship model, proposed by Peter Chen in 1976, is a high level conceptual data model that describes the data requirements of a system in terms of entities, the attributes that describe them and the relationships between them, independently of any particular DBMS.
+
+   Components of an E-R model:
+   - Entity: a real world object or concept about which data is stored, drawn as a rectangle. A strong entity has its own key; a weak entity, drawn as a double rectangle, depends on another entity for its identity.
+   - Attribute: a property of an entity, drawn as an ellipse. Types: simple and composite; single valued and multivalued, drawn as a double ellipse; derived, drawn as a dashed ellipse; and the key attribute, whose name is underlined.
+   - Relationship: an association between entities, drawn as a diamond. A relationship may itself carry descriptive attributes.
+   - Cardinality: one to one, one to many, many to one, or many to many, written on the connecting lines.
+   - Participation: total participation, shown by a double line, meaning every instance of the entity must take part; and partial participation, shown by a single line.
+
+   Example:
+
+   ```
+       Student_ID     Name        Course_ID     Course_Name
+           |            |             |              |
+           +-----+------+             +------+-------+
+                 |                           |
+           +-----------+   M         N  +----------+
+           |  STUDENT  |-----< ENROLLS >-| COURSE  |
+           +-----------+                 +----------+
+                              |
+                          Grade, Enrollment_Date
+                       (descriptive attributes)
+   ```
+
+   Extended E-R features:
+   - Specialisation and generalisation, that is the IS-A relationship, for example Employee generalising Manager and Engineer.
+   - Aggregation, treating a whole relationship as a single entity so that another relationship can be defined on it.
+   - Constraints on specialisation: disjoint or overlapping, and total or partial.
+
+   Why the model is used:
+   - It captures the data requirements before any table is created, so errors are found while they are still cheap to correct.
+   - It is understandable by users and managers who do not know SQL, so it serves as a communication tool.
+   - It maps mechanically to a relational schema by defined rules, which is why it is the standard first step of database design.
+   - It documents the design permanently.
+
+   Rules for converting an E-R diagram into tables:
+   - Each strong entity becomes a table, with its key attribute as the primary key.
+   - Each weak entity becomes a table whose primary key is the combination of its own partial key and the primary key of the owning entity, which is also a foreign key.
+   - A one to one relationship becomes a foreign key placed in either table, preferably in the one with total participation.
+   - A one to many relationship becomes a foreign key placed in the table on the "many" side, referring to the "one" side. No extra table is needed.
+   - A many to many relationship becomes a separate junction table, whose primary key is the combination of the two foreign keys, and which also holds any descriptive attributes of the relationship.
+   - A multivalued attribute becomes a separate table containing the entity's key and the attribute.
+   - A composite attribute is flattened into its component columns.
+   - A derived attribute is not stored; it is computed when required.
 8. **Draw an entity diagram Student database management systemfrom following statement: Student (data); Course (data); Report (data); Registration; Staff (data)** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 759 (ET: N/A)]*
 
+
+   Answer: A student database management system with the entities Student, Course, Report, Registration and Staff.
+
+   Entities and attributes:
+   - Student: Student_ID as primary key, Name, Date_of_Birth, Address, Phone, Email, Admission_Date, Programme.
+   - Course: Course_ID as primary key, Course_Name, Credit_Hours, Semester, Department.
+   - Staff: Staff_ID as primary key, Name, Designation, Department, Phone, Email.
+   - Registration: the junction entity between Student and Course, with the composite key (Student_ID, Course_ID, Semester) and the descriptive attributes Registration_Date and Status.
+   - Report: Report_ID as primary key, Marks, Grade, Grade_Point, Exam_Date, together with the Student_ID and Course_ID to which it refers.
+
+   Relationships and cardinalities:
+   - Student REGISTERS_FOR Course: many to many, since a student registers for many courses and a course is taken by many students. It is resolved by the Registration entity.
+   - Staff TEACHES Course: one to many, since one member of staff teaches several courses; or many to many if a course may be shared between teachers.
+   - Student RECEIVES Report: one to many, since a student receives one report per course per semester.
+   - Course GENERATES Report: one to many.
+
+   ```mermaid
+   erDiagram
+       STUDENT ||--o{ REGISTRATION : "registers"
+       COURSE ||--o{ REGISTRATION : "is registered in"
+       STAFF ||--o{ COURSE : "teaches"
+       STUDENT ||--o{ REPORT : "receives"
+       COURSE ||--o{ REPORT : "generates"
+       STUDENT {
+           int Student_ID PK
+           string Name
+           date Date_of_Birth
+           string Programme
+       }
+       COURSE {
+           int Course_ID PK
+           string Course_Name
+           int Credit_Hours
+           int Staff_ID FK
+       }
+       STAFF {
+           int Staff_ID PK
+           string Name
+           string Designation
+           string Department
+       }
+       REGISTRATION {
+           int Student_ID PK
+           int Course_ID PK
+           string Semester PK
+           date Registration_Date
+       }
+       REPORT {
+           int Report_ID PK
+           int Student_ID FK
+           int Course_ID FK
+           decimal Marks
+           string Grade
+       }
+   ```
+
+   Relational schema:
+
+   ```sql
+   CREATE TABLE Student (
+       Student_ID INT PRIMARY KEY,
+       Name       VARCHAR(100) NOT NULL,
+       Programme  VARCHAR(50)
+   );
+
+   CREATE TABLE Staff (
+       Staff_ID    INT PRIMARY KEY,
+       Name        VARCHAR(100) NOT NULL,
+       Designation VARCHAR(50)
+   );
+
+   CREATE TABLE Course (
+       Course_ID    INT PRIMARY KEY,
+       Course_Name  VARCHAR(100) NOT NULL,
+       Credit_Hours INT,
+       Staff_ID     INT REFERENCES Staff(Staff_ID)
+   );
+
+   CREATE TABLE Registration (
+       Student_ID        INT REFERENCES Student(Student_ID),
+       Course_ID         INT REFERENCES Course(Course_ID),
+       Semester          VARCHAR(20),
+       Registration_Date DATE,
+       PRIMARY KEY (Student_ID, Course_ID, Semester)
+   );
+
+   CREATE TABLE Report (
+       Report_ID  INT PRIMARY KEY,
+       Student_ID INT REFERENCES Student(Student_ID),
+       Course_ID  INT REFERENCES Course(Course_ID),
+       Marks      DECIMAL(5,2),
+       Grade      CHAR(2)
+   );
+   ```
+
+   - The Registration table exists because the relationship between Student and Course is many to many and carries its own attributes; a foreign key in either entity table could not represent it.
 9. **(ক) Entity-Relationship (ER) Diagram কেন ব্যবহার করা হয়? একটি উদাহরণের মাধ্যমে ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 768 (ET: N/A)]*
 
+
+   Answer:
+
+   Why an E-R diagram is used:
+   - To model the data requirements of a system before any table is created, so that design errors are found while correcting them is still cheap. Correcting a design after the database is built and populated is far more expensive.
+   - As a communication tool between the designer, the developers and the users. A diagram of boxes and lines can be reviewed by people who do not know SQL, which is how requirements are actually confirmed.
+   - To identify the entities, their attributes and the relationships between them, together with cardinality and participation constraints. These are precisely the facts needed to produce a correct relational schema.
+   - To reveal design problems early: a missing entity, an attribute placed on the wrong entity, or a many to many relationship that will need a junction table.
+   - As the basis of normalisation. A carefully drawn E-R model already avoids most of the redundancy that normalisation exists to remove.
+   - As permanent documentation of the database, which is essential once the original designers have left.
+   - Because it maps mechanically to tables by defined rules, so the conversion is systematic rather than a matter of judgement.
+
+   Example, a university enrolment system:
+
+   ```
+       Student_ID    Name    Department            Course_ID    Course_Name   Credit
+           |          |          |                     |             |          |
+           +----+-----+----------+                     +------+------+----------+
+                |                                             |
+          +-----------+        M              N       +-------------+
+          |  STUDENT  |-----------< ENROLLS >---------|   COURSE    |
+          +-----------+                               +-------------+
+                                    |
+                            Enrollment_Date, Grade
+                            (descriptive attributes)
+   ```
+
+   Reading the diagram:
+   - Student and Course are entities, drawn as rectangles, with their attributes in ellipses and their key attributes underlined.
+   - ENROLLS is a relationship, drawn as a diamond, and it is many to many: a student enrols in many courses and a course is taken by many students.
+   - Enrollment_Date and Grade are descriptive attributes of the relationship. A grade belongs to neither the student nor the course alone; it is meaningful only for the pair, which is why it is attached to the relationship.
+
+   Conversion to tables:
+
+   ```sql
+   Student(Student_ID, Name, Department)
+   Course(Course_ID, Course_Name, Credit)
+   Enrollment(Student_ID, Course_ID, Enrollment_Date, Grade)
+   ```
+
+   - The many to many relationship becomes its own table with a composite primary key of the two foreign keys. Without the diagram, a designer might attempt to put a course identifier in Student or a student identifier in Course, both of which are wrong and both of which the diagram makes obviously wrong.
 10. **(a) While converting E-R diagram into Tables, how is a Many-to-many relationship set between entities A and B is converted into database tables?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
 
+
+   Answer: A many to many relationship between entities A and B cannot be represented by placing a foreign key in either table, so it is converted into three tables.
+
+   The rule:
+   - Entity A becomes a table with its own primary key.
+   - Entity B becomes a table with its own primary key.
+   - The relationship itself becomes a third table, called a junction, bridge, associative or link table. Its primary key is the combination of the primary keys of A and B, and each of those columns is also a foreign key referring to the corresponding table. Any descriptive attributes of the relationship become ordinary columns of this third table.
+
+   Why a foreign key alone will not work:
+   - Suppose a student enrols in many courses and a course has many students. Placing `course_id` in the Student table would allow only one course per student. Placing `student_id` in the Course table would allow only one student per course. Placing a list of identifiers in a single column would violate first normal form. The only correct representation is a separate table with one row per pair.
+
+   Example:
+
+   ```
+   E-R model:     STUDENT ----M----< ENROLLS >----N---- COURSE
+                                      |
+                            enrollment_date, grade
+   ```
+
+   ```sql
+   CREATE TABLE Student (
+       student_id INT PRIMARY KEY,
+       name       VARCHAR(100)
+   );
+
+   CREATE TABLE Course (
+       course_id   INT PRIMARY KEY,
+       course_name VARCHAR(100)
+   );
+
+   CREATE TABLE Enrollment (
+       student_id      INT,
+       course_id       INT,
+       enrollment_date DATE,
+       grade           CHAR(2),
+       PRIMARY KEY (student_id, course_id),
+       FOREIGN KEY (student_id) REFERENCES Student(student_id),
+       FOREIGN KEY (course_id)  REFERENCES Course(course_id)
+   );
+   ```
+
+   - The composite primary key (student_id, course_id) enforces that a given student can be enrolled in a given course only once. If the same pair may recur, for example if a student may retake a course in a later semester, the semester must be added to the key.
+   - `enrollment_date` and `grade` are descriptive attributes of the relationship and have no other place to live; this is the second reason the junction table is required.
+
+   General statement of the rule:
+   - For a relationship R between A and B with cardinality m:n, create a table R(A_key, B_key, descriptive attributes) with PRIMARY KEY (A_key, B_key) and a foreign key on each component.
+   - For contrast, a 1:n relationship needs no extra table: the foreign key is simply placed on the "many" side. A 1:1 relationship places the foreign key in either table, preferably the one with total participation.
 11. **Draw ER diagram for Titas Gas Transmission and Distribution Company limited. Relation between customer and meter. (full question টা পাওয়া যায়নি।)** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
 
+
+   Answer: A gas transmission and distribution company such as Titas, modelling in particular the relationship between customer and meter.
+
+   Entities and attributes:
+   - Customer: Customer_ID as primary key, Name, Address, Phone, NID, Customer_Type which is Domestic, Commercial or Industrial, Connection_Date, Zone_ID.
+   - Meter: Meter_ID as primary key, Meter_Number, Model, Manufacturer, Installation_Date, Meter_Type which is prepaid or postpaid, Status.
+   - Reading: Reading_ID as primary key, Meter_ID, Reading_Date, Previous_Reading, Current_Reading, Consumption.
+   - Bill: Bill_ID as primary key, Customer_ID, Billing_Month, Units_Consumed, Amount, Due_Date, Status.
+   - Payment: Payment_ID as primary key, Bill_ID, Payment_Date, Amount_Paid, Payment_Method.
+   - Zone or Office: Zone_ID as primary key, Zone_Name, Area, Office_Address.
+   - Complaint: Complaint_ID as primary key, Customer_ID, Complaint_Date, Type, Description, Status.
+
+   Relationships and cardinalities:
+   - Customer HAS Meter: one to one in the usual case, since each customer has exactly one meter and each meter serves exactly one customer. Both sides have total participation, since a connection cannot exist without a meter and a meter is not installed except for a customer. If a large industrial customer may have several meters, the relationship becomes one to many.
+   - Meter RECORDS Reading: one to many, since a meter produces a reading every billing period.
+   - Customer RECEIVES Bill: one to many, one bill per month.
+   - Bill HAS Payment: one to many if part payment is allowed, otherwise one to one.
+   - Zone SERVES Customer: one to many.
+
+   ```mermaid
+   erDiagram
+       ZONE ||--o{ CUSTOMER : "serves"
+       CUSTOMER ||--|| METER : "has"
+       METER ||--o{ READING : "records"
+       CUSTOMER ||--o{ BILL : "receives"
+       BILL ||--o{ PAYMENT : "is settled by"
+       CUSTOMER ||--o{ COMPLAINT : "lodges"
+       CUSTOMER {
+           int Customer_ID PK
+           string Name
+           string Address
+           string Customer_Type
+           int Zone_ID FK
+       }
+       METER {
+           int Meter_ID PK
+           string Meter_Number
+           string Model
+           string Manufacturer
+           date Installation_Date
+           int Customer_ID FK
+       }
+       READING {
+           int Reading_ID PK
+           int Meter_ID FK
+           date Reading_Date
+           decimal Current_Reading
+           decimal Consumption
+       }
+       BILL {
+           int Bill_ID PK
+           int Customer_ID FK
+           string Billing_Month
+           decimal Amount
+           date Due_Date
+       }
+       PAYMENT {
+           int Payment_ID PK
+           int Bill_ID FK
+           date Payment_Date
+           decimal Amount_Paid
+       }
+   ```
+
+   - The one to one relationship between Customer and Meter is implemented by placing `Customer_ID` as a foreign key in Meter with a UNIQUE constraint on it, which enforces that no customer has two meters. Placing it on the Meter side is preferable because Meter has total participation.
+   - Consumption in the Reading entity is a derived attribute, computed as the current reading minus the previous one; whether to store it is a deliberate denormalisation decision, usually taken because billing disputes require the figure as it was calculated at the time. <!-- verify -->
 12. **Draw ER diagram from a story.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 837 (ET: N/A)]*
 
+
+   Answer: Drawing an E-R diagram from a narrative description follows a systematic procedure, which is what such a question tests.
+
+   Procedure:
+   - Step 1: read the description and underline every noun. Nouns are candidate entities and attributes.
+   - Step 2: decide which nouns are entities. A noun is an entity if it has attributes of its own and there will be many instances of it. A noun that merely describes another noun is an attribute.
+   - Step 3: underline every verb. Verbs connecting two entities are candidate relationships.
+   - Step 4: assign attributes to entities and identify the primary key of each.
+   - Step 5: determine the cardinality of each relationship by asking two questions in both directions: "can one A be related to many B?" and "can one B be related to many A?"
+   - Step 6: determine participation by asking "must every A take part in this relationship?" Total participation is drawn with a double line.
+   - Step 7: identify any attributes belonging to the relationship rather than to either entity; these are descriptive attributes and they force the relationship into its own table.
+   - Step 8: look for weak entities, which have no key of their own and depend on an owner.
+   - Step 9: draw the diagram and then convert it to tables by the standard rules.
+
+   Worked example, from the narrative "A hospital has several departments. Each department has many doctors, and each doctor belongs to one department. A patient may consult many doctors, and a doctor sees many patients. Each consultation has a date, a diagnosis and a prescription.":
+   - Nouns: hospital, department, doctor, patient, consultation, date, diagnosis, prescription.
+   - Entities: Department, Doctor, Patient. Consultation becomes a relationship.
+   - Attributes: date, diagnosis and prescription describe the consultation, so they are descriptive attributes of the relationship.
+   - Cardinalities: Department to Doctor is one to many; Doctor to Patient is many to many.
+
+   ```mermaid
+   erDiagram
+       DEPARTMENT ||--o{ DOCTOR : "employs"
+       DOCTOR ||--o{ CONSULTATION : "conducts"
+       PATIENT ||--o{ CONSULTATION : "attends"
+       DEPARTMENT {
+           int Dept_ID PK
+           string Dept_Name
+       }
+       DOCTOR {
+           int Doctor_ID PK
+           string Name
+           string Specialization
+           int Dept_ID FK
+       }
+       PATIENT {
+           int Patient_ID PK
+           string Name
+           int Age
+       }
+       CONSULTATION {
+           int Doctor_ID PK
+           int Patient_ID PK
+           date Consult_Date PK
+           string Diagnosis
+           string Prescription
+       }
+   ```
+
+   Rules for converting an E-R diagram into tables:
+   - Each strong entity becomes a table, with its key attribute as the primary key.
+   - Each weak entity becomes a table whose primary key is the combination of its own partial key and the primary key of the owning entity, which is also a foreign key.
+   - A one to one relationship becomes a foreign key placed in either table, preferably in the one with total participation.
+   - A one to many relationship becomes a foreign key placed in the table on the "many" side, referring to the "one" side. No extra table is needed.
+   - A many to many relationship becomes a separate junction table, whose primary key is the combination of the two foreign keys, and which also holds any descriptive attributes of the relationship.
+   - A multivalued attribute becomes a separate table containing the entity's key and the attribute.
+   - A composite attribute is flattened into its component columns.
+   - A derived attribute is not stored; it is computed when required.
 13. **Draw E-R diagram of hospital management system. Hospital name “SKY Hospital Ltd.”.** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
+
+   Answer: E-R diagram for a hospital management system, SKY Hospital Ltd.
+
+   Entities and attributes:
+   - Patient: Patient_ID as primary key, Name, Age, Gender, Date_of_Birth, Address, Phone, Blood_Group, Admission_Date.
+   - Doctor: Doctor_ID as primary key, Name, Specialization, Qualification, Phone, Consultation_Fee, Department_ID.
+   - Department: Department_ID as primary key, Department_Name, Location, Head_Doctor_ID.
+   - Appointment: Appointment_ID as primary key, Patient_ID, Doctor_ID, Appointment_Date, Time_Slot, Status.
+   - Treatment: the relationship between Doctor and Patient, carrying Treatment_Date, Diagnosis, Prescription and Notes.
+   - Room: Room_No as primary key, Room_Type which is General, Cabin or ICU, Charge_Per_Day, Availability.
+   - Admission: Admission_ID as primary key, Patient_ID, Room_No, Admit_Date, Discharge_Date.
+   - Bill: Bill_ID as primary key, Patient_ID, Bill_Date, Room_Charge, Doctor_Fee, Medicine_Cost, Test_Charge, Total_Amount, Payment_Status.
+   - Nurse: Nurse_ID as primary key, Name, Shift, Department_ID.
+   - Test: Test_ID as primary key, Test_Name, Cost, Patient_ID, Result, Test_Date.
+
+   Relationships and cardinalities:
+   - Department EMPLOYS Doctor: one to many.
+   - Patient BOOKS Appointment WITH Doctor: many to many, resolved by the Appointment entity.
+   - Doctor TREATS Patient: many to many, carrying the diagnosis and prescription.
+   - Patient OCCUPIES Room: one to one at any moment, but one to many over time, so the Admission entity records each stay.
+   - Patient RECEIVES Bill: one to many.
+   - Patient UNDERGOES Test: one to many.
+   - Nurse ASSIGNED_TO Department: many to one.
+
+   ```mermaid
+   erDiagram
+       DEPARTMENT ||--o{ DOCTOR : "employs"
+       DEPARTMENT ||--o{ NURSE : "employs"
+       PATIENT ||--o{ APPOINTMENT : "books"
+       DOCTOR ||--o{ APPOINTMENT : "accepts"
+       PATIENT ||--o{ ADMISSION : "is admitted by"
+       ROOM ||--o{ ADMISSION : "accommodates"
+       PATIENT ||--o{ BILL : "is billed"
+       PATIENT ||--o{ TEST : "undergoes"
+       PATIENT {
+           int Patient_ID PK
+           string Name
+           int Age
+           string Blood_Group
+           string Phone
+       }
+       DOCTOR {
+           int Doctor_ID PK
+           string Name
+           string Specialization
+           decimal Consultation_Fee
+           int Department_ID FK
+       }
+       DEPARTMENT {
+           int Department_ID PK
+           string Department_Name
+           string Location
+       }
+       APPOINTMENT {
+           int Appointment_ID PK
+           int Patient_ID FK
+           int Doctor_ID FK
+           date Appointment_Date
+           string Diagnosis
+       }
+       ROOM {
+           int Room_No PK
+           string Room_Type
+           decimal Charge_Per_Day
+       }
+       ADMISSION {
+           int Admission_ID PK
+           int Patient_ID FK
+           int Room_No FK
+           date Admit_Date
+           date Discharge_Date
+       }
+       BILL {
+           int Bill_ID PK
+           int Patient_ID FK
+           decimal Total_Amount
+           string Payment_Status
+       }
+       TEST {
+           int Test_ID PK
+           int Patient_ID FK
+           string Test_Name
+           decimal Cost
+       }
+       NURSE {
+           int Nurse_ID PK
+           string Name
+           string Shift
+           int Department_ID FK
+       }
+   ```
+
+   - The design point worth stating: Admission is a separate entity rather than a simple foreign key in Patient, because a patient may be admitted several times and each stay has its own room, dates and charges. Recording only the current room would destroy the history.
 14. **Draw E-R diagram of Banking Management system. Bank name “SKY Bank Ltd.”.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
+
+   Answer: E-R diagram for a banking management system, SKY Bank Ltd.
+
+   Entities and attributes:
+   - Customer: Customer_ID as primary key, Name, Date_of_Birth, Address, Phone, Email, NID, Occupation.
+   - Account: Account_No as primary key, Account_Type which is Savings, Current or Fixed Deposit, Balance, Opening_Date, Status, Interest_Rate, Branch_ID.
+   - Branch: Branch_ID as primary key, Branch_Name, Address, City, Phone, Manager_ID.
+   - Transaction: Transaction_ID as primary key, Account_No, Transaction_Date, Transaction_Type which is deposit, withdrawal or transfer, Amount, Balance_After, Description.
+   - Loan: Loan_ID as primary key, Customer_ID, Loan_Type, Principal_Amount, Interest_Rate, Tenure, Sanction_Date, Outstanding_Balance, Status.
+   - Employee: Employee_ID as primary key, Name, Designation, Branch_ID, Salary, Joining_Date.
+   - Card: Card_No as primary key, Account_No, Card_Type which is debit or credit, Issue_Date, Expiry_Date, Status.
+   - Loan_Payment: Payment_ID as primary key, Loan_ID, Payment_Date, Amount, Principal_Component, Interest_Component.
+
+   Relationships and cardinalities:
+   - Customer HAS Account: many to many in the general case, since a customer may hold several accounts and a joint account has several holders. If joint accounts are excluded it is one to many.
+   - Branch MAINTAINS Account: one to many.
+   - Account RECORDS Transaction: one to many, with total participation on the Transaction side since a transaction cannot exist without an account.
+   - Customer TAKES Loan: one to many.
+   - Loan HAS Loan_Payment: one to many.
+   - Branch EMPLOYS Employee: one to many.
+   - Account HAS Card: one to many, since an account may have both a debit and a credit card.
+
+   ```mermaid
+   erDiagram
+       BRANCH ||--o{ ACCOUNT : "maintains"
+       BRANCH ||--o{ EMPLOYEE : "employs"
+       CUSTOMER ||--o{ ACCOUNT : "holds"
+       ACCOUNT ||--o{ TRANSACTION : "records"
+       ACCOUNT ||--o{ CARD : "has"
+       CUSTOMER ||--o{ LOAN : "takes"
+       LOAN ||--o{ LOAN_PAYMENT : "is repaid by"
+       CUSTOMER {
+           int Customer_ID PK
+           string Name
+           string NID
+           string Address
+           string Phone
+       }
+       ACCOUNT {
+           string Account_No PK
+           string Account_Type
+           decimal Balance
+           date Opening_Date
+           int Customer_ID FK
+           int Branch_ID FK
+       }
+       BRANCH {
+           int Branch_ID PK
+           string Branch_Name
+           string City
+       }
+       TRANSACTION {
+           int Transaction_ID PK
+           string Account_No FK
+           date Transaction_Date
+           string Transaction_Type
+           decimal Amount
+       }
+       LOAN {
+           int Loan_ID PK
+           int Customer_ID FK
+           decimal Principal_Amount
+           decimal Interest_Rate
+           string Status
+       }
+       LOAN_PAYMENT {
+           int Payment_ID PK
+           int Loan_ID FK
+           date Payment_Date
+           decimal Amount
+       }
+       CARD {
+           string Card_No PK
+           string Account_No FK
+           string Card_Type
+           date Expiry_Date
+       }
+       EMPLOYEE {
+           int Employee_ID PK
+           string Name
+           string Designation
+           int Branch_ID FK
+       }
+   ```
+
+   Design points worth stating:
+   - If joint accounts are permitted, the Customer to Account relationship is many to many and requires a junction table `Account_Holder(Customer_ID, Account_No, Holder_Type)`. This is the decision an examiner looks for.
+   - `Balance` in Account is a derived value, being the sum of all transactions, but it is stored deliberately. Recomputing it from millions of transactions on every enquiry would be unacceptable, so this is a justified denormalisation, maintained by the application within a transaction.
+   - A transfer is modelled as two transaction rows, a debit and a credit, linked by a common reference, so that double entry is preserved.
 15. **Draw ER diagram for details of gas company data described. Bakharbad gas distribution Compeny has two types of customers i.e General and Industrial. General customer has customer ID, name, DOB, age (calculated from DOB). Industrial customer has all attributes of general customer with TAX number additionally. Meter has model and producer name. Every customer has one meter.** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 877 (ET: BUET)]*
 
+
+   Answer: This is a specialisation and generalisation problem, since there are two kinds of customer sharing most attributes.
+
+   Entities and attributes:
+   - Customer, the superclass: Customer_ID as primary key, Name, Date_of_Birth, Age as a derived attribute computed from the date of birth, Address, Phone.
+   - General_Customer, a subclass: it inherits everything from Customer and adds nothing of its own.
+   - Industrial_Customer, a subclass: it inherits everything from Customer and adds Tax_Number.
+   - Meter: Meter_ID as primary key, Model, Producer_Name, Installation_Date.
+
+   Relationships and constraints:
+   - Customer IS-A General_Customer or Industrial_Customer: this is a specialisation, drawn with a triangle. It is disjoint, since a customer is of one kind or the other but not both, and total, since every customer is one of the two.
+   - Customer HAS Meter: one to one, since every customer has exactly one meter and every meter belongs to one customer. Both sides have total participation.
+   - Age is a derived attribute, drawn with a dashed ellipse, and it is not stored; it is computed from the date of birth whenever required.
+
+   ```
+        Customer_ID   Name   DOB   (Age)   Address
+             |          |     |      :        |
+             +----------+--+--+......+--------+
+                           |
+                     +-----------+  1        1  +---------+
+                     | CUSTOMER  |----< HAS >---|  METER  |
+                     +-----------+              +---------+
+                           |                         |
+                          /_\  (disjoint, total)   +--+---+
+                         /   \                     |      |
+              +---------+     +----------+       Model  Producer
+              | GENERAL |     | INDUSTRIAL|
+              +---------+     +----------+
+                                    |
+                               Tax_Number
+   ```
+
+   ```mermaid
+   erDiagram
+       CUSTOMER ||--|| METER : "has"
+       CUSTOMER ||--o| GENERAL_CUSTOMER : "is a"
+       CUSTOMER ||--o| INDUSTRIAL_CUSTOMER : "is a"
+       CUSTOMER {
+           int Customer_ID PK
+           string Name
+           date DOB
+           string Address
+       }
+       GENERAL_CUSTOMER {
+           int Customer_ID PK
+       }
+       INDUSTRIAL_CUSTOMER {
+           int Customer_ID PK
+           string Tax_Number
+       }
+       METER {
+           int Meter_ID PK
+           string Model
+           string Producer_Name
+           int Customer_ID FK
+       }
+   ```
+
+   Conversion to tables. Three strategies exist for a specialisation, and the choice should be justified:
+
+   Strategy 1, a single table with a discriminator, which is the simplest and is appropriate here because the subclasses differ by only one attribute:
+
+   ```sql
+   CREATE TABLE Customer (
+       Customer_ID   INT PRIMARY KEY,
+       Name          VARCHAR(100) NOT NULL,
+       DOB           DATE,
+       Address       VARCHAR(200),
+       Customer_Type VARCHAR(20) CHECK (Customer_Type IN ('General','Industrial')),
+       Tax_Number    VARCHAR(30),
+       CHECK ((Customer_Type = 'Industrial' AND Tax_Number IS NOT NULL)
+           OR (Customer_Type = 'General'    AND Tax_Number IS NULL))
+   );
+
+   CREATE TABLE Meter (
+       Meter_ID      INT PRIMARY KEY,
+       Model         VARCHAR(50),
+       Producer_Name VARCHAR(100),
+       Customer_ID   INT UNIQUE NOT NULL REFERENCES Customer(Customer_ID)
+   );
+   ```
+
+   Strategy 2, a table per subclass, keeping the superclass table and adding one table for the subclass with the extra attribute:
+
+   ```sql
+   CREATE TABLE Industrial_Customer (
+       Customer_ID INT PRIMARY KEY REFERENCES Customer(Customer_ID),
+       Tax_Number  VARCHAR(30) NOT NULL
+   );
+   ```
+
+   Points worth stating:
+   - `Age` is not a column, because it is derived. Storing it would require updating every row every year, which is exactly the kind of anomaly normalisation avoids.
+   - The one to one relationship is implemented by putting `Customer_ID` in Meter with a `UNIQUE` and `NOT NULL` constraint, which enforces both the one to one cardinality and the total participation.
 16. **Draw the ER diagram where their relation named TEAM, PLAYER, MATCH** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 880 (ET: BUET)]*
 
+
+   Answer: E-R diagram for the entities TEAM, PLAYER and MATCH.
+
+   Entities and attributes:
+   - Team: Team_ID as primary key, Team_Name, Coach_Name, Home_Ground, Founded_Year, City.
+   - Player: Player_ID as primary key, Player_Name, Date_of_Birth, Age as a derived attribute, Position, Jersey_Number, Nationality, Team_ID.
+   - Match: Match_ID as primary key, Match_Date, Venue, Home_Team_ID, Away_Team_ID, Result, Home_Score, Away_Score.
+   - Performance, the junction entity between Player and Match: Player_ID, Match_ID, Goals_Scored or Runs, Minutes_Played, Cards or Wickets, Rating.
+
+   Relationships and cardinalities:
+   - Team HAS Player: one to many. A team has many players and a player belongs to one team at a time. Player has total participation, since a player must belong to a team.
+   - Team PLAYS Match: many to many, since each match involves two teams and each team plays many matches. In practice it is implemented by two foreign keys in Match, Home_Team_ID and Away_Team_ID, both referring to Team, which is a double relationship to the same entity.
+   - Player PLAYS_IN Match: many to many, resolved by the Performance entity, which carries the statistics of that player in that match.
+
+   ```mermaid
+   erDiagram
+       TEAM ||--o{ PLAYER : "has"
+       TEAM ||--o{ MATCH : "plays as home team"
+       PLAYER ||--o{ PERFORMANCE : "records"
+       MATCH ||--o{ PERFORMANCE : "contains"
+       TEAM {
+           int Team_ID PK
+           string Team_Name
+           string Coach_Name
+           string Home_Ground
+       }
+       PLAYER {
+           int Player_ID PK
+           string Player_Name
+           date Date_of_Birth
+           string Position
+           int Jersey_Number
+           int Team_ID FK
+       }
+       MATCH {
+           int Match_ID PK
+           date Match_Date
+           string Venue
+           int Home_Team_ID FK
+           int Away_Team_ID FK
+           string Result
+       }
+       PERFORMANCE {
+           int Player_ID PK
+           int Match_ID PK
+           int Goals_Scored
+           int Minutes_Played
+       }
+   ```
+
+   Relational schema:
+
+   ```sql
+   CREATE TABLE Team (
+       Team_ID     INT PRIMARY KEY,
+       Team_Name   VARCHAR(100) NOT NULL,
+       Coach_Name  VARCHAR(100),
+       Home_Ground VARCHAR(100)
+   );
+
+   CREATE TABLE Player (
+       Player_ID     INT PRIMARY KEY,
+       Player_Name   VARCHAR(100) NOT NULL,
+       Date_of_Birth DATE,
+       Position      VARCHAR(30),
+       Jersey_Number INT,
+       Team_ID       INT NOT NULL REFERENCES Team(Team_ID),
+       UNIQUE (Team_ID, Jersey_Number)
+   );
+
+   CREATE TABLE Match (
+       Match_ID     INT PRIMARY KEY,
+       Match_Date   DATE NOT NULL,
+       Venue        VARCHAR(100),
+       Home_Team_ID INT NOT NULL REFERENCES Team(Team_ID),
+       Away_Team_ID INT NOT NULL REFERENCES Team(Team_ID),
+       Result       VARCHAR(50),
+       CHECK (Home_Team_ID <> Away_Team_ID)
+   );
+
+   CREATE TABLE Performance (
+       Player_ID      INT REFERENCES Player(Player_ID),
+       Match_ID       INT REFERENCES Match(Match_ID),
+       Goals_Scored   INT DEFAULT 0,
+       Minutes_Played INT,
+       PRIMARY KEY (Player_ID, Match_ID)
+   );
+   ```
+
+   - Two constraints worth pointing out: `UNIQUE (Team_ID, Jersey_Number)` prevents two players in the same team wearing the same number, and `CHECK (Home_Team_ID <> Away_Team_ID)` prevents a team from playing itself. Constraints of this kind are what turn a diagram into a correct schema.
 17. **Railway Service system ER diagram.** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
 
+
+   Answer: E-R diagram for a railway service system.
+
+   Entities and attributes:
+   - Passenger: Passenger_ID as primary key, Name, Age, Gender, Phone, Email, NID.
+   - Train: Train_No as primary key, Train_Name, Source_Station, Destination_Station, Departure_Time, Arrival_Time, Total_Seats, Train_Type.
+   - Station: Station_ID as primary key, Station_Name, City, Zone, Platform_Count.
+   - Route: Route_ID as primary key, Train_No, Station_ID, Arrival_Time, Departure_Time, Stop_Number, Distance_From_Source.
+   - Ticket: PNR_Number as primary key, Passenger_ID, Train_No, Journey_Date, Class, Seat_Number, Coach_Number, Fare, Booking_Date, Status.
+   - Booking: Booking_ID as primary key, Passenger_ID, Booking_Date, Total_Amount, Payment_Status.
+   - Class: Class_ID as primary key, Class_Name such as AC, First or Shovon, Fare_Per_Km.
+   - Payment: Payment_ID as primary key, Booking_ID, Amount, Payment_Method, Payment_Date, Transaction_Reference.
+
+   Relationships and cardinalities:
+   - Passenger BOOKS Ticket: one to many, since one passenger books many tickets over time.
+   - Train HAS Ticket: one to many.
+   - Train PASSES_THROUGH Station: many to many, resolved by the Route entity, which carries the arrival and departure time at each stop and the stop number. These are descriptive attributes of the relationship, since an arrival time is meaningless without both the train and the station.
+   - Ticket BELONGS_TO Class: many to one.
+   - Booking HAS Payment: one to one, or one to many if part payment is allowed.
+
+   ```mermaid
+   erDiagram
+       PASSENGER ||--o{ TICKET : "books"
+       TRAIN ||--o{ TICKET : "carries"
+       TRAIN ||--o{ ROUTE : "follows"
+       STATION ||--o{ ROUTE : "is a stop on"
+       PASSENGER ||--o{ BOOKING : "makes"
+       BOOKING ||--o{ PAYMENT : "is settled by"
+       CLASS ||--o{ TICKET : "categorises"
+       PASSENGER {
+           int Passenger_ID PK
+           string Name
+           int Age
+           string Phone
+           string NID
+       }
+       TRAIN {
+           int Train_No PK
+           string Train_Name
+           string Source_Station
+           string Destination_Station
+           int Total_Seats
+       }
+       STATION {
+           int Station_ID PK
+           string Station_Name
+           string City
+       }
+       ROUTE {
+           int Train_No PK
+           int Station_ID PK
+           int Stop_Number
+           time Arrival_Time
+           time Departure_Time
+       }
+       TICKET {
+           string PNR_Number PK
+           int Passenger_ID FK
+           int Train_No FK
+           date Journey_Date
+           string Seat_Number
+           decimal Fare
+       }
+       BOOKING {
+           int Booking_ID PK
+           int Passenger_ID FK
+           date Booking_Date
+           decimal Total_Amount
+       }
+       PAYMENT {
+           int Payment_ID PK
+           int Booking_ID FK
+           decimal Amount
+           string Payment_Method
+       }
+       CLASS {
+           int Class_ID PK
+           string Class_Name
+           decimal Fare_Per_Km
+       }
+   ```
+
+   - The Route entity is the important design decision. A train stops at many stations and a station is served by many trains, so the relationship is many to many; and the arrival time, departure time and stop number belong to the pair rather than to either entity, so they force the relationship into its own table.
 18. **(i) Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Referee (Referee-id, Referee-name) Player (player-id, palyername, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result).** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 928-929 (ET: CTI)], [Janata Bank Assistant System Administrator 2021 compact it 939 (ET: N/A)]*
    **(ii) Convert the ER diagram to relations (Table)** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 929-930 (ET: CTI)]*
 
+
+   Answer:
+
+   (i) E-R diagram for the football scenario:
+
+   Entities and attributes:
+   - Game: Game_no as primary key, Game_time, Game_name.
+   - Team: Team_id as primary key, Coach_id, Team_name.
+   - Referee: Referee_id as primary key, Referee_name.
+   - Player: Player_id as primary key, Player_name, Player_position, Team_id.
+   - Stadium: Stadium_id as primary key, Stadium_name, Stadium_loc.
+   - Match: Match_id as primary key, Match_date, Match_result, Stadium_id, Referee_id.
+
+   Relationships and cardinalities:
+   - Team HAS Player: one to many. A team has many players; a player belongs to one team. Player has total participation.
+   - Team PLAYS Match: many to many, since each match involves two teams and each team plays many matches. It is implemented by two foreign keys in Match.
+   - Match HELD_AT Stadium: many to one.
+   - Referee OFFICIATES Match: one to many, or many to many if several referees officiate one match.
+   - Match BELONGS_TO Game: many to one, taking Game as the tournament or fixture category.
+   - Player PLAYS_IN Match: many to many, which requires a Performance junction entity if individual statistics are to be recorded.
+
+   ```mermaid
+   erDiagram
+       TEAM ||--o{ PLAYER : "has"
+       TEAM ||--o{ MATCH : "plays in"
+       STADIUM ||--o{ MATCH : "hosts"
+       REFEREE ||--o{ MATCH : "officiates"
+       GAME ||--o{ MATCH : "comprises"
+       PLAYER ||--o{ PERFORMANCE : "records"
+       MATCH ||--o{ PERFORMANCE : "contains"
+       GAME {
+           int Game_no PK
+           time Game_time
+           string Game_name
+       }
+       TEAM {
+           int Team_id PK
+           int Coach_id
+           string Team_name
+       }
+       PLAYER {
+           int Player_id PK
+           string Player_name
+           string Player_position
+           int Team_id FK
+       }
+       REFEREE {
+           int Referee_id PK
+           string Referee_name
+       }
+       STADIUM {
+           int Stadium_id PK
+           string Stadium_name
+           string Stadium_loc
+       }
+       MATCH {
+           int Match_id PK
+           date Match_date
+           string Match_result
+           int Stadium_id FK
+           int Referee_id FK
+           int Game_no FK
+       }
+       PERFORMANCE {
+           int Player_id PK
+           int Match_id PK
+           int Goals
+           int Minutes_Played
+       }
+   ```
+
+   (ii) Conversion of the E-R diagram to relations:
+
+   ```sql
+   Game(Game_no, Game_time, Game_name)
+       PRIMARY KEY (Game_no)
+
+   Team(Team_id, Coach_id, Team_name)
+       PRIMARY KEY (Team_id)
+
+   Player(Player_id, Player_name, Player_position, Team_id)
+       PRIMARY KEY (Player_id)
+       FOREIGN KEY (Team_id) REFERENCES Team(Team_id)
+
+   Referee(Referee_id, Referee_name)
+       PRIMARY KEY (Referee_id)
+
+   Stadium(Stadium_id, Stadium_name, Stadium_loc)
+       PRIMARY KEY (Stadium_id)
+
+   Match(Match_id, Match_date, Match_result, Home_Team_id, Away_Team_id,
+         Stadium_id, Referee_id, Game_no)
+       PRIMARY KEY (Match_id)
+       FOREIGN KEY (Home_Team_id) REFERENCES Team(Team_id)
+       FOREIGN KEY (Away_Team_id) REFERENCES Team(Team_id)
+       FOREIGN KEY (Stadium_id)   REFERENCES Stadium(Stadium_id)
+       FOREIGN KEY (Referee_id)   REFERENCES Referee(Referee_id)
+       FOREIGN KEY (Game_no)      REFERENCES Game(Game_no)
+       CHECK (Home_Team_id <> Away_Team_id)
+
+   Performance(Player_id, Match_id, Goals, Minutes_Played)
+       PRIMARY KEY (Player_id, Match_id)
+       FOREIGN KEY (Player_id) REFERENCES Player(Player_id)
+       FOREIGN KEY (Match_id)  REFERENCES Match(Match_id)
+   ```
+
+   Rules applied in the conversion:
+   - Each entity became a table with its key attribute as the primary key.
+   - The one to many relationship between Team and Player became a foreign key on the "many" side, that is `Team_id` in Player. No extra table was needed.
+   - The many to many relationship between Team and Match was handled by two foreign keys in Match, since exactly two teams take part; had the number been unbounded, a junction table would have been required.
+   - The many to many relationship between Player and Match became the Performance junction table with a composite primary key.
+   - `CHECK (Home_Team_id <> Away_Team_id)` was added, because a team cannot play itself.
 19. **Draw ER diagram (Self test)** *[Combined 4 Banks Assistant Programmer 2020 compact it 1009 (ET: DU)]*
 
+
+   Answer: The scenario is not specified, so the general method and a complete worked example are given.
+
+   Method for drawing an E-R diagram:
+   - Identify the entities: the nouns in the description that have attributes of their own and of which there will be many instances.
+   - Identify the attributes of each entity, and underline the primary key.
+   - Identify the relationships: the verbs connecting two entities.
+   - Determine the cardinality of each relationship, by asking in both directions whether one instance can relate to many.
+   - Determine the participation, that is whether every instance must take part; total participation is drawn with a double line.
+   - Identify any attributes belonging to a relationship rather than to an entity; these are descriptive attributes.
+   - Look for weak entities, which have no key of their own.
+   - Draw the diagram and convert it to tables.
+
+   Worked example, an online shopping system:
+
+   ```mermaid
+   erDiagram
+       CUSTOMER ||--o{ ORDERS : "places"
+       ORDERS ||--|{ ORDER_ITEM : "contains"
+       PRODUCT ||--o{ ORDER_ITEM : "appears in"
+       CATEGORY ||--o{ PRODUCT : "classifies"
+       ORDERS ||--|| PAYMENT : "is paid by"
+       CUSTOMER {
+           int Customer_ID PK
+           string Name
+           string Email
+           string Phone
+           string Address
+       }
+       CATEGORY {
+           int Category_ID PK
+           string Category_Name
+       }
+       PRODUCT {
+           int Product_ID PK
+           string Product_Name
+           decimal Price
+           int Stock
+           int Category_ID FK
+       }
+       ORDERS {
+           int Order_ID PK
+           int Customer_ID FK
+           date Order_Date
+           decimal Total_Amount
+           string Status
+       }
+       ORDER_ITEM {
+           int Order_ID PK
+           int Product_ID PK
+           int Quantity
+           decimal Unit_Price
+       }
+       PAYMENT {
+           int Payment_ID PK
+           int Order_ID FK
+           decimal Amount
+           string Method
+           date Payment_Date
+       }
+   ```
+
+   Rules for converting an E-R diagram into tables:
+   - Each strong entity becomes a table, with its key attribute as the primary key.
+   - Each weak entity becomes a table whose primary key is the combination of its own partial key and the primary key of the owning entity, which is also a foreign key.
+   - A one to one relationship becomes a foreign key placed in either table, preferably in the one with total participation.
+   - A one to many relationship becomes a foreign key placed in the table on the "many" side, referring to the "one" side. No extra table is needed.
+   - A many to many relationship becomes a separate junction table, whose primary key is the combination of the two foreign keys, and which also holds any descriptive attributes of the relationship.
+   - A multivalued attribute becomes a separate table containing the entity's key and the attribute.
+   - A composite attribute is flattened into its component columns.
+   - A derived attribute is not stored; it is computed when required.
 20. **E-R Diagram কী? উদাহরণসহ লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019-1020 (ET: N/A)]*
 
+
+   Answer:
+
+   What an E-R diagram is:
+   - An Entity Relationship diagram is a graphical representation of the data requirements of a system, showing the entities about which data is to be stored, the attributes describing them, and the relationships between them. It was introduced by Peter Chen in 1976 and it is the standard first step of database design.
+   - It is a conceptual model, independent of any particular database product, and it is converted to a relational schema by defined rules.
+
+   Components of an E-R model:
+   - Entity: a real world object or concept about which data is stored, drawn as a rectangle. A strong entity has its own key; a weak entity, drawn as a double rectangle, depends on another entity for its identity.
+   - Attribute: a property of an entity, drawn as an ellipse. Types: simple and composite; single valued and multivalued, drawn as a double ellipse; derived, drawn as a dashed ellipse; and the key attribute, whose name is underlined.
+   - Relationship: an association between entities, drawn as a diamond. A relationship may itself carry descriptive attributes.
+   - Cardinality: one to one, one to many, many to one, or many to many, written on the connecting lines.
+   - Participation: total participation, shown by a double line, meaning every instance of the entity must take part; and partial participation, shown by a single line.
+
+   Example, a university system:
+
+   ```
+      Student_ID     Name      Dept            Course_ID   Course_Name   Credit
+          |            |         |                 |            |          |
+          +------+-----+---------+                 +-----+------+----------+
+                 |                                       |
+           +-----------+     M              N     +-------------+
+           |  STUDENT  |--------< ENROLLS >-------|   COURSE    |
+           +-----------+                          +-------------+
+                                  |
+                          Grade, Enrollment_Date
+   ```
+
+   Reading the diagram:
+   - Student and Course are entities, drawn as rectangles. Their attributes are drawn as ellipses, with the key attributes underlined.
+   - ENROLLS is a relationship, drawn as a diamond. It is many to many, since a student enrols in many courses and a course has many students.
+   - Grade and Enrollment_Date are descriptive attributes of the relationship, because a grade is meaningless without knowing both the student and the course.
+
+   Conversion to tables:
+
+   ```sql
+   Student(Student_ID, Name, Dept)
+   Course(Course_ID, Course_Name, Credit)
+   Enrollment(Student_ID, Course_ID, Enrollment_Date, Grade)
+   ```
+
+   - The many to many relationship becomes a junction table whose primary key is the pair of foreign keys, which is where the descriptive attributes are stored.
 21. **Draw an ER diagram of a Library Management System.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036-1037 (ET: BUET)]*
+
+
+   Answer: E-R diagram for a library management system.
+
+   Entities and attributes:
+   - Book: ISBN as primary key, Title, Author, Publisher, Edition, Subject, Publication_Year, Price.
+   - Book_Copy, a weak entity: Copy_ID as a partial key together with ISBN, Shelf_Location, Status which is Available, Issued, Reserved or Damaged, Acquisition_Date.
+   - Member: Member_ID as primary key, Name, Address, Phone, Email, Member_Type which is Student, Teacher or Staff, Join_Date, Expiry_Date.
+   - Librarian: Staff_ID as primary key, Name, Designation, Phone, Shift.
+   - Issue: Issue_ID as primary key, Copy_ID, ISBN, Member_ID, Staff_ID, Issue_Date, Due_Date, Return_Date, Fine.
+   - Reservation: Reservation_ID as primary key, Member_ID, ISBN, Reservation_Date, Status.
+   - Publisher: Publisher_ID as primary key, Publisher_Name, Address, Contact.
+
+   Relationships and cardinalities:
+   - Book HAS Book_Copy: one to many, and identifying, since a copy has no identity of its own without the book it is a copy of. Book_Copy is therefore a weak entity, drawn with a double rectangle and a double diamond.
+   - Member BORROWS Book_Copy: many to many over time, resolved by the Issue entity, which carries the dates and the fine.
+   - Librarian PROCESSES Issue: one to many.
+   - Member RESERVES Book: many to many, resolved by the Reservation entity.
+   - Publisher PUBLISHES Book: one to many.
+
+   ```mermaid
+   erDiagram
+       PUBLISHER ||--o{ BOOK : "publishes"
+       BOOK ||--|{ BOOK_COPY : "has copies"
+       MEMBER ||--o{ ISSUE : "borrows"
+       BOOK_COPY ||--o{ ISSUE : "is issued in"
+       LIBRARIAN ||--o{ ISSUE : "processes"
+       MEMBER ||--o{ RESERVATION : "reserves"
+       BOOK ||--o{ RESERVATION : "is reserved as"
+       BOOK {
+           string ISBN PK
+           string Title
+           string Author
+           string Subject
+           int Publisher_ID FK
+       }
+       BOOK_COPY {
+           int Copy_ID PK
+           string ISBN PK
+           string Shelf_Location
+           string Status
+       }
+       MEMBER {
+           int Member_ID PK
+           string Name
+           string Member_Type
+           date Expiry_Date
+       }
+       LIBRARIAN {
+           int Staff_ID PK
+           string Name
+           string Designation
+       }
+       ISSUE {
+           int Issue_ID PK
+           int Copy_ID FK
+           int Member_ID FK
+           int Staff_ID FK
+           date Issue_Date
+           date Due_Date
+           date Return_Date
+           decimal Fine
+       }
+       RESERVATION {
+           int Reservation_ID PK
+           int Member_ID FK
+           string ISBN FK
+           date Reservation_Date
+       }
+       PUBLISHER {
+           int Publisher_ID PK
+           string Publisher_Name
+           string Address
+       }
+   ```
+
+   Design points that earn marks:
+   - The separation of Book from Book_Copy is the essential decision. Book holds the bibliographic information once, and Book_Copy holds one row per physical volume. Without it, the title, author and publisher would be repeated for every copy, which is precisely the redundancy that normalisation exists to remove.
+   - Book_Copy is a weak entity: its Copy_ID alone does not identify it, so its primary key is the composite (ISBN, Copy_ID).
+   - Fine is stored in Issue rather than computed on demand, because the rate may change over time and the amount actually charged must be preserved.
 
 ## Keys in DBMS (21)
 
