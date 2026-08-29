@@ -3592,23 +3592,202 @@
 
 1. **What is SSL?** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
 
+
+   Answer: SSL stands for Secure Sockets Layer. It is a cryptographic protocol developed by Netscape in the 1990s to provide a secure, encrypted channel between a client and a server over an insecure network.
+
+   - SSL, Secure Sockets Layer, and TLS, Transport Layer Security, are cryptographic protocols that provide a secure channel between two applications over a network. TLS is the successor to SSL; SSL versions 2.0 and 3.0 are obsolete and insecure, and the current versions in use are TLS 1.2 and TLS 1.3.
+   - They sit between the transport layer and the application layer, so any application protocol can be wrapped in them: HTTP becomes HTTPS, SMTP becomes SMTPS, FTP becomes FTPS, and the same applies to IMAP, LDAP and database connections.
+
+   What they provide:
+   - Confidentiality: all traffic is encrypted with a symmetric cipher such as AES, so an interceptor sees only ciphertext.
+   - Integrity: a message authentication code detects any alteration in transit.
+   - Authentication: the server proves its identity with an X.509 certificate issued by a trusted Certifying Authority, and the client may optionally do the same in mutual TLS.
+
+   How the handshake works:
+   - The client sends a ClientHello listing the TLS versions and cipher suites it supports, with a random value.
+   - The server replies with a ServerHello choosing the version and cipher suite, its own random value, and its certificate.
+   - The client validates the certificate: the signature chain up to a trusted root, the validity dates, the domain name, and the revocation status.
+   - The two sides perform a key exchange, in modern practice ephemeral Diffie-Hellman or ECDHE, and derive a shared symmetric session key. Because the key is ephemeral, it gives forward secrecy: recording the traffic and later stealing the server's private key does not allow it to be decrypted.
+   - Both sides confirm with a Finished message, and all application data is then encrypted with the symmetric session key.
+   - This is hybrid encryption: asymmetric cryptography authenticates and agrees the key, and fast symmetric cryptography protects the data.
+
+   Important qualification: SSL itself is obsolete and insecure. SSL 2.0 and SSL 3.0 have both been broken, SSL 3.0 by the POODLE attack in 2014, and both are formally deprecated. What is used today is TLS, and the word SSL survives only as a colloquialism, as in the phrase "SSL certificate", which is in fact a TLS certificate.
 2. **Which client is used to security cannot to a remote server?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
+
+   Answer: SSH, the Secure Shell client, is used to connect securely to a remote server.
+
+   - SSH runs over TCP port 22 and provides an encrypted channel for remote command line login, so the username, the password and every command are protected from interception.
+   - It authenticates the server by its host key, which prevents connection to an impostor, and it authenticates the user by password or, far better, by a public and private key pair.
+   - It also provides secure file transfer through SCP and SFTP, and port forwarding, which tunnels other protocols through the encrypted channel.
+   - Common clients: OpenSSH on Linux and macOS and now built into Windows, PuTTY, MobaXterm and Termius.
+
+   Why not the alternatives:
+   - Telnet, on port 23, performs the same remote login function but sends everything, including the password, in plain text, so it must never be used across an untrusted network.
+   - FTP on port 21 is similarly unencrypted; SFTP over SSH or FTPS over TLS should be used instead.
+   - For graphical remote access the secure options are RDP with TLS, or VNC tunnelled through SSH or a VPN.
 3. **Ensure secure communication between a client application and the database server.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 314 (ET: N/A)]*
 
+
+   Answer: Securing communication between a client application and a database server requires encryption in transit, strong authentication and network restriction, so that the connection cannot be read, altered or established by anyone unauthorised.
+
+   Encryption in transit:
+   - Enable TLS on the database server and require it for every connection. All the major databases support it: `require_secure_transport` in MySQL, `ssl = on` with `hostssl` entries in PostgreSQL, Force Encryption in SQL Server, and TCPS in Oracle.
+   - Configure the client connection string to demand verification, not merely encryption: use `verify-full` in PostgreSQL or `VERIFY_IDENTITY` in MySQL, so that the client checks the server's certificate and its hostname. Encryption without verification still permits a man in the middle.
+   - Use TLS 1.2 or 1.3 only, with strong cipher suites, and disable SSL 3.0, TLS 1.0 and TLS 1.1.
+   - Deploy certificates from an internal or public Certifying Authority, and manage their renewal so they never expire unnoticed.
+   - Use mutual TLS where the sensitivity justifies it, so the database also authenticates the client by certificate.
+
+   Authentication and authorisation:
+   - Strong, unique credentials for the application account, stored in a secrets manager or a vault rather than in the source code or a configuration file.
+   - A dedicated database account per application, with the minimum privileges it actually needs: no DDL rights, no access to system catalogues, and no superuser.
+   - Certificate or integrated authentication, such as Kerberos or Active Directory, in preference to a password where the environment allows.
+   - Rotate credentials regularly, and remove default and unused accounts.
+
+   Network controls:
+   - Never expose the database directly to the Internet. Place it in a separate protected network zone and permit access only from the application servers, by firewall rule, on the specific port.
+   - Change the default port where it adds value, and disable any unused network protocols on the server.
+   - Use a VPN or an SSH tunnel where the application must connect across an untrusted network.
+   - Bind the listener to a specific interface rather than to all addresses.
+
+   Data and application controls:
+   - Encrypt data at rest as well: transparent database encryption, and column level encryption for the most sensitive fields such as card numbers, with keys held in a hardware security module.
+   - Use parameterised queries in the application, since the most likely route to the data is SQL injection through the application rather than interception of the wire.
+   - Apply connection pooling with a bounded pool, and set connection timeouts.
+
+   Monitoring and governance:
+   - Enable database auditing of logins, privileged actions and bulk data access, and ship the logs to a SIEM.
+   - Alert on failed logins, connections from unexpected addresses and unusually large result sets.
+   - Patch the database engine promptly, and run periodic vulnerability assessment and configuration review against a CIS benchmark.
+   - Encrypt backups and test the restoration.
 4. **Difference between HTTP and HTTPs.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 398 (ET: BUET)]*
 
+
+   Answer:
+
+   | Point | HTTP | HTTPS |
+   |---|---|---|
+   | Full form | HyperText Transfer Protocol | HyperText Transfer Protocol Secure |
+   | Security | Data travels in plain text | Data is encrypted with SSL/TLS |
+   | Port | 80 | 443 |
+   | Certificate | Not required | An SSL/TLS certificate from a trusted CA is required |
+   | Protection provided | None | Confidentiality, integrity and server authentication |
+   | Vulnerability | Open to eavesdropping, tampering and man in the middle | Protected against all three, provided the certificate is validated |
+   | Browser indication | Marked "Not Secure" | Padlock shown |
+   | Speed | Marginally faster, with no handshake | A small handshake cost, negligible today and offset by HTTP/2 and HTTP/3 |
+   | SEO and modern protocols | Ranked lower; HTTP/2 and HTTP/3 are effectively unavailable | Ranked higher; required in practice for HTTP/2 and HTTP/3 |
+   | Suitable for | Nothing sensitive; and in practice nothing at all today | Login pages, banking, payment, and any site handling personal data |
+
+   - HTTPS is simply HTTP carried inside a TLS encrypted channel. The application protocol is unchanged; the security is added by the layer beneath it.
+   - The modern position is that HTTPS should be used everywhere, not only on pages that handle sensitive data, because an attacker who can modify any page on a site can inject content into it. HSTS should also be enabled so that a downgrade to HTTP is impossible.
 5. **(গ) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে কোনটি কার্যকর?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer: HTTPS is far more effective than HTTP from the point of view of security, and it should be used for every website.
+
+   Why HTTPS is effective and HTTP is not:
+   - Confidentiality: HTTPS encrypts everything with TLS, so an interceptor on a public Wi-Fi network, at an ISP or anywhere along the path sees only unreadable ciphertext. With HTTP the password, the card number, the national identity number and the whole page content are visible to anyone who captures the traffic.
+   - Integrity: TLS attaches a message authentication code to every record, so any alteration in transit is detected and the connection is aborted. With HTTP an attacker can inject advertisements, malware or false content into the page, and neither the user nor the server will know.
+   - Authentication: the server presents an X.509 certificate issued by a trusted Certifying Authority, and the browser verifies the signature chain, the validity dates and the domain name. This proves the site is genuine. HTTP offers no assurance at all, so a counterfeit site is indistinguishable from the real one.
+   - Protection against specific attacks: HTTPS defeats eavesdropping, session cookie theft, man in the middle interception and content injection, all of which are trivial against HTTP.
+   - Regulatory and legal: PCI DSS for card data, data protection law and the Bangladesh Bank ICT security guidelines effectively make HTTPS mandatory for any site handling personal or financial data.
+   - Practical: browsers now label HTTP sites as "Not Secure", search engines rank HTTPS higher, and HTTP/2 and HTTP/3, which are substantially faster, are available only over HTTPS in practice.
+
+   - Ports and mechanism: HTTP uses TCP port 80 and HTTPS uses port 443. HTTPS is not a different application protocol; it is the same HTTP carried inside a TLS channel.
+   - Additional measures that complete the protection: HSTS, so the browser refuses to fall back to HTTP; TLS 1.2 or 1.3 only, with weak ciphers disabled; correct certificate management so that certificates never expire; and redirecting all HTTP requests to HTTPS.
 6. **Write down the basic differences of the following:**
    **(ii) TLS 1.2 vs. 1.3** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 535 (ET: MIST)]*
 
+
+   Answer:
+
+   | Point | TLS 1.2 | TLS 1.3 |
+   |---|---|---|
+   | Year | 2008, RFC 5246 | 2018, RFC 8446 |
+   | Handshake round trips | 2 round trips before data can flow | 1 round trip, and 0-RTT for a resumed session |
+   | Speed | Slower connection establishment | Noticeably faster, which matters most on mobile and high latency links |
+   | Cipher suites supported | Many, including weak and obsolete options | Only five, all modern and authenticated |
+   | Key exchange | RSA key transport, static and ephemeral Diffie-Hellman | Ephemeral Diffie-Hellman only, that is ECDHE or DHE |
+   | Forward secrecy | Optional, and often not configured | Mandatory, so recorded traffic cannot be decrypted later even if the server's private key is stolen |
+   | Encryption modes | CBC and RC4 permitted, which enabled BEAST, POODLE and Lucky13 | AEAD only, that is AES-GCM and ChaCha20-Poly1305 |
+   | Obsolete algorithms | RC4, 3DES, MD5, SHA-1, static RSA, compression all permitted | All removed |
+   | Handshake privacy | Certificate sent in clear | Most of the handshake, including the certificate, is encrypted |
+   | Renegotiation | Supported, and a source of vulnerabilities | Removed entirely |
+   | Session resumption | Session IDs and tickets | PSK based resumption with 0-RTT |
+   | Security | Secure if configured carefully; insecure if configured badly | Secure by design; there are almost no insecure configurations available |
+
+   - The central improvement: TLS 1.3 removed choice. Every weak option that made TLS 1.2 dangerous when misconfigured — RC4, CBC modes, static RSA, compression, renegotiation, MD5 and SHA-1 — was deleted rather than deprecated, so a TLS 1.3 connection is secure by construction.
+   - The practical benefit: one fewer round trip, which reduces page load time measurably, especially on mobile networks.
+   - The one caution: 0-RTT resumption data is replayable, so it must be used only for idempotent requests.
 7. **What is SSL, TLS, and HTTPs?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 594 (ET: N/A)]*
 
+
+   Answer:
+
+   SSL and TLS:
+
+   - SSL, Secure Sockets Layer, and TLS, Transport Layer Security, are cryptographic protocols that provide a secure channel between two applications over a network. TLS is the successor to SSL; SSL versions 2.0 and 3.0 are obsolete and insecure, and the current versions in use are TLS 1.2 and TLS 1.3.
+   - They sit between the transport layer and the application layer, so any application protocol can be wrapped in them: HTTP becomes HTTPS, SMTP becomes SMTPS, FTP becomes FTPS, and the same applies to IMAP, LDAP and database connections.
+
+   What they provide:
+   - Confidentiality: all traffic is encrypted with a symmetric cipher such as AES, so an interceptor sees only ciphertext.
+   - Integrity: a message authentication code detects any alteration in transit.
+   - Authentication: the server proves its identity with an X.509 certificate issued by a trusted Certifying Authority, and the client may optionally do the same in mutual TLS.
+
+   How the handshake works:
+   - The client sends a ClientHello listing the TLS versions and cipher suites it supports, with a random value.
+   - The server replies with a ServerHello choosing the version and cipher suite, its own random value, and its certificate.
+   - The client validates the certificate: the signature chain up to a trusted root, the validity dates, the domain name, and the revocation status.
+   - The two sides perform a key exchange, in modern practice ephemeral Diffie-Hellman or ECDHE, and derive a shared symmetric session key. Because the key is ephemeral, it gives forward secrecy: recording the traffic and later stealing the server's private key does not allow it to be decrypted.
+   - Both sides confirm with a Finished message, and all application data is then encrypted with the symmetric session key.
+   - This is hybrid encryption: asymmetric cryptography authenticates and agrees the key, and fast symmetric cryptography protects the data.
+
+   HTTPS:
+   - HTTPS is HyperText Transfer Protocol Secure: ordinary HTTP carried inside a TLS encrypted channel, on TCP port 443 instead of port 80.
+   - The browser first completes the TLS handshake, validating the server's certificate and agreeing a session key, and every HTTP request and response thereafter is encrypted with it.
+   - It gives the three services described above to web traffic: nobody in the path can read the page or the credentials, nobody can alter them undetected, and the user knows the site is genuine.
+   - It should be used on every page, not only login pages, because an attacker who can modify any page can inject malicious content into it. HSTS should be enabled so that a downgrade to plain HTTP is impossible.
+
+   Relationship in one line: SSL was the original protocol, TLS is its secure successor, and HTTPS is what you get when HTTP is carried over TLS.
 8. **Attacker steals private key of website that uses transport layer security and remains undetected what can be done with private key?** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
 
+
+   Answer: If an attacker steals a website's TLS private key and remains undetected, the consequences depend critically on whether the site uses forward secrecy.
+
+   What the attacker can do:
+   - Impersonate the website completely: with the private key and the corresponding certificate, he can present himself as the genuine site. The browser validates the certificate successfully and shows the padlock, so the user has no indication whatever that the site is false. This is the most serious consequence.
+   - Mount an undetectable man in the middle attack: combined with DNS poisoning, ARP spoofing, BGP hijacking or a rogue access point, he can sit between the users and the real site, decrypt everything, read and alter it, and re-encrypt it onward. Credentials, session cookies, card details and personal data are all exposed.
+   - Decrypt recorded past traffic, but only if the connection used RSA key transport rather than ephemeral Diffie-Hellman. In RSA key transport the client encrypts the session key with the server's public key, so anyone with the private key can recover every session key from a recorded capture, retrospectively, going back as far as the recordings go.
+   - Forge digital signatures made with that key, and sign content or software as the organisation.
+   - Set up convincing phishing sites that pass every certificate check.
+
+   What limits the damage:
+   - Forward secrecy is the decisive factor. If the server uses ephemeral Diffie-Hellman, that is ECDHE or DHE, which is mandatory in TLS 1.3 and should be configured in TLS 1.2, the session key is derived from a temporary key pair that is discarded after the session and never transmitted. Stealing the long term private key therefore does not allow past recorded sessions to be decrypted. It still allows impersonation of future connections.
+   - The attacker cannot decrypt future connections passively either; he must actively intercept them, which requires a position in the network path.
+
+   How to manage it:
+   - Revoke the certificate immediately through the Certifying Authority, and publish the revocation through the CRL and OCSP. Note that revocation checking is imperfect in browsers, so this is necessary but not sufficient.
+   - Generate a completely new key pair and obtain a new certificate. Never reuse the compromised key.
+   - Enable OCSP stapling with the must-staple flag, so that clients reliably learn of the revocation.
+   - Investigate how the key was stolen and close that route, since the same weakness will otherwise be used again.
+   - Monitor Certificate Transparency logs for certificates issued for the domain, which detects misissuance.
+
+   How to prevent it:
+   - Store private keys in a Hardware Security Module or a TPM, so that the key can be used for signing but can never be extracted.
+   - Restrict file permissions, encrypt the key at rest with a passphrase, and never place it in a code repository or a backup that is not itself protected.
+   - Enforce forward secrecy by configuring ECDHE cipher suites only, or by using TLS 1.3, which makes it mandatory. This is the single most valuable measure, because it limits an undetected compromise to future active attacks rather than the entire past.
+   - Use short certificate lifetimes, now typically 90 days, so that a stolen key becomes useless quickly.
+   - Rotate keys on a schedule and on any suspicion, and audit access to the key material.
 9. **(a) Write the full form of those: (i) SSL (ii) TSL** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819 (ET: BUET)]*
 
+
+   Answer:
+
+   - SSL: Secure Sockets Layer. A cryptographic protocol developed by Netscape to provide encrypted communication between a client and a server. Versions 2.0 and 3.0 are both obsolete and insecure, and it has been replaced by TLS.
+   - TLS, which the question writes as TSL: Transport Layer Security. The successor to SSL, standardised by the IETF. The versions in current use are TLS 1.2, published in 2008, and TLS 1.3, published in 2018.
+
+   - Both provide the same three services: confidentiality through symmetric encryption, integrity through a message authentication code, and server authentication through an X.509 certificate.
+   - The term "SSL certificate" is still used colloquially, but what is actually issued and used today is a TLS certificate.
 10. **(b) Which IP address may have secured via SSL and publicly by the Certificate Authority(CA). If secured Write Yes or otherwise No.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819 (ET: BUET)]*
    1.1.1.1
    8.8.4.1
@@ -3617,7 +3796,64 @@
    172.16.8.1
    10.0.0.1
 
+
+   Answer: A certificate issued by a public Certifying Authority can be granted only for a publicly routable IP address or a public domain name. A private RFC 1918 address cannot be validated by a public CA, because it is not globally unique and no one can prove ownership of it.
+
+   | IP address | Type | Can it be secured by a public CA certificate |
+   |---|---|---|
+   | 1.1.1.1 | Public, Cloudflare DNS | Yes |
+   | 8.8.4.1 | Public | Yes |
+   | 192.168.10.2 | Private, 192.168.0.0/16 | No |
+   | 8.8.8.8 | Public, Google DNS | Yes |
+   | 172.16.8.1 | Private, 172.16.0.0/12 | No |
+   | 10.0.0.1 | Private, 10.0.0.0/8 | No |
+
+   Reasoning:
+   - The private ranges defined by RFC 1918 are 10.0.0.0/8, 172.16.0.0 to 172.31.255.255 and 192.168.0.0/16. The same private address exists simultaneously inside millions of separate networks, so no Certifying Authority can verify that a particular applicant controls it, and the CA/Browser Forum rules explicitly forbid issuing publicly trusted certificates for them. Since 2016 no public CA may issue a certificate for a private IP address or an internal server name.
+   - A public IP address is globally unique and its control can be demonstrated, so a certificate may be issued for it, although IP address certificates are uncommon and only a few CAs offer them; the normal practice is to certify a domain name instead.
+   - Private addresses can still be secured, but only by an internal or private Certifying Authority whose root certificate the organisation installs on its own machines. Such a certificate is trusted inside the organisation and nowhere else, which is exactly the correct arrangement for internal servers.
+   - The general rule to state: public trust requires public, verifiable ownership. Anything that cannot be uniquely and verifiably owned cannot be publicly certified.
 11. **HTTPs কীভাবে একটি Website-এর সুরক্ষা দেয়? ব্লক ডায়াফ্রামের মাধ্যমে উত্তর দিন।** *[40th BCS 2020 compact it 971 (ET: BPSC)]*
+
+
+   Answer: HTTPS protects a website by carrying ordinary HTTP inside a TLS encrypted channel, which gives confidentiality, integrity and server authentication.
+
+   Block diagram:
+
+   ```mermaid
+   graph LR
+       A["Browser"] --> B["HTTP request in plain form"]
+       B --> C["TLS layer: encrypt with the session key, add MAC"]
+       C --> D["TCP port 443"]
+       D --> E["Internet, where only ciphertext is visible"]
+       E --> F["Web server: TCP 443"]
+       F --> G["TLS layer: verify MAC, decrypt"]
+       G --> H["HTTP request delivered to the application"]
+       I["Server's X.509 certificate from a trusted CA"] -.-> C
+   ```
+
+   The handshake, which establishes the protection:
+
+   ```mermaid
+   sequenceDiagram
+       participant B as Browser
+       participant S as Web Server
+       B->>S: ClientHello: TLS versions, cipher suites, client random
+       S->>B: ServerHello: chosen version and cipher, server random, X.509 certificate
+       B->>B: Validate the certificate: CA signature chain, dates, domain name, revocation
+       B->>S: Key exchange, ECDHE; both derive the same session key
+       S->>B: Finished
+       B->>S: Finished
+       Note over B,S: All HTTP traffic from here is encrypted with AES using the session key
+   ```
+
+   How each protection is delivered:
+   - Confidentiality: after the handshake, every request and response is encrypted with a symmetric cipher such as AES-256-GCM. An interceptor on public Wi-Fi, at the ISP or anywhere on the path sees only ciphertext, so passwords, card numbers and page content are unreadable.
+   - Integrity: each TLS record carries a message authentication code. Any alteration in transit fails verification and the connection is aborted, so an attacker cannot inject advertisements, malware or false content into the page.
+   - Authentication of the server: the X.509 certificate is signed by a Certifying Authority whose root the browser already trusts. The browser checks the signature chain, the validity dates, the domain name and the revocation status. This proves the user is talking to the genuine site and not to a counterfeit, which is what defeats phishing and pharming at the technical level.
+   - Forward secrecy: because the session key is derived from an ephemeral Diffie-Hellman exchange and then discarded, recording the traffic and later stealing the server's private key does not allow it to be decrypted.
+
+   Supporting measures that complete the protection: HSTS, so the browser will not fall back to plain HTTP; redirecting all port 80 requests to 443; TLS 1.2 or 1.3 only with weak ciphers disabled; `Secure` and `HttpOnly` cookie flags; and disciplined certificate renewal.
 
 ## Cyber Crime & Security (9)
 
@@ -3659,15 +3895,201 @@
 
 1. **What is the purpose of VPN used in computer security?** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
 
+
+   Answer: The purpose of a VPN in computer security is to create an encrypted tunnel across an untrusted public network, so that data can be exchanged as though the two endpoints were on the same private network.
+
+   - A Virtual Private Network creates an encrypted tunnel across a public network such as the Internet, so that two endpoints can exchange data as though they were on the same private network.
+   - The data is encapsulated, that is the original packet is placed inside a new packet, and encrypted, so that anyone intercepting it on the public network sees only the outer header and an unreadable payload.
+
+   How it works:
+   - Step 1: the two endpoints authenticate each other, using a pre-shared key, digital certificates or user credentials.
+   - Step 2: they negotiate the encryption and integrity algorithms and derive session keys, typically using IKE for IPsec or a TLS handshake for an SSL VPN.
+   - Step 3: the tunnel is established.
+   - Step 4: each outgoing packet is encrypted and encapsulated in a new IP packet addressed to the far tunnel endpoint.
+   - Step 5: the far end decapsulates and decrypts it and forwards the original packet into the private network.
+
+   Protocols:
+   - IPsec, which operates at the network layer, layer 3, with AH for authentication and ESP for encryption, and two modes: transport mode, which protects only the payload, and tunnel mode, which protects the whole original packet and is used for site to site VPNs.
+   - SSL and TLS VPN, which operates at the application layer and can run through a browser, so no client software is needed. It passes firewalls easily because it uses port 443.
+   - Others: OpenVPN, WireGuard, which is modern, fast and simple, L2TP over IPsec, and the obsolete and insecure PPTP.
+
+   Purposes and benefits:
+   - Confidentiality on an untrusted network, which is the primary purpose; public Wi-Fi becomes safe to use.
+   - Secure remote access for staff working from home or travelling, without exposing internal services to the Internet.
+   - Connecting branch offices to head office over the Internet at a small fraction of the cost of a leased line.
+   - Authentication, so that only authorised users and sites can join the private network.
+   - Integrity, so that traffic cannot be altered in transit.
+   - Hiding the user's real IP address and location, and bypassing geographic restrictions and censorship.
+   - Cost saving compared with dedicated circuits, and easy scalability.
+
+   Limitations: it adds encryption overhead and therefore some latency; the VPN concentrator is a single point of failure and a high value target; a compromised endpoint brings the infection straight into the private network; and split tunnelling, if misconfigured, leaks traffic outside the tunnel.
 2. **In which layer IPsec works?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: IPsec works at the Network layer, that is Layer 3 of the OSI model, and correspondingly at the Internet layer of the TCP/IP model.
+
+   - Because it operates at layer 3, it protects every packet regardless of the application above it, and applications need no modification at all to benefit from it. This is its principal advantage over TLS, which works at the application and transport boundary and must be built into each application.
+   - Its two protocols: AH, the Authentication Header, IP protocol 51, which provides integrity and authentication but no encryption; and ESP, the Encapsulating Security Payload, IP protocol 50, which provides encryption as well and is what is actually used.
+   - Its two modes: transport mode, which encrypts only the payload and leaves the original IP header intact, used for host to host communication; and tunnel mode, which encrypts the entire original packet and adds a new IP header, used for site to site VPNs and gateway to gateway links.
+   - Key management is performed by IKE, the Internet Key Exchange, over UDP port 500, and NAT traversal uses UDP port 4500.
+   - IPsec is mandatory in the IPv6 specification and optional in IPv4, and it is the standard protocol for site to site VPNs between offices.
 3. **What is VPN? How it is working.** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
 
+
+   Answer:
+
+   - A Virtual Private Network creates an encrypted tunnel across a public network such as the Internet, so that two endpoints can exchange data as though they were on the same private network.
+   - The data is encapsulated, that is the original packet is placed inside a new packet, and encrypted, so that anyone intercepting it on the public network sees only the outer header and an unreadable payload.
+
+   How it works:
+   - Step 1: the two endpoints authenticate each other, using a pre-shared key, digital certificates or user credentials.
+   - Step 2: they negotiate the encryption and integrity algorithms and derive session keys, typically using IKE for IPsec or a TLS handshake for an SSL VPN.
+   - Step 3: the tunnel is established.
+   - Step 4: each outgoing packet is encrypted and encapsulated in a new IP packet addressed to the far tunnel endpoint.
+   - Step 5: the far end decapsulates and decrypts it and forwards the original packet into the private network.
+
+   Protocols:
+   - IPsec, which operates at the network layer, layer 3, with AH for authentication and ESP for encryption, and two modes: transport mode, which protects only the payload, and tunnel mode, which protects the whole original packet and is used for site to site VPNs.
+   - SSL and TLS VPN, which operates at the application layer and can run through a browser, so no client software is needed. It passes firewalls easily because it uses port 443.
+   - Others: OpenVPN, WireGuard, which is modern, fast and simple, L2TP over IPsec, and the obsolete and insecure PPTP.
+
+   Purposes and benefits:
+   - Confidentiality on an untrusted network, which is the primary purpose; public Wi-Fi becomes safe to use.
+   - Secure remote access for staff working from home or travelling, without exposing internal services to the Internet.
+   - Connecting branch offices to head office over the Internet at a small fraction of the cost of a leased line.
+   - Authentication, so that only authorised users and sites can join the private network.
+   - Integrity, so that traffic cannot be altered in transit.
+   - Hiding the user's real IP address and location, and bypassing geographic restrictions and censorship.
+   - Cost saving compared with dedicated circuits, and easy scalability.
+
+   Limitations: it adds encryption overhead and therefore some latency; the VPN concentrator is a single point of failure and a high value target; a compromised endpoint brings the infection straight into the private network; and split tunnelling, if misconfigured, leaks traffic outside the tunnel.
 4. **(a) How can VPN provide secure communication platform? Explain site-to-site VPN and remote-access VPN using necessary figures.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 800 (ET: N/A)]*
 
+
+   Answer:
+
+   How a VPN provides a secure communication platform:
+   - Encryption: every packet entering the tunnel is encrypted with a strong symmetric cipher such as AES-256, so anyone intercepting it on the public network sees only ciphertext. This gives confidentiality on a medium that is fundamentally untrustworthy.
+   - Authentication: the endpoints prove their identity to each other before the tunnel is established, using pre-shared keys, digital certificates or user credentials with multi-factor authentication. An unauthorised party cannot join the private network.
+   - Integrity: a message authentication code is attached to every packet, so any alteration in transit is detected and the packet is discarded.
+   - Encapsulation: the original packet, including its private IP addresses, is placed inside a new packet addressed to the far tunnel endpoint. The internal addressing is therefore invisible from outside, and private addresses can be routed across the public Internet.
+   - Anti-replay protection: sequence numbers prevent an attacker from capturing a valid packet and replaying it later.
+   - Key management: IKE negotiates and periodically rekeys the session, so that a compromised key protects only a limited amount of traffic, and ephemeral Diffie-Hellman provides forward secrecy.
+
+   Site to site VPN:
+   - It connects two entire networks, typically a branch office and head office, through a permanent tunnel between their gateway devices. Individual hosts know nothing about it; they simply route to the other network as if it were local.
+   - It normally uses IPsec in tunnel mode, and the tunnel is always up.
+
+   ```mermaid
+   graph LR
+       A["Branch LAN 192.168.2.0/24"] --> B["Branch VPN Gateway"]
+       B -->|"IPsec tunnel over the Internet"| C["Head Office VPN Gateway"]
+       C --> D["Head Office LAN 192.168.1.0/24"]
+   ```
+
+   Remote access VPN:
+   - It connects a single user's device to the organisation's network, wherever that user happens to be. The tunnel is created on demand when the user connects and torn down afterwards.
+   - It uses either an SSL/TLS VPN, which may run through a browser and passes firewalls easily on port 443, or IPsec with a client.
+
+   ```mermaid
+   graph LR
+       A["Remote user laptop at home"] -->|"Encrypted tunnel, TLS or IPsec"| B["VPN Concentrator at head office"]
+       B --> C["Internal LAN: file server, application, database"]
+       D["Mobile phone"] -->|"Encrypted tunnel"| B
+   ```
+
+   Comparison:
+
+   | Point | Site to site VPN | Remote access VPN |
+   |---|---|---|
+   | Connects | Two whole networks | One device to a network |
+   | Endpoints | Router or firewall at each site | Client software on the device, and a concentrator at the office |
+   | Client software | None needed on individual hosts | Required on each device, unless it is a browser based SSL VPN |
+   | Tunnel | Permanent, always established | On demand, created when the user connects |
+   | Number of users | All users of both sites, transparently | One user per tunnel |
+   | Typical protocol | IPsec in tunnel mode | SSL/TLS VPN, or IPsec with a client |
+   | Authentication | Pre-shared key or device certificate | User credentials with multi-factor authentication |
+   | Typical use | Linking branch offices, connecting to a data centre or a cloud region | Staff working from home or travelling, and vendor support access |
 5. **What is VPN? Difference between site to site VPN and Remote access VPN.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 840 (ET: N/A)]*
 
+
+   Answer:
+
+   What a VPN is:
+
+   - A Virtual Private Network creates an encrypted tunnel across a public network such as the Internet, so that two endpoints can exchange data as though they were on the same private network.
+   - The data is encapsulated, that is the original packet is placed inside a new packet, and encrypted, so that anyone intercepting it on the public network sees only the outer header and an unreadable payload.
+
+   How it works:
+   - Step 1: the two endpoints authenticate each other, using a pre-shared key, digital certificates or user credentials.
+   - Step 2: they negotiate the encryption and integrity algorithms and derive session keys, typically using IKE for IPsec or a TLS handshake for an SSL VPN.
+   - Step 3: the tunnel is established.
+   - Step 4: each outgoing packet is encrypted and encapsulated in a new IP packet addressed to the far tunnel endpoint.
+   - Step 5: the far end decapsulates and decrypts it and forwards the original packet into the private network.
+
+   Protocols:
+   - IPsec, which operates at the network layer, layer 3, with AH for authentication and ESP for encryption, and two modes: transport mode, which protects only the payload, and tunnel mode, which protects the whole original packet and is used for site to site VPNs.
+   - SSL and TLS VPN, which operates at the application layer and can run through a browser, so no client software is needed. It passes firewalls easily because it uses port 443.
+   - Others: OpenVPN, WireGuard, which is modern, fast and simple, L2TP over IPsec, and the obsolete and insecure PPTP.
+
+   Purposes and benefits:
+   - Confidentiality on an untrusted network, which is the primary purpose; public Wi-Fi becomes safe to use.
+   - Secure remote access for staff working from home or travelling, without exposing internal services to the Internet.
+   - Connecting branch offices to head office over the Internet at a small fraction of the cost of a leased line.
+   - Authentication, so that only authorised users and sites can join the private network.
+   - Integrity, so that traffic cannot be altered in transit.
+   - Hiding the user's real IP address and location, and bypassing geographic restrictions and censorship.
+   - Cost saving compared with dedicated circuits, and easy scalability.
+
+   Limitations: it adds encryption overhead and therefore some latency; the VPN concentrator is a single point of failure and a high value target; a compromised endpoint brings the infection straight into the private network; and split tunnelling, if misconfigured, leaks traffic outside the tunnel.
+
+   Difference between site to site VPN and remote access VPN:
+
+   | Point | Site to site VPN | Remote access VPN |
+   |---|---|---|
+   | Purpose | Connects two entire networks permanently | Connects an individual device to a network on demand |
+   | Endpoints | A gateway, router or firewall at each site | Client software on the user's device, and a VPN concentrator at the office |
+   | Client software | Not needed on individual hosts; it is transparent to them | Required on each device, unless a browser based SSL VPN is used |
+   | Tunnel state | Always up | Established when the user connects and torn down afterwards |
+   | Users served | All users at both sites at once | One user per tunnel |
+   | Protocol normally used | IPsec in tunnel mode | SSL/TLS VPN, or IPsec with a client |
+   | Authentication | Pre-shared key or device certificate | User credentials, preferably with multi-factor authentication |
+   | Scalability | Limited by the number of sites and the mesh of tunnels | Limited by the concentrator's capacity and licences |
+   | Management | Configured once by the network team | Requires user provisioning, client distribution and support |
+   | Typical use | Branch office to head office, office to data centre, office to cloud | Staff working from home, travelling users, vendor support access |
+   | Sub-types | Intranet VPN between an organisation's own sites, and extranet VPN to a partner | Full tunnel, in which all traffic goes through the office, and split tunnel, in which only corporate traffic does |
+
+   - The two are complementary, and most organisations use both: site to site tunnels to link the branches permanently, and remote access for individual staff.
 6. **What is VPN? Why we use it?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
+
+
+   Answer:
+
+   - A Virtual Private Network creates an encrypted tunnel across a public network such as the Internet, so that two endpoints can exchange data as though they were on the same private network.
+   - The data is encapsulated, that is the original packet is placed inside a new packet, and encrypted, so that anyone intercepting it on the public network sees only the outer header and an unreadable payload.
+
+   How it works:
+   - Step 1: the two endpoints authenticate each other, using a pre-shared key, digital certificates or user credentials.
+   - Step 2: they negotiate the encryption and integrity algorithms and derive session keys, typically using IKE for IPsec or a TLS handshake for an SSL VPN.
+   - Step 3: the tunnel is established.
+   - Step 4: each outgoing packet is encrypted and encapsulated in a new IP packet addressed to the far tunnel endpoint.
+   - Step 5: the far end decapsulates and decrypts it and forwards the original packet into the private network.
+
+   Protocols:
+   - IPsec, which operates at the network layer, layer 3, with AH for authentication and ESP for encryption, and two modes: transport mode, which protects only the payload, and tunnel mode, which protects the whole original packet and is used for site to site VPNs.
+   - SSL and TLS VPN, which operates at the application layer and can run through a browser, so no client software is needed. It passes firewalls easily because it uses port 443.
+   - Others: OpenVPN, WireGuard, which is modern, fast and simple, L2TP over IPsec, and the obsolete and insecure PPTP.
+
+   Purposes and benefits:
+   - Confidentiality on an untrusted network, which is the primary purpose; public Wi-Fi becomes safe to use.
+   - Secure remote access for staff working from home or travelling, without exposing internal services to the Internet.
+   - Connecting branch offices to head office over the Internet at a small fraction of the cost of a leased line.
+   - Authentication, so that only authorised users and sites can join the private network.
+   - Integrity, so that traffic cannot be altered in transit.
+   - Hiding the user's real IP address and location, and bypassing geographic restrictions and censorship.
+   - Cost saving compared with dedicated circuits, and easy scalability.
+
+   Limitations: it adds encryption overhead and therefore some latency; the VPN concentrator is a single point of failure and a high value target; a compromised endpoint brings the infection straight into the private network; and split tunnelling, if misconfigured, leaks traffic outside the tunnel.
 
 ## Critical Information Infrastructure (CII) & Cyber Governance (3)
 
