@@ -483,1125 +483,1125 @@
 10. **What is Universal gate and how is constructed it?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   What a universal gate is:
-   - A universal gate is a logic gate from which every other logic gate, and therefore every Boolean function, can be constructed using that gate alone.
-   - There are exactly two: NAND and NOR.
-   - The reason they are universal is that any Boolean function can be written in sum of products form, which requires only AND, OR and NOT, and all three of those can be built from NAND alone or from NOR alone.
+    What a universal gate is:
+    - A universal gate is a logic gate from which every other logic gate, and therefore every Boolean function, can be constructed using that gate alone.
+    - There are exactly two: NAND and NOR.
+    - The reason they are universal is that any Boolean function can be written in sum of products form, which requires only AND, OR and NOT, and all three of those can be built from NAND alone or from NOR alone.
 
-   Why NAND is a universal gate:
-   - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
-   - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
+    Why NAND is a universal gate:
+    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
-   NOT from NAND, using 1 gate:
-   - Tie both inputs together: (A · A)' = A'
+    NOT from NAND, using 1 gate:
+    - Tie both inputs together: (A · A)' = A'
 
-   ```
-   A ---+
-        |>o--- A'
-   A ---+
-   ```
+    ```
+    A ---+
+         |>o--- A'
+    A ---+
+    ```
 
-   AND from NAND, using 2 gates:
-   - A NAND followed by a NOT: ((A · B)')' = A · B
+    AND from NAND, using 2 gates:
+    - A NAND followed by a NOT: ((A · B)')' = A · B
 
-   ```
-   A ---|
-        |>o---+---|
-   B ---|         |>o--- A.B
-                +-|
-   ```
+    ```
+    A ---|
+         |>o---+---|
+    B ---|         |>o--- A.B
+                 +-|
+    ```
 
-   OR from NAND, using 3 gates:
-   - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
+    OR from NAND, using 3 gates:
+    - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
 
-   ```
-   A --|>o---|
-              |>o--- A + B
-   B --|>o---|
-   ```
+    ```
+    A --|>o---|
+               |>o--- A + B
+    B --|>o---|
+    ```
 
-   NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
-   XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
+    NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
+    XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
 
-   - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
+    - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
 
-   Why NOR is a universal gate:
-   - NOT from NOR, 1 gate: (A + A)' = A'
-   - OR from NOR, 2 gates: ((A + B)')' = A + B
-   - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
-   - NAND from NOR, 4 gates: build AND with 3 and invert with 1
+    Why NOR is a universal gate:
+    - NOT from NOR, 1 gate: (A + A)' = A'
+    - OR from NOR, 2 gates: ((A + B)')' = A + B
+    - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
+    - NAND from NOR, 4 gates: build AND with 3 and invert with 1
 
-   ```
-   NOT:  A ---+
-              |>o--- A'      (both inputs tied together)
-          A ---+
+    ```
+    NOT:  A ---+
+               |>o--- A'      (both inputs tied together)
+           A ---+
 
-   OR:   A ---|
-              |>o---|>o--- A + B
-         B ---|
+    OR:   A ---|
+               |>o---|>o--- A + B
+          B ---|
 
-   AND:  A --|>o---|
-                    |>o--- A.B
-         B --|>o---|
-   ```
+    AND:  A --|>o---|
+                     |>o--- A.B
+          B --|>o---|
+    ```
 
-   - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
+    - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
 
-   Why universal gates are used in practice:
-   - Only one kind of gate need be fabricated, which simplifies manufacture and reduces cost.
-   - In CMOS, NAND and NOR are the natural primitives: a two input NAND needs 4 transistors, whereas AND needs 6, because AND is a NAND followed by an inverter. Designing in NAND therefore uses fewer transistors, less area and less power.
-   - Any sum of products expression converts directly into a two level NAND-NAND network with no additional gates; any product of sums expression converts into a NOR-NOR network.
-   - Uniform propagation delay, since every path passes through gates of the same kind.
+    Why universal gates are used in practice:
+    - Only one kind of gate need be fabricated, which simplifies manufacture and reduces cost.
+    - In CMOS, NAND and NOR are the natural primitives: a two input NAND needs 4 transistors, whereas AND needs 6, because AND is a NAND followed by an inverter. Designing in NAND therefore uses fewer transistors, less area and less power.
+    - Any sum of products expression converts directly into a two level NAND-NAND network with no additional gates; any product of sums expression converts into a NOR-NOR network.
+    - Uniform propagation delay, since every path passes through gates of the same kind.
 11. **মৌলিক গেইট কী? NAND এবং NOR গেইটকে কেন সার্বজনীন গেইট বলা হয় ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   Basic logic gates:
-   - The basic, or fundamental, gates are AND, OR and NOT. They are called basic because every other gate can be constructed from them, and because they correspond directly to the three operations of Boolean algebra: conjunction, disjunction and complement.
-   - AND: Y = A · B, output 1 only when every input is 1.
-   - OR: Y = A + B, output 1 when at least one input is 1.
-   - NOT: Y = A', which inverts the single input.
+    Basic logic gates:
+    - The basic, or fundamental, gates are AND, OR and NOT. They are called basic because every other gate can be constructed from them, and because they correspond directly to the three operations of Boolean algebra: conjunction, disjunction and complement.
+    - AND: Y = A · B, output 1 only when every input is 1.
+    - OR: Y = A + B, output 1 when at least one input is 1.
+    - NOT: Y = A', which inverts the single input.
 
-   | Gate | Symbol expression | Description | Truth table, inputs A B → output |
-   |---|---|---|---|
-   | AND | Y = A · B | Output 1 only when every input is 1 | 00→0, 01→0, 10→0, 11→1 |
-   | OR | Y = A + B | Output 1 when at least one input is 1 | 00→0, 01→1, 10→1, 11→1 |
-   | NOT | Y = A' | Inverts the single input | 0→1, 1→0 |
-   | NAND | Y = (A · B)' | AND followed by NOT | 00→1, 01→1, 10→1, 11→0 |
-   | NOR | Y = (A + B)' | OR followed by NOT | 00→1, 01→0, 10→0, 11→0 |
-   | XOR | Y = A ⊕ B | Output 1 when the inputs differ | 00→0, 01→1, 10→1, 11→0 |
-   | XNOR | Y = (A ⊕ B)' | Output 1 when the inputs are equal | 00→1, 01→0, 10→0, 11→1 |
+    | Gate | Symbol expression | Description | Truth table, inputs A B → output |
+    |---|---|---|---|
+    | AND | Y = A · B | Output 1 only when every input is 1 | 00→0, 01→0, 10→0, 11→1 |
+    | OR | Y = A + B | Output 1 when at least one input is 1 | 00→0, 01→1, 10→1, 11→1 |
+    | NOT | Y = A' | Inverts the single input | 0→1, 1→0 |
+    | NAND | Y = (A · B)' | AND followed by NOT | 00→1, 01→1, 10→1, 11→0 |
+    | NOR | Y = (A + B)' | OR followed by NOT | 00→1, 01→0, 10→0, 11→0 |
+    | XOR | Y = A ⊕ B | Output 1 when the inputs differ | 00→0, 01→1, 10→1, 11→0 |
+    | XNOR | Y = (A ⊕ B)' | Output 1 when the inputs are equal | 00→1, 01→0, 10→0, 11→1 |
 
-   - The three basic or fundamental gates are AND, OR and NOT, because every other gate is built from them.
-   - NAND and NOR are called universal gates, because either one alone suffices to build all three basic gates and therefore any Boolean function.
-   - XOR and XNOR are called arithmetic gates, since XOR produces the sum bit of a half adder and XNOR is the equality comparator.
+    - The three basic or fundamental gates are AND, OR and NOT, because every other gate is built from them.
+    - NAND and NOR are called universal gates, because either one alone suffices to build all three basic gates and therefore any Boolean function.
+    - XOR and XNOR are called arithmetic gates, since XOR produces the sum bit of a half adder and XNOR is the equality comparator.
 
-   Why NAND and NOR are called universal gates:
-   - A universal gate is one from which every other gate, and therefore every Boolean function, can be built using that gate alone. NAND and NOR are the only two.
-   - The argument has two parts. First, every Boolean function can be written in sum of products form, which uses only AND, OR and NOT. Second, all three of those can be constructed from NAND alone, or from NOR alone. Therefore either gate suffices for any function.
+    Why NAND and NOR are called universal gates:
+    - A universal gate is one from which every other gate, and therefore every Boolean function, can be built using that gate alone. NAND and NOR are the only two.
+    - The argument has two parts. First, every Boolean function can be written in sum of products form, which uses only AND, OR and NOT. Second, all three of those can be constructed from NAND alone, or from NOR alone. Therefore either gate suffices for any function.
 
-   Why NAND is a universal gate:
-   - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
-   - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
+    Why NAND is a universal gate:
+    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
-   NOT from NAND, using 1 gate:
-   - Tie both inputs together: (A · A)' = A'
+    NOT from NAND, using 1 gate:
+    - Tie both inputs together: (A · A)' = A'
 
-   ```
-   A ---+
-        |>o--- A'
-   A ---+
-   ```
+    ```
+    A ---+
+         |>o--- A'
+    A ---+
+    ```
 
-   AND from NAND, using 2 gates:
-   - A NAND followed by a NOT: ((A · B)')' = A · B
+    AND from NAND, using 2 gates:
+    - A NAND followed by a NOT: ((A · B)')' = A · B
 
-   ```
-   A ---|
-        |>o---+---|
-   B ---|         |>o--- A.B
-                +-|
-   ```
+    ```
+    A ---|
+         |>o---+---|
+    B ---|         |>o--- A.B
+                 +-|
+    ```
 
-   OR from NAND, using 3 gates:
-   - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
+    OR from NAND, using 3 gates:
+    - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
 
-   ```
-   A --|>o---|
-              |>o--- A + B
-   B --|>o---|
-   ```
+    ```
+    A --|>o---|
+               |>o--- A + B
+    B --|>o---|
+    ```
 
-   NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
-   XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
+    NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
+    XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
 
-   - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
+    - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
 
-   Why NOR is a universal gate:
-   - NOT from NOR, 1 gate: (A + A)' = A'
-   - OR from NOR, 2 gates: ((A + B)')' = A + B
-   - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
-   - NAND from NOR, 4 gates: build AND with 3 and invert with 1
+    Why NOR is a universal gate:
+    - NOT from NOR, 1 gate: (A + A)' = A'
+    - OR from NOR, 2 gates: ((A + B)')' = A + B
+    - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
+    - NAND from NOR, 4 gates: build AND with 3 and invert with 1
 
-   ```
-   NOT:  A ---+
-              |>o--- A'      (both inputs tied together)
-          A ---+
+    ```
+    NOT:  A ---+
+               |>o--- A'      (both inputs tied together)
+           A ---+
 
-   OR:   A ---|
-              |>o---|>o--- A + B
-         B ---|
+    OR:   A ---|
+               |>o---|>o--- A + B
+          B ---|
 
-   AND:  A --|>o---|
-                    |>o--- A.B
-         B --|>o---|
-   ```
+    AND:  A --|>o---|
+                     |>o--- A.B
+          B --|>o---|
+    ```
 
-   - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
+    - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
 
-   - Practical importance: a chip containing only one kind of gate is simpler and cheaper to manufacture, and in CMOS a NAND uses fewer transistors than an AND, so designing in NAND saves area and power.
+    - Practical importance: a chip containing only one kind of gate is simpler and cheaper to manufacture, and in CMOS a NAND uses fewer transistors than an AND, so designing in NAND saves area and power.
 12. **X = \bar{A}BC + A\bar{B}C + AB\bar{C} + ABC সমীকরণটির সরলীকৃত মান NAND এবং NOR গেইট দ্বারা বাস্তবায়ন করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   Given: X = A'BC + AB'C + ABC' + ABC
+    Given: X = A'BC + AB'C + ABC' + ABC
 
-   Step 1, simplify using a K-map. The minterms are m3 (011), m5 (101), m6 (110) and m7 (111).
+    Step 1, simplify using a K-map. The minterms are m3 (011), m5 (101), m6 (110) and m7 (111).
 
-   ```
-          BC
-   A \   00   01   11   10
-     0 |  0 |  0 |  1 |  0 |     m3 = A'BC
-     1 |  0 |  1 |  1 |  1 |     m5, m7, m6
-   ```
+    ```
+           BC
+    A \   00   01   11   10
+      0 |  0 |  0 |  1 |  0 |     m3 = A'BC
+      1 |  0 |  1 |  1 |  1 |     m5, m7, m6
+    ```
 
-   Groups of two:
-   - m3 and m7, that is 011 and 111: A varies, B = 1, C = 1 → BC
-   - m5 and m7, that is 101 and 111: B varies, A = 1, C = 1 → AC
-   - m6 and m7, that is 110 and 111: C varies, A = 1, B = 1 → AB
+    Groups of two:
+    - m3 and m7, that is 011 and 111: A varies, B = 1, C = 1 → BC
+    - m5 and m7, that is 101 and 111: B varies, A = 1, C = 1 → AC
+    - m6 and m7, that is 110 and 111: C varies, A = 1, B = 1 → AB
 
-   Simplified expression: X = AB + BC + AC
+    Simplified expression: X = AB + BC + AC
 
-   - This is the majority function: the output is 1 when at least two of the three inputs are 1. It is also the carry output of a full adder.
+    - This is the majority function: the output is 1 when at least two of the three inputs are 1. It is also the carry output of a full adder.
 
-   Step 2, implementation using NAND gates only:
-   - A sum of products expression converts directly into a two level NAND-NAND network. Applying De Morgan twice:
-   - X = AB + BC + AC = ((AB)' · (BC)' · (AC)')'
+    Step 2, implementation using NAND gates only:
+    - A sum of products expression converts directly into a two level NAND-NAND network. Applying De Morgan twice:
+    - X = AB + BC + AC = ((AB)' · (BC)' · (AC)')'
 
-   ```
-   A ---|
-        |>o---+
-   B ---|      \
-                \
-   B ---|        \
-        |>o------ +---| 3-input NAND |--- X
-   C ---|        /
-                /
-   A ---|      /
-        |>o---+
-   C ---|
-   ```
+    ```
+    A ---|
+         |>o---+
+    B ---|      \
+                 \
+    B ---|        \
+         |>o------ +---| 3-input NAND |--- X
+    C ---|        /
+                 /
+    A ---|      /
+         |>o---+
+    C ---|
+    ```
 
-   - Total: three 2-input NAND gates for the product terms, and one 3-input NAND to combine them. Four gates in all, with no extra inverters needed, which is the advantage of the NAND-NAND form.
+    - Total: three 2-input NAND gates for the product terms, and one 3-input NAND to combine them. Four gates in all, with no extra inverters needed, which is the advantage of the NAND-NAND form.
 
-   Step 3, implementation using NOR gates only:
-   - The expression must first be converted to product of sums form. From the K-map, the zeros are at m0, m1, m2 and m4, so
-   - X = (A + B)(B + C)(A + C)
-   - Applying De Morgan twice: X = ((A+B)' + (B+C)' + (A+C)')'
+    Step 3, implementation using NOR gates only:
+    - The expression must first be converted to product of sums form. From the K-map, the zeros are at m0, m1, m2 and m4, so
+    - X = (A + B)(B + C)(A + C)
+    - Applying De Morgan twice: X = ((A+B)' + (B+C)' + (A+C)')'
 
-   ```
-   A ---|
-        |>o---+
-   B ---|      \
-                \
-   B ---|        \
-        |>o------ +---| 3-input NOR |--- X
-   C ---|        /
-                /
-   A ---|      /
-        |>o---+
-   C ---|
-   ```
+    ```
+    A ---|
+         |>o---+
+    B ---|      \
+                 \
+    B ---|        \
+         |>o------ +---| 3-input NOR |--- X
+    C ---|        /
+                 /
+    A ---|      /
+         |>o---+
+    C ---|
+    ```
 
-   - Total: three 2-input NOR gates and one 3-input NOR. Again four gates.
+    - Total: three 2-input NOR gates and one 3-input NOR. Again four gates.
 
-   - The symmetry is worth noting: a sum of products expression maps onto NAND-NAND, and a product of sums expression maps onto NOR-NOR, in each case with no extra inverters. This is why a designer chooses the form that matches the available gate.
+    - The symmetry is worth noting: a sum of products expression maps onto NAND-NAND, and a product of sums expression maps onto NOR-NOR, in each case with no extra inverters. This is why a designer chooses the form that matches the available gate.
 13. **$Y = A \cdot B + \overline{(A \cdot B)}$** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
 
-   Answer:
+    Answer:
 
-   Expression: Y = A·B + (A·B)'
+    Expression: Y = A·B + (A·B)'
 
-   Analysis:
-   - Let X = A·B. The expression becomes Y = X + X'.
-   - By the complement law of Boolean algebra, X + X' = 1 for every value of X.
-   - Therefore Y = 1 always, regardless of the values of A and B. The expression is a tautology.
+    Analysis:
+    - Let X = A·B. The expression becomes Y = X + X'.
+    - By the complement law of Boolean algebra, X + X' = 1 for every value of X.
+    - Therefore Y = 1 always, regardless of the values of A and B. The expression is a tautology.
 
-   Truth table:
+    Truth table:
 
-   | A | B | A·B | (A·B)' | Y = A·B + (A·B)' |
-   |---|---|---|---|---|
-   | 0 | 0 | 0 | 1 | 1 |
-   | 0 | 1 | 0 | 1 | 1 |
-   | 1 | 0 | 0 | 1 | 1 |
-   | 1 | 1 | 1 | 0 | 1 |
+    | A | B | A·B | (A·B)' | Y = A·B + (A·B)' |
+    |---|---|---|---|---|
+    | 0 | 0 | 0 | 1 | 1 |
+    | 0 | 1 | 0 | 1 | 1 |
+    | 1 | 0 | 0 | 1 | 1 |
+    | 1 | 1 | 1 | 0 | 1 |
 
-   - The output column is 1 in every row, which confirms the algebraic result.
+    - The output column is 1 in every row, which confirms the algebraic result.
 
-   Consequence:
-   - The circuit is redundant. Whatever the inputs, the output is constant logic 1, so the AND gate, the NAND gate and the OR gate can all be removed and the output tied directly to Vcc.
-   - This is the practical value of Boolean simplification: it identifies circuitry that serves no purpose. Recognising the complement law here rather than merely constructing the truth table is what earns the marks.
+    Consequence:
+    - The circuit is redundant. Whatever the inputs, the output is constant logic 1, so the AND gate, the NAND gate and the OR gate can all be removed and the output tied directly to Vcc.
+    - This is the practical value of Boolean simplification: it identifies circuitry that serves no purpose. Recognising the complement law here rather than merely constructing the truth table is what earns the marks.
 
-   Related identities of the same kind:
-   - X · X' = 0, which gives a constant logic 0.
-   - X + X = X and X · X = X, the idempotent laws.
-   - X + 1 = 1 and X · 0 = 0, the null laws.
-   - X + 0 = X and X · 1 = X, the identity laws.
+    Related identities of the same kind:
+    - X · X' = 0, which gives a constant logic 0.
+    - X + X = X and X · X = X, the idempotent laws.
+    - X + 1 = 1 and X · 0 = 0, the null laws.
+    - X + 0 = X and X · 1 = X, the identity laws.
 14. **Explain: NOR and NAND is a Universal gate.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
 
 
-   Answer: A gate is called universal if every other logic gate, and therefore every Boolean function, can be constructed from that gate alone. NAND and NOR are the only two universal gates.
+    Answer: A gate is called universal if every other logic gate, and therefore every Boolean function, can be constructed from that gate alone. NAND and NOR are the only two universal gates.
 
-   The reason both are universal:
-   - Every Boolean function can be written in sum of products form, which uses only the operations AND, OR and NOT.
-   - Therefore, if all three of those can be built from a single gate, that gate can build any function.
+    The reason both are universal:
+    - Every Boolean function can be written in sum of products form, which uses only the operations AND, OR and NOT.
+    - Therefore, if all three of those can be built from a single gate, that gate can build any function.
 
-   Why NAND is a universal gate:
-   - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
-   - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
+    Why NAND is a universal gate:
+    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
-   NOT from NAND, using 1 gate:
-   - Tie both inputs together: (A · A)' = A'
+    NOT from NAND, using 1 gate:
+    - Tie both inputs together: (A · A)' = A'
 
-   ```
-   A ---+
-        |>o--- A'
-   A ---+
-   ```
+    ```
+    A ---+
+         |>o--- A'
+    A ---+
+    ```
 
-   AND from NAND, using 2 gates:
-   - A NAND followed by a NOT: ((A · B)')' = A · B
+    AND from NAND, using 2 gates:
+    - A NAND followed by a NOT: ((A · B)')' = A · B
 
-   ```
-   A ---|
-        |>o---+---|
-   B ---|         |>o--- A.B
-                +-|
-   ```
+    ```
+    A ---|
+         |>o---+---|
+    B ---|         |>o--- A.B
+                 +-|
+    ```
 
-   OR from NAND, using 3 gates:
-   - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
+    OR from NAND, using 3 gates:
+    - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
 
-   ```
-   A --|>o---|
-              |>o--- A + B
-   B --|>o---|
-   ```
+    ```
+    A --|>o---|
+               |>o--- A + B
+    B --|>o---|
+    ```
 
-   NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
-   XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
+    NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
+    XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
 
-   - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
+    - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
 
-   Why NOR is a universal gate:
-   - NOT from NOR, 1 gate: (A + A)' = A'
-   - OR from NOR, 2 gates: ((A + B)')' = A + B
-   - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
-   - NAND from NOR, 4 gates: build AND with 3 and invert with 1
+    Why NOR is a universal gate:
+    - NOT from NOR, 1 gate: (A + A)' = A'
+    - OR from NOR, 2 gates: ((A + B)')' = A + B
+    - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
+    - NAND from NOR, 4 gates: build AND with 3 and invert with 1
 
-   ```
-   NOT:  A ---+
-              |>o--- A'      (both inputs tied together)
-          A ---+
+    ```
+    NOT:  A ---+
+               |>o--- A'      (both inputs tied together)
+           A ---+
 
-   OR:   A ---|
-              |>o---|>o--- A + B
-         B ---|
+    OR:   A ---|
+               |>o---|>o--- A + B
+          B ---|
 
-   AND:  A --|>o---|
-                    |>o--- A.B
-         B --|>o---|
-   ```
+    AND:  A --|>o---|
+                     |>o--- A.B
+          B --|>o---|
+    ```
 
-   - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
+    - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
 
-   Gate counts:
+    Gate counts:
 
-   | Gate to be built | NAND gates needed | NOR gates needed |
-   |---|---|---|
-   | NOT | 1 | 1 |
-   | AND | 2 | 3 |
-   | OR | 3 | 2 |
-   | NOR | 4 | 1 |
-   | NAND | 1 | 4 |
-   | XOR | 4 | 5 |
+    | Gate to be built | NAND gates needed | NOR gates needed |
+    |---|---|---|
+    | NOT | 1 | 1 |
+    | AND | 2 | 3 |
+    | OR | 3 | 2 |
+    | NOR | 4 | 1 |
+    | NAND | 1 | 4 |
+    | XOR | 4 | 5 |
 
-   Why this matters:
-   - A chip containing only one kind of gate is simpler and cheaper to manufacture.
-   - In CMOS, NAND and NOR are the natural primitives; a two input NAND needs 4 transistors while AND needs 6, so designing in NAND saves transistors, area and power.
-   - A sum of products expression maps directly onto a two level NAND-NAND network, and a product of sums expression onto a NOR-NOR network, in each case without extra inverters.
+    Why this matters:
+    - A chip containing only one kind of gate is simpler and cheaper to manufacture.
+    - In CMOS, NAND and NOR are the natural primitives; a two input NAND needs 4 transistors while AND needs 6, so designing in NAND saves transistors, area and power.
+    - A sum of products expression maps directly onto a two level NAND-NAND network, and a product of sums expression onto a NOR-NOR network, in each case without extra inverters.
 15. **Define basic logical operations with examples. (AND, OR, NOT)** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
 
-   Answer: The three basic logical operations are AND, OR and NOT. They correspond to the three operations of Boolean algebra and every other gate is built from them.
+    Answer: The three basic logical operations are AND, OR and NOT. They correspond to the three operations of Boolean algebra and every other gate is built from them.
 
-   AND, logical conjunction:
-   - Expression: Y = A · B, also written AB or A ∧ B.
-   - The output is 1 only when every input is 1.
-   - Everyday meaning: "both must be true".
-   - Example: a bank locker opens only when the manager's key AND the customer's key are both turned. In programming, `if (age >= 18 && citizen == true)`.
+    AND, logical conjunction:
+    - Expression: Y = A · B, also written AB or A ∧ B.
+    - The output is 1 only when every input is 1.
+    - Everyday meaning: "both must be true".
+    - Example: a bank locker opens only when the manager's key AND the customer's key are both turned. In programming, `if (age >= 18 && citizen == true)`.
 
-   | A | B | Y = A · B |
-   |---|---|---|
-   | 0 | 0 | 0 |
-   | 0 | 1 | 0 |
-   | 1 | 0 | 0 |
-   | 1 | 1 | 1 |
+    | A | B | Y = A · B |
+    |---|---|---|
+    | 0 | 0 | 0 |
+    | 0 | 1 | 0 |
+    | 1 | 0 | 0 |
+    | 1 | 1 | 1 |
 
-   OR, logical disjunction:
-   - Expression: Y = A + B, also written A ∨ B.
-   - The output is 1 when at least one input is 1. It is the inclusive OR: 1 + 1 = 1, not 0.
-   - Everyday meaning: "either or both".
-   - Example: an alarm sounds if the front door OR the back door is opened. In programming, `if (isAdmin || isOwner)`.
+    OR, logical disjunction:
+    - Expression: Y = A + B, also written A ∨ B.
+    - The output is 1 when at least one input is 1. It is the inclusive OR: 1 + 1 = 1, not 0.
+    - Everyday meaning: "either or both".
+    - Example: an alarm sounds if the front door OR the back door is opened. In programming, `if (isAdmin || isOwner)`.
 
-   | A | B | Y = A + B |
-   |---|---|---|
-   | 0 | 0 | 0 |
-   | 0 | 1 | 1 |
-   | 1 | 0 | 1 |
-   | 1 | 1 | 1 |
+    | A | B | Y = A + B |
+    |---|---|---|
+    | 0 | 0 | 0 |
+    | 0 | 1 | 1 |
+    | 1 | 0 | 1 |
+    | 1 | 1 | 1 |
 
-   NOT, logical complement or inversion:
-   - Expression: Y = A', also written Ā or ¬A.
-   - It has a single input, and the output is the opposite of the input.
-   - Everyday meaning: "the opposite of".
-   - Example: an indicator lamp that is lit when the machine is not running. In programming, `if (!isValid)`.
+    NOT, logical complement or inversion:
+    - Expression: Y = A', also written Ā or ¬A.
+    - It has a single input, and the output is the opposite of the input.
+    - Everyday meaning: "the opposite of".
+    - Example: an indicator lamp that is lit when the machine is not running. In programming, `if (!isValid)`.
 
-   | A | Y = A' |
-   |---|---|
-   | 0 | 1 |
-   | 1 | 0 |
+    | A | Y = A' |
+    |---|---|
+    | 0 | 1 |
+    | 1 | 0 |
 
-   - Symbols: AND is drawn as a flat backed D shape, OR as a curved shield, and NOT as a triangle with a small circle at its point. The small circle always denotes inversion, which is why NAND and NOR are drawn as AND and OR with a circle added.
-   - Precedence in Boolean algebra: NOT is applied first, then AND, then OR, which is why A + B·C means A + (B·C).
+    - Symbols: AND is drawn as a flat backed D shape, OR as a curved shield, and NOT as a triangle with a small circle at its point. The small circle always denotes inversion, which is why NAND and NOR are drawn as AND and OR with a circle added.
+    - Precedence in Boolean algebra: NOT is applied first, then AND, then OR, which is why A + B·C means A + (B·C).
 16. **(a) Implement the following expression using NAND gates only: F = AB\bar{C} + ABC + \bar{A}BC** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   Given: F = AB C' + ABC + A'BC
+    Given: F = AB C' + ABC + A'BC
 
-   Step 1, simplify.
-   - Combining the first two terms: ABC' + ABC = AB(C' + C) = AB · 1 = AB
-   - Combining the last two terms: ABC + A'BC = BC(A + A') = BC · 1 = BC
-   - Note that ABC has been used twice, which is permitted because X + X = X.
-   - Therefore F = AB + BC = B(A + C)
+    Step 1, simplify.
+    - Combining the first two terms: ABC' + ABC = AB(C' + C) = AB · 1 = AB
+    - Combining the last two terms: ABC + A'BC = BC(A + A') = BC · 1 = BC
+    - Note that ABC has been used twice, which is permitted because X + X = X.
+    - Therefore F = AB + BC = B(A + C)
 
-   Step 2, convert to NAND only form.
-   - The simplified expression AB + BC is in sum of products form, which maps directly onto a two level NAND-NAND network. Applying De Morgan twice:
-   - F = AB + BC = ((AB)' · (BC)')'
+    Step 2, convert to NAND only form.
+    - The simplified expression AB + BC is in sum of products form, which maps directly onto a two level NAND-NAND network. Applying De Morgan twice:
+    - F = AB + BC = ((AB)' · (BC)')'
 
-   Step 3, the circuit:
+    Step 3, the circuit:
 
-   ```
-   A ----|
-         |>o---- G1 = (A.B)' ----|
-   B --+-|                       |
-       |                         |>o---- F = AB + BC
-       |                         |
-       +-|                       |
-   C ----|>o---- G2 = (B.C)' ----|
-   ```
+    ```
+    A ----|
+          |>o---- G1 = (A.B)' ----|
+    B --+-|                       |
+        |                         |>o---- F = AB + BC
+        |                         |
+        +-|                       |
+    C ----|>o---- G2 = (B.C)' ----|
+    ```
 
-   - Three NAND gates in total: two to form the product terms and one to combine them.
-   - No inverters are needed at all, because the double inversion introduced by the second NAND cancels the inversion of the first. This is precisely why a sum of products expression converts into NAND with no extra cost.
+    - Three NAND gates in total: two to form the product terms and one to combine them.
+    - No inverters are needed at all, because the double inversion introduced by the second NAND cancels the inversion of the first. This is precisely why a sum of products expression converts into NAND with no extra cost.
 
-   Verification:
+    Verification:
 
-   | A | B | C | AB | BC | G1 = (AB)' | G2 = (BC)' | F = (G1·G2)' |
-   |---|---|---|---|---|---|---|---|
-   | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 |
-   | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 0 |
-   | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
-   | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 |
-   | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 0 |
-   | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 |
-   | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 1 |
-   | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 1 |
+    | A | B | C | AB | BC | G1 = (AB)' | G2 = (BC)' | F = (G1·G2)' |
+    |---|---|---|---|---|---|---|---|
+    | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 |
+    | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 0 |
+    | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
+    | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 |
+    | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 0 |
+    | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 |
+    | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 1 |
+    | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 1 |
 
-   - The output is 1 for the minterms 011, 110 and 111, which are exactly A'BC, ABC' and ABC as given. The implementation is therefore correct.
+    - The output is 1 for the minterms 011, 110 and 111, which are exactly A'BC, ABC' and ABC as given. The implementation is therefore correct.
 17. **NAND gate ব্যবহার করে OR gate তৈরি করার logic diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
 
-   Answer: An OR gate is built from three NAND gates, using De Morgan's theorem.
+    Answer: An OR gate is built from three NAND gates, using De Morgan's theorem.
 
-   Derivation:
-   - De Morgan's theorem: (A' · B')' = A + B
-   - So inverting both inputs and then NANDing them produces OR.
-   - A NAND gate with both inputs tied together acts as an inverter, since (A · A)' = A'.
+    Derivation:
+    - De Morgan's theorem: (A' · B')' = A + B
+    - So inverting both inputs and then NANDing them produces OR.
+    - A NAND gate with both inputs tied together acts as an inverter, since (A · A)' = A'.
 
-   Logic diagram:
+    Logic diagram:
 
-   ```
-   A ---+
-        |>o---- A' ----+
-   A ---+              |
-                       |>o---- Y = (A' . B')' = A + B
-   B ---+              |
-        |>o---- B' ----+
-   B ---+
+    ```
+    A ---+
+         |>o---- A' ----+
+    A ---+              |
+                        |>o---- Y = (A' . B')' = A + B
+    B ---+              |
+         |>o---- B' ----+
+    B ---+
 
-   Gate 1: NAND used as inverter, giving A'
-   Gate 2: NAND used as inverter, giving B'
-   Gate 3: NAND of A' and B', giving A + B
-   ```
+    Gate 1: NAND used as inverter, giving A'
+    Gate 2: NAND used as inverter, giving B'
+    Gate 3: NAND of A' and B', giving A + B
+    ```
 
-   Verification:
+    Verification:
 
-   | A | B | A' | B' | A'·B' | Y = (A'·B')' | A + B |
-   |---|---|---|---|---|---|---|
-   | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
-   | 0 | 1 | 1 | 0 | 0 | 1 | 1 |
-   | 1 | 0 | 0 | 1 | 0 | 1 | 1 |
-   | 1 | 1 | 0 | 0 | 0 | 1 | 1 |
+    | A | B | A' | B' | A'·B' | Y = (A'·B')' | A + B |
+    |---|---|---|---|---|---|---|
+    | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
+    | 0 | 1 | 1 | 0 | 0 | 1 | 1 |
+    | 1 | 0 | 0 | 1 | 0 | 1 | 1 |
+    | 1 | 1 | 0 | 0 | 0 | 1 | 1 |
 
-   - The Y column matches the A + B column exactly, so the circuit is a correct OR gate.
-   - Three NAND gates is the minimum for OR.
+    - The Y column matches the A + B column exactly, so the circuit is a correct OR gate.
+    - Three NAND gates is the minimum for OR.
 
-   For comparison, the AND gate needs only two NAND gates, since ((A·B)')' = A·B requires one NAND and one inverter. The asymmetry follows directly from De Morgan's theorem and is why NAND suits sum of products expressions.
+    For comparison, the AND gate needs only two NAND gates, since ((A·B)')' = A·B requires one NAND and one inverter. The asymmetry follows directly from De Morgan's theorem and is why NAND suits sum of products expressions.
 18. **What is Logic gate? Prove that NAND and NOR gate is Universal gate.** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 724 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   What a logic gate is:
-   - A logic gate is an electronic circuit that performs a basic logical operation on one or more binary inputs and produces a single binary output. It is the fundamental building block of every digital circuit.
-   - It operates on two voltage levels representing logic 0 and logic 1, and its behaviour is described completely by its truth table and by a Boolean expression.
-   - Gates are implemented with transistors, in CMOS technology in modern devices.
+    What a logic gate is:
+    - A logic gate is an electronic circuit that performs a basic logical operation on one or more binary inputs and produces a single binary output. It is the fundamental building block of every digital circuit.
+    - It operates on two voltage levels representing logic 0 and logic 1, and its behaviour is described completely by its truth table and by a Boolean expression.
+    - Gates are implemented with transistors, in CMOS technology in modern devices.
 
-   | Gate | Symbol expression | Description | Truth table, inputs A B → output |
-   |---|---|---|---|
-   | AND | Y = A · B | Output 1 only when every input is 1 | 00→0, 01→0, 10→0, 11→1 |
-   | OR | Y = A + B | Output 1 when at least one input is 1 | 00→0, 01→1, 10→1, 11→1 |
-   | NOT | Y = A' | Inverts the single input | 0→1, 1→0 |
-   | NAND | Y = (A · B)' | AND followed by NOT | 00→1, 01→1, 10→1, 11→0 |
-   | NOR | Y = (A + B)' | OR followed by NOT | 00→1, 01→0, 10→0, 11→0 |
-   | XOR | Y = A ⊕ B | Output 1 when the inputs differ | 00→0, 01→1, 10→1, 11→0 |
-   | XNOR | Y = (A ⊕ B)' | Output 1 when the inputs are equal | 00→1, 01→0, 10→0, 11→1 |
+    | Gate | Symbol expression | Description | Truth table, inputs A B → output |
+    |---|---|---|---|
+    | AND | Y = A · B | Output 1 only when every input is 1 | 00→0, 01→0, 10→0, 11→1 |
+    | OR | Y = A + B | Output 1 when at least one input is 1 | 00→0, 01→1, 10→1, 11→1 |
+    | NOT | Y = A' | Inverts the single input | 0→1, 1→0 |
+    | NAND | Y = (A · B)' | AND followed by NOT | 00→1, 01→1, 10→1, 11→0 |
+    | NOR | Y = (A + B)' | OR followed by NOT | 00→1, 01→0, 10→0, 11→0 |
+    | XOR | Y = A ⊕ B | Output 1 when the inputs differ | 00→0, 01→1, 10→1, 11→0 |
+    | XNOR | Y = (A ⊕ B)' | Output 1 when the inputs are equal | 00→1, 01→0, 10→0, 11→1 |
 
-   - The three basic or fundamental gates are AND, OR and NOT, because every other gate is built from them.
-   - NAND and NOR are called universal gates, because either one alone suffices to build all three basic gates and therefore any Boolean function.
-   - XOR and XNOR are called arithmetic gates, since XOR produces the sum bit of a half adder and XNOR is the equality comparator.
+    - The three basic or fundamental gates are AND, OR and NOT, because every other gate is built from them.
+    - NAND and NOR are called universal gates, because either one alone suffices to build all three basic gates and therefore any Boolean function.
+    - XOR and XNOR are called arithmetic gates, since XOR produces the sum bit of a half adder and XNOR is the equality comparator.
 
-   Proof that NAND is universal:
+    Proof that NAND is universal:
 
-   Why NAND is a universal gate:
-   - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
-   - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
+    Why NAND is a universal gate:
+    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
-   NOT from NAND, using 1 gate:
-   - Tie both inputs together: (A · A)' = A'
+    NOT from NAND, using 1 gate:
+    - Tie both inputs together: (A · A)' = A'
 
-   ```
-   A ---+
-        |>o--- A'
-   A ---+
-   ```
+    ```
+    A ---+
+         |>o--- A'
+    A ---+
+    ```
 
-   AND from NAND, using 2 gates:
-   - A NAND followed by a NOT: ((A · B)')' = A · B
+    AND from NAND, using 2 gates:
+    - A NAND followed by a NOT: ((A · B)')' = A · B
 
-   ```
-   A ---|
-        |>o---+---|
-   B ---|         |>o--- A.B
-                +-|
-   ```
+    ```
+    A ---|
+         |>o---+---|
+    B ---|         |>o--- A.B
+                 +-|
+    ```
 
-   OR from NAND, using 3 gates:
-   - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
+    OR from NAND, using 3 gates:
+    - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
 
-   ```
-   A --|>o---|
-              |>o--- A + B
-   B --|>o---|
-   ```
+    ```
+    A --|>o---|
+               |>o--- A + B
+    B --|>o---|
+    ```
 
-   NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
-   XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
+    NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
+    XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
 
-   - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
+    - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
 
-   Proof that NOR is universal:
+    Proof that NOR is universal:
 
-   Why NOR is a universal gate:
-   - NOT from NOR, 1 gate: (A + A)' = A'
-   - OR from NOR, 2 gates: ((A + B)')' = A + B
-   - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
-   - NAND from NOR, 4 gates: build AND with 3 and invert with 1
+    Why NOR is a universal gate:
+    - NOT from NOR, 1 gate: (A + A)' = A'
+    - OR from NOR, 2 gates: ((A + B)')' = A + B
+    - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
+    - NAND from NOR, 4 gates: build AND with 3 and invert with 1
 
-   ```
-   NOT:  A ---+
-              |>o--- A'      (both inputs tied together)
-          A ---+
+    ```
+    NOT:  A ---+
+               |>o--- A'      (both inputs tied together)
+           A ---+
 
-   OR:   A ---|
-              |>o---|>o--- A + B
-         B ---|
+    OR:   A ---|
+               |>o---|>o--- A + B
+          B ---|
 
-   AND:  A --|>o---|
-                    |>o--- A.B
-         B --|>o---|
-   ```
+    AND:  A --|>o---|
+                     |>o--- A.B
+          B --|>o---|
+    ```
 
-   - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
+    - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
 
-   Conclusion: since AND, OR and NOT can each be constructed from NAND alone and from NOR alone, and since every Boolean function can be expressed using only those three operations, either gate by itself suffices to implement any digital circuit. That is precisely what makes them universal.
+    Conclusion: since AND, OR and NOT can each be constructed from NAND alone and from NOR alone, and since every Boolean function can be expressed using only those three operations, either gate by itself suffices to implement any digital circuit. That is precisely what makes them universal.
 19. **Implementation the following two Boolean functions using NAND gate only: (a) F = A + (B' + C)(D' + BE') (b) F = ((A + B) + CD)E** *[NWPGCL Junior Assistant Manager (IT) 2022 compact it 731 (ET: N/A)]*
 
 
-   Answer: Both functions are implemented by converting them into a form containing only NAND operations, using the identities X = (X')' and De Morgan's theorem.
+    Answer: Both functions are implemented by converting them into a form containing only NAND operations, using the identities X = (X')' and De Morgan's theorem.
 
-   (a) F = A + (B' + C)(D' + B·E')
+    (a) F = A + (B' + C)(D' + B·E')
 
-   Step 1, express in NAND form by double inversion:
-   - The overall structure is an OR of A with a product of two sums. Applying De Morgan to the OR:
-   - F = A + P where P = (B' + C)(D' + BE')
-   - F = (A' · P')'
-   - P' = ((B' + C)(D' + BE'))' = (B' + C)' + (D' + BE')'
+    Step 1, express in NAND form by double inversion:
+    - The overall structure is an OR of A with a product of two sums. Applying De Morgan to the OR:
+    - F = A + P where P = (B' + C)(D' + BE')
+    - F = (A' · P')'
+    - P' = ((B' + C)(D' + BE'))' = (B' + C)' + (D' + BE')'
 
-   Step 2, express each sum as a NAND:
-   - B' + C = (B · C')' , which is a NAND of B and C'
-   - D' + B·E' = (D · (BE')')' , which is a NAND of D and (BE')'
-   - B·E' is an AND, built as a NAND followed by an inverter.
+    Step 2, express each sum as a NAND:
+    - B' + C = (B · C')' , which is a NAND of B and C'
+    - D' + B·E' = (D · (BE')')' , which is a NAND of D and (BE')'
+    - B·E' is an AND, built as a NAND followed by an inverter.
 
-   Step 3, the gate network:
+    Step 3, the gate network:
 
-   ```
-   B ---+---------------------|
-        |                     |>o--- G1 = (B . C')' = B' + C
-   C ---|>o-------------------|
-       (inverter from NAND)
+    ```
+    B ---+---------------------|
+         |                     |>o--- G1 = (B . C')' = B' + C
+    C ---|>o-------------------|
+        (inverter from NAND)
 
-   B ---+---------------------|
-        |                     |>o--- G2 = (B . E')'
-   E ---|>o-------------------|
-        |
-        +--> G2 --|>o-- G3 = B.E'
+    B ---+---------------------|
+         |                     |>o--- G2 = (B . E')'
+    E ---|>o-------------------|
+         |
+         +--> G2 --|>o-- G3 = B.E'
 
-   D ---|
-        |>o--- G4 = (D . G3)' = D' + B.E'
-   G3 --|
+    D ---|
+         |>o--- G4 = (D . G3)' = D' + B.E'
+    G3 --|
 
-   G1 --|
-        |>o--- G5 = (G1 . G4)' = P'
-   G4 --|
+    G1 --|
+         |>o--- G5 = (G1 . G4)' = P'
+    G4 --|
 
-   G5 --|>o--- P
-   A ---|>o--- A'
-   A' --|
-        |>o--- F = (A' . P')' = A + P
-   P' --|
-   ```
+    G5 --|>o--- P
+    A ---|>o--- A'
+    A' --|
+         |>o--- F = (A' . P')' = A + P
+    P' --|
+    ```
 
-   - Note that in NAND-only design each inversion costs one gate, so the count rises quickly. The systematic method is: convert the expression to sum of products, then map it to a two level NAND-NAND network, which needs no extra inverters.
+    - Note that in NAND-only design each inversion costs one gate, so the count rises quickly. The systematic method is: convert the expression to sum of products, then map it to a two level NAND-NAND network, which needs no extra inverters.
 
-   (b) F = ((A + B) + C·D)·E
+    (b) F = ((A + B) + C·D)·E
 
-   Step 1, simplify the structure:
-   - F = (A + B + CD) · E
+    Step 1, simplify the structure:
+    - F = (A + B + CD) · E
 
-   Step 2, express in NAND form:
-   - Let S = A + B + CD. Then F = S · E = ((S · E)')'
-   - S = A + B + CD = ((A + B + CD)')' = (A' · B' · (CD)')'
+    Step 2, express in NAND form:
+    - Let S = A + B + CD. Then F = S · E = ((S · E)')'
+    - S = A + B + CD = ((A + B + CD)')' = (A' · B' · (CD)')'
 
-   Step 3, the gate network:
+    Step 3, the gate network:
 
-   ```
-   C ---|
-        |>o--- G1 = (C . D)'
-   D ---|
+    ```
+    C ---|
+         |>o--- G1 = (C . D)'
+    D ---|
 
-   A ---|>o--- A'      (NAND as inverter)
-   B ---|>o--- B'      (NAND as inverter)
+    A ---|>o--- A'      (NAND as inverter)
+    B ---|>o--- B'      (NAND as inverter)
 
-   A' --|
-   B' --|--- 3-input NAND ---> G2 = (A' . B' . G1)' = A + B + CD
-   G1 --|
+    A' --|
+    B' --|--- 3-input NAND ---> G2 = (A' . B' . G1)' = A + B + CD
+    G1 --|
 
-   G2 --|
-        |>o--- G3 = (G2 . E)'
-   E ---|
+    G2 --|
+         |>o--- G3 = (G2 . E)'
+    E ---|
 
-   G3 --|>o--- F = ((G2 . E)')' = (A + B + CD) . E
-   ```
+    G3 --|>o--- F = ((G2 . E)')' = (A + B + CD) . E
+    ```
 
-   - Gate count: 1 NAND for CD, 2 NAND inverters for A' and B', 1 three input NAND for the sum, 1 NAND for the final AND and 1 NAND inverter, giving 6 gates.
+    - Gate count: 1 NAND for CD, 2 NAND inverters for A' and B', 1 three input NAND for the sum, 1 NAND for the final AND and 1 NAND inverter, giving 6 gates.
 
-   General procedure to state:
-   - Convert the expression into sum of products form.
-   - Draw it as AND gates feeding an OR gate.
-   - Replace each AND with a NAND, and the OR with a NAND having inverted inputs; the pairs of inversions cancel.
-   - The result is a two level NAND-NAND network, which is always the most economical NAND implementation of a sum of products expression. <!-- verify -->
+    General procedure to state:
+    - Convert the expression into sum of products form.
+    - Draw it as AND gates feeding an OR gate.
+    - Replace each AND with a NAND, and the OR with a NAND having inverted inputs; the pairs of inversions cancel.
+    - The result is a two level NAND-NAND network, which is always the most economical NAND implementation of a sum of products expression. <!-- verify -->
 20. **(গ) Universal logic gate কি? 3-input এর একটি Universal logic gate এর Logic symbol এবং Truth Table দেখান।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   What a universal logic gate is:
-   - A universal gate is one from which every other logic gate, and therefore every Boolean function, can be constructed using that gate alone. NAND and NOR are the only two.
-   - The reason is that every Boolean function can be written using only AND, OR and NOT, and all three can be built from NAND alone or from NOR alone.
+    What a universal logic gate is:
+    - A universal gate is one from which every other logic gate, and therefore every Boolean function, can be constructed using that gate alone. NAND and NOR are the only two.
+    - The reason is that every Boolean function can be written using only AND, OR and NOT, and all three can be built from NAND alone or from NOR alone.
 
-   Three input NAND gate:
+    Three input NAND gate:
 
-   Logic symbol:
+    Logic symbol:
 
-   ```
-        A ---|\
-             |  \
-        B ---|   )o--- Y = (A . B . C)'
-             |  /
-        C ---|/
-        (the small circle at the output marks the inversion)
-   ```
+    ```
+         A ---|\
+              |  \
+         B ---|   )o--- Y = (A . B . C)'
+              |  /
+         C ---|/
+         (the small circle at the output marks the inversion)
+    ```
 
-   Expression: Y = (A · B · C)' = A' + B' + C'
+    Expression: Y = (A · B · C)' = A' + B' + C'
 
-   Truth table:
+    Truth table:
 
-   | A | B | C | A·B·C | Y = (A·B·C)' |
-   |---|---|---|---|---|
-   | 0 | 0 | 0 | 0 | 1 |
-   | 0 | 0 | 1 | 0 | 1 |
-   | 0 | 1 | 0 | 0 | 1 |
-   | 0 | 1 | 1 | 0 | 1 |
-   | 1 | 0 | 0 | 0 | 1 |
-   | 1 | 0 | 1 | 0 | 1 |
-   | 1 | 1 | 0 | 0 | 1 |
-   | 1 | 1 | 1 | 1 | 0 |
+    | A | B | C | A·B·C | Y = (A·B·C)' |
+    |---|---|---|---|---|
+    | 0 | 0 | 0 | 0 | 1 |
+    | 0 | 0 | 1 | 0 | 1 |
+    | 0 | 1 | 0 | 0 | 1 |
+    | 0 | 1 | 1 | 0 | 1 |
+    | 1 | 0 | 0 | 0 | 1 |
+    | 1 | 0 | 1 | 0 | 1 |
+    | 1 | 1 | 0 | 0 | 1 |
+    | 1 | 1 | 1 | 1 | 0 |
 
-   - The output is 0 for exactly one combination, when every input is 1; it is 1 for all the other seven.
+    - The output is 0 for exactly one combination, when every input is 1; it is 1 for all the other seven.
 
-   Three input NOR gate, for comparison:
+    Three input NOR gate, for comparison:
 
-   ```
-        A ---|\
-             |  \
-        B ---|   )o--- Y = (A + B + C)'
-             |  /
-        C ---|/
-   ```
+    ```
+         A ---|\
+              |  \
+         B ---|   )o--- Y = (A + B + C)'
+              |  /
+         C ---|/
+    ```
 
-   Expression: Y = (A + B + C)' = A' · B' · C'
+    Expression: Y = (A + B + C)' = A' · B' · C'
 
-   | A | B | C | A+B+C | Y = (A+B+C)' |
-   |---|---|---|---|---|
-   | 0 | 0 | 0 | 0 | 1 |
-   | 0 | 0 | 1 | 1 | 0 |
-   | 0 | 1 | 0 | 1 | 0 |
-   | 0 | 1 | 1 | 1 | 0 |
-   | 1 | 0 | 0 | 1 | 0 |
-   | 1 | 0 | 1 | 1 | 0 |
-   | 1 | 1 | 0 | 1 | 0 |
-   | 1 | 1 | 1 | 1 | 0 |
+    | A | B | C | A+B+C | Y = (A+B+C)' |
+    |---|---|---|---|---|
+    | 0 | 0 | 0 | 0 | 1 |
+    | 0 | 0 | 1 | 1 | 0 |
+    | 0 | 1 | 0 | 1 | 0 |
+    | 0 | 1 | 1 | 1 | 0 |
+    | 1 | 0 | 0 | 1 | 0 |
+    | 1 | 0 | 1 | 1 | 0 |
+    | 1 | 1 | 0 | 1 | 0 |
+    | 1 | 1 | 1 | 1 | 0 |
 
-   - The output is 1 for exactly one combination, when every input is 0.
-   - Both are universal, and either can be reduced to a two input gate by tying one input to the appropriate constant: 1 for NAND, 0 for NOR.
+    - The output is 1 for exactly one combination, when every input is 0.
+    - Both are universal, and either can be reduced to a two input gate by tying one input to the appropriate constant: 1 for NAND, 0 for NOR.
 21. **What is Universal gate? NAND and NOR gate কে Universal gate বলা হয় কেন?** *[DMLC Assistant Teacher (ICT) 2021 compact it 827-828 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   What a universal gate is:
-   - A universal gate is a logic gate from which every other logic gate, and therefore every Boolean function, can be constructed using that gate alone.
-   - There are exactly two universal gates: NAND and NOR.
+    What a universal gate is:
+    - A universal gate is a logic gate from which every other logic gate, and therefore every Boolean function, can be constructed using that gate alone.
+    - There are exactly two universal gates: NAND and NOR.
 
-   Why NAND and NOR are called universal gates:
-   - The reasoning has two steps. First, every Boolean function can be written in sum of products form, which requires only the three operations AND, OR and NOT. Second, all three of those can be constructed from NAND alone, and equally from NOR alone. It follows that either gate by itself suffices for any digital circuit.
+    Why NAND and NOR are called universal gates:
+    - The reasoning has two steps. First, every Boolean function can be written in sum of products form, which requires only the three operations AND, OR and NOT. Second, all three of those can be constructed from NAND alone, and equally from NOR alone. It follows that either gate by itself suffices for any digital circuit.
 
-   Why NAND is a universal gate:
-   - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
-   - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
+    Why NAND is a universal gate:
+    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
-   NOT from NAND, using 1 gate:
-   - Tie both inputs together: (A · A)' = A'
+    NOT from NAND, using 1 gate:
+    - Tie both inputs together: (A · A)' = A'
 
-   ```
-   A ---+
-        |>o--- A'
-   A ---+
-   ```
+    ```
+    A ---+
+         |>o--- A'
+    A ---+
+    ```
 
-   AND from NAND, using 2 gates:
-   - A NAND followed by a NOT: ((A · B)')' = A · B
+    AND from NAND, using 2 gates:
+    - A NAND followed by a NOT: ((A · B)')' = A · B
 
-   ```
-   A ---|
-        |>o---+---|
-   B ---|         |>o--- A.B
-                +-|
-   ```
+    ```
+    A ---|
+         |>o---+---|
+    B ---|         |>o--- A.B
+                 +-|
+    ```
 
-   OR from NAND, using 3 gates:
-   - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
+    OR from NAND, using 3 gates:
+    - Invert both inputs and then NAND them: (A' · B')' = A + B, by De Morgan's theorem.
 
-   ```
-   A --|>o---|
-              |>o--- A + B
-   B --|>o---|
-   ```
+    ```
+    A --|>o---|
+               |>o--- A + B
+    B --|>o---|
+    ```
 
-   NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
-   XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
+    NOR from NAND, using 4 gates: build OR with 3 and then invert with 1.
+    XOR from NAND, using 4 gates: A ⊕ B = (A·(A·B)') · (B·(A·B)')' as shown below.
 
-   - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
+    - Since NOT, AND and OR are all obtainable, NAND alone suffices for every Boolean function, which is what makes it universal. The same argument applies to NOR by duality.
 
-   Why NOR is a universal gate:
-   - NOT from NOR, 1 gate: (A + A)' = A'
-   - OR from NOR, 2 gates: ((A + B)')' = A + B
-   - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
-   - NAND from NOR, 4 gates: build AND with 3 and invert with 1
+    Why NOR is a universal gate:
+    - NOT from NOR, 1 gate: (A + A)' = A'
+    - OR from NOR, 2 gates: ((A + B)')' = A + B
+    - AND from NOR, 3 gates: (A' + B')' = A · B, by De Morgan's theorem
+    - NAND from NOR, 4 gates: build AND with 3 and invert with 1
 
-   ```
-   NOT:  A ---+
-              |>o--- A'      (both inputs tied together)
-          A ---+
+    ```
+    NOT:  A ---+
+               |>o--- A'      (both inputs tied together)
+           A ---+
 
-   OR:   A ---|
-              |>o---|>o--- A + B
-         B ---|
+    OR:   A ---|
+               |>o---|>o--- A + B
+          B ---|
 
-   AND:  A --|>o---|
-                    |>o--- A.B
-         B --|>o---|
-   ```
+    AND:  A --|>o---|
+                     |>o--- A.B
+          B --|>o---|
+    ```
 
-   - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
+    - Since NOT, AND and OR can all be built from NOR alone, every Boolean function can be, so NOR is universal.
 
-   Practical advantages:
-   - Only one kind of gate need be manufactured, which simplifies fabrication and reduces cost.
-   - In CMOS technology NAND and NOR are the natural primitives: a two input NAND uses 4 transistors, while AND uses 6, because AND is built as a NAND followed by an inverter. Designing in NAND therefore uses fewer transistors, less silicon area and less power.
-   - A sum of products expression maps directly onto a two level NAND-NAND network, and a product of sums expression onto a NOR-NOR network, in each case with no additional inverters.
-   - Propagation delay is more uniform when every path passes through gates of the same kind, which simplifies timing analysis.
+    Practical advantages:
+    - Only one kind of gate need be manufactured, which simplifies fabrication and reduces cost.
+    - In CMOS technology NAND and NOR are the natural primitives: a two input NAND uses 4 transistors, while AND uses 6, because AND is built as a NAND followed by an inverter. Designing in NAND therefore uses fewer transistors, less silicon area and less power.
+    - A sum of products expression maps directly onto a two level NAND-NAND network, and a product of sums expression onto a NOR-NOR network, in each case with no additional inverters.
+    - Propagation delay is more uniform when every path passes through gates of the same kind, which simplifies timing analysis.
 22. **Implement X-OR gate using NAND gate. Maximum 4 NAND gate are using.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 
 
-   Answer:
+    Answer:
 
-   XOR using four 2-input NAND gates:
+    XOR using four 2-input NAND gates:
 
-   - The identity used is A ⊕ B = A·B' + A'·B, which can be rewritten using only NAND as:
-   - Let G1 = (A · B)'
-   - Let G2 = (A · G1)'
-   - Let G3 = (B · G1)'
-   - Output Y = (G2 · G3)' = A ⊕ B
+    - The identity used is A ⊕ B = A·B' + A'·B, which can be rewritten using only NAND as:
+    - Let G1 = (A · B)'
+    - Let G2 = (A · G1)'
+    - Let G3 = (B · G1)'
+    - Output Y = (G2 · G3)' = A ⊕ B
 
-   ```
-        A ----+--------------------|
-              |                    | G2 = (A . G1)'
-              |     +--------------|>o-----+
-              |     |                      |
-              |  +--+                      |    +---------|
-   A ---|     |  |                          +---|         |
-        |>o---+--+  G1 = (A.B)'                 |>o--- Y = A xor B
-   B ---|        |                          +---|         |
-                 |                          |   +---------+
-              +--+                          |
-              |     +--------------|         |
-              |     |              |>o-------+
-        B ----+-----+--------------|  G3 = (B . G1)'
-   ```
+    ```
+         A ----+--------------------|
+               |                    | G2 = (A . G1)'
+               |     +--------------|>o-----+
+               |     |                      |
+               |  +--+                      |    +---------|
+    A ---|     |  |                          +---|         |
+         |>o---+--+  G1 = (A.B)'                 |>o--- Y = A xor B
+    B ---|        |                          +---|         |
+                  |                          |   +---------+
+               +--+                          |
+               |     +--------------|         |
+               |     |              |>o-------+
+         B ----+-----+--------------|  G3 = (B . G1)'
+    ```
 
-   Verification:
+    Verification:
 
-   | A | B | G1 = (A·B)' | G2 = (A·G1)' | G3 = (B·G1)' | Y = (G2·G3)' |
-   |---|---|---|---|---|---|
-   | 0 | 0 | 1 | 1 | 1 | 0 |
-   | 0 | 1 | 1 | 1 | 0 | 1 |
-   | 1 | 0 | 1 | 0 | 1 | 1 |
-   | 1 | 1 | 0 | 1 | 1 | 0 |
+    | A | B | G1 = (A·B)' | G2 = (A·G1)' | G3 = (B·G1)' | Y = (G2·G3)' |
+    |---|---|---|---|---|---|
+    | 0 | 0 | 1 | 1 | 1 | 0 |
+    | 0 | 1 | 1 | 1 | 0 | 1 |
+    | 1 | 0 | 1 | 0 | 1 | 1 |
+    | 1 | 1 | 0 | 1 | 1 | 0 |
 
-   - The output column is 0, 1, 1, 0, which is exactly the XOR truth table. Four NAND gates is the minimum for XOR.
+    - The output column is 0, 1, 1, 0, which is exactly the XOR truth table. Four NAND gates is the minimum for XOR.
 
-   Step by step construction:
-   - Gate 1: G1 = (A · B)'
-   - Gate 2: G2 = (A · G1)' = (A · (A·B)')'
-   - Gate 3: G3 = (B · G1)' = (B · (A·B)')'
-   - Gate 4: Y = (G2 · G3)'
+    Step by step construction:
+    - Gate 1: G1 = (A · B)'
+    - Gate 2: G2 = (A · G1)' = (A · (A·B)')'
+    - Gate 3: G3 = (B · G1)' = (B · (A·B)')'
+    - Gate 4: Y = (G2 · G3)'
 
-   Algebraic proof:
-   - G1 = (AB)' = A' + B'
-   - G2 = (A · (A' + B'))' = (A·A' + A·B')' = (0 + A·B')' = (A·B')'
-   - G3 = (B · (A' + B'))' = (A'·B)'
-   - Y = (G2 · G3)' = ((A·B')' · (A'·B)')'
-   - By De Morgan: Y = A·B' + A'·B = A ⊕ B
+    Algebraic proof:
+    - G1 = (AB)' = A' + B'
+    - G2 = (A · (A' + B'))' = (A·A' + A·B')' = (0 + A·B')' = (A·B')'
+    - G3 = (B · (A' + B'))' = (A'·B)'
+    - Y = (G2 · G3)' = ((A·B')' · (A'·B)')'
+    - By De Morgan: Y = A·B' + A'·B = A ⊕ B
 
-   - Four NAND gates is the minimum possible for an XOR, and this is the standard implementation. A five gate version exists, building NOT, AND and OR separately, but it is not minimal.
+    - Four NAND gates is the minimum possible for an XOR, and this is the standard implementation. A five gate version exists, building NOT, AND and OR separately, but it is not minimal.
 23. **What is basic Logic gate? Which gate are called Universal gate and write down advantages of Universal gate?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 873-874 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   What a basic logic gate is:
-   - A logic gate is an electronic circuit performing a basic logical operation on binary inputs to produce a binary output. The basic, or fundamental, gates are AND, OR and NOT, so called because every other gate can be constructed from them and because they correspond to the three operations of Boolean algebra.
+    What a basic logic gate is:
+    - A logic gate is an electronic circuit performing a basic logical operation on binary inputs to produce a binary output. The basic, or fundamental, gates are AND, OR and NOT, so called because every other gate can be constructed from them and because they correspond to the three operations of Boolean algebra.
 
-   | Gate | Symbol expression | Description | Truth table, inputs A B → output |
-   |---|---|---|---|
-   | AND | Y = A · B | Output 1 only when every input is 1 | 00→0, 01→0, 10→0, 11→1 |
-   | OR | Y = A + B | Output 1 when at least one input is 1 | 00→0, 01→1, 10→1, 11→1 |
-   | NOT | Y = A' | Inverts the single input | 0→1, 1→0 |
-   | NAND | Y = (A · B)' | AND followed by NOT | 00→1, 01→1, 10→1, 11→0 |
-   | NOR | Y = (A + B)' | OR followed by NOT | 00→1, 01→0, 10→0, 11→0 |
-   | XOR | Y = A ⊕ B | Output 1 when the inputs differ | 00→0, 01→1, 10→1, 11→0 |
-   | XNOR | Y = (A ⊕ B)' | Output 1 when the inputs are equal | 00→1, 01→0, 10→0, 11→1 |
+    | Gate | Symbol expression | Description | Truth table, inputs A B → output |
+    |---|---|---|---|
+    | AND | Y = A · B | Output 1 only when every input is 1 | 00→0, 01→0, 10→0, 11→1 |
+    | OR | Y = A + B | Output 1 when at least one input is 1 | 00→0, 01→1, 10→1, 11→1 |
+    | NOT | Y = A' | Inverts the single input | 0→1, 1→0 |
+    | NAND | Y = (A · B)' | AND followed by NOT | 00→1, 01→1, 10→1, 11→0 |
+    | NOR | Y = (A + B)' | OR followed by NOT | 00→1, 01→0, 10→0, 11→0 |
+    | XOR | Y = A ⊕ B | Output 1 when the inputs differ | 00→0, 01→1, 10→1, 11→0 |
+    | XNOR | Y = (A ⊕ B)' | Output 1 when the inputs are equal | 00→1, 01→0, 10→0, 11→1 |
 
-   - The three basic or fundamental gates are AND, OR and NOT, because every other gate is built from them.
-   - NAND and NOR are called universal gates, because either one alone suffices to build all three basic gates and therefore any Boolean function.
-   - XOR and XNOR are called arithmetic gates, since XOR produces the sum bit of a half adder and XNOR is the equality comparator.
+    - The three basic or fundamental gates are AND, OR and NOT, because every other gate is built from them.
+    - NAND and NOR are called universal gates, because either one alone suffices to build all three basic gates and therefore any Boolean function.
+    - XOR and XNOR are called arithmetic gates, since XOR produces the sum bit of a half adder and XNOR is the equality comparator.
 
-   Which gates are called universal:
-   - NAND and NOR, and only these two.
-   - A gate is universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR satisfy this because AND, OR and NOT can all be built from either of them, and every Boolean function can be written using only those three operations.
+    Which gates are called universal:
+    - NAND and NOR, and only these two.
+    - A gate is universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR satisfy this because AND, OR and NOT can all be built from either of them, and every Boolean function can be written using only those three operations.
 
-   Advantages of universal gates:
-   - Only one kind of gate need be designed, manufactured and stocked, which simplifies production, reduces cost and simplifies inventory and maintenance.
-   - Fewer transistors: in CMOS a two input NAND needs 4 transistors while an AND needs 6, since AND is a NAND followed by an inverter. Designing in NAND therefore saves silicon area and power on every gate in the chip, which at the scale of billions of gates is decisive.
-   - Direct mapping from Boolean expressions: a sum of products expression converts into a two level NAND-NAND network and a product of sums expression into a NOR-NOR network, in each case with no additional inverters, so the conversion costs nothing.
-   - Uniform propagation delay, since every signal path passes through the same kind of gate, which makes timing analysis simpler and more predictable.
-   - Simpler and more regular chip layout, which improves yield.
-   - Design automation is easier, since the synthesis tool needs to map onto a single primitive.
-   - Fault diagnosis and testing are simplified when the circuit is homogeneous.
+    Advantages of universal gates:
+    - Only one kind of gate need be designed, manufactured and stocked, which simplifies production, reduces cost and simplifies inventory and maintenance.
+    - Fewer transistors: in CMOS a two input NAND needs 4 transistors while an AND needs 6, since AND is a NAND followed by an inverter. Designing in NAND therefore saves silicon area and power on every gate in the chip, which at the scale of billions of gates is decisive.
+    - Direct mapping from Boolean expressions: a sum of products expression converts into a two level NAND-NAND network and a product of sums expression into a NOR-NOR network, in each case with no additional inverters, so the conversion costs nothing.
+    - Uniform propagation delay, since every signal path passes through the same kind of gate, which makes timing analysis simpler and more predictable.
+    - Simpler and more regular chip layout, which improves yield.
+    - Design automation is easier, since the synthesis tool needs to map onto a single primitive.
+    - Fault diagnosis and testing are simplified when the circuit is homogeneous.
 
-   - The practical consequence: modern integrated circuits are built almost entirely from NAND and NOR gates, and the AND and OR gates that appear in a logic diagram are constructed from them internally.
+    - The practical consequence: modern integrated circuits are built almost entirely from NAND and NOR gates, and the AND and OR gates that appear in a logic diagram are constructed from them internally.
 24. **How can you Implement AND, OR and NOT gates using only NAND and NOR gates? What is the main difference between Latch and Flip-flop?** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   AND, OR and NOT using NAND gates only:
-   - NOT: tie both inputs together. (A · A)' = A'. One gate.
-   - AND: NAND followed by an inverter. ((A · B)')' = A · B. Two gates.
-   - OR: invert both inputs and NAND them, since (A' · B')' = A + B by De Morgan. Three gates.
+    AND, OR and NOT using NAND gates only:
+    - NOT: tie both inputs together. (A · A)' = A'. One gate.
+    - AND: NAND followed by an inverter. ((A · B)')' = A · B. Two gates.
+    - OR: invert both inputs and NAND them, since (A' · B')' = A + B by De Morgan. Three gates.
 
-   ```
-   NOT:   A ---+
-               |>o--- A'
-          A ---+
+    ```
+    NOT:   A ---+
+                |>o--- A'
+           A ---+
 
-   AND:   A ---|
-               |>o---+---+
-          B ---|         |>o--- A.B
-                     +---+
+    AND:   A ---|
+                |>o---+---+
+           B ---|         |>o--- A.B
+                      +---+
 
-   OR:    A ---+
-               |>o--- A' ---+
-          A ---+            |
-                            |>o--- A + B
-          B ---+            |
-               |>o--- B' ---+
-          B ---+
-   ```
+    OR:    A ---+
+                |>o--- A' ---+
+           A ---+            |
+                             |>o--- A + B
+           B ---+            |
+                |>o--- B' ---+
+           B ---+
+    ```
 
-   AND, OR and NOT using NOR gates only:
-   - NOT: tie both inputs together. (A + A)' = A'. One gate.
-   - OR: NOR followed by an inverter. ((A + B)')' = A + B. Two gates.
-   - AND: invert both inputs and NOR them, since (A' + B')' = A · B by De Morgan. Three gates.
+    AND, OR and NOT using NOR gates only:
+    - NOT: tie both inputs together. (A + A)' = A'. One gate.
+    - OR: NOR followed by an inverter. ((A + B)')' = A + B. Two gates.
+    - AND: invert both inputs and NOR them, since (A' + B')' = A · B by De Morgan. Three gates.
 
-   ```
-   NOT:   A ---+
-               |>o--- A'
-          A ---+
+    ```
+    NOT:   A ---+
+                |>o--- A'
+           A ---+
 
-   OR:    A ---|
-               |>o---+---+
-          B ---|         |>o--- A + B
-                     +---+
+    OR:    A ---|
+                |>o---+---+
+           B ---|         |>o--- A + B
+                      +---+
 
-   AND:   A ---+
-               |>o--- A' ---+
-          A ---+            |
-                            |>o--- A . B
-          B ---+            |
-               |>o--- B' ---+
-          B ---+
-   ```
+    AND:   A ---+
+                |>o--- A' ---+
+           A ---+            |
+                             |>o--- A . B
+           B ---+            |
+                |>o--- B' ---+
+           B ---+
+    ```
 
-   Main difference between a latch and a flip-flop:
+    Main difference between a latch and a flip-flop:
 
-   | Point | Latch | Flip-flop |
-   |---|---|---|
-   | Triggering | Level triggered: it responds continuously while the enable is at the active level | Edge triggered: it responds only at the rising or falling edge of the clock |
-   | Clock | May be unclocked, or gated by an enable level | Always clocked |
-   | Transparency | Transparent: while enabled, the output follows the input continuously | Not transparent: the output changes only at the clock edge |
-   | Sensitivity to input changes | Any change while enabled passes straight through | Only the value present at the edge is captured |
-   | Speed and area | Faster and uses fewer transistors | Slower and larger, since it is built from two latches |
-   | Timing analysis | Difficult; a glitch during the enable period propagates | Straightforward; the state changes only at known instants |
-   | Use | Temporary storage, asynchronous circuits, register files in some designs | Registers, counters, shift registers and all synchronous sequential circuits |
-   | Construction | Built from cross-coupled gates | Built from two latches in a master-slave arrangement, or as an edge triggered structure |
+    | Point | Latch | Flip-flop |
+    |---|---|---|
+    | Triggering | Level triggered: it responds continuously while the enable is at the active level | Edge triggered: it responds only at the rising or falling edge of the clock |
+    | Clock | May be unclocked, or gated by an enable level | Always clocked |
+    | Transparency | Transparent: while enabled, the output follows the input continuously | Not transparent: the output changes only at the clock edge |
+    | Sensitivity to input changes | Any change while enabled passes straight through | Only the value present at the edge is captured |
+    | Speed and area | Faster and uses fewer transistors | Slower and larger, since it is built from two latches |
+    | Timing analysis | Difficult; a glitch during the enable period propagates | Straightforward; the state changes only at known instants |
+    | Use | Temporary storage, asynchronous circuits, register files in some designs | Registers, counters, shift registers and all synchronous sequential circuits |
+    | Construction | Built from cross-coupled gates | Built from two latches in a master-slave arrangement, or as an edge triggered structure |
 
-   - The essential distinction: a latch is level sensitive and therefore transparent, while a flip-flop is edge sensitive and therefore samples its input at one precise instant. This is why synchronous digital design uses flip-flops: the whole circuit changes state at a single clock edge, which makes timing analysable.
+    - The essential distinction: a latch is level sensitive and therefore transparent, while a flip-flop is edge sensitive and therefore samples its input at one precise instant. This is why synchronous digital design uses flip-flops: the whole circuit changes state at a single clock edge, which makes timing analysable.
 25. **Make NAND gate using NOR gate.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
 
-   Answer: A NAND gate is built from NOR gates by first constructing AND and then inverting it.
+    Answer: A NAND gate is built from NOR gates by first constructing AND and then inverting it.
 
-   Derivation:
-   - NAND: Y = (A · B)'
-   - By De Morgan's theorem: A · B = (A' + B')'
-   - So (A · B)' = ((A' + B')')' = A' + B'
-   - Therefore Y = A' + B', which is an OR of the inverted inputs.
-   - Building this with NOR gates: invert A, invert B, NOR them to obtain (A' + B')', then invert once more to obtain A' + B'.
+    Derivation:
+    - NAND: Y = (A · B)'
+    - By De Morgan's theorem: A · B = (A' + B')'
+    - So (A · B)' = ((A' + B')')' = A' + B'
+    - Therefore Y = A' + B', which is an OR of the inverted inputs.
+    - Building this with NOR gates: invert A, invert B, NOR them to obtain (A' + B')', then invert once more to obtain A' + B'.
 
-   Circuit, using four NOR gates:
+    Circuit, using four NOR gates:
 
-   ```
-   A ---+
-        |>o--- A' ----+           G1: NOR as inverter
-   A ---+             |
-                      |>o--- (A'+B')' ---+
-   B ---+             |     G3               |
-        |>o--- B' ----+                      |>o--- Y = A' + B' = (A.B)'
-   B ---+                                    |     G4: NOR as inverter
-                                    (A'+B')'-+
-        G2: NOR as inverter
-   ```
+    ```
+    A ---+
+         |>o--- A' ----+           G1: NOR as inverter
+    A ---+             |
+                       |>o--- (A'+B')' ---+
+    B ---+             |     G3               |
+         |>o--- B' ----+                      |>o--- Y = A' + B' = (A.B)'
+    B ---+                                    |     G4: NOR as inverter
+                                     (A'+B')'-+
+         G2: NOR as inverter
+    ```
 
-   - Gate 1: NOR with both inputs tied to A, giving A'
-   - Gate 2: NOR with both inputs tied to B, giving B'
-   - Gate 3: NOR of A' and B', giving (A' + B')' which equals A · B
-   - Gate 4: NOR with both inputs tied to the output of gate 3, giving (A·B)' which is the NAND output
+    - Gate 1: NOR with both inputs tied to A, giving A'
+    - Gate 2: NOR with both inputs tied to B, giving B'
+    - Gate 3: NOR of A' and B', giving (A' + B')' which equals A · B
+    - Gate 4: NOR with both inputs tied to the output of gate 3, giving (A·B)' which is the NAND output
 
-   Verification:
+    Verification:
 
-   | A | B | A' | B' | G3 = (A'+B')' = A·B | Y = (G3)' = (A·B)' |
-   |---|---|---|---|---|---|
-   | 0 | 0 | 1 | 1 | 0 | 1 |
-   | 0 | 1 | 1 | 0 | 0 | 1 |
-   | 1 | 0 | 0 | 1 | 0 | 1 |
-   | 1 | 1 | 0 | 0 | 1 | 0 |
+    | A | B | A' | B' | G3 = (A'+B')' = A·B | Y = (G3)' = (A·B)' |
+    |---|---|---|---|---|---|
+    | 0 | 0 | 1 | 1 | 0 | 1 |
+    | 0 | 1 | 1 | 0 | 0 | 1 |
+    | 1 | 0 | 0 | 1 | 0 | 1 |
+    | 1 | 1 | 0 | 0 | 1 | 0 |
 
-   - The Y column is 1, 1, 1, 0, which is exactly the NAND truth table.
-   - Four NOR gates are required. By symmetry, building a NOR gate from NAND gates also requires four.
+    - The Y column is 1, 1, 1, 0, which is exactly the NAND truth table.
+    - Four NOR gates are required. By symmetry, building a NOR gate from NAND gates also requires four.
 26. **(i) Logic gate কী? মৌলিক Logic gate কয়টি ও কী কী? সত্যক সারণিসহ আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 958-959 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   What a logic gate is:
-   - A logic gate is an electronic circuit that performs a basic logical operation on one or more binary inputs and produces a single binary output. It is the fundamental building block from which every digital circuit, and therefore every computer, is constructed.
-   - It works with two voltage levels representing logic 0 and logic 1, and its behaviour is described completely by its truth table and by a Boolean expression.
+    What a logic gate is:
+    - A logic gate is an electronic circuit that performs a basic logical operation on one or more binary inputs and produces a single binary output. It is the fundamental building block from which every digital circuit, and therefore every computer, is constructed.
+    - It works with two voltage levels representing logic 0 and logic 1, and its behaviour is described completely by its truth table and by a Boolean expression.
 
-   How many basic logic gates there are:
-   - There are three basic, or fundamental, gates: AND, OR and NOT. They are called basic because every other gate can be built from them, and because they correspond exactly to the three operations of Boolean algebra: conjunction, disjunction and complement.
-   - From these are derived four further gates in common use: NAND, NOR, XOR and XNOR. NAND and NOR are additionally called universal gates, because either alone can build all three basic gates.
+    How many basic logic gates there are:
+    - There are three basic, or fundamental, gates: AND, OR and NOT. They are called basic because every other gate can be built from them, and because they correspond exactly to the three operations of Boolean algebra: conjunction, disjunction and complement.
+    - From these are derived four further gates in common use: NAND, NOR, XOR and XNOR. NAND and NOR are additionally called universal gates, because either alone can build all three basic gates.
 
-   AND gate:
-   - Y = A · B. The output is 1 only when every input is 1.
+    AND gate:
+    - Y = A · B. The output is 1 only when every input is 1.
 
-   | A | B | Y = A·B |
-   |---|---|---|
-   | 0 | 0 | 0 |
-   | 0 | 1 | 0 |
-   | 1 | 0 | 0 |
-   | 1 | 1 | 1 |
+    | A | B | Y = A·B |
+    |---|---|---|
+    | 0 | 0 | 0 |
+    | 0 | 1 | 0 |
+    | 1 | 0 | 0 |
+    | 1 | 1 | 1 |
 
-   OR gate:
-   - Y = A + B. The output is 1 when at least one input is 1. It is inclusive, so 1 + 1 = 1.
+    OR gate:
+    - Y = A + B. The output is 1 when at least one input is 1. It is inclusive, so 1 + 1 = 1.
 
-   | A | B | Y = A+B |
-   |---|---|---|
-   | 0 | 0 | 0 |
-   | 0 | 1 | 1 |
-   | 1 | 0 | 1 |
-   | 1 | 1 | 1 |
+    | A | B | Y = A+B |
+    |---|---|---|
+    | 0 | 0 | 0 |
+    | 0 | 1 | 1 |
+    | 1 | 0 | 1 |
+    | 1 | 1 | 1 |
 
-   NOT gate, the inverter:
-   - Y = A'. It has one input, and the output is its opposite.
+    NOT gate, the inverter:
+    - Y = A'. It has one input, and the output is its opposite.
 
-   | A | Y = A' |
-   |---|---|
-   | 0 | 1 |
-   | 1 | 0 |
+    | A | Y = A' |
+    |---|---|
+    | 0 | 1 |
+    | 1 | 0 |
 
-   The derived gates:
+    The derived gates:
 
-   | Gate | Symbol expression | Description | Truth table, inputs A B → output |
-   |---|---|---|---|
-   | AND | Y = A · B | Output 1 only when every input is 1 | 00→0, 01→0, 10→0, 11→1 |
-   | OR | Y = A + B | Output 1 when at least one input is 1 | 00→0, 01→1, 10→1, 11→1 |
-   | NOT | Y = A' | Inverts the single input | 0→1, 1→0 |
-   | NAND | Y = (A · B)' | AND followed by NOT | 00→1, 01→1, 10→1, 11→0 |
-   | NOR | Y = (A + B)' | OR followed by NOT | 00→1, 01→0, 10→0, 11→0 |
-   | XOR | Y = A ⊕ B | Output 1 when the inputs differ | 00→0, 01→1, 10→1, 11→0 |
-   | XNOR | Y = (A ⊕ B)' | Output 1 when the inputs are equal | 00→1, 01→0, 10→0, 11→1 |
+    | Gate | Symbol expression | Description | Truth table, inputs A B → output |
+    |---|---|---|---|
+    | AND | Y = A · B | Output 1 only when every input is 1 | 00→0, 01→0, 10→0, 11→1 |
+    | OR | Y = A + B | Output 1 when at least one input is 1 | 00→0, 01→1, 10→1, 11→1 |
+    | NOT | Y = A' | Inverts the single input | 0→1, 1→0 |
+    | NAND | Y = (A · B)' | AND followed by NOT | 00→1, 01→1, 10→1, 11→0 |
+    | NOR | Y = (A + B)' | OR followed by NOT | 00→1, 01→0, 10→0, 11→0 |
+    | XOR | Y = A ⊕ B | Output 1 when the inputs differ | 00→0, 01→1, 10→1, 11→0 |
+    | XNOR | Y = (A ⊕ B)' | Output 1 when the inputs are equal | 00→1, 01→0, 10→0, 11→1 |
 
-   - The three basic or fundamental gates are AND, OR and NOT, because every other gate is built from them.
-   - NAND and NOR are called universal gates, because either one alone suffices to build all three basic gates and therefore any Boolean function.
-   - XOR and XNOR are called arithmetic gates, since XOR produces the sum bit of a half adder and XNOR is the equality comparator.
+    - The three basic or fundamental gates are AND, OR and NOT, because every other gate is built from them.
+    - NAND and NOR are called universal gates, because either one alone suffices to build all three basic gates and therefore any Boolean function.
+    - XOR and XNOR are called arithmetic gates, since XOR produces the sum bit of a half adder and XNOR is the equality comparator.
 
-   - Symbols: AND is a flat backed D shape, OR a curved shield, NOT a triangle with a small circle at its point. The small circle always denotes inversion, which is why NAND and NOR are drawn as AND and OR with a circle added, and XOR as an OR with an extra curved input line.
+    - Symbols: AND is a flat backed D shape, OR a curved shield, NOT a triangle with a small circle at its point. The small circle always denotes inversion, which is why NAND and NOR are drawn as AND and OR with a circle added, and XOR as an OR with an extra curved input line.
 27. **Design 3 input NAND gate and 2 input XOR gate using 2 input NAND gate.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
 
 
-   Answer:
+    Answer:
 
-   Part 1, a 3-input NAND gate from 2-input NAND gates:
+    Part 1, a 3-input NAND gate from 2-input NAND gates:
 
-   - Required: Y = (A · B · C)'
-   - Method: form A·B using two NAND gates, then NAND that result with C.
+    - Required: Y = (A · B · C)'
+    - Method: form A·B using two NAND gates, then NAND that result with C.
 
-   ```
-   A ---|
-        |>o--- G1 = (A.B)'
-   B ---|
+    ```
+    A ---|
+         |>o--- G1 = (A.B)'
+    B ---|
 
-   G1 --+
-        |>o--- G2 = A.B          (NAND used as inverter)
-   G1 --+
+    G1 --+
+         |>o--- G2 = A.B          (NAND used as inverter)
+    G1 --+
 
-   G2 --|
-        |>o--- Y = (A.B.C)'
-   C ---|
-   ```
+    G2 --|
+         |>o--- Y = (A.B.C)'
+    C ---|
+    ```
 
-   - Gate 1: G1 = (A·B)'
-   - Gate 2: G2 = (G1)' = A·B, using a NAND as an inverter
-   - Gate 3: Y = (G2 · C)' = (A·B·C)'
-   - Total: 3 two-input NAND gates.
+    - Gate 1: G1 = (A·B)'
+    - Gate 2: G2 = (G1)' = A·B, using a NAND as an inverter
+    - Gate 3: Y = (G2 · C)' = (A·B·C)'
+    - Total: 3 two-input NAND gates.
 
-   Verification:
+    Verification:
 
-   | A | B | C | A·B | Y = (A·B·C)' |
-   |---|---|---|---|---|
-   | 0 | 0 | 0 | 0 | 1 |
-   | 0 | 1 | 1 | 0 | 1 |
-   | 1 | 0 | 1 | 0 | 1 |
-   | 1 | 1 | 0 | 1 | 1 |
-   | 1 | 1 | 1 | 1 | 0 |
+    | A | B | C | A·B | Y = (A·B·C)' |
+    |---|---|---|---|---|
+    | 0 | 0 | 0 | 0 | 1 |
+    | 0 | 1 | 1 | 0 | 1 |
+    | 1 | 0 | 1 | 0 | 1 |
+    | 1 | 1 | 0 | 1 | 1 |
+    | 1 | 1 | 1 | 1 | 0 |
 
-   - The output is 0 only when all three inputs are 1, which is the correct 3-input NAND behaviour.
+    - The output is 0 only when all three inputs are 1, which is the correct 3-input NAND behaviour.
 
-   Part 2, a 2-input XOR gate from 2-input NAND gates:
+    Part 2, a 2-input XOR gate from 2-input NAND gates:
 
-   XOR using four 2-input NAND gates:
+    XOR using four 2-input NAND gates:
 
-   - The identity used is A ⊕ B = A·B' + A'·B, which can be rewritten using only NAND as:
-   - Let G1 = (A · B)'
-   - Let G2 = (A · G1)'
-   - Let G3 = (B · G1)'
-   - Output Y = (G2 · G3)' = A ⊕ B
+    - The identity used is A ⊕ B = A·B' + A'·B, which can be rewritten using only NAND as:
+    - Let G1 = (A · B)'
+    - Let G2 = (A · G1)'
+    - Let G3 = (B · G1)'
+    - Output Y = (G2 · G3)' = A ⊕ B
 
-   ```
-        A ----+--------------------|
-              |                    | G2 = (A . G1)'
-              |     +--------------|>o-----+
-              |     |                      |
-              |  +--+                      |    +---------|
-   A ---|     |  |                          +---|         |
-        |>o---+--+  G1 = (A.B)'                 |>o--- Y = A xor B
-   B ---|        |                          +---|         |
-                 |                          |   +---------+
-              +--+                          |
-              |     +--------------|         |
-              |     |              |>o-------+
-        B ----+-----+--------------|  G3 = (B . G1)'
-   ```
+    ```
+         A ----+--------------------|
+               |                    | G2 = (A . G1)'
+               |     +--------------|>o-----+
+               |     |                      |
+               |  +--+                      |    +---------|
+    A ---|     |  |                          +---|         |
+         |>o---+--+  G1 = (A.B)'                 |>o--- Y = A xor B
+    B ---|        |                          +---|         |
+                  |                          |   +---------+
+               +--+                          |
+               |     +--------------|         |
+               |     |              |>o-------+
+         B ----+-----+--------------|  G3 = (B . G1)'
+    ```
 
-   Verification:
+    Verification:
 
-   | A | B | G1 = (A·B)' | G2 = (A·G1)' | G3 = (B·G1)' | Y = (G2·G3)' |
-   |---|---|---|---|---|---|
-   | 0 | 0 | 1 | 1 | 1 | 0 |
-   | 0 | 1 | 1 | 1 | 0 | 1 |
-   | 1 | 0 | 1 | 0 | 1 | 1 |
-   | 1 | 1 | 0 | 1 | 1 | 0 |
+    | A | B | G1 = (A·B)' | G2 = (A·G1)' | G3 = (B·G1)' | Y = (G2·G3)' |
+    |---|---|---|---|---|---|
+    | 0 | 0 | 1 | 1 | 1 | 0 |
+    | 0 | 1 | 1 | 1 | 0 | 1 |
+    | 1 | 0 | 1 | 0 | 1 | 1 |
+    | 1 | 1 | 0 | 1 | 1 | 0 |
 
-   - The output column is 0, 1, 1, 0, which is exactly the XOR truth table. Four NAND gates is the minimum for XOR.
+    - The output column is 0, 1, 1, 0, which is exactly the XOR truth table. Four NAND gates is the minimum for XOR.
 
 ## Number Systems & Base Conversions (19)
 
@@ -1900,265 +1900,265 @@
 10. **Number Conversion: (i) (4673)_8 = (?)_{16} (ii) (7491)_{10} = (?)_{16}** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   (i) (4673)₈ to hexadecimal:
-   - Convert through binary, since 1 octal digit is 3 bits and 1 hexadecimal digit is 4 bits.
-   - Step 1, each octal digit to 3 bits: 4 = 100, 6 = 110, 7 = 111, 3 = 011
-   - So (4673)₈ = (100 110 111 011)₂ = (100110111011)₂
-   - Step 2, regroup into 4 bits from the right: 1001 1011 1011
-   - Step 3, each group to a hexadecimal digit: 1001 = 9, 1011 = B, 1011 = B
-   - (4673)₈ = (9BB)₁₆
-   - Verification through decimal: (4673)₈ = 4×512 + 6×64 + 7×8 + 3 = 2048 + 384 + 56 + 3 = 2491, and (9BB)₁₆ = 9×256 + 11×16 + 11 = 2304 + 176 + 11 = 2491. Correct.
+    (i) (4673)₈ to hexadecimal:
+    - Convert through binary, since 1 octal digit is 3 bits and 1 hexadecimal digit is 4 bits.
+    - Step 1, each octal digit to 3 bits: 4 = 100, 6 = 110, 7 = 111, 3 = 011
+    - So (4673)₈ = (100 110 111 011)₂ = (100110111011)₂
+    - Step 2, regroup into 4 bits from the right: 1001 1011 1011
+    - Step 3, each group to a hexadecimal digit: 1001 = 9, 1011 = B, 1011 = B
+    - (4673)₈ = (9BB)₁₆
+    - Verification through decimal: (4673)₈ = 4×512 + 6×64 + 7×8 + 3 = 2048 + 384 + 56 + 3 = 2491, and (9BB)₁₆ = 9×256 + 11×16 + 11 = 2304 + 176 + 11 = 2491. Correct.
 
-   (ii) (7491)₁₀ to hexadecimal:
-   - Divide repeatedly by 16 and read the remainders upward.
-   - 7491 ÷ 16 = 468 remainder 3
-   - 468 ÷ 16 = 29 remainder 4
-   - 29 ÷ 16 = 1 remainder 13, which is D
-   - 1 ÷ 16 = 0 remainder 1
-   - Reading upward: (7491)₁₀ = (1D43)₁₆
-   - Verification: 1×4096 + 13×256 + 4×16 + 3 = 4096 + 3328 + 64 + 3 = 7491. Correct.
+    (ii) (7491)₁₀ to hexadecimal:
+    - Divide repeatedly by 16 and read the remainders upward.
+    - 7491 ÷ 16 = 468 remainder 3
+    - 468 ÷ 16 = 29 remainder 4
+    - 29 ÷ 16 = 1 remainder 13, which is D
+    - 1 ÷ 16 = 0 remainder 1
+    - Reading upward: (7491)₁₀ = (1D43)₁₆
+    - Verification: 1×4096 + 13×256 + 4×16 + 3 = 4096 + 3328 + 64 + 3 = 7491. Correct.
 
-   - The method to remember: octal and hexadecimal never convert directly; binary is the bridge, because 8 = 2³ and 16 = 2⁴, so the regrouping of bits is exact and no arithmetic is needed.
+    - The method to remember: octal and hexadecimal never convert directly; binary is the bridge, because 8 = 2³ and 16 = 2⁴, so the regrouping of bits is exact and no arithmetic is needed.
 11. **Computer এর Binary পদ্ধতি কোন সংখ্যার উপর প্রতিষ্ঠিত?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
 
-   Answer: The binary system used by a computer is based on the number 2, that is on base 2.
+    Answer: The binary system used by a computer is based on the number 2, that is on base 2.
 
-   - It uses exactly two digits, 0 and 1. Each position has a place value that is a power of 2: 1, 2, 4, 8, 16 and so on.
-   - Example: (1011)₂ = 1×8 + 0×4 + 1×2 + 1×1 = 11 in decimal.
+    - It uses exactly two digits, 0 and 1. Each position has a place value that is a power of 2: 1, 2, 4, 8, 16 and so on.
+    - Example: (1011)₂ = 1×8 + 0×4 + 1×2 + 1×1 = 11 in decimal.
 
-   Why base 2 is used in computers:
-   - Electronic devices are naturally two state: a transistor is either conducting or not, a switch is on or off, a voltage is high or low. Representing exactly two values is therefore simple, cheap and reliable.
-   - Noise immunity: because only two widely separated voltage bands must be distinguished, a large amount of electrical noise can be tolerated before a bit is misread. A ten state system would need ten narrow bands and would be far more error prone.
-   - Boolean algebra, which has exactly two values, maps directly onto binary, so logic circuits and arithmetic circuits are built from the same primitives.
-   - Storage devices are naturally two state as well: magnetised in one direction or the other, a capacitor charged or discharged, a pit or a land on an optical disc.
-   - Error detection and correction are straightforward with two symbols.
+    Why base 2 is used in computers:
+    - Electronic devices are naturally two state: a transistor is either conducting or not, a switch is on or off, a voltage is high or low. Representing exactly two values is therefore simple, cheap and reliable.
+    - Noise immunity: because only two widely separated voltage bands must be distinguished, a large amount of electrical noise can be tolerated before a bit is misread. A ten state system would need ten narrow bands and would be far more error prone.
+    - Boolean algebra, which has exactly two values, maps directly onto binary, so logic circuits and arithmetic circuits are built from the same primitives.
+    - Storage devices are naturally two state as well: magnetised in one direction or the other, a capacitor charged or discharged, a pit or a land on an optical disc.
+    - Error detection and correction are straightforward with two symbols.
 
-   - Related terms: 1 bit is one binary digit; 8 bits make 1 byte; 1024 bytes make 1 KB.
+    - Related terms: 1 bit is one binary digit; 8 bits make 1 byte; 1024 bytes make 1 KB.
 12. **BCD code – এ কতগুলি বিট থাকে?** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
 
-   Answer: A BCD code uses 4 bits for each decimal digit.
+    Answer: A BCD code uses 4 bits for each decimal digit.
 
-   - BCD stands for Binary Coded Decimal. Each decimal digit from 0 to 9 is coded separately in its own group of 4 bits, rather than the whole number being converted to binary as a unit.
-   - Four bits are needed because 3 bits give only 8 combinations, which is fewer than the ten digits required, while 4 bits give 16, which is sufficient.
+    - BCD stands for Binary Coded Decimal. Each decimal digit from 0 to 9 is coded separately in its own group of 4 bits, rather than the whole number being converted to binary as a unit.
+    - Four bits are needed because 3 bits give only 8 combinations, which is fewer than the ten digits required, while 4 bits give 16, which is sufficient.
 
-   | Decimal | BCD | Decimal | BCD |
-   |---|---|---|---|
-   | 0 | 0000 | 5 | 0101 |
-   | 1 | 0001 | 6 | 0110 |
-   | 2 | 0010 | 7 | 0111 |
-   | 3 | 0011 | 8 | 1000 |
-   | 4 | 0100 | 9 | 1001 |
+    | Decimal | BCD | Decimal | BCD |
+    |---|---|---|---|
+    | 0 | 0000 | 5 | 0101 |
+    | 1 | 0001 | 6 | 0110 |
+    | 2 | 0010 | 7 | 0111 |
+    | 3 | 0011 | 8 | 1000 |
+    | 4 | 0100 | 9 | 1001 |
 
-   - The six patterns 1010 to 1111 are invalid in BCD and are never used, which is why about 20 percent of the capacity is wasted. This is the principal disadvantage of the code.
-   - Example: the decimal number 943 is written in BCD as 1001 0100 0011, using 12 bits, whereas in pure binary it is 1110101111, using only 10.
-   - BCD arithmetic requires correction: after adding two BCD digits, if the result exceeds 9 or produces a carry, 6 must be added to bring it back into range.
-   - Uses: seven segment displays, digital clocks, calculators, electronic meters and financial systems, because the conversion to a decimal display requires no arithmetic at all and because decimal fractions are represented exactly.
-   - This form is properly called 8421 BCD, from the weights of the four bit positions. Excess-3 and 2421 are other decimal codes.
+    - The six patterns 1010 to 1111 are invalid in BCD and are never used, which is why about 20 percent of the capacity is wasted. This is the principal disadvantage of the code.
+    - Example: the decimal number 943 is written in BCD as 1001 0100 0011, using 12 bits, whereas in pure binary it is 1110101111, using only 10.
+    - BCD arithmetic requires correction: after adding two BCD digits, if the result exceeds 9 or produces a carry, 6 must be added to bring it back into range.
+    - Uses: seven segment displays, digital clocks, calculators, electronic meters and financial systems, because the conversion to a decimal display requires no arithmetic at all and because decimal fractions are represented exactly.
+    - This form is properly called 8421 BCD, from the weights of the four bit positions. Excess-3 and 2421 are other decimal codes.
 13. **(b) Convert the following Octal number into Decimal and Hexadecimal: (651)_8** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   (651)₈ to decimal:
-   - Multiply each digit by the appropriate power of 8 and add.
-   - 6 × 8² + 5 × 8¹ + 1 × 8⁰
-   - = 6 × 64 + 5 × 8 + 1 × 1
-   - = 384 + 40 + 1
-   - = 425
-   - (651)₈ = (425)₁₀
+    (651)₈ to decimal:
+    - Multiply each digit by the appropriate power of 8 and add.
+    - 6 × 8² + 5 × 8¹ + 1 × 8⁰
+    - = 6 × 64 + 5 × 8 + 1 × 1
+    - = 384 + 40 + 1
+    - = 425
+    - (651)₈ = (425)₁₀
 
-   (651)₈ to hexadecimal:
-   - Convert through binary, since 1 octal digit is 3 bits and 1 hexadecimal digit is 4 bits.
-   - Step 1, each octal digit to 3 bits: 6 = 110, 5 = 101, 1 = 001
-   - So (651)₈ = (110 101 001)₂ = (110101001)₂
-   - Step 2, regroup into 4 bits from the right, padding on the left: 0001 1010 1001
-   - Step 3, each group to a hexadecimal digit: 0001 = 1, 1010 = A, 1001 = 9
-   - (651)₈ = (1A9)₁₆
+    (651)₈ to hexadecimal:
+    - Convert through binary, since 1 octal digit is 3 bits and 1 hexadecimal digit is 4 bits.
+    - Step 1, each octal digit to 3 bits: 6 = 110, 5 = 101, 1 = 001
+    - So (651)₈ = (110 101 001)₂ = (110101001)₂
+    - Step 2, regroup into 4 bits from the right, padding on the left: 0001 1010 1001
+    - Step 3, each group to a hexadecimal digit: 0001 = 1, 1010 = A, 1001 = 9
+    - (651)₈ = (1A9)₁₆
 
-   Verification:
-   - (1A9)₁₆ = 1×256 + 10×16 + 9 = 256 + 160 + 9 = 425, which matches the decimal answer. Correct.
+    Verification:
+    - (1A9)₁₆ = 1×256 + 10×16 + 9 = 256 + 160 + 9 = 425, which matches the decimal answer. Correct.
 
-   Summary: (651)₈ = (425)₁₀ = (1A9)₁₆ = (110101001)₂
+    Summary: (651)₈ = (425)₁₀ = (1A9)₁₆ = (110101001)₂
 14. **Binary Number system এর Base কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 943 (ET: N/A)]*
 
 
-   Answer: The base, or radix, of the binary number system is 2.
+    Answer: The base, or radix, of the binary number system is 2.
 
-   - It uses exactly two digits, 0 and 1. Each position has a place value that is a power of 2: 2⁰ = 1, 2¹ = 2, 2² = 4, 2³ = 8 and so on.
-   - Example: (1011)₂ = 1×8 + 0×4 + 1×2 + 1×1 = 11 in decimal.
+    - It uses exactly two digits, 0 and 1. Each position has a place value that is a power of 2: 2⁰ = 1, 2¹ = 2, 2² = 4, 2³ = 8 and so on.
+    - Example: (1011)₂ = 1×8 + 0×4 + 1×2 + 1×1 = 11 in decimal.
 
-   The bases of the four number systems commonly used in computing:
+    The bases of the four number systems commonly used in computing:
 
-   | System | Base | Digits used |
-   |---|---|---|
-   | Binary | 2 | 0, 1 |
-   | Octal | 8 | 0 to 7 |
-   | Decimal | 10 | 0 to 9 |
-   | Hexadecimal | 16 | 0 to 9 and A to F |
+    | System | Base | Digits used |
+    |---|---|---|
+    | Binary | 2 | 0, 1 |
+    | Octal | 8 | 0 to 7 |
+    | Decimal | 10 | 0 to 9 |
+    | Hexadecimal | 16 | 0 to 9 and A to F |
 
-   - In general, a system of base r uses r digits, from 0 to r − 1, and the place values are powers of r.
-   - Binary is used inside computers because electronic devices are naturally two state, and because Boolean algebra, which has exactly two values, maps directly onto it.
-   - Octal and hexadecimal exist as convenient shorthand for binary: 1 octal digit is exactly 3 bits and 1 hexadecimal digit exactly 4 bits, so conversion is a matter of regrouping rather than arithmetic.
+    - In general, a system of base r uses r digits, from 0 to r − 1, and the place values are powers of r.
+    - Binary is used inside computers because electronic devices are naturally two state, and because Boolean algebra, which has exactly two values, maps directly onto it.
+    - Octal and hexadecimal exist as convenient shorthand for binary: 1 octal digit is exactly 3 bits and 1 hexadecimal digit exactly 4 bits, so conversion is a matter of regrouping rather than arithmetic.
 15. **(i) (1\text{AC})_{16} = (?)_{2}\text{ and }(?)_{10}** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 974 (ET: BUET)]*
 
 
-   Answer:
+    Answer:
 
-   (1AC)₁₆ to binary:
-   - Convert each hexadecimal digit into its 4 bit binary equivalent.
-   - 1 = 0001
-   - A = 10 = 1010
-   - C = 12 = 1100
-   - So (1AC)₁₆ = (0001 1010 1100)₂ = (110101100)₂, dropping the leading zeros.
+    (1AC)₁₆ to binary:
+    - Convert each hexadecimal digit into its 4 bit binary equivalent.
+    - 1 = 0001
+    - A = 10 = 1010
+    - C = 12 = 1100
+    - So (1AC)₁₆ = (0001 1010 1100)₂ = (110101100)₂, dropping the leading zeros.
 
-   (1AC)₁₆ to decimal:
-   - Multiply each digit by the appropriate power of 16 and add.
-   - 1 × 16² + A × 16¹ + C × 16⁰
-   - = 1 × 256 + 10 × 16 + 12 × 1
-   - = 256 + 160 + 12
-   - = 428
-   - (1AC)₁₆ = (428)₁₀
+    (1AC)₁₆ to decimal:
+    - Multiply each digit by the appropriate power of 16 and add.
+    - 1 × 16² + A × 16¹ + C × 16⁰
+    - = 1 × 256 + 10 × 16 + 12 × 1
+    - = 256 + 160 + 12
+    - = 428
+    - (1AC)₁₆ = (428)₁₀
 
-   Verification from the binary form:
-   - (110101100)₂ = 256 + 128 + 0 + 32 + 0 + 8 + 4 + 0 + 0 = 428. Correct.
+    Verification from the binary form:
+    - (110101100)₂ = 256 + 128 + 0 + 32 + 0 + 8 + 4 + 0 + 0 = 428. Correct.
 
-   Summary: (1AC)₁₆ = (110101100)₂ = (428)₁₀ = (654)₈
+    Summary: (1AC)₁₆ = (110101100)₂ = (428)₁₀ = (654)₈
 
-   - The method to note: hexadecimal to binary needs no arithmetic at all, because each hexadecimal digit corresponds to exactly 4 bits. This is precisely why hexadecimal is used as shorthand for binary in programming and in memory addressing.
+    - The method to note: hexadecimal to binary needs no arithmetic at all, because each hexadecimal digit corresponds to exactly 4 bits. This is precisely why hexadecimal is used as shorthand for binary in programming and in memory addressing.
 16. **(ii) What is the Excess-3 code of 1010?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 974 (ET: BUET)]*
 
 
-   Answer: The Excess-3 code of 1010 depends on whether 1010 is read as a BCD digit or as a binary number, and both readings should be given.
+    Answer: The Excess-3 code of 1010 depends on whether 1010 is read as a BCD digit or as a binary number, and both readings should be given.
 
-   What Excess-3 is:
-   - Excess-3, also called XS-3, is a decimal code in which each decimal digit is represented by its BCD value plus 3. It is therefore a self-complementing and unweighted code.
-   - Rule: Excess-3 code = BCD value + 0011
+    What Excess-3 is:
+    - Excess-3, also called XS-3, is a decimal code in which each decimal digit is represented by its BCD value plus 3. It is therefore a self-complementing and unweighted code.
+    - Rule: Excess-3 code = BCD value + 0011
 
-   Reading 1: if 1010 is a binary number
-   - (1010)₂ = 10 in decimal.
-   - The decimal number 10 has two digits, 1 and 0.
-   - Excess-3 of 1 = 1 + 3 = 4 = 0100
-   - Excess-3 of 0 = 0 + 3 = 3 = 0011
-   - So the Excess-3 code of decimal 10 is 0100 0011.
+    Reading 1: if 1010 is a binary number
+    - (1010)₂ = 10 in decimal.
+    - The decimal number 10 has two digits, 1 and 0.
+    - Excess-3 of 1 = 1 + 3 = 4 = 0100
+    - Excess-3 of 0 = 0 + 3 = 3 = 0011
+    - So the Excess-3 code of decimal 10 is 0100 0011.
 
-   Reading 2: if 1010 is intended as a single 4 bit group
-   - 1010 is not a valid BCD digit at all, since BCD uses only 0000 to 1001 and the six patterns 1010 to 1111 are invalid. So this reading has no Excess-3 equivalent, and pointing that out is part of the answer.
+    Reading 2: if 1010 is intended as a single 4 bit group
+    - 1010 is not a valid BCD digit at all, since BCD uses only 0000 to 1001 and the six patterns 1010 to 1111 are invalid. So this reading has no Excess-3 equivalent, and pointing that out is part of the answer.
 
-   The Excess-3 code table, for reference:
+    The Excess-3 code table, for reference:
 
-   | Decimal | BCD | Excess-3 |
-   |---|---|---|
-   | 0 | 0000 | 0011 |
-   | 1 | 0001 | 0100 |
-   | 2 | 0010 | 0101 |
-   | 3 | 0011 | 0110 |
-   | 4 | 0100 | 0111 |
-   | 5 | 0101 | 1000 |
-   | 6 | 0110 | 1001 |
-   | 7 | 0111 | 1010 |
-   | 8 | 1000 | 1011 |
-   | 9 | 1001 | 1100 |
+    | Decimal | BCD | Excess-3 |
+    |---|---|---|
+    | 0 | 0000 | 0011 |
+    | 1 | 0001 | 0100 |
+    | 2 | 0010 | 0101 |
+    | 3 | 0011 | 0110 |
+    | 4 | 0100 | 0111 |
+    | 5 | 0101 | 1000 |
+    | 6 | 0110 | 1001 |
+    | 7 | 0111 | 1010 |
+    | 8 | 1000 | 1011 |
+    | 9 | 1001 | 1100 |
 
-   - Note from the table that 1010 is the Excess-3 code of decimal 7, so if the question is asking which decimal digit 1010 represents in Excess-3, the answer is 7.
+    - Note from the table that 1010 is the Excess-3 code of decimal 7, so if the question is asking which decimal digit 1010 represents in Excess-3, the answer is 7.
 
-   Why Excess-3 is used:
-   - It is self-complementing: the nine's complement of a digit is obtained simply by inverting all four bits. For example 4 is 0111, and inverting gives 1000, which is 5, and 4 + 5 = 9. This makes subtraction by complement arithmetic very simple in hardware.
-   - No code word is 0000, so an all zero pattern indicates a fault rather than a valid digit, which helps in error detection. <!-- verify -->
+    Why Excess-3 is used:
+    - It is self-complementing: the nine's complement of a digit is obtained simply by inverting all four bits. For example 4 is 0111, and inverting gives 1000, which is 5, and 4 + 5 = 9. This makes subtraction by complement arithmetic very simple in hardware.
+    - No code word is 0000, so an all zero pattern indicates a fault rather than a valid digit, which helps in error detection. <!-- verify -->
 17. **There are different number systems. i. Convert (10010.101)_2 = (?)_{10} ii. (543)_{10} = (?)_{16}** *[Sonali & Janata Bank Officer (IT) 2020 compact it 989 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   (i) (10010.101)₂ to decimal:
-   - Multiply each bit by its place value and add. The place values to the left of the point are 2⁰, 2¹, 2² and so on; to the right they are 2⁻¹, 2⁻², 2⁻³.
+    (i) (10010.101)₂ to decimal:
+    - Multiply each bit by its place value and add. The place values to the left of the point are 2⁰, 2¹, 2² and so on; to the right they are 2⁻¹, 2⁻², 2⁻³.
 
-   Integer part 10010:
-   - 1 × 2⁴ + 0 × 2³ + 0 × 2² + 1 × 2¹ + 0 × 2⁰
-   - = 16 + 0 + 0 + 2 + 0
-   - = 18
+    Integer part 10010:
+    - 1 × 2⁴ + 0 × 2³ + 0 × 2² + 1 × 2¹ + 0 × 2⁰
+    - = 16 + 0 + 0 + 2 + 0
+    - = 18
 
-   Fractional part .101:
-   - 1 × 2⁻¹ + 0 × 2⁻² + 1 × 2⁻³
-   - = 0.5 + 0 + 0.125
-   - = 0.625
+    Fractional part .101:
+    - 1 × 2⁻¹ + 0 × 2⁻² + 1 × 2⁻³
+    - = 0.5 + 0 + 0.125
+    - = 0.625
 
-   - Total: (10010.101)₂ = 18 + 0.625 = (18.625)₁₀
+    - Total: (10010.101)₂ = 18 + 0.625 = (18.625)₁₀
 
-   (ii) (543)₁₀ to hexadecimal:
-   - Divide repeatedly by 16 and read the remainders upward, converting 10 to 15 into A to F.
-   - 543 ÷ 16 = 33 remainder 15, which is F
-   - 33 ÷ 16 = 2 remainder 1
-   - 2 ÷ 16 = 0 remainder 2
-   - Reading upward: (543)₁₀ = (21F)₁₆
-   - Verification: 2 × 256 + 1 × 16 + 15 = 512 + 16 + 15 = 543. Correct.
+    (ii) (543)₁₀ to hexadecimal:
+    - Divide repeatedly by 16 and read the remainders upward, converting 10 to 15 into A to F.
+    - 543 ÷ 16 = 33 remainder 15, which is F
+    - 33 ÷ 16 = 2 remainder 1
+    - 2 ÷ 16 = 0 remainder 2
+    - Reading upward: (543)₁₀ = (21F)₁₆
+    - Verification: 2 × 256 + 1 × 16 + 15 = 512 + 16 + 15 = 543. Correct.
 
-   - Method for a fractional part when converting from decimal: multiply the fraction repeatedly by the base and read the integer parts from first to last. For example 0.625 × 2 = 1.25 → 1; 0.25 × 2 = 0.5 → 0; 0.5 × 2 = 1.0 → 1, giving .101, which confirms part (i).
+    - Method for a fractional part when converting from decimal: multiply the fraction repeatedly by the base and read the integer parts from first to last. For example 0.625 × 2 = 1.25 → 1; 0.25 × 2 = 0.5 → 0; 0.5 × 2 = 1.0 → 1, giving .101, which confirms part (i).
 18. **Convert (343)_{10} to binary and Hexadecimal.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
 
 
-   Answer:
+    Answer:
 
-   (343)₁₀ to binary:
-   - Divide repeatedly by 2 and read the remainders upward.
-   - 343 ÷ 2 = 171 r 1
-   - 171 ÷ 2 = 85 r 1
-   - 85 ÷ 2 = 42 r 1
-   - 42 ÷ 2 = 21 r 0
-   - 21 ÷ 2 = 10 r 1
-   - 10 ÷ 2 = 5 r 0
-   - 5 ÷ 2 = 2 r 1
-   - 2 ÷ 2 = 1 r 0
-   - 1 ÷ 2 = 0 r 1
-   - Reading upward: (343)₁₀ = (101010111)₂
-   - Verification: 256 + 0 + 64 + 0 + 16 + 0 + 4 + 2 + 1 = 343. Correct.
+    (343)₁₀ to binary:
+    - Divide repeatedly by 2 and read the remainders upward.
+    - 343 ÷ 2 = 171 r 1
+    - 171 ÷ 2 = 85 r 1
+    - 85 ÷ 2 = 42 r 1
+    - 42 ÷ 2 = 21 r 0
+    - 21 ÷ 2 = 10 r 1
+    - 10 ÷ 2 = 5 r 0
+    - 5 ÷ 2 = 2 r 1
+    - 2 ÷ 2 = 1 r 0
+    - 1 ÷ 2 = 0 r 1
+    - Reading upward: (343)₁₀ = (101010111)₂
+    - Verification: 256 + 0 + 64 + 0 + 16 + 0 + 4 + 2 + 1 = 343. Correct.
 
-   (343)₁₀ to hexadecimal:
-   - Divide repeatedly by 16 and read the remainders upward.
-   - 343 ÷ 16 = 21 remainder 7
-   - 21 ÷ 16 = 1 remainder 5
-   - 1 ÷ 16 = 0 remainder 1
-   - Reading upward: (343)₁₀ = (157)₁₆
-   - Verification: 1 × 256 + 5 × 16 + 7 = 256 + 80 + 7 = 343. Correct.
+    (343)₁₀ to hexadecimal:
+    - Divide repeatedly by 16 and read the remainders upward.
+    - 343 ÷ 16 = 21 remainder 7
+    - 21 ÷ 16 = 1 remainder 5
+    - 1 ÷ 16 = 0 remainder 1
+    - Reading upward: (343)₁₀ = (157)₁₆
+    - Verification: 1 × 256 + 5 × 16 + 7 = 256 + 80 + 7 = 343. Correct.
 
-   Cross check between the two answers:
-   - Group the binary form into 4 bits from the right: 0001 0101 0111
-   - 0001 = 1, 0101 = 5, 0111 = 7, giving (157)₁₆, which agrees.
+    Cross check between the two answers:
+    - Group the binary form into 4 bits from the right: 0001 0101 0111
+    - 0001 = 1, 0101 = 5, 0111 = 7, giving (157)₁₆, which agrees.
 
-   Summary: (343)₁₀ = (101010111)₂ = (527)₈ = (157)₁₆
+    Summary: (343)₁₀ = (101010111)₂ = (527)₈ = (157)₁₆
 19. **(1111001101011)_2 কে অক্টাল ও হেক্সাডেসিম্যালে রূপান্তর করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
 
-   Answer:
+    Answer:
 
-   Given: (1111001101011)₂, which has 13 bits.
+    Given: (1111001101011)₂, which has 13 bits.
 
-   To octal, by grouping into 3 bits from the right:
-   - Pad on the left with 2 zeros to make 15 bits: 001 111 001 101 011
-   - 001 = 1
-   - 111 = 7
-   - 001 = 1
-   - 101 = 5
-   - 011 = 3
-   - (1111001101011)₂ = (17153)₈
+    To octal, by grouping into 3 bits from the right:
+    - Pad on the left with 2 zeros to make 15 bits: 001 111 001 101 011
+    - 001 = 1
+    - 111 = 7
+    - 001 = 1
+    - 101 = 5
+    - 011 = 3
+    - (1111001101011)₂ = (17153)₈
 
-   To hexadecimal, by grouping into 4 bits from the right:
-   - Pad on the left with 3 zeros to make 16 bits: 0001 1110 0110 1011
-   - 0001 = 1
-   - 1110 = 14 = E
-   - 0110 = 6
-   - 1011 = 11 = B
-   - (1111001101011)₂ = (1E6B)₁₆
+    To hexadecimal, by grouping into 4 bits from the right:
+    - Pad on the left with 3 zeros to make 16 bits: 0001 1110 0110 1011
+    - 0001 = 1
+    - 1110 = 14 = E
+    - 0110 = 6
+    - 1011 = 11 = B
+    - (1111001101011)₂ = (1E6B)₁₆
 
-   Verification through decimal:
-   - (1111001101011)₂ = 4096 + 2048 + 1024 + 512 + 0 + 0 + 64 + 32 + 0 + 8 + 0 + 2 + 1 = 7787
-   - (17153)₈ = 1×4096 + 7×512 + 1×64 + 5×8 + 3 = 4096 + 3584 + 64 + 40 + 3 = 7787. Correct.
-   - (1E6B)₁₆ = 1×4096 + 14×256 + 6×16 + 11 = 4096 + 3584 + 96 + 11 = 7787. Correct.
+    Verification through decimal:
+    - (1111001101011)₂ = 4096 + 2048 + 1024 + 512 + 0 + 0 + 64 + 32 + 0 + 8 + 0 + 2 + 1 = 7787
+    - (17153)₈ = 1×4096 + 7×512 + 1×64 + 5×8 + 3 = 4096 + 3584 + 64 + 40 + 3 = 7787. Correct.
+    - (1E6B)₁₆ = 1×4096 + 14×256 + 6×16 + 11 = 4096 + 3584 + 96 + 11 = 7787. Correct.
 
-   - The essential rule: always group from the right, not from the left, and pad the leftmost group with zeros. Grouping from the left is the commonest error in this kind of question and gives a completely wrong answer.
+    - The essential rule: always group from the right, not from the left, and pad the leftmost group with zeros. Grouping from the left is the commonest error in this kind of question and gives a completely wrong answer.
 
 ## Combinational Circuits (Adders, Encoders, MUX) (18)
 
@@ -2636,580 +2636,580 @@
 10. **What is Half Adder circuit? Expalin with block diagram with logic circuit.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 497 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   - A half adder is a combinational circuit that adds two single bit binary numbers and produces a sum bit and a carry bit. It is called a half adder because it cannot accept a carry from a previous stage, so it cannot be used alone for multi-bit addition.
+    - A half adder is a combinational circuit that adds two single bit binary numbers and produces a sum bit and a carry bit. It is called a half adder because it cannot accept a carry from a previous stage, so it cannot be used alone for multi-bit addition.
 
-   Truth table:
+    Truth table:
 
-   | A | B | Sum | Carry |
-   |---|---|---|---|
-   | 0 | 0 | 0 | 0 |
-   | 0 | 1 | 1 | 0 |
-   | 1 | 0 | 1 | 0 |
-   | 1 | 1 | 0 | 1 |
+    | A | B | Sum | Carry |
+    |---|---|---|---|
+    | 0 | 0 | 0 | 0 |
+    | 0 | 1 | 1 | 0 |
+    | 1 | 0 | 1 | 0 |
+    | 1 | 1 | 0 | 1 |
 
-   Boolean expressions:
-   - Sum = A ⊕ B = A'B + AB'
-   - Carry = A · B
+    Boolean expressions:
+    - Sum = A ⊕ B = A'B + AB'
+    - Carry = A · B
 
-   Logic circuit:
+    Logic circuit:
 
-   ```
-        A ---+---|\
-             |   | )D--- Sum = A xor B
-        B ---|---|/
-             |   |
-             +---+---| AND |--- Carry = A.B
-   ```
+    ```
+         A ---+---|\
+              |   | )D--- Sum = A xor B
+         B ---|---|/
+              |   |
+              +---+---| AND |--- Carry = A.B
+    ```
 
-   Block diagram:
+    Block diagram:
 
-   ```
-        A ---->|           |----> Sum
-               | Half Adder|
-        B ---->|           |----> Carry
-   ```
+    ```
+         A ---->|           |----> Sum
+                | Half Adder|
+         B ---->|           |----> Carry
+    ```
 
-   - Note that the carry is 1 only when both inputs are 1, which is the binary fact that 1 + 1 = 10, that is sum 0 with a carry of 1.
+    - Note that the carry is 1 only when both inputs are 1, which is the binary fact that 1 + 1 = 10, that is sum 0 with a carry of 1.
 
-   Explanation of the circuit:
-   - The XOR gate produces the sum. Its output is 1 when exactly one input is 1, which is precisely when the binary sum of the two bits is 1 without a carry.
-   - The AND gate produces the carry. Its output is 1 only when both inputs are 1, which is the case 1 + 1 = 10, that is a sum of 0 with a carry of 1.
-   - The two gates operate in parallel on the same inputs, so the propagation delay of the whole circuit is that of a single gate, not two.
+    Explanation of the circuit:
+    - The XOR gate produces the sum. Its output is 1 when exactly one input is 1, which is precisely when the binary sum of the two bits is 1 without a carry.
+    - The AND gate produces the carry. Its output is 1 only when both inputs are 1, which is the case 1 + 1 = 10, that is a sum of 0 with a carry of 1.
+    - The two gates operate in parallel on the same inputs, so the propagation delay of the whole circuit is that of a single gate, not two.
 
-   Using only basic gates, since XOR is not basic:
-   - Sum = A'B + AB', requiring 2 inverters, 2 AND gates and 1 OR gate.
-   - Carry = A·B, requiring 1 AND gate.
+    Using only basic gates, since XOR is not basic:
+    - Sum = A'B + AB', requiring 2 inverters, 2 AND gates and 1 OR gate.
+    - Carry = A·B, requiring 1 AND gate.
 
-   ```
-   A ---|>o--- A' ---+
-                     |--- AND --- A'B ---+
-   B ----------------+                   |--- OR --- Sum
-                                         |
-   A ----------------+                   |
-                     |--- AND --- AB' ---+
-   B ---|>o--- B' ---+
+    ```
+    A ---|>o--- A' ---+
+                      |--- AND --- A'B ---+
+    B ----------------+                   |--- OR --- Sum
+                                          |
+    A ----------------+                   |
+                      |--- AND --- AB' ---+
+    B ---|>o--- B' ---+
 
-   A ----------------+
-                     |--- AND --- Carry
-   B ----------------+
-   ```
+    A ----------------+
+                      |--- AND --- Carry
+    B ----------------+
+    ```
 
-   Limitation and its consequence:
-   - The half adder has no carry input, so it cannot add a carry propagated from a lower order bit. It is therefore usable only for the least significant position of a multi-bit addition.
-   - Two half adders and one OR gate form a full adder, which does accept a carry in, and n full adders cascaded form an n bit adder.
+    Limitation and its consequence:
+    - The half adder has no carry input, so it cannot add a carry propagated from a lower order bit. It is therefore usable only for the least significant position of a multi-bit addition.
+    - Two half adders and one OR gate form a full adder, which does accept a carry in, and n full adders cascaded form an n bit adder.
 11. **Desugn a logic circuit that counts the number of 1s in 3 inputs (A, B, C) and outputs a two-bit binary number representing that count of 1s?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 683 (ET: N/A)]*
 
 
-   Answer: The circuit counts how many of the three inputs are 1 and outputs the count as a two bit binary number. This is a 3 bit ones counter, and it is in fact identical to a full adder.
+    Answer: The circuit counts how many of the three inputs are 1 and outputs the count as a two bit binary number. This is a 3 bit ones counter, and it is in fact identical to a full adder.
 
-   Step 1, the truth table. Let the outputs be Y₁ Y₀, with Y₁ the more significant bit:
+    Step 1, the truth table. Let the outputs be Y₁ Y₀, with Y₁ the more significant bit:
 
-   | A | B | C | Number of 1s | Y₁ | Y₀ |
-   |---|---|---|---|---|---|
-   | 0 | 0 | 0 | 0 | 0 | 0 |
-   | 0 | 0 | 1 | 1 | 0 | 1 |
-   | 0 | 1 | 0 | 1 | 0 | 1 |
-   | 0 | 1 | 1 | 2 | 1 | 0 |
-   | 1 | 0 | 0 | 1 | 0 | 1 |
-   | 1 | 0 | 1 | 2 | 1 | 0 |
-   | 1 | 1 | 0 | 2 | 1 | 0 |
-   | 1 | 1 | 1 | 3 | 1 | 1 |
+    | A | B | C | Number of 1s | Y₁ | Y₀ |
+    |---|---|---|---|---|---|
+    | 0 | 0 | 0 | 0 | 0 | 0 |
+    | 0 | 0 | 1 | 1 | 0 | 1 |
+    | 0 | 1 | 0 | 1 | 0 | 1 |
+    | 0 | 1 | 1 | 2 | 1 | 0 |
+    | 1 | 0 | 0 | 1 | 0 | 1 |
+    | 1 | 0 | 1 | 2 | 1 | 0 |
+    | 1 | 1 | 0 | 2 | 1 | 0 |
+    | 1 | 1 | 1 | 3 | 1 | 1 |
 
-   Step 2, derive the expressions.
+    Step 2, derive the expressions.
 
-   Y₀ = Σm(1, 2, 4, 7):
+    Y₀ = Σm(1, 2, 4, 7):
 
-   ```
-          BC
-   A \   00   01   11   10
-     0 |  0 |  1 |  0 |  1 |
-     1 |  1 |  0 |  1 |  0 |
-   ```
+    ```
+           BC
+    A \   00   01   11   10
+      0 |  0 |  1 |  0 |  1 |
+      1 |  1 |  0 |  1 |  0 |
+    ```
 
-   - The chequerboard pattern admits no grouping, which is the signature of XOR.
-   - Y₀ = A ⊕ B ⊕ C
+    - The chequerboard pattern admits no grouping, which is the signature of XOR.
+    - Y₀ = A ⊕ B ⊕ C
 
-   Y₁ = Σm(3, 5, 6, 7):
+    Y₁ = Σm(3, 5, 6, 7):
 
-   ```
-          BC
-   A \   00   01   11   10
-     0 |  0 |  0 |  1 |  0 |
-     1 |  0 |  1 |  1 |  1 |
-   ```
+    ```
+           BC
+    A \   00   01   11   10
+      0 |  0 |  0 |  1 |  0 |
+      1 |  0 |  1 |  1 |  1 |
+    ```
 
-   - Group m3, m7: BC
-   - Group m5, m7: AC
-   - Group m6, m7: AB
-   - Y₁ = AB + BC + AC, the majority function.
+    - Group m3, m7: BC
+    - Group m5, m7: AC
+    - Group m6, m7: AB
+    - Y₁ = AB + BC + AC, the majority function.
 
-   Step 3, the circuit:
+    Step 3, the circuit:
 
-   ```
-   A ---+---|\
-        |   | )D--- (A xor B) ---+---|\
-   B ---+---|/                   |   | )D--- Y0
-        |                  C ----+---|/
-        |                        |
-        |                        +---| AND |--- (A xor B).C ---+
-        |                                                      |--- OR --- Y1
-        +---| AND |--- A.B ------------------------------------+
-   B ------|
-   ```
+    ```
+    A ---+---|\
+         |   | )D--- (A xor B) ---+---|\
+    B ---+---|/                   |   | )D--- Y0
+         |                  C ----+---|/
+         |                        |
+         |                        +---| AND |--- (A xor B).C ---+
+         |                                                      |--- OR --- Y1
+         +---| AND |--- A.B ------------------------------------+
+    B ------|
+    ```
 
-   Verification of the output as a number:
-   - Y₁Y₀ = 00 for zero 1s, 01 for one, 10 for two and 11 for three, which is the correct binary count.
+    Verification of the output as a number:
+    - Y₁Y₀ = 00 for zero 1s, 01 for one, 10 for two and 11 for three, which is the correct binary count.
 
-   - The key observation, which is what the question is really testing: this circuit is exactly a full adder. Y₀ is the Sum output and Y₁ is the Carry out. That is not a coincidence: adding three single bits produces a value from 0 to 3, which needs two bits, and counting the 1s among three inputs is the same operation. A ones counter of this kind is therefore built from a full adder, and larger population count circuits are built from trees of them.
+    - The key observation, which is what the question is really testing: this circuit is exactly a full adder. Y₀ is the Sum output and Y₁ is the Carry out. That is not a coincidence: adding three single bits produces a value from 0 to 3, which needs two bits, and counting the 1s among three inputs is the same operation. A ones counter of this kind is therefore built from a full adder, and larger population count circuits are built from trees of them.
 12. **একটি 4:1 Multiplexer এর Logic Diagram অঙ্কন করে দেখান?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
 
-   Answer:
+    Answer:
 
-   A 4:1 multiplexer has 4 data inputs I₀ to I₃, 2 select lines S₁ and S₀, and 1 output Y.
+    A 4:1 multiplexer has 4 data inputs I₀ to I₃, 2 select lines S₁ and S₀, and 1 output Y.
 
-   Function table:
+    Function table:
 
-   | S₁ | S₀ | Y |
-   |---|---|---|
-   | 0 | 0 | I₀ |
-   | 0 | 1 | I₁ |
-   | 1 | 0 | I₂ |
-   | 1 | 1 | I₃ |
+    | S₁ | S₀ | Y |
+    |---|---|---|
+    | 0 | 0 | I₀ |
+    | 0 | 1 | I₁ |
+    | 1 | 0 | I₂ |
+    | 1 | 1 | I₃ |
 
-   Boolean expression:
-   - Y = S₁'S₀'I₀ + S₁'S₀I₁ + S₁S₀'I₂ + S₁S₀I₃
+    Boolean expression:
+    - Y = S₁'S₀'I₀ + S₁'S₀I₁ + S₁S₀'I₂ + S₁S₀I₃
 
-   Logic diagram:
+    Logic diagram:
 
-   ```
-   I0 ----+
-          |--- AND ---+   (enabled when S1'S0' = 1)
-   S1'----+           |
-   S0'----+           |
-                      |
-   I1 ----+           |
-          |--- AND ---+
-   S1'----+           |
-   S0 ----+           |--- OR --- Y
-                      |
-   I2 ----+           |
-          |--- AND ---+
-   S1 ----+           |
-   S0'----+           |
-                      |
-   I3 ----+           |
-          |--- AND ---+
-   S1 ----+
-   S0 ----+
+    ```
+    I0 ----+
+           |--- AND ---+   (enabled when S1'S0' = 1)
+    S1'----+           |
+    S0'----+           |
+                       |
+    I1 ----+           |
+           |--- AND ---+
+    S1'----+           |
+    S0 ----+           |--- OR --- Y
+                       |
+    I2 ----+           |
+           |--- AND ---+
+    S1 ----+           |
+    S0'----+           |
+                       |
+    I3 ----+           |
+           |--- AND ---+
+    S1 ----+
+    S0 ----+
 
-   S1 ---|>o--- S1'      (inverters supplying the complements)
-   S0 ---|>o--- S0'
-   ```
+    S1 ---|>o--- S1'      (inverters supplying the complements)
+    S0 ---|>o--- S0'
+    ```
 
-   - Gate count: 2 inverters, four 3-input AND gates and one 4-input OR gate.
+    - Gate count: 2 inverters, four 3-input AND gates and one 4-input OR gate.
 
-   Function of the two select lines:
-   - The two select lines together form a 2 bit binary address that chooses which one of the four data inputs is connected to the output.
-   - S₁ is the more significant bit and S₀ the less significant. The combination S₁S₀ = 00 selects I₀, 01 selects I₁, 10 selects I₂ and 11 selects I₃.
-   - Only one AND gate is enabled at a time, because only one combination of the select lines and their complements can be all 1s simultaneously. The other three AND gates output 0, so the OR gate simply passes the selected value.
-   - In general, n select lines address 2ⁿ data inputs, which is why a 4:1 MUX needs 2 select lines and an 8:1 MUX needs 3.
+    Function of the two select lines:
+    - The two select lines together form a 2 bit binary address that chooses which one of the four data inputs is connected to the output.
+    - S₁ is the more significant bit and S₀ the less significant. The combination S₁S₀ = 00 selects I₀, 01 selects I₁, 10 selects I₂ and 11 selects I₃.
+    - Only one AND gate is enabled at a time, because only one combination of the select lines and their complements can be all 1s simultaneously. The other three AND gates output 0, so the OR gate simply passes the selected value.
+    - In general, n select lines address 2ⁿ data inputs, which is why a 4:1 MUX needs 2 select lines and an 8:1 MUX needs 3.
 13. **How do you design a logic circuit that has three inputs A, B, C and whose output will be high only when majority of the inputs are high. (a) Find truth table and (b) Show SOP and POS equation.** *[EGCB Assistant Engineer (CSE) 2022 compact it 715 (ET: BUET)]*
 
 
-   Answer: The circuit required is the majority function: the output is 1 when two or more of the three inputs are 1.
+    Answer: The circuit required is the majority function: the output is 1 when two or more of the three inputs are 1.
 
-   (a) Truth table:
+    (a) Truth table:
 
-   | A | B | C | Number of 1s | F |
-   |---|---|---|---|---|
-   | 0 | 0 | 0 | 0 | 0 |
-   | 0 | 0 | 1 | 1 | 0 |
-   | 0 | 1 | 0 | 1 | 0 |
-   | 0 | 1 | 1 | 2 | 1 |
-   | 1 | 0 | 0 | 1 | 0 |
-   | 1 | 0 | 1 | 2 | 1 |
-   | 1 | 1 | 0 | 2 | 1 |
-   | 1 | 1 | 1 | 3 | 1 |
+    | A | B | C | Number of 1s | F |
+    |---|---|---|---|---|
+    | 0 | 0 | 0 | 0 | 0 |
+    | 0 | 0 | 1 | 1 | 0 |
+    | 0 | 1 | 0 | 1 | 0 |
+    | 0 | 1 | 1 | 2 | 1 |
+    | 1 | 0 | 0 | 1 | 0 |
+    | 1 | 0 | 1 | 2 | 1 |
+    | 1 | 1 | 0 | 2 | 1 |
+    | 1 | 1 | 1 | 3 | 1 |
 
-   - F = 1 for the minterms m3, m5, m6 and m7.
+    - F = 1 for the minterms m3, m5, m6 and m7.
 
-   (b) SOP equation:
+    (b) SOP equation:
 
-   - Canonical sum of products, taken directly from the rows where F = 1:
-   - F = A'BC + AB'C + ABC' + ABC
+    - Canonical sum of products, taken directly from the rows where F = 1:
+    - F = A'BC + AB'C + ABC' + ABC
 
-   Simplifying with a K-map:
+    Simplifying with a K-map:
 
-   ```
-          BC
-   A \   00   01   11   10
-     0 |  0 |  0 |  1 |  0 |     m0 m1 m3 m2
-     1 |  0 |  1 |  1 |  1 |     m4 m5 m7 m6
-   ```
+    ```
+           BC
+    A \   00   01   11   10
+      0 |  0 |  0 |  1 |  0 |     m0 m1 m3 m2
+      1 |  0 |  1 |  1 |  1 |     m4 m5 m7 m6
+    ```
 
-   - Group m3, m7: BC
-   - Group m5, m7: AC
-   - Group m6, m7: AB
-   - Minimal SOP: F = AB + BC + AC
+    - Group m3, m7: BC
+    - Group m5, m7: AC
+    - Group m6, m7: AB
+    - Minimal SOP: F = AB + BC + AC
 
-   POS equation:
+    POS equation:
 
-   - The canonical product of sums is taken from the rows where F = 0, that is M0, M1, M2 and M4. For each, a variable that is 0 appears uncomplemented and one that is 1 appears complemented.
-   - M0 (000): (A + B + C)
-   - M1 (001): (A + B + C')
-   - M2 (010): (A + B' + C)
-   - M4 (100): (A' + B + C)
-   - F = (A + B + C)(A + B + C')(A + B' + C)(A' + B + C)
+    - The canonical product of sums is taken from the rows where F = 0, that is M0, M1, M2 and M4. For each, a variable that is 0 appears uncomplemented and one that is 1 appears complemented.
+    - M0 (000): (A + B + C)
+    - M1 (001): (A + B + C')
+    - M2 (010): (A + B' + C)
+    - M4 (100): (A' + B + C)
+    - F = (A + B + C)(A + B + C')(A + B' + C)(A' + B + C)
 
-   Simplifying by grouping the 0s on the K-map:
-   - Group m0, m1: A'B', giving the sum term (A + B)
-   - Group m0, m2: A'C', giving (A + C)
-   - Group m0, m4: B'C', giving (B + C)
-   - Minimal POS: F = (A + B)(A + C)(B + C)
+    Simplifying by grouping the 0s on the K-map:
+    - Group m0, m1: A'B', giving the sum term (A + B)
+    - Group m0, m2: A'C', giving (A + C)
+    - Group m0, m4: B'C', giving (B + C)
+    - Minimal POS: F = (A + B)(A + C)(B + C)
 
-   Logic circuit from the minimal SOP form:
+    Logic circuit from the minimal SOP form:
 
-   ```
-   A ---+
-        |--- AND --- AB ---+
-   B ---+                  |
-                           |
-   B ---+                  |--- OR --- F
-        |--- AND --- BC ---+
-   C ---+                  |
-                           |
-   A ---+                  |
-        |--- AND --- AC ---+
-   C ---+
-   ```
+    ```
+    A ---+
+         |--- AND --- AB ---+
+    B ---+                  |
+                            |
+    B ---+                  |--- OR --- F
+         |--- AND --- BC ---+
+    C ---+                  |
+                            |
+    A ---+                  |
+         |--- AND --- AC ---+
+    C ---+
+    ```
 
-   - Gate count: 3 AND gates and 1 three input OR gate. No inverters are needed at all, which is a useful check on the answer.
-   - This function is also the carry out of a full adder, and it is used in fault tolerant systems as a triple modular redundancy voter, in which three copies of a computation vote and the majority result is taken.
+    - Gate count: 3 AND gates and 1 three input OR gate. No inverters are needed at all, which is a useful check on the answer.
+    - This function is also the carry out of a full adder, and it is used in fault tolerant systems as a triple modular redundancy voter, in which three copies of a computation vote and the majority result is taken.
 14. **Design a 8\times 1 MUX and explain working procedure.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 720 (ET: N/A)]*
 
 
-   Answer: An 8:1 multiplexer has 8 data inputs I₀ to I₇, 3 select lines S₂ S₁ S₀, and 1 output Y.
+    Answer: An 8:1 multiplexer has 8 data inputs I₀ to I₇, 3 select lines S₂ S₁ S₀, and 1 output Y.
 
-   Function table:
+    Function table:
 
-   | S₂ | S₁ | S₀ | Y |
-   |---|---|---|---|
-   | 0 | 0 | 0 | I₀ |
-   | 0 | 0 | 1 | I₁ |
-   | 0 | 1 | 0 | I₂ |
-   | 0 | 1 | 1 | I₃ |
-   | 1 | 0 | 0 | I₄ |
-   | 1 | 0 | 1 | I₅ |
-   | 1 | 1 | 0 | I₆ |
-   | 1 | 1 | 1 | I₇ |
+    | S₂ | S₁ | S₀ | Y |
+    |---|---|---|---|
+    | 0 | 0 | 0 | I₀ |
+    | 0 | 0 | 1 | I₁ |
+    | 0 | 1 | 0 | I₂ |
+    | 0 | 1 | 1 | I₃ |
+    | 1 | 0 | 0 | I₄ |
+    | 1 | 0 | 1 | I₅ |
+    | 1 | 1 | 0 | I₆ |
+    | 1 | 1 | 1 | I₇ |
 
-   Boolean expression:
-   - Y = S₂'S₁'S₀'I₀ + S₂'S₁'S₀I₁ + S₂'S₁S₀'I₂ + S₂'S₁S₀I₃ + S₂S₁'S₀'I₄ + S₂S₁'S₀I₅ + S₂S₁S₀'I₆ + S₂S₁S₀I₇
+    Boolean expression:
+    - Y = S₂'S₁'S₀'I₀ + S₂'S₁'S₀I₁ + S₂'S₁S₀'I₂ + S₂'S₁S₀I₃ + S₂S₁'S₀'I₄ + S₂S₁'S₀I₅ + S₂S₁S₀'I₆ + S₂S₁S₀I₇
 
-   Logic diagram:
+    Logic diagram:
 
-   ```
-   I0 --+
-   S2'--+--- AND ---+
-   S1'--+           |
-   S0'--+           |
-                    |
-   I1 --+           |
-   S2'--+--- AND ---+
-   S1'--+           |
-   S0 --+           |
-                    |
-   ... (six more 4-input AND gates, one per data input) ...
-                    |
-   I7 --+           |--- 8-input OR --- Y
-   S2 --+--- AND ---+
-   S1 --+
-   S0 --+
+    ```
+    I0 --+
+    S2'--+--- AND ---+
+    S1'--+           |
+    S0'--+           |
+                     |
+    I1 --+           |
+    S2'--+--- AND ---+
+    S1'--+           |
+    S0 --+           |
+                     |
+    ... (six more 4-input AND gates, one per data input) ...
+                     |
+    I7 --+           |--- 8-input OR --- Y
+    S2 --+--- AND ---+
+    S1 --+
+    S0 --+
 
-   S2 --|>o--- S2'
-   S1 --|>o--- S1'      (inverters supplying the complements)
-   S0 --|>o--- S0'
-   ```
+    S2 --|>o--- S2'
+    S1 --|>o--- S1'      (inverters supplying the complements)
+    S0 --|>o--- S0'
+    ```
 
-   - Gate count: 3 inverters, eight 4-input AND gates and one 8-input OR gate.
+    - Gate count: 3 inverters, eight 4-input AND gates and one 8-input OR gate.
 
-   Working procedure:
-   - The three select lines form a 3 bit address, giving 2³ = 8 combinations, one for each data input.
-   - Each AND gate is connected to one data input and to the particular combination of select lines and their complements corresponding to its index. For example the AND gate for I₅ receives S₂, S₁' and S₀, since 5 in binary is 101.
-   - For any given value of the select lines, exactly one of those combinations is all 1s, so exactly one AND gate is enabled and passes its data input. The other seven output 0 regardless of their data inputs.
-   - The OR gate therefore outputs whatever the single enabled AND gate produced, which is the selected data input.
-   - Example: with S₂S₁S₀ = 101, only the AND gate for I₅ is enabled, so Y = I₅.
+    Working procedure:
+    - The three select lines form a 3 bit address, giving 2³ = 8 combinations, one for each data input.
+    - Each AND gate is connected to one data input and to the particular combination of select lines and their complements corresponding to its index. For example the AND gate for I₅ receives S₂, S₁' and S₀, since 5 in binary is 101.
+    - For any given value of the select lines, exactly one of those combinations is all 1s, so exactly one AND gate is enabled and passes its data input. The other seven output 0 regardless of their data inputs.
+    - The OR gate therefore outputs whatever the single enabled AND gate produced, which is the selected data input.
+    - Example: with S₂S₁S₀ = 101, only the AND gate for I₅ is enabled, so Y = I₅.
 
-   Applications:
-   - Selecting one of eight sources onto a shared bus.
-   - Implementing any Boolean function of up to 4 variables, by putting three variables on the select lines and 0, 1, the fourth variable or its complement on each data input.
-   - Parallel to serial conversion, by cycling the select lines through 0 to 7.
-   - Time division multiplexing of eight channels onto one line.
-   - The corresponding IC is the 74151.
+    Applications:
+    - Selecting one of eight sources onto a shared bus.
+    - Implementing any Boolean function of up to 4 variables, by putting three variables on the select lines and 0, 1, the fourth variable or its complement on each data input.
+    - Parallel to serial conversion, by cycling the select lines through 0 to 7.
+    - Time division multiplexing of eight channels onto one line.
+    - The corresponding IC is the 74151.
 15. **(a) Draw the logic diagram of Half-Adder the truth table of Full-Adder and use half Adder (S) and basic gates to build a Full-Adder.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   Logic diagram of the half adder:
+    Logic diagram of the half adder:
 
-   - A half adder is a combinational circuit that adds two single bit binary numbers and produces a sum bit and a carry bit. It is called a half adder because it cannot accept a carry from a previous stage, so it cannot be used alone for multi-bit addition.
+    - A half adder is a combinational circuit that adds two single bit binary numbers and produces a sum bit and a carry bit. It is called a half adder because it cannot accept a carry from a previous stage, so it cannot be used alone for multi-bit addition.
 
-   Truth table:
+    Truth table:
 
-   | A | B | Sum | Carry |
-   |---|---|---|---|
-   | 0 | 0 | 0 | 0 |
-   | 0 | 1 | 1 | 0 |
-   | 1 | 0 | 1 | 0 |
-   | 1 | 1 | 0 | 1 |
+    | A | B | Sum | Carry |
+    |---|---|---|---|
+    | 0 | 0 | 0 | 0 |
+    | 0 | 1 | 1 | 0 |
+    | 1 | 0 | 1 | 0 |
+    | 1 | 1 | 0 | 1 |
 
-   Boolean expressions:
-   - Sum = A ⊕ B = A'B + AB'
-   - Carry = A · B
+    Boolean expressions:
+    - Sum = A ⊕ B = A'B + AB'
+    - Carry = A · B
 
-   Logic circuit:
+    Logic circuit:
 
-   ```
-        A ---+---|\
-             |   | )D--- Sum = A xor B
-        B ---|---|/
-             |   |
-             +---+---| AND |--- Carry = A.B
-   ```
+    ```
+         A ---+---|\
+              |   | )D--- Sum = A xor B
+         B ---|---|/
+              |   |
+              +---+---| AND |--- Carry = A.B
+    ```
 
-   Block diagram:
+    Block diagram:
 
-   ```
-        A ---->|           |----> Sum
-               | Half Adder|
-        B ---->|           |----> Carry
-   ```
+    ```
+         A ---->|           |----> Sum
+                | Half Adder|
+         B ---->|           |----> Carry
+    ```
 
-   - Note that the carry is 1 only when both inputs are 1, which is the binary fact that 1 + 1 = 10, that is sum 0 with a carry of 1.
+    - Note that the carry is 1 only when both inputs are 1, which is the binary fact that 1 + 1 = 10, that is sum 0 with a carry of 1.
 
-   Truth table of the full adder:
+    Truth table of the full adder:
 
-   - A full adder adds three single bit inputs: the two operand bits A and B, and a carry in C_in from the previous stage. It produces a sum bit and a carry out.
+    - A full adder adds three single bit inputs: the two operand bits A and B, and a carry in C_in from the previous stage. It produces a sum bit and a carry out.
 
-   Truth table:
+    Truth table:
 
-   | A | B | C_in | Sum | C_out |
-   |---|---|---|---|---|
-   | 0 | 0 | 0 | 0 | 0 |
-   | 0 | 0 | 1 | 1 | 0 |
-   | 0 | 1 | 0 | 1 | 0 |
-   | 0 | 1 | 1 | 0 | 1 |
-   | 1 | 0 | 0 | 1 | 0 |
-   | 1 | 0 | 1 | 0 | 1 |
-   | 1 | 1 | 0 | 0 | 1 |
-   | 1 | 1 | 1 | 1 | 1 |
+    | A | B | C_in | Sum | C_out |
+    |---|---|---|---|---|
+    | 0 | 0 | 0 | 0 | 0 |
+    | 0 | 0 | 1 | 1 | 0 |
+    | 0 | 1 | 0 | 1 | 0 |
+    | 0 | 1 | 1 | 0 | 1 |
+    | 1 | 0 | 0 | 1 | 0 |
+    | 1 | 0 | 1 | 0 | 1 |
+    | 1 | 1 | 0 | 0 | 1 |
+    | 1 | 1 | 1 | 1 | 1 |
 
-   Boolean expressions, derived from the truth table:
-   - Sum = Σm(1, 2, 4, 7) = A'B'C_in + A'BC_in' + AB'C_in' + ABC_in = A ⊕ B ⊕ C_in
-   - C_out = Σm(3, 5, 6, 7) = A'BC_in + AB'C_in + ABC_in' + ABC_in
+    Boolean expressions, derived from the truth table:
+    - Sum = Σm(1, 2, 4, 7) = A'B'C_in + A'BC_in' + AB'C_in' + ABC_in = A ⊕ B ⊕ C_in
+    - C_out = Σm(3, 5, 6, 7) = A'BC_in + AB'C_in + ABC_in' + ABC_in
 
-   Simplifying C_out with a K-map:
+    Simplifying C_out with a K-map:
 
-   ```
-              B C_in
-       A     00   01   11   10
-       0  |   0 |  0 |  1 |  0 |
-       1  |   0 |  1 |  1 |  1 |
-   ```
+    ```
+               B C_in
+        A     00   01   11   10
+        0  |   0 |  0 |  1 |  0 |
+        1  |   0 |  1 |  1 |  1 |
+    ```
 
-   - Group m3, m7: B·C_in
-   - Group m5, m7: A·C_in
-   - Group m6, m7: A·B
-   - C_out = AB + AC_in + BC_in
+    - Group m3, m7: B·C_in
+    - Group m5, m7: A·C_in
+    - Group m6, m7: A·B
+    - C_out = AB + AC_in + BC_in
 
-   - The Sum function is a chequerboard pattern on the K-map, so it admits no grouping at all; that is the signature of an XOR, and it is why Sum = A ⊕ B ⊕ C_in cannot be reduced in sum of products form.
+    - The Sum function is a chequerboard pattern on the K-map, so it admits no grouping at all; that is the signature of an XOR, and it is why Sum = A ⊕ B ⊕ C_in cannot be reduced in sum of products form.
 
-   Circuit using basic gates:
+    Circuit using basic gates:
 
-   ```
-   A ---+---|\
-        |   | )D--- (A xor B) ---+---|\
-   B ---+---|/                   |   | )D--- Sum = A xor B xor Cin
-        |                Cin ----+---|/
-        |                        |
-        |                        +---| AND |--- (A xor B).Cin ---+
-        |                                                        |--- OR --- Cout
-        +---| AND |--- A.B --------------------------------------+
-   B ------|
-   ```
+    ```
+    A ---+---|\
+         |   | )D--- (A xor B) ---+---|\
+    B ---+---|/                   |   | )D--- Sum = A xor B xor Cin
+         |                Cin ----+---|/
+         |                        |
+         |                        +---| AND |--- (A xor B).Cin ---+
+         |                                                        |--- OR --- Cout
+         +---| AND |--- A.B --------------------------------------+
+    B ------|
+    ```
 
-   - The alternative form of the carry, C_out = A·B + (A ⊕ B)·C_in, is equivalent to AB + AC_in + BC_in and is what the two half adder construction produces naturally.
+    - The alternative form of the carry, C_out = A·B + (A ⊕ B)·C_in, is equivalent to AB + AC_in + BC_in and is what the two half adder construction produces naturally.
 
-   Building a full adder from half adders and basic gates:
+    Building a full adder from half adders and basic gates:
 
-   Construction from two half adders and one OR gate:
+    Construction from two half adders and one OR gate:
 
-   ```
-                +-------------+                    +-------------+
-   A ---------->|             |---- S1 ----------->|             |----> Sum
-                | Half Adder 1|                    | Half Adder 2|
-   B ---------->|             |---- C1 --+   Cin -->|             |----> C2
-                +-------------+          |         +-------------+
-                                         |                |
-                                         +---| OR |-------+---> Cout
-   ```
+    ```
+                 +-------------+                    +-------------+
+    A ---------->|             |---- S1 ----------->|             |----> Sum
+                 | Half Adder 1|                    | Half Adder 2|
+    B ---------->|             |---- C1 --+   Cin -->|             |----> C2
+                 +-------------+          |         +-------------+
+                                          |                |
+                                          +---| OR |-------+---> Cout
+    ```
 
-   How it works:
-   - Half adder 1 adds A and B, giving S1 = A ⊕ B and C1 = A·B.
-   - Half adder 2 adds S1 and C_in, giving Sum = S1 ⊕ C_in = A ⊕ B ⊕ C_in, which is the required sum, and C2 = S1 · C_in = (A ⊕ B)·C_in.
-   - The OR gate combines the two carries: C_out = C1 + C2 = A·B + (A ⊕ B)·C_in.
-   - The two carries can never both be 1 at the same time, so the OR could equally be an XOR; OR is used because it is simpler.
+    How it works:
+    - Half adder 1 adds A and B, giving S1 = A ⊕ B and C1 = A·B.
+    - Half adder 2 adds S1 and C_in, giving Sum = S1 ⊕ C_in = A ⊕ B ⊕ C_in, which is the required sum, and C2 = S1 · C_in = (A ⊕ B)·C_in.
+    - The OR gate combines the two carries: C_out = C1 + C2 = A·B + (A ⊕ B)·C_in.
+    - The two carries can never both be 1 at the same time, so the OR could equally be an XOR; OR is used because it is simpler.
 
-   Verification that C_out is correct:
-   - A·B + (A ⊕ B)·C_in = AB + (AB' + A'B)C_in = AB + AB'C_in + A'BC_in
-   - Adding the redundant ABC_in, which is already inside AB, gives AB + AC_in(B + B') + BC_in(A + A') = AB + AC_in + BC_in, which is the expression obtained from the K-map. Correct.
+    Verification that C_out is correct:
+    - A·B + (A ⊕ B)·C_in = AB + (AB' + A'B)C_in = AB + AB'C_in + A'BC_in
+    - Adding the redundant ABC_in, which is already inside AB, gives AB + AC_in(B + B') + BC_in(A + A') = AB + AC_in + BC_in, which is the expression obtained from the K-map. Correct.
 16. **Circuit of the following figure uses 4:1 Multiplexer, what is output of the function f?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
 
-   Answer: The figure is not reproduced here, so the method for reading the output of a multiplexer based circuit is given, with a worked example.
+    Answer: The figure is not reproduced here, so the method for reading the output of a multiplexer based circuit is given, with a worked example.
 
-   Method:
-   - Identify which variables are connected to the select lines. For a 4:1 multiplexer these are S₁ and S₀.
-   - Read the value connected to each data input I₀ to I₃. It will be a constant 0, a constant 1, a variable, or the complement of a variable.
-   - Write the multiplexer equation: f = S₁'S₀'I₀ + S₁'S₀I₁ + S₁S₀'I₂ + S₁S₀I₃
-   - Substitute the actual data inputs and simplify.
+    Method:
+    - Identify which variables are connected to the select lines. For a 4:1 multiplexer these are S₁ and S₀.
+    - Read the value connected to each data input I₀ to I₃. It will be a constant 0, a constant 1, a variable, or the complement of a variable.
+    - Write the multiplexer equation: f = S₁'S₀'I₀ + S₁'S₀I₁ + S₁S₀'I₂ + S₁S₀I₃
+    - Substitute the actual data inputs and simplify.
 
-   Worked example: suppose B and C are on the select lines S₁ and S₀, and the data inputs are I₀ = 0, I₁ = A, I₂ = A' and I₃ = 1.
+    Worked example: suppose B and C are on the select lines S₁ and S₀, and the data inputs are I₀ = 0, I₁ = A, I₂ = A' and I₃ = 1.
 
-   - f = B'C'·0 + B'C·A + BC'·A' + BC·1
-   - f = AB'C + A'BC' + BC
+    - f = B'C'·0 + B'C·A + BC'·A' + BC·1
+    - f = AB'C + A'BC' + BC
 
-   Truth table obtained by substitution:
+    Truth table obtained by substitution:
 
-   | A | B | C | Selected input | f |
-   |---|---|---|---|---|
-   | 0 | 0 | 0 | I₀ = 0 | 0 |
-   | 0 | 0 | 1 | I₁ = A = 0 | 0 |
-   | 0 | 1 | 0 | I₂ = A' = 1 | 1 |
-   | 0 | 1 | 1 | I₃ = 1 | 1 |
-   | 1 | 0 | 0 | I₀ = 0 | 0 |
-   | 1 | 0 | 1 | I₁ = A = 1 | 1 |
-   | 1 | 1 | 0 | I₂ = A' = 0 | 0 |
-   | 1 | 1 | 1 | I₃ = 1 | 1 |
+    | A | B | C | Selected input | f |
+    |---|---|---|---|---|
+    | 0 | 0 | 0 | I₀ = 0 | 0 |
+    | 0 | 0 | 1 | I₁ = A = 0 | 0 |
+    | 0 | 1 | 0 | I₂ = A' = 1 | 1 |
+    | 0 | 1 | 1 | I₃ = 1 | 1 |
+    | 1 | 0 | 0 | I₀ = 0 | 0 |
+    | 1 | 0 | 1 | I₁ = A = 1 | 1 |
+    | 1 | 1 | 0 | I₂ = A' = 0 | 0 |
+    | 1 | 1 | 1 | I₃ = 1 | 1 |
 
-   - f = Σm(2, 3, 5, 7)
-   - Simplifying with a K-map: group m2, m3 gives A'B; group m3, m7 gives BC; group m5, m7 gives AC. Minimal form: f = A'B + AC, since BC is redundant, being covered by the other two.
+    - f = Σm(2, 3, 5, 7)
+    - Simplifying with a K-map: group m2, m3 gives A'B; group m3, m7 gives BC; group m5, m7 gives AC. Minimal form: f = A'B + AC, since BC is redundant, being covered by the other two.
 
-   - The general principle: a 2ⁿ:1 multiplexer implements any function of n + 1 variables, by putting n variables on the select lines and connecting each data input to 0, 1, the remaining variable, or its complement, according to the pairs of rows in the truth table. <!-- verify -->
+    - The general principle: a 2ⁿ:1 multiplexer implements any function of n + 1 variables, by putting n variables on the select lines and connecting each data input to 0, 1, the remaining variable, or its complement, according to the pairs of rows in the truth table. <!-- verify -->
 17. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927-928 (ET: CTI)]*
 
 
-   Answer:
+    Answer:
 
-   A 2-to-4 line decoder has 2 inputs, 4 outputs and normally an enable input. For each input combination exactly one output is activated.
+    A 2-to-4 line decoder has 2 inputs, 4 outputs and normally an enable input. For each input combination exactly one output is activated.
 
-   Function table, with the enable E active high:
+    Function table, with the enable E active high:
 
-   | E | A | B | D₀ | D₁ | D₂ | D₃ |
-   |---|---|---|---|---|---|---|
-   | 0 | X | X | 0 | 0 | 0 | 0 |
-   | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
-   | 1 | 0 | 1 | 0 | 1 | 0 | 0 |
-   | 1 | 1 | 0 | 0 | 0 | 1 | 0 |
-   | 1 | 1 | 1 | 0 | 0 | 0 | 1 |
+    | E | A | B | D₀ | D₁ | D₂ | D₃ |
+    |---|---|---|---|---|---|---|
+    | 0 | X | X | 0 | 0 | 0 | 0 |
+    | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
+    | 1 | 0 | 1 | 0 | 1 | 0 | 0 |
+    | 1 | 1 | 0 | 0 | 0 | 1 | 0 |
+    | 1 | 1 | 1 | 0 | 0 | 0 | 1 |
 
-   Boolean expressions:
-   - D₀ = E · A' · B'
-   - D₁ = E · A' · B
-   - D₂ = E · A · B'
-   - D₃ = E · A · B
+    Boolean expressions:
+    - D₀ = E · A' · B'
+    - D₁ = E · A' · B
+    - D₂ = E · A · B'
+    - D₃ = E · A · B
 
-   Logic circuit:
+    Logic circuit:
 
-   ```
-   A ---|>o--- A' ---+
-   B ---|>o--- B' ---+
+    ```
+    A ---|>o--- A' ---+
+    B ---|>o--- B' ---+
 
-   E ---+
-   A' --+--- AND --- D0 = E.A'.B'
-   B' --+
+    E ---+
+    A' --+--- AND --- D0 = E.A'.B'
+    B' --+
 
-   E ---+
-   A' --+--- AND --- D1 = E.A'.B
-   B ---+
+    E ---+
+    A' --+--- AND --- D1 = E.A'.B
+    B ---+
 
-   E ---+
-   A ---+--- AND --- D2 = E.A.B'
-   B' --+
+    E ---+
+    A ---+--- AND --- D2 = E.A.B'
+    B' --+
 
-   E ---+
-   A ---+--- AND --- D3 = E.A.B
-   B ---+
-   ```
+    E ---+
+    A ---+--- AND --- D3 = E.A.B
+    B ---+
+    ```
 
-   - Gate count: 2 inverters and four 3-input AND gates.
+    - Gate count: 2 inverters and four 3-input AND gates.
 
-   The same circuit as a 1:4 demultiplexer:
-   - A decoder with an enable input is functionally identical to a demultiplexer. Treat E as the data input and A, B as the select lines: the data on E appears on exactly the one output selected by A and B, and all the others are 0.
-   - This is why the 74138 is described as a 3:8 decoder or demultiplexer; the two names describe the same silicon used in two ways.
+    The same circuit as a 1:4 demultiplexer:
+    - A decoder with an enable input is functionally identical to a demultiplexer. Treat E as the data input and A, B as the select lines: the data on E appears on exactly the one output selected by A and B, and all the others are 0.
+    - This is why the 74138 is described as a 3:8 decoder or demultiplexer; the two names describe the same silicon used in two ways.
 
-   Relation to the seven segment display mentioned in the question:
-   - A seven segment display driver is a different circuit: it is a 4-to-7 decoder, taking the 4 bit BCD digit and producing the seven segment signals a to g. The commercial part is the 7447 for common anode or the 7448 for common cathode.
-   - The 2:4 decoder is used in a multiplexed display to select which digit position is currently lit, while the 4-to-7 decoder drives the segments themselves.
+    Relation to the seven segment display mentioned in the question:
+    - A seven segment display driver is a different circuit: it is a 4-to-7 decoder, taking the 4 bit BCD digit and producing the seven segment signals a to g. The commercial part is the 7447 for common anode or the 7448 for common cathode.
+    - The 2:4 decoder is used in a multiplexed display to select which digit position is currently lit, while the 4-to-7 decoder drives the segments themselves.
 
-   Other uses of a decoder: memory address decoding, selecting one of several chips or peripherals; and implementing combinational logic, since a decoder produces all the minterms and any function can be formed by ORing the appropriate outputs.
+    Other uses of a decoder: memory address decoding, selecting one of several chips or peripherals; and implementing combinational logic, since a decoder produces all the minterms and any function can be formed by ORing the appropriate outputs.
 18. **4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
 
 
-   Answer:
+    Answer:
 
-   A 4:1 multiplexer has 4 data inputs I₀ to I₃, 2 select lines S₁ and S₀, and 1 output Y.
+    A 4:1 multiplexer has 4 data inputs I₀ to I₃, 2 select lines S₁ and S₀, and 1 output Y.
 
-   Function table:
+    Function table:
 
-   | S₁ | S₀ | Y |
-   |---|---|---|
-   | 0 | 0 | I₀ |
-   | 0 | 1 | I₁ |
-   | 1 | 0 | I₂ |
-   | 1 | 1 | I₃ |
+    | S₁ | S₀ | Y |
+    |---|---|---|
+    | 0 | 0 | I₀ |
+    | 0 | 1 | I₁ |
+    | 1 | 0 | I₂ |
+    | 1 | 1 | I₃ |
 
-   Boolean expression:
-   - Y = S₁'S₀'I₀ + S₁'S₀I₁ + S₁S₀'I₂ + S₁S₀I₃
+    Boolean expression:
+    - Y = S₁'S₀'I₀ + S₁'S₀I₁ + S₁S₀'I₂ + S₁S₀I₃
 
-   Logic diagram:
+    Logic diagram:
 
-   ```
-   I0 ----+
-          |--- AND ---+   (enabled when S1'S0' = 1)
-   S1'----+           |
-   S0'----+           |
-                      |
-   I1 ----+           |
-          |--- AND ---+
-   S1'----+           |
-   S0 ----+           |--- OR --- Y
-                      |
-   I2 ----+           |
-          |--- AND ---+
-   S1 ----+           |
-   S0'----+           |
-                      |
-   I3 ----+           |
-          |--- AND ---+
-   S1 ----+
-   S0 ----+
+    ```
+    I0 ----+
+           |--- AND ---+   (enabled when S1'S0' = 1)
+    S1'----+           |
+    S0'----+           |
+                       |
+    I1 ----+           |
+           |--- AND ---+
+    S1'----+           |
+    S0 ----+           |--- OR --- Y
+                       |
+    I2 ----+           |
+           |--- AND ---+
+    S1 ----+           |
+    S0'----+           |
+                       |
+    I3 ----+           |
+           |--- AND ---+
+    S1 ----+
+    S0 ----+
 
-   S1 ---|>o--- S1'      (inverters supplying the complements)
-   S0 ---|>o--- S0'
-   ```
+    S1 ---|>o--- S1'      (inverters supplying the complements)
+    S0 ---|>o--- S0'
+    ```
 
-   - Gate count: 2 inverters, four 3-input AND gates and one 4-input OR gate.
+    - Gate count: 2 inverters, four 3-input AND gates and one 4-input OR gate.
 
-   Function of the two select lines:
-   - The two select lines together form a 2 bit binary address that chooses which one of the four data inputs is connected to the output.
-   - S₁ is the more significant bit and S₀ the less significant. The combination S₁S₀ = 00 selects I₀, 01 selects I₁, 10 selects I₂ and 11 selects I₃.
-   - Only one AND gate is enabled at a time, because only one combination of the select lines and their complements can be all 1s simultaneously. The other three AND gates output 0, so the OR gate simply passes the selected value.
-   - In general, n select lines address 2ⁿ data inputs, which is why a 4:1 MUX needs 2 select lines and an 8:1 MUX needs 3.
+    Function of the two select lines:
+    - The two select lines together form a 2 bit binary address that chooses which one of the four data inputs is connected to the output.
+    - S₁ is the more significant bit and S₀ the less significant. The combination S₁S₀ = 00 selects I₀, 01 selects I₁, 10 selects I₂ and 11 selects I₃.
+    - Only one AND gate is enabled at a time, because only one combination of the select lines and their complements can be all 1s simultaneously. The other three AND gates output 0, so the OR gate simply passes the selected value.
+    - In general, n select lines address 2ⁿ data inputs, which is why a 4:1 MUX needs 2 select lines and an 8:1 MUX needs 3.
 
 ## Karnaugh Map (K-Map) (16)
 
@@ -3614,367 +3614,367 @@
 10. **Simplify using K-map with logic circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
 
 
-   Answer: The specific function is not reproduced here, so the method is given with a worked example including the circuit.
+    Answer: The specific function is not reproduced here, so the method is given with a worked example including the circuit.
 
-   Method for simplifying with a Karnaugh map:
-   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
-   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
-   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
-   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
-   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
-   - Every 1 must be covered by at least one group.
-   - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
-   - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
+    Method for simplifying with a Karnaugh map:
+    - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
+    - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
+    - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
+    - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+    - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+    - Every 1 must be covered by at least one group.
+    - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
+    - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
 
-   Worked example: F(A,B,C,D) = Σm(0, 2, 5, 7, 8, 10, 13, 15)
+    Worked example: F(A,B,C,D) = Σm(0, 2, 5, 7, 8, 10, 13, 15)
 
-   ```
-              CD
-       AB   00   01   11   10
-       00 |  1 |  0 |  0 |  1 |     m0  m1  m3  m2
-       01 |  0 |  1 |  1 |  0 |     m4  m5  m7  m6
-       11 |  0 |  1 |  1 |  0 |     m12 m13 m15 m14
-       10 |  1 |  0 |  0 |  1 |     m8  m9  m11 m10
-   ```
+    ```
+               CD
+        AB   00   01   11   10
+        00 |  1 |  0 |  0 |  1 |     m0  m1  m3  m2
+        01 |  0 |  1 |  1 |  0 |     m4  m5  m7  m6
+        11 |  0 |  1 |  1 |  0 |     m12 m13 m15 m14
+        10 |  1 |  0 |  0 |  1 |     m8  m9  m11 m10
+    ```
 
-   Groupings:
-   - Group of 4, the four corners m0, m2, m8, m10, wrapping in both directions: B = 0 and D = 0 remain. Term: B'D'
-   - Group of 4, m5, m7, m13, m15: B = 1 and D = 1 remain. Term: BD
+    Groupings:
+    - Group of 4, the four corners m0, m2, m8, m10, wrapping in both directions: B = 0 and D = 0 remain. Term: B'D'
+    - Group of 4, m5, m7, m13, m15: B = 1 and D = 1 remain. Term: BD
 
-   Simplified expression: F = B'D' + BD
+    Simplified expression: F = B'D' + BD
 
-   - This is recognisable as the XNOR of B and D: F = (B ⊕ D)', which is 1 exactly when B and D are equal. The variables A and C do not appear at all, so the output does not depend on them.
+    - This is recognisable as the XNOR of B and D: F = (B ⊕ D)', which is 1 exactly when B and D are equal. The variables A and C do not appear at all, so the output does not depend on them.
 
-   Logic circuit:
+    Logic circuit:
 
-   ```
-   B ---|>o--- B' ---+
-                     |--- AND ---+
-   D ---|>o--- D' ---+           |
-                                 |--- OR --- F
-   B ----------------+           |
-                     |--- AND ---+
-   D ----------------+
-   ```
+    ```
+    B ---|>o--- B' ---+
+                      |--- AND ---+
+    D ---|>o--- D' ---+           |
+                                  |--- OR --- F
+    B ----------------+           |
+                      |--- AND ---+
+    D ----------------+
+    ```
 
-   Or, using a single gate:
+    Or, using a single gate:
 
-   ```
-   B ---|\
-        | )Do--- F = (B xor D)'      (XNOR gate)
-   D ---|/
-   ```
+    ```
+    B ---|\
+         | )Do--- F = (B xor D)'      (XNOR gate)
+    D ---|/
+    ```
 
-   - The advantage of recognising the pattern: two AND gates, two inverters and an OR gate reduce to a single XNOR gate. K-map patterns that alternate in a chequerboard fashion always indicate XOR or XNOR. <!-- verify -->
+    - The advantage of recognising the pattern: two AND gates, two inverters and an OR gate reduce to a single XNOR gate. K-map patterns that alternate in a chequerboard fashion always indicate XOR or XNOR. <!-- verify -->
 11. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 798 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   (i) Truth table for F, where F = 1 when A > B, with A = A₁A₀ and B = B₁B₀:
+    (i) Truth table for F, where F = 1 when A > B, with A = A₁A₀ and B = B₁B₀:
 
-   | A₁ | A₀ | B₁ | B₀ | A | B | F = 1 if A > B |
-   |---|---|---|---|---|---|---|
-   | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-   | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
-   | 0 | 0 | 1 | 0 | 0 | 2 | 0 |
-   | 0 | 0 | 1 | 1 | 0 | 3 | 0 |
-   | 0 | 1 | 0 | 0 | 1 | 0 | 1 |
-   | 0 | 1 | 0 | 1 | 1 | 1 | 0 |
-   | 0 | 1 | 1 | 0 | 1 | 2 | 0 |
-   | 0 | 1 | 1 | 1 | 1 | 3 | 0 |
-   | 1 | 0 | 0 | 0 | 2 | 0 | 1 |
-   | 1 | 0 | 0 | 1 | 2 | 1 | 1 |
-   | 1 | 0 | 1 | 0 | 2 | 2 | 0 |
-   | 1 | 0 | 1 | 1 | 2 | 3 | 0 |
-   | 1 | 1 | 0 | 0 | 3 | 0 | 1 |
-   | 1 | 1 | 0 | 1 | 3 | 1 | 1 |
-   | 1 | 1 | 1 | 0 | 3 | 2 | 1 |
-   | 1 | 1 | 1 | 1 | 3 | 3 | 0 |
+    | A₁ | A₀ | B₁ | B₀ | A | B | F = 1 if A > B |
+    |---|---|---|---|---|---|---|
+    | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+    | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
+    | 0 | 0 | 1 | 0 | 0 | 2 | 0 |
+    | 0 | 0 | 1 | 1 | 0 | 3 | 0 |
+    | 0 | 1 | 0 | 0 | 1 | 0 | 1 |
+    | 0 | 1 | 0 | 1 | 1 | 1 | 0 |
+    | 0 | 1 | 1 | 0 | 1 | 2 | 0 |
+    | 0 | 1 | 1 | 1 | 1 | 3 | 0 |
+    | 1 | 0 | 0 | 0 | 2 | 0 | 1 |
+    | 1 | 0 | 0 | 1 | 2 | 1 | 1 |
+    | 1 | 0 | 1 | 0 | 2 | 2 | 0 |
+    | 1 | 0 | 1 | 1 | 2 | 3 | 0 |
+    | 1 | 1 | 0 | 0 | 3 | 0 | 1 |
+    | 1 | 1 | 0 | 1 | 3 | 1 | 1 |
+    | 1 | 1 | 1 | 0 | 3 | 2 | 1 |
+    | 1 | 1 | 1 | 1 | 3 | 3 | 0 |
 
-   - Minterms where F = 1: m4, m8, m9, m12, m13, m14
-   - So F = Σm(4, 8, 9, 12, 13, 14)
+    - Minterms where F = 1: m4, m8, m9, m12, m13, m14
+    - So F = Σm(4, 8, 9, 12, 13, 14)
 
-   (ii) Simplification with a K-map, taking A₁A₀ down the side and B₁B₀ across the top:
+    (ii) Simplification with a K-map, taking A₁A₀ down the side and B₁B₀ across the top:
 
-   ```
-                 B1 B0
-   A1 A0     00    01    11    10
-      00 |   0  |  0  |  0  |  0  |     m0  m1  m3  m2
-      01 |   1  |  0  |  0  |  0  |     m4  m5  m7  m6
-      11 |   1  |  1  |  0  |  1  |     m12 m13 m15 m14
-      10 |   1  |  1  |  0  |  0  |     m8  m9  m11 m10
-   ```
+    ```
+                  B1 B0
+    A1 A0     00    01    11    10
+       00 |   0  |  0  |  0  |  0  |     m0  m1  m3  m2
+       01 |   1  |  0  |  0  |  0  |     m4  m5  m7  m6
+       11 |   1  |  1  |  0  |  1  |     m12 m13 m15 m14
+       10 |   1  |  1  |  0  |  0  |     m8  m9  m11 m10
+    ```
 
-   Groupings:
-   - Group of 4: m8, m9, m12, m13, that is A₁ = 1 and B₁ = 0. A₀ and B₀ both vary. Term: A₁B₁'
-   - Group of 2: m12, m14, that is A₁ = 1, A₀ = 1, B₀ = 0. Term: A₁A₀B₀'
-   - Group of 2: m4, m12, that is A₀ = 1, B₁ = 0, B₀ = 0. Term: A₀B₁'B₀'
+    Groupings:
+    - Group of 4: m8, m9, m12, m13, that is A₁ = 1 and B₁ = 0. A₀ and B₀ both vary. Term: A₁B₁'
+    - Group of 2: m12, m14, that is A₁ = 1, A₀ = 1, B₀ = 0. Term: A₁A₀B₀'
+    - Group of 2: m4, m12, that is A₀ = 1, B₁ = 0, B₀ = 0. Term: A₀B₁'B₀'
 
-   Final simplified expression:
-   - F = A₁B₁' + A₁A₀B₀' + A₀B₁'B₀'
+    Final simplified expression:
+    - F = A₁B₁' + A₁A₀B₀' + A₀B₁'B₀'
 
-   Verification:
-   - A₁B₁' covers m8, m9, m12, m13
-   - A₁A₀B₀' covers m12, m14
-   - A₀B₁'B₀' covers m4, m12
-   - Union: {4, 8, 9, 12, 13, 14}, exactly the given set. Correct.
+    Verification:
+    - A₁B₁' covers m8, m9, m12, m13
+    - A₁A₀B₀' covers m12, m14
+    - A₀B₁'B₀' covers m4, m12
+    - Union: {4, 8, 9, 12, 13, 14}, exactly the given set. Correct.
 
-   Interpretation of the three terms, which is worth stating:
-   - A₁B₁' means the high order bit of A is 1 and that of B is 0, so A is greater whatever the low order bits.
-   - A₁A₀B₀' and A₀B₁'B₀' cover the cases in which the high order bits are equal and the low order bit of A exceeds that of B.
-   - The general expression for an n bit comparator follows the same pattern: compare the most significant bits first, and only where they are equal move down to the next.
+    Interpretation of the three terms, which is worth stating:
+    - A₁B₁' means the high order bit of A is 1 and that of B is 0, so A is greater whatever the low order bits.
+    - A₁A₀B₀' and A₀B₁'B₀' cover the cases in which the high order bits are equal and the low order bit of A exceeds that of B.
+    - The general expression for an n bit comparator follows the same pattern: compare the most significant bits first, and only where they are equal move down to the next.
 12. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   Given: F = A'B'C' + ABC + AB'C'
+    Given: F = A'B'C' + ABC + AB'C'
 
-   Step 1, identify the minterms:
-   - A'B'C' = 000 = m0
-   - ABC = 111 = m7
-   - AB'C' = 100 = m4
-   - So F = Σm(0, 4, 7)
+    Step 1, identify the minterms:
+    - A'B'C' = 000 = m0
+    - ABC = 111 = m7
+    - AB'C' = 100 = m4
+    - So F = Σm(0, 4, 7)
 
-   Step 2, draw the K-map:
+    Step 2, draw the K-map:
 
-   ```
-          BC
-   A \   00   01   11   10
-     0 |  1 |  0 |  0 |  0 |     m0  m1  m3  m2
-     1 |  1 |  0 |  1 |  0 |     m4  m5  m7  m6
-   ```
+    ```
+           BC
+    A \   00   01   11   10
+      0 |  1 |  0 |  0 |  0 |     m0  m1  m3  m2
+      1 |  1 |  0 |  1 |  0 |     m4  m5  m7  m6
+    ```
 
-   Step 3, group:
-   - Group of 2: m0 and m4, that is the BC = 00 column. Here A varies and B = 0, C = 0 remain. Term: B'C'
-   - Single cell: m7, which has no adjacent 1, since m3, m5 and m6 are all 0. Term: ABC
+    Step 3, group:
+    - Group of 2: m0 and m4, that is the BC = 00 column. Here A varies and B = 0, C = 0 remain. Term: B'C'
+    - Single cell: m7, which has no adjacent 1, since m3, m5 and m6 are all 0. Term: ABC
 
-   Step 4, simplified expression:
-   - F = B'C' + ABC
+    Step 4, simplified expression:
+    - F = B'C' + ABC
 
-   Verification:
-   - B'C' covers m0 and m4
-   - ABC covers m7
-   - Union: {0, 4, 7}, exactly the given set. Correct.
+    Verification:
+    - B'C' covers m0 and m4
+    - ABC covers m7
+    - Union: {0, 4, 7}, exactly the given set. Correct.
 
-   - The reduction is from three three-variable terms to one two-variable term and one three-variable term. The minterm m7 is isolated, which always means that no reduction is possible for it, and an isolated 1 in a K-map is the signal to stop looking.
+    - The reduction is from three three-variable terms to one two-variable term and one three-variable term. The minterm m7 is isolated, which always means that no reduction is possible for it, and an isolated 1 in a K-map is the signal to stop looking.
 
-   Logic circuit:
+    Logic circuit:
 
-   ```
-   B ---|>o--- B' ---+
-                     |--- AND ---+
-   C ---|>o--- C' ---+           |
-                                 |--- OR --- F = B'C' + ABC
-   A ----------------+           |
-   B ----------------+--- AND ---+
-   C ----------------+
-   ```
+    ```
+    B ---|>o--- B' ---+
+                      |--- AND ---+
+    C ---|>o--- C' ---+           |
+                                  |--- OR --- F = B'C' + ABC
+    A ----------------+           |
+    B ----------------+--- AND ---+
+    C ----------------+
+    ```
 13. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879 (ET: BUET)]*
 
 
-   Answer: The two maps are not reproduced here, so the method is given together with worked examples of the two cases such a question normally presents.
+    Answer: The two maps are not reproduced here, so the method is given together with worked examples of the two cases such a question normally presents.
 
-   Method for simplifying with a Karnaugh map:
-   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
-   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
-   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
-   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
-   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
-   - Every 1 must be covered by at least one group.
-   - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
-   - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
+    Method for simplifying with a Karnaugh map:
+    - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
+    - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
+    - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
+    - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+    - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+    - Every 1 must be covered by at least one group.
+    - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
+    - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
 
-   Case (i), a function to be minimised as a sum of products, by grouping the 1s:
+    Case (i), a function to be minimised as a sum of products, by grouping the 1s:
 
-   F(A,B,C,D) = Σm(0, 1, 4, 5, 10, 11, 14, 15)
+    F(A,B,C,D) = Σm(0, 1, 4, 5, 10, 11, 14, 15)
 
-   ```
-              CD
-       AB   00   01   11   10
-       00 |  1 |  1 |  0 |  0 |     m0  m1  m3  m2
-       01 |  1 |  1 |  0 |  0 |     m4  m5  m7  m6
-       11 |  0 |  0 |  1 |  1 |     m12 m13 m15 m14
-       10 |  0 |  0 |  1 |  1 |     m8  m9  m11 m10
-   ```
+    ```
+               CD
+        AB   00   01   11   10
+        00 |  1 |  1 |  0 |  0 |     m0  m1  m3  m2
+        01 |  1 |  1 |  0 |  0 |     m4  m5  m7  m6
+        11 |  0 |  0 |  1 |  1 |     m12 m13 m15 m14
+        10 |  0 |  0 |  1 |  1 |     m8  m9  m11 m10
+    ```
 
-   - Group of 4: m0, m1, m4, m5, giving A'C'
-   - Group of 4: m10, m11, m14, m15, giving AC
-   - F = A'C' + AC = (A ⊕ C)', the XNOR of A and C. Neither B nor D appears.
+    - Group of 4: m0, m1, m4, m5, giving A'C'
+    - Group of 4: m10, m11, m14, m15, giving AC
+    - F = A'C' + AC = (A ⊕ C)', the XNOR of A and C. Neither B nor D appears.
 
-   Case (ii), the same function expressed as a product of sums, by grouping the 0s:
+    Case (ii), the same function expressed as a product of sums, by grouping the 0s:
 
-   - The 0s are at m2, m3, m6, m7, m8, m9, m12, m13.
-   - Group of 4: m2, m3, m6, m7, that is A = 0 and C = 1. As a sum term this becomes (A + C').
-   - Group of 4: m8, m9, m12, m13, that is A = 1 and C = 0. As a sum term this becomes (A' + C).
-   - F = (A + C')(A' + C)
+    - The 0s are at m2, m3, m6, m7, m8, m9, m12, m13.
+    - Group of 4: m2, m3, m6, m7, that is A = 0 and C = 1. As a sum term this becomes (A + C').
+    - Group of 4: m8, m9, m12, m13, that is A = 1 and C = 0. As a sum term this becomes (A' + C).
+    - F = (A + C')(A' + C)
 
-   - The two forms are equivalent, and either may be required. The rule for converting a group of 0s into a sum term is to complement each variable: a variable that is 0 in the group appears uncomplemented, and one that is 1 appears complemented, which is the exact reverse of the rule for a group of 1s. <!-- verify -->
+    - The two forms are equivalent, and either may be required. The rule for converting a group of 0s into a sum term is to complement each variable: a variable that is 0 in the group appears uncomplemented, and one that is 1 appears complemented, which is the exact reverse of the rule for a group of 1s. <!-- verify -->
 14. **Draw the k-map for the equation:** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
    F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
 
 
-   Answer:
+    Answer:
 
-   Given: F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
+    Given: F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
 
-   Step 1, identify the minterms:
-   - A'B'C'D' = 0000 = m0
-   - A'B'CD' = 0010 = m2
-   - A'BCD' = 0110 = m6
-   - A'BCD = 0111 = m7
-   - AB'C'D' = 1000 = m8
-   - AB'CD' = 1010 = m10
-   - ABCD' = 1110 = m14
-   - ABCD = 1111 = m15
-   - So F = Σm(0, 2, 6, 7, 8, 10, 14, 15)
+    Step 1, identify the minterms:
+    - A'B'C'D' = 0000 = m0
+    - A'B'CD' = 0010 = m2
+    - A'BCD' = 0110 = m6
+    - A'BCD = 0111 = m7
+    - AB'C'D' = 1000 = m8
+    - AB'CD' = 1010 = m10
+    - ABCD' = 1110 = m14
+    - ABCD = 1111 = m15
+    - So F = Σm(0, 2, 6, 7, 8, 10, 14, 15)
 
-   Step 2, draw the K-map:
+    Step 2, draw the K-map:
 
-   ```
-              CD
-       AB   00   01   11   10
-       00 |  1 |  0 |  0 |  1 |     m0  m1  m3  m2
-       01 |  0 |  0 |  1 |  1 |     m4  m5  m7  m6
-       11 |  0 |  0 |  1 |  1 |     m12 m13 m15 m14
-       10 |  1 |  0 |  0 |  1 |     m8  m9  m11 m10
-   ```
+    ```
+               CD
+        AB   00   01   11   10
+        00 |  1 |  0 |  0 |  1 |     m0  m1  m3  m2
+        01 |  0 |  0 |  1 |  1 |     m4  m5  m7  m6
+        11 |  0 |  0 |  1 |  1 |     m12 m13 m15 m14
+        10 |  1 |  0 |  0 |  1 |     m8  m9  m11 m10
+    ```
 
-   Step 3, group:
-   - Group of 4: m0, m2, m8, m10, the four corners of the B = 0 rows in the D = 0 columns, wrapping top to bottom. Here A and C vary, B = 0 and D = 0 remain. Term: B'D'
-   - Group of 4: m6, m7, m14, m15, that is the AB = 01 and AB = 11 rows in the CD = 11 and CD = 10 columns. Here A and D vary, B = 1 and C = 1 remain. Term: BC
+    Step 3, group:
+    - Group of 4: m0, m2, m8, m10, the four corners of the B = 0 rows in the D = 0 columns, wrapping top to bottom. Here A and C vary, B = 0 and D = 0 remain. Term: B'D'
+    - Group of 4: m6, m7, m14, m15, that is the AB = 01 and AB = 11 rows in the CD = 11 and CD = 10 columns. Here A and D vary, B = 1 and C = 1 remain. Term: BC
 
-   Step 4, simplified expression:
-   - F = B'D' + BC
+    Step 4, simplified expression:
+    - F = B'D' + BC
 
-   Verification:
-   - B'D' covers m0, m2, m8, m10
-   - BC covers m6, m7, m14, m15
-   - Union: {0, 2, 6, 7, 8, 10, 14, 15}, exactly the given set. Correct.
+    Verification:
+    - B'D' covers m0, m2, m8, m10
+    - BC covers m6, m7, m14, m15
+    - Union: {0, 2, 6, 7, 8, 10, 14, 15}, exactly the given set. Correct.
 
-   - Eight four variable product terms reduce to two two variable terms, requiring 2 AND gates, 2 inverters and 1 OR gate instead of 8 four input AND gates and an eight input OR gate.
+    - Eight four variable product terms reduce to two two variable terms, requiring 2 AND gates, 2 inverters and 1 OR gate instead of 8 four input AND gates and an eight input OR gate.
 
-   Logic circuit:
+    Logic circuit:
 
-   ```
-   B ---|>o--- B' ---+
-                     |--- AND --- B'D' ---+
-   D ---|>o--- D' ---+                    |
-                                          |--- OR --- F
-   B ----------------+                    |
-                     |--- AND --- BC -----+
-   C ----------------+
-   ```
+    ```
+    B ---|>o--- B' ---+
+                      |--- AND --- B'D' ---+
+    D ---|>o--- D' ---+                    |
+                                           |--- OR --- F
+    B ----------------+                    |
+                      |--- AND --- BC -----+
+    C ----------------+
+    ```
 15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1010-1011 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   Given: F = A'B'C' + AB'C' + A'B'C + A'BC + ABC
+    Given: F = A'B'C' + AB'C' + A'B'C + A'BC + ABC
 
-   Step 1, identify the minterms:
-   - A'B'C' = 000 = m0
-   - AB'C' = 100 = m4
-   - A'B'C = 001 = m1
-   - A'BC = 011 = m3
-   - ABC = 111 = m7
-   - So F = Σm(0, 1, 3, 4, 7)
+    Step 1, identify the minterms:
+    - A'B'C' = 000 = m0
+    - AB'C' = 100 = m4
+    - A'B'C = 001 = m1
+    - A'BC = 011 = m3
+    - ABC = 111 = m7
+    - So F = Σm(0, 1, 3, 4, 7)
 
-   Step 2, draw the K-map:
+    Step 2, draw the K-map:
 
-   ```
-          BC
-   A \   00   01   11   10
-     0 |  1 |  1 |  1 |  0 |     m0  m1  m3  m2
-     1 |  1 |  0 |  1 |  0 |     m4  m5  m7  m6
-   ```
+    ```
+           BC
+    A \   00   01   11   10
+      0 |  1 |  1 |  1 |  0 |     m0  m1  m3  m2
+      1 |  1 |  0 |  1 |  0 |     m4  m5  m7  m6
+    ```
 
-   Step 3, group:
-   - Group of 2: m0, m4, the BC = 00 column. A varies, B = 0 and C = 0 remain. Term: B'C'
-   - Group of 2: m3, m7, the BC = 11 column. A varies, B = 1 and C = 1 remain. Term: BC
-   - Group of 2: m1, m3, the A = 0 row in the C = 1 columns. B varies, A = 0 and C = 1 remain. Term: A'C
-   - m1 is not yet covered by the first two groups, so the third is needed. Alternatively m0, m1 gives A'B', which also covers m1; either choice yields a minimal three term answer.
+    Step 3, group:
+    - Group of 2: m0, m4, the BC = 00 column. A varies, B = 0 and C = 0 remain. Term: B'C'
+    - Group of 2: m3, m7, the BC = 11 column. A varies, B = 1 and C = 1 remain. Term: BC
+    - Group of 2: m1, m3, the A = 0 row in the C = 1 columns. B varies, A = 0 and C = 1 remain. Term: A'C
+    - m1 is not yet covered by the first two groups, so the third is needed. Alternatively m0, m1 gives A'B', which also covers m1; either choice yields a minimal three term answer.
 
-   Step 4, simplified expression:
-   - F = B'C' + BC + A'C
+    Step 4, simplified expression:
+    - F = B'C' + BC + A'C
 
-   Verification:
-   - B'C' covers m0, m4
-   - BC covers m3, m7
-   - A'C covers m1, m3
-   - Union: {0, 1, 3, 4, 7}, exactly the given set. Correct.
+    Verification:
+    - B'C' covers m0, m4
+    - BC covers m3, m7
+    - A'C covers m1, m3
+    - Union: {0, 1, 3, 4, 7}, exactly the given set. Correct.
 
-   - Note that B'C' and BC together form the XNOR of B and C, so an equivalent compact form is F = (B ⊕ C)' + A'C.
+    - Note that B'C' and BC together form the XNOR of B and C, so an equivalent compact form is F = (B ⊕ C)' + A'C.
 
-   Logic circuit:
+    Logic circuit:
 
-   ```
-   B ---|>o--- B' ---+
-                     |--- AND --- B'C' ---+
-   C ---|>o--- C' ---+                    |
-                                          |
-   B ----------------+                    |--- OR --- F
-                     |--- AND --- BC -----+
-   C ----------------+                    |
-                                          |
-   A ---|>o--- A' ---+                    |
-                     |--- AND --- A'C ----+
-   C ----------------+
-   ```
+    ```
+    B ---|>o--- B' ---+
+                      |--- AND --- B'C' ---+
+    C ---|>o--- C' ---+                    |
+                                           |
+    B ----------------+                    |--- OR --- F
+                      |--- AND --- BC -----+
+    C ----------------+                    |
+                                           |
+    A ---|>o--- A' ---+                    |
+                      |--- AND --- A'C ----+
+    C ----------------+
+    ```
 
-   - Gate count: 3 inverters, 3 AND gates and 1 three input OR gate, against 5 three input AND gates and a five input OR gate for the unsimplified form.
+    - Gate count: 3 inverters, 3 AND gates and 1 three input OR gate, against 5 three input AND gates and a five input OR gate for the unsimplified form.
 16. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038-1039 (ET: DPI)]*
 
 
-   Answer:
+    Answer:
 
-   Given: f(a,b,c,d) = a'bc'd' + a'b'c'd + a'bc'd + abc'd'
+    Given: f(a,b,c,d) = a'bc'd' + a'b'c'd + a'bc'd + abc'd'
 
-   Step 1, identify the minterms:
-   - a'bc'd' = 0100 = m4
-   - a'b'c'd = 0001 = m1
-   - a'bc'd = 0101 = m5
-   - abc'd' = 1100 = m12
-   - So f = Σm(1, 4, 5, 12)
+    Step 1, identify the minterms:
+    - a'bc'd' = 0100 = m4
+    - a'b'c'd = 0001 = m1
+    - a'bc'd = 0101 = m5
+    - abc'd' = 1100 = m12
+    - So f = Σm(1, 4, 5, 12)
 
-   Step 2, draw the K-map:
+    Step 2, draw the K-map:
 
-   ```
-              cd
-       ab   00   01   11   10
-       00 |  0 |  1 |  0 |  0 |     m0  m1  m3  m2
-       01 |  1 |  1 |  0 |  0 |     m4  m5  m7  m6
-       11 |  1 |  0 |  0 |  0 |     m12 m13 m15 m14
-       10 |  0 |  0 |  0 |  0 |     m8  m9  m11 m10
-   ```
+    ```
+               cd
+        ab   00   01   11   10
+        00 |  0 |  1 |  0 |  0 |     m0  m1  m3  m2
+        01 |  1 |  1 |  0 |  0 |     m4  m5  m7  m6
+        11 |  1 |  0 |  0 |  0 |     m12 m13 m15 m14
+        10 |  0 |  0 |  0 |  0 |     m8  m9  m11 m10
+    ```
 
-   Step 3, group:
-   - Group of 2: m1 and m5, that is the cd = 01 column in the ab = 00 and ab = 01 rows. Here b varies, and a = 0, c = 0, d = 1 remain. Term: a'c'd
-   - Group of 2: m4 and m12, that is the cd = 00 column in the ab = 01 and ab = 11 rows. Here a varies, and b = 1, c = 0, d = 0 remain. Term: bc'd'
-   - m5 is covered by the first group and m4 by the second; every 1 is covered.
+    Step 3, group:
+    - Group of 2: m1 and m5, that is the cd = 01 column in the ab = 00 and ab = 01 rows. Here b varies, and a = 0, c = 0, d = 1 remain. Term: a'c'd
+    - Group of 2: m4 and m12, that is the cd = 00 column in the ab = 01 and ab = 11 rows. Here a varies, and b = 1, c = 0, d = 0 remain. Term: bc'd'
+    - m5 is covered by the first group and m4 by the second; every 1 is covered.
 
-   Step 4, simplified expression:
-   - f = a'c'd + bc'd'
+    Step 4, simplified expression:
+    - f = a'c'd + bc'd'
 
-   Verification:
-   - a'c'd covers m1 and m5
-   - bc'd' covers m4 and m12
-   - Union: {1, 4, 5, 12}, exactly the given set. Correct.
+    Verification:
+    - a'c'd covers m1 and m5
+    - bc'd' covers m4 and m12
+    - Union: {1, 4, 5, 12}, exactly the given set. Correct.
 
-   - An alternative pairing takes m4 with m5, giving a'bc', together with m1 and m12 as isolated cells, which would give three terms instead of two. Choosing the pairing that yields the fewest terms is the whole point of the exercise, so the answer above is the minimal one.
+    - An alternative pairing takes m4 with m5, giving a'bc', together with m1 and m12 as isolated cells, which would give three terms instead of two. Choosing the pairing that yields the fewest terms is the whole point of the exercise, so the answer above is the minimal one.
 
-   Logic circuit:
+    Logic circuit:
 
-   ```
-   a ---|>o--+
-   c ---|>o--+--- AND --- a'c'd ---+
-   d --------+                     |
-                                   |--- OR --- f
-   b --------+                     |
-   c ---|>o--+--- AND --- bc'd' ---+
-   d ---|>o--+
-   ```
+    ```
+    a ---|>o--+
+    c ---|>o--+--- AND --- a'c'd ---+
+    d --------+                     |
+                                    |--- OR --- f
+    b --------+                     |
+    c ---|>o--+--- AND --- bc'd' ---+
+    d ---|>o--+
+    ```
 
 ## Boolean Algebra & De Morgan’s Theorem (13)
 
@@ -4181,25 +4181,25 @@
 10. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 890-891 (ET: N/A)]*
 
 
-   Answer: Y = (x + y + xy)(x + z)
+    Answer: Y = (x + y + xy)(x + z)
 
-   Step 1 - simplify the first bracket by absorption (x + xy = x):
-   x + y + xy = (x + xy) + y = x + y
+    Step 1 - simplify the first bracket by absorption (x + xy = x):
+    x + y + xy = (x + xy) + y = x + y
 
-   So Y = (x + y)(x + z)
+    So Y = (x + y)(x + z)
 
-   Step 2 - apply the distributive law x + AB = (x + A)(x + B) in reverse:
-   (x + y)(x + z) = x + yz
+    Step 2 - apply the distributive law x + AB = (x + A)(x + B) in reverse:
+    (x + y)(x + z) = x + yz
 
-   Step 3 - the same result by direct multiplication:
-   - (x + y)(x + z) = xx + xz + xy + yz
-   - = x + xz + xy + yz   (xx = x)
-   - = x(1 + z + y) + yz  = x.1 + yz
-   - = x + yz
+    Step 3 - the same result by direct multiplication:
+    - (x + y)(x + z) = xx + xz + xy + yz
+    - = x + xz + xy + yz   (xx = x)
+    - = x(1 + z + y) + yz  = x.1 + yz
+    - = x + yz
 
-   Final answer: Y = x + yz
+    Final answer: Y = x + yz
 
-   The circuit reduces to one AND gate (y and z) followed by one OR gate with x.
+    The circuit reduces to one AND gate (y and z) followed by one OR gate with x.
 11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 
 
@@ -4237,32 +4237,32 @@
 13. **De-Morgans Law গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
 
 
-   Answer: De Morgan's theorem gives the rule for complementing a whole AND or OR expression. It is the bridge that lets any circuit be built from NAND gates only or NOR gates only. (A' means complement of A.)
+    Answer: De Morgan's theorem gives the rule for complementing a whole AND or OR expression. It is the bridge that lets any circuit be built from NAND gates only or NOR gates only. (A' means complement of A.)
 
-   Law 1 (break the OR):
-   - (A + B)' = A' . B'
-   - The complement of a sum equals the product of the complements.
+    Law 1 (break the OR):
+    - (A + B)' = A' . B'
+    - The complement of a sum equals the product of the complements.
 
-   Law 2 (break the AND):
-   - (A . B)' = A' + B'
-   - The complement of a product equals the sum of the complements.
+    Law 2 (break the AND):
+    - (A . B)' = A' + B'
+    - The complement of a product equals the sum of the complements.
 
-   Memory rule: break the bar, change the sign (OR becomes AND, AND becomes OR).
+    Memory rule: break the bar, change the sign (OR becomes AND, AND becomes OR).
 
-   Proof of Law 1 by truth table:
+    Proof of Law 1 by truth table:
 
-   | A | B | A+B | (A+B)' | A' | B' | A'.B' |
-   |---|---|-----|--------|----|----|-------|
-   | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
-   | 0 | 1 | 1 | 0 | 1 | 0 | 0 |
-   | 1 | 0 | 1 | 0 | 0 | 1 | 0 |
-   | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+    | A | B | A+B | (A+B)' | A' | B' | A'.B' |
+    |---|---|-----|--------|----|----|-------|
+    | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+    | 0 | 1 | 1 | 0 | 1 | 0 | 0 |
+    | 1 | 0 | 1 | 0 | 0 | 1 | 0 |
+    | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
 
-   Columns (A+B)' and A'.B' are identical, so the law holds. Law 2 is proved the same way.
+    Columns (A+B)' and A'.B' are identical, so the law holds. Law 2 is proved the same way.
 
-   Example: a motor runs only when neither the stop switch S nor the fault flag F is active, that is M = (S + F)'. By De Morgan this equals S'.F', so instead of one OR followed by a NOT, the circuit is built as two NOT gates feeding one AND gate. Both circuits give the same output but the second one uses gates already available on the board.
+    Example: a motor runs only when neither the stop switch S nor the fault flag F is active, that is M = (S + F)'. By De Morgan this equals S'.F', so instead of one OR followed by a NOT, the circuit is built as two NOT gates feeding one AND gate. Both circuits give the same output but the second one uses gates already available on the board.
 
-   Extension to more variables: (A + B + C)' = A'.B'.C' and (A.B.C)' = A' + B' + C'.
+    Extension to more variables: (A + B + C)' = A'.B'.C' and (A.B.C)' = A' + B' + C'.
 
 ## Sequential Circuits (Latches & Flip-Flops) (9)
 
