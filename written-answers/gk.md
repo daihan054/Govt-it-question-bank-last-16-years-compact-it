@@ -1238,143 +1238,989 @@
 
 1. What is the name of the central bank of the United Kingdom? [SO IT 25-07-2026]
 
+
+   Answer: The Bank of England.
+
+   - Established in 1694, it is one of the oldest central banks in the world and is often called "The Old Lady of Threadneedle Street" after the street in London where it stands.
+   - Its main functions are issuing banknotes, setting monetary policy through the Monetary Policy Committee, maintaining price stability (the inflation target is 2 per cent), acting as banker to the government and as lender of last resort, and supervising banks through the Prudential Regulation Authority.
+   - It was nationalised in 1946 and was given operational independence in setting interest rates in 1997.
 2. Which international organization publishes the "World Economic Outlook" report? [SO IT 25-07-2026]
 
+
+   Answer: The International Monetary Fund (IMF).
+
+   - The World Economic Outlook (WEO) is published twice a year, in April and October, with two interim updates in January and July.
+   - It contains the IMF's analysis and projections of global growth, inflation, trade, employment and current account balances, both for the world and for individual countries.
+   - The IMF also publishes the Global Financial Stability Report and the Fiscal Monitor.
+   - It was established in 1944 at the Bretton Woods Conference and began operations in 1945; its headquarters is in Washington, D.C., United States.
 3. What is the name of the international organization that monitors global health standards and coordinates the response to pandemics? *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+
+   Answer: The World Health Organization (WHO).
+
+   - It is the specialised agency of the United Nations responsible for international public health, established on 7 April 1948, a date observed every year as World Health Day.
+   - Its headquarters is in Geneva, Switzerland, and it has 194 member states.
+   - Functions: setting international health standards and guidelines, coordinating the response to epidemics and pandemics, declaring a Public Health Emergency of International Concern (PHEIC) under the International Health Regulations, running immunisation and disease eradication programmes, and publishing global health data.
+   - It led the global response to COVID-19, declaring it a pandemic on 11 March 2020, and it earlier certified the eradication of smallpox in 1980.
 4. Where is the headquarters of the International Monetary Fund (IMF) located? *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+
+   Answer: The headquarters of the International Monetary Fund (IMF) is located in Washington, D.C., United States of America.
+
+   - It stands at 700 19th Street NW, very close to the headquarters of the World Bank, which is on the opposite side of the same street.
+   - The IMF was created at the Bretton Woods Conference in July 1944 and began operations in 1945. It now has 191 member countries.
+   - Its main functions are surveillance of the global economy, lending to countries facing balance of payments crises, and capacity development.
+   - Bangladesh joined the IMF in 1972.
 5. Which country has the world's longest coastline? *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+
+   Answer: Canada has the world's longest coastline, about 202,080 kilometres.
+
+   - This is roughly 15 per cent of the total coastline of the world, and it is far longer than that of any other country because of the enormous number of islands in the Canadian Arctic Archipelago.
+   - Canada is bordered by three oceans: the Atlantic, the Pacific and the Arctic.
+   - The next longest coastlines belong to Norway, Indonesia, Russia and the Philippines.
+   - Canada is also the second largest country in the world by area, after Russia.
 6. **সবুজ গ্রিন হাউস গ্যাসের প্রভাবের LDC এর ভূমিকা কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer: গ্রিনহাউস গ্যাসের প্রভাবে স্বল্পোন্নত দেশগুলোর (LDC) ভূমিকা দ্বিমুখী: নিঃসরণে তাদের অবদান নগণ্য, অথচ ক্ষতির শিকার তারাই সবচেয়ে বেশি।
+
+    নিঃসরণে ভূমিকা:
+    - বিশ্বের ৪৫টিরও বেশি স্বল্পোন্নত দেশে বিশ্বের প্রায় ১৪ শতাংশ মানুষ বাস করে, কিন্তু বৈশ্বিক গ্রিনহাউস গ্যাস নিঃসরণে তাদের অবদান মাত্র ১ শতাংশের কাছাকাছি।
+    - বাংলাদেশের মাথাপিছু নিঃসরণ প্রায় ০.৬ টন, যেখানে বিশ্ব গড় প্রায় ৪.৭ টন এবং যুক্তরাষ্ট্রে প্রায় ১৪ টন।
+    - অর্থাৎ সমস্যাটি তারা সৃষ্টি করেনি, কিন্তু ফল ভোগ করছে সবচেয়ে বেশি। একেই বলা হয় "জলবায়ু অবিচার" (climate injustice)।
+
+    ক্ষতিগ্রস্ত হওয়ার কারণ:
+    - ভৌগোলিক অবস্থান: বেশির ভাগ স্বল্পোন্নত দেশ নিচু উপকূলীয় অঞ্চল, ছোট দ্বীপ বা খরাপ্রবণ এলাকায় অবস্থিত।
+    - অর্থনীতি কৃষিনির্ভর, যা সরাসরি বৃষ্টিপাত ও তাপমাত্রার ওপর নির্ভরশীল।
+    - অভিযোজনের আর্থিক ও প্রযুক্তিগত সক্ষমতা কম।
+
+    আন্তর্জাতিক আলোচনায় ভূমিকা:
+    - স্বল্পোন্নত দেশগুলো "LDC Group" হিসেবে জাতিসংঘের জলবায়ু সম্মেলনে (COP) একত্রে দর কষাকষি করে এবং জি-৭৭ ও ক্লাইমেট ভালনারেবল ফোরামে (CVF) সক্রিয় ভূমিকা রাখে। বাংলাদেশ CVF-এর সভাপতিত্ব করেছে।
+    - তাদের প্রধান দাবিসমূহ: বৈশ্বিক তাপমাত্রা বৃদ্ধি ১.৫ ডিগ্রি সেলসিয়াসে সীমাবদ্ধ রাখা; উন্নত দেশগুলোর প্রতিশ্রুত বার্ষিক ১০০ বিলিয়ন ডলার জলবায়ু অর্থায়ন নিশ্চিত করা; ক্ষয়ক্ষতি মোকাবিলায় "Loss and Damage Fund" (কপ-২৭ এ অনুমোদিত ও কপ-২৮ এ চালু) কার্যকর করা; এবং প্রযুক্তি হস্তান্তর ও অভিযোজন সহায়তা।
+    - "কমন বাট ডিফারেনশিয়েটেড রেসপনসিবিলিটিজ" নীতির ভিত্তিতে তারা যুক্তি দেয় যে দায় সবার হলেও দায়ের মাত্রা সমান নয়।
+
+    নিজেদের উদ্যোগ: নবায়নযোগ্য জ্বালানিতে বিনিয়োগ, বনায়ন, জলবায়ু-সহনশীল ফসলের জাত উদ্ভাবন এবং জাতীয় অভিযোজন পরিকল্পনা (NAP) প্রণয়ন। বাংলাদেশ নিজস্ব অর্থে জলবায়ু ট্রাস্ট ফান্ড গঠন করে এ ক্ষেত্রে দৃষ্টান্ত স্থাপন করেছে।
 7. **রাশিয়া ও ইউক্রেন যুদ্ধের মূল কারণগুলো কী কী? ব্যাখ্যা করুন।** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
 
+
+   Answer: রাশিয়া-ইউক্রেন যুদ্ধ শুরু হয় ২০২২ সালের ২৪ ফেব্রুয়ারি, যদিও এর সূচনা ২০১৪ সালের ক্রিমিয়া দখল ও দনবাস সংঘাত থেকেই।
+
+   মূল কারণসমূহ:
+   - ন্যাটোর পূর্বমুখী সম্প্রসারণ: সোভিয়েত ইউনিয়ন ভাঙার পর পূর্ব ইউরোপের একের পর এক দেশ ন্যাটোতে যোগ দেয়। ইউক্রেনের সম্ভাব্য সদস্যপদকে রাশিয়া তার সীমান্তে সরাসরি সামরিক হুমকি হিসেবে দেখে এবং এটিকে "লাল রেখা" ঘোষণা করে।
+   - ভূরাজনৈতিক প্রভাব বলয়: ইউক্রেন রাশিয়ার কাছে ঐতিহাসিক ও কৌশলগতভাবে গুরুত্বপূর্ণ। রাশিয়া মনে করে ইউক্রেন পশ্চিমা বলয়ে চলে গেলে তার নিরাপত্তা বলয় ভেঙে পড়বে।
+   - ২০১৪ সালের ইউরোমাইদান আন্দোলন: রাশিয়াপন্থী প্রেসিডেন্ট ভিক্তর ইয়ানুকোভিচের পতনের পর রাশিয়া ক্রিমিয়া দখল করে এবং দনেৎস্ক ও লুহানস্কে বিচ্ছিন্নতাবাদীদের সমর্থন দেয়। এই সংঘাত আট বছর ধরে চলে।
+   - জাতিগত ও ভাষাগত বিভাজন: পূর্ব ইউক্রেনে বিপুল রুশভাষী জনগোষ্ঠী রয়েছে; রাশিয়া তাদের "রক্ষা" করার যুক্তি দেয়।
+   - অর্থনৈতিক ও জ্বালানি স্বার্থ: ইউক্রেন ছিল ইউরোপে রুশ গ্যাস সরবরাহের প্রধান ট্রানজিট রুট। কৃষ্ণসাগরের বন্দর ও শস্য রপ্তানি পথের নিয়ন্ত্রণও একটি বড় বিবেচনা।
+   - অভ্যন্তরীণ রাজনীতি: জাতীয়তাবাদী আবেগ উসকে দিয়ে অভ্যন্তরীণ সমর্থন সংহত করার রাজনৈতিক প্রেরণাও কাজ করেছে।
+   - মিনস্ক চুক্তির ব্যর্থতা: ২০১৪ ও ২০১৫ সালের মিনস্ক চুক্তি বাস্তবায়িত না হওয়ায় কূটনৈতিক পথ বন্ধ হয়ে যায়।
+
+   ফলাফল ও প্রভাব:
+   - লক্ষাধিক হতাহত, এক কোটির বেশি মানুষ বাস্তুচ্যুত এবং ইউক্রেনের অবকাঠামোর ব্যাপক ধ্বংস।
+   - রাশিয়ার ওপর নজিরবিহীন পশ্চিমা নিষেধাজ্ঞা এবং সুইফট থেকে রুশ ব্যাংকগুলোর বিচ্ছিন্নকরণ।
+   - বিশ্বব্যাপী জ্বালানি ও খাদ্যশস্যের দাম বৃদ্ধি; গম, ভুট্টা ও সারের সরবরাহ ব্যাহত হওয়ায় বাংলাদেশসহ আমদানিনির্ভর দেশগুলোতে মূল্যস্ফীতি বেড়ে যায়।
+   - ফিনল্যান্ড ও সুইডেনের ন্যাটোতে যোগদান, অর্থাৎ রাশিয়ার আশঙ্কার বিপরীত ফল।
 8. **পিং পং কূটনীতি (Ping Pong Diplomacy) কী? এর ফলাফল কী হয়েছিল?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
 
+
+   Answer: পিং পং কূটনীতি বলতে বোঝায় ১৯৭১ সালে যুক্তরাষ্ট্র ও গণচীনের মধ্যে টেবিল টেনিস (পিং পং) খেলোয়াড় বিনিময়ের মাধ্যমে দুই বৈরী রাষ্ট্রের সম্পর্ক স্বাভাবিকীকরণের সূচনা। এটি ক্রীড়া কূটনীতির (sports diplomacy) সবচেয়ে বিখ্যাত উদাহরণ।
+
+   প্রেক্ষাপট ও ঘটনা:
+   - ১৯৪৯ সালে গণচীন প্রতিষ্ঠার পর থেকে যুক্তরাষ্ট্রের সঙ্গে চীনের কোনো কূটনৈতিক সম্পর্ক ছিল না; দুই দেশ পরস্পরকে শত্রু বিবেচনা করত।
+   - ১৯৭১ সালের এপ্রিলে জাপানের নাগোয়ায় ৩১তম বিশ্ব টেবিল টেনিস চ্যাম্পিয়নশিপ চলাকালে মার্কিন খেলোয়াড় গ্লেন কাওয়ান ভুলবশত চীনা দলের বাসে উঠে পড়েন। চীনা তারকা খেলোয়াড় ঝুয়াং জেদং তাঁকে উপহার দিয়ে স্বাগত জানান।
+   - এই ঘটনার সূত্র ধরে চীন মার্কিন টেবিল টেনিস দলকে চীন সফরের আমন্ত্রণ জানায়। ১৯৭১ সালের ১০ এপ্রিল মার্কিন দল চীনে যায়, যা ছিল ১৯৪৯ সালের পর প্রথম কোনো মার্কিন প্রতিনিধিদলের চীন সফর।
+
+   ফলাফল:
+   - ১৯৭১ সালের জুলাই মাসে মার্কিন জাতীয় নিরাপত্তা উপদেষ্টা হেনরি কিসিঞ্জার গোপনে বেইজিং সফর করেন।
+   - ১৯৭১ সালের অক্টোবরে জাতিসংঘে চীনের আসন তাইওয়ানের বদলে গণচীনকে দেওয়া হয় এবং চীন নিরাপত্তা পরিষদের স্থায়ী সদস্য হয়।
+   - ১৯৭২ সালের ফেব্রুয়ারিতে প্রেসিডেন্ট রিচার্ড নিক্সন চীন সফর করেন এবং সাংহাই ইশতেহার স্বাক্ষরিত হয়।
+   - ১৯৭৯ সালের ১ জানুয়ারি দুই দেশের মধ্যে পূর্ণ কূটনৈতিক সম্পর্ক স্থাপিত হয়।
+   - স্নায়ুযুদ্ধের ভারসাম্য পাল্টে যায়; চীন-সোভিয়েত বিভাজন কাজে লাগিয়ে যুক্তরাষ্ট্র কৌশলগত সুবিধা পায়।
+
+   তাৎপর্য: এটি প্রমাণ করে যে সাংস্কৃতিক ও ক্রীড়া বিনিময় আনুষ্ঠানিক কূটনীতির অচলাবস্থা ভাঙার কার্যকর উপায় হতে পারে। মাও সে তুং একে বলেছিলেন, "ছোট বল বড় বলকে (পৃথিবীকে) ঘুরিয়ে দিয়েছে।"
 9. **SDG কী? এর কয়টি লক্ষ্যমাত্রা রয়েছে? যে কোন ১০টি লক্ষ্যমাত্রার নাম লিখুন।** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
 
+
+   Answer: SDG এর পূর্ণরূপ Sustainable Development Goals বা টেকসই উন্নয়ন লক্ষ্যমাত্রা। এটি ২০১৫ সালের ২৫ সেপ্টেম্বর জাতিসংঘের সাধারণ পরিষদে গৃহীত "Agenda 2030" এর অংশ, যা ২০১৬ থেকে ২০৩০ সাল পর্যন্ত বিশ্বের উন্নয়ন কর্মসূচির রূপরেখা নির্ধারণ করে। এর আগের কর্মসূচি ছিল সহস্রাব্দ উন্নয়ন লক্ষ্যমাত্রা (MDG, ২০০০-২০১৫)।
+
+   সংখ্যা: মোট লক্ষ্যমাত্রা (Goal) ১৭টি, অভীষ্ট (Target) ১৬৯টি এবং সূচক (Indicator) ২৩১টি।
+
+   ১৭টি লক্ষ্যমাত্রা:
+   - ১. দারিদ্র্যের অবসান
+   - ২. ক্ষুধামুক্তি
+   - ৩. সুস্বাস্থ্য ও কল্যাণ
+   - ৪. মানসম্মত শিক্ষা
+   - ৫. লিঙ্গ সমতা
+   - ৬. নিরাপদ পানি ও স্যানিটেশন
+   - ৭. সাশ্রয়ী ও দূষণমুক্ত জ্বালানি
+   - ৮. শোভন কাজ ও অর্থনৈতিক প্রবৃদ্ধি
+   - ৯. শিল্প, উদ্ভাবন ও অবকাঠামো
+   - ১০. অসমতার হ্রাস
+   - ১১. টেকসই নগর ও জনপদ
+   - ১২. পরিমিত ভোগ ও উৎপাদন
+   - ১৩. জলবায়ু কার্যক্রম
+   - ১৪. জলজ জীবন
+   - ১৫. স্থলজ জীবন
+   - ১৬. শান্তি, ন্যায়বিচার ও কার্যকর প্রতিষ্ঠান
+   - ১৭. অভীষ্ট অর্জনে অংশীদারিত্ব
+
+   মূলনীতি: "Leave No One Behind" অর্থাৎ কাউকে পেছনে ফেলে নয়। লক্ষ্যমাত্রাগুলো তিনটি স্তম্ভের ওপর দাঁড়িয়ে আছে—অর্থনৈতিক প্রবৃদ্ধি, সামাজিক অন্তর্ভুক্তি ও পরিবেশ সুরক্ষা।
+
+   বাংলাদেশের প্রেক্ষাপট: বাস্তবায়ন সমন্বয় করে প্রধানমন্ত্রীর কার্যালয়ের এসডিজি বিষয়ক মুখ্য সমন্বয়কের দপ্তর। দারিদ্র্য হ্রাস, শিশু ও মাতৃমৃত্যু হ্রাস এবং প্রাথমিক শিক্ষায় লিঙ্গ সমতা অর্জনে বাংলাদেশ উল্লেখযোগ্য সাফল্য দেখিয়েছে।
 10. **বিশ্বায়ন প্রক্রিয়ার মূল চালিকা শক্তি (Driving Forces of Globalization) গুলো কী কী?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+    Answer: বিশ্বায়ন (Globalization) বলতে বোঝায় পণ্য, সেবা, পুঁজি, প্রযুক্তি, তথ্য ও মানুষের আন্তঃসীমান্ত চলাচলের মাধ্যমে বিশ্বের দেশগুলোর ক্রমবর্ধমান আন্তঃনির্ভরশীলতা ও একীভবন।
+
+    মূল চালিকা শক্তিসমূহ:
+
+    - প্রযুক্তিগত শক্তি: ইন্টারনেট, স্যাটেলাইট যোগাযোগ, সাবমেরিন কেবল, মোবাইল ফোন ও ক্লাউড কম্পিউটিং দূরত্বকে অপ্রাসঙ্গিক করে দিয়েছে। একটি নকশা ঢাকায় তৈরি হয়ে মুহূর্তেই লন্ডনে পৌঁছাতে পারে।
+    - পরিবহন বিপ্লব: কনটেইনারাইজেশন, বিশাল মালবাহী জাহাজ, উড়োজাহাজ ও উন্নত বন্দর ব্যবস্থাপনা পণ্য পরিবহনের খরচ ও সময় নাটকীয়ভাবে কমিয়েছে।
+    - অর্থনৈতিক উদারীকরণ: শুল্ক ও কোটা হ্রাস, বাণিজ্য বাধা অপসারণ, বৈদেশিক বিনিয়োগে উন্মুক্ততা এবং রাষ্ট্রীয় প্রতিষ্ঠানের বেসরকারিকরণ।
+    - আন্তর্জাতিক প্রতিষ্ঠান: বিশ্ব বাণিজ্য সংস্থা (WTO), আন্তর্জাতিক মুদ্রা তহবিল (IMF), বিশ্বব্যাংক ও আঞ্চলিক ব্যাংকগুলো অভিন্ন নিয়ম ও অর্থায়ন সরবরাহ করে।
+    - বহুজাতিক কোম্পানি (MNC): উৎপাদন খরচ কমাতে তারা বিশ্বজুড়ে সরবরাহ শৃঙ্খল ছড়িয়ে দেয়। বাংলাদেশের তৈরি পোশাক শিল্প এই প্রক্রিয়ারই ফল।
+    - আঞ্চলিক অর্থনৈতিক জোট: ইইউ, নাফটা (বর্তমানে ইউএসএমসিএ), আসিয়ান, সাফটা ও বিমসটেকের মতো জোট আঞ্চলিক বাণিজ্য বাড়ায়।
+    - আর্থিক বাজারের একীভবন: পুঁজির অবাধ চলাচল, বৈদেশিক মুদ্রার বিনিময়যোগ্যতা এবং ২৪ ঘণ্টা সক্রিয় বৈশ্বিক পুঁজিবাজার।
+    - রাজনৈতিক পরিবর্তন: স্নায়ুযুদ্ধের অবসান, সোভিয়েত ইউনিয়নের পতন এবং চীন ও ভারতের অর্থনীতি উন্মুক্তকরণ বিশ্ববাজারে কোটি কোটি ভোক্তা ও শ্রমিক যুক্ত করেছে।
+    - সাংস্কৃতিক ও সামাজিক শক্তি: গণমাধ্যম, সামাজিক যোগাযোগমাধ্যম, ইংরেজি ভাষার প্রসার, আন্তর্জাতিক শিক্ষা, পর্যটন ও অভিবাসন।
+    - শ্রম অভিবাসন ও রেমিট্যান্স: বাংলাদেশের মতো দেশে জনশক্তি রপ্তানি ও রেমিট্যান্স প্রবাহ বিশ্বায়নের প্রত্যক্ষ ফল।
+
+    ইতিবাচক দিক: প্রযুক্তি হস্তান্তর, কর্মসংস্থান, রপ্তানি বাজার, বিদেশি বিনিয়োগ ও ভোক্তার জন্য কম দামে পণ্য।
+
+    নেতিবাচক দিক: অর্থনৈতিক অসমতা বৃদ্ধি, দুর্বল দেশীয় শিল্পের ক্ষতি, সাংস্কৃতিক আগ্রাসন, পরিবেশ দূষণ এবং বৈশ্বিক সংকটের দ্রুত সংক্রমণ, যেমন ২০০৮ সালের আর্থিক সংকট বা কোভিড-১৯ মহামারি।
 11. **মানবিক করিডোর কী? ইউক্রেন কোন বন্দরকে মানবিক করিডোর ঘোষণা করেছে?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+    Answer: মানবিক করিডোর (Humanitarian Corridor) হলো যুদ্ধ বা সংঘাতপূর্ণ এলাকায় নির্দিষ্ট সময়ের জন্য যুদ্ধবিরতির মাধ্যমে গড়ে তোলা একটি নিরাপদ পথ, যা দিয়ে বেসামরিক নাগরিকেরা নিরাপদে সরে যেতে পারেন এবং ত্রাণসামগ্রী, ওষুধ ও খাদ্য আটকে পড়া মানুষের কাছে পৌঁছানো যায়।
+
+    বৈশিষ্ট্য:
+    - এটি সাধারণত জাতিসংঘ, আন্তর্জাতিক রেড ক্রস কমিটি বা কোনো নিরপেক্ষ মধ্যস্থতাকারীর তত্ত্বাবধানে সংঘাতরত পক্ষগুলোর সম্মতিতে গঠিত হয়।
+    - নির্দিষ্ট সময়সীমা ও নির্দিষ্ট পথ থাকে এবং ওই সময়ে ওই পথে কোনো সামরিক তৎপরতা চালানো যায় না।
+    - আন্তর্জাতিক মানবিক আইন, বিশেষত জেনেভা কনভেনশনের ভিত্তিতে এটি পরিচালিত হয়।
+
+    ইউক্রেনের ক্ষেত্রে: রাশিয়া-ইউক্রেন যুদ্ধ শুরুর পর ইউক্রেন কৃষ্ণসাগরের ওদেসা (Odesa) বন্দরকে কেন্দ্র করে সামুদ্রিক মানবিক করিডোর ঘোষণা করে, যাতে আটকে পড়া জাহাজ ও খাদ্যশস্য নিরাপদে বের হতে পারে। <!-- verify -->
+
+    - ২০২২ সালের জুলাই মাসে জাতিসংঘ ও তুরস্কের মধ্যস্থতায় স্বাক্ষরিত "কৃষ্ণসাগর শস্য উদ্যোগ" (Black Sea Grain Initiative) এর আওতায় ওদেসা, চোরনোমোরস্ক ও ইউঝনে বন্দর থেকে শস্যবাহী জাহাজ চলাচল শুরু হয়।
+    - এই করিডোরের মাধ্যমে কোটি কোটি টন গম ও ভুট্টা রপ্তানি সম্ভব হয়, যা আফ্রিকা ও এশিয়ার খাদ্য সংকট প্রশমনে গুরুত্বপূর্ণ ভূমিকা রাখে।
+    - এছাড়া মারিউপোল, সুমি ও খারকিভ থেকে বেসামরিক নাগরিক সরিয়ে নিতেও স্থল মানবিক করিডোর ঘোষণা করা হয়েছিল।
 12. **"সবুজ অর্থনীতি" কাকে বলে? কার্ল বুরকাতের মতে সবুজ অর্থনীতি কয়টি বিষয়ের উপর নির্ভর করে? কী কী?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+    Answer: সবুজ অর্থনীতি (Green Economy) বলতে এমন অর্থনৈতিক ব্যবস্থাকে বোঝায় যা মানুষের জীবনমান ও সামাজিক ন্যায়বিচার উন্নত করে, অথচ পরিবেশগত ঝুঁকি ও প্রাকৃতিক সম্পদের ঘাটতি উল্লেখযোগ্যভাবে হ্রাস করে। জাতিসংঘ পরিবেশ কর্মসূচি (UNEP) এই সংজ্ঞাটি ব্যবহার করে।
+
+    বৈশিষ্ট্য: কম কার্বন নিঃসরণ, সম্পদের দক্ষ ব্যবহার এবং সামাজিকভাবে অন্তর্ভুক্তিমূলক। অর্থাৎ প্রবৃদ্ধি ও পরিবেশ সুরক্ষাকে পরস্পরবিরোধী নয়, বরং পরিপূরক হিসেবে দেখা হয়।
+
+    কার্ল বুরকার্টের (Karl Burkart) মতে সবুজ অর্থনীতি ছয়টি প্রধান খাতের ওপর নির্ভর করে:
+
+    - নবায়নযোগ্য জ্বালানি (Renewable energy): সৌর, বায়ু, ভূতাপীয়, জলবিদ্যুৎ ও বায়োগ্যাস।
+    - সবুজ ভবন (Green buildings): জ্বালানি-সাশ্রয়ী নকশা, LEED সনদ, পরিবেশবান্ধব নির্মাণসামগ্রী।
+    - টেকসই পরিবহন (Sustainable transport): বৈদ্যুতিক যানবাহন, গণপরিবহন, রেল, বাইসাইকেল ও পথচারীবান্ধব নগর।
+    - পানি ব্যবস্থাপনা (Water management): পানি সংরক্ষণ, বৃষ্টির পানি সংগ্রহ, বর্জ্যপানি পরিশোধন ও পুনর্ব্যবহার।
+    - বর্জ্য ব্যবস্থাপনা (Waste management): পুনর্ব্যবহার, কম্পোস্টিং, বর্জ্য থেকে শক্তি উৎপাদন এবং চক্রাকার অর্থনীতি।
+    - ভূমি ব্যবস্থাপনা (Land management): জৈব কৃষি, বনায়ন, মাটির উর্বরতা সংরক্ষণ ও নগর পরিকল্পনা।
+
+    বাংলাদেশের প্রেক্ষাপট: সৌর হোম সিস্টেম, বাংলাদেশ ব্যাংকের সবুজ পুনঃঅর্থায়ন তহবিল, LEED সনদপ্রাপ্ত সবুজ পোশাক কারখানা (সংখ্যায় বিশ্বে শীর্ষে), পরিবেশবান্ধব ইটভাটা প্রযুক্তি এবং বর্জ্য থেকে বিদ্যুৎ প্রকল্প সবুজ অর্থনীতির উদাহরণ।
 13. **পৃথিবীর সর্ববৃহৎ দ্বীপটির নাম কী? এটি কোথায় অবস্থিত এবং কোন দেশের নিয়ন্ত্রণাধীন?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+    Answer: পৃথিবীর সর্ববৃহৎ দ্বীপ গ্রিনল্যান্ড।
+
+    - আয়তন: প্রায় ২১,৬৬,০৮৬ বর্গকিলোমিটার।
+    - অবস্থান: উত্তর আটলান্টিক ও উত্তর মহাসাগরের (আর্কটিক) মধ্যবর্তী অঞ্চলে, উত্তর আমেরিকা মহাদেশের উত্তর-পূর্ব দিকে। ভৌগোলিকভাবে এটি উত্তর আমেরিকার অংশ।
+    - নিয়ন্ত্রণ: এটি ডেনমার্ক রাজ্যের অধীন একটি স্বায়ত্তশাসিত অঞ্চল। ১৯৭৯ সাল থেকে এটি স্বশাসন এবং ২০০৯ সাল থেকে বর্ধিত স্বায়ত্তশাসন ভোগ করছে। প্রতিরক্ষা ও পররাষ্ট্রনীতি ডেনমার্কের হাতে।
+    - রাজধানী: নুক (Nuuk)। জনসংখ্যা মাত্র প্রায় ৫৭,০০০, ফলে এটি বিশ্বের সবচেয়ে কম জনঘনত্বের অঞ্চল।
+    - বিশেষত্ব: এর প্রায় ৮০ শতাংশ বরফে ঢাকা। এই বরফের স্তর গললে বৈশ্বিক সমুদ্রপৃষ্ঠ প্রায় ৭ মিটার বেড়ে যাবে, তাই জলবায়ু গবেষণায় এর গুরুত্ব অপরিসীম।
+    - উল্লেখ্য, অস্ট্রেলিয়া গ্রিনল্যান্ডের চেয়ে বড় হলেও তাকে দ্বীপ নয়, মহাদেশ হিসেবে গণ্য করা হয়। দ্বিতীয় বৃহত্তম দ্বীপ নিউ গিনি।
 14. **যুক্তরাষ্ট্র সরকারের নতুন দপ্তর "ডিপার্টমেন্ট অব গভর্নমেন্ট এফিসিয়েন্সি" এর প্রধান নির্বাহী কর্মকর্তা কে?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+    Answer: যুক্তরাষ্ট্রের "ডিপার্টমেন্ট অব গভর্নমেন্ট এফিসিয়েন্সি" (DOGE) এর নেতৃত্বে ছিলেন ইলন মাস্ক।
+
+    - দপ্তরটি গঠনের ঘোষণা দেওয়া হয় ২০২৪ সালের নভেম্বরে, নবনির্বাচিত প্রেসিডেন্ট ডোনাল্ড ট্রাম্পের উদ্যোগে, এবং এটি কার্যক্রম শুরু করে ২০২৫ সালের জানুয়ারিতে।
+    - প্রাথমিকভাবে ইলন মাস্ক ও বিবেক রামাস্বামীকে যৌথভাবে এর দায়িত্ব দেওয়া হয়েছিল; পরে রামাস্বামী সরে দাঁড়ালে মাস্ক একাই নেতৃত্ব দেন।
+    - ঘোষিত উদ্দেশ্য: ফেডারেল সরকারের ব্যয় হ্রাস, অপ্রয়োজনীয় নিয়মকানুন বাতিল, সংস্থার পুনর্গঠন এবং প্রশাসনিক দক্ষতা বৃদ্ধি।
+    - প্রতিষ্ঠানটি একটি আনুষ্ঠানিক মন্ত্রণালয় নয়, বরং নির্বাহী শাখার একটি উপদেষ্টা ও সংস্কার উদ্যোগ। এর কার্যক্রম নিয়ে ব্যাপক আইনি ও রাজনৈতিক বিতর্ক সৃষ্টি হয়। <!-- verify -->
 15. **“অপারেশন আয়রন সর্ডস কী?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+    Answer: "অপারেশন আয়রন সোর্ডস" (Operation Iron Swords / Swords of Iron) হলো ২০২৩ সালের ৭ অক্টোবর হামাসের হামলার জবাবে ইসরায়েল প্রতিরক্ষা বাহিনী কর্তৃক গাজায় শুরু করা সামরিক অভিযানের সাংকেতিক নাম।
+
+    - সূচনা: ৭ অক্টোবর ২০২৩ তারিখে হামাস ইসরায়েলের দক্ষিণাঞ্চলে বড় ধরনের হামলা চালায়, যাতে বহু মানুষ নিহত ও শতাধিক ব্যক্তি জিম্মি হন। ওই দিনই ইসরায়েল এই অভিযান ঘোষণা করে।
+    - ঘোষিত লক্ষ্য: হামাসের সামরিক ও প্রশাসনিক সক্ষমতা ধ্বংস করা এবং জিম্মিদের উদ্ধার করা।
+    - অভিযানের ধরন: ব্যাপক বিমান হামলা, স্থল অভিযান, গাজা অবরোধ এবং উত্তর গাজা থেকে বেসামরিক জনগণকে সরে যাওয়ার নির্দেশ।
+    - ফলাফল: গাজায় বিপুলসংখ্যক বেসামরিক মানুষ নিহত ও আহত হন, প্রায় সমগ্র জনগোষ্ঠী বাস্তুচ্যুত হয় এবং অবকাঠামো ধ্বংস হয়ে ভয়াবহ মানবিক সংকট তৈরি হয়।
+    - আন্তর্জাতিক প্রতিক্রিয়া: জাতিসংঘসহ বিভিন্ন সংস্থা যুদ্ধবিরতি ও মানবিক সহায়তা প্রবেশের আহ্বান জানায়; আন্তর্জাতিক বিচার আদালতে (ICJ) দক্ষিণ আফ্রিকা ইসরায়েলের বিরুদ্ধে গণহত্যার অভিযোগে মামলা দায়ের করে। বাংলাদেশ ধারাবাহিকভাবে ফিলিস্তিনি জনগণের প্রতি সমর্থন ও যুদ্ধবিরতির দাবি জানিয়ে আসছে।
 16. **ভারত-চীন যুদ্ধ কত সালে হয়?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+
+    Answer: ভারত-চীন যুদ্ধ সংঘটিত হয় ১৯৬২ সালে।
+
+    - স্থায়িত্ব: ২০ অক্টোবর থেকে ২১ নভেম্বর ১৯৬২, প্রায় এক মাস।
+    - কারণ: হিমালয়ের সীমান্ত বিরোধ, বিশেষত আকসাই চিন (লাদাখ) ও অরুণাচল প্রদেশ (তৎকালীন নেফা) অঞ্চলের মালিকানা নিয়ে বিরোধ; ম্যাকমোহন লাইনকে চীনের অস্বীকৃতি; এবং ১৯৫৯ সালে তিব্বতের দালাই লামাকে ভারতের আশ্রয়দান।
+    - ফলাফল: চীন উভয় রণাঙ্গনে জয়লাভ করে এবং একতরফাভাবে যুদ্ধবিরতি ঘোষণা করে। চীন আকসাই চিনের নিয়ন্ত্রণ ধরে রাখে।
+    - প্রভাব: ভারতের প্রতিরক্ষা নীতিতে বড় পরিবর্তন আসে, প্রতিরক্ষা ব্যয় বহুগুণ বাড়ে এবং জোটনিরপেক্ষ নীতির সীমাবদ্ধতা প্রকাশ পায়। দুই দেশের মধ্যে প্রকৃত নিয়ন্ত্রণরেখা (LAC) নিয়ে বিরোধ আজও অমীমাংসিত, যা ২০২০ সালের গালওয়ান উপত্যকার সংঘর্ষে আবার প্রকাশ পায়।
 17. **What is the difference between a Green Economy and a Blue Economy?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 313 (ET: N/A)]*
 
+
+    Answer:
+
+    | Point | Green Economy | Blue Economy |
+    |---|---|---|
+    | Domain | Land-based resources and the economy as a whole | Ocean, sea and coastal resources |
+    | Core idea | Low carbon, resource efficient and socially inclusive growth | Sustainable use of ocean resources for growth, jobs and ecosystem health |
+    | Main sectors | Renewable energy, green buildings, sustainable transport, water management, waste management, land management | Marine fisheries and aquaculture, shipping and ports, shipbuilding and recycling, offshore energy, coastal tourism, marine biotechnology, sea minerals, salt |
+    | Environmental focus | Reducing greenhouse gas emissions, pollution and biodiversity loss on land | Preventing overfishing, marine pollution, ocean acidification and coastal degradation |
+    | Governing framework | UNEP Green Economy Initiative, Rio+20 outcome | UN Convention on the Law of the Sea (UNCLOS), SDG 14 (Life Below Water) |
+    | Relevant SDG | Mainly SDG 7, 12, 13 and 15 | Mainly SDG 14 |
+    | Bangladesh example | Solar home systems, LEED-certified green garment factories, green refinancing by Bangladesh Bank | Marine fisheries, Payra and Matarbari ports, ship recycling, coastal tourism, offshore gas exploration |
+
+    Relationship: the Blue Economy is best understood as the marine branch of the Green Economy. Both apply the same principle, that economic growth must not exhaust the natural capital it depends on, one on land and the other at sea.
+
+    Importance for Bangladesh: after winning its maritime boundary cases against Myanmar (ITLOS, 2012) and India (PCA, 2014), Bangladesh secured about 118,813 square kilometres of sea area, almost equal to its land area, which makes the Blue Economy a major new frontier of national development.
 18. **Concept of Westminster Government?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 313 (ET: N/A)]*
 
+
+    Answer: The Westminster system is the parliamentary form of government that developed in the United Kingdom and takes its name from the Palace of Westminster, the seat of the British Parliament. It was adopted by most former British colonies, including Bangladesh, India, Canada, Australia and Malaysia.
+
+    Main features:
+    - Fusion of powers: the executive is drawn from and remains part of the legislature, unlike the presidential system, where the two are separated.
+    - Ceremonial head of state and executive head of government: the head of state (a monarch or a president) performs formal functions, while real executive power lies with the Prime Minister and the Cabinet.
+    - Collective responsibility: the Cabinet is collectively responsible to the Parliament, and a government that loses the confidence of the lower house must resign or seek fresh elections.
+    - Individual ministerial responsibility: each minister answers to Parliament for the work of the ministry.
+    - The Prime Minister is normally the leader of the majority party in the lower house.
+    - Bicameral legislature in most cases, though Bangladesh has a unicameral Parliament.
+    - A recognised Leader of the Opposition and a shadow cabinet, so that an alternative government is always ready.
+    - A politically neutral, permanent civil service that serves whichever party is in power.
+    - Parliamentary control through question hour, adjournment motions, no-confidence motions and standing committees.
+    - The Speaker presides over the house impartially.
+    - Elections are usually held on a first-past-the-post basis in single-member constituencies.
+
+    In Bangladesh: the country adopted the Westminster model in the 1972 Constitution. It shifted to a presidential system in 1975 and returned to the parliamentary system through the Twelfth Amendment in 1991. The President is the ceremonial head of state, and the Prime Minister exercises real executive authority.
+
+    Advantages: quick decision making, continuous accountability to the legislature, and the ability to change a failing government without waiting for a fixed term.
+
+    Criticism: the ruling party can dominate the legislature, so parliamentary scrutiny weakens; in Bangladesh, Article 70 of the Constitution, which bars a member from voting against the party, is often cited as further reducing the independence of members.
 19. **Who was Sir David Attenborough?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+    Answer: Sir David Attenborough is a British broadcaster, biologist, natural historian and writer, widely regarded as the most influential natural history broadcaster in the world. He was born on 8 May 1926.
+
+    - He joined the BBC in 1952 and later served as Controller of BBC Two and Director of Programmes.
+    - He is best known for writing and presenting the nine natural history series known collectively as the "Life" collection, including "Life on Earth" (1979), "The Living Planet", "The Trials of Life" and "The Blue Planet".
+    - Later landmark series include "Planet Earth", "Frozen Planet", "Blue Planet II", "Our Planet" and "A Life on Our Planet".
+    - "Blue Planet II" is credited with creating worldwide public awareness of plastic pollution in the oceans and with prompting changes in law and consumer behaviour in several countries.
+    - He has become one of the most prominent voices warning about climate change, biodiversity loss and habitat destruction, and he addressed the UN Security Council and COP26 on these issues.
+    - He was knighted in 1985 and has received numerous honours, including several BAFTA awards and honorary degrees, and many newly discovered species have been named after him.
 20. **2026 সালে ফিফা ফুটবল বিশ্বকাপ কোথায় হবে?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+    Answer: ২০২৬ সালের ফিফা বিশ্বকাপ যৌথভাবে আয়োজন করবে তিনটি দেশ: যুক্তরাষ্ট্র, কানাডা ও মেক্সিকো।
+
+    - এটি ২৩তম ফিফা বিশ্বকাপ এবং ইতিহাসে প্রথমবারের মতো তিনটি দেশ যৌথভাবে আয়োজন করছে।
+    - অংশগ্রহণকারী দলের সংখ্যা ৩২ থেকে বেড়ে ৪৮ হবে, যা এখন পর্যন্ত সবচেয়ে বড় বিশ্বকাপ।
+    - মোট ম্যাচ সংখ্যা ১০৪, আয়োজক শহর ১৬টি (যুক্তরাষ্ট্রে ১১টি, মেক্সিকোতে ৩টি, কানাডায় ২টি)।
+    - উদ্বোধনী ম্যাচ মেক্সিকোর মেক্সিকো সিটির এস্তাদিও আজতেকায় এবং ফাইনাল যুক্তরাষ্ট্রের নিউ জার্সির মেটলাইফ স্টেডিয়ামে অনুষ্ঠিত হবে।
+    - মেক্সিকো এর মাধ্যমে তৃতীয়বারের মতো বিশ্বকাপ আয়োজন করবে (১৯৭০ ও ১৯৮৬ সালের পর), যা একটি রেকর্ড।
+    - পূর্ববর্তী আসর: ২০২২ সালে কাতার, যেখানে আর্জেন্টিনা চ্যাম্পিয়ন হয়।
 21. **Carlos Ancelotti কোন দেশের কোন ক্লাবের ম্যানেজার?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+    Answer: কার্লো আনচেলত্তি স্পেনের ক্লাব রিয়াল মাদ্রিদের ম্যানেজার ছিলেন। ২০২৫ সালের মে মাসে রিয়াল মাদ্রিদ ছেড়ে তিনি ব্রাজিল জাতীয় ফুটবল দলের প্রধান কোচের দায়িত্ব গ্রহণ করেন। <!-- verify -->
+
+    - তিনি ইতালীয় নাগরিক এবং সাবেক ইতালি জাতীয় দলের খেলোয়াড়।
+    - রিয়াল মাদ্রিদে তিনি দুই দফায় দায়িত্ব পালন করেন: ২০১৩-২০১৫ এবং ২০২১-২০২৫।
+    - তিনি ইতিহাসের একমাত্র কোচ যিনি পাঁচবার উয়েফা চ্যাম্পিয়নস লিগ জিতেছেন (এসি মিলানের হয়ে দুইবার এবং রিয়াল মাদ্রিদের হয়ে তিনবার)।
+    - তিনিই একমাত্র ম্যানেজার যিনি ইউরোপের শীর্ষ পাঁচ লিগেই (ইতালি, ইংল্যান্ড, স্পেন, ফ্রান্স ও জার্মানি) শিরোপা জিতেছেন।
+    - অন্যান্য ক্লাব: এসি মিলান, চেলসি, প্যারিস সেন্ট জার্মেই, বায়ার্ন মিউনিখ, নাপোলি ও এভারটন।
 22. **টেস্ট ক্রিকেটে এখন পর্যন্ত কোন কোন বোলার 700 উইকেট লাভ করেছে?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+    Answer: টেস্ট ক্রিকেটে এখন পর্যন্ত তিনজন বোলার ৭০০ বা তার বেশি উইকেট লাভ করেছেন।
+
+    | বোলার | দেশ | উইকেট | ম্যাচ |
+    |---|---|---|---|
+    | মুত্তিয়া মুরালিধরন | শ্রীলঙ্কা | ৮০০ | ১৩৩ |
+    | শেন ওয়ার্ন | অস্ট্রেলিয়া | ৭০৮ | ১৪৫ |
+    | জেমস অ্যান্ডারসন | ইংল্যান্ড | ৭০৪ | ১৮৮ |
+
+    - মুত্তিয়া মুরালিধরন একজন অফ স্পিনার এবং টেস্ট ও ওয়ানডে উভয় সংস্করণেই সর্বোচ্চ উইকেটশিকারি। তিনি ২০১০ সালে অবসর নেন, তাঁর শেষ টেস্টের শেষ বলে ৮০০তম উইকেটটি নিয়ে।
+    - শেন ওয়ার্ন ছিলেন লেগ স্পিনার, অবসর নেন ২০০৭ সালে।
+    - জেমস অ্যান্ডারসন ফাস্ট বোলার এবং পেসারদের মধ্যে সর্বোচ্চ উইকেটশিকারি; তিনি ২০২৪ সালে অবসর নেন। <!-- verify -->
+    - এই তালিকার পরে রয়েছেন অনিল কুম্বলে (৬১৯) ও স্টুয়ার্ট ব্রড (৬০৪)।
 23. **পেট্রা শহরটি কোথায় অবস্থিত এবং এটি কারা নির্মাণ করে?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+    Answer: পেট্রা শহরটি জর্ডানে অবস্থিত এবং এটি নির্মাণ করেছিল নাবাতীয় (Nabataean) জাতি।
+
+    - অবস্থান: দক্ষিণ জর্ডানের মা'আন প্রদেশে, লোহিত সাগর ও মৃত সাগরের মধ্যবর্তী পাহাড়ি অঞ্চলে।
+    - নির্মাণকাল: খ্রিষ্টপূর্ব চতুর্থ শতকের কাছাকাছি সময়ে এটি নাবাতীয় রাজ্যের রাজধানী হিসেবে গড়ে ওঠে।
+    - বৈশিষ্ট্য: শহরটির স্থাপনাগুলো গোলাপি বেলেপাথরের পাহাড় কেটে তৈরি, তাই একে "রোজ সিটি" বা "গোলাপি শহর" বলা হয়। প্রবেশপথ "সিক" নামে পরিচিত একটি সরু গিরিখাত, যার শেষে দেখা যায় বিখ্যাত "আল-খাজনেহ" বা ট্রেজারি।
+    - গুরুত্ব: এটি ছিল প্রাচীন ধূপ ও মসলা বাণিজ্যপথের একটি প্রধান কেন্দ্র। নাবাতীয়রা মরুভূমিতে অসাধারণ পানি সংরক্ষণ ও বণ্টনব্যবস্থা গড়ে তুলেছিল।
+    - ১০৬ খ্রিষ্টাব্দে রোমান সাম্রাজ্য এটি দখল করে; পরে ভূমিকম্প ও বাণিজ্যপথ পরিবর্তনের ফলে শহরটি পরিত্যক্ত হয়। ১৮১২ সালে সুইস পর্যটক ইয়োহান লুডভিগ বুর্কহার্ট এটি পুনরাবিষ্কার করেন।
+    - স্বীকৃতি: ১৯৮৫ সালে ইউনেস্কো বিশ্ব ঐতিহ্য তালিকাভুক্ত এবং ২০০৭ সালে "নতুন সপ্তাশ্চর্য" এর একটি হিসেবে নির্বাচিত।
 24. **বাংলাদেশের কোন নাগরিক লন্ডনের মেয়র নির্বাচিত হয়েছে এবং তিনি কতবার হয়েছে?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+    Answer: বাংলাদেশি বংশোদ্ভূত লুৎফুর রহমান লন্ডনের টাওয়ার হ্যামলেটস বরার নির্বাহী মেয়র নির্বাচিত হয়েছেন, এবং তিনি দুইবার এই পদে নির্বাচিত হন।
+
+    - প্রথমবার: ২০১০ সালে, স্বতন্ত্র প্রার্থী হিসেবে। তিনি ছিলেন যুক্তরাজ্যের প্রথম সরাসরি নির্বাচিত মুসলিম নির্বাহী মেয়র।
+    - দ্বিতীয়বার: ২০১৪ সালে পুনর্নির্বাচিত হন, তবে ২০১৫ সালে নির্বাচনী অনিয়মের অভিযোগে আদালতের রায়ে তাঁকে পদচ্যুত করা হয় এবং পাঁচ বছরের জন্য নির্বাচনে অযোগ্য ঘোষণা করা হয়।
+    - পুনরায়: নিষেধাজ্ঞা শেষে ২০২২ সালের মে মাসে তিনি "অ্যাস্পায়ার" দলের প্রার্থী হিসেবে আবার টাওয়ার হ্যামলেটসের নির্বাহী মেয়র নির্বাচিত হন।
+    - তাঁর পূর্বপুরুষের বাড়ি সিলেট জেলায়।
+    - উল্লেখ্য, লন্ডন শহরের (গ্রেটার লন্ডন) মেয়র পদটি আলাদা; সেখানে ২০১৬ সাল থেকে দায়িত্ব পালন করছেন পাকিস্তানি বংশোদ্ভূত সাদিক খান।
 25. **What is BIMSTEC?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 322 (ET: BIBM)]*
 
+
+    Answer: BIMSTEC stands for the Bay of Bengal Initiative for Multi-Sectoral Technical and Economic Cooperation.
+
+    - It is a regional organisation of seven countries lying around the Bay of Bengal, bridging South Asia and South East Asia.
+    - Founded: 6 June 1997 in Bangkok, originally as BIST-EC (Bangladesh, India, Sri Lanka, Thailand). Myanmar joined the same year, making it BIMST-EC, and Nepal and Bhutan joined in 2004, when the present name was adopted.
+    - Members (7): Bangladesh, Bhutan, India, Myanmar, Nepal, Sri Lanka and Thailand.
+    - Headquarters: Dhaka, Bangladesh, established in 2014. The Secretary General is appointed on rotation among the member states.
+    - Population covered: about 1.8 billion, roughly 22 per cent of the world's population.
+
+    Areas of cooperation: originally six sectors, later expanded to fourteen, and reorganised in 2021 into seven pillars, each led by one member state:
+    - Trade, Investment and Development (Bangladesh)
+    - Environment and Climate Change (Bhutan)
+    - Security, including energy (India)
+    - Agriculture and Food Security (Myanmar)
+    - People-to-People Contact (Nepal)
+    - Science, Technology and Innovation (Sri Lanka)
+    - Connectivity (Thailand)
+
+    Importance for Bangladesh: hosting the secretariat gives Bangladesh a leading role; BIMSTEC also offers an alternative platform to SAARC, which has remained inactive because of India-Pakistan tensions, and it supports the country's connectivity with South East Asia.
 26. **Mention the day and month of celebration of International Mother's Day.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 322 (ET: BIBM)]*
 
+
+    Answer: International Mother's Day is celebrated on the second Sunday of May every year.
+
+    - It therefore has no fixed date; for example it fell on 12 May in 2024 and on 11 May in 2025.
+    - The modern observance was founded by Anna Jarvis in the United States in 1908, and it was made an official national holiday there by President Woodrow Wilson in 1914.
+    - The day honours mothers, motherhood and the influence of mothers in society.
+    - Related days: International Women's Day is on 8 March, Father's Day is on the third Sunday of June, and International Day of Families is on 15 May.
 27. **Who will host the T20 World Cup 2024?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 323 (ET: BIBM)]*
 
+
+    Answer: The ICC Men's T20 World Cup 2024 was hosted jointly by the West Indies and the United States of America.
+
+    - It was held from 1 to 29 June 2024.
+    - This was the first ICC world event hosted, even partly, by the United States, and the ninth edition of the T20 World Cup.
+    - It was the largest T20 World Cup up to that time, with 20 participating teams playing 55 matches.
+    - India won the title, beating South Africa in the final at the Kensington Oval in Barbados.
+    - The West Indies had earlier hosted the tournament in 2010, and the previous edition, in 2022, was hosted by Australia.
 28. **UNDP works in different countries and territories to eradicate poverty while protecting the planet. The headquarters of UNDP is located in which country?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 429 (ET: BIBM)]*
 
+
+    Answer: The headquarters of the United Nations Development Programme (UNDP) is located in New York, United States of America.
+
+    - It is at One United Nations Plaza, close to the UN Headquarters building.
+    - UNDP was founded in 1965 by the merger of the Expanded Programme of Technical Assistance and the United Nations Special Fund.
+    - It works in about 170 countries and territories on poverty eradication, democratic governance, climate resilience, crisis recovery and the achievement of the Sustainable Development Goals.
+    - It publishes the annual Human Development Report and the Human Development Index (HDI), first produced in 1990 under the leadership of the Pakistani economist Mahbub ul Haq with Amartya Sen.
+    - It is funded entirely by voluntary contributions from member states, and it is headed by an Administrator.
 29. **On 17 November 2015, UNESCO declared International Day for Universal Access to Information. Which day is observed as International Information Day?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 429 (ET: BIBM)]*
 
+
+    Answer: The International Day for Universal Access to Information is observed on 28 September.
+
+    - It was proclaimed by the UNESCO General Conference on 17 November 2015, and the United Nations General Assembly endorsed it in October 2019, giving it full UN recognition.
+    - The date was chosen because 28 September had already been observed since 2002 as International Right to Know Day, promoted by civil society organisations.
+    - Purpose: to promote the right of every citizen to seek, receive and impart information held by public bodies, which is regarded as essential to transparency, accountability and the fight against corruption.
+    - It relates directly to SDG target 16.10 on public access to information and fundamental freedoms.
+    - In Bangladesh the corresponding law is the Right to Information Act, 2009, which established the Information Commission and gives citizens the right to obtain information from public offices, ordinarily within twenty working days.
 30. **Which campaign works toward building an international consensus and a sustained global movement of leaders and citizens to eliminate nuclear weapons?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 430 (ET: BIBM)]*
 
+
+    Answer: Global Zero.
+
+    - Global Zero is an international campaign launched in December 2008 in Paris, working to build an international consensus and a sustained global movement of leaders and citizens for the elimination of nuclear weapons.
+    - It was founded by more than one hundred political, military, business, faith and civic leaders, and it proposes a phased, verified plan for the complete elimination of all nuclear weapons.
+    - Its supporters have included former heads of state, foreign ministers, national security advisers and senior military commanders from both nuclear and non-nuclear states.
+
+    Related organisations:
+    - ICAN (International Campaign to Abolish Nuclear Weapons), founded in 2007, won the Nobel Peace Prize in 2017 for its work leading to the Treaty on the Prohibition of Nuclear Weapons (TPNW).
+    - The Pugwash Conferences on Science and World Affairs won the Nobel Peace Prize in 1995.
+    - The main treaties in this field are the Non-Proliferation Treaty (NPT, 1968), the Comprehensive Nuclear-Test-Ban Treaty (CTBT, 1996) and the TPNW (2017), and the monitoring body is the International Atomic Energy Agency (IAEA).
 31. **জাতিসংঘের নিরাপত্তা পরিষদের দায়িত্ব বর্ণনা করুন।** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+    Answer: জাতিসংঘ নিরাপত্তা পরিষদ (UN Security Council) জাতিসংঘের ছয়টি প্রধান অঙ্গের একটি এবং আন্তর্জাতিক শান্তি ও নিরাপত্তা রক্ষার প্রধান দায়িত্বপ্রাপ্ত সংস্থা।
+
+    গঠন:
+    - মোট সদস্য ১৫টি।
+    - স্থায়ী সদস্য ৫টি (P5): যুক্তরাষ্ট্র, যুক্তরাজ্য, ফ্রান্স, রাশিয়া ও চীন। এদের ভেটো ক্ষমতা রয়েছে।
+    - অস্থায়ী সদস্য ১০টি, যারা সাধারণ পরিষদ কর্তৃক ভৌগোলিক ভারসাম্য বজায় রেখে দুই বছরের জন্য নির্বাচিত হয় এবং পরপর পুনর্নির্বাচিত হতে পারে না।
+    - সভাপতিত্ব সদস্যদের মধ্যে ইংরেজি বর্ণানুক্রমে প্রতি মাসে পরিবর্তিত হয়।
+    - পদ্ধতিগত বিষয়ে ৯ ভোট এবং গুরুত্বপূর্ণ বিষয়ে ৯ ভোটসহ কোনো স্থায়ী সদস্যের বিরোধিতা না থাকা প্রয়োজন।
+
+    দায়িত্ব ও ক্ষমতা (জাতিসংঘ সনদের ৫, ৬ ও ৭ নম্বর অধ্যায়):
+    - আন্তর্জাতিক শান্তি ও নিরাপত্তার প্রতি হুমকি চিহ্নিত করা এবং আগ্রাসনের কাজ নির্ধারণ করা।
+    - বিরোধের শান্তিপূর্ণ নিষ্পত্তির জন্য মধ্যস্থতা, সমঝোতা ও সালিশের সুপারিশ করা।
+    - যুদ্ধবিরতি ও অস্ত্রবিরতির আহ্বান জানানো।
+    - অর্থনৈতিক নিষেধাজ্ঞা, অস্ত্র নিষেধাজ্ঞা, ভ্রমণ নিষেধাজ্ঞা ও সম্পদ জব্দসহ অহিংস ব্যবস্থা গ্রহণ (৪১ অনুচ্ছেদ)।
+    - প্রয়োজনে সামরিক শক্তি প্রয়োগের অনুমোদন দেওয়া (৪২ অনুচ্ছেদ)।
+    - শান্তিরক্ষা মিশন প্রতিষ্ঠা ও তার ম্যান্ডেট নির্ধারণ।
+    - জাতিসংঘের মহাসচিব নিয়োগের জন্য সাধারণ পরিষদে সুপারিশ করা।
+    - নতুন সদস্য রাষ্ট্রের ভর্তির সুপারিশ করা।
+    - সাধারণ পরিষদের সঙ্গে যৌথভাবে আন্তর্জাতিক বিচার আদালতের (ICJ) বিচারক নির্বাচন করা।
+    - নিরাপত্তা পরিষদের সিদ্ধান্ত সব সদস্য রাষ্ট্রের জন্য বাধ্যতামূলক, যা জাতিসংঘের অন্য কোনো অঙ্গের নেই।
+
+    সমালোচনা: ভেটো ক্ষমতার অপব্যবহারে বহু গুরুত্বপূর্ণ প্রস্তাব আটকে যায়; গঠন ১৯৪৫ সালের বিশ্বব্যবস্থার প্রতিফলন হওয়ায় এশিয়া, আফ্রিকা ও লাতিন আমেরিকার প্রতিনিধিত্ব অপর্যাপ্ত। তাই সংস্কার ও স্থায়ী সদস্য সংখ্যা বাড়ানোর দাবি দীর্ঘদিনের।
+
+    বাংলাদেশ দুইবার অস্থায়ী সদস্য নির্বাচিত হয়েছে: ১৯৭৯-৮০ এবং ২০০০-০১ মেয়াদে। বাংলাদেশ জাতিসংঘ শান্তিরক্ষা মিশনে সৈন্য প্রেরণকারী শীর্ষ দেশগুলোর একটি।
 32. **বিশ্ব অর্থনীতিতে হরমুজ প্রণালির গুরুত্ব কী?** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+    Answer: হরমুজ প্রণালি (Strait of Hormuz) পারস্য উপসাগর ও ওমান উপসাগরকে যুক্ত করেছে, যার মাধ্যমে পারস্য উপসাগর আরব সাগর ও ভারত মহাসাগরের সঙ্গে সংযুক্ত হয়েছে। এর উত্তরে ইরান এবং দক্ষিণে ওমান ও সংযুক্ত আরব আমিরাত।
+
+    ভৌগোলিক বৈশিষ্ট্য:
+    - সবচেয়ে সরু স্থানে প্রস্থ মাত্র প্রায় ৩৩ কিলোমিটার (২১ নটিক্যাল মাইল)।
+    - জাহাজ চলাচলের প্রকৃত লেনের প্রস্থ প্রতিদিকে মাত্র ৩ কিলোমিটার, ফলে এটি অত্যন্ত সংকীর্ণ ও ঝুঁকিপূর্ণ।
+
+    বিশ্ব অর্থনীতিতে গুরুত্ব:
+    - এটি বিশ্বের সবচেয়ে গুরুত্বপূর্ণ তেল পরিবহন পথ (world's most important oil chokepoint)। বিশ্বের সমুদ্রপথে পরিবাহিত তেলের প্রায় এক-তৃতীয়াংশ এবং মোট বৈশ্বিক তেল ব্যবহারের প্রায় ২০ শতাংশ প্রতিদিন এই প্রণালি দিয়ে যায়, যার পরিমাণ প্রায় ২ কোটি ব্যারেল।
+    - সৌদি আরব, ইরাক, ইরান, সংযুক্ত আরব আমিরাত, কুয়েত ও কাতারের রপ্তানি করা তেলের প্রায় পুরোটাই এই পথ ব্যবহার করে।
+    - বিশ্বের তরলীকৃত প্রাকৃতিক গ্যাসের (LNG) প্রায় এক-তৃতীয়াংশ, বিশেষত কাতারের সম্পূর্ণ রপ্তানি, এখান দিয়ে যায়।
+    - এশিয়ার শিল্পোন্নত দেশগুলো—চীন, ভারত, জাপান ও দক্ষিণ কোরিয়া—তাদের জ্বালানির সিংহভাগ এই পথে পায়।
+    - প্রণালিটি কয়েক দিনের জন্য বন্ধ হলেও বিশ্ববাজারে তেলের দাম আকাশছোঁয়া হয়, শেয়ারবাজারে ধস নামে এবং সারা বিশ্বে মূল্যস্ফীতি বেড়ে যায়।
+    - বিকল্প পথ সীমিত: সৌদি আরবের ইস্ট-ওয়েস্ট পাইপলাইন ও আমিরাতের ফুজাইরা পাইপলাইন দিয়ে সামান্য পরিমাণ তেল প্রণালি এড়িয়ে পাঠানো সম্ভব, কিন্তু তা মোট সরবরাহের তুলনায় অপ্রতুল।
+
+    ভূরাজনৈতিক ঝুঁকি: ইরানের সঙ্গে পশ্চিমা দেশগুলোর উত্তেজনা বাড়লেই প্রণালি বন্ধ করে দেওয়ার হুমকি আসে। ১৯৮০-৮৮ সালের ইরান-ইরাক যুদ্ধকালীন "ট্যাংকার যুদ্ধ" এর প্রকৃত উদাহরণ। এ কারণে যুক্তরাষ্ট্রের পঞ্চম নৌবহর বাহরাইনে অবস্থান করে এবং প্রণালিতে নিয়মিত নৌ-টহল চলে।
+
+    বাংলাদেশের জন্য প্রভাব: দেশের জ্বালানি তেলের বড় অংশ মধ্যপ্রাচ্য থেকে আমদানি হয় এবং বিপুলসংখ্যক প্রবাসী শ্রমিক উপসাগরীয় দেশগুলোতে কাজ করেন। তাই এই প্রণালিতে সংকট দেখা দিলে বাংলাদেশে জ্বালানির দাম, পরিবহন ব্যয়, মূল্যস্ফীতি ও রেমিট্যান্স প্রবাহ সরাসরি ক্ষতিগ্রস্ত হয়।
 33. **অর্থনৈতিক কূটনীতি (Economic Diplomacy) কী? বাংলাদেশের অর্থনৈতিক কূটনীতি (Economic Diplomacy) এর চ্যালেঞ্জসমূহ কী কী?** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+    Answer: অর্থনৈতিক কূটনীতি (Economic Diplomacy) বলতে বোঝায় জাতীয় অর্থনৈতিক স্বার্থ অর্জনের উদ্দেশ্যে পরিচালিত কূটনৈতিক তৎপরতা—অর্থাৎ বাণিজ্য সম্প্রসারণ, বিদেশি বিনিয়োগ আকর্ষণ, শ্রমবাজার সৃষ্টি, প্রযুক্তি হস্তান্তর ও উন্নয়ন সহায়তা নিশ্চিত করতে দূতাবাস, মন্ত্রণালয় ও আন্তর্জাতিক ফোরামের ব্যবহার।
+
+    উপাদানসমূহ:
+    - বাণিজ্য কূটনীতি: রপ্তানি বাজার সম্প্রসারণ, শুল্কমুক্ত সুবিধা আদায়, মুক্ত বাণিজ্য চুক্তি সম্পাদন।
+    - বিনিয়োগ কূটনীতি: বিদেশি সরাসরি বিনিয়োগ আকর্ষণ, দ্বিপাক্ষিক বিনিয়োগ চুক্তি ও দ্বৈত কর পরিহার চুক্তি।
+    - শ্রম কূটনীতি: বিদেশে জনশক্তি রপ্তানির বাজার সৃষ্টি ও প্রবাসী শ্রমিকদের অধিকার রক্ষা।
+    - উন্নয়ন কূটনীতি: রেয়াতি ঋণ, অনুদান ও কারিগরি সহায়তা সংগ্রহ।
+
+    বাংলাদেশের অর্থনৈতিক কূটনীতির চ্যালেঞ্জসমূহ:
+    - এলডিসি থেকে উত্তরণ: ২০২৬ সালে স্বল্পোন্নত দেশের তালিকা থেকে উত্তরণের পর ইউরোপীয় ইউনিয়নের "এভরিথিং বাট আর্মস" সহ বিভিন্ন শুল্কমুক্ত সুবিধা ধাপে ধাপে বন্ধ হয়ে যাবে, যা রপ্তানির প্রতিযোগিতা সক্ষমতা কমাবে।
+    - রপ্তানি পণ্যের একমুখিতা: মোট রপ্তানির প্রায় ৮৪ শতাংশই তৈরি পোশাক। একটি খাতের ওপর এই নির্ভরতা অত্যন্ত ঝুঁকিপূর্ণ; পণ্য ও বাজার বৈচিত্র্যকরণ জরুরি।
+    - বিদেশি বিনিয়োগে দুর্বল প্রবাহ: জিডিপির অনুপাতে এফডিআই দক্ষিণ এশিয়ার মধ্যে সর্বনিম্নগুলোর একটি। প্রতিবন্ধকতা হলো আমলাতান্ত্রিক জটিলতা, জমি প্রাপ্তির অসুবিধা, নীতির ঘন ঘন পরিবর্তন, দুর্বল অবকাঠামো ও চুক্তি বাস্তবায়নে দীর্ঘসূত্রতা।
+    - দুর্বল মিশন-সক্ষমতা: অধিকাংশ দূতাবাসে প্রশিক্ষিত বাণিজ্য বা বিনিয়োগ কর্মকর্তার সংখ্যা অপ্রতুল এবং কমার্শিয়াল উইং সীমিত।
+    - মুক্ত বাণিজ্য চুক্তির অভাব: প্রতিবেশী ও প্রতিযোগী দেশগুলোর তুলনায় বাংলাদেশ খুব কম দ্বিপাক্ষিক ও আঞ্চলিক এফটিএ স্বাক্ষর করেছে।
+    - আঞ্চলিক সহযোগিতার স্থবিরতা: সার্ক কার্যত অকার্যকর; বিমসটেক ও বিবিআইএন উদ্যোগ ধীরগতির।
+    - শ্রমবাজারের ঝুঁকি: উপসাগরীয় দেশগুলোতে অতিনির্ভরতা, স্থানীয়করণ নীতি (নিতাকাত, সৌদিকরণ), অদক্ষ শ্রমিকের আধিক্য ও অভিবাসন ব্যয় বেশি হওয়া।
+    - ভূরাজনৈতিক ভারসাম্য: ভারত, চীন, যুক্তরাষ্ট্র, জাপান ও রাশিয়ার প্রতিযোগিতামূলক স্বার্থের মধ্যে ভারসাম্য রক্ষা করা কঠিন হয়ে উঠছে।
+    - অশুল্ক বাধা: মান নিয়ন্ত্রণ, পরীক্ষাগার সনদ, শ্রম মান ও পরিবেশগত শর্ত পূরণে ঘাটতি।
+    - ভাবমূর্তির সমস্যা: শ্রম অধিকার, কারখানার নিরাপত্তা ও সুশাসন নিয়ে আন্তর্জাতিক উদ্বেগ রপ্তানিতে প্রভাব ফেলে।
+
+    করণীয়: দূতাবাসগুলোতে দক্ষ বাণিজ্য উইং স্থাপন, রপ্তানি পণ্য ও বাজার বৈচিত্র্যকরণ, এফটিএ আলোচনায় সক্রিয়তা, ব্যবসাবান্ধব নীতি ও এক-স্টপ সেবা, দক্ষ জনশক্তি তৈরি এবং সরকারি-বেসরকারি যৌথ কূটনৈতিক উদ্যোগ।
 34. **জলবায়ু পরিবর্তন সমস্যা মোকাবেলায় G-7 এর ভূমিকা কী?** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+    Answer: জি-৭ (G-7) হলো বিশ্বের সাতটি উন্নত শিল্পোন্নত দেশের জোট: যুক্তরাষ্ট্র, যুক্তরাজ্য, কানাডা, ফ্রান্স, জার্মানি, ইতালি ও জাপান। ইউরোপীয় ইউনিয়নও এতে অংশগ্রহণ করে। বিশ্ব অর্থনীতির একটি বড় অংশ এবং ঐতিহাসিক কার্বন নিঃসরণের সিংহভাগ এই দেশগুলোর, তাই জলবায়ু পরিবর্তন মোকাবিলায় তাদের ভূমিকা নির্ণায়ক।
+
+    ভূমিকা:
+    - নিঃসরণ হ্রাসের অঙ্গীকার: জি-৭ দেশগুলো ২০৫০ সালের মধ্যে নেট-জিরো কার্বন নিঃসরণে পৌঁছানোর লক্ষ্য ঘোষণা করেছে এবং ২০৩৫ সালের মধ্যে বিদ্যুৎ খাতকে প্রায় সম্পূর্ণ কার্বনমুক্ত করার কথা বলেছে।
+    - কয়লা থেকে প্রস্থান: ২০২১ সালের সম্মেলনে তারা বিদেশে নতুন কয়লাভিত্তিক বিদ্যুৎকেন্দ্রে সরকারি অর্থায়ন বন্ধের সিদ্ধান্ত নেয়, এবং পরবর্তী সম্মেলনগুলোতে অভ্যন্তরীণ কয়লা বিদ্যুৎ পর্যায়ক্রমে বন্ধ করার সময়সীমা নির্ধারণ করে।
+    - জলবায়ু অর্থায়ন: উন্নয়নশীল দেশগুলোর জন্য বছরে ১০০ বিলিয়ন ডলার জলবায়ু অর্থায়নের প্রতিশ্রুতি পূরণে জি-৭ প্রধান দাতা। তবে বাস্তবে এই প্রতিশ্রুতি বহু বছর অপূর্ণ থেকেছে, যা সবচেয়ে বড় সমালোচনার বিষয়।
+    - প্যারিস চুক্তির নেতৃত্ব: ২০১৫ সালের প্যারিস চুক্তি ও পরবর্তী কপ সম্মেলনগুলোতে আলোচনার এজেন্ডা নির্ধারণে জি-৭ কেন্দ্রীয় ভূমিকা পালন করে।
+    - প্রযুক্তি ও গবেষণা: নবায়নযোগ্য জ্বালানি, সবুজ হাইড্রোজেন, কার্বন ক্যাপচার ও ব্যাটারি প্রযুক্তির গবেষণায় বিনিয়োগ এবং উন্নয়নশীল দেশে প্রযুক্তি হস্তান্তর।
+    - অবকাঠামো উদ্যোগ: "Build Back Better World" এবং "Partnership for Global Infrastructure and Investment" এর আওতায় উন্নয়নশীল দেশে সবুজ অবকাঠামোতে বিনিয়োগ।
+    - জাস্ট এনার্জি ট্রানজিশন পার্টনারশিপ (JETP): দক্ষিণ আফ্রিকা, ইন্দোনেশিয়া ও ভিয়েতনামের মতো দেশকে কয়লা থেকে নবায়নযোগ্য জ্বালানিতে উত্তরণে অর্থায়ন।
+    - "ক্লাইমেট ক্লাব" গঠন: শিল্পখাতের কার্বনমুক্তি ও অভিন্ন কার্বন মূল্য নির্ধারণে সমন্বিত উদ্যোগ।
+    - জীবাশ্ম জ্বালানিতে ভর্তুকি হ্রাস এবং প্লাস্টিক দূষণ ও জীববৈচিত্র্য রক্ষায় অঙ্গীকার।
+
+    সীমাবদ্ধতা ও সমালোচনা:
+    - জি-৭ এর সিদ্ধান্ত আইনগতভাবে বাধ্যতামূলক নয়; এগুলো কেবল রাজনৈতিক অঙ্গীকার।
+    - প্রতিশ্রুত অর্থায়ন যথাসময়ে ও যথাপরিমাণে পৌঁছায় না, এবং বড় অংশ অনুদানের বদলে ঋণ হিসেবে দেওয়া হয়।
+    - চীন, ভারত ও রাশিয়ার মতো বড় নিঃসরণকারী দেশ জোটে নেই, তাই একক প্রচেষ্টা যথেষ্ট নয়।
+    - ইউক্রেন যুদ্ধের পর জ্বালানি সংকটে কয়েকটি সদস্য দেশ সাময়িকভাবে কয়লা ব্যবহারে ফিরে গিয়েছিল, যা অঙ্গীকারের সঙ্গে সাংঘর্ষিক।
+    - ক্ষয়ক্ষতি তহবিলে (Loss and Damage Fund) অবদান প্রয়োজনের তুলনায় খুবই কম।
+
+    বাংলাদেশের প্রত্যাশা: ঐতিহাসিক দায় অনুযায়ী পর্যাপ্ত ও অনুদানভিত্তিক জলবায়ু অর্থায়ন, প্রযুক্তি হস্তান্তর এবং ক্ষয়ক্ষতি তহবিল কার্যকর করা, কারণ বাংলাদেশ নিঃসরণে প্রায় শূন্য অবদান রেখেও সবচেয়ে ক্ষতিগ্রস্ত দেশগুলোর একটি।
 35. **FTA এবং PTA এর পূর্ণরূপ লিখুন এবং এদের মধ্যে পার্থক্য কী?** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+    Answer:
+    - FTA এর পূর্ণরূপ: Free Trade Agreement (মুক্ত বাণিজ্য চুক্তি)
+    - PTA এর পূর্ণরূপ: Preferential Trade Agreement (অগ্রাধিকারমূলক বাণিজ্য চুক্তি)
+
+    | বিষয় | PTA (অগ্রাধিকারমূলক বাণিজ্য চুক্তি) | FTA (মুক্ত বাণিজ্য চুক্তি) |
+    |---|---|---|
+    | শুল্ক ছাড়ের মাত্রা | নির্দিষ্ট কিছু পণ্যে আংশিক শুল্ক হ্রাস | প্রায় সব পণ্যে শুল্ক সম্পূর্ণ বিলোপ বা শূন্যের কাছাকাছি |
+    | পণ্যের পরিধি | সীমিত তালিকা (positive list) | ব্যাপক; সাধারণত ৯০ শতাংশের বেশি বাণিজ্য অন্তর্ভুক্ত |
+    | একীভবনের স্তর | আঞ্চলিক অর্থনৈতিক একীভবনের প্রথম ও দুর্বলতম ধাপ | দ্বিতীয় ও গভীরতর ধাপ |
+    | পরিধি | মূলত পণ্য বাণিজ্য | পণ্যের পাশাপাশি সেবা, বিনিয়োগ, মেধাস্বত্ব ও সরকারি ক্রয়ও অন্তর্ভুক্ত হতে পারে |
+    | আলোচনার জটিলতা | তুলনামূলক সহজ ও দ্রুত | জটিল, দীর্ঘ ও বিস্তারিত |
+    | উদাহরণ | সাপটা (SAPTA), গ্লোবাল সিস্টেম অব ট্রেড প্রেফারেন্সেস | সাফটা (SAFTA), নাফটা/ইউএসএমসিএ, আসিয়ান এফটিএ, বাংলাদেশ-ভুটান পিটিএ থেকে উত্তরণের আলোচনা |
+
+    একীভবনের ধাপগুলো: PTA → FTA → শুল্ক ইউনিয়ন (Customs Union) → অভিন্ন বাজার (Common Market) → অর্থনৈতিক ইউনিয়ন (Economic Union)। ইউরোপীয় ইউনিয়ন সর্বশেষ ধাপের উদাহরণ।
+
+    বাংলাদেশের প্রেক্ষাপট: বাংলাদেশ ২০২০ সালে ভুটানের সঙ্গে তার প্রথম দ্বিপাক্ষিক অগ্রাধিকারমূলক বাণিজ্য চুক্তি (PTA) স্বাক্ষর করে। ২০২৬ সালে স্বল্পোন্নত দেশের তালিকা থেকে উত্তরণের পর শুল্কমুক্ত সুবিধা হারানোর ঝুঁকি মোকাবিলায় জাপান, ভারত, দক্ষিণ কোরিয়া, মালয়েশিয়াসহ বিভিন্ন দেশের সঙ্গে এফটিএ বা সমন্বিত অর্থনৈতিক অংশীদারিত্ব চুক্তি (CEPA) নিয়ে আলোচনা চলছে।
 36. **5.3 What is the name of the central bank of the United Kingdom?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+    Answer: The Bank of England.
+
+    - Established in 1694, it is one of the oldest central banks in the world and is often called "The Old Lady of Threadneedle Street" after the street in London where it stands.
+    - Its main functions are issuing banknotes, setting monetary policy through the Monetary Policy Committee, maintaining price stability (the inflation target is 2 per cent), acting as banker to the government and as lender of last resort, and supervising banks through the Prudential Regulation Authority.
+    - It was nationalised in 1946 and was given operational independence in setting interest rates in 1997.
 37. **5.4 Which international organization publishes the "World Economic Outlook" report?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+    Answer: The International Monetary Fund (IMF).
+
+    - The World Economic Outlook (WEO) is published twice a year, in April and October, with two interim updates in January and July.
+    - It contains the IMF's analysis and projections of global growth, inflation, trade, employment and current account balances, both for the world and for individual countries.
+    - The IMF also publishes the Global Financial Stability Report and the Fiscal Monitor.
+    - It was established in 1944 at the Bretton Woods Conference and began operations in 1945; its headquarters is in Washington, D.C., United States.
 38. **How many country participated in cricket world cup 2023?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
+
+    Answer: Ten (10) countries took part in the ICC Cricket World Cup 2023.
+
+    - The tournament was the thirteenth edition of the ODI World Cup and was hosted by India alone, from 5 October to 19 November 2023.
+    - Format: a single round-robin league in which all ten teams played one another, followed by two semi-finals and the final. Each team therefore played nine league matches, and the total number of matches was 48.
+    - The ten teams were India, Australia, England, Pakistan, New Zealand, South Africa, Bangladesh, Sri Lanka, Afghanistan and the Netherlands.
+    - Australia won the title, beating India by six wickets in the final at the Narendra Modi Stadium, Ahmedabad. It was Australia's sixth World Cup.
+    - Virat Kohli was named Player of the Tournament with 765 runs, a record for a single World Cup.
+    - The next edition, in 2027, is scheduled to be hosted by South Africa, Zimbabwe and Namibia with 14 teams.
 39. **How many goals of SDG?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
+
+    Answer: There are 17 Sustainable Development Goals (SDGs).
+
+    - They also contain 169 targets and 231 unique indicators.
+    - They were adopted by the United Nations General Assembly on 25 September 2015 as part of the 2030 Agenda for Sustainable Development, and they run from 2016 to 2030.
+    - They replaced the eight Millennium Development Goals (MDGs), which ran from 2000 to 2015.
+    - The guiding principle is "Leave No One Behind".
 40. **What is the function of Global Climate Fund?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
+
+    Answer: The Green Climate Fund (GCF) is the world's largest dedicated climate fund, created in 2010 at COP16 in Cancun under the United Nations Framework Convention on Climate Change (UNFCCC), and made operational in 2015. Its headquarters is in Songdo, Incheon, Republic of Korea.
+
+    Functions:
+    - To channel climate finance from developed countries to developing countries, in line with the commitment under the UNFCCC and the Paris Agreement.
+    - To finance mitigation projects that reduce greenhouse gas emissions, such as renewable energy, energy efficiency, clean transport, sustainable forestry and low-carbon industry.
+    - To finance adaptation projects that build resilience to the effects of climate change, such as embankments, cyclone shelters, saline-tolerant crops, early warning systems and water management.
+    - To maintain a balance of roughly 50 per cent of resources between mitigation and adaptation, and to direct at least half of the adaptation funding to the most vulnerable groups, namely the least developed countries, small island developing states and African states.
+    - To promote a paradigm shift towards low-emission and climate-resilient development pathways, rather than financing isolated projects.
+    - To support readiness and preparatory activities, so that developing countries can build the institutional capacity needed to access and manage climate finance.
+    - To mobilise private-sector investment through its Private Sector Facility, using instruments such as grants, concessional loans, equity and guarantees.
+    - To operate through accredited entities, both international (such as UNDP, the World Bank and the Asian Development Bank) and national (Direct Access Entities), so that recipient countries gain direct control over funds.
+
+    Bangladesh and the GCF:
+    - The Palli Karma-Sahayak Foundation (PKSF) and the Ministry of Finance's Economic Relations Division are among the accredited and designated bodies.
+    - Funded projects include coastal climate-resilient infrastructure, water supply in saline-affected coastal districts, and enhancing the adaptive capacity of coastal communities.
+    - Bangladesh also finances adaptation from its own budget through the Bangladesh Climate Change Trust Fund, which is often cited internationally as an example of national ownership.
 41. **মেসোপটেমিয়া কোন দেশের সভ্যতা।** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
+
+    Answer: মেসোপটেমিয়া সভ্যতা গড়ে উঠেছিল বর্তমান ইরাক ভূখণ্ডে।
+
+    - "মেসোপটেমিয়া" গ্রিক শব্দ, যার অর্থ "দুই নদীর মধ্যবর্তী ভূমি"। নদী দুটি হলো টাইগ্রিস (দজলা) ও ইউফ্রেটিস (ফোরাত)।
+    - অঞ্চলটি বর্তমান ইরাকের প্রায় সম্পূর্ণ অংশ এবং সিরিয়া, তুরস্ক ও ইরানের সীমান্তবর্তী কিছু এলাকা নিয়ে বিস্তৃত ছিল। এটি "উর্বর অর্ধচন্দ্র" (Fertile Crescent) অঞ্চলের অংশ।
+    - একে "সভ্যতার সূতিকাগার" (Cradle of Civilization) বলা হয়।
+    - প্রধান সভ্যতাগুলো: সুমেরীয়, আক্কাদীয়, ব্যাবিলনীয় ও অ্যাসিরীয়।
+
+    উল্লেখযোগ্য অবদান:
+    - কিউনিফর্ম লিপি, যা পৃথিবীর প্রাচীনতম লিখন পদ্ধতিগুলোর একটি।
+    - চাকার আবিষ্কার এবং লাঙল ও সেচব্যবস্থার উন্নয়ন।
+    - হাম্মুরাবির আইন সংহিতা, পৃথিবীর প্রাচীনতম লিখিত আইনগুলোর একটি।
+    - ৬০ ভিত্তিক গণনা পদ্ধতি, যা থেকে ঘণ্টায় ৬০ মিনিট ও বৃত্তে ৩৬০ ডিগ্রির হিসাব এসেছে।
+    - "গিলগামেশ" মহাকাব্য এবং ব্যাবিলনের ঝুলন্ত উদ্যান।
 42. **কোন প্রণালী এশিয়া আফ্রিকাকে পৃথক করেছে?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
+
+    Answer: বাব-এল-মান্দেব প্রণালি (Bab-el-Mandeb Strait) এশিয়া ও আফ্রিকাকে পৃথক করেছে।
+
+    - এটি লোহিত সাগর ও এডেন উপসাগরকে (তথা আরব সাগর ও ভারত মহাসাগরকে) যুক্ত করেছে।
+    - এর পূর্ব তীরে এশিয়া মহাদেশের ইয়েমেন এবং পশ্চিম তীরে আফ্রিকা মহাদেশের জিবুতি ও ইরিত্রিয়া অবস্থিত।
+    - প্রস্থ সবচেয়ে সরু স্থানে মাত্র প্রায় ২৯ কিলোমিটার।
+    - নামের অর্থ আরবিতে "অশ্রুর তোরণ" (Gate of Tears), যা এর বিপজ্জনক নৌচলাচলের কারণে দেওয়া হয়েছে।
+    - গুরুত্ব: এটি ইউরোপ ও এশিয়ার মধ্যে সুয়েজ খাল হয়ে যাওয়া সমুদ্রপথের অপরিহার্য অংশ, তাই এটি বিশ্বের অন্যতম গুরুত্বপূর্ণ সামুদ্রিক চোকপয়েন্ট।
+
+    উল্লেখ্য, সুয়েজ খালও এশিয়া ও আফ্রিকাকে পৃথক করেছে, তবে সেটি একটি মনুষ্যনির্মিত খাল, প্রাকৃতিক প্রণালি নয়। প্রণালি হিসেবে সঠিক উত্তর বাব-এল-মান্দেব।
 43. **The first ODI Cricket was played on January 5, 1971 between which countries?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
+
+    Answer: The first One Day International (ODI) cricket match was played on 5 January 1971 between Australia and England.
+
+    - Venue: the Melbourne Cricket Ground (MCG), Australia.
+    - Background: the third Test of the 1970-71 Ashes series had been washed out by rain without a ball being bowled, so the authorities arranged a one-day 40-over match on the final scheduled day to compensate the spectators.
+    - Format: 40 overs per side, with eight balls per over, which was the Australian practice at the time.
+    - Result: Australia won by 5 wickets. John Edrich of England was named Man of the Match.
+    - About 46,000 spectators attended, and the unexpected success of the match convinced administrators that limited-overs international cricket had a future, leading to the first Cricket World Cup in England in 1975.
+    - Bangladesh played its first ODI on 31 March 1986 against Pakistan in the Asia Cup at Moratuwa, Sri Lanka.
 44. **Who won the Nobel Prize in Physics in 2023?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+
+    Answer: The Nobel Prize in Physics 2023 was awarded jointly to Pierre Agostini, Ferenc Krausz and Anne L'Huillier.
+
+    - Citation: "for experimental methods that generate attosecond pulses of light for the study of electron dynamics in matter."
+    - An attosecond is one quintillionth of a second (10 to the power minus 18 seconds). There are about as many attoseconds in one second as there have been seconds since the birth of the universe.
+    - Their work made it possible to create extremely short pulses of light, short enough to capture the movement of electrons inside atoms and molecules, which was previously impossible because electrons move far too fast.
+    - Applications include electronics, molecular imaging and medical diagnostics, for example the early detection of disease markers in blood.
+    - Pierre Agostini is French and works in the United States (Ohio State University), Ferenc Krausz is Hungarian-Austrian (Max Planck Institute of Quantum Optics, Germany), and Anne L'Huillier is French-Swedish (Lund University). She is only the fifth woman ever to win the Nobel Prize in Physics.
 45. **Write down the names of new members of BRICS.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+
+    Answer: BRICS expanded from five to ten members on 1 January 2024.
+
+    Original members (5): Brazil, Russia, India, China and South Africa. The acronym BRIC was coined by the economist Jim O'Neill of Goldman Sachs in 2001, the group's first summit was held in 2009, and South Africa joined in 2010.
+
+    New members admitted from 1 January 2024:
+    - Egypt
+    - Ethiopia
+    - Iran
+    - Saudi Arabia
+    - United Arab Emirates
+
+    - Argentina had also been invited at the 2023 Johannesburg summit but declined to join after a change of government.
+    - Indonesia was admitted as a full member in January 2025, making the group eleven members. <!-- verify -->
+    - Several other countries, including Bangladesh, have expressed interest in joining, and a category of partner countries has been created.
+
+    Significance: the expanded group covers a large share of world population, oil production and land area, and is seen as a platform for the Global South seeking reform of the existing international financial order. Its main institution is the New Development Bank (NDB), headquartered in Shanghai, of which Bangladesh became a member in 2021.
 46. **Main Purposes of UNESCO.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+
+    Answer: UNESCO stands for the United Nations Educational, Scientific and Cultural Organization. It was founded on 16 November 1945 and its headquarters is in Paris, France. Its constitution states that "since wars begin in the minds of men, it is in the minds of men that the defences of peace must be constructed."
+
+    Main purposes:
+    - To contribute to peace and security by promoting collaboration among nations through education, science, culture and communication.
+    - To promote universal, quality and inclusive education for all, and to lead the achievement of SDG 4 on quality education.
+    - To advance scientific cooperation and research, including programmes on oceanography, hydrology, biosphere reserves and the ethics of science and artificial intelligence.
+    - To protect and preserve cultural and natural heritage, principally through the World Heritage List established by the 1972 World Heritage Convention.
+    - To safeguard intangible cultural heritage, such as traditional music, craft, festival and language practices.
+    - To promote freedom of expression, press freedom and the safety of journalists, and to build inclusive knowledge societies.
+    - To promote cultural diversity, intercultural dialogue and a culture of peace.
+    - To maintain the Memory of the World Register for documentary heritage.
+    - To promote gender equality and the empowerment of women through education and access to information.
+
+    Relevance to Bangladesh:
+    - UNESCO declared 21 February as International Mother Language Day in 1999, in recognition of the Language Movement of 1952. It is observed worldwide from 2000.
+    - The 7 March speech of Bangabandhu Sheikh Mujibur Rahman was inscribed in the Memory of the World International Register on 30 October 2017.
+    - World Heritage Sites in Bangladesh: the Sundarbans, the Sixty Dome Mosque of Bagerhat and the Buddhist Vihara at Paharpur.
+    - Intangible heritage: Jamdani weaving, Baul songs, Mangal Shobhajatra of Pahela Baishakh, Shital Pati weaving and rickshaw art of Dhaka.
 47. **Which city of China, the Asian Olympic be held in 2023?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+
+    Answer: The 19th Asian Games were held in Hangzhou, in the Zhejiang province of China.
+
+    - They were originally scheduled for 10 to 25 September 2022, but were postponed because of the COVID-19 pandemic and were finally held from 23 September to 8 October 2023. The name "Hangzhou 2022" was retained.
+    - About 12,500 athletes from 45 countries and territories of the Olympic Council of Asia took part, competing in 40 sports and 61 disciplines, which made it the largest Asian Games in history.
+    - China topped the medal table by a wide margin, followed by Japan and the Republic of Korea.
+    - This was the third time China hosted the Asian Games, after Beijing in 1990 and Guangzhou in 2010.
+    - The next edition, the 20th Asian Games, is to be held in Aichi-Nagoya, Japan, in 2026.
 48. **বিজ্ঞানে নোবেল বিজয়ী ২০২৩ পেয়েছে কোন বিষয়ের উপরে?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+    Answer: ২০২৩ সালে বিজ্ঞানের তিনটি শাখায় নোবেল পুরস্কার নিম্নলিখিত বিষয়ের ওপর প্রদান করা হয়:
+
+    | শাখা | বিজয়ী | বিষয় |
+    |---|---|---|
+    | পদার্থবিজ্ঞান | পিয়ের আগোস্তিনি, ফেরেঙ্ক ক্রাউস, অ্যান লুইলিয়ে | পদার্থে ইলেকট্রনের গতিবিধি পর্যবেক্ষণের জন্য অ্যাটোসেকেন্ড আলোকস্পন্দ সৃষ্টির পরীক্ষামূলক পদ্ধতি উদ্ভাবন |
+    | রসায়ন | মুঙ্গি বাভেন্ডি, লুই ব্রুস, আলেক্সেই একিমভ | কোয়ান্টাম ডট আবিষ্কার ও সংশ্লেষণ |
+    | চিকিৎসাবিজ্ঞান | কাতালিন কারিকো, ড্রু ওয়াইজম্যান | নিউক্লিওসাইড বেস পরিবর্তন সংক্রান্ত আবিষ্কার, যা কোভিড-১৯ এর বিরুদ্ধে কার্যকর এমআরএনএ টিকা তৈরির পথ খুলে দেয় |
+
+    ব্যাখ্যা:
+    - অ্যাটোসেকেন্ড হলো সেকেন্ডের ১০ এর ঋণাত্মক ১৮ ভাগের এক ভাগ। এত ক্ষুদ্র সময়ের আলোকস্পন্দ ব্যবহার করে পরমাণুর ভেতরে ইলেকট্রনের অতি দ্রুত গতি প্রথমবারের মতো পর্যবেক্ষণ করা সম্ভব হয়।
+    - কোয়ান্টাম ডট হলো ন্যানোমিটার আকারের কণা, যাদের আকার বদলালেই নিঃসৃত আলোর রং বদলে যায়। এগুলো QLED টেলিভিশন, LED আলো এবং চিকিৎসাক্ষেত্রে টিউমার শনাক্তকরণে ব্যবহৃত হয়।
+    - কারিকো ও ওয়াইজম্যানের গবেষণা এমআরএনএ-কে দেহের প্রতিরোধ ব্যবস্থার অবাঞ্ছিত প্রতিক্রিয়া থেকে রক্ষা করে, যা ফাইজার-বায়োএনটেক ও মডার্নার টিকা তৈরির ভিত্তি।
 49. **Who is the inventor of IR 4.00?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+    Answer: The term "Fourth Industrial Revolution" (IR 4.0) was coined and popularised by Professor Klaus Schwab, the founder and Executive Chairman of the World Economic Forum (WEF).
+
+    - He introduced the concept in 2015 and developed it in his 2016 book "The Fourth Industrial Revolution", and it was the theme of the World Economic Forum annual meeting at Davos in 2016.
+    - The related German term "Industrie 4.0" had earlier been used in 2011 as a national strategy of the German government for the digitisation of manufacturing, so Schwab did not invent the technology but named and framed the wider social and economic transformation.
+
+    The four industrial revolutions:
+    - First (about 1760): steam power and mechanised production.
+    - Second (about 1870): electricity, the assembly line and mass production.
+    - Third (about 1969): electronics, computers and automation, also called the digital revolution.
+    - Fourth (present): the fusion of physical, digital and biological systems.
+
+    Core technologies of IR 4.0: artificial intelligence and machine learning, the Internet of Things, big data analytics, cloud computing, robotics, 3D printing, blockchain, autonomous vehicles, quantum computing, nanotechnology, biotechnology and augmented reality.
+
+    Implications for Bangladesh: automation threatens a large share of low-skilled jobs in the ready-made garment sector, so investment in skills, STEM education and technical training is critical. At the same time it creates opportunities in software, freelancing, business process outsourcing and high-value manufacturing. The government has established hi-tech parks and skills programmes for this reason.
 50. **Breifly explain SDG.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 644 (ET: BUET)]*
 
+
+    Answer: SDG stands for Sustainable Development Goals. They form a universal set of 17 goals, 169 targets and 231 indicators adopted by all 193 member states of the United Nations on 25 September 2015 as the 2030 Agenda for Sustainable Development, to be achieved between 2016 and 2030.
+
+    The 17 goals:
+    - 1. No Poverty
+    - 2. Zero Hunger
+    - 3. Good Health and Well-being
+    - 4. Quality Education
+    - 5. Gender Equality
+    - 6. Clean Water and Sanitation
+    - 7. Affordable and Clean Energy
+    - 8. Decent Work and Economic Growth
+    - 9. Industry, Innovation and Infrastructure
+    - 10. Reduced Inequalities
+    - 11. Sustainable Cities and Communities
+    - 12. Responsible Consumption and Production
+    - 13. Climate Action
+    - 14. Life Below Water
+    - 15. Life on Land
+    - 16. Peace, Justice and Strong Institutions
+    - 17. Partnerships for the Goals
+
+    Key features:
+    - They rest on three pillars: economic growth, social inclusion and environmental protection.
+    - Unlike the Millennium Development Goals, which applied mainly to developing countries, the SDGs apply to every country, rich and poor alike.
+    - The central principle is "Leave No One Behind", meaning that progress must reach the most disadvantaged groups first.
+    - Progress is reviewed through the annual Voluntary National Review at the High-Level Political Forum of the United Nations.
+
+    Bangladesh context: implementation is coordinated by the SDG Affairs office at the Prime Minister's Office. Bangladesh has made notable progress in reducing poverty, cutting maternal and child mortality, and achieving gender parity in primary and secondary school enrolment, but faces challenges in quality education, decent employment, inequality and climate resilience. The main constraint is financing, since the estimated additional requirement is a very large share of GDP every year.
 51. **Greenpeace বলতে কি বুঝ?** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 658 (ET: N/A)]*
 
+
+    Answer: গ্রিনপিস (Greenpeace) হলো একটি স্বাধীন আন্তর্জাতিক পরিবেশবাদী অলাভজনক সংস্থা, যা পৃথিবীর পরিবেশ রক্ষা ও শান্তি প্রতিষ্ঠার লক্ষ্যে অহিংস সরাসরি কর্মসূচির (non-violent direct action) মাধ্যমে প্রচারাভিযান চালায়।
+
+    - প্রতিষ্ঠা: ১৯৭১ সালে কানাডার ভ্যাঙ্কুভারে। প্রথম অভিযান ছিল আলাস্কার আমচিটকা দ্বীপে যুক্তরাষ্ট্রের পারমাণবিক পরীক্ষার প্রতিবাদ।
+    - আন্তর্জাতিক সদর দপ্তর: আমস্টারডাম, নেদারল্যান্ডস।
+    - বর্তমানে বিশ্বের ৫৫টিরও বেশি দেশে এর কার্যালয় রয়েছে।
+    - অর্থায়ন: সাধারণ মানুষের ব্যক্তিগত অনুদান ও কিছু ফাউন্ডেশনের সহায়তা। নিরপেক্ষতা রক্ষার জন্য এটি কোনো সরকার, রাজনৈতিক দল বা কর্পোরেশনের অর্থ গ্রহণ করে না।
+
+    প্রধান কর্মক্ষেত্র:
+    - পারমাণবিক অস্ত্র ও পারমাণবিক পরীক্ষার বিরোধিতা।
+    - জলবায়ু পরিবর্তন প্রতিরোধ এবং কয়লা, তেল ও গ্যাসের পরিবর্তে নবায়নযোগ্য জ্বালানির পক্ষে প্রচারণা।
+    - বন উজাড় প্রতিরোধ, বিশেষত আমাজন ও ইন্দোনেশিয়ার রেইনফরেস্ট রক্ষা।
+    - তিমি শিকার ও অতিরিক্ত মৎস্য আহরণ বন্ধ করা এবং সমুদ্র রক্ষা।
+    - প্লাস্টিক দূষণ ও বিষাক্ত রাসায়নিক নিঃসরণ প্রতিরোধ।
+    - জেনেটিকালি মডিফাইড ফসল ও আর্কটিকে তেল অনুসন্ধানের বিরোধিতা।
+
+    কর্মপদ্ধতি: জাহাজ নিয়ে পরীক্ষাস্থল বা তেল রিগে অবস্থান নেওয়া, ব্যানার টাঙানো, বৈজ্ঞানিক প্রতিবেদন প্রকাশ, জনমত গঠন ও আইনি লড়াই। এর বিখ্যাত জাহাজ "রেইনবো ওয়ারিয়র", যার প্রথমটি ১৯৮৫ সালে নিউজিল্যান্ডে ফরাসি গোয়েন্দা সংস্থার বোমা হামলায় ডুবিয়ে দেওয়া হয়।
+
+    সমালোচনা: কোনো কোনো অভিযানকে অতিরিক্ত আগ্রাসী বা আইনভঙ্গকারী বলে সমালোচনা করা হয়, এবং জিএম ফসলের বিরোধিতাকে বিজ্ঞানবিরোধী বলেও অভিযোগ ওঠে।
 52. **৯. পূর্ণরূপ লিখুন: UNIDO, ICJ, NATO** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
 
+
+    Answer:
+    - UNIDO: United Nations Industrial Development Organization (জাতিসংঘ শিল্প উন্নয়ন সংস্থা)। প্রতিষ্ঠা ১৯৬৬, সদর দপ্তর ভিয়েনা, অস্ট্রিয়া। উন্নয়নশীল দেশে অন্তর্ভুক্তিমূলক ও টেকসই শিল্পায়ন এগিয়ে নেওয়াই এর কাজ।
+    - ICJ: International Court of Justice (আন্তর্জাতিক বিচার আদালত)। প্রতিষ্ঠা ১৯৪৫, সদর দপ্তর হেগ, নেদারল্যান্ডস (পিস প্যালেস)। এটি জাতিসংঘের প্রধান বিচার বিভাগীয় অঙ্গ; রাষ্ট্রের মধ্যকার বিরোধ নিষ্পত্তি করে এবং জাতিসংঘের অঙ্গগুলোকে পরামর্শমূলক মতামত দেয়। বিচারকের সংখ্যা ১৫ জন, মেয়াদ ৯ বছর।
+    - NATO: North Atlantic Treaty Organization (উত্তর আটলান্টিক চুক্তি সংস্থা)। প্রতিষ্ঠা ৪ এপ্রিল ১৯৪৯, সদর দপ্তর ব্রাসেলস, বেলজিয়াম। এটি একটি সামরিক জোট, যার ৫ নম্বর অনুচ্ছেদ অনুযায়ী কোনো সদস্যের ওপর হামলা সব সদস্যের ওপর হামলা বলে গণ্য হয়। ফিনল্যান্ড (২০২৩) ও সুইডেন (২০২৪) যোগ দেওয়ার পর সদস্য সংখ্যা ৩২।
 53. **১০. ডি-৮ প্রতিষ্ঠিত হয় কোন সালে? এর সদস্য সংখ্যা কত? এর সদরদপ্তর কোথায়?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
 
+
+    Answer:
+    - ডি-৮ প্রতিষ্ঠিত হয় ১৯৯৭ সালের ১৫ জুন, তুরস্কের ইস্তাম্বুলে গৃহীত ইস্তাম্বুল ঘোষণার মাধ্যমে।
+    - সদস্য সংখ্যা ৮টি: বাংলাদেশ, মিসর, ইন্দোনেশিয়া, ইরান, মালয়েশিয়া, নাইজেরিয়া, পাকিস্তান ও তুরস্ক।
+    - সদর দপ্তর ইস্তাম্বুল, তুরস্কে।
+
+    অন্যান্য তথ্য:
+    - পূর্ণ নাম: Developing Eight (উন্নয়নশীল আটটি মুসলিম সংখ্যাগরিষ্ঠ দেশের অর্থনৈতিক সহযোগিতা সংস্থা)।
+    - উদ্যোক্তা: তুরস্কের তৎকালীন প্রধানমন্ত্রী নাজমুদ্দিন এরবাকান।
+    - উদ্দেশ্য: সদস্য দেশগুলোর মধ্যে বাণিজ্য বৃদ্ধি, বিশ্ব অর্থনীতিতে অবস্থান শক্তিশালী করা, উন্নয়নশীল দেশগুলোর জীবনমান উন্নয়ন এবং আন্তর্জাতিক সিদ্ধান্ত গ্রহণে অংশগ্রহণ বাড়ানো।
+    - সহযোগিতার খাত: বাণিজ্য, শিল্প, কৃষি ও খাদ্য নিরাপত্তা, জ্বালানি, পরিবহন, স্বাস্থ্য ও পর্যটন।
+    - এটি কোনো ধর্মীয় জোট নয়, বরং একটি অর্থনৈতিক সহযোগিতা সংস্থা। বাংলাদেশ এর প্রতিষ্ঠাতা সদস্য এবং কয়েকবার শীর্ষ সম্মেলন আয়োজন করেছে।
 54. **১১. বাংলাদেশের সাথে মিয়ানমারের প্রধান সমস্যার উল্লেখ করত: এর সমাধানের উপায় সংক্ষেপে বর্ণনা করুন।** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
 
+
+    Answer: বাংলাদেশ ও মিয়ানমারের মধ্যে প্রধান সমস্যা রোহিঙ্গা শরণার্থী সংকট।
+
+    সমস্যার স্বরূপ:
+    - ২০১৭ সালের আগস্টে মিয়ানমারের রাখাইন রাজ্যে সামরিক অভিযানের ফলে প্রায় সাত লাখ রোহিঙ্গা বাংলাদেশে পালিয়ে আসেন। আগে থেকে অবস্থানরতসহ বর্তমানে সংখ্যা প্রায় ১২ লাখ।
+    - তাঁরা মূলত কক্সবাজারের উখিয়া ও টেকনাফের ক্যাম্পে এবং কিছু অংশ নোয়াখালীর ভাসানচরে বসবাস করছেন।
+    - মিয়ানমার ১৯৮২ সালের নাগরিকত্ব আইনে রোহিঙ্গাদের স্বীকৃত জাতিগোষ্ঠী হিসেবে গণ্য করে না, ফলে তাঁরা রাষ্ট্রহীন।
+    - বহুবার প্রত্যাবাসন চুক্তি ও উদ্যোগ নেওয়া হলেও একজন রোহিঙ্গাও স্বেচ্ছায় ফিরে যাননি।
+
+    বাংলাদেশের ওপর প্রভাব:
+    - বিপুল অর্থনৈতিক ব্যয় ও আন্তর্জাতিক সহায়তা ক্রমশ হ্রাস।
+    - কক্সবাজারের বনভূমি উজাড়, পাহাড় কাটা ও পরিবেশগত বিপর্যয়।
+    - স্থানীয় জনগোষ্ঠীর সঙ্গে সামাজিক উত্তেজনা এবং শ্রমবাজারে চাপ।
+    - ক্যাম্পে সশস্ত্র গোষ্ঠীর তৎপরতা, মাদক ও মানব পাচারের বিস্তার এবং নিরাপত্তা ঝুঁকি।
+    - এছাড়া সীমান্তে গোলাগুলি, আকাশসীমা লঙ্ঘন এবং সাম্প্রতিক সময়ে রাখাইনের অভ্যন্তরীণ সংঘাতের প্রভাব সীমান্তে এসে পড়া।
+
+    সমাধানের উপায়:
+    - দ্বিপাক্ষিক আলোচনা অব্যাহত রাখার পাশাপাশি বিষয়টিকে বহুপাক্ষিক করা: আসিয়ান, ওআইসি, জাতিসংঘ, চীন ও ভারতকে সক্রিয়ভাবে যুক্ত করা।
+    - প্রত্যাবাসনের পূর্বশর্ত হিসেবে নাগরিকত্ব, নিরাপত্তা, চলাচলের স্বাধীনতা ও জীবিকার লিখিত নিশ্চয়তা আদায়।
+    - আন্তর্জাতিক বিচার আদালতে গাম্বিয়ার দায়ের করা গণহত্যা মামলা এবং আইসিসির তদন্তে সমর্থন অব্যাহত রাখা, যাতে দায়মুক্তির সংস্কৃতি ভাঙে।
+    - রাখাইনে জাতিসংঘ সংস্থাগুলোর উপস্থিতি ও পর্যবেক্ষণ নিশ্চিত করা এবং সেখানে পুনর্বাসনের অবকাঠামো গড়ে তোলা।
+    - কূটনৈতিক তৎপরতা জোরদার করে চীন ও ভারতকে বোঝানো যে দীর্ঘস্থায়ী সংকট গোটা অঞ্চলের নিরাপত্তার জন্য ক্ষতিকর।
+    - স্বল্পমেয়াদে ক্যাম্পে শিক্ষা ও দক্ষতা প্রশিক্ষণ চালু রাখা, ভাসানচরের ব্যবস্থাপনা উন্নত করা এবং স্থানীয় জনগোষ্ঠীর জন্যও উন্নয়ন কর্মসূচি নেওয়া।
+    - সীমান্ত ব্যবস্থাপনা শক্তিশালী করা এবং মাদক ও অস্ত্র পাচার রোধে যৌথ ব্যবস্থা।
+
+    মূল কথা: প্রত্যাবাসন অবশ্যই স্বেচ্ছাপ্রণোদিত, নিরাপদ, মর্যাদাপূর্ণ ও টেকসই হতে হবে; আর তার জন্য মিয়ানমারের অভ্যন্তরে পরিস্থিতির পরিবর্তনই একমাত্র স্থায়ী সমাধান।
 55. **১২. ইউক্রেনের ৩টি সমুদ্রবন্দরের নাম লিখুন।** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
+
+    Answer: ইউক্রেনের তিনটি প্রধান সমুদ্রবন্দর:
+
+    - ওদেসা (Odesa) — কৃষ্ণসাগরের তীরে অবস্থিত ইউক্রেনের বৃহত্তম ও সবচেয়ে গুরুত্বপূর্ণ বন্দর।
+    - চোরনোমোরস্ক (Chornomorsk) — ওদেসার নিকটবর্তী প্রধান কনটেইনার ও শস্য রপ্তানি বন্দর।
+    - ইউঝনে (Yuzhne / Pivdennyi) — ওদেসা অঞ্চলের গভীর জলের বন্দর, মূলত সার ও আকরিক রপ্তানিতে ব্যবহৃত।
+
+    অন্যান্য উল্লেখযোগ্য বন্দর: মারিউপোল ও বেরদিয়ানস্ক (আজভ সাগর) এবং মিকোলাইভ ও খেরসন।
+
+    গুরুত্ব: এই বন্দরগুলো দিয়ে ইউক্রেনের গম, ভুট্টা ও সূর্যমুখী তেল রপ্তানি হয়, যা বিশ্বের খাদ্য সরবরাহের একটি বড় উৎস। যুদ্ধের কারণে বন্দরগুলো অবরুদ্ধ হয়ে পড়লে বিশ্বজুড়ে খাদ্যশস্যের দাম বেড়ে যায়। ২০২২ সালের জুলাই মাসে জাতিসংঘ ও তুরস্কের মধ্যস্থতায় স্বাক্ষরিত "কৃষ্ণসাগর শস্য উদ্যোগ" এর আওতায় ওদেসা, চোরনোমোরস্ক ও ইউঝনে বন্দর থেকে শস্য রপ্তানি পুনরায় শুরু হয়।
 56. **১৩. নিম্নলিখিত দেশগুলির রাজধানীর নাম লিখুন: লিবিয়া, হন্ডুরাস, লাটভিয়া।** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
+
+    Answer:
+    - লিবিয়া — ত্রিপোলি (Tripoli)। মুদ্রা: লিবীয় দিনার। অবস্থান: উত্তর আফ্রিকা।
+    - হন্ডুরাস — তেগুসিগালপা (Tegucigalpa)। মুদ্রা: লেম্পিরা। অবস্থান: মধ্য আমেরিকা।
+    - লাটভিয়া — রিগা (Riga)। মুদ্রা: ইউরো। অবস্থান: বাল্টিক অঞ্চল, উত্তর-পূর্ব ইউরোপ; ইউরোপীয় ইউনিয়ন ও ন্যাটোর সদস্য।
 57. **১৪. শ্রীলংকার অর্থনৈতিক বিপর্যয়ের মূল কারণ কি?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
+
+    Answer: শ্রীলঙ্কা ২০২২ সালে স্বাধীনতার পর সবচেয়ে ভয়াবহ অর্থনৈতিক বিপর্যয়ের মুখে পড়ে এবং ইতিহাসে প্রথমবারের মতো বৈদেশিক ঋণ পরিশোধে ব্যর্থ (sovereign default) হয়।
+
+    মূল কারণসমূহ:
+    - অতিরিক্ত বৈদেশিক ঋণ ও ভুল প্রকল্প: হাম্বানটোটা বন্দর, মাত্তালা বিমানবন্দর ও লোটাস টাওয়ারের মতো বিপুল ব্যয়ের প্রকল্প বাণিজ্যিকভাবে লাভজনক হয়নি, কিন্তু ঋণের বোঝা রেখে গেছে। হাম্বানটোটা বন্দর শেষ পর্যন্ত ৯৯ বছরের জন্য চীনের কাছে ইজারা দিতে হয়।
+    - কর হ্রাসের ভুল সিদ্ধান্ত: ২০১৯ সালে ভ্যাট ও আয়করে ব্যাপক ছাড় দেওয়ায় সরকারি রাজস্ব প্রায় এক-তৃতীয়াংশ কমে যায়, ফলে ঘাটতি অর্থায়নে ঋণনির্ভরতা বাড়ে।
+    - পর্যটন খাতের ধস: ২০১৯ সালের ইস্টার সানডে বোমা হামলা এবং তার পরপরই কোভিড-১৯ মহামারিতে পর্যটন ও রেমিট্যান্স, অর্থাৎ বৈদেশিক মুদ্রার দুটি প্রধান উৎস, প্রায় বন্ধ হয়ে যায়।
+    - আকস্মিক জৈব কৃষিতে রূপান্তর: ২০২১ সালে রাতারাতি রাসায়নিক সার আমদানি নিষিদ্ধ করায় ধান ও চায়ের উৎপাদন নাটকীয়ভাবে কমে যায়। খাদ্য আমদানি করতে হয় এবং চা রপ্তানি আয় হ্রাস পায়।
+    - বৈদেশিক মুদ্রার রিজার্ভ শূন্য হয়ে যাওয়া: জ্বালানি, ওষুধ ও খাদ্য আমদানির অর্থ না থাকায় দীর্ঘ লোডশেডিং, জ্বালানির জন্য দীর্ঘ সারি এবং ওষুধের সংকট দেখা দেয়।
+    - কাঠামোগত দুর্বলতা: রপ্তানির তুলনায় আমদানি অনেক বেশি হওয়ায় ধারাবাহিক বাণিজ্য ঘাটতি; উৎপাদনভিত্তিক শিল্পের ঘাটতি।
+    - মুদ্রানীতির ব্যর্থতা: বিনিময় হার কৃত্রিমভাবে ধরে রাখা এবং ঘাটতি পূরণে অতিরিক্ত টাকা ছাপানোর ফলে মূল্যস্ফীতি ৫০ শতাংশের ওপরে ওঠে।
+    - রাজনৈতিক পরিবারতন্ত্র ও দুর্নীতি: নীতিনির্ধারণে জবাবদিহির অভাব এবং স্বজনপ্রীতি।
+    - বৈশ্বিক ধাক্কা: রাশিয়া-ইউক্রেন যুদ্ধের পর জ্বালানি ও খাদ্যের দাম বৃদ্ধি সংকটকে চূড়ান্ত রূপ দেয়।
+
+    ফলাফল: ব্যাপক গণআন্দোলনে প্রেসিডেন্ট গোতাবায়া রাজাপাকসে পদত্যাগ করে দেশ ছাড়েন, এবং শ্রীলঙ্কাকে আইএমএফের সঙ্গে বর্ধিত ঋণ কর্মসূচিতে যেতে হয়।
+
+    বাংলাদেশের জন্য শিক্ষা: প্রকল্প গ্রহণের আগে অর্থনৈতিক প্রতিদান যাচাই করা, রাজস্ব আয় বাড়ানো, রপ্তানি ও রেমিট্যান্সের উৎস বৈচিত্র্যময় করা, পর্যাপ্ত বৈদেশিক মুদ্রার রিজার্ভ রাখা এবং কৃষি বা জ্বালানিনীতিতে আকস্মিক পরিবর্তন এড়ানো।
 58. **১৫. রাশিয়া-ইউক্রেন যুদ্ধের মূল কারণ সম্পর্কে তিনটি বাক্য লিখুন।** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
+
+    Answer: রাশিয়া-ইউক্রেন যুদ্ধের মূল কারণ সম্পর্কে তিনটি বাক্য:
+
+    - ন্যাটোর ক্রমাগত পূর্বমুখী সম্প্রসারণ এবং ইউক্রেনের সম্ভাব্য ন্যাটো সদস্যপদকে রাশিয়া নিজের সীমান্তে সরাসরি নিরাপত্তা হুমকি হিসেবে বিবেচনা করে।
+    - ২০১৪ সালে রাশিয়াপন্থী প্রেসিডেন্টের পতনের পর ক্রিমিয়া দখল এবং পূর্ব ইউক্রেনের দনবাস অঞ্চলে বিচ্ছিন্নতাবাদী সংঘাত শুরু হলে দুই দেশের সম্পর্ক পুরোপুরি ভেঙে পড়ে।
+    - কৃষ্ণসাগরের বন্দর, গ্যাস ট্রানজিট রুট ও রুশভাষী জনগোষ্ঠীর ওপর প্রভাব বজায় রাখার ভূরাজনৈতিক ও অর্থনৈতিক স্বার্থই শেষ পর্যন্ত ২০২২ সালের ২৪ ফেব্রুয়ারি পূর্ণাঙ্গ সামরিক অভিযানে রূপ নেয়।
 59. **(খ) জাতিসংঘের প্রথম মহাসচিব কে ছিলেন?** *[Software Assistant Programmer 13.10.2022 compact it 712 (ET: N/A)]*
 
+
+    Answer: জাতিসংঘের প্রথম মহাসচিব ছিলেন নরওয়ের ট্রিগভে লি (Trygve Lie)।
+
+    - দায়িত্ব পালনের সময়কাল: ১৯৪৬ থেকে ১৯৫২ সাল।
+    - তিনি নরওয়ের সাবেক পররাষ্ট্রমন্ত্রী ছিলেন।
+    - কোরিয়া যুদ্ধ নিয়ে সোভিয়েত ইউনিয়নের সঙ্গে মতবিরোধের কারণে তিনি মেয়াদ শেষ হওয়ার আগেই ১৯৫২ সালে পদত্যাগ করেন।
+    - তাঁর উত্তরসূরি ছিলেন সুইডেনের দাগ হ্যামারশোল্ড, যিনি ১৯৬১ সালে বিমান দুর্ঘটনায় নিহত হন এবং মরণোত্তর শান্তিতে নোবেল পুরস্কার পান।
+    - মহাসচিব নিরাপত্তা পরিষদের সুপারিশে সাধারণ পরিষদ কর্তৃক ৫ বছরের জন্য নিযুক্ত হন। বর্তমান মহাসচিব পর্তুগালের আন্তোনিও গুতেরেস, যিনি ২০১৭ সাল থেকে দায়িত্ব পালন করছেন।
 60. **(গ) জাতিসংঘের সর্বশেষ সদস্য রাষ্ট্রের নাম কি?** *[Software Assistant Programmer 13.10.2022 compact it 712 (ET: N/A)]*
 
+
+    Answer: জাতিসংঘের সর্বশেষ ও ১৯৩তম সদস্য রাষ্ট্র দক্ষিণ সুদান (South Sudan)।
+
+    - সদস্যপদ লাভ: ১৪ জুলাই ২০১১।
+    - দক্ষিণ সুদান ২০১১ সালের ৯ জুলাই সুদান থেকে বিচ্ছিন্ন হয়ে স্বাধীন রাষ্ট্র হিসেবে আত্মপ্রকাশ করে, একটি গণভোটের ভিত্তিতে যেখানে প্রায় ৯৯ শতাংশ ভোটার স্বাধীনতার পক্ষে রায় দেন।
+    - রাজধানী: জুবা। মহাদেশ: আফ্রিকা।
+    - বাংলাদেশ জাতিসংঘের সদস্যপদ লাভ করে ১৯৭৪ সালের ১৭ সেপ্টেম্বর, ১৩৬তম সদস্য হিসেবে।
+    - উল্লেখ্য, ফিলিস্তিন ও ভ্যাটিকান সিটি পূর্ণ সদস্য নয়; তারা পর্যবেক্ষক রাষ্ট্রের মর্যাদা ভোগ করে।
 61. **সুয়েজ খাল কোন ২টি সাগরকে যুক্ত করেছে।** *[BWMRI Assistant Maintenance Engineer 2022 compact it 737 (ET: N/A)]*
 
+
+    Answer: সুয়েজ খাল ভূমধ্যসাগর (Mediterranean Sea) ও লোহিত সাগরকে (Red Sea) যুক্ত করেছে।
+
+    - অবস্থান: মিসরের সিনাই উপদ্বীপের পশ্চিমে; এটি আফ্রিকা ও এশিয়াকে পৃথক করেছে।
+    - দৈর্ঘ্য: প্রায় ১৯৩ কিলোমিটার।
+    - উদ্বোধন: ১৭ নভেম্বর ১৮৬৯। নির্মাণ পরিকল্পনার প্রধান ছিলেন ফরাসি প্রকৌশলী ফার্দিনান্দ দ্য লেসেপস।
+    - ১৯৫৬ সালে মিসরের প্রেসিডেন্ট গামাল আবদেল নাসের খালটি জাতীয়করণ করেন, যার ফলে সুয়েজ সংকট সৃষ্টি হয়।
+    - এটি একটি সমুদ্রপৃষ্ঠ-সমতল খাল, অর্থাৎ এতে কোনো লক গেট নেই।
+
+    গুরুত্ব:
+    - ইউরোপ ও এশিয়ার মধ্যে সমুদ্রপথে যাতায়াতে আফ্রিকার উত্তমাশা অন্তরীপ ঘুরে যাওয়ার প্রয়োজন হয় না, ফলে দূরত্ব প্রায় ৭,০০০ কিলোমিটার এবং সময় ৮ থেকে ১৪ দিন কমে যায়।
+    - বিশ্বের মোট সামুদ্রিক বাণিজ্যের প্রায় ১২ থেকে ১৫ শতাংশ এই পথে পরিবাহিত হয়।
+    - ২০২১ সালে "এভার গিভেন" নামের একটি কনটেইনার জাহাজ আড়াআড়ি আটকে গিয়ে ছয় দিন খাল বন্ধ থাকায় বিশ্ব সরবরাহ শৃঙ্খলে বিপুল ক্ষতি হয়, যা এর গুরুত্ব স্পষ্ট করে দেয়।
 62. **আয়তন ও জনসংখ্যায় এশিয়া মহাদেশের ক্ষুদ্রতম দেশ কোনটি?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 737 (ET: N/A)]*
 
+
+    Answer: আয়তন ও জনসংখ্যা—উভয় দিক থেকেই এশিয়া মহাদেশের ক্ষুদ্রতম দেশ মালদ্বীপ।
+
+    - আয়তন: প্রায় ২৯৮ বর্গকিলোমিটার, যা এশিয়ার যেকোনো দেশের চেয়ে কম।
+    - জনসংখ্যা: প্রায় ৫ লক্ষ ২০ হাজার, যা এশিয়ার মধ্যে সর্বনিম্ন।
+    - রাজধানী: মালে। মুদ্রা: রুফিয়া। ভাষা: ধিবেহি।
+    - এটি ভারত মহাসাগরে অবস্থিত প্রায় ১,১৯২টি প্রবাল দ্বীপ নিয়ে গঠিত একটি দ্বীপরাষ্ট্র, যার মধ্যে প্রায় ২০০টি দ্বীপে মানুষ বাস করে।
+    - এটি বিশ্বের সবচেয়ে নিচু দেশ; গড় উচ্চতা সমুদ্রপৃষ্ঠ থেকে মাত্র প্রায় ১.৫ মিটার। ফলে সমুদ্রপৃষ্ঠের উচ্চতা বৃদ্ধিতে এর অস্তিত্বই হুমকির মুখে।
+    - অর্থনীতি প্রধানত পর্যটন ও মৎস্যনির্ভর। এটি সার্কের সদস্য।
+    - উল্লেখ্য, আয়তনে বিশ্বের ক্ষুদ্রতম দেশ ভ্যাটিকান সিটি (ইউরোপ), যার আয়তন মাত্র ০.৪৪ বর্গকিলোমিটার।
 63. **একজন বিখ্যাত ব্যক্তির নাম লিখুন যিনি কৃষিতে গবেষণা করে শান্তিতে নোবেল পুরষ্কার জয় লাভ করেন?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 737 (ET: N/A)]*
 
+
+    Answer: নরম্যান বোরলগ (Norman Borlaug)।
+
+    - তিনি ছিলেন একজন মার্কিন কৃষিবিজ্ঞানী ও উদ্ভিদ রোগতত্ত্ববিদ, যিনি ১৯৭০ সালে শান্তিতে নোবেল পুরস্কার লাভ করেন।
+    - কারণ: উচ্চফলনশীল, রোগ প্রতিরোধী ও খাটো জাতের গম উদ্ভাবন করে তিনি মেক্সিকো, ভারত ও পাকিস্তানসহ বহু দেশে খাদ্য উৎপাদন নাটকীয়ভাবে বাড়িয়ে দুর্ভিক্ষ প্রতিরোধ করেন। এই পরিবর্তনকে বলা হয় "সবুজ বিপ্লব" (Green Revolution)।
+    - তাঁকে "সবুজ বিপ্লবের জনক" এবং "যিনি একশ কোটি মানুষের জীবন বাঁচিয়েছেন" বলা হয়।
+    - নোবেল কমিটির যুক্তি ছিল, ক্ষুধা ও খাদ্যাভাব দূর করা শান্তি প্রতিষ্ঠারই একটি রূপ, কারণ ক্ষুধা থেকেই সংঘাত ও অস্থিরতার জন্ম হয়।
+    - তাঁর কাজের ধারাবাহিকতায় প্রতিষ্ঠিত হয় CIMMYT (আন্তর্জাতিক ভুট্টা ও গম উন্নয়ন কেন্দ্র), যার সঙ্গে বাংলাদেশের গম ও ভুট্টা গবেষণার ঘনিষ্ঠ সম্পর্ক রয়েছে।
 64. **জার্মানির প্রধানমন্ত্রী সমমর্যাদার পদ কোনটি ও সর্বপ্রথম মহিলার নাম কি?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
+
+    Answer:
+    - জার্মানিতে প্রধানমন্ত্রীর সমমর্যাদার পদটির নাম চ্যান্সেলর (জার্মান ভাষায় "বুন্ডেসকানৎসলার", Bundeskanzler)।
+    - এই পদে অধিষ্ঠিত প্রথম নারী আঙ্গেলা মের্কেল (Angela Merkel)।
+
+    - চ্যান্সেলর জার্মানির সরকারপ্রধান এবং প্রকৃত নির্বাহী ক্ষমতার অধিকারী। তিনি নিম্নকক্ষ বুন্ডেসটাগ কর্তৃক নির্বাচিত হন।
+    - রাষ্ট্রপ্রধান হলেন প্রেসিডেন্ট (Bundespräsident), যাঁর ভূমিকা মূলত আনুষ্ঠানিক।
+    - আঙ্গেলা মের্কেল ২০০৫ সাল থেকে ২০২১ সাল পর্যন্ত, অর্থাৎ টানা ১৬ বছর, চ্যান্সেলর হিসেবে দায়িত্ব পালন করেন। তিনি ছিলেন খ্রিষ্টান ডেমোক্র্যাটিক ইউনিয়নের (CDU) নেত্রী।
+    - পূর্ব জার্মানিতে বেড়ে ওঠা এই পদার্থবিজ্ঞানী দীর্ঘদিন ইউরোপের সবচেয়ে প্রভাবশালী নেতা হিসেবে বিবেচিত হতেন, বিশেষত ইউরো সংকট, শরণার্থী সংকট ও কোভিড-১৯ মহামারি মোকাবিলায় তাঁর ভূমিকার জন্য।
+    - জার্মানির প্রথম চ্যান্সেলর (যুদ্ধোত্তর পশ্চিম জার্মানি) ছিলেন কনরাড আডেনাউয়ার।
 65. **Short Question: a. SWIFT full form. b. Which international organization helps Rohingya? c. Where “Golden Gate” Situated?** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
+
+    Answer:
+    - a. SWIFT full form: Society for Worldwide Interbank Financial Telecommunication. It is a cooperative founded in 1973 and headquartered at La Hulpe, Belgium. It does not move money itself; it provides a secure standardised messaging network through which more than 11,000 financial institutions in over 200 countries send payment instructions to one another. Each member has a unique 8 or 11 character SWIFT/BIC code. It was the SWIFT network that was misused in the Bangladesh Bank reserve heist of February 2016, and exclusion from SWIFT has since become a major instrument of financial sanctions, as applied to Russian banks in 2022.
+    - b. The international organisation that helps the Rohingya: the principal agency is UNHCR, the United Nations High Commissioner for Refugees, which handles registration, protection and shelter. Working with it are IOM (International Organization for Migration), which manages camp coordination and site management, WFP (World Food Programme) for food assistance, UNICEF for child protection, education and nutrition, WHO for health services, and UNFPA for reproductive health. Non-governmental bodies such as the International Committee of the Red Cross, BRAC, Médecins Sans Frontières and Save the Children also work in the camps, and the whole operation is coordinated through the Joint Response Plan led by the Government of Bangladesh.
+    - c. The Golden Gate Bridge is situated in San Francisco, California, United States of America. It spans the Golden Gate strait, the entrance to San Francisco Bay from the Pacific Ocean. It was opened in 1937, is about 2,737 metres long, and its distinctive colour is called "international orange". It was the longest suspension bridge in the world at the time of its construction.
 66. **১. CEDAW এর পূর্ণ রূপ কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+
+    Answer: CEDAW এর পূর্ণরূপ Convention on the Elimination of All Forms of Discrimination Against Women (নারীর প্রতি সকল প্রকার বৈষম্য বিলোপ সনদ)।
+
+    - গৃহীত হয়: ১৮ ডিসেম্বর ১৯৭৯, জাতিসংঘ সাধারণ পরিষদে। কার্যকর হয়: ৩ সেপ্টেম্বর ১৯৮১।
+    - এটি "নারী অধিকারের আন্তর্জাতিক বিল" (International Bill of Rights for Women) নামে পরিচিত।
+    - মোট ৩০টি অনুচ্ছেদ রয়েছে, যেখানে রাজনৈতিক, অর্থনৈতিক, সামাজিক, সাংস্কৃতিক, নাগরিক ও পারিবারিক—সব ক্ষেত্রে নারীর সমান অধিকার নিশ্চিত করার বাধ্যবাধকতা রাষ্ট্রের ওপর আরোপ করা হয়েছে।
+    - বাস্তবায়ন তদারক করে CEDAW কমিটি, যার কাছে সদস্য রাষ্ট্রগুলোকে প্রতি চার বছর অন্তর অগ্রগতি প্রতিবেদন জমা দিতে হয়।
+    - বাংলাদেশ ১৯৮৪ সালের ৬ নভেম্বর এই সনদে অনুস্বাক্ষর করে, তবে ২ ও ১৬(১)(গ) অনুচ্ছেদে সংরক্ষণ (reservation) রেখেছে, যা ধর্মীয় ব্যক্তিগত আইনের সঙ্গে সাংঘর্ষিক বলে বিবেচিত হয়।
+    - সনদের প্রভাবে বাংলাদেশে নারী উন্নয়ন নীতি, নারী ও শিশু নির্যাতন দমন আইন, যৌতুক নিরোধ আইন ও বাল্যবিবাহ নিরোধ আইন প্রণীত হয়েছে।
 67. **৩. আফগানিস্তান এর মুদ্রার নাম কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+
+    Answer: আফগানিস্তানের মুদ্রার নাম আফগানি (Afghani), যার আন্তর্জাতিক কোড AFN।
+
+    - প্রতীক: ؋
+    - এক আফগানি সমান ১০০ পুল (pul)।
+    - রাজধানী: কাবুল। কেন্দ্রীয় ব্যাংক: দ্য আফগানিস্তান ব্যাংক।
+    - এটি প্রচলন শুরু হয় ১৯২৫ সালে, রুপিয়ার স্থলাভিষিক্ত হয়ে; ২০০২ সালে নতুন আফগানি চালু করা হয়।
+    - প্রধান ভাষা: পশতু ও দারি।
+
+    কয়েকটি সংশ্লিষ্ট দেশের মুদ্রা: ভারত ও পাকিস্তান — রুপি, মালদ্বীপ — রুফিয়া, নেপাল — নেপালি রুপি, ভুটান — গুলট্রাম, শ্রীলঙ্কা — শ্রীলঙ্কান রুপি, মিয়ানমার — কিয়াট, ইরান — রিয়াল।
 68. **৪. হোয়াইট হল কোথায় অবস্থিত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+
+    Answer: হোয়াইটহল (Whitehall) যুক্তরাজ্যের রাজধানী লন্ডনে অবস্থিত।
+
+    - এটি ওয়েস্টমিনস্টার এলাকার একটি সড়ক, যা ট্রাফালগার স্কয়ার থেকে পার্লামেন্ট স্কয়ার পর্যন্ত বিস্তৃত।
+    - এই সড়ক ও তার আশপাশে যুক্তরাজ্যের প্রধান সরকারি দপ্তরগুলো অবস্থিত: প্রতিরক্ষা মন্ত্রণালয়, পররাষ্ট্র দপ্তর, ট্রেজারি, স্বরাষ্ট্র দপ্তর, মন্ত্রিপরিষদ কার্যালয় এবং প্রধানমন্ত্রীর সরকারি বাসভবন ১০ ডাউনিং স্ট্রিট, যা হোয়াইটহল থেকেই বেরিয়ে গেছে।
+    - এ কারণে "হোয়াইটহল" শব্দটি রূপকভাবে ব্রিটিশ সরকার ও তার আমলাতন্ত্র বোঝাতে ব্যবহৃত হয়, যেমন "ওয়েস্টমিনস্টার" বলতে বোঝানো হয় পার্লামেন্ট।
+    - নামটি এসেছে এখানে অবস্থিত সাবেক হোয়াইটহল প্রাসাদ থেকে, যা ১৫৩০ থেকে ১৬৯৮ সাল পর্যন্ত ইংল্যান্ডের রাজাদের প্রধান বাসভবন ছিল; ১৬৯৮ সালে অগ্নিকাণ্ডে এটি ধ্বংস হয়ে যায়।
+
+    সংশ্লিষ্ট রূপক নাম: হোয়াইট হাউস (যুক্তরাষ্ট্রের প্রেসিডেন্ট), ক্রেমলিন (রাশিয়ার সরকার), পেন্টাগন (যুক্তরাষ্ট্রের প্রতিরক্ষা দপ্তর), ওয়াল স্ট্রিট (মার্কিন আর্থিক বাজার) এবং ডাউনিং স্ট্রিট (ব্রিটিশ প্রধানমন্ত্রীর দপ্তর)।
 69. **৫. CIRDAP এর সদর দপ্তর কোথায়?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+
+    Answer: CIRDAP এর সদর দপ্তর বাংলাদেশের ঢাকায় অবস্থিত।
+
+    - পূর্ণরূপ: Centre on Integrated Rural Development for Asia and the Pacific (এশিয়া ও প্রশান্ত মহাসাগরীয় অঞ্চলের সমন্বিত পল্লী উন্নয়ন কেন্দ্র)।
+    - প্রতিষ্ঠা: ৬ জুলাই ১৯৭৯, জাতিসংঘের খাদ্য ও কৃষি সংস্থার (FAO) উদ্যোগে এবং এশিয়া-প্রশান্ত মহাসাগরীয় অঞ্চলের দেশগুলোর সহযোগিতায়।
+    - ঢাকার চামেলীবাগে অবস্থিত এর কার্যালয় "সিরডাপ মিলনায়তন" নামে সুপরিচিত।
+    - সদস্য দেশ: বাংলাদেশ, ভারত, পাকিস্তান, নেপাল, শ্রীলঙ্কা, ইন্দোনেশিয়া, মালয়েশিয়া, ফিলিপাইন, থাইল্যান্ড, ভিয়েতনাম, ইরান, আফগানিস্তান, লাওস, মিয়ানমার ও ফিজিসহ ১৫টি দেশ।
+    - উদ্দেশ্য: সদস্য দেশগুলোর মধ্যে পল্লী উন্নয়ন বিষয়ে গবেষণা, প্রশিক্ষণ, তথ্য বিনিময় ও নীতিসহায়তা প্রদান এবং গ্রামীণ দারিদ্র্য বিমোচন।
+    - উল্লেখ্য, ঢাকায় সদর দপ্তর রয়েছে এমন আরেকটি আন্তর্জাতিক সংস্থা হলো বিমসটেক (BIMSTEC)।
 70. **৭. সোয়াজিল্যান্ড কোন মহাদেশে অবস্থিত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+
+
+    Answer: সোয়াজিল্যান্ড আফ্রিকা মহাদেশে অবস্থিত।
+
+    - বর্তমান নাম: ইসোয়াতিনি (Eswatini)। ২০১৮ সালে রাজা তৃতীয় এমসোয়াতি দেশটির নাম পরিবর্তন করে "কিংডম অব ইসোয়াতিনি" রাখেন, কারণ "সোয়াজিল্যান্ড" নামটি প্রায়ই সুইজারল্যান্ডের সঙ্গে গুলিয়ে ফেলা হতো।
+    - অবস্থান: দক্ষিণ আফ্রিকা মহাদেশের একটি স্থলবেষ্টিত দেশ, যার তিন দিকে দক্ষিণ আফ্রিকা এবং পূর্ব দিকে মোজাম্বিক।
+    - রাজধানী: এমবাবানে (প্রশাসনিক) ও লোবাম্বা (আইনসভা ও রাজকীয়)।
+    - আয়তন প্রায় ১৭,৩৬৪ বর্গকিলোমিটার; জনসংখ্যা প্রায় ১২ লাখ।
+    - শাসনব্যবস্থা: এটি আফ্রিকার সর্বশেষ পূর্ণ রাজতন্ত্র (absolute monarchy)।
+    - মুদ্রা: লিলাঙ্গেনি। ভাষা: সোয়াতি ও ইংরেজি।
 
 ## Everyday Science & Environment (22)
 
