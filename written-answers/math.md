@@ -469,29 +469,410 @@
 
 1. **Given, n(A) = 20, n(B) = 30 and n(A \cup B) = 40 what is n(A \cap B)?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
+
+   Answer: Given: n(A) = 20, n(B) = 30, n(A union B) = 40. Find n(A intersection B).
+
+   Step 1 - use the addition principle for two sets:
+   - n(A union B) = n(A) + n(B) - n(A intersection B)
+
+   Step 2 - substitute the given values:
+   - 40 = 20 + 30 - n(A intersection B)
+   - 40 = 50 - n(A intersection B)
+
+   Step 3 - solve:
+   - n(A intersection B) = 50 - 40
+   - n(A intersection B) = 10
+
+   Final answer: n(A intersection B) = 10
+
+   Additional results that follow:
+   - Elements only in A = n(A) - n(A intersection B) = 20 - 10 = 10
+   - Elements only in B = n(B) - n(A intersection B) = 30 - 10 = 20
+   - Check: 10 + 10 + 20 = 40 = n(A union B). Correct.
 2. **Math: Set related (72%, 40% and both 30%)** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
+
+   Answer: Reading of the data: in a group, 72 per cent like one thing (say A), 40 per cent like another (say B), and 30 per cent like both.
+
+   Step 1 - apply the addition principle:
+   - n(A union B) = n(A) + n(B) - n(A intersection B)
+   - = 72 + 40 - 30
+   - = 82 per cent
+
+   Step 2 - those who like neither:
+   - = 100 - 82
+   - = 18 per cent
+
+   Step 3 - those who like only A:
+   - = 72 - 30 = 42 per cent
+
+   Step 4 - those who like only B:
+   - = 40 - 30 = 10 per cent
+
+   Summary:
+   - Only A: 42 per cent
+   - Only B: 10 per cent
+   - Both: 30 per cent
+   - Neither: 18 per cent
+   - Total: 42 + 10 + 30 + 18 = 100 per cent. Correct.
+
+   Note: if the total number of people is given, for example 200, then multiply each percentage by 2 to get the actual number in each category.
 3. **Find the sets X and Y if X \cup Y = \{1, 2, 3, 5, 6, 8, 9, 10\}, X \cap Y = \{1, 5\} and Y - X = \{2, 6, 9, 10\}.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 419 (ET: BIBM)]*
 
+
+   Answer: Given:
+   - X union Y = {1, 2, 3, 5, 6, 8, 9, 10}
+   - X intersection Y = {1, 5}
+   - Y - X = {2, 6, 9, 10}
+
+   Step 1 - find Y. Every element of Y is either in Y alone or in both sets:
+   - Y = (Y - X) union (X intersection Y)
+   - Y = {2, 6, 9, 10} union {1, 5}
+   - Y = {1, 2, 5, 6, 9, 10}
+
+   Step 2 - find X - Y. The union is made up of three disjoint parts, namely X - Y, X intersection Y and Y - X. So:
+   - X - Y = (X union Y) - Y
+   - X - Y = {1, 2, 3, 5, 6, 8, 9, 10} - {1, 2, 5, 6, 9, 10}
+   - X - Y = {3, 8}
+
+   Step 3 - find X:
+   - X = (X - Y) union (X intersection Y)
+   - X = {3, 8} union {1, 5}
+   - X = {1, 3, 5, 8}
+
+   Final answer:
+   - X = {1, 3, 5, 8}
+   - Y = {1, 2, 5, 6, 9, 10}
+
+   Verification:
+   - X union Y = {1, 2, 3, 5, 6, 8, 9, 10}. Correct.
+   - X intersection Y = {1, 5}. Correct.
+   - Y - X = {2, 6, 9, 10}. Correct.
 4. **১ থেকে ১০০ পর্যন্ত কয়টি সংখ্যা রয়েছে যা ৩ ও ৪ দ্বারা বিভাজ্য নয়?** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
 
+
+   Answer: ১ থেকে ১০০ পর্যন্ত মোট সংখ্যা = ১০০
+
+   ধাপ ১ - ৩ দ্বারা বিভাজ্য সংখ্যার সংখ্যা:
+   - ১০০ / ৩ = ৩৩.৩৩, পূর্ণসংখ্যা অংশ = ৩৩টি
+
+   ধাপ ২ - ৪ দ্বারা বিভাজ্য সংখ্যার সংখ্যা:
+   - ১০০ / ৪ = ২৫টি
+
+   ধাপ ৩ - ৩ ও ৪ উভয় দ্বারা বিভাজ্য, অর্থাৎ ১২ (৩ ও ৪ এর লসাগু) দ্বারা বিভাজ্য:
+   - ১০০ / ১২ = ৮.৩৩, পূর্ণসংখ্যা অংশ = ৮টি
+
+   ধাপ ৪ - অন্তর্ভুক্তি-বহির্ভুক্তি নীতি প্রয়োগ করে ৩ অথবা ৪ দ্বারা বিভাজ্য সংখ্যা:
+   - n(৩ বা ৪) = n(৩) + n(৪) - n(১২)
+   - = ৩৩ + ২৫ - ৮
+   - = ৫০টি
+
+   ধাপ ৫ - যেগুলো ৩ ও ৪ কোনোটি দ্বারাই বিভাজ্য নয়:
+   - = ১০০ - ৫০
+   - = ৫০টি
+
+   উত্তর: ৫০টি সংখ্যা।
+
+   নোট: ৮ কে বিয়োগ করা হয়েছে কারণ ১২, ২৪, ৩৬, ৪৮, ৬০, ৭২, ৮৪ ও ৯৬ — এই ৮টি সংখ্যা ৩ ও ৪ উভয় তালিকাতেই আছে, তাই একবার করে বাদ না দিলে দুইবার গোনা হয়ে যেত।
 5. **Express the following statement as a logical expression, “If someone is female and is a parent, then this person is someone's mother”.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 664 (ET: N/A)]*
 
+
+   Answer: The statement is: "If someone is female and is a parent, then this person is someone's mother."
+
+   Step 1 - define the predicates over the domain of all people:
+   - F(x): x is female
+   - P(x): x is a parent
+   - M(x, y): x is the mother of y
+
+   Step 2 - translate the antecedent:
+   - "someone is female and is a parent" becomes F(x) AND P(x)
+
+   Step 3 - translate the consequent:
+   - "this person is someone's mother" means there exists some person y such that x is the mother of y
+   - This becomes: there exists y such that M(x, y)
+
+   Step 4 - combine with implication, and quantify over all people, because the statement applies to everyone:
+
+   for all x [ (F(x) AND P(x)) implies (there exists y such that M(x, y)) ]
+
+   In symbolic notation, using the usual signs:
+   - forall x ( F(x) ^ P(x) -> exists y M(x, y) )
+
+   Points to note:
+   - The universal quantifier must be outside, because the claim is made about every person.
+   - The existential quantifier must be inside the consequent, because the child y depends on which person x we are considering.
+   - The scope matters: writing exists y outside would wrongly assert that there is one single person y who is the child of every female parent.
 6. **(ক) p \land (\neg p \lor q) - logical expression টির জন্য Truth table প্রস্তুত করুন। যেখানে p, q- Boolean variable.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
 
+
+   Answer: রাশিটি: p AND (NOT p OR q)
+
+   সত্যক সারণি:
+
+   | p | q | NOT p | NOT p OR q | p AND (NOT p OR q) |
+   |---|---|---|---|---|
+   | T | T | F | T | T |
+   | T | F | F | F | F |
+   | F | T | T | T | F |
+   | F | F | T | T | F |
+
+   সারণি তৈরির ধাপ:
+   - দুটি চলক থাকায় ২^২ = ৪টি সারি হবে।
+   - তৃতীয় কলামে p এর বিপরীত মান বসানো হয়েছে।
+   - চতুর্থ কলামে NOT p OR q নির্ণয় করা হয়েছে; OR মিথ্যা হয় কেবল যখন উভয় পদই মিথ্যা।
+   - পঞ্চম কলামে p এর সঙ্গে AND করা হয়েছে; AND সত্য হয় কেবল যখন উভয় পদই সত্য।
+
+   পর্যবেক্ষণ: চূড়ান্ত কলামের মান হুবহু p AND q এর মানের সমান। অর্থাৎ
+
+   p AND (NOT p OR q) equivalent to p AND q
+
+   এটি শোষণ বা absorption সূত্রের একটি রূপ। বীজগণিতিক প্রমাণ:
+   - p AND (NOT p OR q)
+   - = (p AND NOT p) OR (p AND q)   [বণ্টন সূত্র]
+   - = F OR (p AND q)                [কারণ p AND NOT p = F]
+   - = p AND q
+
+   অর্থাৎ রাশিটি না tautology, না contradiction; এটি একটি contingency, যা কেবল p ও q উভয়ই সত্য হলে সত্য হয়।
 7. **(খ) দেখাও যে, (p \land q) \rightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
 
+
+   Answer: দেখাতে হবে (p AND q) -> (p OR q) একটি tautology, অর্থাৎ সব ক্ষেত্রেই সত্য।
+
+   সত্যক সারণির মাধ্যমে প্রমাণ:
+
+   | p | q | p AND q | p OR q | (p AND q) -> (p OR q) |
+   |---|---|---|---|---|
+   | T | T | T | T | T |
+   | T | F | F | T | T |
+   | F | T | F | T | T |
+   | F | F | F | F | T |
+
+   চূড়ান্ত কলামের প্রতিটি মান T, তাই রাশিটি একটি tautology। (প্রমাণিত)
+
+   ব্যাখ্যা: implication মিথ্যা হয় কেবল একটি ক্ষেত্রে, যখন পূর্বপদ (antecedent) সত্য কিন্তু উত্তরপদ (consequent) মিথ্যা। এখানে সেই ক্ষেত্রটি কখনো ঘটতে পারে না, কারণ p AND q সত্য হওয়ার একমাত্র শর্ত p = T এবং q = T; আর তখন p OR q অবশ্যই সত্য।
+
+   বীজগণিতিক প্রমাণ:
+   - (p AND q) -> (p OR q)
+   - = NOT(p AND q) OR (p OR q)         [implication এর সংজ্ঞা]
+   - = (NOT p OR NOT q) OR (p OR q)     [দ্য মরগানের সূত্র]
+   - = (NOT p OR p) OR (NOT q OR q)     [সহযোগ ও বিনিময় সূত্র]
+   - = T OR T
+   - = T
+
+   অর্থাৎ রাশিটি সর্বদা সত্য, তাই এটি tautology।
+
+   সংশ্লিষ্ট সংজ্ঞা: যে যৌগিক উক্তি সব সম্ভাব্য সত্যমানের জন্য সত্য তাকে tautology বলে; যেটি সব ক্ষেত্রেই মিথ্যা তাকে contradiction বলে; আর যেটি কখনো সত্য কখনো মিথ্যা তাকে contingency বলে।
 8. **(ক) Set, Power set এবং Proper set কী? Membership table এর মাধ্যমে প্রমাণ করুন যে, A \cup (B \cap C) = (\bar{C} \cup \bar{B}) \cap \bar{A}. এখানে A, B, C এগুলো Sets.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
 
+
+   Answer:
+
+   Set (সেট): সুনির্দিষ্ট ও সুসংজ্ঞায়িত বস্তুর সমাবেশকে সেট বলে। যেমন A = {1, 2, 3}। বস্তুগুলোকে বলা হয় সেটের উপাদান বা সদস্য। n(A) = 3 হলো সেটের কার্ডিনালিটি।
+
+   Power set (পাওয়ার সেট): কোনো সেট A এর সব উপসেট নিয়ে গঠিত সেটকে A এর পাওয়ার সেট বলে, লেখা হয় P(A)।
+   - A = {1, 2} হলে P(A) = { {}, {1}, {2}, {1, 2} }
+   - n(A) = n হলে পাওয়ার সেটের উপাদান সংখ্যা = 2^n
+   - উপরের উদাহরণে 2^2 = 4টি উপাদান আছে।
+   - ফাঁকা সেট ও সেটটি নিজে সবসময় পাওয়ার সেটের সদস্য।
+
+   Proper subset (প্রকৃত উপসেট): B যদি A এর উপসেট হয় এবং B, A এর সমান না হয়, তবে B কে A এর প্রকৃত উপসেট বলে। লেখা হয় B প্রকৃত উপসেট A।
+   - A = {1, 2, 3} এর প্রকৃত উপসেটগুলো: {}, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}
+   - অর্থাৎ A নিজে বাদ যায়, তাই প্রকৃত উপসেটের সংখ্যা = 2^n - 1 = 8 - 1 = 7
+
+   প্রদত্ত সমতা সম্পর্কে: প্রশ্নে লেখা "A ∪ (B ∩ C) = (C‾ ∪ B‾) ∩ A‾" সমতাটি বাস্তবে সত্য নয়। কারণ ডান পক্ষ = (B ∩ C)‾ ∩ A‾ = [A ∪ (B ∩ C)]‾, যা বাম পক্ষের পরিপূরক। প্রকৃত অভেদটি হলো দ্য মরগানের সূত্র:
+
+   [A ∪ (B ∩ C)]‾ = (C‾ ∪ B‾) ∩ A‾
+
+   মেম্বারশিপ টেবিল দিয়ে প্রমাণ (১ মানে উপাদানটি সেটে আছে, ০ মানে নেই):
+
+   | A | B | C | B∩C | A∪(B∩C) | [A∪(B∩C)]‾ | A‾ | B‾ | C‾ | C‾∪B‾ | (C‾∪B‾)∩A‾ |
+   |---|---|---|---|---|---|---|---|---|---|---|
+   | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+   | 1 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
+   | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+   | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 0 |
+   | 0 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
+   | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 1 | 1 |
+   | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 1 | 1 |
+   | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+   ষষ্ঠ কলাম [A∪(B∩C)]‾ এবং শেষ কলাম (C‾∪B‾)∩A‾ হুবহু এক, তাই সমতাটি প্রমাণিত।
+
+   একই সঙ্গে দেখা যাচ্ছে পঞ্চম কলাম A∪(B∩C) এবং শেষ কলাম পরস্পরের বিপরীত, তাই প্রশ্নে লেখা সমতাটি ভুল। <!-- verify -->
 9. **(খ) যদি A-B = \{1, 5, 7, 8\}, B-A = \{2, 10\} এবং A \cap B = \{3, 6, 9\} হয়, তবে A, B Set এর মান কত?** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
 
+
+   Answer: দেওয়া আছে:
+   - A - B = {১, ৫, ৭, ৮}
+   - B - A = {২, ১০}
+   - A ∩ B = {৩, ৬, ৯}
+
+   ধাপ ১ - A নির্ণয়। A এর প্রতিটি উপাদান হয় কেবল A তে আছে, নয়তো উভয় সেটে আছে:
+   - A = (A - B) ∪ (A ∩ B)
+   - A = {১, ৫, ৭, ৮} ∪ {৩, ৬, ৯}
+   - A = {১, ৩, ৫, ৬, ৭, ৮, ৯}
+
+   ধাপ ২ - B নির্ণয়। একইভাবে:
+   - B = (B - A) ∪ (A ∩ B)
+   - B = {২, ১০} ∪ {৩, ৬, ৯}
+   - B = {২, ৩, ৬, ৯, ১০}
+
+   উত্তর:
+   - A = {১, ৩, ৫, ৬, ৭, ৮, ৯}, যেখানে n(A) = ৭
+   - B = {২, ৩, ৬, ৯, ১০}, যেখানে n(B) = ৫
+
+   যাচাই:
+   - A - B = {১, ৫, ৭, ৮}। মিলেছে।
+   - B - A = {২, ১০}। মিলেছে।
+   - A ∩ B = {৩, ৬, ৯}। মিলেছে।
+   - A ∪ B = {১, ২, ৩, ৫, ৬, ৭, ৮, ৯, ১০}, n(A ∪ B) = ৯ = ৭ + ৫ - ৩। সূত্রের সঙ্গেও মিলেছে।
 10. **(a) Out of ten families, six families have dogs, four have cats and two have neither cats nor dogs. Find the number of families that have both cats and dogs?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
+
+    Answer: Let D be the set of families having dogs and C the set of families having cats.
+
+    Given:
+    - Total number of families = 10
+    - n(D) = 6
+    - n(C) = 4
+    - Families having neither = 2
+
+    Step 1 - find the number of families having at least one of the two:
+    - n(D union C) = Total - families having neither
+    - = 10 - 2
+    - = 8
+
+    Step 2 - apply the addition principle:
+    - n(D union C) = n(D) + n(C) - n(D intersection C)
+    - 8 = 6 + 4 - n(D intersection C)
+    - 8 = 10 - n(D intersection C)
+
+    Step 3 - solve:
+    - n(D intersection C) = 10 - 8
+    - n(D intersection C) = 2
+
+    Final answer: 2 families have both cats and dogs.
+
+    Full breakdown:
+    - Only dogs: 6 - 2 = 4 families
+    - Only cats: 4 - 2 = 2 families
+    - Both: 2 families
+    - Neither: 2 families
+    - Total: 4 + 2 + 2 + 2 = 10 families. Correct.
 11. **(c) Using truth table finds which of the following implications are equivalent to p \to (p \lor \neg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
 
+
+    Answer: The expression to be tested is p -> (p OR NOT(p AND q)).
+
+    Truth table:
+
+    | p | q | p AND q | NOT(p AND q) | p OR NOT(p AND q) | p -> (p OR NOT(p AND q)) |
+    |---|---|---|---|---|---|
+    | T | T | T | F | T | T |
+    | T | F | F | T | T | T |
+    | F | T | F | T | T | T |
+    | F | F | F | T | T | T |
+
+    Conclusion: the last column is T in every row, so the expression is a tautology, not a contradiction. The statement in the question that it is a contradiction is therefore incorrect.
+
+    Algebraic verification:
+    - p OR NOT(p AND q)
+    - = p OR (NOT p OR NOT q)          [De Morgan's law]
+    - = (p OR NOT p) OR NOT q          [associative law]
+    - = T OR NOT q
+    - = T
+    - So the whole expression is p -> T, and an implication with a true consequent is always true. Hence it is a tautology.
+
+    Definitions for reference:
+    - Tautology: a compound proposition that is true for every assignment of truth values, for example p OR NOT p.
+    - Contradiction: one that is false for every assignment, for example p AND NOT p.
+    - Contingency: one that is true for some assignments and false for others, for example p AND q.
+
+    An expression equivalent to this one would be any tautology, such as p -> p, p OR NOT p, or (p AND q) -> (p OR q).
 12. **(ii) Propositional logic ও Predicate Logic উদাহরণসহ বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 952-953 (ET: N/A)]*
 
+
+    Answer: Propositional Logic (প্রতিজ্ঞা যুক্তি):
+
+    - এটি যুক্তিবিদ্যার সবচেয়ে মৌলিক শাখা, যেখানে সম্পূর্ণ বাক্যকে একটি অবিভাজ্য একক হিসেবে ধরা হয় এবং তার সত্য বা মিথ্যা মান নিয়ে কাজ করা হয়।
+    - প্রতিটি বাক্যকে একটি চলক দিয়ে প্রকাশ করা হয়, যেমন p, q, r।
+    - সংযোজক (connectives): NOT (¬), AND (∧), OR (∨), IMPLIES (→), IF AND ONLY IF (↔)।
+    - উদাহরণ:
+      - p: "ঢাকা বাংলাদেশের রাজধানী" (সত্য)
+      - q: "২ + ২ = ৫" (মিথ্যা)
+      - p ∧ q: মিথ্যা
+      - p ∨ q: সত্য
+      - p → q: মিথ্যা
+    - সীমাবদ্ধতা: এটি বাক্যের ভেতরের গঠন বিশ্লেষণ করতে পারে না। যেমন "সব মানুষ মরণশীল" এবং "সক্রেটিস একজন মানুষ" থেকে "সক্রেটিস মরণশীল" — এই সিদ্ধান্তটি প্রতিজ্ঞা যুক্তিতে টানা যায় না, কারণ তিনটি বাক্যকে আলাদা আলাদা p, q, r হিসেবে দেখা হয় এবং তাদের মধ্যে কোনো সম্পর্ক ধরা পড়ে না।
+
+    Predicate Logic (পূর্বপদ যুক্তি বা First Order Logic):
+
+    - এটি প্রতিজ্ঞা যুক্তির সম্প্রসারিত রূপ, যেখানে বাক্যকে ভেঙে বিষয় (subject) ও বিধেয় (predicate) আলাদা করা হয় এবং পরিমাণজ্ঞাপক (quantifier) ব্যবহার করা হয়।
+    - উপাদান:
+      - Predicate: কোনো বস্তুর ধর্ম বা সম্পর্ক প্রকাশ করে, যেমন M(x) মানে "x মরণশীল"।
+      - Variable ও Constant: x, y চলক এবং সক্রেটিসের মতো নির্দিষ্ট নাম ধ্রুবক।
+      - Quantifier: সর্বজনীন পরিমাণজ্ঞাপক ∀ (for all) এবং অস্তিত্বজ্ঞাপক ∃ (there exists)।
+    - উদাহরণ:
+      - "সব মানুষ মরণশীল": ∀x (H(x) → M(x))
+      - "কিছু ছাত্র মেধাবী": ∃x (S(x) ∧ B(x))
+      - "সক্রেটিস একজন মানুষ": H(সক্রেটিস)
+      - এখান থেকে সিদ্ধান্ত: M(সক্রেটিস), অর্থাৎ সক্রেটিস মরণশীল। এই সিদ্ধান্ত টানা যায়, যা প্রতিজ্ঞা যুক্তিতে সম্ভব ছিল না।
+
+    পার্থক্য:
+
+    | বিষয় | Propositional Logic | Predicate Logic |
+    |---|---|---|
+    | মৌলিক একক | সম্পূর্ণ বাক্য | বস্তু, ধর্ম ও সম্পর্ক |
+    | বাক্যের ভেতরের গঠন | বিশ্লেষণ করা হয় না | বিশ্লেষণ করা হয় |
+    | পরিমাণজ্ঞাপক | নেই | আছে (∀ এবং ∃) |
+    | প্রকাশক্ষমতা | সীমিত | অনেক বেশি |
+    | সিদ্ধান্ত পদ্ধতি | সিদ্ধান্তযোগ্য (decidable), সত্যক সারণি দিয়েই সমাধান হয় | সাধারণভাবে অসিদ্ধান্তযোগ্য (undecidable) |
+    | জটিলতা | সরল | জটিল |
+    | ব্যবহার | ডিজিটাল সার্কিট নকশা, সরল যাচাইকরণ | কৃত্রিম বুদ্ধিমত্তা, ডেটাবেজ কোয়েরি, প্রোগ্রাম যাচাইকরণ, জ্ঞান উপস্থাপন |
+
+    কম্পিউটার বিজ্ঞানে প্রয়োগ: প্রতিজ্ঞা যুক্তি বুলিয়ান বীজগণিত ও লজিক গেট নকশার ভিত্তি; আর পূর্বপদ যুক্তি এসকিউএল কোয়েরি, প্রোলগ ভাষা, অটোমেটেড থিওরেম প্রুভিং এবং কৃত্রিম বুদ্ধিমত্তার জ্ঞান উপস্থাপনের ভিত্তি।
 13. **Propositional Logic and Predicate Logic উদাহরণসহ বুঝিয়ে লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1020 (ET: N/A)]*
+
+
+    Answer: Propositional Logic (প্রতিজ্ঞা যুক্তি):
+
+    - এটি যুক্তিবিদ্যার সবচেয়ে মৌলিক শাখা, যেখানে সম্পূর্ণ বাক্যকে একটি অবিভাজ্য একক হিসেবে ধরা হয় এবং তার সত্য বা মিথ্যা মান নিয়ে কাজ করা হয়।
+    - প্রতিটি বাক্যকে একটি চলক দিয়ে প্রকাশ করা হয়, যেমন p, q, r।
+    - সংযোজক (connectives): NOT (¬), AND (∧), OR (∨), IMPLIES (→), IF AND ONLY IF (↔)।
+    - উদাহরণ:
+      - p: "ঢাকা বাংলাদেশের রাজধানী" (সত্য)
+      - q: "২ + ২ = ৫" (মিথ্যা)
+      - p ∧ q: মিথ্যা
+      - p ∨ q: সত্য
+      - p → q: মিথ্যা
+    - সীমাবদ্ধতা: এটি বাক্যের ভেতরের গঠন বিশ্লেষণ করতে পারে না। যেমন "সব মানুষ মরণশীল" এবং "সক্রেটিস একজন মানুষ" থেকে "সক্রেটিস মরণশীল" — এই সিদ্ধান্তটি প্রতিজ্ঞা যুক্তিতে টানা যায় না, কারণ তিনটি বাক্যকে আলাদা আলাদা p, q, r হিসেবে দেখা হয় এবং তাদের মধ্যে কোনো সম্পর্ক ধরা পড়ে না।
+
+    Predicate Logic (পূর্বপদ যুক্তি বা First Order Logic):
+
+    - এটি প্রতিজ্ঞা যুক্তির সম্প্রসারিত রূপ, যেখানে বাক্যকে ভেঙে বিষয় (subject) ও বিধেয় (predicate) আলাদা করা হয় এবং পরিমাণজ্ঞাপক (quantifier) ব্যবহার করা হয়।
+    - উপাদান:
+      - Predicate: কোনো বস্তুর ধর্ম বা সম্পর্ক প্রকাশ করে, যেমন M(x) মানে "x মরণশীল"।
+      - Variable ও Constant: x, y চলক এবং সক্রেটিসের মতো নির্দিষ্ট নাম ধ্রুবক।
+      - Quantifier: সর্বজনীন পরিমাণজ্ঞাপক ∀ (for all) এবং অস্তিত্বজ্ঞাপক ∃ (there exists)।
+    - উদাহরণ:
+      - "সব মানুষ মরণশীল": ∀x (H(x) → M(x))
+      - "কিছু ছাত্র মেধাবী": ∃x (S(x) ∧ B(x))
+      - "সক্রেটিস একজন মানুষ": H(সক্রেটিস)
+      - এখান থেকে সিদ্ধান্ত: M(সক্রেটিস), অর্থাৎ সক্রেটিস মরণশীল। এই সিদ্ধান্ত টানা যায়, যা প্রতিজ্ঞা যুক্তিতে সম্ভব ছিল না।
+
+    পার্থক্য:
+
+    | বিষয় | Propositional Logic | Predicate Logic |
+    |---|---|---|
+    | মৌলিক একক | সম্পূর্ণ বাক্য | বস্তু, ধর্ম ও সম্পর্ক |
+    | বাক্যের ভেতরের গঠন | বিশ্লেষণ করা হয় না | বিশ্লেষণ করা হয় |
+    | পরিমাণজ্ঞাপক | নেই | আছে (∀ এবং ∃) |
+    | প্রকাশক্ষমতা | সীমিত | অনেক বেশি |
+    | সিদ্ধান্ত পদ্ধতি | সিদ্ধান্তযোগ্য (decidable), সত্যক সারণি দিয়েই সমাধান হয় | সাধারণভাবে অসিদ্ধান্তযোগ্য (undecidable) |
+    | জটিলতা | সরল | জটিল |
+    | ব্যবহার | ডিজিটাল সার্কিট নকশা, সরল যাচাইকরণ | কৃত্রিম বুদ্ধিমত্তা, ডেটাবেজ কোয়েরি, প্রোগ্রাম যাচাইকরণ, জ্ঞান উপস্থাপন |
+
+    কম্পিউটার বিজ্ঞানে প্রয়োগ: প্রতিজ্ঞা যুক্তি বুলিয়ান বীজগণিত ও লজিক গেট নকশার ভিত্তি; আর পূর্বপদ যুক্তি এসকিউএল কোয়েরি, প্রোলগ ভাষা, অটোমেটেড থিওরেম প্রুভিং এবং কৃত্রিম বুদ্ধিমত্তার জ্ঞান উপস্থাপনের ভিত্তি।
 
 ## Percentage, Profit & Loss, Simple & Compound Interest (12)
 
