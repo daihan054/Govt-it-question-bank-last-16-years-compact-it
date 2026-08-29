@@ -4497,17 +4497,295 @@
 
 1. What is CII? How many CII organizations? Name 10 CII organization name. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+
+   Answer:
+
+   What CII is:
+   - Critical Information Infrastructure means the information systems, networks and data whose incapacity or destruction would have a debilitating effect on national security, the economy, public health or public safety.
+   - In Bangladesh it is defined and designated under the Digital Security Act 2018, and continued under the Cyber Security Act 2023. Section 15 provides that the government may declare any computer system, network or information infrastructure to be Critical Information Infrastructure, and unauthorised access to it or damage to it carries substantially heavier penalties than an ordinary offence.
+   - Designated CII organisations are subject to mandatory security requirements: compliance audits, incident reporting to the national CERT, designation of a chief information security officer, and adherence to the guidelines issued by the Digital Security Agency and BGD e-GOV CIRT.
+
+   How many CII organisations there are:
+   - The government has designated CII in successive gazette notifications rather than in a single list. The first notification in 2022 designated 29 organisations, and later notifications extended the number; by 2024 the figure commonly cited is in the region of 30 to 40 organisations.
+   - The list is revised by gazette, so the current number should be checked against the latest notification of the Digital Security Agency rather than quoted from memory. <!-- verify -->
+
+   Ten CII organisations in Bangladesh:
+   - Bangladesh Bank, the central bank and the national payment systems.
+   - Bangladesh Telecommunication Regulatory Commission, BTRC.
+   - Bangladesh Computer Council, which operates the national data centre.
+   - Election Commission Secretariat, which holds the National ID database.
+   - Department of Immigration and Passports.
+   - National Board of Revenue.
+   - Bangladesh Power Development Board and the Power Grid Company of Bangladesh, that is the electricity generation and transmission control systems.
+   - Bangladesh Telecommunications Company Limited, BTCL, and Bangladesh Submarine Cable Company, BSCPLC.
+   - Directorate General of Health Services, which holds national health information systems.
+   - Bangladesh Railway, and the Civil Aviation Authority of Bangladesh, for transport control systems.
+   - Others commonly designated: Titas Gas and Petrobangla, the Roads and Highways Department, the Bangladesh Bureau of Statistics, the Ministry of Foreign Affairs, and the state owned commercial banks.
+
+   Why the designation matters:
+   - It concentrates limited national security capability on the systems whose failure would be catastrophic, imposes a minimum standard on operators who might otherwise underinvest, and creates a legal duty to report incidents so that a national picture of the threat actually exists. <!-- verify -->
 2. **CTC কী? কী কাজে ব্যবহার হয়?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer: CTC most probably refers to the Cyber Threat Centre, and in some contexts to a Computer Training Centre. The reading that fits a cyber security paper is the Cyber Threat Centre.
+
+   Cyber Threat Centre:
+   - A Cyber Threat Centre is a specialised unit that collects, analyses and disseminates information about cyber threats, and coordinates the response to incidents, at a national or an organisational level.
+   - Its functions: continuous monitoring of the threat landscape; collection and analysis of threat intelligence; issuing alerts and advisories to constituent organisations; incident response coordination; digital forensic investigation; vulnerability assessment; and awareness and capacity building.
+   - In Bangladesh the corresponding national body is BGD e-GOV CIRT, the Computer Incident Response Team operating under the ICT Division and now the Digital Security Agency, which performs exactly these functions for government and for designated Critical Information Infrastructure.
+   - It is closely related to, and often part of, a Security Operations Centre, which does the same work for a single organisation, and to a CERT or CSIRT, which is the incident response function specifically.
+   - Its value is that no single organisation sees enough of the threat landscape to defend itself well. A central body aggregates observations from many sources, so an attack detected against one bank becomes a warning to all of them within hours.
+
+   The alternative reading, Computer Training Centre:
+   - If the paper is a general ICT one rather than a security one, CTC is the Computer Training Centre, an institution that trains people in computer operation, programming, networking and office applications. In Bangladesh such centres operate under the Bangladesh Computer Council, the Directorate of Technical Education and various ministries, and they are used for the ICT skills programmes of the Digital Bangladesh initiative.
+
+   - The abbreviation is not a fixed standard term in either sense, so the answer should state the assumption being made. <!-- verify -->
 3. **(c) Briefly write about the cybersecurity laws of Bangladesh.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
+
+
+   Answer: The cyber security legal framework of Bangladesh consists of a small number of principal statutes together with the institutions created under them.
+
+   ICT Act 2006, the Information and Communication Technology Act:
+   - The first comprehensive law in this field. It gave legal recognition to electronic records, electronic signatures and electronic transactions, so that a digitally signed document has the same standing as a written one.
+   - It established the Controller of Certifying Authorities, which licenses and supervises the Certifying Authorities that issue digital certificates.
+   - It criminalised hacking, unauthorised access, damage to computer systems, tampering with source code and the publication of obscene material electronically, and it established cyber tribunals and a cyber appellate tribunal to try such offences.
+   - It was amended in 2009 and 2013; the 2013 amendment made several offences non-bailable and raised the penalties, which attracted substantial criticism.
+
+   Digital Security Act 2018:
+   - It replaced the criminal provisions of the ICT Act, including the much criticised section 57, and became the principal instrument for cyber offences.
+   - It created the Digital Security Agency, and gave statutory footing to the National Computer Emergency Response Team, BGD e-GOV CIRT, and to the Digital Forensic Laboratory.
+   - It provided for the designation of Critical Information Infrastructure and imposed heavier penalties for offences against it.
+   - Offences covered: illegal access, damage to computers and networks, identity fraud, e-transaction fraud, cyber terrorism, the spread of communal hatred, defamation, and the publication of offensive or false information.
+   - It was heavily criticised by journalists, human rights organisations and international bodies for provisions that were vague, that permitted arrest without a warrant, and that were used against journalistic and political expression rather than against genuine cyber crime.
+
+   Cyber Security Act 2023:
+   - Enacted to replace the Digital Security Act following that criticism. It retains the structure of the earlier law but makes several offences bailable, reduces some penalties, removes imprisonment for certain defamation related offences and narrows some definitions.
+   - It continues the Digital Security Agency, now the National Cyber Security Agency, and the CIRT, and retains the Critical Information Infrastructure regime.
+   - It has itself been criticised on the ground that the substance of the contested provisions survives under new headings, and further amendment has been under discussion.
+
+   Other relevant instruments:
+   - Pornography Control Act 2012, which addresses the electronic distribution of pornographic material.
+   - Right to Information Act 2009, which governs access to public information and interacts with data held electronically.
+   - Bangladesh Telecommunication Act 2001, under which the BTRC regulates telecommunications and Internet services.
+   - Money Laundering Prevention Act and the Anti-Terrorism Act, which apply to financial cyber crime and to cyber terrorism.
+   - Evidence Act, as amended, which now provides for the admissibility of digital evidence.
+   - Bangladesh Bank ICT Security Guideline, which is not a statute but a binding regulatory instrument for the financial sector, mandating security controls, incident reporting and audit.
+   - A Data Protection Act has been in draft for several years and had not been enacted at the time of writing, which leaves personal data protection as the principal gap in the framework.
+
+   Institutions:
+   - National Cyber Security Agency, formerly the Digital Security Agency, under the ICT Division.
+   - BGD e-GOV CIRT, the national computer incident response team.
+   - Cyber Crime Investigation Division of the CID, and the Counter Terrorism and Transnational Crime unit of the police.
+   - Cyber tribunals and the cyber appellate tribunal.
+   - Controller of Certifying Authorities.
+   - National Telecommunication Monitoring Centre.
+
+   Assessment for an examination answer:
+   - Strengths: Bangladesh has a defined legal framework, a designated national CERT, a CII regime and cyber tribunals, which places it ahead of many countries at a comparable stage of development.
+   - Weaknesses: the absence of a data protection law; provisions drafted broadly enough to affect legitimate expression; limited forensic and investigative capacity relative to the volume of offences; and substantial under-reporting, which leaves the true scale of cyber crime unknown. <!-- verify -->
 
 ## Cryptography & Network Security Scenarios (3)
 
 1. Cryptography and Network Security Scenario: [BSCCPL AME 21-08-2026 (BUET)] Cox's Bazar wants to send confidential information to Kuakata through an insecure network. Cox's Bazar first generates a hash value using a Hash Function (H). The message, hash value, and routing data are combined and encrypted using Kuakata's Public Key (Ku). The encrypted ciphertext is transmitted through the network. During transmission, an attacker positioned between Cox's Bazar and Kuakata intercepts the encrypted data. The attacker captures the ciphertext and deliberately blocks it so that Kuakata never receives the message. However, the attacker is unable to read or decrypt the original message because Kuakata's Private Key (\text{Ku}^{-1}) is not available to the attacker. Kuakata is expected to decrypt the received ciphertext using its Private Key (\text{Ku}^{-1}) and verify the integrity of the message using the hash value whenever the message is successfully delivered. Questions: (a) Is there any digital signature? (b) Identify attack. (c) How to identify origin of the? (d) How to manage the attack. (e) Does the described communication provide a Digital Signature? Give reasons. If not, explain how Cox's Bazar can add a Digital Signature using Cox's Bazar's Private Key (\text{Kc}^{-1}) and verification using Cox's Bazar's Public Key (\text{Kc}). (f) Which security services are provided by the system among Confidentiality, Integrity, Authentication, Non-repudiation, and Availability? (g) Suggest suitable techniques or mechanisms to protect the communication against the attack identified in question (b). (h) Draw a complete communication diagram showing \text{Message} \to \text{Hash} \to \text{Routing Data} \to \text{Encryption with Ku} \to \text{Attacker} \to \text{Kuakata} \to \text{Decryption with } \text{Ku}^{-1}, and indicate the keys used in each stage.
 
+
+   Answer:
+
+   (a) Is there any digital signature?
+   - No. The scheme described uses only Kuakata's public key Ku to encrypt, which provides confidentiality to Kuakata alone. A digital signature requires the sender to encrypt with the sender's own private key, and Cox's Bazar's private key Kc⁻¹ is never used. The hash provides integrity, but an unsigned hash proves nothing about origin, because an attacker who replaced the message could simply compute a new hash for it.
+
+   (b) Identify the attack.
+   - The attacker intercepts the ciphertext and deliberately blocks it so that Kuakata never receives the message. This is an interruption attack, which is an active attack against availability, and it is a form of Denial of Service. Because the attacker sits between the two parties and controls the traffic, the position itself is a Man in the Middle. He cannot read the content, so confidentiality holds; what is destroyed is availability.
+
+   (c) How to identify the origin of the message.
+   - The origin cannot be identified in the scheme as described, which is precisely its defect. To identify it, Cox's Bazar must digitally sign the message with its own private key Kc⁻¹, and Kuakata must verify with Cox's Bazar's public key Kc. Since only Cox's Bazar holds Kc⁻¹, a signature that verifies proves the origin. A digital certificate issued by a Certifying Authority must bind Kc to Cox's Bazar's identity, otherwise an attacker could publish his own key claiming to be Cox's Bazar.
+
+   (d) How to manage the attack.
+   - Detection first: use sequence numbers, timestamps and acknowledgements, so that a message that never arrives is noticed. Keep-alive and heartbeat messages reveal a blocked channel within seconds.
+   - Timeout and retransmission, so that a blocked message is resent automatically.
+   - Redundant and diverse paths: send over more than one route or link, so that blocking one does not prevent delivery. Multipath transmission is the direct countermeasure to interruption.
+   - Out of band confirmation for critical messages, for example an SMS or a telephone confirmation that the message was received.
+   - Prevent the middle position in the first place: VPN or IPsec tunnels, authenticated TLS, Dynamic ARP Inspection and DHCP snooping on the LAN, and DNSSEC.
+   - Monitoring and logging of link availability, with alerting so that a persistent block is escalated rather than silently tolerated.
+
+   (e) Does the communication provide a digital signature, and how to add one?
+   - It does not, for the reason given in (a).
+   - To add one: Cox's Bazar computes h = H(M) over the message. It then encrypts that hash with its own private key: S = E(h, Kc⁻¹). This value S is the digital signature. The message, the signature and the routing data are then encrypted together with Kuakata's public key Ku for confidentiality, and transmitted.
+   - Verification at Kuakata: decrypt the ciphertext with the private key Ku⁻¹ to recover M and S. Decrypt S with Cox's Bazar's public key Kc to obtain h1. Compute h2 = H(M) independently. If h1 = h2, the message is authentic, unaltered, and provably from Cox's Bazar, who cannot afterwards deny sending it.
+   - The order matters: sign first and then encrypt. Encrypting and then signing would allow an attacker to strip the signature and attach his own to the same ciphertext.
+
+   (f) Which security services are provided?
+
+   | Service | Provided in the scheme as described | Reason |
+   |---|---|---|
+   | Confidentiality | Yes | The message is encrypted with Ku, and only Ku⁻¹ can decrypt it, which the attacker does not have |
+   | Integrity | Partially | The hash detects accidental corruption, but an attacker who could decrypt could also recompute the hash; without a signature the integrity check is not cryptographically bound to any identity |
+   | Authentication | No | Nothing identifies the sender; anyone can obtain Kuakata's public key and send a message |
+   | Non-repudiation | No | Cox's Bazar could deny having sent it, since nothing was signed with its private key |
+   | Availability | No | It is exactly what the attack destroys; the message is blocked and never delivered |
+
+   - After adding the digital signature of (e), authentication, non-repudiation and cryptographically bound integrity are all obtained. Availability still is not, because no cryptographic measure can prevent an attacker in the path from discarding packets; that requires redundancy and detection.
+
+   (g) Techniques to protect against the identified attack.
+   - Redundant and diverse routing, and multipath transmission, so no single interception point can block the message.
+   - Acknowledgements, sequence numbers, timestamps and retransmission timers, so that loss is detected and corrected automatically.
+   - Heartbeat and keep-alive monitoring of the link, with alerting.
+   - Authenticated encrypted tunnels, that is IPsec or TLS with mutual authentication, which prevent the attacker from obtaining the middle position at all.
+   - Layer 2 protections on the local network: Dynamic ARP Inspection, DHCP snooping, port security and 802.1X.
+   - DNSSEC and secure routing practice such as RPKI, to prevent redirection at the network level.
+   - Out of band confirmation for critical messages.
+   - Store and forward with persistent queues, so that an undelivered message is retried rather than lost.
+   - Anti-replay protection with nonces, so the attacker cannot resend an old captured message later.
+
+   (h) Complete communication diagram:
+
+   ```mermaid
+   graph LR
+       A["Cox's Bazar: Message M"] --> B["Hash H, gives h = H(M)"]
+       B --> S["Sign: S = E(h, Kc-1), sender's PRIVATE key"]
+       A --> C["Combine M + S + Routing Data"]
+       S --> C
+       C --> D["Encrypt with Ku, receiver's PUBLIC key"]
+       D --> E["Ciphertext transmitted over the insecure network"]
+       E --> F["Attacker in the middle: cannot decrypt, but blocks the message"]
+       F -.->|"if delivered"| G["Kuakata"]
+       G --> H2["Decrypt with Ku-1, receiver's PRIVATE key"]
+       H2 --> I["Recover M and S"]
+       I --> J["Decrypt S with Kc, sender's PUBLIC key, gives h1"]
+       I --> K["Compute h2 = H(M)"]
+       J --> L{"h1 = h2 ?"}
+       K --> L
+       L -->|Yes| M2["Authentic, unaltered, origin proved"]
+       L -->|No| N["Reject the message"]
+   ```
+
+   Keys used at each stage:
+   - Signing at Cox's Bazar: Kc⁻¹, Cox's Bazar's private key.
+   - Encryption at Cox's Bazar: Ku, Kuakata's public key.
+   - Decryption at Kuakata: Ku⁻¹, Kuakata's private key.
+   - Signature verification at Kuakata: Kc, Cox's Bazar's public key.
+
+   - Practical refinement worth adding: encrypting a long message directly with RSA is impractically slow. In a real system Cox's Bazar would generate a random symmetric session key, encrypt the message with AES using that key, and encrypt only the short session key with Ku. This is hybrid encryption, and it is what TLS and PGP actually do.
 2. **Explain Cyber Attack Scenario-** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1441 (ET: BUET)]*
 
+
+   Answer: A cyber attack scenario is normally explained by walking through the stages of the attack lifecycle, which is what the Cyber Kill Chain and the MITRE ATT&CK framework describe. The following is a representative scenario for a bank.
+
+   The scenario:
+   - A bank's finance department receives an email that appears to come from a known supplier, with an attached invoice. Two weeks later, on a Friday evening, the bank's file servers are found encrypted and a ransom note demands payment in cryptocurrency, with a threat to publish stolen customer data.
+
+   Stage 1, Reconnaissance:
+   - The attacker researches the bank from its website, LinkedIn, job advertisements and previous data leaks. He identifies the finance staff, the email address format, the supplier relationships and the security products in use.
+
+   Stage 2, Weaponisation:
+   - He prepares a Word document containing a malicious macro, or a PDF exploiting a known reader vulnerability, and registers a domain closely resembling the supplier's.
+
+   Stage 3, Delivery:
+   - The email is sent to three named members of the finance team, spoofing the supplier's address, with a plausible pretext about an overdue payment.
+
+   Stage 4, Exploitation:
+   - One recipient opens the attachment and enables macros. The macro executes PowerShell, which downloads the actual payload from the attacker's server. Nothing is written to disk in a form the antivirus recognises.
+
+   Stage 5, Installation and persistence:
+   - The payload installs a remote access Trojan, creates a scheduled task and a registry run key so that it survives a reboot, and disables the antivirus.
+
+   Stage 6, Command and control:
+   - The implant establishes an encrypted outbound connection to the attacker's server over port 443, which blends into ordinary web traffic and is not blocked by the firewall, because outbound HTTPS is permitted.
+
+   Stage 7, Privilege escalation and lateral movement:
+   - The attacker harvests credentials from memory, finds a local administrator password reused across many machines, and moves laterally using legitimate administrative tools such as PsExec and WMI, which is why endpoint antivirus does not object. Over several days he reaches a domain administrator account.
+
+   Stage 8, Discovery and collection:
+   - He maps the network, locates the file servers, the database and the backup server, and identifies the most sensitive data.
+
+   Stage 9, Exfiltration:
+   - Customer data is compressed, encrypted and uploaded slowly to a cloud storage service over several nights, in volumes small enough not to trigger any alert.
+
+   Stage 10, Actions on objectives:
+   - The backups are deleted or encrypted first, shadow copies are removed, and only then is the ransomware deployed across the estate simultaneously, deliberately at a weekend so that the response is slowest.
+
+   How it should have been stopped, at each stage:
+   - Delivery: email filtering, attachment sandboxing, DMARC to block spoofing, and external sender warnings.
+   - Exploitation: macros disabled by policy for documents from the Internet, patched software, and user training with simulated phishing.
+   - Installation: application whitelisting, PowerShell constrained language mode and script block logging, and endpoint detection and response watching behaviour rather than signatures.
+   - Command and control: egress filtering with a proxy, DNS monitoring, and threat intelligence feeds blocking known malicious destinations.
+   - Lateral movement: unique local administrator passwords through LAPS, network segmentation, restriction of administrative protocols, and multi-factor authentication on privileged accounts.
+   - Exfiltration: Data Loss Prevention, monitoring of outbound volume, and blocking of unsanctioned cloud storage.
+   - Impact: immutable and offline backups that the attacker cannot reach, tested by restoration; least privilege so that no single account can encrypt everything; and 24 hour monitoring so that a weekend attack is noticed within minutes rather than on Monday morning.
+
+   Response when it happens:
+   - Isolate the affected systems immediately, before investigating.
+   - Activate the incident response plan and inform management, the regulator and the national CERT.
+   - Preserve evidence for forensic analysis.
+   - Do not pay the ransom; identify the strain and check for a free decryptor.
+   - Rebuild from known good images, restore from offline backups, reset every credential, and close the entry route before reconnecting.
+   - Conduct a root cause analysis and correct the control that failed.
+
+   - The lesson to state: no single control would have prevented this. The attack succeeded because several ordinary controls were missing at once, and it would have been stopped at any one of ten points had defence in depth been properly implemented.
 3. **Imagine yu should design a secure transmission protocol for sending data from one node to another node. You should divide the message in the multiple packets and this packets will be using different path so that any one cannot decrypt the message.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
+
+
+   Answer: The requirement is a protocol in which a message is divided into packets, the packets travel by different paths, and no single interceptor can reconstruct the message. This is achieved by combining secret sharing with multipath transmission and authenticated encryption.
+
+   Design overview:
+   - The essential idea is that interception of a subset of the paths must yield nothing at all, not merely a fragment. Simply splitting the ciphertext across paths is insufficient, because an attacker who captures enough fragments can reassemble it. The correct construction is a threshold secret sharing scheme, in which any k of n shares reconstruct the message and any k − 1 shares reveal nothing whatever about it.
+
+   Step 1, preparation at the sender:
+   - Compute a hash of the whole message, h = SHA-256(M), for end to end integrity.
+   - Generate a random symmetric session key K and encrypt the message with authenticated encryption: C = AES-256-GCM(M, K). This gives confidentiality and integrity in one operation.
+   - Sign the hash with the sender's private key to give origin authentication and non-repudiation.
+
+   Step 2, splitting:
+   - Apply Shamir's Secret Sharing to the session key K, producing n shares such that any k of them reconstruct K and any fewer reveal nothing. This is the security critical step.
+   - Divide the ciphertext C into n fragments, and apply erasure coding, for example Reed-Solomon, so that any k fragments suffice to rebuild C. This gives resilience against packets being blocked as well as against interception.
+   - Give every packet a message identifier, a sequence number, a timestamp and a nonce, and attach a message authentication code so that a modified or replayed packet is rejected.
+
+   Step 3, path selection and dispersal:
+   - Discover n disjoint paths, ideally physically diverse: different ISPs, different links, or an overlay network such as multipath TCP, SCTP or a Tor-like circuit.
+   - Distribute the shares and fragments so that no single path carries k of them. Randomise the assignment for each message, so an attacker cannot learn a stable pattern.
+   - Introduce small random delays and, where the threat model justifies it, dummy traffic, so that traffic analysis cannot correlate the packets of one message.
+
+   Step 4, transmission:
+   - Send each packet over its assigned path inside its own encrypted tunnel, so that even the metadata is protected.
+
+   Step 5, reassembly at the receiver:
+   - Collect packets until k shares of the key and k fragments of the ciphertext have arrived.
+   - Reconstruct K from the shares, rebuild C from the fragments, decrypt with AES-GCM, and verify the authentication tag.
+   - Verify the hash and the digital signature to confirm integrity and origin.
+   - Acknowledge, and request retransmission of anything still missing after a timeout.
+
+   ```mermaid
+   graph LR
+       A["Message M"] --> B["Encrypt: C = AES-GCM(M, K)"]
+       B --> C["Split C into n fragments with erasure coding"]
+       A --> D["Hash and sign with the sender's private key"]
+       K1["Session key K"] --> E["Shamir split into n shares, threshold k"]
+       C --> F["Path 1"]
+       C --> G["Path 2"]
+       C --> H["Path n"]
+       E --> F
+       E --> G
+       E --> H
+       F --> I["Receiver"]
+       G --> I
+       H --> I
+       I --> J["Collect any k shares and k fragments"]
+       J --> K2["Reconstruct K, rebuild C, decrypt, verify tag and signature"]
+   ```
+
+   Why the design meets the requirement:
+   - An attacker who compromises fewer than k paths obtains shares that are, by the mathematics of Shamir's scheme, statistically independent of the key. He learns nothing at all, not a partial message.
+   - Even with the ciphertext fragments, without the key they are indistinguishable from random data.
+   - Erasure coding means that blocking some paths does not prevent delivery, so availability is protected as well as confidentiality.
+   - Authenticated encryption and the message authentication code prevent modification; nonces and timestamps prevent replay; and the digital signature provides origin authentication and non-repudiation.
+
+   Parameters and practical considerations:
+   - Choose n and k according to the threat model: n = 5 and k = 3 tolerates two blocked or compromised paths.
+   - Overhead: the traffic volume is multiplied by roughly n/k, so the security is bought with bandwidth. This must be justified by the value of the data.
+   - Genuine path diversity is the hard part in practice. Paths that appear separate often converge at a single transit provider or a single physical cable, which destroys the assumption. Route diversity must be verified, not assumed.
+   - Key management: the sender must hold an authenticated copy of the receiver's public key, obtained through a PKI, or the whole scheme is open to a man in the middle at the key exchange.
+   - Reassembly complexity, latency from waiting for k arrivals, and the need for careful protocol design against side channels.
+   - Comparable real systems: onion routing as used by Tor, multipath TCP, SCTP with multihoming, and the secure dispersal schemes used in distributed storage.
 
 ## Email & Messaging Security (Spam, Phishing) (2)
 
