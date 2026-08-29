@@ -3,9 +3,9 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 7/239 subtopics · 45/2673 answers**
+**Overall: 8/239 subtopics · 48/2673 answers**
 
-## ai-and-ml.md — 6/11 sections, 34/41 answers
+## ai-and-ml.md — 7/11 sections, 37/41 answers
 
 - [x] Artificial Intelligence & Expert Systems (8)
 - [x] Deep Learning & Neural Networks (ANN, CNN, RNN) (7)
@@ -13,7 +13,7 @@ Commit unit: one `##` subtopic.
 - [x] Model Evaluation & Datasets (5)
 - [x] Supervised Learning (Decision Trees) (4)
 - [x] Generative AI & Explainable AI (XAI) (4)
-- [ ] Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)
+- [x] Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)
 - [ ] Search Algorithms (Informed vs Uninformed Search) (1)
 - [ ] Overfitting, Underfitting & Model Generalization (1)
 - [ ] Association Rule Learning (Market Basket Analysis) (1)

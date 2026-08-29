@@ -507,9 +507,61 @@
 
 1. **Explain the concepts of Reinforcement Learning (RL), Deep Learning (DL), and Federated Learning (FL) in the context of Machine Learning. Briefly describe how each approach differs in its learning mechanism, data usage, and real-world applications.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1427 (ET: E-Zone)]*
 
+   Answer:
+
+   Reinforcement Learning:
+   - Learning mechanism: an agent takes an action in an environment, receives a reward or penalty, and updates its policy to maximise the total future reward.
+   - Data usage: no labelled dataset. The agent generates its own experience by trial and error.
+   - Applications: robot navigation, game playing, traffic signal control, automated trading, dynamic pricing.
+
+   Deep Learning:
+   - Learning mechanism: a multi-layer neural network learns features automatically, and weights are adjusted by backpropagation to reduce the loss.
+   - Data usage: needs a very large labelled dataset and heavy computation, normally GPU.
+   - Applications: image and face recognition, speech recognition, machine translation, medical image diagnosis, cheque and document reading.
+
+   Federated Learning:
+   - Learning mechanism: the model is sent to each device or branch, trained locally on local data, and only the model updates are sent back to a central server, which aggregates them into a global model.
+   - Data usage: raw data never leaves the device, so privacy is preserved. Data is naturally distributed and often not identically distributed.
+   - Applications: mobile keyboard prediction, healthcare where hospital data cannot be shared, and banking where each branch or bank keeps customer data local but a shared fraud model is still trained.
+
+   Key difference in one line: RL learns from reward, DL learns from large labelled data in deep networks, and FL learns across many devices without moving the data.
+
 2. **Explain reinforcement learning in the field of Machine Learning?** *[BTCL Assistant Manager (Technical) 2023 compact it 593 (ET: BUET)]*
 
+   Answer: Reinforcement Learning is a machine learning approach where an agent learns which action to take by interacting with an environment and receiving a reward or a penalty for each action, so that the total reward over time becomes maximum.
+
+   Main elements:
+   - Agent: the learner or decision maker.
+   - Environment: everything the agent interacts with.
+   - State: the current situation of the environment.
+   - Action: what the agent can do in that state.
+   - Reward: the numeric feedback after an action.
+   - Policy: the strategy that maps a state to an action.
+
+   ```mermaid
+   graph LR
+       AG[Agent] -->|Action| ENV[Environment]
+       ENV -->|State| AG
+       ENV -->|Reward| AG
+   ```
+
+   - The agent must balance exploration, that is trying new actions, against exploitation, that is using the best known action.
+   - Common algorithms are Q-Learning, SARSA and Deep Q-Network.
+   - Example: a robot learning to walk gets a positive reward for moving forward and a negative reward for falling, and after many attempts it learns a stable walking policy.
+
 3. **Weak and strong learner ensemble learning in Machine learning.** *[GTCL Assistant Engineer (CSE) 2022 compact it 686 (ET: BUET)]*
+
+   Answer: Ensemble learning combines several models so that the group performs better than any single model.
+
+   - Weak learner: a model whose accuracy is only slightly better than random guessing, for example a decision stump, which is a tree of depth one.
+   - Strong learner: a model with high accuracy, which ensemble methods build by combining many weak learners.
+
+   Main ensemble techniques:
+   - Bagging: many models are trained in parallel on different bootstrap samples and their outputs are averaged or voted. It mainly reduces variance. Example: Random Forest.
+   - Boosting: models are trained one after another, and each new model gives more weight to the samples the previous model got wrong. It mainly reduces bias. Examples: AdaBoost, Gradient Boosting, XGBoost.
+   - Stacking: several different models are trained and a meta model learns how to combine their predictions.
+
+   Why it works: individual weak learners make different errors, and combining them cancels out much of the random error, so accuracy and stability both improve.
 
 ## Search Algorithms (Informed vs Uninformed Search) (1)
 
