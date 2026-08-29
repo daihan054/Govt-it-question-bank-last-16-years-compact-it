@@ -198,15 +198,73 @@
  * **(ii) Unsupervised learning**
  * **(iii) Reinforcement learning**
 
+   Answer:
+
+   (i) Supervised learning
+   - The model is trained on labelled data, where every input already has the correct output.
+   - The algorithm learns the mapping from input to output and then predicts the label of unseen data.
+   - Two types: classification (output is a category) and regression (output is a number).
+   - Examples: spam detection, credit approval, house price prediction.
+
+   (ii) Unsupervised learning
+   - The model is trained on unlabelled data, so no correct answer is supplied.
+   - The algorithm finds hidden structure, groups or patterns by itself.
+   - Two common types: clustering (K-Means, hierarchical) and association (market basket analysis).
+   - Examples: customer segmentation, anomaly detection in transactions.
+
+   (iii) Reinforcement learning
+   - An agent learns by interacting with an environment, taking actions and receiving a reward or penalty.
+   - No labelled dataset is given; the agent learns a policy that maximises long term reward through trial and error.
+   - Key elements: agent, environment, state, action, reward.
+   - Examples: game playing, robot navigation, automatic trading systems.
+
 2. **a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
+
+   Answer: Data Mining is the process of discovering useful patterns, relationships and knowledge from a large volume of data by using statistics, machine learning and database techniques. It is a key step of the KDD (Knowledge Discovery in Databases) process.
+
+   Supervised classification:
+   - Training data is labelled, so each record already carries its class.
+   - The model learns the boundary between classes and assigns a class to new records.
+   - Example: a bank has past loan records marked as "defaulter" or "non-defaulter". A decision tree trained on these can classify a new applicant.
+
+   Unsupervised classification (clustering):
+   - Data has no label, so the algorithm groups records only by similarity.
+   - The number and meaning of groups are discovered from the data itself.
+   - Example: a bank runs K-Means on customer transaction data and gets natural groups such as high value customers, regular customers and dormant customers, without anyone labelling them first.
 
 3. **Briefly explain supervised learning, unsupervised learning & reinforcement learning.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1341 (ET: N/A)]*
 
+   Answer:
+   - Supervised learning: learns from labelled data where the correct output is known, and predicts the output for new input. Used in classification and regression, for example spam filtering and price prediction.
+   - Unsupervised learning: learns from unlabelled data and finds hidden groups or patterns by itself. Used in clustering and association, for example customer segmentation.
+   - Reinforcement learning: an agent learns by acting in an environment and receiving reward or penalty, improving its policy over time. Used in robotics, game playing and automated control.
+
 4. **(b) What is the difference between supervised and unsupervised learning? Explain with examples.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)], [SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)], [DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
+
+   Answer:
+
+   | Point | Supervised Learning | Unsupervised Learning |
+   |---|---|---|
+   | Training data | Labelled, correct output given | Unlabelled, no output given |
+   | Goal | Predict the output for new input | Find hidden structure in the data |
+   | Guidance | Learns under supervision of known answers | Learns without any supervision |
+   | Main types | Classification, Regression | Clustering, Association |
+   | Algorithms | Decision Tree, SVM, KNN, Linear Regression | K-Means, Hierarchical clustering, Apriori |
+   | Accuracy check | Easy, compare prediction with the true label | Difficult, no ground truth to compare |
+   | Example | Detecting whether an email is spam, using past emails already marked spam or not spam | Grouping bank customers into segments by spending behaviour, where no group was defined beforehand |
 
 5. **Given some features of diabetic patient dataset with some labeled data. From this it can be predict whether this patient is diabetic or not. Is this supervised learning or unsupervised learning problem. Explain in one sentence.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 
+   Answer: It is a supervised learning problem, specifically binary classification, because the dataset already carries labels showing which patients are diabetic and which are not, and the model learns from those labels to classify a new patient.
+
 6. **What do you mean by machine learning? Name three machine learning application in our daily life?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 680 (ET: N/A)]*
+
+   Answer: Machine Learning is a branch of Artificial Intelligence in which a computer learns patterns from data and improves its performance on a task with experience, instead of being explicitly programmed with fixed rules for every case.
+
+   Three daily life applications:
+   - Email spam filtering, which classifies an incoming mail as spam or not from past mail patterns.
+   - Product or video recommendation on e-commerce and streaming sites, based on the behaviour of similar users.
+   - Fraud detection in card and mobile banking transactions, where an unusual transaction pattern raises an alert.
 
 ## Model Evaluation & Datasets (5)
 
