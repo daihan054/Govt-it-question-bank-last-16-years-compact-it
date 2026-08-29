@@ -6230,15 +6230,334 @@
 
 1. **Difference between: Policy, Guideline, Procedure; why auditor must focus on control as a system? Explain four types of risks auditor faces, Explain each of theme.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 310 (ET: BIBM)]*
 
+
+   Answer: Policy, guideline and procedure; control as a system; and the four types of audit risk.
+
+   Difference between policy, guideline and procedure
+
+   | Point | Policy | Procedure | Guideline |
+   |---|---|---|---|
+   | What it is | A high-level statement of management's intent and direction | A step-by-step description of how a task is performed | A recommended practice or advice |
+   | Question it answers | Why and what | How, who and when | How it may best be done |
+   | Nature | Mandatory | Mandatory | Advisory, not mandatory |
+   | Level of detail | General, no detail | Very detailed, sequential | Moderate, offers options |
+   | Changes | Rarely; needs board or senior management approval | Often, as the process changes | Freely, as practice improves |
+   | Approved by | Board or top management | Department head or process owner | Subject-matter expert |
+   | Example | "All customer data shall be classified and protected according to its sensitivity." | "To grant a new user access: 1. Receive the signed request form. 2. Verify the manager's approval. 3. Create the account in AD. 4. Assign the role. 5. Record it in the access register." | "A password is easier to remember and stronger if it is formed from a passphrase of four unrelated words." |
+
+   Their relationship: the policy states the objective, the standard fixes the measurable requirement, the procedure gives the exact steps to meet it, and the guideline offers help where discretion is allowed. A policy without procedures is unenforceable; procedures without a policy have no authority behind them.
+
+   Why the auditor must focus on control as a system
+
+   The auditor examines internal control as a system rather than as a collection of separate checks, for these reasons:
+
+   - Controls interact. A weakness in one control may be compensated by another, and a strength in one may be nullified by a weakness elsewhere. Strong application-level access control means nothing if the database administrator can alter records directly. Only a system view reveals this.
+
+   - The overall objective is what matters. Management's objectives are reliable reporting, effective operations and compliance with law. No single control achieves these; they emerge from the whole set of controls working together. Testing controls one by one can show every control operating and still miss that the objective is not met.
+
+   - Layers depend on each other. In the COSO framework, the control environment, risk assessment, control activities, information and communication, and monitoring form five interdependent components. Control activities operating in a weak control environment, where management overrides them at will, give no assurance at all. The tone at the top conditions everything below it.
+
+   - Efficiency of the audit. Where the system of controls is strong, the auditor can rely on it and reduce substantive testing. Where it is weak, substantive testing must be increased. That judgement can only be made about the system as a whole.
+
+   - Gaps and overlaps become visible. Looking at the system shows where a risk is covered by no control at all, and where three controls duplicate each other wastefully.
+
+   - Segregation of duties is inherently systemic. Whether one person can both initiate and approve a payment cannot be seen by examining either control alone; it is a property of how the duties are arranged across the process.
+
+   - Compensating and preventive, detective and corrective controls must be balanced. A preventive control that fails needs a detective control behind it and a corrective one after it. That defence in depth is a property of the system.
+
+   Four types of risk the auditor faces
+
+   1. Inherent risk. The susceptibility of an account balance, a transaction class or a process to material misstatement before considering any internal control. It arises from the nature of the business itself: complex transactions, large volumes of cash, estimates requiring judgement, a rapidly changing technology, new products, or a highly regulated environment. In an IT audit, a payment gateway carries far higher inherent risk than a static company website. The auditor cannot reduce inherent risk; it can only be assessed.
+
+   2. Control risk. The risk that a material misstatement will not be prevented, or detected and corrected in time, by the entity's internal control. It arises from poorly designed controls, controls that exist on paper but are not operated, management override, collusion, or absent segregation of duties. The auditor cannot reduce control risk either; that is management's responsibility. The auditor assesses it by testing the controls.
+
+   3. Detection risk. The risk that the auditor's own procedures fail to detect a material misstatement that exists. It arises from sampling, from choosing inappropriate procedures, from misinterpreting evidence, or from insufficient time. This is the only one of the three the auditor controls directly, by changing the nature, timing and extent of testing. The relationship is the audit risk model:
+
+   Audit risk = Inherent risk × Control risk × Detection risk
+
+   If inherent and control risk are assessed as high, detection risk must be driven low by doing more testing, using larger samples and testing at the year end rather than at an interim date, so that overall audit risk stays acceptable.
+
+   4. Business risk, sometimes stated as the fourth in this list, is the risk that the auditor suffers loss or damage to reputation from an association with the client, from litigation, or from the client's own failure. Some texts instead name residual risk, the risk that remains after controls have been applied, as the fourth. Either may be given, provided it is explained.
+
+   In an IT audit the same four are expressed as technology risk in the systems themselves, control risk in the IT general controls of access, change and operations, detection risk in the audit's own sampling of logs and configurations, and residual risk accepted by management after remediation.
 2. **A bank has association with two different service providers as their payment gateways. The bank hires Mr. X to audit the payment gateway based on risk and threat detection. Which possible scenarios Mr. X will face?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 443 (ET: BIBM)]*
 
+
+   Answer: Mr. X is auditing the bank's two payment gateway service providers for risk and threat. The scenarios he will face fall into the following groups.
+
+   Third-party and governance scenarios
+   - Two different providers means two different security postures, two contracts and two sets of controls. Mr. X may find that one provider is PCI-DSS certified and the other is not, or that the two certifications are of different scope or different dates.
+   - Right-to-audit clauses may be missing from one of the contracts, so the provider refuses access to its systems, logs or data centre. He is then limited to reviewing its independent assurance reports, such as SOC 2 Type II or an ISO 27001 certificate, which may be out of date or scoped to exclude the service the bank actually uses.
+   - Fourth-party risk: a provider may itself subcontract part of the processing to another company, of which the bank was unaware and over which it has no contractual control.
+   - No documented service level agreement for uptime, response time or incident notification, or an SLA with no penalty and no measurement.
+   - No exit or contingency plan: if one provider fails or the contract ends, the bank has no tested way to move the traffic to the other.
+   - The bank's own vendor risk assessment may never have been performed, or performed once at onboarding and never repeated.
+
+   Technical and security scenarios
+   - Weak or obsolete cryptography: TLS 1.0 or 1.1 still enabled, weak cipher suites, self-signed or expired certificates, or the certificate not pinned in the mobile application.
+   - Card data being stored, logged or cached where it should not be, including full PAN in application logs or in database backups, and CVV stored after authorisation, which is expressly forbidden.
+   - Encryption keys stored alongside the encrypted data, or in application source code, rather than in a hardware security module; no key rotation policy.
+   - Absent or weak tokenisation, so real card numbers flow through more systems than necessary.
+   - API security weaknesses: no mutual TLS, static API keys shared by several applications, no request signing, no replay protection through a nonce or timestamp, no rate limiting, and verbose error messages that disclose internal details.
+   - Injection and application flaws in the payment pages, and cross-site scripting that could be used to skim card details from the checkout page, which is the Magecart class of attack.
+   - Man-in-the-middle exposure where traffic passes through an unencrypted internal segment.
+   - Missing input validation permitting negative amounts, altered currency codes or a tampered amount field between the merchant and the gateway.
+   - The two gateways using different security protocols and message formats, so the bank's integration layer contains custom code for each, doubling the attack surface and making consistent controls hard to enforce.
+
+   Transaction integrity scenarios
+   - Duplicate transactions where a retry is not idempotent, so the customer is charged twice.
+   - Lost transactions where money leaves the customer's account but the order is not recorded, because the callback failed and no reconciliation job exists.
+   - Reconciliation differences between the bank's ledger and each provider's settlement file, and no documented process to investigate and clear them within a defined time.
+   - Different settlement cycles between the two providers, causing timing differences that are mistaken for losses.
+   - Race conditions allowing double spending on the same authorisation.
+   - No end-to-end transaction tracing, so a disputed payment cannot be followed from the customer through the gateway to the settlement.
+
+   Access control and monitoring scenarios
+   - Shared or generic administrative accounts on the gateway consoles, with no individual accountability.
+   - No multi-factor authentication for administrative access.
+   - Excessive privileges, and access retained by staff who have changed role or left the bank, because there is no periodic access recertification.
+   - Segregation of duties failures, where one person can both configure a merchant account and approve refunds.
+   - Audit logs not enabled, not retained for the required period, stored where an administrator can alter them, or never reviewed.
+   - No real-time fraud monitoring, or rules tuned so loosely that they never fire, or so tightly that genuine transactions are declined and the alerts are ignored.
+
+   Availability and continuity scenarios
+   - A single point of failure despite there being two providers, because all traffic is routed to one and the second is not actually configured to take over.
+   - No tested failover between the two gateways, and no tested disaster recovery for either.
+   - Capacity not proven for peak load, such as the days before Eid.
+   - Backups not tested by an actual restore.
+
+   Compliance and legal scenarios
+   - Non-compliance with Bangladesh Bank's ICT security guideline and its PSO or PSP regulations.
+   - Cross-border data flow: one provider processing or storing Bangladeshi cardholder data on servers abroad, which raises data sovereignty and legal jurisdiction questions.
+   - Anti-money-laundering and know-your-customer checks not applied consistently across the two channels, so the weaker one becomes the route of choice for illicit funds.
+   - Incident notification obligations to the regulator not defined in the contract.
+   - Customer complaint and chargeback handling procedures differing between the two providers.
+
+   How Mr. X should proceed, which is worth stating briefly
+   - Define the audit scope and obtain the right of access in writing before starting.
+   - Build a risk register, rating each finding by likelihood and impact, and map each risk to the control that should address it.
+   - Test controls rather than accept descriptions: sample transactions end to end, attempt an unauthorised access in a controlled way, inspect actual configurations and logs, and observe the reconciliation being performed.
+   - Compare the two providers against the same control checklist, so the difference between them is measurable.
+   - Report findings with the risk rating, the business impact, the responsible owner and a remediation deadline, and agree a follow-up audit to verify closure.
 3. **(ক) Software risk কত প্রকার ও কী কী? Risk management process চিত্রের মাধ্যমে বুঝিয়ে লিখুন।** *[Software Assistant Programmer 13.10.2022 compact it 709 (ET: N/A)]*
+
+
+   Answer: Software risk এর প্রকারভেদ এবং risk management process।
+
+   Risk হলো এমন একটি সম্ভাব্য ঘটনা, যা ঘটলে প্রকল্পের সময়, খরচ বা গুণগত মানের ক্ষতি হয়। এর দুটি বৈশিষ্ট্য — এটি অনিশ্চিত, অর্থাৎ ঘটতেও পারে নাও পারে; এবং ঘটলে ক্ষতি হয়।
+
+   প্রভাবের ভিত্তিতে software risk তিন প্রকার:
+
+   ১. Project risk: প্রকল্পের সময়সূচি ও সম্পদকে প্রভাবিত করে।
+   - বাজেট ঘাটতি, সময়সূচি বিলম্ব।
+   - দক্ষ কর্মীর অভাব বা মাঝপথে কর্মী ছেড়ে যাওয়া।
+   - Requirement বারবার পরিবর্তন হওয়া।
+   - গ্রাহকের অসহযোগিতা বা অনুপস্থিতি।
+   - ভুল অনুমান, অর্থাৎ estimation error।
+
+   ২. Technical risk: পণ্যের গুণগত মান ও কারিগরি বাস্তবায়নকে প্রভাবিত করে।
+   - অসম্পূর্ণ বা অস্পষ্ট specification।
+   - নতুন ও অপরীক্ষিত প্রযুক্তি ব্যবহার।
+   - Integration এর সমস্যা।
+   - কর্মক্ষমতা বা নিরাপত্তার লক্ষ্য পূরণ না হওয়া।
+   - পুরনো প্রযুক্তি অচল হয়ে যাওয়া।
+
+   ৩. Business risk: পণ্যটির ব্যবসায়িক টিকে থাকা প্রশ্নবিদ্ধ করে। এটি সবচেয়ে বিপজ্জনক শ্রেণি।
+   - Market risk: এমন পণ্য তৈরি করা, যা কেউ চায় না।
+   - Strategic risk: প্রতিষ্ঠানের কৌশলের সঙ্গে সঙ্গতিহীন পণ্য।
+   - Sales risk: বিক্রয় বিভাগ কীভাবে বিক্রি করবে তা জানে না।
+   - Management risk: ব্যবস্থাপনার সমর্থন হারানো।
+   - Budget risk: তহবিল বন্ধ হয়ে যাওয়া।
+
+   অন্য একটি প্রচলিত বিভাজন — পূর্বাভাসের ভিত্তিতে:
+   - Known risk: নথিপত্র ও অভিজ্ঞতা থেকে আগেই জানা যায়, যেমন অবাস্তব সময়সীমা।
+   - Predictable risk: অতীত অভিজ্ঞতা থেকে অনুমান করা যায়, যেমন কর্মী প্রতিস্থাপন।
+   - Unpredictable risk: আগে থেকে জানা সম্ভব নয়, যেমন প্রাকৃতিক দুর্যোগ বা সরকারি নীতির আকস্মিক পরিবর্তন।
+
+   Risk management process:
+
+   ```mermaid
+   flowchart TD
+     A[Risk Identification] --> B[Risk Analysis]
+     B --> C[Risk Prioritization / Ranking]
+     C --> D[Risk Planning<br/>Avoid · Transfer · Mitigate · Accept]
+     D --> E[Risk Monitoring & Control]
+     E -->|new risks found| A
+     E -->|status changed| B
+   ```
+
+   প্রতিটি ধাপের কাজ:
+
+   ১. Risk identification: সম্ভাব্য সব ঝুঁকি খুঁজে বের করা। কৌশল — checklist ব্যবহার, brainstorming, অতীত প্রকল্পের অভিজ্ঞতা, বিশেষজ্ঞের মতামত, SWOT বিশ্লেষণ। ফল হলো risk register, যেখানে প্রতিটি ঝুঁকি নম্বরসহ লেখা থাকে।
+
+   ২. Risk analysis: প্রতিটি ঝুঁকির ঘটার সম্ভাবনা ও ঘটলে কত ক্ষতি হবে তা নির্ণয় করা। সম্ভাবনা ও প্রভাব দুটোই সাধারণত পাঁচ ধাপে মাপা হয় — খুব কম থেকে খুব বেশি।
+
+   Risk Exposure = Probability × Impact (cost)
+
+   উদাহরণ: একটি ঝুঁকির সম্ভাবনা ০.৪ এবং ঘটলে ক্ষতি ১০ লাখ টাকা। তাহলে risk exposure = ০.৪ × ১০,০০,০০০ = ৪,০০,০০০ টাকা। এই অঙ্ক দিয়েই বোঝা যায় ঝুঁকি এড়াতে কত টাকা খরচ করা যুক্তিসংগত।
+
+   ৩. Risk prioritization: risk exposure অনুযায়ী ঝুঁকিগুলো সাজানো এবং সবচেয়ে উপরের দশটি বা কুড়িটির দিকে মনোযোগ দেওয়া। বাকিগুলো কেবল নজরে রাখা হয়।
+
+   | Impact ↓ / Probability → | কম | মাঝারি | বেশি |
+   |---|---|---|---|
+   | বেশি | নজরে রাখা | প্রশমন | অবিলম্বে ব্যবস্থা |
+   | মাঝারি | গ্রহণ | নজরে রাখা | প্রশমন |
+   | কম | গ্রহণ | গ্রহণ | নজরে রাখা |
+
+   ৪. Risk planning: প্রতিটি গুরুত্বপূর্ণ ঝুঁকির জন্য কৌশল নির্ধারণ। চারটি কৌশল:
+   - Avoidance: ঝুঁকির উৎসটিই বাদ দেওয়া, যেমন অপরীক্ষিত প্রযুক্তির বদলে পরিচিত প্রযুক্তি ব্যবহার।
+   - Transfer: ঝুঁকি অন্যের কাছে সরানো, যেমন বিমা করা বা কাজটি উপঠিকাদারকে দেওয়া।
+   - Mitigation: সম্ভাবনা বা প্রভাব কমানো, যেমন কর্মী ছেড়ে যাওয়ার ঝুঁকির বিপরীতে জ্ঞান নথিভুক্ত করা ও একাধিক জনকে প্রশিক্ষণ দেওয়া।
+   - Acceptance: ঝুঁকি মেনে নেওয়া এবং একটি contingency plan ও contingency budget প্রস্তুত রাখা।
+
+   ৫. Risk monitoring and control: প্রতিটি ঝুঁকির অবস্থা নিয়মিত পর্যবেক্ষণ করা — সম্ভাবনা বেড়েছে না কমেছে, প্রশমনের ব্যবস্থা কাজ করছে কিনা, নতুন কোনো ঝুঁকি দেখা দিয়েছে কিনা। এটি একটি চক্র; প্রকল্পের প্রতিটি পর্যালোচনা সভায় risk register হালনাগাদ করা হয়।
+
+   গুরুত্বপূর্ণ নীতি: ঝুঁকি ব্যবস্থাপনা প্রকল্পের শুরুতে একবার করার কাজ নয়, বরং শুরু থেকে শেষ পর্যন্ত চলমান একটি প্রক্রিয়া। প্রকল্পের শুরুতে ঝুঁকি সবচেয়ে বেশি এবং তা কমাতে খরচ সবচেয়ে কম; শেষের দিকে উল্টোটা ঘটে।
 
 ## Data Flow Diagrams (DFD) (2)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
 
+
+   Answer: Data Flow Diagram (DFD) হলো একটি গ্রাফিক্যাল চিত্র, যা দেখায় একটি সিস্টেমের ভেতর দিয়ে ডেটা কোথা থেকে আসে, কোন প্রক্রিয়ার মধ্য দিয়ে যায়, কোথায় সংরক্ষিত হয় এবং কোথায় যায়। এটি সিস্টেমের কার্যকরী দিক বা functional view উপস্থাপন করে।
+
+   গুরুত্বপূর্ণ বৈশিষ্ট্য: DFD দেখায় ডেটা কোথায় যায়, কিন্তু কখন যায় বা কী শর্তে যায় তা দেখায় না। অর্থাৎ এতে কোনো সময়ক্রম, লুপ বা শর্ত থাকে না। সেগুলো flowchart এ দেখানো হয়, DFD তে নয় — এটাই দুইয়ের মূল পার্থক্য।
+
+   DFD তে ব্যবহৃত Symbol সমূহ (চারটি):
+
+   | Symbol | নাম | অর্থ |
+   |---|---|---|
+   | বৃত্ত বা গোলাকার আয়তক্ষেত্র | Process | ইনপুট ডেটাকে রূপান্তর করে আউটপুট তৈরির কাজ। নাম হয় ক্রিয়াপদ, যেমন "Verify Account" |
+   | আয়তক্ষেত্র | External Entity বা Terminator | সিস্টেমের বাইরের উৎস বা গন্তব্য — ব্যক্তি, সংস্থা বা অন্য সিস্টেম। নাম হয় বিশেষ্য, যেমন "Customer" |
+   | দুই সমান্তরাল রেখা বা এক পাশ খোলা আয়তক্ষেত্র | Data Store | ডেটা যেখানে সংরক্ষিত থাকে, যেমন "D1 Account File" |
+   | তীরচিহ্নযুক্ত রেখা | Data Flow | ডেটার চলাচল ও তার দিক। রেখার ওপর ডেটার নাম লেখা থাকে |
+
+   দুটি প্রচলিত রীতি:
+   - Yourdon-DeMarco রীতি: Process বৃত্ত, external entity আয়তক্ষেত্র, data store দুই সমান্তরাল রেখা।
+   - Gane-Sarson রীতি: Process গোলাকার কোণের আয়তক্ষেত্র, data store এক পাশ খোলা আয়তক্ষেত্র।
+
+   DFD এর স্তরসমূহ:
+   - Level 0 বা Context Diagram: সমগ্র সিস্টেমকে একটি মাত্র process হিসেবে দেখানো হয়, তার চারপাশে external entity গুলো এবং তাদের সঙ্গে ডেটার আদান-প্রদান। এতে কোনো data store থাকে না।
+   - Level 1: প্রধান process টিকে ভেঙে কয়েকটি প্রধান উপ-প্রক্রিয়ায় দেখানো হয়, এবং data store গুলো যুক্ত হয়।
+   - Level 2 ও তার নিচে: প্রতিটি উপ-প্রক্রিয়াকে আরও ভেঙে বিস্তারিত দেখানো হয়। যতক্ষণ না প্রতিটি process একক ও সরল হয়, ততক্ষণ ভাঙা চলে।
+
+   DFD আঁকার নিয়ম:
+   - প্রতিটি process এর অন্তত একটি input ও একটি output থাকতে হবে। কেবল input থাকলে তাকে বলে black hole; কেবল output থাকলে বলে miracle বা spontaneous generation — দুটোই ভুল।
+   - দুটি external entity সরাসরি একে অপরের সঙ্গে যুক্ত হতে পারে না; মাঝে process থাকতে হবে।
+   - Data store থেকে সরাসরি data store এ বা data store থেকে সরাসরি external entity তে ডেটা যেতে পারে না; মাঝে process থাকতে হবে।
+   - প্রতিটি data flow এর নাম থাকতে হবে।
+   - Balancing: উপরের স্তরের একটি process ভেঙে নিচের স্তরে দেখালে, নিচের চিত্রের বাইরের দিকের input ও output গুলো উপরের চিত্রের ওই process এর input ও output এর সঙ্গে হুবহু মিলতে হবে।
+   - Process গুলোকে নম্বর দেওয়া হয়: ১, ২, ৩; এবং তাদের উপ-প্রক্রিয়াকে ১.১, ১.২ ইত্যাদি।
+
+   DFD এর উপকারিতা: গ্রাহকের কাছে সহজবোধ্য, সিস্টেমের সীমানা স্পষ্ট করে, ডেটার প্রবাহ ও প্রয়োজনীয় সংরক্ষণ চিহ্নিত করে, এবং structured analysis এর মূল হাতিয়ার হিসেবে design এর ভিত্তি তৈরি করে।
 2. **১ জন ব্যক্তি ১টি Bank Account খোলার জন্য একটি form fillup করেন। এরপর তাতে Manager স্বাক্ষর করেন। এবার উক্ত Account-এ ঐ ব্যক্তি কিছু টাকা Deposit করলে Account সচল হয়। এই Process টি DFD এর মাধ্যমে প্রকাশ করুন।** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
+
+
+   Answer: ব্যাংক অ্যাকাউন্ট খোলার প্রক্রিয়ার DFD।
+
+   প্রক্রিয়াটির ধাপ: ব্যক্তি ফর্ম পূরণ করেন → ব্যাংক তথ্য যাচাই করে → ম্যানেজার স্বাক্ষর করে অনুমোদন দেন → অ্যাকাউন্ট তৈরি হয় কিন্তু নিষ্ক্রিয় থাকে → ব্যক্তি প্রাথমিক টাকা জমা দেন → অ্যাকাউন্ট সচল হয়।
+
+   Level 0 — Context Diagram
+
+   ```mermaid
+   flowchart LR
+     C[Customer] -->|Filled Account Form, Documents, Initial Deposit| P((0. Bank Account<br/>Opening System))
+     M[Bank Manager] -->|Approval / Signature| P
+     P -->|Account Number, Passbook, Deposit Receipt| C
+     P -->|Verified Application for Signature| M
+   ```
+
+   Level 1 — বিস্তারিত DFD
+
+   ```mermaid
+   flowchart TD
+     C[Customer]
+     M[Bank Manager]
+
+     P1((1.0 Receive &<br/>Verify Form))
+     P2((2.0 Manager<br/>Approval))
+     P3((3.0 Create<br/>Account))
+     P4((4.0 Accept<br/>Deposit))
+     P5((5.0 Activate<br/>Account))
+
+     D1[(D1 Customer File)]
+     D2[(D2 Account File)]
+     D3[(D3 Transaction File)]
+
+     C -->|Filled form + NID + photo| P1
+     P1 -->|Customer details| D1
+     P1 -->|Verified application| P2
+     M -->|Signature / Approval| P2
+     P2 -->|Approved application| P3
+     P3 -->|New account record status = inactive| D2
+     P3 -->|Account number| C
+
+     C -->|Initial deposit + deposit slip| P4
+     P4 -->|Deposit entry| D3
+     P4 -->|Deposit receipt| C
+     P4 -->|Deposit confirmation| P5
+     D2 -->|Account record| P5
+     P5 -->|status = active, updated balance| D2
+     P5 -->|Activation notice + passbook| C
+   ```
+
+   টেক্সট আকারে একই চিত্র:
+
+   ```
+   +----------+  filled form + NID    +------------------+
+   | Customer |---------------------->| 1.0 Receive &    |
+   +----------+                       |     Verify Form  |
+        ^                             +------------------+
+        |                                |          |
+        |                     customer   |          | verified application
+        |                     details    v          v
+        |                          [D1 Customer File]  +------------------+
+        |                                              | 2.0 Manager      |
+        |                            signature ------->|     Approval     |<--- Bank Manager
+        |                                              +------------------+
+        |                                                       |
+        |                                                       | approved application
+        |                                                       v
+        |            account number                    +------------------+
+        |<---------------------------------------------| 3.0 Create       |
+        |                                              |     Account      |
+        |                                              +------------------+
+        |                                                       | new record (inactive)
+        |                                                       v
+        |                                              [D2 Account File]
+        |  initial deposit                                      ^
+        +-------------------------->+------------------+        |
+        |                           | 4.0 Accept       |        |
+        |<--- deposit receipt ------|     Deposit      |        |
+        |                           +------------------+        |
+        |                              |          |             |
+        |               deposit entry  v          | confirmation|
+        |                    [D3 Transaction File] v             |
+        |                                 +------------------+  |
+        |<--- passbook + activation ------| 5.0 Activate     |--+
+                                          |     Account      |  status = active
+                                          +------------------+
+   ```
+
+   উপাদানসমূহের ব্যাখ্যা:
+
+   External Entities দুটি:
+   - Customer: যিনি ফর্ম পূরণ করেন, কাগজপত্র দেন এবং টাকা জমা করেন। তিনি অ্যাকাউন্ট নম্বর, রসিদ ও পাসবই পান।
+   - Bank Manager: যিনি যাচাইকৃত আবেদনে স্বাক্ষর দিয়ে অনুমোদন করেন।
+
+   Processes পাঁচটি:
+   - ১.০ ফর্ম গ্রহণ ও যাচাই: জাতীয় পরিচয়পত্র, ছবি, নমুনা স্বাক্ষর ও পরিচয়দানকারীর তথ্য মিলিয়ে দেখা।
+   - ২.০ ম্যানেজারের অনুমোদন: ম্যানেজার স্বাক্ষর দেন। অনুমোদন না দিলে আবেদন ফেরত যায়।
+   - ৩.০ অ্যাকাউন্ট তৈরি: অ্যাকাউন্ট নম্বর তৈরি হয় এবং রেকর্ড নিষ্ক্রিয় অবস্থায় সংরক্ষিত হয়।
+   - ৪.০ জমা গ্রহণ: প্রাথমিক টাকা জমা নেওয়া ও লেনদেন নথিভুক্ত করা।
+   - ৫.০ অ্যাকাউন্ট সক্রিয়করণ: জমা নিশ্চিত হলে অ্যাকাউন্টের অবস্থা সক্রিয় করা এবং পাসবই দেওয়া।
+
+   Data Stores তিনটি:
+   - D1 Customer File: গ্রাহকের ব্যক্তিগত তথ্য।
+   - D2 Account File: অ্যাকাউন্টের নম্বর, ধরন, অবস্থা ও স্থিতি।
+   - D3 Transaction File: প্রতিটি জমা ও উত্তোলনের নথি।
+
+   লক্ষণীয় নিয়ম: এখানে গ্রাহক ও ম্যানেজার — দুটি external entity — সরাসরি যুক্ত নয়, তাদের মধ্যে সবসময় process আছে; কোনো data store থেকে সরাসরি external entity তে তীর যায়নি; এবং প্রতিটি process এর অন্তত একটি input ও একটি output আছে। এগুলো DFD এর বাধ্যতামূলক শর্ত।
 
 ## Code Smells & Refactoring (2)
 
