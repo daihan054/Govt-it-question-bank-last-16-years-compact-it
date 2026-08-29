@@ -5783,10 +5783,415 @@ public:
 };
 ```
 
+
+   Answer: A friend function is a function that is not a member of a class but is granted permission by that class to access its private and protected members. The permission is given by declaring the function inside the class with the keyword friend.
+
+   Key properties:
+   - It is declared inside the class but defined outside it, and the keyword friend is not repeated in the definition.
+   - It is not a member function, so it is called like an ordinary function, without an object and without the dot operator.
+   - It has no this pointer, so it must receive the object as a parameter.
+   - Friendship is granted, not taken: a class chooses who may see its internals.
+   - Friendship is not inherited, is not transitive (a friend of a friend is not a friend), and is not reciprocal.
+   - It may be declared in the public, private or protected section; the placement makes no difference.
+
+   Adding the required friend function to the given class:
+
+   ```cpp
+   #include <iostream>
+   using namespace std;
+
+   class myclass {
+       int num;
+   public:
+       myclass(int i) { num = i; }
+
+       // declaration of the friend function
+       friend bool isneg(myclass obj);
+   };
+
+   // definition outside the class; the keyword friend is not repeated
+   bool isneg(myclass obj) {
+       return (obj.num < 0);      // direct access to the private member num
+   }
+
+   int main() {
+       myclass a(10);
+       myclass b(-25);
+       myclass c(0);
+
+       cout << boolalpha;                 // print true and false instead of 1 and 0
+       cout << "a is negative? " << isneg(a) << endl;
+       cout << "b is negative? " << isneg(b) << endl;
+       cout << "c is negative? " << isneg(c) << endl;
+       return 0;
+   }
+   ```
+
+   Output:
+   ```
+   a is negative? false
+   b is negative? true
+   c is negative? false
+   ```
+
+   Explanation:
+   - Without the friend declaration, the line return (obj.num < 0); would not compile, because num is private and isneg() is not a member of myclass.
+   - The object is passed by value as a parameter, since a non-member function has no this pointer of its own. Passing by constant reference, as bool isneg(const myclass& obj), would be more efficient and is the preferred style.
+   - The function is called as isneg(a), not a.isneg(), because it is not a member.
+
+   A slightly better version, passing by constant reference:
+
+   ```cpp
+   class myclass {
+       int num;
+   public:
+       myclass(int i) : num(i) {}
+       friend bool isneg(const myclass& obj);
+   };
+
+   bool isneg(const myclass& obj) { return obj.num < 0; }
+   ```
+
+   When a friend function is genuinely useful:
+   - Operator overloading where the left operand is not an object of the class, in particular the stream insertion and extraction operators, which must be written as friends: friend ostream& operator<<(ostream& out, const myclass& obj);
+   - A function that must access the private members of two different classes, for example a function that adds a Complex and a Polar object.
+
+   Caution: friendship weakens encapsulation, so it should be used only where a member function genuinely cannot do the job.
 2. **(ক) Friend Function কী? উহার সুবিধা অসুবিধাগুলো লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
+
+
+   Answer: ফ্রেন্ড ফাংশন (Friend Function) হলো এমন একটি ফাংশন, যা কোনো ক্লাসের সদস্য না হয়েও ওই ক্লাসের private ও protected সদস্যগুলোতে সরাসরি প্রবেশাধিকার পায়। ক্লাসের ভেতরে friend কীওয়ার্ড দিয়ে ঘোষণা করে এই অনুমতি দেওয়া হয়।
+
+   বৈশিষ্ট্য:
+   - ক্লাসের ভেতরে কেবল ঘোষণা দেওয়া হয়, সংজ্ঞা লেখা হয় ক্লাসের বাইরে এবং সেখানে friend কীওয়ার্ড আর লেখা হয় না।
+   - এটি সদস্য ফাংশন নয়, তাই সাধারণ ফাংশনের মতো ডাকতে হয়; অবজেক্ট ও ডট অপারেটর লাগে না।
+   - এর this পয়েন্টার নেই, তাই অবজেক্টকে প্যারামিটার হিসেবে পাঠাতে হয়।
+   - বন্ধুত্ব দেওয়া হয়, নেওয়া যায় না; ক্লাস নিজেই ঠিক করে কাকে অনুমতি দেবে।
+   - বন্ধুত্ব উত্তরাধিকারসূত্রে যায় না, সংক্রামক নয় (বন্ধুর বন্ধু বন্ধু নয়) এবং পারস্পরিকও নয়।
+   - public, private বা protected — যেকোনো অংশে ঘোষণা করা যায়; অবস্থানভেদে কোনো পার্থক্য হয় না।
+   - একটি সম্পূর্ণ ক্লাসকেও friend ঘোষণা করা যায়, তখন ওই ক্লাসের সব সদস্য ফাংশন প্রবেশাধিকার পায়।
+
+   উদাহরণ:
+
+   ```cpp
+   #include <iostream>
+   using namespace std;
+
+   class Box {
+       double width;              // private
+
+   public:
+       Box(double w) : width(w) {}
+
+       friend void printWidth(Box b);          // ফ্রেন্ড ফাংশনের ঘোষণা
+       friend class BoxInspector;              // ফ্রেন্ড ক্লাসের ঘোষণা
+   };
+
+   void printWidth(Box b) {
+       cout << "Width = " << b.width << endl;  // private সদস্যে সরাসরি প্রবেশ
+   }
+
+   class BoxInspector {
+   public:
+       void check(Box b) {
+           cout << (b.width > 10 ? "Large box" : "Small box") << endl;
+       }
+   };
+
+   int main() {
+       Box b(15.5);
+       printWidth(b);        // Width = 15.5
+       BoxInspector insp;
+       insp.check(b);        // Large box
+       return 0;
+   }
+   ```
+
+   সুবিধাসমূহ:
+   - দুই বা ততোধিক ভিন্ন ক্লাসের private সদস্য একসঙ্গে ব্যবহার করে কাজ করা যায়। যেমন একটি ফাংশন Complex ও Polar দুই ক্লাসের ব্যক্তিগত তথ্য নিয়ে হিসাব করতে পারে, যা কোনো একটি ক্লাসের সদস্য ফাংশন দিয়ে সম্ভব নয়।
+   - অপারেটর ওভারলোডিংয়ে অপরিহার্য, বিশেষত যখন বাঁ দিকের অপারেন্ড ওই ক্লাসের অবজেক্ট নয়। যেমন cout << obj; লিখতে হলে operator<< কে friend হতেই হয়, কারণ বাঁ পাশে আছে ostream, আমাদের ক্লাস নয়।
+   - কখনো কখনো কোড বেশি স্বাভাবিক ও পাঠযোগ্য হয়। ২ * obj লেখা obj.multiply(2) এর চেয়ে স্বাভাবিক।
+   - কিছু ক্ষেত্রে কর্মদক্ষতা বাড়ে, কারণ গেটার-সেটারের অতিরিক্ত ফাংশন কল এড়ানো যায়।
+   - দুটি সম্পর্কিত ক্লাসের মধ্যে ঘনিষ্ঠ সহযোগিতা প্রকাশ করা যায়, যেমন LinkedList ও Node।
+
+   অসুবিধাসমূহ:
+   - এনক্যাপসুলেশন দুর্বল হয়: ফ্রেন্ড ফাংশন ক্লাসের ব্যক্তিগত তথ্য দেখে ফেলে, যা তথ্য গোপনীয়তার মূল নীতির পরিপন্থী।
+   - রক্ষণাবেক্ষণ কঠিন হয়: ক্লাসের অভ্যন্তরীণ গঠন বদলালে সব ফ্রেন্ড ফাংশনও বদলাতে হয়। ফলে ক্লাসটি আর স্বাধীনভাবে পরিবর্তনযোগ্য থাকে না।
+   - অবজেক্ট ওরিয়েন্টেড নীতির সঙ্গে সাংঘর্ষিক: এটি কার্যত ফাংশন-কেন্দ্রিক পদ্ধতির দিকে ফিরে যাওয়া।
+   - এটি উত্তরাধিকারসূত্রে যায় না, তাই ডেরাইভড ক্লাসের জন্য আলাদা করে ঘোষণা করতে হয়।
+   - অতিরিক্ত ব্যবহারে ক্লাসগুলোর মধ্যে আঁটসাঁট সংযুক্তি (tight coupling) তৈরি হয়।
+   - Java ও C# এ এই ধারণা নেই, তাই এমন কোড অন্য ভাষায় সরাসরি রূপান্তরযোগ্য নয়।
+
+   ব্যবহারের নির্দেশনা: যেখানে সদস্য ফাংশন দিয়ে কাজটি করা যায়, সেখানে ফ্রেন্ড ফাংশন ব্যবহার করা উচিত নয়। কেবল অপারেটর ওভারলোডিং এবং দুই ক্লাসের যৌথ কাজে এটি ব্যবহার করা যুক্তিসঙ্গত।
 
 ## Interfaces & Abstract Classes (2)
 
 1. **Class/Interface implementation of code?** *[BCIC Assistant Programmer 14.02.2025 compact it 1329 (ET: BUET)]*
 
+
+   Answer: An interface declares what a class can do without saying how it does it. It contains method signatures with no bodies, and any class that implements the interface is obliged to supply the implementations. It is the strongest form of abstraction in Java, and it is how a common capability is given to unrelated classes.
+
+   Interface compared with an abstract class:
+
+   | Point | Interface | Abstract class |
+   |---|---|---|
+   | Methods | Abstract by default; default, static and private methods allowed since Java 8 and 9 | May have both abstract and concrete methods |
+   | Variables | Implicitly public, static and final, that is constants only | May have instance variables of any access level |
+   | Constructor | Not allowed | Allowed, and called by the subclass |
+   | Multiple inheritance | A class may implement any number of interfaces | A class may extend only one abstract class |
+   | Keyword to use it | implements | extends |
+   | Access modifiers on methods | Implicitly public | Any |
+   | Purpose | To define a capability or contract, a "can-do" relationship | To share common code in a family, an "is-a" relationship |
+   | When to choose | When unrelated classes must share a capability | When related classes share both state and code |
+
+   Complete example implementing an interface:
+
+   ```java
+   // the contract
+   interface Payable {
+       double TAX_RATE = 0.10;                 // public static final by default
+
+       double calculateSalary();               // abstract by default
+       String getRole();
+
+       default void printPayslip() {           // default method, Java 8 onwards
+           double gross = calculateSalary();
+           double tax = gross * TAX_RATE;
+           System.out.printf("%-12s Gross: Tk %-10.2f Tax: Tk %-9.2f Net: Tk %.2f%n",
+                   getRole(), gross, tax, gross - tax);
+       }
+
+       static double annual(double monthly) {  // static method, Java 8 onwards
+           return monthly * 12;
+       }
+   }
+
+   // a second, independent capability
+   interface Reportable {
+       void generateReport();
+   }
+
+   // one class implementing two interfaces: multiple inheritance of type
+   class Manager implements Payable, Reportable {
+       private double basic;
+       private double allowance;
+
+       Manager(double basic, double allowance) {
+           this.basic = basic;
+           this.allowance = allowance;
+       }
+
+       @Override
+       public double calculateSalary() {
+           return basic + allowance;
+       }
+
+       @Override
+       public String getRole() { return "Manager"; }
+
+       @Override
+       public void generateReport() {
+           System.out.println("Manager's monthly report generated");
+       }
+   }
+
+   class Consultant implements Payable {
+       private int hours;
+       private double rate;
+
+       Consultant(int hours, double rate) {
+           this.hours = hours;
+           this.rate = rate;
+       }
+
+       @Override
+       public double calculateSalary() { return hours * rate; }
+
+       @Override
+       public String getRole() { return "Consultant"; }
+   }
+
+   public class InterfaceDemo {
+       public static void main(String[] args) {
+           Payable[] staff = {
+               new Manager(60000, 15000),
+               new Consultant(120, 800)
+           };
+
+           for (Payable p : staff) {
+               p.printPayslip();                 // the default method, one implementation
+           }
+
+           System.out.println("Annual salary of the first: Tk "
+                   + Payable.annual(staff[0].calculateSalary()));
+
+           // an interface reference can be narrowed when the capability is needed
+           if (staff[0] instanceof Reportable) {
+               ((Reportable) staff[0]).generateReport();
+           }
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Manager      Gross: Tk 75000.00   Tax: Tk 7500.00   Net: Tk 67500.00
+   Consultant   Gross: Tk 96000.00   Tax: Tk 9600.00   Net: Tk 86400.00
+   Annual salary of the first: Tk 900000.0
+   Manager's monthly report generated
+   ```
+
+   Points demonstrated:
+   - An interface as a contract: Payable guarantees that anything payable can report its salary and its role.
+   - Multiple interface implementation, which is how Java obtains the benefits of multiple inheritance without the diamond problem.
+   - Constants in an interface, which are automatically public, static and final.
+   - Default methods, which allow shared behaviour to be added to an interface without breaking existing implementations.
+   - Static methods in an interface, used as utilities.
+   - Polymorphism through an interface reference: the array is of type Payable[], yet each element behaves according to its own class.
+   - instanceof and casting, used when a second, optional capability is required.
 2. **An Abstract class Player with two sub classes Bowler and Batsman, Abstract class has one abstract method average, also have constructor and a string function that display name bowler or batsman. Batsman class implement abstract function average and display result, Batsman class have run and number match data. Now write a Java Program and show Batsman average run.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
+
+
+   Answer: The program uses an abstract class Player with an abstract method average(), a constructor, and a concrete method that returns the type of player. Batsman implements average() using runs and matches.
+
+   ```java
+   // Abstract base class
+   abstract class Player {
+       protected String name;
+       protected int matches;
+
+       // constructor of an abstract class: called by the subclasses
+       public Player(String name, int matches) {
+           this.name = name;
+           this.matches = matches;
+       }
+
+       // abstract method: every subclass must implement it
+       public abstract double average();
+
+       // concrete method returning a String
+       public String playerType() {
+           return "Player";
+       }
+
+       public void display() {
+           System.out.println("Name    : " + name);
+           System.out.println("Type    : " + playerType());
+           System.out.println("Matches : " + matches);
+           System.out.printf("Average : %.2f%n", average());
+           System.out.println("--------------------------------");
+       }
+   }
+
+   // Subclass 1
+   class Batsman extends Player {
+       private int totalRuns;
+
+       public Batsman(String name, int matches, int totalRuns) {
+           super(name, matches);           // call the base constructor
+           this.totalRuns = totalRuns;
+       }
+
+       @Override
+       public double average() {
+           if (matches == 0) return 0;
+           return (double) totalRuns / matches;    // runs per match
+       }
+
+       @Override
+       public String playerType() {
+           return "Batsman";
+       }
+
+       public int getTotalRuns() { return totalRuns; }
+   }
+
+   // Subclass 2
+   class Bowler extends Player {
+       private int runsConceded;
+       private int wickets;
+
+       public Bowler(String name, int matches, int runsConceded, int wickets) {
+           super(name, matches);
+           this.runsConceded = runsConceded;
+           this.wickets = wickets;
+       }
+
+       @Override
+       public double average() {
+           if (wickets == 0) return 0;
+           return (double) runsConceded / wickets;   // bowling average
+       }
+
+       @Override
+       public String playerType() {
+           return "Bowler";
+       }
+   }
+
+   public class CricketDemo {
+       public static void main(String[] args) {
+
+           // Player p = new Player("X", 10);   // error: an abstract class cannot be instantiated
+
+           Batsman b1 = new Batsman("Tamim Iqbal", 100, 3500);
+           Batsman b2 = new Batsman("Mushfiqur Rahim", 120, 3600);
+           Bowler  w1 = new Bowler("Shakib Al Hasan", 110, 4200, 150);
+
+           System.out.println("========= PLAYER STATISTICS =========");
+           b1.display();
+           b2.display();
+           w1.display();
+
+           // the batting average asked for
+           System.out.printf("%s scored %d runs in %d matches.%n",
+                   "Tamim Iqbal", b1.getTotalRuns(), 100);
+           System.out.printf("Batting average = %.2f runs per match%n", b1.average());
+
+           // polymorphism through the abstract base type
+           System.out.println("\n========= THROUGH THE BASE REFERENCE =========");
+           Player[] squad = { b1, b2, w1 };
+           for (Player p : squad) {
+               System.out.printf("%-18s %-10s %.2f%n",
+                       p.name, p.playerType(), p.average());
+           }
+       }
+   }
+   ```
+
+   Output:
+   ```
+   ========= PLAYER STATISTICS =========
+   Name    : Tamim Iqbal
+   Type    : Batsman
+   Matches : 100
+   Average : 35.00
+   --------------------------------
+   Name    : Mushfiqur Rahim
+   Type    : Batsman
+   Matches : 120
+   Average : 30.00
+   --------------------------------
+   Name    : Shakib Al Hasan
+   Type    : Bowler
+   Matches : 110
+   Average : 28.00
+   --------------------------------
+   Tamim Iqbal scored 3500 runs in 100 matches.
+   Batting average = 35.00 runs per match
+
+   ========= THROUGH THE BASE REFERENCE =========
+   Tamim Iqbal        Batsman    35.00
+   Mushfiqur Rahim    Batsman    30.00
+   Shakib Al Hasan    Bowler     28.00
+   ```
+
+   Points demonstrated:
+   - An abstract class with an abstract method: Player declares average() without a body, so every concrete subclass is compelled to define it.
+   - A constructor in an abstract class: it cannot be used to create a Player directly, but it is called through super() to initialise the inherited fields.
+   - A concrete method in an abstract class: playerType() has a body and is overridden by each subclass.
+   - The same abstract method carries a different meaning in each subclass: for a batsman it is runs per match, and for a bowler it is runs conceded per wicket. This is the essence of abstraction.
+   - Run-time polymorphism through an array of the base type.
+   - A guard against division by zero in both implementations.
+
+   Note on the cricketing definition: the official batting average is total runs divided by the number of dismissals, not by the number of matches. The program above uses runs per match, as the question asks; if the number of not-outs were available, average() would be written as totalRuns / (innings - notOuts).
