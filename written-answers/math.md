@@ -1442,28 +1442,250 @@
 
 4. **Two sides of a plot 32m and 24m and the angle between them a perfect right angle. The other two sides measure 25m each and the other three angles are not right angles. What is the area of the plot?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
+
+   Answer: The plot is a quadrilateral in which two adjacent sides of 32 m and 24 m meet at a right angle, and the other two sides are 25 m each. It is split into two triangles by the diagonal joining the ends of the two given sides.
+
+   Step 1 - find the diagonal using Pythagoras in the right-angled triangle:
+   - Diagonal^2 = 32^2 + 24^2
+   - = 1024 + 576
+   - = 1600
+   - Diagonal = sqrt(1600) = 40 m
+
+   Step 2 - area of the right-angled triangle:
+   - Area = (1/2) x base x height
+   - = (1/2) x 32 x 24
+   - = 384 square metres
+
+   Step 3 - the second triangle has sides 25 m, 25 m and 40 m, so it is isosceles. Drop a perpendicular from the apex to the 40 m side; it bisects that side.
+   - Half of the base = 40 / 2 = 20 m
+   - Height^2 = 25^2 - 20^2
+   - = 625 - 400
+   - = 225
+   - Height = sqrt(225) = 15 m
+
+   Step 4 - area of the isosceles triangle:
+   - Area = (1/2) x 40 x 15
+   - = 300 square metres
+
+   Step 5 - total area of the plot:
+   - = 384 + 300
+   - = 684 square metres
+
+   Final answer: the area of the plot is 684 square metres.
+
+   Alternative check by Heron's formula for the second triangle:
+   - s = (25 + 25 + 40) / 2 = 45
+   - Area = sqrt[45 x (45 - 25) x (45 - 25) x (45 - 40)]
+   - = sqrt(45 x 20 x 20 x 5)
+   - = sqrt(90000)
+   - = 300 square metres. Same result.
 5. **In the given figure, PQT is a right triangle then what is the area of square QRST.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
 6. **AD is the longest side of the triangle ABD shown in the figure, what is the length of longest side of \Delta\text{ABC}?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
 
 7. **একটি সমদ্বিবাহু সমকোণী ত্রিভুজের অতিভুজ ১২ সেমি হলে, ত্রিভুজটির ক্ষেত্রফল কত বর্গ সেমি?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+
+   Answer: ধরি, সমদ্বিবাহু সমকোণী ত্রিভুজের সমান দুই বাহুর প্রতিটির দৈর্ঘ্য = a সেমি। অতিভুজ = ১২ সেমি।
+
+   ধাপ ১ - পিথাগোরাসের উপপাদ্য প্রয়োগ:
+   - a^2 + a^2 = (১২)^2
+   - 2a^2 = ১৪৪
+
+   ধাপ ২ - a^2 এর মান:
+   - a^2 = ১৪৪ / ২
+   - a^2 = ৭২
+   - a = sqrt(৭২) = ৬.sqrt2 সেমি
+
+   ধাপ ৩ - ক্ষেত্রফল নির্ণয়। সমকোণী ত্রিভুজে সমকোণ সংলগ্ন দুই বাহুই ভূমি ও উচ্চতা:
+   - ক্ষেত্রফল = (১/২) x a x a
+   - = (১/২) x a^2
+   - = (১/২) x ৭২
+   - = ৩৬
+
+   উত্তর: ত্রিভুজটির ক্ষেত্রফল ৩৬ বর্গ সেন্টিমিটার।
+
+   সরাসরি সূত্র: সমদ্বিবাহু সমকোণী ত্রিভুজের অতিভুজ h হলে ক্ষেত্রফল = h^2 / 4।
+   - এখানে = ১২^২ / ৪ = ১৪৪ / ৪ = ৩৬ বর্গ সেমি। একই উত্তর।
+
+   অতিরিক্ত তথ্য: এই ত্রিভুজের কোণগুলো ৪৫ ডিগ্রি, ৪৫ ডিগ্রি ও ৯০ ডিগ্রি, এবং বাহুগুলোর অনুপাত ১ : ১ : sqrt2।
 8. **বৃত্তস্থ চতুর্ভুজের একটি কোণ ৮০° হলে তার বিপরীত কোণের মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: বৃত্তস্থ চতুর্ভুজের (cyclic quadrilateral) বিপরীত কোণদ্বয় পরস্পর সম্পূরক, অর্থাৎ তাদের সমষ্টি ১৮০ ডিগ্রি।
+
+   ধাপ ১ - উপপাদ্য প্রয়োগ:
+   - একটি কোণ + তার বিপরীত কোণ = ১৮০ ডিগ্রি
+
+   ধাপ ২ - মান বসানো:
+   - ৮০ ডিগ্রি + বিপরীত কোণ = ১৮০ ডিগ্রি
+
+   ধাপ ৩ - সমাধান:
+   - বিপরীত কোণ = ১৮০ - ৮০
+   - = ১০০ ডিগ্রি
+
+   উত্তর: বিপরীত কোণের মান ১০০ ডিগ্রি।
+
+   সংশ্লিষ্ট তথ্য:
+   - বৃত্তস্থ চতুর্ভুজ বলতে এমন চতুর্ভুজ বোঝায় যার চারটি শীর্ষবিন্দুই একটি বৃত্তের পরিধির উপর অবস্থিত।
+   - চারটি কোণের সমষ্টি ৩৬০ ডিগ্রি, এবং দুই জোড়া বিপরীত কোণের প্রতিটি জোড়ার সমষ্টি ১৮০ ডিগ্রি।
+   - বৃত্তস্থ চতুর্ভুজের বহিঃস্থ কোণ তার বিপরীত অন্তঃস্থ কোণের সমান।
 9. **কোন বর্গক্ষেত্রের ক্ষেত্রফল ১০০ বর্গমিটার। এর বাহুর দৈর্ঘ্য ১০% বৃদ্ধি পেলে এর ক্ষেত্রফলের শতকরা বৃদ্ধির হার কত?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
+
+   Answer: ধাপ ১ - মূল বর্গক্ষেত্রের বাহুর দৈর্ঘ্য নির্ণয়:
+   - ক্ষেত্রফল = বাহু^2
+   - ১০০ = বাহু^2
+   - বাহু = ১০ মিটার
+
+   ধাপ ২ - বাহু ১০ শতাংশ বৃদ্ধির পর নতুন দৈর্ঘ্য:
+   - বৃদ্ধি = ১০ এর ১০ শতাংশ = ১ মিটার
+   - নতুন বাহু = ১০ + ১ = ১১ মিটার
+
+   ধাপ ৩ - নতুন ক্ষেত্রফল:
+   - = ১১^2
+   - = ১২১ বর্গমিটার
+
+   ধাপ ৪ - ক্ষেত্রফলের বৃদ্ধি:
+   - = ১২১ - ১০০
+   - = ২১ বর্গমিটার
+
+   ধাপ ৫ - শতকরা বৃদ্ধি:
+   - = (২১ / ১০০) x ১০০
+   - = ২১ শতাংশ
+
+   উত্তর: ক্ষেত্রফলের শতকরা বৃদ্ধির হার ২১ শতাংশ।
+
+   সরাসরি সূত্র: বাহু r শতাংশ বাড়লে ক্ষেত্রফল বাড়ে (2r + r^2/100) শতাংশ।
+   - এখানে = ২(১০) + (১০)^২/১০০ = ২০ + ১ = ২১ শতাংশ। একই উত্তর।
+
+   লক্ষণীয়: বাহু দ্বিগুণ (১০০ শতাংশ বৃদ্ধি) হলে ক্ষেত্রফল হয় চারগুণ, অর্থাৎ ৩০০ শতাংশ বৃদ্ধি; কারণ ক্ষেত্রফল বাহুর বর্গের সমানুপাতিক।
 10. **৫. সমকোণী ত্রিভুজের সমকোণ সংলগ্ন দুই বাহুর মান ৩ এবং ৪ হলে। ইহার অতিভুজ এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+
+
+    Answer: সমকোণী ত্রিভুজে পিথাগোরাসের উপপাদ্য অনুযায়ী, অতিভুজের বর্গ সমকোণ সংলগ্ন অপর দুই বাহুর বর্গের সমষ্টির সমান।
+
+    ধাপ ১ - সূত্র লেখা:
+    - (অতিভুজ)^2 = (ভূমি)^2 + (লম্ব)^2
+
+    ধাপ ২ - মান বসানো:
+    - (অতিভুজ)^2 = ৩^2 + ৪^2
+    - = ৯ + ১৬
+    - = ২৫
+
+    ধাপ ৩ - বর্গমূল নির্ণয়:
+    - অতিভুজ = sqrt(২৫)
+    - = ৫
+
+    উত্তর: অতিভুজের দৈর্ঘ্য ৫ একক।
+
+    অতিরিক্ত তথ্য:
+    - (৩, ৪, ৫) হলো সবচেয়ে পরিচিত পিথাগোরীয় ত্রয়ী।
+    - অন্যান্য পিথাগোরীয় ত্রয়ী: (৫, ১২, ১৩), (৮, ১৫, ১৭), (৭, ২৪, ২৫), (৯, ৪০, ৪১) এবং এদের গুণিতক যেমন (৬, ৮, ১০) ও (৯, ১২, ১৫)।
+    - এই ত্রিভুজের ক্ষেত্রফল = (১/২) x ৩ x ৪ = ৬ বর্গ একক এবং পরিসীমা = ৩ + ৪ + ৫ = ১২ একক।
 
 ## Permutations & Combinations (5)
 
 1. **CARBON word permutations that vowel must occupy odd positions?** *[BCIC Assistant Programmer 14.02.2025 compact it 1329 (ET: BUET)]*
 
+
+   Answer: The word CARBON has 6 letters: C, A, R, B, O, N. All are distinct.
+
+   Step 1 - identify vowels and consonants:
+   - Vowels: A, O (2 vowels)
+   - Consonants: C, R, B, N (4 consonants)
+
+   Step 2 - identify the odd positions:
+   - The six positions are 1, 2, 3, 4, 5, 6
+   - The odd positions are 1, 3 and 5, so there are 3 odd positions
+
+   Step 3 - place the 2 vowels in the 3 odd positions:
+   - Choose 2 of the 3 positions and arrange the 2 vowels in them
+   - Number of ways = P(3, 2) = 3 x 2 = 6
+
+   Step 4 - place the 4 consonants in the remaining 4 positions:
+   - Number of ways = 4! = 4 x 3 x 2 x 1 = 24
+
+   Step 5 - apply the multiplication principle:
+   - Total arrangements = 6 x 24
+   - = 144
+
+   Final answer: 144 arrangements.
+
+   Note: the total number of arrangements of CARBON without any restriction is 6! = 720, so the restricted count of 144 is one-fifth of that, which is reasonable.
 2. **PROBLEMS শব্দটির P ও S কে প্রথমে এবং শেষে যথাক্রমে রেখে কতগুলো শব্দ গঠন করা যায়?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+   Answer: PROBLEMS শব্দে মোট ৮টি অক্ষর: P, R, O, B, L, E, M, S। কোনো অক্ষরের পুনরাবৃত্তি নেই।
+
+   ধাপ ১ - শর্ত অনুযায়ী নির্দিষ্ট অক্ষর বসানো:
+   - P বসবে প্রথম স্থানে (১ ভাবে)
+   - S বসবে শেষ স্থানে (১ ভাবে)
+
+   ধাপ ২ - অবশিষ্ট অক্ষর ও স্থান নির্ণয়:
+   - অবশিষ্ট অক্ষর: R, O, B, L, E, M — মোট ৬টি
+   - অবশিষ্ট স্থান: ২য় থেকে ৭ম, অর্থাৎ ৬টি স্থান
+
+   ধাপ ৩ - ৬টি ভিন্ন অক্ষরকে ৬টি স্থানে সাজানোর উপায়:
+   - = ৬!
+   - = ৬ x ৫ x ৪ x ৩ x ২ x ১
+   - = ৭২০
+
+   ধাপ ৪ - গুণন নীতি প্রয়োগ:
+   - মোট উপায় = ১ x ৭২০ x ১ = ৭২০
+
+   উত্তর: ৭২০টি শব্দ গঠন করা যায়।
+
+   তুলনা: কোনো শর্ত ছাড়া ৮টি ভিন্ন অক্ষর সাজানো যেত ৮! = ৪০,৩২০ ভাবে। দুইটি অক্ষরের স্থান নির্দিষ্ট করে দেওয়ায় সংখ্যাটি ৮ x ৭ = ৫৬ গুণ কমে গেছে।
 3. **In how many ways you can distribute 3 identical green shirt and 3 identical red shirt among 6 individual persons.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+   Answer: There are 3 identical green shirts and 3 identical red shirts, making 6 shirts in total, to be distributed among 6 individual persons. Since the number of shirts equals the number of persons, each person receives exactly one shirt.
+
+   Step 1 - understand what determines a distribution:
+   - Shirts of the same colour are identical, so what matters is only which persons receive green and which receive red.
+   - Once the set of persons who get green is fixed, the remaining persons automatically get red.
+
+   Step 2 - choose the 3 persons who receive a green shirt out of 6:
+   - Number of ways = C(6, 3)
+
+   Step 3 - compute:
+   - C(6, 3) = 6! / (3! x 3!)
+   - = (6 x 5 x 4) / (3 x 2 x 1)
+   - = 120 / 6
+   - = 20
+
+   Final answer: 20 ways.
+
+   Note on the alternative reading: if the shirts were all distinct, the answer would be 6! = 720. If any person could receive any number of shirts, the count would be different again. The reading used here, one shirt per person with identical shirts of each colour, is the standard interpretation and gives 20.
 4. **Suppose we have 6 hospital and 4 police station. Need to select a 4 stations for interrupted power supply. How many ways can we select where at least one hospital on the uninterrupted power supply list?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 454 (ET: BUET)]*
 
+
+   Answer: There are 6 hospitals and 4 police stations, making 10 stations in all. Four stations are to be selected for uninterrupted power supply, and at least one hospital must be on the list.
+
+   Method: complementary counting is easier here, because "at least one" has several cases while its complement has only one.
+
+   Step 1 - total ways to select any 4 stations out of 10:
+   - C(10, 4) = 10! / (4! x 6!)
+   - = (10 x 9 x 8 x 7) / (4 x 3 x 2 x 1)
+   - = 5040 / 24
+   - = 210
+
+   Step 2 - count the selections with no hospital at all. All four must then be police stations, and there are exactly 4 police stations:
+   - C(4, 4) = 1
+
+   Step 3 - subtract:
+   - Required number = 210 - 1
+   - = 209
+
+   Final answer: 209 ways.
+
+   Verification by direct case counting:
+   - Exactly 1 hospital: C(6, 1) x C(4, 3) = 6 x 4 = 24
+   - Exactly 2 hospitals: C(6, 2) x C(4, 2) = 15 x 6 = 90
+   - Exactly 3 hospitals: C(6, 3) x C(4, 1) = 20 x 4 = 80
+   - Exactly 4 hospitals: C(6, 4) x C(4, 0) = 15 x 1 = 15
+   - Total = 24 + 90 + 80 + 15 = 209. The two methods agree.
 5. **Reliability, Permutation related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
 
 ## Ratio, Proportion & Mixtures (4)
@@ -1474,7 +1696,57 @@
 
 3. **In the three jars, milk and water are mixed with the ratio 1:2, 2:3, and 3:4. If all are mixed into one jar, what will be the ratio of milk and water?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
+
+   Answer: Assume that the three jars are of equal volume, and take that volume as 1 unit each, so the total mixture is 3 units.
+
+   Step 1 - find the fraction of milk in each jar:
+   - Jar 1, milk : water = 1 : 2, so total parts = 3, milk fraction = 1/3
+   - Jar 2, milk : water = 2 : 3, so total parts = 5, milk fraction = 2/5
+   - Jar 3, milk : water = 3 : 4, so total parts = 7, milk fraction = 3/7
+
+   Step 2 - add the milk from the three jars:
+   - Total milk = 1/3 + 2/5 + 3/7
+   - LCM of 3, 5 and 7 is 105
+   - = 35/105 + 42/105 + 45/105
+   - = 122/105
+
+   Step 3 - find the total water:
+   - Total mixture = 3 units = 315/105
+   - Total water = 315/105 - 122/105
+   - = 193/105
+
+   Step 4 - form the ratio:
+   - Milk : Water = 122/105 : 193/105
+   - = 122 : 193
+
+   Final answer: milk : water = 122 : 193
+
+   Check: 122 + 193 = 315, and 315/105 = 3 units, which is the total volume of the three jars. Correct.
+
+   Note: this result depends on the assumption that the three jars hold equal quantities. If the quantities differ, the milk fractions must be weighted by the actual volumes before adding.
 4. **১২ জন লোক একটি কাজ ৯ দিনে করতে পারে। একই হারে কাজ করলে ১৮ জনে কাজটি কত দিনে করতে পারবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+
+   Answer: এটি একটি বিপরীত অনুপাতের সমস্যা: লোক সংখ্যা বাড়লে সময় কমে, কারণ মোট কাজের পরিমাণ অপরিবর্তিত থাকে।
+
+   ধাপ ১ - মোট কাজের পরিমাণ নির্ণয় (লোক-দিন এককে):
+   - মোট কাজ = লোক সংখ্যা x দিন সংখ্যা
+   - = ১২ x ৯
+   - = ১০৮ লোক-দিন
+
+   ধাপ ২ - ১৮ জনের জন্য প্রয়োজনীয় সময়:
+   - প্রয়োজনীয় দিন = মোট কাজ / লোক সংখ্যা
+   - = ১০৮ / ১৮
+   - = ৬ দিন
+
+   উত্তর: ১৮ জন লোক কাজটি ৬ দিনে শেষ করতে পারবে।
+
+   বিকল্প পদ্ধতি (বিপরীত অনুপাত):
+   - ১২ জনে লাগে ৯ দিন
+   - ১ জনে লাগে ৯ x ১২ = ১০৮ দিন
+   - ১৮ জনে লাগে ১০৮ / ১৮ = ৬ দিন। একই উত্তর।
+
+   সূত্র আকারে: M1 x D1 = M2 x D2, অর্থাৎ ১২ x ৯ = ১৮ x D2, তাই D2 = ৬ দিন।
 
 ## Speed, Time, Distance & Boats (4)
 
