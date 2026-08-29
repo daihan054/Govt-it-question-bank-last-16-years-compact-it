@@ -2972,15 +2972,281 @@ Output: Not Balanced
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
 
+
+   Answer: A circular queue is preferred because it reuses the array positions freed by earlier removals, whereas a linear queue wastes them permanently.
+
+   - A linear queue uses an array with a front and a rear index. Elements are added at the rear and removed from the front, and both indices only ever move forward.
+   - The defect is that when the rear reaches the end of the array, no further insertion is possible even though positions at the front have been freed by earlier removals. This wasted space is called the false overflow or queue overflow problem.
+   - A circular queue treats the array as a ring: when an index reaches the last position it wraps round to position 0, using the modulo operation. The freed positions at the front therefore become available again.
+
+   Index arithmetic in a circular queue, with array size n:
+   - Enqueue: rear = (rear + 1) mod n, then store the element.
+   - Dequeue: take the element at front, then front = (front + 1) mod n.
+   - Full condition: (rear + 1) mod n == front, deliberately leaving one position unused so that full and empty can be distinguished.
+   - Empty condition: front == rear, or front == −1 depending on the convention used.
+
+   The problem with a linear queue, illustrated:
+
+   ```
+   Array of size 5, after 5 enqueues and 3 dequeues:
+
+     index:   0     1     2     3     4
+            +-----+-----+-----+-----+-----+
+            |  -  |  -  |  30 |  40 |  50 |
+            +-----+-----+-----+-----+-----+
+                          ^front           ^rear
+
+   Enqueue(60) fails: rear is at the last index, so the queue reports
+   overflow, although positions 0 and 1 are free. Two fifths of the
+   memory is unusable.
+   ```
+
+   The circular queue solves this:
+
+   ```
+   Same state in a circular queue:
+
+     index:   0     1     2     3     4
+            +-----+-----+-----+-----+-----+
+            | 60  |  -  |  30 |  40 |  50 |
+            +-----+-----+-----+-----+-----+
+                    ^rear   ^front
+
+   Enqueue(60): rear = (4 + 1) mod 5 = 0, which is free, so 60 is stored
+   there. No memory is wasted and the queue continues to operate.
+   ```
+
+   Why operating systems in particular prefer it:
+   - Fixed memory: kernel buffers must be allocated once at boot and never resized, so an unbounded structure is not an option. A circular queue makes complete use of a fixed block.
+   - No shifting: the alternative fix for a linear queue is to move every element back to the front after each removal, which is O(n) per operation. A circular queue keeps both enqueue and dequeue at O(1), which is essential in an interrupt handler that must complete in a bounded time.
+   - Continuous operation: an operating system queue is never emptied and restarted; it runs for the lifetime of the machine, so the wasted positions of a linear queue would accumulate until the queue became unusable.
+
+   Example in an operating system:
+   - The keyboard input buffer is a circular queue. Keystrokes are enqueued by the keyboard interrupt handler and dequeued by the reading process. Since the two run at unrelated speeds and the buffer runs for the whole session, the ring structure allows the same small fixed buffer to serve indefinitely.
+   - Other examples: the round robin ready queue of the CPU scheduler, in which the time slice expiry moves a process to the rear and the ring returns naturally to the first process; the printer spooler; the network interface card's packet ring buffer; and the disk request queue.
+
+   - Advantage in one line: a circular queue gives full utilisation of a fixed array with O(1) operations, whereas a linear queue either wastes memory or pays O(n) to reclaim it.
 2. **FIFO is used which data structure?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
+
+   Answer: FIFO, First In First Out, is the principle used by the Queue data structure.
+
+   - In a queue, insertion takes place at one end called the rear, through the enqueue operation, and deletion at the other end called the front, through the dequeue operation. Because the two ends are different, the element inserted first is necessarily the one removed first.
+   - The order of the output is therefore identical to the order of the input, which is what makes a queue fair: no element can overtake another, so no element starves.
+   - Both enqueue and dequeue are O(1).
+   - Real world analogy: people waiting at a ticket counter, where the first to arrive is the first to be served.
+   - Applications: CPU scheduling in a First Come First Served or round robin scheduler, printer spooling, breadth first search, buffering between a fast producer and a slow consumer such as a keyboard buffer or a network packet buffer, disk request scheduling, and message queues.
+   - Variants: circular queue, which reuses freed positions; priority queue, in which the highest priority element leaves first rather than the earliest; and double ended queue, which allows insertion and deletion at both ends.
+
+   - By contrast, LIFO, Last In First Out, is the principle of the Stack, where both insertion and deletion occur at the same end, so the output order is the reverse of the input order.
 3. **6.6 Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+   Answer: A circular queue is preferred because it makes full use of a fixed array, while a linear queue wastes the positions freed at the front.
+
+   - A linear queue uses an array with a front and a rear index. Elements are added at the rear and removed from the front, and both indices only ever move forward.
+   - The defect is that when the rear reaches the end of the array, no further insertion is possible even though positions at the front have been freed by earlier removals. This wasted space is called the false overflow or queue overflow problem.
+   - A circular queue treats the array as a ring: when an index reaches the last position it wraps round to position 0, using the modulo operation. The freed positions at the front therefore become available again.
+
+   Index arithmetic in a circular queue, with array size n:
+   - Enqueue: rear = (rear + 1) mod n, then store the element.
+   - Dequeue: take the element at front, then front = (front + 1) mod n.
+   - Full condition: (rear + 1) mod n == front, deliberately leaving one position unused so that full and empty can be distinguished.
+   - Empty condition: front == rear, or front == −1 depending on the convention used.
+
+   Illustration of the linear queue defect:
+
+   ```
+   Array of size 5, after 5 enqueues and 3 dequeues:
+
+     index:   0     1     2     3     4
+            +-----+-----+-----+-----+-----+
+            |  -  |  -  |  30 |  40 |  50 |
+            +-----+-----+-----+-----+-----+
+                          ^front           ^rear
+
+   Enqueue(60) reports overflow, although indices 0 and 1 are free.
+   ```
+
+   Circular queue behaviour with the same state:
+
+   ```
+     index:   0     1     2     3     4
+            +-----+-----+-----+-----+-----+
+            | 60  |  -  |  30 |  40 |  50 |
+            +-----+-----+-----+-----+-----+
+                    ^rear   ^front
+
+   rear = (4 + 1) mod 5 = 0, so 60 is placed at index 0.
+   ```
+
+   Why operating systems use it:
+   - Kernel buffers are allocated once and never resized, so full utilisation of a fixed block matters.
+   - Both operations remain O(1). Compacting a linear queue by shifting elements would be O(n), which is unacceptable in an interrupt handler.
+   - These queues run for the lifetime of the machine and are never reset, so the wasted positions of a linear queue would accumulate until nothing could be inserted.
+
+   Example: the keyboard input buffer. The interrupt handler enqueues each keystroke and the reading process dequeues it. The two run at unrelated speeds, and the buffer must serve indefinitely from a small fixed allocation, which only a ring structure permits. The round robin ready queue of the CPU scheduler is the other standard example: when a process's time slice expires it is placed at the rear, and the ring returns naturally to the first process.
 4. **What is a Circular Queue? Describe its implementation.** *[BDCCL Assistant Engineer (Network) 2022 compact it 743 (ET: N/A)]*
 
+
+   Answer: A circular queue is a linear data structure following the FIFO principle in which the array is treated as a ring, so that the position after the last index is index 0 again. This allows the positions freed by earlier removals at the front to be reused, which a linear queue cannot do.
+
+   Why it is needed:
+   - In a linear queue both front and rear only move forward. Once rear reaches the last index, insertion fails even though positions at the front are free. This is called false overflow, and it wastes memory.
+   - The circular arrangement removes the problem without any shifting of elements, so both operations remain O(1).
+
+   ```
+   The array viewed as a ring, size 5:
+
+                 [0]
+              /       \
+           [4]         [1]
+             \         /
+              [3] - [2]
+
+   rear = (rear + 1) mod 5, so after index 4 comes index 0 again.
+   ```
+
+   Implementation:
+
+   ```c
+   #define SIZE 5
+
+   int queue[SIZE];
+   int front = -1, rear = -1;
+
+   int isFull(void) {
+       return (front == 0 && rear == SIZE - 1) || (rear == (front - 1) % (SIZE - 1));
+   }
+
+   int isEmpty(void) {
+       return front == -1;
+   }
+
+   void enqueue(int value) {
+       if (isFull()) {
+           printf("Queue is full\n");
+           return;
+       }
+       if (front == -1) front = 0;          /* first insertion */
+       rear = (rear + 1) % SIZE;            /* wrap around */
+       queue[rear] = value;
+   }
+
+   int dequeue(void) {
+       if (isEmpty()) {
+           printf("Queue is empty\n");
+           return -1;
+       }
+       int value = queue[front];
+       if (front == rear) {                 /* only one element was left */
+           front = rear = -1;               /* reset to empty */
+       } else {
+           front = (front + 1) % SIZE;      /* wrap around */
+       }
+       return value;
+   }
+   ```
+
+   The essential expressions:
+   - Enqueue: rear = (rear + 1) mod SIZE, then store at that position.
+   - Dequeue: take the value at front, then front = (front + 1) mod SIZE.
+   - Empty: front == −1, or front == rear in the alternative convention.
+   - Full: (rear + 1) mod SIZE == front, if one position is deliberately kept unused so that full and empty can be distinguished; otherwise a separate count variable must be maintained.
+
+   Trace with SIZE = 5:
+   - Enqueue 10, 20, 30, 40, 50: front = 0, rear = 4, the queue is full.
+   - Dequeue three times: 10, 20 and 30 are returned, front becomes 3.
+   - Enqueue 60: rear = (4 + 1) mod 5 = 0, so 60 is stored at index 0. In a linear queue this insertion would have failed.
+
+   - Complexity: O(1) for both enqueue and dequeue, and O(n) space for a queue of capacity n.
+   - Applications: the round robin CPU scheduler, keyboard and network interface buffers, printer spooling, traffic light control, and any producer-consumer buffer of fixed size.
 5. **Circular Queue and Priority Queue কীভাবে কাজ করে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 912-913 (ET: BUET)]*
 
+
+   Answer:
+
+   How a circular queue works:
+
+   - A linear queue uses an array with a front and a rear index. Elements are added at the rear and removed from the front, and both indices only ever move forward.
+   - The defect is that when the rear reaches the end of the array, no further insertion is possible even though positions at the front have been freed by earlier removals. This wasted space is called the false overflow or queue overflow problem.
+   - A circular queue treats the array as a ring: when an index reaches the last position it wraps round to position 0, using the modulo operation. The freed positions at the front therefore become available again.
+
+   Index arithmetic in a circular queue, with array size n:
+   - Enqueue: rear = (rear + 1) mod n, then store the element.
+   - Dequeue: take the element at front, then front = (front + 1) mod n.
+   - Full condition: (rear + 1) mod n == front, deliberately leaving one position unused so that full and empty can be distinguished.
+   - Empty condition: front == rear, or front == −1 depending on the convention used.
+
+   - Trace with an array of size 5: after enqueuing 10, 20, 30, 40 and 50 the queue is full with front = 0 and rear = 4. Dequeuing three times returns 10, 20 and 30 and leaves front = 3. Enqueuing 60 now computes rear = (4 + 1) mod 5 = 0 and stores 60 at index 0, which a linear queue could not do.
+   - Both operations remain O(1), and no element is ever moved.
+   - Uses: round robin CPU scheduling, keyboard and network buffers, printer spooling, and any fixed size producer-consumer buffer.
+
+   How a priority queue works:
+   - A priority queue is an abstract data type in which every element carries a priority, and the element with the highest priority is removed first regardless of when it was inserted. If two elements share a priority, the usual rule is that the earlier arrival is served first.
+   - This breaks the FIFO rule deliberately: in an ordinary queue position in the line decides, while in a priority queue importance decides.
+   - Operations: insert, which adds an element with its priority; extract, which removes and returns the highest priority element; and peek, which reads it without removing.
+   - Implementation matters greatly:
+   - An unsorted array or list gives O(1) insertion but O(n) extraction, since the maximum must be searched for.
+   - A sorted array or list gives O(n) insertion but O(1) extraction.
+   - A binary heap gives O(log n) for both, which is why a heap is the standard implementation. The highest priority element is always at the root, so peek is O(1).
+   - A max heap serves a queue in which the largest key has the highest priority, and a min heap one in which the smallest does.
+   - Uses: operating system process scheduling, in which a high priority process pre-empts others; Dijkstra's shortest path and Prim's minimum spanning tree algorithms; Huffman coding; hospital emergency triage, where the most serious case is treated first rather than the earliest arrival; and event driven simulation ordered by time.
+   - A caution worth stating: a strict priority scheme can starve a low priority element indefinitely. The remedy is ageing, in which the priority of a waiting element is raised gradually so that it is eventually served.
 6. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+
+   Answer: The enqueue operation inserts an element at the rear of the queue, which is the only end at which insertion is permitted.
+
+   Steps:
+   - Step 1: check the overflow condition. In a linear queue this is rear = SIZE − 1; in a circular queue it is (rear + 1) mod SIZE = front. If the queue is full, print "Queue Overflow" and stop. This check must precede everything else.
+   - Step 2: if the queue is empty, that is if front = −1, set front = 0, since the first element becomes both the front and the rear.
+   - Step 3: increment the rear pointer. In a linear queue rear = rear + 1; in a circular queue rear = (rear + 1) mod SIZE.
+   - Step 4: store the new element at queue[rear].
+   - Step 5: stop.
+
+   Pseudocode:
+
+   ```
+   ENQUEUE(queue, item):
+       if isFull():
+           print "Queue Overflow"
+           return
+       if front == -1:
+           front = 0
+       rear = (rear + 1) mod SIZE       // simply rear + 1 in a linear queue
+       queue[rear] = item
+   ```
+
+   Implementation in C, for a linear queue:
+
+   ```c
+   #define SIZE 5
+   int queue[SIZE];
+   int front = -1, rear = -1;
+
+   void enqueue(int item) {
+       if (rear == SIZE - 1) {
+           printf("Queue Overflow\n");
+           return;
+       }
+       if (front == -1)
+           front = 0;
+       rear = rear + 1;
+       queue[rear] = item;
+       printf("%d inserted\n", item);
+   }
+   ```
+
+   Trace, starting from an empty queue with front = rear = −1 and SIZE = 5:
+   - Enqueue(10): the queue is not full; front becomes 0; rear becomes 0; queue[0] = 10.
+   - Enqueue(20): rear becomes 1; queue[1] = 20.
+   - Enqueue(30): rear becomes 2; queue[2] = 30. The queue now holds 10, 20, 30 with front = 0 and rear = 2.
+   - Enqueue(40) and Enqueue(50) fill the array; rear reaches 4.
+   - Enqueue(60): rear = SIZE − 1, so overflow is reported and the queue is unchanged.
+
+   - Complexity: O(1) in both time and space, since no searching and no shifting is required.
+   - The corresponding dequeue operation is the mirror image: check the underflow condition front = −1 or front > rear, take the element at queue[front], and then advance front, resetting both pointers to −1 when the last element is removed.
 
 ## Binary Search Tree (BST) (6)
 
@@ -3014,4 +3280,59 @@ Output: Not Balanced
 
 1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
 
+
+   Answer:
+
+   What a data structure is:
+   - A data structure is a particular way of organising, storing and managing data in a computer so that it can be accessed and modified efficiently. It defines both the arrangement of the data in memory and the operations permitted on it.
+   - The purpose is efficiency: the choice of structure determines the time and space cost of every operation, and a badly chosen structure can turn a fast algorithm into an unusable one.
+   - Classification: primitive data structures such as int, float, char and pointer, which the language provides directly; and non-primitive data structures, which are built from them and are divided into linear and non-linear.
+
+   Linear data structures:
+   - In a linear data structure the elements are arranged in a sequence, so that each element has exactly one predecessor and one successor, except the first and the last. There is a single level, and the whole structure can be traversed in one pass.
+   - Array: a fixed size collection of elements of the same type held in contiguous memory, with O(1) access by index. Example: storing the marks of 50 students.
+   - Linked list: nodes scattered in memory and joined by pointers, allowing dynamic growth. Example: a playlist, or the chaining of a hash table.
+   - Stack: LIFO, with insertion and deletion at one end. Example: the function call stack, undo in an editor.
+   - Queue: FIFO, with insertion at the rear and deletion at the front. Example: a printer spool, CPU scheduling.
+   - Advantages: simple to implement and easy to traverse. Disadvantage: for a large number of elements the operations tend to be O(n), and memory use is not always efficient.
+
+   Non-linear data structures:
+   - In a non-linear data structure the elements are not arranged in a sequence; an element may be connected to several others, so the structure has multiple levels and cannot be traversed in a single straight pass.
+   - Tree: a hierarchical structure with a root and no cycles, in which each node has one parent and any number of children. Examples: a binary search tree for searching in O(log n), a heap for priority queues, a B-tree for database indexing, and the directory structure of a file system.
+   - Graph: a set of vertices joined by edges, with no restriction on the connections and cycles permitted. Examples: a road network, a social network, the routing topology of the Internet.
+   - Hash table: keys mapped to positions by a hash function, giving O(1) average access, and generally classified as non-linear.
+   - Advantages: they model hierarchical and networked relationships that a linear structure cannot, and they give better complexity for searching, as in a balanced tree at O(log n). Disadvantage: they are more complex to implement and traverse.
+
+   The essential distinction: in a linear structure the data is arranged one after another, and in a non-linear structure it is arranged in a hierarchy or a network, so the choice depends on whether the relationship between the data items is sequential or structured.
 2. **Linear Data Structure এবং Non Linear Data Structure বলতে কি বুঝায়?** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
+
+
+   Answer:
+
+   Linear data structure:
+   - A linear data structure is one in which the data elements are arranged sequentially, so that each element has exactly one predecessor and one successor, apart from the first and the last. The structure has a single level and can be traversed completely in one pass.
+   - Memory may be contiguous, as in an array, or scattered and linked by pointers, as in a linked list, but the logical arrangement is always a straight sequence.
+   - Examples: array, linked list, stack and queue.
+   - Advantages: simple to understand and implement, easy to traverse, and efficient for small collections.
+   - Disadvantages: search and many other operations tend to be O(n) as the size grows, and a linear structure cannot represent a hierarchy or a network of relationships.
+
+   Non-linear data structure:
+   - A non-linear data structure is one in which the elements are not arranged in a simple sequence; an element may be connected to several others, so the structure has multiple levels and cannot be traversed in a single straight pass.
+   - Examples: tree, graph and hash table.
+   - Advantages: they represent hierarchical relationships, as a tree does for a file system or an organisation chart, and networked relationships, as a graph does for a road or social network. They also give far better complexity for searching, since a balanced tree searches in O(log n) and a hash table in O(1) on average.
+   - Disadvantages: they are more complex to implement, traversal requires an explicit algorithm such as depth first or breadth first search, and they generally consume more memory for pointers.
+
+   Comparison:
+
+   | Point | Linear | Non-linear |
+   |---|---|---|
+   | Arrangement | Sequential, one after another | Hierarchical or networked |
+   | Levels | Single | Multiple |
+   | Traversal | Complete in one pass | Requires DFS, BFS or a tree traversal |
+   | Neighbours per element | One predecessor and one successor | Any number of connected elements |
+   | Memory use | Generally simpler and less | Generally more, because of pointers |
+   | Implementation | Easier | More complex |
+   | Typical complexity of search | O(n) | O(log n) for a balanced tree, O(1) average for a hash table |
+   | Examples | Array, linked list, stack, queue | Tree, graph, hash table |
+
+   - The choice is determined by the relationship between the data items: sequential data calls for a linear structure, and hierarchical or networked data calls for a non-linear one.

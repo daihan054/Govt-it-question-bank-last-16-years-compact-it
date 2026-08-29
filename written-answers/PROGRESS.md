@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 115/239 subtopics · 1322/2673 answers**
+**Overall: 116/239 subtopics · 1328/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -143,13 +143,13 @@ Commit unit: one `##` subtopic.
 - [x] Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (2)
 - [x] High Availability & Redundancy Protocols (VRRP, HSRP) (1)
 
-## data-structure.md — 4/8 sections, 66/86 answers
+## data-structure.md — 5/8 sections, 72/86 answers
 
 - [x] Tree (26)
 - [x] Stack (19)
 - [x] Linked List (14)
 - [x] Priority Queues & Heaps (Min/Max Heap) (7)
-- [ ] Queue (6)
+- [x] Queue (6)
 - [ ] Binary Search Tree (BST) (6)
 - [ ] Hashing & Hash Tables (6)
 - [ ] Data Structure Fundamentals (2)
