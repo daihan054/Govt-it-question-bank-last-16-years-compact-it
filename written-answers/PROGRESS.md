@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 27/239 subtopics · 171/2673 answers**
+**Overall: 28/239 subtopics · 176/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -36,14 +36,14 @@ Commit unit: one `##` subtopic.
 - [x] Huffman Coding & Data Compression (1)
 - [x] NP-Completeness & Complexity Reduction (1)
 
-## bangla.md — 1/6 sections, 6/123 answers
+## bangla.md — 2/6 sections, 11/123 answers
 
 - [ ] বাংলা ব্যাকরণ ও সাহিত্য (61)
 - [ ] Focus Writing (25)
 - [ ] Translation (19)
 - [ ] পত্র লিখন (7)
 - [x] সারমর্ম / সারাংশ (6)
-- [ ] এক কথায় প্রকাশ (One Word Substitution) (5)
+- [x] এক কথায় প্রকাশ (One Word Substitution) (5)
 
 ## c-programming.md — 0/9 sections, 0/202 answers
 
