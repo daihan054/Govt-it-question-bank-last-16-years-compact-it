@@ -9591,7 +9591,7 @@ SELECT count (*) FROM (
 1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
 
 
-    Answer: Speedup and scaleup are the two measures of how well a parallel database system uses additional hardware.
+   Answer: Speedup and scaleup are the two measures of how well a parallel database system uses additional hardware.
 
     Speedup:
     - Speedup measures how much faster a fixed amount of work is completed when more resources are added. The problem size stays the same and the hardware grows.

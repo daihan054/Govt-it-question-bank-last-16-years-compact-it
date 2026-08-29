@@ -414,7 +414,7 @@
 15. **Explain four type of register.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
 
 
-     Answer: A register is a small, very fast storage location inside the CPU used to hold data, addresses or control information during processing. Four important types are described below.
+    Answer: A register is a small, very fast storage location inside the CPU used to hold data, addresses or control information during processing. Four important types are described below.
 
     - Accumulator (AC): holds one operand before an arithmetic or logic operation and stores the result afterwards. It is the busiest register in a simple CPU.
      - Program Counter (PC): holds the address of the next instruction to be fetched. It is incremented automatically after each fetch, and it is loaded with a new value on a jump or a call.
@@ -570,7 +570,7 @@
 21. **Difference between Microprocessor and Microcontroller.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 870 (ET: N/A)]*
 
 
-     Answer:
+    Answer:
 
     | Point | Microprocessor | Microcontroller |
     |---|---|---|

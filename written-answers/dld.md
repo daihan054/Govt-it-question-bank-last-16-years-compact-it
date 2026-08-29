@@ -4203,7 +4203,7 @@
 11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 
 
-     Answer: Y = ABC'D + A'BD + ABCD
+    Answer: Y = ABC'D + A'BD + ABCD
 
     Minimum literal form means the expression with the fewest total literals (variable appearances).
 
@@ -4221,7 +4221,7 @@
 12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
 
 
-     Answer: Y = ABCD + A'BD + ABC'D
+    Answer: Y = ABCD + A'BD + ABC'D
 
     Step 1 - combine the terms that differ only in C:
     ABCD + ABC'D = ABD(C + C') = ABD

@@ -262,7 +262,7 @@
     Digital financial literacy is what turns an account number into genuine financial inclusion.
 17. **Focus writing in English: Metro Rail Equal Opportunity** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
-     Answer: Metro Rail and Equal Opportunity
+    Answer: Metro Rail and Equal Opportunity
 
     The Dhaka Metro Rail, opened in December 2022, is more than a transport project. It is a rare piece of public infrastructure in which every passenger, regardless of wealth, gender or physical ability, is treated in the same way.
 
@@ -277,7 +277,7 @@
     Extending the network, integrating it with buses and keeping fares within reach will decide whether this promise of equal opportunity spreads across the whole city.
 18. **Write a composition: E-commerce in Bangladesh** *[BREB Assistant Programmer 18.02.2023 (ET: N/A)]*
 
-     Answer: E-commerce in Bangladesh
+    Answer: E-commerce in Bangladesh
 
     E-commerce means buying and selling goods and services over the internet. In Bangladesh it has grown from a curiosity into an industry worth several billion dollars, driven by cheap smartphones, expanding broadband, mobile financial services and a young population.
 
@@ -292,7 +292,7 @@
     Handled properly, e-commerce can become one of the strongest pillars of the digital economy of Bangladesh.
 19. **Growing use to technology in the Financial Service Industry.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
-     Answer: The Growing Use of Technology in the Financial Service Industry
+    Answer: The Growing Use of Technology in the Financial Service Industry
 
     Financial services have changed more in the last fifteen years than in the previous hundred, and technology is the reason. The branch, once the only point of contact between a bank and a customer, is now one channel among many.
 
@@ -307,7 +307,7 @@
     The institutions that succeed will be those that combine strong technology with equally strong security, regulation and customer education.
 20. **Focus English (Harm of durg)** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
 
-     Answer: The Harm of Drugs
+    Answer: The Harm of Drugs
 
     Drug abuse is one of the gravest social problems facing Bangladesh today. Yaba, heroin, cannabis, phensedyl and a growing range of synthetic substances have spread from the border districts into every city and town, and the most affected group is young people between fifteen and thirty.
 
@@ -324,7 +324,7 @@
     A generation lost to drugs is a nation's future lost with it.
 21. **Write an essay on any one of the following using the hints given below: a) Technical Education. [Hints: Introduction — What technical education is — importance — Role of the government — Conclusion.] b) Environment Pollution. [Hints: Introduction — What environment polluton is — Sources of pollution — Effects on environment — impacts of human health — How to prevent the pollution — Conclusion.]** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 668 (ET: N/A)]*
 
-     Answer: Environment Pollution
+    Answer: Environment Pollution
 
     Introduction: Environment pollution means the contamination of air, water, soil and the acoustic environment by substances that harm living organisms. For Bangladesh, a low-lying and densely populated delta, it has become a question of survival rather than of comfort.
 
@@ -341,7 +341,7 @@
     Conclusion: Development that destroys the environment is not development but borrowing from the next generation. Bangladesh must grow and stay liveable at the same time.
 22. **Write an essay on safe Environment/ [Hints : Introduction – relation between life and environment – actions taken by the government to protect environment – individual actions to ensure safe environment – conclusion]** *[Software Assistant Programmer 13.10.2022 compact it 711 (ET: N/A)]*
 
-     Answer: A Safe Environment
+    Answer: A Safe Environment
 
     Introduction: A safe environment is one in which the air, water, soil and surroundings do not threaten the health of the people who live in it. It is the foundation on which every other kind of development stands.
 
@@ -354,7 +354,7 @@
     Conclusion: Laws can restrain the worst offenders, but a safe environment is finally created by the daily behaviour of ordinary citizens. Every person who acts responsibly makes the task of the next generation easier.
 23. **Write brief paragraph on “Patience is the mother of success.”** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
-     Answer: Patience is the Mother of Success
+    Answer: Patience is the Mother of Success
 
     Patience is the capacity to continue working steadily towards a goal without being discouraged by delay, difficulty or repeated failure. The proverb calls it the mother of success because no achievement of any value has ever been born without it.
 
@@ -367,7 +367,7 @@
     In an age that promises instant results, this old truth matters more than ever. Whoever learns to wait while working steadily will find that success, though slow, is certain.
 24. **Write an eassy on the “Role of Telecommunications in supporting economic and business activities during three Covid-19 pandemic situations.”** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 811 (ET: IBA)]*
 
-     Answer: The Role of Telecommunications in Supporting Economic and Business Activities during the COVID-19 Pandemic
+    Answer: The Role of Telecommunications in Supporting Economic and Business Activities during the COVID-19 Pandemic
 
     When the COVID-19 pandemic closed offices, factories, schools and borders, telecommunications became the only structure holding economic life together. What had been a convenience turned overnight into essential infrastructure.
 
@@ -384,7 +384,7 @@
     The lesson is permanent. Telecommunications is not a support service but a core economic sector, and investment in it is investment in national resilience.
 25. **English Focus: Bhasan Char- A Safe Home for Rohingya Refugees.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 837 (ET: N/A)]*
 
-     Answer: Bhasan Char: A Safe Home for Rohingya Refugees
+    Answer: Bhasan Char: A Safe Home for Rohingya Refugees
 
     Since 2017 Bangladesh has sheltered more than a million Rohingya refugees who fled violence in Myanmar. Almost all of them were placed in the camps of Ukhiya and Teknaf in Cox's Bazar, an area that quickly became one of the most densely crowded human settlements on earth.
 
@@ -399,7 +399,7 @@
 
 27. **Write a composition: Edge Computing** *[RAKUB Programmer (PO) 12.10.2021 compact it 854 (ET: N/A)]*
 
-     Answer: Edge Computing
+    Answer: Edge Computing
 
     Edge computing is a model in which data is processed close to where it is generated instead of being sent to a distant central cloud. The processing happens on the device itself, on a nearby gateway or at a small local data centre, and only summarised or important data travels onward.
 
@@ -414,7 +414,7 @@
     Edge computing does not replace the cloud. The two work together, with the edge handling immediate decisions and the cloud handling long-term storage, training and analysis. With 5G now available, this combination is becoming the standard architecture.
 28. **Write a composition: “Block chain technology”** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 858 (ET: N/A)]*
 
-     Answer: Blockchain Technology
+    Answer: Blockchain Technology
 
     A blockchain is a distributed digital ledger in which records are grouped into blocks and each block is cryptographically linked to the one before it. Copies of the ledger are held by every participant in the network, so no single authority controls it.
 
@@ -429,7 +429,7 @@
     Blockchain is best suited where several parties who do not fully trust one another must share one authoritative record.
 29. **Write a Composition in English: “Social Media Platform” are now the greatest threat to Democracy.** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875 (ET: BUET)]*
 
-     Answer: Social Media Platforms are Now the Greatest Threat to Democracy
+    Answer: Social Media Platforms are Now the Greatest Threat to Democracy
 
     Social media was welcomed as a democratic instrument. It gave every citizen a printing press, helped organise mass movements and broke the monopoly of state-controlled media. Two decades later the same platforms are accused of undermining the systems they once strengthened, and the accusation deserves serious examination.
 
@@ -440,7 +440,7 @@
     The honest conclusion is that social media is not the greatest threat to democracy but the greatest amplifier of whatever a society already contains. The remedy lies in algorithmic transparency, independent fact-checking, platform accountability and, above all, a digitally literate public that verifies before it believes.
 30. **English focus: Telecommunication in Developing Economic sector.** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
 
-     Answer: Telecommunication in Developing the Economic Sector
+    Answer: Telecommunication in Developing the Economic Sector
 
     Telecommunication is the nervous system of a modern economy. Every transaction, contract, shipment and payment depends on the movement of information, and the speed of that movement now determines the competitiveness of a country.
 
@@ -457,7 +457,7 @@
     Investment in telecommunication is therefore not spending on a utility but investment in every other sector of the economy at once.
 31. **Write a short note on “Digital Bangladesh”** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
-     Answer: Digital Bangladesh
+    Answer: Digital Bangladesh
 
     Digital Bangladesh was declared as a national vision in 2008 and became the guiding programme of national development from 2009. Its aim was not merely to buy computers but to use technology to deliver services, create employment and reduce inequality.
 
@@ -470,7 +470,7 @@
     Digital Bangladesh has moved from being a slogan to being the ordinary way in which the country works. Its next stage, Smart Bangladesh, must now focus on quality, security and inclusion rather than on numbers alone.
 32. **English: Confront the Rumors of Social Media.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 930 (ET: CTI)]*
 
-     Answer: Confronting the Rumours of Social Media
+    Answer: Confronting the Rumours of Social Media
 
     Rumour is not new, but social media has given it speed, reach and the appearance of credibility. A false message can now travel to lakhs of people before a single fact is checked, and in Bangladesh the consequences have included communal attacks on temples and villages, the lynching of innocent people accused of child abduction, panic buying during the pandemic, and refusal of vaccination.
 
@@ -481,7 +481,7 @@
     The strongest defence against rumour is not censorship but an informed public that pauses before it believes.
 33. **Some people may think that long-term imprisonment is helpful in reducing crime, and some people think that there are other options to reduce crime. Discuss both vies and your opinion with an example?** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-     Answer: Long-term imprisonment and the alternatives for reducing crime
+    Answer: Long-term imprisonment and the alternatives for reducing crime
 
     Some people hold that long prison sentences are the most effective way to reduce crime, while others argue that different approaches work better. Both positions deserve examination.
 
@@ -494,7 +494,7 @@
     In my opinion the two approaches should be combined rather than opposed. Long sentences are justified for violent and repeat offenders who present a real danger. For the far larger number of minor and non-violent offenders, imprisonment does more harm than good. Norway, which emphasises rehabilitation, has one of the lowest reoffending rates in the world, while several countries with the longest sentences have among the highest. The evidence favours certainty of detection and serious rehabilitation over severity alone.
 34. **Write an Essay: Climate change Impact in Bangladesh.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
-     Answer: The Impact of Climate Change on Bangladesh
+    Answer: The Impact of Climate Change on Bangladesh
 
     Bangladesh contributes less than half a per cent of global greenhouse gas emissions, yet it is consistently ranked among the countries most vulnerable to climate change. Its geography explains why: a flat delta at the meeting point of three great rivers, with a long coastline, a dense population and an economy resting on agriculture.
 
@@ -507,7 +507,7 @@
     Adaptation alone, however, cannot solve a problem the country did not create. Global emission reduction and the delivery of promised climate finance remain the responsibility of the industrialised world.
 35. **Write a paragraph on “Post-corona Green Recovery Plans and Progress in Bangladesh” in English.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-     Answer: Post-Corona Green Recovery Plans and Progress in Bangladesh
+    Answer: Post-Corona Green Recovery Plans and Progress in Bangladesh
 
     The COVID-19 pandemic damaged the economy of Bangladesh severely, but it also created an opportunity. During the lockdown the air of Dhaka became clean, the rivers ran clearer and wildlife returned to places it had abandoned. The question that followed was whether recovery should simply restore the old pattern of growth or build a cleaner one.
 
