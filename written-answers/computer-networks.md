@@ -464,39 +464,409 @@ ii) 211.10.15.4
 
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
 
+
+   Answer:
+
+   Given:
+   - 5 channels, each of 100 kHz bandwidth.
+   - A guard band of 10 kHz is needed between adjacent channels.
+
+   Step 1, total channel bandwidth:
+   - 5 × 100 = 500 kHz
+
+   Step 2, number of guard bands:
+   - Guard bands are placed only between channels, so for 5 channels there are 5 − 1 = 4 guard bands.
+   - 4 × 10 = 40 kHz
+
+   Step 3, minimum link bandwidth:
+   - Total = 500 + 40 = 540 kHz
+
+   Final answer: the minimum bandwidth of the link is 540 kHz.
+
+   ```
+   |<-100->|10|<-100->|10|<-100->|10|<-100->|10|<-100->|
+      Ch1   G    Ch2   G    Ch3   G    Ch4   G    Ch5
+   Total = 500 kHz of channels + 40 kHz of guard bands = 540 kHz
+   ```
+
+   - The guard band is unused spectrum kept between adjacent channels so that a small drift or the skirt of one filter does not spill into the neighbouring channel and cause interference. This is a feature of FDM only; TDM needs no guard band because the channels are separated in time.
 2. **ব্যান্ডউইথ (Bandwidth) বলতে কী বুঝায়?** *[সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer: Bandwidth bolte bojhay kono transmission channel-er data bohon korar khomota, mane ek second-e sorbochcho koto poriman data pathano jete pare.
+
+   - Analog signal-er khetre bandwidth mane channel-e je sorbochcho ar sorbonimno frequency-r modhye parthokko, ar eta Hertz (Hz)-e mapa hoy. Jemon telephone line-er bandwidth 3000 Hz (300 theke 3300 Hz).
+   - Digital signal-er khetre bandwidth mane ek second-e sorbochcho koto bit pathano jay, ar eta bps, Kbps, Mbps ba Gbps-e mapa hoy.
+   - Bandwidth jato beshi, tato beshi data ekshathe pathano jay, tai video streaming ba boro file transfer tato druto hoy.
+   - Bandwidth ar Throughput ek noy: bandwidth holo sorbochcho tattwik khomota, ar throughput holo bastobe pawa data rate, ja congestion, error ar overhead-er karone shobshomoy bandwidth-er cheye kom hoy.
+   - Upoma: bandwidth holo rasta-r prosthota, ar throughput holo ghontay bastobe koyta gari par holo.
 3. **6.9 Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - 5 channels, each of 100 kHz bandwidth.
+   - A guard band of 10 kHz is needed between adjacent channels.
+
+   Step 1, total channel bandwidth:
+   - 5 × 100 = 500 kHz
+
+   Step 2, number of guard bands:
+   - Guard bands are placed only between channels, so for 5 channels there are 5 − 1 = 4 guard bands.
+   - 4 × 10 = 40 kHz
+
+   Step 3, minimum link bandwidth:
+   - Total = 500 + 40 = 540 kHz
+
+   Final answer: the minimum bandwidth of the link is 540 kHz.
+
+   ```
+   |<-100->|10|<-100->|10|<-100->|10|<-100->|10|<-100->|
+      Ch1   G    Ch2   G    Ch3   G    Ch4   G    Ch5
+   Total = 500 kHz of channels + 40 kHz of guard bands = 540 kHz
+   ```
+
+   - The guard band is unused spectrum kept between adjacent channels so that a small drift or the skirt of one filter does not spill into the neighbouring channel and cause interference. This is a feature of FDM only; TDM needs no guard band because the channels are separated in time.
 4. **Differentiate among TDM, FDM and WDM. How does working process in TDM?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 511 (ET: MIST)]*
 
+
+   Answer:
+
+   | Point | FDM | TDM | WDM |
+   |---|---|---|---|
+   | Full form | Frequency Division Multiplexing | Time Division Multiplexing | Wavelength Division Multiplexing |
+   | Divides | The bandwidth into frequency bands | The time into slots | The light spectrum into wavelengths |
+   | Signal | Analog | Digital | Optical |
+   | Medium | Copper, coaxial, radio | Copper, wireless, any digital link | Optical fibre only |
+   | Concurrency | All channels transmit simultaneously on different frequencies | One channel at a time, in rotation | All wavelengths travel simultaneously in one fibre |
+   | Separation | Guard band | Guard bit or framing bit | Wavelength spacing, 0.8 nm for DWDM |
+   | Equipment | Modulator, filter, carrier oscillator | Multiplexer with precise clock synchronisation | Prism or diffraction grating, or an AWG |
+   | Capacity | Limited by the total bandwidth | Limited by the link bit rate | Very high, terabits per second |
+   | Examples | Radio, TV, cable TV, ADSL | T-1, E-1, SONET, GSM, ISDN | Submarine cable, long haul backbone, PON |
+
+   - WDM is really FDM applied to light: the difference is only that the carriers are wavelengths of light rather than radio frequencies.
+
+   Working process of TDM:
+   - The link's total time is divided into repeating frames, and each frame is divided into fixed time slots, one slot per input channel.
+   - The multiplexer rotates through the input channels like a rotating switch, taking one unit of data, that is one bit or one byte, from each channel in turn and placing it in that channel's slot.
+   - The slots are then sent one after another down the shared link, so at any instant the whole link bandwidth belongs to one channel.
+   - At the far end the demultiplexer rotates in exact synchronism, taking the data out of each slot and delivering it to the correct output line. A framing bit added to each frame keeps the two ends in step.
+   - Example, the T-1 carrier: 24 voice channels, each contributing 8 bits per frame, gives 192 bits, plus 1 framing bit makes 193 bits per frame; at 8000 frames per second this is 1.544 Mbps.
+   - Two kinds: synchronous TDM, where every channel gets its slot whether or not it has data, so idle slots are wasted; and statistical or asynchronous TDM, where slots are allocated only to channels that actually have data, which is far more efficient but requires an address in each slot.
 5. **Describe the different types of Multiplexing.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 554 (ET: BIBM)]*
 
+
+   Answer: Multiplexing is the technique of combining several signals so that they can share one transmission link, with a multiplexer at the sending end and a demultiplexer at the receiving end.
+
+   Types of multiplexing:
+
+   - Frequency Division Multiplexing, FDM: the bandwidth of the link is divided into frequency bands and each signal is modulated onto its own carrier. All signals travel at the same time on different frequencies, separated by guard bands. It is analog in nature. Examples: radio and TV broadcast, cable TV, ADSL.
+   - Wavelength Division Multiplexing, WDM: the optical version of FDM, where several wavelengths of light travel through one fibre at the same time and are combined and separated by prisms, gratings or arrayed waveguides. CWDM uses a few widely spaced wavelengths and DWDM uses dozens spaced only 0.8 nm apart. It gives terabits per second on one fibre and is used in submarine and backbone links.
+   - Time Division Multiplexing, TDM: the time is divided into frames and slots, and each channel is given a slot in rotation, so at any instant the whole bandwidth belongs to one channel. It is digital in nature. It has two forms:
+   - Synchronous TDM, where each channel gets its own fixed slot whether or not it has data, so idle slots are wasted. Examples: T-1, E-1, SONET, ISDN.
+   - Statistical or asynchronous TDM, where slots are given only to channels that actually have data at that moment, so the link is used far more efficiently, at the cost of carrying an address in each slot.
+   - Code Division Multiplexing, CDM or CDMA: every channel uses the whole bandwidth all the time, but each is multiplied by a unique orthogonal chip code. The receiver recovers its own channel by correlating with the same code. It resists jamming and interference well and is used in 3G mobile and in GPS.
+   - Orthogonal Frequency Division Multiplexing, OFDM: a refined FDM in which the subcarriers are orthogonal and may therefore overlap, so no guard band is wasted. It resists multipath fading very well and is used in Wi-Fi, LTE, 5G, DSL and digital TV.
+   - Space Division Multiplexing, SDM: separate physical paths are used, for example several fibres in one cable or several antennas in MIMO.
+   - Polarisation Division Multiplexing: two signals share one wavelength using perpendicular polarisations of light, used in modern coherent optical systems.
 6. **What technique allows simultaneous transmission of multiple signals across a single data link?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: The technique is called multiplexing.
+
+   - Multiplexing allows several signals to be combined and carried simultaneously over a single data link, using a multiplexer at the sending end and a demultiplexer at the receiving end.
+   - Its main forms are FDM, which divides the frequency; TDM, which divides the time; WDM, which divides the light spectrum in a fibre; and CDM, which separates the signals by orthogonal codes.
+   - The purpose is efficiency: one expensive high capacity link is shared by many low rate users instead of laying a separate link for each.
 7. **(খ) FDM এবং TDM এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 615 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | FDM | TDM |
+   |---|---|---|
+   | Sharing | The bandwidth is divided, each channel gets its own frequency band | The time is divided, each channel gets its own time slot |
+   | Signal type | Suits analog signals | Suits digital signals |
+   | Transmission | All channels transmit at the same time on different frequencies | Only one channel transmits at any instant, in turn |
+   | Separation | Guard bands in frequency | Guard bits or a framing bit in time |
+   | Equipment | Needs modulators, filters and carriers | Needs precise synchronisation between sender and receiver |
+   | Interference | Crosstalk between adjacent bands is possible | No crosstalk, but a timing error corrupts everything |
+   | Bandwidth use | The full bandwidth is needed all the time | The full bandwidth is given to one user at a time |
+   | Efficiency | Wasted if a channel is idle | Synchronous TDM also wastes an idle slot, but statistical TDM does not |
+   | Examples | Radio and TV broadcast, cable TV, ADSL, first generation mobile | T-1 and E-1 carriers, SONET, GSM, ISDN |
+
+   - Sonkhipto kotha: FDM-e protita channel nijer alada frequency band pay ebong shobai ekshathe pathay, ar TDM-e protita channel puro bandwidth pay kintu palakrome, nijer time slot-e.
 8. **Show that the data rate of T-1 carrier is 1.544 Mbps.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: the T-1 carrier multiplexes 24 voice channels using synchronous TDM.
+
+   Step 1, sampling rate of each voice channel:
+   - A voice channel is limited to 4 kHz, so by the Nyquist theorem the sampling rate is 2 × 4000 = 8000 samples per second.
+
+   Step 2, bits per sample:
+   - Each sample is quantised into 8 bits by PCM.
+
+   Step 3, bits per frame:
+   - One frame carries one 8 bit sample from each of the 24 channels: 24 × 8 = 192 bits.
+   - One extra framing bit is added for synchronisation: 192 + 1 = 193 bits per frame.
+
+   Step 4, frame rate:
+   - Since each channel is sampled 8000 times per second, 8000 frames must be sent per second.
+
+   Step 5, data rate:
+   - Data rate = 193 bits per frame × 8000 frames per second = 1,544,000 bps
+
+   Final answer: the data rate of the T-1 carrier is 1,544,000 bps, that is 1.544 Mbps, which is what was to be shown.
+
+   - Note: each channel therefore carries 8 × 8000 = 64 kbps, which is the standard DS-0 rate, and 24 × 64 kbps = 1.536 Mbps of payload plus 8 kbps of framing gives the 1.544 Mbps total. The European E-1 uses 32 slots instead and gives 2.048 Mbps.
 9. **Suppose you are appointed as an Assistant Engineer in a Government organization. The number of telephone connections required for the organization is 1000. The per year increment of telephone connection is 100. Considering the life time of telephone equipment is to be 15 years, design a T-carrier based TDM system for the organization.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   Step 1, find the total number of connections over the equipment lifetime:
+   - Present requirement = 1000 connections.
+   - Growth = 100 connections per year.
+   - Lifetime = 15 years, so growth over the lifetime = 100 × 15 = 1500.
+   - Total capacity to be designed for = 1000 + 1500 = 2500 connections.
+
+   Step 2, recall the T-carrier hierarchy:
+
+   | Level | Voice channels | Data rate |
+   |---|---|---|
+   | DS-0 | 1 | 64 kbps |
+   | T-1, DS-1 | 24 | 1.544 Mbps |
+   | T-2, DS-2 | 96, that is 4 T-1 | 6.312 Mbps |
+   | T-3, DS-3 | 672, that is 28 T-1 | 44.736 Mbps |
+   | T-4, DS-4 | 4032, that is 6 T-3 | 274.176 Mbps |
+
+   Step 3, number of T-1 lines required:
+   - 2500 / 24 = 104.17, so 105 T-1 lines would be needed. This is far too many to manage individually.
+
+   Step 4, choose a higher level of the hierarchy:
+   - Using T-3, each carrying 672 channels: 2500 / 672 = 3.72, so 4 T-3 lines are required.
+   - 4 T-3 gives 4 × 672 = 2688 channels, which covers the 2500 requirement with 188 spare channels, that is nearly two more years of growth beyond the fifteenth.
+   - A single T-4, with 4032 channels, would also work but leaves 1532 channels idle, which is wasteful and costlier.
+
+   Final design:
+   - Provide 4 T-3 links, each of 44.736 Mbps, giving 2688 voice channels in all.
+   - Each T-3 is formed by multiplexing 28 T-1 links, and each T-1 by multiplexing 24 DS-0 channels of 64 kbps.
+   - Total capacity = 4 × 44.736 = 178.944 Mbps.
+
+   ```mermaid
+   graph LR
+       A["2500 telephone lines, 64 kbps each DS-0"] --> B["T-1 multiplexers: 24 channels each, 1.544 Mbps"]
+       B --> C["T-3 multiplexers: 28 T-1 each, 44.736 Mbps"]
+       C --> D["4 x T-3 trunk to the exchange, 178.944 Mbps"]
+   ```
+
+   - Practical recommendation to add: since 4 T-3 links are needed anyway, a modern design would use a single SONET OC-3 at 155.52 Mbps or an OC-12 at 622 Mbps over fibre instead, which is cheaper per channel, easier to expand and gives built in protection switching.
 10. **Compare between TDM and TDMA techniques.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 676 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | TDM | TDMA |
+   |---|---|---|
+   | Full form | Time Division Multiplexing | Time Division Multiple Access |
+   | Nature | A multiplexing technique | A channel access, that is a MAC, method |
+   | Where used | At one point, a multiplexer combining several inputs onto one link | Among many separate users sharing one medium |
+   | Sources | All the inputs arrive at the same physical multiplexer | The users are physically separate and far apart |
+   | Synchronisation | Simple, one local clock at the multiplexer | Difficult, every user must be synchronised to the base station, and guard time is needed for the different propagation delays |
+   | Guard time | Not needed, only a framing bit | Essential, so that bursts from different distances do not overlap |
+   | Slot assignment | Fixed at the time of configuration | Assigned dynamically by the base station on request |
+   | Layer | Physical layer | Data link layer, MAC sublayer |
+   | Example | T-1 and E-1 carriers, SONET | GSM, DECT, satellite uplink access |
+
+   - The relationship in one sentence: TDMA is TDM applied to a shared radio or satellite medium where the users are geographically separated, so it has to add synchronisation, guard time and a request-and-grant mechanism that ordinary TDM does not need.
 11. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** *[BDCCL Assistant Engineer (Network) 2022 compact it 742 (ET: N/A)], [Water Supply and Sewerage Authority (WASA); Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)], [BTCL Assistant Manager (Technical) 2021 compact it 765 (ET: BUET)]*
 
+
+   Answer:
+
+   Given:
+   - 8 transmitter and receiver pairs, so 8 sources.
+   - Each source is sampled at 8 kHz, that is 8000 samples per second.
+   - Each sample produces 16 bits.
+   - 2 synchronisation bits are added to each frame.
+
+   Step 1, data rate of each source:
+   - 8000 samples per second × 16 bits = 128,000 bps = 128 kbps
+
+   Step 2, size of one frame:
+   - Each frame carries one sample from each of the 8 sources: 8 × 16 = 128 bits
+   - Plus 2 synchronisation bits: 128 + 2 = 130 bits per frame
+
+   Step 3, frame rate:
+   - Since each source is sampled 8000 times per second, 8000 frames must be sent per second.
+
+   Step 4, data rate of the TDMA line:
+   - 130 bits per frame × 8000 frames per second = 1,040,000 bps
+
+   Final answer: the data rate of the TDMA line is 1,040,000 bps, that is 1.04 Mbps.
+
+   - Check: the useful payload is 8 × 128 kbps = 1.024 Mbps and the overhead is 2 × 8000 = 16 kbps, and 1.024 + 0.016 = 1.04 Mbps, which agrees. The efficiency is 1.024 / 1.04 = 98.5 percent.
 12. **Two channels, one with a bit rate of 190kbps and another with a bit rate 180 kbps are to be multiplexed using pulse stuffing TDM with no synchronization bits. Answer the following questions: (a) What is the size of a frame in bits? (b) What is the frame rate? (c) What is the duration of a frame? (d) What is the date rate?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: two channels of 190 kbps and 180 kbps, multiplexed by pulse stuffing TDM, no synchronisation bits.
+
+   Principle: in pulse stuffing the slower channel has dummy bits inserted so that its rate is raised to match the fastest channel. So both channels are treated as 190 kbps.
+
+   (a) Size of a frame in bits:
+   - The interleaving unit is 1 bit, and there are 2 channels, so each frame takes 1 bit from each.
+   - Frame size = 2 × 1 = 2 bits.
+
+   (b) Frame rate:
+   - Each channel must contribute 190,000 bits per second, and it contributes 1 bit per frame.
+   - Frame rate = 190,000 frames per second.
+
+   (c) Duration of a frame:
+   - Duration = 1 / frame rate = 1 / 190,000 = 5.26 × 10⁻⁶ s = 5.26 microseconds.
+
+   (d) Data rate of the link:
+   - Data rate = frame size × frame rate = 2 × 190,000 = 380,000 bps = 380 kbps.
+
+   Final answer: frame size 2 bits, frame rate 190,000 frames per second, frame duration 5.26 microseconds, and link data rate 380 kbps.
+
+   - Note: the second channel really supplies only 180 kbps, so 10 kbps of the link is stuffed dummy bits. This waste is the price of using synchronous TDM with sources of unequal rate.
 13. **What is Multiplexing? Write about Time division Multiplexing.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 870 (ET: N/A)]*
 
+
+   Answer: Multiplexing is the technique of combining several separate signals so that they share a single transmission link, using a multiplexer at the sending end to combine them and a demultiplexer at the receiving end to separate them again.
+
+   - Purpose: one high capacity link is expensive, so it is far cheaper to share it among many low rate users than to lay a separate link for each. It also reduces the number of cables, connectors and amplifiers.
+   - Main types: FDM which divides the frequency, TDM which divides the time, WDM which divides the light spectrum in a fibre, CDM which separates signals by orthogonal codes, and OFDM which uses overlapping orthogonal subcarriers.
+
+   Time Division Multiplexing:
+   - TDM divides the transmission time into repeating frames, and each frame into fixed time slots, one per input channel.
+   - The multiplexer acts like a rotating switch: it takes one unit of data, a bit or a byte, from each input in turn and places it in that channel's slot.
+   - At any instant the entire link bandwidth belongs to one channel, so TDM suits digital signals which can be buffered and sent in bursts.
+   - The demultiplexer at the far end rotates in exact synchronism and delivers each slot to the correct output. A framing bit in every frame keeps the two ends aligned.
+   - Synchronous TDM: every channel gets its slot in every frame whether it has data or not, so an idle channel wastes its slot. Used in T-1, E-1, SONET and ISDN.
+   - Statistical or asynchronous TDM: slots are given only to channels that actually have data, so the link is used much more efficiently, but each slot must then carry an address to say which channel it belongs to.
+   - Example, T-1: 24 channels × 8 bits = 192 bits, plus 1 framing bit = 193 bits per frame, at 8000 frames per second = 1.544 Mbps.
+   - Advantages: no crosstalk, simple digital circuitry, and full bandwidth for each user in its slot. Disadvantage: it needs precise synchronisation, and synchronous TDM wastes idle slots.
 14. **(a) Distinguish between Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM).** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 888 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | FDM | TDM |
+   |---|---|---|
+   | Sharing | The bandwidth is divided, each channel gets its own frequency band | The time is divided, each channel gets its own time slot |
+   | Signal type | Suits analog signals | Suits digital signals |
+   | Transmission | All channels transmit at the same time on different frequencies | Only one channel transmits at any instant, in turn |
+   | Separation | Guard bands in frequency | Guard bits or a framing bit in time |
+   | Equipment | Needs modulators, filters and carriers | Needs precise synchronisation between sender and receiver |
+   | Interference | Crosstalk between adjacent bands is possible | No crosstalk, but a timing error corrupts everything |
+   | Bandwidth use | The full bandwidth is needed all the time | The full bandwidth is given to one user at a time |
+   | Efficiency | Wasted if a channel is idle | Synchronous TDM also wastes an idle slot, but statistical TDM does not |
+   | Examples | Radio and TV broadcast, cable TV, ADSL, first generation mobile | T-1 and E-1 carriers, SONET, GSM, ISDN |
 15. **TDM math: rate= 1.536 Mbps, message size= 960000, Slot=32, end to end circuit Switch time=800ms, calculate transfer time.** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - Link rate = 1.536 Mbps.
+   - The link is time division multiplexed into 32 slots, so each circuit gets one slot.
+   - Message size = 960,000 bits.
+   - End to end circuit establishment time = 800 ms = 0.8 s.
+
+   Step 1, bandwidth available to one circuit:
+   - Each circuit gets 1 / 32 of the link.
+   - Rate per circuit = 1,536,000 / 32 = 48,000 bps = 48 kbps.
+
+   Step 2, time to transmit the message:
+   - Transmission time = message size / rate per circuit = 960,000 / 48,000 = 20 s.
+
+   Step 3, total transfer time:
+   - Total = circuit establishment time + transmission time = 0.8 + 20 = 20.8 s.
+
+   Final answer: the total transfer time is 20.8 seconds.
+
+   - Note: propagation delay is ignored here, as the question gives none. The important observation is that in a circuit switched network the user does not get the full 1.536 Mbps; the dedicated slot gives only 48 kbps, and the circuit setup time must be paid before any data can flow.
 16. **A want to send 2 files the size of each file is 500000 bit's data to B through TDM channel which has slot 16 channel bit rate 1.5 Mbps and 30 millisecond delay time, if no propagation delay; find out time to send the data.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925 (ET: CTI)]*
 
+
+   Answer:
+
+   Given:
+   - Two files of 500,000 bits each, so total data = 1,000,000 bits.
+   - The TDM channel has 16 slots.
+   - Channel bit rate = 1.5 Mbps = 1,500,000 bps.
+   - Circuit establishment delay = 30 ms = 0.03 s, and there is no propagation delay.
+
+   Step 1, bandwidth available to one circuit:
+   - Rate per slot = 1,500,000 / 16 = 93,750 bps.
+
+   Step 2, total data to be sent:
+   - 2 × 500,000 = 1,000,000 bits.
+
+   Step 3, transmission time:
+   - Time = 1,000,000 / 93,750 = 10.67 s.
+
+   Step 4, total time:
+   - Total = setup delay + transmission time = 0.03 + 10.67 = 10.70 s.
+
+   Final answer: the time required to send the data is about 10.70 seconds.
+
+   - Note: if the two files were sent as two separate circuits, each with its own 30 ms setup, the total would be 0.03 + 0.03 + 10.67 = 10.73 s, which is practically the same, since the setup delay is negligible against the transmission time here.
 17. **We have four sources, each creating 250 characters per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame. Now find- (a) the data rate of each source. (b) the duration of each character in each source.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - 4 sources, each producing 250 characters per second.
+   - The interleaved unit is one character, that is 8 bits.
+   - 1 synchronising bit is added to each frame.
+
+   (a) Data rate of each source:
+   - Each character is 8 bits, and there are 250 characters per second.
+   - Data rate = 250 × 8 = 2000 bps = 2 kbps.
+
+   (b) Duration of each character in each source:
+   - Duration = 1 / character rate = 1 / 250 = 0.004 s = 4 ms.
+
+   Additional results the examiner usually expects:
+   - Frame size: each frame carries one character from each source, so 4 × 8 = 32 bits, plus 1 synchronising bit = 33 bits per frame.
+   - Frame rate: 250 frames per second, since each source contributes one character per frame.
+   - Frame duration: 1 / 250 = 4 ms, the same as the character duration.
+   - Link data rate: 33 × 250 = 8250 bps.
+   - Efficiency: useful data is 4 × 2000 = 8000 bps out of 8250 bps, that is 97 percent.
 18. **Figure shows synchronous TOM with a data stream for each input and one data stream for the output. The unit of data is 1bit. Find (a) the input bit duration (b) the output bit duration (c) the output bit rate and (d) the output frame rate.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1009 (ET: N/A)]*
+
+
+   Answer: The relationships used for synchronous TDM, and the standard case shown in this figure, three inputs of 1 kbps each with 1 bit as the unit of data.
+
+   Formulas:
+   - Input bit duration = 1 / input bit rate.
+   - Output bit rate = n × input bit rate, where n is the number of inputs.
+   - Output bit duration = input bit duration / n.
+   - Output frame rate = input bit rate, since each frame carries exactly one bit from each input.
+
+   Applying them to three inputs of 1 kbps:
+
+   (a) Input bit duration:
+   - 1 / 1000 = 1 ms.
+
+   (b) Output bit duration:
+   - Each input bit must be squeezed into one third of the time, so 1 ms / 3 = 333 microseconds.
+
+   (c) Output bit rate:
+   - 3 × 1000 = 3000 bps = 3 kbps. Equivalently, 1 / 333 microseconds = 3 kbps.
+
+   (d) Output frame rate:
+   - Each frame carries 3 bits, one from each input, and each input supplies 1000 bits per second, so 1000 frames per second.
+
+   - The general rule to remember: the frame rate always equals the bit rate of a single input, and the output bit rate is n times an input bit rate, so the multiplexer neither creates nor destroys data. <!-- verify -->
 
 ## Routing Protocols & Route Configuration (18)
 
