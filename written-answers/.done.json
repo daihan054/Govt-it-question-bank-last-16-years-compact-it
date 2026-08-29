@@ -845,6 +845,10 @@
  ],
  [
   "operating-system.md",
+  "Process Management & Process States (10)"
+ ],
+ [
+  "operating-system.md",
   "Virtual Memory & Page Replacement (Thrashing) (15)"
  ]
 ]

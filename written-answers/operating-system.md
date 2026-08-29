@@ -6030,23 +6030,533 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 1. **(b) What is process? Describe different states of a process.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
 
+
+   Answer: A process is a program in execution. A program is a passive entity, a file of instructions stored on disk; a process is the active entity, with a program counter, registers, a stack, a data section and an entry in the process table. One program can give rise to many processes, as when several copies of a browser run at once.
+
+   A process holds:
+   - The program code, called the text section
+   - The program counter and the contents of the CPU registers
+   - The stack, holding temporary data such as function parameters, return addresses and local variables
+   - The data section, holding global variables
+   - The heap, memory allocated dynamically at run time
+
+   The five states of a process:
+
+   - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+
+   - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+
+   - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+
+   - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+
+   - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+
+   Two further states in systems with swapping:
+   - Suspended-Ready: ready, but swapped out to disk.
+   - Suspended-Blocked: waiting, and swapped out to disk.
+
+   State transition diagram:
+
+   ```mermaid
+   stateDiagram-v2
+     [*] --> New
+     New --> Ready : admitted
+     Ready --> Running : scheduler dispatch
+     Running --> Ready : interrupt, quantum expired
+     Running --> Waiting : I/O or event wait
+     Waiting --> Ready : I/O or event completion
+     Running --> Terminated : exit
+     Terminated --> [*]
+   ```
+
+   In plain text:
+   ```
+                    admitted            dispatch
+      New  ------------------> Ready -------------> Running
+                                ^   \                  |  \
+                                |    \  interrupt      |   \  exit
+                                |     +----------------+    +------> Terminated
+                                |                           |
+                                |    I/O completion         |  I/O request
+                                +---------- Waiting <-------+
+   ```
+
+   Explanation of each transition:
+   - New to Ready (admitted): the long-term scheduler admits the process and allocates memory for it.
+   - Ready to Running (dispatch): the short-term scheduler selects the process and the dispatcher gives it the CPU.
+   - Running to Ready (interrupt): the time quantum expires, or a higher-priority process arrives and preempts it. The process is still able to run; it has only lost its turn.
+   - Running to Waiting (I/O or event wait): the process issues a request that cannot be satisfied immediately, so it voluntarily gives up the CPU.
+   - Waiting to Ready (completion): the awaited event occurs, and the process becomes eligible for the CPU again. Note that it goes to Ready, not directly to Running, because the CPU may be busy.
+   - Running to Terminated (exit): the process finishes or is killed.
+
+   Two transitions that can never occur, and are worth stating because they are frequently asked:
+   - Ready to Waiting is impossible: a process cannot begin waiting for an event it has not yet requested, and it cannot request anything without running.
+   - Waiting to Running is impossible: after its event completes, a process must join the ready queue and be selected by the scheduler like any other.
 2. **(c) Define context switch with proper example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
 
+
+   Answer: A context switch is the operation by which the CPU is transferred from one process to another. The state of the currently running process is saved so that it can be resumed later, and the saved state of the incoming process is restored.
+
+   What is saved and restored, that is what constitutes the context:
+   - The program counter, so that execution resumes at the right instruction
+   - All CPU registers, including general-purpose registers, the stack pointer and the status or flag register
+   - Memory management information: page table pointers or base and limit registers
+   - The process state and scheduling information
+   - Open file and input-output status
+
+   All of this is written into the PCB of the outgoing process and read from the PCB of the incoming one.
+
+   Steps in a context switch:
+   1. An interrupt or a system call causes the CPU to enter kernel mode.
+   2. The context of the running process P1 is saved into PCB1.
+   3. The scheduler selects the next process P2 from the ready queue.
+   4. The context of P2 is loaded from PCB2 into the CPU registers.
+   5. The memory management unit is reloaded with P2's page table, and the TLB is flushed or tagged.
+   6. Execution resumes in P2 at the instruction its program counter indicates.
+
+   When it occurs:
+   - The time quantum of the running process expires (a timer interrupt).
+   - The running process makes an input-output request and blocks.
+   - A higher-priority process becomes ready and preempts the running one.
+   - The running process terminates or makes a system call that blocks.
+   - A hardware interrupt occurs that requires the kernel to run.
+
+   Example with two processes:
+   ```
+   Time    CPU is running        Action
+   0-10    P1                    P1 executes
+   10      -                     interrupt; save P1's context into PCB1;
+                                 load P2's context from PCB2   (context switch)
+   10-25   P2                    P2 executes
+   25      -                     P2 requests input; save P2 into PCB2;
+                                 load P1 from PCB1             (context switch)
+   25-40   P1                    P1 resumes exactly where it stopped at time 10
+   ```
+   When P1 resumes it finds its program counter, its registers and its stack exactly as they were, so it has no way of knowing that fifteen milliseconds of another process ran in between.
+
+   Cost of a context switch:
+   - It is pure overhead: during the switch no useful work is done by any process.
+   - Typical cost is 1 to 100 microseconds, depending on the hardware and the number of registers.
+   - The indirect cost is often larger than the direct one: the cache and the TLB are filled with the outgoing process's data, so the incoming process suffers a burst of misses. This is called cache pollution.
+   - The cost is the main reason why a very small scheduling quantum is harmful, and why threads, which share an address space and therefore need no page table reload, are cheaper to switch between than processes.
+
+   Comparison of process and thread switching: switching between two threads of the same process is much cheaper, because the address space, the page table and the open files are shared and need not be changed; only the registers and the stack pointer are swapped.
 3. **(খ) Process কী? বিভিন্ন ধরনের Process state এর কাজ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 414 (ET: N/A)]*
 
+
+   Answer: প্রসেস (Process) হলো চলমান অবস্থায় থাকা একটি প্রোগ্রাম। প্রোগ্রাম একটি নিষ্ক্রিয় সত্তা, অর্থাৎ ডিস্কে সংরক্ষিত নির্দেশের একটি ফাইল; আর প্রসেস হলো সক্রিয় সত্তা, যার নিজস্ব প্রোগ্রাম কাউন্টার, রেজিস্টার, স্ট্যাক, ডেটা অংশ এবং প্রসেস টেবিলে একটি এন্ট্রি থাকে। একই প্রোগ্রাম থেকে একাধিক প্রসেস তৈরি হতে পারে, যেমন একই ব্রাউজারের কয়েকটি কপি একসঙ্গে চালানো।
+
+   একটি প্রসেসের অংশসমূহ: টেক্সট অংশ (প্রোগ্রাম কোড), প্রোগ্রাম কাউন্টার ও রেজিস্টার, স্ট্যাক (ফাংশনের প্যারামিটার, রিটার্ন ঠিকানা ও স্থানীয় ভেরিয়েবল), ডেটা অংশ (গ্লোবাল ভেরিয়েবল) এবং হিপ (চলাকালীন বরাদ্দকৃত মেমোরি)।
+
+   প্রসেসের বিভিন্ন অবস্থা ও তাদের কাজ:
+
+   - New (নতুন): প্রসেসটি তৈরি হচ্ছে। অপারেটিং সিস্টেম এর জন্য একটি Process Control Block তৈরি করেছে, কিন্তু এখনো একে ready queue তে যুক্ত করা হয়নি। এই ধাপে মেমোরি বরাদ্দ ও প্রয়োজনীয় সম্পদের ব্যবস্থা করা হয়।
+
+   - Ready (প্রস্তুত): প্রসেসটি প্রধান মেমোরিতে লোড হয়ে গেছে এবং সিপিইউ পাওয়ার অপেক্ষায় আছে। চালানোর জন্য প্রয়োজনীয় সবকিছু আছে, কেবল প্রসেসরটি নেই। সব ready প্রসেস ready queue তে থাকে। এর কাজ হলো সিপিইউ মুক্ত হওয়া মাত্র কাজ শুরু করতে প্রস্তুত থাকা।
+
+   - Running (চলমান): প্রসেসটি বর্তমানে সিপিইউতে চলছে, অর্থাৎ এর নির্দেশগুলো সম্পাদিত হচ্ছে। একক কোরের মেশিনে একই সময়ে কেবল একটি প্রসেসই এই অবস্থায় থাকতে পারে।
+
+   - Waiting বা Blocked (অপেক্ষমাণ): প্রসেসটি কোনো ঘটনার জন্য অপেক্ষা করছে, যেমন ইনপুট-আউটপুট শেষ হওয়া, কোনো সংকেত আসা, বা কোনো রিসোর্স মুক্ত হওয়া। এই অবস্থায় সিপিইউ দিলেও প্রসেসটি কাজ করতে পারবে না, তাই একে সিপিইউ দেওয়া হয় না। এর কাজ হলো ধীরগতির ইনপুট-আউটপুট চলাকালে সিপিইউ ছেড়ে দেওয়া, যাতে অন্য প্রসেস চলতে পারে।
+
+   - Terminated (সমাপ্ত): প্রসেসের কাজ শেষ হয়েছে বা একে বন্ধ করে দেওয়া হয়েছে। এর সম্পদ ফিরিয়ে নেওয়া হয়, তবে প্যারেন্ট প্রসেস প্রস্থান-অবস্থা পড়ার আগ পর্যন্ত PCB টি কিছুক্ষণ থাকতে পারে। ইউনিক্সে এই অবস্থাকে zombie বলা হয়।
+
+   Swapping যুক্ত সিস্টেমে আরও দুটি অবস্থা:
+   - Suspended-Ready: প্রস্তুত, কিন্তু মেমোরি থেকে সরিয়ে ডিস্কে রাখা হয়েছে।
+   - Suspended-Blocked: অপেক্ষমাণ এবং ডিস্কে রাখা হয়েছে।
+
+   অবস্থা পরিবর্তনের চিত্র:
+
+   ```mermaid
+   stateDiagram-v2
+     [*] --> New
+     New --> Ready : admitted
+     Ready --> Running : dispatch
+     Running --> Ready : interrupt
+     Running --> Waiting : I/O request
+     Waiting --> Ready : I/O completion
+     Running --> Terminated : exit
+     Terminated --> [*]
+   ```
+
+   পরিবর্তনগুলোর ব্যাখ্যা:
+   - New থেকে Ready: long-term scheduler প্রসেসটিকে গ্রহণ করে মেমোরি বরাদ্দ দেয়।
+   - Ready থেকে Running: short-term scheduler প্রসেসটি নির্বাচন করে এবং dispatcher একে সিপিইউ দেয়।
+   - Running থেকে Ready: সময়ের কোটা শেষ হলে বা উচ্চতর অগ্রাধিকারের প্রসেস এলে বাধ্য হয়ে সিপিইউ ছাড়তে হয়।
+   - Running থেকে Waiting: প্রসেসটি স্বেচ্ছায় সিপিইউ ছেড়ে দেয়, কারণ এটি এমন কিছুর জন্য অপেক্ষা করছে যা তাৎক্ষণিকভাবে পাওয়া যাবে না।
+   - Waiting থেকে Ready: প্রত্যাশিত ঘটনাটি ঘটেছে, তাই প্রসেসটি আবার সিপিইউ পাওয়ার যোগ্য হয়েছে। লক্ষণীয়, এটি সরাসরি Running এ যায় না, কারণ সিপিইউ তখন অন্য প্রসেস ব্যবহার করছে থাকতে পারে।
+   - Running থেকে Terminated: কাজ শেষ হলে বা বন্ধ করে দিলে।
+
+   যে দুটি পরিবর্তন কখনোই সম্ভব নয়: Ready থেকে সরাসরি Waiting (কারণ না চললে কোনো অনুরোধই করা যায় না) এবং Waiting থেকে সরাসরি Running (কারণ ঘটনা ঘটার পরও scheduler এর নির্বাচনের অপেক্ষা করতে হয়)।
 4. **Explain the process state.** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
+
+   Answer: A process is a program in execution. A program is a passive entity, a file of instructions stored on disk; a process is the active entity, with a program counter, registers, a stack, a data section and an entry in the process table. One program can give rise to many processes, as when several copies of a browser run at once.
+
+   A process holds:
+   - The program code, called the text section
+   - The program counter and the contents of the CPU registers
+   - The stack, holding temporary data such as function parameters, return addresses and local variables
+   - The data section, holding global variables
+   - The heap, memory allocated dynamically at run time
+
+   The five states of a process:
+
+   - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+
+   - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+
+   - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+
+   - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+
+   - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+
+   Two further states in systems with swapping:
+   - Suspended-Ready: ready, but swapped out to disk.
+   - Suspended-Blocked: waiting, and swapped out to disk.
+
+   State transition diagram:
+
+   ```mermaid
+   stateDiagram-v2
+     [*] --> New
+     New --> Ready : admitted
+     Ready --> Running : scheduler dispatch
+     Running --> Ready : interrupt, quantum expired
+     Running --> Waiting : I/O or event wait
+     Waiting --> Ready : I/O or event completion
+     Running --> Terminated : exit
+     Terminated --> [*]
+   ```
+
+   In plain text:
+   ```
+                    admitted            dispatch
+      New  ------------------> Ready -------------> Running
+                                ^   \                  |  \
+                                |    \  interrupt      |   \  exit
+                                |     +----------------+    +------> Terminated
+                                |                           |
+                                |    I/O completion         |  I/O request
+                                +---------- Waiting <-------+
+   ```
+
+   Explanation of each transition:
+   - New to Ready (admitted): the long-term scheduler admits the process and allocates memory for it.
+   - Ready to Running (dispatch): the short-term scheduler selects the process and the dispatcher gives it the CPU.
+   - Running to Ready (interrupt): the time quantum expires, or a higher-priority process arrives and preempts it. The process is still able to run; it has only lost its turn.
+   - Running to Waiting (I/O or event wait): the process issues a request that cannot be satisfied immediately, so it voluntarily gives up the CPU.
+   - Waiting to Ready (completion): the awaited event occurs, and the process becomes eligible for the CPU again. Note that it goes to Ready, not directly to Running, because the CPU may be busy.
+   - Running to Terminated (exit): the process finishes or is killed.
+
+   Two transitions that can never occur, and are worth stating because they are frequently asked:
+   - Ready to Waiting is impossible: a process cannot begin waiting for an event it has not yet requested, and it cannot request anything without running.
+   - Waiting to Running is impossible: after its event completes, a process must join the ready queue and be selected by the scheduler like any other.
 5. **(ক) Process কী? একটি Process এর বিভিন্ন ধাপগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+
+   Answer: প্রসেস (Process) হলো চলমান অবস্থায় থাকা একটি প্রোগ্রাম। প্রোগ্রাম নিষ্ক্রিয় (passive), অর্থাৎ ডিস্কে রাখা নির্দেশের একটি ফাইল; প্রসেস সক্রিয় (active), যার নিজস্ব প্রোগ্রাম কাউন্টার, রেজিস্টার, স্ট্যাক ও মেমোরি বরাদ্দ থাকে।
+
+   একটি প্রসেসের জীবনচক্রের বিভিন্ন ধাপ:
+
+   - ধাপ ১ — New (সৃষ্টি): প্রসেসটি তৈরি হচ্ছে। ইউনিক্সে fork() সিস্টেম কল দিয়ে নতুন প্রসেস তৈরি হয়। অপারেটিং সিস্টেম একটি PCB তৈরি করে, একটি PID বরাদ্দ দেয় এবং মেমোরি বরাদ্দের ব্যবস্থা করে।
+
+   - ধাপ ২ — Ready (প্রস্তুত): প্রসেসটি মেমোরিতে লোড হয়ে ready queue তে অপেক্ষা করছে। এর চলার জন্য প্রয়োজনীয় সবকিছু আছে, কেবল সিপিইউ নেই।
+
+   - ধাপ ৩ — Running (চলমান): scheduler প্রসেসটিকে নির্বাচন করেছে এবং dispatcher একে সিপিইউ দিয়েছে। এখন এর নির্দেশগুলো সম্পাদিত হচ্ছে।
+
+   - ধাপ ৪ — Waiting বা Blocked (অপেক্ষমাণ): প্রসেসটি কোনো ইনপুট-আউটপুট বা অন্য ঘটনার জন্য অপেক্ষা করছে। এই সময়ে সিপিইউ অন্য প্রসেসকে দেওয়া হয়।
+
+   - ধাপ ৫ — Terminated (সমাপ্ত): কাজ শেষ, বা ত্রুটির কারণে বা অন্য প্রসেসের নির্দেশে বন্ধ। সম্পদ ফিরিয়ে নেওয়া হয় এবং প্যারেন্ট প্রসেস exit status পড়ার পর PCB মুছে ফেলা হয়।
+
+   ধাপগুলোর মধ্যে চলাচল:
+
+   ```
+                    admitted            dispatch
+      New  ------------------> Ready -------------> Running
+                                ^   \                  |  \
+                                |    \  interrupt      |   \  exit
+                                |     +----------------+    +------> Terminated
+                                |                           |
+                                |    I/O completion         |  I/O request
+                                +---------- Waiting <-------+
+   ```
+
+   Swapping যুক্ত সিস্টেমে অতিরিক্ত দুটি ধাপ: Suspended-Ready ও Suspended-Blocked, অর্থাৎ প্রসেসটিকে মেমোরি থেকে সরিয়ে ডিস্কে রেখে দেওয়া হয়েছে।
+
+   ইউনিক্স সিস্টেম কলের সঙ্গে সম্পর্ক:
+   - fork() — নতুন প্রসেস তৈরি করে (New)
+   - exec() — নতুন প্রোগ্রাম চালু করে প্রসেসের ছবি বদলে দেয়
+   - wait() — প্যারেন্ট প্রসেস সন্তানের শেষ হওয়ার অপেক্ষা করে (Waiting)
+   - exit() — প্রসেস শেষ করে (Terminated)
+   - kill() — অন্য প্রসেসকে সংকেত পাঠিয়ে বন্ধ করে
 6. **অথবা, (ক) Process Control Block (PCB) কী? এটি একটি Process সংক্রান্ত যে যে তথ্য রাখে সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
 
+
+   Answer: Process Control Block (PCB) হলো সেই ডেটা স্ট্রাকচার, যেখানে অপারেটিং সিস্টেম একটি নির্দিষ্ট প্রসেস সম্পর্কে সব তথ্য সংরক্ষণ করে। প্রতিটি প্রসেসের জন্য ঠিক একটি PCB থাকে; প্রসেস তৈরির সময় এটি তৈরি হয় এবং প্রসেস শেষ হলে মুছে ফেলা হয়। সব PCB মিলে গঠিত হয় process table। একে task control block ও বলা হয়।
+
+   PCB তে যেসব তথ্য রাখা হয়:
+
+   - প্রসেস শনাক্তকরণ: প্রসেস আইডি (PID), প্যারেন্ট প্রসেস আইডি (PPID), মালিকের ইউজার আইডি ও গ্রুপ আইডি।
+
+   - প্রসেসের অবস্থা (Process State): new, ready, running, waiting নাকি terminated।
+
+   - প্রোগ্রাম কাউন্টার: পরবর্তী যে নির্দেশটি চালানো হবে তার ঠিকানা।
+
+   - সিপিইউ রেজিস্টারসমূহ: অ্যাকিউমুলেটর, ইনডেক্স রেজিস্টার, স্ট্যাক পয়েন্টার ও সাধারণ উদ্দেশ্যের রেজিস্টারের বিষয়বস্তু। প্রোগ্রাম কাউন্টারসহ এগুলোকেই বলা হয় প্রসেসের context, যা context switch এর সময় সংরক্ষণ ও পুনরুদ্ধার করা হয়।
+
+   - সিপিইউ শিডিউলিং তথ্য: অগ্রাধিকার (priority), শিডিউলিং কিউয়ের পয়েন্টার, ব্যবহৃত সময়ের কোটা এবং মোট ব্যবহৃত সিপিইউ সময়।
+
+   - মেমোরি ব্যবস্থাপনা তথ্য: base ও limit রেজিস্টারের মান, অথবা page table ও segment table এর পয়েন্টার, যা নির্ধারণ করে প্রসেসটি কোন মেমোরি ব্যবহার করতে পারবে।
+
+   - হিসাব সংক্রান্ত তথ্য (Accounting): ব্যবহৃত সিপিইউ সময় ও প্রকৃত সময়, সময়সীমা, অ্যাকাউন্ট নম্বর ও প্রসেস নম্বর।
+
+   - ইনপুট-আউটপুট অবস্থার তথ্য: খোলা ফাইলের তালিকা, ফাইল ডেসক্রিপ্টর টেবিল, বরাদ্দকৃত যন্ত্রের তালিকা ও অসমাপ্ত অনুরোধ।
+
+   - পয়েন্টারসমূহ: প্যারেন্ট প্রসেস, সন্তান প্রসেস এবং ready বা waiting কিউয়ে এই PCB টির অবস্থান নির্দেশক লিংক।
+
+   - সংকেত (signal) ব্যবস্থাপনার তথ্য ও প্রসেসের exit status।
+
+   কেবল চারটি চাইলে যেগুলো অবশ্যই লিখতে হবে:
+   - Process ID
+   - Process State
+   - Program Counter
+   - CPU Registers
+
+   PCB কেন গুরুত্বপূর্ণ: PCB ই multiprogramming সম্ভব করে তোলে। যখন কোনো প্রসেসকে সিপিইউ থেকে সরানো হয়, তখন তার সম্পূর্ণ অবস্থা PCB তে লিখে রাখা হয়; পরে আবার সিপিইউ দিলে PCB থেকে সেই অবস্থা ফিরিয়ে এনে প্রসেসটি ঠিক যেখানে থেমেছিল সেখান থেকেই চলতে থাকে, এবং সে বুঝতেও পারে না যে মাঝখানে থেমে ছিল। PCB না থাকলে কোনো প্রসেস থামিয়ে আবার চালু করা যেত না, অর্থাৎ multitasking সম্ভব হতো না।
 7. **Write down the name of four information stored in PCB (Process Control Block).** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
 
+
+   Answer: The Process Control Block (PCB), also called the task control block, is the data structure in which the operating system keeps all the information about a single process. There is exactly one PCB per process, and it is created when the process is created and destroyed when the process terminates. The collection of all PCBs forms the process table.
+
+   Information stored in a PCB:
+
+   - Process identification:
+     - Process ID (PID), a unique number
+     - Parent process ID (PPID)
+     - User ID and group ID of the owner
+
+   - Process state: new, ready, running, waiting or terminated.
+
+   - Program counter: the address of the next instruction to execute.
+
+   - CPU registers: the contents of the accumulator, index registers, stack pointer and general-purpose registers. These, together with the program counter, form the context that must be saved and restored on a context switch.
+
+   - CPU scheduling information: the priority, pointers to the scheduling queues, the time quantum used, accumulated CPU time and any other parameters the scheduling algorithm needs.
+
+   - Memory management information: the base and limit registers, or the page table or segment table pointers, defining the memory the process may access.
+
+   - Accounting information: the amount of CPU time and real time used, time limits, account numbers, job or process numbers.
+
+   - Input and output status information: the list of open files, the file descriptor table, the input and output devices allocated to the process, and pending requests.
+
+   - Pointers: to the parent, to the children, and the link that places the PCB in a ready or waiting queue.
+
+   - Signal handling information and the process's exit status.
+
+   Four items that are always required, if only four are asked for:
+   - Process ID
+   - Process state
+   - Program counter
+   - CPU registers
+
+   Why the PCB matters: it is what makes multiprogramming possible. When a process is taken off the CPU, its entire execution context is written into its PCB; when it is given the CPU again, the context is restored from the PCB and the process resumes exactly where it stopped, unaware that it was ever interrupted. Without the PCB there would be no way to suspend and resume a process, and therefore no multitasking.
 8. **Operating System এর Process state diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
+
+   Answer: A process is a program in execution. A program is a passive entity, a file of instructions stored on disk; a process is the active entity, with a program counter, registers, a stack, a data section and an entry in the process table. One program can give rise to many processes, as when several copies of a browser run at once.
+
+   A process holds:
+   - The program code, called the text section
+   - The program counter and the contents of the CPU registers
+   - The stack, holding temporary data such as function parameters, return addresses and local variables
+   - The data section, holding global variables
+   - The heap, memory allocated dynamically at run time
+
+   The five states of a process:
+
+   - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+
+   - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+
+   - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+
+   - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+
+   - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+
+   Two further states in systems with swapping:
+   - Suspended-Ready: ready, but swapped out to disk.
+   - Suspended-Blocked: waiting, and swapped out to disk.
+
+   State transition diagram:
+
+   ```mermaid
+   stateDiagram-v2
+     [*] --> New
+     New --> Ready : admitted
+     Ready --> Running : scheduler dispatch
+     Running --> Ready : interrupt, quantum expired
+     Running --> Waiting : I/O or event wait
+     Waiting --> Ready : I/O or event completion
+     Running --> Terminated : exit
+     Terminated --> [*]
+   ```
+
+   In plain text:
+   ```
+                    admitted            dispatch
+      New  ------------------> Ready -------------> Running
+                                ^   \                  |  \
+                                |    \  interrupt      |   \  exit
+                                |     +----------------+    +------> Terminated
+                                |                           |
+                                |    I/O completion         |  I/O request
+                                +---------- Waiting <-------+
+   ```
+
+   Explanation of each transition:
+   - New to Ready (admitted): the long-term scheduler admits the process and allocates memory for it.
+   - Ready to Running (dispatch): the short-term scheduler selects the process and the dispatcher gives it the CPU.
+   - Running to Ready (interrupt): the time quantum expires, or a higher-priority process arrives and preempts it. The process is still able to run; it has only lost its turn.
+   - Running to Waiting (I/O or event wait): the process issues a request that cannot be satisfied immediately, so it voluntarily gives up the CPU.
+   - Waiting to Ready (completion): the awaited event occurs, and the process becomes eligible for the CPU again. Note that it goes to Ready, not directly to Running, because the CPU may be busy.
+   - Running to Terminated (exit): the process finishes or is killed.
+
+   Two transitions that can never occur, and are worth stating because they are frequently asked:
+   - Ready to Waiting is impossible: a process cannot begin waiting for an event it has not yet requested, and it cannot request anything without running.
+   - Waiting to Running is impossible: after its event completes, a process must join the ready queue and be selected by the scheduler like any other.
 9. **(i) Operating System এর Process State Transition Diagram আঁকুন ও ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 786 (ET: N/A)]*
 
+
+   Answer: A process is a program in execution. A program is a passive entity, a file of instructions stored on disk; a process is the active entity, with a program counter, registers, a stack, a data section and an entry in the process table. One program can give rise to many processes, as when several copies of a browser run at once.
+
+   A process holds:
+   - The program code, called the text section
+   - The program counter and the contents of the CPU registers
+   - The stack, holding temporary data such as function parameters, return addresses and local variables
+   - The data section, holding global variables
+   - The heap, memory allocated dynamically at run time
+
+   The five states of a process:
+
+   - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+
+   - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+
+   - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+
+   - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+
+   - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+
+   Two further states in systems with swapping:
+   - Suspended-Ready: ready, but swapped out to disk.
+   - Suspended-Blocked: waiting, and swapped out to disk.
+
+   State transition diagram:
+
+   ```mermaid
+   stateDiagram-v2
+     [*] --> New
+     New --> Ready : admitted
+     Ready --> Running : scheduler dispatch
+     Running --> Ready : interrupt, quantum expired
+     Running --> Waiting : I/O or event wait
+     Waiting --> Ready : I/O or event completion
+     Running --> Terminated : exit
+     Terminated --> [*]
+   ```
+
+   In plain text:
+   ```
+                    admitted            dispatch
+      New  ------------------> Ready -------------> Running
+                                ^   \                  |  \
+                                |    \  interrupt      |   \  exit
+                                |     +----------------+    +------> Terminated
+                                |                           |
+                                |    I/O completion         |  I/O request
+                                +---------- Waiting <-------+
+   ```
+
+   Explanation of each transition:
+   - New to Ready (admitted): the long-term scheduler admits the process and allocates memory for it.
+   - Ready to Running (dispatch): the short-term scheduler selects the process and the dispatcher gives it the CPU.
+   - Running to Ready (interrupt): the time quantum expires, or a higher-priority process arrives and preempts it. The process is still able to run; it has only lost its turn.
+   - Running to Waiting (I/O or event wait): the process issues a request that cannot be satisfied immediately, so it voluntarily gives up the CPU.
+   - Waiting to Ready (completion): the awaited event occurs, and the process becomes eligible for the CPU again. Note that it goes to Ready, not directly to Running, because the CPU may be busy.
+   - Running to Terminated (exit): the process finishes or is killed.
+
+   Two transitions that can never occur, and are worth stating because they are frequently asked:
+   - Ready to Waiting is impossible: a process cannot begin waiting for an event it has not yet requested, and it cannot request anything without running.
+   - Waiting to Running is impossible: after its event completes, a process must join the ready queue and be selected by the scheduler like any other.
 10. **Operating System এর ক্ষেত্রে নিম্নোক্ত Process State গুলো ব্যবহার করে State Diagram অংকন করুন। [New, ready, Wait, Run, Terminated]** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
+
+
+    Answer: A process is a program in execution. A program is a passive entity, a file of instructions stored on disk; a process is the active entity, with a program counter, registers, a stack, a data section and an entry in the process table. One program can give rise to many processes, as when several copies of a browser run at once.
+
+    A process holds:
+    - The program code, called the text section
+    - The program counter and the contents of the CPU registers
+    - The stack, holding temporary data such as function parameters, return addresses and local variables
+    - The data section, holding global variables
+    - The heap, memory allocated dynamically at run time
+
+    The five states of a process:
+
+    - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+
+    - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+
+    - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+
+    - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+
+    - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+
+    Two further states in systems with swapping:
+    - Suspended-Ready: ready, but swapped out to disk.
+    - Suspended-Blocked: waiting, and swapped out to disk.
+
+    State transition diagram:
+
+    ```mermaid
+    stateDiagram-v2
+      [*] --> New
+      New --> Ready : admitted
+      Ready --> Running : scheduler dispatch
+      Running --> Ready : interrupt, quantum expired
+      Running --> Waiting : I/O or event wait
+      Waiting --> Ready : I/O or event completion
+      Running --> Terminated : exit
+      Terminated --> [*]
+    ```
+
+    In plain text:
+    ```
+                     admitted            dispatch
+       New  ------------------> Ready -------------> Running
+                                 ^   \                  |  \
+                                 |    \  interrupt      |   \  exit
+                                 |     +----------------+    +------> Terminated
+                                 |                           |
+                                 |    I/O completion         |  I/O request
+                                 +---------- Waiting <-------+
+    ```
+
+    Explanation of each transition:
+    - New to Ready (admitted): the long-term scheduler admits the process and allocates memory for it.
+    - Ready to Running (dispatch): the short-term scheduler selects the process and the dispatcher gives it the CPU.
+    - Running to Ready (interrupt): the time quantum expires, or a higher-priority process arrives and preempts it. The process is still able to run; it has only lost its turn.
+    - Running to Waiting (I/O or event wait): the process issues a request that cannot be satisfied immediately, so it voluntarily gives up the CPU.
+    - Waiting to Ready (completion): the awaited event occurs, and the process becomes eligible for the CPU again. Note that it goes to Ready, not directly to Running, because the CPU may be busy.
+    - Running to Terminated (exit): the process finishes or is killed.
+
+    Two transitions that can never occur, and are worth stating because they are frequently asked:
+    - Ready to Waiting is impossible: a process cannot begin waiting for an event it has not yet requested, and it cannot request anything without running.
+    - Waiting to Running is impossible: after its event completes, a process must join the ready queue and be selected by the scheduler like any other.
 
 ## Concurrency, Threads & Synchronization (9)
 
