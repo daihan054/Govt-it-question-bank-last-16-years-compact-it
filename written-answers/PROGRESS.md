@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 168/239 subtopics · 2045/2673 answers**
+**Overall: 169/239 subtopics · 2046/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -217,10 +217,10 @@ Commit unit: one `##` subtopic.
 - [x] Everyday Science & Environment (22)
 - [x] Banking & ICT Abbreviations (8)
 
-## image-processing.md — 1/5 sections, 3/7 answers
+## image-processing.md — 2/5 sections, 4/7 answers
 
 - [x] Computer Graphics (Vector & Raster) (3)
-- [ ] Color Models (1)
+- [x] Color Models (1)
 - [ ] Frequency Domain Filtering (1)
 - [ ] Edge Detection (1)
 - [ ] Morphological Operations (1)
