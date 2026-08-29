@@ -3356,45 +3356,1779 @@
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
 
+
+   Answer: Maintaining a proper MVC structure is essential in web applications for the following reasons.
+
+   MVC stands for Model-View-Controller. It is an architectural pattern that separates an application into three interconnected components, so that the internal representation of information is kept separate from the way it is presented to the user and from the way the user interacts with it.
+
+   The three components:
+
+   - Model: the data and the business logic. It manages the state of the application, enforces the business rules, and communicates with the database. It knows nothing about the user interface. In a banking application the Model holds the Account class, the balance, and the rules governing a withdrawal.
+
+   - View: the presentation layer, that is what the user sees. It displays the data supplied by the Model and sends user actions to the Controller. It contains no business logic and performs no calculation. In a web application the View is the HTML template.
+
+   - Controller: the intermediary. It receives input from the user through the View, interprets it, calls the appropriate operations on the Model, and selects the View to display in response. It contains no business rules of its own; it coordinates.
+
+   Flow of control:
+
+   ```mermaid
+   flowchart LR
+     U[User] -->|action| C[Controller]
+     C -->|updates / queries| M[Model]
+     M -->|data| C
+     C -->|selects and supplies data| V[View]
+     V -->|displays| U
+   ```
+
+   Sequence for a typical request:
+   1. The user performs an action in the View, for example submitting a login form.
+   2. The Controller receives the request and validates the input format.
+   3. The Controller calls the Model to authenticate the user.
+   4. The Model queries the database, applies the business rules and returns the result.
+   5. The Controller chooses the appropriate View, the dashboard on success or the login page with an error on failure.
+   6. The View renders and is returned to the user.
+
+   Advantages:
+   - Separation of concerns: the three responsibilities are independent, so each can be understood and changed on its own.
+   - Parallel development: a front-end developer can build the View while a back-end developer builds the Model, once the Controller's interface is agreed.
+   - Testability: the Model contains the business logic and has no dependence on the user interface, so it can be unit tested directly. Testing business logic embedded in a page is far harder.
+   - Multiple views of the same data: one Model can serve an HTML page, a mobile application and a JSON API, without duplication.
+   - Maintainability: a change to the appearance touches only the View; a change to a business rule touches only the Model.
+   - Reusability: Models and Controllers can be reused across interfaces.
+   - Clear structure for a team: a new developer knows where to look for any particular kind of code.
+
+   Disadvantages:
+   - It adds complexity, and for a very small application the overhead is not justified.
+   - There are more files and more layers to navigate.
+   - Strict separation is not always natural, and developers often let logic leak into the Controller, producing what is called a fat controller.
+   - The learning curve is real for beginners.
+
+   Frameworks that implement it: Laravel and CodeIgniter in PHP, Spring MVC and Struts in Java, ASP.NET MVC in C#, Django (which calls it MVT, Model-View-Template) and Flask in Python, and Ruby on Rails.
+
+   Related patterns: MVP (Model-View-Presenter), used in Android; MVVM (Model-View-ViewModel), used in WPF and in Angular and Vue; and the three-tier architecture, which is similar but describes deployment layers rather than responsibilities within a layer.
+
+   Why it is essential specifically in web applications:
+   - A web application has at least three distinct audiences for its output: browsers, mobile applications and other systems calling an API. With MVC, one Model and one Controller serve all three simply by choosing a different View.
+   - Web front ends change far more often than business rules. A redesign should not require the business logic to be touched, and MVC guarantees that it need not be.
+   - Web teams are usually divided into front-end and back-end specialists, and MVC gives each a clearly bounded area to work in.
+   - Security is easier to reason about when input validation and authorisation live in the Controller and the business rules live in the Model, rather than being scattered through the pages.
+   - Without MVC, business logic embedded in the presentation pages cannot be unit tested, and in practice it is simply never tested at all.
 2. **What is MVC? Write down the MVC design pattern.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
 
+
+   Answer: MVC stands for Model-View-Controller. It is an architectural pattern that separates an application into three interconnected components, so that the internal representation of information is kept separate from the way it is presented to the user and from the way the user interacts with it.
+
+   The three components:
+
+   - Model: the data and the business logic. It manages the state of the application, enforces the business rules, and communicates with the database. It knows nothing about the user interface. In a banking application the Model holds the Account class, the balance, and the rules governing a withdrawal.
+
+   - View: the presentation layer, that is what the user sees. It displays the data supplied by the Model and sends user actions to the Controller. It contains no business logic and performs no calculation. In a web application the View is the HTML template.
+
+   - Controller: the intermediary. It receives input from the user through the View, interprets it, calls the appropriate operations on the Model, and selects the View to display in response. It contains no business rules of its own; it coordinates.
+
+   Flow of control:
+
+   ```mermaid
+   flowchart LR
+     U[User] -->|action| C[Controller]
+     C -->|updates / queries| M[Model]
+     M -->|data| C
+     C -->|selects and supplies data| V[View]
+     V -->|displays| U
+   ```
+
+   Sequence for a typical request:
+   1. The user performs an action in the View, for example submitting a login form.
+   2. The Controller receives the request and validates the input format.
+   3. The Controller calls the Model to authenticate the user.
+   4. The Model queries the database, applies the business rules and returns the result.
+   5. The Controller chooses the appropriate View, the dashboard on success or the login page with an error on failure.
+   6. The View renders and is returned to the user.
+
+   Advantages:
+   - Separation of concerns: the three responsibilities are independent, so each can be understood and changed on its own.
+   - Parallel development: a front-end developer can build the View while a back-end developer builds the Model, once the Controller's interface is agreed.
+   - Testability: the Model contains the business logic and has no dependence on the user interface, so it can be unit tested directly. Testing business logic embedded in a page is far harder.
+   - Multiple views of the same data: one Model can serve an HTML page, a mobile application and a JSON API, without duplication.
+   - Maintainability: a change to the appearance touches only the View; a change to a business rule touches only the Model.
+   - Reusability: Models and Controllers can be reused across interfaces.
+   - Clear structure for a team: a new developer knows where to look for any particular kind of code.
+
+   Disadvantages:
+   - It adds complexity, and for a very small application the overhead is not justified.
+   - There are more files and more layers to navigate.
+   - Strict separation is not always natural, and developers often let logic leak into the Controller, producing what is called a fat controller.
+   - The learning curve is real for beginners.
+
+   Frameworks that implement it: Laravel and CodeIgniter in PHP, Spring MVC and Struts in Java, ASP.NET MVC in C#, Django (which calls it MVT, Model-View-Template) and Flask in Python, and Ruby on Rails.
+
+   Related patterns: MVP (Model-View-Presenter), used in Android; MVVM (Model-View-ViewModel), used in WPF and in Angular and Vue; and the three-tier architecture, which is similar but describes deployment layers rather than responsibilities within a layer.
 3. **Name of few architecture in design pattern.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 503 (ET: N/A)]*
 
+
+   Answer: The word "architecture" is used in two senses in this context, so both are given.
+
+   Architectural patterns, that is patterns that structure a whole system:
+
+   - Model-View-Controller (MVC): separates data, presentation and control. Used in almost every web framework.
+   - Model-View-Presenter (MVP): a variant in which the Presenter, rather than the View, holds the presentation logic. Used in Android.
+   - Model-View-ViewModel (MVVM): the View binds declaratively to a ViewModel. Used in WPF, Angular and Vue.
+   - Layered (n-tier) architecture: presentation, business logic, data access and database layers, each depending only on the one below.
+   - Client-Server: a server provides a service and many clients consume it.
+   - Three-tier architecture: client, application server and database server.
+   - Microservices: the application is decomposed into small independently deployable services, each owning its data and communicating over a network.
+   - Monolithic architecture: the whole application is built and deployed as one unit.
+   - Service-Oriented Architecture (SOA): services communicate through an enterprise service bus.
+   - Event-Driven architecture: components communicate by producing and consuming events, often through a message broker.
+   - Publish-Subscribe: publishers emit messages on topics and subscribers receive them, without knowing one another.
+   - Peer-to-Peer: every node acts as both client and server.
+   - Pipe and Filter: data flows through a series of processing stages, as in a Unix pipeline or a compiler.
+   - Broker: a broker coordinates communication between distributed components.
+   - Blackboard: several specialist components contribute to a shared knowledge store; used in artificial intelligence and speech recognition.
+   - Repository: components share data through a common central store.
+   - Master-Slave: a master distributes work to identical slaves and combines their results.
+   - Serverless: functions are executed on demand by a cloud platform, with no server managed by the developer.
+
+   Design patterns proper, that is the Gang of Four patterns, in their three categories:
+
+   - Creational: Singleton, Factory Method, Abstract Factory, Builder, Prototype.
+   - Structural: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy.
+   - Behavioural: Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor.
+
+   The distinction worth stating: an architectural pattern determines the overall shape of the system and is chosen once, at the beginning, and is expensive to change later. A design pattern solves a local problem within a component and can be introduced or removed during refactoring.
 4. **What is software design pattern? What are the advantages?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 471 (ET: N/A)]*
 
+
+   Answer: A design pattern is a general, reusable solution to a commonly occurring problem in software design. It is not finished code that can be pasted into a program; it is a description of a problem, of a proven solution to it, and of the consequences of applying that solution. Patterns were catalogued in 1994 by Gamma, Helm, Johnson and Vlissides, known as the Gang of Four, in the book Design Patterns.
+
+   Categories and the principal patterns:
+
+   Creational patterns, concerned with how objects are created:
+   - Singleton: ensures a class has only one instance and provides a global point of access to it. Used for a configuration object, a logger or a database connection pool.
+   - Factory Method: defines an interface for creating an object but lets subclasses decide which class to instantiate.
+   - Abstract Factory: creates families of related objects without specifying their concrete classes.
+   - Builder: constructs a complex object step by step, separating construction from representation.
+   - Prototype: creates new objects by cloning an existing one.
+
+   Structural patterns, concerned with how classes and objects are composed:
+   - Adapter: converts the interface of a class into another interface that a client expects, so that classes with incompatible interfaces can work together.
+   - Facade: provides a simplified interface to a complex subsystem.
+   - Decorator: attaches additional responsibilities to an object dynamically, without changing its class.
+   - Proxy: provides a placeholder that controls access to another object, used for lazy loading, access control and remote objects.
+   - Composite: composes objects into tree structures so that individual objects and groups are treated uniformly.
+   - Bridge and Flyweight.
+
+   Behavioural patterns, concerned with communication between objects:
+   - Observer: defines a one-to-many dependency so that when one object changes state, all its dependants are notified automatically. This is the basis of event handling.
+   - Strategy: defines a family of interchangeable algorithms and lets the algorithm vary independently of the clients that use it.
+   - Template Method: defines the skeleton of an algorithm in a base class, deferring some steps to subclasses.
+   - Command: encapsulates a request as an object, which allows queuing, logging and undo.
+   - Iterator, State, Chain of Responsibility, Mediator, Memento and Visitor.
+
+   Architectural patterns, which operate at a higher level: MVC, MVP, MVVM, layered architecture, microservices, client-server, publish-subscribe and repository.
+
+   Advantages of design patterns:
+   - Proven solutions: the pattern has been used successfully many times, so its pitfalls are known.
+   - Reusability of design, not merely of code.
+   - A shared vocabulary: saying "use an Observer here" conveys in two words what would otherwise take a paragraph. This is arguably the single greatest practical benefit.
+   - Better maintainability and extensibility, because patterns generally reduce coupling and localise change.
+   - Faster development, since a designer need not invent a solution to a problem that has been solved a thousand times.
+   - Easier communication with other developers and in design documents.
+   - They embody good principles such as programming to an interface rather than an implementation.
+
+   Disadvantages and cautions:
+   - Over-use produces unnecessary complexity. Applying a pattern where a simple function would do is a well-known beginner's error.
+   - Patterns are not a substitute for understanding the problem.
+   - Some patterns, in particular Singleton, introduce global state and make testing harder, and many practitioners now regard it as an anti-pattern.
+   - A pattern must be adapted to the situation, not copied mechanically.
 5. **Define design pattern. Write about singleton pattern.** *[BREB Assistant Programmer 18.02.2023 compact it 469 (ET: N/A)]*
 
+
+   Answer: A design pattern is a general, reusable solution to a commonly occurring problem in software design. It is not code to be copied, but a description of a problem, of a proven solution and of the consequences of applying it. The standard catalogue is that of the Gang of Four, published in 1994, which divides patterns into creational, structural and behavioural categories.
+
+   The Singleton pattern:
+
+   Intent: to ensure that a class has exactly one instance, and to provide a single global point of access to it.
+
+   When it is used:
+   - A configuration object that must be shared by the whole application.
+   - A logging service.
+   - A database connection pool.
+   - A cache.
+   - A hardware device driver, where only one object may control the device.
+
+   How it is implemented:
+   - The constructor is made private, so that no other class can create an instance with new.
+   - A private static field holds the single instance.
+   - A public static method returns that instance, creating it on the first call.
+
+   Simple implementation in Java:
+   ```java
+   public class ConfigManager {
+       private static ConfigManager instance;   // the single instance
+       private String databaseUrl;
+
+       private ConfigManager() {                // private constructor
+           databaseUrl = "jdbc:mysql://localhost:3306/mydb";
+       }
+
+       public static ConfigManager getInstance() {
+           if (instance == null) {              // lazy initialisation
+               instance = new ConfigManager();
+           }
+           return instance;
+       }
+
+       public String getDatabaseUrl() { return databaseUrl; }
+   }
+   ```
+   Usage:
+   ```java
+   ConfigManager c1 = ConfigManager.getInstance();
+   ConfigManager c2 = ConfigManager.getInstance();
+   System.out.println(c1 == c2);    // true: both refer to the same object
+   ```
+
+   The thread safety problem: the version above is not thread safe. Two threads may both find instance to be null and both create an object, so two instances would exist. Three standard remedies:
+
+   Eager initialisation, the simplest and safe:
+   ```java
+   public class ConfigManager {
+       private static final ConfigManager INSTANCE = new ConfigManager();
+       private ConfigManager() { }
+       public static ConfigManager getInstance() { return INSTANCE; }
+   }
+   ```
+
+   Double-checked locking, when creation is expensive and must be deferred:
+   ```java
+   public class ConfigManager {
+       private static volatile ConfigManager instance;
+       private ConfigManager() { }
+       public static ConfigManager getInstance() {
+           if (instance == null) {
+               synchronized (ConfigManager.class) {
+                   if (instance == null) {
+                       instance = new ConfigManager();
+                   }
+               }
+           }
+           return instance;
+       }
+   }
+   ```
+   The keyword volatile is essential here, otherwise a partially constructed object could become visible to another thread.
+
+   Enum singleton, which Joshua Bloch recommends as the best approach in Java, since it is thread safe, handles serialisation correctly and cannot be defeated by reflection:
+   ```java
+   public enum ConfigManager {
+       INSTANCE;
+       public String getDatabaseUrl() { return "jdbc:mysql://localhost:3306/mydb"; }
+   }
+   ```
+
+   Advantages:
+   - Controlled access to the single instance.
+   - Memory is saved, since the object is created only once and only when needed.
+   - A single point of access makes global state easy to reach.
+
+   Disadvantages, which should always be stated, because many practitioners now regard Singleton as an anti-pattern:
+   - It introduces global state, which makes the flow of data through a program hard to follow.
+   - It makes unit testing difficult, because the singleton cannot easily be replaced by a mock, and state persists between tests.
+   - It hides dependencies: a class that calls getInstance() does not declare that it depends on the configuration, so the dependency is invisible in its interface.
+   - It violates the single responsibility principle, since the class both does its job and controls its own instantiation.
+   - Thread safety requires care.
+   - It is difficult to subclass.
+
+   Modern alternative: dependency injection. Instead of a class fetching the single instance itself, the single instance is created once by the framework and passed to whoever needs it. The object is still unique, but the dependency is explicit and can be replaced in a test. Spring, Guice and most modern frameworks work this way.
 6. **We are going to create a Shape interface and concrete classes implementing the Shape interface. A facade class ShapeMaker is defined as a next step. ShapeMaker class uses the concrete classes to delegate user calls to these classes. FacadePatternDemo, our demo class, will use ShapeMaker class to show the results.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 450 (ET: BUET)]*
 
+
+   Answer: This describes the Facade design pattern, which is a structural pattern.
+
+   Intent of the Facade pattern: to provide a single simplified interface to a complex subsystem, so that a client can use the subsystem without knowing about its individual classes.
+
+   Implementation of the described scenario:
+
+   Step 1 - the Shape interface:
+   ```java
+   public interface Shape {
+       void draw();
+   }
+   ```
+
+   Step 2 - the concrete classes implementing Shape:
+   ```java
+   public class Rectangle implements Shape {
+       @Override
+       public void draw() {
+           System.out.println("Rectangle::draw()");
+       }
+   }
+
+   public class Square implements Shape {
+       @Override
+       public void draw() {
+           System.out.println("Square::draw()");
+       }
+   }
+
+   public class Circle implements Shape {
+       @Override
+       public void draw() {
+           System.out.println("Circle::draw()");
+       }
+   }
+   ```
+
+   Step 3 - the facade class ShapeMaker, which holds the concrete objects and exposes simple methods:
+   ```java
+   public class ShapeMaker {
+       private Shape circle;
+       private Shape rectangle;
+       private Shape square;
+
+       public ShapeMaker() {
+           circle    = new Circle();
+           rectangle = new Rectangle();
+           square    = new Square();
+       }
+
+       public void drawCircle()    { circle.draw();    }
+       public void drawRectangle() { rectangle.draw(); }
+       public void drawSquare()    { square.draw();    }
+   }
+   ```
+
+   Step 4 - the demonstration class, which uses only the facade:
+   ```java
+   public class FacadePatternDemo {
+       public static void main(String[] args) {
+           ShapeMaker shapeMaker = new ShapeMaker();
+
+           shapeMaker.drawCircle();
+           shapeMaker.drawRectangle();
+           shapeMaker.drawSquare();
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Circle::draw()
+   Rectangle::draw()
+   Square::draw()
+   ```
+
+   Class relationships:
+
+   ```mermaid
+   classDiagram
+     class Shape {
+       <<interface>>
+       +draw()
+     }
+     class Circle {
+       +draw()
+     }
+     class Rectangle {
+       +draw()
+     }
+     class Square {
+       +draw()
+     }
+     class ShapeMaker {
+       -Shape circle
+       -Shape rectangle
+       -Shape square
+       +drawCircle()
+       +drawRectangle()
+       +drawSquare()
+     }
+     Shape <|.. Circle
+     Shape <|.. Rectangle
+     Shape <|.. Square
+     ShapeMaker --> Shape
+   ```
+
+   What the pattern achieves here:
+   - The client, FacadePatternDemo, never mentions Circle, Rectangle or Square. It knows only ShapeMaker.
+   - The subsystem can be changed freely. A new Triangle class can be added, or Circle can be reimplemented, without touching the client at all.
+   - Coupling between the client and the subsystem is reduced from three dependencies to one.
+   - The client code is simpler and reads at the level of intent, drawCircle(), rather than at the level of mechanism, new Circle().draw().
+
+   When to use the Facade pattern:
+   - When a subsystem is complex and most clients need only a small part of it.
+   - When a layer boundary is being defined, to give the layer a single entry point.
+   - When legacy code with an awkward interface must be wrapped for new clients.
+   - Real examples: a JDBC helper class that hides connection, statement and result set handling; a service layer in a web application that hides the repositories beneath it.
+
+   Distinction from related patterns:
+   - Adapter converts an existing interface into a different one that a client expects; Facade defines a new simpler interface to a whole subsystem.
+   - Facade does not prevent direct access to the subsystem classes; it merely makes it unnecessary.
+   - Mediator centralises communication between peers; Facade centralises access from outside to inside.
 7. **Imagine a scenario where new child classes are introduced frequently from a basic class. The method calling sequences for every child class are the same but the implementation is different among the child classes. Here which design pattern would you like to apply? Explain the reasons with examples to support your answer.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 639 (ET: N/A)]*
 
+
+   Answer: The Template Method design pattern should be applied, and the Factory Method pattern may be used alongside it for the creation of the child objects.
+
+   Restating the scenario: new child classes are introduced frequently from a base class; the sequence of method calls is the same for every child; only the implementation of the individual steps differs among the children.
+
+   That description is precisely the intent of the Template Method pattern: define the skeleton of an algorithm in a base class, deferring some steps to subclasses, so that subclasses can redefine those steps without changing the structure of the algorithm.
+
+   Why Template Method is the right choice:
+   - The sequence is fixed and identical for every child, so it should be written once in the base class rather than repeated in every child, where it could drift out of step.
+   - Only the individual steps vary, and those are exactly what the pattern leaves abstract.
+   - A new child class is added by implementing the abstract steps, and the base class need not be touched at all. This satisfies the open-closed principle: open for extension, closed for modification.
+   - Duplication is eliminated. Without the pattern, every child would repeat the calling sequence, and a change to that sequence would have to be made in every child.
+   - The base class controls the algorithm, so a child cannot accidentally reorder or omit a step. This is called inversion of control, or the Hollywood principle: do not call us, we will call you.
+
+   Implementation:
+
+   ```java
+   // The base class defines the skeleton of the algorithm
+   abstract class DataProcessor {
+
+       // The template method: final, so that no subclass can change the sequence
+       public final void process() {
+           openConnection();
+           readData();
+           processData();
+           writeResult();
+           closeConnection();
+           logCompletion();          // a concrete step, shared by all
+       }
+
+       // Steps that every subclass must implement
+       protected abstract void readData();
+       protected abstract void processData();
+       protected abstract void writeResult();
+
+       // Steps with a default implementation that a subclass may override
+       protected void openConnection() {
+           System.out.println("Opening a default connection");
+       }
+
+       protected void closeConnection() {
+           System.out.println("Closing the connection");
+       }
+
+       // A step that is the same for every subclass
+       private void logCompletion() {
+           System.out.println("Processing completed at " + java.time.LocalTime.now());
+       }
+   }
+
+   // Child class 1
+   class CsvProcessor extends DataProcessor {
+       protected void readData()    { System.out.println("Reading rows from a CSV file"); }
+       protected void processData() { System.out.println("Parsing comma-separated fields"); }
+       protected void writeResult() { System.out.println("Writing the result to a CSV file"); }
+   }
+
+   // Child class 2
+   class DatabaseProcessor extends DataProcessor {
+       protected void openConnection() { System.out.println("Opening a JDBC connection"); }
+       protected void readData()       { System.out.println("Executing a SELECT query"); }
+       protected void processData()    { System.out.println("Aggregating the result set"); }
+       protected void writeResult()    { System.out.println("Executing an INSERT statement"); }
+       protected void closeConnection(){ System.out.println("Closing the JDBC connection"); }
+   }
+
+   // Child class 3, added later, with no change to the base class
+   class XmlProcessor extends DataProcessor {
+       protected void readData()    { System.out.println("Parsing an XML document"); }
+       protected void processData() { System.out.println("Applying an XSLT transformation"); }
+       protected void writeResult() { System.out.println("Writing the transformed XML"); }
+   }
+
+   public class TemplateDemo {
+       public static void main(String[] args) {
+           DataProcessor[] processors = {
+               new CsvProcessor(),
+               new DatabaseProcessor(),
+               new XmlProcessor()
+           };
+
+           for (DataProcessor p : processors) {
+               p.process();          // the same sequence, different implementations
+               System.out.println("-----");
+           }
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Opening a default connection
+   Reading rows from a CSV file
+   Parsing comma-separated fields
+   Writing the result to a CSV file
+   Closing the connection
+   Processing completed at 11:42:03
+   -----
+   Opening a JDBC connection
+   Executing a SELECT query
+   Aggregating the result set
+   Executing an INSERT statement
+   Closing the JDBC connection
+   Processing completed at 11:42:03
+   -----
+   Opening a default connection
+   Parsing an XML document
+   Applying an XSLT transformation
+   Writing the transformed XML
+   Closing the connection
+   Processing completed at 11:42:03
+   -----
+   ```
+
+   Adding the Factory Method: since new child classes are introduced frequently, the client should not decide which one to create with a chain of if statements. A factory keeps that decision in one place:
+   ```java
+   class ProcessorFactory {
+       public static DataProcessor create(String type) {
+           switch (type.toLowerCase()) {
+               case "csv":      return new CsvProcessor();
+               case "database": return new DatabaseProcessor();
+               case "xml":      return new XmlProcessor();
+               default: throw new IllegalArgumentException("Unknown type: " + type);
+           }
+       }
+   }
+   ```
+   Now adding a JsonProcessor requires changing only the factory, not every place in the program that creates a processor.
+
+   Why the alternatives are less suitable:
+   - Strategy would be the choice if the algorithms were entirely different and interchangeable at run time. Here the sequence is fixed and only the steps vary, which is Template Method, not Strategy. The distinction is that Template Method uses inheritance and fixes the structure, while Strategy uses composition and replaces the whole algorithm.
+   - Simple inheritance without a template method would let each child define its own process() method, which is exactly the duplication the question is trying to avoid.
+   - Observer, Decorator and Adapter address different problems entirely.
+
+   Real examples of Template Method in practice: the servlet lifecycle in Java (init, service, destroy), JUnit's setUp, test and tearDown sequence, and Spring's JdbcTemplate.
 8. **(ক) 'ATM machine' এর Software Structure আঁকুন।** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
 
+
+   Answer: ATM machine এর Software Structure (সফটওয়্যার কাঠামো):
+
+   একটি ATM ব্যবস্থাকে স্তরে স্তরে সাজানো (layered) স্থাপত্যে বিন্যস্ত করা হয়, যেখানে উপরের স্তর নিচের স্তরের সেবা ব্যবহার করে কিন্তু বিপরীতটি ঘটে না।
+
+   স্তরভিত্তিক কাঠামো:
+
+   ```mermaid
+   flowchart LR
+     subgraph P[Presentation Layer]
+       SC[Screen / Touch UI]
+       KP[Keypad Handler]
+     end
+     subgraph A[Application Layer]
+       TM[Transaction Manager]
+       SM[Session Manager]
+       AU[Authentication Module]
+     end
+     subgraph B[Business Logic Layer]
+       WD[Withdrawal Service]
+       DP[Deposit Service]
+       BQ[Balance Enquiry]
+       TR[Fund Transfer]
+       ST[Mini Statement]
+     end
+     subgraph D[Device Control Layer]
+       CR[Card Reader Driver]
+       CD[Cash Dispenser Driver]
+       PR[Receipt Printer Driver]
+       DS[Deposit Slot Driver]
+       CM[Camera / Sensor Driver]
+     end
+     subgraph N[Communication Layer]
+       NW[Network Interface]
+       EN[Encryption Module]
+     end
+     BK[(Bank Host / Core Banking Server)]
+     LOG[(Local Transaction Log)]
+
+     P --> A
+     A --> B
+     B --> D
+     B --> N
+     N --> BK
+     A --> LOG
+   ```
+
+   প্রতিটি স্তরের দায়িত্ব:
+
+   ১. Presentation Layer (উপস্থাপনা স্তর):
+   - পর্দায় মেনু ও বার্তা দেখানো, ভাষা নির্বাচন (বাংলা বা ইংরেজি)।
+   - কীপ্যাড ও টাচ ইনপুট গ্রহণ ও যাচাই।
+   - পিন প্রবেশের সময় তা আড়াল করা।
+   - এতে কোনো ব্যবসায়িক যুক্তি থাকে না।
+
+   ২. Application Layer (অ্যাপ্লিকেশন স্তর):
+   - Session Manager: কার্ড প্রবেশ থেকে কার্ড ফেরত পর্যন্ত সম্পূর্ণ সেশন নিয়ন্ত্রণ করে; নির্দিষ্ট সময় নিষ্ক্রিয় থাকলে সেশন বাতিল করে।
+   - Authentication Module: কার্ড নম্বর ও পিন যাচাই করে; তিনবার ভুল পিনে কার্ড আটকে দেয়।
+   - Transaction Manager: প্রতিটি লেনদেনকে একটি পরমাণুসদৃশ (atomic) একক হিসেবে পরিচালনা করে — হয় সম্পূর্ণ সম্পন্ন হবে, নয়তো পুরোপুরি বাতিল হবে।
+
+   ৩. Business Logic Layer (ব্যবসায়িক যুক্তি স্তর):
+   - টাকা তোলা: ব্যালেন্স পরীক্ষা, দৈনিক সীমা যাচাই, নোটের সংমিশ্রণ নির্ণয়।
+   - টাকা জমা, ব্যালেন্স জিজ্ঞাসা, তহবিল স্থানান্তর, মিনি স্টেটমেন্ট, পিন পরিবর্তন।
+   - সব ব্যবসায়িক নিয়ম এখানেই কেন্দ্রীভূত।
+
+   ৪. Device Control Layer (যন্ত্র নিয়ন্ত্রণ স্তর):
+   - Card Reader Driver: কার্ডের চৌম্বকীয় ফিতা বা চিপ পড়া ও কার্ড ফেরত দেওয়া।
+   - Cash Dispenser Driver: নোট গণনা, বিতরণ ও নোট আটকে গেলে সংকেত দেওয়া।
+   - Receipt Printer Driver, Deposit Slot Driver, Camera ও Sensor Driver।
+   - প্রতিটি যন্ত্রের ত্রুটি ওপরের স্তরে জানানো এর দায়িত্ব।
+
+   ৫. Communication Layer (যোগাযোগ স্তর):
+   - Encryption Module: পিন ব্লক ও লেনদেনের তথ্য এনক্রিপ্ট করা। পিন কখনোই সাধারণ পাঠ্য আকারে পাঠানো হয় না।
+   - Network Interface: ব্যাংকের কেন্দ্রীয় সার্ভারের সঙ্গে ISO 8583 প্রোটোকলে বার্তা আদান-প্রদান।
+   - সংযোগ বিচ্ছিন্ন হলে লেনদেন বাতিল করা এবং তা স্থানীয় লগে লিখে রাখা।
+
+   ৬. Data Layer:
+   - স্থানীয় লেনদেন লগ (audit trail), যা কখনো মুছে ফেলা যায় না।
+   - যন্ত্রের অবস্থা ও নোটের হিসাব।
+   - কেন্দ্রীয় ডেটাবেজ ব্যাংকের সার্ভারে থাকে, ATM এ নয়।
+
+   একটি টাকা তোলার লেনদেনের ক্রম:
+
+   ```
+   ১. কার্ড প্রবেশ            → Card Reader → Session Manager
+   ২. পিন প্রবেশ              → Keypad → Encryption → Authentication
+   ৩. যাচাইকরণ                → Network → Bank Host → সাড়া
+   ৪. মেনু প্রদর্শন            → Presentation Layer
+   ৫. পরিমাণ নির্বাচন          → Withdrawal Service
+   ৬. ব্যালেন্স ও সীমা যাচাই   → Bank Host
+   ৭. অনুমোদন                 → Transaction Manager
+   ৮. টাকা বিতরণ              → Cash Dispenser
+   ৯. নিশ্চিতকরণ বার্তা        → Bank Host (ডেবিট চূড়ান্ত)
+   ১০. রসিদ ছাপা ও কার্ড ফেরত  → Printer, Card Reader
+   ```
+
+   গুরুত্বপূর্ণ নকশাগত বিবেচনা:
+   - পরমাণুসদৃশতা (Atomicity): টাকা বেরোনোর পর সংযোগ বিচ্ছিন্ন হলে যেন হিসাব থেকে দুইবার কাটা না যায় বা কাটা বাদ না পড়ে। এ জন্য দুই ধাপের নিশ্চিতকরণ ব্যবহার করা হয়।
+   - ব্যর্থতা সামলানো: নোট আটকে গেলে, কাগজ ফুরালে বা বিদ্যুৎ চলে গেলে ব্যবস্থাটি একটি সুনির্দিষ্ট অবস্থায় থাকবে এবং লগে তা লেখা থাকবে।
+   - নিরাপত্তা: পিন কখনো সংরক্ষণ করা হয় না, কেবল এনক্রিপ্ট করে পাঠানো হয়; সব লেনদেন লগবদ্ধ; ক্যামেরা সচল; এবং যন্ত্রটি খোলা হলে তা শনাক্ত হয় (tamper detection)।
+   - রিয়েল-টাইম প্রয়োজনীয়তা: নির্দিষ্ট সময়ের মধ্যে সাড়া না পেলে লেনদেন বাতিল হবে।
+
+   ব্যবহৃত নকশা নীতি: স্তরভিত্তিক স্থাপত্য (layered architecture), যাতে প্রতিটি স্তর কেবল নিচের স্তরের ওপর নির্ভর করে; State pattern, কারণ ATM একটি সসীম অবস্থা যন্ত্র (idle, card inserted, authenticated, transaction, dispensing); এবং Facade pattern, যাতে অ্যাপ্লিকেশন স্তর যন্ত্রগুলোর জটিলতা না জেনেই কাজ করতে পারে।
 9. **(ii) Design the communication for the user login system for an MVC pattern framework.** *[NESCO Assistant Manager (ICT) 2021 compact it 907 (ET: BUET)]*
 
+
+   Answer: Communication design for a user login system in an MVC framework.
+
+   The components:
+   - View: the login page containing the form, and the dashboard page shown after success.
+   - Controller: the LoginController, which receives the request, validates its format, calls the Model and selects the response.
+   - Model: the User model and the AuthenticationService, which hold the business rules and query the database.
+
+   Sequence diagram:
+
+   ```mermaid
+   sequenceDiagram
+     actor User
+     participant V as View (login.html)
+     participant C as LoginController
+     participant M as User Model / AuthService
+     participant DB as Database
+     participant S as Session
+
+     User->>V: Opens the login page
+     V-->>User: Displays the form with a CSRF token
+     User->>V: Enters username and password, submits
+     V->>C: POST /login with the credentials
+     C->>C: Validate the CSRF token
+     C->>C: Validate the input format (not empty, valid email)
+     alt Input invalid
+       C-->>V: Re-render the form with an error message
+       V-->>User: "Please enter a valid email address"
+     else Input valid
+       C->>M: authenticate(username, password)
+       M->>DB: SELECT user WHERE email = ?
+       DB-->>M: User record with the password hash, or none
+       alt User not found or password does not match
+         M->>DB: Record the failed attempt
+         M-->>C: AuthResult.failure()
+         C-->>V: Re-render the form with a generic error
+         V-->>User: "Invalid username or password"
+       else Credentials correct
+         M->>M: Verify the hash with bcrypt or Argon2
+         M->>DB: Update last_login, reset the failed count
+         M-->>C: AuthResult.success(user)
+         C->>S: Create a session, regenerate the session ID
+         S-->>C: Session token
+         C-->>V: Redirect to /dashboard
+         V-->>User: Dashboard page
+       end
+     end
+   ```
+
+   Step-by-step description of the communication:
+
+   1. The user requests the login page. The Controller returns the View, which includes a CSRF token.
+   2. The user submits the form. The View sends a POST request to the Controller. It does not talk to the Model directly; that is the rule that MVC exists to enforce.
+   3. The Controller performs only presentation-level validation: is the CSRF token valid, are the fields present, is the email syntactically valid. It performs no authentication itself.
+   4. The Controller calls the Model, passing the credentials. All business logic lives here.
+   5. The Model queries the database, compares the stored password hash with the supplied password using a slow hashing function such as bcrypt or Argon2, checks whether the account is locked or inactive, and applies the rate-limiting rules.
+   6. The Model returns a result object to the Controller. It does not know or care what the Controller will do with it, and it never writes to the screen.
+   7. The Controller decides the response: on success it creates a session and redirects; on failure it re-renders the form with an error.
+   8. The View renders whatever the Controller gives it, and contains no logic beyond simple display.
+
+   Why the responsibilities are divided in this way:
+   - The Model can be unit tested without any web server, because it takes a username and a password and returns a result.
+   - The same Model serves a browser login, a mobile application and an API, with only the Controller and the View differing.
+   - A change to the appearance of the login page cannot break the authentication rules.
+   - Security logic is in one place rather than scattered through the pages.
+
+   Security points that must be built into this design:
+   - Never store the password itself; store a salted hash produced by bcrypt, scrypt or Argon2.
+   - Return the same generic message for an unknown user and for a wrong password, so that an attacker cannot enumerate valid accounts.
+   - Regenerate the session identifier on successful login, to prevent session fixation.
+   - Use a CSRF token on the form.
+   - Rate-limit attempts and lock the account after a number of failures.
+   - Send everything over HTTPS, and mark the session cookie HttpOnly, Secure and SameSite.
+   - Log every attempt, successful and failed, with the time and the source address.
+   - Use parameterised queries, never string concatenation, to prevent SQL injection.
 10. **(i) MVC framework কী? এর সুবিধাগুলো লিখুন।** *[BPSC Assistant Network Engineer 2020 compact it 960 (ET: N/A)]*
 
+
+    Answer: MVC framework কী এবং এর সুবিধাসমূহ:
+
+    MVC এর পূর্ণরূপ Model-View-Controller। এটি একটি স্থাপত্যিক নকশা কাঠামো (architectural pattern), যা একটি অ্যাপ্লিকেশনকে তিনটি পরস্পর সংযুক্ত অংশে ভাগ করে, যাতে তথ্যের অভ্যন্তরীণ উপস্থাপনা, ব্যবহারকারীর কাছে তা প্রদর্শনের পদ্ধতি এবং ব্যবহারকারীর সঙ্গে মিথস্ক্রিয়া — এই তিনটি আলাদা থাকে।
+
+    তিনটি অংশ:
+
+    - Model (মডেল): তথ্য ও ব্যবসায়িক যুক্তি। অ্যাপ্লিকেশনের অবস্থা ব্যবস্থাপনা করে, ব্যবসায়িক নিয়ম প্রয়োগ করে এবং ডেটাবেজের সঙ্গে যোগাযোগ করে। এটি ব্যবহারকারী ইন্টারফেস সম্পর্কে কিছুই জানে না। ব্যাংকিং অ্যাপে Account শ্রেণি, ব্যালেন্স এবং টাকা তোলার নিয়ম মডেলে থাকে।
+
+    - View (ভিউ): উপস্থাপনা স্তর, অর্থাৎ ব্যবহারকারী যা দেখেন। মডেল থেকে পাওয়া তথ্য প্রদর্শন করে এবং ব্যবহারকারীর কাজ কন্ট্রোলারের কাছে পাঠায়। এতে কোনো ব্যবসায়িক যুক্তি বা হিসাব থাকে না। ওয়েব অ্যাপে ভিউ হলো HTML টেমপ্লেট।
+
+    - Controller (কন্ট্রোলার): মধ্যস্থতাকারী। ভিউয়ের মাধ্যমে ব্যবহারকারীর ইনপুট গ্রহণ করে, তা ব্যাখ্যা করে, মডেলের ওপর উপযুক্ত কাজ সম্পাদন করায় এবং প্রতিক্রিয়া হিসেবে কোন ভিউ দেখানো হবে তা নির্বাচন করে।
+
+    কার্যপ্রবাহ:
+
+    ```mermaid
+    flowchart LR
+      U[User] -->|কাজ| C[Controller]
+      C -->|আহ্বান| M[Model]
+      M -->|তথ্য| C
+      C -->|তথ্যসহ নির্বাচন| V[View]
+      V -->|প্রদর্শন| U
+    ```
+
+    সুবিধাসমূহ:
+
+    - দায়িত্বের পৃথকীকরণ (Separation of Concerns): তিনটি ভিন্ন দায়িত্ব তিনটি আলাদা অংশে থাকায় প্রতিটি স্বাধীনভাবে বোঝা ও বদলানো যায়। ডিজাইন বদলাতে হলে কেবল View, ব্যবসায়িক নিয়ম বদলাতে হলে কেবল Model স্পর্শ করতে হয়।
+
+    - সমান্তরাল উন্নয়ন: ফ্রন্ট-এন্ড ডেভেলপার View তৈরি করতে পারেন আর ব্যাক-এন্ড ডেভেলপার Model তৈরি করতে পারেন, একই সময়ে।
+
+    - পরীক্ষণযোগ্যতা: সব ব্যবসায়িক যুক্তি Model এ থাকে এবং তার সঙ্গে ইন্টারফেসের কোনো নির্ভরতা নেই, তাই একে সরাসরি ইউনিট টেস্ট করা যায়। ওয়েব পাতার ভেতরে ছড়িয়ে থাকা যুক্তি বাস্তবে কখনোই পরীক্ষিত হয় না।
+
+    - একই তথ্যের একাধিক উপস্থাপনা: একটিমাত্র Model দিয়ে HTML পাতা, মোবাইল অ্যাপ এবং JSON API — তিনটিই চালানো যায়, কোনো কোড পুনরাবৃত্তি ছাড়াই।
+
+    - রক্ষণাবেক্ষণযোগ্যতা: পরিবর্তন একটি নির্দিষ্ট স্তরেই সীমাবদ্ধ থাকে, সারা প্রোগ্রামে ছড়ায় না।
+
+    - পুনঃব্যবহারযোগ্যতা: Model ও Controller একাধিক ইন্টারফেসে পুনরায় ব্যবহার করা যায়।
+
+    - সুস্পষ্ট কাঠামো: নতুন ডেভেলপার সহজেই বুঝতে পারেন কোন ধরনের কোড কোথায় থাকবে, ফলে বড় দলে কাজ করা সহজ হয়।
+
+    - নিরাপত্তা: ইনপুট যাচাই ও অনুমোদন Controller এ এবং ব্যবসায়িক নিয়ম Model এ কেন্দ্রীভূত থাকায় নিরাপত্তা যাচাই করা সহজ হয়।
+
+    অসুবিধা: ছোট অ্যাপ্লিকেশনের জন্য অতিরিক্ত জটিলতা তৈরি করে; ফাইল ও স্তরের সংখ্যা বাড়ে; নতুনদের জন্য শেখার বাধা আছে; এবং শৃঙ্খলা না থাকলে যুক্তি Controller এ জমা হয়ে "fat controller" সমস্যা তৈরি হয়।
+
+    বাস্তব কাঠামোসমূহ: PHP তে Laravel ও CodeIgniter, Java তে Spring MVC ও Struts, C# এ ASP.NET MVC, Python এ Django (যা একে MVT বলে) ও Flask, এবং Ruby on Rails।
+
+    সংশ্লিষ্ট নকশা: MVP (Model-View-Presenter), যা অ্যান্ড্রয়েডে ব্যবহৃত, এবং MVVM (Model-View-ViewModel), যা Angular ও Vue তে ব্যবহৃত।
 11. **MVC framework কী? MVC Framework এর সুবিধাসমূহ লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
+
+
+    Answer: MVC stands for Model-View-Controller. It is an architectural pattern that separates an application into three interconnected components, so that the internal representation of information is kept separate from the way it is presented to the user and from the way the user interacts with it.
+
+    The three components:
+
+    - Model: the data and the business logic. It manages the state of the application, enforces the business rules, and communicates with the database. It knows nothing about the user interface. In a banking application the Model holds the Account class, the balance, and the rules governing a withdrawal.
+
+    - View: the presentation layer, that is what the user sees. It displays the data supplied by the Model and sends user actions to the Controller. It contains no business logic and performs no calculation. In a web application the View is the HTML template.
+
+    - Controller: the intermediary. It receives input from the user through the View, interprets it, calls the appropriate operations on the Model, and selects the View to display in response. It contains no business rules of its own; it coordinates.
+
+    Flow of control:
+
+    ```mermaid
+    flowchart LR
+      U[User] -->|action| C[Controller]
+      C -->|updates / queries| M[Model]
+      M -->|data| C
+      C -->|selects and supplies data| V[View]
+      V -->|displays| U
+    ```
+
+    Sequence for a typical request:
+    1. The user performs an action in the View, for example submitting a login form.
+    2. The Controller receives the request and validates the input format.
+    3. The Controller calls the Model to authenticate the user.
+    4. The Model queries the database, applies the business rules and returns the result.
+    5. The Controller chooses the appropriate View, the dashboard on success or the login page with an error on failure.
+    6. The View renders and is returned to the user.
+
+    Advantages:
+    - Separation of concerns: the three responsibilities are independent, so each can be understood and changed on its own.
+    - Parallel development: a front-end developer can build the View while a back-end developer builds the Model, once the Controller's interface is agreed.
+    - Testability: the Model contains the business logic and has no dependence on the user interface, so it can be unit tested directly. Testing business logic embedded in a page is far harder.
+    - Multiple views of the same data: one Model can serve an HTML page, a mobile application and a JSON API, without duplication.
+    - Maintainability: a change to the appearance touches only the View; a change to a business rule touches only the Model.
+    - Reusability: Models and Controllers can be reused across interfaces.
+    - Clear structure for a team: a new developer knows where to look for any particular kind of code.
+
+    Disadvantages:
+    - It adds complexity, and for a very small application the overhead is not justified.
+    - There are more files and more layers to navigate.
+    - Strict separation is not always natural, and developers often let logic leak into the Controller, producing what is called a fat controller.
+    - The learning curve is real for beginners.
+
+    Frameworks that implement it: Laravel and CodeIgniter in PHP, Spring MVC and Struts in Java, ASP.NET MVC in C#, Django (which calls it MVT, Model-View-Template) and Flask in Python, and Ruby on Rails.
+
+    Related patterns: MVP (Model-View-Presenter), used in Android; MVVM (Model-View-ViewModel), used in WPF and in Angular and Vue; and the three-tier architecture, which is similar but describes deployment layers rather than responsibilities within a layer.
 
 ## UML Diagrams (Class, Use Case, Sequence) (9)
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
 
+
+   Answer: Class diagram for an e-commerce platform with Customers, Orders and Payment methods.
+
+   ```mermaid
+   classDiagram
+     class Customer {
+       -int customerId
+       -String name
+       -String email
+       -String phone
+       -String address
+       +register()
+       +login()
+       +placeOrder(Order)
+       +viewOrderHistory() List~Order~
+     }
+
+     class Order {
+       -int orderId
+       -Date orderDate
+       -String status
+       -double totalAmount
+       +addItem(Product, int)
+       +removeItem(Product)
+       +calculateTotal() double
+       +confirm()
+       +cancel()
+     }
+
+     class OrderItem {
+       -int quantity
+       -double unitPrice
+       +getSubtotal() double
+     }
+
+     class Product {
+       -int productId
+       -String name
+       -double price
+       -int stockQuantity
+       +checkStock(int) boolean
+       +reduceStock(int)
+     }
+
+     class Payment {
+       <<abstract>>
+       -int paymentId
+       -double amount
+       -Date paymentDate
+       -String status
+       +processPayment()* boolean
+       +refund()* boolean
+     }
+
+     class CreditCard {
+       -String cardNumber
+       -String cardHolderName
+       -Date expiryDate
+       -String cvv
+       +processPayment() boolean
+       +refund() boolean
+       +validateCard() boolean
+     }
+
+     class MobileBanking {
+       -String mobileNumber
+       -String provider
+       -String transactionPin
+       +processPayment() boolean
+       +refund() boolean
+       +sendOtp()
+     }
+
+     Customer "1" --> "0..*" Order : places
+     Order "1" *-- "1..*" OrderItem : contains
+     OrderItem "0..*" --> "1" Product : refers to
+     Order "1" --> "1" Payment : is paid by
+     Payment <|-- CreditCard : inheritance
+     Payment <|-- MobileBanking : inheritance
+   ```
+
+   Explanation of the classes:
+
+   - Customer: holds the identity and contact details of the buyer, with operations to register, log in and place orders.
+   - Order: represents one purchase, with its date, status and total, and operations to add and remove items and to confirm or cancel.
+   - OrderItem: an association class holding the quantity and the price at the time of purchase. It is necessary because the same product may appear in many orders with different quantities, and because the price must be frozen at the time of the order rather than following later price changes.
+   - Product: the catalogue item, with its price and stock level.
+   - Payment: an abstract base class holding what every payment has in common: an identifier, an amount, a date and a status, and two abstract operations that every payment method must implement.
+   - CreditCard and MobileBanking: concrete subclasses, each with its own attributes and its own implementation of processPayment and refund.
+
+   Explanation of the relationships:
+
+   - Customer to Order is an association with multiplicity 1 to 0..*: one customer may place many orders, and each order belongs to exactly one customer. The multiplicity 0..* is used rather than 1..* because a newly registered customer has no orders.
+
+   - Order to OrderItem is a composition, shown by the filled diamond, with multiplicity 1 to 1..*: an order consists of at least one item, and an item cannot exist without its order. If the order is deleted, its items are deleted with it. This is what distinguishes composition from aggregation.
+
+   - OrderItem to Product is an association: an item refers to a product, but the product exists independently of any order.
+
+   - Order to Payment is an association: each order has one payment.
+
+   - Payment to CreditCard and MobileBanking is inheritance, shown by the hollow triangle: a credit card payment is a payment. This is the "is-a" relationship the question asks for.
+
+   Why the inheritance is designed this way: the Order class holds a reference of type Payment, not of type CreditCard. At run time that reference may hold either subclass, and calling processPayment() dispatches to the correct implementation. This is run-time polymorphism, and its practical value is that a new payment method, for example a bank transfer or a digital wallet, can be added as a new subclass without changing the Order class at all.
+
+   UML notation used in the diagram:
+   - A minus sign before an attribute means private; a plus sign before an operation means public.
+   - An abstract class and its abstract operations are shown in the stereotype and marked with an asterisk.
+   - A solid line with an arrow is an association; a filled diamond is composition; a hollow triangle is inheritance.
+   - Multiplicities are written at each end: 1, 0..*, 1..*.
 2. Draw a Use Case Diagram for an Online Banking System with two actors: Customer and Bank Admin. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+
+   Answer: Use case diagram for an Online Banking System with two actors, Customer and Bank Admin.
+
+   ```mermaid
+   flowchart LR
+     Cust((Customer))
+     Admin((Bank Admin))
+
+     subgraph OBS[Online Banking System]
+       UC1([Login])
+       UC2([View Account Balance])
+       UC3([View Transaction History])
+       UC4([Transfer Funds])
+       UC5([Pay Utility Bill])
+       UC6([Request Cheque Book])
+       UC7([Change Password])
+       UC8([Download Statement])
+       UC9([Manage Customer Accounts])
+       UC10([Approve Account Opening])
+       UC11([Block / Unblock Account])
+       UC12([Generate Reports])
+       UC13([Set Transaction Limits])
+       UC14([Authenticate User])
+       UC15([Send OTP])
+     end
+
+     Cust --> UC1
+     Cust --> UC2
+     Cust --> UC3
+     Cust --> UC4
+     Cust --> UC5
+     Cust --> UC6
+     Cust --> UC7
+     Cust --> UC8
+
+     Admin --> UC1
+     Admin --> UC9
+     Admin --> UC10
+     Admin --> UC11
+     Admin --> UC12
+     Admin --> UC13
+
+     UC1 -.includes.-> UC14
+     UC4 -.includes.-> UC15
+     UC5 -.includes.-> UC15
+   ```
+
+   In the conventional stick-figure notation:
+
+   ```
+                     +--------------------------------------+
+                     |      Online Banking System           |
+                     |                                      |
+     Customer        |   ( Login ) --<<include>>--> (Authenticate User)
+        O            |                                      |
+       /|\ ----------|-> ( View Account Balance )           |
+       / \           |                                      |
+                     |-> ( View Transaction History )       |
+                     |                                      |
+                     |-> ( Transfer Funds ) --<<include>>--> (Send OTP)
+                     |                                      |
+                     |-> ( Pay Utility Bill )               |
+                     |                                      |
+                     |-> ( Request Cheque Book )            |
+                     |                                      |
+                     |-> ( Change Password )                |
+                     |                                      |
+                     |-> ( Download Statement )             |
+                     |                                      |
+     Bank Admin      |-> ( Manage Customer Accounts )       |
+        O            |                                      |
+       /|\ ----------|-> ( Approve Account Opening )        |
+       / \           |                                      |
+                     |-> ( Block / Unblock Account )        |
+                     |                                      |
+                     |-> ( Generate Reports )               |
+                     |                                      |
+                     |-> ( Set Transaction Limits )         |
+                     +--------------------------------------+
+   ```
+
+   Explanation of the elements:
+
+   - Actors, drawn as stick figures outside the system boundary: Customer and Bank Admin. An actor is a role, not a person, so one individual could act as both.
+   - Use cases, drawn as ovals inside the boundary: each is a complete piece of functionality that delivers value to an actor. Each is named with a verb phrase.
+   - The system boundary, drawn as a rectangle, separates what is inside the system from what is outside it.
+   - Association, a plain line, means that the actor participates in the use case.
+   - Include, a dashed arrow labelled <<include>>, means that the base use case always incorporates the included one. Login always includes Authenticate User, and a funds transfer always includes sending a one-time password.
+   - Extend, a dashed arrow labelled <<extend>>, would mean an optional behaviour that occurs only under a condition, for example "Transfer Funds" extended by "Charge Excess Transaction Fee" when a limit is exceeded.
+   - Generalisation between actors could be added if, for example, a Bank Admin were also a Customer.
+
+   Use cases shared by both actors: Login, and by extension logout and password change. This is shown by lines from both actors to the same oval.
+
+   Points that a good answer should state:
+   - The diagram shows what the system does, not how it does it. It contains no logic, no sequence and no data structures.
+   - Each use case should be named from the actor's point of view and should deliver something the actor recognises as valuable. "Validate account number" is not a use case; it is a step inside one.
+   - The diagram is only the summary; each use case is described in detail in a separate specification giving the actor, the preconditions, the main flow, the alternative flows, the exceptions and the postconditions.
+   - External systems can also be actors. Here a Payment Gateway and a Core Banking Server would be secondary actors, drawn on the right of the boundary.
 3. **Draw a class diagram for an E-commerce website where customer can view different products, can pay either by card or cash.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 401 (ET: BUET)]*
 
+
+   Answer: Class diagram for an e-commerce website in which a customer can view products and pay by card or by cash.
+
+   ```mermaid
+   classDiagram
+     class Customer {
+       -int customerId
+       -String name
+       -String email
+       -String phone
+       -String shippingAddress
+       +register()
+       +login()
+       +viewProducts() List~Product~
+       +addToCart(Product, int)
+       +placeOrder() Order
+     }
+
+     class Product {
+       -int productId
+       -String name
+       -String description
+       -double price
+       -int stockQuantity
+       -String category
+       +getDetails() String
+       +checkAvailability(int) boolean
+       +reduceStock(int)
+     }
+
+     class Cart {
+       -int cartId
+       -double subtotal
+       +addItem(Product, int)
+       +removeItem(Product)
+       +updateQuantity(Product, int)
+       +calculateSubtotal() double
+       +clear()
+     }
+
+     class CartItem {
+       -int quantity
+       -double unitPrice
+       +getLineTotal() double
+     }
+
+     class Order {
+       -int orderId
+       -Date orderDate
+       -String status
+       -double totalAmount
+       -String deliveryAddress
+       +confirm()
+       +cancel()
+       +track() String
+     }
+
+     class Payment {
+       <<abstract>>
+       -int paymentId
+       -double amount
+       -Date paymentDate
+       -String status
+       +processPayment()* boolean
+       +generateReceipt() String
+     }
+
+     class CardPayment {
+       -String cardNumber
+       -String cardHolderName
+       -Date expiryDate
+       -String cvv
+       -String cardType
+       +processPayment() boolean
+       +validateCard() boolean
+       +authorize() boolean
+     }
+
+     class CashPayment {
+       -String collectedBy
+       -Date collectionDate
+       -double amountReceived
+       -double changeGiven
+       +processPayment() boolean
+       +calculateChange() double
+     }
+
+     Customer "1" --> "0..1" Cart : owns
+     Cart "1" *-- "0..*" CartItem : contains
+     CartItem "0..*" --> "1" Product : refers to
+     Customer "1" --> "0..*" Order : places
+     Order "1" --> "1" Payment : settled by
+     Payment <|-- CardPayment
+     Payment <|-- CashPayment
+   ```
+
+   Explanation of the design decisions:
+
+   - Payment is abstract, with processPayment declared abstract. Neither a generic payment nor an object of class Payment can exist; only a card payment or a cash payment can. This forces every new payment type to implement the operation.
+
+   - CardPayment and CashPayment inherit from Payment. This is the "is-a" relationship: a card payment is a payment. Their attributes differ completely, which is exactly why they are separate classes rather than one class with a type field and a great many null columns.
+
+   - The Order class holds a reference of type Payment, not of type CardPayment. At run time the reference may hold either subclass, and calling processPayment() dispatches to the right implementation. This is run-time polymorphism, and its practical value is that mobile banking can be added later as a third subclass without changing the Order class at all.
+
+   - CartItem is an association class between Cart and Product, holding the quantity and the unit price at the time the item was added. Storing the price here rather than reading it from Product matters, because the price of a product may change after the customer adds it to the cart.
+
+   - Cart to CartItem is a composition, shown by the filled diamond: an item cannot exist without its cart, and clearing the cart destroys the items.
+
+   - CartItem to Product is a plain association: the product exists independently and is shared by many carts.
+
+   - Customer to Cart has multiplicity 0..1, because a customer may not yet have an active cart.
+
+   Cash on delivery, which the question implies: the CashPayment class models payment at the moment of delivery, so it records who collected the money, when, how much was received and how much change was given. Its status remains pending until the delivery is completed, which is why status is an attribute of Payment rather than of Order alone.
+
+   UML notation used:
+   - Minus for private attributes, plus for public operations.
+   - An abstract class is marked with the stereotype, and abstract operations with an asterisk.
+   - A hollow triangle points to the superclass, indicating inheritance.
+   - A filled diamond indicates composition; a plain line an association.
+   - Multiplicities appear at both ends of each association.
 4. **Consider the following buy a product description. Customer browses catalog, selects items to buy and then goes to check out. Customer fills in shipping information (address, receive time). System presents full pricing information and customer fills in credit card information. System authorizes purchase, confirms sale and sends confirming email to customer. Draw a use case diagram for the above system.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 424 (ET: BIBM)]*
 
+
+   Answer: Use case diagram for the described purchase process.
+
+   The description in steps: the customer browses the catalogue, selects items to buy, goes to check out, fills in shipping information, is shown the full pricing, enters credit card information; the system authorises the purchase, confirms the sale and sends a confirming email.
+
+   ```mermaid
+   flowchart LR
+     Cust((Customer))
+     Bank((Payment Gateway))
+     Mail((Email Service))
+
+     subgraph SYS[Online Shopping System]
+       UC1([Browse Catalog])
+       UC2([Select Items])
+       UC3([Checkout])
+       UC4([Enter Shipping Information])
+       UC5([Display Pricing Information])
+       UC6([Enter Credit Card Information])
+       UC7([Authorize Purchase])
+       UC8([Confirm Sale])
+       UC9([Send Confirmation Email])
+     end
+
+     Cust --> UC1
+     Cust --> UC2
+     Cust --> UC3
+     Cust --> UC4
+     Cust --> UC6
+
+     UC3 -.include.-> UC4
+     UC3 -.include.-> UC5
+     UC3 -.include.-> UC6
+     UC3 -.include.-> UC7
+     UC7 -.include.-> UC8
+     UC8 -.include.-> UC9
+
+     UC7 --> Bank
+     UC9 --> Mail
+   ```
+
+   In the conventional notation:
+
+   ```
+                      +----------------------------------------+
+                      |       Online Shopping System           |
+     Customer         |                                        |        Payment
+        O             |   ( Browse Catalog )                   |        Gateway
+       /|\ -----------|-> ( Select Items )                     |           O
+       / \            |                                        |          /|\
+                      |-> ( Checkout )                         |          / \
+                      |        |                               |
+                      |        |--<<include>>--> ( Enter Shipping Info )
+                      |        |--<<include>>--> ( Display Pricing )
+                      |        |--<<include>>--> ( Enter Card Info )
+                      |        |--<<include>>--> ( Authorize Purchase )-----+
+                      |                                  |                 |
+                      |                             <<include>>            |
+                      |                                  v                 |
+                      |                          ( Confirm Sale )          |
+                      |                                  |                 |
+                      |                             <<include>>            |
+                      |                                  v                 |
+                      |                     ( Send Confirmation Email )----|--> Email
+                      +----------------------------------------+          |    Service
+   ```
+
+   Actors identified:
+   - Customer: the primary actor, who initiates the process and derives value from it.
+   - Payment Gateway: a secondary actor, an external system that authorises the card transaction. It is drawn on the right of the boundary by convention.
+   - Email Service: a secondary actor, the external system that delivers the confirming message.
+
+   Use cases identified from the description, one for each activity that delivers recognisable value:
+   - Browse Catalog
+   - Select Items
+   - Checkout, which is the central use case
+   - Enter Shipping Information
+   - Display Pricing Information
+   - Enter Credit Card Information
+   - Authorize Purchase
+   - Confirm Sale
+   - Send Confirmation Email
+
+   Relationships:
+   - Include, shown by a dashed arrow labelled <<include>>: the base use case always performs the included one. Checkout always includes entering shipping information, showing the pricing, taking the card details and authorising the purchase. Authorising always leads to confirming the sale, and confirming always sends the email.
+   - Extend, shown by a dashed arrow labelled <<extend>>, would be used for optional behaviour. Examples that could be added here: "Apply Discount Coupon" extending Checkout, or "Handle Payment Failure" extending Authorize Purchase.
+   - Association, a plain line, connects an actor to a use case in which it participates.
+
+   The main flow of the Checkout use case, written out as it would appear in the use case specification that accompanies the diagram:
+
+   1. Precondition: the customer has selected at least one item and is logged in.
+   2. The customer initiates checkout.
+   3. The system requests the shipping address and the preferred delivery time.
+   4. The customer supplies them.
+   5. The system displays the full pricing: item subtotal, shipping charge, tax and grand total.
+   6. The customer supplies the credit card details.
+   7. The system sends an authorisation request to the payment gateway.
+   8. The gateway authorises the transaction.
+   9. The system confirms the sale, reduces the stock and creates the order record.
+   10. The system sends a confirming email.
+   11. Postcondition: the order exists with status confirmed, and the customer has been notified.
+
+   Alternative and exception flows, which a complete specification must include:
+   - At step 8, if the gateway declines the card, the system informs the customer and returns to step 6.
+   - At step 9, if an item has gone out of stock since selection, the system informs the customer and returns to the cart.
+   - At step 10, if the email cannot be sent, the order still stands and the message is queued for retry. The sale must not be reversed because an email failed.
+
+   Points worth stating about use case diagrams generally:
+   - They show what the system does, not how. There is no sequence, no logic and no data in the diagram itself.
+   - Each use case is named as a verb phrase from the actor's point of view.
+   - The diagram is a summary; the value lies in the accompanying specifications with their main, alternative and exception flows.
 5. **Library management class diagram:** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 380 (ET: BUET)]*
 
+
+   Answer: Class diagram for a library management system.
+
+   ```mermaid
+   classDiagram
+     class Library {
+       -String name
+       -String address
+       +addBook(Book)
+       +removeBook(Book)
+       +searchBook(String) List~Book~
+       +registerMember(Member)
+     }
+
+     class Person {
+       <<abstract>>
+       -int id
+       -String name
+       -String address
+       -String phone
+       -String email
+       +getDetails() String
+     }
+
+     class Member {
+       -int membershipId
+       -Date joinDate
+       -Date expiryDate
+       -int booksIssued
+       -double outstandingFine
+       +borrowBook(Book) boolean
+       +returnBook(Book)
+       +reserveBook(Book)
+       +payFine(double)
+       +canBorrow() boolean
+     }
+
+     class Librarian {
+       -int staffId
+       -String designation
+       -double salary
+       +issueBook(Book, Member)
+       +acceptReturn(Loan)
+       +addBook(Book)
+       +calculateFine(Loan) double
+       +generateReport()
+     }
+
+     class Book {
+       -String isbn
+       -String title
+       -String author
+       -String publisher
+       -int publicationYear
+       -String category
+       -int totalCopies
+       -int availableCopies
+       +isAvailable() boolean
+       +getDetails() String
+     }
+
+     class BookCopy {
+       -String accessionNumber
+       -String status
+       -String shelfLocation
+       -Date acquisitionDate
+       +markIssued()
+       +markAvailable()
+     }
+
+     class Loan {
+       -int loanId
+       -Date issueDate
+       -Date dueDate
+       -Date returnDate
+       -String status
+       +calculateFine() double
+       +isOverdue() boolean
+       +renew() boolean
+     }
+
+     class Reservation {
+       -int reservationId
+       -Date reservationDate
+       -String status
+       +cancel()
+       +notifyMember()
+     }
+
+     class Fine {
+       -int fineId
+       -double amount
+       -Date fineDate
+       -boolean isPaid
+       +pay()
+     }
+
+     Person <|-- Member
+     Person <|-- Librarian
+     Library "1" *-- "0..*" Book : holds
+     Book "1" *-- "1..*" BookCopy : has copies
+     Member "1" --> "0..*" Loan : takes
+     BookCopy "1" --> "0..*" Loan : is lent through
+     Librarian "1" --> "0..*" Loan : issues
+     Member "1" --> "0..*" Reservation : makes
+     Book "1" --> "0..*" Reservation : is reserved in
+     Loan "1" --> "0..1" Fine : may incur
+   ```
+
+   Explanation of the design decisions:
+
+   - Person is an abstract superclass holding what a Member and a Librarian have in common: identity, name, address and contact details. Both inherit from it, which removes duplication and expresses the "is-a" relationship. No object of class Person can exist.
+
+   - The distinction between Book and BookCopy is the most important decision in this model, and it is the one most often missed. Book represents the title, that is the bibliographic record with its ISBN, author and publisher. BookCopy represents one physical volume on the shelf, with its own accession number and its own status. A library with five copies of the same title has one Book and five BookCopy objects. Without this distinction it is impossible to record which particular copy a member has borrowed, or that copy number 3 is damaged while the others are fine.
+
+   - Loan is an association class between Member and BookCopy. It carries the information that belongs to the relationship rather than to either class: the issue date, the due date, the return date and the status. The same member may borrow the same copy on different occasions, and each occasion is a separate Loan.
+
+   - Fine is separated from Loan rather than being an attribute of it, because a fine has its own lifecycle: it is created, it may be waived, and it is paid, possibly long after the book is returned.
+
+   - Reservation connects a Member to a Book, not to a BookCopy, because a member reserves the title and is satisfied by whichever copy becomes free first.
+
+   - Library to Book is a composition, since the catalogue record has no meaning outside the library; Book to BookCopy is also a composition, since a physical copy is a copy of a particular title.
+
+   Business rules that the model supports:
+   - canBorrow() checks the member's outstanding fine, the number of books already issued against the limit, and whether the membership has expired.
+   - isOverdue() compares the due date with the current date.
+   - calculateFine() multiplies the days overdue by the daily rate.
+   - availableCopies on Book is derived: it is the count of BookCopy objects whose status is available.
+
+   UML notation used: a hollow triangle for inheritance, a filled diamond for composition, a plain arrow for association, multiplicities at both ends, minus for private attributes and plus for public operations.
 6. **Draw A class diagram. A token-ring based local area network (LAN) is a network consisting of nodes in which network packets are sent around. Every node has a unique name within the network, and refers to its next node. Different kinds of nodes exist: Workstations are originators of messages; servers and printers are network nodes that can receive messages. Packets contain an originator a destination and content, and are sent around on a network. A LAN is a circular configuration of nodes.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 438 (ET: BIBM)]*
 
+
+   Answer: Class diagram for a token-ring local area network.
+
+   Reading the requirements: a LAN is a circular configuration of nodes; every node has a unique name and refers to its next node; workstations originate messages; servers and printers can receive messages; a packet contains an originator, a destination and content, and is sent around the network.
+
+   ```mermaid
+   classDiagram
+     class LAN {
+       -String networkId
+       -int nodeCount
+       +addNode(Node)
+       +removeNode(Node)
+       +findNode(String) Node
+       +isCircular() boolean
+     }
+
+     class Node {
+       <<abstract>>
+       -String name
+       +accept(Packet)*
+       +send(Packet)
+       +getNextNode() Node
+     }
+
+     class Workstation {
+       -String userName
+       +originate(Packet)
+       +accept(Packet)
+     }
+
+     class Server {
+       -int storageCapacity
+       -String operatingSystem
+       +accept(Packet)
+       +processRequest(Packet)
+     }
+
+     class Printer {
+       -String model
+       -int pagesPerMinute
+       -boolean isBusy
+       +accept(Packet)
+       +printJob(Packet)
+     }
+
+     class Packet {
+       -int packetId
+       -String content
+       -Date timestamp
+       +getOriginator() Node
+       +getDestination() Node
+     }
+
+     LAN "1" *-- "3..*" Node : consists of
+     Node "1" --> "1" Node : next
+     Node <|-- Workstation
+     Node <|-- Server
+     Node <|-- Printer
+     Packet "0..*" --> "1" Workstation : originator
+     Packet "0..*" --> "1" Node : destination
+   ```
+
+   Explanation of each modelling decision:
+
+   - Node is an abstract superclass. Every kind of node has a unique name and a reference to the next node, so those belong in the superclass. accept(Packet) is abstract, because every concrete kind of node handles an incoming packet differently: a server processes a request, a printer prints, a workstation displays.
+
+   - Workstation, Server and Printer inherit from Node. This is the "is-a" relationship: a printer is a node.
+
+   - The self-association Node to Node with the role name "next" and multiplicity 1 to 1 is the crucial element. It captures the requirement that every node refers to its next node, and the fact that both ends have multiplicity 1 is what makes the configuration a ring rather than a chain: every node has exactly one successor and is the successor of exactly one node. In UML this is drawn as a line from the class back to itself, labelled with the role name at the arrow end.
+
+   - LAN to Node is a composition, with multiplicity 3..* because a meaningful ring needs at least three nodes. A node does not exist outside its network, so the diamond is filled.
+
+   - Packet has two associations to nodes. The originator is constrained to be a Workstation, because the requirement states that workstations are the originators of messages. The destination is any Node, since servers and printers can receive them. Modelling these as two separate associations with different target types is what captures that asymmetry; a single "involves" association would lose it.
+
+   - Content, an identifier and a timestamp are attributes of Packet.
+
+   Constraints that the diagram cannot express graphically and which are added as notes in UML:
+   - {The name of every Node in a LAN is unique}
+   - {Following the next reference from any node returns to that node, so the configuration is circular}
+   - {The originator of a Packet must be a Workstation}
+
+   A design point worth stating: an alternative model would introduce an interface Receiver, implemented by Server and Printer but not by Workstation, and a separate interface Originator implemented by Workstation. That would express the requirement more precisely, since it would make it impossible at compile time for a printer to originate a packet. The inheritance model above is simpler and is what the question's wording most directly suggests, but mentioning the interface alternative shows understanding of the trade-off between simplicity and precision in a model.
+
+   How a packet travels, which the diagram implies: a workstation creates a packet with itself as originator and some node as destination, and passes it to its next node. Each node in turn examines the destination; if the packet is not for it, it passes the packet to its own next node. The packet therefore circulates until it reaches its destination, which is exactly the behaviour of a token ring.
 7. **(খ) একটি লাইব্রেরি ব্যবস্থাপনা সিস্টেম এর জন্যে Use Case Diagram অঙ্কন করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
 
+
+   Answer: লাইব্রেরি ব্যবস্থাপনা সিস্টেমের জন্য Use Case Diagram:
+
+   ```mermaid
+   flowchart LR
+     Mem((Member))
+     Lib((Librarian))
+     Adm((Administrator))
+
+     subgraph LMS[Library Management System]
+       UC1([Search Book])
+       UC2([Borrow Book])
+       UC3([Return Book])
+       UC4([Reserve Book])
+       UC5([Renew Book])
+       UC6([Pay Fine])
+       UC7([View Borrowing History])
+       UC8([Issue Book])
+       UC9([Accept Return])
+       UC10([Calculate Fine])
+       UC11([Add / Update Book])
+       UC12([Register Member])
+       UC13([Generate Report])
+       UC14([Manage Staff Accounts])
+       UC15([Verify Membership])
+       UC16([Check Availability])
+     end
+
+     Mem --> UC1
+     Mem --> UC2
+     Mem --> UC3
+     Mem --> UC4
+     Mem --> UC5
+     Mem --> UC6
+     Mem --> UC7
+
+     Lib --> UC8
+     Lib --> UC9
+     Lib --> UC11
+     Lib --> UC12
+     Lib --> UC13
+
+     Adm --> UC13
+     Adm --> UC14
+     Adm --> UC11
+
+     UC2 -.include.-> UC15
+     UC2 -.include.-> UC16
+     UC9 -.include.-> UC10
+     UC5 -.include.-> UC16
+   ```
+
+   প্রচলিত চিত্র আকারে:
+
+   ```
+                        +--------------------------------------------+
+                        |      Library Management System             |
+      Member            |                                            |
+         O              |   ( Search Book )                          |
+        /|\ ------------|-> ( Borrow Book ) --<<include>>--> (Verify Membership)
+        / \             |          |--<<include>>--> (Check Availability)
+                        |                                            |
+                        |-> ( Return Book )                          |
+                        |-> ( Reserve Book )                         |
+                        |-> ( Renew Book )                           |
+                        |-> ( Pay Fine )                             |
+                        |-> ( View Borrowing History )               |
+                        |                                            |
+      Librarian         |-> ( Issue Book )                           |
+         O              |-> ( Accept Return ) --<<include>>--> (Calculate Fine)
+        /|\ ------------|-> ( Add / Update Book )                    |
+        / \             |-> ( Register Member )                      |
+                        |-> ( Generate Report )                      |
+                        |                                            |
+      Administrator     |-> ( Manage Staff Accounts )                |
+         O              |-> ( Generate Report )                      |
+        /|\ ------------|-> ( Add / Update Book )                    |
+        / \             +--------------------------------------------+
+   ```
+
+   উপাদানসমূহের ব্যাখ্যা:
+
+   Actor (অভিনেতা): সিস্টেমের বাইরে অবস্থিত ব্যক্তি বা ব্যবস্থা, যারা সিস্টেমের সঙ্গে মিথস্ক্রিয়া করে। এখানে তিনজন:
+   - Member (সদস্য): বই খোঁজেন, ধার নেন, ফেরত দেন, সংরক্ষণ করেন, নবায়ন করেন ও জরিমানা পরিশোধ করেন।
+   - Librarian (গ্রন্থাগারিক): বই ইস্যু ও গ্রহণ করেন, নতুন বই যোগ করেন, সদস্য নিবন্ধন করেন ও প্রতিবেদন তৈরি করেন।
+   - Administrator (প্রশাসক): কর্মীদের অ্যাকাউন্ট ব্যবস্থাপনা করেন এবং সামগ্রিক প্রতিবেদন দেখেন।
+
+   Use Case (ব্যবহার-ঘটনা): ডিম্বাকৃতিতে আঁকা প্রতিটি সম্পূর্ণ কাজ, যা কোনো actor এর কাছে মূল্যবান একটি ফল এনে দেয়। প্রতিটির নাম ক্রিয়াপদ দিয়ে শুরু হয়।
+
+   System Boundary (সিস্টেমের সীমানা): আয়তক্ষেত্র, যা ভেতরে সিস্টেমের কাজ এবং বাইরে actor দের আলাদা করে।
+
+   সম্পর্কসমূহ:
+   - Association (সংযোগ): সরল রেখা, যা বোঝায় ওই actor ওই use case এ অংশ নেন।
+   - Include (<<include>>): ভাঙা তীর; মূল use case সবসময় অন্তর্ভুক্ত use case টি সম্পাদন করে। "Borrow Book" সবসময় সদস্যপদ যাচাই ও প্রাপ্যতা পরীক্ষা করে; "Accept Return" সবসময় জরিমানা হিসাব করে।
+   - Extend (<<extend>>): ভাঙা তীর; ঐচ্ছিক আচরণ, যা কেবল নির্দিষ্ট শর্তে ঘটে। যেমন "Return Book" কে extend করতে পারে "Charge Damage Fee", যা কেবল বই ক্ষতিগ্রস্ত হলে ঘটে।
+   - Generalization (সাধারণীকরণ): Administrator ও Librarian উভয়ই Staff হলে, একটি সাধারণ Staff actor তৈরি করে দুজনকে তার বিশেষ রূপ হিসেবে দেখানো যেত।
+
+   "Borrow Book" use case এর বিস্তারিত বিবরণ, যা চিত্রের সঙ্গে অবশ্যই লিখতে হয়:
+   - Actor: Member
+   - Precondition: সদস্য লগইন করেছেন এবং তাঁর সদস্যপদ বৈধ।
+   - প্রধান প্রবাহ: ১. সদস্য বই নির্বাচন করেন। ২. সিস্টেম সদস্যপদ যাচাই করে। ৩. সিস্টেম বইয়ের কপি প্রাপ্য কিনা দেখে। ৪. সিস্টেম সদস্যের ধার নেওয়ার সীমা ও বকেয়া জরিমানা পরীক্ষা করে। ৫. গ্রন্থাগারিক বই ইস্যু করেন। ৬. সিস্টেম ধারের রেকর্ড তৈরি করে ও ফেরতের তারিখ নির্ধারণ করে। ৭. প্রাপ্য কপির সংখ্যা কমে যায়।
+   - বিকল্প প্রবাহ: বই প্রাপ্য না হলে সিস্টেম সংরক্ষণের প্রস্তাব দেয়; সীমা অতিক্রান্ত হলে বা জরিমানা বকেয়া থাকলে অনুরোধ প্রত্যাখ্যাত হয়।
+   - Postcondition: ধারের রেকর্ড তৈরি হয়েছে এবং কপিটির অবস্থা "issued" হয়েছে।
+
+   গুরুত্বপূর্ণ নীতি: Use case diagram দেখায় সিস্টেম কী করে, কীভাবে করে তা নয়। এতে কোনো ক্রম, যুক্তি বা ডেটা কাঠামো থাকে না; সেগুলো sequence diagram ও class diagram এ দেখানো হয়।
 8. **How do you model the following situation with a UML class diagram the car fleet of a car rental contains multiple cars, one car belongs to exactly one car fleet.** *[BIWTA; Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
 
+
+   Answer: The situation is that a car fleet contains multiple cars, and one car belongs to exactly one car fleet.
+
+   The correct model is a composition, or at minimum a strong aggregation, from CarFleet to Car, with multiplicity 1 to 1..* on one side and exactly 1 on the other.
+
+   ```mermaid
+   classDiagram
+     class CarRental {
+       -int rentalId
+       -String companyName
+       +getFleet() CarFleet
+     }
+
+     class CarFleet {
+       -int fleetId
+       -String location
+       -int capacity
+       +addCar(Car)
+       +removeCar(Car)
+       +getAvailableCars() List~Car~
+       +getFleetSize() int
+     }
+
+     class Car {
+       -String registrationNumber
+       -String make
+       -String model
+       -int year
+       -String status
+       -double dailyRate
+       +isAvailable() boolean
+       +rent()
+       +returnCar()
+     }
+
+     CarRental "1" *-- "1..*" CarFleet : has
+     CarFleet "1" *-- "1..*" Car : contains
+   ```
+
+   In plain UML notation:
+
+   ```
+   +-------------+                    +---------+
+   |  CarFleet   |◆-------------------|   Car   |
+   +-------------+ 1            1..*  +---------+
+   | -fleetId    |                    | -regNo  |
+   | -location   |                    | -make   |
+   +-------------+                    | -model  |
+   | +addCar()   |                    +---------+
+   | +removeCar()|                    | +rent() |
+   +-------------+                    +---------+
+   ```
+   The filled diamond is placed at the CarFleet end, because the fleet is the whole and the car is the part.
+
+   Reading the multiplicities:
+   - At the Car end, 1..* means one fleet contains one or more cars. If an empty fleet is permitted, 0..* is used instead.
+   - At the CarFleet end, 1 means each car belongs to exactly one fleet, which is precisely what the question states. It is this 1, rather than 0..1 or *, that expresses the constraint.
+
+   Why composition rather than aggregation:
+   - Composition, the filled diamond, means the part cannot belong to more than one whole and its lifetime is bound to the whole. Since a car belongs to exactly one fleet, composition is the correct choice.
+   - Aggregation, the hollow diamond, would allow a car to belong to several fleets or to none, which contradicts the requirement.
+   - A plain association would express only that the two classes are related, without capturing the whole-part nature of the relationship.
+
+   The three relationships compared, since this distinction is the point of the question:
+
+   | Relationship | Symbol | Meaning | Lifetime | Example |
+   |---|---|---|---|---|
+   | Association | plain line | The classes are related in some way | Independent | A Driver drives a Car |
+   | Aggregation | hollow diamond | Whole-part, but the part can exist alone and can be shared | Independent | A Department has Teachers; a teacher survives the department |
+   | Composition | filled diamond | Whole-part, the part belongs to exactly one whole and dies with it | Dependent | A CarFleet contains Cars; a House contains Rooms |
+
+   A qualification worth stating: whether this particular case is composition or aggregation depends on how the business treats a car when a fleet is dissolved. If the car is simply transferred to another fleet, the relationship is really a strong aggregation, since the car survives. If the fleet is the only way a car exists in the system and dissolving it removes the cars, it is composition. The question says a car belongs to exactly one fleet, which fixes the multiplicity but not the lifetime; a complete answer should note this and state the assumption made.
+
+   Extension of the model: if a car may be moved between fleets over time, that history is itself information, and it would be modelled as an association class FleetAssignment carrying the start date and the end date, with Car and CarFleet associated through it.
 9. **(ক) Typical web-based login system এর জন্য sequence diagram আঁকুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 778 (ET: N/A)]*
+
+
+   Answer: Typical web-based login system এর জন্য Sequence Diagram:
+
+   ```mermaid
+   sequenceDiagram
+     actor U as User
+     participant B as Browser
+     participant S as Web Server / Controller
+     participant A as Authentication Service
+     participant DB as Database
+     participant SS as Session Store
+
+     U->>B: লগইন পাতা চান
+     B->>S: GET /login
+     S-->>B: লগইন ফর্ম + CSRF token
+     B-->>U: ফর্ম প্রদর্শন
+
+     U->>B: ইউজারনেম ও পাসওয়ার্ড দেন
+     B->>S: POST /login (credentials, CSRF token) over HTTPS
+
+     S->>S: CSRF token যাচাই
+     S->>S: ইনপুট ফরম্যাট যাচাই
+
+     alt ইনপুট অবৈধ
+       S-->>B: ত্রুটিসহ ফর্ম পুনরায়
+       B-->>U: "সঠিক তথ্য দিন"
+     else ইনপুট বৈধ
+       S->>A: authenticate(username, password)
+       A->>DB: SELECT * FROM users WHERE email = ?
+       DB-->>A: user record (password hash সহ) অথবা কিছুই নয়
+
+       alt ব্যবহারকারী নেই বা পাসওয়ার্ড ভুল
+         A->>DB: ব্যর্থ চেষ্টার সংখ্যা বাড়ানো
+         A-->>S: AuthResult.failure()
+         S-->>B: সাধারণ ত্রুটি বার্তা
+         B-->>U: "ইউজারনেম বা পাসওয়ার্ড ভুল"
+       else পাসওয়ার্ড সঠিক
+         A->>A: bcrypt দিয়ে hash মিলিয়ে দেখা
+         A->>DB: last_login হালনাগাদ, ব্যর্থ গণনা শূন্য
+         A-->>S: AuthResult.success(user)
+         S->>SS: নতুন session তৈরি, session ID পুনর্গঠন
+         SS-->>S: session token
+         S-->>B: 302 Redirect to /dashboard + Set-Cookie (HttpOnly, Secure)
+         B->>S: GET /dashboard (cookie সহ)
+         S->>SS: session যাচাই
+         SS-->>S: বৈধ
+         S-->>B: ড্যাশবোর্ড পাতা
+         B-->>U: ড্যাশবোর্ড প্রদর্শন
+       end
+     end
+   ```
+
+   টেক্সট আকারে ক্রমটি:
+
+   ```
+   User    Browser   Server    AuthService   Database   SessionStore
+    |         |         |           |            |            |
+    |--চান--->|         |           |            |            |
+    |         |--GET--->|           |            |            |
+    |         |<--ফর্ম--|           |            |            |
+    |<--দেখান-|         |           |            |            |
+    |--তথ্য-->|         |           |            |            |
+    |         |--POST-->|           |            |            |
+    |         |         |--auth---->|            |            |
+    |         |         |           |--SELECT--->|            |
+    |         |         |           |<--record---|            |
+    |         |         |<--result--|            |            |
+    |         |         |--------create session------------->|
+    |         |         |<-------------token-----------------|
+    |         |<--302---|           |            |            |
+    |<--ড্যাশ-|         |           |            |            |
+   ```
+
+   Sequence diagram এর উপাদানসমূহ:
+   - Lifeline: প্রতিটি অংশগ্রহণকারীর নিচে নেমে যাওয়া উল্লম্ব ভাঙা রেখা, যা সময়ের প্রবাহ নির্দেশ করে। সময় উপর থেকে নিচে বয়ে যায়।
+   - Activation bar: lifeline এর ওপর সরু আয়তক্ষেত্র, যা দেখায় ওই সময়ে অংশগ্রহণকারীটি সক্রিয়।
+   - Synchronous message: ভরাট তীরযুক্ত অবিচ্ছিন্ন রেখা; প্রেরক উত্তরের জন্য অপেক্ষা করে।
+   - Return message: ভাঙা রেখা ও খোলা তীর।
+   - alt fragment: বিকল্প পথ (if-else) দেখায়।
+   - opt fragment: ঐচ্ছিক অংশ দেখায়।
+   - loop fragment: পুনরাবৃত্তি দেখায়।
+
+   নিরাপত্তার দিকগুলো, যা এই নকশায় অবশ্যই থাকতে হবে:
+   - পাসওয়ার্ড কখনোই সরাসরি সংরক্ষণ করা হয় না; bcrypt, scrypt বা Argon2 দিয়ে salt সহ hash করে রাখা হয়।
+   - ব্যবহারকারী না থাকা এবং পাসওয়ার্ড ভুল — দুই ক্ষেত্রেই একই সাধারণ বার্তা দেওয়া হয়, যাতে আক্রমণকারী কোন অ্যাকাউন্ট আছে তা জানতে না পারে।
+   - সফল লগইনের পর session ID পুনর্গঠন করা হয়, যাতে session fixation আক্রমণ ঠেকানো যায়।
+   - CSRF token ব্যবহার করা হয়।
+   - সব যোগাযোগ HTTPS এ হয়, এবং cookie তে HttpOnly, Secure ও SameSite পতাকা দেওয়া হয়।
+   - নির্দিষ্টসংখ্যক ব্যর্থ চেষ্টার পর অ্যাকাউন্ট সাময়িকভাবে লক করা হয়।
+   - সব চেষ্টা, সফল ও ব্যর্থ, সময় ও উৎস ঠিকানাসহ লগবদ্ধ করা হয়।
+   - ডেটাবেজ কোয়েরিতে parameterized query ব্যবহার করা হয়, যাতে SQL injection সম্ভব না হয়।
+
+   Sequence diagram এর উপযোগিতা: এটি দেখায় কোন বার্তা কোন ক্রমে কার কাছে যায়, তাই একটি জটিল মিথস্ক্রিয়ার সময়ভিত্তিক আচরণ বুঝতে ও নথিভুক্ত করতে এটি সবচেয়ে কার্যকর UML চিত্র। Class diagram দেখায় কাঠামো, আর sequence diagram দেখায় আচরণ।
 
 ## Software Requirements Engineering (8)
 
