@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 153/239 subtopics · 1714/2673 answers**
+**Overall: 154/239 subtopics · 1716/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -188,7 +188,7 @@ Commit unit: one `##` subtopic.
 - [x] 2's Complement & Binary Arithmetic (2)
 - [x] Finite State Machines (FSM) (1)
 
-## electrical-and-electronics.md — 6/8 sections, 33/37 answers
+## electrical-and-electronics.md — 7/8 sections, 35/37 answers
 
 - [x] Electrical Circuits & Protection Devices (12)
 - [x] Transistors (BJT & FET) (9)
@@ -196,7 +196,7 @@ Commit unit: one `##` subtopic.
 - [x] Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)
 - [x] AC Circuits & Power Analysis (2)
 - [x] Operational Amplifiers (Op-Amp) (2)
-- [ ] Sensor Circuits & Automated Control Systems (2)
+- [x] Sensor Circuits & Automated Control Systems (2)
 - [ ] Circuit Theorems (Thevenin, Norton, Superposition) (2)
 
 ## english.md — 0/8 sections, 0/110 answers
