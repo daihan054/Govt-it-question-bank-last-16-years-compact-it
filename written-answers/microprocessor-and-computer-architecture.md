@@ -1730,27 +1730,398 @@
 
 1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
 
+
+   Answer: Cache misses are classified into three kinds, known as the three Cs: compulsory, capacity and conflict.
+
+   Compulsory miss (also called a cold miss or a first-reference miss):
+   - It occurs the very first time a block of data is referenced, because that block has never been in the cache before.
+   - It is unavoidable regardless of how large the cache is made, since the data must be brought in from main memory at least once.
+   - It dominates at the start of a program, when the cache is empty, which is why it is called a cold start.
+   - Remedies: increase the block size, so that one miss brings in more useful neighbouring data (spatial locality), or use hardware or software prefetching to fetch a block before it is actually needed.
+
+   Capacity miss:
+   - It occurs when the working set of the program is larger than the cache, so a block that was previously loaded had to be evicted to make room, and is then referenced again.
+   - It would not happen in a cache of unlimited size, which is exactly what distinguishes it from a compulsory miss.
+   - It becomes worse as the program's active data set grows relative to the cache.
+   - Remedies: increase the cache size, add another level of cache, or restructure the program so that its working set is smaller, for example by blocking or tiling a matrix computation.
+
+   Conflict miss (mentioned for completeness):
+   - It occurs in a direct-mapped or set-associative cache when several blocks map to the same set and evict one another, even though the cache as a whole still has free space elsewhere.
+   - Remedy: raise the associativity, or use a victim cache.
+
+   | Point | Compulsory miss | Capacity miss |
+   |---|---|---|
+   | Cause | The block has never been referenced before | The block was evicted because the cache was too small |
+   | Occurs when | The first access to any block | On re-access after eviction |
+   | Would a larger cache help? | No | Yes |
+   | Would an infinite cache help? | No | Yes, it would eliminate them entirely |
+   | Typical timing | At program start-up, or on first touch of new data | During steady-state execution of a large working set |
+   | Main remedy | Larger blocks, prefetching | Larger cache, more cache levels, better data locality in the program |
 2. **(d) What is cache memory? Explain the concepts of (i) Cache hit and (ii) Cache miss.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
 
+
+   Answer: Cache memory is a small, very fast memory placed between the CPU and the main memory. It is built from SRAM and it holds copies of the instructions and data that the processor has used most recently or is most likely to use next. Its purpose is to bridge the large speed gap between the processor, which works in fractions of a nanosecond, and DRAM main memory, which takes 50 to 100 nanoseconds.
+
+   Levels: L1 is the smallest and fastest and is private to each core, often split into separate instruction and data caches; L2 is larger and slower and is usually per core; L3 is the largest and is shared by all cores.
+
+   Why it works: the principle of locality of reference.
+   - Temporal locality: a location that has just been accessed is very likely to be accessed again soon, for example a loop counter.
+   - Spatial locality: locations near a recently accessed one are likely to be accessed soon, for example successive elements of an array. This is why data is brought in as a whole block rather than a single byte.
+
+   (i) Cache hit:
+   - A cache hit occurs when the data the CPU requests is already present in the cache, so it can be supplied within a few nanoseconds without going to main memory.
+   - The proportion of accesses that are hits is called the hit ratio: hit ratio = number of hits / total number of accesses.
+   - A well-designed cache achieves a hit ratio of 90 to 99 per cent.
+   - Effect: the CPU is not stalled, so the program runs at full speed.
+
+   (ii) Cache miss:
+   - A cache miss occurs when the requested data is not in the cache, so the CPU must wait while the whole block containing it is fetched from main memory and placed in the cache.
+   - Miss ratio = 1 - hit ratio.
+   - A miss costs the miss penalty, which is the time to fetch the block, typically 50 to 200 clock cycles.
+   - Types of miss: compulsory (first ever reference), capacity (the working set exceeds the cache) and conflict (several blocks map to the same set).
+
+   Average memory access time:
+   AMAT = hit time + (miss ratio x miss penalty)
+
+   Worked example: if the hit time is 2 ns, the miss penalty is 100 ns and the hit ratio is 95 per cent, then
+   AMAT = 2 + (0.05 x 100) = 2 + 5 = 7 ns.
+   Without a cache every access would take about 100 ns, so the cache has made memory access roughly fourteen times faster.
 3. **Write advantage and disadvantage of direct mapping and associative mapping between cache memory and main memory.** *[BCIC Assistant Programmer 14.02.2025 compact it 1330 (ET: BUET)]*
 
+
+   Answer: Direct mapping and associative mapping are two ways of deciding where a block of main memory may be placed in the cache.
+
+   Direct mapping:
+   - Each main memory block can go into exactly one cache line, determined by cache line number = (block number) modulo (number of cache lines).
+   - The address is divided into three fields: tag, index (line number) and block offset.
+
+   Advantages of direct mapping:
+   - Simplest and cheapest to implement, because only one line has to be checked on every access.
+   - Fastest lookup, since a single tag comparison is required; no search is needed.
+   - No replacement algorithm is needed, because there is only one possible place for a block, so no decision has to be made about which block to evict.
+   - Requires the least hardware, so it is well suited to a large L2 or L3 cache where cost matters.
+
+   Disadvantages of direct mapping:
+   - Suffers heavily from conflict misses. If a program repeatedly uses two blocks that happen to map to the same line, they evict each other on every access even though the rest of the cache is empty. This is called thrashing.
+   - Cache utilisation can be poor, since some lines are heavily contended while others sit unused.
+   - The hit ratio is the lowest of the three schemes.
+   - Performance is sensitive to the exact addresses a program uses, so it can be unpredictable.
+
+   Associative mapping (fully associative):
+   - Any main memory block may be placed in any cache line.
+   - The address is divided into only two fields: tag and block offset.
+
+   Advantages of associative mapping:
+   - Complete flexibility of placement, so conflict misses are eliminated entirely; a miss occurs only if the cache is genuinely full or the block has never been seen.
+   - Highest hit ratio and the best possible utilisation of the cache.
+   - Performance is not sensitive to the particular addresses used by the program.
+
+   Disadvantages of associative mapping:
+   - Very expensive, because every line's tag must be compared with the requested tag simultaneously, which requires an array of comparators or a content-addressable memory.
+   - The tag field is long, since it must hold the whole block number, so more storage is wasted on tags.
+   - Slower access or higher power consumption, because of the parallel comparison of all tags.
+   - A replacement algorithm such as LRU, FIFO or random is required, and implementing true LRU across many lines is itself costly.
+   - Impractical for a large cache; it is used only for small structures such as the TLB.
+
+   Set-associative mapping, the practical compromise:
+   - The cache is divided into sets of k lines each, and a block maps to one set but may occupy any line within it.
+   - Only k comparators are needed, so it is far cheaper than fully associative, and conflict misses are greatly reduced compared with direct mapping.
+   - Typical modern designs use 4-way or 8-way set-associative caches, which give almost the hit ratio of a fully associative cache at a small fraction of the cost. This is why nearly every real processor uses it.
 4. **How many total bits are required for a direct mapped cache with 16KB of data and 4-word blocks? Assuming a 32 bit address?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 421 (ET: BIBM)]*
 
+
+   Answer: Given:
+   - Cache data size = 16 KB
+   - Block size = 4 words
+   - Address size = 32 bits
+   - Word size = 4 bytes (32 bits), which follows from the 32-bit architecture
+   - Mapping = direct mapped
+
+   Step 1 - find the block size in bytes:
+   - Block size = 4 words x 4 bytes per word = 16 bytes
+
+   Step 2 - find the number of blocks (cache lines):
+   - Number of blocks = cache size / block size
+   - = 16 KB / 16 bytes
+   - = 16,384 / 16
+   - = 1,024 blocks = 2^10
+
+   Step 3 - find the index field:
+   - In a direct mapped cache the index selects one of the 1,024 lines
+   - Index bits = log2(1,024) = 10 bits
+
+   Step 4 - find the offset field:
+   - The offset selects a byte within the 16-byte block
+   - Offset bits = log2(16) = 4 bits
+   - These 4 bits are often described as 2 bits to select the word within the block and 2 bits to select the byte within the word
+
+   Step 5 - find the tag field:
+   - Tag bits = address bits - index bits - offset bits
+   - = 32 - 10 - 4
+   - = 18 bits
+
+   Address division:
+
+   | Field | Tag | Index | Block offset |
+   |---|---|---|---|
+   | Bits | 18 | 10 | 4 |
+   | Purpose | Identifies which memory block is stored in the line | Selects the cache line | Selects the byte within the block |
+
+   Step 6 - find the total number of bits in the cache:
+   - Each line stores: the data block, the tag, and one valid bit
+   - Data per line = 4 words x 32 bits = 128 bits
+   - Tag per line = 18 bits
+   - Valid bit = 1 bit
+   - Total per line = 128 + 18 + 1 = 147 bits
+   - Total for the cache = 1,024 x 147 = 150,528 bits
+
+   Final answers:
+   - Tag = 18 bits, Index = 10 bits, Offset = 4 bits
+   - Total cache size including overhead = 150,528 bits = 147 Kbits = 18,816 bytes = 18.375 KB
+
+   Observation: the cache holds 16 KB of useful data but occupies 18.375 KB of storage, so the overhead of tags and valid bits is about 15 per cent. Using a larger block size would reduce this overhead, because fewer lines would be needed and therefore fewer tags.
 5. **6.3 Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+   Answer: Cache misses are classified into three kinds, known as the three Cs: compulsory, capacity and conflict.
+
+   Compulsory miss (also called a cold miss or a first-reference miss):
+   - It occurs the very first time a block of data is referenced, because that block has never been in the cache before.
+   - It is unavoidable regardless of how large the cache is made, since the data must be brought in from main memory at least once.
+   - It dominates at the start of a program, when the cache is empty, which is why it is called a cold start.
+   - Remedies: increase the block size, so that one miss brings in more useful neighbouring data (spatial locality), or use hardware or software prefetching to fetch a block before it is actually needed.
+
+   Capacity miss:
+   - It occurs when the working set of the program is larger than the cache, so a block that was previously loaded had to be evicted to make room, and is then referenced again.
+   - It would not happen in a cache of unlimited size, which is exactly what distinguishes it from a compulsory miss.
+   - It becomes worse as the program's active data set grows relative to the cache.
+   - Remedies: increase the cache size, add another level of cache, or restructure the program so that its working set is smaller, for example by blocking or tiling a matrix computation.
+
+   Conflict miss (mentioned for completeness):
+   - It occurs in a direct-mapped or set-associative cache when several blocks map to the same set and evict one another, even though the cache as a whole still has free space elsewhere.
+   - Remedy: raise the associativity, or use a victim cache.
+
+   | Point | Compulsory miss | Capacity miss |
+   |---|---|---|
+   | Cause | The block has never been referenced before | The block was evicted because the cache was too small |
+   | Occurs when | The first access to any block | On re-access after eviction |
+   | Would a larger cache help? | No | Yes |
+   | Would an infinite cache help? | No | Yes, it would eliminate them entirely |
+   | Typical timing | At program start-up, or on first touch of new data | During steady-state execution of a large working set |
+   | Main remedy | Larger blocks, prefetching | Larger cache, more cache levels, better data locality in the program |
 6. **Write Concept of cache memory in computer. How its change performance of computer?** *[BITAC Assistant Programmer 27.10.2023 compact it 559 (ET: BUTEX)]*
 
+
+   Answer: Concept of cache memory:
+
+   Cache memory is a small, extremely fast memory placed between the CPU and the main memory. It is built from SRAM and holds copies of the instructions and data that the processor has used most recently or is most likely to need next.
+
+   The problem it solves: the processor works in fractions of a nanosecond while DRAM main memory needs 50 to 100 nanoseconds. Without a cache the CPU would spend most of its time idle, waiting for memory. This gap is called the memory wall, and it has widened steadily because processor speed has improved much faster than memory latency.
+
+   The principle that makes it work is locality of reference:
+   - Temporal locality: an item just used is likely to be used again very soon, for example a loop variable.
+   - Spatial locality: items stored near a recently used item are likely to be needed next, for example successive elements of an array. This is why a whole block is fetched rather than a single byte.
+
+   Levels: L1 is small (32 to 64 KB), fastest, and private to each core, usually split into instruction and data caches. L2 is larger (256 KB to 2 MB) and usually per core. L3 is the largest (8 to 64 MB) and shared by all cores.
+
+   Operation: when the CPU requests an address, the cache is searched first. If the data is present it is a cache hit and the data is delivered in a few nanoseconds. If not it is a cache miss, and the whole block containing the address is fetched from main memory, placed in the cache, and then delivered.
+
+   How it changes the performance of a computer:
+
+   - It reduces the average memory access time, which is the direct measure of its effect:
+     AMAT = hit time + (miss ratio x miss penalty)
+   - Worked example: with a hit time of 2 ns, a miss penalty of 100 ns and a hit ratio of 95 per cent,
+     AMAT = 2 + (0.05 x 100) = 7 ns, against 100 ns with no cache. Memory access becomes roughly fourteen times faster.
+   - It keeps the CPU busy: fewer stall cycles mean more instructions completed per second, so the effective instructions per cycle rises.
+   - It reduces traffic on the memory bus, which matters greatly in a multi-core system where several cores share one memory controller.
+   - It saves energy, because reading from a small on-chip SRAM consumes far less power than driving the external bus and activating a DRAM row.
+   - It benefits programs with good locality most: loops, array processing and repeated function calls run dramatically faster, while random access over a very large data set benefits little.
+   - Larger and better-organised caches are one of the main reasons a newer processor outperforms an older one at the same clock speed.
+
+   Limits: a cache cannot help with compulsory misses, its benefit falls off as the cache grows (diminishing returns), it occupies expensive die area, and in multi-core systems it requires cache coherence protocols such as MESI to keep the copies in different cores consistent.
 7. **Suppose we have a 16 KB of data in a direct mapped cache with 4 word blocks. Determine the size of the tag, index and offset fields if we are using a 32-bit architecture.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 439 (ET: BIBM)]*
 
+
+   Answer: Given:
+   - Cache data size = 16 KB
+   - Block size = 4 words
+   - Address size = 32 bits
+   - Word size = 4 bytes (32 bits), which follows from the 32-bit architecture
+   - Mapping = direct mapped
+
+   Step 1 - find the block size in bytes:
+   - Block size = 4 words x 4 bytes per word = 16 bytes
+
+   Step 2 - find the number of blocks (cache lines):
+   - Number of blocks = cache size / block size
+   - = 16 KB / 16 bytes
+   - = 16,384 / 16
+   - = 1,024 blocks = 2^10
+
+   Step 3 - find the index field:
+   - In a direct mapped cache the index selects one of the 1,024 lines
+   - Index bits = log2(1,024) = 10 bits
+
+   Step 4 - find the offset field:
+   - The offset selects a byte within the 16-byte block
+   - Offset bits = log2(16) = 4 bits
+   - These 4 bits are often described as 2 bits to select the word within the block and 2 bits to select the byte within the word
+
+   Step 5 - find the tag field:
+   - Tag bits = address bits - index bits - offset bits
+   - = 32 - 10 - 4
+   - = 18 bits
+
+   Address division:
+
+   | Field | Tag | Index | Block offset |
+   |---|---|---|---|
+   | Bits | 18 | 10 | 4 |
+   | Purpose | Identifies which memory block is stored in the line | Selects the cache line | Selects the byte within the block |
+
+   Step 6 - find the total number of bits in the cache:
+   - Each line stores: the data block, the tag, and one valid bit
+   - Data per line = 4 words x 32 bits = 128 bits
+   - Tag per line = 18 bits
+   - Valid bit = 1 bit
+   - Total per line = 128 + 18 + 1 = 147 bits
+   - Total for the cache = 1,024 x 147 = 150,528 bits
+
+   Final answers:
+   - Tag = 18 bits, Index = 10 bits, Offset = 4 bits
+   - Total cache size including overhead = 150,528 bits = 147 Kbits = 18,816 bytes = 18.375 KB
+
+   Observation: the cache holds 16 KB of useful data but occupies 18.375 KB of storage, so the overhead of tags and valid bits is about 15 per cent. Using a larger block size would reduce this overhead, because fewer lines would be needed and therefore fewer tags.
 8. **What is the use of cache memory?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
+
+   Answer: The use of cache memory is to bridge the speed gap between the very fast CPU and the comparatively slow main memory, so that the processor spends less time waiting for data.
+
+   Specific uses:
+   - Storing frequently used data and instructions: the items a program uses repeatedly, such as loop bodies and loop counters, are kept where they can be reached in a few nanoseconds.
+   - Storing recently used data: by temporal locality, whatever has just been used is likely to be used again shortly, so it is retained.
+   - Prefetching neighbouring data: because a whole block is fetched on a miss, the neighbouring items are already present when they are needed, which exploits spatial locality.
+   - Reducing average memory access time, which is the direct performance benefit.
+   - Reducing traffic on the system bus, which matters especially when several cores share one memory controller.
+   - Reducing power consumption, since an on-chip SRAM access uses far less energy than an external DRAM access.
+   - Holding the results of address translation in the TLB, which is itself a specialised cache.
+   - Buffering writes, so the CPU need not wait for a slow memory write to complete.
+
+   Where caches appear beyond the CPU: disk caches inside a drive or in the operating system, web browser caches, DNS caches, database buffer pools and content delivery networks all apply the same idea at different scales.
+
+   Effect in numbers: with a hit time of 2 ns, a miss penalty of 100 ns and a hit ratio of 95 per cent, the average access time is 2 + (0.05 x 100) = 7 ns instead of 100 ns, so memory appears roughly fourteen times faster than it really is.
 9. **Some of the factors determine the performance of a computer system. Cache memory is one of them. Why cache memory is one of the factors to determine the performance of a computer system?** *[BTRC Assistant Director (Technical) 2021 compact it 807 (ET: IBA)]*
 
+
+   Answer: Cache memory determines the performance of a computer system because the processor can only run as fast as the data reaches it, and the cache is what decides how often the processor has to wait.
+
+   Reasons:
+
+   - It closes the memory wall. A modern CPU executes an instruction in a fraction of a nanosecond, while DRAM main memory needs 50 to 100 nanoseconds, which is one to two hundred processor cycles. Without a cache the processor would be idle for the great majority of its cycles regardless of how high its clock speed was.
+   - It determines the average memory access time directly:
+     AMAT = hit time + (miss ratio x miss penalty)
+     A change in the hit ratio therefore changes the effective speed of the whole machine. Improving the hit ratio from 90 to 98 per cent, with a hit time of 2 ns and a miss penalty of 100 ns, reduces AMAT from 12 ns to 4 ns, that is a threefold improvement, with no change in clock speed at all.
+   - It governs how many stall cycles the pipeline suffers. A cache miss empties the pipeline of useful work for a hundred cycles or more, so miss rate translates almost directly into lost instructions per cycle.
+   - Its size and organisation set the working set that can be held. A program whose active data fits in the cache runs several times faster than the same program on a slightly larger data set that does not fit. This is why the same benchmark shows a sharp performance cliff as the data size crosses the cache size.
+   - It reduces contention on the shared memory bus, which is a limiting factor in multi-core processors where several cores compete for one memory controller.
+   - The number of levels matters: L1 for speed, L2 for capacity per core, L3 shared to avoid duplicate fetches and to allow cores to share data cheaply.
+   - Its associativity and replacement policy determine the number of conflict misses.
+   - It saves energy, and since modern processors are limited by thermal budget, energy saved is performance gained through higher sustained clocks.
+
+   Practical evidence: two processors of the same generation and the same clock speed but with different cache sizes show clearly different performance, and server processors are given very large L3 caches for exactly this reason. Cache is therefore listed alongside clock speed, core count, instructions per cycle and memory bandwidth as one of the principal determinants of computer performance.
 10. **Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit. The average read access time in nanoseconds is ______.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 864 (ET: BUET)]*
 
+
+    Answer: Given:
+    - Time on a cache hit = 5 nanoseconds
+    - Time on a cache miss = 50 nanoseconds
+    - Hit ratio = 80 per cent = 0.8
+    - Miss ratio = 1 - 0.8 = 0.2
+
+    Step 1 - write the formula for the average access time as a weighted average:
+    - Average access time = (hit ratio x hit time) + (miss ratio x miss time)
+
+    Step 2 - substitute the values:
+    - = (0.8 x 5) + (0.2 x 50)
+
+    Step 3 - compute each term:
+    - 0.8 x 5 = 4
+    - 0.2 x 50 = 10
+
+    Step 4 - add:
+    - Average access time = 4 + 10 = 14 nanoseconds
+
+    Final answer: 14 nanoseconds.
+
+    Note on the two common formulations: the question states that a miss takes 50 ns in total, so the simple weighted average above is correct. If instead the problem had said that a miss costs a penalty of 50 ns in addition to the hit time, the formula would be
+    AMAT = hit time + (miss ratio x miss penalty) = 5 + (0.2 x 50) = 15 ns.
+    The wording "takes 50 nanoseconds on a cache miss" means the total, so 14 ns is the answer here.
+
+    Observation: raising the hit ratio from 80 to 95 per cent would give (0.95 x 5) + (0.05 x 50) = 4.75 + 2.5 = 7.25 ns, almost halving the access time. This shows how strongly the hit ratio governs system performance.
 11. **Cache memory কী কাজে ব্যবহৃত হয়? Compiler and Interpreater -এর মধ্যে পার্থক্য লিখুন।** *[41th BCS 2021 compact it 880-881 (ET: N/A)]*
 
+
+    Answer:
+
+    ক্যাশে মেমোরির ব্যবহার:
+
+    ক্যাশে মেমোরি হলো সিপিইউ ও প্রধান মেমোরির (RAM) মধ্যবর্তী একটি ছোট কিন্তু অত্যন্ত দ্রুতগতির স্মৃতি, যা SRAM প্রযুক্তিতে তৈরি। এর কাজ নিচে দেওয়া হলো।
+
+    - সিপিইউ ও RAM এর গতির বিশাল ব্যবধান কমানো। সিপিইউ ন্যানোসেকেন্ডের ভগ্নাংশে কাজ করে, আর RAM এর অ্যাক্সেস সময় ৫০ থেকে ১০০ ন্যানোসেকেন্ড। ক্যাশে না থাকলে সিপিইউ-কে বেশির ভাগ সময় বসে থাকতে হতো।
+    - সাম্প্রতিক ও ঘন ঘন ব্যবহৃত নির্দেশ ও তথ্যের অনুলিপি ধরে রাখা, যাতে পরের বার তা কয়েক ন্যানোসেকেন্ডেই পাওয়া যায়।
+    - একটি ব্লক আনার সময় পার্শ্ববর্তী তথ্যও চলে আসায় ভবিষ্যতের অনুরোধ আগেই পূরণ হয়ে যায়।
+    - মেমোরি বাসের ট্রাফিক কমানো, যা মাল্টি-কোর প্রসেসরে বিশেষভাবে গুরুত্বপূর্ণ।
+    - বিদ্যুৎ খরচ কমানো, কারণ চিপের ভেতরের ছোট SRAM পড়তে বাইরের DRAM পড়ার চেয়ে অনেক কম শক্তি লাগে।
+    - গড় মেমোরি অ্যাক্সেস সময় (AMAT) কমিয়ে সামগ্রিক কর্মদক্ষতা বাড়ানো।
+
+    স্তরভেদ: L1 (ছোট ও দ্রুততম, প্রতিটি কোরে আলাদা), L2 (মাঝারি), L3 (সবচেয়ে বড়, সব কোরের মধ্যে ভাগাভাগি)।
+
+    Compiler ও Interpreter এর মধ্যে পার্থক্য:
+
+    | বিষয় | Compiler | Interpreter |
+    |---|---|---|
+    | অনুবাদ পদ্ধতি | সম্পূর্ণ সোর্স কোড একবারে অনুবাদ করে | এক লাইন করে অনুবাদ ও সম্পাদন করে |
+    | আউটপুট | একটি স্বতন্ত্র অবজেক্ট বা এক্সিকিউটেবল ফাইল তৈরি করে | কোনো আলাদা ফাইল তৈরি করে না |
+    | সম্পাদনের গতি | দ্রুত, কারণ অনুবাদ আগেই শেষ হয়ে যায় | ধীর, কারণ প্রতিবার চালানোর সময় অনুবাদ করতে হয় |
+    | ত্রুটি নির্ণয় | সম্পূর্ণ প্রোগ্রাম স্ক্যান করে সব ত্রুটি একসঙ্গে দেখায় | প্রথম ত্রুটি পেলেই থেমে যায় ও সেটি দেখায় |
+    | ডিবাগিং | তুলনামূলক কঠিন, কারণ ত্রুটির তালিকা দীর্ঘ হয় | সহজ, কারণ ত্রুটির অবস্থান তাৎক্ষণিকভাবে জানা যায় |
+    | মেমোরি ব্যবহার | বেশি, কারণ অবজেক্ট কোড সংরক্ষণ করতে হয় | কম |
+    | পুনরায় চালানো | একবার কম্পাইল করে বারবার চালানো যায় | প্রতিবারই নতুন করে অনুবাদ করতে হয় |
+    | সোর্স কোডের প্রয়োজন | চালানোর সময় প্রয়োজন হয় না | প্রতিবার চালানোর সময় প্রয়োজন হয় |
+    | প্ল্যাটফর্ম নির্ভরতা | অবজেক্ট কোড নির্দিষ্ট প্ল্যাটফর্মের জন্য | সোর্স কোড যেকোনো প্ল্যাটফর্মে চলে, যদি ইন্টারপ্রেটার থাকে |
+    | উদাহরণ ভাষা | C, C++, Java (বাইটকোডে), Go, Rust | Python, JavaScript, PHP, Ruby, BASIC |
+
+    উল্লেখযোগ্য: জাভা দুটোই ব্যবহার করে। জাভা কম্পাইলার সোর্স কোডকে বাইটকোডে অনুবাদ করে, আর জাভা ভার্চুয়াল মেশিন সেই বাইটকোড ইন্টারপ্রেট করে অথবা JIT (Just-In-Time) কম্পাইলারের মাধ্যমে মেশিন কোডে রূপান্তর করে চালায়।
 12. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** *[BPSC Assistant Network Engineer 2020 compact it 951-952 (ET: N/A)], [BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
+
+
+    Answer: ক্যাশে মেমোরি (Cache Memory) হলো সিপিইউ ও প্রধান মেমোরির মধ্যবর্তী একটি ছোট আকারের অত্যন্ত দ্রুতগতির স্মৃতি, যা SRAM প্রযুক্তিতে তৈরি। এতে সিপিইউ-এর সদ্য ব্যবহৃত ও ঘন ঘন ব্যবহৃত নির্দেশ ও তথ্যের অনুলিপি রাখা হয়, যাতে সিপিইউ-কে ধীরগতির RAM পর্যন্ত যেতে না হয়।
+
+    কেন প্রয়োজন: সিপিইউ ন্যানোসেকেন্ডের ভগ্নাংশে কাজ করে, কিন্তু DRAM এর অ্যাক্সেস সময় ৫০ থেকে ১০০ ন্যানোসেকেন্ড। এই ব্যবধানকে বলা হয় "মেমোরি ওয়াল"। ক্যাশে এই ব্যবধান পূরণ করে।
+
+    কাজের ভিত্তি — স্থানিকতার নীতি (locality of reference):
+    - কালিক স্থানিকতা (temporal locality): যে তথ্য এইমাত্র ব্যবহৃত হয়েছে, তা শীঘ্রই আবার লাগার সম্ভাবনা বেশি।
+    - স্থানিক স্থানিকতা (spatial locality): ব্যবহৃত তথ্যের পাশের তথ্যও শীঘ্রই লাগার সম্ভাবনা বেশি। তাই একটি বাইট নয়, পুরো ব্লক আনা হয়।
+
+    স্তরভেদ: L1 (৩২-৬৪ কিলোবাইট, প্রতিটি কোরে আলাদা), L2 (২৫৬ কিলোবাইট থেকে ২ মেগাবাইট), L3 (৮ থেকে ৬৪ মেগাবাইট, সব কোরের মধ্যে ভাগাভাগি)।
+
+    প্রধান মেমোরির সঙ্গে ক্যাশে মেমোরির পার্থক্য:
+
+    | বিষয় | ক্যাশে মেমোরি | প্রধান মেমোরি (RAM) |
+    |---|---|---|
+    | প্রযুক্তি | SRAM, ফ্লিপ-ফ্লপ ভিত্তিক | DRAM, ক্যাপাসিটর ভিত্তিক |
+    | গতি | অত্যন্ত দ্রুত, ১ থেকে ২০ ন্যানোসেকেন্ড | ধীর, ৫০ থেকে ১০০ ন্যানোসেকেন্ড |
+    | ধারণক্ষমতা | খুব কম, কিলোবাইট থেকে কয়েক মেগাবাইট | অনেক বেশি, গিগাবাইট |
+    | দাম (প্রতি বাইট) | অত্যন্ত বেশি | তুলনামূলক কম |
+    | অবস্থান | সিপিইউ চিপের ভেতরে বা খুব কাছে | মাদারবোর্ডে আলাদা মডিউল হিসেবে |
+    | রিফ্রেশ | প্রয়োজন হয় না | প্রতি কয়েক মিলিসেকেন্ডে প্রয়োজন |
+    | পরিচালনা | হার্ডওয়্যার স্বয়ংক্রিয়ভাবে করে, প্রোগ্রামার জানেন না | অপারেটিং সিস্টেমের মেমোরি ম্যানেজার করে |
+    | বিষয়বস্তু | প্রধান মেমোরির একটি অংশের অনুলিপি | চলমান প্রোগ্রাম ও তথ্যের মূল কপি |
+    | ঠিকানাযোগ্যতা | প্রোগ্রাম সরাসরি ঠিকানা দিয়ে ডাকতে পারে না | প্রোগ্রাম সরাসরি ঠিকানা দিয়ে ডাকতে পারে |
+    | বিদ্যুৎ খরচ | প্রতি বাইটে বেশি, কিন্তু অ্যাক্সেসে কম | প্রতি বাইটে কম |
+    | অস্থিতিশীলতা | অস্থিতিশীল (volatile) | অস্থিতিশীল (volatile) |
+
+    গড় অ্যাক্সেস সময়ের সূত্র: AMAT = হিট টাইম + (মিস রেশিও x মিস পেনাল্টি)। উদাহরণস্বরূপ হিট টাইম ২ ন্যানোসেকেন্ড, মিস পেনাল্টি ১০০ ন্যানোসেকেন্ড এবং হিট রেশিও ৯৫ শতাংশ হলে AMAT = ২ + (০.০৫ x ১০০) = ৭ ন্যানোসেকেন্ড, যেখানে ক্যাশে ছাড়া লাগত ১০০ ন্যানোসেকেন্ড।
 
 ## Secondary Storage (HDD vs SSD) (10)
 
