@@ -1194,25 +1194,243 @@
 
 1. **What is the Average of 1 to 49 numbers?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+
+   Answer: The numbers 1, 2, 3, ..., 49 form an arithmetic series.
+
+   Method 1 - using the property of an evenly spaced set:
+   - For a set of consecutive numbers, the average equals the average of the first and the last term.
+   - Average = (first + last) / 2
+   - = (1 + 49) / 2
+   - = 50 / 2
+   - = 25
+
+   Method 2 - using the sum:
+   - Sum of first n natural numbers = n(n + 1) / 2
+   - Sum = 49 x 50 / 2 = 1225
+   - Average = Sum / n = 1225 / 49 = 25
+
+   Final answer: 25
+
+   Note: since 49 is an odd count, the average is also the middle term, which is the 25th number, namely 25 itself.
 2. **দুইটি সংখ্যার গ.সা.গু. ১১ এবং ল.সা.গু. ৭৭০০। একটি সংখ্যা ২৭৫ হলে অপর সংখ্যাটি কত?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
 
+
+   Answer: দুইটি সংখ্যার গুণফল = তাদের গসাগু x লসাগু। এটিই মূল সূত্র।
+
+   ধাপ ১ - সূত্র লেখা:
+   - প্রথম সংখ্যা x দ্বিতীয় সংখ্যা = গসাগু x লসাগু
+
+   ধাপ ২ - মান বসানো:
+   - ২৭৫ x দ্বিতীয় সংখ্যা = ১১ x ৭৭০০
+
+   ধাপ ৩ - ডান পক্ষ হিসাব:
+   - ১১ x ৭৭০০ = ৮৪,৭০০
+
+   ধাপ ৪ - সমাধান:
+   - দ্বিতীয় সংখ্যা = ৮৪,৭০০ / ২৭৫
+   - = ৩০৮
+
+   উত্তর: অপর সংখ্যাটি ৩০৮।
+
+   যাচাই:
+   - ২৭৫ = ৫ x ৫ x ১১ এবং ৩০৮ = ২ x ২ x ৭ x ১১
+   - গসাগু = ১১ (উভয়ের সাধারণ উৎপাদক)
+   - লসাগু = ২ x ২ x ৫ x ৫ x ৭ x ১১ = ৭,৭০০
+   - গুণফল = ২৭৫ x ৩০৮ = ৮৪,৭০০ = ১১ x ৭৭০০। মিলে গেছে।
+
+   গুরুত্বপূর্ণ নোট: এই সূত্র কেবল দুইটি সংখ্যার ক্ষেত্রেই প্রযোজ্য, তিন বা তার বেশি সংখ্যার ক্ষেত্রে নয়। এছাড়া গসাগু সবসময় লসাগুর একটি উৎপাদক হয়।
 3. **What is the largest two-digit natural number (a part of the number system, which includes all positive integers from 1 to infinity)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: The largest two-digit natural number is 99.
+
+   Reasoning:
+   - A two-digit number lies between 10 and 99 inclusive.
+   - The smallest two-digit natural number is 10, and the largest is 99, because 100 has three digits.
+   - There are therefore 99 - 10 + 1 = 90 two-digit natural numbers in all.
+
+   Final answer: 99
+
+   Related facts:
+   - Largest one-digit number: 9
+   - Largest three-digit number: 999; smallest three-digit number: 100
+   - Largest four-digit number: 9999
+   - In general, the largest n-digit number is 10^n - 1.
 4. **If the average of seven consecutive even numbers is 62, then the one-fourth of twice of total of first and sixth number is?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: Step 1 - find the seven consecutive even numbers.
+   - For an evenly spaced set of an odd count, the average equals the middle term.
+   - The middle term is the fourth number, so the fourth number = 62.
+   - Working outwards in steps of 2, the seven numbers are:
+     56, 58, 60, 62, 64, 66, 68
+
+   Step 2 - identify the first and the sixth number:
+   - First number = 56
+   - Sixth number = 66
+
+   Step 3 - find their total:
+   - 56 + 66 = 122
+
+   Step 4 - twice of the total:
+   - 2 x 122 = 244
+
+   Step 5 - one-fourth of that:
+   - 244 / 4 = 61
+
+   Final answer: 61
+
+   Verification of step 1: sum of the seven numbers = 56 + 58 + 60 + 62 + 64 + 66 + 68 = 434, and 434 / 7 = 62. Correct.
 5. **৯৯ + ৯৮ + ৯৭ + ------+৪০ = কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: ধারাটি: ৯৯ + ৯৮ + ৯৭ + ... + ৪০
+
+   এটি একটি সমান্তর ধারা, যেখানে প্রথম পদ a = ৯৯, শেষ পদ l = ৪০ এবং সাধারণ অন্তর d = -১।
+
+   ধাপ ১ - পদসংখ্যা নির্ণয়:
+   - n = (শেষ পদ - প্রথম পদ) / d + ১
+   - = (৪০ - ৯৯) / (-১) + ১
+   - = ৫৯ + ১
+   - = ৬০টি পদ
+
+   ধাপ ২ - সমষ্টির সূত্র প্রয়োগ:
+   - S = (n / 2)(প্রথম পদ + শেষ পদ)
+   - = (৬০ / ২)(৯৯ + ৪০)
+   - = ৩০ x ১৩৯
+
+   ধাপ ৩ - গুণ:
+   - = ৪,১৭০
+
+   উত্তর: ৪,১৭০
+
+   বিকল্প পদ্ধতি (বিয়োগ করে):
+   - ১ থেকে ৯৯ পর্যন্ত সমষ্টি = ৯৯ x ১০০ / ২ = ৪,৯৫০
+   - ১ থেকে ৩৯ পর্যন্ত সমষ্টি = ৩৯ x ৪০ / ২ = ৭৮০
+   - নির্ণেয় সমষ্টি = ৪,৯৫০ - ৭৮০ = ৪,১৭০। একই উত্তর।
 6. **কোন ক্ষুদ্রতম সংখ্যাকে ৩, ৫ এবং ৬ দ্বারা ভাগ করলে ভাগশেষ ১ হবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: ধাপ ১ - সমস্যার ধরন চিহ্নিত করা:
+   - ৩, ৫ ও ৬ দ্বারা ভাগ করলে প্রতিবার ভাগশেষ ১ থাকবে। অর্থাৎ সংখ্যাটি থেকে ১ বাদ দিলে যা থাকে তা ৩, ৫ ও ৬ দ্বারা নিঃশেষে বিভাজ্য।
+   - সুতরাং নির্ণেয় সংখ্যা = (৩, ৫ ও ৬ এর লসাগু) + ১
+
+   ধাপ ২ - লসাগু নির্ণয়:
+   - ৩ = ৩
+   - ৫ = ৫
+   - ৬ = ২ x ৩
+   - লসাগু = ২ x ৩ x ৫ = ৩০
+
+   ধাপ ৩ - ভাগশেষ যোগ:
+   - নির্ণেয় ক্ষুদ্রতম সংখ্যা = ৩০ + ১ = ৩১
+
+   উত্তর: ৩১
+
+   যাচাই:
+   - ৩১ / ৩ = ১০ ভাগফল, ভাগশেষ ১
+   - ৩১ / ৫ = ৬ ভাগফল, ভাগশেষ ১
+   - ৩১ / ৬ = ৫ ভাগফল, ভাগশেষ ১
+   তিনটি ক্ষেত্রেই ভাগশেষ ১। মিলে গেছে।
+
+   সাধারণ নিয়ম: এমন সব সংখ্যার সাধারণ রূপ হলো ৩০k + ১, অর্থাৎ ৩১, ৬১, ৯১, ১২১ ইত্যাদি; এর মধ্যে ক্ষুদ্রতমটি ৩১।
 7. **১. তিন অংকের বৃহত্তম সংখ্যা ও ক্ষুদ্রতম সংখ্যার পার্থক্য কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+
+   Answer: ধাপ ১ - তিন অংকের বৃহত্তম সংখ্যা:
+   - প্রতিটি স্থানে সর্বোচ্চ অংক ৯ বসালে পাওয়া যায় ৯৯৯
+
+   ধাপ ২ - তিন অংকের ক্ষুদ্রতম সংখ্যা:
+   - শতকের ঘরে ০ বসানো যায় না, তাই সর্বনিম্ন ১ বসিয়ে বাকি ঘরে ০ বসালে পাওয়া যায় ১০০
+
+   ধাপ ৩ - পার্থক্য নির্ণয়:
+   - ৯৯৯ - ১০০ = ৮৯৯
+
+   উত্তর: ৮৯৯
+
+   সংশ্লিষ্ট তথ্য:
+   - তিন অংকের সংখ্যা মোট = ৯৯৯ - ১০০ + ১ = ৯০০টি
+   - দুই অংকের বৃহত্তম ও ক্ষুদ্রতম সংখ্যার পার্থক্য = ৯৯ - ১০ = ৮৯
+   - চার অংকের ক্ষেত্রে = ৯৯৯৯ - ১০০০ = ৮৯৯৯
 8. **৪. দুইটি সংখ্যার গ. সা. গু ও ল. সা. গু যথাক্রমে ১২ ও ১৫। সংখ্যা দুইটির গুনফল কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+
+   Answer: ধাপ ১ - মূল সূত্র:
+   - দুইটি সংখ্যার গুণফল = তাদের গসাগু x লসাগু
+
+   ধাপ ২ - মান বসানো:
+   - গুণফল = ১২ x ১৫
+   - = ১৮০
+
+   উত্তর: সংখ্যা দুইটির গুণফল ১৮০।
+
+   গুরুত্বপূর্ণ পর্যবেক্ষণ: প্রশ্নের উপাত্তটি গাণিতিকভাবে সঙ্গতিপূর্ণ নয়। কারণ গসাগু সবসময় লসাগুর একটি উৎপাদক হতে হয়, কিন্তু এখানে ১৫ কে ১২ দ্বারা নিঃশেষে ভাগ করা যায় না। তাই বাস্তবে গসাগু ১২ এবং লসাগু ১৫ হওয়া কোনো সংখ্যাযুগলের পক্ষে সম্ভব নয়।
+
+   প্রশ্নে যেহেতু কেবল গুণফল চাওয়া হয়েছে, তাই সূত্র প্রয়োগ করে উত্তর ১৮০ লেখাই অভিপ্রেত। <!-- verify -->
+
+   সঠিক উদাহরণ: গসাগু ১২ ও লসাগু ৭২ হলে সংখ্যা দুইটির গুণফল = ১২ x ৭২ = ৮৬৪, এবং সংখ্যাগুলো হতে পারে ২৪ ও ৩৬ (২৪ x ৩৬ = ৮৬৪)।
 9. **১. ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা কয়টি ও কি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+
+   Answer: মৌলিক সংখ্যা হলো এমন স্বাভাবিক সংখ্যা, যা ১ এর চেয়ে বড় এবং যার উৎপাদক কেবল ১ ও সেই সংখ্যাটি নিজে।
+
+   ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা মোট ১০টি।
+
+   সংখ্যাগুলো হলো:
+   - ২, ৩, ৫, ৭, ১১, ১৩, ১৭, ১৯, ২৩, ২৯
+
+   ব্যাখ্যা:
+   - ১ মৌলিক সংখ্যা নয়, কারণ এর উৎপাদক মাত্র একটি।
+   - ২ হলো একমাত্র জোড় মৌলিক সংখ্যা; বাকি সব মৌলিক সংখ্যা বিজোড়।
+   - ৪, ৬, ৮, ৯, ১০, ১২, ১৪, ১৫, ১৬, ১৮, ২০, ২১, ২২, ২৪, ২৫, ২৬, ২৭, ২৮, ৩০ যৌগিক সংখ্যা, কারণ এদের দুইয়ের অধিক উৎপাদক আছে।
+
+   সংশ্লিষ্ট তথ্য:
+   - ১ থেকে ১০০ পর্যন্ত মৌলিক সংখ্যা ২৫টি।
+   - ১ থেকে ৫০ পর্যন্ত মৌলিক সংখ্যা ১৫টি।
+   - যমজ মৌলিক সংখ্যা (পার্থক্য ২): (৩, ৫), (৫, ৭), (১১, ১৩), (১৭, ১৯), (২৯, ৩১)।
 10. **৩. একজনন ক্রিকেটারের 10 ইনিংসে রানের গড় 44.5. 11 তম ইনিংসে কত রান করে আউট হলে, সব ইনিংস মিলিয়ে তার রানের গড় 50 হবে?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+
+    Answer: ধাপ ১ - ১০ ইনিংসে মোট রান নির্ণয়:
+    - মোট রান = গড় x ইনিংস সংখ্যা
+    - = ৪৪.৫ x ১০
+    - = ৪৪৫ রান
+
+    ধাপ ২ - ১১ ইনিংসে কাঙ্ক্ষিত মোট রান নির্ণয়:
+    - প্রয়োজনীয় মোট রান = ৫০ x ১১
+    - = ৫৫০ রান
+
+    ধাপ ৩ - ১১তম ইনিংসে প্রয়োজনীয় রান:
+    - = ৫৫০ - ৪৪৫
+    - = ১০৫ রান
+
+    উত্তর: ১১তম ইনিংসে তাকে ১০৫ রান করতে হবে।
+
+    যাচাই: ৪৪৫ + ১০৫ = ৫৫০ এবং ৫৫০ / ১১ = ৫০। মিলে গেছে।
+
+    দ্রুত পদ্ধতি: গড় ৫.৫ রান বাড়াতে হলে আগের ১০ ইনিংসের জন্য অতিরিক্ত ১০ x ৫.৫ = ৫৫ রান এবং নিজের ইনিংসের জন্য নতুন গড় ৫০ রান, অর্থাৎ মোট ৫০ + ৫৫ = ১০৫ রান।
 11. **৫. দুইটি সংখ্যার গড় xy. একটি সংখ্যা x হলে অপর সংখ্যাটি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+
+
+    Answer: ধরি, অপর সংখ্যাটি = a।
+
+    ধাপ ১ - গড়ের সংজ্ঞা প্রয়োগ:
+    - দুইটি সংখ্যার গড় = (সংখ্যা দুইটির যোগফল) / ২
+    - xy = (x + a) / 2
+
+    ধাপ ২ - উভয় পক্ষকে ২ দিয়ে গুণ:
+    - 2xy = x + a
+
+    ধাপ ৩ - a এর মান নির্ণয়:
+    - a = 2xy - x
+
+    ধাপ ৪ - উৎপাদকে প্রকাশ:
+    - a = x(2y - 1)
+
+    উত্তর: অপর সংখ্যাটি = 2xy - x, অর্থাৎ x(2y - 1)।
+
+    যাচাই: সংখ্যা দুইটির যোগফল = x + (2xy - x) = 2xy, এবং গড় = 2xy / 2 = xy। প্রদত্ত শর্তের সঙ্গে মিলে গেছে।
+
+    সংখ্যা দিয়ে উদাহরণ: x = ৪ ও y = ৩ হলে গড় = ১২। অপর সংখ্যাটি = ২(৪)(৩) - ৪ = ২৪ - ৪ = ২০। যাচাই: (৪ + ২০)/২ = ১২। সঠিক।
 
 ## Geometry & Coordinate Geometry (10)
 
