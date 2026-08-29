@@ -5217,8 +5217,168 @@ class Test {
 ```
 [SO IT 25-07-2026]
 
+
+   Answer: The value printed is 19.
+
+   Step-by-step trace. The variable x is static, so there is one copy shared by every call, and it starts at 5.
+
+   Call fun(3):
+   - n = 3, which is greater than 1, so the recursion continues.
+   - x = x + 2, so x becomes 7.
+   - The statement is return fun(2) + x. Java evaluates the left operand first, so fun(2) is called before x is read.
+
+   Call fun(2):
+   - n = 2, which is greater than 1.
+   - x = x + 2, so x becomes 9.
+   - The statement is return fun(1) + x, and again fun(1) is evaluated first.
+
+   Call fun(1):
+   - n = 1, so the condition n <= 1 is true and the method returns 1 immediately. Note that x is not changed here.
+
+   Return to fun(2):
+   - fun(1) returned 1.
+   - Now x is read, and its current value is 9.
+   - fun(2) returns 1 + 9 = 10.
+
+   Return to fun(3):
+   - fun(2) returned 10.
+   - Now x is read, and its current value is still 9, because no further increment has happened.
+   - fun(3) returns 10 + 9 = 19.
+
+   Output:
+   ```
+   19
+   ```
+
+   Summary table:
+
+   | Call | Value of n | x after the increment | Value returned by the inner call | x when read | Result |
+   |---|---|---|---|---|---|
+   | fun(3) | 3 | 7 | 10 | 9 | 19 |
+   | fun(2) | 2 | 9 | 1 | 9 | 10 |
+   | fun(1) | 1 | not changed | none | not read | 1 |
+
+   The two points that decide the answer:
+   - x is declared static, so it is shared across all the recursive calls rather than each call having its own copy. If it were a local variable the answer would be different.
+   - Java's evaluation order in the expression fun(n-1) + x is strictly left to right. The recursive call is completed first, and only then is x read. Because the deeper calls have already increased x to 9 by that time, the outer call adds 9 rather than the 7 it had just written. A reader who assumes that x is read before the recursive call would wrongly compute 10 + 7 = 17.
 2. **(খ) কোন object-oriented programming language ব্যবহার করে একটি program লিখুন, যা recursive function ব্যবহার করে Fibonacci series প্রদান করবে।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer: নিচে Java ভাষায় একটি প্রোগ্রাম দেওয়া হলো, যা recursive function ব্যবহার করে ফিবোনাচি ধারা তৈরি করে।
+
+   ফিবোনাচি ধারার সংজ্ঞা:
+   - F(0) = 0
+   - F(1) = 1
+   - F(n) = F(n-1) + F(n-2), যেখানে n বৃহত্তর বা সমান 2
+
+   ধারাটি: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+
+   ```java
+   import java.util.Scanner;
+
+   public class FibonacciRecursive {
+
+       // recursive function
+       public static int fibonacci(int n) {
+           if (n == 0) {            // base case 1
+               return 0;
+           }
+           if (n == 1) {            // base case 2
+               return 1;
+           }
+           return fibonacci(n - 1) + fibonacci(n - 2);   // recursive case
+       }
+
+       public static void main(String[] args) {
+           Scanner sc = new Scanner(System.in);
+           System.out.print("How many terms? ");
+           int terms = sc.nextInt();
+
+           System.out.print("Fibonacci series: ");
+           for (int i = 0; i < terms; i++) {
+               System.out.print(fibonacci(i) + " ");
+           }
+           System.out.println();
+           sc.close();
+       }
+   }
+   ```
+
+   নমুনা আউটপুট:
+   ```
+   How many terms? 10
+   Fibonacci series: 0 1 1 2 3 5 8 13 21 34
+   ```
+
+   কার্যপ্রণালীর ব্যাখ্যা, fibonacci(4) এর জন্য:
+
+   ```
+   fibonacci(4)
+   = fibonacci(3) + fibonacci(2)
+   = [fibonacci(2) + fibonacci(1)] + [fibonacci(1) + fibonacci(0)]
+   = [(fibonacci(1) + fibonacci(0)) + 1] + [1 + 0]
+   = [(1 + 0) + 1] + 1
+   = 2 + 1
+   = 3
+   ```
+
+   গুরুত্বপূর্ণ দিক:
+   - Base case অপরিহার্য। n == 0 ও n == 1 এই দুটি শর্ত না থাকলে ফাংশনটি অসীমবার নিজেকে ডাকতে থাকত এবং StackOverflowError ঘটত।
+   - প্রতিটি রিকার্সিভ কল স্ট্যাকে একটি নতুন ফ্রেম তৈরি করে; base case এ পৌঁছালে ফ্রেমগুলো একে একে ফিরে আসে।
+
+   দক্ষতার সমস্যা: সাধারণ রিকার্সিভ পদ্ধতিতে একই মান বারবার হিসাব হয়। fibonacci(5) নির্ণয়ে fibonacci(2) তিনবার এবং fibonacci(3) দুইবার হিসাব হয়। এর সময় জটিলতা O(2^n), তাই n = 40 এর বেশি হলে প্রোগ্রামটি অত্যন্ত ধীর হয়ে যায়।
+
+   সমাধান ১ — Memoization (উপরের দিক থেকে):
+
+   ```java
+   public class FibonacciMemo {
+       static long[] memo;
+
+       public static long fibonacci(int n) {
+           if (n <= 1) return n;
+           if (memo[n] != -1) return memo[n];      // আগে হিসাব করা থাকলে তা-ই ফেরত
+           memo[n] = fibonacci(n - 1) + fibonacci(n - 2);
+           return memo[n];
+       }
+
+       public static void main(String[] args) {
+           int terms = 50;
+           memo = new long[terms + 1];
+           java.util.Arrays.fill(memo, -1);
+
+           for (int i = 0; i < terms; i++) {
+               System.out.print(fibonacci(i) + " ");
+           }
+       }
+   }
+   ```
+
+   এতে সময় জটিলতা O(2^n) থেকে কমে O(n) হয়ে যায়।
+
+   সমাধান ২ — Iterative পদ্ধতি (সবচেয়ে দক্ষ):
+
+   ```java
+   public static long fibonacciIterative(int n) {
+       if (n <= 1) return n;
+       long a = 0, b = 1, c = 0;
+       for (int i = 2; i <= n; i++) {
+           c = a + b;
+           a = b;
+           b = c;
+       }
+       return c;
+   }
+   ```
+
+   এর সময় জটিলতা O(n) এবং স্থান জটিলতা O(1), অর্থাৎ স্ট্যাকও ব্যবহার করতে হয় না।
+
+   তুলনা:
+
+   | পদ্ধতি | সময় জটিলতা | স্থান জটিলতা | মন্তব্য |
+   |---|---|---|---|
+   | সাধারণ রিকার্সন | O(2^n) | O(n) স্ট্যাক | সহজ ও সুস্পষ্ট, কিন্তু ধীর |
+   | Memoization সহ রিকার্সন | O(n) | O(n) | দ্রুত, রিকার্সিভ কাঠামো অক্ষুণ্ন |
+   | Iterative | O(n) | O(1) | সবচেয়ে দক্ষ |
 3. **6.13 Consider the following Java program and determine the integer value printed by the execution of the main() method:** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 ```java
 class Test {
@@ -5236,13 +5396,381 @@ class Test {
 }
 ```
 
+
+   Answer: The value printed is 19.
+
+   Step-by-step trace. The variable x is static, so there is one copy shared by every call, and it starts at 5.
+
+   Call fun(3):
+   - n = 3, which is greater than 1, so the recursion continues.
+   - x = x + 2, so x becomes 7.
+   - The statement is return fun(2) + x. Java evaluates the left operand first, so fun(2) is called before x is read.
+
+   Call fun(2):
+   - n = 2, which is greater than 1.
+   - x = x + 2, so x becomes 9.
+   - The statement is return fun(1) + x, and again fun(1) is evaluated first.
+
+   Call fun(1):
+   - n = 1, so the condition n <= 1 is true and the method returns 1 immediately. Note that x is not changed here.
+
+   Return to fun(2):
+   - fun(1) returned 1.
+   - Now x is read, and its current value is 9.
+   - fun(2) returns 1 + 9 = 10.
+
+   Return to fun(3):
+   - fun(2) returned 10.
+   - Now x is read, and its current value is still 9, because no further increment has happened.
+   - fun(3) returns 10 + 9 = 19.
+
+   Output:
+   ```
+   19
+   ```
+
+   Summary table:
+
+   | Call | Value of n | x after the increment | Value returned by the inner call | x when read | Result |
+   |---|---|---|---|---|---|
+   | fun(3) | 3 | 7 | 10 | 9 | 19 |
+   | fun(2) | 2 | 9 | 1 | 9 | 10 |
+   | fun(1) | 1 | not changed | none | not read | 1 |
+
+   The two points that decide the answer:
+   - x is declared static, so it is shared across all the recursive calls rather than each call having its own copy. If it were a local variable the answer would be different.
+   - Java's evaluation order in the expression fun(n-1) + x is strictly left to right. The recursive call is completed first, and only then is x read. Because the deeper calls have already increased x to 9 by that time, the outer call adds 9 rather than the 7 it had just written. A reader who assumes that x is read before the recursive call would wrongly compute 10 + 7 = 17.
+
 ## Exception Handling (3)
 
 1. **(b) What is exception? Explain how it can be used for debugging a program.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
 
+
+   Answer: An exception is an abnormal event that occurs during the execution of a program and disrupts its normal flow of instructions. Examples are dividing by zero, opening a file that does not exist, using a null reference, or accessing an array element beyond its bounds.
+
+   In Java every exception is an object of a class that descends from java.lang.Throwable, whose two branches are Error and Exception.
+
+   Hierarchy:
+   ```
+   Throwable
+      |
+      +-- Error                  (serious problems the program should not catch)
+      |     +-- OutOfMemoryError, StackOverflowError
+      |
+      +-- Exception
+            +-- IOException, SQLException, ClassNotFoundException   (checked)
+            +-- RuntimeException                                    (unchecked)
+                  +-- NullPointerException
+                  +-- ArithmeticException
+                  +-- ArrayIndexOutOfBoundsException
+                  +-- NumberFormatException
+   ```
+
+   Checked exceptions must either be caught or be declared with throws, and the compiler enforces this. Unchecked exceptions, which descend from RuntimeException, need not be declared; they generally indicate programming errors.
+
+   The five keywords:
+   - try: encloses the code that might throw an exception.
+   - catch: handles a particular type of exception.
+   - finally: contains code that runs whether or not an exception occurred, and is used for cleanup.
+   - throw: raises an exception explicitly.
+   - throws: declares that a method may propagate an exception to its caller.
+
+   How exceptions help in debugging a program:
+
+   - The stack trace pinpoints the fault: when an exception is not caught, the JVM prints the exception type, the message and the complete chain of method calls with line numbers. This tells the developer exactly which line failed and how the program reached it, which is usually the hardest part of debugging.
+
+   - The exception type identifies the category of fault: a NullPointerException says an object was never initialised, a NumberFormatException says the input was not a valid number, an ArrayIndexOutOfBoundsException says a loop bound is wrong. The name itself narrows the search.
+
+   - The program fails at the point of the error rather than continuing with corrupt data. Without exceptions, an error such as a failed file open would return a special value that a careless programmer might ignore, and the real symptom would appear far from the real cause.
+
+   - Custom exceptions carry domain meaning: a class such as InsufficientBalanceException makes a business rule violation immediately obvious in the log, instead of appearing as a mysterious negative number.
+
+   - Logging inside a catch block records the state of the program at the moment of failure, which is often the only evidence available for a fault that occurs in production.
+
+   - The finally block guarantees cleanup, so a file or a database connection is closed even when an error occurs, which prevents a second, misleading failure later.
+
+   - Exception chaining preserves the original cause. Wrapping a low-level SQLException in a high-level DataAccessException while passing the original as the cause keeps the full trail visible.
+
+   Example:
+
+   ```java
+   import java.util.Scanner;
+
+   public class ExceptionDemo {
+
+       static double divide(int a, int b) {
+           if (b == 0) {
+               throw new ArithmeticException("Division by zero attempted with a = " + a);
+           }
+           return (double) a / b;
+       }
+
+       public static void main(String[] args) {
+           int[] numbers = {10, 20, 30};
+
+           try {
+               System.out.println(divide(100, 5));      // works: 20.0
+               System.out.println(numbers[5]);          // throws
+               System.out.println(divide(100, 0));      // never reached
+           }
+           catch (ArithmeticException e) {
+               System.out.println("Arithmetic problem: " + e.getMessage());
+           }
+           catch (ArrayIndexOutOfBoundsException e) {
+               System.out.println("Bad array index: " + e.getMessage());
+               e.printStackTrace();      // prints the full trace for debugging
+           }
+           catch (Exception e) {
+               System.out.println("Some other problem: " + e);
+           }
+           finally {
+               System.out.println("This always runs: cleanup done");
+           }
+
+           System.out.println("Program continues normally");
+       }
+   }
+   ```
+
+   Output:
+   ```
+   20.0
+   Bad array index: Index 5 out of bounds for length 3
+   java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 3
+       at ExceptionDemo.main(ExceptionDemo.java:16)
+   This always runs: cleanup done
+   Program continues normally
+   ```
+
+   The trace names the file, the method and the line, which is precisely what a developer needs.
+
+   Good practice:
+   - Catch the most specific exception first and the general Exception last; the reverse order will not compile.
+   - Never write an empty catch block; swallowing an exception silently destroys the very information that makes debugging possible.
+   - Do not use exceptions for ordinary control flow, because throwing and catching is expensive.
+   - Prefer try-with-resources for anything that must be closed.
 2. **What is difference between exception and error in Java?** *[SPCB Sub-Assistant Programmer 2022 compact it 737 (ET: N/A)]*
 
+
+   Answer: In Java both Error and Exception are subclasses of java.lang.Throwable, but they represent very different kinds of problem.
+
+   | Point | Error | Exception |
+   |---|---|---|
+   | Nature | A serious problem in the run-time environment itself | An abnormal condition that the application can reasonably anticipate |
+   | Cause | Usually beyond the control of the program, such as exhaustion of memory or of the stack | Usually within the program or its inputs, such as bad data or a missing file |
+   | Should it be caught | No; the application generally cannot recover | Yes; it should be caught and handled |
+   | Recovery | Normally impossible | Normally possible |
+   | Checked or unchecked | All errors are unchecked | Checked exceptions must be handled or declared; unchecked ones need not be |
+   | Compiler enforcement | None | Checked exceptions are enforced by the compiler |
+   | Package | java.lang | java.lang, java.io, java.sql and others |
+   | Typical response | Let the program terminate and fix the underlying condition | Handle it, log it, retry, or report it to the user |
+   | Examples | OutOfMemoryError, StackOverflowError, VirtualMachineError, NoClassDefFoundError, AssertionError | IOException, SQLException, ClassNotFoundException, NullPointerException, ArithmeticException, ArrayIndexOutOfBoundsException |
+
+   The hierarchy:
+
+   ```
+   Throwable
+      |
+      +-- Error (unchecked, do not catch)
+      |     +-- OutOfMemoryError
+      |     +-- StackOverflowError
+      |     +-- NoClassDefFoundError
+      |
+      +-- Exception
+            +-- IOException          (checked)
+            +-- SQLException         (checked)
+            +-- ClassNotFoundException (checked)
+            +-- RuntimeException     (unchecked)
+                  +-- NullPointerException
+                  +-- ArithmeticException
+                  +-- ArrayIndexOutOfBoundsException
+                  +-- NumberFormatException
+                  +-- IllegalArgumentException
+   ```
+
+   Examples:
+
+   ```java
+   public class ErrorVsException {
+
+       // causes StackOverflowError: infinite recursion
+       static void recurse() {
+           recurse();
+       }
+
+       public static void main(String[] args) {
+
+           // Exception: anticipated and handled
+           try {
+               int[] arr = new int[3];
+               arr[5] = 10;
+           } catch (ArrayIndexOutOfBoundsException e) {
+               System.out.println("Handled exception: " + e.getMessage());
+           }
+
+           try {
+               int result = 10 / 0;
+           } catch (ArithmeticException e) {
+               System.out.println("Handled exception: " + e.getMessage());
+           }
+
+           // Error: technically catchable, but the program cannot really recover
+           try {
+               recurse();
+           } catch (StackOverflowError e) {
+               System.out.println("Caught an Error, but the state is unreliable");
+           }
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Handled exception: Index 5 out of bounds for length 3
+   Handled exception: / by zero
+   Caught an Error, but the state is unreliable
+   ```
+
+   Why an Error should not be caught: it signals that the JVM or the environment is in a condition the program cannot mend. Catching an OutOfMemoryError and continuing is dangerous, because the very act of handling it may need memory that is not there, and any data structure being built at the time may be half-formed. The correct response is to let the program stop and to fix the cause, for example by increasing the heap or by correcting the recursion.
+
+   The distinction in one line: an Exception is a problem the program is expected to deal with; an Error is a problem that means the program can no longer be trusted to run.
 3. **What is exception handling? Write with an example.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
+
+
+   Answer: Exception handling is the mechanism by which a program deals with abnormal events that occur during execution, so that it can respond to them in a controlled way instead of terminating abruptly.
+
+   Purpose:
+   - To keep the program running when a recoverable problem occurs.
+   - To separate the code that does the work from the code that deals with failure, which keeps both readable.
+   - To make sure resources such as files and connections are released even when something goes wrong.
+   - To report meaningful information to the user and to the developer instead of a raw crash.
+
+   The five keywords in Java:
+   - try: encloses the statements that may throw an exception.
+   - catch: handles a particular type of exception. A try may have several catch blocks.
+   - finally: always executes, whether an exception occurred or not, and is used for cleanup.
+   - throw: raises an exception explicitly, for example when a business rule is violated.
+   - throws: declares in a method signature that the method may pass an exception on to its caller.
+
+   General structure:
+
+   ```java
+   try {
+       // code that might fail
+   }
+   catch (SpecificException e) {
+       // handle that specific case
+   }
+   catch (Exception e) {
+       // handle anything else
+   }
+   finally {
+       // always runs: release resources
+   }
+   ```
+
+   Complete example:
+
+   ```java
+   import java.util.Scanner;
+
+   // a custom exception for a business rule
+   class InsufficientBalanceException extends Exception {
+       public InsufficientBalanceException(String message) {
+           super(message);
+       }
+   }
+
+   class BankAccount {
+       private double balance;
+
+       public BankAccount(double balance) {
+           this.balance = balance;
+       }
+
+       public void withdraw(double amount) throws InsufficientBalanceException {
+           if (amount <= 0) {
+               throw new IllegalArgumentException("Amount must be positive");
+           }
+           if (amount > balance) {
+               throw new InsufficientBalanceException(
+                   "Insufficient balance. Available: Tk " + balance
+                   + ", requested: Tk " + amount);
+           }
+           balance -= amount;
+           System.out.println("Withdrawn Tk " + amount + ". Balance: Tk " + balance);
+       }
+   }
+
+   public class ExceptionHandlingDemo {
+       public static void main(String[] args) {
+           BankAccount acc = new BankAccount(5000);
+           Scanner sc = new Scanner(System.in);
+
+           try {
+               acc.withdraw(2000);       // succeeds
+               acc.withdraw(10000);      // throws InsufficientBalanceException
+               acc.withdraw(-100);       // never reached
+           }
+           catch (InsufficientBalanceException e) {
+               System.out.println("Business rule violated: " + e.getMessage());
+           }
+           catch (IllegalArgumentException e) {
+               System.out.println("Invalid input: " + e.getMessage());
+           }
+           catch (Exception e) {
+               System.out.println("Unexpected problem: " + e);
+           }
+           finally {
+               sc.close();
+               System.out.println("Transaction session closed");
+           }
+
+           System.out.println("Program continues normally");
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Withdrawn Tk 2000.0. Balance: Tk 3000.0
+   Business rule violated: Insufficient balance. Available: Tk 3000.0, requested: Tk 10000.0
+   Transaction session closed
+   Program continues normally
+   ```
+
+   Without exception handling the program would have terminated at the second withdrawal, and the Scanner would never have been closed.
+
+   The modern try-with-resources form, which closes resources automatically:
+
+   ```java
+   import java.io.BufferedReader;
+   import java.io.FileReader;
+   import java.io.IOException;
+
+   public class FileReadDemo {
+       public static void main(String[] args) {
+           try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+               String line;
+               while ((line = br.readLine()) != null) {
+                   System.out.println(line);
+               }
+           }
+           catch (IOException e) {
+               System.out.println("Could not read the file: " + e.getMessage());
+           }
+           // br is closed automatically, even if an exception was thrown
+       }
+   }
+   ```
+
+   Rules and good practice:
+   - Catch the most specific exception first; putting catch (Exception e) before a more specific one is a compile error, because the later block would be unreachable.
+   - Never leave a catch block empty; swallowing an exception silently hides the fault.
+   - Use finally, or better try-with-resources, for anything that must be closed.
+   - Throw a custom exception when a domain rule is broken, so that the log names the business problem rather than a generic condition.
+   - Do not use exceptions for ordinary control flow, because throwing and catching is expensive.
+   - A method that catches an exception it cannot handle should rethrow it, wrapping it if necessary, so that the original cause is preserved.
 
 ## C++ OOP Concepts & Friend Functions (2)
 
