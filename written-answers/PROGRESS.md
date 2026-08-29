@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 232/239 subtopics · 2620/2673 answers**
+**Overall: 233/239 subtopics · 2637/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -300,9 +300,9 @@ Commit unit: one `##` subtopic.
 - [x] Open Source Software & Licensing (2)
 - [x] CI/CD & DevOps Methodologies (1)
 
-## web-technology.md — 0/7 sections, 0/53 answers
+## web-technology.md — 1/7 sections, 17/53 answers
 
-- [ ] HTML & Web Fundamentals (17)
+- [x] HTML & Web Fundamentals (17)
 - [ ] HTTP Protocol (10)
 - [ ] JavaScript & jQuery (DOM & Validation) (8)
 - [ ] Web Services & APIs (SOAP vs REST) (7)

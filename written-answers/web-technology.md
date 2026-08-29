@@ -19,8 +19,67 @@
 
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: The HTML image tag is `<img>`. It is used to embed an image in a web page.
+
+   Syntax:
+
+   ```html
+   <img src="photo.jpg" alt="A red rose" width="300" height="200">
+   ```
+
+   Key points:
+   - It is an empty or void element: it has no closing tag and no content of its own.
+   - The image is not inserted into the page; the tag creates a holding space and the browser fetches the image from the given address and displays it there.
+
+   Important attributes:
+   - src, source: the path or URL of the image. This is compulsory.
+   - alt, alternative text: the text shown if the image fails to load, and the text read out by a screen reader. It is compulsory for accessibility and helps search engines.
+   - width and height: the display size in pixels. Giving both prevents the page from jumping while the image loads.
+   - title: the tooltip shown when the mouse rests on the image.
+   - loading="lazy": tells the browser to load the image only when it is about to come into view.
+
+   Example with a link on the image:
+
+   ```html
+   <a href="https://www.example.com">
+     <img src="images/logo.png" alt="Company logo" width="150">
+   </a>
+   ```
+
+   Common image formats used: JPEG for photographs, PNG for images needing transparency, GIF for simple animation, SVG for scalable vector graphics, and WebP for smaller file size.
 2. **What is URL? Give an Example.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
+
+   Answer: URL stands for Uniform Resource Locator. It is the complete address of a resource on the internet, which tells the browser what protocol to use, which server to contact, and which file or resource to ask for.
+
+   Example:
+
+   ```
+   https://www.example.com:443/products/laptop.html?id=45&color=black#specs
+   ```
+
+   Parts of a URL:
+
+   | Part | In the example | Meaning |
+   |---|---|---|
+   | Scheme or protocol | `https` | How to communicate: http, https, ftp, mailto, file |
+   | Subdomain | `www` | A division of the domain |
+   | Domain name | `example.com` | The name of the server, resolved to an IP address by DNS |
+   | Port | `443` | The port on the server; 80 for HTTP and 443 for HTTPS are assumed if omitted |
+   | Path | `/products/laptop.html` | The location of the resource on the server |
+   | Query string | `?id=45&color=black` | Parameters passed to the server, in name=value pairs joined by `&` |
+   | Fragment | `#specs` | A position within the page; handled by the browser and never sent to the server |
+
+   More examples:
+   - `https://www.google.com`
+   - `https://bpsc.gov.bd/notice/result.pdf`
+   - `ftp://files.example.com/data.zip`
+   - `mailto:info@example.com`
+
+   Related terms:
+   - URI, Uniform Resource Identifier, is the general term; a URL is a URI that also gives the location.
+   - URN, Uniform Resource Name, names a resource without saying where it is, for example `urn:isbn:0451450523`.
 3. **(খ) নিচের টেবিলটি তৈরি করার জন্য HTML কোড লিখুন :** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 413 (ET: N/A)]*
 
 | Std name | Compulsory | Optional |
@@ -28,20 +87,405 @@
 | Hasan | Bangla | English | ICT | Math |
 | Nafis | Bangla | English | ICT | Biology |
 
+
+   Answer: The table has three columns, and the Optional column of each row holds several subjects.
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <title>Student Subject Table</title>
+     <style>
+       table { border-collapse: collapse; }
+       th, td { border: 1px solid black; padding: 8px; text-align: left; }
+       th { background-color: #dddddd; }
+     </style>
+   </head>
+   <body>
+
+     <table>
+       <tr>
+         <th>Std name</th>
+         <th>Compulsory</th>
+         <th>Optional</th>
+       </tr>
+       <tr>
+         <td>Hasan</td>
+         <td>Bangla, English</td>
+         <td>ICT, Math</td>
+       </tr>
+       <tr>
+         <td>Nafis</td>
+         <td>Bangla, English</td>
+         <td>ICT, Biology</td>
+       </tr>
+     </table>
+
+   </body>
+   </html>
+   ```
+
+   HTML table tags used:
+
+   | Tag | কাজ |
+   |---|---|
+   | `<table>` | সমগ্র টেবিল ধারণ করে |
+   | `<tr>` | table row — একটি সারি |
+   | `<th>` | table heading — শিরোনামের ঘর, লেখা মোটা ও মাঝখানে থাকে |
+   | `<td>` | table data — সাধারণ ঘর |
+   | `<caption>` | টেবিলের শিরোনাম |
+   | `<thead>`, `<tbody>`, `<tfoot>` | টেবিলের মাথা, দেহ ও পা আলাদা করে |
+
+   গুরুত্বপূর্ণ দুটি attribute:
+   - `colspan="n"` — একটি ঘরকে n সংখ্যক কলাম জুড়ে বিস্তৃত করে।
+   - `rowspan="n"` — একটি ঘরকে n সংখ্যক সারি জুড়ে বিস্তৃত করে।
+
+   colspan ব্যবহার করে যদি Optional এর নিচে দুটি উপ-কলাম দেখাতে হয়:
+
+   ```html
+   <table border="1">
+     <tr>
+       <th rowspan="2">Std name</th>
+       <th rowspan="2">Compulsory</th>
+       <th colspan="2">Optional</th>
+     </tr>
+     <tr>
+       <th>Subject 1</th>
+       <th>Subject 2</th>
+     </tr>
+     <tr>
+       <td>Hasan</td>
+       <td>Bangla, English</td>
+       <td>ICT</td>
+       <td>Math</td>
+     </tr>
+     <tr>
+       <td>Nafis</td>
+       <td>Bangla, English</td>
+       <td>ICT</td>
+       <td>Biology</td>
+     </tr>
+   </table>
+   ```
 4. **একটি ওয়েবসাইটের (Website) কয়টি অংশ থাকে এবং কী কী?** *[সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer: একটি ওয়েবসাইট প্রধানত দুইভাবে বিভক্ত করে দেখানো যায় — কাঠামোগত অংশ এবং কারিগরি উপাদান।
+
+   কাঠামোগত দিক থেকে একটি ওয়েবসাইটের অংশ পাঁচটি:
+
+   ১. Header (শিরোনাম অংশ): পৃষ্ঠার একেবারে উপরের অংশ। এতে থাকে প্রতিষ্ঠানের লোগো, নাম, স্লোগান, অনুসন্ধানের ঘর ও যোগাযোগের তথ্য। এটি সব পৃষ্ঠায় একই থাকে।
+
+   ২. Navigation Menu (দিকনির্দেশনা অংশ): সাইটের প্রধান বিভাগগুলোর লিঙ্ক — যেমন Home, About, Services, Contact। এর মাধ্যমেই দর্শক এক পৃষ্ঠা থেকে অন্য পৃষ্ঠায় যান।
+
+   ৩. Body বা Content Area (মূল অংশ): পৃষ্ঠার প্রধান বিষয়বস্তু — লেখা, ছবি, ভিডিও, তালিকা ও ফর্ম। এটিই ওয়েবসাইটের আসল উদ্দেশ্য এবং প্রতিটি পৃষ্ঠায় ভিন্ন হয়।
+
+   ৪. Sidebar (পার্শ্ব অংশ): মূল অংশের পাশে অতিরিক্ত তথ্য — বিভাগের তালিকা, সাম্প্রতিক সংবাদ, বিজ্ঞাপন বা সংক্ষিপ্ত লিঙ্ক। এটি ঐচ্ছিক।
+
+   ৫. Footer (পাদ অংশ): পৃষ্ঠার একেবারে নিচের অংশ। এতে থাকে কপিরাইট ঘোষণা, ঠিকানা ও ফোন নম্বর, গোপনীয়তা নীতি, সাইটম্যাপ ও সামাজিক যোগাযোগমাধ্যমের লিঙ্ক।
+
+   ```
+   +-------------------------------------------+
+   |                 HEADER                    |
+   |          (লোগো, নাম, অনুসন্ধান)            |
+   +-------------------------------------------+
+   |            NAVIGATION MENU                |
+   |   Home | About | Services | Contact       |
+   +--------------------------+----------------+
+   |                          |                |
+   |      CONTENT AREA        |    SIDEBAR     |
+   |     (মূল বিষয়বস্তু)      |  (অতিরিক্ত)    |
+   |                          |                |
+   +--------------------------+----------------+
+   |                 FOOTER                    |
+   |    (কপিরাইট, ঠিকানা, লিঙ্ক)               |
+   +-------------------------------------------+
+   ```
+
+   কারিগরি দিক থেকে একটি ওয়েবসাইটের উপাদান:
+   - Domain Name: সাইটের ঠিকানা, যেমন www.example.com।
+   - Web Hosting বা Server: যেখানে সাইটের ফাইলগুলো রাখা হয়।
+   - Web Pages: HTML ফাইল, যার মধ্যে প্রথম পৃষ্ঠাটিকে বলে Home Page।
+   - Front-end: HTML, CSS ও JavaScript — যা দর্শক দেখেন।
+   - Back-end: PHP, Node.js, Python ইত্যাদি সার্ভার-সাইড কোড।
+   - Database: তথ্য সংরক্ষণের জন্য, যেমন MySQL।
+   - Hyperlink: পৃষ্ঠাগুলোকে যুক্তকারী লিঙ্ক।
+
+   Home Page সম্পর্কে বিশেষভাবে উল্লেখযোগ্য: এটি ওয়েবসাইটের প্রথম ও প্রধান পৃষ্ঠা, যা ডোমেইন নাম লিখলেই খোলে। এর ফাইলের নাম সাধারণত index.html বা index.php হয়।
 5. **(ক) ওয়েব ডিজাইন কী? স্ট্যাটিক ও ডায়নামিক ওয়েবসাইটের পার্থক্য ব্যাখ্যা করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer: ওয়েব ডিজাইন হলো একটি ওয়েবসাইটের চেহারা, বিন্যাস ও ব্যবহারযোগ্যতা পরিকল্পনা ও তৈরি করার প্রক্রিয়া। এতে নির্ধারণ করা হয় পৃষ্ঠার কাঠামো কেমন হবে, কোথায় কী থাকবে, রং ও ফন্ট কী হবে, ছবি ও লেখার বিন্যাস কেমন হবে এবং দর্শক কীভাবে সাইটটি ব্যবহার করবেন।
+
+   ওয়েব ডিজাইনের প্রধান দিকসমূহ:
+   - Layout: পৃষ্ঠার কাঠামোগত বিন্যাস — header, menu, content, sidebar ও footer এর অবস্থান।
+   - Color scheme: রঙের সমন্বয়, যা প্রতিষ্ঠানের পরিচয়ের সঙ্গে মানানসই হয়।
+   - Typography: ফন্ট, আকার ও লেখার ব্যবধান, যাতে পড়তে আরাম হয়।
+   - Graphics ও Images: ছবি, আইকন ও লোগোর ব্যবহার।
+   - Navigation: দর্শক যাতে সহজে ও দ্রুত কাঙ্ক্ষিত তথ্য পান।
+   - Responsive design: মোবাইল, ট্যাব ও ডেস্কটপ — সব পর্দায় সঠিকভাবে দেখানো।
+   - Accessibility: দৃষ্টিপ্রতিবন্ধী ও অন্যান্য বিশেষ চাহিদাসম্পন্ন ব্যবহারকারীর উপযোগী করা।
+   - User Experience (UX): সমগ্র ব্যবহারের অভিজ্ঞতা যাতে সহজ ও স্বচ্ছন্দ হয়।
+
+   ব্যবহৃত প্রযুক্তি: HTML গঠনের জন্য, CSS সাজসজ্জার জন্য, JavaScript মিথস্ক্রিয়ার জন্য; Bootstrap ও Tailwind এর মতো framework; এবং নকশার জন্য Figma, Adobe XD বা Photoshop।
+
+   ওয়েব ডিজাইন ও ওয়েব ডেভেলপমেন্টের পার্থক্য: ডিজাইন সাইটটি দেখতে ও ব্যবহার করতে কেমন হবে তা নির্ধারণ করে; ডেভেলপমেন্ট সেই নকশাকে কার্যকর কোডে রূপ দেয় এবং সার্ভার ও ডেটাবেজের কাজ করে।
+
+   স্ট্যাটিক ও ডায়নামিক ওয়েবসাইটের পার্থক্য:
+
+   | বিষয় | Static Website | Dynamic Website |
+   |---|---|---|
+   | বিষয়বস্তু | সব ব্যবহারকারীর জন্য একই, নির্দিষ্ট | ব্যবহারকারী, সময় ও অবস্থাভেদে পরিবর্তিত |
+   | তৈরির প্রযুক্তি | কেবল HTML, CSS ও সামান্য JavaScript | HTML, CSS, JavaScript এর সঙ্গে PHP, ASP.NET, Node.js, Python ইত্যাদি সার্ভার-সাইড ভাষা |
+   | Database | ব্যবহৃত হয় না | অবশ্যই ব্যবহৃত হয় — MySQL, PostgreSQL, MongoDB |
+   | Server-side processing | নেই; সার্ভার কেবল ফাইলটি পাঠিয়ে দেয় | আছে; প্রতিটি অনুরোধে সার্ভার পৃষ্ঠাটি তৈরি করে |
+   | পরিবর্তন | প্রতিটি পৃষ্ঠার কোড হাতে সম্পাদনা করতে হয় | Admin panel বা CMS থেকে বিষয়বস্তু বদলানো যায়, কোড ছুঁতে হয় না |
+   | গতি | দ্রুত, কারণ কোনো প্রক্রিয়াকরণ নেই | তুলনামূলক ধীর, কারণ প্রতিবার তৈরি করতে হয় |
+   | খরচ | কম — তৈরি ও হোস্টিং দুটোই সস্তা | বেশি — উন্নয়ন, সার্ভার ও রক্ষণাবেক্ষণ ব্যয়বহুল |
+   | জটিলতা | সরল | জটিল |
+   | মিথস্ক্রিয়া | সীমিত; ব্যবহারকারী কেবল পড়তে পারেন | পূর্ণ; লগইন, অনুসন্ধান, মন্তব্য, কেনাকাটা সম্ভব |
+   | নিরাপত্তা ঝুঁকি | কম, কারণ ডেটাবেজ ও ইনপুট নেই | বেশি — SQL injection, XSS, session hijacking |
+   | SEO | সহজ, তবে বিষয়বস্তু নতুন হয় না | নিয়মিত নতুন বিষয়বস্তুর কারণে সুবিধাজনক |
+   | Scalability | সীমিত সংখ্যক পৃষ্ঠার জন্য উপযুক্ত | হাজার হাজার পৃষ্ঠা স্বয়ংক্রিয়ভাবে তৈরি হয় |
+   | উদাহরণ | ছোট প্রতিষ্ঠানের পরিচিতিমূলক সাইট, ব্যক্তিগত পোর্টফোলিও, ব্রochure সাইট | Facebook, Amazon, Daraz, অনলাইন ব্যাংকিং, সংবাদপত্র, ই-কমার্স |
+
+   কোথায় কোনটি ব্যবহার করা উচিত: বিষয়বস্তু যদি খুব কম বদলায় এবং ব্যবহারকারীর সঙ্গে মিথস্ক্রিয়ার প্রয়োজন না থাকে, তবে static site যথেষ্ট ও সাশ্রয়ী। ব্যবহারকারীর অ্যাকাউন্ট, অনুসন্ধান, লেনদেন বা নিয়মিত হালনাগাদ প্রয়োজন হলে dynamic site অপরিহার্য।
 6. **What is the popular way of linking many documents?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: The popular way of linking many documents is the hyperlink, created with the anchor tag `<a>` and its `href` attribute. Linking documents to one another in this way is what makes the collection a hypertext system, and it is the foundation of the World Wide Web.
+
+   Syntax:
+
+   ```html
+   <a href="page2.html">Go to page 2</a>
+   ```
+
+   Types of link by the kind of address used:
+   - Absolute link: gives the full URL, used for another site.
+     `<a href="https://www.example.com/about.html">About</a>`
+   - Relative link: gives the path relative to the current document, used within the same site.
+     `<a href="products/laptop.html">Laptops</a>` and `<a href="../index.html">Home</a>`
+   - Internal or bookmark link: jumps to a position within the same page, using an id.
+     `<a href="#contact">Contact section</a>` together with `<section id="contact">`
+   - Email link: `<a href="mailto:info@example.com">Send email</a>`
+   - Telephone link: `<a href="tel:+8801711111111">Call us</a>`
+   - Download link: `<a href="report.pdf" download>Download report</a>`
+
+   Useful attributes:
+   - `target="_blank"` opens the link in a new tab. When it is used, `rel="noopener noreferrer"` should be added for security.
+   - `title` gives a tooltip.
+
+   A navigation menu, which is the usual way many documents in a site are linked together:
+
+   ```html
+   <nav>
+     <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="services.html">Services</a></li>
+       <li><a href="contact.html">Contact</a></li>
+     </ul>
+   </nav>
+   ```
+
+   For a very large site the same purpose is served by a sitemap page, which lists links to every document, and by an XML sitemap submitted to search engines.
 7. **Which tag is used for creating button in html?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: Two tags create a button in HTML: `<button>` and `<input>` with a button type.
+
+   1. The `<button>` element:
+
+   ```html
+   <button type="button" onclick="alert('Clicked!')">Click Me</button>
+   <button type="submit">Submit</button>
+   <button type="reset">Reset</button>
+   ```
+
+   2. The `<input>` element with a button type:
+
+   ```html
+   <input type="button" value="Click Me">
+   <input type="submit" value="Submit">
+   <input type="reset" value="Reset">
+   <input type="image" src="go.png" alt="Submit">
+   ```
+
+   Difference between the two:
+
+   | Point | `<button>` | `<input type="button">` |
+   |---|---|---|
+   | Tag type | Paired: has a closing tag | Empty: no closing tag |
+   | Label | The content between the tags | The `value` attribute |
+   | Content allowed | Text, images, icons and other HTML | Plain text only |
+   | Default type | `submit` inside a form | `button` |
+   | Styling | More flexible | Limited |
+
+   Because `<button>` can contain other HTML, an icon can be placed inside it:
+
+   ```html
+   <button type="submit">
+     <img src="search-icon.png" alt=""> Search
+   </button>
+   ```
+
+   Note on the default type: inside a `<form>`, a `<button>` with no `type` attribute acts as a submit button, which is a very common source of unexpected page reloads. Always write the type explicitly.
 8. **(ক) HTML Element কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 607 (ET: N/A)]*
 
+
+   Answer: HTML Element হলো একটি HTML নথির একক গঠনগত উপাদান, যা একটি opening tag, তার ভেতরের বিষয়বস্তু এবং একটি closing tag নিয়ে গঠিত। ব্রাউজার এই element গুলো পড়েই বুঝতে পারে পৃষ্ঠার কোন অংশ কী।
+
+   গঠন:
+
+   ```
+   <p class="intro">This is a paragraph.</p>
+   |            |            |            |
+   opening tag  attribute   content    closing tag
+   ```
+
+   একটি element এর অংশ চারটি:
+   - Opening tag: `<p>` — element এর শুরু নির্দেশ করে।
+   - Attribute: `class="intro"` — element সম্পর্কে অতিরিক্ত তথ্য দেয়। এটি সবসময় opening tag এর ভেতরে থাকে এবং name="value" আকারে লেখা হয়।
+   - Content: `This is a paragraph.` — element এর ভেতরের বিষয়বস্তু।
+   - Closing tag: `</p>` — element এর শেষ নির্দেশ করে; এতে একটি slash থাকে।
+
+   Element এর প্রকারভেদ:
+
+   ১. Container বা Paired element: যাদের শুরু ও শেষ দুটি ট্যাগই থাকে।
+
+   ```html
+   <h1>এটি একটি শিরোনাম</h1>
+   <p>এটি একটি অনুচ্ছেদ।</p>
+   <div>এটি একটি বিভাগ</div>
+   <a href="page.html">এটি একটি লিঙ্ক</a>
+   ```
+
+   ২. Empty বা Void element: যাদের কোনো বিষয়বস্তু নেই, তাই closing tag ও নেই।
+
+   ```html
+   <br>       <!-- নতুন লাইন -->
+   <hr>       <!-- অনুভূমিক রেখা -->
+   <img src="a.jpg" alt="ছবি">
+   <input type="text" name="user">
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="style.css">
+   ```
+
+   প্রদর্শনের ভিত্তিতে আরেকটি বিভাজন:
+   - Block-level element: নিজের জন্য পুরো লাইন দখল করে এবং আগে-পরে নতুন লাইন তৈরি করে। যেমন `<div>`, `<p>`, `<h1>` থেকে `<h6>`, `<ul>`, `<ol>`, `<li>`, `<table>`, `<form>`, `<section>`।
+   - Inline element: কেবল প্রয়োজনীয় জায়গাটুকু নেয় এবং একই লাইনে থাকে। যেমন `<span>`, `<a>`, `<img>`, `<b>`, `<i>`, `<strong>`, `<em>`, `<input>`।
+
+   Nesting বা একটি element এর ভেতরে আরেকটি:
+
+   ```html
+   <ul>
+     <li><a href="#">প্রথম লিঙ্ক</a></li>
+     <li><a href="#">দ্বিতীয় লিঙ্ক</a></li>
+   </ul>
+   ```
+
+   এখানে `<a>` element টি `<li>` এর ভেতরে, এবং `<li>` গুলো `<ul>` এর ভেতরে রয়েছে। নিয়ম হলো — যে element পরে খোলা হয়, তাকে আগে বন্ধ করতে হয়। `<b><i>text</b></i>` লেখা ভুল; সঠিক হলো `<b><i>text</i></b>`।
+
+   Element ও Tag এর পার্থক্য: Tag হলো কেবল কোণাকৃতি বন্ধনীর ভেতরের চিহ্ন, যেমন `<p>` বা `</p>`। আর Element হলো opening tag, content ও closing tag মিলে সম্পূর্ণ একক। অর্থাৎ tag হলো element এর সীমানা।
 9. **(খ) Static ও Dynamic ওয়েবসাইটের মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 607 (ET: N/A)]*
 
+
+   Answer: Static ও Dynamic ওয়েবসাইটের পার্থক্য:
+
+   | বিষয় | Static Website | Dynamic Website |
+   |---|---|---|
+   | বিষয়বস্তু | সব ব্যবহারকারীর জন্য একই, নির্দিষ্ট | ব্যবহারকারী, সময় ও অবস্থাভেদে পরিবর্তিত |
+   | তৈরির প্রযুক্তি | কেবল HTML, CSS ও সামান্য JavaScript | HTML, CSS, JavaScript এর সঙ্গে PHP, ASP.NET, Node.js, Python ইত্যাদি সার্ভার-সাইড ভাষা |
+   | Database | ব্যবহৃত হয় না | অবশ্যই ব্যবহৃত হয় — MySQL, PostgreSQL, MongoDB |
+   | Server-side processing | নেই; সার্ভার কেবল ফাইলটি পাঠিয়ে দেয় | আছে; প্রতিটি অনুরোধে সার্ভার পৃষ্ঠাটি তৈরি করে |
+   | পরিবর্তন | প্রতিটি পৃষ্ঠার কোড হাতে সম্পাদনা করতে হয় | Admin panel বা CMS থেকে বিষয়বস্তু বদলানো যায়, কোড ছুঁতে হয় না |
+   | গতি | দ্রুত, কারণ কোনো প্রক্রিয়াকরণ নেই | তুলনামূলক ধীর, কারণ প্রতিবার তৈরি করতে হয় |
+   | খরচ | কম — তৈরি ও হোস্টিং দুটোই সস্তা | বেশি — উন্নয়ন, সার্ভার ও রক্ষণাবেক্ষণ ব্যয়বহুল |
+   | জটিলতা | সরল | জটিল |
+   | মিথস্ক্রিয়া | সীমিত; ব্যবহারকারী কেবল পড়তে পারেন | পূর্ণ; লগইন, অনুসন্ধান, মন্তব্য, কেনাকাটা সম্ভব |
+   | নিরাপত্তা ঝুঁকি | কম, কারণ ডেটাবেজ ও ইনপুট নেই | বেশি — SQL injection, XSS, session hijacking |
+   | SEO | সহজ, তবে বিষয়বস্তু নতুন হয় না | নিয়মিত নতুন বিষয়বস্তুর কারণে সুবিধাজনক |
+   | Scalability | সীমিত সংখ্যক পৃষ্ঠার জন্য উপযুক্ত | হাজার হাজার পৃষ্ঠা স্বয়ংক্রিয়ভাবে তৈরি হয় |
+   | উদাহরণ | ছোট প্রতিষ্ঠানের পরিচিতিমূলক সাইট, ব্যক্তিগত পোর্টফোলিও, ব্রochure সাইট | Facebook, Amazon, Daraz, অনলাইন ব্যাংকিং, সংবাদপত্র, ই-কমার্স |
+
+   কোথায় কোনটি ব্যবহার করা উচিত: বিষয়বস্তু যদি খুব কম বদলায় এবং ব্যবহারকারীর সঙ্গে মিথস্ক্রিয়ার প্রয়োজন না থাকে, তবে static site যথেষ্ট ও সাশ্রয়ী। ব্যবহারকারীর অ্যাকাউন্ট, অনুসন্ধান, লেনদেন বা নিয়মিত হালনাগাদ প্রয়োজন হলে dynamic site অপরিহার্য।
+
+   কার্যপ্রণালীর পার্থক্য:
+   - Static: ব্রাউজার অনুরোধ পাঠায় → সার্ভার সংরক্ষিত HTML ফাইলটি হুবহু পাঠিয়ে দেয় → ব্রাউজার দেখায়।
+   - Dynamic: ব্রাউজার অনুরোধ পাঠায় → সার্ভার-সাইড কোড চলে → ডেটাবেজ থেকে তথ্য আনা হয় → সেই তথ্য দিয়ে HTML তৈরি হয় → সেই তৈরি করা HTML পাঠানো হয়।
 10. **অথবা, (ক) উদাহরণসহ HTML webpage এর গঠন ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 608 (ET: N/A)]*
 
+
+    Answer: একটি HTML webpage এর গঠন তিনটি প্রধান অংশ নিয়ে — DOCTYPE ঘোষণা, head এবং body।
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="bn">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="একটি নমুনা ওয়েব পৃষ্ঠা">
+      <title>আমার প্রথম ওয়েব পৃষ্ঠা</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+      <header>
+        <h1>আমার ওয়েবসাইট</h1>
+      </header>
+
+      <nav>
+        <a href="index.html">হোম</a> |
+        <a href="about.html">পরিচিতি</a> |
+        <a href="contact.html">যোগাযোগ</a>
+      </nav>
+
+      <main>
+        <h2>স্বাগতম</h2>
+        <p>এটি মূল বিষয়বস্তুর অংশ।</p>
+        <img src="photo.jpg" alt="একটি ছবি" width="300">
+        <ul>
+          <li>প্রথম বিষয়</li>
+          <li>দ্বিতীয় বিষয়</li>
+        </ul>
+      </main>
+
+      <footer>
+        <p>&copy; ২০২৬ সর্বস্বত্ব সংরক্ষিত</p>
+      </footer>
+
+      <script src="script.js"></script>
+    </body>
+    </html>
+    ```
+
+    প্রতিটি অংশের ব্যাখ্যা:
+
+    `<!DOCTYPE html>` — নথির ধরন ঘোষণা। এটি ব্রাউজারকে জানায় নথিটি HTML5 এ লেখা, ফলে ব্রাউজার standards mode এ চলে। এটি কোনো ট্যাগ নয় এবং সবার আগে থাকতে হয়।
+
+    `<html>` — মূল বা root element। DOCTYPE ছাড়া সব কিছু এর ভেতরে থাকে। `lang` attribute দিয়ে পৃষ্ঠার ভাষা জানানো হয়, যা search engine ও screen reader এর জন্য প্রয়োজন।
+
+    `<head>` — পৃষ্ঠা সম্পর্কে তথ্য বা metadata ধারণ করে। এই অংশের কিছুই পৃষ্ঠায় দেখা যায় না, কেবল `<title>` ব্রাউজারের ট্যাবে দেখায়। এর ভেতরে থাকে:
+    - `<meta charset="UTF-8">` — অক্ষর সংকেতায়ন। বাংলা লেখা দেখানোর জন্য এটি অপরিহার্য।
+    - `<meta name="viewport">` — মোবাইল পর্দায় সঠিকভাবে দেখানোর জন্য।
+    - `<title>` — ব্রাউজারের ট্যাবে ও search engine এর ফলাফলে দেখানো শিরোনাম।
+    - `<link>` — বাইরের CSS ফাইল যুক্ত করে।
+    - `<style>` — ভেতরের CSS।
+    - `<script>` — JavaScript।
+
+    `<body>` — পৃষ্ঠার দৃশ্যমান সব বিষয়বস্তু এখানে থাকে — লেখা, ছবি, লিঙ্ক, তালিকা, টেবিল ও ফর্ম।
+
+    HTML5 এর semantic element গুলো, যা body কে অর্থবহভাবে ভাগ করে:
+    - `<header>` — পৃষ্ঠা বা বিভাগের উপরের অংশ।
+    - `<nav>` — দিকনির্দেশনার লিঙ্ক।
+    - `<main>` — প্রধান বিষয়বস্তু, প্রতি পৃষ্ঠায় একবার।
+    - `<section>` — বিষয়ভিত্তিক বিভাগ।
+    - `<article>` — স্বয়ংসম্পূর্ণ লেখা, যেমন একটি সংবাদ বা ব্লগ পোস্ট।
+    - `<aside>` — পাশের অতিরিক্ত তথ্য।
+    - `<footer>` — পাদ অংশ।
+
+    এই semantic ট্যাগগুলো ব্যবহারের সুবিধা: search engine পৃষ্ঠার গঠন বুঝতে পারে, screen reader দৃষ্টিপ্রতিবন্ধী ব্যবহারকারীকে সঠিকভাবে পথ দেখাতে পারে, এবং কোড পড়ে বোঝা সহজ হয়। কেবল `<div>` ব্যবহার করলে এই সুবিধাগুলো পাওয়া যায় না।
 11. **(খ) নিচের লিস্টটি তৈরি করার জন্য HTML কোড লিখুন :** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 609 (ET: N/A)]*
    1. Fruits
       (a) Mango
@@ -51,17 +495,429 @@
       - Yellow Capsicum
       - Red Capsicum
 
+
+    Answer: তালিকাটিতে একটি ordered list আছে, যার প্রথম আইটেমের নিচে ছোট হাতের অক্ষরের ordered list এবং দ্বিতীয় আইটেমের নিচে unordered list রয়েছে।
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Nested List</title>
+    </head>
+    <body>
+
+      <ol type="1">
+        <li>Fruits
+          <ol type="a">
+            <li>Mango</li>
+            <li>Orange</li>
+          </ol>
+        </li>
+        <li>Vegetables
+          <ul>
+            <li>Green Capsicum</li>
+            <li>Yellow Capsicum</li>
+            <li>Red Capsicum</li>
+          </ul>
+        </li>
+      </ol>
+
+    </body>
+    </html>
+    ```
+
+    লক্ষণীয় নিয়ম: ভেতরের তালিকাটি অবশ্যই বাইরের `<li>` এর ভেতরে বসাতে হবে, `</li>` এর পরে নয়। অন্যথায় HTML অবৈধ হয় এবং ব্রাউজার ভিন্নভাবে দেখায়।
+
+    HTML এ তালিকা তিন প্রকার:
+
+    | প্রকার | ট্যাগ | ব্যবহার |
+    |---|---|---|
+    | Ordered List | `<ol>` ও `<li>` | ক্রম গুরুত্বপূর্ণ হলে; সংখ্যা বা অক্ষর দেখায় |
+    | Unordered List | `<ul>` ও `<li>` | ক্রম গুরুত্বপূর্ণ নয়; বুলেট দেখায় |
+    | Description List | `<dl>`, `<dt>`, `<dd>` | পদ ও তার সংজ্ঞা |
+
+    `<ol>` এর `type` attribute এর মান:
+    - `type="1"` — ১, ২, ৩ (এটিই default)
+    - `type="a"` — a, b, c
+    - `type="A"` — A, B, C
+    - `type="i"` — i, ii, iii
+    - `type="I"` — I, II, III
+    - `start="5"` — গণনা ৫ থেকে শুরু হবে
+    - `reversed` — উল্টো ক্রমে গণনা
+
+    `<ul>` এর বুলেটের আকার CSS দিয়ে নির্ধারণ করা হয়: `list-style-type: disc | circle | square | none;`
+
+    Description list এর উদাহরণ:
+
+    ```html
+    <dl>
+      <dt>HTML</dt>
+      <dd>ওয়েব পৃষ্ঠার গঠন নির্ধারণকারী markup ভাষা।</dd>
+      <dt>CSS</dt>
+      <dd>ওয়েব পৃষ্ঠার সাজসজ্জা নির্ধারণকারী ভাষা।</dd>
+    </dl>
+    ```
 12. **অথবা, নিম্নোক্ত উপাদানগুলোসহ একটি HTML page লিখুন। Hyperlink, Ordered list, Unordered list, Form (Tent box, Check box, Option Button).** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+
+    Answer: প্রশ্নে চাওয়া সব উপাদান — hyperlink, ordered list, unordered list এবং text box, check box ও radio button সহ একটি form — একটি HTML পৃষ্ঠায়:
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Student Registration Page</title>
+      <style>
+        body   { font-family: Arial, sans-serif; margin: 30px; }
+        fieldset { border: 1px solid #999; padding: 15px; width: 420px; }
+        label  { display: inline-block; width: 130px; }
+        input, select { margin-bottom: 10px; }
+      </style>
+    </head>
+    <body>
+
+      <h1>Student Registration</h1>
+
+      <!-- 1. HYPERLINK -->
+      <h2>Useful Links</h2>
+      <p>
+        <a href="https://www.bpsc.gov.bd" target="_blank" rel="noopener noreferrer">BPSC Website</a> |
+        <a href="index.html">Home Page</a> |
+        <a href="#form">Go to Form</a> |
+        <a href="mailto:info@college.edu.bd">Email Us</a>
+      </p>
+
+      <!-- 2. ORDERED LIST -->
+      <h2>Admission Steps</h2>
+      <ol>
+        <li>Collect the application form</li>
+        <li>Fill in all required information</li>
+        <li>Attach the necessary documents</li>
+        <li>Pay the application fee</li>
+        <li>Submit the form before the deadline</li>
+      </ol>
+
+      <!-- 3. UNORDERED LIST -->
+      <h2>Required Documents</h2>
+      <ul>
+        <li>SSC certificate and transcript</li>
+        <li>HSC certificate and transcript</li>
+        <li>National ID or birth certificate</li>
+        <li>Two passport-size photographs</li>
+      </ul>
+
+      <!-- 4. FORM -->
+      <h2 id="form">Registration Form</h2>
+      <form action="/register" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <!-- TEXT BOX -->
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="8" required><br>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob"><br>
+
+          <!-- RADIO BUTTON (OPTION BUTTON) -->
+          <p>Gender:</p>
+          <input type="radio" id="male" name="gender" value="male" checked>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+
+          <!-- CHECK BOX -->
+          <p>Subjects (choose one or more):</p>
+          <input type="checkbox" id="ict" name="subject" value="ICT">
+          <label for="ict">ICT</label><br>
+          <input type="checkbox" id="math" name="subject" value="Math">
+          <label for="math">Mathematics</label><br>
+          <input type="checkbox" id="physics" name="subject" value="Physics">
+          <label for="physics">Physics</label><br>
+
+          <!-- DROPDOWN -->
+          <label for="district">District:</label>
+          <select id="district" name="district">
+            <option value="">-- Select --</option>
+            <option value="dhaka">Dhaka</option>
+            <option value="chattogram">Chattogram</option>
+            <option value="rajshahi">Rajshahi</option>
+          </select><br>
+
+          <!-- TEXT AREA -->
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" rows="3" cols="30"></textarea><br>
+
+          <!-- AGREEMENT CHECKBOX -->
+          <input type="checkbox" id="agree" name="agree" required>
+          <label for="agree" style="width:auto">I agree to the terms and conditions</label><br><br>
+
+          <!-- BUTTONS -->
+          <input type="submit" value="Register">
+          <input type="reset" value="Clear">
+        </fieldset>
+      </form>
+
+    </body>
+    </html>
+    ```
+
+    গুরুত্বপূর্ণ বিষয়গুলো:
+
+    - Radio button ও Check box এর পার্থক্য: একই `name` দেওয়া radio button গুলোর মধ্যে কেবল একটি নির্বাচন করা যায়; check box এ একাধিক নির্বাচন করা যায়। এজন্য radio button এ `name` একই রাখা বাধ্যতামূলক, না রাখলে সবগুলো আলাদা দল হয়ে যায় এবং সবই নির্বাচন করা যায়।
+
+    - `<label>` এর `for` attribute টি input এর `id` এর সঙ্গে মিলিয়ে দিলে লেখার ওপর ক্লিক করলেও input টি নির্বাচিত হয়, যা ব্যবহারযোগ্যতা ও accessibility দুটোই বাড়ায়।
+
+    - Form এর দুটি প্রধান attribute: `action` বলে দেয় তথ্য কোথায় পাঠানো হবে, আর `method` বলে দেয় কীভাবে — GET হলে তথ্য URL এ যায়, POST হলে অনুরোধের শরীরে যায়। পাসওয়ার্ড বা গোপন তথ্যের জন্য অবশ্যই POST ব্যবহার করতে হবে।
+
+    - HTML5 এর built-in validation: `required`, `minlength`, `maxlength`, `pattern`, এবং `type="email"` বা `type="number"` ব্যবহার করলে ব্রাউজার নিজেই যাচাই করে। তবে এটি নিরাপত্তা নয় — সার্ভারেও যাচাই করা বাধ্যতামূলক, কারণ ব্রাউজারের যাচাই সহজেই এড়ানো যায়।
 13. **(ক) HTML এবং CSS কী? সংক্ষেপে ব্যাখ্যা করুন। শুধুমাত্র HTML এবং CSS ব্যবহার করে Web Site তৈরির ক্ষেত্রে সীমাবদ্ধতা আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 705 (ET: N/A)]*
 
+
+    Answer:    HTML (HyperText Markup Language): ওয়েব পৃষ্ঠার গঠন ও বিষয়বস্তু নির্ধারণকারী markup ভাষা। এটি প্রোগ্রামিং ভাষা নয় — এতে শর্ত, লুপ বা গণনা নেই। HTML ট্যাগ ব্যবহার করে বলে দেওয়া হয় কোনটি শিরোনাম, কোনটি অনুচ্ছেদ, কোনটি তালিকা, কোনটি ছবি ও কোনটি লিঙ্ক। বর্তমান সংস্করণ HTML5।
+
+    CSS (Cascading Style Sheets): ওয়েব পৃষ্ঠার উপস্থাপন ও সাজসজ্জা নির্ধারণকারী ভাষা — রং, ফন্ট, আকার, ব্যবধান, অবস্থান ও বিন্যাস। এটি HTML থেকে নকশাকে আলাদা করে, ফলে একটি CSS ফাইল বদলালেই সমগ্র সাইটের চেহারা বদলে যায়।
+
+    দুইয়ের সম্পর্ক: HTML হলো ভবনের কাঠামো, CSS হলো তার রং ও সাজসজ্জা। HTML বলে "এটি একটি শিরোনাম", CSS বলে "শিরোনামটি নীল রঙের, ২৪ পিক্সেল এবং মাঝখানে থাকবে"।
+
+    শুধুমাত্র HTML ও CSS ব্যবহার করে ওয়েবসাইট তৈরির সীমাবদ্ধতা:
+
+    - কোনো যুক্তি বা গণনা করা যায় না। HTML ও CSS দুটোই ঘোষণামূলক ভাষা; এতে শর্ত, লুপ, চলক বা ফাংশন নেই। ফলে যোগফল বের করা, শতকরা হিসাব করা বা কোনো সিদ্ধান্ত নেওয়া অসম্ভব।
+
+    - Database ব্যবহার করা যায় না। তথ্য সংরক্ষণ, সংশোধন বা অনুসন্ধান করা যায় না। সব লেখা কোডের ভেতরে স্থির অবস্থায় থাকে।
+
+    - Form জমা নেওয়া যায় না। ফর্মটি দেখানো যায়, কিন্তু জমা দেওয়া তথ্য গ্রহণ ও সংরক্ষণ করার জন্য সার্ভার-সাইড ভাষা লাগে। ফলে যোগাযোগের ফর্ম, নিবন্ধন বা মতামত গ্রহণ কিছুই কাজ করে না।
+
+    - User authentication সম্ভব নয়। লগইন, পাসওয়ার্ড যাচাই বা ব্যবহারকারীভেদে ভিন্ন বিষয়বস্তু দেখানো যায় না।
+
+    - কোনো মিথস্ক্রিয়া নেই। ক্লিক করলে ফর্ম যাচাই হওয়া, পপ-আপ দেখানো, ছবি স্লাইড হওয়া, ড্রপডাউন মেনু খোলা, লাইভ অনুসন্ধান — এসবের জন্য JavaScript প্রয়োজন। CSS দিয়ে কিছু hover ও transition সম্ভব, কিন্তু তা খুবই সীমিত।
+
+    - বিষয়বস্তু হালনাগাদ করা কষ্টসাধ্য। নতুন একটি সংবাদ যোগ করতে হলে HTML ফাইল খুলে হাতে কোড লিখতে হয়। ১০০ পৃষ্ঠার সাইটে menu তে একটি লিঙ্ক যোগ করতে হলে ১০০টি ফাইলই সম্পাদনা করতে হয়, কারণ কোনো template ব্যবস্থা নেই।
+
+    - পৃষ্ঠা পুনরায় ব্যবহারযোগ্য নয়। ১০০০টি পণ্যের জন্য ১০০০টি আলাদা HTML ফাইল লিখতে হয়; dynamic সাইটে একটি template ও একটি ডেটাবেজ দিয়েই কাজ হয়।
+
+    - কোনো API বা বাইরের সেবার সঙ্গে যোগাযোগ নেই। আবহাওয়ার তথ্য আনা, মূল্য পরিশোধ, মানচিত্র বা এসএমএস পাঠানো — কিছুই সম্ভব নয়।
+
+    - Search ও filter নেই। ব্যবহারকারী কোনো কিছু খুঁজতে পারেন না।
+
+    - কোনো ব্যক্তিগতকরণ নেই। প্রত্যেক দর্শক হুবহু একই পৃষ্ঠা দেখেন।
+
+    - Content Management System নেই। কারিগরি জ্ঞান ছাড়া কেউ সাইটটি হালনাগাদ করতে পারেন না।
+
+    - ফাইল আপলোড বা ডাউনলোডের ব্যবস্থাপনা নেই।
+
+    সীমাবদ্ধতা দূর করার উপায়: ক্লায়েন্ট-সাইড মিথস্ক্রিয়ার জন্য JavaScript, সার্ভার-সাইড প্রক্রিয়াকরণের জন্য PHP, Node.js, Python বা ASP.NET, এবং তথ্য সংরক্ষণের জন্য MySQL বা MongoDB এর মতো ডেটাবেজ যুক্ত করতে হয়।
+
+    তবু কোথায় HTML ও CSS যথেষ্ট: ব্যক্তিগত পোর্টফোলিও, ছোট প্রতিষ্ঠানের পরিচিতিমূলক সাইট, অনুষ্ঠানের ঘোষণাপত্র, নথিপত্র বা টিউটোরিয়াল সাইট — যেখানে বিষয়বস্তু স্থির এবং কোনো মিথস্ক্রিয়া দরকার নেই। এসব ক্ষেত্রে static সাইট দ্রুততর, সস্তা ও নিরাপদ।
 14. **(খ) Static Web Page এবং Dynamic Web Page এর মধ্যে পার্থক্য আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 705 (ET: N/A)]*
 
+
+    Answer: Static Web Page ও Dynamic Web Page এর পার্থক্য:
+
+    | বিষয় | Static Web Page | Dynamic Web Page |
+    |---|---|---|
+    | সংজ্ঞা | সার্ভারে সংরক্ষিত অপরিবর্তিত HTML ফাইল, যা হুবহু পাঠানো হয় | প্রতিটি অনুরোধে সার্ভারে তৈরি হওয়া পৃষ্ঠা |
+    | বিষয়বস্তু | সবার জন্য এক, সবসময় এক | ব্যবহারকারী, সময় ও ইনপুট অনুযায়ী ভিন্ন |
+    | ভাষা | HTML, CSS, সামান্য JavaScript | HTML, CSS, JavaScript এর সঙ্গে PHP, JSP, ASP.NET, Node.js, Python |
+    | Database | নেই | আছে |
+    | Server-side প্রক্রিয়াকরণ | নেই | আছে |
+    | Client-side script | ঐচ্ছিক | প্রায়ই থাকে |
+    | Loading গতি | দ্রুত | তুলনামূলক ধীর |
+    | সার্ভারের ওপর চাপ | খুব কম | বেশি |
+    | পরিবর্তন | HTML ফাইল হাতে সম্পাদনা করতে হয় | Admin panel বা CMS থেকে করা যায় |
+    | তৈরির খরচ | কম | বেশি |
+    | রক্ষণাবেক্ষণ | পৃষ্ঠা বাড়লে কঠিন হয়ে পড়ে | সহজ, কারণ template ও ডেটাবেজ আলাদা |
+    | নিরাপত্তা | তুলনামূলক নিরাপদ | ঝুঁকি বেশি; SQL injection, XSS প্রতিরোধ করতে হয় |
+    | Caching | পুরো পৃষ্ঠা সহজে cache করা যায় | সীমিতভাবে cache করা যায় |
+    | উপযুক্ত ক্ষেত্র | পোর্টফোলিও, ছোট প্রতিষ্ঠানের সাইট, নথিপত্র | ই-কমার্স, সামাজিক মাধ্যম, সংবাদপত্র, ব্যাংকিং |
+    | উদাহরণ | একটি স্কুলের তথ্যপৃষ্ঠা | Facebook, Daraz, Amazon, Prothom Alo |
+
+    কার্যপ্রণালীর তুলনা:
+
+    ```
+    STATIC:
+    Browser --request--> Web Server --> সংরক্ষিত .html ফাইল খুঁজে পায়
+                                     --> ফাইলটি হুবহু পাঠায়
+    Browser <--HTML-- Web Server
+
+    DYNAMIC:
+    Browser --request--> Web Server --> Application Server (PHP/Node)
+                                         |--> Database এ query পাঠায়
+                                         |<-- ফল ফিরে আসে
+                                         |--> template + ডেটা মিলিয়ে HTML তৈরি
+    Browser <--তৈরি করা HTML-- Web Server
+    ```
+
+    একটি মূল বিষয়: Dynamic হওয়া মানে কেবল অ্যানিমেশন বা নড়াচড়া নয়। JavaScript দিয়ে ছবি স্লাইড করানো একটি static পৃষ্ঠাতেও সম্ভব; সেটি dynamic পৃষ্ঠা নয়। Dynamic বলতে বোঝায় পৃষ্ঠার বিষয়বস্তু সার্ভারে প্রতিবার নতুন করে তৈরি হয়।
 15. **(ক) কোন প্রতিষ্ঠানের Web page development এ HTML এবং CSS এর ভূমিকা কি? শুধুমাত্র HTML এবং CSS ব্যবহার করে কোন ধরনের Web Page Development করা যেতে পারে?** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 771 (ET: N/A)]*
 
+
+    Answer:    HTML (HyperText Markup Language): ওয়েব পৃষ্ঠার গঠন ও বিষয়বস্তু নির্ধারণকারী markup ভাষা। এটি প্রোগ্রামিং ভাষা নয় — এতে শর্ত, লুপ বা গণনা নেই। HTML ট্যাগ ব্যবহার করে বলে দেওয়া হয় কোনটি শিরোনাম, কোনটি অনুচ্ছেদ, কোনটি তালিকা, কোনটি ছবি ও কোনটি লিঙ্ক। বর্তমান সংস্করণ HTML5।
+
+    CSS (Cascading Style Sheets): ওয়েব পৃষ্ঠার উপস্থাপন ও সাজসজ্জা নির্ধারণকারী ভাষা — রং, ফন্ট, আকার, ব্যবধান, অবস্থান ও বিন্যাস। এটি HTML থেকে নকশাকে আলাদা করে, ফলে একটি CSS ফাইল বদলালেই সমগ্র সাইটের চেহারা বদলে যায়।
+
+    দুইয়ের সম্পর্ক: HTML হলো ভবনের কাঠামো, CSS হলো তার রং ও সাজসজ্জা। HTML বলে "এটি একটি শিরোনাম", CSS বলে "শিরোনামটি নীল রঙের, ২৪ পিক্সেল এবং মাঝখানে থাকবে"।
+
+    একটি প্রতিষ্ঠানের Web page development এ HTML ও CSS এর ভূমিকা:
+
+    HTML এর ভূমিকা:
+    - পৃষ্ঠার কাঠামো গড়ে তোলে — header, navigation, content, sidebar ও footer।
+    - প্রতিষ্ঠানের সব তথ্য উপস্থাপন করে: পরিচিতি, সেবা, পণ্য, যোগাযোগের ঠিকানা।
+    - পৃষ্ঠাগুলোকে hyperlink দিয়ে যুক্ত করে, ফলে সমগ্র সাইটটি একটি ঐক্যবদ্ধ ব্যবস্থা হয়ে ওঠে।
+    - ছবি, ভিডিও, নথি ও মানচিত্র যুক্ত করে।
+    - তথ্য সংগ্রহের জন্য form তৈরি করে — যোগাযোগ ফর্ম, চাকরির আবেদন, মতামত।
+    - টেবিল ও তালিকা দিয়ে তথ্য সুবিন্যস্ত করে, যেমন মূল্যতালিকা বা নোটিশের তালিকা।
+    - Semantic ট্যাগ ও meta tag এর মাধ্যমে search engine optimization এ সহায়তা করে, যাতে প্রতিষ্ঠানটি Google এ সহজে পাওয়া যায়।
+    - Accessibility নিশ্চিত করে alt text ও সঠিক শিরোনাম কাঠামোর মাধ্যমে।
+
+    CSS এর ভূমিকা:
+    - প্রতিষ্ঠানের ব্র্যান্ড পরিচয় প্রতিষ্ঠা করে — নির্দিষ্ট রং, ফন্ট ও শৈলী সব পৃষ্ঠায় এক রাখে।
+    - পেশাদার ও আকর্ষণীয় চেহারা দেয়, যা দর্শকের আস্থা তৈরি করে।
+    - Layout নিয়ন্ত্রণ করে Flexbox ও Grid এর মাধ্যমে।
+    - Responsive design এর মাধ্যমে মোবাইল, ট্যাব ও ডেস্কটপ — সব পর্দায় সাইটটি সঠিকভাবে দেখায়। বর্তমানে অধিকাংশ দর্শক মোবাইলে আসেন, তাই এটি অপরিহার্য।
+    - একটি বাইরের CSS ফাইল ব্যবহার করলে একটি ফাইল বদলেই সমগ্র সাইটের চেহারা বদলে যায়, ফলে রক্ষণাবেক্ষণ সহজ ও সাশ্রয়ী হয়।
+    - Hover, transition ও animation দিয়ে সীমিত মিথস্ক্রিয়ার অনুভূতি দেয়।
+    - Print stylesheet দিয়ে ছাপার উপযোগী সংস্করণ তৈরি করা যায়।
+
+    শুধুমাত্র HTML ও CSS দিয়ে যে ধরনের Web Page তৈরি করা যায়:
+
+    - Static informational website: প্রতিষ্ঠানের পরিচিতি, ইতিহাস, লক্ষ্য ও উদ্দেশ্য, সেবার তালিকা, ঠিকানা ও ফোন নম্বর।
+    - Portfolio ও Resume site: ব্যক্তিগত পরিচিতি, কাজের নমুনা ও অভিজ্ঞতা।
+    - Brochure বা Landing page: একটি পণ্য বা অনুষ্ঠানের জন্য একক পৃষ্ঠা।
+    - Product catalogue: পণ্যের ছবি ও বিবরণ, তবে কেনার ব্যবস্থা ছাড়া।
+    - Documentation ও tutorial site: নথিপত্র ও শিক্ষামূলক লেখা।
+    - Notice board: বিজ্ঞপ্তি ও সংবাদের তালিকা, যা হাতে হালনাগাদ করতে হয়।
+    - Event page: অনুষ্ঠানের সময়সূচি, স্থান ও বক্তাদের পরিচিতি।
+    - Contact page: মানচিত্র ও যোগাযোগের তথ্যসহ, তবে ফর্মটি কেবল দেখানো যাবে, জমা নেওয়া যাবে না।
+
+    যা তৈরি করা যাবে না: লগইন ব্যবস্থা, অনুসন্ধান, অনলাইন কেনাকাটা, মন্তব্য, ডেটাবেজভিত্তিক যেকোনো তালিকা, ব্যবহারকারীভেদে ভিন্ন বিষয়বস্তু, বা কার্যকর যোগাযোগ ফর্ম। এসবের জন্য JavaScript, সার্ভার-সাইড ভাষা ও ডেটাবেজ প্রয়োজন।
 16. **(ii) HTML ও CSS কী?** *[BPSC Assistant Network Engineer 2020 compact it 950-951 (ET: N/A)]*
 
+
+    Answer:    HTML (HyperText Markup Language): ওয়েব পৃষ্ঠার গঠন ও বিষয়বস্তু নির্ধারণকারী markup ভাষা। এটি প্রোগ্রামিং ভাষা নয় — এতে শর্ত, লুপ বা গণনা নেই। HTML ট্যাগ ব্যবহার করে বলে দেওয়া হয় কোনটি শিরোনাম, কোনটি অনুচ্ছেদ, কোনটি তালিকা, কোনটি ছবি ও কোনটি লিঙ্ক। বর্তমান সংস্করণ HTML5।
+
+    CSS (Cascading Style Sheets): ওয়েব পৃষ্ঠার উপস্থাপন ও সাজসজ্জা নির্ধারণকারী ভাষা — রং, ফন্ট, আকার, ব্যবধান, অবস্থান ও বিন্যাস। এটি HTML থেকে নকশাকে আলাদা করে, ফলে একটি CSS ফাইল বদলালেই সমগ্র সাইটের চেহারা বদলে যায়।
+
+    দুইয়ের সম্পর্ক: HTML হলো ভবনের কাঠামো, CSS হলো তার রং ও সাজসজ্জা। HTML বলে "এটি একটি শিরোনাম", CSS বলে "শিরোনামটি নীল রঙের, ২৪ পিক্সেল এবং মাঝখানে থাকবে"।
+
+    HTML এর মূল বিষয়:
+    - এটি ট্যাগ ব্যবহার করে লেখা হয়, যেমন `<h1>`, `<p>`, `<a>`, `<img>`, `<table>`, `<form>`।
+    - একটি পৃষ্ঠার দুটি প্রধান অংশ — `<head>` এ তথ্য বা metadata, আর `<body>` তে দৃশ্যমান বিষয়বস্তু।
+    - ফাইলের বর্ধিতাংশ `.html` বা `.htm`।
+    - এটি কেবল গঠন বলে; কীভাবে দেখাবে তা বলে না।
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>My Page</title>
+    </head>
+    <body>
+      <h1>Welcome</h1>
+      <p>This is a paragraph.</p>
+    </body>
+    </html>
+    ```
+
+    CSS এর মূল বিষয়:
+    - এর গঠন: `selector { property: value; }`
+    - তিনভাবে যুক্ত করা যায় — inline, internal ও external।
+    - ফাইলের বর্ধিতাংশ `.css`।
+    - Cascading শব্দটির অর্থ: একই element এ একাধিক নিয়ম প্রযোজ্য হলে নির্দিষ্ট অগ্রাধিকার অনুযায়ী একটি বেছে নেওয়া হয় — inline সবচেয়ে শক্তিশালী, তারপর id, তারপর class, তারপর element selector।
+
+    ```css
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: navy;
+      text-align: center;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+    #header {
+      padding: 20px;
+    }
+    ```
+
+    দুইয়ের তুলনা:
+
+    | বিষয় | HTML | CSS |
+    |---|---|---|
+    | পূর্ণরূপ | HyperText Markup Language | Cascading Style Sheets |
+    | কাজ | গঠন ও বিষয়বস্তু নির্ধারণ | উপস্থাপন ও সাজসজ্জা নির্ধারণ |
+    | ধরন | Markup language | Style sheet language |
+    | ফাইল | `.html` | `.css` |
+    | ছাড়া চলে কি | HTML ছাড়া CSS এর কোনো অর্থ নেই | CSS ছাড়া HTML চলে, তবে সাদামাটা দেখায় |
+    | লেখার ধরন | `<tag attribute="value">content</tag>` | `selector { property: value; }` |
+
+    কেন দুটি আলাদা রাখা হয়: গঠন ও উপস্থাপন পৃথক রাখলে একটি CSS ফাইল বদলেই সমগ্র সাইটের চেহারা বদলানো যায়, একই HTML বিভিন্ন যন্ত্রের জন্য ভিন্নভাবে দেখানো যায়, ফাইলের আকার ছোট হয় ও cache হয়, এবং কোড পড়া ও রক্ষণাবেক্ষণ সহজ হয়। একে বলা হয় separation of concerns।
 17. **একটি Image ও একটি Web site URL HTML প্রদর্শন করার জন্য প্রয়োজনীয় code লিখুন?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
+
+
+    Answer: একটি ছবি এবং একটি ওয়েবসাইটের URL দেখানোর HTML কোড:
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Image and Link Example</title>
+    </head>
+    <body>
+
+      <!-- একটি ছবি দেখানো -->
+      <h2>Image</h2>
+      <img src="images/flower.jpg" alt="A red flower" width="400" height="300">
+
+      <!-- একটি ওয়েবসাইটের URL দেখানো -->
+      <h2>Website Link</h2>
+      <a href="https://www.bpsc.gov.bd" target="_blank" rel="noopener noreferrer">
+        Visit BPSC Website
+      </a>
+
+      <!-- ছবির ওপরেই লিঙ্ক দেওয়া -->
+      <h2>Clickable Image</h2>
+      <a href="https://www.bpsc.gov.bd" target="_blank" rel="noopener noreferrer">
+        <img src="images/logo.png" alt="BPSC Logo" width="150">
+      </a>
+
+    </body>
+    </html>
+    ```
+
+    ব্যাখ্যা:
+
+    `<img>` ট্যাগ — ছবি দেখানোর জন্য। এটি empty element, তাই closing tag নেই।
+    - `src` — ছবির পথ বা ঠিকানা। বাধ্যতামূলক। এটি হতে পারে আপেক্ষিক পথ (`images/flower.jpg`) অথবা সম্পূর্ণ URL (`https://example.com/pic.jpg`)।
+    - `alt` — ছবি লোড না হলে যে লেখা দেখাবে, এবং screen reader যা পড়ে শোনাবে। Accessibility ও SEO দুইয়ের জন্যই বাধ্যতামূলক।
+    - `width` ও `height` — প্রদর্শনের মাপ পিক্সেলে।
+
+    `<a>` ট্যাগ — লিঙ্ক তৈরির জন্য।
+    - `href` — গন্তব্যের URL। বাধ্যতামূলক।
+    - ট্যাগের ভেতরের লেখাটিই ক্লিকযোগ্য অংশ হিসেবে দেখা যায়।
+    - `target="_blank"` — নতুন ট্যাবে খোলে।
+    - `rel="noopener noreferrer"` — নতুন ট্যাবে খোলার সময় নিরাপত্তার জন্য দিতে হয়, কারণ এটি ছাড়া নতুন পৃষ্ঠাটি `window.opener` এর মাধ্যমে মূল পৃষ্ঠাটিকে নিয়ন্ত্রণ করতে পারে।
+
+    URL কেবল লেখা হিসেবে দেখাতে হলে:
+
+    ```html
+    <p>Our website: <a href="https://www.example.com">https://www.example.com</a></p>
+    ```
 
 ## HTTP Protocol (10)
 
