@@ -3532,27 +3532,300 @@ int main() {
 
 1. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
+
+   Answer:
+
+   Algorithm:
+   - Step 1: Start.
+   - Step 2: Set attempt counter to 0.
+   - Step 3: Take username and password as input.
+   - Step 4: Check the pair against the database.
+   - Step 5: If correct, grant access and stop.
+   - Step 6: If wrong, increase the counter by 1.
+   - Step 7: If counter is less than 3, show "invalid credentials" and go back to Step 3.
+   - Step 8: If counter reaches 3, deny access, block the account and stop.
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[Set attempt = 0]
+       B --> C[/Input username and password/]
+       C --> D{Match found in database?}
+       D -- Yes --> E[Grant access]
+       E --> Z([End])
+       D -- No --> F[attempt = attempt + 1]
+       F --> G{attempt >= 3?}
+       G -- No --> H[Show invalid credentials]
+       H --> C
+       G -- Yes --> I[Deny access and block account]
+       I --> Z
+   ```
+
+   - The counter is the key element, since it enforces the three attempt limit.
+   - Blocking the account after three failures protects against brute force password guessing.
 2. **Draw a Flow chart for print odd number for 1 to N.** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
+
+   Answer:
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read N/]
+       B --> C[i = 1]
+       C --> D{i <= N?}
+       D -- No --> Z([End])
+       D -- Yes --> E{i mod 2 != 0?}
+       E -- Yes --> F[/Print i/]
+       F --> G[i = i + 1]
+       E -- No --> G
+       G --> D
+   ```
+
+   - The decision box `i mod 2 != 0` selects only the odd numbers.
+   - A simpler version starts i at 1 and increases it by 2, removing the need for the modulus test.
 3. **১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 381 (ET: BUET)]*
 
+
+   Answer:
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[i = 1]
+       B --> C{i <= 100?}
+       C -- No --> Z([End])
+       C -- Yes --> D[/Print i/]
+       D --> E[i = i + 1]
+       E --> C
+   ```
+
+   - The counter i starts at 1 and increases by 1 on each pass.
+   - The loop ends when i exceeds 100, so exactly 100 numbers are printed.
 4. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
+
+   Answer:
+
+   Algorithm to find GCD by the Euclidean method:
+   - Step 1: Start.
+   - Step 2: Read two numbers A and B.
+   - Step 3: If B is 0, then A is the GCD, so print A and stop.
+   - Step 4: Set R = A mod B.
+   - Step 5: Set A = B and B = R.
+   - Step 6: Go back to Step 3.
+   - Step 7: Stop.
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read A and B/]
+       B --> C{B = 0?}
+       C -- Yes --> D[/Print A as GCD/]
+       D --> Z([End])
+       C -- No --> E[R = A mod B]
+       E --> F[A = B]
+       F --> G[B = R]
+       G --> C
+   ```
+
+   - Example with A = 48 and B = 18: R = 12, then A = 18 and B = 12; next R = 6, A = 12, B = 6; next R = 0, A = 6, B = 0, so the GCD is 6.
+   - The Euclidean method runs in O(log min(A,B)) steps.
 5. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 596 (ET: N/A)]*
 
+
+   Answer:
+
+   Algorithm:
+   - Step 1: Start.
+   - Step 2: Read n.
+   - Step 3: Set i = 1.
+   - Step 4: If i > n, go to Step 8.
+   - Step 5: Print i.
+   - Step 6: Set i = i + 2.
+   - Step 7: Go to Step 4.
+   - Step 8: Stop.
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read n/]
+       B --> C[i = 1]
+       C --> D{i <= n?}
+       D -- No --> Z([End])
+       D -- Yes --> E[/Print i/]
+       E --> F[i = i + 2]
+       F --> D
+   ```
+
+   - Starting at 1 and stepping by 2 guarantees only odd numbers are produced, so no modulus test is needed.
 6. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
 
+
+   Answer:
+
+   Algorithm:
+   - Step 1: Start.
+   - Step 2: Read N.
+   - Step 3: Set i = 1 and sum = 0.
+   - Step 4: If i > N, go to Step 8.
+   - Step 5: sum = sum + i.
+   - Step 6: i = i + 2.
+   - Step 7: Go to Step 4.
+   - Step 8: Print sum and stop.
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read N/]
+       B --> C[i = 1, sum = 0]
+       C --> D{i <= N?}
+       D -- Yes --> E[sum = sum + i]
+       E --> F[i = i + 2]
+       F --> D
+       D -- No --> G[/Print sum/]
+       G --> Z([End])
+   ```
+
+   - The sum of the first k odd numbers equals k², which can be used to verify the result.
 7. **Write an Algorithm to check a number is Prime or not Prime.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 656 (ET: N/A)]*
 
+
+   Answer:
+
+   Algorithm to check whether a number is prime:
+   - Step 1: Start.
+   - Step 2: Read the number N.
+   - Step 3: If N is less than 2, print "Not prime" and stop.
+   - Step 4: Set i = 2 and flag = 1.
+   - Step 5: If i × i > N, go to Step 9.
+   - Step 6: If N mod i = 0, set flag = 0 and go to Step 9.
+   - Step 7: i = i + 1.
+   - Step 8: Go to Step 5.
+   - Step 9: If flag = 1 print "Prime", otherwise print "Not prime".
+   - Step 10: Stop.
+
+   - Testing divisors only up to √N is enough, because if N = a × b then one of the factors must be less than or equal to √N.
+   - Time complexity is O(√N).
 8. **Write down the algorithm and draw the flowchart of Quadratic equation.** *[CAAB Programmer 2022 compact it 722 (ET: N/A)]*
 
+
+   Answer:
+
+   Algorithm for the quadratic equation ax² + bx + c = 0:
+   - Step 1: Start.
+   - Step 2: Read a, b and c.
+   - Step 3: If a = 0, the equation is not quadratic, so print a message and stop.
+   - Step 4: Compute D = b² − 4ac.
+   - Step 5: If D > 0, roots are real and distinct: r1 = (−b + √D)/2a, r2 = (−b − √D)/2a.
+   - Step 6: If D = 0, roots are real and equal: r = −b/2a.
+   - Step 7: If D < 0, roots are imaginary: real part = −b/2a, imaginary part = √(−D)/2a.
+   - Step 8: Print the roots and stop.
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read a, b, c/]
+       B --> C[D = b*b - 4*a*c]
+       C --> D{D > 0?}
+       D -- Yes --> E[/Print two real distinct roots/]
+       D -- No --> F{D = 0?}
+       F -- Yes --> G[/Print equal roots/]
+       F -- No --> H[/Print imaginary roots/]
+       E --> Z([End])
+       G --> Z
+       H --> Z
+   ```
+
+   - The discriminant D decides which of the three cases applies.
 9. **Draw a flowchart and write algorithm for finding Factorial value of an integer number.** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 723 (ET: N/A)]*
 
+
+   Answer:
+
+   Algorithm:
+   - Step 1: Start.
+   - Step 2: Read N.
+   - Step 3: Set fact = 1 and i = 1.
+   - Step 4: If i > N, go to Step 8.
+   - Step 5: fact = fact × i.
+   - Step 6: i = i + 1.
+   - Step 7: Go to Step 4.
+   - Step 8: Print fact and stop.
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read N/]
+       B --> C[fact = 1, i = 1]
+       C --> D{i <= N?}
+       D -- Yes --> E[fact = fact * i]
+       E --> F[i = i + 1]
+       F --> D
+       D -- No --> G[/Print fact/]
+       G --> Z([End])
+   ```
+
+   - For N = 0 the loop never runs, so fact stays 1, which is the correct value of 0 factorial.
 10. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
 
+
+    Answer:
+
+    ```mermaid
+    flowchart TD
+        A([Start]) --> B[/Read N/]
+        B --> C[i = 1, sum = 0]
+        C --> D{i <= N?}
+        D -- Yes --> E[sum = sum + i]
+        E --> F[i = i + 2]
+        F --> D
+        D -- No --> G[/Print sum/]
+        G --> Z([End])
+    ```
+
+    - The variable i starts at 1 and increases by 2, so only the odd terms 1, 3, 5, 7 are added.
+    - The loop stops as soon as i becomes greater than N.
 11. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
+
+    Answer: An algorithm is a finite, ordered set of unambiguous steps that solves a particular problem or performs a computation.
+
+    Properties of a good algorithm:
+    - Finiteness: it must terminate after a finite number of steps.
+    - Definiteness: every step must be clear and unambiguous.
+    - Input and output: zero or more inputs and at least one output.
+    - Effectiveness: every operation must be basic enough to be carried out.
+
+    Three ways of expressing an algorithm:
+    - Pseudocode: an English like structured description that is close to code but not tied to any language.
+    - Flowchart: a diagram using standard symbols such as oval for start and end, parallelogram for input and output, rectangle for process and diamond for decision.
+    - Programming language code: the algorithm written directly in C, Java, Python or another language.
 12. **Three types of control statements and their graphical presentation using flowchart or flow graph.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1037-1038 (ET: BUET)]*
+
+
+    Answer: The three basic control structures of structured programming are sequence, selection and iteration.
+
+    Sequence: statements execute one after another in the order written.
+    ```mermaid
+    flowchart TD
+        A([Start]) --> B[Statement 1]
+        B --> C[Statement 2]
+        C --> Z([End])
+    ```
+
+    Selection: a condition decides which path is taken, using if, if-else or switch.
+    ```mermaid
+    flowchart TD
+        A([Start]) --> B{Condition?}
+        B -- True --> C[Statement A]
+        B -- False --> D[Statement B]
+        C --> Z([End])
+        D --> Z
+    ```
+
+    Iteration: a block repeats while a condition holds, using for, while or do-while.
+    ```mermaid
+    flowchart TD
+        A([Start]) --> B{Condition?}
+        B -- True --> C[Loop body]
+        C --> B
+        B -- False --> Z([End])
+    ```
+
+    - Any program, however complex, can be written using only these three structures, which is the basic claim of the structured programming theorem.
 
 ## String Manipulation & Algorithms (11)
 
