@@ -239,54 +239,54 @@
 10. **(c) What are the three types of services provided by the cloud?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 888 (ET: N/A)]*
 
 
-   Answer: The three types of services provided by the cloud are IaaS, PaaS and SaaS.
+    Answer: The three types of services provided by the cloud are IaaS, PaaS and SaaS.
 
-   - IaaS, Infrastructure as a Service: virtual machines, storage and networking rented on demand; the customer manages the operating system and everything above it. Examples: AWS EC2, Azure VM, Google Compute Engine.
-   - PaaS, Platform as a Service: a ready runtime with operating system, middleware, database and development tools; the customer deploys only its own code. Examples: Heroku, Google App Engine, AWS Elastic Beanstalk.
-   - SaaS, Software as a Service: a complete finished application delivered over the Internet; the customer manages nothing but its own data. Examples: Gmail, Office 365, Salesforce, Dropbox.
+    - IaaS, Infrastructure as a Service: virtual machines, storage and networking rented on demand; the customer manages the operating system and everything above it. Examples: AWS EC2, Azure VM, Google Compute Engine.
+    - PaaS, Platform as a Service: a ready runtime with operating system, middleware, database and development tools; the customer deploys only its own code. Examples: Heroku, Google App Engine, AWS Elastic Beanstalk.
+    - SaaS, Software as a Service: a complete finished application delivered over the Internet; the customer manages nothing but its own data. Examples: Gmail, Office 365, Salesforce, Dropbox.
 
-   | Point | IaaS | PaaS | SaaS |
-   |---|---|---|---|
-   | What is provided | Virtual machines, storage, network, that is raw infrastructure | A ready runtime platform with OS, middleware, database and development tools | Complete ready to use application software |
-   | The user manages | OS, middleware, runtime, applications and data | Applications and data only | Nothing, only the data and the settings |
-   | The provider manages | Hardware, virtualisation, network, storage | Everything below the application | Absolutely everything |
-   | Control and flexibility | Highest | Medium | Lowest |
-   | Target user | System administrator, network engineer | Application developer | End user |
-   | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
-   | Analogy, using a car | Renting a car and driving it yourself | Hiring a car with a driver | Taking a taxi ride |
+    | Point | IaaS | PaaS | SaaS |
+    |---|---|---|---|
+    | What is provided | Virtual machines, storage, network, that is raw infrastructure | A ready runtime platform with OS, middleware, database and development tools | Complete ready to use application software |
+    | The user manages | OS, middleware, runtime, applications and data | Applications and data only | Nothing, only the data and the settings |
+    | The provider manages | Hardware, virtualisation, network, storage | Everything below the application | Absolutely everything |
+    | Control and flexibility | Highest | Medium | Lowest |
+    | Target user | System administrator, network engineer | Application developer | End user |
+    | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
+    | Analogy, using a car | Renting a car and driving it yourself | Hiring a car with a driver | Taking a taxi ride |
 11. **Write the three basic function of cloud services?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
 
-   Answer: The three basic functions, that is the three service categories, of cloud services are:
+    Answer: The three basic functions, that is the three service categories, of cloud services are:
 
-   - Infrastructure as a Service, IaaS: providing computing infrastructure, that is virtual servers, storage and networking, on demand. The customer manages the operating system and the applications. Examples: AWS EC2, Azure Virtual Machines.
-   - Platform as a Service, PaaS: providing a complete development and deployment platform, with the operating system, runtime, database and tools already in place, so the customer supplies only application code. Examples: Heroku, Google App Engine.
-   - Software as a Service, SaaS: providing a finished application over the Internet, ready to use, with nothing to install or maintain. Examples: Gmail, Office 365, Salesforce.
+    - Infrastructure as a Service, IaaS: providing computing infrastructure, that is virtual servers, storage and networking, on demand. The customer manages the operating system and the applications. Examples: AWS EC2, Azure Virtual Machines.
+    - Platform as a Service, PaaS: providing a complete development and deployment platform, with the operating system, runtime, database and tools already in place, so the customer supplies only application code. Examples: Heroku, Google App Engine.
+    - Software as a Service, SaaS: providing a finished application over the Internet, ready to use, with nothing to install or maintain. Examples: Gmail, Office 365, Salesforce.
 
-   - In terms of underlying functions rather than models, the three things every cloud service delivers are computing power, storage, and networking, all pooled, virtualised and metered.
+    - In terms of underlying functions rather than models, the three things every cloud service delivers are computing power, storage, and networking, all pooled, virtualised and metered.
 12. **ক্লাউড কম্পিউটিং এর সুবিধা ও অসুবিধা লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-   Answer:
+    Answer:
 
-   Advantages of cloud computing:
-   - Almost no initial capital investment is required; the cost becomes a monthly operating expense.
-   - Scalability and elasticity: resources can be increased or reduced within minutes to match demand, so a site survives a sudden surge in traffic and pays nothing extra when demand falls.
-   - Accessible from anywhere: with an Internet connection the service can be used from any device, which supports remote working.
-   - Reliability and disaster recovery: the provider replicates data across several availability zones and regions and offers service level agreements of up to 99.9 percent.
-   - Automatic updates and maintenance: patching, hardware replacement and upgrades are all the provider's responsibility.
-   - Rapid deployment: a server that once took weeks to procure now runs within minutes.
-   - Collaboration: many users can work on the same document or dataset at the same time.
-   - Advanced services such as machine learning, big data analytics and content delivery networks become available, which a small organisation could never have built for itself.
+    Advantages of cloud computing:
+    - Almost no initial capital investment is required; the cost becomes a monthly operating expense.
+    - Scalability and elasticity: resources can be increased or reduced within minutes to match demand, so a site survives a sudden surge in traffic and pays nothing extra when demand falls.
+    - Accessible from anywhere: with an Internet connection the service can be used from any device, which supports remote working.
+    - Reliability and disaster recovery: the provider replicates data across several availability zones and regions and offers service level agreements of up to 99.9 percent.
+    - Automatic updates and maintenance: patching, hardware replacement and upgrades are all the provider's responsibility.
+    - Rapid deployment: a server that once took weeks to procure now runs within minutes.
+    - Collaboration: many users can work on the same document or dataset at the same time.
+    - Advanced services such as machine learning, big data analytics and content delivery networks become available, which a small organisation could never have built for itself.
 
-   Disadvantages of cloud computing:
-   - Complete dependence on the Internet: if the connection fails, nothing works. Where bandwidth is expensive or unreliable this is a serious problem.
-   - Security and privacy: the data resides on someone else's hardware, so confidentiality depends on the provider's controls and on the customer configuring the service correctly.
-   - Data sovereignty and law: many countries, and in Bangladesh the rules governing banking data, require certain data to remain within the national boundary.
-   - Limited control and customisation, especially in SaaS, where the behaviour of the software cannot be changed.
-   - Vendor lock-in: proprietary services and data transfer charges make it difficult and expensive to move to another provider later.
-   - Long term cost: for a steady and predictable workload, owning the hardware may be cheaper after a few years.
-   - Downtime risk: a single outage at the provider affects every customer at once, and the customer can do nothing but wait.
-   - Hidden charges, particularly for outbound data transfer, and the need for staff with new skills.
+    Disadvantages of cloud computing:
+    - Complete dependence on the Internet: if the connection fails, nothing works. Where bandwidth is expensive or unreliable this is a serious problem.
+    - Security and privacy: the data resides on someone else's hardware, so confidentiality depends on the provider's controls and on the customer configuring the service correctly.
+    - Data sovereignty and law: many countries, and in Bangladesh the rules governing banking data, require certain data to remain within the national boundary.
+    - Limited control and customisation, especially in SaaS, where the behaviour of the software cannot be changed.
+    - Vendor lock-in: proprietary services and data transfer charges make it difficult and expensive to move to another provider later.
+    - Long term cost: for a steady and predictable workload, owning the hardware may be cheaper after a few years.
+    - Downtime risk: a single outage at the provider affects every customer at once, and the customer can do nothing but wait.
+    - Hidden charges, particularly for outbound data transfer, and the need for staff with new skills.
 
 ## Cloud Storage & Fundamentals (6)
 
