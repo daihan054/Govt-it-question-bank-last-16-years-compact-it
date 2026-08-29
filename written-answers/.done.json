@@ -826,5 +826,9 @@
  [
   "oop.md",
   "Output Tracing & Recursion (3)"
+ ],
+ [
+  "operating-system.md",
+  "Linux / Unix Commands & Administration (42)"
  ]
 ]
