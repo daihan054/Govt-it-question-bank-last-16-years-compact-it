@@ -5457,52 +5457,983 @@ SELECT count (*) FROM (
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Primary Key | Foreign Key | Candidate Key |
+   |---|---|---|---|
+   | Definition | The candidate key chosen to identify rows of its own table | An attribute referring to the primary key of another table | Any minimal set of attributes that uniquely identifies a row |
+   | Uniqueness | Must be unique | May repeat | Must be unique |
+   | NULL | Not permitted | Permitted unless declared NOT NULL | Permitted in principle, but a candidate key chosen as primary must not be NULL |
+   | Number per table | Exactly one | Any number | One or more |
+   | Purpose | Entity integrity, that is unique identification | Referential integrity, that is linking tables | Provides the pool from which the primary key is chosen |
+   | Index | Created automatically | Not created automatically; should be added | Created if declared UNIQUE |
+   | Minimality | Minimal, since it is a candidate key | Not relevant | Minimal by definition |
+   | Example | Student_ID in Student | Dept_ID in Employee referring to Department | Student_ID, Registration_No and NID in Student |
+
+   Relationship between them:
+   - Every candidate key is a minimal super key. The designer chooses one of them as the primary key; the remainder become alternate keys, normally enforced with a UNIQUE constraint.
+   - A foreign key is not a key of its own table at all; it is a reference to a key of another table. Its values are drawn from the referenced column, so it is unique only by coincidence.
+
+   Example:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL UNIQUE
+   );
+
+   CREATE TABLE Student (
+       Student_ID      INT PRIMARY KEY,          -- primary key
+       Registration_No VARCHAR(20) UNIQUE,       -- candidate key, now an alternate key
+       NID             VARCHAR(20) UNIQUE,       -- candidate key, now an alternate key
+       Name            VARCHAR(100) NOT NULL,
+       Dept_ID         INT REFERENCES Department(Dept_ID)   -- foreign key
+   );
+   ```
 2. **(a) Define RDBMS. Explain the different key and primary key, candidate key, super key, and foreign key DBMS.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1445 (ET: N/A)]*
 
+
+   Answer:
+
+   Definition of RDBMS:
+   - A Relational Database Management System is a database management system based on the relational model proposed by E. F. Codd in 1970, in which data is stored in tables, called relations, consisting of rows and columns.
+   - Its characteristics: data is held in two dimensional tables; each row is a tuple and each column an attribute; the order of rows and columns is immaterial; every value is atomic; tables are related to one another by keys rather than by pointers; and the language used is SQL.
+   - It enforces integrity: entity integrity through the primary key, referential integrity through the foreign key, and domain integrity through data types and CHECK constraints.
+   - It supports transactions with the ACID properties.
+   - Examples: Oracle, MySQL, PostgreSQL, Microsoft SQL Server, IBM Db2.
+
+   The different kinds of key:
+
+   - Super key: any attribute or set of attributes that uniquely identifies a row. It may contain extra attributes that are not needed for uniqueness. It is the widest category, and every other key is a super key.
+   - Candidate key: a minimal super key, that is a super key from which no attribute can be removed without losing uniqueness. A relation may have several candidate keys.
+   - Primary key: the one candidate key chosen by the designer to identify rows. It cannot be NULL and cannot contain duplicates, and a table has exactly one.
+   - Alternate key: any candidate key not chosen as the primary key. It is normally enforced with a UNIQUE constraint.
+   - Composite key: a key made up of two or more attributes together, because no single attribute is unique.
+   - Foreign key: an attribute in one table whose values must match the primary key of another table, which is how a relationship between tables is expressed. It may be NULL and may contain duplicates.
+   - Unique key: a constraint guaranteeing uniqueness that is not the primary key. Unlike the primary key it permits one NULL value.
+   - Surrogate key: an artificial key with no business meaning, such as an auto-incremented number, used when no natural attribute is a satisfactory identifier.
+
+   Example, a Student relation:
+
+   ```
+   Student(Student_ID, Registration_No, NID, Name, Department, Dept_ID)
+   ```
+
+   - Super keys: {Student_ID}, {Registration_No}, {NID}, {Student_ID, Name}, {Registration_No, Department} and so on, since adding attributes to a unique set keeps it unique.
+   - Candidate keys: {Student_ID}, {Registration_No}, {NID}, each of which is unique and minimal.
+   - Primary key: Student_ID, chosen by the designer.
+   - Alternate keys: Registration_No and NID.
+   - Foreign key: Dept_ID, referring to Department(Dept_ID).
+   - Composite key example: in `Enrollment(Student_ID, Course_ID, Grade)` the primary key is the pair (Student_ID, Course_ID), since neither alone is unique.
+
+   Relationship between them: every candidate key is a super key, and the primary key is one of the candidate keys. So primary key ⊆ candidate key ⊆ super key.
 3. **Difference between primary key, foreign key? What is trigger?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
 
+
+   Answer:
+
+   Difference between primary key and foreign key:
+
+   | Point | Primary Key | Foreign Key |
+   |---|---|---|
+   | Purpose | Uniquely identifies each row of its own table | Links a row to a row of another table |
+   | Uniqueness | Must be unique | May repeat |
+   | NULL values | Not permitted | Permitted, unless declared NOT NULL |
+   | Number per table | Exactly one | Any number |
+   | Index | Created automatically | Not created automatically in most systems; should be created manually |
+   | References | Nothing; it is referenced | The primary key or a unique key of another table |
+   | Deletion | A row cannot be deleted while a foreign key refers to it, unless CASCADE is specified | Deleting the child row affects nothing else |
+   | What it enforces | Entity integrity | Referential integrity |
+   | Constraint syntax | `PRIMARY KEY (col)` | `FOREIGN KEY (col) REFERENCES Parent(col)` |
+
+   Example:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,              -- primary key of Employee
+       Emp_Name VARCHAR(100) NOT NULL,
+       Dept_ID  INT,                          -- foreign key
+       FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)
+   );
+   ```
+
+   - `Emp_ID` uniquely identifies each employee, which is entity integrity.
+   - `Dept_ID` in Employee must match some `Dept_ID` in Department, which is referential integrity. An employee cannot be placed in a department that does not exist, and a department cannot be deleted while employees still refer to it, unless `ON DELETE CASCADE` or `ON DELETE SET NULL` is specified.
+
+   What a trigger is:
+   - A trigger is a named block of procedural code stored in the database and executed automatically by the DBMS when a specified event occurs on a specified table. It is never called explicitly by an application.
+   - Its components: the event, that is INSERT, UPDATE or DELETE; the timing, that is BEFORE, AFTER or INSTEAD OF; the level, that is FOR EACH ROW or FOR EACH STATEMENT; and the body, that is the code to be executed.
+
+   ```sql
+   CREATE TRIGGER audit_salary_change
+   AFTER UPDATE ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF OLD.salary <> NEW.salary THEN
+           INSERT INTO Salary_Audit(emp_id, old_salary, new_salary, changed_on, changed_by)
+           VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW(), CURRENT_USER());
+       END IF;
+   END;
+   ```
+
+   Uses of triggers:
+   - Maintaining an audit trail of who changed what and when, which is a regulatory requirement in banking.
+   - Enforcing complex business rules that a CHECK constraint cannot express, for example that a withdrawal must not exceed the balance plus the overdraft limit.
+   - Maintaining derived or summary columns automatically, such as updating an account balance when a transaction is inserted.
+   - Enforcing referential actions beyond what CASCADE provides.
+   - Preventing invalid operations, by raising an error inside a BEFORE trigger.
+
+   Disadvantages worth stating: triggers execute invisibly, so they make behaviour hard to predict and to debug; they add overhead to every affected statement; a chain of triggers firing one another is difficult to trace; and they can make a bulk load extremely slow.
 4. **Define primary key, super key, and Candidate key.** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
+
+   Answer:
+
+   Super key:
+   - A super key is any attribute or set of attributes whose values uniquely identify a row of a relation. It may contain redundant attributes that are not required for uniqueness.
+   - It is the widest of the three categories: every candidate key and every primary key is also a super key.
+   - Example, in `Student(Student_ID, Registration_No, Name, Department)`: {Student_ID}, {Registration_No}, {Student_ID, Name}, {Student_ID, Registration_No, Name, Department} are all super keys, because each identifies a row uniquely.
+
+   Candidate key:
+   - A candidate key is a minimal super key, that is a super key from which no attribute can be removed without destroying uniqueness.
+   - A relation may have several candidate keys, and each is a genuine alternative for identifying rows.
+   - Example: {Student_ID} and {Registration_No} are candidate keys, since each is unique and neither contains a redundant attribute. {Student_ID, Name} is not a candidate key, because Name can be dropped and uniqueness survives.
+
+   Primary key:
+   - The primary key is the one candidate key selected by the designer to be the principal means of identifying rows.
+   - It must be unique, it cannot be NULL, and a table has exactly one. The DBMS creates an index on it automatically.
+   - The candidate keys not chosen are called alternate keys and are normally enforced with a UNIQUE constraint.
+   - Example: Student_ID is chosen as the primary key, and Registration_No becomes an alternate key.
+
+   Relationship, which is the point being tested:
+   - primary key ⊆ candidate key ⊆ super key.
+   - Every primary key is a candidate key, and every candidate key is a super key, but not the reverse.
+
+   Criteria for choosing the primary key from among the candidate keys: it should be stable and never change, short, simple, never NULL, and preferably numeric for indexing efficiency. Where no natural attribute satisfies these, a surrogate key such as an auto-incremented integer is created.
 5. **What is primary key and foreign key with example?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
 
+
+   Answer:
+
+   Primary key:
+   - A primary key is the attribute or set of attributes chosen to identify each row of a table uniquely. It must be unique, it cannot contain NULL, and a table has exactly one. It enforces entity integrity, and the DBMS creates an index on it automatically.
+
+   Foreign key:
+   - A foreign key is an attribute in one table whose values must match the primary key of another table. It expresses the relationship between the two tables and enforces referential integrity. It may be NULL and may contain duplicate values, and a table may have several.
+
+   Example:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL,
+       Salary   DECIMAL(10,2),
+       Dept_ID  INT,
+       FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)
+   );
+   ```
+
+   With data:
+
+   | Department |  | | Employee | | | |
+   |---|---|---|---|---|---|---|
+   | Dept_ID | Dept_Name | | Emp_ID | Emp_Name | Salary | Dept_ID |
+   | 10 | IT | | 1 | Rahim | 45000 | 10 |
+   | 20 | Finance | | 2 | Karim | 65000 | 10 |
+   | 30 | HR | | 3 | Salma | 40000 | 20 |
+
+   - `Emp_ID` is the primary key of Employee: no two employees share it and it is never NULL.
+   - `Dept_ID` in Employee is a foreign key referring to `Dept_ID` in Department. It repeats, since two employees are in department 10, and it could be NULL for an employee not yet assigned.
+   - What the foreign key enforces: an employee cannot be given `Dept_ID = 50`, because no such department exists; and department 10 cannot be deleted while employees still refer to it, unless `ON DELETE CASCADE` is specified, which would delete those employees too, or `ON DELETE SET NULL`, which would set their `Dept_ID` to NULL.
+
+   | Point | Primary Key | Foreign Key |
+   |---|---|---|
+   | Purpose | Uniquely identifies each row of its own table | Links a row to a row of another table |
+   | Uniqueness | Must be unique | May repeat |
+   | NULL values | Not permitted | Permitted, unless declared NOT NULL |
+   | Number per table | Exactly one | Any number |
+   | Index | Created automatically | Not created automatically in most systems; should be created manually |
+   | References | Nothing; it is referenced | The primary key or a unique key of another table |
+   | Deletion | A row cannot be deleted while a foreign key refers to it, unless CASCADE is specified | Deleting the child row affects nothing else |
+   | What it enforces | Entity integrity | Referential integrity |
+   | Constraint syntax | `PRIMARY KEY (col)` | `FOREIGN KEY (col) REFERENCES Parent(col)` |
+
+   Example:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,              -- primary key of Employee
+       Emp_Name VARCHAR(100) NOT NULL,
+       Dept_ID  INT,                          -- foreign key
+       FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)
+   );
+   ```
+
+   - `Emp_ID` uniquely identifies each employee, which is entity integrity.
+   - `Dept_ID` in Employee must match some `Dept_ID` in Department, which is referential integrity. An employee cannot be placed in a department that does not exist, and a department cannot be deleted while employees still refer to it, unless `ON DELETE CASCADE` or `ON DELETE SET NULL` is specified.
 6. **Explain Primary key, Candidate key, and Foreign key.** *[Teletalk Assistant Manager (IT) 2023 compact it 468 (ET: N/A)]*
 
+
+   Answer:
+
+   Primary key:
+   - The candidate key chosen by the designer to identify each row of a table uniquely. It must be unique, cannot be NULL, and there is exactly one per table. It enforces entity integrity and is indexed automatically.
+   - Example: `Student_ID` in `Student(Student_ID, Name, Registration_No, Dept_ID)`.
+
+   Candidate key:
+   - A minimal set of attributes that uniquely identifies a row, that is a super key from which no attribute can be removed without losing uniqueness. A relation may have several, and the designer chooses one of them as the primary key; the rest become alternate keys.
+   - Example: `Student_ID` and `Registration_No` are both candidate keys of Student, since each is unique and minimal. If `Student_ID` is chosen as primary, `Registration_No` becomes an alternate key and is enforced with a UNIQUE constraint.
+
+   Foreign key:
+   - An attribute in one table whose values must match the primary key of another table. It is how a relationship between two tables is expressed, and it enforces referential integrity. It may be NULL and may repeat, and a table may have several.
+   - Example: `Dept_ID` in Student, referring to `Dept_ID` in Department. A student cannot be placed in a department that does not exist, and a department cannot be deleted while students still refer to it.
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50)
+   );
+
+   CREATE TABLE Student (
+       Student_ID      INT PRIMARY KEY,        -- primary key
+       Registration_No VARCHAR(20) UNIQUE,     -- alternate, that is another candidate key
+       Name            VARCHAR(100) NOT NULL,
+       Dept_ID         INT REFERENCES Department(Dept_ID)   -- foreign key
+   );
+   ```
+
+   Relationship: primary key ⊆ candidate key ⊆ super key. The foreign key is not a key of its own table at all; it is a reference to a key of another table.
 7. **(খ) Primary key এবং Super key এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Primary Key | Super Key |
+   |---|---|---|
+   | Definition | The candidate key chosen to identify rows uniquely | Any attribute or set of attributes that identifies rows uniquely |
+   | Minimality | Minimal; no attribute can be removed | Not necessarily minimal; it may contain redundant attributes |
+   | Number per relation | Exactly one | Many; a relation with n attributes may have a very large number |
+   | NULL values | Not permitted | Permitted in principle, since the concept is theoretical |
+   | Selection | Chosen deliberately by the designer | Not chosen; it is any set satisfying the uniqueness property |
+   | Implementation | Declared with `PRIMARY KEY` and indexed automatically | A theoretical concept, not declared in SQL |
+   | Relationship | Every primary key is a super key | Not every super key is a primary key |
+   | Purpose | Practical identification of rows and enforcement of entity integrity | Theoretical basis from which candidate keys and the primary key are derived |
+
+   Example, `Student(Student_ID, Registration_No, Name, Department)`:
+   - Super keys: {Student_ID}, {Registration_No}, {Student_ID, Name}, {Registration_No, Department}, {Student_ID, Registration_No, Name, Department}, and every other set containing a unique attribute.
+   - Candidate keys, that is the minimal super keys: {Student_ID} and {Registration_No}.
+   - Primary key: {Student_ID}, chosen from among the candidate keys.
+
+   - The hierarchy to state: primary key ⊆ candidate key ⊆ super key. A super key becomes a candidate key when it is minimal, and a candidate key becomes the primary key when it is selected.
 8. **Super key and Candidate key finding from table.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 648 (ET: BUET)]*
 
+
+   Answer: Super keys and candidate keys are found from a table by testing which sets of attributes are unique, or more reliably from the functional dependencies by computing attribute closures.
+
+   Method:
+   - Step 1: identify which single attributes are unique across all the rows. Each is a candidate key.
+   - Step 2: for the remaining attributes, test pairs, then triples, until a unique combination is found. A combination is a candidate key only if no proper subset of it is already unique.
+   - Step 3: every superset of a candidate key is a super key. The number of super keys is therefore large: if a relation has n attributes and {A} is a candidate key, then all 2^(n−1) subsets containing A are super keys.
+
+   Worked example:
+
+   | Roll | Reg_No | Name | Department |
+   |---|---|---|---|
+   | 101 | R-001 | Rahim | CSE |
+   | 102 | R-002 | Karim | CSE |
+   | 103 | R-003 | Rahim | EEE |
+   | 104 | R-004 | Salma | CSE |
+
+   - Roll: all four values are distinct, so {Roll} is unique. It is a candidate key.
+   - Reg_No: all four values are distinct, so {Reg_No} is also a candidate key.
+   - Name: 'Rahim' appears twice, so {Name} is not unique and cannot be a key.
+   - Department: repeats, so it is not a key.
+   - {Name, Department}: the pairs are (Rahim, CSE), (Karim, CSE), (Rahim, EEE), (Salma, CSE), all distinct in this instance. It is therefore unique here, but uniqueness must hold for every possible instance, not merely the one shown, so it can be treated as a candidate key only if the business rule guarantees that no two students of the same name are in the same department. This distinction is what such a question is testing.
+
+   Candidate keys: {Roll}, {Reg_No}.
+
+   Super keys: every set containing a candidate key, that is
+   - {Roll}, {Reg_No}
+   - {Roll, Reg_No}, {Roll, Name}, {Roll, Department}, {Reg_No, Name}, {Reg_No, Department}
+   - {Roll, Reg_No, Name}, {Roll, Name, Department}, and so on
+   - {Roll, Reg_No, Name, Department}
+   - With 4 attributes and 2 single attribute candidate keys, the number of super keys is 2⁴ − number of subsets containing neither Roll nor Reg_No, that is 16 − 4 = 12.
+
+   Finding candidate keys from functional dependencies, which is the more rigorous method:
+   - Compute the closure X⁺ of each candidate set X. If X⁺ contains every attribute of the relation, X is a super key. If no proper subset of X has that property, X is a candidate key.
+   - Attributes appearing only on the left of every dependency must be in every candidate key; attributes appearing only on the right can never be part of one.
 9. **From Functional Dependency for determine candidate key.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 661 (ET: N/A)]*
 
+
+   Answer: Candidate keys are found from a set of functional dependencies by computing attribute closures.
+
+   Method:
+   - Step 1: classify the attributes. An attribute that appears only on the left hand side of the dependencies, or in none of them, must belong to every candidate key. An attribute that appears only on the right hand side can never belong to a candidate key.
+   - Step 2: compute the closure of the set of essential attributes found in step 1. If that closure already contains every attribute of the relation, it is the only candidate key and the work is finished.
+   - Step 3: otherwise, add the remaining attributes one at a time, and to each resulting set, and compute the closure of each. Any set whose closure is the whole relation is a super key; it is a candidate key if no proper subset of it is already a super key.
+
+   Closure algorithm: to compute X⁺, start with X, and repeatedly, for every dependency A → B in which A is already contained in the current set, add B. Stop when nothing more can be added.
+
+   Worked example: R(A, B, C, D, E) with F = {A → BC, CD → E, B → D, E → A}.
+
+   - Step 1: attribute A appears on both sides, B on both, C on both, D on both, E on both. No attribute is confined to one side, so no attribute is forced into or excluded from every key.
+   - Step 2, test single attributes:
+   - A⁺ = A, then A → BC gives {A, B, C}; B → D gives {A, B, C, D}; CD → E gives {A, B, C, D, E}. So A⁺ = ABCDE and {A} is a candidate key.
+   - B⁺ = B, then B → D gives {B, D}. Nothing more applies, so B⁺ = BD. Not a key.
+   - C⁺ = C. Not a key.
+   - D⁺ = D. Not a key.
+   - E⁺ = E, then E → A gives {E, A}; A → BC gives {E, A, B, C}; B → D gives everything. So E⁺ = ABCDE and {E} is a candidate key.
+   - Step 3, test pairs that do not contain A or E:
+   - BC⁺ = {B, C}, then B → D gives {B, C, D}; CD → E gives {B, C, D, E}; E → A gives everything. So {B, C} is a candidate key, and neither {B} nor {C} alone is, so it is minimal.
+   - CD⁺ = {C, D}, then CD → E gives {C, D, E}; E → A gives {A, C, D, E}; A → BC gives everything. So {C, D} is a candidate key.
+   - BD⁺ = {B, D}. Not a key.
+
+   Candidate keys: {A}, {E}, {B, C}, {C, D}.
+
+   - Prime attributes, that is those appearing in some candidate key: A, B, C, D, E. Here all five are prime.
+   - Any superset of a candidate key is a super key.
+   - The result is used directly in normalisation: 2NF requires that no non-prime attribute is partially dependent on a candidate key, and 3NF that none is transitively dependent.
 10. **Relation to find primary key, candidate key, super key.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
 
+
+   Answer: The three kinds of key are found from a relation by testing which sets of attributes uniquely identify a row.
+
+   Definitions:
+   - Super key: any set of attributes that uniquely identifies a row; it may contain redundant attributes.
+   - Candidate key: a minimal super key, from which no attribute can be removed without losing uniqueness.
+   - Primary key: the candidate key chosen by the designer.
+
+   Worked example, `Employee(Emp_ID, NID, Email, Name, Dept)`:
+
+   | Emp_ID | NID | Email | Name | Dept |
+   |---|---|---|---|---|
+   | 101 | 1234567890 | rahim@x.com | Rahim | IT |
+   | 102 | 2345678901 | karim@x.com | Karim | IT |
+   | 103 | 3456789012 | salma@x.com | Salma | HR |
+
+   Step 1, test single attributes for uniqueness:
+   - Emp_ID: all distinct, so it is a candidate key.
+   - NID: all distinct, and a national identity number is unique by definition, so it is a candidate key.
+   - Email: all distinct, and an email address is unique in practice, so it is a candidate key.
+   - Name and Dept: not unique, so neither can be a key.
+
+   Step 2, candidate keys: {Emp_ID}, {NID}, {Email}. Each is unique and minimal.
+
+   Step 3, primary key: {Emp_ID} is chosen, because it is short, numeric, stable and controlled by the organisation. NID and Email become alternate keys, enforced with UNIQUE constraints. Email in particular is a poor primary key, because a person may change it.
+
+   Step 4, super keys: every set containing at least one candidate key.
+   - {Emp_ID}, {NID}, {Email}
+   - {Emp_ID, Name}, {NID, Dept}, {Email, Name}, {Emp_ID, NID}, and so on
+   - {Emp_ID, NID, Email, Name, Dept}, the whole relation
+   - Counting: with 5 attributes and 3 single attribute candidate keys, the super keys are all subsets except those containing none of Emp_ID, NID or Email. There are 2² = 4 such subsets, taken from {Name, Dept}, so the number of super keys is 32 − 4 = 28.
+
+   ```sql
+   CREATE TABLE Employee (
+       Emp_ID INT PRIMARY KEY,
+       NID    VARCHAR(20) UNIQUE NOT NULL,
+       Email  VARCHAR(100) UNIQUE,
+       Name   VARCHAR(100) NOT NULL,
+       Dept   VARCHAR(50)
+   );
+   ```
+
+   - Caution worth stating: uniqueness must hold for every possible instance of the relation, not merely for the rows that happen to be present. A column that looks unique in a sample may not be unique in general, so the business rules must be consulted rather than the data alone.
 11. **(a) Differentiate among foreign key, candidate key, and primary key.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Candidate Key | Primary Key | Foreign Key |
+   |---|---|---|---|
+   | Definition | A minimal set of attributes that uniquely identifies a row | The candidate key chosen to identify rows | An attribute referring to the primary key of another table |
+   | Minimality | Minimal by definition | Minimal, being a candidate key | Not applicable |
+   | Uniqueness | Unique | Unique | May repeat |
+   | NULL | Permitted in theory | Never permitted | Permitted unless declared NOT NULL |
+   | Number per table | One or more | Exactly one | Any number |
+   | Chosen by | Determined by the data and the business rules | Selected by the designer from the candidate keys | Determined by the relationship being modelled |
+   | Purpose | Identifies the possible identifiers | Entity integrity | Referential integrity |
+   | Index | Created if declared UNIQUE | Created automatically | Not automatic; should be added manually |
+   | Belongs to | Its own table | Its own table | Its own table, but refers to another |
+
+   Relationship:
+   - primary key ⊆ candidate key ⊆ super key. The candidate keys are all the minimal identifiers available; the primary key is the one selected; the remainder become alternate keys.
+   - A foreign key is of a different character altogether. It is not an identifier of its own table but a pointer to another table's identifier, and it is what turns a set of independent tables into a related database.
+
+   Example:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) UNIQUE NOT NULL
+   );
+
+   CREATE TABLE Student (
+       Student_ID      INT PRIMARY KEY,       -- primary key, chosen
+       Registration_No VARCHAR(20) UNIQUE,    -- candidate key, now alternate
+       NID             VARCHAR(20) UNIQUE,    -- candidate key, now alternate
+       Name            VARCHAR(100) NOT NULL,
+       Dept_ID         INT REFERENCES Department(Dept_ID)  -- foreign key
+   );
+   ```
 12. **Explain the primary key and composite key with respect to database.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
 
+
+   Answer:
+
+   Primary key:
+   - The attribute or set of attributes chosen to identify each row of a table uniquely. It must be unique, it cannot be NULL, and a table has exactly one. It enforces entity integrity and is indexed automatically by the DBMS.
+   - Example: `Student_ID` in `Student(Student_ID, Name, Department)`.
+
+   Composite key:
+   - A composite key, also called a compound key, is a primary key made up of two or more attributes taken together, used when no single attribute is unique on its own but the combination is.
+   - Every attribute of a composite key must be NOT NULL, and the uniqueness applies to the combination rather than to any individual column.
+
+   Example of a composite key:
+
+   ```sql
+   CREATE TABLE Enrollment (
+       Student_ID INT,
+       Course_ID  INT,
+       Semester   VARCHAR(20),
+       Grade      CHAR(2),
+       PRIMARY KEY (Student_ID, Course_ID, Semester),
+       FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+       FOREIGN KEY (Course_ID)  REFERENCES Course(Course_ID)
+   );
+   ```
+
+   - Neither `Student_ID` nor `Course_ID` alone is unique in this table: a student takes many courses and a course has many students. The combination of the two, together with the semester, is unique, because a given student takes a given course once in a given semester.
+   - This arrangement arises naturally whenever a many to many relationship is converted into a table, which is why composite keys are common in junction tables.
+
+   Relationship between the two:
+   - A composite key is a kind of primary key, not an alternative to it. Every primary key is either simple, consisting of one attribute, or composite, consisting of several.
+
+   Practical consideration:
+   - A composite key can become cumbersome when it must be referenced by other tables, since every referencing table must carry all its columns. For this reason designers often add a surrogate key, such as an auto-incremented `Enrollment_ID`, as the primary key, and keep a UNIQUE constraint on the natural composite key to preserve the business rule. Both approaches are correct, and the trade-off should be stated.
 13. **(খ) Relational Database Design এ Primary Key ও Foreign Key বলতে কি বুঝায়? উদাহরণসহ লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
 
+
+   Answer:
+
+   Primary key:
+   - A primary key is the attribute or set of attributes chosen to identify each row of a table uniquely. It must be unique, it cannot contain NULL, and each table has exactly one. The DBMS creates an index on it automatically, so lookups by the key are fast. It enforces entity integrity, that is the rule that every row must be identifiable.
+
+   Foreign key:
+   - A foreign key is an attribute in one table whose values must match the primary key of another table. It is the mechanism by which a relationship between two tables is represented, and it enforces referential integrity, that is the rule that a reference must point to something that exists.
+   - It may be NULL, meaning that no relationship exists for that row, and it may repeat, since many rows may refer to the same parent. A table may have several foreign keys.
+
+   Example:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,               -- primary key
+       Emp_Name VARCHAR(100) NOT NULL,
+       Salary   DECIMAL(10,2),
+       Dept_ID  INT,                           -- foreign key
+       FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)
+           ON DELETE SET NULL
+           ON UPDATE CASCADE
+   );
+   ```
+
+   What this achieves:
+   - `Emp_ID` guarantees that every employee row is distinct and identifiable.
+   - `Dept_ID` in Employee can only hold a value that exists in Department, so an employee cannot be assigned to a department that does not exist.
+   - `ON DELETE SET NULL` means that if a department is deleted, its employees remain but their `Dept_ID` becomes NULL. The alternatives are `ON DELETE RESTRICT`, which is the default and refuses the deletion, and `ON DELETE CASCADE`, which deletes the employees too.
+   - `ON UPDATE CASCADE` means that if a department's identifier is changed, the change propagates automatically to the employees.
+
+   | Point | Primary Key | Foreign Key |
+   |---|---|---|
+   | Purpose | Uniquely identifies each row of its own table | Links a row to a row of another table |
+   | Uniqueness | Must be unique | May repeat |
+   | NULL values | Not permitted | Permitted, unless declared NOT NULL |
+   | Number per table | Exactly one | Any number |
+   | Index | Created automatically | Not created automatically in most systems; should be created manually |
+   | References | Nothing; it is referenced | The primary key or a unique key of another table |
+   | Deletion | A row cannot be deleted while a foreign key refers to it, unless CASCADE is specified | Deleting the child row affects nothing else |
+   | What it enforces | Entity integrity | Referential integrity |
+   | Constraint syntax | `PRIMARY KEY (col)` | `FOREIGN KEY (col) REFERENCES Parent(col)` |
+
+   Example:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,              -- primary key of Employee
+       Emp_Name VARCHAR(100) NOT NULL,
+       Dept_ID  INT,                          -- foreign key
+       FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)
+   );
+   ```
+
+   - `Emp_ID` uniquely identifies each employee, which is entity integrity.
+   - `Dept_ID` in Employee must match some `Dept_ID` in Department, which is referential integrity. An employee cannot be placed in a department that does not exist, and a department cannot be deleted while employees still refer to it, unless `ON DELETE CASCADE` or `ON DELETE SET NULL` is specified.
 14. **(b) What are purpose of using foreign key in a database? Give suitable example.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 802 (ET: N/A)]*
 
+
+   Answer: The purpose of a foreign key is to represent a relationship between two tables and to enforce referential integrity, that is the rule that a reference must always point to a row that actually exists.
+
+   Purposes:
+   - Establishing relationships: a foreign key is how a one to many relationship is represented in a relational database. Without it the tables would be independent and the connection between them would exist only in the mind of the programmer.
+   - Referential integrity: the DBMS refuses to insert or update a row whose foreign key value does not exist in the parent table, so orphan records cannot be created. This is enforced centrally, whatever any application does.
+   - Controlled deletion and update: `ON DELETE RESTRICT` prevents a parent from being deleted while children refer to it; `ON DELETE CASCADE` deletes the children with it; `ON DELETE SET NULL` leaves the children but severs the link. `ON UPDATE CASCADE` propagates a change of key value automatically.
+   - Documenting the design: the constraints make the structure of the database self describing, so a new developer can see how the tables relate without consulting a document.
+   - Enabling the optimiser: the query planner uses the declared relationship to choose better join strategies.
+   - Supporting joins naturally, since the foreign key names the column on which the tables should be joined.
+
+   Example:
+
+   ```sql
+   CREATE TABLE Customer (
+       Customer_ID INT PRIMARY KEY,
+       Name        VARCHAR(100) NOT NULL,
+       Phone       VARCHAR(20)
+   );
+
+   CREATE TABLE Orders (
+       Order_ID    INT PRIMARY KEY,
+       Order_Date  DATE NOT NULL,
+       Amount      DECIMAL(10,2),
+       Customer_ID INT NOT NULL,
+       FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
+           ON DELETE RESTRICT
+   );
+   ```
+
+   What the constraint prevents:
+   - `INSERT INTO Orders VALUES (5, '2025-01-10', 500, 99);` fails if customer 99 does not exist, so an order can never belong to a non-existent customer.
+   - `DELETE FROM Customer WHERE Customer_ID = 1;` fails if that customer has orders, so the order history cannot be silently orphaned.
+   - `NOT NULL` on `Customer_ID` additionally enforces total participation: every order must belong to a customer.
+
+   Practical note: a foreign key is not indexed automatically in most database systems, although the primary key it refers to is. An index should be created on the foreign key column, otherwise every deletion from the parent table requires a full scan of the child table to check the constraint.
 15. **What is primary key?** *[BCC CA Monitoring System Project 2021 compact it 829 (ET: N/A)]*
 
+
+   Answer: A primary key is the attribute or set of attributes chosen to identify each row of a table uniquely.
+
+   Properties:
+   - Uniqueness: no two rows may have the same value. This is what makes every row identifiable.
+   - Not NULL: it can never be empty, because a row that cannot be identified has no place in a relation.
+   - Exactly one per table: a table may have several candidate keys, but only one of them is designated the primary key.
+   - Minimal: it contains no attribute that is not needed for uniqueness, since it is a candidate key.
+   - Immutable in practice: it should be chosen so that its value never needs to change, because changing it would require every referencing foreign key to be changed too.
+   - Indexed automatically by the DBMS, so lookups by the key are fast.
+   - It enforces entity integrity, which is one of the two fundamental integrity rules of the relational model.
+   - It is the target of foreign keys in other tables, and therefore the basis of every relationship.
+
+   Types: simple, consisting of one attribute; composite, consisting of several attributes together; natural, drawn from real data such as a national identity number; and surrogate, an artificial value such as an auto-incremented integer with no business meaning.
+
+   ```sql
+   CREATE TABLE Student (
+       Student_ID INT PRIMARY KEY,
+       Name       VARCHAR(100) NOT NULL,
+       Department VARCHAR(50)
+   );
+
+   -- Composite primary key
+   CREATE TABLE Enrollment (
+       Student_ID INT,
+       Course_ID  INT,
+       Grade      CHAR(2),
+       PRIMARY KEY (Student_ID, Course_ID)
+   );
+   ```
+
+   Choosing a primary key: it should be stable, short, simple, never NULL and preferably numeric. Where no natural attribute satisfies these conditions, a surrogate key is created. An email address or a telephone number is a poor choice, because a person may change either.
 16. **What is Primary key, Unique key and Forgein key.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
+
+   Answer:
+
+   Primary key:
+   - The attribute or set of attributes chosen to identify each row uniquely. It must be unique, cannot be NULL, and there is exactly one per table. It is indexed automatically and enforces entity integrity.
+
+   Unique key:
+   - A constraint that guarantees the values of a column or a combination of columns are distinct, but which is not the primary key. It is used for the alternate keys, that is the candidate keys not chosen as primary.
+   - The essential difference from the primary key is that a unique key permits NULL, and in most systems permits one NULL value, because NULL is not equal to anything including another NULL.
+
+   Foreign key:
+   - An attribute whose values must match the primary key or a unique key of another table. It represents the relationship between the tables and enforces referential integrity. It may be NULL and may repeat.
+
+   Comparison:
+
+   | Point | Primary Key | Unique Key | Foreign Key |
+   |---|---|---|---|
+   | Uniqueness | Enforced | Enforced | Not enforced; values may repeat |
+   | NULL permitted | No | Yes, generally one | Yes |
+   | Number per table | Exactly one | Any number | Any number |
+   | Index | Clustered index created automatically in most systems | Non-clustered unique index created | None automatically |
+   | Purpose | Identifies rows, entity integrity | Prevents duplicates in a non-key column | Links tables, referential integrity |
+   | Can be referenced by a foreign key | Yes | Yes | Not applicable |
+
+   Example:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID  INT PRIMARY KEY,                  -- primary key
+       Email   VARCHAR(100) UNIQUE,              -- unique key, may be NULL
+       NID     VARCHAR(20) UNIQUE NOT NULL,      -- unique key, made compulsory
+       Name    VARCHAR(100) NOT NULL,
+       Dept_ID INT REFERENCES Department(Dept_ID) -- foreign key
+   );
+   ```
+
+   - `Email` is unique but optional: two employees cannot share an address, but an employee may have none.
+   - `NID` is unique and compulsory, which makes it effectively a second primary key, an alternate key.
+   - `Dept_ID` may repeat, since many employees belong to one department, and may be NULL for an unassigned employee.
 17. **Database Management System (DBMS) বলতে কী বোঝেন? Relational database -এ Primary key এবং Foreign key -এর ভূমিকা উদাহরণসহ সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 882 (ET: N/A)]*
 
+
+   Answer:
+
+   What a DBMS is:
+   - A Database Management System is software that allows users to define, create, store, retrieve, update and manage data in a database, and that controls access to it. It sits between the physical stored data and the users and applications, so that no program needs to know how the data is actually held.
+   - Its main functions: data definition, data manipulation through SQL, transaction management with the ACID properties, concurrency control, security and authorisation, backup and recovery, enforcement of integrity constraints, and maintenance of the data dictionary.
+   - Its benefits over file based storage: control of redundancy, enforced consistency and integrity, controlled sharing by many users, security, recovery after failure, and data independence.
+   - Examples: Oracle, MySQL, PostgreSQL, Microsoft SQL Server, MongoDB.
+
+   Role of the primary key in a relational database:
+   - It uniquely identifies every row of a table, so that any particular record can be found, updated or deleted without ambiguity.
+   - It enforces entity integrity: it cannot be NULL and cannot be duplicated, so no row is unidentifiable and no two rows are indistinguishable.
+   - It is indexed automatically, so lookups by the key are fast.
+   - It is the anchor for relationships: every foreign key in the database points at some table's primary key.
+
+   Role of the foreign key:
+   - It represents the relationship between two tables, which is what turns a set of independent tables into a database.
+   - It enforces referential integrity: a value in the foreign key column must exist in the referenced table, so orphan rows cannot be created.
+   - It controls what happens on deletion and update of the parent through CASCADE, RESTRICT or SET NULL.
+   - It documents the design, so that the structure of the database is self describing.
+
+   Example:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL,
+       Dept_ID  INT REFERENCES Department(Dept_ID)
+   );
+   ```
+
+   - `Emp_ID` identifies each employee uniquely; `Dept_ID` in Employee must match a department that exists. An employee cannot be assigned to department 50 if no such department has been created, and department 10 cannot be deleted while employees still belong to it.
 18. **(b) Explain the different type of database keys with examples.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
 
+
+   Answer: The different types of database key, with examples:
+
+   - Super key: any attribute or set of attributes that uniquely identifies a row. It may contain extra attributes that are not needed for uniqueness. It is the widest category, and every other key is a super key.
+   - Candidate key: a minimal super key, that is a super key from which no attribute can be removed without losing uniqueness. A relation may have several candidate keys.
+   - Primary key: the one candidate key chosen by the designer to identify rows. It cannot be NULL and cannot contain duplicates, and a table has exactly one.
+   - Alternate key: any candidate key not chosen as the primary key. It is normally enforced with a UNIQUE constraint.
+   - Composite key: a key made up of two or more attributes together, because no single attribute is unique.
+   - Foreign key: an attribute in one table whose values must match the primary key of another table, which is how a relationship between tables is expressed. It may be NULL and may contain duplicates.
+   - Unique key: a constraint guaranteeing uniqueness that is not the primary key. Unlike the primary key it permits one NULL value.
+   - Surrogate key: an artificial key with no business meaning, such as an auto-incremented number, used when no natural attribute is a satisfactory identifier.
+
+   Example, a Student relation:
+
+   ```
+   Student(Student_ID, Registration_No, NID, Name, Department, Dept_ID)
+   ```
+
+   - Super keys: {Student_ID}, {Registration_No}, {NID}, {Student_ID, Name}, {Registration_No, Department} and so on, since adding attributes to a unique set keeps it unique.
+   - Candidate keys: {Student_ID}, {Registration_No}, {NID}, each of which is unique and minimal.
+   - Primary key: Student_ID, chosen by the designer.
+   - Alternate keys: Registration_No and NID.
+   - Foreign key: Dept_ID, referring to Department(Dept_ID).
+   - Composite key example: in `Enrollment(Student_ID, Course_ID, Grade)` the primary key is the pair (Student_ID, Course_ID), since neither alone is unique.
+
+   Relationship between them: every candidate key is a super key, and the primary key is one of the candidate keys. So primary key ⊆ candidate key ⊆ super key.
+
+   Declaration in SQL:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) UNIQUE NOT NULL
+   );
+
+   CREATE TABLE Student (
+       Student_ID      INT PRIMARY KEY,                    -- primary key
+       Registration_No VARCHAR(20) UNIQUE,                 -- alternate key
+       NID             VARCHAR(20) UNIQUE,                 -- alternate key
+       Name            VARCHAR(100) NOT NULL,
+       Dept_ID         INT REFERENCES Department(Dept_ID)  -- foreign key
+   );
+
+   CREATE TABLE Enrollment (
+       Student_ID INT REFERENCES Student(Student_ID),
+       Course_ID  INT,
+       Grade      CHAR(2),
+       PRIMARY KEY (Student_ID, Course_ID)                 -- composite key
+   );
+   ```
 19. **What is the Primary key, Candidate key and Super key?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 921 (ET: N/A)]*
 
+
+   Answer:
+
+   Super key:
+   - Any attribute or set of attributes whose values uniquely identify a row of a relation. It may include attributes that are not needed for uniqueness, so it need not be minimal.
+   - It is the broadest category: every candidate key and every primary key is also a super key.
+
+   Candidate key:
+   - A minimal super key, that is a super key from which no attribute can be removed without losing the uniqueness property.
+   - A relation may have several candidate keys, and each is a genuine alternative identifier.
+
+   Primary key:
+   - The one candidate key selected by the designer to be the principal identifier of rows. It must be unique and not NULL, there is exactly one per table, and it is indexed automatically.
+   - The candidate keys not selected are called alternate keys and are enforced with UNIQUE constraints.
+
+   Example, `Student(Student_ID, Registration_No, NID, Name, Department)`:
+   - Candidate keys: {Student_ID}, {Registration_No}, {NID}, since each is unique and minimal.
+   - Primary key: {Student_ID}, chosen because it is short, numeric, stable and controlled by the institution.
+   - Alternate keys: {Registration_No} and {NID}.
+   - Super keys: all of the above, and every set containing one of them, such as {Student_ID, Name}, {NID, Department} and the whole relation. With 5 attributes and 3 single attribute candidate keys, there are 2⁵ − 2² = 28 super keys.
+
+   Relationship, which is the point of the question:
+   - primary key ⊆ candidate key ⊆ super key.
+   - A super key becomes a candidate key when it is minimal, and a candidate key becomes the primary key when the designer selects it.
 20. **Difference between Primary key and Unique Key, Drop and Purge, Delete and Truncate.** *[RAKUB Assistant Database Administrator 2020 compact it 1013-1014 (ET: E-Zone)]*
 
+
+   Answer:
+
+   Primary key vs Unique key:
+
+   | Point | Primary Key | Unique Key |
+   |---|---|---|
+   | NULL values | Never permitted | Permitted, generally one NULL |
+   | Number per table | Exactly one | Any number |
+   | Index created | Clustered index in most systems | Non-clustered unique index |
+   | Purpose | Identifies each row; entity integrity | Prevents duplicate values in a non-key column |
+   | Role | The chosen identifier | Enforces an alternate key |
+   | Referenced by a foreign key | Yes, normally | Yes, it may also be referenced |
+
+   DROP vs PURGE:
+
+   | Point | DROP | PURGE |
+   |---|---|---|
+   | Effect | Removes the table from the database | Permanently removes an object already in the recycle bin |
+   | Recoverability | Recoverable, since the table goes to the recycle bin in Oracle and can be restored with FLASHBACK | Not recoverable at all |
+   | Space | Space is not released immediately | Space is released immediately |
+   | Syntax | `DROP TABLE employee;` | `PURGE TABLE employee;` or `DROP TABLE employee PURGE;` |
+   | Availability | Every DBMS | Chiefly Oracle, which has the recycle bin concept |
+
+   DELETE vs TRUNCATE:
+
+   | Point | DELETE | TRUNCATE |
+   |---|---|---|
+   | Command type | DML, Data Manipulation Language | DDL, Data Definition Language |
+   | Rows removed | Selected rows, or all if no WHERE clause | All rows, always |
+   | WHERE clause | Permitted | Not permitted |
+   | Transaction log | Each row is logged individually | Only the page deallocations are logged |
+   | Speed | Slow on a large table | Very fast |
+   | Rollback | Can be rolled back | Cannot be rolled back in most systems, since it is DDL and is auto-committed |
+   | Triggers | DELETE triggers fire | Triggers do not fire |
+   | Identity or auto-increment counter | Not reset | Reset to the initial value |
+   | Space reclaimed | Not immediately | Immediately |
+   | Foreign key references | Permitted | Refused if the table is referenced by a foreign key |
+
+   - The practical rule: use DELETE when specific rows must be removed or when the operation must be reversible; use TRUNCATE to empty a large table quickly when nothing is to be preserved; and use DROP when the table itself is no longer required.
 21. **Example Foreign key in RDBMS.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035 (ET: BUET)]*
+
+
+   Answer: A foreign key is an attribute in one table whose values must match the primary key of another table, which is how a relationship between the two is represented and how referential integrity is enforced.
+
+   Example:
+
+   ```sql
+   -- Parent table
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   -- Child table with a foreign key
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL,
+       Salary   DECIMAL(10,2),
+       Dept_ID  INT,
+       CONSTRAINT fk_employee_dept
+           FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)
+           ON DELETE SET NULL
+           ON UPDATE CASCADE
+   );
+   ```
+
+   Sample data:
+
+   | Department | | | Employee | | |
+   |---|---|---|---|---|---|
+   | Dept_ID | Dept_Name | | Emp_ID | Emp_Name | Dept_ID |
+   | 10 | IT | | 1 | Rahim | 10 |
+   | 20 | Finance | | 2 | Karim | 10 |
+   | 30 | HR | | 3 | Salma | 20 |
+   | | | | 4 | Jamal | NULL |
+
+   What the constraint enforces:
+   - `INSERT INTO Employee VALUES (5, 'Nadia', 50000, 99);` is refused, because no department 99 exists. This is the prevention of an orphan row.
+   - `DELETE FROM Department WHERE Dept_ID = 10;` sets the `Dept_ID` of Rahim and Karim to NULL, because of `ON DELETE SET NULL`. Without any action clause the default is RESTRICT, which would refuse the deletion; `ON DELETE CASCADE` would delete both employees.
+   - `UPDATE Department SET Dept_ID = 15 WHERE Dept_ID = 10;` changes the employees' `Dept_ID` to 15 automatically, because of `ON UPDATE CASCADE`.
+   - Employee 4 has a NULL `Dept_ID`, which is permitted, and means the employee is not yet assigned to any department. Adding `NOT NULL` would forbid this and enforce total participation.
+
+   Practical note: create an index on the foreign key column. It is not created automatically, and without it every deletion from the parent table requires a full scan of the child table to verify the constraint.
 
 ## Normalization & Database Design (18)
 
 1. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
+
+   Answer:
+
+   What normalisation is:
+   - Normalisation is the process of organising the tables and columns of a relational database so as to reduce data redundancy and eliminate the update, insertion and deletion anomalies that redundancy causes. It was introduced by E. F. Codd.
+   - It proceeds by decomposing a large table into smaller related tables, in such a way that no information is lost and the original can be reconstructed by joining them.
+
+   Why it is needed, that is the anomalies it removes:
+   - Update anomaly: the same fact stored in many rows must be changed in every one of them; if one is missed, the data becomes inconsistent.
+   - Insertion anomaly: a fact cannot be recorded because other, unrelated, information is not yet available. For example a new department cannot be recorded until an employee is assigned to it.
+   - Deletion anomaly: deleting one fact accidentally destroys another. For example deleting the last employee of a department destroys the record of the department itself.
+   - It also saves storage, makes the design clearer, and makes constraints easier to enforce.
+
+   The normal forms:
+
+   First Normal Form, 1NF:
+   - Every attribute must hold a single atomic value; no repeating groups, no multivalued attributes and no arrays.
+   - Each row must be unique, that is the table must have a primary key.
+   - Violation: `Student(Roll, Name, Subjects)` where Subjects holds 'Math, Physics, Chemistry'.
+   - Remedy: place each value in its own row, or move the multivalued attribute to a separate table: `Student(Roll, Name)` and `Student_Subject(Roll, Subject)`.
+
+   Second Normal Form, 2NF:
+   - The relation must be in 1NF, and every non-prime attribute must be fully functionally dependent on the whole primary key, not on part of it. Partial dependency is not permitted.
+   - It only arises when the primary key is composite; a table with a single attribute key is automatically in 2NF once it is in 1NF.
+   - Violation: `Enrollment(Student_ID, Course_ID, Student_Name, Course_Name, Grade)` with the key (Student_ID, Course_ID). Here Student_Name depends only on Student_ID and Course_Name only on Course_ID, both of which are partial dependencies.
+   - Remedy: decompose into `Student(Student_ID, Student_Name)`, `Course(Course_ID, Course_Name)` and `Enrollment(Student_ID, Course_ID, Grade)`.
+
+
+   - Higher forms are 3NF, which removes transitive dependency; BCNF, which is a stricter version of 3NF; and 4NF and 5NF, which remove multivalued and join dependencies.
+
+   Worked example of 1NF:
+
+   Unnormalised, violating 1NF because Subjects holds several values in one field:
+
+   | Roll | Name | Subjects |
+   |---|---|---|
+   | 101 | Rahim | Math, Physics |
+   | 102 | Karim | Chemistry |
+
+   In 1NF, each field holding a single atomic value:
+
+   | Roll | Name | Subject |
+   |---|---|---|
+   | 101 | Rahim | Math |
+   | 101 | Rahim | Physics |
+   | 102 | Karim | Chemistry |
+
+   Worked example of 2NF:
+
+   In 1NF but violating 2NF, since the key is (Roll, Subject) and Name depends only on Roll, which is a partial dependency:
+
+   | Roll | Subject | Name | Marks |
+   |---|---|---|---|
+   | 101 | Math | Rahim | 85 |
+   | 101 | Physics | Rahim | 78 |
+   | 102 | Chemistry | Karim | 90 |
+
+   In 2NF, decomposed so that every non-key attribute depends on the whole key:
+
+   ```
+   Student(Roll, Name)
+     101, Rahim
+     102, Karim
+
+   Result(Roll, Subject, Marks)
+     101, Math, 85
+     101, Physics, 78
+     102, Chemistry, 90
+   ```
+
+   - The improvement: Rahim's name is now stored once rather than twice, so it cannot be updated inconsistently; a student can be recorded before any result exists; and deleting a result does not destroy the student's record.
 2. **Why normalization is required in Database? Write shortly about 3NF?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
 
+
+   Answer:
+
+   Why normalisation is required:
+   - To eliminate data redundancy, so that the same fact is not stored in many places.
+   - To remove the update anomaly: if a fact is repeated in fifty rows, changing it requires fifty updates, and missing one leaves the database inconsistent.
+   - To remove the insertion anomaly: a new department should be recordable before any employee is assigned to it, which an unnormalised design prevents.
+   - To remove the deletion anomaly: deleting the last employee of a department should not destroy the record of the department.
+   - To save storage space.
+   - To make the design clearer and easier to extend, since each table then describes one kind of thing.
+   - To make integrity constraints easier to define and enforce.
+
+   Third Normal Form:
+   - A relation is in 3NF if it is in 2NF and no non-prime attribute is transitively dependent on the primary key. Equivalently, for every non-trivial functional dependency X → Y, either X is a super key or Y is a prime attribute.
+   - A transitive dependency exists when a non-key attribute determines another non-key attribute, so that the second depends on the key only through the first.
+
+   Example of a violation:
+
+   | Emp_ID | Emp_Name | Dept_ID | Dept_Name | Dept_Location |
+   |---|---|---|---|---|
+   | 1 | Rahim | 10 | IT | Dhaka |
+   | 2 | Karim | 10 | IT | Dhaka |
+   | 3 | Salma | 20 | Finance | Chattogram |
+
+   - The dependencies are Emp_ID → Dept_ID and Dept_ID → Dept_Name, Dept_Location. So Emp_ID → Dept_Name transitively, through Dept_ID, which is not a key. This violates 3NF.
+   - The consequences: the IT department's name and location are repeated for every employee, so renaming the department requires many updates; a new department cannot be recorded until it has an employee; and deleting the last employee of Finance destroys all record of that department.
+
+   Decomposition into 3NF:
+
+   ```
+   Employee(Emp_ID, Emp_Name, Dept_ID)
+     1, Rahim, 10
+     2, Karim, 10
+     3, Salma, 20
+
+   Department(Dept_ID, Dept_Name, Dept_Location)
+     10, IT, Dhaka
+     20, Finance, Chattogram
+   ```
+
+   - Each department's details are now stored exactly once, all three anomalies disappear, and the original table can be recovered exactly by joining on Dept_ID, so the decomposition is lossless.
+   - 3NF is the usual target for a transactional database, because it removes almost all redundancy while keeping the number of joins reasonable.
 3. **Explain the differences between Second Normal Form (2NF) and Third Normal Form (3NF) with examples.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
 
 | 2NF(Second Normal Form) | 3NF(Third Normal Form) |
@@ -5514,41 +6445,661 @@ SELECT count (*) FROM (
 | It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
 | The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
 
+
+   Answer:
+
+   Second Normal Form:
+   - A relation is in 2NF if it is in 1NF and every non-prime attribute is fully functionally dependent on the whole of the primary key, that is there is no partial dependency on a proper subset of a composite key.
+   - It arises only when the primary key is composite. A relation whose key is a single attribute is automatically in 2NF once it is in 1NF.
+
+   Third Normal Form:
+   - A relation is in 3NF if it is in 2NF and no non-prime attribute is transitively dependent on the primary key, that is no non-key attribute determines another non-key attribute.
+
+   Difference:
+
+   | Point | 2NF | 3NF |
+   |---|---|---|
+   | Prerequisite | Must be in 1NF | Must be in 2NF |
+   | Dependency removed | Partial dependency on part of a composite key | Transitive dependency through a non-key attribute |
+   | When it can be violated | Only when the primary key is composite | Even when the key is a single attribute |
+   | Formal condition | Every non-prime attribute is fully dependent on every candidate key | For every X → Y, either X is a super key or Y is prime |
+   | Strength | Stronger than 1NF, weaker than 3NF | Stronger than both |
+   | Effect | Removes redundancy caused by part of the key | Removes redundancy caused by non-key attributes determining each other |
+
+   Example of a 2NF violation:
+
+   `Enrollment(Student_ID, Course_ID, Student_Name, Course_Name, Grade)` with the key (Student_ID, Course_ID).
+
+   | Student_ID | Course_ID | Student_Name | Course_Name | Grade |
+   |---|---|---|---|---|
+   | 101 | C1 | Rahim | Database | A |
+   | 101 | C2 | Rahim | Networks | B |
+   | 102 | C1 | Karim | Database | A |
+
+   - Student_Name depends only on Student_ID and Course_Name only on Course_ID; both are partial dependencies on part of the composite key.
+   - Decomposition into 2NF: `Student(Student_ID, Student_Name)`, `Course(Course_ID, Course_Name)`, `Enrollment(Student_ID, Course_ID, Grade)`.
+
+   Example of a 3NF violation:
+
+   `Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name)` with the key Emp_ID.
+
+   | Emp_ID | Emp_Name | Dept_ID | Dept_Name |
+   |---|---|---|---|
+   | 1 | Rahim | 10 | IT |
+   | 2 | Karim | 10 | IT |
+   | 3 | Salma | 20 | Finance |
+
+   - The key is a single attribute, so the relation is already in 2NF. But Emp_ID → Dept_ID and Dept_ID → Dept_Name, so Dept_Name depends on the key only transitively.
+   - Decomposition into 3NF: `Employee(Emp_ID, Emp_Name, Dept_ID)` and `Department(Dept_ID, Dept_Name)`.
+
+   - The essential distinction: 2NF is concerned with dependency on part of the key, and therefore arises only with composite keys; 3NF is concerned with dependency through a non-key attribute, and can arise with any key.
 4. **What is Logical design database is called?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: The logical design of a database is called the schema, and more precisely the conceptual schema or logical schema.
+
+   - The logical design describes what data is stored and how it is structured — the tables, their columns and data types, the primary and foreign keys, the relationships and the constraints — without any reference to how it is physically stored.
+   - It is the second of the three stages of database design:
+   - Conceptual design produces the E-R model, which is independent of any DBMS.
+   - Logical design converts that model into a relational schema of tables and keys, normalised to an appropriate form. This is where the schema is produced.
+   - Physical design decides how it is actually stored: file organisation, indexes, partitioning and placement.
+   - In the three level ANSI/SPARC architecture, the logical design corresponds to the conceptual level, which sits between the external views seen by users and the internal storage.
+   - The term "schema" is also used for the whole definition written in the Data Definition Language, that is the set of CREATE TABLE statements.
+   - Related term: the logical design is sometimes described as the logical data model, and the process of producing it as data modelling.
 5. **A Bank schema is given below:** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1322 (ET: DU)]*
    $$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
    * (a) Provided and Normalize and point out Primary and Foreign Key?
    * (b) Show that is the schema and state that why your schema is in good form.
 
+
+   Answer:
+
+   Given schema: `Bank(Br_Name, Br_City, Assets, Acc_Name, Acc_Num, Balance)`
+
+   (a) Normalisation, with the keys identified:
+
+   Step 1, identify the functional dependencies:
+   - Br_Name → Br_City, Assets, since a branch has one city and one asset figure.
+   - Acc_Num → Balance, Br_Name, since an account has one balance and belongs to one branch.
+   - Acc_Name and Acc_Num together identify a row if a customer may hold several accounts; taking Acc_Num as unique, it alone is the key of the account information.
+
+   Step 2, identify the problems with the single table:
+   - Redundancy: the city and the assets of a branch are repeated for every account held at that branch.
+   - Update anomaly: if a branch's assets change, every row for that branch must be updated.
+   - Insertion anomaly: a new branch cannot be recorded until an account is opened there.
+   - Deletion anomaly: deleting the last account of a branch destroys the record of the branch, its city and its assets.
+
+   Step 3, check 1NF: every attribute holds a single atomic value, so the relation is already in 1NF.
+
+   Step 4, check 2NF and 3NF: taking Acc_Num as the key, Acc_Num → Br_Name and Br_Name → Br_City, Assets. So Br_City and Assets depend on the key only transitively, which violates 3NF.
+
+   Step 5, decomposition into 3NF:
+
+   ```
+   Branch(Br_Name, Br_City, Assets)
+       PRIMARY KEY (Br_Name)
+
+   Account(Acc_Num, Acc_Name, Balance, Br_Name)
+       PRIMARY KEY (Acc_Num)
+       FOREIGN KEY (Br_Name) REFERENCES Branch(Br_Name)
+   ```
+
+   - Primary keys: `Br_Name` in Branch, and `Acc_Num` in Account.
+   - Foreign key: `Br_Name` in Account, referring to Branch.
+   - If a customer may hold accounts at several branches and the customer's own details are to be held separately, a third relation `Customer(Cust_ID, Acc_Name, Address)` with a link table would be added; the schema as given does not require it.
+
+   ```sql
+   CREATE TABLE Branch (
+       Br_Name VARCHAR(50) PRIMARY KEY,
+       Br_City VARCHAR(50) NOT NULL,
+       Assets  DECIMAL(15,2)
+   );
+
+   CREATE TABLE Account (
+       Acc_Num  INT PRIMARY KEY,
+       Acc_Name VARCHAR(100) NOT NULL,
+       Balance  DECIMAL(15,2) DEFAULT 0,
+       Br_Name  VARCHAR(50) NOT NULL,
+       FOREIGN KEY (Br_Name) REFERENCES Branch(Br_Name)
+   );
+   ```
+
+   (b) Why this schema is in good form:
+   - It is in 3NF, and in fact in BCNF, since in each relation the only determinant is the primary key. Br_Name determines everything else in Branch and is its key; Acc_Num determines everything else in Account and is its key.
+   - The decomposition is lossless: joining Branch and Account on Br_Name reconstructs the original relation exactly, with no spurious rows, because Br_Name is a key of Branch.
+   - It is dependency preserving: both original dependencies, Br_Name → Br_City, Assets and Acc_Num → Balance, Br_Name, are each enforceable within a single relation, so no dependency has to be checked by joining.
+   - All three anomalies are removed: a branch's assets are stored once and can be updated in one place; a new branch can be created before any account exists; and closing the last account does not destroy the branch record.
+   - Referential integrity is enforced by the foreign key, so an account cannot belong to a branch that does not exist.
+   - Storage is reduced, since the branch details are no longer repeated per account.
+
+   - One practical qualification: using Br_Name as a key is undesirable in a real system, because a branch may be renamed and the change would have to cascade. A surrogate `Br_ID` would be preferable, with a UNIQUE constraint on Br_Name.
 6. **What is Normalize a database? Used containers if needed, draw an ER Diagram.** **[See WZPGCL, Assistant Engineer (CSE), Exam: 27.05.2023]** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 315 (ET: N/A)]*
 
+
+   Answer:
+
+   What normalising a database means:
+   - Normalisation is the process of organising the tables and columns of a relational database so as to remove redundancy and eliminate the update, insertion and deletion anomalies that redundancy causes. A large table is decomposed into smaller related tables in a way that loses no information.
+
+   Worked example, from an unnormalised table to 3NF:
+
+   Unnormalised, a single Student table:
+
+   | Roll | Name | Dept_ID | Dept_Name | Courses |
+   |---|---|---|---|---|
+   | 101 | Rahim | 10 | CSE | Database, Networks |
+   | 102 | Karim | 10 | CSE | Database |
+   | 103 | Salma | 20 | EEE | Circuits |
+
+   Problems: Courses holds several values in one field, violating 1NF; the department name is repeated for every student of that department, causing an update anomaly; a new department cannot be recorded before a student joins it; and deleting the last student of EEE destroys the record of the department.
+
+   1NF, by making every value atomic:
+
+   | Roll | Name | Dept_ID | Dept_Name | Course |
+   |---|---|---|---|---|
+   | 101 | Rahim | 10 | CSE | Database |
+   | 101 | Rahim | 10 | CSE | Networks |
+   | 102 | Karim | 10 | CSE | Database |
+   | 103 | Salma | 20 | EEE | Circuits |
+
+   2NF, by removing partial dependency. The key is now (Roll, Course), and Name, Dept_ID and Dept_Name depend only on Roll:
+
+   ```
+   Student(Roll, Name, Dept_ID, Dept_Name)
+   Enrollment(Roll, Course)
+   ```
+
+   3NF, by removing the transitive dependency Roll → Dept_ID → Dept_Name:
+
+   ```
+   Student(Roll, Name, Dept_ID)
+   Department(Dept_ID, Dept_Name)
+   Enrollment(Roll, Course)
+   ```
+
+   E-R diagram of the normalised design:
+
+   ```mermaid
+   erDiagram
+       DEPARTMENT ||--o{ STUDENT : "has"
+       STUDENT ||--o{ ENROLLMENT : "registers"
+       COURSE ||--o{ ENROLLMENT : "is taken in"
+       DEPARTMENT {
+           int Dept_ID PK
+           string Dept_Name
+       }
+       STUDENT {
+           int Roll PK
+           string Name
+           int Dept_ID FK
+       }
+       COURSE {
+           string Course_ID PK
+           string Course_Name
+       }
+       ENROLLMENT {
+           int Roll PK
+           string Course_ID PK
+           string Grade
+       }
+   ```
+
+   - Each department's name is now stored once; a department can exist without students; deleting a student does not affect the department; and the original table can be reconstructed exactly by joining, so the decomposition is lossless.
 7. **(ক) Normalization কী? কত প্রকার ও কী কী? ব্যাখ্যা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
 
+
+   Answer:
+
+   What normalisation is:
+   - Normalisation is the process of organising the tables and columns of a relational database so as to reduce data redundancy and eliminate the update, insertion and deletion anomalies that redundancy causes. It was introduced by E. F. Codd.
+   - It proceeds by decomposing a large table into smaller related tables, in such a way that no information is lost and the original can be reconstructed by joining them.
+
+   Why it is needed, that is the anomalies it removes:
+   - Update anomaly: the same fact stored in many rows must be changed in every one of them; if one is missed, the data becomes inconsistent.
+   - Insertion anomaly: a fact cannot be recorded because other, unrelated, information is not yet available. For example a new department cannot be recorded until an employee is assigned to it.
+   - Deletion anomaly: deleting one fact accidentally destroys another. For example deleting the last employee of a department destroys the record of the department itself.
+   - It also saves storage, makes the design clearer, and makes constraints easier to enforce.
+
+   The normal forms:
+
+   First Normal Form, 1NF:
+   - Every attribute must hold a single atomic value; no repeating groups, no multivalued attributes and no arrays.
+   - Each row must be unique, that is the table must have a primary key.
+   - Violation: `Student(Roll, Name, Subjects)` where Subjects holds 'Math, Physics, Chemistry'.
+   - Remedy: place each value in its own row, or move the multivalued attribute to a separate table: `Student(Roll, Name)` and `Student_Subject(Roll, Subject)`.
+
+   Second Normal Form, 2NF:
+   - The relation must be in 1NF, and every non-prime attribute must be fully functionally dependent on the whole primary key, not on part of it. Partial dependency is not permitted.
+   - It only arises when the primary key is composite; a table with a single attribute key is automatically in 2NF once it is in 1NF.
+   - Violation: `Enrollment(Student_ID, Course_ID, Student_Name, Course_Name, Grade)` with the key (Student_ID, Course_ID). Here Student_Name depends only on Student_ID and Course_Name only on Course_ID, both of which are partial dependencies.
+   - Remedy: decompose into `Student(Student_ID, Student_Name)`, `Course(Course_ID, Course_Name)` and `Enrollment(Student_ID, Course_ID, Grade)`.
+
+   Third Normal Form, 3NF:
+   - The relation must be in 2NF, and no non-prime attribute may be transitively dependent on the primary key. In other words, a non-key attribute must not determine another non-key attribute.
+   - Violation: `Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name)`. Here Emp_ID determines Dept_ID, and Dept_ID determines Dept_Name, so Dept_Name depends on the key only transitively.
+   - Remedy: decompose into `Employee(Emp_ID, Emp_Name, Dept_ID)` and `Department(Dept_ID, Dept_Name)`.
+   - Formal statement: for every functional dependency X → Y, either X is a super key or Y is a prime attribute.
+
+   Boyce-Codd Normal Form, BCNF:
+   - A stricter form of 3NF: for every non-trivial functional dependency X → Y, X must be a super key. 3NF allows the exception "or Y is a prime attribute"; BCNF removes it.
+   - Every relation in BCNF is in 3NF, but not every 3NF relation is in BCNF. The difference arises only when a relation has overlapping candidate keys.
+   - Example: `Class(Student, Subject, Teacher)` where a student takes one teacher per subject, and each teacher teaches only one subject. The dependencies are (Student, Subject) → Teacher and Teacher → Subject. The candidate keys are (Student, Subject) and (Student, Teacher). The relation is in 3NF, because Subject is a prime attribute; but Teacher → Subject has a determinant that is not a super key, so it is not in BCNF.
+   - Remedy: decompose into `Teacher_Subject(Teacher, Subject)` and `Student_Teacher(Student, Teacher)`.
+
+   Higher forms:
+   - Fourth Normal Form, 4NF: removes multivalued dependencies, that is two independent multivalued facts stored in one table.
+   - Fifth Normal Form, 5NF or project-join normal form: removes join dependencies, so that a relation cannot be losslessly decomposed further.
+
+   How far to normalise:
+   - 3NF or BCNF is the normal target for a transactional system. Beyond that the benefit is usually theoretical.
+   - Deliberate denormalisation is used in reporting and data warehouse systems, where the cost of many joins outweighs the cost of the redundancy, and the redundancy is controlled by the load process rather than by ad hoc updates.
 8. **What is database Normalization? Write down the types of database Normalization.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 504 (ET: N/A)]*
 
+
+   Answer:
+
+   What database normalisation is:
+   - Normalisation is the process of organising the tables and columns of a relational database to reduce redundancy and eliminate the update, insertion and deletion anomalies that redundancy causes. It works by decomposing a large table into smaller related tables in a lossless way.
+   - It was introduced by E. F. Codd, who defined the first three normal forms in 1970 and 1971.
+
+   Types of normalisation, that is the normal forms:
+
+   - First Normal Form, 1NF: every attribute holds a single atomic value, with no repeating groups, no multivalued attributes and no arrays; and every row is unique. Violation: a Subjects column holding 'Math, Physics'. Remedy: one value per row, or a separate table.
+
+   - Second Normal Form, 2NF: in 1NF, and every non-prime attribute is fully dependent on the whole primary key, with no partial dependency on part of a composite key. It arises only when the key is composite. Violation: `Enrollment(Student_ID, Course_ID, Student_Name, Grade)` where Student_Name depends only on Student_ID. Remedy: separate Student from Enrollment.
+
+   - Third Normal Form, 3NF: in 2NF, and no non-prime attribute is transitively dependent on the key, that is no non-key attribute determines another non-key attribute. Violation: `Employee(Emp_ID, Name, Dept_ID, Dept_Name)`. Remedy: separate Department from Employee.
+
+   - Boyce-Codd Normal Form, BCNF: a stricter 3NF, requiring that for every non-trivial dependency X → Y, X is a super key. It differs from 3NF only when candidate keys overlap.
+
+   - Fourth Normal Form, 4NF: in BCNF, and containing no multivalued dependency, that is no two independent multivalued facts in one table. Violation: a table holding a student's skills and languages together, which forces a spurious cross product.
+
+   - Fifth Normal Form, 5NF, also called project-join normal form: containing no join dependency that is not implied by the candidate keys, so the relation cannot be decomposed further without loss.
+
+   - Sixth Normal Form and Domain-Key Normal Form are further theoretical refinements, rarely used in practice.
+
+   How far to go: 3NF or BCNF is the practical target for a transactional database. Beyond that the benefit is usually theoretical, and reporting systems are often deliberately denormalised to avoid excessive joins.
 9. **Which normalization is related to functional dependency?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: Functional dependency is the basis of the second, third and Boyce-Codd normal forms.
+
+   - A functional dependency X → Y means that the value of X determines the value of Y: if two rows agree on X they must agree on Y. It is the formal relationship between attributes on which normalisation rests.
+
+   Which normal forms use it:
+   - First Normal Form does not use functional dependencies at all. It concerns only atomicity, that is that every value must be single valued, so it is a structural rather than a dependency requirement.
+   - Second Normal Form uses it: it forbids partial functional dependency, that is a non-prime attribute depending on only part of a composite key.
+   - Third Normal Form uses it: it forbids transitive functional dependency, that is a non-prime attribute depending on the key only through another non-prime attribute.
+   - Boyce-Codd Normal Form uses it most strictly: for every non-trivial functional dependency X → Y, X must be a super key.
+   - Fourth Normal Form is based on multivalued dependency, which is a generalisation of functional dependency, and Fifth Normal Form on join dependency, a further generalisation.
+
+   - So the direct answer is 2NF, 3NF and BCNF, with 4NF and 5NF resting on the generalisations of the concept.
+
+   Example:
+   - In `Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name)` the dependencies are Emp_ID → Emp_Name, Dept_ID and Dept_ID → Dept_Name. The second of these has a determinant that is not a key, which is precisely what 3NF forbids, and it is the reason the table must be decomposed.
 10. **Functional dependency use in which normalizations?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: Functional dependency is used in the second, third and Boyce-Codd normal forms, and its generalisations are used in the fourth and fifth.
+
+   - Functional dependency X → Y means that X determines Y: any two rows agreeing on X must agree on Y.
+
+   Where it is used:
+   - 1NF: not used. It requires only that every value be atomic, which is a structural condition.
+   - 2NF: forbids partial functional dependency, in which a non-prime attribute depends on part of a composite key rather than on the whole of it.
+   - 3NF: forbids transitive functional dependency, in which a non-prime attribute depends on the key only through another non-prime attribute. Formally, for every X → Y, either X is a super key or Y is prime.
+   - BCNF: the strictest condition based purely on functional dependency, requiring that for every non-trivial X → Y, X is a super key.
+   - 4NF: based on multivalued dependency, X →→ Y, which is a generalisation of functional dependency.
+   - 5NF: based on join dependency, a further generalisation.
+
+   Types of functional dependency worth naming:
+   - Trivial: X → Y where Y is a subset of X, for example {Roll, Name} → Roll. Always holds.
+   - Non-trivial: Y is not a subset of X.
+   - Fully functional: Y depends on the whole of X and on no proper subset of it.
+   - Partial: Y depends on only part of a composite X. This is what 2NF removes.
+   - Transitive: X → Y and Y → Z, so X → Z indirectly. This is what 3NF removes.
+
+   Armstrong's axioms, the rules by which dependencies are derived: reflexivity, augmentation and transitivity, with union, decomposition and pseudo-transitivity following from them. They are used to compute the closure of a set of attributes, which is how candidate keys are found and how a normal form is verified.
 11. **What in First and Second Normal form is DBMS?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
+
+   Answer:
+
+   First Normal Form:
+   - A relation is in 1NF if every attribute holds a single atomic value, so there are no repeating groups, no multivalued attributes and no arrays or lists inside a column, and if every row is unique, that is the relation has a primary key.
+   - It is the minimum requirement for a table to be relational at all.
+
+   Example of a violation and its remedy:
+
+   Not in 1NF, since Phone holds two values in one field:
+
+   | Roll | Name | Phone |
+   |---|---|---|
+   | 101 | Rahim | 01711111111, 01822222222 |
+   | 102 | Karim | 01933333333 |
+
+   In 1NF, one value per field:
+
+   | Roll | Name | Phone |
+   |---|---|---|
+   | 101 | Rahim | 01711111111 |
+   | 101 | Rahim | 01822222222 |
+   | 102 | Karim | 01933333333 |
+
+   - The better remedy is to move the multivalued attribute to its own table: `Student(Roll, Name)` and `Student_Phone(Roll, Phone)`, which avoids repeating the name.
+
+   Second Normal Form:
+   - A relation is in 2NF if it is in 1NF and every non-prime attribute is fully functionally dependent on the whole primary key, that is no non-prime attribute depends on only part of a composite key.
+   - It can only be violated when the primary key is composite; a relation whose key is a single attribute is automatically in 2NF once it is in 1NF.
+
+   Example of a violation and its remedy:
+
+   Not in 2NF. The key is (Roll, Course_ID), but Name depends only on Roll and Course_Name only on Course_ID:
+
+   | Roll | Course_ID | Name | Course_Name | Marks |
+   |---|---|---|---|---|
+   | 101 | C1 | Rahim | Database | 85 |
+   | 101 | C2 | Rahim | Networks | 78 |
+   | 102 | C1 | Karim | Database | 90 |
+
+   In 2NF, decomposed so that each non-key attribute depends on the whole key of its own table:
+
+   ```
+   Student(Roll, Name)
+   Course(Course_ID, Course_Name)
+   Result(Roll, Course_ID, Marks)
+   ```
+
+   - The improvement: the student's name and the course's name are each stored once, so they cannot become inconsistent; a course can be created before anyone enrols in it; and deleting a result does not destroy the record of either the student or the course.
 12. **অথবা, (ক) “BCNF is stricter than 3NF” এই উক্তিটি উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
 
+
+   Answer: The statement is correct: every relation in BCNF is in 3NF, but a relation may be in 3NF without being in BCNF.
+
+   The two definitions, which make the difference visible:
+   - 3NF: for every non-trivial functional dependency X → Y, either X is a super key, or Y is a prime attribute, that is Y belongs to some candidate key.
+   - BCNF: for every non-trivial functional dependency X → Y, X must be a super key. The escape clause "or Y is prime" is removed.
+   - BCNF is therefore strictly stronger. The difference arises only when a relation has more than one candidate key and those keys overlap.
+
+   Worked example:
+
+   `Class(Student, Subject, Teacher)` with the business rules:
+   - A student takes one teacher for a given subject: (Student, Subject) → Teacher.
+   - Each teacher teaches only one subject: Teacher → Subject.
+
+   | Student | Subject | Teacher |
+   |---|---|---|
+   | Rahim | Database | Dr. Alam |
+   | Rahim | Networks | Dr. Haque |
+   | Karim | Database | Dr. Alam |
+   | Salma | Database | Dr. Rashid |
+
+   - Candidate keys: (Student, Subject) and (Student, Teacher). They overlap in Student.
+   - Prime attributes: Student, Subject and Teacher, since all three appear in some candidate key.
+
+   Is it in 3NF?
+   - The dependency (Student, Subject) → Teacher has a super key as its determinant, so it is fine.
+   - The dependency Teacher → Subject has a determinant that is not a super key, but its right hand side, Subject, is a prime attribute, so the 3NF escape clause applies. The relation is therefore in 3NF.
+
+   Is it in BCNF?
+   - Teacher → Subject has a determinant, Teacher, that is not a super key. BCNF has no escape clause, so the relation is not in BCNF.
+
+   Why this matters in practice, that is the redundancy 3NF leaves behind:
+   - The fact that Dr. Alam teaches Database is repeated in every row involving him, so it can be updated inconsistently.
+   - A teacher's subject cannot be recorded before any student is assigned to that teacher.
+   - Deleting the last student of Dr. Rashid destroys the fact that he teaches Database.
+   - These are exactly the anomalies normalisation exists to remove, and 3NF has failed to remove them.
+
+   Decomposition into BCNF:
+
+   ```
+   Teaches(Teacher, Subject)
+       PRIMARY KEY (Teacher)
+
+   Studies(Student, Teacher)
+       PRIMARY KEY (Student, Teacher)
+   ```
+
+   - Each teacher's subject is now stored once, and the anomalies disappear.
+
+   The cost of BCNF, which should also be stated:
+   - The decomposition is lossless, but it is not dependency preserving: the original dependency (Student, Subject) → Teacher can no longer be enforced within a single relation, so a join is required to check it.
+   - Every relation can be decomposed into 3NF losslessly and with dependency preservation; not every relation can be decomposed into BCNF with dependency preservation. This is why designers sometimes stop at 3NF deliberately.
 13. **Why Normalization is used in database? Explain 1^{\text{st}} Normal form using an example.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
+
+   Answer:
+
+   Why normalisation is used:
+   - To eliminate data redundancy, so that a fact is stored once rather than repeated.
+   - To remove the update anomaly, in which a repeated fact must be changed in many rows and an omission leaves the data inconsistent.
+   - To remove the insertion anomaly, in which a fact cannot be recorded because unrelated information is missing.
+   - To remove the deletion anomaly, in which deleting one fact accidentally destroys another.
+   - To save storage space.
+   - To produce a clearer design in which each table describes one kind of thing, which makes the database easier to understand and to extend.
+   - To make integrity constraints easier to state and enforce.
+
+   First Normal Form:
+   - A relation is in 1NF if every attribute contains only a single atomic value, so there are no repeating groups, no multivalued attributes and no lists inside a column, and if every row is unique.
+   - It is the minimum requirement for a table to be relational at all, since the relational model is defined on atomic values.
+
+   Example of a violation:
+
+   | Student_ID | Name | Subjects |
+   |---|---|---|
+   | 101 | Rahim | Math, Physics, Chemistry |
+   | 102 | Karim | Math |
+   | 103 | Salma | Physics, Chemistry |
+
+   - The Subjects column holds several values in one field. The consequences are severe: it is impossible to search for all students taking Physics with a simple equality test; sorting and aggregating on subject is impossible; the value must be parsed by the application; and adding or removing one subject requires rewriting the whole string.
+
+   Conversion to 1NF, method 1, one row per value:
+
+   | Student_ID | Name | Subject |
+   |---|---|---|
+   | 101 | Rahim | Math |
+   | 101 | Rahim | Physics |
+   | 101 | Rahim | Chemistry |
+   | 102 | Karim | Math |
+   | 103 | Salma | Physics |
+   | 103 | Salma | Chemistry |
+
+   - The primary key is now the composite (Student_ID, Subject). Every field holds one atomic value, so the table is in 1NF.
+
+   Conversion to 1NF, method 2, which is better because it also avoids repeating the name:
+
+   ```
+   Student(Student_ID, Name)
+       101, Rahim
+       102, Karim
+       103, Salma
+
+   Student_Subject(Student_ID, Subject)
+       101, Math
+       101, Physics
+       101, Chemistry
+       102, Math
+       103, Physics
+       103, Chemistry
+   ```
+
+   - A common error to avoid: adding columns Subject1, Subject2 and Subject3 does not achieve 1NF in spirit. It creates a repeating group, imposes an arbitrary limit, wastes space when fewer subjects are taken, and makes querying just as awkward.
 14. **Why do you need database Normalization?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
+
+   Answer: Normalisation is needed because an unnormalised design stores the same fact in many places, and that redundancy causes three specific kinds of failure.
+
+   The anomalies it removes:
+
+   - Update anomaly: a fact repeated across many rows must be changed in every one of them. If one row is missed, the database now holds two contradictory values and there is no way to tell which is correct. Example: in a table holding employee and department details together, changing a department's location requires updating every employee row of that department.
+
+   - Insertion anomaly: a fact cannot be recorded because other, unrelated, information is not yet available. Example: a newly created department cannot be entered at all until at least one employee is assigned to it, because the row would have no key value.
+
+   - Deletion anomaly: deleting one fact accidentally destroys another. Example: deleting the last employee of a department also destroys the only record of that department's name and location.
+
+   Other reasons:
+   - Reduced storage, since a fact occupies space once rather than many times.
+   - Improved data integrity and consistency, because there is only one place where each fact can be wrong.
+   - Clearer design: each table describes one kind of thing, so the schema is easier to understand, to document and to extend.
+   - Easier enforcement of constraints, since a constraint on a fact stored once is simple, whereas a constraint on a fact stored many times requires the copies to be kept in agreement.
+   - Better support for change: adding a new attribute of a department affects only the Department table.
+   - More efficient indexing, since smaller tables with narrower rows fit more rows per page.
+
+   Illustration:
+
+   Unnormalised:
+
+   | Emp_ID | Emp_Name | Dept_ID | Dept_Name | Dept_Location |
+   |---|---|---|---|---|
+   | 1 | Rahim | 10 | IT | Dhaka |
+   | 2 | Karim | 10 | IT | Dhaka |
+   | 3 | Salma | 20 | Finance | Chattogram |
+
+   Normalised:
+
+   ```
+   Employee(Emp_ID, Emp_Name, Dept_ID)
+   Department(Dept_ID, Dept_Name, Dept_Location)
+   ```
+
+   - All three anomalies disappear: the location is stored once, a department can exist without employees, and removing an employee does not remove the department.
+
+   The cost, which a complete answer should state:
+   - Normalisation increases the number of tables and therefore the number of joins, which costs query performance. For reporting and data warehouse systems, deliberate denormalisation is often the right choice, because the redundancy is controlled by the load process rather than by ad hoc updates. The rule of thumb is to normalise to 3NF and then denormalise selectively where measurement shows it is necessary.
 15. **Let a relational function is R(A, B, C, D, E), Write Yes or No based on those are the follow n functional dependency.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 822 (ET: BUET)]*
    AB \to C
    B \to B
    DE \to A
 
+
+   Answer: The question asks whether each of the given dependencies can hold on the relation R(A, B, C, D, E). The three must be judged separately.
+
+   AB → C
+   - Answer: Yes.
+   - This is a valid non-trivial functional dependency. It asserts that the combination of A and B determines C, that is any two rows agreeing on both A and B must agree on C. Whether it actually holds for a particular relation depends on the data and the business rules, but it is a well formed and permissible dependency.
+
+   B → B
+   - Answer: Yes, but it is trivial.
+   - A functional dependency X → Y is trivial when Y is a subset of X. Here the right hand side is identical to the left, so B → B holds for every relation by definition, in every possible instance. It follows immediately from Armstrong's reflexivity axiom.
+   - Because it always holds and asserts nothing, it is useless for design purposes. It is never listed in a set of functional dependencies, it plays no part in computing a closure, and it never causes a normal form violation.
+
+   DE → A
+   - Answer: Yes.
+   - Like the first, this is a valid non-trivial functional dependency asserting that D and E together determine A. Its truth depends on the data and the business rules.
+
+   Summary:
+
+   | Dependency | Valid | Type |
+   |---|---|---|
+   | AB → C | Yes | Non-trivial |
+   | B → B | Yes | Trivial, holds always |
+   | DE → A | Yes | Non-trivial |
+
+   The point being tested:
+   - The distinction between trivial and non-trivial dependencies. A trivial dependency is always true and therefore carries no information; a non-trivial one is a genuine assertion about the data that may or may not hold and that must be enforced.
+   - Armstrong's axioms formalise this: reflexivity states that if Y ⊆ X then X → Y, which is exactly why B → B needs no justification.
+   - In normalisation, only non-trivial dependencies matter. The definitions of 3NF and BCNF explicitly exclude trivial dependencies, since otherwise no relation could ever satisfy them.
 16. **What is DBMS? Write down the purpose of normalization in DBMS.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
+
+   Answer:
+
+   What a DBMS is:
+   - A Database Management System is software that enables users to define, create, store, retrieve, update and manage data in a database, and that controls access to it. It stands between the physical data and the users, so that no application needs to know how the data is stored.
+   - Its principal functions: data definition, data manipulation through SQL, transaction management with the ACID properties, concurrency control, security and authorisation, backup and recovery, enforcement of integrity constraints, and maintenance of the data dictionary.
+   - Examples: Oracle, MySQL, PostgreSQL, Microsoft SQL Server, MongoDB.
+
+   Purpose of normalisation in a DBMS:
+   - To eliminate data redundancy, so that each fact is stored in exactly one place.
+   - To remove the update anomaly: a fact repeated in many rows must be changed in all of them, and missing one leaves contradictory data with no means of telling which value is correct.
+   - To remove the insertion anomaly: a new fact should be recordable without waiting for unrelated information, for example a new department should be enterable before any employee joins it.
+   - To remove the deletion anomaly: removing one fact should not destroy another, for example deleting the last employee of a department should not erase the department itself.
+   - To ensure data integrity and consistency, since there is only one place where each fact can be wrong.
+   - To save storage space.
+   - To produce a clearer design in which each table represents one kind of thing, which makes the schema easier to understand, document and extend.
+   - To simplify the enforcement of constraints, since a constraint on a fact stored once is straightforward.
+   - To organise the data logically so that relationships are represented explicitly by keys.
+
+   How it is achieved: by decomposing tables according to the normal forms — 1NF for atomicity, 2NF to remove partial dependency, 3NF to remove transitive dependency, and BCNF as a stricter form of 3NF — in such a way that the decomposition is lossless and, where possible, dependency preserving.
+
+   The cost, which should be stated: more tables means more joins, so heavily normalised schemas can be slower to query. 3NF is the usual target, with selective denormalisation for reporting.
 17. **(b) What is normalization? Why is it needed?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
 
+
+   Answer:
+
+   What normalisation is:
+   - Normalisation is the process of organising the tables and columns of a relational database so as to reduce redundancy and eliminate the anomalies it causes. A large table is decomposed into smaller related tables in a way that loses no information, so that the original can be reconstructed by joining them.
+   - It proceeds through a series of normal forms, each imposing a stricter condition: 1NF requires atomic values; 2NF removes partial dependency on part of a composite key; 3NF removes transitive dependency through a non-key attribute; and BCNF requires every determinant to be a super key.
+   - It was introduced by E. F. Codd.
+
+   Why it is needed:
+   - Update anomaly: a fact repeated across many rows must be changed in every one of them; missing one leaves the database holding contradictory values.
+   - Insertion anomaly: a fact cannot be recorded because other information is not yet available. A new department cannot be entered until an employee is assigned to it.
+   - Deletion anomaly: deleting one fact destroys another. Removing the last employee of a department erases the department itself.
+   - Redundancy wastes storage.
+   - Integrity is easier to enforce when each fact exists in exactly one place.
+   - The design becomes clearer, since each table then describes one kind of entity, and it is easier to extend.
+
+   Example:
+
+   Before normalisation:
+
+   | Emp_ID | Emp_Name | Dept_ID | Dept_Name | Dept_Location |
+   |---|---|---|---|---|
+   | 1 | Rahim | 10 | IT | Dhaka |
+   | 2 | Karim | 10 | IT | Dhaka |
+   | 3 | Salma | 20 | Finance | Chattogram |
+
+   After normalisation to 3NF:
+
+   ```
+   Employee(Emp_ID, Emp_Name, Dept_ID)
+   Department(Dept_ID, Dept_Name, Dept_Location)
+   ```
+
+   - The department's name and location are now stored once; they can be updated in one place; a department can exist with no employees; and removing an employee does not remove the department.
+
+   The trade-off worth stating: normalisation increases the number of joins, which costs query performance. 3NF is the practical target for a transactional system, and reporting systems are deliberately denormalised where measurement shows the joins to be too expensive.
 18. **(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 953-954 (ET: N/A)]*
+
+
+   Answer:
+
+   What a DBMS is:
+   - A Database Management System is software that allows users to define, create, store, retrieve, update and manage data in a database, and that controls access to it. It stands between the stored data and the applications, so no program needs to know how the data is physically held.
+   - Its functions: data definition, data manipulation, transaction management with ACID guarantees, concurrency control, security, backup and recovery, integrity enforcement, and maintenance of the data dictionary.
+
+   Procedure for normalising a database:
+
+   Step 1, gather the relation and its functional dependencies:
+   - List every attribute, and determine which attributes determine which others from the business rules. This is the essential preparatory step; normalisation cannot be performed without knowing the dependencies.
+
+   Step 2, identify the candidate keys:
+   - Compute attribute closures to find the minimal sets that determine every attribute. From these, identify the prime attributes, that is those appearing in some candidate key.
+
+   Step 3, convert to First Normal Form:
+   - Ensure every attribute holds a single atomic value. Remove repeating groups, multivalued attributes and lists inside columns by placing each value in its own row or in a separate table. Ensure the relation has a primary key.
+
+   Step 4, convert to Second Normal Form:
+   - Check whether any non-prime attribute depends on only part of a composite key. If so, that is a partial dependency: move the partially dependent attributes, together with the part of the key they depend on, into a new relation.
+   - A relation whose key is a single attribute is already in 2NF.
+
+   Step 5, convert to Third Normal Form:
+   - Check whether any non-prime attribute is determined by another non-prime attribute. If so, that is a transitive dependency: move the determining attribute and the attributes it determines into a new relation, leaving the determining attribute in the original as a foreign key.
+
+   Step 6, convert to Boyce-Codd Normal Form:
+   - Check every non-trivial dependency X → Y. If X is not a super key, decompose so that it becomes one. This step matters only where candidate keys overlap.
+
+   Step 7, consider 4NF and 5NF:
+   - Remove multivalued dependencies, that is two independent multivalued facts held in one table, and then any remaining join dependencies. These are rarely required in practice.
+
+   Step 8, verify the decomposition:
+   - Lossless join: the original relation must be reconstructible exactly by joining the parts, with no spurious rows. This is guaranteed if the common attributes of the two parts form a key of at least one of them.
+   - Dependency preservation: every original functional dependency should be enforceable within a single relation, so that no constraint requires a join to check. 3NF always allows this; BCNF sometimes does not.
+
+   Step 9, consider deliberate denormalisation:
+   - Measure the resulting query performance. Where the number of joins is unacceptable, as in reporting and data warehouse systems, reintroduce controlled redundancy knowingly, and manage it through the load process rather than through ad hoc updates.
 
 ## SQL Commands (DDL, DML, DCL, TCL) (13)
 
