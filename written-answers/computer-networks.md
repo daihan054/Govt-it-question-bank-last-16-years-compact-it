@@ -373,52 +373,457 @@ ii) 211.10.15.4
 
 1. **Define Computer Network. Describe different types of Computer Networks.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
+
+   Answer: A computer network is a collection of two or more computing devices connected by a transmission medium so that they can exchange data and share resources such as files, printers and an Internet connection, following an agreed set of protocols.
+
+   Types of computer network, classified by geographical area:
+
+   - PAN, Personal Area Network: about 10 metres around one person, connecting that person's own devices. Uses Bluetooth, Zigbee, NFC or USB. Example: a phone paired with a headset and a smartwatch.
+   - LAN, Local Area Network: one building or campus, up to a few kilometres. Privately owned, high speed of 1 to 10 Gbps, very low delay and low error rate. Uses Ethernet and Wi-Fi with switches and access points. Example: an office or a university network.
+   - CAN, Campus Area Network: several nearby buildings under one organisation, larger than a LAN but smaller than a MAN.
+   - MAN, Metropolitan Area Network: a whole city, roughly 5 to 50 km, often owned by an operator and shared by several organisations. Uses fibre, Metro Ethernet and formerly WiMAX. Example: a cable television network or a bank's branches across Dhaka.
+   - WAN, Wide Area Network: a country or the whole world, with no distance limit. Usually leased from a carrier, lower speed per user, higher delay and higher error rate than a LAN. Uses leased lines, MPLS, SONET and satellite. Example: the Internet itself, or a bank's national network.
+   - Additional types worth naming: SAN, a Storage Area Network for block level access to storage; VPN, a Virtual Private Network that tunnels a private network securely over the public Internet; WLAN for the wireless version of a LAN; and an intranet, which is an organisation's private internal network, with an extranet extending part of it to partners.
+
+   Classification by architecture:
+   - Client-server: dedicated servers provide services and clients consume them. Centralised control, better security and easier backup, but the server is a single point of failure and it costs more.
+   - Peer to peer: every machine is both client and server. Cheap and simple, but hard to secure and to manage beyond about ten machines.
 2. **(ক) IP address এবং MAC Address- এর মাঝে তুলনা করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer:
+
+   | Point | MAC address | IP address |
+   |---|---|---|
+   | Layer | Data link layer, layer 2 | Network layer, layer 3 |
+   | Length | 48 bits, six hexadecimal pairs | 32 bits for IPv4, 128 bits for IPv6 |
+   | Format | 00:1A:2B:3C:4D:5E | 192.168.1.10 |
+   | Assigned by | The manufacturer, burned into the NIC | The network administrator or DHCP |
+   | Nature | Physical and permanent | Logical and changeable |
+   | Structure | Flat, the first 24 bits are the vendor OUI | Hierarchical, network part plus host part |
+   | Scope | Within one local network only | End to end across the whole Internet |
+   | Routable | No, a router does not forward it | Yes, this is what routers forward on |
+   | Changes in transit | Rewritten at every hop | Stays the same from source to destination, except under NAT |
+   | Resolved by | ARP, from an IP address to a MAC address | DNS, from a name to an IP address |
+   | Command to view | `ipconfig /all` or `ifconfig` | `ipconfig` or `ip addr` |
+
+   - Ekshathe kaj kore kivabe: packet-e source ar destination IP shesh porjonto ek-i thake, kintu protita hop-e frame-er MAC address bodlay. Tai IP bole kothay jete hobe, ar MAC bole ei muhurte pasher kon device-er kache dite hobe. ARP ei duitir modhye setu toiri kore.
 3. **(ক) সংজ্ঞা লিখুন: (i) Propagation delay, (ii) Transmission delay.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer:
+
+   (i) Propagation delay:
+   - Ekti bit-er signal sender theke receiver porjonto pouchate je somoy lage, ta-i propagation delay.
+   - Sutro: Tp = durottwo / signal-er gati. Cable-e gati praay 2 × 10⁸ m/s, ar sunno ba batash-e 3 × 10⁸ m/s.
+   - Eta shudhu durottwo ar medium-er upor nirbhor kore; data-r akar ba bandwidth-er sathe kono somporko nei.
+   - Udahoron: 2000 km cable-e Tp = 2 × 10⁶ / 2 × 10⁸ = 10 ms.
+
+   (ii) Transmission delay:
+   - Puro message-ke link-er upor tule dite, mane sender-er prothom bit theke sesh bit porjonto pathate je somoy lage, ta-i transmission delay.
+   - Sutro: Tt = message-er akar (bit) / bandwidth (bps).
+   - Eta message-er akar ar bandwidth-er upor nirbhor kore; durottwo-r sathe kono somporko nei.
+   - Udahoron: 1 Mbps link-e 1000 bit-er frame-e Tt = 1000 / 10⁶ = 1 ms.
+
+   - Mot delay = transmission + propagation + queuing + processing delay. LAN-e transmission delay-i prodhan, ar satellite ba dirgho WAN link-e propagation delay-i prodhan.
 4. **Write short note: Network, Protocol, link, gateway, Node.** *[BREB Assistant Programmer 18.02.2023 compact it 470 (ET: N/A)]*
 
+
+   Answer:
+
+   Network:
+   - A collection of two or more devices connected by a transmission medium so that they can exchange data and share resources such as files, printers and Internet access.
+   - Classified by area as PAN, LAN, MAN and WAN, and by architecture as client-server or peer to peer.
+   - Its purpose is resource sharing, communication, centralised data management and cost saving.
+
+   Protocol:
+   - A set of agreed rules that governs how two devices communicate, covering syntax, that is the format of the data; semantics, that is the meaning of each field and what action to take; and timing, that is when and how fast to send.
+   - Without a common protocol two devices cannot understand each other even when physically connected.
+   - Examples: TCP, IP, HTTP, FTP, SMTP, DNS and ARP. They are organised in layers, each layer using the services of the one below.
+
+   Link:
+   - The physical or logical connection between two directly connected nodes, that is the actual transmission path.
+   - It may be guided, such as twisted pair, coaxial cable or fibre, or unguided, such as radio, microwave or satellite.
+   - It may be point to point, joining exactly two devices, or multipoint, shared by several devices.
+
+   Gateway:
+   - A device or software that connects two networks using different protocols, architectures or data formats, and translates between them.
+   - It can operate at any layer of the OSI model, up to the application layer, because translation may mean rebuilding the message entirely.
+   - In everyday LAN usage the default gateway is the router interface a host uses to reach anything outside its own subnet.
+   - Examples: a VoIP gateway between IP and the PSTN, an email gateway, an IoT gateway.
+
+   Node:
+   - Any device on a network that can send, receive or forward data and that has a network address.
+   - End nodes are computers, phones, printers and servers; intermediate nodes are switches, routers and access points.
+   - Every node needs a network interface, and in a mesh topology n nodes require n(n − 1)/2 links.
 5. **(b) Define following terms: (i) Bandwidth (ii) Latency (iii) MAC Address (iv) IP address** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 491 (ET: N/A)]*
 
+
+   Answer:
+
+   (i) Bandwidth:
+   - The maximum theoretical capacity of a link, that is the highest rate at which data can be carried. It is measured in bps, Mbps or Gbps for a digital link, and in Hz for an analog channel.
+   - It is a fixed property of the medium and the technology, and it is always an upper limit; the throughput actually achieved is lower.
+
+   (ii) Latency:
+   - The total time taken for a message to travel from the source to the destination, also called delay.
+   - Latency = transmission delay + propagation delay + queuing delay + processing delay.
+   - Transmission delay is size divided by bandwidth, propagation delay is distance divided by signal speed, queuing delay is the waiting time in router buffers, and processing delay is the time each router spends examining the header.
+   - Round trip time is the latency in both directions and is what `ping` reports. Jitter is the variation in latency, and it matters greatly for voice and video.
+
+   (iii) MAC address:
+   - The Media Access Control address, a 48 bit physical address permanently burned into the network interface card by its manufacturer, written as six hexadecimal pairs such as `00:1A:2B:3C:4D:5E`.
+   - The first 24 bits are the vendor's Organisationally Unique Identifier and the last 24 bits identify the card.
+   - It works at the data link layer, is flat and non-routable, and is used for delivery within a single local network.
+
+   (iv) IP address:
+   - A logical network layer address that identifies a device on a network and enables end to end routing across the Internet.
+   - IPv4 is 32 bits in dotted decimal such as 192.168.1.10, and IPv6 is 128 bits in hexadecimal such as 2001:db8::1.
+   - It is hierarchical, divided into a network part and a host part by the subnet mask, and it may be assigned statically or by DHCP.
+   - It may be public, that is globally routable, or private, that is 10.x, 172.16 to 172.31 and 192.168.x, which need NAT to reach the Internet.
 6. **Define networking and Internetworking. What are the different types of network? Explain in details.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 672 (ET: N/A)]*
 
+
+   Answer:
+
+   Networking:
+   - Networking is the practice of connecting two or more computing devices through a transmission medium so that they can exchange data and share resources, using an agreed set of protocols. It covers the design, implementation and management of a single network.
+
+   Internetworking:
+   - Internetworking is the connecting of two or more distinct, and often dissimilar, networks so that they function as one larger network. It is done by routers and gateways operating at the network layer, using a common protocol, which in practice is IP.
+   - The Internet itself is the largest example: millions of independent networks joined together, each keeping its own internal technology, whether Ethernet, Wi-Fi or a WAN link, while IP provides a common addressing and forwarding scheme above them.
+   - Its purposes are to extend reach, to allow different technologies to interwork, and to divide a large network into manageable and separately administered parts.
+
+   Types of network:
+
+   - PAN, Personal Area Network: about 10 metres around one person, connecting that person's own devices. Uses Bluetooth, Zigbee, NFC or USB. Example: a phone paired with a headset and a smartwatch.
+   - LAN, Local Area Network: one building or campus, up to a few kilometres. Privately owned, high speed of 1 to 10 Gbps, very low delay and low error rate. Uses Ethernet and Wi-Fi with switches and access points. Example: an office or a university network.
+   - CAN, Campus Area Network: several nearby buildings under one organisation, larger than a LAN but smaller than a MAN.
+   - MAN, Metropolitan Area Network: a whole city, roughly 5 to 50 km, often owned by an operator and shared by several organisations. Uses fibre, Metro Ethernet and formerly WiMAX. Example: a cable television network or a bank's branches across Dhaka.
+   - WAN, Wide Area Network: a country or the whole world, with no distance limit. Usually leased from a carrier, lower speed per user, higher delay and higher error rate than a LAN. Uses leased lines, MPLS, SONET and satellite. Example: the Internet itself, or a bank's national network.
+   - Additional types worth naming: SAN, a Storage Area Network for block level access to storage; VPN, a Virtual Private Network that tunnels a private network securely over the public Internet; WLAN for the wireless version of a LAN; and an intranet, which is an organisation's private internal network, with an extranet extending part of it to partners.
 7. **Write short note: (i) web server (ii) ISP (iii) Router (iv) Search Engine** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 680 (ET: N/A)]*
 
+
+   Answer:
+
+   (i) Web server:
+   - A server, that is both the hardware and the software, that stores website files and delivers them to browsers over HTTP and HTTPS, on ports 80 and 443.
+   - It listens for requests, finds or generates the requested resource, and returns it with a status code such as 200 OK, 404 Not Found or 500 Internal Server Error.
+   - It serves static content directly from disk and passes dynamic requests to an application layer such as PHP, Java or Node.js, which may in turn query a database.
+   - It also handles TLS termination, virtual hosting of many sites on one machine, logging, compression and caching.
+   - Examples: Apache, Nginx, Microsoft IIS and LiteSpeed.
+
+   (ii) ISP:
+   - An Internet Service Provider is an organisation that provides access to the Internet to homes and businesses, for a fee.
+   - It is arranged in tiers: Tier 1 providers own global backbones and peer with each other without payment, Tier 2 providers buy transit and also peer, and Tier 3 providers are local access networks.
+   - Services offered: broadband access over fibre, DSL or cable, leased lines, IP address allocation, DNS resolution, email and web hosting, and often domain registration and colocation.
+   - In Bangladesh the chain runs from the submarine cable operator BSCPLC to the IIGs, then the NTTN operators, then the ISPs, and finally the subscriber.
+
+   (iii) Router:
+   - A network layer, layer 3, device that connects two or more different networks and forwards packets between them.
+   - It reads the destination IP address, performs a longest prefix match in its routing table and sends the packet to the best next hop, decrementing the TTL at each hop.
+   - It builds that table with static routes or dynamic protocols such as RIP, OSPF and BGP, and it blocks broadcasts, so each interface is a separate broadcast domain.
+   - It usually also provides NAT, DHCP, ACL based filtering, QoS and WAN interfaces.
+
+   (iv) Search engine:
+   - A software system that searches the World Wide Web for information matching a user's query and returns a ranked list of results.
+   - It works in three stages: crawling, where automated bots follow links and fetch pages; indexing, where the content is parsed and stored in an inverted index; and ranking, where an algorithm orders the matching pages by relevance and authority, using signals such as keywords, links, freshness and user location.
+   - Examples: Google, Bing, DuckDuckGo and Yahoo.
 8. **What is Interface protocol?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+
+   Answer: An interface protocol is the agreed set of rules that governs how two adjacent components exchange information across the boundary between them.
+
+   - In the OSI model each layer offers services to the layer above through a well defined service interface, and the rules of that exchange, that is what may be requested and what will be returned, form the interface protocol. The layer above does not need to know how the layer below does its work.
+   - Between two networks or two systems, an interface protocol defines the format, timing and control signals used at the boundary, so that equipment from different vendors can interoperate.
+   - Examples: RS-232 and USB define the interface between a computer and a peripheral; the UNI, User Network Interface, and NNI, Network Node Interface, in ATM and Frame Relay define the boundary between the customer and the carrier and between two carriers; and an API defines the interface between two software components.
+   - The value of the idea is separation of concerns: as long as the interface stays fixed, either side may be redesigned independently, which is what makes layered network architecture work at all.
 9. **(ক) সংজ্ঞা লিখুন: WWW, URL, HTTP, IP Address, Router.** *[Software Assistant Programmer 13.10.2022 compact it 708 (ET: N/A)]*
 
+
+   Answer:
+
+   WWW:
+   - World Wide Web, ekti tothyo babostha jekhane hypertext document ar resource URL diye chinhito hoy ebong hyperlink diye eke oporer sathe jukto thake. Eta HTTP ba HTTPS protocol-e Internet-er upore chole. Tim Berners-Lee 1989 sale CERN-e eta udbhabon koren. Mone rakhte hobe, WWW ar Internet ek noy — Internet holo network-er avokathamo, ar WWW tar upore chola ekti seba.
+
+   URL:
+   - Uniform Resource Locator, Internet-e kono resource-er sompurno thikana. Er ongsho: scheme (`https`), host (`www.example.com`), port (`:443`), path (`/page/index.html`), query (`?id=10`) ar fragment (`#top`). Udahoron: `https://www.example.com:443/page?id=10`.
+
+   HTTP:
+   - HyperText Transfer Protocol, application layer-er protocol ja web page ar resource paribohon kore. TCP port 80-e chole (HTTPS 443-e). Eta stateless request-response protocol; state rakhte cookie ba session lage. Mul method: GET, POST, PUT, DELETE. Status code: 200 OK, 301 Moved, 404 Not Found, 500 Server Error.
+
+   IP Address:
+   - Network layer-er logical address ja network-e protita device-ke unique bhabe chinhito kore ebong end-to-end routing somvob kore. IPv4 32 bit (192.168.1.10), IPv6 128 bit (2001:db8::1). Subnet mask diye network part ar host part alada hoy. Public ba private hote pare, ar static ba DHCP theke deoa hote pare.
+
+   Router:
+   - Layer 3-er device ja duti ba tar beshi bhinno network-ke jukto kore ebong tader modhye packet forward kore. Destination IP dekhe routing table-e longest prefix match kore best next hop bachai kore. RIP, OSPF, BGP diye table toiri kore. Broadcast block kore, tai protita interface alada broadcast domain. Ei sathe NAT, DHCP, ACL ar WAN connectivity dey.
 10. **What is computer network?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+
+   Answer: A computer network is a collection of two or more computing devices connected together by a transmission medium so that they can exchange data and share resources, following an agreed set of protocols.
+
+   - Its components are the devices themselves, the network interface cards, the transmission medium, the connecting devices such as switches and routers, and the protocols.
+   - Purposes: sharing files, printers and an Internet connection; communication by email, chat and video; centralised data storage and backup; and reduced cost, since one resource serves many users.
+   - Classified by area as PAN, LAN, MAN and WAN, and by architecture as client-server or peer to peer.
 11. **What is SDN?** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
 
+
+   Answer: SDN, Software Defined Networking, is a network architecture in which the control plane is separated from the data plane and moved into a central software controller, so the whole network can be programmed and managed from one place.
+
+   - In a traditional network every switch and router makes its own forwarding decisions, so a policy change means configuring each device individually. In SDN the devices become simple forwarding hardware and all the intelligence sits in the controller.
+   - Three layers: the application layer holds the network applications and business logic; the control layer holds the SDN controller, such as OpenDaylight, ONOS or Ryu; and the infrastructure layer holds the switches and routers.
+   - Two interfaces: the southbound API, usually OpenFlow, through which the controller programs the flow tables of the switches; and the northbound API, usually REST, through which applications tell the controller what they want.
+   - Advantages: central control and a global view of the network, rapid provisioning, automation through software, vendor independence, easy implementation of complex policy and traffic engineering, and lower operating cost.
+   - Disadvantages: the controller is a single point of failure and a high value target, so redundancy is essential; latency between the switch and the controller matters; and the skills required are different from traditional networking.
+   - Uses: data centres, cloud providers, WAN traffic engineering such as Google's B4, and SD-WAN for enterprise branch connectivity. It is closely related to Network Function Virtualisation, NFV, which replaces dedicated appliances such as firewalls and load balancers with software.
 12. **How to works networks?** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
 
+
+   Answer: A network works by breaking data into packets, addressing them, and passing them through a series of devices until they reach the destination, where they are reassembled.
+
+   Step by step:
+   - The application produces data, which the transport layer divides into segments and gives a port number so the right application receives it at the far end. TCP adds sequence numbers and acknowledgements for reliability; UDP does not.
+   - The network layer wraps each segment in an IP packet carrying the source and destination IP addresses. This is the end to end address that stays the same all the way.
+   - The data link layer wraps the packet in a frame carrying the source and destination MAC addresses of the next hop only, plus a CRC for error detection. ARP is used to find the MAC address that matches the next hop IP.
+   - The physical layer converts the frame into signals, that is voltage on copper, light in fibre or radio waves, and puts it on the medium.
+   - A switch reads the destination MAC and forwards the frame out of the correct port, using the table it built by learning source addresses.
+   - If the destination is on another network, the frame goes to the default gateway. The router strips the frame, reads the destination IP, looks it up in its routing table using the longest prefix match, builds a new frame for the next hop and forwards it. This repeats at every router, and the TTL is decremented each time.
+   - At the destination the process runs in reverse up the layers: the frame's CRC is checked, the packet is passed to the network layer, the segment to the transport layer, which reorders and acknowledges it, and the data is delivered to the application by port number.
+   - Along the way DNS translates the name into an IP address, DHCP supplied the sender's address in the first place, and NAT may rewrite the address at the network edge.
 13. **(খ) Address গুলির সংক্ষিপ্ত বর্ণনা দিন। (i) Port Number (ii) IP অ্যাড্রেস (iii) MAC অ্যাড্রেস।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 775 (ET: N/A)]*
 
+
+   Answer:
+
+   (i) Port Number:
+   - Transport layer-er 16 bit sonkha, ja bole packet-ti kon application ba service-er jonno. Range 0 theke 65535.
+   - Tin bhag: Well-known 0 theke 1023 (HTTP 80, HTTPS 443, FTP 21, SSH 22, SMTP 25, DNS 53), Registered 1024 theke 49151, ar Dynamic ba Ephemeral 49152 theke 65535 ja client nijer jonno tokhoni bachai kore.
+   - IP address bole kon computer, ar port number bole shei computer-er kon program. Duita mile hoy socket, jemon 192.168.1.10:443.
+
+   (ii) IP address:
+   - Network layer-er logical address ja network-e protita device-ke unique bhabe chinhito kore ebong end-to-end routing somvob kore.
+   - IPv4 32 bit, dotted decimal-e, jemon 192.168.1.10. IPv6 128 bit, hexadecimal-e, jemon 2001:db8::1.
+   - Subnet mask diye network part ar host part alada hoy, tai eta hierarchical ar routable.
+   - Public ba private hote pare; static bhabe ba DHCP theke deoa hoy, tai eta poriborton-shil.
+
+   (iii) MAC address:
+   - Data link layer-er 48 bit physical address, ja NIC-er bhitore prostutkarok sthayi bhabe likhe dey. Lekha hoy choyti hexadecimal pair-e, jemon 00:1A:2B:3C:4D:5E.
+   - Prothom 24 bit prostutkarok-er OUI, sesh 24 bit card-er nijoswo number.
+   - Eta flat ar non-routable; shudhu local network-er bhitore delivery-r jonno byabohar hoy ar protita hop-e bodle jay.
+   - ARP protocol IP address theke MAC address ber kore.
 14. **(i) নিচের MAC Address গুলো কোন ধরনের বের করুন। (a) 4C:23:10:4A:1A:2A (b) 45:24:56:2B:24:12 (c) FF:FF:FF:FF:FF:FF** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 788 (ET: N/A)]*
 
+
+   Answer: MAC address-er dhoron thik hoy prothom byte-er sorbonimno bit, mane I/G bit dekhe. Ei bit 0 hole unicast, 1 hole multicast ba group address. Ar shob bit 1 hole broadcast.
+
+   (a) `4C:23:10:4A:1A:2A`
+   - Prothom byte 4C = 0100 1100 (binary). Sorbonimno bit = 0, tai eta Unicast address.
+   - Er porer bit (U/L) = 0, mane eta universally administered, mane prostutkarok-er deoa globally unique address.
+   - Uttor: Unicast.
+
+   (b) `45:24:56:2B:24:12`
+   - Prothom byte 45 = 0100 0101 (binary). Sorbonimno bit = 1, tai eta Multicast ba group address.
+   - Uttor: Multicast.
+
+   (c) `FF:FF:FF:FF:FF:FF`
+   - Shob 48 ti bit 1, ja Broadcast address. Ei frame local network-er protita device grohon kore.
+   - Uttor: Broadcast.
+
+   | Address | Prothom byte (binary) | I/G bit | Dhoron |
+   |---|---|---|---|
+   | 4C:23:10:4A:1A:2A | 0100 1100 | 0 | Unicast |
+   | 45:24:56:2B:24:12 | 0100 0101 | 1 | Multicast |
+   | FF:FF:FF:FF:FF:FF | 1111 1111 | 1, ar shob bit 1 | Broadcast |
 15. **If you have a company of two branch in the same city and they are connected. Which connection is used between then? (a) LAN (b) MAN (c) WAN (d) NONE** *[BCC Assistant Programmer 12.02.2021 compact it 811 (ET: BUET)]*
 
+
+   Answer: The correct option is (b) MAN, Metropolitan Area Network.
+
+   - The two branches are in the same city, and a MAN is defined as a network covering a metropolitan area, roughly 5 to 50 km.
+   - A LAN covers only one building or campus, so it is too small.
+   - A WAN covers a country or the world, so it is larger than needed here, although in practice such a link is often bought as a WAN service from a carrier.
 16. **Short Question: a) What are the protocol for connectionless and connection oriented? b) Why UTP cable are twisted? c) What are the main requirement of optical fiber splicing? d) Why use subnet mask? e) What the major difference between multicast and broadcast?** *[BPDB Assistant Engineer (CSE) 2021 compact it 816 (ET: BUET)]*
 
+
+   Answer:
+
+   (a) Protocols for connectionless and connection oriented:
+   - Connectionless: UDP at the transport layer, and IP at the network layer. Also ICMP, ARP, DHCP, DNS and TFTP. Data is sent immediately with no setup and no guarantee.
+   - Connection oriented: TCP at the transport layer, and SCTP. At the network level, virtual circuit technologies such as X.25, Frame Relay and ATM. A connection is established first, data flows in order, and the connection is then closed.
+
+   (b) Why UTP cables are twisted:
+   - To cancel electromagnetic interference. The two wires of a pair carry equal and opposite currents, so their magnetic fields cancel, and any external noise that reaches both wires equally is rejected as common mode noise at the differential receiver.
+   - To reduce crosstalk between adjacent pairs. Each pair in the cable has a different twist rate, so no two pairs stay parallel for long and the coupling between them is minimised.
+   - Without the twist the pair would act as an antenna, both radiating and receiving interference, and the usable distance and speed would collapse.
+
+   (c) Main requirements of optical fibre splicing:
+   - Clean and precise preparation: strip the coating, clean the fibre with alcohol, and cleave the end so the face is flat and exactly perpendicular, within about 1 degree.
+   - Accurate core alignment, since the single mode core is only about 9 micron across; the fusion splicer aligns the cores automatically.
+   - Matching fibre types, that is the same core diameter, refractive index profile and mode, on both sides.
+   - Low splice loss and low back reflection: a good fusion splice loses about 0.02 to 0.1 dB, a mechanical splice about 0.2 to 0.5 dB.
+   - Correct fusion arc current and time, so the glass melts and fuses without bubbles or bending.
+   - Mechanical protection afterwards: a heat shrink splice protector, and secure mounting in a splice tray and closure.
+   - Testing with an OTDR or a power meter to confirm the loss, and a clean and dust free working environment throughout.
+
+   (d) Why a subnet mask is used:
+   - To separate the network part of an IP address from the host part, which the address alone does not reveal in a classless network.
+   - A host ANDs its own address with the mask to find its network address, and does the same with the destination address; if the two results match, the destination is local and the frame is sent directly, otherwise it is sent to the default gateway. This is the single most important decision a host makes for every packet.
+   - It allows a large network to be divided into smaller subnets, which reduces broadcast domains, improves performance and security, and lets addresses be allocated efficiently with VLSM.
+   - Routers use it in the longest prefix match to select the best route.
+
+   (e) Major difference between multicast and broadcast:
+   - Broadcast sends the packet to every device on the network segment, whether or not it wants the data. The destination is 255.255.255.255 or the subnet broadcast address, and the MAC address is FF:FF:FF:FF:FF:FF. Every host must process the frame, so bandwidth and CPU are wasted, and routers do not forward it.
+   - Multicast sends the packet only to the devices that have joined a particular group. The destination is a class D address, 224.0.0.0 to 239.255.255.255, and membership is managed by IGMP. Only interested hosts process it, routers can forward it across networks, and one copy of a stream can serve thousands of receivers.
+   - In short: broadcast is one to all and wasteful, multicast is one to many who asked and efficient. IPv6 has removed broadcast altogether and uses multicast in its place.
 17. **Name of the Following figure:** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 880 (ET: BUET)]*
    Broadcast
    Unicast
    Multicast
 
+
+   Answer: The three figures represent the three basic modes of data delivery.
+
+   - Broadcast: one sender transmits to every device on the network segment. The destination address is 255.255.255.255 or the subnet broadcast address, and at layer 2 it is FF:FF:FF:FF:FF:FF. Every host must receive and process the frame. Routers do not forward broadcasts, so it is limited to one broadcast domain. Used by ARP and by DHCPDISCOVER.
+   - Unicast: one sender transmits to exactly one receiver, using that receiver's own address. This is the normal one to one communication and it accounts for almost all Internet traffic, for example a web request or a file transfer.
+   - Multicast: one sender transmits to a selected group of receivers who have joined that group. The address is a class D address in the range 224.0.0.0 to 239.255.255.255, and membership is managed by IGMP. Only the interested hosts process the packet, and the routers replicate the stream only where it is needed, so it is far more efficient than sending a separate unicast to each receiver. Used for IPTV, video conferencing, stock feeds and routing protocol updates.
+
+   ```
+   Unicast              Broadcast              Multicast
+   S --> R1             S --> R1               S --> R1 (joined)
+         R2                   R2                     R2 (joined)
+         R3                   R3                     R3 (not joined, ignored)
+   one to one           one to all             one to a group
+   ```
+
+   - The fourth mode, anycast, delivers the packet to the nearest member of a group of identically addressed servers, and is used by DNS root servers and CDNs.
 18. **(i) Computer network কী? বিভিন্ন প্রকার Computer network সম্পর্কে আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 955-956 (ET: N/A)]*
 
+
+   Answer: Computer network holo duti ba tar beshi computing device-er ekti songroho, jara ekti transmission medium diye jukto ebong ekti nirdisto protocol mene data adan-prodan ar resource share korte pare.
+
+   - Uddeshsho: file, printer ar Internet connection share kora; email, chat ar video-r madhome jogajog; kendrio data sonrokkhon ar backup; ebong khoroch komano.
+   - Uposhthito upadan: device, network interface card, transmission medium, switch ar router-er moto connecting device, ebong protocol.
+
+   Bibhinno prokar computer network:
+
+   - PAN, Personal Area Network: about 10 metres around one person, connecting that person's own devices. Uses Bluetooth, Zigbee, NFC or USB. Example: a phone paired with a headset and a smartwatch.
+   - LAN, Local Area Network: one building or campus, up to a few kilometres. Privately owned, high speed of 1 to 10 Gbps, very low delay and low error rate. Uses Ethernet and Wi-Fi with switches and access points. Example: an office or a university network.
+   - CAN, Campus Area Network: several nearby buildings under one organisation, larger than a LAN but smaller than a MAN.
+   - MAN, Metropolitan Area Network: a whole city, roughly 5 to 50 km, often owned by an operator and shared by several organisations. Uses fibre, Metro Ethernet and formerly WiMAX. Example: a cable television network or a bank's branches across Dhaka.
+   - WAN, Wide Area Network: a country or the whole world, with no distance limit. Usually leased from a carrier, lower speed per user, higher delay and higher error rate than a LAN. Uses leased lines, MPLS, SONET and satellite. Example: the Internet itself, or a bank's national network.
+   - Additional types worth naming: SAN, a Storage Area Network for block level access to storage; VPN, a Virtual Private Network that tunnels a private network securely over the public Internet; WLAN for the wireless version of a LAN; and an intranet, which is an organisation's private internal network, with an extranet extending part of it to partners.
+
+   Architecture onujayi prokarbhed:
+   - Client-server: nirdisto server seba dey ar client seba nay. Kendrio niyontron, bhalo nirapotta ar sohoj backup, kintu server-i single point of failure ar khoroch beshi.
+   - Peer-to-peer: protita machine-i client ar server duito-i. Shosta ar sohoj, kintu nirapotta ar babosthapona kothin, tai praay 10 ti machine-er beshi hole obabharjo.
 19. **What is difference between MAC Address and IP Address?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1018-1019 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | MAC address | IP address |
+   |---|---|---|
+   | Layer | Data link layer, layer 2 | Network layer, layer 3 |
+   | Length | 48 bits, six hexadecimal pairs | 32 bits for IPv4, 128 bits for IPv6 |
+   | Format | 00:1A:2B:3C:4D:5E | 192.168.1.10 |
+   | Assigned by | The manufacturer, burned into the NIC | The network administrator or DHCP |
+   | Nature | Physical and permanent | Logical and changeable |
+   | Structure | Flat, the first 24 bits are the vendor OUI | Hierarchical, network part plus host part |
+   | Scope | Within one local network only | End to end across the whole Internet |
+   | Routable | No, a router does not forward it | Yes, this is what routers forward on |
+   | Changes in transit | Rewritten at every hop | Stays the same from source to destination, except under NAT |
+   | Resolved by | ARP, from an IP address to a MAC address | DNS, from a name to an IP address |
+   | Command to view | `ipconfig /all` or `ifconfig` | `ipconfig` or `ip addr` |
+
+   - How they work together: the source and destination IP addresses stay the same for the whole journey, while the MAC addresses in the frame are rewritten at every hop. So the IP address says where the packet is finally going, and the MAC address says which neighbouring device should receive it right now. ARP is the protocol that bridges the two.
 20. **(b) List the factors that affect the performance of a network.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1027 (ET: N/A)]*
 
+
+   Answer: Factors that affect the performance of a network:
+
+   - Bandwidth: the capacity of the link. A link that is too narrow for the offered traffic becomes the bottleneck for everything behind it.
+   - Latency or delay: made up of transmission delay, which is size divided by bandwidth; propagation delay, which is distance divided by signal speed; queuing delay in router buffers; and processing delay at each node.
+   - Number of users and the traffic load. As utilisation rises above about 70 percent, queuing delay grows very sharply.
+   - Congestion: when the offered load exceeds capacity, queues overflow, packets are dropped, retransmissions increase and throughput can collapse.
+   - Transmission medium: fibre gives far better bandwidth, attenuation and noise immunity than copper or wireless.
+   - Errors and packet loss: a high bit error rate forces retransmission, which consumes capacity twice over.
+   - Network devices: the speed, memory and forwarding capacity of the switches and routers, and whether a hub is used instead of a switch.
+   - Topology and design: a poor design creates unnecessary hops, single points of failure and traffic concentration.
+   - Protocol overhead: header size, acknowledgements, window size and the bandwidth delay product. A small TCP window on a long fat link wastes most of the capacity.
+   - Jitter: variation in delay, which is critical for voice and video even when the average delay is acceptable.
+   - Distance and the number of hops between source and destination.
+   - Interference and noise, especially on wireless links, and physical problems such as damaged cable or a bad connector.
+   - Server and end device performance: a slow disk, a loaded CPU or a weak NIC limits throughput regardless of the network.
+   - Security processing: encryption, firewall inspection and deep packet inspection all add delay.
+   - Configuration errors: a duplex mismatch, a wrong MTU or a routing loop can destroy performance on an otherwise healthy network.
 21. **(a) Write a brief history of the internet. How to access to the internet?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1028-1029 (ET: N/A)]*
 
+
+   Answer:
+
+   Brief history of the Internet:
+   - 1957: after the launch of Sputnik, the United States set up ARPA to advance defence research.
+   - 1969: ARPANET became operational, connecting four universities, UCLA, Stanford Research Institute, UC Santa Barbara and the University of Utah. It used packet switching, the idea developed by Paul Baran and Donald Davies.
+   - 1972: Ray Tomlinson invented email and chose the `@` symbol.
+   - 1974: Vint Cerf and Bob Kahn designed TCP/IP, which is why they are called the fathers of the Internet.
+   - 1983: ARPANET formally adopted TCP/IP on 1 January, the date usually taken as the birth of the Internet. DNS was introduced in 1984.
+   - 1986: NSFNET was created as a high speed backbone linking supercomputer centres, and it gradually replaced ARPANET, which was retired in 1990.
+   - 1989 to 1991: Tim Berners-Lee at CERN invented the World Wide Web, with HTML, HTTP and the first browser and web server.
+   - 1993: the Mosaic graphical browser made the Web accessible to ordinary users, and commercial use grew rapidly.
+   - 1995 onwards: full commercialisation, the growth of ISPs, search engines, e-commerce, broadband, mobile Internet, social media and cloud computing.
+   - In Bangladesh, dial-up Internet arrived in 1996, and the country joined the SEA-ME-WE 4 submarine cable in 2006 and SEA-ME-WE 5 in 2017.
+
+   How to access the Internet:
+   - Dial-up over a telephone line with a modem, up to 56 kbps; obsolete now.
+   - DSL and ADSL over the existing telephone line, a few Mbps, without blocking voice calls.
+   - Cable Internet over the cable television coaxial network.
+   - Fibre to the home, FTTH or GPON, which is the normal broadband service today, offering tens to hundreds of Mbps.
+   - Leased line, a dedicated symmetric link with a guaranteed service level, used by banks and large offices.
+   - Wireless: Wi-Fi from a local access point, and mobile data over 3G, 4G LTE or 5G.
+   - Satellite, including modern low earth orbit services, for remote areas where no cable reaches.
+   - WiMAX and other fixed wireless access in areas without cabling.
+   - In every case the user needs a device, a modem or router, an account with an ISP, and the TCP/IP protocol stack with an IP address supplied by DHCP.
 22. **(b) Define computer network. Sate some merits and demerits of a computer network.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1029 (ET: N/A)]*
 
+
+   Answer: A computer network is a collection of two or more computing devices connected by a transmission medium so that they can exchange data and share resources, following an agreed set of protocols.
+
+   Merits:
+   - Resource sharing: one printer, scanner, storage array or Internet connection serves many users, which saves a great deal of money.
+   - File sharing and central data storage, so everyone works on the same current version.
+   - Communication: email, chat, voice and video conferencing, both inside and outside the organisation.
+   - Centralised administration: software can be installed, updated and licensed centrally, and policy applied to everyone at once.
+   - Centralised backup and easier disaster recovery.
+   - Better security control through user accounts, permissions and auditing, which is impossible with isolated machines.
+   - Reliability through redundancy: if one server or one path fails, another can take over.
+   - Scalability: new users and new services can be added without redesigning everything.
+   - Remote access, so staff can work from home or from a branch office.
+   - Distributed processing, so a heavy computation can be shared across several machines.
+
+   Demerits:
+   - Initial cost of cabling, switches, routers, servers and software licences.
+   - Skilled staff are needed to design, run and troubleshoot the network, and their salaries are a continuing cost.
+   - Security risks: a network exposes every machine to viruses, worms, ransomware, unauthorised access and eavesdropping, and one infected machine can spread the problem to all.
+   - Dependency: if the server or a key link fails, work stops for everyone, so a single point of failure becomes very costly.
+   - Congestion and performance degradation as the number of users grows.
+   - Privacy concerns, since an administrator can in principle see users' files and traffic.
+   - Maintenance overhead: patching, monitoring, backup verification and hardware replacement never stop.
+   - Distraction and misuse of the Internet connection during working hours.
 23. **b) Two IP address map to same Ethernet address. Will both of them receive packets?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+
+
+   Answer: Yes, both will receive the packets, and this is not an error; it is a normal and deliberate configuration.
+
+   - The mapping is one way. ARP maps an IP address to a MAC address, and many IP addresses may map to the same MAC address, but one MAC address cannot map to two different interfaces.
+   - When a frame arrives, the NIC accepts it because the destination MAC matches, and passes it up to the IP layer. The IP layer then looks at the destination IP address in the packet header and decides which logical interface or service it belongs to. So both packets are received by the same machine, and the machine separates them by IP address.
+   - Common situations where this happens deliberately:
+   - IP aliasing, where one physical interface is given several IP addresses, for example `eth0` and `eth0:1`, so that one server can host several websites on different addresses.
+   - A router or firewall interface holding a primary and a secondary address for two subnets on the same physical segment.
+   - A virtualisation host or a load balancer presenting several service addresses on one NIC.
+   - A machine that has both a static address and a DHCP address on the same card.
+   - The reverse case is the problem: two different machines sharing the same MAC address would cause the switch's MAC table to flap between two ports and traffic would be delivered erratically. That is a genuine fault, and it is also how a MAC spoofing attack works.
+   - So the answer is yes, both IP addresses receive their packets, because the delivery decision is made by MAC at layer 2 and then by IP at layer 3.
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (19)
 
