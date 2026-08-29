@@ -2482,27 +2482,333 @@
 
 1. **Core vs thread in networking?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
+
+   Answer: The question uses the word "networking", but core and thread are terms of processor architecture, so the comparison is given in that sense.
+
+   Core:
+   - A core is a complete physical processing unit inside the CPU chip, with its own ALU, control unit, registers and usually its own L1 and L2 cache.
+   - It is real hardware, so a quad-core processor genuinely contains four processing units and can execute four instruction streams in parallel.
+   - Adding cores increases the true parallel processing capacity of the chip.
+
+   Thread:
+   - A thread is the smallest sequence of instructions that the operating system can schedule; it is a software concept.
+   - A logical thread, in the hardware sense, is a virtual processing path presented by a core. With simultaneous multithreading (Intel calls it Hyper-Threading), one physical core presents itself as two logical processors.
+   - Threads on the same core share that core's execution units and caches; only the register state and program counter are duplicated.
+
+   | Point | Core | Thread |
+   |---|---|---|
+   | Nature | Physical hardware unit | Logical or virtual execution path, and in software a scheduled sequence of instructions |
+   | Own execution units | Yes, its own ALU and registers | No; shares the core's ALU and caches |
+   | True parallelism | Yes | Only apparent; two threads on one core interleave on shared units |
+   | Performance gain | Large, close to linear with core count for parallel work | Modest, typically 15 to 30 per cent |
+   | Cost in silicon | High | Very low, about 5 per cent extra die area |
+   | Example | A 4-core processor has 4 physical cores | A 4-core processor with Hyper-Threading presents 8 logical threads |
+
+   Meaning of a specification such as "4 cores, 8 threads": there are four physical cores, and each supports two hardware threads, so the operating system sees eight logical processors and can schedule eight tasks concurrently.
+
+   Where networking touches this: a network server benefits from many cores and threads because each connection or request is usually handled by its own thread, so a server processor is designed with a high core and thread count to handle many simultaneous clients.
 2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
+
+   Answer: Core i5 ও Core i7 প্রসেসরের মধ্যে প্রধান হার্ডওয়্যারগত পার্থক্যসমূহ:
+
+   | বিষয় | Core i5 | Core i7 |
+   |---|---|---|
+   | কোর সংখ্যা | কম | বেশি |
+   | থ্রেড সংখ্যা | কম; হাইপার-থ্রেডিং সব মডেলে থাকে না | বেশি; সাধারণত হাইপার-থ্রেডিং থাকে |
+   | L3 ক্যাশে | ছোট | বড়, ফলে মেমোরিতে যাওয়ার প্রয়োজন কম হয় |
+   | বেস ক্লক ও টার্বো ক্লক | তুলনামূলক কম | বেশি |
+   | টার্বো বুস্ট | আছে, তবে সীমিত | আছে, উচ্চতর ফ্রিকোয়েন্সি পর্যন্ত |
+   | তাপ ও বিদ্যুৎ খরচ (TDP) | কম | বেশি |
+   | সমন্বিত গ্রাফিক্স | মৌলিক পর্যায়ের | তুলনামূলক শক্তিশালী |
+   | দাম | কম | বেশি |
+   | উপযুক্ত ব্যবহার | সাধারণ অফিসের কাজ, মাঝারি গেমিং, ছবি সম্পাদনা | ভিডিও সম্পাদনা, 3D রেন্ডারিং, ভারী গেমিং, সফটওয়্যার ডেভেলপমেন্ট |
+
+   সবচেয়ে গুরুত্বপূর্ণ তিনটি পার্থক্য:
+   - কোর ও থ্রেডের সংখ্যা: এটিই সমান্তরাল কাজের ক্ষমতা নির্ধারণ করে। বেশি কোর মানে একসঙ্গে বেশি কাজ প্রকৃত অর্থে সমান্তরালে চলতে পারে।
+   - ক্যাশে মেমোরির আকার: বড় L3 ক্যাশে থাকলে সিপিইউ-কে কম বার ধীরগতির RAM পর্যন্ত যেতে হয়, ফলে বড় ডেটাসেটে কর্মদক্ষতা অনেক বাড়ে।
+   - ক্লক গতি ও টার্বো বুস্ট: একক থ্রেডের কাজে i7 এর উচ্চতর টার্বো ফ্রিকোয়েন্সি সরাসরি সুবিধা দেয়।
+
+   গুরুত্বপূর্ণ সতর্কতা: i3, i5, i7 ও i9 কেবল একটি শ্রেণিবিন্যাস, নির্দিষ্ট কোনো স্পেসিফিকেশন নয়। প্রতিটি প্রজন্মে কোর সংখ্যা ও ক্যাশের আকার বদলায়, তাই তুলনা সবসময় একই প্রজন্মের মধ্যে করতে হয়। একটি নতুন প্রজন্মের i5 প্রায়ই পুরোনো প্রজন্মের i7 এর চেয়ে দ্রুত হয়। মডেল নম্বরের প্রথম সংখ্যাগুলো প্রজন্ম নির্দেশ করে; যেমন i5-13600K এর "13" মানে ত্রয়োদশ প্রজন্ম।
 3. **What is Hyper threading? What is the use of it?** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)]*
 
+
+   Answer: Hyper-Threading is Intel's implementation of simultaneous multithreading (SMT). It makes a single physical core appear to the operating system as two logical processors, so that two threads can be scheduled on the same core at the same time.
+
+   How it works:
+   - The core duplicates only the small architectural state needed to hold a thread: the register set, the program counter, the instruction pointer and the interrupt controller state.
+   - It does not duplicate the expensive execution resources: the ALUs, the floating-point units, the caches and the buses remain shared.
+   - A modern core has many execution units, and a single thread rarely keeps all of them busy, because it stalls on cache misses, branch mispredictions and dependencies between instructions.
+   - When one thread stalls, the core immediately issues instructions from the other thread instead of standing idle, so the unused execution slots are filled.
+
+   Uses and benefits:
+   - Better utilisation of the execution units, which raises throughput by roughly 15 to 30 per cent on multithreaded workloads.
+   - More responsive multitasking, because more threads can be in flight at once.
+   - Useful for servers, virtualisation, database engines, web servers, video encoding and compilation, all of which run many threads.
+   - It costs only about 5 per cent extra die area, which is far cheaper than adding a whole physical core.
+
+   Limitations:
+   - It is not the same as doubling the cores. Two logical processors share one set of execution units, so the gain is well short of 100 per cent.
+   - A single-threaded program gains nothing.
+   - Two threads competing for the same cache can evict each other's data and actually slow things down.
+   - It has been implicated in side-channel security vulnerabilities, which is why some secure environments disable it.
 4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
 
+
+   Answer: The naming i3, i5, i7 and i9 is a tier classification, and within one generation a higher number does indicate a more capable processor, generally with more cores, more threads, more cache and a higher turbo frequency. The comparison is only valid within the same generation, since a newer i5 often outperforms an older i7.
+
+   Hyper-Threading is Intel's implementation of simultaneous multithreading (SMT). It makes a single physical core appear to the operating system as two logical processors, so that two threads can be scheduled on the same core at the same time.
+
+   How it works:
+   - The core duplicates only the small architectural state needed to hold a thread: the register set, the program counter, the instruction pointer and the interrupt controller state.
+   - It does not duplicate the expensive execution resources: the ALUs, the floating-point units, the caches and the buses remain shared.
+   - A modern core has many execution units, and a single thread rarely keeps all of them busy, because it stalls on cache misses, branch mispredictions and dependencies between instructions.
+   - When one thread stalls, the core immediately issues instructions from the other thread instead of standing idle, so the unused execution slots are filled.
+
+   Uses and benefits:
+   - Better utilisation of the execution units, which raises throughput by roughly 15 to 30 per cent on multithreaded workloads.
+   - More responsive multitasking, because more threads can be in flight at once.
+   - Useful for servers, virtualisation, database engines, web servers, video encoding and compilation, all of which run many threads.
+   - It costs only about 5 per cent extra die area, which is far cheaper than adding a whole physical core.
+
+   Limitations:
+   - It is not the same as doubling the cores. Two logical processors share one set of execution units, so the gain is well short of 100 per cent.
+   - A single-threaded program gains nothing.
+   - Two threads competing for the same cache can evict each other's data and actually slow things down.
+   - It has been implicated in side-channel security vulnerabilities, which is why some secure environments disable it.
+
+   Meaning of "2 cores and 4 threads":
+   - There are 2 physical cores, that is two complete processing units, each with its own ALU, registers and L1 and L2 cache.
+   - Each core supports two hardware threads through Hyper-Threading, so 2 x 2 = 4 logical processors.
+   - The operating system's task manager therefore shows 4 CPUs and can schedule 4 tasks at once.
+   - The performance is not that of 4 physical cores. Each pair of threads shares one core's execution units, so the realistic gain over 2 cores without Hyper-Threading is about 15 to 30 per cent on multithreaded work, not 100 per cent.
+
+   Related configurations:
+   - 4 cores, 4 threads: no Hyper-Threading.
+   - 4 cores, 8 threads: Hyper-Threading enabled.
+   - 8 cores, 16 threads: a typical mid-range modern desktop processor.
+   - Recent Intel designs also mix performance cores and efficiency cores, where only the performance cores support two threads, which is why a chip may show, for example, 14 cores and 20 threads.
 5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+
+   Answer: Core i7 প্রজন্ম অনুযায়ী প্রসেসরের কয়েকটি উদাহরণ:
+
+   | প্রজন্ম | কোড নাম | উদাহরণ মডেল |
+   |---|---|---|
+   | ১ম | Nehalem / Lynnfield | Core i7-920, i7-870 |
+   | ২য় | Sandy Bridge | Core i7-2600K, i7-2670QM |
+   | ৩য় | Ivy Bridge | Core i7-3770K |
+   | ৪র্থ | Haswell | Core i7-4790K |
+   | ৫ম | Broadwell | Core i7-5775C |
+   | ৬ষ্ঠ | Skylake | Core i7-6700K |
+   | ৭ম | Kaby Lake | Core i7-7700K |
+   | ৮ম | Coffee Lake | Core i7-8700K |
+   | ৯ম | Coffee Lake Refresh | Core i7-9700K |
+   | ১০ম | Comet Lake | Core i7-10700K |
+   | ১১তম | Rocket Lake | Core i7-11700K |
+   | ১২তম | Alder Lake | Core i7-12700K |
+   | ১৩তম | Raptor Lake | Core i7-13700K |
+   | ১৪তম | Raptor Lake Refresh | Core i7-14700K |
+
+   মডেল নম্বর পড়ার নিয়ম, উদাহরণ Core i7-12700K:
+   - i7 — প্রসেসরের শ্রেণি বা টিয়ার
+   - 12 — প্রজন্ম (দ্বাদশ প্রজন্ম)
+   - 700 — ওই প্রজন্মের মধ্যে মডেলের অবস্থান; সংখ্যা যত বড়, মডেল তত উচ্চতর
+   - K — প্রত্যয়, যার অর্থ আনলকড, অর্থাৎ ওভারক্লক করা যায়
+
+   প্রচলিত প্রত্যয়সমূহ:
+   - K — আনলকড, ওভারক্লক করা যায়
+   - F — সমন্বিত গ্রাফিক্স নেই, আলাদা গ্রাফিক্স কার্ড লাগবে
+   - U — অতি কম বিদ্যুৎ খরচ, পাতলা ল্যাপটপের জন্য
+   - H — উচ্চ কর্মক্ষমতার ল্যাপটপ প্রসেসর
+   - T — কম বিদ্যুৎ খরচের ডেস্কটপ সংস্করণ
+   - X — এক্সট্রিম সংস্করণ
+
+   উল্লেখযোগ্য: প্রজন্ম বদলালে কোর সংখ্যা, ক্যাশের আকার ও স্থাপত্য বদলে যায়। যেমন চতুর্থ প্রজন্মের i7-4790K ছিল ৪ কোর ও ৮ থ্রেডের, আর দ্বাদশ প্রজন্মের i7-12700K এ রয়েছে ১২ কোর (৮টি পারফরম্যান্স ও ৪টি এফিসিয়েন্সি কোর) ও ২০ থ্রেড। তাই কেবল i7 নাম দেখে তুলনা করা ভুল; প্রজন্মও দেখতে হবে।
 
 ## Assembly Language & Addressing Modes (5)
 
 1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
    (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer:
+
+   (a) Propagation delay ও Transmission delay এর পার্থক্য:
+
+   | বিষয় | Propagation Delay | Transmission Delay |
+   |---|---|---|
+   | সংজ্ঞা | একটি বিট উৎস থেকে গন্তব্যে পৌঁছাতে যে সময় লাগে | সম্পূর্ণ প্যাকেটের সব বিট লিংকে ঠেলে দিতে যে সময় লাগে |
+   | সূত্র | দূরত্ব / সঞ্চালন গতি (d / s) | প্যাকেটের আকার / ব্যান্ডউইথ (L / R) |
+   | কীসের উপর নির্ভর করে | লিংকের দৈর্ঘ্য ও মাধ্যমের প্রকৃতি | প্যাকেটের আকার ও লিংকের ব্যান্ডউইথ |
+   | প্যাকেটের আকারের প্রভাব | নেই | সরাসরি সমানুপাতিক |
+   | দূরত্বের প্রভাব | সরাসরি সমানুপাতিক | নেই |
+   | কোথায় প্রধান | দূরপাল্লার লিংক, যেমন স্যাটেলাইট বা আন্তমহাদেশীয় ফাইবার | উচ্চগতির স্বল্প দূরত্বের লিংক, যেমন ল্যান |
+
+   উদাহরণ: ১,০০০ কিলোমিটার ফাইবারে সঞ্চালন গতি ২ x ১০^৮ মিটার/সেকেন্ড হলে propagation delay = ১০^৬ / (২ x ১০^৮) = ৫ মিলিসেকেন্ড। ওই লিংকে ১০ Mbps হারে ১,০০০ বাইটের প্যাকেট পাঠাতে transmission delay = (১০০০ x ৮) / (১০ x ১০^৬) = ০.৮ মিলিসেকেন্ড।
+
+   (b) MOV AX, A334H এবং MOV AX, [A334H] এর পার্থক্য:
+
+   | বিষয় | MOV AX, A334H | MOV AX, [A334H] |
+   |---|---|---|
+   | অ্যাড্রেসিং মোড | Immediate addressing | Direct (memory) addressing |
+   | অর্থ | A334H সংখ্যাটিকেই AX রেজিস্টারে বসাও | মেমোরির A334H ঠিকানায় যে মান আছে, তা AX রেজিস্টারে আনো |
+   | বর্গাকার বন্ধনী | নেই, তাই মানটি ধ্রুবক | আছে, তাই মানটি ঠিকানা |
+   | AX এর চূড়ান্ত মান | A334H | ওই ঠিকানার বিষয়বস্তু, যা যেকোনো মান হতে পারে |
+   | মেমোরি অ্যাক্সেস | প্রয়োজন হয় না; মানটি নির্দেশের সঙ্গেই আসে | প্রয়োজন হয়; ডেটা সেগমেন্ট থেকে দুই বাইট পড়তে হয় |
+   | সম্পাদনের গতি | দ্রুত | ধীর, কারণ অতিরিক্ত মেমোরি চক্র লাগে |
+   | ডিফল্ট সেগমেন্ট | প্রযোজ্য নয় | DS (ডেটা সেগমেন্ট) |
+
+   উদাহরণ দিয়ে ব্যাখ্যা: ধরা যাক মেমোরির A334H ঠিকানায় 1234H সংরক্ষিত আছে।
+   - MOV AX, A334H সম্পাদনের পর AX = A334H
+   - MOV AX, [A334H] সম্পাদনের পর AX = 1234H
+
+   অর্থাৎ বর্গাকার বন্ধনী থাকলে সেটি ঠিকানা বোঝায়, না থাকলে সরাসরি মান বোঝায়। এটিই immediate ও direct অ্যাড্রেসিং মোডের মৌলিক পার্থক্য।
+
+   SIMD সম্পর্কে সংক্ষিপ্ত টীকা: SIMD এর পূর্ণরূপ Single Instruction, Multiple Data। এতে একটি নির্দেশ একসঙ্গে একাধিক ডেটা উপাদানের ওপর একই কাজ সম্পাদন করে। যেমন একটি SIMD যোগ নির্দেশ চার জোড়া সংখ্যাকে একই সঙ্গে যোগ করতে পারে। ইন্টেলের MMX, SSE ও AVX এবং ARM এর NEON হলো SIMD নির্দেশ সেট। এগুলো মাল্টিমিডিয়া, ছবি প্রক্রিয়াকরণ, বৈজ্ঞানিক গণনা ও যন্ত্র শিখনে গতি বহুগুণ বাড়ায়। উল্লেখ্য, প্রশ্নে দেওয়া MOV নির্দেশ দুটি SIMD নয়, বরং সাধারণ অ্যাড্রেসিং মোডের উদাহরণ।
 2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1424 (ET: E-Zone)]*
 
+
+   Answer: An addressing mode specifies how the operand of an instruction is to be located. Three of the modes of the 8086 are compared below.
+
+   Immediate addressing mode:
+   - The operand is a constant supplied as part of the instruction itself, so it is stored in the code segment along with the opcode.
+   - No memory access and no register read is needed to obtain it.
+   - Example: MOV AX, 1234H places the constant 1234H into AX.
+   - It is the fastest mode, since the value travels with the instruction.
+   - It can only be a source operand, never a destination, and its size must match the destination register.
+
+   Register addressing mode:
+   - The operand is held in one of the processor's own registers.
+   - No memory access is required at all, so it is very fast, second only to immediate.
+   - Example: MOV AX, BX copies the contents of BX into AX.
+   - The instruction is short, because only a few bits are needed to name the register.
+   - It is the mode used most heavily in optimised code, which is why compilers work hard to keep values in registers.
+
+   Direct addressing mode:
+   - The instruction contains the 16-bit offset of the memory location that holds the operand, written in square brackets.
+   - The physical address is formed as (DS x 16) + offset, using the data segment register by default.
+   - Example: MOV AX, [1234H] fetches the two bytes stored at offset 1234H in the data segment and loads them into AX.
+   - It is slower than the other two, because an extra memory read cycle is needed.
+
+   | Point | Immediate | Register | Direct |
+   |---|---|---|---|
+   | Where the operand is | Inside the instruction | In a CPU register | In main memory |
+   | Memory access needed | No | No | Yes, one extra cycle |
+   | Speed | Fastest | Very fast | Slowest of the three |
+   | Instruction length | Longer, carries the constant | Shortest | Longer, carries the address |
+   | Syntax example | MOV AX, 1234H | MOV AX, BX | MOV AX, [1234H] |
+   | Flexibility | Value fixed at assembly time | Limited by the number of registers | Any memory location, fixed at assembly time |
+   | Can be a destination | No | Yes | Yes |
+
+   The critical distinction to remember: the square brackets. MOV AX, 1234H loads the number 1234H, while MOV AX, [1234H] loads whatever value is stored at address 1234H. Omitting or adding brackets by mistake is one of the most common errors in assembly programming.
+
+   Other addressing modes of the 8086, for completeness: register indirect (MOV AX, [BX]), based (MOV AX, [BX+4]), indexed (MOV AX, [SI+4]), based-indexed (MOV AX, [BX+SI]), based-indexed with displacement (MOV AX, [BX+SI+4]), and the implied and relative modes used by string and jump instructions.
 3. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 MOV AX, A534H এবং MOV AX, [A534H]
 
+
+   Answer: MOV AX, A534H এবং MOV AX, [A534H] নির্দেশ দুটির পার্থক্য:
+
+   | বিষয় | MOV AX, A534H | MOV AX, [A534H] |
+   |---|---|---|
+   | অ্যাড্রেসিং মোড | Immediate addressing (তাৎক্ষণিক) | Direct addressing (প্রত্যক্ষ বা মেমোরি) |
+   | অর্থ | A534H সংখ্যাটিকে সরাসরি AX রেজিস্টারে বসানো হয় | মেমোরির A534H অফসেটে সংরক্ষিত মানটি AX রেজিস্টারে আনা হয় |
+   | বর্গাকার বন্ধনী | নেই, তাই এটি একটি ধ্রুব মান | আছে, তাই এটি একটি ঠিকানা |
+   | অপারেন্ড কোথায় থাকে | নির্দেশের ভেতরেই, কোড সেগমেন্টে | মেমোরিতে, ডেটা সেগমেন্টে |
+   | মেমোরি অ্যাক্সেস | প্রয়োজন নেই | প্রয়োজন; দুই বাইট পড়তে হয় |
+   | সম্পাদনের গতি | দ্রুত | ধীর, অতিরিক্ত মেমোরি চক্রের কারণে |
+   | ভৌত ঠিকানা গণনা | প্রযোজ্য নয় | (DS x 16) + A534H |
+   | AX এর ফলাফল | সর্বদা A534H | ওই ঠিকানার বিষয়বস্তু, যা যেকোনো মান হতে পারে |
+
+   উদাহরণ দিয়ে ব্যাখ্যা:
+   - ধরা যাক DS = 2000H এবং মেমোরির ভৌত ঠিকানা (2000H x 16) + A534H = 2A534H এ 7BC9H মানটি সংরক্ষিত আছে।
+   - MOV AX, A534H সম্পাদনের পর AX = A534H
+   - MOV AX, [A534H] সম্পাদনের পর AX = 7BC9H
+
+   মূল কথা: বর্গাকার বন্ধনী থাকলে ভেতরের সংখ্যাটি ঠিকানা হিসেবে গণ্য হয় এবং ওই ঠিকানার বিষয়বস্তু আনা হয়; বন্ধনী না থাকলে সংখ্যাটি নিজেই অপারেন্ড। অ্যাসেম্বলি ভাষায় এই পার্থক্য ভুল করা সবচেয়ে সাধারণ ভুলগুলোর একটি।
+
+   বাইট বনাম শব্দ: AX ১৬ বিটের রেজিস্টার, তাই [A534H] থেকে পরপর দুই বাইট আনা হয়। নিম্ন বাইট যায় AL এ এবং উচ্চ বাইট যায় AH এ, কারণ ইন্টেল প্রসেসর লিটল-এন্ডিয়ান পদ্ধতি অনুসরণ করে।
 4. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
+
+   Answer:
+
+   (i) ADC — Add with Carry:
+   - Syntax: ADC destination, source
+   - Operation: destination = destination + source + CF, where CF is the current value of the carry flag.
+   - It differs from ADD in that it also adds in the carry produced by the previous addition.
+   - Purpose: it makes multi-byte or multi-word addition possible. A 16-bit processor can add two 32-bit numbers by adding the low words with ADD and the high words with ADC, so that the carry out of the low half is carried into the high half.
+   - Example:
+     - ADD AX, BX    ; add the low words; a carry out sets CF
+     - ADC DX, CX    ; add the high words together with that carry
+   - Flags affected: CF, PF, AF, ZF, SF and OF are all updated by the result.
+
+   (ii) CMP — Compare:
+   - Syntax: CMP destination, source
+   - Operation: it performs destination minus source, exactly as SUB does, but it discards the result and keeps only the flags. The destination operand is therefore unchanged.
+   - Purpose: it sets the flags so that a conditional jump can test the relationship between the two operands. It is almost always followed immediately by a conditional jump.
+   - Interpretation of the flags after CMP A, B:
+     - ZF = 1 means A equals B
+     - ZF = 0 and CF = 0 means A is greater than B (for unsigned numbers)
+     - CF = 1 means A is less than B (for unsigned numbers)
+     - For signed numbers the comparison uses SF and OF instead of CF
+   - Example:
+     - CMP AX, BX
+     - JE  EQUAL      ; jump if AX equals BX
+     - JA  GREATER    ; jump if AX is above BX, unsigned
+   - Flags affected: CF, PF, AF, ZF, SF and OF.
+
+   (iii) JBE — Jump if Below or Equal:
+   - Syntax: JBE label
+   - Operation: the jump is taken if CF = 1 or ZF = 1.
+   - Meaning: it is used after a comparison of unsigned numbers, and it transfers control when the first operand is less than or equal to the second.
+   - Its synonym is JNA (Jump if Not Above); both assemble to the same opcode.
+   - Example:
+     - CMP AX, 100
+     - JBE SMALL      ; jump to SMALL if AX is less than or equal to 100, unsigned
+   - Flags affected: none. A conditional jump reads the flags but does not change them.
+   - Important distinction: JBE is for unsigned comparison. The signed equivalent is JLE (Jump if Less or Equal), which tests ZF = 1 or SF is not equal to OF. Using the wrong one is a common source of bugs when negative numbers are involved.
 5. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
+
+
+   Answer:
+
+   ADC — Add with Carry:
+   - গঠন: ADC গন্তব্য, উৎস
+   - কাজ: গন্তব্য = গন্তব্য + উৎস + CF, অর্থাৎ দুইটি অপারেন্ডের সঙ্গে ক্যারি ফ্ল্যাগের মানও যোগ করা হয়।
+   - ADD থেকে পার্থক্য: ADD ক্যারি যোগ করে না, ADC করে।
+   - প্রয়োজনীয়তা: প্রসেসরের শব্দদৈর্ঘ্যের চেয়ে বড় সংখ্যা যোগ করতে। যেমন ১৬ বিট প্রসেসরে দুইটি ৩২ বিট সংখ্যা যোগ করতে নিম্ন অংশ ADD দিয়ে এবং উচ্চ অংশ ADC দিয়ে যোগ করতে হয়।
+   - উদাহরণ: ADD AX, BX এরপর ADC DX, CX
+   - প্রভাবিত ফ্ল্যাগ: CF, PF, AF, ZF, SF, OF
+
+   XCHG — Exchange:
+   - গঠন: XCHG অপারেন্ড১, অপারেন্ড২
+   - কাজ: দুইটি অপারেন্ডের বিষয়বস্তু পরস্পর বিনিময় করে।
+   - বিশেষত্ব: কোনো অস্থায়ী রেজিস্টার বা ভেরিয়েবল ছাড়াই একটি নির্দেশে বিনিময় সম্পন্ন হয়, যা সাজানো (sorting) অ্যালগরিদমে অত্যন্ত কার্যকর।
+   - উদাহরণ: XCHG AX, BX সম্পাদনের পর AX এ আগের BX এর মান এবং BX এ আগের AX এর মান থাকে।
+   - সীমাবদ্ধতা: দুইটি মেমোরি অবস্থানের মধ্যে সরাসরি XCHG করা যায় না; অন্তত একটি অপারেন্ড রেজিস্টার হতে হবে।
+   - প্রভাবিত ফ্ল্যাগ: কোনোটিই নয়।
+
+   POP — Pop from Stack:
+   - গঠন: POP গন্তব্য
+   - কাজ: স্ট্যাকের শীর্ষ থেকে দুই বাইট (একটি শব্দ) নিয়ে গন্তব্যে বসায় এবং স্ট্যাক পয়েন্টার SP এর মান ২ বাড়িয়ে দেয়।
+   - কার্যধারা: গন্তব্য = [SS:SP], তারপর SP = SP + 2
+   - PUSH এর বিপরীত কাজ। PUSH আগে SP কমিয়ে তারপর লেখে, POP আগে পড়ে তারপর SP বাড়ায়।
+   - ব্যবহার: সাবরুটিন থেকে ফেরার সময় সংরক্ষিত রেজিস্টার পুনরুদ্ধার করা, প্যারামিটার গ্রহণ করা এবং ইন্টারাপ্টের পর প্রসঙ্গ ফিরিয়ে আনা।
+   - উল্লেখ্য: ৮০৮৬ এর স্ট্যাক নিচের দিকে বাড়ে, অর্থাৎ PUSH করলে SP কমে।
+   - প্রভাবিত ফ্ল্যাগ: কোনোটিই নয়, তবে POPF নির্দেশ ফ্ল্যাগ রেজিস্টার পুনরুদ্ধার করে।
+
+   JNZ — Jump if Not Zero:
+   - গঠন: JNZ লেবেল
+   - কাজ: জিরো ফ্ল্যাগ ZF = 0 হলে নির্দিষ্ট লেবেলে লাফ দেয়; ZF = 1 হলে পরবর্তী নির্দেশে যায়।
+   - সমার্থক নির্দেশ: JNE (Jump if Not Equal); দুটির অপকোড একই।
+   - ব্যবহার: লুপ তৈরি করা এবং তুলনার পর শর্তসাপেক্ষ শাখা তৈরি করা।
+   - উদাহরণ:
+     - MOV CX, 5
+     - LOOP1: DEC CX
+     - JNZ LOOP1      ; CX শূন্য না হওয়া পর্যন্ত পুনরাবৃত্তি
+   - প্রভাবিত ফ্ল্যাগ: কোনোটিই নয়; এটি কেবল ফ্ল্যাগ পড়ে।
 
 ## Instruction Pipelining & Hazards (5)
 
