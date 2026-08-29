@@ -2226,62 +2226,550 @@
 
 1. **শব্দ দূষণ কী? এর উৎস কী কী? শব্দ দূষণ কীভাবে রোধ করা যায়?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
 
+
+   Answer: শব্দ দূষণ (Noise Pollution) বলতে বোঝায় পরিবেশে এমন মাত্রার অবাঞ্ছিত ও অস্বস্তিকর শব্দের উপস্থিতি, যা মানুষ ও অন্যান্য প্রাণীর স্বাস্থ্য ও স্বাভাবিক জীবনযাত্রার ক্ষতি করে। সাধারণভাবে ৬০ ডেসিবেলের বেশি শব্দকে দূষণ এবং ১০০ ডেসিবেলের বেশি শব্দকে মারাত্মক ক্ষতিকর ধরা হয়।
+
+   উৎসসমূহ:
+   - যানবাহন: হাইড্রোলিক হর্ন, ট্রাক, বাস, মোটরসাইকেল ও অটোরিকশার শব্দ। এটি শহরের সবচেয়ে বড় উৎস।
+   - নির্মাণকাজ: পাইলিং, মিক্সার মেশিন, জেনারেটর, ড্রিল ও ভাঙচুরের কাজ।
+   - শিল্পকারখানা: মেশিন, কম্প্রেসার ও বয়লারের একটানা শব্দ।
+   - মাইক ও লাউডস্পিকার: রাজনৈতিক সমাবেশ, ধর্মীয় ও সামাজিক অনুষ্ঠান, বিজ্ঞাপন প্রচার ও উৎসব।
+   - গৃহস্থালি ও বিনোদন: উচ্চস্বরে টেলিভিশন ও গানের যন্ত্র, বিয়েবাড়ির সাউন্ড সিস্টেম, আতশবাজি ও পটকা।
+   - বিমানবন্দর ও রেলস্টেশন সংলগ্ন এলাকার শব্দ।
+
+   ক্ষতিকর প্রভাব:
+   - সাময়িক ও স্থায়ী শ্রবণশক্তি হ্রাস এবং কানে ভোঁ ভোঁ শব্দ (টিনিটাস)।
+   - উচ্চ রক্তচাপ, হৃৎস্পন্দন বৃদ্ধি ও হৃদরোগের ঝুঁকি।
+   - অনিদ্রা, মানসিক চাপ, বিরক্তি ও উদ্বেগ।
+   - শিক্ষার্থীদের মনোযোগ ও স্মৃতিশক্তি হ্রাস; শিশুদের ভাষা শেখায় বিলম্ব।
+   - গর্ভবতী নারীর ক্ষেত্রে জটিলতা এবং হাসপাতালের রোগীদের সুস্থ হতে বিলম্ব।
+
+   প্রতিরোধের উপায়:
+   - আইনের কঠোর প্রয়োগ: শব্দদূষণ (নিয়ন্ত্রণ) বিধিমালা, ২০০৬ অনুযায়ী এলাকাভিত্তিক শব্দের সীমা নির্ধারিত আছে—নীরব এলাকা ৪৫ ডেসিবেল, আবাসিক ৫৫, বাণিজ্যিক ৭০ এবং শিল্প এলাকা ৭৫ ডেসিবেল (দিনের বেলা)। এই সীমা মানা বাধ্যতামূলক করতে হবে।
+   - হাইড্রোলিক হর্ন সম্পূর্ণ নিষিদ্ধ করা এবং ব্যবহারকারীর বিরুদ্ধে জরিমানা ও লাইসেন্স বাতিলের ব্যবস্থা।
+   - হাসপাতাল, শিক্ষাপ্রতিষ্ঠান ও আদালতের চারপাশে "নীরব এলাকা" চিহ্নিত করে সাইনবোর্ড স্থাপন ও কার্যকর করা।
+   - সড়কের পাশে ঘন গাছের সারি লাগানো; একটি ভালো সবুজ বেষ্টনী ৫ থেকে ১০ ডেসিবেল শব্দ কমাতে পারে।
+   - পরিকল্পিত নগরায়ণ: আবাসিক এলাকা থেকে শিল্প এলাকা ও প্রধান সড়ককে পৃথক রাখা।
+   - নির্মাণকাজে শব্দনিরোধক ঘেরাও ব্যবহার এবং রাতে ভারী কাজ নিষিদ্ধ করা।
+   - যানবাহনের নিয়মিত ফিটনেস পরীক্ষা ও ইঞ্জিনের সাইলেন্সার পরীক্ষা।
+   - ভবনে শব্দনিরোধক কাচ ও দেয়াল এবং কারখানায় কর্মীদের জন্য ইয়ার মাফ ব্যবহার।
+   - বিদ্যালয় ও গণমাধ্যমের মাধ্যমে ব্যাপক জনসচেতনতা সৃষ্টি করা, কারণ শব্দদূষণ মূলত আচরণগত সমস্যা।
 2. **বেতার তরঙ্গ কী? রেডিও, টেলিভিশন ও রাডারে এ তরঙ্গ কীভাবে ব্যবহৃত হয়?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
 
+
+   Answer: বেতার তরঙ্গ (Radio Wave) হলো তড়িৎচুম্বকীয় বর্ণালির সবচেয়ে দীর্ঘ তরঙ্গদৈর্ঘ্যের ও সর্বনিম্ন কম্পাঙ্কের অংশ।
+
+   বৈশিষ্ট্য:
+   - কম্পাঙ্কের পরিসর: প্রায় ৩ কিলোহার্জ থেকে ৩০০ গিগাহার্জ।
+   - তরঙ্গদৈর্ঘ্য: প্রায় ১ মিলিমিটার থেকে ১০০ কিলোমিটার পর্যন্ত।
+   - এগুলো শূন্য মাধ্যমে আলোর গতিতে (৩ x ১০^৮ মিটার/সেকেন্ড) চলে এবং সঞ্চালনের জন্য কোনো জড় মাধ্যমের প্রয়োজন হয় না।
+   - সম্পর্ক: c = f λ, অর্থাৎ কম্পাঙ্ক বাড়লে তরঙ্গদৈর্ঘ্য কমে।
+   - এগুলো অদৃশ্য, শ্রবণের অযোগ্য এবং আয়নোস্ফিয়ার থেকে প্রতিফলিত হতে পারে, যা দূরপাল্লার সম্প্রচার সম্ভব করে।
+   - আবিষ্কার: তাত্ত্বিক ভবিষ্যদ্বাণী জেমস ক্লার্ক ম্যাক্সওয়েলের; পরীক্ষামূলক প্রমাণ হেনরিক হার্জের; ব্যবহারিক প্রয়োগ গুলিয়েলমো মার্কোনি ও জগদীশচন্দ্র বসুর।
+
+   রেডিওতে ব্যবহার:
+   - শব্দ তরঙ্গকে মাইক্রোফোন দিয়ে বৈদ্যুতিক সংকেতে পরিণত করা হয়। এই নিম্ন কম্পাঙ্কের অডিও সংকেত সরাসরি পাঠানো যায় না, কারণ তার জন্য কয়েক কিলোমিটার দীর্ঘ অ্যান্টেনা লাগত।
+   - তাই একে উচ্চ কম্পাঙ্কের বাহক তরঙ্গের (carrier wave) ওপর আরোপ করা হয়, যাকে বলে মড্যুলেশন।
+   - AM (Amplitude Modulation): বাহক তরঙ্গের বিস্তার পরিবর্তন করা হয়। কম্পাঙ্ক ৫৩৫-১৬০৫ কিলোহার্জ; দূরত্ব বেশি কিন্তু শব্দমান কম ও নয়েজ বেশি।
+   - FM (Frequency Modulation): বাহক তরঙ্গের কম্পাঙ্ক পরিবর্তন করা হয়। পরিসর ৮৮-১০৮ মেগাহার্জ; শব্দমান উন্নত ও নয়েজমুক্ত, কিন্তু পাল্লা সীমিত।
+   - রিসিভারে ডিমড্যুলেশনের মাধ্যমে বাহক তরঙ্গ থেকে মূল অডিও আলাদা করে লাউডস্পিকারে পাঠানো হয়।
+
+   টেলিভিশনে ব্যবহার:
+   - ছবি (ভিডিও) ও শব্দ (অডিও) দুটি আলাদা সংকেত হিসেবে একই চ্যানেলে পাঠানো হয়। সাধারণত ভিডিও AM এবং অডিও FM পদ্ধতিতে মড্যুলেট করা হয়।
+   - ভিএইচএফ (৩০-৩০০ মেগাহার্জ) ও ইউএইচএফ (৩০০ মেগাহার্জ-৩ গিগাহার্জ) ব্যান্ড ব্যবহৃত হয়, কারণ ছবির জন্য অনেক বেশি ব্যান্ডউইথ প্রয়োজন।
+   - স্যাটেলাইট টেলিভিশনে সি-ব্যান্ড ও কেইউ-ব্যান্ড মাইক্রোওয়েভ ব্যবহার করে ভূস্থির উপগ্রহের মাধ্যমে সম্প্রচার করা হয়, যেমন বঙ্গবন্ধু স্যাটেলাইট-১।
+
+   রাডারে ব্যবহার:
+   - RADAR এর পূর্ণরূপ Radio Detection and Ranging।
+   - ট্রান্সমিটার একটি নির্দিষ্ট দিকে অতি ক্ষুদ্র সময়ের মাইক্রোওয়েভ স্পন্দ পাঠায়। কোনো বস্তুতে বাধা পেয়ে তরঙ্গ প্রতিফলিত হয়ে ফিরে আসে (echo), যা রিসিভার গ্রহণ করে।
+   - দূরত্ব নির্ণয়ের সূত্র: d = (c x t) / 2, যেখানে t হলো তরঙ্গ যাওয়া-আসার মোট সময় এবং ২ দিয়ে ভাগ করা হয় কারণ পথটি দুইবার অতিক্রান্ত হয়েছে।
+   - বস্তুর গতি নির্ণয় করা হয় ডপলার প্রভাব ব্যবহার করে, অর্থাৎ ফিরে আসা তরঙ্গের কম্পাঙ্ক পরিবর্তনের পরিমাণ থেকে।
+   - প্রয়োগ: বিমান ও জাহাজ চলাচল নিয়ন্ত্রণ, আবহাওয়া পর্যবেক্ষণ ও ঘূর্ণিঝড়ের গতিপথ নির্ণয় (বাংলাদেশে কক্সবাজার, খেপুপাড়া, রংপুর ও মৌলভীবাজারে আবহাওয়া রাডার রয়েছে), সামরিক নজরদারি, যানবাহনের গতি পরিমাপ এবং ভূগর্ভস্থ অনুসন্ধান।
+
+   অন্যান্য প্রয়োগ: মোবাইল ফোন, ওয়াই-ফাই, ব্লুটুথ, জিপিএস, রিমোট কন্ট্রোল, আরএফআইডি এবং মহাকাশ যোগাযোগ।
 3. **বিজ্ঞান ও প্রযুক্তি ন্যানো টেকনোলজি কী? কৃষি ক্ষেত্রে ন্যানো টেকনোলজির প্রয়োগ সম্পর্কে লিখুন।** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+   Answer: ন্যানো টেকনোলজি (Nanotechnology) হলো ন্যানো স্কেলে, অর্থাৎ ১ থেকে ১০০ ন্যানোমিটার আকারের কণা ও কাঠামো নিয়ে কাজ করার বিজ্ঞান ও প্রযুক্তি। এক ন্যানোমিটার হলো এক মিটারের একশ কোটি ভাগের এক ভাগ (১০^-৯ মিটার); মানুষের একটি চুল প্রায় ৮০,০০০ ন্যানোমিটার পুরু।
+
+   মূল ধারণা: এত ক্ষুদ্র আকারে পদার্থের ভৌত, রাসায়নিক ও জৈবিক ধর্ম সম্পূর্ণ বদলে যায়। ক্ষেত্রফল-আয়তন অনুপাত বিপুলভাবে বেড়ে যাওয়ায় বিক্রিয়ার হার, শক্তি, পরিবাহিতা ও রং পাল্টে যায়। সোনার ন্যানোকণা লাল দেখায় এবং কার্বন ন্যানোটিউব ইস্পাতের চেয়ে বহু গুণ শক্তিশালী অথচ অনেক হালকা।
+
+   কৃষিক্ষেত্রে ন্যানো টেকনোলজির প্রয়োগ:
+
+   - ন্যানো সার (Nano fertilizer): সাধারণ ইউরিয়ার প্রায় ৬০ শতাংশ ধুয়ে বা বাষ্পীভূত হয়ে নষ্ট হয়। ন্যানো ইউরিয়া পাতায় স্প্রে করলে গাছ সরাসরি শোষণ করে, ফলে অল্প পরিমাণেই কাজ হয় এবং মাটি ও পানির দূষণ কমে।
+   - নিয়ন্ত্রিত মুক্তি ব্যবস্থা (Controlled release): ন্যানো ক্যাপসুলে ভরা সার বা কীটনাশক প্রয়োজন অনুযায়ী ধীরে ধীরে নির্গত হয়, ফলে একবার প্রয়োগেই দীর্ঘ সময় কাজ চলে।
+   - ন্যানো কীটনাশক ও ছত্রাকনাশক: অতি অল্প মাত্রায় বেশি কার্যকর হওয়ায় রাসায়নিকের ব্যবহার ও অবশিষ্টাংশ কমে যায়, ফলে খাদ্য নিরাপদ হয়।
+   - ন্যানো সেন্সর: মাটির আর্দ্রতা, পিএইচ, পুষ্টি উপাদান, ফসলের রোগ এবং পোকার উপস্থিতি প্রাথমিক পর্যায়েই শনাক্ত করে, ফলে সময়মতো ব্যবস্থা নেওয়া যায়। এটি নিখুঁত কৃষি বা precision agriculture এর ভিত্তি।
+   - বীজ শোধন: ন্যানো কণা দিয়ে বীজের আবরণ তৈরি করলে অঙ্কুরোদগমের হার বাড়ে এবং রোগ প্রতিরোধ ক্ষমতা তৈরি হয়।
+   - পানি ও মাটি বিশুদ্ধকরণ: ন্যানো ফিল্টার ও ন্যানো শোষক দিয়ে সেচের পানি থেকে আর্সেনিক, ভারী ধাতু ও জীবাণু দূর করা যায়, যা বাংলাদেশের আর্সেনিক সমস্যায় বিশেষভাবে প্রাসঙ্গিক।
+   - খাদ্য সংরক্ষণ ও প্যাকেজিং: ন্যানো সিলভার বা জিংক অক্সাইড মেশানো মোড়ক জীবাণু ধ্বংস করে ফল ও সবজির পচন রোধ করে, ফলে ফসলোত্তর ক্ষতি কমে।
+   - প্রাণিসম্পদ ও মৎস্য: ন্যানো ভ্যাকসিন ও ন্যানো ফিড সাপ্লিমেন্ট ব্যবহারে রোগ প্রতিরোধ ক্ষমতা ও উৎপাদন বাড়ে।
+   - স্মার্ট ডেলিভারি: গাছের নির্দিষ্ট কোষে সরাসরি পুষ্টি বা জিন পৌঁছে দেওয়া সম্ভব হয়, যা জৈবপ্রযুক্তিতে নতুন সুযোগ তৈরি করেছে।
+
+   সুবিধা: উৎপাদন বৃদ্ধি, রাসায়নিকের ব্যবহার হ্রাস, পরিবেশ সুরক্ষা, ফসলোত্তর ক্ষতি হ্রাস ও কৃষকের খরচ কমানো।
+
+   সীমাবদ্ধতা ও উদ্বেগ: উচ্চ ব্যয়, ন্যানো কণার দীর্ঘমেয়াদি স্বাস্থ্য ও পরিবেশগত প্রভাব সম্পর্কে অনিশ্চয়তা, খাদ্যচক্রে জমা হওয়ার ঝুঁকি এবং নিয়ন্ত্রক কাঠামোর অভাব।
 4. **এন্টিবায়োটিক ও এন্টিবডি এর মধ্যকার পার্থক্য লিখুন।** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+   Answer:
+
+   | বিষয় | অ্যান্টিবায়োটিক (Antibiotic) | অ্যান্টিবডি (Antibody) |
+   |---|---|---|
+   | প্রকৃতি | একটি ওষুধ বা রাসায়নিক পদার্থ | একটি প্রোটিন (ইমিউনোগ্লোবিউলিন) |
+   | উৎস | ছত্রাক বা ব্যাকটেরিয়া থেকে প্রাপ্ত, অথবা কৃত্রিমভাবে সংশ্লেষিত; বাইরে থেকে দেহে প্রয়োগ করা হয় | দেহের ভেতরে বি-লিম্ফোসাইট বা প্লাজমা কোষ কর্তৃক উৎপাদিত |
+   | কাজ | ব্যাকটেরিয়া ধ্বংস করে বা তার বৃদ্ধি রোধ করে | নির্দিষ্ট অ্যান্টিজেনের সঙ্গে যুক্ত হয়ে তাকে নিষ্ক্রিয় করে এবং ধ্বংসের জন্য চিহ্নিত করে |
+   | নির্দিষ্টতা | তুলনামূলক কম; একটি ব্রড স্পেকট্রাম অ্যান্টিবায়োটিক বহু ধরনের ব্যাকটেরিয়ার বিরুদ্ধে কাজ করে | অত্যন্ত নির্দিষ্ট; একটি অ্যান্টিবডি কেবল একটি নির্দিষ্ট অ্যান্টিজেনের বিরুদ্ধেই কাজ করে |
+   | ভাইরাসের বিরুদ্ধে | কার্যকর নয় | কার্যকর |
+   | স্মৃতি | কোনো স্মৃতি তৈরি করে না; প্রতিবার নতুন করে সেবন করতে হয় | স্মৃতি কোষ তৈরি করে, ফলে পুনরায় সংক্রমণে দ্রুত ও শক্তিশালী প্রতিরোধ গড়ে ওঠে |
+   | গঠন | ছোট অণু | বড়, ওয়াই-আকৃতির প্রোটিন অণু, চারটি পলিপেপটাইড শৃঙ্খল দিয়ে গঠিত |
+   | পার্শ্বপ্রতিক্রিয়া | থাকতে পারে; অতিরিক্ত ব্যবহারে অ্যান্টিবায়োটিক রেজিস্ট্যান্স তৈরি হয় | দেহের নিজস্ব উপাদান বলে সাধারণত পার্শ্বপ্রতিক্রিয়া নেই |
+   | উদাহরণ | পেনিসিলিন, অ্যামোক্সিসিলিন, টেট্রাসাইক্লিন, অ্যাজিথ্রোমাইসিন | IgG, IgM, IgA, IgE, IgD |
+   | আবিষ্কার | পেনিসিলিন আবিষ্কার করেন আলেকজান্ডার ফ্লেমিং, ১৯২৮ সালে | ইমিল ফন বেরিং ও কিতাসাতোর গবেষণায় প্রথম ধারণা প্রতিষ্ঠিত |
+
+   সম্পর্ক: অ্যান্টিবায়োটিক বাইরে থেকে দেওয়া অস্ত্র, আর অ্যান্টিবডি দেহের নিজস্ব প্রতিরক্ষা ব্যবস্থা। টিকা দেওয়া হয় দেহে অ্যান্টিবডি তৈরির জন্য, রোগ সারাতে নয়।
+
+   সতর্কতা: ভাইরাসজনিত রোগে (সর্দি, ফ্লু, কোভিড-১৯) অ্যান্টিবায়োটিক কাজ করে না। অপ্রয়োজনীয় ও অসম্পূর্ণ ব্যবহারে অ্যান্টিবায়োটিক রেজিস্ট্যান্স তৈরি হয়, যা বর্তমানে বিশ্বস্বাস্থ্যের অন্যতম বড় হুমকি।
 5. **রেডিও-থেরাপি কী? কোন রোগের চিকিৎসায় মূলত: এটি ব্যবহার করা হয়।** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+   Answer: রেডিওথেরাপি (Radiotherapy বা Radiation Therapy) হলো উচ্চ শক্তিসম্পন্ন আয়নীভূতকারী বিকিরণ ব্যবহার করে অস্বাভাবিক কোষ, বিশেষত ক্যানসার কোষ ধ্বংস করার চিকিৎসাপদ্ধতি।
+
+   কার্যপ্রণালি:
+   - উচ্চ শক্তির এক্স-রে, গামা রশ্মি, ইলেকট্রন বিম বা প্রোটন বিম ক্যানসার কোষের ডিএনএ ভেঙে দেয়, ফলে কোষটি বিভাজিত হতে পারে না এবং মারা যায়।
+   - ক্যানসার কোষ স্বাভাবিক কোষের তুলনায় দ্রুত বিভাজিত হয় বলে বিকিরণে তারাই বেশি ক্ষতিগ্রস্ত হয়। স্বাভাবিক কোষগুলো ক্ষতি সারিয়ে নিতে পারে, তাই মোট মাত্রাকে বহু ছোট ভাগে (fraction) ভাগ করে কয়েক সপ্তাহ ধরে দেওয়া হয়।
+
+   প্রকারভেদ:
+   - এক্সটার্নাল বিম রেডিওথেরাপি: দেহের বাইরে থেকে লিনিয়ার অ্যাক্সিলারেটর বা কোবাল্ট-৬০ যন্ত্রের সাহায্যে নির্দিষ্ট স্থানে বিকিরণ দেওয়া হয়। এটিই সবচেয়ে প্রচলিত পদ্ধতি।
+   - ব্র্যাকিথেরাপি (Internal): তেজস্ক্রিয় উৎস ছোট ক্যাপসুল বা সিড আকারে সরাসরি টিউমারের ভেতরে বা কাছে স্থাপন করা হয়। জরায়ুমুখ ও প্রোস্টেট ক্যানসারে বহুল ব্যবহৃত।
+   - সিস্টেমিক রেডিওথেরাপি: তেজস্ক্রিয় আইসোটোপ (যেমন আয়োডিন-১৩১) মুখে বা শিরায় দেওয়া হয়, যা রক্তের মাধ্যমে লক্ষ্য কোষে পৌঁছায়। থাইরয়েড ক্যানসারে ব্যবহৃত হয়।
+
+   প্রধানত যেসব রোগের চিকিৎসায় ব্যবহৃত হয়:
+   - সবচেয়ে বেশি ব্যবহৃত হয় ক্যানসার চিকিৎসায়। প্রায় অর্ধেক ক্যানসার রোগীর চিকিৎসায় কোনো না কোনো পর্যায়ে রেডিওথেরাপি প্রয়োজন হয়।
+   - স্তন ক্যানসার, জরায়ুমুখের ক্যানসার, ফুসফুস, মাথা ও গলার ক্যানসার, প্রোস্টেট ক্যানসার, মস্তিষ্কের টিউমার, লিম্ফোমা ও থাইরয়েড ক্যানসারে বিশেষভাবে কার্যকর।
+   - ব্যবহারের উদ্দেশ্য তিন রকম: নিরাময়মূলক (curative), অস্ত্রোপচারের আগে টিউমার ছোট করা বা পরে অবশিষ্ট কোষ ধ্বংস করা (adjuvant), এবং উপশমমূলক (palliative), অর্থাৎ ব্যথা ও রক্তক্ষরণ কমিয়ে জীবনমান উন্নত করা।
+   - কিছু ক্ষেত্রে ক্যানসার ছাড়াও ব্যবহৃত হয়, যেমন কেলয়েড, হাইপারথাইরয়েডিজম ও কিছু রক্তরোগে।
+
+   পার্শ্বপ্রতিক্রিয়া: ক্লান্তি, ত্বকে জ্বালা ও লালচে ভাব, চুল পড়া, বমিভাব, মুখে ঘা এবং রক্তকণিকা হ্রাস। বেশির ভাগ পার্শ্বপ্রতিক্রিয়া চিকিৎসা শেষে ধীরে ধীরে সেরে যায়।
+
+   বাংলাদেশে জাতীয় ক্যানসার গবেষণা ইনস্টিটিউট ও হাসপাতালসহ কয়েকটি সরকারি ও বেসরকারি কেন্দ্রে এই সুবিধা রয়েছে, তবে চাহিদার তুলনায় যন্ত্রের সংখ্যা অপ্রতুল।
 6. **পিকো সেকেন্ড বলতে কী বুঝায়?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+   Answer: পিকো সেকেন্ড (picosecond) হলো সময়ের একটি অতি ক্ষুদ্র একক।
+
+   - ১ পিকো সেকেন্ড = ১০^-১২ সেকেন্ড = এক সেকেন্ডের এক লক্ষ কোটি ভাগের এক ভাগ।
+   - অর্থাৎ ১ পিকো সেকেন্ড = ০.০০০০০০০০০০০১ সেকেন্ড।
+   - সম্পর্ক: ১ ন্যানো সেকেন্ড = ১০০০ পিকো সেকেন্ড, এবং ১ পিকো সেকেন্ড = ১০০০ ফেমটো সেকেন্ড।
+
+   সময়ের উপসর্গগুলোর ক্রম:
+
+   | উপসর্গ | মান | উদাহরণ |
+   |---|---|---|
+   | মিলি (m) | ১০^-৩ | চোখের পলক প্রায় ১০০-৪০০ মিলি সেকেন্ড |
+   | মাইক্রো | ১০^-৬ | পুরোনো কম্পিউটারের নির্দেশ চক্র |
+   | ন্যানো (n) | ১০^-৯ | আধুনিক প্রসেসরের একটি ক্লক চক্র প্রায় ০.৩ ন্যানো সেকেন্ড |
+   | পিকো (p) | ১০^-১২ | অতিদ্রুত লেজার স্পন্দ, ট্রানজিস্টরের সুইচিং সময় |
+   | ফেমটো (f) | ১০^-১৫ | রাসায়নিক বন্ধন ভাঙার সময় |
+   | অ্যাটো (a) | ১০^-১৮ | পরমাণুর ভেতরে ইলেকট্রনের গতি (২০২৩ সালের নোবেল পুরস্কারের বিষয়) |
+
+   ব্যবহার: অতি দ্রুতগতির ইলেকট্রনিক্স, অপটিক্যাল ফাইবার যোগাযোগে সংকেতের বিস্তার, লেজার স্পেকট্রোস্কোপি এবং রাসায়নিক বিক্রিয়ার গতিবিদ্যা পরিমাপে পিকো সেকেন্ড ব্যবহৃত হয়। আলো এক পিকো সেকেন্ডে মাত্র ০.৩ মিলিমিটার পথ অতিক্রম করে।
 7. **"স্টার লিংক" কী?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+   Answer: স্টারলিংক (Starlink) হলো ইলন মাস্কের প্রতিষ্ঠান স্পেসএক্স পরিচালিত একটি স্যাটেলাইট ইন্টারনেট পরিষেবা, যা পৃথিবীর নিম্ন কক্ষপথে (Low Earth Orbit, LEO) হাজার হাজার ছোট উপগ্রহের নেটওয়ার্ক ব্যবহার করে সরাসরি ব্যবহারকারীর কাছে ব্রডব্যান্ড ইন্টারনেট পৌঁছে দেয়।
+
+   কার্যপ্রণালি:
+   - উপগ্রহগুলো ভূপৃষ্ঠ থেকে প্রায় ৫৫০ কিলোমিটার উচ্চতায় অবস্থান করে, যেখানে ঐতিহ্যবাহী ভূস্থির যোগাযোগ উপগ্রহ থাকে প্রায় ৩৫,৭৮৬ কিলোমিটার উচ্চতায়।
+   - কম উচ্চতার কারণে সংকেতের যাওয়া-আসার সময় (লেটেন্সি) ৬০০ মিলিসেকেন্ডের বদলে নেমে আসে ২০ থেকে ৪০ মিলিসেকেন্ডে, যা ভিডিও কল ও অনলাইন গেমিংয়ের জন্য যথেষ্ট।
+   - কম উচ্চতায় একটি উপগ্রহ ভূপৃষ্ঠের অল্প এলাকা দেখতে পায় এবং দ্রুত সরে যায়, তাই নিরবচ্ছিন্ন সেবার জন্য কয়েক হাজার উপগ্রহের নক্ষত্রপুঞ্জ (constellation) প্রয়োজন হয়।
+   - ব্যবহারকারীর প্রান্তে থাকে একটি ফেজড অ্যারে অ্যান্টেনা (ডিশ) ও রাউটার, যা স্বয়ংক্রিয়ভাবে নিকটতম উপগ্রহের দিকে সংকেত ধরে।
+   - সাম্প্রতিক উপগ্রহগুলোতে লেজার ইন্টার-স্যাটেলাইট লিংক রয়েছে, ফলে ভূমিতে গেটওয়ে না থাকলেও উপগ্রহগুলো নিজেদের মধ্যে তথ্য চালাচালি করতে পারে।
+
+   সুবিধা:
+   - দুর্গম পাহাড়ি, দ্বীপ, চর, হাওর ও মরুভূমি অঞ্চলে ইন্টারনেট পৌঁছে দেওয়া যায়, যেখানে ফাইবার বা মোবাইল টাওয়ার বসানো ব্যয়বহুল বা অসম্ভব।
+   - দুর্যোগে স্থল অবকাঠামো ধ্বংস হলেও যোগাযোগ চালু রাখা যায়। ইউক্রেন যুদ্ধ ও বিভিন্ন ভূমিকম্পে এর ব্যবহার আলোচিত হয়েছে।
+   - জাহাজ, উড়োজাহাজ ও চলমান যানবাহনে সংযোগ দেওয়া সম্ভব।
+
+   সীমাবদ্ধতা ও সমালোচনা:
+   - সরঞ্জাম ও মাসিক খরচ তুলনামূলক বেশি।
+   - বিপুলসংখ্যক উপগ্রহ কক্ষপথে জঞ্জাল (space debris) ও সংঘর্ষের ঝুঁকি বাড়ায়।
+   - উজ্জ্বল উপগ্রহের সারি জ্যোতির্বিজ্ঞানের পর্যবেক্ষণে বাধা সৃষ্টি করে বলে অভিযোগ রয়েছে।
+   - নিয়ন্ত্রক ও নিরাপত্তাগত প্রশ্ন: বিদেশি প্রতিষ্ঠানের সরাসরি সেবা দেশের টেলিযোগাযোগ নিয়ন্ত্রণ কাঠামোর বাইরে চলে যেতে পারে।
+
+   বাংলাদেশ প্রেক্ষাপট: ২০২৫ সালে বাংলাদেশে স্টারলিংকের বাণিজ্যিক কার্যক্রমের অনুমোদন দেওয়া হয়, প্রধানত দুর্গম অঞ্চলে সংযোগ ও দুর্যোগকালীন যোগাযোগ নিশ্চিত করার লক্ষ্যে। <!-- verify -->
 8. **আর্সেনিকের পারমাণবিক ভর কত?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+
+   Answer: আর্সেনিকের পারমাণবিক ভর প্রায় ৭৪.৯২ (৭৪.৯২১৬ u)।
+
+   - প্রতীক: As
+   - পারমাণবিক সংখ্যা: ৩৩
+   - পর্যায় সারণিতে অবস্থান: গ্রুপ ১৫, পর্যায় ৪। এটি একটি ধাতুকল্প বা মেটালয়েড।
+   - ইলেকট্রন বিন্যাস: [Ar] 3d^10 4s^2 4p^3
+
+   বাংলাদেশের প্রেক্ষাপটে গুরুত্ব:
+   - দেশের বহু জেলার ভূগর্ভস্থ পানিতে আর্সেনিকের মাত্রা নিরাপদ সীমার ওপরে, যা একটি বড় জনস্বাস্থ্য সমস্যা।
+   - বাংলাদেশের গ্রহণযোগ্য সীমা প্রতি লিটারে ০.০৫ মিলিগ্রাম, যেখানে বিশ্ব স্বাস্থ্য সংস্থার নির্দেশিত সীমা প্রতি লিটারে ০.০১ মিলিগ্রাম।
+   - দীর্ঘদিন আর্সেনিকযুক্ত পানি পান করলে আর্সেনিকোসিস হয়, যার লক্ষণ হাতে-পায়ে কালো দাগ ও ক্ষত (মেলানোসিস ও কেরাটোসিস), এবং শেষ পর্যন্ত ত্বক, ফুসফুস ও মূত্রথলির ক্যানসার হতে পারে।
+   - প্রতিকার: গভীর নলকূপ, বৃষ্টির পানি সংরক্ষণ, পুকুরের বালুর ফিল্টার এবং আর্সেনিক অপসারণ প্রযুক্তি।
 9. **Explain the concept of Electrocardiogram (ECG) and Echocardiogram (ECHO).** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 313 (ET: N/A)]*
 
+
+   Answer:
+
+   Electrocardiogram (ECG or EKG):
+   - It records the electrical activity of the heart. Each heartbeat is triggered by an electrical impulse that begins at the sinoatrial node and spreads through the heart muscle, and the ECG captures this impulse from the surface of the body.
+   - Procedure: ten electrodes are placed on the chest and limbs, giving twelve standard leads, each viewing the heart from a different angle. The test takes a few minutes, is painless and involves no radiation.
+   - The tracing consists of the P wave (atrial depolarisation), the QRS complex (ventricular depolarisation) and the T wave (ventricular repolarisation).
+   - What it detects: heart rate and rhythm, arrhythmia such as atrial fibrillation, myocardial infarction (heart attack) both current and past, ischaemia, conduction blocks, enlargement of chambers and electrolyte disturbances.
+   - Limitation: it shows the electrical function only. It cannot show the structure of the heart, the condition of the valves or how well the heart is pumping.
+
+   Echocardiogram (ECHO):
+   - It is an ultrasound scan of the heart. A transducer sends high-frequency sound waves (about 2 to 7 MHz) into the chest, and the echoes reflected from the heart structures are converted into a moving image.
+   - Procedure: a gel is applied to the chest and the probe is moved over it. In a transoesophageal echo the probe is passed down the food pipe for a clearer image. There is no radiation.
+   - What it shows: the size and shape of the chambers, the thickness and motion of the heart muscle walls, the structure and functioning of the four valves, the pumping efficiency measured as the ejection fraction, blood flow direction and speed using Doppler, congenital defects such as a hole in the heart, blood clots, tumours and fluid around the heart.
+   - Limitation: it shows structure and mechanical function but not the electrical activity.
+
+   | Point | ECG | ECHO |
+   |---|---|---|
+   | Principle | Records electrical impulses | Uses ultrasound imaging |
+   | Shows | Rhythm and electrical conduction | Structure, valves and pumping function |
+   | Output | A graph or tracing on paper or screen | A moving image of the heart |
+   | Detects best | Arrhythmia, heart attack, conduction block | Valve disease, heart failure, congenital defect, clot |
+   | Duration and cost | A few minutes, inexpensive | Twenty to forty minutes, more expensive |
+
+   The two tests are complementary rather than alternative: an ECG shows that something is wrong with the rhythm or the muscle, and an ECHO shows what the heart looks like and how well it is actually pumping.
 10. **Justify "Invention of Transistor changed the world."** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 313 (ET: N/A)]*
 
+
+    Answer: The invention of the transistor at Bell Laboratories in December 1947 by John Bardeen, Walter Brattain and William Shockley is widely regarded as the single most important invention of the twentieth century. The three received the Nobel Prize in Physics in 1956.
+
+    A transistor is a semiconductor device that can amplify a signal and act as an electronic switch with no moving parts.
+
+    Justification:
+
+    - It replaced the vacuum tube. Vacuum tubes were large, fragile, hot, power-hungry and short-lived. ENIAC, the first general-purpose electronic computer, used about 18,000 tubes, filled a large room, weighed 30 tons and consumed 150 kilowatts, and a tube failed every few hours. A transistor is smaller than a grain of rice, needs almost no power and lasts for decades.
+    - It made the integrated circuit possible. Once transistors could be fabricated on a single piece of silicon, first by Jack Kilby and Robert Noyce in 1958-59, the entire semiconductor industry followed. A modern processor chip now contains tens of billions of transistors on an area the size of a fingernail.
+    - It created the computer as we know it. Without the transistor there would be no personal computer, no laptop, no smartphone and no server. Every logic gate, every memory cell and every processor is built from transistors.
+    - It enabled Moore's Law. The observation that the number of transistors on a chip doubles roughly every two years drove five decades of exponential growth in computing power and equally exponential fall in cost, so that a phone today is far more powerful than the supercomputers of the 1980s.
+    - It made modern communication possible. Mobile phones, satellites, optical fibre systems, Wi-Fi and the entire internet infrastructure run on transistor-based electronics.
+    - It transformed medicine. Pacemakers, MRI and CT scanners, ultrasound machines, ventilators and portable diagnostic devices all depend on it.
+    - It transformed transport and industry. Engine control units, avionics, robotics, industrial automation and the control systems of power plants are all built on it.
+    - It reduced power consumption enormously, which made battery-operated portable devices practical, from the pocket transistor radio of the 1950s to today's wearable devices.
+    - It changed society and economics. It created the semiconductor industry, Silicon Valley, the software industry and the digital economy, and it made information cheap and universally accessible, changing education, commerce, governance and social life.
+
+    Conclusion: the transistor is the fundamental building block of every electronic device in existence. Its invention did not merely improve an existing technology; it created the conditions for the entire information age, and in that sense it genuinely changed the world.
 11. **What is the hardest substance available on earth?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 430 (ET: BIBM)]*
 
+
+    Answer: Diamond is the hardest naturally occurring substance found on earth.
+
+    - It scores 10, the maximum, on the Mohs scale of mineral hardness.
+    - Reason for its hardness: diamond is pure carbon in which every carbon atom is covalently bonded to four neighbouring carbon atoms in a rigid three-dimensional tetrahedral lattice. All four valence electrons are used in strong covalent bonds, so there are no free electrons and no weak planes along which the structure can slip.
+    - Comparison with graphite: graphite is also pure carbon, but its atoms are arranged in flat layers held together by weak forces, so the layers slide over one another. That is why graphite is one of the softest substances and is used as a lubricant and in pencils, while diamond is the hardest. Substances like this, with the same composition but different structures, are called allotropes.
+    - Other properties: diamond is the best thermal conductor known, is electrically insulating, has a very high refractive index of about 2.42, which gives it its brilliance, and has an extremely high melting point.
+    - Uses: cutting, drilling and grinding tools, glass cutters, oil-drilling bits, abrasive powders, precision surgical blades, heat sinks in high-power electronics and, of course, jewellery.
+    - Note: some laboratory-made materials, such as wurtzite boron nitride and lonsdaleite, are predicted to be harder, and aggregated diamond nanorods have been produced that are harder than natural diamond. But among naturally occurring substances, diamond remains the hardest.
 12. **আলোক বর্ষ কী? আলোক বর্ষের দূরত্ব কিলোমিটারে প্রকাশ করুন।** *[সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+    Answer: আলোকবর্ষ (Light Year) হলো দূরত্বের একক, সময়ের নয়। এক আলোকবর্ষ বলতে বোঝায় শূন্য মাধ্যমে আলো এক বছরে যত দূরত্ব অতিক্রম করে।
+
+    কিলোমিটারে প্রকাশ:
+
+    ধাপ ১ - শূন্য মাধ্যমে আলোর বেগ:
+    - c = ৩ x ১০^৮ মিটার/সেকেন্ড = ৩ x ১০^৫ কিলোমিটার/সেকেন্ড
+
+    ধাপ ২ - এক বছরে সেকেন্ডের সংখ্যা:
+    - ১ বছর = ৩৬৫ দিন x ২৪ ঘণ্টা x ৬০ মিনিট x ৬০ সেকেন্ড
+    - = ৩৬৫ x ২৪ x ৩৬০০
+    - = ৩,১৫,৩৬,০০০ সেকেন্ড = ৩.১৫৩৬ x ১০^৭ সেকেন্ড
+
+    ধাপ ৩ - দূরত্ব = বেগ x সময়:
+    - দূরত্ব = (৩ x ১০^৫) x (৩.১৫৩৬ x ১০^৭)
+    - = ৯.৪৬০৮ x ১০^১২ কিলোমিটার
+
+    উত্তর: ১ আলোকবর্ষ = প্রায় ৯.৪৬ x ১০^১২ কিলোমিটার, অর্থাৎ প্রায় ৯ লক্ষ ৪৬ হাজার কোটি কিলোমিটার।
+
+    ব্যবহার ও তুলনা:
+    - মহাকাশের বিশাল দূরত্ব প্রকাশে কিলোমিটার ব্যবহার করা অবাস্তব বলে আলোকবর্ষ ব্যবহৃত হয়।
+    - সূর্য থেকে পৃথিবীতে আলো আসতে সময় লাগে প্রায় ৮ মিনিট ২০ সেকেন্ড, অর্থাৎ দূরত্ব প্রায় ০.০০০০১৬ আলোকবর্ষ।
+    - সূর্যের পরে নিকটতম নক্ষত্র প্রক্সিমা সেন্টাউরির দূরত্ব প্রায় ৪.২৪ আলোকবর্ষ।
+    - আমাদের আকাশগঙ্গা ছায়াপথের ব্যাস প্রায় ১,০০,০০০ আলোকবর্ষ।
+    - এর তাৎপর্য হলো, আমরা যখন কোনো দূরবর্তী নক্ষত্র দেখি, তখন আসলে তার অতীতকে দেখি; ১০০ আলোকবর্ষ দূরের নক্ষত্রের যে আলো আজ চোখে পড়ছে, তা ১০০ বছর আগে রওনা দিয়েছিল।
+    - আরেকটি বৃহত্তর একক পারসেক (parsec) = ৩.২৬ আলোকবর্ষ।
 13. **“জেনেটিক ইঞ্জিনিয়ারিং” কী?** *[সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+    Answer: জেনেটিক ইঞ্জিনিয়ারিং (Genetic Engineering) বা জিন প্রকৌশল হলো জীবের ডিএনএ বা জিনগত বৈশিষ্ট্য পরীক্ষাগারে সরাসরি পরিবর্তন, সংযোজন বা অপসারণ করে কাঙ্ক্ষিত বৈশিষ্ট্যসম্পন্ন নতুন জীব তৈরির প্রযুক্তি। একে রিকম্বিন্যান্ট ডিএনএ প্রযুক্তিও বলা হয়।
+
+    মূল ধাপসমূহ:
+    - কাঙ্ক্ষিত বৈশিষ্ট্য বহনকারী জিন শনাক্ত করা।
+    - রেস্ট্রিকশন এনজাইম দিয়ে ওই জিন কেটে আলাদা করা। এই এনজাইমকে বলা হয় "আণবিক কাঁচি"।
+    - প্লাজমিড বা ভাইরাসের মতো বাহকের (vector) সঙ্গে লাইগেজ এনজাইম দিয়ে জিনটি জোড়া দেওয়া।
+    - বাহকসহ জিনটি গ্রহীতা কোষে প্রবেশ করানো (transformation)।
+    - সফলভাবে জিন গ্রহণকারী কোষ বাছাই করে বংশবৃদ্ধি করানো।
+
+    আধুনিক পদ্ধতি: CRISPR-Cas9 প্রযুক্তি, যা নির্দিষ্ট স্থানে অত্যন্ত নির্ভুলভাবে জিন কাটা ও সম্পাদনা করতে পারে। এর আবিষ্কারের জন্য এমানুয়েল শারপঁতিয়ে ও জেনিফার ডাউডনা ২০২০ সালে রসায়নে নোবেল পুরস্কার পান।
+
+    প্রয়োগ:
+    - চিকিৎসা: ইনসুলিন, গ্রোথ হরমোন, ইন্টারফেরন ও হেপাটাইটিস-বি টিকা এখন জিন প্রকৌশলের মাধ্যমে ব্যাকটেরিয়া দিয়ে তৈরি হয়। জিন থেরাপির মাধ্যমে থ্যালাসেমিয়া ও সিকল সেল অ্যানিমিয়ার চিকিৎসা শুরু হয়েছে।
+    - কৃষি: রোগ ও পোকা প্রতিরোধী, খরা ও লবণাক্ততা সহনশীল এবং অধিক পুষ্টিসমৃদ্ধ ফসল উদ্ভাবন। উদাহরণ: বিটি বেগুন (বাংলাদেশে ২০১৩ সাল থেকে চাষ হচ্ছে), গোল্ডেন রাইস (ভিটামিন এ সমৃদ্ধ) এবং বিটি কটন।
+    - শিল্প: এনজাইম, জৈব জ্বালানি, বায়োপ্লাস্টিক ও ডিটারজেন্টের উপাদান উৎপাদন।
+    - পরিবেশ: তেল দূষণ ও ভারী ধাতু পরিশোধনে সক্ষম অণুজীব তৈরি (bioremediation)।
+    - বিজ্ঞান ও ফরেনসিক: ডিএনএ ফিঙ্গারপ্রিন্টিং, পিতৃত্ব নির্ধারণ ও অপরাধী শনাক্তকরণ।
+
+    সুবিধা: খাদ্য উৎপাদন বৃদ্ধি, ওষুধ সস্তা ও সহজলভ্য হওয়া, দুরারোগ্য রোগের চিকিৎসা এবং রাসায়নিক কীটনাশকের ব্যবহার হ্রাস।
+
+    উদ্বেগ ও নৈতিক প্রশ্ন: জিএম ফসলের দীর্ঘমেয়াদি স্বাস্থ্য ও পরিবেশগত প্রভাব, জীববৈচিত্র্যের ক্ষতি, বহুজাতিক কোম্পানির হাতে বীজের একচেটিয়া মালিকানা, এবং মানব ভ্রূণে জিন সম্পাদনার নৈতিকতা ("ডিজাইনার বেবি")। এসব কারণেই বেশির ভাগ দেশে জীবনিরাপত্তা নীতিমালা ও নিয়ন্ত্রক কমিটি রয়েছে; বাংলাদেশেও জাতীয় জীবনিরাপত্তা কাঠামো ও নীতিমালা প্রণীত হয়েছে।
 14. **CFC কী? কী কাজে ব্যবহৃত হয়?** *[সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+    Answer: CFC এর পূর্ণরূপ ক্লোরোফ্লুরোকার্বন (Chlorofluorocarbon)।
+
+    প্রকৃতি:
+    - এটি কার্বন, ক্লোরিন ও ফ্লোরিন দিয়ে গঠিত একদল কৃত্রিম যৌগ। বাণিজ্যিক নাম "ফ্রেয়ন"।
+    - উদাহরণ: CFC-11 (CCl3F), CFC-12 (CCl2F2)।
+    - বৈশিষ্ট্য: বর্ণহীন, গন্ধহীন, অদাহ্য, অবিষাক্ত, রাসায়নিকভাবে অত্যন্ত স্থিতিশীল এবং সহজে তরলীভূত হয়। এই গুণগুলোর কারণেই একে এক সময় আদর্শ শিল্প-রাসায়নিক ভাবা হতো।
+
+    ব্যবহার:
+    - রেফ্রিজারেটর ও শীতাতপ নিয়ন্ত্রণ যন্ত্রে শীতলকারক (refrigerant) হিসেবে।
+    - অ্যারোসল স্প্রে ক্যানে প্রোপেল্যান্ট হিসেবে, যেমন পারফিউম, কীটনাশক ও রংয়ের স্প্রেতে।
+    - ফোম বা স্পঞ্জ (পলিইউরিথেন, থার্মোকল) তৈরিতে ফোমিং এজেন্ট হিসেবে।
+    - ইলেকট্রনিক যন্ত্রাংশ ও ধাতব পৃষ্ঠ পরিষ্কারের দ্রাবক হিসেবে।
+    - অগ্নিনির্বাপক যন্ত্রে (হ্যালন জাতীয় যৌগ)।
+
+    ক্ষতিকর প্রভাব:
+    - সিএফসি অত্যন্ত স্থিতিশীল হওয়ায় নিম্ন বায়ুমণ্ডলে ভাঙে না; ধীরে ধীরে স্ট্র্যাটোস্ফিয়ারে উঠে যায়, যেখানে পৌঁছাতে ১৫ থেকে ৩০ বছর লাগে।
+    - সেখানে অতিবেগুনি রশ্মির প্রভাবে অণু ভেঙে মুক্ত ক্লোরিন পরমাণু নির্গত হয়।
+    - একটি ক্লোরিন পরমাণু ওজোন অণুকে (O3) ভেঙে অক্সিজেনে পরিণত করে এবং নিজে অপরিবর্তিত থাকে, ফলে একটিমাত্র ক্লোরিন পরমাণু প্রায় এক লক্ষ ওজোন অণু ধ্বংস করতে পারে।
+    - এভাবে ওজোন স্তর পাতলা হয়ে যায় এবং অ্যান্টার্কটিকার ওপরে "ওজোন গহ্বর" সৃষ্টি হয়।
+    - পরিণতি: অতিবেগুনি রশ্মি বেশি পরিমাণে ভূপৃষ্ঠে পৌঁছে ত্বকের ক্যানসার, ছানি, রোগ প্রতিরোধ ক্ষমতা হ্রাস, ফসলের ক্ষতি ও সামুদ্রিক প্ল্যাংকটন ধ্বংস ঘটায়।
+    - সিএফসি একটি শক্তিশালী গ্রিনহাউস গ্যাসও বটে; কার্বন ডাই-অক্সাইডের তুলনায় এর উষ্ণায়ন ক্ষমতা কয়েক হাজার গুণ বেশি।
+
+    নিয়ন্ত্রণ:
+    - ১৯৮৭ সালের মন্ট্রিল প্রটোকল অনুযায়ী সিএফসি উৎপাদন ও ব্যবহার পর্যায়ক্রমে বন্ধ করা হয়েছে। এটি বিশ্বের সবচেয়ে সফল পরিবেশ চুক্তি হিসেবে স্বীকৃত এবং জাতিসংঘের সব সদস্য রাষ্ট্র এতে অনুস্বাক্ষর করেছে।
+    - বিকল্প হিসেবে প্রথমে HCFC এবং পরে HFC ব্যবহার শুরু হয়। তবে HFC ওজোনের ক্ষতি না করলেও শক্তিশালী গ্রিনহাউস গ্যাস, তাই ২০১৬ সালের কিগালি সংশোধনীতে এটিও পর্যায়ক্রমে কমানোর সিদ্ধান্ত হয়েছে। সর্বাধুনিক বিকল্প হাইড্রোকার্বন ও অ্যামোনিয়াভিত্তিক শীতলকারক।
+    - প্রতি বছর ১৬ সেপ্টেম্বর "আন্তর্জাতিক ওজোন স্তর রক্ষা দিবস" পালিত হয়। বর্তমানে ওজোন স্তর ধীরে ধীরে পুনরুদ্ধার হচ্ছে বলে বিজ্ঞানীরা জানিয়েছেন।
 15. **Write down the longest and shortest day in the planet.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
+
+    Answer: The question can be understood in two ways, and both are given below.
+
+    On Earth, in terms of daylight hours:
+    - The longest day of the year in the Northern Hemisphere is 21 June, called the summer solstice. On this date the sun is directly overhead at the Tropic of Cancer, so the Northern Hemisphere receives the maximum number of daylight hours and the Southern Hemisphere has its shortest day.
+    - The shortest day of the year in the Northern Hemisphere is 22 December, called the winter solstice. On this date the sun is directly overhead at the Tropic of Capricorn, so the Northern Hemisphere has the fewest daylight hours and the Southern Hemisphere has its longest day.
+    - On 21 March (vernal equinox) and 23 September (autumnal equinox) the sun is directly overhead at the equator and day and night are of equal length everywhere on earth.
+
+    Among the planets, in terms of the length of one rotation:
+    - The planet with the longest day is Venus. One rotation takes about 243 Earth days, which is longer than its own year of 225 Earth days, so on Venus a day is longer than a year. Venus also rotates in the opposite direction to most planets, so there the sun rises in the west.
+    - The planet with the shortest day is Jupiter. It completes one rotation in only about 9 hours 56 minutes, despite being the largest planet. This rapid spin causes its visible flattening at the poles and drives its powerful atmospheric bands and storms.
+
+    For reference, the rotation periods are: Mercury 59 days, Venus 243 days, Earth 24 hours, Mars 24 hours 37 minutes, Jupiter 9.9 hours, Saturn 10.7 hours, Uranus 17.2 hours and Neptune 16.1 hours.
 16. **Mention the name of the largest, biggest and heaviest planet.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
+
+    Answer: Jupiter is the largest, the biggest and the heaviest planet in the solar system.
+
+    - Diameter: about 142,984 kilometres at the equator, roughly 11 times that of Earth. About 1,300 Earths could fit inside it.
+    - Mass: about 1.9 x 10^27 kilograms, which is roughly 318 times the mass of Earth, and more than twice the mass of all the other planets in the solar system put together.
+    - Composition: it is a gas giant made mostly of hydrogen and helium, with no solid surface. Its density is therefore low, about 1.33 grams per cubic centimetre.
+    - It has a very large number of moons, of which the four largest, discovered by Galileo in 1610, are Io, Europa, Ganymede and Callisto. Ganymede is the largest moon in the solar system, larger even than the planet Mercury.
+    - Its most famous feature is the Great Red Spot, a storm larger than the earth that has been observed for more than three hundred years.
+    - It has the shortest day of all the planets, completing one rotation in about 9 hours 56 minutes, and it takes about 11.86 Earth years to orbit the sun.
+    - It has a faint ring system and the strongest magnetic field of any planet.
+
+    Related facts: the smallest planet is Mercury; the hottest is Venus, because of its runaway greenhouse effect; the coldest is Neptune; the densest is Earth; and the least dense is Saturn, which would float in water.
 17. **What is the name of a technique that will be used to make multiple copies of target DNA in vitro?** *[BCC Assistant Programmer 11.11.2023 compact it 549 (ET: N/A)]*
 
+
+    Answer: The technique is the Polymerase Chain Reaction (PCR).
+
+    - It was invented by Kary Mullis in 1983, for which he received the Nobel Prize in Chemistry in 1993.
+    - Purpose: to make millions to billions of copies of a specific segment of DNA in vitro, that is, in a test tube outside a living organism, within a few hours. This process is called amplification.
+
+    Requirements:
+    - Template DNA containing the target sequence
+    - Two primers, short single-stranded DNA sequences that mark the beginning and the end of the target region
+    - Taq polymerase, a heat-stable DNA polymerase enzyme obtained from the bacterium Thermus aquaticus, which survives the high temperatures used in the cycle
+    - Free nucleotides (dNTPs) as building blocks
+    - A buffer solution with magnesium ions
+    - A thermal cycler machine
+
+    The three steps of one cycle:
+    - Denaturation at about 94 to 96 degrees Celsius: the double-stranded DNA separates into two single strands.
+    - Annealing at about 50 to 65 degrees Celsius: the primers bind to their complementary sequences on each single strand.
+    - Extension at about 72 degrees Celsius: Taq polymerase adds nucleotides and builds the new complementary strand.
+
+    Each cycle doubles the amount of target DNA, so after n cycles the number of copies is 2^n. Thirty cycles therefore produce about one billion copies.
+
+    Applications: diagnosis of infectious disease (RT-PCR was the standard test for COVID-19), detection of genetic disorders, DNA fingerprinting and forensic identification, paternity testing, cloning, gene expression studies, and the study of ancient DNA in archaeology.
+
+    Variants: RT-PCR (reverse transcription PCR) for RNA viruses, qPCR or real-time PCR for measuring the quantity of DNA present, and multiplex PCR for amplifying several targets at once.
 18. **সুষম খাদ্যের উপাদান কয়টি?** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 658 (ET: N/A)]*
 
+
+    Answer: সুষম খাদ্যের উপাদান ছয়টি।
+
+    - শর্করা (Carbohydrate): দেহের প্রধান শক্তির উৎস। প্রতি গ্রামে ৪ কিলোক্যালরি শক্তি দেয়। উৎস: ভাত, রুটি, আলু, চিনি।
+    - আমিষ বা প্রোটিন (Protein): দেহ গঠন, ক্ষয়পূরণ, বৃদ্ধি এবং এনজাইম ও হরমোন তৈরিতে প্রয়োজন। প্রতি গ্রামে ৪ কিলোক্যালরি। উৎস: মাছ, মাংস, ডিম, দুধ, ডাল।
+    - স্নেহ বা চর্বি (Fat): সবচেয়ে ঘন শক্তির উৎস, প্রতি গ্রামে ৯ কিলোক্যালরি। দেহের তাপ সংরক্ষণ করে এবং ভিটামিন এ, ডি, ই ও কে শোষণে সাহায্য করে। উৎস: তেল, ঘি, মাখন, বাদাম।
+    - ভিটামিন (Vitamin): অল্প পরিমাণে প্রয়োজন হলেও বিপাকক্রিয়া ও রোগ প্রতিরোধে অপরিহার্য। উৎস: শাকসবজি ও ফলমূল।
+    - খনিজ লবণ (Mineral): হাড়, দাঁত, রক্ত ও স্নায়ু গঠনে প্রয়োজন। যেমন ক্যালসিয়াম, লৌহ, আয়োডিন, ফসফরাস।
+    - পানি (Water): দেহের প্রায় ৭০ শতাংশ পানি। পরিপাক, শোষণ, রেচন ও তাপমাত্রা নিয়ন্ত্রণে অপরিহার্য।
+
+    সংজ্ঞা: যে খাদ্যে এই ছয়টি উপাদান দেহের প্রয়োজন অনুযায়ী সঠিক অনুপাতে থাকে, তাকে সুষম খাদ্য বলে।
+
+    কেউ কেউ খাদ্য আঁশ বা ফাইবারকে সপ্তম উপাদান হিসেবে উল্লেখ করেন; এটি শক্তি দেয় না, কিন্তু কোষ্ঠকাঠিন্য প্রতিরোধ ও অন্ত্রের সুস্থতার জন্য প্রয়োজনীয়।
 19. **১৭. হর্টিকালচার ও সেরিকালচার বলতে কি বুঝায়?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
+
+    Answer:
+
+    হর্টিকালচার (Horticulture):
+    - অর্থ উদ্যানবিদ্যা বা উদ্যানপালনবিদ্যা। শব্দটি লাতিন "hortus" (বাগান) ও "cultura" (চাষ) থেকে এসেছে।
+    - এটি কৃষিবিজ্ঞানের সেই শাখা যেখানে বাগানভিত্তিক ফসল—ফল, শাকসবজি, ফুল, মসলা, ঔষধি ও সৌন্দর্যবর্ধক গাছের চাষ, বংশবিস্তার, ব্যবস্থাপনা, সংরক্ষণ ও বিপণন নিয়ে আলোচনা করা হয়।
+    - প্রধান শাখা: পোমোলজি (ফল চাষ), অলেরিকালচার (সবজি চাষ), ফ্লোরিকালচার (ফুল চাষ), ল্যান্ডস্কেপ হর্টিকালচার এবং ফসলোত্তর প্রযুক্তি।
+    - সাধারণ কৃষির (agronomy) সঙ্গে পার্থক্য: কৃষিতে ধান, গম ও পাটের মতো বড় আকারের মাঠ ফসল হয়, আর হর্টিকালচারে অপেক্ষাকৃত ছোট পরিসরে উচ্চমূল্যের নিবিড় পরিচর্যানির্ভর ফসল হয়।
+
+    সেরিকালচার (Sericulture):
+    - অর্থ রেশম চাষ বা রেশম কীট পালনবিদ্যা।
+    - এতে রেশম উৎপাদনের জন্য রেশম মথ (প্রধানত Bombyx mori) পালন এবং তার খাদ্য তুঁত গাছের (mulberry) চাষ অন্তর্ভুক্ত।
+    - প্রক্রিয়া: তুঁত গাছ চাষ, ডিম সংগ্রহ, শুঁয়োপোকা পালন, গুটি (cocoon) সংগ্রহ, গুটি থেকে সুতা রিলিং এবং কাপড় বুনন।
+    - একটি রেশম গুটি থেকে প্রায় ৮০০ থেকে ১,৫০০ মিটার পর্যন্ত অখণ্ড সুতা পাওয়া যায়।
+    - বাংলাদেশে রেশম চাষের প্রধান কেন্দ্র রাজশাহী, যেখানে বাংলাদেশ রেশম গবেষণা ও প্রশিক্ষণ ইনস্টিটিউট এবং বাংলাদেশ রেশম উন্নয়ন বোর্ড অবস্থিত। "রাজশাহী সিল্ক" দেশে ও বিদেশে সুপরিচিত।
+
+    সংশ্লিষ্ট অন্যান্য পরিভাষা: এপিকালচার (মৌমাছি পালন), পিসিকালচার (মৎস্য চাষ), অ্যাপিকালচার, ভার্মিকালচার (কেঁচো চাষ), সিলভিকালচার (বনবিদ্যা) এবং ফ্লোরিকালচার (ফুল চাষ)।
 20. **১৮. সুষমখাদ্যে শর্করা, আমিষ ও স্নেহজাতীয় খাদ্যের অনুপাত কত?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
+
+    Answer: সুষম খাদ্যে শর্করা, আমিষ ও স্নেহজাতীয় খাদ্যের আদর্শ অনুপাত ৪ : ১ : ১।
+
+    - অর্থাৎ ৪ ভাগ শর্করা, ১ ভাগ আমিষ ও ১ ভাগ স্নেহ।
+
+    শক্তির শতকরা হিসাবে (আধুনিক পুষ্টিবিজ্ঞানের সুপারিশ):
+    - শর্করা থেকে মোট ক্যালরির প্রায় ৫৫ থেকে ৬০ শতাংশ
+    - আমিষ থেকে প্রায় ১০ থেকে ১৫ শতাংশ
+    - স্নেহ থেকে প্রায় ২০ থেকে ৩০ শতাংশ
+
+    ক্যালরির মান:
+    - ১ গ্রাম শর্করা = ৪ কিলোক্যালরি
+    - ১ গ্রাম আমিষ = ৪ কিলোক্যালরি
+    - ১ গ্রাম স্নেহ = ৯ কিলোক্যালরি
+
+    - একজন প্রাপ্তবয়স্ক ব্যক্তির দৈনিক গড় প্রয়োজন প্রায় ২,০০০ থেকে ২,৫০০ কিলোক্যালরি, যা বয়স, লিঙ্গ, শারীরিক পরিশ্রম ও স্বাস্থ্যগত অবস্থার ওপর নির্ভর করে।
+    - অনুপাত বজায় না থাকলে অপুষ্টি বা স্থূলতা দেখা দেয়। বাংলাদেশে খাদ্যতালিকায় শর্করা তথা ভাতের পরিমাণ প্রয়োজনের চেয়ে অনেক বেশি এবং আমিষ ও সবজির পরিমাণ কম, যা একটি বড় পুষ্টি সমস্যা।
 21. **১৯. তিনটি যৌগমূলকের নাম লিখুন।** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
+
+    Answer: যৌগমূলক (Radical) হলো একাধিক পরমাণু দিয়ে গঠিত এমন একটি পরমাণুগুচ্ছ যা রাসায়নিক বিক্রিয়ায় একটি একক আধানযুক্ত সত্তা হিসেবে অংশ নেয় এবং সাধারণ বিক্রিয়ায় ভেঙে যায় না।
+
+    তিনটি যৌগমূলকের নাম:
+    - অ্যামোনিয়াম মূলক: NH4^+ (ধনাত্মক আধান, যোজনী ১)
+    - সালফেট মূলক: SO4^2- (ঋণাত্মক আধান, যোজনী ২)
+    - নাইট্রেট মূলক: NO3^- (ঋণাত্মক আধান, যোজনী ১)
+
+    আরও কয়েকটি সাধারণ যৌগমূলক:
+
+    | নাম | সংকেত | আধান |
+    |---|---|---|
+    | হাইড্রক্সাইড | OH^- | ১- |
+    | কার্বনেট | CO3^2- | ২- |
+    | বাইকার্বনেট | HCO3^- | ১- |
+    | ফসফেট | PO4^3- | ৩- |
+    | নাইট্রাইট | NO2^- | ১- |
+    | সালফাইট | SO3^2- | ২- |
+    | ক্রোমেট | CrO4^2- | ২- |
+
+    উদাহরণ: অ্যামোনিয়াম সালফেট (NH4)2SO4 একটি সার, যেখানে দুটি অ্যামোনিয়াম মূলক ও একটি সালফেট মূলক রয়েছে; সিলভার নাইট্রেট AgNO3; ক্যালসিয়াম কার্বনেট CaCO3।
 22. **২০. আইনস্টাইনকে বিংশশতাব্দীর সর্বশ্রেষ্ঠ বিজ্ঞানী বলা হয় কেন?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
+
+
+    Answer: আলবার্ট আইনস্টাইনকে (১৮৭৯-১৯৫৫) বিংশ শতাব্দীর সর্বশ্রেষ্ঠ বিজ্ঞানী বলা হয়, কারণ তাঁর তত্ত্বগুলো স্থান, কাল, ভর ও শক্তি সম্পর্কে মানুষের ধারণাকে সম্পূর্ণ বদলে দিয়েছে এবং আধুনিক পদার্থবিজ্ঞানের ভিত্তি স্থাপন করেছে।
+
+    প্রধান কারণসমূহ:
+
+    - বিশেষ আপেক্ষিকতা তত্ত্ব (১৯০৫): তিনি দেখান যে আলোর বেগ সব পর্যবেক্ষকের কাছে অপরিবর্তনীয়, কিন্তু স্থান ও কাল আপেক্ষিক। এর ফলে সময় প্রসারণ (time dilation) ও দৈর্ঘ্য সংকোচনের ধারণা আসে, যা নিউটনীয় ধারণাকে পাল্টে দেয়।
+    - ভর-শক্তি সমতুল্যতা: E = mc^2 সমীকরণটি প্রমাণ করে ভর ও শক্তি একই সত্তার দুই রূপ। এটি পারমাণবিক শক্তি, নিউক্লীয় চুল্লি ও নক্ষত্রে শক্তি উৎপাদনের ব্যাখ্যা দেয়।
+    - সাধারণ আপেক্ষিকতা তত্ত্ব (১৯১৫): মাধ্যাকর্ষণকে তিনি বল হিসেবে নয়, বরং ভরের প্রভাবে স্থান-কালের বক্রতা হিসেবে ব্যাখ্যা করেন। ১৯১৯ সালের সূর্যগ্রহণে আলোর বেঁকে যাওয়া পর্যবেক্ষণ করে এই তত্ত্ব প্রমাণিত হয়। এই তত্ত্ব থেকেই কৃষ্ণগহ্বর, মহাকর্ষীয় তরঙ্গ ও মহাবিশ্বের সম্প্রসারণের ধারণা এসেছে।
+    - আলোক-তড়িৎ ক্রিয়া (Photoelectric effect): তিনি প্রমাণ করেন আলো কণা বা ফোটন আকারে শক্তি বহন করে। এই কাজের জন্যই তিনি ১৯২১ সালে পদার্থবিজ্ঞানে নোবেল পুরস্কার পান, আপেক্ষিকতার জন্য নয়। এটি কোয়ান্টাম তত্ত্বের ভিত্তি স্থাপন করে এবং সৌর কোষ, ফটোডায়োড ও ডিজিটাল ক্যামেরার সেন্সরের মূলনীতি।
+    - ব্রাউনীয় গতি (১৯০৫): তিনি এর গাণিতিক ব্যাখ্যা দিয়ে পরমাণুর অস্তিত্ব সম্পর্কে অবশিষ্ট সন্দেহ দূর করেন।
+    - অলৌকিক বছর (Annus Mirabilis): ১৯০৫ সালে মাত্র ২৬ বছর বয়সে, পেটেন্ট অফিসের কেরানি হিসেবে কাজ করার সময়, তিনি চারটি যুগান্তকারী গবেষণাপত্র প্রকাশ করেন, যার প্রতিটিই স্বতন্ত্রভাবে নোবেলযোগ্য ছিল।
+    - ব্যবহারিক প্রভাব: জিপিএস ব্যবস্থা আপেক্ষিকতার সংশোধন ছাড়া কাজ করে না; লেজার, সৌরকোষ, পারমাণবিক বিদ্যুৎ ও চিকিৎসায় বিকিরণ প্রযুক্তি তাঁর কাজের ওপর দাঁড়িয়ে আছে।
+    - বৈজ্ঞানিক পদ্ধতি: তিনি কেবল পর্যবেক্ষণ নয়, চিন্তন পরীক্ষার (thought experiment) মাধ্যমে তত্ত্ব গড়ার এক নতুন ধারা তৈরি করেন।
+    - মানবতাবাদী ভূমিকা: তিনি যুদ্ধবিরোধী, বর্ণবাদবিরোধী ও পারমাণবিক নিরস্ত্রীকরণের পক্ষে সোচ্চার ছিলেন এবং বিজ্ঞানীর সামাজিক দায়বদ্ধতার প্রশ্নকে সামনে আনেন।
+
+    এসব কারণেই টাইম ম্যাগাজিন তাঁকে "শতাব্দীর ব্যক্তিত্ব" (Person of the Century) হিসেবে নির্বাচিত করে, এবং তাঁর নামটি আজও প্রতিভার সমার্থক হিসেবে ব্যবহৃত হয়।
 
 ## Banking & ICT Abbreviations (8)
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
 
+
+   Answer: NPSB stands for National Payment Switch Bangladesh.
+
+   - It is a central electronic platform established by Bangladesh Bank in 2012 to route interbank electronic transactions within the country.
+   - Purpose: before NPSB, a card issued by one bank could be used at another bank's ATM only through costly international networks such as VISA or MasterCard, and the fee left the country in foreign currency. NPSB routes these transactions domestically instead.
+   - Services it supports: interbank ATM transactions, POS (point of sale) transactions, internet banking fund transfer (IBFT), and interoperability between banks for cards.
+   - Benefits: lower transaction cost, saving of foreign currency, faster settlement, and a single national infrastructure that every bank can join.
+   - Related systems operated by Bangladesh Bank: BACH (Bangladesh Automated Clearing House) with BACPS for cheques and BEFTN for electronic fund transfer, RTGS (Real Time Gross Settlement) for high-value transactions, and Binimoy for interoperable digital transactions across banks, MFS and payment service providers.
 2. **(b) Write the full forms of OTP and VPN.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer:
+   - OTP: One Time Password. It is a numeric or alphanumeric code, usually of four to eight digits, that is valid for a single login or transaction and for a short time, typically thirty to three hundred seconds. It is delivered by SMS, e-mail or an authenticator application, and it forms the second factor in two-factor authentication (2FA). Because it changes every time, it protects against password theft, replay attacks and phishing to a large extent. It should never be shared with anyone, including a caller claiming to be from the bank.
+   - VPN: Virtual Private Network. It creates an encrypted tunnel over a public network such as the internet, so that data travelling between the user and the private network cannot be read or altered by anyone in between. It is used to connect a remote employee securely to an office network, to link branch offices, to protect traffic on public Wi-Fi, and to hide the user's IP address. Common protocols are IPSec, OpenVPN and WireGuard, and the two main types are site-to-site VPN and remote-access VPN.
 3. **Full meaning: ASEAN, SPARRSO, BERC** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
 
+
+   Answer:
+   - ASEAN: Association of Southeast Asian Nations (দক্ষিণ-পূর্ব এশীয় জাতিসমূহের সংস্থা)। প্রতিষ্ঠা ৮ আগস্ট ১৯৬৭, ব্যাংকক ঘোষণার মাধ্যমে। সদর দপ্তর জাকার্তা, ইন্দোনেশিয়া। সদস্য ১০টি: ইন্দোনেশিয়া, মালয়েশিয়া, ফিলিপাইন, সিঙ্গাপুর, থাইল্যান্ড, ব্রুনেই, ভিয়েতনাম, লাওস, মিয়ানমার ও কম্বোডিয়া। উদ্দেশ্য আঞ্চলিক অর্থনৈতিক প্রবৃদ্ধি, সামাজিক অগ্রগতি ও শান্তি-স্থিতিশীলতা।
+   - SPARRSO: Bangladesh Space Research and Remote Sensing Organization (বাংলাদেশ মহাকাশ গবেষণা ও দূর অনুধাবন প্রতিষ্ঠান)। প্রতিষ্ঠা ১৯৮০ সালে, ঢাকার আগারগাঁওয়ে অবস্থিত। কাজ: উপগ্রহচিত্র ব্যবহার করে আবহাওয়া ও ঘূর্ণিঝড় পর্যবেক্ষণ, ফসল ও বন জরিপ, নদীভাঙন ও বন্যা পর্যবেক্ষণ, ভূমি ব্যবহার মানচিত্র প্রণয়ন এবং মৎস্যসম্পদ অনুসন্ধান।
+   - BERC: Bangladesh Energy Regulatory Commission (বাংলাদেশ এনার্জি রেগুলেটরি কমিশন)। প্রতিষ্ঠা ২০০৩ সালে, বিইআরসি আইন অনুযায়ী। কাজ: বিদ্যুৎ, গ্যাস ও পেট্রোলিয়াম খাতের শুল্ক বা দাম নির্ধারণ, লাইসেন্স প্রদান, সেবার মান নিশ্চিত করা এবং ভোক্তা ও সরবরাহকারীর স্বার্থে ভারসাম্য রক্ষা করা।
 4. **পূর্ণরূপ লিখুন: a) DFOF b) THAAD c) BIMSTEC** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+
+   Answer:
+   - a) DFQF: Duty Free Quota Free market access. এটি স্বল্পোন্নত দেশগুলোর (LDC) রপ্তানি পণ্যের ওপর উন্নত ও কিছু উন্নয়নশীল দেশের দেওয়া শুল্ক ও কোটামুক্ত বাজার সুবিধা। ইউরোপীয় ইউনিয়নের "Everything But Arms" এই সুবিধার সবচেয়ে বড় উদাহরণ, যার ওপর বাংলাদেশের পোশাক রপ্তানি ব্যাপকভাবে নির্ভরশীল। প্রশ্নে "DFOF" লেখা হলেও প্রচলিত সংক্ষেপটি DFQF। <!-- verify -->
+   - b) THAAD: Terminal High Altitude Area Defense। এটি যুক্তরাষ্ট্রের তৈরি একটি ভূমি থেকে আকাশে নিক্ষেপযোগ্য ক্ষেপণাস্ত্র প্রতিরোধ ব্যবস্থা, যা স্বল্প ও মধ্যম পাল্লার ব্যালিস্টিক ক্ষেপণাস্ত্রকে তার উড্ডয়নের শেষ ধাপে ধ্বংস করে। এটি "হিট-টু-কিল" পদ্ধতিতে কাজ করে, অর্থাৎ বিস্ফোরক ছাড়াই সরাসরি আঘাত করে লক্ষ্যবস্তু ধ্বংস করে। দক্ষিণ কোরিয়ায় এটি মোতায়েন করা নিয়ে চীনের সঙ্গে বড় কূটনৈতিক বিরোধ সৃষ্টি হয়েছিল।
+   - c) BIMSTEC: Bay of Bengal Initiative for Multi-Sectoral Technical and Economic Cooperation (বঙ্গোপসাগরীয় বহুখাতভিত্তিক কারিগরি ও অর্থনৈতিক সহযোগিতা উদ্যোগ)। প্রতিষ্ঠা ৬ জুন ১৯৯৭, ব্যাংকক ঘোষণার মাধ্যমে। সদস্য ৭টি: বাংলাদেশ, ভুটান, ভারত, মিয়ানমার, নেপাল, শ্রীলঙ্কা ও থাইল্যান্ড। সদর দপ্তর ঢাকা, বাংলাদেশ (২০১৪ সাল থেকে)।
 5. **NATA এর পূর্ণ রূপ কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+
+   Answer: প্রশ্নে উল্লিখিত "NATA" সম্ভবত "NATO" এর মুদ্রণজনিত ভুল।
+
+   - NATO: North Atlantic Treaty Organization (উত্তর আটলান্টিক চুক্তি সংস্থা)। প্রতিষ্ঠা ৪ এপ্রিল ১৯৪৯, ওয়াশিংটন চুক্তির মাধ্যমে। সদর দপ্তর ব্রাসেলস, বেলজিয়াম। এটি একটি সামরিক জোট, যার সনদের ৫ নম্বর অনুচ্ছেদ অনুযায়ী কোনো এক সদস্যের ওপর সশস্ত্র হামলা সব সদস্যের ওপর হামলা বলে গণ্য হবে। ফিনল্যান্ড (২০২৩) ও সুইডেন (২০২৪) যোগ দেওয়ার পর বর্তমান সদস্য সংখ্যা ৩২। এর প্রতিদ্বন্দ্বী জোট ছিল ওয়ারশ প্যাক্ট, যা ১৯৯১ সালে বিলুপ্ত হয়।
+   - যদি প্রশ্নটি প্রকৃতপক্ষে NATA হয়, তবে এর প্রচলিত অর্থ National Aptitude Test in Architecture, যা ভারতে স্থাপত্য বিষয়ে স্নাতক পর্যায়ে ভর্তির জন্য অনুষ্ঠিত একটি জাতীয় পরীক্ষা। <!-- verify -->
 6. **5.1 What is the full form of NPSB in the banking sector of Bangladesh?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+   Answer: NPSB stands for National Payment Switch Bangladesh.
+
+   - It is a central electronic platform established by Bangladesh Bank in 2012 to route interbank electronic transactions within the country.
+   - Purpose: before NPSB, a card issued by one bank could be used at another bank's ATM only through costly international networks such as VISA or MasterCard, and the fee left the country in foreign currency. NPSB routes these transactions domestically instead.
+   - Services it supports: interbank ATM transactions, POS (point of sale) transactions, internet banking fund transfer (IBFT), and interoperability between banks for cards.
+   - Benefits: lower transaction cost, saving of foreign currency, faster settlement, and a single national infrastructure that every bank can join.
+   - Related systems operated by Bangladesh Bank: BACH (Bangladesh Automated Clearing House) with BACPS for cheques and BEFTN for electronic fund transfer, RTGS (Real Time Gross Settlement) for high-value transactions, and Binimoy for interoperable digital transactions across banks, MFS and payment service providers.
 7. **What Is RTGS related to?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+
+   Answer: RTGS stands for Real Time Gross Settlement. It is related to the interbank payment and settlement system, that is, the electronic transfer of large-value funds between banks.
+
+   - Meaning of the name: "real time" means the transaction is processed immediately, without waiting for a batch cycle, and "gross settlement" means each transaction is settled individually and in full, not netted off against other transactions.
+   - Settlement is final and irrevocable once made, and it takes place in the accounts that the banks maintain with the central bank.
+   - In Bangladesh, RTGS was launched by Bangladesh Bank on 29 October 2015. It handles high-value and time-critical transactions, with a minimum limit of one lakh taka per transaction for local currency, and it also supports settlement in major foreign currencies.
+   - Advantages: elimination of settlement risk, immediate availability of funds to the beneficiary, and no need to move physical instruments.
+   - Comparison with BEFTN: BEFTN (Bangladesh Electronic Funds Transfer Network) is a deferred net settlement system that processes transactions in batches, so it is cheaper and suited to bulk low-value payments such as salaries, while RTGS is used for large single payments where speed and finality matter.
+   - Other components of the national payment infrastructure are BACPS for cheque clearing, NPSB for card and ATM interoperability, and Binimoy for interoperable digital transactions.
 8. **What is the full form BDCCL?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+
+   Answer: BDCCL stands for Bangladesh Data Center Company Limited.
+
+   - It is a state-owned company under the ICT Division of the Ministry of Posts, Telecommunications and Information Technology, formed to operate the national data centre infrastructure of the country.
+   - Its principal asset is the National Data Center at Kaliakair Hi-Tech Park, Gazipur, which is a Tier-IV certified facility, the highest reliability rating, with fully redundant power, cooling and network paths and a guaranteed uptime of about 99.995 per cent.
+   - Functions: hosting government applications, databases and websites; providing co-location, cloud and disaster recovery services to government offices and private organisations; ensuring data sovereignty by keeping national data inside the country; and maintaining a Disaster Recovery Site at Jashore so that services continue if the main site fails.
+   - Significance: it stores the national identity database, land records, education and health data and many e-government systems, so it is treated as critical information infrastructure.
+
+   Do not confuse it with BSCCL, which is Bangladesh Submarine Cable Company Limited, the operator of the submarine cable connections at Cox's Bazar and Kuakata.
