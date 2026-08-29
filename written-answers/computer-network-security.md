@@ -3279,33 +3279,314 @@
 
 1. Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Computer Virus | Computer Worm |
+   |---|---|---|
+   | Host required | Yes; it must attach itself to a file, a program or a boot sector | No; it is a complete standalone program |
+   | How it replicates | It copies itself into other files when the infected host is executed | It copies itself and transmits the copy across the network by itself |
+   | Human action needed | Yes; the user must run the infected program, open the file or connect the infected drive | No; it needs no user action at all |
+   | Method of spread | File sharing, email attachments, infected USB drives, downloaded programs | Network vulnerabilities, open ports and services, email address books, and shared drives |
+   | Speed of spread | Slow, because it waits for human action | Extremely fast; SQL Slammer infected most vulnerable hosts worldwide within about ten minutes |
+   | Primary damage | Corrupts or deletes files, damages the host system | Consumes bandwidth and system resources, saturates the network, and delivers a payload |
+   | Detection | Antivirus signature and heuristic scanning of files | Unusual outbound traffic, rapid port scanning and network congestion |
+   | Containment | Remove the infected files and clean the host | Patch the vulnerability and segment the network; cleaning single hosts is useless while the hole remains |
+   | Examples | Melissa, CIH or Chernobyl, file infectors | Morris worm, SQL Slammer, Conficker, Blaster |
+
+   The essential distinction:
+   - A virus is parasitic and passive: it needs a host to live in and a human to carry it. A worm is independent and active: it is a complete program that finds its own victims and transmits itself, which is why worms cause network wide outbreaks in minutes while viruses spread over days or weeks.
+   - The consequence for defence is different too. A virus is countered mainly by antivirus scanning and user caution about what they run. A worm is countered by patching the vulnerability it exploits, by network segmentation and by closing unnecessary services, because once it is loose no amount of user caution will stop it.
+   - Modern malware often combines both: WannaCry in 2017 was ransomware carried by a worm component that exploited the EternalBlue SMB vulnerability, which is why it spread across the world in hours.
 2. **What is exfiltration?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
+
+   Answer: Exfiltration, or data exfiltration, is the unauthorised transfer of data out of an organisation's systems to a location controlled by the attacker. It is the theft stage of a breach, as distinct from the intrusion that preceded it.
+
+   How it is carried out:
+   - Over the network: HTTP or HTTPS uploads to a cloud service or an attacker's server, which blends into normal traffic; FTP or SFTP transfer; email with attachments to an external address.
+   - Covert channels: DNS tunnelling, in which data is encoded into DNS queries, ICMP tunnelling, and hiding data inside images by steganography. These are used because DNS and ICMP are rarely blocked or inspected.
+   - Encryption and compression of the stolen data before transfer, so that content inspection cannot recognise it.
+   - Slow and low transfer, sending small amounts over a long period to stay below alerting thresholds.
+   - Physical means: USB drives, external disks, printed documents and photographs of screens.
+   - Cloud and collaboration abuse: uploading to a personal cloud drive or a code repository.
+   - Insider action, which is the hardest to detect, since the person is authorised to see the data.
+
+   Where it fits in an attack:
+   - Initial access, then privilege escalation, then lateral movement, then discovery and collection, then exfiltration, and finally in a ransomware case encryption. Modern ransomware exfiltrates before encrypting, so that the victim can be extorted twice.
+
+   Impact: loss of customer and financial data, intellectual property theft, regulatory penalties, mandatory breach disclosure, reputational damage and blackmail.
+
+   Detection and prevention:
+   - Data Loss Prevention tools that inspect content leaving the network and block or alert on sensitive patterns such as card numbers and national identity numbers.
+   - Egress filtering: block outbound traffic by default and permit only what is required, which defeats most simple channels.
+   - Monitor for anomalies: unusual data volumes, transfers at unusual hours, connections to unfamiliar destinations, and abnormally large DNS query volumes.
+   - Classify and encrypt sensitive data, so that stolen data is unusable.
+   - Least privilege and need to know, so that a compromised account can reach only a small part of the data.
+   - Control removable media and restrict cloud storage and personal email at work.
+   - Network segmentation and monitoring of east-west traffic, a SIEM with correlation rules, and user and entity behaviour analytics.
+   - Insider threat programme, and logging of all bulk data access and export.
 3. **Software downloaded from internet and installed that is not malicious is called?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: Software downloaded from the Internet and installed, which is not malicious, is called legitimate or benign software. Where the question intends a specific security term, the expected answer is freeware or shareware, or in the broader category simply an application program.
+
+   The relevant distinctions:
+   - Freeware: software provided free of charge, but with the source code kept closed. Examples: Adobe Acrobat Reader, VLC media player, Skype.
+   - Shareware: distributed free for a trial period, after which payment is required. Examples: WinRAR, older versions of WinZip.
+   - Open source software: the source code is available and may be modified and redistributed under a licence. Examples: Linux, Firefox, LibreOffice.
+   - Commercial or proprietary software: purchased under a licence, with the source closed.
+   - Public domain software: released with all rights waived.
+
+   Terms for the malicious counterparts, which the question is distinguishing it from:
+   - Malware is the general term for any software written to cause harm: viruses, worms, Trojans, ransomware, spyware and rootkits.
+   - Potentially Unwanted Program, PUP, or greyware: software that is not strictly malicious but is unwanted, such as toolbars, adware and system optimisers bundled with a legitimate installer.
+   - Bloatware: unnecessary pre-installed software that consumes resources without being harmful.
+
+   - The practical caution the examiner is looking for: software downloaded from the Internet is safe only when it comes from the official source. The same application obtained from a third party download site is a very common carrier of Trojans and PUPs, and pirated or cracked software is the single commonest infection route. Verify the publisher's digital signature and, where provided, the file hash. <!-- verify -->
 4. **একটি Virus ও Ransomware এর নাম লিখ?** *[BTCL Junior Assistant Manager 2022 compact it 640 (ET: BUET)]*
 
+
+   Answer:
+
+   Name of a virus:
+   - Melissa, a macro virus of 1999 that spread through infected Word documents attached to email and mailed itself to the first fifty contacts in the victim's address book.
+   - Other well known viruses: CIH or Chernobyl, which overwrote the BIOS; ILOVEYOU in 2000; and Stuxnet, which targeted industrial control systems.
+
+   Name of a ransomware:
+   - WannaCry, of May 2017, which encrypted files and demanded a Bitcoin payment. It spread as a worm using the EternalBlue vulnerability in Windows SMB and affected more than two hundred thousand computers in 150 countries within days, including hospitals of the British National Health Service.
+   - Other well known ransomware: Petya and NotPetya, Ryuk, LockBit, REvil and Locky.
+
+   - The distinction between the two: a virus attaches itself to a host file and replicates when that file is run, and its harm is usually corruption or deletion. Ransomware is a payload rather than a spreading mechanism: it encrypts the victim's data and demands payment for the key, and modern strains also steal the data first so that the victim can be extorted a second time by the threat of publication.
+   - The defence against ransomware specifically is offline or immutable backups that have actually been tested by restoration, together with prompt patching, email filtering, network segmentation and least privilege.
 5. **What is Trojan horse virus?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+
+   Answer:
+
+   - A Trojan horse is malware that disguises itself as legitimate, useful software so that the user installs it voluntarily. The name comes from the wooden horse of Troy: an apparent gift concealing an attack.
+   - Its defining characteristic is that it does not replicate. Unlike a virus it attaches to nothing, and unlike a worm it does not spread by itself; it depends entirely on deceiving the user.
+   - How it arrives: a pirated or cracked application, a fake antivirus or system optimiser, a fake software update, a game or utility from an unofficial site, an email attachment, or a malicious mobile application.
+   - What it does once installed: opens a backdoor for remote control; steals passwords, banking credentials and files; logs keystrokes; captures the screen and the camera; downloads further malware such as ransomware; and enrols the machine in a botnet.
+   - Types: backdoor Trojan, banking Trojan such as Zeus and Emotet, downloader or dropper, remote access Trojan, rootkit Trojan, ransomware dropper, and fake antivirus.
+   - Detection and prevention: install software only from official sources; never use pirated software, which is the commonest carrier; keep antivirus and endpoint detection current; watch for unexpected network connections and unexplained slowness; apply least privilege so that malware cannot install system wide; and educate users, since the Trojan's only entry point is the user's decision.
 6. **Computer এর Virus কি?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
 
+
+   Answer: A computer virus is a malicious program that attaches itself to a legitimate file, program or boot sector and replicates itself when that host is executed, spreading from one file and one computer to another and damaging data or disrupting the system.
+
+   Characteristics:
+   - It requires a host; it cannot exist as an independent program.
+   - It requires human action to spread: the user must run the infected program, open the infected document or connect the infected drive.
+   - It replicates by inserting its own code into other files.
+   - It usually has a trigger condition and a payload, so the damage may occur long after the infection.
+
+   Components of a virus:
+   - Infection mechanism, that is the routine that finds and infects new hosts.
+   - Trigger, or logic bomb, that is the condition on which the payload activates, such as a date or a number of executions.
+   - Payload, the actual damaging action.
+   - Concealment routines, which hide the virus from detection.
+
+   Types:
+   - File infector, which attaches to executable files.
+   - Boot sector virus, which infects the master boot record.
+   - Macro virus, which lives in the macros of a document, as Melissa did.
+   - Polymorphic virus, which changes its own code at each infection to defeat signature detection.
+   - Metamorphic and stealth viruses, and multipartite viruses that infect both files and boot sectors.
+
+   Symptoms of infection: the computer becomes slow, files disappear or become corrupted, unusual messages appear, programs crash, free disk space falls unexpectedly, and the antivirus is disabled.
+
+   Prevention: keep antivirus software installed and current, keep the operating system and applications patched, do not run software from untrusted sources, avoid pirated software, scan removable media, do not open unexpected attachments, use a firewall, apply least privilege, and keep regular backups.
 7. **Trojan Horse কি?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+
+   Answer:
+
+   - A Trojan horse is malware that disguises itself as legitimate, useful software so that the user installs it voluntarily. The name comes from the wooden horse of Troy: an apparent gift concealing an attack.
+   - Its defining characteristic is that it does not replicate. Unlike a virus it attaches to nothing, and unlike a worm it does not spread by itself; it depends entirely on deceiving the user.
+   - How it arrives: a pirated or cracked application, a fake antivirus or system optimiser, a fake software update, a game or utility from an unofficial site, an email attachment, or a malicious mobile application.
+   - What it does once installed: opens a backdoor for remote control; steals passwords, banking credentials and files; logs keystrokes; captures the screen and the camera; downloads further malware such as ransomware; and enrols the machine in a botnet.
+   - Types: backdoor Trojan, banking Trojan such as Zeus and Emotet, downloader or dropper, remote access Trojan, rootkit Trojan, ransomware dropper, and fake antivirus.
+   - Detection and prevention: install software only from official sources; never use pirated software, which is the commonest carrier; keep antivirus and endpoint detection current; watch for unexpected network connections and unexplained slowness; apply least privilege so that malware cannot install system wide; and educate users, since the Trojan's only entry point is the user's decision.
 8. **What is QR code? What is Rootkit and bootkit?** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 820-821 (ET: BUET)]*
 
+
+   Answer:
+
+   What a QR code is:
+   - A QR code, Quick Response code, is a two dimensional barcode consisting of black squares arranged on a white grid, which encodes data that a camera and decoding software can read very quickly.
+   - It was invented by Denso Wave in Japan in 1994 for tracking vehicle parts.
+   - Compared with a linear barcode it holds far more data — up to about 7,089 numeric or 4,296 alphanumeric characters — because it stores information in two dimensions rather than one.
+   - It has three large position detection squares at the corners, so it can be read from any angle, and it uses Reed-Solomon error correction, so it still reads correctly when up to 30 percent of it is damaged or obscured.
+   - Uses: payment, which in Bangladesh is now widespread with bKash and Nagad merchant QR; product information; website links; Wi-Fi credentials; contact details; ticketing; and enrolling an authenticator application.
+   - Security concern: a QR code is unreadable to a human, so the user cannot see where it leads. Quishing, that is QR code phishing, exploits this by placing a malicious code over a genuine one on a poster or a payment terminal, sending the victim to a counterfeit site. The defence is to check the URL before opening it and to be suspicious of a code stuck over another.
+
+   What a rootkit is:
+   - A rootkit is malware designed to obtain and maintain privileged, that is root or administrator, access to a system while concealing its own presence and the presence of other malware.
+   - It works by subverting the operating system itself: hooking system calls, modifying kernel structures, or filtering the results of file and process listings, so that its files, processes, registry keys and network connections are simply not reported to the user or to security software.
+   - Types by level: user mode rootkits, which hook library calls and are the easiest to detect; kernel mode rootkits, which run with full system privilege; bootkits, described below; hypervisor rootkits, which install a malicious hypervisor beneath the operating system; and firmware rootkits in the BIOS, UEFI or a device's firmware, which survive even a disk replacement.
+   - Detection: extremely difficult from within the infected system, because the system's own reporting is compromised. Methods are behavioural analysis, memory forensics, integrity checking against known good hashes, and scanning the disk from a clean external boot medium.
+   - Removal: the only reliable course is to reformat and reinstall from trusted media; for a firmware rootkit, to reflash the firmware or replace the hardware.
+
+   What a bootkit is:
+   - A bootkit is a rootkit that infects the boot process itself, placing its code in the Master Boot Record, the Volume Boot Record or the UEFI firmware, so that it loads before the operating system and before any antivirus.
+   - Because it gains control first, it can modify the kernel as it loads, disable security features and remain invisible to everything that runs afterwards. It also survives reinstallation of the operating system, since the boot code is not on the system partition.
+   - Examples: TDL4 or Alureon, Stoned Bootkit, and the UEFI implants LoJax and MoonBounce.
+   - Defence: UEFI Secure Boot, which verifies the digital signature of each stage of the boot chain; Measured Boot with a TPM; firmware passwords and signed firmware updates; and keeping the firmware itself patched.
 9. **Suppose your computer system is attack by a VIRUS and it's also copy into the six neighbor computer. Then it encrypts your all data in your all data in your system so that you can’t detect your data. What is the name of the VIRUS, how can you detect it?** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 821 (ET: BUET)]*
 
+
+   Answer:
+
+   Name of the malware described:
+   - The behaviour given is that of ransomware, and specifically of a worm-ransomware hybrid, since it both copies itself to neighbouring computers and encrypts the victim's data.
+   - The classic example matching this description exactly is WannaCry, of May 2017. Its ransomware payload encrypted the files and demanded a Bitcoin payment, while its worm component used the EternalBlue vulnerability in the Windows SMB service to spread automatically to every reachable unpatched machine, with no user action at all. Other examples are NotPetya and Ryuk.
+   - Note on terminology, which the examiner is testing: it is not strictly a virus. A virus needs a host file and human action to spread. Something that copies itself to six neighbouring computers by itself is a worm, and the encryption payload makes it ransomware.
+
+   How it can be detected:
+   - Symptoms visible to the user: files suddenly unopenable and renamed with an unfamiliar extension such as `.wncry` or `.locked`; a ransom note appearing on the desktop and in every folder; the machine slowing sharply during the encryption; shadow copies and restore points deleted; and antivirus or Task Manager disabled.
+   - Network indicators: a sudden burst of scanning on port 445 or 3389 to neighbouring addresses, which is the worm spreading; connections to unknown external addresses, which is the command and control channel; and unusual outbound data volume, which is exfiltration before encryption.
+   - Endpoint detection and response, which detects the behaviour of mass file modification, shadow copy deletion and process injection, rather than relying on a signature the malware may not match.
+   - File integrity monitoring and honeypot files: a small set of decoy files whose modification triggers an immediate alarm and isolates the host.
+   - SIEM correlation: a spike in file rename events across a file server, or many failed authentication attempts followed by successful lateral movement.
+   - Antivirus signature and heuristic scanning, which catches known families.
+   - Offline forensic examination by booting from clean media, since a compromised system cannot be trusted to report on itself.
+
+   Immediate response:
+   - Isolate the affected machines from the network at once, physically if necessary, to stop the spread; this takes priority over investigation.
+   - Do not pay the ransom; it funds the crime and does not guarantee recovery.
+   - Preserve evidence, identify the strain, and check whether a free decryptor exists, for example through the No More Ransom project.
+   - Restore from offline backups after rebuilding the systems, patch the vulnerability that allowed the spread, reset all credentials, and report as required by the regulator.
+
+   Prevention: prompt patching, since WannaCry exploited a vulnerability for which a patch had been available for two months; offline and immutable backups tested by restoration; network segmentation to limit lateral movement; disabling SMBv1 and unnecessary services; least privilege; email filtering; and endpoint detection and response.
 10. **‘Trojan Horse’ এর একটি বৈশিষ্ট্য লিখুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
 
+
+   Answer: The defining characteristic of a Trojan horse is that it disguises itself as legitimate, useful software so that the user installs it voluntarily, and it does not replicate itself.
+
+   - Unlike a virus it attaches to no host file, and unlike a worm it does not spread across the network by itself. Its only route of entry is the user's own decision to install it, obtained by deception.
+   - Other characteristics that follow from this: it usually performs the advertised function so that nothing appears wrong, while carrying out its real purpose in the background; it commonly opens a backdoor for remote control; and it is most often distributed through pirated software, fake updates, fake antivirus tools and unofficial application stores.
+   - Because it does not replicate, it is not detected by looking for spreading behaviour; it is detected by behavioural analysis of what the installed program actually does, and prevented by installing software only from official sources.
 11. **Explain: Worm, Botnet, Ransomware and Trojan horse.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
+
+   Answer:
+
+   Worm:
+   - A worm is a standalone malicious program that replicates itself and spreads across a network automatically, without needing a host file and without any human action.
+   - It spreads by exploiting vulnerabilities in network services, by scanning for open ports, through email address books, and across shared drives.
+   - Its immediate harm is consumption of bandwidth and system resources, which can saturate a network entirely, and it usually carries a payload such as a backdoor or ransomware.
+   - Because it needs no human action, it spreads extremely fast: SQL Slammer infected most vulnerable hosts worldwide in about ten minutes.
+   - Examples: Morris worm, SQL Slammer, Conficker, Blaster.
+   - Defence: patch the vulnerability it exploits, segment the network, close unnecessary services, and monitor for scanning behaviour.
+
+   Botnet:
+   - A botnet is a network of compromised computers, called bots or zombies, under the remote control of an attacker known as the botmaster, through a command and control infrastructure.
+   - The owners are unaware; the machine works normally while executing the botmaster's instructions in the background.
+   - Uses: launching Distributed Denial of Service attacks, sending spam, harvesting credentials, click fraud, cryptomining, and distributing further malware.
+   - Command and control may be centralised through an IRC or HTTP server, or peer to peer, which is far harder to dismantle. Domain generation algorithms are used to evade blocking.
+   - Examples: Mirai, which used insecure IoT devices to launch some of the largest DDoS attacks ever recorded; Zeus; Emotet.
+   - Defence: endpoint protection, egress filtering and DNS monitoring to detect command and control traffic, prompt patching, and changing default credentials on IoT devices.
+
+   Ransomware:
+   - Ransomware is malware that encrypts the victim's files and demands a payment, usually in cryptocurrency, in exchange for the decryption key.
+   - It arrives through phishing attachments, exploited vulnerabilities, exposed RDP, or a compromised software update.
+   - It typically gains a foothold, escalates privileges, moves laterally, deliberately deletes backups and shadow copies, and only then encrypts, leaving a ransom note.
+   - Double extortion is now standard: the data is stolen before encryption, so the attacker also threatens to publish it, which defeats the defence of simply restoring from backup.
+   - Examples: WannaCry, NotPetya, Ryuk, LockBit.
+   - Defence: offline or immutable backups tested by restoration, prompt patching, email filtering, endpoint detection and response, network segmentation, least privilege and multi-factor authentication. Paying is discouraged.
+
+   Trojan horse:
+
+   - A Trojan horse is malware that disguises itself as legitimate, useful software so that the user installs it voluntarily. The name comes from the wooden horse of Troy: an apparent gift concealing an attack.
+   - Its defining characteristic is that it does not replicate. Unlike a virus it attaches to nothing, and unlike a worm it does not spread by itself; it depends entirely on deceiving the user.
+   - How it arrives: a pirated or cracked application, a fake antivirus or system optimiser, a fake software update, a game or utility from an unofficial site, an email attachment, or a malicious mobile application.
+   - What it does once installed: opens a backdoor for remote control; steals passwords, banking credentials and files; logs keystrokes; captures the screen and the camera; downloads further malware such as ransomware; and enrols the machine in a botnet.
+   - Types: backdoor Trojan, banking Trojan such as Zeus and Emotet, downloader or dropper, remote access Trojan, rootkit Trojan, ransomware dropper, and fake antivirus.
+   - Detection and prevention: install software only from official sources; never use pirated software, which is the commonest carrier; keep antivirus and endpoint detection current; watch for unexpected network connections and unexplained slowness; apply least privilege so that malware cannot install system wide; and educate users, since the Trojan's only entry point is the user's decision.
 12. **Malware বলতে কী বুঝানো হয়? উদাহরণসহ সংক্ষেপে বর্ণনা করুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
 
+
+   Answer:
+
+   - Malware, short for malicious software, is any program written deliberately to damage, disrupt or gain unauthorised access to a computer, a network or data.
+
+   Types with examples:
+   - Virus: attaches itself to a file or program and replicates when the host is executed. It needs human action to spread. Examples: Melissa, CIH.
+   - Worm: a standalone program that replicates and spreads across the network by itself, exploiting vulnerabilities. Examples: Morris worm, SQL Slammer, Conficker.
+   - Trojan horse: disguises itself as legitimate software so the user installs it; it does not replicate. Examples: Zeus, Emotet.
+   - Ransomware: encrypts the victim's data and demands payment for the key, now usually with the added threat of publishing stolen data. Examples: WannaCry, LockBit, Ryuk.
+   - Spyware and keyloggers: secretly monitor activity and steal credentials and personal data.
+   - Adware: displays unwanted advertisements and often tracks browsing.
+   - Rootkit: hides deep in the operating system or the firmware to conceal an attacker's presence and maintain privileged access.
+   - Botnet malware: enrols the machine as a bot under a command and control server, for use in DDoS attacks or spam.
+   - Logic bomb: dormant code that triggers on a condition such as a date or the deletion of an employee record.
+   - Cryptojacking malware: uses the victim's processor to mine cryptocurrency.
+   - Fileless malware: lives in memory and in legitimate tools such as PowerShell, leaving no file for an antivirus to scan.
+
+   How it spreads: email attachments and links, malicious or compromised websites, pirated software, infected USB drives, unpatched vulnerabilities, and supply chain compromise of a legitimate update.
+
+   Prevention: keep systems patched, use endpoint protection with behavioural detection, filter email and web traffic, apply least privilege, segment the network, take offline immutable backups, and train users, since most infections begin with a human action.
 13. **Define component of computer virus.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
 
+
+   Answer: A computer virus has three essential components, and usually a fourth for concealment.
+
+   - Infection mechanism, also called the infection vector: the routine that searches for suitable hosts and inserts a copy of the virus into them. This is what makes it a virus rather than any other kind of malware, and it defines how the virus spreads, whether by infecting executable files, the boot sector or document macros.
+   - Trigger, also called the logic bomb: the condition that decides when the payload will run. It may be a particular date, a number of executions, the presence or absence of a file, or a specific user action. The delay between infection and activation is deliberate, so that the virus can spread widely before it is noticed.
+   - Payload: the actual action the virus performs when triggered. It may be destructive, such as deleting or corrupting files, formatting the disk or overwriting the BIOS; or it may steal data, open a backdoor, display a message or simply consume resources. Some viruses have no payload at all beyond replication.
+   - Concealment or defence mechanism: the code that hides the virus from detection. Stealth viruses intercept system calls to report the original uninfected file; encrypted viruses encrypt their own body with a changing key; polymorphic viruses change their decryption routine at every infection to defeat signature matching; and metamorphic viruses rewrite their entire code.
+
+   Phases of a virus, which correspond to these components:
+   - Dormant phase: the virus is idle and waiting for the trigger.
+   - Propagation phase: the infection mechanism copies the virus into other hosts.
+   - Triggering phase: the condition is met and the virus activates.
+   - Execution phase: the payload runs and the damage occurs.
+
+   - The practical consequence: antivirus software targets the infection mechanism and the concealment routines, because the payload may never have been seen before, and behavioural detection watches for the act of a program modifying other executables, which is the one thing every virus must do.
 14. **দুটি এন্টিভাইরাস সফটওয়্যার এর নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+
+   Answer: Two antivirus software packages:
+
+   - Kaspersky Anti-Virus, a widely used commercial product with strong detection rates.
+   - Bitdefender Antivirus, another leading commercial product, well regarded in independent testing.
+
+   Other well known antivirus software:
+   - Microsoft Defender, built into Windows and now a capable product requiring no separate purchase.
+   - Norton, McAfee, ESET NOD32, Avast, AVG and Trend Micro.
+   - Free options: Avast Free, AVG Free and Avira, and on Linux ClamAV.
+   - Enterprise endpoint detection and response platforms: CrowdStrike Falcon, SentinelOne, Sophos Intercept X and Symantec Endpoint Protection.
+
+   How antivirus software works: signature matching against a database of known malware; heuristic analysis of suspicious code structure; behavioural monitoring of what a program actually does; sandboxing of unknown files; and cloud reputation lookup. Real time protection scans files as they are accessed, and scheduled scans check the whole disk.
+
+   - Practical point worth stating: antivirus software is necessary but not sufficient. It cannot detect an unknown zero day threat by signature, and modern fileless malware leaves no file to scan. It must be combined with prompt patching, least privilege, network segmentation, tested backups and user awareness.
 15. **কম্পিউটার ভাইরাস, ওয়ার্ম এবং ট্রোজান হর্স এর মধ্যে পার্থক্য লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
+
+
+   Answer:
+
+   | Point | Virus | Worm | Trojan horse |
+   |---|---|---|---|
+   | Host required | Yes; it attaches to a file or program | No; it is a standalone program | No; it is itself a complete program |
+   | Replication | Replicates when the infected host is executed | Replicates by itself, automatically | Does not replicate at all |
+   | Spread | Needs human action: running the file, sharing it, using an infected USB | Spreads across the network by itself, exploiting vulnerabilities | Spread by deceiving the user into installing it |
+   | Speed of spread | Slow, limited by human action | Extremely fast; a worm can cross the world in minutes | Depends entirely on how convincing the deception is |
+   | Main harm | Corrupts or deletes files, damages the host | Consumes bandwidth and resources, and delivers a payload | Opens a backdoor, steals data, installs further malware |
+   | Detection | Antivirus signature and heuristic scanning | Unusual network traffic and rapid scanning behaviour | Behavioural monitoring; it looks legitimate |
+   | Examples | Melissa, CIH, file infectors | Morris worm, SQL Slammer, Conficker, WannaCry's spreading component | Zeus, Emotet, fake antivirus, a pirated application carrying a payload |
+   | Analogy | A biological virus needing a cell | A self propelled organism | The wooden horse of Troy: a gift concealing an attack |
+
+   The essential distinctions:
+   - A virus is parasitic: it cannot exist without a host file and cannot spread without a human running that file.
+   - A worm is independent and self propelled: it is a complete program that finds its own victims across the network and transmits itself with no human involvement, which is why worm outbreaks are measured in minutes.
+   - A Trojan neither attaches nor replicates: its whole method is deception, persuading the user to install it, after which it acts quietly in the background.
+
+   Consequences for defence:
+   - Against a virus: antivirus scanning, care about what is executed, and avoiding pirated software.
+   - Against a worm: prompt patching of the vulnerability it exploits, network segmentation, closing unnecessary services, and monitoring for scanning behaviour. User caution is useless here.
+   - Against a Trojan: installing software only from official sources, verifying digital signatures, least privilege, behavioural detection, and user education.
+   - Modern malware combines them: WannaCry was ransomware carried by a worm, and Emotet was a Trojan that later behaved as a worm on the local network.
 
 ## Security Protocols (SSL/TLS, HTTPS) (11)
 
