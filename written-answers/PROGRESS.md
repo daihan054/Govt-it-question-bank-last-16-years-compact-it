@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 106/239 subtopics · 1240/2673 answers**
+**Overall: 107/239 subtopics · 1247/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -90,7 +90,7 @@ Commit unit: one `##` subtopic.
 - [x] Digital Banking & Financial Inclusion (2)
 - [x] User Interfaces (CLI vs GUI) (1)
 
-## computer-network-security.md — 9/14 sections, 140/156 answers
+## computer-network-security.md — 10/14 sections, 147/156 answers
 
 - [x] Cryptography (27)
 - [x] Social Engineering & Cyber Attacks (26)
@@ -100,7 +100,7 @@ Commit unit: one `##` subtopic.
 - [x] Malware & Security Threats (15)
 - [x] Security Protocols (SSL/TLS, HTTPS) (11)
 - [x] Cyber Crime & Security (9)
-- [ ] Security Principles (CIA Triad) (7)
+- [x] Security Principles (CIA Triad) (7)
 - [x] VPN & Tunneling Protocols (IPsec, SSL VPN) (6)
 - [ ] Critical Information Infrastructure (CII) & Cyber Governance (3)
 - [ ] Cryptography & Network Security Scenarios (3)
