@@ -842,5 +842,9 @@
  [
   "operating-system.md",
   "Memory Management & Paging (13)"
+ ],
+ [
+  "operating-system.md",
+  "Virtual Memory & Page Replacement (Thrashing) (15)"
  ]
 ]
