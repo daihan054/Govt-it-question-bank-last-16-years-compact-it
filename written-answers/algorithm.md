@@ -1220,27 +1220,231 @@ for i in N:
 ```
 *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
+   Answer:
+
+   Time complexity:
+   - The outer loop runs N times.
+   - For every single iteration of the outer loop, the inner loop runs M times.
+   - Total number of basic operations = N × M.
+   - So the time complexity is O(N × M).
+   - If N and M are both equal to n, this becomes O(n²), which is quadratic.
+
+   Space complexity:
+   - Only the loop counters i and j are stored, and no array or recursion is used.
+   - The memory used does not grow with N or M.
+   - So the space complexity is O(1), that is constant.
+
 2. **What is complexity of Algorithm? Categorize complexity of Algorihm.** *[BKSP Assistant Programmer 13.07.2024 compact it 1458 (ET: N/A)]*
+
+   Answer: Complexity of an algorithm means the amount of resource it consumes as a function of the input size n. It measures efficiency independently of the machine, language or compiler used.
+
+   Two categories of resource:
+   - Time complexity: the number of basic operations performed, as a function of n.
+   - Space complexity: the extra memory required, beyond the input itself.
+
+   Three categories of case:
+   - Best case: the minimum work, on the most favourable input. Written with Omega notation.
+   - Average case: the expected work over all inputs. Written with Theta notation.
+   - Worst case: the maximum work, on the least favourable input. Written with Big-O notation and normally quoted, because it gives a guarantee.
+
+   Common complexity classes, from best to worst:
+   - O(1) constant, for example accessing an array element.
+   - O(log n) logarithmic, for example binary search.
+   - O(n) linear, for example linear search.
+   - O(n log n) linearithmic, for example merge sort.
+   - O(n²) quadratic, for example bubble sort.
+   - O(n³) cubic, for example naive matrix multiplication.
+   - O(2ⁿ) exponential, for example the naive recursive Fibonacci.
+   - O(n!) factorial, for example brute force travelling salesman.
 
 3. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+   Answer: Computational complexity of an algorithm is the measure of the computing resources the algorithm needs, expressed as a function of the input size n.
+
+   - Time complexity: how the number of basic operations grows as n grows.
+   - Space complexity: how much extra memory is needed as n grows.
+   - It is measured asymptotically, that is only the growth rate is kept and constants and lower order terms are dropped, because these depend on the machine.
+   - Notations used: Big-O for the upper bound, Big Omega for the lower bound and Big Theta for the tight bound.
+   - Example: for linear search the time complexity is O(n) and the space complexity is O(1).
+
 4. **Including Time and Space complexity....** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 553 (ET: BIBM)]*
+
+   Answer:
+
+   Time complexity:
+   - It is the number of basic operations an algorithm performs as a function of the input size n.
+   - It is not measured in seconds, because that depends on the hardware. Instead the growth rate is counted.
+   - Example: a single loop over n elements is O(n), and two nested loops are O(n²).
+
+   Space complexity:
+   - It is the total memory the algorithm needs, which is the input space plus the auxiliary space.
+   - Auxiliary space is the extra memory used besides the input, and it is the part normally compared.
+   - Example: bubble sort uses O(1) auxiliary space, while merge sort uses O(n).
+
+   Relation between them:
+   - There is usually a trade-off. Storing precomputed results in a table lowers time but raises space, which is exactly what dynamic programming does.
+   - Example: recursive Fibonacci takes O(2ⁿ) time and O(n) space, whereas the dynamic programming version takes O(n) time and O(n) space.
 
 5. **What is complexity? Find the Complexity from code and explain.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 501 (ET: IBA)]*
 
+   Answer: Complexity is the measure of how the running time and memory requirement of an algorithm grow with the size of the input.
+
+   Rules for finding complexity from code:
+   - A simple statement takes O(1).
+   - A single loop running n times takes O(n).
+   - Two nested loops each running n times take O(n²).
+   - A loop where the counter is halved or doubled each time takes O(log n).
+   - Sequential blocks are added, and the largest term is kept.
+   - Constants and lower order terms are dropped, so 3n² + 5n + 7 becomes O(n²).
+
+   Example:
+   ```c
+   for (i = 0; i < n; i++)          // runs n times
+       for (j = 0; j < n; j++)      // runs n times for each i
+           sum = sum + a[i][j];     // O(1)
+   ```
+   - The inner statement executes n × n = n² times, so the time complexity is O(n²).
+   - Only the variables i, j and sum are stored, so the auxiliary space complexity is O(1).
+
+   Second example:
+   ```c
+   while (n > 1)
+       n = n / 2;
+   ```
+   - n is halved each time, so the loop runs log₂n times and the complexity is O(log n).
+
 6. **What is Big O and Big Omega?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
+
+   Answer: Big-O and Big Omega are asymptotic notations that describe how the running time of an algorithm grows.
+
+   Big-O, written O(g(n)):
+   - It gives the upper bound, that is the worst case growth rate.
+   - Formally, f(n) = O(g(n)) if there exist positive constants c and n₀ such that f(n) ≤ c·g(n) for all n ≥ n₀.
+   - It answers: the algorithm will never be slower than this.
+   - Example: linear search is O(n).
+
+   Big Omega, written Ω(g(n)):
+   - It gives the lower bound, that is the best case growth rate.
+   - Formally, f(n) = Ω(g(n)) if there exist positive constants c and n₀ such that f(n) ≥ c·g(n) for all n ≥ n₀.
+   - It answers: the algorithm will never be faster than this.
+   - Example: linear search is Ω(1), because the target may be the very first element.
+
+   Big Theta, written Θ(g(n)), is used when the upper and lower bounds match, so it gives the exact growth rate. For example merge sort is Θ(n log n).
 
 7. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 606 (ET: N/A)]*
 
+   Answer: Complexity of an algorithm means how much time and memory it needs as the input size grows. Time complexity counts the basic operations and space complexity counts the extra memory, and both are written using asymptotic notation such as O, Omega and Theta.
+
+   Complexity of common sorting algorithms:
+
+   | Algorithm | Best | Average | Worst | Space |
+   |---|---|---|---|---|
+   | Bubble sort | O(n) | O(n²) | O(n²) | O(1) |
+   | Selection sort | O(n²) | O(n²) | O(n²) | O(1) |
+   | Insertion sort | O(n) | O(n²) | O(n²) | O(1) |
+   | Merge sort | O(n log n) | O(n log n) | O(n log n) | O(n) |
+   | Quick sort | O(n log n) | O(n log n) | O(n²) | O(log n) |
+   | Heap sort | O(n log n) | O(n log n) | O(n log n) | O(1) |
+
 8. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
 
+   Answer:
+
+   Binary search:
+   - Best case O(1), when the target is exactly the middle element on the first comparison.
+   - Worst case O(log n), when the search continues until a single element remains.
+   - It requires the array to be sorted.
+
+   Quick sort:
+   - Best case O(n log n), when every partition splits the array into two nearly equal halves.
+   - Worst case O(n²), when the pivot is always the smallest or largest element, so one side gets n−1 elements.
+
+   Depth First Search:
+   - Best case O(V + E) and worst case O(V + E) with an adjacency list, because every vertex and every edge is examined once in either case.
+   - With an adjacency matrix it becomes O(V²).
+   - If only reaching a goal matters, the best case is O(1) when the goal is the source itself.
+
 9. **Recurrence equation of binary search and solve it.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
+
+   Answer:
+
+   Forming the recurrence:
+   - Binary search compares the target with the middle element, which costs O(1).
+   - If they do not match, it discards half the array and searches only the remaining half of size n/2.
+   - So the recurrence is T(n) = T(n/2) + c, with base case T(1) = c.
+
+   Solving by substitution:
+   - T(n) = T(n/2) + c
+   - = [T(n/4) + c] + c = T(n/4) + 2c
+   - = T(n/8) + 3c
+   - After k steps: T(n) = T(n/2ᵏ) + k·c
+   - The recursion stops when n/2ᵏ = 1, which gives 2ᵏ = n, so k = log₂n.
+   - Substituting: T(n) = T(1) + c·log₂n = c + c·log₂n
+
+   Final answer: T(n) = O(log n)
+
+   Verification by the Master Theorem:
+   - Here a = 1, b = 2 and f(n) = O(1) = n⁰.
+   - n^(log_b a) = n^(log₂1) = n⁰ = 1, which matches f(n), so case 2 applies.
+   - Therefore T(n) = Θ(n⁰ · log n) = Θ(log n).
 
 10. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
 11. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
+    Answer:
+
+    Given: T(n) = 3T(n−1) + 2 with T(1) = 1
+
+    Method 1, repeated substitution:
+    - T(n) = 3T(n−1) + 2
+    - = 3[3T(n−2) + 2] + 2 = 3²T(n−2) + 3·2 + 2
+    - = 3²[3T(n−3) + 2] + 3·2 + 2 = 3³T(n−3) + 3²·2 + 3·2 + 2
+    - After k steps: T(n) = 3ᵏ·T(n−k) + 2(3^(k−1) + 3^(k−2) + ... + 3 + 1)
+    - Put n − k = 1, so k = n − 1 and T(n−k) = T(1) = 1
+    - T(n) = 3^(n−1)·1 + 2 × (3^(n−1) − 1)/(3 − 1)
+    - The geometric series sums to (3^(n−1) − 1)/2, so the second term becomes (3^(n−1) − 1)
+    - T(n) = 3^(n−1) + 3^(n−1) − 1
+    - T(n) = 2·3^(n−1) − 1
+
+    Method 2, homogeneous plus particular:
+    - Homogeneous part: T(n) = 3T(n−1) gives T_h(n) = A·3ⁿ
+    - Particular part: assume T_p = C, then C = 3C + 2, so −2C = 2 and C = −1
+    - General solution: T(n) = A·3ⁿ − 1
+    - Apply T(1) = 1: 3A − 1 = 1, so A = 2/3
+    - T(n) = (2/3)·3ⁿ − 1 = 2·3^(n−1) − 1
+
+    Verification:
+    - T(1) = 2·3⁰ − 1 = 2 − 1 = 1, correct.
+    - T(2) = 3(1) + 2 = 5, and the formula gives 2·3¹ − 1 = 5, correct.
+    - T(3) = 3(5) + 2 = 17, and the formula gives 2·3² − 1 = 17, correct.
+
+    Final answer: T(n) = 2·3^(n−1) − 1, so the complexity is O(3ⁿ), that is exponential.
+
 12. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983-984 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+    Answer: The complexity of an algorithm is influenced by the following factors.
+
+    Input related factors:
+    - Input size (n): the main factor, because complexity is always expressed as a function of n.
+    - Nature of the input: whether the data is already sorted, reverse sorted or random. Insertion sort is O(n) on sorted data but O(n²) on reverse sorted data.
+    - Distribution of the data, including how many duplicate values are present.
+
+    Algorithm related factors:
+    - Number of basic operations such as comparisons, assignments and arithmetic.
+    - Loop structure, since nested loops multiply the cost.
+    - Recursion depth and the number of recursive calls made at each level.
+    - The data structure chosen, for example searching a hash table is O(1) while searching a linked list is O(n).
+
+    Resource related factors:
+    - Time complexity, that is the count of operations.
+    - Space complexity, that is the auxiliary memory used, including the recursion stack.
+    - The time and space trade-off, where extra memory is used to reduce running time, as done in dynamic programming.
+
+    Implementation related factors:
+    - Programming language and compiler optimisation.
+    - Processor speed, cache size and memory access pattern.
+    - These affect the actual running time but not the asymptotic complexity, which is why asymptotic analysis is preferred for comparison.
 
 ## Searching Algorithms (11)
 
