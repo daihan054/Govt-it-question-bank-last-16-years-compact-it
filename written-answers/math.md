@@ -1752,25 +1752,284 @@
 
 1. **A boat travels 15 km upstream and 22 km downstream in 5 hr. find out the speed of the stream.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
+
+   Answer: Let the speed of the boat in still water be b km/h and the speed of the stream be s km/h.
+
+   Step 1 - write the effective speeds:
+   - Upstream speed = (b - s) km/h
+   - Downstream speed = (b + s) km/h
+
+   Step 2 - form the time equation. Time = distance / speed, and the total time is 5 hours:
+   - 15 / (b - s) + 22 / (b + s) = 5
+
+   Step 3 - note that this is one equation in two unknowns, so a whole-number solution is sought, as intended by the question. Trying values in which both 15 and 22 divide exactly:
+   - If b - s = 5 and b + s = 11, then 15/5 + 22/11 = 3 + 2 = 5 hours. This satisfies the equation.
+
+   Step 4 - solve the two simple equations:
+   - b - s = 5
+   - b + s = 11
+   - Adding: 2b = 16, so b = 8
+   - Subtracting: 2s = 6, so s = 3
+
+   Final answer: the speed of the stream is 3 km/h (and the speed of the boat in still water is 8 km/h).
+
+   Verification:
+   - Upstream speed = 8 - 3 = 5 km/h, so 15 km takes 15/5 = 3 hours.
+   - Downstream speed = 8 + 3 = 11 km/h, so 22 km takes 22/11 = 2 hours.
+   - Total = 3 + 2 = 5 hours. Correct.
+
+   Standard formulas for such problems:
+   - Speed in still water = (downstream speed + upstream speed) / 2
+   - Speed of stream = (downstream speed - upstream speed) / 2
 2. **A boat covers 143 km upstream in 13 hours and the same distance downstream in 11 hours. What is the speed (in km/hr) of the boat in still (without stream) water?** *[BARC Programmer 04.08.2023 compact it 597 (ET: N/A)]*
 
+
+   Answer: Step 1 - find the upstream speed:
+   - Upstream: 143 km in 13 hours
+   - Upstream speed = 143 / 13 = 11 km/h
+
+   Step 2 - find the downstream speed:
+   - Downstream: 143 km in 11 hours
+   - Downstream speed = 143 / 11 = 13 km/h
+
+   Step 3 - apply the formula for the speed in still water:
+   - Speed in still water = (downstream speed + upstream speed) / 2
+   - = (13 + 11) / 2
+   - = 24 / 2
+   - = 12 km/h
+
+   Final answer: the speed of the boat in still water is 12 km/h.
+
+   Step 4 - the speed of the stream, for completeness:
+   - Speed of stream = (downstream speed - upstream speed) / 2
+   - = (13 - 11) / 2
+   - = 1 km/h
+
+   Verification:
+   - Upstream speed = 12 - 1 = 11 km/h, and 143 / 11 = 13 hours. Correct.
+   - Downstream speed = 12 + 1 = 13 km/h, and 143 / 13 = 11 hours. Correct.
 3. **An aeroplane started 30 minutes later than the scheduled time from a place 1500 km away from its destination. To reach the destination at the scheduled time the pilot had to increase the speed by 250 km/h. What was the speed of the aeroplane per hour during the journey?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
+
+   Answer: Let the original scheduled speed be v km/h.
+
+   Step 1 - write the scheduled time and the actual time:
+   - Distance = 1500 km
+   - Scheduled time = 1500 / v hours
+   - The plane started 30 minutes late, that is 1/2 hour late, and had to increase its speed by 250 km/h to arrive on time.
+   - Actual flying time = 1500 / (v + 250) hours
+
+   Step 2 - the actual flying time is half an hour less than the scheduled time:
+   - 1500 / v - 1500 / (v + 250) = 1/2
+
+   Step 3 - multiply throughout by 2v(v + 250):
+   - 3000(v + 250) - 3000v = v(v + 250)
+   - 3000v + 750000 - 3000v = v^2 + 250v
+   - 750000 = v^2 + 250v
+
+   Step 4 - form and solve the quadratic:
+   - v^2 + 250v - 750000 = 0
+   - Discriminant = 250^2 + 4 x 750000 = 62500 + 3000000 = 3062500
+   - sqrt(3062500) = 1750
+   - v = (-250 + 1750) / 2 = 1500 / 2 = 750
+   - (The negative root is rejected as a speed cannot be negative.)
+
+   Step 5 - find the speed during the journey:
+   - Speed during the journey = v + 250
+   - = 750 + 250
+   - = 1000 km/h
+
+   Final answer: the speed of the aeroplane during the journey was 1000 km/h.
+
+   Verification:
+   - Scheduled time at 750 km/h = 1500 / 750 = 2 hours.
+   - Actual time at 1000 km/h = 1500 / 1000 = 1.5 hours.
+   - Difference = 0.5 hour = 30 minutes, which exactly makes up for the late start. Correct.
 4. **নৌকার গতিবেগ ঘন্টায় ১৫কিমি ও স্রোতের গতিবেগ ঘন্টায় ৫কিমি। ৩০কিমি গিয়ে ফিরে আসতে মোট সময় কত?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
+
+
+   Answer: দেওয়া আছে:
+   - স্থির পানিতে নৌকার গতিবেগ = ১৫ কিমি/ঘণ্টা
+   - স্রোতের গতিবেগ = ৫ কিমি/ঘণ্টা
+   - একমুখী দূরত্ব = ৩০ কিমি
+
+   ধাপ ১ - অনুকূলে (স্রোতের দিকে) গতিবেগ:
+   - = নৌকার গতি + স্রোতের গতি
+   - = ১৫ + ৫ = ২০ কিমি/ঘণ্টা
+
+   ধাপ ২ - প্রতিকূলে (স্রোতের বিপরীতে) গতিবেগ:
+   - = নৌকার গতি - স্রোতের গতি
+   - = ১৫ - ৫ = ১০ কিমি/ঘণ্টা
+
+   ধাপ ৩ - যাওয়ার সময়:
+   - সময় = দূরত্ব / গতিবেগ = ৩০ / ২০ = ১.৫ ঘণ্টা
+
+   ধাপ ৪ - ফেরার সময়:
+   - = ৩০ / ১০ = ৩ ঘণ্টা
+
+   ধাপ ৫ - মোট সময়:
+   - = ১.৫ + ৩
+   - = ৪.৫ ঘণ্টা
+
+   উত্তর: মোট সময় ৪.৫ ঘণ্টা, অর্থাৎ ৪ ঘণ্টা ৩০ মিনিট।
+
+   লক্ষণীয়: গড় গতিবেগ (২০ + ১০)/২ = ১৫ কিমি/ঘণ্টা নয়। প্রকৃত গড় গতিবেগ = মোট দূরত্ব / মোট সময় = ৬০ / ৪.৫ = ১৩.৩৩ কিমি/ঘণ্টা, কারণ ধীর গতিতে বেশি সময় ব্যয় হয়।
 
 ## Probability & Statistics (3)
 
 1. **(b)** In Bangladesh Bank, there are 6 Assistant Directors (ADs) and 4 Deputy Directors (DDs). Each AD brings a bag, while only half of the DDs bring a bag. If a bag is selected at random from all the bags, what is the probability that the chosen bag belongs to a Deputy Director (DD)? *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
+
+   Answer: Step 1 - count the bags brought by the Assistant Directors:
+   - There are 6 ADs and each brings a bag
+   - Number of AD bags = 6
+
+   Step 2 - count the bags brought by the Deputy Directors:
+   - There are 4 DDs and only half of them bring a bag
+   - Number of DD bags = 4 x (1/2) = 2
+
+   Step 3 - find the total number of bags:
+   - Total bags = 6 + 2 = 8
+
+   Step 4 - apply the definition of probability:
+   - P(the bag belongs to a DD) = number of DD bags / total number of bags
+   - = 2 / 8
+   - = 1 / 4
+   - = 0.25, that is 25 per cent
+
+   Final answer: the probability is 1/4 or 0.25.
+
+   Point to note: the probability is not 4/10, because the question asks about a bag chosen at random, not a person chosen at random. Only 2 of the 4 Deputy Directors brought a bag, so the sample space is the set of 8 bags, not the set of 10 officers. The probability that the bag belongs to an AD is correspondingly 6/8 = 3/4, and the two probabilities add to 1 as they must.
 2. **If you throw two unbiased dice (each with six sides) together, what is the probability that the sum of two upward faces will be 7? Explain your answer.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 421 (ET: BIBM)]*
 
+
+   Answer: Step 1 - find the size of the sample space.
+   - Each die has 6 faces, and the two dice are independent.
+   - Total number of outcomes = 6 x 6 = 36
+
+   Step 2 - list the outcomes whose sum is 7:
+   - (1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)
+   - Number of favourable outcomes = 6
+
+   Step 3 - apply the definition of probability:
+   - P(sum = 7) = favourable outcomes / total outcomes
+   - = 6 / 36
+   - = 1 / 6
+   - which is approximately 0.1667, that is about 16.67 per cent
+
+   Final answer: the probability is 1/6.
+
+   Explanation: 7 is the most likely sum when two dice are thrown, because it can be formed in more ways than any other total. The number of ways for each possible sum is:
+
+   | Sum | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+   |---|---|---|---|---|---|---|---|---|---|---|---|
+   | Ways | 1 | 2 | 3 | 4 | 5 | 6 | 5 | 4 | 3 | 2 | 1 |
+
+   The counts add to 36, confirming that all outcomes have been accounted for. The distribution is symmetric about 7, which is why 7 has the highest probability and 2 and 12 the lowest, each 1/36.
+
+   Note: the pairs (1, 6) and (6, 1) are counted separately because the two dice are distinguishable; treating them as one outcome would give a wrong answer.
 3. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
+
+
+   Answer: The data set is: 24, 24, 23, 25, 28, 30, 22, 12. The number of observations n = 8.
+
+   Step 1 - arrange the data in ascending order:
+   - 12, 22, 23, 24, 24, 25, 28, 30
+
+   Step 2 - find the mean:
+   - Mean = sum of all observations / n
+   - Sum = 24 + 24 + 23 + 25 + 28 + 30 + 22 + 12
+   - = 188
+   - Mean = 188 / 8
+   - = 23.5
+
+   Step 3 - find the median. Since n = 8 is even, the median is the average of the 4th and 5th values in the ordered list:
+   - 4th value = 24
+   - 5th value = 24
+   - Median = (24 + 24) / 2
+   - = 24
+
+   Step 4 - find the mode, the value that occurs most often:
+   - 24 occurs twice; every other value occurs once
+   - Mode = 24
+
+   Final answers:
+   - Mean = 23.5
+   - Median = 24
+   - Mode = 24
+
+   Observation: the mean (23.5) is lower than the median (24) because the single low value 12 pulls the mean down. This shows that the median is more resistant to extreme values than the mean, which is why the median is preferred when a data set contains outliers.
 
 ## Calculus & Integration (2)
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
+
+   Answer: Evaluate the definite integral of (2x^2 + 3x) from 0 to 2.
+
+   Step 1 - find the indefinite integral term by term, using the power rule that the integral of x^n is x^(n+1)/(n+1):
+   - Integral of 2x^2 = 2 . x^3/3 = 2x^3/3
+   - Integral of 3x = 3 . x^2/2 = 3x^2/2
+   - So the antiderivative F(x) = 2x^3/3 + 3x^2/2
+
+   Step 2 - apply the limits, using F(2) - F(0):
+
+   At x = 2:
+   - 2(2)^3/3 + 3(2)^2/2
+   - = 2(8)/3 + 3(4)/2
+   - = 16/3 + 6
+
+   At x = 0:
+   - 2(0)^3/3 + 3(0)^2/2 = 0
+
+   Step 3 - subtract:
+   - Value = (16/3 + 6) - 0
+   - = 16/3 + 18/3
+   - = 34/3
+
+   Final answer: 34/3, which is approximately 11.33.
+
+   Note: no constant of integration is written in a definite integral, because it cancels when the limits are applied.
 2. **Solve the problem: \int e^x \cos x\,dx** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
+
+
+   Answer: Evaluate the integral of e^x cos x with respect to x. This is solved by integration by parts applied twice, and then by solving for the integral itself.
+
+   Let I = integral of e^x cos x dx.
+
+   Step 1 - apply integration by parts, using the formula integral of u dv = uv - integral of v du.
+   Take u = cos x and dv = e^x dx, so du = -sin x dx and v = e^x.
+   - I = e^x cos x - integral of e^x (-sin x) dx
+   - I = e^x cos x + integral of e^x sin x dx    ... (i)
+
+   Step 2 - apply integration by parts again to the new integral.
+   Let J = integral of e^x sin x dx. Take u = sin x and dv = e^x dx, so du = cos x dx and v = e^x.
+   - J = e^x sin x - integral of e^x cos x dx
+   - J = e^x sin x - I    ... (ii)
+
+   Step 3 - substitute (ii) into (i):
+   - I = e^x cos x + (e^x sin x - I)
+   - I = e^x cos x + e^x sin x - I
+
+   Step 4 - bring I to one side:
+   - I + I = e^x cos x + e^x sin x
+   - 2I = e^x (cos x + sin x)
+
+   Step 5 - divide by 2 and add the constant of integration:
+   - I = e^x (sin x + cos x) / 2 + C
+
+   Final answer: integral of e^x cos x dx = (e^x / 2)(sin x + cos x) + C
+
+   Verification by differentiation:
+   - d/dx [(e^x/2)(sin x + cos x)]
+   - = (1/2)[e^x(sin x + cos x) + e^x(cos x - sin x)]
+   - = (1/2)[e^x sin x + e^x cos x + e^x cos x - e^x sin x]
+   - = (1/2)(2 e^x cos x)
+   - = e^x cos x, which is the original integrand. Correct.
+
+   General formula worth remembering:
+   - integral of e^(ax) cos(bx) dx = e^(ax)(a cos bx + b sin bx) / (a^2 + b^2) + C
+   - integral of e^(ax) sin(bx) dx = e^(ax)(a sin bx - b cos bx) / (a^2 + b^2) + C
 
 ## Analytical Ability & Logical Reasoning (2)
 
