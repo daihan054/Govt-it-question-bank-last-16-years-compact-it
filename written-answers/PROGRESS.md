@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 38/239 subtopics · 450/2673 answers**
+**Overall: 39/239 subtopics · 454/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -45,7 +45,7 @@ Commit unit: one `##` subtopic.
 - [x] সারমর্ম / সারাংশ (6)
 - [x] এক কথায় প্রকাশ (One Word Substitution) (5)
 
-## c-programming.md — 6/9 sections, 162/202 answers
+## c-programming.md — 7/9 sections, 166/202 answers
 
 - [x] Basic Programs & Control Statements (86)
 - [ ] Output Tracing & Control Flow (35)
@@ -54,7 +54,7 @@ Commit unit: one `##` subtopic.
 - [x] Flowcharts & Algorithms (12)
 - [x] String Manipulation & Algorithms (11)
 - [x] File Handling (4)
-- [ ] Pointers (4)
+- [x] Pointers (4)
 - [ ] Command Line Arguments & Basic Programs (1)
 
 ## cloud-computing.md — 0/9 sections, 0/34 answers
