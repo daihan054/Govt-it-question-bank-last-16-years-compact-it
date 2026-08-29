@@ -369,11 +369,77 @@
 
 1. **What is Machine Learning? Mention some real-life applications.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer: Machine Learning is a branch of Artificial Intelligence in which a system learns patterns from data and improves its performance on a task with experience, instead of following rules written by a programmer for every case.
+
+   Basic working steps:
+   - Collect and clean the data.
+   - Select features and split the data into training, validation and test sets.
+   - Train a model so that its error on the training data becomes minimum.
+   - Validate, tune and finally test the model on unseen data.
+
+   Real life applications:
+   - Fraud detection in card and mobile banking transactions.
+   - Credit scoring, where a bank predicts whether an applicant will repay a loan.
+   - Email spam filtering.
+   - Product and video recommendation on e-commerce and streaming platforms.
+   - Face recognition and fingerprint matching in national ID and attendance systems.
+   - Speech recognition in voice assistants and automatic call routing.
+   - Medical diagnosis from X-ray and pathology images.
+   - Demand and price forecasting in retail and agriculture.
+
 2. **Decisiontree model in Machine Learning.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
+
+   Answer: A Decision Tree is a supervised learning model shaped like a tree, where each internal node tests one feature, each branch is the outcome of that test, and each leaf gives the final class or value.
+
+   ```mermaid
+   graph TD
+       A{Income >= 50000?} -->|Yes| B{Credit history good?}
+       A -->|No| C[Reject loan]
+       B -->|Yes| D[Approve loan]
+       B -->|No| E[Reject loan]
+   ```
+
+   - Splitting criteria: Information Gain or Gini Index for classification, and variance reduction for regression.
+   - Working: the feature that separates the classes best is chosen at the root, and the process repeats on each branch until a stopping condition is reached.
+   - Advantages: easy to understand and explain, needs little data preparation, handles both numeric and categorical data.
+   - Disadvantages: a deep tree easily overfits, and a small change in data can change the whole tree. Pruning, or an ensemble such as Random Forest, is used to control this.
 
 3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 339 (ET: BIBM)]*
 
+   Answer: Machine Learning is the field of Artificial Intelligence where a computer learns from data and improves with experience, without being explicitly programmed for each rule.
+
+   | Point | Supervised | Unsupervised | Reinforcement |
+   |---|---|---|---|
+   | Input data | Labelled | Unlabelled | No dataset, an environment |
+   | Learns from | Known correct output | Hidden structure in data | Reward and penalty |
+   | Goal | Predict output for new input | Find groups or patterns | Maximise long term reward |
+   | Feedback | Direct, from the label | None | Delayed, through reward |
+   | Main types | Classification, Regression | Clustering, Association | Value based, Policy based |
+   | Algorithms | Decision Tree, SVM, KNN | K-Means, Apriori | Q-Learning, SARSA |
+   | Example | Loan default prediction | Customer segmentation | Robot learning to walk |
+
 4. **(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
+
+   Answer: A Decision Tree is a supervised machine learning model that makes a decision by asking a series of questions on the features. It has a tree structure where the root node is the first test, internal nodes are further tests, branches are the answers, and leaf nodes carry the final decision.
+
+   Example: deciding whether to play cricket based on the weather.
+
+   ```mermaid
+   graph TD
+       R{Outlook?} -->|Sunny| H{Humidity?}
+       R -->|Overcast| P1[Play]
+       R -->|Rainy| W{Windy?}
+       H -->|High| N1[Do not play]
+       H -->|Normal| P2[Play]
+       W -->|True| N2[Do not play]
+       W -->|False| P3[Play]
+   ```
+
+   - Root node: Outlook is chosen first because it separates the classes best, measured by Information Gain.
+   - If Outlook is Overcast, the answer is always Play, so it becomes a leaf immediately.
+   - If Outlook is Sunny, Humidity is tested next; if Rainy, Wind is tested.
+   - Reading a path from root to leaf gives a readable rule, such as "if Outlook is Sunny and Humidity is High, then do not play".
+   - This readability is why decision trees are widely used where the decision must be explained, for example in loan approval.
 
 ## Generative AI & Explainable AI (XAI) (4)
 
