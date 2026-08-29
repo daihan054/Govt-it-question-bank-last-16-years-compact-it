@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 92/239 subtopics · 1082/2673 answers**
+**Overall: 93/239 subtopics · 1089/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -77,14 +77,14 @@ Commit unit: one `##` subtopic.
 - [x] Lexical Analysis & Compiler Phases (4)
 - [x] Linker & Loader (1)
 
-## computer-fundamental.md — 5/10 sections, 109/127 answers
+## computer-fundamental.md — 6/10 sections, 116/127 answers
 
 - [x] Computer Fundamentals & Acronyms (49)
 - [x] Hardware Components & BIOS (CMOS Battery) (21)
 - [x] ICT in Society & Governance (20)
 - [x] Software Types & Classification (12)
 - [x] Blockchain & Emerging Technologies (7)
-- [ ] Data Center Infrastructure & Power Management (7)
+- [x] Data Center Infrastructure & Power Management (7)
 - [ ] Server Hardware & Enterprise Systems (5)
 - [ ] Quantum Computing & Emerging Technologies (3)
 - [ ] Digital Banking & Financial Inclusion (2)

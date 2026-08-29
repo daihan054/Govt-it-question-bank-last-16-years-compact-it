@@ -1932,17 +1932,235 @@
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 305 (ET: BIBM)]*
 
+
+   Answer: For a data centre cooling load, a diesel generator set is the appropriate choice, and the recommendation below is made against the criteria asked.
+
+   Note on terminology: a data centre generator produces AC, which the UPS then rectifies to DC for its batteries and the DC power plant. The choice is therefore of the prime mover and fuel, not of a literal DC alternator.
+
+   Choice by fuel type:
+   - Diesel is preferred. It has high energy density, the fuel is available everywhere in Bangladesh, it can be stored on site for days, the engines are robust and accept a full load step within about 10 seconds, and both service and spare parts are readily available locally.
+   - Natural gas is cheaper to run and burns cleaner, but it depends on an uninterrupted pipeline supply, which cannot be guaranteed during the very emergency the generator exists for, and gas engines accept load more slowly. It suits a continuously running prime power set rather than standby.
+   - Petrol is unsuitable: low energy density, dangerous to store in quantity, and short engine life.
+   - Bi-fuel, gas with diesel ignition, is a reasonable compromise where a firm gas supply exists, giving lower running cost with diesel as the fallback.
+
+   Choice by generator type:
+   - A standby rated diesel generator set with an alternator, an automatic voltage regulator and electronic governor control, coupled to an Automatic Transfer Switch so that it starts and takes the load within 10 to 15 seconds of a mains failure.
+   - Configuration: N+1 redundancy, that is one more set than the load requires, with a paralleling switchgear panel, so that maintenance or a single failure does not remove the cooling.
+   - Sizing: cover the full IT load plus the cooling load plus about 25 percent margin. Cooling typically accounts for 30 to 40 percent of the total data centre load, so it must never be left off the generator; a data centre without cooling reaches shutdown temperature in minutes.
+   - A soundproof canopy and a residential grade silencer, since data centres are usually in built up areas.
+
+   Choice by cost and budget:
+   - Capital cost: a diesel set is moderate, roughly in the middle between a petrol set and a gas set with its pipeline and metering work.
+   - Running cost: diesel fuel is more expensive per kWh than gas, but a standby set runs only a few hours a month, so the fuel bill is small and the capital and reliability considerations dominate.
+   - Maintenance: predictable and inexpensive, with an oil and filter change every 250 to 500 running hours and a monthly test run on load.
+   - Whole life cost is best assessed over 10 to 15 years, including fuel, maintenance, the fuel storage tank and the eventual overhaul.
+
+   Choice by energy and efficiency:
+   - Modern diesel sets reach about 35 to 40 percent thermal efficiency, better than gas engines of the same size.
+   - Fuel storage for at least 24 to 48 hours on site, with a contracted refuelling arrangement, because a national fuel disruption is exactly when it will be needed.
+   - Load bank testing at least annually, so that the set is proved on full load rather than only on a light test run.
+
+   Recommendation:
+   - A standby rated diesel generator set in an N+1 configuration, sized for the IT load plus the full cooling load plus 25 percent, with an ATS, a soundproof canopy, 48 hours of on-site fuel and a monthly on-load test. It gives the fastest start, the highest availability, the lowest dependence on an external supply during an emergency and the best supported maintenance in the local market, which together outweigh its higher fuel price for a machine that runs only during outages.
 2. **Describe the most important factors of data center for banking organization.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 557 (ET: BIBM)]*
 
+
+   Answer: The most important factors of a data centre for a banking organisation:
+
+   Availability and redundancy:
+   - The design target is Tier III or Tier IV, giving 99.982 or 99.995 percent availability, that is at most a few minutes of downtime a year. Banking cannot tolerate an outage during business hours.
+   - N+1 or 2N redundancy on every critical system: power, cooling, network and storage, with no single point of failure and with concurrent maintainability, so that any component can be serviced without stopping the service.
+
+   Power infrastructure:
+   - Dual utility feeds from separate substations, UPS systems with battery autonomy, and standby diesel generators with on-site fuel for at least 24 to 48 hours.
+   - Automatic transfer switches, power distribution units, and regular load bank testing.
+
+   Cooling and environment:
+   - Precision air conditioning with redundancy, hot and cold aisle containment, and control of temperature between about 18 and 27 degrees Celsius and of humidity, since cooling is 30 to 40 percent of the total load and failure causes shutdown within minutes.
+
+   Physical security:
+   - Multi-layer access control with biometric authentication and mantraps, CCTV with retention, 24 hour manned security, visitor logging, and cages or separate rooms for particularly sensitive equipment.
+
+   Disaster recovery and business continuity:
+   - A geographically separate DR site, far enough away to be outside the same flood, fire or seismic event, with data replication, defined RPO and RTO, and DR drills actually performed rather than merely documented. This is a regulatory requirement of Bangladesh Bank.
+
+   Network connectivity:
+   - Redundant links from at least two independent providers over diverse physical routes, redundant core switches and routers, and adequate bandwidth for replication traffic.
+
+   Data security and compliance:
+   - Encryption at rest and in transit, network segmentation, firewalls, IDS and IPS, privileged access management, complete audit logging, and compliance with Bangladesh Bank ICT security guidelines, PCI DSS for card data and ISO 27001.
+
+   Fire detection and suppression:
+   - Very early smoke detection, and a clean agent suppression system such as FM-200 or Novec 1230 rather than water, which would destroy the equipment.
+
+   Scalability and capacity planning:
+   - Modular design in power, cooling and space so that capacity can be added as the bank grows, with headroom planned rather than exhausted.
+
+   Monitoring and management:
+   - A DCIM system and a 24 hour network operations centre monitoring power, temperature, humidity, water leakage, capacity and every device, with alerting and escalation.
+
+   Site selection:
+   - Away from flood plains, industrial hazards and flight paths, with a stable power supply, good road access and the ability to bring in diverse fibre routes.
+
+   Data sovereignty:
+   - Bangladesh Bank requires core banking data to remain within the country, so the primary and DR sites must both be domestic.
+
+   Operational discipline:
+   - Documented change management, trained staff, defined incident response, regular audits, and tested backup and restore procedures. Most real outages come from process failures rather than equipment failures.
 3. **What are the challenges in optimizing energy efficiency of data centers? Explain!** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 442 (ET: BIBM)]*
 
+
+   Answer: The challenges in optimising the energy efficiency of a data centre are the following.
+
+   Cooling load:
+   - Cooling typically consumes 30 to 40 percent of the total energy of a data centre, and in a hot and humid climate such as Bangladesh far more. Removing the heat is as expensive as producing the computation.
+   - Mixing of hot and cold air is the commonest inefficiency: without hot and cold aisle containment the cold supply air short circuits into the return, so the cooling plant works far harder than necessary.
+   - Conservative set points: operators keep the hall much colder than necessary out of fear, although modern equipment tolerates up to 27 degrees Celsius under the ASHRAE guidance. Every degree of over-cooling costs money.
+
+   Low server utilisation:
+   - A typical server runs at 10 to 20 percent utilisation but draws 50 to 60 percent of its peak power, because power consumption is far from proportional to load. Idle machines therefore waste enormous amounts of energy.
+   - Ghost or comatose servers, that is machines still running but serving nothing, are widespread and hard to identify without careful auditing.
+
+   Power conversion losses:
+   - Every conversion stage loses energy: transformer, UPS, PDU and the server power supply. An older UPS running at low load can be only 85 to 90 percent efficient, and the losses appear as heat, which then has to be cooled, so the penalty is paid twice.
+
+   Redundancy against efficiency:
+   - The 2N redundancy that a bank needs for availability means every system runs at about half load, and equipment is least efficient at low load. Availability and efficiency pull in opposite directions, and availability rightly wins, so the efficiency gain must be found elsewhere.
+
+   Legacy infrastructure:
+   - Old servers, old UPS units and old chillers are far less efficient than current equipment, but replacing them requires capital and downtime, and the payback calculation must compete with other investments.
+   - Retrofitting containment or changing the airflow design in a live hall is disruptive and risky.
+
+   Measurement and visibility:
+   - Without metering at the rack and the device level, there is no basis for improvement. Many data centres cannot even calculate PUE, Power Usage Effectiveness, accurately, and PUE itself measures only infrastructure overhead, not whether the IT work being done is useful.
+   - The absence of DCIM tooling means capacity and consumption are estimated rather than known.
+
+   Variable and unpredictable workload:
+   - Capacity must be provisioned for the peak, so most of the time it is over-provisioned. Dynamic capacity provisioning and workload consolidation help, but they conflict with the requirement to have headroom instantly available.
+
+   Organisational and financial obstacles:
+   - Split incentives: the facilities budget pays the electricity bill while the IT department chooses the equipment, so neither has both the motive and the means.
+   - Risk aversion: any change that could affect uptime is resisted, and rightly so in a bank, which makes efficiency projects hard to approve.
+   - Lack of skilled staff who understand both the IT and the mechanical and electrical side.
+
+   Local constraints in Bangladesh:
+   - High ambient temperature and humidity for most of the year, which rules out free cooling for much of the time and raises the cooling load.
+   - Unreliable grid supply, so generators run more often and at partial load, which is inefficient.
+   - Limited availability of high efficiency equipment and of local expertise, and the capital cost of importing it.
+
+   Measures that address these challenges: hot and cold aisle containment, raising the set point within ASHRAE limits, virtualisation and consolidation to raise utilisation, decommissioning comatose servers, modern high efficiency UPS in eco mode, variable speed fans and pumps, in-row and liquid cooling for high density racks, free cooling where the climate allows, rack level metering with DCIM, and setting and tracking a PUE target.
 4. **What do you mean by national data center?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
 
+
+   Answer: A national data centre is a centralised, government owned data centre facility that hosts the information systems, applications and data of the government of a country.
+
+   Purpose:
+   - To provide a single, secure, standardised and professionally managed hosting facility for all ministries, departments and agencies, instead of each maintaining its own small and poorly protected server room.
+   - To keep national data within the country, which is a requirement of data sovereignty and of sector regulations such as those governing banking data.
+   - To provide shared infrastructure, cloud services and disaster recovery to the whole of government, which is far cheaper than duplicating it.
+   - To enable e-government: the national portal, the National ID system, e-Nothi, e-GP, land records, health and education systems all need reliable hosting.
+
+   Characteristics:
+   - High availability design, normally Tier III or Tier IV, with redundant power, cooling, network and storage.
+   - Dual utility feeds, UPS systems and standby generators with substantial on-site fuel.
+   - Precision cooling with hot and cold aisle containment and fire suppression using a clean agent.
+   - Strong physical security: biometric access control, CCTV, mantraps and 24 hour guarding.
+   - Government cloud services, virtualisation and shared storage.
+   - A geographically separate disaster recovery site with data replication.
+   - 24 hour network operations and security operations centres.
+
+   In Bangladesh:
+   - The National Data Centre is operated by the Bangladesh Computer Council under the ICT Division.
+   - The Bangladesh National Data Center at Kaliakoir, in the Sheikh Hasina Software Technology Park, is a Tier IV facility, the largest in the country and among the largest in South Asia, and it provides government cloud and disaster recovery services.
+   - It hosts the national portal, government email, the Election Commission's NID system, e-Nothi, e-GP and many ministry applications, and provides co-location and cloud services to government agencies.
+
+   Benefits: economies of scale, uniform security standards, professional operation, faster deployment of new government services, and central disaster recovery. Its risks are the concentration of national data in one place, which makes it a high value target, and the need for genuinely independent disaster recovery.
 5. **What is DCIM in a data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
 
+
+   Answer: DCIM stands for Data Center Infrastructure Management. It is the software and hardware system that monitors, measures and manages the physical infrastructure of a data centre together with the IT equipment it supports.
+
+   What it manages:
+   - Power: consumption at the utility, UPS, PDU, rack and device level; power chain topology; capacity headroom; and PUE calculation.
+   - Cooling and environment: temperature, humidity, airflow, water leak detection, and the performance of the CRAC or CRAH units.
+   - Space and assets: a full inventory of every rack, server, switch and cable, with the exact position of each device, often shown as a 3D floor plan.
+   - Capacity planning: how much power, cooling, space, network port and weight capacity remains, and where a new server can actually be placed.
+   - Connectivity: port level network and power connection mapping, so that the effect of removing any device is known.
+   - Change management: workflow for installations, moves and decommissioning, so that the documentation matches reality.
+   - Alerting: threshold based alarms with escalation, integrated with the operations centre.
+
+   Benefits:
+   - Visibility: it replaces spreadsheets and guesswork with measured data, which is the precondition for every other improvement.
+   - Energy efficiency: it identifies hot spots, over-cooling, low utilisation and comatose servers, and it makes PUE measurable and therefore improvable.
+   - Capacity optimisation: it prevents both stranded capacity, where power exists but space does not or the reverse, and dangerous over-provisioning of a circuit.
+   - Availability: early warning of a rising temperature, a failing UPS battery or an overloaded circuit prevents outages rather than merely recording them.
+   - Faster incident resolution, because the exact location and dependencies of every device are known.
+   - Cost control and better informed investment decisions, and support for audit and compliance reporting.
+
+   Examples of DCIM products: Schneider Electric EcoStruxure IT, Nlyte, Sunbird dcTrack, Vertiv Trellis and Device42.
+
+   - The essential point: a data centre cannot be optimised for either energy or capacity without measurement, and DCIM is the measurement layer. Its main difficulty is that it requires accurate data entry and disciplined change management to stay useful.
 6. **What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
 
+
+   Answer:
+
+   What data centre tiering means:
+   - Tiering is a standardised classification of data centre availability, defined by the Uptime Institute in standard TIA-942, which grades a facility from Tier I to Tier IV according to the redundancy of its power, cooling and distribution paths and the resulting expected availability.
+   - The tier describes the design of the physical infrastructure, not the quality of the IT equipment or the operations, and each tier includes all the requirements of the tiers below it.
+
+   Differences between the tier standards:
+
+   | Point | Tier I | Tier II | Tier III | Tier IV |
+   |---|---|---|---|---|
+   | Description | Basic capacity | Redundant components | Concurrently maintainable | Fault tolerant |
+   | Power and cooling paths | Single, non-redundant | Single path | Multiple paths, one active and one alternate | Two simultaneously active independent paths |
+   | Redundancy | N | N+1 | N+1 | 2N or 2(N+1) |
+   | Availability | 99.671 percent | 99.741 percent | 99.982 percent | 99.995 percent |
+   | Annual downtime | About 28.8 hours | About 22 hours | About 1.6 hours | About 26 minutes |
+   | Maintenance without shutdown | No, the whole site must be shut down | No, the distribution path must be shut down | Yes, any component can be maintained while running | Yes, and it also survives an unplanned failure |
+   | Single point of failure | Many | Some | Few in capacity, but the distribution is still a risk | None; it is fault tolerant |
+   | Generator and UPS | Single | Redundant components, single path | Multiple, dual powered equipment | Fully independent dual systems, physically separated |
+   | Typical user | Small business, test and development | Small and medium enterprise | Bank, large enterprise, government, co-location provider | Central bank, national data centre, mission critical government systems |
+   | Relative cost | Lowest | Low | High | Highest, roughly double Tier III |
+
+   Illustration of the power path:
+
+   ```
+   TIER I               TIER II              TIER III                 TIER IV
+   Utility              Utility              Utility A                Utility A     Utility B
+     |                    |                    |                        |             |
+    UPS                UPS + spare          UPS A   UPS B             UPS A         UPS B
+     |                    |                    \     /                  |             |
+    PDU                  PDU                    PDU (dual fed)         PDU A         PDU B
+     |                    |                       |                      \           /
+   Server               Server              Dual-corded Server        Dual-corded Server
+   single path        redundant parts      two paths, one active     two paths, both active
+   ```
+
+   - The practical meaning: Tier I and Tier II must be shut down for maintenance; Tier III can be maintained while running but a single unplanned failure can still cause an outage; Tier IV survives any single unplanned failure without interruption.
+   - The Bangladesh National Data Center at Kaliakoir is a Tier IV facility, and most commercial bank data centres in the country are designed to Tier III.
 7. **What do you mean by dynamic capacity provisioning? Why it is essential for data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 751 (ET: N/A)]*
+
+
+   Answer:
+
+   What dynamic capacity provisioning is:
+   - Dynamic capacity provisioning is the practice of allocating computing resources — servers, virtual machines, containers, storage, bandwidth and even power and cooling — automatically and in real time according to the actual workload, instead of fixing the capacity in advance for the expected peak.
+   - It works through continuous monitoring of demand indicators such as CPU utilisation, memory, queue length or request rate; a policy that defines thresholds and limits; and an orchestration layer that adds or removes resources automatically. Auto-scaling groups, Kubernetes horizontal pod autoscaling and dynamic power capping are the usual implementations.
+   - It scales in both directions: out and up when demand rises, and in and down when it falls, which is the part that actually saves money.
+
+   Why it is essential for a data centre:
+   - Energy saving: a server at idle still draws 50 to 60 percent of its peak power, so consolidating workloads and powering down or suspending unused machines is one of the largest available efficiency gains. Cooling load falls proportionally, so the saving is doubled.
+   - Cost efficiency: capacity provisioned for a peak that occurs a few hours a month is idle and paid for the rest of the time. Matching capacity to demand converts that waste into avoided cost.
+   - Handling variable and unpredictable demand: traffic to a bank's systems on salary day, before Eid, or during an examination result publication is many times the average. Fixed provisioning either fails at the peak or wastes money the rest of the year.
+   - Better resource utilisation: it raises typical utilisation from 10 or 20 percent towards a healthy 60 or 70 percent, which is the single most effective efficiency measure available.
+   - Performance and service levels: capacity is added before the queue builds, so response time stays within the service level agreement instead of degrading under load.
+   - Availability and resilience: workloads can be moved automatically away from a failing or overheating node, and capacity can be re-created elsewhere.
+   - Deferred capital expenditure: by using the existing estate more effectively, the date at which new hardware, power capacity or floor space must be bought is pushed further out.
+   - Sustainability and thermal management: lower consumption reduces both the electricity bill and the carbon footprint, and dynamic power capping prevents localised hot spots that would otherwise force the whole hall to be over-cooled.
+
+   Challenges to state for balance: the delay in bringing new capacity online, which means scaling must be predictive rather than purely reactive; the risk of oscillation if the thresholds are badly chosen; licensing that is charged per physical core regardless of use; stateful applications and databases, which do not scale horizontally as easily as stateless web tiers; and the need for accurate monitoring, without which the automation makes the wrong decisions.
 
 ## Server Hardware & Enterprise Systems (5)
 
