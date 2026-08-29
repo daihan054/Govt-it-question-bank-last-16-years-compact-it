@@ -878,27 +878,317 @@
 
 1. **Math: Interest realated** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
+
+   Answer: The question only says "interest related", so the two standard formulas and a worked example of each are given below.
+
+   Simple interest:
+   - I = P.r.t / 100, where P is the principal, r the annual rate per cent and t the time in years
+   - Amount A = P + I = P(1 + rt/100)
+   - The interest is calculated on the original principal every year, so it is the same amount each year.
+
+   Example: principal Tk 10,000 at 8 per cent for 3 years.
+   - I = (10000 x 8 x 3) / 100 = Tk 2,400
+   - A = 10000 + 2400 = Tk 12,400
+
+   Compound interest:
+   - A = P(1 + r/100)^n when compounded annually
+   - CI = A - P
+   - For compounding m times a year: A = P(1 + r/(100m))^(mn)
+   - The interest of each period is added to the principal, so interest is earned on interest.
+
+   Example: principal Tk 10,000 at 8 per cent for 3 years, compounded annually.
+   - A = 10000 x (1.08)^3 = 10000 x 1.259712 = Tk 12,597.12
+   - CI = 12597.12 - 10000 = Tk 2,597.12
+
+   Difference between the two for the same data: 2597.12 - 2400 = Tk 197.12, which is the interest earned on interest.
+
+   Useful shortcuts:
+   - Difference between CI and SI for 2 years = P(r/100)^2
+   - Difference for 3 years = P(r/100)^2 x (300 + r)/100
+   - Time to double at simple interest = 100/r years
+   - Approximate time to double at compound interest (rule of 72) = 72/r years
 2. **১০০ টাকার ২৫টি করে লেবু ক্রয় করে ১০০ টাকায় ২০টি করে লেবু বিক্রি করলে শতকরা কত লাভ হবে?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
 
+
+   Answer: ধাপ ১ - ক্রয়মূল্য নির্ণয়:
+   - ১০০ টাকায় ২৫টি লেবু
+   - প্রতিটির ক্রয়মূল্য = ১০০ / ২৫ = ৪ টাকা
+
+   ধাপ ২ - বিক্রয়মূল্য নির্ণয়:
+   - ১০০ টাকায় ২০টি লেবু
+   - প্রতিটির বিক্রয়মূল্য = ১০০ / ২০ = ৫ টাকা
+
+   ধাপ ৩ - লাভ নির্ণয়:
+   - প্রতিটিতে লাভ = ৫ - ৪ = ১ টাকা
+
+   ধাপ ৪ - শতকরা লাভ নির্ণয়:
+   - শতকরা লাভ = (লাভ / ক্রয়মূল্য) x ১০০
+   - = (১ / ৪) x ১০০
+   - = ২৫ শতাংশ
+
+   উত্তর: ২৫ শতাংশ লাভ হবে।
+
+   বিকল্প পদ্ধতি (লসাগু ব্যবহার করে): ২৫ ও ২০ এর লসাগু ১০০। ১০০টি লেবু কিনতে খরচ = ৪ x ১০০ = ৪০০ টাকা এবং বিক্রি করে পাওয়া যাবে ৫ x ১০০ = ৫০০ টাকা। লাভ ১০০ টাকা, শতকরা লাভ = (১০০/৪০০) x ১০০ = ২৫ শতাংশ। একই উত্তর।
 3. **জনাব রহিম তার সম্পদের ২৫% স্ত্রীকে, ৪৫% ছেলেকে এবং অবশিষ্ট ৭২০০০ টাকা মেয়েকে দিলেন। তার সম্পদের মোট মূল কত?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
 
+
+   Answer: ধরি, জনাব রহিমের মোট সম্পদের পরিমাণ = x টাকা।
+
+   ধাপ ১ - স্ত্রী ও ছেলেকে দেওয়া অংশ:
+   - স্ত্রীকে = ২৫ শতাংশ
+   - ছেলেকে = ৪৫ শতাংশ
+   - মোট = ২৫ + ৪৫ = ৭০ শতাংশ
+
+   ধাপ ২ - মেয়েকে দেওয়া অংশ:
+   - অবশিষ্ট = ১০০ - ৭০ = ৩০ শতাংশ
+   - প্রশ্ন অনুযায়ী এই ৩০ শতাংশ = ৭২,০০০ টাকা
+
+   ধাপ ৩ - সমীকরণ গঠন ও সমাধান:
+   - (৩০ / ১০০) x x = ৭২,০০০
+   - ০.৩০ x = ৭২,০০০
+   - x = ৭২,০০০ / ০.৩০
+   - x = ২,৪০,০০০
+
+   উত্তর: তার মোট সম্পদের পরিমাণ ২,৪০,০০০ টাকা।
+
+   যাচাই:
+   - স্ত্রী পেলেন ২৫ শতাংশ = ৬০,০০০ টাকা
+   - ছেলে পেলেন ৪৫ শতাংশ = ১,০৮,০০০ টাকা
+   - মেয়ে পেলেন ৩০ শতাংশ = ৭২,০০০ টাকা
+   - মোট = ৬০,০০০ + ১,০৮,০০০ + ৭২,০০০ = ২,৪০,০০০ টাকা। মিলে গেছে।
 4. **A scored 30% marks and failed by 15 marks. B scored 40% marks and obtained 35 marks more than those required to pass. The pass percentage is?** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
 
+
+   Answer: Let the total marks be T and the pass mark be P.
+
+   Step 1 - form the equation from A's result:
+   - A scored 30 per cent and failed by 15 marks, so A's marks are 15 short of the pass mark.
+   - 0.30T + 15 = P ... (i)
+
+   Step 2 - form the equation from B's result:
+   - B scored 40 per cent and obtained 35 marks more than the pass mark.
+   - 0.40T - 35 = P ... (ii)
+
+   Step 3 - equate (i) and (ii):
+   - 0.30T + 15 = 0.40T - 35
+   - 15 + 35 = 0.40T - 0.30T
+   - 50 = 0.10T
+   - T = 500
+
+   Step 4 - find the pass mark:
+   - P = 0.30(500) + 15 = 150 + 15 = 165
+
+   Step 5 - find the pass percentage:
+   - Pass percentage = (P / T) x 100
+   - = (165 / 500) x 100
+   - = 33 per cent
+
+   Final answer: the pass percentage is 33 per cent.
+
+   Verification: A scored 30 per cent of 500 = 150, which is 15 short of 165. B scored 40 per cent of 500 = 200, which is 35 more than 165. Both conditions hold.
 5. **A basketball team has won 15 games and lost 9. If these games represent 16\frac{2}{3}\% of the games to be played, then how many more games must the team win to average 75% for the season?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
+
+   Answer: Step 1 - find the number of games played so far:
+   - Games won = 15, games lost = 9
+   - Games played = 15 + 9 = 24
+
+   Step 2 - find the total number of games in the season:
+   - These 24 games are 16 and two-thirds per cent of the total, and 16 and two-thirds per cent = 50/3 per cent = 1/6
+   - So (1/6) x Total = 24
+   - Total = 24 x 6 = 144 games
+
+   Step 3 - find the number of wins needed for a 75 per cent average:
+   - Required wins = 75 per cent of 144
+   - = (75 / 100) x 144
+   - = 108 games
+
+   Step 4 - find how many more must be won:
+   - Already won = 15
+   - More wins needed = 108 - 15
+   - = 93
+
+   Final answer: the team must win 93 more games.
+
+   Check: 108 wins out of 144 games gives 108/144 = 0.75, that is 75 per cent. Correct. The team will lose 144 - 108 = 36 games in total, of which 9 have already been lost, so it can afford only 27 more losses in the remaining 120 games.
 6. **A father has divided his property between his two sons A and B. A invests the amount at a compound profit of 8\% p.a. B invests the amount of 10\% p.a. simple profit. At the end of 2 years, the profit received by B is Taka 1336 more than the interest received by A. Find A's share in the fathers property of Taka 25000.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 446 (ET: BIBM)]*
 
+
+   Answer: Let A's share be Tk x, so B's share is Tk (25000 - x).
+
+   Step 1 - A's compound interest for 2 years at 8 per cent:
+   - Amount = x(1 + 8/100)^2 = x(1.08)^2 = 1.1664x
+   - CI = 1.1664x - x = 0.1664x
+
+   Step 2 - B's simple interest for 2 years at 10 per cent:
+   - SI = (25000 - x) x 10 x 2 / 100
+   - = 0.20(25000 - x)
+   - = 5000 - 0.20x
+
+   Step 3 - form the equation from the given condition, that B's profit exceeds A's by Tk 1336:
+   - (5000 - 0.20x) - 0.1664x = 1336
+
+   Step 4 - solve:
+   - 5000 - 0.3664x = 1336
+   - 0.3664x = 5000 - 1336
+   - 0.3664x = 3664
+   - x = 3664 / 0.3664
+   - x = 10000
+
+   Final answer: A's share in the father's property is Tk 10,000 (and B's share is Tk 15,000).
+
+   Verification:
+   - A's compound interest = 10000 x 0.1664 = Tk 1,664
+   - B's simple interest = 15000 x 0.20 = Tk 3,000
+   - Difference = 3000 - 1664 = Tk 1,336. Correct.
 7. **The percentage profit earned by selling an artical for Tk. 1920 is equal to the percentage loss incurred by selling the same artical for Tk. 1280. At what price should the artical be sold to make 25\% profit?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
 
+
+   Answer: Let the cost price of the article be Tk c.
+
+   Step 1 - write the profit percentage at Tk 1920:
+   - Profit percentage = [(1920 - c) / c] x 100
+
+   Step 2 - write the loss percentage at Tk 1280:
+   - Loss percentage = [(c - 1280) / c] x 100
+
+   Step 3 - the two are equal, so equate them. The denominator and the factor 100 cancel:
+   - 1920 - c = c - 1280
+
+   Step 4 - solve for c:
+   - 1920 + 1280 = 2c
+   - 3200 = 2c
+   - c = 1600
+
+   Step 5 - find the selling price for 25 per cent profit:
+   - SP = c x (1 + 25/100)
+   - = 1600 x 1.25
+   - = Tk 2,000
+
+   Final answer: the article should be sold for Tk 2,000.
+
+   Verification: at Tk 1920 the profit is 320 on a cost of 1600, that is 20 per cent. At Tk 1280 the loss is 320 on a cost of 1600, that is also 20 per cent. The two percentages are equal, so the cost price is correct.
+
+   Shortcut worth remembering: when the profit percentage at one price equals the loss percentage at another, the cost price is simply the average of the two prices, that is (1920 + 1280)/2 = 1600.
 8. **আগে যে টাকায় ৭ লিটার সয়াবিন তেল পাওয়া যেত, এখন সে টাকায় ৫ লিটার সয়াবিন তেল পাওয়া যায়। সয়াবিন তেলের দাম শতকরা কত ভাগ বৃদ্ধি পেল?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: ধরি, নির্দিষ্ট টাকার পরিমাণ = ৩৫ টাকা (৭ ও ৫ এর লসাগু নিলে হিসাব সহজ হয়)।
+
+   ধাপ ১ - আগের দাম নির্ণয়:
+   - ৩৫ টাকায় পাওয়া যেত ৭ লিটার
+   - প্রতি লিটারের আগের দাম = ৩৫ / ৭ = ৫ টাকা
+
+   ধাপ ২ - বর্তমান দাম নির্ণয়:
+   - ৩৫ টাকায় এখন পাওয়া যায় ৫ লিটার
+   - প্রতি লিটারের বর্তমান দাম = ৩৫ / ৫ = ৭ টাকা
+
+   ধাপ ৩ - দাম বৃদ্ধি:
+   - বৃদ্ধি = ৭ - ৫ = ২ টাকা
+
+   ধাপ ৪ - শতকরা বৃদ্ধি নির্ণয় (আগের দামের ওপর ভিত্তি করে):
+   - শতকরা বৃদ্ধি = (বৃদ্ধি / আগের দাম) x ১০০
+   - = (২ / ৫) x ১০০
+   - = ৪০ শতাংশ
+
+   উত্তর: সয়াবিন তেলের দাম শতকরা ৪০ ভাগ বৃদ্ধি পেয়েছে।
+
+   সূত্র আকারে: পরিমাণ a থেকে b তে নেমে এলে দামের শতকরা বৃদ্ধি = [(a - b) / b] x ১০০ = [(৭ - ৫)/৫] x ১০০ = ৪০ শতাংশ।
 9. **০.০২৫ এর শতকরা ১ অংশ কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: নির্ণেয় = ০.০২৫ এর শতকরা ১ অংশ, অর্থাৎ ০.০২৫ এর ১ শতাংশ।
+
+   ধাপ ১ - শতকরার অর্থ:
+   - ১ শতাংশ = ১ / ১০০ = ০.০১
+
+   ধাপ ২ - গুণ:
+   - ০.০২৫ x ০.০১
+
+   ধাপ ৩ - হিসাব:
+   - = ২৫ / ১০০০ x ১ / ১০০
+   - = ২৫ / ১,০০,০০০
+   - = ০.০০০২৫
+
+   উত্তর: ০.০০০২৫ (অর্থাৎ ২.৫ x ১০^-৪)
+
+   ভগ্নাংশ আকারে: ১/৪০০০।
 10. **৩. চিনির মূল্য ২০% বৃদ্ধির পাওয়ার পর চিনির ব্যবহার শতকরা কত কমালে মোট খরচের কোনো পরিবর্তন হবে না।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+
+    Answer: ধরি, আগের দাম = ১০০ টাকা এবং আগের ব্যবহার = ১ একক। তাহলে আগের মোট খরচ = ১০০ x ১ = ১০০ টাকা।
+
+    ধাপ ১ - দাম বৃদ্ধির পর নতুন দাম:
+    - নতুন দাম = ১০০ + ২০ শতাংশ = ১২০ টাকা
+
+    ধাপ ২ - মোট খরচ অপরিবর্তিত রাখতে হলে:
+    - নতুন দাম x নতুন ব্যবহার = ১০০
+    - ১২০ x নতুন ব্যবহার = ১০০
+    - নতুন ব্যবহার = ১০০ / ১২০ = ৫/৬ একক
+
+    ধাপ ৩ - ব্যবহারের হ্রাস:
+    - হ্রাস = ১ - ৫/৬ = ১/৬ একক
+
+    ধাপ ৪ - শতকরা হ্রাস (আগের ব্যবহারের ওপর ভিত্তি করে):
+    - = (১/৬) x ১০০
+    - = ১৬.৬৭ শতাংশ, অর্থাৎ ১৬ ও ২/৩ শতাংশ
+
+    উত্তর: চিনির ব্যবহার ১৬ ও ২/৩ শতাংশ (প্রায় ১৬.৬৭ শতাংশ) কমালে মোট খরচের কোনো পরিবর্তন হবে না।
+
+    সরাসরি সূত্র: দাম r শতাংশ বাড়লে খরচ অপরিবর্তিত রাখতে ব্যবহার কমাতে হবে [r / (১০০ + r)] x ১০০ শতাংশ।
+    - এখানে = [২০ / (১০০ + ২০)] x ১০০ = (২০/১২০) x ১০০ = ১৬.৬৭ শতাংশ। একই উত্তর।
 11. **৪. একই হার সুদে ৩০০ টাকার ৪ বছরের সুদ এবং ৫০০ টাকার ৫ বছরের সুদ একতে ১৪৮ টাকা হলে, শতকনা বার্ষিক সুদের হার কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+
+    Answer: ধরি, বার্ষিক সুদের হার = r শতাংশ। সরল সুদের সূত্র: সুদ = (আসল x সময় x হার) / ১০০
+
+    ধাপ ১ - ৩০০ টাকার ৪ বছরের সুদ:
+    - = (৩০০ x ৪ x r) / ১০০
+    - = ১২r
+
+    ধাপ ২ - ৫০০ টাকার ৫ বছরের সুদ:
+    - = (৫০০ x ৫ x r) / ১০০
+    - = ২৫r
+
+    ধাপ ৩ - প্রশ্ন অনুযায়ী দুই সুদের যোগফল ১৪৮ টাকা:
+    - ১২r + ২৫r = ১৪৮
+    - ৩৭r = ১৪৮
+
+    ধাপ ৪ - সমাধান:
+    - r = ১৪৮ / ৩৭
+    - r = ৪
+
+    উত্তর: বার্ষিক সুদের হার ৪ শতাংশ।
+
+    যাচাই:
+    - ৩০০ টাকার ৪ বছরের সুদ = (৩০০ x ৪ x ৪)/১০০ = ৪৮ টাকা
+    - ৫০০ টাকার ৫ বছরের সুদ = (৫০০ x ৫ x ৪)/১০০ = ১০০ টাকা
+    - যোগফল = ৪৮ + ১০০ = ১৪৮ টাকা। মিলে গেছে।
 12. **মিঃ কবির সাহেব তার স্ত্রীকে ৫৮%, ছেলেকে ১২% সম্পত্তি দান করেন। দান করার পর তার কাছে অবশিষ্ট সম্পত্তির পরিমাণ ৭২,০০০ টাকা। তার মোট সম্পত্তির পরিমান কত?** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+
+    Answer: ধরি, কবির সাহেবের মোট সম্পত্তির পরিমাণ = x টাকা।
+
+    ধাপ ১ - দান করা অংশ:
+    - স্ত্রীকে = ৫৮ শতাংশ
+    - ছেলেকে = ১২ শতাংশ
+    - মোট দান = ৫৮ + ১২ = ৭০ শতাংশ
+
+    ধাপ ২ - অবশিষ্ট অংশ:
+    - অবশিষ্ট = ১০০ - ৭০ = ৩০ শতাংশ
+    - প্রশ্ন অনুযায়ী এই ৩০ শতাংশ = ৭২,০০০ টাকা
+
+    ধাপ ৩ - সমীকরণ গঠন ও সমাধান:
+    - (৩০ / ১০০) x x = ৭২,০০০
+    - ৩০x = ৭২,০০,০০০
+    - x = ২,৪০,০০০
+
+    উত্তর: তার মোট সম্পত্তির পরিমাণ ২,৪০,০০০ টাকা।
+
+    যাচাই:
+    - স্ত্রী পেলেন ৫৮ শতাংশ = ১,৩৯,২০০ টাকা
+    - ছেলে পেলেন ১২ শতাংশ = ২৮,৮০০ টাকা
+    - অবশিষ্ট = ২,৪০,০০০ - ১,৩৯,২০০ - ২৮,৮০০ = ৭২,০০০ টাকা। মিলে গেছে।
 
 ## Basic Arithmetic & Average (11)
 
