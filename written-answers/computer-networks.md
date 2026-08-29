@@ -879,26 +879,194 @@ ii) 211.10.15.4
 | Path 3 | 200 | 65030 65040 | IGP | 10 |
 | Path 4 | 200 | 65050 65060 | IGP | 20 |
 
+
+   Answer: BGP compares the attributes in a fixed order and stops at the first attribute that produces a single winner.
+
+   Step 1, highest LOCAL_PREF wins:
+   - Path 1 = 200, Path 2 = 150, Path 3 = 200, Path 4 = 200.
+   - Path 2 is eliminated. Paths 1, 3 and 4 continue.
+
+   Step 2, shortest AS_PATH wins:
+   - Path 1 = 65001 65010, length 2. Path 3 = 65030 65040, length 2. Path 4 = 65050 65060, length 2.
+   - All three are equal, so no decision. All continue.
+
+   Step 3, lowest ORIGIN wins, where IGP is better than EGP which is better than Incomplete:
+   - All three are IGP, so no decision. All continue.
+
+   Step 4, lowest MED wins:
+   - Path 1 = 50, Path 3 = 10, Path 4 = 20.
+   - Path 3 has the lowest MED, so Path 3 is selected.
+
+   Final answer: Path 3 is chosen as the best route, on the basis of the lowest MED of 10 among the paths that tied on LOCAL_PREF, AS_PATH length and ORIGIN.
+
+   Full BGP best path order, for reference:
+   - Highest weight, which is Cisco specific and local to the router.
+   - Highest LOCAL_PREF.
+   - Locally originated route, that is one injected by this router.
+   - Shortest AS_PATH.
+   - Lowest ORIGIN code: IGP, then EGP, then Incomplete.
+   - Lowest MED.
+   - eBGP preferred over iBGP.
+   - Lowest IGP metric to the next hop.
+   - Oldest route, for eBGP stability.
+   - Lowest router ID, and finally the lowest neighbour IP address.
+
+   - One caution worth writing: by the strict rule MED is compared only between paths received from the same neighbouring AS. Here the three paths come from different ASes, so a real router with the default configuration would skip MED and move on to the eBGP versus iBGP and IGP metric tie-breakers. The question asks for the attributes to be applied in the given order, so Path 3 is the intended answer, and `bgp always-compare-med` would make a real router behave that way too.
 2. **Static route Configuration: Configure R0 to reach PC1 you can assume any Vendor, Cisco, Huawei, juniper** *[Islami Bank PLC Senior Officer (Network/System) 14.03.2025 compact it 1331 (ET: BUET)]*
 
+
+   Answer: Static route configuration on a Cisco router, so that R0 can reach PC1.
+
+   Assumed topology: PC1 sits on the LAN 192.168.2.0/24 behind R1; R0 and R1 are joined by the link 10.0.0.0/30, with R0 at 10.0.0.1 and R1 at 10.0.0.2. R0's own LAN is 192.168.1.0/24.
+
+   ```
+   PC0 --- [R0] ---10.0.0.0/30--- [R1] --- PC1
+   192.168.1.0/24  .1        .2   192.168.2.0/24
+   ```
+
+   Configuration on R0:
+
+   ```
+   Router> enable
+   Router# configure terminal
+   Router(config)# hostname R0
+   R0(config)# interface gigabitEthernet 0/0
+   R0(config-if)# ip address 192.168.1.1 255.255.255.0
+   R0(config-if)# no shutdown
+   R0(config-if)# exit
+   R0(config)# interface serial 0/0/0
+   R0(config-if)# ip address 10.0.0.1 255.255.255.252
+   R0(config-if)# clock rate 64000
+   R0(config-if)# no shutdown
+   R0(config-if)# exit
+   R0(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2
+   R0(config)# exit
+   R0# write memory
+   ```
+
+   - Syntax of the static route: `ip route <destination network> <subnet mask> <next hop IP or exit interface>`.
+   - Here it says: to reach 192.168.2.0/24, send the packet to the next hop 10.0.0.2, which is R1.
+
+   The return route must also be configured on R1, otherwise the reply cannot come back:
+
+   ```
+   R1(config)# ip route 192.168.1.0 255.255.255.0 10.0.0.1
+   ```
+
+   Verification commands:
+   - `show ip route` to confirm the route appears with an S, meaning static.
+   - `show ip interface brief` to check that the interfaces are up.
+   - `ping 192.168.2.10` from R0, and `tracert` from PC0 to PC1.
+
+   - A default route `ip route 0.0.0.0 0.0.0.0 10.0.0.2` could be used instead if R0 has only one way out. Static routes have an administrative distance of 1, so they are preferred over any dynamically learned route.
 3. **What is OSPF? Briefly Explain.** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
 
+
+   Answer: OSPF, Open Shortest Path First, is a link state interior gateway protocol used to route within a single autonomous system.
+
+   - It is an open standard, defined in RFC 2328 for OSPFv2 with IPv4 and RFC 5340 for OSPFv3 with IPv6, so it works between equipment from different vendors.
+   - Algorithm: Dijkstra's shortest path first. Every router builds a complete map of the area and computes the shortest path tree with itself as the root.
+   - Metric: cost, calculated as reference bandwidth divided by interface bandwidth, with a default reference of 100 Mbps.
+   - It runs directly over IP as protocol number 89, and uses multicast 224.0.0.5 for all OSPF routers and 224.0.0.6 for the designated routers.
+   - Operation: routers discover each other with Hello packets every 10 seconds on a broadcast link, form adjacencies, exchange Link State Advertisements, build an identical link state database for the area, and then each runs Dijkstra independently.
+   - On a multi-access segment a Designated Router and a Backup Designated Router are elected, so that adjacencies are n instead of n(n − 1)/2.
+   - Hierarchy: the network is divided into areas, all connected to the backbone Area 0. This limits flooding, reduces the size of the database and speeds up convergence.
+   - Advantages: fast convergence, no routing loops, classless with VLSM and CIDR support, no hop count limit, supports equal cost load balancing and authentication, and sends updates only when something changes.
+   - Disadvantages: it needs more CPU and memory than a distance vector protocol, and its design and troubleshooting are more complex.
+   - Administrative distance is 110.
 4. **Which of the following is a pair of routing protocol?** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
    * **(A) TCP and IP**
    * **(B) HTTP and FTP**
    * **(C) RIP and OSPF**
    * **(D) ARP and RARP**
 
+
+   Answer: The correct option is (C) RIP and OSPF.
+
+   - RIP, the Routing Information Protocol, is a distance vector routing protocol using hop count as its metric, and OSPF, Open Shortest Path First, is a link state routing protocol using cost. Both are interior gateway routing protocols.
+   - (A) TCP and IP are transport and network layer protocols, not routing protocols.
+   - (B) HTTP and FTP are application layer protocols.
+   - (D) ARP and RARP are address resolution protocols, which map between IP and MAC addresses.
 5. **BGP is __________ protocol.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: BGP is a path vector routing protocol.
+
+   - It is also called an exterior gateway protocol, EGP, because it routes between autonomous systems rather than inside one, and it is the routing protocol of the Internet itself.
+   - It is called path vector because each advertisement carries the full list of autonomous systems the route has traversed, the AS_PATH, which is how loops are detected and how policy is applied.
+   - It runs over TCP port 179, uses BGP-4 today, and its administrative distance is 20 for eBGP and 200 for iBGP.
 6. **BGP stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+
+   Answer: BGP stands for Border Gateway Protocol.
+
+   - It is the exterior gateway protocol that exchanges routing information between autonomous systems, and it is what holds the global Internet routing table together.
+   - It is a path vector protocol running over TCP port 179, and the current version is BGP-4.
 7. **Which routing protocol use Dijkstra Algorithm?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+
+   Answer: OSPF, Open Shortest Path First, uses Dijkstra's algorithm.
+
+   - IS-IS, Intermediate System to Intermediate System, is the other link state protocol that also uses Dijkstra.
+   - Every OSPF router builds an identical link state database for its area and then runs Dijkstra's shortest path first algorithm with itself as the root, producing a shortest path tree from which the routing table is derived.
+   - For contrast, RIP and IGRP use the Bellman-Ford distance vector algorithm, EIGRP uses DUAL, and BGP uses a path vector best path selection process.
 8. **What is Routing? Explain different types of Routing? Why using benefit of an Adhoce routing? Which routing algorithm is used in shortest path algorithm?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 525 (ET: MIST)]*
 
+
+   Answer:
+
+   Routing:
+   - Routing is the process of selecting a path along which a packet travels from a source network to a destination network, and of building and maintaining the routing table that records those paths.
+
+   Types of routing:
+   - Static routing: paths are entered manually by the administrator. No overhead, complete control, but no automatic adaptation and no scalability. Suits small or stub networks and default routes.
+   - Default routing: a single route, 0.0.0.0/0, that catches everything not matched by a more specific entry. Used on a stub router with only one exit.
+   - Dynamic routing: routers learn paths automatically by exchanging information with a routing protocol, and adapt when a link fails. It is subdivided as follows.
+   - Interior Gateway Protocols, used inside one autonomous system: RIP and IGRP as distance vector, OSPF and IS-IS as link state, and EIGRP as a hybrid.
+   - Exterior Gateway Protocol, used between autonomous systems: BGP, a path vector protocol.
+   - Distance vector routing: uses Bellman-Ford; each router tells its neighbours its whole table periodically.
+   - Link state routing: uses Dijkstra; each router floods the state of its own links to everyone, so all routers hold the same map.
+
+   Benefits of ad hoc routing:
+   - No fixed infrastructure is needed: no router, no access point and no cabling, so a network can be formed anywhere immediately.
+   - Rapid deployment, which is exactly what is needed in a disaster area, a battlefield or a temporary site where the fixed network has been destroyed or never existed.
+   - Self configuring and self healing: every node also acts as a router, so if one node moves away or fails, the routes are recomputed automatically around it.
+   - Multi-hop reach: two nodes far apart can still communicate by relaying through intermediate nodes, so the coverage is greater than any single radio range.
+   - Low cost, and full mobility, since the topology is expected to change continuously.
+   - Robustness, since there is no single point of failure such as a central base station.
+   - Common protocols are AODV and DSR, which are reactive, and OLSR and DSDV, which are proactive.
+
+   Shortest path algorithm:
+   - Dijkstra's algorithm is used for shortest path routing, and OSPF and IS-IS are the protocols built on it.
+   - Bellman-Ford is the shortest path algorithm used by distance vector protocols such as RIP.
 9. **(b) Distinguish between routing and forwarding. What are the advantages of net specific routing over host specific routing?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
 
+
+   Answer:
+
+   Routing vs forwarding:
+
+   | Point | Routing | Forwarding |
+   |---|---|---|
+   | Meaning | Deciding which paths exist and which is best | Moving one arriving packet to the correct outgoing interface |
+   | Scope | Network wide, involves many routers | Local to one router, one packet at a time |
+   | Plane | Control plane | Data plane |
+   | Timescale | Slow, seconds to minutes, runs in the background | Very fast, nanoseconds, for every packet |
+   | Produces or uses | Builds the routing table, the RIB | Uses the forwarding table, the FIB |
+   | Implementation | Software, running routing protocols such as OSPF and BGP | Hardware, using an ASIC or TCAM lookup |
+   | Trigger | A topology change or a periodic update | The arrival of a packet |
+
+   - In one sentence: routing decides the map, forwarding drives on it.
+
+   Advantages of net specific routing over host specific routing:
+   - Far smaller routing tables. One entry covers a whole network of thousands of hosts, instead of one entry per host, so a router that would otherwise need millions of entries needs only a few hundred thousand.
+   - Faster lookup, because the table is smaller and can fit into fast hardware memory.
+   - Less memory and less CPU needed on every router.
+   - Much less routing update traffic, since a change affecting one host does not have to be advertised across the network.
+   - Better scalability: adding or removing a host inside a network requires no routing change at all anywhere.
+   - Simpler administration and far fewer opportunities for error.
+   - It supports aggregation and CIDR, so many adjacent networks can be summarised into a single supernet entry, which is what keeps the global Internet routing table manageable.
+   - Host specific routing still has its place, for a special path for one particular server or for troubleshooting, and being more specific it takes precedence under the longest prefix match rule.
 10. **Consider the following routing table at an IP router:** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 461 (ET: BUET)]*
 | Network | Subnet mask | Outgoing Interface |
 |---|---|---|
@@ -918,21 +1086,226 @@ ii) 211.10.15.4
 | 0.0.0.0 | Interface 4 |
 *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 462 (ET: BUET)]*
 
+
+   Answer: The router uses the longest prefix match. The mask 255.255.254.0 is a /23, so each entry covers a block of two consecutive third octets.
+
+   Ranges covered by the table:
+   - 172.168.164.0/23 covers 172.168.164.0 to 172.168.165.255, Interface 0.
+   - 172.168.166.0/23 covers 172.168.166.0 to 172.168.167.255, Interface 1.
+   - 172.168.168.0/23 covers 172.168.168.0 to 172.168.169.255, Interface 2.
+   - 172.168.170.0/23 covers 172.168.170.0 to 172.168.171.255, Interface 3.
+   - Everything else falls to the default route, Interface 4.
+
+   Matching each address:
+
+   | IP address | Falls in | Outgoing interface |
+   |---|---|---|
+   | 172.168.165.121 | 164.0 to 165.255 | Interface 0 |
+   | 172.168.167.151 | 166.0 to 167.255 | Interface 1 |
+   | 172.168.163.151 | no entry matches | Interface 4, the default |
+   | 172.168.171.92 | 170.0 to 171.255 | Interface 3 |
+   | 0.0.0.0 | no entry matches | Interface 4, the default |
+
+   - Note that 172.168.163.151 lies just below the first block, since 163 is odd and the /23 blocks start at even third octets, so it does not match any specific entry and takes the default route.
+   - Interface 2 is not used by any of the given addresses, because none of them lies in 172.168.168.0 to 172.168.169.255.
 11. **Define distance Vector and Link state routing protocols.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
 
+
+   Answer:
+
+   Distance vector routing protocol:
+   - Each router knows only the distance, that is the metric, and the direction, that is the next hop, to each destination; it has no picture of the whole network.
+   - It periodically sends its entire routing table to its directly connected neighbours only, and updates its own table from what they send back, using the Bellman-Ford algorithm.
+   - Convergence is slow because information spreads one hop per update cycle, and it is vulnerable to routing loops and the count to infinity problem, which is why split horizon, route poisoning and hold-down timers are needed.
+   - It uses little CPU and memory. Examples: RIP with a hop count metric and a limit of 15 hops, and IGRP. EIGRP is a hybrid that adds link state ideas.
+
+   Link state routing protocol:
+   - Every router discovers the state of its own directly connected links and floods that information, as a Link State Advertisement, to every router in the area.
+   - All routers thus hold an identical link state database, that is a complete map of the topology, and each independently runs Dijkstra's shortest path first algorithm with itself as the root to build its routing table.
+   - Updates are sent only when something changes, plus a periodic refresh, so the steady state overhead is low, but a change causes a burst of flooding.
+   - Convergence is fast and routing loops are essentially impossible, at the cost of much higher CPU and memory use. Examples: OSPF and IS-IS.
 12. **What are static and dynamic routing? Given their relative advantages.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
 
+
+   Answer:
+
+   Static routing: routes are configured manually by the administrator with a command such as `ip route <network> <mask> <next hop>`. The router never changes them by itself.
+
+   Dynamic routing: routes are learned automatically by running a routing protocol such as RIP, OSPF, EIGRP or BGP, which exchanges information with neighbouring routers and rebuilds the table when the topology changes.
+
+   | Point | Static routing | Dynamic routing |
+   |---|---|---|
+   | Configuration | Entered manually by the administrator | Learned automatically by a routing protocol |
+   | Adaptation | None; a failed link must be fixed by hand | Automatic; an alternative path is found in seconds |
+   | CPU, memory and bandwidth | Almost none | Consumes CPU, memory and link bandwidth for updates |
+   | Security | Higher, no routing information is advertised | Lower, updates can be spoofed unless authenticated |
+   | Scalability | Poor, unusable beyond a few routers | Excellent, designed for large networks |
+   | Predictability | Complete, the path is always known | The path may change with conditions |
+   | Administrative distance | 1, so it is preferred over dynamic routes | 90 for EIGRP, 110 for OSPF, 120 for RIP |
+   | Best use | Small or stub networks, a default route, a backup path | Medium and large networks with redundant links |
+
+   Relative advantages of static routing:
+   - No protocol overhead at all, so it suits low bandwidth links.
+   - Total administrative control and complete predictability of the path.
+   - More secure, since nothing is advertised that an attacker could read or inject.
+   - Simple to understand and easy to troubleshoot in a small network.
+
+   Relative advantages of dynamic routing:
+   - Adapts automatically to a link or router failure, giving real fault tolerance.
+   - Scales to hundreds of routers without manual work.
+   - Chooses the best path by a metric, and can load balance across equal cost paths.
+   - Far less administrative effort and far less risk of a typing mistake.
 13. **What is Routing? Write down the difference between static routing and dynamic routing.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 837-838 (ET: N/A)]*
 
+
+   Answer: Routing is the process of selecting the path along which a packet is sent from a source network to a destination network, and of building and maintaining the routing table that records those paths. The router reads the destination IP address, looks it up in the routing table using the longest prefix match, and forwards the packet towards the chosen next hop.
+
+   | Point | Static routing | Dynamic routing |
+   |---|---|---|
+   | Configuration | Entered manually by the administrator | Learned automatically by a routing protocol |
+   | Adaptation | None; a failed link must be fixed by hand | Automatic; an alternative path is found in seconds |
+   | CPU, memory and bandwidth | Almost none | Consumes CPU, memory and link bandwidth for updates |
+   | Security | Higher, no routing information is advertised | Lower, updates can be spoofed unless authenticated |
+   | Scalability | Poor, unusable beyond a few routers | Excellent, designed for large networks |
+   | Predictability | Complete, the path is always known | The path may change with conditions |
+   | Administrative distance | 1, so it is preferred over dynamic routes | 90 for EIGRP, 110 for OSPF, 120 for RIP |
+   | Best use | Small or stub networks, a default route, a backup path | Medium and large networks with redundant links |
+
+   Relative advantages of static routing:
+   - No protocol overhead at all, so it suits low bandwidth links.
+   - Total administrative control and complete predictability of the path.
+   - More secure, since nothing is advertised that an attacker could read or inject.
+   - Simple to understand and easy to troubleshoot in a small network.
+
+   Relative advantages of dynamic routing:
+   - Adapts automatically to a link or router failure, giving real fault tolerance.
+   - Scales to hundreds of routers without manual work.
+   - Chooses the best path by a metric, and can load balance across equal cost paths.
+   - Far less administrative effort and far less risk of a typing mistake.
 14. **Name of the Algorithm RIP, OSPF and EIGRP routing protocol.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 838 (ET: N/A)]*
 
+
+   Answer:
+
+   - RIP, the Routing Information Protocol, uses the Bellman-Ford algorithm, which is the distance vector algorithm. Its metric is hop count, with a maximum of 15, and it updates every 30 seconds. Administrative distance 120.
+   - OSPF, Open Shortest Path First, uses Dijkstra's algorithm, which is the shortest path first or link state algorithm. Its metric is cost, derived from bandwidth. Administrative distance 110.
+   - EIGRP, the Enhanced Interior Gateway Routing Protocol, uses DUAL, the Diffusing Update Algorithm. It is a hybrid or advanced distance vector protocol whose composite metric is based on bandwidth and delay, and DUAL keeps a loop free feasible successor ready so that convergence is almost instant. Administrative distance 90 for internal routes.
 15. **What is Autonomous system? What is the difference between Link state routing protocol and Distance vector routing protocol?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 838-839 (ET: N/A)]*
 
+
+   Answer:
+
+   Autonomous System:
+   - An Autonomous System is a collection of networks and routers under a single administrative authority that presents a common and clearly defined routing policy to the outside world.
+   - It is identified by a globally unique Autonomous System Number, ASN, 16 bit originally and 32 bit now, allocated by IANA through the regional registries. Every ISP, and any large organisation that connects to more than one ISP, holds one.
+   - Inside the AS an interior gateway protocol such as OSPF, EIGRP or IS-IS is used; between autonomous systems the exterior protocol BGP is used.
+   - The purpose is scalability: the Internet is treated as a network of autonomous systems rather than a network of individual routers, so the global routing table stays manageable, and each operator keeps full control of its own internal design.
+   - Types: a stub AS with a single connection, a multihomed AS with several connections but carrying no transit traffic, and a transit AS such as an ISP that carries traffic for others.
+
+   Link state vs distance vector:
+
+   | Point | Distance Vector | Link State |
+   |---|---|---|
+   | Algorithm | Bellman-Ford | Dijkstra's shortest path first |
+   | What is known | Only the distance and direction to each destination | The complete topology of the whole area |
+   | What is shared | The entire routing table | Only the state of its own directly connected links, the LSA |
+   | Shared with | Directly connected neighbours only | Flooded to every router in the area |
+   | Frequency | Periodically, RIP every 30 seconds | Only when a change occurs, plus a refresh every 30 minutes |
+   | Convergence | Slow, information travels hop by hop | Fast, every router recomputes at once |
+   | Routing loops | Possible, needs split horizon, poison reverse and hold-down timers | Very unlikely, since each router has the full map |
+   | Count to infinity | Yes, this is its classic weakness | No |
+   | CPU and memory | Low | High, it must store the whole topology database |
+   | Bandwidth use | Steady periodic overhead | A burst on change, quiet otherwise |
+   | Hierarchy | None | Supports areas, which limits flooding |
+   | Metric | Hop count in RIP | Cost derived from bandwidth |
+   | Examples | RIP, IGRP, and EIGRP as a hybrid | OSPF, IS-IS |
+
+   - The saying that captures the difference: distance vector routers tell their neighbours about the whole world, while link state routers tell the whole world about their neighbours.
 16. **Cost calculation of EIGRP formula.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 839 (ET: N/A)]*
 
+
+   Answer: The EIGRP composite metric is calculated from the K values.
+
+   Full formula:
+   - Metric = 256 × [ (K1 × Bandwidth + (K2 × Bandwidth) / (256 − Load) + K3 × Delay) × K5 / (Reliability + K4) ]
+   - Where the K value defaults are K1 = 1, K2 = 0, K3 = 1, K4 = 0 and K5 = 0.
+   - When K5 = 0 the whole trailing term is omitted rather than multiplied by zero.
+
+   Default simplified formula:
+   - Metric = 256 × (Bandwidth + Delay)
+   - Bandwidth = 10⁷ / (the lowest bandwidth in kbps along the whole path)
+   - Delay = (the sum of all the interface delays along the path, in microseconds) / 10
+
+   Worked example: a path across a 64 kbps serial link with a total delay of 42,000 microseconds.
+   - Bandwidth term = 10⁷ / 64 = 156,250
+   - Delay term = 42,000 / 10 = 4,200
+   - Metric = 256 × (156,250 + 4,200) = 256 × 160,450 = 41,075,200
+
+   - Note: bandwidth uses the minimum, that is the slowest link on the path, because that is what limits the throughput, whereas delay is cumulative because every hop adds to it. Load and reliability are excluded by default because they change constantly and would make the routing table unstable.
 17. **Given a totology of distance vector routing. Find the table of each node for the 1^{\text{st}} route.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859-860 (ET: N/A)]*
 
+
+   Answer: Method for building the first round of distance vector tables, applied to a standard four node topology.
+
+   Assumed topology, since the figure is not reproduced here: nodes A, B, C and D with links A-B cost 2, B-C cost 3, C-D cost 1 and A-C cost 5.
+
+   Step 1, initialisation. Every node knows only its own directly connected neighbours; everything else is infinity.
+
+   | From | To A | To B | To C | To D |
+   |---|---|---|---|---|
+   | A | 0 | 2 | 5 | infinity |
+   | B | 2 | 0 | 3 | infinity |
+   | C | 5 | 3 | 0 | 1 |
+   | D | infinity | infinity | 1 | 0 |
+
+   Step 2, first exchange. Each node sends its vector to its neighbours and applies the Bellman-Ford rule, Dx(y) = min over all neighbours v of [ cost(x,v) + Dv(y) ].
+
+   Table of A after the first round:
+   - To B: direct 2, or via C = 5 + 3 = 8. Keep 2, next hop B.
+   - To C: direct 5, or via B = 2 + 3 = 5. Both are 5, keep 5, next hop C.
+   - To D: via C = 5 + 1 = 6, or via B = 2 + infinity. So 6, next hop C.
+
+   Table of B after the first round:
+   - To A: 2, next hop A. To C: 3, next hop C. To D: via C = 3 + 1 = 4, next hop C.
+
+   Table of C after the first round:
+   - To A: direct 5, or via B = 3 + 2 = 5. Keep 5. To B: 3, next hop B. To D: 1, next hop D.
+
+   Table of D after the first round:
+   - To C: 1, next hop C. To B: via C = 1 + 3 = 4, next hop C. To A: via C = 1 + 5 = 6, next hop C.
+
+   Consolidated result after the first exchange:
+
+   | From | To A | To B | To C | To D |
+   |---|---|---|---|---|
+   | A | 0 | 2 via B | 5 via C | 6 via C |
+   | B | 2 via A | 0 | 3 via C | 4 via C |
+   | C | 5 via A | 3 via B | 0 | 1 via D |
+   | D | 6 via C | 4 via C | 1 via C | 0 |
+
+   - Method to repeat for any given figure: start with the direct costs and infinity elsewhere, then for every destination take the minimum over each neighbour of the cost to that neighbour plus the neighbour's advertised distance, and record the neighbour that gave the minimum as the next hop. Repeat until no table changes; the count of rounds needed is at most n − 1 for n nodes. <!-- verify -->
 18. **What is difference between link state routing and distance vector routing?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
+
+
+   Answer:
+
+   | Point | Distance Vector | Link State |
+   |---|---|---|
+   | Algorithm | Bellman-Ford | Dijkstra's shortest path first |
+   | What is known | Only the distance and direction to each destination | The complete topology of the whole area |
+   | What is shared | The entire routing table | Only the state of its own directly connected links, the LSA |
+   | Shared with | Directly connected neighbours only | Flooded to every router in the area |
+   | Frequency | Periodically, RIP every 30 seconds | Only when a change occurs, plus a refresh every 30 minutes |
+   | Convergence | Slow, information travels hop by hop | Fast, every router recomputes at once |
+   | Routing loops | Possible, needs split horizon, poison reverse and hold-down timers | Very unlikely, since each router has the full map |
+   | Count to infinity | Yes, this is its classic weakness | No |
+   | CPU and memory | Low | High, it must store the whole topology database |
+   | Bandwidth use | Steady periodic overhead | A burst on change, quiet otherwise |
+   | Hierarchy | None | Supports areas, which limits flooding |
+   | Metric | Hop count in RIP | Cost derived from bandwidth |
+   | Examples | RIP, IGRP, and EIGRP as a hybrid | OSPF, IS-IS |
+
+   - The saying that captures the difference: distance vector routers tell their neighbours about the whole world, while link state routers tell the whole world about their neighbours.
 
 ## Wireless Networks & IoT (mmWave) (17)
 
