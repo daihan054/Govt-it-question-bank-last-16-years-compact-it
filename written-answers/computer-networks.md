@@ -1182,62 +1182,504 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)], [BTCL Assistant Manager (Technical) 2021 compact it 765 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: step size Δ = 2 V, sinusoidal signal peak amplitude A = 10 V.
+
+   Step 1: signal power
+   - For a sinusoid, P_signal = A² / 2
+   - P_signal = 10² / 2 = 50 W
+
+   Step 2: quantization noise power
+   - Formula: P_noise = Δ² / 12
+   - P_noise = 2² / 12 = 4 / 12 = 0.3333 W
+
+   Step 3: signal to noise ratio
+   - SNR = P_signal / P_noise = 50 / 0.3333 = 150
+   - In decibels: SNR(dB) = 10 log₁₀(150) = 21.76 dB
+
+   Step 4: number of bits
+   - Total signal swing is from −10 V to +10 V, that is 20 V.
+   - Number of quantization levels L = 20 / 2 = 10
+   - Bits required n = ⌈log₂ 10⌉ = ⌈3.32⌉ = 4 bits
+
+   Final answer: SNR = 150, that is 21.76 dB, and 4 bits per sample are required.
 2. **Draw Delta modulation figure and math. (Approximate)** *[NPCBL Executive Trainee (IT) 2022 compact it 648 (ET: BUET)]*
 
+
+   Answer: Delta modulation encodes the difference between the current sample and the previous approximation using a single bit per sample.
+
+   Working:
+   - If the input signal is larger than the staircase approximation, a 1 is transmitted and the approximation is raised by one step size Δ.
+   - If the input is smaller, a 0 is transmitted and the approximation is lowered by Δ.
+   - So the output is a staircase that tries to follow the input waveform.
+
+   ```text
+   Amplitude
+      ^            ____
+      |        ___/    \___        <- input signal
+      |    ___|            |___
+      |   |  staircase approximation
+      +---------------------------> time
+   Bits: 1 1 1 1 0 0 1 0 0 0 1 1
+   ```
+
+   Two types of noise:
+   - Slope overload distortion: when the input changes faster than the staircase can follow. The condition to avoid it is Δ · fs ≥ 2π · fm · Am.
+   - Granular noise: when the input is almost constant, the staircase keeps oscillating up and down by one step, producing a small hunting noise. A smaller Δ reduces this but worsens slope overload.
+
+   - Adaptive Delta Modulation solves the conflict by changing the step size according to the slope of the signal.
 3. **A singla-tone message signal of bandwidth 4KHZ and amplitude 10V is transmitted by \Delta-modulation with step size 2V. Determine the data rate so that slope overloading noise is the minimum.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: message bandwidth fm = 4 kHz, amplitude Am = 10 V, step size Δ = 2 V.
+
+   Condition to avoid slope overload:
+   - The staircase must be able to rise at least as fast as the steepest part of the signal.
+   - Maximum slope of the message signal = 2π · fm · Am
+   - Maximum slope of the staircase = Δ · fs
+   - So the condition is Δ · fs ≥ 2π · fm · Am
+
+   Step 1: maximum slope of the signal
+   - 2π × 4000 × 10 = 251,327.4 volts per second
+
+   Step 2: minimum sampling frequency
+   - fs ≥ 251,327.4 / Δ = 251,327.4 / 2
+   - fs ≥ 125,663.7 Hz
+
+   Step 3: data rate
+   - Delta modulation sends 1 bit per sample, so the data rate equals fs.
+   - Data rate = 125,663.7 bits per second ≈ 125.66 kbps
+
+   Final answer: the minimum data rate required so that slope overload noise is minimum is about 125.66 kbps.
 4. **A single-tone message signal of bandwidth 4 KHZ is sampled by using a pulse train of frequency 200% higher than the Nyquist rate of the message signal to obtain PAM signal. The duty cycle of the pulse train is 20%. By drawing the amplitude spectrum of the PAM signal, determine its bandwidth.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 676 (ET: N/A)]*
+
+
+   Answer:
+
+   Given: message bandwidth fm = 4 kHz, sampling frequency 200 percent higher than the Nyquist rate, duty cycle 20 percent.
+
+   Step 1: Nyquist rate
+   - Nyquist rate = 2 × fm = 2 × 4 kHz = 8 kHz
+
+   Step 2: actual sampling frequency
+   - 200 percent higher means the Nyquist rate plus 200 percent of it.
+   - fs = 8 + (2 × 8) = 24 kHz
+
+   Step 3: pulse duration
+   - Sampling period Ts = 1 / fs = 1 / 24,000 = 41.67 µs
+   - Duty cycle is 20 percent, so pulse width τ = 0.2 × Ts = 8.33 µs
+
+   Step 4: bandwidth of the PAM signal
+   - The spectrum of a rectangular pulse train is a sinc envelope whose first null occurs at 1/τ.
+   - BW = 1 / τ = 1 / 8.33 µs = 120,000 Hz
+
+   Final answer: the bandwidth of the PAM signal is 120 kHz.
+
+   - The amplitude spectrum consists of the message spectrum repeated at multiples of 24 kHz, with the amplitudes shaped by the sinc envelope that first crosses zero at 120 kHz.
+   - Note that the narrower the pulse, the wider the required bandwidth.
 
 ## Network Layer (Packet Fragmentation & Tunneling) (4)
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 481 (ET: N/A)]*
 
+
+   Answer: Packet fragmentation is the process of dividing a datagram into smaller pieces when it is larger than the Maximum Transmission Unit (MTU) of the network it must cross.
+
+   Why it is needed:
+   - Different networks have different MTUs, for example Ethernet allows 1500 bytes while some WAN links allow far less.
+   - A datagram larger than the MTU cannot be carried, so the router must either fragment it or discard it.
+
+   Transparent fragmentation:
+   - The router at the entry of the small MTU network fragments the packet, and the router at the exit reassembles it before passing it on.
+   - So the fragmentation is invisible to the rest of the path, hence the name.
+   - Advantage: subsequent networks see a normal sized packet.
+   - Disadvantage: the exit router must buffer all fragments and wait for them, and every fragment must follow the same route.
+
+   Non-transparent fragmentation:
+   - The router fragments the packet but no intermediate router reassembles it. The fragments travel independently and only the final destination host reassembles them.
+   - This is the method used by IPv4.
+   - Advantage: routers stay simple and stateless, and fragments may follow different routes.
+   - Disadvantage: header overhead is repeated for every fragment, and losing a single fragment forces the whole datagram to be discarded.
+
+   - IPv4 uses the Identification, Flags and Fragment Offset fields for this. IPv6 does not allow routers to fragment; the source performs Path MTU Discovery instead.
 2. **(b) Describe briefly the TCP/IP tunneling using appropriate diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 482 (ET: N/A)]*
 
+
+   Answer: Tunneling is the technique of carrying a packet of one protocol inside the payload of another protocol, so that it can cross a network that would not otherwise support it.
+
+   How it works:
+   - The entry router encapsulates the original packet by adding a new outer header. This is the tunnel entry point.
+   - The intermediate network forwards the packet based only on the outer header and does not examine the inner one.
+   - The exit router removes the outer header and delivers the original packet. This is the tunnel exit point.
+
+   ```mermaid
+   flowchart LR
+       A[Host A<br/>IPv6 network] --> B[Tunnel entry router<br/>encapsulate]
+       B --> C[IPv4 Internet]
+       C --> D[Tunnel exit router<br/>decapsulate]
+       D --> E[Host B<br/>IPv6 network]
+   ```
+
+   Uses:
+   - Connecting two IPv6 islands across an IPv4 Internet, which is the classic example.
+   - Building a VPN, where an IP packet is encapsulated and encrypted inside another IP packet using IPsec or GRE.
+   - Joining two branches of a private network over the public Internet.
+
+   - The cost is extra header overhead and a reduced effective MTU, which can itself cause fragmentation.
 3. **Why network need packet fragmentation? Define different types of packet fragmentation with necessary diagram.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 666 (ET: N/A)]*
 
+
+   Answer: Fragmentation is needed because every physical network has its own Maximum Transmission Unit, and a datagram larger than that MTU cannot be carried in a single frame.
+
+   Reasons in detail:
+   - Ethernet has an MTU of 1500 bytes, but other links such as PPP or older WAN technologies allow much less.
+   - A path may cross several networks with different MTUs, and the sender usually does not know the smallest one.
+   - Without fragmentation the router would have to discard the packet, which would break end to end delivery.
+
+   Types:
+   - Transparent fragmentation, where the exit router of the small MTU network reassembles the fragments before forwarding them onward.
+   - Non-transparent fragmentation, where reassembly is done only by the destination host. IPv4 uses this method.
+
+   ```mermaid
+   flowchart LR
+       A[Original datagram<br/>4000 bytes] --> B[Router<br/>MTU = 1500]
+       B --> C[Fragment 1<br/>offset 0]
+       B --> D[Fragment 2<br/>offset 185]
+       B --> E[Fragment 3<br/>offset 370]
+       C --> F[Destination<br/>reassembles]
+       D --> F
+       E --> F
+   ```
+
+   - The Fragment Offset field is counted in units of 8 bytes, which is why every fragment except the last must carry a multiple of 8 bytes of data.
+   - The More Fragments flag is 1 in every fragment except the last one.
 4. **Suppose a 22-byte packet is to be transmitted through a network of \text{MTU} = 3\text{ byte}. The elementary fragment size is 1\text{ byte}. Show the segment numbering of the above packet. Packet number is 217.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
+
+
+   Answer:
+
+   Given: packet size 22 bytes, MTU 3 bytes, elementary fragment size 1 byte, packet number 217.
+
+   Step 1: number of fragments
+   - Each fragment can carry at most 3 bytes of data.
+   - Number of fragments = ceiling(22 / 3) = 8
+   - Seven fragments carry 3 bytes each, that is 21 bytes, and the eighth carries the remaining 1 byte.
+
+   Step 2: numbering of the fragments
+   - Each fragment carries three fields: the packet number, the offset of its first byte measured in elementary units, and the End of Packet bit which is 0 for all but the last fragment.
+
+   | Fragment | Bytes carried | Packet number | Offset | End bit |
+   |---|---|---|---|---|
+   | 1 | 1 to 3 | 217 | 0 | 0 |
+   | 2 | 4 to 6 | 217 | 3 | 0 |
+   | 3 | 7 to 9 | 217 | 6 | 0 |
+   | 4 | 10 to 12 | 217 | 9 | 0 |
+   | 5 | 13 to 15 | 217 | 12 | 0 |
+   | 6 | 16 to 18 | 217 | 15 | 0 |
+   | 7 | 19 to 21 | 217 | 18 | 0 |
+   | 8 | 22 | 217 | 21 | 1 |
+
+   Final answer: the packet is split into 8 fragments, numbered (217, 0, 0), (217, 3, 0), (217, 6, 0), (217, 9, 0), (217, 12, 0), (217, 15, 0), (217, 18, 0) and (217, 21, 1).
+
+   - The destination uses the packet number 217 to group the fragments, the offset to place them in order, and the end bit to know that all fragments have arrived.
 
 ## Analog Modulation & Radio Receivers (3)
 
 1. **With appropriate figures, distinguish between homodyne and heterodyne detection processes. Draw the block diagram of a super heterodyne AM receiver.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   Homodyne detection:
+   - The incoming RF signal is mixed with a local oscillator running at exactly the same frequency as the carrier, so the signal is converted directly to baseband in one step.
+   - It is also called direct conversion or zero IF.
+   - Advantage: no intermediate frequency stage is needed, so the circuit is simple and cheap.
+   - Disadvantage: it needs the local oscillator to be locked in both frequency and phase, and it suffers from DC offset and local oscillator leakage.
+
+   Heterodyne detection:
+   - The incoming RF signal is mixed with a local oscillator running at a different frequency, producing a fixed intermediate frequency, for example 455 kHz for AM radio and 10.7 MHz for FM.
+   - Most of the amplification and filtering is done at this fixed IF, and only then is the signal demodulated.
+   - Advantage: the IF filter can be sharp and fixed, so selectivity and sensitivity are much better across the whole tuning range.
+   - Disadvantage: image frequency interference must be suppressed by an RF stage before the mixer.
+
+   Block diagram of a superheterodyne receiver:
+
+   ```mermaid
+   flowchart LR
+       A[Antenna] --> B[RF Amplifier and Tuner]
+       B --> C[Mixer]
+       D[Local Oscillator] --> C
+       C --> E[IF Amplifier at fixed IF]
+       E --> F[Detector / Demodulator]
+       F --> G[Audio Amplifier]
+       G --> H[Speaker]
+   ```
+
+   - The local oscillator and the RF tuner are ganged together so that the difference always stays equal to the IF.
 2. **Difference between AM and FM. (a) Which is prefer for long distance communication? (b) Which has low distortion? (c) Which has low interference?** *[EGCB Assistant Engineer (CSE) 2022 compact it 716 (ET: BUET)]*
 
+
+   Answer:
+
+   | Point | AM | FM |
+   |---|---|---|
+   | What varies | Amplitude of the carrier | Frequency of the carrier |
+   | Bandwidth | Narrow, about 10 kHz | Wide, about 200 kHz for broadcast |
+   | Noise immunity | Poor, since noise adds to amplitude | Good, since amplitude changes are removed by a limiter |
+   | Sound quality | Lower | Higher |
+   | Frequency range | 535 to 1605 kHz | 88 to 108 MHz |
+   | Coverage | Long distance via sky wave | Line of sight, shorter range |
+   | Circuit complexity | Simple | More complex |
+
+   - (a) Long distance communication: AM is preferred, because its lower frequency waves are reflected by the ionosphere and can travel far beyond the horizon.
+   - (b) Low distortion: FM has lower distortion, giving it much better audio fidelity.
+   - (c) Low interference: FM again, because the receiver uses a limiter that strips away amplitude variations caused by noise, and the capture effect suppresses the weaker of two signals.
 3. **A sinusoidal modulating waveform of amplitude 5V and frequency of 2 kHz is applied to FM generator, which has a frequency sensitivity of 40Hz/volt. Calculate the frequency deviation, modulation index and bandwidth.** *[BOF Assistant Programmer 2022 compact it 734 (ET: MIST)]*
+
+
+   Answer:
+
+   Given: modulating amplitude Am = 5 V, modulating frequency fm = 2 kHz, frequency sensitivity kf = 40 Hz per volt.
+
+   Step 1: frequency deviation
+   - Formula: Δf = kf × Am
+   - Δf = 40 × 5 = 200 Hz
+
+   Step 2: modulation index
+   - Formula: β = Δf / fm
+   - β = 200 / 2000 = 0.1
+
+   Step 3: bandwidth by Carson's rule
+   - Formula: BW = 2(Δf + fm)
+   - BW = 2(200 + 2000) = 2 × 2200 = 4400 Hz
+
+   Final answer: frequency deviation = 200 Hz, modulation index = 0.1 and bandwidth = 4400 Hz, that is 4.4 kHz.
+
+   - Since β is much less than 1, this is narrowband FM, and for narrowband FM the bandwidth is approximately 2fm, which is 4 kHz, close to the Carson value.
 
 ## Satellite Communication (3)
 
 1. **(b) Difference between active and passive satellites.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Passive satellite | Active satellite |
+   |---|---|---|
+   | Function | Only reflects the signal back to earth | Receives, amplifies, changes frequency and retransmits |
+   | Onboard equipment | No transmitter or amplifier | Has a transponder with receiver, amplifier and transmitter |
+   | Power source | None needed | Solar panels and batteries required |
+   | Signal strength at receiver | Very weak, so huge earth stations are needed | Strong and usable |
+   | Cost and complexity | Low | High |
+   | Example | Echo 1, and the moon used as a reflector | Intelsat, Bangabandhu-1, all modern communication satellites |
+
+   - Passive satellites are now obsolete because the reflected signal loses far too much power.
 2. **(c) Briefly describe different types of earth orbital satellite.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
 
+
+   Answer: Satellites are classified by the height of their orbit above the earth.
+
+   GEO, Geostationary Earth Orbit:
+   - Altitude about 35,786 km above the equator, orbital period exactly 24 hours, so the satellite appears fixed in the sky.
+   - Only three satellites can cover almost the whole earth.
+   - Round trip delay is about 500 ms, which is noticeable in voice calls.
+   - Used for television broadcast, weather monitoring and VSAT. Bangabandhu-1 is a GEO satellite.
+
+   MEO, Medium Earth Orbit:
+   - Altitude roughly 2,000 to 35,000 km, period 6 to 12 hours.
+   - Fewer satellites are needed than LEO and the delay is moderate.
+   - Used mainly for navigation, for example GPS at about 20,200 km.
+
+   LEO, Low Earth Orbit:
+   - Altitude roughly 160 to 2,000 km, period about 90 to 120 minutes.
+   - Very low delay, so it suits real time communication, but a large constellation is required for continuous coverage.
+   - Used by Iridium, Starlink and earth observation satellites.
+
+   - HEO, Highly Elliptical Orbit, is used to give long coverage over high latitude regions that GEO cannot serve well.
 3. **Satellite ভিত্তিক যোগাযোগের একটি অসুবিধা লিখুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
+
+
+   Answer: One major disadvantage of satellite based communication is the high propagation delay.
+
+   - A geostationary satellite is about 35,786 km above the earth, so a signal takes roughly 250 ms to go up and come down, giving a round trip of about 500 ms.
+   - This delay makes interactive applications such as voice calls, video conferencing and online gaming noticeably uncomfortable.
+   - It also reduces the efficiency of TCP, because the protocol waits for acknowledgements.
+
+   - Other disadvantages worth noting: very high launch and maintenance cost, signal attenuation during heavy rain which is called rain fade, limited bandwidth per transponder, and the fact that a satellite cannot be repaired once it is in orbit.
 
 ## Line Coding & Digital Encoding (2)
 
 1. **Assume we want to transmit the following binary string: 01001110. Show the resulting signal on the one using the following line coding techniques: (i) NRZ-L (ii) Manchester NRZ (iii) Unipolar RZ (binary string: 11011000100)** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 638 (ET: N/A)]*
 
+
+   Answer: Line coding converts a binary sequence into a digital signal. The three schemes are shown below for the given strings.
+
+   (i) NRZ-L for 01001110
+   - Rule: bit 0 is one voltage level and bit 1 is the opposite level, and the level is held for the whole bit period with no return to zero.
+   - Taking 0 as positive and 1 as negative:
+
+   ```text
+   Bit    :  0    1    0    0    1    1    1    0
+   Level  : +V   -V   +V   +V   -V   -V   -V   +V
+            ▔▔▔┐    ┌▔▔▔▔▔▔▔┐            ┌▔▔▔
+               └────┘       └────────────┘
+   ```
+
+   (ii) Manchester for 01001110
+   - Rule: every bit period has a transition in the middle. A 0 is high to low and a 1 is low to high.
+   - The mid-bit transition provides self synchronisation, which is the main advantage.
+
+   ```text
+   Bit    :  0     1     0     0     1     1     1     0
+   Signal : ▔╲_   _╱▔   ▔╲_   ▔╲_   _╱▔   _╱▔   _╱▔   ▔╲_
+   ```
+
+   (iii) Unipolar RZ for 11011000100
+   - Rule: bit 1 is a positive pulse for the first half of the bit period and returns to zero for the second half. Bit 0 stays at zero for the whole period.
+
+   ```text
+   Bit    : 1   1   0   1   1   0   0   0   1   0   0
+   Signal : ▄   ▄   _   ▄   ▄   _   _   _   ▄   _   _
+   ```
+
+   - NRZ-L is simple but has a DC component and no self clocking.
+   - Manchester has no DC component and is self clocking, but needs twice the bandwidth.
+   - Unipolar RZ is easy to build but wastes power and still carries a DC component.
 2. **What is Line coding? What is the different line coding techniques?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 869-870 (ET: N/A)]*
+
+
+   Answer: Line coding is the process of converting binary data into a digital signal suitable for transmission over a physical medium.
+
+   Purpose:
+   - To match the signal to the characteristics of the channel.
+   - To provide clock synchronisation between sender and receiver.
+   - To remove or reduce the DC component, since transformers and capacitors in the path cannot pass DC.
+   - To allow error detection in some schemes.
+
+   Main categories and techniques:
+   - Unipolar: only one polarity is used, for example Unipolar NRZ and Unipolar RZ. Simple but has a strong DC component.
+   - Polar: two polarities are used, for example NRZ-L, NRZ-I, RZ, Manchester and Differential Manchester.
+   - Bipolar: three levels are used, for example AMI (Alternate Mark Inversion) and Pseudoternary, which remove the DC component.
+   - Multilevel: more than one bit is carried per signal element, for example 2B1Q and 8B6T, which increases the data rate.
+   - Multitransition: for example MLT-3, used in 100BASE-TX Ethernet to reduce the required bandwidth.
+
+   - NRZ-I encodes a 1 as a transition and a 0 as no transition.
+   - AMI represents 0 as zero voltage and alternates the polarity for successive 1s, which keeps the average voltage at zero.
 
 ## Address Resolution (ARP & RARP) (2)
 
 1. **(a) Discuss the main role of Address Resolution Protocol (ARP) in the network layer of TCP/IP protocol suite.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
 
+
+   Answer: ARP (Address Resolution Protocol) maps a known logical IP address to the corresponding physical MAC address on a local network. It works between the network layer and the data link layer of the TCP/IP suite.
+
+   Why it is needed:
+   - Data is routed using IP addresses, but the actual frame delivery on a LAN happens using MAC addresses.
+   - So before sending a frame, a host must learn the MAC address that belongs to the destination IP.
+
+   How it works:
+   - The sender first checks its ARP cache. If the mapping is present, it is used directly.
+   - If not, the sender broadcasts an ARP Request frame to the address FF:FF:FF:FF:FF:FF asking "who has this IP address".
+   - Every host on the LAN receives it, but only the host owning that IP replies.
+   - The owner sends a unicast ARP Reply containing its MAC address.
+   - The sender stores the mapping in its ARP cache for a few minutes, so the process is not repeated for every packet.
+
+   Related points:
+   - If the destination is on another network, ARP resolves the MAC address of the default gateway instead.
+   - RARP does the reverse, finding an IP address from a known MAC address, and has largely been replaced by BOOTP and DHCP.
+   - ARP has no authentication, which makes ARP spoofing possible, so dynamic ARP inspection is used as a defence.
 2. **What is ARP? Briefly explain ARP.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841-842 (ET: N/A)]*
+
+
+   Answer: ARP (Address Resolution Protocol) is the protocol that finds the MAC address corresponding to a known IP address within a local network.
+
+   - Need: a router or host knows the destination IP address, but the Ethernet frame must carry a MAC address, so the two must be linked.
+   - Request: the sender broadcasts an ARP Request asking which machine owns the given IP address.
+   - Reply: only the machine that owns that IP responds with a unicast ARP Reply containing its MAC address.
+   - Cache: the result is stored in the ARP table for a short time so that repeated broadcasts are avoided. The table can be viewed with the command `arp -a`.
+   - If the destination lies outside the local network, ARP is used to obtain the MAC address of the default gateway instead.
 
 ## VLANs & Subnetting Comparison (2)
 
 1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
 
+
+   Answer: VLAN (Virtual LAN) is the correct solution for this requirement.
+
+   Why VLAN:
+   - A VLAN divides one physical switch or network into several logical broadcast domains, so departments are isolated even though they share the same cabling and switches.
+   - Traffic of one VLAN cannot reach another VLAN unless it passes through a router or a Layer 3 switch, where access control rules can be applied.
+   - Users can be grouped by function rather than by physical location, so a user who moves desks stays in the same VLAN.
+
+   Benefits:
+   - Security: sensitive departments such as Accounts can be isolated from general staff.
+   - Performance: broadcast traffic stays inside its own VLAN, which reduces unnecessary load.
+   - Flexibility: adding or moving a user is a configuration change, not a re-cabling job.
+   - Cost: one physical switch serves several logical networks, so fewer devices are needed.
+
+   Implementation outline:
+   - Create VLANs on the switch, for example VLAN 10 for Accounts, VLAN 20 for HR and VLAN 30 for IT.
+   - Assign access ports to the correct VLAN and configure trunk ports carrying 802.1Q tags between switches.
+   - Give each VLAN its own subnet and configure inter-VLAN routing on a router or Layer 3 switch, applying ACLs where isolation must be enforced.
 2. **What is VLAN? Difference between static and dynamic VLAN.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 550 (ET: BIBM)]*
+
+
+   Answer: A VLAN (Virtual Local Area Network) is a logical grouping of devices into a single broadcast domain, independent of their physical location, created by configuration on a switch.
+
+   | Point | Static VLAN | Dynamic VLAN |
+   |---|---|---|
+   | Assignment basis | Switch port number | Device MAC address, or user credentials |
+   | Configuration | Manual, done by the administrator per port | Automatic, from a policy server such as VMPS or through 802.1X |
+   | When a user moves | The new port must be reconfigured | The user keeps the same VLAN automatically |
+   | Complexity | Simple to set up | Needs a central server and more setup effort |
+   | Common name | Port based VLAN | MAC based or policy based VLAN |
+   | Use | Small and medium fixed networks | Large networks with mobile users |
+
+   - Static VLAN is the most widely used because of its simplicity and predictability.
 
 ## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (2)
 
 1. **What are the limitaions of CDMA?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer: Limitations of CDMA are the following.
+
+   - Near-far problem: a user close to the base station drowns out a distant user, so strict and fast power control is essential.
+   - Self jamming: since all users transmit on the same frequency at the same time, the signals of other users appear as background noise.
+   - Capacity is soft limited: there is no hard channel count, but as more users join, the noise floor rises and the quality of every call degrades.
+   - Complexity: the receiver needs a rake receiver and precise code synchronisation, which makes the hardware costlier.
+   - Code management: a large set of orthogonal codes must be generated and distributed, and code planning is difficult.
+   - Handset power consumption is higher because of continuous power control signalling.
 2. **Mention the basic differences between frequency-hopped spread spectrum (FHSS) and direct sequence spread spectrum (DSSS) techniques.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+
+   Answer:
+
+   | Point | FHSS | DSSS |
+   |---|---|---|
+   | Technique | The carrier hops from one frequency to another following a pseudo-random pattern | The data bit is multiplied by a high rate pseudo-random chip sequence |
+   | Bandwidth spreading | Achieved by using many narrow channels in turn | Achieved by widening each bit into many chips |
+   | Resistance to narrowband interference | Very good, the signal simply hops away from the jammed band | Good, the interference is spread out during despreading |
+   | Processing gain | Number of hopping channels | Chip rate divided by bit rate |
+   | Power spectral density | Concentrated in one channel at a time | Very low and spread over the whole band |
+   | Synchronisation | Hop timing must be synchronised | Chip sequence must be synchronised |
+   | Data rate | Comparatively lower | Higher |
+   | Example | Bluetooth | Wi-Fi 802.11b, GPS, CDMA |
 
 ## High Availability & Redundancy Protocols (VRRP, HSRP) (1)
 
 1. **State the network protocol of VRRP?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1359 (ET: BUET)]*
+
+
+   Answer: VRRP stands for Virtual Router Redundancy Protocol. It is an open standard first-hop redundancy protocol defined in RFC 5798.
+
+   - Purpose: it removes the single point of failure at the default gateway by letting several physical routers share one virtual IP address.
+   - Working: one router is elected Master based on the highest priority and it forwards traffic for the virtual IP. The others stay as Backup.
+   - The Master sends advertisement messages every second by default. If the Backup routers stop receiving them, the one with the highest priority takes over the virtual IP.
+   - Hosts on the LAN keep pointing to the same virtual gateway address, so the failover is invisible to them.
+   - It uses IP protocol number 112 and multicast address 224.0.0.18.
+   - HSRP is the equivalent Cisco proprietary protocol, and GLBP additionally provides load balancing.
