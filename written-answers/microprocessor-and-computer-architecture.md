@@ -3175,12 +3175,144 @@ MOV AX, A534H এবং MOV AX, [A534H]
 1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।
    (b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer: এজ কম্পিউটিং (Edge Computing) হলো এমন একটি বণ্টিত কম্পিউটিং পদ্ধতি, যেখানে তথ্য যেখানে তৈরি হয় তার কাছাকাছিই প্রক্রিয়াকরণ করা হয়, দূরবর্তী কেন্দ্রীয় ক্লাউড ডেটা সেন্টারে পাঠানোর বদলে। প্রক্রিয়াকরণ ঘটে যন্ত্রের ভেতরেই, নিকটবর্তী গেটওয়েতে বা স্থানীয় ছোট ডেটা সেন্টারে; কেবল সারসংক্ষেপ বা গুরুত্বপূর্ণ তথ্য কেন্দ্রে পাঠানো হয়।
+
+   কেন প্রয়োজন হলো: ইন্টারনেট অব থিংসের বিস্তারে কোটি কোটি সেন্সর, ক্যামেরা ও যন্ত্র এত বিপুল তথ্য তৈরি করছে যে তা সবই কেন্দ্রীয় ক্লাউডে পাঠানো ব্যয়সাধ্য ও ধীর। আবার অনেক প্রয়োগে সিদ্ধান্ত মিলিসেকেন্ডের মধ্যে নিতে হয়, যা দূরবর্তী সার্ভারে পাঠিয়ে সম্ভব নয়।
+
+   প্রধান সুবিধা:
+   - লেটেন্সি হ্রাস: সাড়া দেওয়ার সময় কয়েকশ মিলিসেকেন্ড থেকে কমে কয়েক মিলিসেকেন্ডে নেমে আসে, যা স্বয়ংচালিত গাড়ি, রোবোটিক সার্জারি ও শিল্প নিয়ন্ত্রণে অপরিহার্য।
+   - ব্যান্ডউইথ সাশ্রয়: কাঁচা ভিডিও ও সেন্সর ডেটা স্থানীয়ভাবে ছেঁকে নেওয়ায় নেটওয়ার্কে পাঠানোর পরিমাণ ও খরচ কমে।
+   - গোপনীয়তা ও নিরাপত্তা: রোগীর তথ্য বা ক্যামেরার ফুটেজ প্রতিষ্ঠানের বাইরে যায় না, ফলে তথ্য সার্বভৌমত্ব রক্ষা হয়।
+   - নির্ভরযোগ্যতা: ইন্টারনেট সংযোগ বিচ্ছিন্ন হলেও স্থানীয় নোড কাজ চালিয়ে যেতে পারে।
+   - শক্তি সাশ্রয় ও পরিমাপযোগ্যতা: প্রতিটি নতুন যন্ত্র নিজের প্রক্রিয়াকরণ ক্ষমতা নিয়ে আসে, তাই কেন্দ্রের ওপর চাপ বাড়ে না।
+
+   প্রয়োগক্ষেত্র: স্মার্ট ট্রাফিক সিগন্যাল, নিরাপত্তা ক্যামেরায় ভিডিও অ্যানালিটিকস, কারখানায় যন্ত্রের পূর্বাভাসভিত্তিক রক্ষণাবেক্ষণ, হাসপাতালে রোগী পর্যবেক্ষণ, স্মার্ট গ্রিড, কৃষিতে সেন্সর নেটওয়ার্ক ও কনটেন্ট ডেলিভারি নেটওয়ার্ক।
+
+   চ্যালেঞ্জ: হাজার হাজার বিতরণকৃত নোড ব্যবস্থাপনা, তাদের ভৌত নিরাপত্তা, সফটওয়্যার হালনাগাদ ও নোডগুলোর মধ্যে সঙ্গতি বজায় রাখা।
+
+   ক্লাউডের সঙ্গে সম্পর্ক: এজ কম্পিউটিং ক্লাউডের বিকল্প নয়, পরিপূরক। তাৎক্ষণিক সিদ্ধান্ত নেয় এজ, আর দীর্ঘমেয়াদি সংরক্ষণ, প্রশিক্ষণ ও সামগ্রিক বিশ্লেষণ করে ক্লাউড। ৫জি নেটওয়ার্কের বিস্তারে এই সমন্বিত কাঠামোই আদর্শ স্থাপত্য হয়ে উঠছে।
 2. **Intel 8085 ও Intel 8086 Microprocessor-এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি কত এবং কেন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
+
+   Answer:
+   - Intel 8085 এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি ৬৪ কিলোবাইট (64 KB)।
+   - Intel 8086 এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি ১ মেগাবাইট (1 MB)।
+
+   কেন — মূল কারণ অ্যাড্রেস বাসের প্রশস্ততা:
+
+   একটি প্রসেসর সর্বোচ্চ কত মেমোরি সম্বোধন করতে পারে তা নির্ভর করে তার অ্যাড্রেস বাসে কতটি লাইন আছে তার ওপর। n সংখ্যক অ্যাড্রেস লাইন থাকলে ভিন্ন ভিন্ন ঠিকানার সংখ্যা 2^n।
+
+   Intel 8085:
+   - অ্যাড্রেস বাস ১৬ বিটের (A0 থেকে A15)।
+   - সম্বোধনযোগ্য ঠিকানার সংখ্যা = 2^16 = 65,536
+   - প্রতিটি ঠিকানায় ১ বাইট থাকে, তাই মোট = 65,536 বাইট = ৬৪ কিলোবাইট।
+   - ঠিকানার পরিসর 0000H থেকে FFFFH।
+   - উল্লেখযোগ্য: ৮০৮৫ এর AD0 থেকে AD7 পিনগুলো মাল্টিপ্লেক্সড, অর্থাৎ একই পিন সময়ভেদে ঠিকানার নিম্ন বাইট ও ডেটা উভয়ই বহন করে; ALE সংকেত দিয়ে দুটি আলাদা করা হয়।
+
+   Intel 8086:
+   - অ্যাড্রেস বাস ২০ বিটের (A0 থেকে A19)।
+   - সম্বোধনযোগ্য ঠিকানার সংখ্যা = 2^20 = 10,48,576
+   - মোট = 10,48,576 বাইট = ১ মেগাবাইট।
+   - ঠিকানার পরিসর 00000H থেকে FFFFFH।
+
+   ৮০৮৬ এর সেগমেন্টেশন পদ্ধতি:
+   - ৮০৮৬ এর ভেতরের সব রেজিস্টার ১৬ বিটের, যা দিয়ে সর্বোচ্চ ৬৪ কিলোবাইট সম্বোধন করা যায়। কিন্তু অ্যাড্রেস বাস ২০ বিটের। এই ব্যবধান পূরণ করতে সেগমেন্টেশন ব্যবহার করা হয়।
+   - ভৌত ঠিকানা = (সেগমেন্ট রেজিস্টারের মান x 16) + অফসেট
+   - অর্থাৎ সেগমেন্টের মানকে বাঁ দিকে ৪ বিট সরিয়ে (১৬ দিয়ে গুণ করে) ১৬ বিটের অফসেটের সঙ্গে যোগ করা হয়, যা ২০ বিটের ঠিকানা দেয়।
+   - উদাহরণ: CS = 2000H এবং IP = 0050H হলে ভৌত ঠিকানা = 20000H + 0050H = 20050H।
+   - চারটি সেগমেন্ট রেজিস্টার: CS (কোড), DS (ডেটা), SS (স্ট্যাক) ও ES (অতিরিক্ত)। প্রতিটি সেগমেন্ট ৬৪ কিলোবাইট পর্যন্ত হতে পারে।
+
+   তুলনামূলক সারণি:
+
+   | বিষয় | Intel 8085 | Intel 8086 |
+   |---|---|---|
+   | ডেটা বাস | ৮ বিট | ১৬ বিট |
+   | অ্যাড্রেস বাস | ১৬ বিট | ২০ বিট |
+   | সর্বোচ্চ মেমোরি | ৬৪ কিলোবাইট | ১ মেগাবাইট |
+   | ঠিকানার পরিসর | 0000H - FFFFH | 00000H - FFFFFH |
+   | সেগমেন্টেশন | নেই | আছে |
+   | পাইপলাইনিং | নেই | আছে (BIU ও EU আলাদা) |
 3. **What is the difference between 8-bit (8085) and 16-bit (8086) microprocessor?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865-866 (ET: BUET)]*
+
+
+   Answer:
+
+   | Point | Intel 8085 (8-bit) | Intel 8086 (16-bit) |
+   |---|---|---|
+   | Data bus width | 8 bits | 16 bits |
+   | Address bus width | 16 bits | 20 bits |
+   | Maximum addressable memory | 2^16 = 64 KB | 2^20 = 1 MB |
+   | Word size | 8 bits | 16 bits |
+   | Register size | 8-bit registers (A, B, C, D, E, H, L), which can be paired to form 16 bits | 16-bit registers (AX, BX, CX, DX), each divisible into two 8-bit halves |
+   | Internal architecture | A single unit that fetches and executes in sequence | Divided into a Bus Interface Unit and an Execution Unit, which work in parallel |
+   | Pipelining | Not available; fetch and execute happen one after the other | Available; the BIU prefetches up to 6 bytes into an instruction queue while the EU executes |
+   | Memory organisation | Linear, one flat 64 KB space | Segmented, with four 64 KB segments selected by CS, DS, SS and ES |
+   | Physical address formation | The 16-bit address is used directly | Physical address = (segment x 16) + offset |
+   | Clock frequency | 3 MHz | 5, 8 or 10 MHz |
+   | Number of pins | 40 | 40 |
+   | Instruction set | 74 instructions, 246 opcodes | Larger and more powerful, including multiply and divide instructions |
+   | Multiply and divide | Not available as single instructions; must be done by repeated addition or subtraction in software | MUL, IMUL, DIV and IDIV are provided in hardware |
+   | Flag register | 8 bits, 5 flags used | 16 bits, 9 flags used (6 status and 3 control) |
+   | Interrupts | 5 hardware interrupts (TRAP, RST 7.5, 6.5, 5.5, INTR) | 256 interrupt vectors through an interrupt vector table |
+   | Addressing modes | Fewer, about 5 | More, about 12 |
+   | Multiprocessing support | None | Supports maximum mode with a coprocessor such as the 8087 |
+   | Introduced | 1976 | 1978 |
+
+   Key structural advantage of the 8086: the separation of the Bus Interface Unit from the Execution Unit. While the EU is executing one instruction, the BIU is already fetching the next ones into a six-byte queue. In the 8085 the processor must finish executing before it can fetch again, so the bus sits idle for part of every instruction. This overlap is the earliest form of pipelining in the x86 family and is a major reason for the performance jump.
+
+   Note on the 8088: it is internally identical to the 8086 but has an 8-bit external data bus and a four-byte queue, which made the supporting hardware cheaper. It was the processor used in the original IBM PC of 1981.
 
 ## RISC vs CISC Architecture (2)
 
 1. **RISC stand for __________? Write two characteristics of it's?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+
+   Answer: RISC stands for Reduced Instruction Set Computer.
+
+   It is a processor design philosophy in which the instruction set is deliberately kept small and simple, so that each instruction can be executed quickly and the hardware can remain uncomplicated. The complexity that is removed from the hardware is transferred to the compiler.
+
+   Two characteristics of RISC:
+
+   - Simple, fixed-length instructions executed in a single clock cycle: every instruction is the same size, typically 32 bits, and performs one elementary operation. Because instructions are uniform in length and duration, the decoder is simple and the pipeline stages stay balanced, which allows efficient pipelining and, in the ideal case, the completion of one instruction per clock cycle.
+
+   - Load-store architecture with a large register set: only two instructions, load and store, may touch memory. All arithmetic and logical operations work exclusively on registers, and a RISC processor provides many registers, typically 32 or more, so that values can be kept in registers instead of being repeatedly fetched from memory. This greatly reduces memory traffic and makes execution time predictable.
+
+   Other characteristics worth mentioning:
+   - Few addressing modes, typically three to five.
+   - A hardwired control unit rather than a microprogrammed one, which is faster.
+   - Larger program code size, since more simple instructions are needed to do the same work.
+   - A more complex compiler, which must schedule instructions and allocate registers well.
+   - Lower power consumption and simpler silicon, which is why RISC dominates mobile and embedded devices.
+
+   Examples: ARM (used in almost every smartphone and in Apple's M series), MIPS, SPARC, PowerPC and the open standard RISC-V.
 2. **Difference between RISC and CISC.** *[NPCBL Executive Trainee (IT) 2022 compact it 644 (ET: BUET)]*
+
+
+   Answer:
+
+   | Point | RISC (Reduced Instruction Set Computer) | CISC (Complex Instruction Set Computer) |
+   |---|---|---|
+   | Instruction set | Small, simple, about 100 instructions | Large, complex, several hundred instructions |
+   | Instruction length | Fixed length, typically 32 bits | Variable length, 1 to 15 bytes |
+   | Execution time | Mostly one clock cycle per instruction | Several clock cycles per instruction |
+   | Addressing modes | Few, typically 3 to 5 | Many, 12 to 20 or more |
+   | Memory access | Only by dedicated load and store instructions | Almost any instruction can access memory |
+   | Registers | Many, typically 32 or more | Few, typically 8 to 16 |
+   | Pipelining | Easy and highly efficient | Difficult because of variable instruction length |
+   | Control unit | Hardwired, so it is fast | Microprogrammed, so it is flexible but slower |
+   | Code size | Larger, more instructions per program | Smaller, one instruction does more work |
+   | Compiler | Complex, must do more optimisation | Simpler, hardware does more of the work |
+   | Power consumption | Low, so it suits battery-powered devices | Higher |
+   | Chip complexity | Simpler, leaves room for cache and more registers | Complex control logic uses much of the chip |
+   | Examples | ARM, MIPS, SPARC, PowerPC, RISC-V, Apple M series | Intel x86, AMD x86-64, Intel 8086, Motorola 68000 |
+
+   Note: modern x86 processors are CISC on the outside but internally translate each complex instruction into simple RISC-like micro-operations, so the two philosophies have converged in practice.
+
+   Design philosophy in one line each:
+   - CISC: make each instruction do as much as possible, so that programs are short and memory, which was once very expensive, is saved. Complexity is placed in the hardware.
+   - RISC: make each instruction as simple as possible, so that it executes in one cycle and the pipeline stays full. Complexity is placed in the compiler.
+
+   Historical reason for the difference: in the 1970s memory was extremely expensive and compilers were primitive, so a rich instruction set that produced compact code was valuable. By the 1980s memory had become cheap and compilers had improved, and studies showed that programs used only a small subset of the available instructions most of the time. This observation led to the RISC movement at Berkeley and Stanford.
+
+   Convergence today: modern x86 processors present a CISC instruction set to software for compatibility, but internally a decoder translates each complex instruction into a sequence of simple RISC-like micro-operations, which are then executed by a RISC-style pipelined core. Conversely, modern ARM processors have added more complex instructions, such as SIMD and cryptography extensions. The two philosophies have therefore met in the middle, and the practical distinction now lies mainly in the instruction encoding and in the power and performance targets of the design.

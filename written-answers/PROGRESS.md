@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 196/239 subtopics · 2239/2673 answers**
+**Overall: 197/239 subtopics · 2242/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -243,7 +243,7 @@ Commit unit: one `##` subtopic.
 - [x] Propositional Logic & Logical Equivalence (1)
 - [x] Numerical Methods & Root Finding (1)
 
-## microprocessor-and-computer-architecture.md — 9/11 sections, 102/107 answers
+## microprocessor-and-computer-architecture.md — 10/11 sections, 105/107 answers
 
 - [x] Microprocessor Architecture & Functions (27)
 - [x] Memory Hierarchy & Storage (21)
@@ -254,7 +254,7 @@ Commit unit: one `##` subtopic.
 - [x] Assembly Language & Addressing Modes (5)
 - [x] Instruction Pipelining & Hazards (5)
 - [x] CPU Performance & Instruction Cycle (4)
-- [ ] 8085 Microprocessor & Edge Computing (3)
+- [x] 8085 Microprocessor & Edge Computing (3)
 - [ ] RISC vs CISC Architecture (2)
 
 ## oop.md — 0/9 sections, 0/84 answers
