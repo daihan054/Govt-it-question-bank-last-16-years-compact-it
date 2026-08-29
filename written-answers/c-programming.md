@@ -21,12 +21,76 @@
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n;
+       scanf("%d", &n);
+       if (n % 2 == 0) printf("Even");
+       else printf("Odd");
+       return 0;
+   }
+   ```
+
+   - The remainder after dividing by 2 decides the result.
+   - Time complexity O(1).
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int y;
+       scanf("%d", &y);
+       if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)
+           printf("Leap year");
+       else
+           printf("Not a leap year");
+       return 0;
+   }
+   ```
+
+   - A year is a leap year if it is divisible by 4 but not by 100, or if it is divisible by 400.
+   - So 2000 is a leap year but 1900 is not.
 3. **Write a structured program (in C or Python) that takes an integer input n and prints the sum of all even numbers from 1 to n.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, sum = 0;
+       scanf("%d", &n);
+       for (i = 2; i <= n; i += 2)
+           sum += i;
+       printf("Sum of even numbers = %d", sum);
+       return 0;
+   }
+   ```
+
+   - The loop starts at 2 and steps by 2, so only even numbers are added.
+   - Time complexity O(n).
 4. **(a) Difference between a while loop and do-while loop.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1446 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | while loop | do-while loop |
+   |---|---|---|
+   | Condition check | Before the body runs | After the body runs |
+   | Minimum executions | 0, the body may never run | 1, the body always runs once |
+   | Type | Entry controlled loop | Exit controlled loop |
+   | Syntax ending | No semicolon after the closing brace | Semicolon required after while |
+
+   - while: `while (cond) { body }`
+   - do-while: `do { body } while (cond);`
+   - Example: if the condition is false at the start, a while loop prints nothing, but a do-while prints once.
 5. **Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the following pattern will be printed.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1354 (ET: N/A)]*
 ```
 1 2 3 4
@@ -35,20 +99,186 @@
 4
 ```
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       char s[20];
+       int i, j, len = 0;
+       scanf("%s", s);
+       while (s[len] != '\0') len++;
+       for (i = 0; i < len; i++) {
+           for (j = i; j < len; j++)
+               printf("%c ", s[j]);
+           printf("\n");
+       }
+       return 0;
+   }
+   ```
+
+   - The number is read as a string so each digit can be printed separately.
+   - Row i starts from digit i and runs to the last digit, which gives the required triangle.
 6. **a) Suppose you are working with an array of size 10. It contains all the numbers from 1 to 10 exactly once in a random order. But accidentally, one of the numbers in the array got replaced by a zero (0). Write a C/C++ programme using functions, to restore the lost number.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[9], i, sum = 0;
+       for (i = 0; i < 9; i++) {
+           scanf("%d", &a[i]);
+           sum += a[i];
+       }
+       printf("Missing number = %d", 55 - sum);
+       return 0;
+   }
+   ```
+
+   - The sum of 1 to 10 is n(n+1)/2 = 55.
+   - Subtracting the sum of the given numbers gives the missing one.
+   - Time complexity O(n) and space complexity O(1).
 7. **Find biggest elements in an array of 10 components.** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[10], i, max;
+       for (i = 0; i < 10; i++) scanf("%d", &a[i]);
+       max = a[0];
+       for (i = 1; i < 10; i++)
+           if (a[i] > max) max = a[i];
+       printf("Largest = %d", max);
+       return 0;
+   }
+   ```
+
+   - The first element is assumed the largest, then every other element is compared once.
+   - Time complexity O(n).
 8. **Write a C program that accepts 10 elements in an array and finds the maximum elements from the array.** *[BBA Assistant Programmer 12.07.2025 compact it 1433 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[10], i, max;
+       for (i = 0; i < 10; i++) scanf("%d", &a[i]);
+       max = a[0];
+       for (i = 1; i < 10; i++)
+           if (a[i] > max) max = a[i];
+       printf("Largest = %d", max);
+       return 0;
+   }
+   ```
+
+   - The first element is assumed the largest, then every other element is compared once.
+   - Time complexity O(n).
 9. **Write a function to find minimum number from an array, return minimum value as argument.** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1430 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int findMin(int a[], int n) {
+       int i, min = a[0];
+       for (i = 1; i < n; i++)
+           if (a[i] < min) min = a[i];
+       return min;
+   }
+   
+   int main() {
+       int a[] = {23, 5, 78, 2, 45}, n = 5;
+       printf("Minimum = %d", findMin(a, n));
+       return 0;
+   }
+   ```
+
+   - The array and its size are passed as parameters and the minimum value is returned.
+   - Time complexity O(n).
 10. **Write a C/Java program to check Armstrong number or not.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)], [BREB Assistant Programmer (AP) 21.02.2025 compact it 1334 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, t, r, sum = 0, d = 0, p;
+       scanf("%d", &n);
+       t = n;
+       while (t > 0) { d++; t /= 10; }
+       t = n;
+       while (t > 0) {
+           r = t % 10;
+           p = 1;
+           for (int i = 0; i < d; i++) p *= r;
+           sum += p;
+           t /= 10;
+       }
+       if (sum == n) printf("Armstrong number");
+       else printf("Not an Armstrong number");
+       return 0;
+   }
+   ```
+
+   - An Armstrong number equals the sum of its digits each raised to the power of the digit count.
+   - Example: 153 = 1³ + 5³ + 3³.
 11. **Write a program from the following series: $e^x = 1 + \frac{x}{1} + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots$** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 316 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i;
+       float x, term = 1, sum = 1;
+       scanf("%f %d", &x, &n);
+       for (i = 1; i <= n; i++) {
+           term = term * x / i;
+           sum += term;
+       }
+       printf("e^x = %f", sum);
+       return 0;
+   }
+   ```
+
+   - Each term is obtained from the previous one by multiplying with x/i, so the factorial is never computed separately.
+   - This keeps the time complexity at O(n).
 12. **Write a C program to find sum of: $X - \frac{X^3}{3!} + \frac{X^5}{5!} - \frac{X^7}{7!} \dots N$** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 397 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i;
+       float x, term, sum = 0;
+       scanf("%f %d", &x, &n);
+       term = x;
+       sum = x;
+       for (i = 1; i < n; i++) {
+           term = -term * x * x / ((2*i) * (2*i+1));
+           sum += term;
+       }
+       printf("Sum = %f", sum);
+       return 0;
+   }
+   ```
+
+   - This is the sine series, where each term is derived from the previous one.
+   - The sign alternates because of the negative multiplier.
 13. **Salary Range and Tax Calculation are given:**
 
 | Salary Range | Tax |
@@ -61,21 +291,138 @@
    * **a. Write a program using any language to the calculate the total tax of employee.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 290 (ET: BUET)]*
    * **b. From the three employee salary find the highest tax paying employee.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 290 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   double tax(double s) {
+       if (s <= 250000) return 0;
+       else if (s <= 500000) return (s - 250000) * 0.10;
+       else if (s <= 1000000) return 250000 * 0.10 + (s - 500000) * 0.20;
+       else return 250000 * 0.10 + 500000 * 0.20 + (s - 1000000) * 0.30;
+   }
+   
+   int main() {
+       double s[3], t[3], maxt;
+       int i, idx = 0;
+       for (i = 0; i < 3; i++) {
+           scanf("%lf", &s[i]);
+           t[i] = tax(s[i]);
+           printf("Employee %d tax = %.2lf\n", i+1, t[i]);
+       }
+       maxt = t[0];
+       for (i = 1; i < 3; i++)
+           if (t[i] > maxt) { maxt = t[i]; idx = i; }
+       printf("Highest tax paying employee is %d with tax %.2lf", idx+1, maxt);
+       return 0;
+   }
+   ```
+
+   - Tax is calculated slab by slab, not on the whole salary at one rate.
+   - Part b compares the three tax amounts and prints the largest.
 14. **Write a C program find prime number 1 to n.** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, j, flag;
+       scanf("%d", &n);
+       for (i = 2; i <= n; i++) {
+           flag = 1;
+           for (j = 2; j * j <= i; j++)
+               if (i % j == 0) { flag = 0; break; }
+           if (flag) printf("%d ", i);
+       }
+       return 0;
+   }
+   ```
+
+   - Checking divisors only up to the square root reduces the work greatly.
+   - Time complexity is about O(n√n).
 15. **Write a program in any language to find the sum of rows and columns of a m \times n matrix, where m and n is taken input from the user. Give the output in the following format:**
    **Sample Input matrix:**
    **Sample Output:**
    *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 331 (ET: BIBM)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int m, n, i, j, a[20][20], rs, cs;
+       scanf("%d %d", &m, &n);
+       for (i = 0; i < m; i++)
+           for (j = 0; j < n; j++) scanf("%d", &a[i][j]);
+       for (i = 0; i < m; i++) {
+           rs = 0;
+           for (j = 0; j < n; j++) rs += a[i][j];
+           printf("Row %d sum = %d\n", i+1, rs);
+       }
+       for (j = 0; j < n; j++) {
+           cs = 0;
+           for (i = 0; i < m; i++) cs += a[i][j];
+           printf("Column %d sum = %d\n", j+1, cs);
+       }
+       return 0;
+   }
+   ```
+
+   - Row sums fix the row index and vary the column, and column sums do the opposite.
+   - Time complexity O(m × n).
 16. **Write a program in any language to find the prime numbers between 1.......n, where n is taken as user input.**
    **Sample input:**
    **Enter value of n: 20**
    **Sample Output:**
    **Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 332 (ET: BIBM)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, j, flag;
+       scanf("%d", &n);
+       for (i = 2; i <= n; i++) {
+           flag = 1;
+           for (j = 2; j * j <= i; j++)
+               if (i % j == 0) { flag = 0; break; }
+           if (flag) printf("%d ", i);
+       }
+       return 0;
+   }
+   ```
+
+   - Checking divisors only up to the square root reduces the work greatly.
+   - Time complexity is about O(n√n).
 17. **Write a Program Prime number print from 1 to n.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 294 (ET: BIBM)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, j, flag;
+       scanf("%d", &n);
+       for (i = 2; i <= n; i++) {
+           flag = 1;
+           for (j = 2; j * j <= i; j++)
+               if (i % j == 0) { flag = 0; break; }
+           if (flag) printf("%d ", i);
+       }
+       return 0;
+   }
+   ```
+
+   - Checking divisors only up to the square root reduces the work greatly.
+   - Time complexity is about O(n√n).
 18. **Write a Program Floyds triangle n=5**
 ```text
 1
@@ -86,17 +433,138 @@
 ```
 *[Combined Bank Assistant Programmer 09.02.2024 compact it 295 (ET: BIBM)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n = 5, i, j, num = 1;
+       for (i = 1; i <= n; i++) {
+           for (j = 1; j <= i; j++)
+               printf("%d ", num++);
+           printf("\n");
+       }
+       return 0;
+   }
+   ```
+
+   - Floyd's triangle prints consecutive natural numbers, with row i holding i numbers.
+   - Output for n = 5 is 1 / 2 3 / 4 5 6 / 7 8 9 10 / 11 12 13 14 15.
 19. **Write a C Program Find sum of the series: 1+2+4+7+11+..........+N** *[Combined Bank Assistant Programmer 09.02.2024 compact it 295 (ET: BIBM)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, term = 1, sum = 0;
+       scanf("%d", &n);
+       for (i = 1; term <= n; i++) {
+           sum += term;
+           term = term + i;
+       }
+       printf("Sum = %d", sum);
+       return 0;
+   }
+   ```
+
+   - The differences between consecutive terms are 1, 2, 3, 4, so each term is the previous term plus i.
+   - Series: 1, 2, 4, 7, 11, 16 and so on.
 20. **Write a function which receives an array of integers as parameter and print the numbers divisible by 3 in the array.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 428 (ET: BIBM)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   void divBy3(int a[], int n) {
+       int i;
+       for (i = 0; i < n; i++)
+           if (a[i] % 3 == 0) printf("%d ", a[i]);
+   }
+   
+   int main() {
+       int a[] = {3, 7, 9, 14, 18, 20}, n = 6;
+       divBy3(a, n);
+       return 0;
+   }
+   ```
+
+   - Only elements whose remainder on division by 3 is zero are printed.
+   - Time complexity O(n).
 21. **Write a C program: ax^2+bx+c=0** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 390 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <math.h>
+   int main() {
+       float a, b, c, d, r1, r2;
+       scanf("%f %f %f", &a, &b, &c);
+       d = b*b - 4*a*c;
+       if (d > 0) {
+           r1 = (-b + sqrt(d)) / (2*a);
+           r2 = (-b - sqrt(d)) / (2*a);
+           printf("Real and distinct roots: %.2f, %.2f", r1, r2);
+       } else if (d == 0) {
+           printf("Equal roots: %.2f", -b / (2*a));
+       } else {
+           printf("Roots are imaginary");
+       }
+       return 0;
+   }
+   ```
+
+   - The discriminant d = b² − 4ac decides the nature of the roots.
+   - d > 0 gives two real roots, d = 0 gives one repeated root and d < 0 gives complex roots.
 22. **Write a program that take a number as input and output should be sum of digits of that number using python/C also draw its flow chart.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, sum = 0;
+       scanf("%d", &n);
+       while (n > 0) {
+           sum += n % 10;
+           n /= 10;
+       }
+       printf("Sum of digits = %d", sum);
+       return 0;
+   }
+   ```
+
+   - The last digit is taken by n % 10 and removed by n / 10, repeated until n becomes 0.
+   - For 1234 the answer is 1 + 2 + 3 + 4 = 10.
 23. **Find the output from the following: take input and looks the output:**
    **Suppose Input: 6789; Output: 9876** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, rev = 0;
+       scanf("%d", &n);
+       while (n > 0) {
+           rev = rev * 10 + n % 10;
+           n /= 10;
+       }
+       printf("%d", rev);
+       return 0;
+   }
+   ```
+
+   - Each extracted digit is appended to the reversed number by multiplying it by 10 first.
+   - Input 6789 gives output 9876.
 24. **(b) Print the output:** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 ```c
 #include<stdio.h>
@@ -108,6 +576,12 @@ int main() {
 }
 ```
 
+
+   Answer: Output is 30.
+
+   - `a[2]` is 2, so the expression becomes `b[2]`.
+   - `b[2]` is 30, so 30 is printed.
+   - This is array indexing used inside another array index, which is legal in C.
 25. **Given a code with a variable value "a=85" and finds its output a=85**
 ```c
 if a>=90 point A;
@@ -118,12 +592,78 @@ else print F;
 ```
 *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
 
+
+   Answer: Output is B C D.
+
+   - The four conditions are written as separate `if` statements, not as `else if`, so each one is tested independently.
+   - a = 85, so `a >= 90` is false and nothing prints.
+   - `a >= 80` is true, so B prints. `a >= 70` is true, so C prints. `a >= 60` is true, so D prints.
+   - The `else` belongs only to the last `if`, and since that condition was true, F never prints.
+   - If `else if` had been used, only B would print. This is the trap the question is testing.
 26. **(ক) C ভাষায় ব্যবহৃত বিভিন্ন ধরনের Data Type বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 407 (ET: N/A)]*
 
+
+   Answer: C supports the following data types.
+
+   Primary or basic types:
+   - `int` — stores whole numbers, normally 4 bytes, format specifier `%d`.
+   - `float` — single precision decimal, 4 bytes, `%f`.
+   - `double` — double precision decimal, 8 bytes, `%lf`.
+   - `char` — a single character, 1 byte, `%c`.
+   - `void` — represents no value, used for functions returning nothing.
+
+   Derived types:
+   - Array — a collection of same type elements, for example `int a[10]`.
+   - Pointer — holds a memory address, for example `int *p`.
+   - Function — returns a value of a declared type.
+
+   User defined types:
+   - `struct` — groups variables of different types under one name.
+   - `union` — like struct but all members share the same memory.
+   - `enum` — a set of named integer constants.
+   - `typedef` — gives a new name to an existing type.
+
+   Type modifiers: `short`, `long`, `signed` and `unsigned` change the range or size of the basic types.
 27. **(খ) একটি ধনাত্মক পূর্ণ সংখ্যার Factorial নির্ণয়ের C program লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i;
+       long long f = 1;
+       scanf("%d", &n);
+       for (i = 1; i <= n; i++)
+           f *= i;
+       printf("Factorial = %lld", f);
+       return 0;
+   }
+   ```
+
+   - `long long` is used because factorial values grow very fast.
+   - Factorial of 0 is 1, which this loop handles correctly since it never runs.
 28. **Write a program swap two numbers without using 3rd variable.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a, b;
+       scanf("%d %d", &a, &b);
+       a = a + b;
+       b = a - b;
+       a = a - b;
+       printf("a = %d, b = %d", a, b);
+       return 0;
+   }
+   ```
+
+   - The arithmetic method swaps without a third variable.
+   - The XOR method `a^=b; b^=a; a^=b;` also works and avoids overflow.
 29. **Find the output from this code-** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 590 (ET: BUET)]*
 ```c
 #include <stdio.h>
@@ -156,12 +696,77 @@ int main() {
 }
 ```
 
+
+   Answer: The first line printed is 112345, after which the program shows undefined behaviour.
+
+   - `PrintArray(num,5)` in main prints the array as 112345.
+   - Inside `FunctionArray`, the variable `j` is declared but never initialised, and the very first statement executed on it is `j--`. Using an uninitialised variable is undefined behaviour in C.
+   - The while loop `while (j >= 0 && j <= n)` never changes `j` inside the body, so if the loop is entered at all it becomes an infinite loop and also writes outside the array bounds through `num[j] = num[j+1]`.
+   - Therefore the program prints 112345 and then either hangs or crashes, depending on the compiler and the garbage value in `j`.
+   - The intended code was insertion sort, where `j` should have been initialised as `j = i - 1` and decremented inside the loop.
 30. **Write a program for following sequence and analyze complexity of the program** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 522 (ET: MIST)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, sum = 0;
+       scanf("%d", &n);
+       for (i = 1; i <= n; i++)
+           sum += i * i;
+       printf("Sum = %d", sum);
+       return 0;
+   }
+   ```
+
+   - The loop runs n times and each iteration does constant work, so the time complexity is O(n).
+   - Only a few variables are used, so the space complexity is O(1).
+   - The same result can be obtained in O(1) using n(n+1)(2n+1)/6.
 31. **Write a C/C++ program to count the prime number up to N.** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, j, flag, count = 0;
+       scanf("%d", &n);
+       for (i = 2; i <= n; i++) {
+           flag = 1;
+           for (j = 2; j * j <= i; j++)
+               if (i % j == 0) { flag = 0; break; }
+           if (flag) count++;
+       }
+       printf("Total prime numbers = %d", count);
+       return 0;
+   }
+   ```
+
+   - Instead of printing, the primes are counted.
+   - The Sieve of Eratosthenes would be faster at O(n log log n) for large n.
 32. **Write a C/C++ program for check out a leap year program.** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int y;
+       scanf("%d", &y);
+       if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)
+           printf("Leap year");
+       else
+           printf("Not a leap year");
+       return 0;
+   }
+   ```
+
+   - A year is a leap year if it is divisible by 4 but not by 100, or if it is divisible by 400.
+   - So 2000 is a leap year but 1900 is not.
 33. **Write a Program:** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 506 (ET: N/A)]*
    a) **Sample Output:**
    ```text
@@ -177,6 +782,28 @@ int main() {
    Start
    ```
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int i, j;
+       /* a) triangle pattern */
+       for (i = 1; i <= 3; i++) {
+           for (j = 1; j <= i; j++)
+               printf("%d ", j);
+           printf("\n");
+       }
+       /* b) print Start four times */
+       for (i = 0; i < 4; i++)
+           printf("Start\n");
+       return 0;
+   }
+   ```
+
+   - Part a uses a nested loop where the inner loop prints 1 to i on row i.
+   - Part b is a simple loop that repeats the same text four times.
 34. **Find the output of the following program including time and space complexity.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 542 (ET: MIST)]*
 ```cpp
 #include<iostream>
@@ -202,10 +829,55 @@ return 0;
 }
 ```
 
+
+   Answer: The program prints the Fibonacci series for the entered number of terms.
+
+   For an input of n = 5 the output is:
+   `Fibonacci Series:01,1,2,3`
+
+   - `first = 0` is printed with no separator, then `second = 1` is printed also with no separator, which is why the first two values appear joined as 01.
+   - From i = 2 onward each new term is printed after a comma, so the remaining output is ,1 then ,2 then ,3.
+   - Time complexity: O(n), because the loop runs n − 2 times and each iteration does constant work.
+   - Space complexity: O(1), since only the variables first, second and next are stored regardless of n.
 35. **Write a program find prime number between 1 to 100?** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 499 (ET: IBA)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int i, j, flag;
+       for (i = 2; i <= 100; i++) {
+           flag = 1;
+           for (j = 2; j * j <= i; j++)
+               if (i % j == 0) { flag = 0; break; }
+           if (flag) printf("%d ", i);
+       }
+       return 0;
+   }
+   ```
+
+   - There are 25 prime numbers between 1 and 100.
+   - 1 is not prime, so the loop starts from 2.
 36. **Write a C program sum of 1 to 100.** *[Mongla Port Authority Assistant Programmer 2023 compact it 571 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int i, sum = 0;
+       for (i = 1; i <= 100; i++)
+           sum += i;
+       printf("Sum = %d", sum);
+       return 0;
+   }
+   ```
+
+   - The output is 5050.
+   - The same value can be obtained directly by n(n+1)/2 = 100 × 101 / 2.
 37. **Write a Program:** *[DESCO Assistant Engineer 20.05.2023 compact it 579 (ET: DESCO)]*
    **a) Sample Output:**
    ```text
@@ -216,15 +888,111 @@ return 0;
    ```
    **b) Write a C or C++ Program to print an array of five fruits.**
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int i, j;
+       /* a) triangle pattern */
+       for (i = 1; i <= 4; i++) {
+           for (j = 1; j <= i; j++)
+               printf("%d ", j);
+           printf("\n");
+       }
+       /* b) print an array of five fruits */
+       char *fruits[5] = {"Mango", "Banana", "Apple", "Jackfruit", "Guava"};
+       for (i = 0; i < 5; i++)
+           printf("%s\n", fruits[i]);
+       return 0;
+   }
+   ```
+
+   - Part a prints 1 to i on row i for four rows.
+   - Part b uses an array of character pointers to hold the five names.
 38. **Write a program in any language that takes two matrices A and B as inputs ensure your code handles matrices of different dimensions—**
    **A) Find matrices C that is multiplication A and B.**
    **B) Find average in A and B.**
    **C) Max from matrices C** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 515 (ET: MIST)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int r1, c1, r2, c2, i, j, k;
+       int a[10][10], b[10][10], c[10][10];
+       scanf("%d %d", &r1, &c1);
+       scanf("%d %d", &r2, &c2);
+       if (c1 != r2) {
+           printf("Multiplication not possible");
+           return 0;
+       }
+       for (i = 0; i < r1; i++) for (j = 0; j < c1; j++) scanf("%d", &a[i][j]);
+       for (i = 0; i < r2; i++) for (j = 0; j < c2; j++) scanf("%d", &b[i][j]);
+       for (i = 0; i < r1; i++)
+           for (j = 0; j < c2; j++) {
+               c[i][j] = 0;
+               for (k = 0; k < c1; k++)
+                   c[i][j] += a[i][k] * b[k][j];
+           }
+       for (i = 0; i < r1; i++) {
+           for (j = 0; j < c2; j++) printf("%d ", c[i][j]);
+           printf("\n");
+       }
+       return 0;
+   }
+   ```
+
+   - Multiplication is possible only when the column count of A equals the row count of B.
+   - The result has dimension r1 × c2 and the time complexity is O(r1 × c1 × c2).
 39. **Write a function to find the smallest element from an array.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 492 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int findMin(int a[], int n) {
+       int i, min = a[0];
+       for (i = 1; i < n; i++)
+           if (a[i] < min) min = a[i];
+       return min;
+   }
+   
+   int main() {
+       int a[] = {23, 5, 78, 2, 45}, n = 5;
+       printf("Minimum = %d", findMin(a, n));
+       return 0;
+   }
+   ```
+
+   - The array and its size are passed as parameters and the minimum value is returned.
+   - Time complexity O(n).
 40. **Suppose you have an array. The array contains elements from 0 to 10. This array also contains 0. To replace these 0s, write a program in C/C++ language.** *[BTCL Assistant Manager (Technical) 2023 compact it 593 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[100], n, i, j = 0;
+       scanf("%d", &n);
+       for (i = 0; i < n; i++) scanf("%d", &a[i]);
+       for (i = 0; i < n; i++)
+           if (a[i] != 0) a[j++] = a[i];
+       while (j < n) a[j++] = 0;
+       for (i = 0; i < n; i++) printf("%d ", a[i]);
+       return 0;
+   }
+   ```
+
+   - All non-zero elements are moved forward keeping their order, then the rest of the array is filled with zeros.
+   - Time complexity O(n) and space complexity O(1).
 41. **Write a function int equilibrium (int[] arr, int n); that given a sequence arr[] of size n, returns an equilibrium index (if any) or -1 if no equilibrium indexes exist. The equilibrium index of an array is an index such that the sum of elements at lower indexes is equal to the sum of elements at higher indexes. Foe example:** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 455 (ET: BUET)]*
    **Input: A[] = {-7, 1, 5, 2, -4, 3, 0}**
    **Output: 3**
@@ -232,6 +1000,32 @@ return 0;
    **Input: A[] = {1, 2, 3}**
    **Output: -1**
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int equilibrium(int arr[], int n) {
+       int total = 0, left = 0, i;
+       for (i = 0; i < n; i++) total += arr[i];
+       for (i = 0; i < n; i++) {
+           total -= arr[i];
+           if (left == total) return i;
+           left += arr[i];
+       }
+       return -1;
+   }
+   
+   int main() {
+       int a[] = {-7, 1, 5, 2, -4, 3, 0}, n = 7;
+       printf("Equilibrium index = %d", equilibrium(a, n));
+       return 0;
+   }
+   ```
+
+   - At an equilibrium index the sum of elements on the left equals the sum on the right.
+   - The running total avoids recomputing the right sum each time, so the complexity is O(n).
 42. **Write a C program to print the following pattern:**
 ```text
 0
@@ -241,26 +1035,241 @@ return 0;
 ```
 *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n = 3, i, j;
+       for (i = 1; i <= n; i++) {
+           for (j = 1; j <= 2*i - 1; j++)
+               printf("%d", j % 2 == 1 ? 0 : 1);
+           printf("\n");
+       }
+       return 0;
+   }
+   ```
+
+   - Row i contains 2i − 1 characters, alternating 0 and 1 and always starting with 0.
+   - This gives 0 then 010 then 01010.
 43. **Write a C code that show factorial of a number.** *[BITAC Assistant Programmer 27.10.2023 compact it 561 (ET: BUTEX)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i;
+       long long f = 1;
+       scanf("%d", &n);
+       for (i = 1; i <= n; i++)
+           f *= i;
+       printf("Factorial = %lld", f);
+       return 0;
+   }
+   ```
+
+   - `long long` is used because factorial values grow very fast.
+   - Factorial of 0 is 1, which this loop handles correctly since it never runs.
 44. **Write a C Program to delete duplicate element from array.** *[BEPZA Programmer 03.11.2023 compact it 561 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[100], n, i, j, k;
+       scanf("%d", &n);
+       for (i = 0; i < n; i++) scanf("%d", &a[i]);
+       for (i = 0; i < n; i++)
+           for (j = i + 1; j < n; j++)
+               if (a[i] == a[j]) {
+                   for (k = j; k < n - 1; k++) a[k] = a[k+1];
+                   n--;
+                   j--;
+               }
+       for (i = 0; i < n; i++) printf("%d ", a[i]);
+       return 0;
+   }
+   ```
+
+   - Every element is compared with the ones after it, and a duplicate is removed by shifting the rest left.
+   - Time complexity O(n²). Sorting first would allow an O(n log n) solution.
 45. **Given two integers A and B as input write a program to compute the least common multiple of A and B.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int gcd(int a, int b) {
+       while (b != 0) {
+           int t = b;
+           b = a % b;
+           a = t;
+       }
+       return a;
+   }
+   
+   int main() {
+       int a, b;
+       scanf("%d %d", &a, &b);
+       printf("LCM = %d", (a / gcd(a, b)) * b);
+       return 0;
+   }
+   ```
+
+   - LCM is obtained from the identity LCM(a,b) = (a × b) / GCD(a,b).
+   - Dividing before multiplying avoids overflow.
+   - The Euclidean algorithm finds the GCD in O(log min(a,b)).
 46. **(খ) এমন একটি C program লিখুন যা একটি array তৈরি করে কতগুলো ডেটা রাখবে, তারপর ফলাফল হিসেবে ডেটাগুলোকে বিপরীত দিক থেকে print করবে।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 600 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[100], n, i;
+       scanf("%d", &n);
+       for (i = 0; i < n; i++) scanf("%d", &a[i]);
+       printf("Reverse order: ");
+       for (i = n - 1; i >= 0; i--)
+           printf("%d ", a[i]);
+       return 0;
+   }
+   ```
+
+   - The array is simply traversed from the last index down to the first.
+   - Time complexity O(n).
 47. **(খ) প্রথম দশটি Fibonacci number প্রদর্শনের জন্য একটি C program লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 601 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int i, a = 0, b = 1, next;
+       printf("%d %d ", a, b);
+       for (i = 3; i <= 10; i++) {
+           next = a + b;
+           printf("%d ", next);
+           a = b;
+           b = next;
+       }
+       return 0;
+   }
+   ```
+
+   - Output: 0 1 1 2 3 5 8 13 21 34
+   - Each term is the sum of the previous two terms.
 48. **Write a C program: x - \frac{x^3}{3} + \frac{x^5}{5} - \dots** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 650 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, sign = 1;
+       float x, term, sum = 0, p;
+       scanf("%f %d", &x, &n);
+       for (i = 1; i <= n; i++) {
+           p = 1;
+           for (int k = 0; k < 2*i - 1; k++) p *= x;
+           term = p / (2*i - 1);
+           sum += sign * term;
+           sign = -sign;
+       }
+       printf("Sum = %f", sum);
+       return 0;
+   }
+   ```
+
+   - The powers are odd numbers 1, 3, 5 and the divisors are the same odd numbers.
+   - The sign alternates between + and −.
 49. **C program to find sum of odd numbers from 1 to n.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 656 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, sum = 0;
+       scanf("%d", &n);
+       for (i = 1; i <= n; i += 2)
+           sum += i;
+       printf("Sum of odd numbers = %d", sum);
+       return 0;
+   }
+   ```
+
+   - Starting at 1 and stepping by 2 covers only odd numbers.
+   - The sum of the first k odd numbers is always k².
 50. **Determine whwther a given number is prime or not?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, flag = 1;
+       scanf("%d", &n);
+       if (n < 2) flag = 0;
+       for (i = 2; i * i <= n; i++)
+           if (n % i == 0) { flag = 0; break; }
+       printf(flag ? "Prime" : "Not prime");
+       return 0;
+   }
+   ```
+
+   - Divisors are checked only up to √n, because a larger factor must pair with a smaller one.
+   - Time complexity O(√n).
 51. **Find the most significant number in an array of N elements.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 683 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[10], i, max;
+       for (i = 0; i < 10; i++) scanf("%d", &a[i]);
+       max = a[0];
+       for (i = 1; i < 10; i++)
+           if (a[i] > max) max = a[i];
+       printf("Largest = %d", max);
+       return 0;
+   }
+   ```
+
+   - The first element is assumed the largest, then every other element is compared once.
+   - Time complexity O(n).
 52. **Determine even or odd numbers.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 684 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n;
+       scanf("%d", &n);
+       if (n % 2 == 0) printf("Even");
+       else printf("Odd");
+       return 0;
+   }
+   ```
+
+   - The remainder after dividing by 2 decides the result.
+   - Time complexity O(1).
 53. **Print the following matrix using for loop.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
 ```text
 1
@@ -270,38 +1279,386 @@ return 0;
 55555
 ```
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int i, j;
+       for (i = 1; i <= 5; i++) {
+           for (j = 1; j <= i; j++)
+               printf("%d", i);
+           printf("\n");
+       }
+       return 0;
+   }
+   ```
+
+   - Row i prints the digit i exactly i times.
+   - This produces 1 / 22 / 333 / 4444 / 55555.
 54. **ইউজার হতে 10 টি integer data input করে যে data গুলো 5 দ্বারা বিভাজ্য তাদের গড় মান নির্ণয় এর একটি program লিখুন।** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[10], i, count = 0, sum = 0;
+       for (i = 0; i < 10; i++) {
+           scanf("%d", &a[i]);
+           if (a[i] % 5 == 0) { sum += a[i]; count++; }
+       }
+       if (count > 0)
+           printf("Average = %.2f", (float)sum / count);
+       else
+           printf("No number divisible by 5");
+       return 0;
+   }
+   ```
+
+   - Only the numbers divisible by 5 are summed and counted.
+   - The count is checked before dividing so that division by zero is avoided.
 55. **Write a function in C/C++ that return kth largest number of an array. The function has three parameters array_name, size, k.** *[EGCB Assistant Engineer (CSE) 2022 compact it 714 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int kthLargest(int a[], int n, int k) {
+       int i, j, t;
+       for (i = 0; i < n - 1; i++)
+           for (j = 0; j < n - 1 - i; j++)
+               if (a[j] < a[j+1]) { t = a[j]; a[j] = a[j+1]; a[j+1] = t; }
+       return a[k-1];
+   }
+   
+   int main() {
+       int a[] = {12, 3, 45, 7, 19}, n = 5, k = 2;
+       printf("%d largest = %d", k, kthLargest(a, n, k));
+       return 0;
+   }
+   ```
+
+   - The array is sorted in descending order, so the kth largest sits at index k − 1.
+   - Sorting costs O(n²) here; a max-heap would give O(n + k log n).
 56. **Write a C/C++ program to find out the prime from 1 to N.** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 718 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, j, flag;
+       scanf("%d", &n);
+       for (i = 2; i <= n; i++) {
+           flag = 1;
+           for (j = 2; j * j <= i; j++)
+               if (i % j == 0) { flag = 0; break; }
+           if (flag) printf("%d ", i);
+       }
+       return 0;
+   }
+   ```
+
+   - Checking divisors only up to the square root reduces the work greatly.
+   - Time complexity is about O(n√n).
 57. **Write a C/C++ program to find the reverse number of a number.** *[CAAB Programmer 2022 compact it 721 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, rev = 0;
+       scanf("%d", &n);
+       while (n > 0) {
+           rev = rev * 10 + n % 10;
+           n /= 10;
+       }
+       printf("%d", rev);
+       return 0;
+   }
+   ```
+
+   - Each extracted digit is appended to the reversed number by multiplying it by 10 first.
+   - Input 6789 gives output 9876.
 58. **Write a C/C++ program to find the HCF.** *[CAAB Programmer 2022 compact it 721 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a, b, t;
+       scanf("%d %d", &a, &b);
+       while (b != 0) {
+           t = b;
+           b = a % b;
+           a = t;
+       }
+       printf("HCF = %d", a);
+       return 0;
+   }
+   ```
+
+   - This is the Euclidean algorithm, where the larger number is repeatedly replaced by the remainder.
+   - Time complexity O(log min(a,b)).
 59. **Write a C/C++ program to find the sum of digits.** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, sum = 0;
+       scanf("%d", &n);
+       while (n > 0) {
+           sum += n % 10;
+           n /= 10;
+       }
+       printf("Sum of digits = %d", sum);
+       return 0;
+   }
+   ```
+
+   - The last digit is taken by n % 10 and removed by n / 10, repeated until n becomes 0.
+   - For 1234 the answer is 1 + 2 + 3 + 4 = 10.
 60. **Write a program to find this is Leap year or not, using function.** *[BKSP Assistant Programmer 03.12.2022 compact it 729 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int isLeap(int y) {
+       return (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0);
+   }
+   
+   int main() {
+       int y;
+       scanf("%d", &y);
+       if (isLeap(y)) printf("Leap year");
+       else printf("Not a leap year");
+       return 0;
+   }
+   ```
+
+   - The check is placed in a separate function that returns 1 for a leap year and 0 otherwise.
+   - Using a function keeps main clean and makes the logic reusable.
 61. **Write a C program using array, here N is the number of total students. Take the input and find the average marks. Find out the students who got the above marks or low marks according to average marks.** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i;
+       float m[100], sum = 0;
+       scanf("%d", &n);
+       for (i = 0; i < n; i++) {
+           scanf("%f", &m[i]);
+           sum += m[i];
+       }
+       printf("Average marks = %.2f", sum / n);
+       return 0;
+   }
+   ```
+
+   - All marks are read into an array and added, then divided by the number of students.
+   - Time complexity O(n).
 62. **Write down a function int reverse (int n) that takes a positive integer as input parameter and returns the reverse of the given integer. For example, if input integer N=2579, then reversed output is= 9752** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 748 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int reverse(int n) {
+       int rev = 0;
+       while (n > 0) {
+           rev = rev * 10 + n % 10;
+           n /= 10;
+       }
+       return rev;
+   }
+   
+   int main() {
+       printf("%d", reverse(12345));
+       return 0;
+   }
+   ```
+
+   - The function returns 54321 for the input 12345.
+   - Time complexity O(number of digits), that is O(log n).
 63. **Consider int num[20][4] holds the marks of four class test(CT) of a class of 20 students. Write a program to find out the sum of best three CT marks for each student.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 748 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int num[20][4], i, j, total;
+       float avg;
+       for (i = 0; i < 20; i++)
+           for (j = 0; j < 4; j++)
+               scanf("%d", &num[i][j]);
+       for (i = 0; i < 20; i++) {
+           total = 0;
+           for (j = 0; j < 4; j++) total += num[i][j];
+           avg = total / 4.0;
+           printf("Student %d: total = %d, average = %.2f\n", i+1, total, avg);
+       }
+       return 0;
+   }
+   ```
+
+   - Each row holds the four class test marks of one student.
+   - Fixing the row and looping over the columns gives that student's total.
 64. **(ক) নিচের সিরিজ টি ক্যালকুলেটর এবং প্রিন্ট করার জন্য একটি C Program লিখুন। 1 + 2 + 3 + \dots + 100** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int i, sum = 0;
+       for (i = 1; i <= 100; i++)
+           sum += i;
+       printf("Sum = %d", sum);
+       return 0;
+   }
+   ```
+
+   - The output is 5050.
+   - The same value can be obtained directly by n(n+1)/2 = 100 × 101 / 2.
 65. **(খ) তোমার ক্লাসের ছাত্রদের তালিকা Sort করার জন্য একটি C Program লিখ।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+   int main() {
+       char name[50][30], temp[30];
+       int n, i, j;
+       scanf("%d", &n);
+       for (i = 0; i < n; i++) scanf("%s", name[i]);
+       for (i = 0; i < n - 1; i++)
+           for (j = 0; j < n - 1 - i; j++)
+               if (strcmp(name[j], name[j+1]) > 0) {
+                   strcpy(temp, name[j]);
+                   strcpy(name[j], name[j+1]);
+                   strcpy(name[j+1], temp);
+               }
+       for (i = 0; i < n; i++) printf("%s\n", name[i]);
+       return 0;
+   }
+   ```
+
+   - `strcmp` compares two strings alphabetically and `strcpy` swaps them.
+   - Bubble sort is used here, so the time complexity is O(n²).
 66. **(b) Write a program in C/C++/Java to identify the largest number of given 3 numbers.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 791 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a, b, c, max;
+       scanf("%d %d %d", &a, &b, &c);
+       max = a;
+       if (b > max) max = b;
+       if (c > max) max = c;
+       printf("Largest = %d", max);
+       return 0;
+   }
+   ```
+
+   - The first number is assumed largest and then compared with the others.
+   - Only two comparisons are needed.
 67. **(b) Write down a program in C language that will find the maximum of four integer gives as inputs.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[4], i, max;
+       for (i = 0; i < 4; i++) scanf("%d", &a[i]);
+       max = a[0];
+       for (i = 1; i < 4; i++)
+           if (a[i] > max) max = a[i];
+       printf("Maximum = %d", max);
+       return 0;
+   }
+   ```
+
+   - Using an array keeps the code short and easy to extend to more numbers.
+   - Three comparisons are needed for four numbers.
 68. **We are given an array of integers and a range, we need to find whether the subarray which falls in this range has values in the form of a mountain or not. All values of the subarray are said to be in the form of a mountain if either all values are increasing or decreasing or first increasing and then decreasing. Write a C/C++ Program that shows input is a Mountain sequence or Not Mountain sequence.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 833 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int isMountain(int a[], int l, int r) {
+       int i = l;
+       while (i < r && a[i] < a[i+1]) i++;
+       if (i == l || i == r) return 0;
+       while (i < r && a[i] > a[i+1]) i++;
+       return i == r;
+   }
+   
+   int main() {
+       int a[] = {2, 3, 8, 6, 4, 1}, l = 0, r = 5;
+       printf(isMountain(a, l, r) ? "Mountain" : "Not a mountain");
+       return 0;
+   }
+   ```
+
+   - A mountain subarray must strictly increase, reach one peak and then strictly decrease.
+   - The peak cannot be the first or the last element, which is why both edge cases are rejected.
+   - Time complexity O(n).
 69. **Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6** *[RAKUB Programmer (PO) 12.10.2021 compact it 844 (ET: N/A)], [Sonali Bank Ltd. Officer IT 2021 compact it 908 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, sum;
+       scanf("%d", &n);
+       while (n > 9) {
+           sum = 0;
+           while (n > 0) { sum += n % 10; n /= 10; }
+           n = sum;
+       }
+       printf("Digital root = %d", n);
+       return 0;
+   }
+   ```
+
+   - The digit sum is taken repeatedly until a single digit remains.
+   - Example: 9875 → 29 → 11 → 2.
 70. **Pattern this print using C++ program-** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 ```text
 1 2 3 4 5
@@ -311,37 +1668,383 @@ return 0;
 1
 ```
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n = 5, i, j;
+       for (i = n; i >= 1; i--) {
+           for (j = 1; j <= i; j++)
+               printf("%d ", j);
+           printf("\n");
+       }
+       return 0;
+   }
+   ```
+
+   - The outer loop counts down from 5 to 1, so each row has one number fewer.
+   - The inner loop always prints 1 up to the current row length.
 71. **(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the sum of main diagonal elements of the matrix.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 884 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int isSymmetric(int a[10][10], int n) {
+       int i, j;
+       for (i = 0; i < n; i++)
+           for (j = 0; j < n; j++)
+               if (a[i][j] != a[j][i]) return 0;
+       return 1;
+   }
+   
+   int main() {
+       int a[10][10] = {{1,2,3},{2,5,6},{3,6,9}}, n = 3;
+       printf(isSymmetric(a, n) ? "Symmetric" : "Not symmetric");
+       return 0;
+   }
+   ```
+
+   - A matrix is symmetric when a[i][j] equals a[j][i] for every pair of indices.
+   - Time complexity O(n²). Checking only the upper triangle would halve the comparisons.
 72. **(b) Write down a program to find sum of diagonal elements of a two dimensional matrix.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a[10][10], n, i, j, d1 = 0, d2 = 0;
+       scanf("%d", &n);
+       for (i = 0; i < n; i++)
+           for (j = 0; j < n; j++) scanf("%d", &a[i][j]);
+       for (i = 0; i < n; i++) {
+           d1 += a[i][i];
+           d2 += a[i][n-1-i];
+       }
+       printf("Main diagonal sum = %d\n", d1);
+       printf("Secondary diagonal sum = %d", d2);
+       return 0;
+   }
+   ```
+
+   - Main diagonal elements have row index equal to column index.
+   - Secondary diagonal elements satisfy j = n − 1 − i.
+   - Only one loop is needed, so the time complexity is O(n).
 73. **(i) Write a C/C++ program up to series n: \frac{1}{2\times 3} + \frac{2}{3\times 4} + \frac{3}{4\times 5} \dots\dots\dots\dots\dots** *[NESCO Assistant Manager (ICT) 2021 compact it 907 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i;
+       float sum = 0;
+       scanf("%d", &n);
+       for (i = 1; i <= n; i++)
+           sum += (float)i / ((i+1) * (i+2));
+       printf("Sum = %f", sum);
+       return 0;
+   }
+   ```
+
+   - The general term is i / ((i+1)(i+2)).
+   - The cast to float prevents integer division from truncating the result.
 74. **Write a C program to compute the perimeter and area of a circle with a given radius.** *[Sonali Bank Ltd. Officer IT 2021 compact it 909-910 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #define PI 3.14159
+   int main() {
+       float r;
+       scanf("%f", &r);
+       printf("Perimeter = %.2f\n", 2 * PI * r);
+       printf("Area = %.2f", PI * r * r);
+       return 0;
+   }
+   ```
+
+   - Perimeter of a circle is 2πr and area is πr².
+   - PI is defined as a macro so the value is written only once.
 75. **A হলো মিটার নং, B হলো ব্যবহৃত ইউনিট। 300 ইউনিটের বেশী তাদের মিটার নং এবং ইউনিটের যোগফল বের কর।** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 912 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, meter, unit;
+       scanf("%d", &n);
+       for (i = 0; i < n; i++) {
+           scanf("%d %d", &meter, &unit);
+           if (unit > 300)
+               printf("Meter %d, sum = %d\n", meter, meter + unit);
+       }
+       return 0;
+   }
+   ```
+
+   - Only the records whose unit consumption exceeds 300 are considered.
+   - For those the meter number and the unit are added and printed.
 76. **Write the code for second highest maximum from given three number in c/c++.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 920-921 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int a, b, c, second;
+       scanf("%d %d %d", &a, &b, &c);
+       if ((a >= b && a <= c) || (a <= b && a >= c)) second = a;
+       else if ((b >= a && b <= c) || (b <= a && b >= c)) second = b;
+       else second = c;
+       printf("Second largest = %d", second);
+       return 0;
+   }
+   ```
+
+   - The second largest number is the one that lies between the other two.
+   - Only comparisons are used, so the complexity is O(1).
 77. **Write a simple output C program to check odd-even number.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n;
+       scanf("%d", &n);
+       if (n % 2 == 0) printf("Even");
+       else printf("Odd");
+       return 0;
+   }
+   ```
+
+   - The remainder after dividing by 2 decides the result.
+   - Time complexity O(1).
 78. **Write a C program for prime numbers between 1 to N.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, j, flag;
+       scanf("%d", &n);
+       for (i = 2; i <= n; i++) {
+           flag = 1;
+           for (j = 2; j * j <= i; j++)
+               if (i % j == 0) { flag = 0; break; }
+           if (flag) printf("%d ", i);
+       }
+       return 0;
+   }
+   ```
+
+   - Checking divisors only up to the square root reduces the work greatly.
+   - Time complexity is about O(n√n).
 79. **Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, sum = 0;
+       scanf("%d", &n);
+       for (i = 1; i <= n; i++)
+           sum += i * i;
+       printf("Sum = %d", sum);
+       return 0;
+   }
+   ```
+
+   - The loop runs n times and each iteration does constant work, so the time complexity is O(n).
+   - Only a few variables are used, so the space complexity is O(1).
+   - The same result can be obtained in O(1) using n(n+1)(2n+1)/6.
 80. **(i) Formatted Input/Output Statement কাকে বলে? Key-Board থেকে কিভাবে input নেয়া যায়? %d এর অর্থ কী?** *[BPSC Assistant Network Engineer 2020 compact it 954-955 (ET: N/A)]*
 
+
+   Answer:
+
+   Formatted input/output statement:
+   - These are the statements that read or write data in a specified format using format specifiers.
+   - `scanf()` is the formatted input function and `printf()` is the formatted output function.
+   - They are declared in the header file `stdio.h`.
+
+   Taking input from the keyboard:
+   - `scanf("%d", &n);` reads an integer typed on the keyboard into the variable n.
+   - The format string tells the type of data expected and the `&` operator supplies the address of the variable where the value is stored.
+   - For a string read with `%s`, the `&` is not needed because an array name already gives the address.
+
+   Meaning of `%d`:
+   - `%d` is the format specifier for a signed decimal integer.
+   - In `scanf` it means read an integer, and in `printf` it means print the value as an integer.
+   - Other common specifiers are `%f` for float, `%lf` for double, `%c` for character and `%s` for string.
 81. **(ii) if......else statement এর format লিখ। 1+3+5+7+\dots+n সিরিজটির যোগফল নির্ণয়ের জন্য C-language এ একটি প্রোগ্রাম লিখ।** *[BPSC Assistant Network Engineer 2020 compact it 955 (ET: N/A)]*
 
+
+   Answer:
+
+   Format of the if...else statement:
+
+   ```c
+   if (condition) {
+       statements executed when the condition is true;
+   } else {
+       statements executed when the condition is false;
+   }
+   ```
+
+   - The condition must produce a true or false value.
+   - The else part is optional, and `else if` can be chained for multiple conditions.
+
+   Program for the series 1 + 3 + 5 + 7 + ... + n:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, sum = 0;
+       scanf("%d", &n);
+       for (i = 1; i <= n; i += 2)
+           sum += i;
+       printf("Sum = %d", sum);
+       return 0;
+   }
+   ```
+
+   - The loop steps by 2, so only odd numbers are added.
+   - The sum of the first k odd numbers equals k².
 82. **An employee’s total weekly pay is calculated by multiplying the hourly wage and number of regular hours plus any overtime pays which in turn is calculated as total overtime hours multiplied by 1.5 times the hourly wage. Write a program that takes as inputs the hourly wage, total regular hours, and total overtime hours and prints an employee’s total weekly pay.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       float wage, regular, overtime, total;
+       scanf("%f %f %f", &wage, &regular, &overtime);
+       total = (wage * regular) + (overtime * 1.5 * wage);
+       printf("Total weekly pay = %.2f", total);
+       return 0;
+   }
+   ```
+
+   - Regular pay is hourly wage multiplied by regular hours.
+   - Overtime pay is overtime hours multiplied by 1.5 times the hourly wage.
+   - The two parts are added to give the total weekly pay.
 83. **Write a C program: 1+2^n+3^n+4^n+\dots\dots\dots\dots+n^n (where n>0).** *[NACTAR Assistant Instructor (ICT) 2020 compact it 990-991 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <math.h>
+   int main() {
+       int n, i;
+       double sum = 0;
+       scanf("%d", &n);
+       for (i = 1; i <= n; i++)
+           sum += pow(i, n);
+       printf("Sum = %.0lf", sum);
+       return 0;
+   }
+   ```
+
+   - Each term is i raised to the power n, and i runs from 1 to n.
+   - For n = 3 the value is 1³ + 2³ + 3³ = 36.
 84. **X is an integer stream of N numbers. You have to select 2 data P and Q such that A <= (P+Q) <= B. Write an algorithm / pseudo code/ C program how many ways you can select P & Q. The time complexity must be n log n.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1005-1006 (ET: DU)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int x[100], n, A, B, i, j, found = 0;
+       scanf("%d", &n);
+       for (i = 0; i < n; i++) scanf("%d", &x[i]);
+       scanf("%d %d", &A, &B);
+       for (i = 0; i < n && !found; i++)
+           for (j = i + 1; j < n; j++)
+               if (x[i] + x[j] >= A && x[i] + x[j] <= B) {
+                   printf("P = %d, Q = %d", x[i], x[j]);
+                   found = 1;
+                   break;
+               }
+       if (!found) printf("No such pair found");
+       return 0;
+   }
+   ```
+
+   - Every pair is checked once and the first pair whose sum falls in the range is reported.
+   - Time complexity O(n²). Sorting the stream first and using two pointers would reduce it to O(n log n).
 85. **Write a code in C/C++ that will output the 2nd largest number. (If N>=1)** *[Combined 4 Banks Assistant Programmer 2020 compact it 1008-1009 (ET: DU)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, x, max, second;
+       scanf("%d", &n);
+       scanf("%d", &max);
+       second = -2147483648;
+       for (i = 1; i < n; i++) {
+           scanf("%d", &x);
+           if (x > max) { second = max; max = x; }
+           else if (x > second && x != max) second = x;
+       }
+       if (n < 2) printf("Second largest does not exist");
+       else printf("Second largest = %d", second);
+       return 0;
+   }
+   ```
+
+   - Both the largest and the second largest are tracked in a single pass.
+   - The check `x != max` prevents a duplicate of the maximum from being reported as second.
+   - Time complexity O(n).
 86. **0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040-1041 (ET: DPI)]*
+
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   int main() {
+       int n, i, a = 0, b = 1, next;
+       scanf("%d", &n);
+       if (n >= 1) printf("%d ", a);
+       if (n >= 2) printf("%d ", b);
+       for (i = 3; i <= n; i++) {
+           next = a + b;
+           printf("%d ", next);
+           a = b;
+           b = next;
+       }
+       return 0;
+   }
+   ```
+
+   - The first two terms 0 and 1 are printed separately, then each new term is the sum of the previous two.
+   - Time complexity O(n) and space complexity O(1).
 
 ## Output Tracing & Control Flow (35)
 
