@@ -568,37 +568,330 @@ ii) 211.10.15.4
 
 1. **Describe Wi-Fi, Bluetooth, and WiMAX.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer:
+
+   Wi-Fi:
+   - Wireless LAN technology defined by IEEE 802.11, used to connect devices to a local network and the Internet without cable.
+   - Operates in the unlicensed 2.4 GHz, 5 GHz and now 6 GHz bands, with a range of about 30 to 100 metres indoors.
+   - Uses CSMA/CA for medium access, since a radio cannot detect a collision while transmitting.
+   - Data rates from 11 Mbps in 802.11b to about 9.6 Gbps theoretical in 802.11ax, that is Wi-Fi 6.
+   - Security is provided by WPA2 and WPA3. Devices connect through an access point that bridges the wireless side to the wired LAN.
+
+   Bluetooth:
+   - Short range WPAN technology defined by IEEE 802.15.1, designed to replace cables between personal devices.
+   - Operates in the 2.4 GHz ISM band using frequency hopping spread spectrum, 1600 hops per second, which gives good resistance to interference.
+   - Range is about 10 metres for class 2 devices and up to 100 metres for class 1. Data rate is 1 to 3 Mbps for classic Bluetooth and about 2 Mbps for Bluetooth Low Energy.
+   - Topology is a piconet with one master and up to seven active slaves; several piconets form a scatternet.
+   - Very low power consumption, which is why BLE dominates wearables and IoT sensors. Devices are paired with a PIN and the link is encrypted.
+
+   WiMAX:
+   - Worldwide Interoperability for Microwave Access, defined by IEEE 802.16, a wireless metropolitan area network technology, that is broadband wireless access over a whole city.
+   - Range up to about 50 km for fixed line of sight links and 5 to 15 km for mobile use, with data rates up to about 70 Mbps.
+   - Operates in licensed and unlicensed bands from 2 to 66 GHz, using OFDM and OFDMA with adaptive modulation.
+   - Architecture is a base station serving many subscriber stations, both line of sight and non line of sight.
+   - Unlike Wi-Fi it is connection oriented and scheduled by the base station, so it has built in QoS. It was designed as a last mile alternative to DSL and cable, but LTE largely displaced it commercially.
 2. **What is the use of mmWave in IoT?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
 
+
+   Answer: mmWave, millimetre wave, is the radio spectrum from 24 GHz to 100 GHz, where the wavelength is 1 to 10 mm. It is used in IoT for the following purposes.
+
+   - Very high data rate: the enormous available bandwidth, hundreds of MHz to several GHz per channel, allows multi-gigabit links, which suits IoT applications that carry video, such as smart surveillance, industrial machine vision and augmented reality headsets.
+   - Massive device density: 5G mmWave supports up to a million connected devices per square kilometre, which is what a dense sensor deployment in a smart city or a factory needs.
+   - Ultra low latency: about 1 ms, which makes real time control possible for industrial robots, autonomous vehicle to everything communication and remote surgery.
+   - Precise sensing and radar: because the wavelength is a few millimetres, mmWave radar can measure distance, speed and even small movements very accurately. It is used for gesture recognition, occupancy and people counting, fall detection for elderly care, vehicle collision avoidance and level measurement in tanks.
+   - Privacy friendly sensing: a mmWave radar sensor can detect presence, posture and breathing without any camera image, so it suits homes and hospitals where a camera would be intrusive.
+   - Small antennas and beamforming: the tiny wavelength lets many antenna elements fit into a small array, so massive MIMO and narrow steerable beams become practical, which increases capacity and reduces interference.
+   - Short range by design: mmWave is heavily attenuated by walls, rain and foliage and needs near line of sight, so cells are small, typically 100 to 200 metres. This is a limitation for coverage but an advantage for spatial reuse and security, since the signal does not leak far.
+   - Typical deployments: smart factories, smart cities, stadiums and airports, fixed wireless access to homes, and in vehicle radar.
 3. **What is IoT? Brefly explain.** *[Mongla Port Authority Assistant Programmer 2023 compact it 571 (ET: N/A)]*
 
+
+   Answer: IoT, the Internet of Things, is a network of physical objects embedded with sensors, software and network connectivity, which collect data and exchange it over the Internet with little or no human involvement.
+
+   - The idea is to give ordinary objects, such as a light, a meter, a pump or a wristband, the ability to sense their environment, report it and be controlled remotely.
+   - A typical flow is: sensor collects data, a gateway forwards it over the network, a cloud platform stores and analyses it, and an application presents it or triggers an action back on the device.
+   - Communication uses Wi-Fi, Bluetooth Low Energy, Zigbee, LoRaWAN, NB-IoT or 5G, and the application layer usually uses MQTT or CoAP because they are lightweight.
+   - Examples: smart electricity meters, smart agriculture with soil moisture sensors, wearable health monitors, smart traffic lights, industrial predictive maintenance and home automation.
+   - Benefits: automation, real time monitoring, better efficiency, cost saving and data driven decisions.
+   - Challenges: security and privacy, since many devices are weakly protected; power consumption; the sheer volume of data; and the lack of a single common standard.
 4. **How to work WiMax technology?** *[Mongla Port Authority Assistant Programmer 2023 compact it 571 (ET: N/A)]*
 
+
+   Answer: WiMAX, IEEE 802.16, provides broadband wireless access over a metropolitan area, working as a wireless replacement for DSL or cable in the last mile.
+
+   How it works:
+   - The network has two main parts, a base station mounted on a tower and subscriber stations, that is customer premises equipment, at homes and offices. The base station connects back to the Internet through a wired or microwave backhaul.
+   - The base station covers up to about 50 km for a fixed line of sight link and 5 to 15 km for non line of sight and mobile use, serving thousands of subscribers.
+   - The air interface uses OFDM and OFDMA, which splits the channel into many orthogonal subcarriers. This resists multipath fading well and lets subcarriers be allocated to different users at the same time.
+   - Adaptive modulation is used: a subscriber close to the tower with a strong signal gets 64-QAM and a high rate, while a distant one falls back to QPSK, so the link stays alive rather than dropping.
+   - Access is connection oriented and scheduled. Unlike Wi-Fi, a subscriber does not contend randomly; it requests bandwidth and the base station grants it a time slot. This is what gives WiMAX real QoS, with separate service classes for voice, video and best effort data.
+   - Duplexing may be TDD, where uplink and downlink share one frequency in different time slots, or FDD with separate frequencies.
+   - Mobile WiMAX, 802.16e, adds handover between base stations, so a moving user stays connected.
+   - Security uses EAP based authentication and AES encryption of the traffic.
+   - Typical performance is up to about 70 Mbps shared, and it operates in bands from 2 to 66 GHz. Commercially it has largely been replaced by LTE.
 5. **Briefly describe the basis structure at a mobile cellular system with a proper figure.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 676 (ET: N/A)]*
 
+
+   Answer: A mobile cellular system divides the service area into small regions called cells, each served by its own base station, so that the same frequencies can be reused in cells that are far enough apart.
+
+   ```mermaid
+   graph TD
+       M1["Mobile Station MS"] --> B1["Base Transceiver Station BTS, Cell 1"]
+       M2["Mobile Station MS"] --> B2["Base Transceiver Station BTS, Cell 2"]
+       B1 --> C["Base Station Controller BSC"]
+       B2 --> C
+       C --> S["Mobile Switching Centre MSC"]
+       S --> H["HLR: Home Location Register"]
+       S --> V["VLR: Visitor Location Register"]
+       S --> A["AUC and EIR: authentication and equipment check"]
+       S --> P["PSTN / Internet"]
+   ```
+
+   Basic structure:
+   - Cell: the basic geographic unit, drawn as a hexagon for convenience, from a few hundred metres in a city to tens of kilometres in a rural area. Each cell uses a set of frequencies that is reused in distant cells, which is the whole reason a cellular system can serve millions of users with limited spectrum.
+   - Mobile Station: the handset with its SIM, which identifies the subscriber.
+   - Base Transceiver Station: the antennas and radios at the tower, handling the air interface for one cell or sector.
+   - Base Station Controller: controls a group of BTSs, allocates radio channels, manages power control and takes handover decisions.
+   - Mobile Switching Centre: the telephone exchange of the mobile network. It sets up and routes calls, handles handover between BSCs, and connects to the PSTN and to other networks.
+   - HLR: the permanent database of all subscribers of this network, holding the subscription details and the current location area.
+   - VLR: a temporary database of the subscribers currently roaming in this MSC area.
+   - AUC and EIR: the authentication centre holds the keys used to verify the SIM, and the equipment identity register checks the handset IMEI against a blacklist.
+   - Handover: as a user moves out of one cell, the network transfers the call to the neighbouring cell without dropping it. Frequency reuse and handover together are the two central ideas of the cellular concept.
 6. **How can you define IoT? What are the basic components of IoT?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 680 (ET: N/A)]*
 
+
+   Answer: IoT, the Internet of Things, is a network of physical objects fitted with sensors, processors and communication modules that collect data and exchange it over the Internet, so that they can be monitored and controlled remotely with little human involvement.
+
+   Basic components of IoT:
+   - Sensors and actuators: the sensor measures a physical quantity such as temperature, humidity, motion, light or current, and the actuator performs an action such as switching a relay, opening a valve or running a motor. Together they form the perception layer.
+   - Embedded device and processor: a microcontroller or SoC, for example ESP32, Arduino or Raspberry Pi, which reads the sensor, does basic processing and drives the actuator. This is where edge computing is done to reduce the data sent upward.
+   - Connectivity: the communication technology carrying the data, that is Wi-Fi, Bluetooth Low Energy, Zigbee, LoRaWAN, NB-IoT, 5G or Ethernet, chosen according to range, data rate and battery life.
+   - Gateway: aggregates data from many local devices, translates between the local protocol such as Zigbee and IP, and often provides local storage, filtering and security.
+   - Cloud platform and data storage: receives, stores and processes the data at scale, using MQTT or CoAP as the messaging protocol because they are lightweight.
+   - Data analytics and intelligence: analytics and machine learning turn raw readings into useful information, for example predicting when a machine will fail.
+   - User interface and application: the mobile app or dashboard through which the user sees the data and issues commands.
+   - Security layer: device authentication, encryption of data in transit and at rest, secure firmware update, and access control, which runs across every other component.
+   - Power supply: usually a battery, which is why low power design dominates IoT hardware.
 7. **(a) Write down the features of 4G wireless networks.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
 
+
+   Answer: Features of 4G wireless networks:
+
+   - All IP packet switched network. There is no separate circuit switched voice path; voice is carried as VoLTE over the same IP core.
+   - High data rate: about 100 Mbps for a user in a fast moving vehicle and up to 1 Gbps for a stationary or slow moving user, as set by the IMT-Advanced requirement.
+   - Low latency, about 30 to 50 ms, which makes video calling, online gaming and cloud applications usable.
+   - OFDMA on the downlink and SC-FDMA on the uplink, which resists multipath fading well and uses spectrum efficiently.
+   - MIMO with multiple transmit and receive antennas, which multiplies throughput without extra bandwidth.
+   - Scalable channel bandwidth from 1.4 MHz to 20 MHz, and carrier aggregation in LTE-Advanced to combine several carriers.
+   - High spectral efficiency, about 15 bits per second per hertz on the downlink.
+   - Seamless handover and global roaming, with smooth handover between LTE, 3G and Wi-Fi.
+   - Better QoS support, so voice, video and data can be given different treatment.
+   - Improved security with stronger mutual authentication and encryption than 3G.
+   - Support for high mobility, working at speeds up to 350 km per hour.
+   - A flat, simplified network architecture, eNodeB and the Evolved Packet Core, with fewer nodes than 3G, which lowers cost and delay.
 8. **5G প্রথম কত সালে ও কোথায় চালু হয়?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: 5G banijjikbhabe prothom chalu hoy 2019 sale.
+
+   - 2019 sal-er April mash-e Dokkhin Korea (South Korea) bishwer prothom deshbyapi banijjik 5G network chalu kore, ar praay ekoi somoye USA-te Verizon Chicago o Minneapolis-e chalu kore.
+   - Dokkhin Korea-ke sadharonoto prothom dhora hoy karon tara prothom purno deshbyapi banijjik 5G service diyechilo.
+   - Bangladesh-e Teletalk 2021 sal-er 12 December sīmito paribeshe prothom 5G chalu kore.
 9. **(ক) Wi-Fi Network সম্পর্কে সংক্ষিপ্ত বিবরণ দিন। Wi-Fi Sensor Network এবং Ad Hoc Network এর মধ্যে পার্থক্য লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
 
+
+   Answer:
+
+   Wi-Fi Network:
+   - Wi-Fi holo IEEE 802.11 standard-e toiri wireless LAN technology, ja cable chara device-ke local network o Internet-er sathe jukto kore.
+   - Eta 2.4 GHz, 5 GHz ebong ekhon 6 GHz unlicensed band-e kaj kore, indoor range praay 30 theke 100 metre.
+   - Access Point (AP) wireless client-der wired LAN-er sathe bridge kore. Ekti AP-r elaka ke BSS bole, ekadhik AP mile ESS toiri kore jekhane roaming somvob.
+   - Medium access-e CSMA/CA byabohar hoy, karon radio-te transmit korar somoy collision shona jay na.
+   - Data rate 802.11b-te 11 Mbps theke 802.11ax ba Wi-Fi 6-te theoretically 9.6 Gbps porjonto.
+   - Nirapotta WPA2 ar WPA3 diye. Shubidha: sohoj installation, mobility, kom cost. Oshubidha: interference, sīmito range, ar khola medium-e nirapotta jhuki.
+
+   Wireless Sensor Network ar Ad Hoc Network-er parthokko:
+
+   | Bishoy | Wireless Sensor Network | Ad Hoc Network |
+   |---|---|---|
+   | Uddeshsho | Poribesh theke data sensing ar sonngroho | Duti ba tar beshi device-er modhye sadharon jogajog |
+   | Node | Chhoto, sosta, kom khomotar sensor node, songkha hajar hajar | Laptop, mobile-er moto samortho device, songkha kom |
+   | Traffic dik | Prayoshoi many-to-one, shob node theke ekti sink-e | Peer-to-peer, je kono node theke je kono node-e |
+   | Power | Battery-chalito, replace kora jay na, tai energy-i mul design constraint | Recharge kora jay, power tulonamulok kom somossa |
+   | Mobility | Sadharonoto node sthir thake | Node prayoshoi cholmān |
+   | Data rate | Khub kom, majhe majhe kichu byte | Onek beshi, file ba video |
+   | Addressing | Data-centric, attribute onujayi, ID chara-o hote pare | Node-centric, protita node-er nijoswo address |
+   | Redundancy | Onek node ek-i ghotona dekhe, tai data redundant | Protita node-er data alada |
+   | Udahoron | Krishi jomite moisture sensor, forest fire detection | Duti laptop-er modhye direct file sharing, MANET, VANET |
+
+   - Mul kotha: WSN asole ekti bishesh dhoroner ad hoc network jekhane uddeshsho sensing ar shobcheye boro bishoy holo energy bachano.
 10. **Call Drop কী? এর কারণ গুলো উল্লেখ করুন।** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
 
+
+   Answer:
+
+   Call Drop ki:
+   - Call Drop mane holo ekti cholmān phone call kono paksher iccha chara hothat kete jaoa, mane network-i connection-ti sesh kore dey.
+   - Regulator, jemon BTRC, call drop rate ke service quality-r ekti mul mapkathi hisebe dhore; sadharonoto 2 percent-er niche thaka bāñchhonīyo.
+
+   Call Drop-er karon:
+   - Durbol signal ba coverage-er obhab: user cell-er kinare ba coverage hole-e chole gele signal strength threshold-er niche neme jay.
+   - Handover byartho hoa: user ek cell theke onno cell-e jaowar somoy target cell-e jaiga na thakle ba handover somoymoto na hole call kete jay.
+   - Network congestion: cell-e channel ba capacity sesh hoye gele notun call to bote-i, cholmān call-o drop hote pare.
+   - Interference: pashe-r cell theke co-channel ba adjacent channel interference, othoba onno source theke noise.
+   - Building-er bhitor penetration loss: motha dewal, lift, basement ba shopping mall-e signal dhukte pare na.
+   - Tower ba BTS-er kārigori tuti: power failure, transmission link down, antenna misalignment, ba equipment fault.
+   - Bhugolik badha: pahar, uchu bhaban, ghon gach — bishesh kore uchu frequency-te.
+   - Weather: bhari brishti ba jhor microwave backhaul link-ke durbol kore.
+   - Handset-er somossa: durbol battery, kharap antenna, purano software ba faulty SIM.
+   - Druto cholachol: train ba gari-te khub druto cholle handover shomoy pay na, ar Doppler effect signal noshto kore.
+   - Optimization-er obhab: notun bhaban uthle purano cell plan ar mele na, tokhon drive test kore reoptimize korte hoy.
 11. **LTE কী? এর এডভান্সড প্রযুক্তির নাম লিখুন।** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 811 (ET: IBA)]*
 
+
+   Answer:
+
+   LTE ki:
+   - LTE mane Long Term Evolution, 3GPP-r toiri ekti wireless broadband standard, jake sadharonoto 4G bola hoy.
+   - Eta puropuri IP-bhittik packet switched network; alada circuit switched voice path nei, voice-o VoLTE hisebe ekoi IP core-e jay.
+   - Downlink-e OFDMA ar uplink-e SC-FDMA byabohar kore, sathe MIMO antenna.
+   - Data rate downlink-e 100 theke 300 Mbps, latency praay 30 theke 50 ms. Channel bandwidth 1.4 MHz theke 20 MHz porjonto scalable.
+   - Architecture flat: eNodeB ar Evolved Packet Core, tai node kom ebong delay kom.
+
+   LTE-r advanced projukti-r nam:
+   - LTE-Advanced, 3GPP Release 10, ja ITU-r prokrito 4G shorto purno kore. Er mul projukti gulo holo:
+   - Carrier Aggregation: 5 ti porjonto carrier jog kore 100 MHz porjonto bandwidth, tai onek beshi speed.
+   - Enhanced MIMO: downlink-e 8 × 8 ar uplink-e 4 × 4 porjonto antenna.
+   - Coordinated Multi-Point (CoMP): pashapashi ekadhik cell mile ek user-ke seba dey, tai cell-er kinare-o speed bhalo thake.
+   - Relay Node ar Heterogeneous Network (HetNet): boro macro cell-er bhitore chhoto pico o femto cell.
+   - Inter-Cell Interference Coordination (eICIC), ja cell-er modhye interference komay.
+   - LTE-Advanced Pro, Release 13 o tar pore, jekhane License Assisted Access, Massive MIMO, NB-IoT ar Gigabit LTE ache. Erpor-i ashe 5G NR.
 12. **Wi-Fi, Bluetooth, Wi-Max, Cellure network এইগুলোকে দূরত্বের ক্রমানুসারে ছোট থেকে বড় এর দিক অনুসারে লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 867 (ET: BUET)]*
 
+
+   Answer: Range-er kramanusare choto theke boro:
+
+   | Krom | Technology | Sadharon range | Network dhoron |
+   |---|---|---|---|
+   | 1 | Bluetooth | 10 m, class 1-e 100 m porjonto | WPAN, Personal Area Network |
+   | 2 | Wi-Fi | 30 theke 100 m indoor | WLAN, Local Area Network |
+   | 3 | WiMAX | 5 theke 50 km | WMAN, Metropolitan Area Network |
+   | 4 | Cellular network | 1 theke 35 km per cell, kintu deshbyapi ba bishwabyapi coverage | WWAN, Wide Area Network |
+
+   - Tai krom holo: Bluetooth < Wi-Fi < WiMAX < Cellular network.
+   - Ekti tower-er hisebe WiMAX-er range cellular cell-er cheye beshi hote pare, kintu cellular network-e hajar hajar tower mile puro desh cover kore, tai shomogrik coverage-e cellular-i shob theke boro.
 13. **(c) Difference between broadband Wi-Fi and Wi-Max communication technology.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Broadband Wi-Fi | WiMAX |
+   |---|---|---|
+   | Standard | IEEE 802.11 | IEEE 802.16 |
+   | Network type | WLAN, local area | WMAN, metropolitan area |
+   | Range | 30 to 100 m indoors | 5 to 15 km non line of sight, up to 50 km line of sight |
+   | Frequency band | Unlicensed 2.4, 5 and 6 GHz | Licensed and unlicensed, 2 to 66 GHz |
+   | Access method | CSMA/CA, random contention | Scheduled by the base station, connection oriented |
+   | QoS | Weak, added later by 802.11e | Built in, with defined service classes for voice, video and data |
+   | Data rate | Up to about 9.6 Gbps theoretical in Wi-Fi 6, shared | Up to about 70 Mbps shared per channel |
+   | Users supported | Tens per access point | Thousands per base station |
+   | Channel bandwidth | 20, 40, 80 or 160 MHz | Scalable, 1.25 to 20 MHz |
+   | Modulation | OFDM and OFDMA | OFDM and OFDMA with adaptive modulation by distance |
+   | Mobility | Limited, roaming within an ESS | Supported, 802.16e allows handover at vehicular speed |
+   | Security | WPA2, WPA3 | EAP authentication with AES encryption |
+   | Cost and deployment | Very cheap, anyone can install | Expensive, needs licensed spectrum and towers |
+   | Purpose | Last few metres, home and office access | Last mile, replacing DSL and cable across a city |
 14. **What is wireless network system? Why CSMA/CA used instead of CSMA/CD?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922-923 (ET: N/A)]*
 
+
+   Answer:
+
+   Wireless network system:
+   - A wireless network is a network in which devices are connected by radio, microwave or infrared waves instead of physical cable, so the transmission medium is unguided.
+   - Categories by range: WPAN such as Bluetooth and Zigbee, WLAN such as Wi-Fi, WMAN such as WiMAX, and WWAN such as cellular 4G and 5G.
+   - Components: wireless NIC in each device, an access point or base station, an antenna, and the radio spectrum itself.
+   - Advantages: mobility, easy and cheap installation with no cabling, easy expansion, and access in places where cable cannot go.
+   - Disadvantages: lower bandwidth than cable, interference, limited range, higher security risk because the medium is open, and variable performance.
+
+   Why CSMA/CA is used instead of CSMA/CD:
+   - Collision detection is physically impossible on a radio interface. A station transmits at a much higher power than the signal it would receive from a distant station, so its own transmission drowns out everything else and it simply cannot hear a collision while sending.
+   - Building a radio that could transmit and listen on the same channel at the same time would need full duplex radio with echo cancellation, which was not practical or affordable in ordinary Wi-Fi hardware.
+   - The hidden terminal problem: two stations A and C may both be in range of the access point B but not of each other. Neither hears the other's carrier, so both sense the channel as free and transmit together, colliding at B. Carrier sensing alone therefore cannot prevent collisions, and CSMA/CA adds the RTS and CTS exchange to solve exactly this.
+   - The exposed terminal problem similarly makes a station defer unnecessarily when it could safely transmit.
+   - Wireless collisions are expensive. The channel is scarce and the error rate is already high, so it is far better to avoid a collision beforehand than to detect one and retransmit.
+   - How CSMA/CA works instead: sense the channel; if it is busy, wait; if it is free, wait a DIFS interval and then a random backoff before transmitting; optionally exchange RTS and CTS so that all neighbours set their network allocation vector and stay silent; and require an ACK for every unicast frame, since the absence of an ACK is the only way the sender can learn that a collision occurred.
 15. **Write about 5G disadvantages: (a) Increased High Costs (b) Draining Battery of devices. (c) Increased infrastructure development cost** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 928 (ET: CTI)]*
 
+
+   Answer: Disadvantages of 5G.
+
+   (a) Increased high costs
+   - 5G devices and subscription plans are considerably more expensive than 4G, so ordinary users bear a higher monthly cost.
+   - Handsets need new mmWave and massive MIMO capable chipsets and antennas, which raises the price of the phone itself.
+   - Older 4G handsets cannot use 5G at all, so the whole user base has to replace its equipment, which is a large national expense.
+   - Licensed 5G spectrum is auctioned at very high prices, and the operator recovers this from the tariff.
+
+   (b) Draining battery of devices
+   - The 5G modem consumes far more power than a 4G modem, so a phone on 5G typically loses 20 percent or more battery life for the same use.
+   - mmWave has a short range, so the handset frequently switches between 5G and 4G and constantly searches for a signal, and searching consumes more energy than a stable connection.
+   - Beamforming and massive MIMO need multiple antennas and continuous channel measurement and reporting, which keeps the radio busy.
+   - The very high data rates make the application processor work harder as well, and the whole device heats up, which further degrades battery health over time.
+   - IoT sensors that must run for years on one battery cannot use ordinary 5G, which is why low power variants such as NB-IoT and RedCap exist.
+
+   (c) Increased infrastructure development cost
+   - mmWave cells cover only 100 to 300 metres, so many times more base stations are needed than for 4G, each with site rental, power and maintenance.
+   - Every small cell needs a fibre backhaul link, so a vast amount of new fibre must be laid, which is usually the largest single item of expenditure.
+   - Existing towers must be upgraded with new massive MIMO antennas and radios, and the power supply at each site must be strengthened.
+   - Coverage in rural areas becomes commercially unattractive because the same dense infrastructure serves far fewer subscribers, which widens the digital divide.
+   - Signals are blocked by walls, glass, rain and even foliage, so indoor coverage needs additional repeaters and distributed antenna systems.
+   - The result is that operators recover the cost slowly, and full national coverage takes many years, which is exactly the position in Bangladesh today.
 16. **Make a list of LTE Network elements.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 988 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+
+   Answer: LTE network elements, grouped into the radio access network and the core network.
+
+   Radio access network, E-UTRAN:
+   - UE, User Equipment: the handset or data device together with its USIM.
+   - eNodeB, Evolved Node B: the base station. It handles the radio interface, scheduling, radio resource management, handover decisions and header compression. Unlike 3G there is no separate controller; the eNodeBs talk to each other directly over the X2 interface.
+
+   Core network, Evolved Packet Core:
+   - MME, Mobility Management Entity: the control plane node. It handles attach and detach, authentication, bearer setup, tracking area updates, paging and handover signalling. It carries no user data.
+   - S-GW, Serving Gateway: routes and forwards user data packets, and acts as the mobility anchor during handover between eNodeBs.
+   - P-GW, PDN Gateway: the gateway to the external packet data network, that is the Internet. It allocates the IP address to the UE, enforces policy and does charging and packet filtering.
+   - HSS, Home Subscriber Server: the master database of subscriber profiles and authentication keys, the LTE equivalent of the HLR and AUC.
+   - PCRF, Policy and Charging Rules Function: decides QoS policy and charging rules for each service flow.
+
+   Supporting elements:
+   - IMS, IP Multimedia Subsystem, which delivers VoLTE voice and video calling.
+   - ANDSF for access network discovery and selection, and the ePDG for secure access over untrusted Wi-Fi.
+   - Key interfaces: Uu between the UE and the eNodeB, S1-MME and S1-U between the eNodeB and the core, X2 between eNodeBs, and SGi from the P-GW to the Internet.
 17. **Explain Bluetooth, Wi-Fi and Cellular Network.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1023 (ET: N/A)]*
+
+
+   Answer:
+
+   Bluetooth:
+   - A short range wireless personal area network technology, IEEE 802.15.1, designed to replace cables between personal devices.
+   - Works in the 2.4 GHz ISM band using frequency hopping spread spectrum at 1600 hops per second, which gives strong resistance to interference.
+   - Range about 10 metres for class 2 and up to 100 metres for class 1; data rate 1 to 3 Mbps for classic Bluetooth and about 2 Mbps for Bluetooth Low Energy.
+   - Topology is a piconet with one master and up to seven active slaves; interconnected piconets form a scatternet.
+   - Very low power consumption, so it dominates headsets, wearables, keyboards and IoT sensors. Devices pair with a PIN and the link is encrypted.
+
+   Wi-Fi:
+   - A wireless local area network technology, IEEE 802.11, connecting devices to a LAN and the Internet without cable.
+   - Works in the unlicensed 2.4 GHz, 5 GHz and 6 GHz bands, with an indoor range of 30 to 100 metres.
+   - Uses CSMA/CA with RTS and CTS, since a radio cannot detect a collision while it is transmitting.
+   - Data rates from 11 Mbps in 802.11b to about 9.6 Gbps theoretical in Wi-Fi 6, shared among all users of the access point.
+   - An access point bridges the wireless clients to the wired network; several access points form an ESS allowing roaming. Security uses WPA2 and WPA3.
+
+   Cellular network:
+   - A wide area wireless network in which the coverage area is divided into cells, each served by a base station, so that the same frequencies can be reused in cells that are sufficiently far apart.
+   - Uses licensed spectrum, with cells from a few hundred metres in a city to about 35 km in a rural area, and coverage extending nationwide and, through roaming, worldwide.
+   - Core elements are the mobile station, the base station, the base station controller and the mobile switching centre, together with the HLR and VLR databases.
+   - Handover transfers a call to the next cell as the user moves, so the connection is not lost.
+   - Generations: 2G GSM for voice and SMS, 3G UMTS for data, 4G LTE as an all IP network at up to 1 Gbps, and 5G NR with about 1 ms latency and support for a million devices per square kilometre.
+   - Comparison in one line: Bluetooth covers metres, Wi-Fi covers a building, and a cellular network covers a country.
 
 ## Transport Layer (TCP & UDP) (15)
 
