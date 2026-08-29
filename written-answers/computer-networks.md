@@ -1762,31 +1762,302 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **Nyquist math: See in Data Communication & Networking Chapter** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
 
+
+   Answer: Nyquist's theorem gives the maximum data rate of a noiseless channel.
+
+   Formulas:
+   - Maximum bit rate: C = 2 B log2 L bps, where B is the bandwidth in Hz and L is the number of discrete signal levels.
+   - Number of levels needed: L = 2^(C / 2B).
+   - Nyquist sampling theorem: fs ≥ 2 fmax, that is the sampling rate must be at least twice the highest frequency, otherwise aliasing occurs.
+   - Maximum signalling rate, that is baud rate, = 2 B symbols per second.
+   - Bit rate = baud rate × log2 L.
+
+   Worked example: a noiseless 3 kHz channel using 4 signal levels.
+   - C = 2 × 3000 × log2 4 = 2 × 3000 × 2 = 12,000 bps.
+   - If 16 levels were used instead, C = 2 × 3000 × 4 = 24,000 bps.
+
+   Points the examiner looks for:
+   - Nyquist applies only to a noiseless channel, so it gives an upper bound that cannot be reached in practice.
+   - Raising L raises the bit rate without extra bandwidth, but the levels come closer together, so noise causes more errors. Shannon's law sets the real limit.
+   - The practical capacity is the smaller of the Nyquist and the Shannon values.
 2. **Suppose that a digitized TV picture is to be transmitted from a source that uses a matrix of 480 × 500 picture elements (pixels), where each pixel can take on one of 32 intensity values. Assume that 30 pictures are sent per second. (This digital source is roughly equivalent to broadcast TV standards that have been adopted). Find the source rate R (bps).** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
 
+
+   Answer:
+
+   Given:
+   - Picture matrix = 480 × 500 pixels.
+   - Each pixel can take 32 intensity values.
+   - 30 pictures are sent per second.
+
+   Step 1, bits needed per pixel:
+   - 32 levels need log2 32 = 5 bits per pixel.
+
+   Step 2, pixels per picture:
+   - 480 × 500 = 240,000 pixels.
+
+   Step 3, bits per picture:
+   - 240,000 × 5 = 1,200,000 bits per picture.
+
+   Step 4, source rate:
+   - R = 1,200,000 × 30 = 36,000,000 bps.
+
+   Final answer: the source rate R is 36 Mbps, that is 36 × 10⁶ bits per second.
+
+   - Note: this is the raw uncompressed rate. Broadcast television uses compression such as MPEG-2 or H.264 to bring it down to a few Mbps, which is why compression is essential for video transmission.
 3. **One of the drawbacks of a small packet size is that a large function of link bandwidth is consumed by overhead bytes. To this end, supposed that the packet consists of P bytes and 5 bytes of header. Consider sending a digitally encoded voice source directly. Suppose the source is encoded a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the packetization delay. Determine the packetization delay for length L-1500 bytes (roughly corresponding to maximum-sized Ethernet packet).** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
 
+
+   Answer:
+
+   Given:
+   - Voice source encoded at a constant rate of 128 kbps = 128,000 bps.
+   - Packet length L = 1500 bytes of data, plus a 5 byte header.
+   - The packet must be completely filled before it is sent.
+
+   Step 1, convert the packet payload to bits:
+   - 1500 bytes × 8 = 12,000 bits.
+
+   Step 2, packetization delay, that is the time to fill the packet:
+   - Delay = payload bits / source rate = 12,000 / 128,000 = 0.09375 s.
+
+   Final answer: the packetization delay is 0.09375 s, that is 93.75 ms.
+
+   - Comment the examiner wants: 93.75 ms of delay is far too high for interactive voice, where the total one way budget is about 150 ms. This is why VoIP uses very small packets, typically 20 ms of speech, even though the 5 byte header then becomes a much larger fraction of the packet.
+   - Trade-off: a large packet gives low header overhead but high packetization delay; a small packet gives low delay but wastes bandwidth on headers. If instead the 1500 bytes includes the 5 byte header, the payload is 1495 bytes and the delay is 93.44 ms, which changes nothing in the conclusion.
 4. **(ক) Bandwidth এবং Through put এর মধ্যে পার্থক্য কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
 
+
+   Answer:
+
+   Bandwidth: ekti link-er sorbochcho theoretical capacity, mane ek second-e sorbochcho koto bit pathano somvob. Digital-e bps ba Mbps, analog-e Hz.
+
+   Throughput: bastobe ek second-e koto bit shofolbhabe pouchay, tar mapa mullo. Eta shobshomoy bandwidth-er cheye kom.
+
+   | Bishoy | Bandwidth | Throughput |
+   |---|---|---|
+   | Ortho | Sorbochcho somvabbo capacity | Bastob-e pawa data rate |
+   | Dhoron | Medium-er nirdisto boishishtho, sthir | Poristhiti onujayi bodlay |
+   | Unit | bps, Mbps, Gbps, ba Hz | bps, Mbps, Gbps |
+   | Ki probhabito kore | Medium, encoding, channel width | Congestion, error, retransmission, protocol overhead, latency |
+   | Somporko | Shobshomoy uporer shima | Shobshomoy bandwidth-er soman ba tar kom |
+   | Upoma | Rasta-r prosthota | Ghontay koyta gari bastobe jay |
+
+   - Udahoron: ekti 100 Mbps link-e overhead ar congestion-er por hoyto 60 Mbps useful data pawa jay.
 5. **The power of signal is 10\text{mW} and the power of the noise is 1\mu\text{W}; What are the values of \text{SNR} and \text{SNR}_{\text{dB}}?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 651 (ET: BUET)]*
 
+
+   Answer:
+
+   Given:
+   - Signal power = 10 mW = 10 × 10⁻³ W.
+   - Noise power = 1 µW = 1 × 10⁻⁶ W.
+
+   Step 1, SNR:
+   - SNR = Psignal / Pnoise = (10 × 10⁻³) / (1 × 10⁻⁶) = 10,000
+
+   Step 2, SNR in decibels:
+   - SNR(dB) = 10 log10(SNR) = 10 log10(10,000) = 10 × 4 = 40 dB
+
+   Final answer: SNR = 10,000 and SNR in dB = 40 dB.
+
+   - Note: SNR is a ratio, so it has no unit. A higher SNR means a cleaner channel and, by Shannon's law, a higher achievable capacity.
 6. **We need to send 265\text{ kbps} over a noiseless channel with a bandwidth of 20\text{kHz}. How many signal levels do we need?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 652 (ET: BUET)]*
 
+
+   Answer:
+
+   Given:
+   - Required bit rate C = 265 kbps = 265,000 bps.
+   - Bandwidth B = 20 kHz = 20,000 Hz, noiseless channel.
+
+   Step 1, Nyquist formula for a noiseless channel:
+   - C = 2 B log2 L
+
+   Step 2, substitute:
+   - 265,000 = 2 × 20,000 × log2 L
+   - 265,000 = 40,000 × log2 L
+   - log2 L = 265,000 / 40,000 = 6.625
+
+   Step 3, find L:
+   - L = 2^6.625 = 98.7
+
+   Final answer: the calculation gives L = 98.7 levels.
+
+   - Since the number of signal levels must be a power of 2, 98.7 is not usable. Rounding down to 64 levels gives C = 40,000 × 6 = 240 kbps, which is below the requirement. Rounding up to 128 levels gives C = 40,000 × 7 = 280 kbps, which meets it.
+   - Therefore 128 signal levels are needed. The practical caution is that more levels means the levels are closer together, so the system becomes far more sensitive to noise, and Shannon's law must also be checked.
 7. **A telephone line normally has a bandwidth of 3000\text{ Hz} (300\text{ to } 3300\text{ Hz}) assigned foe data communications. The signal-to-noise ratio is usually 3162. Calculate the capacity for this channel?** *[RPGCL Assistant Manager (ICT) 2022 compact it 656 (ET: BUET)]*
 
+
+   Answer:
+
+   Given:
+   - Bandwidth B = 3000 Hz, from 300 Hz to 3300 Hz.
+   - SNR = 3162.
+
+   Step 1, Shannon capacity formula:
+   - C = B log2(1 + SNR)
+
+   Step 2, substitute:
+   - C = 3000 × log2(1 + 3162) = 3000 × log2(3163)
+
+   Step 3, evaluate:
+   - log2(3163) = 11.627
+   - C = 3000 × 11.627 = 34,881 bps
+
+   Final answer: the channel capacity is about 34,881 bps, that is roughly 34.9 kbps.
+
+   - Cross check: SNR = 3162 is 35 dB, and the shortcut C ≈ B × SNR(dB)/3 gives 3000 × 35/3 = 35,000 bps, which agrees. This is why telephone line modems could not exceed about 33.6 kbps.
 8. **Consider that a signal is transmitted over a channel of bandwidth 200kHz and the total path loss in the channel is found to be 60dB. The noise power per hertz at the receiver is- 100 dBm. Determine the required transmit power to achieve data rate of 40kb/s.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - Channel bandwidth B = 200 kHz = 2 × 10⁵ Hz.
+   - Total path loss = 60 dB.
+   - Noise power spectral density N0 = −100 dBm/Hz.
+   - Required data rate C = 40 kbps.
+
+   Step 1, find the required SNR from Shannon's law:
+   - C = B log2(1 + SNR)
+   - 40,000 = 200,000 × log2(1 + SNR)
+   - log2(1 + SNR) = 0.2
+   - 1 + SNR = 2^0.2 = 1.1487, so SNR = 0.1487
+   - SNR in dB = 10 log10(0.1487) = −8.28 dB
+
+   Step 2, find the total noise power at the receiver:
+   - N = N0 × B, so in dB: N = −100 + 10 log10(200,000) = −100 + 53.01 = −46.99 dBm
+
+   Step 3, find the required received signal power:
+   - S(dBm) = N(dBm) + SNR(dB) = −46.99 + (−8.28) = −55.27 dBm
+
+   Step 4, add the path loss to get the transmit power:
+   - Pt = S + path loss = −55.27 + 60 = 4.73 dBm
+   - In linear form, Pt = 10^(4.73/10) = 2.97 mW
+
+   Final answer: the required transmit power is about 4.73 dBm, that is roughly 2.97 mW.
+
+   - Note that the required SNR is less than 1, which is possible because the bandwidth of 200 kHz is five times the data rate, so the system is bandwidth rich and power poor. Spread spectrum systems work in exactly this region.
 9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+
+   Answer: Prottekti rate ke bit per second-e rupantor:
+
+   | Diya ache | Hisheb | Uttor |
+   |---|---|---|
+   | 50 Mb/s | 50 × 10⁶ | 50,000,000 bps |
+   | 10 KB/s | 10 × 10³ × 8 | 80,000 bps |
+   | 20 MB/s | 20 × 10⁶ × 8 | 160,000,000 bps |
+   | 10 Kb/s | 10 × 10³ | 10,000 bps |
+
+   - Mone rakhar niyom: choto b mane bit, boro B mane Byte, ar 1 Byte = 8 bit.
+   - Data communication-e k, M ar G mane jothakrome 10³, 10⁶ ar 10⁹, storage-er 1024-bhittik hisheb noy.
 10. **What is the channel capacity for a teleprinter channel with a 300 Hz bandwidth and a signal-to-noise ratio of 3 dB?** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - Bandwidth B = 300 Hz.
+   - SNR = 3 dB.
+
+   Step 1, convert the SNR from dB to a linear ratio:
+   - SNR(dB) = 10 log10(SNR)
+   - 3 = 10 log10(SNR), so log10(SNR) = 0.3
+   - SNR = 10^0.3 = 1.995, which is approximately 2
+
+   Step 2, apply Shannon's law:
+   - C = B log2(1 + SNR) = 300 × log2(1 + 2) = 300 × log2 3
+
+   Step 3, evaluate:
+   - log2 3 = 1.585
+   - C = 300 × 1.585 = 475.5 bps
+
+   Final answer: the channel capacity is about 475 bps.
+
+   - Using the exact SNR of 1.995 instead of 2 gives 474.8 bps, so 475 bps is the correct answer to state.
+   - Useful rule to remember: an SNR of 3 dB means the signal power is twice the noise power.
 11. **Using the Nyquist theorem, we can sample 12 million times/sec. Four–level signals provide 2 bits per sample, for a total data rate of 24 Mbps.** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
 
+
+   Answer: The statement is correct, and it is verified as follows.
+
+   Given:
+   - Sampling rate = 12 million samples per second.
+   - Four level signalling, so L = 4.
+
+   Step 1, bits per sample:
+   - log2 L = log2 4 = 2 bits per sample.
+
+   Step 2, data rate:
+   - Data rate = samples per second × bits per sample = 12 × 10⁶ × 2 = 24 × 10⁶ bps = 24 Mbps.
+
+   Final answer: the total data rate is 24 Mbps, which confirms the statement.
+
+   Relation to the Nyquist formula:
+   - Nyquist's theorem says the maximum signalling rate is 2 B symbols per second, so 12 million samples per second corresponds to a channel bandwidth of B = 6 MHz.
+   - Applying C = 2 B log2 L directly: C = 2 × 6 × 10⁶ × log2 4 = 12 × 10⁶ × 2 = 24 Mbps, the same result.
+   - Raising the number of levels to 16 would double this to 48 Mbps in the same 6 MHz, but the levels would be four times closer together and the system far more vulnerable to noise.
 12. **In serial communication employing 8 data bits, a parity bit and 2 stop bits. What is the minimum band rate requested to sustain a transfer rate of 300 characters per second?** *[BAUST Assistant Programmer 2021 compact it 918 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - 8 data bits, 1 parity bit, 2 stop bits, and asynchronous serial framing always adds 1 start bit.
+   - Transfer rate required = 300 characters per second.
+
+   Step 1, total bits per character:
+   - 1 start + 8 data + 1 parity + 2 stop = 12 bits per character.
+
+   Step 2, minimum baud rate:
+   - Baud rate = characters per second × bits per character = 300 × 12 = 3600 bits per second.
+
+   Final answer: the minimum baud rate required is 3600 baud, that is 3600 bps.
+
+   - Note on efficiency: only 8 of the 12 bits carry data, so the useful data rate is 300 × 8 = 2400 bps out of 3600 bps, that is 66.7 percent. The remaining 33.3 percent is framing overhead, which is the price of asynchronous transmission.
+   - In this case the baud rate equals the bit rate, because each signal element carries one bit; they differ only when multilevel signalling is used.
 13. **Find signal bit per second bound rate 1000 and 16-QAM signal.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
 
+
+   Answer:
+
+   Given:
+   - Baud rate, that is the signalling rate = 1000 symbols per second.
+   - Modulation = 16-QAM.
+
+   Step 1, bits per symbol:
+   - 16-QAM has 16 constellation points, so each symbol carries log2 16 = 4 bits.
+
+   Step 2, bit rate:
+   - Bit rate = baud rate × bits per symbol = 1000 × 4 = 4000 bps.
+
+   Final answer: the signal rate is 4000 bits per second, that is 4 kbps.
+
+   - General relation: bit rate = baud rate × log2 L. For the same baud rate, 4-QAM would give 2000 bps, 64-QAM would give 6000 bps and 256-QAM would give 8000 bps, but each step needs a higher signal to noise ratio.
 14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
+
+
+   Answer: The two formulas required for any channel capacity problem, with the method.
+
+   Nyquist, for a noiseless channel:
+   - C = 2 B log2 L bps, where B is the bandwidth in Hz and L is the number of signal levels.
+   - Rearranged: L = 2^(C / 2B), which gives the number of levels needed for a target rate.
+
+   Shannon, for a noisy channel:
+   - C = B log2(1 + SNR) bps, where SNR is the linear power ratio.
+   - SNR(dB) = 10 log10(SNR), so SNR = 10^(SNR(dB)/10).
+   - Shortcut: C ≈ B × SNR(dB) / 3, which is accurate for a high SNR.
+
+   Method:
+   - Convert the SNR from dB to linear form first, apply Shannon to find the real upper limit, then apply Nyquist to find how many signal levels are needed to reach that limit.
+   - The practical capacity is the smaller of the two values, since Shannon sets the limit imposed by noise and Nyquist the limit imposed by bandwidth.
+
+   Worked example: B = 1 MHz with an SNR of 63.
+   - Shannon: C = 10⁶ × log2(64) = 10⁶ × 6 = 6 Mbps.
+   - Nyquist, to reach 6 Mbps: 6 × 10⁶ = 2 × 10⁶ × log2 L, so log2 L = 3 and L = 8 levels.
+   - Final answer: capacity 6 Mbps, requiring 8 signal levels.
 
 ## Network Topologies (12)
 
