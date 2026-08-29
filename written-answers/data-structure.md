@@ -1911,6 +1911,77 @@ Output: Not Balanced
    Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
 19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
+   Answer: The PUSH procedure inserts an element at the top of the stack, which is the only end at which a stack may be modified.
+
+   Steps:
+   - Step 1: check the overflow condition. If top = MAX − 1, the stack is already full, so print "Stack Overflow" and stop. This check must come first, otherwise the write would go beyond the end of the array.
+   - Step 2: increment the top pointer by one, so that it points to the next free position.
+   - Step 3: store the new element at stack[top].
+   - Step 4: stop.
+
+   Pseudocode:
+
+   ```
+   PUSH(stack, item):
+       if top == MAX - 1:
+           print "Stack Overflow"
+           return
+       top = top + 1
+       stack[top] = item
+   ```
+
+   Implementation in C, using an array:
+
+   ```c
+   #define MAX 100
+
+   int stack[MAX];
+   int top = -1;              /* -1 indicates an empty stack */
+
+   void push(int item) {
+       if (top == MAX - 1) {
+           printf("Stack Overflow\n");
+           return;
+       }
+       top = top + 1;
+       stack[top] = item;
+       printf("%d pushed onto the stack\n", item);
+   }
+   ```
+
+   Implementation with a linked list, where overflow occurs only when memory is exhausted:
+
+   ```c
+   struct Node {
+       int data;
+       struct Node* next;
+   };
+   struct Node* top = NULL;
+
+   void push(int item) {
+       struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+       if (newNode == NULL) {
+           printf("Stack Overflow: memory not available\n");
+           return;
+       }
+       newNode->data = item;
+       newNode->next = top;      /* the new node points to the old top */
+       top = newNode;            /* the new node becomes the top */
+   }
+   ```
+
+   Example, starting from an empty stack with top = −1 and MAX = 3:
+
+   | Operation | Condition checked | top after | Stack, bottom to top |
+   |---|---|---|---|
+   | Push(10) | top ≠ 2, so proceed | 0 | 10 |
+   | Push(20) | top ≠ 2, so proceed | 1 | 10, 20 |
+   | Push(30) | top ≠ 2, so proceed | 2 | 10, 20, 30 |
+   | Push(40) | top = 2, the stack is full | 2 | Overflow reported, stack unchanged |
+
+   - Complexity: O(1) in both time and space, since no searching and no shifting of elements is required.
+   - The corresponding POP procedure is the exact inverse: check the underflow condition top = −1, take the element at stack[top], then decrement top.
+
 ## Linked List (14)
 
 1. **Explain with proper example of singly linked list.** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
