@@ -3831,48 +3831,471 @@ int main() {
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1362 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int strToInt(char s[]) {
+       int i = 0, sign = 1, num = 0;
+       if (s[0] == '-') { sign = -1; i = 1; }
+       for (; s[i] != '\0'; i++)
+           num = num * 10 + (s[i] - '0');
+       return sign * num;
+   }
+   
+   int main() {
+       char s[] = "-1234";
+       printf("%d", strToInt(s));
+       return 0;
+   }
+   ```
+
+   - Subtracting the character '0' converts a digit character into its numeric value.
+   - Each new digit is added after multiplying the running number by 10.
+   - A leading minus sign is handled separately. Time complexity O(n).
 2. **Write a C program to check whether a string is a Palindrome.** *[BUET Assistant Programmer 21.06.2025 compact it 1433 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int main() {
+       char s[100];
+       int i = 0, j, flag = 1;
+       scanf("%s", s);
+       while (s[i] != '\0') i++;
+       j = i - 1;
+       for (i = 0; i < j; i++, j--)
+           if (s[i] != s[j]) { flag = 0; break; }
+       printf(flag ? "Palindrome" : "Not a palindrome");
+       return 0;
+   }
+   ```
+
+   - Two indexes move from the two ends towards the middle and compare characters.
+   - If any pair differs the string is not a palindrome. Time complexity O(n).
 3. **Write a C program upper case to lower case conversion.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 475 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int main() {
+       char s[100];
+       int i;
+       scanf("%s", s);
+       for (i = 0; s[i] != '\0'; i++)
+           if (s[i] >= 'A' && s[i] <= 'Z')
+               s[i] = s[i] + 32;
+       printf("%s", s);
+       return 0;
+   }
+   ```
+
+   - In ASCII the lowercase letters are exactly 32 greater than the uppercase ones, so adding 32 converts the case.
+   - Characters that are not uppercase letters are left unchanged.
 4. **String reverse program but without without using the library function.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)], [BREB Assistant Programmer 18.02.2023 compact it 468 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int main() {
+       char s[100], t;
+       int i = 0, j;
+       scanf("%s", s);
+       while (s[i] != '\0') i++;
+       j = i - 1;
+       for (i = 0; i < j; i++, j--) {
+           t = s[i];
+           s[i] = s[j];
+           s[j] = t;
+       }
+       printf("%s", s);
+       return 0;
+   }
+   ```
+
+   - The length is found by counting characters until the null terminator.
+   - Characters are swapped in place from both ends, so no extra array is needed. Space complexity O(1).
 5. **Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from string.** *[RPGCL Assistant Manager (ICT) 2022 compact it 652 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int main() {
+       char s[100], r[50];
+       int i, j, k = 0, found;
+       scanf("%s %s", s, r);
+       for (i = 0; s[i] != '\0'; i++) {
+           found = 0;
+           for (j = 0; r[j] != '\0'; j++)
+               if (s[i] == r[j]) { found = 1; break; }
+           if (!found) s[k++] = s[i];
+       }
+       s[k] = '\0';
+       printf("%s", s);
+       return 0;
+   }
+   ```
+
+   - Every character of the main string is checked against the set of characters to be removed.
+   - Characters that are not in the removal set are written back at index k, which compacts the string in place.
+   - For input programming and gram, the output is ponin.
 6. **Write a program IPv4 IP validation from given IP with valid and not valid.** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+   
+   int main() {
+       char ip[50];
+       int a, b, c, d, n;
+       scanf("%s", ip);
+       n = sscanf(ip, "%d.%d.%d.%d", &a, &b, &c, &d);
+       if (n == 4 && a >= 0 && a <= 255 && b >= 0 && b <= 255 &&
+           c >= 0 && c <= 255 && d >= 0 && d <= 255)
+           printf("Valid IPv4 address");
+       else
+           printf("Not a valid IPv4 address");
+       return 0;
+   }
+   ```
+
+   - A valid IPv4 address has exactly four octets separated by dots.
+   - Each octet must lie between 0 and 255.
+   - `sscanf` returns how many values it read successfully, so a return of 4 confirms the format.
 7. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** *[BKSP Assistant Programmer 03.12.2022 compact it 729 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int main() {
+       char s[200], ch;
+       int i, count = 0;
+       fgets(s, 200, stdin);
+       scanf("%c", &ch);
+       for (i = 0; s[i] != '\0'; i++)
+           if (s[i] == ch || s[i] == ch - 32 || s[i] == ch + 32)
+               count++;
+       printf("%c occurs %d times", ch, count);
+       return 0;
+   }
+   ```
+
+   - The string is scanned once and every match is counted.
+   - The extra checks with 32 make the search case insensitive, so both b and B are counted.
+   - For the sentence given and the character b, the answer is 2.
 8. **What is the purpose of '\0' character in C?** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
 
+
+   Answer: The character `'\0'`, called the null character, marks the end of a string in C.
+
+   - C has no separate string type; a string is simply an array of characters that ends with `'\0'`.
+   - Library functions such as `strlen()`, `strcpy()` and `printf("%s")` keep reading characters until they meet `'\0'`, so without it they would read past the array and produce garbage or crash.
+   - Its ASCII value is 0, which is different from the character `'0'` whose ASCII value is 48.
+   - This is why an array must be one byte larger than the text, for example `char s[6]` is needed to store "Hello".
 9. **(c) Write down a program to find length of a string without using any library function.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 892 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   
+   int strLength(char s[]) {
+       int i = 0;
+       while (s[i] != '\0') i++;
+       return i;
+   }
+   
+   int main() {
+       char s[100];
+       scanf("%s", s);
+       printf("Length = %d", strLength(s));
+       return 0;
+   }
+   ```
+
+   - Characters are counted until the null terminator is found.
+   - The null character itself is not counted, so "Hello" gives 5.
+   - Time complexity O(n) and space complexity O(1).
 10. **Write a program to read a character “lower case ” and convert it into upper case.** *[BAUST Assistant Programmer 2021 compact it 918-919 (ET: N/A)]*
 
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main() {
+        char ch;
+        scanf("%c", &ch);
+        if (ch >= 'a' && ch <= 'z')
+            ch = ch - 32;
+        printf("Uppercase: %c", ch);
+        return 0;
+    }
+    ```
+
+    - Uppercase letters are 32 less than lowercase letters in ASCII, so subtracting 32 converts the case.
+    - The range check makes sure that digits and symbols are not altered.
+    - The library function `toupper()` from `ctype.h` does the same job.
 11. **Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 923-924 (ET: CTI)]*
    Sample Input: 192.168.0.0
    Sample Output: Class C
+
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main() {
+        char ip[50];
+        int a, b, c, d;
+        scanf("%s", ip);
+        sscanf(ip, "%d.%d.%d.%d", &a, &b, &c, &d);
+
+        if (a >= 1 && a <= 126)        printf("Class A");
+        else if (a >= 128 && a <= 191) printf("Class B");
+        else if (a >= 192 && a <= 223) printf("Class C");
+        else if (a >= 224 && a <= 239) printf("Class D (Multicast)");
+        else if (a >= 240 && a <= 255) printf("Class E (Reserved)");
+        else                           printf("Invalid or loopback address");
+
+        return 0;
+    }
+    ```
+
+    - The class is decided entirely by the value of the first octet.
+    - Range 127 is skipped because 127.x.x.x is reserved for loopback.
+    - Example: 192.168.1.1 falls in the range 192 to 223, so it is Class C.
 
 ## File Handling (4)
 
 1. Name Top C 5 File Management Function Name. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+
+   Answer: The five most used file management functions in C are the following.
+
+   - `fopen()` — opens a file and returns a FILE pointer. Modes are "r" read, "w" write, "a" append, and the b suffix for binary.
+   - `fclose()` — closes an open file and flushes the buffer to disk.
+   - `fprintf()` / `fscanf()` — write formatted data to a file and read formatted data from it.
+   - `fgets()` / `fputs()` — read a line from a file and write a string to a file.
+   - `fread()` / `fwrite()` — read and write blocks of binary data.
+
+   - Other useful ones are `fseek()` to move the file pointer, `ftell()` to report the current position and `rewind()` to return to the beginning.
 2. **Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.** *[BCC Assistant Programmer 12.02.2021 compact it 814 (ET: BUET)]*
 
+
+   Answer:
+
+   ```python
+   def first_ten_sorted(filename):
+       with open(filename, 'r') as f:
+           lines = f.readlines()
+       lines.sort()
+       for line in lines[:10]:
+           print(line.rstrip())
+
+   first_ten_sorted("data.txt")
+   ```
+
+   - `readlines()` loads every line of the file into a list.
+   - `sort()` arranges the lines in ascending alphabetical order.
+   - Slicing with `[:10]` takes only the first ten lines, and `rstrip()` removes the trailing newline.
+   - For a very large file it is better to read line by line and keep only the ten smallest, which saves memory.
 3. **You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account, Find the highest and second highest balance of saving account.** *[NRCC Assistant Programmer 2021 compact it 931-932 (ET: N/A)]*
 
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       FILE *fp;
+       char name[50];
+       int acc;
+       float balance, maxBal = -1;
+       char maxName[50];
+
+       fp = fopen("accounts.txt", "r");
+       if (fp == NULL) {
+           printf("File cannot be opened");
+           return 1;
+       }
+
+       while (fscanf(fp, "%d %s %f", &acc, name, &balance) == 3) {
+           if (balance > maxBal) {
+               maxBal = balance;
+               for (int i = 0; name[i] != '\0'; i++) maxName[i] = name[i];
+           }
+           printf("%d %s %.2f\n", acc, name, balance);
+       }
+
+       fclose(fp);
+       printf("Highest balance: %s with %.2f", maxName, maxBal);
+       return 0;
+   }
+   ```
+
+   - The file is opened in read mode and the return value is checked, because `fopen` returns NULL if the file is missing.
+   - `fscanf` returns the number of items read, so comparing it with 3 detects the end of file safely.
+   - The largest balance is tracked while reading, so the file needs only one pass.
+   - `fclose` is essential to release the file handle.
 4. **Folder থেকে একটি Image নিয়ে ঐ Image এর নামের .jpeg extention কে .png extention এ convert করার জন্য Python language এর Function লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
+
+
+   Answer:
+
+   ```python
+   from PIL import Image
+   import os
+
+   def jpeg_to_png(folder, filename):
+       path = os.path.join(folder, filename)
+       img = Image.open(path)
+       new_name = os.path.splitext(filename)[0] + ".png"
+       img.save(os.path.join(folder, new_name), "PNG")
+       print("Converted to", new_name)
+
+   jpeg_to_png("images", "photo.jpeg")
+   ```
+
+   - The Pillow library is used, installed with `pip install pillow`.
+   - `Image.open()` reads the JPEG and `save()` with the format "PNG" writes the converted file.
+   - `os.path.splitext()` separates the name from the extension so the base name is kept unchanged.
+   - Simply renaming the file would not work, because JPEG and PNG use different compression formats internally.
 
 ## Pointers (4)
 
 1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 600 (ET: N/A)]*
 
+
+   Answer: A pointer is a variable that stores the memory address of another variable instead of a value.
+
+   Declaration and use:
+   ```c
+   int x = 10;
+   int *p = &x;      // p holds the address of x
+   printf("%d", *p); // dereferencing prints 10
+   ```
+
+   Advantages of using pointers:
+   - Call by reference becomes possible, so a function can modify the caller's variable.
+   - Dynamic memory allocation with `malloc()` and `calloc()` is only possible through pointers.
+   - Arrays, strings and structures can be passed to functions efficiently, since only an address is copied instead of the whole data.
+   - Data structures such as linked lists, trees and graphs cannot be built without pointers.
+   - Direct access to memory makes some operations faster.
+
+   - The main risk is that a wrong or uninitialised pointer causes a crash, so a pointer that points to nothing should be set to NULL.
 2. **(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
 
+
+   Answer: A pointer is a variable that holds the memory address of another variable.
+
+   | Point | malloc() | calloc() |
+   |---|---|---|
+   | Full form | Memory allocation | Contiguous allocation |
+   | Number of arguments | One, the total size in bytes | Two, the number of blocks and the size of each |
+   | Syntax | `p = (int*)malloc(n * sizeof(int));` | `p = (int*)calloc(n, sizeof(int));` |
+   | Initialisation | Memory contains garbage values | Memory is initialised to zero |
+   | Speed | Faster, since no initialisation is done | Slightly slower because of the zero filling |
+   | Use | When the values will be assigned immediately | When a clean zero filled block is needed |
+
+   - Both return a `void*` which should be cast, and both return NULL if the allocation fails.
+   - Memory taken by either must be released with `free()` to avoid a memory leak.
 3. **Describe Dynamic memory allocation in programming in C?** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
 
+
+   Answer: Dynamic memory allocation means requesting memory at run time from the heap, instead of fixing the size at compile time.
+
+   Why it is needed:
+   - The exact amount of data is often not known while writing the program.
+   - A fixed array either wastes memory or runs short, whereas dynamic memory grows to the actual need.
+
+   Four functions, all declared in `stdlib.h`:
+   - `malloc(size)` — allocates a block of the given size and leaves it uninitialised.
+   - `calloc(n, size)` — allocates n blocks and fills them with zero.
+   - `realloc(ptr, newsize)` — changes the size of an already allocated block, keeping the existing contents.
+   - `free(ptr)` — releases the block back to the system.
+
+   Example:
+   ```c
+   int n;
+   scanf("%d", &n);
+   int *a = (int*)malloc(n * sizeof(int));
+   if (a == NULL) { printf("Allocation failed"); return 1; }
+   for (int i = 0; i < n; i++) a[i] = i;
+   free(a);
+   ```
+
+   - The return value must always be checked for NULL.
+   - Every allocated block must be freed, otherwise the program leaks memory.
 4. **(a) What is the difference between array and pointer?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891-892 (ET: N/A)]*
+
+
+   Answer:
+
+   | Point | Array | Pointer |
+   |---|---|---|
+   | What it is | A block of memory holding several elements | A variable holding one memory address |
+   | Memory allocation | Static, fixed at compile time | Can point to static or dynamically allocated memory |
+   | Value change | The array name is a constant, so `a = a + 1` is illegal | A pointer can be reassigned, `p = p + 1` is legal |
+   | sizeof | Gives the total size of the array, for example 40 for `int a[10]` | Gives the size of the pointer itself, normally 8 |
+   | Declaration | `int a[10];` | `int *p;` |
+   | Relationship | The array name gives the address of the first element | A pointer can be made to point at an array with `p = a;` |
+
+   - Because of this relationship `a[i]` and `*(a + i)` mean exactly the same thing.
+   - When an array is passed to a function it decays into a pointer, which is why the size must be passed separately.
 
 ## Command Line Arguments & Basic Programs (1)
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1361 (ET: BUET)]*
+
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+   
+   int main(int argc, char *argv[]) {
+       int i, sum = 0;
+   
+       if (argc < 2) {
+           printf("Usage: ./program num1 num2 ...");
+           return 1;
+       }
+   
+       for (i = 1; i < argc; i++)
+           sum += atoi(argv[i]);
+   
+       printf("Sum = %d", sum);
+       return 0;
+   }
+   ```
+
+   - `argc` holds the number of arguments including the program name, and `argv` holds them as strings.
+   - Counting starts at 1 because `argv[0]` is the program name itself.
+   - `atoi()` from `stdlib.h` converts each argument string into an integer.
+   - Running `./program 10 20 30` prints Sum = 60.
