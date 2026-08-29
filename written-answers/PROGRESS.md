@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 239/239 subtopics · 2673/2673 answers**
+**Overall: 239/239 subtopics · 2614/2673 answers** — 59 questions skipped as content-free or incomplete (figure, code or question text not reproduced in the source)
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
