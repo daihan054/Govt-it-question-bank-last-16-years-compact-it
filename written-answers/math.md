@@ -162,7 +162,7 @@
 
    Since a price cannot be negative, p = 10.
 
-   Answer: the price of each notebook is Rs. 10.
+   Final answer: the price of each notebook is Rs. 10.
 
    Verification: at Rs. 10 each, he buys 300 / 10 = 30 notebooks. At Rs. 15 each, he would buy 300 / 15 = 20 notebooks, which is 10 fewer. Correct.
 6. **If x is an Integer and x + \frac{1}{x} = \frac{17}{4}, then value of x - \frac{1}{x} = ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
@@ -185,7 +185,7 @@
    - x - 1/x = plus or minus sqrt(225/16)
    - x - 1/x = plus or minus 15/4
 
-   Answer: x - 1/x = 15/4 or -15/4.
+   Final answer: x - 1/x = 15/4 or -15/4.
 
    Note on the values of x: solving x + 1/x = 17/4 gives 4x^2 - 17x + 4 = 0, so x = 4 or x = 1/4. Neither of these is described correctly as "an integer" for both roots, but for x = 4 we get 4 - 1/4 = 15/4, and for x = 1/4 we get 1/4 - 4 = -15/4. Both signs are therefore genuine, and if the positive root x = 4 is intended, the answer is 15/4.
 7. **Students of a class are made to stand in rows. If students are extra in each row, then there would be 2 rows less. If four students are less in each row, then there would be 4 more rows. What is the number of students in the class?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
@@ -218,7 +218,7 @@
    Step 5 - total number of students:
    - N = r x s = 8 x 12 = 96
 
-   Answer: there are 96 students in the class, arranged in 8 rows of 12.
+   Final answer: there are 96 students in the class, arranged in 8 rows of 12.
 
    Verification: with 16 students per row, 96 / 16 = 6 rows, which is 2 rows less. With 8 students per row, 96 / 8 = 12 rows, which is 4 rows more. Both conditions are satisfied.
 8. **\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - \frac{2+\sqrt{3}}{2-\sqrt{3}} = ?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
@@ -243,7 +243,7 @@
    - = 8 - 7 + 4.sqrt3 - 4.sqrt3
    - = 1
 
-   Answer: 1
+   Final answer: 1
 
    Note: sqrt12 = 2.sqrt3, which was used in step 1.
 9. **9+7+5+.......ধারাটির যোগফল -১৪৪ হলে, n = কত?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
