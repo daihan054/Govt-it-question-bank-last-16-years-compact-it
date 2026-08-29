@@ -7883,6 +7883,114 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. A single-mode optical fiber communication link connects two locations 250\text{ km} apart using WDM technology with 50 channels, where each channel provides a bit rate of 10\text{ Gbps}. The refractive index of the fiber is 1.5, and data is transmitted using the Stop-and-Wait protocol. A 1\text{ GB} file is divided into suitable data frames, and after successfully receiving each frame, the receiver sends a 54-byte acknowledgment (ACK) back to the sender. Assuming no processing or queuing delay, determine the total time required to completely transfer the 1\text{ GB} file, including data transmission time, propagation delay, ACK transmission time, and the Stop-and-Wait waiting time. [BSCCPL AME 21-08-2026 (BUET)]
 
+
+   Answer:
+
+   Given:
+   - Distance d = 250 km = 250 × 10³ m
+   - Refractive index of the fibre n = 1.5
+   - WDM: 50 channels × 10 Gbps each
+   - Protocol: Stop-and-Wait
+   - File size = 1 GB
+   - ACK size = 54 bytes
+   - No processing or queuing delay
+
+   Step 1 — Propagation speed in the fibre
+
+   v = c / n
+
+   where c = 3 × 10⁸ m/s is the speed of light in vacuum.
+
+   v = (3 × 10⁸) / 1.5
+   v = 2 × 10⁸ m/s
+
+   Step 2 — Propagation delay (one way)
+
+   Tp = d / v
+
+   Tp = (250 × 10³) / (2 × 10⁸)
+   Tp = 1.25 × 10⁻³ s
+
+   Tp = 1.25 ms
+
+   Step 3 — Total link capacity from WDM
+
+   R = number of channels × bit rate per channel
+
+   R = 50 × 10 Gbps
+   R = 500 Gbps = 500 × 10⁹ bps
+
+   Step 4 — Frame size
+
+   The frame size is not stated, so the standard Ethernet payload of 1500 bytes is taken as the "suitable" frame size.
+
+   L = 1500 bytes = 1500 × 8 = 12,000 bits
+   ACK = 54 bytes = 54 × 8 = 432 bits
+
+   Step 5 — Number of frames
+
+   N = file size / frame size
+
+   N = (1 × 10⁹ bytes) / (1500 bytes)
+   N = 666,666.67 → 666,667 frames
+
+   Step 6 — Transmission time of one data frame
+
+   Tt = L / R
+
+   Tt = 12,000 / (500 × 10⁹)
+   Tt = 2.4 × 10⁻⁸ s = 0.024 µs = 24 ns
+
+   Step 7 — Transmission time of one ACK
+
+   Tack = 432 / (500 × 10⁹)
+   Tack = 8.64 × 10⁻¹⁰ s = 0.000864 µs = 0.864 ns
+
+   Step 8 — Time for one Stop-and-Wait cycle
+
+   In Stop-and-Wait the sender transmits one frame and then waits idle until the ACK arrives.
+
+   Tcycle = Tt + Tp + Tack + Tp = Tt + Tack + 2Tp
+
+   Tcycle = 24 ns + 0.864 ns + 2 × 1,250,000 ns
+   Tcycle = 24.864 ns + 2,500,000 ns
+   Tcycle = 2,500,024.864 ns
+
+   Tcycle = 2.500025 ms
+
+   Step 9 — Total transfer time
+
+   Ttotal = N × Tcycle
+
+   Ttotal = 666,667 × 2.500025 × 10⁻³ s
+   Ttotal = 1666.68 s
+
+   Final answer: total time ≈ 1666.7 seconds ≈ 27.8 minutes ≈ 27 minutes 47 seconds.
+
+   Step 10 — Link utilisation, which shows why the figure is so large
+
+   η = Tt / Tcycle = useful transmission time / total cycle time
+
+   η = 24 / 2,500,024.864
+   η = 9.6 × 10⁻⁶ = 0.00096 %
+
+   Interpretation, which is the point of the problem: the link can carry 500 Gbps, so a 1 GB file should take
+
+   Tideal = (8 × 10⁹ bits) / (500 × 10⁹ bps) = 0.016 s = 16 ms
+
+   but Stop-and-Wait takes 1666.7 s, which is more than 100,000 times longer. The reason is that the sender waits 2.5 ms of propagation for every 24 ns of transmission, so the line sits idle 99.999 % of the time. Stop-and-Wait is unusable on a long fat pipe, that is a link with a large bandwidth-delay product.
+
+   Bandwidth-delay product of this link:
+
+   BDP = R × 2Tp = 500 × 10⁹ × 2.5 × 10⁻³ = 1.25 × 10⁹ bits = 156.25 MB
+
+   To keep such a link busy the window must hold about 156 MB of unacknowledged data, so a sliding-window protocol with a very large window, such as Go-Back-N or Selective Repeat with window scaling, is required. With a window of W frames the time becomes
+
+   Ttotal = (N / W) × Tcycle,  for W ≤ 1 + 2Tp/Tt
+
+   Note on the alternative reading: if the Stop-and-Wait session is taken to run over one WDM channel only, then R = 10 Gbps, Tt = 1.2 µs, Tack = 0.0432 µs, Tcycle = 2.501243 ms and Ttotal = 1667.5 s. The answer barely changes, because propagation delay, not bandwidth, dominates completely. This is itself worth stating: on this link, adding bandwidth does nothing at all for a Stop-and-Wait transfer.
+
+   Note on the unit of 1 GB: if 1 GB is taken as 2³⁰ = 1,073,741,824 bytes, then N = 715,828 frames and Ttotal = 1789.6 s ≈ 29.8 minutes.
 2. **Using an explanation of the difference between flow-control and congestion control, discuss the impact of a stable end-to-end latency.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 424 (ET: BIBM)]*
 
 

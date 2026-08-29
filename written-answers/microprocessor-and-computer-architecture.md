@@ -133,6 +133,28 @@
 | (d) Which system connects the hardware and software? | Operating System(OS) |
 | (e) Microprocessor and other peripherals are interfaced Microcontroller, with which board? | Microcontrollers, Motherboard |
 
+
+   Answer: The completed table, with each blank filled in three words at most.
+
+   | Question | Answer |
+   |---|---|
+   | (a) Which bus transfers data between the CPU and I/O devices? | Data bus |
+   | (b) Which register contains the address of the next instruction? | Program counter |
+   | (c) Which unit does the arithmetic and logical operations? | Arithmetic Logic Unit |
+   | (d) Which system connects the hardware and the software? | Operating system |
+   | (e) With which board are the microprocessor and other peripherals interfaced? | Motherboard |
+
+   Brief justification of each:
+
+   - (a) Data bus. A microprocessor has three buses. The address bus carries the address of the location being accessed and is unidirectional. The data bus carries the actual data between the CPU, memory and I/O devices, and is bidirectional. The control bus carries signals such as read, write and interrupt.
+
+   - (b) Program counter, also called the instruction pointer. It always holds the address of the next instruction to be fetched, and is incremented automatically after each fetch. It must be distinguished from the Instruction Register, which holds the instruction currently being executed, and from the Memory Address Register, which holds the address currently placed on the address bus.
+
+   - (c) Arithmetic Logic Unit. It performs addition, subtraction, multiplication and division, the logical operations AND, OR, NOT and XOR, comparison, and the shift and rotate operations. It is one of the three parts of the CPU, the others being the control unit and the registers.
+
+   - (d) Operating system. It is the system software that sits between the hardware and the application software, managing the processor, memory, files and devices, and providing the interface through which programs use the hardware.
+
+   - (e) Motherboard, also called the system board or the main board. It carries the CPU socket, the memory slots, the expansion slots, the chipset and the buses, and it is the board on which the microprocessor and all the peripherals are interfaced together.
 6. **ALU কী? এর কার্যপদ্ধতি চিত্রসহ বর্ণনা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 405 (ET: N/A)]*
 
 
