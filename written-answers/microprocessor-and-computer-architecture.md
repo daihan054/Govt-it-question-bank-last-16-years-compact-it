@@ -1327,29 +1327,404 @@
 
 1. **Which RAID level is best and why?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+
+   Answer: There is no single RAID level that is best in every situation, because each level trades performance, capacity and fault tolerance differently. The correct answer is to name the best level for a given purpose and to justify it.
+
+   | Level | Technique | Minimum disks | Usable capacity | Fault tolerance | Read speed | Write speed | Typical use |
+   |---|---|---|---|---|---|---|---|
+   | RAID 0 | Striping only | 2 | 100 per cent | None; one failure loses everything | Very high | Very high | Video editing scratch space, temporary data |
+   | RAID 1 | Mirroring | 2 | 50 per cent | Survives 1 disk failure | High | Same as a single disk | Operating system and boot volumes, small servers |
+   | RAID 5 | Striping with distributed parity | 3 | (n-1)/n | Survives 1 disk failure | High | Moderate; a write costs read-modify-write | File servers, general purpose storage |
+   | RAID 6 | Striping with double distributed parity | 4 | (n-2)/n | Survives 2 disk failures | High | Lower than RAID 5 | Large arrays with high-capacity drives |
+   | RAID 10 (1+0) | Mirrored pairs, then striped | 4 | 50 per cent | Survives at least 1, often more, failures | Very high | Very high | Databases, high-transaction OLTP systems |
+   | RAID 50 (5+0) | Striped RAID 5 groups | 6 | Varies | 1 failure per group | Very high | High | Large file and application servers |
+
+   Parity calculation: parity is the bitwise XOR of the data blocks in a stripe. For example, with data blocks A = 1011 and B = 0110, parity P = A XOR B = 1101. If the disk holding A fails, A is recovered as B XOR P = 0110 XOR 1101 = 1011, the original value.
+
+   The usual answers, with justification:
+
+   - Best overall for a database or any transaction-heavy server: RAID 10.
+     - It combines mirroring and striping, so it gives both high read speed and high write speed.
+     - It has no parity to compute, so there is no write penalty, which matters greatly for the small random writes that databases produce.
+     - Rebuilding after a failure is fast and low-risk, because it is a simple block-for-block copy from the surviving mirror rather than a computation across every other disk.
+     - Its drawback is cost: only 50 per cent of the raw capacity is usable.
+
+   - Best balance of capacity, protection and cost for general file storage: RAID 5.
+     - It gives fault tolerance for one disk failure while sacrificing the capacity of only a single disk, so usable capacity is (n-1)/n.
+     - It gives excellent read performance, because reads are striped across all disks.
+     - Its drawback is the write penalty: every small write requires reading the old data and parity, computing the new parity, and writing both back. Rebuilding is also slow and stresses every remaining disk, which raises the risk of a second failure during rebuild.
+
+   - Best for very large arrays of high-capacity drives: RAID 6, because with modern multi-terabyte disks a rebuild takes many hours or days, during which a second failure is a real possibility. RAID 6 survives two simultaneous failures.
+
+   - Best for pure speed with no need for protection: RAID 0, for scratch and temporary data only.
+
+   Conclusion: for a bank or an organisation running transactional databases, RAID 10 is preferred despite its cost, because performance and rebuild safety matter more than capacity. For a departmental file server where capacity matters most, RAID 5 or RAID 6 is chosen.
 2. **Striping with parity is done in which level of RAID.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
+
+   Answer: Striping with parity is done in RAID 5, and striping with double parity in RAID 6.
+
+   RAID 5 - striping with distributed parity:
+   - Data is striped in blocks across all disks, and for each stripe one parity block is computed as the XOR of the data blocks in that stripe.
+   - The parity block is not kept on one dedicated disk; it rotates across all disks, which is why it is called distributed parity. This avoids the bottleneck that a single dedicated parity disk would create.
+   - Minimum disks: 3. Usable capacity: (n-1)/n of the total. Fault tolerance: one disk failure.
+
+   RAID 6 - striping with double distributed parity:
+   - Two independent parity blocks are computed per stripe, so the array survives two simultaneous disk failures.
+   - Minimum disks: 4. Usable capacity: (n-2)/n.
+
+   For completeness:
+   - RAID 3 and RAID 4 also use parity, but on a single dedicated parity disk. RAID 3 stripes at byte level and RAID 4 at block level. Both are rarely used today, because the dedicated parity disk becomes a write bottleneck.
+   - RAID 0 uses striping without parity, so it has no fault tolerance.
+   - RAID 1 uses mirroring, not parity.
+
+   How parity works: parity is the bitwise XOR of the data blocks in a stripe. With A = 1011 and B = 0110, parity P = A XOR B = 1101. If the disk holding A fails, A is recovered as B XOR P = 0110 XOR 1101 = 1011. The same single parity therefore protects against the loss of any one block in the stripe, but only one.
 3. **Concept of RAID, Relevance in Database, Uses in Database, is it possible?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)]*
 
+
+   Answer:
+
+   Concept of RAID:
+   RAID stands for Redundant Array of Independent Disks (originally Redundant Array of Inexpensive Disks). It is a technology that combines several physical disk drives into a single logical unit in order to improve performance, provide fault tolerance, or both.
+
+   Three basic techniques are used, alone or in combination:
+   - Striping: data is split into blocks and written across several disks in turn, so several disks work in parallel and the transfer rate multiplies. Striping alone gives speed but no protection.
+   - Mirroring: the same data is written identically to two or more disks, so if one fails the other still holds a complete copy. Mirroring gives protection but costs capacity.
+   - Parity: an extra block is computed by an XOR of the data blocks and stored on another disk. If any one disk fails, its contents can be reconstructed from the remaining data and the parity. Parity gives protection at a much lower capacity cost than mirroring.
+
+   Relevance to a database:
+   - A database is the workload for which storage performance and reliability matter most, because every transaction involves disk input and output, and the loss of a single data file can destroy the whole system.
+   - Databases generate a great deal of small random reads and writes, which is precisely the pattern that a single disk handles worst and that striping across several disks improves.
+   - The transaction log must be written before a commit can be acknowledged, so log write latency directly limits transaction throughput.
+   - Continuous availability is usually required, and RAID allows the system to keep running while a failed disk is replaced.
+
+   Uses in a database:
+   - Data files: RAID 10 for heavy transactional systems, or RAID 5 or RAID 6 for read-heavy data warehouses where capacity matters more.
+   - Transaction log: usually placed on its own RAID 1 or RAID 10 volume, because the log is written sequentially and its latency is critical.
+   - Temporary and scratch space: sometimes RAID 0, since it can be rebuilt if lost.
+   - Backups: on a separate array, never on the same physical disks as the live data.
+   - Separating the data files, log files and temporary space onto different physical arrays prevents them from competing for the same spindles.
+
+   Is it possible? Yes, and it is standard practice. Every serious database deployment, including those of banks and government systems in Bangladesh, runs on RAID storage or on a SAN that itself uses RAID internally. The database software is unaware of RAID; it sees a single logical volume, and the RAID controller or the operating system handles the distribution and redundancy.
+
+   Important warning: RAID is not a backup. It protects against the mechanical failure of a disk, but it does not protect against accidental deletion, a corrupt transaction, ransomware, fire, theft or a controller failure, because every such event is faithfully written to all the disks at once. A separate backup regime, preferably off-site, is always required.
 4. **How to solve drive failure in RAID?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
 
+
+   Answer: Solving a drive failure in a RAID array follows a defined procedure. What is possible depends on the RAID level.
+
+   Step 1 - detect the failure:
+   - The RAID controller marks the array as degraded and raises an alert through the management software, an audible alarm, an indicator light on the drive bay, or an entry in the system log.
+   - In a degraded state the array continues to serve data, but with no remaining protection (in RAID 1, 5 and 10) and with reduced performance.
+
+   Step 2 - identify the failed drive:
+   - Use the controller utility to find the exact slot. Most enclosures allow the light on the failed bay to be flashed, which prevents the fatal mistake of pulling a healthy drive.
+
+   Step 3 - take a backup before doing anything else:
+   - The array is unprotected while degraded, so if the data is critical and a current backup does not exist, copy it off first.
+
+   Step 4 - replace the drive:
+   - Hot swap: in enterprise systems with hot-swappable bays, simply remove the failed drive and insert a new one while the system runs.
+   - Cold swap: in systems without hot-swap support, shut down, replace and restart.
+   - The replacement must be of the same or greater capacity, and preferably the same model and firmware.
+
+   Step 5 - rebuild the array:
+   - RAID 1: the surviving mirror is copied block for block onto the new disk. This is fast and low risk.
+   - RAID 5: every remaining disk is read in full and the missing data is recomputed by XOR. This is slow and stresses all drives.
+   - RAID 6: the same, using one or both parity sets.
+   - RAID 10: only the partner of the failed disk in that mirrored pair is read, so the rebuild is fast.
+   - RAID 0: no rebuild is possible. All data is lost and must be restored from backup.
+   - Rebuild may take from a few hours to more than a day for large drives, and performance is reduced throughout.
+
+   Step 6 - verify and restore protection:
+   - Confirm from the controller that the array status has returned to optimal, run a consistency check, and verify that the data is intact.
+
+   If a hot spare is configured, steps 4 and 5 begin automatically the moment the failure is detected, which greatly shortens the window of exposure.
+
+   Preventive measures:
+   - Keep hot spares in the array.
+   - Enable monitoring and email alerts, and check SMART attributes regularly.
+   - Prefer RAID 6 or RAID 10 over RAID 5 when using large drives, because of the long rebuild time.
+   - Do not build an array entirely from drives of the same batch, since they tend to fail at similar times.
+   - Maintain independent backups, because RAID is redundancy, not backup.
 5. **Explain the purpose of RAID.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 564 (ET: N/A)]*
 
+
+   Answer: The purpose of RAID (Redundant Array of Independent Disks) is to combine several physical disks into one logical unit in order to achieve one or more of the following objectives.
+
+   - Fault tolerance and data protection: by keeping a mirror copy or a parity block, the array continues to work when a disk fails, and the lost data can be reconstructed. This is the primary purpose of RAID 1, 5, 6 and 10.
+   - Improved performance: by striping data across several disks, several read or write operations proceed in parallel, so the transfer rate and the number of operations per second multiply. This is the purpose of RAID 0, and it is also present in RAID 5, 6 and 10.
+   - High availability and continuous service: a business system need not be shut down when a disk fails, because a degraded array keeps serving data and a hot-swappable drive can be replaced while the system runs.
+   - Larger logical volumes: several smaller disks are combined into one large volume, so a file system can exceed the size of any single physical disk.
+   - Better use of inexpensive hardware: the original idea was that many cheap drives with redundancy could match the reliability of one very expensive drive at a lower total cost.
+   - Reduced downtime and recovery time: rebuilding onto a replacement disk is far faster than restoring an entire system from tape or from an off-site backup.
+   - Simplified management: the operating system sees a single logical drive instead of many separate ones.
+
+   What RAID does not do: it is not a backup. It protects against the mechanical failure of a disk only. Accidental deletion, file corruption, ransomware, a database error, fire, theft or a controller failure will affect every disk in the array simultaneously. A separate, preferably off-site, backup is therefore always required in addition to RAID.
 6. **What do you mean by RAID? Write the difference types of RAID level.** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
 
+
+   Answer: RAID stands for Redundant Array of Independent Disks (originally Redundant Array of Inexpensive Disks). It is a technology that combines several physical disk drives into a single logical unit in order to improve performance, provide fault tolerance, or both.
+
+   Three basic techniques are used, alone or in combination:
+   - Striping: data is split into blocks and written across several disks in turn, so several disks work in parallel and the transfer rate multiplies. Striping alone gives speed but no protection.
+   - Mirroring: the same data is written identically to two or more disks, so if one fails the other still holds a complete copy. Mirroring gives protection but costs capacity.
+   - Parity: an extra block is computed by an XOR of the data blocks and stored on another disk. If any one disk fails, its contents can be reconstructed from the remaining data and the parity. Parity gives protection at a much lower capacity cost than mirroring.
+
+   The different RAID levels:
+
+   | Level | Technique | Minimum disks | Usable capacity | Fault tolerance | Read speed | Write speed | Typical use |
+   |---|---|---|---|---|---|---|---|
+   | RAID 0 | Striping only | 2 | 100 per cent | None; one failure loses everything | Very high | Very high | Video editing scratch space, temporary data |
+   | RAID 1 | Mirroring | 2 | 50 per cent | Survives 1 disk failure | High | Same as a single disk | Operating system and boot volumes, small servers |
+   | RAID 5 | Striping with distributed parity | 3 | (n-1)/n | Survives 1 disk failure | High | Moderate; a write costs read-modify-write | File servers, general purpose storage |
+   | RAID 6 | Striping with double distributed parity | 4 | (n-2)/n | Survives 2 disk failures | High | Lower than RAID 5 | Large arrays with high-capacity drives |
+   | RAID 10 (1+0) | Mirrored pairs, then striped | 4 | 50 per cent | Survives at least 1, often more, failures | Very high | Very high | Databases, high-transaction OLTP systems |
+   | RAID 50 (5+0) | Striped RAID 5 groups | 6 | Varies | 1 failure per group | Very high | High | Large file and application servers |
+
+   Parity calculation: parity is the bitwise XOR of the data blocks in a stripe. For example, with data blocks A = 1011 and B = 0110, parity P = A XOR B = 1101. If the disk holding A fails, A is recovered as B XOR P = 0110 XOR 1101 = 1011, the original value.
+
+   Descriptions of the main levels:
+
+   - RAID 0 (striping): data is divided into blocks and written across all disks in turn. It gives the highest performance and uses 100 per cent of the capacity, but it has no redundancy at all. The failure of any one disk destroys the entire array, and the risk actually increases with the number of disks. Used only for temporary or reproducible data.
+
+   - RAID 1 (mirroring): every block is written identically to two disks. Reads can be served from either disk, so read performance improves, while write performance is about that of a single disk. Only 50 per cent of the capacity is usable, but rebuilding is a simple copy and is therefore fast and safe. Used for boot volumes and small critical systems.
+
+   - RAID 5 (striping with distributed parity): needs at least three disks. Each stripe has one parity block, computed by XOR, and the parity rotates across the disks. It survives one disk failure and gives (n-1)/n usable capacity, which makes it the most capacity-efficient protected level. Its weakness is the write penalty and the long, risky rebuild.
+
+   - RAID 6 (striping with double parity): needs at least four disks and survives two simultaneous failures, at the cost of (n-2)/n usable capacity and a heavier write penalty. It is the preferred choice for arrays built from large modern drives, because rebuilds take so long that a second failure during rebuild is a genuine risk.
+
+   - RAID 10 (mirroring then striping): needs at least four disks. Disks are first paired as mirrors, and the mirrored pairs are then striped. It gives the performance of RAID 0 and the safety and fast rebuild of RAID 1, at the cost of 50 per cent of the capacity. It is the standard choice for databases.
+
+   Note on RAID 2, 3 and 4: RAID 2 used Hamming code error correction and is obsolete. RAID 3 stripes at byte level and RAID 4 at block level, both with a single dedicated parity disk, which becomes a bottleneck. All three are rare in practice.
 7. **What is RAID technology? Why it's important Server in data center?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 555 (ET: BIBM)]*
 
+
+   Answer: RAID technology combines several physical disk drives into a single logical storage unit using striping, mirroring and parity, so as to improve performance, provide fault tolerance, or both.
+
+   Why it is important for a server in a data centre:
+
+   - Continuous availability: a data centre serves users around the clock, and a disk is the component most likely to fail because it is the only major part with moving mechanics. RAID allows the server to keep running in a degraded state when a disk fails, so there is no service interruption and no missed service level agreement.
+   - Protection against data loss: banking transactions, national identity records, medical records and government files cannot be lost. Mirroring or parity guarantees that the failure of a drive does not destroy the data.
+   - Hot swapping: enterprise arrays allow a failed disk to be pulled and replaced while the system is powered and serving requests, so maintenance requires no downtime window.
+   - Performance under heavy load: a data centre server handles thousands of concurrent requests. Striping distributes those requests across many spindles, so throughput and input-output operations per second scale with the number of disks.
+   - Large capacity as one volume: databases and virtual machine stores routinely exceed the capacity of a single drive, so many drives must be presented as one logical volume.
+   - Faster recovery: rebuilding onto a replacement disk restores protection in hours, whereas restoring a multi-terabyte system from backup tape could take days.
+   - Hot spares and automatic rebuild: a spare disk sitting idle in the enclosure is brought into the array automatically the moment a failure is detected, which shortens the unprotected window to minutes.
+   - Cost efficiency: many standard drives with redundancy are far cheaper than a single ultra-reliable drive of the same total capacity.
+   - Foundation for virtualisation and cloud: hypervisors, container platforms and storage area networks all assume a reliable, fast, large shared volume underneath, which RAID provides.
+
+   Typical choices in a data centre: RAID 10 for database and transaction servers where speed and rebuild safety dominate, RAID 6 for bulk file and archive storage where capacity dominates, and RAID 1 for operating system and boot volumes.
+
+   Essential caution: RAID protects against hardware failure only. Data centres therefore combine RAID with regular backups, off-site replication and a disaster recovery site, which in Bangladesh is the model used for the National Data Center at Kaliakair with its disaster recovery site at Jashore.
 8. **(a) Compare RAID 1 and RAID 5 levels. Which one you prefer? Why?** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
+
+   Answer: Comparison of RAID 1 and RAID 5:
+
+   | Point | RAID 1 (Mirroring) | RAID 5 (Striping with distributed parity) |
+   |---|---|---|
+   | Technique | Identical copy of all data on two or more disks | Data striped across disks with one rotating parity block per stripe |
+   | Minimum disks | 2 | 3 |
+   | Usable capacity | 50 per cent | (n-1)/n, for example 75 per cent with 4 disks |
+   | Fault tolerance | Survives 1 disk failure (more with additional mirrors) | Survives 1 disk failure |
+   | Read performance | High; either copy can serve a read | High; reads are spread across all disks |
+   | Write performance | About that of a single disk; each write goes to both disks | Lower; each small write needs a read-modify-write cycle for the parity, known as the write penalty |
+   | Rebuild method | Direct block-for-block copy from the surviving mirror | Read every surviving disk in full and recompute by XOR |
+   | Rebuild speed and risk | Fast and low risk | Slow, and it stresses every remaining disk, raising the chance of a second failure during rebuild |
+   | Controller overhead | Very low, no calculation required | Higher; parity must be computed on every write |
+   | Cost per usable gigabyte | High | Lower |
+   | Suitable for | Boot volumes, transaction logs, small critical systems | File servers, archives, read-heavy general storage |
+
+   Which one I prefer, and why:
+
+   The choice depends on the workload, so a good answer states the condition:
+
+   - For a database server, a transaction log, or any write-intensive and latency-sensitive system, I prefer RAID 1 (or RAID 10, which extends it with striping). The reasons are that there is no parity calculation and therefore no write penalty, the read performance is high, and above all the rebuild is a simple copy, which is fast and does not endanger the remaining disks. In a bank or a government transaction system, the extra cost of the lost 50 per cent of capacity is small compared with the cost of slow writes or a failed rebuild.
+
+   - For a departmental file server, a document archive or a backup target, where the data is read far more often than it is written and where capacity per taka matters, I prefer RAID 5. With five disks it gives 80 per cent usable capacity instead of 50 per cent, which is a large saving on a big array.
+
+   - Caveat for modern large drives: as drive capacity has grown into the multi-terabyte range, a RAID 5 rebuild can take a day or more, during which a second failure destroys everything. For such arrays RAID 6 should be used instead of RAID 5.
+
+   Overall preference for a critical production system: RAID 10, because it gives the performance of striping together with the fast, safe rebuild of mirroring.
 9. **What is RAID?** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
+
+   Answer: RAID stands for Redundant Array of Independent Disks (originally Redundant Array of Inexpensive Disks). It is a technology that combines several physical disk drives into a single logical unit in order to improve performance, provide fault tolerance, or both.
+
+   Three basic techniques are used, alone or in combination:
+   - Striping: data is split into blocks and written across several disks in turn, so several disks work in parallel and the transfer rate multiplies. Striping alone gives speed but no protection.
+   - Mirroring: the same data is written identically to two or more disks, so if one fails the other still holds a complete copy. Mirroring gives protection but costs capacity.
+   - Parity: an extra block is computed by an XOR of the data blocks and stored on another disk. If any one disk fails, its contents can be reconstructed from the remaining data and the parity. Parity gives protection at a much lower capacity cost than mirroring.
+
+   In short: RAID makes many disks behave as one, so that the system is faster, safer, or both.
+
+   The common levels in one line each:
+   - RAID 0: striping only. Fastest, no protection.
+   - RAID 1: mirroring. Full copy, survives one failure, half the capacity usable.
+   - RAID 5: striping with distributed parity. Survives one failure, (n-1)/n capacity usable.
+   - RAID 6: double parity. Survives two failures.
+   - RAID 10: mirrored pairs then striped. Best performance with protection, half the capacity usable.
+
+   Implementation: RAID can be hardware based, using a dedicated controller card with its own processor and battery-backed cache, or software based, implemented by the operating system (for example mdadm on Linux, Storage Spaces on Windows, or ZFS). Hardware RAID is faster and independent of the operating system; software RAID is cheaper and more flexible.
+
+   Important caution: RAID is redundancy, not backup. It protects against the mechanical failure of a disk but not against deletion, corruption, ransomware, fire or theft, because those affect all disks at once.
 10. **What is RAID? What is the classification of RAIDs? Difference between RAID 1 and RAID 5 using illustration.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
 
+
+    Answer: RAID stands for Redundant Array of Independent Disks (originally Redundant Array of Inexpensive Disks). It is a technology that combines several physical disk drives into a single logical unit in order to improve performance, provide fault tolerance, or both.
+
+     Three basic techniques are used, alone or in combination:
+     - Striping: data is split into blocks and written across several disks in turn, so several disks work in parallel and the transfer rate multiplies. Striping alone gives speed but no protection.
+     - Mirroring: the same data is written identically to two or more disks, so if one fails the other still holds a complete copy. Mirroring gives protection but costs capacity.
+     - Parity: an extra block is computed by an XOR of the data blocks and stored on another disk. If any one disk fails, its contents can be reconstructed from the remaining data and the parity. Parity gives protection at a much lower capacity cost than mirroring.
+
+     Classification of RAID levels:
+
+    | Level | Technique | Minimum disks | Usable capacity | Fault tolerance | Read speed | Write speed | Typical use |
+    |---|---|---|---|---|---|---|---|
+    | RAID 0 | Striping only | 2 | 100 per cent | None; one failure loses everything | Very high | Very high | Video editing scratch space, temporary data |
+    | RAID 1 | Mirroring | 2 | 50 per cent | Survives 1 disk failure | High | Same as a single disk | Operating system and boot volumes, small servers |
+    | RAID 5 | Striping with distributed parity | 3 | (n-1)/n | Survives 1 disk failure | High | Moderate; a write costs read-modify-write | File servers, general purpose storage |
+    | RAID 6 | Striping with double distributed parity | 4 | (n-2)/n | Survives 2 disk failures | High | Lower than RAID 5 | Large arrays with high-capacity drives |
+    | RAID 10 (1+0) | Mirrored pairs, then striped | 4 | 50 per cent | Survives at least 1, often more, failures | Very high | Very high | Databases, high-transaction OLTP systems |
+    | RAID 50 (5+0) | Striped RAID 5 groups | 6 | Varies | 1 failure per group | Very high | High | Large file and application servers |
+
+    Parity calculation: parity is the bitwise XOR of the data blocks in a stripe. For example, with data blocks A = 1011 and B = 0110, parity P = A XOR B = 1101. If the disk holding A fails, A is recovered as B XOR P = 0110 XOR 1101 = 1011, the original value.
+
+     Difference between RAID 1 and RAID 5, with illustration:
+
+     RAID 1 with 2 disks. Every block is written twice, once to each disk.
+
+     ```
+       Disk 1        Disk 2
+       ------        ------
+         A             A
+         B             B
+         C             C
+         D             D
+
+       Usable capacity: 50 per cent
+       If Disk 1 fails, Disk 2 already holds a complete copy.
+       Rebuild = straight copy from Disk 2 to the replacement.
+     ```
+
+     RAID 5 with 4 disks. Each stripe has three data blocks and one parity block, and the parity rotates.
+
+     ```
+       Disk 1     Disk 2     Disk 3     Disk 4
+       ------     ------     ------     ------
+         A1         A2         A3         Ap
+         B1         B2         Bp         B3
+         C1         Cp         C2         C3
+         Dp         D1         D2         D3
+
+       Ap = A1 XOR A2 XOR A3, and so on for each stripe.
+       Usable capacity: 3 of 4 disks = 75 per cent
+       If Disk 2 fails, A2 is recovered as A1 XOR A3 XOR Ap,
+       and the same computation restores B2, C2 (parity) and D2.
+     ```
+
+     | Point | RAID 1 | RAID 5 |
+     |---|---|---|
+     | Minimum disks | 2 | 3 |
+     | Usable capacity | 50 per cent | (n-1)/n |
+     | Write performance | Same as a single disk | Reduced by the parity write penalty |
+     | Rebuild | Fast, a simple copy | Slow, must read every surviving disk |
+     | Controller work | Minimal | Parity computation on every write |
+     | Cost per usable gigabyte | High | Lower |
+     | Best for | Boot volumes, transaction logs, small critical systems | File servers, archives, read-heavy storage |
 11. **What is RAID technology? Describe about the advantages of RAID technology.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 820 (ET: BUET)]*
 
+
+    Answer: RAID technology, which stands for Redundant Array of Independent Disks, is a method of combining several physical disk drives into a single logical unit through striping, mirroring and parity, in order to improve performance, provide fault tolerance, or both.
+
+    Advantages of RAID technology:
+
+    - Fault tolerance: the array continues to operate when a disk fails. RAID 1, 5 and 10 survive one failure, and RAID 6 survives two. Without RAID, a single disk failure means immediate loss of service and of data.
+    - Data reconstruction: the contents of a failed disk can be rebuilt automatically onto a replacement, using the mirror copy or the parity blocks, so no data is lost.
+    - Improved read performance: because data is striped across several disks, several reads proceed in parallel, which multiplies the transfer rate and the number of operations per second.
+    - Improved write performance in the striping levels: RAID 0 and RAID 10 write in parallel across disks, giving a large gain over a single drive.
+    - High availability and reduced downtime: with hot-swappable bays a failed disk is replaced while the system runs, so critical services need not be stopped.
+    - Automatic recovery with hot spares: a spare disk kept idle in the enclosure is brought into service automatically the moment a failure is detected, so the unprotected window is minutes rather than hours.
+    - Large logical volumes: many smaller drives are presented as one large volume, so a file system or database can exceed the capacity of any single physical disk.
+    - Cost effectiveness: several ordinary drives with redundancy give the reliability that would otherwise require a single very expensive drive, at a lower total cost.
+    - Transparency to software: the operating system and the applications see one ordinary drive, so no application needs to be modified.
+    - Scalability: capacity is increased by adding drives to the array rather than by rebuilding the system.
+    - Choice of trade-off: different levels allow the administrator to choose between speed, capacity and protection according to the workload.
+    - Faster recovery than backup restoration: rebuilding a disk takes hours, whereas restoring a large system from backup media can take days.
+
+    Limitations that must be stated alongside the advantages:
+    - RAID is not a backup. It gives no protection against accidental deletion, file corruption, ransomware, fire or theft, because every such event is written to all disks at once.
+    - The controller itself is a single point of failure unless it is duplicated.
+    - Levels with parity impose a write penalty.
+    - Rebuild times on large modern drives are long, and performance is degraded throughout.
+    - Redundancy costs capacity: 50 per cent in RAID 1 and 10, and one or two disks in RAID 5 and 6.
 12. **Why necessary to use RAID? If you choose a RAID level for an organization with huge data process. Justify your answer?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 854 (ET: N/A)]*
 
+
+    Answer: Why RAID is necessary:
+
+    - A disk drive is the component of a server most likely to fail, because it is the only major part with moving mechanics. Without redundancy, one failure stops the service and destroys the data.
+    - Modern systems need more capacity and more input-output operations per second than a single drive can provide, so several drives must work together.
+    - Business systems must remain available continuously; RAID allows a failed drive to be replaced while the system runs.
+    - Restoring a large system from backup can take days, whereas a RAID rebuild takes hours and requires no service interruption.
+    - Striping across several spindles multiplies throughput, which matters for databases, virtualisation and file services.
+
+    Choice of RAID level for an organisation with a huge data processing load, with justification:
+
+    Recommended level: RAID 10 for the transactional data and RAID 6 for bulk and archival storage.
+
+    Justification for RAID 10 on the transaction and database tier:
+    - Heavy data processing means a very large number of small random reads and writes. RAID 10 has no parity, so there is no read-modify-write penalty on every small write, whereas RAID 5 would suffer badly under exactly this pattern.
+    - It gives the read and write performance of striping combined with the safety of mirroring, which is the best performance available with protection.
+    - Rebuilding is a straight copy from the surviving member of the mirrored pair. It is fast and it does not stress the whole array, so the risk of a second failure during rebuild is low. In RAID 5 a rebuild must read every remaining disk in full, which both takes far longer and raises the chance of a second failure.
+    - It can survive more than one failure, provided the failures are not both members of the same mirrored pair.
+    - The cost is that only 50 per cent of the raw capacity is usable. For an organisation whose business depends on transaction throughput and data integrity, this cost is justified.
+
+    Justification for RAID 6 on the bulk and archive tier:
+    - Archival data is written once and read many times, so the write penalty matters little.
+    - Capacity efficiency of (n-2)/n is far better than the 50 per cent of RAID 10.
+    - With multi-terabyte drives a rebuild takes a day or more, during which RAID 5 would be completely unprotected. RAID 6 survives a second failure during that window, which is why RAID 5 is no longer recommended for large arrays.
+
+    Supporting measures that must accompany the choice:
+    - Configure hot spares so that rebuilding begins automatically.
+    - Use a hardware controller with battery-backed or flash-backed write cache.
+    - Separate the database data files, the transaction log and the temporary space onto different arrays.
+    - Monitor SMART data and set up alerts.
+    - Maintain independent backups and an off-site disaster recovery site, because RAID is redundancy and not backup.
 13. **Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+
+    Answer: Given:
+    - The largest single storage requirement is 500 GB.
+    - Two system backups of 30 GB each are also to be kept.
+    - RAID 1 (mirroring) is to be used.
+
+    Step 1 - find the total usable capacity required:
+    - Main storage = 500 GB
+    - Backups = 2 x 30 GB = 60 GB
+    - Total usable capacity required = 500 + 60 = 560 GB
+
+    Step 2 - apply the RAID 1 rule:
+    - In RAID 1 every block is written to two disks, so only 50 per cent of the raw capacity is usable.
+    - Raw capacity required = 2 x usable capacity
+    - = 2 x 560 GB
+    - = 1120 GB
+
+    Step 3 - decide the number of drives, taking a practical drive size:
+    - If 500 GB drives are used, the pair gives 500 GB usable, which is not enough for 560 GB. Two mirrored pairs would be needed, that is 4 drives, giving 1000 GB usable.
+    - If 1 TB (1000 GB) drives are used, one mirrored pair gives 1000 GB usable, which comfortably covers the 560 GB requirement with room to grow.
+
+    Final answer:
+    - The minimum is 2 drives of at least 560 GB each, in one mirrored pair. In practice, using standard 1 TB drives, 2 drives are sufficient.
+    - If only 500 GB drives are available, 4 drives are needed, arranged as two mirrored pairs, because a single 500 GB pair cannot hold 560 GB.
+
+    Recommended configuration:
+    - 2 drives of 1 TB in RAID 1, giving 1 TB usable, which holds the 500 GB of data and the 60 GB of backups with about 440 GB spare for growth.
+    - Add one hot spare drive, making 3 drives in total, so that rebuilding starts automatically if one fails.
+
+    Important note to add in the answer: keeping the backups on the same RAID array as the live data is poor practice. A RAID array protects only against the mechanical failure of a disk; accidental deletion, corruption, ransomware, fire or theft would destroy the live data and the backups together. The backups should be kept on a separate device, and preferably off site.
 
 ## Cache Memory (12)
 
