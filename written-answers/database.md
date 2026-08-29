@@ -9265,6 +9265,46 @@ SELECT count (*) FROM (
 
 1. **How indexing improve query performance?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
 
+
+   Answer: An index improves query performance by giving the database a fast path to the rows required, so that it need not examine every row of the table.
+
+   - An index is a separate data structure that stores the values of one or more columns together with pointers to the rows containing them, held in sorted order. It is the database equivalent of the index at the back of a book.
+   - Without an index, finding a row requires a full table scan, examining every row, which is O(n). With a B+ tree index, the search is O(log n), so a million row table is searched in about three or four disk reads instead of thousands.
+   - Structure: almost every index is a B+ tree, in which all the data pointers are in the leaves, the leaves are linked in a chain, and the internal nodes hold only keys for navigation. The high branching factor keeps the tree very shallow, which is what makes it fast on disk. Hash indexes are used for equality lookups only, and bitmap indexes for low cardinality columns in data warehouses.
+
+   Types of index:
+   - Primary index: on the primary key, created automatically.
+   - Unique index: enforces uniqueness as well as speeding up lookups.
+   - Clustered index: the table rows themselves are stored in the index order, so there can be only one per table. Range queries on it are extremely fast.
+   - Non-clustered, or secondary, index: a separate structure holding the key and a pointer to the row. A table may have many.
+   - Composite index: on several columns together. The order of the columns matters greatly, since it can be used only for a prefix of them.
+   - Covering index: contains every column the query needs, so the table itself need not be read at all.
+   - Partial or filtered index: covers only the rows matching a condition.
+   - Full text index for text search, and spatial index for geographic data.
+
+   How it improves specific operations:
+   - Equality and range searches in a WHERE clause: instead of scanning every row, the database descends the B+ tree to the first matching key and then follows the linked leaves. `WHERE emp_id = 5000` becomes a few page reads instead of a million.
+   - Joins: an index on the foreign key column allows a nested loop or index join, in which each row of the outer table probes the index of the inner table directly, rather than scanning it repeatedly.
+   - ORDER BY and GROUP BY: because the index is already sorted, the sort step can be skipped entirely, which for a large result is the largest single saving.
+   - MIN and MAX: the answer is the first or last entry of the index, found in one descent.
+   - Uniqueness checking: a unique index makes the constraint check O(log n) instead of O(n).
+   - Covering index: if the index contains every column the query needs, the table is never touched at all, which halves the I/O.
+
+   Illustration:
+   - A table of one million employees. `SELECT * FROM Employee WHERE emp_id = 750000;` without an index reads every one of the million rows. With a B+ tree index of order about 100, the height is about 3, so the row is found in 3 or 4 disk reads. The improvement is of the order of a hundred thousand times.
+
+   Why indexing does not always make an application faster:
+   - Every INSERT, UPDATE and DELETE must update every affected index as well as the table. A table with ten indexes performs eleven writes for every one logical write, so a write heavy table is slowed considerably. This is the central trade-off.
+   - Indexes consume disk space and memory. A large index competes with the data itself for buffer cache, which can make the whole system slower.
+   - The optimiser may ignore an index if it estimates that a full scan is cheaper. This happens when the query returns a large proportion of the table, typically more than about 20 percent, because random access through an index is more expensive per row than a sequential scan.
+   - An index on a low cardinality column, such as gender or a yes-no flag, is nearly useless, because each value matches a large fraction of the rows.
+   - An index cannot be used if a function is applied to the column, as in `WHERE YEAR(join_date) = 2024` or `WHERE UPPER(name) = 'RAHIM'`, unless a functional index exists.
+   - A leading wildcard, as in `LIKE '%abc'`, cannot use an index either, because the index is ordered from the left.
+   - A composite index can be used only for a prefix of its columns: an index on (a, b, c) helps a query on a, or on a and b, but not one on b alone.
+   - Indexes fragment over time and need maintenance.
+   - Statistics must be current; if they are stale the optimiser makes wrong choices.
+
+   The practical rule: index the columns used in WHERE, JOIN and ORDER BY clauses on tables that are read far more often than they are written; measure with the execution plan rather than guessing; and remove indexes that are never used.
 2. **Briefly describe primary key, foreign key and indexing in relational database and their relationship. Do you think database indexing always makes applications faster? Explain your answer.**
 
 **Table Name: STUDENT**
@@ -9287,23 +9327,407 @@ SELECT count (*) FROM (
 
 *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 337 (ET: BIBM)]*
 
+
+   Answer:
+
+   Primary key:
+   - The attribute or set of attributes chosen to identify each row of a table uniquely. It must be unique and not NULL, and there is exactly one per table. In the STUDENT table it is `Stu_Id`, since the two students named Steve are distinguished only by their identifiers.
+   - It enforces entity integrity, and the DBMS creates a unique index on it automatically.
+
+   Foreign key:
+   - An attribute in one table whose values must match the primary key of another. In the Course_enrollment table, `Stu_Id` is a foreign key referring to STUDENT. It enforces referential integrity, so no enrollment can refer to a student who does not exist.
+   - It may repeat, as `Stu_Id` 101 and 102 do here, and it may be NULL unless declared otherwise.
+
+   Indexing:
+   - A separate sorted structure holding column values with pointers to the rows, which allows a row to be found in O(log n) instead of by scanning the whole table in O(n).
+
+   Their relationship:
+   - The primary key is indexed automatically, because uniqueness must be checked on every insertion, and an index is the only efficient way to do it.
+   - A foreign key is not indexed automatically in most systems. It should be indexed manually, because a join on it is the commonest operation and because every deletion from the parent table requires a check against the child, which without an index is a full scan.
+   - So all three are connected: the primary key provides identity, the foreign key provides the relationship, and the index provides the speed at which the relationship can be traversed.
+
+   For the given tables:
+
+   ```sql
+   CREATE TABLE STUDENT (
+       Stu_Id   INT PRIMARY KEY,
+       Stu_Name VARCHAR(50),
+       Stu_Age  INT
+   );
+
+   CREATE TABLE Course_enrollment (
+       Course_Id VARCHAR(10),
+       Stu_Id    INT,
+       PRIMARY KEY (Course_Id, Stu_Id),
+       FOREIGN KEY (Stu_Id) REFERENCES STUDENT(Stu_Id)
+   );
+
+   CREATE INDEX idx_enroll_student ON Course_enrollment(Stu_Id);
+   ```
+
+   - The composite primary key on Course_enrollment prevents the same student from being enrolled twice in the same course.
+   - The explicit index on `Stu_Id` makes the join `STUDENT JOIN Course_enrollment ON Stu_Id` efficient, and makes the referential integrity check on deletion cheap.
+
+   Does indexing always make an application faster? No.
+
+   Why indexing does not always make an application faster:
+   - Every INSERT, UPDATE and DELETE must update every affected index as well as the table. A table with ten indexes performs eleven writes for every one logical write, so a write heavy table is slowed considerably. This is the central trade-off.
+   - Indexes consume disk space and memory. A large index competes with the data itself for buffer cache, which can make the whole system slower.
+   - The optimiser may ignore an index if it estimates that a full scan is cheaper. This happens when the query returns a large proportion of the table, typically more than about 20 percent, because random access through an index is more expensive per row than a sequential scan.
+   - An index on a low cardinality column, such as gender or a yes-no flag, is nearly useless, because each value matches a large fraction of the rows.
+   - An index cannot be used if a function is applied to the column, as in `WHERE YEAR(join_date) = 2024` or `WHERE UPPER(name) = 'RAHIM'`, unless a functional index exists.
+   - A leading wildcard, as in `LIKE '%abc'`, cannot use an index either, because the index is ordered from the left.
+   - A composite index can be used only for a prefix of its columns: an index on (a, b, c) helps a query on a, or on a and b, but not one on b alone.
+   - Indexes fragment over time and need maintenance.
+   - Statistics must be current; if they are stale the optimiser makes wrong choices.
+
+   The practical rule: index the columns used in WHERE, JOIN and ORDER BY clauses on tables that are read far more often than they are written; measure with the execution plan rather than guessing; and remove indexes that are never used.
+
+   - Applied to these particular tables: with four students and six enrollments, an index would make no difference at all and would simply add overhead. Indexing pays only when the table is large enough that scanning it is expensive, which is the point most often missed.
 3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 612 (ET: N/A)]*
 
+
+   Answer:
+
+   Indexing:
+
+   - An index is a separate data structure that stores the values of one or more columns together with pointers to the rows containing them, held in sorted order. It is the database equivalent of the index at the back of a book.
+   - Without an index, finding a row requires a full table scan, examining every row, which is O(n). With a B+ tree index, the search is O(log n), so a million row table is searched in about three or four disk reads instead of thousands.
+   - Structure: almost every index is a B+ tree, in which all the data pointers are in the leaves, the leaves are linked in a chain, and the internal nodes hold only keys for navigation. The high branching factor keeps the tree very shallow, which is what makes it fast on disk. Hash indexes are used for equality lookups only, and bitmap indexes for low cardinality columns in data warehouses.
+
+   Types of index:
+   - Primary index: on the primary key, created automatically.
+   - Unique index: enforces uniqueness as well as speeding up lookups.
+   - Clustered index: the table rows themselves are stored in the index order, so there can be only one per table. Range queries on it are extremely fast.
+   - Non-clustered, or secondary, index: a separate structure holding the key and a pointer to the row. A table may have many.
+   - Composite index: on several columns together. The order of the columns matters greatly, since it can be used only for a prefix of them.
+   - Covering index: contains every column the query needs, so the table itself need not be read at all.
+   - Partial or filtered index: covers only the rows matching a condition.
+   - Full text index for text search, and spatial index for geographic data.
+
+   Indexing methods, classified by structure:
+   - Ordered index: entries kept in sorted order of the search key. Subdivided into dense index, which has an entry for every search key value, and sparse index, which has an entry only for some values and requires a sequential scan from there.
+   - Primary index: built on the ordering key of a sequentially ordered file. Only one per file, and normally sparse.
+   - Secondary index: built on a non-ordering attribute. It must be dense, and a file may have many.
+   - Clustering index: on a non-key attribute by which the file is ordered.
+   - Multilevel index: an index on the index, applied repeatedly, which is what leads to the B tree.
+   - B tree and B+ tree: the standard structure in practice. All leaves are at the same level, so the tree is perfectly balanced; the branching factor is high, so the tree is very shallow; and in a B+ tree all the data pointers are in the leaves and the leaves are chained, which makes range queries and full ordered scans extremely efficient. This is why every relational database uses B+ trees for its indexes.
+
+   Hashing:
+   - Hashing computes the address of a record directly from its key using a hash function, so no search is required at all. The average cost of an equality lookup is O(1), which no ordered index can match.
+   - Static hashing: a fixed number of buckets. Simple, but it degrades badly as the file grows, since overflow chains lengthen, and it wastes space if the file shrinks.
+   - Dynamic hashing: the number of buckets changes as the file grows.
+   - Extendible hashing: a directory of pointers to buckets; when a bucket overflows it is split and the directory is doubled if necessary. Growth is graceful and no reorganisation of the whole file is required.
+   - Linear hashing: buckets are split in a predetermined order rather than on overflow, so no directory is needed.
+   - Collision resolution: separate chaining, in which each bucket holds an overflow list, or open addressing, in which another bucket is probed.
+
+   Comparison, which is what the question is really testing:
+
+   | Point | Indexing, that is B+ tree | Hashing |
+   |---|---|---|
+   | Equality search | O(log n) | O(1) on average |
+   | Range search | Excellent, since the leaves are linked and ordered | Impossible; the hash destroys the order |
+   | ORDER BY and MIN/MAX | Supported directly | Not supported |
+   | Growth | Handles growth gracefully by splitting nodes | Static hashing degrades; dynamic hashing is needed |
+   | Space | Predictable | Some buckets under-filled |
+   | Partial key match | Works on a prefix of a composite key | Requires the whole key |
+
+   - The practical conclusion: hashing is faster for exact match lookups, but a B+ tree supports range queries, sorting and prefix matching as well, and range queries are extremely common. This is why B+ trees are the default index structure in every relational database, and hash indexes are offered only as a specialised option.
 4. **How does index tuning help in improving query performance?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 747 (ET: N/A)]*
 
+
+   Answer: Index tuning is the deliberate design, review and adjustment of the indexes on a database so that the queries actually being executed run as fast as possible, at an acceptable cost in write performance and storage.
+
+   How it improves query performance:
+
+   - Creating the right indexes: identifying the columns used in WHERE, JOIN and ORDER BY clauses of the queries that matter, and indexing those. This is what converts a full table scan into an index seek, changing O(n) into O(log n).
+   - Composite indexes in the correct column order: an index on (dept_id, salary) serves a query filtering on dept_id and sorting by salary, whereas two separate indexes serve it far less well. The most selective column, or the one used for equality, should come first; the order matters because only a prefix of the index can be used.
+   - Covering indexes: including in the index every column the query returns, so the table itself is never read. This can halve the I/O of a frequently executed query.
+   - Removing unused and duplicate indexes: every index slows down every write and consumes memory. Indexes created for a query that no longer exists are pure cost, and most databases can report which indexes have never been used.
+   - Choosing the clustered index wisely: since there can be only one, it should support the commonest range query, and it should be narrow, static and monotonically increasing to avoid page splits.
+   - Filtered or partial indexes: indexing only the rows that matter, for example only the active accounts, which makes the index far smaller and therefore faster.
+   - Keeping statistics current: the optimiser chooses a plan from estimated row counts. Stale statistics cause it to choose a scan where a seek would be better, or the reverse. Updating statistics is often the single most effective tuning action.
+   - Rebuilding or reorganising fragmented indexes, so that logically adjacent pages are physically adjacent again.
+   - Avoiding the constructs that prevent index use: a function applied to the column, a leading wildcard in LIKE, an implicit data type conversion, or an OR that could be rewritten as a UNION.
+
+   Method:
+   - Identify the slow queries from the slow query log or the wait statistics; do not guess.
+   - Read the execution plan and find the full scans, the sorts and the expensive operators.
+   - Propose an index, create it in a test environment, and measure the same query again.
+   - Verify that the write performance of the affected tables has not degraded unacceptably.
+   - Review periodically, since the workload changes.
+
+   The trade-off that must be stated:
+   - Indexes accelerate reads and slow writes. A table with ten indexes performs eleven writes for every logical write. The correct number of indexes is therefore a judgement about the read to write ratio of that particular table, and it can only be settled by measurement.
 5. **Construct a B+ tree index structure on emp_id for the given relation employee as shown below with n=4.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
 
+
+   Answer: A B+ tree of order n = 4 permits at most 3 keys and 4 pointers in each node, and requires at least ⌈4/2⌉ = 2 pointers in an internal node and ⌈(4−1)/2⌉ = 2 keys in a leaf.
+
+   Properties of a B+ tree:
+   - All the actual data pointers are in the leaf nodes; the internal nodes hold keys only, for navigation.
+   - All the leaves are at the same level, so the tree is perfectly balanced.
+   - The leaves are linked in a chain, which is what makes range queries and full ordered scans efficient.
+   - Every key that appears in an internal node also appears in a leaf.
+
+   Construction with the example emp_id values 10, 20, 30, 40, 50, 60, 70:
+
+   Step 1, insert 10, 20, 30. The single leaf, which is also the root, can hold 3 keys.
+
+   ```
+   [10 | 20 | 30]
+   ```
+
+   Step 2, insert 40. The leaf overflows, so it splits. In a B+ tree the middle key is copied up, not moved, so it remains in the leaf.
+
+   ```
+                 [30]
+                /     \
+       [10 | 20]       [30 | 40]
+   ```
+
+   Step 3, insert 50. It belongs in the right leaf, which has room.
+
+   ```
+                 [30]
+                /     \
+       [10 | 20]       [30 | 40 | 50]
+   ```
+
+   Step 4, insert 60. The right leaf overflows and splits, copying 50 up into the root.
+
+   ```
+                 [30 | 50]
+                /    |     \
+       [10 | 20] [30 | 40] [50 | 60]
+   ```
+
+   Step 5, insert 70. It belongs in the rightmost leaf, which has room.
+
+   ```
+                 [30 | 50]
+                /    |     \
+       [10 | 20] [30 | 40] [50 | 60 | 70]
+   ```
+
+   Final structure, with the leaves linked:
+
+   ```
+                        [ 30 | 50 ]                  <- root, internal node
+                       /     |      \
+                      /      |       \
+        [10 | 20] --> [30 | 40] --> [50 | 60 | 70]   <- leaves, chained
+   ```
+
+   Searching for emp_id = 40:
+   - At the root, 40 is between 30 and 50, so follow the middle pointer.
+   - In that leaf, 40 is found. Two node accesses in total.
+
+   Range query, emp_id between 20 and 60:
+   - Descend to the leaf containing 20, then follow the leaf chain forwards, collecting 20, 30, 40, 50 and 60 until the upper bound is passed. No further descent of the tree is needed, which is the principal advantage of the B+ tree over the plain B tree.
+
+   Why the B+ tree is used for database indexing:
+   - Each node is sized to one disk page, so a single read brings in many keys and the tree is very shallow. A million keys typically fit in three or four levels, so any row is found in three or four disk reads.
+   - The linked leaves make range scans and ORDER BY efficient, which is the commonest requirement after equality lookup.
+   - Because the internal nodes hold no data, they hold more keys, so the branching factor is higher and the tree shallower than a plain B tree of the same page size. <!-- verify -->
 6. **What is Indexing? Write down the usages of Indexing.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
+
+
+   Answer:
+
+   What indexing is:
+
+   - An index is a separate data structure that stores the values of one or more columns together with pointers to the rows containing them, held in sorted order. It is the database equivalent of the index at the back of a book.
+   - Without an index, finding a row requires a full table scan, examining every row, which is O(n). With a B+ tree index, the search is O(log n), so a million row table is searched in about three or four disk reads instead of thousands.
+   - Structure: almost every index is a B+ tree, in which all the data pointers are in the leaves, the leaves are linked in a chain, and the internal nodes hold only keys for navigation. The high branching factor keeps the tree very shallow, which is what makes it fast on disk. Hash indexes are used for equality lookups only, and bitmap indexes for low cardinality columns in data warehouses.
+
+   Types of index:
+   - Primary index: on the primary key, created automatically.
+   - Unique index: enforces uniqueness as well as speeding up lookups.
+   - Clustered index: the table rows themselves are stored in the index order, so there can be only one per table. Range queries on it are extremely fast.
+   - Non-clustered, or secondary, index: a separate structure holding the key and a pointer to the row. A table may have many.
+   - Composite index: on several columns together. The order of the columns matters greatly, since it can be used only for a prefix of them.
+   - Covering index: contains every column the query needs, so the table itself need not be read at all.
+   - Partial or filtered index: covers only the rows matching a condition.
+   - Full text index for text search, and spatial index for geographic data.
+
+   Uses of indexing:
+   - Accelerating searches: a WHERE clause on an indexed column becomes an O(log n) descent of a B+ tree instead of an O(n) scan of the whole table. This is its primary purpose.
+   - Accelerating joins: an index on the foreign key allows each row of one table to probe the other directly, instead of scanning it repeatedly.
+   - Avoiding sorts: because an index is already ordered, an ORDER BY or GROUP BY on the indexed column needs no sort step, which for a large result is the largest saving of all.
+   - Enforcing uniqueness: a unique index is the mechanism by which a PRIMARY KEY or UNIQUE constraint is checked, in O(log n) rather than O(n).
+   - Finding minimum and maximum values: the answer is the first or last entry of the index.
+   - Covering a query entirely: if the index contains every column the query needs, the table is never read at all.
+   - Speeding up range queries: the linked leaves of the B+ tree allow all the rows in a range to be read sequentially after one descent.
+   - Supporting full text search and spatial queries through specialised index types.
+
+   Where to create an index:
+   - Columns used frequently in WHERE clauses, in JOIN conditions and in ORDER BY.
+   - Foreign key columns, which are not indexed automatically.
+   - Columns of high cardinality, that is with many distinct values.
+   - Tables that are read far more often than they are written.
+
+   Where not to create one:
+   - Small tables, where a scan is cheaper than a descent.
+   - Columns of low cardinality, such as a yes-no flag.
+   - Columns updated very frequently.
+   - Tables that are predominantly written rather than read.
+
+   Why indexing does not always make an application faster:
+   - Every INSERT, UPDATE and DELETE must update every affected index as well as the table. A table with ten indexes performs eleven writes for every one logical write, so a write heavy table is slowed considerably. This is the central trade-off.
+   - Indexes consume disk space and memory. A large index competes with the data itself for buffer cache, which can make the whole system slower.
+   - The optimiser may ignore an index if it estimates that a full scan is cheaper. This happens when the query returns a large proportion of the table, typically more than about 20 percent, because random access through an index is more expensive per row than a sequential scan.
+   - An index on a low cardinality column, such as gender or a yes-no flag, is nearly useless, because each value matches a large fraction of the rows.
+   - An index cannot be used if a function is applied to the column, as in `WHERE YEAR(join_date) = 2024` or `WHERE UPPER(name) = 'RAHIM'`, unless a functional index exists.
+   - A leading wildcard, as in `LIKE '%abc'`, cannot use an index either, because the index is ordered from the left.
+   - A composite index can be used only for a prefix of its columns: an index on (a, b, c) helps a query on a, or on a and b, but not one on b alone.
+   - Indexes fragment over time and need maintenance.
+   - Statistics must be current; if they are stale the optimiser makes wrong choices.
+
+   The practical rule: index the columns used in WHERE, JOIN and ORDER BY clauses on tables that are read far more often than they are written; measure with the execution plan rather than guessing; and remove indexes that are never used.
 
 ## Distributed & Parallel Databases (4)
 
 1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
 
+
+   Answer: Speedup and scaleup are the two measures of how well a parallel database system uses additional hardware.
+
+   Speedup:
+   - Speedup measures how much faster a fixed amount of work is completed when more resources are added. The problem size stays the same and the hardware grows.
+   - Formula: Speedup = time taken on the small system ÷ time taken on the large system.
+   - Linear speedup means that doubling the hardware halves the time, so the speedup equals the number of processors. This is the ideal.
+   - Example: a query that takes 100 seconds on one processor takes 50 seconds on two and 25 on four. The speedup at four processors is 4, which is linear.
+
+   ```
+   Speedup
+      |                    ideal, linear
+    4 |                  /
+      |               /
+    3 |            /  ....... actual, sublinear
+      |         /  ....
+    2 |      / ....
+      |   /....
+    1 |/..
+      +---+---+---+---+---> Number of processors
+      1   2   3   4
+   ```
+
+   Scaleup:
+   - Scaleup measures whether a larger problem can be handled in the same time when the resources are increased in proportion. Both the problem size and the hardware grow together.
+   - Formula: Scaleup = time on the small system with the small problem ÷ time on the large system with the proportionally larger problem.
+   - Linear scaleup means the ratio is 1: doubling both the data and the hardware leaves the response time unchanged. This is the ideal.
+   - Example: a query over 1 GB takes 100 seconds on one processor. Over 2 GB on two processors it still takes 100 seconds, so the scaleup is 1, which is linear.
+
+   ```
+   Time
+      |
+  150 |            ....... actual, sublinear scaleup
+      |        ....
+  100 |----------------------  ideal, flat: linear scaleup
+      |
+   50 |
+      +---+---+---+---+---> Problem size and processors together
+      1   2   3   4
+   ```
+
+   Types of scaleup:
+   - Batch scaleup: the size of the database grows and the query is over the larger database.
+   - Transaction scaleup: the number of transactions per second grows, which is the case in an OLTP banking system.
+
+   Why linear speedup and scaleup are rarely achieved:
+   - Start-up cost: initiating a process on every one of many processors takes time that does not decrease.
+   - Interference: the processors contend for shared resources such as the bus, the disk and the locks.
+   - Skew: the work does not divide evenly, so the whole operation waits for the slowest partition. This is usually the dominant factor.
+   - Communication cost between nodes, which grows with their number.
+   - Amdahl's law: the sequential portion of the work cannot be parallelised at all, and it eventually dominates.
 2. **(ক) Data Fragmentation কী? ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
 
+
+   Answer: Data fragmentation is the division of a relation into smaller pieces, called fragments, which are then stored at different sites of a distributed database. The purpose is to place data near the users who need it, so as to reduce network traffic and to allow parallel processing.
+
+   Types of fragmentation:
+
+   Horizontal fragmentation:
+   - The relation is divided by rows. Each fragment contains a subset of the tuples, selected by a predicate, and every fragment has the same schema as the original.
+   - It corresponds to the relational algebra selection operator, σ.
+   - Example: a bank's Account relation is fragmented by branch, so that the Dhaka branch's accounts are stored in Dhaka and the Chattogram branch's in Chattogram.
+   - Reconstruction: the original relation is recovered by the union of the fragments.
+
+   ```
+   Account = σ(branch = 'Dhaka')(Account)  ∪  σ(branch = 'Chattogram')(Account)
+   ```
+
+   - Derived horizontal fragmentation: a child relation is fragmented according to the fragmentation of its parent, so that related rows are stored together and joins become local. For example Transaction is fragmented by the branch of its Account.
+
+   Vertical fragmentation:
+   - The relation is divided by columns. Each fragment contains a subset of the attributes, and the primary key must be repeated in every fragment so that the original can be reconstructed.
+   - It corresponds to the projection operator, π.
+   - Example: Employee(Emp_ID, Name, Address, Salary, Bank_Account) is split so that the personnel department holds (Emp_ID, Name, Address) and the payroll department holds (Emp_ID, Salary, Bank_Account), which also serves as an access control measure.
+   - Reconstruction: the original is recovered by the natural join of the fragments on the primary key.
+
+   ```
+   Employee = π(Emp_ID, Name, Address)(Employee)  ⋈  π(Emp_ID, Salary)(Employee)
+   ```
+
+   Mixed or hybrid fragmentation:
+   - Both applied together: the relation is first divided horizontally and each fragment then divided vertically, or the reverse. This is what most real designs use.
+
+   Rules that any correct fragmentation must satisfy:
+   - Completeness: every tuple and every attribute of the original relation must appear in at least one fragment, so nothing is lost.
+   - Reconstruction: it must be possible to recover the original relation exactly from the fragments, by union for horizontal and by join for vertical fragmentation.
+   - Disjointness: for horizontal fragmentation the fragments should not overlap, so that a tuple is stored once; for vertical fragmentation the primary key is necessarily repeated and is the permitted exception.
+
+   Advantages: queries run against smaller relations; data is placed near the users who need it, reducing network traffic; fragments can be processed in parallel; and access control can be applied per fragment.
+   Disadvantages: a query needing data from several fragments must join across the network, which is expensive; enforcing integrity constraints across fragments is difficult; and the design itself requires knowledge of the access patterns, which may change.
 3. **What is distributed database?** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)]*
 
+
+   Answer: A distributed database is a single logical database whose data is physically stored across several computers, called sites, which are connected by a network but which appear to the user as one system.
+
+   Characteristics:
+   - The data is distributed, but the user is unaware of it. This property is called distribution transparency, and it has several components: location transparency, so the user need not know where the data is; fragmentation transparency, so the user need not know that a relation is split; and replication transparency, so the user need not know that copies exist.
+   - Each site has its own local DBMS and can operate autonomously for local work.
+   - A distributed DBMS coordinates queries, transactions and recovery across the sites.
+
+   Types:
+   - Homogeneous: every site runs the same DBMS software and the same schema. Simpler to build and manage.
+   - Heterogeneous, or federated: the sites run different DBMS products or different data models, and a middleware layer translates between them. Far harder, and it arises when independent systems are integrated after the fact.
+   - By distribution method: fragmented, in which each piece of data is held at one site; replicated, in which copies are held at several sites; or a combination of both.
+
+   Advantages:
+   - Reliability and availability: the failure of one site does not stop the whole system, since the other sites continue and replicated data remains reachable.
+   - Performance: data is placed near the users who use it, so queries are answered locally and network traffic falls. Queries can also be processed in parallel across sites.
+   - Modular growth: a new site can be added without redesigning or shutting down the system, which is the principal practical advantage over a centralised database.
+   - Local autonomy: each branch or region controls its own data.
+   - Reflects the structure of the organisation, which is often itself distributed.
+
+   Disadvantages:
+   - Complexity: distributed query processing, distributed transactions with the two phase commit protocol, distributed deadlock detection and distributed recovery are all substantially harder than their centralised equivalents.
+   - Higher software cost and the need for more skilled staff.
+   - Security is harder, since there are many sites and a network between them.
+   - Maintaining consistency of replicated data requires either synchronous replication, which is slow, or eventual consistency, which is weaker.
+   - Network dependence: a partition can split the system, and by the CAP theorem consistency and availability cannot both be preserved when that happens.
+
+   Examples: a bank whose branches hold their own accounts locally but which presents one national view; Google Spanner; Cassandra; and any large cloud database spanning several regions.
 4. **Which of the following distributed database system over centralized database system? (a) Software cost (b) Software complexity (c) Slow response (d) Modular growth** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
+
+
+   Answer: The correct option is (d) Modular growth.
+
+   - Modular growth means that new sites, and therefore new processing power and storage, can be added to a distributed system incrementally, without redesigning the system and without shutting it down. A centralised database can only be enlarged by replacing the single machine with a larger one, which is disruptive, expensive and eventually impossible because there is a limit to how large one machine can be.
+   - This is the principal advantage of the distributed approach and the reason large systems adopt it.
+
+   Why the other options are not advantages:
+   - (a) Software cost: distributed database software is more expensive, not less, and it requires more skilled staff.
+   - (b) Software complexity: a distributed system is considerably more complex. Distributed query processing, two phase commit for distributed transactions, distributed deadlock detection and distributed recovery are all much harder than their centralised equivalents. This is a disadvantage.
+   - (c) Slow response: a distributed system generally gives a faster response for local queries, since the data is near the user. A query spanning several sites can be slower because of network delay, but slowness is in no sense an advantage.
+
+   Other genuine advantages of a distributed database, for completeness:
+   - Reliability and availability: the failure of one site does not stop the whole system.
+   - Local autonomy: each region controls its own data.
+   - Performance for local access, and the possibility of parallel processing across sites.
+   - A structure that matches an organisation that is itself geographically distributed.
 
 ## Data Warehousing, Data Mining & Business Intelligence (4)
 
