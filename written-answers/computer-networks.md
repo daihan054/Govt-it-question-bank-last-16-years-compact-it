@@ -884,46 +884,38 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
    * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   **Answer:**
+   Answer:
 
-   **(a) The addressing limitation**
-   - IPv4 uses a 32-bit address, so only about 4.3 billion (2^32) unique addresses exist.
-   - Internet growth from the 1990s (PCs, mobiles, later IoT) pushed demand far beyond this pool; IANA handed out its last free blocks in 2011.
-   - Early class-based allocation wasted addresses badly — a single Class A block gave one organisation about 16 million addresses.
-   - RFC 1918 reserved private ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) that every organisation may reuse internally, but these are **not routable** on the public Internet.
-   - NAT became the bridge: many private hosts share a few public addresses, which let IPv4 survive until IPv6 is fully deployed.
+   (a) The addressing limitation
+   - IPv4 uses a 32-bit address, so only about 4.3 billion (2^32) addresses exist in total.
+   - Internet growth from the 1990s (PCs, then mobiles and IoT) pushed demand far beyond this pool, and IANA gave out its last free blocks in 2011.
+   - Early class-based allocation wasted addresses badly, because a single Class A block handed about 16 million addresses to one organisation.
+   - RFC 1918 reserved private ranges (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) that every organisation may reuse internally, but these are not routable on the public Internet.
+   - NAT became the bridge: many private hosts share a few public addresses, which allowed IPv4 to survive until IPv6 is fully deployed.
 
-   **(b) Translation of the web request**
+   (b) Translation of the web request
 
    Outgoing packet:
-   - PC sends: Source `192.168.1.5:50000`, Destination `203.0.113.10:80`.
-   - The packet reaches the router's inside interface; the routing table sends it out of the outside interface.
-   - Router rewrites the source IP to its public address `198.51.100.7` and the source port to a free unique port, say `6001`.
-   - Router creates a NAT table entry: `192.168.1.5:50000` ↔ `198.51.100.7:6001`.
-   - IP and TCP checksums are recalculated (the header changed) and the packet is forwarded.
+   - The PC sends a packet with source `192.168.1.5:50000` and destination `203.0.113.10:80`.
+   - It reaches the inside interface of the branch router, and the routing table sends it out through the outside interface.
+   - The router replaces the source IP with its own public address `198.51.100.7` and replaces the source port with a free unique port, say `6001`.
+   - The router creates a NAT table entry mapping `192.168.1.5:50000` to `198.51.100.7:6001`.
+   - IP and TCP checksums are recalculated because the header changed, and the packet is forwarded to the Internet.
 
    Returning packet:
-   - Server replies: Source `203.0.113.10:80`, Destination `198.51.100.7:6001`.
-   - Router searches the NAT table using the destination IP and port.
-   - The entry matches, so the destination is rewritten back to `192.168.1.5:50000`.
-   - Checksums are recalculated and the packet is delivered to the PC.
-
-   | Stage | Source | Destination |
-   |---|---|---|
-   | PC → Router | 192.168.1.5:50000 | 203.0.113.10:80 |
-   | Router → Internet | 198.51.100.7:6001 | 203.0.113.10:80 |
-   | Internet → Router | 203.0.113.10:80 | 198.51.100.7:6001 |
-   | Router → PC | 203.0.113.10:80 | 192.168.1.5:50000 |
-
-   Without the NAT table entry the router could not know which internal PC the reply belongs to.
+   - The server replies with source `203.0.113.10:80` and destination `198.51.100.7:6001`.
+   - The router searches the NAT table using this destination IP and port.
+   - The stored entry matches, so the destination is rewritten back to `192.168.1.5:50000`.
+   - Checksums are recalculated again and the packet is delivered to the PC on the LAN.
+   - Without that NAT table entry the router would have no way to know which internal host the reply belongs to.
 
 2. **Connection between Public IP to Private IP is called __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   **Answer:** **NAT (Network Address Translation)** — performed by the router or firewall sitting at the boundary between the private network and the Internet.
+   Answer: NAT (Network Address Translation), performed by the router or firewall placed at the boundary between the private network and the Internet.
 
 3. **What is NAT? Explain with topological diagram.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 589 (ET: BUET)]*
 
-   **Answer:** NAT (Network Address Translation) is a router function that rewrites the IP address in a packet header, so that hosts using private IP addresses can communicate over the public Internet through one or a few public IP addresses.
+   Answer: NAT (Network Address Translation) is a router function that rewrites the IP address in a packet header, so that hosts using private IP addresses can communicate over the public Internet through one or a few public IP addresses.
 
    ```mermaid
    graph LR
@@ -935,16 +927,16 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
        NET --> SRV["Web Server<br/>203.0.113.10"]
    ```
 
-   - Left of the router is the **inside local** network — private, reusable, not routable on the Internet.
-   - Right of the router is the **outside** network — one registered public address.
-   - The router keeps a NAT table and swaps private ↔ public addresses in both directions.
-   - The web server sees only `198.51.100.7`; the internal structure stays hidden.
+   - Left of the router is the inside local network, which uses private addresses that are not routable on the Internet.
+   - Right of the router is the outside network, holding one registered public address.
+   - The router keeps a NAT table and swaps private and public addresses in both directions.
+   - The web server sees only `198.51.100.7`, so the internal structure stays hidden.
 
 4. **Explain NAT? Differenc between IPv4 and IPv6.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 549 (ET: BIBM)]*
 
-   **Answer:** NAT translates private IP addresses into public IP addresses at the network boundary, allowing many internal hosts to reach the Internet through a small number of registered addresses. It also hides the internal topology, which adds a layer of security.
+   Answer: NAT translates private IP addresses into public IP addresses at the network boundary, allowing many internal hosts to reach the Internet through a small number of registered addresses. It also hides the internal topology, which adds a layer of security.
 
-   **Difference between IPv4 and IPv6**
+   Difference between IPv4 and IPv6:
 
    | Point | IPv4 | IPv6 |
    |---|---|---|
@@ -953,40 +945,35 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Notation | Dotted decimal (192.168.1.1) | Hexadecimal with colons (2001:db8::1) |
    | Header | 20–60 bytes, variable | 40 bytes, fixed |
    | Header checksum | Present | Removed |
-   | Broadcast | Supported | Not used (multicast / anycast instead) |
-   | Address configuration | Manual or DHCP | SLAAC (auto) or DHCPv6 |
+   | Broadcast | Supported | Not used, multicast and anycast instead |
+   | Configuration | Manual or DHCP | SLAAC (auto) or DHCPv6 |
    | IPsec | Optional | Designed in from the start |
    | Fragmentation | Sender and routers | Sender only |
    | NAT | Usually required | Generally not required |
 
 5. **What is NAT? Write down the list of private IP address.** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
 
-   **Answer:** NAT (Network Address Translation) is the process of changing the source or destination IP address of a packet as it passes through a router, so that privately addressed hosts can communicate with the public Internet.
+   Answer: NAT (Network Address Translation) is the process of changing the source or destination IP address of a packet as it passes through a router, so that privately addressed hosts can communicate with the public Internet.
 
-   **Private IP address ranges (RFC 1918)**
-
-   | Class | Range | CIDR | Number of addresses |
-   |---|---|---|---|
-   | A | 10.0.0.0 – 10.255.255.255 | 10.0.0.0/8 | 16,777,216 |
-   | B | 172.16.0.0 – 172.31.255.255 | 172.16.0.0/12 | 1,048,576 |
-   | C | 192.168.0.0 – 192.168.255.255 | 192.168.0.0/16 | 65,536 |
-
-   - These addresses can be reused by any organisation.
-   - Internet routers drop packets carrying these addresses, so NAT is required before such traffic can leave the network.
-   - `127.0.0.0/8` is loopback and `169.254.0.0/16` is APIPA (link-local); they are reserved, not private-usable ranges.
+   Private IP address ranges defined in RFC 1918:
+   - Class A: `10.0.0.0` to `10.255.255.255`, that is `10.0.0.0/8`, giving 16,777,216 addresses.
+   - Class B: `172.16.0.0` to `172.31.255.255`, that is `172.16.0.0/12`, giving 1,048,576 addresses.
+   - Class C: `192.168.0.0` to `192.168.255.255`, that is `192.168.0.0/16`, giving 65,536 addresses.
+   - Any organisation may reuse these ranges internally, and Internet routers drop packets carrying them, so NAT is required before such traffic leaves the network.
+   - `127.0.0.0/8` is loopback and `169.254.0.0/16` is APIPA link-local; these are reserved but are not usable private ranges.
 
 6. **Briefly explain Network Address Translation (NAT).** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
 
-   **Answer:** NAT is a router service that replaces the private IP address of an outgoing packet with a public IP address, and reverses the change for the returning packet using entries stored in a NAT table.
+   Answer: NAT is a router service that replaces the private IP address of an outgoing packet with a public IP address, and reverses the change for the returning packet by using entries stored in a NAT table.
 
-   - **Purpose:** save scarce public IPv4 addresses and hide the internal network.
-   - **Types:** Static NAT (one-to-one, fixed), Dynamic NAT (one-to-one from a pool), PAT / NAT Overload (many-to-one using port numbers).
-   - **Where:** implemented on the border router or firewall.
-   - **Cost:** breaks true end-to-end addressing and complicates protocols such as IPsec, VoIP and peer-to-peer applications.
+   - Purpose: save scarce public IPv4 addresses and hide the internal network from outside.
+   - Types: Static NAT (fixed one-to-one), Dynamic NAT (one-to-one from a pool), and PAT or NAT Overload (many-to-one using port numbers).
+   - Where: implemented on the border router or firewall.
+   - Cost: it breaks true end-to-end addressing and complicates protocols such as IPsec, VoIP and peer-to-peer applications.
 
 7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 787 (ET: N/A)]*
 
-   **Answer:** NAT (Network Address Translation) হলো রাউটারের একটি প্রক্রিয়া, যেখানে প্যাকেটের private IP address পরিবর্তন করে public IP address বসানো হয়। এর ফলে private address ব্যবহারকারী অনেকগুলো কম্পিউটার অল্প কয়েকটি public address দিয়ে ইন্টারনেটে যোগাযোগ করতে পারে।
+   Answer: NAT (Network Address Translation) is a process running on a router that changes the private IP address of a packet into a public IP address. Because of this, many computers using private addresses can communicate with the Internet through only a few public addresses.
 
    ```mermaid
    graph LR
@@ -996,37 +983,37 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
        R --> NET((Internet))
    ```
 
-   - রাউটারের **বাম পাশ** private network — এই address ইন্টারনেটে routable নয়।
-   - রাউটারের **ডান পাশ** public network — এখানে একটি registered IP address থাকে।
-   - বাইরে যাওয়ার সময় রাউটার source address বদলে public address বসায় এবং NAT table-এ এন্ট্রি রাখে।
-   - উত্তর ফিরে এলে ওই NAT table দেখে রাউটার সঠিক PC-তে প্যাকেট পাঠায়।
-   - সুবিধা: public IP সাশ্রয় হয় এবং ভেতরের নেটওয়ার্কের গঠন বাইরে থেকে দেখা যায় না।
+   - The left side of the router is the private network, and those addresses are not routable on the Internet.
+   - The right side is the public network, where one registered IP address is assigned.
+   - While going out, the router replaces the source address with the public address and stores an entry in the NAT table.
+   - When the reply returns, the router reads that NAT table and delivers the packet to the correct PC.
+   - Benefit: public IP addresses are saved, and the internal network structure cannot be seen from outside.
 
 8. **(b) What is NAT? Mention its advantages.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
 
-   **Answer:** NAT (Network Address Translation) is a technique in which a router rewrites the IP address of a packet, so that hosts with private addresses can access the public Internet through a registered public address.
+   Answer: NAT (Network Address Translation) is a technique in which a router rewrites the IP address of a packet, so that hosts holding private addresses can access the public Internet through a registered public address.
 
-   **Advantages**
-   - **Saves public IPv4 addresses** — hundreds of internal hosts can share one public address, which slowed IPv4 exhaustion.
-   - **Security by hiding topology** — external hosts see only the public address, so internal addressing is not exposed and unsolicited inbound connections are blocked by default.
-   - **Addressing flexibility** — the internal network can use any private range without asking any authority.
-   - **Easy ISP change** — if the provider changes the public IP, only the router configuration changes; internal hosts are not renumbered.
-   - **Load sharing** — with static NAT, incoming requests can be mapped to different internal servers.
+   Advantages:
+   - Saves public IPv4 addresses, because hundreds of internal hosts can share a single public address, which slowed down IPv4 exhaustion.
+   - Gives security by hiding topology, since external hosts see only the public address and unsolicited inbound connections are blocked by default.
+   - Gives addressing flexibility, because the internal network can use any private range without permission from any authority.
+   - Makes ISP change easy, as only the router configuration changes while internal hosts are never renumbered.
+   - Allows load sharing, because static NAT can map incoming requests to different internal servers.
 
 9. **(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 799 (ET: N/A)]*
 
-   **Answer:**
+   Answer:
 
-   **Why NAT is needed**
-   - IPv4 has only about 4.3 billion addresses and the free pool is finished, so every host cannot get a public address.
-   - Private ranges (RFC 1918) are not routable on the Internet, so traffic from them must be translated before it leaves the network.
-   - Organisations want to hide their internal addressing from the outside world.
+   Why NAT is needed:
+   - IPv4 has only about 4.3 billion addresses and the free pool is already finished, so every host cannot be given a public address.
+   - Private ranges defined in RFC 1918 are not routable on the Internet, so traffic from them must be translated before it leaves the network.
+   - Organisations want to keep their internal addressing hidden from the outside world.
 
-   **Advantages**
+   Advantages:
    - Conserves public IPv4 addresses.
    - Hides internal hosts and blocks unsolicited inbound traffic.
    - Internal addressing can be chosen freely and changed without informing any authority.
-   - Changing ISP needs a change only on the router, not on every host.
+   - Changing the ISP needs a change only on the router, not on every host.
 
    ```mermaid
    graph LR
@@ -1037,11 +1024,11 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
        NET --> WS["Remote Server"]
    ```
 
-   The router is the only device holding a public address; every internal host reaches the Internet through it.
+   The router is the only device holding a public address, and every internal host reaches the Internet through it.
 
 10. **Why do we need NAT? Draw a topology diagram to explain NAT.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
 
-    **Answer:** NAT is needed because IPv4 addresses are limited (32-bit, about 4.3 billion) and have run out, while private addresses defined in RFC 1918 cannot be routed on the Internet. NAT lets many private hosts reach the Internet through one public address, and at the same time keeps the internal network hidden.
+    Answer: NAT is needed because IPv4 addresses are limited to about 4.3 billion and have already run out, while the private addresses defined in RFC 1918 cannot be routed on the Internet. NAT lets many private hosts reach the Internet through one public address and at the same time keeps the internal network hidden.
 
     ```mermaid
     graph LR
@@ -1057,22 +1044,15 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 11. **What is PAT? How does a network PAT work?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
 
-    **Answer:** PAT (Port Address Translation), also called **NAT Overload**, is a form of NAT in which many private IP addresses share a **single public IP address**, and the individual sessions are separated by **port numbers** instead of by address.
+    Answer: PAT (Port Address Translation), also called NAT Overload, is a form of NAT in which many private IP addresses share a single public IP address, and the individual sessions are separated by port numbers instead of by address.
 
-    **How it works**
-    - An internal host sends a packet with its private IP and a source port.
-    - The router replaces the source IP with the single public IP and replaces the source port with a **unique** port number that is not currently in use.
-    - It records the mapping (private IP + private port ↔ public IP + new port) in the PAT table.
-    - The reply arrives addressed to the public IP and that unique port; the router looks the port up in the table and forwards the packet to the correct internal host and port.
-
-    | Inside local | Inside global (after PAT) | Outside |
-    |---|---|---|
-    | 192.168.1.5:1050 | 198.51.100.7:6001 | 203.0.113.10:80 |
-    | 192.168.1.6:1050 | 198.51.100.7:6002 | 203.0.113.10:80 |
-    | 192.168.1.7:3300 | 198.51.100.7:6003 | 8.8.8.8:53 |
-
-    - Note that two hosts used the **same** private port 1050, but PAT gave them different public ports, so the replies never get mixed up.
-    - Because a port field is 16-bit, one public address can theoretically track around 65,000 simultaneous sessions.
+    How it works:
+    - An internal host sends a packet carrying its private IP and a source port, for example `192.168.1.5:1050`.
+    - The router replaces the source IP with the single public IP and replaces the source port with a unique port that is not currently in use, for example `198.51.100.7:6001`.
+    - It records this mapping in the PAT table, so private IP with private port is tied to public IP with the new port.
+    - The reply arrives addressed to the public IP and that unique port, the router looks the port up in the table, and forwards the packet to the correct internal host and port.
+    - If a second host also used port `1050`, PAT simply gives it a different public port such as `6002`, so the two replies never get mixed up.
+    - Because the port field is 16-bit, one public address can theoretically track around 65,000 simultaneous sessions.
 
 ## Network Services (DHCP, NAT) (10)
 
