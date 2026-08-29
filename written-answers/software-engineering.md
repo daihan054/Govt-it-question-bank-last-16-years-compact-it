@@ -6567,14 +6567,323 @@
    * **(c) Duplicate Code**
    * **(d) Shotgun surgery.**
 
+
+   Answer: A code smell is a surface indication in the source code that usually points to a deeper design problem. It is not a bug, and the program runs correctly, but it makes the code harder to understand and change. Each smell has a known refactoring.
+
+   (a) Feature envy
+
+   A method is more interested in the data of another class than in the data of its own class. It repeatedly calls getters on another object and does the work that the other class should be doing.
+
+   ```java
+   // SMELL: Invoice does the work, but uses only Customer's data
+   class Customer {
+       private String name, street, city, postCode;
+       public String getName()     { return name; }
+       public String getStreet()   { return street; }
+       public String getCity()     { return city; }
+       public String getPostCode() { return postCode; }
+   }
+
+   class Invoice {
+       private Customer customer;
+       String formatAddress() {
+           return customer.getName() + "\n"
+                + customer.getStreet() + "\n"
+                + customer.getCity() + " - " + customer.getPostCode();
+       }
+   }
+   ```
+
+   Refactoring: Move Method. Move formatAddress() into Customer, where the data lives, and let Invoice call customer.formatAddress(). If only part of the method envies the other class, first do Extract Method and then move the extracted part.
+
+   Why it matters: it breaks encapsulation and raises coupling. When the address fields change, Invoice must change too, even though address is not its concern.
+
+   (b) Dead code
+
+   Code that is never executed, or whose result is never used. Variables, parameters, fields, methods and whole classes can all be dead.
+
+   ```java
+   class OrderService {
+       // never called from anywhere in the system
+       private double calculateOldTax(double amount) {
+           return amount * 0.15;
+       }
+
+       double total(double amount) {
+           double unusedDiscount = amount * 0.05;   // computed, never used
+           if (false) {                             // unreachable
+               applyLegacyRule(amount);
+           }
+           return amount + amount * 0.075;
+       }
+   }
+   ```
+
+   Other forms: a method left behind after a feature was removed, a commented-out block kept "just in case", an if branch whose condition can never be true, and code after a return statement.
+
+   Refactoring: delete it. Version control holds the history, so nothing is lost. Dead code costs real money: it must be read, compiled, maintained and understood by every developer who passes through, and it misleads them into thinking it matters.
+
+   (c) Duplicate code
+
+   The same or nearly the same code appears in more than one place. This is the most common and the most damaging smell, because a fix applied to one copy leaves the others wrong.
+
+   ```java
+   // SMELL: the same validation repeated in three places
+   class RegistrationService {
+       void register(String email) {
+           if (email == null || !email.contains("@") || email.length() < 5)
+               throw new IllegalArgumentException("Invalid email");
+           // ...
+       }
+   }
+
+   class NewsletterService {
+       void subscribe(String email) {
+           if (email == null || !email.contains("@") || email.length() < 5)
+               throw new IllegalArgumentException("Invalid email");
+           // ...
+       }
+   }
+
+   class ProfileService {
+       void updateEmail(String email) {
+           if (email == null || !email.contains("@") || email.length() < 5)
+               throw new IllegalArgumentException("Invalid email");
+           // ...
+       }
+   }
+   ```
+
+   Refactoring: Extract Method into a single shared validator; if the duplication is in sibling classes, Pull Up Method into the superclass; if in unrelated classes, Extract Class into a utility such as EmailValidator.validate(email). The principle is DRY: Don't Repeat Yourself.
+
+   (d) Shotgun surgery
+
+   One small change to the system forces many small edits scattered across many different classes. If a single one is missed, a bug results.
+
+   ```java
+   // SMELL: the VAT rate is written into five different classes
+   class InvoicePrinter  { double vat = 0.15; }
+   class OrderTotal      { double vat = 0.15; }
+   class RefundService   { double vat = 0.15; }
+   class ReportGenerator { double vat = 0.15; }
+   class PriceDisplay    { double vat = 0.15; }
+   ```
+
+   When the government changes VAT from 15 percent to 7.5 percent, all five classes must be edited. Miss one, and the refund figures silently disagree with the invoices.
+
+   Refactoring: Move Method and Move Field to gather the scattered behaviour into one class, an Inline Class if the responsibility was wrongly split, so that the change has one home:
+
+   ```java
+   class TaxPolicy {
+       private static final double VAT_RATE = 0.075;
+       static double vat(double amount) { return amount * VAT_RATE; }
+   }
+   ```
+
+   Distinction worth stating in the answer:
+   - Divergent change: one class is changed for many different reasons. The class does too much, so split it.
+   - Shotgun surgery: one reason forces changes in many classes. The responsibility is too scattered, so gather it.
+   They are opposites, and both are cured by putting each responsibility in exactly one place, which is the Single Responsibility Principle.
 2. **What is reverse engineering and forward engineering?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 860-861 (ET: N/A)]*
+
+
+   Answer: Forward engineering and reverse engineering.
+
+   Forward engineering is the conventional direction of software development: starting from requirements, moving to a design and a set of models, and from those producing the source code and the working system. It goes from the abstract to the concrete.
+
+   ```mermaid
+   flowchart LR
+     R[Requirements] --> D[Design / Models] --> C[Source Code] --> S[Working System]
+   ```
+
+   Examples: writing an SRS, then class diagrams, then Java code; or generating skeleton code automatically from a UML class diagram in a CASE tool; or generating the CREATE TABLE statements from an ER diagram.
+
+   Reverse engineering is the opposite direction: starting from an existing system or its executable, and recovering its design, its structure and its specification. It goes from the concrete to the abstract. Nothing is changed; the purpose is to understand.
+
+   ```mermaid
+   flowchart LR
+     S[Existing System / Binary] --> C[Source Code] --> D[Design / Models] --> R[Requirements]
+   ```
+
+   Examples: producing a class diagram from an existing code base with a tool; recovering the ER diagram of a database whose documentation was lost; disassembling a binary to understand a protocol; analysing malware to learn what it does; examining a competitor's product to understand its technique.
+
+   Comparison
+
+   | Point | Forward engineering | Reverse engineering |
+   |---|---|---|
+   | Direction | Abstract to concrete: requirements to code | Concrete to abstract: code to design |
+   | Starting point | Requirements and specifications | Existing system, source code or binary |
+   | Output | New working software | Documentation, models, understanding of the design |
+   | Purpose | To build a new system | To understand an existing system |
+   | Level of detail | Increases as work proceeds | Decreases as work proceeds |
+   | Knowledge available | Complete, since the team defines it | Partial; must be inferred |
+   | Typical tools | CASE tools, code generators, compilers | Decompilers, disassemblers, code analysers, model extractors |
+   | Time and cost | Predictable | Uncertain, often high |
+   | Legal position | Straightforward | Depends on the licence and on the jurisdiction |
+
+   Where reverse engineering is used
+   - Legacy system maintenance, where the original developers and the documentation are both gone. This is the commonest reason.
+   - Recovering lost or never-written documentation.
+   - Migrating a system to a new platform or language.
+   - Security analysis: malware analysis, vulnerability research, and verifying that a supplied binary does what it claims.
+   - Interoperability: understanding an undocumented file format or protocol so that another product can work with it.
+   - Auditing software that has been bought rather than built.
+
+   Re-engineering, which must be distinguished from both: it is reverse engineering followed by forward engineering. The existing system is analysed to recover its design, the design is improved, and a new system is then built from the improved design. Converting a COBOL mainframe application into a Java web application, keeping the same business rules, is re-engineering.
+
+   ```mermaid
+   flowchart LR
+     A[Old System] -->|reverse engineering| B[Recovered Design]
+     B -->|improve / restructure| C[New Design]
+     C -->|forward engineering| D[New System]
+   ```
+
+   Restructuring is a related but narrower activity: changing the form of the code without changing its function and without changing the level of abstraction, for example removing goto statements or reformatting. Refactoring is restructuring at the source level, done in small behaviour-preserving steps.
+
+   Legal and ethical note: reverse engineering for interoperability, for security research and for maintaining software one owns is generally lawful in many jurisdictions, but many commercial licences forbid it by contract, and using it to copy a protected design or to circumvent protection is unlawful. The purpose, not the technique, decides whether it is legitimate.
 
 ## Open Source Software & Licensing (2)
 
 1. **Write down the advantages and disadvantages of Open source software with example.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 549 (ET: BIBM)]*
 
+
+   Answer: Open source software is software whose source code is published under a licence that allows anyone to read it, run it, modify it and redistribute it. Examples: Linux, Apache HTTP Server, MySQL, PostgreSQL, Python, PHP, Firefox, LibreOffice, Android Open Source Project, Kubernetes, WordPress, Moodle.
+
+   Advantages
+
+   - No licence cost. The software itself is free of charge, which for a government office or a bank replacing hundreds of proprietary licences is a very large saving. Replacing Windows Server with Linux and Oracle with PostgreSQL removes both the acquisition cost and the annual renewal.
+
+   - Freedom to modify. The source code is available, so the organisation can adapt the software to its own need: adding Bangla support, changing a report format, or integrating with a local payment system. With proprietary software the organisation must wait for the vendor, or pay for a custom build, or do without.
+
+   - No vendor lock-in. The organisation is not tied to one supplier's prices, roadmap or survival. If the original project stops, the code can be maintained in-house or the community can fork it, as happened when MariaDB was forked from MySQL and LibreOffice from OpenOffice.
+
+   - Security through transparency. Anyone can inspect the code for defects and backdoors. Widely used projects are examined by thousands of developers, and vulnerabilities are typically patched quickly. For a government system, the ability to verify that no hidden channel exists is itself a security requirement.
+
+   - Reliability and quality in mature projects. Linux, Apache and PostgreSQL run a large part of the world's infrastructure and are extremely stable, precisely because so many organisations depend on and test them.
+
+   - Rapid bug fixing and community support. Large user communities, forums, mailing lists and public issue trackers often answer a question faster than a commercial support desk.
+
+   - Learning and skill development. Students and engineers can read production-quality code, which is impossible with closed software. This builds local capability.
+
+   - Interoperability and open standards. Open source projects generally implement open, documented formats and protocols, so data is not trapped in a proprietary format.
+
+   - Flexibility of deployment. It can be installed on any number of machines without counting licences, which makes scaling and test environments free.
+
+   Disadvantages
+
+   - No single accountable vendor. If the system fails at two in the morning, there is no contract compelling anyone to fix it. Community help is voluntary and carries no service level agreement. This is the single biggest objection in banking and government procurement.
+
+   - Hidden costs. The licence is free, but skilled staff, training, integration, customisation and paid support are not. The total cost of ownership can equal or exceed a proprietary product for an organisation without in-house expertise.
+
+   - Requires higher technical skill. Installing and tuning PostgreSQL or a Linux cluster demands more expertise than running a packaged commercial product with a graphical installer and a vendor engineer.
+
+   - Uneven documentation and user interfaces. Many projects are written by developers for developers; documentation may be thin or out of date, and the interface less polished than a commercial equivalent.
+
+   - Hardware and software compatibility gaps. Some specialised hardware ships drivers only for Windows; some industry-standard commercial applications have no Linux version.
+
+   - Project abandonment risk. A small project may lose its maintainers, leaving the organisation with unmaintained code that it must then support itself.
+
+   - Fragmentation. Many competing forks and distributions make selection difficult and split the community's effort.
+
+   - Licence complexity and legal risk. Copyleft licences such as the GPL require that derivative works be released under the same licence. A company that builds a commercial product on GPL code and distributes it may be obliged to publish its own source. Mixing incompatible licences in one product is a real legal hazard, and licence compliance must be actively managed.
+
+   - Security is not automatic. Openness helps only where people actually look. Heartbleed in OpenSSL and the Log4Shell vulnerability in Log4j sat in critical, universally used code for years. A small project with few reviewers can be less safe than a well-funded commercial one, and dependency chains pull in code nobody has audited.
+
+   - Slower adoption of niche business features. Development follows the interests of contributors, so a feature needed by one Bangladeshi bank may never be built unless that bank builds it.
+
+   Practical conclusion: open source is the right default for infrastructure, where the products are mature and widely used, such as Linux, Apache, Nginx, PostgreSQL and Kubernetes, and where paid commercial support from companies like Red Hat, Canonical or EnterpriseDB removes the accountability objection. Proprietary software remains preferable where a specialised business product has no credible open equivalent, or where the organisation lacks the in-house skill to support the system itself.
 2. **Open source এবং Proprietary Software -এর মধ্যে পার্থক্য লিখুন। একটি Open source এবং একটি Proprietary Operating system এর উদাহরণ দিন।** *[41th BCS 2021 compact it 881-882 (ET: N/A)]*
+
+
+   Answer: Open source ও Proprietary software এর পার্থক্য।
+
+   | বিষয় | Open Source Software | Proprietary Software |
+   |---|---|---|
+   | Source code | সবার জন্য উন্মুক্ত, দেখা ও পড়া যায় | গোপন, কেবল মালিক প্রতিষ্ঠানের কাছে থাকে |
+   | পরিবর্তনের অধিকার | যে কেউ পরিবর্তন করতে পারে | পরিবর্তন করা আইনত নিষিদ্ধ |
+   | পুনর্বণ্টন | অনুমোদিত, লাইসেন্সের শর্ত মেনে | নিষিদ্ধ |
+   | খরচ | সাধারণত বিনামূল্যে | ক্রয়মূল্য বা বার্ষিক লাইসেন্স ফি দিতে হয় |
+   | License | GPL, Apache, MIT, BSD, MPL | EULA — শেষ ব্যবহারকারী লাইসেন্স চুক্তি |
+   | মালিকানা | সম্মিলিত বা কমিউনিটির | একক প্রতিষ্ঠান বা ব্যক্তির |
+   | উন্নয়ন | বিশ্বব্যাপী স্বেচ্ছাসেবী ও প্রতিষ্ঠানের যৌথ প্রচেষ্টায় | নির্দিষ্ট প্রতিষ্ঠানের নিজস্ব দলের দ্বারা |
+   | Support | কমিউনিটি ফোরাম, ঐচ্ছিকভাবে অর্থের বিনিময়ে বাণিজ্যিক সহায়তা | বিক্রেতার আনুষ্ঠানিক সহায়তা, SLA সহ |
+   | দায়বদ্ধতা | নির্দিষ্ট কারও নেই, ওয়ারেন্টি সাধারণত নেই | বিক্রেতা চুক্তিবদ্ধভাবে দায়ী |
+   | নিরাপত্তা | উন্মুক্ত পর্যালোচনার সুযোগ, দ্রুত প্যাচ | গোপনীয়তার ওপর নির্ভরশীল, প্যাচ বিক্রেতার সময়সূচি অনুযায়ী |
+   | ব্যবহারকারীর সংখ্যা | সীমাহীন, যত খুশি মেশিনে ইনস্টল করা যায় | লাইসেন্সে নির্ধারিত সংখ্যায় সীমিত |
+   | Vendor lock-in | নেই | প্রবল; বিক্রেতা বদলানো কঠিন ও ব্যয়বহুল |
+   | Update | কমিউনিটি থেকে নিয়মিত ও বিনামূল্যে | বিক্রেতার সিদ্ধান্তে, বড় সংস্করণে অতিরিক্ত অর্থ লাগতে পারে |
+   | Documentation | মানের তারতম্য থাকে | সাধারণত সুসংগঠিত ও পূর্ণাঙ্গ |
+   | উদাহরণ | Linux, Apache, MySQL, PostgreSQL, Python, Firefox, LibreOffice, Android (AOSP) | Windows, macOS, Microsoft Office, Adobe Photoshop, Oracle Database, AutoCAD |
+
+   উদাহরণ, প্রশ্ন অনুযায়ী:
+
+   Open source Operating System: Linux — উদাহরণস্বরূপ Ubuntu, Debian, Fedora, CentOS বা Red Hat Enterprise Linux। এর kernel ১৯৯১ সালে Linus Torvalds তৈরি করেন এবং এটি GNU General Public License (GPL) এর অধীনে প্রকাশিত। যে কেউ এর সম্পূর্ণ source code ডাউনলোড করে পড়তে, পরিবর্তন করতে ও পুনরায় বিতরণ করতে পারেন। অন্যান্য উদাহরণ: FreeBSD, Android Open Source Project।
+
+   Proprietary Operating System: Microsoft Windows — উদাহরণস্বরূপ Windows 11 বা Windows Server 2022। এটি Microsoft Corporation এর মালিকানাধীন; source code গোপন, ব্যবহার করতে লাইসেন্স কিনতে হয়, এবং EULA অনুযায়ী পরিবর্তন বা পুনর্বণ্টন নিষিদ্ধ। অন্যান্য উদাহরণ: Apple macOS, IBM z/OS।
+
+   একটি গুরুত্বপূর্ণ পার্থক্য মনে রাখার বিষয়: open source মানে সবসময় বিনামূল্যে নয়। Red Hat Enterprise Linux open source, তবু এর জন্য সাবস্ক্রিপশন ফি দিতে হয় — অর্থ দেওয়া হয় সহায়তা, প্রত্যয়ন ও দীর্ঘমেয়াদি রক্ষণাবেক্ষণের জন্য, সফটওয়্যারটির জন্য নয়। তেমনি free software আন্দোলনের "free" শব্দটি স্বাধীনতা বোঝায়, মূল্যহীনতা নয়।
 
 ## CI/CD & DevOps Methodologies (1)
 
 1. **What is CI/DI development model?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
+
+
+   Answer: CI/CD stands for Continuous Integration and Continuous Delivery, or Continuous Deployment. It is a DevOps practice in which code changes are integrated, built, tested and released automatically and frequently, instead of being merged and released in large batches at long intervals.
+
+   Continuous Integration (CI)
+
+   Every developer merges work into the shared main branch several times a day. Each merge automatically triggers a pipeline that builds the code, runs the automated tests and reports the result within minutes.
+   - Small, frequent commits, at least daily.
+   - A single shared repository with a main branch that must always build.
+   - An automated build triggered by every push.
+   - Automated unit and integration tests, plus static analysis and security scanning.
+   - Fast feedback: if the build breaks, fixing it is the team's first priority.
+   - The result: integration problems are found within minutes of being created, while the change is still small and the author still remembers it. This replaces "integration hell", where merging months of parallel work takes weeks.
+
+   Continuous Delivery (CD)
+
+   Every change that passes CI is automatically packaged, deployed to a staging environment and subjected to further automated testing, so that the software is always in a releasable state. The release to production is a business decision made by pressing a button, not a technical event.
+
+   Continuous Deployment (also CD)
+
+   The stricter form: every change that passes all automated tests goes to production automatically, with no human approval step. This requires very high confidence in the test suite and mature monitoring and rollback.
+
+   The distinction, which is the point most often asked: continuous delivery makes the release possible at any moment; continuous deployment makes it happen automatically.
+
+   The pipeline
+
+   ```mermaid
+   flowchart LR
+     A[Developer commits] --> B[Version Control]
+     B --> C[Build & Compile]
+     C --> D[Unit Tests]
+     D --> E[Static Analysis & Security Scan]
+     E --> F[Package / Container Image]
+     F --> G[Deploy to Staging]
+     G --> H[Integration & Acceptance Tests]
+     H --> I{Approval}
+     I -->|manual gate = Continuous Delivery| J[Deploy to Production]
+     I -->|automatic = Continuous Deployment| J
+     J --> K[Monitor & Alert]
+     K -->|failure| L[Automatic Rollback]
+   ```
+
+   Benefits
+   - Bugs are found early, when they are cheapest to fix.
+   - Release risk falls, because each release contains a small change; if something breaks, the cause is obvious.
+   - Time to market shortens from months to days or hours.
+   - The build and release process is repeatable and documented in code, so it does not depend on one person's knowledge.
+   - Developers spend their time on features rather than on manual builds and merges.
+   - Rollback is fast and practised, because deployment happens constantly.
+
+   Requirements for it to work
+   - Everything in version control: source, configuration, infrastructure definitions and pipeline scripts.
+   - A strong automated test suite; without it, automation only delivers defects faster.
+   - Identical environments for development, staging and production, achieved with containers and infrastructure as code.
+   - Trunk-based development or very short-lived branches.
+   - Feature flags, so that incomplete work can be merged without being visible to users.
+   - Monitoring, logging and alerting, with an agreed rollback procedure.
+
+   Common tools: Jenkins, GitLab CI/CD, GitHub Actions, CircleCI, Travis CI, Azure DevOps and Bamboo for the pipeline; Docker and Kubernetes for packaging and running; Ansible, Terraform, Puppet and Chef for infrastructure; SonarQube for code quality; Prometheus and Grafana for monitoring.
+
+   Deployment strategies used at the last step: blue-green deployment, where two identical production environments are switched between; canary release, where the new version is given to a small percentage of users first; and rolling update, where instances are replaced a few at a time. All three allow a fast return to the previous version.
