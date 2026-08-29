@@ -617,33 +617,363 @@ ii) 211.10.15.4
 
 Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packets 6 and 7 are lost, while packet 8 arrives. The server sends a cumulative ACK for the next byte it is expecting. Find the missing values in the table.
 
+
+   Answer:
+
+   Given: 4000 bytes divided into 8 packets of 500 bytes, first sequence number 3001. Packets 1 to 5 arrive, packets 6 and 7 are lost, packet 8 arrives. The server carries no data of its own, so its sequence number stays fixed; it is taken as 8001 here.
+
+   Sequence number of packet n = 3001 + (n − 1) × 500. The cumulative ACK is the number of the next byte the server expects.
+
+   | SL | Client Packet Sequence No. | DB Server Sequence No. | ACK Sequence No. |
+   |---|---|---|---|
+   | 1 | 3001, bytes 3001 to 3500 | 8001 | 3501 |
+   | 2 | 3501, bytes 3501 to 4000 | 8001 | 4001 |
+   | 3 | 4001, bytes 4001 to 4500 | 8001 | 4501 |
+   | 4 | 4501, bytes 4501 to 5000 | 8001 | 5001 |
+   | 5 | 5001, bytes 5001 to 5500 | 8001 | 5501 |
+   | 6 | 5501, bytes 5501 to 6000 | lost, no ACK | none |
+   | 7 | 6001, bytes 6001 to 6500 | lost, no ACK | none |
+   | 8 | 6501, bytes 6501 to 7000 | 8001 | 5501, a duplicate ACK |
+
+   Explanation:
+   - After the first five packets the server has received bytes 3001 to 5500 continuously, so it acknowledges 5501, meaning it now expects byte 5501.
+   - Packets 6 and 7 never arrive, so no acknowledgement is generated for them.
+   - Packet 8 arrives out of order. TCP cumulative acknowledgement can only acknowledge a continuous run of bytes, so the server cannot acknowledge 7001. It repeats ACK 5501, which is a duplicate ACK, and holds packet 8 in its out of order buffer.
+   - When three duplicate ACKs of 5501 arrive, the client's fast retransmit triggers and it resends packet 6 without waiting for the timeout. After packet 6 arrives the server still holds a gap at packet 7, so it sends ACK 6001; once packet 7 also arrives the server can acknowledge everything including the buffered packet 8, and it sends ACK 7001.
+   - With SACK enabled, the server would also report the block it already holds, 6501 to 7000, so the client would retransmit only packets 6 and 7 and nothing more.
 2. **(b) Distinguish between TCP and UDP protocols.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 886 (ET: N/A)], [Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)], [BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | TCP | UDP |
+   |---|---|---|
+   | Full form | Transmission Control Protocol | User Datagram Protocol |
+   | Connection | Connection oriented, three way handshake before data | Connectionless, sends immediately |
+   | Reliability | Reliable, acknowledgement and retransmission | Unreliable, fire and forget |
+   | Ordering | In order delivery using sequence numbers | No ordering guarantee |
+   | Header size | 20 to 60 bytes | 8 bytes, fixed |
+   | Flow control | Yes, sliding window | No |
+   | Congestion control | Yes, slow start and AIMD | No |
+   | Error control | Checksum plus retransmission | Checksum only, bad datagrams are dropped |
+   | Speed and overhead | Slower, high overhead | Faster, minimal overhead |
+   | Data boundary | Byte stream, no message boundary | Message oriented, boundaries preserved |
+   | Broadcast and multicast | Not supported | Supported |
+   | Handshake and teardown | SYN, SYN-ACK, ACK, then FIN exchange | None |
+   | Typical use | HTTP, HTTPS, FTP, SMTP, SSH, Telnet, file transfer | DNS, DHCP, TFTP, SNMP, RIP, VoIP, video streaming, gaming |
+
+   - Rule of thumb: use TCP when every byte must arrive correctly and in order, and UDP when speed and low delay matter more than perfection, such as live voice and video where a retransmitted packet would arrive too late to be of any use.
 3. **Show the pictorial representation of TCP 3-way handshaking protocol for establishing a connection between a server and a client.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
 
+
+   Answer: TCP establishes a connection using a three way handshake.
+
+   ```mermaid
+   sequenceDiagram
+       participant C as Client
+       participant S as Server
+       Note over C: CLOSED -> SYN-SENT
+       C->>S: SYN, seq = x
+       Note over S: LISTEN -> SYN-RECEIVED
+       S->>C: SYN + ACK, seq = y, ack = x + 1
+       Note over C: ESTABLISHED
+       C->>S: ACK, seq = x + 1, ack = y + 1
+       Note over S: ESTABLISHED
+       C->>S: Data transfer begins
+   ```
+
+   Steps:
+   - Step 1, SYN: the client sends a segment with the SYN flag set and its own initial sequence number x. It moves to the SYN-SENT state. No data is carried, but the SYN consumes one sequence number.
+   - Step 2, SYN + ACK: the server replies with both SYN and ACK flags set. It sends its own initial sequence number y and acknowledges the client with ack = x + 1. It also advertises its receive window and MSS. The server moves to SYN-RECEIVED.
+   - Step 3, ACK: the client acknowledges the server's SYN with ack = y + 1 and seq = x + 1. Both sides are now ESTABLISHED and data transfer can begin.
+
+   Why three ways are needed:
+   - The connection is full duplex, so both directions must be opened and both initial sequence numbers must be agreed and acknowledged.
+   - It also synchronises the window sizes and the MSS, and it prevents an old delayed duplicate SYN from opening a spurious connection.
+   - A connection is closed by a separate four way exchange of FIN and ACK in each direction.
 4. **What is the deference between TCP and UDP?** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
 
+
+   Answer:
+
+   | Point | TCP | UDP |
+   |---|---|---|
+   | Full form | Transmission Control Protocol | User Datagram Protocol |
+   | Connection | Connection oriented, three way handshake before data | Connectionless, sends immediately |
+   | Reliability | Reliable, acknowledgement and retransmission | Unreliable, fire and forget |
+   | Ordering | In order delivery using sequence numbers | No ordering guarantee |
+   | Header size | 20 to 60 bytes | 8 bytes, fixed |
+   | Flow control | Yes, sliding window | No |
+   | Congestion control | Yes, slow start and AIMD | No |
+   | Error control | Checksum plus retransmission | Checksum only, bad datagrams are dropped |
+   | Speed and overhead | Slower, high overhead | Faster, minimal overhead |
+   | Data boundary | Byte stream, no message boundary | Message oriented, boundaries preserved |
+   | Broadcast and multicast | Not supported | Supported |
+   | Handshake and teardown | SYN, SYN-ACK, ACK, then FIN exchange | None |
+   | Typical use | HTTP, HTTPS, FTP, SMTP, SSH, Telnet, file transfer | DNS, DHCP, TFTP, SNMP, RIP, VoIP, video streaming, gaming |
 5. **3-way handshake protocol for TCP connection using diagram.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 403 (ET: N/A)], [BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 876-877 (ET: BUET)]*
 
+
+   Answer:
+
+   ```mermaid
+   sequenceDiagram
+       participant C as Client
+       participant S as Server
+       Note over C: CLOSED -> SYN-SENT
+       C->>S: SYN, seq = x
+       Note over S: LISTEN -> SYN-RECEIVED
+       S->>C: SYN + ACK, seq = y, ack = x + 1
+       Note over C: ESTABLISHED
+       C->>S: ACK, seq = x + 1, ack = y + 1
+       Note over S: ESTABLISHED
+       C->>S: Data transfer begins
+   ```
+
+   Steps:
+   - Step 1, SYN: the client sends a segment with the SYN flag set and its own initial sequence number x. It moves to the SYN-SENT state. No data is carried, but the SYN consumes one sequence number.
+   - Step 2, SYN + ACK: the server replies with both SYN and ACK flags set. It sends its own initial sequence number y and acknowledges the client with ack = x + 1. It also advertises its receive window and MSS. The server moves to SYN-RECEIVED.
+   - Step 3, ACK: the client acknowledges the server's SYN with ack = y + 1 and seq = x + 1. Both sides are now ESTABLISHED and data transfer can begin.
+
+   Why three ways are needed:
+   - The connection is full duplex, so both directions must be opened and both initial sequence numbers must be agreed and acknowledged.
+   - It also synchronises the window sizes and the MSS, and it prevents an old delayed duplicate SYN from opening a spurious connection.
+   - A connection is closed by a separate four way exchange of FIN and ACK in each direction.
 6. **Write a TCP/UDP used service name?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+
+   Answer:
+
+   Services that use TCP:
+   - HTTP on port 80 and HTTPS on 443, web browsing.
+   - FTP on ports 20 and 21, file transfer.
+   - SMTP on 25, POP3 on 110 and IMAP on 143, email.
+   - SSH on 22 and Telnet on 23, remote login.
+   - Because these need every byte to arrive correctly and in order.
+
+   Services that use UDP:
+   - DNS on port 53 for queries.
+   - DHCP on ports 67 and 68.
+   - TFTP on 69.
+   - SNMP on 161 and 162.
+   - RIP on 520, VoIP, video streaming and online gaming.
+   - Because these need speed and low delay, or are short single request and reply exchanges where retransmission by the application is cheaper than a connection setup.
 7. **Difference between TCP and UDP. Distinguish between Cat5 and Cat6. Difference among exFAT, FAT32 and NTFS.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 523 (ET: MIST)]*
 
+
+   Answer:
+
+   TCP vs UDP:
+
+   | Point | TCP | UDP |
+   |---|---|---|
+   | Full form | Transmission Control Protocol | User Datagram Protocol |
+   | Connection | Connection oriented, three way handshake before data | Connectionless, sends immediately |
+   | Reliability | Reliable, acknowledgement and retransmission | Unreliable, fire and forget |
+   | Ordering | In order delivery using sequence numbers | No ordering guarantee |
+   | Header size | 20 to 60 bytes | 8 bytes, fixed |
+   | Flow control | Yes, sliding window | No |
+   | Congestion control | Yes, slow start and AIMD | No |
+   | Error control | Checksum plus retransmission | Checksum only, bad datagrams are dropped |
+   | Speed and overhead | Slower, high overhead | Faster, minimal overhead |
+   | Data boundary | Byte stream, no message boundary | Message oriented, boundaries preserved |
+   | Broadcast and multicast | Not supported | Supported |
+   | Handshake and teardown | SYN, SYN-ACK, ACK, then FIN exchange | None |
+   | Typical use | HTTP, HTTPS, FTP, SMTP, SSH, Telnet, file transfer | DNS, DHCP, TFTP, SNMP, RIP, VoIP, video streaming, gaming |
+
+   Cat5 vs Cat6:
+
+   | Point | Cat5 and Cat5e | Cat6 |
+   |---|---|---|
+   | Bandwidth | 100 MHz for Cat5e | 250 MHz |
+   | Data rate | 100 Mbps for Cat5, 1 Gbps for Cat5e | 1 Gbps at 100 m, 10 Gbps up to 55 m |
+   | Construction | Fewer twists per inch, no separator | More twists, and a plastic spline separating the pairs |
+   | Crosstalk and noise | Higher | Much lower, better NEXT and return loss |
+   | Cable thickness and cost | Thinner, cheaper, more flexible | Thicker, costlier, stiffer |
+   | Use | Legacy installations | Current standard for new structured cabling |
+
+   exFAT vs FAT32 vs NTFS:
+
+   | Point | FAT32 | exFAT | NTFS |
+   |---|---|---|---|
+   | Maximum file size | 4 GB | Practically unlimited, 16 EB | 16 TB and above |
+   | Maximum volume size | 2 TB, 32 GB when formatted by Windows | 128 PB | 256 TB |
+   | Journaling | No | No | Yes, so it recovers well from a crash |
+   | Permissions and encryption | None | None | ACL permissions, EFS encryption, compression, quotas |
+   | Compatibility | Highest, works on almost every device | Good, Windows, macOS, modern Linux and cameras | Full on Windows, read only by default on macOS |
+   | Best use | Small USB drives and devices needing wide compatibility | Large USB drives, SD cards, external drives shared between systems | Windows system and data drives |
 8. **Show a 3-way handshake protocol in TCP connection established using a diagram.** *[BICIC Assistant Programmer 2022 compact it 630 (ET: BUET)]*
 
+
+   Answer: TCP uses a three way handshake to establish a connection.
+
+   ```mermaid
+   sequenceDiagram
+       participant C as Client
+       participant S as Server
+       Note over C: CLOSED -> SYN-SENT
+       C->>S: SYN, seq = x
+       Note over S: LISTEN -> SYN-RECEIVED
+       S->>C: SYN + ACK, seq = y, ack = x + 1
+       Note over C: ESTABLISHED
+       C->>S: ACK, seq = x + 1, ack = y + 1
+       Note over S: ESTABLISHED
+       C->>S: Data transfer begins
+   ```
+
+   Steps:
+   - Step 1, SYN: the client sends a segment with the SYN flag set and its own initial sequence number x. It moves to the SYN-SENT state. No data is carried, but the SYN consumes one sequence number.
+   - Step 2, SYN + ACK: the server replies with both SYN and ACK flags set. It sends its own initial sequence number y and acknowledges the client with ack = x + 1. It also advertises its receive window and MSS. The server moves to SYN-RECEIVED.
+   - Step 3, ACK: the client acknowledges the server's SYN with ack = y + 1 and seq = x + 1. Both sides are now ESTABLISHED and data transfer can begin.
+
+   Why three ways are needed:
+   - The connection is full duplex, so both directions must be opened and both initial sequence numbers must be agreed and acknowledged.
+   - It also synchronises the window sizes and the MSS, and it prevents an old delayed duplicate SYN from opening a spurious connection.
+   - A connection is closed by a separate four way exchange of FIN and ACK in each direction.
 9. **Differecne between TCP and UDP.** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 658 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | TCP | UDP |
+   |---|---|---|
+   | Full form | Transmission Control Protocol | User Datagram Protocol |
+   | Connection | Connection oriented, three way handshake before data | Connectionless, sends immediately |
+   | Reliability | Reliable, acknowledgement and retransmission | Unreliable, fire and forget |
+   | Ordering | In order delivery using sequence numbers | No ordering guarantee |
+   | Header size | 20 to 60 bytes | 8 bytes, fixed |
+   | Flow control | Yes, sliding window | No |
+   | Congestion control | Yes, slow start and AIMD | No |
+   | Error control | Checksum plus retransmission | Checksum only, bad datagrams are dropped |
+   | Speed and overhead | Slower, high overhead | Faster, minimal overhead |
+   | Data boundary | Byte stream, no message boundary | Message oriented, boundaries preserved |
+   | Broadcast and multicast | Not supported | Supported |
+   | Handshake and teardown | SYN, SYN-ACK, ACK, then FIN exchange | None |
+   | Typical use | HTTP, HTTPS, FTP, SMTP, SSH, Telnet, file transfer | DNS, DHCP, TFTP, SNMP, RIP, VoIP, video streaming, gaming |
 10. **What is UDP protocol? UDP is reliable or not? Explain why or why not?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 754 (ET: N/A)]*
 
+
+   Answer: UDP, the User Datagram Protocol, is a connectionless transport layer protocol that sends independent datagrams without establishing a connection first.
+
+   - Its header is only 8 bytes, containing the source port, destination port, length and checksum.
+   - It performs no handshake, no acknowledgement, no sequencing, no flow control and no congestion control.
+   - It preserves message boundaries and supports broadcast and multicast.
+
+   Is UDP reliable? No, UDP is not reliable.
+
+   Why it is not reliable:
+   - There is no acknowledgement, so the sender never learns whether the datagram arrived.
+   - There is no retransmission, so a lost datagram is lost for good.
+   - There is no sequence number, so datagrams may arrive out of order and the receiver cannot reorder them.
+   - There is no duplicate detection, so a duplicated datagram is delivered twice.
+   - There is no flow control, so a fast sender can overwhelm a slow receiver and the excess is simply dropped.
+   - The checksum only detects corruption; a corrupt datagram is discarded silently, not repaired.
+
+   Why it is still used despite being unreliable:
+   - It is fast, with an 8 byte header against TCP's 20, and no connection setup delay of one round trip.
+   - For real time voice and video, a retransmitted packet would arrive too late to be played, so dropping it is better than delaying everything behind it.
+   - For a short single request and reply such as DNS, retrying at the application layer is cheaper than a full TCP connection.
+   - It supports broadcast and multicast, which TCP cannot.
+   - Where reliability is needed over UDP, the application adds it itself, which is what QUIC and RTP with RTCP do.
 11. **The primary function of the Transmission Control Protocol (TCP). TCP performs six basic functions. What are the basic function performing by TCP?** *[BTRC Assistant Director (Technical) 2021 compact it 807-808 (ET: IBA)]*
 
+
+   Answer: The primary function of TCP is to provide a reliable, connection oriented, in-order byte stream service between two application processes over an unreliable IP network.
+
+   The six basic functions performed by TCP:
+   - Connection management: it establishes a connection with the three way handshake of SYN, SYN-ACK and ACK, maintains it, and closes it with the four way FIN and ACK exchange.
+   - Reliable data transfer: every byte is numbered and acknowledged; unacknowledged data is retransmitted after a timeout, or immediately on three duplicate ACKs through fast retransmit.
+   - Sequencing and in-order delivery: sequence numbers let the receiver reassemble segments in the correct order and discard duplicates, so the application sees a clean byte stream.
+   - Flow control: the receiver advertises a window size in every acknowledgement, and the sender never transmits more than that, so a fast sender cannot overwhelm a slow receiver.
+   - Congestion control: slow start, congestion avoidance, fast retransmit and fast recovery adjust the congestion window so the network itself is not overloaded.
+   - Error detection and multiplexing: a checksum covering the header, data and pseudo header detects corruption, and port numbers multiplex many application conversations over one IP address.
+
+   - Additional services worth mentioning: full duplex operation, segmentation of the byte stream into segments sized by the MSS, urgent data through the URG pointer, and buffering at both ends.
 12. **(c) What is purpose of routers? How congestion control works in the TCP?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 886-887 (ET: N/A)]*
 
+
+   Answer:
+
+   Purpose of routers:
+   - To connect two or more different networks and forward packets between them, which is what makes an internetwork possible.
+   - To choose the best path by reading the destination IP address and consulting the routing table with a longest prefix match.
+   - To build and maintain that routing table using static routes or dynamic protocols such as RIP, OSPF and BGP, and to adapt automatically when a link fails.
+   - To separate broadcast domains, since a router does not forward broadcasts, which stops broadcast storms from spreading.
+   - To perform fragmentation where the next link has a smaller MTU, and to decrement the TTL so that looping packets are eventually destroyed.
+   - To provide additional services: NAT, DHCP, access control lists for filtering, QoS and WAN connectivity.
+
+   How congestion control works in TCP:
+   - TCP keeps a congestion window, cwnd, in addition to the receiver's advertised window, and the amount it may send is the smaller of the two.
+   - Slow start: cwnd begins at one MSS and doubles every round trip time, that is exponential growth, until it reaches the slow start threshold ssthresh.
+   - Congestion avoidance: beyond ssthresh, cwnd grows by only one MSS per round trip time, that is linear additive increase, so the network is probed gently.
+   - Loss detected by timeout: this is taken as severe congestion. ssthresh is set to half the current window and cwnd drops back to one MSS, so slow start begins again.
+   - Fast retransmit: three duplicate acknowledgements indicate a single lost segment while later ones are still arriving, so TCP retransmits it immediately without waiting for the timeout.
+   - Fast recovery: after a fast retransmit, ssthresh and cwnd are halved rather than dropped to one, so the connection continues from half its previous rate. This whole pattern is called AIMD, additive increase multiplicative decrease.
+   - Modern additions: ECN lets routers mark packets instead of dropping them, and algorithms such as CUBIC and BBR replace the classical growth rule on high speed links.
 13. **What is a TCP Three-way handshaking step?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
 
+
+   Answer: The TCP three way handshake has three steps.
+
+   - Step 1, SYN: the client sends a segment with the SYN flag set and its initial sequence number x, and moves to the SYN-SENT state.
+   - Step 2, SYN + ACK: the server replies with both SYN and ACK set, its own initial sequence number y, and ack = x + 1. It also advertises its window size and MSS, and moves to SYN-RECEIVED.
+   - Step 3, ACK: the client sends ACK with seq = x + 1 and ack = y + 1. Both sides are now ESTABLISHED and data can flow.
+
+   ```mermaid
+   sequenceDiagram
+       participant C as Client
+       participant S as Server
+       Note over C: CLOSED -> SYN-SENT
+       C->>S: SYN, seq = x
+       Note over S: LISTEN -> SYN-RECEIVED
+       S->>C: SYN + ACK, seq = y, ack = x + 1
+       Note over C: ESTABLISHED
+       C->>S: ACK, seq = x + 1, ack = y + 1
+       Note over S: ESTABLISHED
+       C->>S: Data transfer begins
+   ```
+
+   Steps:
+   - Step 1, SYN: the client sends a segment with the SYN flag set and its own initial sequence number x. It moves to the SYN-SENT state. No data is carried, but the SYN consumes one sequence number.
+   - Step 2, SYN + ACK: the server replies with both SYN and ACK flags set. It sends its own initial sequence number y and acknowledges the client with ack = x + 1. It also advertises its receive window and MSS. The server moves to SYN-RECEIVED.
+   - Step 3, ACK: the client acknowledges the server's SYN with ack = y + 1 and seq = x + 1. Both sides are now ESTABLISHED and data transfer can begin.
+
+   Why three ways are needed:
+   - The connection is full duplex, so both directions must be opened and both initial sequence numbers must be agreed and acknowledged.
+   - It also synchronises the window sizes and the MSS, and it prevents an old delayed duplicate SYN from opening a spurious connection.
+   - A connection is closed by a separate four way exchange of FIN and ACK in each direction.
 14. **The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate packets. What are the functions performed by TCP to make a network more reliable?** *[Sonali & Janata Bank Officer (IT) 2020 compact it 990 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+
+   Answer: TCP performs the following functions to turn an unreliable IP network into a reliable service.
+
+   - Sequence numbering: every byte in the stream is numbered, so the receiver can place segments in the correct order however they arrive, and can detect a gap.
+   - Acknowledgement: the receiver returns a cumulative acknowledgement giving the next byte it expects, so the sender knows exactly what has arrived safely.
+   - Retransmission on timeout: the sender keeps a retransmission timer, calculated from the measured round trip time, and resends any segment that is not acknowledged in time.
+   - Fast retransmit: three duplicate acknowledgements are taken as a sign that one segment was lost while later ones arrived, so it is resent at once instead of waiting for the timer.
+   - Duplicate detection: because every byte is numbered, a duplicate segment is recognised and discarded, so the application never sees the same data twice.
+   - Checksum: a 16 bit checksum over the header, the data and a pseudo header detects corruption; a corrupt segment is discarded and will be retransmitted.
+   - Flow control: the receiver advertises its free buffer space as a window in every acknowledgement, and the sender never exceeds it, so no data is lost through receiver overflow.
+   - Congestion control: slow start, congestion avoidance, fast retransmit and fast recovery keep the sending rate within what the network can carry, so loss caused by router queue overflow is minimised.
+   - Connection management: the three way handshake agrees the initial sequence numbers and window sizes before any data flows, and the four way close ensures no data is lost at the end.
+   - Buffering and reordering: segments arriving out of order are held in a receive buffer until the gap is filled, so the application always receives a continuous byte stream.
+
+   - The result is that although IP may lose, duplicate, corrupt or reorder packets, the application above TCP sees an exact, ordered copy of what was sent.
 15. **a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+
+
+   Answer: For a live video stream, UDP is the correct transport layer protocol, normally with RTP running on top of it.
+
+   Reasons:
+   - Real time delay matters more than perfection. A retransmitted packet would arrive after the moment it was needed and would have to be discarded anyway, so TCP's retransmission is wasted effort.
+   - TCP's head of line blocking is fatal for live media: while one lost segment is being retransmitted, all the later data waits in the buffer, so the picture freezes. UDP simply carries on with the next frame.
+   - TCP's congestion control halves the sending rate on any loss, which causes visible quality collapse and rebuffering. Live streaming prefers to control its own rate through adaptive bit rate logic.
+   - Video codecs tolerate loss. A few missing packets cause a brief artefact that the decoder conceals, and the next key frame corrects it entirely.
+   - The 8 byte UDP header against TCP's 20 saves bandwidth on a high volume continuous stream, and there is no connection setup delay.
+   - UDP supports multicast, so one stream can serve thousands of viewers, which TCP cannot do at all.
+   - RTP over UDP adds the sequence numbers and timestamps needed for playback ordering and synchronisation, and RTCP reports quality back, so the application gets exactly the features it needs and nothing more.
+
+   - Caution worth stating: for stored, non-live video such as YouTube on demand, TCP based HTTP streaming, that is DASH or HLS, is used instead, because a few seconds of buffering is acceptable there and TCP passes through firewalls more easily.
 
 ## Networking Devices (14)
 

@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 65/239 subtopics · 671/2673 answers**
+**Overall: 66/239 subtopics · 686/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -107,7 +107,7 @@ Commit unit: one `##` subtopic.
 - [ ] Email & Messaging Security (Spam, Phishing) (2)
 - [ ] Buffer Overflow & Software Vulnerabilities (1)
 
-## computer-networks.md — 25/33 sections, 192/440 answers
+## computer-networks.md — 26/33 sections, 207/440 answers
 
 - [ ] Subnetting & IP Addressing (95)
 - [ ] OSI & TCP/IP Reference Model (43)
@@ -116,7 +116,7 @@ Commit unit: one `##` subtopic.
 - [ ] Multiplexing & Bandwidth (18)
 - [ ] Routing Protocols & Route Configuration (18)
 - [ ] Wireless Networks & IoT (mmWave) (17)
-- [ ] Transport Layer (TCP & UDP) (15)
+- [x] Transport Layer (TCP & UDP) (15)
 - [x] Networking Devices (14)
 - [x] Communication System & Transmission Modes (14)
 - [x] Physical Layer & Transmission Media (Cables & Wiring) (14)
