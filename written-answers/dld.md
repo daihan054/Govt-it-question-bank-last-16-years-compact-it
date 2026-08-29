@@ -2214,38 +2214,766 @@
 
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
 
+
+   Answer:
+
+   Given: F(A,B,C,D) = Σm(0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15)
+
+   K-map grid, with AB down the side and CD across the top in Gray code order:
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  1 |  0 |  1 |  0 |     m0  m1  m3  m2
+       01 |  0 |  1 |  1 |  0 |     m4  m5  m7  m6
+       11 |  1 |  1 |  1 |  1 |     m12 m13 m15 m14
+       10 |  1 |  0 |  1 |  1 |     m8  m9  m11 m10
+   ```
+
+   Groupings:
+   - Group 1, a block of 4: m3, m7, m15, m11, that is the whole CD = 11 column. A and B both vary, C = 1 and D = 1 remain. Term: CD
+   - Group 2, a block of 4: m5, m7, m13, m15, that is the cells with B = 1 and D = 1. Term: BD
+   - Group 3, a block of 4: m12, m13, m14, m15 and m8, m10, that is the AB = 11 row together with A = 1, D = 0. Taking the block m8, m10, m12, m14, which is A = 1 and D = 0. Term: AD'
+   - Group 4, a block of 4 using the corners: m0, m8, and wrapping, m0 with m8 vertically and m0 with m2 horizontally. The corner group m0, m2, m8, m10 gives B'D'. But m2 and m10 are 0 here, so instead take the pair m0, m8, which gives B'C'D'.
+
+   Final simplified SOP expression:
+   - F = CD + BD + AD' + B'C'D'
+
+   Verification, by expanding each term:
+   - CD covers m3, m7, m11, m15
+   - BD covers m5, m7, m13, m15
+   - AD' covers m8, m10, m12, m14
+   - B'C'D' covers m0, m8
+   - Union: {0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15}, which is exactly the given set. Correct.
+
+   Gate count: the simplified expression needs 4 AND gates and 1 OR gate, against 11 four input AND gates and one eleven input OR gate for the unsimplified form.
+
+   Method for simplifying with a Karnaugh map:
+   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
+   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
+   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - Every 1 must be covered by at least one group.
+   - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
+   - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
 2. **Simplification using K-map?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+
+   Answer: The question gives no specific function, so the method is set out with a worked example.
+
+   Method for simplifying with a Karnaugh map:
+   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
+   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
+   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - Every 1 must be covered by at least one group.
+   - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
+   - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
+
+   Worked example: F(A,B,C,D) = Σm(0, 1, 2, 5, 8, 9, 10)
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  1 |  1 |  0 |  1 |     m0  m1  m3  m2
+       01 |  0 |  1 |  0 |  0 |     m4  m5  m7  m6
+       11 |  0 |  0 |  0 |  0 |     m12 m13 m15 m14
+       10 |  1 |  1 |  0 |  1 |     m8  m9  m11 m10
+   ```
+
+   Groupings:
+   - Group of 4, the corners m0, m2, m8, m10, wrapping top to bottom and left to right: B = 0 and D = 0 remain. Term: B'D'
+   - Group of 4, m0, m1, m8, m9: B = 0 and C = 0 remain. Term: B'C'
+   - Group of 2, m1, m5: A = 0, C = 0, D = 1 remain. Term: A'C'D
+
+   Simplified expression: F = B'D' + B'C' + A'C'D
+
+   Two useful points:
+   - Don't care conditions, written d or X, may be treated as either 0 or 1, whichever makes the groups larger. They are used freely to enlarge a group but never covered by a group of their own.
+   - To obtain the product of sums form instead, group the 0s rather than the 1s, and write each group as a sum with the variables complemented.
+   - A K-map is practical up to 4 variables, workable with care at 5 or 6, and impractical beyond that; the Quine-McCluskey algorithm is used instead, and in practice a synthesis tool. <!-- verify -->
 3. **(a) Consider the following logic circuit-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
  * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
  * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
 
+
+   Answer: The circuit is not reproduced here, so the method is given with a worked example of the standard form of this question.
+
+   (i) Deriving the Boolean expressions:
+   - Label the output of every gate as an intermediate term T1, T2, T3 and T4.
+   - Work forward from the inputs: write the expression at the output of each gate in terms of its own inputs, substituting the expressions already derived.
+   - The final outputs F1 and F2 are then expressed entirely in terms of A, B and C.
+
+   Worked example, a typical circuit of this kind:
+   - T1 = A ⊕ B
+   - T2 = A · B
+   - T3 = T1 · C = (A ⊕ B) · C
+   - T4 = T2 + T3 = A·B + (A ⊕ B)·C
+   - F1 = T1 ⊕ C = A ⊕ B ⊕ C
+   - F2 = T4 = A·B + (A ⊕ B)·C
+
+   - This is in fact a full adder: F1 is the sum and F2 is the carry out.
+
+   (ii) Simplifying with a K-map and showing equivalence:
+
+   F1 = A ⊕ B ⊕ C, whose minterms are m1, m2, m4, m7:
+
+   ```
+          BC
+   A \   00   01   11   10
+     0 |  0 |  1 |  0 |  1 |     m0 m1 m3 m2
+     1 |  1 |  0 |  1 |  0 |     m4 m5 m7 m6
+   ```
+
+   - No two 1s are adjacent, so no grouping is possible and every 1 stands alone.
+   - F1 = A'B'C + A'BC' + AB'C' + ABC
+   - This cannot be reduced further in sum of products form, which is the characteristic signature of an XOR function: a K-map with a chequerboard pattern of 1s admits no grouping.
+   - Recognising the pattern gives the compact form F1 = A ⊕ B ⊕ C, which is equivalent to the expression derived in (i).
+
+   F2 = A·B + (A ⊕ B)·C, whose minterms are m3, m5, m6, m7:
+
+   ```
+          BC
+   A \   00   01   11   10
+     0 |  0 |  0 |  1 |  0 |     m0 m1 m3 m2
+     1 |  0 |  1 |  1 |  1 |     m4 m5 m7 m6
+   ```
+
+   Groupings:
+   - m3 and m7: B = 1, C = 1 remain. Term: BC
+   - m5 and m7: A = 1, C = 1 remain. Term: AC
+   - m6 and m7: A = 1, B = 1 remain. Term: AB
+
+   - F2 = AB + BC + AC
+   - Expanding the expression from (i): A·B + (A ⊕ B)·C = AB + (AB' + A'B)C = AB + AB'C + A'BC. Adding the redundant term ABC, which is already contained in AB, gives AB + AC(B + B') + BC(A + A') = AB + AC + BC.
+   - The two are therefore equivalent, which is what the question asks to be shown.
+   - F2 is the majority function, and it is the carry out of a full adder. <!-- verify -->
 4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC
+
+   Step 1, identify the minterms:
+   - A'B'C' = 000 = m0
+   - A'B'C = 001 = m1
+   - A'BC = 011 = m3
+   - A'BC' = 010 = m2
+   - ABC' = 110 = m6
+   - ABC = 111 = m7
+   - So f = Σm(0, 1, 2, 3, 6, 7)
+
+   Step 2, draw the K-map:
+
+   ```
+          BC
+   A \   00   01   11   10
+     0 |  1 |  1 |  1 |  1 |     m0 m1 m3 m2
+     1 |  0 |  0 |  1 |  1 |     m4 m5 m7 m6
+   ```
+
+   Step 3, group:
+   - Group 1, a block of 4: the entire top row, m0, m1, m3, m2. Here B and C both vary and only A = 0 remains. Term: A'
+   - Group 2, a block of 4: m3, m2, m7, m6, that is the two right hand columns. Here A and C both vary and only B = 1 remains. Term: B
+
+   Step 4, write the simplified expression:
+   - f = A' + B
+
+   Verification:
+   - A' covers m0, m1, m2, m3.
+   - B covers m2, m3, m6, m7.
+   - Union: {0, 1, 2, 3, 6, 7}, which is exactly the given set. Correct.
+
+   - The simplification is dramatic: six three variable product terms reduce to a single OR gate with one inverted input. The variable C has disappeared entirely, meaning the output does not depend on it at all.
+
+   Logic circuit:
+
+   ```
+   A ---|>o--- A' ---|
+                     |  OR  |--- f = A' + B
+   B ----------------|
+   ```
 5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)], [BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: F(A,B,C,D) = Σm(2, 8, 9, 11, 13, 15)
+
+   K-map:
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  0 |  0 |  0 |  1 |     m0  m1  m3  m2
+       01 |  0 |  0 |  0 |  0 |     m4  m5  m7  m6
+       11 |  0 |  1 |  1 |  0 |     m12 m13 m15 m14
+       10 |  1 |  1 |  1 |  0 |     m8  m9  m11 m10
+   ```
+
+   Groupings:
+   - Group 1, a block of 4: m9, m11, m13, m15, that is the cells with A = 1 and D = 1. B and C both vary. Term: AD
+   - Group 2, a block of 2: m8, m9, that is A = 1, B = 0, C = 0. Term: AB'C'
+   - Group 3, a single cell: m2, that is A = 0, B = 0, C = 1, D = 0, which has no adjacent 1 to pair with. Term: A'B'CD'
+
+   Final simplified expression:
+   - F = AD + AB'C' + A'B'CD'
+
+   Verification:
+   - AD covers m9, m11, m13, m15
+   - AB'C' covers m8, m9
+   - A'B'CD' covers m2
+   - Union: {2, 8, 9, 11, 13, 15}, which is exactly the given set. Correct.
+
+   Gate count: 3 AND gates and 1 OR gate, against 6 four input AND gates and a six input OR gate for the unsimplified form.
+
+   - Note that m2 is isolated: it has no neighbour differing in a single variable among the 1s, so it must appear as a full four variable term. An isolated 1 in a K-map always signals that no reduction is possible for that minterm.
 6. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: F(A,B,C,D) = Σm(0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15)
+
+   K-map grid:
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  1 |  0 |  1 |  0 |     m0  m1  m3  m2
+       01 |  0 |  1 |  1 |  0 |     m4  m5  m7  m6
+       11 |  1 |  1 |  1 |  1 |     m12 m13 m15 m14
+       10 |  1 |  0 |  1 |  1 |     m8  m9  m11 m10
+   ```
+
+   Groupings, shown as loops:
+   - Loop 1, a block of 4: m3, m7, m15, m11, the whole CD = 11 column. C = 1 and D = 1 remain. Term: CD
+   - Loop 2, a block of 4: m5, m7, m13, m15, the cells with B = 1 and D = 1. Term: BD
+   - Loop 3, a block of 4: m8, m10, m12, m14, the cells with A = 1 and D = 0. Term: AD'
+   - Loop 4, a block of 2: m0, m8, the cells with B = 0, C = 0 and D = 0. Term: B'C'D'
+
+   Final simplified SOP expression:
+   - F = CD + BD + AD' + B'C'D'
+
+   Verification by expansion:
+   - CD covers m3, m7, m11, m15
+   - BD covers m5, m7, m13, m15
+   - AD' covers m8, m10, m12, m14
+   - B'C'D' covers m0, m8
+   - Union: {0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15}, exactly the given minterms. Correct.
+
+   - The unsimplified expression would require eleven four input AND gates and an eleven input OR gate; the simplified form requires four AND gates and one OR gate, which is the point of the exercise.
 7. **(b) Simplify the following Boolean function using K-map.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 489 (ET: N/A)]*
 
+
+   Answer: The specific function is not reproduced here, so the method is given together with a worked example.
+
+   Method for simplifying with a Karnaugh map:
+   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
+   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
+   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - Every 1 must be covered by at least one group.
+   - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
+   - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
+
+   Worked example: F(A,B,C,D) = Σm(1, 3, 5, 7, 9, 11, 13, 15)
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  0 |  1 |  1 |  0 |
+       01 |  0 |  1 |  1 |  0 |
+       11 |  0 |  1 |  1 |  0 |
+       10 |  0 |  1 |  1 |  0 |
+   ```
+
+   - Every 1 lies in the two middle columns, that is wherever D = 1, and all eight of them form a single group of 8.
+   - A group of 8 in a 4 variable map eliminates 3 variables, leaving only D.
+   - F = D
+
+   Second worked example: F(A,B,C,D) = Σm(0, 1, 4, 5, 12, 13)
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  1 |  1 |  0 |  0 |
+       01 |  1 |  1 |  0 |  0 |
+       11 |  1 |  1 |  0 |  0 |
+       10 |  0 |  0 |  0 |  0 |
+   ```
+
+   - Group of 4: m0, m1, m4, m5, giving A'C'
+   - Group of 4: m4, m5, m12, m13, giving BC'
+   - F = A'C' + BC'  = C'(A' + B)
+
+   Points that earn marks: always look for the largest possible group first; remember that the map wraps at both edges, so the four corners form a valid group of 4; and treat don't care conditions as whichever value makes the group larger. <!-- verify -->
 8. **Minimize the following function in SOP minimal form using K-map:** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
 
+
+   Answer: The specific function is not reproduced here, so the method for obtaining the minimal SOP form is given with a worked example.
+
+   Method for simplifying with a Karnaugh map:
+   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
+   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
+   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - Every 1 must be covered by at least one group.
+   - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
+   - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
+
+   Additional rules for obtaining the truly minimal form:
+   - Identify the prime implicants, that is the groups that cannot be enlarged further.
+   - Identify the essential prime implicants: those covering at least one minterm that no other group covers. These must appear in the answer.
+   - Select the essential prime implicants first, then choose the fewest additional groups needed to cover whatever remains.
+   - A minterm covered by an essential prime implicant need not be considered again.
+
+   Worked example: F(A,B,C,D) = Σm(0, 1, 2, 5, 6, 7, 8, 9, 10, 14)
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  1 |  1 |  0 |  1 |     m0  m1  m3  m2
+       01 |  0 |  1 |  1 |  1 |     m4  m5  m7  m6
+       11 |  0 |  0 |  0 |  1 |     m12 m13 m15 m14
+       10 |  1 |  1 |  0 |  1 |     m8  m9  m11 m10
+   ```
+
+   Groupings:
+   - Group of 4, the corners m0, m2, m8, m10, wrapping in both directions: B'D'
+   - Group of 4, m0, m1, m8, m9: B'C'
+   - Group of 4, m2, m6, m10, m14, the whole CD = 10 column: CD'
+   - Group of 4, m5, m7, and m1, m3 — but m3 is 0, so instead m1, m5: A'C'D
+   - Group of 2, m6, m7: A'BC
+
+   Minimal SOP: F = B'D' + B'C' + CD' + A'C'D + A'BC
+
+   - The essential step is to check each group before including it: a group whose every minterm is already covered by other groups is redundant and must be omitted. This is what distinguishes a minimal answer from a merely correct one. <!-- verify -->
 9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: F(A,B,C,D) = ACD + AB + D' + ACD'
+
+   Step 1, expand each term into minterms.
+   - ACD, that is A=1, C=1, D=1, with B free: m11 (1011), m15 (1111)
+   - AB, that is A=1, B=1, with C and D free: m12, m13, m14, m15
+   - D', that is D=0, with A, B, C free: m0, m2, m4, m6, m8, m10, m12, m14
+   - ACD', that is A=1, C=1, D=0, with B free: m10 (1010), m14 (1110)
+   - Union: F = Σm(0, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15)
+
+   Step 2, draw the K-map:
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  1 |  0 |  0 |  1 |     m0  m1  m3  m2
+       01 |  1 |  0 |  0 |  1 |     m4  m5  m7  m6
+       11 |  1 |  1 |  1 |  1 |     m12 m13 m15 m14
+       10 |  1 |  0 |  1 |  1 |     m8  m9  m11 m10
+   ```
+
+   Step 3, group:
+   - Group of 8: the two outer columns CD = 00 and CD = 10, that is every cell where D = 0. Term: D'
+   - Group of 4: the whole AB = 11 row, m12, m13, m15, m14. A = 1 and B = 1 remain. Term: AB
+   - Group of 4: m10, m11, m14, m15, that is A = 1 and C = 1. Term: AC
+
+   Step 4, simplified expression:
+   - F = D' + AB + AC
+
+   Verification:
+   - D' covers m0, m2, m4, m6, m8, m10, m12, m14
+   - AB covers m12, m13, m14, m15
+   - AC covers m10, m11, m14, m15
+   - Union: {0, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15}, exactly as expanded. Correct.
+   - Note that the term ACD' in the original expression was redundant, since it is entirely contained within D'. Recognising redundancy is part of the exercise.
+
+   Logic circuit:
+
+   ```
+   D ---|>o------------------------------+
+        (NOT)                            |
+                                         |
+   A ---+---| AND |--- AB ---------------+---| OR |--- F = D' + AB + AC
+        |   |     |                      |   |    |
+   B ---+---|     |                      |   |    |
+                                         |   |    |
+   A ---+---| AND |--- AC ---------------+   |    |
+        |   |     |
+   C ---+---|     |
+   ```
+
+   - Gate count after simplification: 1 NOT, 2 AND and 1 three input OR. The unsimplified form would have required considerably more.
 10. **Simplify using K-map with logic circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
 
+
+   Answer: The specific function is not reproduced here, so the method is given with a worked example including the circuit.
+
+   Method for simplifying with a Karnaugh map:
+   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
+   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
+   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - Every 1 must be covered by at least one group.
+   - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
+   - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
+
+   Worked example: F(A,B,C,D) = Σm(0, 2, 5, 7, 8, 10, 13, 15)
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  1 |  0 |  0 |  1 |     m0  m1  m3  m2
+       01 |  0 |  1 |  1 |  0 |     m4  m5  m7  m6
+       11 |  0 |  1 |  1 |  0 |     m12 m13 m15 m14
+       10 |  1 |  0 |  0 |  1 |     m8  m9  m11 m10
+   ```
+
+   Groupings:
+   - Group of 4, the four corners m0, m2, m8, m10, wrapping in both directions: B = 0 and D = 0 remain. Term: B'D'
+   - Group of 4, m5, m7, m13, m15: B = 1 and D = 1 remain. Term: BD
+
+   Simplified expression: F = B'D' + BD
+
+   - This is recognisable as the XNOR of B and D: F = (B ⊕ D)', which is 1 exactly when B and D are equal. The variables A and C do not appear at all, so the output does not depend on them.
+
+   Logic circuit:
+
+   ```
+   B ---|>o--- B' ---+
+                     |--- AND ---+
+   D ---|>o--- D' ---+           |
+                                 |--- OR --- F
+   B ----------------+           |
+                     |--- AND ---+
+   D ----------------+
+   ```
+
+   Or, using a single gate:
+
+   ```
+   B ---|\
+        | )Do--- F = (B xor D)'      (XNOR gate)
+   D ---|/
+   ```
+
+   - The advantage of recognising the pattern: two AND gates, two inverters and an OR gate reduce to a single XNOR gate. K-map patterns that alternate in a chequerboard fashion always indicate XOR or XNOR. <!-- verify -->
 11. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 798 (ET: N/A)]*
 
+
+   Answer:
+
+   (i) Truth table for F, where F = 1 when A > B, with A = A₁A₀ and B = B₁B₀:
+
+   | A₁ | A₀ | B₁ | B₀ | A | B | F = 1 if A > B |
+   |---|---|---|---|---|---|---|
+   | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+   | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
+   | 0 | 0 | 1 | 0 | 0 | 2 | 0 |
+   | 0 | 0 | 1 | 1 | 0 | 3 | 0 |
+   | 0 | 1 | 0 | 0 | 1 | 0 | 1 |
+   | 0 | 1 | 0 | 1 | 1 | 1 | 0 |
+   | 0 | 1 | 1 | 0 | 1 | 2 | 0 |
+   | 0 | 1 | 1 | 1 | 1 | 3 | 0 |
+   | 1 | 0 | 0 | 0 | 2 | 0 | 1 |
+   | 1 | 0 | 0 | 1 | 2 | 1 | 1 |
+   | 1 | 0 | 1 | 0 | 2 | 2 | 0 |
+   | 1 | 0 | 1 | 1 | 2 | 3 | 0 |
+   | 1 | 1 | 0 | 0 | 3 | 0 | 1 |
+   | 1 | 1 | 0 | 1 | 3 | 1 | 1 |
+   | 1 | 1 | 1 | 0 | 3 | 2 | 1 |
+   | 1 | 1 | 1 | 1 | 3 | 3 | 0 |
+
+   - Minterms where F = 1: m4, m8, m9, m12, m13, m14
+   - So F = Σm(4, 8, 9, 12, 13, 14)
+
+   (ii) Simplification with a K-map, taking A₁A₀ down the side and B₁B₀ across the top:
+
+   ```
+                 B1 B0
+   A1 A0     00    01    11    10
+      00 |   0  |  0  |  0  |  0  |     m0  m1  m3  m2
+      01 |   1  |  0  |  0  |  0  |     m4  m5  m7  m6
+      11 |   1  |  1  |  0  |  1  |     m12 m13 m15 m14
+      10 |   1  |  1  |  0  |  0  |     m8  m9  m11 m10
+   ```
+
+   Groupings:
+   - Group of 4: m8, m9, m12, m13, that is A₁ = 1 and B₁ = 0. A₀ and B₀ both vary. Term: A₁B₁'
+   - Group of 2: m12, m14, that is A₁ = 1, A₀ = 1, B₀ = 0. Term: A₁A₀B₀'
+   - Group of 2: m4, m12, that is A₀ = 1, B₁ = 0, B₀ = 0. Term: A₀B₁'B₀'
+
+   Final simplified expression:
+   - F = A₁B₁' + A₁A₀B₀' + A₀B₁'B₀'
+
+   Verification:
+   - A₁B₁' covers m8, m9, m12, m13
+   - A₁A₀B₀' covers m12, m14
+   - A₀B₁'B₀' covers m4, m12
+   - Union: {4, 8, 9, 12, 13, 14}, exactly the given set. Correct.
+
+   Interpretation of the three terms, which is worth stating:
+   - A₁B₁' means the high order bit of A is 1 and that of B is 0, so A is greater whatever the low order bits.
+   - A₁A₀B₀' and A₀B₁'B₀' cover the cases in which the high order bits are equal and the low order bit of A exceeds that of B.
+   - The general expression for an n bit comparator follows the same pattern: compare the most significant bits first, and only where they are equal move down to the next.
 12. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: F = A'B'C' + ABC + AB'C'
+
+   Step 1, identify the minterms:
+   - A'B'C' = 000 = m0
+   - ABC = 111 = m7
+   - AB'C' = 100 = m4
+   - So F = Σm(0, 4, 7)
+
+   Step 2, draw the K-map:
+
+   ```
+          BC
+   A \   00   01   11   10
+     0 |  1 |  0 |  0 |  0 |     m0  m1  m3  m2
+     1 |  1 |  0 |  1 |  0 |     m4  m5  m7  m6
+   ```
+
+   Step 3, group:
+   - Group of 2: m0 and m4, that is the BC = 00 column. Here A varies and B = 0, C = 0 remain. Term: B'C'
+   - Single cell: m7, which has no adjacent 1, since m3, m5 and m6 are all 0. Term: ABC
+
+   Step 4, simplified expression:
+   - F = B'C' + ABC
+
+   Verification:
+   - B'C' covers m0 and m4
+   - ABC covers m7
+   - Union: {0, 4, 7}, exactly the given set. Correct.
+
+   - The reduction is from three three-variable terms to one two-variable term and one three-variable term. The minterm m7 is isolated, which always means that no reduction is possible for it, and an isolated 1 in a K-map is the signal to stop looking.
+
+   Logic circuit:
+
+   ```
+   B ---|>o--- B' ---+
+                     |--- AND ---+
+   C ---|>o--- C' ---+           |
+                                 |--- OR --- F = B'C' + ABC
+   A ----------------+           |
+   B ----------------+--- AND ---+
+   C ----------------+
+   ```
 13. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879 (ET: BUET)]*
 
+
+   Answer: The two maps are not reproduced here, so the method is given together with worked examples of the two cases such a question normally presents.
+
+   Method for simplifying with a Karnaugh map:
+   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
+   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
+   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - Every 1 must be covered by at least one group.
+   - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
+   - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
+
+   Case (i), a function to be minimised as a sum of products, by grouping the 1s:
+
+   F(A,B,C,D) = Σm(0, 1, 4, 5, 10, 11, 14, 15)
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  1 |  1 |  0 |  0 |     m0  m1  m3  m2
+       01 |  1 |  1 |  0 |  0 |     m4  m5  m7  m6
+       11 |  0 |  0 |  1 |  1 |     m12 m13 m15 m14
+       10 |  0 |  0 |  1 |  1 |     m8  m9  m11 m10
+   ```
+
+   - Group of 4: m0, m1, m4, m5, giving A'C'
+   - Group of 4: m10, m11, m14, m15, giving AC
+   - F = A'C' + AC = (A ⊕ C)', the XNOR of A and C. Neither B nor D appears.
+
+   Case (ii), the same function expressed as a product of sums, by grouping the 0s:
+
+   - The 0s are at m2, m3, m6, m7, m8, m9, m12, m13.
+   - Group of 4: m2, m3, m6, m7, that is A = 0 and C = 1. As a sum term this becomes (A + C').
+   - Group of 4: m8, m9, m12, m13, that is A = 1 and C = 0. As a sum term this becomes (A' + C).
+   - F = (A + C')(A' + C)
+
+   - The two forms are equivalent, and either may be required. The rule for converting a group of 0s into a sum term is to complement each variable: a variable that is 0 in the group appears uncomplemented, and one that is 1 appears complemented, which is the exact reverse of the rule for a group of 1s. <!-- verify -->
 14. **Draw the k-map for the equation:** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
    F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
 
+
+   Answer:
+
+   Given: F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
+
+   Step 1, identify the minterms:
+   - A'B'C'D' = 0000 = m0
+   - A'B'CD' = 0010 = m2
+   - A'BCD' = 0110 = m6
+   - A'BCD = 0111 = m7
+   - AB'C'D' = 1000 = m8
+   - AB'CD' = 1010 = m10
+   - ABCD' = 1110 = m14
+   - ABCD = 1111 = m15
+   - So F = Σm(0, 2, 6, 7, 8, 10, 14, 15)
+
+   Step 2, draw the K-map:
+
+   ```
+              CD
+       AB   00   01   11   10
+       00 |  1 |  0 |  0 |  1 |     m0  m1  m3  m2
+       01 |  0 |  0 |  1 |  1 |     m4  m5  m7  m6
+       11 |  0 |  0 |  1 |  1 |     m12 m13 m15 m14
+       10 |  1 |  0 |  0 |  1 |     m8  m9  m11 m10
+   ```
+
+   Step 3, group:
+   - Group of 4: m0, m2, m8, m10, the four corners of the B = 0 rows in the D = 0 columns, wrapping top to bottom. Here A and C vary, B = 0 and D = 0 remain. Term: B'D'
+   - Group of 4: m6, m7, m14, m15, that is the AB = 01 and AB = 11 rows in the CD = 11 and CD = 10 columns. Here A and D vary, B = 1 and C = 1 remain. Term: BC
+
+   Step 4, simplified expression:
+   - F = B'D' + BC
+
+   Verification:
+   - B'D' covers m0, m2, m8, m10
+   - BC covers m6, m7, m14, m15
+   - Union: {0, 2, 6, 7, 8, 10, 14, 15}, exactly the given set. Correct.
+
+   - Eight four variable product terms reduce to two two variable terms, requiring 2 AND gates, 2 inverters and 1 OR gate instead of 8 four input AND gates and an eight input OR gate.
+
+   Logic circuit:
+
+   ```
+   B ---|>o--- B' ---+
+                     |--- AND --- B'D' ---+
+   D ---|>o--- D' ---+                    |
+                                          |--- OR --- F
+   B ----------------+                    |
+                     |--- AND --- BC -----+
+   C ----------------+
+   ```
 15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1010-1011 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: F = A'B'C' + AB'C' + A'B'C + A'BC + ABC
+
+   Step 1, identify the minterms:
+   - A'B'C' = 000 = m0
+   - AB'C' = 100 = m4
+   - A'B'C = 001 = m1
+   - A'BC = 011 = m3
+   - ABC = 111 = m7
+   - So F = Σm(0, 1, 3, 4, 7)
+
+   Step 2, draw the K-map:
+
+   ```
+          BC
+   A \   00   01   11   10
+     0 |  1 |  1 |  1 |  0 |     m0  m1  m3  m2
+     1 |  1 |  0 |  1 |  0 |     m4  m5  m7  m6
+   ```
+
+   Step 3, group:
+   - Group of 2: m0, m4, the BC = 00 column. A varies, B = 0 and C = 0 remain. Term: B'C'
+   - Group of 2: m3, m7, the BC = 11 column. A varies, B = 1 and C = 1 remain. Term: BC
+   - Group of 2: m1, m3, the A = 0 row in the C = 1 columns. B varies, A = 0 and C = 1 remain. Term: A'C
+   - m1 is not yet covered by the first two groups, so the third is needed. Alternatively m0, m1 gives A'B', which also covers m1; either choice yields a minimal three term answer.
+
+   Step 4, simplified expression:
+   - F = B'C' + BC + A'C
+
+   Verification:
+   - B'C' covers m0, m4
+   - BC covers m3, m7
+   - A'C covers m1, m3
+   - Union: {0, 1, 3, 4, 7}, exactly the given set. Correct.
+
+   - Note that B'C' and BC together form the XNOR of B and C, so an equivalent compact form is F = (B ⊕ C)' + A'C.
+
+   Logic circuit:
+
+   ```
+   B ---|>o--- B' ---+
+                     |--- AND --- B'C' ---+
+   C ---|>o--- C' ---+                    |
+                                          |
+   B ----------------+                    |--- OR --- F
+                     |--- AND --- BC -----+
+   C ----------------+                    |
+                                          |
+   A ---|>o--- A' ---+                    |
+                     |--- AND --- A'C ----+
+   C ----------------+
+   ```
+
+   - Gate count: 3 inverters, 3 AND gates and 1 three input OR gate, against 5 three input AND gates and a five input OR gate for the unsimplified form.
 16. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038-1039 (ET: DPI)]*
+
+
+   Answer:
+
+   Given: f(a,b,c,d) = a'bc'd' + a'b'c'd + a'bc'd + abc'd'
+
+   Step 1, identify the minterms:
+   - a'bc'd' = 0100 = m4
+   - a'b'c'd = 0001 = m1
+   - a'bc'd = 0101 = m5
+   - abc'd' = 1100 = m12
+   - So f = Σm(1, 4, 5, 12)
+
+   Step 2, draw the K-map:
+
+   ```
+              cd
+       ab   00   01   11   10
+       00 |  0 |  1 |  0 |  0 |     m0  m1  m3  m2
+       01 |  1 |  1 |  0 |  0 |     m4  m5  m7  m6
+       11 |  1 |  0 |  0 |  0 |     m12 m13 m15 m14
+       10 |  0 |  0 |  0 |  0 |     m8  m9  m11 m10
+   ```
+
+   Step 3, group:
+   - Group of 2: m1 and m5, that is the cd = 01 column in the ab = 00 and ab = 01 rows. Here b varies, and a = 0, c = 0, d = 1 remain. Term: a'c'd
+   - Group of 2: m4 and m12, that is the cd = 00 column in the ab = 01 and ab = 11 rows. Here a varies, and b = 1, c = 0, d = 0 remain. Term: bc'd'
+   - m5 is covered by the first group and m4 by the second; every 1 is covered.
+
+   Step 4, simplified expression:
+   - f = a'c'd + bc'd'
+
+   Verification:
+   - a'c'd covers m1 and m5
+   - bc'd' covers m4 and m12
+   - Union: {1, 4, 5, 12}, exactly the given set. Correct.
+
+   - An alternative pairing takes m4 with m5, giving a'bc', together with m1 and m12 as isolated cells, which would give three terms instead of two. Choosing the pairing that yields the fewest terms is the whole point of the exercise, so the answer above is the minimal one.
+
+   Logic circuit:
+
+   ```
+   a ---|>o--+
+   c ---|>o--+--- AND --- a'c'd ---+
+   d --------+                     |
+                                   |--- OR --- f
+   b --------+                     |
+   c ---|>o--+--- AND --- bc'd' ---+
+   d ---|>o--+
+   ```
 
 ## Boolean Algebra & De Morgan’s Theorem (13)
 
