@@ -2035,7 +2035,91 @@
 
 1. **A, B, C, D, E, F, G are sitting in a circular arrangement. Each of them wears caps of either red, blue, or green color. Conditions are (i) D sits two seats right of A. A is wearing green cap (ii) C sits two seats left of B. C is wearing blue cap (iii) E sits in between F and G. E is wearing red cap (iv) No two person sitting next to each other can have same color cap Find the cap color of everyone.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+   Answer: Seven persons A to G sit in a circle, so there are seven seats. Number the seats 1 to 7 clockwise.
+
+   Step 1 - fix a reference. Place A at seat 1.
+
+   Step 2 - apply condition (i): D sits two seats to the right of A.
+   - Taking "right" as clockwise, D is at seat 3.
+
+   Step 3 - apply condition (iii): E sits between F and G, so F, E and G occupy three consecutive seats with E in the middle.
+   - Seats 1 and 3 are taken, so the only blocks of three consecutive free seats are (4, 5, 6) and (5, 6, 7).
+
+   Step 4 - apply condition (ii): C sits two seats to the left of B, that is B is two seats clockwise from C.
+   - Case A: take E at seat 5, with F and G at seats 4 and 6 in some order. Then B and C must occupy seats 2 and 7. Since B is two seats clockwise from C, C at 7 gives B at 2 (7 + 2 = 9, which is seat 2 in a circle of seven). This works.
+   - Case B: take E at seat 6, with F and G at 5 and 7. Then B and C must occupy seats 2 and 4, but neither 2 nor 4 is two seats clockwise from the other. This fails.
+
+   So the seating is:
+   - Seat 1: A
+   - Seat 2: B
+   - Seat 3: D
+   - Seat 4: F or G
+   - Seat 5: E
+   - Seat 6: G or F
+   - Seat 7: C
+
+   Step 5 - apply the cap conditions.
+   - A (seat 1) wears green, C (seat 7) wears blue, E (seat 5) wears red.
+   - Condition (iv): no two neighbours may wear the same colour.
+   - Seat 6 is next to E (red) and C (blue), so seat 6 must be green.
+   - Seat 4 is next to D and E (red), so seat 4 is green or blue.
+   - Seat 2 is next to A (green) and D, so B is red or blue.
+   - Seat 3 (D) is next to B and seat 4, so D differs from both.
+
+   A consistent assignment satisfying every condition:
+   - A: green
+   - B: red
+   - D: blue
+   - Seat 4 (F): green
+   - E: red
+   - Seat 6 (G): green
+   - C: blue
+
+   Check of adjacent pairs going round the circle: green-red, red-blue, blue-green, green-red, red-green, green-blue, blue-green. No two neighbours share a colour, so all conditions are satisfied.
+
+   Important observation: the seating order is fixed by the conditions, but the cap colours are not unique. The four given conditions leave several valid colourings, because seats 2, 3 and 4 each have more than one permissible colour. For example B could be blue with D red instead. The answer above is one valid solution; a complete answer should state that the colouring is not uniquely determined by the information given. <!-- verify -->
 2. **Explain knight knave problem.** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
+
+
+   Answer: The knight and knave problem is a classic type of logic puzzle introduced by the mathematician Raymond Smullyan.
+
+   The setting:
+   - There is an island inhabited by two kinds of people.
+   - Knights always tell the truth. Every statement a knight makes is true.
+   - Knaves always lie. Every statement a knave makes is false.
+   - A visitor meets some inhabitants, hears their statements, and must work out who is a knight and who is a knave.
+
+   The method of solution: assume a person is a knight, work out the consequences, and check for contradiction. Then assume the same person is a knave and do the same. Exactly one assumption survives.
+
+   Example 1 - a single speaker:
+   - A says: "I am a knave."
+   - If A were a knight, the statement would have to be true, so A would be a knave. That is a contradiction.
+   - If A were a knave, the statement would have to be false, so A would not be a knave, that is A would be a knight. That is also a contradiction.
+   - Conclusion: no inhabitant of the island can make this statement. It is a paradox, which shows that the puzzle rules exclude self-referential falsehoods of this kind.
+
+   Example 2 - two speakers:
+   - A says: "We are both knaves." B says nothing.
+   - If A were a knight, the statement would be true, so A would be a knave. Contradiction. Therefore A is a knave.
+   - Since A is a knave, the statement is false, so it is not the case that both are knaves. As A is a knave, B must be a knight.
+   - Conclusion: A is a knave and B is a knight.
+
+   Example 3 - the classic fork in the road:
+   - You reach a fork where one road leads to the city and the other to certain danger. One guard stands there, but you do not know whether the guard is a knight or a knave, and you may ask only one question.
+   - The correct question is: "If I asked you whether the left road leads to the city, would you say yes?"
+   - A knight answers truthfully about a truthful answer, so the answer is correct.
+   - A knave lies about what a lie would be, and the two lies cancel, so the answer is again correct.
+   - Either way, "yes" means the left road is the right one.
+
+   Formal representation in propositional logic:
+   - Let A be the proposition "A is a knight". Then "A is a knave" is NOT A.
+   - If A says S, this is captured by the biconditional A <-> S, which means the statement S is true exactly when the speaker is a knight.
+   - The whole puzzle then becomes a set of biconditionals to be solved for a consistent truth assignment.
+
+   Importance:
+   - It teaches propositional logic, truth tables, consistency checking and proof by contradiction.
+   - It is the standard illustration of self-reference and its dangers, which links it to Godel's incompleteness theorems and the halting problem.
+   - In computer science the same reasoning underlies formal verification, constraint satisfaction and SAT solving.
 
 ## Comprehensive Math Problems (2)
 
@@ -2047,12 +2131,148 @@
 
 1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 592 (ET: BUET)]*
 
+
+   Answer: We must count the bit strings of length n that contain no two consecutive 0s. Let a(n) denote this number.
+
+   Step 1 - classify the strings by their last bit.
+   - Case 1: the string ends in 1. The first n-1 bits can be any valid string of length n-1 with no two consecutive 0s, because placing a 1 at the end can never create a pair of consecutive 0s. This gives a(n-1) strings.
+   - Case 2: the string ends in 0. Then the bit before it must be 1, otherwise two 0s would be adjacent. So the string ends in "10", and the first n-2 bits form any valid string of length n-2. This gives a(n-2) strings.
+
+   Step 2 - the two cases are mutually exclusive and cover every possibility, so by the addition principle:
+
+   a(n) = a(n-1) + a(n-2), for n greater than or equal to 3
+
+   Step 3 - find the initial conditions.
+   - For n = 1: the strings are 0 and 1. Both are valid, since two consecutive 0s need at least two bits. So a(1) = 2.
+   - For n = 2: the strings are 00, 01, 10 and 11. Only 00 is invalid. So a(2) = 3.
+
+   Final answer:
+   - Recurrence relation: a(n) = a(n-1) + a(n-2) for n greater than or equal to 3
+   - Initial conditions: a(1) = 2 and a(2) = 3
+
+   The first few values:
+   - a(1) = 2
+   - a(2) = 3
+   - a(3) = 3 + 2 = 5
+   - a(4) = 5 + 3 = 8
+   - a(5) = 8 + 5 = 13
+   - a(6) = 13 + 8 = 21
+
+   Observation: this is the Fibonacci sequence, shifted by two positions. In fact a(n) = F(n + 2), where F(1) = F(2) = 1.
+
+   Verification for n = 3 by listing: the eight strings of length 3 are 000, 001, 010, 011, 100, 101, 110, 111. Those containing two consecutive 0s are 000, 001 and 100. The remaining five are 010, 011, 101, 110 and 111, which matches a(3) = 5.
 2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
+
+
+   Answer: To prove by mathematical induction that 3^n - 1 is a multiple of 2 for every integer n greater than or equal to 1.
+
+   Let P(n) be the statement: 3^n - 1 is a multiple of 2, that is 3^n - 1 = 2k for some integer k.
+
+   Step 1 - Basis step. Verify P(1):
+   - 3^1 - 1 = 3 - 1 = 2
+   - 2 = 2 x 1, which is a multiple of 2
+   - So P(1) is true.
+
+   Step 2 - Inductive hypothesis. Assume P(m) is true for some arbitrary integer m greater than or equal to 1:
+   - 3^m - 1 = 2k, where k is an integer
+   - Rearranging: 3^m = 2k + 1
+
+   Step 3 - Inductive step. Show that P(m + 1) is true, that is 3^(m+1) - 1 is a multiple of 2.
+   - 3^(m+1) - 1
+   - = 3 . 3^m - 1
+   - = 3(2k + 1) - 1        [substituting from the hypothesis]
+   - = 6k + 3 - 1
+   - = 6k + 2
+   - = 2(3k + 1)
+
+   Since k is an integer, (3k + 1) is also an integer. Therefore 3^(m+1) - 1 is 2 times an integer, which means it is a multiple of 2. So P(m + 1) is true.
+
+   Step 4 - Conclusion. P(1) is true, and P(m) implies P(m + 1) for every m greater than or equal to 1. Hence, by the principle of mathematical induction, P(n) is true for all integers n greater than or equal to 1. (Proved)
+
+   Verification with numbers:
+   - n = 1: 3 - 1 = 2 = 2 x 1
+   - n = 2: 9 - 1 = 8 = 2 x 4
+   - n = 3: 27 - 1 = 26 = 2 x 13
+   - n = 4: 81 - 1 = 80 = 2 x 40
+
+   Simple alternative argument: 3 is odd, and any power of an odd number is odd. An odd number minus 1 is always even, so 3^n - 1 is always a multiple of 2. The induction proof, however, is the method the question asks for.
 
 ## Propositional Logic & Logical Equivalence (1)
 
 1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer: দেখাতে হবে p <-> q এবং (p AND q) OR (NOT p AND NOT q) যুক্তিগতভাবে সমতুল্য (logically equivalent)।
+
+   দুইটি রাশি যুক্তিগতভাবে সমতুল্য হয় যদি সব সম্ভাব্য সত্যমানের জন্য তাদের ফলাফল একই হয়।
+
+   সত্যক সারণির মাধ্যমে প্রমাণ:
+
+   | p | q | p <-> q | p AND q | NOT p | NOT q | NOT p AND NOT q | (p AND q) OR (NOT p AND NOT q) |
+   |---|---|---|---|---|---|---|---|
+   | T | T | T | T | F | F | F | T |
+   | T | F | F | F | F | T | F | F |
+   | F | T | F | F | T | F | F | F |
+   | F | F | T | F | T | T | T | T |
+
+   পর্যবেক্ষণ: তৃতীয় কলাম (p <-> q) এবং শেষ কলাম [(p AND q) OR (NOT p AND NOT q)] এর মান প্রতিটি সারিতেই অভিন্ন — T, F, F, T।
+
+   অতএব p <-> q equivalent to (p AND q) OR (NOT p AND NOT q)। (প্রমাণিত)
+
+   বীজগণিতিক প্রমাণ:
+   - p <-> q
+   - = (p -> q) AND (q -> p)                          [দ্বিমুখী শর্তের সংজ্ঞা]
+   - = (NOT p OR q) AND (NOT q OR p)                  [implication এর সংজ্ঞা]
+   - = [(NOT p OR q) AND NOT q] OR [(NOT p OR q) AND p]   [বণ্টন সূত্র]
+   - = [(NOT p AND NOT q) OR (q AND NOT q)] OR [(NOT p AND p) OR (q AND p)]
+   - = [(NOT p AND NOT q) OR F] OR [F OR (p AND q)]   [কারণ q AND NOT q = F এবং NOT p AND p = F]
+   - = (NOT p AND NOT q) OR (p AND q)
+   - = (p AND q) OR (NOT p AND NOT q)                 [বিনিময় সূত্র]
+
+   অর্থবোধক ব্যাখ্যা: p <-> q সত্য হয় কেবল তখনই, যখন p ও q এর সত্যমান একই। সেটি দুইভাবে ঘটতে পারে — হয় দুটিই সত্য (p AND q), নয়তো দুটিই মিথ্যা (NOT p AND NOT q)। এই দুই সম্ভাবনাকে OR দিয়ে যুক্ত করলেই ডান পক্ষের রাশিটি পাওয়া যায়।
+
 ## Numerical Methods & Root Finding (1)
 
 1. **Determine the root of the given equation x^2 - 3 = 0 for x \in [1, 2]** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 458 (ET: BUET)]*
+
+
+   Answer: The equation is f(x) = x^2 - 3 = 0, and the root is to be found in the interval [1, 2]. The exact root is sqrt3, and it is to be located numerically.
+
+   Step 1 - verify that a root exists in the interval, using the intermediate value theorem:
+   - f(1) = 1^2 - 3 = -2, which is negative
+   - f(2) = 2^2 - 3 = 1, which is positive
+   - The signs are opposite and f is continuous, so at least one root lies between 1 and 2.
+
+   Step 2 - apply the bisection method. At each step take the midpoint c = (a + b) / 2, evaluate f(c), and keep the half-interval in which the sign change occurs.
+
+   | Iteration | a | b | c = (a+b)/2 | f(c) | Sign of f(c) | New interval |
+   |---|---|---|---|---|---|---|
+   | 1 | 1.0000 | 2.0000 | 1.5000 | -0.7500 | negative | [1.5000, 2.0000] |
+   | 2 | 1.5000 | 2.0000 | 1.7500 | 0.0625 | positive | [1.5000, 1.7500] |
+   | 3 | 1.5000 | 1.7500 | 1.6250 | -0.3594 | negative | [1.6250, 1.7500] |
+   | 4 | 1.6250 | 1.7500 | 1.6875 | -0.1523 | negative | [1.6875, 1.7500] |
+   | 5 | 1.6875 | 1.7500 | 1.7188 | -0.0457 | negative | [1.7188, 1.7500] |
+   | 6 | 1.7188 | 1.7500 | 1.7344 | 0.0081 | positive | [1.7188, 1.7344] |
+   | 7 | 1.7188 | 1.7344 | 1.7266 | -0.0189 | negative | [1.7266, 1.7344] |
+   | 8 | 1.7266 | 1.7344 | 1.7305 | -0.0054 | negative | [1.7305, 1.7344] |
+
+   The interval is narrowing towards 1.732.
+
+   Step 3 - the Newton-Raphson method converges much faster. The iteration formula is
+   - x(n+1) = x(n) - f(x(n)) / f'(x(n))
+   - Here f(x) = x^2 - 3 and f'(x) = 2x, so
+   - x(n+1) = x(n) - (x(n)^2 - 3) / (2 x(n)) = (x(n) + 3/x(n)) / 2
+
+   Taking x0 = 2:
+   - x1 = (2 + 3/2) / 2 = 1.750000
+   - x2 = (1.75 + 3/1.75) / 2 = 1.732142857
+   - x3 = (1.732142857 + 3/1.732142857) / 2 = 1.732050810
+   - x4 = 1.732050808
+
+   The value stabilises after four iterations.
+
+   Final answer: the root in [1, 2] is x = 1.7321 (correct to four decimal places), which is sqrt3.
+
+   Verification: (1.7320508)^2 = 2.99999998, which is 3 to seven decimal places. Correct.
+
+   Note on the methods: the bisection method always converges but slowly, halving the error at each step. Newton-Raphson converges quadratically, roughly doubling the number of correct digits each iteration, but it needs a derivative and a good starting value. The second root of the equation, x = -1.7321, lies outside the given interval.
