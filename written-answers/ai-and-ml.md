@@ -567,6 +567,21 @@
 
 1. **Write down the difference between informed and uninformed search algorithm.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
+   Answer:
+
+   | Point | Uninformed (Blind) Search | Informed (Heuristic) Search |
+   |---|---|---|
+   | Domain knowledge | None beyond the problem definition | Uses a heuristic that estimates cost to the goal |
+   | Guidance | Explores blindly in a fixed order | Guided towards the most promising node |
+   | Efficiency | Explores many unnecessary nodes | Explores far fewer nodes |
+   | Time and memory | Generally high | Generally lower |
+   | Completeness | BFS and UCS are complete | Complete if the heuristic is admissible |
+   | Optimality | BFS optimal for equal cost, UCS optimal | A* is optimal when the heuristic is admissible and consistent |
+   | Examples | BFS, DFS, Depth Limited Search, Uniform Cost Search, Iterative Deepening | Greedy Best First Search, A* Search, AO* Search |
+
+   - A heuristic h(n) is an estimate of the cost from node n to the goal, for example straight line distance in a map problem.
+   - A* uses f(n) = g(n) + h(n), where g(n) is the actual cost already spent, which is why it is both efficient and optimal.
+
 ## Overfitting, Underfitting & Model Generalization (1)
 
 1. **In machine learning. What will happen, when a machine is highly trained up a slight trained up?** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 395 (ET: BUET)]*
