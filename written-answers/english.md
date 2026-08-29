@@ -1121,15 +1121,202 @@ ii. The data were collected and it were analyzed carefully.
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer 2024 (ET: N/A)]*
 
+
+   Answer:
+
+   The Editor
+   The Daily Star
+   64-65 Kazi Nazrul Islam Avenue, Dhaka-1215
+
+   Subject: Widespread corruption in every sphere of life
+
+   Sir,
+
+   I shall be grateful if you kindly publish the following lines in the letters column of your widely circulated daily to draw the attention of the authorities and of the general public.
+
+   Corruption has spread into almost every sphere of our national life. A man seeking a simple certificate at a local office is asked for an unofficial payment. Contracts are awarded to the highest bribe rather than to the lowest bid. Admission, recruitment, land registration, hospital beds and even relief materials meant for the poorest are affected. What was once shameful is now treated as normal, and honest officials are made to feel foolish.
+
+   The consequences are severe. Public money is wasted, roads and buildings are constructed with substandard materials, capable people are denied opportunity, and confidence in institutions collapses. Foreign investors hesitate, and the cost of every service ultimately falls on the ordinary citizen.
+
+   The causes are weak accountability, delayed justice, political protection of the guilty, low salaries at the lower level and above all the social acceptance of dishonest wealth.
+
+   I therefore urge the authorities to strengthen the Anti-Corruption Commission, ensure the speedy trial of corruption cases regardless of the position of the accused, expand digital service delivery so that direct contact between citizen and clerk is reduced, protect whistle-blowers, and publish the assets of public servants. At the same time, families, schools and the media must rebuild the social contempt for dishonest earning that we have lost.
+
+   Corruption is not merely an administrative problem; it is a moral one. Unless we confront it now, no amount of economic growth will make this a just society.
+
+   Yours faithfully,
+   Anwar Hossain
+   28 Green Road, Dhaka-1205
+   Date: 15 July 2026
 2. **Imagine that you have purchased a laptop from a local showroom a week back. The warranty period is on and the laptop is not functioning well. Write a letter of complaint to the manager of the showroom about it. Your letter should contain information about the problem and what you want.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1357 (ET: N/A)]*
 
+
+   Answer:
+
+   28 Green Road
+   Dhaka-1205
+   29 May 2025
+
+   The Manager
+   Star Computer Showroom
+   IDB Bhaban, Agargaon, Dhaka-1207
+
+   Subject: Complaint about a defective laptop purchased on 22 May 2025
+
+   Sir,
+
+   I purchased a laptop from your showroom on 22 May 2025 against cash memo number 4517. The model is an ASUS VivoBook 15, serial number K9N2XA00317, and it carries a one-year warranty which is still valid.
+
+   The laptop has not been functioning properly since the third day of use. The specific problems are as follows:
+
+   - The machine shuts down on its own after about twenty minutes of use, even when it is connected to the mains.
+   - The battery does not charge beyond fifty per cent, and the charging indicator flickers continuously.
+   - The right hinge of the display is loose, and a faint crackling sound comes from the left side of the keyboard.
+   - Two keys, "E" and the space bar, frequently fail to register.
+
+   I have not opened the machine, installed any unauthorised software or subjected it to any physical damage. The fault is clearly a manufacturing defect.
+
+   As the product is only a week old and is fully within warranty, I request you to replace it with a new unit of the same model. If replacement is not possible, I request a full refund of Tk 78,000. I am not willing to accept a repair on a machine that was defective from the beginning.
+
+   I am enclosing a photocopy of the cash memo and the warranty card for your reference. I shall be grateful if the matter is settled within seven working days.
+
+   Yours faithfully,
+   Anwar Hossain
+   Mobile: 01711-XXXXXX
+
+   Enclosure: Copy of cash memo and warranty card
 3. **Write a letter to the officer-in-charge of your police station to provide regular police patrol in your locality to prevent crimes.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
 
+
+   Answer:
+
+   28 Green Road
+   Dhaka-1205
+   21 May 2025
+
+   The Officer-in-Charge
+   Dhanmondi Police Station
+   Dhaka-1205
+
+   Subject: Prayer for regular police patrol in our locality
+
+   Sir,
+
+   On behalf of the residents of Green Road and the adjoining lanes under your jurisdiction, I beg to draw your kind attention to the deteriorating law and order situation in our area.
+
+   For the last two months, incidents of crime have increased alarmingly. Mobile phones and handbags are snatched almost every evening near the Green Road crossing. Two motorcycles were stolen from in front of residential buildings last month. A group of young men gathers at the corner of Lane 3 after nightfall and takes drugs openly, which has made it unsafe for women and students to walk home. On 12 May a service holder returning from work was assaulted and robbed at about nine in the evening.
+
+   The main reasons are the absence of police presence after dusk, several broken street lights, and the fact that the lanes have no permanent guard.
+
+   I therefore request you to arrange the following:
+
+   - A regular police patrol in the area, particularly between eight in the evening and one at night.
+   - A police box or a fixed picket at the Green Road crossing.
+   - Occasional drives against the drug gathering at Lane 3.
+   - A coordinated arrangement with the city corporation to repair the street lights.
+
+   The residents are ready to cooperate fully with your force through our welfare association.
+
+   I hope you will take the necessary steps at your earliest convenience and oblige thereby.
+
+   Yours faithfully,
+   Anwar Hossain
+   General Secretary, Green Road Residents' Welfare Association
+   Mobile: 01711-XXXXXX
 4. **Write a Letter to your younger brother about Importance of professional vocational training.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
+
+   Answer:
+
+   28 Green Road
+   Dhaka-1205
+   9 February 2024
+
+   My dear Rakib,
+
+   I received your letter yesterday and was glad to know that you have finished your higher secondary examination. You wrote that you are undecided about what to do next, and that many of your friends are simply waiting for university admission results. I want to say something about that.
+
+   Do not let this year pass idly. Along with your studies, take a professional vocational training course. I say this for several reasons.
+
+   First, a degree alone no longer gets anyone a job. Employers now ask what you can actually do. A young man with a certificate in web development, graphic design, electrical work, air conditioning servicing or accounting software has a skill that can be demonstrated, not merely claimed.
+
+   Second, vocational training gives you independence early. Many of my colleagues began earning from freelancing while they were still students, and they never had to ask their families for pocket money again.
+
+   Third, it protects you against unemployment. Our country produces far more graduates than there are office posts, but there is a real shortage of trained technicians. The demand exists both at home and abroad, and a trained worker earns several times what an untrained one does in the Middle East.
+
+   Fourth, it builds discipline and confidence. Learning to do a job properly with your own hands changes the way a young person thinks about work.
+
+   The Bangladesh-Korea Technical Training Centre, the Technical Training Centres under the Bureau of Manpower, and the courses run by the Sheikh Kamal IT Training and Incubation Centres are all reliable and inexpensive. Choose one that genuinely interests you rather than one that sounds impressive.
+
+   Give my respects to Father and Mother, and love to Rimi. Write to me as soon as you decide.
+
+   Your affectionate brother,
+   Anwar
 5. **(a) Write a letter to your friend condoling the death of his/her mother. Or, (b) Write an application to the Upazila Nirbahi Officer for taking steps to repair damaged road in your locality.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 668 (ET: N/A)]*
 
+
+   Answer: (b) Application to the Upazila Nirbahi Officer for repairing a damaged road
+
+   Date: 13 October 2022
+
+   The Upazila Nirbahi Officer
+   Savar Upazila, Dhaka
+
+   Subject: Application for taking steps to repair the damaged road of our locality
+
+   Sir,
+
+   With due respect, I beg to state on behalf of the inhabitants of Bank Colony under Savar Upazila that the two-kilometre road connecting our locality with the Dhaka-Aricha Highway has become almost unusable.
+
+   The road has not been repaired for the last six years. The bitumen has worn away completely and large pits have formed all along it. During the rainy season these pits fill with water, so that no one can tell how deep they are, and rickshaws and vans overturn regularly. Two schoolchildren were injured last month. Ambulances refuse to enter the area, and patients have to be carried to the main road on foot. Vegetable growers of the locality cannot send their produce to the market in time, and they suffer a loss in every season.
+
+   About four thousand people, including the students of two primary schools and one high school, use this road every day.
+
+   I therefore request you to take the necessary steps to repair the road as early as possible, and if possible before the coming monsoon.
+
+   I hope you will consider our long-standing suffering and oblige thereby.
+
+   Yours faithfully,
+   Anwar Hossain
+   On behalf of the inhabitants of Bank Colony, Savar, Dhaka
+   Mobile: 01711-XXXXXX
 6. **Write an application to the Mayor of Dhaka south City Corporation (DSCC) to take measures against illegal chemical storages in your locality.** *[Software Assistant Programmer 13.10.2022 compact it 711 (ET: N/A)]*
+
+
+   Answer:
+
+   Date: 13 October 2022
+
+   The Mayor
+   Dhaka South City Corporation
+   Nagar Bhaban, Dhaka-1000
+
+   Subject: Application for taking measures against illegal chemical storage in our locality
+
+   Sir,
+
+   With due respect, I beg to draw your kind attention on behalf of the residents of Armanitola under Ward No. 32 of Dhaka South City Corporation to the illegal storage of chemicals in our densely populated residential area.
+
+   At least twenty-five buildings in our neighbourhood are being used as warehouses for highly inflammable chemicals such as hydrogen peroxide, methylated spirit, thinner, plastic granules and industrial adhesives. Most of these godowns occupy the ground floors of residential buildings in which families live on the upper floors. The lanes are narrow, so a fire engine cannot enter, and there is no fire hydrant within half a kilometre.
+
+   The consequences of such storage are already known to the whole nation. The Nimtoli fire of 2010 killed one hundred and twenty-four people and the Churihatta fire of 2019 killed seventy-one, both in this same locality and both caused by chemicals stored in residential buildings. The residents live in constant fear that the same disaster will be repeated.
+
+   We therefore request your kind office to take the following measures:
+
+   - Conduct an immediate survey to identify all illegal chemical godowns in the area.
+   - Cancel the trade licence of any warehouse operating in a residential building without a fire safety clearance.
+   - Relocate the chemical traders to the designated chemical village at Shyampur, as already planned by the government.
+   - Ensure regular inspection by the city corporation together with the Fire Service and Civil Defence.
+   - Widen the main access lane so that emergency vehicles can enter.
+
+   We are not opposed to the livelihood of the traders; we ask only that hazardous goods be stored where they belong.
+
+   I hope you will take urgent action and save thousands of lives from an avoidable disaster.
+
+   Yours faithfully,
+   Anwar Hossain
+   On behalf of the residents of Armanitola, Ward No. 32, Dhaka
+   Mobile: 01711-XXXXXX
 
 ## Reading Comprehension (5)
 
@@ -1141,6 +1328,13 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 (d) What would be the appropriate title of the above passage? Justify the title in two sentences.
 (e) What is the consequence of radiation?
 
+
+   Answer:
+   - (a) A nuclear war would exterminate most of the population of the world. The few creatures that survived would be exposed to radiation and to electrical rays harmful to life, many new diseases would be caused by radiation, and there would be an acute shortage of food, since most of the areas on which nuclear bombs are dropped are ruined.
+   - (b) The survivors would hardly survive in any real sense. They would live sick from radiation-borne diseases, hungry because of the acute shortage of food, and homeless because their areas would be ruined. The writer says that it might perhaps be better to be killed in a nuclear war than to survive it.
+   - (c) The best way to avoid nuclear war is for men to learn to live in peace with one another. The passage states plainly that if this can be achieved, there will be no nuclear wars.
+   - (d) An appropriate title would be "The Horrors of a Nuclear War". The title is justified because the whole passage describes what a nuclear war would do to human beings, namely extermination, disease, hunger and homelessness. It is also justified because the passage ends by arguing that such horrors can be escaped only through peace, which is the natural conclusion of a discussion of those horrors.
+   - (e) Radiation would cause many new diseases, according to scientists, and the living creatures exposed to it would suffer from these diseases along with the harmful effects of electrical rays.
 2. **Read the following passage and answer the questions that follow:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1357 (ET: N/A)]*
 > I am convinced that inculcating of discipline at home and in the educational institutions is essential for the growth of every individual. It is however unfortunate that the need for discipline in the youth is not sufficiently appreciated in this country. People seem to believe that to insist on discipline is to be unkind to the young. I have a different opinion. For me, what is unkind is to let a young person indulge in whatever s/he wants to do without parental, educational and ethical guidance. Discipline does not mean illogical harshness or oppressive imposition of law. Discipline involves ethics, i.e. responsible concern for the well-being of oneself and the other. Discipline involves guidance from the outside and control from the inside (self-control). Lack of guidance and control may lead a young person to waste her/his strength because s/he is yet to experience things in full. I feel sad when I see our youth-often individuals of talent, spirit and imagination-talking, behaving and acting as if they are their own judge and have the vision of predicting the future. I consider it as a wrong trend because it is detrimental to the physical, mental and social well-being of theirs and others as well.
 > 
@@ -1150,6 +1344,13 @@ Various kinds of nuclear weapons have been produced in the past few years by man
  * **(d) What do you think is the dominant tone of the passage prescriptive dialogic? Engaging or distant? Why do you think so?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
  * **(e) Write in brief your response to the author's take on discipline.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
 
+
+   Answer:
+   - (a) The people of this country believe that to insist on discipline is to be unkind to the young, and therefore they do not sufficiently appreciate the need for discipline in the youth. The author holds the opposite view. For him, what is truly unkind is to let a young person indulge in whatever he or she wants without parental, educational and ethical guidance.
+   - (b) The author does not perceive discipline as illogical harshness or as the oppressive imposition of law. He perceives it as something ethical, that is, a responsible concern for the well-being of oneself and of others. For him discipline has two sides: guidance that comes from outside, and control that comes from inside, which is self-control.
+   - (c) According to the author, a young person who lacks guidance and control may waste his or her strength, because such a person has not yet experienced things in full. The young then begin to talk, behave and act as though they are their own judge and can predict the future, and this trend is detrimental to their own physical, mental and social well-being as well as to that of others.
+   - (d) The dominant tone is prescriptive and engaging rather than dialogic and distant. It is prescriptive because the author does not weigh two positions equally; he states his own conviction and tells the reader what discipline should mean and what the young ought to receive. It is engaging because he uses the first person throughout, says openly "I have a different opinion" and "I feel sad", and speaks of the youth with evident sympathy, calling them individuals of talent, spirit and imagination. This personal warmth keeps the reader involved rather than lectured at from a distance.
+   - (e) I largely agree with the author. Discipline understood as ethical concern and self-control is different from mere obedience, and a young person who never learns it does waste real ability. His distinction between guidance and harshness is important, because much of what passes for discipline in our families and schools is in fact humiliation, which produces fear rather than judgement. Where I would qualify his view is that guidance works only when the young are also given reasons and some freedom to make and correct their own mistakes; control imposed without explanation tends to collapse the moment the authority is absent.
 3. **Read the following passage and then answer the questions that follow:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
 > The Change of Climate is a major concern nowadays. The worst of all the problems that affects all the flora and fauna is the climate change. There are many plants and animals that are vulnerable to climate change. As a result of increasing temperature, they are likely to be extinct from nature. The reasons of increasing temperature are multifarious. Every day many industries, mills and factories in different countries are excreting Carbon Dioxide. Besides, a significant number of vehicles ply on the roads creating smoke which emits Carbon Dioxide. In addition to these, industrially developed countries are emitting tons of Carbon on the sea, which is indirectly responsible for producing Carbon Dioxide. The more Carbon Dioxide will increase, the more the temperature will increase. Over the last century, the sea level had risen by 10-20 cm possibly in response to global warming.
 > 
@@ -1160,9 +1361,31 @@ Various kinds of nuclear weapons have been produced in the past few years by man
  * (d) How does global warming affect the sea level?
  * (e) What message does the passage convey?
 
+
+   Answer:
+   - (a) The worst of the problems that affects all the flora and fauna is climate change.
+   - (b) As a result of the increasing temperature, many plants and animals that are vulnerable to climate change are likely to become extinct from nature.
+   - (c) The two major reasons are, first, the carbon dioxide excreted every day by many industries, mills and factories in different countries, and second, the smoke created by the large number of vehicles plying on the roads, which emits carbon dioxide. The passage also mentions the tons of carbon that industrially developed countries emit into the sea, which is indirectly responsible for producing carbon dioxide.
+   - (d) Global warming raises the sea level. Over the last century the sea level rose by ten to twenty centimetres, possibly in response to global warming.
+   - (e) The passage conveys the message that climate change is the gravest danger facing life on earth today, that it is caused mainly by human activities which release carbon dioxide, and that unless these emissions are controlled, plants and animals will be lost and the rising sea will threaten human habitation as well.
 4. **Read the following passage and then answer the questions given below: War is the worst of all evils of human civilisation. It is an ancient institution which has existed for at least six thousand years. It was always wicked and usually foolish, but in the past, human race managed to live with it. Modern ingenuity has changed this drastically. Either man will abolish war or war will abolish man. In the present, it is nuclear weapons that cause the gravest danger, but bacteriological or chemical weapons may, before long, offer an even greater threat. If we succeed at any cost in abolishing nuclear weapons, our work will not be done completely. It will never be completed until we have succeeded in abolishing war for ever. To do this, we need to persuade mankind to look upon international disputes in a new intellectual and mutual way, not as contest of force or power, in which the victory goes to the side which is the most skillful in massacre, but by arbitration in accordance with agreed principles of law. It is not easy to change age-old mental habits, but this is what must be attempted. It is the destructive war that must be checked for the existence of life on earth. Questions: a) Why should we avoid war? b) Why is war more dangerous at present? c) What should we do to abolish war forever? d) How should all international problems be solved? e) Why should we check the destructive war at any cost?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 668 (ET: N/A)]*
 
+
+   Answer:
+   - (a) We should avoid war because it is the worst of all the evils of human civilisation. It has always been wicked and usually foolish, and modern ingenuity has now made it so destructive that either man will abolish war or war will abolish man.
+   - (b) War is more dangerous at present because modern ingenuity has changed it drastically. It is nuclear weapons that cause the gravest danger now, and bacteriological or chemical weapons may before long offer an even greater threat. In the past the human race managed to live with war; today it cannot.
+   - (c) To abolish war forever, it is not enough to abolish nuclear weapons. We need to persuade mankind to look upon international disputes in a new intellectual and mutual way, not as a contest of force or power, and to change age-old mental habits, difficult though that is.
+   - (d) All international problems should be solved by arbitration in accordance with agreed principles of law, rather than by a contest of force in which victory goes to the side that is most skilful in massacre.
+   - (e) We should check destructive war at any cost because the very existence of life on earth depends on it. With nuclear, bacteriological and chemical weapons available, a future war would not merely defeat one side but would abolish mankind itself.
 5. **Read the following passage crefully and answer the questions below in your words : “To be good is noble, but to teach others how to be good is nobler - and no trouble” said a well known writer. This may explain why in this world there is more of preaching than of practice. We do not mean the preaching which are get in church, but that which is given freely and without stint, on buses, in the streets and even in the homes of our land. Where is the parent who does not discover himself telling his child to do just what he himself does regularly? How many people are there who are certain that they have never made anything but financial mistakes? The man who never swam a stroke feels perfectly competent to tell another how to swim. The man who can not find his way to modest livelihood pretends to know just how to save the nation from all economic ills. It is no trouble to preach. But it is a considerable trouble to carry out what we preach. This is so the man who is striving to climb the loftiest heights know just how difficult is the way. Questions: (a) What does the quoted expression mean? (b) Why is practicing more difficult than preaching? (c) What does the writer mean by preaching? (d) What do the parents tell their children to do? (e) How does the honest preacher preach to himself?** *[Software Assistant Programmer 13.10.2022 compact it 711 (ET: N/A)]*
+
+
+   Answer:
+   - (a) The quoted expression means that although it is a noble thing to be good, it is considered nobler, and far easier, to teach others how to be good. The writer uses it ironically: preaching costs nothing, while being good costs real effort. This is why there is more preaching in the world than practice.
+   - (b) Practising is more difficult than preaching because preaching requires only words, while practice requires effort, sacrifice and self-control. Anyone can describe the right course of action, but only the person who actually attempts it discovers how hard the way is. As the passage says, the man who is striving to climb the loftiest heights knows just how difficult the way is.
+   - (c) By preaching the writer does not mean the sermons we hear in church. He means the free and unlimited advice that people give one another everywhere in ordinary life, on buses, in the streets and even in our own homes.
+   - (d) Parents tell their children to do exactly what they themselves do regularly, that is, they forbid in their children the very faults they practise themselves. The writer asks where one would find a parent who does not do this.
+   - (e) The honest preacher preaches first to himself. Because he has actually attempted the difficult path, he knows how hard it is, and so he directs his advice at his own conduct before offering it to others. Such a person speaks with humility instead of confidence, unlike the man who has never swum a stroke yet feels perfectly competent to teach swimming.
 
 ## English Literature & Authors (1)
 
