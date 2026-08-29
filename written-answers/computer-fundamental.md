@@ -1534,27 +1534,208 @@
 
 1. **What is the difference between System Software and Application Software?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)], [Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | System software | Application software |
+   |---|---|---|
+   | Purpose | Manages and controls the hardware and provides a platform for other software | Performs a specific task for the user |
+   | Runs | Automatically at start-up and continuously | Only when the user launches it |
+   | Dependence | Independent; it runs without any application software | Depends on system software, since it needs an operating system beneath it |
+   | Interaction | Interacts mainly with the hardware | Interacts mainly with the user |
+   | Written in | Low level languages such as assembly and C, for speed and direct hardware access | High level languages such as Java, Python and C# |
+   | Installation | Comes with the machine, or is installed first | Installed afterwards, as the user requires |
+   | Size and complexity | Generally large and complex | Varies from very small to very large |
+   | If removed | The computer cannot be used at all | Only that one task cannot be performed |
+   | Examples | Operating systems such as Windows, Linux and Android; device drivers; utilities such as antivirus and disk defragmenter; compilers, assemblers and linkers; the BIOS | MS Word, Excel, PowerPoint, browsers, media players, Photoshop, banking software, games |
+
+   - A third category is often added: utility software, such as antivirus, backup, compression and disk management tools, which sits between the two, since it serves the system rather than the user's own task but is installed separately.
 2. **What is platform independent software discuss with example?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 514 (ET: MIST)]*
 
+
+   Answer: Platform independent software is software that runs on any operating system or hardware architecture without being rewritten or recompiled for each one. The same program file works on Windows, Linux, macOS and others.
+
+   How it is achieved:
+   - The source is compiled not into the machine code of a particular processor but into an intermediate form, called bytecode, which is then executed by a virtual machine or an interpreter built for each platform.
+   - The principle is "write once, run anywhere": the platform specific work is done once by whoever writes the virtual machine, and every program above it becomes portable.
+   - Interpreted languages achieve the same result differently: the source itself is distributed and an interpreter present on each platform executes it directly.
+
+   Examples:
+   - Java: the compiler produces `.class` bytecode, which any Java Virtual Machine executes. The JVM itself is platform dependent, but the bytecode is not. This is the classic example.
+   - Python, Ruby, PHP and JavaScript: the source runs unchanged wherever the interpreter or engine exists.
+   - C# and the .NET platform: compiled to CIL bytecode, executed by the Common Language Runtime, and with .NET Core and later it runs on Windows, Linux and macOS.
+   - Web applications: HTML, CSS and JavaScript run in any browser on any device, which makes the browser itself the universal platform.
+   - Docker containers: the application together with its dependencies is packaged in an image that runs identically on any host running Docker, although it cannot cross the operating system kernel boundary.
+   - Cross platform frameworks such as Flutter, React Native and Electron, which build one codebase into applications for several platforms.
+
+   Contrast with platform dependent software:
+   - A C or C++ program compiled into a Windows `.exe` will not run on Linux, because the machine code, the system calls, the file format and the libraries all differ. It must be recompiled for each target.
+
+   Advantages: one codebase to write, test and maintain; a much larger potential market; lower development cost; and easy migration between platforms.
+   Disadvantages: slower than native code, because of the interpretation or just in time compilation layer; higher memory use; the virtual machine or runtime must be installed; and limited access to platform specific features and to the native look and feel.
 3. **Difference between High level languages and low level language with some example?** *[SPCB Sub-Assistant Programmer 2022 compact it 739 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | High level language | Low level language |
+   |---|---|---|
+   | Closeness to | Human language and mathematical notation | The machine's own hardware |
+   | Readability | Easy for a person to read and write | Very difficult; assembly is cryptic and machine code is unreadable |
+   | Machine dependence | Independent; the same source compiles for many machines | Dependent; written for one specific processor architecture |
+   | Translator needed | Compiler or interpreter | Assembler for assembly language; none for machine code |
+   | Speed of execution | Slower, since the translation adds a layer | Fastest, since it is the machine's own instructions |
+   | Memory efficiency | Less efficient; the compiler decides the layout | Extremely efficient; the programmer controls every byte |
+   | Development speed | Fast; a line does a great deal | Very slow; many instructions are needed for a simple operation |
+   | Debugging and maintenance | Comparatively easy | Very difficult |
+   | Hardware access | Indirect, through libraries and the operating system | Direct access to registers, memory addresses and I/O ports |
+   | Portability | High | None |
+   | Examples | C, C++, Java, Python, C#, PHP, JavaScript, COBOL, FORTRAN | Machine language, that is binary; assembly language with mnemonics such as MOV, ADD and JMP |
+
+   - Machine language, the first generation, is pure binary and is what the processor actually executes. Assembly language, the second generation, replaces the binary with mnemonics and is translated by an assembler.
+   - C is sometimes called a middle level language, because it has the structure and readability of a high level language while allowing pointer arithmetic and direct memory manipulation like a low level one. This is why operating system kernels and device drivers are written in it.
+   - Low level languages remain necessary for device drivers, embedded firmware, boot loaders, real time control and performance critical routines, where direct hardware control or the last few percent of speed matters.
 4. **Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+
+   Answer: Spreadsheet software is used for calculation work on a computer, and Microsoft Excel is the best known example.
+
+   - A spreadsheet arranges data in a grid of rows and columns, and a formula in one cell can calculate from the values in others and update automatically whenever they change.
+   - Its capabilities: arithmetic and statistical functions such as SUM, AVERAGE, COUNT, MIN and MAX; logical functions such as IF; lookup functions such as VLOOKUP and INDEX with MATCH; financial functions; sorting, filtering and pivot tables; and charts.
+   - Other spreadsheet programs are Google Sheets, LibreOffice Calc and Apple Numbers.
+   - For heavier numerical and scientific work, MATLAB, R and Python with NumPy are used instead, and for accounting, dedicated accounting software such as Tally or QuickBooks.
 5. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+
+   Answer: The grid of many cells in a spreadsheet program is called a worksheet, and each individual box in it is called a cell.
+
+   - Worksheet: the single sheet made up of rows and columns. In Excel it holds 1,048,576 rows and 16,384 columns, that is A to XFD.
+   - Cell: the intersection of one row and one column, identified by a cell reference such as A1, B5 or D10, where the letter is the column and the number is the row.
+   - Row: a horizontal line of cells, numbered 1, 2, 3 and so on.
+   - Column: a vertical line of cells, lettered A, B, C and so on.
+   - Range: a rectangular block of cells, written as A1:C10.
+   - Workbook: the whole file, which may contain many worksheets.
 6. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
+
+   Answer: The correct option is (c) Java.
+
+   - Java was the official language of Android development from the beginning, and the Android SDK, the framework classes and the great majority of existing Android code are written in it.
+   - Since 2019 Google has made Kotlin its preferred language for Android. Kotlin runs on the same Java Virtual Machine, interoperates fully with Java code, and is more concise and safer against null pointer errors, so a modern answer should mention it.
+   - C and C++ can be used through the Android NDK for performance critical parts such as games and signal processing, but not for building an ordinary application.
+   - iOS is an operating system, not a language; applications for it are written in Swift or Objective-C.
 7. **LOGO কি ধরনের প্রোগ্রাম?** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
+
+   Answer: LOGO is an educational programming language, designed to teach programming concepts to children.
+
+   - It was created in 1967 by Seymour Papert, Wally Feurzeig and Cynthia Solomon at MIT, and it is derived from LISP, so it is a functional and interpreted language.
+   - Its best known feature is turtle graphics: the learner directs a screen cursor called the turtle with simple commands such as `FORWARD 100`, `RIGHT 90` and `PENUP`, and the turtle draws as it moves. Geometry, angles, loops and procedures are learned by seeing them drawn.
+   - It teaches the fundamental ideas of programming — sequence, repetition with `REPEAT`, procedures with `TO ... END`, parameters and recursion — in a form a child can see immediately.
+   - Its educational philosophy is constructionism: children learn best by building something themselves and by debugging their own mistakes.
+   - Its descendants are Scratch and Blockly, which use the same idea with drag and drop blocks and are widely used in schools today, including in the Bangladesh ICT curriculum.
 8. **MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 867 (ET: BUET)]*
 
+
+   Answer: The IF function tests a condition and returns one value if it is true and another if it is false.
+
+   Syntax:
+   - `=IF(logical_test, value_if_true, value_if_false)`
+
+   Placing the result in D1 from the values in A1, B1 and C1:
+
+   ```
+   =IF(A1>B1, A1, B1)
+   ```
+   - This puts the larger of A1 and B1 into D1.
+
+   Nested IF, to find the largest of the three:
+
+   ```
+   =IF(AND(A1>=B1, A1>=C1), A1, IF(B1>=C1, B1, C1))
+   ```
+   - Read as: if A1 is the largest, take A1; otherwise compare B1 and C1 and take the larger.
+   - The same result is obtained far more simply with `=MAX(A1:C1)`.
+
+   Other common forms:
+   - Pass or fail on a total: `=IF(SUM(A1:C1)>=120, "Pass", "Fail")`
+   - Grade from a mark, with nested IF: `=IF(A1>=80, "A+", IF(A1>=70, "A", IF(A1>=60, "A-", IF(A1>=50, "B", "F"))))`
+   - Adding a condition: `=IF(AND(A1>50, B1>50), "Qualified", "Not qualified")`
+   - Either condition: `=IF(OR(A1>90, B1>90), "Excellent", "Ordinary")`
+   - Guarding against an error: `=IFERROR(A1/B1, "Division by zero")`
+
+   Points to note:
+   - The condition uses the comparison operators `=`, `>`, `<`, `>=`, `<=` and `<>`.
+   - Text must be enclosed in double quotation marks; numbers must not be.
+   - Up to 64 IF functions may be nested, but beyond three or four it becomes unreadable, and `IFS`, `VLOOKUP` or `CHOOSE` should be used instead.
+   - Every formula begins with `=`.
 9. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** *[41th BCS 2021 compact it 881 (ET: N/A)]*
 
+
+   Answer:
+
+   What software is:
+   - Software is the set of programs, procedures and associated data that tells a computer what to do. It is the intangible part of a computer system, as opposed to the hardware, which is the physical part.
+   - Hardware without software can do nothing at all; software gives the machine its purpose. Software cannot be touched, does not wear out, and is copied at almost no cost, but it can become obsolete and can contain defects.
+   - Its main categories are system software, application software and utility software.
+
+   System software:
+   - Software that manages and controls the hardware and provides the platform on which application software runs. It starts automatically and runs continuously in the background.
+   - Types and examples:
+   - Operating system: Windows, Linux, macOS, Android, iOS, Unix. It manages the processor, memory, files, devices and users.
+   - Device drivers: printer driver, graphics driver, network driver, which let the operating system talk to particular hardware.
+   - Firmware: the BIOS or UEFI held in ROM, which starts the machine.
+   - Language translators: compiler, interpreter, assembler and linker.
+   - Utility programs: antivirus, disk defragmenter, backup, file compression, disk cleanup.
+
+   Application software:
+   - Software written to perform a specific task for the user. It runs only when the user launches it, and it depends on the system software beneath it.
+   - Types and examples:
+   - General purpose packages: MS Word for word processing, MS Excel for spreadsheets, MS PowerPoint for presentations, MS Access for databases.
+   - Internet and communication: browsers such as Chrome and Firefox, email clients, Zoom, WhatsApp.
+   - Multimedia: VLC media player, Adobe Photoshop, Illustrator, video editors.
+   - Custom or bespoke software written for one organisation: a bank's core banking system, a hospital management system, an airline reservation system.
+   - Mobile applications: bKash, Nagad, ride sharing and delivery applications.
+
+   - The relationship in one line: system software runs the computer, and application software makes the computer do the user's work.
 10. **১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
+
+   Answer: Potrodut is the software developed for sending email in Bangla.
+
+   - It was developed in Bangladesh to allow email to be composed, sent and read in Bangla script at a time when Unicode support in mail clients was poor.
+   - Today the problem it solved has largely disappeared, because Unicode is supported everywhere: any ordinary mail service such as Gmail or Outlook handles Bangla directly, and Bangla is typed with the Avro or Bijoy keyboard.
+   - Related Bangla software worth naming: Bijoy for Bangla typing and fonts, Avro as the free Unicode Bangla keyboard, and Ekushey as the Bangla computing initiative. <!-- verify -->
 11. **Graphics Design এর চারটি Software এর নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
+
+   Answer: Four graphics design software packages:
+
+   - Adobe Photoshop: raster image editing, used for photo retouching, digital painting and web graphics.
+   - Adobe Illustrator: vector graphics, used for logos, icons and illustrations that must scale to any size without loss of quality.
+   - CorelDRAW: vector graphics and page layout, very widely used in Bangladesh for printing, banners and signage.
+   - Adobe InDesign: page layout and desktop publishing, used for books, magazines and brochures.
+   - Others that may be named: GIMP and Inkscape as free alternatives to Photoshop and Illustrator, Figma and Adobe XD for interface design, Canva for quick online design, and Adobe After Effects and Premiere Pro for motion graphics and video.
 12. **Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadsheet এর একেকটা ঘরকে _____ বলে? (iv) Storage device এর মূল folder এর নাম _____? (v) Database এর data file গুলোর তালিকাকে _____ বলা হয়?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
+
+
+   Answer:
+
+   (i) How to open MS Word from the Run command:
+   - Press Windows key + R to open the Run box and type `winword`, then press Enter.
+   - The related commands are `excel` for MS Excel, `powerpnt` for PowerPoint, `msaccess` for Access, `notepad`, `mspaint`, `calc`, `cmd` and `control` for the Control Panel.
+
+   (ii) Macros are used in MS Word, Excel and spreadsheets for the convenience of automation:
+   - A macro records a sequence of actions or holds a small VBA program, so that a repetitive task is performed with a single click or keystroke. It saves time, removes the errors of manual repetition and makes a complex task reproducible.
+
+   (iii) Each box of a spreadsheet is called a cell:
+   - It is the intersection of a row and a column, identified by a reference such as A1 or D10. A rectangular block of cells is a range, the whole sheet is a worksheet, and the whole file is a workbook.
+
+   (iv) The main folder of a storage device is called the root folder, or root directory:
+   - It is the top level of the file system, written as `C:\` on Windows and `/` on Linux. Every other folder and file is contained within it, directly or indirectly.
+
+   (v) The list of the data files of a database is called the data dictionary, also known as the system catalog:
+   - It is the metadata repository: it holds the definitions of the tables, columns, data types, indexes, views, constraints, users and privileges. It is data about data, and the DBMS itself consults it whenever a query is processed.
 
 ## Blockchain & Emerging Technologies (7)
 
