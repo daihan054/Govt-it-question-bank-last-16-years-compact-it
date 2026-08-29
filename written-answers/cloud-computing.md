@@ -294,15 +294,177 @@
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+
+   Answer:
+
+   What cloud computing is:
+
+   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - The five essential characteristics defined by NIST are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+
+   Why it is used:
+   - To avoid the large capital cost and the long lead time of buying and installing physical servers.
+   - To scale capacity up and down quickly with demand, paying only for what is used.
+   - To reach data and applications from anywhere, on any device.
+   - To obtain reliability, backup and disaster recovery that a single organisation could not afford to build.
+   - To hand over patching, hardware maintenance and upgrades to the provider, so the internal team can work on the business instead.
+   - To use advanced services such as analytics and machine learning without building the infrastructure for them.
+
+   Cloud storage vs traditional storage:
+
+   | Point | Cloud storage | Traditional, that is local or on-premises storage |
+   |---|---|---|
+   | Location | On the provider's servers, reached over the Internet | On the organisation's own disks, servers, NAS or SAN |
+   | Cost model | Operating expense, pay per GB per month | Capital expense, paid up front for the hardware |
+   | Capacity | Practically unlimited, expanded instantly | Fixed by the hardware bought; expansion needs procurement |
+   | Access | From anywhere with an Internet connection | Normally only from within the local network |
+   | Maintenance | Handled entirely by the provider | The organisation's own responsibility |
+   | Backup and redundancy | Built in, replicated across zones and regions | Must be designed, bought and operated separately |
+   | Speed | Limited by the Internet link | Very fast, limited only by the local bus or LAN |
+   | Availability without network | None | Full |
+   | Security and control | Shared responsibility; data is on someone else's hardware | Complete physical and logical control |
+   | Examples | Amazon S3, Google Drive, Dropbox, Azure Blob Storage | Internal hard disk, USB drive, NAS, SAN, tape library |
 2. **What is Cloud Computing? What are its characteristics? Briefly describe the types of cloud computing.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
+
+   Answer:
+
+   What cloud computing is:
+
+   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - The five essential characteristics defined by NIST are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+
+   Essential characteristics, as defined by NIST:
+   - On demand self service: the user provisions computing resources automatically through a portal or an API, without any human interaction with the provider.
+   - Broad network access: the service is available over the network and reachable from any standard client, whether a phone, a tablet or a workstation.
+   - Resource pooling: the provider's resources are pooled to serve many customers using a multi-tenant model, with resources assigned and reassigned dynamically according to demand.
+   - Rapid elasticity: capacity can be scaled out and in quickly, and to the customer the available resources appear unlimited.
+   - Measured service: usage is metered and billed, so the customer pays only for what is consumed, which also gives transparency to both sides.
+
+   Additional practical characteristics: virtualisation, high availability, automation, self healing and geographic distribution.
+
+   Deployment types:
+   - Public cloud: infrastructure owned by a provider and shared by many customers over the Internet. Cheapest, most scalable, least control. Examples: AWS, Azure, Google Cloud.
+   - Private cloud: infrastructure dedicated to one organisation, either on its own premises or hosted. Highest control, security and compliance, but highest cost.
+   - Hybrid cloud: a combination of public and private, with data and applications moving between them. Sensitive data is kept private while variable workloads burst into the public cloud. This is what most banks use.
+   - Community cloud: shared by several organisations with a common concern, such as a group of government agencies or hospitals, sharing the cost and the compliance framework.
+
+   Service types: IaaS, PaaS and SaaS, and now also FaaS or serverless.
 3. **Explain cloud computing and evaluate its advantages and disadvantages.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer:
+
+   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - The five essential characteristics defined by NIST are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+
+   Advantages:
+   - Low initial cost: no capital expenditure on servers, data centre space, cooling or power; the cost becomes a monthly operating expense.
+   - Scalability and elasticity: resources can be added or removed within minutes to match demand, so a sudden peak is survivable and quiet periods cost nothing extra.
+   - Accessibility: reachable from anywhere with an Internet connection and from any device, which supports remote and distributed work.
+   - Reliability and disaster recovery: providers replicate data across availability zones and regions and offer service level agreements of 99.9 percent or better.
+   - Automatic updates and maintenance: patching, hardware replacement and upgrades are the provider's responsibility.
+   - Speed of deployment: a server that once took weeks to procure is running in minutes.
+   - Collaboration: many users can work on the same document or dataset at the same time.
+   - Access to advanced services such as machine learning, big data analytics and content delivery networks that a small organisation could never build itself.
+
+   Disadvantages:
+   - Dependence on the Internet: if the connection fails, nothing works, which is a real constraint where bandwidth is expensive or unreliable.
+   - Security and privacy concerns: the data resides on someone else's hardware, so confidentiality depends on the provider's controls and on correct configuration by the customer.
+   - Data sovereignty and legal compliance: many countries, including Bangladesh for banking data, require certain data to remain within the national boundary.
+   - Limited control and customisation, particularly in SaaS, where the customer cannot change how the software behaves.
+   - Vendor lock-in: proprietary services and data transfer charges make later migration costly and difficult.
+   - Long term cost: for a steady workload running continuously, owning the hardware can be cheaper over several years.
+   - Downtime risk: an outage at the provider affects every customer at once and the customer can only wait.
+   - Hidden charges, especially for outbound data transfer, and the need for staff with new skills.
+
+   - Evaluation: for a startup or for any workload with variable demand, the advantages are decisive, because the cost and the delay of owning hardware would be prohibitive. For a large organisation with a steady workload and strict data residency rules, such as a central bank, a private or hybrid cloud is the more sensible choice, keeping regulated data in-house while using the public cloud for elastic and non-sensitive work.
 4. **(খ) Cloud computing কী? উহার বৈশিষ্ট্য ও সুবিধা বর্ণনা করুন ।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 616 (ET: N/A)]*
 
+
+   Answer:
+
+   Cloud computing ki:
+   - Cloud computing holo Internet-er madhome computing seba — server, storage, database, networking, software ar analytics — chahida onujayi bhara neoa, nijer physical hardware kene chalanor poribote.
+   - Jotota byabohar kora hoy totota-i taka deoa hoy, tai eta pay as you go model.
+
+   Boishishtho (characteristics):
+   - On demand self service: byabaharkari nijei portal ba API diye resource nite pare, provider-er kono lok-er dorkar hoy na.
+   - Broad network access: je kono standard device theke network-er madhome pawa jay.
+   - Resource pooling: provider-er resource multi-tenant model-e onek grahok-er modhye bhag kore deoa hoy ebong chahida onujayi punorbonton hoy.
+   - Rapid elasticity: kichukhon-er modhye khomota barano ba komano jay, ar grahok-er kache resource oshim mone hoy.
+   - Measured service: byabohar mapa hoy ar sei onujayi bill hoy, tai duipokkher jonoi ta sposhto.
+   - Ei sathe virtualization, uchcho nirbhorjogyota, automation ar bhougolik bistar.
+
+   Shubidha:
+   - Prathomik binoyog prayo lage na; khoroch masik operating expense hoye jay.
+   - Chahida onujayi kichukhon-er modhye resource barano-komano jay.
+   - Je kono jaiga theke, je kono device theke access kora jay.
+   - Provider ekadhik region-e data replicate kore, tai backup ar disaster recovery built-in.
+   - Patch, upgrade ar hardware maintenance provider-er dayitto.
+   - Druto deployment — koyek minute-e server chalu.
+   - Onek byabaharkari ekoi file-e ekshathe kaj korte pare.
+   - Machine learning ar big data analytics-er moto unnoto seba sohoje pawa jay.
+
+   Oshubidha, jeta uttor-e ullekh korle bhalo:
+   - Internet-er upor sompurno nirbhorota, nirapotta ar data sovereignty niye udbeg, sīmito niyontron, vendor lock-in, ar dirghomeyade khoroch beshi hote para.
 5. **What is Cloud Computing? Write its adventages and Disadventages?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
+
+   Answer:
+
+   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - The five essential characteristics defined by NIST are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+
+   Advantages:
+   - Low initial cost: no capital expenditure on servers, data centre space, cooling or power; the cost becomes a monthly operating expense.
+   - Scalability and elasticity: resources can be added or removed within minutes to match demand, so a sudden peak is survivable and quiet periods cost nothing extra.
+   - Accessibility: reachable from anywhere with an Internet connection and from any device, which supports remote and distributed work.
+   - Reliability and disaster recovery: providers replicate data across availability zones and regions and offer service level agreements of 99.9 percent or better.
+   - Automatic updates and maintenance: patching, hardware replacement and upgrades are the provider's responsibility.
+   - Speed of deployment: a server that once took weeks to procure is running in minutes.
+   - Collaboration: many users can work on the same document or dataset at the same time.
+   - Access to advanced services such as machine learning, big data analytics and content delivery networks that a small organisation could never build itself.
+
+   Disadvantages:
+   - Dependence on the Internet: if the connection fails, nothing works, which is a real constraint where bandwidth is expensive or unreliable.
+   - Security and privacy concerns: the data resides on someone else's hardware, so confidentiality depends on the provider's controls and on correct configuration by the customer.
+   - Data sovereignty and legal compliance: many countries, including Bangladesh for banking data, require certain data to remain within the national boundary.
+   - Limited control and customisation, particularly in SaaS, where the customer cannot change how the software behaves.
+   - Vendor lock-in: proprietary services and data transfer charges make later migration costly and difficult.
+   - Long term cost: for a steady workload running continuously, owning the hardware can be cheaper over several years.
+   - Downtime risk: an outage at the provider affects every customer at once and the customer can only wait.
+   - Hidden charges, especially for outbound data transfer, and the need for staff with new skills.
 6. **Describe the cloud base database briefly.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
+
+
+   Answer: A cloud based database is a database that runs on cloud infrastructure and is accessed over the Internet, with the provider taking responsibility for the underlying servers, storage and, in the managed form, for the database software itself.
+
+   Two forms:
+   - Self managed on IaaS: the customer installs MySQL, PostgreSQL or Oracle on a cloud virtual machine and administers it. Full control, but patching, backup and scaling remain the customer's work.
+   - Managed database as a service, DBaaS: the provider runs the engine as well, and handles provisioning, patching, backup, replication, failover and scaling. Examples: Amazon RDS and Aurora, Azure SQL Database, Google Cloud SQL, MongoDB Atlas, Amazon DynamoDB and Firebase.
+
+   Characteristics:
+   - Elastic scaling: storage and compute can be increased with a setting change, and read replicas can be added to spread the query load.
+   - High availability: automatic replication to a standby in another availability zone, with automatic failover in seconds.
+   - Automated backup and point in time recovery, typically to any second within a retention window of days or weeks.
+   - Pay per use billing, based on instance size, storage and I/O.
+   - Security: encryption at rest and in transit, IAM based access control, VPC isolation and audit logging.
+   - Both relational and NoSQL engines are offered, as well as data warehouse services such as Amazon Redshift, Google BigQuery and Snowflake.
+
+   Advantages:
+   - No hardware to buy or maintain, and no database administrator needed for routine work.
+   - Fast provisioning, in minutes rather than weeks.
+   - Built in redundancy and disaster recovery across regions.
+   - Global reach, with replicas placed near the users.
+   - Cost matches usage, so a small application pays very little.
+
+   Disadvantages:
+   - Latency depends on the network link, so a chatty application far from the region suffers.
+   - Less control: superuser access, custom extensions and OS level tuning may not be permitted.
+   - Vendor lock-in, particularly with proprietary engines such as Aurora or DynamoDB, and outbound data transfer charges make migration expensive.
+   - Compliance and data residency limits, which matter for banking and government data in Bangladesh.
+   - Cost can rise sharply and unpredictably at large scale.
 
 ## Virtualization & Containers (VM vs Container) (6)
 
@@ -311,15 +473,159 @@ Approach A: Deploy each service in a separate Virtual Machine.
 Approach B: Deploy each service in a separate Container.
 A submarine cable connects Bangladesh to an international data center. At the cable landing station, a server hosts 4 VMs, while another server runs 4 containers. Which one and why? [BSCCPL AME 21-08-2026 (BUET)]
 
+
+   Answer:
+
+   The two approaches compared:
+
+   | Point | Approach A, Virtual Machines | Approach B, Containers |
+   |---|---|---|
+   | What is virtualised | The whole hardware, so each VM runs a complete guest OS | The operating system, so all containers share the host kernel |
+   | Size | Gigabytes per VM | Megabytes per container |
+   | Boot time | Minutes | Seconds or less |
+   | Overhead | High: each VM needs its own OS, kernel and memory | Very low: only the application and its libraries |
+   | Density on one server | Few, perhaps 4 to 10 | Many, dozens to hundreds |
+   | Isolation | Strong, hardware level, enforced by the hypervisor | Weaker, process level, shared kernel |
+   | Security blast radius | A kernel compromise affects only that VM | A host kernel exploit can affect every container |
+   | Different operating systems | Yes, Windows and Linux can run side by side | No, all containers share the host kernel |
+   | Portability | Heavy image, but fully self contained | Very light and portable, runs identically anywhere |
+   | Typical management | VMware vSphere, KVM, Hyper-V | Docker, Kubernetes, Podman |
+
+   Which one and why, for a submarine cable landing station:
+   - The recommendation is a hybrid, and if a single choice is demanded it is Virtual Machines for this specific environment.
+   - Reason 1, criticality and isolation: a cable landing station carries the international connectivity of a whole country. DNS and network management are the most security sensitive services on the site. Hardware level isolation by a hypervisor is far stronger than shared kernel isolation, so a compromise of the web service cannot reach the DNS or the network management system.
+   - Reason 2, regulatory and audit requirements: national critical infrastructure is normally required to demonstrate strong workload separation, and VMs satisfy an auditor more readily than containers on a shared kernel.
+   - Reason 3, mixed operating systems: network management and monitoring products in this sector are often supplied as appliances or as Windows software, which containers on a Linux host cannot run.
+   - Reason 4, stability over density: only five services are involved, so the density advantage of containers is not needed, and the resource overhead of five VMs on one server is entirely affordable.
+   - Where containers are the better answer: for the monitoring and web services, which change often and must be redeployed frequently, containers give much faster deployment, easy rollback and consistent environments.
+   - Practical design actually used in industry: run VMs as the base isolation layer, one VM per security zone, and run containers inside those VMs for the stateless services. This gives the strong isolation of virtualisation and the agility of containers at the same time.
 2. **What is Virtualization? Write down the benefits of Virtualization. Write down the top 5 virtual platform software.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
+
+   Answer:
+
+   What virtualisation is:
+   - Virtualisation is the creation of a software based, that is virtual, version of a physical resource such as a server, storage device, network or operating system, so that one physical resource can be presented as several independent logical ones.
+   - A hypervisor sits between the hardware and the virtual machines and allocates CPU, memory, storage and network to each. Type 1 or bare metal hypervisors run directly on the hardware, and Type 2 hypervisors run on top of a host operating system.
+   - Types: server virtualisation, storage virtualisation, network virtualisation including SDN and NFV, desktop virtualisation and application virtualisation.
+
+   Benefits of virtualisation:
+
+   - Server consolidation: many virtual machines run on one physical server, so utilisation rises from a typical 10 to 15 percent to 70 or 80 percent and far fewer machines are needed.
+   - Cost saving: less hardware means less capital expenditure, less rack space, less power and less cooling.
+   - Isolation: each VM is separated from the others, so a crash or a compromise in one does not affect the rest.
+   - Rapid provisioning: a new server is created from a template in minutes rather than weeks.
+   - Snapshots and rollback: the entire state of a machine can be saved before a risky change and restored instantly if it fails.
+   - Live migration: a running VM can be moved to another host with no downtime, allowing hardware maintenance during working hours.
+   - High availability and disaster recovery: VMs restart automatically on another host if one fails, and replication to a second site is straightforward.
+   - Hardware independence: a VM is just a set of files, so it runs on any host with the same hypervisor.
+   - Legacy support: an old operating system that no longer runs on modern hardware can continue inside a VM.
+   - Excellent for testing and development, since several operating systems can be tried on one machine and reset at will.
+
+   Top five virtual platform software:
+   - VMware vSphere with ESXi, the enterprise market leader, a Type 1 hypervisor.
+   - Microsoft Hyper-V, built into Windows Server, a Type 1 hypervisor.
+   - KVM, Kernel-based Virtual Machine, the open source hypervisor built into the Linux kernel and the basis of most public clouds and of Red Hat and Proxmox.
+   - Citrix Hypervisor, formerly XenServer, based on Xen and widely used for virtual desktop infrastructure.
+   - Oracle VirtualBox, a free Type 2 hypervisor, used mainly for development and testing; VMware Workstation is its commercial equivalent.
 3. **What is Server Virtualization? Explain with example of its.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 551 (ET: BIBM)]*
 
+
+   Answer:
+
+   Server virtualisation:
+   - Server virtualisation is the technique of dividing one physical server into several isolated virtual servers, each running its own operating system and applications as if it were a separate machine.
+   - A hypervisor sits between the hardware and the virtual machines, allocating CPU cores, memory, disk and network to each and keeping them isolated from one another.
+   - Type 1, bare metal, hypervisors such as VMware ESXi, Microsoft Hyper-V and KVM run directly on the hardware and are used in production. Type 2 hypervisors such as VirtualBox and VMware Workstation run on top of a host operating system and are used for development.
+
+   Example:
+   - An office has one physical server with 32 CPU cores, 128 GB of RAM and 8 TB of storage, which as a single machine would run at perhaps 10 percent utilisation.
+   - VMware ESXi is installed on it, and four virtual machines are created: a Windows Server domain controller with 4 cores and 16 GB, a Linux web server with 8 cores and 32 GB, a database server with 12 cores and 48 GB, and a test server with 4 cores and 16 GB.
+   - Each behaves as an independent server with its own IP address and its own administrator, users cannot tell the difference, and yet only one physical box, one rack unit and one power feed are used instead of four.
+   - If the database server needs more memory, it is given more with a configuration change rather than a hardware purchase. If the physical host must be serviced, the running VMs are migrated live to another host with no downtime.
+
+   Why it matters:
+   - Utilisation rises from about 10 percent to 70 or 80 percent, hardware, power, cooling and rack space costs fall sharply, provisioning takes minutes instead of weeks, and snapshots make risky changes safely reversible.
+   - It is also the foundation of cloud computing: every IaaS offering is server virtualisation sold by the hour.
 4. **How virtualization help physical server.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 566 (ET: N/A)]*
 
+
+   Answer: Virtualisation helps a physical server in the following ways.
+
+   - It raises utilisation dramatically. A dedicated physical server typically runs at only 10 to 15 percent of its capacity, because it is sized for peak load and runs one application. Virtualisation lets several workloads share it, taking utilisation to 70 or 80 percent, so the hardware already bought does far more work.
+   - It consolidates many servers into one. Ten lightly loaded physical machines become ten virtual machines on one host, which cuts hardware, rack space, power, cooling and maintenance cost by roughly an order of magnitude.
+   - It allows dynamic resource allocation. CPU, memory and disk can be added to or taken from a workload with a configuration change, without opening the case or buying anything.
+   - It provides isolation. Each VM has its own operating system, so one application crashing or being compromised does not affect the others sharing the same physical server, which was the whole reason for having one server per application in the first place.
+   - It makes provisioning instant. A new server is cloned from a template in minutes rather than procured over weeks.
+   - It makes the workload independent of the hardware. A VM is a set of files, so it can be moved to a newer server, or to a different vendor's server, without reinstalling anything.
+   - It enables live migration, so a running workload moves to another host while the physical server is serviced or upgraded, with no downtime at all.
+   - It gives snapshots and instant rollback, so an upgrade or a patch can be reversed in seconds if it goes wrong.
+   - It improves availability. If the physical server fails, its VMs are restarted automatically on another host in the cluster.
+   - It simplifies backup and disaster recovery, since a whole server can be replicated to a second site as a file.
+   - It extends the life of legacy applications, because an old operating system that will not install on modern hardware still runs happily inside a VM.
 5. **Define a virtual machine with a neat diagram, explain the working of VM. What are the benefits of a VM?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 442 (ET: BIBM)]*
 
+
+   Answer:
+
+   Definition:
+   - A virtual machine is a software emulation of a physical computer. It has its own virtual CPU, memory, disk and network interface, runs its own complete guest operating system, and behaves exactly as an independent machine, although it is actually sharing the hardware of a physical host with other virtual machines.
+
+   Diagram:
+
+   ```mermaid
+   graph TD
+       A["Physical Hardware: CPU, RAM, Disk, NIC"] --> B["Hypervisor: VMware ESXi, KVM, Hyper-V"]
+       B --> C["VM 1: Guest OS Linux + Apps"]
+       B --> D["VM 2: Guest OS Windows + Apps"]
+       B --> E["VM 3: Guest OS Linux + Database"]
+   ```
+
+   Working of a VM:
+   - The hypervisor sits between the physical hardware and the virtual machines and owns all the real resources.
+   - When a VM is created, the hypervisor allocates it a share of CPU cores, a block of memory, a virtual disk file and a virtual network adapter.
+   - The guest operating system inside the VM believes it is talking to real hardware. When it issues a privileged instruction or an I/O request, the hypervisor intercepts it, translates it to the real hardware and returns the result. Modern CPUs help this directly with Intel VT-x and AMD-V, so the overhead is small.
+   - The hypervisor schedules the virtual CPUs of all the VMs onto the physical cores, maps guest memory pages to host memory, and multiplexes the disk and network.
+   - Each VM is kept in its own memory space, so it cannot read or affect another VM. From outside, a VM is simply a set of files, which is why it can be copied, moved, snapshotted and restored.
+   - Type 1 hypervisors run straight on the hardware and are used in production; Type 2 hypervisors run inside a host operating system and are used on desktops.
+
+   Benefits of a VM:
+
+   - Server consolidation: many virtual machines run on one physical server, so utilisation rises from a typical 10 to 15 percent to 70 or 80 percent and far fewer machines are needed.
+   - Cost saving: less hardware means less capital expenditure, less rack space, less power and less cooling.
+   - Isolation: each VM is separated from the others, so a crash or a compromise in one does not affect the rest.
+   - Rapid provisioning: a new server is created from a template in minutes rather than weeks.
+   - Snapshots and rollback: the entire state of a machine can be saved before a risky change and restored instantly if it fails.
+   - Live migration: a running VM can be moved to another host with no downtime, allowing hardware maintenance during working hours.
+   - High availability and disaster recovery: VMs restart automatically on another host if one fails, and replication to a second site is straightforward.
+   - Hardware independence: a VM is just a set of files, so it runs on any host with the same hypervisor.
+   - Legacy support: an old operating system that no longer runs on modern hardware can continue inside a VM.
+   - Excellent for testing and development, since several operating systems can be tried on one machine and reset at will.
 6. **What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
+
+
+   Answer:
+
+   What Docker is:
+   - Docker is a containerisation platform that packages an application together with all its dependencies — libraries, runtime, configuration files and environment variables — into a single portable unit called a container image.
+   - Containers share the host operating system kernel rather than each carrying a full guest OS, so they are megabytes rather than gigabytes in size and start in seconds.
+   - Key concepts: the Dockerfile describes how to build the image, the image is the immutable package, the container is a running instance of it, and Docker Hub is the registry where images are stored.
+
+   Problems when an application is moved from a Windows server to a Linux server:
+   - Different system libraries and runtimes: a program built against the Windows API, the .NET Framework or specific DLLs will not run on Linux at all.
+   - Path and file system differences: backslash versus forward slash, drive letters versus a single root, and Linux is case sensitive while Windows is not, so `Config.xml` and `config.xml` are different files.
+   - Line ending differences, CRLF against LF, which break scripts and configuration parsing.
+   - Permissions and user model: NTFS ACLs against POSIX ownership and permission bits, so file access fails.
+   - Service management differs: Windows Services against systemd, so the startup mechanism must be rewritten.
+   - Registry dependence: any setting stored in the Windows registry has no equivalent on Linux.
+   - Environment differences: different versions of the runtime, the database client, OpenSSL and other libraries, which produces the classic "it works on my machine" failure.
+   - Different default character encodings and time zone handling.
+
+   Can Docker solve it?
+   - Partly, and this is the honest answer the examiner is looking for.
+   - What Docker does solve: the environment and dependency problem completely. Because the image contains the exact runtime, libraries and configuration the application needs, the container behaves identically on any host that runs Docker. Path, permission and library version mismatches disappear, deployment becomes one command, and the same image runs on the developer's laptop, in test and in production.
+   - What Docker does not solve: the operating system boundary itself. Containers share the host kernel, so a Windows container cannot run on a Linux host and a Linux container cannot run natively on a Windows host. If the application genuinely depends on the Windows API or the .NET Framework, packaging it in a Linux container is impossible; the code has to be ported, for example to .NET Core or .NET 5 and later, which is cross platform.
+   - The practical routes are therefore: port the application to a cross platform runtime and then containerise it, which is the correct long term solution; or run it in a Windows container on a Windows host; or, if porting is not possible, run the original Windows server as a virtual machine on the Linux host, since a VM does carry its own kernel and can therefore cross the operating system boundary that a container cannot.
 
 ## Cluster, Grid & Distributed Computing (3)
 
