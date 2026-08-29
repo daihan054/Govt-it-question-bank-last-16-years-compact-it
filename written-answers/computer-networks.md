@@ -140,46 +140,43 @@
    - /23: host bits = 9, so 2⁹ = 512 addresses and 510 usable. The block spans two whole third octets, 192.168.0.x and 192.168.1.x.
    - /24: host bits = 8, so 256 addresses and 254 usable.
 5. (a) IP address এবং MAC/MU এর পার্থক্য লেখ।
-   (b) Classfull এবং Classless IP address এর মধ্যে পার্থক্য লেখ।
-   (c) 11000001 00001001 00001010 00010101 এই IP এর Class লিখ। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
 
    Answer:
 
-   (a) IP address ar MAC address-er parthokko:
+   (a) Difference between IP address and MAC address:
 
-   | Bishoy | IP address | MAC address |
+   | Point | IP address | MAC address |
    |---|---|---|
    | Layer | Network layer, layer 3 | Data link layer, layer 2 |
-   | Doirghyo | IPv4 32 bit, IPv6 128 bit | 48 bit |
+   | Length | 32 bits for IPv4, 128 bits for IPv6 | 48 bits |
    | Format | 192.168.1.10 | 00:1A:2B:3C:4D:5E |
-   | Ke dey | Administrator ba DHCP | Prostutkarok, NIC-e sthayi bhabe lekha |
-   | Dhoron | Logical, poriborton-shil | Physical, sthayi |
-   | Kathamo | Hierarchical, network part + host part | Flat, prothom 24 bit vendor OUI |
-   | Elaka | Sompurno Internet jure end-to-end | Shudhu local network-er bhitore |
-   | Router forward kore? | Ha | Na |
-   | Path-e bodlay? | Na, NAT chara | Ha, protita hop-e |
-   | Ke ber kore | DNS name theke IP | ARP IP theke MAC |
+   | Assigned by | The administrator or DHCP | The manufacturer, burned into the NIC |
+   | Nature | Logical and changeable | Physical and permanent |
+   | Structure | Hierarchical, network part plus host part | Flat, the first 24 bits are the vendor OUI |
+   | Scope | End to end across the whole Internet | Within one local network only |
+   | Forwarded by a router | Yes | No |
+   | Changes in transit | No, except under NAT | Yes, rewritten at every hop |
+   | Resolved by | DNS, from a name to an address | ARP, from an IP address to a MAC address |
 
-   (b) Classful ar Classless IP address-er parthokko:
+   (b) Difference between classful and classless IP addressing:
 
-   | Bishoy | Classful | Classless (CIDR) |
+   | Point | Classful | Classless, that is CIDR |
    |---|---|---|
-   | Bhag | Fixed Class A, B, C, D, E | Kono class nei, je kono prefix |
-   | Mask | Default fixed mask: /8, /16, /24 | Je kono prefix, /1 theke /32 |
-   | Notation | Shudhu IP address | IP address-er sathe /n prefix |
-   | Address opochoy | Onek beshi; ekti class B-te 65534 host, ja kono protishthan-i puro byabohar kore na | Onek kom; joto dorkar totota-i deoa jay |
-   | Subnetting | Sīmito | VLSM diye je kono akare bhaga jay |
-   | Route summarization | Somvob noy | Somvob, tai routing table choto thake |
-   | Routing protocol | RIPv1, IGRP | RIPv2, OSPF, EIGRP, BGP |
-   | Bortoman obostha | Purono, 1993 sale bad deoa hoyeche | Ekhon eta-i byabohrito |
+   | Division | Fixed Class A, B, C, D and E | No classes at all |
+   | Mask | A fixed default mask, /8, /16 or /24 | Any prefix from /1 to /32 |
+   | Notation | The IP address alone | The IP address written with a /n prefix |
+   | Address waste | Very high, since only three sizes exist | Very low, since a block of the required size is given |
+   | VLSM | Not supported | Supported, so different subnet sizes may be used in one network |
+   | Route summarisation | Not possible | Possible, so routing tables stay small |
+   | Routing protocols | RIPv1, IGRP | RIPv2, OSPF, EIGRP, BGP |
+   | Status | Obsolete, replaced in 1993 | The system in use today |
 
-   (c) Class nirnoy:
+   (c) Class of the given IP address:
    - Binary: 11000001 00001001 00001010 00010101
-   - Prothom octet 11000001 = 128 + 64 + 1 = 193
-   - Dotted decimal: 193.9.10.21
-   - Prothom octet 193, ja 192 theke 223-er modhye, ar binary-te shuru hoy 110 diye.
-   - Uttor: eta Class C IP address.
+   - First octet 11000001 = 128 + 64 + 1 = 193
+   - In dotted decimal the address is 193.9.10.21
+   - The first octet 193 lies between 192 and 223, and in binary it begins with 110.
+   - Answer: this is a Class C IP address.
 6. **A bank has the network block 192.168.10.0/24. The IT manager wants to divide this into 4 equal subnets.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 (a) How many bits do you need to borrow to make 4 subnets?
 (b) What is the new Subnet Mask in dotted-decimal format?
@@ -758,21 +755,20 @@
    - Smaller routing tables, because contiguous subnets can be summarised into a single advertised prefix.
 34. **Local loopback address কি? কোন কমান্ড ব্যবহার করে কানেক্টিভিটি টেস্ট করা হয়?** *[BTCL - JAM ( Technical) 05.04.2024 compact it 383 (ET: BUET)]*
 
-
    Answer:
 
    Local loopback address:
-   - Loopback address holo 127.0.0.1, ar sompurno block 127.0.0.0/8 ei kajer jonno songrokkhito.
-   - Ei address diye kono packet network card ba cable porjonto jay na; TCP/IP stack-i ta ferot pathiye dey. Tai eta diye nijer machine-er TCP/IP stack thik ache kina ta jacha kora jay.
-   - Er domain name `localhost`, ar IPv6-te eta `::1`.
-   - Byabohar: nijer computer-e chola server test kora, jemon `http://127.0.0.1:8080`, ba software development-e local database-e connect kora.
+   - The loopback address is 127.0.0.1, and the whole block 127.0.0.0/8 is reserved for this purpose.
+   - A packet sent to it never reaches the network card or the cable; the TCP/IP stack loops it straight back. It therefore tests the machine's own protocol stack rather than any external connectivity.
+   - Its hostname is `localhost`, and the IPv6 equivalent is `::1`.
+   - Uses: connecting to a server running on the same machine, for example `http://127.0.0.1:8080`, and connecting to a local database during development.
 
-   Connectivity test-er command:
-   - `ping 127.0.0.1` — nijer TCP/IP stack thik ache kina dekhe.
-   - `ping <gateway IP>` — router porjonto jogajog ache kina dekhe.
-   - `ping 8.8.8.8` — Internet porjonto jogajog ache kina dekhe.
-   - `ping www.google.com` — DNS thik kaj korche kina dekhe.
-   - Onnanno kaje: `tracert` ba `traceroute` poth dekhay, `ipconfig` ba `ifconfig` nijer address dekhay, `nslookup` DNS jachai kore, ar `netstat` chalu connection dekhay.
+   Command used to test connectivity:
+   - `ping 127.0.0.1` checks that the local TCP/IP stack is working.
+   - `ping <gateway IP>` checks that the router is reachable.
+   - `ping 8.8.8.8` checks that the Internet is reachable.
+   - `ping www.google.com` checks that DNS resolution is working.
+   - Related tools: `tracert` or `traceroute` shows the path, `ipconfig` or `ifconfig` shows the local address, `nslookup` tests DNS, and `netstat` lists active connections.
 35. **Given IP address 192.168. 2.0/ 24; Determine to network address and broadcast address.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
 
@@ -856,37 +852,34 @@
 
    - The point the examiner is checking: the same IP address can belong to different networks depending on the mask, so the mask must always be applied before any conclusion is drawn. Interfaces 1 and 2 look alike but are on different networks, because the /25 mask splits the block at .128. <!-- verify -->
 40. **(খ) Classful এবং Classless IP address এর পার্থক্য কী? নিচের IP গুলোর Class নির্ণয় করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-i) 00000001 00001011 00001011 11101111
-ii) 211.10.15.4
-
 
    Answer:
 
-   Classful ar Classless IP address-er parthokko:
+   Difference between classful and classless IP addressing:
 
-   | Bishoy | Classful | Classless (CIDR) |
+   | Point | Classful | Classless, that is CIDR |
    |---|---|---|
-   | Bhag | Fixed Class A, B, C, D, E | Kono class nei |
-   | Mask | Default fixed: /8, /16, /24 | Je kono prefix, /1 theke /32 |
-   | Notation | Shudhu IP address lekha hoy | IP-r sathe /n prefix lekha hoy |
-   | Address opochoy | Onek beshi, karon matro tinti akar ache | Onek kom, joto dorkar totota deoa jay |
-   | VLSM | Somorthon kore na | Kore, tai ek network-e bhinno akar-er subnet somvob |
-   | Summarization | Somvob noy | Somvob, tai routing table choto thake |
-   | Routing protocol | RIPv1, IGRP | RIPv2, OSPF, EIGRP, BGP |
-   | Obostha | 1993 sale bad deoa hoyeche | Bortomane eta-i byabohrito |
+   | Division | Fixed Class A, B, C, D and E | No classes at all |
+   | Mask | A fixed default mask, /8, /16 or /24 | Any prefix from /1 to /32 |
+   | Notation | The IP address alone | The IP address written with a /n prefix |
+   | Address waste | Very high, since only three sizes exist | Very low, since a block of the required size is given |
+   | VLSM | Not supported | Supported, so different subnet sizes may be used in one network |
+   | Route summarisation | Not possible | Possible, so routing tables stay small |
+   | Routing protocols | RIPv1, IGRP | RIPv2, OSPF, EIGRP, BGP |
+   | Status | Obsolete, replaced in 1993 | The system in use today |
 
-   Diya deoa IP gulo-r Class:
+   Class of the given IP addresses:
 
    (i) 00000001 00001011 00001011 11101111
-   - Prothom octet 00000001 = 1
-   - Dwitiyo octet 00001011 = 11, tritiyo 00001011 = 11, chaturtho 11101111 = 239
-   - Dotted decimal: 1.11.11.239
-   - Prothom octet 1, ja 1 theke 126-er modhye, ar binary-te shuru hoy 0 diye.
-   - Uttor: Class A
+   - First octet 00000001 = 1
+   - Second octet 00001011 = 11, third octet 00001011 = 11, fourth octet 11101111 = 239
+   - In dotted decimal the address is 1.11.11.239
+   - The first octet 1 lies between 1 and 126, and in binary it begins with 0.
+   - Answer: Class A
 
    (ii) 211.10.15.4
-   - Prothom octet 211, ja 192 theke 223-er modhye.
-   - Uttor: Class C
+   - The first octet 211 lies between 192 and 223.
+   - Answer: Class C
 41. **6.10 An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
 
@@ -1456,29 +1449,28 @@ ii) 211.10.15.4
    - The first usable host is 192.168.10.1, and the network address is 192.168.10.0.
 69. **(ii) CIDR কী? 192.168.100.9/26 IP address থেকে (a) Total subnets (b) Block size (c) Valid Hosts (d) Total hosts বের করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 788 (ET: N/A)]*
 
-
    Answer:
 
-   CIDR ki:
-   - CIDR mane Classless Inter-Domain Routing, ja 1993 sale RFC 1519-e chalu hoy. Ekhane fixed Class A, B, C-r poribote address-er sathe ekti prefix length lekha hoy, jemon 192.168.100.9/26.
-   - Er upokarita: joto dorkar totota-i address deoa jay, tai opochoy onek kome; VLSM diye ek network-e bhinno akar-er subnet toiri kora jay; ar ekadhik contiguous network-ke ek prefix-e summarize kore routing table choto rakha jay.
+   What CIDR is:
+   - CIDR stands for Classless Inter-Domain Routing, introduced in 1993 by RFC 1519. Instead of the fixed Classes A, B and C, the prefix length is written explicitly with the address, for example 192.168.100.9/26.
+   - Its benefits: a block of exactly the required size can be allocated, so waste falls sharply; VLSM allows subnets of different sizes inside one network; and contiguous networks can be summarised into a single prefix, which keeps the global routing table manageable.
 
-   192.168.100.9/26 theke:
+   From the address 192.168.100.9/26:
 
    (a) Total subnets:
-   - Class C-r default prefix /24, tai borrowed bits = 26 − 24 = 2, ebong subnet songkha = 2² = 4.
+   - The default prefix of a Class C address is /24, so the bits borrowed are 26 − 24 = 2, and the number of subnets is 2² = 4.
 
    (b) Block size:
-   - Mask = 255.255.255.192, tai block size = 256 − 192 = 64.
+   - The mask is 255.255.255.192, so the block size is 256 − 192 = 64.
 
    (c) Valid hosts:
-   - Host bits = 32 − 26 = 6, tai valid host = 2⁶ − 2 = 62.
+   - Host bits = 32 − 26 = 6, so valid hosts = 2⁶ − 2 = 62.
 
    (d) Total hosts:
-   - Total address per subnet = 2⁶ = 64.
+   - Total addresses per subnet = 2⁶ = 64.
 
-   Ei IP-r nijer subnet:
-   - 9 pore 0 theke 63-er modhye, tai network address 192.168.100.0, broadcast 192.168.100.63, ar host range 192.168.100.1 theke 192.168.100.62.
+   The subnet this address belongs to:
+   - 9 lies between 0 and 63, so the network address is 192.168.100.0, the broadcast address is 192.168.100.63, and the host range is 192.168.100.1 to 192.168.100.62.
 70. **(a) What is the usable number of host IP addresses available on a network that has a /26 mask? Write down the subset mask of this network. Write down the first and the last IP address that can be assigned to host PCs if the network address is 192.168.30.128/26. What address should be used for broadcast purpose in this Network?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 801-802 (ET: N/A)]*
 
 
@@ -1659,29 +1651,28 @@ ii) 211.10.15.4
    - For this particular address: block size = 256 − 192 = 64, and 3 lies in the first block, so the network address is 10.2.1.0, the broadcast is 10.2.1.63 and the usable range is 10.2.1.1 to 10.2.1.62.
 79. **172.168.128.0/20 এর Broadcast Address বের কর এবং কতগুলো Computer (Host) Connect করা যাবে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
 
-
    Answer:
 
-   Deoa ache: 172.168.128.0/20.
+   Given: 172.168.128.0/20.
 
-   Step 1, subnet mask ar block size:
-   - /20 mane mask 11111111.11111111.11110000.00000000 = 255.255.240.0
-   - Interesting octet tritiyo, tai block size = 256 − 240 = 16. Block shuru hoy tritiyo octet-er 0, 16, 32, ... 128, 144-e.
+   Step 1, subnet mask and block size:
+   - /20 gives the mask 11111111.11111111.11110000.00000000 = 255.255.240.0
+   - The interesting octet is the third, so the block size is 256 − 240 = 16, and blocks begin at third octet values 0, 16, 32, ... 128, 144.
 
-   Step 2, block-er shima:
-   - 128 nijei ekti block boundary, tai block cholbe 172.168.128.0 theke 172.168.143.255 porjonto.
+   Step 2, boundaries of the block:
+   - 128 is itself a block boundary, so the block runs from 172.168.128.0 to 172.168.143.255.
 
-   Step 3, Broadcast address:
-   - Block-er sesh address = 172.168.143.255
+   Step 3, broadcast address:
+   - The last address of the block = 172.168.143.255
 
-   Step 4, koyti computer connect kora jabe:
+   Step 4, how many computers can be connected:
    - Host bits = 32 − 20 = 12
-   - Mot address = 2¹² = 4096
-   - Byabohar-jogyo host = 4096 − 2 = 4094
+   - Total addresses = 2¹² = 4096
+   - Usable hosts = 4096 − 2 = 4094
 
-   Sesh uttor:
+   Final answer:
    - Broadcast address: 172.168.143.255
-   - Connect kora jabe: 4094 ti computer, ar tader range 172.168.128.1 theke 172.168.143.254.
+   - Number of computers that can be connected: 4094, with the usable range 172.168.128.1 to 172.168.143.254.
 80. **Suppose a network with IP address 192.16.0.0 is divided into 2 subnets, find number of hosts per subnet. Also for the first subnet, find- (i) First Subnet address (ii) First host address (iii) Last host address (iv) Broadcast address** *[BAUST Assistant Programmer 2021 compact it 919 (ET: N/A)]*
 
 
@@ -1856,30 +1847,27 @@ ii) 211.10.15.4
    - Usable host range: 10.20.30.1 to 10.20.30.126.
 88. **২. 192.168.10.0/28 এর জন্য সাবনেট মাস্ক হবে কোনটি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
+   Answer: The subnet mask for 192.168.10.0/28 is 255.255.255.240.
 
-   Answer: 192.168.10.0/28 er subnet mask hobe 255.255.255.240.
+   - /28 means the first 28 bits are 1: 11111111.11111111.11111111.11110000
+   - The last octet 11110000 = 128 + 64 + 32 + 16 = 240
+   - Therefore the mask is 255.255.255.240.
 
-   - /28 mane prothom 28 ti bit 1: 11111111.11111111.11111111.11110000
-   - Sesh octet 11110000 = 128 + 64 + 32 + 16 = 240
-   - Tai mask = 255.255.255.240
-
-   - Ei block-e host bit = 32 − 28 = 4, mane 2⁴ = 16 ti address ar 14 ti byabohar-jogyo host. Network address 192.168.10.0, broadcast 192.168.10.15, ar host range 192.168.10.1 theke 192.168.10.14.
+   - In this block the host bits are 32 − 28 = 4, so there are 2⁴ = 16 addresses and 14 usable hosts. The network address is 192.168.10.0, the broadcast address is 192.168.10.15, and the host range is 192.168.10.1 to 192.168.10.14.
 89. **৯. ক্লাস C এর ডিফল্ট সাবনেট মাস্ক কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
+   Answer: The default subnet mask of Class C is 255.255.255.0, that is /24.
 
-   Answer: Class C-r default subnet mask holo 255.255.255.0, mane /24.
-
-   - Binary-te: 11111111.11111111.11111111.00000000
-   - Ekhane 24 ti network bit ar 8 ti host bit, tai protita Class C network-e 2⁸ = 256 ti address ar 254 ti byabohar-jogyo host.
-   - Tulonar jonno: Class A-r default mask 255.0.0.0 (/8) ar Class B-r 255.255.0.0 (/16).
+   - In binary: 11111111.11111111.11111111.00000000
+   - It has 24 network bits and 8 host bits, so every Class C network holds 2⁸ = 256 addresses and 254 usable hosts.
+   - For comparison, the Class A default mask is 255.0.0.0, that is /8, and the Class B default mask is 255.255.0.0, that is /16.
 90. **১১. নিচের কোনটি লুপ ব্যাক আইপি এড্রেস?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
+   Answer: The loopback IP address is 127.0.0.1.
 
-   Answer: Loopback IP address holo 127.0.0.1.
-
-   - Sompurno 127.0.0.0/8 block ei kajer jonno songrokkhito, mane 127.0.0.0 theke 127.255.255.255 porjonto.
-   - Ei address-e pathano packet network card ba cable porjonto jay na; TCP/IP stack-i ta ferot pathay. Tai `ping 127.0.0.1` diye nijer machine-er TCP/IP stack thik ache kina jacha kora hoy.
-   - Er hostname `localhost`, ar IPv6-te loopback address `::1`.
+   - The whole block 127.0.0.0/8 is reserved for loopback, that is 127.0.0.0 to 127.255.255.255.
+   - A packet sent to this address never reaches the network card or the cable; the TCP/IP stack returns it directly. This is why `ping 127.0.0.1` is used to test whether the machine's own TCP/IP stack is working.
+   - Its hostname is `localhost`, and the IPv6 loopback address is `::1`.
 91. **A IP Address is: 172.16.128.120/25 now answers the following questions: (i) What is the network address of this IP? (ii) What is the subnet mask? (iii) What is the broadcast address? (iv) How many connection is possible in this network?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
 
 
@@ -2023,25 +2011,24 @@ ii) 211.10.15.4
    - Mnemonic, top down: All People Seem To Need Data Processing. Bottom up: Please Do Not Throw Sausage Pizza Away.
 2. **OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: The seven layers of the OSI model and their functions:
 
-   Answer: OSI model-er 7 ti layer ar tader kaj:
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
 
-   | # | Layer | Kaj |
-   |---|---|---|
-   | 7 | Application | Byabaharkari-r application-ke network seba deoa: file transfer, mail, web browsing, name lookup. Protocol: HTTP, FTP, SMTP, DNS |
-   | 6 | Presentation | Data-r format rupantor, encryption ar decryption, compression. Udahoron: SSL/TLS, JPEG, MPEG, ASCII |
-   | 5 | Session | Duti application-er modhye session toiri, rokkha ar bondho kora; dialogue control ar synchronization checkpoint |
-   | 4 | Transport | Process theke process-e sompurno data pouche deoa, segmentation ar reassembly, port number, flow ar error control. Protocol: TCP, UDP |
-   | 3 | Network | Logical IP address deoa, bhinno network-er modhye routing ar path nirbachon, fragmentation. Protocol: IP, ICMP, OSPF, RIP; device: Router |
-   | 2 | Data link | Frame toiri kora, MAC address diye local delivery, CRC diye error detection, medium access control. Udahoron: Ethernet, PPP, ARP; device: Switch |
-   | 1 | Physical | Bit ke bidyut, aalo ba radio signal-e rupantor kore pathano; cable, connector, voltage ar data rate nirdharon. Device: Hub, repeater, cable |
-
-   Ei star gulor shomogrik bhumika:
-   - Jotil network jogajog-ke choto choto swadhin ongshe bhag kore, tai protita layer alada bhabe design, bujhe ar debug kora jay.
-   - Protita layer nicher layer-er seba nay ar uporer layer-ke seba dey, kintu bhitorer kajkormo lukiye rakhe. Ei abstraction-er karone kono ek layer-er projukti bodlale baki gulo bodlate hoy na — jemon copper theke fibre-e gele application-er kichu bodlay na.
-   - Bhinno prostutkarok-er equipment eke oporer sathe kaj korte pare, karon protita layer-er interface ar protocol standard kora.
-   - Troubleshooting sohoj hoy: layer 1 theke shuru kore uporer dike egole somossa kothay ta dhora pore.
-   - Data pathanor somoy protita layer nijer header jog kore, jake encapsulation bole, ar grohon-er somoy ulto kram-e khule ney.
+   Overall role of the seven layers:
+   - They break a complex communication problem into small independent parts, so each part can be designed, understood and debugged separately.
+   - Each layer uses the service of the layer below and provides a service to the layer above, while hiding its own internal working. Because of this abstraction, a technology can be changed in one layer without disturbing the others; moving from copper to fibre changes nothing above the physical layer.
+   - Equipment from different manufacturers can interoperate, because the interface and the protocol of every layer are standardised.
+   - Troubleshooting becomes systematic: start at layer 1 and work upward, and the layer at which the failure appears identifies the problem.
+   - When data is sent, each layer adds its own header, which is called encapsulation, and at the receiving end each layer removes its own header in the reverse order.
 3. **What is the OSI model? Explain the functions of each layer with examples.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
 
@@ -2159,12 +2146,11 @@ ii) 211.10.15.4
    - From bottom to top: Physical, Data Link, Network, Transport, Session, Presentation and Application.
 10. **রাউটার OSI এর কোন লেয়ারে থাকে?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+   Answer: A router works at the Network layer, that is Layer 3, of the OSI model.
 
-   Answer: Router OSI model-er Network layer, mane Layer 3-e kaj kore.
-
-   - Eta packet-er destination IP address dekhe routing table-e longest prefix match kore best next hop bachai kore.
-   - Ei sathe TTL komay, dorkar hole fragmentation kore ar broadcast block kore, tai protita interface alada broadcast domain toiri kore.
-   - Tulonar jonno: Hub o repeater Layer 1-e, Switch o Bridge Layer 2-e, Layer 3 switch o Router Layer 3-e, ar Gateway ba Firewall Layer 4 theke 7 porjonto kaj korte pare.
+   - It reads the destination IP address of a packet, performs a longest prefix match in its routing table and selects the best next hop.
+   - It also decrements the TTL, performs fragmentation where the next link has a smaller MTU, and blocks broadcasts, so every interface becomes a separate broadcast domain.
+   - For comparison: a hub and a repeater work at Layer 1, a switch and a bridge at Layer 2, a Layer 3 switch and a router at Layer 3, and a gateway or a firewall may work anywhere from Layer 4 up to Layer 7.
 11. **Write the name of OSI layers.** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
 
@@ -2549,15 +2535,14 @@ ii) 211.10.15.4
    ```
 28. **TCP/IP model এর Layer গুলোর কাজ লিখুন।** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
+   Answer: The four layers of the TCP/IP model and their functions:
 
-   Answer: TCP/IP model-er char ti layer ar tader kaj:
-
-   | Layer | Kaj | Protocol |
-   |---|---|---|
-   | Application | Byabaharkari-r program-ke network seba deoa: web browsing, email, file transfer, name resolution. OSI-r Application, Presentation ar Session — ei tin ti layer-er kaj ekhane ekshathe hoy | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH |
-   | Transport | Ek process theke aar ek process-e data pouche deoa; port number diye application chena, boro data ke segment-e bhaga ar abar jora, error o flow control | TCP (nirbhorjoggo, connection-oriented), UDP (druto, connectionless) |
-   | Internet | Logical IP address deoa, bhinno network-er modhye routing kore best path bachai kora, fragmentation ar TTL babosthapona | IP, ICMP, IGMP, ARP, OSPF, RIP, BGP |
-   | Network Access | Packet ke frame-e mure MAC address boshano, medium access niyontron, CRC diye error dhora, ar sesh porjonto bit ke signal hisebe medium-e pathano | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay |
+   | Layer | Corresponding OSI layers | Function | Protocols | Devices |
+   |---|---|---|---|---|
+   | Application | Application, Presentation, Session | Provides network services directly to the user's programs: web, mail, file transfer, name resolution | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH | Proxy server, application firewall, gateway |
+   | Transport | Transport | End to end delivery between processes, port addressing, segmentation, reliability, flow and congestion control | TCP, UDP, SCTP | Gateway, layer 4 load balancer |
+   | Internet | Network | Logical addressing, routing between networks, packet forwarding, fragmentation | IP, ICMP, IGMP, ARP, RARP, OSPF, BGP | Router, layer 3 switch |
+   | Network Access, that is Link | Data link, Physical | Framing, MAC addressing, medium access, and physical transmission of bits over the medium | Ethernet, Wi-Fi 802.11, PPP, HDLC, Frame Relay | Switch, bridge, hub, NIC, cable, repeater |
 
    ```mermaid
    graph TD
@@ -2567,7 +2552,7 @@ ii) 211.10.15.4
        D --> E["Physical medium: copper, fibre, radio"]
    ```
 
-   - Encapsulation: Application-e Data, Transport-e Segment, Internet-e Packet, Network Access-e Frame, ar sesh-e Bit. Grohonkari prante thik ulto kram-e khola hoy.
+   - Encapsulation: the unit is Data at the Application layer, a Segment at the Transport layer, a Packet at the Internet layer, a Frame at the Network Access layer, and finally Bits on the medium. At the receiving end the headers are removed in the reverse order.
 29. **What is OSI model? Write different layers of OSI model.** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 
 
@@ -2642,58 +2627,55 @@ ii) 211.10.15.4
    - Knowing the PDU names matters in practice, because it tells you which device works where: a switch handles Frames, a router handles Packets, and a firewall may inspect Segments and Data.
 32. **(খ) Computer network এর OSI 7-Layer গুলো উদাহরণসহ লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 767 (ET: N/A)]*
 
+   Answer: The seven layers of the OSI model, with an example for each:
 
-   Answer: OSI model-er 7 ti layer, udahoron shoho:
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
 
-   | # | Layer | Kaj |
-   |---|---|---|
-   | 7 | Application | Byabaharkari-r application-ke network seba deoa: file transfer, mail, web browsing, name lookup. Protocol: HTTP, FTP, SMTP, DNS |
-   | 6 | Presentation | Data-r format rupantor, encryption ar decryption, compression. Udahoron: SSL/TLS, JPEG, MPEG, ASCII |
-   | 5 | Session | Duti application-er modhye session toiri, rokkha ar bondho kora; dialogue control ar synchronization checkpoint |
-   | 4 | Transport | Process theke process-e sompurno data pouche deoa, segmentation ar reassembly, port number, flow ar error control. Protocol: TCP, UDP |
-   | 3 | Network | Logical IP address deoa, bhinno network-er modhye routing ar path nirbachon, fragmentation. Protocol: IP, ICMP, OSPF, RIP; device: Router |
-   | 2 | Data link | Frame toiri kora, MAC address diye local delivery, CRC diye error detection, medium access control. Udahoron: Ethernet, PPP, ARP; device: Switch |
-   | 1 | Physical | Bit ke bidyut, aalo ba radio signal-e rupantor kore pathano; cable, connector, voltage ar data rate nirdharon. Device: Hub, repeater, cable |
-
-   Protita layer-er udahoron:
-   - Physical: UTP cable-e voltage, fibre-e aalor pulse, Wi-Fi-r radio signal. Device: hub, repeater.
-   - Data link: Ethernet switch je frame-ti 00:1A:2B:3C:4D:5E ache shei port-e pathay; ARP diye IP theke MAC ber kora hoy.
-   - Network: router 8.8.8.8-er jonno packet-ti Internet interface diye pathay; `ping` command ICMP byabohar kore.
-   - Transport: TCP port 443-e ekti web session, jekhane hariye jaoa segment abar pathano hoy; DNS query-te UDP port 53.
-   - Session: database-er sathe ekti session, ba RPC call, ja bicched hole abar chalu korte hoy.
-   - Presentation: TLS diye data encrypt kora, JPEG image decode kora, ZIP compression.
-   - Application: browser-er HTTP GET request, mail client-er SMTP diye mail pathano, FTP diye file transfer.
+   Example of each layer:
+   - Physical: the voltage on a UTP cable, the light pulse in a fibre, or the radio signal of Wi-Fi. Devices: hub and repeater.
+   - Data link: an Ethernet switch forwarding a frame to the port where 00:1A:2B:3C:4D:5E is located, and ARP finding a MAC address from an IP address.
+   - Network: a router sending a packet destined for 8.8.8.8 out of its Internet interface, and the `ping` command, which uses ICMP.
+   - Transport: a web session carried on TCP port 443, where a lost segment is retransmitted, and a DNS query carried on UDP port 53.
+   - Session: a database session or a remote procedure call, which must be re-established after a disconnection.
+   - Presentation: TLS encrypting the data, a JPEG image being decoded, or ZIP compression.
+   - Application: a browser issuing an HTTP GET request, a mail client sending mail by SMTP, or a file transfer by FTP.
 33. **Computer Network এ OSI Model এর Layer কয়টি?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+   Answer: The OSI model in computer networking has 7 layers.
 
-   Answer: Computer network-e OSI Model-er layer songkha 7 ti.
-
-   - Niche theke upore: Physical, Data Link, Network, Transport, Session, Presentation ar Application.
-   - Tulonay TCP/IP model-e 4 ti layer: Network Access, Internet, Transport ar Application.
+   - From bottom to top: Physical, Data Link, Network, Transport, Session, Presentation and Application.
+   - For comparison, the TCP/IP model has 4 layers: Network Access, Internet, Transport and Application.
 34. **OSI Model এর কাজ কী? এর লেয়ারসমূহ কী কী?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 811 (ET: IBA)]*
-
 
    Answer:
 
-   OSI Model-er kaj:
-   - Duti bhinno system-er modhye jogajog kivabe hobe tar ekti standard reference kathamo deoa, jate bhinno prostutkarok-er equipment eke oporer sathe kaj korte pare.
-   - Jotil jogajog process-ke 7 ti swadhin ongshe bhag kora, tai protita ongsho alada bhabe design, tairi ar update kora jay.
-   - Protita layer nicher layer-er seba nay ar uporer layer-ke seba dey, kintu bhitorer kajkormo lukiye rakhe — ei abstraction-er karone ek layer bodlale onno layer bodlate hoy na.
-   - Troubleshooting-er ekti kathamo deoa: layer 1 theke shuru kore uporer dike egole somossa kothay ta thik korte pare.
-   - Encapsulation ar decapsulation-er niyom nirdharon kora, mane data pathanor somoy protita layer nijer header jog kore ar grohon-er somoy khule ney.
-   - Shikkha ar alochonar jonno ekti common bhasha deoa — "eta layer 3-er somossa" bolle shobai ekoi jinish bojhe.
+   Function of the OSI model:
+   - To give a standard reference framework for how two different systems should communicate, so that equipment from different manufacturers can interoperate.
+   - To divide the complex process of communication into seven independent parts, so that each can be designed, built and upgraded separately.
+   - To let each layer use the service of the layer below and offer a service to the layer above while hiding its internal working. Because of this abstraction, changing one layer does not force a change in the others.
+   - To provide a systematic method of troubleshooting: start at layer 1 and work upward until the failing layer is identified.
+   - To define the rules of encapsulation and decapsulation, so that each layer adds its header when sending and removes it when receiving.
+   - To provide a common vocabulary, so that saying "this is a layer 3 problem" means the same thing to every engineer.
 
-   Er layer shomuho:
+   Its layers:
 
-   | # | Layer | Kaj |
-   |---|---|---|
-   | 7 | Application | Byabaharkari-r application-ke network seba deoa: file transfer, mail, web browsing, name lookup. Protocol: HTTP, FTP, SMTP, DNS |
-   | 6 | Presentation | Data-r format rupantor, encryption ar decryption, compression. Udahoron: SSL/TLS, JPEG, MPEG, ASCII |
-   | 5 | Session | Duti application-er modhye session toiri, rokkha ar bondho kora; dialogue control ar synchronization checkpoint |
-   | 4 | Transport | Process theke process-e sompurno data pouche deoa, segmentation ar reassembly, port number, flow ar error control. Protocol: TCP, UDP |
-   | 3 | Network | Logical IP address deoa, bhinno network-er modhye routing ar path nirbachon, fragmentation. Protocol: IP, ICMP, OSPF, RIP; device: Router |
-   | 2 | Data link | Frame toiri kora, MAC address diye local delivery, CRC diye error detection, medium access control. Udahoron: Ethernet, PPP, ARP; device: Switch |
-   | 1 | Physical | Bit ke bidyut, aalo ba radio signal-e rupantor kore pathano; cable, connector, voltage ar data rate nirdharon. Device: Hub, repeater, cable |
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
 35. **Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
 
@@ -2777,27 +2759,26 @@ ii) 211.10.15.4
    - The relationship in one line: OSI is the theory used to explain and troubleshoot networks, and TCP/IP is the practice actually running on them.
 38. **TCP/IP protocol suite -এর বিভিন্ন স্তরের নাম লিখুন? HTTPs কী? এর ব্যবহারের প্রয়োজনীয়তা সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 882 (ET: N/A)]*
 
-
    Answer:
 
-   TCP/IP protocol suite-er star gulor nam:
+   Layers of the TCP/IP protocol suite:
    - Application layer
    - Transport layer
    - Internet layer
-   - Network Access layer, jake Link ba Network Interface layer-o bola hoy
+   - Network Access layer, also called the Link or Network Interface layer
 
-   HTTPS ki:
-   - HTTPS mane HyperText Transfer Protocol Secure. Eta sadharon HTTP-r sathe SSL/TLS encryption jog kora rup. Eta TCP port 443-e chole, jekhane HTTP chole port 80-e.
-   - Browser prothome server-er sathe TLS handshake kore: server-er digital certificate jachai kore, tarpor ekti session key toiri kore, ar erpor shob data oi key diye encrypt kore pathay.
+   What HTTPS is:
+   - HTTPS stands for HyperText Transfer Protocol Secure. It is ordinary HTTP carried inside an SSL/TLS encrypted channel. It runs on TCP port 443, whereas plain HTTP runs on port 80.
+   - The browser first performs a TLS handshake with the server: it validates the server's digital certificate, the two sides agree a session key, and all subsequent data is encrypted with that key.
 
-   Er byabohar-er proyojoniyota:
-   - Gopaniyota: password, credit card number, NID ba byaktigato tothyo encrypt hoye jay, tai majhkhane keu pathkorte pare na.
-   - Ontonihitota (integrity): data majhpothe bodle deoa hole TLS ta dhore fele, tai page ba transaction tampering thekano jay.
-   - Server-er porichoy jachai: certificate proman kore je apni asol bank-er site-ei acchen, kono nokol site-e non. Ei karone phishing ar man-in-the-middle attack kothin hoye jay.
-   - Public Wi-Fi-te nirapotta: khola network-e HTTP-r shob tothyo shohoje dhora jay, HTTPS-e jay na.
-   - Ain o compliance: online payment-er jonno PCI DSS ar byaktigato tothyo-r ain HTTPS baddhotamulok kore.
-   - Byabaharkari-r bishwas ar SEO: browser HTTP site-ke "Not Secure" dekhay, ar search engine HTTPS site-ke egiye rakhe.
-   - HTTP/2 ar HTTP/3-er moto notun ar druto protocol bastobe shudhu HTTPS-er upor-i chole.
+   Why HTTPS is necessary:
+   - Confidentiality: passwords, card numbers, national identity numbers and other personal data are encrypted, so nobody in the middle can read them.
+   - Integrity: if the data is altered in transit, TLS detects it, so pages and transactions cannot be tampered with.
+   - Server authentication: the certificate proves that the site really is the bank's site and not an imitation, which makes phishing and man in the middle attacks far harder.
+   - Safety on public Wi-Fi: on an open network everything sent over plain HTTP can be captured trivially, while HTTPS traffic cannot.
+   - Legal and regulatory compliance: PCI DSS for online payments and data protection laws effectively make HTTPS mandatory.
+   - User trust and search ranking: browsers mark HTTP sites as "Not Secure", and search engines rank HTTPS sites higher.
+   - Modern protocols: HTTP/2 and HTTP/3, which are considerably faster, are in practice available only over HTTPS.
 39. **বর্তমানে Hybrid network model জনপ্রিয় একটি মডেল। এই মডেলের পাঁচটি Layer হচ্ছে, Application, Transport, Physical, Data link and Network Layer। এদের কাজ দেওয়া আছে বামপাশের কলামে, ডানপাশের কলামে কাজ অনুসারে Layer গুলোর নাম লিখুন।** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975-976 (ET: BUET)]*
 
 
@@ -2842,27 +2823,26 @@ ii) 211.10.15.4
    - It gives a systematic method of troubleshooting, working upward from layer 1, and a common vocabulary for engineers.
 41. **OSI Model এর Layer গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
+   Answer: The layers of the OSI model:
 
-   Answer: OSI Model-er layer gulo:
+   | # | Layer | Function | PDU | Protocols and devices |
+   |---|---|---|---|---|
+   | 7 | Application | Provides the interface to the user's application: file transfer, mail, web, name lookup | Data | HTTP, HTTPS, FTP, SMTP, DNS, SNMP, Telnet |
+   | 6 | Presentation | Translation of data format, encryption and decryption, compression | Data | SSL/TLS, JPEG, MPEG, ASCII, EBCDIC |
+   | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
+   | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
+   | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
+   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
+   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
 
-   | # | Layer | Kaj |
-   |---|---|---|
-   | 7 | Application | Byabaharkari-r application-ke network seba deoa: file transfer, mail, web browsing, name lookup. Protocol: HTTP, FTP, SMTP, DNS |
-   | 6 | Presentation | Data-r format rupantor, encryption ar decryption, compression. Udahoron: SSL/TLS, JPEG, MPEG, ASCII |
-   | 5 | Session | Duti application-er modhye session toiri, rokkha ar bondho kora; dialogue control ar synchronization checkpoint |
-   | 4 | Transport | Process theke process-e sompurno data pouche deoa, segmentation ar reassembly, port number, flow ar error control. Protocol: TCP, UDP |
-   | 3 | Network | Logical IP address deoa, bhinno network-er modhye routing ar path nirbachon, fragmentation. Protocol: IP, ICMP, OSPF, RIP; device: Router |
-   | 2 | Data link | Frame toiri kora, MAC address diye local delivery, CRC diye error detection, medium access control. Udahoron: Ethernet, PPP, ARP; device: Switch |
-   | 1 | Physical | Bit ke bidyut, aalo ba radio signal-e rupantor kore pathano; cable, connector, voltage ar data rate nirdharon. Device: Hub, repeater, cable |
-
-   Alada kore protita layer-er borno:
-   - Physical layer: bit ke bidyut, aalo ba radio signal-e rupantor kore medium-e pathay. Cable-er dhoron, connector, voltage level, data rate ar topology ekhane nirdharito hoy. Device: hub, repeater, cable.
-   - Data link layer: packet ke frame-e mure source ar destination MAC address boshay, CRC diye error dhore, ar shared medium-e ke kokhon pathabe ta niyontron kore. Device: switch, bridge, NIC.
-   - Network layer: logical IP address dey ebong bhinno network-er modhye routing kore best path bachai kore. Fragmentation ar TTL-o ekhane. Device: router.
-   - Transport layer: ek process theke aar ek process-e sompurno data pouchay, port number dey, boro data ke segment kore, ar TCP-r khetre nirbhorjoggo delivery, flow ar congestion control dey.
-   - Session layer: duti application-er modhye session toiri, rokkha ar bondho kore; dialogue control ar checkpoint dey jate bicched hole abar shuru kora jay.
-   - Presentation layer: data-r format rupantor, encryption-decryption ar compression kore. Ekhane-i SSL/TLS, JPEG, MPEG.
-   - Application layer: byabaharkari-r program-ke network-er seba dey — web, mail, file transfer, name lookup.
+   Description of each layer:
+   - Physical layer: converts bits into electrical, optical or radio signals and puts them on the medium. It defines the cable type, the connector, the voltage levels, the data rate and the physical topology. Devices: hub, repeater, cable.
+   - Data link layer: wraps the packet in a frame carrying the source and destination MAC addresses, detects errors with a CRC, and controls which station may use a shared medium. Devices: switch, bridge, network interface card.
+   - Network layer: assigns logical IP addresses and routes packets between different networks, choosing the best path. Fragmentation and the TTL also belong here. Device: router.
+   - Transport layer: delivers data from one process to another, adds port numbers, divides the data into segments, and in the case of TCP provides reliable delivery with flow and congestion control.
+   - Session layer: establishes, maintains and terminates the session between two applications, and provides dialogue control and synchronisation checkpoints so that a broken transfer can be resumed.
+   - Presentation layer: translates the data format, performs encryption and decryption, and compresses the data. SSL and TLS, JPEG and MPEG belong here.
+   - Application layer: gives the user's programs access to network services such as the web, email, file transfer and name lookup.
 42. **(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1028 (ET: N/A)]*
 
 
@@ -2902,18 +2882,17 @@ ii) 211.10.15.4
    | 2 Data Link, 1 Physical | Network Access |
 43. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1042-1043 (ET: DPI)]*
 
+   Answer: The four layers of the TCP/IP model and their functions, in brief:
 
-   Answer: TCP/IP model-er char ti layer ar tader kaj sonkhipte:
+   - Application layer: gives the user's programs direct access to network services such as web browsing, email, file transfer and name resolution. The work of the OSI Application, Presentation and Session layers is all done here, so data formatting, encryption and session control belong to this layer as well. Protocols: HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH.
 
-   - Application layer: byabaharkari-r program-ke seruashroy network seba dey — web browsing, email, file transfer, name resolution. OSI-r Application, Presentation ar Session — ei tin ti layer-er kaj ekhane ek-i shathe hoy, tai data-r format, encryption ar session niyontron-o ekhanei. Protocol: HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH.
+   - Transport layer: delivers data from a process on one computer to a process on another. It uses port numbers to identify the application, divides large data into segments and reassembles them at the far end. TCP is reliable and connection oriented, providing sequence numbers, acknowledgements, retransmission, and flow and congestion control; UDP is fast and connectionless, offering no guarantee but with very little overhead.
 
-   - Transport layer: ek computer-er ekti process theke onno computer-er ekti process porjonto data pouche dey. Port number diye kon application ta bujhe ney, boro data ke segment-e bhag kore ar opor prante abar jora lagay. TCP nirbhorjoggo ar connection-oriented, sequence number, acknowledgement, retransmission, flow ar congestion control dey; UDP druto ar connectionless, kono nishchoyota dey na kintu overhead khub kom.
+   - Internet layer: gives every host a logical IP address and routes packets between different networks, selecting the best path. Longest prefix match in the routing table, decrementing the TTL and fragmentation are all done here. Protocols: IP, ICMP, IGMP, ARP, OSPF, RIP, BGP. Device: router.
 
-   - Internet layer: protita host-ke logical IP address dey ebong bhinno network-er modhye packet routing kore best path bachai kore. Routing table-e longest prefix match, TTL komano, ar dorkar hole fragmentation ei layer-er kaj. Protocol: IP, ICMP, IGMP, ARP, OSPF, RIP, BGP; device: router.
+   - Network Access layer: wraps the packet in a frame with source and destination MAC addresses, detects errors with a CRC, controls access to the shared medium, and finally converts the bits into electrical, optical or radio signals. The work of the OSI Data Link and Physical layers is combined here. Examples: Ethernet, Wi-Fi 802.11, PPP, HDLC. Devices: switch, network interface card, cable.
 
-   - Network Access layer: packet ke frame-e mure source ar destination MAC address boshay, CRC diye error dhore, shared medium-e ke kokhon pathabe ta niyontron kore, ar sesh porjonto bit ke bidyut, aalo ba radio signal-e rupantor kore pathay. OSI-r Data Link ar Physical — dui layer-er kaj ekhane ek shathe. Udahoron: Ethernet, Wi-Fi 802.11, PPP, HDLC; device: switch, NIC, cable.
-
-   - Encapsulation: Application-e Data, Transport-e Segment, Internet-e Packet, Network Access-e Frame, ar medium-e Bit.
+   - Encapsulation: Data at the Application layer, a Segment at the Transport layer, a Packet at the Internet layer, a Frame at the Network Access layer, and Bits on the medium.
 
 ## Networking Fundamentals & Terminology (23)
 
@@ -2936,42 +2915,40 @@ ii) 211.10.15.4
    - Peer to peer: every machine is both client and server. Cheap and simple, but hard to secure and to manage beyond about ten machines.
 2. **(ক) IP address এবং MAC Address- এর মাঝে তুলনা করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-
    Answer:
 
-   | Point | MAC address | IP address |
+   | Point | IP address | MAC address |
    |---|---|---|
-   | Layer | Data link layer, layer 2 | Network layer, layer 3 |
-   | Length | 48 bits, six hexadecimal pairs | 32 bits for IPv4, 128 bits for IPv6 |
-   | Format | 00:1A:2B:3C:4D:5E | 192.168.1.10 |
-   | Assigned by | The manufacturer, burned into the NIC | The network administrator or DHCP |
-   | Nature | Physical and permanent | Logical and changeable |
-   | Structure | Flat, the first 24 bits are the vendor OUI | Hierarchical, network part plus host part |
-   | Scope | Within one local network only | End to end across the whole Internet |
-   | Routable | No, a router does not forward it | Yes, this is what routers forward on |
-   | Changes in transit | Rewritten at every hop | Stays the same from source to destination, except under NAT |
-   | Resolved by | ARP, from an IP address to a MAC address | DNS, from a name to an IP address |
-   | Command to view | `ipconfig /all` or `ifconfig` | `ipconfig` or `ip addr` |
+   | Layer | Network layer, layer 3 | Data link layer, layer 2 |
+   | Length | 32 bits for IPv4, 128 bits for IPv6 | 48 bits |
+   | Format | 192.168.1.10 | 00:1A:2B:3C:4D:5E |
+   | Assigned by | The administrator or DHCP | The manufacturer, burned into the NIC |
+   | Nature | Logical and changeable | Physical and permanent |
+   | Structure | Hierarchical, network part plus host part | Flat, the first 24 bits are the vendor OUI |
+   | Scope | End to end across the whole Internet | Within one local network only |
+   | Forwarded by a router | Yes | No |
+   | Changes in transit | No, except under NAT | Yes, rewritten at every hop |
+   | Resolved by | DNS, from a name to an address | ARP, from an IP address to a MAC address |
+   | Command to view | `ipconfig` or `ip addr` | `ipconfig /all` or `ifconfig` |
 
-   - Ekshathe kaj kore kivabe: packet-e source ar destination IP shesh porjonto ek-i thake, kintu protita hop-e frame-er MAC address bodlay. Tai IP bole kothay jete hobe, ar MAC bole ei muhurte pasher kon device-er kache dite hobe. ARP ei duitir modhye setu toiri kore.
+   - How the two work together: the source and destination IP addresses stay the same for the whole journey, while the MAC addresses in the frame are rewritten at every hop. The IP address says where the packet must finally go, and the MAC address says which neighbouring device should receive it at this moment. ARP is the protocol that bridges the two.
 3. **(ক) সংজ্ঞা লিখুন: (i) Propagation delay, (ii) Transmission delay.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-
 
    Answer:
 
    (i) Propagation delay:
-   - Ekti bit-er signal sender theke receiver porjonto pouchate je somoy lage, ta-i propagation delay.
-   - Sutro: Tp = durottwo / signal-er gati. Cable-e gati praay 2 × 10⁸ m/s, ar sunno ba batash-e 3 × 10⁸ m/s.
-   - Eta shudhu durottwo ar medium-er upor nirbhor kore; data-r akar ba bandwidth-er sathe kono somporko nei.
-   - Udahoron: 2000 km cable-e Tp = 2 × 10⁶ / 2 × 10⁸ = 10 ms.
+   - Propagation delay is the time taken for a single bit of the signal to travel from the sender to the receiver across the medium.
+   - Formula: Tp = distance / propagation speed. The speed is about 2 × 10⁸ m/s in cable and 3 × 10⁸ m/s in air or vacuum.
+   - It depends only on the distance and the medium; it has nothing to do with the size of the data or the bandwidth.
+   - Example: over a 2000 km cable, Tp = 2 × 10⁶ / 2 × 10⁸ = 10 ms.
 
    (ii) Transmission delay:
-   - Puro message-ke link-er upor tule dite, mane sender-er prothom bit theke sesh bit porjonto pathate je somoy lage, ta-i transmission delay.
-   - Sutro: Tt = message-er akar (bit) / bandwidth (bps).
-   - Eta message-er akar ar bandwidth-er upor nirbhor kore; durottwo-r sathe kono somporko nei.
-   - Udahoron: 1 Mbps link-e 1000 bit-er frame-e Tt = 1000 / 10⁶ = 1 ms.
+   - Transmission delay is the time taken to push the whole message onto the link, that is from the first bit to the last bit leaving the sender.
+   - Formula: Tt = message size in bits / bandwidth in bps.
+   - It depends on the size of the message and the bandwidth; it has nothing to do with the distance.
+   - Example: a 1000 bit frame on a 1 Mbps link gives Tt = 1000 / 10⁶ = 1 ms.
 
-   - Mot delay = transmission + propagation + queuing + processing delay. LAN-e transmission delay-i prodhan, ar satellite ba dirgho WAN link-e propagation delay-i prodhan.
+   - Total delay = transmission + propagation + queuing + processing delay. On a LAN the transmission delay dominates, while on a satellite link or a long WAN the propagation delay dominates.
 4. **Write short note: Network, Protocol, link, gateway, Node.** *[BREB Assistant Programmer 18.02.2023 compact it 470 (ET: N/A)]*
 
 
@@ -3087,23 +3064,22 @@ ii) 211.10.15.4
    - The value of the idea is separation of concerns: as long as the interface stays fixed, either side may be redesigned independently, which is what makes layered network architecture work at all.
 9. **(ক) সংজ্ঞা লিখুন: WWW, URL, HTTP, IP Address, Router.** *[Software Assistant Programmer 13.10.2022 compact it 708 (ET: N/A)]*
 
-
    Answer:
 
    WWW:
-   - World Wide Web, ekti tothyo babostha jekhane hypertext document ar resource URL diye chinhito hoy ebong hyperlink diye eke oporer sathe jukto thake. Eta HTTP ba HTTPS protocol-e Internet-er upore chole. Tim Berners-Lee 1989 sale CERN-e eta udbhabon koren. Mone rakhte hobe, WWW ar Internet ek noy — Internet holo network-er avokathamo, ar WWW tar upore chola ekti seba.
+   - The World Wide Web is an information system of hypertext documents and resources, each identified by a URL and linked to others by hyperlinks. It runs over the Internet using HTTP or HTTPS. Tim Berners-Lee invented it at CERN in 1989. The Web and the Internet are not the same thing: the Internet is the underlying network infrastructure, and the Web is one service running on top of it.
 
    URL:
-   - Uniform Resource Locator, Internet-e kono resource-er sompurno thikana. Er ongsho: scheme (`https`), host (`www.example.com`), port (`:443`), path (`/page/index.html`), query (`?id=10`) ar fragment (`#top`). Udahoron: `https://www.example.com:443/page?id=10`.
+   - A Uniform Resource Locator is the complete address of a resource on the Internet. Its parts are the scheme (`https`), the host (`www.example.com`), the port (`:443`), the path (`/page/index.html`), the query string (`?id=10`) and the fragment (`#top`). Example: `https://www.example.com:443/page?id=10`.
 
    HTTP:
-   - HyperText Transfer Protocol, application layer-er protocol ja web page ar resource paribohon kore. TCP port 80-e chole (HTTPS 443-e). Eta stateless request-response protocol; state rakhte cookie ba session lage. Mul method: GET, POST, PUT, DELETE. Status code: 200 OK, 301 Moved, 404 Not Found, 500 Server Error.
+   - The HyperText Transfer Protocol is the application layer protocol that carries web pages and resources. It runs on TCP port 80, and HTTPS on port 443. It is a stateless request and response protocol, so cookies or sessions are needed to maintain state. Its main methods are GET, POST, PUT and DELETE, and its common status codes are 200 OK, 301 Moved Permanently, 404 Not Found and 500 Internal Server Error.
 
-   IP Address:
-   - Network layer-er logical address ja network-e protita device-ke unique bhabe chinhito kore ebong end-to-end routing somvob kore. IPv4 32 bit (192.168.1.10), IPv6 128 bit (2001:db8::1). Subnet mask diye network part ar host part alada hoy. Public ba private hote pare, ar static ba DHCP theke deoa hote pare.
+   IP address:
+   - A logical network layer address that uniquely identifies a device on a network and makes end to end routing possible. IPv4 is 32 bits, for example 192.168.1.10, and IPv6 is 128 bits, for example 2001:db8::1. The subnet mask separates the network part from the host part. It may be public or private, and static or assigned by DHCP.
 
    Router:
-   - Layer 3-er device ja duti ba tar beshi bhinno network-ke jukto kore ebong tader modhye packet forward kore. Destination IP dekhe routing table-e longest prefix match kore best next hop bachai kore. RIP, OSPF, BGP diye table toiri kore. Broadcast block kore, tai protita interface alada broadcast domain. Ei sathe NAT, DHCP, ACL ar WAN connectivity dey.
+   - A layer 3 device that connects two or more different networks and forwards packets between them. It reads the destination IP address, performs a longest prefix match in its routing table and selects the best next hop. It builds that table with RIP, OSPF or BGP. It blocks broadcasts, so each interface is a separate broadcast domain. It also provides NAT, DHCP, ACL filtering and WAN connectivity.
 10. **What is computer network?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
 
@@ -3139,48 +3115,46 @@ ii) 211.10.15.4
    - Along the way DNS translates the name into an IP address, DHCP supplied the sender's address in the first place, and NAT may rewrite the address at the network edge.
 13. **(খ) Address গুলির সংক্ষিপ্ত বর্ণনা দিন। (i) Port Number (ii) IP অ্যাড্রেস (iii) MAC অ্যাড্রেস।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 775 (ET: N/A)]*
 
-
    Answer:
 
    (i) Port Number:
-   - Transport layer-er 16 bit sonkha, ja bole packet-ti kon application ba service-er jonno. Range 0 theke 65535.
-   - Tin bhag: Well-known 0 theke 1023 (HTTP 80, HTTPS 443, FTP 21, SSH 22, SMTP 25, DNS 53), Registered 1024 theke 49151, ar Dynamic ba Ephemeral 49152 theke 65535 ja client nijer jonno tokhoni bachai kore.
-   - IP address bole kon computer, ar port number bole shei computer-er kon program. Duita mile hoy socket, jemon 192.168.1.10:443.
+   - A 16 bit number at the transport layer that identifies which application or service a packet belongs to. The range is 0 to 65535.
+   - Three groups: well known ports from 0 to 1023 (HTTP 80, HTTPS 443, FTP 21, SSH 22, SMTP 25, DNS 53), registered ports from 1024 to 49151, and dynamic or ephemeral ports from 49152 to 65535, which a client chooses for itself at the moment of connection.
+   - The IP address says which computer, and the port number says which program on that computer. The two together form a socket, for example 192.168.1.10:443.
 
    (ii) IP address:
-   - Network layer-er logical address ja network-e protita device-ke unique bhabe chinhito kore ebong end-to-end routing somvob kore.
-   - IPv4 32 bit, dotted decimal-e, jemon 192.168.1.10. IPv6 128 bit, hexadecimal-e, jemon 2001:db8::1.
-   - Subnet mask diye network part ar host part alada hoy, tai eta hierarchical ar routable.
-   - Public ba private hote pare; static bhabe ba DHCP theke deoa hoy, tai eta poriborton-shil.
+   - A logical network layer address that uniquely identifies a device on a network and makes end to end routing possible.
+   - IPv4 is 32 bits in dotted decimal, for example 192.168.1.10; IPv6 is 128 bits in hexadecimal, for example 2001:db8::1.
+   - The subnet mask separates the network part from the host part, which is what makes the address hierarchical and routable.
+   - It may be public or private, and it may be configured statically or leased by DHCP, so it is changeable.
 
    (iii) MAC address:
-   - Data link layer-er 48 bit physical address, ja NIC-er bhitore prostutkarok sthayi bhabe likhe dey. Lekha hoy choyti hexadecimal pair-e, jemon 00:1A:2B:3C:4D:5E.
-   - Prothom 24 bit prostutkarok-er OUI, sesh 24 bit card-er nijoswo number.
-   - Eta flat ar non-routable; shudhu local network-er bhitore delivery-r jonno byabohar hoy ar protita hop-e bodle jay.
-   - ARP protocol IP address theke MAC address ber kore.
+   - A 48 bit physical address at the data link layer, written permanently into the network interface card by its manufacturer and expressed as six hexadecimal pairs, for example 00:1A:2B:3C:4D:5E.
+   - The first 24 bits are the manufacturer's Organisationally Unique Identifier and the last 24 bits identify the individual card.
+   - It is flat and non-routable, used only for delivery within the local network, and it is replaced at every hop.
+   - The ARP protocol finds the MAC address that corresponds to a given IP address.
 14. **(i) নিচের MAC Address গুলো কোন ধরনের বের করুন। (a) 4C:23:10:4A:1A:2A (b) 45:24:56:2B:24:12 (c) FF:FF:FF:FF:FF:FF** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 788 (ET: N/A)]*
 
-
-   Answer: MAC address-er dhoron thik hoy prothom byte-er sorbonimno bit, mane I/G bit dekhe. Ei bit 0 hole unicast, 1 hole multicast ba group address. Ar shob bit 1 hole broadcast.
+   Answer: The type of a MAC address is determined by the least significant bit of the first byte, called the I/G bit. If that bit is 0 the address is unicast, and if it is 1 the address is multicast or a group address. If all 48 bits are 1 the address is broadcast.
 
    (a) `4C:23:10:4A:1A:2A`
-   - Prothom byte 4C = 0100 1100 (binary). Sorbonimno bit = 0, tai eta Unicast address.
-   - Er porer bit (U/L) = 0, mane eta universally administered, mane prostutkarok-er deoa globally unique address.
-   - Uttor: Unicast.
+   - First byte 4C = 0100 1100 in binary. The least significant bit is 0, so this is a Unicast address.
+   - The next bit, the U/L bit, is also 0, which means the address is universally administered, that is a globally unique address assigned by the manufacturer.
+   - Answer: Unicast.
 
    (b) `45:24:56:2B:24:12`
-   - Prothom byte 45 = 0100 0101 (binary). Sorbonimno bit = 1, tai eta Multicast ba group address.
-   - Uttor: Multicast.
+   - First byte 45 = 0100 0101 in binary. The least significant bit is 1, so this is a Multicast or group address.
+   - Answer: Multicast.
 
    (c) `FF:FF:FF:FF:FF:FF`
-   - Shob 48 ti bit 1, ja Broadcast address. Ei frame local network-er protita device grohon kore.
-   - Uttor: Broadcast.
+   - All 48 bits are 1, which is the Broadcast address. Every device on the local network accepts this frame.
+   - Answer: Broadcast.
 
-   | Address | Prothom byte (binary) | I/G bit | Dhoron |
+   | Address | First byte in binary | I/G bit | Type |
    |---|---|---|---|
    | 4C:23:10:4A:1A:2A | 0100 1100 | 0 | Unicast |
    | 45:24:56:2B:24:12 | 0100 0101 | 1 | Multicast |
-   | FF:FF:FF:FF:FF:FF | 1111 1111 | 1, ar shob bit 1 | Broadcast |
+   | FF:FF:FF:FF:FF:FF | 1111 1111 | 1, and all bits 1 | Broadcast |
 15. **If you have a company of two branch in the same city and they are connected. Which connection is used between then? (a) LAN (b) MAN (c) WAN (d) NONE** *[BCC Assistant Programmer 12.02.2021 compact it 811 (ET: BUET)]*
 
 
@@ -3245,24 +3219,22 @@ ii) 211.10.15.4
    - The fourth mode, anycast, delivers the packet to the nearest member of a group of identically addressed servers, and is used by DNS root servers and CDNs.
 18. **(i) Computer network কী? বিভিন্ন প্রকার Computer network সম্পর্কে আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 955-956 (ET: N/A)]*
 
+   Answer: A computer network is a collection of two or more computing devices connected by a transmission medium so that they can exchange data and share resources, following an agreed set of protocols.
 
-   Answer: Computer network holo duti ba tar beshi computing device-er ekti songroho, jara ekti transmission medium diye jukto ebong ekti nirdisto protocol mene data adan-prodan ar resource share korte pare.
+   - Purpose: sharing files, printers and an Internet connection; communication by email, chat and video; centralised data storage and backup; and reduced cost, since one resource serves many users.
+   - Components: the devices themselves, network interface cards, the transmission medium, connecting devices such as switches and routers, and the protocols.
 
-   - Uddeshsho: file, printer ar Internet connection share kora; email, chat ar video-r madhome jogajog; kendrio data sonrokkhon ar backup; ebong khoroch komano.
-   - Uposhthito upadan: device, network interface card, transmission medium, switch ar router-er moto connecting device, ebong protocol.
+   Types of computer network, by geographical area:
+   - PAN, Personal Area Network: about 10 metres around one person, connecting that person's own devices, using Bluetooth, Zigbee, NFC or USB. Example: a phone paired with a headset and a smartwatch.
+   - LAN, Local Area Network: one building or campus, up to a few kilometres. Privately owned, high speed of 1 to 10 Gbps, very low delay and low error rate, using Ethernet and Wi-Fi with switches and access points. Example: an office or university network.
+   - CAN, Campus Area Network: several nearby buildings belonging to one organisation, larger than a LAN and smaller than a MAN.
+   - MAN, Metropolitan Area Network: a whole city, roughly 5 to 50 km, often owned by an operator and shared by several organisations, using fibre and Metro Ethernet. Example: a cable television network, or a bank's branches across Dhaka.
+   - WAN, Wide Area Network: a country or the whole world, with no distance limit, usually leased from a carrier, with lower speed per user and higher delay than a LAN. Example: the Internet itself, or a bank's national network.
+   - Other types: SAN for storage, VPN for a secure tunnel over the public Internet, WLAN for a wireless LAN, and an intranet for an organisation's private internal network.
 
-   Bibhinno prokar computer network:
-
-   - PAN, Personal Area Network: about 10 metres around one person, connecting that person's own devices. Uses Bluetooth, Zigbee, NFC or USB. Example: a phone paired with a headset and a smartwatch.
-   - LAN, Local Area Network: one building or campus, up to a few kilometres. Privately owned, high speed of 1 to 10 Gbps, very low delay and low error rate. Uses Ethernet and Wi-Fi with switches and access points. Example: an office or a university network.
-   - CAN, Campus Area Network: several nearby buildings under one organisation, larger than a LAN but smaller than a MAN.
-   - MAN, Metropolitan Area Network: a whole city, roughly 5 to 50 km, often owned by an operator and shared by several organisations. Uses fibre, Metro Ethernet and formerly WiMAX. Example: a cable television network or a bank's branches across Dhaka.
-   - WAN, Wide Area Network: a country or the whole world, with no distance limit. Usually leased from a carrier, lower speed per user, higher delay and higher error rate than a LAN. Uses leased lines, MPLS, SONET and satellite. Example: the Internet itself, or a bank's national network.
-   - Additional types worth naming: SAN, a Storage Area Network for block level access to storage; VPN, a Virtual Private Network that tunnels a private network securely over the public Internet; WLAN for the wireless version of a LAN; and an intranet, which is an organisation's private internal network, with an extranet extending part of it to partners.
-
-   Architecture onujayi prokarbhed:
-   - Client-server: nirdisto server seba dey ar client seba nay. Kendrio niyontron, bhalo nirapotta ar sohoj backup, kintu server-i single point of failure ar khoroch beshi.
-   - Peer-to-peer: protita machine-i client ar server duito-i. Shosta ar sohoj, kintu nirapotta ar babosthapona kothin, tai praay 10 ti machine-er beshi hole obabharjo.
+   Types by architecture:
+   - Client-server: dedicated servers provide services and clients consume them. Centralised control, better security and easier backup, but the server is a single point of failure and the cost is higher.
+   - Peer to peer: every machine is both client and server. Cheap and simple, but hard to secure and to manage beyond about ten machines.
 19. **What is difference between MAC Address and IP Address?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1018-1019 (ET: N/A)]*
 
 
@@ -3511,32 +3483,31 @@ ii) 211.10.15.4
    - If the server is on a different subnet, a DHCP relay agent, configured with `ip helper-address`, converts the client's broadcast into a unicast towards the server.
 8. **SMTP, DNS, DHCP, NAT এর কাজ কি লিখ?** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
 
-
    Answer:
 
-   SMTP-er kaj:
-   - SMTP mane Simple Mail Transfer Protocol, ja email pathanor jonno byabohar hoy. TCP port 25, ar client submission-e 587.
-   - Eta ekti push protocol: sender-er mail client theke tar mail server-e, ar tarpor ek mail server theke onno mail server-e mail pouche dey.
-   - HELO, MAIL FROM, RCPT TO, DATA, QUIT — ei sohoj text command byabohar kore.
-   - Mail grohon korar jonno SMTP noy, POP3 ba IMAP lage.
+   Function of SMTP:
+   - SMTP stands for Simple Mail Transfer Protocol, and it is used to send email. It runs on TCP port 25, and on port 587 for client submission.
+   - It is a push protocol: it carries the message from the sender's mail client to the sender's mail server, and then from one mail server to the next.
+   - It uses simple text commands: HELO, MAIL FROM, RCPT TO, DATA and QUIT.
+   - It is not used to receive mail; POP3 or IMAP is used for that.
 
-   DNS-er kaj:
-   - DNS mane Domain Name System, ja domain name ke IP address-e rupantor kore. UDP port 53.
-   - Forward lookup name theke IP dey (A ar AAAA record), reverse lookup IP theke name dey (PTR record).
-   - MX record mail routing-e, CNAME alias-e, NS record delegation-e byabohar hoy.
-   - Eta ekti hierarchical distributed database: root, TLD ar authoritative server. Cache-er karone puro babostha druto kaj kore.
+   Function of DNS:
+   - DNS stands for Domain Name System, and it translates a domain name into an IP address. It uses UDP port 53 for queries and TCP port 53 for zone transfers.
+   - A forward lookup gives the IP address from the name, using A and AAAA records; a reverse lookup gives the name from the IP address, using PTR records.
+   - MX records are used for mail routing, CNAME records for aliases, and NS records for delegation.
+   - It is a hierarchical distributed database of root, TLD and authoritative servers, and caching is what makes the whole system fast.
 
-   DHCP-er kaj:
-   - DHCP mane Dynamic Host Configuration Protocol, ja client-ke automatically IP address, subnet mask, default gateway ar DNS server-er thikana dey. UDP port 67 ar 68.
-   - DORA process byabohar kore: DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, DHCPACK.
-   - Address lease-e deoa hoy, tai purono address abar reuse kora jay ar duplicate IP conflict hoy na.
-   - Hate hate protita PC configure korar dorkar pore na, ja boro network-e obhabniyo.
+   Function of DHCP:
+   - DHCP stands for Dynamic Host Configuration Protocol, and it automatically gives a client its IP address, subnet mask, default gateway and DNS server addresses. It uses UDP ports 67 and 68.
+   - It works through the DORA exchange: DHCPDISCOVER, DHCPOFFER, DHCPREQUEST and DHCPACK.
+   - Addresses are given on lease, so an address can be reused when it is released and duplicate address conflicts are prevented.
+   - It removes the need to configure every machine by hand, which is indispensable in a large network.
 
-   NAT-er kaj:
-   - NAT mane Network Address Translation, ja private IP address ke public IP address-e rupantor kore, ar phera pothe ulto kaj kore.
-   - Ekti public IP-r pichone hajar hajar private host chalano jay, tai sīmito IPv4 address bache. PAT ba NAT overload-e port number diye alada kora hoy.
-   - Bhitorer address bahire dekha jay na, tai kichuta nirapotta-o pawa jay.
-   - Oshubidha: prokrito end-to-end connectivity noshto hoy, ar FTP, SIP-er moto protocol-e somossa toiri kore.
+   Function of NAT:
+   - NAT stands for Network Address Translation, and it converts a private IP address into a public IP address, and back again on the return path.
+   - It lets thousands of private hosts share one public address, which conserves the scarce IPv4 space. In PAT, also called NAT overload, the hosts are distinguished by port number.
+   - Internal addresses are not visible from outside, which gives a degree of security.
+   - Its drawback is that it breaks true end to end connectivity and causes problems for protocols such as FTP and SIP that carry addresses in their payload.
 9. **What is DNS? What is forward and reverse lookup DNS?** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 658 (ET: N/A)]*
 
 
@@ -3761,38 +3732,36 @@ ii) 211.10.15.4
    - In short: the stub resolver asks, the recursive resolver finds out, and the authoritative server knows.
 18. **DNS server এবং DHCP server এর কাজ কী?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 911 (ET: BUET)]*
 
-
    Answer:
 
-   DNS server-er kaj:
-   - Domain name ke IP address-e rupantor kora, jemon `www.example.com` theke 93.184.216.34. Eta forward lookup, A ba AAAA record diye.
-   - Reverse lookup: IP address theke name ber kora, PTR record diye, ja mail server verification ar log-e byabohar hoy.
-   - MX record diye mail kon server-e jabe ta bola, CNAME diye alias, NS record diye subdomain delegation.
-   - Ekti hierarchical distributed database maintain kora: root, TLD, authoritative server.
-   - Uttor cache kore rakha, tai porer bar ar puro path ghurte hoy na — ei karone-i DNS eto druto.
-   - Ekadhik A record diye load distribution ar failover kora.
-   - UDP port 53-e query, ar zone transfer-er jonno TCP port 53.
+   Function of a DNS server:
+   - To translate a domain name into an IP address, for example `www.example.com` into 93.184.216.34. This is the forward lookup, using A records for IPv4 and AAAA for IPv6.
+   - To perform reverse lookup, giving a name from an IP address using PTR records, which is used for mail server verification and for readable logs.
+   - To provide MX records that say which server accepts mail for a domain, CNAME records for aliases, and NS records that delegate a subdomain to other name servers.
+   - To maintain a hierarchical distributed database of root servers, TLD servers and authoritative servers.
+   - To cache answers for their TTL, so that a later query does not have to travel the whole path again. This is what makes DNS fast and keeps the global infrastructure viable.
+   - To distribute load and provide failover by returning several A records, or weighted and geographic answers.
+   - It answers queries on UDP port 53 and performs zone transfers on TCP port 53.
 
-   DHCP server-er kaj:
-   - Client-ke automatically IP address dewa, ekti pool ba scope theke lease hisebe.
-   - Sathe subnet mask, default gateway ar DNS server-er thikana dewa, dorkar hole NTP server ar domain name-o.
-   - DORA process chalano: DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, DHCPACK. UDP port 67 ar 68.
-   - Lease table rekhe duplicate IP conflict thekano.
-   - Lease sesh hole address abar pool-e ferot nea, tai sīmito address-e onek beshi user chalano jay.
-   - MAC address diye reservation kora, jate printer ba server shobshomoy ekoi address pay.
-   - Puro network-er gateway ba DNS setting ek jaiga theke bodlano, protita PC-te na giye.
+   Function of a DHCP server:
+   - To lease an IP address to a client automatically from a pool, called a scope.
+   - To supply the subnet mask, the default gateway and the DNS server addresses along with it, and where required the NTP server and the domain name.
+   - To run the DORA exchange: DHCPDISCOVER, DHCPOFFER, DHCPREQUEST and DHCPACK, over UDP ports 67 and 68.
+   - To keep a lease table so that no two hosts receive the same address.
+   - To return an address to the pool when its lease expires, so that a small pool can serve a far larger number of occasional users.
+   - To hold reservations by MAC address, so that a printer or a server always receives the same address.
+   - To let the gateway or DNS settings of the whole network be changed from one place instead of on every machine.
 
-   - Sonkhipto parthokko: DHCP address dey, ar DNS shei address khuje dey.
+   - The difference in one line: DHCP gives the address, and DNS finds the address.
 19. **দূরবর্তী কম্পিউটার সংযোগ এর জন্য কোন প্রোটোকল ব্যবহার করা হয়?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
+   Answer: Telnet and SSH are the protocols mainly used to connect to a remote computer.
 
-   Answer: Durborti computer-e songjog-er jonno mulot Telnet ebong SSH protocol byabohar kora hoy.
-
-   - SSH, Secure Shell, TCP port 22: encrypted remote login, tai username, password ar shob command surokkhito thake. Ajker din-e eta-i standard.
-   - Telnet, TCP port 23: purono remote login protocol, kintu shob kichu plain text-e jay, tai eta oniropod ebong ekhon prayo byabohar hoy na.
-   - RDP, Remote Desktop Protocol, TCP port 3389: Windows-er graphical remote desktop-er jonno.
-   - VNC, port 5900: platform-nirapekkho graphical remote access.
-   - FTP (port 21) ar SFTP (port 22) durborti computer-er sathe file adan-prodan-er jonno.
+   - SSH, Secure Shell, TCP port 22: encrypted remote login, so the username, the password and every command are protected. This is the standard today.
+   - Telnet, TCP port 23: the older remote login protocol, but everything travels in plain text, so it is insecure and is now rarely used.
+   - RDP, Remote Desktop Protocol, TCP port 3389: for graphical remote desktop access to Windows.
+   - VNC, port 5900: platform independent graphical remote access.
+   - FTP on port 21 and SFTP on port 22 are used to transfer files to and from a remote computer.
 
 ## Multiplexing & Bandwidth (18)
 
@@ -3826,14 +3795,13 @@ ii) 211.10.15.4
    - The guard band is unused spectrum kept between adjacent channels so that a small drift or the skirt of one filter does not spill into the neighbouring channel and cause interference. This is a feature of FDM only; TDM needs no guard band because the channels are separated in time.
 2. **ব্যান্ডউইথ (Bandwidth) বলতে কী বুঝায়?** *[সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+   Answer: Bandwidth means the data carrying capacity of a transmission channel, that is the maximum amount of data that can be sent in one second.
 
-   Answer: Bandwidth bolte bojhay kono transmission channel-er data bohon korar khomota, mane ek second-e sorbochcho koto poriman data pathano jete pare.
-
-   - Analog signal-er khetre bandwidth mane channel-e je sorbochcho ar sorbonimno frequency-r modhye parthokko, ar eta Hertz (Hz)-e mapa hoy. Jemon telephone line-er bandwidth 3000 Hz (300 theke 3300 Hz).
-   - Digital signal-er khetre bandwidth mane ek second-e sorbochcho koto bit pathano jay, ar eta bps, Kbps, Mbps ba Gbps-e mapa hoy.
-   - Bandwidth jato beshi, tato beshi data ekshathe pathano jay, tai video streaming ba boro file transfer tato druto hoy.
-   - Bandwidth ar Throughput ek noy: bandwidth holo sorbochcho tattwik khomota, ar throughput holo bastobe pawa data rate, ja congestion, error ar overhead-er karone shobshomoy bandwidth-er cheye kom hoy.
-   - Upoma: bandwidth holo rasta-r prosthota, ar throughput holo ghontay bastobe koyta gari par holo.
+   - For an analog signal, bandwidth means the difference between the highest and the lowest frequency the channel can carry, and it is measured in Hertz. For example, a telephone line has a bandwidth of 3000 Hz, from 300 Hz to 3300 Hz.
+   - For a digital signal, bandwidth means the maximum number of bits that can be sent in one second, and it is measured in bps, Kbps, Mbps or Gbps.
+   - The greater the bandwidth, the more data can be sent at once, so video streaming or a large file transfer completes more quickly.
+   - Bandwidth and throughput are not the same. Bandwidth is the maximum theoretical capacity, while throughput is the data rate actually achieved, which is always lower because of congestion, errors and protocol overhead.
+   - An analogy: bandwidth is the width of a road, and throughput is the number of vehicles that actually pass along it in an hour.
 3. **6.9 Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
 
@@ -3929,7 +3897,7 @@ ii) 211.10.15.4
    | Efficiency | Wasted if a channel is idle | Synchronous TDM also wastes an idle slot, but statistical TDM does not |
    | Examples | Radio and TV broadcast, cable TV, ADSL, first generation mobile | T-1 and E-1 carriers, SONET, GSM, ISDN |
 
-   - Sonkhipto kotha: FDM-e protita channel nijer alada frequency band pay ebong shobai ekshathe pathay, ar TDM-e protita channel puro bandwidth pay kintu palakrome, nijer time slot-e.
+   - In short: in FDM every channel receives its own separate frequency band and all of them transmit at the same time, whereas in TDM every channel receives the whole bandwidth but only in turn, during its own time slot.
 8. **Show that the data rate of T-1 carrier is 1.544 Mbps.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
 
@@ -4769,95 +4737,90 @@ ii) 211.10.15.4
    - A flat, simplified network architecture, eNodeB and the Evolved Packet Core, with fewer nodes than 3G, which lowers cost and delay.
 8. **5G প্রথম কত সালে ও কোথায় চালু হয়?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+   Answer: 5G was launched commercially for the first time in 2019.
 
-   Answer: 5G banijjikbhabe prothom chalu hoy 2019 sale.
-
-   - 2019 sal-er April mash-e Dokkhin Korea (South Korea) bishwer prothom deshbyapi banijjik 5G network chalu kore, ar praay ekoi somoye USA-te Verizon Chicago o Minneapolis-e chalu kore.
-   - Dokkhin Korea-ke sadharonoto prothom dhora hoy karon tara prothom purno deshbyapi banijjik 5G service diyechilo.
-   - Bangladesh-e Teletalk 2021 sal-er 12 December sīmito paribeshe prothom 5G chalu kore.
+   - In April 2019 South Korea launched the world's first nationwide commercial 5G network, and at almost the same time Verizon launched 5G in Chicago and Minneapolis in the United States.
+   - South Korea is generally credited as the first, because it was the first to offer a full nationwide commercial 5G service.
+   - In Bangladesh, Teletalk launched 5G on a limited scale on 12 December 2021.
 9. **(ক) Wi-Fi Network সম্পর্কে সংক্ষিপ্ত বিবরণ দিন। Wi-Fi Sensor Network এবং Ad Hoc Network এর মধ্যে পার্থক্য লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
 
-
    Answer:
 
-   Wi-Fi Network:
-   - Wi-Fi holo IEEE 802.11 standard-e toiri wireless LAN technology, ja cable chara device-ke local network o Internet-er sathe jukto kore.
-   - Eta 2.4 GHz, 5 GHz ebong ekhon 6 GHz unlicensed band-e kaj kore, indoor range praay 30 theke 100 metre.
-   - Access Point (AP) wireless client-der wired LAN-er sathe bridge kore. Ekti AP-r elaka ke BSS bole, ekadhik AP mile ESS toiri kore jekhane roaming somvob.
-   - Medium access-e CSMA/CA byabohar hoy, karon radio-te transmit korar somoy collision shona jay na.
-   - Data rate 802.11b-te 11 Mbps theke 802.11ax ba Wi-Fi 6-te theoretically 9.6 Gbps porjonto.
-   - Nirapotta WPA2 ar WPA3 diye. Shubidha: sohoj installation, mobility, kom cost. Oshubidha: interference, sīmito range, ar khola medium-e nirapotta jhuki.
+   Wi-Fi network:
+   - Wi-Fi is a wireless LAN technology built on the IEEE 802.11 standard, which connects devices to a local network and to the Internet without cable.
+   - It works in the unlicensed 2.4 GHz, 5 GHz and now 6 GHz bands, with an indoor range of about 30 to 100 metres.
+   - An access point bridges the wireless clients to the wired LAN. The coverage area of one access point is called a BSS, and several access points form an ESS within which a client can roam.
+   - Medium access uses CSMA/CA, because a radio cannot detect a collision while it is transmitting.
+   - Data rates run from 11 Mbps in 802.11b up to a theoretical 9.6 Gbps in 802.11ax, that is Wi-Fi 6.
+   - Security is provided by WPA2 and WPA3. Its advantages are easy installation, mobility and low cost; its disadvantages are interference, limited range and the security risk of an open medium.
 
-   Wireless Sensor Network ar Ad Hoc Network-er parthokko:
+   Difference between a Wireless Sensor Network and an Ad Hoc Network:
 
-   | Bishoy | Wireless Sensor Network | Ad Hoc Network |
+   | Point | Wireless Sensor Network | Ad Hoc Network |
    |---|---|---|
-   | Uddeshsho | Poribesh theke data sensing ar sonngroho | Duti ba tar beshi device-er modhye sadharon jogajog |
-   | Node | Chhoto, sosta, kom khomotar sensor node, songkha hajar hajar | Laptop, mobile-er moto samortho device, songkha kom |
-   | Traffic dik | Prayoshoi many-to-one, shob node theke ekti sink-e | Peer-to-peer, je kono node theke je kono node-e |
-   | Power | Battery-chalito, replace kora jay na, tai energy-i mul design constraint | Recharge kora jay, power tulonamulok kom somossa |
-   | Mobility | Sadharonoto node sthir thake | Node prayoshoi cholmān |
-   | Data rate | Khub kom, majhe majhe kichu byte | Onek beshi, file ba video |
-   | Addressing | Data-centric, attribute onujayi, ID chara-o hote pare | Node-centric, protita node-er nijoswo address |
-   | Redundancy | Onek node ek-i ghotona dekhe, tai data redundant | Protita node-er data alada |
-   | Udahoron | Krishi jomite moisture sensor, forest fire detection | Duti laptop-er modhye direct file sharing, MANET, VANET |
+   | Purpose | Sensing and collecting data from the environment | General communication between two or more devices |
+   | Nodes | Small, cheap, low powered sensor nodes, often thousands of them | Capable devices such as laptops and phones, and far fewer of them |
+   | Traffic direction | Usually many to one, from every node towards a single sink | Peer to peer, from any node to any node |
+   | Power | Battery powered and often not replaceable, so energy is the main design constraint | Rechargeable, so power is a much smaller problem |
+   | Mobility | Nodes are normally stationary | Nodes are often moving |
+   | Data rate | Very low, a few bytes at intervals | Much higher, files or video |
+   | Addressing | Data centric, by attribute, and possibly without an identifier | Node centric, each node has its own address |
+   | Redundancy | Many nodes observe the same event, so the data is redundant | Each node's data is distinct |
+   | Examples | Soil moisture sensors in a field, forest fire detection | Direct file sharing between two laptops, MANET, VANET |
 
-   - Mul kotha: WSN asole ekti bishesh dhoroner ad hoc network jekhane uddeshsho sensing ar shobcheye boro bishoy holo energy bachano.
+   - In essence a wireless sensor network is a special kind of ad hoc network whose purpose is sensing and whose overriding concern is saving energy.
 10. **Call Drop কী? এর কারণ গুলো উল্লেখ করুন।** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
 
-
    Answer:
 
-   Call Drop ki:
-   - Call Drop mane holo ekti cholmān phone call kono paksher iccha chara hothat kete jaoa, mane network-i connection-ti sesh kore dey.
-   - Regulator, jemon BTRC, call drop rate ke service quality-r ekti mul mapkathi hisebe dhore; sadharonoto 2 percent-er niche thaka bāñchhonīyo.
+   What a call drop is:
+   - A call drop is the sudden termination of an ongoing telephone call by the network, without either party wishing to end it.
+   - Regulators such as the BTRC treat the call drop rate as a key measure of service quality, and it is normally expected to remain below 2 percent.
 
-   Call Drop-er karon:
-   - Durbol signal ba coverage-er obhab: user cell-er kinare ba coverage hole-e chole gele signal strength threshold-er niche neme jay.
-   - Handover byartho hoa: user ek cell theke onno cell-e jaowar somoy target cell-e jaiga na thakle ba handover somoymoto na hole call kete jay.
-   - Network congestion: cell-e channel ba capacity sesh hoye gele notun call to bote-i, cholmān call-o drop hote pare.
-   - Interference: pashe-r cell theke co-channel ba adjacent channel interference, othoba onno source theke noise.
-   - Building-er bhitor penetration loss: motha dewal, lift, basement ba shopping mall-e signal dhukte pare na.
-   - Tower ba BTS-er kārigori tuti: power failure, transmission link down, antenna misalignment, ba equipment fault.
-   - Bhugolik badha: pahar, uchu bhaban, ghon gach — bishesh kore uchu frequency-te.
-   - Weather: bhari brishti ba jhor microwave backhaul link-ke durbol kore.
-   - Handset-er somossa: durbol battery, kharap antenna, purano software ba faulty SIM.
-   - Druto cholachol: train ba gari-te khub druto cholle handover shomoy pay na, ar Doppler effect signal noshto kore.
-   - Optimization-er obhab: notun bhaban uthle purano cell plan ar mele na, tokhon drive test kore reoptimize korte hoy.
+   Causes of call drops:
+   - Weak signal or lack of coverage: when a user moves to the edge of a cell or into a coverage hole, the signal strength falls below the usable threshold.
+   - Handover failure: when a user moves from one cell to another, the call is lost if the target cell has no free capacity or if the handover is not completed in time.
+   - Network congestion: when the channels or the capacity of a cell are exhausted, not only are new calls blocked but ongoing calls may also be dropped.
+   - Interference: co-channel and adjacent channel interference from neighbouring cells, or noise from other sources.
+   - Indoor penetration loss: thick walls, lifts, basements and shopping malls block the signal.
+   - Equipment faults at the tower or base station: power failure, a failed transmission link, antenna misalignment or hardware failure.
+   - Geographical obstacles: hills, tall buildings and dense trees, particularly at higher frequencies.
+   - Weather: heavy rain or storms weaken microwave backhaul links.
+   - Handset problems: a weak battery, a poor antenna, outdated firmware or a faulty SIM.
+   - High speed movement: on a train or in a fast car there is too little time for handover, and the Doppler effect degrades the signal.
+   - Lack of optimisation: when new buildings appear, the old cell plan no longer fits, and the network must be re-optimised through drive testing.
 11. **LTE কী? এর এডভান্সড প্রযুক্তির নাম লিখুন।** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 811 (ET: IBA)]*
 
-
    Answer:
 
-   LTE ki:
-   - LTE mane Long Term Evolution, 3GPP-r toiri ekti wireless broadband standard, jake sadharonoto 4G bola hoy.
-   - Eta puropuri IP-bhittik packet switched network; alada circuit switched voice path nei, voice-o VoLTE hisebe ekoi IP core-e jay.
-   - Downlink-e OFDMA ar uplink-e SC-FDMA byabohar kore, sathe MIMO antenna.
-   - Data rate downlink-e 100 theke 300 Mbps, latency praay 30 theke 50 ms. Channel bandwidth 1.4 MHz theke 20 MHz porjonto scalable.
-   - Architecture flat: eNodeB ar Evolved Packet Core, tai node kom ebong delay kom.
+   What LTE is:
+   - LTE stands for Long Term Evolution, a wireless broadband standard developed by 3GPP and generally known as 4G.
+   - It is a fully IP based packet switched network; there is no separate circuit switched voice path, and voice is carried over the same IP core as VoLTE.
+   - It uses OFDMA on the downlink and SC-FDMA on the uplink, together with MIMO antennas.
+   - Downlink data rates are 100 to 300 Mbps and latency is about 30 to 50 ms. The channel bandwidth is scalable from 1.4 MHz to 20 MHz.
+   - Its architecture is flat, consisting of the eNodeB and the Evolved Packet Core, so there are fewer nodes and lower delay.
 
-   LTE-r advanced projukti-r nam:
-   - LTE-Advanced, 3GPP Release 10, ja ITU-r prokrito 4G shorto purno kore. Er mul projukti gulo holo:
-   - Carrier Aggregation: 5 ti porjonto carrier jog kore 100 MHz porjonto bandwidth, tai onek beshi speed.
-   - Enhanced MIMO: downlink-e 8 × 8 ar uplink-e 4 × 4 porjonto antenna.
-   - Coordinated Multi-Point (CoMP): pashapashi ekadhik cell mile ek user-ke seba dey, tai cell-er kinare-o speed bhalo thake.
-   - Relay Node ar Heterogeneous Network (HetNet): boro macro cell-er bhitore chhoto pico o femto cell.
-   - Inter-Cell Interference Coordination (eICIC), ja cell-er modhye interference komay.
-   - LTE-Advanced Pro, Release 13 o tar pore, jekhane License Assisted Access, Massive MIMO, NB-IoT ar Gigabit LTE ache. Erpor-i ashe 5G NR.
+   Names of its advanced technologies:
+   - LTE-Advanced, 3GPP Release 10, which meets the ITU requirements for true 4G. Its main technologies are:
+   - Carrier Aggregation: combining up to five carriers for a total of 100 MHz of bandwidth, giving much higher speed.
+   - Enhanced MIMO: up to 8 × 8 on the downlink and 4 × 4 on the uplink.
+   - Coordinated Multi-Point, CoMP: several neighbouring cells serve one user together, so speed remains good even at the cell edge.
+   - Relay Nodes and Heterogeneous Networks, HetNet: small pico and femto cells placed inside the large macro cell.
+   - Enhanced Inter-Cell Interference Coordination, eICIC, which reduces interference between cells.
+   - LTE-Advanced Pro, Release 13 and later, which adds License Assisted Access, Massive MIMO, NB-IoT and Gigabit LTE. 5G NR follows after this.
 12. **Wi-Fi, Bluetooth, Wi-Max, Cellure network এইগুলোকে দূরত্বের ক্রমানুসারে ছোট থেকে বড় এর দিক অনুসারে লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 867 (ET: BUET)]*
 
+   Answer: In order of range, from smallest to largest:
 
-   Answer: Range-er kramanusare choto theke boro:
-
-   | Krom | Technology | Sadharon range | Network dhoron |
+   | Order | Technology | Typical range | Network type |
    |---|---|---|---|
-   | 1 | Bluetooth | 10 m, class 1-e 100 m porjonto | WPAN, Personal Area Network |
-   | 2 | Wi-Fi | 30 theke 100 m indoor | WLAN, Local Area Network |
-   | 3 | WiMAX | 5 theke 50 km | WMAN, Metropolitan Area Network |
-   | 4 | Cellular network | 1 theke 35 km per cell, kintu deshbyapi ba bishwabyapi coverage | WWAN, Wide Area Network |
+   | 1 | Bluetooth | 10 m, up to 100 m for class 1 | WPAN, Personal Area Network |
+   | 2 | Wi-Fi | 30 to 100 m indoors | WLAN, Local Area Network |
+   | 3 | WiMAX | 5 to 50 km | WMAN, Metropolitan Area Network |
+   | 4 | Cellular network | 1 to 35 km per cell, but nationwide coverage overall | WWAN, Wide Area Network |
 
-   - Tai krom holo: Bluetooth < Wi-Fi < WiMAX < Cellular network.
-   - Ekti tower-er hisebe WiMAX-er range cellular cell-er cheye beshi hote pare, kintu cellular network-e hajar hajar tower mile puro desh cover kore, tai shomogrik coverage-e cellular-i shob theke boro.
+   - The order is therefore: Bluetooth < Wi-Fi < WiMAX < Cellular network.
+   - Measured from a single tower, WiMAX can reach further than one cellular cell, but a cellular network uses thousands of towers to cover a whole country, so its overall coverage is the greatest.
 13. **(c) Difference between broadband Wi-Fi and Wi-Max communication technology.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)]*
 
 
@@ -5465,22 +5428,21 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - So yes, there is a difference: every router acting as an exit point is a gateway, but not every gateway is a router. A router routes; a gateway translates.
 8. **অথবা, (ক) ডেটা ট্রান্সমিশনে Router ও Gateway এর মধ্যে কোনটি অধিকতর সুবিধাজনক-মতামত ব্যক্ত করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 615 (ET: N/A)]*
 
+   Answer: A router and a gateway perform different roles, so which is more advantageous depends on what kind of networks are being joined.
 
-   Answer: Data transmission-e Router ebong Gateway duitar bhumika alada, tai kon ta beshi shubidhajonok seta nirbhor kore ki dhoroner network jog kora hocche tar upor.
-
-   | Bishoy | Router | Gateway |
+   | Point | Router | Gateway |
    |---|---|---|
-   | Kaj | Ek IP network theke aar ek IP network-e packet forward kora | Bhinno protocol ba format-er duti network-er modhye translate kora |
-   | Layer | Network layer, layer 3 | Je kono layer, prayoshoi application layer |
-   | Speed | Onek druto, hardware forwarding | Dheere, karon puro message rupantor korte hoy |
-   | Cost | Kom | Beshi |
-   | Example | LAN theke Internet-e traffic pathano | VoIP theke PSTN, IoT Zigbee theke TCP/IP |
+   | Function | Forwards packets from one IP network to another | Translates between two networks using different protocols or data formats |
+   | Layer | Network layer, layer 3 | Any layer, most often the application layer |
+   | Speed | Much faster, forwarding is done in hardware | Slower, because the whole message may have to be converted |
+   | Cost | Lower | Higher |
+   | Example | Sending traffic from a LAN to the Internet | VoIP to PSTN, or an IoT Zigbee network to TCP/IP |
 
-   Motamot:
-   - Jodi duti network-i same protocol, mane TCP/IP byabohar kore, tahole Router-i beshi shubidhajonok: eta druto, shosta, scalable, ar routing protocol diye best path nijei ber kore.
-   - Jodi duti network-er protocol ba data format alada hoy, tahole Router kichui korte parbe na, tokhon Gateway-i ekmatro somadhan.
-   - Ajker Internet praytoi puropuri TCP/IP bhittik, tai bastobe beshirbhag khetre Router-i beshi byabohar hoy, ar Gateway lage bishesh khetre.
-   - Practical bhabe duitai ek device-e thake: ekti home router-i default gateway, NAT ar firewall-er kaj kore.
+   Opinion:
+   - If both networks use the same protocol, that is TCP/IP, the router is clearly the more advantageous choice. It is faster, cheaper and scalable, and with a routing protocol it finds the best path by itself.
+   - If the two networks use different protocols or data formats, a router can do nothing at all, and a gateway is the only possible solution.
+   - Today's Internet is almost entirely TCP/IP based, so in practice the router is used in the great majority of cases and the gateway is needed only in special situations.
+   - In practical equipment the two are combined: a home router is simultaneously the default gateway, the NAT device and the firewall.
 9. **Write the Difference among Network Switch, Hub and Router.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1023 (ET: N/A)], [DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
 
@@ -5501,23 +5463,22 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Summary: a hub simply repeats the electrical signal, a switch makes an intelligent forwarding decision inside one network, and a router makes a routing decision between different networks.
 10. **(iii) Router and Gateway এর ফাংশন লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 789 (ET: N/A)]*
 
-
    Answer:
 
-   Router-er function:
-   - Layer 3, mane network layer-e kaj kore ebong duti ba tar beshi bhinno network-ke jukto kore.
-   - Packet-er destination IP address dekhe routing table-e longest prefix match kore best next hop nirbachon kore.
-   - Static route ba RIP, OSPF, BGP-er moto routing protocol diye routing table toiri ar update kore.
-   - Protita hop-e TTL komay, dorkar hole packet fragment kore, ar layer 2 header notun kore lekhe.
-   - Broadcast block kore, tai protita interface ekti alada broadcast domain toiri kore.
-   - Ei sathe NAT, DHCP server, ACL diye filtering, QoS ar WAN connectivity dey.
+   Functions of a router:
+   - It works at layer 3, the network layer, and connects two or more different networks.
+   - It reads the destination IP address of a packet, performs a longest prefix match in the routing table and selects the best next hop.
+   - It builds and updates that routing table with static routes or with routing protocols such as RIP, OSPF and BGP.
+   - It decrements the TTL at every hop, fragments the packet where the next link has a smaller MTU, and rewrites the layer 2 header.
+   - It blocks broadcasts, so every interface forms a separate broadcast domain.
+   - It also provides NAT, a DHCP service, filtering with access control lists, QoS and WAN connectivity.
 
-   Gateway-er function:
-   - Bhinno protocol, architecture ba data format-er duti network-ke jukto kore ebong tader modhye translate kore.
-   - OSI-r je kono layer-e, emonki application layer porjonto kaj korte pare, karon puro message-er format bodlate hote pare.
-   - Network-er entry ba exit point hisebe kaj kore; LAN-er host-ra nijer subnet-er baire jete default gateway byabohar kore.
-   - Example: VoIP gateway IP call-ke PSTN call-e rupantor kore, email gateway duti mail system-er modhye onubad kore, IoT gateway Zigbee sensor data-ke TCP/IP-te ane.
-   - Prayoshoi security ar protocol conversion ekshathe kore, jemon ekti API gateway.
+   Functions of a gateway:
+   - It connects two networks that use different protocols, architectures or data formats and translates between them.
+   - It can operate at any layer of the OSI model, up to and including the application layer, because the whole format of the message may have to be changed.
+   - It acts as the entry and exit point of a network; hosts on a LAN use the default gateway to reach anything outside their own subnet.
+   - Examples: a VoIP gateway converting an IP call into a PSTN call, an email gateway translating between two mail systems, and an IoT gateway bringing Zigbee sensor data onto TCP/IP.
+   - It often performs protocol conversion and security functions together, as an API gateway does.
 11. **Write down the difference between Hub and Switch.** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
 
 
@@ -5536,30 +5497,28 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Cost and status | Cheap but obsolete | Slightly costlier, the standard device today |
 12. **Wi-Fi access point বলতে কী বুঝানো হয়? Router and Switch -এর মধ্যে পার্থক্য লিখুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
 
-
    Answer:
 
    Wi-Fi access point:
-   - Wi-Fi Access Point holo emon ekti networking device ja wireless client-der, jemon laptop ba mobile, wired LAN-er sathe jukto kore. Eta radio signal ke Ethernet frame-e ebong ulto dike rupantor kore.
-   - Eta layer 2-e kaj kore ar mulot ekti wireless bridge; IEEE 802.11 standard mene CSMA/CA diye medium access niyontron kore.
-   - Protita AP ekti SSID broadcast kore, client authenticate ar associate hoy, ebong WPA2 ba WPA3 diye encryption hoy.
-   - Ekti AP-r coverage area ke bola hoy BSS; ekadhik AP mile ekti ESS toiri kore, jekhane client ek AP theke onno AP-te roam korte pare.
-   - Home router-e AP, switch ar router — tinti kaj ek boxe thake, kintu enterprise-e AP alada device ebong ekti WLAN controller diye niyontrito hoy.
+   - A Wi-Fi access point is a networking device that connects wireless clients, such as laptops and mobile phones, to a wired LAN. It converts radio signals into Ethernet frames and Ethernet frames back into radio signals.
+   - It works at layer 2 and is essentially a wireless bridge. It follows the IEEE 802.11 standard and controls access to the medium with CSMA/CA.
+   - Each access point broadcasts an SSID; the client authenticates and associates with it, and the traffic is encrypted with WPA2 or WPA3.
+   - The coverage area of one access point is called a BSS, and several access points together form an ESS, within which a client can roam from one access point to another.
+   - In a home router the access point, the switch and the router are combined in a single box, but in an enterprise the access point is a separate device managed by a WLAN controller.
 
-   Router ar Switch-er parthokko:
+   Difference between a router and a switch:
 
-   | Bishoy | Router | Switch |
+   | Point | Router | Switch |
    |---|---|---|
    | Layer | Network layer, layer 3 | Data link layer, layer 2 |
-   | Address | IP address | MAC address |
-   | Kaj | Bhinno network-er modhye packet forward kora | Ek LAN-er bhitor frame forward kora |
+   | Address used | IP address | MAC address |
+   | Function | Forwards packets between different networks | Forwards frames within one LAN |
    | Table | Routing table | MAC address table |
-   | Broadcast | Block kore, protita interface alada broadcast domain | Forward kore, shob port ek broadcast domain |
-   | Port songkha | Kom, 2 theke 8 | Beshi, 8 theke 48 ba tar beshi |
-   | Baroti feature | NAT, DHCP, ACL, firewall, WAN link | VLAN, STP, port security, link aggregation |
-   | Speed ar dam | Tulonamulok dheere ar dami | Druto ar kom dami |
+   | Broadcast | Blocks it, so each interface is a separate broadcast domain | Forwards it, so all ports form one broadcast domain |
+   | Number of ports | Few, typically 2 to 8 | Many, 8 to 48 or more |
+   | Extra features | NAT, DHCP, ACL, firewall, WAN links | VLAN, STP, port security, link aggregation |
+   | Speed and cost | Comparatively slower and more expensive | Faster and cheaper |
 13. **হাব, সুইচ ও রাউটার এর মধ্যে পার্থক্য লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
-
 
    Answer:
 
@@ -5575,7 +5534,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Intelligence and cost | None, cheapest, now obsolete | Learns addresses, moderate cost | Runs routing protocols, most expensive |
    | NAT, DHCP, firewall | No | No, except on layer 3 switches | Yes |
 
-   - Sonkhipto kotha: Hub kichu bujhe na, shudhu signal repeat kore; Switch MAC address dekhe thik port-e frame pathay; ar Router IP address dekhe ek network theke onno network-e packet pathay.
+   - In short: a hub understands nothing and simply repeats the signal; a switch reads the MAC address and sends the frame to the correct port; and a router reads the IP address and sends the packet from one network to another.
 14. **(c) Briefly describe three devices using which different LANs can be connected.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030 (ET: N/A)]*
 
 
@@ -5661,21 +5620,20 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Examples | Walkie-talkie, CB radio, hub based Ethernet | Telephone, mobile call, switched Ethernet |
 5. **(গ) উদাহরণসহ Simplex, half-duplex এবং duplex কমিউনিকেশন সিস্টেমের পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
 
-
    Answer:
 
-   | Bishoy | Simplex | Half duplex | Full duplex |
+   | Point | Simplex | Half duplex | Full duplex |
    |---|---|---|---|
-   | Direction | Ek dike matro | Duidike, kintu ekbare ek dike | Duidike ekshathe |
-   | Channel capacity | Purota ek dike | Purota, kintu palakrome | Duidike bhag kore, ba duti alada channel |
-   | Turnaround delay | Prayojon nei | Ache | Nei |
-   | Performance | Shob theke kom nomonio | Moddhom | Shob theke bhalo |
-   | Cost | Shob theke kom | Moddhom | Shob theke beshi |
-   | Udahoron | Keyboard theke computer, monitor, radio o TV broadcast | Walkie-talkie, CB radio, hub bhittik Ethernet | Telephone, mobile call, switched Ethernet |
+   | Direction | One direction only | Both directions, but only one at a time | Both directions at the same time |
+   | Channel capacity | The whole capacity is used in one direction | The whole capacity, but used alternately | Divided between the two directions, or two separate channels |
+   | Turnaround delay | Not applicable | Present | None |
+   | Performance | Least flexible | Moderate | Best |
+   | Cost | Lowest | Moderate | Highest |
+   | Examples | Keyboard to computer, monitor, radio and television broadcast | Walkie-talkie, CB radio, hub based Ethernet | Telephone, mobile call, switched Ethernet |
 
-   - Simplex-e receiver kokhono uttor dite pare na, tai eta shudhu one-way broadcast-er jonno.
-   - Half duplex-e ek pokkho sesh na kora porjonto onno pokkho opekkha kore, tai shared medium-e CSMA/CD lage.
-   - Full duplex-e duti alada path ba echo cancellation byabohar kore ekshathe pathano o grohon kora jay, tai throughput dwigun hote pare.
+   - In simplex the receiver can never reply, so it suits one way broadcasting only.
+   - In half duplex one side must finish before the other can begin, which is why CSMA/CD is needed on a shared medium.
+   - In full duplex two separate paths or echo cancellation allow sending and receiving at the same instant, so the throughput can be double that of half duplex.
 6. **What is the difference between Synchronous and Asynchronous transmission?** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 723 (ET: N/A)], [RAKUB Assistant Network System Engineer 03.11.2023 compact it 550 (ET: BIBM)]*
 
 
@@ -5752,14 +5710,13 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Protocol: the set of rules that governs the communication, covering syntax, semantics and timing. Without a shared protocol the two devices cannot understand each other even if they are physically connected.
 10. **(ক) Data Communication System এর পাঁচটি প্রধান Component এর চিত্রসহকারে বর্ণনা দিন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+   Answer: A data communication system has five components.
 
-   Answer: Data Communication System-er panchti prodhan component:
-
-   - Message: the actual information to be communicated, that is text, number, image, audio or video.
+   - Message: the actual information to be communicated, that is text, numbers, images, audio or video.
    - Sender: the device that originates and transmits the message, for example a computer, a phone or a camera.
    - Receiver: the device that receives the message, for example a computer, a phone or a television.
-   - Transmission medium: the physical path over which the message travels, either guided such as twisted pair, coaxial or fibre, or unguided such as radio, microwave or infrared.
-   - Protocol: the set of rules that governs the communication, covering syntax, semantics and timing. Without a shared protocol the two devices cannot understand each other even if they are physically connected.
+   - Transmission medium: the physical path along which the message travels, either guided such as twisted pair, coaxial cable or fibre, or unguided such as radio, microwave or infrared.
+   - Protocol: the set of rules governing the communication, covering syntax, semantics and timing. Without a shared protocol two devices cannot understand each other even when they are physically connected.
 
    ```mermaid
    graph LR
@@ -5771,24 +5728,23 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
        G["Noise"] -.-> C
    ```
 
-   - Ei panchti-r modhye ekti-o na thakle jogajog somvob noy: message na thakle pathanor kichu nei, sender ba receiver na thakle prante keu nei, medium na thakle path nei, ar protocol na thakle duti device eke oporer bhasha bujhbe na.
+   - If any one of these five is missing, communication is impossible: without a message there is nothing to send, without a sender or receiver there is nobody at the ends, without a medium there is no path, and without a protocol the two devices cannot understand each other's language.
 11. **(খ) Data Communication কত প্রকার? উদাহরণসহ সংক্ষিপ্ত বর্ণনা দিন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+   Answer: Data communication is classified from three points of view.
 
-   Answer: Data communication ke sadharonoto duti drishtikon theke bhag kora hoy.
+   By the direction of data flow, three types:
+   - Simplex: data travels in one direction only. Examples: keyboard to computer, computer to monitor, radio and television broadcast.
+   - Half duplex: data travels in both directions but only one at a time. Examples: walkie-talkie, CB radio, hub based Ethernet.
+   - Full duplex: data travels in both directions at the same time. Examples: telephone, mobile call, switched Ethernet.
 
-   Data flow-er dik onujayi tin prokar:
-   - Simplex: shudhu ek dike data jay. Udahoron: keyboard theke computer, computer theke monitor, radio o TV broadcast.
-   - Half duplex: duidike jay kintu ekbare ek dike. Udahoron: walkie-talkie, CB radio, hub bhittik Ethernet.
-   - Full duplex: duidike ekshathe jay. Udahoron: telephone, mobile call, switched Ethernet.
+   By the nature of the signal, two types:
+   - Analog data communication: the signal varies continuously, as on an old telephone line or in AM and FM radio.
+   - Digital data communication: the signal is carried as discrete 0s and 1s, as in a computer network. It is far more resistant to noise, because a repeater can regenerate the signal completely.
 
-   Signal-er dhoron onujayi dui prokar:
-   - Analog data communication: signal ekaditkrome poriborton hoy, jemon purono telephone line ba AM/FM radio.
-   - Digital data communication: signal discrete 0 ar 1 hisebe jay, jemon computer network. Eta noise-er birudhdhe onek beshi shokto, karon repeater signal ke notun kore toiri korte pare.
-
-   Synchronization-er dhoron onujayi dui prokar:
-   - Asynchronous: ek ekti character alada kore, start ar stop bit shoho pathano hoy. Udahoron: RS-232 serial port.
-   - Synchronous: ekti boro block ekshathe, common clock diye pathano hoy. Udahoron: Ethernet, SONET.
+   By the method of synchronisation, two types:
+   - Asynchronous: each character is sent separately, framed by a start bit and one or two stop bits. Example: an RS-232 serial port.
+   - Synchronous: a large block is sent as one stream with a common clock. Examples: Ethernet, SONET.
 12. **Define full duplex with an example.** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
 
@@ -5973,32 +5929,31 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - In modern equipment Auto-MDIX detects the mismatch and swaps the pairs electronically, so a straight through cable now works in nearly every situation, but the distinction is still asked in examinations and still matters with older gear.
 9. **(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 629 (ET: N/A)]*
 
-
    Answer:
 
-   Fiber optic cable-er shubidha:
-   - Onek beshi bandwidth, WDM diye terabit per second porjonto.
-   - Khub kom attenuation, 1550 nm-e matro 0.2 dB/km, tai repeater chara 80 theke 100 km jete pare.
-   - EMI ar RFI-er kono probhab nei, crosstalk-o nei, karon eta electrical noy.
-   - Uchcho nirapotta: fibre tap korle aalo bikkhipto hoy ebong ta shonge shonge dhora pore.
-   - Halka ar chikon, ek-i capacity-r copper-er tulonay onek kom jaiga lage.
-   - Bidyut sonchalon kore na, tai explosive poribeshe nirapod ar earthing lage na.
-   - Corrosion hoy na, dirghomeyadi.
+   Advantages of fibre optic cable:
+   - Very high bandwidth, up to terabits per second using WDM.
+   - Very low attenuation, only about 0.2 dB/km at 1550 nm, so the signal can travel 80 to 100 km without a repeater.
+   - Complete immunity to electromagnetic and radio frequency interference, and no crosstalk, because the signal is light and not electricity.
+   - High security: tapping a fibre disturbs the light and is immediately detectable.
+   - Light and thin, so it occupies far less duct space than copper of the same capacity.
+   - It carries no electricity, so it is safe in explosive environments and needs no earthing.
+   - It does not corrode and has a long service life.
 
-   Twisted pair cable-er shubidha:
-   - Shob theke shosta ar shob jaigay pawa jay.
-   - Halka, nomonio, sohoje conduit-e dhukano jay ar bank nite pare.
-   - RJ-45 crimp kore terminate kora khub sohoj, dokkho lok kom lage.
-   - Ekoi cable-e Power over Ethernet diye device-ke bidyut deoa jay.
-   - Cat 6A porjonto 100 m-e 10 Gbps porjonto support kore, ja sadharon office-er jonno jothestho.
-   - Structured cabling-er world standard, tai equipment ar spare shohojlobhyo.
+   Advantages of twisted pair cable:
+   - The cheapest medium and available everywhere.
+   - Light, flexible and easily pulled through conduit and around corners.
+   - Very easy to terminate by crimping an RJ-45 connector, so less skilled labour is required.
+   - Power over Ethernet can supply electricity to a device over the same cable.
+   - Cat 6A supports up to 10 Gbps over 100 metres, which is more than adequate for an ordinary office.
+   - It is the worldwide standard for structured cabling, so equipment and spares are readily available.
 
-   Co-axial cable-er shubidha:
-   - Shield thakay twisted pair-er cheye onek bhalo EMI protection ar kom crosstalk.
-   - Twisted pair-er cheye beshi bandwidth ar dirghoto segment, 185 theke 500 m.
-   - Broadband FDM support kore, tai ek-i cable-e ekshathe voice, video ar data pathano jay, jemon cable TV.
-   - Mojbut ar tiktikari, baire ba CCTV installation-e bhalo kaj kore.
-   - Fibre-er tulonay shosta ar terminate kora sohoj.
+   Advantages of coaxial cable:
+   - The shield gives far better protection against electromagnetic interference and much less crosstalk than twisted pair.
+   - Greater bandwidth and longer segments than twisted pair, 185 to 500 metres.
+   - It supports broadband FDM, so voice, video and data can all travel on the same cable at once, as in cable television.
+   - Strong and durable, so it works well outdoors and in CCTV installations.
+   - Cheaper than fibre and easier to terminate.
 10. **What happens when you use cables longer than the prescribed length in a network?** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
 
 
@@ -6014,22 +5969,21 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - The limits exist for exactly these reasons: 100 m for UTP Ethernet, 185 m for 10BASE2 and 500 m for 10BASE5. The correct fix is to insert a switch or a repeater within the limit, or to change to fibre.
 11. **(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 789 (ET: N/A)]*
 
-
    Answer:
 
    (a) 10Base5
-   - 10 mane 10 Mbps data rate, Base mane baseband transmission, ar 5 mane maximum segment length 500 metre.
-   - Eta thick coaxial cable byabohar kore, jar bhalo nam Thicknet, cable-er byas praay 10 mm ar rong holud.
-   - Computer-ke cable-er sathe jukto kora hoy vampire tap ar AUI connector diye, protita tap-er modhye kompokhkhe 2.5 metre durottwo thakte hoy.
-   - Ek segment-e sorbochcho 100 ti node, ar 5-4-3 rule onujayi sorbochcho 5 ti segment o 4 ti repeater diye mot 2500 metre porjonto jaoa jay.
-   - Topology bus, access method CSMA/CD. Ekhon puropuri obsolete.
+   - 10 means a data rate of 10 Mbps, Base means baseband transmission, and 5 means a maximum segment length of 500 metres.
+   - It uses thick coaxial cable, known as Thicknet, about 10 mm in diameter and yellow in colour.
+   - Computers are attached to the cable through a vampire tap and an AUI connector, and consecutive taps must be at least 2.5 metres apart.
+   - A single segment supports up to 100 nodes, and under the 5-4-3 rule up to 5 segments and 4 repeaters give a total span of 2500 metres.
+   - The topology is a bus and the access method is CSMA/CD. It is now completely obsolete.
 
    (b) 10BaseF
-   - 10 mane 10 Mbps, Base mane baseband, ar F mane Fiber optic cable.
-   - Duti fibre byabohar hoy, ekti pathanor jonno ar ekti grohon-er jonno, tai eta full duplex kaj korte pare.
-   - Maximum segment length praay 2000 metre, ja copper-er cheye onek beshi, karon fibre-e attenuation khub kom.
-   - EMI-r kono probhab nei, tai factory ba building-er modhye backbone link hisebe byabohar hoto.
-   - Er tinti dhoron: 10BASE-FL for link, 10BASE-FB for backbone ar 10BASE-FP for passive star.
+   - 10 means 10 Mbps, Base means baseband, and F means fibre optic cable.
+   - Two fibres are used, one for transmitting and one for receiving, so it can work in full duplex.
+   - The maximum segment length is about 2000 metres, far more than copper allows, because attenuation in fibre is very low.
+   - It is immune to electromagnetic interference, so it was used as a backbone link between buildings and inside factories.
+   - It has three variants: 10BASE-FL for links, 10BASE-FB for backbones and 10BASE-FP for a passive star.
 12. **Explain 10baseT.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 839 (ET: N/A)]*
 
 
@@ -6272,24 +6226,22 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Final answer: total delay 11 ms one way, efficiency 4.76 percent, throughput 47.6 kbps.
 8. **(গ) Data communication-এর সাপেক্ষে bandwidth এবং troughput এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-
    Answer:
 
-   Bandwidth: kono link-er sorbochcho theoretical capacity, mane ek second-e sorbochcho koto bit pathano somvob. Digital channel-e eta bps, Mbps ba Gbps-e, ar analog channel-e Hz-e mapa hoy. Eta medium ar technology-r ekti nirdisto boishishtho.
+   Bandwidth: the maximum theoretical capacity of a link, that is the greatest number of bits that can be sent in one second. It is measured in bps, Mbps or Gbps for a digital channel and in Hertz for an analog channel. It is a fixed property of the medium and the technology.
 
-   Throughput: bastobe ek second-e koto bit shofolbhabe destination-e pouchay, tar mapa mullo. Eta shobshomoy bandwidth-er cheye kom hoy.
+   Throughput: the number of bits that actually reach the destination successfully in one second, as measured. It is always less than the bandwidth.
 
    | Point | Bandwidth | Throughput |
    |---|---|---|
-   | Meaning | The maximum theoretical capacity of a link | The actual amount of data delivered successfully per unit time |
-   | Nature | A fixed property of the medium and the technology | A measured value that varies moment to moment |
+   | Meaning | The maximum theoretical capacity of a link | The data actually delivered successfully per unit time |
+   | Nature | A fixed property of the medium and the technology | A measured value that changes from moment to moment |
    | Unit | bps, Mbps, Gbps, or Hz for an analog channel | bps, Mbps, Gbps |
-   | Affected by | Medium, encoding, channel width | Congestion, errors, retransmission, protocol overhead, latency, device speed |
+   | Affected by | Medium, encoding, channel width | Congestion, errors, retransmission, protocol overhead, latency |
    | Relation | Always the upper limit | Always less than or equal to the bandwidth |
    | Analogy | The width of a road | The number of vehicles that actually pass per hour |
-   | Example | A 100 Mbps link | The same link may deliver only 60 Mbps of useful data |
 
-   - Udahoron: ekti 100 Mbps LAN-e congestion, error, retransmission ar protocol overhead-er por bastobe hoyto 60 Mbps useful data pawa jay. Ekhane bandwidth 100 Mbps kintu throughput 60 Mbps.
+   - Example: on a 100 Mbps LAN, after congestion, errors, retransmission and protocol overhead, perhaps 60 Mbps of useful data is actually delivered. Here the bandwidth is 100 Mbps and the throughput is 60 Mbps.
 9. **CRC is a redundancy error technique used to determine the error. Suppose the original data is 11100 and divisor is 1001.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
 
 
@@ -6527,23 +6479,22 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Trade-off: a large packet gives low header overhead but high packetization delay; a small packet gives low delay but wastes bandwidth on headers. If instead the 1500 bytes includes the 5 byte header, the payload is 1495 bytes and the delay is 93.44 ms, which changes nothing in the conclusion.
 4. **(ক) Bandwidth এবং Through put এর মধ্যে পার্থক্য কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
 
-
    Answer:
 
-   Bandwidth: ekti link-er sorbochcho theoretical capacity, mane ek second-e sorbochcho koto bit pathano somvob. Digital-e bps ba Mbps, analog-e Hz.
+   Bandwidth: the maximum theoretical capacity of a link, that is the greatest number of bits that can be sent in one second. It is measured in bps or Mbps for a digital channel and in Hertz for an analog one.
 
-   Throughput: bastobe ek second-e koto bit shofolbhabe pouchay, tar mapa mullo. Eta shobshomoy bandwidth-er cheye kom.
+   Throughput: the number of bits that actually reach the destination successfully in one second. It is always less than the bandwidth.
 
-   | Bishoy | Bandwidth | Throughput |
+   | Point | Bandwidth | Throughput |
    |---|---|---|
-   | Ortho | Sorbochcho somvabbo capacity | Bastob-e pawa data rate |
-   | Dhoron | Medium-er nirdisto boishishtho, sthir | Poristhiti onujayi bodlay |
-   | Unit | bps, Mbps, Gbps, ba Hz | bps, Mbps, Gbps |
-   | Ki probhabito kore | Medium, encoding, channel width | Congestion, error, retransmission, protocol overhead, latency |
-   | Somporko | Shobshomoy uporer shima | Shobshomoy bandwidth-er soman ba tar kom |
-   | Upoma | Rasta-r prosthota | Ghontay koyta gari bastobe jay |
+   | Meaning | The maximum possible capacity | The data rate actually achieved |
+   | Nature | A fixed property of the medium, unchanging | Varies with conditions |
+   | Unit | bps, Mbps, Gbps, or Hz | bps, Mbps, Gbps |
+   | Affected by | Medium, encoding, channel width | Congestion, errors, retransmission, protocol overhead, latency |
+   | Relation | Always the upper limit | Always equal to or less than the bandwidth |
+   | Analogy | The width of a road | The number of vehicles that actually pass per hour |
 
-   - Udahoron: ekti 100 Mbps link-e overhead ar congestion-er por hoyto 60 Mbps useful data pawa jay.
+   - Example: on a 100 Mbps link, after overhead and congestion, perhaps 60 Mbps of useful data is delivered.
 5. **The power of signal is 10\text{mW} and the power of the noise is 1\mu\text{W}; What are the values of \text{SNR} and \text{SNR}_{\text{dB}}?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 651 (ET: BUET)]*
 
 
@@ -6641,18 +6592,17 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Note that the required SNR is less than 1, which is possible because the bandwidth of 200 kHz is five times the data rate, so the system is bandwidth rich and power poor. Spread spectrum systems work in exactly this region.
 9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+   Answer: Converting each rate into bits per second:
 
-   Answer: Prottekti rate ke bit per second-e rupantor:
-
-   | Diya ache | Hisheb | Uttor |
+   | Given | Working | Answer |
    |---|---|---|
    | 50 Mb/s | 50 × 10⁶ | 50,000,000 bps |
    | 10 KB/s | 10 × 10³ × 8 | 80,000 bps |
    | 20 MB/s | 20 × 10⁶ × 8 | 160,000,000 bps |
    | 10 Kb/s | 10 × 10³ | 10,000 bps |
 
-   - Mone rakhar niyom: choto b mane bit, boro B mane Byte, ar 1 Byte = 8 bit.
-   - Data communication-e k, M ar G mane jothakrome 10³, 10⁶ ar 10⁹, storage-er 1024-bhittik hisheb noy.
+   - Rule to remember: a small b means bit and a capital B means Byte, and 1 Byte = 8 bits.
+   - In data communication k, M and G mean 10³, 10⁶ and 10⁹ respectively, not the 1024 based values used in storage.
 10. **What is the channel capacity for a teleprinter channel with a 300 Hz bandwidth and a signal-to-noise ratio of 3 dB?** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
 
 
@@ -6864,18 +6814,17 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Well known amendments: 802.11a, b, g, n which is Wi-Fi 4, ac which is Wi-Fi 5, ax which is Wi-Fi 6, and be which is Wi-Fi 7.
 7. **(খ) একটি নেটওয়ার্কে n সংখ্যক ডিভাইসের জন্যে Bus, Mesh এবং Star টপোলজিতে তারের লিংকগুলোর সংখ্যা কত?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
 
-
-   Answer: n-ti device-er jonno link songkha:
+   Answer: Number of links required for n devices:
 
    | Topology | Number of links | Reason |
    |---|---|---|
    | Bus | n links to the backbone, plus 1 backbone cable | Each device needs one drop cable onto the shared backbone |
-   | Mesh | n(n − 1)/2 for duplex links, or n(n − 1) for simplex | Every device connects to every other device, and each pair is counted once |
+   | Mesh | n(n − 1)/2 for duplex links, or n(n − 1) for simplex | Every device connects to every other, and each pair is counted once |
    | Star | n | Each device has exactly one cable to the central hub |
 
-   - Mesh-e protita device-er port lage n − 1 ti, Star-e lage 1 ti, ar Bus-e 1 ti.
-   - Example, n = 5: Bus needs 5 drops, Mesh needs 5 × 4 / 2 = 10 links, Star needs 5 links.
-   - Ei karone Mesh-e cabling cost n²-er sathe bare, jar jonno full mesh shudhu choto ba khub critical network-e byabohar kora hoy.
+   - Ports required per device: n − 1 in a mesh, and 1 in both a star and a bus.
+   - Example with n = 5: a bus needs 5 drops, a mesh needs 5 × 4 / 2 = 10 links, and a star needs 5 links.
+   - This is why the cabling cost of a mesh grows with the square of n, so a full mesh is used only in small networks or in networks where reliability is critical.
 8. **What is network topology? Write the name all different topology used in computer networking with example, diagram and their activities.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 673 (ET: N/A)]*
 
 
@@ -7044,17 +6993,16 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Security is provided by firewalls and IPsec rather than by the accidental hiding that NAT gives.
 5. **(ক) IP Address কী? IPv4 এবং IPv6 এর মধ্যে চারটি প্রধান পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
 
-
-   Answer: IP address holo ekti network layer identifier, jeta Internet ba kono network-e juktho protita device-ke unique bhabe chinte ebong tar kache packet pathate byabohar kora hoy. Eta duti ongsho niye toiri: network part ar host part.
+   Answer: An IP address is a network layer identifier used to identify uniquely every device connected to the Internet or to a network, and to deliver packets to it. It consists of two parts, the network part and the host part.
 
    Four main differences between IPv4 and IPv6:
 
    | Point | IPv4 | IPv6 |
    |---|---|---|
    | Address length | 32 bits, dotted decimal, 192.168.10.1 | 128 bits, hexadecimal with colons, 2001:0db8::1 |
-   | Header | Variable 20 to 60 bytes with a checksum | Fixed 40 bytes, no checksum, extension headers |
-   | Configuration and NAT | Manual or DHCP, NAT needed because addresses are scarce | SLAAC or DHCPv6, no NAT needed |
-   | Broadcast and security | Broadcast exists, IPsec optional | No broadcast, multicast instead, IPsec built in |
+   | Header | Variable, 20 to 60 bytes, with a checksum | Fixed 40 bytes, no checksum, with extension headers |
+   | Configuration and NAT | Manual or DHCP, and NAT is needed because addresses are scarce | SLAAC or DHCPv6, and NAT is not needed |
+   | Broadcast and security | Broadcast exists, IPsec is optional | No broadcast, multicast instead, IPsec is built in |
 6. **(a) Differentiate between IPV4 and IPV6.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)], [BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)], [WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)], [BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
 
@@ -7090,11 +7038,11 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Protection comes from stateful firewalls and IPsec instead, which is proper security rather than the accidental obscurity NAT provides.
 8. **IPv6 address কত বিটের?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+   Answer: An IPv6 address is 128 bits long.
 
-   Answer: IPv6 address 128 bit-er. Eta 8-ti group-e bhag kora, protita group 4-ti hexadecimal digit, colon diye alada kora, jemon 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
-
-   - Prothom 64 bit sadharonoto network prefix ar shesh 64 bit interface identifier.
-   - IPv4 chilo 32 bit, tai IPv6-e address songkha 2⁹⁶ gun beshi.
+   - It is divided into 8 groups of 4 hexadecimal digits, separated by colons, for example 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+   - The first 64 bits are normally the network prefix and the last 64 bits the interface identifier.
+   - IPv4 was 32 bits, so IPv6 provides 2⁹⁶ times as many addresses, about 3.4 × 10³⁸ in all.
 9. **What is the difference between stateful DHCPv6 and stateless DHCPv6?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 840-841 (ET: N/A)]*
 
 
@@ -7400,11 +7348,10 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - If a 3 dB system margin is also required, the launch power becomes 5 dBm, about 3.16 mW.
 11. **কোন মাধ্যমে আলোর Pulse ব্যবহৃত হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+   Answer: Pulses of light are used in optical fibre cable.
 
-   Answer: Optical Fibre cable-e aalor pulse byabohar kora hoy.
-
-   - Ekhane data 0 ar 1 hisebe LED ba laser diode theke aalor pulse akare pathano hoy.
-   - Aalo core-er bhitor Total Internal Reflection-er madhome cholte thake ebong opor prante photodiode take abar electrical signal-e rupantorito kore.
+   - Data is sent as pulses of light produced by an LED or a laser diode, where light present represents 1 and light absent represents 0.
+   - The light travels inside the core by total internal reflection, and at the far end a photodiode converts it back into an electrical signal.
 
 ## Network Address Translation (NAT) (11)
 
@@ -7703,21 +7650,20 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    Answer: DHCP uses UDP port 67 for sending data to the server, and port 68 for the reply to the client.
 10. **DHCP কি? DHCP কিভাবে কাজ করে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1043 (ET: DPI)]*
 
-
-   Answer: DHCP is the Dynamic Host Configuration Protocol, which automatically supplies the IP address, subnet mask, default gateway and DNS server address to a host, so that no manual configuration is needed. It runs over UDP, port 67 on the server and 68 on the client.
+   Answer: DHCP is the Dynamic Host Configuration Protocol, which automatically supplies a host with its IP address, subnet mask, default gateway and DNS server addresses, so that no manual configuration is needed. It runs over UDP, on port 67 at the server and port 68 at the client.
 
    How it works, the DORA process:
    - DHCPDISCOVER: the new client has no address, so it broadcasts a discover message from 0.0.0.0 to 255.255.255.255 to find any DHCP server on the link.
    - DHCPOFFER: every server that receives it reserves a free address from its pool and offers it back, together with the mask, the gateway, the DNS servers and the lease time.
    - DHCPREQUEST: the client accepts one offer and broadcasts its choice, so the remaining servers release the addresses they had reserved.
-   - DHCPACK: the chosen server confirms the assignment and the lease period begins. If the address has meanwhile been taken, the server replies DHCPNAK and the client restarts.
+   - DHCPACK: the chosen server confirms the assignment and the lease period begins. If the address has meanwhile been taken, the server replies DHCPNAK and the client starts again.
 
    Lease management:
    - At 50 percent of the lease, called T1, the client unicasts a renewal request to the same server.
    - At 87.5 percent, called T2, if there was no reply, it broadcasts a rebind request to any server.
-   - If the lease expires the client gives up the address and starts from DHCPDISCOVER again.
+   - If the lease expires, the client gives up the address and starts again from DHCPDISCOVER.
    - DHCPRELEASE is sent when the client shuts down, returning the address to the pool.
-   - If the server is on another subnet, a DHCP relay agent configured on the router forwards the broadcast to the server as a unicast.
+   - If the server is on another subnet, a DHCP relay agent configured on the router forwards the client's broadcast to the server as a unicast.
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK) (10)
 
