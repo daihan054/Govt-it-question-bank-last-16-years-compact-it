@@ -833,6 +833,10 @@
  ],
  [
   "operating-system.md",
+  "Concurrency, Threads & Synchronization (9)"
+ ],
+ [
+  "operating-system.md",
   "Deadlock & Resource Allocation (22)"
  ],
  [

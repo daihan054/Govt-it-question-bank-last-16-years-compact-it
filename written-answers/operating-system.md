@@ -6562,10 +6562,140 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 1. Multi-threaded processing and distributed computing have become essential. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
+
+   Answer: Multi-threaded processing and distributed computing have become essential because the limits of single-processor performance were reached, while the size of the problems to be solved kept growing.
+
+   Why multi-threaded processing became essential:
+   - The end of frequency scaling: from about 2005 processor clock speeds stopped rising, because power consumption grows with the cube of frequency and the heat could no longer be removed. Manufacturers therefore added cores instead of megahertz. A single-threaded program cannot use those extra cores, so software had to become multi-threaded to gain any benefit from new hardware.
+   - Responsiveness: an interactive application must remain usable while a long operation runs. Without threads, the interface freezes.
+   - Efficient use of the CPU during input and output: while one thread waits for a disk or a network, another thread of the same process continues to compute.
+   - Economy: creating and switching threads is far cheaper than creating and switching processes, because the address space is shared.
+   - Natural structure: servers handling many clients, browsers with many tabs, and games running physics, rendering and audio all map naturally onto threads.
+
+   Why distributed computing became essential:
+   - Scale beyond one machine: the data sets and workloads of search engines, social platforms, banking systems and scientific simulation exceed what any single machine can hold or process.
+   - Cost: a cluster of ordinary machines is far cheaper than one very large machine of the same total capacity, and it can be grown incrementally.
+   - Reliability and availability: with replication across machines, the failure of one node does not stop the service. A single machine is a single point of failure.
+   - Geographic distribution: users are spread across the world, and placing servers near them reduces latency.
+   - Resource sharing: expensive resources such as storage arrays and GPUs can be shared by many users.
+   - Elasticity: cloud platforms allow capacity to be added and removed as demand changes, which is impossible with a fixed single machine.
+
+   How the two relate: a distributed system is made of many machines, and each machine is itself multi-core and runs multi-threaded software. The two levels of parallelism are complementary, and modern frameworks such as MapReduce, Spark and Kubernetes exploit both at once.
+
+   The difficulties that come with them:
+   - Multi-threading brings race conditions, deadlocks, and faults that depend on timing and cannot be reproduced reliably.
+   - Distributed computing brings network partitions, partial failure, clock skew and the problem of consistency, formalised in the CAP theorem, which states that a distributed system cannot simultaneously guarantee consistency, availability and partition tolerance.
+   - Amdahl's law limits the benefit of parallelism: if a fraction p of a program can be parallelised, the maximum speedup with any number of processors is 1/(1 - p). A program that is 90 per cent parallel can never be more than ten times faster, however many cores are added.
+
+   Relevance to Bangladesh: national systems such as the NID database, mobile financial services and the e-GP platform must serve millions of concurrent users, which is possible only through multi-threaded servers running on distributed clusters, as in the National Data Center with its disaster recovery site.
 2. **What is Multithreading programming? Why Multithreading used in programming?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 296 (ET: BIBM)]*
 
+
+   Answer: Multithreading is the technique of dividing a single process into two or more threads that execute concurrently, sharing the same address space, code, data and open files, while each keeps its own program counter, registers and stack.
+
+   Why multithreading is used:
+
+   - Responsiveness: an interactive program can continue to respond to the user while a long operation proceeds in another thread. A word processor can accept typing while it prints and while it checks spelling.
+   - Resource sharing: threads share memory and files by default, so no special mechanism such as shared memory or message passing is needed for them to cooperate.
+   - Economy: creating a thread is far cheaper than creating a process, typically ten to a hundred times, because no new address space or page table has to be built. Switching between threads is also much cheaper.
+   - Scalability on multiprocessors: threads of one process can run genuinely in parallel on different cores, so a multithreaded program gets faster as cores are added, while a single-threaded program does not.
+   - Better utilisation during input and output: while one thread blocks on a disk or network operation, another thread of the same process continues to use the CPU.
+   - Natural program structure: a server that handles many clients, a game that runs physics, rendering and audio, or a browser that manages many tabs, all map naturally onto threads.
+   - Simpler communication than between processes, since data is already shared.
+
+   Difficulties that must be mentioned:
+   - Shared data must be protected with mutexes, semaphores or monitors, otherwise race conditions occur.
+   - Deadlock becomes possible when several locks are involved.
+   - Debugging is harder, because faults depend on timing and are not reproducible.
+   - One thread that crashes or corrupts memory brings down the entire process.
+   - Excessive threads cause context-switch overhead rather than speedup.
+
+   Models of threading:
+   - Many-to-one: many user threads mapped to one kernel thread. Cheap, but one blocking call blocks all threads and no true parallelism is possible.
+   - One-to-one: each user thread maps to a kernel thread. True parallelism and non-blocking behaviour, at the cost of more kernel resources. This is the model of Linux, Windows and modern Java.
+   - Many-to-many: many user threads multiplexed onto a smaller number of kernel threads, combining the advantages of both.
+
+   Example in Java:
+   ```java
+   class Worker extends Thread {
+       private final String name;
+       Worker(String name) { this.name = name; }
+       public void run() {
+           for (int i = 1; i <= 3; i++) {
+               System.out.println(name + " step " + i);
+               try { Thread.sleep(100); } catch (InterruptedException e) { }
+           }
+       }
+   }
+
+   public class ThreadDemo {
+       public static void main(String[] args) throws InterruptedException {
+           Worker t1 = new Worker("Downloader");
+           Worker t2 = new Worker("Renderer");
+           t1.start();          // starts a new thread
+           t2.start();
+           t1.join();           // wait for both to finish
+           t2.join();
+           System.out.println("Both threads finished");
+       }
+   }
+   ```
+   The two threads interleave, so the output order varies from run to run, which is itself an illustration of why shared data needs protection.
 3. **What is Multithreading System?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1460 (ET: N/A)]*
 
+
+   Answer: A multithreading system is one in which a single process is divided into several threads that execute concurrently, sharing the same address space, code, data and open files, while each thread keeps its own program counter, registers and stack.
+
+   Multithreading is the technique of dividing a single process into two or more threads that execute concurrently, sharing the same address space, code, data and open files, while each keeps its own program counter, registers and stack.
+
+   Why multithreading is used:
+
+   - Responsiveness: an interactive program can continue to respond to the user while a long operation proceeds in another thread. A word processor can accept typing while it prints and while it checks spelling.
+   - Resource sharing: threads share memory and files by default, so no special mechanism such as shared memory or message passing is needed for them to cooperate.
+   - Economy: creating a thread is far cheaper than creating a process, typically ten to a hundred times, because no new address space or page table has to be built. Switching between threads is also much cheaper.
+   - Scalability on multiprocessors: threads of one process can run genuinely in parallel on different cores, so a multithreaded program gets faster as cores are added, while a single-threaded program does not.
+   - Better utilisation during input and output: while one thread blocks on a disk or network operation, another thread of the same process continues to use the CPU.
+   - Natural program structure: a server that handles many clients, a game that runs physics, rendering and audio, or a browser that manages many tabs, all map naturally onto threads.
+   - Simpler communication than between processes, since data is already shared.
+
+   Difficulties that must be mentioned:
+   - Shared data must be protected with mutexes, semaphores or monitors, otherwise race conditions occur.
+   - Deadlock becomes possible when several locks are involved.
+   - Debugging is harder, because faults depend on timing and are not reproducible.
+   - One thread that crashes or corrupts memory brings down the entire process.
+   - Excessive threads cause context-switch overhead rather than speedup.
+
+   Models of threading:
+   - Many-to-one: many user threads mapped to one kernel thread. Cheap, but one blocking call blocks all threads and no true parallelism is possible.
+   - One-to-one: each user thread maps to a kernel thread. True parallelism and non-blocking behaviour, at the cost of more kernel resources. This is the model of Linux, Windows and modern Java.
+   - Many-to-many: many user threads multiplexed onto a smaller number of kernel threads, combining the advantages of both.
+
+   Example in Java:
+   ```java
+   class Worker extends Thread {
+       private final String name;
+       Worker(String name) { this.name = name; }
+       public void run() {
+           for (int i = 1; i <= 3; i++) {
+               System.out.println(name + " step " + i);
+               try { Thread.sleep(100); } catch (InterruptedException e) { }
+           }
+       }
+   }
+
+   public class ThreadDemo {
+       public static void main(String[] args) throws InterruptedException {
+           Worker t1 = new Worker("Downloader");
+           Worker t2 = new Worker("Renderer");
+           t1.start();          // starts a new thread
+           t2.start();
+           t1.join();           // wait for both to finish
+           t2.join();
+           System.out.println("Both threads finished");
+       }
+   }
+   ```
+   The two threads interleave, so the output order varies from run to run, which is itself an illustration of why shared data needs protection.
 4. **What is the output of the following code?** *[BAERA Assistant Engineer (CSE) 2023 compact it 574 (ET: BUET)]*
 ```c
 #include <stdlib.h>
@@ -6588,15 +6718,249 @@ int main(int argc, char *argv[]){
 }
 ```
 
+
+   Answer: The program creates four child processes with fork(), and each child prints the current value of i and then exits.
+
+   Trace of what happens:
+   - The parent enters the loop with i = 0 and calls fork(). Two processes now exist. In the child, fork() returns 0, so the child prints 0 and calls exit(0), leaving the loop at once. In the parent, fork() returns the child's PID, which is not 0, so the parent skips the if and continues the loop.
+   - The same happens for i = 1, 2 and 3, so the parent creates four children in total, and each child prints its own value of i and exits immediately.
+   - Because each child calls exit(0) inside the if block, no child ever reaches the next iteration of the loop. This is the crucial point: if exit(0) were removed, the children would themselves fork, and 2^4 - 1 = 15 processes would be created instead of 4.
+   - The parent then calls wait(NULL) four times, collecting the four children.
+
+   Output:
+   ```
+   0
+   1
+   2
+   3
+   ```
+   Four lines are printed, one by each child.
+
+   Important qualification about the order: the four children are independent processes scheduled by the operating system, so the order in which they run is not determined by the program. The four numbers may appear in any order, for example 2, 0, 3, 1. Only the set of values, and their count, is guaranteed. Any answer to this question should state that the output is non-deterministic in order.
+
+   Total number of processes: 1 parent + 4 children = 5.
+
+   Points worth stating in an answer:
+   - fork() returns 0 in the child and the child's PID in the parent, which is how the two are distinguished. It returns -1 on failure.
+   - After fork() the child receives a copy of the parent's memory, implemented efficiently by copy-on-write, so the child has its own copy of i with the value it had at the moment of the fork.
+   - exit(0) terminates the calling process and flushes its standard output buffer, which is why the printf output appears.
+   - wait(NULL) makes the parent block until one child terminates, and it reaps the child's process table entry. Without it the children would become zombies.
+   - The header <stdio.h> is missing from the code as printed, which a compiler would warn about since printf is used.
+
+   Variant to compare, without exit(0):
+   ```c
+   for (i = 0; i < 4; i++) {
+       fork();
+   }
+   ```
+   Here every process, parent and child alike, continues the loop, so the number of processes doubles at each iteration: 2^4 = 16 processes exist at the end, that is the original plus 15 new ones.
 5. **অথবা, (ক) Thread এর সংজ্ঞা দিন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
 
+
+   Answer: Thread (থ্রেড) হলো একটি প্রসেসের ভেতরে চলমান নির্বাহের ক্ষুদ্রতম একক, অর্থাৎ প্রোগ্রাম কাউন্টার, রেজিস্টার সেট ও স্ট্যাক নিয়ে গঠিত একটি স্বাধীন নির্বাহপথ, যা একই প্রসেসের অন্য থ্রেডগুলোর সঙ্গে কোড, ডেটা ও খোলা ফাইল ভাগাভাগি করে ব্যবহার করে।
+
+   একে বলা হয় lightweight process, কারণ এটি তৈরি ও পরিবর্তন করতে প্রসেসের তুলনায় অনেক কম খরচ হয়।
+
+   একটি থ্রেডের নিজস্ব যা থাকে:
+   - প্রোগ্রাম কাউন্টার
+   - রেজিস্টার সেট
+   - স্ট্যাক
+   - থ্রেড আইডি ও অবস্থা
+
+   একই প্রসেসের থ্রেডগুলো যা ভাগাভাগি করে:
+   - কোড অংশ (text section)
+   - ডেটা অংশ ও গ্লোবাল ভেরিয়েবল
+   - হিপ
+   - খোলা ফাইল ও সিগন্যাল হ্যান্ডলার
+   - প্রসেসের অন্যান্য সম্পদ
+
+   প্রতিটি প্রসেসে অন্তত একটি থ্রেড থাকে, যাকে বলা হয় প্রধান থ্রেড (main thread)। একাধিক থ্রেড থাকলে তাকে বলা হয় multithreaded process।
+
+   উদাহরণ: একটি ওয়ার্ড প্রসেসরে একটি থ্রেড ব্যবহারকারীর টাইপিং গ্রহণ করে, আরেকটি বানান পরীক্ষা করে, তৃতীয়টি স্বয়ংক্রিয়ভাবে ফাইল সংরক্ষণ করে এবং চতুর্থটি ছাপার কাজ চালায়। সবগুলো একই নথির ওপর কাজ করে বলে একই ডেটা ব্যবহার করতে পারে।
+
+   সুবিধা: দ্রুত সাড়াদান, সহজ সম্পদ ভাগাভাগি, কম খরচ এবং বহু-কোর প্রসেসরে প্রকৃত সমান্তরাল নির্বাহ।
+
+   অসুবিধা: ভাগ করা ডেটা রক্ষা করতে সিঙ্ক্রোনাইজেশন লাগে, race condition ও deadlock এর ঝুঁকি থাকে, এবং একটি থ্রেড ভেঙে পড়লে পুরো প্রসেস বন্ধ হয়ে যায়।
 6. **Write down the thread life cycle.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
 
+
+   Answer: The life cycle of a thread consists of the states through which it passes from creation to termination. The names below are those used in Java, which is the standard reference for this question.
+
+   The states:
+
+   - New (born): the thread object has been created, for example with Thread t = new Thread(), but start() has not yet been called. No system resources have been allocated for execution and the thread is not yet alive.
+
+   - Runnable (ready): start() has been called. The thread is eligible to run and has joined the pool of threads the scheduler may choose from. It may or may not be executing at this instant, because the scheduler decides. Java deliberately merges the ready and running states into one, since a program cannot tell the difference reliably.
+
+   - Running: the scheduler has selected the thread and it is executing its run() method on a CPU. On a multi-core machine several threads can be running at once.
+
+   - Blocked or Waiting: the thread is alive but not eligible to run. This happens when it calls sleep(), when it calls wait(), when it calls join() to await another thread, when it blocks on input or output, or when it is waiting to acquire a lock held by another thread. Java distinguishes three sub-states: BLOCKED (waiting for a monitor lock), WAITING (waiting indefinitely for another thread) and TIMED_WAITING (waiting with a timeout).
+
+   - Terminated (dead): the run() method has returned, either normally or because of an uncaught exception. The thread cannot be restarted; calling start() again throws IllegalThreadStateException.
+
+   Diagram:
+
+   ```mermaid
+   stateDiagram-v2
+     [*] --> New
+     New --> Runnable : start()
+     Runnable --> Running : scheduler dispatch
+     Running --> Runnable : yield() or quantum expired
+     Running --> Waiting : sleep(), wait(), join(), I/O
+     Waiting --> Runnable : notify(), timeout, I/O complete
+     Running --> Terminated : run() returns
+     Terminated --> [*]
+   ```
+
+   The transitions:
+   - New to Runnable: caused by start(). Note that calling run() directly does not create a thread; it merely executes the method in the current thread.
+   - Runnable to Running: the scheduler chooses the thread. The program has no control over when.
+   - Running to Runnable: the time quantum expires, or the thread calls yield() to offer the CPU to others.
+   - Running to Waiting: the thread calls sleep(ms), wait(), or join(), or issues a blocking input-output call, or fails to acquire a lock.
+   - Waiting to Runnable: the sleep time expires, notify() or notifyAll() is called, the joined thread finishes, the input-output completes, or the lock becomes free. Note that it returns to Runnable, not directly to Running.
+   - Running to Terminated: run() returns or throws.
+
+   Example:
+   ```java
+   class MyThread extends Thread {
+       public void run() {
+           System.out.println(getName() + " state inside run: " + getState());
+           try { Thread.sleep(500); } catch (InterruptedException e) { }
+           System.out.println(getName() + " finishing");
+       }
+   }
+
+   public class LifeCycleDemo {
+       public static void main(String[] args) throws InterruptedException {
+           MyThread t = new MyThread();
+           System.out.println("After creation: " + t.getState());   // NEW
+           t.start();
+           System.out.println("After start:    " + t.getState());   // RUNNABLE
+           Thread.sleep(100);
+           System.out.println("During sleep:   " + t.getState());   // TIMED_WAITING
+           t.join();
+           System.out.println("After join:     " + t.getState());   // TERMINATED
+       }
+   }
+   ```
+
+   Two important rules to state:
+   - A terminated thread can never be restarted; a new Thread object must be created.
+   - start() creates a new thread of execution; calling run() directly does not, and is a common beginner's error.
 7. **What is Multi-threading and multi-tasking? Difference between Multi-threading and Multi-tasking?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 854 (ET: N/A)]*
 
+
+   Answer:
+
+   Multithreading:
+
+   Multithreading is the technique of dividing a single process into several threads that run concurrently, sharing the same address space, code, data and open files, while each keeps its own program counter, registers and stack. It is concurrency within one process.
+
+   Example: a web browser in which one thread renders the page, another downloads images, a third runs JavaScript and a fourth handles the user interface, all within a single browser process.
+
+   Multitasking:
+
+   Multitasking is the ability of an operating system to execute more than one task, that is more than one process, apparently at the same time, by rapidly switching the CPU among them. It is concurrency between processes.
+
+   Two forms:
+   - Preemptive multitasking: the operating system decides when to take the CPU away, using a timer interrupt. Used by Linux, Windows NT onwards, macOS and Unix.
+   - Cooperative multitasking: a process keeps the CPU until it voluntarily yields. Used by Windows 3.x and early Mac OS. A single misbehaving program can freeze the whole system, which is why it was abandoned.
+
+   Example: writing in a word processor, playing music in a media player and downloading a file in a browser, all at once.
+
+   Difference between multithreading and multitasking:
+
+   | Point | Multithreading | Multitasking |
+   |---|---|---|
+   | Unit of execution | Threads within one process | Separate processes |
+   | Address space | Shared among the threads | Separate for each process |
+   | Level | Within a single program | Across programs |
+   | Creation cost | Low | High |
+   | Context switch cost | Low, the address space does not change | High, the page table and TLB must be changed |
+   | Communication | Through shared variables, which is immediate | Through inter-process communication: pipes, sockets, shared memory |
+   | Isolation | Weak; a fault in one thread kills the whole process | Strong; a crash in one process does not affect others |
+   | Synchronisation | Frequently required, since data is shared by default | Required only for explicitly shared resources |
+   | Managed by | The programmer, using thread libraries, with kernel support | The operating system scheduler |
+   | Purpose | To make one program faster and more responsive | To let several programs run together |
+   | Example | Tabs and rendering inside one browser | A browser, a media player and an editor running together |
+
+   Relationship: the two are complementary levels of concurrency. An operating system multitasks among processes, and each of those processes may itself be multithreaded. A modern machine therefore runs many processes, each with many threads, distributed across several cores.
+
+   Related terms worth distinguishing:
+   - Multiprogramming: keeping several programs in memory so that the CPU always has work; the ancestor of multitasking.
+   - Multiprocessing: using more than one physical CPU or core, which allows genuine parallel execution rather than rapid switching.
+   - Concurrency versus parallelism: concurrency means tasks make progress in overlapping time periods; parallelism means they literally execute at the same instant on different cores.
 8. **(c) What is thread? Give some benefits of multi-threaded programming.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 889-890 (ET: N/A)]*
 
+
+   Answer: A thread is the smallest unit of execution within a process. It consists of a program counter, a register set and a stack, and it shares the code, the data, the heap and the open files with the other threads of the same process. It is often called a lightweight process, because creating and switching it costs far less than a full process.
+
+   What is private to a thread: program counter, registers, stack, thread ID and thread state.
+   What is shared among the threads of a process: code section, data section and global variables, heap, open files and signal handlers.
+
+   Benefits of multi-threaded programming:
+
+   - Responsiveness: an interactive application continues to respond to the user while a long operation runs in another thread. A browser remains usable while a large image downloads, and a word processor accepts typing while it prints.
+
+   - Resource sharing: threads share the memory and the resources of their process by default. Processes must be given explicit shared memory or message passing, which is slower and more complex to write.
+
+   - Economy: creating a thread is typically ten to a hundred times cheaper than creating a process, because no new address space and no new page table are needed. Switching between threads is also much cheaper, since the memory management state is unchanged.
+
+   - Scalability on multiprocessors: the threads of one process can run truly in parallel on different cores, so a multi-threaded program becomes faster as cores are added. A single-threaded program cannot use a second core at all.
+
+   - Better utilisation during input and output: while one thread blocks on a disk or a network operation, another thread of the same process keeps the CPU busy.
+
+   - Simplified program structure: a server that handles many clients, a game with separate physics, rendering and audio loops, or a pipeline of processing stages all map naturally onto threads.
+
+   - Faster communication: threads exchange data through ordinary variables, with no system call and no copying, whereas processes need inter-process communication.
+
+   - Lower memory footprint: many threads in one process consume much less memory than the same number of processes, because the code and data exist only once.
+
+   Costs that should also be stated:
+   - Shared data must be protected with mutexes, semaphores or monitors, or race conditions occur.
+   - Deadlock becomes possible when several locks are used.
+   - Debugging is difficult, because faults depend on timing and are often not reproducible.
+   - A single thread that crashes or corrupts memory brings down the whole process, since the address space is shared.
+   - Creating too many threads causes context-switch overhead rather than speedup, which is why thread pools are used in practice.
+
+   Simple example in Java:
+   ```java
+   class Downloader implements Runnable {
+       private final String file;
+       Downloader(String file) { this.file = file; }
+       public void run() {
+           System.out.println("Downloading " + file + " on " + Thread.currentThread().getName());
+       }
+   }
+
+   public class ThreadBenefit {
+       public static void main(String[] args) {
+           new Thread(new Downloader("a.zip")).start();
+           new Thread(new Downloader("b.zip")).start();
+           System.out.println("Main thread is free to continue");
+       }
+   }
+   ```
+   The two downloads proceed while the main thread continues, which is the responsiveness benefit in its simplest form.
 9. **(d) Differentiate between thread and process.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
+
+
+   Answer: | Point | Process | Thread |
+   |---|---|---|
+   | Definition | A program in execution, with its own address space | A lightweight unit of execution inside a process |
+   | Address space | Its own, private and protected | Shared with all other threads of the same process |
+   | Memory sharing | Processes do not share memory by default | Threads share the code, data and heap |
+   | What is private | Everything | Only the program counter, the registers and the stack |
+   | Creation cost | High; a new address space and page table must be built | Low, typically ten to a hundred times cheaper |
+   | Context switch cost | High; the page table and TLB must be changed | Low; the address space is unchanged |
+   | Communication | Through inter-process communication: pipes, message queues, shared memory, sockets | Directly through shared variables |
+   | Isolation and safety | Strong; a crash in one process does not affect others | Weak; a crash in one thread usually kills the whole process |
+   | Synchronisation needed | Only for explicitly shared resources | Frequently, because data is shared by default |
+   | Termination | Independent | Ending the process ends all its threads |
+   | Also called | Heavyweight process | Lightweight process (LWP) |
+   | Example | Two separate copies of a browser | The tabs, the renderer and the network handler inside one browser |
+
+   Relationship between them: every process has at least one thread, called the main thread. Multithreading means giving a process several threads, so that they can run concurrently, and truly in parallel on a multi-core machine, while sharing the same data.
 
 ## CPU Scheduling (6)
 
