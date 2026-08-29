@@ -2263,7 +2263,79 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1321 (ET: DU)]*
 
+   Answer: A min heap is a complete binary tree in which every parent node is smaller than or equal to both of its children, so the smallest value always sits at the root.
+
+   Index rule for an array based heap, using 0 based indexing:
+   - Left child of index i is at 2i + 1
+   - Right child of index i is at 2i + 2
+   - Parent of index i is at (i − 1) / 2
+
+   Inserting the values one by one: 12, 29, 33, 56, 66, 99, 100, 344
+   - Insert 12: it becomes the root. Heap: 12
+   - Insert 29: placed as left child of 12. Since 29 > 12, no swap. Heap: 12, 29
+   - Insert 33: placed as right child of 12. Since 33 > 12, no swap. Heap: 12, 29, 33
+   - Insert 56: placed as left child of 29. Since 56 > 29, no swap. Heap: 12, 29, 33, 56
+   - Insert 66: placed as right child of 29. Since 66 > 29, no swap. Heap: 12, 29, 33, 56, 66
+   - Insert 99: placed as left child of 33. Since 99 > 33, no swap.
+   - Insert 100: placed as right child of 33. Since 100 > 33, no swap.
+   - Insert 344: placed as left child of 56. Since 344 > 56, no swap.
+
+   Since the given values are already in ascending order, no heapify up operation is ever needed and the final array is unchanged.
+
+   Final min heap array: 12, 29, 33, 56, 66, 99, 100, 344
+
+   ```mermaid
+   graph TD
+       A((12)) --> B((29))
+       A --> C((33))
+       B --> D((56))
+       B --> E((66))
+       C --> F((99))
+       C --> G((100))
+       D --> H((344))
+   ```
+
+   Verification of the heap property:
+   - Node 12 has children 29 and 33, both larger.
+   - Node 29 has children 56 and 66, both larger.
+   - Node 33 has children 99 and 100, both larger.
+   - Node 56 has child 344, which is larger.
+   - So the min heap property holds at every node.
+
+   Building a heap from n elements takes O(n) time, and each insertion takes O(log n).
+
 2. **Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 427 (ET: BIBM)]*
+
+   Answer: A new item is inserted at the end of the heap and then moved upward until the max heap property is restored. This upward movement is called heapify up, sift up or percolate up.
+
+   Procedure:
+   - Increase the heap size by one and place the new key at the last position of the array, which keeps the tree complete.
+   - Compare the new key with its parent, found at index (i − 1) / 2.
+   - If the new key is greater than the parent, swap them.
+   - Repeat the comparison at the new position, moving upward.
+   - Stop when the key is not greater than its parent, or when the root is reached.
+
+   ```
+   INSERT(H, key)
+       n = n + 1
+       H[n] = key
+       i = n
+       while i > 0 and H[parent(i)] < H[i]
+           swap H[i] and H[parent(i)]
+           i = parent(i)
+   ```
+
+   Example: insert 45 into the max heap 50, 30, 40, 10, 20
+   - Place 45 at the end: 50, 30, 40, 10, 20, 45. Index of 45 is 5.
+   - Parent of index 5 is index 2, holding 40. Since 45 > 40, swap: 50, 30, 45, 10, 20, 40.
+   - New index is 2, parent is index 0 holding 50. Since 45 < 50, stop.
+   - Final heap: 50, 30, 45, 10, 20, 40
+
+   Cost estimate:
+   - The item can move up at most the height of the tree, which is log₂n for a complete binary tree of n nodes.
+   - Each level costs one comparison and possibly one swap, that is O(1).
+   - Time complexity: O(log n) in the worst case, and O(1) in the best case when the new key is already smaller than its parent.
+   - Space complexity: O(1), because the insertion is done in place with only a few variables.
 
 ## Graph Representation (Adjacency Matrix vs List) (2)
 
