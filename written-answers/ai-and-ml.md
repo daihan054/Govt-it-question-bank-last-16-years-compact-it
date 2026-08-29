@@ -110,17 +110,86 @@
 
 1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
 
+   Answer: An activation function is a mathematical function applied to the weighted sum of inputs at a neuron, which decides the output that the neuron passes to the next layer.
+
+   Usability:
+   - It introduces non-linearity. Without it, however many layers are stacked, the whole network collapses into a single linear equation and cannot learn complex patterns.
+   - It keeps the output within a controlled range, which makes training stable.
+   - It decides whether a neuron should be activated for a given input, so the network can select useful features.
+   - It allows gradients to flow during backpropagation, which is how the weights get updated.
+
+   Common activation functions:
+   - Sigmoid: output between 0 and 1, used in binary classification output layers, but suffers from vanishing gradient.
+   - Tanh: output between -1 and 1, zero centred, so it converges faster than sigmoid.
+   - ReLU: outputs the input if positive, otherwise zero. It is the most used function in hidden layers because it is simple and avoids vanishing gradient.
+   - Leaky ReLU: allows a small negative slope, which solves the dying ReLU problem.
+   - Softmax: converts outputs into probabilities that sum to 1, used in the output layer of multi-class classification.
+
 2. **What does the axon of neural network do?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
+
+   Answer: The axon carries the output signal of a neuron and transmits it to the next neurons. In an artificial neural network it corresponds to the output connection that passes the activated value, multiplied by the connection weight, to the neurons of the next layer.
 
 3. **Write difference between machine learning and deep learning.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Machine Learning | Deep Learning |
+   |---|---|---|
+   | Relation | A subset of AI | A subset of Machine Learning |
+   | Feature extraction | Features are selected manually by the engineer | Features are learned automatically by the network |
+   | Data requirement | Works well on small or medium datasets | Needs very large datasets |
+   | Hardware | Runs on an ordinary CPU | Usually needs GPU or TPU |
+   | Training time | Short, minutes to hours | Long, hours to days |
+   | Structure | Algorithms such as decision tree, SVM, KNN | Multi-layer neural networks (ANN, CNN, RNN) |
+   | Interpretability | Easier to explain the decision | Behaves like a black box |
+   | Example | Spam filter using Naive Bayes | Face recognition using CNN |
+
 4. **What is Deep learning?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
+
+   Answer: Deep Learning is a subset of Machine Learning that uses artificial neural networks with many hidden layers to learn patterns directly from raw data.
+
+   - The word "deep" refers to the large number of hidden layers between input and output.
+   - Each layer extracts a higher level feature, for example edges, then shapes, then a full face.
+   - It removes the need for manual feature engineering, but requires large data and heavy computation.
+   - Common uses: image recognition, speech recognition, machine translation and self-driving cars.
 
 5. **What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 856 (ET: N/A)]*
 
+   Answer: An Artificial Neural Network is a computing model inspired by the human brain, built from connected units called neurons that are arranged in an input layer, one or more hidden layers and an output layer. Each connection carries a weight, each neuron applies an activation function, and the weights are adjusted by backpropagation so that the network learns the mapping from input to output.
+
+   | Point | Traditional Machine Learning | Deep Learning |
+   |---|---|---|
+   | Feature extraction | Done manually by a domain expert | Learned automatically inside the network |
+   | Data volume | Performs well on limited data | Needs a very large dataset |
+   | Computation | Light, CPU is enough | Heavy, GPU is normally required |
+   | Accuracy on complex data | Saturates early | Keeps improving as data grows |
+   | Explainability | Relatively transparent | Mostly a black box |
+
 6. **Write LSTM gates name in AI.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
 
+   Answer: An LSTM (Long Short Term Memory) cell has three gates:
+   - Forget gate: decides which information from the previous cell state should be dropped.
+   - Input gate: decides which new information should be stored in the cell state.
+   - Output gate: decides which part of the cell state should be given as the output of the cell.
+
 7. **Draw the single layer of ANN.** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 880 (ET: BUET)]*
+
+   Answer: A single layer ANN (also called a perceptron) has only an input layer connected directly to an output layer, with no hidden layer in between.
+
+   ```mermaid
+   graph LR
+       X1["Input x1"] -->|w1| S["Summation<br/>net = w1x1 + w2x2 + w3x3 + b"]
+       X2["Input x2"] -->|w2| S
+       X3["Input x3"] -->|w3| S
+       B["Bias b"] --> S
+       S --> F["Activation Function"]
+       F --> Y["Output y"]
+   ```
+
+   - Each input is multiplied by its own weight and all products are added together with the bias.
+   - The sum is passed through an activation function such as step or sigmoid.
+   - The activation output is the final output of the network.
+   - A single layer network can only separate linearly separable data, so it cannot solve the XOR problem.
 
 ## Machine Learning Paradigms (Supervised vs Unsupervised) (6)
 

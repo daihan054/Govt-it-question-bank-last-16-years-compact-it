@@ -3,12 +3,12 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 2/239 subtopics · 19/2673 answers**
+**Overall: 3/239 subtopics · 26/2673 answers**
 
-## ai-and-ml.md — 1/11 sections, 8/41 answers
+## ai-and-ml.md — 2/11 sections, 15/41 answers
 
 - [x] Artificial Intelligence & Expert Systems (8)
-- [ ] Deep Learning & Neural Networks (ANN, CNN, RNN) (7)
+- [x] Deep Learning & Neural Networks (ANN, CNN, RNN) (7)
 - [ ] Machine Learning Paradigms (Supervised vs Unsupervised) (6)
 - [ ] Model Evaluation & Datasets (5)
 - [ ] Supervised Learning (Decision Trees) (4)
