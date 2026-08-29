@@ -2814,27 +2814,361 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
 
+
+   Answer: In a single-cycle implementation every instruction, however simple, takes one full clock cycle, and that cycle must be long enough for the slowest instruction in the whole instruction set to finish. A pipelined design breaks the work into stages and overlaps consecutive instructions, so that a new instruction is started before the previous one has finished.
+
+   Reasons why modern designs prefer pipelining:
+
+   - Higher clock frequency: in a single-cycle machine the cycle time equals the total propagation delay of the longest instruction path, perhaps 800 picoseconds. Splitting that path into five roughly equal stages allows a cycle time of about 200 picoseconds, so the clock can run four to five times faster.
+   - Higher throughput: although each individual instruction still takes five stages to complete, one instruction finishes in every cycle once the pipeline is full. Ideally the speedup approaches the number of stages.
+   - Better hardware utilisation: in a single-cycle design the ALU sits idle while the instruction is being fetched, and the fetch unit sits idle while the ALU works. In a pipeline all units are busy at once, each serving a different instruction.
+   - No wasted time on simple instructions: in a single-cycle machine an ADD, which needs little time, still consumes the same long cycle as a memory load. Pipelining removes this waste, because the cycle is sized to a stage rather than to a whole instruction.
+   - Scalability: the pipeline can be made deeper (10 to 20 stages) to raise the clock further, and it is the foundation on which superscalar issue, out-of-order execution and speculation are built.
+   - Cost effectiveness: only a set of pipeline registers is added between stages, not duplicated functional units, so the throughput gain is obtained cheaply.
+
+   The five classic stages:
+   - IF: Instruction Fetch, read the instruction from memory
+   - ID: Instruction Decode and register fetch
+   - EX: Execute, or calculate an effective address
+   - MEM: Memory access for a load or store
+   - WB: Write Back the result to a register
+
+   Speedup: for n instructions in a k-stage pipeline with cycle time t, the time is (k + n - 1) x t instead of n x k x t, so the ideal speedup for large n approaches k.
+
+   Worked example: 100 instructions in a 5-stage pipeline take (5 + 100 - 1) = 104 cycles, against 500 cycles in a non-pipelined machine of the same stage time, a speedup of about 4.8.
+
+   The costs that must also be mentioned:
+   - Hazards: structural hazards (two instructions need the same hardware), data hazards (an instruction needs a result not yet written) and control hazards (a branch whose outcome is not yet known). These are handled by forwarding, stalling, branch prediction and, in software, by instruction reordering.
+   - Deeper pipelines suffer a heavier penalty on a branch misprediction, which is why very deep pipelines fell out of favour after the Pentium 4.
+   - Latency for a single instruction is not reduced; only throughput improves.
 2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** *[BPSC (Ministry) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
 
+
+   Answer: Stages of instruction pipelining in a multi-cycle datapath:
+
+   The classic five-stage RISC pipeline, used in MIPS and taught as the standard model:
+   - IF (Instruction Fetch): the instruction is read from instruction memory at the address in the program counter, and the PC is incremented.
+   - ID (Instruction Decode and register fetch): the opcode is decoded, the control signals are generated, and the source registers are read from the register file.
+   - EX (Execute): the ALU performs the arithmetic or logical operation, or computes the effective memory address for a load or store, or evaluates the branch condition.
+   - MEM (Memory access): data memory is read for a load, or written for a store. Other instructions simply pass through this stage.
+   - WB (Write Back): the result is written back into the destination register.
+
+   Some texts use a four-stage version: Fetch, Decode, Execute, Write Back. Modern processors use far deeper pipelines, from 14 to more than 20 stages, by splitting these into finer steps.
+
+   In each clock cycle, five different instructions occupy the five stages, so after the pipeline is full one instruction completes every cycle.
+
+   Data hazard in a pipelined datapath:
+
+   A data hazard occurs when an instruction depends on the result of a previous instruction that has not yet completed its journey through the pipeline, so the required value is not yet available where it is needed.
+
+   Example:
+   ```
+   ADD R1, R2, R3     ; R1 = R2 + R3
+   SUB R4, R1, R5     ; needs R1, but ADD has not written it back yet
+   ```
+   The ADD writes R1 in its WB stage, which is the fifth cycle, but the SUB reads its registers in its ID stage, which is the third cycle. Without intervention the SUB would read the old, stale value of R1.
+
+   Three kinds of data hazard:
+   - RAW (Read After Write), also called a true dependency: an instruction reads a location that an earlier instruction has not yet written. This is the case shown above, and it is the only kind that occurs in a simple in-order pipeline.
+   - WAR (Write After Read), an anti-dependency: an instruction writes a location that an earlier instruction has not yet read. It arises only with out-of-order execution.
+   - WAW (Write After Write), an output dependency: two instructions write the same location and the order matters. It also arises only with out-of-order execution.
+
+   Solutions:
+   - Forwarding or bypassing: the result is routed directly from the output of the EX or MEM stage back to the input of the EX stage of the following instruction, without waiting for the write back. This resolves most hazards with no loss of cycles and is the standard hardware solution.
+   - Stalling, that is inserting pipeline bubbles: the dependent instruction is held until the value is available. This always works but wastes cycles. A load followed immediately by a use of the loaded value cannot be fully resolved by forwarding and needs one stall cycle.
+   - Compiler scheduling: the compiler reorders independent instructions to fill the gap, or inserts NOP instructions where necessary.
+   - Register renaming and out-of-order execution: used in high-performance processors to remove WAR and WAW hazards entirely.
+
+   The other two hazard types, for completeness:
+   - Structural hazard: two instructions need the same hardware resource in the same cycle, for example a single memory port needed by IF and MEM at once. It is solved by duplicating the resource, which is why separate instruction and data caches exist.
+   - Control hazard: a branch instruction is fetched but its outcome is not known until later, so the pipeline does not know which instruction to fetch next. It is solved by branch prediction, delayed branches or early evaluation of the branch condition.
 3. **(c) Fill in the gaps RISC or CISC:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
    * (i) Pipelining is less efficient due to instruction complexity and variability ______
    * (ii) Emphasis on hardware simplicity and efficiency ______
    * (iii) Complex decoding due to variable instruction length ______
    * (iv) Each instruction typically executes in a single clock cycle ______
 
+
+   Answer:
+   - (i) Pipelining is less efficient due to instruction complexity and variability — CISC
+   - (ii) Emphasis on hardware simplicity and efficiency — RISC
+   - (iii) Complex decoding due to variable instruction length — CISC
+   - (iv) Each instruction typically executes in a single clock cycle — RISC
+
+   Reasoning for each:
+   - (i) CISC: instructions have variable length and take different numbers of cycles, so the stages of the pipeline cannot be kept balanced and the pipeline stalls frequently. RISC instructions are of fixed length and roughly equal duration, which is what makes efficient pipelining possible.
+   - (ii) RISC: the whole RISC philosophy is to keep the hardware simple, use a hardwired control unit rather than microprogramming, and let the compiler do the complex work. The silicon saved is spent on more registers and larger caches.
+   - (iii) CISC: an x86 instruction may be anywhere from 1 to 15 bytes long, so the decoder cannot know where the next instruction begins until it has decoded the current one. RISC instructions are a fixed 32 bits, so several can be decoded in parallel.
+   - (iv) RISC: the design target of RISC is one instruction completed per clock cycle in the steady state, which is achieved through fixed-length instructions, a load-store architecture and an efficient pipeline.
+
+   | Point | RISC (Reduced Instruction Set Computer) | CISC (Complex Instruction Set Computer) |
+   |---|---|---|
+   | Instruction set | Small, simple, about 100 instructions | Large, complex, several hundred instructions |
+   | Instruction length | Fixed length, typically 32 bits | Variable length, 1 to 15 bytes |
+   | Execution time | Mostly one clock cycle per instruction | Several clock cycles per instruction |
+   | Addressing modes | Few, typically 3 to 5 | Many, 12 to 20 or more |
+   | Memory access | Only by dedicated load and store instructions | Almost any instruction can access memory |
+   | Registers | Many, typically 32 or more | Few, typically 8 to 16 |
+   | Pipelining | Easy and highly efficient | Difficult because of variable instruction length |
+   | Control unit | Hardwired, so it is fast | Microprogrammed, so it is flexible but slower |
+   | Code size | Larger, more instructions per program | Smaller, one instruction does more work |
+   | Compiler | Complex, must do more optimisation | Simpler, hardware does more of the work |
+   | Power consumption | Low, so it suits battery-powered devices | Higher |
+   | Chip complexity | Simpler, leaves room for cache and more registers | Complex control logic uses much of the chip |
+   | Examples | ARM, MIPS, SPARC, PowerPC, RISC-V, Apple M series | Intel x86, AMD x86-64, Intel 8086, Motorola 68000 |
+
+   Note: modern x86 processors are CISC on the outside but internally translate each complex instruction into simple RISC-like micro-operations, so the two philosophies have converged in practice.
 4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 299 (ET: BIBM)]*
 
+
+   Answer:
+
+   Difference between a multiprocessor system and a multicomputer system:
+
+   | Point | Multiprocessor System | Multicomputer System |
+   |---|---|---|
+   | Memory | All processors share a single global memory | Each computer has its own private memory |
+   | Communication | Through shared memory locations | By passing messages over a network |
+   | Coupling | Tightly coupled | Loosely coupled |
+   | Address space | Single, common to all processors | Separate for each node |
+   | Physical arrangement | Processors on one motherboard or in one cabinet | Independent computers connected by a network |
+   | Operating system | One operating system controls all processors | Each node runs its own operating system |
+   | Scalability | Limited, because memory bus contention grows with the number of processors | High; thousands of nodes can be added |
+   | Programming model | Shared variables, threads, locks | Message passing, for example MPI |
+   | Latency of communication | Very low, memory speed | Higher, network speed |
+   | Cost | Higher per processor | Lower, built from commodity machines |
+   | Examples | A multi-core desktop or server, an SMP server | A Beowulf cluster, a computing grid, a data centre cluster |
+
+   Shared memory:
+
+   Shared memory is a region of physical memory that more than one processor can read and write, and it serves as the medium of communication between them. A value written by one processor becomes visible to the others, so no explicit message is needed.
+
+   - Advantages: communication is fast, at memory speed; programming is natural, because it resembles ordinary variable access; no data has to be copied between address spaces.
+   - Problems: several processors may access the same location at once, so mutual exclusion is required, using locks, semaphores or monitors. Race conditions and deadlocks are the characteristic bugs.
+   - Types: UMA (Uniform Memory Access), where every processor reaches all memory in the same time, as in a symmetric multiprocessor; and NUMA (Non-Uniform Memory Access), where each processor has memory that is local to it and faster to reach, as in large server processors.
+   - The cache coherence problem arises because each processor caches copies of shared data, so a write by one processor can leave a stale copy in another processor's cache.
+
+   Two schemes to maintain cache coherence:
+
+   - Snooping (snoopy) protocol:
+     - Every cache controller monitors, or snoops on, the shared bus and watches all memory transactions issued by other processors.
+     - When it sees a write to an address of which it holds a copy, it either invalidates its copy (write-invalidate) or updates it with the new value (write-update).
+     - Write-invalidate is the more common, because after the first invalidation the writing processor may modify the block repeatedly without further bus traffic.
+     - The best-known example is the MESI protocol, in which each cache line is in one of four states: Modified, Exclusive, Shared or Invalid. Extensions add Owned (MOESI) and Forward (MESIF).
+     - Advantage: simple and fast for a small number of processors.
+     - Disadvantage: it relies on a shared broadcast medium, so it does not scale beyond a few tens of processors, since the bus becomes the bottleneck.
+
+   - Directory-based protocol:
+     - A central directory records, for every block of memory, which caches hold a copy and in what state.
+     - When a processor wants to write, it consults the directory, which sends invalidation or update messages only to the caches that actually hold that block, rather than broadcasting to all.
+     - The directory may be centralised or distributed among the memory modules.
+     - Advantage: it scales to hundreds or thousands of processors, because it uses point-to-point messages instead of a broadcast.
+     - Disadvantage: it needs extra storage for the directory and adds a level of indirection, so latency is higher for a simple transfer.
+
+   Pipelining:
+
+   Pipelining is a technique in which the execution of an instruction is divided into several stages, and consecutive instructions are overlapped so that different instructions occupy different stages at the same time. It works like an assembly line in a factory: each station performs one operation, and a finished product emerges from the end of the line at the rate of one per station-time rather than one per total-time.
+
+   The four stages of the pipeline:
+   - Fetch (IF): the instruction is read from memory at the address held in the program counter, and the program counter is incremented.
+   - Decode (ID): the instruction is decoded, the control signals are generated, and the operands are read from the register file.
+   - Execute (EX): the ALU performs the required arithmetic or logical operation, or computes the effective address for a memory access, or evaluates a branch condition.
+   - Write Back (WB): the result is written back into the destination register or to memory.
+
+   (The five-stage version separates memory access as a stage of its own between EX and WB.)
+
+   Illustration of the overlap:
+
+   ```
+   Cycle:      1     2     3     4     5     6     7
+   Instr 1:   IF    ID    EX    WB
+   Instr 2:         IF    ID    EX    WB
+   Instr 3:               IF    ID    EX    WB
+   Instr 4:                     IF    ID    EX    WB
+   ```
+
+   After the pipeline fills, one instruction completes every cycle.
+
+   Speedup: for n instructions in a k-stage pipeline the total time is (k + n - 1) cycles instead of n x k, so the ideal speedup approaches k for large n. For 100 instructions in a 4-stage pipeline, 103 cycles are needed instead of 400, a speedup of about 3.9.
+
+   Hazards that limit the ideal speedup: structural hazards, data hazards and control hazards, handled respectively by duplicating resources, forwarding and stalling, and branch prediction.
 5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+
+   Answer: In a single-cycle implementation every instruction, however simple, takes one full clock cycle, and that cycle must be long enough for the slowest instruction in the whole instruction set to finish. A pipelined design breaks the work into stages and overlaps consecutive instructions, so that a new instruction is started before the previous one has finished.
+
+   Reasons why modern designs prefer pipelining:
+
+   - Higher clock frequency: in a single-cycle machine the cycle time equals the total propagation delay of the longest instruction path, perhaps 800 picoseconds. Splitting that path into five roughly equal stages allows a cycle time of about 200 picoseconds, so the clock can run four to five times faster.
+   - Higher throughput: although each individual instruction still takes five stages to complete, one instruction finishes in every cycle once the pipeline is full. Ideally the speedup approaches the number of stages.
+   - Better hardware utilisation: in a single-cycle design the ALU sits idle while the instruction is being fetched, and the fetch unit sits idle while the ALU works. In a pipeline all units are busy at once, each serving a different instruction.
+   - No wasted time on simple instructions: in a single-cycle machine an ADD, which needs little time, still consumes the same long cycle as a memory load. Pipelining removes this waste, because the cycle is sized to a stage rather than to a whole instruction.
+   - Scalability: the pipeline can be made deeper (10 to 20 stages) to raise the clock further, and it is the foundation on which superscalar issue, out-of-order execution and speculation are built.
+   - Cost effectiveness: only a set of pipeline registers is added between stages, not duplicated functional units, so the throughput gain is obtained cheaply.
+
+   The five classic stages:
+   - IF: Instruction Fetch, read the instruction from memory
+   - ID: Instruction Decode and register fetch
+   - EX: Execute, or calculate an effective address
+   - MEM: Memory access for a load or store
+   - WB: Write Back the result to a register
+
+   Speedup: for n instructions in a k-stage pipeline with cycle time t, the time is (k + n - 1) x t instead of n x k x t, so the ideal speedup for large n approaches k.
+
+   Worked example: 100 instructions in a 5-stage pipeline take (5 + 100 - 1) = 104 cycles, against 500 cycles in a non-pipelined machine of the same stage time, a speedup of about 4.8.
+
+   The costs that must also be mentioned:
+   - Hazards: structural hazards (two instructions need the same hardware), data hazards (an instruction needs a result not yet written) and control hazards (a branch whose outcome is not yet known). These are handled by forwarding, stalling, branch prediction and, in software, by instruction reordering.
+   - Deeper pipelines suffer a heavier penalty on a branch misprediction, which is why very deep pipelines fell out of favour after the Pentium 4.
+   - Latency for a single instruction is not reduced; only throughput improves.
 
 ## CPU Performance & Instruction Cycle (4)
 
 1. **There was a CPU cycle math** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 400 (ET: BUET)]*
 
+
+   Answer: The question refers to a CPU cycle calculation, so the standard formulas and a fully worked example are given.
+
+   Key formulas:
+   - Clock cycle time (T) = 1 / clock frequency (f)
+   - CPI (Cycles Per Instruction) = total clock cycles / total instruction count
+   - Total clock cycles = instruction count x CPI
+   - CPU execution time = instruction count x CPI x clock cycle time
+   - CPU execution time = (instruction count x CPI) / clock frequency
+   - MIPS (Million Instructions Per Second) = clock frequency / (CPI x 10^6)
+   - When instructions have different CPI values: overall CPI = sum over each class of (fraction of instructions in that class x CPI of that class)
+
+   Worked example: a program of 1 billion instructions runs on a 2 GHz processor. 50 per cent of the instructions take 3 cycles, 30 per cent take 4 cycles and 20 per cent take 5 cycles.
+
+   Step 1 - clock cycle time:
+   - T = 1 / (2 x 10^9) = 0.5 nanosecond
+
+   Step 2 - overall CPI:
+   - CPI = (0.50 x 3) + (0.30 x 4) + (0.20 x 5)
+   - = 1.5 + 1.2 + 1.0
+   - = 3.7
+
+   Step 3 - total clock cycles:
+   - = instruction count x CPI
+   - = 10^9 x 3.7
+   - = 3.7 x 10^9 cycles
+
+   Step 4 - execution time:
+   - = total cycles x cycle time
+   - = 3.7 x 10^9 x 0.5 x 10^-9
+   - = 1.85 seconds
+
+   Step 5 - MIPS rating:
+   - = f / (CPI x 10^6) = (2 x 10^9) / (3.7 x 10^6) = 540.5 MIPS
+
+   Amdahl's law, often part of the same question: if a fraction p of a program is speeded up by a factor s, the overall speedup is
+   Speedup = 1 / [(1 - p) + p/s]
+   For example, if 60 per cent of a program is made 4 times faster, the overall speedup is 1 / (0.4 + 0.15) = 1.82, not 4. This shows that the part which is not improved sets the limit.
 2. **(খ) Clock cycle কী? একটি মাইক্রো-প্রসেসরের speed 3.5 GHz বলতে কী বোঝায়?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+
+   Answer: ক্লক সাইকেল (Clock cycle) হলো প্রসেসরের ঘড়ির সংকেতের একটি সম্পূর্ণ কম্পন, অর্থাৎ সংকেতটি একবার নিম্ন থেকে উচ্চ এবং আবার নিম্নে ফিরে আসার সময়। একে ক্লক পিরিয়ড বা ক্লক টিকও বলা হয়।
+
+   বৈশিষ্ট্য:
+   - এটি প্রসেসরের সবচেয়ে ছোট সময়ের একক; প্রতিটি অভ্যন্তরীণ কাজ এই ঘড়ির সঙ্গে সমন্বিত হয়ে ঘটে।
+   - ক্লক সাইকেলের সময়কাল T = 1 / f, যেখানে f হলো ক্লক ফ্রিকোয়েন্সি।
+   - প্রসেসরের ভেতরে একটি কোয়ার্টজ ক্রিস্টাল অসিলেটর এই সংকেত তৈরি করে।
+   - একটি সম্পূর্ণ নির্দেশ সম্পাদনে সাধারণত একাধিক ক্লক সাইকেল লাগে; এই সংখ্যাকে বলা হয় CPI (Cycles Per Instruction)।
+   - পাইপলাইনিং ও সুপারস্কেলার নকশার কারণে আধুনিক প্রসেসর এক সাইকেলে একাধিক নির্দেশও শেষ করতে পারে।
+
+   3.5 GHz গতি বলতে কী বোঝায়:
+
+   - GHz মানে গিগাহার্জ, অর্থাৎ প্রতি সেকেন্ডে ১০০ কোটি কম্পন।
+   - 3.5 GHz মানে প্রসেসরের ঘড়ি প্রতি সেকেন্ডে ৩,৫০,০০,০০,০০০ (৩৫০ কোটি) বার কম্পিত হয়।
+   - একটি ক্লক সাইকেলের সময়কাল = 1 / (3.5 x 10^9) = 2.857 x 10^-10 সেকেন্ড = ০.২৮৬ ন্যানোসেকেন্ড।
+
+   যা বোঝায় না, তা স্পষ্ট করা জরুরি:
+   - এটি বোঝায় না যে প্রসেসর প্রতি সেকেন্ডে ৩৫০ কোটি নির্দেশ সম্পাদন করে। একটি নির্দেশে একাধিক সাইকেল লাগতে পারে (CPI > 1), আবার সুপারস্কেলার প্রসেসর এক সাইকেলে একাধিক নির্দেশও শেষ করতে পারে (IPC > 1)।
+   - প্রকৃত কর্মদক্ষতা প্রায় ক্লক গতি গুণ IPC। তাই নতুন প্রজন্মের ৩.৫ GHz প্রসেসর পুরোনো প্রজন্মের ৪.০ GHz প্রসেসরের চেয়ে দ্রুত হতে পারে।
+   - ক্যাশে মিস হলে প্রসেসরকে শত শত সাইকেল অপেক্ষা করতে হয়, ফলে কার্যকর গতি অনেক কমে যায়।
+
+   সংশ্লিষ্ট বিষয়:
+   - বেস ক্লক ও টার্বো ক্লক: তাপ ও বিদ্যুতের সীমার মধ্যে থাকলে প্রসেসর সাময়িকভাবে ঘোষিত গতির চেয়ে বেশি গতিতে চলতে পারে।
+   - থার্মাল থ্রটলিং: অতিরিক্ত গরম হলে প্রসেসর নিজেই ক্লক কমিয়ে দেয়।
+   - বিদ্যুৎ খরচ P = C.V^2.f সূত্র অনুযায়ী ফ্রিকোয়েন্সির সঙ্গে বাড়ে, তাই ক্লক অনির্দিষ্টভাবে বাড়ানো যায় না। এ কারণেই নির্মাতারা ক্লক না বাড়িয়ে কোর সংখ্যা বাড়ানোর পথ নিয়েছেন।
 3. **A program (or a program task) takes 1 billion instructions to execute on a processor running at 2 GHz. Suppose also that 50% of the instructions execute in 3 clock cycles, 30% execute in 4 clock cycles, and 20% execute in 5 clock cycles. What is the execution time for the program or task?** *[RAKUB Programmer (PO) 12.10.2021 compact it 847 (ET: N/A)]*
 
+
+   Answer: Given:
+   - Instruction count = 1 billion = 10^9 instructions
+   - Clock frequency = 2 GHz = 2 x 10^9 cycles per second
+   - 50 per cent of instructions take 3 clock cycles
+   - 30 per cent of instructions take 4 clock cycles
+   - 20 per cent of instructions take 5 clock cycles
+
+   Step 1 - find the clock cycle time:
+   - T = 1 / f
+   - = 1 / (2 x 10^9)
+   - = 0.5 x 10^-9 second = 0.5 nanosecond
+
+   Step 2 - find the average CPI (Cycles Per Instruction) as a weighted average:
+   - CPI = (fraction1 x CPI1) + (fraction2 x CPI2) + (fraction3 x CPI3)
+   - = (0.50 x 3) + (0.30 x 4) + (0.20 x 5)
+   - = 1.5 + 1.2 + 1.0
+   - = 3.7
+
+   Step 3 - find the total number of clock cycles:
+   - Total cycles = instruction count x CPI
+   - = 10^9 x 3.7
+   - = 3.7 x 10^9 cycles
+
+   Step 4 - find the execution time:
+   - Execution time = total cycles x clock cycle time
+   - = 3.7 x 10^9 x 0.5 x 10^-9
+   - = 1.85 seconds
+
+   Alternative single-step calculation:
+   - Execution time = (instruction count x CPI) / clock frequency
+   - = (10^9 x 3.7) / (2 x 10^9)
+   - = 3.7 / 2
+   - = 1.85 seconds
+
+   Final answer: the execution time for the program is 1.85 seconds.
+
+   Additional result, the MIPS rating:
+   - MIPS = f / (CPI x 10^6)
+   - = (2 x 10^9) / (3.7 x 10^6)
+   - = 540.5 MIPS
+
+   Verification of the CPI weighting: 0.50 + 0.30 + 0.20 = 1.00, so the three classes account for all instructions, and the weighted CPI of 3.7 lies correctly between the extremes of 3 and 5.
 4. **Operating system math: clock frequency 700MHz.** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
+
+
+   Answer: The question refers only to "operating system math with a clock frequency of 700 MHz", so the standard relations and a worked example based on that frequency are given.
+
+   Step 1 - clock cycle time at 700 MHz:
+   - f = 700 MHz = 700 x 10^6 = 7 x 10^8 cycles per second
+   - T = 1 / f = 1 / (7 x 10^8)
+   - = 1.4286 x 10^-9 second
+   - = 1.43 nanoseconds per cycle
+
+   Standard formulas that apply:
+   - CPU execution time = instruction count x CPI x clock cycle time
+   - CPU execution time = (instruction count x CPI) / clock frequency
+   - CPI = total clock cycles / instruction count
+   - MIPS = clock frequency / (CPI x 10^6)
+   - Throughput = 1 / execution time
+
+   Worked example: suppose a program of 100 million instructions runs on this 700 MHz processor with an average CPI of 2.
+
+   - Total cycles = 100 x 10^6 x 2 = 2 x 10^8 cycles
+   - Execution time = 2 x 10^8 x 1.4286 x 10^-9 = 0.286 second
+   - MIPS = (700 x 10^6) / (2 x 10^6) = 350 MIPS
+
+   Second example, effect of memory stalls: if 20 per cent of the instructions are loads and each load that misses the cache costs 50 extra cycles, with a miss rate of 5 per cent, then
+   - Extra cycles per instruction = 0.20 x 0.05 x 50 = 0.5
+   - Effective CPI = 2 + 0.5 = 2.5
+   - New execution time = (100 x 10^6 x 2.5) / (7 x 10^8) = 0.357 second
+   This shows that memory behaviour can dominate the running time even though the clock has not changed.
+
+   Third relation often required, Amdahl's law:
+   - Speedup = 1 / [(1 - p) + p/s], where p is the fraction of the work improved and s is the factor by which it is improved.
+   - Example: improving 40 per cent of a program by a factor of 10 gives 1 / (0.6 + 0.04) = 1.5625, so the overall gain is only about 56 per cent.
 
 ## 8085 Microprocessor & Edge Computing (3)
 
