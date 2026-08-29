@@ -212,36 +212,54 @@
 1. Translate the following passage into Bangla:
 "The boy found a lost wallet on his way to school. Instead of keeping it, he looked for the owner and returned it. The owner, impressed by his honesty, offered him a reward. The boy politely refused, saying that honesty is its own reward." *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+
+   Answer: ছেলেটি স্কুলে যাওয়ার পথে একটি হারানো মানিব্যাগ কুড়িয়ে পেল। সেটি নিজের কাছে রেখে না দিয়ে সে মালিককে খুঁজে বের করে ফিরিয়ে দিল। তার সততায় মুগ্ধ হয়ে মালিক তাকে পুরস্কার দিতে চাইলেন। ছেলেটি বিনয়ের সঙ্গে তা প্রত্যাখ্যান করে বলল, সততাই তার নিজের পুরস্কার।
 2. **বাংলায় অনুবাদ করুন:** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 Words have a lot of power. They can help or hint, bless or curse. Unkind words do a lot of harm, Kind words do a lot of good. We can spoil a friends happiness by an unkind word, but cheer up a sad heart with a kind word, which costs nothing. A kind word is often more welcome than a costly present.
 
+
+   Answer: শব্দের অনেক শক্তি আছে। শব্দ সাহায্য করতে পারে আবার আঘাতও দিতে পারে, আশীর্বাদ করতে পারে আবার অভিশাপও দিতে পারে। নিষ্ঠুর কথা অনেক ক্ষতি করে, আর মধুর কথা অনেক উপকার করে। একটি নিষ্ঠুর কথায় আমরা বন্ধুর আনন্দ নষ্ট করে দিতে পারি, আবার একটি মধুর কথায় বিষণ্ন হৃদয়কে উৎফুল্ল করে তুলতে পারি, যাতে কোনো খরচও হয় না। একটি মধুর কথা প্রায়ই মূল্যবান উপহারের চেয়েও বেশি আদরণীয়।
 3. **(a) বাংলায় অনুবাদ করো: "Cybersecurity protects information systems from unauthorized access."** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer: সাইবার নিরাপত্তা তথ্য ব্যবস্থাকে অননুমোদিত প্রবেশ থেকে রক্ষা করে।
 4. **বাংলায় অনুবাদ করুন:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1357 (ET: N/A)]*
 > The most common causes of deforestation are cutting and burning the forestland. Though the forestlands are cut and burnt for the sake of agriculture and habitant, it has a negative effect on environment. The removal of trees causes the birds and other animals living on them to leave the place. It also causes serious damage to the soil, as trees give protection to soil as well. In the end, the soil gets sediment in the river bed and causes frequent flood.
 
+
+   Answer: বন উজাড়ের সবচেয়ে সাধারণ কারণ হলো বনভূমির গাছ কাটা ও পুড়িয়ে ফেলা। কৃষি ও বসতির প্রয়োজনে বনভূমি কাটা ও পোড়ানো হলেও তা পরিবেশের ওপর নেতিবাচক প্রভাব ফেলে। গাছ কেটে ফেলার ফলে গাছে বসবাসকারী পাখি ও অন্যান্য প্রাণী সেই স্থান ছেড়ে চলে যায়। এতে মাটিরও মারাত্মক ক্ষতি হয়, কারণ গাছ মাটিকেও রক্ষা করে। শেষ পর্যন্ত সেই মাটি নদীর তলদেশে পলি হয়ে জমা হয় এবং ঘন ঘন বন্যার সৃষ্টি করে।
 5. **বাংলায় অনুবাদ করুন:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
 > A gentleman is one who never causes pain to others. This description is short, but as far as it goes is correct. He is always polite and considerate. He carefully avoids whatever may cause even a slight shock with his associates.
 
+
+   Answer: ভদ্রলোক তিনিই, যিনি কখনো অন্যকে কষ্ট দেন না। এই সংজ্ঞাটি সংক্ষিপ্ত, তবে যতদূর যায় ততদূর সঠিক। তিনি সবসময় বিনয়ী ও অন্যের প্রতি সহানুভূতিশীল। যা তাঁর সঙ্গীদের সামান্যতম আঘাতও দিতে পারে, তিনি সযত্নে তা এড়িয়ে চলেন।
 6. **বিদ্যালয়ের সৃজনশীলতা নিয়ে অনুবাদ** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 312 (ET: N/A)]*
 
 7. **বাংলাদেশে ব্যবসাপ্রতিষ্ঠান বাসাবাড়ি ও বিভিন্ন প্রকল্পে সৌরবিদ্যুৎ তথা সোলার প্যানেলের ব্যবহার দিন দিন বাড়ছে। সূর্য থেকে সোলার প্যানেল আলো শোষণ করে বৈদ্যুতিক প্রবাহ তৈরি করে, যা দিয়ে পরবর্তী সময়ে লাইট, ফ্যান প্রভৃতি চালানো যায়। সরকারের টেকসই উন্নয়ন লক্ষ্যমাত্রায় ২০৩০ সালের মধ্যে ৪ হাজার ১০০ মেগাওয়াট বিদ্যুৎ নবায়নযোগ্য উৎস থেকে উৎপাদনের পরিকল্পনা নেয়া হয়েছে। ফলে নীতিগত ও ব্যবহারিক উভয় দিক দিয়ে দেশে সৌরবিদ্যুৎ খাতের বেশ সম্ভাবনা রয়েছে। সোলার প্যানেলের মাধ্যমে বিদ্যুৎ উৎপাদন মূলত একটি পরিবেশবান্ধব প্রক্রিয়া এবং এ প্রক্রিয়ায় বিদ্যুৎ উৎপাদন করে তা জাতীয় গ্রিডে যুক্ত করা গেলে বিদ্যুৎ খরচ ২০ শতাংশ কমবে।** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 322 (ET: BIBM)]*
 
+
+   Answer: The use of solar power, that is solar panels, is increasing day by day in business establishments, residences and various projects in Bangladesh. Solar panels absorb light from the sun and produce an electric current, which can later be used to run lights, fans and similar appliances. Under the government's sustainable development targets, a plan has been taken to generate 4,100 megawatts of electricity from renewable sources by 2030. As a result, the solar power sector has considerable prospects in the country from both the policy and the practical point of view. Generating electricity through solar panels is essentially an environment friendly process, and if the electricity produced in this way can be added to the national grid, the cost of electricity will fall by 20 percent.
 8. **English to Bangla translation:** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)], [Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)], [RAKUB Network System Engineer (PO) 10.10.2021 compact it 844 (ET: N/A)], [RAKUB Programmer (PO) 12.10.2021 compact it 854 (ET: N/A)], [RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 858 (ET: N/A)], [BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875 (ET: BUET)], [Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)], [Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)], [Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
 
 9. **Translation [English to Bangla]** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 430 (ET: BIBM)]*
    **Translate the following passage into Bangla:**
    > Capacity development in banking is crucial as the industry faces evolving challenges and opportunities in a rapidly changing landscape. It encompasses enhancing the knowledge, skills, and capabilities of banking professionals to effectively navigate complex financial environments. This includes training in areas such as financial literacy, risk management, regulatory compliance, and technological proficiency. As banks integrate advanced technologies, and digital banking solutions, there is a growing need for specialized expertise to harness these tools for operational efficiency and customer service enhancement. Capacity development initiatives also focus on leadership development, fostering strategic thinking and decision-making abilities among senior executives to steer banks through economic uncertainties and competitive pressures.
 
+
+   Answer: ব্যাংকিং খাতে সক্ষমতা উন্নয়ন অত্যন্ত গুরুত্বপূর্ণ, কারণ দ্রুত পরিবর্তনশীল পরিস্থিতিতে এই শিল্প ক্রমাগত নতুন চ্যালেঞ্জ ও সুযোগের মুখোমুখি হচ্ছে। জটিল আর্থিক পরিবেশে কার্যকরভাবে পথ চলার জন্য ব্যাংকিং পেশাজীবীদের জ্ঞান, দক্ষতা ও সামর্থ্য বৃদ্ধি করাই এর মূল উদ্দেশ্য। এর মধ্যে রয়েছে আর্থিক সাক্ষরতা, ঝুঁকি ব্যবস্থাপনা, নিয়ন্ত্রক বিধি পরিপালন ও প্রযুক্তিগত দক্ষতার মতো ক্ষেত্রে প্রশিক্ষণ প্রদান। ব্যাংকগুলো যখন উন্নত প্রযুক্তি ও ডিজিটাল ব্যাংকিং সমাধান গ্রহণ করছে, তখন কার্যক্রমের দক্ষতা ও গ্রাহকসেবা উন্নয়নে এসব প্রযুক্তি কাজে লাগানোর জন্য বিশেষায়িত দক্ষতার চাহিদা ক্রমেই বাড়ছে। সক্ষমতা উন্নয়ন কার্যক্রমে নেতৃত্ব বিকাশের ওপরও গুরুত্ব দেওয়া হয়, যাতে ঊর্ধ্বতন নির্বাহীদের মধ্যে কৌশলগত চিন্তা ও সিদ্ধান্ত গ্রহণের সক্ষমতা গড়ে ওঠে এবং তাঁরা অর্থনৈতিক অনিশ্চয়তা ও প্রতিযোগিতার চাপের মধ্য দিয়ে ব্যাংককে পরিচালনা করতে পারেন।
 10. **অনুবাদ সংক্রান্ত প্রশ্নাবলি।** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
 11. **Translate the following passage into Bangla:** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 “He decided to pull out of the agreement at the eleventh hour. This sudden move took everyone by surprise and put the entire project at stake. Had he informed the team beforehand, we could have easily made alternative arrangements. Now, we are left with no other choice but to start everything from scratch. It just goes to show that you cannot always take people at their word.”
 
+
+   Answer: তিনি একেবারে শেষ মুহূর্তে চুক্তি থেকে সরে দাঁড়ানোর সিদ্ধান্ত নিলেন। তাঁর এই আকস্মিক পদক্ষেপে সবাই হতবাক হয়ে গেল এবং পুরো প্রকল্পটিই ঝুঁকির মুখে পড়ল। তিনি যদি আগেভাগে দলকে জানাতেন, তাহলে আমরা সহজেই বিকল্প ব্যবস্থা করতে পারতাম। এখন নতুন করে সবকিছু শুরু করা ছাড়া আমাদের আর কোনো উপায় নেই। এ থেকেই বোঝা যায়, মানুষের কথার ওপর সবসময় ভরসা করা যায় না।
 12. **Translate the following passage from English to Bangla:**
     > To become a good person is the most important thing for a person. He must try to be honest, just and kind in his personal life. This is his main duty. It is not difficult to understand the reason for this. The welfare of a state or a city depends largely on the moral character of its citizens.
     *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
+
+   Answer: একজন ভালো মানুষ হয়ে ওঠাই মানুষের জন্য সবচেয়ে গুরুত্বপূর্ণ কাজ। ব্যক্তিগত জীবনে তাকে সৎ, ন্যায়পরায়ণ ও দয়ালু হওয়ার চেষ্টা করতে হবে। এটিই তার প্রধান কর্তব্য। এর কারণ বোঝা কঠিন কিছু নয়। কোনো রাষ্ট্র বা নগরের কল্যাণ মূলত তার নাগরিকদের নৈতিক চরিত্রের ওপরই নির্ভর করে।
 13. **Translation (English to Bangla)**
     > Global investment in green economy-related..........
     *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
@@ -252,12 +270,19 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 
 16. **৪. বাংলা অনুবাদ করুন: Love is the crown of all virtues. It adores a man with divine qualities. It is love that strengthens our family ties and make heaven of the world. Love for god is a virtue of the highest excellence. It governs society and secures personal liberty. Love of one's own country is an inherent instinct of human nature.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 668 (ET: N/A)]*
 
+
+   Answer: ভালোবাসা সকল সদ্‌গুণের মুকুট। এটি মানুষকে ঐশ্বরিক গুণে ভূষিত করে। ভালোবাসাই আমাদের পারিবারিক বন্ধনকে দৃঢ় করে এবং পৃথিবীকে স্বর্গে পরিণত করে। ঈশ্বরের প্রতি ভালোবাসা সর্বোচ্চ শ্রেষ্ঠত্বের এক গুণ। এটি সমাজকে পরিচালিত করে এবং ব্যক্তিস্বাধীনতা নিশ্চিত করে। নিজের দেশের প্রতি ভালোবাসা মানবপ্রকৃতির এক সহজাত প্রবৃত্তি।
 17. **৪. বাংলায় অনুবাদ করুন: Cleanliness is a virtue. It is the habit of keeping the body and all other things free from dirts. Without a clean body one cannot have a merry mind. Cleanliness keeps health. It is also a mark of politeness. Good health keeps mind healthy.** *[Software Assistant Programmer 13.10.2022 compact it 711 (ET: N/A)]*
 
+
+   Answer: পরিচ্ছন্নতা একটি সদ্‌গুণ। এটি দেহ ও অন্যান্য সবকিছু ময়লামুক্ত রাখার অভ্যাস। পরিচ্ছন্ন দেহ ছাড়া কেউ প্রফুল্ল মন লাভ করতে পারে না। পরিচ্ছন্নতা স্বাস্থ্য রক্ষা করে। এটি ভদ্রতারও একটি লক্ষণ। সুস্বাস্থ্য মনকেও সুস্থ রাখে।
 18. **English to Bangla: Global Economic debt pandemic.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
 19. **Translate the following passage into Bengali.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 Honoring three medical scientists with the Nobel Medicine Prize 2020 for their homing in on the Hepatitis C has been widely acclaimed as a landmark achievement on the part of the Nobel Assembly at Karolinska Institutet. Awards like this will, undoubtedly, help the Nobel Committee regain a remarkable amount of its earlier prestige tainted by a couple of its decisions and internal scandals. The three Medicine award winners for this year are Americans Harvey Alter and Charles Rice along with Briton Michael Houghton. The world's medicinal research community has enough reasons to feel elated over the recognition extended to the trio. Their joint discovery had turned the page on protracted efforts to find a remedy to Hepatitis C. It is probably the deadliest of the blood-borne hepatitis after Hepatitis A and B.
+
+
+   Answer: হেপাটাইটিস সি শনাক্তকরণে অবদানের জন্য তিনজন চিকিৎসাবিজ্ঞানীকে ২০২০ সালের নোবেল চিকিৎসা পুরস্কারে ভূষিত করাকে ক্যারোলিনস্কা ইনস্টিটিউটের নোবেল অ্যাসেম্বলির এক যুগান্তকারী অর্জন হিসেবে ব্যাপকভাবে প্রশংসিত হয়েছে। এ ধরনের পুরস্কার নিঃসন্দেহে নোবেল কমিটিকে তার কয়েকটি সিদ্ধান্ত ও অভ্যন্তরীণ কেলেঙ্কারিতে কলঙ্কিত পূর্বেকার সুনামের উল্লেখযোগ্য অংশ পুনরুদ্ধারে সহায়তা করবে। এ বছরের তিনজন চিকিৎসা পুরস্কার বিজয়ী হলেন আমেরিকান হার্ভি অল্টার ও চার্লস রাইস এবং ব্রিটিশ মাইকেল হটন। এই ত্রয়ীকে দেওয়া স্বীকৃতিতে আনন্দিত হওয়ার যথেষ্ট কারণ বিশ্বের চিকিৎসা গবেষণা সমাজের রয়েছে। তাঁদের যৌথ আবিষ্কার হেপাটাইটিস সি-এর প্রতিকার খোঁজার দীর্ঘ প্রচেষ্টার মোড় ঘুরিয়ে দিয়েছে। হেপাটাইটিস এ ও বি-এর পর রক্তবাহিত হেপাটাইটিসগুলোর মধ্যে এটিই সম্ভবত সবচেয়ে প্রাণঘাতী।
 
 ## পত্র লিখন (7)
 
