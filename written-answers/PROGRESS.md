@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 160/239 subtopics · 1816/2673 answers**
+**Overall: 161/239 subtopics · 1817/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -199,7 +199,7 @@ Commit unit: one `##` subtopic.
 - [x] Sensor Circuits & Automated Control Systems (2)
 - [x] Circuit Theorems (Thevenin, Norton, Superposition) (2)
 
-## english.md — 5/8 sections, 98/110 answers
+## english.md — 6/8 sections, 99/110 answers
 
 - [x] Focus Writing (35)
 - [x] English Grammar (29)
@@ -208,7 +208,7 @@ Commit unit: one `##` subtopic.
 - [x] English Vocabulary & Antonyms (7)
 - [ ] Letter & Application Writing (6)
 - [ ] Reading Comprehension (5)
-- [ ] English Literature & Authors (1)
+- [x] English Literature & Authors (1)
 
 ## gk.md — 0/4 sections, 0/214 answers
 
