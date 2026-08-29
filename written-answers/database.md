@@ -9733,44 +9733,760 @@ SELECT count (*) FROM (
 
 1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 517 (ET: MIST)]*
 
+
+   Answer:
+
+   | Point | Database | Data Warehouse | Data Mining |
+   |---|---|---|---|
+   | What it is | A system for storing and managing current operational data | A large central repository of historical data drawn from many sources | A process, not a store: the discovery of patterns in data |
+   | Purpose | Running the business day to day, that is OLTP | Analysing the business, that is OLAP | Predicting and discovering, that is knowledge extraction |
+   | Data held | Current, detailed, frequently changing | Historical, summarised as well as detailed, non-volatile | Uses whatever the warehouse or database holds |
+   | Operations | INSERT, UPDATE, DELETE, SELECT | Mostly SELECT, with periodic bulk loads | Algorithms: classification, clustering, association, regression |
+   | Design | Normalised to 3NF, to avoid redundancy | Deliberately denormalised, star or snowflake schema, for query speed |ical | Not applicable |
+   | Time span | Current values only | Years of history |ical | Not applicable |
+   | Query type | Simple, affecting few rows, very many per second | Complex, aggregating millions of rows, comparatively few |ical | Batch analytical processing |
+   | Users | Clerks, tellers, customers, applications | Analysts, managers, executives | Data scientists and analysts |
+   | Updated | Continuously, in real time | Periodically, by an ETL process | Not applicable |
+
+   Real world example, taking a bank:
+   - Database: the core banking system. When a customer withdraws 5,000 taka from an ATM, the transaction is written and the balance updated within milliseconds. It holds the current balance of every account and the transactions of the recent period. It is optimised for many small concurrent writes.
+   - Data warehouse: every night the day's transactions are extracted from the core banking system, from the card system, from the loan system and from the mobile financial service, transformed into a common form, and loaded into a warehouse holding ten years of history. An analyst can then ask "how has average deposit balance in the Chattogram region changed over the last five years, by customer age group", a question the operational system could not answer without crippling it.
+   - Data mining: algorithms are then applied to that warehouse to discover things nobody asked about directly. Classification predicts which customers are likely to default on a loan; clustering segments the customers into groups with similar behaviour; association analysis finds that customers who take a car loan often open a savings account within six months; and anomaly detection identifies transactions that are probably fraudulent.
+
+   - The relationship in one sentence: the database runs the business, the warehouse remembers it, and data mining explains it.
 2. **Discuss different tools and techniques to develop a Business Intelligence Dashboard for a bank. How can data be captured and aggregated from various sources within the bank to monitor the business performance?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 519 (ET: MIST)]*
 
+
+   Answer:
+
+   Tools and techniques for a bank's business intelligence dashboard:
+
+   Data storage and processing layer:
+   - Data warehouse: Oracle Exadata, Teradata, Microsoft SQL Server, or a cloud warehouse such as Snowflake, Amazon Redshift or Google BigQuery. Modelled as a star or snowflake schema with fact tables for transactions and dimension tables for customer, product, branch and time.
+   - Data lake for unstructured and semi-structured data: call recordings, documents, log files, using Hadoop HDFS or cloud object storage.
+   - ETL and ELT tools: Informatica PowerCenter, Talend, Microsoft SSIS, Apache NiFi, or Apache Airflow for orchestration.
+   - Streaming for real time data: Apache Kafka, Apache Flink or Spark Streaming, needed for fraud detection and live transaction monitoring.
+
+   Visualisation and dashboard layer:
+   - Power BI, Tableau, Qlik Sense, MicroStrategy, SAP BusinessObjects, or Oracle Analytics Cloud. Open source options are Apache Superset, Metabase and Grafana.
+   - Reporting: SSRS, JasperReports or Crystal Reports for formal regulatory returns, which must be pixel exact.
+
+   Analytical techniques:
+   - Descriptive analytics: what happened, through KPIs and trends.
+   - Diagnostic analytics: why it happened, through drill down and correlation.
+   - Predictive analytics: what will happen, through regression, classification and time series forecasting.
+   - Prescriptive analytics: what should be done, through optimisation.
+   - Data mining: clustering for customer segmentation, association rules for cross selling, anomaly detection for fraud.
+
+   How data is captured and aggregated from the sources:
+
+   Step 1, identify the sources:
+   - Core banking system: accounts, balances, transactions, customers.
+   - Card management and switch: ATM and POS transactions.
+   - Loan management system: disbursements, repayments, classification.
+   - Treasury and trade finance systems.
+   - Internet and mobile banking platforms, and the mobile financial service.
+   - CRM and the call centre.
+   - Human resources and general ledger.
+   - External sources: the Credit Information Bureau, market rates, Bangladesh Bank returns.
+
+   Step 2, extract:
+   - Batch extraction nightly for most systems, using database connectors.
+   - Change data capture, reading the transaction log, for near real time feeds without loading the source system.
+   - Streaming through Kafka for transactions that must be analysed as they occur, such as fraud scoring.
+   - API and file based extraction for external sources.
+
+   Step 3, transform:
+   - Cleansing: remove duplicates, correct formats, handle missing values.
+   - Standardisation: one customer identifier across all systems, which is the hardest problem in practice, since the same customer appears with different identifiers in the core banking, card and loan systems.
+   - Conformed dimensions: a single agreed definition of customer, branch, product and time, so that figures from different systems can be compared.
+   - Derivation: computing balances, margins, ratios and classifications.
+   - Business rules applied consistently, so that "active customer" means the same thing everywhere.
+
+   Step 4, load:
+   - Into the staging area first, then into the warehouse fact and dimension tables.
+   - Slowly changing dimensions to preserve history, so that a customer who moves branch does not retrospectively alter last year's figures.
+   - Aggregate tables and materialised views pre-computed for the dashboard, so that a dashboard opens in seconds rather than minutes.
+
+   Step 5, present:
+   - Role based dashboards: the board sees the profit and the capital position; a branch manager sees that branch's deposits and non-performing loans; a relationship manager sees their own portfolio.
+   - Drill down from the summary to the individual transaction.
+   - Alerts and exception reporting on thresholds.
+   - Mobile access for executives.
+
+   Typical KPIs monitored: total deposits and advances, the advance to deposit ratio, net interest margin, non-performing loan ratio, cost to income ratio, capital adequacy ratio, liquidity coverage, customer acquisition and attrition, transactions per channel, ATM uptime, and branch profitability.
+
+   Governance, which must not be omitted:
+   - Data quality rules and reconciliation against the general ledger, since a dashboard that disagrees with the accounts will not be trusted and will not be used.
+   - Master data management and a data dictionary, so that every figure has one agreed definition.
+   - Security: role based access, row level security so a branch manager sees only their own branch, encryption, and masking of personally identifiable data for analysts.
+   - Compliance with the Bangladesh Bank ICT guidelines and data residency requirements.
+   - A defined refresh schedule, with the timestamp shown on the dashboard so that users know how current the figures are.
 3. **Software scenario question- Business Intelligence Model** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+
+   Answer: A business intelligence model describes how raw operational data is turned into information that management can act upon. The standard model has five layers, and a scenario question is answered by working through them.
+
+   Layer 1, data sources:
+   - The operational systems that generate the data: in a bank, the core banking system, the card switch, the loan system, internet and mobile banking, the CRM and the general ledger, together with external sources such as the Credit Information Bureau and market data.
+
+   Layer 2, data integration, that is ETL or ELT:
+   - Extract from each source, by batch, by change data capture from the transaction log, or by streaming for data that must be analysed as it occurs.
+   - Transform: cleanse, deduplicate, standardise formats, resolve the same customer appearing under different identifiers in different systems, apply business rules consistently, and derive calculated measures.
+   - Load into the warehouse, on a defined schedule.
+   - Tools: Informatica, Talend, SSIS, Apache NiFi, with Airflow for orchestration and Kafka for streaming.
+
+   Layer 3, data storage:
+   - Data warehouse, modelled as a star schema with fact tables holding the measures, such as transactions, and dimension tables holding the context, such as customer, product, branch and time. A snowflake schema normalises the dimensions further.
+   - Data marts: subject specific subsets for a particular department, which are faster and simpler for that department to use.
+   - Data lake for unstructured data.
+   - Slowly changing dimensions to preserve history correctly.
+
+   Layer 4, analysis:
+   - OLAP cubes supporting the operations of slice, dice, drill down, roll up and pivot.
+   - Descriptive analytics for what happened, diagnostic for why, predictive for what will happen, and prescriptive for what should be done.
+   - Data mining: classification to predict loan default, clustering for customer segmentation, association rules for cross selling, and anomaly detection for fraud.
+
+   Layer 5, presentation:
+   - Dashboards, scorecards, reports and alerts, delivered by Power BI, Tableau, Qlik or Superset, with role based access so that each user sees what concerns them.
+
+   How to answer a scenario question of this kind:
+   - Identify the business question being asked, and the decision it will inform.
+   - Identify which source systems hold the necessary data, and how current it must be, which determines whether batch or streaming extraction is required.
+   - Define the fact and the dimensions: what is being measured, and by what is it to be broken down.
+   - State the transformations and the business rules, particularly the definitions that must be agreed, such as what counts as an active customer.
+   - Choose the storage and refresh strategy according to the volume and the required currency.
+   - Design the presentation for the actual audience, since a board dashboard and an operational dashboard have almost nothing in common.
+   - Address governance: data quality, reconciliation against the ledger, security, row level access and compliance.
+
+   The point most often missed: the technical architecture is the easy part. A BI project fails when the definitions are not agreed, when the figures do not reconcile with the general ledger, or when the dashboard answers a question nobody was asking. Data quality and governance decide the outcome. <!-- verify -->
 4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
+
+
+   Answer:
+
+   What Big Data is:
+   - Big Data means data sets so large, so fast moving or so varied that conventional database tools cannot capture, store, manage or analyse them within an acceptable time.
+   - It is not defined by a fixed size. What matters is that the traditional approach of a single relational database on a single machine has ceased to work, so distributed storage and distributed processing are required.
+   - The technologies associated with it: Hadoop with HDFS for distributed storage and MapReduce or Spark for distributed processing; NoSQL databases such as MongoDB, Cassandra and HBase; Kafka for streaming; and cloud platforms such as BigQuery, Redshift and Snowflake.
+
+   Characteristics of Big Data, the five Vs:
+
+   - Volume: the sheer quantity of data, measured in terabytes, petabytes and beyond. Facebook and Google each process petabytes daily; a bank's transaction history over ten years, together with logs and images, reaches the same scale. Volume is what forces distributed storage.
+
+   - Velocity: the speed at which data arrives and must be processed. Stock market feeds, sensor readings from an industrial plant, ATM transactions, and social media posts arrive continuously and often must be analysed in real time rather than overnight. This is what forces stream processing.
+
+   - Variety: the different forms the data takes. Structured data in tables; semi-structured data such as JSON, XML and log files; and unstructured data such as text, email, images, audio and video. Estimates put unstructured data at about 80 percent of the total, and a relational database cannot hold it naturally.
+
+   - Veracity: the uncertainty and trustworthiness of the data. Big data is often incomplete, inconsistent, duplicated or simply wrong, and the value of any analysis depends entirely on how well this is handled. This is the characteristic most often neglected and most often fatal.
+
+   - Value: the usefulness that can actually be extracted. Data has no value in itself; it acquires value only when analysis turns it into a decision. Storing petabytes that nobody analyses is a cost, not an asset.
+
+   - Two further Vs are sometimes added: Variability, meaning that the meaning and the flow of the data change over time, and Visualisation, meaning the difficulty of presenting such volumes comprehensibly.
+
+   Applications: fraud detection in banking, customer segmentation and recommendation in retail, predictive maintenance in industry, disease surveillance in health, traffic management in smart cities, and weather and climate modelling.
+
+   Challenges: storage and processing cost, the shortage of skilled people, data quality, privacy and regulatory compliance, and security, since a single breach of a large repository exposes far more than a breach of a small one.
 
 ## Database Design & Data Types (3)
 
 1. An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
+
+   Answer:
+
+   ```sql
+   CREATE TABLE STUDENT (
+       Roll_Number    INT           PRIMARY KEY,
+       Name           VARCHAR(100)  NOT NULL,
+       Department     VARCHAR(50),
+       Email          VARCHAR(100)  UNIQUE,
+       Admission_Date DATE          NOT NULL
+   );
+   ```
+
+   Justification of each data type:
+
+   - Roll_Number: `INT`. It is a whole number used for identification and for comparison, never for arithmetic beyond that. An integer is compact, four bytes, and very fast to index and compare. If the roll number contains letters or leading zeros, as in '2024-CSE-001', then `VARCHAR(20)` must be used instead, since leading zeros would be lost in a numeric column.
+
+   - Name: `VARCHAR(100)`. Names vary greatly in length, so a variable length type stores only the characters actually present rather than padding to a fixed width. 100 characters accommodates a long full name. `CHAR` would be wrong here, because it pads every value to the full length and wastes space.
+
+   - Department: `VARCHAR(50)`. Again variable length text. If the set of departments is small and fixed, an `ENUM` or, better, a foreign key to a Department table would be preferable, since that prevents misspellings such as 'CSE' and 'C.S.E.' being stored as different values.
+
+   - Email: `VARCHAR(100)`. Variable length text; the standard permits addresses up to 254 characters, but 100 is sufficient in practice. `UNIQUE` is added because no two students should share an address, and a `CHECK` constraint or application validation should verify the format.
+
+   - Admission_Date: `DATE`. The proper date type must be used, never a string. Only then do comparison, sorting, date arithmetic and functions such as extracting the year work correctly. Storing a date as `VARCHAR` is a common and serious error: '01/02/2024' cannot be sorted or compared reliably, and the format is ambiguous.
+
+   Which column should be the primary key:
+   - Roll_Number should be the primary key.
+
+   Reasons:
+   - It is unique by definition; the institution assigns exactly one to each student.
+   - It is never NULL; every student has one from the moment of admission.
+   - It is stable; a student's roll number does not change during their studies, whereas a name, an email address or a department may all change. A primary key that changes forces every referencing foreign key to change with it.
+   - It is short and numeric, so indexing and joining are efficient.
+   - It carries no personal information, so it is safe to use as a reference in other tables and in reports.
+
+   Why the others are unsuitable:
+   - Name is not unique, since two students may share a name, and it may be corrected or changed after marriage.
+   - Department is shared by many students and is therefore not unique at all.
+   - Email is unique and could serve as an alternate key, but a student may change their address, it is comparatively long which makes indexing less efficient, and it may be absent for a new student. It should be declared UNIQUE rather than PRIMARY KEY.
+   - Admission_Date is shared by every student admitted the same day.
 2. **(c) Describe the difference between CHAR and VARCHAR data type.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | CHAR | VARCHAR |
+   |---|---|---|
+   | Length | Fixed | Variable |
+   | Storage | Always occupies the declared length, padding shorter values with spaces | Occupies only the actual length, plus 1 or 2 bytes recording it |
+   | Padding | Values are padded with trailing spaces to the full width | No padding |
+   | Retrieval | Trailing spaces are removed on retrieval in most systems | Stored and returned exactly as entered |
+   | Speed | Slightly faster, since every row is the same width so the offset can be computed | Slightly slower, since the length must be read |
+   | Memory efficiency | Wasteful when values vary in length | Efficient |
+   | Maximum size | 255 characters in MySQL | 65,535 bytes in MySQL, subject to the row limit |
+   | Suitable for | Values of genuinely fixed length | Values of varying length, which is most text |
+
+   Illustration, storing the word 'Rahim':
+   - `CHAR(10)` stores 'Rahim     ', occupying 10 bytes, with 5 wasted on padding.
+   - `VARCHAR(10)` stores 'Rahim', occupying 6 bytes, that is 5 for the characters and 1 for the length.
+
+   When to use each:
+   - `CHAR` for values that are always the same length: a country code `CHAR(2)`, a currency code `CHAR(3)`, a gender flag `CHAR(1)`, a fixed format account number, a hash of known length such as `CHAR(64)` for SHA-256.
+   - `VARCHAR` for everything else: names, addresses, email addresses, descriptions, and any text whose length varies.
+
+   Points that earn marks:
+   - The trailing space behaviour is the trap. In a `CHAR` column, 'Rahim' and 'Rahim   ' compare as equal, and the padding is generally stripped on retrieval; in a `VARCHAR` column the trailing spaces are preserved and the two values are distinct. Storing a fixed length code in a VARCHAR column can therefore produce comparison failures that are very hard to diagnose.
+   - `CHAR` avoids row fragmentation on update, because the row length never changes; updating a VARCHAR to a longer value may force the row to be moved.
+   - The practical rule: use `CHAR` only when the length is genuinely invariant and short, and `VARCHAR` in every other case.
 3. **What is the domain in a relational database? Explain with an example. Show how you would use Alter table SQL command to add a domain on a database table.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 916 (ET: N/A)]*
+
+
+   Answer:
+
+   What a domain is:
+   - A domain is the set of permissible atomic values that an attribute may take. It defines the data type, the length, the format and any additional restriction on the values of a column.
+   - Domain integrity is one of the integrity rules of the relational model: every value in a column must belong to the declared domain of that column.
+   - It is enforced by the data type declaration, by `NOT NULL`, by `CHECK` constraints, by `DEFAULT` values, and where supported by a user defined domain type.
+
+   Example:
+   - The domain of the attribute `Age` in a Student table is the set of integers between 16 and 60. A value of 200, or of 'twenty', or a negative number, does not belong to the domain and must be rejected.
+   - The domain of `Gender` is the set {'Male', 'Female', 'Other'}.
+   - The domain of `Email` is the set of strings matching a valid email format.
+   - The domain of `Salary` is the set of positive decimal numbers.
+
+   Enforcing a domain when creating a table:
+
+   ```sql
+   CREATE TABLE Student (
+       Roll   INT PRIMARY KEY,
+       Name   VARCHAR(100) NOT NULL,
+       Age    INT CHECK (Age BETWEEN 16 AND 60),
+       Gender CHAR(6) CHECK (Gender IN ('Male', 'Female', 'Other')),
+       CGPA   DECIMAL(3,2) CHECK (CGPA BETWEEN 0.00 AND 4.00)
+   );
+   ```
+
+   Adding a domain constraint to an existing table with ALTER TABLE:
+
+   ```sql
+   -- Add a CHECK constraint to an existing column
+   ALTER TABLE Student
+   ADD CONSTRAINT chk_age CHECK (Age BETWEEN 16 AND 60);
+
+   -- Add a new column together with its domain constraint
+   ALTER TABLE Student
+   ADD COLUMN CGPA DECIMAL(3,2) CHECK (CGPA BETWEEN 0.00 AND 4.00);
+
+   -- Restrict a column to a set of permitted values
+   ALTER TABLE Student
+   ADD CONSTRAINT chk_gender CHECK (Gender IN ('Male', 'Female', 'Other'));
+
+   -- Make a column compulsory, that is exclude NULL from its domain
+   ALTER TABLE Student
+   MODIFY Name VARCHAR(100) NOT NULL;
+
+   -- Change the data type, that is change the domain itself
+   ALTER TABLE Student
+   MODIFY Age SMALLINT;
+
+   -- Remove a domain constraint
+   ALTER TABLE Student
+   DROP CONSTRAINT chk_age;
+   ```
+
+   Creating a named domain, in a system that supports it such as PostgreSQL:
+
+   ```sql
+   CREATE DOMAIN age_domain AS INT CHECK (VALUE BETWEEN 16 AND 60);
+
+   CREATE TABLE Student (
+       Roll INT PRIMARY KEY,
+       Age  age_domain
+   );
+   ```
+
+   - This is the cleanest form, because the rule is defined once and reused in every table that needs it, so it cannot be stated inconsistently. MySQL does not support `CREATE DOMAIN`, so a CHECK constraint must be repeated on each column.
+   - Practical note: adding a CHECK constraint to a table that already contains violating rows will fail. The existing data must be corrected first, or the constraint added with NOVALIDATE where the system permits.
 
 ## SQL Joins & Operations (3)
 
 1. **What are the different types of join in SQL?** *[DESCO Assistant Engineer 20.05.2023 compact it 580 (ET: DESCO)]*
 
+
+   Answer: A join combines rows from two or more tables on a related column.
+
+   Types of join:
+
+   - INNER JOIN: returns only the rows that have a match in both tables. Rows without a match on either side are discarded. This is the default when `JOIN` is written without a qualifier.
+
+   ```sql
+   SELECT e.emp_name, d.dept_name
+   FROM   Employee e INNER JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+
+   - LEFT OUTER JOIN: returns every row of the left table, with NULLs in the right hand columns where there is no match. Used to answer "show me all of A, with B where it exists", and with `WHERE right.key IS NULL` to find rows of A having no B at all.
+
+   ```sql
+   SELECT d.dept_name, e.emp_name
+   FROM   Department d LEFT JOIN Employee e ON d.dept_id = e.dept_id;
+   ```
+
+   - RIGHT OUTER JOIN: the mirror image, returning every row of the right table.
+
+   - FULL OUTER JOIN: returns every row of both tables, matched where possible and with NULLs elsewhere. MySQL does not support it directly; it is written as a UNION of the left and right joins.
+
+   - CROSS JOIN: the Cartesian product, pairing every row of one table with every row of the other. m rows and n rows give m × n. It is occasionally useful for generating combinations, and it is otherwise almost always a mistake, produced by omitting the ON clause.
+
+   - SELF JOIN: a table joined to itself under two aliases. Used for hierarchies such as employee and manager, and for comparing rows of the same table with one another.
+
+   ```sql
+   SELECT e.emp_name AS employee, m.emp_name AS manager
+   FROM   Employee e LEFT JOIN Employee m ON e.manager_id = m.emp_id;
+   ```
+
+   - NATURAL JOIN: joins automatically on all columns having the same name in both tables. It should be avoided in production code, because adding a column with a coincidentally matching name silently changes the meaning of every such query.
+
+   - EQUI JOIN and NON-EQUI JOIN: a join whose condition uses `=` is an equi join; one using `<`, `>` or `BETWEEN` is a non-equi join, used for example to place a salary into a grade band.
+
+   Row counts, which is the point most often tested: if M pairs match, Lu rows of the left table are unmatched and Ru rows of the right, then inner join returns M, left join M + Lu, right join M + Ru and full outer join M + Lu + Ru.
 2. **Left joning and inner joining of a table.** *[BTCL Assistant Manager (Technical) 2023 compact it 594 (ET: BUET)]*
 
+
+   Answer:
+
+   Inner join:
+   - Returns only the rows that have a matching value in both tables. Any row of either table without a match is discarded entirely.
+
+   ```sql
+   SELECT e.emp_id, e.emp_name, d.dept_name
+   FROM   Employee e
+   INNER JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+
+   Left join, that is left outer join:
+   - Returns every row of the left table, whether or not it has a match, together with the matching rows of the right table. Where there is no match, the right hand columns are filled with NULL.
+
+   ```sql
+   SELECT e.emp_id, e.emp_name, d.dept_name
+   FROM   Employee e
+   LEFT JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+
+   Worked comparison:
+
+   | Employee | | | Department | |
+   |---|---|---|---|---|
+   | emp_id | emp_name | dept_id | dept_id | dept_name |
+   | 1 | Rahim | 10 | 10 | IT |
+   | 2 | Karim | 20 | 20 | Finance |
+   | 3 | Salma | NULL | 30 | HR |
+
+   Inner join result, 2 rows:
+
+   | emp_id | emp_name | dept_name |
+   |---|---|---|
+   | 1 | Rahim | IT |
+   | 2 | Karim | Finance |
+
+   - Salma is dropped because her dept_id is NULL, and the HR department is dropped because no employee belongs to it.
+
+   Left join result, 3 rows:
+
+   | emp_id | emp_name | dept_name |
+   |---|---|---|
+   | 1 | Rahim | IT |
+   | 2 | Karim | Finance |
+   | 3 | Salma | NULL |
+
+   - Every employee appears. Salma is retained with NULL in the department column. HR still does not appear, because it is on the right side.
+
+   When to use each:
+   - Inner join when only the matched data is meaningful, which is the usual case.
+   - Left join when the left table must be complete, for example a report listing every employee whether or not a department has been assigned, or every department with its employee count including the empty ones.
+   - The anti-join pattern: `LEFT JOIN ... WHERE right.key IS NULL` finds the rows of the left table having no match at all, which is how "which departments have no employees" is answered.
+
+   A trap worth stating: with a LEFT JOIN, a condition on the right table placed in the `WHERE` clause silently converts it into an inner join, because the NULLs fail the condition. Such a condition must be placed in the `ON` clause instead.
 3. **Which join is used for including not matching all records with output?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+
+   Answer: The FULL OUTER JOIN includes all records, both matching and non-matching, from both tables.
+
+   - It returns every row of the left table and every row of the right table. Where a row has a match on the other side, the two are combined; where it does not, the columns of the other side are filled with NULL.
+   - Row count: M matched pairs + Lu unmatched left rows + Ru unmatched right rows.
+
+   ```sql
+   SELECT c.customer_name, o.order_id, o.amount
+   FROM   Customer c
+   FULL OUTER JOIN Orders o ON c.customer_id = o.customer_id;
+   ```
+
+   - This returns every customer, including those who have placed no order, and every order, including any whose customer identifier does not exist in the Customer table.
+
+   MySQL, which has no FULL OUTER JOIN, requires it to be written as a union of the two one sided joins:
+
+   ```sql
+   SELECT c.customer_name, o.order_id
+   FROM   Customer c LEFT JOIN Orders o ON c.customer_id = o.customer_id
+   UNION
+   SELECT c.customer_name, o.order_id
+   FROM   Customer c RIGHT JOIN Orders o ON c.customer_id = o.customer_id;
+   ```
+
+   The related answers, for contrast:
+   - If the question means all records from one table only, the answer is LEFT JOIN or RIGHT JOIN, which includes all the rows of the named side.
+   - If it means only the matching records, the answer is INNER JOIN.
+   - If it means every possible combination regardless of matching, the answer is CROSS JOIN, which produces the Cartesian product.
+
+   A practical use of the full outer join: reconciliation. Comparing two systems' records of the same transactions, the full outer join shows the entries present in both, the entries present only in the first, and the entries present only in the second, which is exactly what a reconciliation report requires.
 
 ## NoSQL, NewSQL & Modern Databases (2)
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1332 (ET: BUET)]*
 
+
+   Answer:
+
+   Limitations of a traditional relational DBMS:
+   - Horizontal scaling is difficult. A relational database scales vertically, by buying a larger machine, but distributing it across many machines while preserving joins, transactions and constraints is genuinely hard. This is the central limitation and the reason NoSQL arose.
+   - Rigid schema: the structure must be defined in advance, and altering a large table is a heavy operation. This does not suit rapidly changing applications.
+   - Unstructured and semi-structured data such as documents, images, log files and JSON do not fit the tabular model naturally.
+   - Very high write throughput is limited by locking and by the need to maintain ACID guarantees.
+   - Joins become expensive at very large scale, and normalisation multiplies them.
+   - Cost: enterprise relational licences and the hardware to scale them vertically are expensive.
+   - Object relational impedance mismatch: the tabular model does not correspond to the object model of the application, so a mapping layer is always required.
+   - Availability under network partition: by the CAP theorem, a strongly consistent distributed system must sacrifice availability when the network splits.
+
+   NoSQL:
+   - NoSQL, meaning "not only SQL", is a family of non-relational databases designed for horizontal scalability, flexible schemas and very large volumes.
+   - Four kinds: document stores such as MongoDB and CouchDB; key-value stores such as Redis and DynamoDB; column family stores such as Cassandra and HBase; and graph databases such as Neo4j.
+   - It follows the BASE model rather than ACID: Basically Available, Soft state, Eventually consistent.
+   - Advantages: scales horizontally across commodity servers, handles unstructured data, very high throughput, flexible schema, and high availability.
+   - Disadvantages: weaker consistency guarantees, limited or no join support, no standard query language, and immature tooling by comparison.
+
+   NewSQL:
+   - NewSQL is a class of modern relational databases that aim to provide the horizontal scalability of NoSQL while retaining the full ACID guarantees and the SQL interface of the relational model.
+   - It achieves this through distributed architecture, consensus protocols such as Raft and Paxos, distributed transactions with two phase commit, and in some designs an in-memory or log structured storage engine.
+   - Examples: Google Spanner, CockroachDB, TiDB, VoltDB, YugabyteDB, Amazon Aurora and MemSQL, now SingleStore.
+
+   Relationship between the three:
+
+   | Point | SQL, traditional RDBMS | NoSQL | NewSQL |
+   |---|---|---|---|
+   | Data model | Relational tables | Document, key-value, column, graph | Relational tables |
+   | Schema | Fixed | Flexible or none | Fixed |
+   | Query language | SQL | Product specific APIs | SQL |
+   | Transactions | Full ACID | BASE, eventual consistency | Full ACID |
+   | Scaling | Vertical | Horizontal | Horizontal |
+   | Joins | Full support | Limited or absent | Full support |
+   | Best for | Banking, ERP, anything needing correctness | Social media, IoT, logs, catalogues, caching | Applications needing both correctness and scale |
+   | Examples | Oracle, MySQL, PostgreSQL, SQL Server | MongoDB, Cassandra, Redis, Neo4j | Spanner, CockroachDB, TiDB, VoltDB |
+
+   - The relationship in one sentence: NoSQL gave up consistency to obtain scale, and NewSQL is the attempt to recover the consistency without giving the scale back. NewSQL is not a replacement for either; it is the option chosen when an application genuinely needs ACID transactions at a volume a single machine cannot serve, which is precisely the position of a large payment system.
 2. **Write difference between relational database and NoSQL database.** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
+
+
+   Answer:
+
+   | Point | Relational database | NoSQL database |
+   |---|---|---|
+   | Data model | Tables of rows and columns | Document, key-value, column family or graph |
+   | Schema | Fixed, defined before data is inserted | Flexible or schema-less; documents in one collection may differ |
+   | Query language | SQL, standardised across products | Product specific APIs and query languages |
+   | Transactions | Full ACID guarantees | BASE model: basically available, soft state, eventually consistent; some products now offer limited ACID |
+   | Consistency | Strong and immediate | Usually eventual, though tunable in some products |
+   | Scaling | Vertical, by using a larger machine; horizontal scaling is difficult | Horizontal, by adding commodity servers; designed for it from the start |
+   | Joins | Fully supported and optimised | Limited or absent; data is denormalised and embedded instead |
+   | Normalisation | Normalised to avoid redundancy | Deliberately denormalised for read speed |
+   | Relationships | Expressed by foreign keys, enforced by the DBMS | Expressed by embedding or by application level references, not enforced |
+   | Data types handled | Structured | Structured, semi-structured and unstructured |
+   | Maturity and tooling | Very mature, decades of tools and expertise | Newer, less standardised |
+   | Best suited to | Banking, accounting, ERP, inventory, anything where correctness is paramount | Social media, IoT streams, logs, content management, catalogues, caching, real time analytics |
+   | Examples | Oracle, MySQL, PostgreSQL, SQL Server | MongoDB, Cassandra, Redis, HBase, Neo4j, DynamoDB |
+
+   The four kinds of NoSQL database:
+   - Document store: stores JSON or BSON documents, each of which may have its own structure. Good for content management and catalogues. Examples: MongoDB, CouchDB.
+   - Key-value store: the simplest model, a dictionary of keys to values, extremely fast. Used for caching and session storage. Examples: Redis, DynamoDB, Memcached.
+   - Column family store: rows with dynamic columns grouped into families, designed for very large write volumes across many machines. Examples: Cassandra, HBase.
+   - Graph database: nodes and edges with properties, designed for traversing relationships. Used for social networks, recommendation and fraud detection. Example: Neo4j.
+
+   How to choose:
+   - Use a relational database when the data is structured, the relationships matter, and correctness cannot be compromised. A bank ledger must never lose or duplicate a transaction, so ACID is not negotiable.
+   - Use NoSQL when the volume or the write rate exceeds what one machine can serve, when the structure varies or changes rapidly, or when eventual consistency is acceptable. A social media timeline that shows a post a second late does no harm.
+   - Many systems use both, which is called polyglot persistence: the relational database holds the transactions and the NoSQL store holds the session state, the search index or the activity feed.
 
 ## Database Connectivity (JDBC) (2)
 
 1. What is JDBC? Explain the steps required to connect a Java application to a MySQL database. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+
+   Answer:
+
+   What JDBC is:
+   - JDBC, Java Database Connectivity, is a standard Java API that allows a Java application to connect to a relational database, send SQL statements and process the results, independently of which database product is used.
+   - It consists of the interfaces in the `java.sql` package, principally `DriverManager`, `Connection`, `Statement`, `PreparedStatement` and `ResultSet`, together with a driver supplied by each database vendor which implements them.
+   - Its purpose is portability: the same application code works against MySQL, Oracle or PostgreSQL by changing only the driver and the connection URL. It is the Java equivalent of ODBC.
+   - Driver types: Type 1, the JDBC-ODBC bridge, now removed; Type 2, a native API partly in Java; Type 3, a network protocol driver; and Type 4, a pure Java thin driver speaking the database's native protocol directly, which is what every modern driver is.
+
+   Steps to connect a Java application to MySQL:
+
+   Step 1, add the driver to the classpath:
+   - Obtain `mysql-connector-j.jar` and place it on the classpath, or declare it as a Maven dependency. Since JDBC 4.0 the driver registers itself automatically, so an explicit `Class.forName("com.mysql.cj.jdbc.Driver")` is no longer required, though it is harmless.
+
+   Step 2, establish the connection:
+   - Use `DriverManager.getConnection(url, user, password)` with a URL of the form `jdbc:mysql://host:port/database`.
+
+   Step 3, create a statement:
+   - Use `PreparedStatement` rather than `Statement`, because it is precompiled, faster when reused, and above all immune to SQL injection, since the parameters are bound rather than concatenated.
+
+   Step 4, execute the statement:
+   - `executeQuery()` for a SELECT, which returns a `ResultSet`; `executeUpdate()` for INSERT, UPDATE or DELETE, which returns the number of rows affected.
+
+   Step 5, process the result:
+   - Iterate the `ResultSet` with `next()` and read the columns by name or by index.
+
+   Step 6, close the resources:
+   - Close the ResultSet, the Statement and the Connection, in that order. A try-with-resources block does this automatically and is the correct modern practice.
+
+   ```java
+   import java.sql.*;
+
+   public class DatabaseExample {
+       public static void main(String[] args) {
+           String url  = "jdbc:mysql://localhost:3306/company_db";
+           String user = "root";
+           String pass = "password";
+
+           String sql = "SELECT emp_id, emp_name, salary FROM Employee WHERE salary > ?";
+
+           // try-with-resources closes everything automatically
+           try (Connection conn = DriverManager.getConnection(url, user, pass);
+                PreparedStatement ps = conn.prepareStatement(sql)) {
+
+               ps.setDouble(1, 50000);                    // bind the parameter
+
+               try (ResultSet rs = ps.executeQuery()) {
+                   while (rs.next()) {
+                       System.out.println(rs.getInt("emp_id") + " "
+                                        + rs.getString("emp_name") + " "
+                                        + rs.getDouble("salary"));
+                   }
+               }
+
+           } catch (SQLException e) {
+               e.printStackTrace();
+           }
+       }
+   }
+   ```
+
+   Inserting, with an explicit transaction:
+
+   ```java
+   try (Connection conn = DriverManager.getConnection(url, user, pass)) {
+       conn.setAutoCommit(false);                          // begin the transaction
+       try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO Employee (emp_id, emp_name, salary) VALUES (?, ?, ?)")) {
+           ps.setInt(1, 101);
+           ps.setString(2, "Rahim");
+           ps.setDouble(3, 45000);
+           ps.executeUpdate();
+           conn.commit();                                  // make it permanent
+       } catch (SQLException e) {
+           conn.rollback();                                // undo on failure
+           throw e;
+       }
+   }
+   ```
+
+   Points that earn marks:
+   - Always use `PreparedStatement` with bound parameters. Concatenating a user supplied value into the SQL string is the direct route to SQL injection.
+   - Always close the resources; try-with-resources is the reliable way.
+   - Use a connection pool such as HikariCP in a real application, since opening a connection is expensive and a web application must not open one per request.
+   - Never hard code the credentials in the source; read them from configuration or a secrets store.
+   - Set `autoCommit(false)` when several statements must succeed or fail together.
 2. **(b) Explain embedded SQL with an appropriate example.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
+
+
+   Answer:
+
+   What embedded SQL is:
+   - Embedded SQL is SQL written directly inside the source code of a host language such as C, C++, COBOL or Java, rather than being sent as a string at run time. The statements are marked with a prefix, normally `EXEC SQL`, and a precompiler converts them into calls to the database's runtime library before the ordinary compiler is invoked.
+   - Its purpose is to combine the data handling power of SQL with the control structures of a procedural language, since SQL alone has no loops, no conditionals and no user interface.
+
+   How it is processed:
+   - Source file with embedded SQL → precompiler → source file with library calls → ordinary compiler → object code → linked with the DBMS runtime library → executable.
+
+   Host variables:
+   - Variables of the host language used inside SQL statements, prefixed with a colon. They carry values into the statement and receive results from it.
+   - Indicator variables accompany them to signal a NULL result, since a C variable has no way of representing NULL.
+
+   Example in C with Oracle Pro*C:
+
+   ```c
+   #include <stdio.h>
+
+   EXEC SQL BEGIN DECLARE SECTION;
+       int    emp_id;
+       char   emp_name[50];
+       float  salary;
+       short  salary_ind;            /* indicator variable for NULL */
+       char   *username = "scott";
+       char   *password = "tiger";
+   EXEC SQL END DECLARE SECTION;
+
+   EXEC SQL INCLUDE SQLCA;           /* SQL Communications Area, holds the status */
+
+   int main(void) {
+       EXEC SQL CONNECT :username IDENTIFIED BY :password;
+
+       emp_id = 101;
+
+       EXEC SQL SELECT emp_name, salary
+                INTO   :emp_name, :salary:salary_ind
+                FROM   Employee
+                WHERE  emp_id = :emp_id;
+
+       if (sqlca.sqlcode == 0) {
+           if (salary_ind == -1)
+               printf("%s has no salary recorded\n", emp_name);
+           else
+               printf("%s earns %.2f\n", emp_name, salary);
+       } else {
+           printf("Error: %d\n", sqlca.sqlcode);
+       }
+
+       EXEC SQL COMMIT WORK RELEASE;
+       return 0;
+   }
+   ```
+
+   Cursors, needed when a query returns more than one row:
+
+   ```c
+   EXEC SQL DECLARE emp_cursor CURSOR FOR
+            SELECT emp_id, emp_name FROM Employee WHERE dept_id = :dept;
+
+   EXEC SQL OPEN emp_cursor;
+
+   for (;;) {
+       EXEC SQL FETCH emp_cursor INTO :emp_id, :emp_name;
+       if (sqlca.sqlcode != 0) break;         /* no more rows */
+       printf("%d %s\n", emp_id, emp_name);
+   }
+
+   EXEC SQL CLOSE emp_cursor;
+   ```
+
+   - A `SELECT ... INTO` may return only one row; anything more requires a cursor, which is the point most often tested.
+
+   Static versus dynamic embedded SQL:
+   - Static: the statement text is fixed at compile time, so it can be checked and optimised in advance. This is the normal case.
+   - Dynamic: the statement is built as a string at run time and executed with `EXEC SQL EXECUTE IMMEDIATE` or `PREPARE` and `EXECUTE`. Necessary when the table or the conditions are not known in advance, but slower and vulnerable to SQL injection if input is concatenated rather than bound.
+
+   Advantages: compile time checking of static statements, better performance because the plan is prepared in advance, and direct access to SQL from a procedural language.
+   Disadvantages: a precompiler is required, the code is tied to a particular DBMS, and the impedance mismatch between the set based results of SQL and the row at a time processing of the host language must be bridged with cursors. This is why embedded SQL has largely been replaced by call level interfaces such as JDBC and ODBC, which need no precompiler and are portable.
 
 ## Relational Keys (Candidate, Super, Primary, Foreign Key) (1)
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 399 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: `Employee(NID, Company_ID, Name, Mobile_Number)`, with the stated assumption that every record has a unique mobile number. NID is a national identity number, which is unique by definition.
+
+   Step 1, identify the candidate keys:
+   - {NID}: a national identity number is unique to one person, so it uniquely identifies a row. It is minimal, being a single attribute. Candidate key.
+   - {Mobile_Number}: unique by the assumption stated in the question. Minimal. Candidate key.
+   - {Company_ID}: not stated to be unique, and in general many employees may share a company identifier, so it cannot be a key.
+   - {Name}: names are not unique. Not a key.
+   - Any set containing NID or Mobile_Number is a super key but is not minimal, so it is not a candidate key.
+
+   Number of candidate keys: 2, namely {NID} and {Mobile_Number}.
+
+   Example of two candidate keys:
+   - Candidate key 1: {NID}
+   - Candidate key 2: {Mobile_Number}
+
+   Step 2, count the super keys:
+   - A super key is any subset of the four attributes that contains at least one candidate key, that is at least one of NID or Mobile_Number.
+   - Total number of subsets of 4 attributes = 2⁴ = 16.
+   - Subsets containing neither NID nor Mobile_Number are the subsets of {Company_ID, Name}, of which there are 2² = 4, namely { }, {Company_ID}, {Name} and {Company_ID, Name}.
+   - Number of super keys = 16 − 4 = 12.
+
+   The twelve super keys listed:
+   - {NID}, {Mobile_Number}
+   - {NID, Company_ID}, {NID, Name}, {NID, Mobile_Number}
+   - {Mobile_Number, Company_ID}, {Mobile_Number, Name}
+   - {NID, Company_ID, Name}, {NID, Company_ID, Mobile_Number}, {NID, Name, Mobile_Number}
+   - {Mobile_Number, Company_ID, Name}
+   - {NID, Company_ID, Name, Mobile_Number}
+
+   Final answers:
+   - Number of super keys: 12
+   - Number of candidate keys: 2
+   - The two candidate keys: {NID} and {Mobile_Number}
+
+   - Which should be the primary key: NID, because it is stable and permanent, whereas a person may change their mobile number. Mobile_Number then becomes an alternate key, enforced with a UNIQUE constraint. A key that can change is a poor primary key, since every referencing foreign key would have to change with it.
+
 ## Indexing in DBMS (1)
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+
+   Answer: An index is a separate sorted structure holding the values of one or more columns together with pointers to the rows containing them, which allows a row to be found in O(log n) instead of by scanning the whole table in O(n).
+
+   Types of index:
+
+   By the ordering of the underlying file:
+   - Primary index: built on the primary key of a file whose records are physically stored in that key order. There can be only one, and it is normally sparse, holding one entry per data block rather than per record.
+   - Clustering index: built on a non-key attribute by which the file is physically ordered. Records with the same value are stored together, which makes range queries on that attribute very fast.
+   - Secondary index: built on any other attribute. It must be dense, holding an entry for every record, and a file may have many.
+
+   By density:
+   - Dense index: one index entry for every record in the file. Faster lookup, larger index.
+   - Sparse index: one entry per block. Smaller index, but a sequential scan within the block is needed after the descent.
+
+   By structure:
+   - B tree and B+ tree index: the standard in every relational database. All leaves are at the same level, the branching factor is high so the tree is very shallow, and in a B+ tree the data pointers are all in the leaves and the leaves are chained, which makes range queries and ordered scans efficient.
+   - Hash index: computes the address directly from the key, giving O(1) equality lookup, but it cannot support range queries or ordering because hashing destroys the order.
+   - Bitmap index: one bit vector per distinct value. Extremely compact and fast for low cardinality columns such as gender or status, and it supports AND and OR operations directly. Used in data warehouses, unsuitable where the data changes frequently.
+
+   By uniqueness and coverage:
+   - Unique index: enforces uniqueness as well as accelerating lookup. Created automatically for PRIMARY KEY and UNIQUE constraints.
+   - Non-unique index: permits duplicate values.
+   - Composite or multi-column index: on several columns together. The column order matters, since only a prefix of it can be used.
+   - Covering index: contains every column the query needs, so the table itself is never read.
+   - Partial or filtered index: covers only the rows matching a condition, which makes it far smaller.
+   - Functional or expression index: built on the result of an expression, such as `UPPER(name)`, which allows a query applying that function to use an index.
+
+   By physical organisation:
+   - Clustered index: the table rows themselves are held in the index order, so there can be only one per table and range scans on it are extremely fast.
+   - Non-clustered index: a separate structure holding the key and a pointer to the row; a table may have many.
+
+   Specialised:
+   - Full text index for searching within text, and spatial index, normally an R tree, for geographic data.
+
+   - The trade-off that must be stated: every index accelerates reads and slows writes, since each INSERT, UPDATE and DELETE must maintain every affected index. Indexes should be created for the queries that actually matter, verified with the execution plan, and removed when they are no longer used.

@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 131/239 subtopics · 1555/2673 answers**
+**Overall: 132/239 subtopics · 1559/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -154,7 +154,7 @@ Commit unit: one `##` subtopic.
 - [x] Hashing & Hash Tables (6)
 - [x] Data Structure Fundamentals (2)
 
-## database.md — 12/19 sections, 213/229 answers
+## database.md — 13/19 sections, 217/229 answers
 
 - [x] SQL Queries (71)
 - [x] DBMS Architecture & Features (22)
@@ -168,7 +168,7 @@ Commit unit: one `##` subtopic.
 - [x] PL/SQL & Database Triggers (6)
 - [x] Indexing & Query Optimization (B-Tree, B+ Tree) (6)
 - [x] Distributed & Parallel Databases (4)
-- [ ] Data Warehousing, Data Mining & Business Intelligence (4)
+- [x] Data Warehousing, Data Mining & Business Intelligence (4)
 - [ ] Database Design & Data Types (3)
 - [ ] SQL Joins & Operations (3)
 - [ ] NoSQL, NewSQL & Modern Databases (2)
