@@ -756,55 +756,854 @@
 
 1. What is a phishing attack? Explain its types and discuss methods to prevent it. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+
+   Answer:
+
+   - Phishing is a social engineering attack in which the attacker sends a fraudulent message that appears to come from a trusted source, in order to trick the recipient into revealing credentials or financial information, or into opening a malicious attachment or link.
+   - It attacks the human being rather than the technology, which is why it defeats organisations with strong technical defences. It is the starting point of the great majority of successful breaches.
+
+   Types of phishing:
+   - Email phishing: mass emails imitating a bank, a courier or a service provider, with a link to a counterfeit login page.
+   - Spear phishing: targeted at one named individual, using personal details gathered beforehand, which makes it far more convincing.
+   - Whaling: spear phishing aimed at a senior executive, since their access is the most valuable.
+   - Vishing: voice phishing by telephone, for example a caller claiming to be from the bank's card division asking for an OTP.
+   - Smishing: phishing by SMS, very common in Bangladesh with fake mobile financial service messages.
+   - Clone phishing: a genuine email that the victim has already received is copied, with the attachment or link replaced.
+   - Business Email Compromise: impersonating a chief executive or a supplier to instruct a fraudulent payment.
+   - Pharming: redirecting the victim to a counterfeit site by poisoning DNS or the hosts file, without any deceptive message at all.
+   - Angler phishing on social media, and QR code phishing.
+
+   Prevention:
+   - User awareness training and regular simulated phishing exercises, since the user is the control that actually decides the outcome.
+   - Email security: SPF, DKIM and DMARC to stop domain spoofing; anti-spam and attachment sandboxing; and warning banners on external mail.
+   - Multi-factor authentication, so a stolen password alone is not enough. Phishing resistant factors such as FIDO2 security keys defeat even a real time proxy attack.
+   - Verify independently: never use a link or a telephone number contained in the message; go to the site or ring the number from the official source.
+   - Technical controls: URL filtering, DNS filtering, browser anti-phishing, and blocking macros in documents from the Internet.
+   - Procedural controls: dual authorisation and call-back verification for any payment or change of bank details.
+   - Prompt patching, least privilege, and monitoring for credential use from unusual locations.
+   - A no-blame reporting culture, so that a user who clicks reports it immediately rather than concealing it.
 2. **(b) What is an ARP poisoning attack, and how does it work?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer: ARP poisoning, also called ARP spoofing or ARP cache poisoning, is an attack in which the attacker sends forged ARP messages onto a local network so that his own MAC address becomes associated with the IP address of another host, typically the default gateway.
+
+   - ARP has no authentication at all. A host accepts any ARP reply it receives and updates its cache accordingly, even if it never sent a request. This is the flaw the attack exploits.
+
+   How it works:
+   - Step 1: the attacker connects to the same LAN segment as the victim.
+   - Step 2: the attacker sends a forged ARP reply to the victim saying "the gateway's IP address is at my MAC address".
+   - Step 3: the attacker sends another forged ARP reply to the gateway saying "the victim's IP address is at my MAC address".
+   - Step 4: both update their ARP caches. From that moment every packet between the victim and the gateway passes through the attacker's machine.
+   - Step 5: the attacker enables IP forwarding so the traffic still reaches its destination and nothing appears wrong, while he reads, records or alters it. This is a Man in the Middle position.
+   - The forged replies are sent repeatedly, so that the poisoned entry is refreshed before the legitimate one can replace it.
+
+   ```
+   Normal:    Victim <---------------> Gateway <---> Internet
+
+   Poisoned:  Victim <---> Attacker <---> Gateway <---> Internet
+              (victim believes the attacker is the gateway,
+               and the gateway believes the attacker is the victim)
+   ```
+
+   What the attacker can then do: capture credentials sent over unencrypted protocols, hijack sessions by stealing cookies, perform SSL stripping to downgrade HTTPS, inject content into pages, or simply drop the traffic to cause a denial of service.
+
+   Prevention:
+   - Dynamic ARP Inspection on managed switches, which validates every ARP packet against the DHCP snooping binding table and drops forged ones. This is the primary defence.
+   - DHCP snooping, which builds that trusted table of IP to MAC to port bindings.
+   - Port security, limiting the number of MAC addresses learned on a port.
+   - Static ARP entries for critical hosts such as the gateway and servers, though this does not scale.
+   - Encryption everywhere: HTTPS, SSH and VPN, so that even a successful interception yields nothing readable.
+   - Network segmentation with VLANs, which limits how far an attacker can reach.
+   - ARP monitoring tools such as arpwatch, which alert when an IP to MAC mapping changes unexpectedly.
+   - 802.1X port based authentication, so that an unauthorised device cannot join the LAN at all.
 3. **What is a Man-in-the-Middle (MITM) attack? Describe two countermeasures to prevent it.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer:
+
+   - A Man in the Middle attack is one in which the attacker secretly places himself between two communicating parties, so that all traffic passes through him. Each party believes it is talking directly to the other, while the attacker can read, record and alter everything.
+   - It breaks confidentiality, integrity and authentication at once.
+
+   How it is carried out:
+   - ARP spoofing on a LAN: the attacker sends forged ARP replies so that the victim maps the gateway's IP to the attacker's MAC address, and the gateway maps the victim's IP to the attacker's MAC. All traffic then flows through the attacker.
+   - DNS spoofing or cache poisoning: the attacker supplies a false IP address for a domain, so the victim connects to the attacker's server believing it to be the real one.
+   - Rogue access point or evil twin: a fake Wi-Fi hotspot with a familiar name, to which victims connect voluntarily.
+   - SSL stripping: the attacker downgrades an HTTPS connection to HTTP so the traffic is readable.
+   - Session hijacking: stealing a session cookie and impersonating the authenticated user.
+   - BGP hijacking and rogue DHCP servers, which redirect traffic at the network level.
+
+   Countermeasures:
+   - Strong encryption in transit: HTTPS with TLS 1.2 or 1.3 everywhere, so that even if the traffic is intercepted it cannot be read or altered. This is the single most effective measure.
+   - Certificate validation and HSTS: the browser must verify the server's certificate against a trusted Certifying Authority, and HTTP Strict Transport Security prevents a downgrade to plain HTTP. Certificate pinning goes further by accepting only one specific certificate.
+   - Mutual authentication: both sides prove their identity, as in mutual TLS and in IPsec with certificates, so an attacker cannot impersonate either end.
+   - Dynamic ARP Inspection and DHCP snooping on switches, which block forged ARP and DHCP messages on the LAN, and port security to limit MAC addresses per port.
+   - DNSSEC, which cryptographically signs DNS records so a forged answer is rejected.
+   - VPN for any use of an untrusted network, so the whole session is encrypted end to end.
+   - Multi-factor authentication, so that a stolen password alone is useless.
+   - Avoiding open public Wi-Fi, and user awareness of certificate warnings, which should never be clicked through.
+
+   - Two countermeasures if only two are asked: first, end to end encryption with TLS together with strict certificate validation and HSTS, which makes intercepted traffic useless and prevents impersonation; and second, Dynamic ARP Inspection with DHCP snooping on the switches, which prevents the attacker from obtaining the middle position on the LAN in the first place.
 4. **What is a DoS attack? Explain the mechanism of a DDoS attack and how it differs from a simple DoS attack.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer:
+
+   - A Denial of Service attack aims to make a service unavailable to its legitimate users, by exhausting some finite resource: bandwidth, connection table entries, CPU, memory or application threads. It does not steal data; it destroys availability, which is one third of the CIA triad.
+   - A Distributed Denial of Service attack is the same thing launched simultaneously from many compromised machines, called a botnet, which may number in the hundreds of thousands and be spread across the world.
+
+   | Point | DoS | DDoS |
+   |---|---|---|
+   | Source | A single machine and a single IP address | Thousands of machines and IP addresses |
+   | Traffic volume | Limited by the attacker's own connection | Can reach terabits per second |
+   | Detection | Comparatively easy; the pattern comes from one source | Very difficult; each source looks like an ordinary user |
+   | Mitigation | Block the offending IP address | Blocking individual addresses is useless; scrubbing services and rate limiting are required |
+   | Tracing the attacker | Possible | Very hard, since the real attacker only commands the botnet |
+   | Impact | Moderate | Severe; it can remove a large service entirely |
+
+   Types of attack:
+   - Volumetric: UDP flood, ICMP flood and amplification attacks using DNS, NTP or memcached, in which a small forged request produces a very large reply directed at the victim.
+   - Protocol attacks: SYN flood, which fills the connection table with half open connections; ping of death; Smurf attack.
+   - Application layer attacks: HTTP flood, Slowloris, which holds connections open with partial requests, and expensive database queries repeated endlessly. These use very little bandwidth and are the hardest to detect.
+
+   Mitigation:
+   - Rate limiting and connection limits, SYN cookies, and traffic filtering at the edge.
+   - A Web Application Firewall and an Intrusion Prevention System.
+   - A DDoS scrubbing service or CDN such as Cloudflare or Akamai, which absorbs and filters the traffic before it reaches the origin.
+   - Anycast, which spreads the traffic across many sites.
+   - Over-provisioned bandwidth, autoscaling and load balancing.
+   - Blackhole and sinkhole routing, and coordination with the upstream ISP, which is essential because a volumetric attack must be stopped upstream of the victim's own link.
+   - Monitoring with alert thresholds and a rehearsed incident response plan.
 5. **What is a Man-inThe Middle (MitM) attack? How can it be prevented?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1337 (ET: N/A)]*
 
+
+   Answer:
+
+   - A Man in the Middle attack is one in which the attacker secretly places himself between two communicating parties, so that all traffic passes through him. Each party believes it is talking directly to the other, while the attacker can read, record and alter everything.
+   - It breaks confidentiality, integrity and authentication at once.
+
+   How it is carried out:
+   - ARP spoofing on a LAN: the attacker sends forged ARP replies so that the victim maps the gateway's IP to the attacker's MAC address, and the gateway maps the victim's IP to the attacker's MAC. All traffic then flows through the attacker.
+   - DNS spoofing or cache poisoning: the attacker supplies a false IP address for a domain, so the victim connects to the attacker's server believing it to be the real one.
+   - Rogue access point or evil twin: a fake Wi-Fi hotspot with a familiar name, to which victims connect voluntarily.
+   - SSL stripping: the attacker downgrades an HTTPS connection to HTTP so the traffic is readable.
+   - Session hijacking: stealing a session cookie and impersonating the authenticated user.
+   - BGP hijacking and rogue DHCP servers, which redirect traffic at the network level.
+
+   Countermeasures:
+   - Strong encryption in transit: HTTPS with TLS 1.2 or 1.3 everywhere, so that even if the traffic is intercepted it cannot be read or altered. This is the single most effective measure.
+   - Certificate validation and HSTS: the browser must verify the server's certificate against a trusted Certifying Authority, and HTTP Strict Transport Security prevents a downgrade to plain HTTP. Certificate pinning goes further by accepting only one specific certificate.
+   - Mutual authentication: both sides prove their identity, as in mutual TLS and in IPsec with certificates, so an attacker cannot impersonate either end.
+   - Dynamic ARP Inspection and DHCP snooping on switches, which block forged ARP and DHCP messages on the LAN, and port security to limit MAC addresses per port.
+   - DNSSEC, which cryptographically signs DNS records so a forged answer is rejected.
+   - VPN for any use of an untrusted network, so the whole session is encrypted end to end.
+   - Multi-factor authentication, so that a stolen password alone is useless.
+   - Avoiding open public Wi-Fi, and user awareness of certificate warnings, which should never be clicked through.
 6. **Briefly explain phishing attack and denial-of-service (DoS) attack.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1341 (ET: N/A)]*
 
+
+   Answer:
+
+   Phishing attack:
+   - Phishing is a social engineering attack in which a fraudulent message, appearing to come from a trusted source such as a bank or a service provider, tricks the recipient into revealing credentials or financial details, or into opening a malicious link or attachment.
+   - Mechanism: the attacker registers a similar looking domain, copies the genuine login page, sends the message with an urgent pretext such as "your account will be suspended", and captures whatever the victim types into the counterfeit page.
+   - Variants: spear phishing at a named individual, whaling at an executive, vishing by telephone, smishing by SMS, and business email compromise instructing a fraudulent payment.
+   - Damage: stolen credentials and money, malware installed, and a foothold from which a much larger breach follows.
+   - Prevention: user awareness and simulated phishing exercises, SPF, DKIM and DMARC, multi-factor authentication, URL and DNS filtering, verification of any payment instruction by an independent channel, and a no-blame reporting culture.
+
+   Denial of Service attack:
+   - A DoS attack aims to make a service unavailable to its legitimate users by exhausting a finite resource: bandwidth, connection table entries, CPU, memory or application threads. It attacks availability rather than confidentiality.
+   - Mechanism: the attacker sends far more requests than the service can handle, or sends specially crafted requests that consume a disproportionate amount of resource. A SYN flood fills the connection table with half open connections; Slowloris holds connections open with deliberately incomplete requests; an amplification attack sends a small forged request to a DNS or NTP server so that a very large reply is directed at the victim.
+   - A DDoS attack is the same thing launched simultaneously from a botnet of thousands of compromised machines, which makes it far larger and far harder to filter, since each source looks like an ordinary user.
+   - Damage: loss of service and revenue, reputational harm, and sometimes use as a distraction while another attack proceeds.
+   - Prevention: rate limiting, SYN cookies, a Web Application Firewall, a DDoS scrubbing service or CDN, anycast distribution, over-provisioned bandwidth, and coordination with the upstream ISP, since a volumetric attack must be stopped upstream of the victim's own link.
 7. **How to attack DHCP server in MIMA?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
 
+
+   Answer: A DHCP server can be attacked in a Man in the Middle scenario in two complementary ways: by starving the legitimate server, and by introducing a rogue one.
+
+   Step 1, DHCP starvation:
+   - The attacker floods the legitimate DHCP server with DHCPDISCOVER messages, each carrying a different spoofed MAC address, using a tool such as Yersinia or dhcpstarv.
+   - The server reserves and then leases an address for each request. Within a short time the entire scope is exhausted and the server can serve nobody.
+   - This alone is a denial of service, since new clients receive no address.
+
+   Step 2, rogue DHCP server:
+   - With the legitimate server unable to answer, the attacker runs his own DHCP server on the same segment.
+   - Every new client, and every client whose lease expires, now receives its configuration from the attacker.
+   - The attacker sets himself as the default gateway, and usually as the DNS server as well.
+
+   Step 3, the Man in the Middle position:
+   - The victim now sends all traffic destined for other networks to the attacker's machine, believing it to be the router.
+   - The attacker enables IP forwarding, so the traffic still reaches the Internet and the victim notices nothing.
+   - He can now capture credentials sent over unencrypted protocols, perform SSL stripping, inject content, redirect the victim through a poisoned DNS answer, or simply drop the traffic.
+
+   ```
+   Normal:   Client --DHCP--> Legitimate server --> Gateway --> Internet
+
+   Attack:   Step 1: Client flood exhausts the legitimate server's pool
+             Step 2: Rogue server answers instead
+             Step 3: Client --> Attacker (fake gateway) --> Gateway --> Internet
+   ```
+
+   Prevention:
+   - DHCP snooping on the switches: ports are marked trusted or untrusted, and DHCP server messages, that is OFFER and ACK, are dropped on untrusted ports, so a rogue server cannot answer at all. This is the primary defence.
+   - Port security, limiting the number of MAC addresses learned on a port, which stops the starvation flood, since it depends on many spoofed MAC addresses appearing on one port.
+   - Dynamic ARP Inspection, which uses the DHCP snooping binding table to reject forged ARP as well.
+   - 802.1X port based authentication, so an unauthorised device never joins the network.
+   - Rate limiting DHCP messages per port.
+   - Monitoring for unexpected DHCP servers and for a sudden fall in the available address pool.
+   - Encryption everywhere, so that even a successful interception yields nothing readable.
 8. **Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps would you take to mitigate the threats?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 332 (ET: BIBM)]*
 
+
+   Answer:
+
+   Cyber security threats to be aware of when hosting a microfinance application in the office data centre:
+
+   Application layer threats:
+   - SQL injection, cross site scripting, cross site request forgery and insecure direct object references, all of which can expose or alter customer and loan data.
+   - Broken authentication and session management, allowing account takeover.
+   - Insecure APIs, particularly if a mobile application or an agent device connects to the system.
+   - Vulnerabilities in the third party components and libraries the vendor has used, which is a supply chain risk.
+   - Business logic flaws, for example manipulating a repayment or a disbursement amount.
+
+   Data threats:
+   - Theft of personally identifiable information and financial records, which for a microfinance institution means the details of very large numbers of low income customers.
+   - Data at rest unencrypted on disks and backups, so that a stolen drive or tape exposes everything.
+   - Data in transit unencrypted between branches, agents and the data centre.
+   - Insider misuse by staff with legitimate access, which is statistically one of the largest risks in a financial institution.
+
+   Infrastructure threats:
+   - Ransomware encrypting the database and the backups, which is the single most damaging scenario.
+   - Malware and advanced persistent threats establishing a long term foothold.
+   - DDoS attacks making the service unavailable at month end when collections are due.
+   - Unpatched operating systems, databases and network devices.
+   - Weak or default credentials on servers, databases and network equipment.
+   - Rogue DHCP, ARP spoofing and lateral movement within the internal network.
+   - Physical threats: unauthorised access to the server room, theft, fire and power failure.
+
+   Human and process threats:
+   - Phishing and social engineering aimed at staff and at the vendor's support engineers.
+   - Excessive privileges and orphaned accounts of departed staff.
+   - Poor change management, so that an untested change causes an outage or opens a hole.
+   - Vendor and third party access left permanently open.
+
+   Steps to mitigate the threats:
+
+   Before procurement and deployment:
+   - Require a security assessment of the application: source code review or at least an independent penetration test, and evidence of secure development practice from the vendor.
+   - Put security requirements in the contract: patching obligations, vulnerability disclosure, data ownership, an exit plan and audit rights.
+   - Verify compliance with Bangladesh Bank ICT security guidelines and, where cards are involved, PCI DSS.
+
+   Network and infrastructure:
+   - Segment the network: place the application in a DMZ, the database in a separate protected zone, and the office LAN elsewhere, with firewalls between them so that a compromise in one does not reach the others.
+   - Deploy a next generation firewall, a web application firewall in front of the application, and an intrusion detection and prevention system.
+   - Restrict administrative access to a jump host with multi-factor authentication, and never expose the database directly to the Internet.
+   - Harden every server: remove unnecessary services, close unused ports, disable default accounts and apply a security baseline.
+
+   Data protection:
+   - Encrypt data in transit with TLS 1.2 or 1.3 everywhere, including internal traffic between branches and the data centre.
+   - Encrypt data at rest: full disk encryption, database encryption of sensitive columns, and encrypted backups.
+   - Manage keys properly, ideally in a hardware security module, and rotate them.
+   - Mask or tokenise sensitive data in test and development environments.
+
+   Identity and access:
+   - Enforce least privilege and role based access control, and review entitlements quarterly.
+   - Multi-factor authentication for all administrative and remote access.
+   - Strong password policy, and privileged access management with session recording for administrators.
+   - Remove accounts immediately when staff leave, and give vendor accounts time limited access only.
+
+   Operations:
+   - Patch management with a defined cycle for the operating system, the database, the application and the network devices, and emergency patching for critical vulnerabilities.
+   - Backups following the 3-2-1 rule, with at least one copy immutable or offline so that ransomware cannot encrypt it, and regular restore tests.
+   - Centralised logging and a SIEM, with alerting for privileged actions, failed logins and data exports.
+   - 24 hour monitoring, and an incident response plan that has actually been rehearsed.
+   - A disaster recovery site with defined RPO and RTO, and periodic DR drills.
+
+   People and governance:
+   - Security awareness training and simulated phishing for all staff, including field officers.
+   - Segregation of duties, dual authorisation for disbursements and for changes to bank details.
+   - Regular vulnerability scanning and an annual independent penetration test.
+   - An information security policy, a risk register and periodic internal and external audit.
+   - Physical security of the data centre: access control, CCTV, fire suppression, UPS and generator.
+
+   - The governing principle to state: defence in depth. No single control is sufficient, so layered technical, procedural and human controls are used, and the assumption is that a breach will eventually occur, which is why detection, response and tested recovery matter as much as prevention.
 9. **Write down the 10 most Cyber attacks. Difference among Black Hat hacker, Grey hat hacker and white hat hacker.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 526 (ET: MIST)]*
 
+
+   Answer:
+
+   Top 10 cyber attacks:
+   - Phishing and social engineering: fraudulent messages that trick a user into revealing credentials or opening a malicious file. It is the entry point of most breaches.
+   - Malware: viruses, worms, Trojans, spyware and rootkits that damage, steal or take control.
+   - Ransomware: malware that encrypts the victim's data and demands payment for the key. It has become the most damaging category for organisations.
+   - Denial of Service and Distributed Denial of Service: flooding a service so that legitimate users cannot reach it.
+   - Man in the Middle: intercepting traffic between two parties to read or alter it, through ARP spoofing, DNS spoofing or a rogue access point.
+   - SQL injection: inserting malicious SQL through an input field to read, alter or destroy the database.
+   - Cross Site Scripting, XSS: injecting a script into a web page so that it runs in another user's browser and steals their session.
+   - Password attacks: brute force, dictionary, credential stuffing using passwords leaked elsewhere, and keylogging.
+   - Zero day exploit: attacking a vulnerability for which no patch yet exists.
+   - Insider threat: a current or former employee misusing legitimate access, whether maliciously or negligently.
+   - Others worth naming: DNS poisoning, supply chain attacks, advanced persistent threats, IoT botnets, cryptojacking, and the drive-by download.
+
+   | Point | Black hat hacker | Grey hat hacker | White hat hacker |
+   |---|---|---|---|
+   | Intent | Malicious: theft, damage, extortion or espionage | Mixed; usually curiosity or reputation rather than harm | Constructive: to find and fix weaknesses |
+   | Authorisation | None | None; the systems are entered without permission | Full written authorisation from the owner |
+   | Legality | Illegal | Illegal, even when the intention is not harmful | Legal |
+   | Discloses findings | No, or sells them | Usually reports them afterwards, sometimes asking a fee | Yes, through a formal report to the owner |
+   | Motive | Money, ideology, revenge, espionage | Curiosity, recognition, sometimes payment | Employment, contract, bug bounty |
+   | Typical activity | Stealing data, deploying ransomware, building botnets | Scanning systems uninvited and then reporting the flaw | Penetration testing, vulnerability assessment, red teaming |
+   | Also called | Cracker | — | Ethical hacker |
+
+   - The distinction that matters legally is authorisation, not intent: a grey hat who breaks in with good intentions has still committed an offence under the Digital Security Act and equivalent laws elsewhere. The correct route for a well intentioned researcher is a bug bounty programme or responsible disclosure with prior permission.
 10. **What is Cyber Security? Write down the top 10 cyber attack. Discuss about Ransomware and DDoS attack.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 512 (ET: MIST)]*
 
+
+   Answer:
+
+   What cyber security is:
+   - Cyber security is the practice of protecting computers, networks, programs and data from unauthorised access, damage, disruption or theft. Its three core objectives are the CIA triad: confidentiality, integrity and availability.
+   - Its domains: network security, application security, endpoint security, identity and access management, data security and cryptography, cloud security, operational security, incident response and disaster recovery, and user awareness.
+
+   Top 10 cyber attacks:
+   - Phishing and social engineering: fraudulent messages that trick a user into revealing credentials or opening a malicious file. It is the entry point of most breaches.
+   - Malware: viruses, worms, Trojans, spyware and rootkits that damage, steal or take control.
+   - Ransomware: malware that encrypts the victim's data and demands payment for the key. It has become the most damaging category for organisations.
+   - Denial of Service and Distributed Denial of Service: flooding a service so that legitimate users cannot reach it.
+   - Man in the Middle: intercepting traffic between two parties to read or alter it, through ARP spoofing, DNS spoofing or a rogue access point.
+   - SQL injection: inserting malicious SQL through an input field to read, alter or destroy the database.
+   - Cross Site Scripting, XSS: injecting a script into a web page so that it runs in another user's browser and steals their session.
+   - Password attacks: brute force, dictionary, credential stuffing using passwords leaked elsewhere, and keylogging.
+   - Zero day exploit: attacking a vulnerability for which no patch yet exists.
+   - Insider threat: a current or former employee misusing legitimate access, whether maliciously or negligently.
+   - Others worth naming: DNS poisoning, supply chain attacks, advanced persistent threats, IoT botnets, cryptojacking, and the drive-by download.
+
+   Ransomware:
+   - Ransomware is malware that encrypts the victim's files and demands a payment, usually in cryptocurrency, in exchange for the decryption key.
+   - How it arrives: a phishing attachment or link, an exploited unpatched vulnerability such as in RDP or a VPN appliance, a compromised supply chain update, or a drive-by download.
+   - How it works: it gains a foothold, escalates privileges, spreads laterally across the network, deliberately deletes shadow copies and backups, and only then encrypts the data on every reachable system, leaving a ransom note.
+   - Double extortion, which is now standard: the data is stolen before it is encrypted, so the attacker threatens to publish it as well, which defeats the defence of simply restoring from backup.
+   - Examples: WannaCry in 2017, which spread through the EternalBlue SMB vulnerability; NotPetya; Ryuk; LockBit; and the Ransomware as a Service model, in which affiliates rent the malware.
+   - Defence: offline or immutable backups tested by restoration, prompt patching, disabling or protecting RDP, email filtering, endpoint detection and response, network segmentation to limit lateral movement, least privilege, multi-factor authentication and user training. Paying the ransom is discouraged, since it funds the crime and does not guarantee recovery.
+
+   DDoS attack:
+
+   - A Denial of Service attack aims to make a service unavailable to its legitimate users, by exhausting some finite resource: bandwidth, connection table entries, CPU, memory or application threads. It does not steal data; it destroys availability, which is one third of the CIA triad.
+   - A Distributed Denial of Service attack is the same thing launched simultaneously from many compromised machines, called a botnet, which may number in the hundreds of thousands and be spread across the world.
+
+   | Point | DoS | DDoS |
+   |---|---|---|
+   | Source | A single machine and a single IP address | Thousands of machines and IP addresses |
+   | Traffic volume | Limited by the attacker's own connection | Can reach terabits per second |
+   | Detection | Comparatively easy; the pattern comes from one source | Very difficult; each source looks like an ordinary user |
+   | Mitigation | Block the offending IP address | Blocking individual addresses is useless; scrubbing services and rate limiting are required |
+   | Tracing the attacker | Possible | Very hard, since the real attacker only commands the botnet |
+   | Impact | Moderate | Severe; it can remove a large service entirely |
+
+   Types of attack:
+   - Volumetric: UDP flood, ICMP flood and amplification attacks using DNS, NTP or memcached, in which a small forged request produces a very large reply directed at the victim.
+   - Protocol attacks: SYN flood, which fills the connection table with half open connections; ping of death; Smurf attack.
+   - Application layer attacks: HTTP flood, Slowloris, which holds connections open with partial requests, and expensive database queries repeated endlessly. These use very little bandwidth and are the hardest to detect.
+
+   Mitigation:
+   - Rate limiting and connection limits, SYN cookies, and traffic filtering at the edge.
+   - A Web Application Firewall and an Intrusion Prevention System.
+   - A DDoS scrubbing service or CDN such as Cloudflare or Akamai, which absorbs and filters the traffic before it reaches the origin.
+   - Anycast, which spreads the traffic across many sites.
+   - Over-provisioned bandwidth, autoscaling and load balancing.
+   - Blackhole and sinkhole routing, and coordination with the upstream ISP, which is essential because a volumetric attack must be stopped upstream of the victim's own link.
+   - Monitoring with alert thresholds and a rehearsed incident response plan.
 11. **What is meant by Encryption and Decryption? What is Cyber security? Write down the top 10 cyber attack.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 557 (ET: BIBM)]*
 
+
+   Answer:
+
+   Encryption and decryption:
+   - Encryption is the process of converting readable plaintext into unreadable ciphertext using an algorithm and a key, so that anyone intercepting it cannot understand it. Decryption is the reverse, converting the ciphertext back into the plaintext with the appropriate key.
+   - Formulas: C = E(P, K) and P = D(C, K).
+   - Types: symmetric, using one shared key, which is fast and used for bulk data, with algorithms such as AES and 3DES; and asymmetric, using a public key to encrypt and a private key to decrypt, which is slower but solves key distribution and enables digital signatures, with algorithms such as RSA and ECC.
+   - Purpose: confidentiality above all, and with authenticated modes also integrity. It is what makes online banking, e-commerce, VPNs and secure messaging possible.
+
+   What cyber security is:
+   - Cyber security is the protection of computers, networks, programs and data from unauthorised access, damage or disruption. Its objectives are the CIA triad: confidentiality, integrity and availability, to which authentication and non-repudiation are often added.
+   - It covers network, application, endpoint, data, cloud and physical security, together with identity management, monitoring, incident response and user awareness.
+
+   Top 10 cyber attacks:
+   - Phishing and social engineering: fraudulent messages that trick a user into revealing credentials or opening a malicious file. It is the entry point of most breaches.
+   - Malware: viruses, worms, Trojans, spyware and rootkits that damage, steal or take control.
+   - Ransomware: malware that encrypts the victim's data and demands payment for the key. It has become the most damaging category for organisations.
+   - Denial of Service and Distributed Denial of Service: flooding a service so that legitimate users cannot reach it.
+   - Man in the Middle: intercepting traffic between two parties to read or alter it, through ARP spoofing, DNS spoofing or a rogue access point.
+   - SQL injection: inserting malicious SQL through an input field to read, alter or destroy the database.
+   - Cross Site Scripting, XSS: injecting a script into a web page so that it runs in another user's browser and steals their session.
+   - Password attacks: brute force, dictionary, credential stuffing using passwords leaked elsewhere, and keylogging.
+   - Zero day exploit: attacking a vulnerability for which no patch yet exists.
+   - Insider threat: a current or former employee misusing legitimate access, whether maliciously or negligently.
+   - Others worth naming: DNS poisoning, supply chain attacks, advanced persistent threats, IoT botnets, cryptojacking, and the drive-by download.
 12. **Difference between active and passive atack.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Active attack | Passive attack |
+   |---|---|---|
+   | Action | The attacker alters the data or the system | The attacker only observes; nothing is changed |
+   | Goal | To affect integrity and availability | To violate confidentiality |
+   | Detection | Comparatively easy, since something visibly changes | Very difficult, since there is no trace |
+   | Prevention | Hard to prevent absolutely; the emphasis is on detection and recovery | Preventable, by encryption |
+   | Harm to the victim | Immediate and visible | Delayed, and often discovered only when the stolen data is used |
+   | System resources affected | Yes | No |
+   | Examples | Masquerade, replay, message modification, denial of service, session hijacking, SQL injection, malware | Eavesdropping and sniffing, traffic analysis, packet capture, shoulder surfing |
+   | Countermeasures | Digital signatures, message authentication codes, intrusion detection, firewalls, timestamps and nonces against replay | Encryption in transit and at rest, VPN, traffic padding, physical security of the medium |
+
+   - The security principle behind the distinction: a passive attack is prevented, because once the data is encrypted the eavesdropper gains nothing; an active attack is detected and recovered from, because an attacker with access to the medium cannot be stopped from injecting traffic, only from doing so undetectably.
 13. **Describe a man-in the middle attack on the Diffie-Hellman key exchange protocol in which the adversary generates two public key pairs for the attack.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
 
+
+   Answer: The Diffie-Hellman key exchange agrees a shared secret over a public channel, but in its basic form it authenticates neither party, which is exactly the weakness the attack exploits.
+
+   Normal Diffie-Hellman:
+   - Alice and Bob agree publicly on a large prime p and a generator g.
+   - Alice chooses a secret a and sends A = gᵃ mod p.
+   - Bob chooses a secret b and sends B = g^b mod p.
+   - Alice computes the shared key K = B^a mod p, and Bob computes K = A^b mod p. Both obtain g^(ab) mod p.
+   - An eavesdropper who sees p, g, A and B cannot compute g^(ab) without solving the discrete logarithm problem.
+
+   The man in the middle attack, in which the adversary generates two key pairs:
+   - Step 1: the attacker, Mallory, positions herself between Alice and Bob so that all messages pass through her, for example by ARP spoofing or by controlling a router.
+   - Step 2: Mallory generates two secrets of her own, m1 for the conversation with Alice and m2 for the conversation with Bob, and computes M1 = g^m1 mod p and M2 = g^m2 mod p.
+   - Step 3: Alice sends A = gᵃ mod p intended for Bob. Mallory intercepts it and does not forward it. She sends M1 to Alice instead, pretending it came from Bob.
+   - Step 4: Bob sends B = g^b mod p intended for Alice. Mallory intercepts it and sends M2 to Bob, pretending it came from Alice.
+   - Step 5: Alice computes K1 = M1^a mod p = g^(a·m1) mod p, believing this is a secret shared with Bob. Mallory computes the same value as A^m1 mod p.
+   - Step 6: Bob computes K2 = M2^b mod p = g^(b·m2) mod p, believing this is a secret shared with Alice. Mallory computes the same value as B^m2 mod p.
+   - Step 7: two separate secure channels now exist, Alice to Mallory with key K1 and Mallory to Bob with key K2. Neither Alice nor Bob has any way of detecting this, because the mathematics worked perfectly in each case.
+   - Step 8: when Alice sends a message, Mallory decrypts it with K1, reads or alters it, re-encrypts it with K2 and forwards it to Bob, and vice versa. She has complete visibility and complete control.
+
+   ```
+   Alice  --- A = g^a --->  [ Mallory ]  --- M2 = g^m2 --->  Bob
+   Alice  <-- M1 = g^m1 ---  [ Mallory ]  <--- B = g^b -----  Bob
+
+   Alice's key K1 = g^(a·m1)        Bob's key K2 = g^(b·m2)
+   Mallory knows both K1 and K2, so she reads and alters everything.
+   ```
+
+   Why it succeeds:
+   - Diffie-Hellman guarantees that a secret is shared with whoever is at the other end of the exchange, but it gives no assurance about who that is. Without authentication, the party at the other end may be the attacker.
+
+   Prevention:
+   - Authenticated Diffie-Hellman: each party signs its public value with its long term private key, and the other verifies the signature against a certificate. This is exactly what TLS does with ECDHE plus an RSA or ECDSA signature.
+   - Digital certificates issued by a trusted Certifying Authority, and strict certificate validation by the client.
+   - Station to Station protocol, which adds mutual authentication to Diffie-Hellman.
+   - Pre-shared keys or a password authenticated key exchange where a PKI is not available.
+   - Out of band verification of a key fingerprint, which is what secure messaging applications offer through a safety number.
+   - The general lesson: key exchange without authentication is never sufficient, and every real protocol built on Diffie-Hellman adds an authentication step for precisely this reason.
 14. **What is MAC flooding? How to prevent MAC flooding?** *[Teletalk Assistant Manager (IT) 2023 compact it 466 (ET: N/A)], [Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
 
+
+   Answer:
+
+   What MAC flooding is:
+   - MAC flooding is an attack on a layer 2 switch in which the attacker sends an enormous number of frames with different forged source MAC addresses, in order to fill the switch's MAC address table, also called the CAM table.
+   - The table has a finite size, typically a few thousand to a few tens of thousands of entries. Once it is full the switch cannot learn any new address.
+   - A switch that cannot find a destination address in its table must flood the frame out of every port. So a switch with a full table behaves like a hub, sending every frame to every port.
+
+   How the attack proceeds:
+   - Step 1: the attacker connects to any port on the switch.
+   - Step 2: using a tool such as macof, part of the dsniff suite, he generates thousands of frames per second, each with a random source MAC address.
+   - Step 3: the switch learns each forged address against the attacker's port until the table is exhausted.
+   - Step 4: legitimate entries age out and cannot be relearned, so the switch begins flooding.
+   - Step 5: the attacker now receives a copy of traffic intended for other hosts and captures it with a packet sniffer.
+
+   Impact on the switch and the network:
+   - The switch degrades into a hub, so the confidentiality of the whole segment is lost and the attacker can capture credentials, session cookies and any unencrypted data.
+   - Performance collapses, because every frame now goes to every port, and the available bandwidth on each port is consumed by traffic that does not belong there.
+   - CPU and memory on the switch are exhausted, and it may become unmanageable or crash, causing a denial of service.
+   - It is often the first step of a larger attack, providing the visibility needed for session hijacking or a man in the middle position.
+
+   How to prevent MAC flooding:
+   - Port security on the switch, which is the primary defence: limit the number of MAC addresses that may be learned on each access port, typically to one or two, and define the violation action as shutdown, restrict or protect. Sticky learning binds the first address seen to the port permanently.
+   - 802.1X port based network access control, so that a device must authenticate before it can send any traffic at all.
+   - Disable unused ports and place them in an unused VLAN.
+   - VLAN segmentation, which limits the blast radius of a successful attack to one VLAN.
+   - Dynamic ARP Inspection and DHCP snooping, which stop the follow-on attacks that MAC flooding enables.
+   - Storm control and rate limiting on access ports.
+   - Monitoring: alert on a rapid rise in MAC table entries or on repeated port security violations.
+   - Encryption everywhere, so that even successful capture yields nothing readable. This is the defence of last resort and the most important one.
+   - Physical security of network ports, so that an unauthorised device cannot be connected.
 15. **What is Denial of Service (DoS) is and NAT?** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
+
+   Answer:
+
+   Denial of Service:
+   - A DoS attack aims to make a service unavailable to its legitimate users by exhausting a finite resource: bandwidth, connection table entries, CPU, memory or application threads. It attacks availability rather than confidentiality or integrity.
+   - Types: volumetric attacks such as UDP and ICMP floods and amplification; protocol attacks such as the SYN flood, which fills the connection table with half open connections; and application layer attacks such as HTTP flood and Slowloris, which use very little bandwidth and are hardest to detect.
+   - A DDoS attack is the same thing launched simultaneously from a botnet of many compromised machines, which makes the traffic far larger and the sources indistinguishable from ordinary users.
+   - Mitigation: rate limiting, SYN cookies, a Web Application Firewall, a DDoS scrubbing service or CDN, anycast, over-provisioned bandwidth and coordination with the upstream ISP.
+
+   NAT:
+   - NAT, Network Address Translation, is the process by which a router rewrites the private IP address in a packet header into a public IP address, and performs the reverse on the return path.
+   - It allows many hosts on a private network, using 10.0.0.0/8, 172.16.0.0/12 or 192.168.0.0/16, to share one or a few public addresses, which is what conserved the limited IPv4 space.
+   - Types: static NAT, a fixed one to one mapping; dynamic NAT, allocated from a pool; and PAT or NAT overload, where many hosts share one public address and are distinguished by port number, which is what almost every home and office router does.
+   - Security side effect: internal addresses are not visible from outside and unsolicited inbound connections are dropped, which gives a degree of protection, although NAT is not a substitute for a firewall.
+   - Drawbacks: it breaks true end to end connectivity, complicates protocols that carry addresses in their payload such as FTP and SIP, requires port forwarding for inbound services, and makes logging and attribution harder. It is not needed in IPv6.
 16. **What do you understand by DOS attack and Man-in-the-middle attack? Please explain how it can be occurred?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
+
+   Answer:
+
+   DoS attack:
+   - A Denial of Service attack aims to make a service unavailable to its legitimate users by exhausting a finite resource: bandwidth, connection table entries, CPU, memory or application threads.
+
+   How a DoS attack occurs:
+   - SYN flood: the attacker sends a stream of TCP SYN packets with spoofed source addresses. The server replies SYN-ACK and reserves an entry in its connection table awaiting the final ACK, which never comes. The table fills with half open connections and legitimate users are refused.
+   - Volumetric flood: UDP or ICMP packets are sent in sufficient volume to saturate the victim's link, so nothing else can get through.
+   - Amplification: the attacker sends a small request to a DNS, NTP or memcached server with the victim's address forged as the source, and the very large reply is delivered to the victim. A small amount of attacker bandwidth produces a very large attack.
+   - Application layer: Slowloris holds many connections open by sending partial HTTP requests very slowly, exhausting the server's connection pool with almost no bandwidth; an HTTP flood repeatedly requests an expensive page or query.
+   - A DDoS attack is the same thing launched from a botnet of thousands of compromised machines, which multiplies the volume and hides the true source.
+
+   Man in the middle attack:
+
+   - A Man in the Middle attack is one in which the attacker secretly places himself between two communicating parties, so that all traffic passes through him. Each party believes it is talking directly to the other, while the attacker can read, record and alter everything.
+   - It breaks confidentiality, integrity and authentication at once.
+
+   How it is carried out:
+   - ARP spoofing on a LAN: the attacker sends forged ARP replies so that the victim maps the gateway's IP to the attacker's MAC address, and the gateway maps the victim's IP to the attacker's MAC. All traffic then flows through the attacker.
+   - DNS spoofing or cache poisoning: the attacker supplies a false IP address for a domain, so the victim connects to the attacker's server believing it to be the real one.
+   - Rogue access point or evil twin: a fake Wi-Fi hotspot with a familiar name, to which victims connect voluntarily.
+   - SSL stripping: the attacker downgrades an HTTPS connection to HTTP so the traffic is readable.
+   - Session hijacking: stealing a session cookie and impersonating the authenticated user.
+   - BGP hijacking and rogue DHCP servers, which redirect traffic at the network level.
+
+   Countermeasures:
+   - Strong encryption in transit: HTTPS with TLS 1.2 or 1.3 everywhere, so that even if the traffic is intercepted it cannot be read or altered. This is the single most effective measure.
+   - Certificate validation and HSTS: the browser must verify the server's certificate against a trusted Certifying Authority, and HTTP Strict Transport Security prevents a downgrade to plain HTTP. Certificate pinning goes further by accepting only one specific certificate.
+   - Mutual authentication: both sides prove their identity, as in mutual TLS and in IPsec with certificates, so an attacker cannot impersonate either end.
+   - Dynamic ARP Inspection and DHCP snooping on switches, which block forged ARP and DHCP messages on the LAN, and port security to limit MAC addresses per port.
+   - DNSSEC, which cryptographically signs DNS records so a forged answer is rejected.
+   - VPN for any use of an untrusted network, so the whole session is encrypted end to end.
+   - Multi-factor authentication, so that a stolen password alone is useless.
+   - Avoiding open public Wi-Fi, and user awareness of certificate warnings, which should never be clicked through.
 17. **What do you mean by a DNS poisoning attack, and how does it work?** *[GTCL Assistant Engineer (CSE) 2022 compact it 685 (ET: BUET)]*
 
+
+   Answer: DNS poisoning, also called DNS cache poisoning or DNS spoofing, is an attack in which false information is inserted into a DNS resolver's cache, so that the resolver returns an incorrect IP address and directs users to a server controlled by the attacker.
+
+   Why it is possible:
+   - Classic DNS has no authentication of its answers. A resolver accepts a reply that matches the query name, the query type, the source and destination addresses and ports, and the 16 bit transaction ID. All of these can be guessed or forced.
+   - Because the answer is cached for its TTL, a single successful poisoning affects every user of that resolver for hours.
+
+   How it works:
+   - Step 1: the attacker causes the target resolver to issue a query for a domain he controls the timing of, for example by requesting a name that is not in the cache.
+   - Step 2: while the resolver waits for the authoritative server's reply, the attacker floods it with forged replies, each guessing a transaction ID and appearing to come from the legitimate name server.
+   - Step 3: if one forged reply arrives before the genuine one and matches the transaction ID and port, the resolver accepts it and caches it.
+   - Step 4: every user of that resolver who asks for the domain is now given the attacker's IP address.
+   - Step 5: the users connect to a counterfeit site, where credentials are captured, or to a server that delivers malware.
+   - The Kaminsky attack of 2008 refined this by poisoning the NS record of a whole domain rather than a single host, which hijacks everything under it at once.
+
+   Other variants:
+   - Compromising the authoritative name server directly, or the domain registrar account, and altering the records at source.
+   - Modifying the victim's local `hosts` file, or the DNS settings supplied by a rogue DHCP server or a compromised home router.
+   - Man in the middle interception of DNS queries on an untrusted network.
+
+   ```
+   Normal:   User -> Resolver -> Authoritative server -> real IP -> real site
+
+   Poisoned: User -> Resolver (cache holds the attacker's IP) -> attacker's site
+             The attacker's forged reply arrived first and was cached.
+   ```
+
+   Impact: credential theft through pharming, malware distribution, interception of email by poisoning MX records, censorship and traffic redirection, and loss of trust in the whole name resolution system. It is particularly dangerous because the user makes no mistake at all; the correct address was typed.
+
+   Prevention:
+   - DNSSEC, which cryptographically signs DNS records so that a forged answer fails validation. This is the fundamental fix.
+   - Source port randomisation and transaction ID randomisation, which raise the difficulty of guessing enormously; this was the emergency mitigation after the Kaminsky disclosure.
+   - DNS over TLS or DNS over HTTPS, which encrypt and authenticate the channel to the resolver.
+   - Restricting recursion to internal clients only, so the resolver cannot be used or poisoned by outsiders.
+   - Keeping DNS software patched, and separating the authoritative and recursive roles onto different servers.
+   - Short TTL values for critical records, monitoring for unexpected answers, and registrar lock on the domain.
+   - On the client side, HTTPS with strict certificate validation, since a poisoned address still cannot present a valid certificate for the real domain.
 18. **Write down the difference between Active and Passive attack.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Active attack | Passive attack |
+   |---|---|---|
+   | Action | The attacker alters the data or the system | The attacker only observes; nothing is changed |
+   | Goal | To affect integrity and availability | To violate confidentiality |
+   | Detection | Comparatively easy, since something visibly changes | Very difficult, since there is no trace |
+   | Prevention | Hard to prevent absolutely; the emphasis is on detection and recovery | Preventable, by encryption |
+   | Harm to the victim | Immediate and visible | Delayed, and often discovered only when the stolen data is used |
+   | System resources affected | Yes | No |
+   | Examples | Masquerade, replay, message modification, denial of service, session hijacking, SQL injection, malware | Eavesdropping and sniffing, traffic analysis, packet capture, shoulder surfing |
+   | Countermeasures | Digital signatures, message authentication codes, intrusion detection, firewalls, timestamps and nonces against replay | Encryption in transit and at rest, VPN, traffic padding, physical security of the medium |
+
+   - The security principle behind the distinction: a passive attack is prevented, because once the data is encrypted the eavesdropper gains nothing; an active attack is detected and recovered from, because an attacker with access to the medium cannot be stopped from injecting traffic, only from doing so undetectably.
 19. **What is DHCP starvation and how DHCP starvation work with diagram? Write down the related attack introduced by DHCP starvation?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
 
+
+   Answer:
+
+   What DHCP starvation is:
+   - DHCP starvation is a denial of service attack in which the attacker exhausts the entire pool of IP addresses held by a DHCP server, so that no legitimate client can obtain an address.
+   - It exploits the fact that a DHCP server has no way of verifying the identity behind a request; it simply reserves an address for every DHCPDISCOVER it receives.
+
+   How it works:
+   - Step 1: the attacker connects to the network and runs a tool such as Yersinia, dhcpstarv or Gobbler.
+   - Step 2: the tool sends a rapid stream of DHCPDISCOVER messages, each with a different randomly generated source MAC address, so that each appears to come from a new client.
+   - Step 3: the server reserves an address and sends a DHCPOFFER for each request.
+   - Step 4: the attacker replies with a DHCPREQUEST for each offer, so the server issues a DHCPACK and marks the address as leased.
+   - Step 5: within seconds or minutes the entire scope is leased to addresses that do not exist, and the pool is exhausted.
+   - Step 6: any genuine client that now boots or renews receives no reply and cannot join the network. On Windows it falls back to an APIPA address in 169.254.x.x and has no connectivity.
+
+   ```mermaid
+   sequenceDiagram
+       participant A as Attacker
+       participant S as DHCP Server
+       participant V as Legitimate Client
+       A->>S: DHCPDISCOVER with spoofed MAC 1
+       S->>A: DHCPOFFER, address reserved
+       A->>S: DHCPREQUEST
+       S->>A: DHCPACK, address leased
+       Note over A,S: repeated thousands of times with different MAC addresses
+       Note over S: address pool exhausted
+       V->>S: DHCPDISCOVER
+       Note over V: no reply, no address, no connectivity
+   ```
+
+   Related attack introduced by DHCP starvation:
+   - The rogue DHCP server attack, which is the real objective. Once the legitimate server can no longer answer, the attacker starts his own DHCP server on the same segment. Every client that now requests configuration receives it from the attacker.
+   - The attacker sets himself as the default gateway and as the DNS server, so all traffic leaving the subnet passes through his machine. He enables IP forwarding so that everything still works and nothing appears wrong.
+   - This gives a complete Man in the Middle position, from which he can capture credentials sent in clear, perform SSL stripping, redirect users through poisoned DNS answers, inject content, or drop traffic selectively.
+   - So the chain is: DHCP starvation, then rogue DHCP server, then man in the middle, then credential theft or session hijacking.
+
+   Prevention:
+   - Port security on access ports, limiting the number of MAC addresses learned per port, which is the direct defence against the starvation flood, since it depends on many MAC addresses appearing on one port.
+   - DHCP snooping, which marks ports as trusted or untrusted and drops DHCPOFFER and DHCPACK messages arriving on untrusted ports, so a rogue server cannot answer. It also rate limits DHCP messages per port and builds the binding table.
+   - Dynamic ARP Inspection, which uses that binding table to reject forged ARP as well.
+   - 802.1X port based authentication, so an unauthorised device never reaches the network.
+   - Monitoring the size of the free address pool and alerting on a sudden fall, and reducing the lease time so that stolen addresses return quickly.
 20. **What is MAC flooding attack? What is the impact of this switch?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
 
+
+   Answer:
+
+   What a MAC flooding attack is:
+   - MAC flooding is an attack in which the attacker sends a very large number of frames with different forged source MAC addresses in order to fill the switch's MAC address table, also known as the CAM table.
+   - The table has a finite size. Once it is full, the switch can no longer learn any new address, and legitimate entries that age out cannot be relearned.
+   - The tool normally used is macof from the dsniff suite, which can generate hundreds of thousands of forged addresses per minute.
+
+   Impact on the switch:
+   - The switch degrades into a hub. Because it cannot find the destination address in its table, it must flood every frame out of every port in the VLAN.
+   - Loss of confidentiality: the attacker, and in fact every device on the segment, now receives a copy of traffic intended for others, which can be captured with a packet sniffer. Any credential or data sent over an unencrypted protocol is exposed.
+   - Loss of performance: the available bandwidth on every port is consumed by traffic that does not belong there, and collisions and congestion rise sharply.
+   - Exhaustion of switch resources: CPU and memory are consumed by processing the flood, so the switch may become slow, unmanageable through its console, or crash entirely, which is a denial of service.
+   - Loss of the security benefit of switching: the entire reason for replacing hubs with switches, namely that a frame goes only where it is needed, is defeated.
+   - It is usually a stepping stone: the visibility it provides is used for session hijacking, credential harvesting or establishing a man in the middle position.
+
+   Prevention:
+   - Port security, limiting the number of MAC addresses per access port with a violation action of shutdown or restrict; this is the primary defence.
+   - 802.1X authentication before any traffic is permitted.
+   - VLAN segmentation to limit how far the flooding reaches.
+   - Disabling unused ports, storm control, and monitoring for a rapid rise in MAC table entries.
+   - Encryption of all sensitive traffic, so that successful capture yields nothing usable.
 21. **(b) Distinguish between phishing and pharming. Give examples to explain.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 801 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Phishing | Pharming |
+   |---|---|---|
+   | Method | The victim is lured by a deceptive message into clicking a link | The victim is redirected automatically, without clicking anything |
+   | Attack vector | Email, SMS, telephone or social media | DNS cache poisoning, a compromised DNS server, a modified `hosts` file, or a compromised router |
+   | User action required | Yes; the victim must open the message and follow the link | No; the victim types the correct address and is still sent to the fake site |
+   | Scale | One message reaches one recipient at a time, though sent in bulk | One poisoned DNS entry redirects every user of that resolver at once |
+   | Detection by the user | Possible: a suspicious sender, poor language, a wrong URL | Very difficult: the address bar shows the correct domain |
+   | Layer attacked | The human being | The name resolution infrastructure |
+   | Difficulty for the attacker | Low | Higher; it requires compromising DNS or the router |
+   | Primary defence | Awareness, email authentication with SPF, DKIM and DMARC, and multi-factor authentication | DNSSEC, DNS over HTTPS, patched and hardened DNS servers, and secured routers |
+   | Common defence to both | HTTPS with strict certificate validation, since a counterfeit site cannot present a valid certificate for the real domain | The same |
+
+   Examples:
+   - Phishing: a customer receives an email that appears to come from her bank, saying her account will be suspended unless she verifies it, with a link to `www.bank-verify-online.com`. She clicks, sees a copy of the real login page, and types her credentials, which the attacker captures. Here she was persuaded to go to the wrong place.
+   - Pharming: the same customer types `www.bank.com` correctly into her browser. Her ISP's DNS resolver has been poisoned, so the name resolves to the attacker's server. The counterfeit page appears at what looks like the correct address, and she has made no mistake at all. Here she was taken to the wrong place without her participation.
+   - A common local variant: malware or a compromised home router changes the DNS setting so that a small number of banking domains resolve to an attacker's server, while everything else works normally.
+
+   - The essential distinction: phishing deceives the person, and pharming deceives the machine. Pharming is more dangerous because the usual advice, to check the address before typing credentials, does not help, and only certificate validation reveals the deception.
 22. **What is DDoS and SQL Injection attack?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
 
+
+   Answer:
+
+   DDoS attack:
+
+   - A Denial of Service attack aims to make a service unavailable to its legitimate users, by exhausting some finite resource: bandwidth, connection table entries, CPU, memory or application threads. It does not steal data; it destroys availability, which is one third of the CIA triad.
+   - A Distributed Denial of Service attack is the same thing launched simultaneously from many compromised machines, called a botnet, which may number in the hundreds of thousands and be spread across the world.
+
+   | Point | DoS | DDoS |
+   |---|---|---|
+   | Source | A single machine and a single IP address | Thousands of machines and IP addresses |
+   | Traffic volume | Limited by the attacker's own connection | Can reach terabits per second |
+   | Detection | Comparatively easy; the pattern comes from one source | Very difficult; each source looks like an ordinary user |
+   | Mitigation | Block the offending IP address | Blocking individual addresses is useless; scrubbing services and rate limiting are required |
+   | Tracing the attacker | Possible | Very hard, since the real attacker only commands the botnet |
+   | Impact | Moderate | Severe; it can remove a large service entirely |
+
+   Types of attack:
+   - Volumetric: UDP flood, ICMP flood and amplification attacks using DNS, NTP or memcached, in which a small forged request produces a very large reply directed at the victim.
+   - Protocol attacks: SYN flood, which fills the connection table with half open connections; ping of death; Smurf attack.
+   - Application layer attacks: HTTP flood, Slowloris, which holds connections open with partial requests, and expensive database queries repeated endlessly. These use very little bandwidth and are the hardest to detect.
+
+   Mitigation:
+   - Rate limiting and connection limits, SYN cookies, and traffic filtering at the edge.
+   - A Web Application Firewall and an Intrusion Prevention System.
+   - A DDoS scrubbing service or CDN such as Cloudflare or Akamai, which absorbs and filters the traffic before it reaches the origin.
+   - Anycast, which spreads the traffic across many sites.
+   - Over-provisioned bandwidth, autoscaling and load balancing.
+   - Blackhole and sinkhole routing, and coordination with the upstream ISP, which is essential because a volumetric attack must be stopped upstream of the victim's own link.
+   - Monitoring with alert thresholds and a rehearsed incident response plan.
+
+   SQL injection attack:
+   - SQL injection is an attack in which the attacker inserts malicious SQL code through an application input field, so that the code is executed by the database as though it were part of the intended query.
+   - Root cause: the application builds a query by concatenating user input into a string, instead of separating code from data. The database cannot tell which part came from the developer and which from the user.
+   - Classic example: a login query written as `SELECT * FROM users WHERE username = '<input>' AND password = '<input>'`. If the user types `' OR '1'='1` as the username, the query becomes `... WHERE username = '' OR '1'='1' AND ...`, whose condition is always true, so the attacker logs in without any password.
+   - Types: in-band, where the result is returned directly; error based, which uses database error messages to learn the schema; union based, which appends a UNION SELECT to extract data from other tables; blind injection, which infers data one bit at a time from whether the page behaves differently; and time based blind injection, which uses a deliberate delay as the signal.
+   - Impact: authentication bypass, reading the entire database including passwords and personal data, altering or deleting records, and in some configurations executing operating system commands and taking over the server. It has been the cause of many of the largest data breaches.
+   - Prevention:
+   - Parameterised queries, that is prepared statements with bound parameters, which is the definitive fix, because the input can never be interpreted as code.
+   - Stored procedures, provided they too avoid dynamic SQL built from input.
+   - Input validation and whitelisting, and escaping as a secondary measure only.
+   - Least privilege for the database account, so the application cannot drop tables or read system catalogues.
+   - Generic error messages, so that database errors are not returned to the user.
+   - A Web Application Firewall as a compensating control, and regular code review and penetration testing.
 23. **Phishing attack এর মাধ্যমে কীভাবে attack করা হয়। উহার কারণে কি ক্ষতি হতে পারে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
 
+
+   Answer:
+
+   How a phishing attack is carried out:
+   - Step 1, reconnaissance: the attacker gathers information about the target organisation or individual from the website, social media and previous data leaks, so that the message will be plausible.
+   - Step 2, preparation: he registers a domain closely resembling the genuine one, for example replacing a letter or adding a word, obtains a TLS certificate for it so that the padlock appears, and copies the real login page exactly.
+   - Step 3, delivery: he sends the message by email, SMS, WhatsApp, telephone or social media, spoofing the sender address to look like the bank, the mobile financial service, the courier or the IT department.
+   - Step 4, the pretext: the message creates urgency or fear — "your account will be suspended", "an unauthorised transaction has been detected", "your parcel could not be delivered", "your salary statement is attached" — so that the victim acts before thinking.
+   - Step 5, the hook: the victim clicks the link, sees the counterfeit page and enters the username, password, PIN, OTP or card details, which are captured immediately. Alternatively an attached document runs a macro that installs malware.
+   - Step 6, exploitation: the attacker uses the credentials at once, often within minutes, before the OTP expires. In a real time proxy attack the fake page relays the credentials to the genuine site live and captures the OTP as it is entered.
+   - Step 7, expansion: the compromised account is used to send further phishing to colleagues and contacts, which is far more convincing because it comes from a genuine address.
+
+   Damage that can result:
+   - Direct financial loss: money transferred out of the bank account or mobile wallet, fraudulent card transactions, and fraudulent loan applications in the victim's name.
+   - Credential theft leading to account takeover of email, banking, social media and corporate systems.
+   - Malware and ransomware installed from the attachment, encrypting the organisation's data and halting operations entirely.
+   - A foothold in the corporate network from which the attacker moves laterally, escalates privileges and reaches the core systems. Most large breaches begin with a single phishing email.
+   - Data breach: theft of customer records and personal data, with regulatory penalties and mandatory disclosure.
+   - Business Email Compromise: a forged instruction from a supposed executive or supplier causing a large payment to be made to the attacker's account.
+   - Identity theft, with the victim's documents used to open accounts and take loans.
+   - Reputational damage and loss of customer trust, which for a bank is the most lasting harm.
+   - Operational disruption and the cost of investigation, remediation and legal action.
+   - Personal consequences for the victim: financial hardship, and blame or disciplinary action at work.
+
+   Prevention:
+   - Awareness training and simulated phishing, multi-factor authentication and preferably phishing resistant factors such as FIDO2 keys, SPF, DKIM and DMARC, URL and DNS filtering, verification of any payment instruction through an independent channel, prompt patching, least privilege, and a reporting culture in which a user who clicks reports it immediately.
 24. **Explain ARP Spoofing attack with diagram. Why ARP spoofing attacker used to launch Man-in-the-Middle attack.** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
 
+
+   Answer: ARP spoofing is an attack in which the attacker sends forged ARP replies on a local network so that his own MAC address becomes associated with another host's IP address, typically that of the default gateway.
+
+   - ARP has no authentication at all. A host accepts any ARP reply it receives and updates its cache accordingly, even if it never sent a request. This is the flaw the attack exploits.
+
+   How it works:
+   - Step 1: the attacker connects to the same LAN segment as the victim.
+   - Step 2: the attacker sends a forged ARP reply to the victim saying "the gateway's IP address is at my MAC address".
+   - Step 3: the attacker sends another forged ARP reply to the gateway saying "the victim's IP address is at my MAC address".
+   - Step 4: both update their ARP caches. From that moment every packet between the victim and the gateway passes through the attacker's machine.
+   - Step 5: the attacker enables IP forwarding so the traffic still reaches its destination and nothing appears wrong, while he reads, records or alters it. This is a Man in the Middle position.
+   - The forged replies are sent repeatedly, so that the poisoned entry is refreshed before the legitimate one can replace it.
+
+   ```
+   Normal:    Victim <---------------> Gateway <---> Internet
+
+   Poisoned:  Victim <---> Attacker <---> Gateway <---> Internet
+              (victim believes the attacker is the gateway,
+               and the gateway believes the attacker is the victim)
+   ```
+
+   What the attacker can then do: capture credentials sent over unencrypted protocols, hijack sessions by stealing cookies, perform SSL stripping to downgrade HTTPS, inject content into pages, or simply drop the traffic to cause a denial of service.
+
+   Prevention:
+   - Dynamic ARP Inspection on managed switches, which validates every ARP packet against the DHCP snooping binding table and drops forged ones. This is the primary defence.
+   - DHCP snooping, which builds that trusted table of IP to MAC to port bindings.
+   - Port security, limiting the number of MAC addresses learned on a port.
+   - Static ARP entries for critical hosts such as the gateway and servers, though this does not scale.
+   - Encryption everywhere: HTTPS, SSH and VPN, so that even a successful interception yields nothing readable.
+   - Network segmentation with VLANs, which limits how far an attacker can reach.
+   - ARP monitoring tools such as arpwatch, which alert when an IP to MAC mapping changes unexpectedly.
+   - 802.1X port based authentication, so that an unauthorised device cannot join the LAN at all.
+
+   Why an ARP spoofing attacker uses it to launch a Man in the Middle attack:
+   - It places the attacker directly in the traffic path. Once both the victim and the gateway have poisoned cache entries, every packet between them physically passes through the attacker's machine, which is precisely the position a Man in the Middle attack requires.
+   - It is silent and requires no compromise of either endpoint. Nothing is installed on the victim, no password is needed, and the victim's machine behaves entirely normally, so the attack is invisible to the user.
+   - With IP forwarding enabled the traffic continues to reach its destination, so there is no loss of service to arouse suspicion. Without forwarding the same technique becomes a denial of service instead.
+   - It requires only access to the same LAN segment, which an insider, a contractor, a guest on the office Wi-Fi or anyone who can reach an unused network port already has.
+   - It gives complete read and write access to the traffic, which enables the full range of follow-on attacks: capturing credentials sent over unencrypted protocols, stealing session cookies to hijack an authenticated session, SSL stripping to downgrade HTTPS to HTTP, injecting malicious content into pages, and redirecting the victim by supplying false DNS answers.
+   - ARP has no authentication whatsoever and no mechanism for verifying an unsolicited reply, so the attack needs no vulnerability to be discovered or exploited; it uses the protocol exactly as designed.
+   - The tools are freely available and require little skill: Ettercap, Cain and Abel, arpspoof and Bettercap all automate it.
+
+   - Defence in one line: prevent the position with Dynamic ARP Inspection, DHCP snooping and 802.1X, and make the position worthless with end to end encryption and strict certificate validation.
 25. **Difference between spoofing and sniffing** *[Combined 4 Banks Assistant Programmer 2020 compact it 1002 (ET: DU)]*
 
+
+   Answer:
+
+   | Point | Spoofing | Sniffing |
+   |---|---|---|
+   | Nature | An active attack: the attacker forges an identity | A passive attack: the attacker only listens |
+   | Action | Pretending to be another host, user or device | Capturing and reading traffic that passes by |
+   | Data altered | Yes, the source information is falsified | No, nothing is changed |
+   | Goal | To gain unauthorised access or to redirect traffic | To obtain confidential information such as credentials |
+   | Detection | Comparatively easier, since forged packets can be spotted | Very difficult, because there is no trace at all |
+   | Traces left | Yes, in logs and in caches | Essentially none |
+   | Types | IP spoofing, MAC spoofing, ARP spoofing, DNS spoofing, email spoofing, caller ID spoofing | Passive sniffing on a hub or a monitor port, and active sniffing on a switch after MAC flooding or ARP spoofing |
+   | Tools | Ettercap, hping3, Scapy | Wireshark, tcpdump, dsniff |
+   | Prevention | Authentication, digital signatures, ingress and egress filtering, DAI, DHCP snooping, DNSSEC, SPF, DKIM and DMARC | Encryption of all traffic with TLS, SSH and VPN; switched networks; port security; VLAN segmentation |
+   | Effect on the victim | May lose data, money or control | Loses confidentiality without knowing it |
+
+   - Relationship between the two: they are commonly combined. On a switched network an attacker cannot simply sniff, because the switch sends each frame only to the correct port. So he first spoofs — ARP spoofing or MAC flooding — to obtain a position in the traffic path, and then sniffs. Spoofing is the means of access and sniffing is the objective.
+   - The single most effective defence against sniffing is encryption, because captured ciphertext is worthless; the most effective defence against spoofing is authentication, because a forged identity then fails verification.
 26. **Which security attacks (given) occur on client side or server side?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+
+
+   Answer: Attacks are classified by where the vulnerability being exploited actually resides.
+
+   Client side attacks:
+   - These exploit weaknesses in the user's browser, operating system or applications, or in the user personally. The attacker's target is the victim's own machine.
+   - Cross Site Scripting, XSS: the injected script executes in another user's browser, so although the flaw is in the server's output handling, the victim and the execution are on the client.
+   - Cross Site Request Forgery, CSRF: the victim's browser is tricked into sending an authenticated request.
+   - Clickjacking, in which an invisible frame overlays a legitimate page.
+   - Drive-by download and malicious advertising, which install malware when a page is merely viewed.
+   - Browser and plug-in exploits, and malicious browser extensions.
+   - Phishing, social engineering and malicious email attachments.
+   - Keyloggers, spyware and ransomware on the endpoint.
+   - Session hijacking through a stolen cookie, and man in the browser malware.
+
+   Server side attacks:
+   - These exploit weaknesses in the server's software, configuration or infrastructure. The attacker's target is the server itself.
+   - SQL injection and other injection flaws such as command injection and LDAP injection.
+   - Remote code execution and buffer overflow in server software.
+   - Directory traversal and local or remote file inclusion.
+   - Server misconfiguration, default credentials and exposed administrative interfaces.
+   - Broken authentication and broken access control on the server.
+   - Denial of Service and Distributed Denial of Service against the server or its link.
+   - Server Side Request Forgery, in which the server is tricked into making requests on the attacker's behalf.
+   - XML External Entity injection, and insecure deserialisation.
+   - Privilege escalation on the host, and exploitation of unpatched services.
+
+   Attacks affecting both, or the network in between:
+   - Man in the Middle, ARP spoofing, DNS poisoning and SSL stripping, which attack the path rather than either endpoint.
+   - Password attacks, which may target either the client's stored credentials or the server's authentication service.
+   - Supply chain attacks, which compromise a component used by both.
+
+   - The practical significance of the distinction: the defences differ completely. Server side flaws are fixed by secure coding, patching, hardening, input validation with parameterised queries and a Web Application Firewall. Client side flaws are addressed by output encoding and a Content Security Policy on the server, together with browser updates, endpoint protection and user awareness on the client. An organisation that secures only one side remains fully exposed through the other.
 
 ## Firewalls & Network Defense (16)
 
