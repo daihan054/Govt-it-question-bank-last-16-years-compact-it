@@ -5134,39 +5134,580 @@
 
 1. What is the difference between functional and non-functional requirements? What is requirement validation? *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
+
+   Answer: Functional and non-functional requirements, and requirement validation.
+
+   Functional requirements state what the system must do. They describe the services, the inputs, the processing and the outputs, and each one can be tested by giving an input and checking the output.
+   - A registered user shall be able to log in with an email address and a password.
+   - The system shall generate a monthly salary statement for every employee.
+   - The system shall send a confirmation email within one minute of an order being placed.
+   - The system shall calculate income tax according to the current slab rates.
+
+   Non-functional requirements state how well the system must do it. They are quality attributes and constraints; they do not add a service but constrain the way every service behaves.
+   - Performance: the search page shall respond within 2 seconds for 1000 concurrent users.
+   - Reliability: availability shall be at least 99.5 percent in a calendar month.
+   - Security: all passwords shall be stored as salted hashes; all traffic shall use HTTPS.
+   - Usability: a new clerk shall be able to complete a data entry task after 30 minutes of training.
+   - Portability: the application shall run on Windows, Linux and Android.
+   - Maintainability, scalability, and legal or regulatory compliance also fall here.
+
+   The key differences:
+   - Functional requirements define behaviour; non-functional requirements define quality of that behaviour.
+   - A missing functional requirement leaves the system incomplete; an unmet non-functional requirement often makes the system unusable even though every function works.
+   - Functional requirements are usually easy to state and verify; non-functional ones must be made measurable to be verifiable. "The system shall be fast" is useless; "shall respond in under 2 seconds at the 95th percentile" is testable.
+   - Functional requirements are usually local to one module; non-functional ones cut across the whole architecture, which is why they drive architectural decisions.
+
+   Requirement validation is the process of checking that the documented requirements actually define the system the customer wants, before design and coding begin. It answers the question "are we building the right product", whereas requirement verification asks "have we built the product right".
+
+   What is checked during validation:
+   - Validity: does the requirement reflect a real need of the stakeholders.
+   - Consistency: no requirement contradicts another.
+   - Completeness: all functions and constraints the user needs are present.
+   - Realism: the requirement can be implemented with the available budget, technology and time.
+   - Verifiability: each requirement is written so that a test can prove it was met.
+   - Unambiguity: only one interpretation is possible.
+   - Traceability: each requirement can be traced to its origin and forward to design and test cases.
+
+   Techniques used:
+   - Requirements review or inspection: a team walks through the SRS against a checklist.
+   - Prototyping: an executable model is shown to users, who confirm or correct their understanding.
+   - Test case generation: writing an acceptance test for each requirement. A requirement for which no test can be written is not verifiable and must be rewritten.
+   - Model validation: checking the consistency of the analysis models.
+   - Walkthrough with the customer and formal sign-off on the SRS.
+
+   Why it matters: an error discovered at the requirements stage costs a fraction of what the same error costs after delivery. The commonly cited multiplier is that a defect costs about 1 unit to fix during requirements, 10 during design, 100 during coding and far more after release.
 2. **Which of the following are not needed in software Requirement Specifications (SRS)?** *[BCIC Assistant Programmer 14.02.2025 compact it 1330 (ET: BUET)]*
    * (a) Functional Requirments
    * (b) Non- Functional Requirments
    * (c) Testing Requirments
    * (d) Interface Requirments
 
+
+   Answer: (c) Testing Requirements.
+
+   An SRS records what the system must do and under what constraints. Functional requirements, non-functional requirements and interface requirements are all part of it. Testing requirements, that is the test plan, test cases and test strategy, belong in a separate document, the Software Test Plan, and are produced by the testing team from the SRS. The SRS makes each requirement verifiable, but it does not contain the tests themselves.
 3. **(b) Which contents shoud be consider when you setup a new system?** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
 
+
+   Answer: Contents to consider when setting up a new system.
+
+   Before a new system is put in place, the following must be settled and documented:
+
+   Requirement and scope
+   - The business objective the system must serve and the problems in the present system.
+   - Functional requirements: the services the system must provide.
+   - Non-functional requirements: performance, availability, security, usability, scalability.
+   - The boundary of the system: what is inside and what is left to other systems.
+
+   Feasibility
+   - Technical feasibility: is the technology available and does the team have the skill.
+   - Economic feasibility: cost-benefit analysis, return on investment, payback period.
+   - Operational feasibility: will the users accept and use it.
+   - Legal feasibility: data protection rules, licensing, government regulations.
+   - Schedule feasibility: can it be delivered in the time available.
+
+   Hardware and infrastructure
+   - Server capacity: processor, memory, storage, with growth allowance.
+   - Network bandwidth, cabling and topology.
+   - Uninterrupted power supply and generator backup.
+   - Air conditioning and physical security of the server room.
+   - Client machines and peripheral devices.
+
+   Software
+   - Operating system, database management system, application server, middleware.
+   - Development platform and framework.
+   - Licensing: proprietary versus open source, number of seats, renewal cost.
+
+   Data
+   - Data migration from the existing system, with cleansing and validation.
+   - Database design, storage estimation and growth projection.
+   - Backup policy, retention period and tested restore procedure.
+   - Archiving of historical data.
+
+   Security
+   - Authentication and role-based authorisation.
+   - Encryption of data in transit and at rest.
+   - Firewall, intrusion detection, antivirus.
+   - Audit trail of every significant transaction.
+   - Disaster recovery site and recovery time and recovery point objectives.
+
+   People and process
+   - Project team structure and responsibilities.
+   - Training for end users and for administrators.
+   - User manuals, administrator manuals and technical documentation.
+   - Change-over strategy: direct, parallel, pilot or phased.
+   - Support arrangement after go-live, and the service level agreement.
+
+   Cost and schedule
+   - Total cost of ownership: acquisition, licences, training, maintenance, upgrades.
+   - Project schedule with milestones and dependencies.
+   - Risk register with mitigation plans.
 4. **You have been given a responsibility to elicit requirements from a customer, who tells you that he is too busy to meet with you. What should you do?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 639 (ET: N/A)]*
 
+
+   Answer: The customer is the source of the requirements, so the meeting cannot simply be abandoned; but pressing an unwilling customer is also useless. The correct response is to reduce the demand on the customer's time while still obtaining valid requirements, and to escalate only if that fails.
+
+   What should be done, in order:
+
+   - Explain the consequence politely and in business terms, not technical ones. Building the wrong system wastes the customer's money and time far more than a meeting would. Requirements errors are the most expensive kind of defect, because they propagate into design, code and tests.
+
+   - Ask for a very short meeting, thirty minutes, at a time and place convenient to the customer, and come with a prepared agenda and specific questions. A busy person will often agree to a focused half hour when he will not agree to an open-ended one.
+
+   - Offer alternative low-cost channels: a telephone or video call, a short questionnaire, or answering a numbered list of questions by email at his convenience.
+
+   - Identify other stakeholders. The person who is too busy is often not the only source. Ask him to nominate a proxy, a domain expert or a senior user who works with the process daily and can speak for him. In practice these people give better operational detail than the executive does.
+
+   - Use indirect elicitation techniques that do not need the customer's presence: study the existing system and its documents, forms, reports and manuals; observe the users at work, that is ethnography; study a competitor's or a similar organisation's system; examine the existing database.
+
+   - Build a prototype or a set of mock-up screens from what you have gathered, and send it for review. Reviewing a concrete screen takes a customer five minutes and elicits far more correction than an abstract discussion would; people find it much easier to criticise something in front of them than to specify it from nothing.
+
+   - Document every assumption explicitly and send the assumption list for confirmation, with a note that silence after a stated date will be taken as agreement. This creates a record and often prompts a reply.
+
+   - If the customer still gives no access and no proxy, escalate through the project manager to the sponsor, in writing, recording it as a project risk in the risk register: "requirements may be incomplete or incorrect owing to lack of stakeholder availability".
+
+   What should not be done:
+   - Do not guess the requirements and start coding on assumptions alone.
+   - Do not simply record "customer unavailable" and stop work.
+   - Do not proceed silently, so that the risk is invisible to management until delivery.
 5. **(ক) Software development এর ক্ষেত্রে কত প্রকার requirements পাওয়া যায়। উদাহরণসহ requirements সমূহ লিখুন।** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
 
+
+   Answer: Software development এ প্রধানত দুই শ্রেণির requirement পাওয়া যায় — functional ও non-functional। এদের সঙ্গে domain requirement ও user/system requirement এর বিভাজনও ব্যবহৃত হয়।
+
+   Functional requirements state what the system must do. They describe the services, the inputs, the processing and the outputs, and each one can be tested by giving an input and checking the output.
+   - A registered user shall be able to log in with an email address and a password.
+   - The system shall generate a monthly salary statement for every employee.
+   - The system shall send a confirmation email within one minute of an order being placed.
+   - The system shall calculate income tax according to the current slab rates.
+
+   Non-functional requirements state how well the system must do it. They are quality attributes and constraints; they do not add a service but constrain the way every service behaves.
+   - Performance: the search page shall respond within 2 seconds for 1000 concurrent users.
+   - Reliability: availability shall be at least 99.5 percent in a calendar month.
+   - Security: all passwords shall be stored as salted hashes; all traffic shall use HTTPS.
+   - Usability: a new clerk shall be able to complete a data entry task after 30 minutes of training.
+   - Portability: the application shall run on Windows, Linux and Android.
+   - Maintainability, scalability, and legal or regulatory compliance also fall here.
+
+   The key differences:
+   - Functional requirements define behaviour; non-functional requirements define quality of that behaviour.
+   - A missing functional requirement leaves the system incomplete; an unmet non-functional requirement often makes the system unusable even though every function works.
+   - Functional requirements are usually easy to state and verify; non-functional ones must be made measurable to be verifiable. "The system shall be fast" is useless; "shall respond in under 2 seconds at the 95th percentile" is testable.
+   - Functional requirements are usually local to one module; non-functional ones cut across the whole architecture, which is why they drive architectural decisions.
+
+   Domain requirements: এগুলো আসে যে ক্ষেত্রে সফটওয়্যারটি চলবে সেই ক্ষেত্রের নিয়ম থেকে, ব্যবহারকারীর চাওয়া থেকে নয়।
+   - ব্যাংকিং সফটওয়্যারে সুদের হিসাব বাংলাদেশ ব্যাংকের নির্ধারিত পদ্ধতিতে হতে হবে।
+   - গ্রন্থাগার ব্যবস্থায় কপিরাইট আইন অনুযায়ী নথি অনুলিপি সীমিত রাখতে হবে।
+   - এই requirement গুলো প্রায়ই অলিখিত থেকে যায়, কারণ ওই ক্ষেত্রের লোকের কাছে সেগুলো এত সাধারণ যে বলার প্রয়োজন মনে হয় না। এটাই এদের সবচেয়ে বড় ঝুঁকি।
+
+   অন্য একটি বিভাজন — কার জন্য লেখা তার ভিত্তিতে:
+   - User requirement: গ্রাহকের ভাষায়, স্বাভাবিক বাক্যে ও চিত্রে লেখা, যা গ্রাহক পড়ে বুঝতে পারেন।
+   - System requirement: বিস্তারিত ও কাঠামোবদ্ধ বিবরণ, যা ডেভেলপারদের জন্য লেখা এবং চুক্তির অংশ হয়।
+
+   একটি উদাহরণে সব ধরন একসঙ্গে — একটি অনলাইন ট্রেন টিকিট ব্যবস্থা:
+   - Functional: যাত্রী তারিখ ও গন্তব্য দিয়ে আসন খুঁজতে পারবেন; অনলাইনে মূল্য পরিশোধ করতে পারবেন; টিকিট বাতিল করতে পারবেন।
+   - Non-functional: ঈদের সময় ৫০,০০০ যুগপৎ ব্যবহারকারী সামলাতে হবে; প্রতিটি অনুসন্ধানের উত্তর ৩ সেকেন্ডের মধ্যে দিতে হবে; কার্ডের তথ্য PCI-DSS মান অনুযায়ী সংরক্ষণ করতে হবে।
+   - Domain: একজন যাত্রী একটি জাতীয় পরিচয়পত্রে সর্বোচ্চ চারটি টিকিট কিনতে পারবেন — এটি রেলওয়ের নিয়ম।
 6. **(খ) Software Requirement Specification (SRS) বলতে কি বুঝায়? Software Development এর কোন ধাপে SRS তৈরি করা হয়?** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 768 (ET: N/A)]*
 
+
+   Answer:    Software Requirement Specification (SRS) is the formal document that records everything the software must do and every constraint under which it must do it. It is the agreed contract between the customer and the development team, and it is the single reference from which design, coding, testing and acceptance all proceed.
+
+   Contents of an SRS, following the IEEE 830 structure:
+   - Introduction: purpose, scope, definitions and abbreviations, references, overview.
+   - Overall description: product perspective, product functions, user characteristics, operating environment, design and implementation constraints, assumptions and dependencies.
+   - Specific requirements: external interface requirements (user, hardware, software, communication interfaces), functional requirements, performance requirements, database requirements, design constraints, and software system attributes such as reliability, availability, security, maintainability and portability.
+   - Appendices and index.
+
+   Characteristics of a good SRS: correct, unambiguous, complete, consistent, ranked for importance and stability, verifiable, modifiable and traceable.
+
+   Which stage produces the SRS: the SRS is produced at the end of the requirement analysis and specification phase, which is the second phase of the SDLC, after feasibility study or planning and before design.
+
+   ```mermaid
+   flowchart LR
+     A[Feasibility Study / Planning] --> B[Requirement Analysis & Specification]
+     B --> C[Design]
+     C --> D[Coding]
+     D --> E[Testing]
+     E --> F[Deployment & Maintenance]
+     B -.produces.-> S[(SRS Document)]
+     S -.input to.-> C
+     S -.basis of.-> E
+   ```
+
+   The activities of that phase are requirement elicitation or gathering, requirement analysis, requirement specification, which produces the document, and requirement validation, after which the customer signs off. The signed SRS is then frozen under configuration control; further changes go through a formal change control procedure.
 7. **Assume that you are going to implement an ecommerce site of “XYZ” company. The CEO of the company is Mr. X. You have to identify the following: (i) Stakeholder (ii) Functional requirements (iii) Non-functional requirements (iv) Deployment requirements** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
 
+
+   Answer: Requirements for the e-commerce site of company XYZ.
+
+   (i) Stakeholders — everyone who affects the system or is affected by it.
+
+   Internal
+   - Mr. X, the CEO: the project sponsor, who funds the project and owns the business objectives.
+   - Sales and marketing team: manage catalogue, pricing, offers and campaigns.
+   - Warehouse and inventory staff: maintain stock, pack and dispatch orders.
+   - Customer support staff: handle enquiries, returns and complaints.
+   - Accounts and finance department: reconcile payments, refunds and settlement.
+   - System administrator and IT team: run and maintain the platform.
+   - Development team: project manager, analysts, designers, developers, testers.
+
+   External
+   - Customers: the primary users, both registered and guest buyers.
+   - Sellers or vendors, if the site is a marketplace.
+   - Payment gateway provider: bKash, Nagad, SSLCOMMERZ, card networks.
+   - Courier and logistics partners: Sundarban, RedX, Pathao and others.
+   - SMS and email service providers.
+   - Government and regulatory bodies: VAT and tax authority, consumer rights authority, Bangladesh Bank for payment rules.
+   - Suppliers of the goods.
+
+   (ii) Functional requirements — what the system must do.
+
+   Customer facing
+   - Register with an email or mobile number, and verify by OTP.
+   - Log in and log out, with password reset.
+   - Browse the catalogue by category and search by keyword, with filters for price, brand and rating.
+   - View a product's detail page with images, description, price, stock and reviews.
+   - Add items to the cart, change quantity, remove items, and save items to a wishlist.
+   - Check out: enter or select a shipping address, choose a delivery option, apply a discount coupon.
+   - Pay by card, mobile financial service or cash on delivery.
+   - Receive an order confirmation by email and SMS.
+   - Track the order status, and view the order history.
+   - Request a return or refund within the return window.
+   - Write a product review and a rating after delivery.
+
+   Administrative
+   - Add, update and remove products, categories and images.
+   - Manage stock levels, with an alert when a product falls below its reorder level.
+   - View, confirm, dispatch and cancel orders.
+   - Manage discount coupons and promotional campaigns.
+   - Manage customer accounts and support tickets.
+   - Generate reports: daily and monthly sales, best sellers, stock status, revenue by category.
+
+   (iii) Non-functional requirements — how well it must do it.
+   - Performance: any page shall load within 3 seconds on a 3G connection; search shall return in under 2 seconds; the system shall support 5,000 concurrent users and 500 orders per hour.
+   - Scalability: the architecture shall allow horizontal scaling to handle a tenfold traffic increase during festival sales without redesign.
+   - Availability: 99.9 percent uptime, which allows about 43 minutes of downtime a month; planned maintenance only in a declared low-traffic window.
+   - Security: HTTPS everywhere; passwords stored as bcrypt hashes; card data never stored on the site, PCI-DSS compliance by delegating to the gateway; protection against SQL injection, XSS and CSRF; role-based access control; a full audit trail of administrative actions.
+   - Usability: checkout shall be completable in at most four steps; the site shall be fully responsive on mobile, tablet and desktop; the interface shall be available in Bangla and English.
+   - Reliability: no order shall be lost; every payment shall be recorded exactly once, even if the customer's connection drops during payment.
+   - Maintainability: modular code, documented APIs, automated test coverage above 70 percent.
+   - Compatibility: the latest two versions of Chrome, Firefox, Safari and Edge; Android 8 and above, iOS 13 and above.
+   - Legal: VAT shown separately on the invoice; a privacy policy and a return policy displayed; compliance with the consumer rights act.
+
+   (iv) Deployment requirements — what is needed to put it into service and keep it there.
+   - Hosting: cloud infrastructure, for example AWS or Azure, with the application servers behind a load balancer in at least two availability zones.
+   - Environments: separate development, testing, staging and production environments, with staging matching production in configuration.
+   - Database: a managed relational database with a primary and a read replica, automated daily backup and point-in-time recovery.
+   - Content delivery network for images and static assets, to cut page load time.
+   - Domain name, and an SSL/TLS certificate with automatic renewal.
+   - CI/CD pipeline: build, automated test, and deployment with a blue-green or rolling strategy so releases cause no downtime, and with a one-command rollback.
+   - Monitoring and alerting: server metrics, application performance monitoring, centralised logs, uptime checks, alerts to the on-call engineer.
+   - Integration credentials and sandbox testing for the payment gateway, the SMS gateway and the courier APIs.
+   - Data migration plan for existing product and customer data, with validation.
+   - Disaster recovery: a documented plan, with the recovery time objective and recovery point objective agreed, and a restore drill performed before go-live.
+   - Go-live plan: cut-over schedule, rollback criteria, support roster for the first weeks, and user training for the administrative staff.
 8. **Software Requirement Specification (SRS) বলতে কী বোঝেন? Software development -এর কোন স্তরে SRS প্রস্তুত করা হয়?** *[41th BCS 2021 compact it 881 (ET: N/A)]*
+
+
+   Answer:    Software Requirement Specification (SRS) is the formal document that records everything the software must do and every constraint under which it must do it. It is the agreed contract between the customer and the development team, and it is the single reference from which design, coding, testing and acceptance all proceed.
+
+   Contents of an SRS, following the IEEE 830 structure:
+   - Introduction: purpose, scope, definitions and abbreviations, references, overview.
+   - Overall description: product perspective, product functions, user characteristics, operating environment, design and implementation constraints, assumptions and dependencies.
+   - Specific requirements: external interface requirements (user, hardware, software, communication interfaces), functional requirements, performance requirements, database requirements, design constraints, and software system attributes such as reliability, availability, security, maintainability and portability.
+   - Appendices and index.
+
+   Characteristics of a good SRS: correct, unambiguous, complete, consistent, ranked for importance and stability, verifiable, modifiable and traceable.
+
+   Which stage produces the SRS: the SRS is produced at the end of the requirement analysis and specification phase, which is the second phase of the SDLC, after feasibility study or planning and before design.
+
+   ```mermaid
+   flowchart LR
+     A[Feasibility Study / Planning] --> B[Requirement Analysis & Specification]
+     B --> C[Design]
+     C --> D[Coding]
+     D --> E[Testing]
+     E --> F[Deployment & Maintenance]
+     B -.produces.-> S[(SRS Document)]
+     S -.input to.-> C
+     S -.basis of.-> E
+   ```
+
+   The activities of that phase are requirement elicitation or gathering, requirement analysis, requirement specification, which produces the document, and requirement validation, after which the customer signs off. The signed SRS is then frozen under configuration control; further changes go through a formal change control procedure.
 
 ## Software Project Management & Organization (7)
 
 1. **সংগঠনিক নির্দেশকগুলো কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer: সাংগঠনিক নির্দেশক বা organizational indicator বলতে বোঝায় সেই পরিমাপযোগ্য সূচকগুলো, যা দিয়ে একটি প্রতিষ্ঠান বা প্রকল্পের অবস্থা, অগ্রগতি ও কার্যকারিতা বোঝা যায়। সফটওয়্যার প্রকল্প ব্যবস্থাপনায় এগুলো ব্যবহৃত হয় প্রকল্পের স্বাস্থ্য মাপতে ও সিদ্ধান্ত নিতে।
+
+   প্রকল্পভিত্তিক নির্দেশক
+   - Schedule variance: পরিকল্পিত সময় ও প্রকৃত সময়ের পার্থক্য।
+   - Cost variance ও budget utilization: বরাদ্দকৃত অর্থের কতটা ব্যয় হয়েছে এবং কাজের অনুপাতে তা যথাযথ কিনা।
+   - Earned value ও তার অনুপাতসমূহ — CPI ও SPI।
+   - Milestone completion rate: নির্ধারিত মাইলফলকের কতগুলো সময়মতো অর্জিত হয়েছে।
+   - Scope creep: অনুমোদিত পরিধির বাইরে যোগ হওয়া কাজের পরিমাণ।
+
+   গুণগত নির্দেশক
+   - Defect density: প্রতি হাজার লাইন কোডে বা প্রতি function point এ পাওয়া ত্রুটির সংখ্যা।
+   - Defect removal efficiency: মুক্তির আগে ধরা পড়া ত্রুটির অনুপাত।
+   - Test coverage: স্বয়ংক্রিয় পরীক্ষায় কতটুকু কোড আচ্ছাদিত।
+   - Mean time between failures ও mean time to repair।
+   - Customer-reported defect: মুক্তির পর গ্রাহকের পাওয়া ত্রুটির সংখ্যা।
+
+   উৎপাদনশীলতার নির্দেশক
+   - Productivity: প্রতি ব্যক্তি-মাসে উৎপাদিত function point বা lines of code।
+   - Velocity: Agile দলে প্রতি sprint এ সম্পন্ন story point।
+   - Cycle time ও lead time: একটি কাজ শুরু থেকে শেষ হতে কত সময় লাগে।
+   - Rework percentage: মোট প্রচেষ্টার কত অংশ পুনরায় করতে হয়েছে।
+
+   মানবসম্পদ ও সাংগঠনিক নির্দেশক
+   - Staff turnover rate: দল থেকে কর্মী ছেড়ে যাওয়ার হার। উচ্চ হার প্রকল্পের বড় ঝুঁকি, কারণ এতে অর্জিত জ্ঞান হারিয়ে যায়।
+   - Training hours per employee ও দক্ষতার বিস্তার।
+   - Resource utilization: কর্মীর সময়ের কত অংশ উৎপাদনশীল কাজে ব্যয় হয়।
+   - Employee satisfaction ও দলের মনোবল।
+
+   গ্রাহক ও ব্যবসায়িক নির্দেশক
+   - Customer satisfaction index।
+   - On-time delivery rate।
+   - Return on investment ও payback period।
+   - Service level agreement মেনে চলার হার।
+
+   ব্যবহারের নীতি: নির্দেশক নির্বাচন করতে হয় প্রকল্পের লক্ষ্য অনুযায়ী, এবং সেগুলো SMART হতে হবে — Specific, Measurable, Achievable, Relevant ও Time-bound। শুধু একটি নির্দেশক দেখে সিদ্ধান্ত নেওয়া বিপজ্জনক; উদাহরণস্বরূপ কেবল lines of code মাপলে দল অপ্রয়োজনীয় লম্বা কোড লিখতে উৎসাহিত হয়। তাই একাধিক নির্দেশক একসঙ্গে বিবেচনা করতে হয়।
 2. **Which you build about real life software project? What problems you faced during that time and how to solve this?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
+
+   Answer: A real-life software project, the problems faced, and how they were solved.
+
+   The project: an online examination and result processing system for a public institution. It allowed the administration to create question banks, schedule examinations, let candidates sit the test in a browser, evaluate the multiple-choice part automatically, record the written marks, and publish the results. It was built with a three-tier architecture: a React front end, a Spring Boot REST API, and a PostgreSQL database, deployed on a Linux server behind Nginx. The team had six people and the schedule was five months.
+
+   The problems, and how each was solved:
+
+   1. Unclear and shifting requirements. The client could describe the paper-based process but not the system, and asked for changes after each demonstration.
+   - Solution: switched from a documents-first approach to short iterations. A clickable prototype was shown at the end of every two-week sprint, and the client signed off each screen. A written change control procedure was introduced: any change after sign-off was logged with its cost and schedule impact, and the sponsor decided whether to accept it. Scope creep stopped being invisible.
+
+   2. Performance collapse under load. The system worked for ten testers but timed out when 2,000 candidates logged in within the same five minutes.
+   - Solution: profiling showed an N+1 query problem, where loading a question list issued one query per option. Fixed by eager fetching with a join. Added database indexes on the columns used in the WHERE clauses, introduced Redis caching for the question paper, which is read constantly and written rarely, and moved to a connection pool of the right size. Response time fell from about 11 seconds to under 1 second. The lesson was to load-test early, not at the end.
+
+   3. Concurrency and lost answers. Two saves from the same candidate could overwrite each other, and a candidate whose network dropped lost the answers of the current page.
+   - Solution: auto-save every 30 seconds to local storage on the client, and an idempotent save API keyed on candidate, question and attempt, so a repeated save is harmless. Optimistic locking with a version column prevented lost updates in the database.
+
+   4. Integration failures with the payment gateway during application fee collection. Sometimes money was deducted but the application was not marked paid.
+   - Solution: made the payment flow transactional and recoverable. Every payment attempt is written to the database before redirecting to the gateway; the callback and a scheduled reconciliation job both update it; a nightly job compares the gateway's settlement report with the local records and flags mismatches. Retries were made idempotent using the gateway's transaction ID as a unique key.
+
+   5. Team communication and merge conflicts. Two developers repeatedly modified the same files and lost work in bad merges.
+   - Solution: adopted a branching strategy of one feature branch per task with mandatory pull request review, a daily fifteen-minute stand-up, and a task board so that work was visible. Continuous integration ran the test suite on every push, so a broken merge was caught within minutes.
+
+   6. Testing left too late. Bugs surfaced in the final two weeks in large numbers.
+   - Solution: introduced unit tests for the service layer and made the build fail below a coverage threshold, wrote automated integration tests for the critical paths, and ran a pilot examination with 300 real candidates one month before the live examination. The pilot revealed the load problem and two usability problems that no internal test had found.
+
+   7. Security. A review found that the answer key was retrievable from the browser and that the exam URL could be reached without an active session.
+   - Solution: removed all evaluation logic from the client, so the browser never receives the correct answer; enforced server-side session and time-window checks on every request; added rate limiting, HTTPS, and an audit log of every answer submission with a timestamp and IP address.
+
+   The general lessons drawn: involve the customer continuously rather than at the two ends; test performance and security from the beginning; automate the build, the tests and the deployment; keep the scope under written control; and treat a pilot run as an essential step, not an optional one.
 3. **Project management related question (what are the approaches)** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 520 (ET: MIST)]*
 
+
+   Answer: Approaches to software project management.
+
+   Project management approaches fall into two broad families, the plan-driven and the adaptive, with hybrids between them.
+
+   Plan-driven, also called predictive or traditional
+   - Waterfall: phases are completed one after another, each fully documented and signed off before the next begins. Suited to projects with stable, well-understood requirements and heavy regulatory documentation needs.
+   - V-Model: the same sequence, but each development phase is paired with a corresponding test level, so verification is planned from the start.
+   - Incremental and iterative: the product is built and delivered in pieces, each adding function to a working system.
+   - Spiral: each loop of the spiral performs objective setting, risk analysis, development and planning. Risk driven, and suited to large, expensive, high-risk projects.
+   - PRINCE2 and PMBOK: formal management frameworks rather than lifecycles. PMBOK organises work into initiating, planning, executing, monitoring and controlling, and closing, across the knowledge areas of scope, schedule, cost, quality, resource, communication, risk, procurement, stakeholder and integration management.
+
+   Adaptive, or agile
+   - Scrum: fixed-length sprints of two to four weeks, a product backlog owned by the Product Owner, a sprint backlog owned by the team, and the ceremonies of sprint planning, daily stand-up, sprint review and retrospective. The Scrum Master removes impediments. Progress is measured by working software and velocity.
+   - Kanban: continuous flow rather than fixed iterations, a visual board, and explicit work-in-progress limits to expose bottlenecks. Suited to maintenance and support work where items arrive unpredictably.
+   - Extreme Programming (XP): engineering-focused, with pair programming, test-driven development, continuous integration, refactoring, collective code ownership, small releases and an on-site customer.
+   - Lean: eliminate waste, amplify learning, decide as late as responsibly possible, deliver fast, and optimise the whole.
+   - Scaled frameworks such as SAFe and LeSS coordinate many agile teams on one product.
+
+   Hybrid: plan-driven governance and milestones at the programme level with agile delivery inside each workstream. This is what most large organisations, including government projects, actually use.
+
+   The core management activities, whichever approach is chosen
+   - Scope management: define the deliverables, build the work breakdown structure, and control changes.
+   - Time management: estimate durations, sequence activities, and build the schedule with a Gantt chart and the critical path.
+   - Cost management: estimate with COCOMO, function point analysis, expert judgement or analogy; then budget and control by earned value.
+   - Quality management: standards, reviews, testing strategy and metrics.
+   - Risk management: identify, analyse by probability and impact, plan responses of avoid, transfer, mitigate or accept, and monitor the risk register.
+   - Human resource management: team structure, roles, staffing and training.
+   - Communication management: who needs what information, how often and in what form.
+   - Configuration management: version control, baselines and change control.
+
+   How to choose
+   - Requirements stable and well known, with heavy compliance needs: plan-driven.
+   - Requirements uncertain or expected to evolve, and the customer is available: agile.
+   - Large, novel and high-risk: spiral or a risk-driven incremental approach.
+   - Continuous stream of small, unpredictable items: Kanban.
 4. **(খ) User story ও Product backlog কী?** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
 
+
+   Answer: User story এবং Product backlog — Agile, বিশেষত Scrum পদ্ধতির দুটি মৌলিক উপাদান।
+
+   User story: ব্যবহারকারীর দৃষ্টিকোণ থেকে লেখা একটি প্রয়োজনের সংক্ষিপ্ত, সরল বিবরণ। এটি সম্পূর্ণ requirement নয়, বরং আলোচনার একটি প্রতিশ্রুতি — কার্ড দেখে দল ও গ্রাহক কথা বলে বিস্তারিত ঠিক করে।
+
+   প্রচলিত কাঠামো:
+   - As a <ব্যবহারকারীর ভূমিকা>, I want <কী চাই>, so that <কেন চাই>।
+   - উদাহরণ: As a customer, I want to reset my password by email, so that I can regain access without calling support.
+   - উদাহরণ: As a librarian, I want to see the list of overdue books, so that I can send reminders.
+
+   প্রতিটি user story এর সঙ্গে থাকে acceptance criteria — যেসব শর্ত পূরণ হলে story টি সম্পন্ন ধরা হয়। যেমন উপরের প্রথমটির জন্য: বৈধ ইমেইল দিলে পুনঃস্থাপনের লিঙ্ক পাঠানো হবে; লিঙ্কটি ৩০ মিনিট পর অকার্যকর হবে; অনিবন্ধিত ইমেইল দিলেও একই বার্তা দেখানো হবে।
+
+   ভালো user story এর মাপকাঠি — INVEST:
+   - Independent: অন্য story এর ওপর নির্ভরশীল নয়।
+   - Negotiable: বিস্তারিত আলোচনার মাধ্যমে ঠিক হয়, আগে থেকে চূড়ান্ত নয়।
+   - Valuable: ব্যবহারকারীর কাছে মূল্যবান।
+   - Estimable: দল এর আকার অনুমান করতে পারে।
+   - Small: একটি sprint এর মধ্যে শেষ করা যায়।
+   - Testable: পরীক্ষা করে প্রমাণ করা যায়।
+
+   Story এর আকার মাপা হয় story point এ, সাধারণত Fibonacci ধারায় ১, ২, ৩, ৫, ৮, ১৩। বড় story কে বলে epic, যা ভেঙে ছোট story তে রূপান্তর করতে হয়।
+
+   Product backlog: পণ্যটির জন্য প্রয়োজনীয় সব কাজের একটি ক্রমবিন্যস্ত তালিকা — user story, feature, ত্রুটি সংশোধন, কারিগরি কাজ ও গবেষণার কাজ সব মিলিয়ে।
+
+   বৈশিষ্ট্য:
+   - এর একমাত্র মালিক Product Owner; তিনিই ক্রম নির্ধারণ করেন।
+   - এটি সর্বদা পরিবর্তনশীল, কখনো চূড়ান্ত নয় — নতুন তথ্য এলে নতুন item যোগ হয়, পুরনোগুলোর ক্রম বদলায়।
+   - উপরের item গুলো বিস্তারিত ও অনুমানকৃত, নিচের item গুলো অস্পষ্ট ও বড় থাকে। একে বলে DEEP — Detailed appropriately, Estimated, Emergent, Prioritized।
+   - ক্রম নির্ধারণে ব্যবসায়িক মূল্য, ঝুঁকি, নির্ভরশীলতা ও খরচ বিবেচনা করা হয়। কৌশল হিসেবে MoSCoW — Must have, Should have, Could have, Won't have — ব্যবহৃত হয়।
+   - Backlog refinement বা grooming নামে নিয়মিত সভায় item গুলো ভাঙা, স্পষ্ট করা ও অনুমান করা হয়।
+
+   Product backlog ও Sprint backlog এর পার্থক্য:
+   - Product backlog সমগ্র পণ্যের জন্য, মালিক Product Owner, এবং এটি কখনো শেষ হয় না।
+   - Sprint backlog কেবল চলতি sprint এ নেওয়া item গুলোর তালিকা, মালিক Development Team, এবং sprint শেষে এটি নিঃশেষ হয়।
+
+   দুইয়ের সম্পর্ক: Product backlog থেকে সর্বোচ্চ অগ্রাধিকারের user story গুলো sprint planning সভায় নির্বাচিত হয়ে sprint backlog এ যায়, সেখান থেকে কাজ হয়ে sprint শেষে সম্ভাব্য মুক্তিযোগ্য increment তৈরি হয়।
 5. **Assume you are a project manager and your job is to develop an application which is similar to what you have developed is past only larger and complex. The customer has documented the requirements clearly. What team structure would you choose in this case and why?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 759 (ET: N/A)]*
 
+
+   Answer: Given the situation — the work is similar to what the team has built before, only larger and more complex, and the customer has documented the requirements clearly — the right choice is a controlled decentralized team, that is a hierarchical or chief-programmer style structure with sub-teams.
+
+   The two properties of the situation decide the answer:
+   - The problem is familiar, and the requirements are clear and stable. There is therefore little need for continuous exploration, constant renegotiation or a highly democratic decision process. Certainty favours structure.
+   - The project is larger and more complex than before. A single flat team cannot handle it, because communication paths grow as n(n-1)/2; a team of 20 has 190 possible channels, which is unmanageable.
+
+   The structure proposed:
+
+   ```mermaid
+   flowchart TD
+     PM[Project Manager / Chief Programmer]
+     PM --> L1[Team Lead - Module A]
+     PM --> L2[Team Lead - Module B]
+     PM --> L3[Team Lead - Module C]
+     PM --> QA[QA Lead]
+     L1 --> D1[Developers]
+     L2 --> D2[Developers]
+     L3 --> D3[Developers]
+     QA --> T1[Testers]
+     PM --> LIB[Configuration / Librarian]
+   ```
+
+   - One project manager or chief programmer holds the overall design and makes the decisions that cross module boundaries.
+   - The system is decomposed into modules, and each module is given to a small sub-team of three to five people with its own senior lead.
+   - Within a sub-team the work is decentralized: members discuss and decide among themselves, which suits problem solving at the detailed level.
+   - Between sub-teams the structure is centralized: the leads report to the project manager, so the number of communication channels stays linear rather than quadratic.
+   - A separate quality assurance group tests independently of the developers.
+   - A configuration manager owns version control, builds and releases.
+
+   Why this rather than the alternatives:
+
+   - Not democratic decentralized, that is an egoless team. It has no permanent leader and everyone participates in every decision. It is excellent for research work and for problems nobody has solved before, because it produces many ideas and high morale. But its communication cost is high and it slows down badly as the team grows. Here the problem is already understood, so the extra exploration buys nothing while the coordination cost is real.
+
+   - Not fully controlled centralized, where the single chief programmer makes all decisions and the others only implement. It is efficient for small, simple, short projects, but it makes the chief a bottleneck and a single point of failure, it does not scale to a large complex system, and it wastes the experience of the senior members. Morale suffers and there is no succession if the chief leaves.
+
+   - The controlled decentralized structure takes the strength of both: fast, consistent decisions at the top where the system must remain coherent, and full participation inside each sub-team where the detailed work happens.
+
+   Supporting decisions that go with the structure:
+   - Because the requirements are documented and stable, a plan-driven lifecycle such as the waterfall or the V-model, or an incremental one with fixed increments, fits well; a fully exploratory agile process is not necessary, though iterative delivery within each module is still useful.
+   - Because the work resembles a previous project, estimation by analogy is reliable, and reuse of components, of the architecture and of the test suites from the earlier system should be planned explicitly.
+   - Interfaces between modules must be defined and frozen early by the project manager, since the sub-teams will work in parallel against them.
+   - Regular integration, ideally continuous, prevents the classic failure of parallel sub-teams: modules that each work alone but do not fit together.
 6. **a) What is conflict in git? How to resolve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
+
+   Answer: Conflict in Git, and how to resolve it.
+
+   A merge conflict occurs when Git cannot decide automatically which of two changes to keep. It happens when two branches modify the same lines of the same file, or when one branch modifies a file that the other deleted or renamed. Git merges changes to different parts of a file without help; it stops only when the changes overlap.
+
+   When conflicts arise: during git merge, git rebase, git pull, which is a fetch followed by a merge, git cherry-pick and git stash pop.
+
+   What Git does when it hits a conflict: it stops the operation, marks the affected files as unmerged, and writes conflict markers into them:
+
+   ```
+   <<<<<<< HEAD
+   int timeout = 30;          // your version, the current branch
+   =======
+   int timeout = 60;          // their version, the incoming branch
+   >>>>>>> feature-branch
+   ```
+
+   - Everything between `<<<<<<< HEAD` and `=======` is the current branch's content.
+   - Everything between `=======` and `>>>>>>>` is the incoming branch's content.
+
+   Resolution procedure:
+
+   ```bash
+   git status                    # lists the files under "Unmerged paths"
+   git diff                      # shows the conflicting hunks
+   # open each conflicted file, edit it to the correct final content,
+   # and delete all three marker lines
+   git add <file>                # marks the conflict as resolved
+   git status                    # confirm nothing is left unmerged
+   git commit                    # completes the merge; Git supplies a default message
+   ```
+
+   During a rebase the last step differs:
+
+   ```bash
+   git add <file>
+   git rebase --continue
+   ```
+
+   Useful commands:
+   - `git merge --abort` or `git rebase --abort` returns the working tree to the state before the operation began.
+   - `git checkout --ours <file>` keeps the current branch's whole file; `git checkout --theirs <file>` keeps the incoming one. Note that during a rebase the meaning of ours and theirs is reversed, because the commits are being replayed onto the other branch.
+   - `git mergetool` opens a three-way visual merge tool.
+   - `git log --merge -p <file>` shows the commits on both sides that touched the file.
+
+   The most important point: resolving means producing the correct code, not simply choosing one side. Often the correct result contains parts of both. After removing the markers the code must be compiled and the tests run before committing, because a syntactically valid merge can still be logically wrong.
+
+   How to reduce conflicts:
+   - Pull or rebase from the main branch frequently, so branches never diverge far.
+   - Keep feature branches short-lived and small.
+   - Divide work so that two people rarely edit the same file at the same time.
+   - Agree on formatting and use an automatic formatter, so that whitespace and indentation changes do not create false conflicts.
+   - Commit often with focused commits.
+   - Communicate in the team about who is working on which module.
 7. **b) Write down the difference between Patch and Upgrade.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+
+   Answer: Difference between a patch and an upgrade.
+
+   | Point | Patch | Upgrade |
+   |---|---|---|
+   | Purpose | Fixes a specific defect or security vulnerability in the existing version | Moves the software to a newer version with new features and improvements |
+   | Size | Small; contains only the changed files or code | Large; often a full new installation package |
+   | Scope of change | Narrow and targeted | Broad; may change the architecture, the interface and the data format |
+   | Version number | Changes the last part, for example 2.4.1 to 2.4.2 | Changes the major or minor part, for example 2.4 to 3.0 |
+   | New features | None; behaviour otherwise stays the same | Yes; that is its main purpose |
+   | Frequency | Frequent, often monthly or on discovery of a vulnerability | Occasional, once in months or years |
+   | Cost | Usually free within the support period | Often paid, or requires a new licence |
+   | Downtime | Little or none; many patches apply while the system runs | Significant; planned outage, testing and possibly retraining |
+   | Risk | Low, but a bad patch can still break a dependent feature | Higher; compatibility of data, plug-ins and integrations must be checked |
+   | Reversibility | Usually easy to uninstall | Difficult; often needs a full restore from backup |
+   | Example | A Windows security update, a MySQL 8.0.35 to 8.0.36 bug fix | Windows 10 to Windows 11, MySQL 5.7 to MySQL 8.0 |
+
+   Related terms worth distinguishing:
+   - Hotfix: an urgent patch issued outside the normal release schedule, usually for a critical production failure or an actively exploited vulnerability.
+   - Service pack: a bundle of many patches and minor improvements released together.
+   - Update: a general term, usually meaning a minor version change that may include both fixes and small features.
+
+   Practical rule for administration: apply security patches promptly, because unpatched known vulnerabilities are the most common cause of compromise. Plan upgrades: test on a staging system first, verify that third-party integrations and custom code still work, take a full backup, schedule a maintenance window, and keep a documented rollback plan.
 
 ## Software Design Principles (Coupling & Cohesion) (5)
 
