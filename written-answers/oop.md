@@ -3809,17 +3809,515 @@ Public class class B extends class A {
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 425 (ET: BIBM)]*
 
+
+   Answer: Requirements for the Circle class:
+
+   Data requirements (attributes):
+   - centreX, centreY: the coordinates of the origin (centre) of the circle, of type double. They are needed because the circle must be translatable, and translation changes the position of the centre.
+   - radius: the radius of the circle, of type double. It determines both the perimeter and the area.
+   - PI: a constant, declared static and final, since it is the same for every circle.
+
+   Method requirements (behaviour):
+   - A constructor Circle(x, y, r) to create a circle at a given position with a given radius, with validation that the radius is not negative.
+   - translate(dx, dy): move the circle by dx along the x axis and dy along the y axis. It changes only the centre, never the radius.
+   - perimeter(): return 2 x PI x radius.
+   - area(): return PI x radius x radius.
+   - Getters and setters for the centre and the radius, so that the data can stay private (encapsulation).
+   - display(): print the current state of the circle.
+
+   Implementation:
+
+   ```java
+   class Circle {
+       private static final double PI = 3.14159265358979;
+
+       private double centreX;      // origin
+       private double centreY;
+       private double radius;
+
+       public Circle(double x, double y, double r) {
+           this.centreX = x;
+           this.centreY = y;
+           setRadius(r);
+       }
+
+       public void setRadius(double r) {
+           if (r < 0) {
+               System.out.println("Radius cannot be negative. Set to 0.");
+               this.radius = 0;
+           } else {
+               this.radius = r;
+           }
+       }
+
+       public double getRadius()  { return radius; }
+       public double getCentreX() { return centreX; }
+       public double getCentreY() { return centreY; }
+
+       // translation: shift the circle by (dx, dy)
+       public void translate(double dx, double dy) {
+           this.centreX = this.centreX + dx;
+           this.centreY = this.centreY + dy;
+       }
+
+       public double perimeter() {
+           return 2 * PI * radius;
+       }
+
+       public double area() {
+           return PI * radius * radius;
+       }
+
+       public void display() {
+           System.out.printf("Centre (%.1f, %.1f), Radius %.1f, Perimeter %.2f, Area %.2f%n",
+                   centreX, centreY, radius, perimeter(), area());
+       }
+   }
+
+   public class GraphicsDemo {
+       public static void main(String[] args) {
+           Circle c = new Circle(0, 0, 5);
+           c.display();
+
+           c.translate(3, 4);       // move 3 right and 4 up
+           c.display();
+
+           c.translate(-1, 2);
+           c.display();
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Centre (0.0, 0.0), Radius 5.0, Perimeter 31.42, Area 78.54
+   Centre (3.0, 4.0), Radius 5.0, Perimeter 31.42, Area 78.54
+   Centre (2.0, 6.0), Radius 5.0, Perimeter 31.42, Area 78.54
+   ```
+
+   Note that translation changes the position but leaves the perimeter and the area unchanged, which is exactly what a rigid translation should do.
+
+   Data flow of the translate method:
+
+   ```mermaid
+   flowchart LR
+     IN[Input: dx, dy] --> CHK[Read current centreX and centreY]
+     CHK --> CALC[Compute newX = centreX + dx and newY = centreY + dy]
+     CALC --> UPD[Assign newX to centreX and newY to centreY]
+     UPD --> OUT[Circle now positioned at the new centre]
+   ```
+
+   Step-by-step description of the data flow:
+   - Input: the translation vector (dx, dy) enters the method as parameters.
+   - Read: the current values of centreX and centreY are read from the object's state.
+   - Compute: newX = centreX + dx and newY = centreY + dy.
+   - Update: the computed values are written back into centreX and centreY.
+   - Output: the object's state now describes the translated circle. Nothing is returned, and radius is not touched, so area() and perimeter() give the same results as before.
+
+   Design points worth stating:
+   - The radius is deliberately not involved in translation, because translation is a rigid motion; scaling would be a separate method.
+   - The data members are private, so the only way to move the circle is through translate(), which guarantees that both coordinates are updated together and the object cannot be left in a half-moved state.
+   - If the graphics package later needs rotation or scaling, they are added as new methods without disturbing the existing ones.
 2. **What are the built in classes?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
 
+
+   Answer: Built-in classes are the ready-made classes supplied with the programming language in its standard library, so that a programmer need not write common functionality from scratch. They are also called predefined or library classes.
+
+   Important built-in classes in Java, grouped by package:
+
+   java.lang (imported automatically):
+   - Object: the root of every class hierarchy in Java; every class inherits from it.
+   - String: an immutable sequence of characters.
+   - StringBuilder and StringBuffer: mutable strings, the second being thread-safe.
+   - Math: static methods such as sqrt(), pow(), abs(), max(), min(), round() and random().
+   - System: standard input, output and error streams, plus utility methods such as currentTimeMillis() and exit().
+   - The wrapper classes Integer, Double, Float, Long, Short, Byte, Character and Boolean, which wrap primitive values as objects and provide conversion methods such as parseInt().
+   - Thread: for concurrent execution.
+   - Exception, RuntimeException and Throwable: the exception hierarchy.
+
+   java.util:
+   - Scanner: reads input from the keyboard or a file.
+   - ArrayList, LinkedList, Vector: dynamic lists.
+   - HashMap, TreeMap, LinkedHashMap: key-value collections.
+   - HashSet, TreeSet: collections of unique elements.
+   - Arrays: static methods such as sort(), binarySearch() and toString().
+   - Collections: static methods for lists and sets.
+   - Date, Calendar, and the modern LocalDate, LocalTime and LocalDateTime.
+   - Random: random number generation.
+
+   java.io and java.nio.file:
+   - File, FileReader, FileWriter, BufferedReader, BufferedWriter, InputStreamReader, Files, Paths.
+
+   java.sql:
+   - Connection, Statement, PreparedStatement, ResultSet, DriverManager, for database access.
+
+   java.net:
+   - Socket, ServerSocket, URL, HttpURLConnection.
+
+   javax.swing and java.awt:
+   - JFrame, JButton, JLabel, JTextField and the rest of the graphical user interface toolkit.
+
+   Example of using several built-in classes together:
+
+   ```java
+   import java.util.Scanner;
+   import java.util.ArrayList;
+   import java.util.Collections;
+
+   public class BuiltInDemo {
+       public static void main(String[] args) {
+           Scanner sc = new Scanner(System.in);       // java.util.Scanner
+           ArrayList<Integer> list = new ArrayList<>();  // java.util.ArrayList
+
+           System.out.print("How many numbers? ");
+           int n = sc.nextInt();
+
+           for (int i = 0; i < n; i++) {
+               list.add(sc.nextInt());
+           }
+
+           Collections.sort(list);                    // java.util.Collections
+           System.out.println("Sorted: " + list);
+           System.out.println("Maximum: " + Collections.max(list));
+           System.out.println("Square root of the maximum: "
+                   + Math.sqrt(Collections.max(list)));   // java.lang.Math
+
+           String s = list.toString().toUpperCase();  // java.lang.String
+           System.out.println(s);
+
+           sc.close();
+       }
+   }
+   ```
+
+   Advantages of built-in classes:
+   - They save development time, since common tasks are already solved.
+   - They are thoroughly tested, optimised and reliable.
+   - They are standard, so any Java programmer recognises them, which makes code portable and readable.
+   - They are documented and maintained by the language vendor.
+
+   The equivalent in C++ is the Standard Template Library, with classes such as string, vector, map, set and the iostream family.
 3. **অথবা, (ক) উদাহরণসহ Class এবং Object এর মধ্যে পার্থক্য ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 602 (ET: N/A)]*
 
+
+   Answer: | Point | Class | Object |
+   |---|---|---|
+   | Definition | A blueprint or template that describes the data members and member functions of a category of things | An actual instance of a class, created from that blueprint |
+   | Nature | A logical entity; it is a description only | A physical entity; it exists in memory |
+   | Memory | No memory is allocated when a class is declared | Memory is allocated when an object is created |
+   | How many | Declared once | Many objects can be created from one class |
+   | Creation | With the keyword class | With the keyword new in Java, or by declaring a variable of the class type in C++ |
+   | Contains | Declarations of members | Actual values for those members |
+   | Analogy | The architect's plan of a house | The houses actually built from that plan |
+   | Example | class Student { ... } | Student s1 = new Student(); |
+
+   Example:
+
+   ```java
+   class Student {                    // class: the blueprint
+       String name;                   // data member
+       int roll;
+       double cgpa;
+
+       void display() {               // member function
+           System.out.println(name + " | Roll: " + roll + " | CGPA: " + cgpa);
+       }
+   }
+
+   public class Demo {
+       public static void main(String[] args) {
+           Student s1 = new Student();     // object 1
+           s1.name = "Rahim";
+           s1.roll = 101;
+           s1.cgpa = 3.75;
+
+           Student s2 = new Student();     // object 2
+           s2.name = "Karim";
+           s2.roll = 102;
+           s2.cgpa = 3.50;
+
+           s1.display();
+           s2.display();
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Rahim | Roll: 101 | CGPA: 3.75
+   Karim | Roll: 102 | CGPA: 3.5
+   ```
+
+   The class Student was written once, but two independent objects were created from it, each with its own copy of the data members.
 4. **(খ) উদাহরণসহ ক্লাস এবং অবজেক্ট এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
 
+
+   Answer: | Point | Class | Object |
+   |---|---|---|
+   | Definition | A blueprint or template that describes the data members and member functions of a category of things | An actual instance of a class, created from that blueprint |
+   | Nature | A logical entity; it is a description only | A physical entity; it exists in memory |
+   | Memory | No memory is allocated when a class is declared | Memory is allocated when an object is created |
+   | How many | Declared once | Many objects can be created from one class |
+   | Creation | With the keyword class | With the keyword new in Java, or by declaring a variable of the class type in C++ |
+   | Contains | Declarations of members | Actual values for those members |
+   | Analogy | The architect's plan of a house | The houses actually built from that plan |
+   | Example | class Student { ... } | Student s1 = new Student(); |
+
+   Example:
+
+   ```java
+   class Student {                    // class: the blueprint
+       String name;                   // data member
+       int roll;
+       double cgpa;
+
+       void display() {               // member function
+           System.out.println(name + " | Roll: " + roll + " | CGPA: " + cgpa);
+       }
+   }
+
+   public class Demo {
+       public static void main(String[] args) {
+           Student s1 = new Student();     // object 1
+           s1.name = "Rahim";
+           s1.roll = 101;
+           s1.cgpa = 3.75;
+
+           Student s2 = new Student();     // object 2
+           s2.name = "Karim";
+           s2.roll = 102;
+           s2.cgpa = 3.50;
+
+           s1.display();
+           s2.display();
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Rahim | Roll: 101 | CGPA: 3.75
+   Karim | Roll: 102 | CGPA: 3.5
+   ```
+
+   The class Student was written once, but two independent objects were created from it, each with its own copy of the data members.
 5. **Define Class and Object in C++ with example.** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
+
+   Answer: Class: a class is a user-defined data type that serves as a blueprint for objects. It groups together data members (variables) and member functions (methods) that operate on those data. Declaring a class allocates no memory; it only describes what an object of that type will contain.
+
+      Object: an object is an instance of a class. It occupies memory and holds its own values for the data members. Many objects can be created from one class, and each has its own independent state.
+
+      Example in C++:
+
+      ```cpp
+      #include <iostream>
+      #include <string>
+      using namespace std;
+
+      class Student {                       // class definition: the blueprint
+      private:                              // access specifier: encapsulation
+          string name;
+          int roll;
+          double cgpa;
+
+      public:
+          // constructor
+          Student(string n, int r, double c) {
+              name = n;
+              roll = r;
+              cgpa = c;
+          }
+
+          // member functions
+          void setCgpa(double c) {
+              if (c >= 0 && c <= 4.0) cgpa = c;
+              else cout << "Invalid CGPA" << endl;
+          }
+
+          double getCgpa() { return cgpa; }
+
+          void display() {
+              cout << "Name: " << name
+                   << " | Roll: " << roll
+                   << " | CGPA: " << cgpa << endl;
+          }
+      };
+
+      int main() {
+          // objects: instances of the class
+          Student s1("Rahim Uddin", 101, 3.75);
+          Student s2("Karim Ahmed", 102, 3.50);
+
+          s1.display();
+          s2.display();
+
+          s2.setCgpa(3.80);        // change through a member function
+          // s2.cgpa = 5.0;        // error: cgpa is private
+          s2.display();
+
+          cout << "Size of one object: " << sizeof(s1) << " bytes" << endl;
+          return 0;
+      }
+      ```
+
+      Output:
+      ```
+      Name: Rahim Uddin | Roll: 101 | CGPA: 3.75
+      Name: Karim Ahmed | Roll: 102 | CGPA: 3.5
+      Name: Karim Ahmed | Roll: 102 | CGPA: 3.8
+      ```
+
+      Difference between class and object:
+
+   | Point | Class | Object |
+      |---|---|---|
+      | Definition | A blueprint or template that describes the data members and member functions of a category of things | An actual instance of a class, created from that blueprint |
+      | Nature | A logical entity; it is a description only | A physical entity; it exists in memory |
+      | Memory | No memory is allocated when a class is declared | Memory is allocated when an object is created |
+      | How many | Declared once | Many objects can be created from one class |
+      | Creation | With the keyword class | With the keyword new in Java, or by declaring a variable of the class type in C++ |
+      | Contains | Declarations of members | Actual values for those members |
+      | Analogy | The architect's plan of a house | The houses actually built from that plan |
+      | Example | class Student { ... } | Student s1 = new Student(); |
+
+   
+
+      Points specific to C++:
+      - Members are private by default in a class, and public by default in a struct.
+      - An object may be created on the stack, as Student s1(...), or on the heap, as Student* p = new Student(...), in which case it must be freed with delete.
+      - The size of an object is the sum of the sizes of its data members plus any padding; member functions are stored once for the whole class, not once per object.
 6. **What are the common activities on OOP design process?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 756 (ET: N/A)]*
 
+
+   Answer: The common activities in the object-oriented design process are the steps by which a problem statement is turned into a set of interacting classes.
+
+   - Identify the objects and classes: read the requirements and pick out the nouns. Each significant noun that has both state and behaviour is a candidate class, for example Student, Account, Book, Invoice.
+
+   - Identify the attributes: for each class, determine the data it must hold. These usually come from the descriptive nouns and adjectives in the requirements, for example a Student has a name, a roll number and a set of marks.
+
+   - Identify the methods (responsibilities): determine what each class must be able to do. These usually come from the verbs in the requirements, for example deposit, withdraw, calculateGrade, issueBook.
+
+   - Identify the relationships between classes:
+     - Inheritance, an "is-a" relationship, for example SavingsAccount is an Account.
+     - Association, a "uses-a" relationship, for example a Teacher teaches a Course.
+     - Aggregation, a "has-a" relationship in which the parts can exist independently, for example a Department has Teachers.
+     - Composition, a stronger "has-a" in which the parts cannot exist without the whole, for example a House has Rooms.
+     - Dependency, in which one class temporarily uses another.
+
+   - Determine the multiplicity of each relationship: one-to-one, one-to-many or many-to-many.
+
+   - Build a class hierarchy: place common attributes and behaviour in a base class and specialise in derived classes, so that code is not duplicated.
+
+   - Apply encapsulation: decide the access level of every member, keeping data private and exposing a minimal public interface.
+
+   - Identify abstractions: decide which classes should be abstract, and which behaviour should be expressed as an interface so that several unrelated classes can provide it.
+
+   - Design for polymorphism: identify the operations that different subclasses will perform differently, and declare them in the base class or interface so that client code can be written once.
+
+   - Draw the design diagrams: a UML class diagram showing classes, attributes, methods and relationships; a use case diagram for the requirements; a sequence diagram for the interaction of objects over time; and a state diagram where objects have significant life cycles.
+
+   - Define the interfaces between classes: fix the exact method signatures, so that different developers can work on different classes in parallel.
+
+   - Review the design against principles: high cohesion within a class, low coupling between classes, and the SOLID principles, in particular the single responsibility principle and the open-closed principle.
+
+   - Iterate and refine: object-oriented design is not a single pass. The model is revised as the requirements are better understood and as implementation reveals awkwardness.
+
+   - Implement and test: write the classes, unit-test each one independently, then test the interactions.
+
+   A simple worked identification: for the requirement "a library issues books to members, and a member may borrow up to five books at a time", the nouns Library, Book and Member become classes; issue and borrow become methods; the relationship between Member and Book is an association with multiplicity one to five; and the attribute "date of issue" belongs to the association itself, which suggests a fourth class, Loan.
 7. **Write a programme to create an object of type batsman and calculate the average runs scored by the player.** *[RAKUB Programmer (PO) 12.10.2021 compact it 846-847 (ET: N/A)]*
+
+
+   Answer: The program creates a Batsman class and calculates the batting average of a player.
+
+   The batting average in cricket is defined as total runs divided by the number of times out, not by the number of innings played. Both are shown below.
+
+   ```java
+   class Batsman {
+       private String name;
+       private int matches;
+       private int innings;
+       private int totalRuns;
+       private int notOuts;
+
+       public Batsman(String name, int matches, int innings, int totalRuns, int notOuts) {
+           this.name = name;
+           this.matches = matches;
+           this.innings = innings;
+           this.totalRuns = totalRuns;
+           this.notOuts = notOuts;
+       }
+
+       // official batting average: runs divided by dismissals
+       public double battingAverage() {
+           int dismissals = innings - notOuts;
+           if (dismissals == 0) {
+               return totalRuns;        // never dismissed
+           }
+           return (double) totalRuns / dismissals;
+       }
+
+       // simple average per innings
+       public double runsPerInnings() {
+           if (innings == 0) return 0;
+           return (double) totalRuns / innings;
+       }
+
+       public void display() {
+           System.out.printf("%-15s %-8d %-8d %-8d %-8d %-10.2f %-10.2f%n",
+                   name, matches, innings, totalRuns, notOuts,
+                   battingAverage(), runsPerInnings());
+       }
+   }
+
+   public class BatsmanDemo {
+       public static void main(String[] args) {
+           Batsman[] players = {
+               new Batsman("Tamim Iqbal",  241, 239, 8357, 11),
+               new Batsman("Shakib Al Hasan", 247, 233, 7570, 32),
+               new Batsman("Mushfiqur Rahim", 274, 254, 7795, 40)
+           };
+
+           System.out.printf("%-15s %-8s %-8s %-8s %-8s %-10s %-10s%n",
+                   "Name", "Matches", "Innings", "Runs", "NotOut", "Average", "Per Inn");
+           System.out.println("-------------------------------------------------------------------------");
+
+           for (Batsman b : players) {
+               b.display();
+           }
+
+           // finding the player with the highest average
+           Batsman best = players[0];
+           for (Batsman b : players) {
+               if (b.battingAverage() > best.battingAverage()) {
+                   best = b;
+               }
+           }
+           System.out.println("-------------------------------------------------------------------------");
+           System.out.print("Highest average: ");
+           best.display();
+       }
+   }
+   ```
+
+   Sample output (the figures are illustrative):
+   ```
+   Name            Matches  Innings  Runs     NotOut   Average    Per Inn
+   -------------------------------------------------------------------------
+   Tamim Iqbal     241      239      8357     11       36.65      34.97
+   Shakib Al Hasan 247      233      7570     32       37.66      32.49
+   Mushfiqur Rahim 274      254      7795     40       36.43      30.69
+   -------------------------------------------------------------------------
+   Highest average: Shakib Al Hasan 247      233      7570     32       37.66      32.49
+   ```
+
+   Points demonstrated:
+   - Class and object: Batsman is the blueprint, and an array of objects is created from it.
+   - Encapsulation: all the data members are private, and the statistics are obtained only through methods.
+   - The cast to double before the division, without which Java would perform integer division and discard the fractional part. This is the commonest error in average calculations.
+   - A guard against division by zero, for a batsman who has never been dismissed.
+   - The distinction between the official batting average and runs per innings, which is worth stating because they differ whenever there are not-outs.
 
 ## Encapsulation & Access Modifiers (6)
 
