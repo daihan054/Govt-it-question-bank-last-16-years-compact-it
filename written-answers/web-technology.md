@@ -2038,17 +2038,297 @@
 
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1426 (ET: E-Zone)]*
 
+
+   Answer: SOAP and RESTful APIs in web services.
+
+   SOAP, Simple Object Access Protocol, is a formal messaging protocol. Every message is an XML document with a fixed structure: an Envelope containing an optional Header and a mandatory Body. The service publishes a WSDL file that formally describes every operation, its parameters and its return type, so a client can be generated automatically from it.
+
+   REST, Representational State Transfer, is not a protocol but an architectural style. A RESTful API exposes resources at URLs and uses the standard HTTP methods on them: GET to read, POST to create, PUT to replace, PATCH to update and DELETE to remove. The data is normally exchanged as JSON.
+
+   One main difference in how they exchange data:
+
+   SOAP must use XML, wrapped in a rigid SOAP Envelope, for every message. REST is not tied to any one format and normally uses JSON, sent as a plain HTTP body with no envelope at all. The consequence is that a SOAP message carrying a single value may run to several hundred bytes of markup, while the equivalent REST message is a few dozen bytes, so REST is markedly lighter and faster over the network.
+
+   The same request in both styles:
+
+   ```xml
+   <!-- SOAP request -->
+   POST /BankService HTTP/1.1
+   Content-Type: text/xml; charset=utf-8
+   SOAPAction: "getBalance"
+
+   <?xml version="1.0"?>
+   <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+     <soap:Header>
+       <auth:Credentials xmlns:auth="http://bank.com/auth">
+         <auth:Token>abc123</auth:Token>
+       </auth:Credentials>
+     </soap:Header>
+     <soap:Body>
+       <getBalance xmlns="http://bank.com/">
+         <accountNumber>1234567890</accountNumber>
+       </getBalance>
+     </soap:Body>
+   </soap:Envelope>
+   ```
+
+   ```http
+   # REST request
+   GET /api/accounts/1234567890/balance HTTP/1.1
+   Host: api.bank.com
+   Authorization: Bearer abc123
+   Accept: application/json
+   ```
+
+   ```json
+   // REST response
+   { "accountNumber": "1234567890", "balance": 45000.50, "currency": "BDT" }
+   ```
+
+   Full comparison:
+
+   | Point | SOAP | REST |
+   |---|---|---|
+   | What it is | A protocol with a strict specification | An architectural style with a set of constraints |
+   | Full form | Simple Object Access Protocol | Representational State Transfer |
+   | Message format | XML only | JSON, XML, HTML, plain text or any format; JSON is usual |
+   | Transport | HTTP, SMTP, TCP, JMS | HTTP and HTTPS only |
+   | Message structure | Envelope with Header and Body, defined by the SOAP schema | A plain HTTP request and response |
+   | Contract | Formal, published as a WSDL file | Informal, usually documented with OpenAPI or Swagger |
+   | Bandwidth and speed | Heavy; the XML envelope adds a great deal of overhead | Light and fast |
+   | State | Can be stateful or stateless | Stateless by definition |
+   | Caching | Not cacheable | GET responses are cacheable |
+   | Security | Built-in WS-Security, offering message-level encryption and signing | Relies on HTTPS, OAuth 2.0, JWT and API keys, which is transport-level |
+   | Transactions | Supports ACID transactions through WS-AtomicTransaction | No built-in transaction support |
+   | Error handling | Standard SOAP Fault element | HTTP status codes: 200, 201, 400, 401, 404, 500 |
+   | Learning curve | Steep | Gentle |
+   | Flexibility | Rigid; any change to the WSDL affects every client | Flexible; new fields can be added without breaking clients |
+   | Suitable for | Banking, payment, telecom and enterprise systems needing guaranteed reliability and formal contracts | Web and mobile applications, public APIs, microservices |
+   | Example | A bank's fund transfer service | The Twitter, Google Maps or Facebook Graph API |
 2. **What is API?** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
+
+   Answer:    API stands for Application Programming Interface. It is a defined set of rules, functions and endpoints through which one piece of software talks to another. It states what requests can be made, in what format, and what response will come back, while hiding entirely how the work is done inside.
+
+   The everyday analogy: an API is like a restaurant waiter. The customer does not enter the kitchen; he gives an order to the waiter, the waiter carries it to the kitchen and brings back the food. The customer needs to know only the menu, which is the API contract, not how the kitchen works.
+
+   How it works, with a concrete case: a weather application on a phone does not measure the temperature itself. It sends a request to a weather service's API, and the service replies with the data.
+
+   ```http
+   GET https://api.weather.com/v1/current?city=Dhaka&key=YOUR_API_KEY
+   ```
+
+   ```json
+   {
+     "city": "Dhaka",
+     "temperature": 32,
+     "unit": "celsius",
+     "humidity": 78,
+     "condition": "Partly cloudy"
+   }
+   ```
+
+   The application takes that response and displays it. It never learns where the weather stations are or how the forecast is computed.
+
+   Types of API:
+   - Web API or REST API: accessed over HTTP, for example a weather service or a payment gateway.
+   - Library or framework API: the set of functions a library exposes, such as `Math.random()` in JavaScript.
+   - Operating system API: system calls such as `open()`, `read()` and `write()` on Linux, and the Win32 API on Windows.
+   - Database API: JDBC and ODBC, through which a program queries a database.
+   - Hardware API: device drivers that let software use a printer or a camera.
+
+   By openness: public or open APIs, available to anyone; partner APIs, given to selected business partners; internal or private APIs, used only inside an organisation; and composite APIs, which combine several calls into one.
+
+   Why APIs matter:
+   - Reuse: a developer need not build a payment system, a map or a translation engine; he calls an existing one.
+   - Abstraction: the caller works with a simple interface and is shielded from the complexity behind it.
+   - Integration: separate systems, written in different languages by different companies, can work together.
+   - Independent change: as long as the interface stays the same, the provider can rewrite the implementation entirely.
+   - Security: the API controls exactly what a caller can see and do; direct access to the database is never given.
+   - Speed of development, which is why almost every modern application is assembled largely from APIs.
+
+   Familiar examples in daily use: Google Maps embedded in a delivery app, "Log in with Google" or "Log in with Facebook", bKash and SSLCOMMERZ payment APIs, an SMS gateway API, and the ChatGPT API.
 3. **What is an API?** *[BBA Assistant Programmer 12.07.2025 compact it 1432 (ET: BUET)]*
 
+
+   Answer:    API stands for Application Programming Interface. It is a defined set of rules, functions and endpoints through which one piece of software talks to another. It states what requests can be made, in what format, and what response will come back, while hiding entirely how the work is done inside.
+
+   The everyday analogy: an API is like a restaurant waiter. The customer does not enter the kitchen; he gives an order to the waiter, the waiter carries it to the kitchen and brings back the food. The customer needs to know only the menu, which is the API contract, not how the kitchen works.
+
+   An example that shows the contract clearly. A REST API for a student record system might publish these endpoints:
+
+   | Method and endpoint | What it does |
+   |---|---|
+   | `GET /api/students` | Return the list of all students |
+   | `GET /api/students/101` | Return the student whose id is 101 |
+   | `POST /api/students` | Create a new student from the JSON body |
+   | `PUT /api/students/101` | Replace the record of student 101 |
+   | `DELETE /api/students/101` | Delete student 101 |
+
+   ```json
+   // GET /api/students/101  →  200 OK
+   {
+     "id": 101,
+     "name": "Karim Rahman",
+     "department": "CSE",
+     "cgpa": 3.75
+   }
+   ```
+
+   The caller needs to know only these URLs and this JSON shape. Whether the data sits in MySQL or MongoDB, and whether the service is written in Java or Python, is invisible and can be changed at any time.
+
+   Types of API:
+   - Web API or REST API: accessed over HTTP, for example a weather service or a payment gateway.
+   - Library or framework API: the set of functions a library exposes, such as `Math.random()` in JavaScript.
+   - Operating system API: system calls such as `open()`, `read()` and `write()` on Linux, and the Win32 API on Windows.
+   - Database API: JDBC and ODBC, through which a program queries a database.
+   - Hardware API: device drivers that let software use a printer or a camera.
+
+   By openness: public or open APIs, available to anyone; partner APIs, given to selected business partners; internal or private APIs, used only inside an organisation; and composite APIs, which combine several calls into one.
+
+   Key benefits: reuse of existing services, abstraction of complexity, integration between systems built by different organisations, controlled and auditable access to data, and much faster development.
 4. **Write difference between REST API and SOAP API.** *[BKSP Assistant Programmer 13.07.2024 compact it 1460 (ET: N/A)]*
 
+
+   Answer: Difference between REST API and SOAP API.
+
+   | Point | SOAP | REST |
+   |---|---|---|
+   | What it is | A protocol with a strict specification | An architectural style with a set of constraints |
+   | Full form | Simple Object Access Protocol | Representational State Transfer |
+   | Message format | XML only | JSON, XML, HTML, plain text or any format; JSON is usual |
+   | Transport | HTTP, SMTP, TCP, JMS | HTTP and HTTPS only |
+   | Message structure | Envelope with Header and Body, defined by the SOAP schema | A plain HTTP request and response |
+   | Contract | Formal, published as a WSDL file | Informal, usually documented with OpenAPI or Swagger |
+   | Bandwidth and speed | Heavy; the XML envelope adds a great deal of overhead | Light and fast |
+   | State | Can be stateful or stateless | Stateless by definition |
+   | Caching | Not cacheable | GET responses are cacheable |
+   | Security | Built-in WS-Security, offering message-level encryption and signing | Relies on HTTPS, OAuth 2.0, JWT and API keys, which is transport-level |
+   | Transactions | Supports ACID transactions through WS-AtomicTransaction | No built-in transaction support |
+   | Error handling | Standard SOAP Fault element | HTTP status codes: 200, 201, 400, 401, 404, 500 |
+   | Learning curve | Steep | Gentle |
+   | Flexibility | Rigid; any change to the WSDL affects every client | Flexible; new fields can be added without breaking clients |
+   | Suitable for | Banking, payment, telecom and enterprise systems needing guaranteed reliability and formal contracts | Web and mobile applications, public APIs, microservices |
+   | Example | A bank's fund transfer service | The Twitter, Google Maps or Facebook Graph API |
+
+   The six architectural constraints that make an API RESTful:
+   - Client-server: the interface separates the client from the data storage.
+   - Stateless: every request carries all the information needed; the server keeps no session.
+   - Cacheable: responses declare whether they may be cached.
+   - Uniform interface: resources are identified by URLs and manipulated through the standard HTTP methods.
+   - Layered system: the client cannot tell whether it is connected to the end server or to an intermediary.
+   - Code on demand, optional: the server may send executable code.
+
+   When to choose which:
+   - Choose SOAP where a formal contract, message-level security, guaranteed delivery or distributed transactions are required. Interbank transfers, telecom provisioning and government-to-government exchanges are typical.
+   - Choose REST for public APIs, mobile and web front ends, and microservices, where speed, simplicity and low bandwidth matter more than formal guarantees. This is the default for new work.
+   - GraphQL and gRPC are the newer alternatives: GraphQL lets the client ask for exactly the fields it needs in one request, and gRPC uses binary Protocol Buffers over HTTP/2 for very fast internal service-to-service calls.
 5. **What is API? Explain with example.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
+
+   Answer:    API stands for Application Programming Interface. It is a defined set of rules, functions and endpoints through which one piece of software talks to another. It states what requests can be made, in what format, and what response will come back, while hiding entirely how the work is done inside.
+
+   The everyday analogy: an API is like a restaurant waiter. The customer does not enter the kitchen; he gives an order to the waiter, the waiter carries it to the kitchen and brings back the food. The customer needs to know only the menu, which is the API contract, not how the kitchen works.
+
+   Example 1 — a payment gateway API. An online shop does not process card payments itself. It calls the gateway's API:
+
+   ```http
+   POST https://api.sslcommerz.com/v3/payment
+   Content-Type: application/json
+   Authorization: Bearer STORE_API_KEY
+
+   {
+     "store_id": "shop123",
+     "amount": 2500.00,
+     "currency": "BDT",
+     "tran_id": "ORD-90871",
+     "success_url": "https://myshop.com/success",
+     "fail_url": "https://myshop.com/fail"
+   }
+   ```
+
+   ```json
+   {
+     "status": "SUCCESS",
+     "sessionkey": "F7A2C91B3D",
+     "GatewayPageURL": "https://securepay.sslcommerz.com/gwprocess/v4/F7A2C91B3D"
+   }
+   ```
+
+   The shop redirects the customer to that page. It never touches the card number, which is precisely why using the API is safer and cheaper than building the payment system.
+
+   Example 2 — a library API inside a program. Every function a library exposes is an API:
+
+   ```javascript
+   Math.max(5, 9, 3);              // 9
+   JSON.parse('{"a":1}');          // { a: 1 }
+   document.getElementById("x");   // the DOM API
+   ```
+
+   The caller uses `Math.max` without knowing how the comparison is implemented.
+
+   Example 3 — a REST API for a student record system:
+
+   | Method and endpoint | What it does |
+   |---|---|
+   | `GET /api/students` | Return all students |
+   | `GET /api/students/101` | Return student 101 |
+   | `POST /api/students` | Create a student |
+   | `PUT /api/students/101` | Replace student 101 |
+   | `DELETE /api/students/101` | Delete student 101 |
+
+   Types of API:
+   - Web API or REST API: accessed over HTTP, for example a weather service or a payment gateway.
+   - Library or framework API: the set of functions a library exposes, such as `Math.random()` in JavaScript.
+   - Operating system API: system calls such as `open()`, `read()` and `write()` on Linux, and the Win32 API on Windows.
+   - Database API: JDBC and ODBC, through which a program queries a database.
+   - Hardware API: device drivers that let software use a printer or a camera.
+
+   By openness: public or open APIs, available to anyone; partner APIs, given to selected business partners; internal or private APIs, used only inside an organisation; and composite APIs, which combine several calls into one.
+
+   Advantages: reuse of ready-made services, abstraction of internal complexity, integration between systems written in different languages, freedom to change the implementation without breaking callers, controlled and auditable access to data instead of direct database access, and much faster development.
 6. **What is the two prime advantages of RESTful API?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 756 (ET: N/A)]*
 
+
+   Answer: The two prime advantages of a RESTful API are statelessness, which gives scalability, and the uniform interface, which gives simplicity and wide interoperability.
+
+   1. Statelessness, and therefore scalability
+
+   Every request carries all the information the server needs, and the server stores nothing about the client between requests. The consequences are the decisive practical advantages:
+   - Any server in a farm can serve any request, so a load balancer can send traffic anywhere. Adding capacity is simply a matter of adding servers, which is horizontal scaling.
+   - No server memory is consumed per connected client, so one machine serves far more users.
+   - If a server crashes, nothing is lost; the client simply repeats the request against another server.
+   - Responses to GET are cacheable, at the browser, at a proxy and at a CDN, which removes load from the server entirely.
+
+   2. Uniform interface, and therefore simplicity and interoperability
+
+   A RESTful API exposes resources at URLs and acts on them with the standard HTTP methods, using standard status codes and normally JSON.
+   - Any client that speaks HTTP can use it: a browser, a mobile application, a desktop program, another server, or a command-line tool. No special library and no generated stub is needed.
+   - The API is largely self-explanatory. `GET /api/students/101` needs no documentation to be understood, whereas a SOAP operation name does.
+   - The same back end serves a web front end, an Android app and an iOS app, so the business logic is written once.
+   - JSON is light, so requests and responses are small, which matters greatly on mobile networks.
+   - It is language-independent: the server may be in Java and the client in JavaScript, and neither needs to know.
+
+   Further advantages worth listing if the question allows more than two: it is lightweight compared with SOAP's XML envelopes; the layered architecture allows proxies, gateways and caches to be inserted transparently; it evolves easily, since new fields can be added without breaking existing clients; and it is the natural fit for a microservices architecture.
 7. **What is API?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
+
+
+   Answer:    API stands for Application Programming Interface. It is a defined set of rules, functions and endpoints through which one piece of software talks to another. It states what requests can be made, in what format, and what response will come back, while hiding entirely how the work is done inside.
+
+   The everyday analogy: an API is like a restaurant waiter. The customer does not enter the kitchen; he gives an order to the waiter, the waiter carries it to the kitchen and brings back the food. The customer needs to know only the menu, which is the API contract, not how the kitchen works.
+
+   A concrete example: a shopping application shows the delivery route on a map. It does not draw the map itself; it calls the Google Maps API with the two addresses and receives back the route, which it then displays.
+
+   Types of API:
+   - Web API or REST API: accessed over HTTP, for example a weather service or a payment gateway.
+   - Library or framework API: the set of functions a library exposes, such as `Math.random()` in JavaScript.
+   - Operating system API: system calls such as `open()`, `read()` and `write()` on Linux, and the Win32 API on Windows.
+   - Database API: JDBC and ODBC, through which a program queries a database.
+   - Hardware API: device drivers that let software use a printer or a camera.
+
+   By openness: public or open APIs, available to anyone; partner APIs, given to selected business partners; internal or private APIs, used only inside an organisation; and composite APIs, which combine several calls into one.
+
+   Why APIs are used: they let a developer reuse an existing service instead of rebuilding it, hide complexity behind a simple interface, allow systems written in different languages by different organisations to work together, and give controlled, auditable access to data without exposing the database.
 
 ## Full Stack & Backend Web Development (5)
 
