@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 120 questions
+**Table of Contents** — 6 subtopics · 122 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [বাংলা ব্যাকরণ ও সাহিত্য](#বাংলা-ব্যাকরণ-ও-সাহিত্য-61) | 61 |
-| 2 | [Focus Writing](#focus-writing-23) | 23 |
-| 3 | [Translation](#translation-18) | 18 |
+| 2 | [Focus Writing](#focus-writing-24) | 24 |
+| 3 | [Translation](#translation-19) | 19 |
 | 4 | [পত্র লিখন](#পত্র-লিখন-7) | 7 |
 | 5 | [সারমর্ম / সারাংশ](#সারমর্ম--সারাংশ-6) | 6 |
 | 6 | [এক কথায় প্রকাশ (One Word Substitution)](#এক-কথায়-প্রকাশ-one-word-substitution-5) | 5 |
@@ -155,7 +155,7 @@
 
 61. **৭. চক্রবাক কাব্যগ্রন্থ কার লেখা?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
-## Focus Writing (23)
+## Focus Writing (24)
 
 1. Focus Writing in Bangla: "বাংলাদেশের অর্থনীতিতে মোবাইল ব্যাংকিং: সম্ভাবনা, বাধা ও উত্তরণের উপায়" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
@@ -203,7 +203,9 @@
 
 23. **Bangla রচনা: সামাজিক মূল্যবোধ বৃদ্ধিতে দেশীয় সংস্কৃতি গুরুত্ব ব্যাখ্যা কর।** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
-## Translation (18)
+24. **কোভিড-১৯ এর ক্ষতিকারক প্রভাব মোকাবেলায় তথ্য প্রযুক্তির প্রয়োগ ও ভূমিকার উপর একটি সংক্ষিপ্ত রচনা বাংলায় লিখুন।** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+## Translation (19)
 
 1. Translate the following passage into Bangla:
 "The boy found a lost wallet on his way to school. Instead of keeping it, he looked for the owner and returned it. The owner, impressed by his honesty, offered him a reward. The boy politely refused, saying that honesty is its own reward." *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
@@ -251,6 +253,9 @@ Words have a lot of power. They can help or hint, bless or curse. Unkind words d
 17. **৪. বাংলায় অনুবাদ করুন: Cleanliness is a virtue. It is the habit of keeping the body and all other things free from dirts. Without a clean body one cannot have a merry mind. Cleanliness keeps health. It is also a mark of politeness. Good health keeps mind healthy.** *[Software Assistant Programmer 13.10.2022 compact it 711 (ET: N/A)]*
 
 18. **English to Bangla: Global Economic debt pandemic.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
+
+19. **Translate the following passage into Bengali.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+Honoring three medical scientists with the Nobel Medicine Prize 2020 for their homing in on the Hepatitis C has been widely acclaimed as a landmark achievement on the part of the Nobel Assembly at Karolinska Institutet. Awards like this will, undoubtedly, help the Nobel Committee regain a remarkable amount of its earlier prestige tainted by a couple of its decisions and internal scandals. The three Medicine award winners for this year are Americans Harvey Alter and Charles Rice along with Briton Michael Houghton. The world's medicinal research community has enough reasons to feel elated over the recognition extended to the trio. Their joint discovery had turned the page on protracted efforts to find a remedy to Hepatitis C. It is probably the deadliest of the blood-borne hepatitis after Hepatitis A and B.
 
 ## পত্র লিখন (7)
 

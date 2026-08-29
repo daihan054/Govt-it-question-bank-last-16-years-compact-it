@@ -333,7 +333,7 @@ return 0;
 
 81. **(ii) if......else statement এর format লিখ। 1+3+5+7+\dots+n সিরিজটির যোগফল নির্ণয়ের জন্য C-language এ একটি প্রোগ্রাম লিখ।** *[BPSC Assistant Network Engineer 2020 compact it 955 (ET: N/A)]*
 
-82. **An employee’s total weekly pay is calculated by multiplying the hourly wage and number of regular hours plus any overtime pays which in turn is calculated as total overtime hours multiplied by 1.5 times the hourly wage. Write a program that takes as inputs the hourly wage, total regular hours, and total overtime hours and prints an employee’s total weekly pay.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]*
+82. **An employee’s total weekly pay is calculated by multiplying the hourly wage and number of regular hours plus any overtime pays which in turn is calculated as total overtime hours multiplied by 1.5 times the hourly wage. Write a program that takes as inputs the hourly wage, total regular hours, and total overtime hours and prints an employee’s total weekly pay.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 83. **Write a C program: 1+2^n+3^n+4^n+\dots\dots\dots\dots+n^n (where n>0).** *[NACTAR Assistant Instructor (ICT) 2020 compact it 990-991 (ET: N/A)]*
 
@@ -871,7 +871,7 @@ int main() {
 
 31. **(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।** *[BPSC Assistant Network Engineer 2020 compact it 954 (ET: N/A)]*
 
-32. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]*
+32. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 ## Operators, Data Types & Language Concepts (17)
 

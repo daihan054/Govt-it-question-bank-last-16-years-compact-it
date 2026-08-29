@@ -1,7 +1,7 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **2667** questions.
+Sorted by count, highest first. Total **2671** questions.
 
 ## IT questions
 
@@ -236,7 +236,7 @@ Total: **2137** questions.
 
 ## General Questions
 
-Total: **530** questions.
+Total: **534** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -245,17 +245,17 @@ Total: **530** questions.
 | | International Affairs | 70 |
 | | Everyday Science & Environment | 22 |
 | | Banking & ICT Abbreviations | 8 |
-| **Bangla** | **— all subcategories —** | **120** |
+| **Bangla** | **— all subcategories —** | **122** |
 | | বাংলা ব্যাকরণ ও সাহিত্য | 61 |
-| | Focus Writing | 23 |
-| | Translation | 18 |
+| | Focus Writing | 24 |
+| | Translation | 19 |
 | | পত্র লিখন | 7 |
 | | সারমর্ম / সারাংশ | 6 |
 | | এক কথায় প্রকাশ (One Word Substitution) | 5 |
-| **English** | **— all subcategories —** | **108** |
-| | Focus Writing | 34 |
+| **English** | **— all subcategories —** | **110** |
+| | Focus Writing | 35 |
 | | English Grammar | 29 |
-| | Translation | 17 |
+| | Translation | 18 |
 | | Idioms & Phrases | 9 |
 | | English Vocabulary & Antonyms | 7 |
 | | Letter & Application Writing | 6 |

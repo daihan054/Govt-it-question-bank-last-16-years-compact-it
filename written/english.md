@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 108 questions
+**Table of Contents** — 8 subtopics · 110 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Focus Writing](#focus-writing-34) | 34 |
+| 1 | [Focus Writing](#focus-writing-35) | 35 |
 | 2 | [English Grammar](#english-grammar-29) | 29 |
-| 3 | [Translation](#translation-17) | 17 |
+| 3 | [Translation](#translation-18) | 18 |
 | 4 | [Idioms & Phrases](#idioms--phrases-9) | 9 |
 | 5 | [English Vocabulary & Antonyms](#english-vocabulary--antonyms-7) | 7 |
 | 6 | [Letter & Application Writing](#letter--application-writing-6) | 6 |
@@ -16,7 +16,7 @@
 
 ---
 
-## Focus Writing (34)
+## Focus Writing (35)
 
 1. Focus Writing in English: "The Role of Sustainable Banking in Achieving the UN Sustainable Development Goals (SDGs) in Bangladesh." *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
@@ -87,6 +87,8 @@
 33. **Some people may think that long-term imprisonment is helpful in reducing crime, and some people think that there are other options to reduce crime. Discuss both vies and your opinion with an example?** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
 34. **Write an Essay: Climate change Impact in Bangladesh.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
+
+35. **Write a paragraph on “Post-corona Green Recovery Plans and Progress in Bangladesh” in English.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 ## English Grammar (29)
 
@@ -180,7 +182,7 @@ ii. The data were collected and it were analyzed carefully.
 
 29. **১০. Since we grow the locally, we need not to _____ it.** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
-## Translation (17)
+## Translation (18)
 
 1. Translate the following passage into English:
 "এক কুখ্যাত চোর একটি আঙুর ক্ষেতের পাশ দিয়ে যাচ্ছিল। উঁচুতে ঝুলানো আঙুর দেখে সে তা খাওয়ার চেষ্টা করল, কিন্তু বারবার চেষ্টা করেও ব্যর্থ হলো। অবশেষে সে হতাশ হয়ে চলে গেল। যাওয়ার সময় বলল, আঙুরগুলো আসলেও টক।" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
@@ -221,6 +223,9 @@ ii. The data were collected and it were analyzed carefully.
 16. **৯. মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের নাম ইংরেজিতে লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
 17. **বঙ্গবন্ধুকে নিয়ে চারটি বাংলা বাক্য ছিলো, সেগুলোর ইংরেজিতে ট্রান্সলেশন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+18. **Translate the following passage into English.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+করোনার টিকা বাজারে এলে দেশের সবার জন্য তা সংগ্রহ করতে চায় সরকার। ধারণা করা হচ্ছে, সবার জন্য টিকা সংগ্রহে ১৭ হাজার কোটি টাকার প্রয়োজন হবে। এই অর্থ সংগ্রহে উন্নয়ন সহযোগীদের সহায়তা চাওয়ার সিদ্ধান্ত নিয়েছে সরকার। ধারণা করা হচ্ছে, জনপ্রতি দুই ডোজ টিকার প্রয়োজন হতে পারে। এর দাম পড়তে পারে ১০ থেকে ১২ ডলার বা কমবেশি এক হাজার টাকা। পরিসংখ্যান ব্যুরো (বিবিএস) তথ্য অনুযায়ী দেশের জনসংখ্যা এখন ১৬ কোটি ৫০ লাখ। সে হিসাবে মোট ১৭ হাজার ২০০ কোটি টাকার প্রয়োজন হবে। স্বাস্থ্য মন্ত্রণালয় থেকে প্রাথমিক এই হিসাব করা হয়েছে বলে ইতোমধ্যে সূত্র জানিয়েছে। এই অর্থের চাহিদা মাথায় রেখেই উন্নয়ন সহযোগীদের সহায়তা চাওয়া হচ্ছে।
 
 ## Idioms & Phrases (9)
 

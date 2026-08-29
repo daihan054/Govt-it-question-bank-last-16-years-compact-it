@@ -198,9 +198,9 @@
 
 14. **(ii) E-Commerce কী? E-Commerce-এর প্রকারভেদ উল্লেখ করুন। Search engine কী? এর কয়েকটি উদাহরণ দিন।** *[BPSC Assistant Network Engineer 2020 compact it 956, 958 (ET: N/A)]*
 
-15. **Make a list of banking software used in Bangladesh. List the essential features for successful Banking Software and Apps.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 986-987 (ET: DU)]*
+15. **Make a list of banking software used in Bangladesh. List the essential features for successful Banking Software and Apps.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 986-987 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-16. **RFID has huge applications in business, especially in supply chain management and toll collection system. Show the basic working principle of RFID in brief.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 987-988 (ET: DU)]*
+16. **RFID has huge applications in business, especially in supply chain management and toll collection system. Show the basic working principle of RFID in brief.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 987-988 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 17. **a) What is E-Government? How can E-Government be implemented through the vision of Digital Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
 
