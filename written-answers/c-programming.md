@@ -3258,37 +3258,275 @@ int main() {
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
+
+   Answer: The two forms differ because `sizeof` is an operator, not a function.
+
+   - `sizeof c + 1` is parsed as `(sizeof c) + 1`, because `sizeof` binds more tightly than `+`. So the size of c is computed first and then 1 is added. If c is a char, the result is 1 + 1 = 2.
+   - `sizeof (c + 1)` computes the size of the whole expression `c + 1`. Due to integer promotion, `c + 1` is an int, so the result is the size of an int, normally 4.
+   - So for `char c`, the first gives 2 and the second gives 4.
 2. **What is the difference between Null and Void?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | NULL | void |
+   |---|---|---|
+   | What it is | A macro representing a null pointer constant, value 0 | A data type keyword meaning no type or no value |
+   | Where used | Assigned to pointers, `int *p = NULL;` | Return type, parameter list or generic pointer |
+   | Defined in | `stddef.h`, also available via `stdio.h` | Built into the language |
+   | Meaning | The pointer points to nothing | The function returns nothing, or the pointer type is unspecified |
+   | Example | `if (p == NULL)` | `void display(void)` or `void *ptr` |
+
+   - `void *` is a generic pointer that can hold the address of any data type but cannot be dereferenced without a cast.
 3. **What can be used to terminate for(;;)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: `for(;;)` is an infinite loop, since the condition part is empty and is therefore treated as always true. It can be terminated in the following ways.
+
+   - `break;` immediately exits the loop and control moves to the statement after it. This is the normal way.
+   - `return;` exits the entire function, so the loop ends as well.
+   - `goto label;` jumps out of the loop to a labelled statement.
+   - `exit(0);` terminates the whole program.
+   - Raising a condition that calls `abort()` or causes the process to stop also ends it, but that is not a normal programming practice.
+
+   Example:
+   ```c
+   for(;;) {
+       scanf("%d", &n);
+       if (n == 0) break;
+       printf("%d\n", n);
+   }
+   ```
 4. **What will occur when an array is declared without size?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: The result depends on whether the array is initialised at the same time.
+
+   - If it is declared with an initialiser list, for example `int a[] = {1, 2, 3, 4};`, the compiler counts the initialisers and sets the size automatically, here 4. This is perfectly valid.
+   - If it is declared without a size and without an initialiser, for example `int a[];`, it is an incomplete type. Inside a function this is a compile time error.
+   - At file scope `int a[];` is a tentative definition and the compiler may assume size 1, but this is poor practice.
+   - As a function parameter, `void f(int a[])` is allowed, because the array decays into a pointer and the size is not needed.
 5. **(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 601 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Local variable | Global variable |
+   |---|---|---|
+   | Where declared | Inside a function or block | Outside all functions |
+   | Scope | Only within that function or block | Throughout the whole program |
+   | Lifetime | Created on entry, destroyed on exit | Exists for the entire run of the program |
+   | Default value | Garbage if not initialised | Automatically initialised to 0 |
+   | Storage | Stack | Data segment |
+   | Access from other functions | Not possible | Possible |
+   | Safety | Safer, no accidental modification | Risky, any function can change it |
+
+   - Local variables are preferred because they limit the effect of a change to one function, which makes debugging easier.
 6. **(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
+
+   Answer: Yes, 32678 can be stored in an `int`, but it cannot be stored in a `short int` on most systems.
+
+   - A 2 byte signed integer holds values from −32768 to 32767, so 32678 fits in that range since it is smaller than 32767.
+   - On modern compilers `int` is 4 bytes, with a range of about −2.1 billion to +2.1 billion, so there is no problem at all.
+   - If the value were 32768 or larger and a 2 byte `short int` were used, overflow would occur and the stored value would wrap around to a negative number.
+   - For such larger values `long int` or `unsigned int` should be used.
 7. **(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | ++i (pre-increment) | i++ (post-increment) |
+   |---|---|---|
+   | When the value changes | Increments first, then the value is used | The old value is used first, then it increments |
+   | Value of the expression | The new value | The old value |
+   | Example with i = 5 | `x = ++i;` gives x = 6, i = 6 | `x = i++;` gives x = 5, i = 6 |
+
+   - As a standalone statement `i++;` and `++i;` behave identically, the difference matters only when the value is used in an expression.
 8. **What is the main difference between structure and array in C programming? Explain with examples.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Array | Structure |
+   |---|---|---|
+   | Data type of members | All elements must be of the same type | Members may be of different types |
+   | Declaration | `int a[5];` | `struct student { int roll; char name[20]; float cgpa; };` |
+   | Memory | Elements are stored in contiguous memory | Members are stored together but may have padding between them |
+   | Access | By index, `a[2]` | By member name using dot, `s.roll` |
+   | Size | size of one element × number of elements | sum of member sizes plus padding |
+   | Assignment | Cannot copy one whole array with `=` | One structure can be assigned to another with `=` |
+   | Use | A list of similar values, such as marks of 50 students | A record of one entity, such as one student's full information |
+
+   - Example of use together: `struct student s[50];` is an array of structures holding records of 50 students.
 9. **Difference between array and structure data type.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Array | Structure |
+   |---|---|---|
+   | Data type of members | All elements must be of the same type | Members may be of different types |
+   | Declaration | `int a[5];` | `struct student { int roll; char name[20]; float cgpa; };` |
+   | Memory | Elements are stored in contiguous memory | Members are stored together but may have padding between them |
+   | Access | By index, `a[2]` | By member name using dot, `s.roll` |
+   | Size | size of one element × number of elements | sum of member sizes plus padding |
+   | Assignment | Cannot copy one whole array with `=` | One structure can be assigned to another with `=` |
+   | Use | A list of similar values, such as marks of 50 students | A record of one entity, such as one student's full information |
 10. **Write down the types of errors which can occur the execution of a program.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
+
+    Answer: Errors that can occur in a program are of the following types.
+
+    - Syntax errors: violations of the grammar of the language, such as a missing semicolon or unmatched brace. The compiler detects them and the program does not compile.
+    - Semantic errors: the syntax is correct but the meaning is wrong, for example using an undeclared variable or wrong type assignment.
+    - Linker errors: the code compiles but a required function or symbol is not found, such as a wrong `main` signature or a missing library.
+    - Runtime errors: they appear while the program is running, for example division by zero, array index out of range, dereferencing a null pointer or stack overflow.
+    - Logical errors: the program runs and produces output, but the output is wrong because the algorithm itself is faulty. These are the hardest to find, because the compiler gives no message.
 11. **Write the syntax of while and do while loop.** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+
+    Answer:
+
+    while loop:
+    ```c
+    while (condition) {
+        statements;
+    }
+    ```
+
+    do-while loop:
+    ```c
+    do {
+        statements;
+    } while (condition);
+    ```
+
+    - The while loop checks the condition before executing the body, so the body may run zero times.
+    - The do-while loop checks the condition after executing the body, so the body always runs at least once.
+    - Note the semicolon after `while (condition)` in the do-while form, which is compulsory.
 12. **What is nested structure in C programming? Explain with example.** *[SPCB Sub-Assistant Programmer 2022 compact it 741 (ET: N/A)]*
 
+
+    Answer: A nested structure is a structure that contains another structure as one of its members. It is used when one record naturally contains a smaller record inside it.
+
+    Example:
+    ```c
+    #include <stdio.h>
+
+    struct Date {
+        int day, month, year;
+    };
+
+    struct Employee {
+        int id;
+        char name[30];
+        struct Date joining;      // nested structure
+    };
+
+    int main() {
+        struct Employee e = {101, "Rahim", {15, 7, 2020}};
+        printf("%s joined on %d-%d-%d",
+               e.name, e.joining.day, e.joining.month, e.joining.year);
+        return 0;
+    }
+    ```
+
+    - The inner member is accessed with two dots, as in `e.joining.day`.
+    - The inner structure must be declared before it is used inside the outer one.
+    - Nesting keeps related data grouped logically and makes the code easier to read.
 13. **(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 784 (ET: N/A)]*
 
+
+    Answer:
+
+    | Point | Array | Structure |
+    |---|---|---|
+    | Data type of members | All elements must be of the same type | Members may be of different types |
+    | Declaration | `int a[5];` | `struct student { int roll; char name[20]; float cgpa; };` |
+    | Memory | Elements are stored in contiguous memory | Members are stored together but may have padding between them |
+    | Access | By index, `a[2]` | By member name using dot, `s.roll` |
+    | Size | size of one element × number of elements | sum of member sizes plus padding |
+    | Assignment | Cannot copy one whole array with `=` | One structure can be assigned to another with `=` |
+    | Use | A list of similar values, such as marks of 50 students | A record of one entity, such as one student's full information |
 14. **Write some default data type in C.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
 
+
+    Answer: The default or basic data types available in C are the following.
+
+    - `int` — whole numbers, normally 4 bytes, range about −2,147,483,648 to 2,147,483,647, specifier `%d`.
+    - `char` — a single character, 1 byte, range −128 to 127, specifier `%c`.
+    - `float` — single precision real number, 4 bytes, about 6 decimal digits of precision, specifier `%f`.
+    - `double` — double precision real number, 8 bytes, about 15 decimal digits, specifier `%lf`.
+    - `void` — represents the absence of a value, used for functions that return nothing.
+
+    - These can be modified by `short`, `long`, `signed` and `unsigned` to change the size or range, for example `unsigned int` or `long double`.
 15. **Write the difference between Structure and Array.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
+
+    Answer:
+
+    | Point | Array | Structure |
+    |---|---|---|
+    | Data type of members | All elements must be of the same type | Members may be of different types |
+    | Declaration | `int a[5];` | `struct student { int roll; char name[20]; float cgpa; };` |
+    | Memory | Elements are stored in contiguous memory | Members are stored together but may have padding between them |
+    | Access | By index, `a[2]` | By member name using dot, `s.roll` |
+    | Size | size of one element × number of elements | sum of member sizes plus padding |
+    | Assignment | Cannot copy one whole array with `=` | One structure can be assigned to another with `=` |
+    | Use | A list of similar values, such as marks of 50 students | A record of one entity, such as one student's full information |
 16. **Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Control structure in C programming (vi) Stack (vii) Debugging (viii) Increment and Decrement process in C programming (ix) Object in C++ (x) Data encapsulation** *[National University Assistant Programmer 2020 compact it 978-980 (ET: DU)]*
 
+
+    Answer:
+
+    (i) Difference between ++i and i++
+
+    | Point | ++i | i++ |
+    |---|---|---|
+    | Order | Increments first, then uses the value | Uses the old value first, then increments |
+    | Expression value | The new value | The old value |
+    | With i = 5 | `x = ++i` gives x = 6 | `x = i++` gives x = 5 |
+
+    (ii) Difference between Overloading and Overriding
+
+    | Point | Overloading | Overriding |
+    |---|---|---|
+    | Definition | Same function name with different parameter lists in the same class | A derived class redefines a base class function with the same signature |
+    | Binding | Compile time, also called static binding | Run time, also called dynamic binding |
+    | Inheritance | Not required | Required |
+    | Parameters | Must differ in number or type | Must be exactly the same |
+    | Keyword in C++ | None needed | The base function should be `virtual` |
+
+    (iii) Polymorphism
+
+    - Polymorphism means one interface taking many forms, so the same function name behaves differently depending on the context.
+    - Compile time polymorphism is achieved by function overloading and operator overloading.
+    - Run time polymorphism is achieved by function overriding using virtual functions and base class pointers.
+    - It is one of the four pillars of object oriented programming, along with encapsulation, inheritance and abstraction.
 17. **নিচের if-else কে switch case এ পরিনত করুন। if(ch== 'A':: ch== 'E' :: ch== 'I' :: ch == 'O':: ch== 'U')** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
+
+
+    Answer: The if-else checks whether the character is a vowel. The equivalent switch-case is written by letting all vowel cases fall through to one common statement.
+
+    ```c
+    switch (ch) {
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+            printf("It is a vowel");
+            break;
+        default:
+            printf("It is not a vowel");
+            break;
+    }
+    ```
+
+    - Cases 'A' to 'O' have no `break`, so control falls through to the statement written under 'U'. This is how an OR condition is expressed in a switch.
+    - `default` plays the role of the `else` part.
+    - To handle small letters as well, the cases 'a', 'e', 'i', 'o', 'u' can be added in the same fall through group.
 
 ## Flowcharts & Algorithms (12)
 
