@@ -583,8 +583,8 @@
    - A comment delimiter inside a string literal is not a comment. `printf("http://example.com")` contains `//` but it is part of the string, so the scanner must recognise string literals first.
    - A comment marker inside another comment: in C, `/* ... /* ... */` ends at the first `*/`, because block comments do not nest. Some languages, such as Scala, do allow nesting, and then the scanner must count the depth.
    - An unterminated block comment must be reported as a lexical error rather than silently swallowing the rest of the file.
-   - Documentation comments such as Javadoc or `/** ... */` are discarded by the compiler but read by a separate documentation tool.
-   - The C preprocessor removes comments before the compiler proper sees the file, replacing each with a single space, which is why `a/**/b` is two tokens and not one.
+   - Documentation comments, that is the Javadoc style block comment that opens with a slash and two asterisks, are discarded by the compiler but read by a separate documentation tool.
+   - The C preprocessor removes comments before the compiler proper sees the file, replacing each with a single space, which is why an identifier split by an empty block comment becomes two tokens and not one.
 
    Consequence:
    - Since comments are removed at the very first phase, they take no space in the executable, cost nothing at run time, and cannot influence the program's behaviour in any way.
