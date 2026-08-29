@@ -992,37 +992,130 @@ ii. The data were collected and it were analyzed carefully.
 
 1. **What is the meaning of “see eye to eye”?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: "See eye to eye" means to agree completely with someone, to share the same opinion.
+
+   Sentence: The two ministers do not see eye to eye on the new tax policy.
 2. **Make sentences with the following (any five): (a) keep pace with (b) make up one's mind (c) put up with (d) take after (e) well off (f) on the sly (g) in case of.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
 
+
+   Answer:
+   - (a) Keep pace with (to move or progress at the same rate as): Bangladesh must upgrade its skills training to keep pace with the demands of the global job market.
+   - (b) Make up one's mind (to decide firmly): After a week of hesitation he finally made up his mind to accept the offer.
+   - (c) Put up with (to tolerate something unpleasant): The residents have been putting up with the noise of construction for six months.
+   - (d) Take after (to resemble a parent or an elder relative): The boy takes after his mother in both looks and temperament.
+   - (e) Well off (rich, in a comfortable financial position): They are well off enough to send all three children abroad for higher study.
+   - (f) On the sly (secretly, without letting others know): He was selling the office stationery on the sly until the audit caught him.
+   - (g) In case of (in the event of): In case of fire, use the staircase and do not use the lift.
 3. **অর্থসহ বাক্য রচনা করুন: A Black Sheep, Crocodile tears, Straw Vote, Bed of roses, Hard and fast.** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+
+   Answer:
+   - A black sheep (a person who brings disgrace on a family or group): Every family has a black sheep, and their eldest son is theirs.
+   - Crocodile tears (a false show of sorrow): The contractor shed crocodile tears for the victims of the building he himself had built badly.
+   - Straw vote (an unofficial vote taken to test opinion): A straw vote among the members showed that most of them favoured the new proposal.
+   - Bed of roses (a situation of ease and comfort): Life in a foreign country is not a bed of roses for a new student.
+   - Hard and fast (fixed, that cannot be changed): There is no hard and fast rule about the order in which the questions must be answered.
 4. **Make sentences with the following: (a) Play fast and loose. (b) A piece of cake. (c) Beat around the bush. (d) Back against the wall. (e) Eat like a horse.** *[Software Assistant Programmer 13.10.2022 compact it 712 (ET: N/A)]*
 
+
+   Answer:
+   - (a) Play fast and loose (to behave irresponsibly or deceitfully): The company played fast and loose with its customers' data and lost their trust.
+   - (b) A piece of cake (something very easy): For a trained programmer, writing this small script was a piece of cake.
+   - (c) Beat around the bush (to avoid coming to the point): Stop beating around the bush and tell me exactly how much the repair will cost.
+   - (d) Back against the wall (in a very difficult position with no escape): With the deadline a day away and half the team absent, the manager had his back against the wall.
+   - (e) Eat like a horse (to eat a very large amount): After the football match the boys ate like horses.
 5. **Make sentence: (a) A dark horse (b) Ever and anon.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
+
+   Answer:
+   - (a) A dark horse (a person whose abilities are unknown until they succeed unexpectedly): He was a dark horse in the examination and stood first, surprising all his classmates.
+   - (b) Ever and anon (now and then, occasionally): Ever and anon he looked at his watch, waiting anxiously for the result.
 6. **“Run with the hare and hunt with the hounds: - কথাটির বাংলা প্রবাদ কী?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: The Bengali proverb corresponding to "Run with the hare and hunt with the hounds" is দুই নৌকায় পা দেওয়া.
+
+   Meaning: to support both sides of a dispute at the same time, so as to remain safe whichever side wins; to be double-faced.
+
+   Sentence: A leader who runs with the hare and hunts with the hounds is trusted by neither side.
 7. **What is the meaning of the phrase “Carry the day”?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: "Carry the day" means to win, to be victorious, or to gain the support of the majority.
+
+   Sentence: Although the opposition argued strongly, the government's proposal carried the day.
 8. **৪. অর্থসহ বাক্য রচনা কর: (a) Blue Blood (b) Baker's dozen** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+
+   Answer:
+   - (a) Blue blood (aristocratic or noble descent): He is proud of his blue blood, though the family lost its wealth long ago.
+   - (b) Baker's dozen (thirteen): The shopkeeper gave me a baker's dozen and charged me for twelve.
 9. **৬. Phrases and Idioms : Eleventh Hours.** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+
+   Answer: "Eleventh hour" means the last possible moment, just before it is too late.
+
+   Sentence: The two sides reached an agreement at the eleventh hour and the strike was called off.
 
 ## English Vocabulary & Antonyms (7)
 
 1. **What is the Opposite word of Transparent?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+
+   Answer: The opposite of "transparent" is opaque.
+
+   - Transparent: allowing light to pass through so that objects behind can be seen clearly (glass).
+   - Translucent: allowing some light through but not a clear image (frosted glass).
+   - Opaque: not allowing light to pass through at all (wood, metal).
+
+   In the figurative sense, the opposite of transparent (open, honest) is secretive or concealed.
 2. **Antonym of “fantasy”:** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: The antonym of "fantasy" is reality.
+
+   Other antonyms: fact, truth, actuality.
+
+   Synonyms of fantasy: imagination, illusion, daydream, fancy, make-believe.
 3. **When the writer uses the word “prosperous” to describe the voyage, what does he mean?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: When the writer describes the voyage as "prosperous", he means that it was favourable and successful, that is, the journey went well and reached its end safely and profitably.
+
+   In this older use, "prosperous" does not refer to wealth but to a journey that goes smoothly with favourable winds and no misfortune.
 4. **What 2 synonyms of the word “Accordingly”?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+   Answer: Two synonyms of "accordingly" are:
+   - Therefore
+   - Consequently
+
+   Other words with the same sense: hence, thus, so, correspondingly, as a result.
 5. **১. নিচের কোনটি লেফটেনেন্ট এর সঠিক Spelling? (a) Lieutenant (b) Leptenant (c) Lieutenand (d) Lieftenant** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
+
+   Answer: (a) Lieutenant
+
+   This is the correct spelling. The word comes from French, in which "lieu" means place and "tenant" means holding, so a lieutenant is one who holds the place of a superior officer.
+
+   Pronunciation note: it is pronounced lef-TEN-ant in British English and loo-TEN-ant in American English, which is why the wrong spellings in the other options are common.
 6. **১. What is the synonym of Certainly?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+
+   Answer: The synonym of "certainly" is surely.
+
+   Other synonyms: definitely, undoubtedly, doubtless, assuredly, without doubt, of course.
+
+   Antonyms: doubtfully, probably, possibly, uncertainly.
 7. **৫. Spelling Correction: Tsunami, Commission, Laughping, hetarogineous.** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+
+   Answer:
+   - Tsunami — correct as written.
+   - Commission — correct as written.
+   - Laughping — incorrect; the correct spelling is laughing.
+   - hetarogineous — incorrect; the correct spelling is heterogeneous.
 
 ## Letter & Application Writing (6)
 
@@ -1074,3 +1167,10 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 ## English Literature & Authors (1)
 
 1. **Who is the writer of “Gulliver's Travels”?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+
+   Answer: Jonathan Swift.
+
+   "Gulliver's Travels" (1726) is a satirical novel by the Anglo-Irish writer Jonathan Swift (1667-1745). Its four parts describe voyages to Lilliput, Brobdingnag, Laputa and the land of the Houyhnhnms, and through them the author satirises the politics, science and human nature of his own age.
+
+   Swift's other well-known work is the essay "A Modest Proposal".
