@@ -7105,79 +7105,1426 @@ SELECT count (*) FROM (
 
 1. Example Query of DDL, DML, DCL. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+
+   Answer:
+
+   - DDL, Data Definition Language: defines and changes the structure of the database. `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`. These commands are auto-committed and cannot be rolled back.
+   - DML, Data Manipulation Language: works with the data inside the structure. `INSERT`, `UPDATE`, `DELETE`, and `SELECT`, which some texts classify separately as DQL. These can be rolled back.
+   - DCL, Data Control Language: controls access rights. `GRANT` and `REVOKE`.
+   - TCL, Transaction Control Language: manages transactions. `COMMIT`, `ROLLBACK`, `SAVEPOINT`, `SET TRANSACTION`.
+
+   Examples:
+
+   ```sql
+   -- DDL
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL,
+       Salary   DECIMAL(10,2)
+   );
+   ALTER TABLE Employee ADD Dept_ID INT;
+   TRUNCATE TABLE Employee;
+   DROP TABLE Employee;
+
+   -- DML
+   INSERT INTO Employee (Emp_ID, Emp_Name, Salary) VALUES (1, 'Rahim', 45000);
+   UPDATE Employee SET Salary = 50000 WHERE Emp_ID = 1;
+   DELETE FROM Employee WHERE Emp_ID = 1;
+   SELECT Emp_Name, Salary FROM Employee WHERE Salary > 40000;
+
+   -- DCL
+   GRANT SELECT, INSERT ON Employee TO user_rahim;
+   REVOKE INSERT ON Employee FROM user_rahim;
+
+   -- TCL
+   COMMIT;
+   ROLLBACK;
+   SAVEPOINT before_update;
+   ```
 2. **What is SQL?** *[BBA Assistant Programmer 12.07.2025 compact it 1433 (ET: BUET)]*
 
+
+   Answer: SQL stands for Structured Query Language. It is the standard language for defining, manipulating and controlling data in a relational database.
+
+   - It was developed at IBM in the 1970s, originally as SEQUEL, standardised by ANSI in 1986 and by ISO in 1987, and revised several times since.
+   - It is declarative: a query states what result is required, and the database's optimiser decides how to obtain it. This is in contrast to a procedural language, in which the programmer specifies the steps.
+   - It is not case sensitive in its keywords, and every statement ends with a semicolon.
+
+   Its command categories:
+
+   - DDL, Data Definition Language: defines and changes the structure of the database. `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`. These commands are auto-committed and cannot be rolled back.
+   - DML, Data Manipulation Language: works with the data inside the structure. `INSERT`, `UPDATE`, `DELETE`, and `SELECT`, which some texts classify separately as DQL. These can be rolled back.
+   - DCL, Data Control Language: controls access rights. `GRANT` and `REVOKE`.
+   - TCL, Transaction Control Language: manages transactions. `COMMIT`, `ROLLBACK`, `SAVEPOINT`, `SET TRANSACTION`.
+
+   Examples:
+
+   ```sql
+   -- DDL
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL,
+       Salary   DECIMAL(10,2)
+   );
+   ALTER TABLE Employee ADD Dept_ID INT;
+   TRUNCATE TABLE Employee;
+   DROP TABLE Employee;
+
+   -- DML
+   INSERT INTO Employee (Emp_ID, Emp_Name, Salary) VALUES (1, 'Rahim', 45000);
+   UPDATE Employee SET Salary = 50000 WHERE Emp_ID = 1;
+   DELETE FROM Employee WHERE Emp_ID = 1;
+   SELECT Emp_Name, Salary FROM Employee WHERE Salary > 40000;
+
+   -- DCL
+   GRANT SELECT, INSERT ON Employee TO user_rahim;
+   REVOKE INSERT ON Employee FROM user_rahim;
+
+   -- TCL
+   COMMIT;
+   ROLLBACK;
+   SAVEPOINT before_update;
+   ```
+
+   Its features: it handles set operations rather than one row at a time; it supports joins, subqueries, aggregate functions, views, indexes, stored procedures and triggers; and it enforces integrity constraints. Its principal dialects are Oracle PL/SQL, Microsoft T-SQL and PostgreSQL PL/pgSQL, which extend the standard with procedural constructs.
 3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: To delete only the structure of a table, that is the table itself along with its definition, the `DROP TABLE` command is used.
+
+   ```sql
+   DROP TABLE table_name;
+   ```
+
+   - This removes the table completely: its structure, its data, its indexes, its constraints and its triggers. Nothing of it remains in the data dictionary.
+
+   The three commands must be distinguished, since this is what the question tests:
+
+   | Command | What is removed | Structure retained | Rollback possible |
+   |---|---|---|---|
+   | `DELETE FROM table;` | Selected rows, or all rows if no WHERE clause | Yes | Yes |
+   | `TRUNCATE TABLE table;` | All rows | Yes | No, in most systems |
+   | `DROP TABLE table;` | Rows and the structure itself | No | No |
+
+   - `DELETE` is DML: it removes rows one at a time, logs each, fires triggers, can be restricted with a WHERE clause and can be rolled back.
+   - `TRUNCATE` is DDL: it removes every row at once by deallocating the data pages, is very fast, resets the auto-increment counter, fires no triggers and cannot be rolled back.
+   - `DROP` is DDL: it removes the table itself, so afterwards the table does not exist and any reference to it fails.
+
+   To remove only a column rather than the whole table:
+
+   ```sql
+   ALTER TABLE table_name DROP COLUMN column_name;
+   ```
 4. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 627 (ET: N/A)], [17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 611 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | DDL | DML |
+   |---|---|---|
+   | Full form | Data Definition Language | Data Manipulation Language |
+   | Purpose | Defines and modifies the structure of the database | Works with the data held inside that structure |
+   | Operates on | Schema objects: tables, views, indexes, schemas | Rows of data |
+   | Commands | CREATE, ALTER, DROP, TRUNCATE, RENAME | INSERT, UPDATE, DELETE, SELECT |
+   | Commit behaviour | Auto-committed; the change is permanent at once | Not auto-committed; a COMMIT is required |
+   | Rollback | Cannot be rolled back | Can be rolled back |
+   | WHERE clause | Not used | Used, to select which rows are affected |
+   | Speed | Fast, since it changes only metadata | Slower, since it processes rows |
+   | Effect on the data dictionary | Changes it | Does not change it |
+   | Typical user | Database administrator or designer | Application and end user |
+
+   Examples:
+
+   ```sql
+   -- DDL: defines the structure
+   CREATE TABLE Student (
+       Roll INT PRIMARY KEY,
+       Name VARCHAR(100)
+   );
+   ALTER TABLE Student ADD Department VARCHAR(50);
+   DROP TABLE Student;
+
+   -- DML: works with the data
+   INSERT INTO Student VALUES (101, 'Rahim', 'CSE');
+   UPDATE Student SET Department = 'EEE' WHERE Roll = 101;
+   DELETE FROM Student WHERE Roll = 101;
+   SELECT * FROM Student;
+   ```
+
+   - The essential distinction: DDL changes the container, DML changes the contents. A DDL command is committed automatically, so it cannot be undone; a DML command can be reversed with ROLLBACK until it is committed. This is why an accidental `DROP TABLE` is far more serious than an accidental `DELETE`.
 5. **SQL query to insert data into table. (A table was given with 3 row)** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 657 (ET: N/A)]*
 
+
+   Answer:
+
+   Inserting a single row, naming the columns:
+
+   ```sql
+   INSERT INTO Student (Roll, Name, Department)
+   VALUES (101, 'Rahim', 'CSE');
+   ```
+
+   Inserting three rows in one statement:
+
+   ```sql
+   INSERT INTO Student (Roll, Name, Department) VALUES
+       (101, 'Rahim', 'CSE'),
+       (102, 'Karim', 'EEE'),
+       (103, 'Salma', 'CSE');
+   ```
+
+   Inserting without naming the columns, which requires values for every column in the declared order:
+
+   ```sql
+   INSERT INTO Student VALUES (104, 'Nadia', 'BBA');
+   ```
+
+   Inserting the result of a query, to copy rows from another table:
+
+   ```sql
+   INSERT INTO Student_Archive (Roll, Name, Department)
+   SELECT Roll, Name, Department FROM Student WHERE Department = 'CSE';
+   ```
+
+   Points that earn marks:
+   - Naming the columns explicitly is better practice, because the statement remains correct if a column is later added to the table.
+   - String and date literals are enclosed in single quotes; numeric literals are not.
+   - A column omitted from the list receives its DEFAULT value, or NULL if none is defined; if the column is NOT NULL and has no default, the insertion fails.
+   - Inserting a duplicate primary key, or a foreign key value that does not exist in the parent table, is rejected by the DBMS.
+   - The multi-row form is considerably faster than several separate statements, because it is parsed once and written in one transaction.
+   - `INSERT` is a DML command, so it can be rolled back until it is committed.
 6. **How can you Revoke permissions from a database table? Give SQL command for it.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 666 (ET: N/A)]*
 
+
+   Answer: Permissions are removed with the `REVOKE` command, which is part of the Data Control Language.
+
+   Syntax:
+
+   ```sql
+   REVOKE privilege_list ON object FROM user_or_role;
+   ```
+
+   Examples:
+
+   ```sql
+   -- Revoke a single privilege
+   REVOKE INSERT ON Employee FROM user_rahim;
+
+   -- Revoke several privileges at once
+   REVOKE SELECT, INSERT, UPDATE, DELETE ON Employee FROM user_rahim;
+
+   -- Revoke every privilege
+   REVOKE ALL PRIVILEGES ON Employee FROM user_rahim;
+
+   -- Revoke from several users
+   REVOKE SELECT ON Employee FROM user_rahim, user_karim;
+
+   -- Revoke a column level privilege
+   REVOKE UPDATE (Salary) ON Employee FROM user_rahim;
+
+   -- Revoke from a role
+   REVOKE SELECT ON Employee FROM clerk_role;
+
+   -- Revoke the right to pass the privilege on, but keep the privilege itself
+   REVOKE GRANT OPTION FOR SELECT ON Employee FROM user_rahim;
+   ```
+
+   The corresponding GRANT, for contrast:
+
+   ```sql
+   GRANT SELECT, INSERT ON Employee TO user_rahim;
+   GRANT SELECT ON Employee TO user_karim WITH GRANT OPTION;
+   ```
+
+   Points worth stating:
+   - `WITH GRANT OPTION` allows the recipient to pass the privilege on to others. Revoking such a privilege causes a cascading revoke, which removes it from everyone who obtained it through that user. This is why the option should be granted sparingly.
+   - Privileges may be granted at table, view or column level, and on individual operations, which is how least privilege is implemented.
+   - Roles are preferred to individual grants in practice: privileges are granted to a role and the role to users, so that a change of policy is made once rather than for every user.
+   - `REVOKE` is DCL and takes effect immediately; the affected user loses access at their next statement, though an existing session may retain it until it reconnects in some systems.
 7. **What is DDL and DML?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+
+   Answer:
+
+   DDL, Data Definition Language:
+   - The set of SQL commands that define and modify the structure of the database rather than its contents.
+   - Commands: `CREATE` to make a new object; `ALTER` to change the structure of an existing one; `DROP` to remove an object entirely; `TRUNCATE` to remove all rows while keeping the structure; and `RENAME`.
+   - DDL commands are auto-committed, so they take effect immediately and cannot be rolled back.
+
+   DML, Data Manipulation Language:
+   - The set of SQL commands that work with the data held inside the structure.
+   - Commands: `INSERT` to add rows; `UPDATE` to modify existing rows; `DELETE` to remove rows; and `SELECT` to retrieve them, which some texts classify separately as DQL, Data Query Language.
+   - DML commands are not auto-committed, so they can be reversed with `ROLLBACK` until a `COMMIT` is issued.
+
+   | Point | DDL | DML |
+   |---|---|---|
+   | Full form | Data Definition Language | Data Manipulation Language |
+   | Purpose | Defines and modifies the structure of the database | Works with the data held inside that structure |
+   | Operates on | Schema objects: tables, views, indexes, schemas | Rows of data |
+   | Commands | CREATE, ALTER, DROP, TRUNCATE, RENAME | INSERT, UPDATE, DELETE, SELECT |
+   | Commit behaviour | Auto-committed; the change is permanent at once | Not auto-committed; a COMMIT is required |
+   | Rollback | Cannot be rolled back | Can be rolled back |
+   | WHERE clause | Not used | Used, to select which rows are affected |
+   | Speed | Fast, since it changes only metadata | Slower, since it processes rows |
+   | Effect on the data dictionary | Changes it | Does not change it |
+   | Typical user | Database administrator or designer | Application and end user |
 8. **(i) নিচের Table টি তৈরি করার SQL কমান্ড লিখুন। student_info (std_id, name, department, phone_number) (a) Table তে ২টি record (insert) প্রবেশ করার SQL কমান্ড লিখুন। (b) Table টি থেকে CSE বিভাগের ছাত্র/ছাত্রীদের নামের তালিকা বের করার SQL command লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 785 (ET: N/A)]*
 
+
+   Answer:
+
+   Creating the table:
+
+   ```sql
+   CREATE TABLE student_info (
+       std_id       INT PRIMARY KEY,
+       name         VARCHAR(100) NOT NULL,
+       department   VARCHAR(50),
+       phone_number VARCHAR(20)
+   );
+   ```
+
+   - `INT PRIMARY KEY` makes `std_id` unique and not null, and creates an index on it automatically.
+   - `VARCHAR` is used for variable length text; `NOT NULL` on the name enforces that every student has one.
+   - The phone number is stored as VARCHAR rather than a numeric type, because it may begin with a zero, may contain a plus sign or hyphens, and is never used in arithmetic.
+
+   (a) Inserting two records:
+
+   ```sql
+   INSERT INTO student_info (std_id, name, department, phone_number) VALUES
+       (101, 'Rahim Uddin', 'CSE', '01711111111'),
+       (102, 'Karim Hossain', 'EEE', '01822222222');
+   ```
+
+   - Naming the columns explicitly is good practice, since the statement remains correct if a column is added later.
+   - The multi-row form is faster than two separate statements, because it is parsed once and executed in one transaction.
+
+   (b) Listing the names of students of the CSE department:
+
+   ```sql
+   SELECT name
+   FROM   student_info
+   WHERE  department = 'CSE';
+   ```
+
+   - To sort the list alphabetically: add `ORDER BY name`.
+   - To include the identifier as well: `SELECT std_id, name`.
+   - To count them instead: `SELECT COUNT(*) FROM student_info WHERE department = 'CSE';`
 9. **Write the create table command for the ‘Employee’ table with the following column: Emp_ID, Emp_Name, Date_of_Birth.** *[BCC CA Monitoring System Project 2021 compact it 829 (ET: N/A)]*
 
+
+   Answer:
+
+   ```sql
+   CREATE TABLE Employee (
+       Emp_ID        INT PRIMARY KEY,
+       Emp_Name      VARCHAR(100) NOT NULL,
+       Date_of_Birth DATE
+   );
+   ```
+
+   Explanation of the choices:
+   - `Emp_ID INT PRIMARY KEY` makes the identifier unique and not null, and creates an index automatically. An integer is preferred for a key because it is compact and fast to compare.
+   - `Emp_Name VARCHAR(100) NOT NULL` uses a variable length string, which occupies only the space actually needed, and `NOT NULL` enforces that every employee has a name.
+   - `Date_of_Birth DATE` uses the proper date type rather than a string, so that date arithmetic, comparison and sorting all work correctly. Storing a date as text is a common and serious error.
+
+   A fuller version with additional constraints:
+
+   ```sql
+   CREATE TABLE Employee (
+       Emp_ID        INT PRIMARY KEY AUTO_INCREMENT,
+       Emp_Name      VARCHAR(100) NOT NULL,
+       Date_of_Birth DATE NOT NULL,
+       Email         VARCHAR(100) UNIQUE,
+       Salary        DECIMAL(10,2) CHECK (Salary > 0),
+       Join_Date     DATE DEFAULT (CURRENT_DATE),
+       CHECK (Date_of_Birth < CURRENT_DATE)
+   );
+   ```
+
+   - `AUTO_INCREMENT` in MySQL, `SERIAL` in PostgreSQL and `IDENTITY` in SQL Server generate the key automatically.
+   - `DECIMAL(10,2)` is the correct type for money; floating point types introduce rounding errors in financial calculations and must not be used.
+   - The CHECK constraints prevent obviously invalid data from being stored at all, whatever the application does.
 10. **৪. ডাটাবেইজে টেবিল ডিলেট করার কমান্ড লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
+
+   Answer: The command to delete a table from a database is `DROP TABLE`.
+
+   ```sql
+   DROP TABLE table_name;
+   ```
+
+   - This removes the table completely: its structure, all its data, its indexes, its constraints and its triggers. After it, the table no longer exists and any reference to it fails.
+   - It is a DDL command and is auto-committed, so it cannot be rolled back in most systems. Oracle places the dropped table in a recycle bin, from which it can be recovered with `FLASHBACK TABLE`, unless `PURGE` was specified.
+
+   Safer form, which does not raise an error if the table is absent:
+
+   ```sql
+   DROP TABLE IF EXISTS table_name;
+   ```
+
+   The related commands, which must be distinguished:
+
+   | Command | Effect |
+   |---|---|
+   | `DELETE FROM table WHERE ...;` | Removes selected rows; the structure remains; can be rolled back |
+   | `TRUNCATE TABLE table;` | Removes all rows very quickly; the structure remains; cannot be rolled back |
+   | `DROP TABLE table;` | Removes the rows and the table itself |
+   | `ALTER TABLE table DROP COLUMN col;` | Removes one column only |
+
+   - A table referenced by a foreign key cannot be dropped until the referencing constraint is removed or the child table is dropped first.
+   - Practical caution: take a backup before dropping anything, and confirm the table name, since the operation is irreversible.
 11. **ডাটাবেইজ ম্যানেজমেন্ট সিস্টেমের মধ্যে CRUD এর কাজ কি?** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
 
+
+   Answer: CRUD stands for Create, Read, Update and Delete. These are the four basic operations that any database management system must support on stored data, and every application is built from combinations of them.
+
+   The four operations and their SQL commands:
+
+   - Create: adds new data to the database. SQL command `INSERT`.
+
+   ```sql
+   INSERT INTO Student (Roll, Name, Department) VALUES (101, 'Rahim', 'CSE');
+   ```
+
+   - Read: retrieves existing data without changing it. SQL command `SELECT`.
+
+   ```sql
+   SELECT Roll, Name FROM Student WHERE Department = 'CSE';
+   ```
+
+   - Update: modifies data that already exists. SQL command `UPDATE`.
+
+   ```sql
+   UPDATE Student SET Department = 'EEE' WHERE Roll = 101;
+   ```
+
+   - Delete: removes data from the database. SQL command `DELETE`.
+
+   ```sql
+   DELETE FROM Student WHERE Roll = 101;
+   ```
+
+   Why the concept matters:
+   - It is the minimum set of operations required for data to be genuinely managed rather than merely stored; a system supporting fewer than all four is incomplete.
+   - It is the basis of application design: a data entry screen performs Create, a report performs Read, an edit form performs Update and a removal button performs Delete.
+   - It maps directly onto the HTTP methods of a REST API: POST for Create, GET for Read, PUT or PATCH for Update, and DELETE for Delete. This correspondence is why CRUD is so widely used in web development.
+
+   Practical points:
+   - The `WHERE` clause is essential in Update and Delete. Omitting it changes or removes every row in the table, which is one of the commonest and most damaging mistakes in practice.
+   - Read is by far the most frequent operation in most systems, which is why indexes exist and why query optimisation matters.
+   - All four are DML operations and can be rolled back until committed.
 12. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 988-989 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+
+   Answer:
+
+   - DDL, Data Definition Language: defines and changes the structure of the database. `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`. These commands are auto-committed and cannot be rolled back.
+   - DML, Data Manipulation Language: works with the data inside the structure. `INSERT`, `UPDATE`, `DELETE`, and `SELECT`, which some texts classify separately as DQL. These can be rolled back.
+   - DCL, Data Control Language: controls access rights. `GRANT` and `REVOKE`.
+   - TCL, Transaction Control Language: manages transactions. `COMMIT`, `ROLLBACK`, `SAVEPOINT`, `SET TRANSACTION`.
+
+   Examples:
+
+   ```sql
+   -- DDL
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL,
+       Salary   DECIMAL(10,2)
+   );
+   ALTER TABLE Employee ADD Dept_ID INT;
+   TRUNCATE TABLE Employee;
+   DROP TABLE Employee;
+
+   -- DML
+   INSERT INTO Employee (Emp_ID, Emp_Name, Salary) VALUES (1, 'Rahim', 45000);
+   UPDATE Employee SET Salary = 50000 WHERE Emp_ID = 1;
+   DELETE FROM Employee WHERE Emp_ID = 1;
+   SELECT Emp_Name, Salary FROM Employee WHERE Salary > 40000;
+
+   -- DCL
+   GRANT SELECT, INSERT ON Employee TO user_rahim;
+   REVOKE INSERT ON Employee FROM user_rahim;
+
+   -- TCL
+   COMMIT;
+   ROLLBACK;
+   SAVEPOINT before_update;
+   ```
+
+   Further examples of each category:
+
+   ```sql
+   -- DDL
+   CREATE DATABASE company_db;
+   CREATE INDEX idx_emp_name ON Employee(Emp_Name);
+   CREATE VIEW HighEarners AS SELECT * FROM Employee WHERE Salary > 50000;
+   ALTER TABLE Employee MODIFY Salary DECIMAL(12,2);
+   ALTER TABLE Employee DROP COLUMN Dept_ID;
+   RENAME TABLE Employee TO Staff;
+
+   -- DML
+   INSERT INTO Employee SELECT * FROM Temp_Employee;
+   UPDATE Employee SET Salary = Salary * 1.10 WHERE Dept_ID = 10;
+   DELETE FROM Employee WHERE Join_Date < '2000-01-01';
+
+   -- DCL
+   GRANT SELECT ON Employee TO clerk_role;
+   GRANT ALL PRIVILEGES ON company_db.* TO admin_user;
+   REVOKE UPDATE (Salary) ON Employee FROM clerk_role;
+   ```
+
+   The distinction that carries the marks: DDL changes the structure and is auto-committed, so it cannot be undone; DML changes the data and can be rolled back; DCL changes who is permitted to do what.
 13. **How to find duplicate data in database? Explain DDL and DML.** *[RAKUB Assistant Database Administrator 2020 compact it 1017-1018 (ET: E-Zone)]*
+
+
+   Answer:
+
+   Finding duplicate data in a database:
+
+   ```sql
+   -- Duplicates on a single column
+   SELECT emp_name, COUNT(*) AS occurrences
+   FROM   Employee
+   GROUP  BY emp_name
+   HAVING COUNT(*) > 1;
+
+   -- Duplicates on a combination of columns
+   SELECT emp_name, department, COUNT(*) AS occurrences
+   FROM   Employee
+   GROUP  BY emp_name, department
+   HAVING COUNT(*) > 1;
+
+   -- The full duplicate rows, not merely the duplicated values
+   SELECT *
+   FROM   Employee
+   WHERE  emp_name IN (SELECT emp_name FROM Employee
+                       GROUP BY emp_name HAVING COUNT(*) > 1)
+   ORDER  BY emp_name;
+
+   -- Using a window function, which finds them in a single pass
+   SELECT emp_id, emp_name
+   FROM   (SELECT emp_id, emp_name,
+                  COUNT(*) OVER (PARTITION BY emp_name) AS cnt
+           FROM   Employee) t
+   WHERE  cnt > 1;
+   ```
+
+   - The principle is always the same: group by the columns that should be unique, and keep the groups whose count exceeds one. `HAVING` must be used rather than `WHERE`, because the condition applies to an aggregate.
+
+   Removing the duplicates, keeping the row with the lowest identifier:
+
+   ```sql
+   DELETE FROM Employee
+   WHERE  emp_id NOT IN (SELECT MIN(emp_id) FROM Employee GROUP BY emp_name);
+   ```
+
+   - The permanent remedy is a `UNIQUE` constraint on the column, so that duplicates cannot be inserted in the first place.
+
+   DDL and DML:
+
+   | Point | DDL | DML |
+   |---|---|---|
+   | Full form | Data Definition Language | Data Manipulation Language |
+   | Purpose | Defines and modifies the structure of the database | Works with the data held inside that structure |
+   | Operates on | Schema objects: tables, views, indexes, schemas | Rows of data |
+   | Commands | CREATE, ALTER, DROP, TRUNCATE, RENAME | INSERT, UPDATE, DELETE, SELECT |
+   | Commit behaviour | Auto-committed; the change is permanent at once | Not auto-committed; a COMMIT is required |
+   | Rollback | Cannot be rolled back | Can be rolled back |
+   | WHERE clause | Not used | Used, to select which rows are affected |
+   | Speed | Fast, since it changes only metadata | Slower, since it processes rows |
+   | Effect on the data dictionary | Changes it | Does not change it |
+   | Typical user | Database administrator or designer | Application and end user |
 
 ## Transaction Management & ACID Properties (12)
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
 
+
+   Answer: A transaction is a logical unit of work consisting of one or more operations that must be treated as a single indivisible action. The ACID properties are the four guarantees a DBMS provides for every transaction.
+
+   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+   - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+
+   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+
+   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+
+   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+   - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
+
+   How the four together ensure reliability and integrity:
+   - Atomicity prevents partial work from ever being visible, so the database never holds half a transfer.
+   - Consistency ensures that only valid states are reachable, so the rules of the business are never violated by a completed transaction.
+   - Isolation ensures that concurrency does not corrupt the result, so a hundred simultaneous users obtain the same outcome as if each had run alone.
+   - Durability ensures that a promise once made is kept, so a confirmed transaction is never lost.
+   - Remove any one and the guarantee collapses: without atomicity money disappears, without consistency the rules are broken, without isolation concurrent updates are lost, and without durability committed work vanishes in a crash.
+
+   Mechanisms: the transaction log with write ahead logging provides atomicity and durability; constraints and triggers provide consistency; and locking or multiversion concurrency control provides isolation.
 2. **How many process of Transaction complete?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
 
+
+   Answer: A transaction passes through a defined sequence of states, and it completes in one of two ways: by committing or by aborting.
+
+   States of a transaction:
+   - Active: the transaction is executing its operations. This is the initial state.
+   - Partially committed: the final operation has been executed, but the changes are still in memory and have not yet been written permanently to disk.
+   - Committed: the changes have been written durably to the log and the transaction has completed successfully. From this point the changes cannot be undone.
+   - Failed: an error has been detected and normal execution cannot continue.
+   - Aborted: the transaction has been rolled back, all its changes undone, and the database restored to the state it was in before the transaction began. The transaction may then be restarted or abandoned.
+   - Terminated: the final state, reached from either Committed or Aborted.
+
+   ```mermaid
+   stateDiagram-v2
+       [*] --> Active
+       Active --> PartiallyCommitted: last operation executed
+       Active --> Failed: error occurs
+       PartiallyCommitted --> Committed: changes written to disk
+       PartiallyCommitted --> Failed: write fails
+       Failed --> Aborted: rollback performed
+       Committed --> [*]
+       Aborted --> [*]
+   ```
+
+   Operations that end a transaction:
+   - `COMMIT`: makes every change permanent and visible to other transactions, and releases the locks. A transaction that reaches this point can never be undone.
+   - `ROLLBACK`: undoes every change made since the transaction began, or since a named savepoint, and releases the locks.
+
+   - So the direct answer is that a transaction completes in one of two ways, by COMMIT or by ROLLBACK, having passed through the five states above.
 3. **ACID এর প্রোপার্টি কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+
+   Answer: ACID stands for Atomicity, Consistency, Isolation and Durability. They are the four properties a database management system guarantees for every transaction.
+
+   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+   - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+
+   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+
+   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+
+   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+   - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 4. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
 
+
+   Answer:
+
+   What a transaction is:
+   - A transaction is a logical unit of work consisting of one or more database operations that must be executed as a single indivisible action. Either all of it takes effect or none of it does.
+   - It is delimited by `BEGIN TRANSACTION` and ended by `COMMIT` or `ROLLBACK`.
+   - The classic example is a fund transfer, which consists of a debit from one account and a credit to another. The two must succeed or fail together; a system that could perform one without the other would destroy or create money.
+
+   ```sql
+   BEGIN TRANSACTION;
+       UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A';
+       UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'B';
+   COMMIT;
+   ```
+
+   ACID properties of transaction management:
+
+   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+   - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+
+   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+
+   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+
+   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+   - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 5. **Case Study type Database-related problem (Solve: ACID)** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
 
+
+   Answer: A case study of this kind is answered by identifying which ACID property is threatened by the scenario and describing the mechanism that protects it.
+
+   Scenario: a customer transfers 5,000 taka from account A to account B. The system debits A and then crashes before crediting B.
+
+   Which property is threatened and how it is protected:
+   - Atomicity is threatened. Without it the money would be destroyed: it has left A but never reached B.
+   - The DBMS maintains an undo log recording the previous value of every changed item. On restart, the recovery manager finds that the transaction had not committed, and it uses the undo log to reverse the debit, restoring A to its original balance. The transfer is then reported as failed and can be retried safely.
+
+   Scenario: two clerks simultaneously read a balance of 10,000 and each subtracts 3,000. The final balance is 7,000 instead of 4,000.
+   - Isolation is threatened. This is the lost update problem, in which the second write overwrites the first.
+   - The DBMS prevents it by locking. Under two phase locking, the first transaction takes an exclusive lock on the row, the second is made to wait, and the result is the same as if they had run one after another. Alternatively, multiversion concurrency control detects the conflict at commit time and aborts one transaction.
+   - The isolation level determines how strictly this is enforced: Read Uncommitted allows dirty reads, Read Committed prevents them, Repeatable Read prevents non-repeatable reads, and Serializable prevents phantoms as well.
+
+   Scenario: a transfer completes and the customer sees a success message; the server then loses power.
+   - Durability is threatened.
+   - The DBMS uses write ahead logging: the redo log record is forced to non-volatile storage before the commit is acknowledged. On restart, the recovery manager replays the log and re-applies every committed change, so the transfer survives.
+
+   Scenario: a transaction debits 5,000 from A but credits only 500 to B.
+   - Consistency is threatened, since the total of all balances has changed.
+   - Constraints, triggers and the application's own logic must reject such a transaction. Consistency is a joint responsibility: the DBMS enforces the declared constraints, and the application is responsible for the business rules the DBMS cannot express.
+
+   Method for answering any such case study:
+   - Identify the operations that must succeed or fail together, which is atomicity.
+   - Identify the invariant that must hold before and after, which is consistency.
+   - Identify what could go wrong if two users acted at once, which is isolation.
+   - Identify what must survive a crash, which is durability.
+   - Then name the mechanism: undo log for atomicity, constraints for consistency, locking or MVCC for isolation, and write ahead logging for durability. <!-- verify -->
 6. **What are the ACID properties of transaction to ensure data reliability and integrity?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
 
+
+   Answer: The ACID properties are the four guarantees that a database management system provides for every transaction, and together they are what make a database reliable enough to hold money and records of record.
+
+   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+   - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+
+   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+
+   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+
+   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+   - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
+
+   How they ensure reliability and integrity in combination:
+   - Reliability comes from atomicity and durability: work is never left half done, and once completed it is never lost.
+   - Integrity comes from consistency and isolation: the rules of the data are never violated, and concurrent users cannot corrupt one another's work.
+   - The mechanisms are the transaction log with write ahead logging, the declared integrity constraints, and locking or multiversion concurrency control.
 7. **(a) What is ACID mean in database system?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
 
+
+   Answer: ACID is the acronym for the four properties that a database system guarantees for every transaction: Atomicity, Consistency, Isolation and Durability.
+
+   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+   - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+
+   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+
+   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+
+   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+   - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
 
+
+   Answer: A transaction is a logical unit of work that must be executed as a single indivisible action. The ACID properties are the four guarantees the DBMS provides for it.
+
+   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+   - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+
+   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+
+   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+
+   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+   - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 9. **What do you mean by Rollback and Roll forward?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
 
+
+   Answer:
+
+   Rollback:
+   - Rollback is the operation of undoing the changes made by a transaction and restoring the database to the state it was in before the transaction began.
+   - It uses the undo log, in which the DBMS records the previous value of every data item a transaction changes. To roll back, those previous values are written back in reverse order.
+   - It occurs in three circumstances: when the application issues an explicit `ROLLBACK`; when the transaction fails, for example through a constraint violation, a deadlock or a division by zero; and during crash recovery, when the recovery manager undoes every transaction that had not committed at the moment of the failure.
+   - It is what implements atomicity: because a failed transaction can always be undone completely, the database never holds partial work.
+   - A partial rollback to a named savepoint is also possible: `ROLLBACK TO SAVEPOINT sp1;` undoes only the work done since that point.
+
+   ```sql
+   BEGIN TRANSACTION;
+       UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A';
+       SAVEPOINT after_debit;
+       UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'C';   -- wrong account
+   ROLLBACK TO SAVEPOINT after_debit;                                   -- undo only the credit
+       UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'B';   -- correct account
+   COMMIT;
+   ```
+
+   Roll forward:
+   - Roll forward, also called redo, is the operation of re-applying the changes of transactions that had committed but whose changes had not yet been written to the data files when a failure occurred.
+   - It uses the redo log, in which the DBMS records the new value of every changed item, written to durable storage before the commit is acknowledged. This is write ahead logging.
+   - It occurs during crash recovery and during restoration from a backup: the backup is restored first, and the log is then rolled forward to bring the database up to the moment of the failure.
+   - It is what implements durability: a committed transaction survives any crash, because the log can always be replayed.
+
+   The two together in crash recovery:
+   - On restart the recovery manager reads the log and divides the transactions into two sets. Those that had committed are rolled forward, so their changes are re-applied. Those that had not are rolled back, so their changes are undone.
+   - The result is a database containing exactly the effects of the committed transactions and nothing else, which is precisely what atomicity and durability require.
+
+   | Point | Rollback, undo | Roll forward, redo |
+   |---|---|---|
+   | Purpose | Removes the effects of an uncommitted transaction | Re-applies the effects of a committed transaction |
+   | Log used | Undo log, holding the old values | Redo log, holding the new values |
+   | Property implemented | Atomicity | Durability |
+   | When it occurs | On explicit ROLLBACK, on failure, and in recovery | In crash recovery and after restoring a backup |
+   | Direction | Backwards through the log | Forwards through the log |
 10. **Describe ACID properties of DBMS.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 860 (ET: N/A)]*
 
+
+   Answer: The ACID properties are the four guarantees that a DBMS provides for every transaction.
+
+   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+   - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+
+   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+
+   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+
+   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+   - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
+
+   Implementation mechanisms, in summary:
+   - Atomicity: the undo log, which allows every change of an incomplete transaction to be reversed.
+   - Consistency: integrity constraints, triggers and the application's own rules.
+   - Isolation: locking with two phase locking, timestamp ordering, or multiversion concurrency control.
+   - Durability: the redo log with write ahead logging, so that the log record reaches durable storage before the commit is acknowledged.
 11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 984-985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+
+   Answer: A transaction is ended by one of two SQL statements: `COMMIT` or `ROLLBACK`.
+
+   COMMIT:
+
+   ```sql
+   COMMIT;
+   ```
+
+   - Function: it ends the transaction successfully and makes every change it made permanent. The changes are written durably to the log, they become visible to all other transactions, and every lock held by the transaction is released.
+   - Once committed, the transaction cannot be undone. Only a compensating transaction can reverse its effect.
+   - It is what provides durability: the DBMS guarantees that the changes survive any subsequent failure.
+
+   ROLLBACK:
+
+   ```sql
+   ROLLBACK;
+   ```
+
+   - Function: it ends the transaction unsuccessfully and undoes every change it made, restoring the database to the state it was in when the transaction began. All locks are released.
+   - It is what provides atomicity: because an incomplete transaction can always be reversed completely, partial work is never visible.
+   - It may be issued explicitly by the application, or performed automatically by the DBMS when the transaction fails or when a deadlock victim is chosen.
+
+   Supporting statements, which do not themselves end the transaction:
+
+   ```sql
+   SAVEPOINT sp1;                  -- marks a point within the transaction
+   ROLLBACK TO SAVEPOINT sp1;      -- undoes only the work done since that point
+   RELEASE SAVEPOINT sp1;          -- discards the savepoint
+   SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;   -- sets the isolation level
+   BEGIN TRANSACTION;              -- starts a transaction explicitly
+   ```
+
+   - `ROLLBACK TO SAVEPOINT` is a partial rollback: the transaction continues and may still be committed. It does not end the transaction.
+
+   Complete example:
+
+   ```sql
+   BEGIN TRANSACTION;
+       UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A';
+       UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'B';
+       -- if both succeeded
+   COMMIT;
+       -- if anything failed
+   -- ROLLBACK;
+   ```
+
+   - Note on autocommit: by default most database systems and client tools run in autocommit mode, in which every individual statement is committed immediately. An explicit `BEGIN TRANSACTION`, or `SET autocommit = 0`, is required before a multi-statement transaction can be controlled.
 12. **Describe Database ACID properties.** *[RAKUB Assistant Database Administrator 2020 compact it 1012 (ET: E-Zone)]*
+
+
+   Answer: The ACID properties describe the four guarantees a database management system makes for every transaction, and they are what make a database trustworthy enough to hold financial records.
+
+   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+   - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+
+   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+
+   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+
+   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+   - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
+
+   Summary of the mechanisms:
+
+   | Property | Guarantee | Mechanism |
+   |---|---|---|
+   | Atomicity | All or nothing | Undo log and ROLLBACK |
+   | Consistency | Only valid states | Integrity constraints, triggers, application rules |
+   | Isolation | Concurrent execution equals some serial execution | Locking, two phase locking, MVCC |
+   | Durability | Committed work survives failure | Redo log with write ahead logging |
+
+   - The BASE model of NoSQL systems, that is Basically Available, Soft state and Eventual consistency, deliberately relaxes these guarantees in exchange for availability and scale. This is a legitimate trade-off for a social media timeline, but it is not acceptable for a bank ledger, which is why relational systems with full ACID guarantees remain the standard for financial data.
 
 ## Relational Data Model & ER Relationships (11)
 
 1. What are the different types of relationships in a relational database? Explain each with examples. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+
+   Answer: The relationships in a relational database are classified by cardinality, that is by how many rows of one table may be associated with how many rows of another.
+
+   One to one, 1:1:
+   - One row in table A relates to at most one row in table B, and the reverse also holds.
+   - Implementation: place a foreign key in either table with a UNIQUE constraint, preferably in the table with total participation.
+   - Example: an Employee and their Passport. Each employee has at most one passport, and each passport belongs to exactly one employee.
+   - It is used to separate rarely accessed or sensitive columns from the main table, or to model optional detail.
+
+   ```sql
+   CREATE TABLE Employee (Emp_ID INT PRIMARY KEY, Name VARCHAR(100));
+   CREATE TABLE Passport (
+       Passport_No VARCHAR(20) PRIMARY KEY,
+       Emp_ID      INT UNIQUE REFERENCES Employee(Emp_ID)
+   );
+   ```
+
+   One to many, 1:N:
+   - One row in table A relates to many rows in table B, but each row of B relates to only one row of A. This is by far the commonest relationship.
+   - Implementation: place a foreign key on the "many" side. No extra table is needed.
+   - Example: a Department has many Employees, but each Employee belongs to one Department. Others: a Customer places many Orders; an Author writes many Books in the simple case.
+
+   ```sql
+   CREATE TABLE Department (Dept_ID INT PRIMARY KEY, Dept_Name VARCHAR(50));
+   CREATE TABLE Employee (
+       Emp_ID  INT PRIMARY KEY,
+       Name    VARCHAR(100),
+       Dept_ID INT REFERENCES Department(Dept_ID)
+   );
+   ```
+
+   Many to one, N:1:
+   - This is the same relationship as one to many, seen from the other side. It is not a separate kind.
+
+   Many to many, M:N:
+   - Many rows of A relate to many rows of B.
+   - Implementation: a third table, called a junction or associative table, whose primary key is the combination of the two foreign keys. This is compulsory; the relationship cannot be represented by a foreign key in either table.
+   - Example: a Student enrols in many Courses and a Course has many Students. Others: Orders and Products; Doctors and Patients.
+
+   ```sql
+   CREATE TABLE Enrollment (
+       Student_ID INT REFERENCES Student(Student_ID),
+       Course_ID  INT REFERENCES Course(Course_ID),
+       Grade      CHAR(2),
+       PRIMARY KEY (Student_ID, Course_ID)
+   );
+   ```
+
+   Self referencing, or unary, relationship:
+   - A table related to itself, implemented by a foreign key referring to the same table's primary key.
+   - Example: an Employee has a Manager, who is also an Employee; a Category has a parent Category.
+
+   ```sql
+   CREATE TABLE Employee (
+       Emp_ID     INT PRIMARY KEY,
+       Name       VARCHAR(100),
+       Manager_ID INT REFERENCES Employee(Emp_ID)
+   );
+   ```
+
+   - The junction table for a many to many relationship is the point most often tested, because the descriptive attributes of the relationship, such as the grade in Enrollment, have nowhere else to live.
 2. **Discuss about different types of relations in DBMS.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
 
+
+   Answer: The word "relation" is used in two senses in a DBMS, and both should be covered.
+
+   Sense 1, a relation as a table:
+   - In the relational model a relation is a table consisting of rows, called tuples, and columns, called attributes. Its degree is the number of attributes and its cardinality is the number of tuples.
+   - Types of relation in this sense:
+   - Base relation: a table physically stored in the database.
+   - View, or virtual relation: defined by a stored query and holding no data of its own.
+   - Materialised view: a view whose result is physically stored and periodically refreshed.
+   - Temporary relation: created for the duration of a session or a transaction.
+   - Derived relation: the result of a query, existing only while the query runs.
+
+   Sense 2, relationships between tables, classified by cardinality:
+
+   - One to one, 1:1: one row of A relates to at most one row of B and the reverse. Implemented by a foreign key with a UNIQUE constraint. Example: Employee and Passport.
+   - One to many, 1:N: one row of A relates to many rows of B, each of which relates to one row of A. Implemented by a foreign key on the "many" side. Example: Department and Employee. This is the commonest relationship.
+   - Many to many, M:N: many rows of A relate to many rows of B. Implemented by a junction table whose key is the pair of foreign keys. Example: Student and Course, through Enrollment.
+   - Self referencing, or unary: a table related to itself. Example: an Employee's manager, who is also an Employee.
+
+   Relationships may also be classified by degree, that is by the number of entities taking part:
+   - Unary or recursive: one entity related to itself.
+   - Binary: two entities, which is the usual case.
+   - Ternary: three entities related simultaneously, for example Supplier supplies Part to Project. A ternary relationship cannot always be decomposed into three binary ones without losing information.
+   - N-ary: more than three.
+
+   And by participation:
+   - Total participation: every instance of the entity must take part, shown by a double line and implemented with NOT NULL on the foreign key.
+   - Partial participation: participation is optional, so the foreign key may be NULL.
 3. **What is the degree of relation in dbms?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: The degree of a relation is the number of attributes, that is columns, that it contains.
+
+   - It is a property of the schema rather than of the data, so it does not change when rows are inserted or deleted.
+   - It is contrasted with the cardinality of a relation, which is the number of tuples, that is rows. Cardinality changes constantly; degree changes only when the table is altered.
+
+   Example:
+
+   | Roll | Name | Department | CGPA |
+   |---|---|---|---|
+   | 101 | Rahim | CSE | 3.75 |
+   | 102 | Karim | EEE | 3.50 |
+   | 103 | Salma | CSE | 3.90 |
+
+   - Degree = 4, since there are four attributes: Roll, Name, Department and CGPA.
+   - Cardinality = 3, since there are three tuples.
+
+   Names for particular degrees: a relation of degree 1 is unary, of degree 2 binary, of degree 3 ternary, and of degree n n-ary.
+
+   A second meaning of the word, which should be distinguished:
+   - The degree of a relationship in an E-R model is the number of entity sets participating in it: unary if one entity relates to itself, binary if two entities are involved, which is the usual case, and ternary if three are. This is a different concept from the degree of a relation, and confusing the two is a common error.
+   - Example: `Supplier supplies Part to Project` is a ternary relationship, of degree 3.
 4. **(খ) One-to-one এবং One-to-many রিলেশন উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
 
+
+   Answer:
+
+   One to one relationship, 1:1:
+   - One row of table A is associated with at most one row of table B, and one row of B with at most one row of A.
+   - It is implemented by placing a foreign key in either table together with a UNIQUE constraint, which is what enforces the "at most one" on that side. The foreign key is preferably placed in the table with total participation.
+
+   Example:
+   - An Employee and their Passport. Each employee holds at most one passport, and each passport belongs to exactly one employee.
+
+   ```sql
+   CREATE TABLE Employee (
+       Emp_ID INT PRIMARY KEY,
+       Name   VARCHAR(100) NOT NULL
+   );
+
+   CREATE TABLE Passport (
+       Passport_No VARCHAR(20) PRIMARY KEY,
+       Issue_Date  DATE,
+       Expiry_Date DATE,
+       Emp_ID      INT UNIQUE NOT NULL REFERENCES Employee(Emp_ID)
+   );
+   ```
+
+   - `UNIQUE` on `Emp_ID` prevents two passports being linked to the same employee, which is precisely what makes the relationship one to one rather than one to many.
+   - Other examples: a Country and its Capital City; a Person and their national identity record; a Student and their Locker.
+   - Why the two are not simply merged into one table: because the relationship is optional, because the second table's columns are rarely accessed, or because they are sensitive and must be separately secured.
+
+   One to many relationship, 1:N:
+   - One row of table A is associated with many rows of table B, but each row of B is associated with only one row of A. This is by far the commonest relationship in a database.
+   - It is implemented by placing a foreign key on the "many" side, referring to the primary key of the "one" side. No extra table is needed and no UNIQUE constraint is applied.
+
+   Example:
+   - A Department has many Employees, but each Employee belongs to exactly one Department.
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID  INT PRIMARY KEY,
+       Name    VARCHAR(100) NOT NULL,
+       Dept_ID INT REFERENCES Department(Dept_ID)
+   );
+   ```
+
+   - `Dept_ID` in Employee may repeat, since many employees belong to one department, and may be NULL if an employee is not yet assigned. Adding NOT NULL would make participation total.
+   - Other examples: a Customer places many Orders; a Publisher publishes many Books; a Branch holds many Accounts.
+
+   The essential difference: the UNIQUE constraint. Without it the foreign key gives one to many; with it, one to one. Everything else about the implementation is identical.
 5. **Weak Entity and strong entity difference with relation.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Strong entity | Weak entity |
+   |---|---|---|
+   | Primary key | Has its own primary key | Has no key of its own; it has only a partial or discriminator key |
+   | Existence | Exists independently | Depends on an owner entity for its existence |
+   | Identification | Identified by its own attributes | Identified only in combination with the owner's key |
+   | Notation | Single rectangle | Double rectangle |
+   | Relationship | Ordinary relationship, single diamond | Identifying relationship, double diamond |
+   | Participation | May be partial | Always total in the identifying relationship |
+   | Primary key in the table | Its own key attribute | Composite: owner's primary key plus its own partial key |
+   | Deletion | Unaffected by others | Deleted when the owner is deleted, that is CASCADE |
+   | Example | Customer, Employee, Book | Dependent, Loan_Instalment, Book_Copy, Order_Item |
+
+   Example:
+
+   ```
+       Emp_ID    Emp_Name                      Dep_Name    Relation    Age
+          |          |                             |          |         |
+          +----+-----+                             +----+-----+---------+
+               |                                        |
+        +-------------+   1              N      +===============+
+        |  EMPLOYEE   |========< HAS >==========||  DEPENDENT   ||
+        +-------------+                          +===============+
+        (strong entity)   identifying relationship  (weak entity)
+   ```
+
+   - A dependent, that is an employee's spouse or child, has no identity in the organisation independently of the employee. Two employees may each have a child named 'Rahim', so the name alone does not identify the dependent. The primary key of the Dependent table is therefore the composite (Emp_ID, Dep_Name).
+
+   ```sql
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL
+   );
+
+   CREATE TABLE Dependent (
+       Emp_ID   INT,
+       Dep_Name VARCHAR(100),
+       Relation VARCHAR(30),
+       Age      INT,
+       PRIMARY KEY (Emp_ID, Dep_Name),
+       FOREIGN KEY (Emp_ID) REFERENCES Employee(Emp_ID) ON DELETE CASCADE
+   );
+   ```
+
+   - `ON DELETE CASCADE` implements the existence dependency: when the employee record is removed, the dependents are removed with it, since they cannot exist alone.
 6. **(b) Give example of week and strong entity sets.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
 
+
+   Answer:
+
+   Strong entity set:
+   - A strong entity has a primary key of its own and exists independently of any other entity. It is drawn as a single rectangle.
+   - Examples: Employee, identified by Emp_ID; Customer, identified by Customer_ID; Book, identified by ISBN; Student, identified by Student_ID; Department, identified by Dept_ID.
+
+   Weak entity set:
+   - A weak entity has no primary key of its own. It possesses only a partial key, also called a discriminator, which distinguishes it among the instances belonging to the same owner. Its existence depends on a strong entity, called the owner or identifying entity, and it is connected to that owner by an identifying relationship.
+   - Its primary key in the relational schema is the composite of the owner's primary key and its own partial key.
+   - It is drawn as a double rectangle, and the identifying relationship as a double diamond, with total participation on the weak side.
+   - Examples:
+   - Dependent, that is an employee's spouse or child, owned by Employee. Two employees may each have a child named 'Rahim', so the name alone does not identify anyone; the key is (Emp_ID, Dep_Name).
+   - Loan_Instalment, owned by Loan. Instalment number 3 is meaningless without knowing which loan; the key is (Loan_ID, Instalment_No).
+   - Order_Item, owned by Order. Line number 2 identifies nothing by itself; the key is (Order_ID, Line_No).
+   - Book_Copy, owned by Book. Copy number 4 is meaningless without the ISBN; the key is (ISBN, Copy_No).
+   - Room, owned by Building, where room 101 exists in many buildings.
+
+   | Point | Strong entity | Weak entity |
+   |---|---|---|
+   | Primary key | Has its own primary key | Has no key of its own; it has only a partial or discriminator key |
+   | Existence | Exists independently | Depends on an owner entity for its existence |
+   | Identification | Identified by its own attributes | Identified only in combination with the owner's key |
+   | Notation | Single rectangle | Double rectangle |
+   | Relationship | Ordinary relationship, single diamond | Identifying relationship, double diamond |
+   | Participation | May be partial | Always total in the identifying relationship |
+   | Primary key in the table | Its own key attribute | Composite: owner's primary key plus its own partial key |
+   | Deletion | Unaffected by others | Deleted when the owner is deleted, that is CASCADE |
+   | Example | Customer, Employee, Book | Dependent, Loan_Instalment, Book_Copy, Order_Item |
+
+   Example:
+
+   ```
+       Emp_ID    Emp_Name                      Dep_Name    Relation    Age
+          |          |                             |          |         |
+          +----+-----+                             +----+-----+---------+
+               |                                        |
+        +-------------+   1              N      +===============+
+        |  EMPLOYEE   |========< HAS >==========||  DEPENDENT   ||
+        +-------------+                          +===============+
+        (strong entity)   identifying relationship  (weak entity)
+   ```
+
+   - A dependent, that is an employee's spouse or child, has no identity in the organisation independently of the employee. Two employees may each have a child named 'Rahim', so the name alone does not identify the dependent. The primary key of the Dependent table is therefore the composite (Emp_ID, Dep_Name).
+
+   ```sql
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL
+   );
+
+   CREATE TABLE Dependent (
+       Emp_ID   INT,
+       Dep_Name VARCHAR(100),
+       Relation VARCHAR(30),
+       Age      INT,
+       PRIMARY KEY (Emp_ID, Dep_Name),
+       FOREIGN KEY (Emp_ID) REFERENCES Employee(Emp_ID) ON DELETE CASCADE
+   );
+   ```
+
+   - `ON DELETE CASCADE` implements the existence dependency: when the employee record is removed, the dependents are removed with it, since they cannot exist alone.
 7. **(a) What is referential integrity? How do you impose in your database design?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
 
+
+   Answer:
+
+   What referential integrity is:
+   - Referential integrity is the rule that a foreign key value in one table must either match some primary key value in the referenced table, or be NULL. It guarantees that a reference always points to something that exists, so that orphan rows cannot occur.
+   - It is one of the two fundamental integrity rules of the relational model, the other being entity integrity, which requires that a primary key be unique and not NULL.
+   - Example: if the Employee table holds `Dept_ID` referring to Department, then every non-null `Dept_ID` must correspond to an actual department. An employee cannot belong to department 99 if no such department exists.
+
+   How it is imposed in a database design:
+
+   - By declaring a FOREIGN KEY constraint, which is the correct and primary method:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,
+       Dept_Name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL,
+       Dept_ID  INT,
+       CONSTRAINT fk_emp_dept
+           FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)
+           ON DELETE RESTRICT
+           ON UPDATE CASCADE
+   );
+   ```
+
+   - By choosing the appropriate referential action, which decides what happens when the parent row is deleted or its key changed:
+   - `ON DELETE RESTRICT` or `NO ACTION`, the default, refuses to delete a parent while children refer to it.
+   - `ON DELETE CASCADE` deletes the children along with the parent. Appropriate for a weak entity such as Order_Item, dangerous elsewhere.
+   - `ON DELETE SET NULL` keeps the children but severs the link, which requires the foreign key column to be nullable.
+   - `ON DELETE SET DEFAULT` sets it to a defined default value.
+   - `ON UPDATE CASCADE` propagates a change of key value to the children.
+
+   - By adding NOT NULL to the foreign key where participation must be total, so that a child cannot exist without a parent.
+   - By adding the constraint to an existing table where it was omitted:
+
+   ```sql
+   ALTER TABLE Employee
+   ADD CONSTRAINT fk_emp_dept FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);
+   ```
+
+   - By inserting in the correct order: the parent row must exist before a child can refer to it, and deletion must proceed in the reverse order.
+   - By indexing the foreign key column. It is not indexed automatically, and without an index every deletion from the parent requires a full scan of the child table to check the constraint.
+
+   Why it should be enforced by the DBMS rather than by the application:
+   - The constraint then applies to every route into the data: the application, a reporting tool, a manual correction by an administrator, or a bulk load. An application level check can always be bypassed, and in practice eventually is.
+
+   Consequences of not enforcing it: orphan rows, joins that silently lose data, reports that do not reconcile, and a database that cannot be trusted.
 8. **What is a weak entity for data modeling using the entity relationship model find out any weak entity and its identify relationship for the school database? Which of the following table? Student(student_id, student_name, admission_year) Teacher(teacher_id, teacher_name, teacher_joindate) Course(course_id, subject_name, credit)** *[BCC Assistant Programmer 12.02.2021 compact it 814 (ET: BUET)]*
 
+
+   Answer:
+
+   What a weak entity is:
+   - A weak entity is an entity that has no primary key of its own and cannot be identified independently. It possesses only a partial key, or discriminator, which distinguishes it among the instances belonging to one particular owner. Its existence depends on a strong entity, to which it is connected by an identifying relationship.
+   - In the relational schema its primary key is the composite of the owner's primary key and its own partial key, and the foreign key normally carries `ON DELETE CASCADE`, since a weak entity cannot survive its owner.
+   - It is drawn as a double rectangle, with a double diamond for the identifying relationship and total participation on the weak side.
+
+   Applied to the given school database:
+
+   ```
+   Student(student_id, student_name, admission_year)
+   Teacher(teacher_id, teacher_name, teacher_joindate)
+   Course(course_id, subject_name, credit)
+   ```
+
+   - None of these three is a weak entity. Each has its own primary key — student_id, teacher_id and course_id — and each exists independently of the others. A course exists whether or not any student has enrolled in it, and a teacher exists whether or not any course has been assigned.
+
+   Weak entities that would arise in a fuller school database:
+   - Enrollment(student_id, course_id, semester, grade): the row has no identity of its own; it exists only because a particular student took a particular course. Its key is the composite (student_id, course_id, semester), and its identifying relationships are with both Student and Course.
+   - Exam_Result(student_id, course_id, exam_type, marks): identified only in combination with the student and the course.
+   - Attendance(student_id, course_id, date, status): the same.
+   - Student_Guardian(student_id, guardian_name, relation, phone): a guardian has no identity in the school database independently of the student, and two students may each have a guardian named 'Karim', so the key is (student_id, guardian_name).
+   - Class_Section(course_id, section_no, room, schedule): section A is meaningless without knowing which course.
+
+   Example schema for one of them:
+
+   ```sql
+   CREATE TABLE Student_Guardian (
+       student_id    INT,
+       guardian_name VARCHAR(100),
+       relation      VARCHAR(30),
+       phone         VARCHAR(20),
+       PRIMARY KEY (student_id, guardian_name),
+       FOREIGN KEY (student_id) REFERENCES Student(student_id) ON DELETE CASCADE
+   );
+   ```
+
+   - The correct answer to the question as asked is therefore that none of the three tables given is a weak entity, and to identify what a weak entity would be in that domain and why. Stating that clearly is what earns the marks.
 9. **(c) What is a weak entity set? How the primary key is generated for weak entity set?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)]*
 
+
+   Answer:
+
+   What a weak entity set is:
+   - A weak entity set is a set of entities that have no primary key of their own and cannot be identified independently of some other entity. Each weak entity depends for its existence on an entity of a strong, or owner, entity set, to which it is connected by an identifying relationship.
+   - Characteristics: it has only a partial key, also called a discriminator, which distinguishes its instances within one owner; its participation in the identifying relationship is always total; and it is deleted when its owner is deleted.
+   - Notation: a double rectangle for the entity, a double diamond for the identifying relationship, and the partial key underlined with a dashed line.
+
+   How the primary key of a weak entity set is generated:
+   - The primary key is formed by combining the primary key of the owner entity with the partial key of the weak entity.
+   - Formally: primary key of weak entity = primary key of owner + discriminator.
+   - This composite is guaranteed to be unique, because the owner's key distinguishes the owners and the discriminator distinguishes the weak entities within one owner.
+
+   Example:
+   - Employee is the owner, with primary key Emp_ID. Dependent is the weak entity, with the partial key Dep_Name.
+   - Two employees may each have a child named 'Rahim', so Dep_Name alone identifies nothing. But within one employee's family the name is unique, so (Emp_ID, Dep_Name) identifies a dependent exactly.
+
+   ```sql
+   CREATE TABLE Employee (
+       Emp_ID   INT PRIMARY KEY,
+       Emp_Name VARCHAR(100) NOT NULL
+   );
+
+   CREATE TABLE Dependent (
+       Emp_ID   INT,
+       Dep_Name VARCHAR(100),
+       Relation VARCHAR(30),
+       Age      INT,
+       PRIMARY KEY (Emp_ID, Dep_Name),
+       FOREIGN KEY (Emp_ID) REFERENCES Employee(Emp_ID) ON DELETE CASCADE
+   );
+   ```
+
+   - `ON DELETE CASCADE` implements the existence dependency: removing the employee removes the dependents, since they cannot exist without an owner.
+   - Further examples: Loan_Instalment owned by Loan, with key (Loan_ID, Instalment_No); Order_Item owned by Order, with key (Order_ID, Line_No); Book_Copy owned by Book, with key (ISBN, Copy_No); Room owned by Building, with key (Building_ID, Room_No).
+
+   - Practical note: many designers add a surrogate key, such as an auto-incremented Dependent_ID, as the primary key, and keep a UNIQUE constraint on the natural composite. This simplifies referencing from other tables while preserving the business rule. Both approaches are defensible.
 10. **(a) Write down Integrity rules in database.** *[National University Assistant Programmer 2020 compact it 976 (ET: DU)]*
 
+
+   Answer: The integrity rules of the relational model are the conditions that the data must always satisfy, and they are enforced by the DBMS itself rather than by the applications.
+
+   Entity integrity:
+   - The primary key of a relation must be unique and must never contain a NULL value in any of its component attributes.
+   - Reason: a row that cannot be identified has no meaning in a relation, and a NULL means "unknown", so a NULL key would make the row unidentifiable.
+   - Enforced by: `PRIMARY KEY (col)`, which implies both UNIQUE and NOT NULL.
+
+   Referential integrity:
+   - A foreign key value must either match some primary key value in the referenced relation, or be entirely NULL.
+   - Reason: a reference must point to something that exists; otherwise the database contains orphan rows and joins silently lose data.
+   - Enforced by: `FOREIGN KEY (col) REFERENCES Parent(col)`, together with the referential actions ON DELETE and ON UPDATE, which may be RESTRICT, CASCADE, SET NULL or SET DEFAULT.
+
+   Domain integrity:
+   - Every value in a column must belong to the declared domain, that is it must be of the correct data type, within the permitted range, and in the permitted format.
+   - Enforced by: the data type declaration, `NOT NULL`, `CHECK` constraints, `DEFAULT` values and enumerated types.
+
+   Key integrity, or uniqueness:
+   - Any attribute declared as an alternate key must contain distinct values.
+   - Enforced by: the `UNIQUE` constraint, which unlike PRIMARY KEY permits one NULL.
+
+   User defined or business integrity:
+   - Rules specific to the organisation that the standard constraints cannot express, for example that a withdrawal must not exceed the balance plus the overdraft limit, or that a discount above 20 percent requires managerial approval.
+   - Enforced by: CHECK constraints where possible, and otherwise by triggers, stored procedures or the application.
+
+   Example bringing them together:
+
+   ```sql
+   CREATE TABLE Department (
+       Dept_ID   INT PRIMARY KEY,                       -- entity integrity
+       Dept_Name VARCHAR(50) NOT NULL UNIQUE            -- domain and key integrity
+   );
+
+   CREATE TABLE Employee (
+       Emp_ID    INT PRIMARY KEY,                       -- entity integrity
+       Emp_Name  VARCHAR(100) NOT NULL,                 -- domain integrity
+       Email     VARCHAR(100) UNIQUE,                   -- key integrity
+       Salary    DECIMAL(10,2) CHECK (Salary > 0),      -- domain integrity
+       Join_Date DATE DEFAULT (CURRENT_DATE),
+       Dept_ID   INT,
+       FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)   -- referential integrity
+           ON DELETE SET NULL
+   );
+   ```
+
+   - The essential principle: these rules should be declared in the database rather than checked in the application, because the database is the single point through which every route to the data must pass. An application level check can be bypassed by a reporting tool, a bulk load or a manual correction, and eventually will be.
 11. **What is constraints? Why use constraint? Difference between table level Cosntraint and column level Cosntraint.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
+
+
+   Answer:
+
+   What a constraint is:
+   - A constraint is a rule declared on a table or a column which the DBMS enforces automatically, so that data violating it can never be stored. It is part of the schema rather than of the application code.
+
+   Types of constraint:
+   - `NOT NULL`: the column must always contain a value.
+   - `UNIQUE`: no two rows may hold the same value in the column, though one NULL is generally permitted.
+   - `PRIMARY KEY`: unique and not null together; identifies each row; one per table.
+   - `FOREIGN KEY`: the value must exist in the referenced table's key, which enforces referential integrity.
+   - `CHECK`: an arbitrary condition that each row must satisfy, for example `Salary > 0`.
+   - `DEFAULT`: supplies a value when none is given on insertion. Strictly a default rather than a constraint, but usually listed with them.
+
+   Why constraints are used:
+   - They guarantee data integrity at the source. Because every route into the database — the application, a reporting tool, a manual correction, a bulk load — passes through the DBMS, a constraint cannot be bypassed, whereas an application check can and eventually will be.
+   - They enforce business rules centrally, so the rule is written once instead of in every application.
+   - They document the design, making the schema self describing.
+   - They help the query optimiser, which uses declared keys and uniqueness to choose better plans.
+   - They prevent whole classes of error before the data is stored, rather than requiring it to be cleaned afterwards, which is far cheaper.
+
+   Column level versus table level constraints:
+
+   | Point | Column level | Table level |
+   |---|---|---|
+   | Where declared | Immediately after the column definition | After all the column definitions, as a separate clause |
+   | Columns involved | Exactly one | One or more |
+   | Composite key possible | No | Yes |
+   | Multi-column CHECK possible | No | Yes |
+   | Naming the constraint | Possible but less common | Usual, with CONSTRAINT name |
+   | Readability | Compact for simple rules | Clearer for complex or multi-column rules |
+   | Applicable to | NOT NULL only at column level; others at either | Everything except NOT NULL |
+
+   Example showing both:
+
+   ```sql
+   CREATE TABLE Enrollment (
+       Student_ID INT NOT NULL,                             -- column level
+       Course_ID  INT NOT NULL,                             -- column level
+       Semester   VARCHAR(20) NOT NULL,
+       Marks      DECIMAL(5,2) CHECK (Marks BETWEEN 0 AND 100),  -- column level CHECK
+       Grade      CHAR(2),
+
+       CONSTRAINT pk_enrollment PRIMARY KEY (Student_ID, Course_ID, Semester),   -- table level
+       CONSTRAINT fk_student FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+       CONSTRAINT fk_course  FOREIGN KEY (Course_ID)  REFERENCES Course(Course_ID),
+       CONSTRAINT chk_grade  CHECK ((Marks >= 80 AND Grade = 'A') OR Marks < 80)  -- multi-column
+   );
+   ```
+
+   - `NOT NULL` can only be written at column level.
+   - The composite primary key must be written at table level, since it spans three columns.
+   - The final CHECK involves two columns and therefore must also be at table level.
+   - Naming constraints explicitly is good practice, because the DBMS then reports a meaningful name when a violation occurs, and the constraint can be dropped or disabled by name later.
 
 ## Database Backup & Disaster Recovery (8)
 
