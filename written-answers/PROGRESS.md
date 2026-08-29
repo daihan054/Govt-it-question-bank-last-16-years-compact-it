@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 146/239 subtopics · 1680/2673 answers**
+**Overall: 147/239 subtopics · 1681/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -176,7 +176,7 @@ Commit unit: one `##` subtopic.
 - [x] Relational Keys (Candidate, Super, Primary, Foreign Key) (1)
 - [x] Indexing in DBMS (1)
 
-## dld.md — 8/9 sections, 109/110 answers
+## dld.md — 9/9 sections, 110/110 answers
 
 - [x] Logic Gates & Universal Gates (27)
 - [x] Number Systems & Base Conversions (19)
@@ -186,7 +186,7 @@ Commit unit: one `##` subtopic.
 - [x] Sequential Circuits (Latches & Flip-Flops) (9)
 - [x] Logic Families (TTL vs CMOS) (5)
 - [x] 2's Complement & Binary Arithmetic (2)
-- [ ] Finite State Machines (FSM) (1)
+- [x] Finite State Machines (FSM) (1)
 
 ## electrical-and-electronics.md — 0/8 sections, 0/37 answers
 
