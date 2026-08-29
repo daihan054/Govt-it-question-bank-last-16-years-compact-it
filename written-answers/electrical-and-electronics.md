@@ -768,22 +768,374 @@
 
 1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
+
+   Answer: A leading power factor means the current leads the voltage, so the reactive element is a capacitor. The two elements in series are therefore a resistor R and a capacitor C.
+
+   Given:
+   - Average (real) power, P = 940 W
+   - Power factor, cos(theta) = 0.707 leading, so theta = -45 degree
+   - Applied voltage, v = 99.cos(600t + 30 degree) V, so Vm = 99 V and omega = 600 rad/s
+
+   Step 1 - find the rms voltage:
+   - Vrms = Vm / sqrt(2) = 99 / 1.4142 = 70.00 V
+
+   Step 2 - find the apparent power:
+   - S = P / cos(theta) = 940 / 0.707 = 1329.56 VA
+
+   Step 3 - find the rms current:
+   - Irms = S / Vrms = 1329.56 / 70.00 = 18.99 A
+
+   Step 4 - find the magnitude of the impedance:
+   - |Z| = Vrms / Irms = 70.00 / 18.99 = 3.686 ohm
+
+   Step 5 - resolve the impedance into its two components. With theta = -45 degree:
+   - R = |Z|.cos(theta) = 3.686 x 0.707 = 2.606 ohm
+   - Xc = |Z|.sin(theta) = 3.686 x 0.707 = 2.606 ohm (capacitive)
+   - So Z = 2.606 - j2.606 ohm
+
+   Step 6 - find the capacitance from Xc = 1 / (omega.C):
+   - C = 1 / (omega x Xc)
+   - C = 1 / (600 x 2.606)
+   - C = 1 / 1563.6
+   - C = 6.395 x 10^-4 F
+
+   Final answer:
+   - R = 2.61 ohm
+   - C = 639.4 microfarad (about 640 microfarad)
+
+   Verification: P = Irms^2 x R = (18.99)^2 x 2.606 = 360.6 x 2.606 = 940 W. This matches the given power, so the answer is correct.
+
+   Note: R can also be found directly from P = Irms^2.R once Irms is known, which avoids Step 4.
 2. **RLC সার্কিট কী? বৈদ্যুতিক সার্কিটে ট্রানজিস্টরের ভূমিকা কী?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809-810 (ET: IBA)]*
+
+
+   Answer:
+
+   RLC circuit:
+   - A circuit containing a resistor (R), an inductor (L) and a capacitor (C), connected either in series or in parallel and driven by an AC source.
+   - Impedance of the series form: Z = R + j(XL - Xc), where XL = 2.pi.f.L and Xc = 1/(2.pi.f.C).
+   - Magnitude: |Z| = sqrt(R^2 + (XL - Xc)^2), and phase angle theta = arctan((XL - Xc)/R).
+   - Behaviour with frequency:
+     - When XL is greater than Xc the circuit is inductive and the current lags the voltage.
+     - When Xc is greater than XL the circuit is capacitive and the current leads the voltage.
+     - When XL = Xc the circuit is at resonance.
+   - Resonance: XL = Xc gives the resonant frequency
+     fr = 1 / (2.pi.sqrt(L.C))
+     At resonance the series RLC circuit has minimum impedance Z = R, so the current is maximum and the power factor is unity. The parallel RLC circuit behaves the opposite way: maximum impedance and minimum current, which is why it is called a rejector or tank circuit.
+   - Quality factor Q = (1/R).sqrt(L/C), and bandwidth BW = fr / Q. A high Q gives a sharp, selective response.
+   - Uses: tuning a radio or television receiver to one station, band-pass and band-stop filters, oscillator tank circuits, and power factor correction.
+
+   Role of a transistor in an electrical circuit:
+   - Amplification: a small signal current or voltage at the input controls a much larger current at the output, so weak signals from a microphone, sensor or antenna can be raised to a usable level. In the common-emitter configuration IC = beta.IB.
+   - Switching: driven between cut-off (fully OFF, acts as an open switch) and saturation (fully ON, acts as a closed switch), a transistor replaces a mechanical relay and switches millions of times per second with no moving parts. This is the basis of every digital circuit.
+   - Oscillation: with positive feedback around an amplifier stage, a transistor generates a continuous waveform without any input, which produces clock signals and carrier frequencies.
+   - Voltage regulation: it acts as the series pass element in a regulated power supply, adjusting its resistance to hold the output constant.
+   - Impedance matching: in the emitter follower (common collector) configuration it converts a high source impedance to a low output impedance, so a weak source can drive a heavy load.
+   - Modulation and demodulation in communication circuits.
+   - As the building block of ICs: the logic gates, memory cells and microprocessors of a computer are all made of millions to billions of transistors.
+
+   In short, the transistor is the active device that gives a circuit gain and control, while R, L and C are passive elements that only shape and store the signal.
 
 ## Operational Amplifiers (Op-Amp) (2)
 
 1. **Assuming Ideal Op Amps, Find The Voltage Gain V_o/V_i of the following circuit.** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
 
+
+   Answer: An ideal op-amp is analysed using two rules, and the gain follows directly from them.
+
+   Ideal op-amp assumptions:
+   - Infinite open-loop gain, so with negative feedback the two input terminals are at the same voltage. This is the virtual short rule: V+ = V-.
+   - Infinite input impedance, so no current enters either input terminal. This is the virtual open rule: I+ = I- = 0.
+   - Zero output impedance, infinite bandwidth and infinite CMRR.
+
+   The exact circuit is not reproduced here, so the gain is derived for the two standard connections that the question refers to.
+
+   Inverting amplifier (input applied through R1 to the minus terminal, feedback resistor Rf, plus terminal grounded):
+   - Since V+ = 0 (grounded), the virtual short gives V- = 0, which is called a virtual ground.
+   - Current through the input resistor: I1 = (Vi - 0)/R1 = Vi/R1
+   - No current enters the op-amp input, so the same current flows through Rf: I1 = (0 - Vo)/Rf
+   - Equating: Vi/R1 = -Vo/Rf
+
+   Voltage gain: Vo/Vi = -Rf/R1
+
+   The minus sign means the output is 180 degree out of phase with the input.
+
+   Non-inverting amplifier (input applied to the plus terminal, Rf from output to the minus terminal, R1 from the minus terminal to ground):
+   - Virtual short gives V- = V+ = Vi
+   - The output divides across Rf and R1, so V- = Vo.R1/(R1 + Rf)
+   - Equating: Vi = Vo.R1/(R1 + Rf)
+
+   Voltage gain: Vo/Vi = 1 + Rf/R1
+
+   The gain is positive, so the output is in phase with the input, and it can never be less than 1.
+
+   Special cases used as building blocks:
+   - Voltage follower (buffer): Rf = 0 and R1 = infinity, so Vo/Vi = 1. Used for impedance matching.
+   - Summing amplifier: several inputs through R1, R2, R3 into the virtual ground give Vo = -Rf(V1/R1 + V2/R2 + V3/R3).
+   - Difference amplifier with all four resistors equal: Vo = V2 - V1.
+
+   Method to apply to any given circuit:
+   1. Mark the two input terminals and set V+ = V- (virtual short).
+   2. Write a node equation at the inverting terminal, remembering that no current enters the op-amp.
+   3. Solve for Vo in terms of Vi and take the ratio Vo/Vi.
 2. **একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
+
+
+   Answer:
+
+   Main characteristics of an operational amplifier:
+
+   - Very high open-loop voltage gain: typically 10^5 to 10^6 (100 to 120 dB). Ideally infinite. This is what makes accurate negative-feedback design possible, because the closed-loop gain then depends only on the external resistors.
+   - Very high input impedance: about 2 M ohm for a 741 and 10^12 ohm for a FET-input type. Ideally infinite, so the op-amp draws almost no current from the source and does not load it.
+   - Very low output impedance: about 75 ohm, ideally zero, so the output voltage does not fall when a load is connected.
+   - Differential input: it amplifies only the difference between the two inputs, Vo = A(V+ - V-).
+   - High common mode rejection ratio (CMRR): about 90 dB. Noise picked up equally by both input wires is rejected, which is essential for instrumentation and long sensor cables.
+   - Wide bandwidth and a fixed gain-bandwidth product: for a 741 it is about 1 MHz, so gain x bandwidth is constant. A gain of 100 leaves only 10 kHz of bandwidth.
+   - Slew rate: the maximum rate of change of the output, about 0.5 V per microsecond for a 741. It limits the largest undistorted output at high frequency.
+   - Low input offset voltage and low input bias current, ideally zero, so the output is zero when both inputs are equal.
+   - High power supply rejection ratio, so ripple on the supply does not appear at the output.
+   - Two operating rules used in analysis, valid whenever negative feedback is present: the two inputs are at the same voltage (virtual short), and no current flows into either input (virtual open).
+   - Applications: inverting and non-inverting amplifier, summing amplifier, difference amplifier, integrator, differentiator, comparator, active filter, and instrumentation amplifier.
+
+   How AC power is converted into DC power:
+
+   The conversion is called rectification and a complete DC power supply has four stages.
+
+   ```mermaid
+   flowchart LR
+     AC[220 V AC Mains] --> T[Step-down Transformer]
+     T --> R[Bridge Rectifier - 4 Diodes]
+     R --> F[Capacitor Filter]
+     F --> RG[Voltage Regulator]
+     RG --> DC[Constant DC Output]
+   ```
+
+   - Transformer: steps the 220 V mains down to a low AC voltage such as 12 V and isolates the load from the mains.
+   - Rectifier: diodes conduct in one direction only. In a full-wave bridge, two of the four diodes conduct in each half cycle, so both halves of the input appear at the output with the same polarity. The output is pulsating DC. Efficiency is 81.2 percent and the ripple frequency is 100 Hz for a 50 Hz supply.
+   - Filter: a large electrolytic capacitor across the load charges at each peak and discharges slowly in between, filling the valleys and smoothing the waveform. Ripple voltage is approximately Vr = I/(f.C), so a larger capacitor gives less ripple.
+   - Regulator: a Zener diode or a regulator IC such as 7805 or LM317 holds the output constant against changes in mains voltage and load current.
+
+   In a modern SMPS the order is different and more efficient: the mains is rectified first, then chopped at 50 to 100 kHz, stepped down by a small ferrite transformer, rectified again and filtered. This gives 85 to 95 percent efficiency and a much smaller and lighter unit.
 
 ## Sensor Circuits & Automated Control Systems (2)
 
 1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
 
+
+   Answer: An automatic street light control system turns the lamp ON when the ambient light falls below a set level and OFF when daylight returns. The light sensor is an LDR (Light Dependent Resistor), whose resistance falls in bright light and rises in darkness.
+
+   Block diagram:
+
+   ```mermaid
+   flowchart LR
+     LDR[LDR Light Sensor] --> DIV[Voltage Divider]
+     DIV --> CMP[Comparator LM393 with Preset Threshold]
+     POT[Preset Potentiometer - Sensitivity] --> CMP
+     CMP --> DRV[Transistor Driver Stage]
+     DRV --> RLY[Relay 5V]
+     RLY --> LAMP[Street Light 220 V AC]
+     PS[Regulated 5V DC Supply] --> CMP
+     PS --> DRV
+   ```
+
+   Circuit description:
+   - The LDR is connected in series with a fixed resistor R across the 5 V supply, forming a voltage divider. The junction voltage is the sensor output.
+     - In daylight the LDR resistance is low (about 1 k ohm), so the junction voltage is low.
+     - At night the LDR resistance is high (about 1 M ohm), so the junction voltage is high.
+   - This junction feeds the non-inverting input of an LM393 comparator. A potentiometer sets the reference voltage on the inverting input, which fixes the darkness level at which the lamp should switch on.
+   - When the sensor voltage rises above the reference, the comparator output goes HIGH.
+   - The comparator output drives an NPN transistor (BC547) through a base resistor. The transistor energises a 5 V relay coil, and the relay contact switches the 220 V lamp circuit.
+   - A freewheeling diode (1N4007) is placed across the relay coil to absorb the back EMF when the coil is de-energised, protecting the transistor.
+   - An optocoupler or the relay itself provides isolation between the low-voltage control side and the 220 V mains side.
+
+   Truth table of the control logic:
+
+   | Condition | LDR resistance | Sensor voltage | Comparator output | Relay | Lamp |
+   |---|---|---|---|---|---|
+   | Daylight | Low | Below reference | LOW | OFF | OFF |
+   | Night / low light | High | Above reference | HIGH | ON | ON |
+
+   Microcontroller version (more flexible):
+   - The LDR divider output goes to an analogue input of an Arduino or a similar microcontroller, and the relay is driven from a digital output pin.
+
+   ```c
+   const int LDR_PIN   = A0;
+   const int RELAY_PIN = 7;
+   const int THRESHOLD = 400;   // set during commissioning
+   const int HYSTERESIS = 40;   // prevents flicker at dusk
+
+   void setup() {
+       pinMode(RELAY_PIN, OUTPUT);
+       digitalWrite(RELAY_PIN, LOW);
+   }
+
+   void loop() {
+       int light = analogRead(LDR_PIN);      // 0 = dark, 1023 = bright
+       if (light < THRESHOLD - HYSTERESIS) {
+           digitalWrite(RELAY_PIN, HIGH);    // dark -> lamp ON
+       } else if (light > THRESHOLD + HYSTERESIS) {
+           digitalWrite(RELAY_PIN, LOW);     // bright -> lamp OFF
+       }
+       delay(1000);                          // sample once per second
+   }
+   ```
+
+   Design points to mention:
+   - Hysteresis is essential. Without it, the lamp flickers on and off at dusk and dawn when the light level hovers around the threshold. In the analogue version hysteresis is added with a feedback resistor from the comparator output back to its non-inverting input, making it a Schmitt trigger.
+   - A time delay of a few seconds prevents false switching when a vehicle headlight or a passing cloud changes the light level briefly.
+   - The LDR must be shielded from the lamp it controls, otherwise the lamp lights the sensor, the sensor switches the lamp off, and the circuit oscillates.
+   - Enhancement: add a PIR motion sensor so the lamp runs at 30 percent brightness when the road is empty and full brightness when a person or vehicle passes, which saves a large amount of energy.
+   - Enhancement: an RTC or a GPS time source can act as a backup, so the lamp still follows sunset and sunrise times if the LDR fails.
+
+   Advantages: no manual switching, no wasted energy in daylight, longer lamp life, and consistent operation across the whole city.
 2. **Which signal a sensor could to send the signal to microcontroller if the sensor finds any gas leakage point?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 861 (ET: N/A)]*
+
+
+   Answer: A gas leakage sensor such as the MQ-2, MQ-5 or MQ-6 produces an analogue voltage that rises with the gas concentration, and most modules also provide a digital threshold output. Both can be sent to a microcontroller.
+
+   Analogue signal (AOUT pin):
+   - The sensing element is a tin dioxide (SnO2) film whose resistance falls as the concentration of combustible gas rises.
+   - The module converts that resistance into a voltage of 0 to 5 V through a load resistor, and this voltage is proportional to the gas concentration in ppm.
+   - The microcontroller reads it on an ADC input pin.
+   - This is the preferred signal, because it tells the controller how much gas is present, not merely whether gas is present. That allows two levels of response: a warning at a low concentration and a shutdown at a high one.
+
+   Digital signal (DOUT pin):
+   - An on-board LM393 comparator compares the sensor voltage with a level set by a preset potentiometer.
+   - It outputs logic LOW (0 V) in clean air and logic HIGH (5 V) when the gas crosses the set level, or the opposite depending on the module.
+   - The microcontroller reads it on an ordinary digital input, or better on an external interrupt pin so that a leak is detected immediately without polling.
+
+   Recommended answer: an analogue voltage signal on the ADC input, with the digital comparator output connected to an interrupt pin as a fast backup.
+
+   Reading and response in a microcontroller:
+
+   ```c
+   const int GAS_AOUT = A0;
+   const int BUZZER   = 8;
+   const int VALVE    = 9;      // solenoid shut-off valve
+   const int WARN_LEVEL  = 300;
+   const int ALARM_LEVEL = 600;
+
+   void loop() {
+       int gas = analogRead(GAS_AOUT);
+       if (gas > ALARM_LEVEL) {
+           digitalWrite(BUZZER, HIGH);
+           digitalWrite(VALVE, HIGH);     // close the gas line
+           sendSMSAlert();
+       } else if (gas > WARN_LEVEL) {
+           digitalWrite(BUZZER, HIGH);    // warning only
+       } else {
+           digitalWrite(BUZZER, LOW);
+       }
+       delay(500);
+   }
+   ```
+
+   Other signal types used by industrial gas detectors:
+   - 4 to 20 mA current loop: the standard for long cable runs in a plant, because current does not drop over distance and a reading of 0 mA immediately indicates a broken wire.
+   - Digital serial output over UART, I2C or Modbus RS-485 for calibrated smart sensors.
+   - Contact closure to a SCADA input for a simple trip signal.
+
+   Practical points:
+   - MQ-series sensors need a warm-up (preheat) time of 20 seconds to a few minutes before the reading is valid, and 24 to 48 hours of burn-in for a new sensor.
+   - The output drifts with temperature and humidity, so periodic calibration in clean air is required.
+   - The sensor must be mounted according to the gas: LPG is heavier than air, so the detector goes near the floor; methane or natural gas is lighter, so the detector goes near the ceiling.
+   - The alarm circuit must be intrinsically safe, because a spark from a relay in a gas-filled room is itself an ignition source.
 
 ## Circuit Theorems (Thevenin, Norton, Superposition) (2)
 
 1. **Find current across 2 \Omega resistor using Thevenin Theorem:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 417 (ET: BUET)]*
 
+
+   Answer: Thevenin's theorem states that any linear two-terminal network of sources and resistances can be replaced, as seen from those two terminals, by a single voltage source Vth in series with a single resistance Rth.
+
+   The specific circuit is not reproduced here, so the complete standard procedure is given and then applied to a worked example.
+
+   Procedure:
+
+   Step 1 - Remove the load resistor (the 2 ohm resistor) from the circuit and leave its two terminals open, marked A and B.
+
+   Step 2 - Find Vth, the open-circuit voltage across A and B. Use any method: series-parallel reduction, voltage divider, mesh analysis or nodal analysis. No current flows through a branch that ends at an open terminal, so any resistor in that branch has no voltage drop across it.
+
+   Step 3 - Find Rth, the resistance looking back into the network from A and B with all independent sources deactivated:
+   - Replace every independent voltage source by a short circuit.
+   - Replace every independent current source by an open circuit.
+   - Dependent sources are kept; for those, apply a 1 V test source at A-B and compute Rth = Vtest/Itest.
+   - Then reduce the remaining resistor network by series and parallel combination.
+
+   Step 4 - Draw the Thevenin equivalent: Vth in series with Rth, and reconnect the 2 ohm load.
+
+   Step 5 - Compute the load current:
+   IL = Vth / (Rth + RL) = Vth / (Rth + 2)
+
+   Worked example with typical values:
+   - Suppose a 12 V source is in series with 4 ohm, that node feeds a 6 ohm resistor to ground, and the 2 ohm load is taken from that node.
+   - Step 2: with the 2 ohm removed, the open-circuit voltage is the divider output
+     Vth = 12 x 6 / (4 + 6) = 12 x 0.6 = 7.2 V
+   - Step 3: short the 12 V source. Looking back from A-B, the 4 ohm and 6 ohm are in parallel
+     Rth = (4 x 6) / (4 + 6) = 24 / 10 = 2.4 ohm
+   - Step 5: reconnect the 2 ohm load
+     IL = 7.2 / (2.4 + 2) = 7.2 / 4.4 = 1.636 A
+   - Voltage across the 2 ohm resistor = 1.636 x 2 = 3.27 V
+
+   Equivalent circuit:
+
+   ```
+       Rth = 2.4 ohm
+    +---/\/\/\---+------o A
+    |              |
+   (Vth = 7.2 V)  [ 2 ohm load ]
+    |              |
+    +--------------+------o B
+   ```
+
+   Why the theorem is useful: once Vth and Rth are known, the load can be changed to any value and the current is found from one division, without solving the whole network again. It also gives the maximum power transfer condition directly: maximum power is delivered when RL = Rth.
 2. **Find the Value of I_{ab} using Norton's Theorem.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
+
+
+   Answer: Norton's theorem states that any linear two-terminal network can be replaced, as seen from those two terminals, by a single current source IN in parallel with a single resistance RN.
+
+   The specific circuit is not reproduced here, so the complete standard procedure is given and then applied to a worked example.
+
+   Procedure:
+
+   Step 1 - Remove the branch whose current is required, that is the branch a-b, leaving terminals a and b open.
+
+   Step 2 - Find IN, the Norton current. Place a short circuit directly across a and b, and find the current that flows through that short. Mesh or nodal analysis is normally used, because the short changes the topology of the network.
+
+   Step 3 - Find RN, the Norton resistance. This is exactly the same as Rth:
+   - Replace every independent voltage source by a short circuit.
+   - Replace every independent current source by an open circuit.
+   - Reduce the remaining resistor network as seen from a-b.
+   - So RN = Rth.
+
+   Step 4 - Draw the Norton equivalent: IN in parallel with RN, and reconnect the load between a and b.
+
+   Step 5 - Find the load current by the current divider rule:
+   Iab = IN x RN / (RN + RL)
+
+   Worked example with typical values:
+   - Suppose a 12 V source is in series with 4 ohm, that node feeds a 6 ohm resistor to ground, and a 2 ohm load is connected between a and b at that node.
+   - Step 2: short a-b. The 6 ohm resistor is then shorted out, so the entire source current flows through the short
+     IN = 12 / 4 = 3 A
+   - Step 3: short the 12 V source. The 4 ohm and 6 ohm appear in parallel
+     RN = (4 x 6) / (4 + 6) = 2.4 ohm
+   - Step 5: reconnect the 2 ohm load and apply the current divider
+     Iab = 3 x 2.4 / (2.4 + 2) = 7.2 / 4.4 = 1.636 A
+
+   Equivalent circuit:
+
+   ```
+        +---------+---------+------o a
+        |         |         |
+      ( ^ ) 3 A  [2.4 ohm] [2 ohm load]
+        |         |         |
+        +---------+---------+------o b
+   ```
+
+   Relation between the two theorems (source transformation):
+   - Vth = IN x RN
+   - IN = Vth / Rth
+   - Rth = RN
+   - Check with the numbers above: Vth = 3 x 2.4 = 7.2 V, which matches the Thevenin result exactly, and both give Iab = 1.636 A.
+
+   Norton's form is preferred when the network is driven mainly by current sources or when several branches are in parallel, because a parallel combination is then handled directly.
