@@ -628,45 +628,393 @@
 
 1. **Performance of CMOS battery?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
+
+   Answer: The CMOS battery is a small 3 volt lithium coin cell, normally a CR2032, mounted on the motherboard.
+
+   Its function:
+   - It supplies power to the CMOS memory chip and to the real time clock when the computer is switched off and unplugged.
+   - The CMOS memory holds the BIOS settings: the system date and time, the boot device order, hardware configuration, the CPU and RAM settings, and any BIOS password.
+   - Without it, all these settings would be lost the moment the mains power was removed, and the machine would have to be reconfigured at every start-up.
+
+   Performance and life:
+   - A healthy CMOS battery lasts about 3 to 5 years in normal use, and longer in a machine that is left plugged in, because the CMOS then draws its power from the standby rail rather than the battery.
+   - Its voltage should measure about 3.0 volts; below about 2.5 volts it should be replaced.
+   - It is not rechargeable, so it is simply replaced rather than recharged.
+
+   Symptoms of a failing CMOS battery:
+   - The system date and time reset to a default value at every start-up.
+   - BIOS settings, especially the boot order, are lost, so the machine may fail to boot or boot from the wrong device.
+   - An error message such as "CMOS checksum error", "CMOS battery failure" or "System time not set" appears at start-up.
+   - Certificate and licensing errors and HTTPS warnings appear, because the wrong system date makes valid certificates look expired.
+   - The machine may take longer to start, as the BIOS re-detects hardware each time.
+
+   - Replacement is simple: shut down, unplug the power, remove the old cell, fit a new CR2032 with the positive side upward, and then re-enter the BIOS settings such as the date, time and boot order.
 2. **(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading operating system.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
 
+
+   Answer:
+
+   Role of the BIOS in the boot process:
+
+   - BIOS stands for Basic Input Output System. It is firmware stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is switched on.
+   - Its functions are: to run the Power On Self Test, which checks the CPU, RAM, keyboard, display and storage; to initialise and configure the hardware; to provide low level input and output routines that the operating system can use; to read the boot order from CMOS and load the bootloader from the selected device; and to hand control to the operating system.
+   - Its settings, such as boot order, date and time, and hardware options, are held in CMOS memory and kept alive by a small battery.
+   - UEFI, Unified Extensible Firmware Interface, has replaced BIOS in modern machines, offering GPT support for disks larger than 2 TB, a graphical setup, faster booting and Secure Boot.
+
+   Steps in booting a computer, from power on to loading the operating system:
+   - Step 1, power on and Power Good signal: the power supply stabilises and sends a Power Good signal to the motherboard, which releases the CPU from reset.
+   - Step 2, CPU starts execution: the CPU begins executing instructions at a fixed address in the BIOS ROM, called the reset vector.
+   - Step 3, POST, the Power On Self Test: the BIOS checks the CPU, the RAM, the keyboard, the display adapter and the storage controllers. A failure is reported with beep codes or POST codes, because the display may not yet be usable.
+   - Step 4, hardware initialisation: the BIOS initialises the chipset, the memory controller, the graphics adapter and the peripheral controllers, and builds a table of the devices found.
+   - Step 5, reading CMOS settings: the BIOS reads the saved configuration from CMOS, including the date and time and the boot device order.
+   - Step 6, selecting the boot device: the BIOS tries each device in the configured order, that is the SSD, the hard disk, the USB drive, the optical drive or the network, until it finds one with a valid boot signature.
+   - Step 7, loading the bootloader: the BIOS reads the first sector of the chosen device, that is the 512 byte Master Boot Record, into memory at address 0x7C00 and checks for the signature 0x55AA. On a UEFI system it instead reads the EFI boot loader file from the EFI System Partition.
+   - Step 8, the bootloader runs: GRUB on Linux or the Windows Boot Manager takes over, presents a menu if several operating systems are installed, and loads the operating system kernel into memory.
+   - Step 9, the kernel initialises: it takes control of the hardware, sets up memory management and interrupts, loads the device drivers, and mounts the root file system.
+   - Step 10, system initialisation: the kernel starts the first user process, `init` or `systemd` on Linux and the Session Manager on Windows, which starts the system services.
+   - Step 11, the login prompt or desktop appears, and the machine is ready for use.
+
+   - The whole sequence is called bootstrapping, from the idea of a machine pulling itself up by its own bootstraps, since a small piece of firmware loads a larger loader which loads the whole operating system.
 3. **Explain BIOS in Server. How does affect booting configuration in Hardware maintenance.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 552 (ET: BIBM)]*
 
+
+   Answer:
+
+   BIOS in a server:
+
+   - BIOS stands for Basic Input Output System. It is firmware stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is switched on.
+   - Its functions are: to run the Power On Self Test, which checks the CPU, RAM, keyboard, display and storage; to initialise and configure the hardware; to provide low level input and output routines that the operating system can use; to read the boot order from CMOS and load the bootloader from the selected device; and to hand control to the operating system.
+   - Its settings, such as boot order, date and time, and hardware options, are held in CMOS memory and kept alive by a small battery.
+   - UEFI, Unified Extensible Firmware Interface, has replaced BIOS in modern machines, offering GPT support for disks larger than 2 TB, a graphical setup, faster booting and Secure Boot.
+
+   - In a server the firmware is more elaborate than in a desktop and is usually UEFI. Vendors give it their own name and management tools: Dell iDRAC, HPE iLO and Lenovo XClarity, which allow the firmware to be configured remotely, out of band, even when the operating system is not running.
+
+   Server specific BIOS settings:
+   - Boot order and boot mode, that is UEFI or Legacy, and whether Secure Boot is enabled.
+   - RAID controller configuration, deciding how the physical disks are grouped into logical volumes before the operating system sees them.
+   - Virtualisation support, Intel VT-x or AMD-V and VT-d for I/O, which must be enabled before a hypervisor can run.
+   - Memory settings: ECC, memory mirroring, rank sparing and interleaving.
+   - CPU settings: hyper-threading, core count, C-states, Turbo Boost, and NUMA configuration.
+   - Power profile: maximum performance against power saving, which materially affects both throughput and the electricity bill.
+   - PXE network boot, so the server can be installed or re-imaged over the network.
+   - Watchdog timers, error logging and hardware monitoring thresholds.
+
+   How BIOS affects boot configuration in hardware maintenance:
+   - Boot device selection: after a disk is replaced, the boot order must be checked, otherwise the server will try to boot from the wrong device or report "no bootable device".
+   - Boot mode consistency: an operating system installed in UEFI mode will not boot if the firmware is later switched to Legacy mode, and the reverse is equally true. This is the commonest cause of a server failing to boot after maintenance.
+   - RAID awareness: replacing a disk requires the array to be rebuilt through the controller's firmware; booting before the rebuild completes can corrupt the array.
+   - Firmware version consistency: mismatched BIOS and firmware versions across a cluster cause unpredictable behaviour, so firmware is normally updated as part of planned maintenance, with a rollback plan.
+   - Hardware changes: adding memory, a CPU or a card may reset settings to default, so the configuration must be verified after any physical work.
+   - CMOS battery failure resets the whole configuration, including the boot order and the date, which in a server also breaks certificate validation and log correlation.
+   - Remote management: because a server usually has no attached keyboard or monitor, iDRAC or iLO is used to change BIOS settings and to watch the boot sequence remotely, which is essential in a data centre.
+   - Good practice: record the BIOS configuration before any maintenance, export it where the vendor tool allows, and verify it afterwards.
 4. **What is BIOS?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
+
+   Answer:
+
+   - BIOS stands for Basic Input Output System. It is firmware stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is switched on.
+   - Its functions are: to run the Power On Self Test, which checks the CPU, RAM, keyboard, display and storage; to initialise and configure the hardware; to provide low level input and output routines that the operating system can use; to read the boot order from CMOS and load the bootloader from the selected device; and to hand control to the operating system.
+   - Its settings, such as boot order, date and time, and hardware options, are held in CMOS memory and kept alive by a small battery.
+   - UEFI, Unified Extensible Firmware Interface, has replaced BIOS in modern machines, offering GPT support for disks larger than 2 TB, a graphical setup, faster booting and Secure Boot.
 5. **Write down the difference between Serial Port and Parallel Port.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
 
+
+   Answer:
+
+   | Point | Serial port | Parallel port |
+   |---|---|---|
+   | Data transmission | One bit at a time over a single line | Several bits at a time, typically 8, over parallel lines |
+   | Number of data wires | 1 for transmit and 1 for receive | 8 or more, one per bit |
+   | Connector | 9 pin or 25 pin D-sub, RS-232 | 25 pin D-sub, the Centronics or IEEE 1284 port |
+   | Cable length | Long, up to about 15 metres, and far more for modern serial standards | Short, about 3 metres, beyond which crosstalk and skew corrupt the data |
+   | Speed | Slower for the same clock rate, but scales to very high clock rates | Faster at low clock rates, but cannot be clocked high |
+   | Crosstalk and clock skew | Not a problem | The main limitation, since the bits must all arrive together |
+   | Cost | Cheaper, fewer wires | More expensive, thicker cable |
+   | Typical devices | Modem, mouse, console access to a router or switch, industrial equipment | Old printers and scanners |
+   | Current status | Survives in modern serial forms: USB, SATA, PCI Express, Ethernet | Obsolete, replaced by USB |
+
+   - The important point to state: modern high speed interfaces are all serial, not parallel. Once the clock rate rose beyond a few hundred megahertz, the different bits of a parallel bus no longer arrived at the same instant, a problem called clock skew, and crosstalk between the closely spaced wires became severe. Serial links avoid both, which is why USB replaced the parallel printer port, SATA replaced PATA and PCI Express replaced PCI.
 6. **Name and define the components of a computer system. Mention two optical input devices.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 663 (ET: N/A)]*
 
+
+   Answer:
+
+   Components of a computer system:
+
+   - Input unit: accepts data and instructions from the user and converts them into a form the computer can process. Examples: keyboard, mouse, scanner, microphone, camera, barcode reader.
+   - Central Processing Unit: the brain of the computer, made of three parts.
+   - Arithmetic and Logic Unit, ALU: performs all arithmetic operations and all logical comparisons.
+   - Control Unit, CU: fetches, decodes and directs the execution of instructions, and controls the flow of data between all the other units.
+   - Registers: very small and very fast storage inside the CPU holding the data and addresses currently in use.
+   - Memory unit: primary memory, that is RAM which is volatile and holds the running programs and data, and ROM which is non-volatile and holds the firmware; and cache, which is a small very fast memory between the CPU and RAM.
+   - Storage unit, that is secondary storage: holds data permanently. Examples: hard disk, SSD, optical disc, USB flash drive.
+   - Output unit: converts the processed result into a human readable form. Examples: monitor, printer, speaker, plotter, projector.
+   - System bus: the set of parallel wires connecting the units, consisting of the data bus, the address bus and the control bus.
+
+   - Beyond the hardware, a complete computer system also includes software, that is system software such as the operating system and application software; data; the people who use it; and the procedures they follow.
+
+   Two optical input devices:
+   - Optical scanner: shines a light on a document, and a CCD or CIS sensor converts the reflected light into a digital image, which OCR software can then turn into editable text.
+   - Barcode reader: shines a laser or LED on a printed barcode and reads the pattern of reflected light from the bars and spaces to obtain the encoded number.
+   - Two further examples if more are wanted: the optical mouse, which photographs the surface many times a second to detect movement, and the OMR reader, which detects pencil marks on an answer sheet.
 7. **What are the components of a Micro computer system?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 670 (ET: N/A)]*
 
+
+   Answer: A microcomputer is a computer built around a single microprocessor as its CPU. Personal computers, laptops, tablets and smartphones are all microcomputers.
+
+   Components of a microcomputer system:
+   - Microprocessor, the CPU: the single chip containing the ALU, the control unit and the registers. Examples: Intel Core, AMD Ryzen, Apple M series.
+   - Motherboard: the main printed circuit board carrying the CPU socket, the chipset, the memory slots, the expansion slots and the connectors, and providing the buses that join them.
+   - Primary memory: RAM, which is volatile and holds the running programs and data; ROM, which holds the BIOS firmware; and cache, a small very fast memory inside or beside the CPU.
+   - Secondary storage: hard disk, SSD, optical drive or USB flash drive, which holds data permanently.
+   - Input devices: keyboard, mouse, scanner, microphone, camera, touchscreen.
+   - Output devices: monitor, printer, speaker, projector.
+   - System bus: the data bus, the address bus and the control bus, which carry information between the CPU, the memory and the peripherals.
+   - Power supply unit: converts mains AC into the regulated DC voltages the components need.
+   - Expansion cards: graphics card, network interface card, sound card, and the ports that connect them to the outside, that is USB, HDMI and Ethernet.
+   - Cooling: heat sink, fan or liquid cooling, without which the processor throttles or fails.
+   - Software: the operating system and the applications, without which the hardware can do nothing.
 8. **What do understand by the resolution of computer screen?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
+
+   Answer: The resolution of a computer screen is the number of pixels it displays, written as the number of pixels across by the number of pixels down, for example 1920 × 1080.
+
+   - A pixel, short for picture element, is the smallest addressable unit of a digital image or a display. Every pixel holds one colour value, and the picture is built from a grid of them. In a colour display each pixel is made of three subpixels, red, green and blue.
+   - Resolution is the number of pixels in the display or the image, written as width × height, for example 1920 × 1080. The higher the resolution, the more detail can be shown and the sharper the picture appears.
+   - Common resolutions: 1280 × 720 is HD, 1920 × 1080 is Full HD, 2560 × 1440 is QHD and 3840 × 2160 is 4K UHD.
+   - Total pixels = width × height. A Full HD screen therefore has 1920 × 1080 = 2,073,600 pixels, about 2 megapixels.
+   - Pixel density is measured in PPI, pixels per inch, which is what determines apparent sharpness: the same 1920 × 1080 looks sharp on a 15 inch laptop and coarse on a 40 inch television.
+   - For printers the equivalent measure is DPI, dots per inch.
+
+   - Aspect ratio is the ratio of width to height that follows from the resolution: 1920 × 1080 is 16:9, and 1024 × 768 is 4:3.
+   - A monitor has a native resolution, that is the physical number of pixels it actually contains. Running it at any other resolution forces the image to be scaled, which makes text look blurred, so the native resolution should always be used.
 9. **What is BIOS?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+
+   Answer:
+
+   - BIOS stands for Basic Input Output System. It is firmware stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is switched on.
+   - Its functions are: to run the Power On Self Test, which checks the CPU, RAM, keyboard, display and storage; to initialise and configure the hardware; to provide low level input and output routines that the operating system can use; to read the boot order from CMOS and load the bootloader from the selected device; and to hand control to the operating system.
+   - Its settings, such as boot order, date and time, and hardware options, are held in CMOS memory and kept alive by a small battery.
+   - UEFI, Unified Extensible Firmware Interface, has replaced BIOS in modern machines, offering GPT support for disks larger than 2 TB, a graphical setup, faster booting and Secure Boot.
 10. **Pixel number 130 হলে রেজুলেশন কত হবে?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+
+   Answer: A single pixel count of 130 is not by itself a resolution, because resolution is always expressed as two numbers, the width and the height in pixels.
+
+   - Resolution = horizontal pixels × vertical pixels, for example 1920 × 1080. Total pixels = width × height.
+   - If 130 is the number of pixels along one side of a square image, the resolution would be 130 × 130 = 16,900 pixels in total.
+   - If 130 is meant as a pixel density it would be 130 PPI, pixels per inch, which describes sharpness rather than resolution. In that case the resolution of a screen d inches wide would be 130 × d pixels across.
+   - The question as printed does not give enough information to determine a resolution, so the correct examination answer is to state the relationship and the assumption made. <!-- verify -->
 11. **(খ) Computer System এর Components গুলির সংক্ষিপ্ত বর্ণনাসহ লিখুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+
+   Answer: The components of a computer system:
+
+   - Input unit: accepts data and instructions from the user and converts them into a form the computer can process. Examples: keyboard, mouse, scanner, microphone, camera, barcode reader.
+   - Central Processing Unit: the brain of the computer, made of three parts.
+   - Arithmetic and Logic Unit, ALU: performs all arithmetic operations and all logical comparisons.
+   - Control Unit, CU: fetches, decodes and directs the execution of instructions, and controls the flow of data between all the other units.
+   - Registers: very small and very fast storage inside the CPU holding the data and addresses currently in use.
+   - Memory unit: primary memory, that is RAM which is volatile and holds the running programs and data, and ROM which is non-volatile and holds the firmware; and cache, which is a small very fast memory between the CPU and RAM.
+   - Storage unit, that is secondary storage: holds data permanently. Examples: hard disk, SSD, optical disc, USB flash drive.
+   - Output unit: converts the processed result into a human readable form. Examples: monitor, printer, speaker, plotter, projector.
+   - System bus: the set of parallel wires connecting the units, consisting of the data bus, the address bus and the control bus.
+
+   Beyond the hardware, a complete computer system also comprises:
+   - Software: system software such as the operating system, device drivers and utilities, and application software such as a word processor or a database.
+   - Data: the raw facts the system stores and processes.
+   - People: the users, operators and administrators who run the system.
+   - Procedures: the documented rules and instructions that govern how the system is used.
+
+   ```mermaid
+   graph LR
+       A["Input Unit"] --> B["CPU: ALU + Control Unit + Registers"]
+       B --> C["Output Unit"]
+       B <--> D["Primary Memory: RAM and ROM"]
+       D <--> E["Secondary Storage"]
+   ```
 12. **(ক) কম্পিউটার সিস্টেমের কর্মক্ষমতার উপর প্রভাব রাখতে সক্ষম এরূপ ৩টি Component এর সংক্ষিপ্ত বর্ণনা দিন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+
+   Answer: Three components that most affect the performance of a computer system:
+
+   1. Processor, the CPU:
+   - Clock speed in GHz determines how many cycles are executed per second, and the number of cores and threads determines how many tasks can run truly in parallel.
+   - Cache size matters greatly, because a hit in L1, L2 or L3 cache is many times faster than fetching from main memory.
+   - Architecture and instruction set efficiency, that is instructions per clock, often matter more than raw clock speed; a newer 3 GHz processor easily outperforms an older 4 GHz one.
+   - A processor that is too slow becomes the bottleneck for computation, compilation and video encoding.
+
+   2. Primary memory, the RAM:
+   - Capacity is decisive. If there is not enough RAM the operating system swaps pages to disk, and because disk access is orders of magnitude slower than memory, the whole system becomes sluggish. This is called thrashing and it is the single commonest cause of a slow computer.
+   - Speed and type also matter, that is DDR4 against DDR5, the clock frequency, and the number of channels, since dual channel gives roughly double the bandwidth of single channel.
+
+   3. Secondary storage:
+   - The type of drive is the largest single difference a user notices. An SSD gives access times of about 0.1 ms and hundreds of megabytes to several gigabytes per second, while a mechanical hard disk gives about 10 ms and 100 to 200 MB/s. Replacing a hard disk with an SSD transforms boot time and application launch time.
+   - The interface matters too: NVMe over PCI Express is far faster than SATA.
+   - Free space also affects performance, since a nearly full drive fragments and leaves no room for the swap file.
+
+   - Other factors worth naming briefly: the bus width and speed, the graphics card for graphical work, the number of programs running at once, malware, the age of the operating system installation, and cooling, because an overheating processor throttles its own clock speed to protect itself.
 13. **What is the difference between UEFI and BIOS?** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 724 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | BIOS | UEFI |
+   |---|---|---|
+   | Full form | Basic Input Output System | Unified Extensible Firmware Interface |
+   | Age | From 1975, 16 bit | From 2005 onwards, 32 or 64 bit |
+   | Partition scheme | MBR, Master Boot Record | GPT, GUID Partition Table |
+   | Maximum disk size supported | 2 TB | 9.4 zettabytes, effectively unlimited |
+   | Maximum primary partitions | 4 | 128 |
+   | Interface | Text only, keyboard driven | Graphical, with mouse support |
+   | Boot speed | Slower, it initialises everything sequentially | Faster, it initialises in parallel and can skip unnecessary checks |
+   | Security | None | Secure Boot, which verifies the digital signature of the bootloader and blocks rootkits and unsigned malware |
+   | Network capability | None | Built in network stack, so it supports remote diagnostics and network booting |
+   | Drivers | Uses only 16 bit real mode drivers stored in ROM | Uses loadable drivers stored on the EFI System Partition |
+   | Boot process | Reads the 512 byte MBR and passes control to it | Reads a `.efi` bootloader file from the EFI System Partition |
+   | Modularity | Monolithic | Modular and extensible, with a shell of its own |
+
+   - Compatibility: most UEFI firmware includes a Compatibility Support Module, CSM, or Legacy mode, so that older operating systems can still boot. An important practical point is that an operating system installed in UEFI mode will not boot if the firmware is later switched to Legacy mode, and the reverse is also true.
 14. **Plotter কোন ধরনের Device?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+
+   Answer: A plotter is an output device.
+
+   - It is a printer designed to draw continuous lines rather than to compose an image from dots, so it produces high quality vector graphics on large sheets of paper.
+   - Uses: engineering and architectural drawings, maps, circuit layouts, banners and large format advertising.
+   - Types: a pen plotter, which moves an actual pen across the paper; a drum plotter, in which the paper moves under the pen; a flatbed plotter, in which the paper is fixed and the pen moves in two axes; and modern inkjet based large format plotters.
+   - The difference from a printer is that a printer works by placing dots and is best for text and photographs, while a plotter draws lines and is best for precise technical drawings at large sizes.
 15. **পিক্সেল ও রেজ্যুলেশন কি ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 827 (ET: N/A)]*
 
+
+   Answer:
+
+   - A pixel, short for picture element, is the smallest addressable unit of a digital image or a display. Every pixel holds one colour value, and the picture is built from a grid of them. In a colour display each pixel is made of three subpixels, red, green and blue.
+   - Resolution is the number of pixels in the display or the image, written as width × height, for example 1920 × 1080. The higher the resolution, the more detail can be shown and the sharper the picture appears.
+   - Common resolutions: 1280 × 720 is HD, 1920 × 1080 is Full HD, 2560 × 1440 is QHD and 3840 × 2160 is 4K UHD.
+   - Total pixels = width × height. A Full HD screen therefore has 1920 × 1080 = 2,073,600 pixels, about 2 megapixels.
+   - Pixel density is measured in PPI, pixels per inch, which is what determines apparent sharpness: the same 1920 × 1080 looks sharp on a 15 inch laptop and coarse on a 40 inch television.
+   - For printers the equivalent measure is DPI, dots per inch.
+
+   Relationship between the two:
+   - Resolution is simply how many pixels there are; a pixel is the individual unit. More pixels in the same physical area means a sharper, more detailed picture.
+   - Two screens of the same resolution can look very different if their sizes differ, because the pixel density in PPI differs.
+   - The same idea applies to a camera, where the number of pixels in the sensor is quoted in megapixels, and to a printer, where the density is quoted in DPI.
 16. **Write the difference between BIOS and CMOS?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | BIOS | CMOS |
+   |---|---|---|
+   | What it is | Firmware, that is a program | A memory chip, that is hardware |
+   | Full form | Basic Input Output System | Complementary Metal Oxide Semiconductor |
+   | Function | Runs the POST, initialises the hardware and loads the operating system | Stores the BIOS settings and keeps the real time clock running |
+   | Stored in | ROM or flash memory on the motherboard | A small RAM chip on the motherboard |
+   | Volatility | Non-volatile; it survives without power | Volatile; it needs continuous power from the CMOS battery |
+   | Power source | None needed | The CR2032 lithium coin cell |
+   | Contents | The boot program and low level I/O routines | Date, time, boot order, hardware configuration, BIOS password |
+   | If it fails | The machine will not start at all | Settings and the clock are lost at every start-up, and a checksum error is reported |
+   | Updated by | Flashing new firmware | Simply changing settings in the BIOS setup screen |
+
+   - The relationship in one sentence: BIOS is the program, and CMOS is the small battery backed memory in which that program stores its settings. The two are often spoken of together because pressing Delete or F2 at start-up opens the BIOS setup screen, which is where the CMOS values are edited.
 17. **গ্রাফিক্স কার্ড কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
+
+   Answer: A graphics card, also called a video card, display adapter or GPU card, is the component that generates the image sent to the monitor.
+
+   - Its core is the GPU, the Graphics Processing Unit, a processor with thousands of small cores designed for the massively parallel arithmetic that image rendering requires.
+   - It has its own dedicated memory, called VRAM, typically GDDR6, which holds textures, frame buffers and geometry.
+   - It connects to the motherboard through a PCI Express slot and drives the monitor through HDMI, DisplayPort, DVI or VGA connectors.
+   - It has its own cooling, that is a heat sink and fans, and on high end cards its own power connectors.
+
+   Two kinds:
+   - Integrated graphics, built into the CPU or the chipset and sharing system RAM. Cheap and power efficient, and adequate for office work and video playback.
+   - Dedicated or discrete graphics, a separate card with its own GPU and memory. Far more powerful, and necessary for gaming, 3D modelling, CAD, video editing and machine learning.
+
+   - Beyond displaying images, modern GPUs are used for general purpose parallel computation through CUDA and OpenCL, which is why they dominate machine learning training and scientific computing.
 18. **ডট মেট্রিক্স প্রিন্টারের মূল উপাদান কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
+
+   Answer: The main component of a dot matrix printer is the print head, which contains a vertical column of small metal pins, and its associated ribbon.
+
+   How it works:
+   - The print head holds a matrix of pins, typically 9 or 24 in a vertical column. Electromagnets, that is solenoids, drive selected pins forward.
+   - The pins strike an inked ribbon against the paper, and each strike leaves one dot. Characters and images are built from patterns of these dots, which is why it is called a dot matrix printer.
+   - The head moves across the paper on a carriage while the platen roller advances the paper, and a stepper motor controls both movements.
+   - It is an impact printer, since the pins physically strike the paper.
+
+   Characteristics:
+   - Advantages: it can print multipart carbon copies at once, because the impact passes through the layers; it is very cheap to run; it handles continuous fanfold paper; and it is extremely durable in dusty industrial conditions.
+   - Disadvantages: it is noisy, slow and of low print quality, and colour printing is very limited.
+   - A 24 pin head gives noticeably better quality than a 9 pin head.
+   - It is still used for bank passbooks, utility bills, railway tickets and invoices needing carbon copies, which is exactly why it survives in Bangladesh.
 19. **Touch Screen কি জাতীয় ডিভাইস?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+
+   Answer: A touchscreen is both an input and an output device, so it is classified as an input-output device.
+
+   - It is an output device because it is a display that shows the image, and an input device because it detects the position of a finger or stylus and passes that position to the computer.
+   - This combination is what makes direct manipulation possible: the user touches the object on the screen itself instead of using a separate pointing device.
+
+   Types of touchscreen:
+   - Resistive: two conductive layers separated by a small gap; pressure brings them into contact and the point of contact is measured. It works with a gloved finger or any stylus, is cheap, but is less clear and does not support multi-touch well.
+   - Capacitive: a transparent conductive coating holds a small charge, and a finger changes the local capacitance. It gives excellent clarity, supports multi-touch, and is what every modern smartphone uses, but it needs a bare finger or a special stylus.
+   - Infrared and surface acoustic wave: a grid of beams or waves across the surface is interrupted by the touch. Used in large kiosks and ATMs.
+
+   - Other devices in the same input-output category are a modem, a network interface card, a touch screen monitor, a headset with a microphone, and any read and write storage device such as a hard disk or a USB drive.
 20. **(d) Mention and discuss some fectors that affect the processing speed a computer.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1024-1025 (ET: N/A)]*
 
+
+   Answer: Factors that affect the processing speed of a computer:
+
+   - CPU clock speed: the number of cycles per second, measured in GHz. More cycles means more instructions executed per second, all else being equal.
+   - Number of cores and threads: multiple cores execute several tasks genuinely in parallel, which matters greatly for modern multitasking and multithreaded software.
+   - Cache memory: the size and the number of levels, L1, L2 and L3. A cache hit is many times faster than a main memory access, so cache size often affects real performance more than clock speed.
+   - Instructions per clock and architecture: a newer architecture executes more work per cycle, so a modern 3 GHz processor easily outperforms an older 4 GHz one.
+   - Word size and bus width: a 64 bit processor handles more data per operation than a 32 bit one, and a wider data bus moves more per transfer.
+   - RAM capacity: if there is too little, the operating system swaps pages to disk, and because disk access is thousands of times slower than memory the machine becomes extremely slow. This is thrashing, and it is the commonest single cause of poor performance.
+   - RAM speed and channels: the memory clock, the generation, DDR4 or DDR5, and single against dual channel operation.
+   - Secondary storage type: an SSD gives access in about 0.1 ms against about 10 ms for a mechanical disk, so boot time and application launch time change dramatically. NVMe over PCI Express is faster still than SATA.
+   - System bus speed: the front side bus or its modern equivalent limits how fast data moves between the CPU, memory and peripherals.
+   - Graphics processing unit: essential for gaming, video editing, CAD and machine learning, where it does the parallel work the CPU cannot.
+   - Number of programs running concurrently, and background services, each competing for CPU time and memory.
+   - Operating system and software efficiency, including how well the program is written and whether it is compiled or interpreted.
+   - Malware and fragmentation, which consume resources invisibly.
+   - Cooling and thermal throttling: an overheating processor deliberately reduces its own clock speed to protect itself, so a dusty fan can halve performance.
+   - Power settings: a laptop on a battery saving profile runs its processor far below its maximum speed.
 21. **How to solve laptop overheating problem?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
+
+
+   Answer: Laptop overheating is solved by improving heat removal, reducing heat production and correcting the software causes.
+
+   Cleaning and physical maintenance:
+   - Clean the air vents and the internal fan with compressed air; accumulated dust blocking the exhaust is by far the commonest cause.
+   - Replace the thermal paste between the processor and the heat sink. It dries out after two or three years, and replacing it can lower temperatures by 10 to 20 degrees Celsius.
+   - Check that the fan is actually spinning; a seized or noisy fan must be replaced.
+   - Ensure the heat sink is properly seated and its fins are not clogged.
+
+   Usage and environment:
+   - Place the laptop on a hard flat surface, never on a bed, a sofa or a lap, since soft surfaces block the intake vents underneath.
+   - Use a cooling pad with fans, or a simple stand that raises the rear of the machine to improve airflow.
+   - Keep the room reasonably cool and avoid direct sunlight.
+
+   Software and configuration:
+   - Close unnecessary background programs and browser tabs, and check the task manager for a process consuming the CPU continuously.
+   - Scan for malware, since cryptomining and botnet malware keep the processor at full load.
+   - Update the BIOS and the chipset, graphics and power management drivers, which often contain fan curve and thermal fixes.
+   - Set the power plan to balanced rather than high performance, and limit the maximum processor state to about 90 percent, which cuts heat sharply for very little loss of speed.
+   - Undervolt the CPU with the manufacturer's tool where it is supported, which reduces heat without reducing performance.
+   - Disable unnecessary start-up programs.
+
+   Hardware:
+   - Replace a failing battery, since a swollen or faulty battery generates heat and can be dangerous.
+   - Consider replacing a mechanical hard disk with an SSD, which runs cooler and consumes less power.
+   - If the machine still overheats after all this, the heat pipe may be damaged and the cooling assembly should be replaced by a service centre.
+
+   - Monitoring: use a tool such as HWMonitor or Core Temp to watch the temperature. Under load, 70 to 85 degrees Celsius is normal for a laptop CPU; sustained operation above 90 degrees causes throttling and shortens the life of the components.
 
 ## ICT in Society & Governance (20)
 
