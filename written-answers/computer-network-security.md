@@ -3859,37 +3859,439 @@
 
 1. **সাইবার অপরাধের প্রকারভেদ পরিবেশের স্থায়িত্ব বর্ণনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer:
+
+   - Cyber crime is any criminal activity that involves a computer, a network or a networked device, either as the target of the offence, as the tool used to commit it, or as the place where the evidence resides.
+
+   Types of cyber crime:
+   - Hacking and unauthorised access to a system or an account.
+   - Phishing, vishing and smishing to steal credentials and money.
+   - Identity theft, and impersonation on social media.
+   - Financial and banking fraud: card fraud, mobile financial service fraud, fraudulent transfers and business email compromise.
+   - Ransomware and extortion.
+   - Malware distribution: viruses, worms, Trojans and spyware.
+   - Denial of Service and Distributed Denial of Service attacks.
+   - Data breach and theft of personal or corporate data.
+   - Cyber stalking, harassment, defamation and blackmail, including the non-consensual sharing of intimate images.
+   - Child exploitation.
+   - Software piracy and infringement of copyright and intellectual property.
+   - Cyber terrorism and attacks on critical infrastructure.
+   - Spreading of false information and rumour that causes public disorder.
+   - Cryptocurrency fraud, online gambling and money laundering.
+   - Website defacement and cyber vandalism.
+
+   Classification by the role of the computer:
+   - The computer as the target: hacking, denial of service, malware, ransomware, data breach and defacement. The offence is against the system itself.
+   - The computer as the tool: fraud, phishing, forgery, harassment, piracy and money laundering. The offence is a traditional one committed by electronic means.
+   - The computer as the repository of evidence: any offence in which the digital device holds the record of the crime.
+
+   Classification by victim:
+   - Against individuals: identity theft, cyber stalking, harassment, defamation, fraud and blackmail.
+   - Against property: hacking, virus distribution, intellectual property theft and website defacement.
+   - Against organisations: data breach, ransomware, denial of service and business email compromise.
+   - Against government and society: cyber terrorism, attacks on critical infrastructure, and the spreading of false information that causes public disorder.
+
+   Persistence of the environment, that is why cyber crime endures:
+   - Anonymity: the offender can hide behind proxies, VPNs, the Tor network and compromised machines, so attribution is difficult and slow.
+   - No geographical boundary: the offender, the victim and the infrastructure may be in three different countries, so jurisdiction is contested and mutual legal assistance is slow.
+   - Low cost and high return: an attack costs very little to launch and can yield a great deal, and ransomware as a service has removed even the need for technical skill.
+   - Speed and scale: one campaign can reach millions of victims in minutes, and automation means the marginal cost of an additional victim is nil.
+   - Evidence is fragile and volatile: logs are overwritten, devices are wiped, and evidence must be collected in a forensically sound manner or it is inadmissible.
+   - Rapid technological change: attackers adopt new technology faster than legislation and enforcement can follow.
+   - Under-reporting: individuals are embarrassed and organisations fear reputational damage, so the true scale is never visible and enforcement is under-resourced.
+   - Shortage of skilled investigators and forensic capacity relative to the volume of offences.
+   - Cryptocurrency, which makes proceeds easy to move and hard to trace.
+   - The human factor: as long as people can be deceived, technical controls alone will not end it.
+
+   Measures to prevent cyber crime:
+   - Legal framework and enforcement: the Cyber Security Act and the ICT Act in Bangladesh, cyber tribunals, and a trained cyber crime investigation unit within the police, together with the CID Cyber Crime Investigation Division.
+   - Institutional capacity: a national CERT, that is BGD e-GOV CIRT, security operations centres, and digital forensic laboratories.
+   - Technical controls in every organisation: firewalls, endpoint protection, encryption, multi-factor authentication, prompt patching, tested backups, network segmentation and continuous monitoring.
+   - Awareness and education: public campaigns, digital literacy in schools, and staff training with simulated phishing, since most crimes begin with a human action.
+   - Strong authentication practice: unique passwords, a password manager, and never sharing an OTP with anyone.
+   - Reporting mechanisms: a national cyber crime helpline and portal, and a culture of reporting rather than concealing, since under-reporting is the largest single obstacle to enforcement.
+   - International cooperation, since cyber crime crosses borders and the offender is usually outside the jurisdiction.
+   - Sector regulation: the Bangladesh Bank ICT security guidelines, transaction monitoring and rapid account freezing in the financial sector.
+   - Regular audit, vulnerability assessment and penetration testing.
+   - Research and cooperation between government, industry and academia.
 2. **Why is cyber security important? What are the common types of cyber threats? Explain cyber security measures.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
+
+   Answer:
+
+   Why cyber security is important:
+   - Protection of sensitive data: personal, financial, medical and government data must be kept confidential, and a breach causes direct harm to real people.
+   - Financial loss: fraud, ransomware payments, business interruption and remediation cost enormous sums, and for a small organisation a single incident can be fatal.
+   - Business continuity: modern organisations cannot operate for a day without their systems, so an attack on availability halts everything.
+   - Reputation and trust: a bank that loses customer data loses customers, and the reputational damage outlasts the technical recovery by years.
+   - Legal and regulatory obligation: the Cyber Security Act, the Bangladesh Bank ICT security guidelines, PCI DSS and data protection law all impose duties, with penalties for failure.
+   - National security and critical infrastructure: power, telecommunications, banking, health and transport are all software controlled, and an attack on them has physical consequences.
+   - Growing attack surface: cloud, mobile, IoT and remote working have multiplied the ways in, and every new connection is a new opportunity.
+   - Increasing sophistication of attackers: organised crime and state sponsored groups have resources far beyond those of the average defender.
+
+   Common types of cyber threat:
+   - Phishing and social engineering, which is the entry point of most breaches.
+   - Malware: viruses, worms, Trojans, spyware and rootkits.
+   - Ransomware, now normally with the added threat of publishing stolen data.
+   - Denial of Service and Distributed Denial of Service.
+   - Man in the Middle attacks, through ARP spoofing, DNS poisoning or a rogue access point.
+   - SQL injection and other injection attacks against web applications.
+   - Cross Site Scripting and Cross Site Request Forgery.
+   - Password attacks: brute force, dictionary and credential stuffing.
+   - Zero day exploits, for which no patch yet exists.
+   - Insider threats, whether malicious or negligent.
+   - Supply chain attacks through a compromised vendor or software update.
+   - Advanced Persistent Threats, in which an attacker remains undetected for months.
+   - IoT botnets and cryptojacking.
+
+   Cyber security measures:
+   - Technical: firewalls and next generation firewalls, intrusion detection and prevention, endpoint detection and response, antivirus, encryption in transit and at rest, multi-factor authentication, network segmentation, a Web Application Firewall and email filtering.
+   - Operational: prompt patch management, secure configuration to a recognised benchmark, least privilege and role based access, privileged access management, centralised logging with a SIEM, and 24 hour monitoring.
+   - Resilience: backups following the 3-2-1 rule with at least one immutable or offline copy, tested restoration, a disaster recovery site, and a rehearsed incident response plan.
+   - Application: secure development lifecycle, code review, static and dynamic testing, parameterised queries, output encoding and dependency scanning.
+   - Assessment: vulnerability scanning, penetration testing, red team exercises and third party audit.
+   - People: security awareness training, simulated phishing, clear policies, segregation of duties, background checks and an insider threat programme.
+   - Governance: an information security management system to ISO 27001, a risk register, a data classification scheme, vendor risk management and board level accountability.
+   - The governing principle: defence in depth, and the assumption that a breach will eventually occur, so detection, containment and tested recovery matter as much as prevention.
 3. **Hacking a system without cracking the system, only for finding bugs and vulgarities is called?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
+
+   Answer: Hacking a system with authorisation, in order to find bugs and vulnerabilities rather than to cause harm, is called ethical hacking, and the practitioner is a white hat hacker.
+
+   - The formal activity is called penetration testing, or a vulnerability assessment where the aim is to enumerate weaknesses rather than to exploit them.
+   - The defining requirement is written authorisation from the owner of the system, with an agreed scope, timing and rules of engagement. Without it the same actions are a criminal offence, however good the intention.
+   - Process: reconnaissance, scanning, gaining access, maintaining access, and reporting, followed by remediation and retesting.
+   - Types: black box, in which the tester is given no information; white box, in which full information and source code are provided; and grey box, which is partial.
+   - Related terms: bug bounty programmes, which invite researchers to find flaws for a reward; responsible disclosure, in which a researcher reports privately and allows time to fix before publishing; and red teaming, which simulates a real adversary against the organisation's defences as a whole.
+   - Certifications: CEH, OSCP, GPEN and CREST.
+   - Contrast: a black hat hacker acts illegally and maliciously, and a grey hat acts without authorisation but usually reports what he finds, which is still an offence.
 4. **What is Cybercrime? Cybercrime রোধে প্রয়োজনীয় পদক্ষেপ গুলো লিখ।** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
+
+   Answer:
+
+   - Cyber crime is any criminal activity that involves a computer, a network or a networked device, either as the target of the offence, as the tool used to commit it, or as the place where the evidence resides.
+
+   Types of cyber crime:
+   - Hacking and unauthorised access to a system or an account.
+   - Phishing, vishing and smishing to steal credentials and money.
+   - Identity theft, and impersonation on social media.
+   - Financial and banking fraud: card fraud, mobile financial service fraud, fraudulent transfers and business email compromise.
+   - Ransomware and extortion.
+   - Malware distribution: viruses, worms, Trojans and spyware.
+   - Denial of Service and Distributed Denial of Service attacks.
+   - Data breach and theft of personal or corporate data.
+   - Cyber stalking, harassment, defamation and blackmail, including the non-consensual sharing of intimate images.
+   - Child exploitation.
+   - Software piracy and infringement of copyright and intellectual property.
+   - Cyber terrorism and attacks on critical infrastructure.
+   - Spreading of false information and rumour that causes public disorder.
+   - Cryptocurrency fraud, online gambling and money laundering.
+   - Website defacement and cyber vandalism.
+
+   Measures to prevent cyber crime:
+   - Legal framework and enforcement: the Cyber Security Act and the ICT Act in Bangladesh, cyber tribunals, and a trained cyber crime investigation unit within the police, together with the CID Cyber Crime Investigation Division.
+   - Institutional capacity: a national CERT, that is BGD e-GOV CIRT, security operations centres, and digital forensic laboratories.
+   - Technical controls in every organisation: firewalls, endpoint protection, encryption, multi-factor authentication, prompt patching, tested backups, network segmentation and continuous monitoring.
+   - Awareness and education: public campaigns, digital literacy in schools, and staff training with simulated phishing, since most crimes begin with a human action.
+   - Strong authentication practice: unique passwords, a password manager, and never sharing an OTP with anyone.
+   - Reporting mechanisms: a national cyber crime helpline and portal, and a culture of reporting rather than concealing, since under-reporting is the largest single obstacle to enforcement.
+   - International cooperation, since cyber crime crosses borders and the offender is usually outside the jurisdiction.
+   - Sector regulation: the Bangladesh Bank ICT security guidelines, transaction monitoring and rapid account freezing in the financial sector.
+   - Regular audit, vulnerability assessment and penetration testing.
+   - Research and cooperation between government, industry and academia.
 5. **What is Cyber space? Write some threats of cyber space.** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 
+
+   Answer:
+
+   What cyberspace is:
+   - Cyberspace is the global, interconnected virtual environment created by computer networks, in which communication, storage and processing of information take place. It comprises the Internet, telecommunications networks, computer systems, embedded processors and controllers, and the data and people that interact through them.
+   - It is not a physical place but a domain of activity. It is now formally recognised as the fifth domain of operations alongside land, sea, air and space, which reflects its strategic importance.
+   - Characteristics: it has no geographical boundary, it permits anonymity, it is accessible at all times from anywhere, information moves instantaneously, and it is largely owned and operated by the private sector while carrying functions on which the state depends.
+
+   Threats in cyberspace:
+   - Hacking and unauthorised access to systems and accounts.
+   - Malware in all its forms: viruses, worms, Trojans, spyware and rootkits.
+   - Ransomware, which encrypts data and demands payment, now normally with the threat of publication as well.
+   - Phishing and social engineering, which attack the person rather than the technology.
+   - Denial of Service and Distributed Denial of Service attacks.
+   - Data breach and theft of personal, financial and corporate data.
+   - Identity theft and financial fraud, including card and mobile financial service fraud.
+   - Man in the Middle interception on untrusted networks.
+   - Insider threats, whether malicious or negligent.
+   - Advanced Persistent Threats, in which a well resourced attacker remains undetected for months.
+   - Supply chain attacks through a compromised vendor or software update.
+   - Cyber terrorism and attacks on critical infrastructure such as power, water, banking and telecommunications, where the consequences are physical.
+   - Cyber espionage, both state sponsored and industrial.
+   - Cyber warfare between states.
+   - Cyber stalking, harassment, defamation and blackmail.
+   - Misinformation and disinformation campaigns, which can cause public disorder.
+   - IoT botnets, exploiting the very large number of poorly secured connected devices.
+   - Cryptojacking, and cryptocurrency fraud.
+   - Privacy erosion through mass data collection and surveillance.
+
+   Protection: encryption, multi-factor authentication, prompt patching, firewalls and endpoint protection, network segmentation, tested backups, monitoring and incident response, awareness training, legal frameworks, and international cooperation.
 6. **Write the cyber security threats.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
+
+   Answer: The principal cyber security threats:
+
+   - Phishing and social engineering: fraudulent messages that deceive a user into revealing credentials or opening a malicious file. It is the starting point of the great majority of breaches.
+   - Malware: viruses, worms, Trojans, spyware, adware and rootkits, which damage, steal or take control.
+   - Ransomware: encrypting the victim's data and demanding payment, now usually combined with theft of the data and a threat to publish it.
+   - Denial of Service and Distributed Denial of Service: flooding a service so that legitimate users cannot reach it.
+   - Man in the Middle: intercepting traffic between two parties through ARP spoofing, DNS poisoning, a rogue access point or SSL stripping.
+   - SQL injection and other injection attacks against applications and databases.
+   - Cross Site Scripting and Cross Site Request Forgery against web application users.
+   - Password attacks: brute force, dictionary attacks, and credential stuffing using passwords leaked from other breaches.
+   - Zero day exploits, attacking a vulnerability for which no patch yet exists.
+   - Insider threats: a current or former employee misusing legitimate access, whether deliberately or through carelessness.
+   - Advanced Persistent Threats: a well resourced attacker who establishes a foothold and remains undetected for months while extracting data.
+   - Supply chain attacks: compromising a trusted vendor, library or software update so that the malicious code arrives through a legitimate channel.
+   - Cloud misconfiguration: exposed storage buckets, over-permissive identity policies and unprotected management interfaces.
+   - IoT and embedded device attacks, exploiting default credentials and unpatched firmware.
+   - Cryptojacking: using the victim's processors to mine cryptocurrency.
+   - Data breach and exfiltration.
+   - Physical threats: theft of equipment, unauthorised access to server rooms, and shoulder surfing.
+   - Wireless attacks: rogue access points, evil twin networks and weak Wi-Fi encryption.
+   - Emerging threats: AI generated phishing and deepfakes, and the future risk that quantum computing poses to current cryptography, which is why post-quantum algorithms are being standardised now.
 7. **What is Vulnerability?** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
+
+   Answer: A vulnerability is a weakness or flaw in a system, an application, a configuration, a process or a person, which an attacker can exploit to compromise the confidentiality, integrity or availability of that system.
+
+   The three related terms, which are frequently confused and which the question is testing:
+   - Vulnerability: the weakness itself, for example an unpatched service, a default password or an input field that is not validated.
+   - Threat: a potential cause of harm, that is anything or anyone that could exploit the vulnerability, such as a hacker, malware, an insider or a natural disaster.
+   - Risk: the combination of the two together with the consequence. Risk = threat × vulnerability × impact. A vulnerability with no threat, or a threat with no matching vulnerability, produces no risk.
+   - Exploit: the actual code or technique that takes advantage of the vulnerability.
+
+   Types of vulnerability:
+   - Software vulnerabilities: buffer overflow, SQL injection, cross site scripting, insecure deserialisation and race conditions.
+   - Configuration vulnerabilities: default credentials, unnecessary open ports and services, excessive permissions, verbose error messages and directory listing enabled.
+   - Missing patches, which is the most common and the most easily fixed category.
+   - Design vulnerabilities: weak or absent encryption, no authentication on an internal API, and flawed business logic.
+   - Human vulnerabilities: susceptibility to phishing, weak passwords, password reuse, and sharing credentials.
+   - Physical vulnerabilities: unlocked server rooms, unattended workstations, and accessible network ports.
+   - Third party and supply chain vulnerabilities in libraries, vendors and outsourced services.
+   - Zero day vulnerabilities, which are known to the attacker but not yet to the vendor, so no patch exists.
+
+   How vulnerabilities are managed:
+   - Identification: vulnerability scanning with tools such as Nessus, Qualys or OpenVAS, penetration testing, code review, and monitoring vendor advisories and the CVE database.
+   - Classification and prioritisation: CVSS scoring combined with the actual exposure and business criticality of the asset, since a critical flaw on an isolated test machine matters less than a moderate one on an Internet facing server.
+   - Remediation: patch, reconfigure, or apply a compensating control such as a firewall rule or a virtual patch at the WAF while the fix is prepared.
+   - Verification: rescan to confirm the fix, and record the result.
+   - Continuous cycle, because new vulnerabilities are disclosed daily and a system that was secure last month may not be secure today.
+
+   - Practical note: the great majority of successful attacks exploit vulnerabilities for which a patch had been available for months. Disciplined patch management is therefore worth more than any single security product.
 8. **What is cyber threat intelligence database? What is the use of this in corporate office network?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 752 (ET: N/A)]*
 
+
+   Answer:
+
+   What a cyber threat intelligence database is:
+   - A cyber threat intelligence database is a structured, continuously updated repository of information about current and emerging threats: the indicators they leave, the techniques the attackers use, and the context needed to act on that information.
+   - Its contents include Indicators of Compromise, that is malicious IP addresses, domains, URLs, file hashes and email addresses; the tactics, techniques and procedures of known attacker groups, usually mapped to the MITRE ATT&CK framework; malware signatures and behavioural profiles; vulnerability and exploit information from CVE and NVD; details of active phishing campaigns; and leaked credentials appearing on criminal forums.
+   - Levels of intelligence: strategic, which informs management about the threat landscape and risk; tactical, which describes attacker techniques; operational, which concerns specific imminent campaigns; and technical, which is the machine readable feed of indicators.
+   - Sources: commercial providers such as Recorded Future, Mandiant and CrowdStrike; open source feeds such as AlienVault OTX, MISP, Abuse.ch and the CISA advisories; national CERTs, in Bangladesh BGD e-GOV CIRT; sector Information Sharing and Analysis Centres, particularly in banking; and internal telemetry from the organisation's own incidents.
+   - Standards for exchange: STIX for describing the intelligence and TAXII for transporting it, which allow feeds to be consumed automatically.
+
+   Use in a corporate office network:
+   - Proactive blocking: malicious IP addresses, domains and URLs from the feed are pushed automatically to the firewall, the proxy, the DNS resolver and the email gateway, so that known bad destinations are blocked before any user reaches them.
+   - Detection: file hashes and behavioural signatures are loaded into the endpoint protection and the SIEM, so that known malware is recognised even if it is new to the organisation.
+   - Alert enrichment and triage: when the SIEM raises an alert, the intelligence database supplies context — whether that address belongs to a known criminal group, what malware family it is associated with, and how serious it is. This turns thousands of undifferentiated alerts into a small number that genuinely matter, which is the single largest practical benefit.
+   - Threat hunting: analysts search historical logs for the indicators of a newly published campaign, which frequently reveals an intrusion that was already present and undetected.
+   - Vulnerability prioritisation: intelligence about which vulnerabilities are actually being exploited in the wild allows patching effort to be directed where it will do most good, rather than simply working down a CVSS score list.
+   - Incident response: during an incident, knowing the attacker's usual techniques predicts where else to look, what persistence mechanisms to expect and what data is likely to have been targeted.
+   - Phishing defence: current campaign indicators are fed to the mail gateway, and leaked credential monitoring warns when a corporate account appears in a breach dump so that it can be reset before it is used.
+   - Brand and executive protection: monitoring for lookalike domains registered against the organisation, and for impersonation of its executives.
+   - Third party risk: assessing whether a vendor has been breached before granting or continuing access.
+   - Strategic planning and board reporting: showing which threats are actually relevant to the sector, which justifies security investment on evidence rather than assertion.
+
+   - Caution to state for balance: intelligence must be relevant, timely and actionable. An unfiltered feed of millions of indicators generates false positives, blocks legitimate traffic and exhausts the analysts, so the feed must be tuned to the organisation's sector, geography and technology.
 9. **সাইবার অপরাধ কি? ৮টি সাইবার অপরাধ এর নাম লিখুন। সাইবার অপরাধ দূর করার জন্য ৬টি পন্থার নাম লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948-949 (ET: N/A)]*
+
+
+   Answer:
+
+   What cyber crime is:
+   - Cyber crime is any criminal activity that involves a computer, a network or a networked device, either as the target of the offence, as the tool used to commit it, or as the place where the evidence resides.
+
+   Eight cyber crimes:
+   - Hacking, that is unauthorised access to a computer system or an account.
+   - Phishing, in which a fraudulent message is used to steal credentials and money.
+   - Identity theft, using another person's identity documents or credentials for fraud.
+   - Ransomware, encrypting the victim's data and demanding payment.
+   - Online financial and banking fraud, including card fraud and mobile financial service fraud.
+   - Data breach and theft of personal or corporate data.
+   - Cyber stalking, harassment and defamation, including the non-consensual sharing of intimate images.
+   - Denial of Service attacks that make a service unavailable.
+   - Others that may equally be named: malware distribution, software piracy, cyber terrorism, website defacement, child exploitation, and the spreading of false information that causes public disorder.
+
+   Six ways to eliminate or reduce cyber crime:
+   - Strong legal framework and enforcement: the Cyber Security Act and the ICT Act, cyber tribunals, and a properly resourced and trained cyber crime investigation unit within the police.
+   - Public awareness and education: campaigns on phishing and fraud, digital literacy in schools, and staff training with simulated phishing, since most offences begin with a human action.
+   - Technical controls in every organisation: firewalls, endpoint protection, encryption, multi-factor authentication, prompt patching, tested backups, network segmentation and continuous monitoring.
+   - Institutional capacity: a national CERT, that is BGD e-GOV CIRT, security operations centres, and digital forensic laboratories with trained investigators.
+   - Effective reporting and rapid response: a national cyber crime helpline and portal, and a culture of reporting rather than concealing, together with the ability to freeze fraudulent accounts within minutes.
+   - International cooperation, since the offender is usually outside the jurisdiction and evidence is usually held abroad, so mutual legal assistance and cross border cooperation are indispensable.
+   - Two further measures worth adding: sector regulation such as the Bangladesh Bank ICT security guidelines with transaction monitoring, and regular audit, vulnerability assessment and penetration testing.
 
 ## Security Principles (CIA Triad) (7)
 
 1. What does CIA stand for in information security? Explain each component briefly. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+
+   Answer: CIA in information security stands for Confidentiality, Integrity and Availability. These three are called the CIA triad and they are the fundamental objectives of every security control.
+
+   - Confidentiality: ensuring that information is accessible only to those who are authorised to see it. It is achieved through encryption in transit and at rest, access control and least privilege, authentication, data classification and physical security. It is broken by eavesdropping, data theft, a misconfigured public storage bucket, or an insider reading records they have no need to see.
+   - Integrity: ensuring that information is accurate and complete and has not been altered by anyone unauthorised, whether deliberately or accidentally. It is achieved through hashing, digital signatures, message authentication codes, checksums, version control, database constraints and audit logging. It is broken by tampering with a transaction, by a man in the middle altering data in transit, or by corruption during storage.
+   - Availability: ensuring that information and systems are accessible to authorised users whenever they are needed. It is achieved through redundancy, clustering, load balancing, backups, disaster recovery, DDoS protection, UPS and generators, and capacity planning. It is broken by a denial of service attack, ransomware, hardware failure, a power cut or a natural disaster.
+
+   - The three are interdependent: security means holding all three at once, and protecting one at the expense of another is a failure rather than a trade-off. Data locked so tightly that the authorised user cannot reach it has failed just as completely as data left open to everyone.
+   - Two further services are usually added to complete the set: authentication, which proves who a party is, and non-repudiation, which prevents a party from denying an action.
 2. What is authentication and authorization? What is the CIA triad in cyber security? How does it work? *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
+
+   Answer:
+
+   Authentication and authorisation:
+
+   | Point | Authentication | Authorisation |
+   |---|---|---|
+   | Question answered | Who are you? | What are you allowed to do? |
+   | Purpose | Verifies identity | Grants or denies permission |
+   | Order | Comes first | Comes after successful authentication |
+   | Method | Password, OTP, biometric, certificate, security key | Access control lists, role based access control, permissions, policies |
+   | Visible to the user | Yes; the user supplies credentials | Usually not; it happens silently |
+   | Changes | Fixed for a given identity | Varies by role, resource and context |
+   | Example | Entering a username and password to log in to internet banking | Being permitted to view your own account but not another customer's |
+
+   - Identification is the preceding step, that is the claim of an identity by presenting a username; authentication proves it; authorisation decides what follows; and accounting or auditing records what was actually done. Together these are sometimes called the AAA framework.
+
+   The CIA triad:
+   - Confidentiality: information is accessible only to those authorised to see it. Achieved by encryption, access control, least privilege and authentication.
+   - Integrity: information is accurate and complete and has not been altered without authorisation. Achieved by hashing, digital signatures, message authentication codes, checksums and audit logs.
+   - Availability: information and systems are accessible to authorised users whenever needed. Achieved by redundancy, backups, disaster recovery, DDoS protection and capacity planning.
+
+   How it works in practice:
+   - Every security control that exists serves at least one of the three, and the triad is the checklist against which a design is assessed: what protects confidentiality here, what protects integrity, and what protects availability.
+   - They are interdependent, and they also pull against each other, which is what makes design difficult. Stronger encryption and multi-factor authentication raise confidentiality but reduce availability when a key is lost or a token fails; wider replication raises availability but multiplies the copies of data that must be kept confidential.
+   - The priority order depends on the context. In a bank, confidentiality and integrity come first. In a hospital emergency system or a power plant control system, availability comes first, because a system that cannot be reached when needed causes immediate physical harm.
+   - Authentication and authorisation are the mechanisms through which confidentiality and integrity are actually enforced: the system first establishes who the user is, and then limits what that user may read and change.
 3. **(a) What is the CIA triad of information system? Briefly describe its each component.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer: The CIA triad is the set of three fundamental objectives of information security: Confidentiality, Integrity and Availability. Every security control exists to serve at least one of them.
+
+   - Confidentiality: ensuring that information is disclosed only to those authorised to receive it. Mechanisms: encryption in transit and at rest, access control and least privilege, strong authentication, data classification, network segmentation and physical security. Threats: eavesdropping, data theft, shoulder surfing, a misconfigured public storage bucket and insider misuse.
+   - Integrity: ensuring that information is accurate, complete and unaltered except by authorised action. Mechanisms: cryptographic hashing, digital signatures, message authentication codes, checksums, version control, database constraints, change management and audit logging. Threats: tampering with data in transit or at rest, man in the middle alteration, unauthorised modification by an insider, and accidental corruption.
+   - Availability: ensuring that systems and data are usable by authorised users whenever required. Mechanisms: redundancy and clustering, load balancing, backups and tested restoration, disaster recovery sites, DDoS protection, UPS and generators, capacity planning and patch management. Threats: denial of service attacks, ransomware, hardware failure, power failure and natural disaster.
+
+   - The three must be held simultaneously; strengthening one at the cost of another is a failure of design, not a legitimate trade-off. The balance between them depends on the context: confidentiality dominates for personal and financial records, integrity for financial transactions and control commands, and availability for emergency and critical infrastructure systems.
+   - Two further services complete the standard set: authentication, which proves identity, and non-repudiation, which prevents denial of an action.
 4. **Describe how the principles of Confidentiality, Integrity, and Availability work together to protect organizational data, and provide one real-world example of a security breach where one or more of these principles were compromised.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1428 (ET: E-Zone)]*
 
+
+   Answer:
+
+   How the three principles work together to protect organisational data:
+   - They are the three complementary questions that any protection scheme must answer: can only the right people see it, can it be trusted to be correct, and can it be reached when it is needed. A control that satisfies only one leaves the data unprotected in the other two respects.
+   - Confidentiality is enforced first, by authentication and access control, so that only authorised identities reach the data at all. Integrity is enforced on what those identities then do, by hashing, signatures, transaction controls and audit logs, so that changes are legitimate and traceable. Availability ensures that this protected and trustworthy data is actually usable, through redundancy, backup and disaster recovery.
+   - They reinforce one another. Encryption protects confidentiality, and an authenticated encryption mode protects integrity at the same time. Backups protect availability, and encrypting those backups protects the confidentiality of the copies. Access control protects confidentiality and also prevents unauthorised modification, which is integrity.
+   - They also constrain one another, which is what makes design a matter of judgement. Very strong encryption and multi-factor authentication raise confidentiality but reduce availability if a key is lost, a token fails or a user is locked out at a critical moment. Extensive replication for availability creates more copies to be kept confidential. Rigorous change control protects integrity but slows response.
+   - The correct balance is decided by the value and the nature of the asset. For a customer database confidentiality is paramount; for a payment instruction integrity is paramount; for a hospital emergency system or a power plant control system availability is paramount, because unavailability causes immediate physical harm.
+   - In practice they are applied through defence in depth, so that the failure of one control does not remove the whole property, and through risk assessment, which decides how much of each is worth paying for.
+
+   Real world example of a breach compromising these principles:
+   - The WannaCry ransomware outbreak of May 2017 compromised availability on an enormous scale. It spread as a worm through the EternalBlue vulnerability in Windows SMB and encrypted the files of more than two hundred thousand computers in about 150 countries within days. The British National Health Service was severely affected: appointments and operations were cancelled, ambulances were diverted, and hospitals reverted to paper because the systems could not be reached. Integrity was also destroyed, since the encrypted files were no longer usable data. Confidentiality was largely preserved, because that strain did not exfiltrate data.
+   - The decisive point for an examiner: a patch for the vulnerability had been released two months earlier. The breach was therefore a failure of patch management, that is of a routine operational control, rather than of any sophisticated defence.
+   - A second example illustrating a different corner of the triad: the Equifax breach of 2017 compromised confidentiality, exposing the personal and financial data of about 147 million people through an unpatched Apache Struts vulnerability. Availability was unaffected; the systems ran perfectly throughout, which is precisely why the intrusion went undetected for months.
+   - A third, closer to home: the Bangladesh Bank cyber heist of February 2016, in which attackers compromised the bank's SWIFT terminal and issued fraudulent payment instructions. This was primarily an integrity failure — false but validly authenticated transactions — combined with a confidentiality failure that gave the attackers the credentials, and a deliberate attack on availability, since malware suppressed the printing of confirmation messages so that the fraud would not be noticed over the weekend. It shows all three principles being attacked in one operation.
 5. **What is CIA Triad?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)], [Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
 
+
+   Answer: The CIA triad is the set of three fundamental objectives of information security: Confidentiality, Integrity and Availability.
+
+   - Confidentiality: information is accessible only to those authorised to see it. Achieved by encryption in transit and at rest, access control and least privilege, authentication, data classification and physical security. Broken by eavesdropping, theft, a misconfigured storage bucket or insider misuse.
+   - Integrity: information is accurate, complete and unaltered except by authorised action. Achieved by hashing, digital signatures, message authentication codes, checksums, version control and audit logging. Broken by tampering, man in the middle alteration or corruption.
+   - Availability: information and systems are usable by authorised users whenever needed. Achieved by redundancy, clustering, backups, disaster recovery, DDoS protection, UPS and capacity planning. Broken by denial of service, ransomware, hardware failure or disaster.
+
+   - It is called a triad because all three must be held simultaneously; protecting one at the expense of another is a failure of design.
+   - Two further services are usually added to complete the standard set: authentication, which proves identity, and non-repudiation, which prevents a party from denying an action. Some frameworks add accountability and reliability as well.
 6. **Preserving confidentiality integrity and availability of data is a restatement of the concern over falsification, interception, masquerade and denial of service. Explain how the first three concepts relate to the last four.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 435 (ET: BIBM)]*
 
+
+   Answer: The three principles are the security properties to be preserved, and the four concerns are the specific attacks that destroy them. Each concern maps onto one or more of the properties.
+
+   Confidentiality is threatened by interception:
+   - Interception is unauthorised access to information in transit or at rest: eavesdropping on a network, capturing packets, reading a stolen disk or copying files. Nothing is altered, so it is a passive attack and it leaves no trace, which is why it is so difficult to detect.
+   - It attacks confidentiality alone, because the data remains correct and available; the only loss is that someone unauthorised now knows it.
+   - Countermeasure: encryption, which makes intercepted data useless, together with access control and physical security. Passive attacks are prevented rather than detected.
+
+   Integrity is threatened by falsification and by masquerade:
+   - Falsification, that is modification, is the unauthorised alteration of data: changing the amount in a transaction, altering a record in a database, or modifying a message in transit. The data remains available but is no longer true, which is precisely the loss of integrity.
+   - Masquerade is one entity pretending to be another: logging in with stolen credentials, spoofing an IP or MAC address, or forging the sender of an email. It attacks integrity in a broader sense, the integrity of the origin, because the recipient acts on data whose claimed source is false.
+   - Masquerade also threatens confidentiality, because an attacker who successfully impersonates an authorised user thereby obtains access to data he should not see. This is why the mapping is not strictly one to one.
+   - Countermeasures: hashing and message authentication codes detect falsification; digital signatures detect both falsification and masquerade, because they bind the content to a verified identity; and strong authentication prevents masquerade in the first place. Active attacks such as these cannot be wholly prevented, so the emphasis is on detection and recovery.
+
+   Availability is threatened by denial of service:
+   - Denial of service prevents authorised users from reaching a system or its data, by exhausting bandwidth, connections, CPU, memory or disk, or by destroying the resource, as ransomware does. The data may remain perfectly confidential and perfectly correct, and yet be entirely useless because nobody can obtain it.
+   - It attacks availability alone, and it is the only one of the four concerns that produces harm without the attacker learning or changing anything.
+   - Countermeasures: redundancy, load balancing, rate limiting, DDoS scrubbing, backups and disaster recovery.
+
+   Summary of the relationship:
+
+   | Concern | Property compromised | Nature of the attack |
+   |---|---|---|
+   | Interception | Confidentiality | Passive; nothing is changed |
+   | Falsification, that is modification | Integrity | Active; the data is altered |
+   | Masquerade | Integrity of origin, and confidentiality as a consequence | Active; the identity is forged |
+   | Denial of service | Availability | Active; the resource is made unreachable |
+
+   - So the statement in the question is a restatement rather than a different model: preserving confidentiality means preventing interception; preserving integrity means preventing falsification and masquerade; and preserving availability means preventing denial of service. The first three concepts describe what is to be protected, and the last four describe what must be prevented in order to protect it.
 7. **Information System কী? Information Syetem -এর সুরক্ষায় প্রয়োজনীয় পদক্ষেপ সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 883-884 (ET: N/A)]*
+
+
+   Answer:
+
+   What an information system is:
+   - An information system is an organised combination of hardware, software, data, people, processes and networks that collects, stores, processes and distributes information to support the operations, management and decision making of an organisation.
+   - Its six components: hardware, that is the physical equipment; software, both system and application; data, the raw material and the most valuable element; people, the users and administrators; processes and procedures, the documented rules governing use; and the network that connects everything.
+   - Types: Transaction Processing Systems for daily operations, Management Information Systems for routine reporting, Decision Support Systems for analysis, Executive Information Systems for senior management, Expert Systems, and Enterprise Resource Planning systems that integrate all of them.
+
+   Measures necessary to secure an information system:
+
+   Technical controls:
+   - Access control and authentication: unique accounts, strong passwords, multi-factor authentication, role based access with least privilege, and prompt removal of accounts when staff leave.
+   - Encryption: TLS for data in transit and full disk or database encryption for data at rest, with keys held securely, ideally in a hardware security module.
+   - Network security: firewalls at every boundary, a DMZ for public facing servers, network segmentation, intrusion detection and prevention, and a Web Application Firewall.
+   - Endpoint security: antivirus and endpoint detection and response on every machine, device control for removable media, and application whitelisting on servers.
+   - Patch management: a defined cycle for operating systems, applications, databases and network devices, with emergency patching for critical vulnerabilities.
+   - Secure development: secure coding standards, code review, static and dynamic testing, parameterised queries and output encoding.
+
+   Operational controls:
+   - Backup and recovery following the 3-2-1 rule, with at least one immutable or offline copy, and restoration tested rather than assumed.
+   - Disaster recovery site with defined RPO and RTO, and rehearsed drills.
+   - Logging, monitoring and a SIEM, with alerting and a security operations capability.
+   - Incident response plan, documented, assigned and actually exercised.
+   - Change management, so that no change reaches production untested and unapproved.
+   - Vulnerability assessment and periodic independent penetration testing.
+
+   Physical controls:
+   - Controlled access to server rooms with biometric authentication and CCTV, fire detection and clean agent suppression, UPS and generator, and environmental monitoring.
+
+   Administrative and human controls:
+   - An information security policy, a data classification scheme and an acceptable use policy.
+   - Security awareness training and simulated phishing for all staff, since most incidents begin with a human action.
+   - Segregation of duties and dual authorisation for sensitive operations such as payments.
+   - Background verification, confidentiality agreements and an insider threat programme.
+   - Vendor and third party risk assessment, with security obligations written into contracts.
+   - Regular internal and external audit, and compliance with ISO 27001, the Bangladesh Bank ICT security guidelines and PCI DSS where applicable.
+
+   - The governing principle: defence in depth, with the assumption that a breach will eventually occur, so detection, containment and tested recovery are given as much weight as prevention.
 
 ## VPN & Tunneling Protocols (IPsec, SSL VPN) (6)
 
@@ -4111,8 +4513,103 @@
 
 1. **Unsoliciated email is called?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+
+   Answer: Unsolicited email is called spam, and more precisely unsolicited bulk email or unsolicited commercial email. The sender is called a spammer.
+
+   - It is sent in very large volume to recipients who never asked for it, usually to advertise a product, to commit fraud, or to deliver malware.
+   - Types: commercial advertising, advance fee fraud such as the lottery and inheritance scams, phishing messages, malware carriers, and image or PDF spam designed to defeat text filters.
+   - Why it persists: the marginal cost of sending one more message is effectively zero, so a response rate of one in a million is still profitable. Most spam is sent from botnets of compromised machines, which hides the true origin.
+   - Harm: wasted bandwidth and storage, lost working time, and above all its use as the delivery mechanism for phishing and malware, which is what makes it a security problem rather than a nuisance.
+   - Countermeasures: spam filters using Bayesian and machine learning classification; blocklists of known bad senders; sender authentication with SPF, DKIM and DMARC, which prevents domain spoofing; greylisting; rate limiting; CAPTCHA on web forms; not publishing addresses in plain text; never replying to or unsubscribing from an unknown sender, since that confirms the address is live; and user awareness.
+   - Related terms: ham is legitimate email, the opposite of spam; spim is spam over instant messaging; and spit is spam over Internet telephony.
 2. **If you downloaded the email, you will be able to face the problem. Which attack do you face?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
+
+
+   Answer: Downloading and opening an email attachment or following a link in an unexpected email exposes the user to a phishing attack and to the malware it delivers.
+
+   The attacks faced:
+   - Phishing: the message impersonates a bank, a courier or a colleague and induces the recipient to open an attachment or follow a link to a counterfeit login page, where credentials are captured.
+   - Malware infection: the attachment itself carries the payload. Common carriers are a Word or Excel file containing a malicious macro, a PDF exploiting a reader vulnerability, an archive concealing an executable, or an executable disguised with a double extension such as `invoice.pdf.exe`.
+   - Ransomware: this is the most damaging outcome, and email is its commonest entry point. Once opened, it encrypts the files on the machine and every network share it can reach.
+   - Trojan and backdoor installation, giving the attacker remote control and a foothold from which to move laterally through the network.
+   - Spyware and keyloggers, which capture credentials as they are typed.
+   - Drive-by download: merely opening a linked page can exploit a browser vulnerability and install malware without any further click.
+   - Business Email Compromise: a forged instruction, apparently from an executive or a supplier, causing a fraudulent payment.
+   - Tracking pixels in the message body, which confirm to the sender that the address is live and that the message was opened.
+
+   Why email is so effective as an attack vector:
+   - It reaches the user directly, it exploits trust and urgency rather than any technical vulnerability, and the decision to open the attachment is made by a person rather than by a control.
+
+   Protection:
+   - Do not open attachments or follow links in unexpected messages, and verify the request through an independent channel before acting on it.
+   - Email gateway filtering with attachment sandboxing, and blocking of executable and macro enabled attachments from external senders.
+   - SPF, DKIM and DMARC to prevent spoofing of the organisation's own domain, and external sender warning banners.
+   - Disable macros by default in Office documents from the Internet.
+   - Keep the operating system, the browser and the document readers patched, since drive-by exploits depend on known vulnerabilities.
+   - Endpoint protection with behavioural detection, least privilege so that malware cannot install system wide, and network segmentation to limit spread.
+   - Multi-factor authentication, so that stolen credentials alone are insufficient.
+   - Tested offline backups, which are the only reliable defence against ransomware.
+   - Regular awareness training with simulated phishing, and a no-blame reporting culture so that a user who clicks reports it immediately.
 
 ## Buffer Overflow & Software Vulnerabilities (1)
 
 1. **Explain buffer overflow attack with an example.** *[BTCL Assistant Manager (Technical) 2023 compact it 592 (ET: BUET)]*
+
+
+   Answer: A buffer overflow occurs when a program writes more data into a fixed size memory buffer than the buffer can hold, so the excess overwrites adjacent memory. If the overwritten memory contains control information, the attacker can redirect the program's execution.
+
+   Why it happens:
+   - Languages such as C and C++ do not check array bounds, and functions such as `gets`, `strcpy`, `strcat` and `sprintf` copy until they meet a terminating null character, regardless of how large the destination is. The programmer is expected to check the length, and when that check is omitted, the overflow follows.
+
+   Stack buffer overflow, which is the classic case:
+   - When a function is called, a stack frame is created containing the local variables, the saved frame pointer and the return address, which tells the processor where to continue when the function ends.
+   - A local buffer sits below the return address in memory. Writing past the end of the buffer therefore walks upward over the saved frame pointer and then over the return address.
+   - If the attacker controls the data being written, he controls the value written into the return address. When the function returns, the processor jumps to whatever address is there.
+
+   ```
+   Stack layout before the overflow          After the overflow
+   +------------------------+                +------------------------+
+   | Return address         |                | Attacker's address     |  <-- overwritten
+   +------------------------+                +------------------------+
+   | Saved frame pointer    |                | AAAAAAAA               |  <-- overwritten
+   +------------------------+                +------------------------+
+   | char buffer[8]         |                | AAAAAAAA               |  <-- filled
+   +------------------------+                +------------------------+
+   ```
+
+   Example in C:
+
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+
+   void vulnerable(char *input) {
+       char buffer[8];
+       strcpy(buffer, input);      /* no length check at all */
+       printf("Input was: %s\n", buffer);
+   }
+
+   int main(int argc, char *argv[]) {
+       vulnerable(argv[1]);
+       return 0;
+   }
+   ```
+
+   - Normal use: the program is run with a 5 character argument. It fits inside the 8 byte buffer and the program behaves correctly.
+   - Overflow: the program is run with a 40 character argument. `strcpy` copies all 40 bytes, the first 8 fill the buffer, and the remaining 32 overwrite the saved frame pointer and then the return address. When `vulnerable` returns, execution jumps to whatever those bytes contain, and the program crashes with a segmentation fault.
+   - Exploitation: instead of random characters, the attacker supplies a payload consisting of machine code, called shellcode, followed by the address of that shellcode positioned exactly where the return address lies. When the function returns, the processor executes the attacker's code with the privileges of the program. If the program runs as root or as a service account, the attacker obtains those privileges.
+
+   Types:
+   - Stack based overflow, as above, which overwrites the return address.
+   - Heap based overflow, which corrupts heap metadata or function pointers in dynamically allocated memory.
+   - Integer overflow leading to a buffer overflow, where a size calculation wraps around and a far too small buffer is allocated.
+   - Format string vulnerability, a related class in which `printf(user_input)` allows arbitrary memory to be read and written.
+
+   Impact: arbitrary code execution, privilege escalation, denial of service through a crash, and data corruption. Historically it is the vulnerability behind the Morris worm of 1988, Code Red, SQL Slammer and a large proportion of remote exploits.
+
+   Prevention:
+   - In the code: use bounded functions such as `strncpy`, `snprintf` and `fgets` in place of `strcpy`, `sprintf` and `gets`; validate every length before copying; and never use `gets`, which cannot be used safely at all.
+   - Use memory safe languages such as Java, Python, C#, Go or Rust, where bounds are checked and this entire class of vulnerability does not exist.
+   - Compiler protections: stack canaries, that is a random value placed before the return address and checked before returning, so that an overflow is detected; `FORTIFY_SOURCE`; and compiling with warnings enabled and treated as errors.
+   - Operating system protections: ASLR, which randomises the addresses of the stack, heap and libraries so the attacker cannot predict where to jump; DEP or the NX bit, which marks the stack non-executable so injected shellcode cannot run; and Control Flow Integrity.
+   - Process: static analysis, code review, fuzz testing to find the overflows before an attacker does, and running services with the least privilege necessary so that a successful exploit gains as little as possible.
