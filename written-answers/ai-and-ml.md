@@ -23,19 +23,88 @@
 
 1. **What is Artificial Intelligence?** *[Mongla Port Authority Assistant Programmer 2023 compact it 573 (ET: N/A)]*
 
+   Answer: Artificial Intelligence (AI) is the branch of computer science that builds machines and software able to perform tasks that normally need human intelligence, such as learning, reasoning, problem solving, understanding language and taking decisions.
+
+   Main characteristics:
+   - Learning: the system improves its performance from data or experience instead of being programmed for every case.
+   - Reasoning: it applies rules and logic on stored knowledge to reach a conclusion.
+   - Perception: it takes input from the environment through images, speech or sensors.
+   - Decision making: it selects the action that best achieves a defined goal.
+
+   Types of AI:
+   - Narrow AI (weak AI): built for one specific task, such as spam filtering, chatbots or face recognition. All AI in practical use today is of this type.
+   - General AI (strong AI): would handle any intellectual task a human can do. It is still theoretical.
+   - Super AI: a hypothetical stage where machine intelligence exceeds human intelligence.
+
+   Major branches:
+   - Machine Learning and Deep Learning
+   - Natural Language Processing
+   - Computer Vision
+   - Robotics
+   - Expert Systems
+
+   Applications in the banking and government sector:
+   - Fraud detection in card and mobile transactions
+   - Credit scoring and risk assessment
+   - Chatbots for customer service
+   - Cheque and document reading through OCR
+   - Cyber attack detection from network traffic patterns
+
 2. **An artificial intelligence is an agent is an entity that continuously revious its enviornment.....** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 449 (ET: BUET)]*
 
 3. **Write PEAS for (a) Auto taxi (b) Automatic clinical test.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
 
+   Answer: PEAS stands for Performance measure, Environment, Actuators and Sensors. It is the standard way to describe the task environment of a rational agent before designing it.
+
+   (a) Automated taxi
+   - Performance measure: safe driving, reaching the destination, minimum trip time and fuel, obeying traffic law, passenger comfort, maximum profit.
+   - Environment: roads, other vehicles, pedestrians, traffic signals, road signs, weather, passengers.
+   - Actuators: steering, accelerator, brake, gear, indicator, horn, display and speaker for the passenger.
+   - Sensors: camera, GPS, speedometer, odometer, radar or LIDAR, engine sensors, accelerometer, microphone.
+
+   (b) Automatic clinical test system
+   - Performance measure: correct diagnosis, accurate test result, minimum cost, minimum patient discomfort, fast reporting.
+   - Environment: patient, hospital or laboratory, sample, medical staff, existing patient records.
+   - Actuators: display of the result, printed report, questions asked to the patient, referral or treatment suggestion.
+   - Sensors: keyboard entry of symptoms, laboratory test readings, imaging devices, patient history database.
+
 4. **Intelligence can not be measured only by intelligence test because it is related to other subjects. (True or False)** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
+
+   Answer: True. An IQ test measures only some abilities such as logic and pattern recognition, while intelligence also covers creativity, emotional intelligence, practical skill and social judgement, so a single test cannot measure it completely.
 
 5. **Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)], [BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+   Answer: False. Machine Learning is a subset of Artificial Intelligence, not of cloud computing. Cloud computing only supplies the storage and processing power on which ML models may be trained and deployed.
+
 6. **What is the father of AI?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
+
+   Answer: John McCarthy is known as the father of Artificial Intelligence. He coined the term "Artificial Intelligence" and organised the Dartmouth Conference of 1956, where AI was established as a field of study.
 
 7. **(i) ‘Knowledge’ কী? Human Knowledge কে Computer এ প্রকাশ করার একটি flow diagram দেখান।** *[BPSC Assistant Network Engineer 2020 compact it 952 (ET: N/A)]*
 
+   Answer: Knowledge is processed and organised information together with the rules and experience needed to use it for reasoning and decision making. In AI, knowledge is the facts and relations that an intelligent system stores and applies to solve a problem.
+
+   Knowledge Representation is the technique of expressing human knowledge in a form a computer can store and process, such as propositional and predicate logic, semantic networks, frames, production rules and ontologies.
+
+   ```mermaid
+   graph TD
+       A[Human Knowledge: facts, rules, experience] --> B[Knowledge Acquisition]
+       B --> C[Knowledge Representation<br/>logic, rules, frames, semantic net]
+       C --> D[(Knowledge Base)]
+       D --> E[Inference Engine]
+       E --> F[Conclusion / Decision]
+       F --> G[User Interface]
+   ```
+
+   - Knowledge is first collected from experts, documents or data during knowledge acquisition.
+   - It is then encoded in a formal representation that a machine can read.
+   - The encoded knowledge is stored in the knowledge base.
+   - The inference engine applies reasoning rules on the knowledge base to derive new facts.
+   - The result is returned to the user through the interface, which is the basic structure of an expert system.
+
 8. **Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?** *[Sadharan Bima Corporation Programmer/ AP/AME 2020 compact it 1002 (ET: DU)]*
+
+   Answer: Alan Turing. He led the work at Bletchley Park that broke the German Enigma cipher during the Second World War, and later proposed the Turing Test, which became a foundation of artificial intelligence.
 
 ## Deep Learning & Neural Networks (ANN, CNN, RNN) (7)
 

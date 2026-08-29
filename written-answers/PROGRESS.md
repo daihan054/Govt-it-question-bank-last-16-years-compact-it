@@ -1,13 +1,13 @@
 # Answer writing progress
 
 `written-answers/` — model answers for every question in `written/`.
-Commit unit: one `##` subtopic. Tick a box only after that subtopic is committed.
-**Overall: 1/239 subtopics · 11/2673 answers**
+Commit unit: one `##` subtopic.
 
+**Overall: 2/239 subtopics · 19/2673 answers**
 
-## ai-and-ml.md — 0/11 sections, 0/41 answers
+## ai-and-ml.md — 1/11 sections, 8/41 answers
 
-- [ ] Artificial Intelligence & Expert Systems (8)
+- [x] Artificial Intelligence & Expert Systems (8)
 - [ ] Deep Learning & Neural Networks (ANN, CNN, RNN) (7)
 - [ ] Machine Learning Paradigms (Supervised vs Unsupervised) (6)
 - [ ] Model Evaluation & Datasets (5)
