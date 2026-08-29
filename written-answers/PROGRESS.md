@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 75/239 subtopics · 937/2673 answers**
+**Overall: 76/239 subtopics · 943/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -57,11 +57,11 @@ Commit unit: one `##` subtopic.
 - [x] Pointers (4)
 - [x] Command Line Arguments & Basic Programs (1)
 
-## cloud-computing.md — 2/9 sections, 18/34 answers
+## cloud-computing.md — 3/9 sections, 24/34 answers
 
 - [x] Cloud Service Models (12)
 - [x] Cloud Storage & Fundamentals (6)
-- [ ] Virtualization & Containers (VM vs Container) (6)
+- [x] Virtualization & Containers (VM vs Container) (6)
 - [ ] Cluster, Grid & Distributed Computing (3)
 - [ ] Scalability (Horizontal & Vertical Scaling) (2)
 - [ ] Edge Computing & Fog Computing (2)
