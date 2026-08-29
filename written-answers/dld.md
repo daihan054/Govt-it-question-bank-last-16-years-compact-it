@@ -4531,13 +4531,133 @@
  * **(ii) Noise**
  * **(iii) Power consumption.**
 
+
+   Answer: TTL (Transistor-Transistor Logic) is built from bipolar junction transistors, CMOS (Complementary Metal-Oxide Semiconductor) from complementary pairs of p-channel and n-channel MOSFETs.
+
+   | Parameter | TTL (74LS series) | CMOS (74HC / 4000 series) |
+   |---|---|---|
+   | (i) Speed | Faster in the classic families. Propagation delay about 9 ns for 74LS, 3 ns for 74AS. Speed is almost independent of load because the totem-pole output drives current actively. | Slower in the old 4000 series (about 40 ns) because the output has to charge the load capacitance through the channel resistance. Modern 74HC/74AC are 8 ns or less, so the gap has closed. |
+   | (ii) Noise | Poorer noise margin, about 0.4 V for logic LOW and 0.7 V for logic HIGH at a 5 V supply. Switching draws current spikes from the supply, so TTL also generates more noise on the power rail. | Much better noise margin, about 30 to 45 percent of the supply voltage (roughly 1.5 V at 5 V, and more at higher supply). High input impedance also means unused inputs must never be left floating. |
+   | (iii) Power consumption | High and almost constant. A 74LS gate draws about 2 mW whether it is switching or idle, because current flows through the input transistor in the steady state. | Very low in the static state, in the microwatt range, because one of the two complementary transistors is always OFF. Power rises with frequency as P = C.V^2.f, so at high clock speed CMOS can approach TTL power. |
+
+   Other practical differences:
+   - Supply voltage: TTL needs a fixed 5 V plus or minus 5 percent; CMOS works over a wide range of 3 to 18 V.
+   - Fan-out: TTL about 10, CMOS more than 50 because the inputs draw almost no current.
+   - Packing density: CMOS transistors are smaller and need no resistors, so CMOS is used for LSI and VLSI; TTL is limited to SSI and MSI.
+   - Static damage: CMOS inputs are sensitive to electrostatic discharge and need protection diodes and careful handling.
+
+   Conclusion: TTL is preferred where raw speed and drive strength matter, CMOS where low power, wide supply range and high integration matter. Almost all modern ICs are CMOS.
 2. **Describe the important characteristics of digital IC's.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 556 (ET: BIBM)]*
 
+
+   Answer: The important characteristics of a digital IC are the parameters used to choose a logic family and to check whether two ICs can be connected together.
+
+   - Propagation delay (tpd): the time between a change at the input and the resulting change at the output, measured at the 50 percent points. It sets the maximum operating speed. Typical values are 9 ns for 74LS, 3 ns for 74AS.
+   - Power dissipation (PD): the power drawn from the supply, PD = Vcc x Icc. TTL draws a few milliwatts per gate, CMOS a few microwatts when static.
+   - Speed-power product (figure of merit): tpd x PD, measured in picojoules. A lower value means a better family, because it shows speed obtained per unit of power.
+   - Noise margin: the largest unwanted voltage that can ride on a signal without changing the logic level.
+     - High-level noise margin: NMH = VOH(min) - VIH(min)
+     - Low-level noise margin: NML = VIL(max) - VOL(max)
+   - Fan-in: the number of inputs a gate can accept.
+   - Fan-out (loading factor): the number of similar gate inputs one output can drive without leaving the guaranteed voltage levels. TTL is about 10, CMOS is above 50.
+   - Current and voltage parameters: VIH, VIL, VOH, VOL, IIH, IIL, IOH, IOL. These decide interface compatibility between families.
+   - Operating temperature range: commercial 0 to 70 degree C, industrial -40 to 85 degree C, military -55 to 125 degree C.
+   - Supply voltage range: TTL is fixed at 5 V, CMOS works from 3 to 18 V.
+   - Packing density: the number of gates per chip, which classifies the IC as SSI, MSI, LSI, VLSI or ULSI.
+   - Cost and availability.
+
+   In practice the first four (delay, power, noise margin and fan-out) are the parameters actually compared when a design is chosen.
 3. **Difference between Analog and Digital Circuit.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 873 (ET: N/A)]*
 
+
+   Answer:
+
+   | Point | Analog circuit | Digital circuit |
+   |---|---|---|
+   | Signal | Continuous, takes any value in a range | Discrete, only two levels, 0 and 1 |
+   | Representation | Amplitude, frequency or phase of a waveform | Binary numbers made of bits |
+   | Basic element | Transistor working in the active region, op-amp, resistor, capacitor | Logic gates working in cut-off or saturation |
+   | Noise effect | Noise adds directly to the signal and cannot be removed | Noise below the noise margin is completely rejected when the signal is regenerated |
+   | Accuracy | Limited by component tolerance and drift | Can be increased simply by using more bits |
+   | Design | Harder, depends on device characteristics and temperature | Easier, uses Boolean algebra and standard building blocks |
+   | Storage | Difficult, needs capacitors or magnetic media, degrades over time | Easy and lossless, stored as bits in memory |
+   | Power consumption | Generally higher, transistors conduct continuously | Lower, transistors are switched fully ON or OFF |
+   | Flexibility | Fixed function, changing it means changing the hardware | Programmable, function can be changed in software |
+   | Examples | Amplifier, oscillator, filter, radio receiver | Counter, adder, microprocessor, memory |
+
+   Note: a real system usually contains both, joined by an ADC (analog to digital converter) at the input and a DAC at the output, because sensors and actuators in the physical world are analog while processing is done digitally.
 4. **(c) What is fan-in and fan out?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
 
+
+   Answer: Fan-in and fan-out are the two loading parameters of a logic gate.
+
+   Fan-in:
+   - The number of inputs a logic gate can accept.
+   - A 3-input NAND gate has a fan-in of 3.
+   - Increasing fan-in increases the input capacitance and the number of transistors in series, so propagation delay grows roughly in proportion to fan-in. This is why large gates are built as a tree of small gates instead of one wide gate.
+
+   Fan-out (loading factor):
+   - The maximum number of standard gate inputs of the same family that one output can drive while still keeping the output voltages within their guaranteed limits.
+   - It is calculated separately for the HIGH and LOW states, and the smaller of the two is taken:
+     - Fan-out (LOW) = IOL(max) / IIL(max)
+     - Fan-out (HIGH) = IOH(max) / IIH(max)
+
+   Example calculation for 74LS TTL:
+   - IOL = 8 mA, IIL = 0.4 mA, so fan-out (LOW) = 8 / 0.4 = 20
+   - IOH = 400 microampere, IIH = 20 microampere, so fan-out (HIGH) = 400 / 20 = 20
+   - Fan-out = 20 (the smaller value)
+
+   Effect of exceeding the fan-out:
+   - The output LOW voltage rises and the output HIGH voltage falls, so the noise margin shrinks and the logic level may be read wrongly.
+   - Rise and fall times increase because of the extra load capacitance, which slows the circuit.
+   - The fix is to insert a buffer or line driver.
+
+   CMOS has a very high fan-out (above 50) at low frequency because its inputs draw almost no DC current; there the real limit is the total load capacitance, which sets the switching speed.
 5. **Sources of transient fault and permanent fault in a digital system consists of hardware and software? Example based on Hardware and software.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
+
+
+   Answer: A fault is a physical defect or a design error that can cause a system to fail. Faults are classified by how long they last.
+
+   Transient fault:
+   - A fault that appears for a short time and then disappears on its own, leaving no permanent damage. The hardware is still good; only the stored value or the signal was corrupted.
+   - Also called a soft error or a single event upset.
+
+   Sources of transient faults in hardware:
+   - Alpha particles from package material and cosmic ray neutrons flipping a bit in RAM or a register.
+   - Power supply fluctuation, voltage sag, spike or brown-out.
+   - Electromagnetic interference from a nearby motor, relay or radio transmitter.
+   - Crosstalk between closely routed PCB tracks or cables.
+   - Ground bounce and simultaneous switching noise.
+   - Metastability when an asynchronous input violates the setup or hold time of a flip-flop.
+   - Temperature spikes causing a momentary timing violation.
+
+   Sources of transient faults in software:
+   - Race condition between two threads that only shows up under a particular timing.
+   - Deadlock or livelock that clears when one task times out.
+   - Buffer overrun or memory leak that fails only after long running.
+   - Unhandled boundary input, such as a leap-second or an unexpected packet size.
+   - These are called Heisenbugs, because they disappear when the system is observed or restarted.
+
+   Permanent fault:
+   - A fault that stays until the faulty part is repaired or replaced. The same wrong output is produced every time the same input is applied.
+   - Also called a hard fault.
+
+   Sources of permanent faults in hardware:
+   - Manufacturing defect: a broken track, a short between two lines, a bad solder joint.
+   - Stuck-at-0 or stuck-at-1 faults, where a node is permanently tied to ground or Vcc.
+   - Electromigration and oxide breakdown after long operation.
+   - Electrostatic discharge that destroys a CMOS input gate.
+   - Burnt component from overvoltage, overheating or a lightning surge.
+
+   Sources of permanent faults in software:
+   - A coding error such as a wrong loop bound or a wrong formula, which fails on every run with the same data.
+   - Wrong algorithm or wrong requirement implemented.
+   - Corrupted firmware image or a wrong configuration file.
+   - These are called Bohrbugs, because they are solid and reproducible.
+
+   Handling:
+   - Transient faults are handled by detection and retry: parity, ECC memory, checksum on messages, watchdog timer, retransmission, or simply rebooting the module.
+   - Permanent faults are handled by redundancy and replacement: spare modules, TMR (triple modular redundancy), built-in self test, and patching or reloading the software.
 
 ## 2's Complement & Binary Arithmetic (2)
 
