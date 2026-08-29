@@ -478,21 +478,291 @@
 
 1. Explain the working principle of a PN junction diode. Draw its symbol and describe the difference between forward bias and reverse bias. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+
+   Answer: A PN junction diode is formed when a p-type semiconductor (rich in holes) is joined to an n-type semiconductor (rich in electrons) in a single crystal. It conducts current in one direction only.
+
+   Formation of the junction:
+   - At the moment of joining, electrons from the n-side diffuse into the p-side and holes from the p-side diffuse into the n-side, and they recombine near the junction.
+   - This leaves behind fixed positive ions on the n-side and fixed negative ions on the p-side, forming a region with no free carriers called the depletion region.
+   - The fixed charges set up an internal electric field, and the potential across it is called the barrier potential: about 0.7 V for silicon and 0.3 V for germanium. This field stops further diffusion, so the junction reaches equilibrium.
+
+   Symbol:
+
+   ```
+        Anode (P)          Cathode (N)
+           ----|>|----
+              A     K
+   ```
+
+   The triangle points in the direction of conventional current flow, and the bar is the cathode (marked with a band on the body of the component).
+
+   | Point | Forward bias | Reverse bias |
+   |---|---|---|
+   | Connection | P side to positive terminal, N side to negative terminal | P side to negative terminal, N side to positive terminal |
+   | Effect on depletion region | Narrows | Widens |
+   | Effect on barrier potential | Reduced | Increased |
+   | Junction resistance | Very low, a few ohm | Very high, in mega ohm |
+   | Current | Large, due to majority carriers; typically mA to A | Very small reverse saturation current, in nA (Si) or microampere (Ge), due to minority carriers |
+   | Voltage across the diode | Almost constant at 0.7 V (Si) once conducting | Equal to the applied reverse voltage |
+   | State | ON, acts as a closed switch | OFF, acts as an open switch |
+   | Effect of temperature | Barrier voltage falls about 2 mV per degree C | Reverse current roughly doubles every 10 degree C |
+
+   Forward bias in detail: once the applied voltage exceeds the barrier potential (the knee or cut-in voltage), the external field overcomes the internal field, majority carriers cross the junction and a large current flows. Beyond the knee the current rises almost exponentially, following the diode equation I = Is.(e^(V/nVT) - 1), so a series resistor must limit it.
+
+   Reverse bias in detail: the applied field adds to the internal field, so the depletion region widens and only the tiny minority-carrier current flows. If the reverse voltage is raised beyond the breakdown voltage, avalanche or Zener breakdown occurs and the current rises sharply. An ordinary diode is destroyed by this, but a Zener diode is designed to operate there and is used as a voltage regulator.
+
+   Main applications: rectification, clipping and clamping, freewheeling protection across a relay coil, and demodulation.
 2. **Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
+
+   Answer: In a simple series circuit of a source, a diode and a resistor, the diode drops a fixed forward voltage and the rest of the source voltage appears across the resistor.
+
+   Given:
+   - R = 10 k ohm = 10,000 ohm
+   - Forward voltage drop of the diode, VD = 0.75 V
+   - The source voltage is not stated, so a standard laboratory supply is assumed: VS = 5 V
+
+   Step 1 - apply Kirchhoff's voltage law around the loop:
+   VS = VD + VR
+
+   Step 2 - find the voltage across the resistor:
+   - VR = VS - VD
+   - VR = 5 - 0.75 = 4.25 V
+
+   Step 3 - apply Ohm's law:
+   - I = VR / R
+   - I = 4.25 / 10,000
+   - I = 0.425 x 10^-3 A
+
+   Final answer: I = 0.425 mA (with the assumed 5 V supply).
+
+   General formula for any supply voltage:
+   I = (VS - 0.75) / 10 k ohm
+
+   For example, with VS = 12 V the current would be (12 - 0.75)/10,000 = 1.125 mA.
+
+   Note: if the diode were reverse biased, it would block and the current would be only the reverse saturation current, which is a few nanoamperes and is treated as zero.
 3. **What is Diode and Inductor?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
+
+   Answer:
+
+   Diode:
+   - A two-terminal semiconductor device formed by a PN junction, having an anode (P side) and a cathode (N side).
+   - It conducts current in one direction only: it conducts when forward biased (anode positive, drop about 0.7 V for silicon) and blocks when reverse biased.
+   - It is a non-linear and unidirectional device, so it acts as an electronic one-way valve or switch.
+   - Uses: rectification (AC to DC), clipping and clamping of waveforms, freewheeling protection across inductive loads, voltage regulation (Zener diode), light emission (LED), and light detection (photodiode).
+
+   Inductor:
+   - A passive two-terminal component made of a coil of wire, often wound on an iron or ferrite core.
+   - It stores energy in a magnetic field when current flows through it. Its property is called inductance L, measured in henry (H).
+   - Its defining relation is v = L.(di/dt), so it opposes any change of current through it. By Lenz's law it induces a back EMF that resists the change.
+   - Energy stored: W = (1/2).L.I^2
+   - Its reactance rises with frequency: XL = 2.pi.f.L. So it passes DC easily and blocks high frequency, which makes it act as a low-pass element.
+   - The current through an inductor cannot change instantly, which is why a spark appears when an inductive circuit is broken.
+   - Uses: filters and chokes in power supplies, tuned LC circuits in radios, transformers, relay and motor coils, and energy storage in switching regulators.
+
+   Key contrast: a diode is an active, non-linear semiconductor device that controls the direction of current, while an inductor is a passive, linear component that stores magnetic energy and opposes change of current.
 4. **How does LED differ from Laser Diod? What are the function of Diode?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
+
+
+   Answer:
+
+   Difference between an LED and a Laser diode:
+
+   | Point | LED (Light Emitting Diode) | Laser Diode |
+   |---|---|---|
+   | Emission process | Spontaneous emission | Stimulated emission inside an optical cavity |
+   | Light coherence | Incoherent, random phase | Coherent, all photons in phase |
+   | Spectral width | Wide, about 30 to 50 nm | Narrow, about 1 to 3 nm |
+   | Beam divergence | Wide, about 60 degree, spreads quickly | Very narrow, about 5 to 10 degree |
+   | Threshold current | None, emits light from a very low current | Emits laser light only above a threshold current |
+   | Output power | Low, microwatt to a few mW | High, mW to watt |
+   | Modulation speed | Slower, up to about 200 Mbps | Fast, several Gbps and above |
+   | Coupling into fibre | Poor, suits multimode fibre only | Efficient, suits single-mode fibre |
+   | Transmission distance | Short, up to about 2 km | Long, tens to hundreds of km |
+   | Temperature sensitivity | Low | High, needs a cooler and a monitor photodiode |
+   | Cost and lifetime | Cheap, long life | Expensive, shorter life |
+   | Typical use | Indicators, displays, short-haul fibre links, remote controls | Long-haul fibre optic communication, optical drives, barcode scanners, surgery, printing |
+
+   Functions of a diode:
+   - Rectification: converts AC into DC in half-wave, full-wave and bridge rectifiers.
+   - Switching: turns a circuit path on or off, used in logic circuits and in switching power supplies.
+   - Clipping: limits a waveform to a fixed level, used to protect an input from overvoltage.
+   - Clamping: shifts the DC level of a waveform without changing its shape.
+   - Freewheeling (flyback) protection: placed across a relay or motor coil to absorb the back EMF when the coil is switched off.
+   - Voltage regulation: a Zener diode operated in reverse breakdown holds a constant output voltage.
+   - Reverse polarity protection: blocks current if the supply is connected the wrong way round.
+   - Demodulation: recovers the audio signal from an AM radio carrier.
+   - Light emission and detection: LED, laser diode, photodiode and solar cell.
+   - Voltage multiplication: diode and capacitor ladders produce a high DC voltage from a low AC voltage.
+   - Variable capacitance: a varactor diode is used to tune an oscillator.
 
 ## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)
 
 1. **You are required to convert a 12-bit digital number to an analogue voltage over the voltage range of 0 to 3.3V with a Digital-to-Analogue Converter (DAC). What is the resolution of the analogue output?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 419 (ET: BIBM)]*
 
+
+   Answer: The resolution of a DAC is the smallest change in the analogue output produced by a change of one LSB in the digital input.
+
+   Given:
+   - Number of bits, n = 12
+   - Output voltage range (full-scale range, FSR) = 0 to 3.3 V, so FSR = 3.3 V
+
+   Step 1 - find the number of discrete output steps:
+   - Number of codes = 2^n = 2^12 = 4096
+   - Number of steps between the lowest and the highest code = 2^n - 1 = 4095
+
+   Step 2 - apply the resolution formula:
+   - Resolution = FSR / (2^n - 1)
+   - Resolution = 3.3 / 4095
+
+   Step 3 - compute:
+   - Resolution = 0.00080586 V
+   - Resolution = 0.806 mV = 806 microvolt (approximately)
+
+   Final answer: the resolution is about 0.806 mV per LSB (roughly 0.8 mV).
+
+   Notes:
+   - Expressed as a percentage, resolution = 1/4095 x 100 = 0.0244 percent of full scale.
+   - Some texts use FSR / 2^n = 3.3 / 4096 = 0.8057 mV. The difference is negligible; the 2^n - 1 form is used when the maximum code must give exactly 3.3 V.
+   - The maximum output voltage is therefore 4095 x 0.806 mV = 3.3 V and the minimum is 0 V.
 2. **An 8 bit (Analog to Digital Converter) = 2.56v. Let the minimum analog voltage = 0v. Calculate binary data output if analog input=1.7** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)]*
 
+
+   Answer: An ADC divides its reference (full-scale) voltage into 2^n equal steps and outputs the code that corresponds to the input.
+
+   Given:
+   - Number of bits, n = 8
+   - Full-scale (reference) voltage, Vref = 2.56 V
+   - Minimum analogue voltage = 0 V
+   - Analogue input, Vin = 1.7 V
+
+   Step 1 - find the number of steps:
+   - 2^n = 2^8 = 256
+
+   Step 2 - find the step size (resolution):
+   - Step size = Vref / 2^n
+   - Step size = 2.56 / 256 = 0.01 V = 10 mV per LSB
+
+   Step 3 - find the digital output code:
+   - Code = Vin / step size
+   - Code = 1.7 / 0.01 = 170 (decimal)
+
+   Step 4 - convert 170 to 8-bit binary by repeated division by 2:
+   - 170 / 2 = 85, remainder 0
+   - 85 / 2 = 42, remainder 1
+   - 42 / 2 = 21, remainder 0
+   - 21 / 2 = 10, remainder 1
+   - 10 / 2 = 5, remainder 0
+   - 5 / 2 = 2, remainder 1
+   - 2 / 2 = 1, remainder 0
+   - 1 / 2 = 0, remainder 1
+   - Reading the remainders from bottom to top: 1010 1010
+
+   Final answer: the binary output is 1010 1010 (170 in decimal, AA in hexadecimal).
+
+   Verification: 170 x 0.01 V = 1.70 V, which matches the input exactly, so there is no quantisation error for this particular input.
 3. **Draw an ADC converter circuit which convert an analog signal to digital signal.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
+
+   Answer: The most commonly drawn ADC is the successive approximation register (SAR) type, because it gives a good balance of speed, accuracy and cost and is the type built into almost every microcontroller.
+
+   Block diagram of a SAR ADC:
+
+   ```mermaid
+   flowchart LR
+     AIN[Analog Input Vin] --> SH[Sample and Hold]
+     SH --> CMP[Comparator]
+     DAC[Internal DAC] --> CMP
+     CMP --> SAR[Successive Approximation Register]
+     SAR --> DAC
+     SAR --> OUT[n-bit Digital Output]
+     CLK[Clock] --> SAR
+     VREF[Reference Voltage] --> DAC
+   ```
+
+   Working:
+   1. The sample-and-hold circuit takes a sample of the input and holds it steady while the conversion runs, so the value cannot drift during comparison.
+   2. The SAR sets the MSB of its register to 1 and clears the rest, so the internal DAC outputs Vref/2.
+   3. The comparator compares Vin with the DAC output. If Vin is greater, the bit is kept as 1; otherwise it is reset to 0.
+   4. The next lower bit is tried in the same way, and so on down to the LSB.
+   5. After n clock cycles the register holds the digital equivalent of the input, and the end-of-conversion signal goes high.
+
+   An n-bit SAR ADC therefore needs exactly n clock cycles per conversion, no matter what the input is.
+
+   Alternative simpler circuit - the flash (parallel comparator) ADC, which is easier to draw for a 3-bit example:
+
+   ```
+     Vref
+      |
+     [R]---+---> comparator 7 --+
+      |    |                    |
+     [R]---+---> comparator 6 --+
+      |    |                    |
+     [R]---+---> comparator 5 --+   Priority
+      |    |                    +-> Encoder --> 3-bit
+     [R]---+---> comparator 4 --+   (8 to 3)      output
+      |    |                    |
+     [R]---+---> comparator 3 --+
+      |    |                    |
+     [R]---+---> comparator 2 --+
+      |    |                    |
+     [R]---+---> comparator 1 --+
+      |
+     GND        (Vin is fed to the other input of every comparator)
+   ```
+
+   Working of the flash ADC: a resistor ladder divides Vref into equally spaced reference levels. Vin is compared with every level at the same time by 2^n - 1 comparators. All comparators below the input level output 1, forming a thermometer code, and a priority encoder converts that into an n-bit binary number.
+
+   Comparison:
+
+   | Type | Speed | Components | Use |
+   |---|---|---|---|
+   | Flash | Fastest, one clock cycle | 2^n - 1 comparators, very costly for large n | Video, radar, high-speed sampling |
+   | SAR | Medium, n clock cycles | One comparator and one DAC | General purpose, microcontrollers |
+   | Dual slope | Slowest | One integrator and one counter | Digital multimeters, high noise rejection |
 4. **(ক) A/D Converter দ্বারা কিভাবে একটি Analog signal Digital signal এ রূপান্তরিত করা হয়। ডায়াগ্রাম সহ লিখুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
+
+
+   Answer: An A/D converter changes a continuous analogue signal into a stream of binary numbers, so that a computer or microcontroller can process it. The conversion is done in four steps.
+
+   ```mermaid
+   flowchart LR
+     A[Analog Signal from Sensor] --> F[Anti-aliasing Low Pass Filter]
+     F --> S[Sampling]
+     S --> H[Hold Circuit]
+     H --> Q[Quantization]
+     Q --> E[Encoding]
+     E --> D[Digital Output - Binary Code]
+   ```
+
+   Step 1 - Filtering:
+   - A low-pass anti-aliasing filter removes any frequency component above half the sampling rate, because such components would fold back and appear as false low frequencies in the output.
+
+   Step 2 - Sampling:
+   - The value of the analogue signal is measured at regular intervals Ts, so a continuous-time signal becomes a discrete-time signal.
+   - Sampling rate fs = 1/Ts.
+   - Nyquist criterion: fs must be at least 2 x fmax, where fmax is the highest frequency in the signal. Speech limited to 4 kHz is therefore sampled at 8 kHz in a telephone system.
+   - If fs is less than 2.fmax, aliasing occurs and the original signal cannot be recovered.
+
+   Step 3 - Holding:
+   - A sample-and-hold circuit (a capacitor plus a switch and buffer) keeps each sample constant while the conversion takes place, so the value does not change during the comparison.
+
+   Step 4 - Quantization:
+   - The full-scale range is divided into 2^n equal levels, where n is the number of bits, and each held sample is rounded to the nearest level.
+   - Step size (resolution) = Vref / 2^n.
+   - The rounding introduces an unavoidable error called quantization error, whose maximum value is half a step. Increasing n reduces this error.
+   - Signal-to-quantization-noise ratio is approximately SQNR = 6.02n + 1.76 dB, so each extra bit adds about 6 dB.
+
+   Step 5 - Encoding:
+   - Each quantized level is given a unique n-bit binary code, and the codes are sent out either in parallel or serially.
+
+   Worked example:
+   - An 8-bit ADC with Vref = 5 V has a step size of 5/256 = 19.53 mV.
+   - An input of 2.5 V gives a code of 2.5/0.01953 = 128, that is 1000 0000.
+
+   Common ADC types: flash (fastest), successive approximation (general purpose), sigma-delta (highest resolution, used in audio) and dual slope (most noise immune, used in multimeters).
 
 ## AC Circuits & Power Analysis (2)
 
