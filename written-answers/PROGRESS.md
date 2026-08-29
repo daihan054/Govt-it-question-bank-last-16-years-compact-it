@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 163/239 subtopics · 1828/2673 answers**
+**Overall: 164/239 subtopics · 1942/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -210,9 +210,9 @@ Commit unit: one `##` subtopic.
 - [x] Reading Comprehension (5)
 - [x] English Literature & Authors (1)
 
-## gk.md — 0/4 sections, 0/214 answers
+## gk.md — 1/4 sections, 114/214 answers
 
-- [ ] Bangladesh Affairs (114)
+- [x] Bangladesh Affairs (114)
 - [ ] International Affairs (70)
 - [ ] Everyday Science & Environment (22)
 - [ ] Banking & ICT Abbreviations (8)
