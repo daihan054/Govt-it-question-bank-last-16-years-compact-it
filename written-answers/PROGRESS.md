@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 178/239 subtopics · 2116/2673 answers**
+**Overall: 179/239 subtopics · 2120/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -225,7 +225,7 @@ Commit unit: one `##` subtopic.
 - [x] Edge Detection (1)
 - [x] Morphological Operations (1)
 
-## math.md — 6/15 sections, 67/88 answers
+## math.md — 7/15 sections, 71/88 answers
 
 - [x] Arithmetic & Algebra Problems (16)
 - [x] Set Theory & Discrete Math (13)
@@ -233,7 +233,7 @@ Commit unit: one `##` subtopic.
 - [x] Basic Arithmetic & Average (11)
 - [x] Geometry & Coordinate Geometry (10)
 - [x] Permutations & Combinations (5)
-- [ ] Ratio, Proportion & Mixtures (4)
+- [x] Ratio, Proportion & Mixtures (4)
 - [ ] Speed, Time, Distance & Boats (4)
 - [ ] Probability & Statistics (3)
 - [ ] Calculus & Integration (2)
