@@ -2341,7 +2341,68 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 495 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Adjacency List | Adjacency Matrix |
+   |---|---|---|
+   | Space | O(V + E) | O(V²) |
+   | Check if edge (u, v) exists | O(degree of u) | O(1) |
+   | Find all neighbours of a vertex | O(degree of u) | O(V) |
+   | Add an edge | O(1) | O(1) |
+   | Remove an edge | O(degree of u) | O(1) |
+   | Best for | Sparse graphs | Dense graphs |
+
+   Problems solved more efficiently with an adjacency list:
+   - BFS and DFS traversal, which take O(V + E) with a list but O(V²) with a matrix, because the matrix forces a scan of a whole row per vertex.
+   - Dijkstra's algorithm with a priority queue, O(E log V) with a list against O(V²) with a matrix.
+   - Kruskal's and Prim's MST algorithms, topological sorting and cycle detection, all of which iterate over edges.
+   - Any real world sparse graph such as a road network or a social network, where E is far smaller than V².
+
+   Problems solved more efficiently with an adjacency matrix:
+   - Checking whether a specific edge exists between two vertices, which is a single O(1) lookup.
+   - Floyd-Warshall all pairs shortest path, which is naturally written on a matrix and runs in O(V³).
+   - Transitive closure using Warshall's algorithm.
+   - Counting paths of a given length, done by matrix multiplication.
+   - Dense graphs where E approaches V², since then the matrix wastes no space.
+
 2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
+
+   Answer: In heap numbering the children of vertex i are 2i and 2i + 1, so the complete binary tree on 7 vertices has the edges 1-2, 1-3, 2-4, 2-5, 3-6 and 3-7.
+
+   ```mermaid
+   graph TD
+       N1((1)) --> N2((2))
+       N1 --> N3((3))
+       N2 --> N4((4))
+       N2 --> N5((5))
+       N3 --> N6((6))
+       N3 --> N7((7))
+   ```
+
+   Adjacency list representation:
+   - 1 → 2, 3
+   - 2 → 1, 4, 5
+   - 3 → 1, 6, 7
+   - 4 → 2
+   - 5 → 2
+   - 6 → 3
+   - 7 → 3
+
+   Equivalent adjacency matrix, where entry [i][j] is 1 if an edge exists between i and j:
+
+   |  | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+   |---|---|---|---|---|---|---|---|
+   | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+   | 2 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+   | 3 | 1 | 0 | 0 | 0 | 0 | 1 | 1 |
+   | 4 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+   | 5 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+   | 6 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+   | 7 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+
+   - The matrix is symmetric because the tree is undirected.
+   - It contains 12 ones, which is twice the number of edges, since a tree on 7 vertices has 6 edges.
+   - The matrix needs 7 × 7 = 49 cells while the list stores only 12 entries, which shows why a list suits a sparse structure like a tree.
 
 ## Divide and Conquer & Matrix Multiplication (1)
 
