@@ -2408,6 +2408,48 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
+   Answer: Block matrix multiplication, which is a divide and conquer method, is used. Each 16 × 16 matrix is divided into four 8 × 8 blocks, and the multiplication is then carried out using only 8 × 8 operations, which the processor supports.
+
+   Partitioning:
+   - Matrix A is written as blocks A11, A12, A21, A22, each of size 8 × 8.
+   - Matrix B is written as blocks B11, B12, B21, B22, each of size 8 × 8.
+   - The result C is also formed of four 8 × 8 blocks C11, C12, C21, C22.
+
+   Block multiplication formulas:
+   - C11 = A11 × B11 + A12 × B21
+   - C12 = A11 × B12 + A12 × B22
+   - C21 = A21 × B11 + A22 × B21
+   - C22 = A21 × B12 + A22 × B22
+
+   Algorithm:
+   - Split both A and B into four 8 × 8 sub-matrices each, using simple index offsets, so no data is copied unnecessarily.
+   - Perform the 8 multiplications listed above, each being an 8 × 8 by 8 × 8 multiplication that the processor can execute.
+   - Perform the 4 additions of 8 × 8 matrices to combine the partial products.
+   - Assemble the four result blocks into the final 16 × 16 matrix C.
+
+   ```
+   MULTIPLY_16x16(A, B)
+       split A into A11, A12, A21, A22        // each 8 x 8
+       split B into B11, B12, B21, B22
+
+       C11 = ADD(MUL8(A11,B11), MUL8(A12,B21))
+       C12 = ADD(MUL8(A11,B12), MUL8(A12,B22))
+       C21 = ADD(MUL8(A21,B11), MUL8(A22,B21))
+       C22 = ADD(MUL8(A21,B12), MUL8(A22,B22))
+
+       return the matrix formed by C11, C12, C21, C22
+   ```
+
+   Cost:
+   - 8 multiplications of size 8 × 8, each costing 8³ = 512 scalar multiplications, giving 4096 in total, which equals 16³ as expected.
+   - 4 additions of 8 × 8 matrices, each costing 64 additions.
+   - Recurrence: T(n) = 8T(n/2) + O(n²), which solves to O(n³).
+
+   Improvement using Strassen's algorithm:
+   - Strassen computes the same result with only 7 multiplications instead of 8, by using 7 cleverly formed sums such as M1 = (A11 + A22)(B11 + B22).
+   - The recurrence becomes T(n) = 7T(n/2) + O(n²), which solves to O(n^log₂7) = O(n^2.81).
+   - For this problem that means 7 multiplications of 8 × 8 instead of 8, at the cost of more additions.
+
 ## Huffman Coding & Data Compression (1)
 
 1. **Huffman encoding draw huffman tree. Given word “CONNECTION”.** *[NPCBL Executive Trainee (IT) 2022 compact it 645 (ET: BUET)]*
