@@ -550,5 +550,9 @@
  [
   "database.md",
   "Transaction Management & ACID Properties (12)"
+ ],
+ [
+  "dld.md",
+  "Logic Gates & Universal Gates (27)"
  ]
 ]
