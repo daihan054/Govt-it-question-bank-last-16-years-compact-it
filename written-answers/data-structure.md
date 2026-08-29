@@ -421,782 +421,782 @@
 10. **6.12 Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   - Tree: a non-linear hierarchical data structure consisting of nodes connected by edges, with exactly one node designated the root and every other node having exactly one parent. It contains no cycles, and a tree with n nodes has exactly n − 1 edges.
-   - Leaf node, also called an external or terminal node: a node with no children, that is a node of degree zero.
-   - Internal node, also called a non-terminal node: a node that has at least one child. Every node that is not a leaf is internal, and the root is internal unless the tree has only one node.
-   - Height of a tree: the length of the longest path from the root down to a leaf. Two conventions exist and the one being used must be stated: measured in edges, a single node tree has height 0; measured in nodes or levels, a single node tree has height 1.
+    - Tree: a non-linear hierarchical data structure consisting of nodes connected by edges, with exactly one node designated the root and every other node having exactly one parent. It contains no cycles, and a tree with n nodes has exactly n − 1 edges.
+    - Leaf node, also called an external or terminal node: a node with no children, that is a node of degree zero.
+    - Internal node, also called a non-terminal node: a node that has at least one child. Every node that is not a leaf is internal, and the root is internal unless the tree has only one node.
+    - Height of a tree: the length of the longest path from the root down to a leaf. Two conventions exist and the one being used must be stated: measured in edges, a single node tree has height 0; measured in nodes or levels, a single node tree has height 1.
 
-   Example:
+    Example:
 
-   ```
-              A          <- root, internal node, level 0
-            /   \
-           B     C       <- internal nodes, level 1
-          / \     \
-         D   E     F     <- leaf nodes, level 2
-   ```
+    ```
+               A          <- root, internal node, level 0
+             /   \
+            B     C       <- internal nodes, level 1
+           / \     \
+          D   E     F     <- leaf nodes, level 2
+    ```
 
-   - In this tree: the nodes are A, B, C, D, E and F, with 6 nodes and 5 edges.
-   - Leaf nodes: D, E and F, since none of them has a child.
-   - Internal nodes: A, B and C, since each has at least one child.
-   - Height: the longest path is A to B to D, which is 2 edges, so the height is 2 by the edge convention and 3 by the node convention.
-   - Other terms: the degree of A is 2; B is the parent of D and E; D and E are siblings; the depth of D is 2; and the tree has 3 levels.
+    - In this tree: the nodes are A, B, C, D, E and F, with 6 nodes and 5 edges.
+    - Leaf nodes: D, E and F, since none of them has a child.
+    - Internal nodes: A, B and C, since each has at least one child.
+    - Height: the longest path is A to B to D, which is 2 edges, so the height is 2 by the edge convention and 3 by the node convention.
+    - Other terms: the degree of A is 2; B is the parent of D and E; D and E are siblings; the depth of D is 2; and the tree has 3 levels.
 11. **Explain binary tree with example.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)]*
 
 
-   Answer: A binary tree is a hierarchical data structure in which every node has at most two children, referred to as the left child and the right child.
+    Answer: A binary tree is a hierarchical data structure in which every node has at most two children, referred to as the left child and the right child.
 
-   Properties:
-   - One node is the root, and every other node has exactly one parent.
-   - A tree of n nodes has exactly n − 1 edges.
-   - The maximum number of nodes at level i is 2ⁱ, taking the root as level 0.
-   - The maximum number of nodes in a tree of height h is 2^(h+1) − 1, and the minimum is h + 1.
-   - The minimum height of a tree with n nodes is ⌈log2(n + 1)⌉ − 1, and the maximum is n − 1 for a skewed tree.
+    Properties:
+    - One node is the root, and every other node has exactly one parent.
+    - A tree of n nodes has exactly n − 1 edges.
+    - The maximum number of nodes at level i is 2ⁱ, taking the root as level 0.
+    - The maximum number of nodes in a tree of height h is 2^(h+1) − 1, and the minimum is h + 1.
+    - The minimum height of a tree with n nodes is ⌈log2(n + 1)⌉ − 1, and the maximum is n − 1 for a skewed tree.
 
-   Example:
+    Example:
 
-   ```
-                50
-              /    \
-            30      70
-           /  \    /  \
-         20    40 60    80
-   ```
+    ```
+                 50
+               /    \
+             30      70
+            /  \    /  \
+          20    40 60    80
+    ```
 
-   - Root: 50. Internal nodes: 50, 30, 70. Leaf nodes: 20, 40, 60, 80.
-   - Height: 2 in edges. Number of nodes: 7. Number of edges: 6.
-   - Preorder: 50, 30, 20, 40, 70, 60, 80.
-   - Inorder: 20, 30, 40, 50, 60, 70, 80, which is sorted, so this is also a binary search tree.
-   - Postorder: 20, 40, 30, 60, 80, 70, 50.
+    - Root: 50. Internal nodes: 50, 30, 70. Leaf nodes: 20, 40, 60, 80.
+    - Height: 2 in edges. Number of nodes: 7. Number of edges: 6.
+    - Preorder: 50, 30, 20, 40, 70, 60, 80.
+    - Inorder: 20, 30, 40, 50, 60, 70, 80, which is sorted, so this is also a binary search tree.
+    - Postorder: 20, 40, 30, 60, 80, 70, 50.
 
-   Types of binary tree:
-   - Full or proper: every node has 0 or 2 children.
-   - Complete: every level is filled except possibly the last, which is filled from the left.
-   - Perfect: all leaves at the same level and every internal node has two children; it has exactly 2^(h+1) − 1 nodes.
-   - Balanced: the heights of the two subtrees of every node differ by at most one, which keeps operations at O(log n).
-   - Skewed: every node has only one child, so the tree degenerates into a linked list and operations become O(n).
+    Types of binary tree:
+    - Full or proper: every node has 0 or 2 children.
+    - Complete: every level is filled except possibly the last, which is filled from the left.
+    - Perfect: all leaves at the same level and every internal node has two children; it has exactly 2^(h+1) − 1 nodes.
+    - Balanced: the heights of the two subtrees of every node differ by at most one, which keeps operations at O(log n).
+    - Skewed: every node has only one child, so the tree degenerates into a linked list and operations become O(n).
 
-   Applications: binary search trees for searching; heaps for priority queues and heap sort; Huffman trees for compression; expression trees in compilers; syntax trees; decision trees; and the indexing structures of databases and file systems, which use B-trees and B+ trees.
+    Applications: binary search trees for searching; heaps for priority queues and heap sort; Huffman trees for compression; expression trees in compilers; syntax trees; decision trees; and the indexing structures of databases and file systems, which use B-trees and B+ trees.
 12. **What is Pre-order and Post order?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   Preorder traversal:
-   - The order is Root, Left, Right: visit the node first, then traverse its left subtree completely, then its right subtree.
-   - Algorithm: visit(node); Preorder(node.left); Preorder(node.right).
-   - Uses: creating a copy of a tree, since the root is created before its children; producing prefix, that is Polish, notation from an expression tree; and serialising a tree for storage or transmission.
+    Preorder traversal:
+    - The order is Root, Left, Right: visit the node first, then traverse its left subtree completely, then its right subtree.
+    - Algorithm: visit(node); Preorder(node.left); Preorder(node.right).
+    - Uses: creating a copy of a tree, since the root is created before its children; producing prefix, that is Polish, notation from an expression tree; and serialising a tree for storage or transmission.
 
-   Postorder traversal:
-   - The order is Left, Right, Root: traverse the left subtree completely, then the right subtree, and visit the node last.
-   - Algorithm: Postorder(node.left); Postorder(node.right); visit(node).
-   - Uses: deleting or freeing a tree, since a node must not be freed until both its children have been; producing postfix, that is Reverse Polish, notation; and evaluating an expression tree, since both operands must be computed before the operator is applied.
+    Postorder traversal:
+    - The order is Left, Right, Root: traverse the left subtree completely, then the right subtree, and visit the node last.
+    - Algorithm: Postorder(node.left); Postorder(node.right); visit(node).
+    - Uses: deleting or freeing a tree, since a node must not be freed until both its children have been; producing postfix, that is Reverse Polish, notation; and evaluating an expression tree, since both operands must be computed before the operator is applied.
 
-   Example:
+    Example:
 
-   ```
-                A
-              /   \
-             B     C
-            / \   / \
-           D   E F   G
-   ```
+    ```
+                 A
+               /   \
+              B     C
+             / \   / \
+            D   E F   G
+    ```
 
-   - Preorder: A, B, D, E, C, F, G
-   - Postorder: D, E, B, F, G, C, A
-   - Inorder, for comparison: D, B, E, A, F, C, G
+    - Preorder: A, B, D, E, C, F, G
+    - Postorder: D, E, B, F, G, C, A
+    - Inorder, for comparison: D, B, E, A, F, C, G
 
-   - Both run in O(n) time, since every node is visited exactly once, and use O(h) space for the recursion stack.
-   - A useful memory aid: the name refers to when the root is visited. Pre means the root comes before the subtrees, post means it comes after, and in means it comes between them.
+    - Both run in O(n) time, since every node is visited exactly once, and use O(h) space for the recursion stack.
+    - A useful memory aid: the name refers to when the root is visited. Pre means the root comes before the subtrees, post means it comes after, and in means it comes between them.
 13. **Explain with example Post order traversal.** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
 
-   Answer: Postorder traversal visits the left subtree first, then the right subtree, and the root last, so the order is Left, Right, Root.
+    Answer: Postorder traversal visits the left subtree first, then the right subtree, and the root last, so the order is Left, Right, Root.
 
-   Algorithm:
+    Algorithm:
 
-   ```
-   Postorder(node):
-       if node == NULL:
-           return
-       Postorder(node.left)      // traverse the left subtree
-       Postorder(node.right)     // traverse the right subtree
-       visit(node)               // visit the root last
-   ```
+    ```
+    Postorder(node):
+        if node == NULL:
+            return
+        Postorder(node.left)      // traverse the left subtree
+        Postorder(node.right)     // traverse the right subtree
+        visit(node)               // visit the root last
+    ```
 
-   Example:
+    Example:
 
-   ```
-                A
-              /   \
-             B     C
-            / \   / \
-           D   E F   G
-   ```
+    ```
+                 A
+               /   \
+              B     C
+             / \   / \
+            D   E F   G
+    ```
 
-   Step by step:
-   - Start at A. Before visiting A, traverse its left subtree rooted at B.
-   - At B, traverse its left subtree: D has no children, so visit D.
-   - Traverse B's right subtree: E has no children, so visit E.
-   - Both subtrees of B are done, so visit B.
-   - Return to A and traverse its right subtree rooted at C.
-   - At C, visit F, then G, then C.
-   - Both subtrees of A are done, so finally visit A.
-   - Postorder: D, E, B, F, G, C, A
+    Step by step:
+    - Start at A. Before visiting A, traverse its left subtree rooted at B.
+    - At B, traverse its left subtree: D has no children, so visit D.
+    - Traverse B's right subtree: E has no children, so visit E.
+    - Both subtrees of B are done, so visit B.
+    - Return to A and traverse its right subtree rooted at C.
+    - At C, visit F, then G, then C.
+    - Both subtrees of A are done, so finally visit A.
+    - Postorder: D, E, B, F, G, C, A
 
-   Expression tree example, which shows why postorder matters:
+    Expression tree example, which shows why postorder matters:
 
-   ```
-                +
-              /   \
-             *     5
-            / \
-           3   4
-   ```
+    ```
+                 +
+               /   \
+              *     5
+             / \
+            3   4
+    ```
 
-   - Postorder: 3, 4, *, 5, + which is the postfix, or Reverse Polish, form of the expression (3 × 4) + 5.
-   - Evaluating it with a stack gives 12, then 12 + 5 = 17, which is the correct value. This is precisely why compilers convert expressions to postfix before generating code: the operands are always available before the operator is reached.
+    - Postorder: 3, 4, *, 5, + which is the postfix, or Reverse Polish, form of the expression (3 × 4) + 5.
+    - Evaluating it with a stack gives 12, then 12 + 5 = 17, which is the correct value. This is precisely why compilers convert expressions to postfix before generating code: the operands are always available before the operator is reached.
 
-   Uses of postorder:
-   - Deleting or freeing a tree, since the children must be released before the parent.
-   - Evaluating an expression tree.
-   - Producing postfix notation.
-   - Computing properties that depend on the subtrees, such as the height of each node or the size of each subtree.
+    Uses of postorder:
+    - Deleting or freeing a tree, since the children must be released before the parent.
+    - Evaluating an expression tree.
+    - Producing postfix notation.
+    - Computing properties that depend on the subtrees, such as the height of each node or the size of each subtree.
 
-   - Complexity: O(n) time and O(h) space, which is O(log n) for a balanced tree and O(n) for a skewed one.
+    - Complexity: O(n) time and O(h) space, which is O(log n) for a balanced tree and O(n) for a skewed one.
 14. **(b) Draw a binary tree of 15 elements in (a) Preorder (b) In-order (c) Post order traversals.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
 
 
-   Answer: A binary tree of 15 elements is drawn as a perfect binary tree of height 3, since 2⁴ − 1 = 15, which fills every level completely.
+    Answer: A binary tree of 15 elements is drawn as a perfect binary tree of height 3, since 2⁴ − 1 = 15, which fills every level completely.
 
-   ```
-                          1
-                    /           \
-                   2             3
-                 /   \         /   \
-                4     5       6     7
-               / \   / \     / \   / \
-              8   9 10  11  12  13 14  15
-   ```
+    ```
+                           1
+                     /           \
+                    2             3
+                  /   \         /   \
+                 4     5       6     7
+                / \   / \     / \   / \
+               8   9 10  11  12  13 14  15
+    ```
 
-   (a) Preorder, that is Root, Left, Right:
-   - Visit 1, then the whole left subtree rooted at 2, then the whole right subtree rooted at 3.
-   - 1, 2, 4, 8, 9, 5, 10, 11, 3, 6, 12, 13, 7, 14, 15
+    (a) Preorder, that is Root, Left, Right:
+    - Visit 1, then the whole left subtree rooted at 2, then the whole right subtree rooted at 3.
+    - 1, 2, 4, 8, 9, 5, 10, 11, 3, 6, 12, 13, 7, 14, 15
 
-   (b) Inorder, that is Left, Root, Right:
-   - 8, 4, 9, 2, 10, 5, 11, 1, 12, 6, 13, 3, 14, 7, 15
+    (b) Inorder, that is Left, Root, Right:
+    - 8, 4, 9, 2, 10, 5, 11, 1, 12, 6, 13, 3, 14, 7, 15
 
-   (c) Postorder, that is Left, Right, Root:
-   - 8, 9, 4, 10, 11, 5, 2, 12, 13, 6, 14, 15, 7, 3, 1
+    (c) Postorder, that is Left, Right, Root:
+    - 8, 9, 4, 10, 11, 5, 2, 12, 13, 6, 14, 15, 7, 3, 1
 
-   For completeness, level order:
-   - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, which is simply the array representation read from left to right.
+    For completeness, level order:
+    - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, which is simply the array representation read from left to right.
 
-   Verification of the structure:
-   - Level 0 has 1 node, level 1 has 2, level 2 has 4 and level 3 has 8, giving 1 + 2 + 4 + 8 = 15.
-   - Internal nodes are 1 to 7, that is 7 of them; leaves are 8 to 15, that is 8 of them; and 8 = 7 + 1, which confirms the property of a full binary tree.
-   - Each traversal visits every node exactly once, so all three sequences contain exactly 15 elements.
+    Verification of the structure:
+    - Level 0 has 1 node, level 1 has 2, level 2 has 4 and level 3 has 8, giving 1 + 2 + 4 + 8 = 15.
+    - Internal nodes are 1 to 7, that is 7 of them; leaves are 8 to 15, that is 8 of them; and 8 = 7 + 1, which confirms the property of a full binary tree.
+    - Each traversal visits every node exactly once, so all three sequences contain exactly 15 elements.
 15. **What is the minimum number of nodes in a binary tree?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)]*
 
 
-   Answer: The minimum number of nodes in a binary tree depends on how the question is framed, and both conventions should be stated.
+    Answer: The minimum number of nodes in a binary tree depends on how the question is framed, and both conventions should be stated.
 
-   - As a general structure, a binary tree may be empty, in which case the minimum number of nodes is 0. An empty tree is a valid binary tree by the recursive definition.
-   - If the tree must be non-empty, the minimum is 1, that is the root alone.
+    - As a general structure, a binary tree may be empty, in which case the minimum number of nodes is 0. An empty tree is a valid binary tree by the recursive definition.
+    - If the tree must be non-empty, the minimum is 1, that is the root alone.
 
-   Minimum nodes for a given height:
-   - Taking the root as height 0, a binary tree of height h has a minimum of h + 1 nodes, which occurs when the tree is skewed, that is when each level contains only a single node forming a chain.
-   - Taking the root as height 1, that is counting levels, the minimum is h nodes.
-   - Example: a binary tree of height 3 with the root at height 0 has a minimum of 4 nodes and a maximum of 2⁴ − 1 = 15 nodes.
+    Minimum nodes for a given height:
+    - Taking the root as height 0, a binary tree of height h has a minimum of h + 1 nodes, which occurs when the tree is skewed, that is when each level contains only a single node forming a chain.
+    - Taking the root as height 1, that is counting levels, the minimum is h nodes.
+    - Example: a binary tree of height 3 with the root at height 0 has a minimum of 4 nodes and a maximum of 2⁴ − 1 = 15 nodes.
 
-   The corresponding maxima, for contrast:
-   - Maximum nodes at level i: 2ⁱ.
-   - Maximum nodes in a tree of height h: 2^(h+1) − 1.
+    The corresponding maxima, for contrast:
+    - Maximum nodes at level i: 2ⁱ.
+    - Maximum nodes in a tree of height h: 2^(h+1) − 1.
 
-   Related result, which is what such questions usually lead to:
-   - The minimum height of a binary tree with n nodes is ⌈log2(n + 1)⌉ − 1 with the root at height 0, which occurs when the tree is complete.
-   - The maximum height is n − 1, which occurs when the tree is skewed. This is why a skewed binary search tree degrades to O(n) search time and why self balancing trees such as AVL and Red-Black trees exist.
+    Related result, which is what such questions usually lead to:
+    - The minimum height of a binary tree with n nodes is ⌈log2(n + 1)⌉ − 1 with the root at height 0, which occurs when the tree is complete.
+    - The maximum height is n − 1, which occurs when the tree is skewed. This is why a skewed binary search tree degrades to O(n) search time and why self balancing trees such as AVL and Red-Black trees exist.
 16. **(ক) B-tree data structure কী? এর প্রয়োগ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   What a B-tree is:
-   - A B-tree is a self balancing, multiway search tree in which a single node may hold many keys and have many children, and in which all the leaves lie at the same level. It was designed by Bayer and McCreight in 1972 specifically for data held on disk.
-   - Properties of a B-tree of minimum degree t, that is of order m = 2t:
-   - Every node holds between t − 1 and 2t − 1 keys, except the root, which may hold as few as 1.
-   - A node holding k keys has exactly k + 1 children.
-   - The keys within a node are kept in sorted order, and the subtree between two adjacent keys contains exactly the values lying between them.
-   - All leaves are at the same depth, so the tree is perfectly height balanced at all times.
-   - The height is O(log_t n), which for a large branching factor is very small: a few million keys typically fit within three or four levels.
+    What a B-tree is:
+    - A B-tree is a self balancing, multiway search tree in which a single node may hold many keys and have many children, and in which all the leaves lie at the same level. It was designed by Bayer and McCreight in 1972 specifically for data held on disk.
+    - Properties of a B-tree of minimum degree t, that is of order m = 2t:
+    - Every node holds between t − 1 and 2t − 1 keys, except the root, which may hold as few as 1.
+    - A node holding k keys has exactly k + 1 children.
+    - The keys within a node are kept in sorted order, and the subtree between two adjacent keys contains exactly the values lying between them.
+    - All leaves are at the same depth, so the tree is perfectly height balanced at all times.
+    - The height is O(log_t n), which for a large branching factor is very small: a few million keys typically fit within three or four levels.
 
-   Why it is designed this way:
-   - The decisive consideration is that a disk read is roughly a hundred thousand times slower than a memory access, so the cost of a search is dominated by the number of disk blocks read, not by the number of comparisons.
-   - Each B-tree node is sized to fill exactly one disk block or page, typically 4 or 8 KB, so one disk read brings in hundreds of keys at once. The high branching factor makes the tree very shallow, so a search touches only three or four blocks.
-   - A binary search tree with the same million keys would be about 20 levels deep and would require 20 disk reads, which is five times slower.
+    Why it is designed this way:
+    - The decisive consideration is that a disk read is roughly a hundred thousand times slower than a memory access, so the cost of a search is dominated by the number of disk blocks read, not by the number of comparisons.
+    - Each B-tree node is sized to fill exactly one disk block or page, typically 4 or 8 KB, so one disk read brings in hundreds of keys at once. The high branching factor makes the tree very shallow, so a search touches only three or four blocks.
+    - A binary search tree with the same million keys would be about 20 levels deep and would require 20 disk reads, which is five times slower.
 
-   Operations:
-   - Search: descend from the root, at each node performing a search among its keys to choose the correct child. O(log n).
-   - Insertion: descend to the correct leaf and insert. If the node overflows, that is exceeds 2t − 1 keys, split it at the median, push the median key up into the parent, and repeat upward if necessary. The tree therefore grows in height only at the root, which is why all leaves remain at the same level.
-   - Deletion: remove the key, and if a node underflows, borrow a key from a sibling or merge with a sibling, propagating upward if required.
-   - All three operations are O(log n) in both the worst and the average case, and no rebalancing rotations are needed.
+    Operations:
+    - Search: descend from the root, at each node performing a search among its keys to choose the correct child. O(log n).
+    - Insertion: descend to the correct leaf and insert. If the node overflows, that is exceeds 2t − 1 keys, split it at the median, push the median key up into the parent, and repeat upward if necessary. The tree therefore grows in height only at the root, which is why all leaves remain at the same level.
+    - Deletion: remove the key, and if a node underflows, borrow a key from a sibling or merge with a sibling, propagating upward if required.
+    - All three operations are O(log n) in both the worst and the average case, and no rebalancing rotations are needed.
 
-   Applications:
-   - Database indexing: this is its principal use. Almost every relational database builds its indexes as B-trees or B+ trees, including MySQL InnoDB, PostgreSQL, Oracle and SQL Server. When a query uses an indexed column, it is a B-tree that is being searched.
-   - File systems: NTFS, HFS+, ext4 with HTree, Btrfs, XFS and ReiserFS all use B-trees for directory and metadata indexing.
-   - Key-value stores and embedded databases such as Berkeley DB and SQLite.
-   - Any application where the data is too large for memory and must be searched on disk.
+    Applications:
+    - Database indexing: this is its principal use. Almost every relational database builds its indexes as B-trees or B+ trees, including MySQL InnoDB, PostgreSQL, Oracle and SQL Server. When a query uses an indexed column, it is a B-tree that is being searched.
+    - File systems: NTFS, HFS+, ext4 with HTree, Btrfs, XFS and ReiserFS all use B-trees for directory and metadata indexing.
+    - Key-value stores and embedded databases such as Berkeley DB and SQLite.
+    - Any application where the data is too large for memory and must be searched on disk.
 
-   B+ tree, the variant actually used in databases:
-   - All the data records are stored only in the leaves, while the internal nodes hold keys purely for navigation. This allows more keys per internal node, so the tree is even shallower.
-   - The leaves are linked together in a chain, which makes a range query or a full ordered scan extremely efficient: find the first key and then follow the leaf links.
-   - This combination of shallow depth for point lookups and linked leaves for range scans is why B+ trees, rather than plain B-trees, are the standard index structure in every major database.
+    B+ tree, the variant actually used in databases:
+    - All the data records are stored only in the leaves, while the internal nodes hold keys purely for navigation. This allows more keys per internal node, so the tree is even shallower.
+    - The leaves are linked together in a chain, which makes a range query or a full ordered scan extremely efficient: find the first key and then follow the leaf links.
+    - This combination of shallow depth for point lookups and linked leaves for range scans is why B+ trees, rather than plain B-trees, are the standard index structure in every major database.
 17. **(গ) নিচের ছবির Tree এর Inorder, Preorder এবং Postorder Traversal লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
 
-   Answer: The figure is not reproduced here, so the method is given together with a worked example on a standard tree.
+    Answer: The figure is not reproduced here, so the method is given together with a worked example on a standard tree.
 
-   The three traversals:
+    The three traversals:
 
-   Three traversal methods:
-   - Preorder, that is Root, Left, Right: visit the node first, then traverse the left subtree, then the right. Used to copy a tree and to produce prefix expressions.
-   - Inorder, that is Left, Root, Right: traverse the left subtree, then visit the node, then the right subtree. On a binary search tree it produces the keys in sorted order, which is its most important property.
-   - Postorder, that is Left, Right, Root: traverse both subtrees and visit the node last. Used to delete a tree and to produce postfix expressions.
-   - A fourth method is level order, or breadth first traversal, which visits the nodes level by level using a queue.
+    Three traversal methods:
+    - Preorder, that is Root, Left, Right: visit the node first, then traverse the left subtree, then the right. Used to copy a tree and to produce prefix expressions.
+    - Inorder, that is Left, Root, Right: traverse the left subtree, then visit the node, then the right subtree. On a binary search tree it produces the keys in sorted order, which is its most important property.
+    - Postorder, that is Left, Right, Root: traverse both subtrees and visit the node last. Used to delete a tree and to produce postfix expressions.
+    - A fourth method is level order, or breadth first traversal, which visits the nodes level by level using a queue.
 
-   Applied to this tree:
+    Applied to this tree:
 
-   ```
-                A
-              /   \
-             B     C
-            / \   / \
-           D   E F   G
-              /
-             H
-   ```
+    ```
+                 A
+               /   \
+              B     C
+             / \   / \
+            D   E F   G
+               /
+              H
+    ```
 
-   - Inorder, Left Root Right: D, B, H, E, A, F, C, G
-   - Preorder, Root Left Right: A, B, D, E, H, C, F, G
-   - Postorder, Left Right Root: D, H, E, B, F, G, C, A
+    - Inorder, Left Root Right: D, B, H, E, A, F, C, G
+    - Preorder, Root Left Right: A, B, D, E, H, C, F, G
+    - Postorder, Left Right Root: D, H, E, B, F, G, C, A
 
-   Method to apply to any given figure:
-   - Preorder: write the root, then recursively write the whole left subtree, then the whole right subtree.
-   - Inorder: recursively write the whole left subtree, then the root, then the whole right subtree.
-   - Postorder: recursively write both subtrees and write the root last.
-   - A quick manual technique: draw a loop around the whole tree starting at the left of the root and travelling anticlockwise, keeping close to the tree. For preorder, output each node as the loop passes its left side; for inorder, as the loop passes beneath it; and for postorder, as the loop passes its right side.
+    Method to apply to any given figure:
+    - Preorder: write the root, then recursively write the whole left subtree, then the whole right subtree.
+    - Inorder: recursively write the whole left subtree, then the root, then the whole right subtree.
+    - Postorder: recursively write both subtrees and write the root last.
+    - A quick manual technique: draw a loop around the whole tree starting at the left of the root and travelling anticlockwise, keeping close to the tree. For preorder, output each node as the loop passes its left side; for inorder, as the loop passes beneath it; and for postorder, as the loop passes its right side.
 
-   - Every traversal contains exactly the same set of nodes and runs in O(n) time.
-   - Checks worth performing: in preorder the first element is always the root; in postorder the last element is always the root; and in inorder the root separates the left subtree from the right. <!-- verify -->
+    - Every traversal contains exactly the same set of nodes and runs in O(n) time.
+    - Checks worth performing: in preorder the first element is always the root; in postorder the last element is always the root; and in inorder the root separates the left subtree from the right. <!-- verify -->
 18. **Write C++ function that will invert mirror a binary tree.** *[BICIC Assistant Programmer 2022 compact it 630 (ET: BUET)]*
 
 
-   Answer: Inverting or mirroring a binary tree means swapping the left and right child of every node, so that the resulting tree is the mirror image of the original.
+    Answer: Inverting or mirroring a binary tree means swapping the left and right child of every node, so that the resulting tree is the mirror image of the original.
 
-   ```c
-   struct Node {
-       int data;
-       Node* left;
-       Node* right;
-       Node(int value) : data(value), left(nullptr), right(nullptr) {}
-   };
+    ```c
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
 
-   // Recursive version
-   Node* invertTree(Node* root) {
-       if (root == nullptr)
-           return nullptr;
+    // Recursive version
+    Node* invertTree(Node* root) {
+        if (root == nullptr)
+            return nullptr;
 
-       // swap the two children
-       Node* temp = root->left;
-       root->left = root->right;
-       root->right = temp;
+        // swap the two children
+        Node* temp = root->left;
+        root->left = root->right;
+        root->right = temp;
 
-       // recurse on both subtrees
-       invertTree(root->left);
-       invertTree(root->right);
+        // recurse on both subtrees
+        invertTree(root->left);
+        invertTree(root->right);
 
-       return root;
-   }
-   ```
+        return root;
+    }
+    ```
 
-   Iterative version using a queue, which avoids deep recursion:
+    Iterative version using a queue, which avoids deep recursion:
 
-   ```c
-   #include <queue>
+    ```c
+    #include <queue>
 
-   Node* invertTreeIterative(Node* root) {
-       if (root == nullptr)
-           return nullptr;
+    Node* invertTreeIterative(Node* root) {
+        if (root == nullptr)
+            return nullptr;
 
-       std::queue<Node*> q;
-       q.push(root);
+        std::queue<Node*> q;
+        q.push(root);
 
-       while (!q.empty()) {
-           Node* current = q.front();
-           q.pop();
+        while (!q.empty()) {
+            Node* current = q.front();
+            q.pop();
 
-           Node* temp = current->left;
-           current->left = current->right;
-           current->right = temp;
+            Node* temp = current->left;
+            current->left = current->right;
+            current->right = temp;
 
-           if (current->left)  q.push(current->left);
-           if (current->right) q.push(current->right);
-       }
-       return root;
-   }
-   ```
+            if (current->left)  q.push(current->left);
+            if (current->right) q.push(current->right);
+        }
+        return root;
+    }
+    ```
 
-   Example:
+    Example:
 
-   ```
-   Before:              After:
-          1                    1
-        /   \                /   \
-       2     3              3     2
-      / \   /                \   / \
-     4   5 6                  6 5   4
-   ```
+    ```
+    Before:              After:
+           1                    1
+         /   \                /   \
+        2     3              3     2
+       / \   /                \   / \
+      4   5 6                  6 5   4
+    ```
 
-   - The inorder traversal before is 4, 2, 5, 1, 6, 3, and after inversion it is 3, 6, 1, 5, 2, 4, which is exactly the reverse. This is a useful check.
+    - The inorder traversal before is 4, 2, 5, 1, 6, 3, and after inversion it is 3, 6, 1, 5, 2, 4, which is exactly the reverse. This is a useful check.
 
-   Complexity:
-   - Time: O(n), since every node is visited exactly once.
-   - Space: O(h) for the recursive version, where h is the height, which is O(log n) for a balanced tree and O(n) for a skewed one; O(w) for the iterative version, where w is the maximum width of the tree.
+    Complexity:
+    - Time: O(n), since every node is visited exactly once.
+    - Space: O(h) for the recursive version, where h is the height, which is O(log n) for a balanced tree and O(n) for a skewed one; O(w) for the iterative version, where w is the maximum width of the tree.
 
-   - Note: the swap may equally be performed after the recursive calls rather than before; both orders produce the same result, because every node is swapped exactly once.
+    - Note: the swap may equally be performed after the recursive calls rather than before; both orders produce the same result, because every node is swapped exactly once.
 19. **X = (a^2 - 5b).(7a + b^5) এক্সপ্রেশনটিকে tree stracture-এ অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
 
-   Answer: An expression tree places every operator at an internal node and every operand at a leaf, with the subtrees as its operands. The tree is built according to operator precedence, so that the operator applied last stands at the root.
+    Answer: An expression tree places every operator at an internal node and every operand at a leaf, with the subtrees as its operands. The tree is built according to operator precedence, so that the operator applied last stands at the root.
 
-   Expression: X = (a² − 5b) · (7a + b⁵)
+    Expression: X = (a² − 5b) · (7a + b⁵)
 
-   The outermost operator is the multiplication between the two bracketed groups, so it becomes the root.
+    The outermost operator is the multiplication between the two bracketed groups, so it becomes the root.
 
-   ```
-                        ×
-                   /         \
-                  −            +
-                /   \        /   \
-               ^     ×      ×     ^
-              / \   / \    / \   / \
-             a   2 5   b  7   a b   5
-   ```
+    ```
+                         ×
+                    /         \
+                   −            +
+                 /   \        /   \
+                ^     ×      ×     ^
+               / \   / \    / \   / \
+              a   2 5   b  7   a b   5
+    ```
 
-   ```mermaid
-   graph TD
-       R["×"] --> L["−"]
-       R --> RR["+"]
-       L --> L1["^"]
-       L --> L2["×"]
-       L1 --> A["a"]
-       L1 --> B["2"]
-       L2 --> C["5"]
-       L2 --> D["b"]
-       RR --> R1["×"]
-       RR --> R2["^"]
-       R1 --> E["7"]
-       R1 --> F["a"]
-       R2 --> G["b"]
-       R2 --> H["5"]
-   ```
+    ```mermaid
+    graph TD
+        R["×"] --> L["−"]
+        R --> RR["+"]
+        L --> L1["^"]
+        L --> L2["×"]
+        L1 --> A["a"]
+        L1 --> B["2"]
+        L2 --> C["5"]
+        L2 --> D["b"]
+        RR --> R1["×"]
+        RR --> R2["^"]
+        R1 --> E["7"]
+        R1 --> F["a"]
+        R2 --> G["b"]
+        R2 --> H["5"]
+    ```
 
-   Construction reasoning:
-   - The whole expression is a product of two bracketed factors, so × is the root.
-   - The left factor a² − 5b has subtraction as its main operator, since exponentiation and multiplication bind more tightly. So − is the left child, with a² on its left and 5b on its right.
-   - a² is the exponentiation of a by 2, and 5b is the multiplication of 5 by b.
-   - The right factor 7a + b⁵ has addition as its main operator, with 7a as a multiplication on the left and b⁵ as an exponentiation on the right.
+    Construction reasoning:
+    - The whole expression is a product of two bracketed factors, so × is the root.
+    - The left factor a² − 5b has subtraction as its main operator, since exponentiation and multiplication bind more tightly. So − is the left child, with a² on its left and 5b on its right.
+    - a² is the exponentiation of a by 2, and 5b is the multiplication of 5 by b.
+    - The right factor 7a + b⁵ has addition as its main operator, with 7a as a multiplication on the left and b⁵ as an exponentiation on the right.
 
-   Traversals of this tree:
-   - Inorder gives the infix form: a ^ 2 − 5 × b × 7 × a + b ^ 5, which needs the brackets restored to be read correctly.
-   - Preorder gives the prefix form: × − ^ a 2 × 5 b + × 7 a ^ b 5
-   - Postorder gives the postfix form: a 2 ^ 5 b × − 7 a × b 5 ^ + ×
+    Traversals of this tree:
+    - Inorder gives the infix form: a ^ 2 − 5 × b × 7 × a + b ^ 5, which needs the brackets restored to be read correctly.
+    - Preorder gives the prefix form: × − ^ a 2 × 5 b + × 7 a ^ b 5
+    - Postorder gives the postfix form: a 2 ^ 5 b × − 7 a × b 5 ^ + ×
 
-   - The postfix form is what a compiler generates, because it can be evaluated directly with a stack: every operand is pushed, and every operator pops its operands and pushes the result. The value of the whole expression appears as the single remaining item on the stack.
+    - The postfix form is what a compiler generates, because it can be evaluated directly with a stack: every operand is pushed, and every operator pops its operands and pushes the result. The value of the whole expression appears as the single remaining item on the stack.
 20. **Write a Pseudocode of postorder by recursion and generate postorder, preorder inorder from the tree.** *[BIWTA; Assistant Programmer 25.11.2022 compact it 762 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   Pseudocode for postorder traversal by recursion:
+    Pseudocode for postorder traversal by recursion:
 
-   ```
-   POSTORDER(node):
-       if node == NULL:
-           return
-       POSTORDER(node.left)       // step 1: traverse the left subtree
-       POSTORDER(node.right)      // step 2: traverse the right subtree
-       PRINT(node.data)           // step 3: visit the root last
-   ```
+    ```
+    POSTORDER(node):
+        if node == NULL:
+            return
+        POSTORDER(node.left)       // step 1: traverse the left subtree
+        POSTORDER(node.right)      // step 2: traverse the right subtree
+        PRINT(node.data)           // step 3: visit the root last
+    ```
 
-   The other two traversals, for comparison:
+    The other two traversals, for comparison:
 
-   ```
-   PREORDER(node):                       INORDER(node):
-       if node == NULL: return               if node == NULL: return
-       PRINT(node.data)                      INORDER(node.left)
-       PREORDER(node.left)                   PRINT(node.data)
-       PREORDER(node.right)                  INORDER(node.right)
-   ```
+    ```
+    PREORDER(node):                       INORDER(node):
+        if node == NULL: return               if node == NULL: return
+        PRINT(node.data)                      INORDER(node.left)
+        PREORDER(node.left)                   PRINT(node.data)
+        PREORDER(node.right)                  INORDER(node.right)
+    ```
 
-   Generating all three traversals from a tree:
+    Generating all three traversals from a tree:
 
-   ```
-                A
-              /   \
-             B     C
-            / \   / \
-           D   E F   G
-   ```
+    ```
+                 A
+               /   \
+              B     C
+             / \   / \
+            D   E F   G
+    ```
 
-   - Preorder, Root Left Right: A, B, D, E, C, F, G
-   - Inorder, Left Root Right: D, B, E, A, F, C, G
-   - Postorder, Left Right Root: D, E, B, F, G, C, A
+    - Preorder, Root Left Right: A, B, D, E, C, F, G
+    - Inorder, Left Root Right: D, B, E, A, F, C, G
+    - Postorder, Left Right Root: D, E, B, F, G, C, A
 
-   Trace of the postorder recursion, to show how the order arises:
-   - POSTORDER(A) calls POSTORDER(B) first.
-   - POSTORDER(B) calls POSTORDER(D). D has no children, so D is printed.
-   - POSTORDER(B) then calls POSTORDER(E), which prints E.
-   - Both subtrees of B are complete, so B is printed.
-   - POSTORDER(A) then calls POSTORDER(C), which prints F, then G, then C.
-   - Both subtrees of A are complete, so A is printed last.
-   - Output: D, E, B, F, G, C, A
+    Trace of the postorder recursion, to show how the order arises:
+    - POSTORDER(A) calls POSTORDER(B) first.
+    - POSTORDER(B) calls POSTORDER(D). D has no children, so D is printed.
+    - POSTORDER(B) then calls POSTORDER(E), which prints E.
+    - Both subtrees of B are complete, so B is printed.
+    - POSTORDER(A) then calls POSTORDER(C), which prints F, then G, then C.
+    - Both subtrees of A are complete, so A is printed last.
+    - Output: D, E, B, F, G, C, A
 
-   Complexity:
-   - Time O(n) for each traversal, since every node is visited once.
-   - Space O(h) for the recursion stack, which is O(log n) for a balanced tree and O(n) for a skewed one.
+    Complexity:
+    - Time O(n) for each traversal, since every node is visited once.
+    - Space O(h) for the recursion stack, which is O(log n) for a balanced tree and O(n) for a skewed one.
 
-   - Iterative postorder is the hardest of the three to write, because a node must be visited only after both its subtrees. It is normally done with two stacks, or with one stack and a pointer to the last visited node.
+    - Iterative postorder is the hardest of the three to write, because a node must be visited only after both its subtrees. It is normally done with two stacks, or with one stack and a pointer to the last visited node.
 21. **(b) Draw a binary tree of 5 elements. Now list out the elements in (i) Pre-order (ii) Post order and (iii) Inorder traversal of the tree.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 792 (ET: N/A)]*
 
 
-   Answer: A binary tree of 5 elements:
+    Answer: A binary tree of 5 elements:
 
-   ```
-                A
-              /   \
-             B     C
-            / \
-           D   E
-   ```
+    ```
+                 A
+               /   \
+              B     C
+             / \
+            D   E
+    ```
 
-   (i) Preorder, that is Root, Left, Right:
-   - Visit A, then the left subtree rooted at B, then the right subtree C.
-   - At B: visit B, then D, then E.
-   - Result: A, B, D, E, C
+    (i) Preorder, that is Root, Left, Right:
+    - Visit A, then the left subtree rooted at B, then the right subtree C.
+    - At B: visit B, then D, then E.
+    - Result: A, B, D, E, C
 
-   (ii) Postorder, that is Left, Right, Root:
-   - Traverse the left subtree of A: at B, traverse D, then E, then visit B → D, E, B
-   - Traverse the right subtree: C
-   - Then visit A.
-   - Result: D, E, B, C, A
+    (ii) Postorder, that is Left, Right, Root:
+    - Traverse the left subtree of A: at B, traverse D, then E, then visit B → D, E, B
+    - Traverse the right subtree: C
+    - Then visit A.
+    - Result: D, E, B, C, A
 
-   (iii) Inorder, that is Left, Root, Right:
-   - Traverse the left subtree of A: at B, traverse D, visit B, traverse E → D, B, E
-   - Visit A.
-   - Traverse the right subtree: C
-   - Result: D, B, E, A, C
+    (iii) Inorder, that is Left, Root, Right:
+    - Traverse the left subtree of A: at B, traverse D, visit B, traverse E → D, B, E
+    - Visit A.
+    - Traverse the right subtree: C
+    - Result: D, B, E, A, C
 
-   Summary:
+    Summary:
 
-   | Traversal | Order of visiting | Result |
-   |---|---|---|
-   | Preorder | Root, Left, Right | A, B, D, E, C |
-   | Inorder | Left, Root, Right | D, B, E, A, C |
-   | Postorder | Left, Right, Root | D, E, B, C, A |
-   | Level order | Level by level | A, B, C, D, E |
+    | Traversal | Order of visiting | Result |
+    |---|---|---|
+    | Preorder | Root, Left, Right | A, B, D, E, C |
+    | Inorder | Left, Root, Right | D, B, E, A, C |
+    | Postorder | Left, Right, Root | D, E, B, C, A |
+    | Level order | Level by level | A, B, C, D, E |
 
-   - Check: each sequence contains all 5 nodes exactly once. In preorder the first element is the root, in postorder the last element is the root, and in inorder the root separates the left subtree from the right.
+    - Check: each sequence contains all 5 nodes exactly once. In preorder the first element is the root, in postorder the last element is the root, and in inorder the root separates the left subtree from the right.
 22. **Mathematically derive the maximum and minimum height of a binary tree consisting of n nodes. Note that the height of a tree with a single node is considered as 1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 849-850 (ET: N/A)]*
 
 
-   Answer: The convention stated in the question is that a tree with a single node has height 1, that is the height is measured in nodes or levels rather than in edges.
+    Answer: The convention stated in the question is that a tree with a single node has height 1, that is the height is measured in nodes or levels rather than in edges.
 
-   Maximum height of a binary tree with n nodes:
-   - The height is greatest when the tree is as thin as possible, that is when every level contains exactly one node. Such a tree is called a skewed binary tree and it degenerates into a linked list.
-   - With one node per level, n nodes occupy n levels.
-   - Therefore h_max = n
-   - Example: n = 5 nodes arranged in a chain gives a height of 5.
+    Maximum height of a binary tree with n nodes:
+    - The height is greatest when the tree is as thin as possible, that is when every level contains exactly one node. Such a tree is called a skewed binary tree and it degenerates into a linked list.
+    - With one node per level, n nodes occupy n levels.
+    - Therefore h_max = n
+    - Example: n = 5 nodes arranged in a chain gives a height of 5.
 
-   ```
-       A            Every level holds one node,
-        \           so height = number of nodes = 5
-         B
-          \
-           C
-            \
-             D
-              \
-               E
-   ```
+    ```
+        A            Every level holds one node,
+         \           so height = number of nodes = 5
+          B
+           \
+            C
+             \
+              D
+               \
+                E
+    ```
 
-   Minimum height of a binary tree with n nodes:
-   - The height is least when every level is filled as completely as possible, that is when the tree is complete.
-   - A tree of height h under this convention has levels 1 to h, and level i holds at most 2^(i−1) nodes.
-   - The maximum number of nodes in a tree of height h is therefore the geometric sum
-   - n_max = 2⁰ + 2¹ + 2² + ... + 2^(h−1) = 2^h − 1
-   - For a given n, the height must be large enough to accommodate all n nodes, so
-   - n ≤ 2^h − 1
-   - n + 1 ≤ 2^h
-   - log2(n + 1) ≤ h
-   - Since the height must be an integer, h_min = ⌈log2(n + 1)⌉
+    Minimum height of a binary tree with n nodes:
+    - The height is least when every level is filled as completely as possible, that is when the tree is complete.
+    - A tree of height h under this convention has levels 1 to h, and level i holds at most 2^(i−1) nodes.
+    - The maximum number of nodes in a tree of height h is therefore the geometric sum
+    - n_max = 2⁰ + 2¹ + 2² + ... + 2^(h−1) = 2^h − 1
+    - For a given n, the height must be large enough to accommodate all n nodes, so
+    - n ≤ 2^h − 1
+    - n + 1 ≤ 2^h
+    - log2(n + 1) ≤ h
+    - Since the height must be an integer, h_min = ⌈log2(n + 1)⌉
 
-   Verification:
-   - n = 1: h_min = ⌈log2 2⌉ = 1 and h_max = 1. Correct, a single node.
-   - n = 3: h_min = ⌈log2 4⌉ = 2 and h_max = 3. Correct: three nodes fit into 2 levels as a root with two children, or into 3 levels as a chain.
-   - n = 7: h_min = ⌈log2 8⌉ = 3 and h_max = 7. Correct: a perfect tree of 3 levels holds exactly 7 nodes.
-   - n = 10: h_min = ⌈log2 11⌉ = ⌈3.46⌉ = 4 and h_max = 10.
+    Verification:
+    - n = 1: h_min = ⌈log2 2⌉ = 1 and h_max = 1. Correct, a single node.
+    - n = 3: h_min = ⌈log2 4⌉ = 2 and h_max = 3. Correct: three nodes fit into 2 levels as a root with two children, or into 3 levels as a chain.
+    - n = 7: h_min = ⌈log2 8⌉ = 3 and h_max = 7. Correct: a perfect tree of 3 levels holds exactly 7 nodes.
+    - n = 10: h_min = ⌈log2 11⌉ = ⌈3.46⌉ = 4 and h_max = 10.
 
-   Summary:
+    Summary:
 
-   | Quantity | Formula | Shape of the tree |
-   |---|---|---|
-   | Maximum height | n | Skewed, one node per level |
-   | Minimum height | ⌈log2(n + 1)⌉ | Complete, every level filled |
+    | Quantity | Formula | Shape of the tree |
+    |---|---|---|
+    | Maximum height | n | Skewed, one node per level |
+    | Minimum height | ⌈log2(n + 1)⌉ | Complete, every level filled |
 
-   - Note on the other convention: if the height of a single node tree is taken as 0, that is if height is measured in edges, then h_max = n − 1 and h_min = ⌈log2(n + 1)⌉ − 1. The convention must always be stated.
-   - Why it matters: the search time in a binary search tree is proportional to the height. A skewed tree gives O(n) and a balanced tree gives O(log n), which for a million nodes is the difference between a million comparisons and twenty. This is the entire reason for self balancing trees such as AVL and Red-Black trees.
+    - Note on the other convention: if the height of a single node tree is taken as 0, that is if height is measured in edges, then h_max = n − 1 and h_min = ⌈log2(n + 1)⌉ − 1. The convention must always be stated.
+    - Why it matters: the search time in a binary search tree is proportional to the height. A skewed tree gives O(n) and a balanced tree gives O(log n), which for a million nodes is the difference between a million comparisons and twenty. This is the entire reason for self balancing trees such as AVL and Red-Black trees.
 23. **(iii) Maximum and Minimum no of Nodes for a binary tree of height 7 where the root is considered as height 0.** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
 
 
-   Answer: The convention here is that the root is at height 0, so a tree of height 7 has 8 levels, numbered 0 to 7.
+    Answer: The convention here is that the root is at height 0, so a tree of height 7 has 8 levels, numbered 0 to 7.
 
-   Maximum number of nodes:
-   - Level i can hold at most 2ⁱ nodes.
-   - The maximum total is the sum over all levels: 2⁰ + 2¹ + 2² + ... + 2⁷
-   - This is a geometric series, so the total is 2⁸ − 1 = 256 − 1 = 255
-   - General formula: maximum nodes = 2^(h+1) − 1
-   - This occurs when the tree is perfect, that is when every level is completely filled.
+    Maximum number of nodes:
+    - Level i can hold at most 2ⁱ nodes.
+    - The maximum total is the sum over all levels: 2⁰ + 2¹ + 2² + ... + 2⁷
+    - This is a geometric series, so the total is 2⁸ − 1 = 256 − 1 = 255
+    - General formula: maximum nodes = 2^(h+1) − 1
+    - This occurs when the tree is perfect, that is when every level is completely filled.
 
-   Level by level:
+    Level by level:
 
-   | Level | Maximum nodes |
-   |---|---|
-   | 0 | 1 |
-   | 1 | 2 |
-   | 2 | 4 |
-   | 3 | 8 |
-   | 4 | 16 |
-   | 5 | 32 |
-   | 6 | 64 |
-   | 7 | 128 |
-   | Total | 255 |
+    | Level | Maximum nodes |
+    |---|---|
+    | 0 | 1 |
+    | 1 | 2 |
+    | 2 | 4 |
+    | 3 | 8 |
+    | 4 | 16 |
+    | 5 | 32 |
+    | 6 | 64 |
+    | 7 | 128 |
+    | Total | 255 |
 
-   Minimum number of nodes:
-   - To attain a height of 7, at least one node must exist at each of the 8 levels; any fewer and the tree would not reach that height.
-   - Minimum nodes = 8
-   - General formula: minimum nodes = h + 1
-   - This occurs when the tree is skewed, that is when each level contains exactly one node and the tree degenerates into a chain.
+    Minimum number of nodes:
+    - To attain a height of 7, at least one node must exist at each of the 8 levels; any fewer and the tree would not reach that height.
+    - Minimum nodes = 8
+    - General formula: minimum nodes = h + 1
+    - This occurs when the tree is skewed, that is when each level contains exactly one node and the tree degenerates into a chain.
 
-   Final answer: for a binary tree of height 7 with the root at height 0, the maximum number of nodes is 255 and the minimum is 8.
+    Final answer: for a binary tree of height 7 with the root at height 0, the maximum number of nodes is 255 and the minimum is 8.
 
-   - Note on the other convention: if the root were counted as level 1, a tree of height 7 would have 7 levels, giving a maximum of 2⁷ − 1 = 127 nodes and a minimum of 7. The convention must always be stated in the answer.
+    - Note on the other convention: if the root were counted as level 1, a tree of height 7 would have 7 levels, giving a maximum of 2⁷ − 1 = 127 nodes and a minimum of 7. The convention must always be stated in the answer.
 24. **Construct a full binary tree from the given inorder and preorder traversal as follows:** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
    Inorder: B A D C F E J H K G I
    Preorder: A B C D E F G H J K I
 
 
-   Answer: A binary tree is uniquely determined by its inorder together with its preorder traversal.
+    Answer: A binary tree is uniquely determined by its inorder together with its preorder traversal.
 
-   Given:
-   - Inorder: B A D C F E J H K G I
-   - Preorder: A B C D E F G H J K I
+    Given:
+    - Inorder: B A D C F E J H K G I
+    - Preorder: A B C D E F G H J K I
 
-   Method: the first element of the preorder is the root; find it in the inorder to split that sequence into the left and right subtrees; then recurse on each part.
+    Method: the first element of the preorder is the root; find it in the inorder to split that sequence into the left and right subtrees; then recurse on each part.
 
-   Step 1: preorder begins with A, so A is the root.
-   - Inorder: B | A | D C F E J H K G I
-   - Left subtree = {B}, right subtree = {D, C, F, E, J, H, K, G, I}
-   - Preorder after A: B belongs to the left subtree, and C D E F G H J K I to the right.
+    Step 1: preorder begins with A, so A is the root.
+    - Inorder: B | A | D C F E J H K G I
+    - Left subtree = {B}, right subtree = {D, C, F, E, J, H, K, G, I}
+    - Preorder after A: B belongs to the left subtree, and C D E F G H J K I to the right.
 
-   Step 2, left subtree: only B, so B is a leaf and is the left child of A.
+    Step 2, left subtree: only B, so B is a leaf and is the left child of A.
 
-   Step 3, right subtree with inorder D C F E J H K G I and preorder C D E F G H J K I:
-   - Root is C. Inorder: D | C | F E J H K G I
-   - Left = {D}, right = {F, E, J, H, K, G, I}
+    Step 3, right subtree with inorder D C F E J H K G I and preorder C D E F G H J K I:
+    - Root is C. Inorder: D | C | F E J H K G I
+    - Left = {D}, right = {F, E, J, H, K, G, I}
 
-   Step 4: D is a leaf and is the left child of C.
+    Step 4: D is a leaf and is the left child of C.
 
-   Step 5, with inorder F E J H K G I and preorder E F G H J K I:
-   - Root is E. Inorder: F | E | J H K G I
-   - Left = {F}, right = {J, H, K, G, I}
+    Step 5, with inorder F E J H K G I and preorder E F G H J K I:
+    - Root is E. Inorder: F | E | J H K G I
+    - Left = {F}, right = {J, H, K, G, I}
 
-   Step 6: F is a leaf and is the left child of E.
+    Step 6: F is a leaf and is the left child of E.
 
-   Step 7, with inorder J H K G I and preorder G H J K I:
-   - Root is G. Inorder: J H K | G | I
-   - Left = {J, H, K}, right = {I}
+    Step 7, with inorder J H K G I and preorder G H J K I:
+    - Root is G. Inorder: J H K | G | I
+    - Left = {J, H, K}, right = {I}
 
-   Step 8, with inorder J H K and preorder H J K:
-   - Root is H, left child J, right child K.
+    Step 8, with inorder J H K and preorder H J K:
+    - Root is H, left child J, right child K.
 
-   Step 9: I is a leaf and is the right child of G.
+    Step 9: I is a leaf and is the right child of G.
 
-   The complete tree:
+    The complete tree:
 
-   ```
-                A
-              /   \
-             B     C
-                  /  \
-                 D    E
-                     /  \
-                    F    G
-                        /  \
-                       H    I
+    ```
+                 A
+               /   \
+              B     C
+                   /  \
+                  D    E
                       /  \
-                     J    K
-   ```
+                     F    G
+                         /  \
+                        H    I
+                       /  \
+                      J    K
+    ```
 
-   ```mermaid
-   graph TD
-       A["A"] --> B["B"]
-       A --> C["C"]
-       C --> D["D"]
-       C --> E["E"]
-       E --> F["F"]
-       E --> G["G"]
-       G --> H["H"]
-       G --> I["I"]
-       H --> J["J"]
-       H --> K["K"]
-   ```
+    ```mermaid
+    graph TD
+        A["A"] --> B["B"]
+        A --> C["C"]
+        C --> D["D"]
+        C --> E["E"]
+        E --> F["F"]
+        E --> G["G"]
+        G --> H["H"]
+        G --> I["I"]
+        H --> J["J"]
+        H --> K["K"]
+    ```
 
-   Verification:
-   - Inorder, Left Root Right: B, A, D, C, F, E, J, H, K, G, I. Matches the given sequence.
-   - Preorder, Root Left Right: A, B, C, D, E, F, G, H, J, K, I. Matches the given sequence.
-   - Postorder, for completeness: B, D, F, J, K, H, I, G, E, C, A.
-   - Every node has 0 or 2 children, so the tree is indeed a full binary tree as the question states.
+    Verification:
+    - Inorder, Left Root Right: B, A, D, C, F, E, J, H, K, G, I. Matches the given sequence.
+    - Preorder, Root Left Right: A, B, C, D, E, F, G, H, J, K, I. Matches the given sequence.
+    - Postorder, for completeness: B, D, F, J, K, H, I, G, E, C, A.
+    - Every node has 0 or 2 children, so the tree is indeed a full binary tree as the question states.
 25. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925-926 (ET: CTI)]*
    In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
    Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
 
 
-   Answer:
+    Answer:
 
-   Given:
-   - Inorder: 20, 30, 35, 40, 45, 50, 55, 65, 70
-   - Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
+    Given:
+    - Inorder: 20, 30, 35, 40, 45, 50, 55, 65, 70
+    - Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
 
-   Step 1: preorder begins with 50, so 50 is the root.
-   - Inorder: 20 30 35 40 45 | 50 | 55 65 70
-   - Left subtree = {20, 30, 35, 40, 45}, right subtree = {55, 65, 70}
-   - Preorder splits as left = 40, 30, 20, 35, 45 and right = 65, 55, 70
+    Step 1: preorder begins with 50, so 50 is the root.
+    - Inorder: 20 30 35 40 45 | 50 | 55 65 70
+    - Left subtree = {20, 30, 35, 40, 45}, right subtree = {55, 65, 70}
+    - Preorder splits as left = 40, 30, 20, 35, 45 and right = 65, 55, 70
 
-   Step 2, left subtree with inorder 20 30 35 40 45 and preorder 40 30 20 35 45:
-   - Root is 40. Inorder: 20 30 35 | 40 | 45
-   - Left = {20, 30, 35}, right = {45}
+    Step 2, left subtree with inorder 20 30 35 40 45 and preorder 40 30 20 35 45:
+    - Root is 40. Inorder: 20 30 35 | 40 | 45
+    - Left = {20, 30, 35}, right = {45}
 
-   Step 3, with inorder 20 30 35 and preorder 30 20 35:
-   - Root is 30, left child 20, right child 35.
+    Step 3, with inorder 20 30 35 and preorder 30 20 35:
+    - Root is 30, left child 20, right child 35.
 
-   Step 4: 45 is a leaf and is the right child of 40.
+    Step 4: 45 is a leaf and is the right child of 40.
 
-   Step 5, right subtree with inorder 55 65 70 and preorder 65 55 70:
-   - Root is 65, left child 55, right child 70.
+    Step 5, right subtree with inorder 55 65 70 and preorder 65 55 70:
+    - Root is 65, left child 55, right child 70.
 
-   The binary tree:
+    The binary tree:
 
-   ```
-                    50
-                  /    \
-                40      65
-               /  \    /  \
-             30    45 55    70
-            /  \
-          20    35
-   ```
+    ```
+                     50
+                   /    \
+                 40      65
+                /  \    /  \
+              30    45 55    70
+             /  \
+           20    35
+    ```
 
-   - The inorder sequence is in ascending order, so this is also a binary search tree.
+    - The inorder sequence is in ascending order, so this is also a binary search tree.
 
-   Procedure to find the sum of all the nodes:
+    Procedure to find the sum of all the nodes:
 
-   ```c
-   struct Node {
-       int data;
-       Node* left;
-       Node* right;
-   };
+    ```c
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+    };
 
-   int sumNodes(Node* root) {
-       if (root == NULL)
-           return 0;
-       return root->data + sumNodes(root->left) + sumNodes(root->right);
-   }
-   ```
+    int sumNodes(Node* root) {
+        if (root == NULL)
+            return 0;
+        return root->data + sumNodes(root->left) + sumNodes(root->right);
+    }
+    ```
 
-   - The logic is postorder in character: the sum of a tree is the value of its root plus the sum of its left subtree plus the sum of its right subtree, with the empty tree contributing zero.
+    - The logic is postorder in character: the sum of a tree is the value of its root plus the sum of its left subtree plus the sum of its right subtree, with the empty tree contributing zero.
 
-   Iterative version, if recursion is to be avoided:
+    Iterative version, if recursion is to be avoided:
 
-   ```c
-   int sumNodesIterative(Node* root) {
-       if (root == NULL) return 0;
-       int total = 0;
-       std::queue<Node*> q;
-       q.push(root);
-       while (!q.empty()) {
-           Node* cur = q.front(); q.pop();
-           total += cur->data;
-           if (cur->left)  q.push(cur->left);
-           if (cur->right) q.push(cur->right);
-       }
-       return total;
-   }
-   ```
+    ```c
+    int sumNodesIterative(Node* root) {
+        if (root == NULL) return 0;
+        int total = 0;
+        std::queue<Node*> q;
+        q.push(root);
+        while (!q.empty()) {
+            Node* cur = q.front(); q.pop();
+            total += cur->data;
+            if (cur->left)  q.push(cur->left);
+            if (cur->right) q.push(cur->right);
+        }
+        return total;
+    }
+    ```
 
-   Verification with the given tree:
-   - 20 + 30 + 35 + 40 + 45 + 50 + 55 + 65 + 70 = 410
+    Verification with the given tree:
+    - 20 + 30 + 35 + 40 + 45 + 50 + 55 + 65 + 70 = 410
 
-   - Complexity: O(n) time, since every node is visited exactly once, and O(h) space for the recursion stack, which is O(log n) here because the tree is balanced.
+    - Complexity: O(n) time, since every node is visited exactly once, and O(h) space for the recursion stack, which is O(log n) here because the tree is balanced.
 26. **Making binary a tree from the given expression: 3 + ((5+9)*2)** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
 
-   Answer: An expression tree places every operator at an internal node and every operand at a leaf. The operator applied last becomes the root.
+    Answer: An expression tree places every operator at an internal node and every operand at a leaf. The operator applied last becomes the root.
 
-   Expression: 3 + ((5 + 9) × 2)
+    Expression: 3 + ((5 + 9) × 2)
 
-   Construction reasoning:
-   - The outermost operation is the addition of 3 to the whole bracketed group, so + is the root.
-   - Its left child is the operand 3.
-   - Its right child is the multiplication (5 + 9) × 2, so × is that node.
-   - The left child of × is the inner addition 5 + 9, and its right child is the operand 2.
+    Construction reasoning:
+    - The outermost operation is the addition of 3 to the whole bracketed group, so + is the root.
+    - Its left child is the operand 3.
+    - Its right child is the multiplication (5 + 9) × 2, so × is that node.
+    - The left child of × is the inner addition 5 + 9, and its right child is the operand 2.
 
-   ```
-                    +
-                  /   \
-                 3     ×
-                     /   \
-                    +     2
-                  /   \
-                 5     9
-   ```
+    ```
+                     +
+                   /   \
+                  3     ×
+                      /   \
+                     +     2
+                   /   \
+                  5     9
+    ```
 
-   ```mermaid
-   graph TD
-       A["+"] --> B["3"]
-       A --> C["×"]
-       C --> D["+"]
-       C --> E["2"]
-       D --> F["5"]
-       D --> G["9"]
-   ```
+    ```mermaid
+    graph TD
+        A["+"] --> B["3"]
+        A --> C["×"]
+        C --> D["+"]
+        C --> E["2"]
+        D --> F["5"]
+        D --> G["9"]
+    ```
 
-   Traversals of this tree:
-   - Inorder, which gives the infix form: 3 + 5 + 9 × 2, which requires the brackets to be restored to be read correctly.
-   - Preorder, which gives the prefix or Polish form: + 3 × + 5 9 2
-   - Postorder, which gives the postfix or Reverse Polish form: 3 5 9 + 2 × +
+    Traversals of this tree:
+    - Inorder, which gives the infix form: 3 + 5 + 9 × 2, which requires the brackets to be restored to be read correctly.
+    - Preorder, which gives the prefix or Polish form: + 3 × + 5 9 2
+    - Postorder, which gives the postfix or Reverse Polish form: 3 5 9 + 2 × +
 
-   Evaluating the tree, which is a postorder computation:
-   - The inner + node: 5 + 9 = 14
-   - The × node: 14 × 2 = 28
-   - The root + node: 3 + 28 = 31
-   - Value of the expression: 31
+    Evaluating the tree, which is a postorder computation:
+    - The inner + node: 5 + 9 = 14
+    - The × node: 14 × 2 = 28
+    - The root + node: 3 + 28 = 31
+    - Value of the expression: 31
 
-   - Checking against the original expression: 3 + ((5 + 9) × 2) = 3 + (14 × 2) = 3 + 28 = 31. Correct.
-   - The practical significance: a compiler builds exactly this tree during parsing, and then walks it in postorder to generate code, because in postorder both operands of an operator are always computed before the operator itself is reached.
+    - Checking against the original expression: 3 + ((5 + 9) × 2) = 3 + (14 × 2) = 3 + 28 = 31. Correct.
+    - The practical significance: a compiler builds exactly this tree during parsing, and then walks it in postorder to generate code, because in postorder both operands of an operator are always computed before the operator itself is reached.
 
 ## Stack (19)
 
@@ -1545,218 +1545,218 @@
 10. **Expalin: Infix, Prefix, Postfix notation.** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
 
 
-   Answer:
+    Answer:
 
-   - Infix notation: the operator is written between its two operands, as in A + B. This is the form people write and read naturally, but it requires precedence rules and brackets to be unambiguous, so a machine cannot evaluate it in a single left to right pass.
-   - Prefix notation, also called Polish notation: the operator is written before its operands, as in + A B. No brackets are ever needed, because the position of the operator determines its operands unambiguously. It is evaluated by scanning from right to left.
-   - Postfix notation, also called Reverse Polish notation: the operator is written after its operands, as in A B +. Again no brackets are needed, and it is evaluated by scanning from left to right with a single stack, which is why compilers convert to it.
+    - Infix notation: the operator is written between its two operands, as in A + B. This is the form people write and read naturally, but it requires precedence rules and brackets to be unambiguous, so a machine cannot evaluate it in a single left to right pass.
+    - Prefix notation, also called Polish notation: the operator is written before its operands, as in + A B. No brackets are ever needed, because the position of the operator determines its operands unambiguously. It is evaluated by scanning from right to left.
+    - Postfix notation, also called Reverse Polish notation: the operator is written after its operands, as in A B +. Again no brackets are needed, and it is evaluated by scanning from left to right with a single stack, which is why compilers convert to it.
 
-   | Infix | Prefix | Postfix |
-   |---|---|---|
-   | A + B | + A B | A B + |
-   | A + B × C | + A × B C | A B C × + |
-   | (A + B) × C | × + A B C | A B + C × |
-   | A + B × C − D | − + A × B C D | A B C × + D − |
-   | (A + B) × (C − D) | × + A B − C D | A B + C D − × |
+    | Infix | Prefix | Postfix |
+    |---|---|---|
+    | A + B | + A B | A B + |
+    | A + B × C | + A × B C | A B C × + |
+    | (A + B) × C | × + A B C | A B + C × |
+    | A + B × C − D | − + A × B C D | A B C × + D − |
+    | (A + B) × (C − D) | × + A B − C D | A B + C D − × |
 
-   Why postfix is used in practice:
-   - Evaluation needs only one stack and one left to right scan: push every operand; on meeting an operator, pop the required operands, apply it, and push the result. The final value is the single item left on the stack.
-   - No precedence rules and no brackets are needed at run time, because the order is already fixed by the notation.
-   - Postorder traversal of an expression tree produces postfix directly, and preorder produces prefix, which is why compilers build an expression tree and then walk it.
+    Why postfix is used in practice:
+    - Evaluation needs only one stack and one left to right scan: push every operand; on meeting an operator, pop the required operands, apply it, and push the result. The final value is the single item left on the stack.
+    - No precedence rules and no brackets are needed at run time, because the order is already fixed by the notation.
+    - Postorder traversal of an expression tree produces postfix directly, and preorder produces prefix, which is why compilers build an expression tree and then walk it.
 
-   Conversion from infix to postfix, the shunting yard method:
-   - Scan the infix expression from left to right.
-   - Output an operand immediately.
-   - On an opening bracket, push it.
-   - On a closing bracket, pop and output until the matching opening bracket is removed.
-   - On an operator, pop and output every operator on the stack of higher or equal precedence, except for a right associative operator such as exponentiation where only higher precedence is popped; then push the current operator.
-   - At the end, pop and output whatever remains on the stack.
+    Conversion from infix to postfix, the shunting yard method:
+    - Scan the infix expression from left to right.
+    - Output an operand immediately.
+    - On an opening bracket, push it.
+    - On a closing bracket, pop and output until the matching opening bracket is removed.
+    - On an operator, pop and output every operator on the stack of higher or equal precedence, except for a right associative operator such as exponentiation where only higher precedence is popped; then push the current operator.
+    - At the end, pop and output whatever remains on the stack.
 11. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
 
 
-   Answer: Stack and Queue are both linear data structures, and they differ in the end at which insertion and deletion take place.
+    Answer: Stack and Queue are both linear data structures, and they differ in the end at which insertion and deletion take place.
 
-   | Point | Stack | Queue |
-   |---|---|---|
-   | Principle | LIFO, Last In First Out | FIFO, First In First Out |
-   | Insertion | Push, at the top only | Enqueue, at the rear only |
-   | Deletion | Pop, from the top only | Dequeue, from the front only |
-   | Ends used | One end, the top | Two ends, the front and the rear |
-   | Pointers needed | One, the top | Two, the front and the rear |
-   | Order of removal | Reverse of the order of insertion | Same as the order of insertion |
-   | Operations | push, pop, peek or top, isEmpty, isFull | enqueue, dequeue, front, rear, isEmpty, isFull |
-   | Variants | — | Circular queue, priority queue, double ended queue |
-   | Real world analogy | A stack of plates: the last plate placed is the first taken | A queue at a ticket counter: the first to arrive is the first served |
-   | Applications | Function call stack, recursion, undo, expression conversion and evaluation, backtracking, depth first search, balanced parenthesis checking, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, call centre waiting, message queues |
-   | Complexity | O(1) for both push and pop | O(1) for both enqueue and dequeue |
+    | Point | Stack | Queue |
+    |---|---|---|
+    | Principle | LIFO, Last In First Out | FIFO, First In First Out |
+    | Insertion | Push, at the top only | Enqueue, at the rear only |
+    | Deletion | Pop, from the top only | Dequeue, from the front only |
+    | Ends used | One end, the top | Two ends, the front and the rear |
+    | Pointers needed | One, the top | Two, the front and the rear |
+    | Order of removal | Reverse of the order of insertion | Same as the order of insertion |
+    | Operations | push, pop, peek or top, isEmpty, isFull | enqueue, dequeue, front, rear, isEmpty, isFull |
+    | Variants | — | Circular queue, priority queue, double ended queue |
+    | Real world analogy | A stack of plates: the last plate placed is the first taken | A queue at a ticket counter: the first to arrive is the first served |
+    | Applications | Function call stack, recursion, undo, expression conversion and evaluation, backtracking, depth first search, balanced parenthesis checking, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, call centre waiting, message queues |
+    | Complexity | O(1) for both push and pop | O(1) for both enqueue and dequeue |
 
-   Similarities worth noting:
-   - Both are linear data structures with elements arranged in sequence.
-   - Both can be implemented with either an array or a linked list.
-   - Both support insertion and deletion in O(1) time.
-   - Both have overflow and underflow conditions that must be checked.
-   - Both are abstract data types, that is they are defined by their operations rather than by their implementation.
+    Similarities worth noting:
+    - Both are linear data structures with elements arranged in sequence.
+    - Both can be implemented with either an array or a linked list.
+    - Both support insertion and deletion in O(1) time.
+    - Both have overflow and underflow conditions that must be checked.
+    - Both are abstract data types, that is they are defined by their operations rather than by their implementation.
 
-   - The choice between them is determined entirely by the order in which the data must be processed: a stack when the most recent item must be handled first, as in recursion and undo; a queue when the earliest item must be handled first, as in scheduling and buffering.
+    - The choice between them is determined entirely by the order in which the data must be processed: a stack when the most recent item must be handled first, as in recursion and undo; a queue when the earliest item must be handled first, as in scheduling and buffering.
 12. **Difference between LIFO and FIFO in data structure.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   | Point | LIFO | FIFO |
-   |---|---|---|
-   | Full form | Last In First Out | First In First Out |
-   | Data structure | Stack | Queue |
-   | Principle | The element inserted most recently is removed first | The element inserted earliest is removed first |
-   | Ends used | One end only, the top | Two ends: rear for insertion, front for removal |
-   | Operations | push and pop | enqueue and dequeue |
-   | Pointers needed | One, the top | Two, the front and the rear |
-   | Order of output | The reverse of the order of input | The same as the order of input |
-   | Fairness | Not fair; an early element may wait indefinitely, which is starvation | Fair; every element is served in turn |
-   | Real world analogy | A stack of plates, or a pile of books | A queue at a ticket counter |
-   | Applications | Function call stack, recursion, undo, expression evaluation, backtracking, depth first search, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, message queues |
-   | Effect on data | Reverses the order | Preserves the order |
+    | Point | LIFO | FIFO |
+    |---|---|---|
+    | Full form | Last In First Out | First In First Out |
+    | Data structure | Stack | Queue |
+    | Principle | The element inserted most recently is removed first | The element inserted earliest is removed first |
+    | Ends used | One end only, the top | Two ends: rear for insertion, front for removal |
+    | Operations | push and pop | enqueue and dequeue |
+    | Pointers needed | One, the top | Two, the front and the rear |
+    | Order of output | The reverse of the order of input | The same as the order of input |
+    | Fairness | Not fair; an early element may wait indefinitely, which is starvation | Fair; every element is served in turn |
+    | Real world analogy | A stack of plates, or a pile of books | A queue at a ticket counter |
+    | Applications | Function call stack, recursion, undo, expression evaluation, backtracking, depth first search, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, message queues |
+    | Effect on data | Reverses the order | Preserves the order |
 
-   Example with the input sequence 1, 2, 3:
-   - LIFO: pushing 1, 2, 3 and then popping gives 3, 2, 1, that is the reverse.
-   - FIFO: enqueuing 1, 2, 3 and then dequeuing gives 1, 2, 3, that is the same order.
+    Example with the input sequence 1, 2, 3:
+    - LIFO: pushing 1, 2, 3 and then popping gives 3, 2, 1, that is the reverse.
+    - FIFO: enqueuing 1, 2, 3 and then dequeuing gives 1, 2, 3, that is the same order.
 
-   - Beyond data structures, the same two terms are used in inventory accounting, where LIFO and FIFO describe which stock is deemed to have been sold first, and in cache and page replacement policies, where FIFO is one of the simplest algorithms.
+    - Beyond data structures, the same two terms are used in inventory accounting, where LIFO and FIFO describe which stock is deemed to have been sold first, and in cache and page replacement policies, where FIFO is one of the simplest algorithms.
 13. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
 
-   Answer: A stack is a linear data structure following the LIFO principle, in which insertion and deletion both occur at one end called the top. Its operations are as follows.
+    Answer: A stack is a linear data structure following the LIFO principle, in which insertion and deletion both occur at one end called the top. Its operations are as follows.
 
-   - Push: inserts an element at the top of the stack. Before inserting, the overflow condition top = MAX − 1 must be checked; if the stack is full, overflow is reported. Otherwise top is incremented and the element is stored at that position. Complexity O(1).
-   - Pop: removes and returns the element at the top. Before removing, the underflow condition top = −1 must be checked; if the stack is empty, underflow is reported. Otherwise the element at top is taken and top is decremented. Complexity O(1).
-   - Peek, also called Top: returns the element at the top without removing it, so the stack is unchanged. Underflow must still be checked. Complexity O(1).
-   - isEmpty: returns true if top = −1, that is if the stack contains no elements. It is used before every pop and peek.
-   - isFull: returns true if top = MAX − 1 in an array implementation. It is used before every push. In a linked list implementation the stack is full only when memory is exhausted.
-   - Size or Count: returns the number of elements, which is top + 1 in the array implementation.
-   - Display or Traverse: prints the elements from the top downwards, which is O(n) and is used only for inspection.
+    - Push: inserts an element at the top of the stack. Before inserting, the overflow condition top = MAX − 1 must be checked; if the stack is full, overflow is reported. Otherwise top is incremented and the element is stored at that position. Complexity O(1).
+    - Pop: removes and returns the element at the top. Before removing, the underflow condition top = −1 must be checked; if the stack is empty, underflow is reported. Otherwise the element at top is taken and top is decremented. Complexity O(1).
+    - Peek, also called Top: returns the element at the top without removing it, so the stack is unchanged. Underflow must still be checked. Complexity O(1).
+    - isEmpty: returns true if top = −1, that is if the stack contains no elements. It is used before every pop and peek.
+    - isFull: returns true if top = MAX − 1 in an array implementation. It is used before every push. In a linked list implementation the stack is full only when memory is exhausted.
+    - Size or Count: returns the number of elements, which is top + 1 in the array implementation.
+    - Display or Traverse: prints the elements from the top downwards, which is O(n) and is used only for inspection.
 
-   Pseudocode of the two essential operations:
+    Pseudocode of the two essential operations:
 
-   ```
-   PUSH(item):                          POP():
-       if top == MAX - 1:                   if top == -1:
-           print "Overflow"; return             print "Underflow"; return NULL
-       top = top + 1                        item = stack[top]
-       stack[top] = item                    top = top - 1
-                                            return item
-   ```
+    ```
+    PUSH(item):                          POP():
+        if top == MAX - 1:                   if top == -1:
+            print "Overflow"; return             print "Underflow"; return NULL
+        top = top + 1                        item = stack[top]
+        stack[top] = item                    top = top - 1
+                                             return item
+    ```
 
-   Example, starting empty with top = −1:
-   - Push(10) gives 10, with top = 0.
-   - Push(20) gives 10, 20 with top = 1.
-   - Peek returns 20 and leaves the stack unchanged.
-   - Pop returns 20, leaving 10 with top = 0.
-   - Pop returns 10, leaving the stack empty with top = −1.
-   - A further Pop reports underflow.
+    Example, starting empty with top = −1:
+    - Push(10) gives 10, with top = 0.
+    - Push(20) gives 10, 20 with top = 1.
+    - Peek returns 20 and leaves the stack unchanged.
+    - Pop returns 20, leaving 10 with top = 0.
+    - Pop returns 10, leaving the stack empty with top = −1.
+    - A further Pop reports underflow.
 
-   Implementation: an array, which is simple and cache friendly but of fixed size; or a linked list, which grows dynamically at the cost of a pointer per node, where push is an insertion at the head and pop a deletion from the head.
+    Implementation: an array, which is simple and cache friendly but of fixed size; or a linked list, which grows dynamically at the cost of a pointer per node, where push is an insertion at the head and pop a deletion from the head.
 
-   Applications: the function call stack and recursion, undo and redo, the browser back button, infix to postfix conversion and postfix evaluation, balanced parenthesis checking, backtracking and depth first search.
+    Applications: the function call stack and recursion, undo and redo, the browser back button, infix to postfix conversion and postfix evaluation, balanced parenthesis checking, backtracking and depth first search.
 14. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
 
 
-   Answer: The expression given is in postfix, that is Reverse Polish, notation, and it is evaluated with a stack scanned from left to right.
+    Answer: The expression given is in postfix, that is Reverse Polish, notation, and it is evaluated with a stack scanned from left to right.
 
-   Expression: 3 2 * 2 ↑ 5 3 − 8 4 / * −
+    Expression: 3 2 * 2 ↑ 5 3 − 8 4 / * −
 
-   Rule: push every operand. On meeting an operator, pop the top two values, apply the operator with the second value popped as the left operand and the first as the right, and push the result.
+    Rule: push every operand. On meeting an operator, pop the top two values, apply the operator with the second value popped as the left operand and the first as the right, and push the result.
 
-   | Symbol | Action | Stack after the step |
-   |---|---|---|
-   | 3 | push | 3 |
-   | 2 | push | 3, 2 |
-   | * | pop 2 and 3, compute 3 × 2 = 6, push | 6 |
-   | 2 | push | 6, 2 |
-   | ↑ | pop 2 and 6, compute 6² = 36, push | 36 |
-   | 5 | push | 36, 5 |
-   | 3 | push | 36, 5, 3 |
-   | − | pop 3 and 5, compute 5 − 3 = 2, push | 36, 2 |
-   | 8 | push | 36, 2, 8 |
-   | 4 | push | 36, 2, 8, 4 |
-   | / | pop 4 and 8, compute 8 / 4 = 2, push | 36, 2, 2 |
-   | * | pop 2 and 2, compute 2 × 2 = 4, push | 36, 4 |
-   | − | pop 4 and 36, compute 36 − 4 = 32, push | 32 |
+    | Symbol | Action | Stack after the step |
+    |---|---|---|
+    | 3 | push | 3 |
+    | 2 | push | 3, 2 |
+    | * | pop 2 and 3, compute 3 × 2 = 6, push | 6 |
+    | 2 | push | 6, 2 |
+    | ↑ | pop 2 and 6, compute 6² = 36, push | 36 |
+    | 5 | push | 36, 5 |
+    | 3 | push | 36, 5, 3 |
+    | − | pop 3 and 5, compute 5 − 3 = 2, push | 36, 2 |
+    | 8 | push | 36, 2, 8 |
+    | 4 | push | 36, 2, 8, 4 |
+    | / | pop 4 and 8, compute 8 / 4 = 2, push | 36, 2, 2 |
+    | * | pop 2 and 2, compute 2 × 2 = 4, push | 36, 4 |
+    | − | pop 4 and 36, compute 36 − 4 = 32, push | 32 |
 
-   Final answer: the value of the expression is 32.
+    Final answer: the value of the expression is 32.
 
-   Verification by writing the equivalent infix expression:
-   - The postfix corresponds to ((3 × 2) ↑ 2) − ((5 − 3) × (8 / 4))
-   - = (6 ↑ 2) − (2 × 2)
-   - = 36 − 4
-   - = 32. Correct.
+    Verification by writing the equivalent infix expression:
+    - The postfix corresponds to ((3 × 2) ↑ 2) − ((5 − 3) × (8 / 4))
+    - = (6 ↑ 2) − (2 × 2)
+    - = 36 − 4
+    - = 32. Correct.
 
-   - The point to state: the order of the operands matters for the non-commutative operators. When an operator is met, the first value popped is the right operand and the second is the left. Reversing them would give 3 − 5 and 4 / 8, which is wrong.
+    - The point to state: the order of the operands matters for the non-commutative operators. When an operator is met, the first value popped is the right operand and the second is the left. Reversing them would give 3 − 5 and 4 / 8, which is wrong.
 15. **Write a C/C++ program to check Balanced parentheses in an Expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 830-831 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   ```c
-   #include <stdio.h>
-   #include <stdlib.h>
-   #include <string.h>
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
 
-   #define MAX 1000
+    #define MAX 1000
 
-   char stack[MAX];
-   int top = -1;
+    char stack[MAX];
+    int top = -1;
 
-   void push(char c) { stack[++top] = c; }
-   char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
-   int isEmpty(void) { return top == -1; }
+    void push(char c) { stack[++top] = c; }
+    char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
+    int isEmpty(void) { return top == -1; }
 
-   int isMatchingPair(char open, char close) {
-       return (open == '(' && close == ')') ||
-              (open == '[' && close == ']') ||
-              (open == '{' && close == '}');
-   }
+    int isMatchingPair(char open, char close) {
+        return (open == '(' && close == ')') ||
+               (open == '[' && close == ']') ||
+               (open == '{' && close == '}');
+    }
 
-   int isBalanced(char expr[]) {
-       top = -1;                                  /* reset the stack */
-       for (int i = 0; expr[i] != '\0'; i++) {
-           char c = expr[i];
-           if (c == '(' || c == '[' || c == '{') {
-               push(c);                           /* opening: push it */
-           }
-           else if (c == ')' || c == ']' || c == '}') {
-               if (isEmpty())                     /* closing with nothing open */
-                   return 0;
-               if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
-                   return 0;
-           }
-           /* any other character is simply ignored */
-       }
-       return isEmpty();                          /* balanced only if nothing is left open */
-   }
+    int isBalanced(char expr[]) {
+        top = -1;                                  /* reset the stack */
+        for (int i = 0; expr[i] != '\0'; i++) {
+            char c = expr[i];
+            if (c == '(' || c == '[' || c == '{') {
+                push(c);                           /* opening: push it */
+            }
+            else if (c == ')' || c == ']' || c == '}') {
+                if (isEmpty())                     /* closing with nothing open */
+                    return 0;
+                if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
+                    return 0;
+            }
+            /* any other character is simply ignored */
+        }
+        return isEmpty();                          /* balanced only if nothing is left open */
+    }
 
-   int main(void) {
-       char expr[MAX];
-       printf("Input: ");
-       if (fgets(expr, MAX, stdin) == NULL) return 0;
-       expr[strcspn(expr, "\n")] = '\0';
+    int main(void) {
+        char expr[MAX];
+        printf("Input: ");
+        if (fgets(expr, MAX, stdin) == NULL) return 0;
+        expr[strcspn(expr, "\n")] = '\0';
 
-       printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
-       return 0;
-   }
-   ```
+        printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
+        return 0;
+    }
+    ```
 
-   How the algorithm works:
-   - Scan the expression from left to right.
-   - Every opening bracket is pushed onto the stack.
-   - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
-   - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
-   - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
+    How the algorithm works:
+    - Scan the expression from left to right.
+    - Every opening bracket is pushed onto the stack.
+    - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
+    - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
+    - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
 
-   Trace of the sample inputs:
-   - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
-   - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
+    Trace of the sample inputs:
+    - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
+    - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
 
-   Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
+    Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
 16. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** *[RAKUB Programmer (PO) 12.10.2021 compact it 845-846 (ET: N/A)]*
 ```text
 Input: [0]{[00]0}
@@ -1766,221 +1766,221 @@ Output: Not Balanced
 ```
 
 
-   Answer:
+    Answer:
 
-   ```c
-   #include <stdio.h>
-   #include <stdlib.h>
-   #include <string.h>
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
 
-   #define MAX 1000
+    #define MAX 1000
 
-   char stack[MAX];
-   int top = -1;
+    char stack[MAX];
+    int top = -1;
 
-   void push(char c) { stack[++top] = c; }
-   char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
-   int isEmpty(void) { return top == -1; }
+    void push(char c) { stack[++top] = c; }
+    char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
+    int isEmpty(void) { return top == -1; }
 
-   int isMatchingPair(char open, char close) {
-       return (open == '(' && close == ')') ||
-              (open == '[' && close == ']') ||
-              (open == '{' && close == '}');
-   }
+    int isMatchingPair(char open, char close) {
+        return (open == '(' && close == ')') ||
+               (open == '[' && close == ']') ||
+               (open == '{' && close == '}');
+    }
 
-   int isBalanced(char expr[]) {
-       top = -1;                                  /* reset the stack */
-       for (int i = 0; expr[i] != '\0'; i++) {
-           char c = expr[i];
-           if (c == '(' || c == '[' || c == '{') {
-               push(c);                           /* opening: push it */
-           }
-           else if (c == ')' || c == ']' || c == '}') {
-               if (isEmpty())                     /* closing with nothing open */
-                   return 0;
-               if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
-                   return 0;
-           }
-           /* any other character is simply ignored */
-       }
-       return isEmpty();                          /* balanced only if nothing is left open */
-   }
+    int isBalanced(char expr[]) {
+        top = -1;                                  /* reset the stack */
+        for (int i = 0; expr[i] != '\0'; i++) {
+            char c = expr[i];
+            if (c == '(' || c == '[' || c == '{') {
+                push(c);                           /* opening: push it */
+            }
+            else if (c == ')' || c == ']' || c == '}') {
+                if (isEmpty())                     /* closing with nothing open */
+                    return 0;
+                if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
+                    return 0;
+            }
+            /* any other character is simply ignored */
+        }
+        return isEmpty();                          /* balanced only if nothing is left open */
+    }
 
-   int main(void) {
-       char expr[MAX];
-       printf("Input: ");
-       if (fgets(expr, MAX, stdin) == NULL) return 0;
-       expr[strcspn(expr, "\n")] = '\0';
+    int main(void) {
+        char expr[MAX];
+        printf("Input: ");
+        if (fgets(expr, MAX, stdin) == NULL) return 0;
+        expr[strcspn(expr, "\n")] = '\0';
 
-       printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
-       return 0;
-   }
-   ```
+        printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
+        return 0;
+    }
+    ```
 
-   How the algorithm works:
-   - Scan the expression from left to right.
-   - Every opening bracket is pushed onto the stack.
-   - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
-   - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
-   - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
+    How the algorithm works:
+    - Scan the expression from left to right.
+    - Every opening bracket is pushed onto the stack.
+    - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
+    - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
+    - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
 
-   Trace of the sample inputs:
-   - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
-   - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
+    Trace of the sample inputs:
+    - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
+    - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
 
-   Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
+    Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
 17. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
 
-   Answer: The structure in which insertion and deletion of items occur at the same end is the Stack.
+    Answer: The structure in which insertion and deletion of items occur at the same end is the Stack.
 
-   - A stack follows the LIFO principle, Last In First Out. Both operations take place at a single end called the top: push inserts at the top, and pop removes from the top.
-   - Because both operations use the same end, only one pointer, the top, is required.
-   - The consequence is that the element removed is always the one most recently inserted, so the output order is the reverse of the input order.
-   - Real world analogy: a stack of plates, where the last plate placed on the pile is the first one taken off.
-   - Applications: the function call stack and recursion, undo in an editor, the browser back button, infix to postfix conversion and postfix evaluation, balanced parenthesis checking, backtracking and depth first search.
+    - A stack follows the LIFO principle, Last In First Out. Both operations take place at a single end called the top: push inserts at the top, and pop removes from the top.
+    - Because both operations use the same end, only one pointer, the top, is required.
+    - The consequence is that the element removed is always the one most recently inserted, so the output order is the reverse of the input order.
+    - Real world analogy: a stack of plates, where the last plate placed on the pile is the first one taken off.
+    - Applications: the function call stack and recursion, undo in an editor, the browser back button, infix to postfix conversion and postfix evaluation, balanced parenthesis checking, backtracking and depth first search.
 
-   By contrast:
-   - A queue uses two different ends: insertion at the rear and deletion at the front, following FIFO.
-   - A double ended queue, or deque, allows insertion and deletion at both ends, so it can behave as either a stack or a queue.
+    By contrast:
+    - A queue uses two different ends: insertion at the rear and deletion at the front, following FIFO.
+    - A double ended queue, or deque, allows insertion and deletion at both ends, so it can behave as either a stack or a queue.
 18. **Write a Program to check for balanced parenthesis in an expression.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1011 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   ```c
-   #include <stdio.h>
-   #include <stdlib.h>
-   #include <string.h>
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
 
-   #define MAX 1000
+    #define MAX 1000
 
-   char stack[MAX];
-   int top = -1;
+    char stack[MAX];
+    int top = -1;
 
-   void push(char c) { stack[++top] = c; }
-   char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
-   int isEmpty(void) { return top == -1; }
+    void push(char c) { stack[++top] = c; }
+    char pop(void)    { return (top == -1) ? '\0' : stack[top--]; }
+    int isEmpty(void) { return top == -1; }
 
-   int isMatchingPair(char open, char close) {
-       return (open == '(' && close == ')') ||
-              (open == '[' && close == ']') ||
-              (open == '{' && close == '}');
-   }
+    int isMatchingPair(char open, char close) {
+        return (open == '(' && close == ')') ||
+               (open == '[' && close == ']') ||
+               (open == '{' && close == '}');
+    }
 
-   int isBalanced(char expr[]) {
-       top = -1;                                  /* reset the stack */
-       for (int i = 0; expr[i] != '\0'; i++) {
-           char c = expr[i];
-           if (c == '(' || c == '[' || c == '{') {
-               push(c);                           /* opening: push it */
-           }
-           else if (c == ')' || c == ']' || c == '}') {
-               if (isEmpty())                     /* closing with nothing open */
-                   return 0;
-               if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
-                   return 0;
-           }
-           /* any other character is simply ignored */
-       }
-       return isEmpty();                          /* balanced only if nothing is left open */
-   }
+    int isBalanced(char expr[]) {
+        top = -1;                                  /* reset the stack */
+        for (int i = 0; expr[i] != '\0'; i++) {
+            char c = expr[i];
+            if (c == '(' || c == '[' || c == '{') {
+                push(c);                           /* opening: push it */
+            }
+            else if (c == ')' || c == ']' || c == '}') {
+                if (isEmpty())                     /* closing with nothing open */
+                    return 0;
+                if (!isMatchingPair(pop(), c))     /* wrong type of bracket */
+                    return 0;
+            }
+            /* any other character is simply ignored */
+        }
+        return isEmpty();                          /* balanced only if nothing is left open */
+    }
 
-   int main(void) {
-       char expr[MAX];
-       printf("Input: ");
-       if (fgets(expr, MAX, stdin) == NULL) return 0;
-       expr[strcspn(expr, "\n")] = '\0';
+    int main(void) {
+        char expr[MAX];
+        printf("Input: ");
+        if (fgets(expr, MAX, stdin) == NULL) return 0;
+        expr[strcspn(expr, "\n")] = '\0';
 
-       printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
-       return 0;
-   }
-   ```
+        printf("Output: %s\n", isBalanced(expr) ? "Balanced" : "Not Balanced");
+        return 0;
+    }
+    ```
 
-   How the algorithm works:
-   - Scan the expression from left to right.
-   - Every opening bracket is pushed onto the stack.
-   - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
-   - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
-   - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
+    How the algorithm works:
+    - Scan the expression from left to right.
+    - Every opening bracket is pushed onto the stack.
+    - Every closing bracket must match the bracket on top of the stack. If the stack is empty, there is a closing bracket with no opening, so the expression is unbalanced. If the top does not match in type, the brackets are crossed, so it is unbalanced.
+    - At the end, the stack must be empty; anything left on it is an opening bracket that was never closed.
+    - Characters that are not brackets are ignored, which is why digits and letters in the sample input make no difference.
 
-   Trace of the sample inputs:
-   - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
-   - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
+    Trace of the sample inputs:
+    - `[0]{[00]0}` : push `[`, ignore 0, `]` matches `[` and pops it; push `{`, push `[`, ignore 0 0, `]` matches `[`, ignore 0, `}` matches `{`. The stack is empty at the end, so the output is Balanced.
+    - `[())` : push `[`, push `(`, `)` matches `(` and pops it, then `)` arrives with `[` on top, which does not match, so the output is Not Balanced.
 
-   Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
+    Complexity: O(n) time, since each character is examined once, and O(n) space in the worst case, when every character is an opening bracket.
 19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
-   Answer: The PUSH procedure inserts an element at the top of the stack, which is the only end at which a stack may be modified.
+    Answer: The PUSH procedure inserts an element at the top of the stack, which is the only end at which a stack may be modified.
 
-   Steps:
-   - Step 1: check the overflow condition. If top = MAX − 1, the stack is already full, so print "Stack Overflow" and stop. This check must come first, otherwise the write would go beyond the end of the array.
-   - Step 2: increment the top pointer by one, so that it points to the next free position.
-   - Step 3: store the new element at stack[top].
-   - Step 4: stop.
+    Steps:
+    - Step 1: check the overflow condition. If top = MAX − 1, the stack is already full, so print "Stack Overflow" and stop. This check must come first, otherwise the write would go beyond the end of the array.
+    - Step 2: increment the top pointer by one, so that it points to the next free position.
+    - Step 3: store the new element at stack[top].
+    - Step 4: stop.
 
-   Pseudocode:
+    Pseudocode:
 
-   ```
-   PUSH(stack, item):
-       if top == MAX - 1:
-           print "Stack Overflow"
-           return
-       top = top + 1
-       stack[top] = item
-   ```
+    ```
+    PUSH(stack, item):
+        if top == MAX - 1:
+            print "Stack Overflow"
+            return
+        top = top + 1
+        stack[top] = item
+    ```
 
-   Implementation in C, using an array:
+    Implementation in C, using an array:
 
-   ```c
-   #define MAX 100
+    ```c
+    #define MAX 100
 
-   int stack[MAX];
-   int top = -1;              /* -1 indicates an empty stack */
+    int stack[MAX];
+    int top = -1;              /* -1 indicates an empty stack */
 
-   void push(int item) {
-       if (top == MAX - 1) {
-           printf("Stack Overflow\n");
-           return;
-       }
-       top = top + 1;
-       stack[top] = item;
-       printf("%d pushed onto the stack\n", item);
-   }
-   ```
+    void push(int item) {
+        if (top == MAX - 1) {
+            printf("Stack Overflow\n");
+            return;
+        }
+        top = top + 1;
+        stack[top] = item;
+        printf("%d pushed onto the stack\n", item);
+    }
+    ```
 
-   Implementation with a linked list, where overflow occurs only when memory is exhausted:
+    Implementation with a linked list, where overflow occurs only when memory is exhausted:
 
-   ```c
-   struct Node {
-       int data;
-       struct Node* next;
-   };
-   struct Node* top = NULL;
+    ```c
+    struct Node {
+        int data;
+        struct Node* next;
+    };
+    struct Node* top = NULL;
 
-   void push(int item) {
-       struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-       if (newNode == NULL) {
-           printf("Stack Overflow: memory not available\n");
-           return;
-       }
-       newNode->data = item;
-       newNode->next = top;      /* the new node points to the old top */
-       top = newNode;            /* the new node becomes the top */
-   }
-   ```
+    void push(int item) {
+        struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+        if (newNode == NULL) {
+            printf("Stack Overflow: memory not available\n");
+            return;
+        }
+        newNode->data = item;
+        newNode->next = top;      /* the new node points to the old top */
+        top = newNode;            /* the new node becomes the top */
+    }
+    ```
 
-   Example, starting from an empty stack with top = −1 and MAX = 3:
+    Example, starting from an empty stack with top = −1 and MAX = 3:
 
-   | Operation | Condition checked | top after | Stack, bottom to top |
-   |---|---|---|---|
-   | Push(10) | top ≠ 2, so proceed | 0 | 10 |
-   | Push(20) | top ≠ 2, so proceed | 1 | 10, 20 |
-   | Push(30) | top ≠ 2, so proceed | 2 | 10, 20, 30 |
-   | Push(40) | top = 2, the stack is full | 2 | Overflow reported, stack unchanged |
+    | Operation | Condition checked | top after | Stack, bottom to top |
+    |---|---|---|---|
+    | Push(10) | top ≠ 2, so proceed | 0 | 10 |
+    | Push(20) | top ≠ 2, so proceed | 1 | 10, 20 |
+    | Push(30) | top ≠ 2, so proceed | 2 | 10, 20, 30 |
+    | Push(40) | top = 2, the stack is full | 2 | Overflow reported, stack unchanged |
 
-   - Complexity: O(1) in both time and space, since no searching and no shifting of elements is required.
-   - The corresponding POP procedure is the exact inverse: check the underflow condition top = −1, take the element at stack[top], then decrement top.
+    - Complexity: O(1) in both time and space, since no searching and no shifting of elements is required.
+    - The corresponding POP procedure is the exact inverse: check the underflow condition top = −1, take the element at stack[top], then decrement top.
 
 ## Linked List (14)
 
@@ -2421,231 +2421,231 @@ Output: Not Balanced
 10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 851-852 (ET: N/A)]*
 
 
-   Answer: The list is printed in reverse by recursing to the end of the list first and printing on the way back, so that the last node is printed first.
+    Answer: The list is printed in reverse by recursing to the end of the list first and printing on the way back, so that the last node is printed first.
 
-   Implementation in C:
+    Implementation in C:
 
-   ```c
-   #include <stdio.h>
-   #include <stdlib.h>
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
 
-   struct Node {
-       int data;
-       struct Node* next;
-   };
+    struct Node {
+        int data;
+        struct Node* next;
+    };
 
-   /* Recursive function to print the list in reverse order */
-   void printReverse(struct Node* head) {
-       if (head == NULL)          /* base case: end of the list */
-           return;
-       printReverse(head->next);  /* first recurse to the end */
-       printf("%d", head->data);  /* then print on the way back */
-       if (head != NULL) printf(" ");
-   }
+    /* Recursive function to print the list in reverse order */
+    void printReverse(struct Node* head) {
+        if (head == NULL)          /* base case: end of the list */
+            return;
+        printReverse(head->next);  /* first recurse to the end */
+        printf("%d", head->data);  /* then print on the way back */
+        if (head != NULL) printf(" ");
+    }
 
-   struct Node* push(struct Node* head, int value) {
-       struct Node* n = malloc(sizeof(struct Node));
-       n->data = value;
-       n->next = head;
-       return n;
-   }
+    struct Node* push(struct Node* head, int value) {
+        struct Node* n = malloc(sizeof(struct Node));
+        n->data = value;
+        n->next = head;
+        return n;
+    }
 
-   int main(void) {
-       struct Node* head = NULL;
-       head = push(head, 4);
-       head = push(head, 3);
-       head = push(head, 2);
-       head = push(head, 1);      /* list is now 1 -> 2 -> 3 -> 4 */
+    int main(void) {
+        struct Node* head = NULL;
+        head = push(head, 4);
+        head = push(head, 3);
+        head = push(head, 2);
+        head = push(head, 1);      /* list is now 1 -> 2 -> 3 -> 4 */
 
-       printReverse(head);        /* prints 4 3 2 1 */
-       printf("\n");
-       return 0;
-   }
-   ```
+        printReverse(head);        /* prints 4 3 2 1 */
+        printf("\n");
+        return 0;
+    }
+    ```
 
-   The same in Python:
+    The same in Python:
 
-   ```python
-   class Node:
-       def __init__(self, data):
-           self.data = data
-           self.next = None
+    ```python
+    class Node:
+        def __init__(self, data):
+            self.data = data
+            self.next = None
 
-   def print_reverse(node):
-       if node is None:            # base case
-           return
-       print_reverse(node.next)    # recurse to the end first
-       print(node.data, end=" ")   # print while returning
-   ```
+    def print_reverse(node):
+        if node is None:            # base case
+            return
+        print_reverse(node.next)    # recurse to the end first
+        print(node.data, end=" ")   # print while returning
+    ```
 
-   How it works, for the list 1 → 2 → 3 → 4:
-   - printReverse(1) calls printReverse(2) before printing anything.
-   - printReverse(2) calls printReverse(3).
-   - printReverse(3) calls printReverse(4).
-   - printReverse(4) calls printReverse(NULL), which returns immediately; then 4 is printed.
-   - Control returns to printReverse(3), which prints 3; then 2; then 1.
-   - Output: 4 3 2 1
+    How it works, for the list 1 → 2 → 3 → 4:
+    - printReverse(1) calls printReverse(2) before printing anything.
+    - printReverse(2) calls printReverse(3).
+    - printReverse(3) calls printReverse(4).
+    - printReverse(4) calls printReverse(NULL), which returns immediately; then 4 is printed.
+    - Control returns to printReverse(3), which prints 3; then 2; then 1.
+    - Output: 4 3 2 1
 
-   - The essential idea: the recursive call is made before the print statement. Putting the print first would produce the list in its original order, which is the ordinary forward traversal.
-   - Complexity: O(n) time, since each node is visited once, and O(n) space for the recursion stack, which is the one drawback. An iterative alternative would push the values onto an explicit stack, or reverse the list first, print it forward and reverse it back, which uses O(1) extra space.
+    - The essential idea: the recursive call is made before the print statement. Putting the print first would produce the list in its original order, which is the ordinary forward traversal.
+    - Complexity: O(n) time, since each node is visited once, and O(n) space for the recursion stack, which is the one drawback. An iterative alternative would push the values onto an explicit stack, or reverse the list first, print it forward and reverse it back, which uses O(1) extra space.
 11. **(a) What are the differences between linked list and array data structure?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
 
 
-   Answer:
+    Answer:
 
-   | Point | Array | Linked List |
-   |---|---|---|
-   | Memory allocation | Contiguous block, allocated at once | Non-contiguous nodes, allocated as needed |
-   | Size | Fixed at declaration in a static array | Dynamic; it grows and shrinks at run time |
-   | Access to the i-th element | Direct, O(1), by computing base + i × size | Sequential, O(n), by following the links from the head |
-   | Insertion or deletion at the beginning | O(n), every element must be shifted | O(1), only pointers are changed |
-   | Insertion or deletion in the middle | O(n) for the shifting | O(1) once the position is reached, but O(n) to reach it |
-   | Insertion at the end | O(1) if space remains, O(n) if the array must be resized | O(1) with a tail pointer, O(n) without |
-   | Memory per element | Only the data | The data plus one pointer, or two in a doubly linked list |
-   | Memory waste | Unused declared positions are wasted | No waste, but pointer overhead on every node |
-   | Cache performance | Excellent, because the elements are contiguous | Poor, because the nodes are scattered in memory |
-   | Merging or splitting | Costly, requires copying | Cheap, only pointers are relinked |
-   | Binary search | Possible, O(log n) on sorted data | Not possible efficiently, since there is no random access |
-   | Implementation | Simple | More complex, and it requires careful pointer handling |
+    | Point | Array | Linked List |
+    |---|---|---|
+    | Memory allocation | Contiguous block, allocated at once | Non-contiguous nodes, allocated as needed |
+    | Size | Fixed at declaration in a static array | Dynamic; it grows and shrinks at run time |
+    | Access to the i-th element | Direct, O(1), by computing base + i × size | Sequential, O(n), by following the links from the head |
+    | Insertion or deletion at the beginning | O(n), every element must be shifted | O(1), only pointers are changed |
+    | Insertion or deletion in the middle | O(n) for the shifting | O(1) once the position is reached, but O(n) to reach it |
+    | Insertion at the end | O(1) if space remains, O(n) if the array must be resized | O(1) with a tail pointer, O(n) without |
+    | Memory per element | Only the data | The data plus one pointer, or two in a doubly linked list |
+    | Memory waste | Unused declared positions are wasted | No waste, but pointer overhead on every node |
+    | Cache performance | Excellent, because the elements are contiguous | Poor, because the nodes are scattered in memory |
+    | Merging or splitting | Costly, requires copying | Cheap, only pointers are relinked |
+    | Binary search | Possible, O(log n) on sorted data | Not possible efficiently, since there is no random access |
+    | Implementation | Simple | More complex, and it requires careful pointer handling |
 12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
 
 
-   Answer: A linked list is better than an array for insertion and deletion; an array is better for searching.
+    Answer: A linked list is better than an array for insertion and deletion; an array is better for searching.
 
-   | Operation | Array | Linked List | Which is better |
-   |---|---|---|---|
-   | Insert at the beginning | O(n), all elements shift right | O(1), only pointers change | Linked List |
-   | Insert at the end | O(1) if space remains, O(n) if resizing is needed | O(1) with a tail pointer | Linked List, marginally |
-   | Insert in the middle | O(n) for the shifting | O(1) once positioned, O(n) to reach the position | Linked List, when the position is already known |
-   | Delete from the beginning | O(n), all elements shift left | O(1) | Linked List |
-   | Delete a known node | O(n) for the shifting | O(1) in a doubly linked list | Linked List |
-   | Search, unsorted | O(n) | O(n) | Equal, though the array is faster in practice |
-   | Search, sorted | O(log n) by binary search | O(n), since binary search needs random access | Array |
-   | Access the i-th element | O(1) | O(n) | Array |
+    | Operation | Array | Linked List | Which is better |
+    |---|---|---|---|
+    | Insert at the beginning | O(n), all elements shift right | O(1), only pointers change | Linked List |
+    | Insert at the end | O(1) if space remains, O(n) if resizing is needed | O(1) with a tail pointer | Linked List, marginally |
+    | Insert in the middle | O(n) for the shifting | O(1) once positioned, O(n) to reach the position | Linked List, when the position is already known |
+    | Delete from the beginning | O(n), all elements shift left | O(1) | Linked List |
+    | Delete a known node | O(n) for the shifting | O(1) in a doubly linked list | Linked List |
+    | Search, unsorted | O(n) | O(n) | Equal, though the array is faster in practice |
+    | Search, sorted | O(log n) by binary search | O(n), since binary search needs random access | Array |
+    | Access the i-th element | O(1) | O(n) | Array |
 
-   Answer to the question as asked:
-   - Insert: Linked list is better. No shifting of existing elements is required; only two pointer assignments are needed, regardless of the size of the list. Additionally the list does not need to be resized when it becomes full, which an array does.
-   - Delete: Linked list is better, for the same reason. Removing a node requires only relinking, whereas an array must move every subsequent element to close the gap.
-   - Search: Array is better. Although both are O(n) for an unsorted collection, the array allows binary search in O(log n) once sorted, which the linked list cannot support because it has no random access. The array is also considerably faster in practice even in the O(n) case, because its contiguous layout gives far better cache performance.
+    Answer to the question as asked:
+    - Insert: Linked list is better. No shifting of existing elements is required; only two pointer assignments are needed, regardless of the size of the list. Additionally the list does not need to be resized when it becomes full, which an array does.
+    - Delete: Linked list is better, for the same reason. Removing a node requires only relinking, whereas an array must move every subsequent element to close the gap.
+    - Search: Array is better. Although both are O(n) for an unsorted collection, the array allows binary search in O(log n) once sorted, which the linked list cannot support because it has no random access. The array is also considerably faster in practice even in the O(n) case, because its contiguous layout gives far better cache performance.
 
-   - Summary: linked lists win on modification, arrays win on access and search.
+    - Summary: linked lists win on modification, arrays win on access and search.
 13. **Linked list, doubly linked list and circular linked list explains with diagram.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1004-1005 (ET: DU)]*
 
 
-   Answer:
+    Answer:
 
-   Types of linked list:
+    Types of linked list:
 
-   - Singly linked list: each node holds the data and one pointer to the next node. The last node points to NULL. Traversal is possible in one direction only.
+    - Singly linked list: each node holds the data and one pointer to the next node. The last node points to NULL. Traversal is possible in one direction only.
 
-   ```
-   head
-     |
-     v
-   +----+----+    +----+----+    +----+------+
-   | 10 |  ------>| 20 |  ------>| 30 | NULL |
-   +----+----+    +----+----+    +----+------+
-   ```
+    ```
+    head
+      |
+      v
+    +----+----+    +----+----+    +----+------+
+    | 10 |  ------>| 20 |  ------>| 30 | NULL |
+    +----+----+    +----+----+    +----+------+
+    ```
 
-   - Doubly linked list: each node holds the data and two pointers, one to the next node and one to the previous. Traversal is possible in both directions, and a node can be deleted in O(1) if a pointer to it is held, because its predecessor is known.
+    - Doubly linked list: each node holds the data and two pointers, one to the next node and one to the previous. Traversal is possible in both directions, and a node can be deleted in O(1) if a pointer to it is held, because its predecessor is known.
 
-   ```
-          head
-            |
-            v
-   +------+----+----+   +----+----+----+   +----+----+------+
-   | NULL | 10 |  ----->| <--- | 20 |  --->| <--- | 30 | NULL |
-   +------+----+----+   +----+----+----+   +----+----+------+
-   ```
+    ```
+           head
+             |
+             v
+    +------+----+----+   +----+----+----+   +----+----+------+
+    | NULL | 10 |  ----->| <--- | 20 |  --->| <--- | 30 | NULL |
+    +------+----+----+   +----+----+----+   +----+----+------+
+    ```
 
-   - Circular linked list: the last node points back to the first instead of to NULL, so the list forms a ring and traversal can continue indefinitely from any starting point. It may be singly or doubly circular.
+    - Circular linked list: the last node points back to the first instead of to NULL, so the list forms a ring and traversal can continue indefinitely from any starting point. It may be singly or doubly circular.
 
-   ```
-     +---------------------------------------+
-     |                                       |
-     v                                       |
-   +----+----+    +----+----+    +----+----+ |
-   | 10 |  ------>| 20 |  ------>| 30 |  ----+
-   +----+----+    +----+----+    +----+----+
-   ```
+    ```
+      +---------------------------------------+
+      |                                       |
+      v                                       |
+    +----+----+    +----+----+    +----+----+ |
+    | 10 |  ------>| 20 |  ------>| 30 |  ----+
+    +----+----+    +----+----+    +----+----+
+    ```
 
-   - Doubly circular linked list: combines both, so the last node's next points to the head and the head's previous points to the last node.
+    - Doubly circular linked list: combines both, so the last node's next points to the head and the head's previous points to the last node.
 
-   Uses: a singly linked list for a simple dynamic sequence, a stack or a queue; a doubly linked list where backward traversal is needed, as in a browser history, an undo and redo list, or the LRU cache implementation; and a circular linked list for round robin CPU scheduling, a circular buffer, or a multiplayer game turn order.
+    Uses: a singly linked list for a simple dynamic sequence, a stack or a queue; a doubly linked list where backward traversal is needed, as in a browser history, an undo and redo list, or the LRU cache implementation; and a circular linked list for round robin CPU scheduling, a circular buffer, or a multiplayer game turn order.
 
-   Comparison:
+    Comparison:
 
-   | Point | Singly Linked | Doubly Linked | Circular Linked |
-   |---|---|---|---|
-   | Pointers per node | 1 | 2 | 1, or 2 if doubly circular |
-   | Traversal direction | Forward only | Both directions | Forward, and endlessly around the ring |
-   | Last node points to | NULL | NULL | The first node |
-   | Deletion of a known node | O(n) | O(1) | O(n), or O(1) if doubly circular |
-   | Memory per node | Least | Most | Same as singly, but no NULL terminator |
-   | Detecting the end | next == NULL | next == NULL | Returning to the starting node |
-   | Typical use | Stack, queue, hash chaining | Browser history, undo and redo, LRU cache | Round robin scheduling, circular buffer, turn order |
+    | Point | Singly Linked | Doubly Linked | Circular Linked |
+    |---|---|---|---|
+    | Pointers per node | 1 | 2 | 1, or 2 if doubly circular |
+    | Traversal direction | Forward only | Both directions | Forward, and endlessly around the ring |
+    | Last node points to | NULL | NULL | The first node |
+    | Deletion of a known node | O(n) | O(1) | O(n), or O(1) if doubly circular |
+    | Memory per node | Least | Most | Same as singly, but no NULL terminator |
+    | Detecting the end | next == NULL | next == NULL | Returning to the starting node |
+    | Typical use | Stack, queue, hash chaining | Browser history, undo and redo, LRU cache | Round robin scheduling, circular buffer, turn order |
 14. **In a doubly linked list write the function of Traversing from the tail.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
 
-   Answer: Traversing a doubly linked list from the tail is straightforward, because each node holds a pointer to its predecessor. This is the principal advantage of the doubly linked structure over the singly linked one.
+    Answer: Traversing a doubly linked list from the tail is straightforward, because each node holds a pointer to its predecessor. This is the principal advantage of the doubly linked structure over the singly linked one.
 
-   Node structure:
+    Node structure:
 
-   ```c
-   struct Node {
-       int data;
-       struct Node* prev;
-       struct Node* next;
-   };
-   ```
+    ```c
+    struct Node {
+        int data;
+        struct Node* prev;
+        struct Node* next;
+    };
+    ```
 
-   Function to traverse from the tail:
+    Function to traverse from the tail:
 
-   ```c
-   /* The tail pointer is maintained by the list, so no traversal is needed to find it */
-   void traverseFromTail(struct Node* tail) {
-       struct Node* temp = tail;
-       while (temp != NULL) {
-           printf("%d -> ", temp->data);
-           temp = temp->prev;          /* move backwards using the prev pointer */
-       }
-       printf("NULL\n");
-   }
-   ```
+    ```c
+    /* The tail pointer is maintained by the list, so no traversal is needed to find it */
+    void traverseFromTail(struct Node* tail) {
+        struct Node* temp = tail;
+        while (temp != NULL) {
+            printf("%d -> ", temp->data);
+            temp = temp->prev;          /* move backwards using the prev pointer */
+        }
+        printf("NULL\n");
+    }
+    ```
 
-   If only the head is available and the tail must first be located:
+    If only the head is available and the tail must first be located:
 
-   ```c
-   void traverseBackward(struct Node* head) {
-       if (head == NULL) return;
+    ```c
+    void traverseBackward(struct Node* head) {
+        if (head == NULL) return;
 
-       struct Node* temp = head;
-       while (temp->next != NULL)      /* walk forward to the last node */
-           temp = temp->next;
+        struct Node* temp = head;
+        while (temp->next != NULL)      /* walk forward to the last node */
+            temp = temp->next;
 
-       while (temp != NULL) {          /* now walk back to the head */
-           printf("%d -> ", temp->data);
-           temp = temp->prev;
-       }
-       printf("NULL\n");
-   }
-   ```
+        while (temp != NULL) {          /* now walk back to the head */
+            printf("%d -> ", temp->data);
+            temp = temp->prev;
+        }
+        printf("NULL\n");
+    }
+    ```
 
-   Example, for the list 10 ↔ 20 ↔ 30 ↔ 40 with the tail at 40:
+    Example, for the list 10 ↔ 20 ↔ 30 ↔ 40 with the tail at 40:
 
-   ```
-   head -> [NULL|10|*] <-> [*|20|*] <-> [*|30|*] <-> [*|40|NULL] <- tail
-   ```
+    ```
+    head -> [NULL|10|*] <-> [*|20|*] <-> [*|30|*] <-> [*|40|NULL] <- tail
+    ```
 
-   - Starting at 40 and following prev gives 40, 30, 20, 10 and then NULL, at which point the loop ends.
-   - Output: 40 -> 30 -> 20 -> 10 -> NULL
+    - Starting at 40 and following prev gives 40, 30, 20, 10 and then NULL, at which point the loop ends.
+    - Output: 40 -> 30 -> 20 -> 10 -> NULL
 
-   Complexity:
-   - O(n) time when a tail pointer is maintained, since each node is visited once.
-   - O(2n) = O(n) time if the tail must first be found by walking forward.
-   - O(1) space, since no extra structure is required.
+    Complexity:
+    - O(n) time when a tail pointer is maintained, since each node is visited once.
+    - O(2n) = O(n) time if the tail must first be found by walking forward.
+    - O(1) space, since no extra structure is required.
 
-   - Contrast with a singly linked list: backward traversal there is impossible directly, because a node has no pointer to its predecessor. It would require either reversing the list, using an auxiliary stack, or recursion that prints on the way back, all of which cost extra time or O(n) extra space. This is exactly why a doubly linked list is used wherever backward movement is needed, as in a browser history or an undo and redo list.
+    - Contrast with a singly linked list: backward traversal there is impossible directly, because a node has no pointer to its predecessor. It would require either reversing the list, using an auxiliary stack, or recursion that prints on the way back, all of which cost extra time or O(n) extra space. This is exactly why a doubly linked list is used wherever backward movement is needed, as in a browser history or an undo and redo list.
 
 ## Priority Queues & Heaps (Min/Max Heap) (7)
 
