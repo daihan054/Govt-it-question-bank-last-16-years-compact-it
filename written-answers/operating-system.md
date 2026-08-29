@@ -6974,6 +6974,46 @@ int main(int argc, char *argv[]){
 
 Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the average waiting time and the average turnaround time. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+
+   Answer: Given:
+
+   | Process | Arrival Time (ms) | Burst Time (ms) |
+   |---|---|---|
+   | P1 | 0 | 5 |
+   | P2 | 1 | 3 |
+   | P3 | 2 | 2 |
+
+   FCFS is non-preemptive and serves processes in order of arrival, so the order is P1, P2, P3.
+
+   Gantt chart:
+   ```
+   |    P1    |  P2  | P3 |
+   0          5      8    10
+   ```
+
+   Calculation:
+   - Turnaround Time = Completion Time - Arrival Time
+   - Waiting Time = Turnaround Time - Burst Time
+
+   | Process | AT | BT | CT | TAT = CT - AT | WT = TAT - BT |
+   |---|---|---|---|---|---|
+   | P1 | 0 | 5 | 5 | 5 - 0 = 5 | 5 - 5 = 0 |
+   | P2 | 1 | 3 | 8 | 8 - 1 = 7 | 7 - 3 = 4 |
+   | P3 | 2 | 2 | 10 | 10 - 2 = 8 | 8 - 2 = 6 |
+
+   Average Waiting Time = (0 + 4 + 6) / 3
+   = 10 / 3
+   = 3.33 ms
+
+   Average Turnaround Time = (5 + 7 + 8) / 3
+   = 20 / 3
+   = 6.67 ms
+
+   Final answers:
+   - Average waiting time = 3.33 ms
+   - Average turnaround time = 6.67 ms
+
+   Observation: FCFS is simple and starvation-free, but it suffers from the convoy effect. Here the longest process P1 happens to run first, so P2 and P3 wait behind it. Had the order been P3, P2, P1, that is shortest first, the waiting times would have been 0, 1 and 3 giving an average of only 1.33 ms, with exactly the same total work. This is why SJF gives the minimum average waiting time and why FCFS is unsuitable for interactive systems.
 2. (a) নিচের গুলোর Distributed-GPT control and computing এর কার্যকারিতা লিখুন:
    (b) Clock cycle কী? একটি প্রসেসরের clock speed 3.5 GHz বলতে কী বোঝায়?
    (c) নিচের সারণীটি দেখুুন:
@@ -6989,6 +7029,88 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 (a) অ্যালগরিদম প্রতিটি সংক্ষেপ ও সারণির উত্তর লেখুন।
 (b) FCFS এবং SJF Scheduling algorithm গুলোর মধ্যে Gantt Chart এবং অপেক্ষাকৃত সুষম এবং গড়ের (average waiting time) ও টার্ন অ্যারাউন্ড (turnaround time) এর হিসাব নির্ণয় কর। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer:
+
+   (a) Distributed control and computing, and the role of a large language model in it:
+
+   Distributed computing means solving a problem with many machines that cooperate over a network rather than with one machine. Its functions and benefits are:
+   - Scale: data sets and workloads that exceed the capacity of any single machine can be processed by dividing the work across a cluster.
+   - Fault tolerance: with replication across nodes, the failure of one machine does not stop the service, whereas a single machine is a single point of failure.
+   - Cost: many ordinary machines are far cheaper than one very large one of the same total capacity, and capacity can be added incrementally.
+   - Geographic distribution: servers placed near users reduce latency, which is why content delivery networks exist.
+   - Resource sharing: expensive storage and accelerators are shared among many users.
+   - Elasticity: capacity is added and removed as demand changes, which is the essence of cloud computing.
+   - Parallel speedup: independent parts of a computation run at the same time, as in MapReduce and Spark.
+
+   Distributed control means the decision-making is spread across nodes rather than concentrated in one controller. It avoids a single point of failure and scales better, but it requires consensus protocols such as Paxos or Raft to keep the nodes in agreement, and it faces the limits of the CAP theorem: a distributed system cannot simultaneously guarantee consistency, availability and tolerance of network partitions.
+
+   A large language model in this setting is itself trained and served on a distributed cluster of accelerators, since neither the model nor the training data fits on one machine. In control and operations it is used for log analysis, anomaly detection, generating and reviewing configuration, and answering operational queries in natural language, always with human verification, because such a model can produce confident but wrong output.
+
+   (b) Clock cycle, and the meaning of 3.5 GHz:
+
+   A clock cycle is one complete oscillation of the processor's clock signal, from low to high and back to low. It is the smallest unit of time in the processor, and every internal operation is synchronised to it. Its duration is T = 1 / f.
+
+   3.5 GHz means the clock oscillates 3,500,000,000 times per second, so one cycle lasts 1 / (3.5 x 10^9) = 0.286 nanoseconds.
+
+   What it does not mean: it does not mean 3.5 billion instructions per second. One instruction may take several cycles (CPI greater than 1), while a superscalar processor may complete several instructions in one cycle (IPC greater than 1). Real performance is roughly clock speed multiplied by IPC, which is why a newer 3.5 GHz processor can outperform an older 4.0 GHz one. A cache miss can also stall the processor for hundreds of cycles, so the memory system often matters more than the clock.
+
+   Related points: base clock and turbo clock differ, thermal throttling reduces the clock when the chip is hot, and dynamic power follows P = C x V^2 x f, which is why clock speeds stopped rising and core counts rose instead.
+
+   (c) Scheduling calculations for the given table:
+
+   | Process | Burst Time (ms) | Priority |
+   |---|---|---|
+   | P1 | 15 | 1 |
+   | P2 | 2 | 1 |
+   | P3 | 4 | 3 |
+   | P4 | 2 | 4 |
+   | P5 | 8 | 2 |
+
+   All processes arrive at time 0, so Turnaround Time = Completion Time.
+
+   FCFS, in the order P1 to P5:
+   ```
+   |        P1        |P2|  P3  |P4|     P5     |
+   0                 15 17     21 23           31
+   ```
+
+   | Process | BT | CT | TAT | WT |
+   |---|---|---|---|---|
+   | P1 | 15 | 15 | 15 | 0 |
+   | P2 | 2 | 17 | 17 | 15 |
+   | P3 | 4 | 21 | 21 | 17 |
+   | P4 | 2 | 23 | 23 | 21 |
+   | P5 | 8 | 31 | 31 | 23 |
+
+   Average Waiting Time = (0 + 15 + 17 + 21 + 23) / 5 = 76 / 5 = 15.20 ms
+   Average Turnaround Time = (15 + 17 + 21 + 23 + 31) / 5 = 107 / 5 = 21.40 ms
+
+   SJF (non-preemptive), in the order P2, P4, P3, P5, P1, with the tie between P2 and P4 broken by arrival order:
+   ```
+   |P2|P4|  P3  |     P5     |        P1        |
+   0  2  4      8           16                 31
+   ```
+
+   | Process | BT | CT | TAT | WT |
+   |---|---|---|---|---|
+   | P1 | 15 | 31 | 31 | 16 |
+   | P2 | 2 | 2 | 2 | 0 |
+   | P3 | 4 | 8 | 8 | 4 |
+   | P4 | 2 | 4 | 4 | 2 |
+   | P5 | 8 | 16 | 16 | 8 |
+
+   Average Waiting Time = (16 + 0 + 4 + 2 + 8) / 5 = 30 / 5 = 6.00 ms
+   Average Turnaround Time = (31 + 2 + 8 + 4 + 16) / 5 = 61 / 5 = 12.20 ms
+
+   Comparison:
+
+   | Algorithm | Average Waiting Time | Average Turnaround Time |
+   |---|---|---|
+   | FCFS | 15.20 ms | 21.40 ms |
+   | SJF | 6.00 ms | 12.20 ms |
+
+   SJF reduces both averages by more than half. The reason is the convoy effect in FCFS: the longest process P1, of 15 ms, happens to run first and delays every shorter process behind it. SJF runs the short ones first, which is provably optimal for average waiting time when all processes are available at time 0.
 3. **Consider the set of 3 processes whose arrival time and burst time are given below-**
 
 | Process | AT | BT |
@@ -6999,6 +7121,53 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 **If the CPU scheduling policy is round robin with time quantum=2, finds out the completion time, turnaround time, waiting time, and response time** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1447 (ET: N/A)]*
 
+
+   Answer: Given:
+
+   | Process | Arrival Time | Burst Time |
+   |---|---|---|
+   | P1 | 0 | 5 |
+   | P2 | 1 | 4 |
+   | P3 | 2 | 2 |
+
+   Scheduling policy: Round Robin with time quantum = 2.
+
+   Trace of the ready queue:
+   - t = 0: only P1 is present, so P1 runs for 2 units. During this time P2 arrives at t = 1 and joins the queue.
+   - t = 2: P1's quantum expires with 3 units left. P3 arrives at t = 2 and joins the queue before the preempted P1 is re-added. Queue: P2, P3, P1. P2 runs.
+   - t = 4: P2's quantum expires with 2 units left, and is re-added. Queue: P3, P1, P2. P3 runs.
+   - t = 6: P3's quantum expires and P3 finishes exactly, since it needed only 2. Queue: P1, P2. P1 runs.
+   - t = 8: P1's quantum expires with 1 unit left, and is re-added. Queue: P2, P1. P2 runs.
+   - t = 10: P2 finishes, using its last 2 units. Queue: P1. P1 runs.
+   - t = 11: P1 finishes its last 1 unit.
+
+   Gantt chart:
+   ```
+   | P1 | P2 | P3 | P1 | P2 |P1|
+   0    2    4    6    8   10 11
+   ```
+
+   Results:
+
+   | Process | AT | BT | CT | TAT = CT - AT | WT = TAT - BT | First run | RT = first run - AT |
+   |---|---|---|---|---|---|---|---|
+   | P1 | 0 | 5 | 11 | 11 | 6 | 0 | 0 |
+   | P2 | 1 | 4 | 10 | 9 | 5 | 2 | 1 |
+   | P3 | 2 | 2 | 6 | 4 | 2 | 4 | 2 |
+
+   Averages:
+   - Average Completion Time = (11 + 10 + 6) / 3 = 27 / 3 = 9.00
+   - Average Turnaround Time = (11 + 9 + 4) / 3 = 24 / 3 = 8.00
+   - Average Waiting Time = (6 + 5 + 2) / 3 = 13 / 3 = 4.33
+   - Average Response Time = (0 + 1 + 2) / 3 = 3 / 3 = 1.00
+
+   Definitions used:
+   - Completion Time: the instant at which the process finishes.
+   - Turnaround Time = Completion Time - Arrival Time.
+   - Waiting Time = Turnaround Time - Burst Time.
+   - Response Time = time of first CPU allocation - Arrival Time. It measures how quickly the system reacts, and it is the metric that matters most in an interactive system.
+
+   Observation: the response times are very small, 0, 1 and 2, because Round Robin gives every process a share of the CPU quickly. The turnaround times are correspondingly larger than they would be under SJF, because each process is interrupted repeatedly. This trade-off, better response at the cost of worse averages, is precisely why time-sharing systems use Round Robin.
 4. **There are 3 tasks P1, P2, and P3. The arrival time and duration of each task is given below. Apply the round-robin scheduling algorithm with quantum size-20 to schedule the tasks in a single core machine. Calculate the turnaround time for each task. (All tasks have the same priority)** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1338 (ET: N/A)]*
 
 | Task | Arrival time (ms) | Duration (ms) |
@@ -7007,6 +7176,50 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 | P2 | 5 | 40 |
 | P3 | 10 | 20 |
 
+
+   Answer: Given:
+
+   | Task | Arrival Time (ms) | Duration (ms) |
+   |---|---|---|
+   | P1 | 0 | 40 |
+   | P2 | 5 | 40 |
+   | P3 | 10 | 20 |
+
+   Scheduling: Round Robin with quantum = 20 ms on a single-core machine, all tasks of equal priority.
+
+   Trace of the ready queue:
+   - t = 0: only P1 is present, so P1 runs for its quantum of 20 ms. During this period P2 arrives at t = 5 and P3 at t = 10, joining the queue in that order.
+   - t = 20: P1's quantum expires with 20 ms left. The queue already holds P2 and P3, so P1 is added after them. Queue: P2, P3, P1. P2 runs.
+   - t = 40: P2's quantum expires with 20 ms left, and it is added at the back. Queue: P3, P1, P2. P3 runs.
+   - t = 60: P3 has used 20 ms, which is exactly its whole duration, so P3 finishes. Queue: P1, P2. P1 runs.
+   - t = 80: P1 uses its remaining 20 ms and finishes. Queue: P2. P2 runs.
+   - t = 100: P2 uses its remaining 20 ms and finishes.
+
+   Gantt chart:
+   ```
+   |    P1    |    P2    |    P3    |    P1    |    P2    |
+   0         20         40         60         80        100
+   ```
+
+   Turnaround time for each task, where Turnaround Time = Completion Time - Arrival Time:
+
+   | Task | Arrival | Duration | Completion | Turnaround = CT - AT | Waiting = TAT - Duration |
+   |---|---|---|---|---|---|
+   | P1 | 0 | 40 | 80 | 80 - 0 = 80 ms | 80 - 40 = 40 ms |
+   | P2 | 5 | 40 | 100 | 100 - 5 = 95 ms | 95 - 40 = 55 ms |
+   | P3 | 10 | 20 | 60 | 60 - 10 = 50 ms | 50 - 20 = 30 ms |
+
+   Final answers:
+   - Turnaround time of P1 = 80 ms
+   - Turnaround time of P2 = 95 ms
+   - Turnaround time of P3 = 50 ms
+
+   Average turnaround time = (80 + 95 + 50) / 3 = 225 / 3 = 75 ms
+   Average waiting time = (40 + 55 + 30) / 3 = 125 / 3 = 41.67 ms
+
+   Note on the quantum: every task's duration is an exact multiple of the 20 ms quantum, so no task ever finishes in the middle of a slice and there are no partial quanta. Note also that P3, the shortest task, finishes first even though it arrived last, which shows how Round Robin favours short jobs indirectly by never letting a long job monopolise the CPU.
+
+   Number of context switches: 4, at t = 20, 40, 60 and 80. If the quantum were reduced to 10 ms the number would double, improving response time but wasting more CPU on switching.
 5. **Calculate the average waiting time.** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
 | Process | Burst Time |
@@ -7015,7 +7228,95 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 | P2 | 3 |
 | P3 | 6 |
 
+
+   Answer: Given:
+
+   | Process | Burst Time (ms) |
+   |---|---|
+   | P1 | 21 |
+   | P2 | 3 |
+   | P3 | 6 |
+
+   No arrival times are stated, so all processes are taken to arrive at time 0, which is the usual assumption. The algorithm is not named either, so the calculation is shown for both FCFS and SJF.
+
+   Under FCFS, in the order P1, P2, P3:
+
+   Gantt chart:
+   ```
+   |          P1          |P2|  P3  |
+   0                     21 24     30
+   ```
+
+   Since all arrival times are 0, the waiting time of each process is the sum of the burst times before it.
+
+   | Process | BT | CT | TAT | WT |
+   |---|---|---|---|---|
+   | P1 | 21 | 21 | 21 | 0 |
+   | P2 | 3 | 24 | 24 | 21 |
+   | P3 | 6 | 30 | 30 | 24 |
+
+   Average Waiting Time = (0 + 21 + 24) / 3 = 45 / 3 = 15.00 ms
+   Average Turnaround Time = (21 + 24 + 30) / 3 = 75 / 3 = 25.00 ms
+
+   Under SJF, in the order P2 (3), P3 (6), P1 (21):
+
+   Gantt chart:
+   ```
+   |P2|  P3  |          P1          |
+   0  3      9                     30
+   ```
+
+   | Process | BT | CT | TAT | WT |
+   |---|---|---|---|---|
+   | P1 | 21 | 30 | 30 | 9 |
+   | P2 | 3 | 3 | 3 | 0 |
+   | P3 | 6 | 9 | 9 | 3 |
+
+   Average Waiting Time = (9 + 0 + 3) / 3 = 12 / 3 = 4.00 ms
+   Average Turnaround Time = (30 + 3 + 9) / 3 = 42 / 3 = 14.00 ms
+
+   Comparison:
+
+   | Algorithm | Average Waiting Time | Average Turnaround Time |
+   |---|---|---|
+   | FCFS | 15.00 ms | 4 times worse |
+   | SJF | 4.00 ms | 14.00 ms |
+
+   Final answer: under FCFS the average waiting time is 15 ms; under SJF it is 4 ms.
+
+   Explanation of the large difference: this data set is the clearest possible illustration of the convoy effect. Under FCFS the very long process of 21 ms runs first, and the two short processes each wait for it, so their waiting times are 21 and 24 ms. Under SJF the two short processes are finished within 9 ms and only the long one waits, for 9 ms. The total work is 30 ms in both cases; only the distribution of waiting changes. This is why SJF is provably optimal for average waiting time when all processes are available at the same instant.
 6. **(খ) CPU Scheduling কী? যে যে কারণে CPU Scheduling করতে হয় সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
+
+
+   Answer: CPU Scheduling হলো সেই কাজ, যার মাধ্যমে অপারেটিং সিস্টেম সিদ্ধান্ত নেয় ready queue তে অপেক্ষমাণ প্রসেসগুলোর মধ্যে কোনটিকে পরবর্তীতে সিপিইউ দেওয়া হবে। এটি multiprogramming এর ভিত্তি: একটি প্রসেস যখন ইনপুট-আউটপুটের জন্য অপেক্ষা করে, তখন সিপিইউ অন্য একটি প্রসেসকে দিয়ে দেওয়া হয়, যাতে প্রসেসর কখনো অলস না থাকে।
+
+   যে যে কারণে CPU Scheduling করতে হয়:
+
+   - সিপিইউ-এর সর্বোচ্চ ব্যবহার নিশ্চিত করা: ইনপুট-আউটপুট কাজ সিপিইউ-এর তুলনায় হাজার গুণ ধীর। শিডিউলিং না থাকলে একটি প্রসেস ডিস্ক থেকে তথ্য পড়ার সময় সিপিইউ পুরোপুরি অলস বসে থাকত। শিডিউলিংয়ের ফলে সিপিইউ ব্যবহারের হার কয়েক শতাংশ থেকে ৯০ শতাংশের ওপরে ওঠে।
+
+   - থ্রুপুট বাড়ানো: একক সময়ে বেশি সংখ্যক প্রসেস সম্পন্ন করা, কারণ সিপিইউ ও ইনপুট-আউটপুট যন্ত্র একসঙ্গে কাজ করতে পারে।
+
+   - অপেক্ষমাণ সময় ও টার্ন-অ্যারাউন্ড সময় কমানো: বুদ্ধিমান ক্রমে প্রসেস চালালে মোট অপেক্ষার সময় কমে যায়। যেমন ছোট কাজ আগে চালালে (SJF) গড় অপেক্ষমাণ সময় সর্বনিম্ন হয়।
+
+   - সাড়া দেওয়ার সময় (response time) কমানো: ইন্টারেক্টিভ ব্যবস্থায় ব্যবহারকারী কীবোর্ডে চাপ দেওয়ার পর দ্রুত ফল দেখতে চান। Round Robin এই সাড়াদানের সময় নির্দিষ্ট সীমার মধ্যে বেঁধে দেয়।
+
+   - ন্যায্যতা রক্ষা ও starvation প্রতিরোধ: প্রতিটি প্রসেসকে যথাসময়ে সিপিইউ দেওয়া নিশ্চিত করা, যাতে কোনো প্রসেস অনির্দিষ্টকাল বসে না থাকে।
+
+   - অগ্রাধিকার রক্ষা: গুরুত্বপূর্ণ ও জরুরি কাজ, যেমন সিস্টেম প্রসেস বা রিয়েল-টাইম কাজ, আগে সম্পন্ন করা।
+
+   - Multiprogramming ও multitasking সম্ভব করা: শিডিউলিং ছাড়া একই সময়ে একাধিক প্রোগ্রাম চালানোর বিভ্রম তৈরি করা যেত না।
+
+   - রিসোর্সের ভারসাম্যপূর্ণ ব্যবহার: সিপিইউ-নির্ভর ও ইনপুট-আউটপুট-নির্ভর প্রসেসের ভালো মিশ্রণ রাখলে প্রসেসর ও যন্ত্র দুটোই ব্যস্ত থাকে।
+
+   - Convoy effect হ্রাস: একটি দীর্ঘ প্রসেস যেন তার পেছনের সব ছোট প্রসেসকে আটকে না রাখে।
+
+   - রিয়েল-টাইম ব্যবস্থায় নির্ভরযোগ্যতা: Earliest Deadline First এর মতো অ্যালগরিদম নিশ্চিত করে যে নির্দিষ্ট সময়সীমার আগেই কাজ শেষ হবে, যা নিয়ন্ত্রণ ও নিরাপত্তা ব্যবস্থায় অপরিহার্য।
+
+   শিডিউলিং কখন ঘটে: প্রসেস running থেকে waiting এ গেলে, running থেকে ready তে গেলে, waiting থেকে ready তে গেলে, এবং প্রসেস শেষ হলে। প্রথম ও শেষ ক্ষেত্রে হলে non-preemptive, চারটিতেই হলে preemptive।
+
+   বিবেচ্য মানদণ্ড: সিপিইউ ব্যবহারের হার (বাড়াতে হবে), থ্রুপুট (বাড়াতে হবে), টার্ন-অ্যারাউন্ড সময় (কমাতে হবে), অপেক্ষমাণ সময় (কমাতে হবে), সাড়াদানের সময় (কমাতে হবে) এবং ন্যায্যতা।
+
+   ব্যয়: শিডিউলিং নিজেই সিপিইউ সময় খরচ করে, এবং প্রতিটি preemption এ context switch হয়, যাতে রেজিস্টার সংরক্ষণ ও পুনরুদ্ধার এবং ক্যাশে ও TLB নষ্ট হওয়ার ক্ষতি হয়। তাই ভালো অ্যালগরিদম হলো সেটি, যা পরিবর্তনের সুফল ও খরচের মধ্যে ভারসাম্য রাখে।
 
 ## Windows & System Administration (4)
 
