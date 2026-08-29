@@ -498,5 +498,9 @@
  [
   "database.md",
   "SQL Queries (71)"
+ ],
+ [
+  "database.md",
+  "Transaction Management & ACID Properties (12)"
  ]
 ]
