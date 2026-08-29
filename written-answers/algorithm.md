@@ -1944,6 +1944,44 @@ for i in N:
 
 **অনুসারে প্রাপ্ত fractional knapsack সমস্যা সমাধান একটি চিত্রানুপাতে উত্তর লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer:
+
+   (a) Vector vs Raster graphics
+
+   | Point | Vector graphics | Raster graphics |
+   |---|---|---|
+   | Made of | Mathematical paths, lines and curves | A grid of pixels |
+   | Scaling | Can be enlarged infinitely without quality loss | Becomes blurred and pixelated when enlarged |
+   | File size | Usually small | Usually large, grows with resolution |
+   | Best for | Logos, icons, diagrams, typography | Photographs and detailed images |
+   | File formats | SVG, AI, EPS, PDF | JPEG, PNG, BMP, GIF, TIFF |
+   | Editing | Each object can be edited separately | Editing is done pixel by pixel |
+   | Resolution | Resolution independent | Resolution dependent, measured in DPI |
+
+   (b) Fractional Knapsack solution
+
+   Step 1: calculate the value per weight ratio for each item.
+   - Item 1: 18 / 4 = 4.5
+   - Item 2: 2.5 / 3 = 0.83
+   - Item 3: 12 / 1 = 12.0
+   - Item 4: 14 / 2 = 7.0
+   - Item 5: 20 / 5 = 4.0
+
+   Step 2: sort the items in decreasing order of ratio.
+   - Item 3 (12.0), Item 4 (7.0), Item 1 (4.5), Item 5 (4.0), Item 2 (0.83)
+
+   Step 3: fill the bag in that order. Taking a bag capacity of 10 units:
+   - Take Item 3 fully: weight 1, value 12. Remaining capacity = 9.
+   - Take Item 4 fully: weight 2, value 14. Remaining capacity = 7.
+   - Take Item 1 fully: weight 4, value 18. Remaining capacity = 3.
+   - Item 5 weighs 5 but only 3 units of space remain, so take the fraction 3/5 of it: value = 20 × 3/5 = 12. Remaining capacity = 0.
+   - Item 2 is not taken, as the bag is full.
+
+   Final answer: total weight 10, maximum total value = 12 + 14 + 18 + 12 = 56.
+
+   The greedy ratio rule is optimal here because items may be broken, so the space is always filled with the most valuable material available.
+   Note: the bag capacity was not printed in the collected question, so a capacity of 10 is used to demonstrate the method.
+
 2. **(খ) নিচের সারণীটি বিবেচনা করুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
 | Item | 1 | 2 | 3 | 4 | 5 |
@@ -1955,11 +1993,143 @@ for i in N:
 i) থলির সর্বোচ্চ ধারণক্ষমতা 25 হলে, এতে সবচেয়ে বেশি মোট কত ওজনের বস্তু (item) রাখা যাবে?
 ii) বস্তুগুলো থলিতে রাখার ক্রম কী হবে?
 
+   Answer:
+
+   Step 1: calculate the value per weight ratio.
+   - Item 1: 20 / 4 = 5.0
+   - Item 2: 15 / 3 = 5.0
+   - Item 3: 12 / 2 = 6.0
+   - Item 4: 14 / 2 = 7.0
+   - Item 5: 20 / 5 = 4.0
+
+   Step 2: total weight available
+   - 4 + 3 + 2 + 2 + 5 = 16 units
+
+   (i) Maximum total weight that can be placed:
+   - The bag capacity is 25 units but all the items together weigh only 16 units.
+   - Since the available weight is less than the capacity, every item can be taken whole and no item needs to be broken.
+   - Maximum total weight placed = 16 units, and 9 units of the bag remain empty.
+   - The total value obtained = 20 + 15 + 12 + 14 + 20 = 81.
+
+   (ii) Order of placing the items:
+   - In the fractional knapsack method items are placed in decreasing order of value per weight ratio.
+   - Order: Item 4 (ratio 7.0) → Item 3 (ratio 6.0) → Item 1 (ratio 5.0) → Item 2 (ratio 5.0) → Item 5 (ratio 4.0)
+   - Items 1 and 2 have the same ratio of 5.0, so either may be placed first without changing the result.
+
+   Final answer: total weight 16 units with total value 81, placed in the order 4, 3, 1, 2, 5.
+
 3. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 453 (ET: BUET)]*
+
+   Answer: This is the Activity Selection Problem, solved by a greedy algorithm. The correct greedy choice is to always select the request that finishes earliest, because that leaves the maximum remaining time for the others.
+
+   ```
+   MAX_CUSTOMERS(start[], end[], n)
+       create an array of n requests as (start[i], end[i])
+       sort the requests in increasing order of end time
+
+       selected = empty list
+       insert request[0] into selected
+       last_end = end of request[0]
+
+       for i = 1 to n - 1
+           if start of request[i] >= last_end
+               insert request[i] into selected
+               last_end = end of request[i]
+
+       return selected
+   ```
+
+   Steps explained:
+   - Sort all n requests by their finishing time, which costs O(n log n).
+   - Always take the first request of the sorted list.
+   - Scan the rest, and take a request only if its start time is not earlier than the finish time of the last selected request.
+   - This single pass costs O(n), so the total time complexity is O(n log n) and the space complexity is O(n).
+
+   Example with slots (1,3), (2,5), (4,7), (6,8), (8,10):
+   - Sorted by end time: (1,3), (2,5), (4,7), (6,8), (8,10)
+   - Take (1,3). Last end = 3.
+   - (2,5) starts at 2 which is before 3, so reject.
+   - (4,7) starts at 4 which is after 3, so take it. Last end = 7.
+   - (6,8) starts at 6 which is before 7, so reject.
+   - (8,10) starts at 8 which is after 7, so take it.
+   - Maximum customers served = 3, that is (1,3), (4,7) and (8,10).
+
+   Why earliest finish time is the correct greedy choice: choosing the request that ends soonest frees the resource at the earliest possible moment, so no other choice can leave more room for the remaining requests.
 
 4. **Given n jobs starting time n[] and duration d[], print maximum number of jobs that don't overlap between each other.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 834 (ET: N/A)]*
 
+   Answer: The finish time of each job is start time plus duration, so this becomes the standard activity selection problem and is solved greedily by earliest finish time.
+
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+
+   typedef struct { int start, finish; } Job;
+
+   int cmp(const void *a, const void *b) {
+       return ((Job*)a)->finish - ((Job*)b)->finish;
+   }
+
+   int main() {
+       int n, i;
+       scanf("%d", &n);
+       Job job[100];
+
+       for (i = 0; i < n; i++) {
+           int s, d;
+           scanf("%d %d", &s, &d);
+           job[i].start = s;
+           job[i].finish = s + d;      // finish = start + duration
+       }
+
+       qsort(job, n, sizeof(Job), cmp);
+
+       int count = 1, lastEnd = job[0].finish;
+       printf("(%d, %d) ", job[0].start, job[0].finish);
+
+       for (i = 1; i < n; i++) {
+           if (job[i].start >= lastEnd) {
+               printf("(%d, %d) ", job[i].start, job[i].finish);
+               lastEnd = job[i].finish;
+               count++;
+           }
+       }
+
+       printf("\nMaximum non-overlapping jobs = %d\n", count);
+       return 0;
+   }
+   ```
+
+   - Step 1: compute finish[i] = start[i] + duration[i].
+   - Step 2: sort the jobs by finish time.
+   - Step 3: pick the first job, then keep picking any job whose start is not earlier than the last selected finish.
+   - Time complexity O(n log n) for the sort plus O(n) for the scan, and space complexity O(n).
+
 5. **You are given a set of activities with their starting time s[] and finishing time f[].** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
+
+   Answer: This is the Activity Selection Problem, where the goal is to choose the largest set of activities that can be performed by one person, so that no two chosen activities overlap in time.
+
+   Greedy strategy: always select the activity that finishes earliest among those still compatible.
+
+   Algorithm:
+   - Sort all activities in increasing order of finishing time f[].
+   - Select the first activity of the sorted list and record its finish time.
+   - For each remaining activity, select it only if its start time s[i] is greater than or equal to the recorded finish time, and then update the recorded finish time.
+   - Continue to the end of the list.
+
+   Example with activities
+   A1(1,4), A2(3,5), A3(0,6), A4(5,7), A5(8,9), A6(5,9):
+   - Sorted by finish time: A1(1,4), A2(3,5), A3(0,6), A4(5,7), A5(8,9), A6(5,9)
+   - Select A1, last finish = 4.
+   - A2 starts at 3 which is before 4, so reject. A3 starts at 0, reject.
+   - A4 starts at 5 which is after 4, so select. Last finish = 7.
+   - A5 starts at 8 which is after 7, so select. Last finish = 9.
+   - A6 starts at 5, reject.
+   - Selected activities: A1, A4, A5, so the maximum count is 3.
+
+   - Time complexity O(n log n), dominated by sorting, and O(n) if the activities are already sorted by finish time.
+   - Space complexity O(1) beyond the input.
+   - Proof idea of correctness: the activity finishing earliest leaves the resource free soonest, so replacing any optimal solution's first activity with it never reduces the count.
 
 6. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
