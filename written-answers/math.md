@@ -27,35 +27,443 @@
 
 1. **তিন ক্রমের ম্যাজিক সংখ্যা কোনটি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
+
+   Answer: তিন ক্রমের (৩ x ৩) ম্যাজিক বর্গের ম্যাজিক সংখ্যা বা ম্যাজিক ধ্রুবক ১৫।
+
+   সূত্র: n ক্রমের ম্যাজিক বর্গের ম্যাজিক সংখ্যা = n(n^2 + 1) / 2
+
+   ধাপে ধাপে:
+   - n = 3
+   - ম্যাজিক সংখ্যা = 3(3^2 + 1) / 2
+   - = 3(9 + 1) / 2
+   - = 3 x 10 / 2
+   - = 30 / 2
+   - = 15
+
+   অর্থাৎ ১ থেকে ৯ পর্যন্ত সংখ্যা দিয়ে গঠিত ৩ x ৩ বর্গে প্রতিটি সারি, প্রতিটি কলাম ও উভয় কর্ণের যোগফল ১৫ হয়।
+
+   একটি উদাহরণ:
+
+   ```
+   2  7  6
+   9  5  1
+   4  3  8
+   ```
+
+   যাচাই: সারি ২+৭+৬ = ১৫, কলাম ২+৯+৪ = ১৫, কর্ণ ২+৫+৮ = ১৫। কেন্দ্রের ঘরে সবসময় গড় মান, অর্থাৎ ৫ বসে।
+
+   উত্তর: ১৫
 2. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝাটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
+
+   Answer: ধরি, মেঝের প্রস্থ = w মিটার এবং দৈর্ঘ্য = ২০ মিটার।
+
+   কার্পেটের খরচ ক্ষেত্রফলের সমানুপাতিক, তাই প্রতি বর্গমিটারের দর দুই ক্ষেত্রেই সমান।
+
+   ধাপ ১ - দুই ক্ষেত্রের ক্ষেত্রফল:
+   - প্রথম ক্ষেত্রে ক্ষেত্রফল = ২০ x w বর্গমিটার, খরচ = ৭৫০০ টাকা
+   - দ্বিতীয় ক্ষেত্রে ক্ষেত্রফল = ২০ x (w - ৪) বর্গমিটার, খরচ = ৬০০০ টাকা
+
+   ধাপ ২ - প্রতি বর্গমিটার দর সমান ধরে সমীকরণ:
+   - ৭৫০০ / (২০w) = ৬০০০ / [২০(w - ৪)]
+
+   ধাপ ৩ - উভয় পক্ষে ২০ কেটে যায়:
+   - ৭৫০০ / w = ৬০০০ / (w - ৪)
+
+   ধাপ ৪ - আড়াআড়ি গুণ:
+   - ৭৫০০ (w - ৪) = ৬০০০ w
+   - ৭৫০০w - ৩০০০০ = ৬০০০w
+   - ১৫০০w = ৩০০০০
+   - w = ২০
+
+   উত্তর: মেঝের প্রস্থ ২০ মিটার।
+
+   যাচাই: ক্ষেত্রফল ২০ x ২০ = ৪০০ বর্গমিটার, দর = ৭৫০০ / ৪০০ = ১৮.৭৫ টাকা প্রতি বর্গমিটার। প্রস্থ ৪ মিটার কম হলে ক্ষেত্রফল = ২০ x ১৬ = ৩২০ বর্গমিটার, খরচ = ৩২০ x ১৮.৭৫ = ৬০০০ টাকা। মিলে গেছে।
 3. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
+
+   Answer: ধাপ ১ - জন্মহার শতকরায় প্রকাশ:
+   - প্রতি হাজারে ৩০ জন = ৩০ / ১০০০ = ০.০৩ = ৩ শতাংশ বার্ষিক বৃদ্ধি
+
+   ধাপ ২ - চক্রবৃদ্ধি সূত্র প্রয়োগ:
+   - P = P0 (1 + r)^n
+   - এখানে P0 = ৮০,০০,০০০, r = ০.০৩, n = ৩ বছর
+
+   ধাপ ৩ - মান বসানো:
+   - P = ৮০,০০,০০০ x (১.০৩)^৩
+
+   ধাপ ৪ - (১.০৩)^৩ এর মান নির্ণয়:
+   - (১.০৩)^২ = ১.০৬০৯
+   - (১.০৩)^৩ = ১.০৬০৯ x ১.০৩ = ১.০৯২৭২৭
+
+   ধাপ ৫ - গুণ:
+   - P = ৮০,০০,০০০ x ১.০৯২৭২৭
+   - P = ৮৭,৪১,৮১৬
+
+   উত্তর: ৩ বছর পর দেশটির মোট জনসংখ্যা হবে প্রায় ৮৭,৪১,৮১৬ জন।
+
+   বছরওয়ারি হিসাব:
+   - ১ম বছর শেষে: ৮০,০০,০০০ + ২,৪০,০০০ = ৮২,৪০,০০০
+   - ২য় বছর শেষে: ৮২,৪০,০০০ + ২,৪৭,২০০ = ৮৪,৮৭,২০০
+   - ৩য় বছর শেষে: ৮৪,৮৭,২০০ + ২,৫৪,৬১৬ = ৮৭,৪১,৮১৬
+
+   নোট: এখানে মৃত্যুহার ও অভিবাসন বিবেচনা করা হয়নি, কেবল জন্মহার ধরা হয়েছে।
 4. **প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
+
+   Answer: প্রথম k সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি = k^2
+
+   প্রমাণ:
+   - বিজোড় সংখ্যাগুলো হলো ১, ৩, ৫, ৭, ..., (২k - ১)
+   - এটি একটি সমান্তর ধারা, যেখানে প্রথম পদ a = ১, সাধারণ অন্তর d = ২, পদসংখ্যা = k
+   - সমান্তর ধারার সমষ্টির সূত্র: S = (n/2)[2a + (n-1)d]
+   - S = (k/2)[2(1) + (k-1)(2)]
+   - S = (k/2)[2 + 2k - 2]
+   - S = (k/2)(2k)
+   - S = k^2
+
+   উদাহরণ দিয়ে যাচাই:
+   - প্রথম ১টি: ১ = ১^২ = ১
+   - প্রথম ২টি: ১ + ৩ = ৪ = ২^২
+   - প্রথম ৩টি: ১ + ৩ + ৫ = ৯ = ৩^২
+   - প্রথম ৪টি: ১ + ৩ + ৫ + ৭ = ১৬ = ৪^২
+   - প্রথম ৫টি: ১ + ৩ + ৫ + ৭ + ৯ = ২৫ = ৫^২
+
+   উত্তর: k^2
+
+   সংশ্লিষ্ট সূত্র: প্রথম k সংখ্যক জোড় সংখ্যার সমষ্টি = k(k + 1), এবং প্রথম k সংখ্যক স্বাভাবিক সংখ্যার সমষ্টি = k(k + 1)/2।
 5. **A man could buy a certain number of notebooks for Rs.300. If each notebook cost is Rs.5 more, he could have bought 10 notebooks less for the same amount. Find the price of each notebook?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
+
+   Answer: Let the price of each notebook be Rs. p, and the number of notebooks bought be n.
+
+   Step 1 - form the first equation:
+   - Total amount = Rs. 300
+   - n = 300 / p
+
+   Step 2 - form the second condition:
+   - If each notebook cost Rs. 5 more, the price becomes (p + 5) and the number becomes 10 less.
+   - 300 / (p + 5) = (300 / p) - 10
+
+   Step 3 - multiply throughout by p(p + 5):
+   - 300p = 300(p + 5) - 10p(p + 5)
+   - 300p = 300p + 1500 - 10p^2 - 50p
+
+   Step 4 - simplify:
+   - 0 = 1500 - 10p^2 - 50p
+   - 10p^2 + 50p - 1500 = 0
+   - p^2 + 5p - 150 = 0
+
+   Step 5 - factorise:
+   - p^2 + 15p - 10p - 150 = 0
+   - p(p + 15) - 10(p + 15) = 0
+   - (p + 15)(p - 10) = 0
+   - p = -15 or p = 10
+
+   Since a price cannot be negative, p = 10.
+
+   Answer: the price of each notebook is Rs. 10.
+
+   Verification: at Rs. 10 each, he buys 300 / 10 = 30 notebooks. At Rs. 15 each, he would buy 300 / 15 = 20 notebooks, which is 10 fewer. Correct.
 6. **If x is an Integer and x + \frac{1}{x} = \frac{17}{4}, then value of x - \frac{1}{x} = ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
+
+   Answer: Given, x + 1/x = 17/4. We are asked for x - 1/x.
+
+   Step 1 - use the identity that connects the two expressions:
+   - (x - 1/x)^2 = (x + 1/x)^2 - 4
+
+   This follows because (x + 1/x)^2 = x^2 + 2 + 1/x^2 and (x - 1/x)^2 = x^2 - 2 + 1/x^2, so the two differ by 4.
+
+   Step 2 - substitute the given value:
+   - (x - 1/x)^2 = (17/4)^2 - 4
+   - = 289/16 - 4
+   - = 289/16 - 64/16
+   - = 225/16
+
+   Step 3 - take the square root:
+   - x - 1/x = plus or minus sqrt(225/16)
+   - x - 1/x = plus or minus 15/4
+
+   Answer: x - 1/x = 15/4 or -15/4.
+
+   Note on the values of x: solving x + 1/x = 17/4 gives 4x^2 - 17x + 4 = 0, so x = 4 or x = 1/4. Neither of these is described correctly as "an integer" for both roots, but for x = 4 we get 4 - 1/4 = 15/4, and for x = 1/4 we get 1/4 - 4 = -15/4. Both signs are therefore genuine, and if the positive root x = 4 is intended, the answer is 15/4.
 7. **Students of a class are made to stand in rows. If students are extra in each row, then there would be 2 rows less. If four students are less in each row, then there would be 4 more rows. What is the number of students in the class?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
+
+   Answer: Let the number of rows be r and the number of students in each row be s. Total number of students N = r x s.
+
+   The first condition as printed does not state how many extra students; the standard form of this problem uses 4, so the two conditions are read as: if 4 students are extra in each row there would be 2 rows less, and if 4 students are less in each row there would be 4 more rows.
+
+   Step 1 - first condition:
+   - (s + 4)(r - 2) = rs
+   - sr - 2s + 4r - 8 = sr
+   - -2s + 4r = 8
+   - -s + 2r = 4 ... (i)
+
+   Step 2 - second condition:
+   - (s - 4)(r + 4) = rs
+   - sr + 4s - 4r - 16 = sr
+   - 4s - 4r = 16
+   - s - r = 4 ... (ii)
+
+   Step 3 - add equations (i) and (ii):
+   - (-s + 2r) + (s - r) = 4 + 4
+   - r = 8
+
+   Step 4 - substitute r = 8 in equation (ii):
+   - s - 8 = 4
+   - s = 12
+
+   Step 5 - total number of students:
+   - N = r x s = 8 x 12 = 96
+
+   Answer: there are 96 students in the class, arranged in 8 rows of 12.
+
+   Verification: with 16 students per row, 96 / 16 = 6 rows, which is 2 rows less. With 8 students per row, 96 / 8 = 12 rows, which is 4 rows more. Both conditions are satisfied.
 8. **\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - \frac{2+\sqrt{3}}{2-\sqrt{3}} = ?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
 
+
+   Answer: The expression is 4(sqrt6 + sqrt2) / (sqrt6 - sqrt2) minus (2 + sqrt3) / (2 - sqrt3).
+
+   Step 1 - rationalise the first term by multiplying numerator and denominator by (sqrt6 + sqrt2):
+   - = 4(sqrt6 + sqrt2)(sqrt6 + sqrt2) / [(sqrt6 - sqrt2)(sqrt6 + sqrt2)]
+   - Denominator = (sqrt6)^2 - (sqrt2)^2 = 6 - 2 = 4
+   - Numerator = 4(sqrt6 + sqrt2)^2 = 4(6 + 2 + 2.sqrt12) = 4(8 + 4.sqrt3)
+   - First term = 4(8 + 4.sqrt3) / 4 = 8 + 4.sqrt3
+
+   Step 2 - rationalise the second term by multiplying numerator and denominator by (2 + sqrt3):
+   - = (2 + sqrt3)(2 + sqrt3) / [(2 - sqrt3)(2 + sqrt3)]
+   - Denominator = 4 - 3 = 1
+   - Numerator = (2 + sqrt3)^2 = 4 + 3 + 4.sqrt3 = 7 + 4.sqrt3
+   - Second term = 7 + 4.sqrt3
+
+   Step 3 - subtract:
+   - (8 + 4.sqrt3) - (7 + 4.sqrt3)
+   - = 8 - 7 + 4.sqrt3 - 4.sqrt3
+   - = 1
+
+   Answer: 1
+
+   Note: sqrt12 = 2.sqrt3, which was used in step 1.
 9. **9+7+5+.......ধারাটির যোগফল -১৪৪ হলে, n = কত?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+
+   Answer: ধারাটি: ৯ + ৭ + ৫ + ...
+
+   এটি একটি সমান্তর ধারা।
+   - প্রথম পদ a = ৯
+   - সাধারণ অন্তর d = ৭ - ৯ = -২
+   - সমষ্টি S = -১৪৪
+
+   ধাপ ১ - সমান্তর ধারার সমষ্টির সূত্র:
+   - S = (n/2)[2a + (n - 1)d]
+
+   ধাপ ২ - মান বসানো:
+   - -১৪৪ = (n/2)[2(9) + (n - 1)(-2)]
+   - -১৪৪ = (n/2)[18 - 2n + 2]
+   - -১৪৪ = (n/2)(20 - 2n)
+   - -১৪৪ = n(10 - n)
+
+   ধাপ ৩ - সমীকরণ সাজানো:
+   - -১৪৪ = 10n - n^2
+   - n^2 - 10n - 144 = 0
+
+   ধাপ ৪ - উৎপাদকে বিশ্লেষণ:
+   - n^2 - 18n + 8n - 144 = 0
+   - n(n - 18) + 8(n - 18) = 0
+   - (n - 18)(n + 8) = 0
+   - n = 18 অথবা n = -8
+
+   পদসংখ্যা ঋণাত্মক হতে পারে না, তাই n = ১৮।
+
+   উত্তর: n = ১৮
+
+   যাচাই: n = ১৮ হলে সমষ্টি = ১৮(১০ - ১৮) = ১৮ x (-৮) = -১৪৪। মিলে গেছে।
 10. **পিতার বর্তমান বয়স পুত্রের বয়সের ৩ গুণ। ৫ বছর আগে পিতার বয়স পুত্রের বয়সের ৪ গুণ ছিল। পিতা ও পুত্রের বর্তমান বয়স কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+    Answer: ধরি, পুত্রের বর্তমান বয়স = x বছর।
+
+    ধাপ ১ - প্রথম শর্ত:
+    - পিতার বর্তমান বয়স পুত্রের বয়সের ৩ গুণ
+    - পিতার বয়স = ৩x বছর
+
+    ধাপ ২ - দ্বিতীয় শর্ত (৫ বছর আগে):
+    - পুত্রের বয়স ছিল = (x - ৫) বছর
+    - পিতার বয়স ছিল = (৩x - ৫) বছর
+    - শর্ত অনুযায়ী: ৩x - ৫ = ৪(x - ৫)
+
+    ধাপ ৩ - সমীকরণ সমাধান:
+    - ৩x - ৫ = ৪x - ২০
+    - ৩x - ৪x = -২০ + ৫
+    - -x = -১৫
+    - x = ১৫
+
+    ধাপ ৪ - বয়স নির্ণয়:
+    - পুত্রের বর্তমান বয়স = ১৫ বছর
+    - পিতার বর্তমান বয়স = ৩ x ১৫ = ৪৫ বছর
+
+    উত্তর: পিতার বর্তমান বয়স ৪৫ বছর এবং পুত্রের বর্তমান বয়স ১৫ বছর।
+
+    যাচাই: ৫ বছর আগে পিতার বয়স ছিল ৪০ এবং পুত্রের ১০; ৪০ = ৪ x ১০। মিলে গেছে।
 11. **দুইটি সংখ্যার যোগফল ১১২০ এবং বিয়োগফল বড় সংখ্যাটির ২/৩ অংশ। সংখ্যা দুইটি কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+    Answer: ধরি, বড় সংখ্যা = a এবং ছোট সংখ্যা = b।
+
+    ধাপ ১ - প্রদত্ত শর্ত:
+    - a + b = ১১২০ ... (i)
+    - a - b = (২/৩) a ... (ii)
+
+    ধাপ ২ - (ii) নং সমীকরণ সরল করা:
+    - a - b = ২a/৩
+    - a - ২a/৩ = b
+    - (৩a - ২a)/৩ = b
+    - a/৩ = b
+    - অর্থাৎ b = a/৩
+
+    ধাপ ৩ - (i) নং সমীকরণে বসানো:
+    - a + a/৩ = ১১২০
+    - (৩a + a)/৩ = ১১২০
+    - ৪a/৩ = ১১২০
+    - ৪a = ৩৩৬০
+    - a = ৮৪০
+
+    ধাপ ৪ - ছোট সংখ্যা নির্ণয়:
+    - b = ৮৪০/৩ = ২৮০
+
+    উত্তর: সংখ্যা দুইটি ৮৪০ এবং ২৮০।
+
+    যাচাই: যোগফল = ৮৪০ + ২৮০ = ১১২০। বিয়োগফল = ৮৪০ - ২৮০ = ৫৬০, এবং বড় সংখ্যার ২/৩ অংশ = (২/৩) x ৮৪০ = ৫৬০। উভয় শর্তই মিলেছে।
 12. **\log_3 \frac{1}{81} এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+    Answer: নির্ণেয় মান = log ভিত্তি ৩ এ (১/৮১)
+
+    ধাপ ১ - ১/৮১ কে ৩ এর ঘাত আকারে লেখা:
+    - ৮১ = ৩^৪
+    - সুতরাং ১/৮১ = ১/৩^৪ = ৩^(-৪)
+
+    ধাপ ২ - লগারিদমে বসানো:
+    - log ভিত্তি ৩ এ ৩^(-৪)
+
+    ধাপ ৩ - লগারিদমের সূত্র প্রয়োগ, log ভিত্তি a এ a^m = m:
+    - = -৪
+
+    উত্তর: -৪
+
+    যাচাই: ৩^(-৪) = ১/৮১। সংজ্ঞা অনুযায়ী লগারিদম হলো সেই ঘাত, যাতে ভিত্তিকে উন্নীত করলে নির্দিষ্ট সংখ্যাটি পাওয়া যায়। এখানে ৩ কে -৪ ঘাতে উন্নীত করলে ১/৮১ পাওয়া যায়, তাই উত্তর -৪।
 13. **x + y = 7 এবং xy = 10 হলে এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+
+    Answer: প্রশ্নে কোন রাশির মান চাওয়া হয়েছে তা উল্লেখ নেই। x + y = ৭ এবং xy = ১০ থেকে সচরাচর যেসব রাশি চাওয়া হয়, সেগুলোর মান নিচে দেওয়া হলো।
+
+    (ক) x^2 + y^2 এর মান:
+    - x^2 + y^2 = (x + y)^2 - 2xy
+    - = (৭)^২ - ২(১০)
+    - = ৪৯ - ২০
+    - = ২৯
+
+    (খ) x - y এর মান:
+    - (x - y)^2 = (x + y)^2 - 4xy
+    - = ৪৯ - ৪০
+    - = ৯
+    - x - y = plus or minus ৩
+
+    (গ) x^3 + y^3 এর মান:
+    - x^3 + y^3 = (x + y)^3 - 3xy(x + y)
+    - = ৩৪৩ - ৩(১০)(৭)
+    - = ৩৪৩ - ২১০
+    - = ১৩৩
+
+    (ঘ) সংখ্যা দুইটি নির্ণয়:
+    - x ও y হলো t^2 - 7t + 10 = 0 সমীকরণের বীজ
+    - t^2 - 5t - 2t + 10 = 0
+    - (t - 5)(t - 2) = 0
+    - t = ৫ অথবা t = ২
+
+    অর্থাৎ সংখ্যা দুইটি ৫ ও ২। যাচাই: ৫ + ২ = ৭ এবং ৫ x ২ = ১০। মিলে গেছে।
 14. **২. x + \frac{1}{x} = 4 হলে, x^2 + \frac{1}{x^2} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+
+    Answer: দেওয়া আছে, x + 1/x = ৪। নির্ণেয় x^2 + 1/x^2 এর মান।
+
+    ধাপ ১ - উভয় পক্ষকে বর্গ করি:
+    - (x + 1/x)^2 = 4^2
+
+    ধাপ ২ - বাম পক্ষ বিস্তৃত করি:
+    - x^2 + 2 . x . (1/x) + 1/x^2 = ১৬
+    - x^2 + 2 + 1/x^2 = ১৬   [কারণ x . (1/x) = 1]
+
+    ধাপ ৩ - ২ স্থানান্তর করি:
+    - x^2 + 1/x^2 = ১৬ - ২
+    - x^2 + 1/x^2 = ১৪
+
+    উত্তর: ১৪
+
+    সংশ্লিষ্ট সূত্রসমূহ:
+    - x^2 + 1/x^2 = (x + 1/x)^2 - 2
+    - x^2 - 1/x^2 ... এর জন্য (x - 1/x)^2 = (x + 1/x)^2 - 4 = 16 - 4 = 12, তাই x - 1/x = plus or minus 2.sqrt3
+    - x^3 + 1/x^3 = (x + 1/x)^3 - 3(x + 1/x) = 64 - 12 = 52
+    - x^4 + 1/x^4 = (x^2 + 1/x^2)^2 - 2 = 196 - 2 = 194
 15. **২. x + \frac{1}{x} = \sqrt{3} হলে x^3 + \frac{1}{x^3} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+
+    Answer: দেওয়া আছে, x + 1/x = sqrt3। নির্ণেয় x^3 + 1/x^3 এর মান।
+
+    ধাপ ১ - উপযুক্ত অভেদ ব্যবহার করি:
+    - (a + b)^3 = a^3 + b^3 + 3ab(a + b)
+    - এখানে a = x, b = 1/x, তাই ab = 1
+    - (x + 1/x)^3 = x^3 + 1/x^3 + 3(x + 1/x)
+
+    ধাপ ২ - সাজিয়ে লিখি:
+    - x^3 + 1/x^3 = (x + 1/x)^3 - 3(x + 1/x)
+
+    ধাপ ৩ - মান বসাই:
+    - = (sqrt3)^3 - 3(sqrt3)
+
+    ধাপ ৪ - হিসাব:
+    - (sqrt3)^3 = sqrt3 x sqrt3 x sqrt3 = 3 . sqrt3
+    - = 3.sqrt3 - 3.sqrt3
+    - = 0
+
+    উত্তর: ০
+
+    ব্যাখ্যা: x + 1/x = sqrt3 থেকে x^2 - (sqrt3)x + 1 = 0 পাওয়া যায়, যার বীজ জটিল সংখ্যা এবং এগুলো ঐক্যের ষষ্ঠ মূলের সঙ্গে সম্পর্কিত। এ কারণেই x^3 + 1/x^3 এর মান শূন্য হয়, অর্থাৎ x^3 = -1/x^3।
 16. **M^0 + \sqrt[3]{8} + \text{Logs}_5{125} + (0100)^2 + 5** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+
+    Answer: রাশিটি: M^0 + cube root of 8 + log ভিত্তি ৫ এ ১২৫ + (0100) দ্বিমিক + ৫
+
+    প্রতিটি পদ আলাদাভাবে নির্ণয়:
+
+    ধাপ ১ - M^0:
+    - শূন্য ঘাতের নিয়ম অনুযায়ী শূন্য নয় এমন যেকোনো সংখ্যার শূন্য ঘাত ১
+    - M^0 = ১
+
+    ধাপ ২ - ৮ এর ঘনমূল:
+    - ৮ = ২^৩
+    - cube root of 8 = ২
+
+    ধাপ ৩ - log ভিত্তি ৫ এ ১২৫:
+    - ১২৫ = ৫^৩
+    - log ভিত্তি ৫ এ ৫^৩ = ৩
+
+    ধাপ ৪ - (0100) দ্বিমিক সংখ্যাকে দশমিকে রূপান্তর:
+    - 0100 (দ্বিমিক) = (0 x 2^3) + (1 x 2^2) + (0 x 2^1) + (0 x 2^0)
+    - = 0 + 4 + 0 + 0
+    - = ৪
+
+    ধাপ ৫ - শেষ পদ:
+    - ৫
+
+    ধাপ ৬ - যোগ:
+    - ১ + ২ + ৩ + ৪ + ৫ = ১৫
+
+    উত্তর: ১৫
+
+    নোট: যদি (0100) কে দ্বিমিক না ধরে দশমিক ১০০ এর বর্গ ধরা হয়, তবে পদটি হবে ১০,০০০ এবং মোট মান দাঁড়াবে ১০,০১১। তবে আইটি বিষয়ের প্রশ্নে এবং ১ + ২ + ৩ + ৪ + ৫ এর সুশৃঙ্খল ধারার কারণে দ্বিমিক ব্যাখ্যাটিই অভিপ্রেত। <!-- verify -->
 
 ## Set Theory & Discrete Math (13)
 
