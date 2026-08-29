@@ -2166,28 +2166,436 @@
 
 1. **What should be checked before buying servers?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 318 (ET: N/A)]*
 
+
+   Answer: Points to check before buying a server:
+
+   Workload and requirement analysis:
+   - What the server will actually do: database, application, file, web, virtualisation host, backup or domain controller. The requirement differs completely between them; a database server needs I/O and memory, a virtualisation host needs cores and memory, and a file server needs storage capacity.
+   - Present load and expected growth over the intended life of three to five years, so the machine is not obsolete within a year.
+   - Number of concurrent users and peak transaction volume.
+
+   Processor:
+   - Number of sockets, cores and threads, the clock speed, the cache size and the generation. More cores for virtualisation and parallel work; higher clock speed for single threaded applications.
+   - Whether the workload benefits from a particular instruction set or from GPU acceleration.
+
+   Memory:
+   - Capacity, and equally important the number of DIMM slots left free for future expansion.
+   - ECC memory is essential in a server, since it corrects single bit errors that would otherwise corrupt data silently.
+   - Memory speed and the number of channels populated.
+
+   Storage:
+   - Type: SSD or NVMe for performance, SAS for a balance of performance and reliability, and SATA or nearline SAS for bulk capacity.
+   - Capacity, the number of drive bays, and whether they are hot swappable.
+   - RAID controller with battery or flash backed write cache, and the RAID level appropriate to the workload.
+   - Whether an external SAN or NAS is to be used instead of internal storage.
+
+   Form factor and physical fit:
+   - Rack mounted, tower or blade, and how many rack units it occupies; whether the rack has the space, the depth and the weight capacity.
+
+   Network:
+   - Number and speed of network ports, 1, 10 or 25 Gbps, redundant ports for teaming, and dedicated ports for management and for storage traffic.
+
+   Power and cooling:
+   - Redundant hot swap power supplies, the total power draw, and whether the existing UPS, generator and cooling can support it.
+   - Power efficiency rating, since electricity is a large part of the whole life cost.
+
+   Reliability, availability and serviceability:
+   - Redundancy of fans, power supplies and disks; hot swap capability; and predictive failure alerting.
+
+   Remote management:
+   - Out of band management such as Dell iDRAC, HPE iLO or Lenovo XClarity, which allows the server to be powered, configured and reinstalled remotely even when the operating system is down. This is essential in any data centre.
+
+   Compatibility and support:
+   - Operating system and hypervisor certification, application vendor support for the exact configuration, and driver availability.
+
+   Warranty and vendor support:
+   - Length of warranty, response time of the service level agreement, on-site support, availability of spare parts locally in Bangladesh, and the reputation of the local partner. A cheap server with no local support is a false economy.
+
+   Scalability:
+   - Free CPU sockets, DIMM slots, drive bays and PCIe slots, so that the server can be upgraded rather than replaced.
+
+   Security:
+   - TPM module, Secure Boot, firmware signing and hardware root of trust.
+
+   Cost:
+   - Total cost of ownership rather than purchase price alone: licences, power, cooling, rack space, support contract and eventual disposal.
+
+   Other practical points:
+   - Delivery lead time, whether the model is at end of life, the vendor's product roadmap, and standardising on one vendor and one family, which simplifies spares and administration.
 2. **Scenario based descriptive question for server related problem ( How do you handle those problem for your company )** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
+
+   Answer: A structured method for handling a server problem, which is what such a scenario question is testing.
+
+   Step 1, detect and record:
+   - Establish exactly what the symptom is, when it started, who is affected and what changed recently. Most incidents follow a change.
+   - Log the incident with a severity level and start the clock against the service level agreement.
+
+   Step 2, communicate:
+   - Inform the affected business units and management immediately with what is known, what is being done and when the next update will come. Silence during an outage causes more damage than the outage.
+   - Convene the required people: system, network, database and application administrators, and the vendor if a hardware fault is suspected.
+
+   Step 3, contain and restore service first:
+   - The priority is to restore service, not to find the root cause. Fail over to the standby node or the DR site, restart the service, roll back the recent change, or move the workload to another host.
+   - If the cause is a security incident, isolate the server from the network before anything else, and preserve the evidence.
+
+   Step 4, diagnose systematically:
+   - Work up the layers: is the machine powered and are the hardware LEDs and the iDRAC or iLO log clean; is the network reachable; is the operating system responding; is the service running; is the application working; is the database available.
+   - Check resources: CPU, memory, disk space, disk I/O wait and network utilisation. A full disk and exhausted memory are the two commonest causes.
+   - Read the logs: system, application, database and security logs around the exact time of failure.
+   - Check the monitoring history to see what was rising before the failure.
+
+   Step 5, fix:
+   - Apply the correct remedy: replace the failed disk or power supply, extend the file system, kill the runaway process, correct the configuration, restore from backup, or apply the vendor's patch.
+   - Test the fix in a non-production environment first wherever the situation allows.
+
+   Step 6, verify and close:
+   - Confirm with the business users that the service is genuinely working, not merely that the server is up.
+   - Monitor closely for a further period to be sure the problem has not simply been masked.
+
+   Step 7, root cause analysis and prevention:
+   - Determine why it happened, and equally why it was not prevented or detected earlier.
+   - Take preventive action: add the missing monitoring threshold, correct the capacity plan, fix the backup, improve the change process, or add redundancy.
+   - Document the incident and share the lessons; update the runbook so the next person resolves it faster.
+
+   Common scenarios and their handling:
+   - Server down: check power, hardware LEDs and the out of band management log; fail over to the standby; replace the faulty component.
+   - Very slow performance: identify the bottleneck among CPU, memory, disk I/O and network; find the offending process or query; check for a full disk or swapping.
+   - Disk full: identify and archive or delete the large files, usually logs; extend the volume; then fix the log rotation that allowed it.
+   - Disk failure in a RAID array: replace the drive, allow the rebuild to complete before doing anything else, and verify the backup meanwhile.
+   - Service crashing repeatedly: read the crash logs, check for a recent update or configuration change, roll back, and involve the vendor.
+   - Security incident: isolate, preserve evidence, assess the scope, patch, change credentials, restore from a known good backup and report as required.
+   - Data corruption: stop writes, restore from the last good backup, and verify the RPO actually achieved.
+
+   Preventive practices to state:
+   - Redundancy and clustering, tested backups with periodic restore drills, proactive monitoring with alert thresholds, disciplined patch and change management, capacity planning, documented runbooks and an on-call rota, and regular DR drills.
 3. **What are the key hardware components that make up a typical server, and how do they contribute to its overall performance and functionality?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 537 (ET: MIST)]*
 
+
+   Answer: The key hardware components of a typical server and their contribution:
+
+   Processor, the CPU:
+   - Servers use one, two or more sockets with Intel Xeon or AMD EPYC processors, which have many more cores, much larger cache and support far more memory than a desktop processor.
+   - Contribution: the number of cores and threads determines how many virtual machines, containers or concurrent requests can be handled truly in parallel; clock speed determines single threaded performance; and cache size heavily affects database and transactional throughput.
+
+   Memory, the RAM:
+   - Server memory is ECC registered DDR4 or DDR5, in capacities from tens of gigabytes to several terabytes across many DIMM slots.
+   - Contribution: it holds the running workload, the database buffer pool and the file system cache. Sufficient memory is the difference between a workload served from memory in microseconds and one served from disk in milliseconds. ECC detects and corrects single bit errors, preventing the silent data corruption that would be unacceptable in a server.
+
+   Storage subsystem:
+   - Drives: NVMe SSDs for the highest performance, SAS SSDs and disks for a balance of performance and reliability, and nearline SAS or SATA disks for bulk capacity. Drive bays are hot swappable.
+   - RAID controller with battery or flash backed write cache, which combines the drives into a fault tolerant array and greatly accelerates writes.
+   - Contribution: storage is usually the limiting factor for database and file workloads. IOPS and latency, rather than capacity, determine how the application feels, and RAID provides both performance and survival of a disk failure.
+
+   Motherboard and chipset:
+   - Contribution: it provides the sockets, the memory channels, the PCIe lanes and the interconnects. The number of PCIe lanes limits how many high speed cards and NVMe drives can be fitted.
+
+   Network interface cards:
+   - Multiple 1, 10 or 25 Gbps ports, usually teamed for redundancy and throughput, with separate ports for management and sometimes for storage traffic.
+   - Contribution: the network is the path to every client, so its bandwidth, latency and redundancy determine both throughput and availability. Offload features reduce the CPU cost of networking.
+
+   Power supply units:
+   - Redundant, hot swappable, high efficiency units fed from separate power paths.
+   - Contribution: they allow the server to survive the failure of one supply or one feed, which is the foundation of the Tier III and Tier IV designs.
+
+   Cooling:
+   - Redundant hot swappable fans, heat sinks and carefully engineered front to back airflow.
+   - Contribution: without adequate cooling the processor throttles its own speed, so cooling directly determines sustained performance, and thermal stress shortens component life.
+
+   Out of band management controller:
+   - Dell iDRAC, HPE iLO or Lenovo XClarity, with its own processor, network port and power.
+   - Contribution: it allows the server to be monitored, powered, configured and reinstalled remotely even when the operating system is dead, which is essential when the machine is in a distant data centre.
+
+   Expansion cards:
+   - RAID and HBA cards, network cards, fibre channel adapters for SAN connectivity, and GPUs for computation.
+   - Contribution: they extend the server for specific workloads without replacing it.
+
+   Chassis and form factor:
+   - Rack mount, tower or blade, with hot swap bays and rails.
+   - Contribution: it determines density, airflow, serviceability and how well the server fits the data centre design.
+
+   Firmware and TPM:
+   - UEFI firmware and a Trusted Platform Module.
+   - Contribution: Secure Boot and hardware root of trust protect against firmware level attacks, and the TPM stores encryption keys securely.
+
+   - The overall point: a server differs from a desktop not mainly in speed but in redundancy, error correction, remote manageability and the ability to run continuously for years, and each of these components contributes to one of those properties.
 4. **Discuss server maintenance best practices, including routine tasks like cleaning, monitoring, and applying security patches. How do these practices contribute to server longevity and performance?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 540 (ET: MIST)]*
 
+
+   Answer: Server maintenance best practices, and how they contribute to longevity and performance.
+
+   Physical and environmental maintenance:
+   - Clean dust from air intakes, fans and heat sinks on a scheduled basis. Dust is the commonest physical cause of overheating, and an overheating processor throttles its clock speed and ages faster.
+   - Verify that all fans are running and replace any that are noisy or slow before they fail.
+   - Maintain the environment: temperature within the ASHRAE range, humidity controlled, hot and cold aisle containment intact, and cable management that does not block airflow.
+   - Check power supplies, both feeds, UPS batteries and the generator on a schedule, and test them under load.
+
+   Monitoring:
+   - Monitor continuously: CPU, memory, disk space, disk I/O, network, temperature, fan speed, power draw and hardware health, with alert thresholds set below the point of failure.
+   - Watch for predictive failure alerts on disks, SMART attributes and rising ECC error counts, which give days or weeks of warning.
+   - Review logs regularly: system, application, security and the out of band management log.
+   - Keep capacity trending, so that growth is anticipated rather than discovered when a disk fills.
+
+   Software and patching:
+   - Apply security patches promptly, following a defined cycle, testing first in a non-production environment and always with a rollback plan.
+   - Update firmware and BIOS on a planned schedule, keeping versions consistent across a cluster.
+   - Update drivers, and remove software that is no longer used.
+   - Follow disciplined change management: every change approved, documented, scheduled and reversible.
+
+   Backup and recovery:
+   - Take backups on the defined schedule, and follow the 3-2-1 rule: three copies, on two kinds of media, one of them off site.
+   - Test the restore, not merely the backup. An untested backup is not a backup.
+   - Verify that the RPO and RTO actually achieved match what the business was promised, and rehearse the disaster recovery plan.
+
+   Security:
+   - Harden the build: remove unnecessary services and default accounts, close unused ports, and apply a baseline configuration.
+   - Enforce least privilege and strong authentication, review accounts regularly and remove those of departed staff.
+   - Run endpoint protection, keep the firewall rules current, and audit privileged access.
+   - Rotate credentials and keep certificates from expiring.
+
+   Storage and file system:
+   - Watch disk space and clear or rotate logs before they fill the volume.
+   - Verify RAID health and replace a failed disk immediately, allowing the rebuild to complete before any other work.
+   - Keep adequate free space, since a nearly full file system degrades performance sharply.
+   - Check database health, indexes, statistics and integrity on a schedule.
+
+   Documentation and process:
+   - Maintain accurate documentation of the configuration, the network and power connections, the dependencies and the runbooks.
+   - Keep an asset register with warranty expiry dates and a hardware refresh plan.
+   - Conduct periodic audits and post-incident reviews.
+
+   How these practices contribute:
+   - Longevity: controlling heat and dust is the single greatest determinant of component life, since electronics age exponentially faster at higher temperatures. Stable power and clean firmware prevent the stresses that shorten life. Replacing a predicted failure before it happens prevents the cascade of damage a real failure causes.
+   - Performance: free disk space, healthy RAID, current drivers and firmware, adequate memory and unobstructed cooling all keep the server operating at its designed speed rather than throttled or swapping. Capacity trending prevents the slow degradation that users notice long before an alert fires.
+   - Availability: monitoring and predictive alerts turn unplanned outages into planned maintenance. Tested backups and rehearsed recovery turn a disaster into an inconvenience.
+   - Security: prompt patching closes the window in which a known vulnerability can be exploited, and hardening reduces the attack surface permanently.
+   - Cost: preventive maintenance is far cheaper than emergency repair, and equipment that lasts its full expected life defers capital expenditure.
+   - The underlying principle: most serious server incidents are not sudden hardware failures but the accumulated result of neglected maintenance, so discipline matters more than any single technical measure.
 5. **Difference between SAS and SATA. Which one is best server?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)]*
+
+
+   Answer:
+
+   | Point | SAS | SATA |
+   |---|---|---|
+   | Full form | Serial Attached SCSI | Serial Advanced Technology Attachment |
+   | Designed for | Enterprise servers and storage arrays | Desktops, laptops and bulk storage |
+   | Interface speed | 12 Gbps, and 24 Gbps in SAS-4 | 6 Gbps in SATA III |
+   | Rotational speed of disks | 10,000 and 15,000 rpm | 5,400 and 7,200 rpm |
+   | Duplex | Full duplex, so it reads and writes simultaneously | Half duplex, one direction at a time |
+   | Ports per drive | Dual ported, giving two independent paths for redundancy | Single ported |
+   | Command queue | Up to 256 commands, with a richer SCSI command set | 32 commands with NCQ |
+   | Error handling | Enterprise grade, with end to end data protection and detailed error reporting | Basic |
+   | Reliability, MTBF | About 1.2 to 1.6 million hours | About 700,000 to 1 million hours |
+   | Annual workload rating | Continuous, 24 hours a day, 7 days a week duty | Typically rated for lighter duty |
+   | Cable length | Up to 10 metres | About 1 metre |
+   | Number of devices per controller | Up to 65,535 through expanders | Up to 4 or 8 typically |
+   | Capacity per drive | Lower for the same generation | Higher |
+   | Cost per gigabyte | Much higher | Much lower |
+   | Compatibility | A SAS controller can drive both SAS and SATA drives; a SATA controller cannot drive a SAS drive | — |
+
+   Which is best for a server:
+   - SAS is the better choice for a server in general, and it is what should be stated as the answer. Its dual ports give path redundancy, its full duplex operation and deeper command queue give far better performance under the random, concurrent, multi-user load that a server actually experiences, its error handling and MTBF are built for continuous duty, and it supports far more drives per controller through expanders.
+   - SATA remains the right choice for bulk, sequential and less critical data: backups, archives, media storage and low cost secondary storage, where capacity per taka matters more than IOPS or redundancy. Nearline SAS drives are a middle option, offering SATA capacity with a SAS interface.
+   - The practical modern answer: for a database, a virtualisation host or any transactional workload, NVMe SSDs have now displaced both, since they attach directly over PCI Express and deliver an order of magnitude more IOPS at far lower latency. A common design today is NVMe for the hot data, SAS SSD for the middle tier and SATA or nearline SAS for capacity, tiered according to what each workload actually needs.
 
 ## Quantum Computing & Emerging Technologies (3)
 
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer:
+
+   What quantum computing is:
+   - Quantum computing is a form of computation that uses the principles of quantum mechanics — superposition, entanglement and interference — to process information, instead of the classical bits used by an ordinary computer.
+   - A classical bit is either 0 or 1. A quantum bit, or qubit, can be in a superposition of both states at once, so n qubits represent 2ⁿ states simultaneously. Fifty qubits therefore describe more than a thousand trillion states at the same time.
+   - Entanglement links qubits so that the state of one instantly determines the state of another, however far apart, which allows correlations no classical system can reproduce.
+   - Interference is used to amplify the correct answers and cancel the wrong ones, which is what a quantum algorithm actually does.
+   - Physical implementations: superconducting circuits used by IBM and Google, trapped ions used by IonQ, photonic systems, and topological qubits under research by Microsoft.
+   - Key algorithms: Shor's algorithm, which factors large integers exponentially faster than any known classical method; and Grover's algorithm, which searches an unsorted database in the square root of the classical time.
+
+   Importance and advantages:
+   - Exponential speed for particular problems: tasks that would take a classical supercomputer thousands of years could take minutes, for a narrow class of problems.
+   - Cryptography: Shor's algorithm would break RSA and elliptic curve cryptography, which is why post-quantum cryptography is being standardised now, before quantum computers become capable enough. This is the single most consequential implication for banking and government.
+   - Drug discovery and materials science: simulating molecules and chemical reactions is naturally a quantum problem, and it is where the first genuine advantage is expected. This could shorten drug development from years to months.
+   - Optimisation: portfolio optimisation, supply chain routing, traffic management and scheduling, where the number of combinations defeats classical methods.
+   - Machine learning: quantum machine learning may accelerate training and certain classes of pattern recognition.
+   - Climate and weather modelling, and financial risk simulation, both of which are limited today by classical computing power.
+   - Quantum key distribution, which offers communication whose security rests on physics rather than on computational difficulty.
+
+   Disadvantages and limitations:
+   - Decoherence: qubits lose their quantum state within microseconds through the slightest interaction with their environment, which is the fundamental obstacle.
+   - Extreme operating conditions: superconducting qubits must be cooled to about 15 millikelvin, colder than deep space, which requires large and expensive dilution refrigerators.
+   - Error rates: quantum gates are far less reliable than classical ones, and quantum error correction may need a thousand or more physical qubits to make one reliable logical qubit.
+   - Scalability: current machines have hundreds to about a thousand physical qubits, while breaking RSA-2048 would need millions of error corrected qubits. This is why the threat is real but not immediate.
+   - Cost and accessibility: only a few organisations can build or operate one, so access is through cloud services such as IBM Quantum and Amazon Braket.
+   - Narrow applicability: a quantum computer is not a faster general purpose computer. For most everyday tasks — word processing, databases, web serving — it offers no advantage at all, and classical machines remain superior.
+   - Immature software and a severe shortage of people who can write quantum algorithms.
+   - Security threat: the same power that solves useful problems would break the encryption protecting banking, government and personal data, and encrypted data stolen today could be decrypted later, which is the "harvest now, decrypt later" risk.
+   - No established error corrected, fault tolerant machine yet exists, so practical commercial advantage remains some years away.
 2. **What is the name of molecular scale computer?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+
+   Answer: A molecular scale computer is called a molecular computer, and the field is known as molecular computing or, more broadly, nanocomputing.
+
+   - It uses individual molecules, or assemblies of molecules, as the switching and storage elements, instead of the transistors etched into silicon. The aim is a device operating at the scale of a few nanometres, far below what conventional lithography can reach.
+   - Related and overlapping terms: a DNA computer, which encodes the problem in strands of DNA and uses the massive parallelism of biochemical reactions to solve it, demonstrated by Leonard Adleman in 1994 on the Hamiltonian path problem; a biocomputer or biochemical computer; a chemical computer; and a nanocomputer as the general category, which also includes quantum dot and carbon nanotube devices.
+   - Motivation: silicon transistors are approaching physical limits at a few nanometres, so Moore's law cannot continue indefinitely. Molecular devices promise far higher density, extremely low power consumption and massive parallelism, and DNA in particular offers extraordinary storage density, on the order of an exabyte per cubic millimetre.
+   - Limitations: the technology is still at the research stage, it is very slow for sequential operations, it is difficult to read the result out reliably, error rates are high, and there is no practical general purpose molecular computer today.
+   - The realistic near term applications are DNA data storage for archival purposes and molecular sensing and diagnostics, rather than general computation.
 3. **Virtual Reality বলতে কি বুঝায় ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
+
+
+   Answer:
+
+   What Virtual Reality means:
+   - Virtual Reality, VR, is a computer generated simulation of a three dimensional environment that a user can enter and interact with as though it were real, using specialised equipment that replaces the senses of sight and hearing, and sometimes touch.
+   - The essential property is immersion: the real world is shut out entirely and replaced by the simulated one, which distinguishes VR from Augmented Reality, where computer generated content is overlaid on the real world.
+
+   How it works:
+   - A head mounted display, such as the Meta Quest, HTC Vive or PlayStation VR, presents a slightly different image to each eye, which the brain fuses into a stereoscopic three dimensional scene.
+   - Head and body tracking, using sensors, cameras and gyroscopes, follows the user's movement so that the view changes exactly as it would in reality. Low latency is essential, since delay causes motion sickness.
+   - Hand controllers, gloves or hand tracking allow the user to reach out and manipulate objects.
+   - Spatial audio places sounds in three dimensions, and haptic feedback provides vibration or force so that contact can be felt.
+   - The scene is rendered in real time at a high frame rate, typically 90 frames per second or more, which is why VR is computationally demanding.
+
+   Types:
+   - Non-immersive, viewed on an ordinary screen, as in a simulation or a game.
+   - Semi-immersive, such as a flight simulator with large projected screens.
+   - Fully immersive, using a head mounted display with full tracking.
+
+   Applications:
+   - Education and training: medical students practising surgery, pilots in flight simulators, and industrial and military training, where mistakes are safe and repeatable.
+   - Healthcare: surgical planning and rehearsal, physiotherapy, and exposure therapy for phobias and post-traumatic stress.
+   - Architecture and engineering: walking through a building before it is constructed, and design review.
+   - Gaming and entertainment, which is the largest commercial market.
+   - Virtual tourism, museums and heritage preservation.
+   - Retail: virtual showrooms and trying products before purchase.
+   - Remote collaboration and virtual meetings, and the wider idea of the metaverse.
+
+   Limitations:
+   - Cost of the equipment, motion sickness and eye strain, the need for physical space, isolation from the real environment, the computational power required, and limited high quality content.
+
+   Related terms: Augmented Reality, which overlays digital content on the real world as Pokemon Go and heads up displays do; Mixed Reality, in which virtual objects interact with real ones; and Extended Reality, XR, as the umbrella term for all three.
 
 ## Digital Banking & Financial Inclusion (2)
 
 1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 554 (ET: BIBM)]*
 
+
+   Answer:
+
+   What digital banking is:
+   - Digital banking is the delivery of banking services through digital channels — internet banking, mobile applications, ATMs, agent points and digital payment systems — so that a customer can carry out almost every transaction without visiting a branch.
+   - It is more than an electronic front end on an old process: it means digitising the whole chain, from customer onboarding through e-KYC, to transaction processing, to service and support.
+
+   How it differs from traditional banking:
+
+   | Point | Traditional banking | Digital banking |
+   |---|---|---|
+   | Channel | Physical branch, counter, cheque, passbook | Website, mobile application, ATM, agent point |
+   | Hours | Fixed banking hours on working days | 24 hours a day, every day of the year |
+   | Location | The customer must travel to the branch | Anywhere with a network connection |
+   | Speed | Slow; a transfer may take hours or days | Instant, through RTGS, BEFTN and mobile financial services |
+   | Paperwork | Heavy: forms, signatures, vouchers | Minimal: e-KYC, digital signature, electronic statements |
+   | Account opening | Visit the branch with documents and an introducer | e-KYC with NID verification, often within minutes |
+   | Cost per transaction | High: premises, staff, cash handling | A small fraction of the branch cost |
+   | Reach | Only where a branch is commercially viable | Rural and remote areas through agents and mobile wallets |
+   | Personal service | Face to face relationship and advice | Chatbot, call centre and self service; less personal |
+   | Security risk | Physical theft, forged cheque, robbery | Phishing, account takeover, malware; needs multi-factor authentication |
+   | Records | Manual ledgers and physical vouchers | Fully digital, searchable and auditable |
+   | Dependence | On staff availability | On connectivity, electricity and system uptime |
+
+   How digital banking promotes financial inclusion:
+   - It removes distance as a barrier. A branch is not commercially viable in a village of a few thousand people, but an agent with a tablet and a mobile connection is. Agent banking and mobile financial services have brought formal financial services to areas that had none.
+   - It removes cost as a barrier. The cost of serving a small account through a branch exceeds the revenue it produces, which is why the poor were excluded. Digital delivery cuts the cost per transaction to a level at which a small account becomes viable.
+   - It simplifies onboarding. e-KYC with NID verification allows an account to be opened in minutes without an introducer, which removes the requirement that excluded people with no existing banking relationship.
+   - It supports small transactions. Mobile wallets handle amounts of a few taka economically, which a branch cannot.
+   - It reaches women. Women who face mobility or social constraints can transact from home, which is why mobile financial services have raised women's account ownership substantially.
+   - It formalises remittances. Both inward foreign remittance and domestic transfers from a city worker to a rural family move through a recorded, safe and cheap channel instead of informal carriers.
+   - It creates a credit history. Digital transaction records give a lender something to assess, so a small trader or a farmer with no collateral and no formal payslip can become creditworthy. This is the route to micro and SME lending at scale.
+   - It enables government to person payments: stipends, social safety net allowances and subsidies paid directly into a beneficiary's wallet, which reaches the recipient in full and is traceable, removing the leakage of cash distribution.
+   - It supports savings and insurance products designed for very small amounts, which a branch could never administer profitably.
+   - It builds financial literacy and habit, since a person who uses a wallet daily gradually enters the formal system.
+
+   - The Bangladesh evidence: bKash, Nagad, Rocket and agent banking have taken account ownership from a small minority to a large majority of adults within about a decade, which is the clearest demonstration of the argument.
+   - Conditions for it to work: network coverage and electricity, affordable devices and data, digital literacy, an interoperable payment system, consumer protection against fraud and mis-selling, and an agent network that is trusted and supervised. Without these, digital banking widens exclusion instead of reducing it.
 2. **(a) Define Electronic Payment System (EPS) with necessary diagram. Name 5 types of EPS.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
+
+
+   Answer:
+
+   Definition of an Electronic Payment System:
+   - An Electronic Payment System, EPS, is a system that allows payment to be made for goods and services electronically over a network, transferring value from the payer to the payee without the physical exchange of cash or cheques.
+   - Its participants are the customer or payer, the merchant or payee, the issuing bank which holds the customer's account, the acquiring bank which holds the merchant's account, the payment gateway which captures and encrypts the transaction, and the payment processor or switch which routes it between the banks.
+   - Its requirements are authentication of the parties, authorisation of the payment, confidentiality of the data, integrity of the message, non-repudiation, and settlement between the banks.
+
+   ```mermaid
+   graph LR
+       A["Customer / Payer"] --> B["Merchant website or POS terminal"]
+       B --> C["Payment Gateway: captures and encrypts"]
+       C --> D["Payment Processor / Switch"]
+       D --> E["Acquiring Bank"]
+       E --> F["Card Network or Clearing House"]
+       F --> G["Issuing Bank: authorises and debits"]
+       G --> F
+       F --> E
+       E --> C
+       C --> B
+       B --> A
+       G -.->|"Settlement"| E
+   ```
+
+   - Flow: the customer initiates the payment at the merchant, the gateway encrypts and forwards it, the processor routes it to the acquiring bank and the card network, the issuing bank checks the balance and the risk and authorises or declines, the response travels back the same way, and settlement between the banks follows later, usually the next business day.
+
+   Five types of Electronic Payment System:
+   - Card based payment: credit card, debit card and prepaid card, used at a POS terminal, an ATM or online. Examples: Visa, Mastercard and in Bangladesh the National Payment Switch.
+   - Mobile financial services and mobile wallets: value held in a mobile account and transferred by phone. Examples: bKash, Nagad, Rocket and Upay.
+   - Internet banking and electronic fund transfer: transfer directly between bank accounts, through BEFTN for batch transfers and RTGS for large value real time settlement.
+   - Digital or e-wallet and QR based payment: a stored value account in an application, and merchant payment by scanning a QR code, which needs no terminal and suits small merchants.
+   - Electronic cheque and direct debit: a cheque presented and cleared electronically through BACPS, and standing instructions that debit an account automatically for recurring bills.
+   - Two further types often named: cryptocurrency and blockchain based payment, and Unstructured Supplementary Service Data based payment, which works on a feature phone without any Internet connection and matters greatly for inclusion.
+
+   Advantages: speed, convenience, availability around the clock, lower handling cost, a complete transaction record, and support for e-commerce.
+   Disadvantages: dependence on connectivity and electricity, fraud and phishing risk, transaction charges, exclusion of those without devices or literacy, and the need for strong regulation and consumer protection.
 
 ## User Interfaces (CLI vs GUI) (1)
 
 1. **What is CLI?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
+
+
+   Answer: CLI stands for Command Line Interface. It is a text based interface in which the user types commands and the computer responds with text, rather than clicking on graphical elements.
+
+   How it works:
+   - The user types a command at a prompt, presses Enter, and a program called the shell interprets it, runs the corresponding program and prints the output as text.
+   - Common shells: Bash, Zsh and sh on Linux and macOS; Command Prompt and PowerShell on Windows.
+   - Examples of commands: `ls` or `dir` to list files, `cd` to change directory, `mkdir` to create a directory, `cp` to copy, `ping` to test connectivity, and `ipconfig` or `ifconfig` to show network settings.
+
+   Advantages:
+   - Speed and efficiency for an experienced user; one line can do what would take many clicks.
+   - Very low resource consumption, so it works on a server with no graphical environment at all.
+   - Automation: commands can be combined in scripts, so a task is repeated identically and unattended, which is the foundation of system administration and DevOps.
+   - Remote access over a slow or narrow link, using SSH, where a graphical session would be unusable.
+   - Precision and power: many options and combinations are available that a graphical tool does not expose, and commands can be piped together so the output of one becomes the input of another.
+   - Reproducibility and auditability, since the exact command is recorded and can be repeated.
+
+   Disadvantages:
+   - Steep learning curve; the user must know the command names and their syntax.
+   - Unforgiving: a typing mistake can be destructive, and there is usually no confirmation and no undo.
+   - Not discoverable; nothing on the screen suggests what is possible.
+   - Unsuitable for graphical work such as image editing or design.
+
+   Comparison with the GUI:
+
+   | Point | CLI | GUI |
+   |---|---|---|
+   | Interaction | Typed commands | Windows, icons, menus and a pointer |
+   | Learning curve | Steep | Gentle, and discoverable |
+   | Speed for an expert | Very fast | Slower, more steps |
+   | Resource use | Very low | High: memory, CPU and graphics |
+   | Automation | Excellent, through scripts | Limited |
+   | Remote use over a slow link | Excellent | Poor |
+   | Error risk | Higher; commands act immediately | Lower; confirmations and undo |
+   | Typical users | System administrators, developers, network engineers | General users |
+
+   - In practice both are used together: servers and network devices are managed through the CLI because it is scriptable and works over a narrow link, while desktops use a GUI for everyday work.
