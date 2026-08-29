@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 218/239 subtopics · 2481/2673 answers**
+**Overall: 219/239 subtopics · 2496/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -269,12 +269,12 @@ Commit unit: one `##` subtopic.
 - [x] C++ OOP Concepts & Friend Functions (2)
 - [x] Interfaces & Abstract Classes (2)
 
-## operating-system.md — 11/12 sections, 153/168 answers
+## operating-system.md — 12/12 sections, 168/168 answers
 
 - [x] Linux / Unix Commands & Administration (42)
 - [x] CPU Scheduling Algorithms (24)
 - [x] Deadlock & Resource Allocation (22)
-- [ ] OS Concepts & System Software (15)
+- [x] OS Concepts & System Software (15)
 - [x] Virtual Memory & Page Replacement (Thrashing) (15)
 - [x] Memory Management & Paging (13)
 - [x] Process Management & Process States (10)
