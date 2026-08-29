@@ -3,7 +3,7 @@
 `written-answers/` — model answers for every question in `written/`.
 Commit unit: one `##` subtopic.
 
-**Overall: 85/239 subtopics · 968/2673 answers**
+**Overall: 86/239 subtopics · 969/2673 answers**
 
 ## ai-and-ml.md — 11/11 sections, 41/41 answers
 
@@ -69,13 +69,13 @@ Commit unit: one `##` subtopic.
 - [x] High Availability & System Redundancy (1)
 - [x] Cloud Security & Compliance (1)
 
-## compiler-and-toc.md — 3/5 sections, 15/20 answers
+## compiler-and-toc.md — 4/5 sections, 16/20 answers
 
 - [x] Regular Expressions & Finite Automata (6)
 - [x] Grammar & Ambiguity (5)
 - [x] Compiler vs Interpreter (4)
 - [ ] Lexical Analysis & Compiler Phases (4)
-- [ ] Linker & Loader (1)
+- [x] Linker & Loader (1)
 
 ## computer-fundamental.md — 0/10 sections, 0/127 answers
 
