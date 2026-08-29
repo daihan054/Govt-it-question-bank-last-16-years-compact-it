@@ -45,29 +45,275 @@
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
+
+   Answer:
+
+   Step 1, size each subnet:
+   - Subnet A needs 120 addresses. 2⁷ = 128 ≥ 120 + 2, so 7 host bits are needed, giving a /25.
+   - Subnet B needs 60 addresses. 2⁶ = 64 ≥ 60 + 2, so 6 host bits are needed, giving a /26.
+
+   Step 2, allocate sequentially, largest first:
+
+   Subnet A, /25:
+   - Network address: 14.24.74.0/25
+   - Broadcast address: 14.24.74.127
+
+   Subnet B, /26, starting from the next free address 14.24.74.128:
+   - Network address: 14.24.74.128/26
+   - Broadcast address: 14.24.74.191
+
+   Final answer:
+   - Subnet A: 14.24.74.0/25, broadcast 14.24.74.127
+   - Subnet B: 14.24.74.128/26, broadcast 14.24.74.191
+   - Remaining free space: 14.24.74.192/26, that is 64 addresses left for future use.
 2. An organization has been assigned the IPv4 network address 192.168.1.0/24. As part of the network deployment, the network administrator is required to divide the address space into four equal-sized subnets to support different departments. Determine the Network Address, Subnet Mask (both CIDR and dotted-decimal notation). *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+
+   Answer:
+
+   Step 1, bits to borrow:
+   - Number of subnets required = 4, and 2ⁿ ≥ 4 gives n = 2, so 2 bits are borrowed from the host part.
+
+   Step 2, new prefix and mask:
+   - New prefix = /24 + 2 = /26
+   - Subnet mask in dotted decimal = 255.255.255.192
+   - Binary of the last octet: 11000000
+
+   Step 3, block size and the four subnets:
+   - Block size = 256 − 192 = 64 addresses per subnet, of which 62 are usable.
+
+   | Subnet | Network address | Mask | Usable range | Broadcast |
+   |---|---|---|---|---|
+   | 1 | 192.168.1.0/26 | 255.255.255.192 | 192.168.1.1 to 192.168.1.62 | 192.168.1.63 |
+   | 2 | 192.168.1.64/26 | 255.255.255.192 | 192.168.1.65 to 192.168.1.126 | 192.168.1.127 |
+   | 3 | 192.168.1.128/26 | 255.255.255.192 | 192.168.1.129 to 192.168.1.190 | 192.168.1.191 |
+   | 4 | 192.168.1.192/26 | 255.255.255.192 | 192.168.1.193 to 192.168.1.254 | 192.168.1.255 |
+
+   Final answer: subnet mask /26, that is 255.255.255.192, with the four network addresses 192.168.1.0, 192.168.1.64, 192.168.1.128 and 192.168.1.192.
 3. Subnetting logic requires precise binary calculation. A network engineer is tasked with dividing the internal network 192.168.10.0/24 into exactly 4 equal subnets for four different bank branches. Show the mathematical calculation to determine how many bits must be borrowed to create 4 subnets, and state the new Subnet Mask in both CIDR notation and decimal format. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+
+   Answer:
+
+   Step 1, how many bits must be borrowed:
+   - The rule is 2ⁿ ≥ number of subnets required, where n is the number of borrowed bits.
+   - 2¹ = 2, which is less than 4.
+   - 2² = 4, which equals 4. So n = 2 bits must be borrowed.
+
+   Step 2, the new prefix:
+   - Original prefix /24, so 24 + 2 = /26.
+
+   Step 3, the mask in binary and decimal:
+   - /26 means the first 26 bits are 1: 11111111.11111111.11111111.11000000
+   - The last octet 11000000 = 128 + 64 = 192
+   - Subnet mask = 255.255.255.192
+
+   Step 4, verification:
+   - Host bits left = 32 − 26 = 6, so each subnet has 2⁶ = 64 addresses and 2⁶ − 2 = 62 usable hosts.
+   - 4 subnets × 64 = 256 addresses, which is exactly the original /24, so nothing is wasted.
+
+   The four branch subnets:
+
+   | Branch | Network | Usable range | Broadcast |
+   |---|---|---|---|
+   | 1 | 192.168.10.0/26 | 192.168.10.1 to 192.168.10.62 | 192.168.10.63 |
+   | 2 | 192.168.10.64/26 | 192.168.10.65 to 192.168.10.126 | 192.168.10.127 |
+   | 3 | 192.168.10.128/26 | 192.168.10.129 to 192.168.10.190 | 192.168.10.191 |
+   | 4 | 192.168.10.192/26 | 192.168.10.193 to 192.168.10.254 | 192.168.10.255 |
+
+   Final answer: 2 bits must be borrowed, and the new subnet mask is /26, that is 255.255.255.192.
 4. Network Address, Broadcast Address, Subnet Mask and Usable Host IP Range of: 10.0.0.0/30, 192.168.0.0/23, 172.16.1.0/24. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+
+   Answer:
+
+   | Item | 10.0.0.0/30 | 192.168.0.0/23 | 172.16.1.0/24 |
+   |---|---|---|---|
+   | Network address | 10.0.0.0 | 192.168.0.0 | 172.16.1.0 |
+   | Subnet mask | 255.255.255.252 | 255.255.254.0 | 255.255.255.0 |
+   | Broadcast address | 10.0.0.3 | 192.168.1.255 | 172.16.1.255 |
+   | Usable host range | 10.0.0.1 to 10.0.0.2 | 192.168.0.1 to 192.168.1.254 | 172.16.1.1 to 172.16.1.254 |
+   | Usable hosts | 2 | 510 | 254 |
+
+   Working:
+   - /30: host bits = 2, so 2² = 4 addresses and 4 − 2 = 2 usable. This is the standard mask for a point to point router link.
+   - /23: host bits = 9, so 2⁹ = 512 addresses and 510 usable. The block spans two whole third octets, 192.168.0.x and 192.168.1.x.
+   - /24: host bits = 8, so 256 addresses and 254 usable.
 5. (a) IP address এবং MAC/MU এর পার্থক্য লেখ।
    (b) Classfull এবং Classless IP address এর মধ্যে পার্থক্য লেখ।
    (c) 11000001 00001001 00001010 00010101 এই IP এর Class লিখ। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+
+   Answer:
+
+   (a) IP address ar MAC address-er parthokko:
+
+   | Bishoy | IP address | MAC address |
+   |---|---|---|
+   | Layer | Network layer, layer 3 | Data link layer, layer 2 |
+   | Doirghyo | IPv4 32 bit, IPv6 128 bit | 48 bit |
+   | Format | 192.168.1.10 | 00:1A:2B:3C:4D:5E |
+   | Ke dey | Administrator ba DHCP | Prostutkarok, NIC-e sthayi bhabe lekha |
+   | Dhoron | Logical, poriborton-shil | Physical, sthayi |
+   | Kathamo | Hierarchical, network part + host part | Flat, prothom 24 bit vendor OUI |
+   | Elaka | Sompurno Internet jure end-to-end | Shudhu local network-er bhitore |
+   | Router forward kore? | Ha | Na |
+   | Path-e bodlay? | Na, NAT chara | Ha, protita hop-e |
+   | Ke ber kore | DNS name theke IP | ARP IP theke MAC |
+
+   (b) Classful ar Classless IP address-er parthokko:
+
+   | Bishoy | Classful | Classless (CIDR) |
+   |---|---|---|
+   | Bhag | Fixed Class A, B, C, D, E | Kono class nei, je kono prefix |
+   | Mask | Default fixed mask: /8, /16, /24 | Je kono prefix, /1 theke /32 |
+   | Notation | Shudhu IP address | IP address-er sathe /n prefix |
+   | Address opochoy | Onek beshi; ekti class B-te 65534 host, ja kono protishthan-i puro byabohar kore na | Onek kom; joto dorkar totota-i deoa jay |
+   | Subnetting | Sīmito | VLSM diye je kono akare bhaga jay |
+   | Route summarization | Somvob noy | Somvob, tai routing table choto thake |
+   | Routing protocol | RIPv1, IGRP | RIPv2, OSPF, EIGRP, BGP |
+   | Bortoman obostha | Purono, 1993 sale bad deoa hoyeche | Ekhon eta-i byabohrito |
+
+   (c) Class nirnoy:
+   - Binary: 11000001 00001001 00001010 00010101
+   - Prothom octet 11000001 = 128 + 64 + 1 = 193
+   - Dotted decimal: 193.9.10.21
+   - Prothom octet 193, ja 192 theke 223-er modhye, ar binary-te shuru hoy 110 diye.
+   - Uttor: eta Class C IP address.
 6. **A bank has the network block 192.168.10.0/24. The IT manager wants to divide this into 4 equal subnets.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 (a) How many bits do you need to borrow to make 4 subnets?
 (b) What is the new Subnet Mask in dotted-decimal format?
 (c) Write down the Network Address, the First Usable IP, and the Broadcast Address for the second subnet created. Show your calculation.
 
+
+   Answer:
+
+   (a) Bits to borrow:
+   - Rule: 2ⁿ ≥ number of subnets. 2¹ = 2 < 4, and 2² = 4 = 4, so n = 2 bits must be borrowed.
+
+   (b) New subnet mask:
+   - New prefix = /24 + 2 = /26
+   - Binary: 11111111.11111111.11111111.11000000
+   - Dotted decimal: 255.255.255.192
+
+   (c) Second subnet:
+   - Block size = 256 − 192 = 64, so the subnets start at 0, 64, 128 and 192.
+   - The second subnet therefore begins at 192.168.10.64.
+   - Network address: 192.168.10.64
+   - First usable IP: 192.168.10.65
+   - Last usable IP: 192.168.10.126
+   - Broadcast address: 192.168.10.127
+
+   Calculation shown:
+   - Host bits left = 32 − 26 = 6, so each subnet holds 2⁶ = 64 addresses and 2⁶ − 2 = 62 usable hosts.
+   - Second subnet range = 192.168.10.64 to 192.168.10.64 + 63 = 192.168.10.127; the first of these is the network address and the last is the broadcast address.
+
+   All four subnets for reference:
+
+   | Subnet | Network | Usable range | Broadcast |
+   |---|---|---|---|
+   | 1 | 192.168.10.0 | .1 to .62 | 192.168.10.63 |
+   | 2 | 192.168.10.64 | .65 to .126 | 192.168.10.127 |
+   | 3 | 192.168.10.128 | .129 to .190 | 192.168.10.191 |
+   | 4 | 192.168.10.192 | .193 to .254 | 192.168.10.255 |
 7. **What is subnetting? For the network 192.168.1.0/22, how many usable host addresses does it have?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+
+   Answer:
+
+   What subnetting is:
+   - Subnetting is the process of dividing one large IP network into several smaller logical networks called subnets, by borrowing bits from the host part of the address and adding them to the network part.
+   - Purpose: to reduce the size of broadcast domains, improve performance and security, use address space efficiently, and make administration and troubleshooting easier.
+
+   Usable hosts in 192.168.1.0/22:
+   - Prefix /22, so host bits = 32 − 22 = 10.
+   - Total addresses = 2¹⁰ = 1024.
+   - Usable hosts = 1024 − 2 = 1022, since the first is the network address and the last is the broadcast address.
+
+   Final answer: 1022 usable host addresses.
+
+   - Note: with a /22 mask the address 192.168.1.0 is not itself a network address. The block boundary falls on a multiple of 4 in the third octet, so the actual network is 192.168.0.0/22, running from 192.168.0.0 to 192.168.3.255, with the usable range 192.168.0.1 to 192.168.3.254.
 8. **Given IP address 10.0.0.100 and Subnet mask 255.255.240.0 which is network address?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: IP 10.0.0.100, subnet mask 255.255.240.0, which is a /20.
+
+   Step 1, AND the address with the mask, octet by octet:
+   - 10 AND 255 = 10
+   - 0 AND 255 = 0
+   - 0 AND 240 = 0
+   - 100 AND 0 = 0
+
+   Step 2, read the result:
+   - Network address = 10.0.0.0
+
+   Final answer: the network address is 10.0.0.0/20.
+
+   - Supporting values: block size in the third octet = 256 − 240 = 16, so the block runs from 10.0.0.0 to 10.0.15.255. The broadcast address is 10.0.15.255, the usable range is 10.0.0.1 to 10.0.15.254, and there are 2¹² − 2 = 4094 usable hosts.
 9. **Given IP address 10.10.0.0/16, you have divide the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the first and last usable IP addresses of third subnet.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1362 (ET: BUET)], [DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
+
+   Answer:
+
+   Step 1, bits to borrow for 8 subnets:
+   - 2ⁿ ≥ 8 gives n = 3, so 3 bits are borrowed from the host part.
+
+   Step 2, new prefix and mask:
+   - New prefix = /16 + 3 = /19
+   - Binary: 11111111.11111111.11100000.00000000
+   - Dotted decimal: 255.255.224.0
+   - CIDR notation: /19
+
+   Step 3, block size:
+   - Block size in the third octet = 256 − 224 = 32, so each subnet holds 32 × 256 = 8192 addresses, of which 8190 are usable.
+
+   Step 4, the eight subnets:
+
+   | Subnet | Network | Usable range | Broadcast |
+   |---|---|---|---|
+   | 1 | 10.10.0.0/19 | 10.10.0.1 to 10.10.31.254 | 10.10.31.255 |
+   | 2 | 10.10.32.0/19 | 10.10.32.1 to 10.10.63.254 | 10.10.63.255 |
+   | 3 | 10.10.64.0/19 | 10.10.64.1 to 10.10.95.254 | 10.10.95.255 |
+   | 4 | 10.10.96.0/19 | 10.10.96.1 to 10.10.127.254 | 10.10.127.255 |
+   | 5 | 10.10.128.0/19 | 10.10.128.1 to 10.10.159.254 | 10.10.159.255 |
+   | 6 | 10.10.160.0/19 | 10.10.160.1 to 10.10.191.254 | 10.10.191.255 |
+   | 7 | 10.10.192.0/19 | 10.10.192.1 to 10.10.223.254 | 10.10.223.255 |
+   | 8 | 10.10.224.0/19 | 10.10.224.1 to 10.10.255.254 | 10.10.255.255 |
+
+   Final answer:
+   - Subnet mask = 255.255.224.0, that is /19.
+   - Third subnet: first usable IP 10.10.64.1 and last usable IP 10.10.95.254.
 10. **Subnet mask & Total host calculation.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+
+   Answer: Method for finding the subnet mask and the total number of hosts.
+
+   Formulas:
+   - Host bits h = 32 − prefix length.
+   - Total addresses per subnet = 2ʰ.
+   - Usable hosts = 2ʰ − 2, because the all zeros address is the network address and the all ones address is the broadcast address.
+   - Borrowed bits n = prefix length − default prefix of the class; number of subnets = 2ⁿ.
+   - Block size = 256 − the value of the interesting octet of the mask, that is the last non-255 octet.
+
+   Reference table:
+
+   | Prefix | Subnet mask | Block size | Total addresses | Usable hosts |
+   |---|---|---|---|---|
+   | /24 | 255.255.255.0 | 256 | 256 | 254 |
+   | /25 | 255.255.255.128 | 128 | 128 | 126 |
+   | /26 | 255.255.255.192 | 64 | 64 | 62 |
+   | /27 | 255.255.255.224 | 32 | 32 | 30 |
+   | /28 | 255.255.255.240 | 16 | 16 | 14 |
+   | /29 | 255.255.255.248 | 8 | 8 | 6 |
+   | /30 | 255.255.255.252 | 4 | 4 | 2 |
+
+   Worked example: 192.168.20.0/27
+   - Host bits = 32 − 27 = 5, so 2⁵ = 32 addresses and 30 usable hosts.
+   - Mask = 255.255.255.224, block size = 256 − 224 = 32.
+   - Subnets start at .0, .32, .64, .96, .128, .160, .192 and .224, giving 8 subnets from the /24.
+   - The exception to remember: a /31 is used for point to point links under RFC 3021 and gives 2 usable addresses, and a /32 is a single host route.
 11. **Given the network 245.248.128.0/20, divide the address space among three departments as follows:**
    **(a) Manager: half of the address space.**
    **(b) HR: one-quarter of the address space.**
@@ -78,8 +324,46 @@
    **(ii) The IP address valid range.**
    **(iii) The number of valid hosts.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: 245.248.128.0/20, which holds 2¹² = 4096 addresses, from 245.248.128.0 to 245.248.143.255.
+
+   Step 1, translate the shares into prefixes:
+   - Manager needs half, that is 2048 addresses, so the prefix is /21.
+   - HR needs one quarter, that is 1024 addresses, so the prefix is /22.
+   - Admin needs the remaining quarter, 1024 addresses, so the prefix is /22.
+
+   Step 2, allocate sequentially, largest first:
+
+   | Department | (i) Network block | (ii) Valid IP range | (iii) Valid hosts |
+   |---|---|---|---|
+   | Manager | 245.248.128.0/21 | 245.248.128.1 to 245.248.135.254 | 2046 |
+   | HR | 245.248.136.0/22 | 245.248.136.1 to 245.248.139.254 | 1022 |
+   | Admin | 245.248.140.0/22 | 245.248.140.1 to 245.248.143.254 | 1022 |
+
+   Broadcast addresses: Manager 245.248.135.255, HR 245.248.139.255, Admin 245.248.143.255.
+
+   Check: 2048 + 1024 + 1024 = 4096, which is exactly the /20, so the whole block is used with nothing left over.
 12. **Find out the network address and Broadcast address of the address: 192.168.0.0/28** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1360 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: 192.168.0.0/28.
+
+   Step 1, host bits and block size:
+   - Host bits = 32 − 28 = 4, so 2⁴ = 16 addresses per block.
+   - Subnet mask = 255.255.255.240, and the block size is 256 − 240 = 16.
+
+   Step 2, network and broadcast:
+   - Network address = 192.168.0.0
+   - Broadcast address = network address + block size − 1 = 192.168.0.0 + 15 = 192.168.0.15
+
+   Final answer:
+   - Network address: 192.168.0.0
+   - Broadcast address: 192.168.0.15
+   - Usable host range: 192.168.0.1 to 192.168.0.14, that is 14 hosts.
 13. **(a) An organization wants to divide its LAN IP address 192.168.0.0/24 into 4 subnets according to buildings. The buildings IP address creiteria are given below.**
 
 | Building block | Hosts need |
@@ -91,8 +375,53 @@
 
 **Calculate the network and broadcast address of this network for each building block.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1443 (ET: N/A)]*
 
+
+   Answer: This requires VLSM, that is Variable Length Subnet Masking, allocating the largest requirement first.
+
+   Step 1, choose a prefix for each building:
+
+   | Building | Hosts needed | Host bits, 2ʰ − 2 ≥ need | Prefix | Block size | Usable |
+   |---|---|---|---|---|---|
+   | A | 110 | 7, since 2⁷ − 2 = 126 | /25 | 128 | 126 |
+   | B | 50 | 6, since 2⁶ − 2 = 62 | /26 | 64 | 62 |
+   | C | 20 | 5, since 2⁵ − 2 = 30 | /27 | 32 | 30 |
+   | D | 8 | 4, since 2⁴ − 2 = 14 | /28 | 16 | 14 |
+
+   Step 2, allocate sequentially from 192.168.0.0, largest block first:
+
+   | Building | Network address | Subnet mask | Usable range | Broadcast address |
+   |---|---|---|---|---|
+   | A | 192.168.0.0/25 | 255.255.255.128 | 192.168.0.1 to 192.168.0.126 | 192.168.0.127 |
+   | B | 192.168.0.128/26 | 255.255.255.192 | 192.168.0.129 to 192.168.0.190 | 192.168.0.191 |
+   | C | 192.168.0.192/27 | 255.255.255.224 | 192.168.0.193 to 192.168.0.222 | 192.168.0.223 |
+   | D | 192.168.0.224/28 | 255.255.255.240 | 192.168.0.225 to 192.168.0.238 | 192.168.0.239 |
+
+   Check: 128 + 64 + 32 + 16 = 240 addresses used out of 256, so 192.168.0.240/28, that is 16 addresses, is left free for future growth.
+
+   - The reason for allocating largest first is that it keeps every block correctly aligned on its own boundary; allocating smallest first would leave gaps that no larger block could fit into.
 14. **Check the valid IP address from the following table.** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1335 (ET: N/A)]*
 
+
+   Answer: Rules for deciding whether an IPv4 address is valid, with the usual test cases.
+
+   Validity rules:
+   - The address must have exactly four octets separated by dots.
+   - Each octet must be a decimal number from 0 to 255; anything above 255 is invalid.
+   - No octet may be empty, and no letters or special characters are allowed.
+   - Leading zeros should not be used, since they may be read as octal.
+   - The first octet 127 is reserved for loopback, and 0 and 255 as a whole first octet are reserved.
+   - An address ending in the all zeros host part is a network address and one ending in the all ones host part is a broadcast address; neither may be assigned to a host.
+
+   | Example | Valid? | Reason |
+   |---|---|---|
+   | 192.168.1.10 | Valid | All four octets are in range, and it is a usable private host address |
+   | 256.100.50.25 | Invalid | 256 exceeds the maximum of 255 |
+   | 192.168.1 | Invalid | Only three octets |
+   | 172.16.0.0/16 | Valid block, but not a host address | It is the network address of the block |
+   | 10.0.0.255/24 | Not assignable | It is the broadcast address of 10.0.0.0/24 |
+   | 127.0.0.1 | Valid but special | Loopback, refers to the machine itself |
+   | 192.168.01.1 | Invalid in practice | Leading zero may be interpreted as octal |
+   | 300.1.1.1 | Invalid | 300 exceeds 255 |
 15. **(a) A network has been assigned the IP address 200.1.2.0/24. It has 3 subnets. Determine the following for each subnet:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
  * **(i) Total number of IP addresses**
  * **(ii) Range of usable IP addresses**
@@ -100,6 +429,28 @@
  * **(iv) Direct broadcast address**
  * **(v) Limited broadcast address.**
 
+
+   Answer:
+
+   Given: 200.1.2.0/24, to be divided into 3 subnets.
+
+   Step 1, bits to borrow:
+   - 2ⁿ ≥ 3 gives n = 2, so 2 bits are borrowed and the prefix becomes /26. This creates 4 equal subnets, of which 3 are used and 1 is kept spare.
+   - Subnet mask = 255.255.255.192, block size = 64.
+
+   Step 2, the results for each subnet:
+
+   | Item | Subnet 1 | Subnet 2 | Subnet 3 |
+   |---|---|---|---|
+   | (i) Total number of IP addresses | 64 | 64 | 64 |
+   | (ii) Range of usable IP addresses | 200.1.2.1 to 200.1.2.62 | 200.1.2.65 to 200.1.2.126 | 200.1.2.129 to 200.1.2.190 |
+   | (iii) Network address | 200.1.2.0/26 | 200.1.2.64/26 | 200.1.2.128/26 |
+   | (iv) Direct broadcast address | 200.1.2.63 | 200.1.2.127 | 200.1.2.191 |
+   | (v) Limited broadcast address | 255.255.255.255 | 255.255.255.255 | 255.255.255.255 |
+
+   - Usable hosts per subnet = 64 − 2 = 62.
+   - The direct broadcast address is the last address of the subnet and it is routable, so a host outside can in principle send to it. The limited broadcast address 255.255.255.255 is the same for every network and is never forwarded by a router; it is used, for example, by DHCPDISCOVER.
+   - The fourth subnet, 200.1.2.192/26, is left unused and available for future expansion.
 16. **The IP address of a device in a network is 172.16.128.123/22. Answer the following questions:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
    * **i) What is the network address?**
    * **ii) What is the subnet mask for the given network?**
@@ -107,65 +458,514 @@
    * **iv) What is the maximum number of devices this network can connect?**
    * **v) What is the IP address of the first host device in the network?**
 
+
+   Answer:
+
+   Given: 172.16.128.123/22.
+
+   Step 1, mask and block size:
+   - /22 means 22 network bits, so the mask is 11111111.11111111.11111100.00000000 = 255.255.252.0.
+   - Block size in the third octet = 256 − 252 = 4, so blocks begin at third octet values 0, 4, 8, ... 128, 132, and so on.
+
+   Step 2, find the block containing 128:
+   - 128 is a multiple of 4, so the block starts at 172.16.128.0 and ends at 172.16.131.255.
+
+   Answers:
+   - i) Network address: 172.16.128.0
+   - ii) Subnet mask: 255.255.252.0, that is /22
+   - iii) Broadcast address: 172.16.131.255
+   - iv) Maximum number of devices: host bits = 32 − 22 = 10, so 2¹⁰ − 2 = 1022 devices
+   - v) First host address: 172.16.128.1
+
+   - The last usable host is 172.16.131.254.
 17. **Find the network address, subnet mask, broadcast address, and usable host IP range for the following IP address: 192.9.205.31/16.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 192.9.205.31/16.
+
+   Step 1, mask:
+   - /16 means the first 16 bits are the network part, so the subnet mask is 255.255.0.0.
+
+   Step 2, network address, by ANDing the address with the mask:
+   - 192 AND 255 = 192, 9 AND 255 = 9, 205 AND 0 = 0, 31 AND 0 = 0
+   - Network address = 192.9.0.0
+
+   Step 3, broadcast address, that is all host bits set to 1:
+   - Broadcast address = 192.9.255.255
+
+   Step 4, usable host range and count:
+   - Host bits = 32 − 16 = 16, so 2¹⁶ = 65,536 addresses and 65,534 usable.
+   - Usable range = 192.9.0.1 to 192.9.255.254
+
+   Final answer:
+   - Network address: 192.9.0.0
+   - Subnet mask: 255.255.0.0
+   - Broadcast address: 192.9.255.255
+   - Usable host range: 192.9.0.1 to 192.9.255.254, that is 65,534 hosts
+
+   - Note: by the old classful rules 192 is a Class C first octet with a default /24, but the given /16 overrides that, which is exactly what classless addressing allows.
 18. **What is the CIDR Prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
+
+   Answer:
+
+   Step 1, count the addresses in the range:
+   - From 10.12.2.0 to 10.12.3.255 the third octet takes the values 2 and 3, that is 2 blocks of 256 addresses.
+   - Total = 2 × 256 = 512 addresses.
+
+   Step 2, find the prefix:
+   - 2ʰ = 512 gives h = 9 host bits.
+   - Prefix = 32 − 9 = /23.
+
+   Step 3, check the alignment:
+   - A /23 block must start on an even third octet, and 2 is even, so 10.12.2.0 is a valid network address.
+   - Mask = 255.255.254.0, block size in the third octet = 256 − 254 = 2, so the block covers third octets 2 and 3.
+
+   Final answer: the CIDR prefix is 10.12.2.0/23.
+
+   - Verification: network 10.12.2.0, broadcast 10.12.3.255, usable range 10.12.2.1 to 10.12.3.254, and 510 usable hosts.
 19. **Write down the private IP address rang for class B?** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
+
+   Answer: The private IP address range for Class B is 172.16.0.0 to 172.31.255.255.
+
+   - In CIDR notation this is 172.16.0.0/12, which covers 16 contiguous Class B networks, from 172.16 through 172.31.
+   - It contains 2²⁰ = 1,048,576 addresses.
+   - Private addresses are defined by RFC 1918 and are not routable on the public Internet, so a host using one needs NAT to reach the outside.
 20. **Given IP address 192.168.0.0/28, determine Network address, Broadcast address, First usable IP, Last usable IP.** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
 
+
+   Answer:
+
+   Given: 192.168.0.0/28.
+
+   Step 1, mask and block size:
+   - Host bits = 32 − 28 = 4, so 2⁴ = 16 addresses per block.
+   - Subnet mask = 255.255.255.240, block size = 256 − 240 = 16.
+
+   Step 2, the four values:
+   - Network address: 192.168.0.0
+   - Broadcast address: 192.168.0.15
+   - First usable IP: 192.168.0.1
+   - Last usable IP: 192.168.0.14
+
+   Final answer: 14 usable host addresses, from 192.168.0.1 to 192.168.0.14, with 192.168.0.0 as the network address and 192.168.0.15 as the broadcast address.
 21. **Write range of private IP address Class A, B and C.** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
 
+
+   Answer: The private IP address ranges defined by RFC 1918:
+
+   | Class | Private range | CIDR | Number of addresses |
+   |---|---|---|---|
+   | A | 10.0.0.0 to 10.255.255.255 | 10.0.0.0/8 | 16,777,216 |
+   | B | 172.16.0.0 to 172.31.255.255 | 172.16.0.0/12 | 1,048,576 |
+   | C | 192.168.0.0 to 192.168.255.255 | 192.168.0.0/16 | 65,536 |
+
+   - These addresses are not routable on the public Internet, so a device using one must go through NAT to reach the outside world.
+   - Two related special ranges worth naming: 127.0.0.0/8 for loopback, and 169.254.0.0/16 for APIPA link local addressing when DHCP fails.
 22. **Given an IP address 192.168.111.169/28. Then Determine the (i) Network address (ii) Broadcast address (iii) First usable Host (iv) Last usable Host.** *[BBA Assistant Maintenance Engineer 12.07.2025 compact it 1431 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: 192.168.111.169/28.
+
+   Step 1, mask and block size:
+   - Host bits = 32 − 28 = 4, so 16 addresses per block.
+   - Subnet mask = 255.255.255.240, block size = 256 − 240 = 16.
+
+   Step 2, find the block containing 169:
+   - Blocks in the last octet start at 0, 16, 32, ... 160, 176.
+   - 169 lies between 160 and 175, so the block is 192.168.111.160 to 192.168.111.175.
+
+   Answers:
+   - (i) Network address: 192.168.111.160
+   - (ii) Broadcast address: 192.168.111.175
+   - (iii) First usable host: 192.168.111.161
+   - (iv) Last usable host: 192.168.111.174
+
+   - Usable hosts = 16 − 2 = 14.
 23. **What are the private IP Ranges for the following IP classes? Class A, Class B and Class C** *[BBA Assistant Maintenance Engineer 12.07.2025 compact it 1431 (ET: BUET)]*
 
+
+   Answer: The private IP ranges for the three classes:
+
+   | Class | Private range | CIDR | Number of addresses |
+   |---|---|---|---|
+   | A | 10.0.0.0 to 10.255.255.255 | 10.0.0.0/8 | 16,777,216 |
+   | B | 172.16.0.0 to 172.31.255.255 | 172.16.0.0/12 | 1,048,576 |
+   | C | 192.168.0.0 to 192.168.255.255 | 192.168.0.0/16 | 65,536 |
+
+   - Defined by RFC 1918. They are reserved for internal use and are never routed on the public Internet, so NAT is required for Internet access.
+   - Class A private space is used by very large organisations, Class B by medium ones, and Class C, especially 192.168.0.0/24 and 192.168.1.0/24, in almost every home and small office router.
 24. **Which is Class C Default Subnet Mask?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: The default subnet mask for Class C is 255.255.255.0, that is /24.
+
+   - In binary: 11111111.11111111.11111111.00000000.
+   - It gives 24 network bits and 8 host bits, so each Class C network has 2⁸ = 256 addresses and 254 usable hosts.
+   - For comparison, Class A default is 255.0.0.0 (/8) and Class B default is 255.255.0.0 (/16).
 25. **What is the maximum number of valid hosts in a network?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: The maximum number of valid, that is usable, hosts in a network is 2ʰ − 2, where h is the number of host bits.
+
+   - Two addresses are always subtracted: the all zeros host address, which is the network address, and the all ones host address, which is the directed broadcast address. Neither can be given to a host.
+   - Class A, /8: 2²⁴ − 2 = 16,777,214 hosts.
+   - Class B, /16: 2¹⁶ − 2 = 65,534 hosts.
+   - Class C, /24: 2⁸ − 2 = 254 hosts.
+   - The exception is a /31, which under RFC 3021 gives 2 usable addresses on a point to point link because no broadcast is needed there, and a /32, which identifies a single host.
 26. **Given IP address 10.2.3.20/22 find the Total valid Host address in this IP?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 10.2.3.20/22.
+
+   Step 1, host bits:
+   - Host bits = 32 − 22 = 10.
+
+   Step 2, total and usable addresses:
+   - Total addresses = 2¹⁰ = 1024.
+   - Valid hosts = 1024 − 2 = 1022.
+
+   Final answer: 1022 valid host addresses.
+
+   - Supporting values: mask 255.255.252.0, block size in the third octet = 256 − 252 = 4, so the block starts at 10.2.0.0 and ends at 10.2.3.255. Network address 10.2.0.0, broadcast 10.2.3.255, usable range 10.2.0.1 to 10.2.3.254.
 27. **Mapping between MAC to IP address?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: The mapping between an IP address and a MAC address is done by ARP and RARP.
+
+   - ARP, the Address Resolution Protocol, maps a known IP address to the unknown MAC address. The host broadcasts an ARP request asking who has that IP, and the owner replies with its MAC address, which is then cached in the ARP table for a few minutes.
+   - RARP, the Reverse Address Resolution Protocol, does the opposite, mapping a known MAC address to an IP address. It was used by diskless workstations and has been replaced by BOOTP and DHCP.
+   - In IPv6 the same job is done by the Neighbor Discovery Protocol using ICMPv6 Neighbor Solicitation and Neighbor Advertisement messages, which use multicast rather than broadcast.
+   - The command to view the cached mappings is `arp -a` on Windows and `arp -n` or `ip neigh` on Linux.
+   - Security note: ARP has no authentication, so a false reply can redirect traffic through an attacker. This is ARP spoofing, and it is countered by dynamic ARP inspection and static entries.
 28. **How many bits are in a MAC address?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+
+   Answer: A MAC address is 48 bits, that is 6 bytes, long.
+
+   - It is written as six pairs of hexadecimal digits, for example `00:1A:2B:3C:4D:5E`, since each pair represents 8 bits.
+   - The first 24 bits are the Organisationally Unique Identifier assigned to the manufacturer, and the last 24 bits identify the individual card.
+   - The total address space is 2⁴⁸, about 281 trillion addresses.
+   - The newer EUI-64 format is 64 bits and is used when forming an IPv6 interface identifier from a MAC address.
 29. **What is the primary motivation for classful IP address to classless IP addressing?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 316 (ET: N/A)]*
 
+
+   Answer: The primary motivation for moving from classful to classless addressing was the rapid exhaustion of the IPv4 address space caused by the enormous waste inherent in fixed classes.
+
+   The problem with classful addressing:
+   - Only three usable sizes existed: Class A with 16.7 million hosts, Class B with 65,534 and Class C with 254. Nothing in between was available.
+   - An organisation needing 300 hosts was too big for a Class C and had to be given a whole Class B, wasting more than 65,000 addresses. An organisation needing 2000 hosts wasted 63,000.
+   - The Class B space ran out fastest, because it was the size almost everyone asked for.
+   - The routing tables of the Internet backbone grew explosively, since every allocated network needed its own entry and no summarisation was possible.
+
+   What classless addressing, that is CIDR, solved:
+   - The prefix length is written explicitly, so a block of any power of two size can be allocated, exactly matching the requirement. An organisation needing 300 hosts gets a /23 with 510 addresses instead of a whole Class B.
+   - VLSM allows different subnet sizes inside one organisation, so a point to point link uses a /30 with two addresses instead of a whole /24.
+   - Route summarisation, or supernetting, lets many contiguous networks be advertised as a single prefix, which drastically slowed the growth of the global routing table.
+   - Address allocation became hierarchical, following the topology of the Internet, which made aggregation effective.
+
+   - CIDR was introduced in 1993 by RFC 1519. Together with NAT and private addressing it postponed IPv4 exhaustion by about two decades, which is why IPv6 deployment took so long to become urgent.
 30. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 292 (ET: BUET)], [BTCL Assistant Manager (Technical) 2023 compact it 594 (ET: BUET)], [BPDB Assistant Engineer (CSE) 10.05.2024 compact it 389 (ET: BUET)], [BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 456 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: IP 192.168.1.50, subnet mask 255.255.255.240, which is a /28.
+
+   Step 1, block size:
+   - Block size = 256 − 240 = 16, so blocks in the last octet start at 0, 16, 32, 48, 64 and so on.
+
+   Step 2, find the block containing 50:
+   - 50 lies between 48 and 63, so the block is 192.168.1.48 to 192.168.1.63.
+
+   Answers:
+   - Network address: 192.168.1.48
+   - Broadcast address: 192.168.1.63
+   - Valid, that is usable, IP range: 192.168.1.49 to 192.168.1.62
+   - Number of usable hosts: 16 − 2 = 14
+
+   - Check by ANDing: 50 in binary is 00110010, and the mask's last octet 240 is 11110000; the AND gives 00110000 = 48, which confirms the network address.
 31. **Given IP Address: 192.168.5.154/27, Calculate a) Network Address b) First valid host c) Last valid host d) Broadcast address e) Subnet mask** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 383 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 192.168.5.154/27.
+
+   Step 1, mask and block size:
+   - /27 gives the mask 11111111.11111111.11111111.11100000 = 255.255.255.224.
+   - Block size = 256 − 224 = 32, so blocks start at 0, 32, 64, 96, 128, 160, 192 and 224.
+
+   Step 2, find the block containing 154:
+   - 154 lies between 128 and 159, so the block is 192.168.5.128 to 192.168.5.159.
+
+   Answers:
+   - a) Network address: 192.168.5.128
+   - b) First valid host: 192.168.5.129
+   - c) Last valid host: 192.168.5.158
+   - d) Broadcast address: 192.168.5.159
+   - e) Subnet mask: 255.255.255.224, that is /27
+
+   - Usable hosts = 32 − 2 = 30.
 32. **Write down the Public and Private IPv4 address for Class A, Class B and Class C.** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
+
+   Answer:
+
+   Private IPv4 addresses, defined by RFC 1918:
+
+   | Class | Private range | CIDR | Number of addresses |
+   |---|---|---|---|
+   | A | 10.0.0.0 to 10.255.255.255 | 10.0.0.0/8 | 16,777,216 |
+   | B | 172.16.0.0 to 172.31.255.255 | 172.16.0.0/12 | 1,048,576 |
+   | C | 192.168.0.0 to 192.168.255.255 | 192.168.0.0/16 | 65,536 |
+
+   Public IPv4 address ranges, that is everything else in the class that is not private or reserved:
+
+   | Class | Full range | Public portion |
+   |---|---|---|
+   | A | 1.0.0.0 to 126.255.255.255 | All of it except 10.0.0.0/8, and 127.0.0.0/8 which is loopback |
+   | B | 128.0.0.0 to 191.255.255.255 | All of it except 172.16.0.0/12, and 169.254.0.0/16 which is APIPA |
+   | C | 192.0.0.0 to 223.255.255.255 | All of it except 192.168.0.0/16 |
+
+   Difference in short:
+   - A public address is globally unique, allocated by IANA through the regional registries and the ISP, and is directly reachable from the Internet.
+   - A private address may be reused inside any number of separate organisations, is never routed on the public Internet, and needs NAT to reach the outside.
 33. **(b) What is a subnet? What benefits will you get using subnets for this office?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 324 (ET: BIBM)]*
 
+
+   Answer:
+
+   What a subnet is:
+   - A subnet is a logical subdivision of a larger IP network, created by borrowing bits from the host part of the address and adding them to the network part. Each subnet behaves as an independent network with its own network address, broadcast address and range of hosts.
+
+   Benefits of using subnets in an office:
+   - Smaller broadcast domains: a broadcast from one department no longer reaches every machine in the building, so bandwidth and CPU are not wasted and broadcast storms are contained.
+   - Better performance: less unnecessary traffic on each segment, and congestion in one department does not slow another.
+   - Improved security and isolation: departments such as Finance and HR can be separated, and access between subnets can be controlled by ACLs on the router, because all inter-subnet traffic must pass through it.
+   - Efficient use of address space: with VLSM each department receives only as many addresses as it needs, so a point to point link takes a /30 instead of a whole /24.
+   - Easier management and troubleshooting: an IP address immediately tells you which department and which floor a machine belongs to, so a fault can be localised quickly.
+   - Fault containment: a problem such as a loop or a rogue DHCP server affects only its own subnet.
+   - Simpler policy: QoS, monitoring and firewall rules can be written per subnet rather than per host.
+   - Scalability: new departments or floors are added as new subnets without redesigning the whole address plan.
+   - Smaller routing tables, because contiguous subnets can be summarised into a single advertised prefix.
 34. **Local loopback address কি? কোন কমান্ড ব্যবহার করে কানেক্টিভিটি টেস্ট করা হয়?** *[BTCL - JAM ( Technical) 05.04.2024 compact it 383 (ET: BUET)]*
 
+
+   Answer:
+
+   Local loopback address:
+   - Loopback address holo 127.0.0.1, ar sompurno block 127.0.0.0/8 ei kajer jonno songrokkhito.
+   - Ei address diye kono packet network card ba cable porjonto jay na; TCP/IP stack-i ta ferot pathiye dey. Tai eta diye nijer machine-er TCP/IP stack thik ache kina ta jacha kora jay.
+   - Er domain name `localhost`, ar IPv6-te eta `::1`.
+   - Byabohar: nijer computer-e chola server test kora, jemon `http://127.0.0.1:8080`, ba software development-e local database-e connect kora.
+
+   Connectivity test-er command:
+   - `ping 127.0.0.1` — nijer TCP/IP stack thik ache kina dekhe.
+   - `ping <gateway IP>` — router porjonto jogajog ache kina dekhe.
+   - `ping 8.8.8.8` — Internet porjonto jogajog ache kina dekhe.
+   - `ping www.google.com` — DNS thik kaj korche kina dekhe.
+   - Onnanno kaje: `tracert` ba `traceroute` poth dekhay, `ipconfig` ba `ifconfig` nijer address dekhay, `nslookup` DNS jachai kore, ar `netstat` chalu connection dekhay.
 35. **Given IP address 192.168. 2.0/ 24; Determine to network address and broadcast address.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 192.168.2.0/24.
+
+   Step 1, mask and host bits:
+   - /24 gives the mask 255.255.255.0, so the host bits are the whole last octet, 8 bits.
+
+   Step 2, network and broadcast:
+   - Network address, all host bits 0: 192.168.2.0
+   - Broadcast address, all host bits 1: 192.168.2.255
+
+   Final answer:
+   - Network address: 192.168.2.0
+   - Broadcast address: 192.168.2.255
+   - Usable host range: 192.168.2.1 to 192.168.2.254, that is 2⁸ − 2 = 254 hosts.
 36. **Given a (slash) /26 based network address. Find Subnet mask, broadcast address, number of host, Number of valid host and number of subnet.** *[BKSP Assistant Programmer 13.07.2024 compact it 1459 (ET: N/A)]*
 
+
+   Answer: For a /26 network, taking a Class C block such as 192.168.1.0/24 as the parent.
+
+   - Subnet mask: /26 = 11111111.11111111.11111111.11000000 = 255.255.255.192
+   - Number of hosts, that is total addresses per subnet: host bits = 32 − 26 = 6, so 2⁶ = 64
+   - Number of valid, that is usable, hosts: 64 − 2 = 62
+   - Number of subnets: bits borrowed from the /24 default = 26 − 24 = 2, so 2² = 4 subnets
+   - Block size = 256 − 192 = 64
+
+   Broadcast address of each subnet:
+
+   | Subnet | Network address | Usable range | Broadcast address |
+   |---|---|---|---|
+   | 1 | 192.168.1.0 | .1 to .62 | 192.168.1.63 |
+   | 2 | 192.168.1.64 | .65 to .126 | 192.168.1.127 |
+   | 3 | 192.168.1.128 | .129 to .190 | 192.168.1.191 |
+   | 4 | 192.168.1.192 | .193 to .254 | 192.168.1.255 |
+
+   - General rule: the broadcast address of any subnet is one less than the next subnet's network address, and the last address of the block.
 37. **Write Class A private IP range.** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+
+   Answer: The Class A private IP range is 10.0.0.0 to 10.255.255.255.
+
+   - In CIDR notation: 10.0.0.0/8.
+   - It contains 2²⁴ = 16,777,216 addresses, of which 16,777,214 are usable.
+   - It is defined by RFC 1918 and is not routable on the public Internet, so NAT is needed for Internet access. Large organisations and cloud providers use it because it offers the biggest private address space.
 38. **Write Command for check LAN connecte?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+
+   Answer: Commands to check LAN connectivity:
+
+   - `ping <IP address>` — the basic reachability test using ICMP Echo. For example `ping 192.168.1.1` to test the gateway, or `ping 127.0.0.1` to test the local TCP/IP stack.
+   - `ipconfig` on Windows, or `ifconfig` and `ip addr` on Linux — shows the interface's IP address, mask and gateway. `ipconfig /all` also shows the MAC address, DHCP server and DNS servers.
+   - `tracert` on Windows or `traceroute` on Linux — shows every hop along the path and where it stops.
+   - `arp -a` — lists the IP to MAC mappings learned on the local segment, which confirms that layer 2 is working.
+   - `netstat -an` — lists the active connections and listening ports.
+   - `nslookup` or `dig` — confirms that name resolution is working, which separates a DNS fault from a connectivity fault.
+   - `getmac` on Windows, and `ethtool eth0` on Linux — shows the physical address and the link status, that is whether the cable is actually connected.
+
+   - Practical order of testing: first `ping 127.0.0.1` for the stack, then the own IP, then the default gateway, then a public IP such as 8.8.8.8, and finally a domain name. The step at which it fails tells you where the fault lies.
 39. **(a) Given 4 Network interface in a table and find which of the following network is on which network.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 
+
+   Answer: Method for deciding which network a given interface belongs to.
+
+   Procedure:
+   - Take the interface's IP address and its subnet mask.
+   - Convert both to binary, or use the block size shortcut: block size = 256 − the value of the interesting octet of the mask, that is the last octet that is not 255.
+   - Perform a bitwise AND of the address with the mask; the result is the network address of that interface.
+   - Two interfaces are on the same network if and only if they produce the same network address with the same mask.
+
+   Worked example:
+
+   | Interface | IP address | Mask | Network address | Broadcast |
+   |---|---|---|---|---|
+   | 1 | 192.168.1.10 | 255.255.255.0, /24 | 192.168.1.0 | 192.168.1.255 |
+   | 2 | 192.168.1.130 | 255.255.255.128, /25 | 192.168.1.128 | 192.168.1.255 |
+   | 3 | 172.16.5.30 | 255.255.0.0, /16 | 172.16.0.0 | 172.16.255.255 |
+   | 4 | 10.1.2.3 | 255.255.255.252, /30 | 10.1.2.0 | 10.1.2.3 |
+
+   - The point the examiner is checking: the same IP address can belong to different networks depending on the mask, so the mask must always be applied before any conclusion is drawn. Interfaces 1 and 2 look alike but are on different networks, because the /25 mask splits the block at .128. <!-- verify -->
 40. **(খ) Classful এবং Classless IP address এর পার্থক্য কী? নিচের IP গুলোর Class নির্ণয় করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 i) 00000001 00001011 00001011 11101111
 ii) 211.10.15.4
 
+
+   Answer:
+
+   Classful ar Classless IP address-er parthokko:
+
+   | Bishoy | Classful | Classless (CIDR) |
+   |---|---|---|
+   | Bhag | Fixed Class A, B, C, D, E | Kono class nei |
+   | Mask | Default fixed: /8, /16, /24 | Je kono prefix, /1 theke /32 |
+   | Notation | Shudhu IP address lekha hoy | IP-r sathe /n prefix lekha hoy |
+   | Address opochoy | Onek beshi, karon matro tinti akar ache | Onek kom, joto dorkar totota deoa jay |
+   | VLSM | Somorthon kore na | Kore, tai ek network-e bhinno akar-er subnet somvob |
+   | Summarization | Somvob noy | Somvob, tai routing table choto thake |
+   | Routing protocol | RIPv1, IGRP | RIPv2, OSPF, EIGRP, BGP |
+   | Obostha | 1993 sale bad deoa hoyeche | Bortomane eta-i byabohrito |
+
+   Diya deoa IP gulo-r Class:
+
+   (i) 00000001 00001011 00001011 11101111
+   - Prothom octet 00000001 = 1
+   - Dwitiyo octet 00001011 = 11, tritiyo 00001011 = 11, chaturtho 11101111 = 239
+   - Dotted decimal: 1.11.11.239
+   - Prothom octet 1, ja 1 theke 126-er modhye, ar binary-te shuru hoy 0 diye.
+   - Uttor: Class A
+
+   (ii) 211.10.15.4
+   - Prothom octet 211, ja 192 theke 223-er modhye.
+   - Uttor: Class C
 41. **6.10 An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+
+   Answer:
+
+   Step 1, size each subnet:
+   - Subnet A needs 120 addresses. 2⁷ = 128, and 128 − 2 = 126 ≥ 120, so 7 host bits are needed, giving a /25.
+   - Subnet B needs 60 addresses. 2⁶ = 64, and 64 − 2 = 62 ≥ 60, so 6 host bits are needed, giving a /26.
+
+   Step 2, allocate sequentially from 14.24.74.0, largest first:
+
+   | Subnet | Network address with mask | Broadcast address |
+   |---|---|---|
+   | A | 14.24.74.0/25 | 14.24.74.127 |
+   | B | 14.24.74.128/26 | 14.24.74.191 |
+
+   Final answer:
+   - Subnet A: network 14.24.74.0/25, broadcast 14.24.74.127
+   - Subnet B: network 14.24.74.128/26, broadcast 14.24.74.191
+
+   - Address space remaining: 14.24.74.192/26, that is 64 addresses, kept free for future growth, which is why the larger block is allocated first.
 42. **An IP address subnet mask is 255.255.255.224 which is the subnet address in this block?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: subnet mask 255.255.255.224, which is a /27.
+
+   Step 1, block size:
+   - Block size = 256 − 224 = 32.
+
+   Step 2, the possible subnet addresses in the last octet:
+   - They are the multiples of 32: 0, 32, 64, 96, 128, 160, 192 and 224.
+   - So for a network such as 192.168.1.0/24 the subnet addresses are 192.168.1.0, .32, .64, .96, .128, .160, .192 and .224.
+
+   How to decide for any given host address:
+   - Divide the last octet by 32 and take the whole number part, then multiply by 32. For example 192.168.1.100: 100 ÷ 32 = 3 remainder 4, and 3 × 32 = 96, so the subnet address is 192.168.1.96 and the broadcast address is 192.168.1.127.
+
+   Final answer: the subnet address is always the largest multiple of 32 that is less than or equal to the host's last octet, and there are 8 such subnets, each with 32 addresses and 30 usable hosts.
 43. **Write down the basic differences of the following:**
    **(i) Public vs Private IP address** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 534 (ET: MIST)]*
 
+
+   Answer:
+
+   Public vs Private IP address:
+
+   | Point | Public IP address | Private IP address |
+   |---|---|---|
+   | Uniqueness | Globally unique on the whole Internet | Unique only within its own private network |
+   | Assigned by | IANA through the regional registries and the ISP | The local network administrator or the local DHCP server |
+   | Routable on the Internet | Yes, directly reachable | No, routers on the Internet discard it |
+   | Ranges | Everything not reserved | 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16 |
+   | Cost | Has to be bought or rented from the ISP | Free, and reusable by anyone |
+   | Security | Directly exposed, so it needs a firewall | Hidden behind NAT, which gives some protection |
+   | Reuse | Cannot be reused anywhere else | The same range is used in millions of homes and offices |
+   | Needs NAT | No | Yes, to reach the Internet |
+   | Typical use | Web servers, mail servers, the WAN interface of a router | PCs, printers and phones inside a LAN |
 44. **What do you mean by Subnet and Subnet Mask? The network address of 172.16.0.0/19 provides how many subnets and hosts? What is the function of OSPF?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 536 (ET: MIST)]*
 
+
+   Answer:
+
+   Subnet and subnet mask:
+   - A subnet is a logical subdivision of a larger IP network, created by borrowing bits from the host part and adding them to the network part, so that one network becomes several smaller independent networks.
+   - A subnet mask is a 32 bit value in which the network bits are 1 and the host bits are 0. A host ANDs an address with the mask to find its network address, and that is how it decides whether a destination is local or must go through the gateway.
+
+   172.16.0.0/19, subnets and hosts:
+   - 172.16.x.x has the first octet 172, so it is a Class B address with a default prefix of /16.
+   - Bits borrowed = 19 − 16 = 3, so the number of subnets = 2³ = 8.
+   - Host bits = 32 − 19 = 13, so addresses per subnet = 2¹³ = 8192 and usable hosts = 8192 − 2 = 8190.
+   - Mask = 255.255.224.0, block size in the third octet = 256 − 224 = 32, so the subnets are 172.16.0.0, 172.16.32.0, 172.16.64.0, 172.16.96.0, 172.16.128.0, 172.16.160.0, 172.16.192.0 and 172.16.224.0.
+
+   Final answer: 8 subnets, each with 8190 usable hosts.
+
+   Function of OSPF:
+   - OSPF, Open Shortest Path First, is a link state interior gateway protocol that determines the best routes within an autonomous system.
+   - Every router floods its link state information to all routers in the area, so all of them build an identical topology database, and each then runs Dijkstra's shortest path first algorithm with itself as the root.
+   - Its metric is cost, derived from bandwidth. It converges fast, is loop free, supports VLSM and CIDR, has no hop count limit, allows equal cost load balancing and authentication, and divides large networks into areas around a backbone Area 0 to limit flooding. Its administrative distance is 110.
 45. **Convert the decimal IP address 192.168.101.5 into binary IP address. Fill-up the following in tabular form:** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 539 (ET: MIST)]*
 | Address Class | First Octet Decimal Range | Example of IP Address (IPA) | Network ID of IPA | Host ID of IPA |
 |---|---|---|---|---|
@@ -173,106 +973,1026 @@ ii) 211.10.15.4
 | Class B |  |  |  |  |
 | Class C |  |  |  |  |
 
+
+   Answer:
+
+   Conversion of 192.168.101.5 to binary:
+   - 192 = 11000000
+   - 168 = 10101000
+   - 101 = 01100101
+   - 5 = 00000101
+   - Full binary: 11000000.10101000.01100101.00000101
+
+   Address class table:
+
+   | Address Class | First Octet Decimal Range | Example of IP Address | Network ID of the example | Host ID of the example |
+   |---|---|---|---|---|
+   | Class A | 1 to 126 | 10.25.30.40 | 10 | 25.30.40 |
+   | Class B | 128 to 191 | 172.16.50.60 | 172.16 | 50.60 |
+   | Class C | 192 to 223 | 192.168.101.5 | 192.168.101 | 5 |
+
+   - Class A uses the first octet as the network ID and the remaining three as the host ID, with a default mask of 255.0.0.0.
+   - Class B uses the first two octets as the network ID, with a default mask of 255.255.0.0.
+   - Class C uses the first three octets as the network ID, with a default mask of 255.255.255.0.
+   - The first octet 127 is skipped because it is reserved for loopback, Class D from 224 to 239 is multicast, and Class E from 240 to 255 is reserved.
 46. **What is IP address? Explain the necessity of IP address in network?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 564 (ET: N/A)]*
 
+
+   Answer:
+
+   What an IP address is:
+   - An IP address is a logical network layer address that uniquely identifies a device on a network and allows data to be routed to it across the Internet.
+   - IPv4 is 32 bits, written as four decimal octets such as 192.168.1.10; IPv6 is 128 bits, written in hexadecimal such as 2001:db8::1.
+   - It is divided by the subnet mask into a network part, which says which network the device is on, and a host part, which says which device it is on that network.
+   - It may be public or private, and static or dynamically assigned by DHCP.
+
+   Necessity of an IP address in a network:
+   - Identification: every device needs a unique identifier, otherwise the network cannot tell one machine from another.
+   - Location and routing: because the address is hierarchical, a router can tell from the network part which direction to send the packet, without knowing anything about the individual host. A flat address such as a MAC address could never be routed globally, since the routing table would need an entry for every device on earth.
+   - End to end delivery: the source and destination IP addresses stay unchanged for the whole journey, so the packet can be delivered and the reply returned across any number of intermediate networks and technologies.
+   - Technology independence: Ethernet, Wi-Fi, fibre and satellite all use different framing, but IP provides one common addressing scheme above them, which is what makes internetworking possible.
+   - Network management: subnetting, access control lists, firewall rules, QoS and monitoring are all written in terms of IP addresses and ranges.
+   - Service association: together with the port number the IP address forms a socket, which identifies not just the machine but the exact process the data is for.
+   - Practical services depend on it: DNS exists to translate names into IP addresses, DHCP exists to hand them out, and NAT exists to share them.
 47. **What is subnet mask? Why it is used?** *[Mongla Port Authority Assistant Programmer 2023 compact it 573 (ET: N/A)]*
 
+
+   Answer:
+
+   What a subnet mask is:
+   - A subnet mask is a 32 bit value used together with an IP address to separate the network part from the host part. In the mask every network bit is 1 and every host bit is 0, and the 1s must be contiguous from the left.
+   - It is written in dotted decimal, such as 255.255.255.0, or as a CIDR prefix, such as /24.
+
+   Why it is used:
+   - To identify the network address: the host performs a bitwise AND of the IP address and the mask, and the result is the network address.
+   - To make the local or remote decision: for every outgoing packet, the host ANDs its own address and the destination address with the mask. If the two results are the same the destination is on the same network and the frame is sent directly using ARP; if they differ, the packet is sent to the default gateway. This single decision is made for every packet a host sends.
+   - To perform subnetting: by lengthening the mask, bits are borrowed from the host part, dividing one network into several smaller ones, which reduces broadcast domains and improves security and performance.
+   - To determine the number of hosts: host bits h = 32 − prefix, so each subnet has 2ʰ addresses and 2ʰ − 2 usable hosts.
+   - To find the broadcast address, which is the address with all host bits set to 1.
+   - For routing: routers use the mask in the longest prefix match to choose the most specific route to a destination.
+   - For efficient allocation: with VLSM, different masks can be used in different parts of one network, so a point to point link takes a /30 rather than a whole /24.
+
+   Example: 192.168.1.10 with mask 255.255.255.0 gives the network 192.168.1.0, the broadcast 192.168.1.255 and 254 usable hosts.
 48. **In HR department have 12 IP enable devices are available in our office and have a big IP block 172.16.5.0/24. To consider your HR department find a suitable IP block than also answer the following question.**
    **i. Subnet mask; ii. Number of usable IP address; iii. First and last IP Address of that block iv. Broadcast IP address** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 596 (ET: N/A)]*
 
+
+   Answer:
+
+   Step 1, choose a suitable block for 12 devices:
+   - Requirement is 12 hosts, and a gateway address is also needed, so at least 13 usable addresses.
+   - 2⁴ − 2 = 14 ≥ 13, so 4 host bits are enough and the prefix is /28.
+   - Taking the first block of 172.16.5.0/24, the suitable IP block is 172.16.5.0/28.
+
+   Answers:
+   - i. Subnet mask: 255.255.255.240, that is /28
+   - ii. Number of usable IP addresses: 2⁴ − 2 = 14
+   - iii. First IP address: 172.16.5.1, and last IP address: 172.16.5.14
+   - iv. Broadcast IP address: 172.16.5.15
+
+   - Block size = 256 − 240 = 16, so the block runs from 172.16.5.0 to 172.16.5.15.
+   - Choosing a /28 rather than the whole /24 leaves 172.16.5.16 to 172.16.5.255, that is 240 addresses, free for the other departments, which is exactly the point of subnetting.
+   - A /29 with only 6 usable addresses would be too small, and a /27 with 30 would waste more than half.
 49. **What is private IP range class A, B and C with maximum host of each class?** *[BREB Assistant Programmer 18.02.2023 compact it 470 (ET: N/A)]*
 
+
+   Answer:
+
+   Private IP ranges with the maximum hosts of each class:
+
+   | Class | Private range | CIDR | Addresses | Maximum hosts in one default network of that class |
+   |---|---|---|---|---|
+   | A | 10.0.0.0 to 10.255.255.255 | 10.0.0.0/8 | 16,777,216 | 16,777,214, that is 2²⁴ − 2 |
+   | B | 172.16.0.0 to 172.31.255.255 | 172.16.0.0/12 | 1,048,576 | 65,534, that is 2¹⁶ − 2 |
+   | C | 192.168.0.0 to 192.168.255.255 | 192.168.0.0/16 | 65,536 | 254, that is 2⁸ − 2 |
+
+   - The Class A private space is a single network of 16.7 million addresses.
+   - The Class B private space is 16 contiguous Class B networks, 172.16 through 172.31, each holding 65,534 hosts.
+   - The Class C private space is 256 contiguous Class C networks, 192.168.0 through 192.168.255, each holding 254 hosts.
+   - Two addresses are always subtracted from each network: the network address and the broadcast address.
 50. **(b) Find out the default mask, network address and broadcast address of the classful IPv4 address: 172.16.99.45** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 480 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 172.16.99.45, treated as a classful address.
+
+   Step 1, identify the class:
+   - The first octet is 172, which lies between 128 and 191, so this is a Class B address.
+
+   Step 2, default mask:
+   - Class B default mask = 255.255.0.0, that is /16.
+
+   Step 3, network address, by ANDing with the mask:
+   - 172 AND 255 = 172, 16 AND 255 = 16, 99 AND 0 = 0, 45 AND 0 = 0
+   - Network address = 172.16.0.0
+
+   Step 4, broadcast address, that is all host bits set to 1:
+   - Broadcast address = 172.16.255.255
+
+   Final answer:
+   - Default mask: 255.255.0.0
+   - Network address: 172.16.0.0
+   - Broadcast address: 172.16.255.255
+   - Usable host range: 172.16.0.1 to 172.16.255.254, that is 65,534 hosts.
+
+   - Note: 172.16.0.0/12 is a private range, so this address is not routable on the public Internet.
 51. **Identify the class, network IP address, direct broadcast address and limited broadcast address of the following IP address: (i) 1.2.3.4 (ii) 130.1.2.3 (iii) 220.15.1.10 (iv) 200.1.10.100** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
 
+
+   Answer:
+
+   | IP address | Class | Network address | Direct broadcast address | Limited broadcast address |
+   |---|---|---|---|---|
+   | 1.2.3.4 | A, first octet 1 is in 1 to 126 | 1.0.0.0 | 1.255.255.255 | 255.255.255.255 |
+   | 130.1.2.3 | B, first octet 130 is in 128 to 191 | 130.1.0.0 | 130.1.255.255 | 255.255.255.255 |
+   | 220.15.1.10 | C, first octet 220 is in 192 to 223 | 220.15.1.0 | 220.15.1.255 | 255.255.255.255 |
+   | 200.1.10.100 | C, first octet 200 is in 192 to 223 | 200.1.10.0 | 200.1.10.255 | 255.255.255.255 |
+
+   Method:
+   - The class is read from the first octet, which fixes the default mask: /8 for A, /16 for B and /24 for C.
+   - The network address is found by setting all the host bits to 0.
+   - The direct broadcast address is found by setting all the host bits to 1. It is routable, so a host on another network can address it, and it reaches every host on the target network.
+   - The limited broadcast address is always 255.255.255.255. It is never forwarded by a router, so it stays within the local segment; DHCPDISCOVER uses it because the sender has no address or network information yet.
 52. **What is the subnet mask in 10.2.1.3/22 network?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 10.2.1.3/22.
+
+   Step 1, write the mask in binary:
+   - /22 means the first 22 bits are 1: 11111111.11111111.11111100.00000000
+
+   Step 2, convert each octet to decimal:
+   - 11111111 = 255
+   - 11111111 = 255
+   - 11111100 = 128 + 64 + 32 + 16 + 8 + 4 = 252
+   - 00000000 = 0
+
+   Final answer: the subnet mask is 255.255.252.0.
+
+   - Supporting values: block size in the third octet = 256 − 252 = 4, so the network is 10.2.0.0/22, the broadcast is 10.2.3.255, the usable range is 10.2.0.1 to 10.2.3.254, and there are 2¹⁰ − 2 = 1022 usable hosts.
 53. **In IPv4 show the network address and host address range of class A, B and C.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 656 (ET: N/A)]*
 
+
+   Answer: Network address and host address ranges of the IPv4 classes:
+
+   | Class | First octet range | Address range | Default mask | Network / Host bits | Networks | Hosts per network |
+   |---|---|---|---|---|---|---|
+   | A | 1 to 126 | 1.0.0.0 to 126.255.255.255 | 255.0.0.0, /8 | 8 / 24 | 126 | 16,777,214 |
+   | B | 128 to 191 | 128.0.0.0 to 191.255.255.255 | 255.255.0.0, /16 | 16 / 16 | 16,384 | 65,534 |
+   | C | 192 to 223 | 192.0.0.0 to 223.255.255.255 | 255.255.255.0, /24 | 24 / 8 | 2,097,152 | 254 |
+
+   - 127.0.0.0/8 is reserved for loopback, Class D from 224 to 239 is multicast, and Class E from 240 to 255 is reserved.
+
+   Structure of each class:
+   - Class A: the first octet is the network ID and the last three octets are the host ID. Example, 10.0.0.0 is the network and 10.0.0.1 to 10.255.255.254 are the hosts.
+   - Class B: the first two octets are the network ID and the last two are the host ID. Example, 172.16.0.0 is the network and 172.16.0.1 to 172.16.255.254 are the hosts.
+   - Class C: the first three octets are the network ID and the last octet is the host ID. Example, 192.168.1.0 is the network and 192.168.1.1 to 192.168.1.254 are the hosts.
+   - In each case the all zeros host address is the network address and the all ones host address is the broadcast address, which is why 2 is subtracted from the host count.
 54. **Given IP Address: 192.168.5.154/26, Calculate network address and subnet mask.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 657 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 192.168.5.154/26.
+
+   Step 1, subnet mask:
+   - /26 in binary is 11111111.11111111.11111111.11000000
+   - The last octet 11000000 = 128 + 64 = 192
+   - Subnet mask = 255.255.255.192
+
+   Step 2, block size:
+   - Block size = 256 − 192 = 64, so blocks in the last octet begin at 0, 64, 128 and 192.
+
+   Step 3, network address:
+   - 154 lies between 128 and 191, so the network address is 192.168.5.128.
+   - Check by ANDing: 154 = 10011010, mask 192 = 11000000, AND = 10000000 = 128.
+
+   Final answer:
+   - Network address: 192.168.5.128
+   - Subnet mask: 255.255.255.192, that is /26
+
+   - Supporting values: broadcast 192.168.5.191, usable range 192.168.5.129 to 192.168.5.190, and 62 usable hosts.
 55. **Mention the maximum number of networks and hosts used in Class A, B and C networks.** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
+
+   Answer: Maximum number of networks and hosts in each class:
+
+   | Class | Network bits | Host bits | Maximum networks | Maximum hosts per network |
+   |---|---|---|---|---|
+   | A | 8, of which 7 are usable | 24 | 2⁷ − 2 = 126 | 2²⁴ − 2 = 16,777,214 |
+   | B | 16, of which 14 are usable | 16 | 2¹⁴ = 16,384 | 2¹⁶ − 2 = 65,534 |
+   | C | 24, of which 21 are usable | 8 | 2²¹ = 2,097,152 | 2⁸ − 2 = 254 |
+
+   Explanation of the arithmetic:
+   - Class A begins with the bit 0, so only 7 of the 8 network bits are free. Networks 0 and 127 are excluded, giving 126.
+   - Class B begins with 10, so 14 of the 16 network bits are free, giving 16,384 networks.
+   - Class C begins with 110, so 21 of the 24 network bits are free, giving 2,097,152 networks.
+   - In every class 2 is subtracted from the host count, for the network address and the broadcast address.
 56. **Which subnet mask would be appropriate for address range to submit for up to LANs, with each LAN contains 5 to 26 hosts?** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: each LAN must support 5 to 26 hosts, so the largest requirement is 26 hosts.
+
+   Step 1, find the host bits needed:
+   - 2ʰ − 2 ≥ 26
+   - h = 4 gives 2⁴ − 2 = 14, which is not enough.
+   - h = 5 gives 2⁵ − 2 = 30, which is enough.
+
+   Step 2, find the prefix and mask:
+   - Prefix = 32 − 5 = /27
+   - Mask in binary: 11111111.11111111.11111111.11100000
+   - Mask in decimal: 255.255.255.224
+
+   Final answer: the appropriate subnet mask is 255.255.255.224, that is /27, giving 30 usable hosts per LAN.
+
+   - From a Class C /24 this gives 2³ = 8 such LANs, with block size 32, starting at .0, .32, .64, .96, .128, .160, .192 and .224.
+   - A /28 with only 14 hosts would be too small for a LAN of 26, and a /26 with 62 hosts would waste more than half of every block.
 57. **Given IP Address: 192.168.19.24/29, find out the following IP Class & type, Number of Host, Network address, Broadcast address, Wildcard, and Subnet mask.** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 192.168.19.24/29.
+
+   IP class and type:
+   - The first octet is 192, which lies between 192 and 223, so it is a Class C address.
+   - It falls in 192.168.0.0/16, so it is a private address, and it is a unicast address.
+
+   Number of hosts:
+   - Host bits = 32 − 29 = 3, so 2³ = 8 total addresses and 8 − 2 = 6 usable hosts.
+
+   Network address:
+   - Block size = 256 − 248 = 8, so blocks start at 0, 8, 16, 24, 32 and so on.
+   - 24 is itself a block boundary, so the network address is 192.168.19.24.
+
+   Broadcast address:
+   - Last address of the block = 192.168.19.24 + 7 = 192.168.19.31.
+
+   Wildcard mask:
+   - The wildcard is the inverse of the subnet mask: 255.255.255.255 − 255.255.255.248 = 0.0.0.7.
+
+   Subnet mask:
+   - /29 = 11111111.11111111.11111111.11111000 = 255.255.255.248.
+
+   Summary:
+
+   | Item | Value |
+   |---|---|
+   | Class and type | Class C, private, unicast |
+   | Number of usable hosts | 6 |
+   | Network address | 192.168.19.24 |
+   | Broadcast address | 192.168.19.31 |
+   | Usable range | 192.168.19.25 to 192.168.19.30 |
+   | Wildcard mask | 0.0.0.7 |
+   | Subnet mask | 255.255.255.248 |
 58. **Find network address, subnet mask, broadcast address and IP host range of 192.168.100.128/26** *[GTCL Assistant Engineer (CSE) 2022 compact it 685 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: 192.168.100.128/26.
+
+   Step 1, subnet mask:
+   - /26 = 11111111.11111111.11111111.11000000 = 255.255.255.192
+
+   Step 2, block size and boundaries:
+   - Block size = 256 − 192 = 64, so blocks start at 0, 64, 128 and 192.
+   - 128 is a block boundary, so this is already a network address.
+
+   Answers:
+   - Network address: 192.168.100.128
+   - Subnet mask: 255.255.255.192, that is /26
+   - Broadcast address: 192.168.100.128 + 63 = 192.168.100.191
+   - IP host range: 192.168.100.129 to 192.168.100.190
+   - Usable hosts: 2⁶ − 2 = 62
 59. **What is the range of IPv4 address class A, B and C?** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 
+
+   Answer: The ranges of the IPv4 address classes:
+
+   | Class | First octet range | Address range | Default mask | Network / Host bits | Networks | Hosts per network |
+   |---|---|---|---|---|---|---|
+   | A | 1 to 126 | 1.0.0.0 to 126.255.255.255 | 255.0.0.0, /8 | 8 / 24 | 126 | 16,777,214 |
+   | B | 128 to 191 | 128.0.0.0 to 191.255.255.255 | 255.255.0.0, /16 | 16 / 16 | 16,384 | 65,534 |
+   | C | 192 to 223 | 192.0.0.0 to 223.255.255.255 | 255.255.255.0, /24 | 24 / 8 | 2,097,152 | 254 |
+
+   - 127.0.0.0/8 is reserved for loopback, Class D from 224 to 239 is multicast, and Class E from 240 to 255 is reserved.
+
+   - How the class is recognised from the leading bits: Class A begins with 0, Class B with 10, Class C with 110, Class D with 1110 and Class E with 1111.
+   - Class D, 224.0.0.0 to 239.255.255.255, is used for multicast, and Class E, 240.0.0.0 to 255.255.255.255, is reserved for research.
 60. **What is subnet mask? Given IP address 192.168.0.0/29 find 10^{\text{th}} and 22^{\text{th}} subnet first host address and last host address.** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)]*
 
+
+   Answer:
+
+   What a subnet mask is:
+   - A subnet mask is a 32 bit value in which the network bits are 1 and the host bits are 0. A host ANDs an IP address with the mask to obtain the network address, which is how it decides whether a destination is on its own network or must be sent to the default gateway. It also determines how many hosts a subnet can hold and where the broadcast address lies.
+
+   Given: 192.168.0.0/29, taking the parent block as 192.168.0.0/24.
+
+   Step 1, block size and mask:
+   - /29 gives host bits = 3, so 2³ = 8 addresses per subnet and 6 usable hosts.
+   - Mask = 255.255.255.248, block size = 256 − 248 = 8.
+   - Number of subnets from a /24 = 2^(29 − 24) = 2⁵ = 32.
+
+   Step 2, find the nth subnet:
+   - The nth subnet starts at (n − 1) × 8 in the last octet.
+
+   10th subnet:
+   - Start = (10 − 1) × 8 = 72, so the network address is 192.168.0.72.
+   - First host address: 192.168.0.73
+   - Last host address: 192.168.0.78
+   - Broadcast address: 192.168.0.79
+
+   22nd subnet:
+   - Start = (22 − 1) × 8 = 168, so the network address is 192.168.0.168.
+   - First host address: 192.168.0.169
+   - Last host address: 192.168.0.174
+   - Broadcast address: 192.168.0.175
+
+   Final answer: the 10th subnet has hosts 192.168.0.73 to 192.168.0.78, and the 22nd subnet has hosts 192.168.0.169 to 192.168.0.174.
 61. **How many bits need to identify an IP address in IPv4?** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
+
+   Answer: An IPv4 address needs 32 bits.
+
+   - It is written as four octets of 8 bits each, separated by dots, for example 192.168.1.10, where each octet ranges from 0 to 255.
+   - The total address space is 2³² = 4,294,967,296 addresses, about 4.3 billion, which is why IPv4 exhaustion became a problem.
+   - IPv6 by comparison uses 128 bits, giving about 3.4 × 10³⁸ addresses.
 62. **What is default subnet mask?** *[BARC Data Entry Officer 10.09.2022 compact it 702 (ET: N/A)]*
 
+
+   Answer: A default subnet mask is the standard mask that belongs to an address class before any subnetting is done. It marks exactly the bits that the class definition treats as the network part.
+
+   | Class | Default subnet mask | CIDR | Network bits |
+   |---|---|---|---|
+   | A | 255.0.0.0 | /8 | 8 |
+   | B | 255.255.0.0 | /16 | 16 |
+   | C | 255.255.255.0 | /24 | 24 |
+
+   - Class D and E have no default mask, since they are used for multicast and for reserved purposes.
+   - When bits are borrowed from the host part to create subnets, the resulting mask is called a custom or subnet mask and it is always longer than the default. For example, subnetting a Class C with 2 borrowed bits gives 255.255.255.192, that is /26.
 63. **Given IP: 168.20.96.63, Subnet mask: 255.255.192.0 Find network address, broadcast address and number of host.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 712 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: IP 168.20.96.63, subnet mask 255.255.192.0, which is a /18.
+
+   Step 1, block size:
+   - The interesting octet is the third, so block size = 256 − 192 = 64.
+   - Blocks in the third octet begin at 0, 64, 128 and 192.
+
+   Step 2, find the block containing 96:
+   - 96 lies between 64 and 127, so the block is 168.20.64.0 to 168.20.127.255.
+
+   Answers:
+   - Network address: 168.20.64.0
+   - Broadcast address: 168.20.127.255
+   - Number of usable hosts: host bits = 32 − 18 = 14, so 2¹⁴ − 2 = 16,382
+   - Usable host range: 168.20.64.1 to 168.20.127.254
+
+   - Check by ANDing the third octet: 96 = 01100000, mask 192 = 11000000, AND = 01000000 = 64, which confirms the network address.
 64. **An IP address is: 172.162.100.25/27, Find out the following: (a) Network Address (b) IP class (c) Subnet mask (d) Broadcast address (e) Hosts per subnet** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 172.162.100.25/27.
+
+   (a) Network address:
+   - Block size = 256 − 224 = 32, so blocks in the last octet start at 0, 32, 64, 96 and so on.
+   - 25 lies between 0 and 31, so the network address is 172.162.100.0.
+
+   (b) IP class:
+   - The first octet is 172, which lies between 128 and 191, so it is a Class B address. Note that only 172.16 to 172.31 is private, so 172.162 is a public Class B address.
+
+   (c) Subnet mask:
+   - /27 = 11111111.11111111.11111111.11100000 = 255.255.255.224.
+
+   (d) Broadcast address:
+   - Last address of the block = 172.162.100.0 + 31 = 172.162.100.31.
+
+   (e) Hosts per subnet:
+   - Host bits = 32 − 27 = 5, so 2⁵ − 2 = 30 usable hosts.
+   - Usable range: 172.162.100.1 to 172.162.100.30.
 65. **What is Public and Private IP?** *[IDRA Assistant Network Administrator 2022 compact it 728 (ET: N/A)]*
 
+
+   Answer:
+
+   Public IP address:
+   - A globally unique address allocated by IANA through the regional registries and the ISP, which is directly routable and reachable on the Internet.
+   - It cannot be reused anywhere else in the world, it has to be bought or rented, and it is directly exposed, so it needs firewall protection.
+   - Used by web servers, mail servers and the WAN interface of a router.
+
+   Private IP address:
+   - An address from the ranges reserved by RFC 1918, used inside a private network. It is unique only within that network, and the same range may be reused in millions of other networks.
+   - Ranges: 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16.
+   - Routers on the Internet discard packets carrying a private source or destination address, so NAT is required at the network edge to reach the outside.
+   - It is free, conserves the scarce public address space, and gives some security because internal hosts are not directly reachable from outside.
+   - Used by PCs, printers and phones inside a home or office LAN.
+
+   - Practical picture: a home has one public address on its router's WAN side, and every device inside uses a private 192.168.x.x address; NAT translates between the two.
 66. **A network IP address is 172.16.236.92/27. Find out the: (a) Subnet mask (b) Network Address (c) Broadcast Address** *[NWPGCL Junior Assistant Manager (IT) 2022 compact it 731 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 172.16.236.92/27.
+
+   (a) Subnet mask:
+   - /27 = 11111111.11111111.11111111.11100000 = 255.255.255.224.
+
+   (b) Network address:
+   - Block size = 256 − 224 = 32, so blocks start at 0, 32, 64, 96, 128 and so on.
+   - 92 lies between 64 and 95, so the network address is 172.16.236.64.
+   - Check: 92 = 01011100, mask 224 = 11100000, AND = 01000000 = 64.
+
+   (c) Broadcast address:
+   - Last address of the block = 172.16.236.64 + 31 = 172.16.236.95.
+
+   - Usable range: 172.16.236.65 to 172.16.236.94, that is 2⁵ − 2 = 30 hosts.
 67. **Given IP address 172.3.16.156/23 and find out the following answer: (i) Network address (ii) Subnet mask (iii) Number of host** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)]*
 
+
+   Answer:
+
+   Given: 172.3.16.156/23.
+
+   (i) Network address:
+   - The interesting octet is the third, and block size = 256 − 254 = 2, so blocks begin at even third octets: 0, 2, 4, ... 16, 18.
+   - 16 is even, so the block starts at 172.3.16.0 and the network address is 172.3.16.0.
+
+   (ii) Subnet mask:
+   - /23 = 11111111.11111111.11111110.00000000 = 255.255.254.0.
+
+   (iii) Number of hosts:
+   - Host bits = 32 − 23 = 9, so 2⁹ = 512 addresses and 512 − 2 = 510 usable hosts.
+
+   - Supporting values: broadcast address 172.3.17.255, and usable range 172.3.16.1 to 172.3.17.254.
 68. **Answer the following: (i) 192.168.10.0/23, How many usable address? (ii) 192.168.10.0/23, Find subnet mask. (iii) 192.168.10.0/23, Find Broadcast Address. (iv) 192.168.10.0/23, What is last usable host?** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
 
+
+   Answer: Given 192.168.10.0/23. Block size in the third octet = 256 − 254 = 2, so the block covers 192.168.10.x and 192.168.11.x.
+
+   (i) How many usable addresses:
+   - Host bits = 32 − 23 = 9, so 2⁹ = 512 total and 512 − 2 = 510 usable.
+
+   (ii) Subnet mask:
+   - /23 = 255.255.254.0.
+
+   (iii) Broadcast address:
+   - The last address of the block = 192.168.11.255.
+
+   (iv) Last usable host:
+   - One below the broadcast address = 192.168.11.254.
+
+   - The first usable host is 192.168.10.1, and the network address is 192.168.10.0.
 69. **(ii) CIDR কী? 192.168.100.9/26 IP address থেকে (a) Total subnets (b) Block size (c) Valid Hosts (d) Total hosts বের করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 788 (ET: N/A)]*
 
+
+   Answer:
+
+   CIDR ki:
+   - CIDR mane Classless Inter-Domain Routing, ja 1993 sale RFC 1519-e chalu hoy. Ekhane fixed Class A, B, C-r poribote address-er sathe ekti prefix length lekha hoy, jemon 192.168.100.9/26.
+   - Er upokarita: joto dorkar totota-i address deoa jay, tai opochoy onek kome; VLSM diye ek network-e bhinno akar-er subnet toiri kora jay; ar ekadhik contiguous network-ke ek prefix-e summarize kore routing table choto rakha jay.
+
+   192.168.100.9/26 theke:
+
+   (a) Total subnets:
+   - Class C-r default prefix /24, tai borrowed bits = 26 − 24 = 2, ebong subnet songkha = 2² = 4.
+
+   (b) Block size:
+   - Mask = 255.255.255.192, tai block size = 256 − 192 = 64.
+
+   (c) Valid hosts:
+   - Host bits = 32 − 26 = 6, tai valid host = 2⁶ − 2 = 62.
+
+   (d) Total hosts:
+   - Total address per subnet = 2⁶ = 64.
+
+   Ei IP-r nijer subnet:
+   - 9 pore 0 theke 63-er modhye, tai network address 192.168.100.0, broadcast 192.168.100.63, ar host range 192.168.100.1 theke 192.168.100.62.
 70. **(a) What is the usable number of host IP addresses available on a network that has a /26 mask? Write down the subset mask of this network. Write down the first and the last IP address that can be assigned to host PCs if the network address is 192.168.30.128/26. What address should be used for broadcast purpose in this Network?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 801-802 (ET: N/A)]*
 
+
+   Answer:
+
+   Usable host addresses on a /26 network:
+   - Host bits = 32 − 26 = 6, so 2⁶ = 64 total addresses and 64 − 2 = 62 usable hosts.
+
+   Subnet mask of this network:
+   - /26 = 11111111.11111111.11111111.11000000 = 255.255.255.192.
+
+   For the network 192.168.30.128/26:
+   - Block size = 256 − 192 = 64, so the block runs from 192.168.30.128 to 192.168.30.191.
+   - First IP address that can be assigned to a host: 192.168.30.129
+   - Last IP address that can be assigned to a host: 192.168.30.190
+
+   Broadcast address for this network:
+   - 192.168.30.191, which is the last address of the block.
+
+   - In practice one of the usable addresses, usually the first or the last, is given to the router interface as the default gateway, so 61 remain for PCs.
 71. **Answer the following: (i) 192.168.10.2/28, Find subnet mask. (ii) 192.168.10.2/28, Find Network Address. (iii) 192.168.10.2/28, Find IP Address of the first host? (iv) 192.168.10.2/28, Find IP Address of the last host? (v) 192.168.10.2/28, Find Broadcast Address.** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
+
+   Answer: Given 192.168.10.2/28. Block size = 256 − 240 = 16, so blocks in the last octet start at 0, 16, 32, 48 and so on, and 2 lies in the first block.
+
+   - (i) Subnet mask: /28 = 11111111.11111111.11111111.11110000 = 255.255.255.240
+   - (ii) Network address: 192.168.10.0
+   - (iii) IP address of the first host: 192.168.10.1
+   - (iv) IP address of the last host: 192.168.10.14
+   - (v) Broadcast address: 192.168.10.15
+
+   - Usable hosts = 2⁴ − 2 = 14.
 72. **Select the correct answer: (i) Which cannot IP address 172.16.28.0/16- (a) .0 (b) .1 (c) .255 (d) All (ii) Which at the follow Dynamically Assign Protocol? (a) DHCP (b) ARP (c) ICMP (d) TCP (iii) Which one is Private IP address? (a) 10.10.10.10 (b) 172.172.172.172 (c) 192.192.192.192 (d) All (iv) SSH Protocol port number is _____. (v) Which is the name of Symmetric key encryption algorithm? (a) AES (b) 3DES (c) Re4 (d) None** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
 
+
+   Answer:
+
+   (i) Which cannot be an IP address in 172.16.28.0/16 — the answer is (a) .0
+   - With a /16 mask the network is 172.16.0.0 and the broadcast is 172.16.255.255. The address 172.16.28.0 is a perfectly valid host address, because the host part is the whole last two octets, so only 172.16.0.0 and 172.16.255.255 are excluded. The address that truly cannot be assigned is the all zeros host address, that is 172.16.0.0, which the option lists as .0.
+
+   (ii) Which is a dynamic address assignment protocol — the answer is (a) DHCP
+   - DHCP, the Dynamic Host Configuration Protocol, leases IP addresses automatically over UDP ports 67 and 68 using the DORA exchange. ARP maps IP to MAC, ICMP reports errors and carries ping, and TCP is a transport protocol.
+
+   (iii) Which one is a private IP address — the answer is (a) 10.10.10.10
+   - The private ranges are 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16. 172.172.172.172 is outside 172.16 to 172.31, and 192.192.192.192 is outside 192.168, so both are public.
+
+   (iv) SSH protocol port number — the answer is 22
+   - SSH runs on TCP port 22. For comparison, Telnet is 23, FTP is 20 and 21, HTTP is 80 and HTTPS is 443.
+
+   (v) Which is a symmetric key encryption algorithm — the answer is all of (a) AES, (b) 3DES and (c) RC4
+   - AES, 3DES and RC4 are all symmetric algorithms, which use the same key to encrypt and decrypt. If only one answer is allowed, AES is the strongest and the current standard. RSA, Diffie-Hellman and ECC are the asymmetric algorithms.
 73. **A network address is given 172.18.10.0/23, divide this network address into 4 subnets and find every subnet address, start address, subnet mask, broadcast address etc.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843-844 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 172.18.10.0/23, to be divided into 4 subnets.
+
+   Step 1, bits to borrow:
+   - 2ⁿ ≥ 4 gives n = 2, so the new prefix is /23 + 2 = /25.
+
+   Step 2, mask and block size:
+   - /25 = 255.255.255.128, block size in the last octet = 256 − 128 = 128.
+   - Host bits = 32 − 25 = 7, so 2⁷ = 128 addresses and 126 usable hosts per subnet.
+
+   Step 3, the four subnets:
+
+   | Subnet | Network address | Subnet mask | First host | Last host | Broadcast |
+   |---|---|---|---|---|---|
+   | 1 | 172.18.10.0/25 | 255.255.255.128 | 172.18.10.1 | 172.18.10.126 | 172.18.10.127 |
+   | 2 | 172.18.10.128/25 | 255.255.255.128 | 172.18.10.129 | 172.18.10.254 | 172.18.10.255 |
+   | 3 | 172.18.11.0/25 | 255.255.255.128 | 172.18.11.1 | 172.18.11.126 | 172.18.11.127 |
+   | 4 | 172.18.11.128/25 | 255.255.255.128 | 172.18.11.129 | 172.18.11.254 | 172.18.11.255 |
+
+   - Check: 4 × 128 = 512 addresses, which is exactly the 2⁹ of the original /23, so nothing is wasted.
 74. **A network address is given 172.168.0.0/28, divide this network address into 4 subnets and find every subnet address, start address, subnet mask, broadcast address etc.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 856 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 172.168.0.0/28, to be divided into 4 subnets.
+
+   Step 1, bits to borrow:
+   - 2ⁿ ≥ 4 gives n = 2, so the new prefix is /28 + 2 = /30.
+
+   Step 2, mask and block size:
+   - /30 = 255.255.255.252, block size = 256 − 252 = 4.
+   - Host bits = 32 − 30 = 2, so 2² = 4 addresses and only 4 − 2 = 2 usable hosts per subnet.
+
+   Step 3, the four subnets:
+
+   | Subnet | Network address | Subnet mask | First host | Last host | Broadcast |
+   |---|---|---|---|---|---|
+   | 1 | 172.168.0.0/30 | 255.255.255.252 | 172.168.0.1 | 172.168.0.2 | 172.168.0.3 |
+   | 2 | 172.168.0.4/30 | 255.255.255.252 | 172.168.0.5 | 172.168.0.6 | 172.168.0.7 |
+   | 3 | 172.168.0.8/30 | 255.255.255.252 | 172.168.0.9 | 172.168.0.10 | 172.168.0.11 |
+   | 4 | 172.168.0.12/30 | 255.255.255.252 | 172.168.0.13 | 172.168.0.14 | 172.168.0.15 |
+
+   - Check: 4 × 4 = 16 addresses, which is exactly the 2⁴ of the original /28.
+   - With only 2 usable addresses each, these subnets are suitable only for point to point router links, which is in fact the standard use of a /30.
 75. **In a “Class A” network total 20 subnets are needed with maximum 260 hosts per subnets. Can 255.255.255.0 subnet mask be used in this?** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 
+
+   Answer: No, the mask 255.255.255.0 cannot be used, because it does not provide enough hosts per subnet.
+
+   Step 1, check the host requirement:
+   - 255.255.255.0 is a /24, so host bits = 32 − 24 = 8.
+   - Usable hosts = 2⁸ − 2 = 254.
+   - The requirement is 260 hosts per subnet, and 254 < 260, so the mask fails.
+
+   Step 2, find a mask that does work:
+   - 2ʰ − 2 ≥ 260 requires h = 9, since 2⁹ − 2 = 510 ≥ 260, while 2⁸ − 2 = 254 is not enough.
+   - Prefix = 32 − 9 = /23, so the mask is 255.255.254.0.
+
+   Step 3, check the subnet requirement with /23:
+   - The network is Class A with a default /8, so borrowed bits = 23 − 8 = 15, giving 2¹⁵ = 32,768 subnets, which is far more than the 20 required.
+
+   Final answer: 255.255.255.0 cannot be used because it gives only 254 usable hosts against the requirement of 260. The correct mask is 255.255.254.0, that is /23, which gives 510 usable hosts per subnet and 32,768 subnets, easily satisfying both requirements.
 76. **Find Network address, Valid Host, Subnet mask and Broadcast address from 172.16.128.120/25.** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: 172.16.128.120/25.
+
+   Step 1, subnet mask:
+   - /25 = 11111111.11111111.11111111.10000000 = 255.255.255.128
+
+   Step 2, block size and boundary:
+   - Block size = 256 − 128 = 128, so blocks in the last octet start at 0 and 128.
+   - 120 lies between 0 and 127, so the block is 172.16.128.0 to 172.16.128.127.
+
+   Answers:
+   - Network address: 172.16.128.0
+   - Subnet mask: 255.255.255.128, that is /25
+   - Broadcast address: 172.16.128.127
+   - Valid host range: 172.16.128.1 to 172.16.128.126, that is 2⁷ − 2 = 126 hosts
 77. **What is the range of class C IPv4 address? Suppose, Class C network has four subnets. How many usable PC needed each subnet?** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875-876 (ET: BUET)]*
 
+
+   Answer:
+
+   Range of Class C IPv4 addresses:
+   - First octet from 192 to 223, that is 192.0.0.0 to 223.255.255.255.
+   - The default mask is 255.255.255.0, that is /24, giving 254 usable hosts per network.
+   - The private portion is 192.168.0.0 to 192.168.255.255.
+
+   Class C network divided into four subnets:
+   - Bits to borrow: 2ⁿ ≥ 4 gives n = 2, so the prefix becomes /24 + 2 = /26 and the mask is 255.255.255.192.
+   - Host bits = 32 − 26 = 6, so each subnet has 2⁶ = 64 addresses and 2⁶ − 2 = 62 usable addresses.
+   - One of those 62 is normally taken by the router interface as the default gateway, so about 61 PCs can be connected per subnet.
+
+   Final answer: 62 usable PCs per subnet, that is 248 in total across the four subnets, against 254 before subnetting. The 6 lost addresses are the extra network and broadcast addresses created by the division.
+
+   | Subnet | Network | Usable range | Broadcast |
+   |---|---|---|---|
+   | 1 | x.y.z.0/26 | .1 to .62 | .63 |
+   | 2 | x.y.z.64/26 | .65 to .126 | .127 |
+   | 3 | x.y.z.128/26 | .129 to .190 | .191 |
+   | 4 | x.y.z.192/26 | .193 to .254 | .255 |
 78. **(a) What is the subnet mask of 10.2.1.3/26 and What is the usable number of IP address on network that has a 26 mask?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 886 (ET: N/A)]*
 
+
+   Answer:
+
+   Subnet mask of 10.2.1.3/26:
+   - /26 in binary is 11111111.11111111.11111111.11000000
+   - The last octet 11000000 = 128 + 64 = 192
+   - Subnet mask = 255.255.255.192
+
+   Usable number of IP addresses on a /26 network:
+   - Host bits = 32 − 26 = 6
+   - Total addresses = 2⁶ = 64
+   - Usable = 64 − 2 = 62, since the first is the network address and the last is the broadcast address
+
+   Final answer: the subnet mask is 255.255.255.192 and there are 62 usable IP addresses.
+
+   - For this particular address: block size = 256 − 192 = 64, and 3 lies in the first block, so the network address is 10.2.1.0, the broadcast is 10.2.1.63 and the usable range is 10.2.1.1 to 10.2.1.62.
 79. **172.168.128.0/20 এর Broadcast Address বের কর এবং কতগুলো Computer (Host) Connect করা যাবে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
 
+
+   Answer:
+
+   Deoa ache: 172.168.128.0/20.
+
+   Step 1, subnet mask ar block size:
+   - /20 mane mask 11111111.11111111.11110000.00000000 = 255.255.240.0
+   - Interesting octet tritiyo, tai block size = 256 − 240 = 16. Block shuru hoy tritiyo octet-er 0, 16, 32, ... 128, 144-e.
+
+   Step 2, block-er shima:
+   - 128 nijei ekti block boundary, tai block cholbe 172.168.128.0 theke 172.168.143.255 porjonto.
+
+   Step 3, Broadcast address:
+   - Block-er sesh address = 172.168.143.255
+
+   Step 4, koyti computer connect kora jabe:
+   - Host bits = 32 − 20 = 12
+   - Mot address = 2¹² = 4096
+   - Byabohar-jogyo host = 4096 − 2 = 4094
+
+   Sesh uttor:
+   - Broadcast address: 172.168.143.255
+   - Connect kora jabe: 4094 ti computer, ar tader range 172.168.128.1 theke 172.168.143.254.
 80. **Suppose a network with IP address 192.16.0.0 is divided into 2 subnets, find number of hosts per subnet. Also for the first subnet, find- (i) First Subnet address (ii) First host address (iii) Last host address (iv) Broadcast address** *[BAUST Assistant Programmer 2021 compact it 919 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: network 192.16.0.0, divided into 2 subnets.
+
+   Step 1, identify the class and default mask:
+   - The first octet is 192, which lies between 192 and 223, so it is a Class C address with a default mask of 255.255.255.0, that is /24. The network is therefore 192.16.0.0/24.
+
+   Step 2, bits to borrow for 2 subnets:
+   - 2ⁿ ≥ 2 gives n = 1, so the new prefix is /25 and the mask is 255.255.255.128.
+
+   Step 3, hosts per subnet:
+   - Host bits = 32 − 25 = 7, so 2⁷ = 128 addresses and 128 − 2 = 126 usable hosts per subnet.
+
+   Step 4, the first subnet:
+   - (i) First subnet address: 192.16.0.0/25
+   - (ii) First host address: 192.16.0.1
+   - (iii) Last host address: 192.16.0.126
+   - (iv) Broadcast address: 192.16.0.127
+
+   - The second subnet is 192.16.0.128/25, with hosts 192.16.0.129 to 192.16.0.254 and broadcast 192.16.0.255.
 81. **Find the Subnet mask from the following IP: 192.168.3.0/22** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 192.168.3.0/22.
+
+   Step 1, write the mask in binary:
+   - /22 means the first 22 bits are 1: 11111111.11111111.11111100.00000000
+
+   Step 2, convert to decimal:
+   - 255.255.252.0
+
+   Final answer: the subnet mask is 255.255.252.0.
+
+   - Supporting values: block size in the third octet = 256 − 252 = 4, so the blocks start at third octets 0, 4, 8 and so on. The address 192.168.3.0 falls in the block beginning at 192.168.0.0, so the actual network is 192.168.0.0/22, the broadcast is 192.168.3.255, the usable range is 192.168.0.1 to 192.168.3.254, and there are 2¹⁰ − 2 = 1022 usable hosts.
 82. **VLSM Subnetting. Given an IP address, 192.168.0.0/20 For creating 4 subnets department of A, B, C, D with 2000, 1000, 6000 and 8000 hosts, find out every department first and last IP address. Also write the subnet mask of q.x.y.z/notation.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927 (ET: CTI)]*
 
+
+   Answer: This requires VLSM, allocating the largest requirement first.
+
+   Step 1, check whether the given block is large enough:
+   - Total requirement = 2000 + 1000 + 6000 + 8000 = 17,000 hosts.
+   - A /20 block holds only 2¹² = 4096 addresses, which is far short of 17,000. The given block is therefore too small, and the smallest block that can hold the allocation is a /17 with 32,768 addresses.
+   - The solution below is worked on 192.168.0.0/17, since the method is what is being examined; with a /20 the requirement simply cannot be met.
+
+   Step 2, size each department:
+
+   | Dept | Hosts | Host bits, 2ʰ − 2 ≥ need | Prefix | Block size |
+   |---|---|---|---|---|
+   | D | 8000 | 13, since 2¹³ − 2 = 8190 | /19 | 8192 |
+   | C | 6000 | 13, since 2¹³ − 2 = 8190 | /19 | 8192 |
+   | A | 2000 | 11, since 2¹¹ − 2 = 2046 | /21 | 2048 |
+   | B | 1000 | 10, since 2¹⁰ − 2 = 1022 | /22 | 1024 |
+
+   Step 3, allocate sequentially, largest first:
+
+   | Dept | Network block | Subnet mask | First IP | Last IP | Broadcast |
+   |---|---|---|---|---|---|
+   | D, 8000 | 192.168.0.0/19 | 255.255.224.0 | 192.168.0.1 | 192.168.31.254 | 192.168.31.255 |
+   | C, 6000 | 192.168.32.0/19 | 255.255.224.0 | 192.168.32.1 | 192.168.63.254 | 192.168.63.255 |
+   | A, 2000 | 192.168.64.0/21 | 255.255.248.0 | 192.168.64.1 | 192.168.71.254 | 192.168.71.255 |
+   | B, 1000 | 192.168.72.0/22 | 255.255.252.0 | 192.168.72.1 | 192.168.75.254 | 192.168.75.255 |
+
+   - Total used = 8192 + 8192 + 2048 + 1024 = 19,456 addresses out of 32,768, so 192.168.76.0 onwards remains free.
+   - The reason for allocating largest first is alignment: every block must start on a boundary that is a multiple of its own size, and taking the big blocks first guarantees this without leaving unusable gaps. <!-- verify -->
 83. **You are given a IP address 172.16.20.0/25 have four subnets. For each department find the following information. (CSE, EEE, IPE, PME)** *[NRCC Assistant Programmer 2021 compact it 931 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 172.16.20.0/25, to be divided into 4 subnets for CSE, EEE, IPE and PME.
+
+   Step 1, bits to borrow:
+   - 2ⁿ ≥ 4 gives n = 2, so the new prefix is /25 + 2 = /27.
+
+   Step 2, mask and block size:
+   - /27 = 255.255.255.224, block size = 256 − 224 = 32.
+   - Host bits = 32 − 27 = 5, so 2⁵ = 32 addresses and 30 usable hosts per department.
+
+   Step 3, the four departments:
+
+   | Department | Network address | Subnet mask | First host | Last host | Broadcast | Usable hosts |
+   |---|---|---|---|---|---|---|
+   | CSE | 172.16.20.0/27 | 255.255.255.224 | 172.16.20.1 | 172.16.20.30 | 172.16.20.31 | 30 |
+   | EEE | 172.16.20.32/27 | 255.255.255.224 | 172.16.20.33 | 172.16.20.62 | 172.16.20.63 | 30 |
+   | IPE | 172.16.20.64/27 | 255.255.255.224 | 172.16.20.65 | 172.16.20.94 | 172.16.20.95 | 30 |
+   | PME | 172.16.20.96/27 | 255.255.255.224 | 172.16.20.97 | 172.16.20.126 | 172.16.20.127 | 30 |
+
+   - Check: 4 × 32 = 128 addresses, which is exactly the 2⁷ of the original /25, so the block is used completely.
 84. **Define IP 127.0.0.1, what is localhost?** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
+
+   Answer:
+
+   IP 127.0.0.1:
+   - It is the IPv4 loopback address, and the whole block 127.0.0.0/8 is reserved for this purpose.
+   - A packet sent to it never reaches the network card or the cable; the TCP/IP stack of the machine loops it straight back. So it tests the machine's own protocol stack rather than any external connectivity.
+   - `ping 127.0.0.1` is therefore the first diagnostic step: if it fails, the TCP/IP stack or the driver is broken, and no cable or switch check will help.
+   - The IPv6 equivalent is `::1`.
+   - Any address in 127.0.0.0/8, such as 127.0.0.53, behaves the same way, which is why some system resolvers listen on such addresses.
+
+   What localhost is:
+   - `localhost` is the standard hostname that refers to the machine itself. It resolves to 127.0.0.1 for IPv4 and to `::1` for IPv6.
+   - The mapping is defined in the `hosts` file, `C:\Windows\System32\drivers\etc\hosts` on Windows and `/etc/hosts` on Linux, so it works even when DNS is unavailable.
+   - Uses: connecting to a server running on the same machine, for example `http://localhost:8080` for a local web application or `localhost:3306` for a local MySQL database; and testing an application during development before it is deployed.
+   - A service bound to 127.0.0.1 is reachable only from that machine and not from the network, which is a common and deliberate security measure for databases and admin interfaces.
 85. **What is static IP Address and dynamic IP Address?** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
+
+   Answer:
+
+   Static IP address:
+   - An address configured manually on the device and kept permanently, so it does not change when the machine restarts.
+   - Advantages: the address is always known, which is essential for servers, printers, routers, cameras and any device that must be reached by name or by port forwarding; DNS records and firewall rules stay valid; remote access is reliable; and there is no dependence on a DHCP server.
+   - Disadvantages: manual configuration on every device is slow and error prone; a mistake causes an IP conflict; it does not scale to hundreds of machines; and moving a device to another subnet requires reconfiguration.
+
+   Dynamic IP address:
+   - An address leased automatically by a DHCP server for a limited period, which may change on renewal or when the device reconnects.
+   - Advantages: no manual work, no duplicate address conflicts, efficient reuse of a limited address pool, easy support for laptops, phones and guests, and central change of gateway or DNS settings for the whole network at once.
+   - Disadvantages: the address is not predictable, so the device cannot easily be reached from outside; the network depends on the DHCP server, which becomes a single point of failure; and troubleshooting is harder because the address in yesterday's log may belong to another machine today.
+
+   | Point | Static | Dynamic |
+   |---|---|---|
+   | Assigned by | Administrator, manually | DHCP server, automatically |
+   | Changes | Never | On lease expiry or reconnection |
+   | Suitable for | Servers, printers, routers, cameras | PCs, laptops, phones, guest devices |
+   | Cost and effort | Higher administrative effort | Very low |
+   | Reliability of reachability | High | Low unless a reservation is used |
+
+   - Middle ground: a DHCP reservation binds a fixed address to a device's MAC, giving the predictability of a static address with the central management of DHCP.
 86. **Using the IP address 192.168.10.0/23 find out- (i) Subnet/First address (ii) Last Address (iii) Subnet mask** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: 192.168.10.0/23.
+
+   Step 1, subnet mask:
+   - /23 = 11111111.11111111.11111110.00000000 = 255.255.254.0
+
+   Step 2, block size and boundary:
+   - Block size in the third octet = 256 − 254 = 2, so blocks begin at even third octets.
+   - 10 is even, so the block runs from 192.168.10.0 to 192.168.11.255.
+
+   Answers:
+   - (i) Subnet, that is the first address: 192.168.10.0, which is the network address; the first usable host address is 192.168.10.1
+   - (ii) Last address: 192.168.11.255, which is the broadcast address; the last usable host address is 192.168.11.254
+   - (iii) Subnet mask: 255.255.254.0, that is /23
+
+   - Total addresses = 2⁹ = 512, of which 510 are usable.
 87. **Consider the IP address 10.20.30.0/25 now answer the below question: (i) What is the subnet mask of the above IP address? (ii) How many host per subnet have? (iii) What is the Broadcast address of this 10.20.30.0/3 IP address?** *[Janata Bank Assistant System Administrator 2021 compact it 938 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 10.20.30.0/25.
+
+   (i) Subnet mask:
+   - /25 = 11111111.11111111.11111111.10000000 = 255.255.255.128
+
+   (ii) Hosts per subnet:
+   - Host bits = 32 − 25 = 7, so 2⁷ = 128 addresses and 128 − 2 = 126 usable hosts.
+
+   (iii) Broadcast address:
+   - Block size = 256 − 128 = 128, so the block runs from 10.20.30.0 to 10.20.30.127.
+   - Broadcast address = 10.20.30.127
+
+   - Usable host range: 10.20.30.1 to 10.20.30.126.
 88. **২. 192.168.10.0/28 এর জন্য সাবনেট মাস্ক হবে কোনটি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
+
+   Answer: 192.168.10.0/28 er subnet mask hobe 255.255.255.240.
+
+   - /28 mane prothom 28 ti bit 1: 11111111.11111111.11111111.11110000
+   - Sesh octet 11110000 = 128 + 64 + 32 + 16 = 240
+   - Tai mask = 255.255.255.240
+
+   - Ei block-e host bit = 32 − 28 = 4, mane 2⁴ = 16 ti address ar 14 ti byabohar-jogyo host. Network address 192.168.10.0, broadcast 192.168.10.15, ar host range 192.168.10.1 theke 192.168.10.14.
 89. **৯. ক্লাস C এর ডিফল্ট সাবনেট মাস্ক কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
+
+   Answer: Class C-r default subnet mask holo 255.255.255.0, mane /24.
+
+   - Binary-te: 11111111.11111111.11111111.00000000
+   - Ekhane 24 ti network bit ar 8 ti host bit, tai protita Class C network-e 2⁸ = 256 ti address ar 254 ti byabohar-jogyo host.
+   - Tulonar jonno: Class A-r default mask 255.0.0.0 (/8) ar Class B-r 255.255.0.0 (/16).
 90. **১১. নিচের কোনটি লুপ ব্যাক আইপি এড্রেস?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
+
+   Answer: Loopback IP address holo 127.0.0.1.
+
+   - Sompurno 127.0.0.0/8 block ei kajer jonno songrokkhito, mane 127.0.0.0 theke 127.255.255.255 porjonto.
+   - Ei address-e pathano packet network card ba cable porjonto jay na; TCP/IP stack-i ta ferot pathay. Tai `ping 127.0.0.1` diye nijer machine-er TCP/IP stack thik ache kina jacha kora hoy.
+   - Er hostname `localhost`, ar IPv6-te loopback address `::1`.
 91. **A IP Address is: 172.16.128.120/25 now answers the following questions: (i) What is the network address of this IP? (ii) What is the subnet mask? (iii) What is the broadcast address? (iv) How many connection is possible in this network?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
 
+
+   Answer:
+
+   Given: 172.16.128.120/25.
+
+   Step 1, mask and block size:
+   - /25 = 255.255.255.128, block size = 256 − 128 = 128, so blocks in the last octet begin at 0 and 128.
+   - 120 lies between 0 and 127, so the block is 172.16.128.0 to 172.16.128.127.
+
+   Answers:
+   - (i) Network address: 172.16.128.0
+   - (ii) Subnet mask: 255.255.255.128, that is /25
+   - (iii) Broadcast address: 172.16.128.127
+   - (iv) Number of connections possible: host bits = 32 − 25 = 7, so 2⁷ − 2 = 126 usable host addresses, of which one is normally the router interface, leaving 125 for hosts.
+
+   - Usable range: 172.16.128.1 to 172.16.128.126.
 92. **(a) A IP address is 172.20.0.0/27. How many subnets and hosts per subnet?** *[National University Assistant Programmer 2020 compact it 977 (ET: DU)]*
 
+
+   Answer:
+
+   Given: 172.20.0.0/27.
+
+   Step 1, identify the class and default prefix:
+   - The first octet is 172, which lies between 128 and 191, so it is a Class B address with a default prefix of /16.
+
+   Step 2, number of subnets:
+   - Bits borrowed = 27 − 16 = 11
+   - Number of subnets = 2¹¹ = 2048
+
+   Step 3, hosts per subnet:
+   - Host bits = 32 − 27 = 5
+   - Total addresses = 2⁵ = 32, and usable hosts = 32 − 2 = 30
+
+   Final answer: 2048 subnets, each with 30 usable hosts.
+
+   - Check: 2048 × 32 = 65,536 addresses, which is exactly the 2¹⁶ of the original Class B block.
+   - The first subnet is 172.20.0.0/27 with hosts 172.20.0.1 to 172.20.0.30 and broadcast 172.20.0.31; the mask is 255.255.255.224 and the block size is 32.
 93. **Given IP address 172.16.128.120/25 what is the subnet mask, network address, broadcast address and total usable host in this network?** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
 
+
+   Answer:
+
+   Given: 172.16.128.120/25.
+
+   Step 1, subnet mask:
+   - /25 = 11111111.11111111.11111111.10000000 = 255.255.255.128
+
+   Step 2, block size and boundary:
+   - Block size = 256 − 128 = 128, so blocks in the last octet start at 0 and 128.
+   - 120 lies between 0 and 127, so the block is 172.16.128.0 to 172.16.128.127.
+
+   Answers:
+   - Subnet mask: 255.255.255.128
+   - Network address: 172.16.128.0
+   - Broadcast address: 172.16.128.127
+   - Total usable hosts: 2⁷ − 2 = 126, with the range 172.16.128.1 to 172.16.128.126
 94. **Given IP address is 172.168.10.0/24, administrator wants to create 32 subnets, then find out sub netmask, number of address of each subnet, first and last address of subnet 1, first and last address of subnet 32.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1012 (ET: DU)]*
 
+
+   Answer:
+
+   Given: 172.168.10.0/24, to be divided into 32 subnets.
+
+   Step 1, bits to borrow:
+   - 2ⁿ ≥ 32 gives n = 5, so the new prefix is /24 + 5 = /29.
+
+   Step 2, subnet mask:
+   - /29 = 11111111.11111111.11111111.11111000 = 255.255.255.248
+
+   Step 3, addresses per subnet:
+   - Host bits = 32 − 29 = 3, so 2³ = 8 addresses per subnet, of which 6 are usable.
+   - Block size = 256 − 248 = 8, so the subnets start at 0, 8, 16, 24, ... 248.
+
+   Step 4, first and last subnets:
+
+   | Subnet | Network address | First host | Last host | Broadcast |
+   |---|---|---|---|---|
+   | 1 | 172.168.10.0/29 | 172.168.10.1 | 172.168.10.6 | 172.168.10.7 |
+   | 32 | 172.168.10.248/29 | 172.168.10.249 | 172.168.10.254 | 172.168.10.255 |
+
+   - The 32nd subnet begins at (32 − 1) × 8 = 248.
+
+   Final answer:
+   - Subnet mask: 255.255.255.248, that is /29
+   - Number of addresses per subnet: 8, of which 6 are usable
+   - Subnet 1: first address 172.168.10.0 and last address 172.168.10.7, with hosts 172.168.10.1 to 172.168.10.6
+   - Subnet 32: first address 172.168.10.248 and last address 172.168.10.255, with hosts 172.168.10.249 to 172.168.10.254
+   - Check: 32 × 8 = 256, which is exactly the original /24.
 95. **Given IP Address 180.79.35.5/24, Find the (i) Network address (ii) Broadcast address (iii) Subnet mask (iv) Total valid host (v) IP address class** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1043 (ET: BUET)]*
+
+
+   Answer:
+
+   Given: 180.79.35.5/24.
+
+   (i) Network address:
+   - /24 means the first three octets are the network part, so the network address is 180.79.35.0.
+
+   (ii) Broadcast address:
+   - All host bits set to 1 gives 180.79.35.255.
+
+   (iii) Subnet mask:
+   - /24 = 11111111.11111111.11111111.00000000 = 255.255.255.0.
+
+   (iv) Total valid hosts:
+   - Host bits = 32 − 24 = 8, so 2⁸ = 256 addresses and 256 − 2 = 254 valid hosts, with the range 180.79.35.1 to 180.79.35.254.
+
+   (v) IP address class:
+   - The first octet is 180, which lies between 128 and 191, so it is a Class B address.
+   - Note that the given /24 mask overrides the Class B default of /16, which is what classless addressing permits; the address is therefore a Class B address being used with a /24 subnet mask.
 
 ## OSI & TCP/IP Reference Model (43)
 
