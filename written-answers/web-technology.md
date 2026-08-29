@@ -3079,4 +3079,155 @@
 
 1. **A & B two frames in a browser loaded from different origins. Why is it a reasonable security policy to allow A to navigate B to another origin base only on whether the display area of A contains dis-pare of B and A has the control over area.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 494 (ET: N/A)]*
 
+
+   Answer: The question concerns the browser's frame navigation policy: when may frame A be allowed to navigate frame B to a different origin. The rule the browsers actually adopted is that A may navigate B if A is an ancestor of B in the frame tree, that is if B is displayed inside an area that A itself controls. This is a reasonable security policy for the following reasons.
+
+   The threat that the policy must prevent
+
+   If any frame could navigate any other frame, a malicious page could carry out this attack: the user is on a legitimate banking site that displays some content in an iframe; a hostile frame elsewhere on the page silently navigates that iframe to a page that looks identical but is controlled by the attacker; the user, seeing the genuine bank URL in the address bar and a familiar-looking form inside the page, types his credentials into the attacker's frame. This is frame phishing, and it works precisely because the user judges trust by the top-level address bar, not by the origin of each individual frame.
+
+   Why "A contains the display area of B" is the right condition
+
+   1. A already controls what appears in that area. If B is nested inside A, then A chose to create that iframe, A chose its initial source, and A decides its size and position. A could equally have drawn its own content in that space, or removed the iframe entirely and replaced it with anything. Allowing A to navigate B therefore grants no power that A did not already possess. The permission adds no new risk.
+
+   2. The user's trust decision is already delegated to A. When the user looks at a region of the page that lies inside A's rectangle, the security context the user is implicitly relying on is A's. The address bar shows the top-level document. The user has already accepted that whatever appears inside A's area is under A's control. Navigating B is consistent with that expectation rather than a violation of it.
+
+   3. The alternative would break legitimate composition. Frames exist so that a page can compose content: an application shell that swaps a content frame as the user clicks a menu, a page that embeds a map or a video player and needs to change it, a portal that arranges several panels. If a parent could not navigate its own child, these ordinary designs would be impossible. The policy therefore permits the case that is necessary and denies the case that is not.
+
+   4. It denies exactly the dangerous case. A frame that is not an ancestor of B does not control B's display area. If it could navigate B, it would be changing content in a region of the screen that belongs to somebody else, with no visible indication to the user. That is the frame-phishing attack, and it is the case the rule blocks.
+
+   5. The permission is scoped and auditable. Ancestry is a structural property of the frame tree, fixed at the time the frames are created. It is unambiguous, cheap for the browser to check, and cannot be manufactured by an attacker at run time. A permission based on something softer, such as "has a reference to the other window", proved to be exploitable, which is why the earlier permissive rules were replaced by the descendant rule.
+
+   6. Responsibility follows control. Security policy should place authority where the ability to affect the outcome already lies. A determines the geometry of B's area, so A is the party that can already deceive the user in that area; making A also the party permitted to navigate it keeps authority and accountability together.
+
+   Relation to the Same-Origin Policy
+
+   The Same-Origin Policy governs reading: A may not read B's DOM, cookies or response bodies unless the origins match on scheme, host and port. The frame navigation policy governs writing in a much weaker sense: A may point B at a new URL, but still cannot see anything inside it. The two are separate and complementary. Navigating a frame reveals nothing to the navigator; it only changes what the user sees. This is why the looser rule for navigation is acceptable while the strict rule for reading is not.
+
+   ```
+   +--------------------------------------------------+
+   |  Top-level page  (origin X)  ← address bar shows X|
+   |                                                  |
+   |   +--------------------+   +------------------+  |
+   |   |  Frame A (origin Y)|   | Frame C (origin Z)|  |
+   |   |                    |   |                  |  |
+   |   |  +--------------+  |   |                  |  |
+   |   |  | Frame B      |  |   |                  |  |
+   |   |  | (origin W)   |  |   |                  |  |
+   |   |  +--------------+  |   |                  |  |
+   |   +--------------------+   +------------------+  |
+   +--------------------------------------------------+
+
+   A may navigate B      : allowed  — A is B's ancestor and owns B's screen area
+   C may navigate B      : denied   — C controls none of B's display area
+   Top-level may navigate any frame : allowed — it owns the whole area
+   B may navigate the top-level page: denied by default; allowed only with
+                                       user activation or the allow-top-navigation
+                                       sandbox flag
+   ```
+
+   Complementary defences that exist because this policy alone is not sufficient
+   - `X-Frame-Options: DENY` or `SAMEORIGIN`, and the modern `Content-Security-Policy: frame-ancestors`, which let a sensitive page refuse to be framed at all. This is the correct defence for a bank's login page.
+   - The `sandbox` attribute on an iframe, which removes capabilities from the framed document, including the ability to navigate the top-level window unless `allow-top-navigation` is granted.
+   - Requiring user activation before a framed document may navigate its ancestors, which prevents silent redirection of the whole page.
+   - `SameSite` cookies and CSRF tokens, which stop a framed page from acting with the user's credentials.
+
+   Stated as a single principle: a frame may navigate another frame only over screen area it already controls, because such permission grants no capability the frame did not already have, while the reverse case would let one site silently rewrite a region of the screen that the user attributes to somebody else.
 2. **What is CORS in web development?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 761 (ET: N/A)]*
+
+
+   Answer: CORS stands for Cross-Origin Resource Sharing. It is an HTTP header-based mechanism by which a server tells the browser that it is willing to let a page from a different origin read its responses. It is a controlled relaxation of the Same-Origin Policy.
+
+   The Same-Origin Policy, which CORS relaxes: a browser blocks a script on one origin from reading a response from another origin. Two URLs share an origin only if the scheme, the host and the port are all identical.
+
+   | URL compared with `https://example.com/page` | Same origin | Reason |
+   |---|---|---|
+   | `https://example.com/other` | Yes | Only the path differs |
+   | `http://example.com/page` | No | Different scheme |
+   | `https://api.example.com/page` | No | Different host, a subdomain still counts as different |
+   | `https://example.com:8080/page` | No | Different port |
+
+   Why the restriction exists: without it, a page the user opened on a hostile site could issue a request to the user's bank, the browser would attach the user's cookies, and the hostile script could read the account balance and transfer money. The Same-Origin Policy is what makes it safe to browse an untrusted site while logged in elsewhere.
+
+   Why CORS is then needed: modern applications are deliberately split across origins. A front end at `https://myapp.com` calls an API at `https://api.myapp.com`, or uses a public weather or maps service. These are legitimate cross-origin reads, and CORS is the mechanism by which the API grants permission.
+
+   How it works — a simple request
+
+   ```http
+   GET /api/products HTTP/1.1
+   Host: api.example.com
+   Origin: https://myapp.com
+   ```
+
+   ```http
+   HTTP/1.1 200 OK
+   Access-Control-Allow-Origin: https://myapp.com
+   Content-Type: application/json
+   ```
+
+   The browser sends the `Origin` header automatically. If the response carries a matching `Access-Control-Allow-Origin`, the browser hands the body to the script; if not, it blocks the script from reading it and logs a CORS error.
+
+   How it works — a preflighted request
+
+   For anything that is not a simple request — a method other than GET, HEAD or POST, a `Content-Type` other than the three form types, or any custom header such as `Authorization` — the browser first sends an OPTIONS request to ask permission.
+
+   ```mermaid
+   sequenceDiagram
+     participant B as Browser
+     participant S as api.example.com
+     B->>S: OPTIONS /api/orders<br/>Origin, Access-Control-Request-Method: PUT,<br/>Access-Control-Request-Headers: Authorization
+     S-->>B: 204 No Content<br/>Allow-Origin, Allow-Methods, Allow-Headers, Max-Age
+     Note over B: Permission granted, cached for Max-Age seconds
+     B->>S: PUT /api/orders (the real request)
+     S-->>B: 200 OK + Access-Control-Allow-Origin
+   ```
+
+   The CORS response headers:
+
+   | Header | Meaning |
+   |---|---|
+   | `Access-Control-Allow-Origin` | Which origin may read the response. A single origin, or `*` for any |
+   | `Access-Control-Allow-Methods` | Which HTTP methods are permitted |
+   | `Access-Control-Allow-Headers` | Which request headers the client may send |
+   | `Access-Control-Allow-Credentials` | `true` if cookies and authorisation headers may be sent |
+   | `Access-Control-Max-Age` | How long the preflight result may be cached, in seconds |
+   | `Access-Control-Expose-Headers` | Which response headers the script is allowed to read |
+
+   Server configuration examples:
+
+   ```javascript
+   // Node.js with Express
+   const cors = require('cors');
+   app.use(cors({
+       origin: ['https://myapp.com', 'https://admin.myapp.com'],
+       methods: ['GET', 'POST', 'PUT', 'DELETE'],
+       allowedHeaders: ['Content-Type', 'Authorization'],
+       credentials: true,
+       maxAge: 86400
+   }));
+   ```
+
+   ```php
+   // PHP
+   header("Access-Control-Allow-Origin: https://myapp.com");
+   header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+   header("Access-Control-Allow-Headers: Content-Type, Authorization");
+   header("Access-Control-Allow-Credentials: true");
+   ```
+
+   Points that must be understood, and that are commonly got wrong:
+
+   - CORS is enforced by the browser, not by the server. `curl`, Postman and any server-to-server call are unaffected. CORS therefore protects the user's browser session; it is not an access control mechanism for the API. Authentication and authorisation are still required.
+
+   - The request usually still reaches the server. In a simple request the browser sends it, the server processes it, and only the reading of the response is blocked. This is why a cross-origin POST can still change data on a badly designed endpoint, and why CSRF protection is a separate and still necessary defence.
+
+   - `Access-Control-Allow-Origin: *` cannot be combined with `Access-Control-Allow-Credentials: true`. When credentials are allowed, the exact origin must be named. This is deliberate: a wildcard plus cookies would recreate exactly the attack the Same-Origin Policy prevents.
+
+   - Echoing back whatever arrives in the `Origin` header is a serious vulnerability, because it grants permission to every site. Origins must be checked against an allow-list.
+
+   - A CORS error is not a network failure. The request often succeeded; the browser simply refused to expose the response to the script.
+
+   CORS distinguished from related terms:
+   - JSONP was the old workaround, which abused `<script>` tags to bypass the policy. It supports only GET and is insecure; CORS replaced it.
+   - A reverse proxy is the other common approach: the front end calls its own origin, and the server forwards the call to the API, so no cross-origin request occurs at all.
+   - CSP, Content Security Policy, controls which resources a page may load; CORS controls which origins may read a response. They solve different problems.
