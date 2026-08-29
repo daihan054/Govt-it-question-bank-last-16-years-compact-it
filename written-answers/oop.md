@@ -4323,27 +4323,878 @@ Public class class B extends class A {
 
 1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
 
+
+   Answer: Java has three access specifier keywords, private, protected and public, and a fourth level called default which is obtained by writing no keyword at all. The visibility table asked for is given below, with Y for yes and N for no.
+
+   Java has four levels of access, controlled by three keywords plus the default (no keyword at all).
+
+   | Modifier | Same class | Same package | Subclass in another package | Anywhere |
+   |---|---|---|---|---|
+   | private | Y | N | N | N |
+   | default (no keyword) | Y | Y | N | N |
+   | protected | Y | Y | Y | N |
+   | public | Y | Y | Y | Y |
+
+   Description of each:
+
+   - private: the member is visible only inside the class in which it is declared. Not even a subclass can see it. It is the level used for data members, and it is what makes encapsulation work.
+   - default, also called package-private: no keyword is written. The member is visible to every class in the same package, but to nothing outside it.
+   - protected: visible inside the class, to every class in the same package, and to subclasses even if they are in a different package. It is used for members that a subclass must be able to use but that are not part of the public interface.
+   - public: visible from everywhere. It is used for the methods that form the interface of the class.
+
+   Rules:
+   - A top-level class may be only public or default; it cannot be private or protected.
+   - Constructors follow the same four levels. A private constructor prevents instantiation from outside, which is how the singleton pattern is implemented.
+   - An overriding method may not reduce the visibility of the method it overrides; it may only keep it the same or widen it.
+   - The general principle is to make everything as private as possible and to expose only what is genuinely needed.
+
+   Filled answer in the Y and N form requested:
+
+   | Accessible from | private | protected | public |
+   |---|---|---|---|
+   | Within the same class | Y | Y | Y |
+   | From another class in the same package | N | Y | Y |
+   | From a subclass in the same package | N | Y | Y |
+   | From a subclass in a different package | N | Y | Y |
+   | From a non-subclass in a different package | N | N | Y |
+   | From anywhere in the program | N | N | Y |
+
+   Example:
+
+   ```java
+   package university;
+
+   public class Student {
+       private   String password;    // only inside Student
+                 String section;     // default: anywhere in package university
+       protected int    roll;        // package plus subclasses anywhere
+       public    String name;        // everywhere
+
+       private void resetPassword() { }     // only inside Student
+       public  void display() { }           // everywhere
+   }
+   ```
 2. **Explain the various types of access specifiers.** *[DESCO Assistant Engineer 20.05.2023 compact it 579 (ET: DESCO)]*
 
+
+   Answer: An access specifier (also called an access modifier) determines from where a class member can be reached. It is the mechanism by which encapsulation and data hiding are enforced.
+
+   Java has four levels of access, controlled by three keywords plus the default (no keyword at all).
+
+   | Modifier | Same class | Same package | Subclass in another package | Anywhere |
+   |---|---|---|---|---|
+   | private | Y | N | N | N |
+   | default (no keyword) | Y | Y | N | N |
+   | protected | Y | Y | Y | N |
+   | public | Y | Y | Y | Y |
+
+   Description of each:
+
+   - private: the member is visible only inside the class in which it is declared. Not even a subclass can see it. It is the level used for data members, and it is what makes encapsulation work.
+   - default, also called package-private: no keyword is written. The member is visible to every class in the same package, but to nothing outside it.
+   - protected: visible inside the class, to every class in the same package, and to subclasses even if they are in a different package. It is used for members that a subclass must be able to use but that are not part of the public interface.
+   - public: visible from everywhere. It is used for the methods that form the interface of the class.
+
+   Rules:
+   - A top-level class may be only public or default; it cannot be private or protected.
+   - Constructors follow the same four levels. A private constructor prevents instantiation from outside, which is how the singleton pattern is implemented.
+   - An overriding method may not reduce the visibility of the method it overrides; it may only keep it the same or widen it.
+   - The general principle is to make everything as private as possible and to expose only what is genuinely needed.
+
+   In C++ there are three access specifiers, and no package-level concept:
+
+   | Specifier | Same class | Derived class | Outside the class |
+   |---|---|---|---|
+   | private | Yes | No | No |
+   | protected | Yes | Yes | No |
+   | public | Yes | Yes | Yes |
+
+   - private: accessible only inside the class and to its friend functions and friend classes. It is the default for a class.
+   - protected: accessible inside the class and inside derived classes, but not from outside. It is used for members that subclasses need.
+   - public: accessible from anywhere. It is the default for a struct.
+
+   C++ also has inheritance access, which is written after the colon and controls how inherited members appear in the derived class:
+
+   | Base member | public inheritance | protected inheritance | private inheritance |
+   |---|---|---|---|
+   | public | stays public | becomes protected | becomes private |
+   | protected | stays protected | stays protected | becomes private |
+   | private | not accessible | not accessible | not accessible |
+
+   Example in C++:
+
+   ```cpp
+   class Base {
+   private:
+       int secret;          // only Base and its friends
+   protected:
+       int shared;          // Base and its derived classes
+   public:
+       int open;            // everyone
+       void setAll(int a, int b, int c) { secret = a; shared = b; open = c; }
+   };
+
+   class Derived : public Base {
+   public:
+       void test() {
+           // secret = 10;   // error: private in Base
+           shared = 20;      // allowed: protected
+           open   = 30;      // allowed: public
+       }
+   };
+
+   int main() {
+       Base b;
+       // b.secret = 1;      // error
+       // b.shared = 2;      // error
+       b.open = 3;           // allowed
+       return 0;
+   }
+   ```
+
+   Purpose of access specifiers:
+   - To enforce encapsulation, so that the internal state cannot be corrupted from outside.
+   - To define a clear public interface, separating what a class promises from how it works.
+   - To allow the implementation to be changed later without breaking client code.
+   - To let a designer decide deliberately what a subclass may rely on.
 3. **Which type of variable violates encapsulation rules?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)], [BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+
+   Answer: A public data member (a public instance variable) violates the rules of encapsulation.
+
+   Reason:
+   - Encapsulation requires that the internal state of an object be hidden and be changed only through methods that can validate the change. Declaring a data member public exposes it directly, so any part of the program may read or write it without any check.
+   - The object can then be placed in an invalid state, for example a negative age or a negative account balance, and the class has no way to prevent it.
+   - It also destroys the freedom to change the implementation later, because outside code now depends on the field itself rather than on a method.
+
+   Example of the violation:
+
+   ```java
+   class BankAccount {
+       public double balance;        // violates encapsulation
+   }
+
+   public class Demo {
+       public static void main(String[] args) {
+           BankAccount acc = new BankAccount();
+           acc.balance = -50000;     // nothing prevents this absurd value
+       }
+   }
+   ```
+
+   The correct form:
+
+   ```java
+   class BankAccount {
+       private double balance;       // hidden
+
+       public double getBalance() {
+           return balance;
+       }
+
+       public void deposit(double amount) {
+           if (amount > 0) {
+               balance += amount;
+           } else {
+               System.out.println("Deposit must be positive");
+           }
+       }
+
+       public boolean withdraw(double amount) {
+           if (amount > 0 && amount <= balance) {
+               balance -= amount;
+               return true;
+           }
+           return false;
+       }
+   }
+   ```
+
+   Other cases that weaken encapsulation:
+   - A public static mutable variable, which is effectively a global variable shared by the whole program.
+   - A protected data member, which is weaker than private because every subclass, present and future, can change it directly.
+   - A default (package-private) data member, which any class in the same package may alter.
+   - A getter that returns a reference to a mutable internal object, such as an array or a collection. The caller can then modify the object's internals through that reference even though the field is private. The remedy is to return a copy or an unmodifiable view.
+
+   ```java
+   class Student {
+       private int[] marks;
+       public int[] getMarks() { return marks; }        // leaks the internal array
+       public int[] getMarksSafe() { return marks.clone(); }   // correct
+   }
+   ```
+
+   General rule: declare every data member private, and expose only the methods that are genuinely part of the interface.
 4. **Which members of base class cannot access to derived class?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+
+   Answer: The private members of a base class cannot be accessed by a derived class.
+
+   Explanation:
+   - Private members are inherited by the derived class, in the sense that they exist in memory as part of every derived object, but they are not accessible by name inside the derived class.
+   - They can be reached only indirectly, through the public or protected methods that the base class itself provides.
+
+   Accessibility of base class members in a derived class:
+
+   | Base class member | Accessible in the derived class? |
+   |---|---|
+   | private | No |
+   | protected | Yes |
+   | public | Yes |
+   | default (package-private, in Java) | Only if the derived class is in the same package |
+
+   Example in Java:
+
+   ```java
+   class Base {
+       private   int a = 10;
+       protected int b = 20;
+       public    int c = 30;
+
+       public int getA() { return a; }     // the only legitimate route to 'a'
+   }
+
+   class Derived extends Base {
+       void show() {
+           // System.out.println(a);    // error: a has private access in Base
+           System.out.println(b);       // allowed: protected
+           System.out.println(c);       // allowed: public
+           System.out.println(getA());  // allowed: reaches 'a' through a public method
+       }
+   }
+   ```
+
+   Example in C++:
+
+   ```cpp
+   class Base {
+   private:
+       int a;
+   protected:
+       int b;
+   public:
+       int c;
+       int getA() { return a; }
+   };
+
+   class Derived : public Base {
+   public:
+       void show() {
+           // a = 5;      // error: a is private
+           b = 10;        // allowed
+           c = 15;        // allowed
+           cout << getA();  // allowed
+       }
+   };
+   ```
+
+   Two further points worth stating:
+   - In C++, a friend function or a friend class of the base can access its private members, and this is not affected by inheritance.
+   - Constructors and destructors are not inherited in either language, although a derived constructor must call a base constructor, explicitly or implicitly.
+
+   Why the rule exists: it preserves encapsulation. If a derived class could reach the private data of its base directly, then any change to the base class's internal representation would break every subclass ever written, and the base class would lose all control over its own invariants.
 5. **What are the various Access Specification in C++? Explain their purpose with are example.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 673 (ET: N/A)]*
 
+
+   Answer: C++ provides three access specifiers: private, protected and public.
+
+   private:
+   - Purpose: to hide the internal data of a class so that it cannot be read or written from outside. It is the mechanism of data hiding.
+   - Accessible from: only within the same class, and from its friend functions and friend classes.
+   - It is the default access level for a class, so any member declared before the first specifier is private.
+
+   protected:
+   - Purpose: to hide a member from the outside world while still making it available to derived classes. It is used for members that subclasses genuinely need in order to extend the behaviour of the base class.
+   - Accessible from: within the same class, within derived classes, and from friends. Not from outside.
+
+   public:
+   - Purpose: to expose the interface of the class, that is the set of operations that the outside world is allowed to perform.
+   - Accessible from: anywhere in the program.
+   - It is the default access level for a struct.
+
+   Summary table:
+
+   | Accessible from | private | protected | public |
+   |---|---|---|---|
+   | Within the same class | Yes | Yes | Yes |
+   | From a derived class | No | Yes | Yes |
+   | From outside the class | No | No | Yes |
+   | From a friend function or class | Yes | Yes | Yes |
+
+   Example:
+
+   ```cpp
+   #include <iostream>
+   using namespace std;
+
+   class Employee {
+   private:
+       double salary;                 // hidden completely
+
+   protected:
+       int employeeId;                // hidden from outside, visible to subclasses
+
+   public:
+       string name;                   // part of the interface
+
+       Employee(string n, int id, double s) {
+           name = n;
+           employeeId = id;
+           setSalary(s);
+       }
+
+       // controlled access to the private member
+       void setSalary(double s) {
+           if (s >= 0) salary = s;
+           else cout << "Salary cannot be negative" << endl;
+       }
+
+       double getSalary() { return salary; }
+   };
+
+   class Manager : public Employee {
+   public:
+       Manager(string n, int id, double s) : Employee(n, id, s) {}
+
+       void showDetails() {
+           cout << "Name: " << name << endl;          // public: allowed
+           cout << "ID: "   << employeeId << endl;    // protected: allowed
+           // cout << salary;                         // error: private
+           cout << "Salary: " << getSalary() << endl; // allowed through a public method
+       }
+   };
+
+   int main() {
+       Manager m("Rahim Uddin", 101, 60000);
+       m.showDetails();
+
+       cout << m.name << endl;        // allowed: public
+       // cout << m.employeeId;       // error: protected
+       // cout << m.salary;           // error: private
+       m.setSalary(-100);             // rejected by the validation
+       return 0;
+   }
+   ```
+
+   Output:
+   ```
+   Name: Rahim Uddin
+   ID: 101
+   Salary: 60000
+   Rahim Uddin
+   Salary cannot be negative
+   ```
+
+   Inheritance access in C++, which is a separate use of the same three keywords:
+
+   | Base member | class D : public B | class D : protected B | class D : private B |
+   |---|---|---|---|
+   | public | remains public | becomes protected | becomes private |
+   | protected | remains protected | remains protected | becomes private |
+   | private | inaccessible | inaccessible | inaccessible |
+
+   Public inheritance expresses an "is-a" relationship and is by far the most common; private inheritance expresses "implemented in terms of" and is rare.
+
+   Design guidance: make data members private by default, expose behaviour through public methods, and use protected sparingly, because a protected member is part of the contract with every future subclass and is therefore almost as hard to change as a public one.
 6. **How many specifiers are used in C++ programing?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
+
+
+   Answer: Three access specifiers are used in C++ programming: private, protected and public.
+
+   - private: accessible only within the same class and to its friends. It is the default for a class.
+   - protected: accessible within the class, within derived classes, and to friends, but not from outside.
+   - public: accessible from anywhere in the program. It is the default for a struct.
+
+   Summary:
+
+   | Accessible from | private | protected | public |
+   |---|---|---|---|
+   | Same class | Yes | Yes | Yes |
+   | Derived class | No | Yes | Yes |
+   | Outside the class | No | No | Yes |
+
+   Point of comparison with Java: Java has four levels, because in addition to private, protected and public it has a default or package-private level that applies when no keyword is written. C++ has no such package concept, so it has only three.
+
+   Note on the word "specifier" in C++: the standard also uses the term for other purposes, such as storage class specifiers (static, extern, mutable, thread_local) and type specifiers (const, volatile). If the question means access specifiers, the answer is three.
 
 ## Constructors & Destructors (5)
 
 1. **What is constructor function? Write the properties of it.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
 
+
+   Answer: A constructor is a special member function of a class that is called automatically when an object is created. Its purpose is to initialise the object, so that it starts life in a valid state.
+
+   Properties of a constructor:
+   - Its name is exactly the same as the name of the class.
+   - It has no return type at all, not even void.
+   - It is invoked automatically at the moment an object is created; it is never called explicitly like an ordinary method.
+   - It can be overloaded, so a class may have several constructors with different parameter lists.
+   - It may take parameters, which is how initial values are supplied.
+   - If no constructor is written, the compiler supplies a default one that takes no arguments. As soon as any constructor is written, that free default disappears.
+   - It is normally public, so that objects can be created from outside. A private constructor prevents outside instantiation, which is how the singleton pattern is built.
+   - It cannot be inherited, cannot be virtual in C++, and cannot be static or final.
+   - In a derived class the base constructor runs first, and it is called with super(...) in Java or through the initialisation list in C++.
+
+   Types of constructor:
+   - Default constructor: takes no parameters and sets default values.
+   - Parameterised constructor: takes arguments and sets the object from them.
+   - Copy constructor: creates a new object as a copy of an existing one. In C++ its signature is ClassName(const ClassName& other).
+
+   Example in C++:
+
+   ```cpp
+   #include <iostream>
+   #include <cstring>
+   using namespace std;
+
+   class Student {
+       string name;
+       int roll;
+       double cgpa;
+
+   public:
+       // default constructor
+       Student() {
+           name = "Unknown";
+           roll = 0;
+           cgpa = 0.0;
+           cout << "Default constructor called" << endl;
+       }
+
+       // parameterised constructor
+       Student(string n, int r, double c) : name(n), roll(r), cgpa(c) {
+           cout << "Parameterised constructor called" << endl;
+       }
+
+       // copy constructor
+       Student(const Student& s) {
+           name = s.name;
+           roll = s.roll;
+           cgpa = s.cgpa;
+           cout << "Copy constructor called" << endl;
+       }
+
+       // destructor
+       ~Student() {
+           cout << "Destructor called for " << name << endl;
+       }
+
+       void display() {
+           cout << name << " | " << roll << " | " << cgpa << endl;
+       }
+   };
+
+   int main() {
+       Student s1;                              // default
+       Student s2("Rahim", 101, 3.75);          // parameterised
+       Student s3 = s2;                         // copy
+
+       s1.display();
+       s2.display();
+       s3.display();
+       return 0;
+   }
+   ```
+
+   Output:
+   ```
+   Default constructor called
+   Parameterised constructor called
+   Copy constructor called
+   Unknown | 0 | 0
+   Rahim | 101 | 3.75
+   Rahim | 101 | 3.75
+   Destructor called for Rahim
+   Destructor called for Rahim
+   Destructor called for Unknown
+   ```
+
+   The destructors run in reverse order of construction, which is the rule in C++.
 2. **Define copy constructor. What Static binding and Dynamic binding?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
+
+   Answer:
+
+   Copy constructor:
+
+   A copy constructor is a constructor that creates a new object as a copy of an existing object of the same class. In C++ its signature is:
+
+   ```cpp
+   ClassName(const ClassName& other);
+   ```
+
+   The parameter must be passed by reference. If it were passed by value, creating that parameter would itself require a copy constructor, which would call itself endlessly.
+
+   It is invoked in three situations:
+   - When an object is initialised from another object: Student s2 = s1; or Student s2(s1);
+   - When an object is passed to a function by value.
+   - When an object is returned from a function by value.
+
+   Why it must sometimes be written by hand: the compiler supplies a default copy constructor that copies each member one by one. This is called a shallow copy, and it is wrong whenever the class holds a pointer to dynamically allocated memory, because both objects would then point to the same block. When one object is destroyed the memory is freed, and the other is left with a dangling pointer; when the second is destroyed, the same memory is freed twice. Writing a copy constructor that allocates new memory and copies the contents is called a deep copy.
+
+   ```cpp
+   #include <iostream>
+   #include <cstring>
+   using namespace std;
+
+   class Student {
+       char* name;
+       int roll;
+
+   public:
+       Student(const char* n, int r) {
+           roll = r;
+           name = new char[strlen(n) + 1];
+           strcpy(name, n);
+       }
+
+       // deep copy constructor
+       Student(const Student& s) {
+           roll = s.roll;
+           name = new char[strlen(s.name) + 1];   // separate memory
+           strcpy(name, s.name);
+           cout << "Copy constructor called" << endl;
+       }
+
+       ~Student() { delete[] name; }
+
+       void setName(const char* n) { strcpy(name, n); }
+       void display() { cout << name << " | " << roll << endl; }
+   };
+
+   int main() {
+       Student s1("Rahim", 101);
+       Student s2 = s1;          // copy constructor runs
+
+       s2.setName("Karim");      // changing s2 must not affect s1
+
+       s1.display();             // Rahim | 101
+       s2.display();             // Karim | 101
+       return 0;
+   }
+   ```
+
+   With only the compiler's shallow copy, changing s2 would also change s1, and the program would crash on exit through a double free.
+
+   Note on Java: Java has no copy constructor built into the language, but one can be written by hand, and the same shallow-versus-deep distinction applies to the clone() method.
+
+   Static binding and dynamic binding:
+
+   Binding means associating a method call with the actual code that will run.
+
+   Static binding, also called early binding or compile-time binding:
+   - The decision is made by the compiler, using the declared type of the reference or pointer.
+   - It applies to static methods, private methods, final methods, variables, and to method overloading.
+   - It is faster, because no lookup is needed at run time, but it is less flexible.
+
+   Dynamic binding, also called late binding or run-time binding:
+   - The decision is deferred until the program is running, and is made from the actual type of the object.
+   - It applies to method overriding, that is to virtual functions in C++ and to ordinary instance methods in Java.
+   - It is slightly slower, because it involves an indirection through the virtual table, but it is what makes run-time polymorphism and extensible design possible.
+
+   ```java
+   class Parent {
+       static void staticMethod()   { System.out.println("Parent static"); }
+       void instanceMethod()        { System.out.println("Parent instance"); }
+   }
+
+   class Child extends Parent {
+       static void staticMethod()   { System.out.println("Child static"); }
+       @Override
+       void instanceMethod()        { System.out.println("Child instance"); }
+   }
+
+   public class BindingDemo {
+       public static void main(String[] args) {
+           Parent p = new Child();
+           p.staticMethod();      // Parent static   -> static binding, by reference type
+           p.instanceMethod();    // Child instance  -> dynamic binding, by object type
+       }
+   }
+   ```
+
+   | Point | Static binding | Dynamic binding |
+   |---|---|---|
+   | When resolved | Compile time | Run time |
+   | Decided by | The declared type of the reference | The actual type of the object |
+   | Applies to | static, private and final methods; overloading | Overriding; virtual functions |
+   | Speed | Faster | Slightly slower |
+   | Flexibility | Low | High |
+   | Keyword in C++ | none | virtual |
 3. **What is the constructor invoked in OOP?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
 
+
+   Answer: In object-oriented programming the constructor is invoked automatically at the moment an object is created. The programmer never calls it explicitly.
+
+   The exact points at which it is invoked:
+
+   - When an object is declared or allocated:
+     - In C++: Student s1;  or  Student s2("Rahim", 101);  or  Student* p = new Student();
+     - In Java: Student s = new Student();
+     The keyword new is what triggers the constructor in Java.
+
+   - When an object is created as a copy of another, the copy constructor is invoked. In C++ this happens in three situations: on initialisation from another object (Student s3 = s2;), when an object is passed to a function by value, and when an object is returned by value.
+
+   - When a derived object is created, the base class constructor is invoked first, before the body of the derived constructor runs. In Java this is written as super(...) and must be the first statement; in C++ it is done through the member initialisation list. If it is not written, the compiler inserts a call to the no-argument base constructor.
+
+   - When an object is a member of another class (composition), the member's constructor runs before the body of the enclosing class's constructor.
+
+   - When an array of objects is created, the constructor runs once for every element.
+
+   - When a temporary object is created during an expression.
+
+   Order of invocation in an inheritance hierarchy:
+
+   ```java
+   class A {
+       A() { System.out.println("Constructor of A"); }
+   }
+   class B extends A {
+       B() { System.out.println("Constructor of B"); }
+   }
+   class C extends B {
+       C() { System.out.println("Constructor of C"); }
+   }
+
+   public class Demo {
+       public static void main(String[] args) {
+           C obj = new C();
+       }
+   }
+   ```
+
+   Output:
+   ```
+   Constructor of A
+   Constructor of B
+   Constructor of C
+   ```
+
+   The base class is always constructed first, because the derived part of the object may depend on the base part being ready. Destructors run in exactly the reverse order.
+
+   Which constructor is chosen: the compiler selects the overloaded constructor whose parameter list matches the arguments supplied, exactly as it does for an overloaded method. This is compile-time polymorphism.
+
+   Two points often asked alongside:
+   - A constructor cannot be called on an existing object; to reinitialise, an ordinary method must be used.
+   - In Java one constructor may call another constructor of the same class using this(...), which must also be the first statement. This is called constructor chaining.
 4. **What is constructor?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+
+   Answer: A constructor is a special member function of a class that is called automatically when an object is created. Its purpose is to initialise the object, so that it starts life in a valid state.
+
+   Properties of a constructor:
+   - Its name is exactly the same as the name of the class.
+   - It has no return type at all, not even void.
+   - It is invoked automatically at the moment an object is created; it is never called explicitly like an ordinary method.
+   - It can be overloaded, so a class may have several constructors with different parameter lists.
+   - It may take parameters, which is how initial values are supplied.
+   - If no constructor is written, the compiler supplies a default one that takes no arguments. As soon as any constructor is written, that free default disappears.
+   - It is normally public, so that objects can be created from outside. A private constructor prevents outside instantiation, which is how the singleton pattern is built.
+   - It cannot be inherited, cannot be virtual in C++, and cannot be static or final.
+   - In a derived class the base constructor runs first, and it is called with super(...) in Java or through the initialisation list in C++.
+
+   Types of constructor:
+   - Default constructor: takes no parameters and sets default values.
+   - Parameterised constructor: takes arguments and sets the object from them.
+   - Copy constructor: creates a new object as a copy of an existing one. In C++ its signature is ClassName(const ClassName& other).
+
+   Example in C++:
+
+   ```cpp
+   #include <iostream>
+   #include <cstring>
+   using namespace std;
+
+   class Student {
+       string name;
+       int roll;
+       double cgpa;
+
+   public:
+       // default constructor
+       Student() {
+           name = "Unknown";
+           roll = 0;
+           cgpa = 0.0;
+           cout << "Default constructor called" << endl;
+       }
+
+       // parameterised constructor
+       Student(string n, int r, double c) : name(n), roll(r), cgpa(c) {
+           cout << "Parameterised constructor called" << endl;
+       }
+
+       // copy constructor
+       Student(const Student& s) {
+           name = s.name;
+           roll = s.roll;
+           cgpa = s.cgpa;
+           cout << "Copy constructor called" << endl;
+       }
+
+       // destructor
+       ~Student() {
+           cout << "Destructor called for " << name << endl;
+       }
+
+       void display() {
+           cout << name << " | " << roll << " | " << cgpa << endl;
+       }
+   };
+
+   int main() {
+       Student s1;                              // default
+       Student s2("Rahim", 101, 3.75);          // parameterised
+       Student s3 = s2;                         // copy
+
+       s1.display();
+       s2.display();
+       s3.display();
+       return 0;
+   }
+   ```
+
+   Output:
+   ```
+   Default constructor called
+   Parameterised constructor called
+   Copy constructor called
+   Unknown | 0 | 0
+   Rahim | 101 | 3.75
+   Rahim | 101 | 3.75
+   Destructor called for Rahim
+   Destructor called for Rahim
+   Destructor called for Unknown
+   ```
+
+   The destructors run in reverse order of construction, which is the rule in C++.
 5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
+
+
+   Answer: Constructors and destructors exist so that an object can be brought into a valid state automatically when it is created, and can release whatever it holds automatically when it is destroyed. Without them, initialisation and cleanup would have to be remembered and written by hand at every use, and forgetting either is one of the commonest causes of bugs and resource leaks.
+
+   Why a constructor is used:
+   - To initialise the data members at the moment of creation, so that no object ever exists in an undefined state.
+   - To allocate the resources the object needs, such as dynamic memory, a file handle or a database connection.
+   - To enforce the invariants of the class, by validating the arguments before storing them.
+   - To make object creation concise and safe: the caller cannot forget to initialise, because the compiler calls the constructor automatically.
+   - Overloaded constructors allow an object to be created in several different ways.
+
+   Why a destructor is used:
+   - To release the resources acquired by the object, such as freeing memory with delete, closing a file or closing a network connection.
+   - To perform any final bookkeeping, such as decrementing an object counter or writing a log entry.
+   - It is invoked automatically when the object goes out of scope or when delete is called, so cleanup cannot be forgotten.
+   - Without it, a program that creates and destroys many objects would leak memory steadily until it exhausted the heap.
+
+   Properties of a destructor in C++:
+   - Its name is the class name preceded by a tilde, for example ~Student().
+   - It takes no parameters and returns nothing, so it cannot be overloaded. A class has exactly one destructor.
+   - It is called automatically, in reverse order of construction.
+   - It should be declared virtual in any class intended to be used as a base class with polymorphism, otherwise deleting a derived object through a base pointer will not call the derived destructor.
+
+   Example in C++:
+
+   ```cpp
+   #include <iostream>
+   #include <cstring>
+   using namespace std;
+
+   class FileManager {
+       char* buffer;
+       string fileName;
+       static int objectCount;
+
+   public:
+       // constructor: acquires the resource
+       FileManager(string fname, int size) {
+           fileName = fname;
+           buffer = new char[size];        // dynamic memory acquired
+           objectCount++;
+           cout << "Constructor: " << fileName
+                << " opened, buffer of " << size << " bytes allocated" << endl;
+       }
+
+       // destructor: releases the resource
+       ~FileManager() {
+           delete[] buffer;                // memory released
+           objectCount--;
+           cout << "Destructor: " << fileName
+                << " closed, buffer released" << endl;
+       }
+
+       static int getCount() { return objectCount; }
+   };
+
+   int FileManager::objectCount = 0;
+
+   int main() {
+       cout << "Objects at start: " << FileManager::getCount() << endl;
+       {
+           FileManager f1("data.txt", 1024);
+           FileManager f2("log.txt", 512);
+           cout << "Objects inside the block: " << FileManager::getCount() << endl;
+       }   // both destructors run automatically here, in reverse order
+
+       cout << "Objects after the block: " << FileManager::getCount() << endl;
+       return 0;
+   }
+   ```
+
+   Output:
+   ```
+   Objects at start: 0
+   Constructor: data.txt opened, buffer of 1024 bytes allocated
+   Constructor: log.txt opened, buffer of 512 bytes allocated
+   Objects inside the block: 2
+   Destructor: log.txt closed, buffer released
+   Destructor: data.txt closed, buffer released
+   Objects after the block: 0
+   ```
+
+   Equivalent in Java:
+
+   ```java
+   class Student {
+       private String name;
+       private static int count = 0;
+
+       // constructor
+       public Student(String name) {
+           this.name = name;
+           count++;
+           System.out.println("Constructor: object created for " + name);
+       }
+
+       public static int getCount() { return count; }
+   }
+
+   public class Demo {
+       public static void main(String[] args) {
+           Student s1 = new Student("Rahim");
+           Student s2 = new Student("Karim");
+           System.out.println("Total objects: " + Student.getCount());
+       }
+   }
+   ```
+
+   Important difference between the two languages: Java has no destructor. Memory is reclaimed automatically by the garbage collector, at an unpredictable time. The finalize() method existed for cleanup but was deprecated in Java 9 and removed in Java 18, because it gave no guarantees. The correct modern practice in Java is to implement AutoCloseable and use a try-with-resources block, which gives the deterministic cleanup that a C++ destructor provides:
+
+   ```java
+   class Resource implements AutoCloseable {
+       Resource()          { System.out.println("Resource acquired"); }
+       public void close() { System.out.println("Resource released"); }
+   }
+
+   public class TryDemo {
+       public static void main(String[] args) {
+           try (Resource r = new Resource()) {
+               System.out.println("Using the resource");
+           }   // close() is guaranteed to run here
+       }
+   }
+   ```
+
+   The C++ idiom in which a constructor acquires a resource and a destructor releases it is called RAII, Resource Acquisition Is Initialisation, and it is one of the most important patterns in the language.
 
 ## Output Tracing & Recursion (3)
 
