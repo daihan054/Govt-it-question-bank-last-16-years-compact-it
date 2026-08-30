@@ -5894,14 +5894,27 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    Answer: Transmission media fall into two categories, guided and unguided.
 
    Guided media:
-   - Twisted pair, UTP and STP. Advantages: cheapest, light, easy to install and terminate with RJ-45, adequate for 1 to 10 Gbps LANs. Disadvantages: high attenuation, limited to 100 m, poor immunity to EMI and crosstalk in UTP, easy to tap.
-   - Coaxial cable. Advantages: better bandwidth and much better EMI immunity than twisted pair because of the shield, longer segments, cheap for cable TV distribution. Disadvantages: bulky and stiff, harder to install, a single break can affect a whole bus segment, largely obsolete for LANs.
-   - Optical fibre. Advantages: enormous bandwidth, very low attenuation of 0.2 dB/km, complete immunity to EMI and crosstalk, high security since a tap is detectable, light and thin, no electrical hazard. Disadvantages: expensive cable and equipment, brittle, needs skilled fusion splicing, cannot carry power, and unidirectional so two fibres are needed.
+   - Twisted pair: two insulated copper wires twisted together in a spiral. The twisting is what cuts electromagnetic interference and crosstalk between the pairs.
+     - UTP, Unshielded Twisted Pair: only the twisting protects it, with no metal shield. Advantages: the cheapest option, easy to install and maintain, and it gives high data rates over short distances. It is what Ethernet LANs use. Disadvantages: lower performance than STP, limited distance of 100 m, and more open to noise and EMI.
+     - STP, Shielded Twisted Pair: the pairs are wrapped in a metal foil or braid. Advantages: better performance at high speed, much less interference, and reliable in noisy places. Disadvantages: costlier than UTP, harder to install because of the shield, and bulkier and less flexible.
+   - Coaxial cable: a central copper conductor, wrapped in an insulating layer, then a metal shield, then an outer jacket. The shield gives strong protection to the signal.
+     - Advantages: higher bandwidth than twisted pair, better signal quality, and it can carry many channels at once using frequency division multiplexing. Much less affected by outside EMI.
+     - Disadvantages: costlier than twisted pair, needs proper grounding, bulky and stiff, and it can be physically tapped.
+   - Optical fibre: it carries the data as light through a glass or plastic core, using total internal reflection. The cladding around the core has a lower refractive index, and that is what keeps the light inside.
+     - Advantages: very high bandwidth and capacity, low attenuation of about 0.2 dB/km so it goes very far, complete immunity to EMI and electrical noise, light and thin, resists corrosion, and it is secure because a tap can be detected.
+     - Disadvantages: installation and maintenance are complex, the initial cost is high, and it is fragile compared with copper.
+     - Uses: internet backbones, undersea cables, medical imaging, aerospace, industrial sensing.
 
    Unguided media:
-   - Radio waves. Advantages: omnidirectional, penetrate walls, no line of sight needed, cheap mobility, good for Wi-Fi and broadcast. Disadvantages: low bandwidth, interference from other users, insecure without encryption, regulated spectrum.
-   - Microwave. Advantages: high bandwidth, no cabling needed across rivers and difficult terrain, cheaper than laying cable over long spans. Disadvantages: strict line of sight needed, towers required, rain fade, and it can be intercepted.
-   - Infrared. Advantages: high bandwidth, no licence needed, secure because it cannot pass through walls. Disadvantages: very short range, blocked by any obstacle, useless in direct sunlight.
+   - Radio waves: electromagnetic waves from 3 kHz to 300 GHz. They pass through buildings easily, so the two antennas do not need to see each other.
+     - Advantages: omnidirectional, so the antennas need no alignment. Good penetration through walls. Cheap, and good for long distance and for mobility. Used in Wi-Fi and broadcast.
+     - Disadvantages: low bandwidth, interference from other users, and low security unless we encrypt. The spectrum is regulated.
+   - Microwave: 1 GHz to 300 GHz. It is line of sight communication, so the sending and receiving antennas must be properly aligned.
+     - Advantages: cheaper than laying cable, no land has to be bought, it works across rivers, hills and oceans, and it gives high data rates.
+     - Disadvantages: low security without encryption, affected by weather such as rain and fog, blocked by obstacles, and the antennas cost a lot to design and maintain.
+   - Infrared: 300 GHz to 400 THz. Short range wireless. It cannot pass through solid objects at all, which limits its range but also cuts interference.
+     - Advantages: high bandwidth, no licence needed, and fairly secure exactly because it cannot cross a wall.
+     - Disadvantages: directional, so it needs line of sight. Very short range, blocked by any obstacle, and useless in direct sunlight. Used in remote controls and wireless peripherals.
    - Satellite. Advantages: covers a huge area, reaches remote regions, ships and aircraft. Disadvantages: about 250 ms one way delay for geostationary orbit, very expensive, rain fade, limited bandwidth per transponder.
 6. **Difference between Guided and Unguided media. Difference between STP and UTP. Why using benefit UTP instead of STP?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 523 (ET: MIST)]*
 
