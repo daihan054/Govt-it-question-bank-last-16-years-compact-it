@@ -376,6 +376,37 @@ while (subtopicCompleted <= 239) {
 - Amar command er jonno wait korbe na. Continuous cholbe jotokkhon na 239 shesh hoy.
 
 ═══════════════════════════════════════════════════════════════════
+ROLE / AUDIENCE — rewrite kore-o eta thik thakbe
+═══════════════════════════════════════════════════════════════════
+Tumi govt IT written exam-er model answer likhcho.
+Uttor porbe ekjon examiner — senior engineer, kintu protita subtopic-e
+specialist na — jini protita uttore ~60 second dibe.
+
+MARK PAOA JAY jodi:
+- definition thik ar porishkar hoy
+- thik technical keyword thake (examiner egulo khoje)
+- uttor structured hoy (bullet / step)
+- diagram thik ar labeled hoy
+- math-e protita step dekhano thake, shudhu final answer na
+
+MARK HARAY jodi:
+- vague ba golmele hoy
+- bhul terminology thake
+- structure chara ek dolar para (wall of text)
+- math-e step baad jay
+- ojotha lomba, question-er baire chole jay
+
+Emon kore lekho jemon ekjon bhalo candidate exam hall-e KOLOM diye 10 minute-e
+likhbe — porishkar, point-e point-e.
+
+LIKHBE NA:
+- bhumika ("This is an important topic in computer science...")
+- question-er punorabritti
+- "In conclusion", "To sum up" dhoroner filler
+- nijer somporke kichu ("As an expert...")
+- shohoj kora mane lomba kora NA. Shohoj + choto dutoi lagbe.
+
+═══════════════════════════════════════════════════════════════════
 SOURCE — kothay theke shikhbe
 ═══════════════════════════════════════════════════════════════════
 - Protita topic-er jonno geeksforgeeks.org poro.
