@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 143/206 sections**
+**Rewritten: 144/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -80,7 +80,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] computer-network-security.md — Firewalls & Network Defense (16)
 - [ ] computer-network-security.md — Authentication & Access Control (15)
 - [x] computer-network-security.md — Web Security Vulnerabilities (15)
-- [ ] computer-network-security.md — Malware & Security Threats (15)
+- [x] computer-network-security.md — Malware & Security Threats (15)
 - [ ] computer-network-security.md — Security Protocols (SSL/TLS, HTTPS) (11)
 - [ ] computer-network-security.md — Cyber Crime & Security (9)
 - [x] computer-network-security.md — Security Principles (CIA Triad) (7)
