@@ -9012,13 +9012,43 @@ SELECT count (*) FROM (
 1. **Explain Database Trigger with example.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
 
-   Answer: A trigger is a named block of procedural code stored in the database and executed automatically by the DBMS when a specified event occurs on a specified table. It is never called explicitly by an application.
+   Answer: A trigger is a special stored procedure that runs automatically when an INSERT, UPDATE or DELETE happens on a table. No application ever calls it directly. We use triggers to keep data integrity, by automating an action in response to a change.
 
-   Its components:
-   - Event: `INSERT`, `UPDATE` or `DELETE`.
-   - Timing: `BEFORE`, `AFTER`, or `INSTEAD OF`, which is used on views.
-   - Level: `FOR EACH ROW`, which fires once per affected row, or statement level, which fires once per statement.
-   - Body: the code executed, with access to the pseudo-records `OLD` and `NEW` holding the values before and after the change.
+   Basic syntax:
+
+   ```sql
+   CREATE TRIGGER trigger_name
+   [BEFORE | AFTER]
+   {INSERT | UPDATE | DELETE}
+   ON table_name
+   FOR EACH ROW
+   BEGIN
+       -- SQL statements
+   END;
+   ```
+
+   Its parts:
+   - Event: INSERT, UPDATE or DELETE.
+   - Timing: BEFORE runs before the action, and we use it to validate or to change a value before the data is saved. AFTER runs once the action is finished, and we use it for logging or for updating a related table. INSTEAD OF is used on views.
+   - Level: FOR EACH ROW fires once for every affected row. Statement level fires once for the whole statement.
+   - Body: the code that runs. Inside it we can use NEW and OLD. NEW holds the values after the change, and OLD holds the values before it.
+
+   Simple example, keeping a timestamp up to date automatically:
+
+   ```sql
+   CREATE TRIGGER update_timestamp
+   BEFORE UPDATE ON users
+   FOR EACH ROW
+   BEGIN
+       SET NEW.updated_at = CURRENT_TIMESTAMP;
+   END;
+   ```
+
+   Whenever a user record changes, this trigger sets `updated_at` to the current time.
+
+   Two more categories:
+   - DML triggers fire on INSERT, UPDATE or DELETE, that is on data changes.
+   - DDL triggers fire on CREATE, ALTER or DROP, that is on structure changes.
 
    Example, maintaining an audit trail of salary changes:
 

@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 68/206 sections**
+**Rewritten: 69/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -145,7 +145,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] database.md — Transaction Management & ACID Properties (12)
 - [x] database.md — Relational Data Model & ER Relationships (11)
 - [ ] database.md — Database Backup & Disaster Recovery (8)
-- [ ] database.md — PL/SQL & Database Triggers (6)
+- [x] database.md — PL/SQL & Database Triggers (6)
 - [x] database.md — Indexing & Query Optimization (B-Tree, B+ Tree) (6)
 - [ ] database.md — Distributed & Parallel Databases (4)
 - [ ] database.md — Data Warehousing, Data Mining & Business Intelligence (4)
