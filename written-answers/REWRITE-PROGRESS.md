@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 179/206 sections**
+**Rewritten: 180/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -241,7 +241,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] web-technology.md — HTML & Web Fundamentals (17)
 - [x] web-technology.md — HTTP Protocol (10)
 - [x] web-technology.md — JavaScript & jQuery (DOM & Validation) (8)
-- [ ] web-technology.md — Web Services & APIs (SOAP vs REST) (7)
+- [x] web-technology.md — Web Services & APIs (SOAP vs REST) (7)
 - [ ] web-technology.md — Full Stack & Backend Web Development (5)
 - [ ] web-technology.md — CSS & Styling (Inline, Internal, External) (4)
 - [ ] web-technology.md — Web Security & Browser Same-Origin Policy (Iframe) (2)
