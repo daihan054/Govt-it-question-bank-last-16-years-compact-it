@@ -68,7 +68,7 @@
 2. Explain how any Boolean function can be implemented using only universal gates. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
 
-   Answer: Any Boolean function can be implemented using only universal gates, that is using NAND alone or NOR alone.
+   Answer: Any Boolean function can be built using only universal gates, that is NAND alone or NOR alone. NAND gives a low output only when all its inputs are high. NOR gives a high output only when all its inputs are low.
 
    The argument, in three steps:
 
@@ -80,7 +80,7 @@
    Step 2, all three basic operations can be built from NAND alone:
 
    Why NAND is a universal gate:
-   - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+   - A gate is called universal if every other logic gate, and so every Boolean function, can be built from it alone. NAND and NOR are the only two such gates. This matters in manufacturing: a whole complex system can be made from one single gate type, which cuts the variety of components needed.
    - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
    NOT from NAND, using 1 gate:
@@ -204,10 +204,10 @@
 4. **Why NAND is universal gate?** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
 
-   Answer: NAND is called a universal gate because every other logic gate, and therefore every Boolean function, can be constructed from NAND gates alone.
+   Answer: NAND is called a universal gate because every other logic gate, and so every Boolean function, can be built from NAND gates alone. NAND itself gives a low output only when all of its inputs are high; in every other case the output is high. Its Boolean expression is X = (A.B)'.
 
    Why NAND is a universal gate:
-   - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+   - A gate is called universal if every other logic gate, and so every Boolean function, can be built from it alone. NAND and NOR are the only two such gates. This matters in manufacturing: a whole complex system can be made from one single gate type, which cuts the variety of components needed.
    - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
    NOT from NAND, using 1 gate:
@@ -491,7 +491,7 @@
     - The reason they are universal is that any Boolean function can be written in sum of products form, which requires only AND, OR and NOT, and all three of those can be built from NAND alone or from NOR alone.
 
     Why NAND is a universal gate:
-    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - A gate is called universal if every other logic gate, and so every Boolean function, can be built from it alone. NAND and NOR are the only two such gates. This matters in manufacturing: a whole complex system can be made from one single gate type, which cuts the variety of components needed.
     - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
     NOT from NAND, using 1 gate:
@@ -584,7 +584,7 @@
     - The argument has two parts. First, every Boolean function can be written in sum of products form, which uses only AND, OR and NOT. Second, all three of those can be constructed from NAND alone, or from NOR alone. Therefore either gate suffices for any function.
 
     Why NAND is a universal gate:
-    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - A gate is called universal if every other logic gate, and so every Boolean function, can be built from it alone. NAND and NOR are the only two such gates. This matters in manufacturing: a whole complex system can be made from one single gate type, which cuts the variety of components needed.
     - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
     NOT from NAND, using 1 gate:
@@ -752,7 +752,7 @@
     - Therefore, if all three of those can be built from a single gate, that gate can build any function.
 
     Why NAND is a universal gate:
-    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - A gate is called universal if every other logic gate, and so every Boolean function, can be built from it alone. NAND and NOR are the only two such gates. This matters in manufacturing: a whole complex system can be made from one single gate type, which cuts the variety of components needed.
     - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
     NOT from NAND, using 1 gate:
@@ -981,7 +981,7 @@
     Proof that NAND is universal:
 
     Why NAND is a universal gate:
-    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - A gate is called universal if every other logic gate, and so every Boolean function, can be built from it alone. NAND and NOR are the only two such gates. This matters in manufacturing: a whole complex system can be made from one single gate type, which cuts the variety of components needed.
     - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
     NOT from NAND, using 1 gate:
@@ -1205,7 +1205,7 @@
     - The reasoning has two steps. First, every Boolean function can be written in sum of products form, which requires only the three operations AND, OR and NOT. Second, all three of those can be constructed from NAND alone, and equally from NOR alone. It follows that either gate by itself suffices for any digital circuit.
 
     Why NAND is a universal gate:
-    - A gate is called universal if every other logic gate, and therefore every Boolean function, can be built from it alone. NAND and NOR are the only two such gates.
+    - A gate is called universal if every other logic gate, and so every Boolean function, can be built from it alone. NAND and NOR are the only two such gates. This matters in manufacturing: a whole complex system can be made from one single gate type, which cuts the variety of components needed.
     - Any Boolean function can be written in sum of products form, which needs only AND, OR and NOT. If all three can be built from NAND, then any function can be built from NAND alone.
 
     NOT from NAND, using 1 gate:
