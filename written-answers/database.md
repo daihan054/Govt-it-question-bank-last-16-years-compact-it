@@ -7674,20 +7674,21 @@ SELECT count (*) FROM (
 
    Answer: A transaction is a logical unit of work consisting of one or more operations that must be treated as a single indivisible action. The ACID properties are the four guarantees a DBMS provides for every transaction.
 
-   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - Atomicity: a transaction is all or nothing. Either all of its operations succeed, or none of them is applied. There is no partial completion.
    - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
    - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
 
-   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - Consistency: the database must stay in a valid state before and after the transaction. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold at both ends, though it may be broken for a moment inside the transaction. If a transaction breaks a rule, the system rolls it back automatically.
    - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
-   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+   - Example: suppose the bank's total is 700 taka before the transaction, held as 500 in account X and 200 in account Y. After transferring 100, it becomes 400 and 300. The total is still 700. A transaction that debited 5,000 but credited only 500 would break this, so it must be rejected.
 
-   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - Isolation: transactions run independently and do not disturb each other. The changes made by one transaction are not visible to the others until it commits. The result of running several transactions together must be the same as running them one after another, which is called serialisability.
    - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
-   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Example: while one transaction is changing accounts X and Y, another transaction running at the same time must see either the old values of both, or the new values of both, never a mixture. This is what stops dirty reads, non-repeatable reads and phantom reads.
+   - Another example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, then without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
    - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
 
-   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - Durability: once a transaction commits, its changes are saved permanently, even if the system fails. The changes are written to non-volatile memory so they can be recovered.
    - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
    - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 
@@ -7734,20 +7735,21 @@ SELECT count (*) FROM (
 
    Answer: ACID stands for Atomicity, Consistency, Isolation and Durability. They are the four properties a database management system guarantees for every transaction.
 
-   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - Atomicity: a transaction is all or nothing. Either all of its operations succeed, or none of them is applied. There is no partial completion.
    - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
    - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
 
-   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - Consistency: the database must stay in a valid state before and after the transaction. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold at both ends, though it may be broken for a moment inside the transaction. If a transaction breaks a rule, the system rolls it back automatically.
    - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
-   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+   - Example: suppose the bank's total is 700 taka before the transaction, held as 500 in account X and 200 in account Y. After transferring 100, it becomes 400 and 300. The total is still 700. A transaction that debited 5,000 but credited only 500 would break this, so it must be rejected.
 
-   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - Isolation: transactions run independently and do not disturb each other. The changes made by one transaction are not visible to the others until it commits. The result of running several transactions together must be the same as running them one after another, which is called serialisability.
    - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
-   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Example: while one transaction is changing accounts X and Y, another transaction running at the same time must see either the old values of both, or the new values of both, never a mixture. This is what stops dirty reads, non-repeatable reads and phantom reads.
+   - Another example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, then without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
    - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
 
-   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - Durability: once a transaction commits, its changes are saved permanently, even if the system fails. The changes are written to non-volatile memory so they can be recovered.
    - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
    - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 4. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
@@ -7769,20 +7771,21 @@ SELECT count (*) FROM (
 
    ACID properties of transaction management:
 
-   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - Atomicity: a transaction is all or nothing. Either all of its operations succeed, or none of them is applied. There is no partial completion.
    - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
    - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
 
-   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - Consistency: the database must stay in a valid state before and after the transaction. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold at both ends, though it may be broken for a moment inside the transaction. If a transaction breaks a rule, the system rolls it back automatically.
    - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
-   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+   - Example: suppose the bank's total is 700 taka before the transaction, held as 500 in account X and 200 in account Y. After transferring 100, it becomes 400 and 300. The total is still 700. A transaction that debited 5,000 but credited only 500 would break this, so it must be rejected.
 
-   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - Isolation: transactions run independently and do not disturb each other. The changes made by one transaction are not visible to the others until it commits. The result of running several transactions together must be the same as running them one after another, which is called serialisability.
    - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
-   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Example: while one transaction is changing accounts X and Y, another transaction running at the same time must see either the old values of both, or the new values of both, never a mixture. This is what stops dirty reads, non-repeatable reads and phantom reads.
+   - Another example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, then without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
    - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
 
-   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - Durability: once a transaction commits, its changes are saved permanently, even if the system fails. The changes are written to non-volatile memory so they can be recovered.
    - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
    - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 5. **Case Study type Database-related problem (Solve: ACID)** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
@@ -7820,20 +7823,21 @@ SELECT count (*) FROM (
 
    Answer: The ACID properties are the four guarantees that a database management system provides for every transaction, and together they are what make a database reliable enough to hold money and records of record.
 
-   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - Atomicity: a transaction is all or nothing. Either all of its operations succeed, or none of them is applied. There is no partial completion.
    - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
    - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
 
-   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - Consistency: the database must stay in a valid state before and after the transaction. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold at both ends, though it may be broken for a moment inside the transaction. If a transaction breaks a rule, the system rolls it back automatically.
    - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
-   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+   - Example: suppose the bank's total is 700 taka before the transaction, held as 500 in account X and 200 in account Y. After transferring 100, it becomes 400 and 300. The total is still 700. A transaction that debited 5,000 but credited only 500 would break this, so it must be rejected.
 
-   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - Isolation: transactions run independently and do not disturb each other. The changes made by one transaction are not visible to the others until it commits. The result of running several transactions together must be the same as running them one after another, which is called serialisability.
    - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
-   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Example: while one transaction is changing accounts X and Y, another transaction running at the same time must see either the old values of both, or the new values of both, never a mixture. This is what stops dirty reads, non-repeatable reads and phantom reads.
+   - Another example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, then without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
    - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
 
-   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - Durability: once a transaction commits, its changes are saved permanently, even if the system fails. The changes are written to non-volatile memory so they can be recovered.
    - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
    - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 
@@ -7846,20 +7850,21 @@ SELECT count (*) FROM (
 
    Answer: ACID is the acronym for the four properties that a database system guarantees for every transaction: Atomicity, Consistency, Isolation and Durability.
 
-   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - Atomicity: a transaction is all or nothing. Either all of its operations succeed, or none of them is applied. There is no partial completion.
    - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
    - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
 
-   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - Consistency: the database must stay in a valid state before and after the transaction. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold at both ends, though it may be broken for a moment inside the transaction. If a transaction breaks a rule, the system rolls it back automatically.
    - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
-   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+   - Example: suppose the bank's total is 700 taka before the transaction, held as 500 in account X and 200 in account Y. After transferring 100, it becomes 400 and 300. The total is still 700. A transaction that debited 5,000 but credited only 500 would break this, so it must be rejected.
 
-   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - Isolation: transactions run independently and do not disturb each other. The changes made by one transaction are not visible to the others until it commits. The result of running several transactions together must be the same as running them one after another, which is called serialisability.
    - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
-   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Example: while one transaction is changing accounts X and Y, another transaction running at the same time must see either the old values of both, or the new values of both, never a mixture. This is what stops dirty reads, non-repeatable reads and phantom reads.
+   - Another example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, then without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
    - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
 
-   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - Durability: once a transaction commits, its changes are saved permanently, even if the system fails. The changes are written to non-volatile memory so they can be recovered.
    - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
    - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
@@ -7867,20 +7872,21 @@ SELECT count (*) FROM (
 
    Answer: A transaction is a logical unit of work that must be executed as a single indivisible action. The ACID properties are the four guarantees the DBMS provides for it.
 
-   - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
+   - Atomicity: a transaction is all or nothing. Either all of its operations succeed, or none of them is applied. There is no partial completion.
    - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
    - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
 
-   - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
+   - Consistency: the database must stay in a valid state before and after the transaction. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold at both ends, though it may be broken for a moment inside the transaction. If a transaction breaks a rule, the system rolls it back automatically.
    - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
-   - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+   - Example: suppose the bank's total is 700 taka before the transaction, held as 500 in account X and 200 in account Y. After transferring 100, it becomes 400 and 300. The total is still 700. A transaction that debited 5,000 but credited only 500 would break this, so it must be rejected.
 
-   - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
+   - Isolation: transactions run independently and do not disturb each other. The changes made by one transaction are not visible to the others until it commits. The result of running several transactions together must be the same as running them one after another, which is called serialisability.
    - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
-   - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+   - Example: while one transaction is changing accounts X and Y, another transaction running at the same time must see either the old values of both, or the new values of both, never a mixture. This is what stops dirty reads, non-repeatable reads and phantom reads.
+   - Another example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, then without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
    - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
 
-   - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
+   - Durability: once a transaction commits, its changes are saved permanently, even if the system fails. The changes are written to non-volatile memory so they can be recovered.
    - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
    - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 9. **What do you mean by Rollback and Roll forward?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
@@ -7927,28 +7933,29 @@ SELECT count (*) FROM (
 
     Answer: The ACID properties are the four guarantees that a DBMS provides for every transaction.
 
-    - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
-    - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
-    - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+     - Atomicity: a transaction is all or nothing. Either all of its operations succeed, or none of them is applied. There is no partial completion.
+     - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+     - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
 
-    - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
-    - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
-    - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+     - Consistency: the database must stay in a valid state before and after the transaction. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold at both ends, though it may be broken for a moment inside the transaction. If a transaction breaks a rule, the system rolls it back automatically.
+     - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+     - Example: suppose the bank's total is 700 taka before the transaction, held as 500 in account X and 200 in account Y. After transferring 100, it becomes 400 and 300. The total is still 700. A transaction that debited 5,000 but credited only 500 would break this, so it must be rejected.
 
-    - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
-    - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
-    - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
-    - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+     - Isolation: transactions run independently and do not disturb each other. The changes made by one transaction are not visible to the others until it commits. The result of running several transactions together must be the same as running them one after another, which is called serialisability.
+     - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+     - Example: while one transaction is changing accounts X and Y, another transaction running at the same time must see either the old values of both, or the new values of both, never a mixture. This is what stops dirty reads, non-repeatable reads and phantom reads.
+    - Another example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, then without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+     - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
 
-    - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
-    - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
-    - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
+     - Durability: once a transaction commits, its changes are saved permanently, even if the system fails. The changes are written to non-volatile memory so they can be recovered.
+     - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+     - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 
-    Implementation mechanisms, in summary:
-    - Atomicity: the undo log, which allows every change of an incomplete transaction to be reversed.
-    - Consistency: integrity constraints, triggers and the application's own rules.
-    - Isolation: locking with two phase locking, timestamp ordering, or multiversion concurrency control.
-    - Durability: the redo log with write ahead logging, so that the log record reaches durable storage before the commit is acknowledged.
+     Implementation mechanisms, in summary:
+     - Atomicity: the undo log, which allows every change of an incomplete transaction to be reversed.
+     - Consistency: integrity constraints, triggers and the application's own rules.
+     - Isolation: locking with two phase locking, timestamp ordering, or multiversion concurrency control.
+     - Durability: the redo log with write ahead logging, so that the log record reaches durable storage before the commit is acknowledged.
 11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 984-985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 
@@ -8004,33 +8011,34 @@ SELECT count (*) FROM (
 
     Answer: The ACID properties describe the four guarantees a database management system makes for every transaction, and they are what make a database trustworthy enough to hold financial records.
 
-    - Atomicity: a transaction is an indivisible unit of work. Either every one of its operations takes effect, or none of them does. There is no partial completion.
-    - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
-    - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
+     - Atomicity: a transaction is all or nothing. Either all of its operations succeed, or none of them is applied. There is no partial completion.
+     - How it is achieved: the DBMS keeps an undo log. If the transaction fails part way through, or is rolled back explicitly, every change already made is undone.
+     - Example: a transfer of 5,000 taka from account A to account B consists of a debit and a credit. If the system crashes after the debit but before the credit, atomicity requires the debit to be undone, so the money is not destroyed.
 
-    - Consistency: a transaction takes the database from one valid state to another valid state. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold before and after the transaction, although it may be violated momentarily inside it.
-    - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
-    - Example: in the transfer, the sum of the two balances must be the same afterwards as before. A transaction that debited 5,000 and credited 500 would leave the database inconsistent and must be rejected.
+     - Consistency: the database must stay in a valid state before and after the transaction. Every integrity constraint, primary key, foreign key, CHECK condition and business rule must hold at both ends, though it may be broken for a moment inside the transaction. If a transaction breaks a rule, the system rolls it back automatically.
+     - How it is achieved: the DBMS enforces the declared constraints, and the application is responsible for the business rules.
+     - Example: suppose the bank's total is 700 taka before the transaction, held as 500 in account X and 200 in account Y. After transferring 100, it becomes 400 and 300. The total is still 700. A transaction that debited 5,000 but credited only 500 would break this, so it must be rejected.
 
-    - Isolation: concurrent transactions must not interfere with one another. The result of running several transactions concurrently must be the same as if they had run one after another in some order, which is called serialisability.
-    - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
-    - Example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
-    - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
+     - Isolation: transactions run independently and do not disturb each other. The changes made by one transaction are not visible to the others until it commits. The result of running several transactions together must be the same as running them one after another, which is called serialisability.
+     - How it is achieved: locking, two phase locking, timestamp ordering or multiversion concurrency control.
+     - Example: while one transaction is changing accounts X and Y, another transaction running at the same time must see either the old values of both, or the new values of both, never a mixture. This is what stops dirty reads, non-repeatable reads and phantom reads.
+    - Another example: if two clerks read a balance of 10,000 at the same moment and each subtracts 3,000, then without isolation the second write overwrites the first and the balance becomes 7,000 instead of 4,000. This is the lost update problem.
+     - Isolation levels, which trade correctness against concurrency: Read Uncommitted permits dirty reads; Read Committed prevents them; Repeatable Read additionally prevents non-repeatable reads; and Serializable prevents phantom reads as well and is fully correct but slowest.
 
-    - Durability: once a transaction has been committed, its effects survive any subsequent failure, including a power cut or a system crash.
-    - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
-    - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
+     - Durability: once a transaction commits, its changes are saved permanently, even if the system fails. The changes are written to non-volatile memory so they can be recovered.
+     - How it is achieved: write ahead logging. The redo log record is written to non-volatile storage before the commit is acknowledged, so that on restart the DBMS can replay the log and restore every committed change.
+     - Example: once the customer sees "transfer successful", the money must remain transferred even if the server loses power a second later.
 
-    Summary of the mechanisms:
+     Summary of the mechanisms:
 
-    | Property | Guarantee | Mechanism |
-    |---|---|---|
-    | Atomicity | All or nothing | Undo log and ROLLBACK |
-    | Consistency | Only valid states | Integrity constraints, triggers, application rules |
-    | Isolation | Concurrent execution equals some serial execution | Locking, two phase locking, MVCC |
-    | Durability | Committed work survives failure | Redo log with write ahead logging |
+     | Property | Guarantee | Mechanism |
+     |---|---|---|
+     | Atomicity | All or nothing | Undo log and ROLLBACK |
+     | Consistency | Only valid states | Integrity constraints, triggers, application rules |
+     | Isolation | Concurrent execution equals some serial execution | Locking, two phase locking, MVCC |
+     | Durability | Committed work survives failure | Redo log with write ahead logging |
 
-    - The BASE model of NoSQL systems, that is Basically Available, Soft state and Eventual consistency, deliberately relaxes these guarantees in exchange for availability and scale. This is a legitimate trade-off for a social media timeline, but it is not acceptable for a bank ledger, which is why relational systems with full ACID guarantees remain the standard for financial data.
+     - The BASE model of NoSQL systems, that is Basically Available, Soft state and Eventual consistency, deliberately relaxes these guarantees in exchange for availability and scale. This is a legitimate trade-off for a social media timeline, but it is not acceptable for a bank ledger, which is why relational systems with full ACID guarantees remain the standard for financial data.
 
 ## Relational Data Model & ER Relationships (11)
 
