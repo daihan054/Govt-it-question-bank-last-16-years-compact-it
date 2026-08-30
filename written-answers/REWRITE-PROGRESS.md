@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 57/206 sections**
+**Rewritten: 58/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -139,7 +139,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] database.md — SQL Queries (71)
 - [ ] database.md — DBMS Architecture & Features (22)
 - [ ] database.md — ER Diagram & Database Design (21)
-- [ ] database.md — Keys in DBMS (21)
+- [x] database.md — Keys in DBMS (21)
 - [x] database.md — Normalization & Database Design (18)
 - [ ] database.md — SQL Commands (DDL, DML, DCL, TCL) (13)
 - [ ] database.md — Transaction Management & ACID Properties (12)

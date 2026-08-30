@@ -5505,14 +5505,17 @@ SELECT count (*) FROM (
 
    The different kinds of key:
 
-   - Super key: any attribute or set of attributes that uniquely identifies a row. It may contain extra attributes that are not needed for uniqueness. It is the widest category, and every other key is a super key.
-   - Candidate key: a minimal super key, that is a super key from which no attribute can be removed without losing uniqueness. A relation may have several candidate keys.
-   - Primary key: the one candidate key chosen by the designer to identify rows. It cannot be NULL and cannot contain duplicates, and a table has exactly one.
-   - Alternate key: any candidate key not chosen as the primary key. It is normally enforced with a UNIQUE constraint.
-   - Composite key: a key made up of two or more attributes together, because no single attribute is unique.
-   - Foreign key: an attribute in one table whose values must match the primary key of another table, which is how a relationship between tables is expressed. It may be NULL and may contain duplicates.
-   - Unique key: a constraint guaranteeing uniqueness that is not the primary key. Unlike the primary key it permits one NULL value.
-   - Surrogate key: an artificial key with no business meaning, such as an auto-incremented number, used when no natural attribute is a satisfactory identifier.
+   - Super key: a set of one or more attributes that can uniquely identify a tuple. It may hold extra attributes that are not needed for uniqueness. This is the widest category, and every other key is a super key. Example in STUDENT: {STUD_NO}, {STUD_NO, STUD_NAME}, {STUD_NO, PHONE} are all super keys.
+   - Candidate key: the minimal set of attributes that can uniquely identify a tuple. It is a super key with no extra attribute left in it. Every table must have at least one, and a table may have several. Example: STUD_NO in STUDENT.
+   - Primary key: the candidate key we choose to identify each record of the table. It cannot be NULL, there is exactly one per table, and the database uses it for faster access. Example: STUD_NO in STUDENT(STUD_NO, SNAME, ADDRESS, PHONE).
+   - Alternate key: any candidate key that we did not choose as the primary key. It is also called a secondary key. Example: if STUD_NO and PHONE are both candidate keys and we pick STUD_NO as primary, then PHONE is the alternate key.
+   - Foreign key: an attribute in one table that refers to the primary key of another table. It links the two tables. It may hold duplicate values and it may be NULL. Example: STUD_NO in STUDENT_COURSE refers to STUD_NO in STUDENT. It repeats there, because one student takes many courses.
+   - Composite key: when one column is not enough to identify a record, we combine two or more attributes. Example: {STUD_NO, COURSE_NO} in STUDENT_COURSE.
+   - Unique key: a constraint that makes sure all the values in a column, or in a set of columns, are different across the rows. Unlike a primary key it allows a NULL value, but only one.
+   - Surrogate key: an artificial attribute created to identify a record when no natural key is suitable. It is system generated, usually auto-increment, and it has no real world meaning. Example: STUDENT_ID.
+   - Partial key: chosen from a weak entity to help identify its records, but it cannot identify a record on its own. It must be paired with data from the strong entity.
+
+   Relationship between them: super keys include the candidate keys, and the candidate keys include the one primary key plus all the alternate keys.
 
    Example, a Student relation:
 
