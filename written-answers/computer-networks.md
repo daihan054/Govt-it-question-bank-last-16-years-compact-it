@@ -8462,7 +8462,17 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Order of arrival | Always in order | May arrive out of order and need reordering |
    | Example | Traditional telephone network | The Internet |
 
-   - Packet switching is predominantly used in Internet communication, because Internet traffic is bursty and packet switching uses the shared bandwidth far more efficiently.
+   - Packet switching is what the Internet uses, because Internet traffic comes in bursts and packet switching shares the bandwidth far better.
+
+   Packet switching itself comes in two forms:
+
+   | Aspect | Virtual circuit | Datagram |
+   |---|---|---|
+   | Nature | Connection oriented. Resources such as buffers, CPU and bandwidth are reserved | Connectionless. Nothing is reserved, because there is no fixed path |
+   | Connection setup | Needed before any data is sent | Not needed at all |
+   | Routing | Fixed for the whole connection. Every packet follows the same path | Decided separately for each packet |
+   | Reliability | Delivery is guaranteed | Delivery is not guaranteed |
+   | Example | ATM, Frame Relay | IP, the Internet Protocol |
 3. **(c) Compare circuit switching and packet switching.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
 
 
