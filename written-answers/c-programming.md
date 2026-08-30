@@ -2839,10 +2839,10 @@ int main(){
 3. **What is recursion?** *[BBA Assistant Programmer 12.07.2025 compact it 1432 (ET: BUET)]*
 
 
-   Answer: Recursion is a technique where a function calls itself, directly or indirectly, to solve a smaller version of the same problem.
+   Answer: Recursion is the process in which a function calls itself, directly or indirectly. Such a function is called a recursive function. It takes one step towards the solution, then calls itself to carry on, until it reaches the answer.
 
    Two parts are always required:
-   - Base case: the condition where the function stops calling itself and returns a value. Without it the recursion never ends.
+   - Base case: the simplest case, whose answer we already know. This is the stopping condition. Without it the function would call itself forever.
    - Recursive case: the function calls itself with a smaller or simpler input that moves towards the base case.
 
    Example:
@@ -2853,9 +2853,9 @@ int main(){
    }
    ```
 
-   - Every call is kept on the system stack. So recursion uses O(depth) extra memory.
-   - Advantage: the code becomes short and natural for problems like tree traversal, Tower of Hanoi and divide and conquer.
-   - Disadvantage: it is slower than a loop, because each function call costs time. And if the base case is missing, we get a stack overflow.
+   - How the call stack works: every call gets its own memory space on the stack, with a fresh copy of the local variables. The stack follows LIFO, Last In First Out, so the most recent call finishes first. As each call returns, its memory is released and we move back up the stack. So recursion uses O(depth) extra memory.
+   - Advantages: the code becomes clean and short. It suits problems that are recursive by nature, such as tree traversal and Tower of Hanoi. It is also the base of divide and conquer and dynamic programming.
+   - Disadvantages: it needs more memory and more time, because of the call stack. It is harder to read and debug, since we must follow many levels of calls. And if the base case is wrong or missing, we get a stack overflow.
 4. **Write recursive way below this program:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 417 (ET: BUET)]*
 ```c
 for(int i=1, i<n; i++)
@@ -3199,8 +3199,8 @@ int main() {
     ```
 
     How the calls happen:
-    - fact(5) waits for fact(4), fact(4) waits for fact(3), and so on down to fact(0).
-    - fact(0) returns 1, then the stack unwinds: 1 × 1 = 1, 2 × 1 = 2, 3 × 2 = 6, 4 × 6 = 24, 5 × 24 = 120.
+    - The stack grows: fact(5) calls fact(4), which calls fact(3), which calls fact(2), which calls fact(1), which calls fact(0).
+    - The base case is reached at fact(0), which returns 1. Then the stack unwinds and the values multiply back up: 1 × 1 = 1, then 2 × 1 = 2, then 3 × 2 = 6, then 4 × 6 = 24, then 5 × 24 = 120.
     - The final answer is 120.
 
     - Every waiting call sits on the system stack. So the space complexity is O(n).
@@ -3515,9 +3515,9 @@ int main() {
     ```
 
     Comparison:
-    - Both give the same result and both run in O(n) time.
+    - Every recursive program can be written iteratively, and every iterative one can be written recursively. Both give the same result here, and both run in O(n) time.
     - The recursive version uses O(n) stack space. The iterative version uses only O(1).
-    - The recursive code is shorter and closer to the maths definition. But the iterative code is faster, and it is safe from stack overflow for large n.
+    - The recursive code is shorter and closer to the maths definition, so it is easier to understand for a naturally recursive problem. The iterative code uses less memory and less stack space, so it is faster and safe from stack overflow for large n.
 30. **১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 946 (ET: BUET)]*
 
 
