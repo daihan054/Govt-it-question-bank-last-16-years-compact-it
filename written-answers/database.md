@@ -10337,6 +10337,24 @@ SELECT count (*) FROM (
    NoSQL:
    - NoSQL, meaning "not only SQL", is a family of non-relational databases designed for horizontal scalability, flexible schemas and very large volumes.
    - Four kinds: document stores such as MongoDB and CouchDB; key-value stores such as Redis and DynamoDB; column family stores such as Cassandra and HBase; and graph databases such as Neo4j.
+
+   SQL against NoSQL:
+
+   | Aspect | SQL | NoSQL |
+   |---|---|---|
+   | Data storage | Data sits in tables, with rows and columns | Data sits as documents, key-value pairs, graphs or column families |
+   | Data model | Relational | Non-relational |
+   | Schema | Fixed schema | Flexible schema |
+   | Joins | Supports complex joins between tables | Generally avoids joins |
+   | Transactions | Follows the ACID properties | Usually follows the BASE model |
+   | Scaling | Scales vertically, by making the server bigger | Scales horizontally, by adding more servers |
+   | Data types | Best for structured data | Handles structured, semi-structured and unstructured data |
+   | Applications | Banking, ERP, CRM systems | Social media, Big Data, IoT |
+   | Examples | MySQL, PostgreSQL, Oracle | MongoDB, Cassandra, Redis, Neo4j |
+
+   When to choose which:
+   - Choose SQL when data consistency matters, when we need complex joins, when the structure of the data is decided in advance, or for banking, ERP and inventory systems.
+   - Choose NoSQL when we need high scalability, when the data has no fixed structure, when real time processing is essential, or when the schema changes often.
    - It follows the BASE model rather than ACID: Basically Available, Soft state, Eventually consistent.
    - Advantages: scales horizontally across commodity servers, handles unstructured data, very high throughput, flexible schema, and high availability.
    - Disadvantages: weaker consistency guarantees, limited or no join support, no standard query language, and immature tooling by comparison.

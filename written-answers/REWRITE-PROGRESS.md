@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 70/206 sections**
+**Rewritten: 71/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -151,7 +151,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] database.md — Data Warehousing, Data Mining & Business Intelligence (4)
 - [ ] database.md — Database Design & Data Types (3)
 - [x] database.md — SQL Joins & Operations (3)
-- [ ] database.md — NoSQL, NewSQL & Modern Databases (2)
+- [x] database.md — NoSQL, NewSQL & Modern Databases (2)
 - [ ] database.md — Database Connectivity (JDBC) (2)
 - [x] database.md — Relational Keys (Candidate, Super, Primary, Foreign Key) (1)
 - [x] database.md — Indexing in DBMS (1)
