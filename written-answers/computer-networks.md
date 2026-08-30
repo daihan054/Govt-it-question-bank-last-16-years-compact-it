@@ -4351,9 +4351,16 @@
    - Routing is the process of selecting a path along which a packet travels from a source network to a destination network, and of building and maintaining the routing table that records those paths.
 
    Types of routing:
-   - Static routing: paths are entered manually by the administrator. No overhead, complete control, but no automatic adaptation and no scalability. Suits small or stub networks and default routes.
-   - Default routing: a single route, 0.0.0.0/0, that catches everything not matched by a more specific entry. Used on a stub router with only one exit.
-   - Dynamic routing: routers learn paths automatically by exchanging information with a routing protocol, and adapt when a link fails. It is subdivided as follows.
+   - Static routing: the network administrator enters every route by hand.
+     - Advantages: almost no load on the router CPU, so cheaper equipment will do. More secure, because the administrator controls exactly what is reachable. It uses no bandwidth between routers.
+     - Disadvantages: not practical for a large network, because of all the manual work. The administrator must know the whole topology deeply.
+   - Default routing: one single route, 0.0.0.0/0, that catches everything not matched by a more specific entry. It sends all such packets to one next hop router. We use it on a stub router, that is a router with only one way out.
+     - Advantages: it gives a fallback when no specific route exists. It makes the configuration simple, improves reliability and reduces packet loss.
+     - Disadvantages: the routing is not optimised, so it can be inefficient and can add latency.
+   - Dynamic routing: the routers adjust their routes automatically, according to the current state of the network. They learn paths by talking to each other with a protocol such as RIP or OSPF, and they adapt when a link fails.
+     - Advantages: the configuration is simple. It is good at picking the best path and at discovering remote networks by itself.
+     - Disadvantages: it uses extra bandwidth to talk to the neighbours. It is less secure than static routing.
+     - It is subdivided as follows.
    - Interior Gateway Protocols, used inside one autonomous system: RIP and IGRP as distance vector, OSPF and IS-IS as link state, and EIGRP as a hybrid.
    - Exterior Gateway Protocol, used between autonomous systems: BGP, a path vector protocol.
    - Distance vector routing: uses Bellman-Ford; each router tells its neighbours its whole table periodically.
