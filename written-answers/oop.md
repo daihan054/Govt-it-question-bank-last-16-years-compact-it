@@ -221,13 +221,13 @@
 
    The four principles (pillars) of OOP:
 
-   - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+   - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-   - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+   - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-   - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+   - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-   - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+   - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
    Two supporting concepts often listed with them:
    - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
@@ -413,13 +413,13 @@
 
    Answer: The four principles (pillars) of OOP:
 
-   - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+   - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-   - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+   - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-   - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+   - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-   - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+   - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
    Two supporting concepts often listed with them:
    - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
@@ -955,13 +955,13 @@
 
     Answer: The four principles (pillars) of OOP:
 
-    - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+    - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-    - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+    - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-    - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+    - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-    - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+    - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
     Two supporting concepts often listed with them:
     - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
@@ -1551,13 +1551,13 @@
 
     The four principles (pillars) of OOP:
 
-        - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+        - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-        - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+        - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-        - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+        - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-        - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+        - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
         Two supporting concepts often listed with them:
         - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
@@ -1774,13 +1774,13 @@
 
     Answer: The four principles (pillars) of OOP:
 
-    - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+    - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-    - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+    - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-    - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+    - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-    - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+    - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
     Two supporting concepts often listed with them:
     - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
@@ -1792,13 +1792,13 @@
 
     Answer: The four principles (pillars) of OOP:
 
-    - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+    - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-    - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+    - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-    - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+    - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-    - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+    - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
     Two supporting concepts often listed with them:
     - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
@@ -1810,13 +1810,13 @@
 
     Answer: The four principles (pillars) of OOP:
 
-    - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+    - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-    - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+    - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-    - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+    - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-    - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+    - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
     Two supporting concepts often listed with them:
     - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
@@ -2577,13 +2577,13 @@ public class main{
 
     The four principles (pillars) of OOP:
 
-        - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+        - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-        - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+        - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-        - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+        - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-        - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+        - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
         Two supporting concepts often listed with them:
         - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
@@ -2728,13 +2728,13 @@ public class main{
 
     Answer: The four principles (pillars) of OOP:
 
-    - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+    - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-    - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+    - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-    - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+    - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-    - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+    - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
     Two supporting concepts often listed with them:
     - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
@@ -2802,13 +2802,13 @@ public class main{
 
     Answer: The four principles (pillars) of OOP:
 
-    - Encapsulation: binding the data and the methods that operate on that data into a single unit called a class, and hiding the internal state from the outside world. Data members are declared private and are reached only through public getter and setter methods. This protects the object from invalid changes and makes it possible to alter the internal implementation without breaking the code that uses it.
+    - Encapsulation: bundling the data, that is the attributes, and the methods that work on that data, into one unit called a class. It stops outside code from touching the parts directly, so nothing can be misused by accident. Data members are declared private and reached only through public methods. Example: a Car class keeps `speed` and `fuelLevel` private, and lets us change them only through `accelerate()`, `brake()` and `refuel()`. This keeps the data valid and lets us change the inside later without breaking anything outside.
 
-    - Abstraction: showing only the essential features of an object and hiding the internal details. A driver uses the steering wheel and the pedals without knowing how the engine works. In code it is implemented with abstract classes and interfaces, which declare what an object can do without specifying how.
+    - Abstraction: hiding the complex inner details and showing only the essential features. We work with what an object does, not with how it does it. A driver uses the steering wheel and the pedals without knowing how the engine works. In code we do it with abstract classes and interfaces. Example: an Animal class holds the general properties of all animals, and the subclasses Dog and Cat write their own `makeSound()`.
 
-    - Inheritance: a new class (the derived or child class) acquires the properties and behaviour of an existing class (the base or parent class). It expresses an "is-a" relationship, promotes reuse of code, and allows a hierarchy to be built. Types are single, multilevel, hierarchical, multiple and hybrid inheritance.
+    - Inheritance: a new class takes the properties and the behaviour of an existing class. The new one is the child or derived class, and the old one is the parent or base class. It expresses an "is-a" relationship and removes duplicate code. Example: a Vehicle parent class holds `make` and `model`. The child classes Car and Bike inherit those, and add their own, such as `num_doors` and `type_bike`. Types: single, multilevel, hierarchical, multiple and hybrid inheritance.
 
-    - Polymorphism: the same interface behaving differently depending on the object or the arguments. The word means "many forms". It appears as compile-time polymorphism through method overloading and operator overloading, and as run-time polymorphism through method overriding and virtual functions.
+    - Polymorphism: objects of different classes can be treated as objects of one common parent class. One interface then stands for several different types. The word means "many forms". Example: Dog and Cat both inherit from Animal, and each writes `makeSound()` differently. A function that takes an Animal works with either one, without knowing which it got. It appears as compile-time polymorphism, through method overloading and operator overloading, and as run-time polymorphism, through method overriding and virtual functions.
 
     Two supporting concepts often listed with them:
     - Class: a blueprint or template that defines the data members and the member functions of a category of objects.
