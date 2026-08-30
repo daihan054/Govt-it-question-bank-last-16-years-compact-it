@@ -2632,7 +2632,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
-   Answer: We use block matrix multiplication, which is a divide and conquer method. We cut each 16 × 16 matrix into four 8 × 8 blocks. Then we do the whole multiplication using only 8 × 8 operations, which the processor supports.
+   Answer: We use block matrix multiplication, which is a Divide and Conquer method. We cut each 16 × 16 matrix into four 8 × 8 blocks. Then we do the whole multiplication using only 8 × 8 operations, which the processor can handle.
 
    Partitioning:
    - Matrix A becomes blocks A11, A12, A21, A22, each 8 × 8.
@@ -2647,8 +2647,8 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
    Algorithm:
    - Split A and B into four 8 × 8 sub-matrices each, using index offsets. So we do not copy data without need.
-   - Do the 8 multiplications listed above. Each one is an 8 × 8 by 8 × 8 multiplication, which the processor can run.
-   - Do the 4 additions of 8 × 8 matrices to join the partial products.
+   - Do the 8 multiplications listed above. Each one is an 8 × 8 by 8 × 8 multiplication, which the processor supports.
+   - Do the 4 additions of 8 × 8 matrices, to join the partial products.
    - Put the four result blocks together into the final 16 × 16 matrix C.
 
    ```
@@ -2665,20 +2665,24 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    ```
 
    Cost:
-   - 8 multiplications of size 8 × 8. Each costs 8³ = 512 scalar multiplications. Total = 4096, which is the same as 16³, as expected.
+   - 8 multiplications of size 8 × 8. Each costs 8³ = 512 scalar multiplications. Total = 8 × 512 = 4096, which is the same as 16³, as expected.
    - 4 additions of 8 × 8 matrices. Each costs 64 additions.
    - Recurrence: T(n) = 8T(n/2) + O(n²), which solves to O(n³).
 
    Improvement using Strassen's algorithm:
    - Strassen gets the same result with only 7 multiplications instead of 8. It uses 7 cleverly built sums, such as M1 = (A11 + A22)(B11 + B22).
    - The recurrence becomes T(n) = 7T(n/2) + O(n²), which solves to O(n^log₂7) = O(n^2.81).
-   - For this problem that means 7 multiplications of 8 × 8 instead of 8, but with more additions.
+   - For this problem that means 7 multiplications of 8 × 8 instead of 8, at the cost of more additions.
 
 ## Huffman Coding & Data Compression (1)
 
 1. **Huffman encoding draw huffman tree. Given word “CONNECTION”.** *[NPCBL Executive Trainee (IT) 2022 compact it 645 (ET: BUET)]*
 
-   Answer: Huffman coding is a greedy lossless compression method. It gives short binary codes to characters that appear often, and long codes to characters that appear rarely.
+   Answer: Huffman coding is a lossless data compression technique. It gives variable length binary codes to characters, based on how often each character appears. The main rule is: give the shortest code to the most frequent character.
+
+   Why it is greedy: at every step it simply joins the two lowest frequency nodes. It does not look at all the possible encodings. This locally best choice still gives the globally best answer.
+
+   Prefix code: no code given to one character is the starting part of the code given to another character. This is why decoding is never ambiguous. If the codes were 00, 01, 0 and 1, then the bit stream 0001 could be decoded in several different ways. Huffman codes remove that problem completely.
 
    Step 1: count the frequency of each character in CONNECTION, which has 10 characters.
    - C = 2
@@ -2689,13 +2693,13 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - I = 1
    - Total = 2 + 2 + 3 + 1 + 1 + 1 = 10
 
-   Step 2: build the tree by joining the two smallest frequencies again and again.
-   - Nodes available: E(1), I(1), T(1), C(2), O(2), N(3)
+   Step 2: build the tree using a min heap. Take out the two smallest nodes, join them into a new node whose frequency is their sum, and put that node back.
+   - Nodes: E(1), I(1), T(1), C(2), O(2), N(3)
    - Join E(1) and I(1) into node X(2). Now: T(1), C(2), O(2), X(2), N(3)
    - Join T(1) and C(2) into node Y(3). Now: O(2), X(2), N(3), Y(3)
    - Join O(2) and X(2) into node Z(4). Now: N(3), Y(3), Z(4)
    - Join N(3) and Y(3) into node W(6). Now: Z(4), W(6)
-   - Join Z(4) and W(6) into the root R(10). The tree is done.
+   - Join Z(4) and W(6) into the root R(10). Only one node is left, so the tree is done.
 
    Step 3: put 0 on every left branch and 1 on every right branch.
 
@@ -2729,9 +2733,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - With a fixed length code, 6 different characters need 3 bits each. So 10 × 3 = 30 bits
    - Saving = 30 − 25 = 5 bits, that is about 16.7 percent
 
-   Points to note:
-   - No code is the starting part of another code. This is the prefix property, and it is what makes decoding unambiguous.
-   - Building the tree takes O(n log n) time using a min heap.
+   Time complexity is O(n log n) and space complexity is O(n).
 
 ## NP-Completeness & Complexity Reduction (1)
 
@@ -2740,7 +2742,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    Answer: The notation A ≤p B means problem A reduces to problem B in polynomial time. That is, we can turn any instance of A into an instance of B in polynomial time, and the answer to B then gives us the answer to A.
 
    What the reduction tells us:
-   - B is at least as hard as A. If we can solve B, we can solve A. So B carries all the difficulty of A, and maybe more.
+   - B is at least as hard as A. If we can solve B, we can solve A. So B carries all the difficulty of A, and possibly more.
    - A is no harder than B. So A is the easier problem, or equally easy.
 
    Which one is better, and why:
