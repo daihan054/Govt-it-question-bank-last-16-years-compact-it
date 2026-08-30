@@ -29,40 +29,56 @@
 
    Answer:
 
-   (a) Computational complexity means the amount of resource an algorithm needs as the input size n grows. It has two parts.
-   - Time complexity: how the number of basic operations grows with n, expressed as O(1), O(log n), O(n), O(n log n), O(n²) and so on.
-   - Space complexity: how much extra memory the algorithm needs beyond the input.
-   - Three cases are analysed: best case (minimum work), average case (expected work) and worst case (maximum work). Worst case is normally quoted because it gives a guarantee.
-   - Asymptotic notations: Big-O for the upper bound, Omega for the lower bound and Theta for the tight bound.
+   (a) Computational complexity means how much resource an algorithm needs when the input size n grows. It has two parts.
+   - Time complexity: how the number of basic steps grows with n. We write it as O(1), O(log n), O(n), O(n log n), O(n²) and so on.
+   - Space complexity: how much extra memory the algorithm needs, apart from the input itself.
 
-   (b) Bubble sort works by comparing each adjacent pair and swapping them if they are out of order, repeating the pass until no swap occurs. The same procedure applies to numbers and to letters, because letters are compared by their alphabetical order. Steps for a sample list 13, 14, 23, 4, 6:
+   We check three cases:
+   - Best case: the least work the algorithm can do.
+   - Average case: the work it does on normal data.
+   - Worst case: the most work it can do. We usually quote this one, because it gives a guarantee.
+
+   Asymptotic notations:
+   - Big-O: the upper bound, the most it can take.
+   - Omega: the lower bound, the least it can take.
+   - Theta: the tight bound, when the upper and lower bounds match.
+
+   (b) Bubble sort compares two side by side elements and swaps them if they are in the wrong order. It repeats the pass until no swap happens. The same method works for numbers and for letters, because letters are compared in alphabetical order.
+
+   Steps for the sample list 13, 14, 23, 4, 6:
    - Pass 1: 13, 14, 4, 6, 23
    - Pass 2: 13, 4, 6, 14, 23
    - Pass 3: 4, 6, 13, 14, 23
-   - Pass 4: no swap occurs, so the list is sorted.
-   - Note: the actual data list was not printed in the question paper collected here, so the standard method is shown with a sample list.
+   - Pass 4: no swap happens, so the list is sorted.
+
+   Note: the actual data list was not printed in the collected question paper, so the method is shown with a sample list.
 
 2. Explain the **QuickSort** algorithm with an example. Analyze its best-case, average-case, and worst-case time complexities. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
-   Answer: Quick Sort is a divide and conquer sorting algorithm. It picks one element as the pivot, partitions the array so that all smaller elements go left of the pivot and all larger elements go right, and then sorts the two parts recursively.
+   Answer: Quick Sort is a Divide and Conquer sorting algorithm. It picks one element as the pivot and splits the array around that pivot. Smaller elements go to the left, bigger elements go to the right.
 
    Steps:
-   - Choose a pivot, commonly the first, last or a random element.
-   - Partition the array around the pivot. After partitioning the pivot sits at its final sorted position.
-   - Apply the same process recursively on the left part and the right part.
-   - The recursion stops when a part has one element or none.
+   - Choose a pivot. It can be the first, the last or a random element.
+   - Partition the array around the pivot. After this, the pivot sits at its final correct place.
+   - Call the same process again on the left part and on the right part.
+   - Stop when a part has only one element or none.
 
-   Example on 10, 80, 30, 90, 40 with the last element 40 as pivot:
-   - Compare each element with 40. Elements 10 and 30 are smaller, so they move to the left side.
-   - After partition the array becomes 10, 30, 40, 90, 80 and the pivot 40 is fixed at index 2.
-   - Left part 10, 30 is already sorted; right part 90, 80 is partitioned again and becomes 80, 90.
-   - Final sorted array: 10, 30, 40, 80, 90.
+   Example: sort 10, 80, 30, 90, 40 taking the last element 40 as pivot.
+   - Compare each element with 40. Here 10 and 30 are smaller, so they move to the left side.
+   - After partition the array becomes 10, 30, 40, 90, 80. The pivot 40 is now fixed at index 2.
+   - Left part 10, 30 is already sorted.
+   - Right part 90, 80 is partitioned again and becomes 80, 90.
+   - Final sorted array: 10, 30, 40, 80, 90
 
-   Complexity:
-   - Best case O(n log n): the pivot splits the array into two nearly equal halves every time, giving recurrence T(n) = 2T(n/2) + O(n).
-   - Average case O(n log n): random data usually gives a reasonably balanced split.
-   - Worst case O(n²): the pivot is always the smallest or largest element, so one side gets n−1 elements and the other gets none, giving T(n) = T(n−1) + O(n).
-   - Space complexity is O(log n) on average for the recursion stack, and O(n) in the worst case.
+   Time complexity:
+
+   | Case | Complexity | Why |
+   |---|---|---|
+   | Best | O(n log n) | The pivot cuts the array into two equal halves every time. Recurrence: T(n) = 2T(n/2) + O(n) |
+   | Average | O(n log n) | On normal data the pivot gives a fairly balanced split, though not exactly equal |
+   | Worst | O(n²) | The pivot is always the smallest or the largest element. One side gets n−1 elements, the other gets none. Recurrence: T(n) = T(n−1) + O(n) |
+
+   Space complexity: O(log n) on average for the recursion stack, and O(n) in the worst case.
 
 3. **Write the Best case, worst case and average case time complexity for the following sorting algorithms.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
 
@@ -84,32 +100,35 @@
    | Quick sort | O(n log n) | O(n²) | O(n log n) |
    | Heap sort | O(n log n) | O(n log n) | O(n log n) |
 
-   - Selection sort always scans the remaining part to find the minimum, so the comparison count never changes and all three cases are O(n²).
-   - Insertion sort gives O(n) in the best case when the array is already sorted, because each new element needs only one comparison.
-   - Merge sort always divides exactly in half, so it is O(n log n) in every case, but it needs O(n) extra space.
-   - Quick sort falls to O(n²) only when the partition is always maximally unbalanced.
-   - Heap sort builds a heap in O(n) and extracts n elements in O(log n) each, so it is O(n log n) always, with O(1) extra space.
+   Reasons:
+   - Selection sort always scans the rest of the array to find the smallest value. The number of comparisons never changes. So all three cases are O(n²).
+   - Insertion sort gets O(n) in the best case, when the array is already sorted. Then each new element needs only one comparison.
+   - Merge sort always cuts the array exactly in half. So it is O(n log n) every time. But it needs O(n) extra space.
+   - Quick sort falls to O(n²) only when the split is always fully unbalanced.
+   - Heap sort builds a heap in O(n) and then removes n elements, each in O(log n). So it is always O(n log n), and it needs only O(1) extra space.
 
 4. **Explain the Quick Sort algorithm with a suitable example. Under what conditions does Quick Sort exhibit its worst-case time complexity, and why does this situation occur?** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1420 (ET: E-Zone)]*
 
-   Answer: Quick Sort selects a pivot, partitions the array so that smaller elements lie to the left of the pivot and larger ones to the right, then recursively sorts both sides. After each partition the pivot is already in its final position.
+   Answer: Quick Sort picks a pivot and splits the array around it. Smaller elements go to the left of the pivot, bigger ones go to the right. Then it sorts both sides again by the same method. After each partition the pivot is already in its final place.
 
-   Example on 7, 2, 9, 4, 1 taking 7 as pivot:
-   - Elements smaller than 7 are 2, 4, 1 and larger are 9.
-   - After partition: 2, 4, 1, 7, 9 and 7 is fixed.
+   Example: sort 7, 2, 9, 4, 1 taking 7 as pivot.
+   - Elements smaller than 7 are 2, 4, 1. The bigger one is 9.
+   - After partition: 2, 4, 1, 7, 9. Now 7 is fixed.
    - Left part 2, 4, 1 is partitioned again and becomes 1, 2, 4.
-   - Final sorted array: 1, 2, 4, 7, 9.
+   - Final sorted array: 1, 2, 4, 7, 9
 
-   Worst case conditions:
-   - The array is already sorted in ascending order and the first element is chosen as pivot.
-   - The array is already sorted in descending order and the last element is chosen as pivot.
-   - All elements are equal, with a partition scheme that does not handle duplicates well.
+   Conditions for the worst case:
+   - The array is already sorted in increasing order and we pick the first element as pivot.
+   - The array is already sorted in decreasing order and we pick the last element as pivot.
+   - All elements are equal, and the partition scheme does not handle duplicates well.
 
-   Why it occurs:
-   - In these cases the pivot is the smallest or the largest element, so one partition receives n−1 elements and the other receives none.
+   Why this situation gives O(n²):
+   - In these cases the pivot is always the smallest or the largest element.
+   - So one partition gets n−1 elements and the other gets nothing. No real division happens.
    - The recursion depth becomes n instead of log n, and each level still costs O(n) comparisons.
-   - The recurrence becomes T(n) = T(n−1) + O(n), which solves to O(n²).
-   - Remedy: choose a random pivot, or use the median of three method, which makes the bad case extremely unlikely.
+   - The recurrence becomes T(n) = T(n−1) + O(n), which gives O(n²).
+
+   How to avoid it: pick a random pivot, or use the median of three method (first, middle, last). Then the bad case becomes very unlikely.
 
 5. **(b) Write down the selection sort algorithm. Find out the best case, average case, and worst case time completely.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1448 (ET: N/A)]*
 
@@ -117,10 +136,10 @@
 
    Algorithm:
    - Step 1: set i = 0.
-   - Step 2: assume the element at index i is the minimum, so min_index = i.
-   - Step 3: scan from j = i+1 to n−1, and if A[j] < A[min_index] then set min_index = j.
+   - Step 2: take the element at index i as the smallest, so min_index = i.
+   - Step 3: scan from j = i+1 to n−1. If A[j] < A[min_index], then set min_index = j.
    - Step 4: swap A[i] with A[min_index].
-   - Step 5: increase i by one and repeat from Step 2 until i = n−1.
+   - Step 5: increase i by one and go back to Step 2, until i = n−1.
 
    ```c
    for (i = 0; i < n - 1; i++) {
@@ -131,31 +150,34 @@
    }
    ```
 
-   Complexity analysis:
-   - The outer loop runs n−1 times and the inner loop runs n−i−1 times.
-   - Total comparisons = (n−1) + (n−2) + ... + 1 = n(n−1)/2, which is O(n²).
-   - This count does not depend on the arrangement of data, so best case, average case and worst case are all O(n²).
-   - Number of swaps is only n−1, which is the advantage of selection sort when writing to memory is costly.
-   - Space complexity is O(1), because sorting is done in place.
+   Time complexity:
+   - The outer loop runs n−1 times. The inner loop runs n−i−1 times.
+   - Total comparisons = (n−1) + (n−2) + ... + 1 = n(n−1)/2
+   - So the complexity is O(n²).
+   - This count does not depend on how the data is arranged. So best case, average case and worst case are all O(n²).
+
+   Other points:
+   - The number of swaps is only n−1. This is the good side of selection sort, when writing to memory is costly.
+   - Space complexity is O(1), because it sorts in place.
 
 6. **Sort the following array using Insertion sort. 14, 33, 27, 10, 35, 19, 48, 44.** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1334 (ET: N/A)]*
 
-   Answer: Insertion sort takes one element at a time as the key and inserts it into its correct place among the already sorted elements on its left.
+   Answer: Insertion sort takes one element at a time as the key. Then it puts that key in its correct place among the already sorted elements on its left.
 
    Initial array: 14, 33, 27, 10, 35, 19, 48, 44
    - Key 33: 33 > 14, so it stays. Array: 14, 33, 27, 10, 35, 19, 48, 44
-   - Key 27: 27 < 33, so 33 shifts right. Array: 14, 27, 33, 10, 35, 19, 48, 44
-   - Key 10: smaller than all, so 33, 27, 14 shift right. Array: 10, 14, 27, 33, 35, 19, 48, 44
+   - Key 27: 27 < 33, so 33 moves right. Array: 14, 27, 33, 10, 35, 19, 48, 44
+   - Key 10: smaller than all, so 33, 27, 14 move right. Array: 10, 14, 27, 33, 35, 19, 48, 44
    - Key 35: 35 > 33, so it stays. Array: 10, 14, 27, 33, 35, 19, 48, 44
-   - Key 19: 35, 33, 27 shift right. Array: 10, 14, 19, 27, 33, 35, 48, 44
+   - Key 19: 35, 33, 27 move right. Array: 10, 14, 19, 27, 33, 35, 48, 44
    - Key 48: 48 > 35, so it stays. Array: 10, 14, 19, 27, 33, 35, 48, 44
-   - Key 44: 48 shifts right. Array: 10, 14, 19, 27, 33, 35, 44, 48
+   - Key 44: 48 moves right. Array: 10, 14, 19, 27, 33, 35, 44, 48
 
    Final sorted array: 10, 14, 19, 27, 33, 35, 44, 48
 
 7. **Sort this array using merge sort 12, 45, 23, 6, 80, 20.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: Merge sort divides the array into halves until each part has one element, then merges the parts back in sorted order.
+   Answer: Merge sort cuts the array into halves again and again, until each part has one element. Then it merges the parts back together in sorted order.
 
    Divide phase:
    - 12, 45, 23, 6, 80, 20 splits into 12, 45, 23 and 6, 80, 20
@@ -172,51 +194,54 @@
    - Merge 12, 23, 45 with 6, 20, 80 gives 6, 12, 20, 23, 45, 80
 
    Final sorted array: 6, 12, 20, 23, 45, 80
-   Time complexity is O(n log n) in all cases and space complexity is O(n).
+
+   Time complexity is O(n log n) in all cases. Space complexity is O(n).
 
 8. **What is the worst-case time and space complexity of quicksort? Briefly explain how this worst-case behavior can occur.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 428 (ET: BIBM)]*
 
    Answer:
-   - Worst case time complexity: O(n²).
-   - Worst case space complexity: O(n), caused by the recursion stack depth.
+   - Worst case time complexity: O(n²)
+   - Worst case space complexity: O(n), because of the recursion stack depth.
 
-   How it occurs:
-   - The pivot chosen is always the smallest or the largest element of the current part.
-   - This happens when the array is already sorted ascending and the first element is the pivot, or already sorted descending and the last element is the pivot.
-   - One partition then holds n−1 elements and the other holds none, so no real division takes place.
-   - The recurrence becomes T(n) = T(n−1) + O(n), giving n levels of recursion with O(n) work per level, that is O(n²).
-   - The recursion depth also becomes n instead of log n, so the stack space rises to O(n).
-   - Randomised pivot selection or median of three keeps this case practically out of reach.
+   How this worst case happens:
+   - The pivot picked is always the smallest or the largest element of the current part.
+   - This happens when the array is already sorted in increasing order and we take the first element as pivot. It also happens when the array is sorted in decreasing order and we take the last element as pivot.
+   - Then one partition holds n−1 elements and the other holds none. So no real division takes place.
+   - The recurrence becomes T(n) = T(n−1) + O(n). That means n levels of recursion, with O(n) work at each level, giving O(n²).
+   - The recursion depth also becomes n instead of log n. So the stack space rises to O(n).
+
+   Picking a random pivot, or the median of three, keeps this case practically out of reach.
 
 9. **Why Quick sort worst complexity in O(n^2)? Explain with example.** *[BKSP Assistant Programmer 13.07.2024 compact it 1458 (ET: N/A)]*
 
-   Answer: Quick sort reaches O(n²) when the partition is maximally unbalanced at every step, so the problem size falls by only one element each time instead of half.
+   Answer: Quick sort becomes O(n²) when the partition is fully unbalanced at every step. Then the problem size drops by only one element each time, instead of dropping by half.
 
-   Example on the already sorted array 1, 2, 3, 4, 5 with the first element as pivot:
-   - Pivot 1: nothing is smaller, so the left part is empty and the right part holds 2, 3, 4, 5. Comparisons made: 4.
-   - Pivot 2: right part holds 3, 4, 5. Comparisons: 3.
-   - Pivot 3: right part holds 4, 5. Comparisons: 2.
-   - Pivot 4: right part holds 5. Comparisons: 1.
-   - Total comparisons = 4 + 3 + 2 + 1 = 10 = n(n−1)/2, which is O(n²).
+   Example: the already sorted array 1, 2, 3, 4, 5, taking the first element as pivot.
+   - Pivot 1: nothing is smaller. Left part is empty, right part holds 2, 3, 4, 5. Comparisons: 4
+   - Pivot 2: right part holds 3, 4, 5. Comparisons: 3
+   - Pivot 3: right part holds 4, 5. Comparisons: 2
+   - Pivot 4: right part holds 5. Comparisons: 1
+   - Total comparisons = 4 + 3 + 2 + 1 = 10 = n(n−1)/2, which is O(n²)
 
-   In the balanced case the array would split into halves and the depth would be log n, giving O(n log n). The unbalanced split destroys that advantage.
+   In the balanced case the array would split into halves, the depth would be log n, and we would get O(n log n). The unbalanced split kills that advantage.
 
 10. **In a quicksort algorithm taking the first element as a pivot element. Now Analyze the time complexity of the quicksort algorithm when all services of the quicks sort algorithm are already sorted.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
 
-    Answer: If the array is already sorted and the first element is always taken as pivot, quick sort falls into its worst case and runs in O(n²).
+    Answer: If the array is already sorted and we always take the first element as pivot, quick sort falls into its worst case and runs in O(n²).
 
     Analysis:
-    - The first element is the smallest element of a sorted array, so after partition no element goes to the left side and all n−1 elements go to the right side.
-    - The recurrence becomes T(n) = T(0) + T(n−1) + O(n) = T(n−1) + O(n).
-    - Expanding: T(n) = O(n) + O(n−1) + O(n−2) + ... + O(1) = O(n(n+1)/2) = O(n²).
-    - Total comparisons are n(n−1)/2, and recursion depth is n, so stack space becomes O(n).
+    - In a sorted array the first element is the smallest one. So after partition, no element goes to the left side and all n−1 elements go to the right side.
+    - The recurrence becomes T(n) = T(0) + T(n−1) + O(n) = T(n−1) + O(n)
+    - Expanding it: T(n) = O(n) + O(n−1) + O(n−2) + ... + O(1) = O(n(n+1)/2) = O(n²)
+    - Total comparisons are n(n−1)/2.
+    - The recursion depth is n, so the stack space becomes O(n).
 
-    Remedy: pick a random pivot, or take the median of the first, middle and last elements, which restores the expected O(n log n) behaviour.
+    How to fix it: pick a random pivot, or take the median of the first, middle and last elements. Then we get back the expected O(n log n).
 
 11. **(খ) Bubble sort algorithm ব্যবহার করে নিচের সংখ্যাগুলো sort করুন। প্রতিটি ধাপ প্রদর্শন করতে হবে।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 13, 14, 23, 4, 6
 
-    Answer: Bubble sort compares each adjacent pair and swaps them when they are in the wrong order, so the largest remaining value moves to the end after every pass.
+    Answer: Bubble sort compares two side by side elements and swaps them when they are in the wrong order. After every pass, the largest remaining value moves to the end.
 
     Initial array: 13, 14, 23, 4, 6
 
@@ -225,21 +250,21 @@
     - 14 and 23: no swap
     - 23 and 4: swap, giving 13, 14, 4, 23, 6
     - 23 and 6: swap, giving 13, 14, 4, 6, 23
-    - Result after pass 1: 13, 14, 4, 6, 23
+    - After pass 1: 13, 14, 4, 6, 23
 
     Pass 2:
     - 13 and 14: no swap
     - 14 and 4: swap, giving 13, 4, 14, 6, 23
     - 14 and 6: swap, giving 13, 4, 6, 14, 23
-    - Result after pass 2: 13, 4, 6, 14, 23
+    - After pass 2: 13, 4, 6, 14, 23
 
     Pass 3:
     - 13 and 4: swap, giving 4, 13, 6, 14, 23
     - 13 and 6: swap, giving 4, 6, 13, 14, 23
-    - Result after pass 3: 4, 6, 13, 14, 23
+    - After pass 3: 4, 6, 13, 14, 23
 
     Pass 4:
-    - 4 and 6: no swap. No swap occurred in this pass, so the array is already sorted.
+    - 4 and 6: no swap. No swap happened in this pass, so the array is sorted.
 
     Final sorted array: 4, 6, 13, 14, 23
 
@@ -247,10 +272,10 @@
 
     Answer:
 
-    Algorithm to merge two sorted arrays A of size m and B of size n into C:
+    Algorithm to merge two sorted arrays A of size m and B of size n into array C:
     - Set i = 0, j = 0, k = 0.
-    - While i < m and j < n: if A[i] <= B[j] then C[k] = A[i], increase i, else C[k] = B[j], increase j. Increase k each time.
-    - When one array finishes, copy the remaining elements of the other array into C.
+    - While i < m and j < n: if A[i] <= B[j], then put A[i] into C and increase i. Otherwise put B[j] into C and increase j. Increase k each time.
+    - When one array finishes, copy the rest of the other array into C.
 
     ```c
     i = j = k = 0;
@@ -260,58 +285,76 @@
     while (j < n) C[k++] = B[j++];
     ```
 
-    Why it is O(n):
-    - Both input arrays are already sorted, so only the front elements need to be compared; no element is ever revisited.
-    - Every comparison places exactly one element into C and advances one pointer permanently.
-    - Since C finally holds m + n elements, the loop runs exactly m + n times.
-    - So the total work is proportional to m + n, that is O(m + n), written as O(n) when the total number of elements is n.
-    - The extra space needed is O(m + n) for the output array.
+    Why this takes O(n) time:
+    - Both input arrays are already sorted. So we only need to compare the front elements. We never go back to an element again.
+    - Every comparison puts exactly one element into C and moves one pointer forward for good.
+    - C finally holds m + n elements. So the loop runs exactly m + n times.
+    - The total work is proportional to m + n, that is O(m + n). We write it as O(n) when the total number of elements is n.
+    - Extra space needed is O(m + n) for the output array.
 
 13. **(a) The complexity of merge sort is T(n) = 2T\left(\frac{n}{2}\right) + n. Explain how the above equation is derived?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 479 (ET: N/A)]*
 
-    Answer: The recurrence comes directly from the three steps of the divide and conquer strategy used by merge sort.
+    Answer: This recurrence comes straight from the three steps of the divide and conquer method that merge sort uses.
 
-    - Divide: the array of n elements is split into two halves. Finding the middle index takes constant time, O(1).
-    - Conquer: each half of size n/2 is sorted by calling merge sort recursively. There are two such calls, so this costs 2T(n/2).
-    - Combine: the two sorted halves are merged into one sorted array. Merging compares front elements and places every element exactly once, so it costs n operations, that is O(n).
+    - Divide: the array of n elements is cut into two halves. Finding the middle index takes constant time, O(1).
+    - Conquer: each half of size n/2 is sorted by calling merge sort again. There are two such calls. So this part costs 2T(n/2).
+    - Combine: the two sorted halves are merged into one. Merging compares the front elements and places every element exactly once. So it costs n operations, that is O(n).
 
-    Adding the three parts: T(n) = O(1) + 2T(n/2) + O(n), and since O(1) is absorbed, T(n) = 2T(n/2) + n.
+    Adding the three parts:
+
+    T(n) = O(1) + 2T(n/2) + O(n)
+
+    The O(1) is very small compared to O(n), so we drop it:
+
+    T(n) = 2T(n/2) + n
 
     Solving it:
-    - By the Master Theorem with a = 2, b = 2 and f(n) = n, we get n^(log_b a) = n^1 = n, which matches f(n), so case 2 applies and T(n) = O(n log n).
-    - Intuitively, the recursion tree has log n levels and each level does O(n) merging work, so total work is n × log n.
+    - By the Master Theorem, here a = 2, b = 2 and f(n) = n.
+    - n^(log_b a) = n^(log_2 2) = n^1 = n, which matches f(n). So case 2 applies and T(n) = O(n log n).
+    - Simple way to see it: the recursion tree has log n levels, and each level does O(n) merging work. So the total is n × log n.
 
 14. **Sort the following data using merge sort. Also mention best and worst case of the algorithm.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 459 (ET: BUET)]*
 
-    Answer: Merge sort repeatedly divides the list into two halves until single elements remain, then merges them back in order. Using a sample list 38, 27, 43, 3, 9, 82, 10:
+    Answer: Merge sort cuts the list into two halves again and again, until single elements are left. Then it merges them back in sorted order.
 
+    Using a sample list 38, 27, 43, 3, 9, 82, 10:
     - Divide: 38, 27, 43 and 3, 9, 82, 10
-    - Divide further until single elements remain.
-    - Merge 38 and 27 gives 27, 38; merge with 43 gives 27, 38, 43
-    - Merge 3 and 9 gives 3, 9; merge 82 and 10 gives 10, 82; merge those gives 3, 9, 10, 82
+    - Divide again until single elements are left.
+    - Merge 38 and 27 gives 27, 38. Merge that with 43 gives 27, 38, 43
+    - Merge 3 and 9 gives 3, 9. Merge 82 and 10 gives 10, 82. Merge those gives 3, 9, 10, 82
     - Final merge gives 3, 9, 10, 27, 38, 43, 82
 
     Best and worst case:
-    - Best case O(n log n), because the array is always divided exactly in half regardless of the data.
-    - Worst case O(n log n) as well, for the same reason.
-    - Average case O(n log n), and space complexity O(n) for the temporary array.
-    - This predictability, plus stability, is why merge sort is preferred for external sorting and for linked lists.
-    - Note: the data list was not printed in the collected question, so a standard list is used to show the method.
+    - Best case: O(n log n). The array is always cut exactly in half, whatever the data is.
+    - Worst case: O(n log n), for the same reason.
+    - Average case: O(n log n).
+    - Space complexity: O(n) for the temporary array.
+
+    This fixed behaviour, plus stability, is why merge sort is chosen for external sorting and for linked lists.
+
+    Note: the data list was not printed in the collected question, so a standard list is used to show the method.
 
 15. **Which short uses divide and conquer technique?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-    Answer: Merge sort and quick sort both use the divide and conquer technique. Merge sort divides first and does the main work while merging, whereas quick sort does the main work while partitioning and then divides.
+    Answer: Merge sort and quick sort both use the divide and conquer technique.
+
+    - Merge sort divides first and does the main work while merging.
+    - Quick sort does the main work while partitioning, and then divides.
 
 16. **Fastest sorting algorithms?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-    Answer: Quick sort is generally the fastest comparison based sorting algorithm in practice, with an average complexity of O(n log n) and very low constant factors because it sorts in place with good cache behaviour. Merge sort and heap sort also achieve O(n log n), and no comparison based sort can be faster than O(n log n). For special cases with small integer ranges, counting sort and radix sort can reach O(n).
+    Answer: Quick sort is generally the fastest comparison based sorting algorithm in practice. Its average complexity is O(n log n), and its constant factor is very low because it sorts in place and uses the cache well.
+
+    - Merge sort and heap sort also give O(n log n).
+    - No comparison based sort can beat O(n log n).
+    - For special data, such as small integers in a fixed range, counting sort and radix sort can reach O(n), because they do not compare elements.
 
 17. **Bubble sort, Quick sort and Merge sort algorithm এর Worst case complexity নির্ণয় কর।** *[BTCL Junior Assistant Manager 2022 compact it 640 (ET: BUET)]*
 
     Answer:
-    - Bubble sort: O(n²). The array is in reverse order, so every pass makes the maximum number of swaps, giving n(n−1)/2 comparisons.
-    - Quick sort: O(n²). The pivot is always the smallest or largest element, so the partition is maximally unbalanced and the recurrence becomes T(n) = T(n−1) + O(n).
-    - Merge sort: O(n log n). The array is always split exactly in half, so the worst case is the same as the best case.
+    - Bubble sort: O(n²). This happens when the array is in reverse order, so every pass makes the maximum number of swaps. Total comparisons are n(n−1)/2.
+    - Quick sort: O(n²). This happens when the pivot is always the smallest or the largest element. Then the partition is fully unbalanced and the recurrence becomes T(n) = T(n−1) + O(n).
+    - Merge sort: O(n log n). The array is always cut exactly in half, so the worst case is the same as the best case.
 
 18. **Write down the pseudocode of quick sort algorithm through recursive algorithm. Express the arrange complexity off this algorithm.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
@@ -336,10 +379,10 @@
     ```
 
     Complexity:
-    - Average case O(n log n), because a random pivot usually splits the array into reasonably balanced parts, giving T(n) = 2T(n/2) + O(n).
-    - Best case O(n log n) with a perfectly balanced split.
-    - Worst case O(n²) with a maximally unbalanced split.
-    - Space complexity is O(log n) average and O(n) worst, for the recursion stack.
+    - Average case: O(n log n). A random pivot usually splits the array into fairly balanced parts, giving T(n) = 2T(n/2) + O(n).
+    - Best case: O(n log n), with a perfectly equal split.
+    - Worst case: O(n²), with a fully unbalanced split.
+    - Space complexity: O(log n) on average and O(n) in the worst case, for the recursion stack.
 
 19. **How many member of swapping is needed to sort the number sequence 5, 8, 3, 6, 2 in ascending order using bubble sort.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 672 (ET: N/A)]*
 
@@ -367,9 +410,10 @@
     - Swaps in pass 4 = 1
 
     Total swaps = 3 + 2 + 1 + 1 = 7
+
     Final sorted sequence: 2, 3, 5, 6, 8
 
-    Cross check: the number of swaps in bubble sort equals the number of inversions in the input. The inversions here are (5,3), (5,2), (8,3), (8,6), (8,2), (3,2) and (6,2), which is 7.
+    Cross check: in bubble sort, the number of swaps is equal to the number of inversions in the input. The inversions here are (5,3), (5,2), (8,3), (8,6), (8,2), (3,2) and (6,2). That is 7 inversions, which matches.
 
 20. **(i) Bubble sort Algorithm লিখুন। এ অ্যালগরিদমটির Time Complexity বের করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 783 (ET: N/A)]*
 
@@ -378,8 +422,8 @@
     Algorithm:
     - Step 1: repeat for i = 0 to n−2.
     - Step 2: repeat for j = 0 to n−2−i.
-    - Step 3: if A[j] > A[j+1] then swap A[j] and A[j+1].
-    - Step 4: if no swap happened in a full pass, stop, because the array is already sorted.
+    - Step 3: if A[j] > A[j+1], then swap A[j] and A[j+1].
+    - Step 4: if no swap happened in a full pass, stop. The array is already sorted.
 
     ```c
     for (i = 0; i < n - 1; i++) {
@@ -394,8 +438,9 @@
     ```
 
     Time complexity:
-    - The inner loop runs (n−1) + (n−2) + ... + 1 = n(n−1)/2 times, so the worst case and average case are O(n²).
-    - Best case is O(n), when the array is already sorted and the swapped flag stops the algorithm after one pass.
+    - The inner loop runs (n−1) + (n−2) + ... + 1 = n(n−1)/2 times.
+    - So the worst case and the average case are O(n²).
+    - The best case is O(n). This happens when the array is already sorted, and the swapped flag stops the algorithm after one pass.
     - Space complexity is O(1), because it sorts in place.
 
 21. **(a) Compaire and contrast between Quick sort and Merge sort in terms of their time and space complexity.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 793 (ET: N/A)]*
@@ -407,14 +452,14 @@
     | Best case time | O(n log n) | O(n log n) |
     | Average case time | O(n log n) | O(n log n) |
     | Worst case time | O(n²) | O(n log n) |
-    | Space complexity | O(log n) average, in place | O(n) extra array needed |
+    | Space complexity | O(log n) average, sorts in place | O(n) extra array needed |
     | Stability | Not stable | Stable |
-    | Main work done | While partitioning, before recursion | While merging, after recursion |
+    | Where the main work happens | While partitioning, before recursion | While merging, after recursion |
     | Cache behaviour | Very good, works in place | Weaker, uses extra memory |
     | Best suited for | Arrays in main memory | Linked lists and external sorting |
 
-    - Quick sort is usually faster in practice despite the worse theoretical bound, because its constant factor is small and it needs no extra array.
-    - Merge sort is chosen when a guaranteed O(n log n) or stability is required.
+    - Quick sort is usually faster in real use, even though its worst case is worse. Its constant factor is small and it needs no extra array.
+    - Merge sort is chosen when we need a guaranteed O(n log n), or when we need stability.
 
 22. **(b) Difference between Heap Sort and Merge Sort.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 885 (ET: N/A)]*
 
@@ -426,26 +471,26 @@
     | Time complexity | O(n log n) in all cases | O(n log n) in all cases |
     | Space complexity | O(1), sorts in place | O(n) extra space |
     | Stability | Not stable | Stable |
-    | Working method | Builds a max heap, then repeatedly removes the root | Splits into halves, sorts, then merges |
+    | Working method | Builds a max heap, then removes the root again and again | Splits into halves, sorts them, then merges |
     | Suitable for | Arrays where memory is limited | Linked lists and external sorting |
-    | Practical speed | Slower due to poor cache locality | Faster in practice for large data |
+    | Practical speed | Slower, because of poor cache locality | Faster in practice for large data |
 
 23. **(a) How the quick sort is implemented? What is the complexity of quick sort?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 892, 895 (ET: N/A)]*
 
     Answer:
 
-    Implementation steps:
-    - Select a pivot element, commonly the last element of the current range.
-    - Partition: traverse the range and move all elements smaller than or equal to the pivot to the left side, keeping a boundary index.
-    - Place the pivot just after that boundary, so the pivot reaches its final sorted position.
-    - Recursively apply the same steps to the sub-array left of the pivot and the sub-array right of it.
-    - Stop when a sub-array has one element or none.
+    How quick sort is implemented:
+    - Pick a pivot element. Usually it is the last element of the current range.
+    - Partition: go through the range and move all elements smaller than or equal to the pivot to the left side. Keep a boundary index while doing this.
+    - Put the pivot just after that boundary. Now the pivot is at its final sorted place.
+    - Apply the same steps again on the part left of the pivot and the part right of it.
+    - Stop when a part has one element or none.
 
     Complexity:
-    - Best case O(n log n), balanced partition.
-    - Average case O(n log n).
-    - Worst case O(n²), maximally unbalanced partition.
-    - Space O(log n) average and O(n) worst, from the recursion stack. It sorts in place, so no extra array is needed.
+    - Best case: O(n log n), with a balanced partition.
+    - Average case: O(n log n).
+    - Worst case: O(n²), with a fully unbalanced partition.
+    - Space: O(log n) on average and O(n) in the worst case, from the recursion stack. It sorts in place, so no extra array is needed.
 
 24. **Analize and compare the Quick-sort and Merge-sort algorithms in term of their time and space complexity.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
@@ -457,13 +502,14 @@
     | Best case | O(n log n) | O(n log n) |
     | Average case | O(n log n) | O(n log n) |
     | Worst case | O(n²) | O(n log n) |
-    | Extra space | O(log n) recursion stack only | O(n) temporary array |
+    | Extra space | O(log n), only the recursion stack | O(n) temporary array |
     | Stability | Not stable | Stable |
 
-    - Quick sort partitions first and then recurses, so the array is arranged during the divide step.
+    Analysis:
+    - Quick sort partitions first and then recurses. So the array gets arranged during the divide step.
     - Merge sort divides blindly and does the ordering work during the combine step.
-    - Quick sort's worst case is removable in practice by randomised or median of three pivot selection.
-    - Merge sort guarantees O(n log n) but pays O(n) memory, which matters for very large data in limited RAM.
+    - Quick sort's worst case can be removed in practice by picking a random pivot or the median of three.
+    - Merge sort always gives O(n log n), but it pays O(n) memory. That matters when the data is very large and RAM is limited.
 
 25. **Insertion sort is a simple sorting algorithm. Write a program to sort some given numbers using insertion sort algorithm.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 989-990 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
@@ -500,42 +546,46 @@
     }
     ```
 
-    - The element at index i is taken as the key, and every larger element on its left is shifted one step right.
-    - The key is then placed in the gap created, so the left part always stays sorted.
-    - Time complexity is O(n) in the best case and O(n²) in the worst case, with O(1) extra space.
+    How it works:
+    - The element at index i is taken as the key.
+    - Every bigger element on its left is moved one step to the right.
+    - The key is then placed in the empty gap. So the left part always stays sorted.
+
+    Time complexity is O(n) in the best case and O(n²) in the worst case. Extra space is O(1).
 
 26. **Bubble Sort কীভাবে কাজ করে উদাহরণসহ বুঝিয়ে লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
 
-    Answer: Bubble sort repeatedly compares two adjacent elements and swaps them if they are in the wrong order. After each complete pass the largest remaining element settles at the end, like a bubble rising to the surface, which is why it carries this name.
+    Answer: Bubble sort compares two side by side elements and swaps them if they are in the wrong order. After each full pass, the largest remaining element settles at the end. It looks like a bubble rising to the surface, and that is why it has this name.
 
     Working steps:
-    - Compare the first and second elements, and swap if the first is greater.
-    - Move one position right and repeat for every adjacent pair up to the end.
-    - After the first pass the largest element is at the last position, so the next pass can ignore it.
-    - Repeat until a full pass completes with no swap.
+    - Compare the first and second elements. Swap if the first one is bigger.
+    - Move one position right and repeat for every side by side pair, up to the end.
+    - After the first pass the largest element is at the last position. So the next pass can leave it out.
+    - Repeat until a full pass finishes with no swap.
 
     Example on 5, 1, 4, 2:
     - Pass 1: compare 5 and 1, swap giving 1, 5, 4, 2. Compare 5 and 4, swap giving 1, 4, 5, 2. Compare 5 and 2, swap giving 1, 4, 2, 5.
     - Pass 2: compare 1 and 4, no swap. Compare 4 and 2, swap giving 1, 2, 4, 5.
-    - Pass 3: compare 1 and 2, no swap. No swap occurred, so sorting is complete.
+    - Pass 3: compare 1 and 2, no swap. No swap happened, so sorting is done.
     - Final sorted array: 1, 2, 4, 5
 
-    Time complexity is O(n²) in the worst case and O(n) in the best case with the swap flag optimisation.
+    Time complexity is O(n²) in the worst case, and O(n) in the best case if we use the swap flag.
 
 27. **Selection Sort টেকনিক ব্যবহার করে নিম্নোক্ত ডাটা গুলোকে সর্টিং করুন। 45, 72, 80, 65, 84, 52, 37** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1039-1040 (ET: DPI)]*
 
-    Answer: Selection sort finds the smallest element from the unsorted part and swaps it with the first element of that part.
+    Answer: Selection sort finds the smallest element in the unsorted part and swaps it with the first element of that part.
 
     Initial array: 45, 72, 80, 65, 84, 52, 37
-    - Pass 1: smallest in the whole array is 37, swap with 45. Array: 37, 72, 80, 65, 84, 52, 45
-    - Pass 2: smallest from index 1 onward is 45, swap with 72. Array: 37, 45, 80, 65, 84, 52, 72
-    - Pass 3: smallest from index 2 onward is 52, swap with 80. Array: 37, 45, 52, 65, 84, 80, 72
-    - Pass 4: smallest from index 3 onward is 65, already in place. Array: 37, 45, 52, 65, 84, 80, 72
-    - Pass 5: smallest from index 4 onward is 72, swap with 84. Array: 37, 45, 52, 65, 72, 80, 84
-    - Pass 6: smallest from index 5 onward is 80, already in place. Array: 37, 45, 52, 65, 72, 80, 84
+    - Pass 1: the smallest in the whole array is 37. Swap it with 45. Array: 37, 72, 80, 65, 84, 52, 45
+    - Pass 2: the smallest from index 1 onward is 45. Swap it with 72. Array: 37, 45, 80, 65, 84, 52, 72
+    - Pass 3: the smallest from index 2 onward is 52. Swap it with 80. Array: 37, 45, 52, 65, 84, 80, 72
+    - Pass 4: the smallest from index 3 onward is 65. It is already in place. Array: 37, 45, 52, 65, 84, 80, 72
+    - Pass 5: the smallest from index 4 onward is 72. Swap it with 84. Array: 37, 45, 52, 65, 72, 80, 84
+    - Pass 6: the smallest from index 5 onward is 80. It is already in place. Array: 37, 45, 52, 65, 72, 80, 84
 
     Final sorted array: 37, 45, 52, 65, 72, 80, 84
-    Total comparisons are n(n−1)/2 = 21 and the time complexity is O(n²) in all cases.
+
+    Total comparisons are n(n−1)/2 = 21. Time complexity is O(n²) in all cases.
 
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 

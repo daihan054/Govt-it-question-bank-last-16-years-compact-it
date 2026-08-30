@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 11/206 sections**
+**Rewritten: 12/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -18,7 +18,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] ai-and-ml.md — Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
 ## algorithm.md — 14 sections
-- [ ] algorithm.md — Sorting Algorithms & Complexity (27)
+- [x] algorithm.md — Sorting Algorithms & Complexity (27)
 - [ ] algorithm.md — Graph Traversal Algorithms (BFS & DFS) (17)
 - [ ] algorithm.md — Graph Algorithms (Shortest Path & Minimum Spanning Tree) (14)
 - [ ] algorithm.md — Algorithm Analysis & Asymptotic Complexity (12)
