@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 101/206 sections**
+**Rewritten: 102/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -209,7 +209,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] oop.md — Interfaces & Abstract Classes (2)
 
 ## operating-system.md — 12 sections
-- [ ] operating-system.md — Linux / Unix Commands & Administration (42)
+- [x] operating-system.md — Linux / Unix Commands & Administration (42)
 - [x] operating-system.md — CPU Scheduling Algorithms (24)
 - [x] operating-system.md — Deadlock & Resource Allocation (22)
 - [x] operating-system.md — OS Concepts & System Software (15)
