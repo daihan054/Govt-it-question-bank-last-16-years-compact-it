@@ -4356,10 +4356,24 @@ int main() {
 
    Answer: The character `'\0'`, called the null character, marks the end of a string in C.
 
-   - C has no separate string type. A string is just an array of characters that ends with `'\0'`.
-   - Library functions like `strlen()`, `strcpy()` and `printf("%s")` keep reading until they meet `'\0'`. Without it they would read past the array and give garbage, or crash.
-   - Its ASCII value is 0. Do not mix it up with the character `'0'`, whose ASCII value is 48.
-   - This is why the array must be one byte bigger than the text. To store "Hello" we need `char s[6]`.
+   How a string is stored in C:
+   - C has no built-in string type. A string is a sequence of characters stored in a character array, and it must end with `'\0'`.
+   - Each character takes one position of the array, and we can reach it by index.
+   - Example: the string "Geeks" is stored as { 'G', 'e', 'e', 'k', 's', '\0' }.
+
+   Role of the null character:
+   - It tells every string function where the string ends.
+   - `printf` with `%s` prints one character after another until it meets `'\0'`, then stops.
+   - `strlen()` counts characters up to the first `'\0'`, and does not count the null itself. So "Hello" gives 5.
+   - Without the null terminator, these functions would keep reading past the array and give garbage, or crash the program.
+
+   Why the array must be one bigger than the text:
+   - We need one extra position to hold the null terminator.
+   - "Geeks" has 5 characters, so it needs an array of at least 6. To store "Hello" we need `char s[6]`.
+   - When we write `char str[] = "Geeks";` the compiler adds the `'\0'` for us automatically.
+
+   One point students often confuse: the ASCII value of `'\0'` is 0. That is not the same as the character `'0'`, whose ASCII value is 48.
+
 9. **(c) Write down a program to find length of a string without using any library function.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 892 (ET: N/A)]*
 
 
