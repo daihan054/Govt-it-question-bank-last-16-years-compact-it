@@ -23,101 +23,162 @@
 
 1. **What is Artificial Intelligence?** *[Mongla Port Authority Assistant Programmer 2023 compact it 573 (ET: N/A)]*
 
-   Answer: Artificial Intelligence (AI) is a branch of computer science. It makes machines and software that can do work which normally needs human thinking. For example: learning, reasoning, solving problems, understanding language and taking decisions.
+   Answer: Artificial Intelligence (AI) is a technology that lets machines and computers do work which normally needs human thinking.
 
-   In simple words: AI tries to make a computer think and act like a human.
+   An AI system can do three things:
+   - It copies human intelligence by learning and reasoning.
+   - It reads large amounts of data and finds patterns in it.
+   - It keeps getting better through experience and feedback.
 
-   Main features of AI:
-   - Learning: the machine gets better by looking at data. We do not write a rule for every case.
-   - Reasoning: it uses rules and logic on stored facts to reach an answer.
-   - Perception: it takes input from the world using images, sound or sensors.
-   - Decision making: it picks the best action to reach a goal.
+   Core concepts of AI:
+   - Machine Learning: the system learns from data. We do not write a rule for every case.
+   - Generative AI: it creates new content, such as text, image, audio or video.
+   - Natural Language Processing (NLP): it lets a computer understand human language.
+   - Expert Systems: it copies the decision making of a human expert, using stored rules.
 
-   Types of AI:
-   - Narrow AI (weak AI): made for one job only. Example: spam filter, chatbot, face unlock. All AI we use today is of this type.
-   - General AI (strong AI): can do any thinking job that a human can do. It does not exist yet.
-   - Super AI: a future idea where machines become smarter than humans.
+   How AI works, step by step:
+   - Collect data from many sources.
+   - Clean and prepare the data.
+   - Train a model on that data.
+   - Test the model and check the result.
+   - Use the model, and keep improving it with feedback.
 
-   Main branches of AI:
-   - Machine Learning and Deep Learning
-   - Natural Language Processing (NLP)
-   - Computer Vision
-   - Robotics
-   - Expert Systems
+   Types of AI based on capability:
+   - Narrow AI: made for one fixed job, like speech recognition or a spam filter. All AI we use today is of this type.
+   - General AI: can do any thinking job a human can do, in any field. It is only theory today.
+   - Superintelligent AI: smarter than humans. It does not exist; it is a future idea.
 
-   Uses in banks and government offices:
-   - Finding fraud in card and mobile transactions
-   - Giving credit score and checking loan risk
-   - Chatbots that answer customer questions
-   - Reading cheques and forms using OCR
-   - Finding cyber attacks from network traffic
+   Types of AI based on functionality:
+   - Reactive Machines: they answer only the current input. They have no memory.
+   - Limited Memory: they use past data to make better decisions now.
+   - Theory of Mind: they would understand human feelings and beliefs. Still theory.
+   - Self-Aware AI: they would have their own consciousness. Still theory.
+
+   Applications:
+   - Healthcare: finding disease early, and suggesting treatment.
+   - Retail: personal shopping suggestions and stock management.
+   - Customer service: chatbots that answer all day and night.
+   - Manufacturing: predicting machine failure before it happens.
+   - Finance: fraud detection, risk analysis and investment support.
+
+   Advantages:
+   - It does repeated work automatically and makes fewer mistakes.
+   - It gives better decisions by studying huge amounts of data.
+   - It gives each user a personal experience.
+   - It works 24 hours a day without rest.
+   - It spots patterns humans miss, which helps in fraud detection and diagnosis.
+
+   Challenges:
+   - It needs a lot of data, which raises privacy and security worries.
+   - If the training data is biased, the output becomes unfair.
+   - Its decisions are often not transparent, so we cannot explain them.
+   - Automation can take away jobs.
+   - It raises ethical questions in sensitive fields.
 
 2. **An artificial intelligence is an agent is an entity that continuously revious its enviornment.....** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 449 (ET: BUET)]*
 
 3. **Write PEAS for (a) Auto taxi (b) Automatic clinical test.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
 
-   Answer: PEAS stands for Performance measure, Environment, Actuators and Sensors. Before we design an agent, we write its PEAS. It tells us what the agent must do, where it works, what it can act with, and what it can sense.
+   Answer: PEAS stands for Performance measure, Environment, Actuators and Sensors. We write the PEAS of an agent before we design it, because it describes the agent's task environment.
+
+   The four parts:
+   - Performance measure: the things we use to judge how well the agent is doing its job.
+   - Environment: the surroundings the agent works in. The agent takes input from it and acts on it.
+   - Actuators: the parts the agent uses to act on the environment. For a human agent, hands and legs are the actuators.
+   - Sensors: the parts the agent uses to take input. For a human agent, eyes, ears and nose are the sensors.
 
    (a) Automated taxi
 
-   | PEAS | Details |
+   | Component | Details |
    |---|---|
-   | Performance measure | Safe driving, reaching the place, less time and fuel, following traffic rules, comfort of the passenger, more profit |
-   | Environment | Roads, other cars, people walking, traffic lights, road signs, weather, passengers |
-   | Actuators | Steering, accelerator, brake, gear, indicator, horn, screen and speaker for the passenger |
+   | Performance measure | Safe driving, reaching the destination, less time and fuel, following traffic rules, passenger comfort, more profit |
+   | Environment | Roads, other vehicles, pedestrians, traffic signals, road signs, weather, passengers |
+   | Actuators | Steering, accelerator, brake, gear, indicator, horn, display and speaker for the passenger |
    | Sensors | Camera, GPS, speedometer, odometer, radar or LIDAR, engine sensors, accelerometer, microphone |
 
    (b) Automatic clinical test system
 
-   | PEAS | Details |
+   | Component | Details |
    |---|---|
-   | Performance measure | Correct disease found, correct test result, low cost, less pain to the patient, fast report |
-   | Environment | Patient, hospital or lab, sample, doctors and staff, old patient records |
-   | Actuators | Showing the result on screen, printed report, questions asked to the patient, advice for treatment |
-   | Sensors | Keyboard input of symptoms, lab machine readings, imaging machines, patient history database |
+   | Performance measure | Correct diagnosis, accurate test result, low cost, less pain to the patient, fast report |
+   | Environment | Patient, hospital or laboratory, sample, medical staff, old patient records |
+   | Actuators | Result shown on screen, printed report, questions asked to the patient, treatment advice |
+   | Sensors | Keyboard input of symptoms, laboratory machine readings, imaging machines, patient history database |
 
 4. **Intelligence can not be measured only by intelligence test because it is related to other subjects. (True or False)** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
-   Answer: True. An IQ test checks only a few skills, like logic and finding patterns. But intelligence also includes creativity, emotional intelligence, practical skill and social sense. So one test cannot measure it fully.
+   Answer: True.
+
+   - An IQ test checks only a few abilities, mainly logic, reasoning and pattern finding.
+   - Intelligence is much wider than that. It also includes creativity, emotional intelligence, practical skill and social judgement.
+   - These other parts are linked with psychology, biology and social science, not with a single test.
+   - So one intelligence test cannot measure the whole of a person's intelligence.
 
 5. **Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)], [BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-   Answer: False. Machine Learning is a part of Artificial Intelligence, not of cloud computing. Cloud computing only gives the storage and the computing power. We can train and run ML models on the cloud, but ML does not belong to cloud computing.
+   Answer: False.
+
+   - Machine Learning is a subset of Artificial Intelligence, not of cloud computing.
+   - The correct order is: Artificial Intelligence > Machine Learning > Deep Learning.
+   - Cloud computing is a separate field. It only supplies the storage and the processing power.
+   - We can train and run an ML model on the cloud, but that does not make ML a part of cloud computing.
 
 6. **What is the father of AI?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-   Answer: John McCarthy is called the father of Artificial Intelligence. He gave the name "Artificial Intelligence" and arranged the Dartmouth Conference in 1956, where AI started as a subject.
+   Answer: John McCarthy is known as the father of Artificial Intelligence.
+
+   - He first used the term "Artificial Intelligence" in 1955.
+   - He organised the Dartmouth Conference in 1956, where AI was born as a subject of study.
+   - He also created the LISP programming language, which was used for AI work for many years.
 
 7. **(i) ‘Knowledge’ কী? Human Knowledge কে Computer এ প্রকাশ করার একটি flow diagram দেখান।** *[BPSC Assistant Network Engineer 2020 compact it 952 (ET: N/A)]*
 
-   Answer: Knowledge means information that is processed and organised, along with the rules and experience needed to use it. In AI, knowledge is the set of facts and relations that a system stores and uses to solve a problem.
+   Answer: Knowledge means real world information stored and organised in such a way that a machine can reason with it, learn from it and take decisions like a human.
 
-   Knowledge Representation is the way we write human knowledge in a form that a computer can store and use. Common ways are: propositional logic, predicate logic, semantic networks, frames, production rules and ontologies.
+   Types of knowledge:
+   - Declarative knowledge: facts, that is what something is. Example: Dhaka is the capital of Bangladesh.
+   - Procedural knowledge: how to do a task. Example: the steps of a sorting algorithm.
+   - Meta knowledge: knowledge about knowledge itself, that is knowing what we know and how to use it.
+   - Heuristic knowledge: rules of thumb from experience, used by experts.
+   - Structural knowledge: how concepts relate to each other, such as a class hierarchy.
 
-   Flow diagram — how human knowledge goes into a computer:
+   Knowledge Representation (KR) is the way we write human knowledge in a form a computer can store and process.
+
+   Techniques of knowledge representation:
+   - Logical representation: uses formal rules and logic, such as propositional logic and predicate logic. It reasons well, but it is hard to read and can be slow.
+   - Semantic network: shows knowledge as a graph. The nodes are concepts or objects, and the arcs are the relations between them, such as IS-A and kind-of. It is easy to picture, but searching a big network is slow.
+   - Frame representation: groups related information into slots and values, like a record. It is flexible, but its inference is not efficient.
+   - Production rules: knowledge written as IF-THEN rules. It has a rule set, a working memory and a recognise-act cycle. It is simple and modular, but slow when there are too many rules.
+
+   Flow diagram — putting human knowledge into a computer:
 
    ```mermaid
    graph TD
        A[Human Knowledge: facts, rules, experience] --> B[Knowledge Acquisition]
-       B --> C[Knowledge Representation<br/>logic, rules, frames, semantic net]
+       B --> C[Knowledge Representation<br/>logic, semantic net, frame, production rules]
        C --> D[(Knowledge Base)]
        D --> E[Inference Engine]
        E --> F[Conclusion / Decision]
        F --> G[User Interface]
+       G --> H[User]
    ```
 
    Steps in the diagram:
-   - Knowledge acquisition: we collect knowledge from experts, books or data.
-   - Knowledge representation: we write that knowledge in a formal form that a machine can read.
+   - Knowledge acquisition: we collect knowledge from experts, documents and data.
+   - Knowledge representation: we write it in a formal form the machine can read.
    - Knowledge base: the written knowledge is stored here.
-   - Inference engine: it applies rules on the knowledge base and finds new facts.
+   - Inference engine: it applies the rules on the knowledge base and finds new facts.
    - User interface: the result is shown to the user.
 
-   This is the basic structure of an expert system.
+   This is exactly how an expert system is built.
 
 8. **Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?** *[Sadharan Bima Corporation Programmer/ AP/AME 2020 compact it 1002 (ET: DU)]*
 
-   Answer: Alan Turing. He led the team at Bletchley Park that broke the German Enigma code in the Second World War. Later he gave the Turing Test, which became a base idea of artificial intelligence.
+   Answer: Alan Turing.
+
+   - He led the codebreaking work at Bletchley Park during the Second World War and broke the German Enigma cipher.
+   - He built the machine called Bombe, which is seen as an early step towards the modern computer.
+   - In 1950 he gave the Turing Test, which asks whether a machine can talk so well that a human cannot tell it apart from another human. This test became a base idea of artificial intelligence.
 
 ## Deep Learning & Neural Networks (ANN, CNN, RNN) (7)
 
