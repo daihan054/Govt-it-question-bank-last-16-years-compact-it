@@ -10580,18 +10580,24 @@ SELECT count (*) FROM (
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 
-   Answer: An index is a separate sorted structure holding the values of one or more columns together with pointers to the rows containing them, which allows a row to be found in O(log n) instead of by scanning the whole table in O(n).
+   Answer: An index is a data structure technique that speeds up data retrieval, by cutting down the number of disk accesses needed to find a record. Instead of scanning the whole table, the database looks in the index and jumps straight to the row.
+
+   Structure of one index entry, which has two parts:
+   - Search key value: a copy of the data in the indexed column.
+   - Pointer: a reference to where the actual data row sits in the main table.
+
+   So the database first finds the right index entry, then follows the pointer to fetch the real data. This makes a lookup O(log n) instead of O(n).
 
    Types of index:
 
    By the ordering of the underlying file:
    - Primary index: built on the primary key of a file whose records are physically stored in that key order. There can be only one, and it is normally sparse, holding one entry per data block rather than per record.
-   - Clustering index: built on a non-key attribute by which the file is physically ordered. Records with the same value are stored together, which makes range queries on that attribute very fast.
-   - Secondary index: built on any other attribute. It must be dense, holding an entry for every record, and a file may have many.
+   - Clustered index: the data itself is physically ordered by the key, often a non-primary key. Records with the same value are kept together in the same file. This grouping cuts the search time, because related records sit close to each other.
+   - Secondary index, also called non-clustered index: it only tells us where the data is; it does not physically arrange it. It gives a list of pointers to the place where the data is actually stored. It works like the table of contents of a book: an ordered list of references pointing into unordered data. It is slower than a primary index, because we must do the extra step of following the pointer. A file may have many of them.
 
    By density:
-   - Dense index: one index entry for every record in the file. Faster lookup, larger index.
-   - Sparse index: one entry per block. Smaller index, but a sequential scan within the block is needed after the descent.
+   - Dense index: there is one index entry for every search key value present in the data file, including duplicate keys. Lookup is faster, but the index is bigger.
+   - Sparse index: there are entries for only a few of the items in the data file, and each entry points to a block, not to one record. To find a record, we look for the index entry with the largest key that is less than or equal to our search key, then follow the pointers in order. The access cost is log₂(n) + 1, where n is the number of blocks in the index file. The index is smaller, but we must scan inside the block at the end.
 
    By structure:
    - B tree and B+ tree index: the standard in every relational database. All leaves are at the same level, the branching factor is high so the tree is very shallow, and in a B+ tree the data pointers are all in the leaves and the leaves are chained, which makes range queries and ordered scans efficient.
