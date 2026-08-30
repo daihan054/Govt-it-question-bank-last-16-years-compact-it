@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 80/206 sections**
+**Rewritten: 81/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -158,7 +158,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 
 ## dld.md — 9 sections
 - [x] dld.md — Logic Gates & Universal Gates (27)
-- [ ] dld.md — Number Systems & Base Conversions (19)
+- [x] dld.md — Number Systems & Base Conversions (19)
 - [x] dld.md — Combinational Circuits (Adders, Encoders, MUX) (18)
 - [x] dld.md — Karnaugh Map (K-Map) (16)
 - [x] dld.md — Boolean Algebra & De Morgan’s Theorem (13)
