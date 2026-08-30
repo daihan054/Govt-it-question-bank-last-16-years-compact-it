@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 163/206 sections**
+**Rewritten: 164/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -234,7 +234,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] software-engineering.md — IT Governance, Audit & Risk Management (3)
 - [x] software-engineering.md — Data Flow Diagrams (DFD) (2)
 - [x] software-engineering.md — Code Smells & Refactoring (2)
-- [ ] software-engineering.md — Open Source Software & Licensing (2)
+- [x] software-engineering.md — Open Source Software & Licensing (2)
 - [ ] software-engineering.md — CI/CD & DevOps Methodologies (1)
 
 ## web-technology.md — 7 sections
