@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 128/206 sections**
+**Rewritten: 129/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -109,7 +109,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] computer-networks.md — Physical Layer & Optical Fiber (Attenuation & Power Budget) (11)
 - [x] computer-networks.md — Network Address Translation (NAT) (11)
 - [x] computer-networks.md — Network Services (DHCP, NAT) (10)
-- [ ] computer-networks.md — Digital Modulation & Signal Processing (BPSK, QPSK) (10)
+- [x] computer-networks.md — Digital Modulation & Signal Processing (BPSK, QPSK) (10)
 - [ ] computer-networks.md — Flow Control & Data Link Layer (Stop-and-Wait) (9)
 - [x] computer-networks.md — Email Architecture & Protocols (SMTP, POP3, IMAP) (9)
 - [x] computer-networks.md — Application Layer & Well-Known Port Numbers (6)
