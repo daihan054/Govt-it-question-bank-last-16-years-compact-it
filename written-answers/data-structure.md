@@ -3561,11 +3561,24 @@ Output: Not Balanced
    - A hash table is a data structure that stores key and value pairs in an array, using a hash function to compute directly the index at which each key belongs. Instead of searching for a key, its position is calculated from the key itself.
    - Components: the array of buckets or slots; the hash function h(k), which maps a key to an index in the range 0 to m − 1; and a collision resolution method, since two different keys may hash to the same index.
    - Example: with a table of size 13 and h(k) = k mod 13, the key 16 is placed at index 3 because 16 mod 13 = 3.
-   - Load factor α = n / m, that is the number of entries divided by the table size, which determines how well the table performs. Once α exceeds about 0.7, the table is normally rehashed into a larger array.
+   - Load factor: α = n / m, where n is the number of keys and m is the number of slots. It decides how well the table performs. Once α goes past about 0.7, we normally rehash everything into a bigger array.
 
-   Collision resolution:
-   - Separate chaining: each slot holds a linked list of all the keys that hash to it. Simple, and the table can hold more entries than it has slots.
-   - Open addressing: on a collision, another slot is probed within the same array, using linear probing, quadratic probing or double hashing. No extra memory is used, and cache performance is better, but deletion requires care and clustering can occur.
+   Collision: when two different keys hash to the same slot index. Two techniques handle it.
+
+   1. Separate chaining
+   - Each slot of the table is a singly linked list, called a chain. When several elements hash to the same slot, we insert them into that chain.
+   - To search, we walk the linked list of that slot one node at a time. If we reach the end with no match, the element is not there.
+   - Time complexity: insert O(1), search O(1 + α), delete O(1 + α). All become O(1) as long as α stays small.
+   - Advantages: simple to write. The table never fills up, because we can always add one more node to a chain. It is less sensitive to a poor hash function. Good when we do not know how many inserts and deletes will happen.
+   - Disadvantages: poor cache performance, because the chain nodes are scattered. Space is wasted in the parts of the table that stay empty. If a chain grows long, search becomes O(n) in the worst case. Each node also costs extra memory for its link.
+
+   2. Open addressing
+   - On a collision we probe another slot inside the same array, instead of using a linked list.
+   - Linear probing: try (h(k) + 1) % m, then (h(k) + 2) % m, and so on.
+   - Quadratic probing: try (h(k) + 1²) % m, then (h(k) + 2²) % m, and so on. It reduces clustering.
+   - Double hashing: the step size comes from a second hash function, so different keys probe in different patterns.
+   - Advantages: no extra memory for links, and much better cache performance, because everything sits in one array.
+   - Disadvantages: the table can fill up. Deletion needs care, because we must leave a marker instead of an empty slot. Clustering can build up and slow the probing down.
 
    Advantages of a hash table:
    - Average time of O(1) for search, insertion and deletion, which no comparison based structure can match. A balanced tree gives O(log n) and an array O(n).
