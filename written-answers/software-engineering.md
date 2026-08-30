@@ -5716,26 +5716,26 @@
 
    Answer: Coupling and cohesion are the two measures of the quality of a modular design. The goal of good design is low coupling and high cohesion.
 
-   Cohesion is the degree to which the elements inside a single module belong together, that is how focused the module is on one task. High cohesion is good.
+   Cohesion is the degree to which the elements inside one module work together for a single, well defined purpose. High cohesion means the parts are focused and related. Low cohesion means unrelated work is scattered inside one module. High cohesion is good.
 
    Types of cohesion, from worst to best:
-   - Coincidental: elements are grouped for no reason at all, for example a module called Utility holding a date formatter, a password checker and a printer driver.
-   - Logical: elements do similar kinds of things and one is chosen by a flag, for example a single function handleInput(type) that reads from keyboard, file or network depending on the argument.
-   - Temporal: elements are grouped because they run at the same time, for example an init() routine that opens a file, clears a buffer and initialises a counter.
-   - Procedural: elements follow a fixed sequence of execution.
-   - Communicational: elements operate on the same data, for example a module that reads a student record and both prints it and computes its average.
-   - Sequential: the output of one element is the input of the next, for example read record, then validate record, then format record.
-   - Functional: every element contributes to exactly one well-defined task. This is the best. Example: a module computeIncomeTax(salary) that does nothing but compute tax.
+   - Coincidental, the worst: the elements have no conceptual link at all. They were grouped purely by accident. Example: a module called Utility holding a date formatter, a password checker and a printer driver.
+   - Logical: the elements are related in idea but do different jobs, and a flag picks one. Example: a single function handleInput(type) that reads from the keyboard, a file or the network, depending on the argument.
+   - Temporal: the elements are grouped only because they all run at the same moment, usually at start-up. They do quite different things. Example: an init() routine that opens a file, clears a buffer and sets a counter to zero.
+   - Procedural: the elements run in a fixed order, but the link between them is weak, so the group is unlikely to be reusable.
+   - Communicational: the elements work on the same input data, or they build the same output. Example: a module that reads a student record and both prints it and computes its average.
+   - Sequential: the output of one element becomes the input of the next, so the data flows through them. Example: read record, then validate record, then format record.
+   - Functional, the best: every element needed for one single computation is inside the module, and nothing else is. Example: a module computeIncomeTax(salary) that does nothing but compute tax.
 
-   Coupling is the degree of interdependence between two modules, that is how much one module must know about the internals of another. Low coupling is good.
+   Coupling is the degree of interdependence between software modules. Low coupling means the modules are independent, so a change in one has little effect on the others. High coupling means they are tied tightly together, so one failure cascades into the rest. Low coupling is good.
 
    Types of coupling, from worst to best:
-   - Content coupling: one module directly modifies or relies on the internal data of another, for example module A changes a local variable inside module B, or jumps into the middle of B. Worst possible.
-   - Common coupling: several modules share the same global variable. A change by one silently affects all the others.
-   - External coupling: modules share an externally imposed data format, protocol or device interface.
-   - Control coupling: one module passes a flag that tells the other what to do, for example process(data, 1) where 1 means sort and 2 means print. The caller must know the callee's internal logic.
-   - Stamp coupling: a whole data structure is passed when only a part is needed, for example passing the entire Employee object to a function that needs only the salary.
-   - Data coupling: only the simple data items actually needed are passed, for example computeTax(salary, allowance). This is the best form of coupling that still allows communication.
+   - Content coupling, the worst: one module changes another module's data, or controls its flow directly. Example: module A changes a local variable inside module B, or jumps into the middle of B. This must always be avoided.
+   - Common coupling: several modules share the same global data structure. A change by one silently affects all the others, which makes maintenance hard and destroys modularity.
+   - External coupling: the modules depend on something imposed from outside, such as a protocol, a file format or a hardware specification.
+   - Control coupling: one module passes a control flag telling the other what to do. Example: process(data, 1) where 1 means sort and 2 means print. It is acceptable when it selects reusable behaviour, but bad when the two options are completely different operations, because then the caller must know the callee's internal logic.
+   - Stamp coupling: a whole data structure is passed when only part of it is needed, so irrelevant data travels with it. Example: passing the entire Employee object to a function that needs only the salary.
+   - Data coupling, the best: the modules talk only through simple data parameters, and pass nothing that is not needed. Example: computeTax(salary, allowance). The modules stay independent.
    - No coupling: the modules are independent.
 
    Example showing the difference:
