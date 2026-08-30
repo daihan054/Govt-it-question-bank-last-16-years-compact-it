@@ -1837,7 +1837,16 @@
    Answer:
 
    What a firewall is:
-   - A firewall is a network security device or software that monitors incoming and outgoing traffic and permits or blocks it according to a defined security policy. It stands between a trusted internal network and an untrusted external one, and it is the primary mechanism for controlling what may cross that boundary.
+   - A firewall is a network security system, in hardware or software form, that watches all incoming and outgoing traffic and controls it using rules fixed in advance. It stands between a trusted internal network and an untrusted outside one.
+   - It takes one of three actions on each packet: Accept, that is let it through; Reject, that is block it and send back an error; or Drop, that is block it silently and tell the sender nothing.
+
+   How a firewall works, step by step:
+   - Every packet entering or leaving the network must pass through the firewall first.
+   - The firewall checks each packet against the organisation's security rules.
+   - A packet that matches an allowed rule goes through. Anything suspicious or blacklisted is blocked.
+   - Blocked or unusual traffic is written to a log, and a serious threat raises a real time alert.
+   - Any traffic not covered by a specific rule falls to the default policy.
+   - Best practice: set the default policy to drop or reject. Then a service we forgot to write a rule for is closed, not open.
    - Its default policy should be deny all, permit by exception, so that anything not explicitly allowed is blocked.
 
    Why it is used:
