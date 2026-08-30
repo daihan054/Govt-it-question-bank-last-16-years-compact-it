@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 191/206 sections**
+**Rewritten: 192/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -71,7 +71,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] computer-fundamental.md — Data Center Infrastructure & Power Management (7)
 - [x] computer-fundamental.md — Server Hardware & Enterprise Systems (5)
 - [x] computer-fundamental.md — Quantum Computing & Emerging Technologies (3)
-- [ ] computer-fundamental.md — Digital Banking & Financial Inclusion (2)
+- [x] computer-fundamental.md — Digital Banking & Financial Inclusion (2)
 - [ ] computer-fundamental.md — User Interfaces (CLI vs GUI) (1)
 
 ## computer-network-security.md — 14 sections
