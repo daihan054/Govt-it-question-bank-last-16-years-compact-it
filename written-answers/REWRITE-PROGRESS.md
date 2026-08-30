@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 23/206 sections**
+**Rewritten: 24/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -30,7 +30,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] algorithm.md — Heap & Priority Queue (2)
 - [x] algorithm.md — Graph Representation (Adjacency Matrix vs List) (2)
 - [x] algorithm.md — Divide and Conquer & Matrix Multiplication (1)
-- [ ] algorithm.md — Huffman Coding & Data Compression (1)
+- [x] algorithm.md — Huffman Coding & Data Compression (1)
 - [ ] algorithm.md — NP-Completeness & Complexity Reduction (1)
 
 ## c-programming.md — 9 sections
