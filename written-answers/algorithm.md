@@ -2077,17 +2077,17 @@ for i in N:
 
    | Point | Vector graphics | Raster graphics |
    |---|---|---|
-   | Made of | Mathematical paths, lines and curves | A grid of pixels |
-   | Scaling | Can be enlarged infinitely without quality loss | Becomes blurred and pixelated when enlarged |
-   | File size | Usually small | Usually large, grows with resolution |
-   | Best for | Logos, icons, diagrams, typography | Photographs and detailed images |
+   | Made of | Maths paths, lines and curves | A grid of pixels |
+   | Scaling | Can be made bigger any amount with no quality loss | Becomes blurred and blocky when made bigger |
+   | File size | Usually small | Usually large, and grows with resolution |
+   | Best for | Logos, icons, diagrams, text | Photographs and detailed images |
    | File formats | SVG, AI, EPS, PDF | JPEG, PNG, BMP, GIF, TIFF |
-   | Editing | Each object can be edited separately | Editing is done pixel by pixel |
-   | Resolution | Resolution independent | Resolution dependent, measured in DPI |
+   | Editing | Each object can be edited on its own | We edit pixel by pixel |
+   | Resolution | Does not depend on resolution | Depends on resolution, measured in DPI |
 
    (b) Fractional Knapsack solution
 
-   Step 1: calculate the value per weight ratio for each item.
+   Step 1: find the value per weight ratio of each item.
    - Item 1: 18 / 4 = 4.5
    - Item 2: 2.5 / 3 = 0.83
    - Item 3: 12 / 1 = 12.0
@@ -2098,16 +2098,17 @@ for i in N:
    - Item 3 (12.0), Item 4 (7.0), Item 1 (4.5), Item 5 (4.0), Item 2 (0.83)
 
    Step 3: fill the bag in that order. Taking a bag capacity of 10 units:
-   - Take Item 3 fully: weight 1, value 12. Remaining capacity = 9.
-   - Take Item 4 fully: weight 2, value 14. Remaining capacity = 7.
-   - Take Item 1 fully: weight 4, value 18. Remaining capacity = 3.
-   - Item 5 weighs 5 but only 3 units of space remain, so take the fraction 3/5 of it: value = 20 × 3/5 = 12. Remaining capacity = 0.
-   - Item 2 is not taken, as the bag is full.
+   - Take Item 3 fully: weight 1, value 12. Space left = 9
+   - Take Item 4 fully: weight 2, value 14. Space left = 7
+   - Take Item 1 fully: weight 4, value 18. Space left = 3
+   - Item 5 weighs 5, but only 3 units of space are left. So take 3/5 of it. Value = 20 × 3/5 = 12. Space left = 0
+   - Item 2 is not taken, because the bag is full.
 
-   Final answer: total weight 10, maximum total value = 12 + 14 + 18 + 12 = 56.
+   Final answer: total weight 10, maximum total value = 12 + 14 + 18 + 12 = 56
 
-   The greedy ratio rule is optimal here because items may be broken, so the space is always filled with the most valuable material available.
-   Note: the bag capacity was not printed in the collected question, so a capacity of 10 is used to demonstrate the method.
+   Why the greedy ratio rule works here: items can be cut. So we can always fill the space with the most valuable material still available.
+
+   Note: the bag capacity was not printed in the collected question, so a capacity of 10 is used to show the method.
 
 2. **(খ) নিচের সারণীটি বিবেচনা করুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
@@ -2122,32 +2123,32 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
    Answer:
 
-   Step 1: calculate the value per weight ratio.
+   Step 1: find the value per weight ratio.
    - Item 1: 20 / 4 = 5.0
    - Item 2: 15 / 3 = 5.0
    - Item 3: 12 / 2 = 6.0
    - Item 4: 14 / 2 = 7.0
    - Item 5: 20 / 5 = 4.0
 
-   Step 2: total weight available
+   Step 2: total weight of all the items
    - 4 + 3 + 2 + 2 + 5 = 16 units
 
    (i) Maximum total weight that can be placed:
-   - The bag capacity is 25 units but all the items together weigh only 16 units.
-   - Since the available weight is less than the capacity, every item can be taken whole and no item needs to be broken.
-   - Maximum total weight placed = 16 units, and 9 units of the bag remain empty.
-   - The total value obtained = 20 + 15 + 12 + 14 + 20 = 81.
+   - The bag can hold 25 units, but all the items together weigh only 16 units.
+   - The available weight is less than the capacity. So we can take every item whole, and we do not need to cut any item.
+   - Maximum total weight placed = 16 units. So 9 units of the bag stay empty.
+   - Total value we get = 20 + 15 + 12 + 14 + 20 = 81
 
    (ii) Order of placing the items:
-   - In the fractional knapsack method items are placed in decreasing order of value per weight ratio.
-   - Order: Item 4 (ratio 7.0) → Item 3 (ratio 6.0) → Item 1 (ratio 5.0) → Item 2 (ratio 5.0) → Item 5 (ratio 4.0)
-   - Items 1 and 2 have the same ratio of 5.0, so either may be placed first without changing the result.
+   - In fractional knapsack we place items in decreasing order of value per weight ratio.
+   - Order: Item 4 (7.0) → Item 3 (6.0) → Item 1 (5.0) → Item 2 (5.0) → Item 5 (4.0)
+   - Item 1 and Item 2 have the same ratio 5.0. So either one can go first. The result does not change.
 
    Final answer: total weight 16 units with total value 81, placed in the order 4, 3, 1, 2, 5.
 
 3. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 453 (ET: BUET)]*
 
-   Answer: This is the Activity Selection Problem, solved by a greedy algorithm. The correct greedy choice is to always select the request that finishes earliest, because that leaves the maximum remaining time for the others.
+   Answer: This is the Activity Selection Problem. We solve it with a greedy algorithm. The correct greedy choice is to always pick the request that finishes earliest, because that leaves the most time free for the others.
 
    ```
    MAX_CUSTOMERS(start[], end[], n)
@@ -2167,25 +2168,25 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    ```
 
    Steps explained:
-   - Sort all n requests by their finishing time, which costs O(n log n).
+   - Sort all n requests by their finish time. This costs O(n log n).
    - Always take the first request of the sorted list.
-   - Scan the rest, and take a request only if its start time is not earlier than the finish time of the last selected request.
-   - This single pass costs O(n), so the total time complexity is O(n log n) and the space complexity is O(n).
+   - Go through the rest. Take a request only if its start time is not earlier than the finish time of the last selected one.
+   - This single pass costs O(n). So the total time is O(n log n) and the space is O(n).
 
    Example with slots (1,3), (2,5), (4,7), (6,8), (8,10):
    - Sorted by end time: (1,3), (2,5), (4,7), (6,8), (8,10)
-   - Take (1,3). Last end = 3.
-   - (2,5) starts at 2 which is before 3, so reject.
-   - (4,7) starts at 4 which is after 3, so take it. Last end = 7.
-   - (6,8) starts at 6 which is before 7, so reject.
-   - (8,10) starts at 8 which is after 7, so take it.
+   - Take (1,3). Last end = 3
+   - (2,5) starts at 2, which is before 3. Reject.
+   - (4,7) starts at 4, which is after 3. Take it. Last end = 7
+   - (6,8) starts at 6, which is before 7. Reject.
+   - (8,10) starts at 8, which is after 7. Take it.
    - Maximum customers served = 3, that is (1,3), (4,7) and (8,10).
 
-   Why earliest finish time is the correct greedy choice: choosing the request that ends soonest frees the resource at the earliest possible moment, so no other choice can leave more room for the remaining requests.
+   Why earliest finish time is the correct greedy choice: the request that ends soonest frees the service at the earliest possible moment. So no other choice can leave more room for the remaining requests.
 
 4. **Given n jobs starting time n[] and duration d[], print maximum number of jobs that don't overlap between each other.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 834 (ET: N/A)]*
 
-   Answer: The finish time of each job is start time plus duration, so this becomes the standard activity selection problem and is solved greedily by earliest finish time.
+   Answer: The finish time of each job is start time plus duration. So this becomes the standard activity selection problem, and we solve it greedily by earliest finish time.
 
    ```c
    #include <stdio.h>
@@ -2227,36 +2228,39 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    }
    ```
 
-   - Step 1: compute finish[i] = start[i] + duration[i].
+   Steps:
+   - Step 1: find finish[i] = start[i] + duration[i].
    - Step 2: sort the jobs by finish time.
-   - Step 3: pick the first job, then keep picking any job whose start is not earlier than the last selected finish.
-   - Time complexity O(n log n) for the sort plus O(n) for the scan, and space complexity O(n).
+   - Step 3: pick the first job. Then keep picking any job whose start is not earlier than the last selected finish time.
+
+   Time complexity is O(n log n) for the sort plus O(n) for the scan. Space complexity is O(n).
 
 5. **You are given a set of activities with their starting time s[] and finishing time f[].** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
 
-   Answer: This is the Activity Selection Problem, where the goal is to choose the largest set of activities that can be performed by one person, so that no two chosen activities overlap in time.
+   Answer: This is the Activity Selection Problem. The goal is to pick the largest set of activities that one person can do, so that no two picked activities overlap in time.
 
-   Greedy strategy: always select the activity that finishes earliest among those still compatible.
+   Greedy strategy: always pick the activity that finishes earliest among those that still fit.
 
    Algorithm:
-   - Sort all activities in increasing order of finishing time f[].
-   - Select the first activity of the sorted list and record its finish time.
-   - For each remaining activity, select it only if its start time s[i] is greater than or equal to the recorded finish time, and then update the recorded finish time.
+   - Sort all activities in increasing order of finish time f[].
+   - Pick the first activity of the sorted list and note its finish time.
+   - For each remaining activity, pick it only if its start time s[i] is greater than or equal to the noted finish time. Then update the noted finish time.
    - Continue to the end of the list.
 
-   Example with activities
-   A1(1,4), A2(3,5), A3(0,6), A4(5,7), A5(8,9), A6(5,9):
+   Example with activities A1(1,4), A2(3,5), A3(0,6), A4(5,7), A5(8,9), A6(5,9):
    - Sorted by finish time: A1(1,4), A2(3,5), A3(0,6), A4(5,7), A5(8,9), A6(5,9)
-   - Select A1, last finish = 4.
-   - A2 starts at 3 which is before 4, so reject. A3 starts at 0, reject.
-   - A4 starts at 5 which is after 4, so select. Last finish = 7.
-   - A5 starts at 8 which is after 7, so select. Last finish = 9.
-   - A6 starts at 5, reject.
-   - Selected activities: A1, A4, A5, so the maximum count is 3.
+   - Pick A1. Last finish = 4
+   - A2 starts at 3, which is before 4. Reject. A3 starts at 0. Reject.
+   - A4 starts at 5, which is after 4. Pick it. Last finish = 7
+   - A5 starts at 8, which is after 7. Pick it. Last finish = 9
+   - A6 starts at 5. Reject.
+   - Selected activities: A1, A4, A5. So the maximum count is 3.
 
-   - Time complexity O(n log n), dominated by sorting, and O(n) if the activities are already sorted by finish time.
-   - Space complexity O(1) beyond the input.
-   - Proof idea of correctness: the activity finishing earliest leaves the resource free soonest, so replacing any optimal solution's first activity with it never reduces the count.
+   Complexity:
+   - Time O(n log n), mostly for sorting. It is O(n) if the activities already come sorted by finish time.
+   - Space O(1) beyond the input.
+
+   Why it is correct: the activity that finishes earliest frees the resource soonest. So if we replace the first activity of any optimal solution with it, the count never goes down.
 
 6. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
@@ -2267,12 +2271,12 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    Answer:
 
    Setting up the positions:
-   - Let pos[1] = 0 and pos[i] = pos[i−1] + P[i−1], so pos[i] is the distance of station M_i from the starting point.
-   - The condition is that for any two selected stations i and j with i < j, pos[j] − pos[i] must be at least K.
+   - Let pos[1] = 0 and pos[i] = pos[i−1] + P[i−1]. So pos[i] is the distance of station M_i from the starting point.
+   - The condition is: for any two chosen stations i and j with i < j, pos[j] − pos[i] must be at least K.
 
    DP formulation:
-   - Let dp[i] = the maximum number of repeaters that can be installed among the first i stations, given that a repeater is installed at station i.
-   - Recurrence: dp[i] = 1 + max{ dp[j] } for all j < i such that pos[i] − pos[j] ≥ K.
+   - Let dp[i] = the maximum number of repeaters we can install among the first i stations, given that a repeater is installed at station i.
+   - Recurrence: dp[i] = 1 + max{ dp[j] } for all j < i where pos[i] − pos[j] ≥ K.
    - If no such j exists, then dp[i] = 1, because station i alone can hold a repeater.
    - Final answer = max{ dp[i] } for i from 1 to n.
 
@@ -2294,35 +2298,35 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
    Complexity:
    - The double loop gives O(n²) time and O(n) space.
-   - Because pos[] is sorted in increasing order, the largest valid j can be found by binary search, which reduces the time to O(n log n).
+   - pos[] is already in increasing order. So we can find the largest valid j by binary search. That brings the time down to O(n log n).
 
-   Note: since the stations lie on a straight line, the greedy rule of always taking the earliest station that is at least K away from the last selected one also gives the same optimal count, and it runs in O(n).
+   Note: the stations lie on a straight line. So the greedy rule of always taking the earliest station that is at least K away from the last chosen one also gives the same optimal count, and it runs in O(n).
 
 2. **What is Dynamic programming? Explain with example.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 474 (ET: N/A)]*
 
-   Answer: Dynamic Programming is a problem solving technique in which a complex problem is broken into smaller overlapping subproblems, each subproblem is solved only once, and its result is stored so that it can be reused instead of being recomputed.
+   Answer: Dynamic Programming is a technique where we break a hard problem into smaller overlapping subproblems. We solve each subproblem only once and store its result. Later, when the same subproblem comes again, we just read the stored value instead of computing it again.
 
-   Two conditions must hold:
-   - Optimal substructure: the optimal solution of the problem contains optimal solutions of its subproblems.
-   - Overlapping subproblems: the same subproblem is encountered many times during the recursion.
+   Two conditions must hold before we can use DP:
+   - Optimal substructure: the best solution of the problem is built from the best solutions of its subproblems.
+   - Overlapping subproblems: the same subproblem comes up many times during the recursion.
 
-   Two implementation styles:
-   - Top down with memoization: write the natural recursion but store each computed result in a table and return the stored value when the same call comes again.
-   - Bottom up with tabulation: fill the table starting from the smallest subproblem up to the required one, using loops instead of recursion.
+   Two ways to write it:
+   - Top down with memoization: write the normal recursion, but store each computed result in a table. When the same call comes again, return the stored value.
+   - Bottom up with tabulation: fill the table from the smallest subproblem up to the one we need, using loops instead of recursion.
 
-   Example, Fibonacci numbers:
-   - Plain recursion: fib(n) = fib(n−1) + fib(n−2). To compute fib(5) the call fib(3) happens twice and fib(2) three times, so the work grows as O(2ⁿ).
-   - Dynamic programming: keep an array F where F[0] = 0, F[1] = 1, and F[i] = F[i−1] + F[i−2] for i from 2 to n.
-   - For n = 6 the table becomes 0, 1, 1, 2, 3, 5, 8, and each entry is computed exactly once.
-   - Time drops from O(2ⁿ) to O(n), and space is O(n), which can be reduced to O(1) by keeping only the last two values.
+   Example: Fibonacci numbers
+   - Plain recursion: fib(n) = fib(n−1) + fib(n−2). To find fib(5), the call fib(3) happens twice and fib(2) happens three times. So the work grows as O(2ⁿ).
+   - Dynamic programming: keep an array F, where F[0] = 0, F[1] = 1, and F[i] = F[i−1] + F[i−2] for i from 2 to n.
+   - For n = 6 the table becomes 0, 1, 1, 2, 3, 5, 8. Each entry is computed exactly once.
+   - Time drops from O(2ⁿ) to O(n). Space is O(n), and we can cut it to O(1) by keeping only the last two values.
 
    Other classic DP problems: 0/1 Knapsack, Longest Common Subsequence, matrix chain multiplication, Floyd-Warshall and Bellman-Ford.
 
 3. **The maximum subarray is the task of finding a contiguous subarray with the largest sum within a given one dimentional array of numbers. Suppose the array is: A: [-2, 1, -3, -1, 2, 1, -5, 4]** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 448 (ET: BUET)]*
 
-   Answer: Kadane's algorithm is used. It scans the array once, keeping the best sum ending at the current position and the best sum seen so far.
+   Answer: We use Kadane's algorithm. It goes through the array once. It keeps two things: the best sum ending at the current position, and the best sum found so far.
 
-   Rule at each element: current = max(A[i], current + A[i]), then best = max(best, current).
+   Rule at each element: current = max(A[i], current + A[i]), then best = max(best, current)
 
    Step by step on A = [−2, 1, −3, −1, 2, 1, −5, 4]:
    - i = 0, A[0] = −2. current = −2, best = −2
@@ -2334,10 +2338,11 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - i = 6, A[6] = −5. current = max(−5, 3 − 5 = −2) = −2, best = 3
    - i = 7, A[7] = 4. current = max(4, −2 + 4 = 2) = 4, best = 4
 
-   Final answer: the maximum subarray sum is 4, given by the subarray [4] at the last index.
+   Final answer: the maximum subarray sum is 4, from the subarray [4] at the last index.
 
-   - Note that [2, 1] gives 3 and [2, 1, −5, 4] gives 2, so 4 is indeed the maximum.
-   - Time complexity O(n) and space complexity O(1).
+   Check: [2, 1] gives 3, and [2, 1, −5, 4] gives 2. So 4 is really the maximum.
+
+   Time complexity is O(n) and space complexity is O(1).
 
 4. **Write down the Algorithm for determining Fibonacci number through dynamic programming.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
@@ -2358,6 +2363,8 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
        return F[n]
    ```
 
+   In C:
+
    ```c
    int fib(int n) {
        int f[100], i;
@@ -2369,22 +2376,23 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    }
    ```
 
-   - This is the bottom up or tabulation method. Each Fibonacci value is computed exactly once and stored, so nothing is recomputed.
-   - Trace for n = 6: F[0] = 0, F[1] = 1, F[2] = 1, F[3] = 2, F[4] = 3, F[5] = 5, F[6] = 8.
-   - Space optimised version: only the previous two values are actually needed, so two variables can replace the array.
+   How it works:
+   - This is the bottom up, or tabulation, method. Each Fibonacci value is computed exactly once and stored. Nothing is computed twice.
+   - Trace for n = 6: F[0] = 0, F[1] = 1, F[2] = 1, F[3] = 2, F[4] = 3, F[5] = 5, F[6] = 8
+   - Space saving version: we only ever need the last two values. So two variables can replace the whole array.
 
 5. **What will be the time and space complexity of the above algorithm?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
    Answer:
 
    For the dynamic programming Fibonacci algorithm:
-   - Time complexity: O(n). The loop runs from 2 to n exactly once and each step performs one addition, so the number of operations grows linearly with n.
+   - Time complexity: O(n). The loop runs from 2 to n exactly once, and each step does one addition. So the number of operations grows in a straight line with n.
    - Space complexity: O(n), because the array F holds n + 1 values.
-   - Optimised space: if only F[i−1] and F[i−2] are kept in two variables, the space drops to O(1) while the time stays O(n).
+   - Space saving version: if we keep only F[i−1] and F[i−2] in two variables, the space drops to O(1) while the time stays O(n).
 
    Comparison with plain recursion:
-   - Naive recursion takes O(2ⁿ) time and O(n) stack space, because the same subproblems are solved repeatedly.
-   - So dynamic programming reduces the time from exponential to linear, which is the main benefit of storing subproblem results.
+   - Plain recursion takes O(2ⁿ) time and O(n) stack space, because it solves the same subproblems again and again.
+   - So dynamic programming brings the time down from exponential to linear. That is the main benefit of storing subproblem results.
 
 ## Heap & Priority Queue (2)
 
