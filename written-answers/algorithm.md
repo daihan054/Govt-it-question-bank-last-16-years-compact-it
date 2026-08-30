@@ -1387,49 +1387,49 @@ for i in N:
    Time complexity:
    - The outer loop runs N times.
    - For each single turn of the outer loop, the inner loop runs M times.
-   - So the total number of basic operations = N × M.
+   - So the total number of basic operations is N × M.
    - Time complexity is O(N × M).
-   - If both N and M are equal to n, this becomes O(n²), that is quadratic.
+   - If both N and M equal n, this becomes O(n²), that is quadratic.
 
    Space complexity:
-   - Only the loop counters i and j are kept. No array and no recursion is used.
+   - Only the loop counters i and j are stored. There is no array and no recursion.
    - The memory used does not grow when N or M grows.
    - So the space complexity is O(1), that is constant.
 
 2. **What is complexity of Algorithm? Categorize complexity of Algorihm.** *[BKSP Assistant Programmer 13.07.2024 compact it 1458 (ET: N/A)]*
 
-   Answer: Complexity of an algorithm means how much resource it uses, written as a function of the input size n. It measures efficiency without depending on the machine, the language or the compiler.
+   Answer: Complexity of an algorithm is the order of growth of the resource it needs, as the input size n grows. It lets us compare algorithms without depending on the machine, the language or the compiler.
 
-   Two categories by resource:
-   - Time complexity: how many basic operations it does, as a function of n.
-   - Space complexity: how much extra memory it needs, apart from the input.
+   Categories by resource:
+   - Time complexity: the order of growth of the time taken, in terms of the input size.
+   - Space complexity: the memory needed. Auxiliary space is the extra memory used, apart from the input.
 
-   Three categories by case:
+   Categories by case:
    - Best case: the least work, on the most helpful input. We write it with Omega notation.
-   - Average case: the expected work over all inputs. We write it with Theta notation.
-   - Worst case: the most work, on the worst input. We write it with Big-O notation. We usually quote this one, because it gives a guarantee.
+   - Average case: the work on normal input. We write it with Theta notation.
+   - Worst case: the most work, on the worst input. We write it with Big-O notation, and we usually quote this one, because it gives a guarantee.
 
    Common complexity classes, from best to worst:
 
    | Class | Name | Example |
    |---|---|---|
-   | O(1) | Constant | Reading an array element |
+   | O(1) | Constant | Reading one array element |
    | O(log n) | Logarithmic | Binary search |
    | O(n) | Linear | Linear search |
-   | O(n log n) | Linearithmic | Merge sort |
-   | O(n²) | Quadratic | Bubble sort |
+   | O(n log n) | Linearithmic | Merge sort, heap sort |
+   | O(n²) | Quadratic | Bubble sort, selection sort |
    | O(n³) | Cubic | Simple matrix multiplication |
    | O(2ⁿ) | Exponential | Plain recursive Fibonacci |
    | O(n!) | Factorial | Brute force travelling salesman |
 
 3. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: Computational complexity of an algorithm is a measure of the computing resources it needs, written as a function of the input size n.
+   Answer: Computational complexity of an algorithm is the measure of the computing resources it needs, written as a function of the input size n.
 
-   - Time complexity: how the number of basic operations grows when n grows.
-   - Space complexity: how much extra memory is needed when n grows.
-   - We measure it asymptotically. That means we keep only the growth rate and drop the constants and the smaller terms, because those depend on the machine.
-   - Notations used: Big-O for the upper bound, Big Omega for the lower bound, and Big Theta for the tight bound.
+   - Time complexity: how the number of basic operations grows as n grows.
+   - Space complexity: how much extra memory is needed as n grows.
+   - We measure it asymptotically. That means we keep only the order of growth, and drop the constants and the lower order terms, because those depend on the machine. For example, 3n³ + 6n² + 6000 becomes Θ(n³).
+   - Notations: Big-O for the upper bound, Big Omega for the lower bound, Big Theta for the tight bound.
    - Example: linear search has time complexity O(n) and space complexity O(1).
 
 4. **Including Time and Space complexity....** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 553 (ET: BIBM)]*
@@ -1438,29 +1438,29 @@ for i in N:
 
    Time complexity:
    - It is the number of basic operations an algorithm does, as a function of the input size n.
-   - We do not measure it in seconds, because that depends on the hardware. Instead we count the growth rate.
+   - We do not measure it in seconds, because that depends on the hardware. We count the order of growth instead.
    - Example: one loop over n elements is O(n). Two nested loops are O(n²).
 
    Space complexity:
-   - It is the total memory the algorithm needs. That is the input space plus the auxiliary space.
-   - Auxiliary space is the extra memory used besides the input. This is the part we usually compare.
+   - It is the total memory the algorithm needs, that is the input space plus the auxiliary space.
+   - Auxiliary space is the extra memory used besides the input. This is the part we normally compare.
    - Example: bubble sort uses O(1) auxiliary space. Merge sort uses O(n).
 
    Relation between the two:
-   - There is usually a trade-off. If we store already computed results in a table, the time goes down but the space goes up. This is exactly what dynamic programming does.
-   - Example: recursive Fibonacci takes O(2ⁿ) time and O(n) space. The dynamic programming version takes O(n) time and O(n) space.
+   - There is usually a trade-off. If we store already computed results in a table, the time falls but the space rises. Dynamic programming works exactly this way.
+   - Example: recursive Fibonacci takes O(2ⁿ) time and O(n) stack space. The dynamic programming version takes O(n) time and O(n) space.
 
 5. **What is complexity? Find the Complexity from code and explain.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 501 (ET: IBA)]*
 
-   Answer: Complexity is a measure of how the running time and the memory need of an algorithm grow when the input size grows.
+   Answer: Complexity is the order of growth of the time and the memory an algorithm needs, as the input size grows.
 
    Rules for finding complexity from code:
    - A simple statement takes O(1).
    - One loop running n times takes O(n).
    - Two nested loops, each running n times, take O(n²).
    - A loop where the counter is halved or doubled each time takes O(log n).
-   - For blocks one after another, we add them and keep the biggest term.
-   - We drop the constants and the smaller terms. So 3n² + 5n + 7 becomes O(n²).
+   - For blocks placed one after another, we add them and keep the biggest term.
+   - We drop the constants and the lower order terms. So 3n² + 5n + 7 becomes O(n²).
 
    Example 1:
    ```c
@@ -1480,35 +1480,37 @@ for i in N:
 
 6. **What is Big O and Big Omega?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
-   Answer: Big-O and Big Omega are asymptotic notations. They describe how the running time of an algorithm grows.
+   Answer: Big-O and Big Omega are asymptotic notations. They describe the order of growth of the running time of an algorithm.
 
    Big-O, written O(g(n)):
-   - It gives the upper bound, that is the worst case growth rate.
-   - Formal definition: f(n) = O(g(n)) if there are positive constants c and n₀ such that f(n) ≤ c·g(n) for all n ≥ n₀.
-   - In simple words: the algorithm will never be slower than this.
-   - Example: linear search is O(n).
+   - Formal definition: f(n) = O(g(n)) if there are positive constants c and n₀ such that 0 ≤ f(n) ≤ c·g(n) for all n ≥ n₀.
+   - In plain words: Big-O gives the upper bound. It is the worst case. It says the algorithm will never take more time than this.
+   - Here c scales the function g(n), and n₀ is the point after which the relation always holds.
+   - Example: insertion sort is O(n²). Its worst case will never go past quadratic time.
 
    Big Omega, written Ω(g(n)):
-   - It gives the lower bound, that is the best case growth rate.
-   - Formal definition: f(n) = Ω(g(n)) if there are positive constants c and n₀ such that f(n) ≥ c·g(n) for all n ≥ n₀.
-   - In simple words: the algorithm will never be faster than this.
+   - Formal definition: f(n) = Ω(g(n)) if there are positive constants c and n₀ such that 0 ≤ c·g(n) ≤ f(n) for all n ≥ n₀.
+   - In plain words: Omega gives the lower bound. It is the best case. It says the algorithm will never take less time than this.
    - Example: linear search is Ω(1), because the target may be the very first element.
 
-   Big Theta, written Θ(g(n)), is used when the upper bound and the lower bound match. So it gives the exact growth rate. Example: merge sort is Θ(n log n).
+   Big Theta, written Θ(g(n)):
+   - Formal definition: f(n) = Θ(g(n)) if there are positive constants c₁, c₂ and n₀ such that 0 ≤ c₁·g(n) ≤ f(n) ≤ c₂·g(n) for all n ≥ n₀.
+   - In plain words: Theta squeezes the function between an upper and a lower bound at the same time. So it gives the exact order of growth.
+   - Example: merge sort is Θ(n log n).
 
 7. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 606 (ET: N/A)]*
 
-   Answer: Complexity of an algorithm means how much time and memory it needs when the input size grows. Time complexity counts the basic operations. Space complexity counts the extra memory. We write both using asymptotic notation such as O, Omega and Theta.
+   Answer: Complexity of an algorithm means the order of growth of the time and the memory it needs, as the input size grows. Time complexity counts the basic operations, and space complexity counts the extra memory. We write both using asymptotic notations such as O, Omega and Theta.
 
    Complexity of common sorting algorithms:
 
-   | Algorithm | Best | Average | Worst | Space |
+   | Algorithm | Best | Average | Worst | Auxiliary space |
    |---|---|---|---|---|
    | Bubble sort | O(n) | O(n²) | O(n²) | O(1) |
    | Selection sort | O(n²) | O(n²) | O(n²) | O(1) |
    | Insertion sort | O(n) | O(n²) | O(n²) | O(1) |
    | Merge sort | O(n log n) | O(n log n) | O(n log n) | O(n) |
-   | Quick sort | O(n log n) | O(n log n) | O(n²) | O(log n) |
+   | Quick sort | O(n log n) | O(n log n) | O(n²) | O(n) |
    | Heap sort | O(n log n) | O(n log n) | O(n log n) | O(1) |
 
 8. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
@@ -1517,15 +1519,15 @@ for i in N:
 
    Binary search:
    - Best case: O(1). The target is exactly the middle element on the very first comparison.
-   - Worst case: O(log n). The search keeps going until only one element is left.
+   - Worst case: O(log n). The search keeps halving until only one element is left.
    - It needs the array to be sorted.
 
    Quick sort:
-   - Best case: O(n log n). Every partition splits the array into two nearly equal halves.
-   - Worst case: O(n²). The pivot is always the smallest or the largest element, so one side gets n−1 elements.
+   - Best case: O(n log n). Every partition cuts the array into two nearly equal halves.
+   - Worst case: O(n²). The pivot is always the smallest or the largest element, so one side gets n−1 elements and the other gets none.
 
    Depth First Search:
-   - Best case O(V + E) and worst case O(V + E) with an adjacency list. Every vertex and every edge is checked once in both cases.
+   - Best case O(V + E) and worst case O(V + E) with an adjacency list, because every vertex and every edge is examined once in both cases.
    - With an adjacency matrix it becomes O(V²).
    - If we only need to reach a goal, the best case is O(1), when the goal is the source itself.
 
@@ -1534,8 +1536,8 @@ for i in N:
    Answer:
 
    Forming the recurrence:
-   - Binary search compares the target with the middle element. This costs O(1).
-   - If they do not match, it throws away half the array and searches only the other half of size n/2.
+   - Binary search compares the target with the middle element. That costs O(1), a constant c.
+   - If they do not match, it throws away half the array and searches only the other half, of size n/2.
    - So the recurrence is T(n) = T(n/2) + c, with base case T(1) = c.
 
    Solving by substitution:
@@ -1593,23 +1595,23 @@ for i in N:
     Input related factors:
     - Input size (n): the main factor. We always write complexity as a function of n.
     - Nature of the input: whether the data is already sorted, reverse sorted or random. Insertion sort is O(n) on sorted data, but O(n²) on reverse sorted data.
-    - How the data is spread out, including how many duplicate values are present.
+    - How the data is spread out, including how many duplicate values there are.
 
     Algorithm related factors:
     - The number of basic operations, such as comparisons, assignments and arithmetic.
     - The loop structure. Nested loops multiply the cost.
-    - The recursion depth, and how many recursive calls are made at each level.
+    - The recursion depth, and how many recursive calls happen at each level.
     - The data structure chosen. Searching a hash table is O(1), but searching a linked list is O(n).
 
     Resource related factors:
     - Time complexity, that is the count of operations.
-    - Space complexity, that is the extra memory used, including the recursion stack.
-    - The time and space trade-off, where we use extra memory to cut the running time. Dynamic programming does this.
+    - Space complexity, that is the auxiliary memory used, including the recursion stack.
+    - The time and space trade-off, where we spend extra memory to cut the running time. Dynamic programming does this.
 
     Implementation related factors:
     - Programming language and compiler optimisation.
     - Processor speed, cache size and memory access pattern.
-    - These change the real running time, but they do not change the asymptotic complexity. That is why we use asymptotic analysis for comparing algorithms.
+    - These change the real running time, but they do not change the asymptotic complexity. That is why we use asymptotic analysis to compare algorithms.
 
 ## Searching Algorithms (11)
 
