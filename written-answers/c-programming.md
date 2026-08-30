@@ -3591,8 +3591,8 @@ int main() {
 
    Answer: The two forms differ because `sizeof` is an operator, not a function.
 
-   - `sizeof c + 1` is parsed as `(sizeof c) + 1`, because `sizeof` binds more tightly than `+`. So the size of c is computed first and then 1 is added. If c is a char, the result is 1 + 1 = 2.
-   - `sizeof (c + 1)` computes the size of the whole expression `c + 1`. Due to integer promotion, `c + 1` is an int, so the result is the size of an int, normally 4.
+   - `sizeof c + 1` is read as `(sizeof c) + 1`, because `sizeof` binds tighter than `+`. So we get the size of c first, and then add 1. If c is a char, the result is 1 + 1 = 2.
+   - `sizeof (c + 1)` finds the size of the whole expression `c + 1`. Because of integer promotion, `c + 1` becomes an int. So the result is the size of an int, normally 4.
    - So for `char c`, the first gives 2 and the second gives 4.
 2. **What is the difference between Null and Void?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
 
@@ -3607,17 +3607,17 @@ int main() {
    | Meaning | The pointer points to nothing | The function returns nothing, or the pointer type is unspecified |
    | Example | `if (p == NULL)` | `void display(void)` or `void *ptr` |
 
-   - `void *` is a generic pointer that can hold the address of any data type but cannot be dereferenced without a cast.
+   - `void *` is a general pointer. It can hold the address of any data type. But we cannot read its value without a cast first.
 3. **What can be used to terminate for(;;)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
 
-   Answer: `for(;;)` is an infinite loop, since the condition part is empty and is therefore treated as always true. It can be terminated in the following ways.
+   Answer: `for(;;)` is an infinite loop. The condition part is empty, so C treats it as always true. We can stop it in these ways.
 
-   - `break;` immediately exits the loop and control moves to the statement after it. This is the normal way.
-   - `return;` exits the entire function, so the loop ends as well.
+   - `break;` leaves the loop at once. Control goes to the statement after it. This is the normal way.
+   - `return;` leaves the whole function, so the loop ends too.
    - `goto label;` jumps out of the loop to a labelled statement.
-   - `exit(0);` terminates the whole program.
-   - Raising a condition that calls `abort()` or causes the process to stop also ends it, but that is not a normal programming practice.
+   - `exit(0);` stops the whole program.
+   - Calling `abort()`, or anything that kills the process, also ends it. But that is not good programming practice.
 
    Example:
    ```c
@@ -3630,12 +3630,12 @@ int main() {
 4. **What will occur when an array is declared without size?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
 
-   Answer: The result depends on whether the array is initialised at the same time.
+   Answer: It depends on whether we give the array values at the same time.
 
-   - If it is declared with an initialiser list, for example `int a[] = {1, 2, 3, 4};`, the compiler counts the initialisers and sets the size automatically, here 4. This is perfectly valid.
-   - If it is declared without a size and without an initialiser, for example `int a[];`, it is an incomplete type. Inside a function this is a compile time error.
-   - At file scope `int a[];` is a tentative definition and the compiler may assume size 1, but this is poor practice.
-   - As a function parameter, `void f(int a[])` is allowed, because the array decays into a pointer and the size is not needed.
+   - If we declare it with a value list, such as `int a[] = {1, 2, 3, 4};`, the compiler counts the values and sets the size itself. Here the size is 4. This is fully valid.
+   - If we declare it with no size and no values, such as `int a[];`, it is an incomplete type. Inside a function this gives a compile time error.
+   - Outside all functions, `int a[];` is a tentative definition. The compiler may take the size as 1. But this is bad practice.
+   - As a function parameter, `void f(int a[])` is allowed. The array turns into a pointer there, so the size is not needed.
 5. **(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 601 (ET: N/A)]*
 
 
@@ -3651,16 +3651,16 @@ int main() {
    | Access from other functions | Not possible | Possible |
    | Safety | Safer, no accidental modification | Risky, any function can change it |
 
-   - Local variables are preferred because they limit the effect of a change to one function, which makes debugging easier.
+   - We prefer local variables, because a change stays inside one function. That makes debugging much easier.
 6. **(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
 
    Answer: Yes, 32678 can be stored in an `int`, but it cannot be stored in a `short int` on most systems.
 
-   - A 2 byte signed integer holds values from −32768 to 32767, so 32678 fits in that range since it is smaller than 32767.
-   - On modern compilers `int` is 4 bytes, with a range of about −2.1 billion to +2.1 billion, so there is no problem at all.
-   - If the value were 32768 or larger and a 2 byte `short int` were used, overflow would occur and the stored value would wrap around to a negative number.
-   - For such larger values `long int` or `unsigned int` should be used.
+   - A 2 byte signed integer holds values from −32768 to 32767. 32678 is smaller than 32767, so it fits.
+   - On modern compilers `int` is 4 bytes. Its range is about −2.1 billion to +2.1 billion. So there is no problem at all.
+   - If the value were 32768 or more, and we used a 2 byte `short int`, we would get overflow. The stored value would wrap around to a negative number.
+   - For such larger values we should use `long int` or `unsigned int`.
 7. **(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
 
@@ -3672,7 +3672,7 @@ int main() {
    | Value of the expression | The new value | The old value |
    | Example with i = 5 | `x = ++i;` gives x = 6, i = 6 | `x = i++;` gives x = 5, i = 6 |
 
-   - As a standalone statement `i++;` and `++i;` behave identically, the difference matters only when the value is used in an expression.
+   - As a statement on its own, `i++;` and `++i;` do the same thing. The difference matters only when we use the value inside an expression.
 8. **What is the main difference between structure and array in C programming? Explain with examples.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
 
 
@@ -3688,7 +3688,7 @@ int main() {
    | Assignment | Cannot copy one whole array with `=` | One structure can be assigned to another with `=` |
    | Use | A list of similar values, such as marks of 50 students | A record of one entity, such as one student's full information |
 
-   - Example of use together: `struct student s[50];` is an array of structures holding records of 50 students.
+   - We can use them together: `struct student s[50];` is an array of structures, holding the records of 50 students.
 9. **Difference between array and structure data type.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
 
@@ -3706,13 +3706,13 @@ int main() {
 10. **Write down the types of errors which can occur the execution of a program.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
 
-    Answer: Errors that can occur in a program are of the following types.
+    Answer: A program can have these types of error.
 
-    - Syntax errors: violations of the grammar of the language, such as a missing semicolon or unmatched brace. The compiler detects them and the program does not compile.
-    - Semantic errors: the syntax is correct but the meaning is wrong, for example using an undeclared variable or wrong type assignment.
-    - Linker errors: the code compiles but a required function or symbol is not found, such as a wrong `main` signature or a missing library.
-    - Runtime errors: they appear while the program is running, for example division by zero, array index out of range, dereferencing a null pointer or stack overflow.
-    - Logical errors: the program runs and produces output, but the output is wrong because the algorithm itself is faulty. These are the hardest to find, because the compiler gives no message.
+    - Syntax errors: we break the grammar rules of the language. Example: a missing semicolon or an unmatched brace. The compiler catches them, and the program does not compile.
+    - Semantic errors: the syntax is right but the meaning is wrong. Example: using a variable we never declared, or assigning the wrong type.
+    - Linker errors: the code compiles, but a needed function or symbol is not found. Example: a wrong `main` signature, or a missing library.
+    - Runtime errors: these show up while the program is running. Example: division by zero, array index out of range, using a null pointer, or stack overflow.
+    - Logical errors: the program runs and gives output, but the output is wrong, because the algorithm itself is wrong. These are the hardest to find, because the compiler says nothing.
 11. **Write the syntax of while and do while loop.** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
 
@@ -3732,13 +3732,13 @@ int main() {
     } while (condition);
     ```
 
-    - The while loop checks the condition before executing the body, so the body may run zero times.
-    - The do-while loop checks the condition after executing the body, so the body always runs at least once.
-    - Note the semicolon after `while (condition)` in the do-while form, which is compulsory.
+    - The while loop checks the condition before running the body. So the body may run zero times.
+    - The do-while loop checks the condition after running the body. So the body always runs at least once.
+    - Note: in the do-while form, the semicolon after `while (condition)` is compulsory.
 12. **What is nested structure in C programming? Explain with example.** *[SPCB Sub-Assistant Programmer 2022 compact it 741 (ET: N/A)]*
 
 
-    Answer: A nested structure is a structure that contains another structure as one of its members. It is used when one record naturally contains a smaller record inside it.
+    Answer: A nested structure is a structure that holds another structure as one of its members. We use it when one record naturally holds a smaller record inside it.
 
     Example:
     ```c
@@ -3762,9 +3762,9 @@ int main() {
     }
     ```
 
-    - The inner member is accessed with two dots, as in `e.joining.day`.
-    - The inner structure must be declared before it is used inside the outer one.
-    - Nesting keeps related data grouped logically and makes the code easier to read.
+    - We reach the inner member with two dots, like `e.joining.day`.
+    - We must declare the inner structure before we use it inside the outer one.
+    - Nesting keeps related data together in a logical way, and makes the code easier to read.
 13. **(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 784 (ET: N/A)]*
 
 
@@ -3782,15 +3782,15 @@ int main() {
 14. **Write some default data type in C.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
 
 
-    Answer: The default or basic data types available in C are the following.
+    Answer: C has these basic data types.
 
     - `int` — whole numbers, normally 4 bytes, range about −2,147,483,648 to 2,147,483,647, specifier `%d`.
     - `char` — a single character, 1 byte, range −128 to 127, specifier `%c`.
     - `float` — single precision real number, 4 bytes, about 6 decimal digits of precision, specifier `%f`.
     - `double` — double precision real number, 8 bytes, about 15 decimal digits, specifier `%lf`.
-    - `void` — represents the absence of a value, used for functions that return nothing.
+    - `void` — means there is no value. We use it for functions that return nothing.
 
-    - These can be modified by `short`, `long`, `signed` and `unsigned` to change the size or range, for example `unsigned int` or `long double`.
+    - We can change their size or range with `short`, `long`, `signed` and `unsigned`. Example: `unsigned int` or `long double`.
 15. **Write the difference between Structure and Array.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
 
@@ -3830,14 +3830,14 @@ int main() {
 
     (iii) Polymorphism
 
-    - Polymorphism means one interface taking many forms, so the same function name behaves differently depending on the context.
-    - Compile time polymorphism is achieved by function overloading and operator overloading.
-    - Run time polymorphism is achieved by function overriding using virtual functions and base class pointers.
+    - Polymorphism means one interface takes many forms. The same function name behaves differently, depending on the situation.
+    - We get compile time polymorphism through function overloading and operator overloading.
+    - We get run time polymorphism through function overriding, using virtual functions and base class pointers.
     - It is one of the four pillars of object oriented programming, along with encapsulation, inheritance and abstraction.
 17. **নিচের if-else কে switch case এ পরিনত করুন। if(ch== 'A':: ch== 'E' :: ch== 'I' :: ch == 'O':: ch== 'U')** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
 
 
-    Answer: The if-else checks whether the character is a vowel. The equivalent switch-case is written by letting all vowel cases fall through to one common statement.
+    Answer: The if-else checks whether the character is a vowel. In the switch-case version, we let all the vowel cases fall through to one common statement.
 
     ```c
     switch (ch) {
@@ -3854,9 +3854,9 @@ int main() {
     }
     ```
 
-    - Cases 'A' to 'O' have no `break`, so control falls through to the statement written under 'U'. This is how an OR condition is expressed in a switch.
-    - `default` plays the role of the `else` part.
-    - To handle small letters as well, the cases 'a', 'e', 'i', 'o', 'u' can be added in the same fall through group.
+    - Cases 'A' to 'O' have no `break`. So control falls through to the statement written under 'U'. This is how we write an OR condition in a switch.
+    - `default` does the job of the `else` part.
+    - To handle small letters too, we can add the cases 'a', 'e', 'i', 'o', 'u' in the same fall through group.
 
 ## Flowcharts & Algorithms (12)
 
@@ -3890,8 +3890,8 @@ int main() {
        I --> Z
    ```
 
-   - The counter is the key element, since it enforces the three attempt limit.
-   - Blocking the account after three failures protects against brute force password guessing.
+   - The counter is the key part, because it enforces the limit of three attempts.
+   - Blocking the account after three failures stops brute force password guessing.
 2. **Draw a Flow chart for print odd number for 1 to N.** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
 
@@ -3910,8 +3910,8 @@ int main() {
        G --> D
    ```
 
-   - The decision box `i mod 2 != 0` selects only the odd numbers.
-   - A simpler version starts i at 1 and increases it by 2, removing the need for the modulus test.
+   - The decision box `i mod 2 != 0` picks only the odd numbers.
+   - A simpler version starts i at 1 and adds 2 each time. Then we do not need the modulus test at all.
 3. **১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 381 (ET: BUET)]*
 
 
@@ -3928,7 +3928,7 @@ int main() {
    ```
 
    - The counter i starts at 1 and increases by 1 on each pass.
-   - The loop ends when i exceeds 100, so exactly 100 numbers are printed.
+   - The loop ends when i goes past 100. So exactly 100 numbers are printed.
 4. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
 
@@ -3983,7 +3983,7 @@ int main() {
        F --> D
    ```
 
-   - Starting at 1 and stepping by 2 guarantees only odd numbers are produced, so no modulus test is needed.
+   - If we start at 1 and step by 2, we get only odd numbers. So we do not need a modulus test.
 6. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
 
 
@@ -4011,7 +4011,7 @@ int main() {
        G --> Z([End])
    ```
 
-   - The sum of the first k odd numbers equals k², which can be used to verify the result.
+   - The sum of the first k odd numbers is k². We can use this to check our result.
 7. **Write an Algorithm to check a number is Prime or not Prime.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 656 (ET: N/A)]*
 
 
@@ -4029,7 +4029,7 @@ int main() {
    - Step 9: If flag = 1 print "Prime", otherwise print "Not prime".
    - Step 10: Stop.
 
-   - Testing divisors only up to √N is enough, because if N = a × b then one of the factors must be less than or equal to √N.
+   - Checking divisors only up to √N is enough. If N = a × b, then one of the two factors must be less than or equal to √N.
    - Time complexity is O(√N).
 8. **Write down the algorithm and draw the flowchart of Quadratic equation.** *[CAAB Programmer 2022 compact it 722 (ET: N/A)]*
 
@@ -4060,7 +4060,7 @@ int main() {
        H --> Z
    ```
 
-   - The discriminant D decides which of the three cases applies.
+   - The discriminant D tells us which of the three cases we have.
 9. **Draw a flowchart and write algorithm for finding Factorial value of an integer number.** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 723 (ET: N/A)]*
 
 
@@ -4088,7 +4088,7 @@ int main() {
        G --> Z([End])
    ```
 
-   - For N = 0 the loop never runs, so fact stays 1, which is the correct value of 0 factorial.
+   - For N = 0 the loop never runs. So fact stays 1, which is the correct value of 0 factorial.
 10. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
 
 
@@ -4106,29 +4106,29 @@ int main() {
         G --> Z([End])
     ```
 
-    - The variable i starts at 1 and increases by 2, so only the odd terms 1, 3, 5, 7 are added.
-    - The loop stops as soon as i becomes greater than N.
+    - The variable i starts at 1 and goes up by 2. So we add only the odd terms 1, 3, 5, 7.
+    - The loop stops as soon as i goes past N.
 11. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
 
-    Answer: An algorithm is a finite, ordered set of unambiguous steps that solves a particular problem or performs a computation.
+    Answer: An algorithm is a limited, ordered set of clear steps that solves a problem or does a computation.
 
     Properties of a good algorithm:
-    - Finiteness: it must terminate after a finite number of steps.
-    - Definiteness: every step must be clear and unambiguous.
+    - Finiteness: it must stop after a limited number of steps.
+    - Definiteness: every step must be clear, with only one meaning.
     - Input and output: zero or more inputs and at least one output.
-    - Effectiveness: every operation must be basic enough to be carried out.
+    - Effectiveness: every operation must be simple enough to actually do.
 
     Three ways of expressing an algorithm:
-    - Pseudocode: an English like structured description that is close to code but not tied to any language.
+    - Pseudocode: a structured description in English like words. It is close to code, but not tied to any one language.
     - Flowchart: a diagram using standard symbols such as oval for start and end, parallelogram for input and output, rectangle for process and diamond for decision.
-    - Programming language code: the algorithm written directly in C, Java, Python or another language.
+    - Programming language code: we write the algorithm directly in C, Java, Python or another language.
 12. **Three types of control statements and their graphical presentation using flowchart or flow graph.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1037-1038 (ET: BUET)]*
 
 
     Answer: The three basic control structures of structured programming are sequence, selection and iteration.
 
-    Sequence: statements execute one after another in the order written.
+    Sequence: the statements run one after another, in the order we wrote them.
     ```mermaid
     flowchart TD
         A([Start]) --> B[Statement 1]
@@ -4136,7 +4136,7 @@ int main() {
         C --> Z([End])
     ```
 
-    Selection: a condition decides which path is taken, using if, if-else or switch.
+    Selection: a condition decides which path we take. We use if, if-else or switch.
     ```mermaid
     flowchart TD
         A([Start]) --> B{Condition?}
@@ -4146,7 +4146,7 @@ int main() {
         D --> Z
     ```
 
-    Iteration: a block repeats while a condition holds, using for, while or do-while.
+    Iteration: a block repeats as long as a condition is true. We use for, while or do-while.
     ```mermaid
     flowchart TD
         A([Start]) --> B{Condition?}
@@ -4155,7 +4155,7 @@ int main() {
         B -- False --> Z([End])
     ```
 
-    - Any program, however complex, can be written using only these three structures, which is the basic claim of the structured programming theorem.
+    - We can write any program, however complex, using only these three structures. This is what the structured programming theorem says.
 
 ## String Manipulation & Algorithms (11)
 
