@@ -4561,14 +4561,15 @@ int main() {
 
    Answer: A pointer is a variable that holds the memory address of another variable.
 
-   | Point | malloc() | calloc() |
+   | Aspect | malloc() | calloc() |
    |---|---|---|
    | Full form | Memory allocation | Contiguous allocation |
-   | Number of arguments | One, the total size in bytes | Two, the number of blocks and the size of each |
+   | Purpose | Allocates a single block of continuous memory | Allocates continuous memory, and also initialises it |
+   | Parameters | One: the total number of bytes | Two: the number of elements, and the size of each |
    | Syntax | `p = (int*)malloc(n * sizeof(int));` | `p = (int*)calloc(n, sizeof(int));` |
-   | Initialisation | Memory contains garbage values | Memory is initialised to zero |
-   | Speed | Faster, since no initialisation is done | Slightly slower because of the zero filling |
-   | Use | When the values will be assigned immediately | When a clean zero filled block is needed |
+   | Initialisation | Leaves the memory uninitialised, so it holds garbage values | Sets all the bits to zero |
+   | Speed | Faster, because it does no initialisation | Slightly slower, because of the zero filling |
+   | Use case | When the initial values do not matter, and we will assign them at once | When we need a clean, zero filled block |
 
    - Both return a `void*`, which we should cast. Both return NULL if the allocation fails.
    - We must release the memory from either one with `free()`, or the program leaks memory.
@@ -4578,14 +4579,25 @@ int main() {
    Answer: Dynamic memory allocation means we ask for memory at run time from the heap, instead of fixing the size at compile time.
 
    Why it is needed:
-   - Often we do not know the exact amount of data while writing the program.
-   - A fixed array either wastes memory or runs short. Dynamic memory grows to the real need.
+   - A fixed size array is decided at compile time. Often we do not know the exact amount of data while writing the program.
+   - With dynamic memory we can increase or decrease the size at run time. A fixed array either wastes memory or runs short.
+   - Stack memory is freed automatically when the function ends, so it is unsafe to return a pointer to it. Heap memory stays alive after the function returns, so we can safely return a pointer to it.
+
+   Static allocation against dynamic allocation:
+
+   | Point | Static allocation | Dynamic allocation |
+   |---|---|---|
+   | Where | On the stack | On the heap |
+   | When | At compile time | At run time |
+   | Size | Fixed for the whole run | We can change it during the run |
+   | Freeing | Automatic, when the scope ends | We must free it ourselves |
+   | Returning a pointer | Unsafe | Safe |
 
    Four functions, all declared in `stdlib.h`:
-   - `malloc(size)` — gives a block of the given size, with garbage values inside.
-   - `calloc(n, size)` — gives n blocks and fills them all with zero.
-   - `realloc(ptr, newsize)` — changes the size of a block we already took, and keeps the old contents.
-   - `free(ptr)` — gives the block back to the system.
+   - `malloc(size)` — allocates one block of the given number of bytes. It returns a void pointer, or NULL if it fails. The memory holds garbage values.
+   - `calloc(n, size)` — allocates memory for n elements of the given size, and sets all the bits to zero. It returns a void pointer, or NULL if it fails.
+   - `realloc(ptr, newsize)` — changes the size of a block we already allocated, keeping the old contents. If it fails, it returns NULL and the original pointer stays valid and unchanged.
+   - `free(ptr)` — releases the block back to the system. It returns nothing. Good practice: set the pointer to NULL after freeing it, so we do not leave a dangling pointer.
 
    Example:
    ```c
