@@ -4289,16 +4289,24 @@
 
    Difference between D latch and D flip-flop:
 
-   | Point | D latch | D flip-flop |
+   | Point | Latch | Flip-flop |
    |---|---|---|
-   | Control signal | Enable (level sensitive) | Clock (edge sensitive) |
-   | When output changes | Any time while enable = 1 | Only at the active clock edge |
-   | Transparency | Transparent, Q follows D continuously | Opaque, Q holds until the next edge |
-   | Structure | One gate-level latch | Two D latches in master-slave form |
-   | Timing safety | Output can change many times in one cycle | Output changes exactly once per cycle |
-   | Typical use | Temporary data hold, address latching | Registers, counters, shift registers, pipelines |
+   | Definition | An electronic device that changes its output at once, as soon as the input changes | A basic digital memory circuit that stores one bit, and changes its output only at a fixed moment of the clock |
+   | Triggering | Level triggered. It follows the input all the time, with no delay | Edge triggered. It changes state only at a defined clock transition |
+   | Clock | Does not need a clock | Needs a clock |
+   | When the output changes | Any time while enable = 1 | Only at the active clock edge |
+   | Transparency | Transparent. Q follows D continuously | Opaque. Q holds its value until the next edge |
+   | Built from | Basic logic gates | Latches. A D flip-flop is two D latches in master-slave form |
+   | Timing safety | The output can change many times in one clock cycle | The output changes exactly once per cycle |
+   | Typical use | Temporary data hold, address latching. Less often used in sequential circuits | Registers, counters, shift registers, pipelines. The preferred building block for sequential circuits |
 
-   Both store one bit, but the flip-flop samples D at one instant, which is what makes reliable synchronous design possible.
+   Both store one bit, but the flip-flop samples D at one single instant, and that is what makes reliable synchronous design possible.
+
+   Types of flip-flop:
+   - S-R, Set-Reset: the S input sets Q to 1, and the R input resets it to 0. If both inputs are 1 at once, the behaviour is unpredictable. This is its weakness.
+   - J-K: an improved S-R. When both inputs are 1, it toggles, that is it flips to the opposite of its current state. So there is no forbidden input.
+   - T, Toggle: it has one input. When that input is active, the flip-flop switches state. Useful for counters.
+   - D, Data: it copies the input value to the output when triggered. Commonly used to synchronise signals.
 2. **Difference between combinational and sequential circuits.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
 
