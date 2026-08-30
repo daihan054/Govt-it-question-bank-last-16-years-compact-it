@@ -406,7 +406,17 @@
     Answer: Charles Babbage is called the father of the computer.
 
     - He designed the Difference Engine in 1822 and the Analytical Engine in 1837. The Analytical Engine contained all the elements of a modern computer: an arithmetic unit called the mill, memory called the store, control flow with conditional branching and loops, and punched card input.
-    - Two related attributions are often asked alongside: Alan Turing is called the father of computer science and of artificial intelligence, for the Turing machine and the Turing test; and John von Neumann gave the stored program architecture, in which instructions and data share the same memory, which every modern computer follows.
+    - Two related names are often asked with this one. Alan Turing is called the father of computer science and of artificial intelligence, for the Turing machine and the Turing test. John von Neumann gave the stored program architecture, which every modern computer follows.
+
+    Von Neumann architecture, in brief:
+    - The key idea: the instructions and the data are kept in the same memory space. So the CPU reaches both through the same path.
+    - CPU, which has three parts. The Control Unit sends control signals, decides how data moves, and fetches instructions from memory. The ALU does the arithmetic, the comparisons and the bitwise operations. The registers are very fast stores inside the CPU: the Program Counter holds the address of the next instruction, the Instruction Register holds the current one, the Memory Address Register holds the address being accessed, the Memory Data Register holds the data in transit, and the Accumulator holds intermediate results.
+    - Memory: one single store holding both the program instructions and the data.
+    - Input and output devices, reached through an I/O interface.
+    - Bus system: one single bus carries the data, the addresses and the control signals.
+    - Stored program concept: because the program is stored like data, one machine can be programmed for many different jobs. A fixed-program machine, such as a simple calculator, can do only the one job it was built for.
+    - Von Neumann bottleneck: the instructions can only be done one at a time, in order. The single shared bus makes this worse. So adding more cache or a faster clock gives only limited gain, unless we change the structure of the processor itself.
+    - Harvard architecture is the alternative. It keeps separate memories and separate buses for instructions and for data, so both can be fetched at the same time. Microcontrollers commonly use it.
     - Ada Lovelace, who wrote an algorithm for the Analytical Engine in 1843, is called the first computer programmer.
 31. **Unicode এর মাধ্যমে সম্ভাব্য কতগুলো চিহ্নকে নির্দিষ্ট করা যায়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
