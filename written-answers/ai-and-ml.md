@@ -123,24 +123,31 @@
 
 1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
 
-   Answer: An activation function is a mathematical function applied to the weighted sum of inputs at a neuron, which decides the output that the neuron passes to the next layer.
+   Answer: An activation function is a small maths function used inside a neuron. The neuron first adds up all its weighted inputs. Then the activation function takes that sum and decides what value the neuron will send to the next layer.
 
-   Usability:
-   - It introduces non-linearity. Without it, however many layers are stacked, the whole network collapses into a single linear equation and cannot learn complex patterns.
-   - It keeps the output within a controlled range, which makes training stable.
-   - It decides whether a neuron should be activated for a given input, so the network can select useful features.
-   - It allows gradients to flow during backpropagation, which is how the weights get updated.
+   Why we need it (usability):
+   - It adds non-linearity. Without it, even 100 layers act like one straight line equation. Then the network cannot learn hard patterns.
+   - It keeps the output inside a fixed range. This makes training stable.
+   - It decides if a neuron should fire or stay quiet for a given input. So the network can pick useful features.
+   - It lets the gradient flow back during backpropagation. This is how the weights get updated.
 
    Common activation functions:
-   - Sigmoid: output between 0 and 1, used in binary classification output layers, but suffers from vanishing gradient.
-   - Tanh: output between -1 and 1, zero centred, so it converges faster than sigmoid.
-   - ReLU: outputs the input if positive, otherwise zero. It is the most used function in hidden layers because it is simple and avoids vanishing gradient.
-   - Leaky ReLU: allows a small negative slope, which solves the dying ReLU problem.
-   - Softmax: converts outputs into probabilities that sum to 1, used in the output layer of multi-class classification.
+
+   | Function | Output range | Where we use it |
+   |---|---|---|
+   | Sigmoid | 0 to 1 | Output layer for yes/no problems. Problem: vanishing gradient |
+   | Tanh | -1 to 1 | Hidden layers. Trains faster than sigmoid because it is zero centred |
+   | ReLU | 0 to input value | Most used in hidden layers. Simple and no vanishing gradient |
+   | Leaky ReLU | small negative to input | Fixes the dying ReLU problem by allowing a small negative value |
+   | Softmax | 0 to 1, all add to 1 | Output layer when there are many classes |
+
+   ReLU in one line: if the input is positive, pass it as it is. If it is negative, give 0.
 
 2. **What does the axon of neural network do?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
 
-   Answer: The axon carries the output signal of a neuron and transmits it to the next neurons. In an artificial neural network it corresponds to the output connection that passes the activated value, multiplied by the connection weight, to the neurons of the next layer.
+   Answer: The axon carries the output of a neuron and sends it to the next neurons.
+
+   In an artificial neural network, the axon is the output connection. It takes the value produced by the activation function, multiplies it by the connection weight, and passes it to the neurons of the next layer.
 
 3. **Write difference between machine learning and deep learning.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
 
@@ -148,46 +155,61 @@
 
    | Point | Machine Learning | Deep Learning |
    |---|---|---|
-   | Relation | A subset of AI | A subset of Machine Learning |
-   | Feature extraction | Features are selected manually by the engineer | Features are learned automatically by the network |
-   | Data requirement | Works well on small or medium datasets | Needs very large datasets |
-   | Hardware | Runs on an ordinary CPU | Usually needs GPU or TPU |
+   | Relation | A part of AI | A part of Machine Learning |
+   | Feature extraction | The engineer picks the features by hand | The network finds the features on its own |
+   | Data needed | Works fine with small or medium data | Needs very large data |
+   | Hardware | Normal CPU is enough | Usually needs GPU or TPU |
    | Training time | Short, minutes to hours | Long, hours to days |
-   | Structure | Algorithms such as decision tree, SVM, KNN | Multi-layer neural networks (ANN, CNN, RNN) |
-   | Interpretability | Easier to explain the decision | Behaves like a black box |
+   | Structure | Algorithms like decision tree, SVM, KNN | Neural networks with many layers (ANN, CNN, RNN) |
+   | Explaining the result | Easy to explain why it decided so | Works like a black box, hard to explain |
    | Example | Spam filter using Naive Bayes | Face recognition using CNN |
+
+   Simple way to remember: in Machine Learning we tell the model what to look at. In Deep Learning the model finds out what to look at.
 
 4. **What is Deep learning?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-   Answer: Deep Learning is a subset of Machine Learning that uses artificial neural networks with many hidden layers to learn patterns directly from raw data.
+   Answer: Deep Learning is a part of Machine Learning. It uses artificial neural networks that have many hidden layers, and it learns patterns straight from raw data.
 
-   - The word "deep" refers to the large number of hidden layers between input and output.
-   - Each layer extracts a higher level feature, for example edges, then shapes, then a full face.
-   - It removes the need for manual feature engineering, but requires large data and heavy computation.
-   - Common uses: image recognition, speech recognition, machine translation and self-driving cars.
+   Key points:
+   - The word "deep" means there are many hidden layers between the input and the output.
+   - Each layer learns a bigger idea than the layer before it. Example for a face: first layer finds edges, next finds shapes like eye and nose, last finds the full face.
+   - We do not need to pick features by hand. The network does it.
+   - But it needs a lot of data and a lot of computing power.
+
+   Where we use it: image recognition, speech recognition, language translation and self-driving cars.
 
 5. **What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 856 (ET: N/A)]*
 
-   Answer: An Artificial Neural Network is a computing model inspired by the human brain, built from connected units called neurons that are arranged in an input layer, one or more hidden layers and an output layer. Each connection carries a weight, each neuron applies an activation function, and the weights are adjusted by backpropagation so that the network learns the mapping from input to output.
+   Answer: An Artificial Neural Network (ANN) is a computing model that copies the idea of the human brain. It is made of small units called neurons. These neurons sit in three kinds of layers: one input layer, one or more hidden layers, and one output layer.
+
+   How it works:
+   - Every connection between two neurons has a number called a weight.
+   - A neuron adds up its weighted inputs and passes the sum through an activation function.
+   - The output goes to the next layer.
+   - Backpropagation compares the output with the correct answer and slowly changes the weights. This is how the network learns.
+
+   Difference between Deep Learning and Traditional Machine Learning:
 
    | Point | Traditional Machine Learning | Deep Learning |
    |---|---|---|
-   | Feature extraction | Done manually by a domain expert | Learned automatically inside the network |
-   | Data volume | Performs well on limited data | Needs a very large dataset |
-   | Computation | Light, CPU is enough | Heavy, GPU is normally required |
-   | Accuracy on complex data | Saturates early | Keeps improving as data grows |
-   | Explainability | Relatively transparent | Mostly a black box |
+   | Feature extraction | A person picks the features by hand | The network learns the features itself |
+   | Data needed | Works well with small data | Needs very large data |
+   | Computing power | Light, CPU is enough | Heavy, GPU is usually needed |
+   | Accuracy on hard data | Stops improving after some point | Keeps improving as data grows |
+   | Explaining the result | Fairly easy to explain | Mostly a black box |
 
 6. **Write LSTM gates name in AI.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
 
    Answer: An LSTM (Long Short Term Memory) cell has three gates:
-   - Forget gate: decides which information from the previous cell state should be dropped.
-   - Input gate: decides which new information should be stored in the cell state.
-   - Output gate: decides which part of the cell state should be given as the output of the cell.
+   - Forget gate: decides which old information should be thrown away from the cell state.
+   - Input gate: decides which new information should be saved into the cell state.
+   - Output gate: decides which part of the cell state should go out as the cell output.
+
+   Simple idea: the forget gate erases, the input gate writes, and the output gate reads.
 
 7. **Draw the single layer of ANN.** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 880 (ET: BUET)]*
 
-   Answer: A single layer ANN (also called a perceptron) has only an input layer connected directly to an output layer, with no hidden layer in between.
+   Answer: A single layer ANN is also called a perceptron. It has only an input layer joined straight to an output layer. There is no hidden layer.
 
    ```mermaid
    graph LR
@@ -199,10 +221,13 @@
        F --> Y["Output y"]
    ```
 
-   - Each input is multiplied by its own weight and all products are added together with the bias.
-   - The sum is passed through an activation function such as step or sigmoid.
-   - The activation output is the final output of the network.
-   - A single layer network can only separate linearly separable data, so it cannot solve the XOR problem.
+   How it works:
+   - Each input is multiplied by its own weight.
+   - All the products are added together, and the bias is also added.
+   - This sum goes into an activation function, such as step or sigmoid.
+   - The result of the activation function is the final output.
+
+   Limitation: a single layer network can only draw a straight line between two classes. So it cannot solve the XOR problem. For that we need at least one hidden layer.
 
 ## Machine Learning Paradigms (Supervised vs Unsupervised) (6)
 
