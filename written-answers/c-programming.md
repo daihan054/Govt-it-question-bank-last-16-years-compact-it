@@ -4442,15 +4442,31 @@ int main() {
 1. Name Top C 5 File Management Function Name. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
 
-   Answer: These are the five file management functions we use most in C.
+   Answer: In C we work with a file through a file pointer. It is a variable of type `FILE*`, and it holds what `fopen()` returns. It tracks the current position inside the open file, and every later operation uses it.
 
-   - `fopen()` — opens a file and returns a FILE pointer. Modes are "r" read, "w" write, "a" append, and the b suffix for binary.
-   - `fclose()` — closes an open file and pushes the buffer out to disk.
-   - `fprintf()` / `fscanf()` — write formatted data to a file and read formatted data from it.
-   - `fgets()` / `fputs()` — read a line from a file and write a string to a file.
-   - `fread()` / `fwrite()` — read and write blocks of binary data.
+   The five most used file management functions:
 
-   - Other useful ones: `fseek()` moves the file pointer, `ftell()` tells the current position, and `rewind()` goes back to the beginning.
+   | Function | What it does |
+   |---|---|
+   | `fopen()` | Creates or opens a file, and returns a `FILE*` |
+   | `fclose()` | Closes an open file, and flushes the buffer to disk |
+   | `fprintf()` / `fscanf()` | Writes formatted data to a file, and reads formatted data from it |
+   | `fgets()` / `fputs()` | Reads a full line from a file, and writes a full line to a file |
+   | `fread()` / `fwrite()` | Reads and writes blocks of binary data |
+
+   The `fopen()` modes:
+   - `"r"` — read mode. The pointer sits at the first character.
+   - `"w"` — write mode. It overwrites the existing content, or creates a new file.
+   - `"a"` — append mode. The pointer sits at the end, so new data is added there.
+   - `"r+"` — read and write, starting from the beginning.
+   - `"w+"` — read and write, with overwrite.
+   - `"a+"` — read and append.
+   - Add `b` to any of these for a binary file, such as `"rb"`, `"wb"`, `"ab"`.
+
+   Other useful functions: `fseek()` moves the file pointer, `ftell()` tells the current position, and `rewind()` sends the pointer back to the beginning.
+
+   End of file: the reading functions return EOF when the file ends. We should always check for EOF while reading, because reading past EOF gives undefined behaviour.
+
 2. **Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.** *[BCC Assistant Programmer 12.02.2021 compact it 814 (ET: BUET)]*
 
 
