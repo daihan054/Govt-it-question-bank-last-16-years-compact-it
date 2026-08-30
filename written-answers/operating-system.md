@@ -7618,14 +7618,16 @@ int main(int argc, char *argv[]){
 
    Answer: | Point | Process | Thread |
    |---|---|---|
-   | Definition | A program in execution, with its own address space | A lightweight unit of execution inside a process |
+   | Definition | A program that is currently running in the operating system. It works in its own independent environment | The smallest unit of execution inside a process. It lets a program do several tasks at once, while sharing the same memory |
    | Address space | Its own, private and protected | Shared with all other threads of the same process |
    | Memory sharing | Processes do not share memory by default | Threads share the code, data and heap |
-   | What is private | Everything | Only the program counter, the registers and the stack |
-   | Creation cost | High; a new address space and page table must be built | Low, typically ten to a hundred times cheaper |
-   | Context switch cost | High; the page table and TLB must be changed | Low; the address space is unchanged |
-   | Communication | Through inter-process communication: pipes, message queues, shared memory, sockets | Directly through shared variables |
-   | Isolation and safety | Strong; a crash in one process does not affect others | Weak; a crash in one thread usually kills the whole process |
+   | What is private | Its own memory space, its own address space, and its own Process Control Block (PCB) | Its own thread ID, its own stack, and its own Thread Control Block (TCB) |
+   | Creation and termination | Takes more time, because a new address space and page table must be built | Takes less time, typically ten to a hundred times cheaper |
+   | Context switching | Slow, because the page table and the TLB must be changed | Fast, because the address space does not change |
+   | Communication | Less efficient. It needs inter-process communication: pipes, message queues, shared memory, sockets | More efficient. Threads talk directly through shared variables |
+   | Effect of blocking | A blocked process does not affect the other processes | A blocked thread may block all the user level threads of that process |
+   | Isolation and safety | Strong. A crash in one process does not touch the others | Weak. A crash in one thread usually kills the whole process |
+   | How it is created | Through system calls | Through APIs |
    | Synchronisation needed | Only for explicitly shared resources | Frequently, because data is shared by default |
    | Termination | Independent | Ending the process ends all its threads |
    | Also called | Heavyweight process | Lightweight process (LWP) |
