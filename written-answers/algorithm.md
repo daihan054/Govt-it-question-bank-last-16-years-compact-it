@@ -591,25 +591,27 @@
 
 1. **Why DFS better than BFS, Explain?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: DFS is better than BFS in several situations, mainly because of memory and the type of problem being solved.
+   Answer: DFS is better than BFS in some cases, mainly because of memory and the kind of problem we are solving.
 
-   - Memory: DFS stores only the current path, so its space need is O(d) where d is the depth. BFS must keep every node of a level in the queue, so its space need is O(b^d), which grows very fast.
-   - Deep solutions: if the goal lies deep in the graph, DFS reaches it quickly, while BFS must expand every shallower level first.
-   - Problem suitability: cycle detection, topological sorting, finding strongly connected components, solving mazes and backtracking problems such as N-Queens are all naturally done by DFS.
-   - Implementation: DFS can be written in a few lines using recursion, whereas BFS needs an explicit queue.
+   - Memory: DFS keeps only the current path in memory. So its space need is O(d), where d is the depth. BFS must keep every node of a level in the queue. So its space need is O(b^d), which grows very fast.
+   - Deep answers: if the goal is deep in the graph, DFS reaches it quickly. BFS has to open every shallower level first.
+   - Type of problem: cycle detection, topological sorting, finding strongly connected components, maze solving and backtracking problems like N-Queens are all done naturally by DFS.
+   - Easy to write: DFS can be written in a few lines using recursion. BFS needs a queue to be made and managed.
 
-   However BFS is better when the shortest path in an unweighted graph is required, or when the solution is known to be near the source, because DFS may go deep down a wrong branch first.
+   But BFS is better when we need the shortest path in an unweighted graph, or when the answer is near the source. DFS may go deep down a wrong branch first and waste time.
 
 2. **Write an Algorithm to detect a cycle in a directed graph.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1336 (ET: N/A)]*
 
-   Answer: A directed graph has a cycle if during DFS we reach a vertex that is still in the current recursion stack, which is called a back edge.
+   Answer: A directed graph has a cycle if, during DFS, we reach a vertex that is still in the current recursion stack. Such an edge is called a back edge.
 
    Algorithm using DFS with a recursion stack:
-   - Create two boolean arrays, visited[] and inStack[], both initialised to false.
+   - Make two boolean arrays, visited[] and inStack[]. Set both to false.
    - For every vertex v that is not visited, call DFS(v).
-   - In DFS(v): mark visited[v] = true and inStack[v] = true.
-   - For every neighbour u of v: if u is not visited, call DFS(u) and if it returns true then return true. Else if inStack[u] is true, a back edge exists, so return true.
-   - Before returning from DFS(v), set inStack[v] = false.
+   - Inside DFS(v): set visited[v] = true and inStack[v] = true.
+   - For every neighbour u of v:
+     - If u is not visited, call DFS(u). If it returns true, return true.
+     - Else if inStack[u] is true, we found a back edge. Return true.
+   - Before leaving DFS(v), set inStack[v] = false.
    - If no call returns true, the graph has no cycle.
 
    ```c
@@ -624,12 +626,15 @@
    }
    ```
 
-   - Time complexity O(V + E) and space complexity O(V).
-   - Alternative method: Kahn's algorithm for topological sorting. If the number of vertices printed is less than V, the graph contains a cycle.
+   Why we need inStack and not just visited: a visited vertex may belong to an older, finished branch. That is not a cycle. Only a vertex still in the current path means a cycle.
+
+   Time complexity is O(V + E) and space complexity is O(V).
+
+   Another method: Kahn's algorithm for topological sorting. If the number of printed vertices is less than V, the graph has a cycle.
 
 3. **What are the BFS and DFS value for the Binary tree from the following figure?** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 459 (ET: BUET)]*
 
-   Answer: BFS visits a tree level by level using a queue, and DFS goes as deep as possible along a branch before backtracking, using a stack or recursion.
+   Answer: BFS visits a tree level by level using a queue. DFS goes as deep as it can along a branch first, then comes back, using a stack or recursion.
 
    Taking the standard binary tree used in such questions:
 
@@ -647,23 +652,24 @@
    - DFS preorder (root, left, right): A, B, D, E, C, F, G
    - DFS inorder (left, root, right): D, B, E, A, F, C, G
    - DFS postorder (left, right, root): D, E, B, F, G, C, A
-   - Note: the figure was not printed in the collected question, so the standard tree is used to show the method.
+
+   Note: the figure was not printed in the collected question, so the standard tree is used to show the method.
 
 4. **What are BFS and DFS for Binary Tree?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 464 (ET: BUET)]*
 
    Answer:
 
    BFS (Breadth First Search):
-   - Visits all nodes of one level before moving to the next level, which is why it is also called level order traversal.
-   - Uses a queue. The root is pushed first, and after removing a node its children are pushed.
-   - Gives the shortest path in terms of number of edges in an unweighted graph.
-   - Time O(V + E), space O(V) because a level may hold many nodes.
+   - It visits all nodes of one level, then moves to the next level. That is why it is also called level order traversal.
+   - It uses a queue. The root goes in first. After we remove a node, we put its children in.
+   - It gives the shortest path in terms of number of edges in an unweighted graph.
+   - Time O(V + E). Space O(V), because one level may hold many nodes.
 
    DFS (Depth First Search):
-   - Goes as deep as possible along one branch, then backtracks and explores the next branch.
-   - Uses a stack, or recursion which uses the system stack.
+   - It goes as deep as possible along one branch, then comes back and takes the next branch.
+   - It uses a stack, or recursion, which uses the system stack.
    - In a binary tree it has three forms: preorder, inorder and postorder.
-   - Time O(V + E), space O(h) where h is the height of the tree.
+   - Time O(V + E). Space O(h), where h is the height of the tree.
 
 5. **(খ) BFS ও DFS এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
@@ -673,24 +679,24 @@
    |---|---|---|
    | Full form | Breadth First Search | Depth First Search |
    | Data structure | Queue | Stack or recursion |
-   | Traversal order | Level by level | Branch by branch, deep first |
-   | Space complexity | O(b^d), stores a whole level | O(d), stores only one path |
-   | Shortest path | Guarantees it in an unweighted graph | Does not guarantee it |
-   | Suitable when | The goal is near the source | The goal is deep in the graph |
+   | Order of visit | Level by level | Branch by branch, deep first |
+   | Space complexity | O(b^d), keeps a whole level | O(d), keeps only one path |
+   | Shortest path | Gives it in an unweighted graph | Does not give it |
+   | Better when | The goal is near the source | The goal is deep in the graph |
    | Applications | Shortest path, peer to peer search, social network levels | Cycle detection, topological sort, maze solving, backtracking |
-   | Completeness | Complete, always finds a solution if one exists | May go infinitely deep in an infinite graph |
+   | Completeness | Complete. Always finds an answer if one exists | May go on forever in an infinite graph |
 
 6. **অথবা, (ক) BFS অ্যালগরিদম উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
-   Answer: BFS explores a graph level by level. It starts at a source vertex, visits all its neighbours first, then the neighbours of those neighbours, and so on, using a queue to remember the order.
+   Answer: BFS explores a graph level by level. It starts at a source vertex, visits all its neighbours first, then the neighbours of those neighbours, and so on. It uses a queue to remember the order.
 
    Algorithm:
-   - Mark the source vertex as visited and insert it into the queue.
-   - While the queue is not empty, remove the front vertex and print it.
-   - For every unvisited neighbour of that vertex, mark it visited and insert it into the queue.
-   - Repeat until the queue becomes empty.
+   - Mark the source vertex as visited and put it into the queue.
+   - While the queue is not empty, take out the front vertex and print it.
+   - For every unvisited neighbour of that vertex, mark it visited and put it into the queue.
+   - Repeat until the queue is empty.
 
-   Example on this graph starting from A:
+   Example on this graph, starting from A:
 
    ```mermaid
    graph LR
@@ -702,18 +708,20 @@
        D --- E
    ```
 
-   - Start: visit A, queue = [A]
-   - Remove A, print A, insert B and C. Queue = [B, C]
-   - Remove B, print B, insert D. Queue = [C, D]
-   - Remove C, print C, insert E. Queue = [D, E]
+   - Start: visit A. Queue = [A]
+   - Remove A, print A, put in B and C. Queue = [B, C]
+   - Remove B, print B, put in D. Queue = [C, D]
+   - Remove C, print C, put in E. Queue = [D, E]
    - Remove D, print D. Queue = [E]
-   - Remove E, print E. Queue is empty.
-   - BFS traversal: A, B, C, D, E
-   - Time complexity O(V + E) and space complexity O(V).
+   - Remove E, print E. Queue is now empty.
+
+   BFS traversal: A, B, C, D, E
+
+   Time complexity is O(V + E) and space complexity is O(V).
 
 7. **(খ) Node A থেকে শুরু করে নিম্নোক্ত গ্রাফটির DFS Traversal লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
-   Answer: DFS starts at A, goes as deep as possible along one branch, and backtracks when no unvisited neighbour is left. Neighbours are taken in alphabetical order.
+   Answer: DFS starts at A, goes as deep as possible along one branch, and comes back when no unvisited neighbour is left. Here neighbours are taken in alphabetical order.
 
    Using the standard graph:
 
@@ -727,14 +735,17 @@
        D --- E
    ```
 
-   - Visit A, push A. Go to its first unvisited neighbour B.
-   - Visit B, go to its unvisited neighbour D.
-   - Visit D, go to its unvisited neighbour C.
-   - Visit C, go to its unvisited neighbour E.
-   - Visit E. All neighbours of E are visited, so backtrack through C, D, B and A.
-   - DFS traversal: A, B, D, C, E
-   - Time complexity O(V + E) and space complexity O(V).
-   - Note: the figure was not printed in the collected question, so a standard graph is used to show the method.
+   - Visit A. Go to its first unvisited neighbour B.
+   - Visit B. Go to its unvisited neighbour D.
+   - Visit D. Go to its unvisited neighbour C.
+   - Visit C. Go to its unvisited neighbour E.
+   - Visit E. All neighbours of E are already visited, so come back through C, D, B and A.
+
+   DFS traversal: A, B, D, C, E
+
+   Time complexity is O(V + E) and space complexity is O(V).
+
+   Note: the figure was not printed in the collected question, so a standard graph is used to show the method.
 
 8. **Difference between depth first and breadth first search.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
 
@@ -743,11 +754,11 @@
    | Point | Depth First Search | Breadth First Search |
    |---|---|---|
    | Data structure | Stack or recursion | Queue |
-   | Order | Explores one branch fully, then backtracks | Explores all nodes of a level first |
-   | Memory | O(d), only the current path | O(b^d), the whole frontier |
+   | Order of visit | Finishes one branch fully, then comes back | Finishes all nodes of a level first |
+   | Memory | O(d), only the current path | O(b^d), the whole level |
    | Shortest path | Not guaranteed | Guaranteed in an unweighted graph |
    | Speed on deep goals | Faster | Slower |
-   | Risk | Can go infinitely deep without a depth limit | Can exhaust memory on wide graphs |
+   | Risk | Can go infinitely deep without a depth limit | Can run out of memory on wide graphs |
    | Uses | Cycle detection, topological sort, backtracking | Shortest path, level order, network broadcast |
 
 9. **(b) What are the main limitation of Depth First Search (DFS)? Is there any way to solve these issues?** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
@@ -756,27 +767,27 @@
 
    Limitations of DFS:
    - Not optimal. The path it finds first may be much longer than the shortest path.
-   - Not complete on infinite or very deep graphs, because it can keep going down one branch forever and never come back.
-   - It can get trapped in a cycle if visited nodes are not tracked.
-   - Recursion depth can cause a stack overflow on very deep graphs.
-   - Its performance depends heavily on the order in which neighbours are chosen.
+   - Not complete on an infinite or very deep graph. It can keep going down one branch forever and never come back.
+   - It can get stuck in a cycle if we do not keep track of visited nodes.
+   - Deep recursion can cause a stack overflow.
+   - Its result depends a lot on the order in which we pick the neighbours.
 
-   Solutions:
-   - Depth Limited Search: fix a maximum depth L so the search cannot go beyond it.
-   - Iterative Deepening DFS: run depth limited search with limit 0, 1, 2 and so on. It keeps the low memory of DFS and gains the completeness and optimality of BFS.
-   - Maintain a visited array so a node is never expanded twice, which removes the cycle problem.
-   - Use an explicit stack instead of recursion to avoid stack overflow.
-   - For weighted graphs use Uniform Cost Search or A* when the optimal path is required.
+   Ways to solve these issues:
+   - Depth Limited Search: fix a maximum depth L. The search cannot go past it.
+   - Iterative Deepening DFS: run depth limited search with limit 0, then 1, then 2, and so on. It keeps the low memory of DFS and gets the completeness and optimality of BFS.
+   - Keep a visited array, so a node is never opened twice. This removes the cycle problem.
+   - Use an explicit stack instead of recursion, to avoid stack overflow.
+   - For weighted graphs, use Uniform Cost Search or A* when we need the best path.
 
 10. **DFS complexity (Approximate)** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 718 (ET: N/A)]*
 
     Answer:
-    - Time complexity: O(V + E) with an adjacency list, and O(V²) with an adjacency matrix, where V is the number of vertices and E the number of edges.
-    - Space complexity: O(V) for the visited array and the recursion stack. In terms of branching factor and depth it is O(d), because only one path is stored at a time.
+    - Time complexity: O(V + E) with an adjacency list, and O(V²) with an adjacency matrix. Here V is the number of vertices and E is the number of edges.
+    - Space complexity: O(V) for the visited array and the recursion stack. If we write it using branching factor and depth, it is O(d), because only one path is stored at a time.
 
 11. **Follow alphabetical ordering while considering the order of nodes traversed. (Find BFS and DFS)** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823 (ET: BUET)]*
 
-    Answer: When several neighbours are available, the alphabetically smallest unvisited neighbour is taken first. Using the standard graph:
+    Answer: When several neighbours are available, we take the alphabetically smallest unvisited one first. Using the standard graph:
 
     ```mermaid
     graph LR
@@ -789,22 +800,23 @@
     ```
 
     BFS from A:
-    - Visit A, queue = [B, C]
+    - Visit A. Queue = [B, C]
     - Visit B, add D. Queue = [C, D]
     - Visit C, add E. Queue = [D, E]
-    - Visit D, then E.
+    - Visit D, then visit E.
     - BFS order: A, B, C, D, E
 
     DFS from A:
-    - Visit A, go to B (alphabetically first).
-    - From B go to D, from D go to C, from C go to E.
-    - Backtrack, all nodes visited.
+    - Visit A, go to B, because B comes first alphabetically.
+    - From B go to D. From D go to C. From C go to E.
+    - Come back. All nodes are now visited.
     - DFS order: A, B, D, C, E
-    - Note: the figure was not printed in the collected question, so a standard graph is used.
+
+    Note: the figure was not printed in the collected question, so a standard graph is used.
 
 12. **Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG. Now write a C/C++ Program with the following Input and Output. Input: 5 2, 5 0, 4 0, 4 1, 2 3, 3 1 Output: 5 4 2 3 1 0** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 831-833 (ET: N/A)]*
 
-    Answer: The DFS based method is used. Every vertex is visited depth first, and when a vertex has no unvisited neighbour left it is pushed onto a stack. Printing the stack from top to bottom gives the topological order.
+    Answer: We use the DFS based method. We visit every vertex depth first. When a vertex has no unvisited neighbour left, we push it onto a stack. Printing the stack from top to bottom gives the topological order.
 
     ```cpp
     #include <iostream>
@@ -859,16 +871,19 @@
     }
     ```
 
-    - Output: 5 4 2 3 1 0
-    - Every vertex is pushed only after all vertices reachable from it are already pushed, so it always appears before them when the stack is printed.
-    - Time complexity O(V + E) and space complexity O(V).
-    - Kahn's algorithm, which repeatedly removes vertices of in-degree zero using a queue, is the alternative BFS based method.
+    Output: 5 4 2 3 1 0
+
+    Why this works: a vertex is pushed only after every vertex reachable from it is already pushed. So when we print the stack from the top, that vertex always comes before them.
+
+    Time complexity is O(V + E) and space complexity is O(V).
+
+    Kahn's algorithm is the other method. It removes vertices of in-degree zero again and again, using a queue.
 
 13. **True false (DFS/ Directed graph related) [হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 858 (ET: N/A)]*
 
 14. **Draw BFS and DFS tree starting node A-** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 878 (ET: BUET)]*
 
-    Answer: A BFS tree keeps only the edges through which a node is first discovered during level order traversal, and a DFS tree keeps the edges through which a node is first discovered during depth first traversal.
+    Answer: A BFS tree keeps only the edges through which a node is first found during level order traversal. A DFS tree keeps the edges through which a node is first found during depth first traversal.
 
     Using the standard graph with edges A-B, A-C, B-D, C-D, C-E, D-E:
 
@@ -892,23 +907,25 @@
         C2 --> E2((E))
     ```
 
-    - In the BFS tree every node sits at its shortest distance from A, so the depth of the tree is small and wide.
-    - In the DFS tree the structure is long and narrow, because the search keeps going deeper before backtracking.
-    - Edges of the original graph that are not in the tree are called cross edges in BFS and back edges in DFS.
-    - Note: the figure was not printed in the collected question, so a standard graph is used.
+    - In the BFS tree every node sits at its shortest distance from A. So the tree is short and wide.
+    - In the DFS tree the shape is long and narrow, because the search keeps going deeper before coming back.
+    - The edges of the original graph that are not in the tree are called cross edges in BFS and back edges in DFS.
+
+    Note: the figure was not printed in the collected question, so a standard graph is used.
 
 15. **(c) Between Depths first search (DFS) and Breath first search (BFS). Which one is faster? Which one requires more memory?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
 
     Answer:
 
-    Which is faster:
-    - Both have the same time complexity O(V + E), so neither is faster in general.
-    - In practice DFS reaches the answer faster when the goal is deep in the graph, and BFS is faster when the goal is close to the source.
+    Which one is faster:
+    - Both have the same time complexity, O(V + E). So neither is faster in general.
+    - In real use, DFS reaches the answer faster when the goal is deep in the graph. BFS is faster when the goal is near the source.
 
-    Which needs more memory:
-    - BFS needs more memory. It must hold every node of the current level in the queue, so its space complexity is O(b^d), which grows exponentially with depth.
-    - DFS stores only the nodes on the current path, so its space complexity is O(d), which is far smaller.
-    - This is the main practical reason DFS is preferred on very large graphs, and BFS is preferred only when the shortest path is needed.
+    Which one needs more memory:
+    - BFS needs more memory. It must hold every node of the current level in the queue. So its space complexity is O(b^d), which grows very fast with depth.
+    - DFS keeps only the nodes on the current path. So its space complexity is O(d), which is much smaller.
+
+    This is the main practical reason why DFS is chosen for very large graphs, and BFS is chosen only when we need the shortest path.
 
 16. **Find the time and space complexity of BFS which has branch 4 branch and the target at level 5? If cpu can explore 10000 nodes per second find the time required and if the memory 1KB find the required memory.** *[NRCC Assistant Programmer 2021 compact it 931 (ET: N/A)]*
 
@@ -916,7 +933,8 @@
 
     Given: branching factor b = 4, goal depth d = 5, speed = 10,000 nodes per second, memory per node = 1 KB.
 
-    Formula: BFS generates every node up to level d, so the total number of nodes is
+    Formula: BFS makes every node up to level d. So the total number of nodes is
+
     N = b⁰ + b¹ + b² + ... + b^d = (b^(d+1) − 1) / (b − 1)
 
     Step 1: number of nodes at each level
@@ -929,29 +947,33 @@
 
     Step 2: total nodes
     - N = 1 + 4 + 16 + 64 + 256 + 1024 = 1365 nodes
-    - Cross check with the formula: (4⁶ − 1)/(4 − 1) = (4096 − 1)/3 = 4095/3 = 1365
+    - Check with the formula: (4⁶ − 1)/(4 − 1) = (4096 − 1)/3 = 4095/3 = 1365
 
     Step 3: time required
-    - Time = total nodes / speed = 1365 / 10000 = 0.1365 seconds
+    - Time = total nodes / speed
+    - = 1365 / 10000
+    - = 0.1365 seconds
 
     Step 4: memory required
-    - Memory = total nodes × 1 KB = 1365 KB
+    - Memory = total nodes × 1 KB
+    - = 1365 KB
     - = 1365 / 1024 = 1.333 MB approximately
 
-    Final answer: time complexity is O(b^d) = O(4⁵), space complexity is O(b^d), total nodes 1365, time required 0.1365 seconds and memory required about 1365 KB or 1.33 MB.
+    Final answer: time complexity is O(b^d) = O(4⁵), space complexity is O(b^d), total nodes are 1365, time needed is 0.1365 seconds, and memory needed is about 1365 KB or 1.33 MB.
 
 17. **Run the BFS algorithm from vertex 1 and draw the BFS tree.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033-1034 (ET: BUET)]*
 
-    Answer: BFS starts at vertex 1, visits all its direct neighbours, then their neighbours, using a queue. An edge is kept in the BFS tree only when it discovers a new vertex.
+    Answer: BFS starts at vertex 1, visits all its direct neighbours, then their neighbours, using a queue. We keep an edge in the BFS tree only when it finds a new vertex.
 
     Using the standard graph with edges 1-2, 1-3, 2-4, 3-4, 3-5, 4-6:
 
-    - Visit 1, queue = [2, 3]
+    - Visit 1. Queue = [2, 3]
     - Remove 2, visit it, add 4. Queue = [3, 4]
     - Remove 3, visit it, add 5. Queue = [4, 5]
     - Remove 4, visit it, add 6. Queue = [5, 6]
     - Remove 5, then remove 6. Queue is empty.
-    - BFS order: 1, 2, 3, 4, 5, 6
+
+    BFS order: 1, 2, 3, 4, 5, 6
 
     BFS tree:
 
@@ -964,10 +986,12 @@
         N4 --> N6((6))
     ```
 
-    - Level 0 holds vertex 1, level 1 holds 2 and 3, level 2 holds 4 and 5, level 3 holds 6.
-    - The edge 3-4 is not in the tree because 4 was already discovered through 2; it is a cross edge.
-    - Time complexity O(V + E) and space complexity O(V).
-    - Note: the figure was not printed in the collected question, so a standard graph is used.
+    - Level 0 has vertex 1. Level 1 has 2 and 3. Level 2 has 4 and 5. Level 3 has 6.
+    - The edge 3-4 is not in the tree, because 4 was already found through 2. Such an edge is called a cross edge.
+
+    Time complexity is O(V + E) and space complexity is O(V).
+
+    Note: the figure was not printed in the collected question, so a standard graph is used.
 
 ## Graph Algorithms (Shortest Path & Minimum Spanning Tree) (14)
 
