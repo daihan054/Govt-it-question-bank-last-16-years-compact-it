@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 62/206 sections**
+**Rewritten: 63/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -136,7 +136,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] data-structure.md — Data Structure Fundamentals (2)
 
 ## database.md — 19 sections
-- [ ] database.md — SQL Queries (71)
+- [x] database.md — SQL Queries (71)
 - [ ] database.md — DBMS Architecture & Features (22)
 - [ ] database.md — ER Diagram & Database Design (21)
 - [x] database.md — Keys in DBMS (21)
