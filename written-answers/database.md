@@ -4324,11 +4324,29 @@ SELECT count (*) FROM (
    Answer: The Entity Relationship model, proposed by Peter Chen in 1976, is a high level conceptual data model that describes the data requirements of a system in terms of entities, the attributes that describe them and the relationships between them, independently of any particular DBMS.
 
    Components of an E-R model:
-   - Entity: a real world object or concept about which data is stored, drawn as a rectangle. A strong entity has its own key; a weak entity, drawn as a double rectangle, depends on another entity for its identity.
-   - Attribute: a property of an entity, drawn as an ellipse. Types: simple and composite; single valued and multivalued, drawn as a double ellipse; derived, drawn as a dashed ellipse; and the key attribute, whose name is underlined.
-   - Relationship: an association between entities, drawn as a diamond. A relationship may itself carry descriptive attributes.
-   - Cardinality: one to one, one to many, many to one, or many to many, written on the connecting lines.
-   - Participation: total participation, shown by a double line, meaning every instance of the entity must take part; and partial participation, shown by a single line.
+   - Entity: a real world object, concept or thing about which we store data. Examples: a person, a car, a course. A strong entity has its own key attribute and does not depend on any other entity. A weak entity cannot be identified by its own attributes alone, so it depends on a strong entity.
+   - Entity set: the collection of all the entities of one type. An ER diagram shows the entity set and its structure, not the individual rows.
+   - Attribute: a property that defines the entity type. Types are: key attribute, which identifies each entity uniquely; composite attribute, which is made of several sub-attributes, such as an address made of street, city and country; multivalued attribute, which can hold several values for one entity, such as several phone numbers; and derived attribute, which is calculated from other attributes, such as age from date of birth.
+   - Relationship: the association between entity types. A relationship set is a set of relationships of the same type. A relationship may itself carry descriptive attributes.
+   - Degree of relationship, that is how many entity sets take part: unary or recursive with one, binary with two, ternary with three, and n-ary with n.
+   - Cardinality ratio: the maximum number of times an entity takes part in a relationship. One-to-one, for example one person and one passport. One-to-many, for example one department has many doctors. Many-to-one, for example many surgeries are done by one surgeon. Many-to-many, for example employees work on many projects and a project has many employees.
+   - Participation constraint: total participation means every entity of the set must take part in the relationship. Partial participation means an entity may or may not take part.
+
+   Notation symbols:
+
+   | Component | Symbol |
+   |---|---|
+   | Entity | Rectangle |
+   | Weak entity | Double rectangle |
+   | Attribute | Oval |
+   | Key attribute | Underlined oval |
+   | Composite attribute | An oval with smaller ovals joined to it |
+   | Multivalued attribute | Double oval |
+   | Derived attribute | Dashed oval |
+   | Relationship | Diamond |
+   | Identifying relationship, for a weak entity | Double diamond |
+   | Total participation | Double line |
+   | Partial participation | Single line |
 
    Example:
 
