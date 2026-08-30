@@ -1996,8 +1996,8 @@
    | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
    | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
    | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+   | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+   | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
    From top to bottom:
    - 7. Application
@@ -2020,8 +2020,8 @@
    | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
    | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
    | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+   | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+   | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
    Overall role of the seven layers:
    - They break a complex communication problem into small independent parts, so each part can be designed, understood and debugged separately.
@@ -2041,8 +2041,8 @@
    | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
    | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
    | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-   | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-   | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+   | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+   | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
    Function of each layer with an example:
    - Physical: sends raw bits as signals. Example, the electrical voltage on a UTP cable or the light pulse in a fibre; a hub works here.
@@ -2254,8 +2254,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
     From top to bottom:
     - 7. Application
@@ -2457,8 +2457,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 25. **In order to prevent that the company decided to add end to end encryption techniques which layer of the OSI model is suitable to work in considering parameters like development time, software maintainability and development cost, Give reasons for your concepts.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 438 (ET: BIBM)]*
 
 
@@ -2511,8 +2511,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
     How two computers exchange information using the OSI model:
     - The process is called encapsulation on the way down and decapsulation on the way up. Each layer on the sending machine talks logically to the same layer on the receiving machine, which is called peer to peer communication, but physically the data travels down the stack, across the medium and back up.
@@ -2567,8 +2567,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
     From top to bottom:
     - 7. Application
@@ -2636,8 +2636,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
     Example of each layer:
     - Physical: the voltage on a UTP cable, the light pulse in a fibre, or the radio signal of Wi-Fi. Devices: hub and repeater.
@@ -2674,8 +2674,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 35. **Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
 
@@ -2710,8 +2710,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 37. **What is OSI and TCP/IP model and briefly explain?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 870-872 (ET: N/A)]*
 
 
@@ -2727,8 +2727,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
     TCP/IP model:
     - The Internet protocol suite, developed by DARPA in the 1970s, is a four layer practical model built from protocols that already worked. It is what the Internet actually runs on.
@@ -2812,8 +2812,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
     Overall functionality of the model itself:
     - It provides a standard framework so that equipment and software from different vendors can interoperate.
@@ -2832,8 +2832,8 @@
     | 5 | Session | Establishes, manages and terminates sessions, dialogue control and synchronisation checkpoints | Data | NetBIOS, RPC, PPTP, SQL sessions |
     | 4 | Transport | End to end delivery between processes, segmentation and reassembly, port addressing, flow and error control | Segment for TCP, Datagram for UDP | TCP, UDP, SCTP; gateway |
     | 3 | Network | Logical addressing, routing between different networks, path selection, fragmentation | Packet | IP, ICMP, IGMP, OSPF, RIP, BGP; router, layer 3 switch |
-    | 2 | Data link | Framing, physical MAC addressing, error detection by CRC, flow control, medium access | Frame | Ethernet, PPP, HDLC, ARP, CSMA/CD; switch, bridge, NIC |
-    | 1 | Physical | Transmits raw bits as electrical, optical or radio signals; defines cables, connectors, voltage, data rate and topology | Bit | Ethernet physical layer, RS-232, DSL; hub, repeater, cable, connector |
+    | 2 | Data link | Gives reliable node to node delivery. It breaks data into frames with start and stop bits, uses MAC addresses for physical addressing, detects errors and asks for retransmission, and controls access to the medium so frames do not collide. It has two sublayers: LLC, which handles flow and error control, and MAC, which handles hardware addressing | Frame | Ethernet, PPP, PPTP, HDLC, ARP; switch, bridge, NIC |
+    | 1 | Physical | Sends raw bits as electrical, optical or radio signals. It gives bit synchronisation through a clock, sets the bit rate, and defines the topology (bus, star, mesh) and the transmission mode (simplex, half-duplex, full-duplex) | Bit | USB, SONET/SDH, RS-232, DSL; hub, repeater, modem, cable |
 
     Description of each layer:
     - Physical layer: converts bits into electrical, optical or radio signals and puts them on the medium. It defines the cable type, the connector, the voltage levels, the data rate and the physical topology. Devices: hub, repeater, cable.
