@@ -4982,10 +4982,11 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Point | TCP | UDP |
    |---|---|---|
    | Full form | Transmission Control Protocol | User Datagram Protocol |
+   | Definition | A reliable, connection oriented transport protocol. It makes sure the data arrives correctly and in the right order | A fast, connectionless transport protocol. It sends data with no guarantee of delivery |
    | Connection | Connection oriented, three way handshake before data | Connectionless, sends immediately |
    | Reliability | Reliable, acknowledgement and retransmission | Unreliable, fire and forget |
    | Ordering | In order delivery using sequence numbers | No ordering guarantee |
-   | Header size | 20 to 60 bytes | 8 bytes, fixed |
+   | Header size | Variable, 20 to 60 bytes | Fixed, 8 bytes |
    | Flow control | Yes, sliding window | No |
    | Congestion control | Yes, slow start and AIMD | No |
    | Error control | Checksum plus retransmission | Checksum only, bad datagrams are dropped |
@@ -5032,10 +5033,11 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Point | TCP | UDP |
    |---|---|---|
    | Full form | Transmission Control Protocol | User Datagram Protocol |
+   | Definition | A reliable, connection oriented transport protocol. It makes sure the data arrives correctly and in the right order | A fast, connectionless transport protocol. It sends data with no guarantee of delivery |
    | Connection | Connection oriented, three way handshake before data | Connectionless, sends immediately |
    | Reliability | Reliable, acknowledgement and retransmission | Unreliable, fire and forget |
    | Ordering | In order delivery using sequence numbers | No ordering guarantee |
-   | Header size | 20 to 60 bytes | 8 bytes, fixed |
+   | Header size | Variable, 20 to 60 bytes | Fixed, 8 bytes |
    | Flow control | Yes, sliding window | No |
    | Congestion control | Yes, slow start and AIMD | No |
    | Error control | Checksum plus retransmission | Checksum only, bad datagrams are dropped |
@@ -5101,10 +5103,11 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Point | TCP | UDP |
    |---|---|---|
    | Full form | Transmission Control Protocol | User Datagram Protocol |
+   | Definition | A reliable, connection oriented transport protocol. It makes sure the data arrives correctly and in the right order | A fast, connectionless transport protocol. It sends data with no guarantee of delivery |
    | Connection | Connection oriented, three way handshake before data | Connectionless, sends immediately |
    | Reliability | Reliable, acknowledgement and retransmission | Unreliable, fire and forget |
    | Ordering | In order delivery using sequence numbers | No ordering guarantee |
-   | Header size | 20 to 60 bytes | 8 bytes, fixed |
+   | Header size | Variable, 20 to 60 bytes | Fixed, 8 bytes |
    | Flow control | Yes, sliding window | No |
    | Congestion control | Yes, slow start and AIMD | No |
    | Error control | Checksum plus retransmission | Checksum only, bad datagrams are dropped |
@@ -5171,10 +5174,11 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Point | TCP | UDP |
    |---|---|---|
    | Full form | Transmission Control Protocol | User Datagram Protocol |
+   | Definition | A reliable, connection oriented transport protocol. It makes sure the data arrives correctly and in the right order | A fast, connectionless transport protocol. It sends data with no guarantee of delivery |
    | Connection | Connection oriented, three way handshake before data | Connectionless, sends immediately |
    | Reliability | Reliable, acknowledgement and retransmission | Unreliable, fire and forget |
    | Ordering | In order delivery using sequence numbers | No ordering guarantee |
-   | Header size | 20 to 60 bytes | 8 bytes, fixed |
+   | Header size | Variable, 20 to 60 bytes | Fixed, 8 bytes |
    | Flow control | Yes, sliding window | No |
    | Congestion control | Yes, slow start and AIMD | No |
    | Error control | Checksum plus retransmission | Checksum only, bad datagrams are dropped |
