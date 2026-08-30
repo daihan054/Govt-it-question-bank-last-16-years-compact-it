@@ -5559,9 +5559,10 @@ The content of the matrix. Need is defined to be Max – Allocation.
    | Optimal | 9 | 11/20 = 55 per cent |
 
    Conclusions to state:
-   - Optimal gives the fewest faults, as it must, since it is provably the best possible. It is not implementable, because it requires knowledge of future references.
-   - LRU performs well because it approximates Optimal by using the past as a predictor of the future, and it is implementable, though it needs hardware support such as a counter or a stack per frame.
-   - FIFO performs worst, because the age of a page in memory has little to do with how likely it is to be needed again. FIFO also suffers from Belady's anomaly, in which increasing the number of frames can increase the number of faults. LRU and Optimal belong to the class of stack algorithms and are free of this anomaly.
+   - Optimal replaces the page that will not be used for the longest time in the future. It gives the fewest faults, as it must, because it is provably the best possible. But we cannot actually build it, since the operating system cannot know future requests. We use it only as a benchmark, to judge how good the other algorithms are.
+   - LRU replaces the page that has not been used for the longest time in the past. It performs well, because it uses the past to guess the future, which is close to what Optimal does. We can build it, but it is more complex and more costly than FIFO, because it must record a timestamp on every single page access.
+   - FIFO keeps all the pages in a queue, with the oldest page at the front, and replaces that oldest page. It is the simplest, but it performs worst, because how long a page has been in memory says very little about whether it will be needed again. It replaces frequently used pages by mistake.
+   - Belady's anomaly: with FIFO, increasing the number of page frames can actually increase the page fault rate, instead of reducing it. That is the opposite of what we expect. LRU and Optimal are stack algorithms, and they never suffer from this anomaly.
    - The practical algorithms used in real systems are approximations of LRU: the second-chance or clock algorithm, and the enhanced clock algorithm that also considers the modify bit.
 2. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1422 (ET: E-Zone)]*
 
