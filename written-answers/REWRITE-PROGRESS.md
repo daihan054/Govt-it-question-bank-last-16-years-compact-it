@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 171/206 sections**
+**Rewritten: 172/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -195,7 +195,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] microprocessor-and-computer-architecture.md — Instruction Pipelining & Hazards (5)
 - [ ] microprocessor-and-computer-architecture.md — CPU Performance & Instruction Cycle (4)
 - [ ] microprocessor-and-computer-architecture.md — 8085 Microprocessor & Edge Computing (3)
-- [ ] microprocessor-and-computer-architecture.md — RISC vs CISC Architecture (2)
+- [x] microprocessor-and-computer-architecture.md — RISC vs CISC Architecture (2)
 
 ## oop.md — 9 sections
 - [x] oop.md — OOP Concepts (Inheritance & Polymorphism) (45)

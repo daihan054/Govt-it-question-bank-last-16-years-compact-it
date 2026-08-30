@@ -98,7 +98,8 @@
 
    | Point | RISC (Reduced Instruction Set Computer) | CISC (Complex Instruction Set Computer) |
    |---|---|---|
-   | Instruction set | Small, simple, about 100 instructions | Large, complex, several hundred instructions |
+   | Instruction set | Small and simple, about 100 instructions | Large and complex, several hundred instructions |
+   | Key idea | Fewer clock cycles per instruction, at the cost of more instructions in the program | Fewer instructions in the program, at the cost of more clock cycles per instruction |
    | Instruction length | Fixed length, typically 32 bits | Variable length, 1 to 15 bytes |
    | Execution time | Mostly one clock cycle per instruction | Several clock cycles per instruction |
    | Addressing modes | Few, typically 3 to 5 | Many, 12 to 20 or more |
@@ -2925,7 +2926,8 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
    | Point | RISC (Reduced Instruction Set Computer) | CISC (Complex Instruction Set Computer) |
    |---|---|---|
-   | Instruction set | Small, simple, about 100 instructions | Large, complex, several hundred instructions |
+   | Instruction set | Small and simple, about 100 instructions | Large and complex, several hundred instructions |
+   | Key idea | Fewer clock cycles per instruction, at the cost of more instructions in the program | Fewer instructions in the program, at the cost of more clock cycles per instruction |
    | Instruction length | Fixed length, typically 32 bits | Variable length, 1 to 15 bytes |
    | Execution time | Mostly one clock cycle per instruction | Several clock cycles per instruction |
    | Addressing modes | Few, typically 3 to 5 | Many, 12 to 20 or more |
@@ -3292,7 +3294,8 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
    Answer: RISC stands for Reduced Instruction Set Computer.
 
-   It is a processor design philosophy in which the instruction set is deliberately kept small and simple, so that each instruction can be executed quickly and the hardware can remain uncomplicated. The complexity that is removed from the hardware is transferred to the compiler.
+   RISC keeps the processor design simple by using a small, uniform set of instructions. Each instruction does one basic operation, such as load, compute or store, and it is designed to finish in a single clock cycle. The complexity taken out of the hardware is pushed into the compiler instead.
+   CISC does the opposite. It cuts the number of instructions a program needs, by using a large set of complex, variable length instructions. One single instruction there can do several operations.
 
    Two characteristics of RISC:
 
@@ -3315,7 +3318,8 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
    | Point | RISC (Reduced Instruction Set Computer) | CISC (Complex Instruction Set Computer) |
    |---|---|---|
-   | Instruction set | Small, simple, about 100 instructions | Large, complex, several hundred instructions |
+   | Instruction set | Small and simple, about 100 instructions | Large and complex, several hundred instructions |
+   | Key idea | Fewer clock cycles per instruction, at the cost of more instructions in the program | Fewer instructions in the program, at the cost of more clock cycles per instruction |
    | Instruction length | Fixed length, typically 32 bits | Variable length, 1 to 15 bytes |
    | Execution time | Mostly one clock cycle per instruction | Several clock cycles per instruction |
    | Addressing modes | Few, typically 3 to 5 | Many, 12 to 20 or more |
