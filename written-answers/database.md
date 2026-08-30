@@ -3402,7 +3402,10 @@ SELECT count (*) FROM (
    Client server system:
    - The work is divided between two kinds of machine. The client provides the user interface and performs some processing, and the server holds the data and provides services on request. They communicate over a network using a defined protocol.
    - Characteristics: the processing load is shared, so the server is relieved; clients can be added without redesigning the system; the server can be made redundant for availability; but the network becomes a dependency and the design is more complex.
-   - Architectures: two tier, in which the client talks directly to the database server; and three tier, in which a middle application server sits between them, which is the standard for web applications.
+   DBMS tier architectures:
+   - 1-tier: the user works directly with the database on the same machine. The client, the server and the database are all in one application. Used for personal or standalone work, such as MS Access. It is simple and cheap, and it suits small projects.
+   - 2-tier: a client-server model. The application on the client side talks directly to the database on the server side. It has a client layer, holding the user interface and the application programs, and a database layer, which stores and retrieves the data. Used for something like a library management system in a school.
+   - 3-tier: there is one more layer between the client and the server, so the client never talks to the database directly. It has a client layer, an application server as the middle layer, and a database layer. This separation gives better security and better scalability. Used for large web applications and e-commerce platforms.
    - Examples: a bank's branch terminals connecting to a core banking server, a web browser connecting to a web server, and any application using a database server.
 
    ```mermaid
