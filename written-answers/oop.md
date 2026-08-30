@@ -5941,16 +5941,22 @@ public:
 
    Interface compared with an abstract class:
 
-   | Point | Interface | Abstract class |
+   | Feature | Abstract class | Interface |
    |---|---|---|
-   | Methods | Abstract by default; default, static and private methods allowed since Java 8 and 9 | May have both abstract and concrete methods |
-   | Variables | Implicitly public, static and final, that is constants only | May have instance variables of any access level |
-   | Constructor | Not allowed | Allowed, and called by the subclass |
-   | Multiple inheritance | A class may implement any number of interfaces | A class may extend only one abstract class |
-   | Keyword to use it | implements | extends |
-   | Access modifiers on methods | Implicitly public | Any |
-   | Purpose | To define a capability or contract, a "can-do" relationship | To share common code in a family, an "is-a" relationship |
-   | When to choose | When unrelated classes must share a capability | When related classes share both state and code |
+   | Method implementation | Can have any number of fully written methods | Only default and static methods, from Java 8 onwards |
+   | Method access level | Methods may be private, protected or public | Methods are public by default. Private allowed from Java 9 |
+   | Variables | Variables may be given a value or left without one | Variables must be given a value at declaration. They are constants only |
+   | Object state | Can hold state, that is instance variables | Cannot hold state, only constants |
+   | Inheritance | Single inheritance. A class extends only one abstract class | Multiple inheritance. A class may implement many interfaces |
+   | Keyword to use it | `extends` | `implements` |
+   | Static methods | Allowed | Allowed from Java 8 |
+   | Final methods | Allowed, and they cannot be overridden | Not allowed |
+   | Constructor | Allowed, and the subclass calls it | Not allowed |
+   | Design purpose | Code reuse and base class design, an "is-a" relationship | Defining a contract or behaviour, a "can-do" relationship |
+   | Coupling | Leads to tighter coupling | Promotes loose coupling |
+   | Method overriding | Optional. Only the abstract methods must be overridden | Compulsory. All the abstract methods must be implemented |
+   | Performance | Slightly better, because there is less abstraction | Slightly more overhead |
+   | When to choose | When the classes are closely related | When the classes are unrelated but share a behaviour |
 
    Complete example implementing an interface:
 

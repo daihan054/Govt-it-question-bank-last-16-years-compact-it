@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 86/206 sections**
+**Rewritten: 87/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -206,7 +206,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] oop.md — Output Tracing & Recursion (3)
 - [ ] oop.md — Exception Handling (3)
 - [ ] oop.md — C++ OOP Concepts & Friend Functions (2)
-- [ ] oop.md — Interfaces & Abstract Classes (2)
+- [x] oop.md — Interfaces & Abstract Classes (2)
 
 ## operating-system.md — 12 sections
 - [ ] operating-system.md — Linux / Unix Commands & Administration (42)
