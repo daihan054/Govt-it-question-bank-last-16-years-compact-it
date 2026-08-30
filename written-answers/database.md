@@ -9881,14 +9881,16 @@ SELECT count (*) FROM (
 
    | Point | Database | Data Warehouse | Data Mining |
    |---|---|---|---|
-   | What it is | A system for storing and managing current operational data | A large central repository of historical data drawn from many sources | A process, not a store: the discovery of patterns in data |
-   | Purpose | Running the business day to day, that is OLTP | Analysing the business, that is OLAP | Predicting and discovering, that is knowledge extraction |
+   | Definition | A system for storing and managing current operational data | A database system designed for analytical work instead of transactional work | The process of analysing data patterns |
+   | Purpose | Running the business day to day, that is OLTP | Pulling together and storing data so that reporting is easier and faster, that is OLAP | Using pattern recognition logic to find patterns |
    | Data held | Current, detailed, frequently changing | Historical, summarised as well as detailed, non-volatile | Uses whatever the warehouse or database holds |
    | Operations | INSERT, UPDATE, DELETE, SELECT | Mostly SELECT, with periodic bulk loads | Algorithms: classification, clustering, association, regression |
-   | Design | Normalised to 3NF, to avoid redundancy | Deliberately denormalised, star or snowflake schema, for query speed |ical | Not applicable |
-   | Time span | Current values only | Years of history |ical | Not applicable |
-   | Query type | Simple, affecting few rows, very many per second | Complex, aggregating millions of rows, comparatively few |ical | Batch analytical processing |
-   | Users | Clerks, tellers, customers, applications | Analysts, managers, executives | Data scientists and analysts |
+   | Design | Normalised to 3NF, to avoid redundancy | Deliberately denormalised, star or snowflake schema, for query speed | Not applicable |
+   | Time span | Current values only | Years of history | Not applicable |
+   | Query type | Simple, affecting few rows, very many per second | Complex, aggregating millions of rows, comparatively few | Batch analytical processing |
+   | Who does it | Clerks, tellers, customers, applications | Engineers alone | Business users, with help from engineers |
+   | Functionality | Transaction processing | Subject oriented, integrated, time varying and non-volatile | Uses AI, statistics, databases and machine learning |
+   | Data handling | Records the current state | Pools all the relevant data together in one place | Pulls patterns out of a large dataset |
    | Updated | Continuously, in real time | Periodically, by an ETL process | Not applicable |
 
    Real world example, taking a bank:
