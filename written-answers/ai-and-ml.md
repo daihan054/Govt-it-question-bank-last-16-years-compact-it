@@ -326,68 +326,77 @@
    Answer:
 
    (i) Supervised learning
-   - We train the model on labelled data. Every input already has its correct output written with it.
-   - The model learns the link between input and output. Then it predicts the output for new, unseen data.
-   - Two types: classification (output is a category, like spam or not spam) and regression (output is a number, like price).
-   - Example: we give the model 10,000 old emails already marked spam or not spam. Now it can mark a new email.
+   - It learns from labelled data. Every input already carries its correct output.
+   - The model learns the link between input and output. Then it predicts the output for new data.
+   - Two types: classification, where the output is a category, and regression, where the output is a number.
+   - It needs a teacher, because the correct answers are supplied.
+   - Example: we give the model 10,000 old emails, each already marked spam or not spam. Now it can mark a new email.
 
    (ii) Unsupervised learning
-   - We train the model on unlabelled data. No correct answer is given.
-   - The model finds hidden groups or patterns on its own.
-   - Two types: clustering (K-Means, Hierarchical) and association (market basket analysis).
-   - Example: we give the model customer spending data with no groups marked. It makes groups like high spenders, normal spenders and inactive customers.
+   - It learns from unlabelled data. No correct answer is given.
+   - The model finds hidden structure or groups on its own.
+   - Two types: clustering, which makes groups, and association, which finds rules between items.
+   - Example: we give it customer spending data with no groups marked. It forms groups such as high spenders, normal spenders and inactive customers.
 
    (iii) Reinforcement learning
-   - An agent works inside an environment. It takes an action and gets a reward or a penalty.
-   - There is no labelled dataset. The agent learns by trial and error and tries to collect the highest total reward.
+   - An agent acts inside an environment. After each action it gets a reward or a penalty.
+   - There is no dataset. The agent learns by trial and error, and tries to collect the highest total reward.
    - Main parts: agent, environment, state, action, reward.
    - Example: a robot learns to walk. Each step forward gives a reward, each fall gives a penalty.
 
-   Comparison of the three:
+   Comparison:
 
    | Criteria | Supervised Learning | Unsupervised Learning | Reinforcement Learning |
    |---|---|---|---|
    | Definition | Learns from labelled data | Finds patterns in unlabelled data | Learns by acting inside an environment |
-   | Type of data | Labelled data | Unlabelled data | No dataset; it gets reward or penalty |
+   | Type of data | Labelled data | Unlabelled data | No dataset. It gets a reward or a penalty |
    | Type of problem | Classification, Regression | Clustering, Association | Step by step decision making |
-   | Supervision | Needs a teacher (the correct label) | No supervision | No supervision, only reward |
+   | Supervision | Needs a teacher, that is the correct label | No supervision | No supervision, only reward |
    | Algorithms | Decision Tree, SVM, KNN, Linear Regression | K-Means, Hierarchical, Apriori | Q-Learning, Deep Q-Network, SARSA |
-   | Goal | Predict the correct output | Find hidden groups or rules | Get the highest total reward |
+   | Goal | Predict the correct output | Find hidden groups or rules | Collect the highest total reward |
    | Applications | Medical diagnosis, fraud detection, spam filtering, price forecasting | Customer segmentation, anomaly detection | Self-driving cars, robotics, game AI |
 
 2. **a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
 
-   Answer: Data Mining is the process of finding useful patterns, relations and knowledge from a large amount of data. It uses statistics, machine learning and database techniques together. It is the main step of the KDD process (Knowledge Discovery in Databases).
+   Answer: Data Mining is the process of finding useful patterns and insights inside large datasets. It uses statistics, machine learning and computing techniques together.
 
-   In simple words: we have a mountain of data. Data mining digs into it and pulls out the useful facts.
+   Why we use it: an organisation studies its old data through data mining, and then takes decisions based on that data instead of on guesswork.
+
+   Main tasks of data mining:
+   - Classification and prediction: Bayes classification, rule based classification, k-nearest neighbour.
+   - Regression analysis: linear and multiple linear regression, support vector regression.
+   - Clustering: partitioning methods such as k-means, and hierarchical methods.
+   - Association rule mining: frequent pattern mining, Apriori algorithm, FP-Growth, market basket analysis.
+   - Outlier detection: finding records that do not fit the normal pattern.
 
    Supervised classification
-   - The training data is labelled. Every record already has its class written on it.
-   - The model learns the border between the classes. Then it puts a new record into one of those classes.
-   - Example: a bank has old loan records. Each record is marked "defaulter" or "non-defaulter". We train a decision tree on them. Now the tree can say whether a new applicant is risky.
+   - The training data is labelled. Every record already carries its class.
+   - The model learns the boundary between the classes. Then it puts a new record into one of them.
+   - The number of classes and their meaning are fixed before training.
+   - Example: a bank has old loan records, each marked "defaulter" or "non-defaulter". We train a decision tree on them. Now the tree can say whether a new applicant is risky.
 
-   Unsupervised classification (clustering)
+   Unsupervised classification, also called clustering
    - The data has no label. The algorithm groups the records only by how similar they are.
-   - Nobody tells it how many groups there are, or what each group means. It finds that from the data.
-   - Example: a bank runs K-Means on customer transaction data. It gets natural groups such as high value customers, regular customers and dormant customers. No one marked these groups first.
+   - Nobody tells it how many groups there are, or what each group means. It finds that from the data itself.
+   - Example: a bank runs K-Means on customer transaction data. It gets natural groups such as high value customers, regular customers and inactive customers. No one marked these groups first.
 
-   Main difference in one line: in supervised classification the classes are known before training. In clustering the groups come out of the data itself.
+   Main difference in one line: in supervised classification the classes are known before training, but in clustering the groups come out of the data itself.
 
 3. **Briefly explain supervised learning, unsupervised learning & reinforcement learning.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1341 (ET: N/A)]*
 
    Answer:
-   - Supervised learning: learns from labelled data where the correct answer is already known, and then predicts the answer for new input. Used in classification and regression. Example: spam filtering, house price prediction.
-   - Unsupervised learning: learns from unlabelled data and finds hidden groups or patterns by itself. Used in clustering and association. Example: grouping customers by spending habit.
-   - Reinforcement learning: an agent acts inside an environment, gets reward or penalty, and slowly learns the best way to act. Example: robots, game playing, automatic trading.
+   - Supervised learning: learns from labelled data, where the correct answer is already known. Then it predicts the answer for new input. Used for classification and regression. Example: spam filtering, house price prediction.
+   - Unsupervised learning: learns from unlabelled data and finds hidden groups or patterns by itself. Used for clustering and association. Example: grouping customers by spending habit.
+   - Reinforcement learning: an agent acts inside an environment, gets a reward or a penalty, and slowly learns the best way to act. Example: robots, game playing, automatic trading.
 
    | Criteria | Supervised Learning | Unsupervised Learning | Reinforcement Learning |
    |---|---|---|---|
    | Definition | Learns from labelled data | Finds patterns in unlabelled data | Learns by acting inside an environment |
-   | Type of data | Labelled data | Unlabelled data | No dataset; it gets reward or penalty |
+   | Type of data | Labelled data | Unlabelled data | No dataset. It gets a reward or a penalty |
    | Type of problem | Classification, Regression | Clustering, Association | Step by step decision making |
-   | Supervision | Needs a teacher (the correct label) | No supervision | No supervision, only reward |
+   | Supervision | Needs a teacher, that is the correct label | No supervision | No supervision, only reward |
    | Algorithms | Decision Tree, SVM, KNN, Linear Regression | K-Means, Hierarchical, Apriori | Q-Learning, Deep Q-Network, SARSA |
-   | Goal | Predict the correct output | Find hidden groups or rules | Get the highest total reward |
+   | Goal | Predict the correct output | Find hidden groups or rules | Collect the highest total reward |
    | Applications | Medical diagnosis, fraud detection, spam filtering, price forecasting | Customer segmentation, anomaly detection | Self-driving cars, robotics, game AI |
 
 4. **(b) What is the difference between supervised and unsupervised learning? Explain with examples.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)], [SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)], [DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
@@ -403,27 +412,28 @@
    | Algorithms | Decision Tree, SVM, KNN, Linear Regression | K-Means, Hierarchical clustering, Apriori |
    | Checking accuracy | Easy. Compare the prediction with the true label | Hard. There is no true answer to compare with |
    | Number of classes | Known before training | Not known. Found from the data |
+   | Complexity | Simpler | More complex |
 
    Example of supervised learning:
-   We have 10,000 old emails. Each one is already marked "spam" or "not spam". We train the model on them. Now when a new email comes, the model marks it. Here the label was given, so it is supervised.
+   We have 10,000 old emails. Each one is already marked "spam" or "not spam". We train the model on them. When a new email arrives, the model marks it. The label was given to us, so this is supervised.
 
    Example of unsupervised learning:
-   A bank has data of 50,000 customers, but no groups are marked. We run K-Means on it. The algorithm makes three groups by spending behaviour. Nobody told it about these groups, so it is unsupervised.
+   A bank has data on 50,000 customers, but no groups are marked. We run K-Means on it. The algorithm forms three groups by spending behaviour. Nobody told it about these groups, so this is unsupervised.
 
 5. **Given some features of diabetic patient dataset with some labeled data. From this it can be predict whether this patient is diabetic or not. Is this supervised learning or unsupervised learning problem. Explain in one sentence.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 
-   Answer: It is a supervised learning problem, and more exactly a binary classification problem, because the dataset already has labels showing which patient is diabetic and which is not, and the model learns from those labels to classify a new patient.
+   Answer: It is a supervised learning problem. More exactly, it is a binary classification problem, because the dataset already carries labels showing which patient is diabetic and which is not, and the model learns from those labels to classify a new patient.
 
 6. **What do you mean by machine learning? Name three machine learning application in our daily life?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 680 (ET: N/A)]*
 
-   Answer: Machine Learning is a branch of Artificial Intelligence. In it, a computer learns patterns from data and gets better at a job with experience. We do not write a fixed rule for every case.
+   Answer: Machine Learning is a branch of Artificial Intelligence. It lets a computer learn patterns from data and make predictions or decisions, without a human writing a rule for every case.
 
-   Simple example: to find spam, we do not write "if the subject has the word LOTTERY then it is spam". Instead we show the model thousands of old spam and non-spam emails, and it learns the pattern itself.
+   Simple example: to catch spam, we do not write "if the subject has the word LOTTERY then it is spam". Instead we show the model thousands of old spam and non-spam emails, and it learns the pattern itself.
 
    Three applications in daily life:
-   - Email spam filtering. Gmail looks at old mail patterns and puts new spam into the spam folder.
-   - Recommendation systems. YouTube, Netflix and Daraz show you videos or products that people like you also liked.
-   - Fraud detection. If your card is suddenly used in another country, the bank's model marks it as unusual and sends an alert.
+   - Email spam filtering: Gmail studies old mail patterns and moves new spam into the spam folder.
+   - Recommendation systems: YouTube, Netflix and Daraz show you videos or products that similar users also liked.
+   - Fraud detection: if your card is suddenly used in another country, the bank's model marks it as unusual and sends an alert.
 
 ## Model Evaluation & Datasets (5)
 
