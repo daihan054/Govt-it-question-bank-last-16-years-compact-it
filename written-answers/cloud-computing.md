@@ -520,22 +520,32 @@ A submarine cable connects Bangladesh to an international data center. At the ca
    Answer:
 
    What virtualisation is:
-   - Virtualisation is the creation of a software based, that is virtual, version of a physical resource such as a server, storage device, network or operating system, so that one physical resource can be presented as several independent logical ones.
-   - A hypervisor sits between the hardware and the virtual machines and allocates CPU, memory, storage and network to each. Type 1 or bare metal hypervisors run directly on the hardware, and Type 2 hypervisors run on top of a host operating system.
-   - Types: server virtualisation, storage virtualisation, network virtualisation including SDN and NFV, desktop virtualisation and application virtualisation.
+   - Virtualisation is the technology that powers cloud computing. It lets us create many simulated environments, called Virtual Machines, out of one physical hardware system. Before it existed, one server could run only one operating system and often only one task, which wasted most of the hardware.
+   - The architecture has three parts: the physical hardware, called the host, with its CPU, RAM, storage and network; the hypervisor, the software that creates and manages the VMs; and the virtual machine, called the guest, which runs its own OS and applications.
+   - The hypervisor gives hardware resources to each VM, and keeps the VMs separate from one another.
+
+   Two types of hypervisor:
+   - Type 1, bare metal: it installs straight on the physical hardware, with no host OS under it. It gives high performance through direct hardware access. Used in enterprise data centres and by cloud providers. Examples: VMware ESXi, Microsoft Hyper-V, the hypervisor behind AWS EC2.
+   - Type 2, hosted: it installs as an application on top of an existing OS such as Windows or macOS. Performance is lower, because every request must pass through the host OS first. Used for personal work and test labs. Examples: Oracle VirtualBox, VMware Workstation.
+
+   Types of virtualisation:
+   - Server virtualisation: divides one physical server into many virtual servers. Each one runs on its own, with its own OS, applications and resources. Different operating systems can run on the same hardware while sharing the CPU, RAM and storage.
+   - Application virtualisation: the application runs on a remote server instead of being installed on the local device. This makes deployment simpler and lets us reach the application from many devices.
+   - Network virtualisation: it separates network services such as routing, switching and firewall from the physical hardware. This gives software based network management, and forms Software Defined Networks (SDN). It improves scalability and security through segmentation.
+   - Desktop virtualisation: the user's desktop is hosted on a central server. The user reaches it remotely, from a thin client or any other device, from any place.
+   - Storage virtualisation: many physical storage devices are joined into one virtual storage pool, managed centrally. The user sees one storage system, while the data is actually spread across many disks and servers.
 
    Benefits of virtualisation:
 
-   - Server consolidation: many virtual machines run on one physical server, so utilisation rises from a typical 10 to 15 percent to 70 or 80 percent and far fewer machines are needed.
-   - Cost saving: less hardware means less capital expenditure, less rack space, less power and less cooling.
-   - Isolation: each VM is separated from the others, so a crash or a compromise in one does not affect the rest.
-   - Rapid provisioning: a new server is created from a template in minutes rather than weeks.
-   - Snapshots and rollback: the entire state of a machine can be saved before a risky change and restored instantly if it fails.
-   - Live migration: a running VM can be moved to another host with no downtime, allowing hardware maintenance during working hours.
-   - High availability and disaster recovery: VMs restart automatically on another host if one fails, and replication to a second site is straightforward.
-   - Hardware independence: a VM is just a set of files, so it runs on any host with the same hypervisor.
-   - Legacy support: an old operating system that no longer runs on modern hardware can continue inside a VM.
-   - Excellent for testing and development, since several operating systems can be tried on one machine and reset at will.
+   - Better hardware utilisation: many VMs run on one physical server, so utilisation rises from a typical 10 to 15 percent up to 70 or 80 percent.
+   - Reduced infrastructure cost: less hardware means less money spent, less rack space, less power and less cooling.
+   - Easy scalability and flexibility: we give a VM more CPU or memory with a setting change, not a hardware purchase.
+   - Improved isolation and security: each VM is kept apart from the others, so a crash or a break-in in one does not touch the rest.
+   - Faster deployment of servers: a new server is cloned from a template in minutes, instead of taking weeks to buy and install.
+   - It is the foundation of cloud services. AWS EC2, Azure VMs and Google Compute Engine are all built on virtualisation.
+   - Snapshots and rollback: we can save the whole state of a machine before a risky change, and restore it instantly if it fails.
+   - Live migration: a running VM moves to another host with no downtime, so hardware can be serviced during working hours.
+   - Legacy support: an old operating system that will not install on modern hardware still runs inside a VM.
 
    Top five virtual platform software:
    - VMware vSphere with ESXi, the enterprise market leader, a Type 1 hypervisor.
@@ -606,16 +616,15 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
    Benefits of a VM:
 
-   - Server consolidation: many virtual machines run on one physical server, so utilisation rises from a typical 10 to 15 percent to 70 or 80 percent and far fewer machines are needed.
-   - Cost saving: less hardware means less capital expenditure, less rack space, less power and less cooling.
-   - Isolation: each VM is separated from the others, so a crash or a compromise in one does not affect the rest.
-   - Rapid provisioning: a new server is created from a template in minutes rather than weeks.
-   - Snapshots and rollback: the entire state of a machine can be saved before a risky change and restored instantly if it fails.
-   - Live migration: a running VM can be moved to another host with no downtime, allowing hardware maintenance during working hours.
-   - High availability and disaster recovery: VMs restart automatically on another host if one fails, and replication to a second site is straightforward.
-   - Hardware independence: a VM is just a set of files, so it runs on any host with the same hypervisor.
-   - Legacy support: an old operating system that no longer runs on modern hardware can continue inside a VM.
-   - Excellent for testing and development, since several operating systems can be tried on one machine and reset at will.
+   - Better hardware utilisation: many VMs run on one physical server, so utilisation rises from a typical 10 to 15 percent up to 70 or 80 percent.
+   - Reduced infrastructure cost: less hardware means less money spent, less rack space, less power and less cooling.
+   - Easy scalability and flexibility: we give a VM more CPU or memory with a setting change, not a hardware purchase.
+   - Improved isolation and security: each VM is kept apart from the others, so a crash or a break-in in one does not touch the rest.
+   - Faster deployment of servers: a new server is cloned from a template in minutes, instead of taking weeks to buy and install.
+   - It is the foundation of cloud services. AWS EC2, Azure VMs and Google Compute Engine are all built on virtualisation.
+   - Snapshots and rollback: we can save the whole state of a machine before a risky change, and restore it instantly if it fails.
+   - Live migration: a running VM moves to another host with no downtime, so hardware can be serviced during working hours.
+   - Legacy support: an old operating system that will not install on modern hardware still runs inside a VM.
 6. **What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
 
