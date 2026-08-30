@@ -888,48 +888,54 @@
 
    | Point | Uninformed (Blind) Search | Informed (Heuristic) Search |
    |---|---|---|
-   | Extra knowledge | Knows nothing beyond the problem itself | Uses a heuristic that guesses the cost to the goal |
-   | Guidance | Searches blindly in a fixed order | Moves towards the most promising node |
-   | Efficiency | Visits many useless nodes | Visits far fewer nodes |
+   | Extra knowledge | Knows nothing beyond the problem definition | Uses a heuristic that guesses the cost to the goal |
+   | Guidance | Searches blindly, in a fixed order | Moves towards the most promising node |
+   | Efficiency | Opens many useless nodes | Opens far fewer nodes |
    | Time and memory | Generally high | Generally lower |
    | Completeness | BFS and UCS are complete | Complete if the heuristic is admissible |
-   | Optimality | BFS is optimal for equal cost, UCS is optimal | A* is optimal if the heuristic is admissible and consistent |
+   | Optimality | BFS is optimal when all costs are equal, UCS is always optimal | A* is optimal if the heuristic is admissible and consistent |
    | Examples | BFS, DFS, Depth Limited Search, Uniform Cost Search, Iterative Deepening | Greedy Best First Search, A* Search, AO* Search |
 
    About the heuristic:
    - h(n) is a guess of the cost from node n to the goal. Example: in a map problem, the straight line distance from a city to the destination.
-   - A* uses f(n) = g(n) + h(n). Here g(n) is the real cost already spent, and h(n) is the guessed cost still remaining. This is why A* is both fast and optimal.
+   - Admissible means the heuristic never guesses more than the real cost.
+   - A* uses f(n) = g(n) + h(n). Here g(n) is the real cost already spent, and h(n) is the guessed cost still left. This is why A* is both fast and optimal.
 
 ## Overfitting, Underfitting & Model Generalization (1)
 
 1. **In machine learning. What will happen, when a machine is highly trained up a slight trained up?** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 395 (ET: BUET)]*
 
-   Answer: If a model is trained too much it overfits. If it is trained too little it underfits. Both make the model perform badly on new data.
+   Answer: If we train a model too much it overfits. If we train it too little it underfits. Both make the model perform badly on new data.
 
-   Overfitting (highly trained up):
-   - The model memorises the training data, including its noise. It does not learn the general pattern.
-   - Training accuracy becomes very high, but validation and test accuracy fall.
-   - It has high variance and low bias.
-   - How to fix: stop training early, add more training data, use regularisation (L1 or L2), use dropout in neural networks, prune the decision tree, and use cross validation.
+   Overfitting, that is a highly trained up model
+   - The model learns too much from the training data. It also learns the noise and the outliers.
+   - It does very well on the training data, but badly on the test data.
+   - Bias and variance: low bias, high variance. High variance means the model reacts too strongly to the training data and treats noise as a real pattern.
+   - Reasons: the model is too complex, there are too many features, there is too little training data, and there is no regularisation.
+   - How to reduce it: collect more training data, use a simpler model, apply L1 or L2 regularisation, use dropout in neural networks, use early stopping, and remove noisy data.
 
-   Underfitting (slightly trained up):
-   - The model is too simple, or it was trained for too few rounds. So it cannot catch the pattern even in the training data.
-   - Both training accuracy and test accuracy stay low.
-   - It has high bias and low variance.
-   - How to fix: train longer, use a bigger model, add better features, and reduce regularisation.
+   Underfitting, that is a slightly trained up model
+   - The model is too simple to catch the important patterns in the data.
+   - It does badly on both the training data and the test data.
+   - Bias and variance: high bias, low variance. High bias means the model makes strong assumptions and ignores the real patterns.
+   - Reasons: the model is too simple, regularisation is too strong, the features are weak, and training was too short.
+   - How to reduce it: use a more complex model, add better features, reduce regularisation, train for more epochs, and scale the features properly.
 
    ```
-   Underfitting            Good fit               Overfitting
-   (high bias)                                   (high variance)
+   Underfitting              Good fit                 Overfitting
+   (high bias)                                      (high variance)
 
-     o   o                   o   o                  o   o
-   ---------              /‾‾‾‾‾‾\               /\  /\  /     o   o               /   o   o\             /  \/  \/                                                  (line touches every point)
+     o     o                  o     o                  o     o
+   ----------              /‾‾‾‾‾‾‾\               /\  /\  /     o     o              /   o   o  \             /  \/  \/                                                  (curve touches every point)
 
-   Training error: HIGH    Training error: LOW    Training error: VERY LOW
-   Test error:     HIGH    Test error:     LOW    Test error:     HIGH
+   Training error: HIGH      Training error: LOW      Training error: VERY LOW
+   Test error:     HIGH      Test error:     LOW      Test error:     HIGH
    ```
 
-   The aim is the middle case, called a good fit. There, training error and validation error are both low and close to each other. This balance is called the bias-variance tradeoff.
+   Bias-variance tradeoff:
+   - If we make the model more complex, bias falls but variance rises, so we risk overfitting.
+   - If we make the model simpler, variance falls but bias rises, so we risk underfitting.
+   - The goal is the balance point in the middle, called a good fit. There the training error and the validation error are both low and close to each other.
 
 ## Association Rule Learning (Market Basket Analysis) (1)
 
