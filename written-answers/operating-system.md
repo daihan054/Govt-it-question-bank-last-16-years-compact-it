@@ -2514,7 +2514,9 @@
    - When a process switches from the running state to the ready state, for example on a timer interrupt.
    - When a process switches from the waiting state to the ready state, for example on completion of input-output.
    - When a process terminates.
-   Scheduling only in the first and fourth cases is non-preemptive; scheduling in all four is preemptive.
+   Two types of scheduling:
+   - Non-preemptive: a switch happens only when the process finishes, or when it moves from running to waiting on its own. Once a process gets the CPU, it keeps it until it finishes or blocks. That is cases one and four.
+   - Preemptive: a switch can also happen when a process moves from running to ready, or from waiting to ready. The CPU can interrupt a running process. That is all four cases.
 
    The main criteria a scheduler tries to optimise:
    - CPU utilisation: keep the CPU as busy as possible; maximise.
@@ -2528,20 +2530,21 @@
 
    | Algorithm | Preemptive | Selection rule | Main advantage | Main drawback |
    |---|---|---|---|---|
-   | FCFS | No | Order of arrival | Simple and fair in order | Convoy effect; a long job delays everything behind it |
-   | SJF | No | Smallest burst time | Provably minimum average waiting time | Burst time must be known; long jobs starve |
-   | SRTF | Yes | Smallest remaining time | Even lower average waiting time | High context-switch overhead; starvation |
+   | FCFS | No | Order of arrival, like a queue | Simple, and no starvation | Large average waiting time. Convoy effect: one long job delays everything behind it |
+   | SJF | No | Smallest burst time first | Gives the minimum average waiting time | More complex than FCFS. Burst time must be known in advance. Long jobs can starve |
+   | SRTF | Yes | Smallest remaining time first. It is the preemptive form of SJF | Even lower average waiting time, because short jobs get preference | Long processes can starve. High context switch overhead. More complex to build |
    | Priority | Either | Highest priority | Important work first | Starvation of low-priority jobs; solved by ageing |
-   | Round Robin | Yes | Cyclic, one time quantum each | Fair, good response time | Higher average turnaround; quantum must be tuned |
+   | Round Robin | Yes | In arrival order, each process gets a fixed time quantum, then goes to the back of the queue | Fair to everyone, and no starvation. Good response time | Waiting time is larger than in SJF or Priority. The quantum size must be tuned carefully |
    | Multilevel Queue | Yes | Separate queue per class | Different policies for different classes | Rigid, processes cannot move between queues |
    | Multilevel Feedback Queue | Yes | Queues with promotion and demotion | Adapts to process behaviour | Complex to configure |
 
    Definitions used throughout:
-   - Arrival Time (AT): when the process enters the ready queue.
-   - Burst Time (BT): the CPU time the process needs.
-   - Completion Time (CT): when the process finishes.
-   - Turnaround Time (TAT) = CT - AT
-   - Waiting Time (WT) = TAT - BT
+   - Arrival Time (AT): the time at which the process arrives in the ready queue.
+   - Burst Time (BT): the time the process needs for CPU execution.
+   - Completion Time (CT): the time at which the process finishes its execution.
+   - Turnaround Time (TAT) = Completion Time − Arrival Time. It is the total time from arrival to finish.
+   - Waiting Time (WT) = Turnaround Time − Burst Time. It is how long the process sat in the ready queue.
+   - Response Time (RT): the time from submission until the first response is given. This matters most in an interactive system.
    - Response Time = time of first CPU allocation - AT
    - Average = the sum over all processes divided by the number of processes
 
@@ -2661,11 +2664,12 @@
    | P4 | 3 | 6 | 3 |
 
    Definitions used throughout:
-   - Arrival Time (AT): when the process enters the ready queue.
-   - Burst Time (BT): the CPU time the process needs.
-   - Completion Time (CT): when the process finishes.
-   - Turnaround Time (TAT) = CT - AT
-   - Waiting Time (WT) = TAT - BT
+   - Arrival Time (AT): the time at which the process arrives in the ready queue.
+   - Burst Time (BT): the time the process needs for CPU execution.
+   - Completion Time (CT): the time at which the process finishes its execution.
+   - Turnaround Time (TAT) = Completion Time − Arrival Time. It is the total time from arrival to finish.
+   - Waiting Time (WT) = Turnaround Time − Burst Time. It is how long the process sat in the ready queue.
+   - Response Time (RT): the time from submission until the first response is given. This matters most in an interactive system.
    - Response Time = time of first CPU allocation - AT
    - Average = the sum over all processes divided by the number of processes
 
@@ -2749,11 +2753,12 @@
    | P4 | 3 | 6 | 3 |
 
    Definitions used throughout:
-   - Arrival Time (AT): when the process enters the ready queue.
-   - Burst Time (BT): the CPU time the process needs.
-   - Completion Time (CT): when the process finishes.
-   - Turnaround Time (TAT) = CT - AT
-   - Waiting Time (WT) = TAT - BT
+   - Arrival Time (AT): the time at which the process arrives in the ready queue.
+   - Burst Time (BT): the time the process needs for CPU execution.
+   - Completion Time (CT): the time at which the process finishes its execution.
+   - Turnaround Time (TAT) = Completion Time − Arrival Time. It is the total time from arrival to finish.
+   - Waiting Time (WT) = Turnaround Time − Burst Time. It is how long the process sat in the ready queue.
+   - Response Time (RT): the time from submission until the first response is given. This matters most in an interactive system.
    - Response Time = time of first CPU allocation - AT
    - Average = the sum over all processes divided by the number of processes
 
