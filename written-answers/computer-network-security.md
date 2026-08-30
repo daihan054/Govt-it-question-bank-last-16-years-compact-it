@@ -4176,9 +4176,15 @@
 
    Answer: CIA in information security stands for Confidentiality, Integrity and Availability. These three are called the CIA triad and they are the fundamental objectives of every security control.
 
-   - Confidentiality: ensuring that information is accessible only to those who are authorised to see it. It is achieved through encryption in transit and at rest, access control and least privilege, authentication, data classification and physical security. It is broken by eavesdropping, data theft, a misconfigured public storage bucket, or an insider reading records they have no need to see.
-   - Integrity: ensuring that information is accurate and complete and has not been altered by anyone unauthorised, whether deliberately or accidentally. It is achieved through hashing, digital signatures, message authentication codes, checksums, version control, database constraints and audit logging. It is broken by tampering with a transaction, by a man in the middle altering data in transit, or by corruption during storage.
-   - Availability: ensuring that information and systems are accessible to authorised users whenever they are needed. It is achieved through redundancy, clustering, load balancing, backups, disaster recovery, DDoS protection, UPS and generators, and capacity planning. It is broken by a denial of service attack, ransomware, hardware failure, a power cut or a natural disaster.
+   - Confidentiality: it makes sure that sensitive data can be reached only by authorised people or systems.
+     - Threats: unauthorised access, where an attacker uses a weakness to break in. Weak or outdated encryption that can be cracked. Insider threats, where a trusted employee leaks or accidentally exposes data.
+     - Controls: strong encryption such as AES and RSA, VPNs that build an encrypted tunnel, and access control with strict authentication and authorisation, plus least privilege and data classification.
+   - Integrity: it makes sure the data stays accurate, genuine and unchanged, both while stored and while being sent.
+     - Threats: data tampering, where an attacker deliberately alters or corrupts the data. Malware and ransomware, which change, encrypt or destroy it.
+     - Controls: hash functions such as SHA-2 and SHA-3 detect any change. The process is simple: the sender computes a hash H1 and sends it with the data; the receiver recomputes the hash as H2; if H1 equals H2, the data was not touched. Also digital signatures, message authentication codes, version control and audit logging.
+   - Availability: it makes sure the systems, the network and the data are reachable by authorised users whenever they need them.
+     - Threats: DoS and DDoS attacks, which flood the network with traffic so real users cannot get through. Also hardware failure, power cuts and natural disasters.
+     - Controls: regular hardware maintenance and upgrades, keeping the software updated, failover plans with backup systems to cut downtime, and monitoring the traffic to stop bottlenecks. Also redundancy, load balancing, backups and DDoS protection.
 
    - The three are interdependent: security means holding all three at once, and protecting one at the expense of another is a failure rather than a trade-off. Data locked so tightly that the authorised user cannot reach it has failed just as completely as data left open to everyone.
    - Two further services are usually added to complete the set: authentication, which proves who a party is, and non-repudiation, which prevents a party from denying an action.
