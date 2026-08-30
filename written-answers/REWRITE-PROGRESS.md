@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 194/206 sections**
+**Rewritten: 195/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -179,7 +179,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 
 ## image-processing.md — 5 sections
 - [x] image-processing.md — Computer Graphics (Vector & Raster) (3)
-- [ ] image-processing.md — Color Models (1)
+- [x] image-processing.md — Color Models (1)
 - [ ] image-processing.md — Frequency Domain Filtering (1)
 - [ ] image-processing.md — Edge Detection (1)
 - [ ] image-processing.md — Morphological Operations (1)
