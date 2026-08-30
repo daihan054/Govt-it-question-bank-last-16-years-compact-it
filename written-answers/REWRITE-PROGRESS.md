@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 122/206 sections**
+**Rewritten: 123/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -120,7 +120,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] computer-networks.md — Analog Modulation & Radio Receivers (3)
 - [ ] computer-networks.md — Satellite Communication (3)
 - [ ] computer-networks.md — Line Coding & Digital Encoding (2)
-- [ ] computer-networks.md — Address Resolution (ARP & RARP) (2)
+- [x] computer-networks.md — Address Resolution (ARP & RARP) (2)
 - [x] computer-networks.md — VLANs & Subnetting Comparison (2)
 - [ ] computer-networks.md — Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (2)
 - [ ] computer-networks.md — High Availability & Redundancy Protocols (VRRP, HSRP) (1)
