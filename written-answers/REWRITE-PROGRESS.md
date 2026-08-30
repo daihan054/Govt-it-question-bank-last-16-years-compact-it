@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 88/206 sections**
+**Rewritten: 89/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -200,7 +200,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 ## oop.md — 9 sections
 - [x] oop.md — OOP Concepts (Inheritance & Polymorphism) (45)
 - [x] oop.md — Java Programming & Methods (11)
-- [ ] oop.md — Class Design & Object-Oriented Modeling (7)
+- [x] oop.md — Class Design & Object-Oriented Modeling (7)
 - [x] oop.md — Encapsulation & Access Modifiers (6)
 - [ ] oop.md — Constructors & Destructors (5)
 - [ ] oop.md — Output Tracing & Recursion (3)
