@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 156/206 sections**
+**Rewritten: 157/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -227,7 +227,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] software-engineering.md — Software Testing & Evaluation (33)
 - [x] software-engineering.md — Software Architecture & Design Patterns (MVC) (11)
 - [x] software-engineering.md — UML Diagrams (Class, Use Case, Sequence) (9)
-- [ ] software-engineering.md — Software Requirements Engineering (8)
+- [x] software-engineering.md — Software Requirements Engineering (8)
 - [ ] software-engineering.md — Software Project Management & Organization (7)
 - [ ] software-engineering.md — Software Design Principles (Coupling & Cohesion) (5)
 - [ ] software-engineering.md — Software Cost Estimation & Build vs Buy Decisions (4)
