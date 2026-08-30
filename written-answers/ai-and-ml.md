@@ -692,10 +692,10 @@
    Answer:
 
    How Generative AI can power the chatbot:
-   - A Large Language Model reads the citizen's question written in normal Bangla or English, and writes a human-like reply. It does not pick from a fixed list of canned answers.
-   - Retrieval Augmented Generation (RAG) is used. The model first searches the agency's own circulars, acts and forms. Then it writes the answer using only those documents. This keeps the reply tied to real policy and cuts down hallucination.
-   - Document summarisation lets a citizen get a short summary of a long gazette or policy paper.
-   - Multilingual support lets the same system serve both Bangla and English users.
+   - A Large Language Model reads the citizen's question written in normal Bangla or English, and writes a human-like reply. It does not pick from a fixed list of ready made answers.
+   - Retrieval Augmented Generation (RAG) is the key technique here. The system first searches the agency's own circulars, acts and forms. Then the model writes the answer using only those documents. RAG grounds the reply in real papers, so hallucination goes down sharply.
+   - Summarisation lets a citizen get a short summary of a long gazette or policy paper.
+   - Multilingual support lets the same system serve Bangla and English users.
    - Form filling help guides the citizen step by step through an application.
 
    ```mermaid
@@ -708,31 +708,43 @@
      A --> U
    ```
 
-   How Explainable AI keeps it transparent, reliable and accountable:
-   - Source citation: every reply shows which circular or section it came from, so the citizen can check it himself.
+   How Explainable AI makes it transparent, reliable and accountable:
+   - Source citation: every reply shows which circular or section it came from. The citizen can then check it himself.
    - Confidence score: when the model is not sure, it says so and passes the case to a human officer.
-   - Feature attribution using LIME or SHAP: these show which input words pushed the answer the most. Developers use this to audit the behaviour.
+   - Feature attribution with LIME or SHAP: these show which input words pushed the answer the most. Developers use this to audit the behaviour.
    - Highlighting the used text: the system shows which part of the retrieved document it actually used.
-   - Decision logging: every question and every reply is stored. So an audit can be done later and responsibility can be fixed.
-   - Human in the loop: for sensitive matters like legal or financial advice, a human officer checks before the reply goes out.
+   - Decision logging: every question and every reply is stored. So an audit can be done later, and responsibility can be fixed.
+   - Human in the loop: for sensitive matters such as legal or financial advice, a human officer checks the reply before it goes out.
 
-   In short, Generative AI gives the service its quality, and Explainable AI gives it the accountability that a government service must have.
+   In short: Generative AI gives the service its quality, and Explainable AI gives it the accountability that a government service must have.
 
 2. **b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1346 (ET: N/A)]*
 
    Answer:
 
-   Generative AI (GAI):
-   - It is the type of AI that creates new content, such as text, image, audio, video or code. Older AI only classified or predicted; this one produces something new.
-   - It learns the pattern of the training data and then makes new data that follows the same pattern.
-   - Main techniques: GAN (Generative Adversarial Network), VAE (Variational Autoencoder), Diffusion models, and Transformer based language models.
-   - Examples: ChatGPT for text, DALL-E and Midjourney for images, GitHub Copilot for code.
+   Generative AI (GAI)
+   - Generative AI is a type of artificial intelligence that creates new content, such as text, image, music or even code. It learns the patterns of existing data and then produces original output that looks human made.
+   - How it differs from traditional AI: older, discriminative AI only sorts data into classes, such as marking an email spam or not spam. Generative AI actually produces new data.
 
-   Large Language Models (LLMs):
-   - An LLM is a very large neural network built on the Transformer architecture. It is trained on a huge amount of text, and its basic job is to predict the next token.
+   Main model types:
+   - Transformer or autoregressive models: they predict the next token one at a time. Self attention lets the model see the whole input so far. GPT models work this way.
+   - Diffusion models: they start from pure random noise and slowly clean it up, step by step, until an image appears. Stable Diffusion and DALL·E work this way.
+   - GAN, Generative Adversarial Network: a generator and a discriminator train against each other. It gives sharp output, but training can be unstable.
+   - VAE, Variational Autoencoder: it compresses data into a small representation, which gives controlled generation.
+   - Encoder-decoder models: the encoder turns the input into a dense form, and the decoder writes the output. Good for translation and summarisation.
+
+   Large Language Models (LLMs)
+   - An LLM is a very large neural network built on the Transformer architecture. It is pre-trained on a huge amount of text by self-supervised learning, and its basic job is to predict the next token.
    - It has billions of parameters. From the training text it picks up grammar, facts and reasoning patterns.
-   - What it can do: answer questions, summarise, translate, generate code, and hold a conversation.
-   - Limitations: it can hallucinate, that is give a wrong answer with full confidence. It has a knowledge cutoff date. It can carry bias from its training data. And training and running it costs a lot.
+   - We can adapt an LLM by fine tuning, using methods such as LoRA, QLoRA and RLHF.
+   - We can also improve it with Retrieval Augmented Generation (RAG). There the model first fetches real documents and answers from them, which cuts down hallucination.
+   - What it can do: answer questions, summarise, translate, write code and hold a conversation.
+
+   Limitations:
+   - The output is only as good and as fair as the training data.
+   - It can give irrelevant results, and we have limited control over it.
+   - It needs huge computing power, so it is expensive.
+   - It raises worries about deepfakes, misinformation and privacy.
 
 3. **LLM stands for __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -743,17 +755,17 @@
    Answer: ChatGPT is a conversational AI system made by OpenAI. It is built on a Large Language Model of the GPT family. It takes a question in normal language and writes a human-like reply. It can also hold a long conversation, because it remembers the earlier messages of the same session.
 
    Pros:
-   - Answers questions in normal language and explains hard topics in a simple way.
-   - Available all day, replies at once, and can serve many users at the same time.
-   - Helps in writing letters, reports, summaries and code, so it saves time.
-   - Supports many languages, including Bangla.
-   - Useful for study, because it can give examples and step by step explanations.
+   - It answers questions in normal language and explains hard topics simply.
+   - It is available all day, replies at once, and serves many users at the same time.
+   - It helps in writing letters, reports, summaries and code, so it saves time.
+   - It supports many languages, including Bangla.
+   - It is useful for study, because it gives examples and step by step explanations.
 
    Cons:
    - It can hallucinate, that is give a wrong answer with full confidence.
-   - Its knowledge has a cutoff date, so very new events may be missing.
+   - Its knowledge has a cutoff date, so very recent events may be missing.
    - It can repeat the bias present in its training data.
-   - Privacy risk if someone types confidential official information into it.
+   - There is a privacy risk if someone types confidential official information into it.
    - Depending on it too much can weaken a person's own thinking and writing skill.
    - It does not really understand meaning. It only predicts the most likely next word.
 
