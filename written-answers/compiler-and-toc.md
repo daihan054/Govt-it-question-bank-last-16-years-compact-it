@@ -58,7 +58,9 @@
 3. **Design a DFA to accept floating-point numbers of the form +/- n or +/- n.m, where n and m are decimal integers (non-empty strings over the digits \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}).** *[EGCB Assistant Engineer (CSE) 2022 compact it 717 (ET: BUET)]*
 
 
-   Answer: The number has the form [+ | −] digits [ . digits ], where the sign is optional, the integer part is compulsory and non-empty, and the fractional part is optional but if the dot appears at least one digit must follow it.
+   Answer: A finite automaton is formally written as a 5-tuple {Q, Σ, q, F, δ}, where Q is the finite set of states, Σ is the set of input symbols, q is the initial state, F is the set of final states, and δ is the transition function δ: Q × Σ → Q.
+
+   The number here has the form [+ | −] digits [ . digits ]. The sign is optional. The integer part is compulsory and must not be empty. The fractional part is optional, but if the dot appears, at least one digit must follow it.
 
    States:
    - q0: start state, expects an optional sign or the first digit.
@@ -107,7 +109,9 @@
 4. **State diagram of DFA using binary strings having 0 with multiple of 3 on input \{0,1\}. Also showing regular expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 836-837 (ET: N/A)], [Janata Bank Assistant System Administrator 2021 compact it 938 (ET: N/A)]*
 
 
-   Answer: The DFA must accept every binary string in which the number of 0s is a multiple of 3, that is 0, 3, 6, and so on. The 1s are ignored, since only the count of 0s matters.
+   Answer: A DFA gives exactly one next state for each input symbol, so the next state is always uniquely decided. It has no ε (null) moves.
+
+   This DFA must accept every binary string in which the number of 0s is a multiple of 3, that is 0, 3, 6, and so on. The 1s are ignored, because only the count of 0s matters.
 
    States, according to the count of 0s modulo 3:
    - q0: the number of 0s read so far ≡ 0 (mod 3). This is the start state and the only accepting state, since 0 is itself a multiple of 3, so the empty string is accepted.
@@ -136,7 +140,8 @@
        q0 --> [*]
    ```
 
-   - Reading a 1 leaves the state unchanged, since it does not affect the count of 0s. Reading a 0 advances the state cyclically q0 → q1 → q2 → q0.
+   - Reading a 1 leaves the state unchanged, since it does not affect the count of 0s. Reading a 0 moves the state around the cycle q0 → q1 → q2 → q0.
+   - In the state diagram each state is a circle and each transition is a labelled arrow. The accepting state is drawn with a double circle. The diagram and the transition table carry exactly the same information, in two different forms.
 
    Regular expression:
    - `1* (0 1* 0 1* 0 1*)*`
@@ -197,7 +202,9 @@
 6. **Design a finite automaton for an elevator. The elevator can be at one of two floors: Ground or First. There is one button that controls the elevator, and it has two values: Up or Down. Also, there are two lights in the elevator that indicate the current floor: Red for Ground and Green for First.** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
 
 
-   Answer: The elevator is modelled as a Moore machine, since the output, that is the light, depends only on the current state, not on the input.
+   Answer: The elevator is modelled as a Moore machine, because the output, that is the light, depends only on the current state, not on the input.
+
+   A finite automaton is formally a 5-tuple {Q, Σ, q, F, δ}. A Moore machine adds an output alphabet and an output function to that.
 
    Formal definition:
    - States Q = {Ground, First}
