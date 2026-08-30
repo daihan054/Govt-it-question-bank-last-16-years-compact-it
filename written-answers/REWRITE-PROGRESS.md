@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 94/206 sections**
+**Rewritten: 95/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -217,7 +217,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] operating-system.md — Memory Management & Paging (13)
 - [ ] operating-system.md — Process Management & Process States (10)
 - [ ] operating-system.md — Concurrency, Threads & Synchronization (9)
-- [ ] operating-system.md — CPU Scheduling (6)
+- [x] operating-system.md — CPU Scheduling (6)
 - [ ] operating-system.md — Windows & System Administration (4)
 - [ ] operating-system.md — Process Synchronization & Concurrency (4)
 - [ ] operating-system.md — File Systems & Disk Management (4)
