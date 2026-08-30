@@ -2,11 +2,11 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 1/206 sections**
+**Rewritten: 2/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
-- [ ] ai-and-ml.md — Deep Learning & Neural Networks (ANN, CNN, RNN) (7)
+- [x] ai-and-ml.md — Deep Learning & Neural Networks (ANN, CNN, RNN) (7)
 - [ ] ai-and-ml.md — Machine Learning Paradigms (Supervised vs Unsupervised) (6)
 - [ ] ai-and-ml.md — Model Evaluation & Datasets (5)
 - [ ] ai-and-ml.md — Supervised Learning (Decision Trees) (4)
