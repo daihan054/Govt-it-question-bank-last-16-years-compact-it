@@ -2398,24 +2398,24 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1321 (ET: DU)]*
 
-   Answer: A min heap is a complete binary tree in which every parent node is smaller than or equal to both of its children, so the smallest value always sits at the root.
+   Answer: A min heap is a complete binary tree where every parent is smaller than or equal to both of its children. So the smallest value always sits at the root.
 
-   Index rule for an array based heap, using 0 based indexing:
+   Index rule for an array heap, using 0 based indexing:
    - Left child of index i is at 2i + 1
    - Right child of index i is at 2i + 2
    - Parent of index i is at (i − 1) / 2
 
    Inserting the values one by one: 12, 29, 33, 56, 66, 99, 100, 344
    - Insert 12: it becomes the root. Heap: 12
-   - Insert 29: placed as left child of 12. Since 29 > 12, no swap. Heap: 12, 29
-   - Insert 33: placed as right child of 12. Since 33 > 12, no swap. Heap: 12, 29, 33
-   - Insert 56: placed as left child of 29. Since 56 > 29, no swap. Heap: 12, 29, 33, 56
-   - Insert 66: placed as right child of 29. Since 66 > 29, no swap. Heap: 12, 29, 33, 56, 66
-   - Insert 99: placed as left child of 33. Since 99 > 33, no swap.
-   - Insert 100: placed as right child of 33. Since 100 > 33, no swap.
-   - Insert 344: placed as left child of 56. Since 344 > 56, no swap.
+   - Insert 29: goes as left child of 12. 29 > 12, so no swap. Heap: 12, 29
+   - Insert 33: goes as right child of 12. 33 > 12, so no swap. Heap: 12, 29, 33
+   - Insert 56: goes as left child of 29. 56 > 29, so no swap. Heap: 12, 29, 33, 56
+   - Insert 66: goes as right child of 29. 66 > 29, so no swap. Heap: 12, 29, 33, 56, 66
+   - Insert 99: goes as left child of 33. 99 > 33, so no swap.
+   - Insert 100: goes as right child of 33. 100 > 33, so no swap.
+   - Insert 344: goes as left child of 56. 344 > 56, so no swap.
 
-   Since the given values are already in ascending order, no heapify up operation is ever needed and the final array is unchanged.
+   The given values are already in increasing order. So we never need a heapify up, and the array stays unchanged.
 
    Final min heap array: 12, 29, 33, 56, 66, 99, 100, 344
 
@@ -2430,25 +2430,25 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
        D --> H((344))
    ```
 
-   Verification of the heap property:
-   - Node 12 has children 29 and 33, both larger.
-   - Node 29 has children 56 and 66, both larger.
-   - Node 33 has children 99 and 100, both larger.
+   Checking the heap property:
+   - Node 12 has children 29 and 33. Both are larger.
+   - Node 29 has children 56 and 66. Both are larger.
+   - Node 33 has children 99 and 100. Both are larger.
    - Node 56 has child 344, which is larger.
    - So the min heap property holds at every node.
 
-   Building a heap from n elements takes O(n) time, and each insertion takes O(log n).
+   Building a heap from n elements takes O(n) time. Each single insertion takes O(log n).
 
 2. **Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 427 (ET: BIBM)]*
 
-   Answer: A new item is inserted at the end of the heap and then moved upward until the max heap property is restored. This upward movement is called heapify up, sift up or percolate up.
+   Answer: We put the new item at the end of the heap and then move it upward until the max heap property is back. This upward movement is called heapify up, sift up or percolate up.
 
    Procedure:
-   - Increase the heap size by one and place the new key at the last position of the array, which keeps the tree complete.
-   - Compare the new key with its parent, found at index (i − 1) / 2.
-   - If the new key is greater than the parent, swap them.
+   - Increase the heap size by one and put the new key at the last array position. This keeps the tree complete.
+   - Compare the new key with its parent, which is at index (i − 1) / 2.
+   - If the new key is bigger than the parent, swap them.
    - Repeat the comparison at the new position, moving upward.
-   - Stop when the key is not greater than its parent, or when the root is reached.
+   - Stop when the key is not bigger than its parent, or when we reach the root.
 
    ```
    INSERT(H, key)
@@ -2461,16 +2461,16 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    ```
 
    Example: insert 45 into the max heap 50, 30, 40, 10, 20
-   - Place 45 at the end: 50, 30, 40, 10, 20, 45. Index of 45 is 5.
-   - Parent of index 5 is index 2, holding 40. Since 45 > 40, swap: 50, 30, 45, 10, 20, 40.
-   - New index is 2, parent is index 0 holding 50. Since 45 < 50, stop.
+   - Put 45 at the end: 50, 30, 40, 10, 20, 45. Index of 45 is 5.
+   - Parent of index 5 is index 2, which holds 40. Since 45 > 40, swap: 50, 30, 45, 10, 20, 40
+   - New index is 2. Its parent is index 0, which holds 50. Since 45 < 50, stop.
    - Final heap: 50, 30, 45, 10, 20, 40
 
-   Cost estimate:
+   Cost:
    - The item can move up at most the height of the tree, which is log₂n for a complete binary tree of n nodes.
-   - Each level costs one comparison and possibly one swap, that is O(1).
-   - Time complexity: O(log n) in the worst case, and O(1) in the best case when the new key is already smaller than its parent.
-   - Space complexity: O(1), because the insertion is done in place with only a few variables.
+   - Each level costs one comparison and maybe one swap, that is O(1).
+   - Time complexity: O(log n) in the worst case. O(1) in the best case, when the new key is already smaller than its parent.
+   - Space complexity: O(1). The insertion happens in place, using only a few variables.
 
 ## Graph Representation (Adjacency Matrix vs List) (2)
 
@@ -2487,22 +2487,22 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    | Remove an edge | O(degree of u) | O(1) |
    | Best for | Sparse graphs | Dense graphs |
 
-   Problems solved more efficiently with an adjacency list:
-   - BFS and DFS traversal, which take O(V + E) with a list but O(V²) with a matrix, because the matrix forces a scan of a whole row per vertex.
-   - Dijkstra's algorithm with a priority queue, O(E log V) with a list against O(V²) with a matrix.
-   - Kruskal's and Prim's MST algorithms, topological sorting and cycle detection, all of which iterate over edges.
-   - Any real world sparse graph such as a road network or a social network, where E is far smaller than V².
+   Problems solved better with an adjacency list:
+   - BFS and DFS traversal. These take O(V + E) with a list, but O(V²) with a matrix, because the matrix makes us scan a whole row for every vertex.
+   - Dijkstra's algorithm with a priority queue: O(E log V) with a list, against O(V²) with a matrix.
+   - Kruskal's and Prim's MST algorithms, topological sorting and cycle detection. All of these walk over the edges.
+   - Any real world sparse graph, such as a road network or a social network, where E is much smaller than V².
 
-   Problems solved more efficiently with an adjacency matrix:
-   - Checking whether a specific edge exists between two vertices, which is a single O(1) lookup.
-   - Floyd-Warshall all pairs shortest path, which is naturally written on a matrix and runs in O(V³).
+   Problems solved better with an adjacency matrix:
+   - Checking whether a certain edge exists between two vertices. That is a single O(1) lookup.
+   - Floyd-Warshall all pairs shortest path. It is naturally written on a matrix and runs in O(V³).
    - Transitive closure using Warshall's algorithm.
-   - Counting paths of a given length, done by matrix multiplication.
-   - Dense graphs where E approaches V², since then the matrix wastes no space.
+   - Counting paths of a given length, which is done by matrix multiplication.
+   - Dense graphs where E is close to V². Then the matrix wastes no space.
 
 2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
 
-   Answer: In heap numbering the children of vertex i are 2i and 2i + 1, so the complete binary tree on 7 vertices has the edges 1-2, 1-3, 2-4, 2-5, 3-6 and 3-7.
+   Answer: In heap numbering, the children of vertex i are 2i and 2i + 1. So the complete binary tree on 7 vertices has the edges 1-2, 1-3, 2-4, 2-5, 3-6 and 3-7.
 
    ```mermaid
    graph TD
@@ -2523,7 +2523,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - 6 → 3
    - 7 → 3
 
-   Equivalent adjacency matrix, where entry [i][j] is 1 if an edge exists between i and j:
+   Equivalent adjacency matrix. Entry [i][j] is 1 if there is an edge between i and j:
 
    |  | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
    |---|---|---|---|---|---|---|---|
@@ -2535,20 +2535,21 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    | 6 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
    | 7 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 
-   - The matrix is symmetric because the tree is undirected.
-   - It contains 12 ones, which is twice the number of edges, since a tree on 7 vertices has 6 edges.
-   - The matrix needs 7 × 7 = 49 cells while the list stores only 12 entries, which shows why a list suits a sparse structure like a tree.
+   Points to note:
+   - The matrix is symmetric, because the tree is undirected.
+   - It has 12 ones. That is twice the number of edges, since a tree on 7 vertices has 6 edges.
+   - The matrix needs 7 × 7 = 49 cells, but the list stores only 12 entries. This shows why a list suits a sparse structure like a tree.
 
 ## Divide and Conquer & Matrix Multiplication (1)
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
-   Answer: Block matrix multiplication, which is a divide and conquer method, is used. Each 16 × 16 matrix is divided into four 8 × 8 blocks, and the multiplication is then carried out using only 8 × 8 operations, which the processor supports.
+   Answer: We use block matrix multiplication, which is a divide and conquer method. We cut each 16 × 16 matrix into four 8 × 8 blocks. Then we do the whole multiplication using only 8 × 8 operations, which the processor supports.
 
    Partitioning:
-   - Matrix A is written as blocks A11, A12, A21, A22, each of size 8 × 8.
-   - Matrix B is written as blocks B11, B12, B21, B22, each of size 8 × 8.
-   - The result C is also formed of four 8 × 8 blocks C11, C12, C21, C22.
+   - Matrix A becomes blocks A11, A12, A21, A22, each 8 × 8.
+   - Matrix B becomes blocks B11, B12, B21, B22, each 8 × 8.
+   - The result C is also four 8 × 8 blocks: C11, C12, C21, C22.
 
    Block multiplication formulas:
    - C11 = A11 × B11 + A12 × B21
@@ -2557,10 +2558,10 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - C22 = A21 × B12 + A22 × B22
 
    Algorithm:
-   - Split both A and B into four 8 × 8 sub-matrices each, using simple index offsets, so no data is copied unnecessarily.
-   - Perform the 8 multiplications listed above, each being an 8 × 8 by 8 × 8 multiplication that the processor can execute.
-   - Perform the 4 additions of 8 × 8 matrices to combine the partial products.
-   - Assemble the four result blocks into the final 16 × 16 matrix C.
+   - Split A and B into four 8 × 8 sub-matrices each, using index offsets. So we do not copy data without need.
+   - Do the 8 multiplications listed above. Each one is an 8 × 8 by 8 × 8 multiplication, which the processor can run.
+   - Do the 4 additions of 8 × 8 matrices to join the partial products.
+   - Put the four result blocks together into the final 16 × 16 matrix C.
 
    ```
    MULTIPLY_16x16(A, B)
@@ -2576,20 +2577,20 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    ```
 
    Cost:
-   - 8 multiplications of size 8 × 8, each costing 8³ = 512 scalar multiplications, giving 4096 in total, which equals 16³ as expected.
-   - 4 additions of 8 × 8 matrices, each costing 64 additions.
+   - 8 multiplications of size 8 × 8. Each costs 8³ = 512 scalar multiplications. Total = 4096, which is the same as 16³, as expected.
+   - 4 additions of 8 × 8 matrices. Each costs 64 additions.
    - Recurrence: T(n) = 8T(n/2) + O(n²), which solves to O(n³).
 
    Improvement using Strassen's algorithm:
-   - Strassen computes the same result with only 7 multiplications instead of 8, by using 7 cleverly formed sums such as M1 = (A11 + A22)(B11 + B22).
+   - Strassen gets the same result with only 7 multiplications instead of 8. It uses 7 cleverly built sums, such as M1 = (A11 + A22)(B11 + B22).
    - The recurrence becomes T(n) = 7T(n/2) + O(n²), which solves to O(n^log₂7) = O(n^2.81).
-   - For this problem that means 7 multiplications of 8 × 8 instead of 8, at the cost of more additions.
+   - For this problem that means 7 multiplications of 8 × 8 instead of 8, but with more additions.
 
 ## Huffman Coding & Data Compression (1)
 
 1. **Huffman encoding draw huffman tree. Given word “CONNECTION”.** *[NPCBL Executive Trainee (IT) 2022 compact it 645 (ET: BUET)]*
 
-   Answer: Huffman coding is a greedy lossless compression method that gives shorter binary codes to more frequent characters and longer codes to rarer ones.
+   Answer: Huffman coding is a greedy lossless compression method. It gives short binary codes to characters that appear often, and long codes to characters that appear rarely.
 
    Step 1: count the frequency of each character in CONNECTION, which has 10 characters.
    - C = 2
@@ -2600,15 +2601,15 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - I = 1
    - Total = 2 + 2 + 3 + 1 + 1 + 1 = 10
 
-   Step 2: build the tree by repeatedly combining the two smallest frequencies.
+   Step 2: build the tree by joining the two smallest frequencies again and again.
    - Nodes available: E(1), I(1), T(1), C(2), O(2), N(3)
-   - Combine E(1) and I(1) into node X(2). Now: T(1), C(2), O(2), X(2), N(3)
-   - Combine T(1) and C(2) into node Y(3). Now: O(2), X(2), N(3), Y(3)
-   - Combine O(2) and X(2) into node Z(4). Now: N(3), Y(3), Z(4)
-   - Combine N(3) and Y(3) into node W(6). Now: Z(4), W(6)
-   - Combine Z(4) and W(6) into the root R(10). The tree is complete.
+   - Join E(1) and I(1) into node X(2). Now: T(1), C(2), O(2), X(2), N(3)
+   - Join T(1) and C(2) into node Y(3). Now: O(2), X(2), N(3), Y(3)
+   - Join O(2) and X(2) into node Z(4). Now: N(3), Y(3), Z(4)
+   - Join N(3) and Y(3) into node W(6). Now: Z(4), W(6)
+   - Join Z(4) and W(6) into the root R(10). The tree is done.
 
-   Step 3: assign 0 to every left branch and 1 to every right branch.
+   Step 3: put 0 on every left branch and 1 on every right branch.
 
    ```mermaid
    graph TD
@@ -2624,7 +2625,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
        Y --> C(("C 2"))
    ```
 
-   Step 4: read the codes from the root to each leaf.
+   Step 4: read the code from the root down to each leaf.
 
    | Character | Frequency | Code | Code length | Bits used |
    |---|---|---|---|---|
@@ -2635,33 +2636,33 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    | I | 1 | 001 | 3 | 3 |
    | T | 1 | 110 | 3 | 3 |
 
-   Step 5: calculate the compression.
+   Step 5: find the compression.
    - Total bits with Huffman coding = 6 + 4 + 6 + 3 + 3 + 3 = 25 bits
-   - With a fixed length code, 6 distinct characters need 3 bits each, so 10 × 3 = 30 bits
+   - With a fixed length code, 6 different characters need 3 bits each. So 10 × 3 = 30 bits
    - Saving = 30 − 25 = 5 bits, that is about 16.7 percent
 
-   - No code is a prefix of another code, which is the prefix property that makes decoding unambiguous.
-   - Time complexity of building the tree is O(n log n) using a min heap.
+   Points to note:
+   - No code is the starting part of another code. This is the prefix property, and it is what makes decoding unambiguous.
+   - Building the tree takes O(n log n) time using a min heap.
 
 ## NP-Completeness & Complexity Reduction (1)
 
 1. **A reduces to B Polynomial time. Which is better and why?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
 
-   Answer: The notation A ≤p B means problem A reduces to problem B in polynomial time, that is any instance of A can be converted into an instance of B in polynomial time, and the answer to B gives the answer to A.
+   Answer: The notation A ≤p B means problem A reduces to problem B in polynomial time. That is, we can turn any instance of A into an instance of B in polynomial time, and the answer to B then gives us the answer to A.
 
    What the reduction tells us:
-   - B is at least as hard as A. Solving B is enough to solve A, so B carries all the difficulty of A and possibly more.
-   - A is no harder than B, so A is the easier or equally easy problem.
+   - B is at least as hard as A. If we can solve B, we can solve A. So B carries all the difficulty of A, and maybe more.
+   - A is no harder than B. So A is the easier problem, or equally easy.
 
    Which one is better, and why:
-   - If the aim is to find an efficient algorithm, then having a solution for B is better, because a polynomial time algorithm for B automatically gives a polynomial time algorithm for A. One solution serves both problems.
-   - If the aim is easy solvability, then A is better, because A is the easier problem. Even if B turns out to be intractable, A may still have a fast direct algorithm.
+   - If we want an efficient algorithm, then having a solution for B is better. A polynomial time algorithm for B gives us a polynomial time algorithm for A for free. One solution covers both problems.
+   - If we want a problem that is easy to solve, then A is better, because A is the easier one. Even if B turns out to be very hard, A may still have a fast direct algorithm.
 
-   Two standard consequences:
-   - If B is in P, then A is also in P, since the reduction plus the algorithm for B is still polynomial.
-   - If A is NP-hard, then B is also NP-hard, because a fast algorithm for B would give a fast algorithm for a known hard problem.
+   Two standard results that follow:
+   - If B is in P, then A is also in P. The reduction plus the algorithm for B is still polynomial.
+   - If A is NP-hard, then B is also NP-hard. A fast algorithm for B would give a fast algorithm for a known hard problem.
 
-   Example: 3-SAT reduces to the Clique problem in polynomial time. Since 3-SAT is NP-complete, this proves Clique is NP-hard as well.
+   Example: 3-SAT reduces to the Clique problem in polynomial time. 3-SAT is NP-complete, so this proves that Clique is NP-hard too.
 
-   Summary: the reduction A ≤p B transfers easiness downward from B to A, and hardness upward from A to B.
-
+   In one line: the reduction A ≤p B passes easiness downward from B to A, and hardness upward from A to B.
