@@ -2346,6 +2346,8 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - Let pos[1] = 0 and pos[i] = pos[i−1] + P[i−1]. So pos[i] is the distance of station M_i from the starting point.
    - The condition is: for any two chosen stations i and j with i < j, pos[j] − pos[i] must be at least K.
 
+   Why dynamic programming fits: the problem has optimal substructure, because the best answer for the first i stations is built from the best answer for some earlier station j. It also has overlapping subproblems, because the same dp[j] is needed by many later stations.
+
    DP formulation:
    - Let dp[i] = the maximum number of repeaters we can install among the first i stations, given that a repeater is installed at station i.
    - Recurrence: dp[i] = 1 + max{ dp[j] } for all j < i where pos[i] − pos[j] ≥ K.
@@ -2372,31 +2374,38 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - The double loop gives O(n²) time and O(n) space.
    - pos[] is already in increasing order. So we can find the largest valid j by binary search. That brings the time down to O(n log n).
 
-   Note: the stations lie on a straight line. So the greedy rule of always taking the earliest station that is at least K away from the last chosen one also gives the same optimal count, and it runs in O(n).
+   Note: the stations lie on a straight line, so the greedy rule of always taking the earliest station that is at least K away from the last chosen one also gives the same optimal count, and it runs in O(n).
 
 2. **What is Dynamic programming? Explain with example.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 474 (ET: N/A)]*
 
-   Answer: Dynamic Programming is a technique where we break a hard problem into smaller overlapping subproblems. We solve each subproblem only once and store its result. Later, when the same subproblem comes again, we just read the stored value instead of computing it again.
+   Answer: Dynamic Programming is a method for solving a hard problem by breaking it into smaller overlapping subproblems, and storing their results so we never compute the same thing twice.
 
-   Two conditions must hold before we can use DP:
-   - Optimal substructure: the best solution of the problem is built from the best solutions of its subproblems.
-   - Overlapping subproblems: the same subproblem comes up many times during the recursion.
+   The main idea: remember the answers we already found. This turns an exponential time recursive solution into a polynomial time solution.
 
-   Two ways to write it:
-   - Top down with memoization: write the normal recursion, but store each computed result in a table. When the same call comes again, return the stored value.
-   - Bottom up with tabulation: fill the table from the smallest subproblem up to the one we need, using loops instead of recursion.
+   Two properties a problem must have before we can use DP:
+   - Optimal substructure: we use the optimal results of the subproblems to build the optimal result of the bigger problem. Example: the minimum cost path between two nodes can be broken into optimal paths through the middle nodes.
+   - Overlapping subproblems: the same subproblems are solved again and again in different parts of the problem. Example: computing F(5) needs F(3) several times, in different branches of the recursion tree.
+
+   Two ways to implement DP:
+
+   | Point | Memoization (top down) | Tabulation (bottom up) |
+   |---|---|---|
+   | Style | Keeps the recursion, and adds a lookup table | Iterative, uses loops, no recursion |
+   | How it works | Before each recursive call, check whether the answer is already in the memo array. If yes, return it. If no, compute it, store it, and return it | Fill the base cases first, then fill the rest of the table using the recurrence |
+   | Order of solving | Only the subproblems actually needed | All the subproblems, from the smallest upward |
+   | Stack space | Uses recursion stack | No recursion stack |
 
    Example: Fibonacci numbers
-   - Plain recursion: fib(n) = fib(n−1) + fib(n−2). To find fib(5), the call fib(3) happens twice and fib(2) happens three times. So the work grows as O(2ⁿ).
-   - Dynamic programming: keep an array F, where F[0] = 0, F[1] = 1, and F[i] = F[i−1] + F[i−2] for i from 2 to n.
-   - For n = 6 the table becomes 0, 1, 1, 2, 3, 5, 8. Each entry is computed exactly once.
-   - Time drops from O(2ⁿ) to O(n). Space is O(n), and we can cut it to O(1) by keeping only the last two values.
+   - Brute force recursion: computing F(5) takes about O(2ⁿ) operations, because F(2) and F(3) are computed many times over.
+   - With memoization or tabulation: each Fibonacci number is computed exactly once and then reused. So the time drops to O(n).
+   - For n = 6 the table is 0, 1, 1, 2, 3, 5, 8.
+   - Space optimisation: we only ever need the last two values, so two variables can replace the array, and the space drops to O(1).
 
    Other classic DP problems: 0/1 Knapsack, Longest Common Subsequence, matrix chain multiplication, Floyd-Warshall and Bellman-Ford.
 
 3. **The maximum subarray is the task of finding a contiguous subarray with the largest sum within a given one dimentional array of numbers. Suppose the array is: A: [-2, 1, -3, -1, 2, 1, -5, 4]** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 448 (ET: BUET)]*
 
-   Answer: We use Kadane's algorithm. It goes through the array once. It keeps two things: the best sum ending at the current position, and the best sum found so far.
+   Answer: We use Kadane's algorithm. It scans the array once, keeping two things: the best sum ending at the current position, and the best sum found so far.
 
    Rule at each element: current = max(A[i], current + A[i]), then best = max(best, current)
 
@@ -2449,22 +2458,23 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    ```
 
    How it works:
-   - This is the bottom up, or tabulation, method. Each Fibonacci value is computed exactly once and stored. Nothing is computed twice.
+   - This is the bottom up, or tabulation, method. We fill the base cases first, then fill the rest of the table using the recurrence.
+   - Each Fibonacci number is computed exactly once and stored. Nothing is computed twice.
    - Trace for n = 6: F[0] = 0, F[1] = 1, F[2] = 1, F[3] = 2, F[4] = 3, F[5] = 5, F[6] = 8
-   - Space saving version: we only ever need the last two values. So two variables can replace the whole array.
+   - Space saving version: we only ever need the last two values, so two variables can replace the whole array.
 
 5. **What will be the time and space complexity of the above algorithm?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
    Answer:
 
    For the dynamic programming Fibonacci algorithm:
-   - Time complexity: O(n). The loop runs from 2 to n exactly once, and each step does one addition. So the number of operations grows in a straight line with n.
+   - Time complexity: O(n). The loop runs from 2 to n exactly once, and each turn does one addition. So the work grows in a straight line with n.
    - Space complexity: O(n), because the array F holds n + 1 values.
-   - Space saving version: if we keep only F[i−1] and F[i−2] in two variables, the space drops to O(1) while the time stays O(n).
+   - Space optimised version: if we keep only F[i−1] and F[i−2] in two variables, the space drops to O(1), while the time stays O(n).
 
    Comparison with plain recursion:
    - Plain recursion takes O(2ⁿ) time and O(n) stack space, because it solves the same subproblems again and again.
-   - So dynamic programming brings the time down from exponential to linear. That is the main benefit of storing subproblem results.
+   - So dynamic programming brings the time down from exponential to linear. That is the whole benefit of storing the subproblem results.
 
 ## Heap & Priority Queue (2)
 
