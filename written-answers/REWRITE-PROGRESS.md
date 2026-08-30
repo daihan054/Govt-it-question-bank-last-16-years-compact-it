@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 9/206 sections**
+**Rewritten: 10/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -14,7 +14,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] ai-and-ml.md — Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)
 - [x] ai-and-ml.md — Search Algorithms (Informed vs Uninformed Search) (1)
 - [x] ai-and-ml.md — Overfitting, Underfitting & Model Generalization (1)
-- [ ] ai-and-ml.md — Association Rule Learning (Market Basket Analysis) (1)
+- [x] ai-and-ml.md — Association Rule Learning (Market Basket Analysis) (1)
 - [ ] ai-and-ml.md — Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
 ## algorithm.md — 14 sections

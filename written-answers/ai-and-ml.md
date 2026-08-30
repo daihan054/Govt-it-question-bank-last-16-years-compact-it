@@ -941,33 +941,41 @@
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1364 (ET: BUET)]*
 
-   Answer: The Apriori algorithm is suitable for Market Basket Analysis. It is an association rule learning method, and it comes under unsupervised learning. For very large datasets, FP-Growth is a faster choice.
+   Answer: The Apriori algorithm is suitable. It is an association rule mining technique, and it comes under unsupervised learning. It finds items that often appear together in a large dataset. For very large datasets, FP-Growth is a faster choice.
 
    Three measures used:
-   - Support: how often an itemset appears.
-     Support(A) = number of transactions containing A / total transactions
-   - Confidence: how often B is bought when A is bought.
-     Confidence(A→B) = Support(A ∪ B) / Support(A)
-   - Lift: how much more likely B becomes when A is present, compared to chance.
-     Lift(A→B) = Confidence(A→B) / Support(B)
-     A lift above 1 means there is a real positive link.
 
-   Steps of the Apriori algorithm:
-   - Fix a minimum support and a minimum confidence value.
-   - Scan the transaction database and count the support of every single item. These are the 1-itemsets.
-   - Drop the items whose support is below the minimum. Keep only the frequent 1-itemsets.
-   - Join the frequent 1-itemsets to make candidate 2-itemsets. Count their support and drop the infrequent ones.
-   - Repeat this join and prune step for 3-itemsets, 4-itemsets and so on, until no new frequent itemset is found.
-   - From each frequent itemset, make all possible association rules.
-   - Keep only the rules whose confidence is above the minimum. Then rank them by lift.
+   Support: how often an item or a group of items appears.
+
+   Support(X) = number of transactions containing X / total number of transactions
+
+   Confidence: the chance that Y is bought when X is bought.
+
+   Confidence(X → Y) = Support(X ∪ Y) / Support(X)
+
+   Lift: whether X and Y appear together more often than pure chance would give.
+
+   Lift(X → Y) = Confidence(X → Y) / Support(Y)
+
+   A lift above 1 means there is a real positive link.
+
+   The Apriori property, which is the pruning rule:
+   - If a group of items is not frequent, then any bigger group containing those items cannot be frequent either.
+   - So we can skip checking those bigger groups. This is what makes the algorithm fast.
+
+   Steps of the algorithm:
+   - Step 1: fix a minimum support and a minimum confidence value. Count how often each single item appears, and keep only the items that pass the minimum support. These are the frequent 1-itemsets.
+   - Step 2: join the frequent items to make pairs, that is 2-itemsets. Count the support of each pair.
+   - Step 3: remove the pairs that fail the minimum support, using the pruning rule. Then repeat step 2 and step 3 for 3-itemsets, 4-itemsets and so on, until no new frequent itemset is found.
+   - Step 4: make association rules from the frequent itemsets. Keep only the rules that pass the minimum confidence, and rank them by lift.
 
    ```mermaid
    flowchart TD
      A[Transaction database] --> B[Count support of 1-itemsets]
      B --> C{Support >= min_support?}
      C -->|No| D[Prune]
-     C -->|Yes| E[Frequent 1-itemsets]
-     E --> F[Join to make candidate 2-itemsets]
+     C -->|Yes| E[Frequent itemsets]
+     E --> F[Join to make bigger candidate itemsets]
      F --> G[Count support and prune]
      G --> H{Any new frequent itemset?}
      H -->|Yes| F
@@ -977,9 +985,20 @@
      J -->|No| D
    ```
 
-   The Apriori property, which makes the pruning possible: if an itemset is frequent, then all its subsets must also be frequent. So if {bread} is not frequent, we do not even need to check {bread, milk}.
+   Worked example, a grocery shop with 5 transactions of Bread, Butter and Milk:
+   - Minimum support = 50%, so an itemset must appear in at least 3 transactions.
+   - Minimum confidence = 70%.
+   - Step 1: all three items pass, so all are frequent 1-itemsets.
+   - Step 2: we test three pairs, {Bread, Butter}, {Bread, Milk} and {Butter, Milk}. Only {Bread, Milk} passes the 50% support. The other two are removed.
+   - Step 3: only one frequent 2-itemset is left, so no 3-itemset can be made. We stop.
+   - Step 4: we test the rules.
+     - Bread → Butter: confidence 50%. It fails.
+     - Butter → Bread: confidence about 67%. It fails.
+     - Bread → Milk: confidence 75%. It passes.
 
-   Example: if the rule {bread, butter} → {milk} has support 20%, confidence 70% and lift 1.5, then the shop can keep milk near bread and butter, or give a combo discount.
+   Final rule: Bread → Milk.
+
+   What the shop does with it: keep the milk near the bread, or offer a combo discount on bread and milk.
 
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
@@ -987,13 +1006,13 @@
 
    Answer:
 
+   In agglomerative hierarchical clustering, every point starts as its own cluster. Then we join the two closest clusters, again and again. In single linkage, the distance between two clusters is the distance between their two nearest points.
+
    Formula: the Euclidean distance between two points is
 
    d(A, B) = √[(x2 − x1)² + (y2 − y1)²]
 
-   In agglomerative single-linkage clustering, every point starts as its own cluster. Then we merge the two clusters that have the smallest distance between them.
-
-   Step 1: find the distance between every pair.
+   Step 1: find the distance between every pair of points.
    - d(P1, P2) = √[(0.85 − 0.07)² + (0.14 − 0.83)²] = √[0.6084 + 0.4761] = √1.0845 = 1.0414
    - d(P1, P3) = √[(0.59)² + (0.06)²] = √[0.3481 + 0.0036] = √0.3517 = 0.5930
    - d(P1, P4) = √[(0.42)² + (−0.19)²] = √[0.1764 + 0.0361] = √0.2125 = 0.4610
@@ -1005,7 +1024,7 @@
    - d(P3, P5) = √[(0.14)² + (−0.43)²] = √[0.0196 + 0.1849] = √0.2045 = 0.4522
    - d(P4, P5) = √[(0.31)² + (−0.18)²] = √[0.0961 + 0.0324] = √0.1285 = 0.3585
 
-   Distance matrix:
+   Step 2: put them in a distance matrix.
 
    | | P1 | P2 | P3 | P4 | P5 |
    |---|---|---|---|---|---|
@@ -1015,11 +1034,11 @@
    | P4 | 0.4610 | 0.6161 | 0.3023 | 0 | 0.3585 |
    | P5 | 0.8184 | 0.3239 | 0.4522 | 0.3585 | 0 |
 
-   Step 2: find the smallest distance.
-   - The smallest value in the whole matrix is 0.3023, which is d(P3, P4).
+   Step 3: find the smallest distance in the matrix.
+   - The smallest value is 0.3023, which is d(P3, P4).
 
-   Step 3: merge that pair.
-   - P3 and P4 join into one cluster {P3, P4} at height 0.3023 in the dendrogram.
-   - After this merge, the distance from {P3, P4} to any other point is the smaller of the two separate distances. This is what "single linkage" means.
+   Step 4: merge that pair.
+   - P3 and P4 join into one cluster {P3, P4}, at height 0.3023 in the dendrogram.
+   - After the merge, the distance from {P3, P4} to any other point is the smaller of the two separate distances. That is what single linkage means.
 
    Final answer: the first two points grouped are P3 (0.66, 0.89) and P4 (0.49, 0.64), merged at a distance of 0.3023.
