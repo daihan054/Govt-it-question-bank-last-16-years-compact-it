@@ -1046,7 +1046,11 @@
 1. **Find current across 2 \Omega resistor using Thevenin Theorem:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 417 (ET: BUET)]*
 
 
-   Answer: Thevenin's theorem states that any linear two-terminal network of sources and resistances can be replaced, as seen from those two terminals, by a single voltage source Vth in series with a single resistance Rth.
+   Answer: Thevenin's theorem states that any two terminal linear network or circuit can be replaced by an equivalent circuit made of one voltage source in series with one resistor.
+
+   The equivalent circuit has two parts:
+   - Thevenin voltage, Vth: the voltage source in the equivalent circuit.
+   - Thevenin resistance, Rth: the series resistor.
 
    The specific circuit is not reproduced here, so the complete standard procedure is given and then applied to a worked example.
 
@@ -1059,7 +1063,7 @@
    Step 3 - Find Rth, the resistance looking back into the network from A and B with all independent sources deactivated:
    - Replace every independent voltage source by a short circuit.
    - Replace every independent current source by an open circuit.
-   - Dependent sources are kept; for those, apply a 1 V test source at A-B and compute Rth = Vtest/Itest.
+   - Dependent sources are kept. When a circuit has both dependent and independent sources, we cannot just deactivate them. Instead we short the open terminals, find the short circuit current Isc, and then use Rth = Vth / Isc. Another way is to apply a 1 V test source at A-B and compute Rth = Vtest / Itest.
    - Then reduce the remaining resistor network by series and parallel combination.
 
    Step 4 - Draw the Thevenin equivalent: Vth in series with Rth, and reconnect the 2 ohm load.

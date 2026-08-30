@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 198/206 sections**
+**Rewritten: 199/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -175,7 +175,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] electrical-and-electronics.md — AC Circuits & Power Analysis (2)
 - [ ] electrical-and-electronics.md — Operational Amplifiers (Op-Amp) (2)
 - [ ] electrical-and-electronics.md — Sensor Circuits & Automated Control Systems (2)
-- [ ] electrical-and-electronics.md — Circuit Theorems (Thevenin, Norton, Superposition) (2)
+- [x] electrical-and-electronics.md — Circuit Theorems (Thevenin, Norton, Superposition) (2)
 
 ## image-processing.md — 5 sections
 - [x] image-processing.md — Computer Graphics (Vector & Raster) (3)
