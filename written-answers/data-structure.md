@@ -2987,14 +2987,17 @@ Output: Not Balanced
    Answer: A circular queue is preferred because it reuses the array positions freed by earlier removals, whereas a linear queue wastes them permanently.
 
    - A linear queue uses an array with a front and a rear index. Elements are added at the rear and removed from the front, and both indices only ever move forward.
-   - The defect is that when the rear reaches the end of the array, no further insertion is possible even though positions at the front have been freed by earlier removals. This wasted space is called the false overflow or queue overflow problem.
+   - The defect is this: when the rear reaches the end of the array, we cannot insert any more, even though positions at the front were freed by earlier removals. That space is wasted and can never be reused. This is called false overflow.
+   - The other fix would be to shift every element back to the front after each removal, but that makes dequeue O(n).
    - A circular queue treats the array as a ring: when an index reaches the last position it wraps round to position 0, using the modulo operation. The freed positions at the front therefore become available again.
 
-   Index arithmetic in a circular queue, with array size n:
-   - Enqueue: rear = (rear + 1) mod n, then store the element.
-   - Dequeue: take the element at front, then front = (front + 1) mod n.
-   - Full condition: (rear + 1) mod n == front, deliberately leaving one position unused so that full and empty can be distinguished.
-   - Empty condition: front == rear, or front == −1 depending on the convention used.
+   Index arithmetic in a circular queue, with capacity n:
+   - The modulo operator is what makes the indices wrap around when they pass the capacity.
+   - Enqueue: rear = (rear + 1) % n, then store the element.
+   - Dequeue: take the element at front, then front = (front + 1) % n.
+   - If we track front, size and capacity, the arithmetic gets even simpler: rear = (front + size) % capacity.
+   - Empty condition: size == 0. Full condition: size == capacity.
+   - If we track front and rear only, then the full condition is (rear + 1) % n == front, leaving one position unused so that full and empty can be told apart.
 
    The problem with a linear queue, illustrated:
 
@@ -3056,14 +3059,17 @@ Output: Not Balanced
    Answer: A circular queue is preferred because it makes full use of a fixed array, while a linear queue wastes the positions freed at the front.
 
    - A linear queue uses an array with a front and a rear index. Elements are added at the rear and removed from the front, and both indices only ever move forward.
-   - The defect is that when the rear reaches the end of the array, no further insertion is possible even though positions at the front have been freed by earlier removals. This wasted space is called the false overflow or queue overflow problem.
+   - The defect is this: when the rear reaches the end of the array, we cannot insert any more, even though positions at the front were freed by earlier removals. That space is wasted and can never be reused. This is called false overflow.
+   - The other fix would be to shift every element back to the front after each removal, but that makes dequeue O(n).
    - A circular queue treats the array as a ring: when an index reaches the last position it wraps round to position 0, using the modulo operation. The freed positions at the front therefore become available again.
 
-   Index arithmetic in a circular queue, with array size n:
-   - Enqueue: rear = (rear + 1) mod n, then store the element.
-   - Dequeue: take the element at front, then front = (front + 1) mod n.
-   - Full condition: (rear + 1) mod n == front, deliberately leaving one position unused so that full and empty can be distinguished.
-   - Empty condition: front == rear, or front == −1 depending on the convention used.
+   Index arithmetic in a circular queue, with capacity n:
+   - The modulo operator is what makes the indices wrap around when they pass the capacity.
+   - Enqueue: rear = (rear + 1) % n, then store the element.
+   - Dequeue: take the element at front, then front = (front + 1) % n.
+   - If we track front, size and capacity, the arithmetic gets even simpler: rear = (front + size) % capacity.
+   - Empty condition: size == 0. Full condition: size == capacity.
+   - If we track front and rear only, then the full condition is (rear + 1) % n == front, leaving one position unused so that full and empty can be told apart.
 
    Illustration of the linear queue defect:
 
@@ -3180,14 +3186,17 @@ Output: Not Balanced
    How a circular queue works:
 
    - A linear queue uses an array with a front and a rear index. Elements are added at the rear and removed from the front, and both indices only ever move forward.
-   - The defect is that when the rear reaches the end of the array, no further insertion is possible even though positions at the front have been freed by earlier removals. This wasted space is called the false overflow or queue overflow problem.
+   - The defect is this: when the rear reaches the end of the array, we cannot insert any more, even though positions at the front were freed by earlier removals. That space is wasted and can never be reused. This is called false overflow.
+   - The other fix would be to shift every element back to the front after each removal, but that makes dequeue O(n).
    - A circular queue treats the array as a ring: when an index reaches the last position it wraps round to position 0, using the modulo operation. The freed positions at the front therefore become available again.
 
-   Index arithmetic in a circular queue, with array size n:
-   - Enqueue: rear = (rear + 1) mod n, then store the element.
-   - Dequeue: take the element at front, then front = (front + 1) mod n.
-   - Full condition: (rear + 1) mod n == front, deliberately leaving one position unused so that full and empty can be distinguished.
-   - Empty condition: front == rear, or front == −1 depending on the convention used.
+   Index arithmetic in a circular queue, with capacity n:
+   - The modulo operator is what makes the indices wrap around when they pass the capacity.
+   - Enqueue: rear = (rear + 1) % n, then store the element.
+   - Dequeue: take the element at front, then front = (front + 1) % n.
+   - If we track front, size and capacity, the arithmetic gets even simpler: rear = (front + size) % capacity.
+   - Empty condition: size == 0. Full condition: size == capacity.
+   - If we track front and rear only, then the full condition is (rear + 1) % n == front, leaving one position unused so that full and empty can be told apart.
 
    - Trace with an array of size 5: after enqueuing 10, 20, 30, 40 and 50 the queue is full with front = 0 and rear = 4. Dequeuing three times returns 10, 20 and 30 and leaves front = 3. Enqueuing 60 now computes rear = (4 + 1) mod 5 = 0 and stores 60 at index 0, which a linear queue could not do.
    - Both operations remain O(1), and no element is ever moved.
