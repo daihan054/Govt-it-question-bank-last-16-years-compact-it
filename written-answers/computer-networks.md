@@ -5358,7 +5358,25 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Hub: a multiport repeater, also layer 1. Any frame arriving on one port is broadcast out of every other port. The whole hub is one collision domain and works half duplex with CSMA/CD, so performance falls badly with load. It is obsolete today.
    - Bridge: a layer 2 device with a small number of ports that joins two LAN segments. It learns MAC addresses and forwards a frame to the other segment only when the destination is there, so it divides collision domains and reduces unnecessary traffic. It does not divide broadcast domains.
    - Switch: a multiport bridge, layer 2, implemented in hardware with an ASIC. It keeps a MAC address table, forwards each frame only to the correct port, gives every port its own collision domain and supports full duplex. It also supports VLANs, STP and port security. This is the standard LAN device today.
-   - Router: a layer 3 device that connects different networks. It reads the destination IP address, looks it up in the routing table, and forwards the packet to the best next hop. It blocks broadcasts, so each interface is a separate broadcast domain, and it also provides NAT, DHCP, ACLs and WAN connectivity.
+   - Router: a layer 3 device that connects several networks and directs packets between them using IP addresses. It reads the destination IP, looks it up in the routing table, and sends the packet to the best next hop. It blocks broadcasts, so each interface is its own broadcast domain. It also provides NAT, DHCP, ACLs and WAN connectivity.
+   - Gateway: a hardware device or a software node that works as the entry and exit point between two different networks that use different protocols. It translates the data so the two sides can understand each other. It works at layers 4 to 7.
+   - Modem: it bridges the gap between digital computer data and analog signals, so a device can reach the internet over a telephone, cable or fibre line. It converts digital to analog, called modulation, and analog back to digital, called demodulation. Layer 1.
+   - Access Point (AP): networking hardware that lets Wi-Fi devices such as laptops and phones join a wired network. It acts as a bridge between wired Ethernet and wireless devices. It does not route and does not hand out IP addresses. Layer 2.
+   - NIC, Network Interface Card: the card inside the computer that physically connects it to the network. It carries the burned-in MAC address. It works at layers 1 and 2.
+
+   Summary:
+
+   | Device | OSI layer | Function |
+   |---|---|---|
+   | Repeater | 1, Physical | Amplifies and regenerates a weak signal |
+   | Hub | 1, Physical | Broadcasts to all ports blindly |
+   | Modem | 1, Physical | Converts digital to analog and back |
+   | NIC | 1 and 2 | Connects the computer to the network, holds the MAC address |
+   | Bridge | 2, Data link | Joins two LAN segments into one |
+   | Switch | 2, Data link | Sends the frame only to the correct port, using the MAC table |
+   | Access Point | 2, Data link | Bridges wireless devices to a wired network |
+   | Router | 3, Network | Connects different networks, routes by IP address |
+   | Gateway | 4 to 7 | Translates between two networks using different protocols |
 3. **How many collision domians are created when you segment a network with a 12-port switch?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
 
