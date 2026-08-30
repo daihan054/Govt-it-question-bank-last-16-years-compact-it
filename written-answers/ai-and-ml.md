@@ -342,13 +342,19 @@
 
 1. **Write down the Role of Validation set in ML.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
-   Answer: The validation set is a part of the data kept aside from training, used to tune the model and check its performance before the final test.
+   Answer: The validation set is a part of the data that we keep aside from training. We use it to tune the model and to check how well it is doing, before we touch the final test set.
 
-   - It is used to select hyperparameters such as learning rate, tree depth or number of hidden layers.
-   - It detects overfitting early, because training accuracy keeps rising while validation accuracy starts falling.
-   - It is used for model selection when several candidate models are compared.
-   - It is used for early stopping, where training is halted once validation error stops improving.
-   - It keeps the test set untouched, so the final reported accuracy stays unbiased.
+   Roles of the validation set:
+   - Choosing hyperparameters: things like learning rate, tree depth or number of hidden layers are picked by trying them and checking the validation score.
+   - Catching overfitting early: training accuracy keeps going up but validation accuracy starts falling. That gap is the warning sign.
+   - Model selection: if we have three or four candidate models, we compare them on the validation set and keep the best one.
+   - Early stopping: we stop training as soon as the validation error stops getting better.
+   - Protecting the test set: because all tuning happens on the validation set, the test set stays unseen. So the final score we report is honest.
+
+   Simple way to remember the three sets:
+   - Training set = the textbook you study from.
+   - Validation set = the practice test you take again and again.
+   - Test set = the real exam, taken only once.
 
 2. **(b) Given following values:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
  * **True Positive \text{(TP)} = 560**
@@ -359,71 +365,118 @@
 
    Answer:
 
-   Given: TP = 560, TN = 330, FP = 60, FN = 50, total = 560 + 330 + 60 + 50 = 1000
+   Given: TP = 560, TN = 330, FP = 60, FN = 50
+   Total = 560 + 330 + 60 + 50 = 1000
+
+   Confusion matrix:
+
+   | | Predicted Positive | Predicted Negative |
+   |---|---|---|
+   | Actual Positive | TP = 560 | FN = 50 |
+   | Actual Negative | FP = 60 | TN = 330 |
 
    (i) Accuracy
-   - Formula: Accuracy = (TP + TN) / (TP + TN + FP + FN)
-   - = (560 + 330) / 1000
-   - = 890 / 1000
-   - = 0.89 or 89%
+
+   Formula: Accuracy = (TP + TN) / (TP + TN + FP + FN)
+
+   = (560 + 330) / 1000
+   = 890 / 1000
+   = 0.89 or 89%
 
    (ii) Precision
-   - Formula: Precision = TP / (TP + FP)
-   - = 560 / (560 + 60)
-   - = 560 / 620
-   - = 0.9032 or 90.32%
+
+   Formula: Precision = TP / (TP + FP)
+
+   = 560 / (560 + 60)
+   = 560 / 620
+   = 0.9032 or 90.32%
 
    (iii) Recall
-   - Formula: Recall = TP / (TP + FN)
-   - = 560 / (560 + 50)
-   - = 560 / 610
-   - = 0.9180 or 91.80%
+
+   Formula: Recall = TP / (TP + FN)
+
+   = 560 / (560 + 50)
+   = 560 / 610
+   = 0.9180 or 91.80%
 
    (iv) F1 Score
-   - Formula: F1 = 2 × (Precision × Recall) / (Precision + Recall)
-   - = 2 × (0.9032 × 0.9180) / (0.9032 + 0.9180)
-   - = 2 × 0.8291 / 1.8212
-   - = 1.6582 / 1.8212
-   - = 0.9105 or 91.05%
+
+   Formula: F1 = 2 × (Precision × Recall) / (Precision + Recall)
+
+   = 2 × (0.9032 × 0.9180) / (0.9032 + 0.9180)
+   = 2 × 0.8291 / 1.8212
+   = 1.6582 / 1.8212
+   = 0.9105 or 91.05%
 
    Final answer: Accuracy = 89%, Precision = 90.32%, Recall = 91.80%, F1 Score = 91.05%
 
+   What each one means in simple words:
+   - Accuracy: out of all cases, how many did we get right.
+   - Precision: out of all the cases we called positive, how many were really positive.
+   - Recall: out of all the real positive cases, how many did we catch.
+   - F1 Score: one number that balances precision and recall together.
+
 3. **b) How can we validate and check reliability of a machine learning model?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
 
-   Answer: A model is validated by testing it on data it has never seen during training, and by measuring the right metrics for the problem.
+   Answer: We validate a model by testing it on data that it never saw during training, and by using the right measure for the problem.
 
    Validation methods:
-   - Train-validation-test split, commonly 70:15:15, where the test set is used only once at the end.
-   - K-fold cross validation, where the data is divided into k parts and the model is trained k times, each time using a different part as validation. The average score is reported.
-   - Stratified k-fold, which keeps the class ratio the same in every fold, needed for imbalanced data.
-   - Hold-out validation on a completely separate dataset collected later.
+   - Train-validation-test split: we cut the data into three parts, often 70:15:15. The test part is used only once, at the very end.
+   - K-fold cross validation: we cut the data into k parts. We train k times. Each time a different part is used as validation. Then we take the average score. This is more reliable than a single split.
+   - Stratified k-fold: same as above, but it keeps the same class ratio in every fold. We need this when the data is imbalanced.
+   - Hold-out validation: we test on a fresh dataset collected later.
 
-   Reliability checks:
-   - Compare training and validation error. A large gap means overfitting, and both being high means underfitting.
-   - Use the correct metric: accuracy for balanced data, but precision, recall, F1 and ROC-AUC for imbalanced data such as fraud detection.
-   - Check the confusion matrix to see which class is being confused.
-   - Test on fresh production data periodically, because data drift reduces accuracy over time.
-   - Check stability by running with different random seeds and different data splits.
+   How to check reliability:
+   - Compare training error and validation error. A big gap means overfitting. Both high means underfitting.
+   - Pick the correct metric. Accuracy is fine for balanced data. For imbalanced data like fraud detection, use precision, recall, F1 and ROC-AUC. In fraud data, a model that says "not fraud" every time can still get 99% accuracy, which is useless.
+   - Look at the confusion matrix to see which class is being mixed up.
+   - Test on fresh production data now and then, because data drift slowly lowers accuracy.
+   - Run the model with different random seeds and different splits. If the score jumps around a lot, the model is not stable.
 
 4. **You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss function for this problem.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 746 (ET: N/A)]*
 
    Answer:
 
-   Model: for binary classification with three features, logistic regression is used.
-   - Linear part: z = w1·f1 + w2·f2 + w3·f3 + b
-   - Prediction: ŷ = σ(z) = 1 / (1 + e^(−z)), which gives a probability between 0 and 1.
-   - Decision: class 1 if ŷ ≥ 0.5, otherwise class 0.
+   Model: for a binary classification problem with three features, we use logistic regression.
 
-   Loss function (binary cross entropy) for a single sample:
-   - L = −[ y·log(ŷ) + (1 − y)·log(1 − ŷ) ]
-   - If the true label y = 1, the loss becomes −log(ŷ), so the loss is small only when ŷ is close to 1.
-   - If y = 0, the loss becomes −log(1 − ŷ), so the loss is small only when ŷ is close to 0.
+   Step 1: the linear part
 
-   Objective function over the whole dataset of n samples:
-   - J(w, b) = −(1/n) × Σ [ yi·log(ŷi) + (1 − yi)·log(1 − ŷi) ]
-   - With L2 regularisation: J(w, b) = −(1/n) × Σ [ ... ] + (λ/2n) × Σ wj²
+   z = w1·f1 + w2·f2 + w3·f3 + b
 
-   Objective: minimise J(w, b) with respect to w1, w2, w3 and b, normally by gradient descent, where each weight is updated as wj = wj − α·(∂J/∂wj).
+   Here w1, w2, w3 are the weights and b is the bias.
+
+   Step 2: the prediction
+
+   ŷ = σ(z) = 1 / (1 + e^(−z))
+
+   The sigmoid function squeezes z into a value between 0 and 1, so we can read it as a probability.
+
+   Decision rule: class 1 if ŷ ≥ 0.5, otherwise class 0.
+
+   Step 3: the loss function for one sample (binary cross entropy)
+
+   L = −[ y·log(ŷ) + (1 − y)·log(1 − ŷ) ]
+
+   Why this works:
+   - If the true label y = 1, the formula becomes −log(ŷ). This is small only when ŷ is near 1.
+   - If the true label y = 0, the formula becomes −log(1 − ŷ). This is small only when ŷ is near 0.
+   - So the loss is low only when the model predicts the correct side with confidence.
+
+   Step 4: the objective function over all n samples
+
+   J(w, b) = −(1/n) × Σ [ yi·log(ŷi) + (1 − yi)·log(1 − ŷi) ]
+
+   With L2 regularisation to stop overfitting:
+
+   J(w, b) = −(1/n) × Σ [ yi·log(ŷi) + (1 − yi)·log(1 − ŷi) ] + (λ/2n) × Σ wj²
+
+   Objective: make J(w, b) as small as possible by changing w1, w2, w3 and b.
+
+   We normally do this with gradient descent, updating each weight as:
+
+   wj = wj − α·(∂J/∂wj)
+
+   where α is the learning rate.
 
 5. **Write down the difference between test set and validation set.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
 
@@ -431,37 +484,39 @@
 
    | Point | Validation Set | Test Set |
    |---|---|---|
-   | Purpose | Tune hyperparameters and select the model | Give the final unbiased performance estimate |
-   | Used during | The training and tuning phase | Only once, after everything is fixed |
-   | Frequency of use | Many times | A single time |
-   | Effect on the model | Indirectly influences the model, since choices are made from it | No influence at all |
-   | Risk | Repeated use can leak information and cause overfitting to it | Stays clean, so the reported score is trustworthy |
+   | Purpose | Tune the hyperparameters and pick the best model | Give the final, honest score of the model |
+   | When used | During training and tuning | Only once, after everything is finished |
+   | How many times used | Many times | One time |
+   | Effect on the model | It shapes the model, because we make choices from it | No effect at all |
+   | Risk | Using it again and again leaks information, so the model can overfit to it | Stays clean, so the reported score can be trusted |
+
+   Simple example: the validation set is the practice test you take many times to improve. The test set is the final exam you sit only once.
 
 ## Supervised Learning (Decision Trees) (4)
 
 1. **What is Machine Learning? Mention some real-life applications.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: Machine Learning is a branch of Artificial Intelligence in which a system learns patterns from data and improves its performance on a task with experience, instead of following rules written by a programmer for every case.
+   Answer: Machine Learning is a branch of Artificial Intelligence. In it, a system learns patterns from data and gets better at a job with experience. We do not write a rule for every case by hand.
 
    Basic working steps:
-   - Collect and clean the data.
-   - Select features and split the data into training, validation and test sets.
-   - Train a model so that its error on the training data becomes minimum.
-   - Validate, tune and finally test the model on unseen data.
+   - Collect the data and clean it.
+   - Pick the features, and split the data into training, validation and test sets.
+   - Train the model so that its error on the training data becomes as small as possible.
+   - Validate it, tune it, and finally test it on data it has never seen.
 
    Real life applications:
    - Fraud detection in card and mobile banking transactions.
-   - Credit scoring, where a bank predicts whether an applicant will repay a loan.
+   - Credit scoring, where a bank predicts if a person will repay the loan.
    - Email spam filtering.
-   - Product and video recommendation on e-commerce and streaming platforms.
-   - Face recognition and fingerprint matching in national ID and attendance systems.
-   - Speech recognition in voice assistants and automatic call routing.
+   - Product and video recommendation on Daraz, YouTube and Netflix.
+   - Face recognition and fingerprint matching in national ID and office attendance systems.
+   - Speech recognition in voice assistants and call centres.
    - Medical diagnosis from X-ray and pathology images.
-   - Demand and price forecasting in retail and agriculture.
+   - Demand and price forecasting in shops and agriculture.
 
 2. **Decisiontree model in Machine Learning.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
-   Answer: A Decision Tree is a supervised learning model shaped like a tree, where each internal node tests one feature, each branch is the outcome of that test, and each leaf gives the final class or value.
+   Answer: A Decision Tree is a supervised learning model that looks like a tree. Each internal node asks a question about one feature. Each branch is an answer to that question. Each leaf gives the final class or value.
 
    ```mermaid
    graph TD
@@ -471,30 +526,50 @@
        B -->|No| E[Reject loan]
    ```
 
-   - Splitting criteria: Information Gain or Gini Index for classification, and variance reduction for regression.
-   - Working: the feature that separates the classes best is chosen at the root, and the process repeats on each branch until a stopping condition is reached.
-   - Advantages: easy to understand and explain, needs little data preparation, handles both numeric and categorical data.
-   - Disadvantages: a deep tree easily overfits, and a small change in data can change the whole tree. Pruning, or an ensemble such as Random Forest, is used to control this.
+   How it is built:
+   - At each node we pick the feature that separates the classes best.
+   - To measure "best" we use Information Gain or Gini Index for classification, and variance reduction for regression.
+   - Then we repeat the same step on each branch, until a stopping rule is reached.
+
+   Advantages:
+   - Very easy to understand and to explain to a non-technical person.
+   - Needs little data preparation. No scaling or normalisation required.
+   - Handles both number data and category data.
+
+   Disadvantages:
+   - A deep tree overfits easily. It memorises the training data.
+   - A small change in the data can change the whole tree.
+
+   How we fix these: pruning (cutting back the tree), or using an ensemble like Random Forest.
 
 3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 339 (ET: BIBM)]*
 
-   Answer: Machine Learning is the field of Artificial Intelligence where a computer learns from data and improves with experience, without being explicitly programmed for each rule.
+   Answer: Machine Learning is the part of Artificial Intelligence where a computer learns from data and improves with experience, without being programmed with a rule for each case.
 
    | Point | Supervised | Unsupervised | Reinforcement |
    |---|---|---|---|
-   | Input data | Labelled | Unlabelled | No dataset, an environment |
-   | Learns from | Known correct output | Hidden structure in data | Reward and penalty |
-   | Goal | Predict output for new input | Find groups or patterns | Maximise long term reward |
-   | Feedback | Direct, from the label | None | Delayed, through reward |
+   | Input data | Labelled | Unlabelled | No dataset. It has an environment |
+   | Learns from | The known correct output | Hidden structure in the data | Reward and penalty |
+   | Goal | Predict the output for new input | Find groups or patterns | Collect the highest total reward |
+   | Feedback | Direct, from the label | None | Delayed, through the reward |
    | Main types | Classification, Regression | Clustering, Association | Value based, Policy based |
    | Algorithms | Decision Tree, SVM, KNN | K-Means, Apriori | Q-Learning, SARSA |
-   | Example | Loan default prediction | Customer segmentation | Robot learning to walk |
+   | Example | Predicting loan default | Grouping customers | Robot learning to walk |
+
+   One line each:
+   - Supervised: learning with a teacher who gives the answers.
+   - Unsupervised: learning with no teacher, just finding groups.
+   - Reinforcement: learning from reward and punishment, like training a pet.
 
 4. **(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
 
-   Answer: A Decision Tree is a supervised machine learning model that makes a decision by asking a series of questions on the features. It has a tree structure where the root node is the first test, internal nodes are further tests, branches are the answers, and leaf nodes carry the final decision.
+   Answer: A Decision Tree is a supervised machine learning model. It takes a decision by asking a series of questions about the features. It has a tree shape:
+   - Root node: the first question.
+   - Internal nodes: the next questions.
+   - Branches: the answers to a question.
+   - Leaf nodes: the final decision.
 
-   Example: deciding whether to play cricket based on the weather.
+   Example: should we play cricket today, based on the weather?
 
    ```mermaid
    graph TD
@@ -507,11 +582,14 @@
        W -->|False| P3[Play]
    ```
 
-   - Root node: Outlook is chosen first because it separates the classes best, measured by Information Gain.
-   - If Outlook is Overcast, the answer is always Play, so it becomes a leaf immediately.
-   - If Outlook is Sunny, Humidity is tested next; if Rainy, Wind is tested.
-   - Reading a path from root to leaf gives a readable rule, such as "if Outlook is Sunny and Humidity is High, then do not play".
-   - This readability is why decision trees are widely used where the decision must be explained, for example in loan approval.
+   Reading the tree:
+   - Outlook is asked first, because it separates the classes best. We measure this with Information Gain.
+   - If Outlook is Overcast, the answer is always Play. So it becomes a leaf at once.
+   - If Outlook is Sunny, we then ask about Humidity. If it is Rainy, we ask about Wind.
+
+   Each path from the root to a leaf gives a simple rule. For example: "if Outlook is Sunny and Humidity is High, then do not play".
+
+   This is why decision trees are popular where the decision must be explained, such as loan approval in a bank. The bank can show the customer the exact rule that was applied.
 
 ## Generative AI & Explainable AI (XAI) (4)
 
