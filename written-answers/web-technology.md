@@ -966,9 +966,12 @@
    |---|---|---|
    | Purpose | Retrieve data from the server | Send data to the server to create or change something |
    | Where the data goes | Appended to the URL as a query string, `page.php?name=Karim&id=5` | Placed in the body of the HTTP request |
-   | Visibility | Visible in the address bar, browser history, server logs and proxy logs | Not visible in the address bar |
+   | Visibility | The parameters appear in the address bar, and the data is stored in the browser history, the server logs and the proxy logs | The data is hidden. It does not appear in the address bar, and it is generally not kept in the browser history |
    | Length limit | Limited by the maximum URL length, about 2,048 characters in practice | No practical limit; large files can be sent |
-   | Data type | ASCII text only | Text and binary; supports file upload with `enctype="multipart/form-data"` |
+   | Data type | Supports ASCII characters only | Supports all kinds of data format, text and binary |
+   | Encoding type | `application/x-www-form-urlencoded` | `application/x-www-form-urlencoded` or `multipart/form-data`, which is what allows file upload |
+   | Data volume | Suitable for small amounts of data | Suitable for large amounts of data and for files |
+   | Performance | Faster, and normal for simple requests | A little slower, because the request body must be processed |
    | Bookmark and share | Can be bookmarked and shared, because the whole request is in the URL | Cannot be bookmarked |
    | Caching | Can be cached by browsers and proxies | Not cached by default |
    | Back button and reload | Harmless; the page simply reloads | The browser warns that the data will be resubmitted |
@@ -1034,9 +1037,12 @@
    |---|---|---|
    | Purpose | Retrieve data from the server | Send data to the server to create or change something |
    | Where the data goes | Appended to the URL as a query string, `page.php?name=Karim&id=5` | Placed in the body of the HTTP request |
-   | Visibility | Visible in the address bar, browser history, server logs and proxy logs | Not visible in the address bar |
+   | Visibility | The parameters appear in the address bar, and the data is stored in the browser history, the server logs and the proxy logs | The data is hidden. It does not appear in the address bar, and it is generally not kept in the browser history |
    | Length limit | Limited by the maximum URL length, about 2,048 characters in practice | No practical limit; large files can be sent |
-   | Data type | ASCII text only | Text and binary; supports file upload with `enctype="multipart/form-data"` |
+   | Data type | Supports ASCII characters only | Supports all kinds of data format, text and binary |
+   | Encoding type | `application/x-www-form-urlencoded` | `application/x-www-form-urlencoded` or `multipart/form-data`, which is what allows file upload |
+   | Data volume | Suitable for small amounts of data | Suitable for large amounts of data and for files |
+   | Performance | Faster, and normal for simple requests | A little slower, because the request body must be processed |
    | Bookmark and share | Can be bookmarked and shared, because the whole request is in the URL | Cannot be bookmarked |
    | Caching | Can be cached by browsers and proxies | Not cached by default |
    | Back button and reload | Harmless; the page simply reloads | The browser warns that the data will be resubmitted |
