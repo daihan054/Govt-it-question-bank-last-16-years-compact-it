@@ -70,7 +70,7 @@
    - Output: the project plan and the feasibility report.
 
    2. Requirement analysis and specification:
-   - Gather what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
+   - Business analysts and product owners gather and confirm what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
    - Distinguish functional requirements (what the system does) from non-functional ones (performance, security, usability, reliability).
    - Resolve conflicts and ambiguities, and check that every requirement is complete, consistent, unambiguous, verifiable and traceable.
    - Output: the Software Requirements Specification (SRS), which is the contract between the customer and the developer.
@@ -93,12 +93,12 @@
    - Output: test plans, test cases, defect reports and the test summary.
 
    6. Deployment:
-   - Install the system in the live environment, migrate the data, train the users and go live.
+   - Release the tested software into production, usually through a CI/CD pipeline. DevOps engineers set up the production environment and run a smoke test. Then migrate the data, train the users and go live.
    - Strategies: direct changeover, parallel running, pilot and phased introduction.
    - Output: the running system and the user manual.
 
    7. Maintenance:
-   - Correct faults found in use, adapt the system to changes in the environment, add enhancements requested by users, and improve internal quality.
+   - Give support after deployment: fix bugs, tune the performance, and add the features users ask for. Adapt the system as the environment changes, and improve its internal quality.
    - This is the longest and most expensive phase, typically 60 to 70 per cent of the total cost over the life of the system.
    - Output: updated versions and revised documentation.
 
@@ -179,7 +179,7 @@
    - Output: the project plan and the feasibility report.
 
    2. Requirement analysis and specification:
-   - Gather what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
+   - Business analysts and product owners gather and confirm what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
    - Distinguish functional requirements (what the system does) from non-functional ones (performance, security, usability, reliability).
    - Resolve conflicts and ambiguities, and check that every requirement is complete, consistent, unambiguous, verifiable and traceable.
    - Output: the Software Requirements Specification (SRS), which is the contract between the customer and the developer.
@@ -202,12 +202,12 @@
    - Output: test plans, test cases, defect reports and the test summary.
 
    6. Deployment:
-   - Install the system in the live environment, migrate the data, train the users and go live.
+   - Release the tested software into production, usually through a CI/CD pipeline. DevOps engineers set up the production environment and run a smoke test. Then migrate the data, train the users and go live.
    - Strategies: direct changeover, parallel running, pilot and phased introduction.
    - Output: the running system and the user manual.
 
    7. Maintenance:
-   - Correct faults found in use, adapt the system to changes in the environment, add enhancements requested by users, and improve internal quality.
+   - Give support after deployment: fix bugs, tune the performance, and add the features users ask for. Adapt the system as the environment changes, and improve its internal quality.
    - This is the longest and most expensive phase, typically 60 to 70 per cent of the total cost over the life of the system.
    - Output: updated versions and revised documentation.
 
@@ -239,7 +239,7 @@
    - Output: the project plan and the feasibility report.
 
    2. Requirement analysis and specification:
-   - Gather what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
+   - Business analysts and product owners gather and confirm what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
    - Distinguish functional requirements (what the system does) from non-functional ones (performance, security, usability, reliability).
    - Resolve conflicts and ambiguities, and check that every requirement is complete, consistent, unambiguous, verifiable and traceable.
    - Output: the Software Requirements Specification (SRS), which is the contract between the customer and the developer.
@@ -262,12 +262,12 @@
    - Output: test plans, test cases, defect reports and the test summary.
 
    6. Deployment:
-   - Install the system in the live environment, migrate the data, train the users and go live.
+   - Release the tested software into production, usually through a CI/CD pipeline. DevOps engineers set up the production environment and run a smoke test. Then migrate the data, train the users and go live.
    - Strategies: direct changeover, parallel running, pilot and phased introduction.
    - Output: the running system and the user manual.
 
    7. Maintenance:
-   - Correct faults found in use, adapt the system to changes in the environment, add enhancements requested by users, and improve internal quality.
+   - Give support after deployment: fix bugs, tune the performance, and add the features users ask for. Adapt the system as the environment changes, and improve its internal quality.
    - This is the longest and most expensive phase, typically 60 to 70 per cent of the total cost over the life of the system.
    - Output: updated versions and revised documentation.
 
@@ -558,7 +558,7 @@
     - Output: the project plan and the feasibility report.
 
     2. Requirement analysis and specification:
-    - Gather what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
+    - Business analysts and product owners gather and confirm what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
     - Distinguish functional requirements (what the system does) from non-functional ones (performance, security, usability, reliability).
     - Resolve conflicts and ambiguities, and check that every requirement is complete, consistent, unambiguous, verifiable and traceable.
     - Output: the Software Requirements Specification (SRS), which is the contract between the customer and the developer.
@@ -581,12 +581,12 @@
     - Output: test plans, test cases, defect reports and the test summary.
 
     6. Deployment:
-    - Install the system in the live environment, migrate the data, train the users and go live.
+    - Release the tested software into production, usually through a CI/CD pipeline. DevOps engineers set up the production environment and run a smoke test. Then migrate the data, train the users and go live.
     - Strategies: direct changeover, parallel running, pilot and phased introduction.
     - Output: the running system and the user manual.
 
     7. Maintenance:
-    - Correct faults found in use, adapt the system to changes in the environment, add enhancements requested by users, and improve internal quality.
+    - Give support after deployment: fix bugs, tune the performance, and add the features users ask for. Adapt the system as the environment changes, and improve its internal quality.
     - This is the longest and most expensive phase, typically 60 to 70 per cent of the total cost over the life of the system.
     - Output: updated versions and revised documentation.
 
@@ -671,7 +671,7 @@
     - Output: the project plan and the feasibility report.
 
     2. Requirement analysis and specification:
-    - Gather what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
+    - Business analysts and product owners gather and confirm what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
     - Distinguish functional requirements (what the system does) from non-functional ones (performance, security, usability, reliability).
     - Resolve conflicts and ambiguities, and check that every requirement is complete, consistent, unambiguous, verifiable and traceable.
     - Output: the Software Requirements Specification (SRS), which is the contract between the customer and the developer.
@@ -694,12 +694,12 @@
     - Output: test plans, test cases, defect reports and the test summary.
 
     6. Deployment:
-    - Install the system in the live environment, migrate the data, train the users and go live.
+    - Release the tested software into production, usually through a CI/CD pipeline. DevOps engineers set up the production environment and run a smoke test. Then migrate the data, train the users and go live.
     - Strategies: direct changeover, parallel running, pilot and phased introduction.
     - Output: the running system and the user manual.
 
     7. Maintenance:
-    - Correct faults found in use, adapt the system to changes in the environment, add enhancements requested by users, and improve internal quality.
+    - Give support after deployment: fix bugs, tune the performance, and add the features users ask for. Adapt the system as the environment changes, and improve its internal quality.
     - This is the longest and most expensive phase, typically 60 to 70 per cent of the total cost over the life of the system.
     - Output: updated versions and revised documentation.
 
@@ -1083,7 +1083,7 @@
     - Output: the project plan and the feasibility report.
 
     2. Requirement analysis and specification:
-    - Gather what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
+    - Business analysts and product owners gather and confirm what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
     - Distinguish functional requirements (what the system does) from non-functional ones (performance, security, usability, reliability).
     - Resolve conflicts and ambiguities, and check that every requirement is complete, consistent, unambiguous, verifiable and traceable.
     - Output: the Software Requirements Specification (SRS), which is the contract between the customer and the developer.
@@ -1106,12 +1106,12 @@
     - Output: test plans, test cases, defect reports and the test summary.
 
     6. Deployment:
-    - Install the system in the live environment, migrate the data, train the users and go live.
+    - Release the tested software into production, usually through a CI/CD pipeline. DevOps engineers set up the production environment and run a smoke test. Then migrate the data, train the users and go live.
     - Strategies: direct changeover, parallel running, pilot and phased introduction.
     - Output: the running system and the user manual.
 
     7. Maintenance:
-    - Correct faults found in use, adapt the system to changes in the environment, add enhancements requested by users, and improve internal quality.
+    - Give support after deployment: fix bugs, tune the performance, and add the features users ask for. Adapt the system as the environment changes, and improve its internal quality.
     - This is the longest and most expensive phase, typically 60 to 70 per cent of the total cost over the life of the system.
     - Output: updated versions and revised documentation.
 
@@ -1526,7 +1526,7 @@
     - Output: the project plan and the feasibility report.
 
     2. Requirement analysis and specification:
-    - Gather what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
+    - Business analysts and product owners gather and confirm what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
     - Distinguish functional requirements (what the system does) from non-functional ones (performance, security, usability, reliability).
     - Resolve conflicts and ambiguities, and check that every requirement is complete, consistent, unambiguous, verifiable and traceable.
     - Output: the Software Requirements Specification (SRS), which is the contract between the customer and the developer.
@@ -1549,12 +1549,12 @@
     - Output: test plans, test cases, defect reports and the test summary.
 
     6. Deployment:
-    - Install the system in the live environment, migrate the data, train the users and go live.
+    - Release the tested software into production, usually through a CI/CD pipeline. DevOps engineers set up the production environment and run a smoke test. Then migrate the data, train the users and go live.
     - Strategies: direct changeover, parallel running, pilot and phased introduction.
     - Output: the running system and the user manual.
 
     7. Maintenance:
-    - Correct faults found in use, adapt the system to changes in the environment, add enhancements requested by users, and improve internal quality.
+    - Give support after deployment: fix bugs, tune the performance, and add the features users ask for. Adapt the system as the environment changes, and improve its internal quality.
     - This is the longest and most expensive phase, typically 60 to 70 per cent of the total cost over the life of the system.
     - Output: updated versions and revised documentation.
 
@@ -1677,7 +1677,7 @@
     - Output: the project plan and the feasibility report.
 
     2. Requirement analysis and specification:
-    - Gather what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
+    - Business analysts and product owners gather and confirm what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
     - Distinguish functional requirements (what the system does) from non-functional ones (performance, security, usability, reliability).
     - Resolve conflicts and ambiguities, and check that every requirement is complete, consistent, unambiguous, verifiable and traceable.
     - Output: the Software Requirements Specification (SRS), which is the contract between the customer and the developer.
@@ -1700,12 +1700,12 @@
     - Output: test plans, test cases, defect reports and the test summary.
 
     6. Deployment:
-    - Install the system in the live environment, migrate the data, train the users and go live.
+    - Release the tested software into production, usually through a CI/CD pipeline. DevOps engineers set up the production environment and run a smoke test. Then migrate the data, train the users and go live.
     - Strategies: direct changeover, parallel running, pilot and phased introduction.
     - Output: the running system and the user manual.
 
     7. Maintenance:
-    - Correct faults found in use, adapt the system to changes in the environment, add enhancements requested by users, and improve internal quality.
+    - Give support after deployment: fix bugs, tune the performance, and add the features users ask for. Adapt the system as the environment changes, and improve its internal quality.
     - This is the longest and most expensive phase, typically 60 to 70 per cent of the total cost over the life of the system.
     - Output: updated versions and revised documentation.
 
@@ -1737,7 +1737,7 @@
     - Output: the project plan and the feasibility report.
 
     2. Requirement analysis and specification:
-    - Gather what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
+    - Business analysts and product owners gather and confirm what the system must do, by interviews, questionnaires, observation, study of existing documents and workshops with users.
     - Distinguish functional requirements (what the system does) from non-functional ones (performance, security, usability, reliability).
     - Resolve conflicts and ambiguities, and check that every requirement is complete, consistent, unambiguous, verifiable and traceable.
     - Output: the Software Requirements Specification (SRS), which is the contract between the customer and the developer.
@@ -1760,12 +1760,12 @@
     - Output: test plans, test cases, defect reports and the test summary.
 
     6. Deployment:
-    - Install the system in the live environment, migrate the data, train the users and go live.
+    - Release the tested software into production, usually through a CI/CD pipeline. DevOps engineers set up the production environment and run a smoke test. Then migrate the data, train the users and go live.
     - Strategies: direct changeover, parallel running, pilot and phased introduction.
     - Output: the running system and the user manual.
 
     7. Maintenance:
-    - Correct faults found in use, adapt the system to changes in the environment, add enhancements requested by users, and improve internal quality.
+    - Give support after deployment: fix bugs, tune the performance, and add the features users ask for. Adapt the system as the environment changes, and improve its internal quality.
     - This is the longest and most expensive phase, typically 60 to 70 per cent of the total cost over the life of the system.
     - Output: updated versions and revised documentation.
 
