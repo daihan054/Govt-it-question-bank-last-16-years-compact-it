@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 28/206 sections**
+**Rewritten: 29/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -37,7 +37,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] c-programming.md — Basic Programs & Control Statements (86)
 - [x] c-programming.md — Output Tracing & Control Flow (35)
 - [x] c-programming.md — Recursion & Functions (32)
-- [ ] c-programming.md — Operators, Data Types & Language Concepts (17)
+- [x] c-programming.md — Operators, Data Types & Language Concepts (17)
 - [ ] c-programming.md — Flowcharts & Algorithms (12)
 - [ ] c-programming.md — String Manipulation & Algorithms (11)
 - [ ] c-programming.md — File Handling (4)
