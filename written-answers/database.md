@@ -6323,14 +6323,20 @@ SELECT count (*) FROM (
    Answer:
 
    What normalisation is:
-   - Normalisation is the process of organising the tables and columns of a relational database so as to reduce data redundancy and eliminate the update, insertion and deletion anomalies that redundancy causes. It was introduced by E. F. Codd.
+   - Normal forms are a set of step by step rules, or design checkpoints, for relational schemas. They cut down redundancy and stop data anomalies. Think of them as layers of cleanliness for our tables: the deeper we go, the fewer redundancy and integrity problems we have. E. F. Codd introduced them.
+   - Each level from 1NF to 5NF is stricter than the one before. If a table meets a higher form, it automatically meets all the lower ones.
    - It proceeds by decomposing a large table into smaller related tables, in such a way that no information is lost and the original can be reconstructed by joining them.
 
    Why it is needed, that is the anomalies it removes:
    - Update anomaly: the same fact stored in many rows must be changed in every one of them; if one is missed, the data becomes inconsistent.
    - Insertion anomaly: a fact cannot be recorded because other, unrelated, information is not yet available. For example a new department cannot be recorded until an employee is assigned to it.
    - Deletion anomaly: deleting one fact accidentally destroys another. For example deleting the last employee of a department destroys the record of the department itself.
-   - It also saves storage, makes the design clearer, and makes constraints easier to enforce.
+   Benefits of normalisation:
+   - Removes duplicate data and saves storage space.
+   - Stops insert, update and delete anomalies.
+   - Improves data consistency and integrity.
+   - Makes the schema easier to maintain and to change later.
+   - Improves query performance through a logical breakdown of the tables.
 
    The normal forms:
 
@@ -6347,7 +6353,22 @@ SELECT count (*) FROM (
    - Remedy: decompose into `Student(Student_ID, Student_Name)`, `Course(Course_ID, Course_Name)` and `Enrollment(Student_ID, Course_ID, Grade)`.
 
 
-   - Higher forms are 3NF, which removes transitive dependency; BCNF, which is a stricter version of 3NF; and 4NF and 5NF, which remove multivalued and join dependencies.
+   Third Normal Form, 3NF:
+   - The relation must be in 2NF, and it must have no transitive dependency. That means a non-prime attribute must not depend on another non-prime attribute.
+   - Violation: a table (StudentID, CourseID, Instructor), where Instructor depends on CourseID, and CourseID depends on StudentID.
+   - Remedy: move Instructor into a separate table, linked through CourseID.
+
+   Boyce-Codd Normal Form, BCNF:
+   - For every non-trivial functional dependency X → Y, X must be a superkey.
+   - It removes the anomalies that stay behind in 3NF when a determinant is not a candidate key.
+   - Remedy: break the table up so that every determinant becomes a candidate key.
+
+   Fourth Normal Form, 4NF:
+   - The table must be in BCNF and have no multi-valued dependency. A multi-valued dependency is when one attribute decides another, without depending on the other attributes.
+   - Violation: a table (StudentID, Language, Hobby), where a student has several languages and several hobbies, and the two are independent of each other.
+   - Remedy: split it into a Languages table and a Hobbies table, each linked to StudentID.
+
+   A caveat worth stating: too much normalisation also causes trouble. Queries then need many joins, which makes them slow. In read heavy systems such as reporting, we often denormalise on purpose, that is join the tables back together, and accept some redundancy in exchange for speed.
 
    Worked example of 1NF:
 
@@ -6651,14 +6672,20 @@ SELECT count (*) FROM (
    Answer:
 
    What normalisation is:
-   - Normalisation is the process of organising the tables and columns of a relational database so as to reduce data redundancy and eliminate the update, insertion and deletion anomalies that redundancy causes. It was introduced by E. F. Codd.
+   - Normal forms are a set of step by step rules, or design checkpoints, for relational schemas. They cut down redundancy and stop data anomalies. Think of them as layers of cleanliness for our tables: the deeper we go, the fewer redundancy and integrity problems we have. E. F. Codd introduced them.
+   - Each level from 1NF to 5NF is stricter than the one before. If a table meets a higher form, it automatically meets all the lower ones.
    - It proceeds by decomposing a large table into smaller related tables, in such a way that no information is lost and the original can be reconstructed by joining them.
 
    Why it is needed, that is the anomalies it removes:
    - Update anomaly: the same fact stored in many rows must be changed in every one of them; if one is missed, the data becomes inconsistent.
    - Insertion anomaly: a fact cannot be recorded because other, unrelated, information is not yet available. For example a new department cannot be recorded until an employee is assigned to it.
    - Deletion anomaly: deleting one fact accidentally destroys another. For example deleting the last employee of a department destroys the record of the department itself.
-   - It also saves storage, makes the design clearer, and makes constraints easier to enforce.
+   Benefits of normalisation:
+   - Removes duplicate data and saves storage space.
+   - Stops insert, update and delete anomalies.
+   - Improves data consistency and integrity.
+   - Makes the schema easier to maintain and to change later.
+   - Improves query performance through a logical breakdown of the tables.
 
    The normal forms:
 
