@@ -439,14 +439,14 @@
 
 1. **Write down the Role of Validation set in ML.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
-   Answer: The validation set is a part of the data that we keep aside from training. We use it to tune the model and to check how well it is doing, before we touch the final test set.
+   Answer: The validation set is the part of the data we keep aside from training. We use it to tune the model and to check how well it is doing, before we ever touch the test set.
 
    Roles of the validation set:
-   - Choosing hyperparameters: things like learning rate, tree depth or number of hidden layers are picked by trying them and checking the validation score.
-   - Catching overfitting early: training accuracy keeps going up but validation accuracy starts falling. That gap is the warning sign.
-   - Model selection: if we have three or four candidate models, we compare them on the validation set and keep the best one.
-   - Early stopping: we stop training as soon as the validation error stops getting better.
-   - Protecting the test set: because all tuning happens on the validation set, the test set stays unseen. So the final score we report is honest.
+   - Tuning hyperparameters: we set values like learning rate, tree depth or number of hidden layers by trying them and checking the validation score.
+   - Catching overfitting early: training accuracy keeps rising while validation accuracy starts falling. That gap is the warning sign.
+   - Model selection: if we have several candidate models, we compare them on the validation set and keep the best one.
+   - Early stopping: we stop training as soon as the validation error stops improving.
+   - Keeping the test set clean: because all tuning happens on the validation set, the test set stays unseen. So the final score we report is honest.
 
 2. **(b) Given following values:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
  * **True Positive \text{(TP)} = 560**
@@ -462,7 +462,7 @@
 
    (i) Accuracy
 
-   Formula: Accuracy = (TP + TN) / (TP + TN + FP + FN)
+   Accuracy = (TP + TN) / (TP + TN + FP + FN)
 
    = (560 + 330) / 1000
    = 890 / 1000
@@ -470,7 +470,7 @@
 
    (ii) Precision
 
-   Formula: Precision = TP / (TP + FP)
+   Precision = TP / (TP + FP)
 
    = 560 / (560 + 60)
    = 560 / 620
@@ -478,7 +478,7 @@
 
    (iii) Recall
 
-   Formula: Recall = TP / (TP + FN)
+   Recall = TP / (TP + FN)
 
    = 560 / (560 + 50)
    = 560 / 610
@@ -486,7 +486,7 @@
 
    (iv) F1 Score
 
-   Formula: F1 = 2 × (Precision × Recall) / (Precision + Recall)
+   F1 = 2 × (Precision × Recall) / (Precision + Recall)
 
    = 2 × (0.9032 × 0.9180) / (0.9032 + 0.9180)
    = 2 × 0.8291 / 1.8212
@@ -497,19 +497,19 @@
 
 3. **b) How can we validate and check reliability of a machine learning model?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
 
-   Answer: We validate a model by testing it on data that it never saw during training, and by using the right measure for the problem.
+   Answer: We validate a model by testing it on data it never saw during training, and by using the right metric for the problem.
 
    Validation methods:
-   - Train-validation-test split: we cut the data into three parts, often 70:15:15. The test part is used only once, at the very end.
-   - K-fold cross validation: we cut the data into k parts. We train k times. Each time a different part is used as validation. Then we take the average score. This is more reliable than a single split.
-   - Stratified k-fold: same as above, but it keeps the same class ratio in every fold. We need this when the data is imbalanced.
-   - Hold-out validation: we test on a fresh dataset collected later.
+   - Train-validation-test split: we cut the data into three parts, often 70:15:15. We use the test part only once, at the very end.
+   - K-fold cross validation: we cut the data into k parts and train k times. Each time a different part becomes the validation set. Then we take the average score. This is more reliable than a single split.
+   - Stratified k-fold: the same idea, but it keeps the class ratio the same in every fold. We need this when the data is imbalanced.
+   - Hold-out validation: we test on a completely fresh dataset collected later.
 
-   How to check reliability:
-   - Compare training error and validation error. A big gap means overfitting. Both high means underfitting.
-   - Pick the correct metric. Accuracy is fine for balanced data. For imbalanced data like fraud detection, use precision, recall, F1 and ROC-AUC. In fraud data, a model that says "not fraud" every time can still get 99% accuracy, which is useless.
-   - Look at the confusion matrix to see which class is being mixed up.
-   - Test on fresh production data now and then, because data drift slowly lowers accuracy.
+   How we check reliability:
+   - Compare training error with validation error. A big gap means overfitting. Both high means underfitting.
+   - Use the correct metric. Accuracy is fine for balanced data. For imbalanced data such as fraud detection, accuracy is misleading, because a model that always says "not fraud" can still score 99%. There we must use precision, recall, F1 and ROC-AUC.
+   - Study the confusion matrix, to see which class is being mixed up.
+   - Test on fresh production data from time to time, because data drift slowly lowers accuracy.
    - Run the model with different random seeds and different splits. If the score jumps around a lot, the model is not stable.
 
 4. **You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss function for this problem.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 746 (ET: N/A)]*
@@ -532,26 +532,26 @@
 
    Decision rule: class 1 if ŷ ≥ 0.5, otherwise class 0.
 
-   Step 3: the loss function for one sample (binary cross entropy)
+   Step 3: the loss function for one sample, called binary cross entropy
 
    L = −[ y·log(ŷ) + (1 − y)·log(1 − ŷ) ]
 
-   Why this works:
-   - If the true label y = 1, the formula becomes −log(ŷ). This is small only when ŷ is near 1.
-   - If the true label y = 0, the formula becomes −log(1 − ŷ). This is small only when ŷ is near 0.
-   - So the loss is low only when the model predicts the correct side with confidence.
+   Why this formula works:
+   - If the true label y = 1, the formula becomes −log(ŷ). This is small only when ŷ is close to 1.
+   - If the true label y = 0, the formula becomes −log(1 − ŷ). This is small only when ŷ is close to 0.
+   - So the loss stays low only when the model predicts the correct side with confidence.
 
    Step 4: the objective function over all n samples
 
    J(w, b) = −(1/n) × Σ [ yi·log(ŷi) + (1 − yi)·log(1 − ŷi) ]
 
-   With L2 regularisation to stop overfitting:
+   With L2 regularisation, to stop overfitting:
 
    J(w, b) = −(1/n) × Σ [ yi·log(ŷi) + (1 − yi)·log(1 − ŷi) ] + (λ/2n) × Σ wj²
 
    Objective: make J(w, b) as small as possible by changing w1, w2, w3 and b.
 
-   We normally do this with gradient descent, updating each weight as:
+   We normally do this with gradient descent. Each weight is updated as:
 
    wj = wj − α·(∂J/∂wj)
 
