@@ -1013,7 +1013,20 @@
     Answer:
 
     What a subnet mask is:
-    - A subnet mask is a 32 bit value used together with an IP address to separate the network part from the host part. In the mask every network bit is 1 and every host bit is 0, and the 1s must be contiguous from the left.
+    - A subnet mask is a 32 bit number used with an IP address to separate the network part from the host part. In the mask every network bit is 1 and every host bit is 0, and the 1s must run together from the left with no gap.
+    - CIDR notation is the short way of writing it. /24 means the first 24 bits are the network part.
+
+    The two formulas we always use:
+    - Number of subnets = 2^(number of borrowed bits)
+    - Usable hosts per subnet = 2^(remaining host bits) − 2
+
+    We subtract 2 because the first address of a subnet is the network ID and the last one is the broadcast address. Neither can be given to a device.
+
+    Why we subnet at all:
+    - Efficient use of IP addresses. Each department gets only as many addresses as it needs.
+    - Better performance. Broadcast traffic stays inside one department instead of flooding the whole network.
+    - Better security. Each department is logically separated from the others.
+    - Easier management. Small networks are easier to run than one huge one.
     - It is written in dotted decimal, such as 255.255.255.0, or as a CIDR prefix, such as /24.
 
     Why it is used:
