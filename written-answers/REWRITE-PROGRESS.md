@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 109/206 sections**
+**Rewritten: 110/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -104,7 +104,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] computer-networks.md — Physical Layer & Transmission Media (Cables & Wiring) (14)
 - [ ] computer-networks.md — Error Detection & Data Communication (CRC, Throughput) (14)
 - [ ] computer-networks.md — Data Rate & Channel Capacity (Nyquist, Shannon) (14)
-- [ ] computer-networks.md — Network Topologies (12)
+- [x] computer-networks.md — Network Topologies (12)
 - [ ] computer-networks.md — IPv6 Addressing (11)
 - [ ] computer-networks.md — Physical Layer & Optical Fiber (Attenuation & Power Budget) (11)
 - [ ] computer-networks.md — Network Address Translation (NAT) (11)

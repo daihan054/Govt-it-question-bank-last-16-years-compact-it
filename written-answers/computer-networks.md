@@ -6751,12 +6751,25 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    - Physical topology is the actual cabling layout; logical topology is the path the data actually follows, and the two need not be the same. Ethernet on a switch is physically a star but logically a bus in the old hub days.
 
    Classification:
-   - Bus: all nodes share one backbone cable with terminators at both ends.
-   - Ring: nodes form a closed loop, data travels in one direction, often with token passing.
-   - Star: every node connects to a central hub or switch.
-   - Mesh: every node connects to every other node, needing n(n − 1)/2 links.
-   - Tree or hierarchical: several star networks joined to a common backbone.
-   - Hybrid: any combination of the above, for example a star-bus or star-ring, which is what most real campus networks are.
+   - Bus: every computer and device connects to one single backbone cable, through short drop lines.
+     - Advantages: it needs the least cable, one backbone plus N drop lines. It is cheap, the installation method is well known, and it suits a small network.
+     - Disadvantages: if the backbone cable fails, the whole network dies. Heavy traffic causes many collisions. Adding devices slows the network. Security is low.
+   - Ring: the devices form a ring. Each node connects to exactly two neighbours, and the data flows in one direction, or both ways in a dual ring.
+     - Advantages: high speed transmission, very little chance of collision, and it is cheap to install and to extend.
+     - Disadvantages: one failed node can bring down the whole ring. Faults are hard to trace. Security is low.
+   - Star: every device connects to one central hub, like spokes on a wheel.
+     - Advantages: it needs only N cables for N devices, and each device needs just one port. It is robust, because one broken link does not affect the others. Faults are easy to find, and the cabling is cheap.
+     - Disadvantages: if the hub fails, the whole network fails. Installation cost is high. The performance depends completely on the hub.
+   - Mesh: every device connects to every other device through its own dedicated channel.
+     - Number of links for N devices = N × (N − 1) / 2
+     - Advantages: very fast communication, a robust design, easy fault diagnosis, and dedicated channels that make the transfer reliable and secure.
+     - Disadvantages: installation and configuration are complex. The cable cost is very high, because of the bulk wiring. Maintenance is expensive. It suits only small networks.
+   - Tree: a hierarchy. A central hub connects to secondary hubs, and those connect to the devices, making a parent-child structure.
+     - Advantages: more devices can hang off the central hub. The signal travels a shorter distance. We can isolate and prioritise parts of the network. Adding a device is easy.
+     - Disadvantages: if the central hub fails, the whole system fails. Cabling cost is high. Reconfiguring it when adding devices is difficult.
+   - Hybrid: a mix of several topologies together, for example star-bus or star-ring. Most real campus networks are like this.
+     - Advantages: very flexible in design, and easy to scale by adding new devices.
+     - Disadvantages: the architecture is complex to design. It needs expensive hubs. The infrastructure and cabling cost is high.
 3. **Write 4 topology name?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
 
