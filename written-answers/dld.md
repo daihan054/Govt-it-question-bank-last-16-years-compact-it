@@ -3250,11 +3250,14 @@
    Gate count: the simplified expression needs 4 AND gates and 1 OR gate, against 11 four input AND gates and one eleven input OR gate for the unsimplified form.
 
    Method for simplifying with a Karnaugh map:
-   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
-   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
-   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
-   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
-   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - A K-map is a picture form of the truth table. It cuts the number of logic gates by grouping neighbouring cells, which makes the circuit simpler and cheaper.
+   - Draw a grid with 2ⁿ cells for n variables. 2 variables need 4 cells, 3 variables need 8 cells, and 4 variables need a 4 × 4 grid of 16 cells.
+   - Label the rows and columns in Gray code order, that is 00, 01, 11, 10. This order is what makes two neighbouring cells differ in exactly one variable, and that is the whole basis of the method.
+   - Put a 1 in every cell that is a minterm of the function, and a 0 everywhere else.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells. Cover as many cells as possible in each group.
+   - Make every group as large as you can, because a bigger group cancels more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap each other. They may also wrap around the edges of the map, because the leftmost and rightmost columns are neighbours, and so are the top and bottom rows.
+   - From each group, read off the variables that stay constant. That gives one product term. OR all the product terms together to get the final SOP expression.
    - Every 1 must be covered by at least one group.
    - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
    - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
@@ -3264,11 +3267,14 @@
    Answer: The question gives no specific function, so the method is set out with a worked example.
 
    Method for simplifying with a Karnaugh map:
-   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
-   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
-   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
-   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
-   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - A K-map is a picture form of the truth table. It cuts the number of logic gates by grouping neighbouring cells, which makes the circuit simpler and cheaper.
+   - Draw a grid with 2ⁿ cells for n variables. 2 variables need 4 cells, 3 variables need 8 cells, and 4 variables need a 4 × 4 grid of 16 cells.
+   - Label the rows and columns in Gray code order, that is 00, 01, 11, 10. This order is what makes two neighbouring cells differ in exactly one variable, and that is the whole basis of the method.
+   - Put a 1 in every cell that is a minterm of the function, and a 0 everywhere else.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells. Cover as many cells as possible in each group.
+   - Make every group as large as you can, because a bigger group cancels more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap each other. They may also wrap around the edges of the map, because the leftmost and rightmost columns are neighbours, and so are the top and bottom rows.
+   - From each group, read off the variables that stay constant. That gives one product term. OR all the product terms together to get the final SOP expression.
    - Every 1 must be covered by at least one group.
    - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
    - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
@@ -3473,11 +3479,14 @@
    Answer: The specific function is not reproduced here, so the method is given together with a worked example.
 
    Method for simplifying with a Karnaugh map:
-   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
-   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
-   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
-   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
-   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - A K-map is a picture form of the truth table. It cuts the number of logic gates by grouping neighbouring cells, which makes the circuit simpler and cheaper.
+   - Draw a grid with 2ⁿ cells for n variables. 2 variables need 4 cells, 3 variables need 8 cells, and 4 variables need a 4 × 4 grid of 16 cells.
+   - Label the rows and columns in Gray code order, that is 00, 01, 11, 10. This order is what makes two neighbouring cells differ in exactly one variable, and that is the whole basis of the method.
+   - Put a 1 in every cell that is a minterm of the function, and a 0 everywhere else.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells. Cover as many cells as possible in each group.
+   - Make every group as large as you can, because a bigger group cancels more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap each other. They may also wrap around the edges of the map, because the leftmost and rightmost columns are neighbours, and so are the top and bottom rows.
+   - From each group, read off the variables that stay constant. That gives one product term. OR all the product terms together to get the final SOP expression.
    - Every 1 must be covered by at least one group.
    - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
    - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
@@ -3519,11 +3528,14 @@
    Answer: The specific function is not reproduced here, so the method for obtaining the minimal SOP form is given with a worked example.
 
    Method for simplifying with a Karnaugh map:
-   - Draw a grid with 2ⁿ cells for n variables, labelling the rows and columns in Gray code order, that is 00, 01, 11, 10, so that adjacent cells differ in exactly one variable.
-   - Place a 1 in every cell corresponding to a minterm of the function and a 0 elsewhere.
-   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells.
-   - Make every group as large as possible, since a larger group eliminates more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
-   - Groups may overlap, and they may wrap around the edges of the map, since the leftmost and rightmost columns are adjacent, as are the top and bottom rows.
+   - A K-map is a picture form of the truth table. It cuts the number of logic gates by grouping neighbouring cells, which makes the circuit simpler and cheaper.
+   - Draw a grid with 2ⁿ cells for n variables. 2 variables need 4 cells, 3 variables need 8 cells, and 4 variables need a 4 × 4 grid of 16 cells.
+   - Label the rows and columns in Gray code order, that is 00, 01, 11, 10. This order is what makes two neighbouring cells differ in exactly one variable, and that is the whole basis of the method.
+   - Put a 1 in every cell that is a minterm of the function, and a 0 everywhere else.
+   - Group the 1s into rectangular blocks whose size is a power of two: 1, 2, 4, 8 or 16 cells. Cover as many cells as possible in each group.
+   - Make every group as large as you can, because a bigger group cancels more variables. A group of 2 removes 1 variable, a group of 4 removes 2, and a group of 8 removes 3.
+   - Groups may overlap each other. They may also wrap around the edges of the map, because the leftmost and rightmost columns are neighbours, and so are the top and bottom rows.
+   - From each group, read off the variables that stay constant. That gives one product term. OR all the product terms together to get the final SOP expression.
    - Every 1 must be covered by at least one group.
    - Use as few groups as possible, and choose the essential prime implicants first, that is those covering a 1 that no other group can cover.
    - For each group, write the product of the variables that remain constant within it, and OR the products together to obtain the simplified sum of products expression.
