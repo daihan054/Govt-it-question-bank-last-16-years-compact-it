@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 37/206 sections**
+**Rewritten: 38/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -48,7 +48,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] cloud-computing.md — Cloud Service Models (12)
 - [x] cloud-computing.md — Cloud Storage & Fundamentals (6)
 - [x] cloud-computing.md — Virtualization & Containers (VM vs Container) (6)
-- [ ] cloud-computing.md — Cluster, Grid & Distributed Computing (3)
+- [x] cloud-computing.md — Cluster, Grid & Distributed Computing (3)
 - [ ] cloud-computing.md — Scalability (Horizontal & Vertical Scaling) (2)
 - [ ] cloud-computing.md — Edge Computing & Fog Computing (2)
 - [ ] cloud-computing.md — Virtualization & Resource Allocation (1)

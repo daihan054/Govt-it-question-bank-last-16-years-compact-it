@@ -654,8 +654,10 @@ A submarine cable connects Bangladesh to an international data center. At the ca
    - Examples: the old mainframe systems, all the terminals of a bank branch connected to one central server, and a single file server in an office.
 
    Distributed computing:
-   - Many independent computers connected by a network work together, and to the user the whole thing appears as one system. The work and the data are divided among many nodes.
-   - Characteristics: there is no single point of failure, horizontal scaling is possible, and the system keeps running when one node fails, but synchronisation, consistency and network delay become problems.
+   - Many independent computers, joined by a network, work together on a task that would be hard for one machine alone. To the user the whole thing looks like one system. The work and the data are divided among many nodes.
+   - Architecture: decentralised control, unlike the client-server model of a centralised system.
+   - Advantages: there is no single point of failure, we can scale horizontally, resources are used well, and tasks can run in parallel.
+   - Disadvantages: synchronisation and consistency become hard, network delay appears, and the system gets complex.
    - Examples: the Internet itself, Google's search infrastructure, Hadoop and Spark clusters, blockchain, and DNS.
 
    | Point | Centralized | Distributed |
@@ -685,6 +687,22 @@ A submarine cable connects Bangladesh to an international data center. At the ca
    | Examples | A web server farm, a database cluster, a Beowulf HPC cluster | SETI@home, Folding@home, the CERN Worldwide LHC Computing Grid |
 
    - In one sentence: a cluster is many machines in one room acting as one computer, while a grid is many computers in many places lending their spare capacity to a common task.
+
+   Grid computing in more detail:
+   - Definition: a network of computers working together on a task that would be difficult for a single machine.
+   - Architecture: a distributed model with decentralised control. It is application oriented, and it uses grid middleware.
+   - Advantages: high resource utilisation, parallel task processing, and a scalable design. There is usually no usage fee, because members share their spare capacity.
+   - Disadvantages: the software is often immature, it adds complexity, it has limited flexibility, and it carries security risks.
+
+   How grid computing differs from cloud computing:
+
+   | Point | Grid computing | Cloud computing |
+   |---|---|---|
+   | Architecture | Distributed, decentralised control | Client-server, centralised control |
+   | Orientation | Application oriented | Service oriented |
+   | Payment | Usually no usage fee | The user pays for what is used |
+   | Accessibility | Lower | High, through standard web protocols |
+   | Resource pattern | Collaborative, members share spare capacity | Pooled resources rented from a provider |
 3. **Imagine data in a system is green, red, yellow and blue in the system using distributed server in parallel. Design the system using reduce map.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
 
 
