@@ -2142,14 +2142,16 @@ for i in N:
    | Point | Vector graphics | Raster graphics |
    |---|---|---|
    | Made of | Maths paths, lines and curves | A grid of pixels |
-   | Scaling | Can be made bigger any amount with no quality loss | Becomes blurred and blocky when made bigger |
-   | File size | Usually small | Usually large, and grows with resolution |
+   | Scaling | Can be made bigger any amount with no loss of quality | Becomes blurred and blocky when made bigger |
+   | File size | Usually small | Usually large, and it grows with resolution |
    | Best for | Logos, icons, diagrams, text | Photographs and detailed images |
    | File formats | SVG, AI, EPS, PDF | JPEG, PNG, BMP, GIF, TIFF |
    | Editing | Each object can be edited on its own | We edit pixel by pixel |
    | Resolution | Does not depend on resolution | Depends on resolution, measured in DPI |
 
    (b) Fractional Knapsack solution
+
+   In fractional knapsack we may take a part of an item. So the greedy rule works: we always fill the bag with the material that gives the most value per unit weight.
 
    Step 1: find the value per weight ratio of each item.
    - Item 1: 18 / 4 = 4.5
@@ -2165,12 +2167,12 @@ for i in N:
    - Take Item 3 fully: weight 1, value 12. Space left = 9
    - Take Item 4 fully: weight 2, value 14. Space left = 7
    - Take Item 1 fully: weight 4, value 18. Space left = 3
-   - Item 5 weighs 5, but only 3 units of space are left. So take 3/5 of it. Value = 20 × 3/5 = 12. Space left = 0
+   - Item 5 weighs 5, but only 3 units of space are left. So we take 3/5 of it. Value = 20 × 3/5 = 12. Space left = 0
    - Item 2 is not taken, because the bag is full.
 
    Final answer: total weight 10, maximum total value = 12 + 14 + 18 + 12 = 56
 
-   Why the greedy ratio rule works here: items can be cut. So we can always fill the space with the most valuable material still available.
+   Time complexity is O(n log n), because of the sorting.
 
    Note: the bag capacity was not printed in the collected question, so a capacity of 10 is used to show the method.
 
@@ -2199,20 +2201,32 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
    (i) Maximum total weight that can be placed:
    - The bag can hold 25 units, but all the items together weigh only 16 units.
-   - The available weight is less than the capacity. So we can take every item whole, and we do not need to cut any item.
+   - The total available weight is less than the capacity. So we can take every item whole, and we never have to cut any item.
    - Maximum total weight placed = 16 units. So 9 units of the bag stay empty.
-   - Total value we get = 20 + 15 + 12 + 14 + 20 = 81
+   - Total value obtained = 20 + 15 + 12 + 14 + 20 = 81
 
    (ii) Order of placing the items:
-   - In fractional knapsack we place items in decreasing order of value per weight ratio.
+   - In fractional knapsack we place the items in decreasing order of value per weight ratio.
    - Order: Item 4 (7.0) → Item 3 (6.0) → Item 1 (5.0) → Item 2 (5.0) → Item 5 (4.0)
-   - Item 1 and Item 2 have the same ratio 5.0. So either one can go first. The result does not change.
+   - Item 1 and Item 2 have the same ratio 5.0. So either one may go first. The result does not change.
 
    Final answer: total weight 16 units with total value 81, placed in the order 4, 3, 1, 2, 5.
 
 3. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 453 (ET: BUET)]*
 
-   Answer: This is the Activity Selection Problem. We solve it with a greedy algorithm. The correct greedy choice is to always pick the request that finishes earliest, because that leaves the most time free for the others.
+   Answer: This is the Activity Selection Problem. We solve it with a greedy algorithm.
+
+   Greedy strategy: always pick the activity that finishes earliest among the ones that still fit.
+
+   Algorithm:
+   - Sort all the activities in increasing order of finish time.
+   - Pick the first activity of the sorted list, and note its finish time.
+   - For each remaining activity, pick it only if its start time is greater than or equal to the noted finish time. Then update the noted finish time.
+   - Continue to the end of the list.
+
+   Why earliest finish time is the correct greedy choice: the activity that ends soonest frees the resource at the earliest possible moment. So it leaves the most room for the remaining activities. No other choice can leave more room.
+
+   Pseudocode:
 
    ```
    MAX_CUSTOMERS(start[], end[], n)
@@ -2231,12 +2245,6 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
        return selected
    ```
 
-   Steps explained:
-   - Sort all n requests by their finish time. This costs O(n log n).
-   - Always take the first request of the sorted list.
-   - Go through the rest. Take a request only if its start time is not earlier than the finish time of the last selected one.
-   - This single pass costs O(n). So the total time is O(n log n) and the space is O(n).
-
    Example with slots (1,3), (2,5), (4,7), (6,8), (8,10):
    - Sorted by end time: (1,3), (2,5), (4,7), (6,8), (8,10)
    - Take (1,3). Last end = 3
@@ -2246,7 +2254,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - (8,10) starts at 8, which is after 7. Take it.
    - Maximum customers served = 3, that is (1,3), (4,7) and (8,10).
 
-   Why earliest finish time is the correct greedy choice: the request that ends soonest frees the service at the earliest possible moment. So no other choice can leave more room for the remaining requests.
+   Time complexity is O(n log n) for the sorting, plus O(n) for the single scan. Space complexity is O(n).
 
 4. **Given n jobs starting time n[] and duration d[], print maximum number of jobs that don't overlap between each other.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 834 (ET: N/A)]*
 
@@ -2293,23 +2301,25 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    ```
 
    Steps:
-   - Step 1: find finish[i] = start[i] + duration[i].
+   - Step 1: compute finish[i] = start[i] + duration[i].
    - Step 2: sort the jobs by finish time.
-   - Step 3: pick the first job. Then keep picking any job whose start is not earlier than the last selected finish time.
+   - Step 3: take the first job. Then take any job whose start is not earlier than the last selected finish time.
 
-   Time complexity is O(n log n) for the sort plus O(n) for the scan. Space complexity is O(n).
+   Time complexity is O(n log n) for the sort, plus O(n) for the scan. Space complexity is O(n).
 
 5. **You are given a set of activities with their starting time s[] and finishing time f[].** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
 
-   Answer: This is the Activity Selection Problem. The goal is to pick the largest set of activities that one person can do, so that no two picked activities overlap in time.
+   Answer: This is the Activity Selection Problem. The goal is to pick the largest set of activities that one person can perform, so that no two picked activities overlap in time.
 
-   Greedy strategy: always pick the activity that finishes earliest among those that still fit.
+   Greedy strategy: always pick the activity that finishes earliest among the ones that still fit.
 
    Algorithm:
-   - Sort all activities in increasing order of finish time f[].
-   - Pick the first activity of the sorted list and note its finish time.
-   - For each remaining activity, pick it only if its start time s[i] is greater than or equal to the noted finish time. Then update the noted finish time.
+   - Sort all the activities in increasing order of finish time.
+   - Pick the first activity of the sorted list, and note its finish time.
+   - For each remaining activity, pick it only if its start time is greater than or equal to the noted finish time. Then update the noted finish time.
    - Continue to the end of the list.
+
+   Why earliest finish time is the correct greedy choice: the activity that ends soonest frees the resource at the earliest possible moment. So it leaves the most room for the remaining activities. No other choice can leave more room.
 
    Example with activities A1(1,4), A2(3,5), A3(0,6), A4(5,7), A5(8,9), A6(5,9):
    - Sorted by finish time: A1(1,4), A2(3,5), A3(0,6), A4(5,7), A5(8,9), A6(5,9)
@@ -2321,10 +2331,8 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - Selected activities: A1, A4, A5. So the maximum count is 3.
 
    Complexity:
-   - Time O(n log n), mostly for sorting. It is O(n) if the activities already come sorted by finish time.
+   - Time O(n log n), mostly for the sorting. It is O(n) if the activities already come sorted by finish time.
    - Space O(1) beyond the input.
-
-   Why it is correct: the activity that finishes earliest frees the resource soonest. So if we replace the first activity of any optimal solution with it, the count never goes down.
 
 6. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
