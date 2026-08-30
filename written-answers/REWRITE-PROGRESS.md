@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 166/206 sections**
+**Rewritten: 167/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -185,7 +185,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] image-processing.md — Morphological Operations (1)
 
 ## microprocessor-and-computer-architecture.md — 11 sections
-- [ ] microprocessor-and-computer-architecture.md — Microprocessor Architecture & Functions (27)
+- [x] microprocessor-and-computer-architecture.md — Microprocessor Architecture & Functions (27)
 - [ ] microprocessor-and-computer-architecture.md — Memory Hierarchy & Storage (21)
 - [ ] microprocessor-and-computer-architecture.md — RAID Architecture & Storage (13)
 - [x] microprocessor-and-computer-architecture.md — Cache Memory (12)
