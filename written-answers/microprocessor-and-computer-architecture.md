@@ -1814,8 +1814,8 @@
    Answer: Direct mapping and associative mapping are two ways of deciding where a block of main memory may be placed in the cache.
 
    Direct mapping:
-   - Each main memory block can go into exactly one cache line, determined by cache line number = (block number) modulo (number of cache lines).
-   - The address is divided into three fields: tag, index (line number) and block offset.
+   - Each main memory block can go into exactly one cache line. The formula is i = j mod m, where i is the cache line number, j is the memory block number and m is the number of cache lines.
+   - The address is split into three fields: the tag, which says which block is sitting in that line; the index, which gives the line number; and the block offset, which gives the word position inside the block.
 
    Advantages of direct mapping:
    - Simplest and cheapest to implement, because only one line has to be checked on every access.
@@ -1830,8 +1830,8 @@
    - Performance is sensitive to the exact addresses a program uses, so it can be unpredictable.
 
    Associative mapping (fully associative):
-   - Any main memory block may be placed in any cache line.
-   - The address is divided into only two fields: tag and block offset.
+   - Any block of main memory can be stored in any cache line. There is no fixed position at all.
+   - The address is split into only two fields: the tag and the block offset. The whole memory address becomes the tag, and the system searches every cache line for a match.
 
    Advantages of associative mapping:
    - Complete flexibility of placement, so conflict misses are eliminated entirely; a miss occurs only if the cache is genuinely full or the block has never been seen.
