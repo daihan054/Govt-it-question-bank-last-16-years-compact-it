@@ -35,7 +35,7 @@
    }
    ```
 
-   - The remainder after dividing by 2 decides the result.
+   - If the remainder after dividing by 2 is 0, the number is even. Otherwise it is odd.
    - Time complexity O(1).
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
@@ -118,8 +118,8 @@
    }
    ```
 
-   - The number is read as a string so each digit can be printed separately.
-   - Row i starts from digit i and runs to the last digit, which gives the required triangle.
+   - We read the number as a string. So we can print each digit on its own.
+   - Row i starts at digit i and goes to the last digit. That makes the triangle shape.
 6. **a) Suppose you are working with an array of size 10. It contains all the numbers from 1 to 10 exactly once in a random order. But accidentally, one of the numbers in the array got replaced by a zero (0). Write a C/C++ programme using functions, to restore the lost number.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
 
 
@@ -139,7 +139,7 @@
    ```
 
    - The sum of 1 to 10 is n(n+1)/2 = 55.
-   - Subtracting the sum of the given numbers gives the missing one.
+   - We subtract the sum of the given numbers from 55. What is left is the missing number.
    - Time complexity O(n) and space complexity O(1).
 7. **Find biggest elements in an array of 10 components.** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
@@ -159,7 +159,7 @@
    }
    ```
 
-   - The first element is assumed the largest, then every other element is compared once.
+   - We take the first element as the largest. Then we compare every other element with it once.
    - Time complexity O(n).
 8. **Write a C program that accepts 10 elements in an array and finds the maximum elements from the array.** *[BBA Assistant Programmer 12.07.2025 compact it 1433 (ET: BUET)]*
 
@@ -179,7 +179,7 @@
    }
    ```
 
-   - The first element is assumed the largest, then every other element is compared once.
+   - We take the first element as the largest. Then we compare every other element with it once.
    - Time complexity O(n).
 9. **Write a function to find minimum number from an array, return minimum value as argument.** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1430 (ET: BUET)]*
 
@@ -203,7 +203,7 @@
    }
    ```
 
-   - The array and its size are passed as parameters and the minimum value is returned.
+   - We pass the array and its size to the function. The function returns the smallest value.
    - Time complexity O(n).
 10. **Write a C/Java program to check Armstrong number or not.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)], [BREB Assistant Programmer (AP) 21.02.2025 compact it 1334 (ET: N/A)]*
 
@@ -231,7 +231,7 @@
     }
     ```
 
-    - An Armstrong number equals the sum of its digits each raised to the power of the digit count.
+    - An Armstrong number is equal to the sum of its digits, where each digit is raised to the power of the total number of digits.
     - Example: 153 = 1³ + 5³ + 3³.
 11. **Write a program from the following series: $e^x = 1 + \frac{x}{1} + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots$** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 316 (ET: N/A)]*
 
@@ -253,7 +253,7 @@
     }
     ```
 
-    - Each term is obtained from the previous one by multiplying with x/i, so the factorial is never computed separately.
+    - We get each term from the one before it by multiplying with x/i. So we never have to compute the factorial.
     - This keeps the time complexity at O(n).
 12. **Write a C program to find sum of: $X - \frac{X^3}{3!} + \frac{X^5}{5!} - \frac{X^7}{7!} \dots N$** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 397 (ET: BUET)]*
 
@@ -277,8 +277,8 @@
     }
     ```
 
-    - This is the sine series, where each term is derived from the previous one.
-    - The sign alternates because of the negative multiplier.
+    - This is the sine series. Each term comes from the one before it.
+    - The sign flips every time, because of the minus sign in the multiplier.
 13. **Salary Range and Tax Calculation are given:**
 
 | Salary Range | Tax |
@@ -342,7 +342,7 @@
     }
     ```
 
-    - Checking divisors only up to the square root reduces the work greatly.
+    - We check divisors only up to the square root. This cuts the work a lot.
     - Time complexity is about O(n√n).
 15. **Write a program in any language to find the sum of rows and columns of a m \times n matrix, where m and n is taken input from the user. Give the output in the following format:**
    **Sample Input matrix:**
@@ -373,7 +373,7 @@
     }
     ```
 
-    - Row sums fix the row index and vary the column, and column sums do the opposite.
+    - For a row sum we fix the row and move across the columns. For a column sum we do the opposite.
     - Time complexity O(m × n).
 16. **Write a program in any language to find the prime numbers between 1.......n, where n is taken as user input.**
    **Sample input:**
@@ -399,7 +399,7 @@
     }
     ```
 
-    - Checking divisors only up to the square root reduces the work greatly.
+    - We check divisors only up to the square root. This cuts the work a lot.
     - Time complexity is about O(n√n).
 17. **Write a Program Prime number print from 1 to n.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 294 (ET: BIBM)]*
 
@@ -421,7 +421,7 @@
     }
     ```
 
-    - Checking divisors only up to the square root reduces the work greatly.
+    - We check divisors only up to the square root. This cuts the work a lot.
     - Time complexity is about O(n√n).
 18. **Write a Program Floyds triangle n=5**
 ```text
@@ -449,7 +449,7 @@
     }
     ```
 
-    - Floyd's triangle prints consecutive natural numbers, with row i holding i numbers.
+    - Floyd's triangle prints natural numbers one after another. Row i holds i numbers.
     - Output for n = 5 is 1 / 2 3 / 4 5 6 / 7 8 9 10 / 11 12 13 14 15.
 19. **Write a C Program Find sum of the series: 1+2+4+7+11+..........+N** *[Combined Bank Assistant Programmer 09.02.2024 compact it 295 (ET: BIBM)]*
 
@@ -470,7 +470,7 @@
     }
     ```
 
-    - The differences between consecutive terms are 1, 2, 3, 4, so each term is the previous term plus i.
+    - The gaps between the terms are 1, 2, 3, 4. So each term is the previous term plus i.
     - Series: 1, 2, 4, 7, 11, 16 and so on.
 20. **Write a function which receives an array of integers as parameter and print the numbers divisible by 3 in the array.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 428 (ET: BIBM)]*
 
@@ -493,7 +493,7 @@
     }
     ```
 
-    - Only elements whose remainder on division by 3 is zero are printed.
+    - We print only the elements whose remainder on division by 3 is 0.
     - Time complexity O(n).
 21. **Write a C program: ax^2+bx+c=0** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 390 (ET: BUET)]*
 
@@ -541,7 +541,7 @@
     }
     ```
 
-    - The last digit is taken by n % 10 and removed by n / 10, repeated until n becomes 0.
+    - We take the last digit with n % 10 and remove it with n / 10. We repeat until n becomes 0.
     - For 1234 the answer is 1 + 2 + 3 + 4 = 10.
 23. **Find the output from the following: take input and looks the output:**
    **Suppose Input: 6789; Output: 9876** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
@@ -563,7 +563,7 @@
     }
     ```
 
-    - Each extracted digit is appended to the reversed number by multiplying it by 10 first.
+    - We multiply the reversed number by 10 and then add the new digit to it.
     - Input 6789 gives output 9876.
 24. **(b) Print the output:** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 ```c
@@ -595,10 +595,10 @@ else print F;
 
     Answer: Output is B C D.
 
-    - The four conditions are written as separate `if` statements, not as `else if`, so each one is tested independently.
+    - The four conditions are separate `if` statements, not `else if`. So each one is checked on its own.
     - a = 85, so `a >= 90` is false and nothing prints.
     - `a >= 80` is true, so B prints. `a >= 70` is true, so C prints. `a >= 60` is true, so D prints.
-    - The `else` belongs only to the last `if`, and since that condition was true, F never prints.
+    - The `else` belongs only to the last `if`. That condition was true, so F never prints.
     - If `else if` had been used, only B would print. This is the trap the question is testing.
 26. **(ক) C ভাষায় ব্যবহৃত বিভিন্ন ধরনের Data Type বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 407 (ET: N/A)]*
 
@@ -610,7 +610,7 @@ else print F;
     - `float` — single precision decimal, 4 bytes, `%f`.
     - `double` — double precision decimal, 8 bytes, `%lf`.
     - `char` — a single character, 1 byte, `%c`.
-    - `void` — represents no value, used for functions returning nothing.
+    - `void` — means no value. We use it for functions that return nothing.
 
     Derived types:
     - Array — a collection of same type elements, for example `int a[10]`.
@@ -643,7 +643,7 @@ else print F;
     ```
 
     - `long long` is used because factorial values grow very fast.
-    - Factorial of 0 is 1, which this loop handles correctly since it never runs.
+    - Factorial of 0 is 1. The loop never runs in that case, so the answer stays 1, which is correct.
 28. **Write a program swap two numbers without using 3rd variable.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)]*
 
 
@@ -700,10 +700,10 @@ int main() {
     Answer: The first line printed is 112345, after which the program shows undefined behaviour.
 
     - `PrintArray(num,5)` in main prints the array as 112345.
-    - Inside `FunctionArray`, the variable `j` is declared but never initialised, and the very first statement executed on it is `j--`. Using an uninitialised variable is undefined behaviour in C.
-    - The while loop `while (j >= 0 && j <= n)` never changes `j` inside the body, so if the loop is entered at all it becomes an infinite loop and also writes outside the array bounds through `num[j] = num[j+1]`.
-    - Therefore the program prints 112345 and then either hangs or crashes, depending on the compiler and the garbage value in `j`.
-    - The intended code was insertion sort, where `j` should have been initialised as `j = i - 1` and decremented inside the loop.
+    - Inside `FunctionArray`, the variable `j` is declared but never given a value. The first thing done to it is `j--`. Using an uninitialised variable is undefined behaviour in C.
+    - The loop `while (j >= 0 && j <= n)` never changes `j` inside the body. So if it starts at all, it runs forever. It also writes outside the array through `num[j] = num[j+1]`.
+    - So the program prints 112345 and then either hangs or crashes. It depends on the compiler and on the garbage value in `j`.
+    - The code was meant to be insertion sort. There `j` should start as `j = i - 1` and go down inside the loop.
 30. **Write a program for following sequence and analyze complexity of the program** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 522 (ET: MIST)]*
 
 
@@ -721,9 +721,9 @@ int main() {
     }
     ```
 
-    - The loop runs n times and each iteration does constant work, so the time complexity is O(n).
+    - The loop runs n times. Each turn does a fixed amount of work. So the time complexity is O(n).
     - Only a few variables are used, so the space complexity is O(1).
-    - The same result can be obtained in O(1) using n(n+1)(2n+1)/6.
+    - We can get the same result in O(1) using the formula n(n+1)(2n+1)/6.
 31. **Write a C/C++ program to count the prime number up to N.** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
 
@@ -745,7 +745,7 @@ int main() {
     }
     ```
 
-    - Instead of printing, the primes are counted.
+    - Here we count the primes instead of printing them.
     - The Sieve of Eratosthenes would be faster at O(n log log n) for large n.
 32. **Write a C/C++ program for check out a leap year program.** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
@@ -835,10 +835,10 @@ return 0;
     For an input of n = 5 the output is:
     `Fibonacci Series:01,1,2,3`
 
-    - `first = 0` is printed with no separator, then `second = 1` is printed also with no separator, which is why the first two values appear joined as 01.
+    - `first = 0` is printed with no separator. Then `second = 1` is also printed with no separator. That is why the first two values look joined, as 01.
     - From i = 2 onward each new term is printed after a comma, so the remaining output is ,1 then ,2 then ,3.
     - Time complexity: O(n), because the loop runs n − 2 times and each iteration does constant work.
-    - Space complexity: O(1), since only the variables first, second and next are stored regardless of n.
+    - Space complexity: O(1). We store only first, second and next, whatever n is.
 35. **Write a program find prime number between 1 to 100?** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 499 (ET: IBA)]*
 
 
@@ -877,7 +877,7 @@ return 0;
     ```
 
     - The output is 5050.
-    - The same value can be obtained directly by n(n+1)/2 = 100 × 101 / 2.
+    - We can get the same value directly from n(n+1)/2 = 100 × 101 / 2.
 37. **Write a Program:** *[DESCO Assistant Engineer 20.05.2023 compact it 579 (ET: DESCO)]*
    **a) Sample Output:**
    ```text
@@ -970,7 +970,7 @@ return 0;
     }
     ```
 
-    - The array and its size are passed as parameters and the minimum value is returned.
+    - We pass the array and its size to the function. The function returns the smallest value.
     - Time complexity O(n).
 40. **Suppose you have an array. The array contains elements from 0 to 10. This array also contains 0. To replace these 0s, write a program in C/C++ language.** *[BTCL Assistant Manager (Technical) 2023 compact it 593 (ET: BUET)]*
 
@@ -991,7 +991,7 @@ return 0;
     }
     ```
 
-    - All non-zero elements are moved forward keeping their order, then the rest of the array is filled with zeros.
+    - We move all non-zero elements to the front, keeping their order. Then we fill the rest of the array with zeros.
     - Time complexity O(n) and space complexity O(1).
 41. **Write a function int equilibrium (int[] arr, int n); that given a sequence arr[] of size n, returns an equilibrium index (if any) or -1 if no equilibrium indexes exist. The equilibrium index of an array is an index such that the sum of elements at lower indexes is equal to the sum of elements at higher indexes. Foe example:** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 455 (ET: BUET)]*
    **Input: A[] = {-7, 1, 5, 2, -4, 3, 0}**
@@ -1025,7 +1025,7 @@ return 0;
     ```
 
     - At an equilibrium index the sum of elements on the left equals the sum on the right.
-    - The running total avoids recomputing the right sum each time, so the complexity is O(n).
+    - We keep a running total, so we do not add up the right side again and again. That makes it O(n).
 42. **Write a C program to print the following pattern:**
 ```text
 0
@@ -1051,7 +1051,7 @@ return 0;
     }
     ```
 
-    - Row i contains 2i − 1 characters, alternating 0 and 1 and always starting with 0.
+    - Row i has 2i − 1 characters. They alternate between 0 and 1, and always start with 0.
     - This gives 0 then 010 then 01010.
 43. **Write a C code that show factorial of a number.** *[BITAC Assistant Programmer 27.10.2023 compact it 561 (ET: BUTEX)]*
 
@@ -1072,7 +1072,7 @@ return 0;
     ```
 
     - `long long` is used because factorial values grow very fast.
-    - Factorial of 0 is 1, which this loop handles correctly since it never runs.
+    - Factorial of 0 is 1. The loop never runs in that case, so the answer stays 1, which is correct.
 44. **Write a C Program to delete duplicate element from array.** *[BEPZA Programmer 03.11.2023 compact it 561 (ET: N/A)]*
 
 
@@ -1096,7 +1096,7 @@ return 0;
     }
     ```
 
-    - Every element is compared with the ones after it, and a duplicate is removed by shifting the rest left.
+    - We compare every element with the ones after it. When we find a duplicate, we remove it by shifting the rest to the left.
     - Time complexity O(n²). Sorting first would allow an O(n log n) solution.
 45. **Given two integers A and B as input write a program to compute the least common multiple of A and B.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
 
@@ -1123,7 +1123,7 @@ return 0;
     }
     ```
 
-    - LCM is obtained from the identity LCM(a,b) = (a × b) / GCD(a,b).
+    - We get the LCM from the formula LCM(a,b) = (a × b) / GCD(a,b).
     - Dividing before multiplying avoids overflow.
     - The Euclidean algorithm finds the GCD in O(log min(a,b)).
 46. **(খ) এমন একটি C program লিখুন যা একটি array তৈরি করে কতগুলো ডেটা রাখবে, তারপর ফলাফল হিসেবে ডেটাগুলোকে বিপরীত দিক থেকে print করবে।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 600 (ET: N/A)]*
@@ -1144,7 +1144,7 @@ return 0;
     }
     ```
 
-    - The array is simply traversed from the last index down to the first.
+    - We just walk the array from the last index down to the first.
     - Time complexity O(n).
 47. **(খ) প্রথম দশটি Fibonacci number প্রদর্শনের জন্য একটি C program লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 601 (ET: N/A)]*
 
@@ -1230,7 +1230,7 @@ return 0;
     }
     ```
 
-    - Divisors are checked only up to √n, because a larger factor must pair with a smaller one.
+    - We check divisors only up to √n. Any larger factor must have a smaller partner, which we have already checked.
     - Time complexity O(√n).
 51. **Find the most significant number in an array of N elements.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 683 (ET: N/A)]*
 
@@ -1250,7 +1250,7 @@ return 0;
     }
     ```
 
-    - The first element is assumed the largest, then every other element is compared once.
+    - We take the first element as the largest. Then we compare every other element with it once.
     - Time complexity O(n).
 52. **Determine even or odd numbers.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 684 (ET: N/A)]*
 
@@ -1268,7 +1268,7 @@ return 0;
     }
     ```
 
-    - The remainder after dividing by 2 decides the result.
+    - If the remainder after dividing by 2 is 0, the number is even. Otherwise it is odd.
     - Time complexity O(1).
 53. **Print the following matrix using for loop.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
 ```text
@@ -1344,7 +1344,7 @@ return 0;
     ```
 
     - The array is sorted in descending order, so the kth largest sits at index k − 1.
-    - Sorting costs O(n²) here; a max-heap would give O(n + k log n).
+    - Sorting costs O(n²) here. A max-heap would give O(n + k log n).
 56. **Write a C/C++ program to find out the prime from 1 to N.** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 718 (ET: N/A)]*
 
 
@@ -1365,7 +1365,7 @@ return 0;
     }
     ```
 
-    - Checking divisors only up to the square root reduces the work greatly.
+    - We check divisors only up to the square root. This cuts the work a lot.
     - Time complexity is about O(n√n).
 57. **Write a C/C++ program to find the reverse number of a number.** *[CAAB Programmer 2022 compact it 721 (ET: N/A)]*
 
@@ -1386,7 +1386,7 @@ return 0;
     }
     ```
 
-    - Each extracted digit is appended to the reversed number by multiplying it by 10 first.
+    - We multiply the reversed number by 10 and then add the new digit to it.
     - Input 6789 gives output 9876.
 58. **Write a C/C++ program to find the HCF.** *[CAAB Programmer 2022 compact it 721 (ET: N/A)]*
 
@@ -1408,7 +1408,7 @@ return 0;
     }
     ```
 
-    - This is the Euclidean algorithm, where the larger number is repeatedly replaced by the remainder.
+    - This is the Euclidean algorithm. We keep replacing the larger number with the remainder.
     - Time complexity O(log min(a,b)).
 59. **Write a C/C++ program to find the sum of digits.** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
 
@@ -1429,7 +1429,7 @@ return 0;
     }
     ```
 
-    - The last digit is taken by n % 10 and removed by n / 10, repeated until n becomes 0.
+    - We take the last digit with n % 10 and remove it with n / 10. We repeat until n becomes 0.
     - For 1234 the answer is 1 + 2 + 3 + 4 = 10.
 60. **Write a program to find this is Leap year or not, using function.** *[BKSP Assistant Programmer 03.12.2022 compact it 729 (ET: N/A)]*
 
@@ -1452,7 +1452,7 @@ return 0;
     }
     ```
 
-    - The check is placed in a separate function that returns 1 for a leap year and 0 otherwise.
+    - We put the check in a separate function. It returns 1 for a leap year and 0 otherwise.
     - Using a function keeps main clean and makes the logic reusable.
 61. **Write a C program using array, here N is the number of total students. Take the input and find the average marks. Find out the students who got the above marks or low marks according to average marks.** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
 
@@ -1474,7 +1474,7 @@ return 0;
     }
     ```
 
-    - All marks are read into an array and added, then divided by the number of students.
+    - We read all the marks into an array, add them up, and then divide by the number of students.
     - Time complexity O(n).
 62. **Write down a function int reverse (int n) that takes a positive integer as input parameter and returns the reverse of the given integer. For example, if input integer N=2579, then reversed output is= 9752** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 748 (ET: N/A)]*
 
@@ -1525,7 +1525,7 @@ return 0;
     ```
 
     - Each row holds the four class test marks of one student.
-    - Fixing the row and looping over the columns gives that student's total.
+    - We fix the row and loop over the columns. That gives the total of that student.
 64. **(ক) নিচের সিরিজ টি ক্যালকুলেটর এবং প্রিন্ট করার জন্য একটি C Program লিখুন। 1 + 2 + 3 + \dots + 100** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
 
 
@@ -1543,7 +1543,7 @@ return 0;
     ```
 
     - The output is 5050.
-    - The same value can be obtained directly by n(n+1)/2 = 100 × 101 / 2.
+    - We can get the same value directly from n(n+1)/2 = 100 × 101 / 2.
 65. **(খ) তোমার ক্লাসের ছাত্রদের তালিকা Sort করার জন্য একটি C Program লিখ।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
 
 
@@ -1589,7 +1589,7 @@ return 0;
     }
     ```
 
-    - The first number is assumed largest and then compared with the others.
+    - We take the first number as the largest, then compare it with the others.
     - Only two comparisons are needed.
 67. **(b) Write down a program in C language that will find the maximum of four integer gives as inputs.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
 
@@ -1635,7 +1635,7 @@ return 0;
     ```
 
     - A mountain subarray must strictly increase, reach one peak and then strictly decrease.
-    - The peak cannot be the first or the last element, which is why both edge cases are rejected.
+    - The peak cannot be the first or the last element. That is why we reject both those cases.
     - Time complexity O(n).
 69. **Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6** *[RAKUB Programmer (PO) 12.10.2021 compact it 844 (ET: N/A)], [Sonali Bank Ltd. Officer IT 2021 compact it 908 (ET: N/A)]*
 
@@ -1657,7 +1657,7 @@ return 0;
     }
     ```
 
-    - The digit sum is taken repeatedly until a single digit remains.
+    - We add the digits again and again, until only one digit is left.
     - Example: 9875 → 29 → 11 → 2.
 70. **Pattern this print using C++ program-** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 ```text
@@ -1684,8 +1684,8 @@ return 0;
     }
     ```
 
-    - The outer loop counts down from 5 to 1, so each row has one number fewer.
-    - The inner loop always prints 1 up to the current row length.
+    - The outer loop counts down from 5 to 1. So each row has one number less than the row above.
+    - The inner loop always prints from 1 up to the current row length.
 71. **(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the sum of main diagonal elements of the matrix.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 884 (ET: N/A)]*
 
 
@@ -1755,7 +1755,7 @@ return 0;
     ```
 
     - The general term is i / ((i+1)(i+2)).
-    - The cast to float prevents integer division from truncating the result.
+    - We cast to float. Without it, integer division would cut off the decimal part.
 74. **Write a C program to compute the perimeter and area of a circle with a given radius.** *[Sonali Bank Ltd. Officer IT 2021 compact it 909-910 (ET: N/A)]*
 
 
@@ -1794,7 +1794,7 @@ return 0;
     }
     ```
 
-    - Only the records whose unit consumption exceeds 300 are considered.
+    - We look only at the records where the unit consumption is more than 300.
     - For those the meter number and the unit are added and printed.
 76. **Write the code for second highest maximum from given three number in c/c++.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 920-921 (ET: N/A)]*
 
@@ -1832,7 +1832,7 @@ return 0;
     }
     ```
 
-    - The remainder after dividing by 2 decides the result.
+    - If the remainder after dividing by 2 is 0, the number is even. Otherwise it is odd.
     - Time complexity O(1).
 78. **Write a C program for prime numbers between 1 to N.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
@@ -1854,7 +1854,7 @@ return 0;
     }
     ```
 
-    - Checking divisors only up to the square root reduces the work greatly.
+    - We check divisors only up to the square root. This cuts the work a lot.
     - Time complexity is about O(n√n).
 79. **Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948 (ET: N/A)]*
 
@@ -1873,23 +1873,23 @@ return 0;
     }
     ```
 
-    - The loop runs n times and each iteration does constant work, so the time complexity is O(n).
+    - The loop runs n times. Each turn does a fixed amount of work. So the time complexity is O(n).
     - Only a few variables are used, so the space complexity is O(1).
-    - The same result can be obtained in O(1) using n(n+1)(2n+1)/6.
+    - We can get the same result in O(1) using the formula n(n+1)(2n+1)/6.
 80. **(i) Formatted Input/Output Statement কাকে বলে? Key-Board থেকে কিভাবে input নেয়া যায়? %d এর অর্থ কী?** *[BPSC Assistant Network Engineer 2020 compact it 954-955 (ET: N/A)]*
 
 
     Answer:
 
     Formatted input/output statement:
-    - These are the statements that read or write data in a specified format using format specifiers.
+    - These statements read or write data in a fixed format, using format specifiers.
     - `scanf()` is the formatted input function and `printf()` is the formatted output function.
     - They are declared in the header file `stdio.h`.
 
     Taking input from the keyboard:
     - `scanf("%d", &n);` reads an integer typed on the keyboard into the variable n.
-    - The format string tells the type of data expected and the `&` operator supplies the address of the variable where the value is stored.
-    - For a string read with `%s`, the `&` is not needed because an array name already gives the address.
+    - The format string says what type of data to expect. The `&` operator gives the address of the variable where the value will be stored.
+    - For a string read with `%s` we do not need `&`, because an array name already gives the address.
 
     Meaning of `%d`:
     - `%d` is the format specifier for a signed decimal integer.
@@ -1911,7 +1911,7 @@ return 0;
     ```
 
     - The condition must produce a true or false value.
-    - The else part is optional, and `else if` can be chained for multiple conditions.
+    - The else part is optional. We can chain `else if` for more conditions.
 
     Program for the series 1 + 3 + 5 + 7 + ... + n:
 
@@ -1993,7 +1993,7 @@ return 0;
     }
     ```
 
-    - Every pair is checked once and the first pair whose sum falls in the range is reported.
+    - We check every pair once. We report the first pair whose sum falls in the range.
     - Time complexity O(n²). Sorting the stream first and using two pointers would reduce it to O(n log n).
 85. **Write a code in C/C++ that will output the 2nd largest number. (If N>=1)** *[Combined 4 Banks Assistant Programmer 2020 compact it 1008-1009 (ET: DU)]*
 
@@ -2018,8 +2018,8 @@ return 0;
     }
     ```
 
-    - Both the largest and the second largest are tracked in a single pass.
-    - The check `x != max` prevents a duplicate of the maximum from being reported as second.
+    - We track both the largest and the second largest in one pass.
+    - The check `x != max` stops a repeat of the maximum from being counted as the second largest.
     - Time complexity O(n).
 86. **0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040-1041 (ET: DPI)]*
 
@@ -2043,7 +2043,7 @@ return 0;
     }
     ```
 
-    - The first two terms 0 and 1 are printed separately, then each new term is the sum of the previous two.
+    - We print the first two terms 0 and 1 separately. After that, each new term is the sum of the previous two.
     - Time complexity O(n) and space complexity O(1).
 
 ## Output Tracing & Control Flow (35)
