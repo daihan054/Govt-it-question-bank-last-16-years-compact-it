@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 138/206 sections**
+**Rewritten: 139/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -75,7 +75,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] computer-fundamental.md — User Interfaces (CLI vs GUI) (1)
 
 ## computer-network-security.md — 14 sections
-- [ ] computer-network-security.md — Cryptography (27)
+- [x] computer-network-security.md — Cryptography (27)
 - [ ] computer-network-security.md — Social Engineering & Cyber Attacks (26)
 - [ ] computer-network-security.md — Firewalls & Network Defense (16)
 - [ ] computer-network-security.md — Authentication & Access Control (15)

@@ -233,12 +233,17 @@
 
     | Point | Symmetric encryption | Asymmetric encryption |
     |---|---|---|
-    | Keys | One shared secret key for both encryption and decryption | A key pair: a public key to encrypt and a private key to decrypt |
+    | Keys required | A single key, used for both encryption and decryption | Two keys: a public key to encrypt and a private key to decrypt |
+    | How it works | P = D(K, E(K, P)). The same key K does both jobs | P = D(Kd, E(Ke, P)). One key encrypts and a different key decrypts |
     | Key distribution | The hard problem: the secret key must reach the other party securely | Solved: the public key may be published freely |
-    | Speed | Very fast, suitable for bulk data | 100 to 1000 times slower |
+    | Speed | Very fast | Slow, roughly 100 to 1000 times slower |
+    | Volume of data | Good for large amounts of data | Good for small amounts of data |
+    | Ciphertext size | Same as, or smaller than, the plaintext | Same as, or larger than, the plaintext |
+    | Resource usage | Low | High |
     | Key length | 128 or 256 bits | 2048 or 4096 bits for RSA, 256 bits for ECC |
     | Number of keys for n users | n(n − 1)/2 keys | 2n keys, one pair each |
-    | Services provided | Confidentiality | Confidentiality, authentication, non-repudiation and key exchange |
+    | Security services | Confidentiality only | Confidentiality, authenticity and non-repudiation |
+    | Security level | Lower, because there is only one key to protect | Higher, because of the two key system |
     | Algorithms | AES, DES, 3DES, Blowfish, RC4, ChaCha20 | RSA, Diffie-Hellman, ECC, ElGamal, DSA |
     | Typical use | Encrypting files, disks, databases and the bulk of network traffic | Key exchange, digital signatures and certificates |
 
@@ -298,12 +303,17 @@
 
     | Point | Symmetric encryption | Asymmetric encryption |
     |---|---|---|
-    | Keys | One shared secret key for both encryption and decryption | A key pair: a public key to encrypt and a private key to decrypt |
+    | Keys required | A single key, used for both encryption and decryption | Two keys: a public key to encrypt and a private key to decrypt |
+    | How it works | P = D(K, E(K, P)). The same key K does both jobs | P = D(Kd, E(Ke, P)). One key encrypts and a different key decrypts |
     | Key distribution | The hard problem: the secret key must reach the other party securely | Solved: the public key may be published freely |
-    | Speed | Very fast, suitable for bulk data | 100 to 1000 times slower |
+    | Speed | Very fast | Slow, roughly 100 to 1000 times slower |
+    | Volume of data | Good for large amounts of data | Good for small amounts of data |
+    | Ciphertext size | Same as, or smaller than, the plaintext | Same as, or larger than, the plaintext |
+    | Resource usage | Low | High |
     | Key length | 128 or 256 bits | 2048 or 4096 bits for RSA, 256 bits for ECC |
     | Number of keys for n users | n(n − 1)/2 keys | 2n keys, one pair each |
-    | Services provided | Confidentiality | Confidentiality, authentication, non-repudiation and key exchange |
+    | Security services | Confidentiality only | Confidentiality, authenticity and non-repudiation |
+    | Security level | Lower, because there is only one key to protect | Higher, because of the two key system |
     | Algorithms | AES, DES, 3DES, Blowfish, RC4, ChaCha20 | RSA, Diffie-Hellman, ECC, ElGamal, DSA |
     | Typical use | Encrypting files, disks, databases and the bulk of network traffic | Key exchange, digital signatures and certificates |
 
@@ -330,12 +340,17 @@
 
     | Point | Symmetric encryption | Asymmetric encryption |
     |---|---|---|
-    | Keys | One shared secret key for both encryption and decryption | A key pair: a public key to encrypt and a private key to decrypt |
+    | Keys required | A single key, used for both encryption and decryption | Two keys: a public key to encrypt and a private key to decrypt |
+    | How it works | P = D(K, E(K, P)). The same key K does both jobs | P = D(Kd, E(Ke, P)). One key encrypts and a different key decrypts |
     | Key distribution | The hard problem: the secret key must reach the other party securely | Solved: the public key may be published freely |
-    | Speed | Very fast, suitable for bulk data | 100 to 1000 times slower |
+    | Speed | Very fast | Slow, roughly 100 to 1000 times slower |
+    | Volume of data | Good for large amounts of data | Good for small amounts of data |
+    | Ciphertext size | Same as, or smaller than, the plaintext | Same as, or larger than, the plaintext |
+    | Resource usage | Low | High |
     | Key length | 128 or 256 bits | 2048 or 4096 bits for RSA, 256 bits for ECC |
     | Number of keys for n users | n(n − 1)/2 keys | 2n keys, one pair each |
-    | Services provided | Confidentiality | Confidentiality, authentication, non-repudiation and key exchange |
+    | Security services | Confidentiality only | Confidentiality, authenticity and non-repudiation |
+    | Security level | Lower, because there is only one key to protect | Higher, because of the two key system |
     | Algorithms | AES, DES, 3DES, Blowfish, RC4, ChaCha20 | RSA, Diffie-Hellman, ECC, ElGamal, DSA |
     | Typical use | Encrypting files, disks, databases and the bulk of network traffic | Key exchange, digital signatures and certificates |
 
@@ -355,12 +370,17 @@
 
     | Point | Symmetric encryption | Asymmetric encryption |
     |---|---|---|
-    | Keys | One shared secret key for both encryption and decryption | A key pair: a public key to encrypt and a private key to decrypt |
+    | Keys required | A single key, used for both encryption and decryption | Two keys: a public key to encrypt and a private key to decrypt |
+    | How it works | P = D(K, E(K, P)). The same key K does both jobs | P = D(Kd, E(Ke, P)). One key encrypts and a different key decrypts |
     | Key distribution | The hard problem: the secret key must reach the other party securely | Solved: the public key may be published freely |
-    | Speed | Very fast, suitable for bulk data | 100 to 1000 times slower |
+    | Speed | Very fast | Slow, roughly 100 to 1000 times slower |
+    | Volume of data | Good for large amounts of data | Good for small amounts of data |
+    | Ciphertext size | Same as, or smaller than, the plaintext | Same as, or larger than, the plaintext |
+    | Resource usage | Low | High |
     | Key length | 128 or 256 bits | 2048 or 4096 bits for RSA, 256 bits for ECC |
     | Number of keys for n users | n(n − 1)/2 keys | 2n keys, one pair each |
-    | Services provided | Confidentiality | Confidentiality, authentication, non-repudiation and key exchange |
+    | Security services | Confidentiality only | Confidentiality, authenticity and non-repudiation |
+    | Security level | Lower, because there is only one key to protect | Higher, because of the two key system |
     | Algorithms | AES, DES, 3DES, Blowfish, RC4, ChaCha20 | RSA, Diffie-Hellman, ECC, ElGamal, DSA |
     | Typical use | Encrypting files, disks, databases and the bulk of network traffic | Key exchange, digital signatures and certificates |
 
@@ -440,12 +460,17 @@
 
     | Point | Symmetric encryption | Asymmetric encryption |
     |---|---|---|
-    | Keys | One shared secret key for both encryption and decryption | A key pair: a public key to encrypt and a private key to decrypt |
+    | Keys required | A single key, used for both encryption and decryption | Two keys: a public key to encrypt and a private key to decrypt |
+    | How it works | P = D(K, E(K, P)). The same key K does both jobs | P = D(Kd, E(Ke, P)). One key encrypts and a different key decrypts |
     | Key distribution | The hard problem: the secret key must reach the other party securely | Solved: the public key may be published freely |
-    | Speed | Very fast, suitable for bulk data | 100 to 1000 times slower |
+    | Speed | Very fast | Slow, roughly 100 to 1000 times slower |
+    | Volume of data | Good for large amounts of data | Good for small amounts of data |
+    | Ciphertext size | Same as, or smaller than, the plaintext | Same as, or larger than, the plaintext |
+    | Resource usage | Low | High |
     | Key length | 128 or 256 bits | 2048 or 4096 bits for RSA, 256 bits for ECC |
     | Number of keys for n users | n(n − 1)/2 keys | 2n keys, one pair each |
-    | Services provided | Confidentiality | Confidentiality, authentication, non-repudiation and key exchange |
+    | Security services | Confidentiality only | Confidentiality, authenticity and non-repudiation |
+    | Security level | Lower, because there is only one key to protect | Higher, because of the two key system |
     | Algorithms | AES, DES, 3DES, Blowfish, RC4, ChaCha20 | RSA, Diffie-Hellman, ECC, ElGamal, DSA |
     | Typical use | Encrypting files, disks, databases and the bulk of network traffic | Key exchange, digital signatures and certificates |
 
@@ -583,12 +608,17 @@
 
     | Point | Symmetric encryption | Asymmetric encryption |
     |---|---|---|
-    | Keys | One shared secret key for both encryption and decryption | A key pair: a public key to encrypt and a private key to decrypt |
+    | Keys required | A single key, used for both encryption and decryption | Two keys: a public key to encrypt and a private key to decrypt |
+    | How it works | P = D(K, E(K, P)). The same key K does both jobs | P = D(Kd, E(Ke, P)). One key encrypts and a different key decrypts |
     | Key distribution | The hard problem: the secret key must reach the other party securely | Solved: the public key may be published freely |
-    | Speed | Very fast, suitable for bulk data | 100 to 1000 times slower |
+    | Speed | Very fast | Slow, roughly 100 to 1000 times slower |
+    | Volume of data | Good for large amounts of data | Good for small amounts of data |
+    | Ciphertext size | Same as, or smaller than, the plaintext | Same as, or larger than, the plaintext |
+    | Resource usage | Low | High |
     | Key length | 128 or 256 bits | 2048 or 4096 bits for RSA, 256 bits for ECC |
     | Number of keys for n users | n(n − 1)/2 keys | 2n keys, one pair each |
-    | Services provided | Confidentiality | Confidentiality, authentication, non-repudiation and key exchange |
+    | Security services | Confidentiality only | Confidentiality, authenticity and non-repudiation |
+    | Security level | Lower, because there is only one key to protect | Higher, because of the two key system |
     | Algorithms | AES, DES, 3DES, Blowfish, RC4, ChaCha20 | RSA, Diffie-Hellman, ECC, ElGamal, DSA |
     | Typical use | Encrypting files, disks, databases and the bulk of network traffic | Key exchange, digital signatures and certificates |
 
