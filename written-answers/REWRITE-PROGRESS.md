@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 32/206 sections**
+**Rewritten: 33/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -41,7 +41,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] c-programming.md — Flowcharts & Algorithms (12)
 - [x] c-programming.md — String Manipulation & Algorithms (11)
 - [x] c-programming.md — File Handling (4)
-- [ ] c-programming.md — Pointers (4)
+- [x] c-programming.md — Pointers (4)
 - [ ] c-programming.md — Command Line Arguments & Basic Programs (1)
 
 ## cloud-computing.md — 9 sections
