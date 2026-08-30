@@ -126,12 +126,15 @@
 
    Comparison with the standard traversals of the same tree:
 
-   | Traversal | Order | Result |
-   |---|---|---|
-   | Preorder | Root, Left, Right | A B D E C F G |
-   | Inorder | Left, Root, Right | D B E A F C G |
-   | Postorder | Left, Right, Root | D E B F G C A |
-   | Right-Left-Root, the new one | Right, Left, Root | G F C E D B A |
+   | Traversal | Order rule | Result | What it is used for |
+   |---|---|---|---|
+   | Preorder | Root, Left, Right | A B D E C F G | Making a copy of the tree, and getting a prefix expression from an expression tree |
+   | Inorder | Left, Root, Right | D B E A F C G | In a BST it gives the nodes in increasing order. Also used to evaluate arithmetic expressions |
+   | Postorder | Left, Right, Root | D E B F G C A | Deleting a tree, getting a postfix expression, and garbage collection |
+   | Level order | Top to bottom, level by level, using a queue | A B C D E F G | Level wise processing, tree serialisation, finding the maximum width of the tree |
+   | Right-Left-Root, the new one | Right, Left, Root | G F C E D B A | The mirror of postorder |
+
+   How level order works: create an empty queue Q. Enqueue the root. Then loop while Q is not empty: dequeue a node and visit it, enqueue its left child if it exists, then enqueue its right child if it exists.
 
    - A useful observation: this traversal is exactly the reverse of the preorder of the mirror image of the tree, and its output is the reverse of the sequence Root, Left, Right applied after swapping every pair of children.
    - Iterative version: it can also be produced by a modified preorder using a stack, pushing the left child before the right, and then reversing the whole output at the end.
