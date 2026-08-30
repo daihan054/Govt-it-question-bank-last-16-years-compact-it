@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 48/206 sections**
+**Rewritten: 49/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -127,7 +127,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 
 ## data-structure.md — 8 sections
 - [ ] data-structure.md — Tree (26)
-- [ ] data-structure.md — Stack (19)
+- [x] data-structure.md — Stack (19)
 - [ ] data-structure.md — Linked List (14)
 - [ ] data-structure.md — Priority Queues & Heaps (Min/Max Heap) (7)
 - [ ] data-structure.md — Queue (6)

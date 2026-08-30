@@ -1203,7 +1203,7 @@
 1. **Explain the push and pop operations of the stack.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1448 (ET: N/A)]*
 
 
-   Answer: A stack is a linear data structure that follows the LIFO principle, Last In First Out, in which insertion and deletion both take place at one end called the top.
+   Answer: A stack is a linear data structure that follows the LIFO principle, Last In First Out. That means the element added most recently is the one removed first. Both insertion and deletion happen at one end only, called the top.
 
    Push operation:
    - Push inserts an element at the top of the stack.
@@ -1246,11 +1246,19 @@
 
    - Note that the element removed is always the one most recently inserted, which is the LIFO property.
 
-   Other operations: peek or top, which returns the top element without removing it; isEmpty, which tests whether top equals −1; and isFull, which tests whether top equals MAX − 1.
+   Other operations of a stack:
+   - Peek or Top: shows the top element without removing it.
+   - IsEmpty: checks whether the stack is empty, that is whether top equals −1.
+   - IsFull: checks whether top equals MAX − 1.
+   - Size: returns how many elements the stack holds.
 
    Complexity: both push and pop are O(1), since neither involves any searching or shifting.
 
-   Applications: the function call stack and recursion, undo in an editor, the browser back button, conversion and evaluation of expressions, balanced parenthesis checking, backtracking algorithms and depth first search.
+   Applications of a stack:
+   - Managing function calls, that is the call stack, and recursion.
+   - Evaluating expressions and parsing syntax, including infix to postfix conversion and balanced bracket checking.
+   - The undo feature in a text editor.
+   - The browser back button, and backtracking algorithms such as depth first search.
 2. **Implementation of Stack using two Queues?** *[BCIC Assistant Programmer 14.02.2025 compact it 1326 (ET: BUET)]*
 
 
@@ -1382,13 +1390,14 @@
 
    | Point | Stack | Queue |
    |---|---|---|
-   | Principle | LIFO, Last In First Out | FIFO, First In First Out |
+   | Definition | A linear data structure that follows LIFO, Last In First Out. The element added most recently is removed first | A linear data structure that follows FIFO, First In First Out. The oldest element is removed first |
    | Insertion | Push, at the top only | Enqueue, at the rear only |
    | Deletion | Pop, from the top only | Dequeue, from the front only |
    | Ends used | One end, the top | Two ends, the front and the rear |
    | Pointers needed | One, the top | Two, the front and the rear |
-   | Order of removal | Reverse of the order of insertion | Same as the order of insertion |
-   | Operations | push, pop, peek or top, isEmpty, isFull | enqueue, dequeue, front, rear, isEmpty, isFull |
+   | Order of removal | The reverse of the order of insertion | The same as the order of insertion |
+   | Operations | Push, Pop, Peek or Top, IsEmpty, Size | Enqueue, Dequeue, Front or Peek, Rear, IsEmpty, Size |
+   | Applications | Function call management, expression evaluation and parsing, undo in an editor, browser history and backtracking | Task scheduling in an OS, breadth first search, data buffering such as IO buffers and print spooling, customer service lines |
    | Variants | — | Circular queue, priority queue, double ended queue |
    | Real world analogy | A stack of plates: the last plate placed is the first taken | A queue at a ticket counter: the first to arrive is the first served |
    | Applications | Function call stack, recursion, undo, expression conversion and evaluation, backtracking, depth first search, balanced parenthesis checking, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, call centre waiting, message queues |
@@ -1449,13 +1458,14 @@
 
    | Point | Stack | Queue |
    |---|---|---|
-   | Principle | LIFO, Last In First Out | FIFO, First In First Out |
+   | Definition | A linear data structure that follows LIFO, Last In First Out. The element added most recently is removed first | A linear data structure that follows FIFO, First In First Out. The oldest element is removed first |
    | Insertion | Push, at the top only | Enqueue, at the rear only |
    | Deletion | Pop, from the top only | Dequeue, from the front only |
    | Ends used | One end, the top | Two ends, the front and the rear |
    | Pointers needed | One, the top | Two, the front and the rear |
-   | Order of removal | Reverse of the order of insertion | Same as the order of insertion |
-   | Operations | push, pop, peek or top, isEmpty, isFull | enqueue, dequeue, front, rear, isEmpty, isFull |
+   | Order of removal | The reverse of the order of insertion | The same as the order of insertion |
+   | Operations | Push, Pop, Peek or Top, IsEmpty, Size | Enqueue, Dequeue, Front or Peek, Rear, IsEmpty, Size |
+   | Applications | Function call management, expression evaluation and parsing, undo in an editor, browser history and backtracking | Task scheduling in an OS, breadth first search, data buffering such as IO buffers and print spooling, customer service lines |
    | Variants | — | Circular queue, priority queue, double ended queue |
    | Real world analogy | A stack of plates: the last plate placed is the first taken | A queue at a ticket counter: the first to arrive is the first served |
    | Applications | Function call stack, recursion, undo, expression conversion and evaluation, backtracking, depth first search, balanced parenthesis checking, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, call centre waiting, message queues |
@@ -1467,13 +1477,14 @@
 
    | Point | Stack | Queue |
    |---|---|---|
-   | Principle | LIFO, Last In First Out | FIFO, First In First Out |
+   | Definition | A linear data structure that follows LIFO, Last In First Out. The element added most recently is removed first | A linear data structure that follows FIFO, First In First Out. The oldest element is removed first |
    | Insertion | Push, at the top only | Enqueue, at the rear only |
    | Deletion | Pop, from the top only | Dequeue, from the front only |
    | Ends used | One end, the top | Two ends, the front and the rear |
    | Pointers needed | One, the top | Two, the front and the rear |
-   | Order of removal | Reverse of the order of insertion | Same as the order of insertion |
-   | Operations | push, pop, peek or top, isEmpty, isFull | enqueue, dequeue, front, rear, isEmpty, isFull |
+   | Order of removal | The reverse of the order of insertion | The same as the order of insertion |
+   | Operations | Push, Pop, Peek or Top, IsEmpty, Size | Enqueue, Dequeue, Front or Peek, Rear, IsEmpty, Size |
+   | Applications | Function call management, expression evaluation and parsing, undo in an editor, browser history and backtracking | Task scheduling in an OS, breadth first search, data buffering such as IO buffers and print spooling, customer service lines |
    | Variants | — | Circular queue, priority queue, double ended queue |
    | Real world analogy | A stack of plates: the last plate placed is the first taken | A queue at a ticket counter: the first to arrive is the first served |
    | Applications | Function call stack, recursion, undo, expression conversion and evaluation, backtracking, depth first search, balanced parenthesis checking, browser back button | CPU scheduling, printer spooling, breadth first search, buffering, disk scheduling, call centre waiting, message queues |
