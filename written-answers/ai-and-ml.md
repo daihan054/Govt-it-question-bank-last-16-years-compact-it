@@ -351,11 +351,6 @@
    - Early stopping: we stop training as soon as the validation error stops getting better.
    - Protecting the test set: because all tuning happens on the validation set, the test set stays unseen. So the final score we report is honest.
 
-   Simple way to remember the three sets:
-   - Training set = the textbook you study from.
-   - Validation set = the practice test you take again and again.
-   - Test set = the real exam, taken only once.
-
 2. **(b) Given following values:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
  * **True Positive \text{(TP)} = 560**
  * **True Negative \text{(TN)} = 330**
@@ -367,13 +362,6 @@
 
    Given: TP = 560, TN = 330, FP = 60, FN = 50
    Total = 560 + 330 + 60 + 50 = 1000
-
-   Confusion matrix:
-
-   | | Predicted Positive | Predicted Negative |
-   |---|---|---|
-   | Actual Positive | TP = 560 | FN = 50 |
-   | Actual Negative | FP = 60 | TN = 330 |
 
    (i) Accuracy
 
@@ -409,12 +397,6 @@
    = 0.9105 or 91.05%
 
    Final answer: Accuracy = 89%, Precision = 90.32%, Recall = 91.80%, F1 Score = 91.05%
-
-   What each one means in simple words:
-   - Accuracy: out of all cases, how many did we get right.
-   - Precision: out of all the cases we called positive, how many were really positive.
-   - Recall: out of all the real positive cases, how many did we catch.
-   - F1 Score: one number that balances precision and recall together.
 
 3. **b) How can we validate and check reliability of a machine learning model?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
 
@@ -490,8 +472,6 @@
    | Effect on the model | It shapes the model, because we make choices from it | No effect at all |
    | Risk | Using it again and again leaks information, so the model can overfit to it | Stays clean, so the reported score can be trusted |
 
-   Simple example: the validation set is the practice test you take many times to improve. The test set is the final exam you sit only once.
-
 ## Supervised Learning (Decision Trees) (4)
 
 1. **What is Machine Learning? Mention some real-life applications.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
@@ -555,11 +535,6 @@
    | Main types | Classification, Regression | Clustering, Association | Value based, Policy based |
    | Algorithms | Decision Tree, SVM, KNN | K-Means, Apriori | Q-Learning, SARSA |
    | Example | Predicting loan default | Grouping customers | Robot learning to walk |
-
-   One line each:
-   - Supervised: learning with a teacher who gives the answers.
-   - Unsupervised: learning with no teacher, just finding groups.
-   - Reinforcement: learning from reward and punishment, like training a pet.
 
 4. **(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
 
