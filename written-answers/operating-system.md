@@ -6665,19 +6665,31 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
    The five states of a process:
 
-   - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+   - New: the process has just been created. It has not started running yet, but its Process Control Block (PCB) is ready. The program still sits in secondary memory.
 
-   - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+   - Ready: the process is loaded into main memory and is ready to run. It waits in the ready queue until the CPU becomes free. It has everything it needs except the processor itself.
 
-   - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+   - Running: the CPU is currently executing the instructions of this process. On a single processor machine only one process can be in this state at a time.
 
-   - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+   - Blocked, also called Waiting: the process cannot go on, because it is waiting for an event, such as an I/O operation finishing, user input arriving, or a locked resource being released. It is not competing for the CPU, so giving it the processor would be useless.
 
-   - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+   - Terminated: the process has finished its execution, or it has been stopped. The OS deletes its PCB and frees every resource it had. The PCB may stay for a short while, so the parent can read the exit status. Such a process is called a zombie in Unix.
 
-   Two further states in systems with swapping:
-   - Suspended-Ready: ready, but swapped out to disk.
-   - Suspended-Blocked: waiting, and swapped out to disk.
+   Two more states in systems that use swapping:
+   - Suspend Ready: a ready process that was moved to secondary storage because memory was short. It comes back to Ready when it is loaded into main memory again.
+   - Suspend Blocked: a waiting process that was swapped out to disk.
+
+   State transitions and what causes each:
+
+   | Transition | What causes it |
+   |---|---|
+   | New → Ready | Resources are allocated and the process is loaded into main memory |
+   | Ready → Running | The scheduler gives the CPU to this process |
+   | Running → Blocked | The process waits for I/O, for input, or for a system resource |
+   | Blocked → Ready | The event finishes, or the resource becomes free |
+   | Running → Ready | The OS preempts the process, often because a higher priority task arrived |
+   | Running → Terminated | The process finishes, or it is forcibly stopped |
+   | Blocked → Terminated | The waiting process is aborted or killed |
 
    State transition diagram:
 
@@ -6825,19 +6837,31 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
    The five states of a process:
 
-   - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+   - New: the process has just been created. It has not started running yet, but its Process Control Block (PCB) is ready. The program still sits in secondary memory.
 
-   - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+   - Ready: the process is loaded into main memory and is ready to run. It waits in the ready queue until the CPU becomes free. It has everything it needs except the processor itself.
 
-   - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+   - Running: the CPU is currently executing the instructions of this process. On a single processor machine only one process can be in this state at a time.
 
-   - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+   - Blocked, also called Waiting: the process cannot go on, because it is waiting for an event, such as an I/O operation finishing, user input arriving, or a locked resource being released. It is not competing for the CPU, so giving it the processor would be useless.
 
-   - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+   - Terminated: the process has finished its execution, or it has been stopped. The OS deletes its PCB and frees every resource it had. The PCB may stay for a short while, so the parent can read the exit status. Such a process is called a zombie in Unix.
 
-   Two further states in systems with swapping:
-   - Suspended-Ready: ready, but swapped out to disk.
-   - Suspended-Blocked: waiting, and swapped out to disk.
+   Two more states in systems that use swapping:
+   - Suspend Ready: a ready process that was moved to secondary storage because memory was short. It comes back to Ready when it is loaded into main memory again.
+   - Suspend Blocked: a waiting process that was swapped out to disk.
+
+   State transitions and what causes each:
+
+   | Transition | What causes it |
+   |---|---|
+   | New → Ready | Resources are allocated and the process is loaded into main memory |
+   | Ready → Running | The scheduler gives the CPU to this process |
+   | Running → Blocked | The process waits for I/O, for input, or for a system resource |
+   | Blocked → Ready | The event finishes, or the resource becomes free |
+   | Running → Ready | The OS preempts the process, often because a higher priority task arrived |
+   | Running → Terminated | The process finishes, or it is forcibly stopped |
+   | Blocked → Terminated | The waiting process is aborted or killed |
 
    State transition diagram:
 
@@ -6999,19 +7023,31 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
    The five states of a process:
 
-   - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+   - New: the process has just been created. It has not started running yet, but its Process Control Block (PCB) is ready. The program still sits in secondary memory.
 
-   - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+   - Ready: the process is loaded into main memory and is ready to run. It waits in the ready queue until the CPU becomes free. It has everything it needs except the processor itself.
 
-   - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+   - Running: the CPU is currently executing the instructions of this process. On a single processor machine only one process can be in this state at a time.
 
-   - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+   - Blocked, also called Waiting: the process cannot go on, because it is waiting for an event, such as an I/O operation finishing, user input arriving, or a locked resource being released. It is not competing for the CPU, so giving it the processor would be useless.
 
-   - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+   - Terminated: the process has finished its execution, or it has been stopped. The OS deletes its PCB and frees every resource it had. The PCB may stay for a short while, so the parent can read the exit status. Such a process is called a zombie in Unix.
 
-   Two further states in systems with swapping:
-   - Suspended-Ready: ready, but swapped out to disk.
-   - Suspended-Blocked: waiting, and swapped out to disk.
+   Two more states in systems that use swapping:
+   - Suspend Ready: a ready process that was moved to secondary storage because memory was short. It comes back to Ready when it is loaded into main memory again.
+   - Suspend Blocked: a waiting process that was swapped out to disk.
+
+   State transitions and what causes each:
+
+   | Transition | What causes it |
+   |---|---|
+   | New → Ready | Resources are allocated and the process is loaded into main memory |
+   | Ready → Running | The scheduler gives the CPU to this process |
+   | Running → Blocked | The process waits for I/O, for input, or for a system resource |
+   | Blocked → Ready | The event finishes, or the resource becomes free |
+   | Running → Ready | The OS preempts the process, often because a higher priority task arrived |
+   | Running → Terminated | The process finishes, or it is forcibly stopped |
+   | Blocked → Terminated | The waiting process is aborted or killed |
 
    State transition diagram:
 
@@ -7064,19 +7100,31 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
    The five states of a process:
 
-   - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+   - New: the process has just been created. It has not started running yet, but its Process Control Block (PCB) is ready. The program still sits in secondary memory.
 
-   - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+   - Ready: the process is loaded into main memory and is ready to run. It waits in the ready queue until the CPU becomes free. It has everything it needs except the processor itself.
 
-   - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+   - Running: the CPU is currently executing the instructions of this process. On a single processor machine only one process can be in this state at a time.
 
-   - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+   - Blocked, also called Waiting: the process cannot go on, because it is waiting for an event, such as an I/O operation finishing, user input arriving, or a locked resource being released. It is not competing for the CPU, so giving it the processor would be useless.
 
-   - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+   - Terminated: the process has finished its execution, or it has been stopped. The OS deletes its PCB and frees every resource it had. The PCB may stay for a short while, so the parent can read the exit status. Such a process is called a zombie in Unix.
 
-   Two further states in systems with swapping:
-   - Suspended-Ready: ready, but swapped out to disk.
-   - Suspended-Blocked: waiting, and swapped out to disk.
+   Two more states in systems that use swapping:
+   - Suspend Ready: a ready process that was moved to secondary storage because memory was short. It comes back to Ready when it is loaded into main memory again.
+   - Suspend Blocked: a waiting process that was swapped out to disk.
+
+   State transitions and what causes each:
+
+   | Transition | What causes it |
+   |---|---|
+   | New → Ready | Resources are allocated and the process is loaded into main memory |
+   | Ready → Running | The scheduler gives the CPU to this process |
+   | Running → Blocked | The process waits for I/O, for input, or for a system resource |
+   | Blocked → Ready | The event finishes, or the resource becomes free |
+   | Running → Ready | The OS preempts the process, often because a higher priority task arrived |
+   | Running → Terminated | The process finishes, or it is forcibly stopped |
+   | Blocked → Terminated | The waiting process is aborted or killed |
 
    State transition diagram:
 
@@ -7129,15 +7177,15 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
     The five states of a process:
 
-    - New: the process is being created. The operating system has allocated a process control block but the process has not yet been admitted to the ready queue.
+    - New: the process has just been created. It has not started running yet, but its Process Control Block (PCB) is ready. The program still sits in secondary memory.
 
-    - Ready: the process is loaded into main memory and is waiting to be assigned to the CPU. It has everything it needs except the processor itself. All ready processes are kept in the ready queue.
+    - Ready: the process is loaded into main memory and is ready to run. It waits in the ready queue until the CPU becomes free. It has everything it needs except the processor itself.
 
-    - Running: the process is currently executing on the CPU. On a single-core machine only one process can be in this state at any instant.
+    - Running: the CPU is currently executing the instructions of this process. On a single processor machine only one process can be in this state at a time.
 
-    - Waiting (also called Blocked): the process cannot continue until some event occurs, typically the completion of an input or output operation, or the arrival of a signal, or the release of a resource. It is not competing for the CPU, so giving it the processor would be useless.
+    - Blocked, also called Waiting: the process cannot go on, because it is waiting for an event, such as an I/O operation finishing, user input arriving, or a locked resource being released. It is not competing for the CPU, so giving it the processor would be useless.
 
-    - Terminated: the process has finished execution or has been killed. Its resources are released, though the process control block may remain briefly so that the parent can read the exit status. A process in this condition is called a zombie in Unix.
+    - Terminated: the process has finished its execution, or it has been stopped. The OS deletes its PCB and frees every resource it had. The PCB may stay for a short while, so the parent can read the exit status. Such a process is called a zombie in Unix.
 
     Two further states in systems with swapping:
     - Suspended-Ready: ready, but swapped out to disk.
