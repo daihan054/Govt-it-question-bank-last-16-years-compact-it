@@ -46,12 +46,12 @@
 
    | Point | IaaS | PaaS | SaaS |
    |---|---|---|---|
-   | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
-   | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
-   | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
-   | Control and flexibility | Highest | Medium | Lowest |
-   | Target user | System administrator, network engineer | Application developer | End user |
-   | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
+   | What it provides | Virtualised computing resources over the internet: servers, storage and networking, on a rental basis | A ready to use platform for building, testing, deploying and managing applications | A fully working, ready to use software application, usually on subscription |
+   | The user controls | The operating system, the applications and the data | Only the application code and the data | Nothing. Only the data and the settings |
+   | The provider manages | The physical infrastructure: hardware, virtualisation, network, storage | Servers, storage and the whole runtime environment | Absolutely everything: infrastructure, updates, bug fixes and security |
+   | How much the customer manages | The most | Less | The least |
+   | Who it is for | System administrator, network engineer | Application developer | End user |
+   | Popular providers | AWS EC2, Microsoft Azure Virtual Machines, Google Compute Engine, DigitalOcean | AWS Elastic Beanstalk, Google App Engine, Heroku, Microsoft Azure App Service | Salesforce, Microsoft Office 365, Google Workspace, Dropbox, Zoho, Slack |
    | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 
    - Deployment models: public cloud, private cloud, hybrid cloud and community cloud.
@@ -136,12 +136,12 @@
 
    | Point | IaaS | PaaS | SaaS |
    |---|---|---|---|
-   | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
-   | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
-   | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
-   | Control and flexibility | Highest | Medium | Lowest |
-   | Target user | System administrator, network engineer | Application developer | End user |
-   | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
+   | What it provides | Virtualised computing resources over the internet: servers, storage and networking, on a rental basis | A ready to use platform for building, testing, deploying and managing applications | A fully working, ready to use software application, usually on subscription |
+   | The user controls | The operating system, the applications and the data | Only the application code and the data | Nothing. Only the data and the settings |
+   | The provider manages | The physical infrastructure: hardware, virtualisation, network, storage | Servers, storage and the whole runtime environment | Absolutely everything: infrastructure, updates, bug fixes and security |
+   | How much the customer manages | The most | Less | The least |
+   | Who it is for | System administrator, network engineer | Application developer | End user |
+   | Popular providers | AWS EC2, Microsoft Azure Virtual Machines, Google Compute Engine, DigitalOcean | AWS Elastic Beanstalk, Google App Engine, Heroku, Microsoft Azure App Service | Salesforce, Microsoft Office 365, Google Workspace, Dropbox, Zoho, Slack |
    | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 6. **Explain IaaS, PaaS, and SaaS with respect to cloud computing.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
 
@@ -165,12 +165,12 @@
 
    | Point | IaaS | PaaS | SaaS |
    |---|---|---|---|
-   | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
-   | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
-   | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
-   | Control and flexibility | Highest | Medium | Lowest |
-   | Target user | System administrator, network engineer | Application developer | End user |
-   | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
+   | What it provides | Virtualised computing resources over the internet: servers, storage and networking, on a rental basis | A ready to use platform for building, testing, deploying and managing applications | A fully working, ready to use software application, usually on subscription |
+   | The user controls | The operating system, the applications and the data | Only the application code and the data | Nothing. Only the data and the settings |
+   | The provider manages | The physical infrastructure: hardware, virtualisation, network, storage | Servers, storage and the whole runtime environment | Absolutely everything: infrastructure, updates, bug fixes and security |
+   | How much the customer manages | The most | Less | The least |
+   | Who it is for | System administrator, network engineer | Application developer | End user |
+   | Popular providers | AWS EC2, Microsoft Azure Virtual Machines, Google Compute Engine, DigitalOcean | AWS Elastic Beanstalk, Google App Engine, Heroku, Microsoft Azure App Service | Salesforce, Microsoft Office 365, Google Workspace, Dropbox, Zoho, Slack |
    | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 7. **What do you mean by multi-tenancy in the cloud? Why is it beneficial for cloud service providers?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 749 (ET: N/A)]*
 
@@ -202,12 +202,12 @@
 
    | Point | IaaS | PaaS | SaaS |
    |---|---|---|---|
-   | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
-   | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
-   | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
-   | Control and flexibility | Highest | Medium | Lowest |
-   | Target user | System administrator, network engineer | Application developer | End user |
-   | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
+   | What it provides | Virtualised computing resources over the internet: servers, storage and networking, on a rental basis | A ready to use platform for building, testing, deploying and managing applications | A fully working, ready to use software application, usually on subscription |
+   | The user controls | The operating system, the applications and the data | Only the application code and the data | Nothing. Only the data and the settings |
+   | The provider manages | The physical infrastructure: hardware, virtualisation, network, storage | Servers, storage and the whole runtime environment | Absolutely everything: infrastructure, updates, bug fixes and security |
+   | How much the customer manages | The most | Less | The least |
+   | Who it is for | System administrator, network engineer | Application developer | End user |
+   | Popular providers | AWS EC2, Microsoft Azure Virtual Machines, Google Compute Engine, DigitalOcean | AWS Elastic Beanstalk, Google App Engine, Heroku, Microsoft Azure App Service | Salesforce, Microsoft Office 365, Google Workspace, Dropbox, Zoho, Slack |
    | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 
    Other services now named separately:
@@ -247,12 +247,12 @@
 
     | Point | IaaS | PaaS | SaaS |
     |---|---|---|---|
-    | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
-    | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
-    | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
-    | Control and flexibility | Highest | Medium | Lowest |
-    | Target user | System administrator, network engineer | Application developer | End user |
-    | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
+    | What it provides | Virtualised computing resources over the internet: servers, storage and networking, on a rental basis | A ready to use platform for building, testing, deploying and managing applications | A fully working, ready to use software application, usually on subscription |
+    | The user controls | The operating system, the applications and the data | Only the application code and the data | Nothing. Only the data and the settings |
+    | The provider manages | The physical infrastructure: hardware, virtualisation, network, storage | Servers, storage and the whole runtime environment | Absolutely everything: infrastructure, updates, bug fixes and security |
+    | How much the customer manages | The most | Less | The least |
+    | Who it is for | System administrator, network engineer | Application developer | End user |
+    | Popular providers | AWS EC2, Microsoft Azure Virtual Machines, Google Compute Engine, DigitalOcean | AWS Elastic Beanstalk, Google App Engine, Heroku, Microsoft Azure App Service | Salesforce, Microsoft Office 365, Google Workspace, Dropbox, Zoho, Slack |
     | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 11. **Write the three basic function of cloud services?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
@@ -342,10 +342,21 @@
    Other practical features: virtualisation, high availability, automation, self healing, and servers spread across the world.
 
    Deployment types:
-   - Public cloud: the provider owns the infrastructure, and many customers share it over the Internet. It is the cheapest and the most scalable, but gives the least control. Examples: AWS, Azure, Google Cloud.
-   - Private cloud: the infrastructure belongs to one organisation only, kept either in its own office or at a host. It gives the most control, security and compliance, but it costs the most.
-   - Hybrid cloud: a mix of public and private. Data and applications move between the two. We keep sensitive data private, and push changing workloads into the public cloud. Most banks use this.
-   - Community cloud: several organisations with a common need share it. For example a group of government offices, or a group of hospitals. They share the cost and the compliance rules.
+   - Public cloud: a third party provider owns, manages and maintains the whole infrastructure, and delivers it over the internet to the general public. Many customers share the same resources.
+     - Advantages: minimal investment, because it works on a pay per use model with no big up front cost. Zero setup and maintenance, because the provider handles all the hardware. Dynamic scalability, because the resources are almost unlimited and scale instantly.
+     - Disadvantages: lower security, because the resources are shared publicly, so meeting strict compliance rules is hard. Low customisation, because the environment is standardised.
+     - Examples: AWS, Azure, Google Cloud.
+   - Private cloud: a one to one environment for a single customer. We do not share the hardware with anyone else. It sits behind strong firewalls, under the organisation's own IT department.
+     - Advantages: total control over IT operations, service integration and user behaviour. Elite security and privacy, so it suits sensitive corporate data. It supports legacy applications, because it is highly customisable.
+     - Disadvantages: high cost, because of the dedicated hardware and internal IT staff. Limited scalability, because we are bound by the physical hardware we bought.
+   - Hybrid cloud: it bridges the public and the private worlds through a layer of software. We can move applications and data between the two as needed.
+     - Advantages: ultimate flexibility, because we keep sensitive data safe on the private cloud and run heavy, non-sensitive work on the public cloud. Cost efficiency, because we pay for extra public capacity only during traffic spikes. This is called cloud bursting. Targeted security, because the most critical data stays fully isolated.
+     - Disadvantages: hard to manage, because it combines two different clouds, so it is complex. Slow data transmission, because data moves through the public cloud, which adds latency.
+     - Most banks use this model.
+   - Community cloud: a shared infrastructure used by a specific group of organisations from a similar industry, who have the same concerns, such as compliance or security rules. It may be managed internally or by a third party.
+     - Advantages: cost effective, because several organisations share it. Better security than a public cloud. Shared resources and infrastructure. Good for collaboration and data sharing.
+     - Disadvantages: less scalable, because many organisations share the same resources. Rigid in customisation, because a change requested by one organisation affects the others.
+     - Example: a group of government offices, or a group of hospitals.
 
    Service types: IaaS, PaaS and SaaS, and now also FaaS or serverless.
 3. **Explain cloud computing and evaluate its advantages and disadvantages.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
