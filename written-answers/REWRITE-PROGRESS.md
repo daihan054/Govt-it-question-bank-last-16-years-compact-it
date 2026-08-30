@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 172/206 sections**
+**Rewritten: 173/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -191,7 +191,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] microprocessor-and-computer-architecture.md — Cache Memory (12)
 - [x] microprocessor-and-computer-architecture.md — Secondary Storage (HDD vs SSD) (10)
 - [x] microprocessor-and-computer-architecture.md — Multi-Core & Multi-Threading (5)
-- [ ] microprocessor-and-computer-architecture.md — Assembly Language & Addressing Modes (5)
+- [x] microprocessor-and-computer-architecture.md — Assembly Language & Addressing Modes (5)
 - [ ] microprocessor-and-computer-architecture.md — Instruction Pipelining & Hazards (5)
 - [ ] microprocessor-and-computer-architecture.md — CPU Performance & Instruction Cycle (4)
 - [ ] microprocessor-and-computer-architecture.md — 8085 Microprocessor & Edge Computing (3)
