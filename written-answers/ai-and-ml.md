@@ -732,58 +732,92 @@
 
    | Point | Uninformed (Blind) Search | Informed (Heuristic) Search |
    |---|---|---|
-   | Domain knowledge | None beyond the problem definition | Uses a heuristic that estimates cost to the goal |
-   | Guidance | Explores blindly in a fixed order | Guided towards the most promising node |
-   | Efficiency | Explores many unnecessary nodes | Explores far fewer nodes |
+   | Extra knowledge | Knows nothing beyond the problem itself | Uses a heuristic that guesses the cost to the goal |
+   | Guidance | Searches blindly in a fixed order | Moves towards the most promising node |
+   | Efficiency | Visits many useless nodes | Visits far fewer nodes |
    | Time and memory | Generally high | Generally lower |
    | Completeness | BFS and UCS are complete | Complete if the heuristic is admissible |
-   | Optimality | BFS optimal for equal cost, UCS optimal | A* is optimal when the heuristic is admissible and consistent |
+   | Optimality | BFS is optimal for equal cost, UCS is optimal | A* is optimal if the heuristic is admissible and consistent |
    | Examples | BFS, DFS, Depth Limited Search, Uniform Cost Search, Iterative Deepening | Greedy Best First Search, A* Search, AO* Search |
 
-   - A heuristic h(n) is an estimate of the cost from node n to the goal, for example straight line distance in a map problem.
-   - A* uses f(n) = g(n) + h(n), where g(n) is the actual cost already spent, which is why it is both efficient and optimal.
+   About the heuristic:
+   - h(n) is a guess of the cost from node n to the goal. Example: in a map problem, the straight line distance from a city to the destination.
+   - A* uses f(n) = g(n) + h(n). Here g(n) is the real cost already spent, and h(n) is the guessed cost still remaining. This is why A* is both fast and optimal.
 
 ## Overfitting, Underfitting & Model Generalization (1)
 
 1. **In machine learning. What will happen, when a machine is highly trained up a slight trained up?** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 395 (ET: BUET)]*
 
-   Answer: If a model is trained too much it overfits, and if it is trained too little it underfits. Both reduce performance on new data.
+   Answer: If a model is trained too much it overfits. If it is trained too little it underfits. Both make the model perform badly on new data.
 
-   Overfitting (highly trained):
-   - The model memorises the training data including its noise, instead of learning the general pattern.
-   - Training accuracy becomes very high but validation and test accuracy fall.
-   - It shows high variance and low bias.
-   - Remedies: stop training early, use more training data, apply regularisation (L1 or L2), use dropout in neural networks, prune the decision tree, and use cross validation.
+   Overfitting (highly trained up):
+   - The model memorises the training data, including its noise. It does not learn the general pattern.
+   - Training accuracy becomes very high, but validation and test accuracy fall.
+   - It has high variance and low bias.
+   - How to fix: stop training early, add more training data, use regularisation (L1 or L2), use dropout in neural networks, prune the decision tree, and use cross validation.
 
-   Underfitting (slightly trained):
-   - The model is too simple or trained for too few iterations, so it cannot capture the pattern even in the training data.
-   - Both training and test accuracy stay low.
-   - It shows high bias and low variance.
-   - Remedies: train longer, use a more complex model, add better features, and reduce regularisation.
+   Underfitting (slightly trained up):
+   - The model is too simple, or it was trained for too few rounds. So it cannot catch the pattern even in the training data.
+   - Both training accuracy and test accuracy stay low.
+   - It has high bias and low variance.
+   - How to fix: train longer, use a bigger model, add better features, and reduce regularisation.
 
-   The aim is the balanced point between the two, called a good fit, where training and validation error are both low and close to each other. This balance is known as the bias-variance tradeoff.
+   ```
+   Underfitting            Good fit               Overfitting
+   (high bias)                                   (high variance)
+
+     o   o                   o   o                  o   o
+   ---------              /‾‾‾‾‾‾\               /\  /\  /     o   o               /   o   o\             /  \/  \/                                                  (line touches every point)
+
+   Training error: HIGH    Training error: LOW    Training error: VERY LOW
+   Test error:     HIGH    Test error:     LOW    Test error:     HIGH
+   ```
+
+   The aim is the middle case, called a good fit. There, training error and validation error are both low and close to each other. This balance is called the bias-variance tradeoff.
 
 ## Association Rule Learning (Market Basket Analysis) (1)
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1364 (ET: BUET)]*
 
-   Answer: The Apriori algorithm, an association rule learning method under unsupervised learning, is suitable for Market Basket Analysis. FP-Growth is a faster alternative for very large datasets.
+   Answer: The Apriori algorithm is suitable for Market Basket Analysis. It is an association rule learning method, and it comes under unsupervised learning. For very large datasets, FP-Growth is a faster choice.
 
    Three measures used:
-   - Support: how often an itemset appears. Support(A) = transactions containing A / total transactions.
-   - Confidence: how often B is bought when A is bought. Confidence(A→B) = Support(A∪B) / Support(A).
-   - Lift: how much more likely B is with A than by chance. Lift(A→B) = Confidence(A→B) / Support(B). A lift above 1 means a real positive association.
+   - Support: how often an itemset appears.
+     Support(A) = number of transactions containing A / total transactions
+   - Confidence: how often B is bought when A is bought.
+     Confidence(A→B) = Support(A ∪ B) / Support(A)
+   - Lift: how much more likely B becomes when A is present, compared to chance.
+     Lift(A→B) = Confidence(A→B) / Support(B)
+     A lift above 1 means there is a real positive link.
 
    Steps of the Apriori algorithm:
-   - Set a minimum support and a minimum confidence threshold.
-   - Scan the transaction database and count the support of every single item, giving the 1-itemsets.
-   - Remove the items whose support is below the minimum, keeping only the frequent 1-itemsets.
-   - Join the frequent 1-itemsets to form candidate 2-itemsets, count their support and prune the infrequent ones.
-   - Repeat this join and prune step for 3-itemsets, 4-itemsets and so on, until no new frequent itemset is found. This uses the Apriori property, that any subset of a frequent itemset must also be frequent.
-   - From each frequent itemset, generate all possible association rules.
-   - Keep only the rules whose confidence is above the minimum threshold, and rank them by lift.
+   - Fix a minimum support and a minimum confidence value.
+   - Scan the transaction database and count the support of every single item. These are the 1-itemsets.
+   - Drop the items whose support is below the minimum. Keep only the frequent 1-itemsets.
+   - Join the frequent 1-itemsets to make candidate 2-itemsets. Count their support and drop the infrequent ones.
+   - Repeat this join and prune step for 3-itemsets, 4-itemsets and so on, until no new frequent itemset is found.
+   - From each frequent itemset, make all possible association rules.
+   - Keep only the rules whose confidence is above the minimum. Then rank them by lift.
 
-   Example: if the rule {bread, butter} → {milk} has support 20%, confidence 70% and lift 1.5, the shop can place milk near bread and butter, or offer a combined discount.
+   ```mermaid
+   flowchart TD
+     A[Transaction database] --> B[Count support of 1-itemsets]
+     B --> C{Support >= min_support?}
+     C -->|No| D[Prune]
+     C -->|Yes| E[Frequent 1-itemsets]
+     E --> F[Join to make candidate 2-itemsets]
+     F --> G[Count support and prune]
+     G --> H{Any new frequent itemset?}
+     H -->|Yes| F
+     H -->|No| I[Generate association rules]
+     I --> J{Confidence >= min_confidence?}
+     J -->|Yes| K[Final rules, ranked by lift]
+     J -->|No| D
+   ```
+
+   The Apriori property, which makes the pruning possible: if an itemset is frequent, then all its subsets must also be frequent. So if {bread} is not frequent, we do not even need to check {bread, milk}.
+
+   Example: if the rule {bread, butter} → {milk} has support 20%, confidence 70% and lift 1.5, then the shop can keep milk near bread and butter, or give a combo discount.
 
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
@@ -791,12 +825,13 @@
 
    Answer:
 
-   Formula: Euclidean distance between two points is
+   Formula: the Euclidean distance between two points is
+
    d(A, B) = √[(x2 − x1)² + (y2 − y1)²]
 
-   In agglomerative single-linkage clustering, every point starts as its own cluster and the two clusters having the smallest distance are merged first.
+   In agglomerative single-linkage clustering, every point starts as its own cluster. Then we merge the two clusters that have the smallest distance between them.
 
-   Step 1: calculate the distance between every pair.
+   Step 1: find the distance between every pair.
    - d(P1, P2) = √[(0.85 − 0.07)² + (0.14 − 0.83)²] = √[0.6084 + 0.4761] = √1.0845 = 1.0414
    - d(P1, P3) = √[(0.59)² + (0.06)²] = √[0.3481 + 0.0036] = √0.3517 = 0.5930
    - d(P1, P4) = √[(0.42)² + (−0.19)²] = √[0.1764 + 0.0361] = √0.2125 = 0.4610
@@ -808,12 +843,21 @@
    - d(P3, P5) = √[(0.14)² + (−0.43)²] = √[0.0196 + 0.1849] = √0.2045 = 0.4522
    - d(P4, P5) = √[(0.31)² + (−0.18)²] = √[0.0961 + 0.0324] = √0.1285 = 0.3585
 
-   Step 2: find the minimum distance.
-   - The smallest value among all pairs is 0.3023, which is d(P3, P4).
+   Distance matrix:
+
+   | | P1 | P2 | P3 | P4 | P5 |
+   |---|---|---|---|---|---|
+   | P1 | 0 | 1.0414 | 0.5930 | 0.4610 | 0.8184 |
+   | P2 | 1.0414 | 0 | 0.7737 | 0.6161 | 0.3239 |
+   | P3 | 0.5930 | 0.7737 | 0 | 0.3023 | 0.4522 |
+   | P4 | 0.4610 | 0.6161 | 0.3023 | 0 | 0.3585 |
+   | P5 | 0.8184 | 0.3239 | 0.4522 | 0.3585 | 0 |
+
+   Step 2: find the smallest distance.
+   - The smallest value in the whole matrix is 0.3023, which is d(P3, P4).
 
    Step 3: merge that pair.
-   - P3 and P4 are joined into one cluster {P3, P4} at height 0.3023 in the dendrogram.
-   - After this merge, the distance from {P3, P4} to any other point is taken as the minimum of the two individual distances, because the linkage is single-linkage.
+   - P3 and P4 join into one cluster {P3, P4} at height 0.3023 in the dendrogram.
+   - After this merge, the distance from {P3, P4} to any other point is the smaller of the two separate distances. This is what "single linkage" means.
 
-   Final answer: the first two points grouped are P3 (0.66, 0.89) and P4 (0.49, 0.64), merging at a distance of 0.3023.
-
+   Final answer: the first two points grouped are P3 (0.66, 0.89) and P4 (0.49, 0.64), merged at a distance of 0.3023.
