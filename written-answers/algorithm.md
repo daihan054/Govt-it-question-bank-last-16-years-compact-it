@@ -2480,24 +2480,30 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1321 (ET: DU)]*
 
-   Answer: A min heap is a complete binary tree where every parent is smaller than or equal to both of its children. So the smallest value always sits at the root.
+   Answer: A binary heap is a complete binary tree that also follows the heap property.
 
-   Index rule for an array heap, using 0 based indexing:
+   Two properties it must have:
+   - Complete binary tree: every level is completely filled, except possibly the last level, which is filled from left to right. This is what lets us store it in an array with no gaps.
+   - Heap property: in a min heap, the value of the root is the smallest, and the same rule holds in every subtree. So every parent is smaller than or equal to both its children.
+
+   Array index formulas, with the root at index 0:
+   - Parent of index i is at (i − 1) / 2
    - Left child of index i is at 2i + 1
    - Right child of index i is at 2i + 2
-   - Parent of index i is at (i − 1) / 2
 
-   Inserting the values one by one: 12, 29, 33, 56, 66, 99, 100, 344
+   Insertion: we put the new element at the end of the array, then bubble it up. We keep swapping it with its parent while the heap property is broken. This is called heapify-up.
+
+   Building the min heap by inserting 12, 29, 33, 56, 66, 99, 100, 344:
    - Insert 12: it becomes the root. Heap: 12
-   - Insert 29: goes as left child of 12. 29 > 12, so no swap. Heap: 12, 29
-   - Insert 33: goes as right child of 12. 33 > 12, so no swap. Heap: 12, 29, 33
-   - Insert 56: goes as left child of 29. 56 > 29, so no swap. Heap: 12, 29, 33, 56
-   - Insert 66: goes as right child of 29. 66 > 29, so no swap. Heap: 12, 29, 33, 56, 66
-   - Insert 99: goes as left child of 33. 99 > 33, so no swap.
-   - Insert 100: goes as right child of 33. 100 > 33, so no swap.
-   - Insert 344: goes as left child of 56. 344 > 56, so no swap.
+   - Insert 29: it goes as left child of 12. 29 > 12, so no swap. Heap: 12, 29
+   - Insert 33: right child of 12. 33 > 12, so no swap. Heap: 12, 29, 33
+   - Insert 56: left child of 29. 56 > 29, so no swap. Heap: 12, 29, 33, 56
+   - Insert 66: right child of 29. 66 > 29, so no swap. Heap: 12, 29, 33, 56, 66
+   - Insert 99: left child of 33. 99 > 33, so no swap.
+   - Insert 100: right child of 33. 100 > 33, so no swap.
+   - Insert 344: left child of 56. 344 > 56, so no swap.
 
-   The given values are already in increasing order. So we never need a heapify up, and the array stays unchanged.
+   The given values are already in increasing order, so heapify-up never has to swap anything. The array stays as it is.
 
    Final min heap array: 12, 29, 33, 56, 66, 99, 100, 344
 
@@ -2519,11 +2525,11 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - Node 56 has child 344, which is larger.
    - So the min heap property holds at every node.
 
-   Building a heap from n elements takes O(n) time. Each single insertion takes O(log n).
+   Time complexity: each insertion is O(log n). Building a heap from n elements at once is O(n).
 
 2. **Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 427 (ET: BIBM)]*
 
-   Answer: We put the new item at the end of the heap and then move it upward until the max heap property is back. This upward movement is called heapify up, sift up or percolate up.
+   Answer: To insert a new item, we put it at the end of the heap, then move it upward until the max heap property is restored. This upward movement is called heapify-up, sift-up or percolate-up.
 
    Procedure:
    - Increase the heap size by one and put the new key at the last array position. This keeps the tree complete.
@@ -2543,14 +2549,14 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    ```
 
    Example: insert 45 into the max heap 50, 30, 40, 10, 20
-   - Put 45 at the end: 50, 30, 40, 10, 20, 45. Index of 45 is 5.
-   - Parent of index 5 is index 2, which holds 40. Since 45 > 40, swap: 50, 30, 45, 10, 20, 40
+   - Put 45 at the end: 50, 30, 40, 10, 20, 45. The index of 45 is 5.
+   - Parent of index 5 is index (5 − 1)/2 = 2, which holds 40. Since 45 > 40, swap: 50, 30, 45, 10, 20, 40
    - New index is 2. Its parent is index 0, which holds 50. Since 45 < 50, stop.
    - Final heap: 50, 30, 45, 10, 20, 40
 
-   Cost:
-   - The item can move up at most the height of the tree, which is log₂n for a complete binary tree of n nodes.
-   - Each level costs one comparison and maybe one swap, that is O(1).
+   Cost estimate:
+   - The item can move up at most the height of the tree. For a complete binary tree of n nodes, the height is log₂n.
+   - Each level costs one comparison and possibly one swap, that is O(1).
    - Time complexity: O(log n) in the worst case. O(1) in the best case, when the new key is already smaller than its parent.
    - Space complexity: O(1). The insertion happens in place, using only a few variables.
 
@@ -2567,20 +2573,20 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    | Find all neighbours of a vertex | O(degree of u) | O(V) |
    | Add an edge | O(1) | O(1) |
    | Remove an edge | O(degree of u) | O(1) |
-   | Best for | Sparse graphs | Dense graphs |
+   | Best for | Sparse graphs, where E is much less than V² | Dense graphs, where E is close to V² |
 
    Problems solved better with an adjacency list:
-   - BFS and DFS traversal. These take O(V + E) with a list, but O(V²) with a matrix, because the matrix makes us scan a whole row for every vertex.
-   - Dijkstra's algorithm with a priority queue: O(E log V) with a list, against O(V²) with a matrix.
+   - BFS and DFS traversal. These take O(V + E) with a list, but O(V²) with a matrix, because the matrix forces us to scan a whole row for every vertex.
+   - Dijkstra's algorithm with a priority queue: O((V + E) log V) with a list, against O(V²) with a matrix.
    - Kruskal's and Prim's MST algorithms, topological sorting and cycle detection. All of these walk over the edges.
-   - Any real world sparse graph, such as a road network or a social network, where E is much smaller than V².
+   - Any real world sparse graph, such as a road network or a social network. There E is much smaller than V², so the matrix would waste huge amounts of memory on zeros.
 
    Problems solved better with an adjacency matrix:
-   - Checking whether a certain edge exists between two vertices. That is a single O(1) lookup.
+   - Checking whether a specific edge exists between two vertices. That is a single O(1) lookup, against O(degree) for a list.
    - Floyd-Warshall all pairs shortest path. It is naturally written on a matrix and runs in O(V³).
    - Transitive closure using Warshall's algorithm.
    - Counting paths of a given length, which is done by matrix multiplication.
-   - Dense graphs where E is close to V². Then the matrix wastes no space.
+   - Dense graphs, where E is close to V². There the matrix wastes no space.
 
 2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
 
@@ -2605,7 +2611,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - 6 → 3
    - 7 → 3
 
-   Equivalent adjacency matrix. Entry [i][j] is 1 if there is an edge between i and j:
+   Equivalent adjacency matrix. Entry [i][j] is 1 if there is an edge between i and j, otherwise 0:
 
    |  | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
    |---|---|---|---|---|---|---|---|
@@ -2619,7 +2625,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
    Points to note:
    - The matrix is symmetric, because the tree is undirected.
-   - It has 12 ones. That is twice the number of edges, since a tree on 7 vertices has 6 edges.
+   - It holds 12 ones. That is twice the number of edges, because a tree on 7 vertices has 6 edges.
    - The matrix needs 7 × 7 = 49 cells, but the list stores only 12 entries. This shows why a list suits a sparse structure like a tree.
 
 ## Divide and Conquer & Matrix Multiplication (1)
