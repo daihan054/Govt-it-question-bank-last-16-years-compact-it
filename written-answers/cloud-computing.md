@@ -25,193 +25,193 @@
    Answer: PaaS, Platform as a Service, is the most appropriate model.
 
    Reason:
-   - The startup does not want to manage hardware, operating systems or the runtime environment. PaaS provides exactly that: the provider supplies the servers, the operating system, the runtime, the middleware and the database, and the customer supplies only the application code and its data.
-   - IaaS would still leave them responsible for installing and patching the operating system and the runtime, which is precisely what they want to avoid.
-   - SaaS would give them a finished application to use, not a place to deploy their own code, so it does not fit at all.
-   - PaaS also gives them automatic scaling, built in deployment pipelines and managed backups, so a very small team can run a production service.
+   - The startup does not want to manage hardware, OS or runtime. PaaS gives exactly that. The provider supplies the servers, the OS, the runtime, the middleware and the database. The startup supplies only its own code and data.
+   - IaaS is not right. They would still have to install and patch the OS and the runtime. That is exactly what they want to avoid.
+   - SaaS is not right either. It gives a finished application to use, not a place to run your own code.
+   - PaaS also gives automatic scaling, ready deployment pipelines and managed backups. So a very small team can run a live service.
 
    Two real-world examples:
-   - Heroku, where the developer pushes code with `git push heroku main` and the platform builds and runs it.
-   - Google App Engine, which runs the application and scales it automatically according to traffic.
-   - Others that would also be accepted: AWS Elastic Beanstalk, Microsoft Azure App Service and Red Hat OpenShift.
+   - Heroku: the developer pushes code with `git push heroku main`, and the platform builds and runs it.
+   - Google App Engine: it runs the application and scales it automatically as traffic changes.
+   - Other correct answers: AWS Elastic Beanstalk, Microsoft Azure App Service, Red Hat OpenShift.
 2. What is cloud computing? Mention its service models. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
 
    Answer:
 
-   - Cloud computing is the delivery of computing services, that is servers, storage, databases, networking, software and analytics, over the Internet on a pay as you go basis, instead of owning and running physical hardware.
-   - The five essential characteristics defined by NIST are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+   - Cloud computing means we get computing services over the Internet and pay only for what we use. These services are servers, storage, databases, networking, software and analytics. We do not buy or run the physical hardware ourselves.
+   - NIST lists five key features: on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
 
    Service models:
 
    | Point | IaaS | PaaS | SaaS |
    |---|---|---|---|
-   | What is provided | Virtual machines, storage, network, that is raw infrastructure | A ready runtime platform with OS, middleware, database and development tools | Complete ready to use application software |
-   | The user manages | OS, middleware, runtime, applications and data | Applications and data only | Nothing, only the data and the settings |
-   | The provider manages | Hardware, virtualisation, network, storage | Everything below the application | Absolutely everything |
+   | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
+   | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
+   | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
    | Control and flexibility | Highest | Medium | Lowest |
    | Target user | System administrator, network engineer | Application developer | End user |
    | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
-   | Analogy, using a car | Renting a car and driving it yourself | Hiring a car with a driver | Taking a taxi ride |
+   | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 
-   - Deployment models, for completeness: public cloud, private cloud, hybrid cloud and community cloud.
+   - Deployment models: public cloud, private cloud, hybrid cloud and community cloud.
 3. **What is SaaS and multi-tenant architecture? How are they related? What are the advantages and disadvantages of multi-tenancy? For a multi-vendor e-commerce application, you can choose a database architecture where you can put all the vendors in a single database or each vendor in a separate database. Which architecture will you follow and why?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 328 (ET: BIBM)]*
 
 
    Answer:
 
    SaaS:
-   - Software as a Service is a cloud model in which a complete application is hosted by the provider and delivered to customers over the Internet, normally by subscription. The customer installs nothing and manages nothing but its own data and settings. Examples: Gmail, Salesforce, Office 365 and Zoom.
+   - Software as a Service means the provider hosts a complete application and gives it to customers over the Internet, usually on subscription. The customer installs nothing. It manages only its own data and settings. Examples: Gmail, Salesforce, Office 365, Zoom.
 
    Multi-tenant architecture:
-   - A single running instance of the application, and usually a single shared database, serves many customers, called tenants. Each tenant's data is logically isolated so that no tenant can see another's, even though the underlying resources are shared.
-   - The opposite is single tenancy, where each customer gets its own separate instance and database.
+   - One running copy of the application, and usually one shared database, serves many customers. We call each customer a tenant. Each tenant's data is kept separate by logic, so no tenant can see another tenant's data, even though they share the same resources.
+   - The opposite is single tenancy. There each customer gets its own separate copy and its own database.
 
    How they are related:
-   - Multi-tenancy is the architecture that makes SaaS economically possible. Running one shared instance for ten thousand customers costs a fraction of running ten thousand separate instances, and it is that economy that allows SaaS to be sold at a low monthly price. In practice almost every large SaaS product is multi-tenant.
+   - Multi-tenancy is what makes SaaS affordable. Running one shared copy for ten thousand customers costs far less than running ten thousand separate copies. That saving is why SaaS can be sold at a low monthly price. In practice, almost every big SaaS product is multi-tenant.
 
    Advantages of multi-tenancy:
-   - Much lower cost per customer, since hardware, licences and operational effort are shared.
-   - One codebase and one deployment, so an update or a security patch reaches every customer at once.
-   - Higher resource utilisation, because tenants peak at different times.
-   - Easier onboarding: a new customer is a new row of configuration, not a new server.
-   - Central monitoring, backup and scaling for the whole population.
+   - Much lower cost per customer, because hardware, licences and operations work are all shared.
+   - One codebase and one deployment. So an update or a security patch reaches every customer at the same time.
+   - Better use of resources, because different tenants are busy at different times.
+   - Adding a new customer is easy. It is just a new configuration row, not a new server.
+   - Monitoring, backup and scaling are done centrally for everyone.
 
    Disadvantages of multi-tenancy:
-   - Noisy neighbour effect: one heavy tenant can degrade performance for everybody.
-   - Security risk is concentrated: a single flaw in the tenant isolation logic can expose every customer's data.
-   - Limited customisation, since the schema and the code must serve all tenants.
-   - A single bug or a bad deployment brings down all tenants together.
-   - Compliance difficulty: a customer that must keep its data in a separate jurisdiction or under separate encryption keys is hard to accommodate.
-   - Complex development: every query must filter by tenant, and a single missing filter is a serious data leak.
+   - Noisy neighbour problem: one heavy tenant can slow the system down for everybody.
+   - The security risk is concentrated. One bug in the tenant separation logic can expose every customer's data.
+   - Little room for customisation, because the schema and the code must suit all tenants.
+   - One bug or one bad deployment brings down all the tenants together.
+   - Compliance is hard. If a customer must keep its data in another country, or under its own encryption keys, that is difficult to arrange.
+   - Development is harder. Every query must filter by tenant, and one missing filter means a serious data leak.
 
    Which database architecture for a multi-vendor e-commerce application:
-   - I would choose a single shared database with a `vendor_id` column on every table, that is the shared schema multi-tenant model, for the general vendor population.
+   - For most vendors I would choose one shared database, with a `vendor_id` column on every table. This is the shared schema multi-tenant model.
 
    Reasons:
-   - Cost and scalability: an e-commerce platform may have thousands of small vendors. Thousands of separate databases would mean thousands of connection pools, backups and migration jobs, which is operationally unmanageable and expensive.
-   - Cross-vendor features are natural: product search across all vendors, a shared cart containing items from several vendors, platform wide analytics and recommendation all require querying across vendors, which is trivial in one database and painful across many.
-   - Schema changes are applied once, not thousands of times, so releases are fast and consistent.
-   - Onboarding a new vendor is instant, which matters for a marketplace.
-   - Better hardware utilisation, since most vendors are small and idle most of the time.
+   - Cost and scalability: an e-commerce platform may have thousands of small vendors. Thousands of separate databases would mean thousands of connection pools, backups and migration jobs. That is too costly and impossible to manage.
+   - Cross-vendor features become easy. Product search across all vendors, one cart holding items from several vendors, platform wide analytics and recommendations all need queries across vendors. That is simple in one database, and very painful across many.
+   - We apply a schema change once, not thousands of times. So releases are fast and the same everywhere.
+   - A new vendor can join instantly, which matters a lot for a marketplace.
+   - Better use of hardware, because most vendors are small and idle most of the time.
 
    How the risks are controlled:
-   - Every table carries `vendor_id`, every query filters on it, and this is enforced in a single data access layer rather than left to individual developers.
-   - Row level security in the database gives a second line of defence independent of application code.
-   - Partitioning or sharding by `vendor_id` keeps large tables manageable.
-   - A hybrid approach is the practical answer for the largest vendors: a very large vendor with special compliance or performance requirements is moved to its own database or its own shard, while the long tail of small vendors stays in the shared one. This is what real marketplaces do.
+   - Every table carries `vendor_id`, and every query filters on it. We enforce this in one data access layer, instead of trusting each developer to remember it.
+   - Row level security in the database gives a second line of defence, separate from the application code.
+   - Partitioning or sharding by `vendor_id` keeps the large tables manageable.
+   - For the biggest vendors we use a hybrid approach. A very large vendor with special compliance or performance needs is moved to its own database or its own shard. All the small vendors stay in the shared one. Real marketplaces work this way.
 4. **6.11 A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
 
    Answer: PaaS, Platform as a Service, is the appropriate model.
 
    Reason:
-   - The requirement is explicitly to avoid managing hardware, operating systems and the runtime environment, and to focus only on writing and deploying code. That is the exact definition of PaaS: the provider manages everything up to and including the runtime, and the customer manages only the application and its data.
-   - IaaS is rejected because the customer would still have to install, patch and secure the operating system and the runtime.
-   - SaaS is rejected because it delivers a finished application, not a place to run one's own code.
+   - The requirement says clearly: do not manage hardware, OS or runtime, and focus only on writing and deploying code. That is exactly what PaaS is. The provider manages everything up to the runtime. The customer manages only the application and its data.
+   - We reject IaaS, because the customer would still have to install, patch and secure the OS and the runtime.
+   - We reject SaaS, because it gives a finished application, not a place to run your own code.
 
    Two real-world examples:
    - Heroku
    - Google App Engine
-   - Equally acceptable: AWS Elastic Beanstalk, Microsoft Azure App Service, Red Hat OpenShift.
+   - These are also correct: AWS Elastic Beanstalk, Microsoft Azure App Service, Red Hat OpenShift.
 
    Additional benefits for a startup:
-   - Automatic scaling as traffic grows, built in deployment and rollback, managed database add-ons, and no need to employ a system administrator, so a very small team can run a production service.
+   - Automatic scaling as traffic grows, ready deployment and rollback, managed database add-ons, and no need to hire a system administrator. So a very small team can run a live service.
 5. **Describe SaaS, IaaS and PaaS.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
 
 
-   Answer: These are the three service models of cloud computing, distinguished by how much the provider manages and how much is left to the customer.
+   Answer: These are the three service models of cloud computing. They differ in how much the provider manages, and how much is left to the customer.
 
    SaaS, Software as a Service:
-   - A complete, ready to use application delivered over the Internet, normally by subscription. The customer manages nothing except its own data and settings; there is no installation, no patching and no server to maintain.
+   - A complete, ready to use application, given over the Internet, usually on subscription. The customer manages nothing except its own data and settings. There is nothing to install, nothing to patch and no server to look after.
    - Examples: Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom.
 
    PaaS, Platform as a Service:
-   - A ready runtime platform including the operating system, web server, database and development tools, on which the customer deploys its own application code. The provider manages everything below the application.
+   - A ready platform that already has the OS, web server, database and development tools. The customer just deploys its own code on it. The provider manages everything below the application.
    - Examples: Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service.
 
    IaaS, Infrastructure as a Service:
-   - Raw virtualised infrastructure, that is virtual machines, storage and networking, rented on demand. The customer installs and manages the operating system, the middleware and the applications, and so keeps the greatest control.
+   - Raw virtual infrastructure, that is virtual machines, storage and networking, rented on demand. The customer installs and manages the OS, the middleware and the applications. So the customer keeps the most control.
    - Examples: AWS EC2, Google Compute Engine, Azure Virtual Machines, DigitalOcean.
 
    | Point | IaaS | PaaS | SaaS |
    |---|---|---|---|
-   | What is provided | Virtual machines, storage, network, that is raw infrastructure | A ready runtime platform with OS, middleware, database and development tools | Complete ready to use application software |
-   | The user manages | OS, middleware, runtime, applications and data | Applications and data only | Nothing, only the data and the settings |
-   | The provider manages | Hardware, virtualisation, network, storage | Everything below the application | Absolutely everything |
+   | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
+   | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
+   | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
    | Control and flexibility | Highest | Medium | Lowest |
    | Target user | System administrator, network engineer | Application developer | End user |
    | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
-   | Analogy, using a car | Renting a car and driving it yourself | Hiring a car with a driver | Taking a taxi ride |
+   | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 6. **Explain IaaS, PaaS, and SaaS with respect to cloud computing.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
 
 
-   Answer: IaaS, PaaS and SaaS are the three service models of cloud computing, and they differ in where the boundary of responsibility falls between the provider and the customer.
+   Answer: IaaS, PaaS and SaaS are the three service models of cloud computing. They differ in where the line of responsibility falls between the provider and the customer.
 
    IaaS, Infrastructure as a Service:
-   - The provider supplies virtualised hardware: compute, storage and network. The customer chooses and installs the operating system and everything above it.
-   - It gives the greatest control and flexibility, and is used when an organisation wants to move its existing servers to the cloud without changing how they are built.
+   - The provider gives virtual hardware: compute, storage and network. The customer chooses and installs the OS and everything above it.
+   - It gives the most control and freedom. We use it when an organisation wants to move its existing servers to the cloud without changing how they are built.
    - Examples: AWS EC2, Azure Virtual Machines, Google Compute Engine.
 
    PaaS, Platform as a Service:
-   - The provider supplies the whole runtime stack: operating system, web server, runtime, database and development tools. The customer supplies only the application code and its data.
-   - It removes all infrastructure work from the developer, and adds automatic scaling and deployment pipelines, but gives less control over the environment.
+   - The provider gives the whole runtime stack: OS, web server, runtime, database and development tools. The customer gives only the application code and its data.
+   - It takes all the infrastructure work away from the developer. It also adds automatic scaling and deployment pipelines. But it gives less control over the environment.
    - Examples: Heroku, Google App Engine, AWS Elastic Beanstalk.
 
    SaaS, Software as a Service:
-   - The provider supplies a complete finished application over the Internet. The customer simply uses it and manages nothing but its own data and configuration.
-   - It is the easiest to adopt and the least flexible, and it is normally multi-tenant, one shared instance serving many customers.
+   - The provider gives a complete finished application over the Internet. The customer just uses it, and manages only its own data and settings.
+   - It is the easiest to start with, and the least flexible. It is normally multi-tenant, that is one shared copy serving many customers.
    - Examples: Gmail, Office 365, Salesforce.
 
    | Point | IaaS | PaaS | SaaS |
    |---|---|---|---|
-   | What is provided | Virtual machines, storage, network, that is raw infrastructure | A ready runtime platform with OS, middleware, database and development tools | Complete ready to use application software |
-   | The user manages | OS, middleware, runtime, applications and data | Applications and data only | Nothing, only the data and the settings |
-   | The provider manages | Hardware, virtualisation, network, storage | Everything below the application | Absolutely everything |
+   | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
+   | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
+   | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
    | Control and flexibility | Highest | Medium | Lowest |
    | Target user | System administrator, network engineer | Application developer | End user |
    | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
-   | Analogy, using a car | Renting a car and driving it yourself | Hiring a car with a driver | Taking a taxi ride |
+   | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 7. **What do you mean by multi-tenancy in the cloud? Why is it beneficial for cloud service providers?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 749 (ET: N/A)]*
 
 
    Answer:
 
    Multi-tenancy in the cloud:
-   - Multi-tenancy means that a single instance of an application, or a single set of physical resources, serves many separate customers, called tenants, at the same time. Each tenant's data and configuration are logically isolated so that no tenant can see or affect another's, even though the underlying software and hardware are shared.
-   - It exists at several levels: shared hardware with separate VMs, shared application with separate databases, and a fully shared application and database with a tenant identifier on every record.
-   - The opposite is single tenancy, where each customer receives its own dedicated instance.
+   - Multi-tenancy means one copy of an application, or one set of physical resources, serves many separate customers at the same time. We call each customer a tenant. Each tenant's data and settings are kept apart by logic, so no tenant can see or disturb another, even though they share the same software and hardware.
+   - It comes in several levels: shared hardware with separate VMs; a shared application with separate databases; and a fully shared application and database, with a tenant id on every record.
+   - The opposite is single tenancy, where each customer gets its own dedicated copy.
 
    Why it is beneficial for cloud service providers:
-   - Economy of scale: one deployment serves thousands of customers, so hardware, licences, power and operational staff are shared and the cost per customer falls dramatically. This is what allows a service to be sold for a few dollars a month.
-   - High resource utilisation: tenants peak at different times and most are idle most of the time, so pooled resources are used far more efficiently than dedicated ones.
-   - Single codebase and single deployment: a feature or a security patch is written once and reaches every customer immediately, instead of being rolled out to thousands of separate installations.
-   - Fast onboarding: adding a customer is a configuration change, not a server build, so the business can grow without a proportional increase in operations work.
-   - Central monitoring, backup, scaling and support, which reduces operational complexity enormously.
-   - Easier capacity planning, because aggregate demand across many tenants is far smoother and more predictable than any individual tenant's demand.
-   - Higher margins, since the marginal cost of one more customer is very small.
+   - Economy of scale: one deployment serves thousands of customers. So hardware, licences, power and staff are all shared, and the cost per customer drops sharply. This is why a service can be sold for a few dollars a month.
+   - High resource use: tenants are busy at different times, and most are idle most of the time. So pooled resources are used far better than dedicated ones.
+   - One codebase and one deployment: we write a feature or a security patch once, and it reaches every customer at once. We do not have to roll it out to thousands of separate installations.
+   - Fast onboarding: adding a customer is just a configuration change, not a new server build. So the business can grow without the operations work growing at the same rate.
+   - Monitoring, backup, scaling and support are all central. This cuts the operational work a great deal.
+   - Capacity planning is easier. The total demand of many tenants is much smoother and easier to predict than the demand of any single tenant.
+   - Higher profit margin, because the extra cost of one more customer is very small.
 
-   - The corresponding obligations on the provider are strong tenant isolation, protection against the noisy neighbour effect through quotas and throttling, and clear data segregation guarantees in the service level agreement.
+   - In return, the provider must give strong tenant separation, must stop the noisy neighbour problem with quotas and throttling, and must promise clear data separation in the service level agreement.
 8. **(ক) Cloud Computing এর সার্ভিসগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
    Answer: The three main service models of cloud computing:
 
-   - SaaS, Software as a Service: a complete ready made application used over the Internet. The user installs and maintains nothing and manages only its own data and settings. Examples: Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom.
-   - PaaS, Platform as a Service: a ready platform including the operating system, runtime, database and development tools, onto which the developer deploys only its own code. Examples: Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service.
-   - IaaS, Infrastructure as a Service: virtual machines, storage and networking, that is raw infrastructure, rented on demand. The customer installs and controls everything from the operating system upwards. Examples: AWS EC2, Google Compute Engine, Azure VM, DigitalOcean.
+   - SaaS, Software as a Service: a complete ready made application, used over the Internet. The user installs nothing and maintains nothing. It manages only its own data and settings. Examples: Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom.
+   - PaaS, Platform as a Service: a ready platform that already has the OS, runtime, database and development tools. The developer deploys only its own code on it. Examples: Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service.
+   - IaaS, Infrastructure as a Service: virtual machines, storage and networking, that is the raw infrastructure, rented on demand. The customer installs and controls everything from the OS upwards. Examples: AWS EC2, Google Compute Engine, Azure VM, DigitalOcean.
 
    | Point | IaaS | PaaS | SaaS |
    |---|---|---|---|
-   | What is provided | Virtual machines, storage, network, that is raw infrastructure | A ready runtime platform with OS, middleware, database and development tools | Complete ready to use application software |
-   | The user manages | OS, middleware, runtime, applications and data | Applications and data only | Nothing, only the data and the settings |
-   | The provider manages | Hardware, virtualisation, network, storage | Everything below the application | Absolutely everything |
+   | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
+   | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
+   | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
    | Control and flexibility | Highest | Medium | Lowest |
    | Target user | System administrator, network engineer | Application developer | End user |
    | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
-   | Analogy, using a car | Renting a car and driving it yourself | Hiring a car with a driver | Taking a taxi ride |
+   | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 
    Other services now named separately:
-   - FaaS, Function as a Service, also called Serverless: only a function is written and deployed, and there is no need to think about servers at all. Example: AWS Lambda.
+   - FaaS, Function as a Service, also called Serverless: we write and deploy just one function. We never think about servers at all. Example: AWS Lambda.
    - DaaS for Database or Desktop as a Service, STaaS for Storage as a Service, and NaaS for Network as a Service.
 
    Deployment models:
@@ -234,59 +234,59 @@
    | Dropbox | SaaS | A finished file storage and sharing application; the user manages only the files |
    | Amazon Web Services (AWS) | IaaS, and also PaaS | EC2, S3 and VPC are IaaS; Elastic Beanstalk and Lambda are PaaS |
 
-   - Rule for deciding: if the customer only uses a finished application, it is SaaS. If the customer deploys its own code onto a managed runtime, it is PaaS. If the customer manages the operating system itself, it is IaaS.
-   - Azure and AWS are whole platforms offering services in all three categories, so the honest answer names IaaS as the primary category while noting that they also provide PaaS and SaaS offerings.
+   - Simple rule: if the customer only uses a finished application, it is SaaS. If the customer puts its own code on a managed runtime, it is PaaS. If the customer manages the OS itself, it is IaaS.
+   - Azure and AWS are whole platforms. They offer services in all three categories. So the correct answer is to name IaaS as the main category, and to mention that they also give PaaS and SaaS services.
 10. **(c) What are the three types of services provided by the cloud?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 888 (ET: N/A)]*
 
 
     Answer: The three types of services provided by the cloud are IaaS, PaaS and SaaS.
 
-    - IaaS, Infrastructure as a Service: virtual machines, storage and networking rented on demand; the customer manages the operating system and everything above it. Examples: AWS EC2, Azure VM, Google Compute Engine.
-    - PaaS, Platform as a Service: a ready runtime with operating system, middleware, database and development tools; the customer deploys only its own code. Examples: Heroku, Google App Engine, AWS Elastic Beanstalk.
-    - SaaS, Software as a Service: a complete finished application delivered over the Internet; the customer manages nothing but its own data. Examples: Gmail, Office 365, Salesforce, Dropbox.
+    - IaaS, Infrastructure as a Service: virtual machines, storage and networking, rented on demand. The customer manages the OS and everything above it. Examples: AWS EC2, Azure VM, Google Compute Engine.
+    - PaaS, Platform as a Service: a ready runtime with the OS, middleware, database and development tools. The customer deploys only its own code. Examples: Heroku, Google App Engine, AWS Elastic Beanstalk.
+    - SaaS, Software as a Service: a complete finished application, given over the Internet. The customer manages nothing but its own data. Examples: Gmail, Office 365, Salesforce, Dropbox.
 
     | Point | IaaS | PaaS | SaaS |
     |---|---|---|---|
-    | What is provided | Virtual machines, storage, network, that is raw infrastructure | A ready runtime platform with OS, middleware, database and development tools | Complete ready to use application software |
-    | The user manages | OS, middleware, runtime, applications and data | Applications and data only | Nothing, only the data and the settings |
-    | The provider manages | Hardware, virtualisation, network, storage | Everything below the application | Absolutely everything |
+    | What you get | Virtual machines, storage and network, that is the raw infrastructure | A ready platform with OS, middleware, database and dev tools | A complete application, ready to use |
+    | You manage | OS, middleware, runtime, your app and your data | Only your app and your data | Nothing. Only your data and settings |
+    | Provider manages | Hardware, virtualisation, network, storage | Everything below your app | Everything |
     | Control and flexibility | Highest | Medium | Lowest |
     | Target user | System administrator, network engineer | Application developer | End user |
     | Examples | AWS EC2, Google Compute Engine, Microsoft Azure VM, DigitalOcean droplets | Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service, Red Hat OpenShift | Gmail, Google Docs, Office 365, Salesforce, Dropbox, Zoom |
-    | Analogy, using a car | Renting a car and driving it yourself | Hiring a car with a driver | Taking a taxi ride |
+    | Car analogy | You rent a car and drive it yourself | You hire a car with a driver | You take a taxi |
 11. **Write the three basic function of cloud services?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
 
     Answer: The three basic functions, that is the three service categories, of cloud services are:
 
-    - Infrastructure as a Service, IaaS: providing computing infrastructure, that is virtual servers, storage and networking, on demand. The customer manages the operating system and the applications. Examples: AWS EC2, Azure Virtual Machines.
-    - Platform as a Service, PaaS: providing a complete development and deployment platform, with the operating system, runtime, database and tools already in place, so the customer supplies only application code. Examples: Heroku, Google App Engine.
-    - Software as a Service, SaaS: providing a finished application over the Internet, ready to use, with nothing to install or maintain. Examples: Gmail, Office 365, Salesforce.
+    - Infrastructure as a Service, IaaS: it gives computing infrastructure on demand, that is virtual servers, storage and networking. The customer manages the OS and the applications. Examples: AWS EC2, Azure Virtual Machines.
+    - Platform as a Service, PaaS: it gives a complete platform for development and deployment. The OS, runtime, database and tools are already there. The customer supplies only the application code. Examples: Heroku, Google App Engine.
+    - Software as a Service, SaaS: it gives a finished application over the Internet, ready to use. There is nothing to install and nothing to maintain. Examples: Gmail, Office 365, Salesforce.
 
-    - In terms of underlying functions rather than models, the three things every cloud service delivers are computing power, storage, and networking, all pooled, virtualised and metered.
+    - If we look at the basic functions instead of the models, every cloud service gives three things: computing power, storage and networking. All three are pooled, virtualised and metered.
 12. **ক্লাউড কম্পিউটিং এর সুবিধা ও অসুবিধা লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
     Answer:
 
     Advantages of cloud computing:
-    - Almost no initial capital investment is required; the cost becomes a monthly operating expense.
-    - Scalability and elasticity: resources can be increased or reduced within minutes to match demand, so a site survives a sudden surge in traffic and pays nothing extra when demand falls.
-    - Accessible from anywhere: with an Internet connection the service can be used from any device, which supports remote working.
-    - Reliability and disaster recovery: the provider replicates data across several availability zones and regions and offers service level agreements of up to 99.9 percent.
-    - Automatic updates and maintenance: patching, hardware replacement and upgrades are all the provider's responsibility.
-    - Rapid deployment: a server that once took weeks to procure now runs within minutes.
-    - Collaboration: many users can work on the same document or dataset at the same time.
-    - Advanced services such as machine learning, big data analytics and content delivery networks become available, which a small organisation could never have built for itself.
+    - We need almost no money up front. The cost becomes a monthly running expense.
+    - Scalability and elasticity: we can add or remove resources within minutes to match the demand. So a site survives a sudden traffic surge, and pays nothing extra when the traffic drops.
+    - We can use it from anywhere. With an Internet connection, any device can reach the service. This helps remote working.
+    - Reliability and disaster recovery: the provider copies the data across several availability zones and regions, and promises uptime of up to 99.9 percent in the SLA.
+    - Updates and maintenance are automatic. Patching, hardware replacement and upgrades are all the provider's job.
+    - Fast deployment: a server that once took weeks to buy and set up now runs in minutes.
+    - Teamwork: many users can work on the same document or dataset at the same time.
+    - We get advanced services like machine learning, big data analytics and content delivery networks. A small organisation could never build these on its own.
 
     Disadvantages of cloud computing:
-    - Complete dependence on the Internet: if the connection fails, nothing works. Where bandwidth is expensive or unreliable this is a serious problem.
-    - Security and privacy: the data resides on someone else's hardware, so confidentiality depends on the provider's controls and on the customer configuring the service correctly.
-    - Data sovereignty and law: many countries, and in Bangladesh the rules governing banking data, require certain data to remain within the national boundary.
-    - Limited control and customisation, especially in SaaS, where the behaviour of the software cannot be changed.
-    - Vendor lock-in: proprietary services and data transfer charges make it difficult and expensive to move to another provider later.
-    - Long term cost: for a steady and predictable workload, owning the hardware may be cheaper after a few years.
-    - Downtime risk: a single outage at the provider affects every customer at once, and the customer can do nothing but wait.
-    - Hidden charges, particularly for outbound data transfer, and the need for staff with new skills.
+    - It depends fully on the Internet. If the connection fails, nothing works. Where bandwidth is costly or unreliable, this is a serious problem.
+    - Security and privacy: the data sits on someone else's hardware. So privacy depends on the provider's controls, and on the customer setting up the service correctly.
+    - Data sovereignty and law: many countries require certain data to stay inside the country. In Bangladesh, the rules for banking data say this.
+    - Less control and less customisation, especially in SaaS, where we cannot change how the software behaves.
+    - Vendor lock-in: the provider's own special services, plus data transfer charges, make it hard and costly to move to another provider later.
+    - Long term cost: if the workload is steady and predictable, buying our own hardware may be cheaper after a few years.
+    - Downtime risk: one outage at the provider hits every customer at the same time, and the customer can only wait.
+    - Hidden charges, especially for data going out of the cloud. We also need staff with new skills.
 
 ## Cloud Storage & Fundamentals (6)
 
@@ -298,7 +298,7 @@
    What cloud computing is:
 
    - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
-   - The five essential characteristics defined by NIST are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+   - NIST lists five key features: on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
 
    Why it is used:
    - To avoid the large capital cost and the long lead time of buying and installing physical servers.
@@ -330,7 +330,7 @@
    What cloud computing is:
 
    - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
-   - The five essential characteristics defined by NIST are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+   - NIST lists five key features: on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
 
    Essential characteristics, as defined by NIST:
    - On demand self service: the user provisions computing resources automatically through a portal or an API, without any human interaction with the provider.
@@ -354,7 +354,7 @@
    Answer:
 
    - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
-   - The five essential characteristics defined by NIST are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+   - NIST lists five key features: on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
 
    Advantages:
    - Low initial cost: no capital expenditure on servers, data centre space, cooling or power; the cost becomes a monthly operating expense.
@@ -411,7 +411,7 @@
    Answer:
 
    - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
-   - The five essential characteristics defined by NIST are on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
+   - NIST lists five key features: on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
 
    Advantages:
    - Low initial cost: no capital expenditure on servers, data centre space, cooling or power; the cost becomes a monthly operating expense.
