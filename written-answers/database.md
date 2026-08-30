@@ -7138,10 +7138,37 @@ SELECT count (*) FROM (
 
    Answer:
 
-   - DDL, Data Definition Language: defines and changes the structure of the database. `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`. These commands are auto-committed and cannot be rolled back.
-   - DML, Data Manipulation Language: works with the data inside the structure. `INSERT`, `UPDATE`, `DELETE`, and `SELECT`, which some texts classify separately as DQL. These can be rolled back.
-   - DCL, Data Control Language: controls access rights. `GRANT` and `REVOKE`.
-   - TCL, Transaction Control Language: manages transactions. `COMMIT`, `ROLLBACK`, `SAVEPOINT`, `SET TRANSACTION`.
+   1. DDL, Data Definition Language: it creates, changes and removes the structures of the database.
+
+   | Command | What it does |
+   |---|---|
+   | CREATE | Creates a database or its objects: table, index, function, view, stored procedure, trigger |
+   | DROP | Deletes an object from the database |
+   | ALTER | Changes the structure of the database |
+   | TRUNCATE | Removes all the records of a table, and also frees the space they used |
+   | RENAME | Renames an object that exists in the database |
+   | COMMENT | Adds a comment to the data dictionary |
+
+   These commands are auto-committed, so we cannot roll them back.
+
+   2. DQL, Data Query Language: it reads data from the database. DQL has only one command, SELECT. The words FROM, WHERE, GROUP BY, HAVING, ORDER BY, DISTINCT and LIMIT are clauses of SELECT, not separate commands.
+
+   | Clause | What it does |
+   |---|---|
+   | SELECT | Reads data from the database |
+   | FROM | Names the source table or tables |
+   | WHERE | Filters the rows before any grouping |
+   | GROUP BY | Groups the rows that share the same values in the named columns |
+   | HAVING | Filters the result of GROUP BY |
+   | DISTINCT | Removes duplicate rows from the result |
+   | ORDER BY | Sorts the result by one or more columns |
+   | LIMIT | Limits how many rows come back |
+
+   3. DML, Data Manipulation Language: it changes the data stored inside the tables. INSERT adds data, UPDATE changes existing data, DELETE removes records. These can be rolled back.
+
+   4. DCL, Data Control Language: it deals with rights and permissions. GRANT gives new privileges to a user account. REVOKE takes previously granted privileges away.
+
+   5. TCL, Transaction Control Language: it groups a set of tasks into one execution unit. BEGIN TRANSACTION starts a new transaction. COMMIT saves all the changes made during it. ROLLBACK undoes all of them. SAVEPOINT sets a marker inside the current transaction.
 
    Examples:
 
@@ -7182,10 +7209,37 @@ SELECT count (*) FROM (
 
    Its command categories:
 
-   - DDL, Data Definition Language: defines and changes the structure of the database. `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`. These commands are auto-committed and cannot be rolled back.
-   - DML, Data Manipulation Language: works with the data inside the structure. `INSERT`, `UPDATE`, `DELETE`, and `SELECT`, which some texts classify separately as DQL. These can be rolled back.
-   - DCL, Data Control Language: controls access rights. `GRANT` and `REVOKE`.
-   - TCL, Transaction Control Language: manages transactions. `COMMIT`, `ROLLBACK`, `SAVEPOINT`, `SET TRANSACTION`.
+   1. DDL, Data Definition Language: it creates, changes and removes the structures of the database.
+
+   | Command | What it does |
+   |---|---|
+   | CREATE | Creates a database or its objects: table, index, function, view, stored procedure, trigger |
+   | DROP | Deletes an object from the database |
+   | ALTER | Changes the structure of the database |
+   | TRUNCATE | Removes all the records of a table, and also frees the space they used |
+   | RENAME | Renames an object that exists in the database |
+   | COMMENT | Adds a comment to the data dictionary |
+
+   These commands are auto-committed, so we cannot roll them back.
+
+   2. DQL, Data Query Language: it reads data from the database. DQL has only one command, SELECT. The words FROM, WHERE, GROUP BY, HAVING, ORDER BY, DISTINCT and LIMIT are clauses of SELECT, not separate commands.
+
+   | Clause | What it does |
+   |---|---|
+   | SELECT | Reads data from the database |
+   | FROM | Names the source table or tables |
+   | WHERE | Filters the rows before any grouping |
+   | GROUP BY | Groups the rows that share the same values in the named columns |
+   | HAVING | Filters the result of GROUP BY |
+   | DISTINCT | Removes duplicate rows from the result |
+   | ORDER BY | Sorts the result by one or more columns |
+   | LIMIT | Limits how many rows come back |
+
+   3. DML, Data Manipulation Language: it changes the data stored inside the tables. INSERT adds data, UPDATE changes existing data, DELETE removes records. These can be rolled back.
+
+   4. DCL, Data Control Language: it deals with rights and permissions. GRANT gives new privileges to a user account. REVOKE takes previously granted privileges away.
+
+   5. TCL, Transaction Control Language: it groups a set of tasks into one execution unit. BEGIN TRANSACTION starts a new transaction. COMMIT saves all the changes made during it. ROLLBACK undoes all of them. SAVEPOINT sets a marker inside the current transaction.
 
    Examples:
 
