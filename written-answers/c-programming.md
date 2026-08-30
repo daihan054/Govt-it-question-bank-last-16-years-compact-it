@@ -604,27 +604,35 @@ else print F;
 26. **(ক) C ভাষায় ব্যবহৃত বিভিন্ন ধরনের Data Type বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 407 (ET: N/A)]*
 
 
-    Answer: C supports the following data types.
+    Answer: C data types fall into three groups: primitive or basic types, derived types, and user defined types.
 
-    Primary or basic types:
-    - `int` — stores whole numbers, normally 4 bytes, format specifier `%d`.
-    - `float` — single precision decimal, 4 bytes, `%f`.
-    - `double` — double precision decimal, 8 bytes, `%lf`.
-    - `char` — a single character, 1 byte, `%c`.
-    - `void` — means no value. We use it for functions that return nothing.
+    1. Primitive, that is basic, data types:
 
-    Derived types:
-    - Array — a collection of same type elements, for example `int a[10]`.
-    - Pointer — holds a memory address, for example `int *p`.
-    - Function — returns a value of a declared type.
+    | Data type | Purpose | Size | Range | Format specifier |
+    |---|---|---|---|---|
+    | `int` | Whole numbers, positive, negative or zero | 4 bytes | −2,147,483,648 to 2,147,483,647 | `%d` |
+    | `char` | A single character | 1 byte | −128 to 127, signed by default | `%c` |
+    | `float` | Decimal numbers with a fractional part | 4 bytes | about 3.4e−38 to 3.4e+38 | `%f` |
+    | `double` | Decimal numbers with more precision than float | 8 bytes | about 1.7e−308 to 1.7e+308 | `%lf` |
+    | `void` | No value, or empty type | — | — | — |
 
-    User defined types:
-    - `struct` — groups variables of different types under one name.
-    - `union` — like struct but all members share the same memory.
+    - `void` is used in two places: for a function that returns no value, and for a generic pointer written as `void *`.
+
+    2. Derived data types. We build these from the primitive types.
+    - Array — many values of the same type, kept in continuous memory. Example: `int a[10]`
+    - Pointer — stores the memory address of a variable. Example: `int *p`
+    - Function — counted as a derived type, based on its return type and its parameters.
+
+    3. User defined data types. The programmer creates these.
+    - `struct` — groups related variables of different types under one name.
+    - `union` — like a struct, but all the members share the same memory location.
     - `enum` — a set of named integer constants.
     - `typedef` — gives a new name to an existing type.
 
-    Type modifiers: `short`, `long`, `signed` and `unsigned` change the range or size of the basic types.
+    Type modifiers: `short`, `long`, `signed` and `unsigned`. We use them with some primitive types to change the size or the range. Example: `unsigned int`, `long double`.
+
+    Note: the real sizes depend on the architecture. The `sizeof()` operator gives the exact size on our own machine.
+
 27. **(খ) একটি ধনাত্মক পূর্ণ সংখ্যার Factorial নির্ণয়ের C program লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
 
@@ -3787,15 +3795,20 @@ int main() {
 14. **Write some default data type in C.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
 
 
-    Answer: C has these basic data types.
+    Answer: These are the primitive, that is basic, data types of C.
 
-    - `int` — whole numbers, normally 4 bytes, range about −2,147,483,648 to 2,147,483,647, specifier `%d`.
-    - `char` — a single character, 1 byte, range −128 to 127, specifier `%c`.
-    - `float` — single precision real number, 4 bytes, about 6 decimal digits of precision, specifier `%f`.
-    - `double` — double precision real number, 8 bytes, about 15 decimal digits, specifier `%lf`.
-    - `void` — means there is no value. We use it for functions that return nothing.
+    | Data type | Purpose | Size | Range | Format specifier |
+    |---|---|---|---|---|
+    | `int` | Whole numbers, positive, negative or zero | 4 bytes | −2,147,483,648 to 2,147,483,647 | `%d` |
+    | `char` | A single character | 1 byte | −128 to 127, signed by default | `%c` |
+    | `float` | Decimal numbers with a fractional part | 4 bytes | about 3.4e−38 to 3.4e+38 | `%f` |
+    | `double` | Decimal numbers with more precision than float | 8 bytes | about 1.7e−308 to 1.7e+308 | `%lf` |
+    | `void` | No value, or empty type | — | — | — |
 
-    - We can change their size or range with `short`, `long`, `signed` and `unsigned`. Example: `unsigned int` or `long double`.
+    - `void` means no value. We use it for a function that returns nothing, and for a generic pointer written as `void *`.
+    - Type modifiers: `short`, `long`, `signed` and `unsigned`. We use them with some of these types to change the size or the range. Example: `unsigned int`, `long double`.
+    - The real sizes depend on the architecture. The `sizeof()` operator gives the exact size on our own machine.
+
 15. **Write the difference between Structure and Array.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
 
