@@ -81,16 +81,17 @@
 
    Answer:
 
-   | Point | while loop | do-while loop |
+   | Aspect | while loop | do-while loop |
    |---|---|---|
-   | Condition check | Before the body runs | After the body runs |
-   | Minimum executions | 0, the body may never run | 1, the body always runs once |
    | Type | Entry controlled loop | Exit controlled loop |
-   | Syntax ending | No semicolon after the closing brace | Semicolon required after while |
+   | Condition check | The condition is checked before entering the body | The condition is checked after running the body |
+   | Minimum executions | 0. If the condition is false at the start, the body never runs | 1. The body always runs at least once |
+   | Syntax ending | No semicolon after the closing brace | A semicolon is compulsory after while |
 
    - while: `while (cond) { body }`
    - do-while: `do { body } while (cond);`
-   - Example: if the condition is false at the start, a while loop prints nothing, but a do-while prints once.
+   - Example: take i = 10 and the condition i < 5. The while loop prints nothing. The do-while prints once, then checks the condition and stops.
+   - The for loop is also entry controlled. It puts the initialisation, the condition and the update on one line.
 5. **Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the following pattern will be printed.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1354 (ET: N/A)]*
 ```
 1 2 3 4
@@ -2276,7 +2277,7 @@ for (i=0; i<9; i++) {
     ```
     - The loop runs from 0 to 8.
     - When i is 5, `continue` skips the `printf` for that turn only. So 5 is missing from the output.
-    - `continue` does not stop the loop. It only jumps to the next turn. That is the difference from `break`.
+    - Difference from `break`: `break` ends the loop completely, while `continue` only skips the rest of the body and jumps to the next iteration. For a loop printing 0 to 4, `break` at i = 3 prints 0 1 2, but `continue` at i = 3 prints 0 1 2 4.
 14. **Find the output of the following program:** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 ```c
 #include<stdio.h>
@@ -3611,11 +3612,13 @@ int main() {
 3. **What can be used to terminate for(;;)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
 
-   Answer: `for(;;)` is an infinite loop. The condition part is empty, so C treats it as always true. We can stop it in these ways.
+   Answer: `for(;;)` is an infinite loop. An infinite loop happens when the test expression never becomes false. Here the condition part is empty, so C treats it as always true. The other common form is `while(1)`.
 
-   - `break;` leaves the loop at once. Control goes to the statement after it. This is the normal way.
+   We can stop such a loop in these ways.
+
+   - `break;` ends the loop at once. Control goes to the statement written after the loop. This is the normal way.
    - `return;` leaves the whole function, so the loop ends too.
-   - `goto label;` jumps out of the loop to a labelled statement.
+   - `goto label;` moves control to a labelled statement outside the loop.
    - `exit(0);` stops the whole program.
    - Calling `abort()`, or anything that kills the process, also ends it. But that is not good programming practice.
 
