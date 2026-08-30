@@ -573,17 +573,18 @@
 
 1. **What is Machine Learning? Mention some real-life applications.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: Machine Learning is a branch of Artificial Intelligence. In it, a system learns patterns from data and gets better at a job with experience. We do not write a rule for every case by hand.
+   Answer: Machine Learning is a branch of Artificial Intelligence. It lets a computer learn patterns from data and make predictions or decisions, without a human writing a rule for every case. It gets better with experience.
 
    Basic working steps:
    - Collect the data and clean it.
    - Pick the features, and split the data into training, validation and test sets.
-   - Train the model so that its error on the training data becomes as small as possible.
+   - Train the model, so its error on the training data becomes as small as possible.
    - Validate it, tune it, and finally test it on data it has never seen.
+   - Put it to use, and keep improving it with new data.
 
    Real life applications:
    - Fraud detection in card and mobile banking transactions.
-   - Credit scoring, where a bank predicts if a person will repay the loan.
+   - Credit scoring, where a bank predicts if a person will repay a loan.
    - Email spam filtering.
    - Product and video recommendation on Daraz, YouTube and Netflix.
    - Face recognition and fingerprint matching in national ID and office attendance systems.
@@ -593,7 +594,27 @@
 
 2. **Decisiontree model in Machine Learning.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
-   Answer: A Decision Tree is a supervised learning model that looks like a tree. Each internal node asks a question about one feature. Each branch is an answer to that question. Each leaf gives the final class or value.
+   Answer: A Decision Tree is a supervised learning algorithm. We use it for both classification and regression. It has a tree structure made of a root node, branches, internal nodes and leaf nodes.
+
+   Terminology:
+   - Root node: the starting point. It holds all the training data.
+   - Internal node: a test on one attribute, that is a question.
+   - Branch: one possible answer to that question. It leads from one node to the next.
+   - Leaf node: the end point. It gives the final prediction, a class label for classification or a number for regression.
+
+   How splitting works:
+   - The tree divides the dataset again and again. Each time it picks the feature that gives the purest groups.
+   - It keeps dividing until a group holds only one class, or until no further split makes the groups purer.
+
+   Measures used to pick the best attribute:
+   - Entropy: it measures the impurity of a dataset. Higher entropy means more uncertainty.
+     H(X) = −Σ(p_i × log₂ p_i)
+   - Information Gain: it measures how much the uncertainty falls after a split. We pick the attribute with the highest gain.
+     Gain(S, A) = Entropy(S) − Σ(|S_v| / |S|) × Entropy(S_v)
+   - Gini Index: it measures how often a randomly picked item would be put in the wrong class. A lower value means a purer split.
+     Gini = 1 − Σ(p_i²)
+
+   Example:
 
    ```mermaid
    graph TD
@@ -603,27 +624,23 @@
        B -->|No| E[Reject loan]
    ```
 
-   How it is built:
-   - At each node we pick the feature that separates the classes best.
-   - To measure "best" we use Information Gain or Gini Index for classification, and variance reduction for regression.
-   - Then we repeat the same step on each branch, until a stopping rule is reached.
-
    Advantages:
-   - Very easy to understand and to explain to a non-technical person.
-   - Needs little data preparation. No scaling or normalisation required.
-   - Handles both number data and category data.
+   - Easy to understand and easy to explain to a non-technical person.
+   - Flexible. It handles both number data and category data.
+   - Needs very little data preparation. No scaling or normalisation is required.
 
    Disadvantages:
-   - A deep tree overfits easily. It memorises the training data.
+   - A deep tree overfits easily. It memorises the training data instead of learning the pattern.
    - A small change in the data can change the whole tree.
+   - Gini Index tends to prefer child nodes of equal size, even when that is not best for accuracy.
 
-   How we fix these: pruning (cutting back the tree), or using an ensemble like Random Forest.
+   How we control these: pruning, that is cutting the tree back, or using an ensemble such as Random Forest.
 
 3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 339 (ET: BIBM)]*
 
-   Answer: Machine Learning is the part of Artificial Intelligence where a computer learns from data and improves with experience, without being programmed with a rule for each case.
+   Answer: Machine Learning is the branch of Artificial Intelligence where a computer learns from data and improves with experience, instead of being programmed with a rule for each case.
 
-   | Point | Supervised | Unsupervised | Reinforcement |
+   | Criteria | Supervised | Unsupervised | Reinforcement |
    |---|---|---|---|
    | Input data | Labelled | Unlabelled | No dataset. It has an environment |
    | Learns from | The known correct output | Hidden structure in the data | Reward and penalty |
@@ -631,14 +648,19 @@
    | Feedback | Direct, from the label | None | Delayed, through the reward |
    | Main types | Classification, Regression | Clustering, Association | Value based, Policy based |
    | Algorithms | Decision Tree, SVM, KNN | K-Means, Apriori | Q-Learning, SARSA |
-   | Example | Predicting loan default | Grouping customers | Robot learning to walk |
+   | Example | Predicting loan default | Grouping customers by spending | A robot learning to walk |
+
+   One line each:
+   - Supervised: learning with a teacher who gives the answers.
+   - Unsupervised: learning with no teacher, only finding groups.
+   - Reinforcement: learning from reward and punishment, like training a pet.
 
 4. **(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
 
-   Answer: A Decision Tree is a supervised machine learning model. It takes a decision by asking a series of questions about the features. It has a tree shape:
-   - Root node: the first question.
+   Answer: A Decision Tree is a supervised learning algorithm. It reaches a decision by asking a series of questions about the features. It has a tree structure:
+   - Root node: the first question. It holds all the data.
    - Internal nodes: the next questions.
-   - Branches: the answers to a question.
+   - Branches: the possible answers to a question.
    - Leaf nodes: the final decision.
 
    Example: should we play cricket today, based on the weather?
@@ -655,13 +677,13 @@
    ```
 
    Reading the tree:
-   - Outlook is asked first, because it separates the classes best. We measure this with Information Gain.
+   - Outlook is asked first, because it gives the highest Information Gain, that is it separates the classes best.
    - If Outlook is Overcast, the answer is always Play. So it becomes a leaf at once.
    - If Outlook is Sunny, we then ask about Humidity. If it is Rainy, we ask about Wind.
 
-   Each path from the root to a leaf gives a simple rule. For example: "if Outlook is Sunny and Humidity is High, then do not play".
+   Each path from the root to a leaf gives us one simple rule. For example: if Outlook is Sunny and Humidity is High, then do not play.
 
-   This is why decision trees are popular where the decision must be explained, such as loan approval in a bank. The bank can show the customer the exact rule that was applied.
+   Why decision trees are popular: the rules are readable. In a bank loan system, the bank can show the customer the exact rule that was applied to reject the loan. Most other models cannot do that.
 
 ## Generative AI & Explainable AI (XAI) (4)
 
