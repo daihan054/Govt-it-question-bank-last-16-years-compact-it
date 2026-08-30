@@ -2165,18 +2165,19 @@ Output: Not Balanced
 
    | Point | Array | Linked List |
    |---|---|---|
-   | Memory allocation | Contiguous block, allocated at once | Non-contiguous nodes, allocated as needed |
-   | Size | Fixed at declaration in a static array | Dynamic; it grows and shrinks at run time |
-   | Access to the i-th element | Direct, O(1), by computing base + i × size | Sequential, O(n), by following the links from the head |
-   | Insertion or deletion at the beginning | O(n), every element must be shifted | O(1), only pointers are changed |
-   | Insertion or deletion in the middle | O(n) for the shifting | O(1) once the position is reached, but O(n) to reach it |
-   | Insertion at the end | O(1) if space remains, O(n) if the array must be resized | O(1) with a tail pointer, O(n) without |
-   | Memory per element | Only the data | The data plus one pointer, or two in a doubly linked list |
-   | Memory waste | Unused declared positions are wasted | No waste, but pointer overhead on every node |
-   | Cache performance | Excellent, because the elements are contiguous | Poor, because the nodes are scattered in memory |
-   | Merging or splitting | Costly, requires copying | Cheap, only pointers are relinked |
-   | Binary search | Possible, O(log n) on sorted data | Not possible efficiently, since there is no random access |
-   | Implementation | Simple | More complex, and it requires careful pointer handling |
+   | Feature | Array | Linked List |
+   |---|---|---|
+   | Memory storage | The elements are stored in continuous memory locations | The nodes are stored in scattered, non-continuous memory locations |
+   | Access time | Direct access by index, in O(1) time | Sequential access, so it takes O(n) time |
+   | Insertion | Slower, because the elements must be shifted | Faster, because only the pointers are updated |
+   | Deletion | Needs shifting of the remaining elements | Efficient, we only adjust the pointers |
+   | Size | Generally fixed once created | Can grow or shrink during the run |
+   | Memory usage | Needs less memory overhead | Needs extra memory for the pointers |
+   | Cache performance | Better cache locality, so traversal is faster | Poor cache locality, because the nodes are scattered |
+   | Implementation | Simple and easy to write | More complex, because of pointer management |
+   | Searching | Faster when we know the index | We must walk from the beginning |
+   | Binary search | Possible, O(log n) on sorted data | Not possible efficiently, because there is no random access |
+   | Merging or splitting | Costly, it needs copying | Cheap, we only relink the pointers |
 
    Diagram:
 
@@ -2203,8 +2204,8 @@ Output: Not Balanced
    - The essential difference: in an array the position of an element is computed arithmetically, which gives O(1) access but requires a contiguous fixed block. In a linked list the position is reached by following pointers, which gives O(n) access but allows the structure to grow anywhere in memory and to be modified without shifting.
 
    When to choose which:
-   - Array: when the number of elements is known or stable, when random access or binary search is needed, and when cache performance matters, as in numerical computation.
-   - Linked list: when the size varies widely and unpredictably, when insertions and deletions are frequent, especially at the front, and when no random access is required.
+   - Array: use it when access operations are frequent, and when we need fast random access to an element by its index. Also when the size is stable and cache performance matters, as in numerical computation.
+   - Linked list: use it when insertion and deletion are frequent, and when the size of the data is unknown or changes a lot during the run.
 5. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
 
@@ -2265,18 +2266,19 @@ Output: Not Balanced
 
    | Point | Array | Linked List |
    |---|---|---|
-   | Memory allocation | Contiguous block, allocated at once | Non-contiguous nodes, allocated as needed |
-   | Size | Fixed at declaration in a static array | Dynamic; it grows and shrinks at run time |
-   | Access to the i-th element | Direct, O(1), by computing base + i × size | Sequential, O(n), by following the links from the head |
-   | Insertion or deletion at the beginning | O(n), every element must be shifted | O(1), only pointers are changed |
-   | Insertion or deletion in the middle | O(n) for the shifting | O(1) once the position is reached, but O(n) to reach it |
-   | Insertion at the end | O(1) if space remains, O(n) if the array must be resized | O(1) with a tail pointer, O(n) without |
-   | Memory per element | Only the data | The data plus one pointer, or two in a doubly linked list |
-   | Memory waste | Unused declared positions are wasted | No waste, but pointer overhead on every node |
-   | Cache performance | Excellent, because the elements are contiguous | Poor, because the nodes are scattered in memory |
-   | Merging or splitting | Costly, requires copying | Cheap, only pointers are relinked |
-   | Binary search | Possible, O(log n) on sorted data | Not possible efficiently, since there is no random access |
-   | Implementation | Simple | More complex, and it requires careful pointer handling |
+   | Feature | Array | Linked List |
+   |---|---|---|
+   | Memory storage | The elements are stored in continuous memory locations | The nodes are stored in scattered, non-continuous memory locations |
+   | Access time | Direct access by index, in O(1) time | Sequential access, so it takes O(n) time |
+   | Insertion | Slower, because the elements must be shifted | Faster, because only the pointers are updated |
+   | Deletion | Needs shifting of the remaining elements | Efficient, we only adjust the pointers |
+   | Size | Generally fixed once created | Can grow or shrink during the run |
+   | Memory usage | Needs less memory overhead | Needs extra memory for the pointers |
+   | Cache performance | Better cache locality, so traversal is faster | Poor cache locality, because the nodes are scattered |
+   | Implementation | Simple and easy to write | More complex, because of pointer management |
+   | Searching | Faster when we know the index | We must walk from the beginning |
+   | Binary search | Possible, O(log n) on sorted data | Not possible efficiently, because there is no random access |
+   | Merging or splitting | Costly, it needs copying | Cheap, we only relink the pointers |
 
    Example illustrating the difference:
    - Suppose 5 elements are stored and a new element must be inserted at the beginning.
@@ -2406,18 +2408,19 @@ Output: Not Balanced
 
    | Point | Array | Linked List |
    |---|---|---|
-   | Memory allocation | Contiguous block, allocated at once | Non-contiguous nodes, allocated as needed |
-   | Size | Fixed at declaration in a static array | Dynamic; it grows and shrinks at run time |
-   | Access to the i-th element | Direct, O(1), by computing base + i × size | Sequential, O(n), by following the links from the head |
-   | Insertion or deletion at the beginning | O(n), every element must be shifted | O(1), only pointers are changed |
-   | Insertion or deletion in the middle | O(n) for the shifting | O(1) once the position is reached, but O(n) to reach it |
-   | Insertion at the end | O(1) if space remains, O(n) if the array must be resized | O(1) with a tail pointer, O(n) without |
-   | Memory per element | Only the data | The data plus one pointer, or two in a doubly linked list |
-   | Memory waste | Unused declared positions are wasted | No waste, but pointer overhead on every node |
-   | Cache performance | Excellent, because the elements are contiguous | Poor, because the nodes are scattered in memory |
-   | Merging or splitting | Costly, requires copying | Cheap, only pointers are relinked |
-   | Binary search | Possible, O(log n) on sorted data | Not possible efficiently, since there is no random access |
-   | Implementation | Simple | More complex, and it requires careful pointer handling |
+   | Feature | Array | Linked List |
+   |---|---|---|
+   | Memory storage | The elements are stored in continuous memory locations | The nodes are stored in scattered, non-continuous memory locations |
+   | Access time | Direct access by index, in O(1) time | Sequential access, so it takes O(n) time |
+   | Insertion | Slower, because the elements must be shifted | Faster, because only the pointers are updated |
+   | Deletion | Needs shifting of the remaining elements | Efficient, we only adjust the pointers |
+   | Size | Generally fixed once created | Can grow or shrink during the run |
+   | Memory usage | Needs less memory overhead | Needs extra memory for the pointers |
+   | Cache performance | Better cache locality, so traversal is faster | Poor cache locality, because the nodes are scattered |
+   | Implementation | Simple and easy to write | More complex, because of pointer management |
+   | Searching | Faster when we know the index | We must walk from the beginning |
+   | Binary search | Possible, O(log n) on sorted data | Not possible efficiently, because there is no random access |
+   | Merging or splitting | Costly, it needs copying | Cheap, we only relink the pointers |
 
    Comparison of the two:
    - Both are linear data structures that store a sequence of elements, both can be traversed, and both support insertion, deletion and searching.
