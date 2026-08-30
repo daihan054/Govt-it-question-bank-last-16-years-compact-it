@@ -3969,19 +3969,27 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 1. **What is Deadlock? Given a scenery and find out the process is face deadlock sitiation?** *[IFIC Bank Officer IT 2025 compact it 1448 (ET: IFIC)]*
 
 
-   Answer: Deadlock is a situation in which a set of processes are permanently blocked, because each process in the set is holding a resource and is waiting for a resource that is held by another process in the same set. No process can proceed, none will release what it holds, and the set waits for ever unless the operating system intervenes.
+   Answer: Deadlock is a state in an operating system where two or more processes are stuck forever, because each one is waiting for a resource that another one is holding. No process can move ahead, none of them will let go of what it holds, and they wait for ever unless the operating system steps in.
 
    Everyday analogy: two cars meet on a single-lane bridge from opposite ends. Each occupies half the bridge and each waits for the other to reverse. Neither can move, and neither will give way.
 
    The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-   - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+   - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-   - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+   - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-   - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+   - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-   - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+   - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
+
+   All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+   Four ways to handle deadlock:
+   - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+   - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+   - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+   - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
 
    How each condition can be attacked, which is the method of deadlock prevention:
    - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
@@ -4098,19 +4106,27 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 4. **What is Deadlock? Write Conditions for Deadlock and also write Deadlock.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
 
 
-   Answer: Deadlock is a situation in which a set of processes are permanently blocked, because each process in the set is holding a resource and is waiting for a resource that is held by another process in the same set. No process can proceed, none will release what it holds, and the set waits for ever unless the operating system intervenes.
+   Answer: Deadlock is a state in an operating system where two or more processes are stuck forever, because each one is waiting for a resource that another one is holding. No process can move ahead, none of them will let go of what it holds, and they wait for ever unless the operating system steps in.
 
    Everyday analogy: two cars meet on a single-lane bridge from opposite ends. Each occupies half the bridge and each waits for the other to reverse. Neither can move, and neither will give way.
 
    The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-   - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+   - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-   - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+   - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-   - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+   - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-   - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+   - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
+
+   All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+   Four ways to handle deadlock:
+   - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+   - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+   - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+   - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
 
    How each condition can be attacked, which is the method of deadlock prevention:
    - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
@@ -4268,13 +4284,21 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
    Answer: The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-   - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+   - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-   - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+   - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-   - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+   - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-   - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+   - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
+
+   All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+   Four ways to handle deadlock:
+   - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+   - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+   - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+   - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
 
    How each condition can be attacked, which is the method of deadlock prevention:
    - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
@@ -4331,7 +4355,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 9. **What is deadlock? Draw its diagram.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
 
-   Answer: Deadlock is a situation in which a set of processes are permanently blocked, because each process in the set is holding a resource and is waiting for a resource that is held by another process in the same set. No process can proceed, none will release what it holds, and the set waits for ever unless the operating system intervenes.
+   Answer: Deadlock is a state in an operating system where two or more processes are stuck forever, because each one is waiting for a resource that another one is holding. No process can move ahead, none of them will let go of what it holds, and they wait for ever unless the operating system steps in.
 
    Everyday analogy: two cars meet on a single-lane bridge from opposite ends. Each occupies half the bridge and each waits for the other to reverse. Neither can move, and neither will give way.
 
@@ -4362,13 +4386,21 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
    The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-   - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+   - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-   - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+   - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-   - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+   - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-   - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+   - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
+
+   All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+   Four ways to handle deadlock:
+   - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+   - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+   - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+   - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
 
    How each condition can be attacked, which is the method of deadlock prevention:
    - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
@@ -4426,49 +4458,65 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
     Answer: The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-    - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+     - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-    - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+     - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-    - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+     - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-    - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+     - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
+
+     All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+    Four ways to handle deadlock:
+    - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+    - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+    - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+    - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
 
     How each condition can be attacked, which is the method of deadlock prevention:
-    - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
-    - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
-    - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
-    - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
+     - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
+     - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
+     - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
+     - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
 12. **(a) What is deadlock in operating system (OS)? What are the four necessary and sufficient conditions behind deadlock?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
 
 
-    Answer: Deadlock is a situation in which a set of processes are permanently blocked, because each process in the set is holding a resource and is waiting for a resource that is held by another process in the same set. No process can proceed, none will release what it holds, and the set waits for ever unless the operating system intervenes.
+    Answer: Deadlock is a state in an operating system where two or more processes are stuck forever, because each one is waiting for a resource that another one is holding. No process can move ahead, none of them will let go of what it holds, and they wait for ever unless the operating system steps in.
 
-    Everyday analogy: two cars meet on a single-lane bridge from opposite ends. Each occupies half the bridge and each waits for the other to reverse. Neither can move, and neither will give way.
+     Everyday analogy: two cars meet on a single-lane bridge from opposite ends. Each occupies half the bridge and each waits for the other to reverse. Neither can move, and neither will give way.
 
-    The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
+     The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-    - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+     - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-    - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+     - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-    - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+     - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-    - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+     - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
+
+     All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+    Four ways to handle deadlock:
+    - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+    - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+    - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+    - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
 
     How each condition can be attacked, which is the method of deadlock prevention:
-    - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
-    - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
-    - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
-    - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
+     - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
+     - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
+     - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
+     - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
 
-    An important correction to the wording of the question: these four conditions are necessary but they are not sufficient. If a deadlock exists, all four must hold; but all four can hold and no deadlock occur.
+     An important correction to the wording of the question: these four conditions are necessary but they are not sufficient. If a deadlock exists, all four must hold; but all four can hold and no deadlock occur.
 
-    Why they are not sufficient: a cycle in the resource-allocation graph is sufficient only when every resource type has exactly one instance. If a resource type has several instances, a cycle can exist while a process outside the cycle still holds an instance that it is about to release, and that release breaks the cycle. In such a case all four conditions hold, yet every process eventually finishes.
+     Why they are not sufficient: a cycle in the resource-allocation graph is sufficient only when every resource type has exactly one instance. If a resource type has several instances, a cycle can exist while a process outside the cycle still holds an instance that it is about to release, and that release breaks the cycle. In such a case all four conditions hold, yet every process eventually finishes.
 
-    Example: R1 and R2 each have two instances. P1 holds an instance of R1 and waits for R2; P2 holds an instance of R2 and waits for R1; P3 holds the second instance of R2 and is waiting for nothing; P4 holds the second instance of R1 and is waiting for nothing. All four conditions hold and the graph contains a cycle, but P3 and P4 will finish and release their instances, so no deadlock occurs.
+     Example: R1 and R2 each have two instances. P1 holds an instance of R1 and waits for R2; P2 holds an instance of R2 and waits for R1; P3 holds the second instance of R2 and is waiting for nothing; P4 holds the second instance of R1 and is waiting for nothing. All four conditions hold and the graph contains a cycle, but P3 and P4 will finish and release their instances, so no deadlock occurs.
 
-    The correct statement is therefore: circular wait, together with the other three conditions, is necessary for deadlock; it is sufficient only in a system where every resource type has a single instance.
+     The correct statement is therefore: circular wait, together with the other three conditions, is necessary for deadlock; it is sufficient only in a system where every resource type has a single instance.
 13. **(b) A system has P processes each needing a maximum of m resources and a total of r resources available. Which conditions must hold to make the system deadlock free?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
 
 
@@ -4522,37 +4570,53 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
     Answer: The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-    - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+     - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-    - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+     - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-    - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+     - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-    - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+     - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
+
+     All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+    Four ways to handle deadlock:
+    - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+    - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+    - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+    - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
 
     How each condition can be attacked, which is the method of deadlock prevention:
-    - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
-    - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
-    - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
-    - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
+     - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
+     - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
+     - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
+     - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
 15. **(b) What are the conditions for deadlock situations? Explain briefly.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 688 (ET: N/A)]*
 
 
     Answer: The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-    - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+     - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-    - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+     - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-    - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+     - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-    - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+     - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
+
+     All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+    Four ways to handle deadlock:
+    - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+    - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+    - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+    - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
 
     How each condition can be attacked, which is the method of deadlock prevention:
-    - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
-    - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
-    - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
-    - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
+     - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
+     - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
+     - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
+     - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
 16. **Banker's Algorithm: 5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances). Snapshot at time T_0. The content of the matrix. Need is defined to be \text{Max} - \text{Allocation}. Check that \text{Request} \le \text{Available}. Executing safety algorithm shows that sequence \langle P_1, P_3, P_4, P_0, P_2 \rangle satisfies safety requirement.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 855 (ET: N/A)]*
 
 
@@ -4623,43 +4687,51 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
     Answer:
 
-    Artificial Intelligence:
+     Artificial Intelligence:
 
-    Artificial Intelligence (AI) is the branch of computer science concerned with building machines and software that can perform tasks which normally require human intelligence, such as learning from experience, reasoning, understanding language, recognising patterns, solving problems and making decisions.
+     Artificial Intelligence (AI) is the branch of computer science concerned with building machines and software that can perform tasks which normally require human intelligence, such as learning from experience, reasoning, understanding language, recognising patterns, solving problems and making decisions.
 
-    Main branches:
-    - Machine Learning: systems that improve their performance from data rather than from explicit programming. Its forms are supervised, unsupervised and reinforcement learning.
-    - Deep Learning: machine learning using multi-layer neural networks, which has produced the recent advances in vision and language.
-    - Natural Language Processing: understanding and generating human language, used in translation, chatbots and speech recognition.
-    - Computer Vision: interpreting images and video, used in face recognition, medical imaging and autonomous vehicles.
-    - Robotics: machines that sense and act in the physical world.
-    - Expert Systems: rule-based systems that capture the knowledge of a specialist in a narrow field.
+     Main branches:
+     - Machine Learning: systems that improve their performance from data rather than from explicit programming. Its forms are supervised, unsupervised and reinforcement learning.
+     - Deep Learning: machine learning using multi-layer neural networks, which has produced the recent advances in vision and language.
+     - Natural Language Processing: understanding and generating human language, used in translation, chatbots and speech recognition.
+     - Computer Vision: interpreting images and video, used in face recognition, medical imaging and autonomous vehicles.
+     - Robotics: machines that sense and act in the physical world.
+     - Expert Systems: rule-based systems that capture the knowledge of a specialist in a narrow field.
 
-    Types by capability: narrow AI, which is what exists today and is limited to one task; general AI, which would match human ability across tasks and does not yet exist; and super AI, a hypothetical level beyond human capability.
+     Types by capability: narrow AI, which is what exists today and is limited to one task; general AI, which would match human ability across tasks and does not yet exist; and super AI, a hypothetical level beyond human capability.
 
-    Applications: medical diagnosis, fraud detection in banking, credit scoring, recommendation systems, weather forecasting, agricultural yield prediction, machine translation and autonomous vehicles.
+     Applications: medical diagnosis, fraud detection in banking, credit scoring, recommendation systems, weather forecasting, agricultural yield prediction, machine translation and autonomous vehicles.
 
-    Concerns: bias in training data, loss of jobs in routine occupations, privacy, the difficulty of explaining a model's decision, and the question of accountability when a system causes harm.
+     Concerns: bias in training data, loss of jobs in routine occupations, privacy, the difficulty of explaining a model's decision, and the question of accountability when a system causes harm.
 
-    The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
+     The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-    - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+     - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-    - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+     - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-    - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+     - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-    - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+     - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
+
+     All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+    Four ways to handle deadlock:
+    - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+    - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+    - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+    - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
 
     How each condition can be attacked, which is the method of deadlock prevention:
-    - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
-    - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
-    - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
-    - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
+     - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
+     - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
+     - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
+     - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
 18. **What is Deadlock? Explain two situations where deadlock condition occurs.** *[Janata Bank Assistant System Administrator 2021 compact it 938 (ET: N/A)]*
 
 
-    Answer: Deadlock is a situation in which a set of processes are permanently blocked, because each process in the set is holding a resource and is waiting for a resource that is held by another process in the same set. No process can proceed, none will release what it holds, and the set waits for ever unless the operating system intervenes.
+    Answer: Deadlock is a state in an operating system where two or more processes are stuck forever, because each one is waiting for a resource that another one is holding. No process can move ahead, none of them will let go of what it holds, and they wait for ever unless the operating system steps in.
 
     Everyday analogy: two cars meet on a single-lane bridge from opposite ends. Each occupies half the bridge and each waits for the other to reverse. Neither can move, and neither will give way.
 
@@ -4769,7 +4841,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 20. **What is Operating Systems Deadlock? কীভাবে Deadlock দূর করা যায়?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
 
-    Answer: Deadlock is a situation in which a set of processes are permanently blocked, because each process in the set is holding a resource and is waiting for a resource that is held by another process in the same set. No process can proceed, none will release what it holds, and the set waits for ever unless the operating system intervenes.
+    Answer: Deadlock is a state in an operating system where two or more processes are stuck forever, because each one is waiting for a resource that another one is holding. No process can move ahead, none of them will let go of what it holds, and they wait for ever unless the operating system steps in.
 
     Everyday analogy: two cars meet on a single-lane bridge from opposite ends. Each occupies half the bridge and each waits for the other to reverse. Neither can move, and neither will give way.
 
@@ -4801,25 +4873,33 @@ The content of the matrix. Need is defined to be Max – Allocation.
 21. **(d) Define Deadlock. Write down the necessary conditions for deadlock.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026 (ET: N/A)]*
 
 
-    Answer: Deadlock is a situation in which a set of processes are permanently blocked, because each process in the set is holding a resource and is waiting for a resource that is held by another process in the same set. No process can proceed, none will release what it holds, and the set waits for ever unless the operating system intervenes.
+    Answer: Deadlock is a state in an operating system where two or more processes are stuck forever, because each one is waiting for a resource that another one is holding. No process can move ahead, none of them will let go of what it holds, and they wait for ever unless the operating system steps in.
 
-        Everyday analogy: two cars meet on a single-lane bridge from opposite ends. Each occupies half the bridge and each waits for the other to reverse. Neither can move, and neither will give way.
+         Everyday analogy: two cars meet on a single-lane bridge from opposite ends. Each occupies half the bridge and each waits for the other to reverse. Neither can move, and neither will give way.
 
-    The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
+     The four necessary conditions, stated by Coffman in 1971. All four must hold simultaneously for a deadlock to be possible.
 
-        - Mutual exclusion: at least one resource must be non-sharable, that is usable by only one process at a time. A printer or a write lock is an example; a read-only file is not.
+         - Mutual exclusion: only one process can use a resource at any one time, that is the resource is non-sharable. A printer or a write lock is an example. A read-only file is not.
 
-        - Hold and wait: a process is holding at least one resource and is waiting to acquire additional resources that are currently held by other processes.
+         - Hold and wait: a process is holding at least one resource, and at the same time it is waiting to get other resources that are held by other processes.
 
-        - No preemption: a resource cannot be forcibly taken away from the process holding it. It can only be released voluntarily, when the process has finished with it.
+         - No preemption: we cannot take a resource away from a process. The process must release it itself, when it has finished with it.
 
-        - Circular wait: there exists a set of waiting processes P0, P1, ..., Pn such that P0 is waiting for a resource held by P1, P1 for one held by P2, and so on, with Pn waiting for a resource held by P0. The wait-for graph therefore contains a cycle.
+         - Circular wait: a set of processes wait for each other in a circle. P1 holds R1 and needs R2, which P2 holds. P2 holds R2 and needs R3, which P3 holds, and so on, until the last one waits for the first. So the wait-for graph contains a cycle.
 
-        How each condition can be attacked, which is the method of deadlock prevention:
-        - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
-        - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
-        - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
-        - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
+         All four conditions must be true at the same time for a deadlock to happen. If we break any one of them, a deadlock cannot occur.
+
+    Four ways to handle deadlock:
+    - Prevention: remove one of the four necessary conditions, so a deadlock can never form.
+    - Avoidance: check every request before granting it, and grant it only if the system stays in a safe state. The Banker's algorithm does this.
+    - Detection and recovery: let deadlocks happen, find them with a wait-for graph, then recover by killing a process or taking a resource back.
+    - Ignorance: pretend deadlocks never happen. Most general purpose systems, including UNIX and Windows, do this, because deadlocks are rare and the cost of handling them is high. This is called the ostrich algorithm.
+
+    How each condition can be attacked, which is the method of deadlock prevention:
+         - Mutual exclusion: make resources sharable where possible, for example by spooling the printer. This condition cannot be removed for genuinely non-sharable resources.
+         - Hold and wait: require a process to request all its resources at once before it begins, or to release everything it holds before requesting more. This causes low utilisation and possible starvation.
+         - No preemption: allow the system to take resources back from a waiting process and restart it later. This works only for resources whose state can be saved and restored, such as CPU registers or memory, not for a printer half-way through a job.
+         - Circular wait: impose a total ordering on all resource types and require every process to request resources only in increasing order. This is the practical method actually used in real systems, for example in the Linux kernel's lock ordering rules.
 22. **Four condition of deadlock in Operating System. Suppose, n processes, \text{P}_1, \text{P}_2\dots \text{P}_n share m identical esource units which can be reserved and released one at a time. The maximum resources request of process \text{P}_i is \text{S}_i, where \text{S}_i>0. Which one is sufficient condition for ensuring that deadlock doesn't occur? (Full প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
 
