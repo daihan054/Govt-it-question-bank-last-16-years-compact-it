@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 130/206 sections**
+**Rewritten: 131/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -114,7 +114,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] computer-networks.md — Email Architecture & Protocols (SMTP, POP3, IMAP) (9)
 - [x] computer-networks.md — Application Layer & Well-Known Port Numbers (6)
 - [x] computer-networks.md — Switching Techniques (Circuit vs Packet Switching) (5)
-- [ ] computer-networks.md — WAN Technologies (SONET/SDH, ATM, WDM) (5)
+- [x] computer-networks.md — WAN Technologies (SONET/SDH, ATM, WDM) (5)
 - [ ] computer-networks.md — Pulse Code Modulation (PCM) & Signal Processing (4)
 - [ ] computer-networks.md — Network Layer (Packet Fragmentation & Tunneling) (4)
 - [ ] computer-networks.md — Analog Modulation & Radio Receivers (3)
