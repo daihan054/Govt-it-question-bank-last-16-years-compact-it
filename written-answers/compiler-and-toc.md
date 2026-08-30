@@ -247,7 +247,9 @@
 1. Consider the grammar: E -> E + E | E * E | id. Show that the grammar is ambiguous for the string: id + id * id. [SO IT 25-07-2026]
 
 
-   Answer: A grammar is ambiguous if there exists at least one string in its language that has two or more distinct parse trees, that is two distinct leftmost derivations. The string `id + id * id` has exactly that.
+   Answer: A Context Free Grammar is formally a 4-tuple G = (V, T, P, S), where V is the set of non-terminals, T is the set of terminals, P is the set of production rules, and S is the start symbol.
+
+   A CFG is ambiguous if at least one string has more than one parse tree, that is more than one derivation. The string `id + id * id` under the grammar E → E + E | E * E | id is exactly such a case.
 
    Derivation 1, treating `+` as the outermost operator, that is `id + (id * id)`:
    - E → E + E
@@ -294,15 +296,16 @@
    - The two trees give different values. With id values 2, 3 and 4, the first tree computes 2 + (3 × 4) = 14 and the second computes (2 + 3) × 4 = 20. A compiler cannot be allowed to choose arbitrarily.
 
    How to remove the ambiguity:
-   - Rewrite the grammar so that precedence and associativity are built into it, with `*` binding more tightly than `+` and both being left associative:
+   - We fix the operator precedence, so multiplication happens before addition. We also fix the grouping direction, that is the associativity, as left to right.
+   - We build these two rules into the grammar itself, by restructuring it in layers:
    - E → E + T | T
    - T → T * F | F
    - F → ( E ) | id
-   - This unambiguous grammar produces only the first tree, that is `id + (id * id)`, which is the mathematically correct interpretation.
+   - This layered structure forces multiplication to bind tighter than addition. So every string now has exactly one parse tree. Here it gives only the first tree, `id + (id * id)`, which is the mathematically correct reading.
 2. **6.15 Consider the grammar: E \to E + E \mid E * E \mid id. Show that the grammar is ambiguous for the string: id + id * id.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
 
-   Answer: A grammar is ambiguous if some string in its language has more than one parse tree, that is more than one leftmost derivation. For `id + id * id` two such derivations exist.
+   Answer: A CFG is ambiguous if at least one string has more than one parse tree, that is more than one derivation. For `id + id * id` under E → E + E | E * E | id, two such derivations exist.
 
    Leftmost derivation 1, giving `id + (id * id)`:
    - E ⇒ E + E ⇒ id + E ⇒ id + E * E ⇒ id + id * E ⇒ id + id * id
@@ -337,10 +340,11 @@
    - Two distinct parse trees for one string prove the grammar is ambiguous.
    - The consequence is a different computed value: with 2, 3 and 4 the first tree gives 14 and the second gives 20.
 
-   Unambiguous replacement, which encodes precedence and left associativity:
+   Unambiguous replacement. It builds the precedence and the left associativity into the grammar itself, in layers:
    - E → E + T | T
    - T → T * F | F
    - F → ( E ) | id
+   - Now multiplication always binds tighter than addition, so each string has exactly one parse tree.
 3. **How CFG to represent a palindrome number?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
 
 
