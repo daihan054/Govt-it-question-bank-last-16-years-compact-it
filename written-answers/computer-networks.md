@@ -3401,7 +3401,24 @@
    - Load distribution and failover: several A records for one name, or weighted and geographic answers, spread users across several servers.
    - Service discovery: SRV records advertise which host and port provide a particular service, and TXT records carry SPF, DKIM and verification data.
    - Caching: every resolver caches answers for the TTL period, which is what makes the whole system fast and keeps the load on the root and TLD servers low.
-   - It runs over UDP port 53 for ordinary queries and TCP port 53 for zone transfers and large responses.
+   - It runs over UDP port 53 for ordinary queries, and TCP port 53 for zone transfers and large responses.
+
+   The domain name space is a hierarchy with four levels:
+   - Root level: the top of the whole DNS hierarchy. It is written as a dot at the end of a name, and it is where every lookup starts.
+   - Top Level Domain (TLD): the level just below the root. It defines the extension, such as .com, .org, .net, .edu, or a country code such as .bd.
+   - Second level domain: the registered name that comes before the TLD, such as `example` in example.com. It identifies one organisation inside that TLD.
+   - Subdomain and hostname: names such as `www`, `mail` or `blog`, which organise the different parts of a site and point to particular servers.
+
+   Three kinds of DNS server:
+   - Root servers: they send the resolver on to the right TLD server.
+   - TLD servers: they send the resolver on to the authoritative server of that domain.
+   - Authoritative servers: they return the actual IP address.
+
+   Recursive and iterative queries:
+   - In a recursive query, the resolver fetches the complete answer on behalf of the client. The client asks once and waits for the final answer.
+   - In an iterative query, each server gives the best information it has, or a referral to another server. The resolver then walks step by step towards the answer.
+
+   Caching: a resolver stores DNS records for a while, so the same question does not have to be asked again. The TTL, Time To Live, says how many seconds a record may stay in the cache. After that, a fresh lookup is needed.
 3. **Why does the Domain Name System (DNS) primarily use UDP as its transport layer protocol instead of TCP? Describe the sequence of events that take place during the DNS name resolution process when a user enters www.companybd.com into a web browser and presses Enter.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1421 (ET: E-Zone)]*
 
 
