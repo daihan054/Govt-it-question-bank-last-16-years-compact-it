@@ -2293,7 +2293,7 @@ int main() {
 
     Answer: With gcc the output is `36 63`, but this program actually has undefined behaviour.
 
-    - In `a = b++ + a++;` the variable a is changed twice in one expression. Once by `a++`, and once by the assignment. There is no sequence point between them.
+    - Post-increment and pre-increment are fine on their own. The problem here is different. In `a = b++ + a++;` the variable a is changed twice inside one expression, once by `a++` and once by the assignment. There is no sequence point between the two changes.
     - In `b = ++b + ++a;` the variable b is also changed twice.
     - The C standard says such an expression is undefined. So different compilers may print different values.
     - What gcc happens to produce: `a = 25 + 10 = 35`, then the pending `a++` makes a = 36. Next `++b` gives 27 and `++a` gives 37, so b = 27 + 37 = 64, and the pending update leaves 63.
@@ -2312,8 +2312,9 @@ int main() {
 
     Answer: Output is `3 5 7`
 
-    - `c = a++ + b` uses the current value of a, which is 2, so c = 2 + 5 = 7.
-    - After the expression is done, the post-increment makes a = 3.
+    - Post-increment means: use the original value first, then increase the variable. So `a++` behaves as result = a, then a = a + 1.
+    - `c = a++ + b` uses the original value of a, which is 2. So c = 2 + 5 = 7.
+    - After the value is used, a becomes 3.
     - b is never modified, so it stays 5.
     - Final printed values are a = 3, b = 5 and c = 7.
 16. **What will be the output of the program?** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
@@ -2333,8 +2334,9 @@ void main() {
     Answer: Output is `3, 2, 15`
 
     - The array starts as {5, 1, 15, 20, 25}.
-    - `i = ++a[1]` first raises a[1] from 1 to 2, then assigns that new value. So i = 2 and the array is {5, 2, 15, 20, 25}.
-    - `j = a[1]++` gives j the current value 2, then raises a[1] to 3. So j = 2 and the array is {5, 3, 15, 20, 25}.
+    - Pre-increment means: increase first, then use the new value. So `++a[1]` behaves as a[1] = a[1] + 1, then result = a[1].
+    - `i = ++a[1]` raises a[1] from 1 to 2, then assigns the new value 2. So i = 2, and the array is {5, 2, 15, 20, 25}.
+    - `j = a[1]++` is post-increment. It gives j the original value 2 first, then raises a[1] to 3. So j = 2, and the array is {5, 3, 15, 20, 25}.
     - `m = a[i++]` uses the current i, which is 2. So m = a[2] = 15, and then i becomes 3.
     - Final values printed are i = 3, j = 2 and m = 15.
 17. **What is the output of the following code?** *[NWPGCL Junior Assistant Manager (IT) 2022 compact it 731 (ET: N/A)]*
