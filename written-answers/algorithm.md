@@ -1335,116 +1335,119 @@ for i in N:
 
    Time complexity:
    - The outer loop runs N times.
-   - For every single iteration of the outer loop, the inner loop runs M times.
-   - Total number of basic operations = N × M.
-   - So the time complexity is O(N × M).
-   - If N and M are both equal to n, this becomes O(n²), which is quadratic.
+   - For each single turn of the outer loop, the inner loop runs M times.
+   - So the total number of basic operations = N × M.
+   - Time complexity is O(N × M).
+   - If both N and M are equal to n, this becomes O(n²), that is quadratic.
 
    Space complexity:
-   - Only the loop counters i and j are stored, and no array or recursion is used.
-   - The memory used does not grow with N or M.
+   - Only the loop counters i and j are kept. No array and no recursion is used.
+   - The memory used does not grow when N or M grows.
    - So the space complexity is O(1), that is constant.
 
 2. **What is complexity of Algorithm? Categorize complexity of Algorihm.** *[BKSP Assistant Programmer 13.07.2024 compact it 1458 (ET: N/A)]*
 
-   Answer: Complexity of an algorithm means the amount of resource it consumes as a function of the input size n. It measures efficiency independently of the machine, language or compiler used.
+   Answer: Complexity of an algorithm means how much resource it uses, written as a function of the input size n. It measures efficiency without depending on the machine, the language or the compiler.
 
-   Two categories of resource:
-   - Time complexity: the number of basic operations performed, as a function of n.
-   - Space complexity: the extra memory required, beyond the input itself.
+   Two categories by resource:
+   - Time complexity: how many basic operations it does, as a function of n.
+   - Space complexity: how much extra memory it needs, apart from the input.
 
-   Three categories of case:
-   - Best case: the minimum work, on the most favourable input. Written with Omega notation.
-   - Average case: the expected work over all inputs. Written with Theta notation.
-   - Worst case: the maximum work, on the least favourable input. Written with Big-O notation and normally quoted, because it gives a guarantee.
+   Three categories by case:
+   - Best case: the least work, on the most helpful input. We write it with Omega notation.
+   - Average case: the expected work over all inputs. We write it with Theta notation.
+   - Worst case: the most work, on the worst input. We write it with Big-O notation. We usually quote this one, because it gives a guarantee.
 
    Common complexity classes, from best to worst:
-   - O(1) constant, for example accessing an array element.
-   - O(log n) logarithmic, for example binary search.
-   - O(n) linear, for example linear search.
-   - O(n log n) linearithmic, for example merge sort.
-   - O(n²) quadratic, for example bubble sort.
-   - O(n³) cubic, for example naive matrix multiplication.
-   - O(2ⁿ) exponential, for example the naive recursive Fibonacci.
-   - O(n!) factorial, for example brute force travelling salesman.
+
+   | Class | Name | Example |
+   |---|---|---|
+   | O(1) | Constant | Reading an array element |
+   | O(log n) | Logarithmic | Binary search |
+   | O(n) | Linear | Linear search |
+   | O(n log n) | Linearithmic | Merge sort |
+   | O(n²) | Quadratic | Bubble sort |
+   | O(n³) | Cubic | Simple matrix multiplication |
+   | O(2ⁿ) | Exponential | Plain recursive Fibonacci |
+   | O(n!) | Factorial | Brute force travelling salesman |
 
 3. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: Computational complexity of an algorithm is the measure of the computing resources the algorithm needs, expressed as a function of the input size n.
+   Answer: Computational complexity of an algorithm is a measure of the computing resources it needs, written as a function of the input size n.
 
-   - Time complexity: how the number of basic operations grows as n grows.
-   - Space complexity: how much extra memory is needed as n grows.
-   - It is measured asymptotically, that is only the growth rate is kept and constants and lower order terms are dropped, because these depend on the machine.
-   - Notations used: Big-O for the upper bound, Big Omega for the lower bound and Big Theta for the tight bound.
-   - Example: for linear search the time complexity is O(n) and the space complexity is O(1).
+   - Time complexity: how the number of basic operations grows when n grows.
+   - Space complexity: how much extra memory is needed when n grows.
+   - We measure it asymptotically. That means we keep only the growth rate and drop the constants and the smaller terms, because those depend on the machine.
+   - Notations used: Big-O for the upper bound, Big Omega for the lower bound, and Big Theta for the tight bound.
+   - Example: linear search has time complexity O(n) and space complexity O(1).
 
 4. **Including Time and Space complexity....** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 553 (ET: BIBM)]*
 
    Answer:
 
    Time complexity:
-   - It is the number of basic operations an algorithm performs as a function of the input size n.
-   - It is not measured in seconds, because that depends on the hardware. Instead the growth rate is counted.
-   - Example: a single loop over n elements is O(n), and two nested loops are O(n²).
+   - It is the number of basic operations an algorithm does, as a function of the input size n.
+   - We do not measure it in seconds, because that depends on the hardware. Instead we count the growth rate.
+   - Example: one loop over n elements is O(n). Two nested loops are O(n²).
 
    Space complexity:
-   - It is the total memory the algorithm needs, which is the input space plus the auxiliary space.
-   - Auxiliary space is the extra memory used besides the input, and it is the part normally compared.
-   - Example: bubble sort uses O(1) auxiliary space, while merge sort uses O(n).
+   - It is the total memory the algorithm needs. That is the input space plus the auxiliary space.
+   - Auxiliary space is the extra memory used besides the input. This is the part we usually compare.
+   - Example: bubble sort uses O(1) auxiliary space. Merge sort uses O(n).
 
-   Relation between them:
-   - There is usually a trade-off. Storing precomputed results in a table lowers time but raises space, which is exactly what dynamic programming does.
-   - Example: recursive Fibonacci takes O(2ⁿ) time and O(n) space, whereas the dynamic programming version takes O(n) time and O(n) space.
+   Relation between the two:
+   - There is usually a trade-off. If we store already computed results in a table, the time goes down but the space goes up. This is exactly what dynamic programming does.
+   - Example: recursive Fibonacci takes O(2ⁿ) time and O(n) space. The dynamic programming version takes O(n) time and O(n) space.
 
 5. **What is complexity? Find the Complexity from code and explain.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 501 (ET: IBA)]*
 
-   Answer: Complexity is the measure of how the running time and memory requirement of an algorithm grow with the size of the input.
+   Answer: Complexity is a measure of how the running time and the memory need of an algorithm grow when the input size grows.
 
    Rules for finding complexity from code:
    - A simple statement takes O(1).
-   - A single loop running n times takes O(n).
-   - Two nested loops each running n times take O(n²).
+   - One loop running n times takes O(n).
+   - Two nested loops, each running n times, take O(n²).
    - A loop where the counter is halved or doubled each time takes O(log n).
-   - Sequential blocks are added, and the largest term is kept.
-   - Constants and lower order terms are dropped, so 3n² + 5n + 7 becomes O(n²).
+   - For blocks one after another, we add them and keep the biggest term.
+   - We drop the constants and the smaller terms. So 3n² + 5n + 7 becomes O(n²).
 
-   Example:
+   Example 1:
    ```c
    for (i = 0; i < n; i++)          // runs n times
        for (j = 0; j < n; j++)      // runs n times for each i
            sum = sum + a[i][j];     // O(1)
    ```
-   - The inner statement executes n × n = n² times, so the time complexity is O(n²).
-   - Only the variables i, j and sum are stored, so the auxiliary space complexity is O(1).
+   - The inner statement runs n × n = n² times. So the time complexity is O(n²).
+   - Only i, j and sum are stored. So the auxiliary space complexity is O(1).
 
-   Second example:
+   Example 2:
    ```c
    while (n > 1)
        n = n / 2;
    ```
-   - n is halved each time, so the loop runs log₂n times and the complexity is O(log n).
+   - n is halved every time. So the loop runs log₂n times, and the complexity is O(log n).
 
 6. **What is Big O and Big Omega?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
-   Answer: Big-O and Big Omega are asymptotic notations that describe how the running time of an algorithm grows.
+   Answer: Big-O and Big Omega are asymptotic notations. They describe how the running time of an algorithm grows.
 
    Big-O, written O(g(n)):
    - It gives the upper bound, that is the worst case growth rate.
-   - Formally, f(n) = O(g(n)) if there exist positive constants c and n₀ such that f(n) ≤ c·g(n) for all n ≥ n₀.
-   - It answers: the algorithm will never be slower than this.
+   - Formal definition: f(n) = O(g(n)) if there are positive constants c and n₀ such that f(n) ≤ c·g(n) for all n ≥ n₀.
+   - In simple words: the algorithm will never be slower than this.
    - Example: linear search is O(n).
 
    Big Omega, written Ω(g(n)):
    - It gives the lower bound, that is the best case growth rate.
-   - Formally, f(n) = Ω(g(n)) if there exist positive constants c and n₀ such that f(n) ≥ c·g(n) for all n ≥ n₀.
-   - It answers: the algorithm will never be faster than this.
+   - Formal definition: f(n) = Ω(g(n)) if there are positive constants c and n₀ such that f(n) ≥ c·g(n) for all n ≥ n₀.
+   - In simple words: the algorithm will never be faster than this.
    - Example: linear search is Ω(1), because the target may be the very first element.
 
-   Big Theta, written Θ(g(n)), is used when the upper and lower bounds match, so it gives the exact growth rate. For example merge sort is Θ(n log n).
+   Big Theta, written Θ(g(n)), is used when the upper bound and the lower bound match. So it gives the exact growth rate. Example: merge sort is Θ(n log n).
 
 7. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 606 (ET: N/A)]*
 
-   Answer: Complexity of an algorithm means how much time and memory it needs as the input size grows. Time complexity counts the basic operations and space complexity counts the extra memory, and both are written using asymptotic notation such as O, Omega and Theta.
+   Answer: Complexity of an algorithm means how much time and memory it needs when the input size grows. Time complexity counts the basic operations. Space complexity counts the extra memory. We write both using asymptotic notation such as O, Omega and Theta.
 
    Complexity of common sorting algorithms:
 
@@ -1462,26 +1465,26 @@ for i in N:
    Answer:
 
    Binary search:
-   - Best case O(1), when the target is exactly the middle element on the first comparison.
-   - Worst case O(log n), when the search continues until a single element remains.
-   - It requires the array to be sorted.
+   - Best case: O(1). The target is exactly the middle element on the very first comparison.
+   - Worst case: O(log n). The search keeps going until only one element is left.
+   - It needs the array to be sorted.
 
    Quick sort:
-   - Best case O(n log n), when every partition splits the array into two nearly equal halves.
-   - Worst case O(n²), when the pivot is always the smallest or largest element, so one side gets n−1 elements.
+   - Best case: O(n log n). Every partition splits the array into two nearly equal halves.
+   - Worst case: O(n²). The pivot is always the smallest or the largest element, so one side gets n−1 elements.
 
    Depth First Search:
-   - Best case O(V + E) and worst case O(V + E) with an adjacency list, because every vertex and every edge is examined once in either case.
+   - Best case O(V + E) and worst case O(V + E) with an adjacency list. Every vertex and every edge is checked once in both cases.
    - With an adjacency matrix it becomes O(V²).
-   - If only reaching a goal matters, the best case is O(1) when the goal is the source itself.
+   - If we only need to reach a goal, the best case is O(1), when the goal is the source itself.
 
 9. **Recurrence equation of binary search and solve it.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
    Answer:
 
    Forming the recurrence:
-   - Binary search compares the target with the middle element, which costs O(1).
-   - If they do not match, it discards half the array and searches only the remaining half of size n/2.
+   - Binary search compares the target with the middle element. This costs O(1).
+   - If they do not match, it throws away half the array and searches only the other half of size n/2.
    - So the recurrence is T(n) = T(n/2) + c, with base case T(1) = c.
 
    Solving by substitution:
@@ -1490,14 +1493,14 @@ for i in N:
    - = T(n/8) + 3c
    - After k steps: T(n) = T(n/2ᵏ) + k·c
    - The recursion stops when n/2ᵏ = 1, which gives 2ᵏ = n, so k = log₂n.
-   - Substituting: T(n) = T(1) + c·log₂n = c + c·log₂n
+   - Putting it back: T(n) = T(1) + c·log₂n = c + c·log₂n
 
    Final answer: T(n) = O(log n)
 
-   Verification by the Master Theorem:
+   Check with the Master Theorem:
    - Here a = 1, b = 2 and f(n) = O(1) = n⁰.
-   - n^(log_b a) = n^(log₂1) = n⁰ = 1, which matches f(n), so case 2 applies.
-   - Therefore T(n) = Θ(n⁰ · log n) = Θ(log n).
+   - n^(log_b a) = n^(log₂1) = n⁰ = 1, which matches f(n). So case 2 applies.
+   - So T(n) = Θ(n⁰ · log n) = Θ(log n).
 
 10. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
@@ -1505,72 +1508,72 @@ for i in N:
 
     Answer:
 
-    Given: T(n) = 3T(n−1) + 2 with T(1) = 1
+    Given: T(n) = 3T(n−1) + 2, with T(1) = 1
 
-    Method 1, repeated substitution:
+    Method 1: repeated substitution
     - T(n) = 3T(n−1) + 2
     - = 3[3T(n−2) + 2] + 2 = 3²T(n−2) + 3·2 + 2
     - = 3²[3T(n−3) + 2] + 3·2 + 2 = 3³T(n−3) + 3²·2 + 3·2 + 2
     - After k steps: T(n) = 3ᵏ·T(n−k) + 2(3^(k−1) + 3^(k−2) + ... + 3 + 1)
     - Put n − k = 1, so k = n − 1 and T(n−k) = T(1) = 1
     - T(n) = 3^(n−1)·1 + 2 × (3^(n−1) − 1)/(3 − 1)
-    - The geometric series sums to (3^(n−1) − 1)/2, so the second term becomes (3^(n−1) − 1)
+    - The geometric series adds up to (3^(n−1) − 1)/2. So the second term becomes (3^(n−1) − 1).
     - T(n) = 3^(n−1) + 3^(n−1) − 1
     - T(n) = 2·3^(n−1) − 1
 
-    Method 2, homogeneous plus particular:
+    Method 2: homogeneous plus particular solution
     - Homogeneous part: T(n) = 3T(n−1) gives T_h(n) = A·3ⁿ
-    - Particular part: assume T_p = C, then C = 3C + 2, so −2C = 2 and C = −1
+    - Particular part: take T_p = C. Then C = 3C + 2, so −2C = 2 and C = −1.
     - General solution: T(n) = A·3ⁿ − 1
     - Apply T(1) = 1: 3A − 1 = 1, so A = 2/3
     - T(n) = (2/3)·3ⁿ − 1 = 2·3^(n−1) − 1
 
     Verification:
-    - T(1) = 2·3⁰ − 1 = 2 − 1 = 1, correct.
-    - T(2) = 3(1) + 2 = 5, and the formula gives 2·3¹ − 1 = 5, correct.
-    - T(3) = 3(5) + 2 = 17, and the formula gives 2·3² − 1 = 17, correct.
+    - T(1) = 2·3⁰ − 1 = 2 − 1 = 1. Correct.
+    - T(2) = 3(1) + 2 = 5. The formula gives 2·3¹ − 1 = 5. Correct.
+    - T(3) = 3(5) + 2 = 17. The formula gives 2·3² − 1 = 17. Correct.
 
     Final answer: T(n) = 2·3^(n−1) − 1, so the complexity is O(3ⁿ), that is exponential.
 
 12. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983-984 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer: The complexity of an algorithm is influenced by the following factors.
+    Answer: The complexity of an algorithm depends on the following factors.
 
     Input related factors:
-    - Input size (n): the main factor, because complexity is always expressed as a function of n.
-    - Nature of the input: whether the data is already sorted, reverse sorted or random. Insertion sort is O(n) on sorted data but O(n²) on reverse sorted data.
-    - Distribution of the data, including how many duplicate values are present.
+    - Input size (n): the main factor. We always write complexity as a function of n.
+    - Nature of the input: whether the data is already sorted, reverse sorted or random. Insertion sort is O(n) on sorted data, but O(n²) on reverse sorted data.
+    - How the data is spread out, including how many duplicate values are present.
 
     Algorithm related factors:
-    - Number of basic operations such as comparisons, assignments and arithmetic.
-    - Loop structure, since nested loops multiply the cost.
-    - Recursion depth and the number of recursive calls made at each level.
-    - The data structure chosen, for example searching a hash table is O(1) while searching a linked list is O(n).
+    - The number of basic operations, such as comparisons, assignments and arithmetic.
+    - The loop structure. Nested loops multiply the cost.
+    - The recursion depth, and how many recursive calls are made at each level.
+    - The data structure chosen. Searching a hash table is O(1), but searching a linked list is O(n).
 
     Resource related factors:
     - Time complexity, that is the count of operations.
-    - Space complexity, that is the auxiliary memory used, including the recursion stack.
-    - The time and space trade-off, where extra memory is used to reduce running time, as done in dynamic programming.
+    - Space complexity, that is the extra memory used, including the recursion stack.
+    - The time and space trade-off, where we use extra memory to cut the running time. Dynamic programming does this.
 
     Implementation related factors:
     - Programming language and compiler optimisation.
     - Processor speed, cache size and memory access pattern.
-    - These affect the actual running time but not the asymptotic complexity, which is why asymptotic analysis is preferred for comparison.
+    - These change the real running time, but they do not change the asymptotic complexity. That is why we use asymptotic analysis for comparing algorithms.
 
 ## Searching Algorithms (11)
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
 
-   Answer: Binary search is chosen, because the array is already sorted.
+   Answer: Binary search is the right choice, because the array is already sorted.
 
    Justification:
-   - Binary search works only on sorted data, and the condition is already satisfied here, so no sorting cost is added.
-   - It repeatedly compares the target with the middle element and discards half of the remaining range each time.
+   - Binary search works only on sorted data. That condition is already met here, so we pay no sorting cost.
+   - It compares the target with the middle element and throws away half of the remaining range each time.
    - For n = 1,000,000 the number of comparisons is at most log₂(1,000,000) ≈ 20.
-   - Linear search would need up to 1,000,000 comparisons in the worst case, so binary search is about 50,000 times faster here.
-   - Space complexity is O(1) for the iterative version, so no extra memory is needed.
+   - Linear search would need up to 1,000,000 comparisons in the worst case. So binary search is about 50,000 times faster here.
+   - Space complexity is O(1) for the iterative version, so we need no extra memory.
 
-   Note: if the same array is searched millions of times, a hash table giving O(1) average lookup could be considered, but it costs O(n) extra memory and loses the sorted order, so for a single sorted array binary search is the correct choice.
+   Note: if we search the same array millions of times, a hash table with O(1) average lookup could be considered. But it costs O(n) extra memory and loses the sorted order. So for one sorted array, binary search is the correct choice.
 
 2. **Write down the Pseudo Code for recursive binary search algorithm. Use the following function definition: binarySearch(array, target, low, high).** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1338 (ET: N/A)]*
 
@@ -1591,44 +1594,46 @@ for i in N:
            return binarySearch(array, target, mid + 1, high)  // search right half
    ```
 
-   - The first call is made as binarySearch(array, target, 0, n − 1).
-   - Base case: low greater than high means the range is empty, so the target does not exist.
+   Points to note:
+   - The first call is binarySearch(array, target, 0, n − 1).
+   - Base case: low greater than high means the range is empty, so the target is not there.
+   - We write mid = low + (high − low)/2 instead of (low + high)/2, because (low + high) can overflow for very large values.
    - Recurrence: T(n) = T(n/2) + O(1), which solves to O(log n).
-   - Space complexity is O(log n) because of the recursion stack, whereas the iterative version needs only O(1).
+   - Space complexity is O(log n) because of the recursion stack. The iterative version needs only O(1).
 
 3. **What is the complexity of Binary algorithm?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: The time complexity of binary search is O(log n) in the worst and average case, and O(1) in the best case when the target is the middle element on the first comparison. Space complexity is O(1) for the iterative version and O(log n) for the recursive version.
+   Answer: The time complexity of binary search is O(log n) in the worst and average case. It is O(1) in the best case, when the target is the middle element on the first comparison. Space complexity is O(1) for the iterative version and O(log n) for the recursive version.
 
 4. **6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
    Answer: Binary search should be chosen.
 
    Justification:
-   - The precondition of binary search, that the data must be sorted, is already met.
-   - Each comparison removes half of the remaining elements, so the worst case is log₂n comparisons.
-   - For one million elements that is about 20 comparisons, against up to 1,000,000 for linear search.
-   - It works in place with O(1) extra memory in the iterative form.
-   - Since the data is a plain sorted array, no extra structure such as a tree or hash table needs to be built.
+   - Binary search needs the data to be sorted. That condition is already met.
+   - Each comparison removes half of the remaining elements. So the worst case is log₂n comparisons.
+   - For one million elements that is about 20 comparisons. Linear search would need up to 1,000,000.
+   - It works in place and needs only O(1) extra memory in the iterative form.
+   - The data is a plain sorted array, so we do not need to build any extra structure such as a tree or a hash table.
 
 5. **Explain Algorithm of Binary search.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
-   Answer: Binary search finds an element in a sorted array by repeatedly halving the search range.
+   Answer: Binary search finds an element in a sorted array by cutting the search range in half again and again.
 
    Steps:
    - Set low = 0 and high = n − 1.
    - Repeat while low is less than or equal to high.
-   - Compute mid = low + (high − low) / 2.
-   - If array[mid] equals the target, return mid, because the element is found.
-   - If array[mid] is greater than the target, the element must lie on the left, so set high = mid − 1.
-   - If array[mid] is smaller than the target, the element must lie on the right, so set low = mid + 1.
-   - If the loop ends without a match, the element is not present, so return −1.
+   - Find mid = low + (high − low) / 2.
+   - If array[mid] is equal to the target, return mid. The element is found.
+   - If array[mid] is greater than the target, the element must be on the left. So set high = mid − 1.
+   - If array[mid] is smaller than the target, the element must be on the right. So set low = mid + 1.
+   - If the loop ends with no match, the element is not present. Return −1.
 
    Example: search 23 in 2, 5, 8, 12, 16, 23, 38, 56, 72, 91
-   - low = 0, high = 9, mid = 4, array[4] = 16, which is less than 23, so low = 5.
-   - low = 5, high = 9, mid = 7, array[7] = 56, which is greater than 23, so high = 6.
-   - low = 5, high = 6, mid = 5, array[5] = 23, which matches, so return index 5.
-   - Only three comparisons were needed instead of six for linear search.
+   - low = 0, high = 9, mid = 4. a[4] = 16, which is less than 23. So low = 5.
+   - low = 5, high = 9, mid = 7. a[7] = 56, which is greater than 23. So high = 6.
+   - low = 5, high = 6, mid = 5. a[5] = 23, which matches. Return index 5.
+   - Only three comparisons were needed, instead of six for linear search.
 
    Time complexity is O(log n) and space complexity is O(1).
 
@@ -1652,10 +1657,11 @@ for i in N:
    }
    ```
 
-   - The function calls itself on a half sized range each time, so the problem shrinks quickly.
-   - Base case is low greater than high, which means the key is absent.
+   How it works:
+   - The function calls itself on a half sized range each time. So the problem shrinks fast.
+   - The base case is low greater than high. That means the key is not there.
    - Recurrence T(n) = T(n/2) + O(1) gives O(log n) time.
-   - Space complexity is O(log n) due to the recursion stack depth.
+   - Space complexity is O(log n), because of the recursion stack depth.
 
 7. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
 
@@ -1664,12 +1670,12 @@ for i in N:
    | Point | Linear Search | Binary Search |
    |---|---|---|
    | Data requirement | Works on sorted or unsorted data | Data must be sorted |
-   | Method | Checks elements one by one from the start | Compares with the middle and discards half |
+   | Method | Checks elements one by one from the start | Compares with the middle and drops half |
    | Best case | O(1), the first element matches | O(1), the middle element matches |
    | Worst case | O(n) | O(log n) |
-   | Comparisons for n = 1000 | up to 1000 | about 10 |
-   | Data structure | Array or linked list | Array with random access only |
-   | Implementation | Very simple | Slightly more complex |
+   | Comparisons for n = 1000 | Up to 1000 | About 10 |
+   | Data structure | Array or linked list | Array only, because it needs random access |
+   | Implementation | Very simple | A little more complex |
    | Suitable for | Small or unsorted data | Large sorted data |
 
 8. **Write a C/C++ program for binary search.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 712 (ET: BUET)]*
@@ -1716,27 +1722,29 @@ for i in N:
    }
    ```
 
-   - The array must be entered in sorted order, otherwise the result is undefined.
+   - The array must be entered in sorted order. Otherwise the result is wrong.
    - Time complexity is O(log n) and space complexity is O(1).
 
 9. **(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
-   Answer: Linear search, also called sequential search, checks each element of the list one after another from the beginning until the target is found or the list ends. It does not require the data to be sorted.
+   Answer: Linear search, also called sequential search, checks each element of the list one after another from the beginning. It stops when the target is found or the list ends. It does not need the data to be sorted.
 
    Algorithm:
    - Start from index 0.
    - Compare the element at the current index with the target.
    - If they match, return that index.
-   - Otherwise move to the next index and repeat.
-   - If the end is reached without a match, return −1.
+   - If not, move to the next index and repeat.
+   - If we reach the end with no match, return −1.
 
    Best case complexity:
-   - O(1), when the target is the very first element, because only one comparison is needed.
+   - O(1). The target is the very first element, so only one comparison is needed.
 
    Worst case complexity:
-   - O(n), when the target is the last element or is not present at all, because all n elements must be compared.
+   - O(n). The target is the last element, or it is not present at all. So all n elements must be compared.
 
-   Average case is O(n/2), which is still O(n). Space complexity is O(1). The advantage of linear search is that it works on unsorted data and on linked lists, where binary search cannot be applied.
+   Average case is O(n/2), which is still O(n). Space complexity is O(1).
+
+   The good side of linear search: it works on unsorted data and on linked lists, where binary search cannot be used.
 
 10. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 791 (ET: N/A)]*
 
@@ -1777,28 +1785,28 @@ for i in N:
     }
     ```
 
-    - The list must already be sorted in ascending order.
-    - Each iteration halves the range, so the loop runs at most log₂n times.
-    - Time complexity O(log n), space complexity O(1).
+    - The list must already be sorted in increasing order.
+    - Each turn of the loop halves the range. So the loop runs at most log₂n times.
+    - Time complexity is O(log n) and space complexity is O(1).
 
 11. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 973-974 (ET: BUET)]*
 
     Answer:
 
-    Array taken: 10, 20, 30, 40, 50, 60, 70 with n = 7. Target key = 60.
+    Array taken: 10, 20, 30, 40, 50, 60, 70, so n = 7. Target key = 60.
 
     Steps:
-    - Step 1: low = 0, high = 6. mid = (0 + 6)/2 = 3. a[3] = 40, which is less than 60, so the key lies on the right. Set low = 4.
+    - Step 1: low = 0, high = 6. mid = (0 + 6)/2 = 3. a[3] = 40, which is less than 60. So the key is on the right. Set low = 4.
     - Step 2: low = 4, high = 6. mid = (4 + 6)/2 = 5. a[5] = 60, which matches the key.
     - The element is found at index 5, that is the 6th position, using only 2 comparisons.
 
-    Time complexity derivation:
+    Time complexity:
     - Each comparison removes half of the remaining elements.
-    - After 1 comparison n/2 elements remain, after 2 comparisons n/4, and after k comparisons n/2ᵏ.
+    - After 1 comparison n/2 elements are left. After 2 comparisons n/4. After k comparisons n/2ᵏ.
     - The search ends when n/2ᵏ = 1, which gives 2ᵏ = n, so k = log₂n.
-    - Therefore the worst case time complexity is O(log n).
+    - So the worst case time complexity is O(log n).
     - For this array log₂7 ≈ 2.8, so at most 3 comparisons are ever needed.
-    - Best case is O(1) when the key is the middle element, and space complexity is O(1).
+    - Best case is O(1), when the key is the middle element. Space complexity is O(1).
 
 ## Dynamic Programming & Greedy Algorithms (7)
 
