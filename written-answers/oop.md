@@ -4328,17 +4328,17 @@ Public class class B extends class A {
 
    Java has four levels of access, controlled by three keywords plus the default (no keyword at all).
 
-   | Modifier | Same class | Same package | Subclass in another package | Anywhere |
-   |---|---|---|---|---|
-   | private | Y | N | N | N |
-   | default (no keyword) | Y | Y | N | N |
-   | protected | Y | Y | Y | N |
-   | public | Y | Y | Y | Y |
+   | Modifier | Same class | Same package, non-subclass | Same package, subclass | Different package, subclass | Different package, non-subclass |
+   |---|---|---|---|---|---|
+   | private | Y | N | N | N | N |
+   | default (no keyword) | Y | Y | Y | N | N |
+   | protected | Y | Y | Y | Y | N |
+   | public | Y | Y | Y | Y | Y |
 
    Description of each:
 
-   - private: the member is visible only inside the class in which it is declared. Not even a subclass can see it. It is the level used for data members, and it is what makes encapsulation work.
-   - default, also called package-private: no keyword is written. The member is visible to every class in the same package, but to nothing outside it.
+   - private: the member is visible only inside the class where it is declared. Not even a subclass can see it. This is the strictest level. We use it for data members, and it is what makes encapsulation work. Example: a banking application keeps the account balance private.
+   - default, also called package-private: we write no keyword at all. The member is visible to every class in the same package, but to nothing outside it. It gives more access than private, but less than protected. We use it for helper classes meant only for that package.
    - protected: visible inside the class, to every class in the same package, and to subclasses even if they are in a different package. It is used for members that a subclass must be able to use but that are not part of the public interface.
    - public: visible from everywhere. It is used for the methods that form the interface of the class.
 
@@ -4346,7 +4346,11 @@ Public class class B extends class A {
    - A top-level class may be only public or default; it cannot be private or protected.
    - Constructors follow the same four levels. A private constructor prevents instantiation from outside, which is how the singleton pattern is implemented.
    - An overriding method may not reduce the visibility of the method it overrides; it may only keep it the same or widen it.
-   - The general principle is to make everything as private as possible and to expose only what is genuinely needed.
+   Best practice:
+   - Use private by default. It is the most restrictive.
+   - Use default for utilities meant only for that package.
+   - Use protected for inheritance hierarchies.
+   - Use public only for the parts we truly mean to expose as an API.
 
    Filled answer in the Y and N form requested:
 
@@ -4381,17 +4385,17 @@ Public class class B extends class A {
 
    Java has four levels of access, controlled by three keywords plus the default (no keyword at all).
 
-   | Modifier | Same class | Same package | Subclass in another package | Anywhere |
-   |---|---|---|---|---|
-   | private | Y | N | N | N |
-   | default (no keyword) | Y | Y | N | N |
-   | protected | Y | Y | Y | N |
-   | public | Y | Y | Y | Y |
+   | Modifier | Same class | Same package, non-subclass | Same package, subclass | Different package, subclass | Different package, non-subclass |
+   |---|---|---|---|---|---|
+   | private | Y | N | N | N | N |
+   | default (no keyword) | Y | Y | Y | N | N |
+   | protected | Y | Y | Y | Y | N |
+   | public | Y | Y | Y | Y | Y |
 
    Description of each:
 
-   - private: the member is visible only inside the class in which it is declared. Not even a subclass can see it. It is the level used for data members, and it is what makes encapsulation work.
-   - default, also called package-private: no keyword is written. The member is visible to every class in the same package, but to nothing outside it.
+   - private: the member is visible only inside the class where it is declared. Not even a subclass can see it. This is the strictest level. We use it for data members, and it is what makes encapsulation work. Example: a banking application keeps the account balance private.
+   - default, also called package-private: we write no keyword at all. The member is visible to every class in the same package, but to nothing outside it. It gives more access than private, but less than protected. We use it for helper classes meant only for that package.
    - protected: visible inside the class, to every class in the same package, and to subclasses even if they are in a different package. It is used for members that a subclass must be able to use but that are not part of the public interface.
    - public: visible from everywhere. It is used for the methods that form the interface of the class.
 
@@ -4399,7 +4403,11 @@ Public class class B extends class A {
    - A top-level class may be only public or default; it cannot be private or protected.
    - Constructors follow the same four levels. A private constructor prevents instantiation from outside, which is how the singleton pattern is implemented.
    - An overriding method may not reduce the visibility of the method it overrides; it may only keep it the same or widen it.
-   - The general principle is to make everything as private as possible and to expose only what is genuinely needed.
+   Best practice:
+   - Use private by default. It is the most restrictive.
+   - Use default for utilities meant only for that package.
+   - Use protected for inheritance hierarchies.
+   - Use public only for the parts we truly mean to expose as an API.
 
    In C++ there are three access specifiers, and no package-level concept:
 
