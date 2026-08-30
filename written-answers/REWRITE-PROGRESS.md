@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 43/206 sections**
+**Rewritten: 44/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -59,7 +59,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] compiler-and-toc.md — Regular Expressions & Finite Automata (6)
 - [ ] compiler-and-toc.md — Grammar & Ambiguity (5)
 - [ ] compiler-and-toc.md — Compiler vs Interpreter (4)
-- [ ] compiler-and-toc.md — Lexical Analysis & Compiler Phases (4)
+- [x] compiler-and-toc.md — Lexical Analysis & Compiler Phases (4)
 - [ ] compiler-and-toc.md — Linker & Loader (1)
 
 ## computer-fundamental.md — 10 sections

@@ -524,13 +524,35 @@
    | Examples | C, C++, Go, Rust, Pascal, Fortran | Python, JavaScript, Ruby, PHP, BASIC, MATLAB |
 
    Phases of a compiler:
-   - Lexical analysis, the scanner: reads the source character by character and groups it into tokens such as keywords, identifiers, constants, operators and punctuation. It removes whitespace and comments and creates symbol table entries. It reports errors such as an illegal character.
-   - Syntax analysis, the parser: checks the token stream against the grammar of the language and builds a parse tree or an abstract syntax tree. It reports errors such as a missing semicolon or an unbalanced bracket.
-   - Semantic analysis: checks meaning rather than form — type compatibility, declaration before use, correct number and type of function arguments, and scope rules. It annotates the tree with type information.
-   - Intermediate code generation: produces a machine independent representation such as three address code, which is easy to optimise and easy to translate to any target machine.
-   - Code optimisation: improves the intermediate code without changing what it does — constant folding, dead code elimination, common subexpression elimination, loop invariant code motion and strength reduction.
-   - Code generation: translates the optimised intermediate code into target machine code or assembly, performing instruction selection and register allocation.
-   - Running across all the phases: symbol table management, which records every identifier with its type, scope and memory location, and error handling, which reports errors and recovers so that compilation can continue.
+   Phases of a compiler, in order:
+
+   | Phase | What it does | Input | Output |
+   |---|---|---|---|
+   | 1. Lexical analysis | Turns the source code into tokens. A token is the smallest meaningful unit: keyword, identifier, constant, operator or punctuation | Source code | Tokens |
+   | 2. Syntax analysis, that is parsing | Checks that the tokens follow the grammar rules of the language | Token stream | Parse tree or syntax tree |
+   | 3. Semantic analysis | Makes sure the code is logically meaningful. It checks type compatibility and whether variables are declared | Syntax tree | Validated syntax tree |
+   | 4. Intermediate code generation | Turns the code into a machine independent form. It is the bridge between the front end and the back end | Checked syntax tree | Three address code |
+   | 5. Code optimisation | Makes the code more efficient without changing what it does | Intermediate code | Optimised intermediate code |
+   | 6. Code generation | Turns the intermediate form into machine code or assembly code | Optimised intermediate code | Assembly or machine code |
+
+   Worked example, traced through the phases:
+   - Lexical analysis: `int x = 10;` becomes the tokens `int` (keyword), `x` (identifier), `=` (operator), `10` (numeric literal), `;` (punctuation).
+   - Syntax analysis: it checks that `int x = 10;` has the correct structure, with the operator and the statement in the right places.
+   - Semantic analysis: for `int a = 5; float b = 3.5; a = a + b;` it reports "Type mismatch: cannot assign float to int".
+   - Intermediate code generation: `a = b + c * d;` becomes
+     ```
+     t1 = c * d
+     t2 = b + t1
+     a = t2
+     ```
+   - Code optimisation: `x = y + z;` inside a loop is moved outside the loop, so it is computed once instead of on every turn.
+   - Code generation: the three address code becomes assembly, such as `LOAD R1, c` and `MUL R1, R2`.
+
+   Two things that run across all the phases:
+   - Symbol table: a data structure the compiler builds and keeps. It holds every identifier name along with its type. It lets any phase look up an identifier quickly.
+   - Error handler: each phase catches its own kind of error. Lexical analysis catches invalid characters. Syntax analysis catches a missing semicolon. Semantic analysis catches a type mismatch. The later phases catch machine level problems.
+
+   The first three phases together are called the analysis phase, or front end. The last three are the synthesis phase, or back end. Keeping them separate is what lets one front end serve many different target machines.
 
    ```mermaid
    graph TD
@@ -646,10 +668,10 @@
 4. **Explain Semantic Error in a context of Compiler.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 
 
-   Answer: A semantic error is an error in the meaning of the program: the code is lexically and syntactically correct, so it parses successfully, but it violates the rules of the language about what the constructs actually mean.
+   Answer: A semantic error is an error in the meaning of the program. The code is lexically and syntactically correct, so it parses fine, but it breaks the language rules about what the constructs actually mean. Semantic analysis is the third phase of the compiler, and its job is to make sure the code is logically meaningful.
 
    Where it is detected:
-   - In the semantic analysis phase, the third phase of the compiler, which walks the syntax tree produced by the parser and checks it against the language's meaning rules, using the symbol table.
+   - In the semantic analysis phase, the third phase. It takes the syntax tree from the parser, checks it against the meaning rules of the language using the symbol table, and gives back a validated syntax tree.
 
    Typical semantic errors:
    - Type mismatch: assigning a string to an integer variable, or adding an integer to a structure.
@@ -663,7 +685,8 @@
    - Applying an operator to operands for which it is not defined, for example the modulus operator on floating point values in C.
 
    Examples in C:
-   - `int x = "hello";` — syntactically valid, but assigning a string literal to an integer is a type error.
+   - `int a = 5; float b = 3.5; a = a + b;` — the compiler reports "Type mismatch: cannot assign float to int".
+   - `int x = "hello";` — the form is valid, but assigning a string literal to an integer is a type error.
    - `undeclaredVar = 10;` — the parser accepts the form, but the identifier is not in the symbol table.
    - `int f(int a) { }` called as `f(1, 2);` — wrong number of arguments.
 
