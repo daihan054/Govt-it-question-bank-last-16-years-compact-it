@@ -827,43 +827,53 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 1. **What is the need of edge server?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
 
 
-   Answer: An edge server is needed because processing data close to where it is produced overcomes the limits of sending everything to a distant central cloud.
+   Answer: An edge server is needed because it does the computation at the edge of the device's network, close to where the data is produced, instead of sending everything to a far away central cloud.
 
-   The need for edge servers:
-   - Latency: a round trip to a central cloud may take 50 to 200 ms, which is far too slow for an autonomous vehicle, an industrial robot, a video analytics camera or an augmented reality headset. An edge server a few kilometres away answers in single digit milliseconds.
-   - Bandwidth cost and capacity: a single high definition camera produces several Mbps continuously. Sending the raw stream of hundreds of cameras to the cloud is neither affordable nor physically possible, particularly where international bandwidth is expensive. The edge server processes the video locally and sends only the events that matter.
-   - Data volume from IoT: millions of sensors generate far more data than is worth transporting. Filtering and aggregating at the edge reduces the volume by orders of magnitude.
-   - Reliability and offline operation: a factory, a hospital or a remote site must keep functioning when the WAN link fails. An edge server keeps the local service running and synchronises later.
-   - Privacy, security and compliance: sensitive data such as patient records, faces or national data can be processed locally and never leave the country or the building, which satisfies data residency laws.
-   - Real time decisions: safety critical control, such as stopping a machine when a person enters a danger zone, cannot depend on a network link at all.
-   - Content delivery: a CDN edge server caches web content, video and software updates near the users, so pages load faster and the origin server and the international link are relieved.
-   - Scalability: distributing the processing across many edge nodes removes the central bottleneck and lets the system grow geographically.
+   Why we need it:
+   - Ultra low latency: a round trip to a central cloud may take 50 to 200 ms. That is far too slow for an autonomous vehicle, an industrial robot, a video analytics camera or an AR headset. An edge server takes the decision in milliseconds, right where the data is created. A self-parking car processes its camera and sensor data this way.
+   - Bandwidth saving: a single 4K camera can produce terabytes a day. Sending all of it to the cloud is costly and often impossible. The edge server processes it locally and sends only the useful part.
+   - Privacy and data residency: the data stays local, so the attack surface is smaller. This matters when the law says medical or banking data must not leave the country.
+   - Works without the network: if the internet link fails, the edge server keeps running the critical tasks. A factory line does not stop.
+   - Less load on the cloud: the central cloud gets only the filtered, important data, so it needs less storage and less processing.
+   - Real time healthcare: a patient monitor gathers data from connected sensors and judges the patient's condition on the spot, without waiting for the cloud.
 
-   - Typical deployments: CDN points of presence, 5G multi-access edge computing at the base station, smart factories, retail stores, and cable landing or telecom exchange sites.
+   Where an edge server sits: on the IoT device itself, on a gateway inside the device, or on an on-premises controller. It has the lowest compute power per node, and it is tuned for quick decisions.
+
 2. **(গ) Edge Computing এর ধারণা সংক্ষেপে উপস্থাপন করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
    Answer:
 
    What edge computing is:
-   - Edge computing is a computing model in which data is processed close to where it is produced, instead of being sent to a distant central cloud data centre.
-   - The edge means the outer boundary of the network, that is the sensors, cameras and IoT devices themselves, or a small server or gateway near them.
+   - Edge computing means the computation happens at the edge of the device's network. A computer joined to the device's network processes the data and sends it to the cloud in real time.
+   - "Edge" means the outer boundary of the network, that is the place where the data is actually created, instead of the central cloud data centre.
+   - The data is processed and sent back to the devices instantly.
 
-   How it works:
-   - The device or the edge server collects the data locally, filters it, analyses it and takes a decision immediately.
-   - Only the important or summarised results are sent to the cloud, for long term storage and larger scale analysis.
-
-   Why it is needed:
-   - Low latency: a round trip to the cloud takes 50 to 200 ms, which is far too long for a self driving car, an industrial robot or real time video analytics. At the edge the answer comes back within a few milliseconds.
-   - Saving bandwidth: sending the raw video of hundreds of HD cameras to the cloud is impossible and very expensive, so the edge processes it and sends only the events.
-   - Reliability: even when the Internet link fails, the local system keeps working and synchronises later.
-   - Privacy and law: patient records or facial images can be processed locally and kept inside the country.
-   - Real time safety decisions, such as stopping a machine when a person enters a dangerous area, cannot depend on a network link at all.
+   Why it is used:
+   - Ultra low latency, so decisions happen at the point where the data is born.
+   - Less backhaul bandwidth, because most of the data is handled locally.
+   - Best privacy, because the data stays local and the attack surface is small.
+   - It keeps working even when the internet link is down.
 
    Examples:
-   - CDN edge servers, Multi-access Edge Computing in 5G, local controllers in a smart factory, traffic cameras in a smart city, and local health analysis on a smartwatch.
+   - Autonomous vehicles process camera and sensor data to decide within milliseconds, such as in self-parking.
+   - Healthcare devices collect data from connected sensors and monitors, and judge the patient's condition on the spot.
 
-   Relationship with fog computing:
-   - Fog computing is an intermediate layer between the edge and the cloud, where the processing happens at the gateway or router level. The edge is closest, the fog is in between, and the cloud is furthest away.
+   Fog computing, which is closely related:
+   - Fog computing is an extension of cloud computing. It is a layer sitting between the edge and the cloud.
+   - When the edge devices send large amounts of data, the fog nodes receive and analyse it, decide what is important, send the important part to the cloud, and delete the rest.
+   - This saves a lot of space in the cloud, and moves the important data quickly.
+
+   Edge computing against fog computing:
+
+   | Aspect | Edge computing | Fog computing |
+   |---|---|---|
+   | Where it runs | On or near the device itself | At a local gateway, ISP point of presence, base station or micro data centre |
+   | Distance from cloud | Farthest from the cloud | Closer to the cloud |
+   | Number of endpoints | Billions: sensors, cameras, wearables | Fewer nodes, spread across regions |
+   | Compute power per node | Lowest, tuned for quick decisions | Higher, because one node serves many devices |
+   | Backhaul bandwidth | Lowest, most data is handled locally | Medium, it filters and groups before forwarding |
+   | Privacy | Highest, the data stays local | Medium, the data is gathered at fog nodes |
+   | Main benefit | Ultra low latency decisions at the point of data creation | Filtering, grouping and regional analysis, which cuts latency and cloud load |
 
 ## Virtualization & Resource Allocation (1)
 
