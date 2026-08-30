@@ -776,67 +776,92 @@
    Answer:
 
    Reinforcement Learning (RL)
-   - Learning mechanism: an agent takes an action inside an environment. It gets a reward or a penalty. It then updates its policy so that the total future reward becomes highest.
-   - Data usage: there is no labelled dataset. The agent makes its own experience by trial and error.
-   - Applications: robot navigation, game playing, traffic signal control, automated trading, dynamic pricing.
+   - Learning mechanism: an agent learns by trial and error. It takes an action in an environment, gets a reward or a penalty, and updates its policy so the total future reward becomes highest.
+   - Data usage: there is no labelled dataset. The agent makes its own data by interacting with the environment.
+   - Applications: robotics, game playing AI, industrial process control, traffic signal control, automated trading.
 
    Deep Learning (DL)
-   - Learning mechanism: a neural network with many layers learns the features on its own. Backpropagation adjusts the weights to reduce the loss.
-   - Data usage: needs a very large labelled dataset and heavy computing power, normally a GPU.
+   - Learning mechanism: a neural network with many hidden layers learns the features on its own. Backpropagation adjusts the weights to cut the loss.
+   - Data usage: it needs a very large labelled dataset and heavy computing power, normally a GPU or TPU.
    - Applications: image and face recognition, speech recognition, machine translation, medical image diagnosis, cheque and document reading.
 
    Federated Learning (FL)
-   - Learning mechanism: the model is sent to each device or branch. It is trained locally on local data. Only the model updates, not the data, are sent back to a central server. The server merges all the updates into one global model.
-   - Data usage: the raw data never leaves the device, so privacy is protected. The data sits spread across many places and is often not of the same type everywhere.
-   - Applications: mobile keyboard prediction, healthcare where hospital data cannot be shared, and banking where each branch keeps its customer data local but all of them still help train one shared fraud model.
+   - Learning mechanism: the model is sent to each device or branch. It trains locally on local data. Only the model updates go back to a central server, which merges them into one global model.
+   - Data usage: the raw data never leaves the device, so privacy is protected. The data is spread out, and it is often not of the same kind everywhere.
+   - Applications: mobile keyboard prediction, healthcare where hospital data cannot be shared, and banking where each branch keeps its customer data local but all branches still help train one shared fraud model.
 
    ```mermaid
    flowchart TD
      S[Central Server<br/>global model] -->|send model| D1[Device 1]
      S -->|send model| D2[Device 2]
      S -->|send model| D3[Device 3]
-     D1 -->|send updates only| S
-     D2 -->|send updates only| S
-     D3 -->|send updates only| S
-     D1 -.raw data stays here.- D1
+     D1 -->|send weight updates only| S
+     D2 -->|send weight updates only| S
+     D3 -->|send weight updates only| S
    ```
 
    Key difference in one line: RL learns from reward, DL learns from large labelled data using deep networks, and FL learns across many devices without ever moving the data.
 
 2. **Explain reinforcement learning in the field of Machine Learning?** *[BTCL Assistant Manager (Technical) 2023 compact it 593 (ET: BUET)]*
 
-   Answer: Reinforcement Learning is a machine learning method where an agent learns which action to take by working inside an environment. For each action it gets a reward or a penalty. Its aim is to collect the highest total reward over time.
+   Answer: Reinforcement Learning is a branch of machine learning where an agent learns to take decisions by trial and error, so that its total reward over time becomes highest. It learns by interacting with an environment and getting feedback on its performance.
 
-   Main elements:
-   - Agent: the learner, the one who decides.
-   - Environment: everything around the agent that it interacts with.
+   Key elements:
+   - Agent: the decision maker, the one who acts.
+   - Environment: the world in which the agent works.
    - State: the current situation of the environment.
-   - Action: what the agent can do in that state.
-   - Reward: the number that the environment gives back after an action.
-   - Policy: the strategy that tells which action to take in which state.
+   - Action: the moves the agent can make.
+   - Reward: the feedback from the environment, positive or negative.
+
+   Core components of an RL system:
+   - Policy: it maps a state to an action. It can be a simple rule or a complex computation.
+   - Reward signal: it guides the agent. It represents the goal of the whole problem.
+   - Value function: it judges the long term benefit, not just the reward right now.
+   - Model: it copies the environment, so the agent can predict what an action will do.
+
+   Agent-environment interaction loop:
 
    ```mermaid
    graph LR
        AG[Agent] -->|Action| ENV[Environment]
-       ENV -->|State| AG
+       ENV -->|New State| AG
        ENV -->|Reward| AG
    ```
 
-   Working points:
-   - The agent must balance exploration and exploitation. Exploration means trying new actions. Exploitation means using the best action it already knows.
-   - Common algorithms: Q-Learning, SARSA and Deep Q-Network.
-   - Example: a robot learns to walk. Moving forward gives a positive reward, falling gives a negative reward. After many tries, it learns a stable way to walk.
+   The steps repeat like this:
+   - The agent looks at the current state of the environment.
+   - It picks an action using its policy, and performs it.
+   - The environment gives back a new state and a reward.
+   - The agent updates its policy or value function from that reward.
+   - The loop repeats.
+
+   Exploration and exploitation:
+   - Exploration means trying new actions, to find a better strategy.
+   - Exploitation means using the best action we already know.
+   - The agent must balance the two. Too much exploration wastes time, too much exploitation misses better options.
+
+   Main algorithm, Q-Learning:
+
+   Q(s,a) = Q(s,a) + α[ r + γ · max Q(s',a') − Q(s,a) ]
+
+   Here α is the learning rate and γ discounts the future rewards.
+
+   Other algorithms: SARSA and Deep Q-Network (DQN).
+
+   Applications: robotics and factory automation, game playing AI such as chess and Go, industrial process control, and personalised learning systems.
+
+   Example: a robot learns to walk. Moving forward gives a positive reward, falling gives a negative reward. After many attempts it learns a stable way to walk.
 
 3. **Weak and strong learner ensemble learning in Machine learning.** *[GTCL Assistant Engineer (CSE) 2022 compact it 686 (ET: BUET)]*
 
-   Answer: Ensemble learning means joining several models together, so that the group gives a better result than any single model alone.
+   Answer: Ensemble learning means joining several models together, so the group gives a better result than any single model alone.
 
-   - Weak learner: a model whose accuracy is only a little better than random guessing. Example: a decision stump, which is a decision tree with only one level.
-   - Strong learner: a model with high accuracy. Ensemble methods build a strong learner by combining many weak learners.
+   - Weak learner: a model whose accuracy is only slightly better than random guessing. Example: a decision stump, that is a decision tree with only one level.
+   - Strong learner: a model with high accuracy. Ensemble methods build a strong learner out of many weak learners.
 
    Main ensemble techniques:
 
-   | Technique | How models are trained | What it reduces | Example |
+   | Technique | How the models are trained | What it reduces | Example |
    |---|---|---|---|
    | Bagging | Many models trained in parallel on different random samples, then averaged or voted | Variance | Random Forest |
    | Boosting | Models trained one after another. Each new model focuses on the samples the last one got wrong | Bias | AdaBoost, Gradient Boosting, XGBoost |
@@ -853,7 +878,7 @@
      C --> S[Strong Learner]
    ```
 
-   Why it works: each weak learner makes different mistakes. When we combine them, the random mistakes cancel each other out. So the accuracy and the stability both go up.
+   Why it works: each weak learner makes different mistakes. When we combine them, the random mistakes cancel each other out. So both accuracy and stability go up.
 
 ## Search Algorithms (Informed vs Uninformed Search) (1)
 
