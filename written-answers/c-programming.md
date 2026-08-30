@@ -4139,7 +4139,26 @@ int main() {
 
     Three ways of expressing an algorithm:
     - Pseudocode: a structured description in English like words. It is close to code, but not tied to any one language.
-    - Flowchart: a diagram using standard symbols such as oval for start and end, parallelogram for input and output, rectangle for process and diamond for decision.
+    - Flowchart: a picture of the algorithm, drawn with standard symbols and arrows.
+
+    Standard flowchart symbols:
+
+    | Symbol | Shape | Purpose |
+    |---|---|---|
+    | Terminal | Oval | Marks the start and the end of the process |
+    | Input / Output | Parallelogram | Taking input, or showing output |
+    | Process | Rectangle | An action, such as a calculation |
+    | Decision | Diamond | A condition that branches into yes or no |
+    | On-page connector | Small circle | Joins two parts on the same page |
+    | Off-page connector | Pentagon | Joins parts across different pages |
+    | Flow line | Arrow | Shows the direction and order of execution |
+
+    Rules for drawing a flowchart:
+    - Begin with the keyword Start.
+    - End with the keyword End.
+    - Join every symbol with a directional arrow.
+    - Every decision point must branch into two or more different outcomes.
+    - Keep the flow going from top to bottom, or from left to right.
     - Programming language code: we write the algorithm directly in C, Java, Python or another language.
 12. **Three types of control statements and their graphical presentation using flowchart or flow graph.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1037-1038 (ET: BUET)]*
 
