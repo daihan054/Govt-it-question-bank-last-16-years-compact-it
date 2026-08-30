@@ -297,30 +297,30 @@
 
    What cloud computing is:
 
-   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - Cloud computing means we get computing services over the Internet and pay only for what we use. These services are servers, storage, databases, networking, software and analytics. We do not buy or run the physical hardware ourselves.
    - NIST lists five key features: on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
 
    Why it is used:
-   - To avoid the large capital cost and the long lead time of buying and installing physical servers.
-   - To scale capacity up and down quickly with demand, paying only for what is used.
-   - To reach data and applications from anywhere, on any device.
-   - To obtain reliability, backup and disaster recovery that a single organisation could not afford to build.
-   - To hand over patching, hardware maintenance and upgrades to the provider, so the internal team can work on the business instead.
-   - To use advanced services such as analytics and machine learning without building the infrastructure for them.
+   - To avoid the big up front cost and the long wait of buying and installing physical servers.
+   - To raise or lower capacity quickly as demand changes, and pay only for what we use.
+   - To reach our data and applications from anywhere, on any device.
+   - To get reliability, backup and disaster recovery that one organisation could never afford to build alone.
+   - To hand patching, hardware maintenance and upgrades to the provider. Then our own team can work on the business instead.
+   - To use advanced services like analytics and machine learning, without building the infrastructure for them.
 
    Cloud storage vs traditional storage:
 
    | Point | Cloud storage | Traditional, that is local or on-premises storage |
    |---|---|---|
-   | Location | On the provider's servers, reached over the Internet | On the organisation's own disks, servers, NAS or SAN |
-   | Cost model | Operating expense, pay per GB per month | Capital expense, paid up front for the hardware |
-   | Capacity | Practically unlimited, expanded instantly | Fixed by the hardware bought; expansion needs procurement |
+   | Where the data is | On the provider's servers, reached over the Internet | On our own disks, servers, NAS or SAN |
+   | Cost model | Running cost, pay per GB per month | Up front cost, we buy the hardware once |
+   | Capacity | Almost unlimited, grows instantly | Fixed by the hardware we bought. To grow, we must buy more |
    | Access | From anywhere with an Internet connection | Normally only from within the local network |
-   | Maintenance | Handled entirely by the provider | The organisation's own responsibility |
-   | Backup and redundancy | Built in, replicated across zones and regions | Must be designed, bought and operated separately |
-   | Speed | Limited by the Internet link | Very fast, limited only by the local bus or LAN |
+   | Maintenance | Fully done by the provider | Our own job |
+   | Backup and redundancy | Already built in, copied across zones and regions | We must plan, buy and run it ourselves |
+   | Speed | Limited by the Internet line | Very fast, limited only by the local bus or LAN |
    | Availability without network | None | Full |
-   | Security and control | Shared responsibility; data is on someone else's hardware | Complete physical and logical control |
+   | Security and control | Shared responsibility. The data sits on someone else's hardware | Full physical and logical control |
    | Examples | Amazon S3, Google Drive, Dropbox, Azure Blob Storage | Internal hard disk, USB drive, NAS, SAN, tape library |
 2. **What is Cloud Computing? What are its characteristics? Briefly describe the types of cloud computing.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -329,23 +329,23 @@
 
    What cloud computing is:
 
-   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - Cloud computing means we get computing services over the Internet and pay only for what we use. These services are servers, storage, databases, networking, software and analytics. We do not buy or run the physical hardware ourselves.
    - NIST lists five key features: on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
 
    Essential characteristics, as defined by NIST:
-   - On demand self service: the user provisions computing resources automatically through a portal or an API, without any human interaction with the provider.
-   - Broad network access: the service is available over the network and reachable from any standard client, whether a phone, a tablet or a workstation.
-   - Resource pooling: the provider's resources are pooled to serve many customers using a multi-tenant model, with resources assigned and reassigned dynamically according to demand.
-   - Rapid elasticity: capacity can be scaled out and in quickly, and to the customer the available resources appear unlimited.
-   - Measured service: usage is metered and billed, so the customer pays only for what is consumed, which also gives transparency to both sides.
+   - On demand self service: the user takes computing resources automatically, through a portal or an API. No person from the provider is involved.
+   - Broad network access: the service is available over the network. Any normal device can reach it, whether a phone, a tablet or a desktop.
+   - Resource pooling: the provider puts its resources into one pool and serves many customers from it, using a multi-tenant model. Resources are given and taken back as the demand changes.
+   - Rapid elasticity: we can add or remove capacity quickly. To the customer, the resources look unlimited.
+   - Measured service: usage is metered and billed. So the customer pays only for what it uses, and both sides can see exactly what was used.
 
-   Additional practical characteristics: virtualisation, high availability, automation, self healing and geographic distribution.
+   Other practical features: virtualisation, high availability, automation, self healing, and servers spread across the world.
 
    Deployment types:
-   - Public cloud: infrastructure owned by a provider and shared by many customers over the Internet. Cheapest, most scalable, least control. Examples: AWS, Azure, Google Cloud.
-   - Private cloud: infrastructure dedicated to one organisation, either on its own premises or hosted. Highest control, security and compliance, but highest cost.
-   - Hybrid cloud: a combination of public and private, with data and applications moving between them. Sensitive data is kept private while variable workloads burst into the public cloud. This is what most banks use.
-   - Community cloud: shared by several organisations with a common concern, such as a group of government agencies or hospitals, sharing the cost and the compliance framework.
+   - Public cloud: the provider owns the infrastructure, and many customers share it over the Internet. It is the cheapest and the most scalable, but gives the least control. Examples: AWS, Azure, Google Cloud.
+   - Private cloud: the infrastructure belongs to one organisation only, kept either in its own office or at a host. It gives the most control, security and compliance, but it costs the most.
+   - Hybrid cloud: a mix of public and private. Data and applications move between the two. We keep sensitive data private, and push changing workloads into the public cloud. Most banks use this.
+   - Community cloud: several organisations with a common need share it. For example a group of government offices, or a group of hospitals. They share the cost and the compliance rules.
 
    Service types: IaaS, PaaS and SaaS, and now also FaaS or serverless.
 3. **Explain cloud computing and evaluate its advantages and disadvantages.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
@@ -353,115 +353,115 @@
 
    Answer:
 
-   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - Cloud computing means we get computing services over the Internet and pay only for what we use. These services are servers, storage, databases, networking, software and analytics. We do not buy or run the physical hardware ourselves.
    - NIST lists five key features: on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
 
    Advantages:
-   - Low initial cost: no capital expenditure on servers, data centre space, cooling or power; the cost becomes a monthly operating expense.
-   - Scalability and elasticity: resources can be added or removed within minutes to match demand, so a sudden peak is survivable and quiet periods cost nothing extra.
-   - Accessibility: reachable from anywhere with an Internet connection and from any device, which supports remote and distributed work.
-   - Reliability and disaster recovery: providers replicate data across availability zones and regions and offer service level agreements of 99.9 percent or better.
-   - Automatic updates and maintenance: patching, hardware replacement and upgrades are the provider's responsibility.
-   - Speed of deployment: a server that once took weeks to procure is running in minutes.
-   - Collaboration: many users can work on the same document or dataset at the same time.
-   - Access to advanced services such as machine learning, big data analytics and content delivery networks that a small organisation could never build itself.
+   - Low starting cost: we spend nothing up front on servers, data centre space, cooling or power. The cost becomes a monthly running expense.
+   - Scalability and elasticity: we can add or remove resources within minutes to match the demand. So a sudden peak is survivable, and quiet periods cost nothing extra.
+   - Accessibility: we can reach it from anywhere with an Internet connection, on any device. This helps remote and spread out teams.
+   - Reliability and disaster recovery: providers copy the data across availability zones and regions, and promise 99.9 percent uptime or better in the SLA.
+   - Automatic updates and maintenance: patching, hardware replacement and upgrades are all the provider's job.
+   - Fast deployment: a server that once took weeks to buy now runs in minutes.
+   - Teamwork: many users can work on the same document or dataset at the same time.
+   - We get advanced services like machine learning, big data analytics and content delivery networks. A small organisation could never build these itself.
 
    Disadvantages:
-   - Dependence on the Internet: if the connection fails, nothing works, which is a real constraint where bandwidth is expensive or unreliable.
-   - Security and privacy concerns: the data resides on someone else's hardware, so confidentiality depends on the provider's controls and on correct configuration by the customer.
-   - Data sovereignty and legal compliance: many countries, including Bangladesh for banking data, require certain data to remain within the national boundary.
-   - Limited control and customisation, particularly in SaaS, where the customer cannot change how the software behaves.
-   - Vendor lock-in: proprietary services and data transfer charges make later migration costly and difficult.
-   - Long term cost: for a steady workload running continuously, owning the hardware can be cheaper over several years.
-   - Downtime risk: an outage at the provider affects every customer at once and the customer can only wait.
-   - Hidden charges, especially for outbound data transfer, and the need for staff with new skills.
+   - It depends on the Internet. If the connection fails, nothing works. Where bandwidth is costly or unreliable, this is a real problem.
+   - Security and privacy worries: the data sits on someone else's hardware. So privacy depends on the provider's controls, and on the customer setting things up correctly.
+   - Data sovereignty and law: many countries require certain data to stay inside the country. Bangladesh does this for banking data.
+   - Less control and less customisation, especially in SaaS, where the customer cannot change how the software behaves.
+   - Vendor lock-in: the provider's own special services, plus data transfer charges, make it costly and hard to move later.
+   - Long term cost: if a workload runs steadily all the time, buying our own hardware can be cheaper over a few years.
+   - Downtime risk: one outage at the provider hits every customer at once, and the customer can only wait.
+   - Hidden charges, especially for data going out of the cloud. We also need staff with new skills.
 
-   - Evaluation: for a startup or for any workload with variable demand, the advantages are decisive, because the cost and the delay of owning hardware would be prohibitive. For a large organisation with a steady workload and strict data residency rules, such as a central bank, a private or hybrid cloud is the more sensible choice, keeping regulated data in-house while using the public cloud for elastic and non-sensitive work.
+   - Which to choose: for a startup, or for any workload whose demand goes up and down, the advantages clearly win. Owning hardware would cost too much and take too long. But for a large organisation with a steady workload and strict data residency rules, such as a central bank, a private or hybrid cloud is better. It keeps the regulated data in-house, and uses the public cloud for the elastic, non-sensitive work.
 4. **(খ) Cloud computing কী? উহার বৈশিষ্ট্য ও সুবিধা বর্ণনা করুন ।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 616 (ET: N/A)]*
 
    Answer:
 
    What cloud computing is:
-   - Cloud computing is the renting of computing services over the Internet on demand — servers, storage, databases, networking, software and analytics — instead of buying and running one's own physical hardware.
-   - Payment is made only for what is actually used, which is why it is called a pay as you go model.
+   - Cloud computing means we rent computing services over the Internet, on demand. These are servers, storage, databases, networking, software and analytics. We do not buy and run our own physical hardware.
+   - We pay only for what we actually use. That is why it is called a pay as you go model.
 
    Characteristics:
-   - On demand self service: the user obtains resources through a portal or an API without any intervention by the provider's staff.
-   - Broad network access: the service is reachable over the network from any standard device.
-   - Resource pooling: the provider's resources are pooled in a multi-tenant model and reallocated dynamically according to demand.
-   - Rapid elasticity: capacity can be increased or decreased within minutes, and to the customer the available resources appear unlimited.
-   - Measured service: usage is metered and billed accordingly, so it is transparent to both sides.
-   - In addition: virtualisation, high availability, automation and geographic distribution.
+   - On demand self service: the user gets resources through a portal or an API, with no help from the provider's staff.
+   - Broad network access: any normal device can reach the service over the network.
+   - Resource pooling: the provider keeps its resources in one pool, in a multi-tenant model, and moves them around as demand changes.
+   - Rapid elasticity: we can raise or lower capacity within minutes. To the customer, the resources look unlimited.
+   - Measured service: usage is metered and billed by that meter. So both sides can see exactly what was used.
+   - Also: virtualisation, high availability, automation, and servers spread across regions.
 
    Advantages:
-   - Almost no initial investment is required; the cost becomes a monthly operating expense.
-   - Resources can be increased or reduced within minutes according to demand.
-   - The service can be used from anywhere and from any device.
-   - The provider replicates data across several regions, so backup and disaster recovery are built in.
-   - Patching, upgrades and hardware maintenance are the provider's responsibility.
-   - Deployment is rapid; a server runs within minutes.
-   - Many users can work on the same file at the same time.
-   - Advanced services such as machine learning and big data analytics are readily available.
+   - We need almost no money up front. The cost becomes a monthly running expense.
+   - We can raise or lower resources within minutes, as the demand changes.
+   - We can use the service from anywhere, on any device.
+   - The provider copies the data across several regions. So backup and disaster recovery come built in.
+   - Patching, upgrades and hardware maintenance are all the provider's job.
+   - Deployment is fast. A server runs within minutes.
+   - Many users can work on one file at the same time.
+   - Advanced services like machine learning and big data analytics are ready to use.
 
    Disadvantages, which should also be mentioned in the answer:
-   - Complete dependence on the Internet, concerns about security and data sovereignty, limited control, vendor lock-in, and a higher total cost over the long term.
+   - It depends fully on the Internet. There are worries about security and data sovereignty. We get less control, we face vendor lock-in, and the total cost can be higher in the long run.
 5. **What is Cloud Computing? Write its adventages and Disadventages?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
 
    Answer:
 
-   - Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the Internet on a pay as you go basis, instead of buying and running physical hardware.
+   - Cloud computing means we get computing services over the Internet and pay only for what we use. These services are servers, storage, databases, networking, software and analytics. We do not buy or run the physical hardware ourselves.
    - NIST lists five key features: on demand self service, broad network access, resource pooling, rapid elasticity and measured service.
 
    Advantages:
-   - Low initial cost: no capital expenditure on servers, data centre space, cooling or power; the cost becomes a monthly operating expense.
-   - Scalability and elasticity: resources can be added or removed within minutes to match demand, so a sudden peak is survivable and quiet periods cost nothing extra.
-   - Accessibility: reachable from anywhere with an Internet connection and from any device, which supports remote and distributed work.
-   - Reliability and disaster recovery: providers replicate data across availability zones and regions and offer service level agreements of 99.9 percent or better.
-   - Automatic updates and maintenance: patching, hardware replacement and upgrades are the provider's responsibility.
-   - Speed of deployment: a server that once took weeks to procure is running in minutes.
-   - Collaboration: many users can work on the same document or dataset at the same time.
-   - Access to advanced services such as machine learning, big data analytics and content delivery networks that a small organisation could never build itself.
+   - Low starting cost: we spend nothing up front on servers, data centre space, cooling or power. The cost becomes a monthly running expense.
+   - Scalability and elasticity: we can add or remove resources within minutes to match the demand. So a sudden peak is survivable, and quiet periods cost nothing extra.
+   - Accessibility: we can reach it from anywhere with an Internet connection, on any device. This helps remote and spread out teams.
+   - Reliability and disaster recovery: providers copy the data across availability zones and regions, and promise 99.9 percent uptime or better in the SLA.
+   - Automatic updates and maintenance: patching, hardware replacement and upgrades are all the provider's job.
+   - Fast deployment: a server that once took weeks to buy now runs in minutes.
+   - Teamwork: many users can work on the same document or dataset at the same time.
+   - We get advanced services like machine learning, big data analytics and content delivery networks. A small organisation could never build these itself.
 
    Disadvantages:
-   - Dependence on the Internet: if the connection fails, nothing works, which is a real constraint where bandwidth is expensive or unreliable.
-   - Security and privacy concerns: the data resides on someone else's hardware, so confidentiality depends on the provider's controls and on correct configuration by the customer.
-   - Data sovereignty and legal compliance: many countries, including Bangladesh for banking data, require certain data to remain within the national boundary.
-   - Limited control and customisation, particularly in SaaS, where the customer cannot change how the software behaves.
-   - Vendor lock-in: proprietary services and data transfer charges make later migration costly and difficult.
-   - Long term cost: for a steady workload running continuously, owning the hardware can be cheaper over several years.
-   - Downtime risk: an outage at the provider affects every customer at once and the customer can only wait.
-   - Hidden charges, especially for outbound data transfer, and the need for staff with new skills.
+   - It depends on the Internet. If the connection fails, nothing works. Where bandwidth is costly or unreliable, this is a real problem.
+   - Security and privacy worries: the data sits on someone else's hardware. So privacy depends on the provider's controls, and on the customer setting things up correctly.
+   - Data sovereignty and law: many countries require certain data to stay inside the country. Bangladesh does this for banking data.
+   - Less control and less customisation, especially in SaaS, where the customer cannot change how the software behaves.
+   - Vendor lock-in: the provider's own special services, plus data transfer charges, make it costly and hard to move later.
+   - Long term cost: if a workload runs steadily all the time, buying our own hardware can be cheaper over a few years.
+   - Downtime risk: one outage at the provider hits every customer at once, and the customer can only wait.
+   - Hidden charges, especially for data going out of the cloud. We also need staff with new skills.
 6. **Describe the cloud base database briefly.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
 
 
-   Answer: A cloud based database is a database that runs on cloud infrastructure and is accessed over the Internet, with the provider taking responsibility for the underlying servers, storage and, in the managed form, for the database software itself.
+   Answer: A cloud based database is a database that runs on cloud infrastructure, and we reach it over the Internet. The provider looks after the servers and the storage. In the managed form, the provider also looks after the database software itself.
 
    Two forms:
-   - Self managed on IaaS: the customer installs MySQL, PostgreSQL or Oracle on a cloud virtual machine and administers it. Full control, but patching, backup and scaling remain the customer's work.
-   - Managed database as a service, DBaaS: the provider runs the engine as well, and handles provisioning, patching, backup, replication, failover and scaling. Examples: Amazon RDS and Aurora, Azure SQL Database, Google Cloud SQL, MongoDB Atlas, Amazon DynamoDB and Firebase.
+   - Self managed on IaaS: the customer installs MySQL, PostgreSQL or Oracle on a cloud virtual machine and runs it. This gives full control, but patching, backup and scaling stay the customer's work.
+   - Managed database as a service, DBaaS: the provider runs the database engine too. It handles setup, patching, backup, replication, failover and scaling. Examples: Amazon RDS and Aurora, Azure SQL Database, Google Cloud SQL, MongoDB Atlas, Amazon DynamoDB, Firebase.
 
    Characteristics:
-   - Elastic scaling: storage and compute can be increased with a setting change, and read replicas can be added to spread the query load.
-   - High availability: automatic replication to a standby in another availability zone, with automatic failover in seconds.
-   - Automated backup and point in time recovery, typically to any second within a retention window of days or weeks.
-   - Pay per use billing, based on instance size, storage and I/O.
-   - Security: encryption at rest and in transit, IAM based access control, VPC isolation and audit logging.
-   - Both relational and NoSQL engines are offered, as well as data warehouse services such as Amazon Redshift, Google BigQuery and Snowflake.
+   - Elastic scaling: we can raise storage and compute with just a setting change. We can also add read replicas to spread the query load.
+   - High availability: the data is copied automatically to a standby in another availability zone, and failover happens in seconds.
+   - Automatic backup and point in time recovery. We can normally go back to any second within a window of days or weeks.
+   - We pay per use, based on instance size, storage and I/O.
+   - Security: the data is encrypted at rest and while moving. There is IAM based access control, VPC isolation and audit logging.
+   - Both relational and NoSQL engines are offered. There are also data warehouse services like Amazon Redshift, Google BigQuery and Snowflake.
 
    Advantages:
-   - No hardware to buy or maintain, and no database administrator needed for routine work.
-   - Fast provisioning, in minutes rather than weeks.
-   - Built in redundancy and disaster recovery across regions.
-   - Global reach, with replicas placed near the users.
-   - Cost matches usage, so a small application pays very little.
+   - No hardware to buy or maintain. We do not need a database administrator for the routine work.
+   - Fast setup, in minutes instead of weeks.
+   - Redundancy and disaster recovery across regions come built in.
+   - Global reach, because we can put replicas near the users.
+   - The cost follows the usage. So a small application pays very little.
 
    Disadvantages:
-   - Latency depends on the network link, so a chatty application far from the region suffers.
-   - Less control: superuser access, custom extensions and OS level tuning may not be permitted.
-   - Vendor lock-in, particularly with proprietary engines such as Aurora or DynamoDB, and outbound data transfer charges make migration expensive.
-   - Compliance and data residency limits, which matter for banking and government data in Bangladesh.
-   - Cost can rise sharply and unpredictably at large scale.
+   - Delay depends on the network link. An application that talks a lot, and sits far from the region, will be slow.
+   - Less control: we may not be allowed superuser access, custom extensions or OS level tuning.
+   - Vendor lock-in, especially with the provider's own engines like Aurora or DynamoDB. Charges for data going out also make migration costly.
+   - Compliance and data residency limits. These matter a lot for banking and government data in Bangladesh.
+   - At large scale the cost can rise sharply, and in ways we did not expect.
 
 ## Virtualization & Containers (VM vs Container) (6)
 
