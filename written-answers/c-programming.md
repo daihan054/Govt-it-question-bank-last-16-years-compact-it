@@ -2808,7 +2808,7 @@ int main(){
    | Example | Intel Core i7, 8086 | 8051, ATmega328, PIC |
    | Speed | Higher clock speed | Comparatively lower |
 
-   - A microprocessor is the brain of a general purpose computer, while a microcontroller is a complete small computer built for one dedicated job such as a washing machine or a traffic light controller.
+   - A microprocessor is the brain of a general purpose computer. A microcontroller is a complete small computer, built for one fixed job such as a washing machine or a traffic light.
 2. **Write a C program to find the sum of digits of an integer number using "recursion".** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1338 (ET: N/A)]*
 
 
@@ -2831,12 +2831,12 @@ int main(){
    ```
 
    - Base case: when n becomes 0 the recursion stops and returns 0.
-   - Recursive case: the last digit is taken by n % 10 and the rest is passed on as n / 10.
+   - Recursive case: we take the last digit with n % 10 and pass the rest on as n / 10.
    - For 1234 the result is 4 + 3 + 2 + 1 = 10, and the time complexity is O(log n).
 3. **What is recursion?** *[BBA Assistant Programmer 12.07.2025 compact it 1432 (ET: BUET)]*
 
 
-   Answer: Recursion is the technique where a function calls itself, directly or indirectly, to solve a smaller instance of the same problem.
+   Answer: Recursion is a technique where a function calls itself, directly or indirectly, to solve a smaller version of the same problem.
 
    Two parts are always required:
    - Base case: the condition where the function stops calling itself and returns a value. Without it the recursion never ends.
@@ -2850,9 +2850,9 @@ int main(){
    }
    ```
 
-   - Each call is stored in the system stack, so recursion uses O(depth) extra memory.
+   - Every call is kept on the system stack. So recursion uses O(depth) extra memory.
    - Advantage: the code becomes short and natural for problems like tree traversal, Tower of Hanoi and divide and conquer.
-   - Disadvantage: it is slower than a loop due to function call overhead, and a missing base case causes stack overflow.
+   - Disadvantage: it is slower than a loop, because each function call costs time. And if the base case is missing, we get a stack overflow.
 4. **Write recursive way below this program:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 417 (ET: BUET)]*
 ```c
 for(int i=1, i<n; i++)
@@ -2895,7 +2895,7 @@ for(int i=1, i<n; i++)
    }
    ```
 
-   - Each of the three nested loops is replaced by one recursive function, where the loop variable becomes a parameter.
+   - We replace each of the three nested loops with one recursive function. The loop variable becomes a parameter.
    - The loop condition becomes the base case and the increment becomes the argument of the next call.
    - The total work is the same as the original code, that is O(n³).
 5. **Output find out from recursion:** *[Combined Bank Assistant Programmer 09.02.2024 compact it 298 (ET: BIBM)]*
@@ -2932,9 +2932,9 @@ int main() {
    - `fun(3)`: prints 3, x becomes 2, then `--x` makes x = 1 and calls `fun(1)`.
    - `fun(1)`: prints 1, x becomes 0, then `--x` makes x = −1 and calls `fun(-1)`.
    - `fun(-1)`: the base case x < 0 is true, so it returns immediately.
-   - Now the stack unwinds and the second printf of each call runs: `fun(1)` prints −1, `fun(3)` prints 1, and `fun(5)` prints 3.
+   - Now the stack unwinds. The second printf of each call runs: `fun(1)` prints −1, `fun(3)` prints 1, and `fun(5)` prints 3.
 
-   - The key point is that `x--` prints the old value while `--x` changes x before passing it, so x drops by 2 in every call.
+   - Key point: `x--` prints the old value, but `--x` changes x before passing it. So x drops by 2 in every call.
 6. **Find the output of following program:**
 ```c
 int F(n) {
@@ -2958,25 +2958,25 @@ int main() {
    - F(3) = F(1) + F(2) = 1 + 1 = 2
    - F(4) = F(2) + F(3) = 1 + 2 = 3
    - F(5) = F(3) + F(4) = 2 + 3 = 5
-   - So `F(5)` returns 5. The time complexity of this naive recursion is O(2ⁿ), because the same subproblems are recomputed many times.
+   - So `F(5)` returns 5. This plain recursion takes O(2ⁿ) time, because it computes the same subproblems again and again.
 7. **What is function?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
 
-   Answer: A function is a self contained block of code that performs a specific task and can be called from anywhere in the program.
+   Answer: A function is a block of code that does one specific task. We can call it from anywhere in the program.
 
    Parts of a function:
    - Declaration or prototype: tells the compiler the return type, name and parameter types, for example `int add(int, int);`
    - Definition: contains the actual body of the function.
-   - Call: the statement that transfers control to the function, for example `add(5, 3);`
+   - Call: the statement that sends control to the function, for example `add(5, 3);`
 
    Types:
-   - Library functions, already written and available through header files, such as `printf()`, `scanf()` and `sqrt()`.
-   - User defined functions, written by the programmer for a specific need.
+   - Library functions: already written for us, and available through header files. Examples are `printf()`, `scanf()` and `sqrt()`.
+   - User defined functions: written by the programmer for a specific need.
 
    Advantages:
-   - Avoids repetition, since one function can be called many times.
-   - Makes the program modular and easier to read, test and debug.
-   - Allows reuse of the same code in other programs.
+   - It stops repetition, because we can call one function many times.
+   - It makes the program modular, and easier to read, test and debug.
+   - We can reuse the same code in other programs.
 8. **Write a C/C++ program to calculte factorial of N using recursive function.** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
 
 
@@ -3029,8 +3029,8 @@ int main() {
     Answer:
 
     Two basic differences:
-    - Call by Value passes a copy of the argument, so changes inside the function do not affect the original variable. Call by Reference passes the address, so changes do affect the original.
-    - Call by Value needs extra memory for the copy, while Call by Reference works directly on the original memory location and is faster for large data.
+    - Call by Value sends a copy of the argument. So changes inside the function do not touch the original variable. Call by Reference sends the address. So changes do affect the original.
+    - Call by Value needs extra memory for the copy. Call by Reference works straight on the original memory, so it is faster for large data.
 
     Program showing both:
 
@@ -3050,7 +3050,7 @@ int main() {
     }
     ```
 
-    - In C, call by reference is achieved using pointers, since C itself only supports call by value.
+    - In C we do call by reference using pointers, because C itself supports only call by value.
 11. **(b) Write a program in C using recursion to find the factorial of an integer.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
 
 
@@ -3078,11 +3078,11 @@ int main() {
 12. **When a function is called more than one time that is called?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
 
-    Answer: When a function calls itself more than once, or is called repeatedly, it is described as follows.
+    Answer: The name depends on how the function is called.
 
     - If a function calls itself, it is called recursion, and such a function is a recursive function.
     - If the function calls itself more than once in a single call, for example `F(n-1) + F(n-2)`, it is called multiple recursion or tree recursion.
-    - If a function is simply invoked several times from different places in the program, that is called reusability, which is one of the main advantages of using functions.
+    - If we simply call a function several times from different places in the program, that is called reusability. It is one of the main advantages of using functions.
 13. **(e) Write about the syntax of function.** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
 
 
@@ -3121,7 +3121,7 @@ int main() {
     }
     ```
 
-    - `return_type` is the type of value sent back; `void` means nothing is returned.
+    - `return_type` is the type of the value sent back. `void` means nothing is returned.
     - The parameter list may be empty, written as `void`.
 14. **(ক) C প্রোগ্রামিং ল্যাঙ্গুয়েজে user defined function এবং library function এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 600 (ET: N/A)]*
 
@@ -3137,7 +3137,7 @@ int main() {
     | Purpose | Common general tasks | A specific need of that program |
     | Example | `printf()`, `scanf()`, `sqrt()`, `strlen()` | `add()`, `factorial()`, `isPrime()` |
 
-    - Library functions save development time and are already tested, while user defined functions give flexibility for problem specific work.
+    - Library functions save time and are already tested. User defined functions give us freedom for problem specific work.
 15. **(ক) Call by Value এবং Call by Reference এর মধ্যে পার্থক্য কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
 
@@ -3151,11 +3151,11 @@ int main() {
     | In C | Default behaviour | Achieved using pointers |
     | Safety | Safer, no accidental change | Faster for large data but riskier |
 
-    - Example: passing `x` to a function changes nothing outside, but passing `&x` and modifying `*a` changes x in main.
+    - Example: if we pass `x` to a function, nothing changes outside. But if we pass `&x` and change `*a`, then x changes in main too.
 16. **(ঘ) উদাহরণসহ Parameter Passing ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
 
-    Answer: Parameter passing is the mechanism of sending values from the calling function to the called function.
+    Answer: Parameter passing is the way we send values from the calling function to the called function.
 
     Terms:
     - Formal parameters: the variables written in the function definition.
@@ -3168,20 +3168,20 @@ int main() {
     void change(int a) { a = 100; }
     int main() { int x = 5; change(x); printf("%d", x); }   // prints 5
     ```
-    - A copy is sent, so the original x is unaffected.
+    - We send a copy. So the original x does not change.
 
     Call by reference using pointers:
     ```c
     void change(int *a) { *a = 100; }
     int main() { int x = 5; change(&x); printf("%d", x); }  // prints 100
     ```
-    - The address is sent, so the function works directly on the original variable.
+    - We send the address. So the function works straight on the original variable.
 
     - Arrays are always passed by address in C, because the array name itself gives the address of the first element.
 17. **(খ) উদাহরণসহ recursion ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
 
 
-    Answer: Recursion is a technique in which a function calls itself to solve a smaller instance of the same problem, until a base case is reached.
+    Answer: Recursion is a technique where a function calls itself to solve a smaller version of the same problem. It stops when it reaches a base case.
 
     Every recursive function needs two parts:
     - Base case, which stops the recursion.
@@ -3200,7 +3200,7 @@ int main() {
     - fact(0) returns 1, then the stack unwinds: 1 × 1 = 1, 2 × 1 = 2, 3 × 2 = 6, 4 × 6 = 24, 5 × 24 = 120.
     - The final answer is 120.
 
-    - Each pending call is kept on the system stack, so the space complexity is O(n).
+    - Every waiting call sits on the system stack. So the space complexity is O(n).
 18. **(ক) Tower of Hanoi সমস্যাটি সমাধানের জন্যে একটি recursive অ্যালগরিদম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
 
@@ -3255,7 +3255,7 @@ int main() {
     | In C | Default behaviour | Achieved using pointers |
     | Safety | Safer, no accidental change | Faster for large data but riskier |
 
-    - C supports only call by value directly; call by reference is simulated with pointers.
+    - C supports only call by value directly. We copy the effect of call by reference using pointers.
     - C++ supports true call by reference using the `&` symbol in the parameter, for example `void f(int &a)`.
 21. **Write a recursive algorithm to find the factorial of a positive integer from 1 to N.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
@@ -3278,12 +3278,12 @@ int main() {
     }
     ```
 
-    - The recursion continues until n becomes 1, which is the base case.
+    - The recursion goes on until n becomes 1. That is the base case.
     - For N the number of calls is N, so the time complexity is O(N).
 22. **What do you mean by recursion? Calculate factorial function using recursion with C programming code.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
 
-    Answer: Recursion means a function calling itself to solve a smaller version of the same problem, stopping at a base case.
+    Answer: Recursion means a function calls itself to solve a smaller version of the same problem. It stops at a base case.
 
     Factorial using recursion:
 
@@ -3306,7 +3306,7 @@ int main() {
 
     - Working for n = 4: fact(4) = 4 × fact(3) = 4 × 3 × fact(2) = 4 × 3 × 2 × fact(1) = 24.
     - Time complexity O(n) and stack space O(n).
-    - Without the base case the function would call itself forever and cause a stack overflow.
+    - Without the base case, the function would call itself forever and cause a stack overflow.
 23. **Write a program with a recursive function that shows the sum of its digits. For example, input =3426, output will be 3+4+2+6=15.** *[GTCL Assistant Engineer (CSE) 2022 compact it 684 (ET: BUET)]*
 
 
@@ -3329,7 +3329,7 @@ int main() {
     ```
 
     - For input 3426 the calls give 6 + 2 + 4 + 3 = 15.
-    - The base case is n = 0, reached after the last digit is removed.
+    - The base case is n = 0. We reach it after the last digit is removed.
 24. **(a) Write down a recursive function to find out number of digits is an integer number (n). Draw the recursion tree when n= 5396.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 690 (ET: N/A)]*
 
 
@@ -3342,8 +3342,8 @@ int main() {
     }
     ```
 
-    - Base case: when n becomes 0 there are no digits left, so 0 is returned.
-    - Recursive case: one digit is counted and the rest of the number is passed on.
+    - Base case: when n becomes 0, there are no digits left. So we return 0.
+    - Recursive case: we count one digit and pass the rest of the number on.
 
     Recursion tree for n = 5396:
 
@@ -3366,7 +3366,7 @@ int main() {
 25. **(খ) Recursion কি? Recursion পদ্ধতিতে একটি Integer সংখ্যার Factorial নির্ণয়ের জন্য C-Language এ একটি Program লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 767 (ET: N/A)]*
 
 
-    Answer: Recursion means a function calling itself to solve a smaller version of the same problem, stopping at a base case.
+    Answer: Recursion means a function calls itself to solve a smaller version of the same problem. It stops at a base case.
 
     Factorial using recursion:
 
@@ -3389,7 +3389,7 @@ int main() {
 
     - Working for n = 4: fact(4) = 4 × fact(3) = 4 × 3 × fact(2) = 4 × 3 × 2 × fact(1) = 24.
     - Time complexity O(n) and stack space O(n).
-    - Without the base case the function would call itself forever and cause a stack overflow.
+    - Without the base case, the function would call itself forever and cause a stack overflow.
 26. **Given an integer number the following C program finds the sum of the digits of the number using recursion. You need to complete the recursive function in the following program. So that it does the intended task.** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
 ```c
 #include<stdio.h>
@@ -3408,7 +3408,7 @@ int main() {
 ```
 
 
-    Answer: The program has a naming mistake. The function is defined as `someDigits` but called as `sumDigits`, so the code will not compile.
+    Answer: The program has a naming mistake. The function is defined as `someDigits`, but it is called as `sumDigits`. So the code will not compile.
 
     Corrected program:
 
@@ -3430,7 +3430,7 @@ int main() {
     }
     ```
 
-    - The only change needed is renaming the function definition from `someDigits` to `sumDigits` so that the definition and the call match.
+    - The only change needed is to rename the function definition from `someDigits` to `sumDigits`, so that the definition and the call match.
     - The recursive logic itself is already correct: it takes the last digit with `num % 10` and passes the remaining number as `num / 10`.
     - Base case `num == 0` stops the recursion.
 27. **(b) Write down a pseudocode/program to generate all possible permutation for a given word.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 793 (ET: N/A)]*
@@ -3466,8 +3466,8 @@ int main() {
     }
     ```
 
-    - Each character is fixed at the current position in turn, then the rest of the string is permuted recursively.
-    - The second swap restores the original order, which is the backtracking step.
+    - We fix each character at the current position in turn. Then we permute the rest of the string by recursion.
+    - The second swap puts the original order back. This is the backtracking step.
     - For "ABC" the output is ABC, ACB, BAC, BCA, CBA, CAB.
     - Time complexity O(n × n!), because there are n! permutations and printing each costs O(n).
 28. **Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
@@ -3513,8 +3513,8 @@ int main() {
 
     Comparison:
     - Both give the same result and both run in O(n) time.
-    - The recursive version uses O(n) stack space, while the iterative version uses O(1).
-    - The recursive code is shorter and closer to the mathematical definition, but the iterative code is faster and safe from stack overflow for large n.
+    - The recursive version uses O(n) stack space. The iterative version uses only O(1).
+    - The recursive code is shorter and closer to the maths definition. But the iterative code is faster, and it is safe from stack overflow for large n.
 30. **১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 946 (ET: BUET)]*
 
 
@@ -3530,13 +3530,13 @@ int main() {
     print("Sum =", total(nums))
     ```
 
-    - Base case: when the index reaches the end of the list, 0 is returned.
-    - Recursive case: the current element is added to the sum of the remaining elements.
+    - Base case: when the index reaches the end of the list, we return 0.
+    - Recursive case: we add the current element to the sum of the remaining elements.
     - Time complexity O(n) and recursion depth O(n), which is 10 here.
 31. **(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।** *[BPSC Assistant Network Engineer 2020 compact it 954 (ET: N/A)]*
 
 
-    Answer: Recursion is the process where a function calls itself to solve a smaller instance of the same problem, and it must always have a base case that stops the calls.
+    Answer: Recursion is the process where a function calls itself to solve a smaller version of the same problem. It must always have a base case that stops the calls.
 
     Simple C code:
 
@@ -3579,8 +3579,8 @@ int main() {
     }
     ```
 
-    - Base case: factorial of 0 and 1 is 1, which stops the recursion.
-    - Recursive case: n! = n × (n−1)!, so the problem reduces by one each time.
+    - Base case: factorial of 0 and 1 is 1. This stops the recursion.
+    - Recursive case: n! = n × (n−1)!. So the problem gets smaller by one each time.
     - For n = 5 the calls unwind as 1, 2, 6, 24, 120.
     - Time complexity O(n) and stack space O(n).
 
