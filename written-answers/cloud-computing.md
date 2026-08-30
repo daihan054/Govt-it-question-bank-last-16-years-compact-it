@@ -486,24 +486,31 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
    The two approaches compared:
 
-   | Point | Approach A, Virtual Machines | Approach B, Containers |
+   Definitions:
+   - A virtual machine is software that lets us install other software inside it, and control it virtually. A hypervisor sits between the hardware and the VM.
+   - A container lets the different parts of an application run independently. It runs on top of a host operating system, and does not need its own operating system.
+   - Hypervisor: it sits between the hardware and the VMs, and shares out the physical resources among them. Examples: KVM, Xen and VMware are Type 1; VirtualBox is Type 2.
+   - Container engine: it manages containers that all share one host operating system. Examples: Docker, RancherOS, PhotonOS.
+
+   | Aspect | Approach A, Virtual Machines | Approach B, Containers |
    |---|---|---|
-   | What is virtualised | The whole hardware, so each VM runs a complete guest OS | The operating system, so all containers share the host kernel |
-   | Size | Gigabytes per VM | Megabytes per container |
-   | Boot time | Minutes | Seconds or less |
-   | Overhead | High: each VM needs its own OS, kernel and memory | Very low: only the application and its libraries |
-   | Density on one server | Few, perhaps 4 to 10 | Many, dozens to hundreds |
-   | Isolation | Strong, hardware level, enforced by the hypervisor | Weaker, process level, shared kernel |
-   | Security blast radius | A kernel compromise affects only that VM | A host kernel exploit can affect every container |
-   | Different operating systems | Yes, Windows and Linux can run side by side | No, all containers share the host kernel |
-   | Portability | Heavy image, but fully self contained | Very light and portable, runs identically anywhere |
-   | Typical management | VMware vSphere, KVM, Hyper-V | Docker, Kubernetes, Podman |
+   | Core function | Installs software inside an isolated software environment | Lets the parts of an application run independently |
+   | Operating system | Each VM runs its own guest OS | All containers share one host OS |
+   | Virtualisation type | Hardware virtualisation | OS or software virtualisation |
+   | Size | Large, in gigabytes | Light, in hundreds of megabytes |
+   | Startup time | Longer, in minutes | Much faster, in seconds |
+   | Memory usage | Uses a lot of system memory | Needs very little memory |
+   | Security | More secure, because there is no shared underlying kernel | Less secure, because it is software based with shared memory |
+   | Different operating systems | Yes. Windows and Linux can run side by side | No. All containers share the host kernel |
+   | Agility and portability | Lower | Higher |
+   | Use case | When an application needs all the OS resources | When we want to fit the most applications onto the fewest servers |
+   | Typical tools | VMware vSphere, KVM, Hyper-V | Docker, Kubernetes, Podman |
 
    Which one and why, for a submarine cable landing station:
    - The recommendation is a hybrid, and if a single choice is demanded it is Virtual Machines for this specific environment.
-   - Reason 1, criticality and isolation: a cable landing station carries the international connectivity of a whole country. DNS and network management are the most security sensitive services on the site. Hardware level isolation by a hypervisor is far stronger than shared kernel isolation, so a compromise of the web service cannot reach the DNS or the network management system.
+   - Reason 1, criticality and isolation: a cable landing station carries the international connectivity of a whole country. DNS and network management are the most security sensitive services on the site. A VM is more secure, because it does not share the underlying kernel with the others. A container is less secure, because it is software based and shares memory. So a break-in through the web service cannot reach the DNS or the network management system if we use VMs.
    - Reason 2, regulatory and audit requirements: national critical infrastructure is normally required to demonstrate strong workload separation, and VMs satisfy an auditor more readily than containers on a shared kernel.
-   - Reason 3, mixed operating systems: network management and monitoring products in this sector are often supplied as appliances or as Windows software, which containers on a Linux host cannot run.
+   - Reason 3, mixed operating systems: network management and monitoring products in this sector often come as appliances, or as Windows software. A VM can run its own guest OS, so Windows and Linux can sit side by side. Containers share the host kernel, so they cannot do this.
    - Reason 4, stability over density: only five services are involved, so the density advantage of containers is not needed, and the resource overhead of five VMs on one server is entirely affordable.
    - Where containers are the better answer: for the monitoring and web services, which change often and must be redeployed frequently, containers give much faster deployment, easy rollback and consistent environments.
    - Practical design actually used in industry: run VMs as the base isolation layer, one VM per security zone, and run containers inside those VMs for the stateless services. This gives the strong isolation of virtualisation and the agility of containers at the same time.
