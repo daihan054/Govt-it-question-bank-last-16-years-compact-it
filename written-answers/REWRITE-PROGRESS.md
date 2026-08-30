@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 202/206 sections**
+**Rewritten: 203/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -171,7 +171,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [x] electrical-and-electronics.md — Electrical Circuits & Protection Devices (12)
 - [x] electrical-and-electronics.md — Transistors (BJT & FET) (9)
 - [x] electrical-and-electronics.md — Semiconductor Devices & Diodes (4)
-- [ ] electrical-and-electronics.md — Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)
+- [x] electrical-and-electronics.md — Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)
 - [ ] electrical-and-electronics.md — AC Circuits & Power Analysis (2)
 - [ ] electrical-and-electronics.md — Operational Amplifiers (Op-Amp) (2)
 - [ ] electrical-and-electronics.md — Sensor Circuits & Automated Control Systems (2)
