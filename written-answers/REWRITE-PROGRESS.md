@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 185/206 sections**
+**Rewritten: 186/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -65,7 +65,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 ## computer-fundamental.md — 10 sections
 - [x] computer-fundamental.md — Computer Fundamentals & Acronyms (49)
 - [x] computer-fundamental.md — Hardware Components & BIOS (CMOS Battery) (21)
-- [ ] computer-fundamental.md — ICT in Society & Governance (20)
+- [x] computer-fundamental.md — ICT in Society & Governance (20)
 - [ ] computer-fundamental.md — Software Types & Classification (12)
 - [ ] computer-fundamental.md — Blockchain & Emerging Technologies (7)
 - [ ] computer-fundamental.md — Data Center Infrastructure & Power Management (7)
