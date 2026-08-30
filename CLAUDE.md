@@ -333,8 +333,20 @@ PROCESS
 ## rewrite prompt
 
 TASK
-`written-answers/` folder-er shob IT answer ABAR LIKHO — khub shohoj English-e.
-Content thik thakbe, shudhu bhasha shohoj hobe.
+`written-answers/` folder-er shob IT answer COMPLETE REWRITE koro — khub shohoj English-e.
+
+EI TA SHOB CHEYE JORURI:
+- Eta shudhu bhasha shohoj kora NA. Eta COMPLETE REWRITE.
+- Protita question-er jonno AGE geeksforgeeks.org poro, sekhan theke SHIKHO,
+  tarpor sei shikha theke uttor-ta NOTUN kore likho.
+- Purono answer-ta dekhe shudhu shobdo bodlabe na. Purono answer bhule jao,
+  GfG theke shikhe notun kore lekho.
+- Decision order:
+      GeeksforGeeks-e ache?          -> sekhan theke shikhe likho
+      GfG-te nai ba bhalo na?        -> tutorialspoint.com theke shikhe likho
+      dutotei nai?                   -> nijer gyan theke likho
+- Structure, explanation-er dhoron, example, table layout — shob GfG-r moto
+  hobe. Kintu lekha nijer bhashay, hubhu copy na.
 
 ═══════════════════════════════════════════════════════════════════
 CURRENT STATE
