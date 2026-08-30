@@ -10127,27 +10127,38 @@ SELECT count (*) FROM (
 1. **What are the different types of join in SQL?** *[DESCO Assistant Engineer 20.05.2023 compact it 580 (ET: DESCO)]*
 
 
-   Answer: A join combines rows from two or more tables on a related column.
+   Answer: A SQL join combines data from two or more tables using a related column. It lets us pull connected data together, match records, and build a meaningful result set.
+
+   General syntax:
+
+   ```sql
+   SELECT table1.column1, table1.column2, table2.column1
+   FROM table1
+   INNER JOIN table2
+   ON table1.matching_column = table2.matching_column;
+   ```
 
    Types of join:
 
-   - INNER JOIN: returns only the rows that have a match in both tables. Rows without a match on either side are discarded. This is the default when `JOIN` is written without a qualifier.
+   Types of join:
+
+   - INNER JOIN: returns only the rows where a matching value exists in both tables. Rows without a match on either side are left out. We can write just `JOIN` instead of `INNER JOIN`; they mean the same thing.
 
    ```sql
    SELECT e.emp_name, d.dept_name
    FROM   Employee e INNER JOIN Department d ON e.dept_id = d.dept_id;
    ```
 
-   - LEFT OUTER JOIN: returns every row of the left table, with NULLs in the right hand columns where there is no match. Used to answer "show me all of A, with B where it exists", and with `WHERE right.key IS NULL` to find rows of A having no B at all.
+   - LEFT JOIN: returns all the rows of the left table, plus the matching rows of the right table. Where there is no match, the right hand columns come back as NULL. `LEFT OUTER JOIN` is the same thing. It answers "show me all of A, with B where it exists". With `WHERE right.key IS NULL` it finds the rows of A that have no B at all.
 
    ```sql
    SELECT d.dept_name, e.emp_name
    FROM   Department d LEFT JOIN Employee e ON d.dept_id = e.dept_id;
    ```
 
-   - RIGHT OUTER JOIN: the mirror image, returning every row of the right table.
+   - RIGHT JOIN: the mirror image. It returns all the rows of the right table, plus the matching rows of the left table, with NULL where there is no match. `RIGHT OUTER JOIN` is the same thing.
 
-   - FULL OUTER JOIN: returns every row of both tables, matched where possible and with NULLs elsewhere. MySQL does not support it directly; it is written as a UNION of the left and right joins.
+   - FULL JOIN: it combines the results of LEFT JOIN and RIGHT JOIN. It returns all the rows of both tables, matched where possible, and NULL where there is no match on either side. MySQL does not support FULL OUTER JOIN directly. There we write it as a UNION of a LEFT JOIN and a RIGHT JOIN.
 
    - CROSS JOIN: the Cartesian product, pairing every row of one table with every row of the other. m rows and n rows give m × n. It is occasionally useful for generating combinations, and it is otherwise almost always a mistake, produced by omitting the ON clause.
 
@@ -10158,7 +10169,7 @@ SELECT count (*) FROM (
    FROM   Employee e LEFT JOIN Employee m ON e.manager_id = m.emp_id;
    ```
 
-   - NATURAL JOIN: joins automatically on all columns having the same name in both tables. It should be avoided in production code, because adding a column with a coincidentally matching name silently changes the meaning of every such query.
+   - NATURAL JOIN: an INNER JOIN that automatically joins on the columns having the same name and the same data type in both tables. The common column appears only once in the result. It should be avoided in production code, because adding a column whose name happens to match will silently change the meaning of every such query.
 
    - EQUI JOIN and NON-EQUI JOIN: a join whose condition uses `=` is an equi join; one using `<`, `>` or `BETWEEN` is a non-equi join, used for example to place a salary into a grade band.
 
