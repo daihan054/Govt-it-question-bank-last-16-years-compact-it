@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 119/206 sections**
+**Rewritten: 120/206 sections**
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -93,7 +93,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 ## computer-networks.md — 33 sections
 - [x] computer-networks.md — Subnetting & IP Addressing (95)
 - [x] computer-networks.md — OSI & TCP/IP Reference Model (43)
-- [ ] computer-networks.md — Networking Fundamentals & Terminology (23)
+- [x] computer-networks.md — Networking Fundamentals & Terminology (23)
 - [x] computer-networks.md — Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (19)
 - [ ] computer-networks.md — Multiplexing & Bandwidth (18)
 - [x] computer-networks.md — Routing Protocols & Route Configuration (18)
