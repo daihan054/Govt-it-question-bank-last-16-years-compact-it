@@ -6386,7 +6386,17 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
     - Example, data 1000100 with even parity: it has two 1s, already even, so the parity bit is 0 and the transmitted unit is 10001000.
     - Strengths: extremely simple and cheap, needs only one bit.
     - Weakness: it detects only an odd number of bit errors. If two bits flip, the parity is unchanged and the error passes undetected. It cannot correct anything.
-    - Two dimensional parity, that is a parity bit per row and per column, improves this and can even correct a single bit error, but CRC is used instead wherever the error rate matters.
+    - Two dimensional parity: we arrange the data as a matrix and compute a parity bit for every row and every column. It can detect and even correct any single bit error, because the wrong row and the wrong column together point to the exact bit. It also catches many multi-bit errors. But some patterns still slip through, and a corrupted parity bit itself weakens it.
+
+    Two types of error that can happen:
+    - Single bit error: only one bit of the data unit is changed during transmission.
+    - Burst error: two or more consecutive bits of the data unit are corrupted.
+
+    The four error detection techniques compared:
+    - Simple parity check: adds one bit. Detects all single bit errors, and is very easy to build in hardware or software. But it fails when an even number of bits are corrupted, so it is unreliable on a noisy channel.
+    - Two dimensional parity: parity per row and per column. Detects and corrects a single bit error, and catches many multi-bit errors.
+    - Checksum: splits the data into k segments of m bits, adds them with one's complement arithmetic, and sends the one's complement of the sum. The receiver adds everything including the checksum; if the result is all 1s the data is clean. Used in IP, TCP and UDP. Weakness: if two errors cancel each other during the addition, it misses them.
+    - CRC: uses binary division instead of addition. Very effective against single bit, multi-bit and burst errors. Used in Ethernet, HDLC and USB. It only detects; it cannot correct, and it costs more processing than the simpler methods.
 
     Bit strings of "Delta" in 7 bit ASCII:
 
