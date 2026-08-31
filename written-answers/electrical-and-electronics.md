@@ -433,124 +433,115 @@
 1. Explain the working principle of a PN junction diode. Draw its symbol and describe the difference between forward bias and reverse bias. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
 
-   Answer: A PN junction diode is formed when a p-type semiconductor (rich in holes) is joined to an n-type semiconductor (rich in electrons) in a single crystal. It conducts current in one direction only.
+   Answer: A PN junction diode is formed by joining a p-type semiconductor and an n-type semiconductor. It lets current pass in one direction only.
 
-   Formation of the junction:
-   - At the moment of joining, electrons from the n-side diffuse into the p-side and holes from the p-side diffuse into the n-side, and they recombine near the junction.
-   - This leaves behind fixed positive ions on the n-side and fixed negative ions on the p-side, forming a region with no free carriers called the depletion region.
-   - The fixed charges set up an internal electric field, and the potential across it is called the barrier potential: about 0.7 V for silicon and 0.3 V for germanium. This field stops further diffusion, so the junction reaches equilibrium.
+   Working principle:
+   - The p-side has holes as its majority carriers. The n-side has electrons.
+   - As soon as the two are joined, electrons near the junction cross into the p-side and holes cross into the n-side, and they recombine.
+   - This leaves a thin region near the junction with no free carriers, only fixed charged ions. It is called the depletion region.
+   - The fixed ions set up an internal electric field that opposes any further crossing. The voltage across this region is the barrier potential: about 0.7 V for silicon and about 0.3 V for germanium.
 
    Symbol:
 
    ```
         Anode (P)          Cathode (N)
            ----|>|----
-              A     K
+                bar
    ```
 
-   The triangle points in the direction of conventional current flow, and the bar is the cathode (marked with a band on the body of the component).
+   The triangle points in the direction of conventional current flow. The bar is the cathode, and on a real diode it is marked with a painted ring.
+
+   Forward bias against reverse bias:
 
    | Point | Forward bias | Reverse bias |
    |---|---|---|
-   | Connection | P side to positive terminal, N side to negative terminal | P side to negative terminal, N side to positive terminal |
-   | Effect on depletion region | Narrows | Widens |
-   | Effect on barrier potential | Reduced | Increased |
-   | Junction resistance | Very low, a few ohm | Very high, in mega ohm |
-   | Current | Large, due to majority carriers; typically mA to A | Very small reverse saturation current, in nA (Si) or microampere (Ge), due to minority carriers |
-   | Voltage across the diode | Almost constant at 0.7 V (Si) once conducting | Equal to the applied reverse voltage |
-   | State | ON, acts as a closed switch | OFF, acts as an open switch |
-   | Effect of temperature | Barrier voltage falls about 2 mV per degree C | Reverse current roughly doubles every 10 degree C |
+   | Connection | Positive terminal to P, negative to N | Positive terminal to N, negative to P |
+   | Effect on the depletion region | It becomes narrower | It becomes wider |
+   | Barrier potential | Reduced, so carriers can cross | Increased, so carriers cannot cross |
+   | Current | Large, in milliamperes. It flows freely once the applied voltage exceeds about 0.7 V | Almost zero. Only a tiny leakage current in microamperes, from the minority carriers |
+   | Resistance offered | Very low, a few ohms | Very high, in megohms |
+   | Behaviour | Acts like a closed switch | Acts like an open switch |
 
-   Forward bias in detail: once the applied voltage exceeds the barrier potential (the knee or cut-in voltage), the external field overcomes the internal field, majority carriers cross the junction and a large current flows. Beyond the knee the current rises almost exponentially, following the diode equation I = Is.(e^(V/nVT) - 1), so a series resistor must limit it.
+   Breakdown: if the reverse voltage is raised too far, the diode reaches its breakdown voltage and a large reverse current suddenly flows. An ordinary diode is destroyed by this. A Zener diode is built to work there safely, and that is how it regulates voltage.
 
-   Reverse bias in detail: the applied field adds to the internal field, so the depletion region widens and only the tiny minority-carrier current flows. If the reverse voltage is raised beyond the breakdown voltage, avalanche or Zener breakdown occurs and the current rises sharply. An ordinary diode is destroyed by this, but a Zener diode is designed to operate there and is used as a voltage regulator.
-
-   Main applications: rectification, clipping and clamping, freewheeling protection across a relay coil, and demodulation.
 2. **Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
 
-   Answer: In a simple series circuit of a source, a diode and a resistor, the diode drops a fixed forward voltage and the rest of the source voltage appears across the resistor.
+   Answer:
 
-   Given:
-   - R = 10 k ohm = 10,000 ohm
-   - Forward voltage drop of the diode, VD = 0.75 V
-   - The source voltage is not stated, so a standard laboratory supply is assumed: VS = 5 V
+   Given: a diode in series with a 10 kΩ resistor. The forward voltage drop across the diode is 0.75 V.
 
-   Step 1 - apply Kirchhoff's voltage law around the loop:
-   VS = VD + VR
+   Method: in a series circuit the same current flows through every element. The diode simply drops a fixed 0.75 V, so the rest of the source voltage appears across the resistor.
 
-   Step 2 - find the voltage across the resistor:
-   - VR = VS - VD
-   - VR = 5 - 0.75 = 4.25 V
+   Formula:
 
-   Step 3 - apply Ohm's law:
-   - I = VR / R
-   - I = 4.25 / 10,000
-   - I = 0.425 x 10^-3 A
+   I = (V_source − V_diode) / R
 
-   Final answer: I = 0.425 mA (with the assumed 5 V supply).
+   Taking a 5 V source, which is the standard value for this problem:
 
-   General formula for any supply voltage:
-   I = (VS - 0.75) / 10 k ohm
+   I = (5 − 0.75) / 10,000
+   = 4.25 / 10,000
+   = 0.000425 A
 
-   For example, with VS = 12 V the current would be (12 - 0.75)/10,000 = 1.125 mA.
+   Final answer: I = 0.425 mA
 
-   Note: if the diode were reverse biased, it would block and the current would be only the reverse saturation current, which is a few nanoamperes and is treated as zero.
+   If the source were 10 V instead, the same method gives I = (10 − 0.75)/10,000 = 0.925 mA.
+
+   Note: the source voltage was not printed in the collected question, so 5 V is assumed. The method does not change; only the number does. The key idea to show is that a forward biased diode is treated as a constant 0.75 V drop, not as a resistance. <!-- verify -->
+
 3. **What is Diode and Inductor?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
 
    Answer:
 
    Diode:
-   - A two-terminal semiconductor device formed by a PN junction, having an anode (P side) and a cathode (N side).
-   - It conducts current in one direction only: it conducts when forward biased (anode positive, drop about 0.7 V for silicon) and blocks when reverse biased.
-   - It is a non-linear and unidirectional device, so it acts as an electronic one-way valve or switch.
-   - Uses: rectification (AC to DC), clipping and clamping of waveforms, freewheeling protection across inductive loads, voltage regulation (Zener diode), light emission (LED), and light detection (photodiode).
+   - A diode is a two terminal semiconductor device, made from a p-n junction, that allows current to flow in one direction only.
+   - Its two terminals are the anode, on the p-side, and the cathode, on the n-side.
+   - In forward bias, that is anode positive, it conducts once the voltage passes about 0.7 V for silicon. In reverse bias it blocks, passing only a tiny leakage current.
+   - Main use: rectification, that is turning AC into DC.
+   - Types: rectifier diode, Zener diode for voltage regulation, LED, photodiode, and Schottky diode for fast switching.
 
    Inductor:
-   - A passive two-terminal component made of a coil of wire, often wound on an iron or ferrite core.
-   - It stores energy in a magnetic field when current flows through it. Its property is called inductance L, measured in henry (H).
-   - Its defining relation is v = L.(di/dt), so it opposes any change of current through it. By Lenz's law it induces a back EMF that resists the change.
-   - Energy stored: W = (1/2).L.I^2
-   - Its reactance rises with frequency: XL = 2.pi.f.L. So it passes DC easily and blocks high frequency, which makes it act as a low-pass element.
-   - The current through an inductor cannot change instantly, which is why a spark appears when an inductive circuit is broken.
-   - Uses: filters and chokes in power supplies, tuned LC circuits in radios, transformers, relay and motor coils, and energy storage in switching regulators.
+   - An inductor is a passive two terminal component, usually a coil of wire, that stores energy in a magnetic field when current flows through it.
+   - Its property is inductance, measured in henry (H).
+   - Its defining equation is V = L (di/dt). So the voltage across it depends on how fast the current is changing, not on the current itself.
+   - It opposes any change in current. So it passes DC easily, because DC does not change, but it opposes AC. Its reactance is X_L = 2πfL, which rises with frequency.
+   - Energy stored: E = ½LI².
+   - Uses: filters, tuned circuits, transformers, chokes and relays.
 
-   Key contrast: a diode is an active, non-linear semiconductor device that controls the direction of current, while an inductor is a passive, linear component that stores magnetic energy and opposes change of current.
+   The essential difference: a diode is an active, non-linear device that controls the direction of current. An inductor is a passive, linear device that stores energy and opposes change in current.
+
 4. **How does LED differ from Laser Diod? What are the function of Diode?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
 
 
    Answer:
 
-   Difference between an LED and a Laser diode:
+   How an LED differs from a laser diode:
 
-   | Point | LED (Light Emitting Diode) | Laser Diode |
+   | Point | LED, Light Emitting Diode | Laser Diode |
    |---|---|---|
-   | Emission process | Spontaneous emission | Stimulated emission inside an optical cavity |
-   | Light coherence | Incoherent, random phase | Coherent, all photons in phase |
-   | Spectral width | Wide, about 30 to 50 nm | Narrow, about 1 to 3 nm |
-   | Beam divergence | Wide, about 60 degree, spreads quickly | Very narrow, about 5 to 10 degree |
-   | Threshold current | None, emits light from a very low current | Emits laser light only above a threshold current |
-   | Output power | Low, microwatt to a few mW | High, mW to watt |
-   | Modulation speed | Slower, up to about 200 Mbps | Fast, several Gbps and above |
-   | Coupling into fibre | Poor, suits multimode fibre only | Efficient, suits single-mode fibre |
-   | Transmission distance | Short, up to about 2 km | Long, tens to hundreds of km |
-   | Temperature sensitivity | Low | High, needs a cooler and a monitor photodiode |
-   | Cost and lifetime | Cheap, long life | Expensive, shorter life |
-   | Typical use | Indicators, displays, short-haul fibre links, remote controls | Long-haul fibre optic communication, optical drives, barcode scanners, surgery, printing |
+   | How light is produced | Spontaneous emission. The electrons fall back and emit photons at random | Stimulated emission. One photon triggers others, so the photons are all identical |
+   | Coherence | Incoherent. The photons are out of step with each other | Coherent. All the photons are in step, in phase |
+   | Spectral width | Wide, about 25 to 100 nm, so the colour is not pure | Very narrow, about 1 to 5 nm, so it is nearly a single wavelength |
+   | Beam | Spreads out widely, about 60 degrees | A very narrow, tightly focused beam, about 5 to 10 degrees |
+   | Optical cavity | None | It has a resonant cavity, with mirrors at the two ends |
+   | Threshold current | None. It emits light as soon as any current flows | It has a threshold. Below that current it behaves like an LED, and only above it does it lase |
+   | Output power | Low, in milliwatts | High, up to watts |
+   | Modulation speed | Slower, up to a few hundred MHz | Much faster, in GHz |
+   | Cost and lifetime | Cheap, long life, and not sensitive to temperature | Expensive, shorter life, and it needs temperature control |
+   | Use in fibre optics | Multimode fibre, short distance | Single mode fibre, long distance |
+   | Common uses | Indicators, displays, lighting, TV remotes | Optical fibre communication, CD and DVD drives, barcode scanners, surgery |
 
    Functions of a diode:
-   - Rectification: converts AC into DC in half-wave, full-wave and bridge rectifiers.
-   - Switching: turns a circuit path on or off, used in logic circuits and in switching power supplies.
-   - Clipping: limits a waveform to a fixed level, used to protect an input from overvoltage.
-   - Clamping: shifts the DC level of a waveform without changing its shape.
-   - Freewheeling (flyback) protection: placed across a relay or motor coil to absorb the back EMF when the coil is switched off.
-   - Voltage regulation: a Zener diode operated in reverse breakdown holds a constant output voltage.
-   - Reverse polarity protection: blocks current if the supply is connected the wrong way round.
-   - Demodulation: recovers the audio signal from an AM radio carrier.
-   - Light emission and detection: LED, laser diode, photodiode and solar cell.
-   - Voltage multiplication: diode and capacitor ladders produce a high DC voltage from a low AC voltage.
-   - Variable capacitance: a varactor diode is used to tune an oscillator.
+   - Rectification: converting AC to DC. This is the most common use, in half wave, full wave and bridge rectifiers.
+   - Voltage regulation: a Zener diode holds a constant voltage across a load, working in its reverse breakdown region.
+   - Clipping: cutting off part of a waveform, to protect a circuit from an over-voltage.
+   - Clamping: shifting a waveform up or down to a required DC level.
+   - Switching: turning a circuit on and off very fast in digital and logic circuits.
+   - Light emission: an LED converts current into light.
+   - Light detection: a photodiode converts light into current, used in solar cells and optical receivers.
+   - Protection: a freewheeling diode across a relay coil safely absorbs the reverse voltage spike when the coil is switched off.
+   - Frequency mixing and demodulation in radio receivers.
 
 ## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)
 
@@ -795,81 +786,94 @@
 1. **Assuming Ideal Op Amps, Find The Voltage Gain V_o/V_i of the following circuit.** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
 
 
-   Answer: An ideal op-amp is analysed using two rules, and the gain follows directly from them.
+   Answer:
 
-   Ideal op-amp assumptions:
-   - Infinite open-loop gain, so with negative feedback the two input terminals are at the same voltage. This is the virtual short rule: V+ = V-.
-   - Infinite input impedance, so no current enters either input terminal. This is the virtual open rule: I+ = I- = 0.
-   - Zero output impedance, infinite bandwidth and infinite CMRR.
+   The circuit diagram was not reproduced in the collected question, so the standard op-amp gain results are derived and given. The two ideal op-amp rules are used throughout.
 
-   The exact circuit is not reproduced here, so the gain is derived for the two standard connections that the question refers to.
+   The two ideal op-amp assumptions:
+   - Infinite open loop gain, so the two input terminals sit at the same voltage. This is the virtual short.
+   - Infinite input resistance, so no current enters either input terminal.
 
-   Inverting amplifier (input applied through R1 to the minus terminal, feedback resistor Rf, plus terminal grounded):
-   - Since V+ = 0 (grounded), the virtual short gives V- = 0, which is called a virtual ground.
-   - Current through the input resistor: I1 = (Vi - 0)/R1 = Vi/R1
-   - No current enters the op-amp input, so the same current flows through Rf: I1 = (0 - Vo)/Rf
-   - Equating: Vi/R1 = -Vo/Rf
+   Inverting amplifier:
 
-   Voltage gain: Vo/Vi = -Rf/R1
+   ```
+        Rf
+     +--///--+
+     |       |
+   Vi--///---+---|-\
+        R1       |  >--- Vo
+              +--|+/
+              |
+             GND
+   ```
 
-   The minus sign means the output is 180 degree out of phase with the input.
+   - The + input is grounded, so by the virtual short the − input is also at 0 V. That node is called a virtual ground.
+   - Current through R1: I = (Vi − 0)/R1 = Vi/R1
+   - No current enters the op-amp, so all of it flows on through Rf: I = (0 − Vo)/Rf
+   - Setting the two equal: Vi/R1 = −Vo/Rf
 
-   Non-inverting amplifier (input applied to the plus terminal, Rf from output to the minus terminal, R1 from the minus terminal to ground):
-   - Virtual short gives V- = V+ = Vi
-   - The output divides across Rf and R1, so V- = Vo.R1/(R1 + Rf)
-   - Equating: Vi = Vo.R1/(R1 + Rf)
+   Voltage gain: Vo/Vi = − Rf/R1
+
+   The minus sign means the output is inverted, that is 180 degrees out of phase with the input.
+
+   Non-inverting amplifier:
+
+   - Here the input goes to the + terminal, and the feedback network R1 and Rf sits between the output, the − terminal and ground.
+   - By the virtual short, the − terminal is also at Vi.
+   - That node is the output of a voltage divider: Vi = Vo × R1/(R1 + Rf)
 
    Voltage gain: Vo/Vi = 1 + Rf/R1
 
-   The gain is positive, so the output is in phase with the input, and it can never be less than 1.
+   This gain is always greater than or equal to 1, and the output is in phase with the input.
 
-   Special cases used as building blocks:
-   - Voltage follower (buffer): Rf = 0 and R1 = infinity, so Vo/Vi = 1. Used for impedance matching.
-   - Summing amplifier: several inputs through R1, R2, R3 into the virtual ground give Vo = -Rf(V1/R1 + V2/R2 + V3/R3).
-   - Difference amplifier with all four resistors equal: Vo = V2 - V1.
+   Voltage follower: a non-inverting amplifier with Rf = 0 and R1 = infinity gives Vo/Vi = 1. It is used as a buffer, because it has very high input impedance and very low output impedance. <!-- verify -->
 
-   Method to apply to any given circuit:
-   1. Mark the two input terminals and set V+ = V- (virtual short).
-   2. Write a node equation at the inverting terminal, remembering that no current enters the op-amp.
-   3. Solve for Vo in terms of Vi and take the ratio Vo/Vi.
 2. **একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
 
 
    Answer:
 
    Main characteristics of an operational amplifier:
+   - It is a high gain, direct coupled, differential amplifier. It amplifies the difference between its two inputs: Vo = A(V⁺ − V⁻).
+   - It has two inputs, the inverting input marked − and the non-inverting input marked +, and one output.
 
-   - Very high open-loop voltage gain: typically 10^5 to 10^6 (100 to 120 dB). Ideally infinite. This is what makes accurate negative-feedback design possible, because the closed-loop gain then depends only on the external resistors.
-   - Very high input impedance: about 2 M ohm for a 741 and 10^12 ohm for a FET-input type. Ideally infinite, so the op-amp draws almost no current from the source and does not load it.
-   - Very low output impedance: about 75 ohm, ideally zero, so the output voltage does not fall when a load is connected.
-   - Differential input: it amplifies only the difference between the two inputs, Vo = A(V+ - V-).
-   - High common mode rejection ratio (CMRR): about 90 dB. Noise picked up equally by both input wires is rejected, which is essential for instrumentation and long sensor cables.
-   - Wide bandwidth and a fixed gain-bandwidth product: for a 741 it is about 1 MHz, so gain x bandwidth is constant. A gain of 100 leaves only 10 kHz of bandwidth.
-   - Slew rate: the maximum rate of change of the output, about 0.5 V per microsecond for a 741. It limits the largest undistorted output at high frequency.
-   - Low input offset voltage and low input bias current, ideally zero, so the output is zero when both inputs are equal.
-   - High power supply rejection ratio, so ripple on the supply does not appear at the output.
-   - Two operating rules used in analysis, valid whenever negative feedback is present: the two inputs are at the same voltage (virtual short), and no current flows into either input (virtual open).
-   - Applications: inverting and non-inverting amplifier, summing amplifier, difference amplifier, integrator, differentiator, comparator, active filter, and instrumentation amplifier.
+   Characteristics of an ideal op-amp, against a real one:
+
+   | Characteristic | Ideal value | Typical real value, 741 |
+   |---|---|---|
+   | Open loop voltage gain | Infinite | About 200,000 |
+   | Input impedance | Infinite, so no input current | About 2 MΩ |
+   | Output impedance | Zero | About 75 Ω |
+   | Bandwidth | Infinite | About 1 MHz gain-bandwidth product |
+   | CMRR, common mode rejection ratio | Infinite | About 90 dB |
+   | Slew rate | Infinite | About 0.5 V/µs |
+   | Offset voltage | Zero | A few millivolts |
+
+   Two rules that follow, used to solve every op-amp circuit:
+   - Virtual short: with negative feedback, the two input terminals stay at the same voltage.
+   - No input current: no current flows into either input terminal.
+
+   Uses: inverting and non-inverting amplifiers, summing amplifier, difference amplifier, integrator, differentiator, comparator, filters and oscillators.
 
    How AC power is converted into DC power:
 
-   The conversion is called rectification and a complete DC power supply has four stages.
+   The process has four stages.
 
-   ```mermaid
-   flowchart LR
-     AC[220 V AC Mains] --> T[Step-down Transformer]
-     T --> R[Bridge Rectifier - 4 Diodes]
-     R --> F[Capacitor Filter]
-     F --> RG[Voltage Regulator]
-     RG --> DC[Constant DC Output]
+   ```
+   AC mains --> [Transformer] --> [Rectifier] --> [Filter] --> [Regulator] --> steady DC
+                  step down        AC to pulsating   smooth      constant
+                                        DC                        output
    ```
 
-   - Transformer: steps the 220 V mains down to a low AC voltage such as 12 V and isolates the load from the mains.
-   - Rectifier: diodes conduct in one direction only. In a full-wave bridge, two of the four diodes conduct in each half cycle, so both halves of the input appear at the output with the same polarity. The output is pulsating DC. Efficiency is 81.2 percent and the ripple frequency is 100 Hz for a 50 Hz supply.
-   - Filter: a large electrolytic capacitor across the load charges at each peak and discharges slowly in between, filling the valleys and smoothing the waveform. Ripple voltage is approximately Vr = I/(f.C), so a larger capacitor gives less ripple.
-   - Regulator: a Zener diode or a regulator IC such as 7805 or LM317 holds the output constant against changes in mains voltage and load current.
+   - Step 1, Transformer: it steps the 220 V AC mains down to a low voltage, such as 12 V AC. It also isolates the circuit from the mains, which is a safety requirement.
+   - Step 2, Rectifier: diodes convert the AC into pulsating DC, that is DC that flows in one direction but still rises and falls.
+     - Half wave rectifier: one diode. It passes only the positive half cycles, so half the power is wasted.
+     - Full wave centre tap: two diodes and a centre tapped transformer. It uses both half cycles.
+     - Full wave bridge: four diodes in a bridge, and no centre tap needed. This is the arrangement used in practice.
+   - Step 3, Filter: a large capacitor across the output charges at the peaks and discharges between them, which smooths the pulses into an almost flat DC. What is left of the variation is called ripple. A bigger capacitor gives less ripple.
+   - Step 4, Regulator: an IC such as the 7805, or a Zener diode, holds the output at a fixed voltage even when the mains voltage or the load current changes.
 
-   In a modern SMPS the order is different and more efficient: the mains is rectified first, then chopped at 50 to 100 kHz, stepped down by a small ferrite transformer, rectified again and filtered. This gives 85 to 95 percent efficiency and a much smaller and lighter unit.
+   The complete unit is called a DC power supply, and it is what sits inside every phone charger and computer power supply.
 
 ## Sensor Circuits & Automated Control Systems (2)
 
