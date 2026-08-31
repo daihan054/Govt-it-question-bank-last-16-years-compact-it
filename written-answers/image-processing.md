@@ -106,59 +106,62 @@
 1. **(ক) বিভিন্ন Color model-এর নাম লিখুন। CMY color model-এর ব্যবহার কী?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
 
-   Answer: কালার মডেল (Color Model) হলো রংকে সংখ্যায় প্রকাশ করার একটি গাণিতিক পদ্ধতি, সাধারণত তিন বা চারটি মৌলিক উপাদানের মান দিয়ে।
+   Answer: A colour model is a way of describing a colour with numbers. The common models are RGB, CMY and CMYK, HSV, HSI, YIQ and YCbCr.
 
-   বিভিন্ন কালার মডেলের নাম:
-   - RGB (Red, Green, Blue): সংযোজন পদ্ধতির (additive) মডেল। আলো যোগ করে রং তৈরি হয়; তিনটিই পূর্ণ মাত্রায় থাকলে সাদা এবং তিনটিই শূন্য হলে কালো। মনিটর, টেলিভিশন, ক্যামেরা ও স্ক্যানারে ব্যবহৃত।
-   - CMY / CMYK (Cyan, Magenta, Yellow, Key/Black): বিয়োজন পদ্ধতির (subtractive) মডেল। মুদ্রণে ব্যবহৃত।
-   - HSI / HSV / HSB (Hue, Saturation, Intensity বা Value বা Brightness): মানুষের রং দেখার অভিজ্ঞতার সঙ্গে সবচেয়ে মিল রেখে তৈরি। ইমেজ প্রসেসিং ও রং নির্বাচনে সুবিধাজনক।
-   - YIQ / YUV / YCbCr: উজ্জ্বলতা (luminance) ও বর্ণ (chrominance) আলাদা রাখে। টেলিভিশন সম্প্রচার এবং JPEG ও MPEG সংকোচনে ব্যবহৃত, কারণ মানুষের চোখ উজ্জ্বলতার পরিবর্তনে বেশি সংবেদনশীল।
-   - CIE XYZ ও CIE L*a*b*: যন্ত্র-নিরপেক্ষ (device independent) আদর্শ মডেল, যা রঙের সঠিক মিল যাচাই ও রূপান্তরে ব্যবহৃত।
-   - Grayscale: কেবল উজ্জ্বলতার মান, সাধারণত ০ থেকে ২৫৫।
+   Names of the colour models:
+   - RGB, Red Green Blue: an additive model. The three light beams are added together, and their spectra add wavelength by wavelength to make the final colour. Zero intensity in all three gives black; full intensity in all three gives white. Used for sensing, showing and displaying images in electronic systems, that is monitors, televisions, cameras and scanners.
+   - CMY, Cyan Magenta Yellow: a subtractive model, used for printing.
+   - CMYK: the CMY model with black, written as K for key, added to it. Printers use this one.
+   - HSV, Hue Saturation Value: it describes a colour the way a human would. Hue is the colour itself, saturation is how pure it is, and value is how bright it is. It gives an easier way for a person to pick a colour than RGB does. HSI, with Intensity instead of Value, is the same idea.
+   - YIQ: used in the old analog television system, where Y is the brightness and I and Q carry the colour. Keeping brightness separate is what let colour television stay compatible with black and white sets.
+   - YCbCr: the digital version of the same idea, used in JPEG and in video compression.
 
-   CMY কালার মডেলের ব্যবহার:
-   - এটি বিয়োজন পদ্ধতির মডেল, অর্থাৎ সাদা আলো থেকে নির্দিষ্ট রং শোষণ বা বিয়োগ করে রং তৈরি হয়। সায়ান লাল আলো শোষণ করে, ম্যাজেন্টা সবুজ শোষণ করে এবং হলুদ নীল শোষণ করে।
-   - RGB এর সঙ্গে সম্পর্ক: C = 1 - R, M = 1 - G, Y = 1 - B (মান ০ থেকে ১ এর মধ্যে ধরে)।
-   - প্রধান ব্যবহার মুদ্রণ শিল্পে: রঙিন প্রিন্টার, ফটোকপিয়ার, অফসেট প্রেস, ম্যাগাজিন, বই, পোস্টার, প্যাকেজিং ও বিজ্ঞাপন।
-   - কারণ: কাগজ নিজে আলো নিঃসরণ করে না, বরং আপতিত আলো প্রতিফলিত করে। তাই মুদ্রণে কালি দিয়ে অবাঞ্ছিত তরঙ্গদৈর্ঘ্য শোষণ করাই একমাত্র উপায়, যা বিয়োজন পদ্ধতি।
-   - কালো (K) যোগ করার কারণ: তত্ত্ব অনুযায়ী C, M ও Y সমান মাত্রায় মেশালে কালো পাওয়ার কথা, কিন্তু বাস্তবে কালির অপূর্ণতার জন্য একটি ঘোলাটে বাদামি রং পাওয়া যায়। তাই আলাদা কালো কালি যোগ করে CMYK করা হয়। এতে লেখা ও ছায়া গাঢ় ও পরিষ্কার হয় এবং তিনটি রঙিন কালি সাশ্রয় হয়, যা খরচ কমায়।
-   - "K" অক্ষরটি Key plate থেকে এসেছে, যা মুদ্রণে বিস্তারিত ও কনট্রাস্ট নির্ধারণ করত; নীল (Blue) এর B এর সঙ্গে বিভ্রান্তি এড়াতেও K ব্যবহৃত হয়।
+   Use of the CMY colour model:
+   - CMY is used in printing, that is for any device that puts ink on paper: printers, photocopiers and printing presses.
+   - It is subtractive, which is the opposite of RGB. The paper starts white and reflects all the light. Each ink subtracts, that is absorbs, one part of the spectrum. Cyan absorbs red, magenta absorbs green, and yellow absorbs blue.
+   - So in CMY, (0,0,0) means no ink, which leaves white paper. And (1,1,1) means all three inks together, which in theory gives black.
+   - Conversion from RGB is simple: C = 1 − R, M = 1 − G, Y = 1 − B.
+   - Why K, that is black, is added in practice: mixing all three inks does not give a true black. It gives a muddy dark brown, it costs three inks, and it soaks the paper. So a separate black ink is used. That is why a real printer uses CMYK and not CMY.
+
+   Why RGB cannot be used for printing: a monitor emits light, so adding more light makes it brighter and finally white. Paper only reflects light, so adding more ink makes it darker and finally black. The two work in opposite directions, which is why we need two different models.
 
 ## Frequency Domain Filtering (1)
 
 1. **How does Butterworth High pass Filter works?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
 
-   Answer: A Butterworth High Pass Filter (BHPF) is a frequency domain filter used to sharpen an image by attenuating low frequencies and passing high frequencies, with a smooth rather than an abrupt transition between the two.
+   Answer: A Butterworth High Pass Filter (BHPF) works in the frequency domain. It removes the low frequencies of an image and keeps the high ones, so the edges and the fine detail stay while the smooth areas fade away.
 
-   Background: in an image, low frequencies correspond to slowly varying regions, that is, smooth areas and the overall background, while high frequencies correspond to rapid intensity changes, that is, edges, fine detail and noise. Removing the low frequencies therefore leaves the edges, which sharpens the image.
+   The idea behind it:
+   - In an image, low frequency means the slowly changing parts, that is the flat background and the smooth regions.
+   - High frequency means the quickly changing parts, that is the edges, the lines, the fine texture and also the noise.
+   - A high pass filter therefore sharpens the image, because it keeps only the parts that change fast.
 
    Transfer function:
 
-   H(u, v) = 1 / [1 + (D0 / D(u, v))^(2n)]
+   H(u,v) = 1 / [ 1 + (D₀ / D(u,v))^(2n) ]
 
    where
-   - D(u, v) is the distance of the point (u, v) from the centre of the frequency rectangle, D(u, v) = sqrt((u - M/2)^2 + (v - N/2)^2)
-   - D0 is the cut-off frequency, the radius at which the filter response falls to 0.5
-   - n is the order of the filter, which controls how sharp the transition is
+   - D(u,v) is the distance of the point (u,v) from the centre of the frequency rectangle.
+   - D₀ is the cutoff frequency, that is the radius at which the filter is half on.
+   - n is the order of the filter, which controls how sharp the transition is.
 
-   How it works, step by step:
-   1. The input image f(x, y) is transformed into the frequency domain using the two-dimensional Discrete Fourier Transform, giving F(u, v).
-   2. The spectrum is shifted so that the zero-frequency component (the DC term, which carries the average brightness) lies at the centre.
-   3. The filter H(u, v) is applied by point-by-point multiplication: G(u, v) = H(u, v) . F(u, v).
-   4. At the centre, where D(u, v) is small, H approaches 0, so low frequencies are suppressed. Far from the centre, where D(u, v) is large, H approaches 1, so high frequencies pass unchanged. At D(u, v) = D0, H = 0.5 exactly.
-   5. The inverse Fourier transform converts the result back to the spatial domain, giving the sharpened image g(x, y).
+   How it behaves:
+   - When D(u,v) is much smaller than D₀, that is at low frequency, the ratio D₀/D is large, so the denominator is large and H is close to 0. The low frequencies are blocked.
+   - When D(u,v) is much larger than D₀, that is at high frequency, the ratio is small, so H is close to 1. The high frequencies pass through.
+   - At D(u,v) = D₀ exactly, H = 1/2. That is the half power point.
+   - The order n controls the steepness. A low n, such as 1 or 2, gives a gentle slope. A high n makes the curve steeper, and at very high n it approaches an ideal high pass filter.
 
-   Effect of the order n:
-   - n = 1 gives a very gradual transition, so the result is smooth but the sharpening is mild.
-   - As n increases the transition becomes steeper, and the filter approaches the behaviour of an ideal high pass filter.
-   - A very large n reintroduces the ringing artefact that the Butterworth filter was designed to avoid.
+   Steps to apply it:
+   - Take the 2D Fourier transform of the image to move it into the frequency domain.
+   - Shift the zero frequency to the centre of the spectrum.
+   - Build H(u,v) with the formula above, for the chosen D₀ and n.
+   - Multiply the shifted spectrum by H(u,v), point by point.
+   - Shift back, then take the inverse Fourier transform to get the filtered image.
 
-   Advantage over the ideal high pass filter: the ideal filter cuts off abruptly at D0, and this sharp cut-off in the frequency domain corresponds to a sinc function in the spatial domain, which produces visible ringing or ripple around edges. The Butterworth filter has a smooth roll-off, so ringing is largely eliminated while sharpening is still achieved.
+   Why Butterworth rather than an ideal filter: an ideal high pass filter cuts sharply at D₀. That sharp cut in the frequency domain produces ringing in the image, that is ripples around every edge. The Butterworth filter changes smoothly from 0 to 1, so it produces very little ringing. A Gaussian high pass filter is even smoother and has no ringing at all, but it gives less control over the sharpness of the cut.
 
-   Comparison with the Gaussian high pass filter: the Gaussian filter has no ringing at all but sharpens less strongly. The Butterworth filter with a moderate order sits between the ideal and the Gaussian, offering a controllable trade-off.
-
-   Applications: edge enhancement, sharpening of blurred images, feature extraction, enhancement of medical and satellite images, and removal of slow illumination variation from a scene.
+   Uses: sharpening an image, detecting edges, and removing slow uneven illumination from a scanned document.
 
 ## Edge Detection (1)
 
