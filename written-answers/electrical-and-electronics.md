@@ -548,166 +548,182 @@
 1. **You are required to convert a 12-bit digital number to an analogue voltage over the voltage range of 0 to 3.3V with a Digital-to-Analogue Converter (DAC). What is the resolution of the analogue output?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 419 (ET: BIBM)]*
 
 
-   Answer: The resolution of a DAC is the smallest change in the analogue output produced by a change of one LSB in the digital input.
+   Answer:
 
-   Given:
-   - Number of bits, n = 12
-   - Output voltage range (full-scale range, FSR) = 0 to 3.3 V, so FSR = 3.3 V
+   Given: a 12-bit DAC, output range 0 to 3.3 V.
 
-   Step 1 - find the number of discrete output steps:
-   - Number of codes = 2^n = 2^12 = 4096
-   - Number of steps between the lowest and the highest code = 2^n - 1 = 4095
+   Resolution means the smallest change in output voltage that the DAC can produce. It is one step of the output.
 
-   Step 2 - apply the resolution formula:
-   - Resolution = FSR / (2^n - 1)
-   - Resolution = 3.3 / 4095
+   Step 1: find the number of levels
 
-   Step 3 - compute:
-   - Resolution = 0.00080586 V
-   - Resolution = 0.806 mV = 806 microvolt (approximately)
+   Number of levels = 2ⁿ = 2¹² = 4096
 
-   Final answer: the resolution is about 0.806 mV per LSB (roughly 0.8 mV).
+   So the output can take 4096 different values, from 0 up to full scale.
+
+   Step 2: find the number of steps
+
+   Number of steps = 2ⁿ − 1 = 4095
+
+   There are 4096 levels, so there are 4095 gaps between them.
+
+   Step 3: find the resolution
+
+   Resolution = Full scale voltage / (2ⁿ − 1)
+   = 3.3 / 4095
+   = 0.000806 V
+
+   Final answer: resolution = 0.806 mV, that is about 0.81 mV per step.
 
    Notes:
-   - Expressed as a percentage, resolution = 1/4095 x 100 = 0.0244 percent of full scale.
-   - Some texts use FSR / 2^n = 3.3 / 4096 = 0.8057 mV. The difference is negligible; the 2^n - 1 form is used when the maximum code must give exactly 3.3 V.
-   - The maximum output voltage is therefore 4095 x 0.806 mV = 3.3 V and the minimum is 0 V.
+   - Some textbooks divide by 2ⁿ instead of 2ⁿ − 1, giving 3.3/4096 = 0.0008057 V. The two differ by only 0.02 percent, so either is acceptable, provided we state which definition we used.
+   - As a percentage: 1/4095 × 100 = 0.0244 percent of full scale.
+   - Meaning of the answer: the DAC output can only move in jumps of about 0.81 mV. It cannot produce any voltage between two neighbouring steps.
+
 2. **An 8 bit (Analog to Digital Converter) = 2.56v. Let the minimum analog voltage = 0v. Calculate binary data output if analog input=1.7** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)]*
 
 
-   Answer: An ADC divides its reference (full-scale) voltage into 2^n equal steps and outputs the code that corresponds to the input.
+   Answer:
 
-   Given:
-   - Number of bits, n = 8
-   - Full-scale (reference) voltage, Vref = 2.56 V
-   - Minimum analogue voltage = 0 V
-   - Analogue input, Vin = 1.7 V
+   Given: an 8-bit ADC, reference voltage V_ref = 2.56 V, minimum analog voltage = 0 V, analog input V_in = 1.7 V.
 
-   Step 1 - find the number of steps:
-   - 2^n = 2^8 = 256
+   Step 1: find the number of levels
 
-   Step 2 - find the step size (resolution):
-   - Step size = Vref / 2^n
-   - Step size = 2.56 / 256 = 0.01 V = 10 mV per LSB
+   Levels = 2⁸ = 256
 
-   Step 3 - find the digital output code:
-   - Code = Vin / step size
-   - Code = 1.7 / 0.01 = 170 (decimal)
+   Step 2: find the step size, that is the resolution
 
-   Step 4 - convert 170 to 8-bit binary by repeated division by 2:
-   - 170 / 2 = 85, remainder 0
-   - 85 / 2 = 42, remainder 1
-   - 42 / 2 = 21, remainder 0
-   - 21 / 2 = 10, remainder 1
-   - 10 / 2 = 5, remainder 0
-   - 5 / 2 = 2, remainder 1
-   - 2 / 2 = 1, remainder 0
-   - 1 / 2 = 0, remainder 1
-   - Reading the remainders from bottom to top: 1010 1010
+   Step size = V_ref / 2ⁿ
+   = 2.56 / 256
+   = 0.01 V, that is 10 mV per step
 
-   Final answer: the binary output is 1010 1010 (170 in decimal, AA in hexadecimal).
+   This is a convenient value, and it is why 2.56 V was chosen as the reference.
 
-   Verification: 170 x 0.01 V = 1.70 V, which matches the input exactly, so there is no quantisation error for this particular input.
+   Step 3: find the digital output
+
+   Digital value D = V_in / step size
+   = 1.7 / 0.01
+   = 170
+
+   Step 4: convert 170 to 8-bit binary
+
+   170 ÷ 2 = 85 remainder 0
+   85 ÷ 2 = 42 remainder 1
+   42 ÷ 2 = 21 remainder 0
+   21 ÷ 2 = 10 remainder 1
+   10 ÷ 2 = 5 remainder 0
+   5 ÷ 2 = 2 remainder 1
+   2 ÷ 2 = 1 remainder 0
+   1 ÷ 2 = 0 remainder 1
+
+   Reading the remainders from the bottom upwards: 10101010
+
+   Final answer: the binary data output is 10101010, that is decimal 170, or AA in hexadecimal.
+
+   Verification: 170 × 0.01 = 1.70 V, which is exactly the input. So the quantisation error here is zero, because 1.7 V falls precisely on a step boundary.
+
 3. **Draw an ADC converter circuit which convert an analog signal to digital signal.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
 
-   Answer: The most commonly drawn ADC is the successive approximation register (SAR) type, because it gives a good balance of speed, accuracy and cost and is the type built into almost every microcontroller.
+   Answer: An ADC converts a continuous analog signal into a discrete digital number.
 
-   Block diagram of a SAR ADC:
-
-   ```mermaid
-   flowchart LR
-     AIN[Analog Input Vin] --> SH[Sample and Hold]
-     SH --> CMP[Comparator]
-     DAC[Internal DAC] --> CMP
-     CMP --> SAR[Successive Approximation Register]
-     SAR --> DAC
-     SAR --> OUT[n-bit Digital Output]
-     CLK[Clock] --> SAR
-     VREF[Reference Voltage] --> DAC
-   ```
-
-   Working:
-   1. The sample-and-hold circuit takes a sample of the input and holds it steady while the conversion runs, so the value cannot drift during comparison.
-   2. The SAR sets the MSB of its register to 1 and clears the rest, so the internal DAC outputs Vref/2.
-   3. The comparator compares Vin with the DAC output. If Vin is greater, the bit is kept as 1; otherwise it is reset to 0.
-   4. The next lower bit is tried in the same way, and so on down to the LSB.
-   5. After n clock cycles the register holds the digital equivalent of the input, and the end-of-conversion signal goes high.
-
-   An n-bit SAR ADC therefore needs exactly n clock cycles per conversion, no matter what the input is.
-
-   Alternative simpler circuit - the flash (parallel comparator) ADC, which is easier to draw for a 3-bit example:
+   The four steps of analog to digital conversion:
 
    ```
-     Vref
-      |
-     [R]---+---> comparator 7 --+
-      |    |                    |
-     [R]---+---> comparator 6 --+
-      |    |                    |
-     [R]---+---> comparator 5 --+   Priority
-      |    |                    +-> Encoder --> 3-bit
-     [R]---+---> comparator 4 --+   (8 to 3)      output
-      |    |                    |
-     [R]---+---> comparator 3 --+
-      |    |                    |
-     [R]---+---> comparator 2 --+
-      |    |                    |
-     [R]---+---> comparator 1 --+
-      |
-     GND        (Vin is fed to the other input of every comparator)
+   Analog in --> [Sampling] --> [Quantisation] --> [Encoding] --> Digital out
+                  take values     round to the      write each
+                  at fixed        nearest level     level as bits
+                  time intervals
    ```
 
-   Working of the flash ADC: a resistor ladder divides Vref into equally spaced reference levels. Vin is compared with every level at the same time by 2^n - 1 comparators. All comparators below the input level output 1, forming a thermometer code, and a priority encoder converts that into an n-bit binary number.
+   - Sampling: we measure the analog signal at fixed intervals of time. A sample and hold circuit grabs the value and holds it steady while the converter works on it.
+     - Nyquist criterion: the sampling rate must be at least twice the highest frequency in the signal, f_s ≥ 2f_max. If we sample slower, different frequencies become indistinguishable, which is called aliasing, and the original signal can never be recovered.
+     - Example: human speech goes up to about 4 kHz, so telephone systems sample at 8 kHz.
+   - Quantisation: each sampled value is rounded to the nearest of the available levels. An n-bit converter has 2ⁿ levels.
+     - The rounding error is called quantisation error, and its maximum is half a step.
+     - More bits means more levels, smaller steps and less error.
+   - Encoding: each level is written as an n-bit binary number, which is the digital output.
+   - Anti-aliasing filter: before sampling, a low pass filter removes any frequency above half the sampling rate, so aliasing cannot occur.
 
-   Comparison:
+   Circuit: a Successive Approximation Register (SAR) ADC, which is the type most commonly used.
 
-   | Type | Speed | Components | Use |
-   |---|---|---|---|
-   | Flash | Fastest, one clock cycle | 2^n - 1 comparators, very costly for large n | Video, radar, high-speed sampling |
-   | SAR | Medium, n clock cycles | One comparator and one DAC | General purpose, microcontrollers |
-   | Dual slope | Slowest | One integrator and one counter | Digital multimeters, high noise rejection |
+   ```
+                    +-------------------+
+   Analog in ------>| Sample & Hold     |
+                    +---------+---------+
+                              | V_in (held steady)
+                              v
+                         +----+----+
+                         | Compar- |<-------- V_DAC
+                         |  ator   |
+                         +----+----+
+                              | 1 if V_in > V_DAC, else 0
+                              v
+                    +-------------------+
+   Clock ---------->| Successive        |------> Digital output
+                    | Approximation Reg |        (n bits)
+                    +---------+---------+
+                              |
+                              v
+                    +-------------------+
+                    |       DAC         |
+                    +-------------------+
+                              |
+                              +----------> back to comparator as V_DAC
+   ```
+
+   How the SAR ADC works, for 8 bits:
+   - Set the most significant bit to 1 and all the rest to 0, giving 10000000. The DAC turns this into half of the full scale voltage.
+   - The comparator checks whether V_in is greater than that. If yes, keep the bit as 1. If no, clear it to 0.
+   - Move to the next bit and repeat. Each step halves the remaining range, exactly like a binary search.
+   - After n comparisons, one per bit, the register holds the final digital value.
+   - So an n-bit SAR ADC needs exactly n clock cycles, whatever the input value is.
+
+   Other types of ADC:
+   - Flash ADC: it uses 2ⁿ − 1 comparators all working at once, so it converts in a single clock cycle. It is the fastest, but also the most expensive and power hungry. Used for video and radar.
+   - Dual slope ADC: it charges and discharges a capacitor and measures the time. Very slow but very accurate, and it rejects mains hum well. Used in digital multimeters.
+   - Sigma-delta ADC: it samples far above the Nyquist rate and filters digitally. It gives very high resolution at low speed. Used in audio.
+
 4. **(ক) A/D Converter দ্বারা কিভাবে একটি Analog signal Digital signal এ রূপান্তরিত করা হয়। ডায়াগ্রাম সহ লিখুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
 
 
-   Answer: An A/D converter changes a continuous analogue signal into a stream of binary numbers, so that a computer or microcontroller can process it. The conversion is done in four steps.
+   Answer: An A/D converter changes a continuous analog signal, such as sound or temperature, into a digital number that a computer can store and process.
 
-   ```mermaid
-   flowchart LR
-     A[Analog Signal from Sensor] --> F[Anti-aliasing Low Pass Filter]
-     F --> S[Sampling]
-     S --> H[Hold Circuit]
-     H --> Q[Quantization]
-     Q --> E[Encoding]
-     E --> D[Digital Output - Binary Code]
+   The four steps of analog to digital conversion:
+
+   ```
+   Analog in --> [Sampling] --> [Quantisation] --> [Encoding] --> Digital out
+                  take values     round to the      write each
+                  at fixed        nearest level     level as bits
+                  time intervals
    ```
 
-   Step 1 - Filtering:
-   - A low-pass anti-aliasing filter removes any frequency component above half the sampling rate, because such components would fold back and appear as false low frequencies in the output.
+   - Sampling: we measure the analog signal at fixed intervals of time. A sample and hold circuit grabs the value and holds it steady while the converter works on it.
+     - Nyquist criterion: the sampling rate must be at least twice the highest frequency in the signal, f_s ≥ 2f_max. If we sample slower, different frequencies become indistinguishable, which is called aliasing, and the original signal can never be recovered.
+     - Example: human speech goes up to about 4 kHz, so telephone systems sample at 8 kHz.
+   - Quantisation: each sampled value is rounded to the nearest of the available levels. An n-bit converter has 2ⁿ levels.
+     - The rounding error is called quantisation error, and its maximum is half a step.
+     - More bits means more levels, smaller steps and less error.
+   - Encoding: each level is written as an n-bit binary number, which is the digital output.
+   - Anti-aliasing filter: before sampling, a low pass filter removes any frequency above half the sampling rate, so aliasing cannot occur.
 
-   Step 2 - Sampling:
-   - The value of the analogue signal is measured at regular intervals Ts, so a continuous-time signal becomes a discrete-time signal.
-   - Sampling rate fs = 1/Ts.
-   - Nyquist criterion: fs must be at least 2 x fmax, where fmax is the highest frequency in the signal. Speech limited to 4 kHz is therefore sampled at 8 kHz in a telephone system.
-   - If fs is less than 2.fmax, aliasing occurs and the original signal cannot be recovered.
+   Worked example, an 8-bit ADC with V_ref = 5 V:
+   - Step size = 5 / 256 = 0.0195 V, that is about 19.5 mV.
+   - If the input is 2.5 V, then D = 2.5 / 0.0195 = 128, which is 10000000 in binary.
+   - If the input is 0 V, the output is 00000000. If the input is 5 V, the output is 11111111.
 
-   Step 3 - Holding:
-   - A sample-and-hold circuit (a capacitor plus a switch and buffer) keeps each sample constant while the conversion takes place, so the value does not change during the comparison.
+   Diagram of the complete conversion:
 
-   Step 4 - Quantization:
-   - The full-scale range is divided into 2^n equal levels, where n is the number of bits, and each held sample is rounded to the nearest level.
-   - Step size (resolution) = Vref / 2^n.
-   - The rounding introduces an unavoidable error called quantization error, whose maximum value is half a step. Increasing n reduces this error.
-   - Signal-to-quantization-noise ratio is approximately SQNR = 6.02n + 1.76 dB, so each extra bit adds about 6 dB.
+   ```
+      Analog signal                Sampled                Quantised           Digital
+      (continuous)                 (discrete in time)     (discrete in value)  output
 
-   Step 5 - Encoding:
-   - Each quantized level is given a unique n-bit binary code, and the codes are sent out either in parallel or serially.
+        /\      /\                  |  |  |  |             _ _ _ _            0110
+       /  \    /  \        --->      |  |  |  |     --->   | | | | |    --->  1010
+      /    \  /    \                 |  |  |  |            |_|_|_|_|          1101
+     /      \/      \                |  |  |  |                              0011
+   ```
 
-   Worked example:
-   - An 8-bit ADC with Vref = 5 V has a step size of 5/256 = 19.53 mV.
-   - An input of 2.5 V gives a code of 2.5/0.01953 = 128, that is 1000 0000.
-
-   Common ADC types: flash (fastest), successive approximation (general purpose), sigma-delta (highest resolution, used in audio) and dual slope (most noise immune, used in multimeters).
+   Why we need A/D conversion: the real world is analog, that is sound, light, temperature and pressure all vary continuously. But a computer can only work with numbers. So every sensor, microphone and camera needs an ADC at its input. The reverse device, a DAC, is needed at the output, for example to drive a loudspeaker.
 
 ## AC Circuits & Power Analysis (2)
 
