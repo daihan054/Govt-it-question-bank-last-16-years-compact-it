@@ -168,68 +168,66 @@
 1. **What are the basic objectives of canny edge detection method?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
 
-   Answer: The Canny edge detector, developed by John F. Canny in 1986, was designed as an optimal edge detector. Canny stated three explicit objectives, often called the three criteria, and the algorithm is constructed to satisfy them simultaneously.
+   Answer: John Canny designed his edge detector in 1986 around three stated objectives, which are also called the three Canny criteria.
 
-   The basic objectives:
+   The three basic objectives:
+   - Good detection, that is a low error rate. The detector must find as many real edges as possible, and it must not report edges where there are none. So it must minimise both false negatives, that is missed edges, and false positives, that is noise reported as an edge.
+   - Good localisation. The edge point the detector marks must be as close as possible to the true centre of the real edge in the image. The distance between the marked pixel and the actual edge must be minimum.
+   - Single response per edge. One real edge must produce exactly one detected edge point. A thick or noisy edge must not be reported several times. This criterion was added because the first two alone still allowed multiple responses.
 
-   - Good detection (low error rate): the detector must find as many real edges as possible while producing as few false edges as possible. In other words, it must not miss genuine edges and must not mark noise as an edge. This is achieved by smoothing the image with a Gaussian filter before differentiation, which suppresses noise.
-   - Good localisation: the edge points marked by the detector must be as close as possible to the true position of the edge in the original image. This is achieved by non-maximum suppression, which thins the gradient ridges down to the exact ridge line.
-   - Minimal response (single response to a single edge): each real edge must be marked only once, and the detector must not produce multiple pixels where only one edge exists. This too is enforced by non-maximum suppression together with hysteresis thresholding.
+   How the algorithm meets these objectives, step by step:
+   - Step 1, noise reduction: smooth the image with a Gaussian filter. Edge detection uses derivatives, and a derivative amplifies noise badly, so the noise must be removed first. This serves the good detection objective.
+   - Step 2, gradient calculation: find the intensity gradient with a Sobel operator in the x and y directions. Then compute the magnitude, √(Gx² + Gy²), which says how strong the edge is, and the direction, arctan(Gy/Gx), which says which way it runs.
+   - Step 3, non-maximum suppression: walk along the gradient direction and keep a pixel only if it is the local maximum there. Everything else is set to zero. This thins a thick edge down to one pixel wide, which serves the single response objective and also improves localisation.
+   - Step 4, double thresholding: use two thresholds, a high one and a low one. A pixel above the high threshold is a strong edge. A pixel below the low threshold is discarded. A pixel between the two is a weak edge, kept for now.
+   - Step 5, edge tracking by hysteresis: keep a weak edge only if it is connected to a strong edge. A weak edge standing alone is noise and is removed. This is what lets the detector keep a faint but genuine edge while still rejecting isolated noise, and it is the key to the low error rate.
 
-   Steps of the algorithm, and how each serves an objective:
-
-   1. Noise reduction: convolve the image with a Gaussian filter to smooth it. This serves the first objective, since differentiation amplifies noise. The standard deviation sigma controls the amount of smoothing: a larger sigma removes more noise but also blurs weak edges.
-   2. Gradient computation: apply a gradient operator, typically Sobel, to compute Gx and Gy. The gradient magnitude is
-      G = sqrt(Gx^2 + Gy^2)
-      and the direction is
-      theta = arctan(Gy / Gx),
-      which is then rounded to one of four directions: 0, 45, 90 or 135 degrees.
-   3. Non-maximum suppression: examine each pixel along the gradient direction and keep it only if its magnitude is greater than that of its two neighbours in that direction; otherwise set it to zero. This thins thick gradient ridges into one-pixel-wide edges, serving the second and third objectives.
-   4. Double thresholding: apply two thresholds, a high one and a low one. Pixels above the high threshold are strong edges, pixels below the low threshold are discarded, and pixels between the two are weak edges.
-   5. Edge tracking by hysteresis: a weak edge is retained only if it is connected to a strong edge; otherwise it is removed. This recovers genuine but faint edge segments while rejecting isolated noise responses, which serves the first objective.
-
-   Why it is preferred over Sobel, Prewitt or Roberts: those operators only compute the gradient, so they give thick edges, are highly sensitive to noise and mark an edge several pixels wide. Canny adds smoothing, thinning and connectivity analysis, so it produces thin, well-located, connected and noise-resistant edges.
-
-   Limitations: it is computationally more expensive, it requires tuning of sigma and the two thresholds, and heavy smoothing can round corners and lose junctions.
+   Why Canny is preferred over Sobel or Prewitt: those operators only compute a gradient and apply one threshold, so they give thick, broken, noisy edges. Canny adds smoothing, thinning and hysteresis, so it gives thin, continuous, well placed edges. That is why it is still the standard edge detector.
 
 ## Morphological Operations (1)
 
 1. **Define: (i) Erosion and Dilation; (ii) Opening and Closing.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
 
-   Answer: Morphological operations process an image on the basis of shape. They apply a small binary mask called a structuring element (SE) to an image, usually a binary image, and produce an output image of the same size. The four fundamental operations are given below, where A is the image and B is the structuring element.
+   Answer: These are the four basic morphological operations. They work on a binary image, using a small shape called a structuring element that slides over the image.
 
    (i) Erosion and Dilation
 
-   Erosion (A eroded by B), written A minus-sign B:
-   - Definition: the set of all points z such that when B is placed with its origin at z, B fits entirely inside A.
-   - Effect: it shrinks or thins the objects in the image. Boundary pixels are removed, so the object becomes smaller by roughly the radius of the structuring element.
-   - Uses: removing small isolated noise specks, separating two objects that are joined by a thin bridge, and finding the skeleton or the interior of an object.
-   - Rule for a binary image: an output pixel is set to 1 only if every pixel under the structuring element is 1; otherwise it is 0.
+   Erosion:
+   - It shrinks the object. A pixel of the object is kept only if the structuring element fits completely inside the object at that position. Otherwise it is removed.
+   - Written as A ⊖ B, that is A eroded by B.
+   - Effect: the object gets thinner, small objects vanish, and thin bridges between two objects break apart.
+   - Use: removing small white specks of noise, and separating two objects that are touching.
 
-   Dilation (A dilated by B), written A plus-sign B:
-   - Definition: the set of all points z such that the reflection of B, translated to z, overlaps at least one pixel of A.
-   - Effect: it grows or thickens the objects in the image. Pixels are added to the boundary, so the object becomes larger.
-   - Uses: filling small holes and narrow gaps inside an object, joining broken parts of a character or a line, and bridging small breaks after edge detection.
-   - Rule for a binary image: an output pixel is set to 1 if at least one pixel under the structuring element is 1.
+   Dilation:
+   - It grows the object. A pixel becomes part of the object if the structuring element, placed there, touches the object anywhere.
+   - Written as A ⊕ B, that is A dilated by B.
+   - Effect: the object gets thicker, small holes inside it get filled, and small gaps in a broken line get joined.
+   - Use: filling small holes, joining broken parts of a character in OCR.
 
-   Duality: erosion and dilation are dual operations. Eroding the object is the same as dilating the background, and vice versa.
+   The two are dual operations: eroding an object is the same as dilating the background, and the reverse. But they are not inverses. Erosion followed by dilation does not give back the original image, and that fact is exactly what makes the next two operations useful.
 
    (ii) Opening and Closing
 
-   Opening (A opened by B), written A o B:
-   - Definition: erosion followed by dilation with the same structuring element. A o B = (A eroded by B) dilated by B.
-   - Effect: it removes small objects, thin protrusions and narrow bridges, while preserving the overall size and shape of the larger objects. The erosion removes the small features and the dilation restores the size of what survived.
-   - Uses: removing salt noise (small bright specks) from a binary image, separating touching objects, and smoothing the outer contour of an object.
+   Opening:
+   - Erosion first, then dilation, with the same structuring element.
+   - Written as A ∘ B = (A ⊖ B) ⊕ B.
+   - Effect: it removes small objects and thin projections, and it smooths the outline from the outside. The erosion deletes the small stuff; the dilation restores the size of what survived.
+   - Use: removing salt noise, that is small white specks, without shrinking the main object.
 
-   Closing (A closed by B), written A dot B:
-   - Definition: dilation followed by erosion with the same structuring element. A dot B = (A dilated by B) eroded by B.
-   - Effect: it fills small holes, narrow gaps and thin cracks inside an object, while preserving the overall size and shape. The dilation fills the gaps and the erosion restores the original size.
-   - Uses: removing pepper noise (small dark holes), joining broken strokes of a character before OCR, and smoothing the inner contour of an object.
+   Closing:
+   - Dilation first, then erosion, with the same structuring element.
+   - Written as A • B = (A ⊕ B) ⊖ B.
+   - Effect: it fills small holes and narrow gaps, and it smooths the outline from the inside. The dilation closes the gaps; the erosion brings the size back.
+   - Use: removing pepper noise, that is small black holes inside an object, and joining a character broken by a scanning fault.
 
-   Important properties:
-   - Both opening and closing are idempotent: applying either of them a second time produces no further change, that is (A o B) o B = A o B.
-   - Opening removes what is smaller than the structuring element; closing fills what is smaller than the structuring element.
-   - Opening and closing are also dual: opening the object corresponds to closing the background.
+   Summary:
 
-   Practical application: in document image processing, closing joins the broken strokes of scanned characters, and opening then removes the leftover speckle noise, so that optical character recognition works reliably. In medical imaging the same pair is used to clean up segmented regions before measurement.
+   | Operation | Order | What it does |
+   |---|---|---|
+   | Erosion | — | Shrinks the object, removes small specks |
+   | Dilation | — | Grows the object, fills small holes |
+   | Opening | Erode, then dilate | Removes small objects, keeps the main object's size |
+   | Closing | Dilate, then erode | Fills small holes and gaps, keeps the main object's size |
+
+   Both opening and closing are idempotent: applying either one a second time changes nothing further.
