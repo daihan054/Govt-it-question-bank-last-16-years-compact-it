@@ -909,124 +909,86 @@
 1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
 
 
-   Answer: An automatic street light control system turns the lamp ON when the ambient light falls below a set level and OFF when daylight returns. The light sensor is an LDR (Light Dependent Resistor), whose resistance falls in bright light and rises in darkness.
+   Answer: The system must switch the street light OFF in daylight and ON in darkness. We do this with a light sensor driving a relay.
 
-   Block diagram:
+   Components:
+   - LDR, Light Dependent Resistor: its resistance falls when light falls on it. In bright daylight it is about 1 kΩ; in darkness it rises to several hundred kΩ. This is the sensor.
+   - A fixed resistor, about 10 kΩ, to form a voltage divider with the LDR.
+   - A comparator, such as an LM358 or LM393 op-amp, or a transistor.
+   - A relay, to switch the 220 V lamp, since the control circuit is only 5 V.
+   - A transistor, such as BC547, to drive the relay coil.
+   - A freewheeling diode, 1N4007, across the relay coil.
+   - A preset, that is a variable resistor, to set the darkness level at which the light comes on.
 
-   ```mermaid
-   flowchart LR
-     LDR[LDR Light Sensor] --> DIV[Voltage Divider]
-     DIV --> CMP[Comparator LM393 with Preset Threshold]
-     POT[Preset Potentiometer - Sensitivity] --> CMP
-     CMP --> DRV[Transistor Driver Stage]
-     DRV --> RLY[Relay 5V]
-     RLY --> LAMP[Street Light 220 V AC]
-     PS[Regulated 5V DC Supply] --> CMP
-     PS --> DRV
+   Circuit:
+
+   ```
+      +5V
+       |
+      LDR
+       |
+       +----------------+
+       |                |          +5V
+      R1 10k        [ - IN ]        |
+       |            Comparator --- Relay coil
+      GND           [ + IN ]        |    (with 1N4007 across it)
+                        |          Collector
+                     preset       BC547
+                        |          Emitter
+                       GND          |
+                                   GND
    ```
 
-   Circuit description:
-   - The LDR is connected in series with a fixed resistor R across the 5 V supply, forming a voltage divider. The junction voltage is the sensor output.
-     - In daylight the LDR resistance is low (about 1 k ohm), so the junction voltage is low.
-     - At night the LDR resistance is high (about 1 M ohm), so the junction voltage is high.
-   - This junction feeds the non-inverting input of an LM393 comparator. A potentiometer sets the reference voltage on the inverting input, which fixes the darkness level at which the lamp should switch on.
-   - When the sensor voltage rises above the reference, the comparator output goes HIGH.
-   - The comparator output drives an NPN transistor (BC547) through a base resistor. The transistor energises a 5 V relay coil, and the relay contact switches the 220 V lamp circuit.
-   - A freewheeling diode (1N4007) is placed across the relay coil to absorb the back EMF when the coil is de-energised, protecting the transistor.
-   - An optocoupler or the relay itself provides isolation between the low-voltage control side and the 220 V mains side.
+   Working:
+   - The LDR and R1 form a voltage divider. The voltage at their junction is the sensor output.
+   - Daytime: light falls on the LDR, so its resistance is low. The junction voltage is high. The comparator output goes LOW, the transistor is off, the relay stays open, and the lamp is OFF.
+   - Night: no light, so the LDR resistance is high. The junction voltage falls below the reference set on the preset. The comparator output goes HIGH, the transistor turns on, the relay closes, and the lamp is ON.
+   - The preset sets the exact light level at which the switching happens, so we can decide how dark it must be before the light comes on.
 
-   Truth table of the control logic:
+   Why each part is needed:
+   - The comparator is used rather than feeding the LDR straight to the transistor, because it gives a clean, sharp switch. Without it the lamp would flicker at dusk, when the light level hovers near the threshold.
+   - Hysteresis, added with a feedback resistor on the comparator, makes the ON threshold and the OFF threshold slightly different. This stops the lamp from chattering when a cloud passes.
+   - The relay is essential, because the 5 V control circuit cannot switch 220 V directly. The relay also gives electrical isolation between the two.
+   - The freewheeling diode is essential. When the relay coil is switched off, its collapsing magnetic field produces a large reverse voltage spike that would destroy the transistor. The diode gives that current a safe path.
 
-   | Condition | LDR resistance | Sensor voltage | Comparator output | Relay | Lamp |
-   |---|---|---|---|---|---|
-   | Daylight | Low | Below reference | LOW | OFF | OFF |
-   | Night / low light | High | Above reference | HIGH | ON | ON |
+   Microcontroller version, which is what is used in practice:
+   - Feed the LDR divider into an ADC pin of an Arduino or similar board.
+   - Read the value, compare it with a threshold in software, and drive the relay pin accordingly.
+   - Advantages: the threshold can be changed in software, we can add a real time clock so the light never comes on in daytime even under a dark cloud, we can dim the lamp with PWM after midnight to save power, and we can log faults.
 
-   Microcontroller version (more flexible):
-   - The LDR divider output goes to an analogue input of an Arduino or a similar microcontroller, and the relay is driven from a digital output pin.
-
-   ```c
-   const int LDR_PIN   = A0;
-   const int RELAY_PIN = 7;
-   const int THRESHOLD = 400;   // set during commissioning
-   const int HYSTERESIS = 40;   // prevents flicker at dusk
-
-   void setup() {
-       pinMode(RELAY_PIN, OUTPUT);
-       digitalWrite(RELAY_PIN, LOW);
-   }
-
-   void loop() {
-       int light = analogRead(LDR_PIN);      // 0 = dark, 1023 = bright
-       if (light < THRESHOLD - HYSTERESIS) {
-           digitalWrite(RELAY_PIN, HIGH);    // dark -> lamp ON
-       } else if (light > THRESHOLD + HYSTERESIS) {
-           digitalWrite(RELAY_PIN, LOW);     // bright -> lamp OFF
-       }
-       delay(1000);                          // sample once per second
-   }
-   ```
-
-   Design points to mention:
-   - Hysteresis is essential. Without it, the lamp flickers on and off at dusk and dawn when the light level hovers around the threshold. In the analogue version hysteresis is added with a feedback resistor from the comparator output back to its non-inverting input, making it a Schmitt trigger.
-   - A time delay of a few seconds prevents false switching when a vehicle headlight or a passing cloud changes the light level briefly.
-   - The LDR must be shielded from the lamp it controls, otherwise the lamp lights the sensor, the sensor switches the lamp off, and the circuit oscillates.
-   - Enhancement: add a PIR motion sensor so the lamp runs at 30 percent brightness when the road is empty and full brightness when a person or vehicle passes, which saves a large amount of energy.
-   - Enhancement: an RTC or a GPS time source can act as a backup, so the lamp still follows sunset and sunrise times if the LDR fails.
-
-   Advantages: no manual switching, no wasted energy in daylight, longer lamp life, and consistent operation across the whole city.
 2. **Which signal a sensor could to send the signal to microcontroller if the sensor finds any gas leakage point?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 861 (ET: N/A)]*
 
 
-   Answer: A gas leakage sensor such as the MQ-2, MQ-5 or MQ-6 produces an analogue voltage that rises with the gas concentration, and most modules also provide a digital threshold output. Both can be sent to a microcontroller.
+   Answer: A gas sensor sends an analog voltage signal to the microcontroller. That signal must then be converted to digital by the ADC inside the microcontroller.
 
-   Analogue signal (AOUT pin):
-   - The sensing element is a tin dioxide (SnO2) film whose resistance falls as the concentration of combustible gas rises.
-   - The module converts that resistance into a voltage of 0 to 5 V through a load resistor, and this voltage is proportional to the gas concentration in ppm.
-   - The microcontroller reads it on an ADC input pin.
-   - This is the preferred signal, because it tells the controller how much gas is present, not merely whether gas is present. That allows two levels of response: a warning at a low concentration and a shutdown at a high one.
+   How a gas sensor works:
+   - The common type is the MQ series, such as MQ-2 for LPG and smoke, MQ-4 for methane, or MQ-7 for carbon monoxide.
+   - Inside is a tin dioxide (SnO₂) sensing layer with a heater. In clean air its resistance is high.
+   - When a combustible gas touches the hot surface, it reacts and the resistance falls.
+   - The sensor is wired with a load resistor as a voltage divider, so the falling resistance produces a rising output voltage.
 
-   Digital signal (DOUT pin):
-   - An on-board LM393 comparator compares the sensor voltage with a level set by a preset potentiometer.
-   - It outputs logic LOW (0 V) in clean air and logic HIGH (5 V) when the gas crosses the set level, or the opposite depending on the module.
-   - The microcontroller reads it on an ordinary digital input, or better on an external interrupt pin so that a leak is detected immediately without polling.
+   The signals available from such a sensor:
+   - Analog output (AO): a continuous voltage, typically 0 to 5 V, proportional to the gas concentration. This is the main signal. We feed it to an ADC pin, and the microcontroller can then tell how much gas is present, not merely that some is present.
+   - Digital output (DO): many modules also carry an on-board comparator and a preset. It gives a simple HIGH or LOW when the concentration crosses the set threshold. We feed this to an ordinary digital input pin, or better to an interrupt pin.
 
-   Recommended answer: an analogue voltage signal on the ADC input, with the digital comparator output connected to an interrupt pin as a fast backup.
+   Which to use, and why:
+   - For a leak detection and alarm system, the analog signal is the correct choice, because the microcontroller can then distinguish a small trace from a dangerous concentration, raise different alarm levels, and log the trend over time.
+   - The digital output is useful in addition, wired to an external interrupt pin, so that a sudden dangerous level wakes the microcontroller immediately instead of waiting for the next scheduled ADC reading.
 
-   Reading and response in a microcontroller:
+   Complete detection chain:
 
-   ```c
-   const int GAS_AOUT = A0;
-   const int BUZZER   = 8;
-   const int VALVE    = 9;      // solenoid shut-off valve
-   const int WARN_LEVEL  = 300;
-   const int ALARM_LEVEL = 600;
-
-   void loop() {
-       int gas = analogRead(GAS_AOUT);
-       if (gas > ALARM_LEVEL) {
-           digitalWrite(BUZZER, HIGH);
-           digitalWrite(VALVE, HIGH);     // close the gas line
-           sendSMSAlert();
-       } else if (gas > WARN_LEVEL) {
-           digitalWrite(BUZZER, HIGH);    // warning only
-       } else {
-           digitalWrite(BUZZER, LOW);
-       }
-       delay(500);
-   }
+   ```
+   Gas --> [MQ sensor] --AO: analog voltage--> [ADC in MCU] --> compare with threshold
+                        --DO: digital HIGH/LOW--> [interrupt pin]
+                                                        |
+                                                        v
+                                        Buzzer + LED + SMS alert + shut off valve
    ```
 
-   Other signal types used by industrial gas detectors:
-   - 4 to 20 mA current loop: the standard for long cable runs in a plant, because current does not drop over distance and a reading of 0 mA immediately indicates a broken wire.
-   - Digital serial output over UART, I2C or Modbus RS-485 for calibrated smart sensors.
-   - Contact closure to a SCADA input for a simple trip signal.
-
-   Practical points:
-   - MQ-series sensors need a warm-up (preheat) time of 20 seconds to a few minutes before the reading is valid, and 24 to 48 hours of burn-in for a new sensor.
-   - The output drifts with temperature and humidity, so periodic calibration in clean air is required.
-   - The sensor must be mounted according to the gas: LPG is heavier than air, so the detector goes near the floor; methane or natural gas is lighter, so the detector goes near the ceiling.
-   - The alarm circuit must be intrinsically safe, because a spark from a relay in a gas-filled room is itself an ignition source.
+   Practical points worth stating:
+   - The sensor needs a warm-up time, typically 20 seconds to a few minutes, before its reading is trustworthy.
+   - It must be calibrated in clean air first, and the reading drifts with temperature and humidity, so a compensation table is used.
+   - The sensor is not selective. It responds to several gases at once, so a specific gas cannot be identified from one sensor alone.
 
 ## Circuit Theorems (Thevenin, Norton, Superposition) (2)
 
