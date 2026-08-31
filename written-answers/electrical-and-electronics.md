@@ -1034,100 +1034,84 @@
 1. **Find current across 2 \Omega resistor using Thevenin Theorem:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 417 (ET: BUET)]*
 
 
-   Answer: Thevenin's theorem states that any two terminal linear network or circuit can be replaced by an equivalent circuit made of one voltage source in series with one resistor.
+   Answer: Thevenin's theorem states that any two terminal linear network can be replaced by an equivalent circuit made of a single voltage source V_th in series with a single resistor R_th.
 
-   The equivalent circuit has two parts:
-   - Thevenin voltage, Vth: the voltage source in the equivalent circuit.
-   - Thevenin resistance, Rth: the series resistor.
-
-   The specific circuit is not reproduced here, so the complete standard procedure is given and then applied to a worked example.
+   The circuit diagram was not reproduced in the collected question, so the full method is given and applied to a standard circuit of this type.
 
    Procedure:
+   - Step 1: remove the load, here the 2 Ω resistor, and leave its two terminals open. Mark them A and B.
+   - Step 2: find V_th, the open circuit voltage across A and B. Any method may be used: voltage divider, mesh analysis or nodal analysis. Remember that no current flows in a branch ending at an open terminal, so any resistor in that branch has no voltage drop across it.
+   - Step 3: find R_th, the resistance looking back into the network from A and B, with every independent source deactivated:
+     - Replace each independent voltage source by a short circuit.
+     - Replace each independent current source by an open circuit.
+     - Then reduce the remaining network by series and parallel combination.
+     - If the circuit also contains dependent sources, we cannot deactivate them. There we short A-B, find the short circuit current I_sc, and use R_th = V_th / I_sc.
+   - Step 4: draw the Thevenin equivalent, V_th in series with R_th, and reconnect the 2 Ω load.
+   - Step 5: find the load current from Ohm's law.
 
-   Step 1 - Remove the load resistor (the 2 ohm resistor) from the circuit and leave its two terminals open, marked A and B.
+     I_L = V_th / (R_th + R_L)
 
-   Step 2 - Find Vth, the open-circuit voltage across A and B. Use any method: series-parallel reduction, voltage divider, mesh analysis or nodal analysis. No current flows through a branch that ends at an open terminal, so any resistor in that branch has no voltage drop across it.
+   Worked example: a 12 V source in series with 4 Ω feeds a node; a 6 Ω resistor runs from that node to ground; the 2 Ω load is taken from the same node.
 
-   Step 3 - Find Rth, the resistance looking back into the network from A and B with all independent sources deactivated:
-   - Replace every independent voltage source by a short circuit.
-   - Replace every independent current source by an open circuit.
-   - Dependent sources are kept. When a circuit has both dependent and independent sources, we cannot just deactivate them. Instead we short the open terminals, find the short circuit current Isc, and then use Rth = Vth / Isc. Another way is to apply a 1 V test source at A-B and compute Rth = Vtest / Itest.
-   - Then reduce the remaining resistor network by series and parallel combination.
+   Step 2, find V_th. With the 2 Ω removed, no current flows out of the node, so the 12 V simply divides between the 4 Ω and the 6 Ω:
 
-   Step 4 - Draw the Thevenin equivalent: Vth in series with Rth, and reconnect the 2 ohm load.
+   V_th = 12 × 6/(4 + 6) = 12 × 0.6 = 7.2 V
 
-   Step 5 - Compute the load current:
-   IL = Vth / (Rth + RL) = Vth / (Rth + 2)
+   Step 3, find R_th. Short the 12 V source. Now the 4 Ω and the 6 Ω are in parallel as seen from A-B:
 
-   Worked example with typical values:
-   - Suppose a 12 V source is in series with 4 ohm, that node feeds a 6 ohm resistor to ground, and the 2 ohm load is taken from that node.
-   - Step 2: with the 2 ohm removed, the open-circuit voltage is the divider output
-     Vth = 12 x 6 / (4 + 6) = 12 x 0.6 = 7.2 V
-   - Step 3: short the 12 V source. Looking back from A-B, the 4 ohm and 6 ohm are in parallel
-     Rth = (4 x 6) / (4 + 6) = 24 / 10 = 2.4 ohm
-   - Step 5: reconnect the 2 ohm load
-     IL = 7.2 / (2.4 + 2) = 7.2 / 4.4 = 1.636 A
-   - Voltage across the 2 ohm resistor = 1.636 x 2 = 3.27 V
+   R_th = (4 × 6)/(4 + 6) = 24/10 = 2.4 Ω
 
-   Equivalent circuit:
+   Step 4 and 5, reconnect the load and find the current:
 
-   ```
-       Rth = 2.4 ohm
-    +---/\/\/\---+------o A
-    |              |
-   (Vth = 7.2 V)  [ 2 ohm load ]
-    |              |
-    +--------------+------o B
-   ```
+   I_L = V_th / (R_th + R_L)
+   = 7.2 / (2.4 + 2)
+   = 7.2 / 4.4
 
-   Why the theorem is useful: once Vth and Rth are known, the load can be changed to any value and the current is found from one division, without solving the whole network again. It also gives the maximum power transfer condition directly: maximum power is delivered when RL = Rth.
+   Final answer: I_L = 1.636 A through the 2 Ω resistor.
+
+   Verification: the voltage across the load is 1.636 × 2 = 3.27 V, and the drop across R_th is 1.636 × 2.4 = 3.93 V. The two add to 7.2 V, which is V_th, so the answer is consistent.
+
+   Why the theorem is useful: once V_th and R_th are known, we can change the load to any value and find the new current in one line, without solving the whole network again. <!-- verify -->
+
 2. **Find the Value of I_{ab} using Norton's Theorem.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
 
-   Answer: Norton's theorem states that any linear two-terminal network can be replaced, as seen from those two terminals, by a single current source IN in parallel with a single resistance RN.
+   Answer: Norton's theorem states that any two terminal linear network can be replaced by an equivalent circuit made of a single current source I_N in parallel with a single resistor R_N.
 
-   The specific circuit is not reproduced here, so the complete standard procedure is given and then applied to a worked example.
+   The circuit diagram was not reproduced in the collected question, so the full method is given and applied to a standard circuit.
 
    Procedure:
+   - Step 1: remove the branch whose current we want, here the branch a-b, and mark the two open terminals.
+   - Step 2: find I_N, the Norton current. Short the terminals a and b together, and find the current that flows through that short. This is the short circuit current.
+   - Step 3: find R_N, the Norton resistance. Deactivate every independent source, replacing each voltage source with a short and each current source with an open, then find the resistance seen from a-b. Note that R_N is always equal to R_th.
+   - Step 4: draw the Norton equivalent, I_N in parallel with R_N, and reconnect the removed branch.
+   - Step 5: find the branch current with the current divider rule.
 
-   Step 1 - Remove the branch whose current is required, that is the branch a-b, leaving terminals a and b open.
+     I_ab = I_N × R_N / (R_N + R_load)
 
-   Step 2 - Find IN, the Norton current. Place a short circuit directly across a and b, and find the current that flows through that short. Mesh or nodal analysis is normally used, because the short changes the topology of the network.
+   Worked example: a 12 V source in series with 4 Ω feeds node a; a 6 Ω resistor runs from a to ground; and we want the current in a 2 Ω load connected between a and b.
 
-   Step 3 - Find RN, the Norton resistance. This is exactly the same as Rth:
-   - Replace every independent voltage source by a short circuit.
-   - Replace every independent current source by an open circuit.
-   - Reduce the remaining resistor network as seen from a-b.
-   - So RN = Rth.
+   Step 2, find I_N. Short a-b. The 6 Ω is then shorted out and carries no current, so all the current flows through the 4 Ω into the short:
 
-   Step 4 - Draw the Norton equivalent: IN in parallel with RN, and reconnect the load between a and b.
+   I_N = 12 / 4 = 3 A
 
-   Step 5 - Find the load current by the current divider rule:
-   Iab = IN x RN / (RN + RL)
+   Step 3, find R_N. Short the 12 V source. The 4 Ω and the 6 Ω appear in parallel:
 
-   Worked example with typical values:
-   - Suppose a 12 V source is in series with 4 ohm, that node feeds a 6 ohm resistor to ground, and a 2 ohm load is connected between a and b at that node.
-   - Step 2: short a-b. The 6 ohm resistor is then shorted out, so the entire source current flows through the short
-     IN = 12 / 4 = 3 A
-   - Step 3: short the 12 V source. The 4 ohm and 6 ohm appear in parallel
-     RN = (4 x 6) / (4 + 6) = 2.4 ohm
-   - Step 5: reconnect the 2 ohm load and apply the current divider
-     Iab = 3 x 2.4 / (2.4 + 2) = 7.2 / 4.4 = 1.636 A
+   R_N = (4 × 6)/(4 + 6) = 2.4 Ω
 
-   Equivalent circuit:
+   Step 4 and 5, reconnect the 2 Ω and apply the current divider:
 
-   ```
-        +---------+---------+------o a
-        |         |         |
-      ( ^ ) 3 A  [2.4 ohm] [2 ohm load]
-        |         |         |
-        +---------+---------+------o b
-   ```
+   I_ab = I_N × R_N/(R_N + R_L)
+   = 3 × 2.4/(2.4 + 2)
+   = 3 × 2.4/4.4
+   = 7.2/4.4
 
-   Relation between the two theorems (source transformation):
-   - Vth = IN x RN
-   - IN = Vth / Rth
-   - Rth = RN
-   - Check with the numbers above: Vth = 3 x 2.4 = 7.2 V, which matches the Thevenin result exactly, and both give Iab = 1.636 A.
+   Final answer: I_ab = 1.636 A.
 
-   Norton's form is preferred when the network is driven mainly by current sources or when several branches are in parallel, because a parallel combination is then handled directly.
+   Relationship between the two theorems: the Norton and Thevenin equivalents of the same network are interchangeable through a simple source transformation.
+
+   - V_th = I_N × R_N
+   - I_N = V_th / R_th
+   - R_th = R_N
+
+   Check with the worked figures: V_th = 3 × 2.4 = 7.2 V, which is exactly the Thevenin voltage found for the same circuit. And both methods give the same load current of 1.636 A, as they must. <!-- verify -->
