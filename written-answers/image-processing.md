@@ -18,71 +18,88 @@
 1. **(ক) Vector এবং Raster graphics- এর সংজ্ঞাসহ পার্থক্য লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
 
-   Answer: Vector graphics: ছবিটি গাণিতিক সূত্র ও জ্যামিতিক আকৃতি (বিন্দু, রেখা, বক্ররেখা, বহুভুজ) দিয়ে সংজ্ঞায়িত হয়। প্রতিটি উপাদানের স্থানাঙ্ক, রং ও পুরুত্ব সংরক্ষিত থাকে, পিক্সেল নয়।
+   Answer:
 
-   Raster graphics: ছবিটি পিক্সেল নামে ক্ষুদ্র বর্গাকার বিন্দুর গ্রিড দিয়ে গঠিত। প্রতিটি পিক্সেলের নিজস্ব রঙের মান সংরক্ষিত থাকে। একে বিটম্যাপ গ্রাফিক্সও বলা হয়।
+   Vector graphics: the image is stored as a set of mathematical instructions, that is points, lines, curves and shapes, each with its own coordinates, colour and thickness. Nothing is stored pixel by pixel. When we display it, the computer computes the shapes again for the current size, so the picture stays sharp at any zoom level.
 
-   | বিষয় | Vector Graphics | Raster Graphics |
+   Raster graphics: the image is stored as a grid of tiny squares called pixels. Each pixel holds one intensity or colour value, and all the values sit together in a frame buffer. The picture is simply that grid of values, so enlarging it only makes the squares bigger.
+
+   Difference between the two:
+
+   | Point | Vector graphics | Raster graphics |
    |---|---|---|
-   | গঠন | গাণিতিক সূত্র ও জ্যামিতিক আকৃতি | পিক্সেলের গ্রিড |
-   | রেজল্যুশন | রেজল্যুশন-নিরপেক্ষ; যত বড় করা হোক, মান অপরিবর্তিত থাকে | রেজল্যুশন-নির্ভর; বড় করলে ঝাপসা ও দানাদার (pixelated) হয় |
-   | ফাইলের আকার | ছোট, কারণ কেবল সমীকরণ সংরক্ষিত হয় | বড়, কারণ প্রতিটি পিক্সেলের তথ্য সংরক্ষণ করতে হয় |
-   | সম্পাদনা | প্রতিটি বস্তু আলাদাভাবে নাড়ানো ও পরিবর্তন করা যায় | পিক্সেল ধরে সম্পাদনা করতে হয়, বস্তু আলাদা করা কঠিন |
-   | রঙের গভীরতা | সীমিত; ছায়া ও রঙের সূক্ষ্ম পরিবর্তন ফুটিয়ে তোলা কঠিন | চমৎকার; ছবির প্রতিটি রঙের সূক্ষ্ম পার্থক্য ধরা পড়ে |
-   | ফাইল ফরম্যাট | SVG, AI, EPS, CDR, PDF | JPEG, PNG, GIF, BMP, TIFF |
-   | সফটওয়্যার | Adobe Illustrator, CorelDRAW, Inkscape | Adobe Photoshop, GIMP, MS Paint |
-   | উপযুক্ত ক্ষেত্র | লোগো, আইকন, টাইপোগ্রাফি, নকশা, মানচিত্র, ইঞ্জিনিয়ারিং ড্রয়িং | ছবি (ফটোগ্রাফ), স্ক্যান করা নথি, ডিজিটাল পেইন্টিং |
-   | মুদ্রণ | যেকোনো আকারে নিখুঁত ছাপা যায়, তাই ব্যানার ও বিলবোর্ডে ব্যবহৃত | নির্দিষ্ট DPI-এর বেশি বড় করলে মান নষ্ট হয় |
+   | How the image is stored | As mathematical instructions: points, lines, curves and shapes | As a grid of pixels, each holding an intensity or colour value |
+   | Storage form | A set of drawing commands | A set of intensity values held in a frame buffer |
+   | Scaling | We can enlarge it any amount with no loss of quality, because the maths is recomputed | It becomes blurred and blocky when enlarged, because the pixels are just stretched |
+   | Resolution | Does not depend on resolution | Depends on resolution, measured in DPI or PPI |
+   | Line quality | Crisp and smooth. Good for polygons and line drawings | Lines can look jagged, because they are drawn from square pixels |
+   | Best suited for | Logos, icons, diagrams, maps, fonts, technical drawings | Photographs and realistic scenes with continuous shades |
+   | File size | Small, because only the instructions are stored | Large, and it grows with the resolution |
+   | Editing | Each object can be selected and edited on its own | We edit pixel by pixel |
+   | Filling a solid area | Harder to fill | Easy to fill |
+   | Cost of hardware | Higher, because the beam must be steered directly | Cheaper |
+   | File formats | SVG, AI, EPS, PDF, DXF | JPEG, PNG, BMP, GIF, TIFF |
+   | Software | Adobe Illustrator, CorelDRAW, Inkscape | Adobe Photoshop, GIMP, MS Paint |
 
-   মূল পার্থক্য এক বাক্যে: ভেক্টর ছবি "কীভাবে আঁকতে হবে" তা সংরক্ষণ করে, আর র‍্যাস্টার ছবি "কোন বিন্দুতে কী রং আছে" তা সংরক্ষণ করে।
+   Simple way to remember: a vector image is a recipe for drawing the picture. A raster image is a photograph of the finished picture.
 
-   বাস্তব উদাহরণ: একটি প্রতিষ্ঠানের লোগো ভেক্টরে তৈরি করা হয়, যাতে ভিজিটিং কার্ড থেকে বিলবোর্ড পর্যন্ত সব আকারে একই মানে ব্যবহার করা যায়। অন্যদিকে ক্যামেরায় তোলা ছবি সবসময় র‍্যাস্টার, কারণ সেন্সরের প্রতিটি বিন্দু আলাদা রঙের তথ্য ধারণ করে।
 2. **(b) Differentiate between vector graphics and raster graphics. What are the applications of computer Graphics?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 888-889 (ET: N/A)]*
 
 
    Answer:
 
-   | Point | Vector Graphics | Raster Graphics |
+   Difference between vector graphics and raster graphics:
+
+   | Point | Vector graphics | Raster graphics |
    |---|---|---|
-   | Basic element | Mathematical formulae and geometric primitives: points, lines, curves, polygons | Pixels arranged in a rectangular grid |
-   | Resolution | Resolution independent; can be scaled to any size with no loss of quality | Resolution dependent; enlarging produces a blurred, pixelated image |
-   | File size | Small, since only equations and attributes are stored | Large, since a colour value is stored for every pixel |
-   | Editing | Each object can be selected, moved and modified independently | Editing is done pixel by pixel; objects cannot easily be separated |
-   | Colour depth and detail | Limited; smooth tonal gradation and photographic detail are difficult | Excellent; captures every shade and texture |
-   | Conversion | Converting vector to raster (rasterisation) is easy | Converting raster to vector (vectorisation or tracing) is difficult and imperfect |
-   | File formats | SVG, AI, EPS, CDR, PDF | JPEG, PNG, GIF, BMP, TIFF |
-   | Software | Adobe Illustrator, CorelDRAW, Inkscape | Adobe Photoshop, GIMP |
-   | Best used for | Logos, icons, typography, maps, CAD drawings, illustrations | Photographs, scanned documents, digital paintings, web images |
+   | How the image is stored | As mathematical instructions: points, lines, curves and shapes | As a grid of pixels, each holding an intensity or colour value |
+   | Storage form | A set of drawing commands | A set of intensity values held in a frame buffer |
+   | Scaling | We can enlarge it any amount with no loss of quality, because the maths is recomputed | It becomes blurred and blocky when enlarged, because the pixels are just stretched |
+   | Resolution | Does not depend on resolution | Depends on resolution, measured in DPI or PPI |
+   | Line quality | Crisp and smooth. Good for polygons and line drawings | Lines can look jagged, because they are drawn from square pixels |
+   | Best suited for | Logos, icons, diagrams, maps, fonts, technical drawings | Photographs and realistic scenes with continuous shades |
+   | File size | Small, because only the instructions are stored | Large, and it grows with the resolution |
+   | Editing | Each object can be selected and edited on its own | We edit pixel by pixel |
+   | Filling a solid area | Harder to fill | Easy to fill |
+   | Cost of hardware | Higher, because the beam must be steered directly | Cheaper |
+   | File formats | SVG, AI, EPS, PDF, DXF | JPEG, PNG, BMP, GIF, TIFF |
+   | Software | Adobe Illustrator, CorelDRAW, Inkscape | Adobe Photoshop, GIMP, MS Paint |
 
    Applications of computer graphics:
-   - Design and engineering: CAD and CAM for machine parts, buildings, circuit boards and vehicles, with 3D modelling and simulation before manufacture.
-   - Entertainment: animation, visual effects in film, video games and virtual reality.
-   - Education and training: interactive learning material, simulations, and flight, driving and surgical simulators, where practice on a real system would be dangerous or expensive.
-   - Medicine: reconstruction and visualisation of CT, MRI and ultrasound data, three-dimensional models for surgical planning.
-   - Scientific visualisation: representation of large datasets such as weather models, fluid flow, molecular structures and astronomical data.
-   - Business and presentation graphics: charts, dashboards, infographics and reports that make numerical data intelligible.
-   - Geographic Information Systems (GIS): digital maps, satellite image overlays, land-use planning and disaster mapping.
-   - Publishing and advertising: page layout, typography, posters, packaging design and web design.
-   - User interfaces: every window, icon, menu and pointer in a modern operating system is computer graphics.
-   - Cartography and remote sensing: processing and displaying satellite imagery, which in Bangladesh is used by SPARRSO for cyclone tracking and crop surveys.
-   - Art and image processing: digital painting, photo editing, restoration of damaged images and forensic image analysis.
+   - User interfaces: every window, icon, menu and button on a screen is computer graphics. This is the largest single use.
+   - Computer Aided Design (CAD) and Computer Aided Manufacturing: engineering drawings, building plans, machine parts, circuit layouts.
+   - Entertainment: animation, film special effects, and video games.
+   - Presentation graphics: charts, graphs and diagrams that turn numbers into a picture people can read quickly.
+   - Medical imaging: CT scan, MRI and ultrasound images, and 3D reconstruction of organs for surgical planning.
+   - Scientific visualisation: weather models, fluid flow, molecular structures, and simulation results.
+   - Geographic Information Systems (GIS): maps, satellite images and route planning.
+   - Education and training: simulators for pilots, drivers and surgeons, where real practice would be dangerous or costly.
+   - Virtual reality and augmented reality.
+   - Image processing and photo editing.
+   - Desktop publishing: page layout for books, newspapers and advertising.
+
 3. **Raster Image কাকে বলে?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
 
-   Answer: র‍্যাস্টার ইমেজ (Raster Image) বলতে এমন ছবিকে বোঝায় যা পিক্সেল নামক ক্ষুদ্র বর্গাকার বিন্দুর একটি আয়তাকার গ্রিড দিয়ে গঠিত, যেখানে প্রতিটি পিক্সেলের নিজস্ব রঙের মান সংরক্ষিত থাকে। একে বিটম্যাপ ইমেজও বলা হয়।
+   Answer: A raster image is an image made of a grid of tiny squares called pixels. Each pixel holds one colour or intensity value, and all the values together form the picture. It is also called a bitmap image.
 
-   বৈশিষ্ট্য:
-   - ছবিটিকে একটি দ্বিমাত্রিক অ্যারে হিসেবে দেখা যায়, যেখানে f(x, y) হলো (x, y) স্থানাঙ্কের পিক্সেলের তীব্রতা বা রঙের মান।
-   - রেজল্যুশন প্রকাশ করা হয় প্রস্থ x উচ্চতা আকারে, যেমন ১৯২০ x ১০৮০ পিক্সেল, অথবা মুদ্রণের ক্ষেত্রে DPI (dots per inch) দিয়ে।
-   - বিট ডেপথ ঠিক করে প্রতিটি পিক্সেল কয়টি রং ধারণ করতে পারে: ১ বিট হলে সাদা-কালো, ৮ বিট হলে ২৫৬টি ধূসর মাত্রা, ২৪ বিট হলে প্রায় ১.৬ কোটি রং (ট্রু কালার)।
-   - ফাইলের আকারের আনুমানিক হিসাব: আকার = প্রস্থ x উচ্চতা x বিট ডেপথ ÷ ৮ বাইট। যেমন ১৯২০ x ১০৮০ x ২৪ বিট = প্রায় ৬.২ মেগাবাইট (সংকোচন ছাড়া)।
-   - প্রধান সীমাবদ্ধতা: রেজল্যুশন-নির্ভর হওয়ায় ছবিটি বড় করলে পিক্সেলগুলো দৃশ্যমান হয়ে ওঠে এবং ছবি ঝাপসা ও দানাদার দেখায়।
+   Key points:
+   - The image is stored as a set of intensity values of the pixels, kept in a frame buffer.
+   - Resolution means how many pixels the image has, written as width × height, for example 1920 × 1080.
+   - Because the picture is a fixed grid, enlarging it does not add any new detail. The pixels simply get bigger, so the image looks blurred and blocky. We call this pixelation.
+   - It is resolution dependent. A raster image looks good only at or below the size it was made for.
+   - The file size grows with the resolution and with the colour depth, so raster files are usually large. Compression such as JPEG is used to control this.
 
-   ফরম্যাট: JPEG (ক্ষতিসহ সংকোচন, ছবির জন্য), PNG (ক্ষতিহীন সংকোচন, স্বচ্ছতা সমর্থন করে), GIF (২৫৬ রং, অ্যানিমেশন), BMP (সংকোচনহীন), TIFF (উচ্চ মান, মুদ্রণ ও স্ক্যানিংয়ে ব্যবহৃত)।
+   Types of raster image by colour depth:
+   - Binary or monochrome: each pixel is 0 or 1, that is black or white.
+   - Grayscale: each pixel is 0 to 255, from black through the greys to white.
+   - Colour (RGB): each pixel has three values, one each for red, green and blue, which mix to give the final colour.
 
-   উৎস: ডিজিটাল ক্যামেরা, স্ক্যানার, স্যাটেলাইট সেন্সর, মেডিকেল ইমেজিং যন্ত্র এবং স্ক্রিনশট—সবই র‍্যাস্টার ইমেজ তৈরি করে।
+   Where raster images are used: photographs, scanned documents, web images and any picture with continuous shading, because a photograph has no clean shapes that could be described by mathematics.
 
-   ব্যবহার: ফটোগ্রাফি, ওয়েব ছবি, ডিজিটাল পেইন্টিং, স্ক্যান করা নথি, চিকিৎসা ও রিমোট সেন্সিং ইমেজ। ডিজিটাল ইমেজ প্রসেসিংয়ের প্রায় সব কৌশল—ফিল্টারিং, হিস্টোগ্রাম সমতাকরণ, প্রান্ত শনাক্তকরণ—র‍্যাস্টার ছবির ওপরেই প্রয়োগ করা হয়।
+   File formats: JPEG, PNG, BMP, GIF, TIFF.
+
+   The opposite type is vector graphics, which stores drawing instructions instead of pixels, and can be scaled to any size with no loss of quality.
 
 ## Color Models (1)
 

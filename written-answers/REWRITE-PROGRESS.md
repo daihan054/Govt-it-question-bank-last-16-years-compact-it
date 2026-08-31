@@ -2,7 +2,7 @@
 
 IT files only. General files (math, gk, english, bangla) are skipped.
 
-**Rewritten: 37/206 sections** (only sections with a substantial rewrite are ticked)
+**Rewritten: 38/206 sections** (only sections with a substantial rewrite are ticked)
 
 ## ai-and-ml.md — 11 sections
 - [x] ai-and-ml.md — Artificial Intelligence & Expert Systems (8)
@@ -178,7 +178,7 @@ IT files only. General files (math, gk, english, bangla) are skipped.
 - [ ] electrical-and-electronics.md — Circuit Theorems (Thevenin, Norton, Superposition) (2)
 
 ## image-processing.md — 5 sections
-- [ ] image-processing.md — Computer Graphics (Vector & Raster) (3)
+- [x] image-processing.md — Computer Graphics (Vector & Raster) (3)
 - [ ] image-processing.md — Color Models (1)
 - [ ] image-processing.md — Frequency Domain Filtering (1)
 - [ ] image-processing.md — Edge Detection (1)
