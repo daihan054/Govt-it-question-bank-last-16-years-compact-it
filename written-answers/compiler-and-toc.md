@@ -449,70 +449,75 @@
 
    Answer:
 
-   | Point | Compiler | Interpreter |
-   |---|---|---|
-   | Translation | Translates the whole program at once into machine code | Translates and executes one statement at a time |
-   | Output | Produces a separate object or executable file | Produces no separate file |
-   | Execution speed | Fast, since translation is already done | Slow, since translation happens on every run |
-   | Time to start | Slow, the whole program must be compiled first | Fast, execution begins immediately |
-   | Error reporting | Reports all errors together after scanning the whole program | Stops at the first error and reports it |
-   | Debugging | Harder, errors are reported away from the running program | Easier, errors appear line by line as they occur |
-   | Memory use | Higher, object code is generated and stored | Lower, no object code is generated |
-   | Portability | The executable is tied to one platform | The same source runs anywhere the interpreter exists |
-   | Re-running | Compiled once, run many times | Re-translated on every run |
-   | Source code needed at run time | No | Yes |
-   | Examples | C, C++, Go, Rust, Pascal, Fortran | Python, JavaScript, Ruby, PHP, BASIC, MATLAB |
+   Compiler: a translator that takes a high level language as input and produces a low level language, that is machine code or assembly code, as output. It translates the entire program in one go, before the program runs.
 
-   - Mixed approach worth mentioning: Java and C# compile the source to an intermediate bytecode, which is then interpreted or just in time compiled by a virtual machine, so they gain both portability and speed. Modern JavaScript engines do the same with JIT compilation.
+   Interpreter: a program that translates a programming language into a form the machine understands, but it works line by line on the code, translating and executing each statement as it goes.
+
+   | Aspect | Compiler | Interpreter |
+   |---|---|---|
+   | Processing | Translates the whole program at once | Converts one statement at a time |
+   | Output | Produces a machine code file, such as a .exe, saved on disk | Produces no permanent output file |
+   | Execution speed | Faster, because translation is already finished | Slower, because it translates while running |
+   | Error detection | Shows all the errors together, after scanning the whole program | Shows the error on the line it reaches, then stops |
+   | Memory usage | Uses more memory, because the object code is generated and stored | Uses less memory, because no object code is produced |
+   | After a source change | The whole program must be recompiled | No retranslation step is needed |
+   | Optimisation | Good, because it can see the whole program at once | Limited, because it works line by line |
+   | Source code at run time | Not needed | Needed |
+   | CPU utilisation | Higher | Lower |
+   | Mainly used in | Production environments | Development and learning environments |
+   | Languages | C, C++, C#, Go, Rust, Pascal | Python, Ruby, Perl, PHP, MATLAB, JavaScript |
+
+   A mixed approach worth mentioning: Java and C# compile the source into an intermediate bytecode, which a virtual machine then interprets or just-in-time compiles. So they get the portability of an interpreter and much of the speed of a compiler. Modern JavaScript engines do the same.
+
 2. **What are Compilers and Interpreters? Briefly describe their role and differences. Write some key points on the advantages and disadvantages of Open Source Software.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
 
    Answer:
 
-   Compiler:
-   - A compiler is a program that translates the entire source code of a high level language into machine code or object code in one pass, before the program is run.
-   - Its role: to check the program for lexical, syntactic and semantic errors, to report them all together, to optimise the code, and to produce a standalone executable that the machine can run directly and repeatedly without the compiler being present.
-   - It works through defined phases: lexical analysis, syntax analysis, semantic analysis, intermediate code generation, optimisation and code generation.
+   What a compiler is, and its role:
+   - A compiler is a translator that takes a high level language as input and produces a low level language, that is machine or assembly code.
+   - Its role: to translate the whole program at once, to check it for lexical, syntactic and semantic errors and report them all together, to optimise the code, and to produce a standalone executable that the machine can run again and again without the compiler being present.
+   - It works in six phases: lexical analysis, syntax analysis, semantic analysis, intermediate code generation, optimisation and code generation.
 
-   Interpreter:
-   - An interpreter is a program that reads the source code statement by statement, translates each one and executes it immediately.
-   - Its role: to run the program directly from source, without producing an executable, which makes development and debugging fast and makes the same source portable to any machine that has the interpreter.
+   What an interpreter is, and its role:
+   - An interpreter is a program that translates a programming language into a comprehensible form, working line by line on the code.
+   - Its role: to run the program straight from the source, with no executable produced. This makes development and debugging fast, and it makes the same source portable to any machine that has the interpreter installed.
 
    Differences:
 
-   | Point | Compiler | Interpreter |
+   | Aspect | Compiler | Interpreter |
    |---|---|---|
-   | Translation | Translates the whole program at once into machine code | Translates and executes one statement at a time |
-   | Output | Produces a separate object or executable file | Produces no separate file |
-   | Execution speed | Fast, since translation is already done | Slow, since translation happens on every run |
-   | Time to start | Slow, the whole program must be compiled first | Fast, execution begins immediately |
-   | Error reporting | Reports all errors together after scanning the whole program | Stops at the first error and reports it |
-   | Debugging | Harder, errors are reported away from the running program | Easier, errors appear line by line as they occur |
-   | Memory use | Higher, object code is generated and stored | Lower, no object code is generated |
-   | Portability | The executable is tied to one platform | The same source runs anywhere the interpreter exists |
-   | Re-running | Compiled once, run many times | Re-translated on every run |
-   | Source code needed at run time | No | Yes |
-   | Examples | C, C++, Go, Rust, Pascal, Fortran | Python, JavaScript, Ruby, PHP, BASIC, MATLAB |
+   | Processing | Translates the whole program at once | Converts one statement at a time |
+   | Output | Produces a machine code file, such as a .exe, saved on disk | Produces no permanent output file |
+   | Execution speed | Faster, because translation is already finished | Slower, because it translates while running |
+   | Error detection | Shows all the errors together, after scanning the whole program | Shows the error on the line it reaches, then stops |
+   | Memory usage | Uses more memory, because the object code is generated and stored | Uses less memory, because no object code is produced |
+   | After a source change | The whole program must be recompiled | No retranslation step is needed |
+   | Optimisation | Good, because it can see the whole program at once | Limited, because it works line by line |
+   | Source code at run time | Not needed | Needed |
+   | CPU utilisation | Higher | Lower |
+   | Mainly used in | Production environments | Development and learning environments |
+   | Languages | C, C++, C#, Go, Rust, Pascal | Python, Ruby, Perl, PHP, MATLAB, JavaScript |
 
-   Open Source Software, advantages:
-   - No licence cost, which matters greatly for government and small organisations.
-   - The source code is available, so it can be studied, modified and adapted to local needs.
-   - No vendor lock-in; the organisation is not dependent on one company's pricing or survival.
-   - Security through transparency: many people examine the code, so flaws are found and fixed quickly, and there are no hidden backdoors.
-   - Rapid innovation and frequent updates from a worldwide community.
-   - High reliability and stability for mature projects such as Linux, Apache, PostgreSQL and Python.
-   - Freedom to deploy on any number of machines without counting licences.
-   - Encourages local skill development, since engineers can learn from real production code.
+   Advantages of Open Source Software:
+   - No licence cost, which matters a great deal for government offices and small organisations.
+   - The source code is available, so it can be studied, changed and adapted to local needs, such as adding Bangla support.
+   - No vendor lock-in. The organisation does not depend on one company's pricing, roadmap or survival.
+   - Security through transparency. Many people read the code, so flaws are found and fixed quickly, and there can be no hidden backdoor.
+   - Frequent updates from a worldwide community.
+   - High reliability for mature projects such as Linux, Apache, PostgreSQL and Python, which run much of the world's infrastructure.
+   - It can be installed on any number of machines with no licence counting.
+   - It builds local skill, because engineers can read real production code.
 
-   Open Source Software, disadvantages:
-   - No single vendor is contractually responsible; support depends on the community or on a paid third party.
-   - Hidden costs: skilled staff, integration, training and customisation may cost more than the licence saved.
-   - Documentation is often incomplete or aimed at developers rather than administrators.
-   - Compatibility problems with proprietary formats, drivers and hardware.
-   - Project abandonment risk: a small project may lose its maintainers, leaving the user with unmaintained code.
-   - Fragmentation: many competing forks and versions make selection difficult.
-   - Usability of some tools is weaker than the commercial equivalent, and the learning curve can be steep.
-   - Security is not automatic: an unmaintained open source component with a known vulnerability is a serious risk, as the well known supply chain incidents have shown.
+   Disadvantages of Open Source Software:
+   - No single vendor is contractually responsible. Support depends on the community, or on a paid third party.
+   - Hidden costs. Skilled staff, integration, training and customisation may cost more than the licence saved.
+   - Documentation is often thin, or written for developers rather than administrators.
+   - Compatibility gaps with proprietary formats, drivers and specialised hardware.
+   - Project abandonment risk. A small project may lose its maintainers, leaving unmaintained code behind.
+   - Fragmentation. Many competing forks make choosing hard.
+   - Security is not automatic. Heartbleed in OpenSSL and Log4Shell in Log4j sat in critical, widely used code for years.
+
 3. **(a) Difference between interpreter and compiler. Write down the phases of a compiler.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
 
@@ -520,83 +525,55 @@
 
    Difference between interpreter and compiler:
 
-   | Point | Compiler | Interpreter |
+   | Aspect | Compiler | Interpreter |
    |---|---|---|
-   | Translation | Translates the whole program at once into machine code | Translates and executes one statement at a time |
-   | Output | Produces a separate object or executable file | Produces no separate file |
-   | Execution speed | Fast, since translation is already done | Slow, since translation happens on every run |
-   | Time to start | Slow, the whole program must be compiled first | Fast, execution begins immediately |
-   | Error reporting | Reports all errors together after scanning the whole program | Stops at the first error and reports it |
-   | Debugging | Harder, errors are reported away from the running program | Easier, errors appear line by line as they occur |
-   | Memory use | Higher, object code is generated and stored | Lower, no object code is generated |
-   | Portability | The executable is tied to one platform | The same source runs anywhere the interpreter exists |
-   | Re-running | Compiled once, run many times | Re-translated on every run |
-   | Source code needed at run time | No | Yes |
-   | Examples | C, C++, Go, Rust, Pascal, Fortran | Python, JavaScript, Ruby, PHP, BASIC, MATLAB |
+   | Processing | Translates the whole program at once | Converts one statement at a time |
+   | Output | Produces a machine code file, such as a .exe, saved on disk | Produces no permanent output file |
+   | Execution speed | Faster, because translation is already finished | Slower, because it translates while running |
+   | Error detection | Shows all the errors together, after scanning the whole program | Shows the error on the line it reaches, then stops |
+   | Memory usage | Uses more memory, because the object code is generated and stored | Uses less memory, because no object code is produced |
+   | After a source change | The whole program must be recompiled | No retranslation step is needed |
+   | Optimisation | Good, because it can see the whole program at once | Limited, because it works line by line |
+   | Source code at run time | Not needed | Needed |
+   | CPU utilisation | Higher | Lower |
+   | Mainly used in | Production environments | Development and learning environments |
+   | Languages | C, C++, C#, Go, Rust, Pascal | Python, Ruby, Perl, PHP, MATLAB, JavaScript |
 
-   Phases of a compiler:
    Phases of a compiler, in order:
 
    | Phase | What it does | Input | Output |
    |---|---|---|---|
-   | 1. Lexical analysis | Turns the source code into tokens. A token is the smallest meaningful unit: keyword, identifier, constant, operator or punctuation | Source code | Tokens |
-   | 2. Syntax analysis, that is parsing | Checks that the tokens follow the grammar rules of the language | Token stream | Parse tree or syntax tree |
-   | 3. Semantic analysis | Makes sure the code is logically meaningful. It checks type compatibility and whether variables are declared | Syntax tree | Validated syntax tree |
-   | 4. Intermediate code generation | Turns the code into a machine independent form. It is the bridge between the front end and the back end | Checked syntax tree | Three address code |
+   | 1. Lexical analysis | Turns the source into tokens. A token is the smallest meaningful unit: keyword, identifier, constant, operator or punctuation. It also throws away whitespace and comments | Source code | Tokens |
+   | 2. Syntax analysis, that is parsing | Checks that the tokens obey the grammar of the language | Token stream | Parse tree, or syntax tree |
+   | 3. Semantic analysis | Checks that the code is logically meaningful: type compatibility, and whether every variable was declared | Syntax tree | Validated syntax tree |
+   | 4. Intermediate code generation | Produces a machine independent form, such as three address code. It is the bridge between the front end and the back end | Checked syntax tree | Three address code |
    | 5. Code optimisation | Makes the code more efficient without changing what it does | Intermediate code | Optimised intermediate code |
-   | 6. Code generation | Turns the intermediate form into machine code or assembly code | Optimised intermediate code | Assembly or machine code |
+   | 6. Code generation | Turns the intermediate form into machine or assembly code | Optimised code | Machine code |
 
-   Worked example, traced through the phases:
-   - Lexical analysis: `int x = 10;` becomes the tokens `int` (keyword), `x` (identifier), `=` (operator), `10` (numeric literal), `;` (punctuation).
-   - Syntax analysis: it checks that `int x = 10;` has the correct structure, with the operator and the statement in the right places.
-   - Semantic analysis: for `int a = 5; float b = 3.5; a = a + b;` it reports "Type mismatch: cannot assign float to int".
-   - Intermediate code generation: `a = b + c * d;` becomes
-     ```
-     t1 = c * d
-     t2 = b + t1
-     a = t2
-     ```
-   - Code optimisation: `x = y + z;` inside a loop is moved outside the loop, so it is computed once instead of on every turn.
-   - Code generation: the three address code becomes assembly, such as `LOAD R1, c` and `MUL R1, R2`.
+   Two things run across every phase:
+   - Symbol table: a structure the compiler builds and maintains, holding every identifier with its type, scope and memory location. Any phase can look up an identifier in it.
+   - Error handler: each phase catches its own kind of error. Lexical analysis catches an illegal character; syntax analysis catches a missing semicolon; semantic analysis catches a type mismatch.
 
-   Two things that run across all the phases:
-   - Symbol table: a data structure the compiler builds and keeps. It holds every identifier name along with its type. It lets any phase look up an identifier quickly.
-   - Error handler: each phase catches its own kind of error. Lexical analysis catches invalid characters. Syntax analysis catches a missing semicolon. Semantic analysis catches a type mismatch. The later phases catch machine level problems.
+   The first three phases together are the analysis phase, or front end. The last three are the synthesis phase, or back end. Keeping them separate is what lets one front end serve many different target machines.
 
-   The first three phases together are called the analysis phase, or front end. The last three are the synthesis phase, or back end. Keeping them separate is what lets one front end serve many different target machines.
-
-   ```mermaid
-   graph TD
-       A["Source program"] --> B["Lexical analysis: tokens"]
-       B --> C["Syntax analysis: parse tree"]
-       C --> D["Semantic analysis: annotated tree"]
-       D --> E["Intermediate code generation"]
-       E --> F["Code optimisation"]
-       F --> G["Code generation"]
-       G --> H["Target machine code"]
-       I["Symbol table"] -.-> C
-       J["Error handler"] -.-> C
-   ```
-
-   - The first three phases are together called the analysis or front end phase, and the last three the synthesis or back end phase. Separating them is what allows one front end to serve many target machines.
 4. **Define an Interpreted language.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823 (ET: BUET)]*
 
 
-   Answer: An interpreted language is a programming language whose programs are executed directly from the source code by an interpreter, statement by statement, without being compiled into machine code beforehand.
+   Answer: An interpreted language is a programming language whose programs are executed directly from the source code by an interpreter, line by line, without being compiled into machine code first.
 
    Characteristics:
-   - No separate executable file is produced; the source code itself is what is distributed and run.
-   - The interpreter must be present on any machine where the program is to run.
-   - Translation happens on every execution, so the program runs more slowly than compiled code, typically by a factor of ten or more.
-   - Execution starts immediately, with no compilation step, which makes the edit-run-test cycle very fast.
-   - Errors are reported when the offending line is actually reached, so a syntax error deep in an unused branch may go unnoticed until it is executed.
+   - No separate executable file is produced. The source code itself is what we distribute and run.
+   - The interpreter must be installed on any machine where the program is to run.
+   - Translation happens on every execution, so the program runs more slowly than compiled code, often by a factor of ten or more.
+   - Execution starts immediately, with no compile step, which makes the edit-run-test cycle very fast.
+   - An error is reported only when the offending line is actually reached. So a mistake inside a branch that never executes may go unnoticed for a long time.
    - The same source runs unchanged on any platform that has the interpreter, so the language is highly portable.
-   - Dynamic typing, runtime code evaluation such as `eval`, and reflection are natural, because the source is available at run time.
-   - Memory use at run time is lower in the sense that no object code is produced, though the interpreter itself consumes memory.
+   - Dynamic typing, and run time evaluation such as `eval`, come naturally, because the source is still available while the program runs.
+   - The source code must be shipped to the user, so the code cannot be hidden.
 
-   Examples: Python, JavaScript, Ruby, PHP, Perl, BASIC, MATLAB and shell scripting languages.
+   Examples: Python, Ruby, Perl, PHP, MATLAB, JavaScript, and shell scripting languages.
 
-   - Modern qualification worth adding: the distinction is no longer absolute. Python compiles to bytecode which is then interpreted, Java compiles to bytecode which the JVM just in time compiles to native code, and JavaScript engines such as V8 compile hot code paths at run time. So a language is not inherently compiled or interpreted; it is the implementation that decides.
+   An important qualification: the distinction is no longer absolute. Python compiles to bytecode which is then interpreted. Java compiles to bytecode which the JVM just-in-time compiles to native code. JavaScript engines such as V8 compile the hot paths at run time. So a language is not inherently compiled or interpreted; it is the implementation that decides.
 
 ## Lexical Analysis & Compiler Phases (4)
 
