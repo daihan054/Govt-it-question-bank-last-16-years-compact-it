@@ -714,72 +714,85 @@
 1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
 
-   Answer: A leading power factor means the current leads the voltage, so the reactive element is a capacitor. The two elements in series are therefore a resistor R and a capacitor C.
+   Answer:
 
-   Given:
-   - Average (real) power, P = 940 W
-   - Power factor, cos(theta) = 0.707 leading, so theta = -45 degree
-   - Applied voltage, v = 99.cos(600t + 30 degree) V, so Vm = 99 V and omega = 600 rad/s
+   Given: average power P = 940 W, power factor pf = 0.707 leading, applied voltage V = 99cos(600t + 30°) V.
 
-   Step 1 - find the rms voltage:
-   - Vrms = Vm / sqrt(2) = 99 / 1.4142 = 70.00 V
+   A leading power factor means the current leads the voltage, so the reactive element is a capacitor. The circuit is therefore a series R-C circuit.
 
-   Step 2 - find the apparent power:
-   - S = P / cos(theta) = 940 / 0.707 = 1329.56 VA
+   Step 1: find the RMS voltage and the angular frequency
 
-   Step 3 - find the rms current:
-   - Irms = S / Vrms = 1329.56 / 70.00 = 18.99 A
+   V_rms = V_m / √2 = 99 / 1.414 = 70 V
+   ω = 600 rad/s
 
-   Step 4 - find the magnitude of the impedance:
-   - |Z| = Vrms / Irms = 70.00 / 18.99 = 3.686 ohm
+   Step 2: find the phase angle
 
-   Step 5 - resolve the impedance into its two components. With theta = -45 degree:
-   - R = |Z|.cos(theta) = 3.686 x 0.707 = 2.606 ohm
-   - Xc = |Z|.sin(theta) = 3.686 x 0.707 = 2.606 ohm (capacitive)
-   - So Z = 2.606 - j2.606 ohm
+   pf = cos θ = 0.707
+   θ = cos⁻¹(0.707) = 45°, and it is leading
 
-   Step 6 - find the capacitance from Xc = 1 / (omega.C):
-   - C = 1 / (omega x Xc)
-   - C = 1 / (600 x 2.606)
-   - C = 1 / 1563.6
-   - C = 6.395 x 10^-4 F
+   Step 3: find the apparent power and the current
 
-   Final answer:
-   - R = 2.61 ohm
-   - C = 639.4 microfarad (about 640 microfarad)
+   P = S × pf, so S = P / pf = 940 / 0.707 = 1329.6 VA
 
-   Verification: P = Irms^2 x R = (18.99)^2 x 2.606 = 360.6 x 2.606 = 940 W. This matches the given power, so the answer is correct.
+   S = V_rms × I_rms, so
 
-   Note: R can also be found directly from P = Irms^2.R once Irms is known, which avoids Step 4.
+   I_rms = S / V_rms = 1329.6 / 70 = 18.99 A
+
+   Step 4: find the impedance
+
+   |Z| = V_rms / I_rms = 70 / 18.99 = 3.686 Ω
+
+   Step 5: split the impedance into R and X_C
+
+   R = |Z| cos θ = 3.686 × 0.707 = 2.606 Ω
+   X_C = |Z| sin θ = 3.686 × 0.707 = 2.607 Ω
+
+   Step 6: find the capacitance from the reactance
+
+   X_C = 1 / (ωC), so
+
+   C = 1 / (ω X_C)
+   = 1 / (600 × 2.607)
+   = 1 / 1564.2
+   = 6.394 × 10⁻⁴ F
+
+   Final answer: the circuit is a resistor R = 2.61 Ω in series with a capacitor C = 639.4 µF.
+
+   Verification: P = I²R = (18.99)² × 2.606 = 360.6 × 2.606 = 940 W. This matches the given power, so the answer is correct.
+
 2. **RLC সার্কিট কী? বৈদ্যুতিক সার্কিটে ট্রানজিস্টরের ভূমিকা কী?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809-810 (ET: IBA)]*
 
 
    Answer:
 
-   RLC circuit:
-   - A circuit containing a resistor (R), an inductor (L) and a capacitor (C), connected either in series or in parallel and driven by an AC source.
-   - Impedance of the series form: Z = R + j(XL - Xc), where XL = 2.pi.f.L and Xc = 1/(2.pi.f.C).
-   - Magnitude: |Z| = sqrt(R^2 + (XL - Xc)^2), and phase angle theta = arctan((XL - Xc)/R).
-   - Behaviour with frequency:
-     - When XL is greater than Xc the circuit is inductive and the current lags the voltage.
-     - When Xc is greater than XL the circuit is capacitive and the current leads the voltage.
-     - When XL = Xc the circuit is at resonance.
-   - Resonance: XL = Xc gives the resonant frequency
-     fr = 1 / (2.pi.sqrt(L.C))
-     At resonance the series RLC circuit has minimum impedance Z = R, so the current is maximum and the power factor is unity. The parallel RLC circuit behaves the opposite way: maximum impedance and minimum current, which is why it is called a rejector or tank circuit.
-   - Quality factor Q = (1/R).sqrt(L/C), and bandwidth BW = fr / Q. A high Q gives a sharp, selective response.
-   - Uses: tuning a radio or television receiver to one station, band-pass and band-stop filters, oscillator tank circuits, and power factor correction.
+   What an RLC circuit is:
+   - An RLC circuit is an electrical circuit containing a resistor (R), an inductor (L) and a capacitor (C), connected either in series or in parallel.
+   - Each element behaves differently towards AC. The resistor opposes current with plain resistance R. The inductor opposes a change in current, with reactance X_L = 2πfL. The capacitor opposes a change in voltage, with reactance X_C = 1/(2πfC).
+   - The total opposition is called impedance. For a series RLC circuit:
+
+     Z = √( R² + (X_L − X_C)² )
+
+   - Phase angle: θ = tan⁻¹((X_L − X_C)/R). If X_L > X_C the circuit is inductive and the current lags. If X_C > X_L it is capacitive and the current leads.
+
+   Resonance, which is the most important property:
+   - At one particular frequency X_L equals X_C, and the two cancel each other out. That frequency is called the resonant frequency.
+
+     f_r = 1 / (2π√(LC))
+
+   - At resonance in a series RLC circuit, Z = R, which is its minimum value. So the current is maximum and the power factor is 1.
+   - In a parallel RLC circuit the opposite happens: the impedance is maximum and the current is minimum at resonance.
+   - Uses: tuning a radio or television to one station, filters, and oscillators. Turning the tuning knob changes C, which changes f_r, so a different station is selected.
 
    Role of a transistor in an electrical circuit:
-   - Amplification: a small signal current or voltage at the input controls a much larger current at the output, so weak signals from a microphone, sensor or antenna can be raised to a usable level. In the common-emitter configuration IC = beta.IB.
-   - Switching: driven between cut-off (fully OFF, acts as an open switch) and saturation (fully ON, acts as a closed switch), a transistor replaces a mechanical relay and switches millions of times per second with no moving parts. This is the basis of every digital circuit.
-   - Oscillation: with positive feedback around an amplifier stage, a transistor generates a continuous waveform without any input, which produces clock signals and carrier frequencies.
-   - Voltage regulation: it acts as the series pass element in a regulated power supply, adjusting its resistance to hold the output constant.
-   - Impedance matching: in the emitter follower (common collector) configuration it converts a high source impedance to a low output impedance, so a weak source can drive a heavy load.
-   - Modulation and demodulation in communication circuits.
-   - As the building block of ICs: the logic gates, memory cells and microprocessors of a computer are all made of millions to billions of transistors.
+   - Amplification: a small input signal controls a much larger output. A tiny base current controls a large collector current, so a weak microphone signal can drive a loudspeaker. This is the main analog use.
+   - Switching: the transistor works only in cut off, which is fully OFF, and saturation, which is fully ON. It becomes an electronic switch with no moving parts, which can operate millions of times a second. This is the main digital use, and it is the basis of every logic gate.
+   - Building logic gates and memory: all AND, OR and NOT gates are built from transistors. A modern processor contains billions of them.
+   - Voltage regulation: a series pass transistor in a regulator holds the output voltage steady.
+   - Oscillation: with feedback, a transistor circuit generates a continuous waveform, used for clocks and radio carriers.
+   - Signal modulation and demodulation in communication circuits.
+   - Impedance matching, using the emitter follower or common collector configuration.
 
-   In short, the transistor is the active device that gives a circuit gain and control, while R, L and C are passive elements that only shape and store the signal.
+   In one line: a transistor is the device that lets a small electrical signal control a large one, and that single property gives us both amplification and switching.
 
 ## Operational Amplifiers (Op-Amp) (2)
 
