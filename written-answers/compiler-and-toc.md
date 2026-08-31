@@ -715,34 +715,62 @@
 1. **(b) What are the tasks of linker and loader? Describe briefly using examples.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 479 (ET: N/A)]*
 
 
-   Answer:
+   Answer: The linker and the loader are two system programs that run after compilation. The linker builds the executable file, and the loader puts it into memory so it can run.
+
+   Where they sit in the whole process:
+
+   ```
+   source.c --[Compiler]--> source.o --[Linker]--> a.out --[Loader]--> running process
+              (object code)          (executable)          (in main memory)
+   ```
 
    Tasks of the linker:
-   - The linker takes the object files produced by the compiler or assembler, together with the library modules needed, and combines them into a single executable file.
-   - Symbol resolution: it matches every external reference to its definition. If `main.o` calls `printf` and does not define it, the linker finds `printf` in the C standard library and records the connection. If the definition is nowhere to be found, it reports the familiar "undefined reference" error; if two modules define the same symbol, it reports a duplicate symbol error.
-   - Relocation: each object file is compiled as if it started at address 0. The linker lays them out one after another, assigns each a real starting address, and then adjusts every address reference in the code and data so that it points to the right place in the combined layout.
-   - Section merging: it gathers all the `.text` sections into one, all the `.data` sections into one, and all the `.bss` sections into one, so the final image has a clean structure.
-   - Library handling: static linking copies the needed library code into the executable, which makes the file larger but self contained. Dynamic linking records only a reference to a shared library, `.dll` on Windows or `.so` on Linux, which keeps the executable small and lets one copy of the library serve many programs, at the cost of needing the library present at run time.
-   - It builds the symbol table and the relocation information that the loader and the debugger will use.
+   - Symbol resolution: it resolves a symbol that is defined in one module but used in another. If `main.c` calls `sqrt()`, the linker finds where `sqrt` actually lives and fills in the address.
+   - Combining object files: it joins the object files produced by the compiler, together with other pieces of code, into one executable.
+   - Library management: it links in the external libraries the program needs.
+   - Memory management: it assigns addresses to the code and data sections, and arranges the objects in the address space.
+   - Code optimisation: it can reduce the code size and improve performance across the whole program.
+
+   Two types of linker:
+   - Linkage editor: it links everything before execution, producing one complete executable. This is static linking.
+   - Dynamic linker: it leaves the library references unresolved, and links them at run time instead.
 
    Tasks of the loader:
-   - The loader is part of the operating system and runs when the program is executed.
-   - Allocation: it asks the operating system for memory for the program, that is for the code, the initialised data, the uninitialised data, the heap and the stack.
-   - Loading: it reads the executable file from disk into that memory.
-   - Relocation, in a system that does not use virtual memory or that uses position independent code: it adjusts addresses to reflect where the program was actually placed.
-   - Dynamic linking: it locates and loads the shared libraries the program needs, maps them into the address space, and fills in the procedure linkage table so that calls reach the right functions. This is why a missing `.dll` or `.so` is reported at start up and not at compile time.
-   - Initialisation: it clears the `.bss` section to zero, sets up the stack and the program arguments, and finally transfers control to the entry point, which for a C program is `_start` and then `main`.
+   - Loading: it allocates memory in main memory for the program, and copies the executable in.
+   - Relocation: it adjusts the addresses inside the program to match where the program actually got loaded, since that address is not known until run time.
+   - Symbol resolution: it resolves any external symbol still left unresolved.
+   - Dynamic linking: it can link shared libraries at run time.
+   - Finally it sets the program counter to the entry point, and execution begins.
+
+   Four types of loader:
+   - Absolute loader: the program must be loaded at one fixed address. Simple but inflexible.
+   - Relocating loader: it can load the program anywhere and fix the addresses.
+   - Direct linking loader: it does the linking and the loading together.
+   - Bootstrap loader: the tiny loader in ROM that loads the operating system itself when the machine is switched on.
+
+   Comparison:
+
+   | Aspect | Linker | Loader |
+   |---|---|---|
+   | Main function | Produces the executable file | Loads the executable into main memory |
+   | Input | Object code from the compiler or assembler | The executable file from the linker |
+   | Output | An executable file | A running process in memory |
+   | When it runs | At compile time | At run time |
+   | Number of types | 2 | 4 |
+   | Extra role | Arranges the objects in the address space | Adjusts the program's references to the real load address |
 
    Example, compiling a two file C program:
 
-   ```
-   gcc -c main.c        ->  main.o     (compiled, not yet linked)
-   gcc -c math_util.c   ->  math_util.o
-   gcc main.o math_util.o -o app       (the linker runs here)
-   ./app                                (the loader runs here)
+   ```bash
+   gcc -c main.c      # compiler  -> main.o
+   gcc -c helper.c    # compiler  -> helper.o
+   gcc main.o helper.o -o app -lm   # linker -> app
+   ./app              # loader puts app into memory and starts it
    ```
 
-   - If `main.c` calls `add()` which is defined in `math_util.c`, the compiler leaves the call address blank in `main.o`. The linker fills it in with the real address of `add` in the combined image. If `math_util.o` is omitted from the link command, the linker reports `undefined reference to 'add'`.
-   - If the program calls `printf`, the linker records a reference to the shared C library rather than copying it in, and when `./app` is run the loader maps `libc.so` into memory and resolves the call.
+   - If `main.c` calls a function defined in `helper.c`, and we forget to give `helper.o` to the linker, we get the error "undefined reference to ...". That is a linker error, not a compiler error, and the distinction is often examined.
+   - The `-lm` flag tells the linker to bring in the maths library, which is where `sqrt()` lives.
 
-   Summary in one line: the linker joins the pieces together at build time, and the loader puts the finished program into memory and starts it at run time.
+   Static linking against dynamic linking:
+   - Static: the library code is copied into the executable. The file is large, but it runs anywhere with no dependency.
+   - Dynamic: only a reference is stored, and the shared library (.so on Linux, .dll on Windows) is loaded at run time. The file is small, one copy of the library serves many programs, and updating the library fixes every program at once. But the program fails if the library is missing.
