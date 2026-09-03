@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 186 questions
+**Table of Contents** — 12 subtopics · 187 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-45) | 45 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
-| 4 | [OS Concepts & System Software](#os-concepts--system-software-20) | 20 |
+| 4 | [OS Concepts & System Software](#os-concepts--system-software-21) | 21 |
 | 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
 | 6 | [Memory Management & Paging](#memory-management--paging-15) | 15 |
 | 7 | [Process Management & Process States](#process-management--process-states-12) | 12 |
@@ -282,7 +282,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 23. **(b) What are the conditions for a deadlock situation?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130 (ET: N/A)]*
 
-## OS Concepts & System Software (20)
+## OS Concepts & System Software (21)
 
 1. Difference Between Firmware and OS. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -323,6 +323,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 19. **(খ) Time shearing operating system and Real time operating system-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
 
 20. **(ক) মাল্টি প্রোগ্রামিং অপারেটিং সিস্টেম কী? সচিত্র বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1092 (ET: N/A)]*
+
+21. **Discuss the Operating System architecture and how it works?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
 
 ## Virtual Memory & Page Replacement (Thrashing) (16)
 

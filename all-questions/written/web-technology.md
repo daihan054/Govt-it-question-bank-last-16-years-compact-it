@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 62 questions
+**Table of Contents** — 7 subtopics · 64 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-22) | 22 |
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-23) | 23 |
 | 2 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 3 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-10) | 10 |
-| 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-7) | 7 |
+| 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-8) | 8 |
 | 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development-7) | 7 |
 | 6 | [CSS & Styling (Inline, Internal, External)](#css--styling-inline-internal-external-4) | 4 |
 | 7 | [Web Security & Browser Same-Origin Policy (Iframe)](#web-security--browser-same-origin-policy-iframe-2) | 2 |
@@ -15,7 +15,7 @@
 
 ---
 
-## HTML & Web Fundamentals (22)
+## HTML & Web Fundamentals (23)
 
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -79,6 +79,8 @@
 
 22. **(b) Explain `<div>`.............`</div>` tag of HTML with an example.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143-1144 (ET: N/A)]*
 
+23. **Write HTML5 media tags name.** *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
+
 ## HTTP Protocol (10)
 
 1. What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503 [SO IT 25-07-2026]
@@ -135,11 +137,11 @@
 </html>
 ```
 
-9. **Differentiate among $.ajax(), $.get() and $.load() function of jQuery with necessary example.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*
+9. **Differentiate among $.ajax(), $.get() and $.load() function of jQuery with necessary example.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*, *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
 10. **How do you change the value of a HTML element using HTML DOM?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*
 
-## Web Services & APIs (SOAP vs REST) (7)
+## Web Services & APIs (SOAP vs REST) (8)
 
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1426 (ET: E-Zone)]*
 
@@ -154,6 +156,8 @@
 6. **What is the two prime advantages of RESTful API?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 756 (ET: N/A)]*
 
 7. **What is API?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
+
+8. **What is SOAP?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1157 (ET: DU)]*
 
 ## Full Stack & Backend Web Development (7)
 

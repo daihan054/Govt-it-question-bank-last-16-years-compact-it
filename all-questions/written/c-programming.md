@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 226 questions
+**Table of Contents** — 9 subtopics · 230 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-94) | 94 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-97) | 97 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-40) | 40 |
-| 3 | [Recursion & Functions](#recursion--functions-33) | 33 |
+| 3 | [Recursion & Functions](#recursion--functions-34) | 34 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-23) | 23 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-14) | 14 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-13) | 13 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (94)
+## Basic Programs & Control Statements (97)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -362,6 +362,12 @@ for(a=1; a<=100; a++)
 93. **(a) Write a Java/C program to find the sum of the following series? $\frac{1}{1!} + \frac{2}{2!} + \frac{3}{3!} + \dots\dots\dots\dots + \frac{N}{N!}$** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
 94. **একটি ৯ ধার বিশিষ্ট বহুভুজের প্রতিটির ধার সমান। উক্ত বহুভুজের অভ্যন্তরীণ কোন ডিগ্রিতে প্রকাশের C Program লিখুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
+
+95. **Write a program to find the GCD using C/C++.** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
+
+96. **Write a c program to find max price from 20 items.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
+
+97. **Write a program to calculate GPA, Avg and total marks.** *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
 ## Output Tracing & Control Flow (40)
 
@@ -841,7 +847,7 @@ int main() {
 }
 ```
 
-## Recursion & Functions (33)
+## Recursion & Functions (34)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -958,6 +964,8 @@ int main() {
 32. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 33. **(a) Write down a function to compute the sum of the row an $n \times m$ matrix of integer.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
+
+34. **What is recursive function? Give an example of recursive function.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
 
 ## Operators, Data Types & Language Concepts (23)
 

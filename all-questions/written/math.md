@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 91 questions
+**Table of Contents** — 15 subtopics · 93 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,13 +11,13 @@
 | 6 | [Permutations & Combinations](#permutations--combinations-5) | 5 |
 | 7 | [Ratio, Proportion & Mixtures](#ratio-proportion--mixtures-4) | 4 |
 | 8 | [Speed, Time, Distance & Boats](#speed-time-distance--boats-4) | 4 |
-| 9 | [Probability & Statistics](#probability--statistics-3) | 3 |
+| 9 | [Probability & Statistics](#probability--statistics-4) | 4 |
 | 10 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations-3) | 3 |
-| 11 | [Calculus & Integration](#calculus--integration-2) | 2 |
-| 12 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-2) | 2 |
-| 13 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
-| 14 | [Numerical Methods & Root Finding](#numerical-methods--root-finding-2) | 2 |
-| 15 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-2) | 2 |
+| 11 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-3) | 3 |
+| 12 | [Calculus & Integration](#calculus--integration-2) | 2 |
+| 13 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-2) | 2 |
+| 14 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
+| 15 | [Numerical Methods & Root Finding](#numerical-methods--root-finding-2) | 2 |
 
 <!-- TOC END -->
 
@@ -189,13 +189,15 @@
 
 4. **নৌকার গতিবেগ ঘন্টায় ১৫কিমি ও স্রোতের গতিবেগ ঘন্টায় ৫কিমি। ৩০কিমি গিয়ে ফিরে আসতে মোট সময় কত?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
-## Probability & Statistics (3)
+## Probability & Statistics (4)
 
 1. **(b)** In Bangladesh Bank, there are 6 Assistant Directors (ADs) and 4 Deputy Directors (DDs). Each AD brings a bag, while only half of the DDs bring a bag. If a bag is selected at random from all the bags, what is the probability that the chosen bag belongs to a Deputy Director (DD)? *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
 2. **If you throw two unbiased dice (each with six sides) together, what is the probability that the sum of two upward faces will be 7? Explain your answer.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 421 (ET: BIBM)]*
 
 3. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
+
+4. **10-bits number taken randomly, find the probability that all the bits are 1.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
 
 ## Discrete Mathematics & Recurrence Relations (3)
 
@@ -204,6 +206,14 @@
 2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
 3. **Proved that $1+2+3+4+\dots\dots\dots\dots+n = \frac{n(n+1)}{2}$** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
+
+## Propositional Logic & Logical Equivalence (3)
+
+1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+2. **(d) Simplify the following expression: $\neg(\neg q \land (\neg p \lor q)) \lor \neg p$.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+
+3. **What is tautology? Write an example of a tautology.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
 
 ## Calculus & Integration (2)
 
@@ -228,9 +238,3 @@
 1. **Determine the root of the given equation x^2 - 3 = 0 for x \in [1, 2]** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 458 (ET: BUET)]*
 
 2. **(ক) কোন একটি সমীকরণের মূল নির্ণয়ের জন্য নিউমেরিক্যাল এনালাইসিসে ব্যবহৃত বিভিন্ন পদ্ধতির নাম লিখুন এবং বাইসেকশান পদ্ধতি ব্যবহার করে সমীকরণটির মূল নির্ণয়ের পদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
-
-## Propositional Logic & Logical Equivalence (2)
-
-1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-
-2. **(d) Simplify the following expression: $\neg(\neg q \land (\neg p \lor q)) \lor \neg p$.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*

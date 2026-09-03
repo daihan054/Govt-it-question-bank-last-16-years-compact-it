@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 95 questions
+**Table of Contents** — 9 subtopics · 98 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-49) | 49 |
 | 2 | [Java Programming & Methods](#java-programming--methods-13) | 13 |
-| 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-8) | 8 |
+| 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-9) | 9 |
 | 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
-| 5 | [Constructors & Destructors](#constructors--destructors-5) | 5 |
-| 6 | [Output Tracing & Recursion](#output-tracing--recursion-5) | 5 |
+| 5 | [Constructors & Destructors](#constructors--destructors-6) | 6 |
+| 6 | [Output Tracing & Recursion](#output-tracing--recursion-6) | 6 |
 | 7 | [Exception Handling](#exception-handling-3) | 3 |
 | 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
 | 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
@@ -194,7 +194,7 @@ Public class class B extends class A {
 
 13. **(c) Why Java is called platform independent language?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
-## Class Design & Object-Oriented Modeling (8)
+## Class Design & Object-Oriented Modeling (9)
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 425 (ET: BIBM)]*
 
@@ -212,6 +212,8 @@ Public class class B extends class A {
 
 8. **(ক) Object কী? কীভাবে Object তৈরি করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1085 (ET: N/A)]*
 
+9. **Suppose, you are implementing “Overdraft Account (OD)” class using java for a banking app. An OD type account is opened with an approved loan limit (ex. 100000/-). The account holder can deposit any amount of money in the OD account at any time. S/he can draw an amount of money from the account (acn) until sufficient acn balance. S/he allowed to draw money beyond his/her acn balance if the total over-drawing amount remains within the loan limit. A java sketch for OD acn is given bellow & code is expected to run in multi-threading mode. (same code with run by different counter in the Bank)** *[Bangladesh Bank Assistant Programmer 2019 compact it 1157 (ET: DU)]*
+
 ## Encapsulation & Access Modifiers (7)
 
 1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
@@ -228,7 +230,7 @@ Public class class B extends class A {
 
 7. **Briefly Describe Abstraction, Encapsulation.** *[Bangladesh Competition Commission Programmer 2019 compact it 1059-1060 (ET: DU)]*
 
-## Constructors & Destructors (5)
+## Constructors & Destructors (6)
 
 1. **What is constructor function? Write the properties of it.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
 
@@ -240,7 +242,9 @@ Public class class B extends class A {
 
 5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
 
-## Output Tracing & Recursion (5)
+6. **What is Constructor function? Write an example of Constructor function?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+
+## Output Tracing & Recursion (6)
 
 1. Consider the following Java program and determine the integer value printed by the execution of the main() method:
 ```java
@@ -318,6 +322,18 @@ public class Audi extends car {
     public static void main(String[] args) {
         car b = new Audi();
         b.run();
+    }
+}
+```
+
+6. **Find the output of Java program:** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+```java
+public class Main{
+    public static void main(String[] args) {
+        int i=0;
+        for(int j=5; i<3 && j<10; i++, j++) {
+            System.out.print(" "+i + " "+j);
+        }
     }
 }
 ```

@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 253 questions
+**Table of Contents** — 19 subtopics · 257 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-76) | 76 |
-| 2 | [Keys in DBMS](#keys-in-dbms-24) | 24 |
-| 3 | [DBMS Architecture & Features](#dbms-architecture--features-22) | 22 |
-| 4 | [ER Diagram & Database Design](#er-diagram--database-design-22) | 22 |
+| 1 | [SQL Queries](#sql-queries-77) | 77 |
+| 2 | [Keys in DBMS](#keys-in-dbms-25) | 25 |
+| 3 | [DBMS Architecture & Features](#dbms-architecture--features-23) | 23 |
+| 4 | [ER Diagram & Database Design](#er-diagram--database-design-23) | 23 |
 | 5 | [Normalization & Database Design](#normalization--database-design-20) | 20 |
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-15) | 15 |
 | 7 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (76)
+## SQL Queries (77)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -349,7 +349,9 @@ SELECT count (*) FROM (
 
 76. **একটি Branch Employee Table; Employee (ID, name, salary); এখন নতুন sub branch তৈরি করার যুক্তিক command লিখুন যার branch name একই হবে এবং Employee এর min ও avg salary বের করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
 
-## Keys in DBMS (24)
+77. **Write an SQL Query for 2nd highest score for the table T.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
+
+## Keys in DBMS (25)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -399,7 +401,9 @@ SELECT count (*) FROM (
 
 24. **(b) What happens when someone tries to delete an entry of a table that has referential integrity constraint? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
 
-## DBMS Architecture & Features (22)
+25. **What is foreign key? When foreign key used?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
+
+## DBMS Architecture & Features (23)
 
 1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।
    (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -446,7 +450,9 @@ SELECT count (*) FROM (
 
 22. **What are the roles of Database Engineer?** *[RAKUB Assistant Database Administrator 2020 compact it 1014 (ET: E-Zone)]*
 
-## ER Diagram & Database Design (22)
+23. **A company needs key person for DBMS. What is his/her duty as key person?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
+
+## ER Diagram & Database Design (23)
 
 1. BSCPL regularly publishes multiple job vacancies, where each Job is identified by a unique Job ID and contains information such as Job Title, Starting Salary, Job Description, and other relevant attributes. An Applicant is identified by a unique Applicant ID and has attributes such as Name, Date of Birth, Starting/Joining Date, Contact Information, and other details. An applicant can apply for only one job, while a particular job can receive applications from many applicants. Design the ER diagram for this system, showing the entities, attributes, primary keys, relationship, cardinalities, and participation constraints. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -499,6 +505,8 @@ SELECT count (*) FROM (
 21. **Draw an ER diagram of a Library Management System.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036-1037 (ET: BUET)]*
 
 22. **(ক) Database এর ক্ষেত্রে E-R Diagram বলতে কী বোঝায়? একটি উদাহরণের মাধ্যমে ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
+
+23. **Explain E-R diagram with example?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
 
 ## Normalization & Database Design (20)
 

@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 134 questions
+**Table of Contents** — 10 subtopics · 137 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-50) | 50 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-52) | 52 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-23) | 23 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-22) | 22 |
-| 4 | [Software Types & Classification](#software-types--classification-12) | 12 |
+| 4 | [Software Types & Classification](#software-types--classification-13) | 13 |
 | 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-8) | 8 |
 | 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-8) | 8 |
 | 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (50)
+## Computer Fundamentals & Acronyms (52)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -126,6 +126,28 @@
 
 50. **(ক) আকার আকৃতি ও ক্ষমতার ভিত্তিতে Digital Computer-এর প্রকারভেদ আলোচনা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1066-1067 (ET: N/A)]*
 
+51. **Answer the following question** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1154 (ET: RUET)]*
+   a) Write the abbreviation of the following terms: HTTP, GUI and ALU.
+   b) How many bits in IPv6 address?
+   c) What is used as a barrier to protect network host/computer?
+
+52. **Short question:** *[BINA Assistant Programmer 2019 compact it 1154 (ET: IBA)]*
+   a) What is full name of ASCII?
+   b) The short cut key to replace a data with another in an Excel sheet is \_\_\_.
+   c) What is full of USB?
+   d) Which function key is use to check spelling?
+   e) The common keyboard arrangement is called the \_\_\_.
+   f) The file system "NTFS" stands for \_\_\_.
+   g) Which of the following properties of a monitor is measured in hertz?
+   h) $(11111110)_2 = (?)_{10}$
+   i) Nibble = ?
+   j) The OSI model has \_\_\_.
+   k) VGA stands for \_\_\_.
+   l) How many bits comprise a unit of a Unicode?
+   m) The brain of any computer system is \_\_\_.
+   n) Which of the following is the save button in computer keyboard?
+   o) How long is an IPv6?
+
 ## ICT in Society & Governance (23)
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
@@ -220,7 +242,7 @@
 
 22. **Difference between BIOS and EFI also BOOT loader and firmware.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120 (ET: BUET)]*
 
-## Software Types & Classification (12)
+## Software Types & Classification (13)
 
 1. **What is the difference between System Software and Application Software?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)], [Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -245,6 +267,8 @@
 11. **Graphics Design এর চারটি Software এর নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
 12. **Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadsheet এর একেকটা ঘরকে _____ বলে? (iv) Storage device এর মূল folder এর নাম _____? (v) Database এর data file গুলোর তালিকাকে _____ বলা হয়?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
+
+13. **What is DSS? Write the difference between MIS and DSS.** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: RUET)]*
 
 ## Data Center Infrastructure & Power Management (8)
 

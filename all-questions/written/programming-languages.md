@@ -11,6 +11,6 @@
 
 ## Visual Basic & .NET (2)
 
-1. **What is .NET framework? Write down the different component of .NET Framework.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1056 (ET: AUST)]*
+1. **What is .NET framework? Write down the different component of .NET Framework.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1056 (ET: AUST)]*, *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
 2. **What is CLR in .NET framework? List the components of .NET Framework.** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*

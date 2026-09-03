@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 118 questions
+**Table of Contents** — 11 subtopics · 119 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-29) | 29 |
-| 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-24) | 24 |
+| 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-25) | 25 |
 | 3 | [RAID Architecture & Storage](#raid-architecture--storage-13) | 13 |
 | 4 | [Cache Memory](#cache-memory-12) | 12 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
@@ -87,7 +87,7 @@
 
 29. **In an arithmetic operation the result has even number of 1s and for another operation the result is zero. Now write the the present status of the flag register.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120-1121 (ET: BUET)]*
 
-## Memory Hierarchy & Storage (24)
+## Memory Hierarchy & Storage (25)
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -136,6 +136,8 @@
 23. **(ক) Memory address register and Memory buffer register কী? Primary memory and Secondary memory-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069-1070 (ET: N/A)]*
 
 24. **(b) Difference between SRAM and DRAM.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
+
+25. **Write the Memory faster access time memory in top and lowest access time memory is below from the following memory: [Cache Memory, Register Memory, Main Memory, Magnetic Tapes and Magnetic Disks.]** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
 
 ## RAID Architecture & Storage (13)
 

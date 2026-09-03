@@ -1,38 +1,38 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **2887** questions.
+Sorted by count, highest first. Total **2923** questions.
 
 ## IT questions
 
-Total: **2348** questions.
+Total: **2382** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **469** |
+| **Computer Networks** | **— all subcategories —** | **476** |
 | | Subnetting & IP Addressing | 99 |
-| | OSI & TCP/IP Reference Model | 47 |
+| | OSI & TCP/IP Reference Model | 48 |
 | | Networking Fundamentals & Terminology | 29 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 20 |
 | | Wireless Networks & IoT (mmWave) | 19 |
 | | Multiplexing & Bandwidth | 18 |
+| | Networking Devices | 18 |
 | | Routing Protocols & Route Configuration | 18 |
-| | Networking Devices | 17 |
+| | Communication System & Transmission Modes | 16 |
 | | Transport Layer (TCP & UDP) | 16 |
-| | Communication System & Transmission Modes | 15 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 14 |
 | | Error Detection & Data Communication (CRC, Throughput) | 14 |
 | | Physical Layer & Transmission Media (Cables & Wiring) | 14 |
+| | IPv6 Addressing | 13 |
 | | Network Topologies | 13 |
-| | IPv6 Addressing | 12 |
+| | Physical Layer & Optical Fiber (Attenuation & Power Budget) | 13 |
 | | Network Address Translation (NAT) | 12 |
-| | Physical Layer & Optical Fiber (Attenuation & Power Budget) | 12 |
 | | Digital Modulation & Signal Processing (BPSK, QPSK) | 10 |
 | | Email Architecture & Protocols (SMTP, POP3, IMAP) | 10 |
+| | Flow Control & Data Link Layer (Stop-and-Wait) | 10 |
 | | Network Services (DHCP, NAT) | 10 |
-| | Flow Control & Data Link Layer (Stop-and-Wait) | 9 |
 | | Application Layer & Well-Known Port Numbers | 6 |
-| | Pulse Code Modulation (PCM) & Signal Processing | 5 |
+| | Pulse Code Modulation (PCM) & Signal Processing | 6 |
 | | Switching Techniques (Circuit vs Packet Switching) | 5 |
 | | WAN Technologies (SONET/SDH, ATM, WDM) | 5 |
 | | Network Layer (Packet Fragmentation & Tunneling) | 4 |
@@ -43,11 +43,11 @@ Total: **2348** questions.
 | | Line Coding & Digital Encoding | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **253** |
-| | SQL Queries | 76 |
-| | Keys in DBMS | 24 |
-| | DBMS Architecture & Features | 22 |
-| | ER Diagram & Database Design | 22 |
+| **Database** | **— all subcategories —** | **257** |
+| | SQL Queries | 77 |
+| | Keys in DBMS | 25 |
+| | DBMS Architecture & Features | 23 |
+| | ER Diagram & Database Design | 23 |
 | | Normalization & Database Design | 20 |
 | | SQL Commands (DDL, DML, DCL, TCL) | 15 |
 | | Relational Data Model & ER Relationships | 13 |
@@ -63,21 +63,21 @@ Total: **2348** questions.
 | | NoSQL, NewSQL & Modern Databases | 2 |
 | | Indexing in DBMS | 1 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
-| **C Programming** | **— all subcategories —** | **226** |
-| | Basic Programs & Control Statements | 94 |
+| **C Programming** | **— all subcategories —** | **230** |
+| | Basic Programs & Control Statements | 97 |
 | | Output Tracing & Control Flow | 40 |
-| | Recursion & Functions | 33 |
+| | Recursion & Functions | 34 |
 | | Operators, Data Types & Language Concepts | 23 |
 | | Flowcharts & Algorithms | 14 |
 | | String Manipulation & Algorithms | 13 |
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **186** |
+| **Operating System** | **— all subcategories —** | **187** |
 | | Linux / Unix Commands & Administration | 45 |
 | | CPU Scheduling Algorithms | 24 |
 | | Deadlock & Resource Allocation | 23 |
-| | OS Concepts & System Software | 20 |
+| | OS Concepts & System Software | 21 |
 | | Virtual Memory & Page Replacement (Thrashing) | 16 |
 | | Memory Management & Paging | 15 |
 | | Process Management & Process States | 12 |
@@ -86,13 +86,13 @@ Total: **2348** questions.
 | | File Systems & Disk Management | 6 |
 | | Process Synchronization & Concurrency | 4 |
 | | Windows & System Administration | 4 |
-| **Computer & Network Security** | **— all subcategories —** | **168** |
+| **Computer & Network Security** | **— all subcategories —** | **170** |
 | | Cryptography | 29 |
 | | Social Engineering & Cyber Attacks | 29 |
-| | Firewalls & Network Defense | 17 |
+| | Firewalls & Network Defense | 18 |
+| | Malware & Security Threats | 17 |
 | | Web Security Vulnerabilities | 17 |
 | | Authentication & Access Control | 16 |
-| | Malware & Security Threats | 16 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
 | | Cyber Crime & Security | 10 |
 | | Security Principles (CIA Triad) | 7 |
@@ -101,8 +101,19 @@ Total: **2348** questions.
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 2 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Software Engineering** | **— all subcategories —** | **136** |
-| | SDLC Phases & Models | 41 |
+| **Computer Fundamentals** | **— all subcategories —** | **137** |
+| | Computer Fundamentals & Acronyms | 52 |
+| | ICT in Society & Governance | 23 |
+| | Hardware Components & BIOS (CMOS Battery) | 22 |
+| | Software Types & Classification | 13 |
+| | Blockchain & Emerging Technologies | 8 |
+| | Data Center Infrastructure & Power Management | 8 |
+| | Server Hardware & Enterprise Systems | 5 |
+| | Quantum Computing & Emerging Technologies | 3 |
+| | Digital Banking & Financial Inclusion | 2 |
+| | User Interfaces (CLI vs GUI) | 1 |
+| **Software Engineering** | **— all subcategories —** | **137** |
+| | SDLC Phases & Models | 42 |
 | | Software Testing & Evaluation | 37 |
 | | Software Architecture & Design Patterns (MVC) | 11 |
 | | Software Requirements Engineering | 10 |
@@ -116,28 +127,17 @@ Total: **2348** questions.
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **134** |
-| | Computer Fundamentals & Acronyms | 50 |
-| | ICT in Society & Governance | 23 |
-| | Hardware Components & BIOS (CMOS Battery) | 22 |
-| | Software Types & Classification | 12 |
-| | Blockchain & Emerging Technologies | 8 |
-| | Data Center Infrastructure & Power Management | 8 |
-| | Server Hardware & Enterprise Systems | 5 |
-| | Quantum Computing & Emerging Technologies | 3 |
-| | Digital Banking & Financial Inclusion | 2 |
-| | User Interfaces (CLI vs GUI) | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **133** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **136** |
 | | Logic Gates & Universal Gates | 31 |
+| | Number Systems & Base Conversions | 23 |
 | | Combinational Circuits (Adders, Encoders, MUX) | 22 |
-| | Number Systems & Base Conversions | 22 |
 | | Karnaugh Map (K-Map) | 19 |
 | | Boolean Algebra & De Morgan’s Theorem | 17 |
-| | Sequential Circuits (Latches & Flip-Flops) | 12 |
+| | Sequential Circuits (Latches & Flip-Flops) | 14 |
 | | Logic Families (TTL vs CMOS) | 6 |
 | | 2's Complement & Binary Arithmetic | 3 |
 | | Finite State Machines (FSM) | 1 |
-| **Algorithm** | **— all subcategories —** | **130** |
+| **Algorithm** | **— all subcategories —** | **131** |
 | | Sorting Algorithms & Complexity | 36 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 14 |
@@ -148,13 +148,13 @@ Total: **2348** questions.
 | | Greedy Algorithms (Fractional Knapsack) | 6 |
 | | Dynamic Programming | 5 |
 | | Graph Representation (Adjacency Matrix vs List) | 4 |
-| | Divide and Conquer & Matrix Multiplication | 2 |
+| | Divide and Conquer & Matrix Multiplication | 3 |
 | | Heap & Priority Queue | 2 |
 | | Huffman Coding & Data Compression | 1 |
 | | NP-Completeness & Complexity Reduction | 1 |
-| **Microprocessor & Computer Architecture** | **— all subcategories —** | **118** |
+| **Microprocessor & Computer Architecture** | **— all subcategories —** | **119** |
 | | Microprocessor Architecture & Functions | 29 |
-| | Memory Hierarchy & Storage | 24 |
+| | Memory Hierarchy & Storage | 25 |
 | | RAID Architecture & Storage | 13 |
 | | Cache Memory | 12 |
 | | Secondary Storage (HDD vs SSD) | 10 |
@@ -164,17 +164,17 @@ Total: **2348** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **95** |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **98** |
 | | OOP Concepts (Inheritance & Polymorphism) | 49 |
 | | Java Programming & Methods | 13 |
-| | Class Design & Object-Oriented Modeling | 8 |
+| | Class Design & Object-Oriented Modeling | 9 |
 | | Encapsulation & Access Modifiers | 7 |
-| | Constructors & Destructors | 5 |
-| | Output Tracing & Recursion | 5 |
+| | Constructors & Destructors | 6 |
+| | Output Tracing & Recursion | 6 |
 | | C++ OOP Concepts & Friend Functions | 3 |
 | | Exception Handling | 3 |
 | | Interfaces & Abstract Classes | 2 |
-| **Data Structure** | **— all subcategories —** | **91** |
+| **Data Structure** | **— all subcategories —** | **92** |
 | | Tree | 27 |
 | | Stack | 19 |
 | | Linked List | 15 |
@@ -182,13 +182,13 @@ Total: **2348** questions.
 | | Binary Search Tree (BST) | 6 |
 | | Hashing & Hash Tables | 6 |
 | | Queue | 6 |
-| | Data Structure Fundamentals | 4 |
-| **Web Technology** | **— all subcategories —** | **62** |
-| | HTML & Web Fundamentals | 22 |
+| | Data Structure Fundamentals | 5 |
+| **Web Technology** | **— all subcategories —** | **64** |
+| | HTML & Web Fundamentals | 23 |
 | | HTTP Protocol | 10 |
 | | JavaScript & jQuery (DOM & Validation) | 10 |
+| | Web Services & APIs (SOAP vs REST) | 8 |
 | | Full Stack & Backend Web Development | 7 |
-| | Web Services & APIs (SOAP vs REST) | 7 |
 | | CSS & Styling (Inline, Internal, External) | 4 |
 | | Web Security & Browser Same-Origin Policy (Iframe) | 2 |
 | **AI & Machine Learning** | **— all subcategories —** | **41** |
@@ -213,10 +213,10 @@ Total: **2348** questions.
 | | Operational Amplifiers (Op-Amp) | 2 |
 | | Sensor Circuits & Automated Control Systems | 2 |
 | | Electrical Machines (Motors & Alternators) | 1 |
-| **Cloud Computing** | **— all subcategories —** | **35** |
+| **Cloud Computing** | **— all subcategories —** | **36** |
 | | Cloud Service Models | 12 |
+| | Virtualization & Containers (VM vs Container) | 7 |
 | | Cloud Storage & Fundamentals | 6 |
-| | Virtualization & Containers (VM vs Container) | 6 |
 | | Cluster, Grid & Distributed Computing | 4 |
 | | Edge Computing & Fog Computing | 2 |
 | | Scalability (Horizontal & Vertical Scaling) | 2 |
@@ -240,7 +240,7 @@ Total: **2348** questions.
 
 ## General Questions
 
-Total: **539** questions.
+Total: **541** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -265,19 +265,19 @@ Total: **539** questions.
 | | Letter & Application Writing | 6 |
 | | Reading Comprehension | 5 |
 | | English Literature & Authors | 1 |
-| **Math** | **— all subcategories —** | **91** |
+| **Math** | **— all subcategories —** | **93** |
 | | Arithmetic & Algebra Problems | 16 |
 | | Set Theory & Discrete Math | 13 |
 | | Percentage, Profit & Loss, Simple & Compound Interest | 12 |
 | | Basic Arithmetic & Average | 11 |
 | | Geometry & Coordinate Geometry | 10 |
 | | Permutations & Combinations | 5 |
+| | Probability & Statistics | 4 |
 | | Ratio, Proportion & Mixtures | 4 |
 | | Speed, Time, Distance & Boats | 4 |
 | | Discrete Mathematics & Recurrence Relations | 3 |
-| | Probability & Statistics | 3 |
+| | Propositional Logic & Logical Equivalence | 3 |
 | | Analytical Ability & Logical Reasoning | 2 |
 | | Calculus & Integration | 2 |
 | | Comprehensive Math Problems | 2 |
 | | Numerical Methods & Root Finding | 2 |
-| | Propositional Logic & Logical Equivalence | 2 |
