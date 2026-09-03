@@ -3653,6 +3653,29 @@ int main() {
 ```
 *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
 
+   Answer: Output is `0 0 1 3 1`.
+
+   Step-by-step evaluation of `m = i++ && j++ && k++ || l++`
+   - `&&` binds tighter than `||`, so the expression is `(i++ && j++ && k++) || l++`.
+   - `i++` returns the old value `−1`, which is non-zero (true), and `i` becomes `0`.
+   - `j++` returns `−1`, true, and `j` becomes `0`.
+   - `k++` returns `0`, which is false, and `k` becomes `1`.
+   - So the whole `&&` chain is false. Because `false || X` still needs `X`, the right operand runs.
+   - `l++` returns `2`, which is true, and `l` becomes `3`.
+   - `false || true` is true, so `m = 1`.
+
+   Final values
+
+   | Variable | Value |
+   |---|---|
+   | i | 0 |
+   | j | 0 |
+   | k | 1 |
+   | l | 3 |
+   | m | 1 |
+
+   - Key point: in C, `−1` is true because only `0` is false. And short-circuiting did not stop the `&&` chain early here, since the first two operands were both true.
+
 3. **(b) Find out the output of this program.**
 ```c
 for (int i= 5; i>=1; i--) {
@@ -3663,6 +3686,23 @@ for (int i= 5; i>=1; i--) {
 
 ```
 *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1444 (ET: N/A)]*
+
+   Answer: Output is everything on a single line, because there is no `printf("\n")` anywhere:
+
+   ```
+     1  2  3  4  5  1  2  3  4  1  2  3  1  2  1
+   ```
+
+   Trace
+   - `i = 5` → inner loop prints `1 2 3 4 5`
+   - `i = 4` → prints `1 2 3 4`
+   - `i = 3` → prints `1 2 3`
+   - `i = 2` → prints `1 2`
+   - `i = 1` → prints `1`
+
+   - `%3d` right-aligns each number in a field 3 characters wide, so each value is preceded by two spaces.
+   - Total numbers printed = `5 + 4 + 3 + 2 + 1 = 15`.
+   - Adding `printf("\n")` after the inner loop would turn this into the familiar inverted triangle.
 
 4. **Find the output of the following program:** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1334 (ET: N/A)]*
 A)
@@ -3684,6 +3724,19 @@ int main() {
 
 ```
 
+   Answer:
+
+   (A) Output is `Devel`, and `len` becomes `5`.
+   - `"Development"` occupies indices 0 to 10. Writing `'\0'` at index 5 replaces `'o'` with the string terminator.
+   - `printf("%s", ...)` stops at the first `'\0'`, so only `D e v e l` is printed.
+   - `strlen` counts characters before the first `'\0'`, giving 5 instead of the original 11.
+   - The remaining characters `pment` are still in memory but are now unreachable through normal string functions.
+
+   (B) Output is `1`.
+   - Iteration 1: `i` is 2, which is true, so `--i` runs → `i` becomes 1, and 1 is true → body runs and prints `i`, which is now `1`.
+   - Iteration 2: `i` is 1, true, so `--i` → `i` becomes 0, and 0 is false → the loop ends without printing.
+   - `j` is never touched, because the false branch of the conditional is never taken while `i` is non-zero.
+
 5. **Output problem:** *[BREB Assistant Programmer 18.02.2023 compact it 470 (ET: N/A)]*
 ```c
 #include<stdio.h>
@@ -3697,6 +3750,20 @@ cout<<i<<j<<k;
 return 0;
 }
 ```
+
+   Answer: The program does not compile. It contains several errors.
+
+   Errors present
+   - `cout` is used but only `<stdio.h>` is included. `cout` belongs to C++ and needs `<iostream>` plus `using namespace std;`.
+   - The text `km 101` is not valid C or C++ — it appears to be a transcription error in the question paper.
+   - Both `cout` statements are missing their terminating semicolons.
+
+   What the intended expression would produce
+   - Taking the intended line as `cout << (++i || ++j && ++k);` with `i = j = k = 1`:
+   - `&&` binds tighter than `||`, so it is `++i || (++j && ++k)`.
+   - `++i` makes `i = 2`, which is true. Because `||` short-circuits, the right side is never evaluated.
+   - So `j` and `k` stay at `1`, the expression prints `1`, and the next line prints `211`.
+   - Full intended output: `1211`.
 
 6. **Output problem:** *[BREB Assistant Programmer 18.02.2023 (ET: N/A)]*
 ```c
@@ -3713,6 +3780,16 @@ printf("%d", a);
 return 0;
 }
 ```
+
+   Answer: Output is `57`.
+
+   Step-by-step
+   - `5 * p` promotes the integer 5 to float, giving `5 × 10.5 = 52.5`.
+   - `52.5 + 5.0 = 57.5`.
+   - Assigning a float to an `int` truncates toward zero — the fractional part is discarded, not rounded.
+   - So `a = 57`, and `printf("%d", a)` prints `57`.
+
+   - Note the difference: truncation gives 57, whereas rounding would have given 58. C assignment always truncates.
 
 7. **Explain following program while part in step for the input 1221 and 3456 and also write the output of the program. (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয় নি!!)** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
@@ -3737,6 +3814,33 @@ int main() {
 ```
 *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 464 (ET: BUET)]*
 
+   Answer: The program reverses the digits of the input and checks whether the reversed value equals the original — that is, it tests for a palindrome number.
+
+   Explanation of lines 7 to 11 (the while block)
+   - Line 7 `while (n != 0)` — keep looping as long as digits remain in `n`.
+   - Line 8 `remainder = n % 10` — take the last digit of `n`.
+   - Line 9 `reversed = reversed * 10 + remainder` — shift the digits already collected one place to the left, then append the new digit at the units place.
+   - Line 10 `n /= 10` — integer division removes the last digit, shrinking `n` by one digit per pass.
+   - Line 11 closes the loop; the loop ends when `n` becomes 0.
+
+   Trace for input `1221`
+
+   | Pass | n | remainder | reversed |
+   |---|---|---|---|
+   | 1 | 1221 | 1 | 0×10 + 1 = 1 |
+   | 2 | 122 | 2 | 1×10 + 2 = 12 |
+   | 3 | 12 | 2 | 12×10 + 2 = 122 |
+   | 4 | 1 | 1 | 122×10 + 1 = 1221 |
+   | end | 0 | — | 1221 |
+
+   - `original = 1221` and `reversed = 1221`, so the output is `1221 is a palindrome.`
+
+   Trace for input `3456`
+   - `reversed` becomes 6, 65, 654, then 6543.
+   - `3456 != 6543`, so the `if` fails. The code as printed has no `else`, so nothing is printed at all.
+
+   - The program also has no closing brace or `return 0;` in the excerpt, so it would not compile as shown.
+
 10. **C programming output problem.** *[Teletalk Assistant Manager (IT) 2023 compact it 468 (ET: N/A)]*
 
 11. **What is the output of code snippet?** *[BICIC Assistant Programmer 2022 compact it 631 (ET: BUET)]*
@@ -3753,6 +3857,21 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+    Answer: Output is
+
+    ```
+    x is greater than y
+    ```
+
+    Step-by-step
+    - `x, y = 8, 4` is tuple unpacking, so `x = 8` and `y = 4`.
+    - The condition `x < y` tests `8 < 4`, which is False.
+    - Control moves to the `else` branch, so `st = "x is greater than y"`.
+    - `print(st)` writes that string.
+    - `if __name__ == "__main__":` is true when the file is run directly, so `main()` is called.
+
+    - The `__name__` guard exists so that the code does not run automatically when this file is imported as a module by another program.
 
 13. **Output Tracing:** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 657 (ET: N/A)]*
 A)
@@ -3771,6 +3890,26 @@ for (i=0; i<9; i++) {
 }
 ```
 
+    Answer:
+
+    (A) Output is `Devel`, with `len = 5`.
+    - Placing `'\0'` at index 5 makes it the new end of the string, so `printf("%s")` and `strlen()` both stop there.
+
+    (B) Output is
+    ```
+    0
+    1
+    2
+    3
+    4
+    6
+    7
+    8
+    ```
+    - `continue` skips the rest of the loop body for that iteration and jumps straight to `i++`.
+    - So when `i` equals 5 the `printf` is skipped, but the loop itself keeps running.
+    - This differs from `break`, which would have ended the loop entirely and printed only 0 to 4.
+
 14. **Find the output of the following program:** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 ```c
 #include<stdio.h>
@@ -3783,6 +3922,18 @@ int main() {
 }
 ```
 
+    Answer: On a typical GCC compiler the output is `36 63`.
+
+    Step-by-step (as GCC evaluates it)
+    - Start: `a = 10`, `b = 25`.
+    - `a = b++ + a++` → uses the old values `25 + 10 = 35`, and both are incremented as side effects. After the assignment `a = 35` and `b = 26`. Note the `a++` side effect is overwritten by the assignment to `a`.
+    - `b = ++b + ++a` → `++b` makes `b = 27` and yields 27; `++a` makes `a = 36` and yields 36. So `b = 27 + 36 = 63`.
+    - Output: `36 63`.
+
+    Important caveat
+    - The statement `a = b++ + a++` modifies `a` twice between two sequence points — once by `a++` and once by the assignment. In C this is undefined behaviour, so a different compiler may legitimately print a different result.
+    - Exam papers expect the GCC answer, but the correct engineering comment is that such code should never be written.
+
 15. **Find the output of the following program:** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 ```c
 #include<stdio.h>
@@ -3793,6 +3944,17 @@ int main() {
     return 0;
 }
 ```
+
+    Answer: Output is `3 5 7`.
+
+    Step-by-step
+    - `a++` is post-increment, so it yields the current value `2` for the expression and only afterwards makes `a` become `3`.
+    - `c = 2 + 5 = 7`.
+    - `b` is never modified, so it stays `5`.
+    - Final values: `a = 3`, `b = 5`, `c = 7`.
+
+    - Contrast with pre-increment: had the code been `c = ++a + b`, then `a` would become 3 first and `c` would be `8`.
+    - Unlike question 14, this statement is well defined, because `a` is modified only once.
 
 16. **What will be the output of the program?** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
 ```c
@@ -3807,6 +3969,17 @@ void main() {
 }
 ```
 
+    Answer: Output is `3, 2, 15`.
+
+    Step-by-step
+    - Initial array: `a = {5, 1, 15, 20, 25}`.
+    - `i = ++a[1]` — pre-increment makes `a[1]` become `2`, and that new value is assigned, so `i = 2`. Array is now `{5, 2, 15, 20, 25}`.
+    - `j = a[1]++` — post-increment yields the current value `2`, so `j = 2`, and afterwards `a[1]` becomes `3`. Array is `{5, 3, 15, 20, 25}`.
+    - `m = a[i++]` — post-increment yields `i = 2` for the subscript, so `m = a[2] = 15`, and afterwards `i` becomes `3`.
+    - Final: `i = 3`, `j = 2`, `m = 15`.
+
+    - Note also that `void main()` is non-standard; the correct signature is `int main(void)`.
+
 17. **What is the output of the following code?** *[NWPGCL Junior Assistant Manager (IT) 2022 compact it 731 (ET: N/A)]*
 ```c
 #include <stdio.h>
@@ -3817,6 +3990,17 @@ int main() {
     return 0;
 }
 ```
+
+    Answer: On GCC the output is `2 2 2`, but the code is undefined behaviour and the answer is compiler dependent.
+
+    Why the result is not reliable
+    - The C standard does not fix the order in which function arguments are evaluated. A compiler may evaluate them left to right, right to left, or in any order.
+    - Worse, `a` is modified twice (by `++a` and `a++`) within one expression with no sequence point in between. The standard explicitly calls this undefined behaviour.
+    - GCC typically evaluates the arguments right to left: `a++` yields 1 and makes `a = 2`; then `a` reads as 2; then `++a` makes `a = 3` and yields... yet the printed values come out as `2 2 2` on common builds.
+
+    The correct answer in an exam
+    - State that the output is undefined behaviour, mention that GCC prints `2 2 2`, and note that the expression should be split into separate statements to be well defined.
+    - The declared function `isLeapYear` is never defined or called, which is harmless but pointless here.
 
 18. **Output programs:** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)], [Water Supply and Sewerage Authority (WASA); Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
 ```c
@@ -3833,6 +4017,20 @@ int main() {
 }
 ```
 
+    Answer: Output is `16`.
+
+    Recursion trace
+    - `fun(2)` → `n != 4`, so it returns `2 * fun(3)`
+    - `fun(3)` → `n != 4`, so it returns `2 * fun(4)`
+    - `fun(4)` → base case reached, returns `4`
+
+    Unwinding the calls
+    - `fun(4) = 4`
+    - `fun(3) = 2 × 4 = 8`
+    - `fun(2) = 2 × 8 = 16`
+
+    - The recursion depth is 3, and the base case `n == 4` is what stops it. If `fun(5)` were called instead, `n` would never equal 4 and the recursion would run until the stack overflowed.
+
 19. **Write down the output from following statement:** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 758 (ET: N/A)]*
 ```c
 #include <stdio.h>
@@ -3844,6 +4042,30 @@ void main() {
     printf("%d", i);
 }
 ```
+
+    Answer: Output is `30`.
+
+    Step 1 - compute y
+    - `y = 6 + 3*3/5`. Multiplication and division bind tighter than addition, and both are left-associative.
+    - `3*3 = 9`, then `9/5 = 1` by integer division.
+    - `y = 6 + 1 = 7`.
+
+    Step 2 - understand what x*x expands to
+    - `#define` is a plain textual macro with no parentheses, so `x*x` expands literally to:
+    - `9+2/4*3-2*4+(5-4)*3 * 9+2/4*3-2*4+(5-4)*3`
+    - This is NOT the square of the macro's value. Only the last term of the first copy and the first term of the second copy get multiplied together.
+
+    Step 3 - evaluate the expanded expression
+    - `2/4 = 0` (integer division), so `2/4*3 = 0`.
+    - First part: `9 + 0 − 8 + (1)*3*9` — here `(5-4)*3 * 9 = 1×3×9 = 27`.
+    - Running total: `9 + 0 − 8 + 27 = 28`.
+    - Second part: `+ 0 − 8 + 3` → `28 + 0 − 8 + 3 = 23`.
+    - So `x*x = 23`.
+
+    Step 4 - final answer
+    - `i = 23 + 7 = 30`.
+
+    - Moral of the question: always wrap a macro body in parentheses — `#define x (9+2/4*3-2*4+(5-4)*3)` — otherwise textual substitution produces surprises like this one.
 
 20. **(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 783 (ET: N/A)]*
 ```c
@@ -3857,6 +4079,40 @@ int main{
     return 0
 }
 ```
+
+    Answer:
+
+    Errors found
+
+    | Line | Error | Correction |
+    |---|---|---|
+    | 1 | Missing `#` before `include` | `#include<stdio.h>` |
+    | 2 | Missing `()` after `main` | `int main()` |
+    | 3 | Missing semicolon | `int i, sum = 0;` |
+    | 4 | Commas used instead of semicolons in the `for` header; stray `{` after `;` | `for(i=1; i<=10; i++) {` |
+    | 5 | Missing semicolon | `sum = sum + i;` |
+    | 7 | Format string not quoted, `%` missing before `d`, no semicolon | `printf("Sum of number = %d", sum);` |
+    | 8 | Missing semicolon | `return 0;` |
+
+    Corrected program
+    ```c
+    #include <stdio.h>
+
+    int main() {
+        int i, sum = 0;
+        for (i = 1; i <= 10; i++) {
+            sum = sum + i;
+        }
+        printf("Sum of number = %d", sum);
+        return 0;
+    }
+    ```
+
+    Output
+    ```
+    Sum of number = 55
+    ```
+    - The loop adds 1 through 10, and `10 × 11 / 2 = 55`.
 
 21. **Find the Output of following C Program:** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 ```c
@@ -3875,6 +4131,20 @@ int main(){
     return 0;
 }
 ```
+
+    Answer: Output is `146`.
+
+    The function returns the sum of `x[0]` through `x[i]`, and prints each partial sum on the way back up the recursion.
+
+    Call trace with `y = {1, 3, 2, 8}` and `i = 2`
+    - `function(y, 2)` → `s = y[2] = 2`, and since `i > 0` it calls `function(y, 1)` first.
+    - `function(y, 1)` → `s = y[1] = 3`, calls `function(y, 0)`.
+    - `function(y, 0)` → `s = y[0] = 1`, `i` is not greater than 0, so it prints `1` and returns 1.
+    - Back in `function(y, 1)`: `s = 3 + 1 = 4`, prints `4`, returns 4.
+    - Back in `function(y, 2)`: `s = 2 + 4 = 6`, prints `6`, returns 6.
+
+    - The prints happen while unwinding, so the order is `1`, then `4`, then `6` — giving `146` with no separators.
+    - `y[3] = 8` is never touched, because the call started at index 2.
 
 22. **Write Output from below code:** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819 (ET: BUET)]*
 ```c
@@ -3897,6 +4167,36 @@ int main() {
 }
 ```
 
+    Answer: Output is
+
+    ```
+    Bangladesh
+     nutiladTc
+    ```
+
+    First loop
+    - Prints `s[0]` to `s[9]`, which is `Bangladesh`.
+    - `++s1` runs 10 times, so afterwards `s1` points to `s + 10`, the space after "Bangladesh".
+
+    Second loop — the tricky part
+    - Both `i` and `s1` advance on every pass, so the effective index into the original string increases by 2 each time.
+    - Pass `i`: it prints `s1[i]`, where `s1` currently equals `s + 10 + i`. So the character printed is `s[10 + 2i]`.
+
+    | i | index into s | character |
+    |---|---|---|
+    | 0 | 10 | (space) |
+    | 1 | 12 | n |
+    | 2 | 14 | u |
+    | 3 | 16 | t |
+    | 4 | 18 | i |
+    | 5 | 20 | l |
+    | 6 | 22 | a |
+    | 7 | 24 | d |
+    | 8 | 26 | T |
+    | 9 | 28 | c |
+
+    - Result: `" nutiladTc"` — every second character, skipping one each time.
+
 23. **Fill in the gape and find output of the following program:** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823 (ET: BUET)]*
 ```c
 #include<stdio.h>
@@ -3915,6 +4215,24 @@ int main(){
 }
 ```
 
+    Answer: The program computes `n` raised to the power `r`, that is `nʳ`.
+
+    How it works
+    - `sum` starts at 1, which is the correct value for `r = 0`.
+    - The loop multiplies `sum` by `n` exactly `r` times, so `sum` ends up as `n × n × ... × n` (`r` factors).
+
+    Sample outputs
+
+    | Input (n r) | Calculation | Output |
+    |---|---|---|
+    | 2 3 | 2 × 2 × 2 | 8 |
+    | 5 2 | 5 × 5 | 25 |
+    | 3 4 | 3 × 3 × 3 × 3 | 81 |
+    | 7 0 | loop never runs | 1 |
+
+    - Time complexity `O(r)`. Fast exponentiation by squaring would reduce it to `O(log r)`.
+    - Limitation: `int` overflows quickly — `2³¹` already exceeds the range, so `long long` would be safer.
+
 24. **Find out program output of f(\text{arr}, 2), f(\text{arr}, 3), f(\text{arr}, 5), f(\text{arr}, 8). \text{arr}[] = [0, 1, 1, 0, 1, 1, 0, 1]** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 861-862 (ET: N/A)]*
 ```c
 int f(int *arr, int arrSize) {
@@ -3925,6 +4243,19 @@ int f(int *arr, int arrSize) {
     return r;
 }
 ```
+
+    Answer: The function returns the XOR of the first `arrSize` elements. With only 0s and 1s in the array, that equals 1 when the count of 1s is odd and 0 when it is even — this is the parity bit.
+
+    | Call | Elements XORed | Count of 1s | Output |
+    |---|---|---|---|
+    | f(arr, 2) | 0 ^ 1 | 1 (odd) | 1 |
+    | f(arr, 3) | 0 ^ 1 ^ 1 | 2 (even) | 0 |
+    | f(arr, 5) | 0 ^ 1 ^ 1 ^ 0 ^ 1 | 3 (odd) | 1 |
+    | f(arr, 8) | 0 ^ 1 ^ 1 ^ 0 ^ 1 ^ 1 ^ 0 ^ 1 | 5 (odd) | 1 |
+
+    - XOR properties used: `x ^ 0 = x` and `x ^ x = 0`, so pairs of equal bits cancel out.
+    - `*(arr + i)` is pointer arithmetic and is exactly equivalent to `arr[i]`.
+    - Time complexity `O(n)`, space `O(1)`.
 
 25. **Output of the following program:** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 868 (ET: BUET)]*
 ```c
@@ -3945,6 +4276,30 @@ int main() {
 }
 ```
 
+    Answer: Output is
+
+    ```
+    5
+    8
+    9
+    11
+    5
+    ```
+
+    Why `y` accumulates across calls
+    - `y` is declared `static`, so it is created once and keeps its value between calls. Every call adds its own `x` to the same shared `y`.
+
+    Call trace
+    - `recursion(5)` → `y = 0 + 5 = 5`, prints `5`, then calls `recursion(3)` and `recursion(2)`.
+    - `recursion(3)` → `y = 5 + 3 = 8`, prints `8`, calls `recursion(1)` and `recursion(0)`.
+    - `recursion(1)` → `y = 8 + 1 = 9`, prints `9`, calls `recursion(-1)` and `recursion(-2)`, both of which return 1 immediately. So it returns `2`.
+    - `recursion(0)` → `x <= 0`, returns `1` with no printing.
+    - So `recursion(3) = 2 + 1 = 3`.
+    - `recursion(2)` → `y = 9 + 2 = 11`, prints `11`, calls `recursion(0)` and `recursion(-1)`, both returning 1. So it returns `2`.
+    - Final: `recursion(5) = 3 + 2 = 5`, printed last.
+
+    - Key learning point: a `static` local variable is not reset on each call, which is what produces the running total 5, 8, 9, 11.
+
 26. **Find the output of following program:** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875 (ET: BUET)]*
 ```c
 int i, j, p, sum;
@@ -3959,6 +4314,31 @@ for(i=-1,p=0; i<=10; i=i+2) {
 printf("\n Outsite Loop, i=%d, p=%d, sum=%d\n", i, p, sum);
 return 0;
 ```
+
+    Answer: Output is
+
+    ```
+    i=-1, p=1, sum=0
+    i=1, p=1, sum=2
+    i=3, p=9, sum=14
+    i=5, p=25, sum=44
+
+     Outsite Loop, i=7, p=49, sum=44
+    ```
+
+    Trace
+
+    | i | p = i×i | i > 5 ? | sum = sum + (i + p) | Printed? |
+    |---|---|---|---|---|
+    | −1 | 1 | No | 0 + (−1 + 1) = 0 | Yes |
+    | 1 | 1 | No | 0 + (1 + 1) = 2 | Yes |
+    | 3 | 9 | No | 2 + (3 + 9) = 14 | Yes |
+    | 5 | 25 | No | 14 + (5 + 25) = 44 | Yes |
+    | 7 | 49 | Yes → break | not updated | No |
+
+    - The critical detail is that `p = i*i` executes before the `break` check, so `p` becomes 49 even though the loop exits on that pass.
+    - `sum` stays at 44 because `break` fires before the sum line.
+    - After `break`, `i` retains the value 7 outside the loop.
 
 27. **Output of the following program:** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 878-879 (ET: BUET)]*
 ```c
@@ -3988,6 +4368,21 @@ int main () {
 }
 ```
 
+    Answer: Output is `11 22 34 39`.
+
+    What the function does
+    - `func` is bubble sort in ascending order — it repeatedly compares adjacent pairs and swaps them when they are out of order.
+    - `n = sizeof(arr)/sizeof(arr[0]) = 16/4 = 4`.
+
+    Pass-by-pass trace starting from `{39, 22, 11, 34}`
+    - Pass 1: (39,22) swap → `22,39,11,34`; (39,11) swap → `22,11,39,34`; (39,34) swap → `22,11,34,39`
+    - Pass 2: (22,11) swap → `11,22,34,39`; (22,34) no swap
+    - Pass 3: (11,22) no swap
+    - Final array: `11 22 34 39`
+
+    - The array is modified in place, because in C an array parameter decays to a pointer and the function works on the caller's memory directly.
+    - Time complexity `O(n²)`.
+
 28. **Find Output:** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 911-912 (ET: BUET)]*
 ```c
 #include <stdio.h>
@@ -4007,6 +4402,30 @@ int main() {
 }
 ```
 
+    Answer: Output is
+
+    ```
+    i=0 x=3 sum=3
+    i=4 x=7 sum=14
+    i=6 x=9 sum=29
+    Out site loop:
+     i=8 x=11 sum=29
+    ```
+
+    Trace
+
+    | i | x = i+3 | i == 2 ? | i >= 8 ? | sum | Printed? |
+    |---|---|---|---|---|---|
+    | 0 | 3 | No | No | 0 + 3 = 3 | Yes |
+    | 2 | 5 | Yes → continue | — | unchanged | No |
+    | 4 | 7 | No | No | 3 + 11 = 14 | Yes |
+    | 6 | 9 | No | No | 14 + 15 = 29 | Yes |
+    | 8 | 11 | No | Yes → break | unchanged | No |
+
+    - Two important details: `x = i + 3` runs before both checks, so `x` becomes 11 on the final pass even though `break` fires.
+    - `continue` at `i = 2` skips the printing but the loop keeps running; `break` at `i = 8` ends it entirely.
+    - After the loop `i` remains 8, `x` remains 11, and `sum` stays at 29.
+
 29. **Find the output of the following program. You must show each staps.** *[NRCC Assistant Programmer 2021 compact it 931 (ET: N/A)]*
 ```c
 #include<stdio.h>
@@ -4025,6 +4444,25 @@ int main(){
 }
 ```
 
+    Answer: Output is `i=5, count=10j=5, x=30`.
+
+    Step-by-step trace
+
+    | Iteration | i | count | x = x + i + count | i after ++ | count after |
+    |---|---|---|---|---|---|
+    | 1 | 0 | 0 | 0 + 0 + 0 = 0 | 1 | 2 |
+    | 2 | 1 | 2 | 0 + 1 + 2 = 3 | 2 | 4 |
+    | 3 | 2 | 4 | 3 + 2 + 4 = 9 | 3 | 6 |
+    | 4 | 3 | 6 | 9 + 3 + 6 = 18 | 4 | 8 |
+    | 5 | 4 | 8 | 18 + 4 + 8 = 30 | 5 | 10 |
+
+    - The loop ends when `i` reaches 5, because `j > i` becomes `5 > 5`, which is false.
+    - The `if (i == 7) break;` never fires, since the loop already stops at `i = 5`.
+    - Final values: `i = 5`, `count = 10`, `x = 30`, and `j` is still 5.
+
+    - Note a bug in the code: the second `printf` prints `i` where it says `j=%d`. That is why the output shows `j=5` — which coincidentally matches the real `j`, since `i` also ended at 5.
+    - Also, neither `printf` has a newline, so the two lines run together as one.
+
 30. **Find out the output of the following program.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 ```c
 #include<stdlib.h>
@@ -4040,6 +4478,26 @@ int main(){
 }
 ```
 
+    Answer: Output is `ello` followed by one invisible null character.
+
+    Step-by-step
+    - `"Hello\0 World!!"` contains an explicit `\0` after "Hello". The array still holds all 14 characters plus the final terminator, but `strlen` stops at the first `\0`.
+    - So `length = 5`.
+    - `s` starts pointing at `string[0]`.
+    - `*++s` is pre-increment, so `s` moves first and then the character is read. That means the loop never prints `string[0]`.
+
+    | i | s points to | Character printed |
+    |---|---|---|
+    | 0 | string[1] | e |
+    | 1 | string[2] | l |
+    | 2 | string[3] | l |
+    | 3 | string[4] | o |
+    | 4 | string[5] | `\0` (nothing visible) |
+
+    - Visible output: `ello`.
+    - Two traps in one question — the embedded `\0` shortening `strlen`, and `*++s` skipping the first character.
+    - The program also omits `<stdio.h>` while calling `printf`, which a strict compiler would flag.
+
 31. **After compilation and execution, what will be output in the following code:** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
 
 32. **Write down the output of following program:** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
@@ -4047,6 +4505,49 @@ int main(){
 33. **What will be the output in C and java code? (i) C program:** *[Combined 4 Banks Assistant Programmer 2020 compact it 1003 (ET: DU)]*
 
 34. **a) Using Pseudocode give an example of run time error.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035-1036 (ET: BUET)]*
+
+    Answer: A run-time error is an error that the compiler cannot detect. The program compiles successfully but fails or crashes while it is running.
+
+    Example 1 — division by zero
+    ```
+    BEGIN
+        READ a
+        READ b
+        result = a / b        // crashes when b = 0
+        PRINT result
+    END
+    ```
+    - The syntax is perfectly valid, so compilation succeeds. But if the user enters `b = 0`, the program crashes with a divide-by-zero error at run time.
+
+    Example 2 — array index out of bounds
+    ```
+    BEGIN
+        DECLARE arr[5]
+        FOR i = 0 TO 5 DO      // should be 0 TO 4
+            arr[i] = i
+        END FOR
+    END
+    ```
+    - Writing to `arr[5]` touches memory outside the array and causes a segmentation fault or silent corruption.
+
+    Example 3 — null pointer dereference
+    ```
+    BEGIN
+        SET ptr = NULL
+        PRINT value at ptr     // crashes here
+    END
+    ```
+
+    Types of errors compared
+
+    | Error type | When detected | Example |
+    |---|---|---|
+    | Syntax error | Compile time | Missing semicolon |
+    | Semantic error | Compile time | Assigning a string to an int |
+    | Run-time error | While running | Division by zero, array overflow |
+    | Logical error | Never — the result is just wrong | Using `+` instead of `-` |
+
+    - Run-time errors are handled with input validation, bounds checking, and exception handling (`try...catch` in languages that support it).
 
 35. **Find the Output:** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
 
@@ -4057,6 +4558,34 @@ For(i=100; i<=0; --i)
     Printf("%d",i);
 ```
 
+    Answer: The code has both syntax errors and a logic error.
+
+    Syntax errors
+    - `Unsigned` should be lowercase `unsigned` — C keywords are case sensitive.
+    - `inti` is missing a space; it should be `int i`.
+    - The declaration has no terminating semicolon.
+    - `For` should be lowercase `for`.
+    - `Printf` should be lowercase `printf`.
+
+    Logic error
+    - The condition is `i <= 0` while `i` starts at 100, so the condition is false immediately and the loop body never runs. It should be `i >= 0` or `i > 0`.
+
+    A second, subtler trap
+    - If the condition were corrected to `i >= 0` with an `unsigned int`, the loop would become infinite. An unsigned value can never be negative, so after `i = 0` the decrement wraps around to a huge positive number and `i >= 0` stays true forever.
+    - Either use a signed `int` with `i >= 0`, or keep `unsigned` and write `i > 0`.
+
+    Corrected version
+    ```c
+    #include <stdio.h>
+    int main(void) {
+        unsigned int i;
+        for (i = 100; i > 0; --i)
+            printf("%d ", i);
+        return 0;
+    }
+    ```
+    - This prints 100 down to 1.
+
 37. **What is the output of following code?** *[Bangladesh Competition Commission Programmer 2019 compact it 1062 (ET: DU)]*
 ```c
 #include<stdio.h>
@@ -4066,6 +4595,28 @@ void main () {
     printf("%s", f[2]+1);
 }
 ```
+
+    Answer: Output is
+
+    ```
+    ssi
+    idan
+    ```
+
+    Explanation
+    - `f` is an array of four pointers, each pointing to the first character of a string literal.
+    - `f[1]` points to `"Messi"`. Adding 2 moves the pointer forward by two characters, so it now points at the first `'s'`. `printf("%s")` prints from there to the terminator, giving `ssi`.
+    - `f[2]` points to `"Zidan"`. Adding 1 skips the `'Z'`, so printing from there gives `idan`.
+
+    | Expression | Points to | Printed |
+    |---|---|---|
+    | f[1] | M-e-s-s-i | Messi |
+    | f[1]+2 | s-s-i | ssi |
+    | f[2] | Z-i-d-a-n | Zidan |
+    | f[2]+1 | i-d-a-n | idan |
+
+    - The variable `str[20]` is declared but never used.
+    - `void main()` is non-standard; `int main(void)` is correct.
 
 38. **Find the output of a program:** *[DESCO Assistant Engineer (CSE) 2019 compact it 1117 (ET: BUET)]*
 ```c
@@ -4089,6 +4640,33 @@ int fun(char *s, char *sup) {
 }
 ```
 
+    Answer: The program is broken. It does not produce a meaningful output and, as written, runs until it crashes.
+
+    Errors in the code
+    - `if (s == "\0")` compares a pointer with the address of a string literal, not the character it points to. It is essentially never true. The correct test is `if (*s == '\0')`.
+    - `else if (s == sup)` compares two pointers, not the characters they point to. Since `s` and `sup` are different arrays, this is never true either. The correct test is `else if (*s == *sup)`.
+    - `fun` is declared to return `int` but the first branch does a bare `return;` with no value.
+    - `fun` is called in `main` before it is declared, so there is no prototype in scope.
+    - `gets()` is dangerous and was removed from the C standard in C11; `fgets()` should be used.
+
+    What actually happens
+    - Both comparisons are always false, so control always falls into the `else` branch.
+    - It prints the string from the current position, then recurses with `s+1` and never stops at the terminator — it keeps walking past the end of the array until the program segfaults.
+
+    Corrected version — prints each suffix of `s` that does not match `sup` character by character
+    ```c
+    void fun(char *s, char *sup) {
+        if (*s == '\0')
+            return;
+        else if (*s == *sup)
+            fun(s + 1, sup + 1);
+        else {
+            printf("%s\n", s);
+            fun(s + 1, sup);
+        }
+    }
+    ```
+
 39. **Find the output of the code:** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120 (ET: BUET)]*
 ```c
 #include <stdio.h>
@@ -4100,6 +4678,27 @@ void main() {
     printf("%d",i);
 }
 ```
+
+    Answer: Output is `30`.
+
+    Step 1 - value of y
+    - `y = 6 + 3*3/5` → `3*3 = 9`, then `9/5 = 1` (integer division), so `y = 6 + 1 = 7`.
+
+    Step 2 - macro substitution
+    - `#define` performs plain text replacement with no parentheses added, so `x*x` becomes:
+    - `9+2/4*3-2*4+(5-4)*3 * 9+2/4*3-2*4+(5-4)*3`
+    - Only the trailing `(5-4)*3` of the first copy and the leading `9` of the second copy actually multiply together.
+
+    Step 3 - evaluate
+    - `2/4 = 0`, so `2/4*3 = 0` in both copies.
+    - `(5-4)*3*9 = 1 × 3 × 9 = 27`
+    - Expression: `9 + 0 − 8 + 27 + 0 − 8 + 3 = 23`
+    - So `x*x = 23`.
+
+    Step 4 - final
+    - `i = 23 + 7 = 30`.
+
+    - The lesson: a macro must be written as `#define x (9+2/4*3-2*4+(5-4)*3)`. With the parentheses, `x*x` would correctly be `(-2)*(-2) = 4` and `i` would be `11` instead.
 
 40. **What is the output of the following program?** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
 ```c
@@ -4114,6 +4713,18 @@ int main() {
 }
 ```
 
+    Answer: Output is `30`. This is the same problem as the previous question.
+
+    Summary of the working
+    - `y = 6 + 3*3/5 = 6 + 9/5 = 6 + 1 = 7` (integer division truncates 1.8 to 1).
+    - `x*x` expands textually, not as a squared value:
+      `9+2/4*3-2*4+(5-4)*3 * 9+2/4*3-2*4+(5-4)*3`
+    - With `2/4 = 0` and `(5-4)*3*9 = 27`, the expression evaluates to `9 + 0 − 8 + 27 + 0 − 8 + 3 = 23`.
+    - `i = 23 + 7 = 30`.
+
+    - This question is a standard test of two things at once — macro substitution being textual, and integer division truncating.
+    - `printf` is used without including `<stdio.h>`, which a strict compiler would reject.
+
 41. **Find the output of the following code:** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160 (ET: BUET)]*
 ```c
 int a=3; int b=10;
@@ -4122,6 +4733,13 @@ if(a>b)
 else
     printf("B");
 ```
+
+    Answer: Output is `B`.
+
+    Reason
+    - The condition `a > b` tests `3 > 10`, which is false.
+    - So the `if` branch is skipped and the `else` branch runs, printing `B`.
+    - Only one of the two branches ever executes.
 
 42. **Find the output of the following code:** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160-1161 (ET: BUET)]*
 ```c
@@ -4133,6 +4751,20 @@ while(i!=n) {
     i++;
 }
 ```
+
+    Answer: Output is `012`.
+
+    Trace
+
+    | i | i != n ? | i == 3 ? | Printed | i after |
+    |---|---|---|---|---|
+    | 0 | 0 != 3, true | No | 0 | 1 |
+    | 1 | 1 != 3, true | No | 1 | 2 |
+    | 2 | 2 != 3, true | No | 2 | 3 |
+    | 3 | 3 != 3, false | — | — | loop ends |
+
+    - The `if (i == 3) continue;` line is dead code — the loop condition already stops the loop the moment `i` reaches 3, so `continue` is never reached.
+    - Had the condition been `i != 5`, the `continue` at `i == 3` would have skipped the `i++` as well and caused an infinite loop. That is the classic danger of `continue` inside a `while` loop.
 
 43. **What is the output of following program?** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1166 (ET: N/A)]*
 
@@ -4156,6 +4788,19 @@ int main() {
 }
 ```
 
+   Answer:
+
+   (i) Infinite loop — the program prints `10` forever.
+   - `for(;;)` has an empty condition. In C an omitted condition is treated as permanently true, so the loop never ends.
+   - `n` is never changed inside the loop, so the same value is printed endlessly: `10101010...`
+   - The `return 0;` is unreachable. The program must be stopped externally with Ctrl+C.
+   - `for(;;)` and `while(1)` are equivalent ways of writing an infinite loop.
+
+   (ii) Output is `1`.
+   - Iteration 1: `i` is 2, non-zero, so the conditional picks `--i`. That makes `i = 1` and yields 1, which is true, so the body prints `i` — now `1`.
+   - Iteration 2: `i` is 1, non-zero, so `--i` runs again. `i` becomes 0 and the expression yields 0, which is false, so the loop ends before printing.
+   - `j++` never executes, because `i` never reaches 0 while the condition is being tested with `i` non-zero.
+
 45. **Find the output following program:** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1170 (ET: N/A)]*
 ```c
 int main() {
@@ -4166,6 +4811,32 @@ int main() {
         break;
 }
 ```
+
+    Answer: The program does not compile. There is no output.
+
+    Error
+    - `break` can only appear inside a loop (`for`, `while`, `do-while`) or inside a `switch` statement. Here it sits in the `else` branch of a plain `if`, with no enclosing loop.
+    - GCC reports: `error: break statement not within loop or switch`.
+
+    What the condition would have evaluated to
+    - `a && b > c` is parsed as `a && (b > c)`, because relational operators bind tighter than `&&`.
+    - `b > c` is `2 > 1`, which is true (1).
+    - `a` is 5, which is non-zero, so also true.
+    - `true && true` is true, so the `if` branch would have run and printed `Bangladesh`.
+
+    Corrected version
+    ```c
+    #include <stdio.h>
+    int main(void) {
+        int a = 5, b = 2, c = 1;
+        if (a && b > c)
+            printf("Bangladesh");
+        else
+            printf("Not Bangladesh");
+        return 0;
+    }
+    ```
+    - Output: `Bangladesh`.
 
 46. **Find the output of following program.** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
    i)
@@ -4192,6 +4863,25 @@ int main() {
 }
 ```
 
+   Answer:
+
+   (i) Output is `Digi`, and `n` holds `18`.
+   - `strlen` is called BEFORE the `'\0'` is inserted, so `n = 18`, the full length of `"Digital Bangladesh"`.
+   - Writing `'\0'` at index 4 replaces `'t'` and becomes the new string terminator.
+   - `printf("%s")` therefore stops after `D i g i`, printing `Digi`.
+   - The order of the two statements is the whole point of the question — swapping them would give `n = 4`.
+
+   (ii) Output is
+   ```
+   0
+   1
+   2
+   4
+   ```
+   - `continue` skips the `printf` when `i` equals 3, then jumps to `i++` and carries on.
+   - The loop still completes all five iterations; only the printing for `i = 3` is skipped.
+   - With `break` instead, the output would have been just `0 1 2`.
+
 47. **What will be the output of following program?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190 (ET: N/A)]*
 ```c
 #include <stdio.h>
@@ -4202,6 +4892,25 @@ int main() {
     return 0;
 }
 ```
+
+    Answer: Output is `0 0 1 3 1`.
+
+    Evaluation of `m = (i++ && j++ && k++) || l++`
+    - `i++` yields the old value `−1`. In C anything non-zero is true, so this is true, and `i` becomes `0`.
+    - `j++` yields `−1`, true, and `j` becomes `0`.
+    - `k++` yields `0`, which is false, and `k` becomes `1`. The `&&` chain is therefore false.
+    - `false || l++` still evaluates the right side. `l++` yields `2`, true, and `l` becomes `3`.
+    - `m = 1`.
+
+    | Variable | Final value |
+    |---|---|
+    | i | 0 |
+    | j | 0 |
+    | k | 1 |
+    | l | 3 |
+    | m | 1 |
+
+    - The two traps here: `−1` is true in C (only `0` is false), and post-increment yields the old value while still performing the increment.
 
 48. **Write output:** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1212 (ET: N/A)]*
 ```c
@@ -4217,6 +4926,14 @@ int main() {
 }
 ```
 
+    Answer: Output is `Bang`.
+
+    Explanation
+    - `"Bangladesh"` fills indices 0 to 9. Writing `'\0'` at index 4 replaces `'l'` with the terminator.
+    - `strlen(str1)` is now 4, and that value is stored in `str2`. Note `str2` is declared as a single `char`, not a string — storing 4 in it is legal but unusual, and it is never printed anyway.
+    - `printf("%s", str1)` stops at the first `'\0'`, so it prints `B a n g`.
+    - The remaining characters `ladesh` are still in memory but unreachable through string functions.
+
 49. **Write output:** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1212 (ET: N/A)]*
 ```c
 #include<stdio.h>
@@ -4231,6 +4948,21 @@ int main() {
 }
 ```
 
+    Answer: Output is `0 1 2 4 `.
+
+    Trace
+
+    | i | i == 3 ? | Action |
+    |---|---|---|
+    | 0 | No | prints `0 ` |
+    | 1 | No | prints `1 ` |
+    | 2 | No | prints `2 ` |
+    | 3 | Yes | `continue` — printing skipped |
+    | 4 | No | prints `4 ` |
+
+    - `continue` jumps straight to the increment step, so only the printing for `i = 3` is missed. The loop still runs to completion.
+    - In a `for` loop `continue` is safe, because the increment `++i` is part of the loop header and still executes. In a `while` loop the same code would skip the increment and hang.
+
 50. **Find output:** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
 ```cpp
 #include<stdio.h>
@@ -4242,6 +4974,22 @@ int main() {
 }
 ```
 
+    Answer: The program does not compile as written.
+
+    Compilation error
+    - `cout` is a C++ stream object declared in `<iostream>`, but only `<stdio.h>` is included and there is no `using namespace std;`.
+    - The compiler reports `'cout' was not declared in this scope`.
+
+    Output if the headers are fixed
+    - Correcting the includes and adding parentheses, the intended code is `cout << (++i || ++j && ++k);` followed by `cout << i << j << k;`.
+    - Precedence: `&&` binds tighter than `||`, so the expression is `++i || (++j && ++k)`.
+    - `++i` makes `i = 2`, which is true. Because `||` short-circuits, the right-hand side is never evaluated at all.
+    - So `j` and `k` remain `1`.
+    - First `cout` prints `1` (the boolean result), then the second prints `211`.
+    - Full output: `1211`.
+
+    - A second subtlety: without parentheses, `cout << ++i || ...` would actually parse as `(cout << ++i) || ...` because `<<` binds tighter than `||`. That is why the parentheses matter.
+
 51. **Find the mistake in the following program and write it correct form.** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 ```c
 unsigned int i;
@@ -4249,6 +4997,29 @@ for(i=100; i<=0; --i)
 printf("%d",i);
 return 0;
 ```
+
+    Answer:
+
+    Mistakes found
+    - Logic error — the condition `i <= 0` is false at the very start, since `i` begins at 100. The loop body never executes, so nothing is printed. It should be `i > 0`.
+    - The unsigned trap — if the condition were written as `i >= 0`, the loop would run forever. An `unsigned int` can never be negative, so after `i` reaches 0 the `--i` wraps around to 4,294,967,295 and the condition stays true.
+    - Format specifier mismatch — `%d` prints a signed int. For an `unsigned int` the correct specifier is `%u`.
+    - The code has no `#include <stdio.h>` and no `main()` function, so `printf` is undeclared and `return 0;` sits outside any function.
+
+    Corrected form
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        unsigned int i;
+        for (i = 100; i > 0; --i)
+            printf("%u ", i);
+        return 0;
+    }
+    ```
+
+    - This prints `100 99 98 ... 2 1` and stops cleanly at zero.
+    - If counting down to 0 inclusive is required, use a signed `int` with the condition `i >= 0`.
 
 52. **Find the output of a program.** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
 ```c
@@ -4262,6 +5033,24 @@ void main() {
 }
 ```
 
+    Answer: Output is `97 98 112 113 120 `.
+
+    Explanation
+    - `N - 2 = 5`, so the loop runs for `i = 0` to `4` — exactly the five characters of `"abpqx"`.
+    - `%d` prints the ASCII code of the character, not the character itself.
+    - Both `str[i]++` and `str[i]--` are post-operators, so the ORIGINAL value is printed and the change happens afterwards. That means the increment or decrement has no effect on what is displayed.
+
+    | i | i % 2 | Operation | Character | ASCII printed | Value after |
+    |---|---|---|---|---|---|
+    | 0 | 0 (false) | `str[0]--` | 'a' | 97 | 96 |
+    | 1 | 1 (true) | `str[1]++` | 'b' | 98 | 99 |
+    | 2 | 0 | `str[2]--` | 'p' | 112 | 111 |
+    | 3 | 1 | `str[3]++` | 'q' | 113 | 114 |
+    | 4 | 0 | `str[4]--` | 'x' | 120 | 119 |
+
+    - Key ASCII values: `'a' = 97`, `'b' = 98`, `'p' = 112`, `'q' = 113`, `'x' = 120`.
+    - Had pre-operators been used (`++str[i]`), the modified values 98, 99, 111, 114, 119 would have been printed instead.
+
 53. **Write output:** *[BCC Assistant Programmer 2017 compact it 1257 (ET: N/A)]*
 ```c
 #include <stdio.h>
@@ -4273,6 +5062,24 @@ int main() {
 }
 ```
 
+    Answer: Output is `-19, 0, 2, 0`.
+
+    Step-by-step evaluation of `m = ++i && ++j && ++k`
+    - `++i` — pre-increment makes `i = −19` and yields `−19`. Non-zero, so true. Continue.
+    - `++j` — pre-increment makes `j = 0` and yields `0`. Zero is false.
+    - `&&` short-circuits here: once an operand is false, the remaining operands are not evaluated at all.
+    - Therefore `++k` never runs, and `k` stays at its original value `2`.
+    - `m` receives the result of the whole expression, which is `0`.
+
+    | Variable | Final value | Why |
+    |---|---|---|
+    | i | −19 | incremented from −20 |
+    | j | 0 | incremented from −1 |
+    | k | 2 | unchanged, short-circuited |
+    | m | 0 | expression is false |
+
+    - Note that `−20` and `−19` are both true in C. Only exactly `0` is false, which is why the chain stopped at `j` and not at `i`.
+
 54. **Write output:** *[BCC Assistant Programmer 2017 compact it 1257-1258 (ET: N/A)]*
 ```c
 #include <stdio.h>
@@ -4283,6 +5090,26 @@ int main() {
     return 0;
 }
 ```
+
+    Answer: Output is `2, 1, 2`.
+
+    Breaking the statement into two halves
+
+    Left side: `*((a) ? &b : &a)`
+    - The condition `a` is `0`, which is false.
+    - So the conditional selects `&a` — the address of `a`.
+    - Dereferencing it gives `a` itself, so the left side is simply `a`.
+
+    Right side: `a ? b : c`
+    - Again `a` is `0`, false.
+    - So the conditional selects `c`, whose value is `2`.
+
+    Result
+    - The statement becomes `a = 2`.
+    - `b` and `c` are untouched, so they remain `1` and `2`.
+    - Output: `2, 1, 2`.
+
+    - The trick in this question is that the same condition `a` controls both sides, and the left side uses the conditional operator to choose which variable gets assigned — a legal but very unusual C idiom.
 
 55. **Write output:** *[BCC Assistant Programmer 2017 compact it 1258 (ET: N/A)]*
 ```c
@@ -4300,6 +5127,31 @@ int main() {
 }
 ```
 
+    Answer: The program does not compile. There is no output.
+
+    Error
+    - The controlling expression of a `switch` statement must have an integer type — `int`, `char`, `short`, `long` or an enum.
+    - Here `n` is declared `float`, which is not allowed.
+    - GCC reports: `error: switch quantity not an integer`. Clang says: `statement requires expression of integer type ('float' invalid)`.
+
+    Why floats are forbidden in a switch
+    - `switch` works by comparing the value against case labels for exact equality, and floating-point values cannot be compared reliably for exact equality because of rounding error. The standard therefore rules them out entirely.
+
+    Corrected version
+    ```c
+    #include <stdio.h>
+    int main(void) {
+        int n = 2;                  // changed from float to int
+        switch (n) {
+            case 2:  printf("Hi");    break;
+            default: printf("Hello");
+        }
+        return 0;
+    }
+    ```
+    - This compiles and prints `Hi`.
+    - Alternatively, keep the float and use an `if...else` chain instead of a `switch`.
+
 56. **Write output:** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
 ```c
 #include<stdio.h>
@@ -4311,6 +5163,23 @@ int main() {
     return 0;
 }
 ```
+
+    Answer: Output is `4`.
+
+    Why — the macro expands textually
+    - `max(i++, ++j)` becomes `(i++ > ++j ? i++ : ++j)`.
+    - Note that the arguments appear TWICE in the expansion, so their side effects can happen twice.
+
+    Step-by-step with `i = 1`, `j = 2`
+    - Evaluate the condition `i++ > ++j`:
+      - `i++` yields `1`, and `i` becomes `2`.
+      - `++j` makes `j` become `3` and yields `3`.
+      - `1 > 3` is false.
+    - The false branch `++j` is taken: `j` becomes `4` and yields `4`.
+    - So `k = 4`. Final state: `i = 2`, `j = 4`, `k = 4`.
+
+    - This is the classic argument against function-like macros with side effects — `j` was incremented twice from a single call.
+    - A real function `int max(int a, int b) { return a > b ? a : b; }` would evaluate each argument exactly once and return `2` here instead.
 
 57. **Write output:** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
 ```c
@@ -4327,6 +5196,27 @@ int main() {
     }
 }
 ```
+
+    Answer: Output is `1 3 6 10 15 21 28 36 45 `.
+
+    Why the values accumulate
+    - `total` is declared `static`, so it is initialised to 0 only once and keeps its value between calls. It is not recreated on each call the way an ordinary local variable would be.
+    - Each call therefore adds the new `i` to the running total from all previous calls.
+
+    | Call | i | total before | total after | Printed |
+    |---|---|---|---|---|
+    | 1 | 1 | 0 | 1 | 1 |
+    | 2 | 2 | 1 | 3 | 3 |
+    | 3 | 3 | 3 | 6 | 6 |
+    | 4 | 4 | 6 | 10 | 10 |
+    | 5 | 5 | 10 | 15 | 15 |
+    | 6 | 6 | 15 | 21 | 21 |
+    | 7 | 7 | 21 | 28 | 28 |
+    | 8 | 8 | 28 | 36 | 36 |
+    | 9 | 9 | 36 | 45 | 45 |
+
+    - These are the triangular numbers — the running sum `1+2+...+n`, which equals `n(n+1)/2`.
+    - Had `total` been a plain `int total = 0;`, it would have been reset on every call and the output would simply have been `1 2 3 4 5 6 7 8 9`.
 
 ## Recursion & Functions (38)
 

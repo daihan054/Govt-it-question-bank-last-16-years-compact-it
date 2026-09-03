@@ -2,14 +2,14 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 26 / 243 done**  ·  **Questions: 285 answered, 5 skipped, 3168 total**
+**Subtopics: 27 / 243 done**  ·  **Questions: 332 answered, 15 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
 | `ai-and-ml.md` | IT | 11 / 11 | 42 | 1 | 43 |
 | `algorithm.md` | IT | 14 / 14 | 130 | 4 | 134 |
 | `bangla.md` | General | 0 / 6 | 0 | 0 | 123 |
-| `c-programming.md` | IT | 1 / 9 | 111 | 0 | 270 |
+| `c-programming.md` | IT | 2 / 9 | 158 | 10 | 270 |
 | `cloud-computing.md` | IT | 0 / 9 | 0 | 0 | 38 |
 | `compiler-and-toc.md` | IT | 0 / 5 | 0 | 0 | 25 |
 | `computer-fundamental.md` | IT | 0 / 10 | 0 | 0 | 153 |
@@ -40,3 +40,13 @@ Content-free or truncated entries — no answer written.
 - `algorithm.md → Greedy Algorithms (Fractional Knapsack)` — question 6
 - `algorithm.md → Algorithm Analysis & Asymptotic Complexity` — question 10
 - `algorithm.md → Graph Traversal Algorithms (BFS & DFS)` — question 13
+- `c-programming.md → Output Tracing & Control Flow` — question 1
+- `c-programming.md → Output Tracing & Control Flow` — question 7
+- `c-programming.md → Output Tracing & Control Flow` — question 8
+- `c-programming.md → Output Tracing & Control Flow` — question 10
+- `c-programming.md → Output Tracing & Control Flow` — question 11
+- `c-programming.md → Output Tracing & Control Flow` — question 31
+- `c-programming.md → Output Tracing & Control Flow` — question 32
+- `c-programming.md → Output Tracing & Control Flow` — question 33
+- `c-programming.md → Output Tracing & Control Flow` — question 35
+- `c-programming.md → Output Tracing & Control Flow` — question 43
