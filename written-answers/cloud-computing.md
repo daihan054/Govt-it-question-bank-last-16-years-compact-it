@@ -886,7 +886,48 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **What is the need of edge server?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
 
+   Answer: An edge server is a computing node placed close to where the data is produced and consumed, instead of in a distant central data centre. It processes data locally and sends only what is necessary to the cloud.
+
+   Why edge servers are needed
+   - **Low latency** — a round trip to a central cloud can take 100 ms or more. A self-driving car, an industrial robot or a remote surgery system cannot wait that long. An edge server responds in a few milliseconds.
+   - **Bandwidth saving** — a factory with 500 cameras cannot stream all its video to the cloud. The edge server analyses locally and uploads only alerts and summaries, cutting network cost dramatically.
+   - **Reliability during network failure** — an oil rig or a remote gas field may lose its internet link. The edge server keeps operating and synchronises later.
+   - **Data privacy and compliance** — sensitive data can be processed and discarded locally, so it never crosses a border or leaves the premises.
+   - **Real-time decision making** — IoT sensors on a pipeline can trigger a shutdown instantly rather than waiting for a cloud round trip.
+   - **Reduced cloud load and cost** — filtering at the edge means less storage and compute billed centrally.
+
+   ```mermaid
+   flowchart LR
+       D[IoT devices / sensors] --> E[Edge server<br/>local processing]
+       E -->|only summaries and alerts| C[Central cloud<br/>long-term storage, analytics]
+       E -->|instant response| D
+   ```
+
+   - Typical use in the oil and gas sector: sensors on a rig feed an edge server, which detects an abnormal pressure reading and shuts a valve within milliseconds, while sending only aggregated trend data to head office.
+
 2. **(গ) Edge Computing এর ধারণা সংক্ষেপে উপস্থাপন করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+   Answer: Edge computing is a distributed model in which data is processed near the place it is generated — at the "edge" of the network — instead of being sent to a centralised cloud data centre.
+
+   Basic idea
+   - Traditional model: device → internet → cloud → process → send result back. This costs latency and bandwidth.
+   - Edge model: device → nearby edge node → process immediately → act, and forward only a summary to the cloud.
+
+   Key characteristics
+   - Processing happens close to the data source.
+   - Very low latency, typically single-digit milliseconds.
+   - Reduces the volume of data travelling to the cloud.
+   - Works even when the connection to the cloud is temporarily lost.
+   - Improves privacy, since raw data can stay local.
+
+   Related terms
+   - **Fog computing** sits between the edge and the cloud, at gateways and routers, aggregating data from many edge nodes. Edge is at the device; fog is one layer above it.
+   - **Cloud computing** remains the layer for long-term storage, heavy analytics and model training.
+
+   Applications
+   - Self-driving vehicles, smart traffic signals, industrial IoT and predictive maintenance, smart CCTV with local face or object detection, healthcare wearables, AR/VR, and 5G base stations.
+
+   - Limitations: an edge node has far less compute and storage than a data centre, many distributed nodes are harder to manage and update, and physical security of remote nodes is a real concern.
 
 ## Virtualization & Resource Allocation (1)
 
