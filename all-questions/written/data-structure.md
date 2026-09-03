@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 93 questions
+**Table of Contents** — 8 subtopics · 95 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,10 +7,10 @@
 | 2 | [Stack](#stack-19) | 19 |
 | 3 | [Linked List](#linked-list-15) | 15 |
 | 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
-| 5 | [Binary Search Tree (BST)](#binary-search-tree-bst-7) | 7 |
+| 5 | [Binary Search Tree (BST)](#binary-search-tree-bst-8) | 8 |
 | 6 | [Queue](#queue-6) | 6 |
 | 7 | [Hashing & Hash Tables](#hashing--hash-tables-6) | 6 |
-| 8 | [Data Structure Fundamentals](#data-structure-fundamentals-5) | 5 |
+| 8 | [Data Structure Fundamentals](#data-structure-fundamentals-6) | 6 |
 
 <!-- TOC END -->
 
@@ -172,7 +172,7 @@ Output: Not Balanced
 
 8. **Draw (max/min) heap binay tree using 11 nodes.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
-## Binary Search Tree (BST) (7)
+## Binary Search Tree (BST) (8)
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
@@ -187,6 +187,8 @@ Output: Not Balanced
 6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
 
 7. **Write an algorithm to find a node in a binary search tree.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
+
+8. **Complexity of BST (Binary Search Tree) best and worst case.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
 
 ## Queue (6)
 
@@ -216,7 +218,7 @@ Output: Not Balanced
 
 6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
 
-## Data Structure Fundamentals (5)
+## Data Structure Fundamentals (6)
 
 1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
 
@@ -231,3 +233,5 @@ Output: Not Balanced
    iv) Show array list
 
 5. **What is linear and Non-linear data structure? Write an example of data structure which represents logarithmic complexity?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+
+6. **Difference between linear and nonlinear data structure.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*

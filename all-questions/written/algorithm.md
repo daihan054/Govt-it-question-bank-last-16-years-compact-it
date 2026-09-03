@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 131 questions
+**Table of Contents** — 14 subtopics · 132 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-36) | 36 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
-| 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-14) | 14 |
+| 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-15) | 15 |
 | 4 | [Searching Algorithms](#searching-algorithms-13) | 13 |
 | 5 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-13) | 13 |
 | 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms-9) | 9 |
@@ -142,7 +142,7 @@
 
 17. **Run the BFS algorithm from vertex 1 and draw the BFS tree.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033-1034 (ET: BUET)]*
 
-## Graph Algorithms (Shortest Path & Minimum Spanning Tree) (14)
+## Graph Algorithms (Shortest Path & Minimum Spanning Tree) (15)
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
 
@@ -171,6 +171,8 @@
 13. **How to Determine the weighted graph has negative cycle?** *[Combined 4 Banks Assistant Programmer 2020 compact it 1006-1007 (ET: DU)]*
 
 14. **নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।** *[Sundharban Gas Assistant Programmer 2020 compact it 1048 (ET: N/A)]*
+
+15. **S1, S2, S3, S4, S5 are five nodes and a value on lines denotes the cost to transmit power. (i) Draw a graph to find the shortest path to transmit power. (ii) Calculates the average cost.** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
 ## Searching Algorithms (13)
 

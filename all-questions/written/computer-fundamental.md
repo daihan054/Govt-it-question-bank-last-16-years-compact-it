@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 140 questions
+**Table of Contents** — 10 subtopics · 141 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-53) | 53 |
-| 2 | [ICT in Society & Governance](#ict-in-society--governance-23) | 23 |
+| 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-22) | 22 |
 | 4 | [Software Types & Classification](#software-types--classification-14) | 14 |
 | 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-9) | 9 |
@@ -155,7 +155,7 @@
    4. HTTP: Hyper Text Transfer Protocol
    5. POP3: Post Office Protocol version 3
 
-## ICT in Society & Governance (23)
+## ICT in Society & Governance (24)
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
 
@@ -202,6 +202,8 @@
 22. **(b) Distinguish between traditional business planning assumption and today’s sense and response strategy.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
 
 23. **(c) Write down the advantages of using internet in business organization. How is legacy system included in intranet of an organization?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
+
+24. **What is E-Commerce? What are the types of E-commerce?** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
 ## Hardware Components & BIOS (CMOS Battery) (22)
 

@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 139 questions
+**Table of Contents** — 14 subtopics · 142 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models-42) | 42 |
-| 2 | [Software Testing & Evaluation](#software-testing--evaluation-38) | 38 |
-| 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-11) | 11 |
+| 1 | [SDLC Phases & Models](#sdlc-phases--models-43) | 43 |
+| 2 | [Software Testing & Evaluation](#software-testing--evaluation-39) | 39 |
+| 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-12) | 12 |
 | 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-11) | 11 |
 | 5 | [Software Requirements Engineering](#software-requirements-engineering-10) | 10 |
 | 6 | [Software Project Management & Organization](#software-project-management--organization-7) | 7 |
@@ -22,7 +22,7 @@
 
 ---
 
-## SDLC Phases & Models (42)
+## SDLC Phases & Models (43)
 
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
@@ -108,7 +108,9 @@
 
 42. **Show the structure model in software engineering. Phase of water fall life cycle.** *[Probashi Kallyan Bank Programmer 2019 compact it 1157 (ET: AUST)]*
 
-## Software Testing & Evaluation (38)
+43. **Write the agile method components for Software development.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+## Software Testing & Evaluation (39)
 
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]
 
@@ -206,7 +208,9 @@
 
 38. **A program sorts an array of integer. Write down the code that tests the sorting algorithm of written in a program.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1163-1164 (ET: N/A)]*
 
-## Software Architecture & Design Patterns (MVC) (11)
+39. **Difference between black box and white box testing.** *[Palli Sanchay Bank Programmer 2018 compact it 1172 (ET: N/A)]*
+
+## Software Architecture & Design Patterns (MVC) (12)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
 
@@ -229,6 +233,8 @@
 10. **(i) MVC framework কী? এর সুবিধাগুলো লিখুন।** *[BPSC Assistant Network Engineer 2020 compact it 960 (ET: N/A)]*
 
 11. **MVC framework কী? MVC Framework এর সুবিধাসমূহ লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
+
+12. **What is MVC? Write down the MVC design pattern.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175-1176 (ET: N/A)]*
 
 ## UML Diagrams (Class, Use Case, Sequence) (11)
 

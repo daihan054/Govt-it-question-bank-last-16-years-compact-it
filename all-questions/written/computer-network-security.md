@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 172 questions
+**Table of Contents** — 14 subtopics · 173 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,7 +11,7 @@
 | 6 | [Authentication & Access Control](#authentication--access-control-16) | 16 |
 | 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
 | 8 | [Cyber Crime & Security](#cyber-crime--security-10) | 10 |
-| 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad-7) | 7 |
+| 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad-8) | 8 |
 | 10 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6) | 6 |
 | 11 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance-3) | 3 |
 | 12 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios-3) | 3 |
@@ -352,7 +352,7 @@
 
 10. **Employee causes the most risk of fraud and computer compromises- do you agree with the statement. Justify your answer.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
-## Security Principles (CIA Triad) (7)
+## Security Principles (CIA Triad) (8)
 
 1. What does CIA stand for in information security? Explain each component briefly. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -367,6 +367,8 @@
 6. **Preserving confidentiality integrity and availability of data is a restatement of the concern over falsification, interception, masquerade and denial of service. Explain how the first three concepts relate to the last four.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 435 (ET: BIBM)]*
 
 7. **Information System কী? Information Syetem -এর সুরক্ষায় প্রয়োজনীয় পদক্ষেপ সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 883-884 (ET: N/A)]*
+
+8. **What is non-repudiation in network security? Give a proper example.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
 ## VPN & Tunneling Protocols (IPsec, SSL VPN) (6)
 

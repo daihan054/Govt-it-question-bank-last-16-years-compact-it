@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 93 questions
+**Table of Contents** — 15 subtopics · 95 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,14 +8,14 @@
 | 3 | [Percentage, Profit & Loss, Simple & Compound Interest](#percentage-profit--loss-simple--compound-interest-12) | 12 |
 | 4 | [Basic Arithmetic & Average](#basic-arithmetic--average-11) | 11 |
 | 5 | [Geometry & Coordinate Geometry](#geometry--coordinate-geometry-10) | 10 |
-| 6 | [Permutations & Combinations](#permutations--combinations-5) | 5 |
+| 6 | [Permutations & Combinations](#permutations--combinations-6) | 6 |
 | 7 | [Ratio, Proportion & Mixtures](#ratio-proportion--mixtures-4) | 4 |
 | 8 | [Speed, Time, Distance & Boats](#speed-time-distance--boats-4) | 4 |
 | 9 | [Probability & Statistics](#probability--statistics-4) | 4 |
 | 10 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations-3) | 3 |
 | 11 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-3) | 3 |
-| 12 | [Calculus & Integration](#calculus--integration-2) | 2 |
-| 13 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-2) | 2 |
+| 12 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-3) | 3 |
+| 13 | [Calculus & Integration](#calculus--integration-2) | 2 |
 | 14 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
 | 15 | [Numerical Methods & Root Finding](#numerical-methods--root-finding-2) | 2 |
 
@@ -157,7 +157,7 @@
 
 10. **৫. সমকোণী ত্রিভুজের সমকোণ সংলগ্ন দুই বাহুর মান ৩ এবং ৪ হলে। ইহার অতিভুজ এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
-## Permutations & Combinations (5)
+## Permutations & Combinations (6)
 
 1. **CARBON word permutations that vowel must occupy odd positions?** *[BCIC Assistant Programmer 14.02.2025 compact it 1329 (ET: BUET)]*
 
@@ -168,6 +168,8 @@
 4. **Suppose we have 6 hospital and 4 police station. Need to select a 4 stations for interrupted power supply. How many ways can we select where at least one hospital on the uninterrupted power supply list?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 454 (ET: BUET)]*
 
 5. **Reliability, Permutation related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
+
+6. **If 10 people meet each other and each shakes hands only once with each of the others, how many handshakes will there be?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
 
 ## Ratio, Proportion & Mixtures (4)
 
@@ -215,17 +217,19 @@
 
 3. **What is tautology? Write an example of a tautology.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
 
+## Analytical Ability & Logical Reasoning (3)
+
+1. **A, B, C, D, E, F, G are sitting in a circular arrangement. Each of them wears caps of either red, blue, or green color. Conditions are (i) D sits two seats right of A. A is wearing green cap (ii) C sits two seats left of B. C is wearing blue cap (iii) E sits in between F and G. E is wearing red cap (iv) No two person sitting next to each other can have same color cap Find the cap color of everyone.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
+
+2. **Explain knight knave problem.** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
+
+3. **Suppose You've [1-9] ordering number, put the appropriate number below this figure such as each side have 17 up.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
 ## Calculus & Integration (2)
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
 2. **Solve the problem: \int e^x \cos x\,dx** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
-
-## Analytical Ability & Logical Reasoning (2)
-
-1. **A, B, C, D, E, F, G are sitting in a circular arrangement. Each of them wears caps of either red, blue, or green color. Conditions are (i) D sits two seats right of A. A is wearing green cap (ii) C sits two seats left of B. C is wearing blue cap (iii) E sits in between F and G. E is wearing red cap (iv) No two person sitting next to each other can have same color cap Find the cap color of everyone.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
-
-2. **Explain knight knave problem.** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
 
 ## Comprehensive Math Problems (2)
 

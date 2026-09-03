@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 262 questions
+**Table of Contents** — 19 subtopics · 268 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-79) | 79 |
-| 2 | [Keys in DBMS](#keys-in-dbms-26) | 26 |
+| 1 | [SQL Queries](#sql-queries-81) | 81 |
+| 2 | [Keys in DBMS](#keys-in-dbms-28) | 28 |
 | 3 | [ER Diagram & Database Design](#er-diagram--database-design-24) | 24 |
 | 4 | [DBMS Architecture & Features](#dbms-architecture--features-23) | 23 |
-| 5 | [Normalization & Database Design](#normalization--database-design-20) | 20 |
-| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-15) | 15 |
+| 5 | [Normalization & Database Design](#normalization--database-design-21) | 21 |
+| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-16) | 16 |
 | 7 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
 | 8 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-13) | 13 |
 | 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (79)
+## SQL Queries (81)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -355,7 +355,13 @@ SELECT count (*) FROM (
 
 79. **Write a query to select top 10% row from grade table.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
-## Keys in DBMS (26)
+80. **Three table are given: Customer (cust_id, Name, Address, Sales_id), Order (Order_id, cust_id, Date, sales_id), Salesman (Sales_id, commission)** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1170 (ET: N/A)]*
+   (i) Find the customer details for those salesman get commission greater than 12% commission.
+   (ii) Count the salesman by their order_id and date.
+
+81. **Suppose you've two table (Employee, Department) in a Database and Employee table three cell (emp_name, dept_id, salary) also Department table two cell (dept_id, dept_name), now update the salary 10% increase value from Department table. Give the appropriate example.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
+
+## Keys in DBMS (28)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -408,6 +414,10 @@ SELECT count (*) FROM (
 25. **What is foreign key? When foreign key used?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
 
 26. **Difference between primary key, foreign key and candidate key.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
+
+27. **Define weak Entity? What are the difference between primary key and super key?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
+
+28. **Difference between Super Key and UNIQUE key?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
 
 ## ER Diagram & Database Design (24)
 
@@ -516,7 +526,7 @@ SELECT count (*) FROM (
 
 23. **A company needs key person for DBMS. What is his/her duty as key person?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
 
-## Normalization & Database Design (20)
+## Normalization & Database Design (21)
 
 1. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -573,7 +583,9 @@ SELECT count (*) FROM (
 
 20. **(a) What do you mean by Normalization in RDBMS? Explain with an example.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
 
-## SQL Commands (DDL, DML, DCL, TCL) (15)
+21. **What do you mean by Database properties using Normalization?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+## SQL Commands (DDL, DML, DCL, TCL) (16)
 
 1. Example Query of DDL, DML, DCL. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -604,6 +616,8 @@ SELECT count (*) FROM (
 14. **(a) How can you revoke permissions from a database table? Give SQL command for it.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
 
 15. **(c) Differentiate between “delete from” and “drop table” SQL statement.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
+
+16. **Write an SQL query to insert a tuple in the table: Employee (ID, Name, Designation, and Salary).** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
 ## Relational Data Model & ER Relationships (13)
 

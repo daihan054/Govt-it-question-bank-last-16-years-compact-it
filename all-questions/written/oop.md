@@ -1,15 +1,15 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 99 questions
+**Table of Contents** — 9 subtopics · 105 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-49) | 49 |
-| 2 | [Java Programming & Methods](#java-programming--methods-13) | 13 |
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-51) | 51 |
+| 2 | [Java Programming & Methods](#java-programming--methods-15) | 15 |
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-9) | 9 |
-| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
-| 5 | [Constructors & Destructors](#constructors--destructors-7) | 7 |
+| 4 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
+| 5 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
 | 6 | [Output Tracing & Recursion](#output-tracing--recursion-6) | 6 |
-| 7 | [Exception Handling](#exception-handling-3) | 3 |
+| 7 | [Exception Handling](#exception-handling-4) | 4 |
 | 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
 | 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
 
@@ -17,7 +17,7 @@
 
 ---
 
-## OOP Concepts (Inheritance & Polymorphism) (49)
+## OOP Concepts (Inheritance & Polymorphism) (51)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -151,7 +151,11 @@ public class main{
 
 49. **(b) Explain Polymorphism concept of OOP language.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1140 (ET: N/A)]*
 
-## Java Programming & Methods (13)
+50. **Explain feature of OOP.** *[Palli Sanchay Bank Programmer 2018 compact it 1170-1171 (ET: N/A)]*
+
+51. **What do you mean by Polymorphism and Inheritance in Object Oriented Programming (OOP)? Give appropriate example.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
+
+## Java Programming & Methods (15)
 
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
@@ -194,6 +198,14 @@ Public class class B extends class A {
 
 13. **(c) Why Java is called platform independent language?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
+14. **Suppose you've a method name “totalAmount” and there three properties (transactionName, transactionType, amount). Write down the full code using JAVA where totalAmount method return total balance after debit or credited.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+15. **Write the full form of following topics:** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
+   i) JAR
+   ii) JRE
+   iii) WAR
+   iv) JDK
+
 ## Class Design & Object-Oriented Modeling (9)
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 425 (ET: BIBM)]*
@@ -214,6 +226,24 @@ Public class class B extends class A {
 
 9. **Suppose, you are implementing “Overdraft Account (OD)” class using java for a banking app. An OD type account is opened with an approved loan limit (ex. 100000/-). The account holder can deposit any amount of money in the OD account at any time. S/he can draw an amount of money from the account (acn) until sufficient acn balance. S/he allowed to draw money beyond his/her acn balance if the total over-drawing amount remains within the loan limit. A java sketch for OD acn is given bellow & code is expected to run in multi-threading mode. (same code with run by different counter in the Bank)** *[Bangladesh Bank Assistant Programmer 2019 compact it 1157 (ET: DU)]*
 
+## Constructors & Destructors (8)
+
+1. **What is constructor function? Write the properties of it.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
+
+2. **Define copy constructor. What Static binding and Dynamic binding?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
+
+3. **What is the constructor invoked in OOP?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
+
+4. **What is constructor?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
+
+5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
+
+6. **What is Constructor function? Write an example of Constructor function?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+
+7. **Differentiate constructor and destructor with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1167-1168 (ET: N/A)]*
+
+8. **What is main difference Destructor and constructor with example?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
+
 ## Encapsulation & Access Modifiers (7)
 
 1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
@@ -229,22 +259,6 @@ Public class class B extends class A {
 6. **How many specifiers are used in C++ programing?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
 7. **Briefly Describe Abstraction, Encapsulation.** *[Bangladesh Competition Commission Programmer 2019 compact it 1059-1060 (ET: DU)]*
-
-## Constructors & Destructors (7)
-
-1. **What is constructor function? Write the properties of it.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
-
-2. **Define copy constructor. What Static binding and Dynamic binding?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
-
-3. **What is the constructor invoked in OOP?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
-
-4. **What is constructor?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
-
-5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
-
-6. **What is Constructor function? Write an example of Constructor function?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
-
-7. **Differentiate constructor and destructor with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1167-1168 (ET: N/A)]*
 
 ## Output Tracing & Recursion (6)
 
@@ -340,13 +354,15 @@ public class Main{
 }
 ```
 
-## Exception Handling (3)
+## Exception Handling (4)
 
 1. **(b) What is exception? Explain how it can be used for debugging a program.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
 
 2. **What is difference between exception and error in Java?** *[SPCB Sub-Assistant Programmer 2022 compact it 737 (ET: N/A)]*
 
 3. **What is exception handling? Write with an example.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
+
+4. **Write the difference between throw and throws using Exception handling?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1172-1173 (ET: N/A)]*
 
 ## C++ OOP Concepts & Friend Functions (3)
 

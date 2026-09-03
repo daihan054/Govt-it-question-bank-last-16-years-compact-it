@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 238 questions
+**Table of Contents** — 9 subtopics · 242 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-100) | 100 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-43) | 43 |
-| 3 | [Recursion & Functions](#recursion--functions-35) | 35 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-46) | 46 |
+| 3 | [Recursion & Functions](#recursion--functions-36) | 36 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-23) | 23 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-15) | 15 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-13) | 13 |
@@ -382,7 +382,7 @@ for(a=1; a<=100; a++)
 1
 ```
 
-## Output Tracing & Control Flow (43)
+## Output Tracing & Control Flow (46)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -882,7 +882,63 @@ while(i!=n) {
 
 43. **What is the output of following program?** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1166 (ET: N/A)]*
 
-## Recursion & Functions (35)
+44. **Find the output of following program.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1169 (ET: N/A)]*
+   i)
+```c
+int main() {
+    int n = 10;
+    for(;;)
+        printf("%d", n);
+    return 0;
+}
+```
+   ii)
+```c
+int main() {
+    int i = 2, j = 2;
+    while (i?--i:j++)
+        printf("%d", i);
+    return 0;
+}
+```
+
+45. **Find the output following program:** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1170 (ET: N/A)]*
+```c
+int main() {
+    int a=5, b=2, c=1;
+    if (a&&b>c)
+        printf("Bangladesh");
+    else
+        break;
+}
+```
+
+46. **Find the output of following program.** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
+   i)
+```c
+int main() {
+    char str[120]= "Digital Bangladesh";
+    int n;
+    n = strlen(str);
+    str[4] = '\0';
+    printf("%s", str);
+    return 0;
+}
+```
+   ii)
+```c
+int main() {
+    int i;
+    for (i=0; i<5; i++) {
+        if(i==3)
+            continue;
+        printf("%d\n", i);
+    }
+    return 0;
+}
+```
+
+## Recursion & Functions (36)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -1003,6 +1059,8 @@ int main() {
 34. **What is recursive function? Give an example of recursive function.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
 
 35. **Difference between call by value and call by reference with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1166-1167 (ET: N/A)]*
+
+36. **Write Algorithm of Fibonacci series.** *[Palli Sanchay Bank Programmer 2018 compact it 1171-1172 (ET: N/A)]*
 
 ## Operators, Data Types & Language Concepts (23)
 

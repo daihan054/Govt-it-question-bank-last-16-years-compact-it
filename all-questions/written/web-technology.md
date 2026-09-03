@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 68 questions
+**Table of Contents** — 7 subtopics · 69 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [HTML & Web Fundamentals](#html--web-fundamentals-25) | 25 |
-| 2 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-12) | 12 |
+| 2 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-13) | 13 |
 | 3 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-8) | 8 |
 | 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development-7) | 7 |
@@ -85,7 +85,7 @@
 
 25. **Write down the name of some HTML5 media tag.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
-## JavaScript & jQuery (DOM & Validation) (12)
+## JavaScript & jQuery (DOM & Validation) (13)
 
 1. **Jquery for email validation** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -126,6 +126,8 @@
 11. **Difference among $.ajax(), $.load() and $.get().** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
 12. **How to change html attribute through html DOM?** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1163 (ET: N/A)]*
+
+13. **Suppose you've a javaScript code name as “bankScript” write the code for loading in HTML using JS.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
 
 ## HTTP Protocol (10)
 

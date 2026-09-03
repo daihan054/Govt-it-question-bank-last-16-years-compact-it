@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 24 questions
+**Table of Contents** — 5 subtopics · 25 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Regular Expressions & Finite Automata](#regular-expressions--finite-automata-7) | 7 |
-| 2 | [Compiler vs Interpreter](#compiler-vs-interpreter-6) | 6 |
+| 2 | [Compiler vs Interpreter](#compiler-vs-interpreter-7) | 7 |
 | 3 | [Grammar & Ambiguity](#grammar--ambiguity-5) | 5 |
 | 4 | [Lexical Analysis & Compiler Phases](#lexical-analysis--compiler-phases-5) | 5 |
 | 5 | [Linker & Loader](#linker--loader-1) | 1 |
@@ -33,7 +33,7 @@
 
 7. **What are the components of finite automation model? Difference between DFA and NFA.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1103-1104 (ET: AUST)]*
 
-## Compiler vs Interpreter (6)
+## Compiler vs Interpreter (7)
 
 1. **b) Write down the difference between Interpreter and Compiler?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)], [BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 672 (ET: N/A)], [CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)], [PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)], [Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)], [BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 678 (ET: N/A)]*
 
@@ -46,6 +46,8 @@
 5. **Difference between compiler and interpreter with example?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
 
 6. **Compiler and Interpreter-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
+
+7. **Difference between Interpreter and Compiler.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
 
 ## Grammar & Ambiguity (5)
 
