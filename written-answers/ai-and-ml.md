@@ -324,6 +324,15 @@
 
 1. **Write down the Role of Validation set in ML.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
+   Answer: The validation set is the part of the data kept aside to tune the model and to check how it performs on data it did not train on, before the final test.
+
+   - Hyperparameter tuning — choose learning rate, number of layers, tree depth, value of K, and so on.
+   - Model selection — compare several models and keep the one that scores best on validation.
+   - Detects overfitting — if training accuracy keeps rising while validation accuracy falls, the model is memorising the training data.
+   - Early stopping — training is stopped at the epoch where validation error is lowest.
+   - Keeps the test set clean, so the final test score stays an honest estimate of real-world performance.
+   - Usual split: 70% train, 15% validation, 15% test. When data is small, k-fold cross-validation is used instead.
+
 2. **(b) Given following values:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
  * **True Positive \text{(TP)} = 560**
  * **True Negative \text{(TN)} = 330**
@@ -331,11 +340,98 @@
  * **False Negative \text{(FN)} = 50**
 **Calculate the following: (i) Accuracy (ii) Precision (iii) Recall (iv) F1 Score**
 
+   Answer:
+
+   Given: TP = 560, TN = 330, FP = 60, FN = 50
+   Total samples = 560 + 330 + 60 + 50 = 1000
+
+   (i) Accuracy
+   - Formula: `Accuracy = (TP + TN) / (TP + TN + FP + FN)`
+   - `= (560 + 330) / 1000 = 890 / 1000 = 0.89`
+   - Accuracy = 0.89 = 89%
+
+   (ii) Precision
+   - Formula: `Precision = TP / (TP + FP)`
+   - `= 560 / (560 + 60) = 560 / 620 = 0.9032`
+   - Precision = 0.9032 = 90.32%
+
+   (iii) Recall
+   - Formula: `Recall = TP / (TP + FN)`
+   - `= 560 / (560 + 50) = 560 / 610 = 0.9180`
+   - Recall = 0.9180 = 91.80%
+
+   (iv) F1 Score
+   - Formula: `F1 = 2 × (Precision × Recall) / (Precision + Recall)`
+   - `= 2 × (0.9032 × 0.9180) / (0.9032 + 0.9180)`
+   - `= 2 × 0.8292 / 1.8212 = 1.6584 / 1.8212 = 0.9106`
+   - F1 Score = 0.9106 = 91.06%
+
+   Final answer
+   - Accuracy = 89%, Precision = 90.32%, Recall = 91.80%, F1 Score = 91.06%
+
 3. **b) How can we validate and check reliability of a machine learning model?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
+
+   Answer: A model is validated by testing it on data it has never seen, and by checking that the score stays stable across different splits of the data.
+
+   (a) Data splitting
+   - Hold-out method — split into train, validation and test sets (about 70:15:15).
+   - K-fold cross-validation — split the data into k parts, train on k-1 and test on the remaining one, repeat k times and take the average score. This removes luck from a single split.
+   - Stratified k-fold — keeps the class ratio same in every fold, needed for imbalanced data.
+
+   (b) Evaluation metrics
+   - Classification: accuracy, precision, recall, F1 score, confusion matrix, ROC-AUC.
+   - Regression: MAE, MSE, RMSE, R-squared.
+   - For imbalanced data do not trust accuracy alone; use precision, recall and F1.
+
+   (c) Reliability checks
+   - Compare training and validation error — a big gap means overfitting, both high means underfitting.
+   - Plot a learning curve to see whether more data would help.
+   - Test on a fresh dataset from a different time period to check that the model still holds.
+   - Watch for data leakage, where test information reaches the training set.
+   - After deployment, monitor for data drift and retrain when accuracy falls.
 
 4. **You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss function for this problem.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 746 (ET: N/A)]*
 
+   Answer: For binary classification with three features, the standard model is logistic regression.
+
+   Step 1 - linear combination of the features
+   - `z = w1·f1 + w2·f2 + w3·f3 + b`
+   - Here `w1, w2, w3` are weights and `b` is the bias.
+
+   Step 2 - convert z into a probability with the sigmoid function
+   - `ŷ = σ(z) = 1 / (1 + e^(-z))`
+   - `ŷ` is the predicted probability that the sample belongs to class 1. Output is 1 if `ŷ ≥ 0.5`, else 0.
+
+   Step 3 - loss function for one sample (binary cross-entropy / log loss)
+   - `L(y, ŷ) = -[ y·log(ŷ) + (1 - y)·log(1 - ŷ) ]`
+   - If `y = 1` the loss is `-log(ŷ)`; if `y = 0` it is `-log(1 - ŷ)`. A confident wrong answer is punished heavily.
+
+   Step 4 - cost function over all m samples
+   - `J(w, b) = -(1/m) · Σ [ yi·log(ŷi) + (1 - yi)·log(1 - ŷi) ]`, for i = 1 to m
+
+   Step 5 - the objective
+   - Objective: find the weights and bias that make the cost smallest.
+   - `min J(w, b)` over `w1, w2, w3, b`
+   - With L2 regularization: `J(w, b) + (λ / 2m) · Σ wj²`, which keeps the weights small and reduces overfitting.
+
+   Step 6 - how the minimum is reached
+   - Gradient descent updates each weight: `wj := wj - α · ∂J/∂wj`
+   - The gradient works out to `∂J/∂wj = (1/m) · Σ (ŷi - yi)·fji`, and `α` is the learning rate.
+
 5. **Write down the difference between test set and validation set.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+
+   Answer:
+
+   | Point | Validation set | Test set |
+   |---|---|---|
+   | Purpose | Tune hyperparameters and compare models | Give the final, unbiased performance score |
+   | When used | Repeatedly, during training | Once only, after training is finished |
+   | Effect on model | Indirect — its result changes the settings we choose | None — the model is never changed from it |
+   | Seen by developer | Yes, many times | Should be kept untouched until the end |
+   | Risk | Repeated use can overfit the model to this set | Stays a fair estimate as long as it is used once |
+   | Typical share | About 15% of the data | About 15% of the data |
+
+   - Both sets are kept out of training, but they answer different questions: validation asks "which settings are best?", test asks "how good is the finished model?".
 
 ## Supervised Learning (Decision Trees) (4)
 
