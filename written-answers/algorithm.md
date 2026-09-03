@@ -2861,13 +2861,168 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. A communication link is established from Cox’s Bazar to Kuakata through a sequence of stations M_1, M_2, M_3, \dots, M_n. Each location can have at most one repeater, and the distance between consecutive locations is given by P_i > 0. For reliable communication, two selected repeater stations must be at least K kilometers apart. Using Dynamic Programming, determine the maximum number of repeaters that can be installed while maintaining the required minimum distance between any two selected stations. [BSCCPL AME 21-08-2026 (BUET)]
 
+   Answer: This is a "maximum number of selections with a minimum gap" problem. Convert the gaps `Pᵢ` into absolute positions first, then apply DP.
+
+   Step 1 - build absolute positions
+   - `pos[1] = 0`
+   - `pos[i] = pos[i-1] + P[i-1]` for `i = 2 to n`
+   - Now the condition becomes: two chosen stations `i` and `j` are valid if `pos[j] − pos[i] ≥ K`.
+
+   Step 2 - define the DP state
+   - `dp[i]` = the maximum number of repeaters that can be installed among stations `1 … i`, with a repeater placed at station `i`.
+
+   Step 3 - recurrence
+   - `dp[i] = 1 + max( dp[j] )` for all `j < i` such that `pos[i] − pos[j] ≥ K`
+   - If no such `j` exists, `dp[i] = 1` (station `i` is the first repeater).
+   - Base case: `dp[1] = 1`.
+
+   Step 4 - answer
+   - `Answer = max( dp[i] )` for `i = 1 to n`
+
+   ```
+   MaxRepeaters(P[], n, K)
+     pos[1] = 0
+     for i = 2 to n
+         pos[i] = pos[i-1] + P[i-1]
+
+     for i = 1 to n
+         dp[i] = 1
+         for j = 1 to i-1
+             if pos[i] - pos[j] >= K and dp[j] + 1 > dp[i]
+                 dp[i] = dp[j] + 1
+
+     return max(dp[1..n])
+   ```
+
+   Example — `pos = 0, 3, 7, 10, 15` and `K = 5`
+   - `dp[1] = 1` (station at 0)
+   - `dp[2] = 1` (3 − 0 = 3 < 5)
+   - `dp[3] = 2` (7 − 0 = 7 ≥ 5, so `dp[1] + 1`)
+   - `dp[4] = 2` (10 − 3 = 7 ≥ 5, so `dp[2] + 1`)
+   - `dp[5] = 3` (15 − 7 = 8 ≥ 5, so `dp[3] + 1`)
+   - Answer = `3` repeaters, at positions 0, 7 and 15.
+
+   - Time complexity `O(n²)`, space `O(n)`.
+   - Because positions are increasing, binary search can find the latest valid `j` and reduce this to `O(n log n)`. A simple greedy (always take the next station that is `K` away) also works here and runs in `O(n)`, but the DP formulation is what the question asks for.
+
 2. **What is Dynamic programming? Explain with example.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 474 (ET: N/A)]*
+
+   Answer: Dynamic programming is a technique that solves a problem by breaking it into smaller subproblems, solving each subproblem only once, and storing its answer so it is never recomputed.
+
+   Two conditions a problem must satisfy
+   - Optimal substructure — the optimal answer to the whole problem is built from optimal answers to its subproblems.
+   - Overlapping subproblems — the same subproblem appears again and again during recursion.
+
+   Two approaches
+   - Memoization (top-down) — write the natural recursion, but cache each result in a table. Entries are filled only when actually needed. Easy to write by modifying a recursive solution.
+   - Tabulation (bottom-up) — fill the table iteratively from the smallest subproblem upward. No recursion overhead, and better when every subproblem must be solved anyway.
+
+   Example — Fibonacci numbers
+   - Plain recursion `fib(n) = fib(n-1) + fib(n-2)` recomputes `fib(3)` many times and costs `O(2ⁿ)`.
+   - With DP, each `fib(i)` is computed once:
+
+   ```
+   Fib(n)
+     dp[0] = 0
+     dp[1] = 1
+     for i = 2 to n
+         dp[i] = dp[i-1] + dp[i-2]
+     return dp[n]
+   ```
+   - Time drops from `O(2ⁿ)` to `O(n)`, space is `O(n)` — or `O(1)` if only the last two values are kept.
+
+   - Other classic DP problems: 0/1 Knapsack, Longest Common Subsequence, Matrix Chain Multiplication, Floyd-Warshall, coin change, edit distance.
 
 3. **The maximum subarray is the task of finding a contiguous subarray with the largest sum within a given one dimentional array of numbers. Suppose the array is: A: [-2, 1, -3, -1, 2, 1, -5, 4]** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 448 (ET: BUET)]*
 
+   Answer: Kadane's algorithm solves this in one pass. At each index it decides whether to extend the previous subarray or start fresh from the current element.
+
+   ```
+   Kadane(A, n)
+     maxSoFar = A[0]
+     currentMax = A[0]
+     for i = 1 to n-1
+         currentMax = max(A[i], currentMax + A[i])
+         maxSoFar  = max(maxSoFar, currentMax)
+     return maxSoFar
+   ```
+
+   Trace on `A = [-2, 1, -3, -1, 2, 1, -5, 4]`
+
+   | i | A[i] | currentMax = max(A[i], currentMax + A[i]) | maxSoFar |
+   |---|---|---|---|
+   | 0 | −2 | −2 | −2 |
+   | 1 | 1 | max(1, −1) = 1 | 1 |
+   | 2 | −3 | max(−3, −2) = −2 | 1 |
+   | 3 | −1 | max(−1, −3) = −1 | 1 |
+   | 4 | 2 | max(2, 1) = 2 | 2 |
+   | 5 | 1 | max(1, 3) = 3 | 3 |
+   | 6 | −5 | max(−5, −2) = −2 | 3 |
+   | 7 | 4 | max(4, 2) = 4 | 4 |
+
+   Final answer
+   - Maximum subarray sum = `4`
+   - The subarray is `[4]`, the single last element (index 7).
+   - Runner-up is `[2, 1]` with sum 3, which is why `maxSoFar` sat at 3 before the last step.
+   - Time complexity `O(n)`, space `O(1)`. The brute-force method of checking all subarrays would cost `O(n²)`.
+
 4. **Write down the Algorithm for determining Fibonacci number through dynamic programming.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
+   Answer: Two DP forms are shown — bottom-up tabulation and top-down memoization.
+
+   Bottom-up (tabulation)
+   ```
+   Fib(n)
+     if n <= 1
+         return n
+     dp[0] = 0
+     dp[1] = 1
+     for i = 2 to n
+         dp[i] = dp[i-1] + dp[i-2]
+     return dp[n]
+   ```
+
+   Top-down (memoization)
+   ```
+   Fib(n, memo[])
+     if n <= 1
+         return n
+     if memo[n] != -1
+         return memo[n]                 // already computed
+     memo[n] = Fib(n-1, memo) + Fib(n-2, memo)
+     return memo[n]
+   ```
+
+   Space-optimised version — only the last two values are ever needed
+   ```
+   Fib(n)
+     a = 0; b = 1
+     for i = 2 to n
+         c = a + b
+         a = b
+         b = c
+     return b
+   ```
+
+   - Example: for `n = 6` the table fills as `0, 1, 1, 2, 3, 5, 8`, so `Fib(6) = 8`.
+   - DP works here because Fibonacci has both required properties — optimal substructure (`fib(n)` is built from `fib(n-1)` and `fib(n-2)`) and overlapping subproblems (`fib(n-2)` is needed by two different calls).
+
 5. **What will be the time and space complexity of the above algorithm?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
+
+   Answer: For the dynamic programming Fibonacci algorithm of the previous question:
+
+   | Method | Time complexity | Space complexity |
+   |---|---|---|
+   | Plain recursion (no DP) | O(2ⁿ) | O(n) recursion stack |
+   | Memoization (top-down) | O(n) | O(n) table + O(n) stack |
+   | Tabulation (bottom-up) | O(n) | O(n) table |
+   | Space-optimised iterative | O(n) | O(1) |
+
+   Explanation
+   - Time `O(n)` — the loop runs from 2 to `n` and each step does one addition, so exactly `n − 1` additions are performed. Every `fib(i)` is computed only once.
+   - Space `O(n)` for the standard version, because the `dp[]` array holds `n + 1` values.
+   - Space `O(1)` for the optimised version, since `fib(i)` only needs `fib(i-1)` and `fib(i-2)`, so three variables are enough.
+   - Compare with plain recursion: it recomputes the same values repeatedly, and its recursion tree has about `2ⁿ` nodes. Storing each result is exactly what collapses that tree into a linear walk.
 
 ## Graph Representation (Adjacency Matrix vs List) (4)
 
