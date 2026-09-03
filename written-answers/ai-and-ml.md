@@ -108,19 +108,130 @@
 
 1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
 
+   Answer: An activation function is a small mathematical function placed at the output of every neuron. It takes the weighted sum of the inputs and decides how strongly that neuron will fire.
+
+   - For a neuron: `output = f(w1x1 + w2x2 + ... + b)`, where `f` is the activation function.
+
+   Usability
+   - Adds non-linearity. Without it the whole network, however deep, collapses into one linear equation and cannot learn curved patterns.
+   - Keeps the output inside a usable range, so values do not blow up layer after layer.
+   - Must be differentiable, because backpropagation needs its derivative to update the weights.
+   - Decides which neurons stay active, which helps the network pick useful features.
+
+   Common ones
+   - Sigmoid — squeezes output to 0-1. Used in binary classification output.
+   - Tanh — output -1 to +1, zero-centred.
+   - ReLU — `f(x) = max(0, x)`. Fast, the default for hidden layers.
+   - Softmax — turns outputs into probabilities that sum to 1. Used for multi-class output.
+
 2. **What does the axon of neural network do?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
+
+   Answer: The axon is the output line of a neuron. It carries the signal produced by the neuron away to the next neurons.
+
+   - In a biological neuron, dendrites receive signals, the cell body sums them, and the axon transmits the result to other neurons through synapses.
+   - In an artificial neural network, the axon matches the output connection of a node — it passes the activation value, multiplied by the connection weight, to the neurons of the next layer.
 
 3. **Write difference between machine learning and deep learning.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
 
+   Answer: Deep learning is a subset of machine learning that uses multi-layer neural networks.
+
+   | Point | Machine Learning | Deep Learning |
+   |---|---|---|
+   | Feature extraction | Done by hand — a human picks the features | Learned automatically by the network |
+   | Data needed | Works well on small to medium data | Needs very large data |
+   | Hardware | Runs on a normal CPU | Usually needs a GPU/TPU |
+   | Structure | Algorithms like decision tree, SVM, KNN | Neural networks with many hidden layers |
+   | Training time | Short (minutes to hours) | Long (hours to days) |
+   | Interpretability | Easier to explain the result | Mostly a black box |
+   | Typical use | Loan default prediction, spam filter | Image recognition, speech, machine translation |
+
 4. **What is Deep learning?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
+
+   Answer: Deep learning is a branch of machine learning that uses artificial neural networks with many hidden layers to learn patterns straight from raw data.
+
+   - "Deep" means the network has several hidden layers stacked one after another.
+   - Each layer learns a higher-level feature: early layers find edges, middle layers find shapes, later layers find whole objects.
+   - It does its own feature extraction, so no manual feature engineering is needed.
+   - It needs large datasets and heavy computing power (GPU).
+   - Main types: CNN for images, RNN and LSTM for sequences and text, Transformer for language.
+   - Uses: face recognition, speech to text, machine translation, self-driving cars, medical image analysis.
 
 5. **What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 856 (ET: N/A)]*
 
+   Answer: An Artificial Neural Network (ANN) is a computing model built from layers of connected nodes called neurons, copying the way the human brain processes signals.
+
+   - Structure: input layer → one or more hidden layers → output layer.
+   - Every connection carries a weight. A neuron sums its weighted inputs, adds a bias, applies an activation function and passes the result on.
+   - It learns by backpropagation — compare output with the correct answer, then adjust weights to reduce the error.
+
+   Deep learning vs traditional machine learning
+
+   | Point | Traditional ML | Deep Learning |
+   |---|---|---|
+   | Features | Selected by a human expert | Learned by the model itself |
+   | Data size | Good result on limited data | Needs a very large dataset |
+   | Layers | Shallow model, no or one hidden layer | Many hidden layers |
+   | Compute | CPU is enough | GPU needed |
+   | Explainability | Result can be traced | Hard to explain |
+
 6. **Write LSTM gates name in AI.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
+
+   Answer: LSTM (Long Short-Term Memory) has three gates.
+
+   - Forget gate — decides what part of the old cell state to throw away.
+   - Input gate — decides what new information to store in the cell state.
+   - Output gate — decides what part of the cell state to send out as the hidden state.
+
+   - All three use a sigmoid layer, which gives a value between 0 (block fully) and 1 (pass fully). These gates let LSTM hold information for long sequences and solve the vanishing gradient problem of a plain RNN.
 
 7. **Draw the single layer of ANN.** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 880 (ET: BUET)]*
 
+   Answer: A single layer ANN (a perceptron) has only an input layer and an output layer — no hidden layer.
+
+   ```mermaid
+   flowchart LR
+       X1[Input x1] -->|w1| S((Sum + bias))
+       X2[Input x2] -->|w2| S
+       X3[Input x3] -->|w3| S
+       S --> A[Activation f]
+       A --> Y[Output y]
+   ```
+
+   - Each input `x` is multiplied by its weight `w`, and all products are added with a bias `b`.
+   - Net input: `net = w1x1 + w2x2 + w3x3 + b`
+   - Output: `y = f(net)`, where `f` is a step or sigmoid activation function.
+   - Weights are updated during training so the output moves closer to the target value.
+   - A single layer can only separate linearly separable data, so it cannot solve the XOR problem.
+
 8. **What is artificial Neural Network (ANN)? Based on ANN, describe input & hidden layer, weight and activation function.** *[ICT Ministry Assistant Programmer 2017 compact it 1237-1238 (ET: N/A)]*
+
+   Answer: An Artificial Neural Network is a model made of layers of connected neurons that learns a mapping from input to output by adjusting the weights of its connections.
+
+   ```mermaid
+   flowchart LR
+       I1[Input layer] --> H1[Hidden layer 1]
+       H1 --> H2[Hidden layer 2]
+       H2 --> O[Output layer]
+   ```
+
+   (a) Input layer
+   - Takes the raw features and passes them into the network. It does no calculation.
+   - Number of nodes = number of input features. For a 28x28 image, 784 nodes.
+
+   (b) Hidden layer
+   - Sits between input and output and does the actual processing.
+   - Each hidden neuron takes a weighted sum of the previous layer, applies an activation function and passes it forward.
+   - More hidden layers let the network learn more complex patterns; a network with many of them is called a deep network.
+
+   (c) Weight
+   - A number on each connection that shows how important that input is.
+   - Net input of a neuron: `net = Σ(wi × xi) + b`, where `b` is the bias.
+   - Training means changing these weights by backpropagation and gradient descent until the error is small.
+
+   (d) Activation function
+   - Decides the output of a neuron from its net input and adds non-linearity.
+   - Common choices: ReLU in hidden layers, sigmoid for binary output, softmax for multi-class output.
+   - Without it, the whole network would behave like a single linear equation.
 
 ## Machine Learning Paradigms (Supervised vs Unsupervised) (6)
 
