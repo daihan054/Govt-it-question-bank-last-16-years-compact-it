@@ -1654,31 +1654,361 @@
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
 
+   Answer: Binary search, because the array is already sorted.
+
+   Justification
+   - Binary search checks the middle element and throws away half the array each time, so it costs `O(log n)`.
+   - `log₂(1,000,000) ≈ 19.93`, so at most 20 comparisons are needed.
+   - Linear search would cost `O(n)` — up to 1,000,000 comparisons in the worst case. Binary search is about 50,000 times faster here.
+   - No extra memory is needed; it works in place with `O(1)` space (iterative form).
+   - The only precondition, that the data be sorted, is already satisfied, so there is no sorting cost to pay.
+
+   - If the array were unsorted, linear search would be the right choice, since sorting first would cost `O(n log n)` — more than a single `O(n)` scan.
+   - For repeated searches on a fixed dataset, a hash table gives `O(1)` average lookup, but it needs `O(n)` extra memory and loses the sorted order.
+
 2. **Write down the Pseudo Code for recursive binary search algorithm. Use the following function definition: binarySearch(array, target, low, high).** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1338 (ET: N/A)]*
+
+   Answer:
+
+   ```
+   binarySearch(array, target, low, high)
+       if low > high
+           return -1                          // base case: not found
+
+       mid = low + (high - low) / 2           // avoids overflow
+
+       if array[mid] == target
+           return mid                         // found
+       else if array[mid] > target
+           return binarySearch(array, target, low, mid - 1)    // search left half
+       else
+           return binarySearch(array, target, mid + 1, high)   // search right half
+   ```
+
+   - First call: `binarySearch(array, target, 0, n - 1)`.
+   - `mid = low + (high - low) / 2` is used instead of `(low + high) / 2` because the second form can overflow when `low` and `high` are both large.
+   - Recurrence: `T(n) = T(n/2) + O(1)`, which solves to `O(log n)`.
+   - Space: `O(log n)` for the recursion stack. The iterative version needs only `O(1)`.
 
 3. **What is the complexity of Binary algorithm?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: Binary search has `O(log n)` time complexity.
+
+   - Best case: `O(1)` — the target is the middle element on the first try.
+   - Average case: `O(log n)`
+   - Worst case: `O(log n)` — the target is at an end or absent.
+   - Space: `O(1)` iterative, `O(log n)` recursive.
+   - The reason is that each comparison removes half the remaining elements, so `n → n/2 → n/4 → ... → 1` takes `log₂ n` steps.
+
 4. **6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+   Answer: Binary search is the correct choice.
+
+   Why
+   - The data is sorted, which is the one condition binary search needs.
+   - Each step halves the search space, giving `O(log n)` time.
+   - `log₂(10⁶) ≈ 20`, so a target is found or ruled out within 20 comparisons.
+   - Worst case for linear search is 1,000,000 comparisons — five orders of magnitude worse.
+   - Space cost is `O(1)` in the iterative form; no extra structure is built.
+
+   Comparison for n = 1,000,000
+
+   | Algorithm | Worst-case comparisons | Needs sorted data | Extra space |
+   |---|---|---|---|
+   | Linear search | 1,000,000 | No | O(1) |
+   | Binary search | 20 | Yes | O(1) |
+   | Hash table lookup | 1 (average) | No | O(n) |
+
+   - Binary search gives the best balance here: near-instant lookup with no extra memory.
 
 5. **Explain Algorithm of Binary search.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
+   Answer: Binary search finds an element in a sorted array by repeatedly comparing with the middle element and discarding the half that cannot contain the target.
+
+   ```
+   BinarySearch(A, n, target)
+     low = 0
+     high = n - 1
+     while low <= high
+         mid = low + (high - low) / 2
+         if A[mid] == target
+             return mid
+         else if A[mid] < target
+             low = mid + 1          // target is in the right half
+         else
+             high = mid - 1         // target is in the left half
+     return -1                      // not found
+   ```
+
+   Steps
+   - Set `low` to the first index and `high` to the last.
+   - Compute `mid` and compare `A[mid]` with the target.
+   - If equal, the search ends. If the target is bigger, move `low` past `mid`; if smaller, move `high` before `mid`.
+   - Repeat while `low <= high`. If the loop ends, the element is absent.
+
+   - Precondition: the array must be sorted.
+   - Time `O(log n)`, space `O(1)`.
+
 6. **Binary search using recursive function.** *[Teletalk Assistant Manager (IT) 2023 compact it 466 (ET: N/A)]*
+
+   Answer:
+
+   ```c
+   int binarySearch(int a[], int low, int high, int target) {
+       if (low > high)
+           return -1;                       // base case: not present
+
+       int mid = low + (high - low) / 2;
+
+       if (a[mid] == target)
+           return mid;
+       else if (a[mid] > target)
+           return binarySearch(a, low, mid - 1, target);
+       else
+           return binarySearch(a, mid + 1, high, target);
+   }
+   ```
+
+   Example — search 7 in `1, 3, 5, 7, 9, 11`
+   - `low=0, high=5, mid=2` → `A[2]=5 < 7`, search right → `low=3`
+   - `low=3, high=5, mid=4` → `A[4]=9 > 7`, search left → `high=3`
+   - `low=3, high=3, mid=3` → `A[3]=7`, found at index 3.
+
+   - Recurrence `T(n) = T(n/2) + 1` → `O(log n)` time.
+   - Space `O(log n)` for the recursion stack, because the depth of recursion is `log n`.
 
 7. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Linear Search | Binary Search |
+   |---|---|---|
+   | Data requirement | Works on sorted or unsorted data | Data must be sorted |
+   | Method | Checks every element one by one | Compares with the middle, discards half |
+   | Best case | O(1) | O(1) |
+   | Worst case | O(n) | O(log n) |
+   | For n = 1000 | Up to 1000 comparisons | About 10 comparisons |
+   | Data structure | Array or linked list | Array only (needs random access) |
+   | Implementation | Very simple | Slightly more complex |
+   | Suitable for | Small or unsorted data | Large sorted data |
+
+   - Linear search wins only when the data is unsorted and searched just once, because sorting first would cost `O(n log n)`.
+
 8. **Write a C/C++ program for binary search.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 712 (ET: BUET)]*
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+
+   int binarySearch(int a[], int n, int target) {
+       int low = 0, high = n - 1, mid;
+       while (low <= high) {
+           mid = low + (high - low) / 2;
+           if (a[mid] == target)
+               return mid;                  // found
+           else if (a[mid] < target)
+               low = mid + 1;               // go right
+           else
+               high = mid - 1;              // go left
+       }
+       return -1;                           // not found
+   }
+
+   int main(void) {
+       int a[100], n, i, target, pos;
+
+       printf("Enter number of elements: ");
+       scanf("%d", &n);
+       printf("Enter %d sorted elements: ", n);
+       for (i = 0; i < n; i++) scanf("%d", &a[i]);
+
+       printf("Enter element to search: ");
+       scanf("%d", &target);
+
+       pos = binarySearch(a, n, target);
+       if (pos == -1)
+           printf("Element not found\n");
+       else
+           printf("Element found at index %d (position %d)\n", pos, pos + 1);
+       return 0;
+   }
+   ```
+
+   - The input array must already be sorted in ascending order.
+   - Time `O(log n)`, space `O(1)`.
 
 9. **(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
+   Answer: Linear search, also called sequential search, checks every element of a list one after another until the target is found or the list ends.
+
+   ```
+   LinearSearch(A, n, target)
+     for i = 0 to n-1
+         if A[i] == target
+             return i
+     return -1
+   ```
+
+   Best case
+   - The target is the very first element, so only one comparison is made.
+   - Best case complexity = `O(1)`.
+
+   Worst case
+   - The target is the last element, or it is not in the list at all, so all `n` elements must be compared.
+   - Worst case complexity = `O(n)`.
+
+   Average case
+   - On average the target is found near the middle, so about `(n+1)/2` comparisons are made, which is still `O(n)`.
+
+   - Space complexity `O(1)`.
+   - It needs no sorting and works on linked lists too, but it is slow on large data.
+
 10. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 791 (ET: N/A)]*
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int a[100], n, i, target;
+        int low, high, mid, found = 0;
+
+        printf("Enter size of the list: ");
+        scanf("%d", &n);
+        printf("Enter %d integers in ascending order: ", n);
+        for (i = 0; i < n; i++) scanf("%d", &a[i]);
+
+        printf("Enter the number to search: ");
+        scanf("%d", &target);
+
+        low = 0;
+        high = n - 1;
+        while (low <= high) {
+            mid = low + (high - low) / 2;
+            if (a[mid] == target) {
+                printf("Found at position %d\n", mid + 1);
+                found = 1;
+                break;
+            }
+            else if (a[mid] < target)
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+        if (!found) printf("Number not found in the list\n");
+        return 0;
+    }
+    ```
+
+    - The list must be entered in ascending order, otherwise the result is wrong.
+    - Time `O(log n)`, space `O(1)`.
 
 11. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 973-974 (ET: BUET)]*
 
+    Answer: Take the sorted array `A = 2, 5, 8, 12, 16, 23, 38, 56, 72, 91` (n = 10, indices 0 to 9) and search for `23`.
+
+    | Step | low | high | mid | A[mid] | Comparison | Action |
+    |---|---|---|---|---|---|---|
+    | 1 | 0 | 9 | 4 | 16 | 16 < 23 | Go right, low = 5 |
+    | 2 | 5 | 9 | 7 | 56 | 56 > 23 | Go left, high = 6 |
+    | 3 | 5 | 6 | 5 | 23 | 23 == 23 | Found at index 5 |
+
+    - Result: 23 is found at index 5 (position 6) after 3 comparisons.
+
+    Time complexity
+    - After each comparison the size becomes `n → n/2 → n/4 → ... → 1`.
+    - After `k` steps the size is `n / 2^k`. Setting `n / 2^k = 1` gives `2^k = n`, so `k = log₂ n`.
+    - Time complexity = `O(log n)`. For n = 10, `log₂ 10 ≈ 3.32`, matching the 3 comparisons used above.
+    - Recurrence form: `T(n) = T(n/2) + O(1)` → `O(log n)`. Space `O(1)`.
+
 12. **(খ) Binary Search কিভাবে করা হয়? উদাহরণসহ দেখান।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087 (ET: N/A)]*
+
+    Answer: Binary search works on a sorted array. It compares the target with the middle element and then searches only the half where the target can be.
+
+    Rule
+    - If `A[mid] == target` → found.
+    - If `A[mid] < target` → search the right half, set `low = mid + 1`.
+    - If `A[mid] > target` → search the left half, set `high = mid - 1`.
+
+    Example — search `40` in `10, 20, 30, 40, 50, 60, 70`
+
+    | Step | low | high | mid | A[mid] | Result |
+    |---|---|---|---|---|---|
+    | 1 | 0 | 6 | 3 | 40 | Found at index 3 |
+
+    Second example — search `60` in the same array
+
+    | Step | low | high | mid | A[mid] | Result |
+    |---|---|---|---|---|---|
+    | 1 | 0 | 6 | 3 | 40 | 40 < 60 → low = 4 |
+    | 2 | 4 | 6 | 5 | 60 | Found at index 5 |
+
+    - Only 2 comparisons were needed instead of 6 for linear search.
+    - Time `O(log n)`, space `O(1)`. The array must stay sorted.
 
 13. **(ক) Liner search কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088-1089 (ET: N/A)]*
 
+    Answer: Linear search is the simplest searching technique. It compares the target with each element of the list from the beginning until a match is found or the list ends.
+
+    Advantages
+    - Very simple to write and understand.
+    - Works on unsorted data — no sorting is required first.
+    - Works on any sequential structure, including linked lists where random access is not possible.
+    - Needs no extra memory, `O(1)` space.
+    - Efficient for small lists, and best case is `O(1)` when the target is first.
+    - The list can change freely; no order has to be maintained.
+
+    Disadvantages
+    - Slow on large data — worst case `O(n)` comparisons.
+    - Time grows directly with the number of elements.
+    - Much worse than binary search when the data is already sorted.
+    - Repeated searching over the same large list is very costly.
+
+    - Rule of thumb: use linear search for small or unsorted lists searched rarely; use binary search or a hash table otherwise.
+
 14. **What is algorithm? Write down the algorithm to find out the second highest element in an n-element array.** *[ICT Ministry Assistant Programmer 2017 compact it 1236 (ET: N/A)]*
+
+    Answer: An algorithm is a finite, ordered set of unambiguous steps that takes some input and produces the required output in a finite time.
+
+    Properties of an algorithm
+    - Input, output, definiteness (each step is clear), finiteness (it terminates), effectiveness (each step is doable).
+
+    Algorithm — second highest element in one pass
+
+    ```
+    SecondHighest(A, n)
+      if n < 2
+          return "Not possible"
+
+      first  = -infinity
+      second = -infinity
+
+      for i = 0 to n-1
+          if A[i] > first
+              second = first          // old maximum becomes second
+              first  = A[i]
+          else if A[i] > second and A[i] != first
+              second = A[i]
+
+      if second == -infinity
+          return "No second highest element (all values equal)"
+      else
+          return second
+    ```
+
+    Dry run on `12, 35, 1, 10, 34, 1`
+    - 12 → first=12, second=-∞
+    - 35 → first=35, second=12
+    - 1 → no change
+    - 10 → second=12 still (10 < 12)
+    - 34 → 34 < 35 but > 12 → second=34
+    - 1 → no change
+    - Answer: second highest = `34`
+
+    - Time complexity `O(n)` — a single scan. Space `O(1)`.
+    - Sorting first and taking `A[n-2]` would also work, but that costs `O(n log n)`, which is slower.
 
 ## Algorithm Analysis & Asymptotic Complexity (14)
 
