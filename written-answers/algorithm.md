@@ -3028,11 +3028,149 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 495 (ET: N/A)]*
 
+   Answer: The right representation depends on whether the graph is sparse or dense, and on which operation is performed most often.
+
+   | Operation | Adjacency matrix | Adjacency list |
+   |---|---|---|
+   | Space | O(V²) | O(V + E) |
+   | Check if edge (u,v) exists | O(1) | O(degree of u) |
+   | List all neighbours of u | O(V) | O(degree of u) |
+   | Add an edge | O(1) | O(1) |
+   | Remove an edge | O(1) | O(degree of u) |
+   | Add a vertex | O(V²) — matrix must be rebuilt | O(1) |
+
+   Problems better solved with an adjacency list
+   - BFS and DFS on a sparse graph — `O(V + E)` instead of `O(V²)`.
+   - Dijkstra with a min-heap — `O((V + E) log V)` instead of `O(V²)`.
+   - Kruskal's MST, which iterates over edges rather than vertex pairs.
+   - Topological sorting and cycle detection, which walk each vertex's neighbour list.
+   - Any real-world sparse network — road maps, social graphs, web link graphs — where `E` is far smaller than `V²`.
+
+   Problems better solved with an adjacency matrix
+   - Repeatedly asking "is there an edge between u and v?" — constant time here, linear in a list.
+   - Floyd-Warshall all-pairs shortest path, which is `O(V³)` and naturally indexes `dist[i][j]`.
+   - Dense graphs where `E ≈ V²`, so the matrix wastes nothing.
+   - Transitive closure and matrix-based graph operations such as counting paths of length `k` by matrix powers.
+   - Small graphs, where `V²` is tiny anyway.
+
+   - Rule of thumb: sparse graph and traversal-heavy work → adjacency list; dense graph and edge-lookup-heavy work → adjacency matrix.
+
 2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
+
+   Answer: In binary-heap numbering, the children of node `i` are `2i` and `2i+1`. So the complete binary tree on 7 vertices is:
+
+   ```
+              1
+            /   \
+           2     3
+          / \   / \
+         4   5 6   7
+   ```
+
+   Adjacency list (treating the tree as an undirected graph)
+   ```
+   1 → 2, 3
+   2 → 1, 4, 5
+   3 → 1, 6, 7
+   4 → 2
+   5 → 2
+   6 → 3
+   7 → 3
+   ```
+
+   Equivalent adjacency matrix (1 = edge present, 0 = no edge)
+
+   |   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+   |---|---|---|---|---|---|---|---|
+   | **1** | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+   | **2** | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+   | **3** | 1 | 0 | 0 | 0 | 0 | 1 | 1 |
+   | **4** | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+   | **5** | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+   | **6** | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+   | **7** | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+
+   - The matrix is symmetric, because the graph is undirected. The diagonal is all zeros, since there is no self-loop.
+   - Total 1s in the matrix = 12 = `2 × 6`, matching the 6 edges of a 7-vertex tree (`V − 1 = 6`).
+   - Space used: the matrix takes `7 × 7 = 49` cells, while the list stores only 12 entries — a clear illustration of why sparse graphs favour the list.
 
 3. **(b) How a graph can be represented? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
 
+   Answer: A graph is stored in memory in one of three standard ways.
+
+   Example graph used below
+   ```
+        A --- B
+        |   / |
+        | /   |
+        C --- D
+   ```
+   Vertices: A, B, C, D. Edges: A-B, A-C, B-C, B-D, C-D.
+
+   (a) Adjacency matrix
+   - A `V × V` table where `M[i][j] = 1` if an edge exists, otherwise 0. For a weighted graph the cell holds the weight.
+
+   |   | A | B | C | D |
+   |---|---|---|---|---|
+   | **A** | 0 | 1 | 1 | 0 |
+   | **B** | 1 | 0 | 1 | 1 |
+   | **C** | 1 | 1 | 0 | 1 |
+   | **D** | 0 | 1 | 1 | 0 |
+
+   - Space `O(V²)`, edge lookup `O(1)`.
+
+   (b) Adjacency list
+   - An array of `V` lists, where list `i` holds all neighbours of vertex `i`.
+   ```
+   A → B, C
+   B → A, C, D
+   C → A, B, D
+   D → B, C
+   ```
+   - Space `O(V + E)`, edge lookup `O(degree)`. This is the usual choice for sparse graphs.
+
+   (c) Edge list
+   - Simply a list of all edges: `(A,B), (A,C), (B,C), (B,D), (C,D)`
+   - Space `O(E)`. Used by Kruskal's algorithm, which just sorts this list.
+
+   - For an undirected graph the matrix is symmetric and each edge appears twice in the adjacency list.
+
 4. **নিম্নে উল্লেখিত Graph- এর Adjacency Metrix এবং Adjacency List বের করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148-1149 (ET: BUET)]*
+
+   Answer: The graph figure was not printed with the question, so this graph is used to show the method.
+
+   ```
+        1 --- 2
+        |   / |
+        | /   |
+        3 --- 4 --- 5
+   ```
+   Edges: 1-2, 1-3, 2-3, 2-4, 3-4, 4-5
+
+   Adjacency matrix
+
+   |   | 1 | 2 | 3 | 4 | 5 |
+   |---|---|---|---|---|---|
+   | **1** | 0 | 1 | 1 | 0 | 0 |
+   | **2** | 1 | 0 | 1 | 1 | 0 |
+   | **3** | 1 | 1 | 0 | 1 | 0 |
+   | **4** | 0 | 1 | 1 | 0 | 1 |
+   | **5** | 0 | 0 | 0 | 1 | 0 |
+
+   Adjacency list
+   ```
+   1 → 2, 3
+   2 → 1, 3, 4
+   3 → 1, 2, 4
+   4 → 2, 3, 5
+   5 → 4
+   ```
+
+   Checks
+   - The matrix is symmetric across the diagonal, as it must be for an undirected graph.
+   - Number of 1s = 12 = `2 × 6`, matching the 6 edges.
+   - The degree of a vertex equals the number of 1s in its matrix row, and also the length of its adjacency list. For example vertex 4 has degree 3.
+   - Space: matrix `O(V²) = 25` cells; list `O(V + E) = 5 + 12 = 17` entries.
 
 ## Divide and Conquer & Matrix Multiplication (3)
 
