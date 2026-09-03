@@ -857,51 +857,580 @@
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
 
+   Answer:
+
+   (a) Positive impacts on Bangladeshi banking
+   - **Fraud detection** — ML models flag unusual card and MFS transactions in real time, cutting losses.
+   - **Credit scoring** — alternative data (mobile wallet history, utility payments) lets banks lend to customers with no formal credit record, widening financial inclusion.
+   - **Chatbots and virtual assistants** — handle routine balance, statement and account queries in Bangla around the clock, easing call-centre load.
+   - **Automated back office (RPA)** — cheque clearing, KYC verification, account opening and reconciliation are processed faster with fewer errors.
+   - **AML compliance** — automated transaction monitoring meets Bangladesh Bank reporting requirements more reliably than manual review.
+   - **Personalised products** — customer segmentation drives targeted loan and deposit offers.
+   - **Cost reduction** — fewer manual steps means lower operating cost per transaction, which matters in a low-margin market.
+
+   (b) Negative impacts and risks
+   - **Job displacement** — tellers, data entry operators and back-office clerks are the most exposed roles.
+   - **Skill gap** — existing staff lack data science and cloud skills.
+   - **Algorithmic bias** — a model trained on past lending data can systematically reject rural or female applicants.
+   - **Cybersecurity risk** — greater automation widens the attack surface.
+   - **Digital divide** — customers without smartphones or literacy are left behind.
+   - **Regulatory gap** — Bangladesh has no comprehensive AI governance framework yet.
+
+   (c) Strategies to balance technology and employment
+   - **Reskill rather than retrench** — retrain tellers as relationship managers, digital advisors and fraud analysts. This is cheaper than hiring and preserves institutional knowledge.
+   - **Redeploy to advisory roles** — automation removes routine work, freeing staff for sales, complaint handling and elderly or rural customer support, which machines handle poorly.
+   - **Phased adoption** — automate gradually so attrition absorbs most of the reduction, avoiding mass layoffs.
+   - **Human-in-the-loop** — keep human approval for loan rejections and large transactions, which protects both jobs and customers.
+   - **Create new roles** — data engineers, ML engineers, cybersecurity analysts, AI ethics and compliance officers.
+   - **Partner with universities** — internship and training pipelines with local institutions.
+   - **Policy support** — Bangladesh Bank should issue AI governance guidelines covering model explainability, bias testing and data protection.
+
+   - Balanced conclusion: AI in Bangladeshi banking is best treated as augmentation, not replacement. The realistic outcome is a change in the JOB MIX rather than a fall in total employment, provided reskilling begins before automation, not after.
+
 2. **Describe the transformative power of ICT with ten innovative applications for the online banking system.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 304 (ET: BIBM)]*
+
+   Answer: ICT has changed banking from a branch-based, paper-driven business into a 24/7 digital service. Ten innovative applications:
+
+   - **Internet and mobile banking** — balance check, fund transfer, bill payment and statements from anywhere, removing the need to visit a branch.
+   - **Mobile Financial Services (MFS)** — bKash, Nagad and Rocket bring banking to people with no bank account, driving financial inclusion in rural Bangladesh.
+   - **ATM and CDM networks** — round-the-clock cash withdrawal and deposit without staff.
+   - **Real-time payment systems** — BEFTN, RTGS and NPSB settle interbank transfers within minutes instead of days.
+   - **AI chatbots** — answer routine customer queries in Bangla and English at any hour, cutting call-centre cost.
+   - **AI fraud detection** — machine learning flags abnormal transaction patterns in real time and blocks suspected card fraud.
+   - **Biometric authentication** — fingerprint and face recognition for account opening (e-KYC) and login, replacing paper signatures.
+   - **Blockchain for trade finance** — tamper-proof letters of credit and remittance tracking, reducing settlement time and fraud.
+   - **Big data analytics** — customer segmentation, credit scoring from alternative data, and churn prediction.
+   - **Cloud core banking** — elastic capacity and disaster recovery without building a second data centre.
+
+   Additional applications worth naming
+   - QR-code merchant payments, agent banking software, robotic process automation for reconciliation, and open banking APIs.
+
+   - Overall effect: lower transaction cost, wider reach into unbanked areas, faster settlement and better fraud control — but with new dependencies on connectivity, cybersecurity and digital literacy.
 
 3. **What do you mean by viral video? List three advantages of viral vedio.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
 
+   Answer: A viral video is a video that spreads rapidly and widely across the internet through sharing on social media, messaging apps and email, reaching a very large audience in a short time without any paid advertising push.
+
+   Why videos go viral
+   - Strong emotional appeal — humour, surprise, inspiration or outrage.
+   - Short length and an immediate hook in the first few seconds.
+   - Relatability, timeliness and easy shareability.
+   - An algorithmic boost once early engagement is high.
+
+   Three advantages
+   - **Massive reach at near-zero cost** — organic sharing does the distribution work that would otherwise need a large advertising budget.
+   - **Rapid brand awareness and credibility** — a shared video carries an implicit recommendation from the person sharing it, which is far more trusted than an advertisement.
+   - **Fast public-message delivery** — governments and NGOs use it for awareness campaigns on health, disaster warning and civic duty, reaching millions within hours.
+
+   - Risk to note: virality cannot be controlled. Negative content spreads just as fast, and misinformation is the main danger, which is why source verification matters.
+
 4. **(ক) IR 4.0 বলতে কি বুঝায়? IR 4.0 এর গুরুত্বপূর্ণ উপাদানগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
+
+   Answer: IR 4.0 means the Fourth Industrial Revolution — the ongoing transformation in which physical production, digital systems and biological technologies merge. Machines, products and systems are connected, exchange data and make decisions with little human intervention.
+
+   The four industrial revolutions
+
+   | Revolution | Period | Driver |
+   |---|---|---|
+   | IR 1.0 | 1780s | Steam power, mechanisation |
+   | IR 2.0 | 1870s | Electricity, mass production, assembly line |
+   | IR 3.0 | 1970s | Computers, electronics, automation |
+   | IR 4.0 | 2010s onward | Cyber-physical systems, IoT, AI, data |
+
+   Key components of IR 4.0
+   - **Internet of Things (IoT)** — sensors on machines, vehicles and products that continuously report data.
+   - **Artificial Intelligence and Machine Learning** — systems that learn from that data and predict, classify and decide.
+   - **Big Data and analytics** — collecting and analysing very large data volumes to guide decisions.
+   - **Cloud computing** — elastic storage and compute that make the above affordable.
+   - **Cyber-Physical Systems (CPS)** — physical machines controlled by software, the core idea of IR 4.0.
+   - **Robotics and automation** — collaborative robots working alongside people.
+   - **3D printing (additive manufacturing)** — on-demand production and rapid prototyping.
+   - **Blockchain** — trusted, tamper-proof records across a supply chain.
+   - **Augmented and Virtual Reality** — used for training, maintenance guidance and design.
+   - **5G connectivity** — the low-latency network that makes real-time machine communication possible.
+   - **Cybersecurity** — essential, because everything is now connected.
+
+   - Impact on Bangladesh: RMG automation, smart agriculture, e-governance and freelancing are the main areas, with reskilling the central policy challenge.
 
 5. **E-commerce ভিত্তিক ৪টি সাইটের নাম লিখুন?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+   Answer: Four e-commerce sites.
+
+   Bangladeshi e-commerce sites
+   - **Daraz Bangladesh** (daraz.com.bd) — the largest general marketplace.
+   - **Chaldal** (chaldal.com) — online grocery delivery.
+   - **Rokomari** (rokomari.com) — books and stationery.
+   - **Pickaboo** (pickaboo.com) — electronics and mobile phones.
+   - Others: AjkerDeal, Bagdoom, Othoba, Priyoshop, Bikroy (classified).
+
+   International e-commerce sites
+   - **Amazon** (amazon.com), **eBay** (ebay.com), **Alibaba** (alibaba.com), **Flipkart** (flipkart.com).
+
+   - Note the difference: Daraz and Amazon are marketplaces where many sellers list; Chaldal is a single-seller retail site. Bikroy and eBay are C2C platforms where individuals sell to each other.
+
 6. **Describe in Bangali or English on the post COVID-19 social challenge that Bangladesh may can front end the way ICT can support to overcome them.** *[BTRC Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
+
+   Answer:
+
+   (a) Post-COVID social challenges facing Bangladesh
+   - **Learning loss** — prolonged school closure widened the gap between urban and rural students.
+   - **Unemployment and income loss** — job losses in RMG, transport and informal sectors, and returning migrant workers.
+   - **Healthcare pressure** — overloaded hospitals, weak rural health access, vaccine record management.
+   - **Digital divide** — many rural households lack smartphones, internet or the literacy to use them.
+   - **Mental health** — isolation, anxiety and domestic stress rose sharply.
+   - **Widening inequality** — the poorest lost the most and recovered the slowest.
+   - **Small business collapse** — SMEs without an online presence lost their customer base.
+
+   (b) How ICT can address them
+   - **Education** — online classrooms, recorded lessons broadcast on television (Sangsad TV's "Ghore Boshe Shikhi"), Muktopaath and Shikkhok Batayon for teacher training, and low-bandwidth mobile learning apps for rural students.
+   - **Employment** — freelancing and outsourcing training through the Learning and Earning Development Project, job-matching portals, and e-commerce and F-commerce enabling home-based businesses.
+   - **Healthcare** — telemedicine services, the Shastho Batayon 16263 helpline, the Surokkha vaccine registration platform, and digital health records.
+   - **Financial support** — direct cash transfer to the poor through MFS (bKash, Nagad), which reached beneficiaries without physical contact.
+   - **Digital divide** — Union Digital Centres, expanded broadband under the Info-Sarkar project, subsidised devices and community internet access.
+   - **Mental health** — online counselling and awareness campaigns on social media.
+   - **SME recovery** — training small traders to sell through Facebook pages and marketplaces, and digital payment adoption.
+
+   - Precondition for all of it: affordable connectivity, digital literacy and cybersecurity. Without these, ICT solutions reach only the already-connected and widen inequality instead of reducing it.
 
 7. **Copyright আইন কি? এর প্রয়োজনীয়তা ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
+   Answer: Copyright law is the legal protection given to the creator of an original work — literary, artistic, musical, film or software — giving the creator the exclusive right to reproduce, distribute, adapt and publicly display that work for a fixed period.
+
+   In Bangladesh
+   - Governed by the **Copyright Act 2000** (amended 2005), administered by the Copyright Office under the Ministry of Cultural Affairs.
+   - Protection generally lasts for the lifetime of the author plus 60 years.
+   - Registration is not compulsory — copyright exists automatically on creation — but registration provides legal evidence in a dispute.
+
+   What copyright protects
+   - Books, articles, music, films, paintings, photographs, computer software and databases.
+   - It protects the EXPRESSION of an idea, not the idea itself.
+
+   Why it is necessary
+   - **Protects the creator's rights** — no one can copy or sell the work without permission.
+   - **Ensures fair economic return** — royalties and licence fees give creators an income from their work.
+   - **Encourages creativity and innovation** — people invest time in creating only if the result cannot simply be taken.
+   - **Prevents plagiarism and piracy** — a major issue for the software and music industries.
+   - **Supports the creative economy** — publishing, film, music and software are significant contributors to national income.
+   - **Enables lawful sharing** — licensing, including open licences like Creative Commons, works only because copyright exists to license.
+   - **International recognition** — Bangladesh is a member of the Berne Convention, so protection extends abroad.
+
+   - Balancing provision: "fair dealing" allows limited use for education, research, criticism and news reporting without permission.
+
 8. **Comparison between MIS and DSS. What is the roles of MIS in Banking sector?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872 (ET: N/A)]*
+
+   Answer:
+
+   MIS vs DSS
+
+   | Point | MIS (Management Information System) | DSS (Decision Support System) |
+   |---|---|---|
+   | Purpose | Reports on routine, structured operations | Supports semi-structured and unstructured decisions |
+   | Users | Middle management | Middle and top management, analysts |
+   | Output | Periodic scheduled reports — daily, weekly, monthly | Interactive analysis, what-if scenarios, forecasts |
+   | Decision type | Structured, repetitive | Semi-structured, one-off |
+   | Data source | Mainly internal transaction data | Internal plus external data |
+   | Flexibility | Low — fixed report formats | High — the user drives the analysis |
+   | Analysis capability | Summarising and comparison | Modelling, simulation, optimisation |
+   | Example | Monthly branch performance report | Should we open a branch in this upazila? |
+
+   - Relationship: MIS answers "what happened"; DSS answers "what if" and "what should we do". A DSS often draws on data produced by the MIS.
+
+   Roles of MIS in the banking sector
+   - **Daily operational reporting** — branch-wise deposits, withdrawals, cash position and transaction volumes.
+   - **Loan portfolio monitoring** — outstanding loans, classified loans, recovery status, sector-wise exposure.
+   - **Regulatory reporting** — CIB reports, CRR and SLR statements and other returns required by Bangladesh Bank.
+   - **Customer information management** — account profiles, KYC records, transaction history.
+   - **Branch performance evaluation** — comparing branches on deposit growth, profit and cost.
+   - **Fraud and risk monitoring** — reports on unusual transactions and limit breaches.
+   - **HR and payroll management** — staff records, attendance, salary processing.
+   - **Budgeting and planning** — actual versus budget comparison to guide targets.
 
 9. **E-commerce and F-commerce -এর মধ্যে পার্থক্য লিখুন। নারী গোষ্ঠী দ্বারা পরিচালিত F-Commerce -এর সামাজিক প্রভাব সম্বন্ধে লিখুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
 
+   Answer:
+
+   (a) E-commerce vs F-commerce
+
+   | Point | E-commerce | F-commerce |
+   |---|---|---|
+   | Platform | A dedicated website or app | A Facebook page or group |
+   | Setup cost | High — domain, hosting, development | Almost zero — a free page |
+   | Technical skill | Needed | Not needed |
+   | Payment | Integrated gateway, card, MFS | Mostly cash on delivery or manual bKash |
+   | Product catalogue | Structured, searchable, filterable | Posts and photo albums |
+   | Order process | Automated cart and checkout | Manual, through comments and Messenger |
+   | Trust basis | Site reputation, reviews, return policy | Personal relationship and social proof |
+   | Scale | Can serve very large volumes | Suits small volumes |
+   | Examples | Daraz, Chaldal, Rokomari | Thousands of Facebook clothing, food and craft pages |
+
+   - F-commerce is a subset of e-commerce, distinguished by using a social platform instead of an owned storefront.
+
+   (b) Social impact of women-led F-commerce in Bangladesh
+   - **Economic empowerment** — women earn an independent income, which raises their bargaining position within the household.
+   - **Work from home** — the business can be run alongside childcare and household duties, removing the mobility barrier that keeps many women out of formal jobs.
+   - **Near-zero entry barrier** — no capital, no shop rent and no formal education required, so rural and less-educated women can participate.
+   - **Skill development** — sellers learn photography, pricing, customer service, packaging and basic digital marketing.
+   - **Employment creation** — successful pages hire tailors, packers and delivery helpers, often other women.
+   - **Preserving traditional crafts** — nakshi kantha, jamdani, handloom and pitha reach a national market instead of a local one.
+   - **Changing social attitudes** — visible female entrepreneurship gradually normalises women earning and running businesses.
+   - **Financial inclusion** — sellers open MFS and bank accounts to receive payments.
+
+   Challenges that remain
+   - No legal registration or consumer protection, product quality disputes, online harassment, dependence on a single platform's algorithm, and difficulty accessing formal credit without documented turnover.
+
+   - Policy direction: the Women Entrepreneur policy of Bangladesh Bank and the "Nari Uddokta" refinancing scheme try to bring these sellers into formal credit, but registration and digital payment adoption remain the practical bottlenecks.
+
 10. **১৪. বাংলাদেশের প্রথম ভিডিও লাইভ শেয়ারিং অ্যাপস কোনটি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+    Answer: **Bioscope** is generally cited as Bangladesh's first live video streaming and sharing app. It was launched by Grameenphone in 2016, with the live TV and video-on-demand app following in August 2017.
+
+    - Before it, **Bongo BD** (2013) was the country's pioneer video-on-demand platform, but it was streaming rather than live sharing.
+    - Other Bangladeshi platforms that followed: Toffee (Banglalink), Hoichoi Bangladesh, Binge (Robi) and Chorki.
+    - The exam paper may intend a specific app; the answer expected in most BPSC keys is Bioscope.  <!-- verify -->
 
 11. **৯. চতুর্থ শিল্প বিপ্লব কি? ইহার সম্পর্কে ৪ লাইন লিখুন।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+    Answer: The Fourth Industrial Revolution (IR 4.0) is the current era in which physical machines, digital systems and biological technologies merge, so that connected devices exchange data and make decisions with little human intervention.
+
+    Four lines about it
+    - It is driven by Artificial Intelligence, the Internet of Things, Big Data, cloud computing, robotics, 3D printing and blockchain.
+    - Its central idea is the cyber-physical system — a physical machine controlled and monitored by software in real time.
+    - It differs from IR 3.0 in that IR 3.0 merely automated tasks, while IR 4.0 lets systems learn, predict and decide for themselves.
+    - Its main effect is mass job displacement in routine work alongside mass creation of new technical roles, making reskilling the central policy challenge.
+
+    - For Bangladesh the key areas are RMG automation, smart agriculture, e-governance, freelancing and the growing ICT export sector.
+
 12. **What is ERP? Write down the Implementation Challenges of ERP?** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948 (ET: N/A)]*
+
+    Answer: **ERP (Enterprise Resource Planning)** is integrated software that runs all the core business functions of an organisation — finance, HR, procurement, inventory, production, sales and customer service — on a SINGLE shared database, so every department sees the same data in real time.
+
+    - Popular systems: SAP, Oracle ERP Cloud, Microsoft Dynamics 365, Odoo, ERPNext.
+    - Main benefit: it removes data silos. Without ERP, finance, stores and production each keep their own numbers and they never agree.
+
+    Implementation challenges
+    - **High cost** — licence, hardware, consultants, customisation and training often run into crores, and the total is usually underestimated.
+    - **Long implementation time** — a full ERP rollout typically takes one to three years.
+    - **Resistance to change** — staff accustomed to old manual processes resist a system that makes their work visible and auditable.
+    - **Business process re-engineering** — the organisation usually has to change its processes to fit the software, which is politically difficult.
+    - **Data migration** — cleaning and transferring years of inconsistent legacy data is the most underestimated task in any ERP project.
+    - **Over-customisation** — heavy modification breaks the upgrade path and multiplies cost.
+    - **Inadequate training** — a good system fails if users cannot operate it.
+    - **Lack of top-management commitment** — ERP is an organisational change project, not an IT project. Without executive sponsorship it stalls.
+    - **Integration with existing systems** — legacy applications and third-party tools must be connected.
+    - **Choosing the wrong vendor or product** — a mismatch between business size and system complexity.
+
+    - Success factors: strong executive sponsorship, a realistic phased rollout, minimum customisation, thorough data cleansing before migration, and continuous user training.
 
 13. **বর্তমান যুগ চতুর্থ শিল্প বিপ্লবের যুগ। BREB ও সেই যুগের সাথে তালমিলিয়ে চলছে, মানুষের দ্বারপ্রান্তে বিদ্যুৎ সেবা পৌছে দেওয়ার জন্য। BREB এর এমন ৫টি পরিকল্পনা বা উদ্যোগ লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
+    Answer: BREB (Bangladesh Rural Electrification Board) has taken several IR 4.0 aligned initiatives to bring electricity service to people's doorsteps.
+
+    - **Prepaid and smart metering** — replacing manual meter reading with prepaid and smart meters, so consumers recharge like a mobile phone and the utility gets accurate, real-time consumption data with no meter-reader visit.
+    - **Online billing and digital payment** — bills paid through bKash, Nagad, Rocket, internet banking and agent points, removing the need to travel to a Palli Bidyut office.
+    - **Online new-connection application** — the whole application, document upload, fee payment and tracking done through a web portal, cutting middlemen and delay.
+    - **Complaint management through a hotline and app** — a call centre and mobile app to report outages, with automatic ticket routing to the nearest crew, replacing the old practice of visiting the office.
+    - **SCADA and automated distribution monitoring** — remote monitoring of substations and feeders, so faults are detected and isolated quickly instead of waiting for consumer complaints.
+
+    Other initiatives worth mentioning
+    - **GIS-based network mapping** — every pole, transformer and line recorded on a digital map for faster fault location and planning.
+    - **ERP for internal operations** — integrated billing, inventory, HR and accounts across all Palli Bidyut Samities.
+    - **Solar and renewable integration**, including net metering for rooftop solar consumers.
+    - **100% electrification achievement** and continuing work on reducing system loss through digital monitoring.
+
+    - Common thread: all of these replace a manual, physically-present process with a data-driven remote one — which is exactly what IR 4.0 means for a utility.
+
 14. **(ii) E-Commerce কী? E-Commerce-এর প্রকারভেদ উল্লেখ করুন। Search engine কী? এর কয়েকটি উদাহরণ দিন।** *[BPSC Assistant Network Engineer 2020 compact it 956, 958 (ET: N/A)]*
+
+    Answer:
+
+    (a) E-Commerce
+    - Electronic commerce means buying and selling goods and services over the internet, including the associated payment, marketing and delivery arrangements.
+
+    (b) Types of e-commerce
+
+    | Type | Meaning | Example |
+    |---|---|---|
+    | B2B (Business to Business) | One business sells to another | Alibaba, a wholesaler supplying retailers |
+    | B2C (Business to Consumer) | A business sells directly to the end customer | Daraz, Amazon, Chaldal |
+    | C2C (Consumer to Consumer) | Individuals sell to each other through a platform | Bikroy, eBay, Facebook Marketplace |
+    | C2B (Consumer to Business) | An individual offers a service to a business | Upwork, Fiverr freelancers |
+    | B2G / G2B | Business and government transactions | e-GP (electronic Government Procurement) |
+    | G2C | Government services to citizens | e-passport, NID services, tax payment |
+
+    (c) Search engine
+    - A software system that searches the web for pages matching a user's keywords and ranks the results by relevance.
+    - It works in three stages: **crawling** (bots follow links to discover pages), **indexing** (page content is stored in a searchable index) and **ranking** (results ordered by an algorithm such as PageRank).
+
+    (d) Examples of search engines
+    - Google, Bing, Yahoo, DuckDuckGo, Baidu (China), Yandex (Russia), Ask.com.
 
 15. **Make a list of banking software used in Bangladesh. List the essential features for successful Banking Software and Apps.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 986-987 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+    Answer:
+
+    (a) Core banking software used in Bangladesh
+
+    | Software | Vendor | Used by |
+    |---|---|---|
+    | Temenos T24 / Transact | Temenos, Switzerland | Many private commercial banks |
+    | Flexcube | Oracle | Several private and foreign banks |
+    | Finacle | Infosys, India | Some private banks |
+    | Ababil | Millennium Information Solution, Bangladesh | Islamic banks |
+    | BankUltimus | Leads Corporation, Bangladesh | Several local banks |
+    | Stelar / eIBS | Local vendors | Smaller banks and NBFIs |
+
+    - Payment and settlement systems: BEFTN, RTGS, NPSB and BACH, all operated by Bangladesh Bank.
+    - MFS platforms: bKash, Nagad, Rocket, Upay.
+
+    (b) Essential features of successful banking software and apps
+    - **Security** — end-to-end encryption, two-factor authentication, biometric login, session timeout and device binding. This is non-negotiable.
+    - **Reliability and uptime** — 24/7 availability with failover and disaster recovery; a bank app that is down at month end loses customers.
+    - **Real-time transaction processing** — instant balance update and instant fund transfer.
+    - **Simple, clear user interface** — usable by customers with limited digital literacy, with Bangla language support.
+    - **Regulatory compliance** — meets Bangladesh Bank guidelines, AML/CFT rules, KYC and e-KYC requirements, and audit trail retention.
+    - **Scalability** — handles peak load at salary day and festival periods.
+    - **Integration** — connects to NPSB, BEFTN, RTGS, MFS wallets, card networks and utility billers.
+    - **Comprehensive audit logging** — every transaction traceable to a user, device and time.
+    - **Notification system** — SMS and push alerts for every debit and credit, which is itself a fraud control.
+    - **Offline and low-bandwidth support** — USSD banking for feature phones and poor network areas.
+    - **Customer support inside the app** — chat, complaint tracking and card block.
+
 16. **RFID has huge applications in business, especially in supply chain management and toll collection system. Show the basic working principle of RFID in brief.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 987-988 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+    Answer: **RFID (Radio Frequency Identification)** identifies and tracks objects automatically using radio waves, without contact and without line of sight.
+
+    Three components
+    - **Tag (transponder)** — attached to the object. Contains a microchip storing a unique ID and an antenna.
+    - **Reader (interrogator)** — sends out radio waves and receives the tag's reply.
+    - **Backend system** — a database and software that turns the ID into meaningful information.
+
+    Working principle
+    ```mermaid
+    flowchart LR
+        R[RFID Reader] -->|1. radio signal| T[RFID Tag<br/>chip + antenna]
+        T -->|2. reflects back its unique ID| R
+        R -->|3. sends ID| D[(Database / Backend)]
+        D -->|4. returns object details| A[Application]
+    ```
+
+    - Step 1 — the reader continuously transmits a radio signal through its antenna.
+    - Step 2 — when a tag enters the field, its antenna picks up the signal. A PASSIVE tag has no battery; it draws power from the reader's radio energy itself.
+    - Step 3 — the powered chip transmits its stored unique ID back to the reader.
+    - Step 4 — the reader passes the ID to the backend, which looks it up and returns the product, vehicle or person details.
+
+    Types of tag
+    - **Passive** — no battery, powered by the reader, range up to a few metres, cheap. Used on retail items and library books.
+    - **Active** — has its own battery, range up to 100 m, more expensive. Used for vehicle and container tracking.
+    - **Semi-passive** — battery powers the chip but not the transmission.
+
+    Applications
+    - **Supply chain** — pallets and cartons are read in bulk as a truck passes a gate, without unloading. Inventory count that took hours takes minutes.
+    - **Toll collection** — a tag on the windscreen is read while the vehicle moves, and the toll is deducted automatically.
+    - Also: access control cards, library book management, animal tracking, passport chips, and hospital asset tracking.
+
+    - Advantage over barcode: no line of sight needed, many tags read simultaneously, the tag is rewritable, and it survives dirt and rough handling. Disadvantage: higher cost per tag and possible radio interference near metal or liquid.
 
 17. **a) What is E-Government? How can E-Government be implemented through the vision of Digital Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
 
+    Answer:
+
+    (a) E-Government
+    - The use of ICT by government to deliver public services, share information and interact with citizens, businesses and other government offices efficiently and transparently.
+
+    Four interaction models
+    - **G2C (Government to Citizen)** — services to the public: NID, e-passport, birth registration, tax payment.
+    - **G2B (Government to Business)** — trade licence, e-GP procurement, VAT registration.
+    - **G2G (Government to Government)** — data sharing between ministries and departments.
+    - **G2E (Government to Employee)** — payroll, HR and training systems for civil servants.
+
+    (b) Implementation through the Digital Bangladesh vision
+    - **Infrastructure first** — the Info-Sarkar project laid optical fibre to union level, and Union Digital Centres (about 5,000 of them) put a service point within reach of every village.
+    - **National Portal** — a single web gateway linking all ministry and district websites.
+    - **e-Service delivery** — e-passport, e-TIN, online birth and death registration, land record digitisation (e-Porcha) and e-mutation.
+    - **e-GP (electronic Government Procurement)** — all public tenders online, which cut collusion and tender manipulation sharply.
+    - **e-Nothi (Digital File System)** — files move electronically between officers instead of on paper, with full tracking.
+    - **e-Payment** — government fees paid through MFS and cards.
+    - **Digital literacy and capacity** — training of civil servants and citizens, without which the systems go unused.
+    - **Legal framework** — ICT Act, Digital Security Act, Right to Information Act, and a data protection framework.
+    - **Interoperability** — a shared national data architecture so ministries can exchange data instead of each rebuilding the same database.
+
+    - The four pillars of Digital Bangladesh (declared 2009, target 2021): human resource development, connecting citizens, digital government, and promoting the ICT industry.
+
 18. **b) List some factors that are needed to implement Digital Bangladesh.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
+
+    Answer: Successful implementation depends on several factors working together.
+
+    - **ICT infrastructure** — nationwide broadband and optical fibre, reliable electricity, data centres and submarine cable capacity.
+    - **Affordable internet and devices** — low-cost data packages and smartphones, otherwise services reach only the well-off.
+    - **Digital literacy** — training for citizens and for government officers; a service nobody can use is not a service.
+    - **Skilled human resources** — programmers, network engineers, cybersecurity specialists and data analysts, produced through education reform.
+    - **Political commitment and continuity** — sustained funding and priority across governments.
+    - **Legal and regulatory framework** — ICT Act, digital security law, data protection law and e-signature recognition.
+    - **Cybersecurity** — protection of national data centres, financial systems and citizen data; a single major breach destroys public trust.
+    - **Interoperability and standards** — common data formats so ministries can share data.
+    - **e-Payment ecosystem** — MFS, cards and internet banking integrated with government services.
+    - **Private sector participation** — local software industry, startups and public-private partnership.
+    - **Content in Bangla** — services and information in the local language.
+    - **Rural focus** — Union Digital Centres and agent networks so services reach beyond the cities.
+    - **Change management** — many officials resist systems that make their work transparent; this is a bigger obstacle than technology.
 
 19. **c) Mention some government entities that have taken E-Government initiatives. What initiatives are taken by the Bangladesh Public Service Commission?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
 
+    Answer:
+
+    (a) Government entities with e-Government initiatives
+    - **a2i (Aspire to Innovate)** — the ICT Division programme that drives most digital service innovation, including Union Digital Centres and the National Portal.
+    - **NID Wing, Election Commission** — national ID card, voter database and online NID services.
+    - **Department of Immigration and Passports** — e-passport and online application system.
+    - **National Board of Revenue (NBR)** — e-TIN registration, online return submission, VAT online.
+    - **CPTU, Ministry of Planning** — e-GP electronic tendering platform.
+    - **Ministry of Land** — e-Porcha, e-mutation and online land development tax.
+    - **Registrar General's office** — online birth and death registration (BDRIS).
+    - **Bangladesh Bank** — BEFTN, RTGS, NPSB, online CIB.
+    - **Directorate General of Health Services** — Shastho Batayon 16263, Surokkha vaccine platform.
+    - **BTRC, Bangladesh Police (online GD), BRTA (online licence and fitness)**.
+
+    (b) BPSC initiatives
+    - **Online application system** — BCS and non-cadre applications submitted through the BPSC website with online fee payment through Teletalk.
+    - **Online admit card download** and result publication on the website.
+    - **SMS notification** — exam date, admit card and result alerts.
+    - **Digital question bank and OMR-based MCQ evaluation** — automated marking of preliminary examinations.
+    - **Online viva scheduling and applicant tracking**.
+    - **BPSC website and mobile app** for circulars, syllabus and notices.
+    - **Digital archive of records** for cadre and non-cadre recruitment.
+
 20. **d) State the E-Government initiatives taken in health and education sectors of Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
+
+    Answer:
+
+    (a) Health sector initiatives
+    - **Shastho Batayon 16263** — a 24-hour national health call centre giving medical advice by phone.
+    - **Surokkha platform** — online COVID-19 vaccine registration and certificate download.
+    - **Telemedicine services** — upazila health complexes connected to specialist doctors in district and medical college hospitals.
+    - **DHIS2 health information system** — nationwide reporting of health data from every facility.
+    - **Online doctor and hospital directory** and appointment booking.
+    - **e-Health records and MIS** under the Directorate General of Health Services.
+    - **Mobile health (mHealth)** — SMS-based maternal health advice such as the Aponjon service.
+    - **Online medicine and blood donor platforms** (Sandhani, Badhan digital registries).
+
+    (b) Education sector initiatives
+    - **Shikkhok Batayon** — a national portal where teachers share and download digital lesson content.
+    - **Muktopaath** — a free e-learning platform for teachers and skills training.
+    - **Multimedia classrooms** — laptops and projectors supplied to schools nationwide.
+    - **"Ghore Boshe Shikhi"** — televised lessons on Sangsad TV during COVID-19 school closure.
+    - **Online textbook distribution** — all NCTB textbooks freely downloadable.
+    - **Online admission** — school, college and university admission applications and results online.
+    - **Online result publication** — SSC, HSC and board results by web and SMS.
+    - **e-Primary school census and EMIS** — digital record of every institution, teacher and student.
+    - **Digital content for the disabled** — audio and sign-language learning material.
+    - **BANBEIS database** and the education MIS for planning and monitoring.
 
 21. **(a) Differentiate between e-commerce and e-business. How does e-commerce exploit self-serviced strategy to increase the market share?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
 
+    Answer:
+
+    (a) E-commerce vs e-business
+
+    | Point | E-commerce | E-business |
+    |---|---|---|
+    | Scope | Narrow — buying and selling only | Broad — ALL business activities done electronically |
+    | Includes | Online transactions, payment, delivery | E-commerce PLUS supply chain, CRM, ERP, HR, e-learning, internal processes |
+    | Focus | External, customer facing | Both internal and external |
+    | Network used | Mainly the internet | Internet, intranet and extranet |
+    | Money involved | A monetary transaction is essential | Not necessarily — internal processes involve no sale |
+    | Relationship | E-commerce is a SUBSET of e-business | E-business is the superset |
+    | Example | Buying a phone on Daraz | Daraz's whole operation — supplier portal, warehouse system, HR, analytics, plus the storefront |
+
+    (b) How e-commerce uses the self-service strategy to increase market share
+    - **Self-service means the customer performs the work the seller's staff used to do** — browsing, comparing, ordering, paying and tracking — through the platform itself.
+    - **Lower operating cost** — no salespeople, no shop rent. Savings are passed on as lower prices, which attracts price-sensitive customers and grows share.
+    - **24/7 availability** — the store never closes, so sales are captured outside business hours and across time zones.
+    - **Unlimited shelf space** — a physical shop stocks hundreds of items; an online store lists millions. This "long tail" captures demand no physical retailer can serve.
+    - **Personalisation at scale** — recommendation engines show each customer relevant products automatically, raising basket size without any human effort.
+    - **Customer self-management** — order tracking, returns, invoice download and account settings handled by the customer, cutting support cost and improving satisfaction because there is no waiting.
+    - **Reviews and ratings** — customers generate the trust content themselves, which is more persuasive than advertising and costs nothing.
+    - **Frictionless checkout** — saved addresses, saved cards and one-click ordering reduce cart abandonment.
+    - **Geographic reach** — one platform serves the whole country without opening a single branch.
+
+    - Net effect: cost per transaction falls as volume rises, allowing lower prices and wider reach — a self-reinforcing loop that steadily takes market share from traditional retail.
+
 22. **(b) Distinguish between traditional business planning assumption and today’s sense and response strategy.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Traditional planning ("make and sell") | Sense and response strategy |
+    |---|---|---|
+    | Core assumption | The future is predictable | The future is uncertain and changes fast |
+    | Approach | Forecast demand, then plan and produce | Sense actual demand signals, then respond |
+    | Planning cycle | Long — annual or multi-year plans | Continuous, short cycles |
+    | Inventory | Build to stock, based on forecast | Build to order, minimal stock |
+    | Customer role | Passive receiver of what is produced | Active source of the signal that drives production |
+    | Data use | Historical data, periodic reports | Real-time data from sales, sensors and social media |
+    | Structure | Rigid hierarchy, fixed processes | Flexible, cross-functional, adaptive |
+    | Risk | Large loss if the forecast is wrong — unsold stock or missed demand | Lower forecast risk, but needs constant sensing capability |
+    | Example | A garment factory producing a full season's stock on last year's numbers | Zara-style fast fashion, restocking weekly from live sales data |
+
+    Why the shift happened
+    - Market change accelerated, product life cycles shortened and customer preferences became volatile, so long-horizon forecasts stopped being reliable.
+    - ICT made sensing cheap — POS data, e-commerce analytics, IoT sensors and social media listening give near-real-time demand signals that did not exist before.
+
+    - In practice most firms combine both: long-term strategic direction is planned, while operational decisions such as production quantity and pricing are sense-and-respond.
 
 23. **(c) Write down the advantages of using internet in business organization. How is legacy system included in intranet of an organization?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
 
+    Answer:
+
+    (a) Advantages of the internet in a business organisation
+    - **Global market reach** — a small firm can sell worldwide without opening foreign offices.
+    - **Low-cost communication** — email, VoIP and video conferencing replace expensive travel and long-distance calls.
+    - **24/7 operation** — the online storefront and self-service portal never close.
+    - **Faster information access** — market research, competitor data and supplier catalogues available instantly.
+    - **Cheaper marketing** — search, social media and email marketing cost a fraction of print and television.
+    - **Improved customer service** — chat, ticket systems, FAQs and self-service reduce cost while improving response time.
+    - **Supply chain efficiency** — suppliers and logistics partners connected through extranets and EDI.
+    - **Remote work and collaboration** — cloud documents and video calls let teams work across locations.
+    - **Cloud services** — computing and storage rented on demand instead of bought.
+    - **Data-driven decisions** — web and sales analytics guide pricing, stocking and marketing.
+
+    (b) How a legacy system is included in the intranet
+    - A legacy system is an old but business-critical application — typically a mainframe or a decades-old database — that cannot simply be discarded because it holds essential data and logic.
+
+    Integration methods
+    - **Web front-end (screen scraping / terminal emulation)** — a browser-based interface is placed in front of the legacy green-screen application, so intranet users reach it through a normal web page.
+    - **Middleware / integration layer** — software such as an ESB (Enterprise Service Bus) sits between the intranet and the legacy system, translating between formats and protocols.
+    - **API wrapper** — the legacy functions are exposed as REST or SOAP web services, so modern intranet applications can call them without knowing the old technology.
+    - **Database gateway** — the intranet application reads and writes the legacy database directly through an ODBC or JDBC connector.
+    - **Data replication / ETL** — legacy data is extracted, transformed and loaded into a modern database or data warehouse that the intranet uses, with periodic synchronisation.
+    - **Gradual migration (strangler pattern)** — new modules are built on the intranet and take over legacy functions one at a time, until the old system can finally be switched off.
+
+    - Why this matters: replacing a working legacy system outright is expensive and risky. Wrapping it and exposing it through the intranet gives users a modern interface while the proven core keeps running.
+
 24. **What is E-Commerce? What are the types of E-commerce?** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
+
+    Answer: **E-commerce (electronic commerce)** is the buying and selling of goods and services over the internet, together with the electronic payment, marketing and delivery arrangements that support it.
+
+    Components of an e-commerce system
+    - An online catalogue, a shopping cart, a payment gateway, a delivery mechanism and a customer account system.
+
+    Types of e-commerce
+
+    | Type | Meaning | Example |
+    |---|---|---|
+    | **B2B** — Business to Business | A business sells to another business, usually in bulk with negotiated pricing | Alibaba, a wholesaler supplying retail shops |
+    | **B2C** — Business to Consumer | A business sells directly to the end consumer | Daraz, Amazon, Chaldal, Rokomari |
+    | **C2C** — Consumer to Consumer | Individuals sell to each other through a platform that takes a fee | Bikroy, eBay, Facebook Marketplace |
+    | **C2B** — Consumer to Business | An individual offers a product or service to a business | Upwork and Fiverr freelancers, stock photo sellers |
+    | **B2G / G2B** — Business and Government | Business transactions with government | e-GP electronic tendering |
+    | **G2C** — Government to Citizen | Government delivers paid services to citizens online | e-passport fee, online tax payment |
+
+    Other models sometimes listed
+    - **B2B2C** — a business sells through another business to the consumer, as marketplaces do.
+    - **D2C (Direct to Consumer)** — a manufacturer sells straight to the customer, bypassing retailers.
+    - **F-commerce** — selling through a Facebook page; a subset of B2C very common in Bangladesh.
+
+    Advantages and limitations
+    - Advantages: wider reach, lower cost, 24/7 availability, easy price comparison, personalisation.
+    - Limitations: no physical inspection before buying, delivery delay, payment fraud risk, return difficulties, and dependence on internet access and digital literacy.
 
 ## Hardware Components & BIOS (CMOS Battery) (24)
 
