@@ -7904,31 +7904,480 @@ int main() {
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1362 (ET: BUET)]*
 
+   Answer: Walk through the string one character at a time. Each digit's numeric value is `ch - '0'`, and the running result is shifted left by multiplying by 10.
+
+   ```c
+   #include <stdio.h>
+
+   int stringToInt(char str[]) {
+       int i = 0, result = 0, sign = 1;
+
+       if (str[0] == '-') { sign = -1; i = 1; }   // handle a leading minus
+       else if (str[0] == '+') { i = 1; }
+
+       for (; str[i] != '\0'; i++) {
+           if (str[i] < '0' || str[i] > '9')
+               return 0;                          // not a valid digit
+           result = result * 10 + (str[i] - '0');
+       }
+       return sign * result;
+   }
+
+   int main(void) {
+       char s[] = "-1234";
+       printf("%d\n", stringToInt(s));            // -1234
+       return 0;
+   }
+   ```
+
+   Trace for `"1234"`
+   - `'1' - '0' = 1` → result = 1
+   - `'2' - '0' = 2` → result = 1×10 + 2 = 12
+   - `'3'` → 12×10 + 3 = 123
+   - `'4'` → 123×10 + 4 = 1234
+
+   - Why `ch - '0'` works: ASCII digits are consecutive, `'0'` is 48 and `'9'` is 57, so subtracting `'0'` gives the numeric value.
+   - Time complexity `O(n)`, space `O(1)`. This is essentially what the library `atoi()` does.
+
 2. **Write a C program to check whether a string is a Palindrome.** *[BUET Assistant Programmer 21.06.2025 compact it 1433 (ET: BUET)]*
+
+   Answer: Compare characters from both ends moving inward. If every pair matches, the string is a palindrome.
+
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+
+   int isPalindrome(char str[]) {
+       int left = 0, right = strlen(str) - 1;
+       while (left < right) {
+           if (str[left] != str[right])
+               return 0;                          // mismatch found
+           left++;
+           right--;
+       }
+       return 1;
+   }
+
+   int main(void) {
+       char str[100];
+       printf("Enter a string: ");
+       scanf("%s", str);
+
+       if (isPalindrome(str)) printf("%s is a Palindrome\n", str);
+       else                   printf("%s is not a Palindrome\n", str);
+       return 0;
+   }
+   ```
+
+   - `"madam"` → m=m, a=a, pointers meet → palindrome.
+   - `"hello"` → h ≠ o at the first comparison → not a palindrome.
+   - Only `n/2` comparisons are needed, so the time complexity is `O(n)` with `O(1)` space.
+   - For case-insensitive checking, convert both characters with `tolower()` before comparing.
 
 3. **Write a C program upper case to lower case conversion.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 475 (ET: N/A)]*
 
+   Answer: In ASCII, a lowercase letter is exactly 32 more than its uppercase counterpart (`'A'` = 65, `'a'` = 97).
+
+   ```c
+   #include <stdio.h>
+
+   int main(void) {
+       char str[100];
+       int i;
+
+       printf("Enter a string: ");
+       scanf("%s", str);
+
+       for (i = 0; str[i] != '\0'; i++) {
+           if (str[i] >= 'A' && str[i] <= 'Z')
+               str[i] = str[i] + 32;              // convert to lowercase
+       }
+
+       printf("Lowercase: %s\n", str);
+       return 0;
+   }
+   ```
+
+   - For input `HELLO World` the output is `hello world` — non-letter characters are left untouched by the range check.
+   - Equivalent forms: `str[i] = str[i] - 'A' + 'a';` or the library call `tolower(str[i])` from `<ctype.h>`.
+   - Time complexity `O(n)`, space `O(1)`.
+
 4. **String reverse program but without without using the library function.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)], [BREB Assistant Programmer 18.02.2023 compact it 468 (ET: N/A)]*
+
+   Answer: Find the length manually, then swap the outer characters inward.
+
+   ```c
+   #include <stdio.h>
+
+   int main(void) {
+       char str[100], temp;
+       int len = 0, i;
+
+       printf("Enter a string: ");
+       scanf("%s", str);
+
+       while (str[len] != '\0')          // find length without strlen()
+           len++;
+
+       for (i = 0; i < len / 2; i++) {   // swap from both ends
+           temp = str[i];
+           str[i] = str[len - 1 - i];
+           str[len - 1 - i] = temp;
+       }
+
+       printf("Reversed string: %s\n", str);
+       return 0;
+   }
+   ```
+
+   - For input `Bangladesh` the output is `hsedalgnaB`.
+   - The loop runs only `len/2` times; going all the way to `len` would swap everything back and undo the reversal.
+   - Time complexity `O(n)`, space `O(1)` — the reversal happens in place.
 
 5. **Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from string.** *[RPGCL Assistant Manager (ICT) 2022 compact it 652 (ET: BUET)]*
 
+   Answer: The example removes the substring `"gram"` from `"programming"`, leaving `"proming"`. So the task is substring removal.
+
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+
+   void removeSubstring(char str[], char sub[]) {
+       char *pos;
+       int len = strlen(sub);
+
+       while ((pos = strstr(str, sub)) != NULL) {   // find the substring
+           // shift the tail left over the matched part
+           strcpy(pos, pos + len);
+       }
+   }
+
+   int main(void) {
+       char str[100] = "programming";
+       char sub[20]  = "gram";
+
+       removeSubstring(str, sub);
+       printf("Result: %s\n", str);       // proming
+       return 0;
+   }
+   ```
+
+   Version without any library function
+   ```c
+   void removeChars(char str[], char remove[]) {
+       int i, j, k = 0;
+       char result[100];
+       int subLen = 0;
+       while (remove[subLen] != '\0') subLen++;
+
+       for (i = 0; str[i] != '\0'; ) {
+           for (j = 0; j < subLen && str[i + j] == remove[j]; j++) ;
+           if (j == subLen) i += subLen;          // match found, skip it
+           else result[k++] = str[i++];
+       }
+       result[k] = '\0';
+       for (i = 0; i <= k; i++) str[i] = result[i];
+   }
+   ```
+
+   - `"programming"` minus `"gram"` gives `pro` + `ming` = `proming`.
+   - The `while` loop in the first version removes every occurrence, not just the first.
+   - Time complexity `O(n × m)` where `m` is the substring length.
+
 6. **Write a program IPv4 IP validation from given IP with valid and not valid.** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
+
+   Answer: A valid IPv4 address has exactly four parts separated by dots, each part is a number from 0 to 255, and no part is empty or has extra leading zeros.
+
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+
+   int isValidIPv4(char ip[]) {
+       int i = 0, num = 0, dots = 0, digits = 0;
+
+       if (ip[0] == '.' || ip[strlen(ip) - 1] == '.') return 0;
+
+       for (i = 0; ip[i] != '\0'; i++) {
+           if (ip[i] == '.') {
+               if (digits == 0) return 0;         // empty part like "1..2.3"
+               if (num > 255) return 0;
+               dots++;
+               num = 0;
+               digits = 0;
+           }
+           else if (ip[i] >= '0' && ip[i] <= '9') {
+               num = num * 10 + (ip[i] - '0');
+               digits++;
+               if (digits > 3) return 0;
+           }
+           else {
+               return 0;                          // any other character
+           }
+       }
+       if (dots != 3 || digits == 0 || num > 255) return 0;
+       return 1;
+   }
+
+   int main(void) {
+       char ip[50];
+       printf("Enter an IP address: ");
+       scanf("%s", ip);
+       printf("%s is %s\n", ip, isValidIPv4(ip) ? "Valid" : "Not Valid");
+       return 0;
+   }
+   ```
+
+   Test cases
+
+   | Input | Result | Reason |
+   |---|---|---|
+   | 192.168.1.1 | Valid | four parts, all 0-255 |
+   | 255.255.255.255 | Valid | maximum allowed |
+   | 256.1.1.1 | Not Valid | 256 exceeds 255 |
+   | 192.168.1 | Not Valid | only 2 dots |
+   | 192.168.1.1.1 | Not Valid | 4 dots |
+   | 192.168.a.1 | Not Valid | non-digit character |
+
+   - Time complexity `O(n)` where `n` is the length of the string.
 
 7. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** *[BKSP Assistant Programmer 03.12.2022 compact it 729 (ET: N/A)]*
 
+   Answer: The sample shows the search is case-insensitive — `'b'` matches both the capital `B` of "Bangladesh" and the small `b` of "big", giving 2.
+
+   ```c
+   #include <stdio.h>
+   #include <ctype.h>
+
+   int main(void) {
+       char str[] = "Bangladesh is a big country";
+       char ch;
+       int i, count = 0;
+
+       printf("Enter a character to search: ");
+       scanf(" %c", &ch);
+
+       for (i = 0; str[i] != '\0'; i++)
+           if (tolower(str[i]) == tolower(ch))
+               count++;
+
+       if (count == 0)
+           printf("Not found this letter\n");
+       else
+           printf("%d times\n", count);
+       return 0;
+   }
+   ```
+
+   Verification with the sample
+   - Input `b` → `B` in "Bangladesh" and `b` in "big" → `2 times`.
+   - Input `p` → no `p` anywhere in the sentence → `Not found this letter`.
+
+   - `scanf(" %c", &ch)` has a leading space, which skips any leftover newline in the input buffer.
+   - Time complexity `O(n)`, space `O(1)`.
+
 8. **What is the purpose of '\0' character in C?** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
+
+   Answer: `'\0'` is the null character, and its purpose is to mark the END of a string in C.
+
+   - C has no separate string type. A string is just a `char` array, and `'\0'` is what tells every string function where the data stops.
+   - Its ASCII value is 0, and it is written as `'\0'` — a single character, not two.
+   - Functions like `strlen()`, `printf("%s")`, `strcpy()` and `strcmp()` all keep reading until they hit `'\0'`.
+
+   Consequence for array sizing
+   - An `n`-character string needs an array of at least `n + 1` bytes.
+   - `char s[] = "Hello";` occupies 6 bytes — `H e l l o \0` — even though `strlen(s)` returns 5.
+
+   What happens without it
+   - Reading past the end of the array continues into unrelated memory until a zero byte happens to appear, producing garbage output or a crash.
+
+   Do not confuse three similar things
+
+   | Symbol | Meaning | Value |
+   |---|---|---|
+   | `'\0'` | Null character, string terminator | 0 |
+   | `'0'` | The digit character zero | 48 |
+   | `NULL` | Null pointer constant | `((void*)0)` |
 
 9. **(c) Write down a program to find length of a string without using any library function.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 892 (ET: N/A)]*
 
+   Answer: Count characters until the null terminator is reached.
+
+   ```c
+   #include <stdio.h>
+
+   int stringLength(char str[]) {
+       int count = 0;
+       while (str[count] != '\0')       // stop at the terminator
+           count++;
+       return count;
+   }
+
+   int main(void) {
+       char str[100];
+       printf("Enter a string: ");
+       scanf("%s", str);
+       printf("Length = %d\n", stringLength(str));
+       return 0;
+   }
+   ```
+
+   - For `"Bangladesh"` the result is `10`. The `'\0'` itself is not counted, which is exactly how `strlen()` behaves.
+   - Pointer version: `int len(char *s){ char *p = s; while(*p) p++; return p - s; }`
+   - Time complexity `O(n)`, space `O(1)`.
+
 10. **Write a program to read a character “lower case ” and convert it into upper case.** *[BAUST Assistant Programmer 2021 compact it 918-919 (ET: N/A)]*
+
+    Answer: An uppercase letter is 32 less than its lowercase counterpart in ASCII.
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        char ch;
+
+        printf("Enter a lowercase character: ");
+        scanf(" %c", &ch);
+
+        if (ch >= 'a' && ch <= 'z') {
+            ch = ch - 32;                // convert to uppercase
+            printf("Uppercase: %c\n", ch);
+        }
+        else {
+            printf("Not a lowercase letter\n");
+        }
+        return 0;
+    }
+    ```
+
+    - For input `d` the output is `D`, since `'d'` is 100 and `100 − 32 = 68`, which is `'D'`.
+    - The range check prevents nonsense results for digits or symbols.
+    - Equivalent library call: `toupper(ch)` from `<ctype.h>`, which is safer because it does not depend on the character set being ASCII.
 
 11. **Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 923-924 (ET: CTI)]*
    Sample Input: 192.168.0.0
    Sample Output: Class C
 
+   Answer: The class is decided entirely by the FIRST octet.
+
+   | Class | First octet range | Purpose |
+   |---|---|---|
+   | A | 1 – 126 | Very large networks |
+   | B | 128 – 191 | Medium networks |
+   | C | 192 – 223 | Small networks |
+   | D | 224 – 239 | Multicast |
+   | E | 240 – 255 | Reserved / experimental |
+
+   ```c
+   #include <stdio.h>
+
+   int main(void) {
+       char ip[20];
+       int a, b, c, d;
+
+       printf("Enter IPv4 address: ");
+       scanf("%s", ip);
+       sscanf(ip, "%d.%d.%d.%d", &a, &b, &c, &d);
+
+       if      (a >= 1   && a <= 126) printf("Class A\n");
+       else if (a == 127)             printf("Loopback address\n");
+       else if (a >= 128 && a <= 191) printf("Class B\n");
+       else if (a >= 192 && a <= 223) printf("Class C\n");
+       else if (a >= 224 && a <= 239) printf("Class D (Multicast)\n");
+       else if (a >= 240 && a <= 255) printf("Class E (Reserved)\n");
+       else                           printf("Invalid IP address\n");
+       return 0;
+   }
+   ```
+
+   - For `192.168.0.0` the first octet is 192, which falls in 192–223, so the output is `Class C` — matching the sample.
+   - 127.x.x.x is excluded from Class A because it is reserved for loopback (`127.0.0.1` is localhost).
+   - `sscanf` parses the four octets out of the string in one call.
+
 12. **(b) Write down a C function to sort a list of strings in alphabetic order.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
 
+    Answer: Strings are compared with `strcmp()` and swapped with `strcpy()`, because `=` does not work on C strings.
+
+    ```c
+    #include <stdio.h>
+    #include <string.h>
+
+    void sortStrings(char list[][30], int n) {
+        char temp[30];
+        int i, j;
+
+        for (i = 0; i < n - 1; i++)
+            for (j = 0; j < n - 1 - i; j++)
+                if (strcmp(list[j], list[j + 1]) > 0) {   // out of order
+                    strcpy(temp, list[j]);
+                    strcpy(list[j], list[j + 1]);
+                    strcpy(list[j + 1], temp);
+                }
+    }
+
+    int main(void) {
+        char names[5][30] = {"Rahim", "Abul", "Karim", "Babu", "Salam"};
+        int i;
+
+        sortStrings(names, 5);
+
+        for (i = 0; i < 5; i++)
+            printf("%s\n", names[i]);
+        return 0;
+    }
+    ```
+
+    Output
+    ```
+    Abul
+    Babu
+    Karim
+    Rahim
+    Salam
+    ```
+
+    - `strcmp(a, b)` returns a positive value when `a` should come after `b`, which is exactly the swap condition.
+    - Comparison is by ASCII value, so all uppercase letters sort before all lowercase ones. Use `strcasecmp()` for case-insensitive ordering.
+    - Time complexity `O(n² × L)` where `L` is the average string length.
+
 13. **(a) Write an algorithm to find Palindrome number.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1140 (ET: N/A)]*
+
+    Answer: A palindrome number reads the same forwards and backwards, such as 121, 1331 or 12321.
+
+    Algorithm
+    ```
+    Step 1: Start
+    Step 2: Read n
+    Step 3: set original = n, reversed = 0
+    Step 4: while n != 0 do
+                remainder = n mod 10
+                reversed  = reversed × 10 + remainder
+                n = n / 10
+            end while
+    Step 5: if original = reversed then
+                print "Palindrome"
+            else
+                print "Not Palindrome"
+    Step 6: Stop
+    ```
+
+    Implementation
+    ```c
+    int isPalindrome(int n) {
+        int original = n, reversed = 0;
+        while (n != 0) {
+            reversed = reversed * 10 + (n % 10);
+            n /= 10;
+        }
+        return (original == reversed);
+    }
+    ```
+
+    Trace for n = 121
+    - `reversed`: 1 → 12 → 121
+    - `original = 121` equals `reversed = 121`, so it is a palindrome.
+
+    - Note the original must be saved before the loop, because `n` is destroyed by the repeated division.
+    - Time complexity `O(d)` where `d` is the number of digits.
 
 14. **Check string str2 is superscript of string str1.** *[NESCO Manager (Software) 2018 compact it 1209-1210 (ET: N/A)]*
 
@@ -7936,6 +8385,48 @@ int main() {
 |---|---|
 | str1=x str2=x^x | Yes |
 | str1=x str2=x^2 | No |
+
+    Answer: From the sample data, `str2` is a "superscript" of `str1` only when `str2` has the exact form `str1 ^ str1` — that is, the base and the exponent are both `str1`.
+
+    - `str1 = "x"`, `str2 = "x^x"` → base `x` and exponent `x` both equal `str1` → Yes.
+    - `str1 = "x"`, `str2 = "x^2"` → exponent is `2`, not `x` → No.
+
+    ```c
+    #include <stdio.h>
+    #include <string.h>
+
+    int isSuperscript(char str1[], char str2[]) {
+        char expected[200];
+
+        // build the expected pattern:  str1 + "^" + str1
+        strcpy(expected, str1);
+        strcat(expected, "^");
+        strcat(expected, str1);
+
+        return (strcmp(str2, expected) == 0);
+    }
+
+    int main(void) {
+        printf("%s\n", isSuperscript("x", "x^x") ? "Yes" : "No");   // Yes
+        printf("%s\n", isSuperscript("x", "x^2") ? "Yes" : "No");   // No
+        return 0;
+    }
+    ```
+
+    Version that splits at the caret instead of building a pattern
+    ```c
+    int isSuperscript2(char str1[], char str2[]) {
+        char *caret = strchr(str2, '^');
+        if (caret == NULL) return 0;                 // no caret at all
+        *caret = '\0';                               // split into base and exponent
+        int ok = (strcmp(str2, str1) == 0) && (strcmp(caret + 1, str1) == 0);
+        *caret = '^';                                // restore the string
+        return ok;
+    }
+    ```
+
+    - Time complexity `O(n)`, space `O(n)` for the pattern buffer.  <!-- verify -->
+    - Note: the question wording is ambiguous and only two sample cases were given, so this reading is inferred from them.
 
 ## File Handling (4)
 
