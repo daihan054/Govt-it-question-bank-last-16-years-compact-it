@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 89 questions
+**Table of Contents** — 15 subtopics · 90 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -12,10 +12,10 @@
 | 7 | [Ratio, Proportion & Mixtures](#ratio-proportion--mixtures-4) | 4 |
 | 8 | [Speed, Time, Distance & Boats](#speed-time-distance--boats-4) | 4 |
 | 9 | [Probability & Statistics](#probability--statistics-3) | 3 |
-| 10 | [Calculus & Integration](#calculus--integration-2) | 2 |
-| 11 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-2) | 2 |
-| 12 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
-| 13 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations-2) | 2 |
+| 10 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations-3) | 3 |
+| 11 | [Calculus & Integration](#calculus--integration-2) | 2 |
+| 12 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-2) | 2 |
+| 13 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
 | 14 | [Numerical Methods & Root Finding](#numerical-methods--root-finding-2) | 2 |
 | 15 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-1) | 1 |
 
@@ -197,6 +197,14 @@
 
 3. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 
+## Discrete Mathematics & Recurrence Relations (3)
+
+1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 592 (ET: BUET)]*
+
+2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
+
+3. **Proved that $1+2+3+4+\dots\dots\dots\dots+n = \frac{n(n+1)}{2}$** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
+
 ## Calculus & Integration (2)
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
@@ -214,12 +222,6 @@
 1. **৫ টা ম্যাথ সংক্রান্ত প্রশ্নাবলি।** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
 2. **Math: 3 \times 5 = 15 Marks** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
-
-## Discrete Mathematics & Recurrence Relations (2)
-
-1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 592 (ET: BUET)]*
-
-2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
 ## Numerical Methods & Root Finding (2)
 

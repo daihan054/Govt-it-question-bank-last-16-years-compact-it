@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 217 questions
+**Table of Contents** — 9 subtopics · 219 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-92) | 92 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-38) | 38 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-39) | 39 |
 | 3 | [Recursion & Functions](#recursion--functions-32) | 32 |
-| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-21) | 21 |
+| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-22) | 22 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-14) | 14 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-11) | 11 |
 | 7 | [File Handling](#file-handling-4) | 4 |
@@ -359,7 +359,7 @@ for(a=1; a<=100; a++)
     printf("%d\n", a*a);
 ```
 
-## Output Tracing & Control Flow (38)
+## Output Tracing & Control Flow (39)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -812,6 +812,18 @@ int fun(char *s, char *sup) {
 }
 ```
 
+39. **Find the output of the code:** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120 (ET: BUET)]*
+```c
+#include <stdio.h>
+#define x 9+2/4*3-2*4+(5-4)*3
+void main() {
+    int i,y;
+    y=6+3*3/5;
+    i=x*x+y;
+    printf("%d",i);
+}
+```
+
 ## Recursion & Functions (32)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
@@ -928,7 +940,7 @@ int main() {
 
 32. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-## Operators, Data Types & Language Concepts (21)
+## Operators, Data Types & Language Concepts (22)
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
@@ -976,6 +988,8 @@ int main() {
 20. **উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1082 (ET: N/A)]*
 
 21. **(খ) C প্রোগ্রামিং ল্যাঙ্গুয়েজে Structure ও Union এর মধ্যে পার্থক্য কী? উদাহরণসহ লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1083 (ET: N/A)]*
+
+22. **Which of the following is the correct order of evaluation?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
 ## Flowcharts & Algorithms (14)
 

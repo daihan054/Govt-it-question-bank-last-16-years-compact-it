@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 180 questions
+**Table of Contents** — 12 subtopics · 181 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,7 +8,7 @@
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-22) | 22 |
 | 4 | [OS Concepts & System Software](#os-concepts--system-software-20) | 20 |
 | 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
-| 6 | [Memory Management & Paging](#memory-management--paging-14) | 14 |
+| 6 | [Memory Management & Paging](#memory-management--paging-15) | 15 |
 | 7 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
 | 8 | [Process Management & Process States](#process-management--process-states-10) | 10 |
 | 9 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
@@ -354,7 +354,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 16. **(খ) Virtual Memory বলতে কী বোঝায়? এর কার্যপদ্ধতি সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1093 (ET: N/A)]*
 
-## Memory Management & Paging (14)
+## Memory Management & Paging (15)
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
    **(i) How many pages are in logical address space?**
@@ -394,6 +394,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 13. **In the given example, let us assume the jobs and the memory requirements as the following: Job1=90k, Job2=20k, Job3=50k, Job4=200k. Let the free pace memory allocation blocks are: Block1=50k, Block2=100k, Block3=90k, Block4=200k, Block5=50k.** *[Janata Bank Assistant System Administrator 2021 compact it 939-940 (ET: N/A)]*
 
 14. **(ক) অপারেটিং সিস্টেম এর ক্ষেত্রে Swapping কী? কোন ক্ষেত্রে এটি ব্যবহৃত হয় লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
+
+15. **(a) What do you mean by page table for memory management? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1129 (ET: N/A)]*
 
 ## Concurrency, Threads & Synchronization (11)
 

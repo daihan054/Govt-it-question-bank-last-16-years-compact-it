@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 128 questions
+**Table of Contents** — 10 subtopics · 133 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-50) | 50 |
-| 2 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-21) | 21 |
-| 3 | [ICT in Society & Governance](#ict-in-society--governance-20) | 20 |
+| 2 | [ICT in Society & Governance](#ict-in-society--governance-23) | 23 |
+| 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-22) | 22 |
 | 4 | [Software Types & Classification](#software-types--classification-12) | 12 |
-| 5 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-7) | 7 |
-| 6 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-7) | 7 |
+| 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-8) | 8 |
+| 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-7) | 7 |
 | 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
 | 8 | [Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies-3) | 3 |
 | 9 | [Digital Banking & Financial Inclusion](#digital-banking--financial-inclusion-2) | 2 |
@@ -126,7 +126,55 @@
 
 50. **(ক) আকার আকৃতি ও ক্ষমতার ভিত্তিতে Digital Computer-এর প্রকারভেদ আলোচনা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1066-1067 (ET: N/A)]*
 
-## Hardware Components & BIOS (CMOS Battery) (21)
+## ICT in Society & Governance (23)
+
+1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
+
+2. **Describe the transformative power of ICT with ten innovative applications for the online banking system.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 304 (ET: BIBM)]*
+
+3. **What do you mean by viral video? List three advantages of viral vedio.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
+
+4. **(ক) IR 4.0 বলতে কি বুঝায়? IR 4.0 এর গুরুত্বপূর্ণ উপাদানগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
+
+5. **E-commerce ভিত্তিক ৪টি সাইটের নাম লিখুন?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
+
+6. **Describe in Bangali or English on the post COVID-19 social challenge that Bangladesh may can front end the way ICT can support to overcome them.** *[BTRC Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
+
+7. **Copyright আইন কি? এর প্রয়োজনীয়তা ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
+
+8. **Comparison between MIS and DSS. What is the roles of MIS in Banking sector?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872 (ET: N/A)]*
+
+9. **E-commerce and F-commerce -এর মধ্যে পার্থক্য লিখুন। নারী গোষ্ঠী দ্বারা পরিচালিত F-Commerce -এর সামাজিক প্রভাব সম্বন্ধে লিখুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
+
+10. **১৪. বাংলাদেশের প্রথম ভিডিও লাইভ শেয়ারিং অ্যাপস কোনটি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+11. **৯. চতুর্থ শিল্প বিপ্লব কি? ইহার সম্পর্কে ৪ লাইন লিখুন।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+
+12. **What is ERP? Write down the Implementation Challenges of ERP?** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948 (ET: N/A)]*
+
+13. **বর্তমান যুগ চতুর্থ শিল্প বিপ্লবের যুগ। BREB ও সেই যুগের সাথে তালমিলিয়ে চলছে, মানুষের দ্বারপ্রান্তে বিদ্যুৎ সেবা পৌছে দেওয়ার জন্য। BREB এর এমন ৫টি পরিকল্পনা বা উদ্যোগ লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+14. **(ii) E-Commerce কী? E-Commerce-এর প্রকারভেদ উল্লেখ করুন। Search engine কী? এর কয়েকটি উদাহরণ দিন।** *[BPSC Assistant Network Engineer 2020 compact it 956, 958 (ET: N/A)]*
+
+15. **Make a list of banking software used in Bangladesh. List the essential features for successful Banking Software and Apps.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 986-987 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+16. **RFID has huge applications in business, especially in supply chain management and toll collection system. Show the basic working principle of RFID in brief.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 987-988 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+17. **a) What is E-Government? How can E-Government be implemented through the vision of Digital Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
+
+18. **b) List some factors that are needed to implement Digital Bangladesh.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
+
+19. **c) Mention some government entities that have taken E-Government initiatives. What initiatives are taken by the Bangladesh Public Service Commission?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
+
+20. **d) State the E-Government initiatives taken in health and education sectors of Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
+
+21. **(a) Differentiate between e-commerce and e-business. How does e-commerce exploit self-serviced strategy to increase the market share?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
+
+22. **(b) Distinguish between traditional business planning assumption and today’s sense and response strategy.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
+
+23. **(c) Write down the advantages of using internet in business organization. How is legacy system included in intranet of an organization?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
+
+## Hardware Components & BIOS (CMOS Battery) (22)
 
 1. **Performance of CMOS battery?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
@@ -170,47 +218,7 @@
 
 21. **How to solve laptop overheating problem?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
 
-## ICT in Society & Governance (20)
-
-1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
-
-2. **Describe the transformative power of ICT with ten innovative applications for the online banking system.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 304 (ET: BIBM)]*
-
-3. **What do you mean by viral video? List three advantages of viral vedio.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
-
-4. **(ক) IR 4.0 বলতে কি বুঝায়? IR 4.0 এর গুরুত্বপূর্ণ উপাদানগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
-
-5. **E-commerce ভিত্তিক ৪টি সাইটের নাম লিখুন?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
-
-6. **Describe in Bangali or English on the post COVID-19 social challenge that Bangladesh may can front end the way ICT can support to overcome them.** *[BTRC Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
-
-7. **Copyright আইন কি? এর প্রয়োজনীয়তা ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
-
-8. **Comparison between MIS and DSS. What is the roles of MIS in Banking sector?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872 (ET: N/A)]*
-
-9. **E-commerce and F-commerce -এর মধ্যে পার্থক্য লিখুন। নারী গোষ্ঠী দ্বারা পরিচালিত F-Commerce -এর সামাজিক প্রভাব সম্বন্ধে লিখুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
-
-10. **১৪. বাংলাদেশের প্রথম ভিডিও লাইভ শেয়ারিং অ্যাপস কোনটি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
-
-11. **৯. চতুর্থ শিল্প বিপ্লব কি? ইহার সম্পর্কে ৪ লাইন লিখুন।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
-
-12. **What is ERP? Write down the Implementation Challenges of ERP?** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948 (ET: N/A)]*
-
-13. **বর্তমান যুগ চতুর্থ শিল্প বিপ্লবের যুগ। BREB ও সেই যুগের সাথে তালমিলিয়ে চলছে, মানুষের দ্বারপ্রান্তে বিদ্যুৎ সেবা পৌছে দেওয়ার জন্য। BREB এর এমন ৫টি পরিকল্পনা বা উদ্যোগ লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
-
-14. **(ii) E-Commerce কী? E-Commerce-এর প্রকারভেদ উল্লেখ করুন। Search engine কী? এর কয়েকটি উদাহরণ দিন।** *[BPSC Assistant Network Engineer 2020 compact it 956, 958 (ET: N/A)]*
-
-15. **Make a list of banking software used in Bangladesh. List the essential features for successful Banking Software and Apps.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 986-987 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
-
-16. **RFID has huge applications in business, especially in supply chain management and toll collection system. Show the basic working principle of RFID in brief.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 987-988 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
-
-17. **a) What is E-Government? How can E-Government be implemented through the vision of Digital Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
-
-18. **b) List some factors that are needed to implement Digital Bangladesh.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
-
-19. **c) Mention some government entities that have taken E-Government initiatives. What initiatives are taken by the Bangladesh Public Service Commission?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
-
-20. **d) State the E-Government initiatives taken in health and education sectors of Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
+22. **Difference between BIOS and EFI also BOOT loader and firmware.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120 (ET: BUET)]*
 
 ## Software Types & Classification (12)
 
@@ -238,6 +246,24 @@
 
 12. **Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadsheet এর একেকটা ঘরকে _____ বলে? (iv) Storage device এর মূল folder এর নাম _____? (v) Database এর data file গুলোর তালিকাকে _____ বলা হয়?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
 
+## Data Center Infrastructure & Power Management (8)
+
+1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 305 (ET: BIBM)]*
+
+2. **Describe the most important factors of data center for banking organization.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 557 (ET: BIBM)]*
+
+3. **What are the challenges in optimizing energy efficiency of data centers? Explain!** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 442 (ET: BIBM)]*
+
+4. **What do you mean by national data center?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
+
+5. **What is DCIM in a data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
+
+6. **What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
+
+7. **What do you mean by dynamic capacity provisioning? Why it is essential for data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 751 (ET: N/A)]*
+
+8. **Write down the element of data center.** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1125 (ET: BREB)]*
+
 ## Blockchain & Emerging Technologies (7)
 
 1. **What is Blockchain technology? How it works?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 324 (ET: BIBM)]*
@@ -253,22 +279,6 @@
 6. **(a) Write short note on (i) Blockchain technology (ii) Cloud Computing** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
 7. **Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 696 (ET: N/A)]*
-
-## Data Center Infrastructure & Power Management (7)
-
-1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 305 (ET: BIBM)]*
-
-2. **Describe the most important factors of data center for banking organization.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 557 (ET: BIBM)]*
-
-3. **What are the challenges in optimizing energy efficiency of data centers? Explain!** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 442 (ET: BIBM)]*
-
-4. **What do you mean by national data center?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
-
-5. **What is DCIM in a data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
-
-6. **What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
-
-7. **What do you mean by dynamic capacity provisioning? Why it is essential for data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 751 (ET: N/A)]*
 
 ## Server Hardware & Enterprise Systems (5)
 

@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 133 questions
+**Table of Contents** — 14 subtopics · 135 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [SDLC Phases & Models](#sdlc-phases--models-41) | 41 |
-| 2 | [Software Testing & Evaluation](#software-testing--evaluation-36) | 36 |
+| 2 | [Software Testing & Evaluation](#software-testing--evaluation-37) | 37 |
 | 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-11) | 11 |
 | 4 | [Software Requirements Engineering](#software-requirements-engineering-10) | 10 |
 | 5 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-9) | 9 |
@@ -16,6 +16,7 @@
 | 11 | [Code Smells & Refactoring](#code-smells--refactoring-2) | 2 |
 | 12 | [Open Source Software & Licensing](#open-source-software--licensing-2) | 2 |
 | 13 | [CI/CD & DevOps Methodologies](#cicd--devops-methodologies-1) | 1 |
+| 14 | [UI/UX Design](#uiux-design-1) | 1 |
 
 <!-- TOC END -->
 
@@ -105,7 +106,7 @@
 
 41. **What is the SCRUM method in software development?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1116 (ET: BUET)]*
 
-## Software Testing & Evaluation (36)
+## Software Testing & Evaluation (37)
 
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]
 
@@ -198,6 +199,8 @@
 35. **Write code to test a sorting algorithm of array?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1056 (ET: AUST)]*
 
 36. **How would you test an ATM in a distributed system?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*
+
+37. **What is Alpha and Beta testing?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1123 (ET: BREB)]*
 
 ## Software Architecture & Design Patterns (MVC) (11)
 
@@ -349,3 +352,7 @@
 ## CI/CD & DevOps Methodologies (1)
 
 1. **What is CI/DI development model?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
+
+## UI/UX Design (1)
+
+1. **What is UI/UX? What is the difference between them?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1123-1124 (ET: BREB)]*

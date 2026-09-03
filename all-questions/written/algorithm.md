@@ -1,19 +1,19 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 125 questions
+**Table of Contents** — 14 subtopics · 128 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-34) | 34 |
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-35) | 35 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-14) | 14 |
 | 4 | [Searching Algorithms](#searching-algorithms-13) | 13 |
-| 5 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-12) | 12 |
+| 5 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-13) | 13 |
 | 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms-9) | 9 |
 | 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-7) | 7 |
 | 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
 | 9 | [Dynamic Programming](#dynamic-programming-5) | 5 |
-| 10 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
-| 11 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-2) | 2 |
+| 10 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-3) | 3 |
+| 11 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
 | 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-2) | 2 |
 | 13 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
 | 14 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction-1) | 1 |
@@ -22,7 +22,7 @@
 
 ---
 
-## Sorting Algorithms & Complexity (34)
+## Sorting Algorithms & Complexity (35)
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -101,6 +101,8 @@
 33. **Describe four types sorting algorithm with example.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1114-1115 (ET: DU)]*
 
 34. **Sorting the value with radix sort: 608, 5, 768, 298, 576, 975, 90, 80** *[DESCO Assistant Engineer (CSE) 2019 compact it 1117-1118 (ET: BUET)]*
+
+35. **(a) Write down the Merge sort algorithm. What is the time complexity of this algorithm?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
 
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 
@@ -196,7 +198,7 @@
 
 13. **(ক) Liner search কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088-1089 (ET: N/A)]*
 
-## Algorithm Analysis & Asymptotic Complexity (12)
+## Algorithm Analysis & Asymptotic Complexity (13)
 
 1. **Analyze the time and space complexity of the following code:**
 ```python
@@ -227,6 +229,8 @@ for i in N:
 11. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
 12. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983-984 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+13. **Write an algorithm which complexity is O(logn).** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1122 (ET: BUET)]*
 
 ## Dynamic Programming & Greedy Algorithms (9)
 
@@ -311,17 +315,19 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 5. **What will be the time and space complexity of the above algorithm?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
+## Graph Representation (Adjacency Matrix vs List) (3)
+
+1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 495 (ET: N/A)]*
+
+2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
+
+3. **(b) How a graph can be represented? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
+
 ## Heap & Priority Queue (2)
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1321 (ET: DU)]*
 
 2. **Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 427 (ET: BIBM)]*
-
-## Graph Representation (Adjacency Matrix vs List) (2)
-
-1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 495 (ET: N/A)]*
-
-2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
 
 ## Divide and Conquer & Matrix Multiplication (2)
 

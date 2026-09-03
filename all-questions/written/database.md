@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 246 questions
+**Table of Contents** — 19 subtopics · 247 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-74) | 74 |
+| 1 | [SQL Queries](#sql-queries-75) | 75 |
 | 2 | [Keys in DBMS](#keys-in-dbms-23) | 23 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-22) | 22 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-22) | 22 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (74)
+## SQL Queries (75)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -344,6 +344,8 @@ SELECT count (*) FROM (
 73. **(খ) SQL ব্যবহার করে Student নামে একটি টেবিল তৈরি করুন। টেবিলে Std-id, Std-name, Std-address এবং GPA নামে চারটি field থাকবে। Student টেবিল হতে যে সকল ছাত্রের ফলাফল GPA-5 তাদের সকল রেকর্ড দেখানোর জন্য SQL Query লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1097 (ET: N/A)]*
 
 74. **There is a student table: Student (s_id, name, gender, age, phone, department, cgpa) find a query to get each department maximum CGPA of student. Which student gets highest cgpa in maximum of each department?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
+
+75. **Given two tables are employee (id, name, salary, dept_id) and department (dept_id, dept_name), write SQL to find MAX salary and average salay of specific department.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
 ## Keys in DBMS (23)
 

@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 163 questions
+**Table of Contents** — 14 subtopics · 164 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Cryptography](#cryptography-29) | 29 |
 | 2 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-27) | 27 |
 | 3 | [Web Security Vulnerabilities](#web-security-vulnerabilities-17) | 17 |
-| 4 | [Firewalls & Network Defense](#firewalls--network-defense-16) | 16 |
+| 4 | [Firewalls & Network Defense](#firewalls--network-defense-17) | 17 |
 | 5 | [Authentication & Access Control](#authentication--access-control-15) | 15 |
 | 6 | [Malware & Security Threats](#malware--security-threats-15) | 15 |
 | 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
@@ -174,7 +174,7 @@
 
 17. **(খ) Cross Site Scripting (XSS) বলতে কী বোঝায়? এর হাত থেকে রক্ষা পাওয়ার পদ্ধতিগুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1090 (ET: N/A)]*
 
-## Firewalls & Network Defense (16)
+## Firewalls & Network Defense (17)
 
 1. **As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
@@ -214,6 +214,8 @@
 15. **Write difference between Antivirus and Firewall.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
 
 16. **What is firewell? Draw a LAN network to showing firewall.** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+17. **What is proxy server? Explain it.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1123 (ET: BREB)]*
 
 ## Authentication & Access Control (15)
 
@@ -281,7 +283,7 @@
 
 ## Security Protocols (SSL/TLS, HTTPS) (12)
 
-1. **What is SSL?** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
+1. **What is SSL?** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*, *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
 2. **Which client is used to security cannot to a remote server?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 

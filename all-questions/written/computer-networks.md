@@ -1,25 +1,25 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 451 questions
+**Table of Contents** — 33 subtopics · 456 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-97) | 97 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-46) | 46 |
-| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-25) | 25 |
+| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-26) | 26 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-19) | 19 |
 | 5 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-18) | 18 |
 | 6 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
 | 7 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-17) | 17 |
 | 8 | [Networking Devices](#networking-devices-16) | 16 |
-| 9 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-15) | 15 |
+| 9 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-16) | 16 |
 | 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-14) | 14 |
 | 11 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-14) | 14 |
 | 12 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
 | 13 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-14) | 14 |
 | 14 | [Network Topologies](#network-topologies-13) | 13 |
-| 15 | [IPv6 Addressing](#ipv6-addressing-11) | 11 |
-| 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-11) | 11 |
-| 17 | [Network Address Translation (NAT)](#network-address-translation-nat-11) | 11 |
+| 15 | [IPv6 Addressing](#ipv6-addressing-12) | 12 |
+| 16 | [Network Address Translation (NAT)](#network-address-translation-nat-12) | 12 |
+| 17 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-11) | 11 |
 | 18 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat-10) | 10 |
 | 19 | [Digital Modulation & Signal Processing (BPSK, QPSK)](#digital-modulation--signal-processing-bpsk-qpsk-10) | 10 |
 | 20 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait-9) | 9 |
@@ -31,10 +31,10 @@
 | 26 | [Network Layer (Packet Fragmentation & Tunneling)](#network-layer-packet-fragmentation--tunneling-4) | 4 |
 | 27 | [Analog Modulation & Radio Receivers](#analog-modulation--radio-receivers-3) | 3 |
 | 28 | [Satellite Communication](#satellite-communication-3) | 3 |
-| 29 | [Line Coding & Digital Encoding](#line-coding--digital-encoding-2) | 2 |
-| 30 | [Address Resolution (ARP & RARP)](#address-resolution-arp--rarp-2) | 2 |
-| 31 | [VLANs & Subnetting Comparison](#vlans--subnetting-comparison-2) | 2 |
-| 32 | [Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)](#spread-spectrum--multiple-access-cdma-fhss-dsss-2) | 2 |
+| 29 | [Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)](#spread-spectrum--multiple-access-cdma-fhss-dsss-3) | 3 |
+| 30 | [Line Coding & Digital Encoding](#line-coding--digital-encoding-2) | 2 |
+| 31 | [Address Resolution (ARP & RARP)](#address-resolution-arp--rarp-2) | 2 |
+| 32 | [VLANs & Subnetting Comparison](#vlans--subnetting-comparison-2) | 2 |
 | 33 | [High Availability & Redundancy Protocols (VRRP, HSRP)](#high-availability--redundancy-protocols-vrrp-hsrp-1) | 1 |
 
 <!-- TOC END -->
@@ -379,7 +379,7 @@ ii) 211.10.15.4
 
 46. **Describe the OSI layers. Draw a diagram to show the hierarchy when the data is transmitted or received.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1114 (ET: DU)]*
 
-## Networking Fundamentals & Terminology (25)
+## Networking Fundamentals & Terminology (26)
 
 1. **Define Computer Network. Describe different types of Computer Networks.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -433,6 +433,8 @@ ii) 211.10.15.4
 24. **Write short note: Node, Backbone, Router and Gateway.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049 (ET: BUET)]*
 
 25. **(খ) Public and Private Network-এর মধ্যে পার্থক্য লিখুন? IP address কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
+
+26. **What is MAC address?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (19)
 
@@ -648,7 +650,7 @@ ii) 211.10.15.4
 
 16. **Difference among HUB, Switch and Router.** *[DESCO Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
-## Transport Layer (TCP & UDP) (15)
+## Transport Layer (TCP & UDP) (16)
 
 1. A client needs to send 4000\text{ bytes} of data to a database server. The client divides the data into packets of 500\text{ bytes} each. The sequence number of the first packet is 3001. After 2500\text{ bytes} have been successfully sent, 2 packets are lost/failed. Assuming TCP cumulative ACK, complete the following table: [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -692,6 +694,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 14. **The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate packets. What are the functions performed by TCP to make a network more reliable?** *[Sonali & Janata Bank Officer (IT) 2020 compact it 990 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 15. **a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+
+16. **(c) What is TCP protocol? How does it work?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
 
 ## Communication System & Transmission Modes (14)
 
@@ -846,7 +850,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 13. **(খ) Bus and Ring টপোলজির মধ্যে কোনটি ভালো এবং কেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1067 (ET: N/A)]*
 
-## IPv6 Addressing (11)
+## IPv6 Addressing (12)
 
 1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -869,6 +873,36 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 10. **What is DHCPv6?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
 
 11. **Explain IPv6 link local address and multicast address.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843 (ET: N/A)]*
+
+12. **Write down the difference between IPv4 and IPv6.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1122-1123 (ET: BREB)]*
+
+## Network Address Translation (NAT) (12)
+
+1. Network Address Translation (NAT) maps internal networks to the public internet.
+   * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
+   * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+
+2. **Connection between Public IP to Private IP is called __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+3. **What is NAT? Explain with topological diagram.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 589 (ET: BUET)]*
+
+4. **Explain NAT? Differenc between IPv4 and IPv6.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 549 (ET: BIBM)]*
+
+5. **What is NAT? Write down the list of private IP address.** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
+
+6. **Briefly explain Network Address Translation (NAT).** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
+
+7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 787 (ET: N/A)]*
+
+8. **(b) What is NAT? Mention its advantages.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
+
+9. **(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 799 (ET: N/A)]*
+
+10. **Why do we need NAT? Draw a topology diagram to explain NAT.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
+
+11. **What is PAT? How does a network PAT work?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
+
+12. **What is NAT?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
 ## Physical Layer & Optical Fiber (Attenuation & Power Budget) (11)
 
@@ -897,32 +931,6 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 10. **A 1550nm fiber optic transmission Link if of 50km length without repeating with a signal mode fiber having loss of 0.2dB/km. The fiber is joined ever 2km with conductor each with 0.5dB loss. Determine the minimum average power which should be lunched in to the fiver in order to Tarantion an average optical power level of 10 micro-watts at the receiver.** *[BTCL Assistant Manager (Technical) 2021 compact it 766 (ET: BUET)]*
 
 11. **কোন মাধ্যমে আলোর Pulse ব্যবহৃত হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
-
-## Network Address Translation (NAT) (11)
-
-1. Network Address Translation (NAT) maps internal networks to the public internet.
-   * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
-   * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
-
-2. **Connection between Public IP to Private IP is called __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
-
-3. **What is NAT? Explain with topological diagram.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 589 (ET: BUET)]*
-
-4. **Explain NAT? Differenc between IPv4 and IPv6.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 549 (ET: BIBM)]*
-
-5. **What is NAT? Write down the list of private IP address.** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
-
-6. **Briefly explain Network Address Translation (NAT).** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
-
-7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 787 (ET: N/A)]*
-
-8. **(b) What is NAT? Mention its advantages.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
-
-9. **(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 799 (ET: N/A)]*
-
-10. **Why do we need NAT? Draw a topology diagram to explain NAT.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
-
-11. **What is PAT? How does a network PAT work?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
 
 ## Network Services (DHCP, NAT) (10)
 
@@ -1086,6 +1094,14 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 3. **Satellite ভিত্তিক যোগাযোগের একটি অসুবিধা লিখুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
 
+## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (3)
+
+1. **What are the limitaions of CDMA?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+2. **Mention the basic differences between frequency-hopped spread spectrum (FHSS) and direct sequence spread spectrum (DSSS) techniques.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+3. **What is CDMA? Briefly explain.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1122 (ET: BREB)]*
+
 ## Line Coding & Digital Encoding (2)
 
 1. **Assume we want to transmit the following binary string: 01001110. Show the resulting signal on the one using the following line coding techniques: (i) NRZ-L (ii) Manchester NRZ (iii) Unipolar RZ (binary string: 11011000100)** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 638 (ET: N/A)]*
@@ -1103,12 +1119,6 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
 
 2. **What is VLAN? Difference between static and dynamic VLAN.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 550 (ET: BIBM)]*
-
-## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (2)
-
-1. **What are the limitaions of CDMA?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
-
-2. **Mention the basic differences between frequency-hopped spread spectrum (FHSS) and direct sequence spread spectrum (DSSS) techniques.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
 ## High Availability & Redundancy Protocols (VRRP, HSRP) (1)
 

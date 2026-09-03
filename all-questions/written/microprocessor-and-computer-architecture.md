@@ -1,25 +1,25 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 114 questions
+**Table of Contents** — 11 subtopics · 117 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-28) | 28 |
+| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-29) | 29 |
 | 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-23) | 23 |
 | 3 | [RAID Architecture & Storage](#raid-architecture--storage-13) | 13 |
 | 4 | [Cache Memory](#cache-memory-12) | 12 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
 | 6 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-6) | 6 |
 | 7 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-6) | 6 |
-| 8 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
-| 9 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-5) | 5 |
-| 10 | [8085 Microprocessor & Edge Computing](#8085-microprocessor--edge-computing-3) | 3 |
-| 11 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-3) | 3 |
+| 8 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-6) | 6 |
+| 9 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
+| 10 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-4) | 4 |
+| 11 | [8085 Microprocessor & Edge Computing](#8085-microprocessor--edge-computing-3) | 3 |
 
 <!-- TOC END -->
 
 ---
 
-## Microprocessor Architecture & Functions (28)
+## Microprocessor Architecture & Functions (29)
 
 1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -84,6 +84,8 @@
 27. **Microcontroller এবং Microprocessor এর মধ্যে Hardware Related পার্থক্য গুলো লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
 
 28. **(ক) System bus কী? বিভিন্ন প্রকার System bus সম্পর্কে সচিত্র আলোচনা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
+
+29. **In an arithmetic operation the result has even number of 1s and for another operation the result is zero. Now write the the present status of the flag register.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120-1121 (ET: BUET)]*
 
 ## Memory Hierarchy & Storage (23)
 
@@ -243,6 +245,20 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 6. **Write down four common rules of Assembly language. Write different type of hazard.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
 
+## CPU Performance & Instruction Cycle (6)
+
+1. **There was a CPU cycle math** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 400 (ET: BUET)]*
+
+2. **(খ) Clock cycle কী? একটি মাইক্রো-প্রসেসরের speed 3.5 GHz বলতে কী বোঝায়?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+3. **A program (or a program task) takes 1 billion instructions to execute on a processor running at 2 GHz. Suppose also that 50% of the instructions execute in 3 clock cycles, 30% execute in 4 clock cycles, and 20% execute in 5 clock cycles. What is the execution time for the program or task?** *[RAKUB Programmer (PO) 12.10.2021 compact it 847 (ET: N/A)]*
+
+4. **Operating system math: clock frequency 700MHz.** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
+
+5. **Computer A has 3.2GHz processing speed and it has 2.0 clock speeds in a program and at the same program Computer B has 2.4 GHz processing speed with 1.2 clock speed. Which computer will run faster and how much faster?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118-1119 (ET: BUET)]*
+
+6. **Write down factor of microprocessor speed?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124-1125 (ET: BREB)]*
+
 ## Multi-Core & Multi-Threading (5)
 
 1. **Core vs thread in networking?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
@@ -255,17 +271,15 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-## CPU Performance & Instruction Cycle (5)
+## RISC vs CISC Architecture (4)
 
-1. **There was a CPU cycle math** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 400 (ET: BUET)]*
+1. **RISC stand for __________? Write two characteristics of it's?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
-2. **(খ) Clock cycle কী? একটি মাইক্রো-প্রসেসরের speed 3.5 GHz বলতে কী বোঝায়?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+2. **Difference between RISC and CISC.** *[NPCBL Executive Trainee (IT) 2022 compact it 644 (ET: BUET)]*
 
-3. **A program (or a program task) takes 1 billion instructions to execute on a processor running at 2 GHz. Suppose also that 50% of the instructions execute in 3 clock cycles, 30% execute in 4 clock cycles, and 20% execute in 5 clock cycles. What is the execution time for the program or task?** *[RAKUB Programmer (PO) 12.10.2021 compact it 847 (ET: N/A)]*
+3. **(ক) CISC and RISC processor বলতে কি বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
 
-4. **Operating system math: clock frequency 700MHz.** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
-
-5. **Computer A has 3.2GHz processing speed and it has 2.0 clock speeds in a program and at the same program Computer B has 2.4 GHz processing speed with 1.2 clock speed. Which computer will run faster and how much faster?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118-1119 (ET: BUET)]*
+4. **What is CISC and RISC?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
 ## 8085 Microprocessor & Edge Computing (3)
 
@@ -275,11 +289,3 @@ MOV AX, A534H এবং MOV AX, [A534H]
 2. **Intel 8085 ও Intel 8086 Microprocessor-এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি কত এবং কেন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
 3. **What is the difference between 8-bit (8085) and 16-bit (8086) microprocessor?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865-866 (ET: BUET)]*
-
-## RISC vs CISC Architecture (3)
-
-1. **RISC stand for __________? Write two characteristics of it's?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
-
-2. **Difference between RISC and CISC.** *[NPCBL Executive Trainee (IT) 2022 compact it 644 (ET: BUET)]*
-
-3. **(ক) CISC and RISC processor বলতে কি বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*

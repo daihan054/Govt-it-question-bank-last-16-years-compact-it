@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 89 questions
+**Table of Contents** — 8 subtopics · 90 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Tree](#tree-27) | 27 |
 | 2 | [Stack](#stack-19) | 19 |
 | 3 | [Linked List](#linked-list-15) | 15 |
-| 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-7) | 7 |
+| 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
 | 5 | [Queue](#queue-6) | 6 |
 | 6 | [Binary Search Tree (BST)](#binary-search-tree-bst-6) | 6 |
 | 7 | [Hashing & Hash Tables](#hashing--hash-tables-6) | 6 |
@@ -154,7 +154,7 @@ Output: Not Balanced
 
 15. **(খ) Linked list কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
 
-## Priority Queues & Heaps (Min/Max Heap) (7)
+## Priority Queues & Heaps (Min/Max Heap) (8)
 
 1. **Max heap:** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
 
@@ -169,6 +169,8 @@ Output: Not Balanced
 6. **Binary tree টিকে heapify করুন যেন maximum heap -এ রূপান্তরিত হয়:** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
 
 7. **Heapify the MAX heap tree.** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1043, 1045 (ET: BUET)]*
+
+8. **Draw (max/min) heap binay tree using 11 nodes.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
 ## Queue (6)
 
