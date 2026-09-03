@@ -71,11 +71,11 @@
 
 21. **(খ) নিচের টেবিলটি তৈরি করার জন্য HTML কোড লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1091 (ET: N/A)]*
 
-   | Customer Name | Product Name |  |  | Product Manufacturer |
-   |---|---|---|---|---|
-   | Mr. Jhon | Computer | Printer | Modem | HP |
-   |  |  |  |  | HP |
-   |  |  |  |  | ASUS |
+| Customer Name | Product Name |  |  | Product Manufacturer |
+|---|---|---|---|---|
+| Mr. Jhon | Computer | Printer | Modem | HP |
+|  |  |  |  | HP |
+|  |  |  |  | ASUS |
 
 ## HTTP Protocol (10)
 
