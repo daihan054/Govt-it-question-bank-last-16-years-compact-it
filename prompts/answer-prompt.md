@@ -392,8 +392,20 @@ func writeAnswers() {
 }
 
 TRAVERSAL ORDER (deterministic rakho, jate resume kora jay):
-- File gulo alphabetical order-e, shob file: ai-and-ml.md, algorithm.md,
-  bangla.md, c-programming.md, ... web-technology.md
+
+PHASE 1 — AGE SHOB IT FILE (20 ta), alphabetical order-e:
+    ai-and-ml.md, algorithm.md, c-programming.md, cloud-computing.md,
+    compiler-and-toc.md, computer-fundamental.md, computer-network-security.md,
+    computer-networks.md, data-structure.md, database.md, dld.md,
+    electrical-and-electronics.md, image-processing.md,
+    microprocessor-and-computer-architecture.md, ms-office.md, oop.md,
+    operating-system.md, programming-languages.md, software-engineering.md,
+    web-technology.md
+
+PHASE 2 — TARPOR GENERAL FILE (4 ta), alphabetical order-e:
+    bangla.md, english.md, gk.md, math.md
+
+- Phase 1 puro shesh na houa porjonto Phase 2 dhorba NA.
 - Protita file-er bhitore section gulo file-e jei order-e ache sei order-e
   (TOC order = count descending) — upor theke niche.
 
