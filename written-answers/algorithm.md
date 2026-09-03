@@ -2020,29 +2020,280 @@ for i in N:
 ```
 *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
+   Answer: The code has two nested loops. The outer loop runs `N` times and, for every one of those turns, the inner loop runs `M` times.
+
+   Time complexity
+   - Total iterations = outer × inner = `N × M`.
+   - Time complexity = `O(N × M)`.
+   - If both collections hold `n` items, this becomes `O(n²)` — the classic quadratic case.
+   - Rule used: nested loops multiply, consecutive loops add.
+
+   Space complexity
+   - Only the two loop counters `i` and `j` are stored, and they do not grow with input size.
+   - Space complexity = `O(1)` (constant, ignoring the input itself).
+   - If the loop body stored a result for every pair, space would rise to `O(N × M)`.
+
 2. **What is complexity of Algorithm? Categorize complexity of Algorihm.** *[BKSP Assistant Programmer 13.07.2024 compact it 1458 (ET: N/A)]*
 
+   Answer: Complexity of an algorithm is a measure of the resources it needs — how much time it takes and how much memory it uses — written as a function of the input size `n`.
+
+   Two main kinds
+   - Time complexity — how the running time grows as `n` grows.
+   - Space complexity — how much extra memory is needed as `n` grows.
+
+   Categorised by case
+   - Best case (Big Omega, Ω) — the minimum work, on the most favourable input.
+   - Average case (Big Theta, Θ) — the expected work over typical inputs.
+   - Worst case (Big O) — the maximum work. This is the one usually quoted, because it gives a guarantee.
+
+   Categorised by growth rate, from fastest to slowest
+
+   | Notation | Name | Example |
+   |---|---|---|
+   | O(1) | Constant | Array index access |
+   | O(log n) | Logarithmic | Binary search |
+   | O(n) | Linear | Linear search |
+   | O(n log n) | Linearithmic | Merge sort, heap sort |
+   | O(n²) | Quadratic | Bubble sort, selection sort |
+   | O(n³) | Cubic | Naive matrix multiplication |
+   | O(2ⁿ) | Exponential | Naive recursive Fibonacci |
+   | O(n!) | Factorial | Brute-force travelling salesman |
+
 3. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+   Answer: Computational complexity of an algorithm is the amount of resources — time and memory — that the algorithm needs, expressed as a function of the input size `n`.
+
+   - It answers the question "how does the cost grow when the input grows?", not "how many seconds does it take on this machine?".
+   - Machine speed, compiler and programming language are deliberately ignored, so the measure stays the same everywhere.
+   - Time complexity counts the basic operations (comparisons, assignments, arithmetic).
+   - Space complexity counts the extra memory used beyond the input.
+   - It is written in asymptotic notation: `O` for the upper bound, `Ω` for the lower bound and `Θ` for a tight bound.
+
+   Example: linear search on `n` elements makes at most `n` comparisons, so its time complexity is `O(n)` and its space complexity is `O(1)`.
 
 4. **Including Time and Space complexity....** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 553 (ET: BIBM)]*
 
 5. **What is complexity? Find the Complexity from code and explain.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 501 (ET: IBA)]*
 
+   Answer: Complexity measures how the time and memory used by an algorithm grow with the input size `n`. The code fragment was not printed with the question, so the standard cases are worked out below.
+
+   Rules used
+   - A loop running `n` times costs `O(n)`.
+   - Nested loops multiply; consecutive loops add.
+   - A loop whose variable is halved or doubled each turn costs `O(log n)`.
+   - Only the fastest-growing term is kept, and constants are dropped.
+
+   Case 1 — single loop
+   ```c
+   for (i = 0; i < n; i++)
+       sum = sum + i;
+   ```
+   - The loop runs `n` times, each turn doing constant work → `O(n)`.
+
+   Case 2 — nested loop
+   ```c
+   for (i = 0; i < n; i++)
+       for (j = 0; j < n; j++)
+           count++;
+   ```
+   - Inner loop runs `n` times for each of the `n` outer turns → `n × n` = `O(n²)`.
+
+   Case 3 — halving loop
+   ```c
+   for (i = 1; i < n; i = i * 2)
+       printf("%d", i);
+   ```
+   - `i` takes values 1, 2, 4, 8, ... so the loop runs `log₂ n` times → `O(log n)`.
+
+   Case 4 — consecutive loops
+   ```c
+   for (i = 0; i < n; i++) a[i] = i;
+   for (j = 0; j < n; j++) b[j] = j;
+   ```
+   - `O(n) + O(n) = O(2n) = O(n)`, because constants are dropped.
+
+   - Space complexity in all four cases is `O(1)`, since only a few counter variables are used.
+
 6. **What is Big O and Big Omega?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
+
+   Answer: Big O and Big Omega are asymptotic notations. They describe how the running time of an algorithm grows, one from above and one from below.
+
+   Big O (upper bound)
+   - `f(n) = O(g(n))` if there are positive constants `c` and `n₀` such that `0 ≤ f(n) ≤ c·g(n)` for all `n ≥ n₀`.
+   - It says the algorithm will never be slower than this, so it describes the worst case.
+   - It is the notation used most often, because it gives a guarantee.
+   - Example: linear search is `O(n)`; bubble sort is `O(n²)`.
+
+   Big Omega (lower bound)
+   - `f(n) = Ω(g(n))` if there are positive constants `c` and `n₀` such that `0 ≤ c·g(n) ≤ f(n)` for all `n ≥ n₀`.
+   - It says the algorithm will never be faster than this, so it describes the best case.
+   - Example: linear search is `Ω(1)` — the target may be the first element.
+
+   - The third notation, Big Theta `Θ`, holds when both bounds are the same: `0 ≤ c₁·g(n) ≤ f(n) ≤ c₂·g(n)`. Merge sort is `Θ(n log n)` because its best and worst cases are equal.
 
 7. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 606 (ET: N/A)]*
 
+   Answer: Complexity of an algorithm means the amount of time and memory it needs, written as a function of the input size `n`. It is a way to compare algorithms without depending on any particular computer.
+
+   - Time complexity — growth of the number of basic operations.
+   - Space complexity — growth of the extra memory used.
+   - Written with `O` (worst case), `Ω` (best case) and `Θ` (tight bound).
+
+   Complexity of common sorting algorithms
+
+   | Algorithm | Best | Average | Worst | Space | Stable |
+   |---|---|---|---|---|---|
+   | Bubble sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
+   | Selection sort | O(n²) | O(n²) | O(n²) | O(1) | No |
+   | Insertion sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
+   | Merge sort | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |
+   | Quick sort | O(n log n) | O(n log n) | O(n²) | O(log n) | No |
+   | Heap sort | O(n log n) | O(n log n) | O(n log n) | O(1) | No |
+
+   - Bubble sort and insertion sort reach `O(n)` in the best case only because they stop early on already sorted data.
+
 8. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
 
+   Answer:
+
+   | Algorithm | Best case | Worst case | Space |
+   |---|---|---|---|
+   | Binary search | O(1) | O(log n) | O(1) iterative, O(log n) recursive |
+   | Quick sort | O(n log n) | O(n²) | O(log n) average, O(n) worst |
+   | Depth First Search | O(V + E) | O(V + E) | O(V) |
+
+   Binary search
+   - Best case `O(1)` — the target happens to be the middle element on the first comparison.
+   - Worst case `O(log n)` — the target sits at an end or is absent, so the array is halved `log₂ n` times.
+
+   Quick sort
+   - Best case `O(n log n)` — every pivot splits the array into two equal halves.
+   - Worst case `O(n²)` — every pivot is the smallest or largest element, which happens on already sorted data with a first-element pivot.
+
+   Depth First Search
+   - Both cases are `O(V + E)`, because DFS visits every vertex once and looks at every edge once, whatever the shape of the graph.
+   - With an adjacency matrix instead of a list, it becomes `O(V²)`.
+
 9. **Recurrence equation of binary search and solve it.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
+
+   Answer:
+
+   Step 1 - form the recurrence
+   - Binary search compares the target with the middle element, which costs constant time `O(1)`.
+   - It then continues on only one half of the array, of size `n/2`.
+   - Recurrence: `T(n) = T(n/2) + c`, with base case `T(1) = c`.
+
+   Step 2 - solve by the iteration (substitution) method
+   - `T(n) = T(n/2) + c`
+   - `= [T(n/4) + c] + c = T(n/4) + 2c`
+   - `= [T(n/8) + c] + 2c = T(n/8) + 3c`
+   - After `k` steps: `T(n) = T(n/2^k) + k·c`
+
+   Step 3 - find where the recursion stops
+   - Recursion ends when `n/2^k = 1`, that is `2^k = n`, so `k = log₂ n`.
+
+   Step 4 - substitute k back
+   - `T(n) = T(1) + c·log₂ n`
+   - `= c + c·log₂ n`
+   - `= O(log n)`
+
+   Cross-check with the Master Theorem
+   - Form `T(n) = aT(n/b) + f(n)` with `a = 1, b = 2, f(n) = O(1)`.
+   - `n^(log_b a) = n^(log₂ 1) = n⁰ = 1`, which equals `f(n)`, so Case 2 applies.
+   - Result: `T(n) = Θ(n⁰ · log n) = Θ(log n)`. Both methods agree.
 
 10. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
 11. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
+    Answer: This is a subtract-and-conquer recurrence, so the Master Theorem does not apply. It is solved by iteration (repeated substitution).
+
+    Step 1 - expand the relation
+    - `T(n) = 3T(n-1) + 2`
+    - `= 3[3T(n-2) + 2] + 2 = 3²T(n-2) + 3·2 + 2`
+    - `= 3²[3T(n-3) + 2] + 3·2 + 2 = 3³T(n-3) + 3²·2 + 3·2 + 2`
+
+    Step 2 - write the general pattern after k steps
+    - `T(n) = 3^k · T(n-k) + 2·(3^(k-1) + 3^(k-2) + ... + 3 + 1)`
+
+    Step 3 - stop at the base case
+    - The base case `T(1)` is reached when `n - k = 1`, so `k = n - 1`.
+    - `T(n) = 3^(n-1) · T(1) + 2·(3^(n-2) + 3^(n-3) + ... + 1)`
+
+    Step 4 - sum the geometric series
+    - The series `1 + 3 + 3² + ... + 3^(n-2)` has `n-1` terms with ratio 3.
+    - Sum `= (3^(n-1) - 1) / (3 - 1) = (3^(n-1) - 1) / 2`
+
+    Step 5 - substitute and simplify
+    - `T(n) = 3^(n-1) · 1 + 2 · (3^(n-1) - 1)/2`
+    - `= 3^(n-1) + 3^(n-1) - 1`
+    - `= 2 · 3^(n-1) - 1`
+
+    Verification
+    - `T(1) = 2·3⁰ - 1 = 2 - 1 = 1` ✓
+    - `T(2) = 3(1) + 2 = 5`, formula gives `2·3 - 1 = 5` ✓
+    - `T(3) = 3(5) + 2 = 17`, formula gives `2·9 - 1 = 17` ✓
+
+    Final answer
+    - `T(n) = 2 · 3^(n-1) - 1`, which is `O(3ⁿ)` — exponential growth.
+
 12. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983-984 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+    Answer: The complexity of an algorithm is decided by several factors, some belonging to the algorithm itself and some to the environment it runs in.
+
+    (a) Input size (n)
+    - The main factor. Complexity is always written as a function of `n`, because cost grows with the amount of data.
+
+    (b) Nature of the input
+    - Already sorted, reverse sorted or random data can change the case. Quick sort is `O(n log n)` on random data but `O(n²)` on sorted data.
+
+    (c) Number of basic operations
+    - Comparisons, assignments, arithmetic operations and swaps are counted. Loops multiply this count.
+
+    (d) Loop and recursion structure
+    - A single loop gives `O(n)`, nested loops give `O(n²)`, and a halving loop gives `O(log n)`. Recursion depth adds stack cost.
+
+    (e) Data structure used
+    - The same operation costs differently in different structures. Searching is `O(n)` in an array, `O(log n)` in a balanced BST and `O(1)` on average in a hash table.
+
+    (f) Memory and space needs
+    - Extra arrays, recursion stack and auxiliary structures decide the space complexity.
+
+    (g) Environment factors
+    - Processor speed, memory size, cache behaviour, compiler quality and programming language all change the actual running time — but not the asymptotic complexity, which is why they are ignored in `O` notation.
+
 13. **Write an algorithm which complexity is O(logn).** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1122 (ET: BUET)]*
+
+    Answer: Binary search runs in `O(log n)`, because each comparison discards half of the remaining elements.
+
+    ```
+    BinarySearch(A, n, target)
+      low = 0
+      high = n - 1
+      while low <= high
+          mid = low + (high - low) / 2
+          if A[mid] == target
+              return mid
+          else if A[mid] < target
+              low = mid + 1
+          else
+              high = mid - 1
+      return -1
+    ```
+
+    Why it is O(log n)
+    - Search space goes `n → n/2 → n/4 → ... → 1`.
+    - After `k` steps the size is `n / 2^k`. Setting `n / 2^k = 1` gives `k = log₂ n`.
+    - So the loop runs at most `log₂ n` times → `O(log n)`.
+
+    A second example — a loop that doubles its counter
+    ```c
+    for (i = 1; i < n; i = i * 2)
+        printf("%d ", i);
+    ```
+    - `i` takes 1, 2, 4, 8, ... and stops past `n`, so it runs `log₂ n` times → `O(log n)`.
+
+    - Other `O(log n)` operations: search, insert and delete in a balanced BST or AVL tree, and heap insertion.
 
 14. **Find time and space complexity like below pseudo code.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1266 (ET: N/A)]*
 ```c
@@ -2051,6 +2302,23 @@ for(j=0; j<n;j++)
 for(k=0; k<n;k++)
 count++;
 ```
+
+    Answer: There are three loops, each nested inside the previous one, and each runs `n` times.
+
+    Time complexity
+    - Outer loop `i` runs `n` times.
+    - For every `i`, loop `j` runs `n` times → `n × n`.
+    - For every `j`, loop `k` runs `n` times → `n × n × n`.
+    - Total executions of `count++` = `n³`.
+    - Time complexity = `O(n³)` — cubic.
+
+    Space complexity
+    - Only three counter variables `i`, `j`, `k` and one variable `count` are stored.
+    - None of them grows with `n`.
+    - Space complexity = `O(1)` — constant.
+
+    - Rule confirmed: nested loops multiply their counts, so `k` levels of nesting over `n` each give `O(n^k)`.
+    - For `n = 100`, `count++` runs 1,000,000 times — cubic algorithms become impractical very quickly.
 
 ## Dynamic Programming & Greedy Algorithms (9)
 
