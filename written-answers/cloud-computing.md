@@ -682,11 +682,131 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **(ক) উদাহরণসহ distributed এবং centralized computing -এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+   Answer:
+
+   Centralized computing
+   - All processing, storage and control happen on a single central computer. Users connect to it through terminals or thin clients that do little or no processing themselves.
+   - Example: a traditional bank mainframe. Every branch terminal sends transactions to one central mainframe, which performs all the processing and holds all the data.
+   - Advantages: simple to manage and secure, data is consistent because there is only one copy, and backup is straightforward.
+   - Disadvantages: a single point of failure, limited scalability, and performance degrades as users increase.
+
+   Distributed computing
+   - Processing and data are spread across many independent computers connected by a network. They coordinate with each other and appear to the user as one system.
+   - Example: Google Search. A single query is answered by thousands of servers across many data centres working together. Another example is a bank with a local server in each branch that synchronises with the others.
+   - Advantages: no single point of failure, scales by adding more machines, better performance through parallel work, and resources can sit close to the users.
+   - Disadvantages: complex to design and debug, network dependency, and difficulty keeping data consistent across nodes.
+
+   | Point | Centralized | Distributed |
+   |---|---|---|
+   | Processing location | One central machine | Many machines |
+   | Failure impact | Whole system stops | Other nodes continue |
+   | Scalability | Vertical only, limited | Horizontal, nearly unlimited |
+   | Complexity | Low | High |
+   | Cost | One powerful expensive machine | Many ordinary machines |
+   | Data consistency | Easy — one copy | Hard — needs synchronisation |
+
 2. **Difference between cluster computing and grid computing.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
+
+   Answer: Both connect multiple computers to work as one, but they differ in how similar the machines are and how far apart they sit.
+
+   | Point | Cluster computing | Grid computing |
+   |---|---|---|
+   | Hardware | Homogeneous — same type of machines | Heterogeneous — different machines and OSes |
+   | Location | Same site, connected by a fast LAN | Geographically dispersed, connected over WAN or internet |
+   | Ownership | Owned and managed by ONE organization | Owned by MANY organizations |
+   | Coupling | Tightly coupled | Loosely coupled |
+   | Scheduling | Centralized scheduler | Distributed scheduling across domains |
+   | Network speed | Very high, low latency | Slower, higher latency |
+   | Task type | One large task split across nodes | Many independent tasks distributed to volunteers |
+   | Example | A university HPC cluster; a web server farm behind a load balancer | SETI@home, Folding@home, World Community Grid |
+
+   - Cluster computing suits tightly coupled problems such as weather simulation, where nodes must exchange data constantly.
+   - Grid computing suits embarrassingly parallel problems, where each task is independent and can be sent anywhere, tolerating slow links.
+   - Cloud computing borrowed from both: it uses clusters inside a data centre and grid-like distribution across regions, adding virtualization and pay-per-use billing.
 
 3. **Imagine data in a system is green, red, yellow and blue in the system using distributed server in parallel. Design the system using reduce map.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
 
+   Answer: MapReduce processes large data in parallel across many servers in two phases — Map produces key-value pairs, and Reduce aggregates the values for each key. Counting the occurrences of the colours green, red, yellow and blue fits this model exactly.
+
+   ```mermaid
+   flowchart LR
+       I[Input data split into blocks] --> M1[Mapper 1]
+       I --> M2[Mapper 2]
+       I --> M3[Mapper 3]
+       M1 --> S[Shuffle and Sort<br/>group by colour]
+       M2 --> S
+       M3 --> S
+       S --> R1[Reducer: green]
+       S --> R2[Reducer: red]
+       S --> R3[Reducer: yellow, blue]
+       R1 --> O[Final counts]
+       R2 --> O
+       R3 --> O
+   ```
+
+   Step 1 — Split
+   - The dataset is divided into blocks and each block is sent to a different server.
+
+   Step 2 — Map phase (runs in parallel on every server)
+   ```
+   map(key, record):
+       colour = record.colour
+       emit(colour, 1)
+   ```
+   - Mapper 1 output: `(green,1) (red,1) (green,1)`
+   - Mapper 2 output: `(blue,1) (yellow,1) (red,1)`
+   - Mapper 3 output: `(green,1) (blue,1)`
+
+   Step 3 — Shuffle and Sort
+   - All pairs with the same key are grouped and sent to the same reducer.
+   - `green → [1,1,1]`, `red → [1,1]`, `yellow → [1]`, `blue → [1,1]`
+
+   Step 4 — Reduce phase
+   ```
+   reduce(colour, list_of_counts):
+       total = sum(list_of_counts)
+       emit(colour, total)
+   ```
+
+   Final output
+
+   | Colour | Count |
+   |---|---|
+   | green | 3 |
+   | red | 2 |
+   | yellow | 1 |
+   | blue | 2 |
+
+   - Why this scales: the Map phase is fully parallel with no communication between mappers, so doubling the servers roughly halves the time.
+   - An optional Combiner running on each mapper (a local reduce) would cut network traffic during the shuffle by pre-summing counts.
+   - Implementations: Apache Hadoop MapReduce and Apache Spark.
+
 4. **(খ) Distributed processing কী? উহার বৈশিষ্ট্য ও সুবিধাগুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
+
+   Answer: Distributed processing means dividing a computing task among several computers connected by a network, so that they work on it simultaneously and appear to the user as a single system.
+
+   Characteristics
+   - **Resource sharing** — CPU, storage, printers and data are shared across the network.
+   - **Concurrency** — many nodes execute parts of the work at the same time.
+   - **Transparency** — the user sees one system and does not know which node did the work or where the data lives.
+   - **Scalability** — capacity grows by adding more nodes.
+   - **Fault tolerance** — the failure of one node does not stop the whole system.
+   - **Openness and heterogeneity** — nodes may run different hardware and operating systems, communicating through standard protocols.
+   - **No global clock** — nodes coordinate by message passing, which is why distributed algorithms are hard.
+
+   Advantages
+   - Higher performance through genuine parallel execution.
+   - Reliability — redundancy means the system survives individual failures.
+   - Economy — many ordinary machines cost less than one very powerful one.
+   - Incremental growth — add nodes as demand rises, without replacing anything.
+   - Geographic distribution — processing sits close to the users, reducing latency.
+   - Better resource utilisation, since idle capacity on one node serves another.
+
+   Disadvantages worth noting
+   - Complex to design, program and debug.
+   - Depends entirely on the network; a partition can split the system.
+   - Keeping data consistent across nodes is difficult — the CAP theorem forces a trade-off between consistency and availability.
+   - Security is harder, because data travels over the network and there are more points to protect.
 
 ## Scalability (Horizontal & Vertical Scaling) (2)
 
