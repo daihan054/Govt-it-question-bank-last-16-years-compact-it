@@ -649,7 +649,37 @@
 
 1. **Write down the difference between informed and uninformed search algorithm.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
+   Answer: Uninformed search explores the state space blindly, while informed search uses extra knowledge (a heuristic) to move towards the goal faster.
+
+   | Point | Uninformed (Blind) Search | Informed (Heuristic) Search |
+   |---|---|---|
+   | Domain knowledge | None beyond the problem definition | Uses a heuristic function `h(n)` |
+   | Direction | Explores in a fixed pattern | Explores towards the goal |
+   | Efficiency | Slow, expands many nodes | Faster, expands fewer nodes |
+   | Time and space cost | High | Comparatively low |
+   | Optimality | BFS and UCS give an optimal path | A* is optimal only if `h(n)` is admissible |
+   | Examples | BFS, DFS, Uniform Cost Search, Depth Limited, Iterative Deepening | Greedy Best First Search, A*, AO* |
+
+   - In A*, `f(n) = g(n) + h(n)`, where `g(n)` is the cost already spent and `h(n)` is the estimated cost still to go.
+   - Example: finding a route from Dhaka to Chittagong. BFS checks every road blindly; A* uses straight-line distance as `h(n)` and heads south-east from the start.
+
 2. **How $\alpha$-$\beta$ pruning is better than minimax search in game planning?** *[ICT Ministry Assistant Programmer 2017 compact it 1243 (ET: N/A)]*
+
+   Answer: Alpha-beta pruning is minimax with a cut-off rule. It gives the same answer as minimax but skips branches that cannot change the result.
+
+   How it works
+   - Alpha (α) — the best value the MAX player is sure of so far.
+   - Beta (β) — the best value the MIN player is sure of so far.
+   - When `α ≥ β` at a node, the rest of that branch is pruned, because neither player would ever choose it.
+
+   Why it is better
+   - Minimax must visit every node of the game tree; alpha-beta skips large parts of it.
+   - Time complexity falls from `O(b^d)` to `O(b^(d/2))` in the best case, where `b` is the branching factor and `d` the depth.
+   - That effectively doubles the search depth for the same time, so the engine sees further ahead and plays stronger.
+   - Uses less memory, since fewer nodes are stored.
+   - The final move chosen is exactly the same as plain minimax — no accuracy is lost.
+
+   - Its gain depends on move ordering. If the best move is examined first, pruning is maximum; with the worst ordering it degrades to plain minimax.
 
 ## Overfitting, Underfitting & Model Generalization (1)
 
