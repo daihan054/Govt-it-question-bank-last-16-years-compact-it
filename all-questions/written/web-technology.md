@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 57 questions
+**Table of Contents** — 7 subtopics · 58 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-18) | 18 |
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-19) | 19 |
 | 2 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 3 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-10) | 10 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-7) | 7 |
@@ -15,7 +15,7 @@
 
 ---
 
-## HTML & Web Fundamentals (18)
+## HTML & Web Fundamentals (19)
 
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -64,6 +64,8 @@
 17. **একটি Image ও একটি Web site URL HTML প্রদর্শন করার জন্য প্রয়োজনীয় code লিখুন?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
 
 18. **Write down the description of `<header>`, `<footer>`, `<section>` and `<article>` tag of new HTML5.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1057 (ET: AUST)]*
+
+19. **(ক) Web portal ও Web hosting কী? Web hosting এর প্রয়োজনীয়তা ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1089-1090 (ET: N/A)]*
 
 ## HTTP Protocol (10)
 

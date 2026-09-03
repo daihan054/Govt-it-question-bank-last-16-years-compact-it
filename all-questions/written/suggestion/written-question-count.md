@@ -1,11 +1,11 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **2734** questions.
+Sorted by count, highest first. Total **2760** questions.
 
 ## IT questions
 
-Total: **2198** questions.
+Total: **2224** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -63,12 +63,12 @@ Total: **2198** questions.
 | | NoSQL, NewSQL & Modern Databases | 2 |
 | | Indexing in DBMS | 1 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
-| **C Programming** | **— all subcategories —** | **208** |
-| | Basic Programs & Control Statements | 89 |
+| **C Programming** | **— all subcategories —** | **214** |
+| | Basic Programs & Control Statements | 91 |
 | | Output Tracing & Control Flow | 37 |
 | | Recursion & Functions | 32 |
-| | Operators, Data Types & Language Concepts | 18 |
-| | Flowcharts & Algorithms | 12 |
+| | Operators, Data Types & Language Concepts | 21 |
+| | Flowcharts & Algorithms | 13 |
 | | String Manipulation & Algorithms | 11 |
 | | File Handling | 4 |
 | | Pointers | 4 |
@@ -86,11 +86,11 @@ Total: **2198** questions.
 | | File Systems & Disk Management | 4 |
 | | Process Synchronization & Concurrency | 4 |
 | | Windows & System Administration | 4 |
-| **Computer & Network Security** | **— all subcategories —** | **159** |
+| **Computer & Network Security** | **— all subcategories —** | **160** |
 | | Cryptography | 28 |
 | | Social Engineering & Cyber Attacks | 26 |
+| | Web Security Vulnerabilities | 17 |
 | | Firewalls & Network Defense | 16 |
-| | Web Security Vulnerabilities | 16 |
 | | Authentication & Access Control | 15 |
 | | Malware & Security Threats | 15 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
@@ -101,6 +101,20 @@ Total: **2198** questions.
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 2 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
+| **Software Engineering** | **— all subcategories —** | **132** |
+| | SDLC Phases & Models | 40 |
+| | Software Testing & Evaluation | 36 |
+| | Software Architecture & Design Patterns (MVC) | 11 |
+| | Software Requirements Engineering | 10 |
+| | UML Diagrams (Class, Use Case, Sequence) | 9 |
+| | Software Project Management & Organization | 7 |
+| | Software Design Principles (Coupling & Cohesion) | 5 |
+| | Software Cost Estimation & Build vs Buy Decisions | 4 |
+| | IT Governance, Audit & Risk Management | 3 |
+| | Code Smells & Refactoring | 2 |
+| | Data Flow Diagrams (DFD) | 2 |
+| | Open Source Software & Licensing | 2 |
+| | CI/CD & DevOps Methodologies | 1 |
 | **Computer Fundamentals** | **— all subcategories —** | **128** |
 | | Computer Fundamentals & Acronyms | 50 |
 | | Hardware Components & BIOS (CMOS Battery) | 21 |
@@ -112,45 +126,31 @@ Total: **2198** questions.
 | | Quantum Computing & Emerging Technologies | 3 |
 | | Digital Banking & Financial Inclusion | 2 |
 | | User Interfaces (CLI vs GUI) | 1 |
-| **Software Engineering** | **— all subcategories —** | **128** |
-| | SDLC Phases & Models | 38 |
-| | Software Testing & Evaluation | 36 |
-| | Software Architecture & Design Patterns (MVC) | 11 |
-| | UML Diagrams (Class, Use Case, Sequence) | 9 |
-| | Software Requirements Engineering | 8 |
-| | Software Project Management & Organization | 7 |
-| | Software Design Principles (Coupling & Cohesion) | 5 |
-| | Software Cost Estimation & Build vs Buy Decisions | 4 |
-| | IT Governance, Audit & Risk Management | 3 |
-| | Code Smells & Refactoring | 2 |
-| | Data Flow Diagrams (DFD) | 2 |
-| | Open Source Software & Licensing | 2 |
-| | CI/CD & DevOps Methodologies | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **120** |
+| **Algorithm** | **— all subcategories —** | **123** |
+| | Sorting Algorithms & Complexity | 32 |
+| | Graph Traversal Algorithms (BFS & DFS) | 17 |
+| | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 14 |
+| | Searching Algorithms | 13 |
+| | Algorithm Analysis & Asymptotic Complexity | 12 |
+| | Dynamic Programming & Greedy Algorithms | 9 |
+| | Graph Theory & Isomorphism | 7 |
+| | Greedy Algorithms (Fractional Knapsack) | 6 |
+| | Dynamic Programming | 5 |
+| | Divide and Conquer & Matrix Multiplication | 2 |
+| | Graph Representation (Adjacency Matrix vs List) | 2 |
+| | Heap & Priority Queue | 2 |
+| | Huffman Coding & Data Compression | 1 |
+| | NP-Completeness & Complexity Reduction | 1 |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **121** |
 | | Logic Gates & Universal Gates | 29 |
 | | Number Systems & Base Conversions | 21 |
-| | Combinational Circuits (Adders, Encoders, MUX) | 18 |
+| | Combinational Circuits (Adders, Encoders, MUX) | 19 |
 | | Karnaugh Map (K-Map) | 17 |
 | | Boolean Algebra & De Morgan’s Theorem | 16 |
 | | Sequential Circuits (Latches & Flip-Flops) | 11 |
 | | Logic Families (TTL vs CMOS) | 5 |
 | | 2's Complement & Binary Arithmetic | 2 |
 | | Finite State Machines (FSM) | 1 |
-| **Algorithm** | **— all subcategories —** | **114** |
-| | Sorting Algorithms & Complexity | 28 |
-| | Graph Traversal Algorithms (BFS & DFS) | 17 |
-| | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 14 |
-| | Algorithm Analysis & Asymptotic Complexity | 12 |
-| | Searching Algorithms | 11 |
-| | Dynamic Programming & Greedy Algorithms | 7 |
-| | Graph Theory & Isomorphism | 7 |
-| | Greedy Algorithms (Fractional Knapsack) | 6 |
-| | Dynamic Programming | 5 |
-| | Graph Representation (Adjacency Matrix vs List) | 2 |
-| | Heap & Priority Queue | 2 |
-| | Divide and Conquer & Matrix Multiplication | 1 |
-| | Huffman Coding & Data Compression | 1 |
-| | NP-Completeness & Complexity Reduction | 1 |
 | **Microprocessor & Computer Architecture** | **— all subcategories —** | **112** |
 | | Microprocessor Architecture & Functions | 28 |
 | | Memory Hierarchy & Storage | 23 |
@@ -163,6 +163,16 @@ Total: **2198** questions.
 | | CPU Performance & Instruction Cycle | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
 | | RISC vs CISC Architecture | 3 |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **89** |
+| | OOP Concepts (Inheritance & Polymorphism) | 47 |
+| | Java Programming & Methods | 11 |
+| | Class Design & Object-Oriented Modeling | 8 |
+| | Encapsulation & Access Modifiers | 7 |
+| | Constructors & Destructors | 5 |
+| | C++ OOP Concepts & Friend Functions | 3 |
+| | Exception Handling | 3 |
+| | Output Tracing & Recursion | 3 |
+| | Interfaces & Abstract Classes | 2 |
 | **Data Structure** | **— all subcategories —** | **87** |
 | | Tree | 26 |
 | | Stack | 19 |
@@ -172,18 +182,8 @@ Total: **2198** questions.
 | | Hashing & Hash Tables | 6 |
 | | Queue | 6 |
 | | Data Structure Fundamentals | 2 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **86** |
-| | OOP Concepts (Inheritance & Polymorphism) | 46 |
-| | Java Programming & Methods | 11 |
-| | Class Design & Object-Oriented Modeling | 7 |
-| | Encapsulation & Access Modifiers | 7 |
-| | Constructors & Destructors | 5 |
-| | Exception Handling | 3 |
-| | Output Tracing & Recursion | 3 |
-| | C++ OOP Concepts & Friend Functions | 2 |
-| | Interfaces & Abstract Classes | 2 |
-| **Web Technology** | **— all subcategories —** | **57** |
-| | HTML & Web Fundamentals | 18 |
+| **Web Technology** | **— all subcategories —** | **58** |
+| | HTML & Web Fundamentals | 19 |
 | | HTTP Protocol | 10 |
 | | JavaScript & jQuery (DOM & Validation) | 10 |
 | | Web Services & APIs (SOAP vs REST) | 7 |
@@ -222,9 +222,9 @@ Total: **2198** questions.
 | | Cloud Security & Compliance | 1 |
 | | High Availability & System Redundancy | 1 |
 | | Virtualization & Resource Allocation | 1 |
-| **Compiler & Theory of Computation** | **— all subcategories —** | **22** |
+| **Compiler & Theory of Computation** | **— all subcategories —** | **23** |
+| | Compiler vs Interpreter | 6 |
 | | Regular Expressions & Finite Automata | 6 |
-| | Compiler vs Interpreter | 5 |
 | | Grammar & Ambiguity | 5 |
 | | Lexical Analysis & Compiler Phases | 5 |
 | | Linker & Loader | 1 |

@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 208 questions
+**Table of Contents** — 9 subtopics · 214 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-89) | 89 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-91) | 91 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-37) | 37 |
 | 3 | [Recursion & Functions](#recursion--functions-32) | 32 |
-| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-18) | 18 |
-| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-12) | 12 |
+| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-21) | 21 |
+| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-13) | 13 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-11) | 11 |
 | 7 | [File Handling](#file-handling-4) | 4 |
 | 8 | [Pointers](#pointers-4) | 4 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (89)
+## Basic Programs & Control Statements (91)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -348,6 +348,10 @@ return 0;
 88. **A prim number is a number that is evenly divided by only 1 and itself. Write a program to your favorite language to print the first 100 prime numbers.** *[Bangladesh Competition Commission Programmer 2019 compact it 1062 (ET: DU)]*
 
 89. **(গ) Array processor কী? $1+\frac{1}{2}+\frac{1}{3}+\dots\dots\dots\dots+\frac{1}{N}$ ধারাটির যোগফল নির্ণয়ের জন্য C ভাষায় একটি প্রোগ্রাম লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072-1073 (ET: N/A)]*
+
+90. **(ক) একটি Array তে পাঁচটি সংখ্যা Input হিসেবে নিয়ে তাদের গড় বের করার জন্য C প্রোগ্রামিং ল্যাঙ্গুয়েজে কোড লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1082-1083 (ET: N/A)]*
+
+91. **(খ) $ax^2+bx+c=0$ সমীকরণটির x চলকের মান নির্ণয়ের জন্য C প্রোগ্রামিং ল্যাঙ্গুয়েজে একটি কোড লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1084-1085 (ET: N/A)]*
 
 ## Output Tracing & Control Flow (37)
 
@@ -896,7 +900,7 @@ int main() {
 
 32. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-## Operators, Data Types & Language Concepts (18)
+## Operators, Data Types & Language Concepts (21)
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
@@ -939,7 +943,13 @@ int main() {
    d. The Size of the character variable in C is \_\_\_\_\_?
    e. In Java what is true about private constructor?
 
-## Flowcharts & Algorithms (12)
+19. **Coding এর সময় সংঘটিত ভুলসমূহ উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
+
+20. **উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1082 (ET: N/A)]*
+
+21. **(খ) C প্রোগ্রামিং ল্যাঙ্গুয়েজে Structure ও Union এর মধ্যে পার্থক্য কী? উদাহরণসহ লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1083 (ET: N/A)]*
+
+## Flowcharts & Algorithms (13)
 
 1. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -964,6 +974,8 @@ int main() {
 11. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
 12. **Three types of control statements and their graphical presentation using flowchart or flow graph.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1037-1038 (ET: BUET)]*
+
+13. **(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1084 (ET: N/A)]*
 
 ## String Manipulation & Algorithms (11)
 

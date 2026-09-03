@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 120 questions
+**Table of Contents** — 9 subtopics · 121 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-29) | 29 |
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-21) | 21 |
-| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-18) | 18 |
+| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-19) | 19 |
 | 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-17) | 17 |
 | 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-16) | 16 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-11) | 11 |
@@ -124,7 +124,7 @@
 
 21. **(খ) $(3\text{D}.4\text{C})_{16}$ এবং $(514.6)_8$ কে বাইনারি সংখ্যায় পরিবর্তন করে যোগ এবং যোগফল হেক্সাডেসিমালে প্রকাশ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1071-1072 (ET: N/A)]*
 
-## Combinational Circuits (Adders, Encoders, MUX) (18)
+## Combinational Circuits (Adders, Encoders, MUX) (19)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -173,6 +173,8 @@
 17. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927-928 (ET: CTI)]*
 
 18. **4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
+
+19. **Half adder এর সাহায্যে Full adder বাস্তবায়ন করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
 ## Karnaugh Map (K-Map) (17)
 

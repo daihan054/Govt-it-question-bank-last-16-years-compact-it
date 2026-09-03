@@ -1,23 +1,23 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 86 questions
+**Table of Contents** — 9 subtopics · 89 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-46) | 46 |
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-47) | 47 |
 | 2 | [Java Programming & Methods](#java-programming--methods-11) | 11 |
-| 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-7) | 7 |
+| 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-8) | 8 |
 | 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
 | 5 | [Constructors & Destructors](#constructors--destructors-5) | 5 |
 | 6 | [Output Tracing & Recursion](#output-tracing--recursion-3) | 3 |
 | 7 | [Exception Handling](#exception-handling-3) | 3 |
-| 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-2) | 2 |
+| 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
 | 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
 
 <!-- TOC END -->
 
 ---
 
-## OOP Concepts (Inheritance & Polymorphism) (46)
+## OOP Concepts (Inheritance & Polymorphism) (47)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -145,6 +145,8 @@ public class main{
 
 46. **Inheritance, Polymorphism and Encapsulation ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1078 (ET: N/A)]*
 
+47. **Function overloading and Operator overloading বলতে কী বুঝেন? উদাহরণ দিন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1082 (ET: N/A)]*
+
 ## Java Programming & Methods (11)
 
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
@@ -184,7 +186,7 @@ Public class class B extends class A {
 
 11. **Write java program for calculate electricity bill using class and object.** *[Sundharban Gas Assistant Programmer 2020 compact it 1047-1048 (ET: N/A)]*
 
-## Class Design & Object-Oriented Modeling (7)
+## Class Design & Object-Oriented Modeling (8)
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 425 (ET: BIBM)]*
 
@@ -199,6 +201,8 @@ Public class class B extends class A {
 6. **What are the common activities on OOP design process?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 756 (ET: N/A)]*
 
 7. **Write a programme to create an object of type batsman and calculate the average runs scored by the player.** *[RAKUB Programmer (PO) 12.10.2021 compact it 846-847 (ET: N/A)]*
+
+8. **(ক) Object কী? কীভাবে Object তৈরি করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1085 (ET: N/A)]*
 
 ## Encapsulation & Access Modifiers (7)
 
@@ -276,7 +280,7 @@ class Test {
 
 3. **What is exception handling? Write with an example.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
 
-## C++ OOP Concepts & Friend Functions (2)
+## C++ OOP Concepts & Friend Functions (3)
 
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1355 (ET: N/A)]*
 ```cpp
@@ -288,6 +292,8 @@ public:
 ```
 
 2. **(ক) Friend Function কী? উহার সুবিধা অসুবিধাগুলো লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
+
+3. **(খ) Friend Function কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1086 (ET: N/A)]*
 
 ## Interfaces & Abstract Classes (2)
 
