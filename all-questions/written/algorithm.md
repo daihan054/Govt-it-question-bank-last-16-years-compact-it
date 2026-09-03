@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 123 questions
+**Table of Contents** — 14 subtopics · 125 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-32) | 32 |
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-34) | 34 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-14) | 14 |
 | 4 | [Searching Algorithms](#searching-algorithms-13) | 13 |
@@ -22,7 +22,7 @@
 
 ---
 
-## Sorting Algorithms & Complexity (32)
+## Sorting Algorithms & Complexity (34)
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -97,6 +97,10 @@
 31. **(খ) ৭ জন ছাত্রের পরীক্ষার প্রাপ্ত Marks দেওয়া আছে: 45, 72, 80, 65, 84, 52, 37 Selection short ব্যবহার করে নম্বরগুলো নিম্নক্রমানুযায়ী সাজানোর প্রক্রিয়া ধাপে ধাপে লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088 (ET: N/A)]*
 
 32. **(ক) Heap sort কিভাবে কাজ করে? উদাহরণসহ দেখান।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088 (ET: N/A)]*
+
+33. **Describe four types sorting algorithm with example.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1114-1115 (ET: DU)]*
+
+34. **Sorting the value with radix sort: 608, 5, 768, 298, 576, 975, 90, 80** *[DESCO Assistant Engineer (CSE) 2019 compact it 1117-1118 (ET: BUET)]*
 
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 

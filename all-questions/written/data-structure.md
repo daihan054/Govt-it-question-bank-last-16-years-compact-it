@@ -1,22 +1,22 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 87 questions
+**Table of Contents** — 8 subtopics · 89 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Tree](#tree-26) | 26 |
+| 1 | [Tree](#tree-27) | 27 |
 | 2 | [Stack](#stack-19) | 19 |
 | 3 | [Linked List](#linked-list-15) | 15 |
 | 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-7) | 7 |
 | 5 | [Queue](#queue-6) | 6 |
 | 6 | [Binary Search Tree (BST)](#binary-search-tree-bst-6) | 6 |
 | 7 | [Hashing & Hash Tables](#hashing--hash-tables-6) | 6 |
-| 8 | [Data Structure Fundamentals](#data-structure-fundamentals-2) | 2 |
+| 8 | [Data Structure Fundamentals](#data-structure-fundamentals-3) | 3 |
 
 <!-- TOC END -->
 
 ---
 
-## Tree (26)
+## Tree (27)
 
 1. Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term. [SO IT 25-07-2026]
 
@@ -73,6 +73,8 @@
    Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
 
 26. **Making binary a tree from the given expression: 3 + ((5+9)*2)** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
+
+27. **Evaluate the prefix and postfix notation with binary tree evaluation and find out its final value.** *[DESCO Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
 ## Stack (19)
 
@@ -210,8 +212,10 @@ Output: Not Balanced
 
 6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
 
-## Data Structure Fundamentals (2)
+## Data Structure Fundamentals (3)
 
 1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
 
 2. **Linear Data Structure এবং Non Linear Data Structure বলতে কি বুঝায়?** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
+
+3. **What are the operations performed on a data structure? What is Prefix, Postfix and Infix operation?** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105 (ET: AUST)]*

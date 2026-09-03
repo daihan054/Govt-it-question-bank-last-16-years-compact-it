@@ -1,16 +1,16 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 244 questions
+**Table of Contents** — 19 subtopics · 246 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-73) | 73 |
+| 1 | [SQL Queries](#sql-queries-74) | 74 |
 | 2 | [Keys in DBMS](#keys-in-dbms-23) | 23 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-22) | 22 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-22) | 22 |
 | 5 | [Normalization & Database Design](#normalization--database-design-19) | 19 |
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-13) | 13 |
 | 7 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
-| 8 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-12) | 12 |
+| 8 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-13) | 13 |
 | 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
 | 10 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-8) | 8 |
 | 11 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-7) | 7 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (73)
+## SQL Queries (74)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -343,6 +343,8 @@ SELECT count (*) FROM (
 
 73. **(খ) SQL ব্যবহার করে Student নামে একটি টেবিল তৈরি করুন। টেবিলে Std-id, Std-name, Std-address এবং GPA নামে চারটি field থাকবে। Student টেবিল হতে যে সকল ছাত্রের ফলাফল GPA-5 তাদের সকল রেকর্ড দেখানোর জন্য SQL Query লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1097 (ET: N/A)]*
 
+74. **There is a student table: Student (s_id, name, gender, age, phone, department, cgpa) find a query to get each department maximum CGPA of student. Which student gets highest cgpa in maximum of each department?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
+
 ## Keys in DBMS (23)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
@@ -603,7 +605,7 @@ SELECT count (*) FROM (
 
 13. **(খ) Relational Database Model কী? অন্যান্য মডেলের তুলনায় এর সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094-1095 (ET: N/A)]*
 
-## Transaction Management & ACID Properties (12)
+## Transaction Management & ACID Properties (13)
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
 
@@ -628,6 +630,8 @@ SELECT count (*) FROM (
 11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 984-985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 12. **Describe Database ACID properties.** *[RAKUB Assistant Database Administrator 2020 compact it 1012 (ET: E-Zone)]*
+
+13. **Describe the ACID properties in a database. When does a deadlock occur and how do you prevent it, in a database?** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1116 (ET: DU)]*
 
 ## Database Backup & Disaster Recovery (8)
 

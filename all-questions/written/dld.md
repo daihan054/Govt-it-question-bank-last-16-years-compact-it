@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 123 questions
+**Table of Contents** — 9 subtopics · 126 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-30) | 30 |
+| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-31) | 31 |
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-21) | 21 |
 | 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-20) | 20 |
-| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-17) | 17 |
-| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-16) | 16 |
+| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-18) | 18 |
+| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-17) | 17 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-11) | 11 |
 | 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-5) | 5 |
 | 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-2) | 2 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Logic Gates & Universal Gates (30)
+## Logic Gates & Universal Gates (31)
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -78,6 +78,8 @@
 29. **(খ) Universal Gate কাকে বলে? Universal Gate-এর সার্বজনীনতা প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
 
 30. **Draw a circuit to relaise the following expression using AND, OR gates and inverter: $F = \bar{A}BC + A\bar{B}C + AB\bar{C}$** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
+
+31. **Describe the seven basic logic gates and show their truth table.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
 ## Number Systems & Base Conversions (21)
 
@@ -180,7 +182,7 @@
 
 20. **(খ) Multiplexer কি? চিত্রসহ একটি Multiplexer এর গঠন ও কাজ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
 
-## Karnaugh Map (K-Map) (17)
+## Karnaugh Map (K-Map) (18)
 
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
 
@@ -219,7 +221,9 @@
 
 17. **(গ) Min term কী? K-map-এর সাহায্যে সরল করুন: $\bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
 
-## Boolean Algebra & De Morgan’s Theorem (16)
+18. **Simplify the expression: $F(A,B,C) = \bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$, using k-map.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
+
+## Boolean Algebra & De Morgan’s Theorem (17)
 
 1. **(a) State De-Morgan’s law with an appropriate example.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
@@ -252,6 +256,8 @@
 15. **(খ) প্রমাণ করুন: $A \oplus B = AB + \bar{A}\bar{B}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073-1074 (ET: N/A)]*
 
 16. **(ক) তিন চলকের De Morgan's উপপাদ্য দুইটি লিখুন এবং Truth table-এর সাহায্যে প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+
+17. **Simplify the following Boolean expression: $F = \bar{A}C + A\bar{B} + B\bar{C} + ABC$** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
 
 ## Sequential Circuits (Latches & Flip-Flops) (11)
 

@@ -1,16 +1,16 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 161 questions
+**Table of Contents** — 14 subtopics · 163 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Cryptography](#cryptography-29) | 29 |
-| 2 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-26) | 26 |
+| 2 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-27) | 27 |
 | 3 | [Web Security Vulnerabilities](#web-security-vulnerabilities-17) | 17 |
 | 4 | [Firewalls & Network Defense](#firewalls--network-defense-16) | 16 |
 | 5 | [Authentication & Access Control](#authentication--access-control-15) | 15 |
 | 6 | [Malware & Security Threats](#malware--security-threats-15) | 15 |
 | 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
-| 8 | [Cyber Crime & Security](#cyber-crime--security-9) | 9 |
+| 8 | [Cyber Crime & Security](#cyber-crime--security-10) | 10 |
 | 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad-7) | 7 |
 | 10 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6) | 6 |
 | 11 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance-3) | 3 |
@@ -82,7 +82,7 @@
 
 29. **(ক) Data encryption বলতে কী বোঝায়? বহুল ব্যবহৃত কয়েকটি encryption পদ্ধতির নাম লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
 
-## Social Engineering & Cyber Attacks (26)
+## Social Engineering & Cyber Attacks (27)
 
 1. What is a phishing attack? Explain its types and discuss methods to prevent it. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -135,6 +135,8 @@
 25. **Difference between spoofing and sniffing** *[Combined 4 Banks Assistant Programmer 2020 compact it 1002 (ET: DU)]*
 
 26. **Which security attacks (given) occur on client side or server side?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+
+27. **Write down ten name of different attack through internet.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105-1106 (ET: AUST)]*
 
 ## Web Security Vulnerabilities (17)
 
@@ -310,7 +312,7 @@
 
 12. **What is the difference among threat, vulnerability and risk? Explain SSL and TLS.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1050 (ET: BUET)]*
 
-## Cyber Crime & Security (9)
+## Cyber Crime & Security (10)
 
 1. **সাইবার অপরাধের প্রকারভেদ পরিবেশের স্থায়িত্ব বর্ণনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -329,6 +331,8 @@
 8. **What is cyber threat intelligence database? What is the use of this in corporate office network?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 752 (ET: N/A)]*
 
 9. **সাইবার অপরাধ কি? ৮টি সাইবার অপরাধ এর নাম লিখুন। সাইবার অপরাধ দূর করার জন্য ৬টি পন্থার নাম লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948-949 (ET: N/A)]*
+
+10. **Employee causes the most risk of fraud and computer compromises- do you agree with the statement. Justify your answer.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
 ## Security Principles (CIA Triad) (7)
 

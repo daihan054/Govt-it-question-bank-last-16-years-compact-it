@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 214 questions
+**Table of Contents** — 9 subtopics · 217 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-91) | 91 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-37) | 37 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-92) | 92 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-38) | 38 |
 | 3 | [Recursion & Functions](#recursion--functions-32) | 32 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-21) | 21 |
-| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-13) | 13 |
+| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-14) | 14 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-11) | 11 |
 | 7 | [File Handling](#file-handling-4) | 4 |
 | 8 | [Pointers](#pointers-4) | 4 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (91)
+## Basic Programs & Control Statements (92)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -353,7 +353,13 @@ return 0;
 
 91. **(খ) $ax^2+bx+c=0$ সমীকরণটির x চলকের মান নির্ণয়ের জন্য C প্রোগ্রামিং ল্যাঙ্গুয়েজে একটি কোড লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1084-1085 (ET: N/A)]*
 
-## Output Tracing & Control Flow (37)
+92. **What is the equivalant code of the following statement in while loop format?** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1107 (ET: AUST)]*
+```c
+for(a=1; a<=100; a++)
+    printf("%d\n", a*a);
+```
+
+## Output Tracing & Control Flow (38)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -784,6 +790,28 @@ void main () {
 }
 ```
 
+38. **Find the output of a program:** *[DESCO Assistant Engineer (CSE) 2019 compact it 1117 (ET: BUET)]*
+```c
+#include<stdio.h>
+int main() {
+    char s[200], s1[200];
+    gets(s);
+    gets(s1);
+    fun(s, s1);
+    return 0;
+}
+int fun(char *s, char *sup) {
+    if(s=="\0")
+        return;
+    else if(s==sup)
+        fun(s+1, sup+1);
+    else {
+        printf("%s\n", s);
+        fun(s+1, sup);
+    }
+}
+```
+
 ## Recursion & Functions (32)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
@@ -949,7 +977,7 @@ int main() {
 
 21. **(খ) C প্রোগ্রামিং ল্যাঙ্গুয়েজে Structure ও Union এর মধ্যে পার্থক্য কী? উদাহরণসহ লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1083 (ET: N/A)]*
 
-## Flowcharts & Algorithms (13)
+## Flowcharts & Algorithms (14)
 
 1. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -976,6 +1004,8 @@ int main() {
 12. **Three types of control statements and their graphical presentation using flowchart or flow graph.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1037-1038 (ET: BUET)]*
 
 13. **(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1084 (ET: N/A)]*
+
+14. **Write a pesudcode that takes in one positive number only and returns the factor for that number.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
 ## String Manipulation & Algorithms (11)
 

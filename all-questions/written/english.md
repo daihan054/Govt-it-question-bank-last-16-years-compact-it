@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 110 questions
+**Table of Contents** — 8 subtopics · 111 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Focus Writing](#focus-writing-35) | 35 |
+| 1 | [Focus Writing](#focus-writing-36) | 36 |
 | 2 | [English Grammar](#english-grammar-29) | 29 |
 | 3 | [Translation](#translation-18) | 18 |
 | 4 | [Idioms & Phrases](#idioms--phrases-9) | 9 |
@@ -16,7 +16,7 @@
 
 ---
 
-## Focus Writing (35)
+## Focus Writing (36)
 
 1. Focus Writing in English: "The Role of Sustainable Banking in Achieving the UN Sustainable Development Goals (SDGs) in Bangladesh." *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
@@ -89,6 +89,8 @@
 34. **Write an Essay: Climate change Impact in Bangladesh.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
 35. **Write a paragraph on “Post-corona Green Recovery Plans and Progress in Bangladesh” in English.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+36. **Write a paragraph on “Importance of Information Technology” in the economic development of Bangladesh.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1116 (ET: DU)]*
 
 ## English Grammar (29)
 

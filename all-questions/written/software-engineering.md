@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 132 questions
+**Table of Contents** — 13 subtopics · 133 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models-40) | 40 |
+| 1 | [SDLC Phases & Models](#sdlc-phases--models-41) | 41 |
 | 2 | [Software Testing & Evaluation](#software-testing--evaluation-36) | 36 |
 | 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-11) | 11 |
 | 4 | [Software Requirements Engineering](#software-requirements-engineering-10) | 10 |
@@ -21,7 +21,7 @@
 
 ---
 
-## SDLC Phases & Models (40)
+## SDLC Phases & Models (41)
 
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
@@ -102,6 +102,8 @@
 39. **(ক) Software Development Life Cycle (SDLC) এর বিভিন্ন ধাপগুলো উল্লেখ করুন ও সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1086 (ET: N/A)]*
 
 40. **(খ) Software Development এর ক্ষেত্রে Agile মডেল সম্পর্কে লিখুন। অন্যান্য মডেলের তুলনায় এ মডেলের সুবিধা কি?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1086 (ET: N/A)]*
+
+41. **What is the SCRUM method in software development?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1116 (ET: BUET)]*
 
 ## Software Testing & Evaluation (36)
 

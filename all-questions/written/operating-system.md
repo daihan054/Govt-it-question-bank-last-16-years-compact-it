@@ -1,16 +1,16 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 177 questions
+**Table of Contents** — 12 subtopics · 180 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-42) | 42 |
+| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-44) | 44 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-22) | 22 |
 | 4 | [OS Concepts & System Software](#os-concepts--system-software-20) | 20 |
 | 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
 | 6 | [Memory Management & Paging](#memory-management--paging-14) | 14 |
-| 7 | [Process Management & Process States](#process-management--process-states-10) | 10 |
-| 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-10) | 10 |
+| 7 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
+| 8 | [Process Management & Process States](#process-management--process-states-10) | 10 |
 | 9 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
 | 10 | [File Systems & Disk Management](#file-systems--disk-management-5) | 5 |
 | 11 | [Windows & System Administration](#windows--system-administration-4) | 4 |
@@ -20,7 +20,7 @@
 
 ---
 
-## Linux / Unix Commands & Administration (42)
+## Linux / Unix Commands & Administration (44)
 
 1. **Write Linux command:** *[Islami Bank PLC Senior Officer (Network/System) 14.03.2025 compact it 1331 (ET: BUET)]*
    (a) Give a file Read Write and Execute permission.
@@ -126,6 +126,14 @@
 41. **Write down Linux command: i. Display current directory folder and file. ii. Create a folder name “DPDC”. iii. Remove a file like as “DPDC2”. iv. A file name is “myFile”; Rename the file name to “DPDC2.txt”. v. Give permission to a file so that anyone can read, write and executive that file.** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
 
 42. **A bash shell script using for loop to give output of given pattern:** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035 (ET: BUET)]*
+
+43. **Answer the following linux command:** *[DESCO Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
+   i. Rename a file test.docs to test.txt
+   ii. Delete a file from a folder
+   iii. Put a read/write permission to a file
+   iv. Find the mac address using command
+
+44. **Write Linux command: (i) File permission (ii) Remove file or folder (iii) Show IP address** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
 ## CPU Scheduling Algorithms (24)
 
@@ -387,29 +395,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 14. **(ক) অপারেটিং সিস্টেম এর ক্ষেত্রে Swapping কী? কোন ক্ষেত্রে এটি ব্যবহৃত হয় লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
 
-## Process Management & Process States (10)
-
-1. **(b) What is process? Describe different states of a process.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
-
-2. **(c) Define context switch with proper example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
-
-3. **(খ) Process কী? বিভিন্ন ধরনের Process state এর কাজ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 414 (ET: N/A)]*
-
-4. **Explain the process state.** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
-
-5. **(ক) Process কী? একটি Process এর বিভিন্ন ধাপগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
-
-6. **অথবা, (ক) Process Control Block (PCB) কী? এটি একটি Process সংক্রান্ত যে যে তথ্য রাখে সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
-
-7. **Write down the name of four information stored in PCB (Process Control Block).** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
-
-8. **Operating System এর Process state diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
-
-9. **(i) Operating System এর Process State Transition Diagram আঁকুন ও ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 786 (ET: N/A)]*
-
-10. **Operating System এর ক্ষেত্রে নিম্নোক্ত Process State গুলো ব্যবহার করে State Diagram অংকন করুন। [New, ready, Wait, Run, Terminated]** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
-
-## Concurrency, Threads & Synchronization (10)
+## Concurrency, Threads & Synchronization (11)
 
 1. Multi-threaded processing and distributed computing have become essential. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
@@ -450,6 +436,30 @@ int main(int argc, char *argv[]){
 9. **(d) Differentiate between thread and process.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
 
 10. **What is multitasking and multithreading? What are the advantage threads over process?** *[Bangladesh Competition Commission Programmer 2019 compact it 1060 (ET: DU)]*
+
+11. **Define thread cancellation, target thread. Enumerate the different RAID level.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1106-1107 (ET: AUST)]*
+
+## Process Management & Process States (10)
+
+1. **(b) What is process? Describe different states of a process.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
+
+2. **(c) Define context switch with proper example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
+
+3. **(খ) Process কী? বিভিন্ন ধরনের Process state এর কাজ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 414 (ET: N/A)]*
+
+4. **Explain the process state.** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
+
+5. **(ক) Process কী? একটি Process এর বিভিন্ন ধাপগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
+
+6. **অথবা, (ক) Process Control Block (PCB) কী? এটি একটি Process সংক্রান্ত যে যে তথ্য রাখে সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
+
+7. **Write down the name of four information stored in PCB (Process Control Block).** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
+
+8. **Operating System এর Process state diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
+
+9. **(i) Operating System এর Process State Transition Diagram আঁকুন ও ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 786 (ET: N/A)]*
+
+10. **Operating System এর ক্ষেত্রে নিম্নোক্ত Process State গুলো ব্যবহার করে State Diagram অংকন করুন। [New, ready, Wait, Run, Terminated]** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
 
 ## CPU Scheduling (6)
 

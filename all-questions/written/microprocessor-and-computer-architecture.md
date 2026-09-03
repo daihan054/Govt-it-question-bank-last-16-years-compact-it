@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 113 questions
+**Table of Contents** — 11 subtopics · 114 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,7 +11,7 @@
 | 6 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-6) | 6 |
 | 7 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-6) | 6 |
 | 8 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
-| 9 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-4) | 4 |
+| 9 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-5) | 5 |
 | 10 | [8085 Microprocessor & Edge Computing](#8085-microprocessor--edge-computing-3) | 3 |
 | 11 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-3) | 3 |
 
@@ -255,7 +255,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-## CPU Performance & Instruction Cycle (4)
+## CPU Performance & Instruction Cycle (5)
 
 1. **There was a CPU cycle math** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 400 (ET: BUET)]*
 
@@ -264,6 +264,8 @@ MOV AX, A534H এবং MOV AX, [A534H]
 3. **A program (or a program task) takes 1 billion instructions to execute on a processor running at 2 GHz. Suppose also that 50% of the instructions execute in 3 clock cycles, 30% execute in 4 clock cycles, and 20% execute in 5 clock cycles. What is the execution time for the program or task?** *[RAKUB Programmer (PO) 12.10.2021 compact it 847 (ET: N/A)]*
 
 4. **Operating system math: clock frequency 700MHz.** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
+
+5. **Computer A has 3.2GHz processing speed and it has 2.0 clock speeds in a program and at the same program Computer B has 2.4 GHz processing speed with 1.2 clock speed. Which computer will run faster and how much faster?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118-1119 (ET: BUET)]*
 
 ## 8085 Microprocessor & Edge Computing (3)
 

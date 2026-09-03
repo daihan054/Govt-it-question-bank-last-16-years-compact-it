@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 90 questions
+**Table of Contents** — 9 subtopics · 92 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,7 +8,7 @@
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-8) | 8 |
 | 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
 | 5 | [Constructors & Destructors](#constructors--destructors-5) | 5 |
-| 6 | [Output Tracing & Recursion](#output-tracing--recursion-3) | 3 |
+| 6 | [Output Tracing & Recursion](#output-tracing--recursion-5) | 5 |
 | 7 | [Exception Handling](#exception-handling-3) | 3 |
 | 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
 | 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
@@ -234,7 +234,7 @@ Public class class B extends class A {
 
 5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
 
-## Output Tracing & Recursion (3)
+## Output Tracing & Recursion (5)
 
 1. Consider the following Java program and determine the integer value printed by the execution of the main() method:
 ```java
@@ -270,6 +270,48 @@ class Test {
     }
     public static void main(String[] args) {
         System.out.println(fun(3));
+    }
+}
+```
+
+4. **Show the output following program.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1115-1116 (ET: DU)]*
+```java
+public class main {
+    public static void find_output(int n) {
+        int i, j;
+        for(i=1; i<=n; i++) {
+            for(j=n; j>0; j--) {
+                if(i==j) {
+                    System.out.print("*");
+                    break;
+                }
+                else {
+                    System.out.print("*");
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+    public static void main(String[] args) {
+        find_output(10);
+    }
+}
+```
+
+5. **What is the output of the following java code?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1117 (ET: BUET)]*
+```java
+class car {
+    void run() {
+        System.out.println("Car is running");
+    }
+}
+public class Audi extends car {
+    void run() {
+        System.out.println("Audi is running");
+    }
+    public static void main(String[] args) {
+        car b = new Audi();
+        b.run();
     }
 }
 ```
