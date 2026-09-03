@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 223 questions
+**Table of Contents** — 9 subtopics · 226 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-93) | 93 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-39) | 39 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-94) | 94 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-40) | 40 |
 | 3 | [Recursion & Functions](#recursion--functions-33) | 33 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-23) | 23 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-14) | 14 |
-| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-12) | 12 |
+| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-13) | 13 |
 | 7 | [File Handling](#file-handling-4) | 4 |
 | 8 | [Pointers](#pointers-4) | 4 |
 | 9 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs-1) | 1 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (93)
+## Basic Programs & Control Statements (94)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -361,7 +361,9 @@ for(a=1; a<=100; a++)
 
 93. **(a) Write a Java/C program to find the sum of the following series? $\frac{1}{1!} + \frac{2}{2!} + \frac{3}{3!} + \dots\dots\dots\dots + \frac{N}{N!}$** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
-## Output Tracing & Control Flow (39)
+94. **একটি ৯ ধার বিশিষ্ট বহুভুজের প্রতিটির ধার সমান। উক্ত বহুভুজের অভ্যন্তরীণ কোন ডিগ্রিতে প্রকাশের C Program লিখুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
+
+## Output Tracing & Control Flow (40)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -826,6 +828,19 @@ void main() {
 }
 ```
 
+40. **What is the output of the following program?** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
+```c
+#define x 9+2/4*3-2*4+(5-4)*3
+int main() {
+    int i;
+    int y;
+    y=6+3*3/5;
+    i=x*x+y;
+    printf("%d",i);
+    return 0;
+}
+```
+
 ## Recursion & Functions (33)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
@@ -1027,7 +1042,7 @@ int main() {
 
 14. **Write a pesudcode that takes in one positive number only and returns the factor for that number.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
-## String Manipulation & Algorithms (12)
+## String Manipulation & Algorithms (13)
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1362 (ET: BUET)]*
 
@@ -1054,6 +1069,8 @@ int main() {
    Sample Output: Class C
 
 12. **(b) Write down a C function to sort a list of strings in alphabetic order.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
+
+13. **(a) Write an algorithm to find Palindrome number.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1140 (ET: N/A)]*
 
 ## File Handling (4)
 

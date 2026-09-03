@@ -1,35 +1,35 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **2856** questions.
+Sorted by count, highest first. Total **2887** questions.
 
 ## IT questions
 
-Total: **2317** questions.
+Total: **2348** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **456** |
-| | Subnetting & IP Addressing | 97 |
-| | OSI & TCP/IP Reference Model | 46 |
-| | Networking Fundamentals & Terminology | 26 |
-| | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 19 |
+| **Computer Networks** | **— all subcategories —** | **469** |
+| | Subnetting & IP Addressing | 99 |
+| | OSI & TCP/IP Reference Model | 47 |
+| | Networking Fundamentals & Terminology | 29 |
+| | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 20 |
+| | Wireless Networks & IoT (mmWave) | 19 |
 | | Multiplexing & Bandwidth | 18 |
 | | Routing Protocols & Route Configuration | 18 |
-| | Wireless Networks & IoT (mmWave) | 17 |
-| | Networking Devices | 16 |
+| | Networking Devices | 17 |
 | | Transport Layer (TCP & UDP) | 16 |
-| | Communication System & Transmission Modes | 14 |
+| | Communication System & Transmission Modes | 15 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 14 |
 | | Error Detection & Data Communication (CRC, Throughput) | 14 |
 | | Physical Layer & Transmission Media (Cables & Wiring) | 14 |
 | | Network Topologies | 13 |
 | | IPv6 Addressing | 12 |
 | | Network Address Translation (NAT) | 12 |
-| | Physical Layer & Optical Fiber (Attenuation & Power Budget) | 11 |
+| | Physical Layer & Optical Fiber (Attenuation & Power Budget) | 12 |
 | | Digital Modulation & Signal Processing (BPSK, QPSK) | 10 |
+| | Email Architecture & Protocols (SMTP, POP3, IMAP) | 10 |
 | | Network Services (DHCP, NAT) | 10 |
-| | Email Architecture & Protocols (SMTP, POP3, IMAP) | 9 |
 | | Flow Control & Data Link Layer (Stop-and-Wait) | 9 |
 | | Application Layer & Well-Known Port Numbers | 6 |
 | | Pulse Code Modulation (PCM) & Signal Processing | 5 |
@@ -43,12 +43,12 @@ Total: **2317** questions.
 | | Line Coding & Digital Encoding | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **250** |
-| | SQL Queries | 75 |
+| **Database** | **— all subcategories —** | **253** |
+| | SQL Queries | 76 |
 | | Keys in DBMS | 24 |
 | | DBMS Architecture & Features | 22 |
 | | ER Diagram & Database Design | 22 |
-| | Normalization & Database Design | 19 |
+| | Normalization & Database Design | 20 |
 | | SQL Commands (DDL, DML, DCL, TCL) | 15 |
 | | Relational Data Model & ER Relationships | 13 |
 | | Transaction Management & ACID Properties | 13 |
@@ -57,24 +57,24 @@ Total: **2317** questions.
 | | Data Warehousing, Data Mining & Business Intelligence | 7 |
 | | PL/SQL & Database Triggers | 6 |
 | | Distributed & Parallel Databases | 5 |
-| | SQL Joins & Operations | 4 |
+| | SQL Joins & Operations | 5 |
 | | Database Design & Data Types | 3 |
 | | Database Connectivity (JDBC) | 2 |
 | | NoSQL, NewSQL & Modern Databases | 2 |
 | | Indexing in DBMS | 1 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
-| **C Programming** | **— all subcategories —** | **223** |
-| | Basic Programs & Control Statements | 93 |
-| | Output Tracing & Control Flow | 39 |
+| **C Programming** | **— all subcategories —** | **226** |
+| | Basic Programs & Control Statements | 94 |
+| | Output Tracing & Control Flow | 40 |
 | | Recursion & Functions | 33 |
 | | Operators, Data Types & Language Concepts | 23 |
 | | Flowcharts & Algorithms | 14 |
-| | String Manipulation & Algorithms | 12 |
+| | String Manipulation & Algorithms | 13 |
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **185** |
-| | Linux / Unix Commands & Administration | 44 |
+| **Operating System** | **— all subcategories —** | **186** |
+| | Linux / Unix Commands & Administration | 45 |
 | | CPU Scheduling Algorithms | 24 |
 | | Deadlock & Resource Allocation | 23 |
 | | OS Concepts & System Software | 20 |
@@ -86,13 +86,13 @@ Total: **2317** questions.
 | | File Systems & Disk Management | 6 |
 | | Process Synchronization & Concurrency | 4 |
 | | Windows & System Administration | 4 |
-| **Computer & Network Security** | **— all subcategories —** | **166** |
+| **Computer & Network Security** | **— all subcategories —** | **168** |
 | | Cryptography | 29 |
 | | Social Engineering & Cyber Attacks | 29 |
 | | Firewalls & Network Defense | 17 |
 | | Web Security Vulnerabilities | 17 |
-| | Authentication & Access Control | 15 |
-| | Malware & Security Threats | 15 |
+| | Authentication & Access Control | 16 |
+| | Malware & Security Threats | 16 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
 | | Cyber Crime & Security | 10 |
 | | Security Principles (CIA Triad) | 7 |
@@ -116,29 +116,29 @@ Total: **2317** questions.
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **133** |
+| **Computer Fundamentals** | **— all subcategories —** | **134** |
 | | Computer Fundamentals & Acronyms | 50 |
 | | ICT in Society & Governance | 23 |
 | | Hardware Components & BIOS (CMOS Battery) | 22 |
 | | Software Types & Classification | 12 |
+| | Blockchain & Emerging Technologies | 8 |
 | | Data Center Infrastructure & Power Management | 8 |
-| | Blockchain & Emerging Technologies | 7 |
 | | Server Hardware & Enterprise Systems | 5 |
 | | Quantum Computing & Emerging Technologies | 3 |
 | | Digital Banking & Financial Inclusion | 2 |
 | | User Interfaces (CLI vs GUI) | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **130** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **133** |
 | | Logic Gates & Universal Gates | 31 |
+| | Combinational Circuits (Adders, Encoders, MUX) | 22 |
 | | Number Systems & Base Conversions | 22 |
-| | Combinational Circuits (Adders, Encoders, MUX) | 20 |
 | | Karnaugh Map (K-Map) | 19 |
 | | Boolean Algebra & De Morgan’s Theorem | 17 |
 | | Sequential Circuits (Latches & Flip-Flops) | 12 |
-| | Logic Families (TTL vs CMOS) | 5 |
+| | Logic Families (TTL vs CMOS) | 6 |
 | | 2's Complement & Binary Arithmetic | 3 |
 | | Finite State Machines (FSM) | 1 |
-| **Algorithm** | **— all subcategories —** | **128** |
-| | Sorting Algorithms & Complexity | 35 |
+| **Algorithm** | **— all subcategories —** | **130** |
+| | Sorting Algorithms & Complexity | 36 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 14 |
 | | Algorithm Analysis & Asymptotic Complexity | 13 |
@@ -147,7 +147,7 @@ Total: **2317** questions.
 | | Graph Theory & Isomorphism | 7 |
 | | Greedy Algorithms (Fractional Knapsack) | 6 |
 | | Dynamic Programming | 5 |
-| | Graph Representation (Adjacency Matrix vs List) | 3 |
+| | Graph Representation (Adjacency Matrix vs List) | 4 |
 | | Divide and Conquer & Matrix Multiplication | 2 |
 | | Heap & Priority Queue | 2 |
 | | Huffman Coding & Data Compression | 1 |
@@ -164,8 +164,8 @@ Total: **2317** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **94** |
-| | OOP Concepts (Inheritance & Polymorphism) | 48 |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **95** |
+| | OOP Concepts (Inheritance & Polymorphism) | 49 |
 | | Java Programming & Methods | 13 |
 | | Class Design & Object-Oriented Modeling | 8 |
 | | Encapsulation & Access Modifiers | 7 |
@@ -183,12 +183,12 @@ Total: **2317** questions.
 | | Hashing & Hash Tables | 6 |
 | | Queue | 6 |
 | | Data Structure Fundamentals | 4 |
-| **Web Technology** | **— all subcategories —** | **60** |
-| | HTML & Web Fundamentals | 21 |
+| **Web Technology** | **— all subcategories —** | **62** |
+| | HTML & Web Fundamentals | 22 |
 | | HTTP Protocol | 10 |
 | | JavaScript & jQuery (DOM & Validation) | 10 |
+| | Full Stack & Backend Web Development | 7 |
 | | Web Services & APIs (SOAP vs REST) | 7 |
-| | Full Stack & Backend Web Development | 6 |
 | | CSS & Styling (Inline, Internal, External) | 4 |
 | | Web Security & Browser Same-Origin Policy (Iframe) | 2 |
 | **AI & Machine Learning** | **— all subcategories —** | **41** |

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 94 questions
+**Table of Contents** — 9 subtopics · 95 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-48) | 48 |
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-49) | 49 |
 | 2 | [Java Programming & Methods](#java-programming--methods-13) | 13 |
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-8) | 8 |
 | 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
@@ -17,7 +17,7 @@
 
 ---
 
-## OOP Concepts (Inheritance & Polymorphism) (48)
+## OOP Concepts (Inheritance & Polymorphism) (49)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -148,6 +148,8 @@ public class main{
 47. **Function overloading and Operator overloading বলতে কী বুঝেন? উদাহরণ দিন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1082 (ET: N/A)]*
 
 48. **(a) What is method overloading?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
+
+49. **(b) Explain Polymorphism concept of OOP language.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1140 (ET: N/A)]*
 
 ## Java Programming & Methods (13)
 

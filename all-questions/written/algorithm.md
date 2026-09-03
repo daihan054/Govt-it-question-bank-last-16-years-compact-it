@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 128 questions
+**Table of Contents** — 14 subtopics · 130 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-35) | 35 |
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-36) | 36 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-14) | 14 |
 | 4 | [Searching Algorithms](#searching-algorithms-13) | 13 |
@@ -12,7 +12,7 @@
 | 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-7) | 7 |
 | 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
 | 9 | [Dynamic Programming](#dynamic-programming-5) | 5 |
-| 10 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-3) | 3 |
+| 10 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-4) | 4 |
 | 11 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
 | 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-2) | 2 |
 | 13 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
@@ -22,7 +22,7 @@
 
 ---
 
-## Sorting Algorithms & Complexity (35)
+## Sorting Algorithms & Complexity (36)
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -103,6 +103,8 @@
 34. **Sorting the value with radix sort: 608, 5, 768, 298, 576, 975, 90, 80** *[DESCO Assistant Engineer (CSE) 2019 compact it 1117-1118 (ET: BUET)]*
 
 35. **(a) Write down the Merge sort algorithm. What is the time complexity of this algorithm?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
+
+36. **Marge sort Algorithm ব্যবহার করে নিম্নের Data গুলো sorting করুন। [3, 13, 25, 7, 15, 2, 5, 35]** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
 
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 
@@ -315,13 +317,15 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 5. **What will be the time and space complexity of the above algorithm?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
-## Graph Representation (Adjacency Matrix vs List) (3)
+## Graph Representation (Adjacency Matrix vs List) (4)
 
 1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 495 (ET: N/A)]*
 
 2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
 
 3. **(b) How a graph can be represented? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
+
+4. **নিম্নে উল্লেখিত Graph- এর Adjacency Metrix এবং Adjacency List বের করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148-1149 (ET: BUET)]*
 
 ## Heap & Priority Queue (2)
 

@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 60 questions
+**Table of Contents** — 7 subtopics · 62 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-21) | 21 |
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-22) | 22 |
 | 2 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 3 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-10) | 10 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-7) | 7 |
-| 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development-6) | 6 |
+| 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development-7) | 7 |
 | 6 | [CSS & Styling (Inline, Internal, External)](#css--styling-inline-internal-external-4) | 4 |
 | 7 | [Web Security & Browser Same-Origin Policy (Iframe)](#web-security--browser-same-origin-policy-iframe-2) | 2 |
 
@@ -15,7 +15,7 @@
 
 ---
 
-## HTML & Web Fundamentals (21)
+## HTML & Web Fundamentals (22)
 
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -76,6 +76,8 @@
 | Mr. Jhon | Computer | Printer | Modem | HP |
 |  |  |  |  | HP |
 |  |  |  |  | ASUS |
+
+22. **(b) Explain `<div>`.............`</div>` tag of HTML with an example.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143-1144 (ET: N/A)]*
 
 ## HTTP Protocol (10)
 
@@ -153,7 +155,7 @@
 
 7. **What is API?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
 
-## Full Stack & Backend Web Development (6)
+## Full Stack & Backend Web Development (7)
 
 1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 320 (ET: N/A)]*
 
@@ -166,6 +168,8 @@
 5. **Apache কোন ধরনের Server এক কথায় লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
 
 6. **Discuss the necessary of using application framework in web application development.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1053 (ET: BUET)]*
+
+7. **(b) Draw three tier architecture of web technology.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1142 (ET: N/A)]*
 
 ## CSS & Styling (Inline, Internal, External) (4)
 

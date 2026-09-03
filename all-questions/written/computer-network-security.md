@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 166 questions
+**Table of Contents** — 14 subtopics · 168 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,8 +7,8 @@
 | 2 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-29) | 29 |
 | 3 | [Web Security Vulnerabilities](#web-security-vulnerabilities-17) | 17 |
 | 4 | [Firewalls & Network Defense](#firewalls--network-defense-17) | 17 |
-| 5 | [Authentication & Access Control](#authentication--access-control-15) | 15 |
-| 6 | [Malware & Security Threats](#malware--security-threats-15) | 15 |
+| 5 | [Authentication & Access Control](#authentication--access-control-16) | 16 |
+| 6 | [Malware & Security Threats](#malware--security-threats-16) | 16 |
 | 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
 | 8 | [Cyber Crime & Security](#cyber-crime--security-10) | 10 |
 | 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad-7) | 7 |
@@ -221,7 +221,7 @@
 
 17. **What is proxy server? Explain it.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1123 (ET: BREB)]*
 
-## Authentication & Access Control (15)
+## Authentication & Access Control (16)
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -253,7 +253,9 @@
 
 15. **১৮. পাসওয়ার্ড সুরক্ষা জন্য যে পদ্ধতি ব্যবহার করা হয় তার নাম কী?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-## Malware & Security Threats (15)
+16. **What do you mean by two factor authentication? Explain with example.** *[BTRC Assistant Director (Technical) 2019 compact it 1147-1148 (ET: N/A)]*
+
+## Malware & Security Threats (16)
 
 1. Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -284,6 +286,8 @@
 14. **দুটি এন্টিভাইরাস সফটওয়্যার এর নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
 15. **কম্পিউটার ভাইরাস, ওয়ার্ম এবং ট্রোজান হর্স এর মধ্যে পার্থক্য লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
+
+16. **Write down possible threats to a computer systems and how to provide security?** *[BTRC Assistant Director (Technical) 2019 compact it 1146 (ET: N/A)]*
 
 ## Security Protocols (SSL/TLS, HTTPS) (12)
 

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 185 questions
+**Table of Contents** — 12 subtopics · 186 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-44) | 44 |
+| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-45) | 45 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
 | 4 | [OS Concepts & System Software](#os-concepts--system-software-20) | 20 |
@@ -20,7 +20,7 @@
 
 ---
 
-## Linux / Unix Commands & Administration (44)
+## Linux / Unix Commands & Administration (45)
 
 1. **Write Linux command:** *[Islami Bank PLC Senior Officer (Network/System) 14.03.2025 compact it 1331 (ET: BUET)]*
    (a) Give a file Read Write and Execute permission.
@@ -134,6 +134,8 @@
    iv. Find the mac address using command
 
 44. **Write Linux command: (i) File permission (ii) Remove file or folder (iii) Show IP address** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
+
+45. **Linux এ file তৈরির জন্য কি কি Command ব্যবহৃত হয়? পূর্ণ Command লিখ।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
 ## CPU Scheduling Algorithms (24)
 

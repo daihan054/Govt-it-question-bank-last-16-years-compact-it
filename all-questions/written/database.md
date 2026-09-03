@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 250 questions
+**Table of Contents** — 19 subtopics · 253 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-75) | 75 |
+| 1 | [SQL Queries](#sql-queries-76) | 76 |
 | 2 | [Keys in DBMS](#keys-in-dbms-24) | 24 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-22) | 22 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-22) | 22 |
-| 5 | [Normalization & Database Design](#normalization--database-design-19) | 19 |
+| 5 | [Normalization & Database Design](#normalization--database-design-20) | 20 |
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-15) | 15 |
 | 7 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
 | 8 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-13) | 13 |
@@ -16,7 +16,7 @@
 | 11 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-7) | 7 |
 | 12 | [PL/SQL & Database Triggers](#plsql--database-triggers-6) | 6 |
 | 13 | [Distributed & Parallel Databases](#distributed--parallel-databases-5) | 5 |
-| 14 | [SQL Joins & Operations](#sql-joins--operations-4) | 4 |
+| 14 | [SQL Joins & Operations](#sql-joins--operations-5) | 5 |
 | 15 | [Database Design & Data Types](#database-design--data-types-3) | 3 |
 | 16 | [NoSQL, NewSQL & Modern Databases](#nosql-newsql--modern-databases-2) | 2 |
 | 17 | [Database Connectivity (JDBC)](#database-connectivity-jdbc-2) | 2 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (75)
+## SQL Queries (76)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -347,6 +347,8 @@ SELECT count (*) FROM (
 
 75. **Given two tables are employee (id, name, salary, dept_id) and department (dept_id, dept_name), write SQL to find MAX salary and average salay of specific department.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
+76. **একটি Branch Employee Table; Employee (ID, name, salary); এখন নতুন sub branch তৈরি করার যুক্তিক command লিখুন যার branch name একই হবে এবং Employee এর min ও avg salary বের করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
+
 ## Keys in DBMS (24)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
@@ -498,7 +500,7 @@ SELECT count (*) FROM (
 
 22. **(ক) Database এর ক্ষেত্রে E-R Diagram বলতে কী বোঝায়? একটি উদাহরণের মাধ্যমে ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
 
-## Normalization & Database Design (19)
+## Normalization & Database Design (20)
 
 1. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -552,6 +554,8 @@ SELECT count (*) FROM (
 18. **(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 953-954 (ET: N/A)]*
 
 19. **What is normalization? Explain composite key with example.** *[Bangladesh Television Assistant Programmer 2019 compact it 1063 (ET: N/A)]*
+
+20. **(a) What do you mean by Normalization in RDBMS? Explain with an example.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
 
 ## SQL Commands (DDL, DML, DCL, TCL) (15)
 
@@ -746,7 +750,7 @@ SELECT count (*) FROM (
 
 5. **Explain the concept distributed DBMS. What are the features of DBMS?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1054 (ET: BUET)]*
 
-## SQL Joins & Operations (4)
+## SQL Joins & Operations (5)
 
 1. **What are the different types of join in SQL?** *[DESCO Assistant Engineer 20.05.2023 compact it 580 (ET: DESCO)]*
 
@@ -755,6 +759,8 @@ SELECT count (*) FROM (
 3. **Which join is used for including not matching all records with output?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
 4. **What is inner join? Explain with syntax and example.** *[Bangladesh Television Assistant Programmer 2019 compact it 1065 (ET: N/A)]*
+
+5. **(b) Explain JOIN and INNER-JOIN procedure.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
 
 ## Database Design & Data Types (3)
 

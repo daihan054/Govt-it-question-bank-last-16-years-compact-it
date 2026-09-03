@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 133 questions
+**Table of Contents** — 10 subtopics · 134 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,7 +8,7 @@
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-22) | 22 |
 | 4 | [Software Types & Classification](#software-types--classification-12) | 12 |
 | 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-8) | 8 |
-| 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-7) | 7 |
+| 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-8) | 8 |
 | 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
 | 8 | [Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies-3) | 3 |
 | 9 | [Digital Banking & Financial Inclusion](#digital-banking--financial-inclusion-2) | 2 |
@@ -264,7 +264,7 @@
 
 8. **Write down the element of data center.** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1125 (ET: BREB)]*
 
-## Blockchain & Emerging Technologies (7)
+## Blockchain & Emerging Technologies (8)
 
 1. **What is Blockchain technology? How it works?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 324 (ET: BIBM)]*
 
@@ -279,6 +279,12 @@
 6. **(a) Write short note on (i) Blockchain technology (ii) Cloud Computing** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
 7. **Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 696 (ET: N/A)]*
+
+8. **Write short note on the folloing topics** *[BPSC Assistant Programmer (ICT) 2019 compact it 1144-1145 (ET: N/A)]*
+   i) AI
+   ii) IoT
+   iii) Big data
+   iv) Robotics
 
 ## Server Hardware & Enterprise Systems (5)
 

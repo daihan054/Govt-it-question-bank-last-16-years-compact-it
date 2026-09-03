@@ -1,15 +1,15 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 130 questions
+**Table of Contents** — 9 subtopics · 133 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-31) | 31 |
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-22) | 22 |
-| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-20) | 20 |
+| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-22) | 22 |
 | 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-19) | 19 |
 | 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-17) | 17 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-12) | 12 |
-| 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-5) | 5 |
+| 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-6) | 6 |
 | 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-3) | 3 |
 | 9 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
 
@@ -130,7 +130,7 @@
 
 22. **(b) Solve the problem: $3.5_{10} + 2.4_8 + 1A.7_{16} = (?)_{16}$** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
 
-## Combinational Circuits (Adders, Encoders, MUX) (20)
+## Combinational Circuits (Adders, Encoders, MUX) (22)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -183,6 +183,10 @@
 19. **Half adder এর সাহায্যে Full adder বাস্তবায়ন করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
 20. **(খ) Multiplexer কি? চিত্রসহ একটি Multiplexer এর গঠন ও কাজ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
+
+21. **দুটি 1-bit full adder এর মাধ্যমে 2-bit full adder তৈরি করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
+
+22. **চিত্রে প্রদর্শিত 7 segment display দেওয়া আছে এখন 7 ও 2 display এর জন্য কোন LED High হবে?** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
 ## Karnaugh Map (K-Map) (19)
 
@@ -289,7 +293,7 @@
 
 12. **(c) Draw the circuit diagram of a mod-10 asynchronous ripple up counter and explain its operation.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
 
-## Logic Families (TTL vs CMOS) (5)
+## Logic Families (TTL vs CMOS) (6)
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1351 (ET: N/A)]*
  * **(i) Speed**
@@ -303,6 +307,8 @@
 4. **(c) What is fan-in and fan out?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
 
 5. **Sources of transient fault and permanent fault in a digital system consists of hardware and software? Example based on Hardware and software.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
+
+6. **What is IC? Advantages of IC over discrete component circuit. Why do IC's need small power for their operation?** *[BTRC Assistant Director (Technical) 2019 compact it 1147 (ET: N/A)]*
 
 ## 2's Complement & Binary Arithmetic (3)
 
