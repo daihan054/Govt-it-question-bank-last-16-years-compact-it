@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 43 / 243 done**  ·  **Questions: 472 answered, 15 skipped, 3168 total**
+**Subtopics: 44 / 243 done**  ·  **Questions: 479 answered, 15 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -11,7 +11,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `bangla.md` | General | 0 / 6 | 0 | 0 | 123 |
 | `c-programming.md` | IT | 9 / 9 | 260 | 10 | 270 |
 | `cloud-computing.md` | IT | 9 / 9 | 38 | 0 | 38 |
-| `compiler-and-toc.md` | IT | 0 / 5 | 0 | 0 | 25 |
+| `compiler-and-toc.md` | IT | 1 / 5 | 7 | 0 | 25 |
 | `computer-fundamental.md` | IT | 0 / 10 | 0 | 0 | 153 |
 | `computer-network-security.md` | IT | 0 / 14 | 0 | 0 | 184 |
 | `computer-networks.md` | IT | 0 / 33 | 2 | 0 | 507 |
