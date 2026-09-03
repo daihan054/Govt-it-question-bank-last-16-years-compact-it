@@ -23,71 +23,81 @@
 
 1. **What is Artificial Intelligence?** *[Mongla Port Authority Assistant Programmer 2023 compact it 573 (ET: N/A)]*
 
-   Answer: Artificial Intelligence (AI) is the branch of computer science that builds machines able to do tasks that normally need human intelligence — learning, reasoning, understanding language and taking decisions.
+   Answer: Artificial Intelligence (AI) is the technology that lets machines perform tasks which normally need human intelligence — learning, reasoning, understanding language and making decisions.
 
-   - An AI system takes input from sensors, processes it with an algorithm or a trained model, and produces an action or an answer.
-   - Main branches: machine learning, natural language processing (NLP), computer vision, robotics, expert systems.
-   - Two approaches: symbolic AI uses rules written by people; machine learning finds the rules itself from data.
+   How an AI system works
+   - Data collection — a large dataset of images, text or sensor readings is gathered.
+   - Processing and learning — algorithms find patterns inside that data.
+   - Model training — the system adjusts its internal settings to improve its predictions.
+   - Decision making — the learned pattern is applied to a new, unseen situation.
+   - Feedback — results are checked and the model is refined.
 
    Types by capability
-   - Narrow AI (ANI) — does one fixed task, like a spam filter or face unlock. All AI today is of this type.
-   - General AI (AGI) — can do any intellectual task a human can. Still research work.
-   - Super AI — ability beyond humans. Only a theory now.
+   - Narrow AI (Weak AI) — does one fixed task, such as Siri, Alexa or a Netflix recommender. All AI in use today is of this kind.
+   - General AI (Strong AI) — could do any intellectual task a human can. Still theoretical.
+   - Super AI — would exceed human ability in every field. Hypothetical.
 
-   - Uses: search engine ranking, chatbots, fraud detection in banks, medical image diagnosis, self-driving cars.
+   Types by functionality
+   - Reactive machines, Limited memory, Theory of mind, Self-aware AI.
+
+   - Main branches: machine learning, natural language processing (NLP), computer vision, robotics, expert systems, generative AI.
+   - Applications: healthcare diagnosis, bank fraud detection, retail recommendation, chatbots, predictive maintenance in factories.
 
 2. **An artificial intelligence is an agent is an entity that continuously revious its enviornment.....** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 449 (ET: BUET)]*
 
 3. **Write PEAS for (a) Auto taxi (b) Automatic clinical test.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
 
-   Answer: PEAS is the standard way to describe the task environment of a rational agent. It stands for Performance measure, Environment, Actuators and Sensors.
+   Answer: PEAS is the standard way to describe the task environment of a rational agent. It stands for Performance measure, Environment, Actuators and Sensors — set these four and the agent's job is fully specified.
 
    | PEAS | (a) Auto taxi | (b) Automatic clinical test |
    |---|---|---|
-   | Performance measure | Safe trip, fast, legal, comfortable ride, minimum fuel, maximum profit | Correct diagnosis, healthy patient, low test cost, fast report |
-   | Environment | Roads, traffic, pedestrians, traffic signals, weather, passengers | Patient, blood/urine sample, hospital lab, doctor, hospital database |
-   | Actuators | Steering, accelerator, brake, gear, indicator, horn, display screen | Test report display, alert to doctor, sample handling arm, printer |
-   | Sensors | Camera, LIDAR, GPS, speedometer, odometer, engine sensor, microphone | Blood analyser, temperature sensor, keyboard input of symptoms, patient history |
+   | Performance measure | Safe, fast, legal and comfortable trip; maximise profit | Healthy patient, correct diagnosis, minimum cost, no lawsuits |
+   | Environment | Roads, other traffic, pedestrians, customers, weather | Patient, hospital, staff, lab samples |
+   | Actuators | Steering, accelerator, brake, gear, signal, horn, display | Screen display of questions, tests, diagnoses, treatments, referrals |
+   | Sensors | Camera, sonar/LIDAR, speedometer, GPS, odometer, engine sensor, keyboard | Entry of symptoms, lab findings, patient's answers, test analyser readings |
 
-   - Performance measure says what "success" means for the agent.
-   - Environment is the world the agent works in.
-   - Actuators are the parts it acts with; sensors are the parts it perceives with.
+   - Performance measure defines what "success" means, so it is fixed before anything else.
+   - Environment is the world the agent operates in — for the taxi it is partially observable, stochastic and continuous.
+   - Actuators are how the agent acts; sensors are how it perceives.
 
 4. **Intelligence can not be measured only by intelligence test because it is related to other subjects. (True or False)** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
    Answer: True.
 
-   - An IQ test checks only a few skills such as logic, pattern finding and memory. Intelligence also covers creativity, emotional skill, language and practical problem solving, so one test cannot measure all of it.
+   - An IQ test measures only a few abilities — logic, pattern recognition and memory. Intelligence also includes creativity, emotional intelligence, language skill and practical problem solving, so a single test cannot capture all of it.
 
 5. **Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)], [BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
    Answer: False.
 
    - Machine learning is a subset of Artificial Intelligence, not of cloud computing.
-   - Correct order: AI > Machine Learning > Deep Learning. Cloud computing is only a platform used to train and run ML models; it does not contain ML.
+   - The correct nesting is `AI ⊃ Machine Learning ⊃ Deep Learning`.
+   - Cloud computing is only a delivery platform. It supplies the GPUs and storage used to train and serve ML models, but ML does not sit inside it.
 
 6. **What is the father of AI?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-   Answer: John McCarthy is called the Father of Artificial Intelligence.
+   Answer: John McCarthy is known as the Father of Artificial Intelligence.
 
-   - He coined the term "Artificial Intelligence" and organised the Dartmouth Conference of 1956, which started AI as a subject. He also created the LISP programming language.
+   - He coined the term "Artificial Intelligence" in the 1955 proposal for the Dartmouth Summer Research Project, held in 1956 — the event that founded AI as a field.
+   - He also created the LISP programming language (1958), which became the standard language of AI research for decades.
 
 7. **(i) ‘Knowledge’ কী? Human Knowledge কে Computer এ প্রকাশ করার একটি flow diagram দেখান।** *[BPSC Assistant Network Engineer 2020 compact it 952 (ET: N/A)]*
 
-   Answer: Knowledge is processed information together with the rules and relations that let a system reason and take a decision. Data is raw, information is data with meaning, and knowledge is information a system can act on.
+   Answer: Knowledge is processed information along with the rules and relations that let a system reason and take a decision. Data is raw, information is data with meaning, and knowledge is information a system can actually act upon.
 
    Types of knowledge
    - Declarative — facts, "what is true" (Dhaka is the capital of Bangladesh).
-   - Procedural — "how to do" a task (steps to withdraw money).
-   - Heuristic — rule of thumb from experience.
-   - Meta knowledge — knowledge about knowledge.
+   - Procedural — "how to do" a task (the steps of a sorting algorithm).
+   - Meta knowledge — knowledge about knowledge, such as which rule to apply first.
+   - Heuristic — rule of thumb built from an expert's experience.
+   - Structural — how concepts relate to each other (a car is a vehicle).
 
-   Putting human knowledge into a computer is called knowledge representation. It is done with IF-THEN rules, semantic networks, frames, ontologies or predicate logic.
+   Storing human knowledge in a machine is called knowledge representation. The four standard techniques are logical representation (predicate logic), semantic networks (nodes and arcs), frames (slots and values) and production rules (IF-THEN).
 
    ```mermaid
    flowchart TD
        A[Human Expert Knowledge] --> B[Knowledge Acquisition]
-       B --> C[Knowledge Representation<br/>rules, frames, logic]
+       B --> C[Knowledge Representation<br/>logic, semantic net, frame, rules]
        C --> D[(Knowledge Base)]
        D --> E[Inference Engine]
        U[User Query] --> E
@@ -96,13 +106,14 @@
 
    - Knowledge acquisition collects facts and rules from the expert or from documents.
    - Knowledge representation converts them into a machine-readable form.
-   - The knowledge base stores them; the inference engine applies the rules to a user query and produces the answer.
+   - The knowledge base stores them, and the inference engine applies the rules to a user query to produce the answer.
 
 8. **Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?** *[Sadharan Bima Corporation Programmer/ AP/AME 2020 compact it 1002 (ET: DU)]*
 
    Answer: Alan Turing.
 
-   - He broke the German Enigma cipher at Bletchley Park during World War II. His work on the Turing machine and the Turing Test became a foundation of computer science and AI.
+   - He led the team at Bletchley Park that broke the German Enigma cipher during World War II, building the electro-mechanical machine called the Bombe.
+   - His Turing machine model and the Turing Test (1950) became a foundation of computer science and AI. He is called the Father of Computer Science, while John McCarthy is called the Father of AI.
 
 ## Deep Learning & Neural Networks (ANN, CNN, RNN) (8)
 
