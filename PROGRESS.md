@@ -2,12 +2,12 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 11 / 243 done**  ·  **Questions: 44 answered, 1 skipped, 3168 total**
+**Subtopics: 12 / 243 done**  ·  **Questions: 80 answered, 1 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
 | `ai-and-ml.md` | IT | 11 / 11 | 42 | 1 | 43 |
-| `algorithm.md` | IT | 0 / 14 | 0 | 0 | 134 |
+| `algorithm.md` | IT | 1 / 14 | 36 | 0 | 134 |
 | `bangla.md` | General | 0 / 6 | 0 | 0 | 123 |
 | `c-programming.md` | IT | 0 / 9 | 0 | 0 | 270 |
 | `cloud-computing.md` | IT | 0 / 9 | 0 | 0 | 38 |
