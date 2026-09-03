@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 487 questions
+**Table of Contents** — 33 subtopics · 488 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-103) | 103 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-104) | 104 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-50) | 50 |
 | 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-29) | 29 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-21) | 21 |
@@ -41,7 +41,7 @@
 
 ---
 
-## Subnetting & IP Addressing (103)
+## Subnetting & IP Addressing (104)
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
@@ -289,6 +289,8 @@ ii) 211.10.15.4
 102. **Find subnet mask and number of host on each subnet mask at a class B IP address is 172.16.2.1/23.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
 
 103. **Find Network Address, Broadcast Address, Net mask, valid host of the IP address is: 192.16.13.0/30** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1176-1177 (ET: N/A)]*
+
+104. **Given an IP address is 240.133.10.20/8 Find out network address, number of host and subnet mask.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1192 (ET: N/A)]*
 
 ## OSI & TCP/IP Reference Model (50)
 

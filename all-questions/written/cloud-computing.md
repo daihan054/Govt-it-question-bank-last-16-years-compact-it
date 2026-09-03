@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 36 questions
+**Table of Contents** — 9 subtopics · 37 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Cloud Service Models](#cloud-service-models-12) | 12 |
+| 1 | [Cloud Service Models](#cloud-service-models-13) | 13 |
 | 2 | [Virtualization & Containers (VM vs Container)](#virtualization--containers-vm-vs-container-7) | 7 |
 | 3 | [Cloud Storage & Fundamentals](#cloud-storage--fundamentals-6) | 6 |
 | 4 | [Cluster, Grid & Distributed Computing](#cluster-grid--distributed-computing-4) | 4 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Cloud Service Models (12)
+## Cloud Service Models (13)
 
 1. A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service. [SO IT 25-07-2026]
 
@@ -47,6 +47,8 @@
 11. **Write the three basic function of cloud services?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
 12. **ক্লাউড কম্পিউটিং এর সুবিধা ও অসুবিধা লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+13. **What is cloud computing? Mention five advantages threat of cloud computing. Describe IaaS, PaaS and SaaS.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1196 (ET: N/A)]*
 
 ## Virtualization & Containers (VM vs Container) (7)
 

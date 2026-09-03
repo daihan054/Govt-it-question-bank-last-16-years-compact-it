@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 242 questions
+**Table of Contents** — 9 subtopics · 245 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-100) | 100 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-46) | 46 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-101) | 101 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-47) | 47 |
 | 3 | [Recursion & Functions](#recursion--functions-36) | 36 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-23) | 23 |
-| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-15) | 15 |
+| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-16) | 16 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-13) | 13 |
 | 7 | [File Handling](#file-handling-4) | 4 |
 | 8 | [Pointers](#pointers-4) | 4 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (100)
+## Basic Programs & Control Statements (101)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -382,7 +382,9 @@ for(a=1; a<=100; a++)
 1
 ```
 
-## Output Tracing & Control Flow (46)
+101. **Write a c program to verify a perfect number. Perfect number is a positive integer which is equal to the sum of its proper positive divisors.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190 (ET: N/A)]*
+
+## Output Tracing & Control Flow (47)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -938,6 +940,17 @@ int main() {
 }
 ```
 
+47. **What will be the output of following program?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190 (ET: N/A)]*
+```c
+#include <stdio.h>
+int main() {
+    int i=-1, j=-1, k=0, l=2, m;
+    m= i++ && j++ && k++ || l++;
+    printf("%d %d %d %d %d", i, j, k, l, m);
+    return 0;
+}
+```
+
 ## Recursion & Functions (36)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
@@ -1115,7 +1128,7 @@ int main() {
 
 23. **(c) Is it possible to convert all if-else code into switch code block? Give an example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
 
-## Flowcharts & Algorithms (15)
+## Flowcharts & Algorithms (16)
 
 1. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -1152,6 +1165,8 @@ int main() {
 | Array | 5 | {1,5}, {7,-1} |
 | Summation value: | 1 7 -1 5 -7 |  |
 |  | 6 |  |
+
+16. **Draw flowchart to input five positive numbers and sort them is ascending order.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1199 (ET: N/A)]*
 
 ## String Manipulation & Algorithms (13)
 

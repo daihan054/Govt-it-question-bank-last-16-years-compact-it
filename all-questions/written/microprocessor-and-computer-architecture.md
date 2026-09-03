@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 120 questions
+**Table of Contents** — 11 subtopics · 121 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-29) | 29 |
 | 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-25) | 25 |
-| 3 | [RAID Architecture & Storage](#raid-architecture--storage-14) | 14 |
+| 3 | [RAID Architecture & Storage](#raid-architecture--storage-15) | 15 |
 | 4 | [Cache Memory](#cache-memory-12) | 12 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
 | 6 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-6) | 6 |
@@ -139,7 +139,7 @@
 
 25. **Write the Memory faster access time memory in top and lowest access time memory is below from the following memory: [Cache Memory, Register Memory, Main Memory, Magnetic Tapes and Magnetic Disks.]** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
 
-## RAID Architecture & Storage (14)
+## RAID Architecture & Storage (15)
 
 1. **Which RAID level is best and why?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -168,6 +168,8 @@
 13. **Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
 14. **What is RAID level? Write down of RAID level 0, level 1 and level 5?** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159 (ET: BUET)]*
+
+15. **Describe RAID level.** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
 
 ## Cache Memory (12)
 

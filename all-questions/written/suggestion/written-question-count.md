@@ -1,16 +1,16 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **2998** questions.
+Sorted by count, highest first. Total **3017** questions.
 
 ## IT questions
 
-Total: **2454** questions.
+Total: **2473** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **487** |
-| | Subnetting & IP Addressing | 103 |
+| **Computer Networks** | **— all subcategories —** | **488** |
+| | Subnetting & IP Addressing | 104 |
 | | OSI & TCP/IP Reference Model | 50 |
 | | Networking Fundamentals & Terminology | 29 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 21 |
@@ -43,10 +43,10 @@ Total: **2454** questions.
 | | Line Coding & Digital Encoding | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **268** |
+| **Database** | **— all subcategories —** | **271** |
 | | SQL Queries | 81 |
 | | Keys in DBMS | 28 |
-| | ER Diagram & Database Design | 24 |
+| | ER Diagram & Database Design | 25 |
 | | DBMS Architecture & Features | 23 |
 | | Normalization & Database Design | 21 |
 | | SQL Commands (DDL, DML, DCL, TCL) | 16 |
@@ -55,20 +55,20 @@ Total: **2454** questions.
 | | Data Warehousing, Data Mining & Business Intelligence | 8 |
 | | Database Backup & Disaster Recovery | 8 |
 | | Indexing & Query Optimization (B-Tree, B+ Tree) | 8 |
-| | PL/SQL & Database Triggers | 6 |
+| | PL/SQL & Database Triggers | 7 |
+| | SQL Joins & Operations | 6 |
 | | Distributed & Parallel Databases | 5 |
-| | SQL Joins & Operations | 5 |
 | | Database Design & Data Types | 3 |
 | | Database Connectivity (JDBC) | 2 |
 | | NoSQL, NewSQL & Modern Databases | 2 |
 | | Indexing in DBMS | 1 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
-| **C Programming** | **— all subcategories —** | **242** |
-| | Basic Programs & Control Statements | 100 |
-| | Output Tracing & Control Flow | 46 |
+| **C Programming** | **— all subcategories —** | **245** |
+| | Basic Programs & Control Statements | 101 |
+| | Output Tracing & Control Flow | 47 |
 | | Recursion & Functions | 36 |
 | | Operators, Data Types & Language Concepts | 23 |
-| | Flowcharts & Algorithms | 15 |
+| | Flowcharts & Algorithms | 16 |
 | | String Manipulation & Algorithms | 13 |
 | | File Handling | 4 |
 | | Pointers | 4 |
@@ -86,11 +86,11 @@ Total: **2454** questions.
 | | File Systems & Disk Management | 6 |
 | | Process Synchronization & Concurrency | 4 |
 | | Windows & System Administration | 4 |
-| **Computer & Network Security** | **— all subcategories —** | **173** |
+| **Computer & Network Security** | **— all subcategories —** | **174** |
 | | Social Engineering & Cyber Attacks | 30 |
 | | Cryptography | 29 |
 | | Firewalls & Network Defense | 19 |
-| | Malware & Security Threats | 17 |
+| | Malware & Security Threats | 18 |
 | | Web Security Vulnerabilities | 17 |
 | | Authentication & Access Control | 16 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
@@ -127,13 +127,13 @@ Total: **2454** questions.
 | | Quantum Computing & Emerging Technologies | 3 |
 | | Digital Banking & Financial Inclusion | 2 |
 | | User Interfaces (CLI vs GUI) | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **139** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **141** |
 | | Logic Gates & Universal Gates | 32 |
 | | Number Systems & Base Conversions | 23 |
 | | Combinational Circuits (Adders, Encoders, MUX) | 22 |
 | | Karnaugh Map (K-Map) | 19 |
-| | Boolean Algebra & De Morgan’s Theorem | 17 |
-| | Sequential Circuits (Latches & Flip-Flops) | 15 |
+| | Boolean Algebra & De Morgan’s Theorem | 18 |
+| | Sequential Circuits (Latches & Flip-Flops) | 16 |
 | | Logic Families (TTL vs CMOS) | 6 |
 | | 2's Complement & Binary Arithmetic | 4 |
 | | Finite State Machines (FSM) | 1 |
@@ -152,10 +152,10 @@ Total: **2454** questions.
 | | Heap & Priority Queue | 2 |
 | | Huffman Coding & Data Compression | 1 |
 | | NP-Completeness & Complexity Reduction | 1 |
-| **Microprocessor & Computer Architecture** | **— all subcategories —** | **120** |
+| **Microprocessor & Computer Architecture** | **— all subcategories —** | **121** |
 | | Microprocessor Architecture & Functions | 29 |
 | | Memory Hierarchy & Storage | 25 |
-| | RAID Architecture & Storage | 14 |
+| | RAID Architecture & Storage | 15 |
 | | Cache Memory | 12 |
 | | Secondary Storage (HDD vs SSD) | 10 |
 | | Assembly Language & Addressing Modes | 6 |
@@ -164,13 +164,13 @@ Total: **2454** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **105** |
-| | OOP Concepts (Inheritance & Polymorphism) | 51 |
-| | Java Programming & Methods | 15 |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **112** |
+| | OOP Concepts (Inheritance & Polymorphism) | 52 |
+| | Java Programming & Methods | 17 |
+| | Output Tracing & Recursion | 10 |
 | | Class Design & Object-Oriented Modeling | 9 |
 | | Constructors & Destructors | 8 |
 | | Encapsulation & Access Modifiers | 7 |
-| | Output Tracing & Recursion | 6 |
 | | Exception Handling | 4 |
 | | C++ OOP Concepts & Friend Functions | 3 |
 | | Interfaces & Abstract Classes | 2 |
@@ -213,8 +213,8 @@ Total: **2454** questions.
 | | Operational Amplifiers (Op-Amp) | 2 |
 | | Sensor Circuits & Automated Control Systems | 2 |
 | | Electrical Machines (Motors & Alternators) | 1 |
-| **Cloud Computing** | **— all subcategories —** | **36** |
-| | Cloud Service Models | 12 |
+| **Cloud Computing** | **— all subcategories —** | **37** |
+| | Cloud Service Models | 13 |
 | | Virtualization & Containers (VM vs Container) | 7 |
 | | Cloud Storage & Fundamentals | 6 |
 | | Cluster, Grid & Distributed Computing | 4 |
