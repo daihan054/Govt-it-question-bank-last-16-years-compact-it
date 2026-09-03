@@ -512,11 +512,66 @@
 
 1. **Imagine a government agency is developing an AI-based citizen service chatbot that can automatically generate responses, summarize documents, and provide policy information to citizens. Explain how Generative AI can be used to power such a system, and how Explainable AI (XAI) techniques can ensure that its responses are transparent, reliable, and accountable.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1428 (ET: E-Zone)]*
 
+   Answer:
+
+   (a) How Generative AI powers the chatbot
+   - A Large Language Model (LLM) trained on text can write a fresh reply for each citizen question instead of picking from fixed templates.
+   - Response generation — the model understands the question in Bangla or English and answers in natural language.
+   - Document summarization — long circulars, gazettes and policy papers are compressed into short points.
+   - RAG (Retrieval Augmented Generation) — before answering, the system searches the agency's own approved documents and passes them to the model, so the answer stays inside official policy and hallucination drops.
+   - Fine-tuning on the agency's past queries teaches it the right tone and the local terms.
+   - Multi-turn memory lets a citizen ask follow-up questions in the same conversation.
+
+   (b) How XAI keeps it transparent and accountable
+   - Source citation — every answer shows which circular or clause it came from, so the citizen can verify it.
+   - Attention or attribution methods (LIME, SHAP) show which input words pushed the model towards its answer.
+   - Confidence score — a low-confidence answer is passed to a human officer instead of being sent out.
+   - Audit log — question, retrieved documents, generated answer and model version are all stored for later review.
+   - Human-in-the-loop for sensitive matters such as tax, legal or financial advice.
+   - Bias and fairness testing before release, plus a feedback button so wrong answers are reported and corrected.
+
 2. **b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1346 (ET: N/A)]*
+
+   Answer:
+
+   Generative AI (GAI)
+   - AI that creates new content — text, image, audio, video or code — instead of only classifying or predicting.
+   - It learns the pattern and distribution of the training data, then produces new samples that follow the same pattern.
+   - Main model families: GAN (Generative Adversarial Network), VAE (Variational Autoencoder), Diffusion models, Transformers.
+   - Examples: ChatGPT for text, DALL-E and Midjourney for images, GitHub Copilot for code.
+
+   Large Language Models (LLMs)
+   - A type of generative AI built for language, trained on a very large text corpus with billions of parameters.
+   - Built on the Transformer architecture, which uses a self-attention mechanism to weigh the importance of every word against the others.
+   - Trained by next-token prediction — guess the next word again and again over huge text.
+   - Abilities: answering, summarizing, translating, writing code, reasoning over text.
+   - Examples: GPT, Claude, Gemini, LLaMA.
+   - Limitations: can hallucinate false facts, carries bias from training data, has a knowledge cut-off date, and training costs are very high.
 
 3. **LLM stands for __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: Large Language Model.
+
 4. **What is ChatGPT? Write down the Pros and cons of ChatGPT.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
+
+   Answer: ChatGPT is a conversational AI chatbot made by OpenAI. It is built on the GPT (Generative Pre-trained Transformer) large language model and answers questions in natural language.
+
+   - It is pre-trained on a very large text corpus, then refined with RLHF (Reinforcement Learning from Human Feedback) so the replies stay helpful and safe.
+   - It keeps the context of a conversation, so follow-up questions work.
+
+   Pros
+   - Instant answers, available all day, in many languages.
+   - Helps with writing, summarizing, translation, coding and debugging.
+   - Explains a hard topic in simple words, useful for learning.
+   - Cuts cost and time in customer support and routine drafting work.
+
+   Cons
+   - Can hallucinate — states wrong facts with full confidence.
+   - Knowledge has a cut-off date, so recent events may be missing.
+   - Carries bias present in the training data.
+   - Privacy risk if users paste confidential or personal data.
+   - Encourages over-dependence and can be misused for plagiarism or exam cheating.
+   - Does not truly understand meaning; it predicts likely text.
 
 ## Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)
 
