@@ -1315,24 +1315,24 @@
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
 
-   Answer: I would select the A* (A-star) algorithm for a pathfinding robot. If the map has no useful heuristic, Dijkstra's algorithm is the fallback.
+   Answer: I would select the A* (A-star) algorithm for a pathfinding robot. If the map offers no useful heuristic, Dijkstra's algorithm is the fallback.
 
    Why A*
    - It is an informed search — it uses the known goal position as a guide, so it expands far fewer cells than Dijkstra.
    - `f(n) = g(n) + h(n)`, where `g(n)` is the cost already travelled and `h(n)` is the estimated cost still to go (straight-line or Manhattan distance).
-   - It is optimal as long as the heuristic never overestimates (an admissible heuristic).
-   - It handles obstacles and different terrain costs naturally.
+   - It is optimal as long as the heuristic never overestimates, that is, as long as it is admissible.
+   - It handles obstacles and varying terrain costs naturally, since terrain cost simply goes into `g(n)`.
 
    Steps of A*
    - Put the start cell in an open list with `g = 0` and `f = h(start)`.
    - Take the cell with the smallest `f` out of the open list and call it current.
    - If current is the goal, stop and rebuild the path by following parent links backwards.
    - Move current into the closed list.
-   - For each walkable neighbour: skip it if it is in the closed list; otherwise compute `g_new = g(current) + cost(current, neighbour)`.
-   - If the neighbour is new, or `g_new` is smaller than its stored `g`, update its `g`, `f` and parent, and put it in the open list.
-   - Repeat until the goal is reached or the open list becomes empty (no path exists).
+   - For each walkable neighbour: skip it if it is already in the closed list; otherwise compute `g_new = g(current) + cost(current, neighbour)`.
+   - If the neighbour is new, or `g_new` improves its stored `g`, update its `g`, `f` and parent and put it in the open list.
+   - Repeat until the goal is reached, or until the open list empties, which means no path exists.
 
-   - Time complexity `O(E log V)` with a priority queue, same as Dijkstra, but the constant is much smaller in practice.
+   - Time complexity `O(E log V)` with a priority queue — the same as Dijkstra, but with a much smaller constant in practice.
 
 2. **(a) Apply the Kruskal's algorithm for the following graph to find out the cost of the minimum spanning Tree (MST).** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
 
@@ -1340,7 +1340,7 @@
 
    Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3` (6 vertices)
 
-   Kruskal's rule: sort all edges by weight, then add an edge only if it does not form a cycle. Stop after `V-1 = 5` edges.
+   Kruskal's rule: sort all edges by weight, then add each edge only if it does not form a cycle. Stop after `V−1 = 5` edges.
 
    | Step | Edge | Weight | Decision | Running cost |
    |---|---|---|---|---|
@@ -1348,42 +1348,44 @@
    | 2 | A-C | 2 | Take | 3 |
    | 3 | D-E | 2 | Take | 5 |
    | 4 | E-F | 3 | Take | 8 |
-   | 5 | A-B | 4 | Skip — cycle A-B-C | 8 |
+   | 5 | A-B | 4 | Reject — makes cycle A-B-C | 8 |
    | 6 | B-D | 5 | Take — joins the two components | 13 |
-   | 7 | D-F, C-D, C-E | 6, 8, 10 | Skip — all form cycles | 13 |
+   | 7 | D-F, C-D, C-E | 6, 8, 10 | Reject — all form cycles | 13 |
 
    Final answer
    - MST edges: `B-C (1), A-C (2), D-E (2), E-F (3), B-D (5)`
    - Cost of the minimum spanning tree = `1 + 2 + 2 + 3 + 5 = 13`
-   - The MST has `V - 1 = 5` edges, as expected.
-   - Cycle detection uses a Disjoint Set Union (union-find) structure. Time complexity `O(E log E)`, dominated by the sorting step.
+   - The MST has `V − 1 = 5` edges, as it must.
+   - Cycles are detected with a Disjoint Set Union (union-find) structure. With path compression and union by rank each operation is almost constant time, so the overall cost `O(E log E)` is dominated by the sorting step.
 
 3. **Shortest path বের করা : Dijkstra's Algorithm** *[BTCL - JAM ( Technical) 05.04.2024 compact it 383 (ET: BUET)]*
 
-   Answer: Dijkstra's algorithm finds the shortest path from one source vertex to every other vertex in a graph with non-negative edge weights.
+   Answer: Dijkstra's algorithm finds the shortest path from one source vertex to every other vertex in a graph with non-negative edge weights. It is a greedy algorithm.
 
    ```
    Dijkstra(G, source)
      for each vertex v      dist[v] = infinity, parent[v] = NIL
      dist[source] = 0
-     put all vertices in a min-priority queue Q keyed by dist
+     insert source into a min-priority queue Q
      while Q is not empty
          u = extract-min(Q)
+         if the popped distance > dist[u]   continue      // stale entry
          for each neighbour v of u
              if dist[u] + weight(u, v) < dist[v]
-                 dist[v] = dist[u] + weight(u, v)     // relaxation
+                 dist[v] = dist[u] + weight(u, v)         // relaxation
                  parent[v] = u
-                 decrease-key(Q, v)
+                 insert v into Q
    ```
 
    Steps in words
-   - Set the source distance to 0 and every other distance to infinity.
-   - Pick the unvisited vertex with the smallest distance and mark it visited (its distance is now final).
-   - Relax all its edges — if going through it gives a shorter route to a neighbour, update that neighbour.
-   - Repeat until all vertices are visited.
+   - Set the source distance to 0 and all others to infinity.
+   - Pick the unvisited vertex with the smallest distance — its value is now final.
+   - Relax all its outgoing edges: if going through it gives a shorter route to a neighbour, update that neighbour.
+   - Repeat until every vertex is settled.
 
-   - Time complexity `O(E log V)` with a binary heap, `O(V²)` with a simple array.
-   - It works only when all weights are non-negative. With a negative edge, a vertex marked final could still be improved later, so the result would be wrong. Use Bellman-Ford in that case.
+   - Time complexity `O((V + E) log V)` with a min-heap, `O(V²)` with a simple array scan.
+   - It works only when all weights are non-negative. The whole method rests on the assumption that once a vertex is popped its distance is final — a negative edge would break that assumption, so use Bellman-Ford there.
+   - Applications: GPS navigation, OSPF link-state routing, game pathfinding, network delay calculation.
 
 4. **Find the shortest path from following graph starts from:** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 394 (ET: BUET)]*
 
@@ -1391,15 +1393,15 @@
 
    Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
 
-   | Step | Vertex chosen | Updated distances |
+   | Step | Vertex settled | Relaxation performed |
    |---|---|---|
-   | 0 | — | A=0, rest = ∞ |
-   | 1 | A (0) | B=4, C=2 |
-   | 2 | C (2) | B = min(4, 2+1) = 3, D=10, E=12 |
+   | 0 | — | A = 0, all others = ∞ |
+   | 1 | A (0) | B = 4, C = 2 |
+   | 2 | C (2) | B = min(4, 2+1) = 3, D = 10, E = 12 |
    | 3 | B (3) | D = min(10, 3+5) = 8 |
-   | 4 | D (8) | E = min(12, 8+2) = 10, F=14 |
+   | 4 | D (8) | E = min(12, 8+2) = 10, F = 14 |
    | 5 | E (10) | F = min(14, 10+3) = 13 |
-   | 6 | F (13) | done |
+   | 6 | F (13) | nothing left |
 
    Final answer — shortest distance and path from A
 
@@ -1412,7 +1414,7 @@
    | E | 10 | A → C → B → D → E |
    | F | 13 | A → C → B → D → E → F |
 
-   - Note that the direct edge A-B costs 4, but going A → C → B costs only 3, so relaxation replaced it.
+   - Note that the direct edge A-B costs 4, but the route A → C → B costs only 3, so relaxation replaced it. This is exactly what relaxation is for.
 
 5. **Find the minimum spanning tree:** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 700 (ET: BUET)]*
 
@@ -1420,7 +1422,9 @@
 
    Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
 
-   | Step | Vertices in tree | Cheapest outgoing edge | Added | Cost |
+   Prim's rule: start from any vertex and repeatedly add the cheapest edge that connects a vertex inside the tree to a vertex outside it.
+
+   | Step | Vertices in tree | Cheapest outgoing edge | Vertex added | Cost |
    |---|---|---|---|---|
    | 1 | A | A-C (2) | C | 2 |
    | 2 | A, C | B-C (1) | B | 1 |
@@ -1431,43 +1435,43 @@
    Final answer
    - MST edges: `A-C (2), B-C (1), B-D (5), D-E (2), E-F (3)`
    - Total cost = `2 + 1 + 5 + 2 + 3 = 13`
-   - The tree has `V - 1 = 5` edges and touches all 6 vertices.
-   - Prim grows one tree from a start vertex; Kruskal picks globally cheapest edges. Both give the same total cost here.
+   - The tree has `V − 1 = 5` edges and touches all 6 vertices.
+   - Prim grows one connected tree from a start vertex and suits dense graphs; Kruskal picks globally cheapest edges and suits sparse graphs. Both give the same total cost here.
 
 6. **How to find single source shortest path from negative weighted cycle. Justify and how you find it is negative weighted graph.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
 
-   Answer: If a graph contains a negative weight cycle reachable from the source, the shortest path is not defined, because going round the cycle again and again keeps reducing the cost towards minus infinity. So the correct answer is to detect the cycle and report it, not to return a distance.
+   Answer: If a negative weight cycle is reachable from the source, the shortest path does not exist — going round the cycle again and again keeps lowering the cost towards minus infinity. So the correct output is to detect and report the cycle, not a distance.
 
    Algorithm to use — Bellman-Ford
-   - Dijkstra cannot be used, because it assumes a finalised vertex can never improve, which fails with negative edges.
+   - Dijkstra cannot be used, because it assumes a settled vertex can never improve, and a negative edge breaks that assumption.
 
    ```
    BellmanFord(G, source)
      dist[source] = 0, all other dist[v] = infinity
-     repeat V-1 times                  // pass 1
+     repeat V-1 times                  // main relaxation rounds
          for each edge (u, v, w)
              if dist[u] + w < dist[v]
                  dist[v] = dist[u] + w
-     for each edge (u, v, w)           // pass 2 — the check
+     for each edge (u, v, w)           // the Vth round — the check
          if dist[u] + w < dist[v]
              report "negative weight cycle exists"
    ```
 
    Justification
-   - In a graph without a negative cycle, any shortest path has at most `V-1` edges, so `V-1` rounds of relaxation are enough to settle every distance.
-   - Therefore, if any edge can still be relaxed in the `V`-th round, some path is still getting shorter — which is only possible if a negative cycle is reachable.
+   - In a graph with no negative cycle, any shortest path uses at most `V−1` edges, so `V−1` rounds of relaxation are enough to settle every distance.
+   - Therefore, if any edge can still be relaxed in the `V`-th round, some walk is still getting shorter — which is only possible when a negative cycle is reachable.
 
    - Time complexity `O(V × E)`, space `O(V)`.
-   - For all-pairs shortest paths, Floyd-Warshall detects the same thing: a negative cycle exists if any `dist[i][i]` becomes negative.
+   - Bellman-Ford only detects cycles reachable from the source. To catch every negative cycle, add a virtual source joined to all vertices with weight 0, or use Floyd-Warshall and check whether any `dist[i][i]` becomes negative.
 
 7. **Shortest path algorithm (Djikstra's algorithm)** *[BPDB Assistant Engineer (CSE) 2021 compact it 817 (ET: BUET)]*
 
-   Answer: Dijkstra's algorithm is a greedy single-source shortest path algorithm for graphs with non-negative edge weights.
+   Answer: Dijkstra's algorithm is a greedy single-source shortest path algorithm for graphs whose edge weights are all non-negative.
 
    Working principle
-   - Keep a distance value for every vertex; source = 0, others = infinity.
-   - Repeatedly pick the unvisited vertex with the smallest distance — its value is now final.
-   - Relax every edge going out of it: `if dist[u] + w(u,v) < dist[v] then dist[v] = dist[u] + w(u,v)`.
+   - Keep a distance value for every vertex; source = 0, all others = infinity.
+   - Repeatedly pick the unvisited vertex with the smallest distance — that value is now final.
+   - Relax every outgoing edge: `if dist[u] + w(u,v) < dist[v] then dist[v] = dist[u] + w(u,v)`.
    - Continue until every vertex is settled.
 
    Small example — source A, edges `A-B 4, A-C 2, B-C 1, B-D 5, D-E 2`
@@ -1475,11 +1479,11 @@
    - Settle C (2) → B improves to 3
    - Settle B (3) → D = 8
    - Settle D (8) → E = 10
-   - Result: A=0, C=2, B=3, D=8, E=10
+   - Result: A = 0, C = 2, B = 3, D = 8, E = 10
 
-   - Time `O(E log V)` with a min-heap, `O(V²)` with an array.
-   - Limitation: fails on negative edges. Use Bellman-Ford there.
-   - Uses: GPS navigation, IP routing (OSPF link-state routing), network delay calculation.
+   - Time `O((V + E) log V)` with a min-heap, `O(V²)` with an array.
+   - Limitation: it fails on negative edges; use Bellman-Ford there.
+   - Applications: GPS navigation, IP routing (OSPF), network delay calculation, game pathfinding.
 
 8. **Find the Minimum Spanning Tree of the following graph using Kruskal's algorithm.** *[RAKUB Programmer (PO) 12.10.2021 compact it 847-849 (ET: N/A)]*
 
@@ -1490,7 +1494,7 @@
    Step 1 - sort the edges by weight
    - `B-C (1), A-C (2), D-E (2), E-F (3), A-B (4), B-D (5), D-F (6), C-D (8), C-E (10)`
 
-   Step 2 - add each edge unless it makes a cycle
+   Step 2 - add each edge unless it creates a cycle
 
    | Edge | Weight | Cycle? | Action |
    |---|---|---|---|
@@ -1504,7 +1508,7 @@
    Final answer
    - MST edges: `B-C (1), A-C (2), D-E (2), E-F (3), B-D (5)`
    - Total weight = `13`
-   - Cycles are detected with union-find. Time complexity `O(E log E)`.
+   - Kruskal treats the graph as a forest of single-vertex trees and merges them with the lightest edges until one tree spans everything. Cycle checks use union-find, giving `O(E log E)` overall.
 
 9. **Find out minimum spanning tree from a given graph using krushkal algorithm.** *[Sonali Bank Ltd. Officer IT 2021 compact it 908 (ET: N/A)]*
 
@@ -1512,18 +1516,18 @@
 
    Algorithm
    - Sort all edges in increasing order of weight.
-   - Create a separate set for each vertex (union-find).
-   - Take edges one by one. If the two endpoints are in different sets, add the edge and union the sets. Otherwise reject it as a cycle.
-   - Stop when `V - 1` edges have been added.
+   - Put each vertex in its own set using a union-find structure.
+   - Take edges one by one. If the two endpoints lie in different sets, add the edge and union the sets. Otherwise reject it, since it would close a cycle.
+   - Stop once `V − 1` edges have been added.
 
    Worked example — edges `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
    - Take B-C (1), A-C (2), D-E (2), E-F (3)
-   - Reject A-B (4) — cycle
-   - Take B-D (5) — now 5 edges, all 6 vertices connected
+   - Reject A-B (4) — both ends already in the same set
+   - Take B-D (5) — now 5 edges and all 6 vertices are connected
    - MST cost = `1 + 2 + 2 + 3 + 5 = 13`
 
-   - Time complexity `O(E log E)` for sorting, plus almost constant time per union-find operation.
-   - Kruskal works well on sparse graphs; Prim is better on dense graphs.
+   - Time complexity `O(E log E)` for the sort, plus nearly constant time per union-find operation when path compression and union by rank are used.
+   - Kruskal suits sparse graphs; Prim suits dense ones.
 
 10. **Consider the following graph: Now find the minimum spanning tree using Kruskal's algorithm.** *[BAUST Assistant Programmer 2021 compact it 920 (ET: N/A)]*
 
@@ -1531,7 +1535,7 @@
 
     Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
 
-    Sorted order: `1, 2, 2, 3, 4, 5, 6, 8, 10`
+    Sorted weights: `1, 2, 2, 3, 4, 5, 6, 8, 10`
 
     | Pass | Edge (weight) | Sets before | Result |
     |---|---|---|---|
@@ -1539,13 +1543,13 @@
     | 2 | A-C (2) | {A}, {B,C} | Add → {A,B,C} |
     | 3 | D-E (2) | {D}, {E} | Add → {D,E} |
     | 4 | E-F (3) | {D,E}, {F} | Add → {D,E,F} |
-    | 5 | A-B (4) | both in {A,B,C} | Reject, cycle |
+    | 5 | A-B (4) | both inside {A,B,C} | Reject, cycle |
     | 6 | B-D (5) | {A,B,C}, {D,E,F} | Add → all joined |
 
     Final answer
     - MST: `B-C, A-C, D-E, E-F, B-D`
     - Minimum cost = `13`
-    - Edge count = `V - 1 = 5`, so the algorithm stops here and the remaining edges are not examined.
+    - Edge count reaches `V − 1 = 5`, so the algorithm stops and the remaining edges (6, 8, 10) are never examined.
 
 11. **Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using the shortest path between two substations for SGFL Company.** *[SGFL Assistant General Engineer 2021 compact it 935-936 (ET: BUET)]*
 
@@ -1576,23 +1580,24 @@
     ```
 
     - `dist[D]` gives the shortest travel cost and `path` gives the route to follow.
-    - Time complexity `O(E log V)`, space `O(V)`.
-    - If some roads have a negative adjustment (for example a subsidy), use Bellman-Ford instead. If the shortest route between every pair of substations is needed, use Floyd-Warshall in `O(V³)`.
+    - The early break is safe because a vertex popped from the queue already has its final distance.
+    - Time complexity `O((V + E) log V)`, space `O(V)`.
+    - If some links carry a negative adjustment, use Bellman-Ford. If the shortest route between every pair of substations is needed, use Floyd-Warshall in `O(V³)`.
 
 12. **Shortest Path Algorithm.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
-    Answer: A shortest path algorithm finds the route between two vertices of a weighted graph whose total edge weight is the smallest.
+    Answer: A shortest path algorithm finds the route between two vertices of a weighted graph whose total edge weight is smallest.
 
-    | Algorithm | Type | Handles negative weights | Time complexity |
+    | Algorithm | Type | Negative weights | Time complexity |
     |---|---|---|---|
     | BFS | Single source, unweighted | Not applicable | O(V + E) |
-    | Dijkstra | Single source | No | O(E log V) |
-    | Bellman-Ford | Single source | Yes, and detects negative cycles | O(V × E) |
-    | Floyd-Warshall | All pairs | Yes (no negative cycle) | O(V³) |
-    | A* | Single pair, with heuristic | No | O(E log V) |
+    | Dijkstra | Single source | Not allowed | O((V + E) log V) |
+    | Bellman-Ford | Single source | Allowed, detects negative cycles | O(V × E) |
+    | Floyd-Warshall | All pairs | Allowed (no negative cycle) | O(V³) |
+    | A* | Single pair, heuristic guided | Not allowed | O(E log V) |
 
-    - All of them work by relaxation: if `dist[u] + w(u,v) < dist[v]`, then update `dist[v]`.
-    - Uses: GPS navigation, network routing protocols (OSPF uses Dijkstra, RIP uses Bellman-Ford), logistics and delivery planning.
+    - All of them work by relaxation: if `dist[u] + w(u,v) < dist[v]`, update `dist[v]`.
+    - Applications: GPS navigation, routing protocols (OSPF uses Dijkstra, RIP uses Bellman-Ford), logistics and delivery planning, network delay analysis.
 
 13. **How to Determine the weighted graph has negative cycle?** *[Combined 4 Banks Assistant Programmer 2020 compact it 1006-1007 (ET: DU)]*
 
@@ -1600,15 +1605,16 @@
 
     Method
     - Set `dist[source] = 0` and every other distance to infinity.
-    - Relax all `E` edges, `V-1` times.
-    - Then run one more pass over all edges. If any edge still satisfies `dist[u] + w(u,v) < dist[v]`, a negative weight cycle exists.
+    - Relax all `E` edges, `V−1` times.
+    - Then perform one more pass over all edges. If any edge still satisfies `dist[u] + w(u,v) < dist[v]`, a negative weight cycle exists.
 
     Why the test works
-    - In a graph with no negative cycle, a shortest path can contain at most `V-1` edges, so `V-1` rounds are enough to fix every distance.
-    - If a distance can still fall in round `V`, some closed walk has a negative total weight — that is a negative cycle.
+    - In a graph with no negative cycle, a shortest path can contain at most `V−1` edges, so `V−1` rounds are enough to finalise every distance.
+    - If a distance can still fall in the `V`-th round, some edge with an overall negative total has been traversed once more — that is a negative cycle.
+    - A negative cycle makes the shortest path undefined, because each extra loop reduces the total further.
 
     - Time complexity `O(V × E)`.
-    - Note: Bellman-Ford only detects cycles reachable from the source. To catch every negative cycle in the graph, add a virtual source joined to all vertices with weight 0, or use Floyd-Warshall and check whether any `dist[i][i] < 0`.
+    - Bellman-Ford only finds cycles reachable from the source. For all negative cycles, add a virtual source connected to every vertex with weight 0, or use Floyd-Warshall and check whether any `dist[i][i] < 0`.
 
 14. **নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।** *[Sundharban Gas Assistant Programmer 2020 compact it 1048 (ET: N/A)]*
 
@@ -1617,10 +1623,10 @@
     Edges: `A-B 4, A-C 2, B-C 1, B-D 5, D-E 2, C-E 10`
 
     Method
-    - Set `dist[A] = 0`, all others infinity.
-    - Repeatedly pick the unvisited vertex with the smallest distance and relax its edges.
+    - Set `dist[A] = 0` and all other distances to infinity.
+    - Repeatedly pick the unvisited vertex with the smallest distance and relax its outgoing edges.
 
-    | Round | Settled vertex | Relaxation done | Distance table |
+    | Round | Vertex settled | Relaxation done | Distance table |
     |---|---|---|---|
     | 1 | A (0) | B = 4, C = 2 | A=0, B=4, C=2 |
     | 2 | C (2) | B = min(4, 3) = 3, E = 12 | B=3, E=12 |
@@ -1630,11 +1636,11 @@
 
     Final answer
     - `A → C` = 2, `A → C → B` = 3, `A → C → B → D` = 8, `A → C → B → D → E` = 10.
-    - The greedy rule works because all weights are non-negative, so once a vertex is settled no shorter route to it can appear later.
+    - The greedy rule is valid because all weights are non-negative, so once a vertex is settled no shorter route to it can appear later.
 
 15. **S1, S2, S3, S4, S5 are five nodes and a value on lines denotes the cost to transmit power. (i) Draw a graph to find the shortest path to transmit power. (ii) Calculates the average cost.** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
-    Answer: The cost values were not printed with the question, so these costs are assumed to show the method.
+    Answer: The cost values were not printed with the question, so these costs are assumed in order to show the method.
 
     Assumed costs: `S1-S2 4, S1-S3 2, S2-S3 1, S2-S4 5, S3-S4 8, S4-S5 2, S3-S5 10`
 
