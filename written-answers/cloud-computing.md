@@ -933,6 +933,41 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ GB} storage. Calculate the maximum number of VMs that can be hosted on the server without overcommitting resources. Identify which hardware resource limits the number of VMs. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+   Answer:
+
+   Given
+
+   | Resource | Available on server | Required per VM |
+   |---|---|---|
+   | CPU cores | 32 | 4 |
+   | RAM | 96 GB | 16 GB |
+   | Storage | 4 TB = 4096 GB | 500 GB |
+
+   Step 1 - VMs allowed by each resource
+   - By CPU: `32 ÷ 4 = 8 VMs`
+   - By RAM: `96 ÷ 16 = 6 VMs`
+   - By storage: `4096 ÷ 500 = 8.19` → `8 VMs` (a partial VM is not possible)
+
+   Step 2 - take the minimum
+   - Without overcommitting, every resource must be sufficient at the same time.
+   - `Maximum VMs = min(8, 6, 8) = 6`
+
+   Final answer
+   - **Maximum number of VMs = 6**
+   - **The limiting resource is RAM.** It allows only 6 VMs while CPU and storage each allow 8.
+
+   Step 3 - resources left unused with 6 VMs
+
+   | Resource | Used by 6 VMs | Remaining |
+   |---|---|---|
+   | CPU cores | 6 × 4 = 24 | 8 cores idle |
+   | RAM | 6 × 16 = 96 GB | 0 GB — fully consumed |
+   | Storage | 6 × 500 = 3000 GB | 1096 GB free |
+
+   - The bottleneck is clear: RAM is exactly exhausted while 8 CPU cores and about 1 TB of disk sit idle.
+   - To reach the CPU and storage limit of 8 VMs, the server would need `8 × 16 = 128 GB` of RAM, so adding 32 GB more would balance the machine.
+   - Note that RAM is the one resource hypervisors overcommit most cautiously, because unlike CPU time it cannot be time-shared without heavy swapping.
+
 ## High Availability & System Redundancy (1)
 
 1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.
