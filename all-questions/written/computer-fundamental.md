@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 137 questions
+**Table of Contents** — 10 subtopics · 140 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-52) | 52 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-53) | 53 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-23) | 23 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-22) | 22 |
-| 4 | [Software Types & Classification](#software-types--classification-13) | 13 |
-| 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-8) | 8 |
+| 4 | [Software Types & Classification](#software-types--classification-14) | 14 |
+| 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-9) | 9 |
 | 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-8) | 8 |
 | 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
 | 8 | [Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies-3) | 3 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (52)
+## Computer Fundamentals & Acronyms (53)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -148,6 +148,13 @@
    n) Which of the following is the save button in computer keyboard?
    o) How long is an IPv6?
 
+53. **Write the full form of following topics:** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
+   1. JPEG: Joint Photographic Experts Group
+   2. LCD: Liquid Crystal Display
+   3. NTFS: New Technology File System
+   4. HTTP: Hyper Text Transfer Protocol
+   5. POP3: Post Office Protocol version 3
+
 ## ICT in Society & Governance (23)
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
@@ -242,7 +249,7 @@
 
 22. **Difference between BIOS and EFI also BOOT loader and firmware.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120 (ET: BUET)]*
 
-## Software Types & Classification (13)
+## Software Types & Classification (14)
 
 1. **What is the difference between System Software and Application Software?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)], [Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -270,7 +277,9 @@
 
 13. **What is DSS? Write the difference between MIS and DSS.** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: RUET)]*
 
-## Data Center Infrastructure & Power Management (8)
+14. **Compare between TPS and DSS.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1165-1166 (ET: N/A)]*
+
+## Data Center Infrastructure & Power Management (9)
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 305 (ET: BIBM)]*
 
@@ -287,6 +296,8 @@
 7. **What do you mean by dynamic capacity provisioning? Why it is essential for data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 751 (ET: N/A)]*
 
 8. **Write down the element of data center.** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1125 (ET: BREB)]*
+
+9. **Write down difference between Online UPS and Offline UPS.** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159-1160 (ET: BUET)]*
 
 ## Blockchain & Emerging Technologies (8)
 

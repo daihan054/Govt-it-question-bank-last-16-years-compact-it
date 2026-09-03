@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 98 questions
+**Table of Contents** — 9 subtopics · 99 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,7 +7,7 @@
 | 2 | [Java Programming & Methods](#java-programming--methods-13) | 13 |
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-9) | 9 |
 | 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
-| 5 | [Constructors & Destructors](#constructors--destructors-6) | 6 |
+| 5 | [Constructors & Destructors](#constructors--destructors-7) | 7 |
 | 6 | [Output Tracing & Recursion](#output-tracing--recursion-6) | 6 |
 | 7 | [Exception Handling](#exception-handling-3) | 3 |
 | 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
@@ -230,7 +230,7 @@ Public class class B extends class A {
 
 7. **Briefly Describe Abstraction, Encapsulation.** *[Bangladesh Competition Commission Programmer 2019 compact it 1059-1060 (ET: DU)]*
 
-## Constructors & Destructors (6)
+## Constructors & Destructors (7)
 
 1. **What is constructor function? Write the properties of it.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
 
@@ -243,6 +243,8 @@ Public class class B extends class A {
 5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
 
 6. **What is Constructor function? Write an example of Constructor function?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+
+7. **Differentiate constructor and destructor with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1167-1168 (ET: N/A)]*
 
 ## Output Tracing & Recursion (6)
 

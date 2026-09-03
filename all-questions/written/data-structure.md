@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 92 questions
+**Table of Contents** — 8 subtopics · 93 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,8 +7,8 @@
 | 2 | [Stack](#stack-19) | 19 |
 | 3 | [Linked List](#linked-list-15) | 15 |
 | 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
-| 5 | [Queue](#queue-6) | 6 |
-| 6 | [Binary Search Tree (BST)](#binary-search-tree-bst-6) | 6 |
+| 5 | [Binary Search Tree (BST)](#binary-search-tree-bst-7) | 7 |
+| 6 | [Queue](#queue-6) | 6 |
 | 7 | [Hashing & Hash Tables](#hashing--hash-tables-6) | 6 |
 | 8 | [Data Structure Fundamentals](#data-structure-fundamentals-5) | 5 |
 
@@ -172,6 +172,22 @@ Output: Not Balanced
 
 8. **Draw (max/min) heap binay tree using 11 nodes.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
+## Binary Search Tree (BST) (7)
+
+1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
+
+2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 590 (ET: BUET)]*
+
+3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
+
+4. **Construct a Binary Search tree, then post order, ....... (Approximate)** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
+
+5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
+
+6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
+
+7. **Write an algorithm to find a node in a binary search tree.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
+
 ## Queue (6)
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
@@ -185,20 +201,6 @@ Output: Not Balanced
 5. **Circular Queue and Priority Queue কীভাবে কাজ করে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 912-913 (ET: BUET)]*
 
 6. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
-
-## Binary Search Tree (BST) (6)
-
-1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
-
-2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 590 (ET: BUET)]*
-
-3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
-
-4. **Construct a Binary Search tree, then post order, ....... (Approximate)** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
-
-5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
-
-6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
 
 ## Hashing & Hash Tables (6)
 

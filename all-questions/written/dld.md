@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 136 questions
+**Table of Contents** — 9 subtopics · 137 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -10,7 +10,7 @@
 | 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-17) | 17 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-14) | 14 |
 | 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-6) | 6 |
-| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-3) | 3 |
+| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-4) | 4 |
 | 9 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
 
 <!-- TOC END -->
@@ -316,13 +316,15 @@
 
 6. **What is IC? Advantages of IC over discrete component circuit. Why do IC's need small power for their operation?** *[BTRC Assistant Director (Technical) 2019 compact it 1147 (ET: N/A)]*
 
-## 2's Complement & Binary Arithmetic (3)
+## 2's Complement & Binary Arithmetic (4)
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
 2. **BCD Addition: 00010011 + 00100110** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 644 (ET: BUET)]*
 
 3. **(a) For two 8bit binary numbers. What will be output values in 2’s complement format: (i) (10000000+10000000) (ii) (11111111-01111111)** *[BPSC Assistant Programmer (CSE) 2019 compact it 1138 (ET: N/A)]*
+
+4. **How many bits have to change to convert int A to int B. Sample A=31 and B=14.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1164 (ET: N/A)]*
 
 ## Finite State Machines (FSM) (1)
 

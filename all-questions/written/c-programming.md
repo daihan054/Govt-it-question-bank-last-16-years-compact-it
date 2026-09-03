@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 230 questions
+**Table of Contents** — 9 subtopics · 238 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-97) | 97 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-40) | 40 |
-| 3 | [Recursion & Functions](#recursion--functions-34) | 34 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-100) | 100 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-43) | 43 |
+| 3 | [Recursion & Functions](#recursion--functions-35) | 35 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-23) | 23 |
-| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-14) | 14 |
+| 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-15) | 15 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-13) | 13 |
 | 7 | [File Handling](#file-handling-4) | 4 |
 | 8 | [Pointers](#pointers-4) | 4 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (97)
+## Basic Programs & Control Statements (100)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -369,7 +369,20 @@ for(a=1; a<=100; a++)
 
 97. **Write a program to calculate GPA, Avg and total marks.** *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
-## Output Tracing & Control Flow (40)
+98. **Write a program of find Prime number in 1 to 100 number. (Using any language)** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
+
+99. **Write a program of find max from 20 item price. (Using any language)** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
+
+100. **Write program for following pattern:** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
+```text
+12345
+1234
+123
+12
+1
+```
+
+## Output Tracing & Control Flow (43)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -847,7 +860,29 @@ int main() {
 }
 ```
 
-## Recursion & Functions (34)
+41. **Find the output of the following code:** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160 (ET: BUET)]*
+```c
+int a=3; int b=10;
+if(a>b)
+    printf("A");
+else
+    printf("B");
+```
+
+42. **Find the output of the following code:** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160-1161 (ET: BUET)]*
+```c
+int i=0; int n=3;
+while(i!=n) {
+    if(i==3)
+        continue;
+    printf("%d", i);
+    i++;
+}
+```
+
+43. **What is the output of following program?** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1166 (ET: N/A)]*
+
+## Recursion & Functions (35)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -967,6 +1002,8 @@ int main() {
 
 34. **What is recursive function? Give an example of recursive function.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
 
+35. **Difference between call by value and call by reference with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1166-1167 (ET: N/A)]*
+
 ## Operators, Data Types & Language Concepts (23)
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
@@ -1020,7 +1057,7 @@ int main() {
 
 23. **(c) Is it possible to convert all if-else code into switch code block? Give an example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
 
-## Flowcharts & Algorithms (14)
+## Flowcharts & Algorithms (15)
 
 1. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -1049,6 +1086,14 @@ int main() {
 13. **(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1084 (ET: N/A)]*
 
 14. **Write a pesudcode that takes in one positive number only and returns the factor for that number.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
+
+15. **Write down the psudo-code that accepts i, n is integer and value as input, store all n integers in an array, called pairs and return all pairs where the summation of individual's pair=value.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1165 (ET: N/A)]*
+
+| Length: | Input | Output |
+|---|---|---|
+| Array | 5 | {1,5}, {7,-1} |
+| Summation value: | 1 7 -1 5 -7 |  |
+|  | 6 |  |
 
 ## String Manipulation & Algorithms (13)
 

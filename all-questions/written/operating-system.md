@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 187 questions
+**Table of Contents** — 12 subtopics · 188 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,7 +8,7 @@
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
 | 4 | [OS Concepts & System Software](#os-concepts--system-software-21) | 21 |
 | 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
-| 6 | [Memory Management & Paging](#memory-management--paging-15) | 15 |
+| 6 | [Memory Management & Paging](#memory-management--paging-16) | 16 |
 | 7 | [Process Management & Process States](#process-management--process-states-12) | 12 |
 | 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
 | 9 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
@@ -360,7 +360,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 16. **(খ) Virtual Memory বলতে কী বোঝায়? এর কার্যপদ্ধতি সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1093 (ET: N/A)]*
 
-## Memory Management & Paging (15)
+## Memory Management & Paging (16)
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
    **(i) How many pages are in logical address space?**
@@ -402,6 +402,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 14. **(ক) অপারেটিং সিস্টেম এর ক্ষেত্রে Swapping কী? কোন ক্ষেত্রে এটি ব্যবহৃত হয় লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
 
 15. **(a) What do you mean by page table for memory management? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1129 (ET: N/A)]*
+
+16. **Why page are sizes always powers of 2?** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
 
 ## Process Management & Process States (12)
 
