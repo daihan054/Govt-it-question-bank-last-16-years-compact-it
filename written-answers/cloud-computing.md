@@ -1009,3 +1009,32 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 ## Cloud Security & Compliance (1)
 
 1. **How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
+
+   Answer: Assessment and audit reports turn the cloud's invisible configuration into a written, checkable record. They are the main evidence that security controls actually exist and work.
+
+   How they help DETECT vulnerabilities
+   - **Configuration assessment** — automated scanners (AWS Security Hub, Azure Defender for Cloud, CSPM tools) compare live settings against a benchmark such as CIS, and report misconfigurations like a public S3 bucket, an open port 22 or an unencrypted database.
+   - **Vulnerability scanning reports** — list unpatched OS packages, outdated libraries and known CVEs in VM images and container images, ranked by severity.
+   - **IAM and access review** — reveal over-privileged accounts, unused keys, missing MFA and accounts that violate the least-privilege principle.
+   - **Penetration test reports** — show whether a vulnerability is actually exploitable, not just theoretically present.
+   - **Log and configuration drift analysis** — audit trails such as AWS CloudTrail show who changed what and when, exposing unauthorised changes.
+   - **Prioritisation** — a good report ranks findings by risk, so limited effort goes to the issues that matter most.
+
+   How they ensure COMPLIANCE
+   - **Mapping to standards** — findings are mapped to controls in ISO 27001, PCI DSS, GDPR, HIPAA or the national data-protection rules, so gaps are visible per requirement.
+   - **Evidence for regulators** — an audit report is the documentary proof an auditor asks for; verbal assurance is not accepted.
+   - **Continuous compliance** — automated CSPM tools re-check continuously instead of once a year, so drift is caught within hours.
+   - **Shared-responsibility clarity** — the report distinguishes what the cloud provider secures from what the customer must secure, which is a common source of gaps.
+   - **Remediation tracking** — each finding gets an owner, a deadline and a closure status, turning the report into an action plan rather than a document.
+   - **Management reporting** — trends over time show whether the security posture is improving or degrading.
+
+   Typical cycle
+   ```mermaid
+   flowchart LR
+       A[Assess / scan] --> B[Report findings<br/>ranked by risk]
+       B --> C[Remediate]
+       C --> D[Re-audit / verify]
+       D --> A
+   ```
+
+   - Limitation worth stating: a report is only a snapshot unless the scanning is continuous. In a cloud where a developer can create a public bucket in seconds, annual audits are far too slow — continuous automated assessment is what actually maintains the security posture.
