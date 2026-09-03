@@ -587,37 +587,43 @@
    Answer:
 
    (a) How Generative AI powers the chatbot
-   - A Large Language Model (LLM) trained on text can write a fresh reply for each citizen question instead of picking from fixed templates.
-   - Response generation — the model understands the question in Bangla or English and answers in natural language.
-   - Document summarization — long circulars, gazettes and policy papers are compressed into short points.
-   - RAG (Retrieval Augmented Generation) — before answering, the system searches the agency's own approved documents and passes them to the model, so the answer stays inside official policy and hallucination drops.
-   - Fine-tuning on the agency's past queries teaches it the right tone and the local terms.
+   - A Large Language Model built on the Transformer architecture can write a fresh reply for each citizen question instead of picking from fixed templates.
+   - Response generation — the model understands the query in Bangla or English and answers in natural language.
+   - Document summarization — long circulars, gazettes and policy papers are compressed into short readable points.
+   - RAG (Retrieval Augmented Generation) — before answering, the system searches the agency's own approved documents and feeds them to the model, so the answer stays inside official policy and hallucination drops sharply.
+   - Fine-tuning on past citizen queries teaches the model the right tone and local terminology.
    - Multi-turn memory lets a citizen ask follow-up questions in the same conversation.
 
    (b) How XAI keeps it transparent and accountable
-   - Source citation — every answer shows which circular or clause it came from, so the citizen can verify it.
-   - Attention or attribution methods (LIME, SHAP) show which input words pushed the model towards its answer.
-   - Confidence score — a low-confidence answer is passed to a human officer instead of being sent out.
-   - Audit log — question, retrieved documents, generated answer and model version are all stored for later review.
-   - Human-in-the-loop for sensitive matters such as tax, legal or financial advice.
-   - Bias and fairness testing before release, plus a feedback button so wrong answers are reported and corrected.
+   - XAI is the set of techniques that make a model's decision understandable to a human, answering the black-box problem.
+   - Its three pillars are transparency (show what influenced the output), interpretability (present it in a form a person can use) and accountability (leave a trail for regulatory and ethical review).
+   - Source citation — every answer names the circular or clause it came from, so the citizen can verify it.
+   - LIME explains a single answer by approximating the model locally; SHAP uses Shapley values from game theory to score how much each input contributed.
+   - Attention visualisation shows which words of the query the model weighted most.
+   - Confidence score — a low-confidence answer is routed to a human officer instead of being sent out.
+   - Audit log — query, retrieved documents, generated answer and model version are stored for later review.
+   - Bias and fairness testing before release, plus a feedback button so wrong answers get reported and corrected.
 
 2. **b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1346 (ET: N/A)]*
 
    Answer:
 
    Generative AI (GAI)
-   - AI that creates new content — text, image, audio, video or code — instead of only classifying or predicting.
-   - It learns the pattern and distribution of the training data, then produces new samples that follow the same pattern.
-   - Main model families: GAN (Generative Adversarial Network), VAE (Variational Autoencoder), Diffusion models, Transformers.
+   - AI that creates original content — text, image, audio, video or code — in response to a user's prompt, rather than only classifying or predicting.
+   - It learns the pattern and distribution of its training data, then produces new samples that follow the same distribution.
+   - Main model families:
+   - GAN — a generator and a discriminator compete; the generator makes fakes, the discriminator detects them. Gives sharp images but training can be unstable.
+   - VAE — encodes data into a compressed latent space and decodes it back, good for smooth, controllable generation.
+   - Diffusion model — starts from random noise and removes it step by step. Gives high quality and stable, diverse output.
+   - Transformer — the base of text generation, using self-attention.
    - Examples: ChatGPT for text, DALL-E and Midjourney for images, GitHub Copilot for code.
 
    Large Language Models (LLMs)
    - A type of generative AI built for language, trained on a very large text corpus with billions of parameters.
-   - Built on the Transformer architecture, which uses a self-attention mechanism to weigh the importance of every word against the others.
-   - Trained by next-token prediction — guess the next word again and again over huge text.
+   - Built on the Transformer architecture, whose self-attention mechanism weighs the importance of every word against all the others.
+   - Trained by next-token prediction — repeatedly guessing the next word across huge amounts of text.
    - Abilities: answering, summarizing, translating, writing code, reasoning over text.
-   - Examples: GPT, Claude, Gemini, LLaMA.
+   - Examples: GPT, Claude, Gemini, LLaMA, BERT.
    - Limitations: can hallucinate false facts, carries bias from training data, has a knowledge cut-off date, and training costs are very high.
 
 3. **LLM stands for __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
@@ -626,24 +632,25 @@
 
 4. **What is ChatGPT? Write down the Pros and cons of ChatGPT.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
-   Answer: ChatGPT is a conversational AI chatbot made by OpenAI. It is built on the GPT (Generative Pre-trained Transformer) large language model and answers questions in natural language.
+   Answer: ChatGPT is a conversational AI chatbot developed by OpenAI. It is built on the GPT (Generative Pre-trained Transformer) family of large language models and replies to questions in natural language.
 
-   - It is pre-trained on a very large text corpus, then refined with RLHF (Reinforcement Learning from Human Feedback) so the replies stay helpful and safe.
-   - It keeps the context of a conversation, so follow-up questions work.
+   - It is pre-trained on a very large text corpus, then refined with RLHF (Reinforcement Learning from Human Feedback) so its replies stay helpful and safe.
+   - It keeps conversation context, so follow-up questions work naturally.
 
    Pros
-   - Instant answers, available all day, in many languages.
+   - Instant answers, available round the clock, in many languages.
    - Helps with writing, summarizing, translation, coding and debugging.
-   - Explains a hard topic in simple words, useful for learning.
+   - Explains a difficult topic in simple words, which is useful for learning.
    - Cuts cost and time in customer support and routine drafting work.
+   - Can generate ideas, outlines and first drafts very quickly.
 
    Cons
    - Can hallucinate — states wrong facts with full confidence.
-   - Knowledge has a cut-off date, so recent events may be missing.
-   - Carries bias present in the training data.
-   - Privacy risk if users paste confidential or personal data.
+   - Knowledge has a cut-off date, so recent events may be missing or wrong.
+   - Reflects bias present in its training data.
+   - Privacy risk if users paste confidential or personal data into it.
    - Encourages over-dependence and can be misused for plagiarism or exam cheating.
-   - Does not truly understand meaning; it predicts likely text.
+   - It predicts likely text rather than truly understanding meaning, so its reasoning can fail on unusual problems.
 
 ## Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)
 
