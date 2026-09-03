@@ -1,26 +1,26 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 493 questions
+**Table of Contents** — 33 subtopics · 499 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-106) | 106 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-108) | 108 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-51) | 51 |
-| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-29) | 29 |
-| 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-21) | 21 |
+| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-30) | 30 |
+| 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-22) | 22 |
 | 5 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-19) | 19 |
 | 6 | [Networking Devices](#networking-devices-19) | 19 |
 | 7 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-18) | 18 |
 | 8 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
 | 9 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-17) | 17 |
 | 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-16) | 16 |
-| 11 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-15) | 15 |
+| 11 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-16) | 16 |
 | 12 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-14) | 14 |
 | 13 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
 | 14 | [Network Topologies](#network-topologies-14) | 14 |
 | 15 | [IPv6 Addressing](#ipv6-addressing-13) | 13 |
 | 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-13) | 13 |
 | 17 | [Network Address Translation (NAT)](#network-address-translation-nat-13) | 13 |
-| 18 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait-11) | 11 |
+| 18 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait-12) | 12 |
 | 19 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat-10) | 10 |
 | 20 | [Digital Modulation & Signal Processing (BPSK, QPSK)](#digital-modulation--signal-processing-bpsk-qpsk-10) | 10 |
 | 21 | [Email Architecture & Protocols (SMTP, POP3, IMAP)](#email-architecture--protocols-smtp-pop3-imap-10) | 10 |
@@ -41,7 +41,7 @@
 
 ---
 
-## Subnetting & IP Addressing (106)
+## Subnetting & IP Addressing (108)
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
@@ -296,6 +296,10 @@ ii) 211.10.15.4
 
 106. **How many subnets and hosts per subnet can you get from the network 172.20.0.0/27?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
 
+107. **A block address is granted to a small organization. If one of the addresses is 205.16.37.39/28, what is the first and last address of the block?** *[Multiple Ministry Assistant Programmer 2017 compact it 1230 (ET: N/A)]*
+
+108. **Explain why subnet mask is used?** *[Multiple Ministry Assistant Programmer 2017 compact it 1232-1233 (ET: N/A)]*
+
 ## OSI & TCP/IP Reference Model (51)
 
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
@@ -412,7 +416,7 @@ ii) 211.10.15.4
 
 51. **Name OSI layer that transmitted bit stream to frames.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213-1214 (ET: N/A)]*
 
-## Networking Fundamentals & Terminology (29)
+## Networking Fundamentals & Terminology (30)
 
 1. **Define Computer Network. Describe different types of Computer Networks.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -475,7 +479,9 @@ ii) 211.10.15.4
 
 29. **What is an access network? Briefly describe the available access network.** *[BTRC Assistant Director (Technical) 2019 compact it 1147 (ET: N/A)]*
 
-## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (21)
+30. **Explain the terms Domains, Bandwidth, Broadcast and Multicast.** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
+
+## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (22)
 
 1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -518,6 +524,8 @@ ii) 211.10.15.4
 20. **(a) Differentiate between DNS server and caches.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1142 (ET: N/A)]*
 
 21. **What is the difference between DNS server and caches? What is the importance of DNS cache in World Wide Web?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
+
+22. **Write short notes on DHCP and SMTP.** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227 (ET: N/A)]*
 
 ## Wireless Networks & IoT (mmWave) (19)
 
@@ -786,7 +794,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 16. **Write down the problem of asynchronous data transmission? How to solve this Problem using synchronous data transmission?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
 
-## Data Rate & Channel Capacity (Nyquist, Shannon) (15)
+## Data Rate & Channel Capacity (Nyquist, Shannon) (16)
 
 1. **Nyquist math: See in Data Communication & Networking Chapter** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
 
@@ -817,6 +825,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
 
 15. **a) Determine the Nyquist sampling rate and the Nyquist sampling interval for the signal $X(t) = \sin(2100\pi t)$** *[38th BCS 2018 compact it 1177 (ET: N/A)]*
+
+16. **Consider a noiseless channel with a bandwidth of 3 KHz transmitting a signal with two signal levels. What is the maximum bit rate?** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
 
 ## Physical Layer & Transmission Media (Cables & Wiring) (14)
 
@@ -1003,7 +1013,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 13. **Show the translation process of a NAT Box.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
-## Flow Control & Data Link Layer (Stop-and-Wait) (11)
+## Flow Control & Data Link Layer (Stop-and-Wait) (12)
 
 1. A single-mode optical fiber communication link connects two locations 250\text{ km} apart using WDM technology with 50 channels, where each channel provides a bit rate of 10\text{ Gbps}. The refractive index of the fiber is 1.5, and data is transmitted using the Stop-and-Wait protocol. A 1\text{ GB} file is divided into suitable data frames, and after successfully receiving each frame, the receiver sends a 54-byte acknowledgment (ACK) back to the sender. Assuming no processing or queuing delay, determine the total time required to completely transfer the 1\text{ GB} file, including data transmission time, propagation delay, ACK transmission time, and the Stop-and-Wait waiting time. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -1026,6 +1036,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 10. **Two OSI layers which known as “flow Control” which are those? Write them and explain.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1156 (ET: DU)]*
 
 11. **What is piggybacking in Networking? Difference among Hub, Switch and Router.** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
+
+12. **Explain IEEE 802.3 frame format.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
 
 ## Network Services (DHCP, NAT) (10)
 

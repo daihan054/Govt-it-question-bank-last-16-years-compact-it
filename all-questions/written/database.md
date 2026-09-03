@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 279 questions
+**Table of Contents** — 19 subtopics · 281 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [SQL Queries](#sql-queries-82) | 82 |
-| 2 | [Keys in DBMS](#keys-in-dbms-32) | 32 |
+| 2 | [Keys in DBMS](#keys-in-dbms-33) | 33 |
 | 3 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
-| 4 | [DBMS Architecture & Features](#dbms-architecture--features-23) | 23 |
+| 4 | [DBMS Architecture & Features](#dbms-architecture--features-24) | 24 |
 | 5 | [Normalization & Database Design](#normalization--database-design-21) | 21 |
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-18) | 18 |
 | 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-14) | 14 |
@@ -363,7 +363,7 @@ SELECT count (*) FROM (
 
 82. **What is the SQL query for showing only the duplicate lists in student (id, name, gpa) table?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1223 (ET: N/A)]*
 
-## Keys in DBMS (32)
+## Keys in DBMS (33)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -429,6 +429,28 @@ SELECT count (*) FROM (
 
 32. **Write down the differences between super key and candidate key with example.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1225 (ET: N/A)]*
 
+33. **What do you mean by primary key and foreign key?** *[Multiple Ministry Assistant Programmer 2017 compact it 1230 (ET: N/A)]*
+
+**Table Name: STUDENT**
+
+| Stu_Id | Stu_Name | Stu_Age |
+|---|---|---|
+| 101 | Steve | 23 |
+| 102 | John | 24 |
+| 103 | Robert | 28 |
+| 104 | Steve | 29 |
+
+**Course_enrollment table:**
+
+| Course_Id | Stu_Id |
+|---|---|
+| C01 | 101 |
+| C02 | 102 |
+| C03 | 101 |
+| C05 | 102 |
+| C06 | 103 |
+| C07 | 102 |
+
 ## ER Diagram & Database Design (25)
 
 1. BSCPL regularly publishes multiple job vacancies, where each Job is identified by a unique Job ID and contains information such as Job Title, Starting Salary, Job Description, and other relevant attributes. An Applicant is identified by a unique Applicant ID and has attributes such as Name, Date of Birth, Starting/Joining Date, Contact Information, and other details. An applicant can apply for only one job, while a particular job can receive applications from many applicants. Design the ER diagram for this system, showing the entities, attributes, primary keys, relationship, cardinalities, and participation constraints. [BSCCPL AME 21-08-2026 (BUET)]
@@ -489,7 +511,7 @@ SELECT count (*) FROM (
 
 25. **Design ER diagram for Online MCQ examination portal. Your design must contain separate entities for student, examination, question, solution and submission. Ensure that normalization is ful-fill in your design and identify the primary and foreign key.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1196-1197 (ET: N/A)]*
 
-## DBMS Architecture & Features (23)
+## DBMS Architecture & Features (24)
 
 1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।
    (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -537,6 +559,8 @@ SELECT count (*) FROM (
 22. **What are the roles of Database Engineer?** *[RAKUB Assistant Database Administrator 2020 compact it 1014 (ET: E-Zone)]*
 
 23. **A company needs key person for DBMS. What is his/her duty as key person?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
+
+24. **What is RDBMS? Why data are stored in database system instead of file?** *[ICT Ministry Assistant Programmer 2017 compact it 1236 (ET: N/A)]*
 
 ## Normalization & Database Design (21)
 

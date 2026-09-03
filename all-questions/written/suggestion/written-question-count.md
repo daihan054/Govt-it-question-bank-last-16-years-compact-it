@@ -1,33 +1,33 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3070** questions.
+Sorted by count, highest first. Total **3095** questions.
 
 ## IT questions
 
-Total: **2526** questions.
+Total: **2551** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **493** |
-| | Subnetting & IP Addressing | 106 |
+| **Computer Networks** | **— all subcategories —** | **499** |
+| | Subnetting & IP Addressing | 108 |
 | | OSI & TCP/IP Reference Model | 51 |
-| | Networking Fundamentals & Terminology | 29 |
-| | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 21 |
+| | Networking Fundamentals & Terminology | 30 |
+| | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 22 |
 | | Networking Devices | 19 |
 | | Wireless Networks & IoT (mmWave) | 19 |
 | | Multiplexing & Bandwidth | 18 |
 | | Routing Protocols & Route Configuration | 18 |
 | | Transport Layer (TCP & UDP) | 17 |
 | | Communication System & Transmission Modes | 16 |
-| | Data Rate & Channel Capacity (Nyquist, Shannon) | 15 |
+| | Data Rate & Channel Capacity (Nyquist, Shannon) | 16 |
 | | Error Detection & Data Communication (CRC, Throughput) | 14 |
 | | Network Topologies | 14 |
 | | Physical Layer & Transmission Media (Cables & Wiring) | 14 |
 | | IPv6 Addressing | 13 |
 | | Network Address Translation (NAT) | 13 |
 | | Physical Layer & Optical Fiber (Attenuation & Power Budget) | 13 |
-| | Flow Control & Data Link Layer (Stop-and-Wait) | 11 |
+| | Flow Control & Data Link Layer (Stop-and-Wait) | 12 |
 | | Digital Modulation & Signal Processing (BPSK, QPSK) | 10 |
 | | Email Architecture & Protocols (SMTP, POP3, IMAP) | 10 |
 | | Network Services (DHCP, NAT) | 10 |
@@ -43,11 +43,11 @@ Total: **2526** questions.
 | | Line Coding & Digital Encoding | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **279** |
+| **Database** | **— all subcategories —** | **281** |
 | | SQL Queries | 82 |
-| | Keys in DBMS | 32 |
+| | Keys in DBMS | 33 |
 | | ER Diagram & Database Design | 25 |
-| | DBMS Architecture & Features | 23 |
+| | DBMS Architecture & Features | 24 |
 | | Normalization & Database Design | 21 |
 | | SQL Commands (DDL, DML, DCL, TCL) | 18 |
 | | Transaction Management & ACID Properties | 14 |
@@ -63,11 +63,11 @@ Total: **2526** questions.
 | | NoSQL, NewSQL & Modern Databases | 2 |
 | | Indexing in DBMS | 1 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
-| **C Programming** | **— all subcategories —** | **254** |
-| | Basic Programs & Control Statements | 104 |
+| **C Programming** | **— all subcategories —** | **259** |
+| | Basic Programs & Control Statements | 106 |
 | | Output Tracing & Control Flow | 51 |
-| | Recursion & Functions | 37 |
-| | Operators, Data Types & Language Concepts | 23 |
+| | Recursion & Functions | 38 |
+| | Operators, Data Types & Language Concepts | 25 |
 | | Flowcharts & Algorithms | 16 |
 | | String Manipulation & Algorithms | 14 |
 | | File Handling | 4 |
@@ -86,12 +86,12 @@ Total: **2526** questions.
 | | CPU Scheduling | 6 |
 | | Process Synchronization & Concurrency | 4 |
 | | Windows & System Administration | 4 |
-| **Computer & Network Security** | **— all subcategories —** | **177** |
+| **Computer & Network Security** | **— all subcategories —** | **179** |
 | | Social Engineering & Cyber Attacks | 31 |
 | | Cryptography | 29 |
 | | Firewalls & Network Defense | 20 |
 | | Malware & Security Threats | 19 |
-| | Web Security Vulnerabilities | 17 |
+| | Web Security Vulnerabilities | 19 |
 | | Authentication & Access Control | 16 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
 | | Cyber Crime & Security | 10 |
@@ -116,33 +116,33 @@ Total: **2526** questions.
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **142** |
-| | Computer Fundamentals & Acronyms | 53 |
+| **Computer Fundamentals** | **— all subcategories —** | **144** |
+| | Computer Fundamentals & Acronyms | 54 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 22 |
-| | Software Types & Classification | 14 |
+| | Software Types & Classification | 15 |
 | | Data Center Infrastructure & Power Management | 10 |
 | | Blockchain & Emerging Technologies | 8 |
 | | Server Hardware & Enterprise Systems | 5 |
 | | Quantum Computing & Emerging Technologies | 3 |
 | | Digital Banking & Financial Inclusion | 2 |
 | | User Interfaces (CLI vs GUI) | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **141** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **142** |
 | | Logic Gates & Universal Gates | 32 |
 | | Number Systems & Base Conversions | 23 |
 | | Combinational Circuits (Adders, Encoders, MUX) | 22 |
 | | Karnaugh Map (K-Map) | 19 |
 | | Boolean Algebra & De Morgan’s Theorem | 18 |
-| | Sequential Circuits (Latches & Flip-Flops) | 16 |
+| | Sequential Circuits (Latches & Flip-Flops) | 17 |
 | | Logic Families (TTL vs CMOS) | 6 |
 | | 2's Complement & Binary Arithmetic | 4 |
 | | Finite State Machines (FSM) | 1 |
-| **Algorithm** | **— all subcategories —** | **132** |
+| **Algorithm** | **— all subcategories —** | **133** |
 | | Sorting Algorithms & Complexity | 36 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 15 |
+| | Searching Algorithms | 14 |
 | | Algorithm Analysis & Asymptotic Complexity | 13 |
-| | Searching Algorithms | 13 |
 | | Dynamic Programming & Greedy Algorithms | 9 |
 | | Graph Theory & Isomorphism | 7 |
 | | Greedy Algorithms (Fractional Knapsack) | 6 |
@@ -152,15 +152,15 @@ Total: **2526** questions.
 | | Heap & Priority Queue | 2 |
 | | Huffman Coding & Data Compression | 1 |
 | | NP-Completeness & Complexity Reduction | 1 |
-| **Microprocessor & Computer Architecture** | **— all subcategories —** | **122** |
-| | Microprocessor Architecture & Functions | 29 |
+| **Microprocessor & Computer Architecture** | **— all subcategories —** | **128** |
+| | Microprocessor Architecture & Functions | 31 |
 | | Memory Hierarchy & Storage | 25 |
 | | RAID Architecture & Storage | 15 |
-| | Cache Memory | 12 |
+| | Cache Memory | 14 |
 | | Secondary Storage (HDD vs SSD) | 10 |
-| | Assembly Language & Addressing Modes | 7 |
+| | Assembly Language & Addressing Modes | 8 |
+| | Instruction Pipelining & Hazards | 7 |
 | | CPU Performance & Instruction Cycle | 6 |
-| | Instruction Pipelining & Hazards | 6 |
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |

@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 177 questions
+**Table of Contents** — 14 subtopics · 179 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,7 +7,7 @@
 | 2 | [Cryptography](#cryptography-29) | 29 |
 | 3 | [Firewalls & Network Defense](#firewalls--network-defense-20) | 20 |
 | 4 | [Malware & Security Threats](#malware--security-threats-19) | 19 |
-| 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-17) | 17 |
+| 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-19) | 19 |
 | 6 | [Authentication & Access Control](#authentication--access-control-16) | 16 |
 | 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
 | 8 | [Cyber Crime & Security](#cyber-crime--security-10) | 10 |
@@ -235,7 +235,7 @@
 
 19. **Define ransomware attack.** *[NESCO Manager (Software) 2018 compact it 1209 (ET: N/A)]*
 
-## Web Security Vulnerabilities (17)
+## Web Security Vulnerabilities (19)
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -270,6 +270,10 @@
 16. **What is SQL injection? How many ways to prevent it?** *[Bangladesh Television Assistant Programmer 2019 compact it 1064 (ET: N/A)]*
 
 17. **(খ) Cross Site Scripting (XSS) বলতে কী বোঝায়? এর হাত থেকে রক্ষা পাওয়ার পদ্ধতিগুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1090 (ET: N/A)]*
+
+18. **What is session hijacking and how to encrypt username and password in PHP?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227-1228 (ET: N/A)]*
+
+19. **What are the important steps to secure a web server?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1228 (ET: N/A)]*
 
 ## Authentication & Access Control (16)
 

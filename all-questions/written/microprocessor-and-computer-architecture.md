@@ -1,15 +1,15 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 122 questions
+**Table of Contents** — 11 subtopics · 128 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-29) | 29 |
+| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-31) | 31 |
 | 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-25) | 25 |
 | 3 | [RAID Architecture & Storage](#raid-architecture--storage-15) | 15 |
-| 4 | [Cache Memory](#cache-memory-12) | 12 |
+| 4 | [Cache Memory](#cache-memory-14) | 14 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
-| 6 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-7) | 7 |
-| 7 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-6) | 6 |
+| 6 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-8) | 8 |
+| 7 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-7) | 7 |
 | 8 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-6) | 6 |
 | 9 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
 | 10 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-4) | 4 |
@@ -19,7 +19,7 @@
 
 ---
 
-## Microprocessor Architecture & Functions (29)
+## Microprocessor Architecture & Functions (31)
 
 1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -86,6 +86,10 @@
 28. **(ক) System bus কী? বিভিন্ন প্রকার System bus সম্পর্কে সচিত্র আলোচনা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
 
 29. **In an arithmetic operation the result has even number of 1s and for another operation the result is zero. Now write the the present status of the flag register.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120-1121 (ET: BUET)]*
+
+30. **Explain the functions of ALU and Control Unit of a Computer.** *[Multiple Ministry Assistant Programmer 2017 compact it 1229 (ET: N/A)]*
+
+31. **Difference between microprocessor and micro-controller.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
 
 ## Memory Hierarchy & Storage (25)
 
@@ -171,7 +175,7 @@
 
 15. **Describe RAID level.** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
 
-## Cache Memory (12)
+## Cache Memory (14)
 
 1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
 
@@ -197,6 +201,10 @@
 
 12. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** *[BPSC Assistant Network Engineer 2020 compact it 951-952 (ET: N/A)], [BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
+13. **If main memory access time is 100ns, cache access time is 50 ns, cache hit rate is 90% then what is the average time to read from memory?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1228 (ET: N/A)]*
+
+14. **Explain how cache memory is used to increase the processing speed of computer.** *[Multiple Ministry Assistant Programmer 2017 compact it 1230-1231 (ET: N/A)]*
+
 ## Secondary Storage (HDD vs SSD) (10)
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
@@ -219,7 +227,7 @@
 
 10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 951 (ET: N/A)], [BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
-## Assembly Language & Addressing Modes (7)
+## Assembly Language & Addressing Modes (8)
 
 1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
    (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -237,7 +245,9 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 7. **Describe addressing mode of 8086 microprocessors.** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1225-1226 (ET: N/A)]*
 
-## Instruction Pipelining & Hazards (6)
+8. **Explain the instructions LDS, PUSHF, TEST and CLD.** *[Multiple Ministry Assistant Programmer 2017 compact it 1235 (ET: N/A)]*
+
+## Instruction Pipelining & Hazards (7)
 
 1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
 
@@ -254,6 +264,8 @@ MOV AX, A534H এবং MOV AX, [A534H]
 5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
 6. **How computer Architecture is characterized. What are the 5 stages of the DLX pipeline?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049-1050 (ET: BUET)]*
+
+7. **“Pentium processor has a superscalar architecture.” Explain the meaning of statement.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
 
 ## CPU Performance & Instruction Cycle (6)
 

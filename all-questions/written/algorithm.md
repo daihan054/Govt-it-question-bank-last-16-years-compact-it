@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 132 questions
+**Table of Contents** — 14 subtopics · 133 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-36) | 36 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-15) | 15 |
-| 4 | [Searching Algorithms](#searching-algorithms-13) | 13 |
+| 4 | [Searching Algorithms](#searching-algorithms-14) | 14 |
 | 5 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-13) | 13 |
 | 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms-9) | 9 |
 | 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-7) | 7 |
@@ -174,7 +174,7 @@
 
 15. **S1, S2, S3, S4, S5 are five nodes and a value on lines denotes the cost to transmit power. (i) Draw a graph to find the shortest path to transmit power. (ii) Calculates the average cost.** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
-## Searching Algorithms (13)
+## Searching Algorithms (14)
 
 1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
 
@@ -201,6 +201,8 @@
 12. **(খ) Binary Search কিভাবে করা হয়? উদাহরণসহ দেখান।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087 (ET: N/A)]*
 
 13. **(ক) Liner search কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088-1089 (ET: N/A)]*
+
+14. **What is algorithm? Write down the algorithm to find out the second highest element in an n-element array.** *[ICT Ministry Assistant Programmer 2017 compact it 1236 (ET: N/A)]*
 
 ## Algorithm Analysis & Asymptotic Complexity (13)
 

@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 141 questions
+**Table of Contents** — 9 subtopics · 142 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,7 +8,7 @@
 | 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-22) | 22 |
 | 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-19) | 19 |
 | 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-18) | 18 |
-| 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-16) | 16 |
+| 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-17) | 17 |
 | 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-6) | 6 |
 | 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-4) | 4 |
 | 9 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
@@ -273,7 +273,7 @@
 
 18. **Construct a truth table for the following function: $(r \lor (q \land \neg p)) \land \neg(r \land (q \land \neg p))$ is the same as $r \oplus (q \land \neg p)$ where $\lor = \text{OR}, \land = \text{AND}, \neg = \text{NOT}, \oplus = \text{XOR}$** *[Combined 3 Banks Assistant Programmer 2018 compact it 1198 (ET: N/A)]*
 
-## Sequential Circuits (Latches & Flip-Flops) (16)
+## Sequential Circuits (Latches & Flip-Flops) (17)
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
@@ -306,6 +306,8 @@
 15. **What is synchronous? Why sequential circuit use synchronization.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
 16. **What is the difference between flip-flop and latch with figure?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190-1191 (ET: N/A)]*
+
+17. **What is the difference between latch and flip-flop?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227 (ET: N/A)]*
 
 ## Logic Families (TTL vs CMOS) (6)
 

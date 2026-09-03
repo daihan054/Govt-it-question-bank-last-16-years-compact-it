@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 254 questions
+**Table of Contents** — 9 subtopics · 259 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-104) | 104 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-106) | 106 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-51) | 51 |
-| 3 | [Recursion & Functions](#recursion--functions-37) | 37 |
-| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-23) | 23 |
+| 3 | [Recursion & Functions](#recursion--functions-38) | 38 |
+| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-16) | 16 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-14) | 14 |
 | 7 | [File Handling](#file-handling-4) | 4 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (104)
+## Basic Programs & Control Statements (106)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -389,6 +389,10 @@ for(a=1; a<=100; a++)
 103. **Suppose an array is {4,5,6,7}. Write a C program that will output like {4,5}, {4,6}, {4,7}, {5,6}, {5,7}, {6,7}.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1212-1213 (ET: N/A)]*
 
 104. **Write a program using any programming language that reads five numbers from keyboard and display the smaller, larger and average of those numbers.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217-1218 (ET: N/A)]*
+
+105. **Write a program to read the coordinates of the end points of a line and to find its length.** *[Multiple Ministry Assistant Programmer 2017 compact it 1231 (ET: N/A)]*
+
+106. **Write a program in C++ to calculate the sum of the series: $1+(1+2)+(1+2+3)+\dots\dots+(1+2+\dots\dots+n)$.** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
 
 ## Output Tracing & Control Flow (51)
 
@@ -1004,7 +1008,7 @@ printf("%d",i);
 return 0;
 ```
 
-## Recursion & Functions (37)
+## Recursion & Functions (38)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -1130,7 +1134,9 @@ int main() {
 
 37. **Write the performance of a non-recursive function which is written in recursive way.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
-## Operators, Data Types & Language Concepts (23)
+38. **Write a program in C with recursive function to compute the value $X^n$ where n is a positive integer and x has real value.** *[Multiple Ministry Assistant Programmer 2017 compact it 1235-1236 (ET: N/A)]*
+
+## Operators, Data Types & Language Concepts (25)
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
@@ -1182,6 +1188,10 @@ int main() {
 22. **Which of the following is the correct order of evaluation?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
 23. **(c) Is it possible to convert all if-else code into switch code block? Give an example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
+
+24. **Using examples explain data types used in C language.** *[Multiple Ministry Assistant Programmer 2017 compact it 1231 (ET: N/A)]*
+
+25. **Explain in details the different forms of looping statement in C language.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233-1235 (ET: N/A)]*
 
 ## Flowcharts & Algorithms (16)
 
