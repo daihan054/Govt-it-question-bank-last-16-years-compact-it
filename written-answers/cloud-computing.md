@@ -319,19 +319,216 @@ Approach A: Deploy each service in a separate Virtual Machine.
 Approach B: Deploy each service in a separate Container.
 A submarine cable connects Bangladesh to an international data center. At the cable landing station, a server hosts 4 VMs, while another server runs 4 containers. Which one and why? [BSCCPL AME 21-08-2026 (BUET)]
 
+   Answer: For a national submarine cable landing station, **Approach A — separate Virtual Machines — is the better choice**, because isolation and security matter more here than density.
+
+   Core technical difference
+   - A VM virtualises the HARDWARE. Each VM runs its own full guest operating system on top of a hypervisor.
+   - A container virtualises the OPERATING SYSTEM. All containers share the host kernel and only package the application with its libraries.
+
+   | Point | Virtual Machine | Container |
+   |---|---|---|
+   | Virtualises | Hardware | Operating system |
+   | Guest OS | Own full OS per VM | Shares the host kernel |
+   | Size | GBs | MBs |
+   | Boot time | Minutes | Seconds |
+   | Isolation | Strong — full separation | Weaker — shared kernel |
+   | Overhead | High | Very low |
+   | Managed by | Hypervisor (VMware ESXi, KVM, Hyper-V) | Container engine (Docker, containerd) |
+
+   Why VMs win for this specific case
+   - **Security isolation** — the station serves SEVERAL DIFFERENT ORGANIZATIONS. Each VM is fully isolated, so a compromise of the Web VM cannot reach the Database VM. With containers, a kernel-level exploit can escape to every other container on the host.
+   - **Critical national infrastructure** — DNS and Network Management for international connectivity must not fail together. Full OS isolation limits the blast radius.
+   - **Different OS requirements** — the database or the network management system may need a specific OS version or kernel module that containers cannot provide, since they must share the host kernel.
+   - **Regulatory and audit needs** — per-organization VMs give clean boundaries for compliance and per-tenant auditing.
+   - **Stable, long-running services** — DNS, database and monitoring are not deployed dozens of times a day, so the container advantage of fast start-up is not valuable here.
+
+   When containers would be the better choice instead
+   - If the five services all belonged to ONE organization, needed frequent redeployment, and had to be packed densely on limited hardware, containers would win on efficiency — 4 containers use far less RAM and CPU than 4 VMs and start in seconds.
+
+   - A practical middle path used in real data centres: run containers INSIDE VMs. Each organization gets its own VM boundary, and inside that VM its services run as containers for easy deployment.
+
 2. **What is Virtualization? Write down the benefits of Virtualization. Write down the top 5 virtual platform software.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
+
+   Answer: Virtualization is the technology that creates a software-based (virtual) version of a physical resource — a server, storage device, network or operating system — so that one physical machine can run several isolated virtual machines at the same time. A software layer called the hypervisor sits between the hardware and the virtual machines and shares the CPU, memory and disk among them.
+
+   Benefits of virtualization
+   - **Server consolidation** — one physical server replaces many under-used ones, cutting hardware cost, rack space and power consumption.
+   - **Better resource utilisation** — a typical physical server runs at 10-15% utilisation; virtualization can push it to 70-80%.
+   - **Isolation** — each VM is separate, so a crash or compromise in one does not affect the others.
+   - **Fast provisioning** — a new server takes minutes from a template instead of weeks of procurement.
+   - **Easy backup and disaster recovery** — a whole VM is a file, so it can be snapshotted, cloned and restored quickly.
+   - **Live migration** — a running VM can be moved to another host with no downtime, which allows maintenance without service interruption.
+   - **Testing and development** — multiple OS versions can be tested on one machine, and snapshots allow instant rollback.
+   - **Foundation of cloud computing** — IaaS is virtualization offered as a service.
+
+   Top 5 virtualization platforms
+   - **VMware vSphere / ESXi** — the enterprise market leader, a Type 1 bare-metal hypervisor.
+   - **Microsoft Hyper-V** — Type 1 hypervisor built into Windows Server.
+   - **KVM (Kernel-based Virtual Machine)** — open source, built into the Linux kernel; the basis of most public clouds.
+   - **Oracle VirtualBox** — free Type 2 hypervisor, popular for desktops and testing.
+   - **Citrix Hypervisor (XenServer)** — Type 1, based on the Xen project.
 
 3. **What is Server Virtualization? Explain with example of its.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 551 (ET: BIBM)]*
 
+   Answer: Server virtualization is the process of dividing one physical server into several isolated virtual servers, each running its own operating system and applications as if it were a separate machine. A hypervisor sits between the hardware and the virtual servers and allocates CPU, memory, disk and network to each.
+
+   ```mermaid
+   flowchart TD
+       A[Physical Server Hardware<br/>CPU, RAM, Disk, NIC] --> B[Hypervisor]
+       B --> C[VM 1: Web Server<br/>Linux]
+       B --> D[VM 2: Database Server<br/>Windows]
+       B --> E[VM 3: Mail Server<br/>Linux]
+   ```
+
+   Example — a bank branch server room
+   - Before virtualization: three physical servers, one each for the web application, the database and email. Each runs at about 12% CPU utilisation, so most of the hardware is idle, yet all three consume power, cooling and rack space.
+   - After virtualization: one powerful server with a hypervisor runs all three as VMs. Utilisation rises to around 70%, two servers are eliminated, and each service is still isolated in its own OS.
+
+   Types of server virtualization
+   - Full virtualization — the guest OS is unaware it is virtualised (VMware ESXi, KVM).
+   - Para-virtualization — the guest OS is modified to cooperate with the hypervisor (Xen).
+   - OS-level virtualization — containers sharing one kernel (Docker, LXC).
+
+   Benefits shown by the example
+   - Lower hardware, power and cooling cost; faster provisioning of new servers; easy snapshot and restore; live migration for zero-downtime maintenance.
+
 4. **How virtualization help physical server.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 566 (ET: N/A)]*
+
+   Answer: Virtualization helps a physical server mainly by turning wasted capacity into useful work.
+
+   - **Raises utilisation** — a dedicated physical server usually runs at 10-15% of its capacity. Hosting several VMs on it pushes utilisation to 70-80%, so the same hardware does far more work.
+   - **Server consolidation** — ten lightly loaded physical servers can become ten VMs on one or two physical machines, cutting purchase cost, rack space, power and cooling.
+   - **Isolation without extra hardware** — each workload gets its own OS and its own failure boundary, which previously required a separate box.
+   - **Faster provisioning** — a new server is cloned from a template in minutes, with no procurement cycle.
+   - **Simpler backup and recovery** — an entire VM is just a set of files, so snapshots and restores are quick and complete.
+   - **Live migration** — running VMs move to another host, so the physical server can be shut down for maintenance without any service outage.
+   - **Hardware independence** — a VM is not tied to specific hardware, so replacing or upgrading the physical server does not require reinstalling the systems.
+   - **Testing and rollback** — snapshots allow a change to be undone instantly, which is impossible on bare metal.
+
+   - The cost of these benefits is a small performance overhead from the hypervisor, and the fact that a failure of the physical host now affects every VM on it — which is why clustering and live migration are used alongside virtualization.
 
 5. **Define a virtual machine with a neat diagram, explain the working of VM. What are the benefits of a VM?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 442 (ET: BIBM)]*
 
+   Answer: A virtual machine (VM) is a software emulation of a complete physical computer. It has its own virtual CPU, memory, disk and network interface, and runs its own operating system, called the guest OS, completely isolated from other VMs on the same hardware.
+
+   Diagram
+   ```mermaid
+   flowchart TD
+       H[Physical Hardware<br/>CPU / RAM / Storage / Network] --> HY[Hypervisor - VMM]
+       HY --> V1[VM 1]
+       HY --> V2[VM 2]
+       HY --> V3[VM 3]
+       V1 --> G1[Guest OS + Applications]
+       V2 --> G2[Guest OS + Applications]
+       V3 --> G3[Guest OS + Applications]
+   ```
+
+   How a VM works
+   - The hypervisor, also called the Virtual Machine Monitor, sits directly on the hardware or on a host OS.
+   - It divides the physical CPU cores, RAM and disk into virtual slices and assigns them to each VM.
+   - Each VM believes it owns real hardware; the hypervisor intercepts privileged instructions and translates them to the real hardware.
+   - The hypervisor schedules the VMs onto physical CPUs, exactly as an OS schedules processes.
+   - Isolation is enforced by the hypervisor, so one VM cannot read another's memory.
+
+   Benefits of a VM
+   - Runs multiple operating systems on one machine at the same time.
+   - Strong isolation — a crash or infection in one VM does not affect the others.
+   - Hardware independence — the VM can be moved to a different physical machine unchanged.
+   - Snapshot and rollback — save the exact state and return to it instantly.
+   - Efficient use of hardware and lower total cost.
+   - Safe environment for testing untrusted software or new OS versions.
+   - Live migration for maintenance with no downtime.
+
+   - Drawback: each VM carries a full guest OS, so it uses more disk and RAM and boots more slowly than a container.
+
 6. **What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
+
+   Answer:
+
+   What Docker is
+   - Docker is a containerization platform that packages an application together with all its dependencies — libraries, configuration files and runtime — into a single unit called a container image.
+   - Unlike a VM, a container does not carry a guest OS. It shares the host kernel and is managed by the Docker Engine, so it is only megabytes in size and starts in seconds.
+
+   Problems when moving a Windows application to a Linux server
+   - **Binary incompatibility** — a Windows `.exe` or `.dll` will not run on Linux at all, because the executable format and system calls are different (PE vs ELF).
+   - **Missing runtime and libraries** — .NET Framework, Windows-specific DLLs, COM components and the Windows registry do not exist on Linux.
+   - **File path and case sensitivity** — Windows uses `C:\folder\file` and is case-insensitive; Linux uses `/folder/file` and is case-sensitive.
+   - **Line endings** — CRLF on Windows versus LF on Linux breaks scripts and config parsing.
+   - **Permissions model** — Windows ACLs differ completely from Linux `rwx` permissions and ownership.
+   - **Services and dependencies** — IIS, Windows Services, Active Directory integration and Windows-only APIs have no direct Linux equivalent.
+
+   Can Docker solve it?
+   - **Partly, not fully.** Docker guarantees that an application runs identically wherever the container runs, which removes the "it works on my machine" class of problems — mismatched library versions, missing dependencies and configuration drift.
+   - **But Docker cannot change the kernel.** A Windows container needs a Windows host kernel; a Linux container needs a Linux kernel. A Windows container simply will not run on a Linux server.
+   - So the application must first be made Linux-compatible — for example by porting it from .NET Framework to .NET Core / .NET 5+, which runs cross-platform. Once it is Linux-capable, Docker packages it and makes deployment to any Linux server reliable and repeatable.
+
+   - Summary: Docker solves the DEPENDENCY and ENVIRONMENT problem, not the PLATFORM problem. The rewrite to a cross-platform runtime is still required.
 
 7. **What is type 2 hypervisors in virtual machine?** *[Probashi Kallyan Bank Programmer 2019 compact it 1157 (ET: AUST)]*
 
+   Answer: A Type 2 hypervisor, also called a hosted hypervisor, is installed as an ordinary application ON TOP of an existing host operating system, rather than directly on the hardware.
+
+   How it works
+   - The stack is: Hardware → Host OS → Type 2 Hypervisor → Guest OS.
+   - The hypervisor requests CPU, memory and disk from the host OS, which in turn talks to the hardware. Every hardware access therefore passes through one extra layer.
+
+   Characteristics
+   - Easy to install — it is just another program, like installing any desktop software.
+   - Lower performance, because the host OS sits between the VM and the hardware.
+   - Less secure, since a compromise of the host OS exposes every VM.
+   - Ideal for desktops, laptops, development, testing and learning — not for production servers.
+
+   Examples
+   - Oracle VirtualBox, VMware Workstation, VMware Fusion, Parallels Desktop, QEMU (in user mode).
+
+   | Point | Type 1 (bare metal) | Type 2 (hosted) |
+   |---|---|---|
+   | Installed on | Directly on hardware | On top of a host OS |
+   | Performance | Near native | Lower, extra layer |
+   | Security | Higher | Lower |
+   | Used in | Data centres, production servers | Desktops, testing |
+   | Examples | VMware ESXi, Hyper-V, Xen, KVM | VirtualBox, VMware Workstation |
+
 8. **Explain Type 1 and Type 2 hypervisors in virtual machine operating system with figure.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220 (ET: N/A)]*
+
+   Answer: A hypervisor, or Virtual Machine Monitor, is the software that creates and runs virtual machines. There are two types, distinguished by where the hypervisor sits.
+
+   Type 1 — bare-metal hypervisor
+   ```mermaid
+   flowchart TD
+       A[Physical Hardware] --> B[Type 1 Hypervisor]
+       B --> C[Guest OS 1 + Apps]
+       B --> D[Guest OS 2 + Apps]
+       B --> E[Guest OS 3 + Apps]
+   ```
+   - Installed directly on the hardware, with no host OS underneath.
+   - The hypervisor itself acts as a minimal operating system and controls the hardware directly.
+   - Near-native performance, strong isolation and high security, because the attack surface is small.
+   - Used in enterprise data centres and by every major cloud provider.
+   - Examples: VMware ESXi, Microsoft Hyper-V, Citrix XenServer, KVM.
+
+   Type 2 — hosted hypervisor
+   ```mermaid
+   flowchart TD
+       A[Physical Hardware] --> B[Host Operating System]
+       B --> C[Type 2 Hypervisor]
+       C --> D[Guest OS 1 + Apps]
+       C --> E[Guest OS 2 + Apps]
+   ```
+   - Installed as an application on an existing host OS such as Windows or macOS.
+   - Every hardware request passes through the host OS, adding overhead.
+   - Easy to install and use, but slower and less secure than Type 1.
+   - Used on desktops for development, testing and running a second OS.
+   - Examples: Oracle VirtualBox, VMware Workstation, Parallels Desktop.
+
+   | Point | Type 1 | Type 2 |
+   |---|---|---|
+   | Position | Directly on hardware | On top of a host OS |
+   | Also called | Bare metal, native | Hosted |
+   | Performance | Near native | Noticeably slower |
+   | Security and isolation | Strong | Weaker — depends on the host OS |
+   | Installation | Complex, needs dedicated hardware | Simple, like any application |
+   | Typical use | Production servers, cloud | Personal computers, labs |
 
 ## Cloud Storage & Fundamentals (6)
 
