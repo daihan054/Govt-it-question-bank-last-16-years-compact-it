@@ -445,13 +445,169 @@
 
 1. Consider the grammar: E -> E + E | E * E | id. Show that the grammar is ambiguous for the string: id + id * id. [SO IT 25-07-2026]
 
+   Answer: A grammar is ambiguous if a single string has MORE THAN ONE parse tree (or more than one leftmost derivation). For `id + id * id` two different parse trees exist, so the grammar is ambiguous.
+
+   Parse tree 1 — treats `+` as the top operator, giving `id + (id * id)`
+   ```
+                E
+             /  |  \
+            E   +   E
+            |     / | \
+           id    E  *  E
+                 |     |
+                id    id
+   ```
+   - Leftmost derivation: `E → E + E → id + E → id + E * E → id + id * E → id + id * id`
+   - Value with id = 2, 3, 4 : `2 + (3 × 4) = 14`
+
+   Parse tree 2 — treats `*` as the top operator, giving `(id + id) * id`
+   ```
+                E
+             /  |  \
+            E   *   E
+          / | \     |
+         E  +  E   id
+         |     |
+        id    id
+   ```
+   - Leftmost derivation: `E → E * E → E + E * E → id + E * E → id + id * E → id + id * id`
+   - Value with id = 2, 3, 4 : `(2 + 3) × 4 = 20`
+
+   Conclusion
+   - The same string `id + id * id` produces two distinct parse trees and two distinct leftmost derivations, giving two different values. Therefore the grammar is **ambiguous**.
+
+   How to remove the ambiguity
+   - The grammar carries no precedence or associativity information. Rewriting it with separate levels fixes this:
+   ```
+   E → E + T | T
+   T → T * F | F
+   F → id
+   ```
+   - Now `*` binds tighter than `+` because `T` sits below `E`, and both are left-associative. Only one parse tree exists for `id + id * id`, matching the value 14.
+
 2. **6.15 Consider the grammar: E \to E + E \mid E * E \mid id. Show that the grammar is ambiguous for the string: id + id * id.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+   Answer: To prove ambiguity, two different parse trees must be produced for the same string.
+
+   Definition used
+   - A context-free grammar is ambiguous if some string in its language has more than one parse tree, or equivalently more than one leftmost derivation.
+
+   Derivation 1 (leftmost) — `+` applied last, so `*` binds tighter
+   ```
+   E ⇒ E + E
+     ⇒ id + E
+     ⇒ id + E * E
+     ⇒ id + id * E
+     ⇒ id + id * id
+   ```
+   Parse tree
+   ```
+             E
+          /  |  \
+         E   +   E
+         |     / | \
+        id    E  *  E
+              |     |
+             id    id
+   ```
+
+   Derivation 2 (leftmost) — `*` applied last, so `+` binds tighter
+   ```
+   E ⇒ E * E
+     ⇒ E + E * E
+     ⇒ id + E * E
+     ⇒ id + id * E
+     ⇒ id + id * id
+   ```
+   Parse tree
+   ```
+             E
+          /  |  \
+         E   *   E
+       / | \     |
+      E  +  E   id
+      |     |
+     id    id
+   ```
+
+   Result
+   - Both derivations are leftmost and both produce exactly the string `id + id * id`, yet the parse trees differ.
+   - Hence the grammar is **ambiguous**. Proved.
+
+   Why this matters in practice
+   - A compiler using this grammar could not decide whether `2 + 3 * 4` means 14 or 20. Ambiguous grammars are therefore unusable for parsing, and the grammar must be rewritten with precedence levels (`E → E + T | T`, `T → T * F | F`, `F → id`) before a parser can be built from it.
+
 3. **How CFG to represent a palindrome number?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
+
+   Answer: A palindrome reads the same forwards and backwards. The grammar is built by adding the SAME symbol at both ends at every step, which is exactly what a context-free grammar can do and a regular expression cannot.
+
+   CFG for binary palindromes over `{0, 1}`
+   ```
+   S → 0 S 0
+   S → 1 S 1
+   S → 0
+   S → 1
+   S → ε
+   ```
+   Written compactly: `S → 0S0 | 1S1 | 0 | 1 | ε`
+
+   Meaning of each rule
+   - `S → 0S0` and `S → 1S1` — wrap the current string with a matching pair, keeping symmetry.
+   - `S → 0` and `S → 1` — base cases for odd-length palindromes, giving the middle symbol.
+   - `S → ε` — base case for even-length palindromes, giving an empty middle.
+
+   Derivation of `10101`
+   ```
+   S ⇒ 1S1 ⇒ 10S01 ⇒ 10101
+   ```
+   (using `S → 1S1`, then `S → 0S0`, then `S → 1`)
+
+   Derivation of `1001`
+   ```
+   S ⇒ 1S1 ⇒ 10S01 ⇒ 1001
+   ```
+   (last step uses `S → ε`)
+
+   For decimal palindrome numbers over digits 0-9
+   ```
+   S → 0S0 | 1S1 | 2S2 | ... | 9S9 | 0 | 1 | ... | 9 | ε
+   ```
+
+   - Why a CFG is needed: the language of palindromes is NOT regular. A finite automaton has finite memory and cannot remember an arbitrarily long first half to compare with the second. This is proved with the pumping lemma.
+   - A pushdown automaton can accept it, by pushing the first half onto a stack and popping while matching the second half.
 
 4. **Context free Grammar: (like as....)** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 864 (ET: BUET)]*
 
 5. **Draw a derivation tree for the string “bab” from the CFG given by- S \to bSb \mid a \mid b** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 877-878 (ET: BUET)]*
+
+   Answer:
+
+   Derivation
+   ```
+   S ⇒ bSb        (using S → bSb)
+     ⇒ bab        (using S → a)
+   ```
+
+   Derivation tree
+   ```
+              S
+           /  |  \
+          b   S   b
+              |
+              a
+   ```
+
+   Reading the tree
+   - The root is the start symbol `S`.
+   - The first production `S → bSb` gives three children: terminal `b`, non-terminal `S`, terminal `b`.
+   - The inner `S` is replaced using `S → a`, producing the single leaf `a`.
+   - Reading the leaves from left to right gives `b a b` — exactly the required string. This is called the yield of the tree.
+
+   Verification
+   - Only two steps are needed, and each step uses a rule that exists in the grammar.
+   - The tree is unique for this string, because after `S → bSb` the middle `S` must expand to a single terminal, and only `a` produces `bab`. Choosing `S → b` would give `bbb` instead.
+
+   - Note the language of this grammar is `{ bⁿ a bⁿ } ∪ { bⁿ b bⁿ }` — strings with an equal number of `b`s on both sides of a single middle symbol. Like the palindrome language, it needs a CFG rather than a regular expression, because the two counts must be matched.
 
 ## Lexical Analysis & Compiler Phases (5)
 
