@@ -825,11 +825,11 @@
 
 1. **Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-linkage hierarchical clustering technique.** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 473 (ET: N/A)]*
 
-   Answer: In single-linkage agglomerative clustering, every point starts as its own cluster and the two closest points are merged first. So we compute the Euclidean distance between every pair and pick the smallest.
+   Answer: In agglomerative hierarchical clustering every point starts as its own cluster, and the two closest clusters are merged first. Single linkage means the distance between two clusters is the shortest distance between any of their members. So the first merge is simply the closest pair of points.
 
-   Formula: `d(A, B) = √[(x2 - x1)² + (y2 - y1)²]`
+   Formula: `d(A, B) = √[(x₂ − x₁)² + (y₂ − y₁)²]`
 
-   Step 1 - distance matrix
+   Step 1 - build the proximity (distance) matrix
 
    | Pair | (dx)² + (dy)² | Distance |
    |---|---|---|
@@ -845,14 +845,15 @@
    | P4-P5 | (0.31)² + (0.18)² = 0.1285 | 0.3585 |
 
    Step 2 - sample calculation for the smallest pair
-   - `d(P3, P4) = √[(0.66 - 0.49)² + (0.89 - 0.64)²]`
+   - `d(P3, P4) = √[(0.66 − 0.49)² + (0.89 − 0.64)²]`
    - `= √[(0.17)² + (0.25)²] = √[0.0289 + 0.0625] = √0.0914`
    - `= 0.3023`
 
    Step 3 - pick the minimum
-   - Smallest distance in the matrix is 0.3023, between P3 and P4.
-   - Next smallest is P2-P5 at 0.3239, so it is not the first merge.
+   - The smallest value in the matrix is 0.3023, between P3 and P4.
+   - The next smallest is P2-P5 at 0.3239, so it is not the first merge.
 
    Final answer
-   - The first two points grouped are P3 (0.66, 0.89) and P4 (0.49, 0.64), merging at distance 0.3023.
-   - The new cluster is {P3, P4}. In the next round, single-linkage uses the shortest distance from any member of this cluster to the remaining points.
+   - The first two points grouped are P3 (0.66, 0.89) and P4 (0.49, 0.64), merging at a distance of 0.3023.
+   - The new cluster is {P3, P4}. In the next round, single linkage takes the shortest distance from either P3 or P4 to each remaining point, and the process repeats until one cluster is left.
+   - On a dendrogram this merge appears at height 0.3023 — the lowest join, showing these two points are the most similar.
