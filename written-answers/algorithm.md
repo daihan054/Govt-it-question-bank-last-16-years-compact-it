@@ -3176,9 +3176,92 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
+   Answer: Use block partitioning — the divide-and-conquer idea behind Strassen's method. Split each 16×16 matrix into four 8×8 blocks and multiply the blocks as if they were single elements, since blocks obey the same multiplication rule as scalars.
+
+   Step 1 - partition
+   - `A = [[A11, A12], [A21, A22]]` and `B = [[B11, B12], [B21, B22]]`, where every block is 8×8 — exactly what the processor supports.
+
+   Step 2 - block multiplication formulas
+   - `C11 = A11×B11 + A12×B21`
+   - `C12 = A11×B12 + A12×B22`
+   - `C21 = A21×B11 + A22×B21`
+   - `C22 = A21×B12 + A22×B22`
+
+   Step 3 - assemble
+   - Place the four 8×8 results back as `C = [[C11, C12], [C21, C22]]`, giving the full 16×16 product.
+
+   ```
+   BlockMultiply(A, B, n = 16, blockSize = 8)
+     split A into A11, A12, A21, A22        // each 8 x 8
+     split B into B11, B12, B21, B22
+
+     C11 = Mul8(A11,B11) + Mul8(A12,B21)
+     C12 = Mul8(A11,B12) + Mul8(A12,B22)
+     C21 = Mul8(A21,B11) + Mul8(A22,B21)
+     C22 = Mul8(A21,B12) + Mul8(A22,B22)
+
+     return C assembled from C11, C12, C21, C22
+   ```
+
+   - Cost: 8 multiplications of 8×8 matrices plus 4 block additions. Each 8×8 multiply is one processor operation.
+   - Total scalar work `= 8 × 8³ = 4096` multiplications, exactly the same as a direct `16³ = 4096`. Block partitioning does not change the arithmetic, it only fits the work into the hardware limit.
+   - Strassen's method reduces the eight block multiplications to seven by using clever additions, giving `O(n^2.81)` instead of `O(n³)`. In practice it is often avoided because of high constant factors, extra memory for submatrices, and greater floating-point error.
+
 2. **(খ) Divide and Conquer technique কী? একটি সমস্যা বর্ণনা করুন যা Divide and Conquer Technique এ সমাধান করা যায়।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1089 (ET: N/A)]*
 
+   Answer: Divide and Conquer is an algorithm design technique with three steps — divide the problem into smaller subproblems of the same type, conquer them by solving each recursively, and combine their solutions into the answer for the original problem.
+
+   - Divide — split the input into two or more smaller parts.
+   - Conquer — solve each part recursively; a part small enough is solved directly (the base case).
+   - Combine — merge the partial answers.
+   - The subproblems are independent, which is the key difference from dynamic programming.
+
+   Example problem — Merge Sort
+   - Divide: split the array into two halves at the middle index.
+   - Conquer: sort each half recursively; an array of one element is already sorted.
+   - Combine: merge the two sorted halves by comparing front elements.
+
+   Example on `38, 27, 43, 3`
+   - Split → `[38, 27]` and `[43, 3]`
+   - Sort each → `[27, 38]` and `[3, 43]`
+   - Merge → `[3, 27, 38, 43]`
+
+   - Recurrence `T(n) = 2T(n/2) + O(n)`, giving `O(n log n)`.
+   - Other divide-and-conquer algorithms: quick sort, binary search, Strassen's matrix multiplication, closest pair of points, and the fast Fourier transform.
+
 3. **Write an algorithm for matrix multiplication.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
+
+   Answer: Two matrices `A (m × n)` and `B (n × p)` can be multiplied only when the column count of A equals the row count of B. The product `C` is `m × p`.
+
+   Formula: `C[i][j] = Σ (A[i][k] × B[k][j])` for `k = 1 to n`
+
+   ```
+   MatrixMultiply(A, B, m, n, p)
+     for i = 0 to m-1
+         for j = 0 to p-1
+             C[i][j] = 0
+             for k = 0 to n-1
+                 C[i][j] = C[i][j] + A[i][k] * B[k][j]
+     return C
+   ```
+
+   Example
+   ```
+   A = | 1  2 |      B = | 5  6 |
+       | 3  4 |          | 7  8 |
+
+   C[0][0] = 1×5 + 2×7 = 19
+   C[0][1] = 1×6 + 2×8 = 22
+   C[1][0] = 3×5 + 4×7 = 43
+   C[1][1] = 3×6 + 4×8 = 50
+
+   C = | 19  22 |
+       | 43  50 |
+   ```
+
+   - Time complexity `O(m × n × p)`, which becomes `O(n³)` for two `n × n` matrices.
+   - Space complexity `O(m × p)` for the result matrix.
+   - Strassen's divide-and-conquer method lowers this to about `O(n^2.81)` by using 7 recursive multiplications instead of 8, though its large constant factor makes the simple method faster for typical sizes.
 
 ## Heap & Priority Queue (2)
 
