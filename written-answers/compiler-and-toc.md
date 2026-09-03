@@ -751,3 +751,54 @@
 ## Linker & Loader (1)
 
 1. **(b) What are the tasks of linker and loader? Describe briefly using examples.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 479 (ET: N/A)]*
+
+   Answer: The linker and the loader are the last two system programs in the path from source code to a running process.
+
+   ```mermaid
+   flowchart LR
+       A[Source .c] --> B[Compiler] --> C[Object .o]
+       C --> D[Linker]
+       L[Library files] --> D
+       D --> E[Executable .exe]
+       E --> F[Loader] --> G[Running process in memory]
+   ```
+
+   Tasks of the LINKER
+   - **Combine object files** — merges several `.o` files produced from different source files into one executable.
+   - **Resolve external references** — if `main.c` calls `add()` defined in `math.c`, the compiler leaves the address blank. The linker fills in the real address.
+   - **Link libraries** — attaches library code such as `printf` from the C standard library.
+   - **Relocation of addresses** — adjusts the addresses in each object file so they do not overlap when combined.
+   - **Build the symbol table** — records every function and global variable name with its final address.
+   - **Report unresolved symbols** — if a function is called but never defined anywhere, the linker reports "undefined reference".
+
+   Example
+   ```bash
+   gcc -c main.c    # produces main.o  (calls add(), address unknown)
+   gcc -c math.c    # produces math.o  (defines add())
+   gcc main.o math.o -o program   # the LINKER joins them and fills in the address
+   ```
+   - Forgetting `math.o` gives the classic error `undefined reference to 'add'` — that message comes from the linker, not the compiler.
+
+   Tasks of the LOADER
+   - **Load the executable into memory** — copies the code and data from disk into RAM.
+   - **Allocate memory** — reserves space for the text, data, heap and stack segments.
+   - **Final relocation** — adjusts addresses to the actual memory location where the program was placed.
+   - **Resolve dynamic libraries** — loads shared libraries (`.so` on Linux, `.dll` on Windows) and binds their symbols at load time.
+   - **Set up the execution environment** — initialises registers, the stack pointer and command-line arguments.
+   - **Transfer control** — jumps to the entry point so execution begins.
+
+   Example
+   ```bash
+   ./program        # the operating system's LOADER does all of the above
+   ```
+   - On Linux the dynamic loader is `ld.so`; `ldd ./program` lists the shared libraries it will load.
+
+   | Point | Linker | Loader |
+   |---|---|---|
+   | When it runs | After compilation, before execution | At the moment the program is run |
+   | Input | Object files and libraries | The executable file |
+   | Output | An executable file on disk | A running process in memory |
+   | Main job | Combine modules and resolve symbols | Place the program in RAM and start it |
+   | Part of | The toolchain (`ld`) | The operating system |
+
+   - Two kinds of linking: **static linking** copies library code into the executable, making it larger but self-contained; **dynamic linking** leaves it to the loader, giving smaller files and shared library updates.
