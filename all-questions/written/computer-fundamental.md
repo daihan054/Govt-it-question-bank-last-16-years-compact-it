@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 150 questions
+**Table of Contents** — 10 subtopics · 153 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-57) | 57 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-59) | 59 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
-| 4 | [Software Types & Classification](#software-types--classification-16) | 16 |
+| 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
 | 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-10) | 10 |
 | 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-8) | 8 |
 | 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (57)
+## Computer Fundamentals & Acronyms (59)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -163,6 +163,16 @@
 
 57. **Explain URL, VOIP and Broadband.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1264 (ET: N/A)]*
 
+58. **c) Enter annotation (any 5)** *[Ministry of Finance Programmer 2013 compact it 1273 (ET: N/A)]*
+   i. Search Engine
+   ii. Operating System
+   iii. Website
+   iv. Computer memory
+   v. ASCII code
+   vi. OCR and OMR
+
+59. **What are the characteristics and elements of a computer system?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1277-1278 (ET: N/A)]*
+
 ## ICT in Society & Governance (24)
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
@@ -263,7 +273,7 @@
 
 24. **Distinguish between OMR and MICR.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
 
-## Software Types & Classification (16)
+## Software Types & Classification (17)
 
 1. **What is the difference between System Software and Application Software?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)], [Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -296,6 +306,8 @@
 15. **Differentiate between system software and application software.** *[Multiple Ministry Assistant Programmer 2017 compact it 1228-1229 (ET: N/A)]*
 
 16. **Define system software and application software with three examples of each.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
+
+17. **b) What are the main differences between software and hardware? Discuss with examples.** *[Ministry of Finance Programmer 2013 compact it 1271 (ET: N/A)]*
 
 ## Data Center Infrastructure & Power Management (10)
 

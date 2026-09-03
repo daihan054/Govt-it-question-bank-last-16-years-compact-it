@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 181 questions
+**Table of Contents** — 14 subtopics · 184 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-32) | 32 |
-| 2 | [Cryptography](#cryptography-30) | 30 |
+| 2 | [Cryptography](#cryptography-31) | 31 |
 | 3 | [Firewalls & Network Defense](#firewalls--network-defense-20) | 20 |
-| 4 | [Malware & Security Threats](#malware--security-threats-19) | 19 |
+| 4 | [Malware & Security Threats](#malware--security-threats-20) | 20 |
 | 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-19) | 19 |
 | 6 | [Authentication & Access Control](#authentication--access-control-16) | 16 |
 | 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
@@ -15,7 +15,7 @@
 | 10 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6) | 6 |
 | 11 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance-3) | 3 |
 | 12 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios-3) | 3 |
-| 13 | [Email & Messaging Security (Spam, Phishing)](#email--messaging-security-spam-phishing-2) | 2 |
+| 13 | [Email & Messaging Security (Spam, Phishing)](#email--messaging-security-spam-phishing-3) | 3 |
 | 14 | [Buffer Overflow & Software Vulnerabilities](#buffer-overflow--software-vulnerabilities-1) | 1 |
 
 <!-- TOC END -->
@@ -88,7 +88,7 @@
 
 32. **What is MAC Flood in Switch? How attacker gets benefitted from it?** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
 
-## Cryptography (30)
+## Cryptography (31)
 
 1. Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026] *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)], [BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
@@ -150,6 +150,8 @@
 
 30. **What is public key encryption? Explain digital signature with example.** *[ICT Ministry Assistant Programmer 2017 compact it 1238-1239 (ET: N/A)]*
 
+31. **b) What is a digital signature? And why is that important?** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
+
 ## Firewalls & Network Defense (20)
 
 1. **As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
@@ -199,7 +201,7 @@
 
 20. **What is DMZ? Explain with appropriate figure.** *[NESCO Manager (Software) 2018 compact it 1207 (ET: N/A)]*
 
-## Malware & Security Threats (19)
+## Malware & Security Threats (20)
 
 1. Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -238,6 +240,8 @@
 18. **Describe five types of malware threats and mention five known countermeasures.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1197-1198 (ET: N/A)]*
 
 19. **Define ransomware attack.** *[NESCO Manager (Software) 2018 compact it 1209 (ET: N/A)]*
+
+20. **c) What is a computer virus? Name of the two software that are used to prevent the virus.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
 
 ## Web Security Vulnerabilities (19)
 
@@ -416,11 +420,13 @@
 
 3. **Imagine yu should design a secure transmission protocol for sending data from one node to another node. You should divide the message in the multiple packets and this packets will be using different path so that any one cannot decrypt the message.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
 
-## Email & Messaging Security (Spam, Phishing) (2)
+## Email & Messaging Security (Spam, Phishing) (3)
 
 1. **Unsoliciated email is called?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
 2. **If you downloaded the email, you will be able to face the problem. Which attack do you face?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
+
+3. **e) What is email? What precautions can be taken to prevent unnecessary and unwanted e-mails?** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
 
 ## Buffer Overflow & Software Vulnerabilities (1)
 

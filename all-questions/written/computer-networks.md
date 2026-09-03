@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 504 questions
+**Table of Contents** — 33 subtopics · 506 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-109) | 109 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-52) | 52 |
-| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-31) | 31 |
+| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-32) | 32 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-22) | 22 |
 | 5 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-19) | 19 |
 | 6 | [Networking Devices](#networking-devices-19) | 19 |
@@ -14,7 +14,7 @@
 | 9 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-17) | 17 |
 | 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-17) | 17 |
 | 11 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-16) | 16 |
-| 12 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-14) | 14 |
+| 12 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-15) | 15 |
 | 13 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
 | 14 | [Network Topologies](#network-topologies-14) | 14 |
 | 15 | [IPv6 Addressing](#ipv6-addressing-13) | 13 |
@@ -420,7 +420,7 @@ ii) 211.10.15.4
 
 52. **Explain: ISO, OSI and TCP/IP model with figure.** *[ICT Ministry Assistant Programmer 2017 compact it 1241-1242 (ET: N/A)]*
 
-## Networking Fundamentals & Terminology (31)
+## Networking Fundamentals & Terminology (32)
 
 1. **Define Computer Network. Describe different types of Computer Networks.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -486,6 +486,8 @@ ii) 211.10.15.4
 30. **Explain the terms Domains, Bandwidth, Broadcast and Multicast.** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
 
 31. **Differentiate between Intranet and Extranet.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1264 (ET: N/A)]*
+
+32. **a) Briefly discuss what a computer network means.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (22)
 
@@ -836,7 +838,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 16. **Consider a noiseless channel with a bandwidth of 3 KHz transmitting a signal with two signal levels. What is the maximum bit rate?** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
 
-## Physical Layer & Transmission Media (Cables & Wiring) (14)
+## Physical Layer & Transmission Media (Cables & Wiring) (15)
 
 1. **Straight through connection vs Crossover connection.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
@@ -865,6 +867,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 13. **Which media transfer data with higher bandwidth? Advantages of this media.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843 (ET: N/A)]*
 
 14. **(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026-1027 (ET: N/A)]*
+
+15. **Explain 10Base2, 10Base5, 10BaseT and Ethernet.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1276-1277 (ET: N/A)]*
 
 ## Error Detection & Data Communication (CRC, Throughput) (14)
 

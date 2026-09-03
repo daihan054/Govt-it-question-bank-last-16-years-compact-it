@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 145 questions
+**Table of Contents** — 9 subtopics · 147 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-32) | 32 |
-| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-24) | 24 |
+| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-26) | 26 |
 | 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
 | 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-19) | 19 |
 | 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-19) | 19 |
@@ -83,7 +83,7 @@
 
 32. **Why binary logic is used for digital system?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1188 (ET: N/A)]*
 
-## Number Systems & Base Conversions (24)
+## Number Systems & Base Conversions (26)
 
 1. **(a) Convert the following number:**
    **i. Decimal number 9 to binary number.**
@@ -135,6 +135,13 @@
 23. **$(12345)_{10} = (?)_8$** *[Bangladesh Bank Assistant Programmer 2019 compact it 1156 (ET: DU)]*
 
 24. **Convert $(2345)_{10}$ to Hexadecimal and $(\text{ABCD})_{16}$ to octal number.** *[ICT Ministry Assistant Programmer 2017 compact it 1240 (ET: N/A)]*
+
+25. **a) Describe the binary and hexadecimal numbering methods with numerical examples.** *[Ministry of Finance Programmer 2013 compact it 1269 (ET: N/A)]*
+
+26. **b) Why does the computer require number conversion?** *[Ministry of Finance Programmer 2013 compact it 1270 (ET: N/A)]*
+   i. $(11101)_2$ to Decimal number
+   ii. $(\text{AB8C})_{16}$ to Decimal number
+   iii. $(1101111010)_2$ to Hexadecimal
 
 ## Combinational Circuits (Adders, Encoders, MUX) (23)
 

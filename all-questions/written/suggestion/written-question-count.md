@@ -1,18 +1,18 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3148** questions.
+Sorted by count, highest first. Total **3165** questions.
 
 ## IT questions
 
-Total: **2603** questions.
+Total: **2620** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **504** |
+| **Computer Networks** | **— all subcategories —** | **506** |
 | | Subnetting & IP Addressing | 109 |
 | | OSI & TCP/IP Reference Model | 52 |
-| | Networking Fundamentals & Terminology | 31 |
+| | Networking Fundamentals & Terminology | 32 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 22 |
 | | Networking Devices | 19 |
 | | Wireless Networks & IoT (mmWave) | 19 |
@@ -21,9 +21,9 @@ Total: **2603** questions.
 | | Communication System & Transmission Modes | 17 |
 | | Transport Layer (TCP & UDP) | 17 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 16 |
+| | Physical Layer & Transmission Media (Cables & Wiring) | 15 |
 | | Error Detection & Data Communication (CRC, Throughput) | 14 |
 | | Network Topologies | 14 |
-| | Physical Layer & Transmission Media (Cables & Wiring) | 14 |
 | | IPv6 Addressing | 13 |
 | | Network Address Translation (NAT) | 13 |
 | | Physical Layer & Optical Fiber (Attenuation & Power Budget) | 13 |
@@ -43,11 +43,11 @@ Total: **2603** questions.
 | | Line Coding & Digital Encoding | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **292** |
+| **Database** | **— all subcategories —** | **294** |
 | | SQL Queries | 87 |
 | | Keys in DBMS | 34 |
+| | DBMS Architecture & Features | 26 |
 | | ER Diagram & Database Design | 25 |
-| | DBMS Architecture & Features | 24 |
 | | Normalization & Database Design | 21 |
 | | SQL Commands (DDL, DML, DCL, TCL) | 18 |
 | | Relational Data Model & ER Relationships | 14 |
@@ -86,11 +86,11 @@ Total: **2603** questions.
 | | CPU Scheduling | 6 |
 | | Windows & System Administration | 5 |
 | | Process Synchronization & Concurrency | 4 |
-| **Computer & Network Security** | **— all subcategories —** | **181** |
+| **Computer & Network Security** | **— all subcategories —** | **184** |
 | | Social Engineering & Cyber Attacks | 32 |
-| | Cryptography | 30 |
+| | Cryptography | 31 |
 | | Firewalls & Network Defense | 20 |
-| | Malware & Security Threats | 19 |
+| | Malware & Security Threats | 20 |
 | | Web Security Vulnerabilities | 19 |
 | | Authentication & Access Control | 16 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
@@ -99,8 +99,19 @@ Total: **2603** questions.
 | | VPN & Tunneling Protocols (IPsec, SSL VPN) | 6 |
 | | Critical Information Infrastructure (CII) & Cyber Governance | 3 |
 | | Cryptography & Network Security Scenarios | 3 |
-| | Email & Messaging Security (Spam, Phishing) | 2 |
+| | Email & Messaging Security (Spam, Phishing) | 3 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
+| **Computer Fundamentals** | **— all subcategories —** | **153** |
+| | Computer Fundamentals & Acronyms | 59 |
+| | Hardware Components & BIOS (CMOS Battery) | 24 |
+| | ICT in Society & Governance | 24 |
+| | Software Types & Classification | 17 |
+| | Data Center Infrastructure & Power Management | 10 |
+| | Blockchain & Emerging Technologies | 8 |
+| | Server Hardware & Enterprise Systems | 5 |
+| | Quantum Computing & Emerging Technologies | 3 |
+| | Digital Banking & Financial Inclusion | 2 |
+| | User Interfaces (CLI vs GUI) | 1 |
 | **Software Engineering** | **— all subcategories —** | **152** |
 | | SDLC Phases & Models | 45 |
 | | Software Testing & Evaluation | 40 |
@@ -116,20 +127,9 @@ Total: **2603** questions.
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **150** |
-| | Computer Fundamentals & Acronyms | 57 |
-| | Hardware Components & BIOS (CMOS Battery) | 24 |
-| | ICT in Society & Governance | 24 |
-| | Software Types & Classification | 16 |
-| | Data Center Infrastructure & Power Management | 10 |
-| | Blockchain & Emerging Technologies | 8 |
-| | Server Hardware & Enterprise Systems | 5 |
-| | Quantum Computing & Emerging Technologies | 3 |
-| | Digital Banking & Financial Inclusion | 2 |
-| | User Interfaces (CLI vs GUI) | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **145** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **147** |
 | | Logic Gates & Universal Gates | 32 |
-| | Number Systems & Base Conversions | 24 |
+| | Number Systems & Base Conversions | 26 |
 | | Combinational Circuits (Adders, Encoders, MUX) | 23 |
 | | Boolean Algebra & De Morgan’s Theorem | 19 |
 | | Karnaugh Map (K-Map) | 19 |
@@ -137,6 +137,18 @@ Total: **2603** questions.
 | | Logic Families (TTL vs CMOS) | 6 |
 | | 2's Complement & Binary Arithmetic | 4 |
 | | Finite State Machines (FSM) | 1 |
+| **Microprocessor & Computer Architecture** | **— all subcategories —** | **135** |
+| | Microprocessor Architecture & Functions | 35 |
+| | Memory Hierarchy & Storage | 26 |
+| | RAID Architecture & Storage | 15 |
+| | Cache Memory | 14 |
+| | Secondary Storage (HDD vs SSD) | 10 |
+| | Instruction Pipelining & Hazards | 9 |
+| | Assembly Language & Addressing Modes | 8 |
+| | CPU Performance & Instruction Cycle | 6 |
+| | Multi-Core & Multi-Threading | 5 |
+| | RISC vs CISC Architecture | 4 |
+| | 8085 Microprocessor & Edge Computing | 3 |
 | **Algorithm** | **— all subcategories —** | **134** |
 | | Sorting Algorithms & Complexity | 36 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
@@ -152,22 +164,10 @@ Total: **2603** questions.
 | | Heap & Priority Queue | 2 |
 | | Huffman Coding & Data Compression | 1 |
 | | NP-Completeness & Complexity Reduction | 1 |
-| **Microprocessor & Computer Architecture** | **— all subcategories —** | **131** |
-| | Microprocessor Architecture & Functions | 32 |
-| | Memory Hierarchy & Storage | 26 |
-| | RAID Architecture & Storage | 15 |
-| | Cache Memory | 14 |
-| | Secondary Storage (HDD vs SSD) | 10 |
-| | Assembly Language & Addressing Modes | 8 |
-| | Instruction Pipelining & Hazards | 8 |
-| | CPU Performance & Instruction Cycle | 6 |
-| | Multi-Core & Multi-Threading | 5 |
-| | RISC vs CISC Architecture | 4 |
-| | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **116** |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **117** |
 | | OOP Concepts (Inheritance & Polymorphism) | 54 |
 | | Java Programming & Methods | 18 |
-| | Class Design & Object-Oriented Modeling | 10 |
+| | Class Design & Object-Oriented Modeling | 11 |
 | | Output Tracing & Recursion | 10 |
 | | Constructors & Destructors | 8 |
 | | Encapsulation & Access Modifiers | 7 |
