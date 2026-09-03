@@ -259,17 +259,187 @@
 
 1. **b) Write down the difference between Interpreter and Compiler?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)], [BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 672 (ET: N/A)], [CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)], [PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)], [Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)], [BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 678 (ET: N/A)]*
 
+   Answer: A compiler translates the WHOLE program into machine code before running it. An interpreter translates and executes ONE LINE at a time.
+
+   | Point | Compiler | Interpreter |
+   |---|---|---|
+   | Translation unit | The entire program at once | One statement at a time |
+   | Output file | Produces an object / executable file | Produces no separate file |
+   | Execution speed | Fast — translation is already done | Slow — translation happens during every run |
+   | Error reporting | Reports all errors together after scanning the whole program | Stops at the first error it meets |
+   | Debugging | Harder, errors are listed in bulk | Easier, the failing line is pointed out directly |
+   | Memory use | More, because the object code is stored | Less, no object code is kept |
+   | Re-translation | Once; the executable runs many times | Every single run re-translates |
+   | Portability | The executable is machine specific | The same source runs anywhere the interpreter exists |
+   | Examples | C, C++, Java (to bytecode), Go, Rust | Python, JavaScript, Ruby, PHP, BASIC |
+
+   - Java uses both: `javac` compiles source to bytecode, then the JVM interprets or JIT-compiles that bytecode — which is why Java is called "compiled and interpreted".
+   - Rule of thumb: use a compiler when execution speed matters, an interpreter when quick development and portability matter.
+
 2. **What are Compilers and Interpreters? Briefly describe their role and differences. Write some key points on the advantages and disadvantages of Open Source Software.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
+
+   Answer:
+
+   (a) Compiler
+   - A system program that translates the entire source code of a high-level language into machine code (object code) in one pass, before execution begins.
+   - Role: scans the whole program, reports all errors together, optimises the code and produces a standalone executable file.
+
+   (b) Interpreter
+   - A system program that reads the source code line by line, translates each line and executes it immediately.
+   - Role: no separate executable is produced; translation happens fresh on every run.
+
+   (c) Differences
+
+   | Point | Compiler | Interpreter |
+   |---|---|---|
+   | Translation | Whole program at once | Line by line |
+   | Output | Executable file | None |
+   | Speed of execution | Fast | Slow |
+   | Error reporting | All errors after full scan | Stops at the first error |
+   | Memory | Higher | Lower |
+   | Examples | C, C++, Go | Python, JavaScript, PHP |
+
+   (d) Open Source Software — advantages
+   - Free of licence cost, which suits government and educational budgets.
+   - Source code is visible, so it can be audited for security and back doors.
+   - Freely modifiable to fit local needs.
+   - Large community support and fast bug fixes.
+   - No vendor lock-in; the software cannot be discontinued out from under the user.
+   - Often more stable and secure, because many eyes review the code.
+
+   (e) Open Source Software — disadvantages
+   - No guaranteed commercial support or SLA unless paid separately.
+   - Documentation and user interface are sometimes weaker.
+   - Requires in-house technical skill to install, customise and maintain.
+   - Compatibility problems with proprietary formats and hardware drivers.
+   - Some projects are abandoned by their maintainers.
+   - Hidden costs in training, integration and support can offset the free licence.
 
 3. **(a) Difference between interpreter and compiler. Write down the phases of a compiler.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
+   Answer:
+
+   (a) Interpreter vs compiler
+
+   | Point | Compiler | Interpreter |
+   |---|---|---|
+   | Working | Translates the whole program before running | Translates and runs one line at a time |
+   | Object code | Generated and stored | Not generated |
+   | Execution speed | Fast | Slow |
+   | Errors | All reported after a full scan | First error stops execution |
+   | Memory requirement | Higher | Lower |
+   | Examples | C, C++, Java (javac) | Python, JavaScript, Ruby |
+
+   (b) Phases of a compiler — six phases, in order
+
+   ```mermaid
+   flowchart TD
+       A[Source code] --> B[1. Lexical Analysis<br/>scanner]
+       B --> C[2. Syntax Analysis<br/>parser]
+       C --> D[3. Semantic Analysis]
+       D --> E[4. Intermediate Code Generation]
+       E --> F[5. Code Optimization]
+       F --> G[6. Code Generation]
+       G --> H[Target machine code]
+   ```
+
+   - **Lexical analysis** — scans the character stream, groups characters into lexemes and outputs tokens such as `id`, `num`, `+`, `if`. Removes whitespace and comments.
+   - **Syntax analysis (parsing)** — checks the token sequence against the language grammar and builds a parse tree. Reports syntax errors such as a missing semicolon.
+   - **Semantic analysis** — checks meaning: type compatibility, undeclared variables, wrong number of function arguments. Produces an annotated parse tree.
+   - **Intermediate code generation** — produces a machine-independent representation such as three-address code, which makes the compiler portable across target machines.
+   - **Code optimization** — improves the intermediate code by removing dead code, folding constants and moving loop-invariant computations out of loops.
+   - **Code generation** — converts the optimised intermediate code into target machine code, allocating registers and memory.
+
+   - Two supporting components run alongside all six phases: the **symbol table manager**, which stores identifier names, types and scopes, and the **error handler**.
+
 4. **Define an Interpreted language.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823 (ET: BUET)]*
+
+   Answer: An interpreted language is a programming language whose programs are executed directly by an interpreter, which reads and runs the source code one statement at a time, without producing a separate compiled executable file.
+
+   Characteristics
+   - No separate compilation step — the source file itself is run.
+   - Translation happens at run time, on every execution.
+   - Errors surface only when the failing line is actually reached.
+   - Slower than compiled languages, because translation is repeated.
+   - Highly portable — the same source runs on any machine that has the interpreter.
+   - Usually dynamically typed, and supports interactive shells (REPL).
+
+   Examples
+   - Python, JavaScript, Ruby, PHP, Perl, BASIC, Lisp.
+
+   - Modern reality: the line has blurred. Python compiles source to `.pyc` bytecode, which is then interpreted. Java compiles to bytecode which the JVM interprets and JIT-compiles. So "interpreted" describes the usual execution model, not an absolute property of the language.
+   - Contrast: a compiled language such as C is translated fully to machine code before running, giving speed at the cost of a build step and platform-specific binaries.
 
 5. **Difference between compiler and interpreter with example?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
 
+   Answer:
+
+   | Point | Compiler | Interpreter |
+   |---|---|---|
+   | Translation | Entire program in one go | One line at a time |
+   | Output | Object / executable file | No file produced |
+   | Execution | Runs the executable, so it is fast | Translates while running, so it is slow |
+   | Error detection | Lists all errors after scanning everything | Halts at the first error |
+   | Debugging | Comparatively harder | Easier — the exact failing line is shown |
+   | Memory | More, the object code is stored | Less |
+   | Examples | C, C++, Go, Rust | Python, JavaScript, PHP, Ruby |
+
+   Example showing the practical difference
+   ```c
+   // C — compiled
+   printf("Line 1\n");
+   printf("Line 2\n"   // missing bracket and semicolon
+   printf("Line 3\n");
+   ```
+   - The C compiler refuses to build. NOTHING runs — not even Line 1 — because compilation fails before execution starts.
+
+   ```python
+   # Python — interpreted
+   print("Line 1")
+   print("Line 2"        # syntax error here
+   print("Line 3")
+   ```
+   - With a runtime error instead of a syntax error, Python would print `Line 1` first and only then fail. Partial execution before the error is the visible signature of an interpreter.
+
+   - Java sits in between: `javac Hello.java` compiles to `Hello.class` bytecode, then `java Hello` has the JVM interpret and JIT-compile it. This gives both portability and reasonable speed.
+
 6. **Compiler and Interpreter-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Compiler | Interpreter |
+   |---|---|---|
+   | Meaning | Translates the complete source program into machine code before execution | Translates and executes the source program statement by statement |
+   | Scanning | The whole program is scanned once | Each line is scanned every time it runs |
+   | Object code | Produced and saved as a file | Never produced |
+   | Speed | Execution is fast, compilation is a one-time cost | Execution is slow, translation repeats every run |
+   | Error message | All errors are listed together after the scan | Only the first error is reported, then it stops |
+   | Debugging | Harder, since errors come in bulk | Easier, since the failing line is identified immediately |
+   | Memory usage | Higher — the object code occupies space | Lower — nothing extra is stored |
+   | Portability | The executable runs only on the target machine type | The same source runs wherever the interpreter is installed |
+   | Language examples | C, C++, Java (to bytecode), Pascal, Go | Python, JavaScript, PHP, Ruby, BASIC |
+
+   - Both start the same way — both convert source text into tokens and both usually build a parse tree. They diverge only at the point of execution.
+   - Java deliberately uses both stages, which is why it is described as "write once, run anywhere".
+
 7. **Difference between Interpreter and Compiler.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Interpreter | Compiler |
+   |---|---|---|
+   | Translation unit | One statement at a time | The whole program at once |
+   | Execution | Translates and runs immediately | Translates first, runs afterwards |
+   | Output file | None | Object / executable file |
+   | Speed | Slower, translation repeats on every run | Faster, translation happens once |
+   | Errors | Reports the first error and halts | Reports every error after the full scan |
+   | Debugging | Easier | Harder |
+   | Memory | Requires less | Requires more |
+   | Suitable for | Scripting, rapid development, learning | Production software where speed matters |
+   | Examples | Python, JavaScript, Ruby, PHP | C, C++, Go, Rust |
+
+   - Both perform lexical and syntax analysis; the difference lies in whether machine code is produced in advance or execution is done directly from the parsed form.
+   - A modern hybrid is the JIT (Just-In-Time) compiler used by Java and JavaScript engines, which interprets first and compiles the hot code paths while the program runs — combining the fast start of an interpreter with the speed of a compiler.
 
 ## Grammar & Ambiguity (5)
 
