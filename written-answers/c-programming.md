@@ -8432,11 +8432,180 @@ int main() {
 
 1. Name Top C 5 File Management Function Name. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+   Answer: The five most used file management functions in C are:
+
+   | Function | Purpose | Syntax |
+   |---|---|---|
+   | `fopen()` | Opens a file and returns a `FILE *` | `fp = fopen("data.txt", "r");` |
+   | `fclose()` | Closes an open file and flushes the buffer | `fclose(fp);` |
+   | `fprintf()` | Writes formatted data to a file | `fprintf(fp, "%d %s", n, name);` |
+   | `fscanf()` | Reads formatted data from a file | `fscanf(fp, "%d %s", &n, name);` |
+   | `fgets()` | Reads one line from a file safely | `fgets(buf, 100, fp);` |
+
+   File opening modes
+   - `"r"` read, `"w"` write (erases existing content), `"a"` append
+   - `"r+"` read and write, `"w+"` read and write with truncation, `"a+"` read and append
+   - Adding `b` (as in `"rb"`) opens the file in binary mode.
+
+   Other important file functions
+   - `fputs()`, `fgetc()`, `fputc()` — line and character level input/output
+   - `fread()`, `fwrite()` — binary block read and write
+   - `fseek()`, `ftell()`, `rewind()` — move and report the file position
+   - `feof()` — test for end of file; `remove()` and `rename()` — delete and rename
+
+   - `fopen()` returns `NULL` when the file cannot be opened, so the return value must always be checked before use.
+
 2. **Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.** *[BCC Assistant Programmer 12.02.2021 compact it 814 (ET: BUET)]*
+
+   Answer: Read the file, take the first 10 lines, sort them and print the result.
+
+   ```python
+   def first_ten_sorted(filename):
+       try:
+           with open(filename, 'r') as f:
+               lines = f.readlines()[:10]        # first 10 lines only
+       except FileNotFoundError:
+           print("File not found:", filename)
+           return []
+
+       lines = [line.rstrip('\n') for line in lines]
+       lines.sort()                              # alphabetical order
+
+       for line in lines:
+           print(line)
+       return lines
+
+
+   # driver code
+   first_ten_sorted("data.txt")
+   ```
+
+   Explanation
+   - `with open(...)` closes the file automatically, even if an error occurs inside the block.
+   - `readlines()[:10]` slices the first ten lines; if the file has fewer, Python simply returns what exists rather than raising an error.
+   - `rstrip('\n')` removes the trailing newline so the sort compares only the text.
+   - `sort()` orders them alphabetically. Use `sort(key=int)` for numeric lines, or `reverse=True` for descending order.
+
+   - For a very large file, reading line by line with `itertools.islice(f, 10)` avoids loading the whole file into memory.
 
 3. **You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account, Find the highest and second highest balance of saving account.** *[NRCC Assistant Programmer 2021 compact it 931-932 (ET: N/A)]*
 
+   Answer: The file contents were not printed with the question, so the format `accountNo accountType balance` is assumed, one record per line.
+
+   Sample `accounts.txt`
+   ```
+   1001 saving 25000
+   1002 current 40000
+   1003 saving 78000
+   1004 saving 15000
+   1005 current 32000
+   1006 saving 92000
+   ```
+
+   ```c
+   #include <stdio.h>
+
+   int main(void) {
+       FILE *fp;
+       int accNo;
+       char type[20];
+       double balance, total = 0;
+       double highest = -1, second = -1;
+
+       fp = fopen("accounts.txt", "r");
+       if (fp == NULL) {
+           printf("Cannot open file\n");
+           return 1;
+       }
+
+       while (fscanf(fp, "%d %s %lf", &accNo, type, &balance) == 3) {
+           if (strcmp(type, "saving") == 0) {
+               total += balance;
+
+               if (balance > highest) {
+                   second = highest;          // old highest drops to second
+                   highest = balance;
+               }
+               else if (balance > second && balance != highest) {
+                   second = balance;
+               }
+           }
+       }
+       fclose(fp);
+
+       printf("Total saving balance   = %.2f\n", total);
+       printf("Highest saving balance = %.2f\n", highest);
+       printf("Second highest balance = %.2f\n", second);
+       return 0;
+   }
+   ```
+
+   Output for the sample file
+   ```
+   Total saving balance   = 210000.00
+   Highest saving balance = 92000.00
+   Second highest balance = 78000.00
+   ```
+
+   - The highest and second highest are tracked in a single pass, so no sorting is needed — `O(n)` time and `O(1)` space.
+   - `fscanf` returning 3 confirms all three fields were read; the loop stops cleanly at end of file.
+   - `<string.h>` must be included for `strcmp`.
+
 4. **Folder থেকে একটি Image নিয়ে ঐ Image এর নামের .jpeg extention কে .png extention এ convert করার জন্য Python language এর Function লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
+
+   Answer: Two things could be meant — renaming the extension only, or actually converting the image format. Both are shown.
+
+   Version 1 — rename the extension only
+   ```python
+   import os
+
+   def rename_extension(folder, filename):
+       old_path = os.path.join(folder, filename)
+
+       name, ext = os.path.splitext(filename)
+       if ext.lower() not in ['.jpeg', '.jpg']:
+           print("Not a JPEG file")
+           return None
+
+       new_name = name + '.png'
+       new_path = os.path.join(folder, new_name)
+
+       os.rename(old_path, new_path)
+       print("Renamed:", filename, "->", new_name)
+       return new_path
+   ```
+
+   Version 2 — actually convert the image data (the correct approach)
+   ```python
+   from PIL import Image
+   import os
+
+   def convert_jpeg_to_png(folder, filename):
+       old_path = os.path.join(folder, filename)
+
+       name, ext = os.path.splitext(filename)
+       if ext.lower() not in ['.jpeg', '.jpg']:
+           print("Not a JPEG file")
+           return None
+
+       new_path = os.path.join(folder, name + '.png')
+
+       img = Image.open(old_path)
+       img.save(new_path, 'PNG')          # re-encodes the pixel data
+       print("Converted:", filename, "->", name + '.png')
+       return new_path
+
+
+   # convert every JPEG in a folder
+   def convert_all(folder):
+       for f in os.listdir(folder):
+           if f.lower().endswith(('.jpeg', '.jpg')):
+               convert_jpeg_to_png(folder, f)
+   ```
+
+   - Important difference: `os.rename` only changes the filename. The bytes inside are still JPEG, so some programs will refuse to open it as a PNG.
+   - `Image.save()` from the Pillow library actually re-encodes the pixels into PNG format, which is what "convert" really means.
+   - Pillow is installed with `pip install Pillow`.
 
 ## Pointers (4)
 
