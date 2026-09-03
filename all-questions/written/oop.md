@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 115 questions
+**Table of Contents** — 9 subtopics · 116 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-53) | 53 |
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-54) | 54 |
 | 2 | [Java Programming & Methods](#java-programming--methods-18) | 18 |
 | 3 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
 | 4 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-10) | 10 |
@@ -17,7 +17,7 @@
 
 ---
 
-## OOP Concepts (Inheritance & Polymorphism) (53)
+## OOP Concepts (Inheritance & Polymorphism) (54)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -158,6 +158,8 @@ public class main{
 52. **Consider a base class Shape and its derived class Rectangle. Design a code inheritance code using C++.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1193 (ET: N/A)]*
 
 53. **Difference between method overloading and overriding in java.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220 (ET: N/A)]*
+
+54. **What is polymorphism? What is the difference between method overriding and method overloading?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
 
 ## Java Programming & Methods (18)
 

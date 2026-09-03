@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 260 questions
+**Table of Contents** — 9 subtopics · 270 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-107) | 107 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-51) | 51 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-111) | 111 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
 | 3 | [Recursion & Functions](#recursion--functions-38) | 38 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-16) | 16 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (107)
+## Basic Programs & Control Statements (111)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -396,7 +396,15 @@ for(a=1; a<=100; a++)
 
 107. **Write a program to find out the minimum number from a series.** *[BTCL Assistant Manager (Technical) 2017 compact it 1254 (ET: N/A)]*
 
-## Output Tracing & Control Flow (51)
+108. **Write a C program to reverse an integer number.** *[BCC Assistant Programmer 2017 compact it 1256-1257 (ET: N/A)]*
+
+109. **Write a C program to acending (A-Z) using selection sort.** *[BCC Assistant Programmer 2017 compact it 1257 (ET: N/A)]*
+
+110. **Write a structured program to display Fibonacci series up to 100 Numbers.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
+
+111. **Write a program in any language to find out maximum among three numbers.** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
+
+## Output Tracing & Control Flow (57)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -1008,6 +1016,84 @@ unsigned int i;
 for(i=100; i<=0; --i)
 printf("%d",i);
 return 0;
+```
+
+52. **Find the output of a program.** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
+```c
+#include<stdio.h>
+#define N 7
+void main() {
+    char str[] = "abpqx";
+    for(int i=0; i<N-2; i++)
+        if(i%2) printf("%d ", str[i]++);
+        else printf("%d ", str[i]--);
+}
+```
+
+53. **Write output:** *[BCC Assistant Programmer 2017 compact it 1257 (ET: N/A)]*
+```c
+#include <stdio.h>
+int main() {
+    int i=-20, j=-1, k=2,m;
+    m=++i && ++j && ++k;
+    printf("%d, %d, %d, %d\n", i,j,k,m);
+    return 0;
+}
+```
+
+54. **Write output:** *[BCC Assistant Programmer 2017 compact it 1257-1258 (ET: N/A)]*
+```c
+#include <stdio.h>
+int main() {
+    int a=0, b=1, c=2;
+    *((a)?&b:&a)=a?b:c;
+    printf("%d, %d, %d\n",a,b,c);
+    return 0;
+}
+```
+
+55. **Write output:** *[BCC Assistant Programmer 2017 compact it 1258 (ET: N/A)]*
+```c
+#include <stdio.h>
+int main() {
+    float n=2;
+    switch(n) {
+        case 2:
+            printf("Hi");
+            break;
+        default:
+            printf("Hello");
+    }
+    return 0;
+}
+```
+
+56. **Write output:** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
+```c
+#include<stdio.h>
+#define max(a,b) (a>b?a:b)
+int main() {
+    int i=1,j=2,k=0;
+    k=max(i++,++j);
+    printf("%d",k);
+    return 0;
+}
+```
+
+57. **Write output:** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
+```c
+#include <stdio.h>
+int sum(int i) {
+    static int total=0;
+    total+=i;
+    return total;
+}
+int main() {
+    int i;
+    for(i=1; i<10; i++) {
+        printf("%d ", sum(i));
+    }
+}
 ```
 
 ## Recursion & Functions (38)

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 193 questions
+**Table of Contents** — 12 subtopics · 195 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-46) | 46 |
+| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-47) | 47 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
 | 3 | [OS Concepts & System Software](#os-concepts--system-software-24) | 24 |
 | 4 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
@@ -13,14 +13,14 @@
 | 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
 | 9 | [File Systems & Disk Management](#file-systems--disk-management-7) | 7 |
 | 10 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
-| 11 | [Windows & System Administration](#windows--system-administration-4) | 4 |
+| 11 | [Windows & System Administration](#windows--system-administration-5) | 5 |
 | 12 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
 
 <!-- TOC END -->
 
 ---
 
-## Linux / Unix Commands & Administration (46)
+## Linux / Unix Commands & Administration (47)
 
 1. **Write Linux command:** *[Islami Bank PLC Senior Officer (Network/System) 14.03.2025 compact it 1331 (ET: BUET)]*
    (a) Give a file Read Write and Execute permission.
@@ -142,6 +142,16 @@
    (ii) Only the owner or the user group can edit the file.
    (iii) None other then the other users can read the file.
    Write a shell command based on those conditions.
+
+47. **Linux Command:** *[BTCL Assistant Manager (Technical) 2017 compact it 1255-1256 (ET: N/A)]*
+   i) passwd
+   ii) cat>file.txt
+   iii) telnet
+   iv) ls
+   v) ping
+   vi) su
+   vii) nslookup
+   viii) mkdir
 
 ## CPU Scheduling Algorithms (24)
 
@@ -558,7 +568,7 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 6. **(খ) CPU Scheduling কী? যে যে কারণে CPU Scheduling করতে হয় সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
 
-## Windows & System Administration (4)
+## Windows & System Administration (5)
 
 1. **How to check the IP address in the Windows Command Prompt?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -568,6 +578,8 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 3. **Describe the booting process in windows system.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)]*
 
 4. **১৯. বর্তমানে উইন্ডোজ অপারেটিং সিস্টেম এর কত তম ভার্সন বাজারজাত করা হয়েছে?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+5. **What is main difference between Domain and Workgroup?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
 
 ## Process Synchronization & Concurrency (4)
 

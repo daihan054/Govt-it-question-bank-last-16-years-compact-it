@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 96 questions
+**Table of Contents** — 8 subtopics · 97 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Tree](#tree-27) | 27 |
-| 2 | [Stack](#stack-19) | 19 |
+| 2 | [Stack](#stack-20) | 20 |
 | 3 | [Linked List](#linked-list-15) | 15 |
 | 4 | [Binary Search Tree (BST)](#binary-search-tree-bst-9) | 9 |
 | 5 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
@@ -76,7 +76,7 @@
 
 27. **Evaluate the prefix and postfix notation with binary tree evaluation and find out its final value.** *[DESCO Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
-## Stack (19)
+## Stack (20)
 
 1. **Explain the push and pop operations of the stack.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1448 (ET: N/A)]*
 
@@ -121,6 +121,8 @@ Output: Not Balanced
 18. **Write a Program to check for balanced parenthesis in an expression.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1011 (ET: N/A)]*
 
 19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
+
+20. **Write prefix and postfix notations from the statement like $((A+B)*C-(D-E)^F)$** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
 
 ## Linked List (15)
 

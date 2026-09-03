@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 502 questions
+**Table of Contents** — 33 subtopics · 504 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-109) | 109 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-52) | 52 |
-| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-30) | 30 |
+| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-31) | 31 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-22) | 22 |
 | 5 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-19) | 19 |
 | 6 | [Networking Devices](#networking-devices-19) | 19 |
@@ -21,7 +21,7 @@
 | 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-13) | 13 |
 | 17 | [Network Address Translation (NAT)](#network-address-translation-nat-13) | 13 |
 | 18 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait-12) | 12 |
-| 19 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat-10) | 10 |
+| 19 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat-11) | 11 |
 | 20 | [Digital Modulation & Signal Processing (BPSK, QPSK)](#digital-modulation--signal-processing-bpsk-qpsk-10) | 10 |
 | 21 | [Email Architecture & Protocols (SMTP, POP3, IMAP)](#email-architecture--protocols-smtp-pop3-imap-10) | 10 |
 | 22 | [Application Layer & Well-Known Port Numbers](#application-layer--well-known-port-numbers-6) | 6 |
@@ -420,7 +420,7 @@ ii) 211.10.15.4
 
 52. **Explain: ISO, OSI and TCP/IP model with figure.** *[ICT Ministry Assistant Programmer 2017 compact it 1241-1242 (ET: N/A)]*
 
-## Networking Fundamentals & Terminology (30)
+## Networking Fundamentals & Terminology (31)
 
 1. **Define Computer Network. Describe different types of Computer Networks.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -484,6 +484,8 @@ ii) 211.10.15.4
 29. **What is an access network? Briefly describe the available access network.** *[BTRC Assistant Director (Technical) 2019 compact it 1147 (ET: N/A)]*
 
 30. **Explain the terms Domains, Bandwidth, Broadcast and Multicast.** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
+
+31. **Differentiate between Intranet and Extranet.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1264 (ET: N/A)]*
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (22)
 
@@ -1045,7 +1047,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 12. **Explain IEEE 802.3 frame format.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
 
-## Network Services (DHCP, NAT) (10)
+## Network Services (DHCP, NAT) (11)
 
 1. **What is the DHCP in computer networking?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
@@ -1066,6 +1068,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 9. **১৬. DHCP uses UDP port _____ for sending data to the server.** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
 10. **DHCP কি? DHCP কিভাবে কাজ করে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1043 (ET: DPI)]*
+
+11. **Write the disadvantage of manual IP. Name the protocol of dynamic IP assigning. DHCP how works?** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK) (10)
 

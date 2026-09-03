@@ -1,21 +1,21 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 282 questions
+**Table of Contents** — 19 subtopics · 292 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-82) | 82 |
-| 2 | [Keys in DBMS](#keys-in-dbms-33) | 33 |
+| 1 | [SQL Queries](#sql-queries-87) | 87 |
+| 2 | [Keys in DBMS](#keys-in-dbms-34) | 34 |
 | 3 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
 | 4 | [DBMS Architecture & Features](#dbms-architecture--features-24) | 24 |
 | 5 | [Normalization & Database Design](#normalization--database-design-21) | 21 |
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-18) | 18 |
 | 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-14) | 14 |
-| 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
-| 9 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-9) | 9 |
-| 10 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
-| 11 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-8) | 8 |
+| 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-14) | 14 |
+| 9 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-10) | 10 |
+| 10 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-9) | 9 |
+| 11 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
 | 12 | [PL/SQL & Database Triggers](#plsql--database-triggers-7) | 7 |
-| 13 | [SQL Joins & Operations](#sql-joins--operations-6) | 6 |
+| 13 | [SQL Joins & Operations](#sql-joins--operations-7) | 7 |
 | 14 | [Distributed & Parallel Databases](#distributed--parallel-databases-5) | 5 |
 | 15 | [Database Design & Data Types](#database-design--data-types-3) | 3 |
 | 16 | [NoSQL, NewSQL & Modern Databases](#nosql-newsql--modern-databases-2) | 2 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (82)
+## SQL Queries (87)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -363,7 +363,24 @@ SELECT count (*) FROM (
 
 82. **What is the SQL query for showing only the duplicate lists in student (id, name, gpa) table?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1223 (ET: N/A)]*
 
-## Keys in DBMS (33)
+83. **Given a database table with some column** *[BTCL Assistant Manager (Technical) 2017 compact it 1256 (ET: N/A)]*
+   a. find out the min salary from table
+   b. find out a matched string
+
+84. **Probably a SQL query** *[BTCL Assistant Manager (Technical) 2017 compact it 1256 (ET: N/A)]*
+   (a) Show the branch name with the minimum balance
+   (b) Select all dept_name, roll from Student
+
+85. **Write a SQL query to get second highest salary from Employee table.** *[BCC Assistant Programmer 2017 compact it 1257 (ET: N/A)]*
+
+86. **Which modifier should be used to remove duplicate rows in SQL query?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1266 (ET: N/A)]*
+
+87. **What dose following query do?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
+```sql
+SELECT *FROM students ORDER BY ID, NAME DESC
+```
+
+## Keys in DBMS (34)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -450,6 +467,8 @@ SELECT count (*) FROM (
 | C05 | 102 |
 | C06 | 103 |
 | C07 | 102 |
+
+34. **Define ‘integrity rules’ of database systems. Write a SQL query to get the second highest salary from Employee table.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
 
 ## ER Diagram & Database Design (25)
 
@@ -695,7 +714,7 @@ SELECT count (*) FROM (
 
 14. **Describe the ACID properties of database.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
 
-## Relational Data Model & ER Relationships (13)
+## Relational Data Model & ER Relationships (14)
 
 1. What are the different types of relationships in a relational database? Explain each with examples. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -722,6 +741,50 @@ SELECT count (*) FROM (
 12. **(ক) Relationship degree কাকে বলে? উহা কত প্রকার ও কি কি? সংক্ষেপে লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1068 (ET: N/A)]*
 
 13. **(খ) Relational Database Model কী? অন্যান্য মডেলের তুলনায় এর সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094-1095 (ET: N/A)]*
+
+14. **What is cardinality and modality?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265-1266 (ET: N/A)]*
+
+## Indexing & Query Optimization (B-Tree, B+ Tree) (10)
+
+1. **How indexing improve query performance?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
+
+2. **Briefly describe primary key, foreign key and indexing in relational database and their relationship. Do you think database indexing always makes applications faster? Explain your answer.**
+
+**Table Name: STUDENT**
+| Stu_Id | Stu_Name | Stu_Age |
+|---|---|---|
+| 101 | Steve | 23 |
+| 102 | John | 24 |
+| 103 | Robert | 28 |
+| 104 | Steve | 29 |
+
+**Course_enrollment table:**
+| Course_Id | Stu_Id |
+|---|---|
+| C01 | 101 |
+| C02 | 102 |
+| C03 | 101 |
+| C05 | 102 |
+| C06 | 103 |
+| C07 | 102 |
+
+*[Combined Bank Senior Officer (IT) 17.05.2024 compact it 337 (ET: BIBM)]*
+
+3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 612 (ET: N/A)]*
+
+4. **How does index tuning help in improving query performance?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 747 (ET: N/A)]*
+
+5. **Construct a B+ tree index structure on emp_id for the given relation employee as shown below with n=4.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
+
+6. **What is Indexing? Write down the usages of Indexing.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
+
+7. **(খ) Database এর ক্ষেত্রে Indexing এর কার্যকারিতা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
+
+8. **(ক) Sorting and Indexing-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
+
+9. **What is the purpose of index in database?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
+
+10. **How hashtable is used in database?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
 
 ## Data Warehousing, Data Mining & Business Intelligence (9)
 
@@ -768,44 +831,6 @@ SELECT count (*) FROM (
 
 8. **Describe what are the ways for no data loss?** *[RAKUB Assistant Database Administrator 2020 compact it 1015-1016 (ET: E-Zone)]*
 
-## Indexing & Query Optimization (B-Tree, B+ Tree) (8)
-
-1. **How indexing improve query performance?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
-
-2. **Briefly describe primary key, foreign key and indexing in relational database and their relationship. Do you think database indexing always makes applications faster? Explain your answer.**
-
-**Table Name: STUDENT**
-| Stu_Id | Stu_Name | Stu_Age |
-|---|---|---|
-| 101 | Steve | 23 |
-| 102 | John | 24 |
-| 103 | Robert | 28 |
-| 104 | Steve | 29 |
-
-**Course_enrollment table:**
-| Course_Id | Stu_Id |
-|---|---|
-| C01 | 101 |
-| C02 | 102 |
-| C03 | 101 |
-| C05 | 102 |
-| C06 | 103 |
-| C07 | 102 |
-
-*[Combined Bank Senior Officer (IT) 17.05.2024 compact it 337 (ET: BIBM)]*
-
-3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 612 (ET: N/A)]*
-
-4. **How does index tuning help in improving query performance?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 747 (ET: N/A)]*
-
-5. **Construct a B+ tree index structure on emp_id for the given relation employee as shown below with n=4.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
-
-6. **What is Indexing? Write down the usages of Indexing.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
-
-7. **(খ) Database এর ক্ষেত্রে Indexing এর কার্যকারিতা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
-
-8. **(ক) Sorting and Indexing-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
-
 ## PL/SQL & Database Triggers (7)
 
 1. **Explain Database Trigger with example.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
@@ -822,7 +847,7 @@ SELECT count (*) FROM (
 
 7. **Write a program in pl/SQL to find the heighest paid employees from employee table and store the data in HighestPaidEmp table.** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
 
-## SQL Joins & Operations (6)
+## SQL Joins & Operations (7)
 
 1. **What are the different types of join in SQL?** *[DESCO Assistant Engineer 20.05.2023 compact it 580 (ET: DESCO)]*
 
@@ -835,6 +860,8 @@ SELECT count (*) FROM (
 5. **(b) Explain JOIN and INNER-JOIN procedure.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
 
 6. **Define: (i) Left outer join (ii) Right outer join (iii) Full outer join (iv) One to many and (v) Many to many** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
+
+7. **What join should use when there is no match between two tables?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1266 (ET: N/A)]*
 
 ## Distributed & Parallel Databases (5)
 

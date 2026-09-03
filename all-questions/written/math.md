@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 95 questions
+**Table of Contents** — 15 subtopics · 96 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -12,8 +12,8 @@
 | 7 | [Ratio, Proportion & Mixtures](#ratio-proportion--mixtures-4) | 4 |
 | 8 | [Speed, Time, Distance & Boats](#speed-time-distance--boats-4) | 4 |
 | 9 | [Probability & Statistics](#probability--statistics-4) | 4 |
-| 10 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations-3) | 3 |
-| 11 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-3) | 3 |
+| 10 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-4) | 4 |
+| 11 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations-3) | 3 |
 | 12 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-3) | 3 |
 | 13 | [Calculus & Integration](#calculus--integration-2) | 2 |
 | 14 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
@@ -201,6 +201,16 @@
 
 4. **10-bits number taken randomly, find the probability that all the bits are 1.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
 
+## Propositional Logic & Logical Equivalence (4)
+
+1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+2. **(d) Simplify the following expression: $\neg(\neg q \land (\neg p \lor q)) \lor \neg p$.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+
+3. **What is tautology? Write an example of a tautology.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+
+4. **What is tautology? A statement like $[(A \rightarrow B) \land A] \rightarrow A$ was given and said to prove it is a tautology by using truth table.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
+
 ## Discrete Mathematics & Recurrence Relations (3)
 
 1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 592 (ET: BUET)]*
@@ -208,14 +218,6 @@
 2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
 3. **Proved that $1+2+3+4+\dots\dots\dots\dots+n = \frac{n(n+1)}{2}$** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
-
-## Propositional Logic & Logical Equivalence (3)
-
-1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-
-2. **(d) Simplify the following expression: $\neg(\neg q \land (\neg p \lor q)) \lor \neg p$.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
-
-3. **What is tautology? Write an example of a tautology.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
 
 ## Analytical Ability & Logical Reasoning (3)
 

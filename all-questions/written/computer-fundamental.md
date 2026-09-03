@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 145 questions
+**Table of Contents** — 10 subtopics · 150 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-55) | 55 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-57) | 57 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
-| 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-22) | 22 |
-| 4 | [Software Types & Classification](#software-types--classification-15) | 15 |
+| 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
+| 4 | [Software Types & Classification](#software-types--classification-16) | 16 |
 | 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-10) | 10 |
 | 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-8) | 8 |
 | 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (55)
+## Computer Fundamentals & Acronyms (57)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -159,6 +159,10 @@
 
 55. **Describe about Firewalls, Microcontroller, COCOMO, Query Optimization, Genetic algorithm and UML.** *[ICT Ministry Assistant Programmer 2017 compact it 1241 (ET: N/A)]*
 
+56. **You have created a file containing 1 million characters. Suppose you want to save the file in ASCII format. How much memory space in MB in needed to store the file?** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1264 (ET: N/A)]*
+
+57. **Explain URL, VOIP and Broadband.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1264 (ET: N/A)]*
+
 ## ICT in Society & Governance (24)
 
 1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
@@ -209,7 +213,7 @@
 
 24. **What is E-Commerce? What are the types of E-commerce?** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
-## Hardware Components & BIOS (CMOS Battery) (22)
+## Hardware Components & BIOS (CMOS Battery) (24)
 
 1. **Performance of CMOS battery?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
@@ -255,7 +259,11 @@
 
 22. **Difference between BIOS and EFI also BOOT loader and firmware.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120 (ET: BUET)]*
 
-## Software Types & Classification (15)
+23. **Suppose you are entering data into computer but facing some problem with your monitor. You need to buy a new monitor. What factor should you consider in case of monitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
+
+24. **Distinguish between OMR and MICR.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
+
+## Software Types & Classification (16)
 
 1. **What is the difference between System Software and Application Software?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)], [Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -286,6 +294,8 @@
 14. **Compare between TPS and DSS.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1165-1166 (ET: N/A)]*
 
 15. **Differentiate between system software and application software.** *[Multiple Ministry Assistant Programmer 2017 compact it 1228-1229 (ET: N/A)]*
+
+16. **Define system software and application software with three examples of each.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
 
 ## Data Center Infrastructure & Power Management (10)
 

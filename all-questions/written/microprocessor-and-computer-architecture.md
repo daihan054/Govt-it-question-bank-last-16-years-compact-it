@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 130 questions
+**Table of Contents** — 11 subtopics · 131 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -9,7 +9,7 @@
 | 4 | [Cache Memory](#cache-memory-14) | 14 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
 | 6 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-8) | 8 |
-| 7 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-7) | 7 |
+| 7 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-8) | 8 |
 | 8 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-6) | 6 |
 | 9 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
 | 10 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-4) | 4 |
@@ -251,7 +251,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 8. **Explain the instructions LDS, PUSHF, TEST and CLD.** *[Multiple Ministry Assistant Programmer 2017 compact it 1235 (ET: N/A)]*
 
-## Instruction Pipelining & Hazards (7)
+## Instruction Pipelining & Hazards (8)
 
 1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
 
@@ -270,6 +270,8 @@ MOV AX, A534H এবং MOV AX, [A534H]
 6. **How computer Architecture is characterized. What are the 5 stages of the DLX pipeline?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049-1050 (ET: BUET)]*
 
 7. **“Pentium processor has a superscalar architecture.” Explain the meaning of statement.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
+
+8. **Using pipeline calculate the value of fetch and execution cycle.** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
 
 ## CPU Performance & Instruction Cycle (6)
 

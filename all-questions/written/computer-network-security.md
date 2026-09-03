@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 180 questions
+**Table of Contents** — 14 subtopics · 181 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-31) | 31 |
+| 1 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-32) | 32 |
 | 2 | [Cryptography](#cryptography-30) | 30 |
 | 3 | [Firewalls & Network Defense](#firewalls--network-defense-20) | 20 |
 | 4 | [Malware & Security Threats](#malware--security-threats-19) | 19 |
@@ -22,7 +22,7 @@
 
 ---
 
-## Social Engineering & Cyber Attacks (31)
+## Social Engineering & Cyber Attacks (32)
 
 1. What is a phishing attack? Explain its types and discuss methods to prevent it. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -85,6 +85,8 @@
 30. **Write down the name of different attack through internet.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*, *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
 
 31. **Briefly describe about DoS, IP address spoofing and Man-in-the-middle attacks.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
+
+32. **What is MAC Flood in Switch? How attacker gets benefitted from it?** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
 
 ## Cryptography (30)
 

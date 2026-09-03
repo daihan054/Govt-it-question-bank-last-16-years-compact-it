@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 133 questions
+**Table of Contents** — 14 subtopics · 134 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,7 +7,7 @@
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-15) | 15 |
 | 4 | [Searching Algorithms](#searching-algorithms-14) | 14 |
-| 5 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-13) | 13 |
+| 5 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-14) | 14 |
 | 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms-9) | 9 |
 | 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-7) | 7 |
 | 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
@@ -204,7 +204,7 @@
 
 14. **What is algorithm? Write down the algorithm to find out the second highest element in an n-element array.** *[ICT Ministry Assistant Programmer 2017 compact it 1236 (ET: N/A)]*
 
-## Algorithm Analysis & Asymptotic Complexity (13)
+## Algorithm Analysis & Asymptotic Complexity (14)
 
 1. **Analyze the time and space complexity of the following code:**
 ```python
@@ -237,6 +237,14 @@ for i in N:
 12. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983-984 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 13. **Write an algorithm which complexity is O(logn).** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1122 (ET: BUET)]*
+
+14. **Find time and space complexity like below pseudo code.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1266 (ET: N/A)]*
+```c
+for(i=0; i<n;i++)
+for(j=0; j<n;j++)
+for(k=0; k<n;k++)
+count++;
+```
 
 ## Dynamic Programming & Greedy Algorithms (9)
 
