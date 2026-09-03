@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 20 questions
+**Table of Contents** — 5 subtopics · 22 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Regular Expressions & Finite Automata](#regular-expressions--finite-automata-6) | 6 |
 | 2 | [Grammar & Ambiguity](#grammar--ambiguity-5) | 5 |
-| 3 | [Compiler vs Interpreter](#compiler-vs-interpreter-4) | 4 |
-| 4 | [Lexical Analysis & Compiler Phases](#lexical-analysis--compiler-phases-4) | 4 |
+| 3 | [Compiler vs Interpreter](#compiler-vs-interpreter-5) | 5 |
+| 4 | [Lexical Analysis & Compiler Phases](#lexical-analysis--compiler-phases-5) | 5 |
 | 5 | [Linker & Loader](#linker--loader-1) | 1 |
 
 <!-- TOC END -->
@@ -43,7 +43,7 @@
 
 5. **Draw a derivation tree for the string “bab” from the CFG given by- S \to bSb \mid a \mid b** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 877-878 (ET: BUET)]*
 
-## Compiler vs Interpreter (4)
+## Compiler vs Interpreter (5)
 
 1. **b) Write down the difference between Interpreter and Compiler?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)], [BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 672 (ET: N/A)], [CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)], [PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)], [Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)], [BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 678 (ET: N/A)]*
 
@@ -53,7 +53,9 @@
 
 4. **Define an Interpreted language.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823 (ET: BUET)]*
 
-## Lexical Analysis & Compiler Phases (4)
+5. **Difference between compiler and interpreter with example?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
+
+## Lexical Analysis & Compiler Phases (5)
 
 1. **(a) How does a compiler handle comments in source code?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
@@ -63,6 +65,8 @@
 3. **Why we optimize algorithm when it runs in compile time?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
 
 4. **Explain Semantic Error in a context of Compiler.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
+
+5. **(খ) Parsing কী? Top-down parsing and bottom-up parsing সম্পর্কে লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1070 (ET: N/A)]*
 
 ## Linker & Loader (1)
 

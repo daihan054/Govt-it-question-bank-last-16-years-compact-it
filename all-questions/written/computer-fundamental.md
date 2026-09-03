@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 127 questions
+**Table of Contents** — 10 subtopics · 128 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-49) | 49 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-50) | 50 |
 | 2 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-21) | 21 |
 | 3 | [ICT in Society & Governance](#ict-in-society--governance-20) | 20 |
 | 4 | [Software Types & Classification](#software-types--classification-12) | 12 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (49)
+## Computer Fundamentals & Acronyms (50)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -123,6 +123,8 @@
 48. **পূর্ণরূপ লিখ: (a) LTE (b) IOT (c) RDBMS (d) FORTRAN** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947-948 (ET: BUET)]*
 
 49. **Write down the full meaning: (i) DNS (ii) TCP (iii) FTP (iv) ARP (v) UDP** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1045-1046 (ET: BUET)]*
+
+50. **(ক) আকার আকৃতি ও ক্ষমতার ভিত্তিতে Digital Computer-এর প্রকারভেদ আলোচনা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1066-1067 (ET: N/A)]*
 
 ## Hardware Components & BIOS (CMOS Battery) (21)
 

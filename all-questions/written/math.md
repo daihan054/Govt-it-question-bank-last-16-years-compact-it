@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 88 questions
+**Table of Contents** — 15 subtopics · 89 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -16,8 +16,8 @@
 | 11 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-2) | 2 |
 | 12 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
 | 13 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations-2) | 2 |
-| 14 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-1) | 1 |
-| 15 | [Numerical Methods & Root Finding](#numerical-methods--root-finding-1) | 1 |
+| 14 | [Numerical Methods & Root Finding](#numerical-methods--root-finding-2) | 2 |
+| 15 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-1) | 1 |
 
 <!-- TOC END -->
 
@@ -221,10 +221,12 @@
 
 2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
+## Numerical Methods & Root Finding (2)
+
+1. **Determine the root of the given equation x^2 - 3 = 0 for x \in [1, 2]** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 458 (ET: BUET)]*
+
+2. **(ক) কোন একটি সমীকরণের মূল নির্ণয়ের জন্য নিউমেরিক্যাল এনালাইসিসে ব্যবহৃত বিভিন্ন পদ্ধতির নাম লিখুন এবং বাইসেকশান পদ্ধতি ব্যবহার করে সমীকরণটির মূল নির্ণয়ের পদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
+
 ## Propositional Logic & Logical Equivalence (1)
 
 1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-
-## Numerical Methods & Root Finding (1)
-
-1. **Determine the root of the given equation x^2 - 3 = 0 for x \in [1, 2]** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 458 (ET: BUET)]*

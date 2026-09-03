@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 108 questions
+**Table of Contents** — 11 subtopics · 112 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-27) | 27 |
-| 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-21) | 21 |
+| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-28) | 28 |
+| 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-23) | 23 |
 | 3 | [RAID Architecture & Storage](#raid-architecture--storage-13) | 13 |
 | 4 | [Cache Memory](#cache-memory-12) | 12 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
@@ -13,13 +13,13 @@
 | 8 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-5) | 5 |
 | 9 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-4) | 4 |
 | 10 | [8085 Microprocessor & Edge Computing](#8085-microprocessor--edge-computing-3) | 3 |
-| 11 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-2) | 2 |
+| 11 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-3) | 3 |
 
 <!-- TOC END -->
 
 ---
 
-## Microprocessor Architecture & Functions (27)
+## Microprocessor Architecture & Functions (28)
 
 1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -83,7 +83,9 @@
 
 27. **Microcontroller এবং Microprocessor এর মধ্যে Hardware Related পার্থক্য গুলো লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
 
-## Memory Hierarchy & Storage (21)
+28. **(ক) System bus কী? বিভিন্ন প্রকার System bus সম্পর্কে সচিত্র আলোচনা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
+
+## Memory Hierarchy & Storage (23)
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -126,6 +128,10 @@
 20. **(c) Given below the list of some memory devices. Identify which are semi-conductor, optical and magnetic memory. CD, RAM, Floppy Disk, Hard Disk, ROM, DVD.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1024 (ET: N/A)]*
 
 21. **How Maximum size of memory (RAM) is needed that can be addressed by 32-bit system.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1031 (ET: BUET)]*
+
+22. **What is access time and transfer time?** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*
+
+23. **(ক) Memory address register and Memory buffer register কী? Primary memory and Secondary memory-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069-1070 (ET: N/A)]*
 
 ## RAID Architecture & Storage (13)
 
@@ -266,8 +272,10 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 3. **What is the difference between 8-bit (8085) and 16-bit (8086) microprocessor?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865-866 (ET: BUET)]*
 
-## RISC vs CISC Architecture (2)
+## RISC vs CISC Architecture (3)
 
 1. **RISC stand for __________? Write two characteristics of it's?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
 2. **Difference between RISC and CISC.** *[NPCBL Executive Trainee (IT) 2022 compact it 644 (ET: BUET)]*
+
+3. **(ক) CISC and RISC processor বলতে কি বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*

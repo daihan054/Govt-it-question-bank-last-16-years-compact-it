@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 127 questions
+**Table of Contents** — 13 subtopics · 128 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models-37) | 37 |
+| 1 | [SDLC Phases & Models](#sdlc-phases--models-38) | 38 |
 | 2 | [Software Testing & Evaluation](#software-testing--evaluation-36) | 36 |
 | 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-11) | 11 |
 | 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-9) | 9 |
@@ -21,7 +21,7 @@
 
 ---
 
-## SDLC Phases & Models (37)
+## SDLC Phases & Models (38)
 
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
@@ -96,6 +96,8 @@
 36. **(ii) Software development এর ধাপসমূহ সংক্ষেপে বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 960 (ET: N/A)]*
 
 37. **What is Agile Methodology? Difference between Agile Model and Waterfall Model.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1003-1004 (ET: DU)]*
+
+38. **What is SDLC? Write down the step of SDLC.** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*
 
 ## Software Testing & Evaluation (36)
 

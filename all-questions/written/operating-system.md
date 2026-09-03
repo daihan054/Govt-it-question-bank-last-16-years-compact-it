@@ -1,16 +1,16 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 169 questions
+**Table of Contents** — 12 subtopics · 173 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-42) | 42 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-22) | 22 |
-| 4 | [OS Concepts & System Software](#os-concepts--system-software-16) | 16 |
+| 4 | [OS Concepts & System Software](#os-concepts--system-software-19) | 19 |
 | 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-15) | 15 |
 | 6 | [Memory Management & Paging](#memory-management--paging-13) | 13 |
 | 7 | [Process Management & Process States](#process-management--process-states-10) | 10 |
-| 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-9) | 9 |
+| 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-10) | 10 |
 | 9 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
 | 10 | [Windows & System Administration](#windows--system-administration-4) | 4 |
 | 11 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
@@ -270,7 +270,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 22. **Four condition of deadlock in Operating System. Suppose, n processes, \text{P}_1, \text{P}_2\dots \text{P}_n share m identical esource units which can be reserved and released one at a time. The maximum resources request of process \text{P}_i is \text{S}_i, where \text{S}_i>0. Which one is sufficient condition for ensuring that deadlock doesn't occur? (Full প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
-## OS Concepts & System Software (16)
+## OS Concepts & System Software (19)
 
 1. Difference Between Firmware and OS. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -303,6 +303,12 @@ The content of the matrix. Need is defined to be Max – Allocation.
 15. **(a) Briefly describe the function that measure the efficiency of an operating system.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1025 (ET: N/A)]*
 
 16. **What is the difference between micro kernel and macro kernel? What are the sub components of I/O manager in Windows NT?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1052-1053 (ET: BUET)]*
+
+17. **What is operating System? What are the main components of operating System?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
+
+18. **(গ) Operating System-এর সংগঠন সহ কাজ উল্লেখ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1067-1068 (ET: N/A)]*
+
+19. **(খ) Time shearing operating system and Real time operating system-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
 
 ## Virtual Memory & Page Replacement (Thrashing) (15)
 
@@ -397,7 +403,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 10. **Operating System এর ক্ষেত্রে নিম্নোক্ত Process State গুলো ব্যবহার করে State Diagram অংকন করুন। [New, ready, Wait, Run, Terminated]** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
 
-## Concurrency, Threads & Synchronization (9)
+## Concurrency, Threads & Synchronization (10)
 
 1. Multi-threaded processing and distributed computing have become essential. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
@@ -436,6 +442,8 @@ int main(int argc, char *argv[]){
 8. **(c) What is thread? Give some benefits of multi-threaded programming.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 889-890 (ET: N/A)]*
 
 9. **(d) Differentiate between thread and process.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
+
+10. **What is multitasking and multithreading? What are the advantage threads over process?** *[Bangladesh Competition Commission Programmer 2019 compact it 1060 (ET: DU)]*
 
 ## CPU Scheduling (6)
 

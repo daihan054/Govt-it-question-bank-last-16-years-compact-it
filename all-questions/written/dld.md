@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 111 questions
+**Table of Contents** — 9 subtopics · 120 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-28) | 28 |
-| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-19) | 19 |
+| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-29) | 29 |
+| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-21) | 21 |
 | 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-18) | 18 |
-| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-16) | 16 |
-| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-13) | 13 |
-| 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-9) | 9 |
+| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-17) | 17 |
+| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-16) | 16 |
+| 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-11) | 11 |
 | 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-5) | 5 |
 | 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-2) | 2 |
 | 9 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Logic Gates & Universal Gates (28)
+## Logic Gates & Universal Gates (29)
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -75,7 +75,9 @@
 
 28. **How will realize a AND gate and OR gate using CMOS NAND and NOR gate?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1051-1052 (ET: BUET)]*
 
-## Number Systems & Base Conversions (19)
+29. **(খ) Universal Gate কাকে বলে? Universal Gate-এর সার্বজনীনতা প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+
+## Number Systems & Base Conversions (21)
 
 1. **(a) Convert the following number:**
    **i. Decimal number 9 to binary number.**
@@ -117,6 +119,10 @@
 18. **Convert (343)_{10} to binary and Hexadecimal.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
 
 19. **(1111001101011)_2 কে অক্টাল ও হেক্সাডেসিম্যালে রূপান্তর করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
+
+20. **(ক) Parity bit কী? $(17.625)_{10}$ কে বাইনারি এবং $(\text{AB.C})_{16}$ কে দশমিক সংখ্যায় প্রকাশ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1071 (ET: N/A)]*
+
+21. **(খ) $(3\text{D}.4\text{C})_{16}$ এবং $(514.6)_8$ কে বাইনারি সংখ্যায় পরিবর্তন করে যোগ এবং যোগফল হেক্সাডেসিমালে প্রকাশ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1071-1072 (ET: N/A)]*
 
 ## Combinational Circuits (Adders, Encoders, MUX) (18)
 
@@ -168,7 +174,7 @@
 
 18. **4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
 
-## Karnaugh Map (K-Map) (16)
+## Karnaugh Map (K-Map) (17)
 
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
 
@@ -205,7 +211,9 @@
 
 16. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038-1039 (ET: DPI)]*
 
-## Boolean Algebra & De Morgan’s Theorem (13)
+17. **(গ) Min term কী? K-map-এর সাহায্যে সরল করুন: $\bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+
+## Boolean Algebra & De Morgan’s Theorem (16)
 
 1. **(a) State De-Morgan’s law with an appropriate example.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
@@ -233,7 +241,13 @@
 
 13. **De-Morgans Law গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
 
-## Sequential Circuits (Latches & Flip-Flops) (9)
+14. **(ক) বুলিয়ান অ্যালজেবরার সাহায্যে সরল করুন: $\overline{x+y(x+z)}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
+
+15. **(খ) প্রমাণ করুন: $A \oplus B = AB + \bar{A}\bar{B}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073-1074 (ET: N/A)]*
+
+16. **(ক) তিন চলকের De Morgan's উপপাদ্য দুইটি লিখুন এবং Truth table-এর সাহায্যে প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+
+## Sequential Circuits (Latches & Flip-Flops) (11)
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
@@ -252,6 +266,10 @@
 8. **(ii) R-S Flip-flop এর সত্যস্য সারণি ও বৈশিষ্ট আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 959-960 (ET: N/A)]*
 
 9. **MOD-6 বাইনারি কাউন্টার এর Block Diagram অংকন করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1039 (ET: DPI)]*
+
+10. **(গ) Flip-Flop কী? একটি Multiplexer এর কার্যপদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1075 (ET: N/A)]*
+
+11. **Ripple counter কী? একটি তিন বিটের Asynchronous up ripple counter এর গঠন লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077-1078 (ET: N/A)]*
 
 ## Logic Families (TTL vs CMOS) (5)
 

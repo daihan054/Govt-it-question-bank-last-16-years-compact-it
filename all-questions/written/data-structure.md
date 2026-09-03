@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 86 questions
+**Table of Contents** — 8 subtopics · 87 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Tree](#tree-26) | 26 |
 | 2 | [Stack](#stack-19) | 19 |
-| 3 | [Linked List](#linked-list-14) | 14 |
+| 3 | [Linked List](#linked-list-15) | 15 |
 | 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-7) | 7 |
 | 5 | [Queue](#queue-6) | 6 |
 | 6 | [Binary Search Tree (BST)](#binary-search-tree-bst-6) | 6 |
@@ -120,7 +120,7 @@ Output: Not Balanced
 
 19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
-## Linked List (14)
+## Linked List (15)
 
 1. **Explain with proper example of singly linked list.** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
 
@@ -149,6 +149,8 @@ Output: Not Balanced
 13. **Linked list, doubly linked list and circular linked list explains with diagram.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1004-1005 (ET: DU)]*
 
 14. **In a doubly linked list write the function of Traversing from the tail.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+15. **(খ) Linked list কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
 
 ## Priority Queues & Heaps (Min/Max Heap) (7)
 

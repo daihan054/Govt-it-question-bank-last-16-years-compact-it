@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 84 questions
+**Table of Contents** — 9 subtopics · 86 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-45) | 45 |
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-46) | 46 |
 | 2 | [Java Programming & Methods](#java-programming--methods-11) | 11 |
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-7) | 7 |
-| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-6) | 6 |
+| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
 | 5 | [Constructors & Destructors](#constructors--destructors-5) | 5 |
 | 6 | [Output Tracing & Recursion](#output-tracing--recursion-3) | 3 |
 | 7 | [Exception Handling](#exception-handling-3) | 3 |
@@ -17,7 +17,7 @@
 
 ---
 
-## OOP Concepts (Inheritance & Polymorphism) (45)
+## OOP Concepts (Inheritance & Polymorphism) (46)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -143,6 +143,8 @@ public class main{
 
 45. **Object Oriented Programming এ Method Overloading and Method Overriding এর মধ্যে পার্থক্য কী?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1023 (ET: N/A)]*
 
+46. **Inheritance, Polymorphism and Encapsulation ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1078 (ET: N/A)]*
+
 ## Java Programming & Methods (11)
 
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
@@ -198,7 +200,7 @@ Public class class B extends class A {
 
 7. **Write a programme to create an object of type batsman and calculate the average runs scored by the player.** *[RAKUB Programmer (PO) 12.10.2021 compact it 846-847 (ET: N/A)]*
 
-## Encapsulation & Access Modifiers (6)
+## Encapsulation & Access Modifiers (7)
 
 1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
 
@@ -211,6 +213,8 @@ Public class class B extends class A {
 5. **What are the various Access Specification in C++? Explain their purpose with are example.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 673 (ET: N/A)]*
 
 6. **How many specifiers are used in C++ programing?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
+
+7. **Briefly Describe Abstraction, Encapsulation.** *[Bangladesh Competition Commission Programmer 2019 compact it 1059-1060 (ET: DU)]*
 
 ## Constructors & Destructors (5)
 

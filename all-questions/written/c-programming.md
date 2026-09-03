@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 203 questions
+**Table of Contents** — 9 subtopics · 208 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-86) | 86 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-36) | 36 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-89) | 89 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-37) | 37 |
 | 3 | [Recursion & Functions](#recursion--functions-32) | 32 |
-| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-17) | 17 |
+| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-18) | 18 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-12) | 12 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-11) | 11 |
 | 7 | [File Handling](#file-handling-4) | 4 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (86)
+## Basic Programs & Control Statements (89)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -343,7 +343,13 @@ return 0;
 
 86. **0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040-1041 (ET: DPI)]*
 
-## Output Tracing & Control Flow (36)
+87. **Write a program in C to find the sum of following series: $1^2+2^2+3^2+\dots\dots\dots\dots+n^2$** *[Bangladesh Competition Commission Programmer 2019 compact it 1061 (ET: DU)]*
+
+88. **A prim number is a number that is evenly divided by only 1 and itself. Write a program to your favorite language to print the first 100 prime numbers.** *[Bangladesh Competition Commission Programmer 2019 compact it 1062 (ET: DU)]*
+
+89. **(গ) Array processor কী? $1+\frac{1}{2}+\frac{1}{3}+\dots\dots\dots\dots+\frac{1}{N}$ ধারাটির যোগফল নির্ণয়ের জন্য C ভাষায় একটি প্রোগ্রাম লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072-1073 (ET: N/A)]*
+
+## Output Tracing & Control Flow (37)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -764,6 +770,16 @@ For(i=100; i<=0; --i)
     Printf("%d",i);
 ```
 
+37. **What is the output of following code?** *[Bangladesh Competition Commission Programmer 2019 compact it 1062 (ET: DU)]*
+```c
+#include<stdio.h>
+void main () {
+    char *f [] = {"Ronaldo", "Messi", "Zidan", "Maradona"}, str[20];
+    printf("%s\n", f[1]+2);
+    printf("%s", f[2]+1);
+}
+```
+
 ## Recursion & Functions (32)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
@@ -880,7 +896,7 @@ int main() {
 
 32. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-## Operators, Data Types & Language Concepts (17)
+## Operators, Data Types & Language Concepts (18)
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
@@ -915,6 +931,13 @@ int main() {
 16. **Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Control structure in C programming (vi) Stack (vii) Debugging (viii) Increment and Decrement process in C programming (ix) Object in C++ (x) Data encapsulation** *[National University Assistant Programmer 2020 compact it 978-980 (ET: DU)]*
 
 17. **নিচের if-else কে switch case এ পরিনত করুন। if(ch== 'A':: ch== 'E' :: ch== 'I' :: ch == 'O':: ch== 'U')** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
+
+18. **Answer the following question:** *[Bangladesh Competition Commission Programmer 2019 compact it 1063 (ET: DU)]*
+   a. Polymorphism refers to \_\_\_\_\_\_\_?
+   b. What is the simplest method to prove that a graph is bipartite?
+   c. In C what is the correct syntax to a send a 3- dimension array as a parameter?
+   d. The Size of the character variable in C is \_\_\_\_\_?
+   e. In Java what is true about private constructor?
 
 ## Flowcharts & Algorithms (12)
 

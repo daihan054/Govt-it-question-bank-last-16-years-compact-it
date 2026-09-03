@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 441 questions
+**Table of Contents** — 33 subtopics · 444 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-95) | 95 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-96) | 96 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-43) | 43 |
-| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-24) | 24 |
+| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-25) | 25 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-19) | 19 |
 | 5 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-18) | 18 |
 | 6 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
@@ -16,7 +16,7 @@
 | 11 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-14) | 14 |
 | 12 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
 | 13 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-14) | 14 |
-| 14 | [Network Topologies](#network-topologies-12) | 12 |
+| 14 | [Network Topologies](#network-topologies-13) | 13 |
 | 15 | [IPv6 Addressing](#ipv6-addressing-11) | 11 |
 | 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-11) | 11 |
 | 17 | [Network Address Translation (NAT)](#network-address-translation-nat-11) | 11 |
@@ -41,7 +41,7 @@
 
 ---
 
-## Subnetting & IP Addressing (95)
+## Subnetting & IP Addressing (96)
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
@@ -274,6 +274,8 @@ ii) 211.10.15.4
 
 95. **Given IP Address 180.79.35.5/24, Find the (i) Network address (ii) Broadcast address (iii) Subnet mask (iv) Total valid host (v) IP address class** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1043 (ET: BUET)]*
 
+96. **What is private IP? List the class B private IP.** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*
+
 ## OSI & TCP/IP Reference Model (43)
 
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
@@ -369,7 +371,7 @@ ii) 211.10.15.4
 
 43. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1042-1043 (ET: DPI)]*
 
-## Networking Fundamentals & Terminology (24)
+## Networking Fundamentals & Terminology (25)
 
 1. **Define Computer Network. Describe different types of Computer Networks.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -421,6 +423,8 @@ ii) 211.10.15.4
 23. **b) Two IP address map to same Ethernet address. Will both of them receive packets?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
 
 24. **Write short note: Node, Backbone, Router and Gateway.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049 (ET: BUET)]*
+
+25. **(খ) Public and Private Network-এর মধ্যে পার্থক্য লিখুন? IP address কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (19)
 
@@ -802,7 +806,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
 
-## Network Topologies (12)
+## Network Topologies (13)
 
 1. **What is Star vs Mesh Topology?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
@@ -827,6 +831,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 11. **(b) Define network topologies with features.** *[National University Assistant Programmer 2020 compact it 977 (ET: DU)]*
 
 12. **(d) List some various types of Topologies. What are the factors to choose a topology?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030 (ET: N/A)]*
+
+13. **(খ) Bus and Ring টপোলজির মধ্যে কোনটি ভালো এবং কেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1067 (ET: N/A)]*
 
 ## IPv6 Addressing (11)
 

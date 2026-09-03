@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 113 questions
+**Table of Contents** — 14 subtopics · 114 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-27) | 27 |
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-28) | 28 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-14) | 14 |
 | 4 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-12) | 12 |
@@ -22,7 +22,7 @@
 
 ---
 
-## Sorting Algorithms & Complexity (27)
+## Sorting Algorithms & Complexity (28)
 
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -87,6 +87,8 @@
 26. **Bubble Sort কীভাবে কাজ করে উদাহরণসহ বুঝিয়ে লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
 
 27. **Selection Sort টেকনিক ব্যবহার করে নিম্নোক্ত ডাটা গুলোকে সর্টিং করুন। 45, 72, 80, 65, 84, 52, 37** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1039-1040 (ET: DPI)]*
+
+28. **(গ) উদাহরনসহ Bubble sort algorithm লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076-1077 (ET: N/A)]*
 
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 
