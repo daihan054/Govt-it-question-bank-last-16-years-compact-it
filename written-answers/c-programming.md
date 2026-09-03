@@ -8611,11 +8611,137 @@ int main() {
 
 1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 600 (ET: N/A)]*
 
+   Answer: A pointer is a variable that stores the memory address of another variable instead of storing a value directly.
+
+   ```c
+   int x = 10;
+   int *p;          // p is a pointer to an int
+   p = &x;          // p now holds the address of x
+   printf("%d", *p) // prints 10 — the value AT that address
+   ```
+   - `&` is the address-of operator; `*` is the dereference operator that reads the value stored at an address.
+
+   Advantages of using pointers
+   - Direct memory access — memory can be read and written efficiently, which is essential for systems and embedded programming.
+   - Dynamic memory allocation — `malloc()`, `calloc()` and `realloc()` return pointers, so arrays can grow at run time instead of being fixed at compile time.
+   - Returning multiple values from a function — pass several pointers and the function writes results into all of them.
+   - Efficient parameter passing — for a large structure, passing an 8-byte address is far cheaper than copying the whole object.
+   - Building dynamic data structures — linked lists, trees, graphs, stacks and queues all depend on pointers to link nodes.
+   - Array and string handling — an array name is itself a pointer to its first element, so pointer arithmetic walks through arrays quickly.
+   - Function pointers — allow callbacks and jump tables, which makes flexible, table-driven code possible.
+
+   - Risks to note: dereferencing a NULL or uninitialised pointer crashes the program, and forgetting to `free()` allocated memory causes a memory leak.
+
 2. **(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
+
+   Answer: A pointer is a variable that holds the memory address of another variable. It is declared with `*` and is used with `&` to take an address and `*` to read the value at that address.
+
+   malloc() vs calloc()
+
+   | Point | malloc() | calloc() |
+   |---|---|---|
+   | Full form | memory allocation | contiguous allocation |
+   | Number of arguments | 1 — total bytes | 2 — number of blocks and size of each |
+   | Syntax | `p = (int*)malloc(n * sizeof(int));` | `p = (int*)calloc(n, sizeof(int));` |
+   | Initialisation | Memory is left uninitialised (garbage) | Every byte is set to 0 |
+   | Speed | Faster, no zero-filling step | Slower, because it clears the memory |
+   | Returns | `void *` to the block, or `NULL` on failure | Same |
+   | Use when | The data will be overwritten immediately | A clean, zeroed block is needed |
+
+   Example
+   ```c
+   int *a = (int *) malloc(5 * sizeof(int));   // 5 ints, values are garbage
+   int *b = (int *) calloc(5, sizeof(int));    // 5 ints, all set to 0
+
+   if (a == NULL || b == NULL) { printf("Allocation failed\n"); return 1; }
+
+   free(a);
+   free(b);
+   ```
+
+   Related functions
+   - `realloc(ptr, newSize)` — resizes an already allocated block, keeping the existing contents.
+   - `free(ptr)` — releases the memory back to the system. Every successful `malloc` or `calloc` must be matched by exactly one `free`, otherwise memory leaks.
 
 3. **Describe Dynamic memory allocation in programming in C?** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
 
+   Answer: Dynamic memory allocation means reserving memory while the program is RUNNING, rather than fixing the amount at compile time. The memory comes from the heap and is accessed through pointers.
+
+   Why it is needed
+   - A static array such as `int a[100];` fixes the size before the program starts. If only 5 elements are used, 95 slots are wasted; if 200 are needed, the program fails.
+   - Dynamic allocation asks for exactly as much memory as the input requires, and releases it when it is no longer needed.
+
+   The four functions, all declared in `<stdlib.h>`
+
+   | Function | Purpose | Example |
+   |---|---|---|
+   | `malloc(size)` | Allocates `size` bytes, uninitialised | `p = (int*)malloc(n*sizeof(int));` |
+   | `calloc(n, size)` | Allocates `n × size` bytes, all set to 0 | `p = (int*)calloc(n, sizeof(int));` |
+   | `realloc(p, size)` | Resizes an existing block, keeping its contents | `p = (int*)realloc(p, 2*n*sizeof(int));` |
+   | `free(p)` | Releases the block back to the heap | `free(p);` |
+
+   Complete example
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+
+   int main(void) {
+       int n, i, *arr;
+
+       printf("How many elements? ");
+       scanf("%d", &n);
+
+       arr = (int *) malloc(n * sizeof(int));    // exactly n integers
+       if (arr == NULL) {                        // always check
+           printf("Memory allocation failed\n");
+           return 1;
+       }
+
+       for (i = 0; i < n; i++) scanf("%d", &arr[i]);
+       for (i = 0; i < n; i++) printf("%d ", arr[i]);
+
+       free(arr);                                // release the memory
+       arr = NULL;                               // avoid a dangling pointer
+       return 0;
+   }
+   ```
+
+   Common mistakes
+   - Not checking for `NULL` — allocation can fail when memory is exhausted.
+   - Memory leak — allocating without ever calling `free()`.
+   - Dangling pointer — using a pointer after `free()`. Setting it to `NULL` afterwards prevents this.
+   - Double free — calling `free()` twice on the same pointer, which corrupts the heap.
+
+   - Static vs dynamic: static memory lives on the stack, is freed automatically and has a fixed size; dynamic memory lives on the heap, must be freed manually and can be sized at run time.
+
 4. **(a) What is the difference between array and pointer?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891-892 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Array | Pointer |
+   |---|---|---|
+   | What it is | A block of contiguous memory holding several elements | A variable holding one memory address |
+   | Memory allocated | At compile time (static), size fixed | Can point to static or dynamically allocated memory |
+   | Reassignment | Not possible — `a = b;` is illegal | Possible — `p = q;` is fine |
+   | `sizeof` | Gives the total size of the whole array | Gives the size of the pointer itself (8 bytes on 64-bit) |
+   | Address arithmetic | The name is a constant address, cannot be incremented | Can be incremented and decremented freely |
+   | Initialisation | `int a[3] = {1,2,3};` | `int *p = &x;` or `p = malloc(...)` |
+   | Deallocation | Automatic when it goes out of scope | Must be freed manually if dynamically allocated |
+
+   Example showing the sizeof difference
+   ```c
+   int a[10];
+   int *p = a;
+
+   printf("%zu\n", sizeof(a));    // 40 — ten ints
+   printf("%zu\n", sizeof(p));    // 8  — just the pointer
+   ```
+
+   How they are related
+   - An array name decays into a pointer to its first element in most expressions, so `a[i]` and `*(a + i)` mean exactly the same thing.
+   - That is why an array passed to a function arrives as a pointer, and why `sizeof` inside the function no longer gives the array size — the length must be passed separately.
+
+   - Key distinction to remember: an array name is a constant address that cannot be changed, while a pointer is a variable that can be pointed anywhere.
 
 ## Command Line Arguments & Basic Programs (1)
 
