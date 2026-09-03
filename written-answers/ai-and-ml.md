@@ -727,3 +727,35 @@
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
 1. **Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-linkage hierarchical clustering technique.** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 473 (ET: N/A)]*
+
+   Answer: In single-linkage agglomerative clustering, every point starts as its own cluster and the two closest points are merged first. So we compute the Euclidean distance between every pair and pick the smallest.
+
+   Formula: `d(A, B) = √[(x2 - x1)² + (y2 - y1)²]`
+
+   Step 1 - distance matrix
+
+   | Pair | (dx)² + (dy)² | Distance |
+   |---|---|---|
+   | P1-P2 | (0.78)² + (0.69)² = 1.0845 | 1.0414 |
+   | P1-P3 | (0.59)² + (0.06)² = 0.3517 | 0.5930 |
+   | P1-P4 | (0.42)² + (0.19)² = 0.2125 | 0.4610 |
+   | P1-P5 | (0.73)² + (0.37)² = 0.6698 | 0.8184 |
+   | P2-P3 | (0.19)² + (0.75)² = 0.5986 | 0.7737 |
+   | P2-P4 | (0.36)² + (0.50)² = 0.3796 | 0.6161 |
+   | P2-P5 | (0.05)² + (0.32)² = 0.1049 | 0.3239 |
+   | P3-P4 | (0.17)² + (0.25)² = 0.0914 | 0.3023 |
+   | P3-P5 | (0.14)² + (0.43)² = 0.2045 | 0.4522 |
+   | P4-P5 | (0.31)² + (0.18)² = 0.1285 | 0.3585 |
+
+   Step 2 - sample calculation for the smallest pair
+   - `d(P3, P4) = √[(0.66 - 0.49)² + (0.89 - 0.64)²]`
+   - `= √[(0.17)² + (0.25)²] = √[0.0289 + 0.0625] = √0.0914`
+   - `= 0.3023`
+
+   Step 3 - pick the minimum
+   - Smallest distance in the matrix is 0.3023, between P3 and P4.
+   - Next smallest is P2-P5 at 0.3239, so it is not the first merge.
+
+   Final answer
+   - The first two points grouped are P3 (0.66, 0.89) and P4 (0.49, 0.64), merging at distance 0.3023.
+   - The new cluster is {P3, P4}. In the next round, single-linkage uses the shortest distance from any member of this cluster to the remaining points.
