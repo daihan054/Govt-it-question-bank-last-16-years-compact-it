@@ -2,12 +2,12 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 18 / 243 done**  ·  **Questions: 153 answered, 4 skipped, 3168 total**
+**Subtopics: 19 / 243 done**  ·  **Questions: 158 answered, 5 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
 | `ai-and-ml.md` | IT | 11 / 11 | 42 | 1 | 43 |
-| `algorithm.md` | IT | 7 / 14 | 109 | 3 | 134 |
+| `algorithm.md` | IT | 8 / 14 | 114 | 4 | 134 |
 | `bangla.md` | General | 0 / 6 | 0 | 0 | 123 |
 | `c-programming.md` | IT | 0 / 9 | 0 | 0 | 270 |
 | `cloud-computing.md` | IT | 0 / 9 | 0 | 0 | 38 |
@@ -37,5 +37,6 @@ Content-free or truncated entries — no answer written.
 
 - `ai-and-ml.md → Artificial Intelligence & Expert Systems` — question 2
 - `algorithm.md → Algorithm Analysis & Asymptotic Complexity` — question 4
+- `algorithm.md → Greedy Algorithms (Fractional Knapsack)` — question 6
 - `algorithm.md → Algorithm Analysis & Asymptotic Complexity` — question 10
 - `algorithm.md → Graph Traversal Algorithms (BFS & DFS)` — question 13

@@ -2661,6 +2661,51 @@ count++;
 
 **অনুসারে প্রাপ্ত fractional knapsack সমস্যা সমাধান একটি চিত্রানুপাতে উত্তর লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer:
+
+   (a) Vector vs Raster graphics
+
+   | Point | Vector graphics | Raster graphics |
+   |---|---|---|
+   | Made of | Mathematical paths — points, lines, curves | A grid of pixels (bitmap) |
+   | Scaling | Can be enlarged to any size with no quality loss | Becomes blocky and pixelated when enlarged |
+   | File size | Small, stores only formulas | Large, stores every pixel value |
+   | Best for | Logos, icons, fonts, diagrams, print artwork | Photographs, detailed and shaded images |
+   | Editing | Each object can be moved and reshaped separately | Pixels are edited; objects cannot be separated |
+   | Resolution | Resolution independent | Resolution dependent (measured in DPI/PPI) |
+   | File formats | SVG, AI, EPS, PDF | JPEG, PNG, GIF, BMP, TIFF |
+   | Software | Illustrator, CorelDRAW, Inkscape | Photoshop, GIMP, MS Paint |
+
+   (b) Fractional knapsack. The bag capacity was not printed with the question, so a capacity of 10 is assumed.
+
+   Step 1 - compute the value-to-weight ratio
+
+   | Item | Value | Weight | Ratio (V/W) |
+   |---|---|---|---|
+   | 1 | 18 | 4 | 4.5 |
+   | 2 | 2.5 | 3 | 0.83 |
+   | 3 | 12 | 1 | 12.0 |
+   | 4 | 14 | 2 | 7.0 |
+   | 5 | 20 | 5 | 4.0 |
+
+   Step 2 - sort in descending order of ratio
+   - Item 3 (12.0), Item 4 (7.0), Item 1 (4.5), Item 5 (4.0), Item 2 (0.83)
+
+   Step 3 - fill the bag
+
+   | Order | Item | Taken | Weight used | Remaining capacity | Value gained |
+   |---|---|---|---|---|---|
+   | 1 | 3 | Full | 1 | 9 | 12 |
+   | 2 | 4 | Full | 2 | 7 | 14 |
+   | 3 | 1 | Full | 4 | 3 | 18 |
+   | 4 | 5 | 3/5 fraction | 3 | 0 | 20 × 3/5 = 12 |
+
+   Final answer
+   - Order of selection: Item 3 → Item 4 → Item 1 → 3/5 of Item 5
+   - Total weight = `1 + 2 + 4 + 3 = 10` (bag full)
+   - Maximum value = `12 + 14 + 18 + 12 = 56`
+   - Time complexity `O(n log n)`, dominated by the sort.
+
 2. **(খ) নিচের সারণীটি বিবেচনা করুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
 | Item | 1 | 2 | 3 | 4 | 5 |
@@ -2672,11 +2717,143 @@ count++;
 i) থলির সর্বোচ্চ ধারণক্ষমতা 25 হলে, এতে সবচেয়ে বেশি মোট কত ওজনের বস্তু (item) রাখা যাবে?
 ii) বস্তুগুলো থলিতে রাখার ক্রম কী হবে?
 
+   Answer:
+
+   Step 1 - compute the value-to-weight ratio
+
+   | Item | Value | Weight | Ratio (V/W) |
+   |---|---|---|---|
+   | 1 | 20 | 4 | 5.0 |
+   | 2 | 15 | 3 | 5.0 |
+   | 3 | 12 | 2 | 6.0 |
+   | 4 | 14 | 2 | 7.0 |
+   | 5 | 20 | 5 | 4.0 |
+
+   Step 2 - total weight available
+   - `4 + 3 + 2 + 2 + 5 = 16`
+   - The bag holds 25, but only 16 units of goods exist, so the bag cannot be filled completely.
+
+   (i) Maximum total weight that can be placed
+   - `16` units — all five items fit, with 9 units of capacity left unused.
+   - Total value obtained = `20 + 15 + 12 + 14 + 20 = 81`
+   - No fraction is needed here, because capacity is larger than the total weight.
+
+   (ii) Order of placing the items
+   - Sort by value-to-weight ratio, highest first: **Item 4 (7.0) → Item 3 (6.0) → Item 1 (5.0) → Item 2 (5.0) → Item 5 (4.0)**
+   - Items 1 and 2 tie at 5.0, so either may come first without changing the result.
+
+   | Order | Item | Weight | Cumulative weight | Value |
+   |---|---|---|---|---|
+   | 1 | 4 | 2 | 2 | 14 |
+   | 2 | 3 | 2 | 4 | 12 |
+   | 3 | 1 | 4 | 8 | 20 |
+   | 4 | 2 | 3 | 11 | 15 |
+   | 5 | 5 | 5 | 16 | 20 |
+
+   - The ratio order still matters as the general rule: had the capacity been smaller than 16, the last item taken would have been split into a fraction.
+
 3. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 453 (ET: BUET)]*
+
+   Answer: This is the Activity Selection Problem. The greedy rule is to always serve the customer whose service finishes earliest, because that leaves the most time free for everyone else.
+
+   ```
+   MaxCustomers(start[], end[], n)
+     create an array of customers with (start, end)
+     sort the customers by end time in ascending order
+
+     selected = empty list
+     add customer[0] to selected
+     lastEnd = end[0]
+
+     for i = 1 to n-1
+         if start[i] >= lastEnd            // no overlap with the last one served
+             add customer[i] to selected
+             lastEnd = end[i]
+
+     return selected and its size
+   ```
+
+   Example — slots `(1,3), (2,5), (4,7), (6,9), (8,10)`
+   - Sorted by finish time: `(1,3), (2,5), (4,7), (6,9), (8,10)`
+   - Take (1,3) → lastEnd = 3
+   - (2,5) starts at 2 < 3 → reject
+   - (4,7) starts at 4 ≥ 3 → take, lastEnd = 7
+   - (6,9) starts at 6 < 7 → reject
+   - (8,10) starts at 8 ≥ 7 → take
+   - Answer: 3 customers — `(1,3), (4,7), (8,10)`
+
+   - Time complexity `O(n log n)` for the sort, plus `O(n)` for the single scan. Space `O(1)` beyond the input.
+   - Why sorting by finish time is optimal: the activity that ends first leaves the largest remaining time window, so it can always be part of some optimal solution. This is the greedy-choice property, and the rest of the problem then has the same structure — the optimal substructure property.
+   - Sorting by start time or by shortest duration does not give the optimal answer.
 
 4. **Given n jobs starting time n[] and duration d[], print maximum number of jobs that don't overlap between each other.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 834 (ET: N/A)]*
 
+   Answer: Duration is given instead of finish time, so first compute `finish[i] = start[i] + duration[i]`. After that it is the standard activity selection problem.
+
+   ```
+   MaxNonOverlappingJobs(start[], duration[], n)
+     for i = 0 to n-1
+         finish[i] = start[i] + duration[i]
+
+     sort the jobs by finish[] in ascending order
+
+     count = 1
+     lastEnd = finish[0]
+     print job[0]
+
+     for i = 1 to n-1
+         if start[i] >= lastEnd
+             print job[i]
+             count = count + 1
+             lastEnd = finish[i]
+
+     return count
+   ```
+
+   Example — start `= 1, 3, 0, 5, 8, 5`, duration `= 2, 1, 6, 2, 1, 4`
+   - Finish times = `3, 4, 6, 7, 9, 9`
+   - Sorted by finish: (1,3), (3,4), (0,6), (5,7), (8,9), (5,9)
+   - Take (1,3) → lastEnd = 3
+   - (3,4): start 3 ≥ 3 → take, lastEnd = 4
+   - (0,6): start 0 < 4 → reject
+   - (5,7): start 5 ≥ 4 → take, lastEnd = 7
+   - (8,9): start 8 ≥ 7 → take, lastEnd = 9
+   - (5,9): start 5 < 9 → reject
+   - Maximum non-overlapping jobs = `4` — namely (1,3), (3,4), (5,7), (8,9)
+
+   - Time `O(n log n)`, space `O(n)` for the finish array.
+
 5. **You are given a set of activities with their starting time s[] and finishing time f[].** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
+
+   Answer: The task is to select the maximum number of activities that a single person can perform, given that no two chosen activities may overlap. This is the Activity Selection Problem, solved by a greedy algorithm.
+
+   Greedy rule
+   - Sort all activities by finishing time in ascending order.
+   - Always pick the first activity, then repeatedly pick the next activity whose start time is greater than or equal to the finish time of the last one chosen.
+
+   ```
+   ActivitySelection(s[], f[], n)
+     sort activities by f[] ascending
+     select activity 0
+     lastFinish = f[0]
+     for i = 1 to n-1
+         if s[i] >= lastFinish
+             select activity i
+             lastFinish = f[i]
+   ```
+
+   Example — `s = 1, 3, 0, 5, 8, 5` and `f = 2, 4, 6, 7, 9, 9`
+   - Already sorted by finish time.
+   - Select (1,2) → lastFinish = 2
+   - (3,4): 3 ≥ 2 → select, lastFinish = 4
+   - (0,6): 0 < 4 → reject
+   - (5,7): 5 ≥ 4 → select, lastFinish = 7
+   - (8,9): 8 ≥ 7 → select, lastFinish = 9
+   - (5,9): 5 < 9 → reject
+   - Answer: 4 activities — `(1,2), (3,4), (5,7), (8,9)`
+
+   - Time `O(n log n)` if sorting is needed, `O(n)` if the input is already sorted by finish time.
+   - Sorting by finish time is what makes greedy optimal here; it minimises idle time and leaves the maximum room for the remaining activities.
 
 6. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
