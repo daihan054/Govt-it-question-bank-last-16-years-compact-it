@@ -812,7 +812,75 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **Server rack digram to draw horizontal and vertical scalling.** *[RPGCL Assistant Manager (ICT) 2022 compact it 655 (ET: BUET)]*
 
+   Answer: Vertical scaling makes ONE server bigger; horizontal scaling adds MORE servers.
+
+   Vertical scaling (scale up) — same rack slot, stronger machine
+   ```
+   BEFORE                          AFTER
+   +----------------------+        +----------------------+
+   |  Server 1            |        |  Server 1            |
+   |  4 CPU cores         |  --->  |  16 CPU cores        |
+   |  8 GB RAM            |        |  64 GB RAM           |
+   |  500 GB SSD          |        |  2 TB SSD            |
+   +----------------------+        +----------------------+
+        (one machine)                  (same one machine,
+                                        upgraded hardware)
+   ```
+
+   Horizontal scaling (scale out) — more machines behind a load balancer
+   ```
+   BEFORE                    AFTER
+                                    +----------------+
+                                    | Load Balancer  |
+                                    +--+----+----+---+
+                                       |    |    |
+   +--------------+           +--------+ +--+---+ +--------+
+   |  Server 1    |   --->    |Server 1| |Server2| |Server 3|
+   |  4 CPU, 8 GB |           |4CPU 8GB| |4CPU8GB| |4CPU 8GB|
+   +--------------+           +--------+ +-------+ +--------+
+    (one machine)                    (three identical machines
+                                      sharing the traffic)
+   ```
+
+   | Point | Vertical scaling (scale up) | Horizontal scaling (scale out) |
+   |---|---|---|
+   | Method | Add CPU, RAM, disk to one server | Add more servers |
+   | Limit | Bounded by the largest machine available | Practically unlimited |
+   | Downtime | Usually needed to upgrade hardware | None — new nodes join live |
+   | Cost | Rises steeply for high-end hardware | Uses many commodity machines |
+   | Complexity | Simple, no code change | Needs a load balancer and stateless design |
+   | Fault tolerance | Poor — still a single point of failure | Good — other nodes survive a failure |
+   | Suitable for | Databases, legacy applications | Web servers, microservices, cloud apps |
+
+   - Cloud platforms favour horizontal scaling because it is elastic — instances are added automatically during a traffic peak and removed afterwards.
+
 2. **Difference between elasticity and scalability of resources in the cloud.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 749 (ET: N/A)]*
+
+   Answer: Both describe growth of capacity, but scalability is about long-term CAPABILITY while elasticity is about short-term AUTOMATIC adjustment.
+
+   Scalability
+   - The ability of a system to handle a growing workload by adding resources.
+   - Usually planned and often manual, responding to predicted long-term growth.
+   - Two forms: vertical (a bigger machine) and horizontal (more machines).
+   - Example: a bank expects 50% more customers next year, so it plans to add servers over the coming months.
+
+   Elasticity
+   - The ability to automatically add and REMOVE resources in real time as demand rises and falls.
+   - Fully automatic, driven by monitoring rules such as "if CPU exceeds 70% for 5 minutes, add an instance".
+   - Includes shrinking back, which pure scalability does not.
+   - Example: an e-commerce site automatically runs 20 servers during an Eid sale and drops back to 4 servers the next week.
+
+   | Point | Scalability | Elasticity |
+   |---|---|---|
+   | Definition | Capability to grow with demand | Automatic real-time expansion and contraction |
+   | Direction | Mainly one way — grow | Both ways — grow and shrink |
+   | Timing | Planned, long term | Immediate, short term |
+   | Trigger | Human decision or capacity planning | Automated monitoring rules |
+   | Cost effect | Capacity is retained and paid for | Pay only for what is running at that moment |
+   | Applies to | Both on-premises and cloud | Essentially a cloud property |
+
+   - Relationship: elasticity requires scalability. A system must be scalable before it can be made elastic, but a scalable system is not automatically elastic.
+   - AWS Auto Scaling Groups, Azure Virtual Machine Scale Sets and Kubernetes Horizontal Pod Autoscaler are elasticity mechanisms.
 
 ## Edge Computing & Fog Computing (2)
 
