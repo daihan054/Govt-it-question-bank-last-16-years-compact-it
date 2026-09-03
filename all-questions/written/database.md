@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 271 questions
+**Table of Contents** — 19 subtopics · 275 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [SQL Queries](#sql-queries-81) | 81 |
-| 2 | [Keys in DBMS](#keys-in-dbms-28) | 28 |
+| 2 | [Keys in DBMS](#keys-in-dbms-30) | 30 |
 | 3 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
 | 4 | [DBMS Architecture & Features](#dbms-architecture--features-23) | 23 |
 | 5 | [Normalization & Database Design](#normalization--database-design-21) | 21 |
-| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-16) | 16 |
+| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-18) | 18 |
 | 7 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
 | 8 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-13) | 13 |
 | 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
@@ -361,7 +361,7 @@ SELECT count (*) FROM (
 
 81. **Suppose you've two table (Employee, Department) in a Database and Employee table three cell (emp_name, dept_id, salary) also Department table two cell (dept_id, dept_name), now update the salary 10% increase value from Department table. Give the appropriate example.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
 
-## Keys in DBMS (28)
+## Keys in DBMS (30)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -418,6 +418,10 @@ SELECT count (*) FROM (
 27. **Define weak Entity? What are the difference between primary key and super key?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
 
 28. **Difference between Super Key and UNIQUE key?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+29. **Define Super key and Primary key.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211 (ET: N/A)]*
+
+30. **What are the difference among Candidate key, Primary key and Foreign key?** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
 ## ER Diagram & Database Design (25)
 
@@ -587,7 +591,7 @@ SELECT count (*) FROM (
 
 21. **What do you mean by Database properties using Normalization?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
 
-## SQL Commands (DDL, DML, DCL, TCL) (16)
+## SQL Commands (DDL, DML, DCL, TCL) (18)
 
 1. Example Query of DDL, DML, DCL. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -620,6 +624,16 @@ SELECT count (*) FROM (
 15. **(c) Differentiate between “delete from” and “drop table” SQL statement.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
 
 16. **Write an SQL query to insert a tuple in the table: Employee (ID, Name, Designation, and Salary).** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
+
+17. **Construct a database table “Customer”, Where CustomerID is primary key of the table.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211 (ET: N/A)]*
+
+| CustomerID | CustomerName | Address | PostCode |
+|---|---|---|---|
+| 1 | Sakib | Khulna | 1212 |
+| 2 | Tamim | Barisal | 2100 |
+| 3 | Musfiq | Dhaka | 1205 |
+
+18. **What are the difference among DDL, DML and DCL?** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
 
 ## Relational Data Model & ER Relationships (13)
 

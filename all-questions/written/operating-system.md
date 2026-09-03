@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 189 questions
+**Table of Contents** — 12 subtopics · 191 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-45) | 45 |
+| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-46) | 46 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
-| 4 | [OS Concepts & System Software](#os-concepts--system-software-22) | 22 |
+| 4 | [OS Concepts & System Software](#os-concepts--system-software-23) | 23 |
 | 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
 | 6 | [Memory Management & Paging](#memory-management--paging-16) | 16 |
 | 7 | [Process Management & Process States](#process-management--process-states-12) | 12 |
@@ -20,7 +20,7 @@
 
 ---
 
-## Linux / Unix Commands & Administration (45)
+## Linux / Unix Commands & Administration (46)
 
 1. **Write Linux command:** *[Islami Bank PLC Senior Officer (Network/System) 14.03.2025 compact it 1331 (ET: BUET)]*
    (a) Give a file Read Write and Execute permission.
@@ -136,6 +136,12 @@
 44. **Write Linux command: (i) File permission (ii) Remove file or folder (iii) Show IP address** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
 45. **Linux এ file তৈরির জন্য কি কি Command ব্যবহৃত হয়? পূর্ণ Command লিখ।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
+
+46. **A question on Linux file permission commands:** *[BPDB Assistant Engineer (CSE) 2018 compact it 1214 (ET: N/A)]*
+   (i) Anyone can execute the file named “sample”.
+   (ii) Only the owner or the user group can edit the file.
+   (iii) None other then the other users can read the file.
+   Write a shell command based on those conditions.
 
 ## CPU Scheduling Algorithms (24)
 
@@ -282,7 +288,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 23. **(b) What are the conditions for a deadlock situation?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130 (ET: N/A)]*
 
-## OS Concepts & System Software (22)
+## OS Concepts & System Software (23)
 
 1. Difference Between Firmware and OS. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -327,6 +333,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 21. **Discuss the Operating System architecture and how it works?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
 
 22. **Difference between Multiprocessing and Multitasking.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
+
+23. **Difference between Multitasking and Multiprogramming.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
 
 ## Virtual Memory & Page Replacement (Thrashing) (16)
 

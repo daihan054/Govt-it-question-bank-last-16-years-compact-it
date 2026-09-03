@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 245 questions
+**Table of Contents** — 9 subtopics · 252 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-101) | 101 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-47) | 47 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-103) | 103 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-51) | 51 |
 | 3 | [Recursion & Functions](#recursion--functions-36) | 36 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-23) | 23 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-16) | 16 |
-| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-13) | 13 |
+| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-14) | 14 |
 | 7 | [File Handling](#file-handling-4) | 4 |
 | 8 | [Pointers](#pointers-4) | 4 |
 | 9 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs-1) | 1 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (101)
+## Basic Programs & Control Statements (103)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -384,7 +384,11 @@ for(a=1; a<=100; a++)
 
 101. **Write a c program to verify a perfect number. Perfect number is a positive integer which is equal to the sum of its proper positive divisors.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190 (ET: N/A)]*
 
-## Output Tracing & Control Flow (47)
+102. **Write a program check a number is prime or not prime.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211-1212 (ET: N/A)]*
+
+103. **Suppose an array is {4,5,6,7}. Write a C program that will output like {4,5}, {4,6}, {4,7}, {5,6}, {5,7}, {6,7}.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1212-1213 (ET: N/A)]*
+
+## Output Tracing & Control Flow (51)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -951,6 +955,53 @@ int main() {
 }
 ```
 
+48. **Write output:** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1212 (ET: N/A)]*
+```c
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char str1[20]="Bangladesh";
+    char str2;
+    str1[4]='\0';
+    str2=strlen(str1);
+    printf("%s",str1);
+    return 0;
+}
+```
+
+49. **Write output:** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1212 (ET: N/A)]*
+```c
+#include<stdio.h>
+int main() {
+    int i;
+    for(i=0;i<5;++i) {
+        if(i==3)
+            continue;
+        printf("%d ",i);
+    }
+    return 0;
+}
+```
+
+50. **Find output:** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
+```cpp
+#include<stdio.h>
+int main() {
+    int i=1,j=1,k=1;
+    cout<<++i || ++j && ++k;
+    cout<<i<<j<<k;
+    return 0;
+}
+```
+
+51. **Find the mistake in the following program and write it correct form.** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
+```c
+unsigned int i;
+for(i=100; i<=0; --i)
+printf("%d",i);
+return 0;
+```
+
 ## Recursion & Functions (36)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
@@ -1168,7 +1219,7 @@ int main() {
 
 16. **Draw flowchart to input five positive numbers and sort them is ascending order.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1199 (ET: N/A)]*
 
-## String Manipulation & Algorithms (13)
+## String Manipulation & Algorithms (14)
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1362 (ET: BUET)]*
 
@@ -1197,6 +1248,13 @@ int main() {
 12. **(b) Write down a C function to sort a list of strings in alphabetic order.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
 
 13. **(a) Write an algorithm to find Palindrome number.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1140 (ET: N/A)]*
+
+14. **Check string str2 is superscript of string str1.** *[NESCO Manager (Software) 2018 compact it 1209-1210 (ET: N/A)]*
+
+| Input | Output |
+|---|---|
+| str1=x str2=x^x | Yes |
+| str1=x str2=x^2 | No |
 
 ## File Handling (4)
 

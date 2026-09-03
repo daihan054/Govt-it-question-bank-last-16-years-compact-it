@@ -1,17 +1,17 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 142 questions
+**Table of Contents** — 14 subtopics · 148 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models-43) | 43 |
+| 1 | [SDLC Phases & Models](#sdlc-phases--models-44) | 44 |
 | 2 | [Software Testing & Evaluation](#software-testing--evaluation-39) | 39 |
-| 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-12) | 12 |
-| 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-11) | 11 |
+| 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-13) | 13 |
+| 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-12) | 12 |
 | 5 | [Software Requirements Engineering](#software-requirements-engineering-10) | 10 |
-| 6 | [Software Project Management & Organization](#software-project-management--organization-7) | 7 |
+| 6 | [Software Project Management & Organization](#software-project-management--organization-9) | 9 |
 | 7 | [Software Design Principles (Coupling & Cohesion)](#software-design-principles-coupling--cohesion-5) | 5 |
 | 8 | [Software Cost Estimation & Build vs Buy Decisions](#software-cost-estimation--build-vs-buy-decisions-4) | 4 |
-| 9 | [IT Governance, Audit & Risk Management](#it-governance-audit--risk-management-3) | 3 |
+| 9 | [IT Governance, Audit & Risk Management](#it-governance-audit--risk-management-4) | 4 |
 | 10 | [Data Flow Diagrams (DFD)](#data-flow-diagrams-dfd-2) | 2 |
 | 11 | [Code Smells & Refactoring](#code-smells--refactoring-2) | 2 |
 | 12 | [Open Source Software & Licensing](#open-source-software--licensing-2) | 2 |
@@ -22,7 +22,7 @@
 
 ---
 
-## SDLC Phases & Models (43)
+## SDLC Phases & Models (44)
 
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
@@ -109,6 +109,8 @@
 42. **Show the structure model in software engineering. Phase of water fall life cycle.** *[Probashi Kallyan Bank Programmer 2019 compact it 1157 (ET: AUST)]*
 
 43. **Write the agile method components for Software development.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+44. **Explain extreme programming.** *[NESCO Manager (Software) 2018 compact it 1208 (ET: N/A)]*
 
 ## Software Testing & Evaluation (39)
 
@@ -208,9 +210,9 @@
 
 38. **A program sorts an array of integer. Write down the code that tests the sorting algorithm of written in a program.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1163-1164 (ET: N/A)]*
 
-39. **Difference between black box and white box testing.** *[Palli Sanchay Bank Programmer 2018 compact it 1172 (ET: N/A)]*
+39. **Difference between black box and white box testing.** *[Palli Sanchay Bank Programmer 2018 compact it 1172 (ET: N/A)]*, *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
-## Software Architecture & Design Patterns (MVC) (12)
+## Software Architecture & Design Patterns (MVC) (13)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
 
@@ -236,7 +238,9 @@
 
 12. **What is MVC? Write down the MVC design pattern.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175-1176 (ET: N/A)]*
 
-## UML Diagrams (Class, Use Case, Sequence) (11)
+13. **Explain desin pattern MVC with appropriate figure.** *[NESCO Manager (Software) 2018 compact it 1209 (ET: N/A)]*
+
+## UML Diagrams (Class, Use Case, Sequence) (12)
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
 
@@ -259,6 +263,8 @@
 10. **(c) Explain different type of relationships that are used in a UML diagram.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
 
 11. **Write down the use case diagram for ATM.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162-1163 (ET: N/A)]*
+
+12. **Draw UML diagram of composite design pattern.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
 
 ## Software Requirements Engineering (10)
 
@@ -286,7 +292,7 @@
 
 10. **(খ) Feasibility Analysis এর বিভিন্ন ধাপসমূহের সংক্ষিপ্ত বিবরণ দিন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087 (ET: N/A)]*
 
-## Software Project Management & Organization (7)
+## Software Project Management & Organization (9)
 
 1. **সংগঠনিক নির্দেশকগুলো কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -301,6 +307,10 @@
 6. **a) What is conflict in git? How to resolve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
 7. **b) Write down the difference between Patch and Upgrade.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+8. **Qualification of a good team leader.** *[NESCO Manager (Software) 2018 compact it 1208-1209 (ET: N/A)]*
+
+9. **Write down pros and cons over qualification candidate.** *[NESCO Manager (Software) 2018 compact it 1210-1211 (ET: N/A)]*
 
 ## Software Design Principles (Coupling & Cohesion) (5)
 
@@ -333,13 +343,15 @@
 
 4. **Which factors are to be consider as software pricing?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 678 (ET: N/A)]*
 
-## IT Governance, Audit & Risk Management (3)
+## IT Governance, Audit & Risk Management (4)
 
 1. **Difference between: Policy, Guideline, Procedure; why auditor must focus on control as a system? Explain four types of risks auditor faces, Explain each of theme.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 310 (ET: BIBM)]*
 
 2. **A bank has association with two different service providers as their payment gateways. The bank hires Mr. X to audit the payment gateway based on risk and threat detection. Which possible scenarios Mr. X will face?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 443 (ET: BIBM)]*
 
 3. **(ক) Software risk কত প্রকার ও কী কী? Risk management process চিত্রের মাধ্যমে বুঝিয়ে লিখুন।** *[Software Assistant Programmer 13.10.2022 compact it 709 (ET: N/A)]*
+
+4. **Draw risk analysis digram.** *[NESCO Manager (Software) 2018 compact it 1210 (ET: N/A)]*
 
 ## Data Flow Diagrams (DFD) (2)
 

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 69 questions
+**Table of Contents** — 7 subtopics · 70 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-25) | 25 |
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-26) | 26 |
 | 2 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-13) | 13 |
 | 3 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-8) | 8 |
@@ -15,7 +15,7 @@
 
 ---
 
-## HTML & Web Fundamentals (25)
+## HTML & Web Fundamentals (26)
 
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -85,6 +85,8 @@
 
 25. **Write down the name of some HTML5 media tag.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
+26. **What is canvas HTML? What is difference between HTML canvas and SVG?** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
+
 ## JavaScript & jQuery (DOM & Validation) (13)
 
 1. **Jquery for email validation** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
@@ -125,7 +127,7 @@
 
 11. **Difference among $.ajax(), $.load() and $.get().** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
-12. **How to change html attribute through html DOM?** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1163 (ET: N/A)]*
+12. **How to change html attribute through html DOM?** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1163 (ET: N/A)]*, *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
 13. **Suppose you've a javaScript code name as “bankScript” write the code for loading in HTML using JS.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
 

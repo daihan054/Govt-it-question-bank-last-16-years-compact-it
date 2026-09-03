@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 174 questions
+**Table of Contents** — 14 subtopics · 177 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-30) | 30 |
+| 1 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-31) | 31 |
 | 2 | [Cryptography](#cryptography-29) | 29 |
-| 3 | [Firewalls & Network Defense](#firewalls--network-defense-19) | 19 |
-| 4 | [Malware & Security Threats](#malware--security-threats-18) | 18 |
+| 3 | [Firewalls & Network Defense](#firewalls--network-defense-20) | 20 |
+| 4 | [Malware & Security Threats](#malware--security-threats-19) | 19 |
 | 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-17) | 17 |
 | 6 | [Authentication & Access Control](#authentication--access-control-16) | 16 |
 | 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
@@ -22,7 +22,7 @@
 
 ---
 
-## Social Engineering & Cyber Attacks (30)
+## Social Engineering & Cyber Attacks (31)
 
 1. What is a phishing attack? Explain its types and discuss methods to prevent it. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -84,6 +84,8 @@
 
 30. **Write down the name of different attack through internet.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
+31. **Briefly describe about DoS, IP address spoofing and Man-in-the-middle attacks.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
+
 ## Cryptography (29)
 
 1. Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026] *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)], [BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
@@ -144,7 +146,7 @@
 
 29. **(ক) Data encryption বলতে কী বোঝায়? বহুল ব্যবহৃত কয়েকটি encryption পদ্ধতির নাম লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
 
-## Firewalls & Network Defense (19)
+## Firewalls & Network Defense (20)
 
 1. **As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
@@ -191,7 +193,9 @@
 
 19. **What is Stateful and Stateless Firewall?** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159 (ET: BUET)]*
 
-## Malware & Security Threats (18)
+20. **What is DMZ? Explain with appropriate figure.** *[NESCO Manager (Software) 2018 compact it 1207 (ET: N/A)]*
+
+## Malware & Security Threats (19)
 
 1. Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -228,6 +232,8 @@
 17. **What protection do you provide for your computer from malware?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
 
 18. **Describe five types of malware threats and mention five known countermeasures.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1197-1198 (ET: N/A)]*
+
+19. **Define ransomware attack.** *[NESCO Manager (Software) 2018 compact it 1209 (ET: N/A)]*
 
 ## Web Security Vulnerabilities (17)
 

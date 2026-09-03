@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 112 questions
+**Table of Contents** — 9 subtopics · 113 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-52) | 52 |
 | 2 | [Java Programming & Methods](#java-programming--methods-17) | 17 |
 | 3 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
-| 4 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-9) | 9 |
+| 4 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-10) | 10 |
 | 5 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
 | 6 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
 | 7 | [Exception Handling](#exception-handling-4) | 4 |
@@ -398,7 +398,7 @@ public class WhatTheOutput{
 
 10. **You are required to trace the changes in value for each of the numbers, before and after each method are called for each of iterations and finally write down output of the program.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1195-1196 (ET: N/A)]*
 
-## Class Design & Object-Oriented Modeling (9)
+## Class Design & Object-Oriented Modeling (10)
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 425 (ET: BIBM)]*
 
@@ -417,6 +417,8 @@ public class WhatTheOutput{
 8. **(ক) Object কী? কীভাবে Object তৈরি করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1085 (ET: N/A)]*
 
 9. **Suppose, you are implementing “Overdraft Account (OD)” class using java for a banking app. An OD type account is opened with an approved loan limit (ex. 100000/-). The account holder can deposit any amount of money in the OD account at any time. S/he can draw an amount of money from the account (acn) until sufficient acn balance. S/he allowed to draw money beyond his/her acn balance if the total over-drawing amount remains within the loan limit. A java sketch for OD acn is given bellow & code is expected to run in multi-threading mode. (same code with run by different counter in the Bank)** *[Bangladesh Bank Assistant Programmer 2019 compact it 1157 (ET: DU)]*
+
+10. **There was a java program where you have to create a class, constructor, setter function, getter function.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1214-1215 (ET: N/A)]*
 
 ## Constructors & Destructors (8)
 

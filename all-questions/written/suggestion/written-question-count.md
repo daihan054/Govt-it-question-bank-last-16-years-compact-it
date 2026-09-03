@@ -1,22 +1,22 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3017** questions.
+Sorted by count, highest first. Total **3044** questions.
 
 ## IT questions
 
-Total: **2473** questions.
+Total: **2500** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **488** |
-| | Subnetting & IP Addressing | 104 |
-| | OSI & TCP/IP Reference Model | 50 |
+| **Computer Networks** | **— all subcategories —** | **491** |
+| | Subnetting & IP Addressing | 105 |
+| | OSI & TCP/IP Reference Model | 51 |
 | | Networking Fundamentals & Terminology | 29 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 21 |
+| | Networking Devices | 19 |
 | | Wireless Networks & IoT (mmWave) | 19 |
 | | Multiplexing & Bandwidth | 18 |
-| | Networking Devices | 18 |
 | | Routing Protocols & Route Configuration | 18 |
 | | Transport Layer (TCP & UDP) | 17 |
 | | Communication System & Transmission Modes | 16 |
@@ -43,13 +43,13 @@ Total: **2473** questions.
 | | Line Coding & Digital Encoding | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **271** |
+| **Database** | **— all subcategories —** | **275** |
 | | SQL Queries | 81 |
-| | Keys in DBMS | 28 |
+| | Keys in DBMS | 30 |
 | | ER Diagram & Database Design | 25 |
 | | DBMS Architecture & Features | 23 |
 | | Normalization & Database Design | 21 |
-| | SQL Commands (DDL, DML, DCL, TCL) | 16 |
+| | SQL Commands (DDL, DML, DCL, TCL) | 18 |
 | | Relational Data Model & ER Relationships | 13 |
 | | Transaction Management & ACID Properties | 13 |
 | | Data Warehousing, Data Mining & Business Intelligence | 8 |
@@ -63,21 +63,21 @@ Total: **2473** questions.
 | | NoSQL, NewSQL & Modern Databases | 2 |
 | | Indexing in DBMS | 1 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
-| **C Programming** | **— all subcategories —** | **245** |
-| | Basic Programs & Control Statements | 101 |
-| | Output Tracing & Control Flow | 47 |
+| **C Programming** | **— all subcategories —** | **252** |
+| | Basic Programs & Control Statements | 103 |
+| | Output Tracing & Control Flow | 51 |
 | | Recursion & Functions | 36 |
 | | Operators, Data Types & Language Concepts | 23 |
 | | Flowcharts & Algorithms | 16 |
-| | String Manipulation & Algorithms | 13 |
+| | String Manipulation & Algorithms | 14 |
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **189** |
-| | Linux / Unix Commands & Administration | 45 |
+| **Operating System** | **— all subcategories —** | **191** |
+| | Linux / Unix Commands & Administration | 46 |
 | | CPU Scheduling Algorithms | 24 |
 | | Deadlock & Resource Allocation | 23 |
-| | OS Concepts & System Software | 22 |
+| | OS Concepts & System Software | 23 |
 | | Memory Management & Paging | 16 |
 | | Virtual Memory & Page Replacement (Thrashing) | 16 |
 | | Process Management & Process States | 12 |
@@ -86,11 +86,11 @@ Total: **2473** questions.
 | | File Systems & Disk Management | 6 |
 | | Process Synchronization & Concurrency | 4 |
 | | Windows & System Administration | 4 |
-| **Computer & Network Security** | **— all subcategories —** | **174** |
-| | Social Engineering & Cyber Attacks | 30 |
+| **Computer & Network Security** | **— all subcategories —** | **177** |
+| | Social Engineering & Cyber Attacks | 31 |
 | | Cryptography | 29 |
-| | Firewalls & Network Defense | 19 |
-| | Malware & Security Threats | 18 |
+| | Firewalls & Network Defense | 20 |
+| | Malware & Security Threats | 19 |
 | | Web Security Vulnerabilities | 17 |
 | | Authentication & Access Control | 16 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
@@ -101,16 +101,16 @@ Total: **2473** questions.
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 2 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Software Engineering** | **— all subcategories —** | **142** |
-| | SDLC Phases & Models | 43 |
+| **Software Engineering** | **— all subcategories —** | **148** |
+| | SDLC Phases & Models | 44 |
 | | Software Testing & Evaluation | 39 |
-| | Software Architecture & Design Patterns (MVC) | 12 |
-| | UML Diagrams (Class, Use Case, Sequence) | 11 |
+| | Software Architecture & Design Patterns (MVC) | 13 |
+| | UML Diagrams (Class, Use Case, Sequence) | 12 |
 | | Software Requirements Engineering | 10 |
-| | Software Project Management & Organization | 7 |
+| | Software Project Management & Organization | 9 |
 | | Software Design Principles (Coupling & Cohesion) | 5 |
+| | IT Governance, Audit & Risk Management | 4 |
 | | Software Cost Estimation & Build vs Buy Decisions | 4 |
-| | IT Governance, Audit & Risk Management | 3 |
 | | Code Smells & Refactoring | 2 |
 | | Data Flow Diagrams (DFD) | 2 |
 | | Open Source Software & Licensing | 2 |
@@ -164,11 +164,11 @@ Total: **2473** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **112** |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **113** |
 | | OOP Concepts (Inheritance & Polymorphism) | 52 |
 | | Java Programming & Methods | 17 |
+| | Class Design & Object-Oriented Modeling | 10 |
 | | Output Tracing & Recursion | 10 |
-| | Class Design & Object-Oriented Modeling | 9 |
 | | Constructors & Destructors | 8 |
 | | Encapsulation & Access Modifiers | 7 |
 | | Exception Handling | 4 |
@@ -183,8 +183,8 @@ Total: **2473** questions.
 | | Data Structure Fundamentals | 6 |
 | | Hashing & Hash Tables | 6 |
 | | Queue | 6 |
-| **Web Technology** | **— all subcategories —** | **69** |
-| | HTML & Web Fundamentals | 25 |
+| **Web Technology** | **— all subcategories —** | **70** |
+| | HTML & Web Fundamentals | 26 |
 | | JavaScript & jQuery (DOM & Validation) | 13 |
 | | HTTP Protocol | 10 |
 | | Web Services & APIs (SOAP vs REST) | 8 |
