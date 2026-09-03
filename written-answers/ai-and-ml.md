@@ -705,6 +705,25 @@
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1364 (ET: BUET)]*
 
+   Answer: The Apriori algorithm is used for market basket analysis. It is an unsupervised association rule mining algorithm that finds which items are bought together. FP-Growth is a faster alternative for large datasets.
+
+   Three measures used
+   - Support — how often the itemset appears: `Support(A) = (transactions containing A) / (total transactions)`
+   - Confidence — how often B is bought when A is bought: `Confidence(A→B) = Support(A ∪ B) / Support(A)`
+   - Lift — how much stronger the rule is than chance: `Lift(A→B) = Confidence(A→B) / Support(B)`. Lift > 1 means a real positive relation.
+
+   Steps of the Apriori algorithm
+   - Step 1 — set a minimum support and a minimum confidence threshold.
+   - Step 2 — scan the transaction database and count the support of every single item (1-itemsets).
+   - Step 3 — drop the items whose support is below the minimum; the rest are frequent 1-itemsets.
+   - Step 4 — join the frequent 1-itemsets to form candidate 2-itemsets, count their support and drop the weak ones.
+   - Step 5 — repeat the join-and-prune step for 3-itemsets, 4-itemsets and so on, until no new frequent itemset is found.
+   - Step 6 — from each frequent itemset, generate association rules and keep only the rules that meet the minimum confidence.
+   - Step 7 — rank the surviving rules by lift and use the strong ones for business decisions.
+
+   - Apriori property used in pruning: if an itemset is not frequent, none of its supersets can be frequent. This cuts the search space heavily.
+   - Example: a rule `{Bread, Butter} → {Milk}` with support 8%, confidence 70% and lift 1.6 tells the shop to place milk near bread and butter, or to offer a combo discount.
+
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
 1. **Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-linkage hierarchical clustering technique.** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 473 (ET: N/A)]*
