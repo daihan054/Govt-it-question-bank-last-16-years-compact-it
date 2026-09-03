@@ -2517,21 +2517,137 @@ count++;
 
 1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1419 (ET: E-Zone)]*
 
+   Answer: The graph figures were not printed with the question, so the checking method is shown instead.
+
+   Definition: two graphs are isomorphic if there is a one-to-one correspondence (bijection) between their vertex sets that preserves adjacency — that is, one graph can be relabelled to become exactly the other.
+
+   Checklist — all four must match
+   - Same number of vertices.
+   - Same number of edges.
+   - Same degree sequence (the sorted list of vertex degrees).
+   - Same connection pattern after relabelling, including the same number of cycles of each length.
+
+   How to justify in one sentence
+   - If they match: "The graphs are isomorphic, because the mapping A→1, B→2, C→3, D→4 preserves every edge."
+   - If they do not: "The graphs are not isomorphic, because their degree sequences differ — one is (3,3,2,2) and the other is (3,2,2,3)... " — any single mismatched invariant is enough to prove non-isomorphism.
+
+   - Note the asymmetry: a mismatch in any invariant proves the graphs are NOT isomorphic, but matching invariants alone do not prove they ARE. A working vertex mapping must be shown for a positive answer.
+
 2. **(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
+
+   Answer:
+
+   (i) Chromatic number χ(G)
+   - The minimum number of colours needed to colour all vertices of a graph so that no two adjacent vertices share a colour.
+   - `χ(G) = 1` only for a graph with no edges; `χ(G) = 2` exactly when the graph is bipartite.
+   - For a complete graph `Kₙ`, `χ(G) = n`, because every vertex touches every other.
+   - Application: exam timetabling, register allocation in compilers, radio frequency assignment.
+
+   (ii) Bipartite graph
+   - A graph whose vertices can be split into two disjoint sets `U` and `V` such that every edge joins a vertex in `U` to a vertex in `V`. No edge lies inside a set.
+   - A graph is bipartite if and only if it can be 2-coloured, and if and only if it contains no odd-length cycle.
+   - It is tested with BFS, colouring each level alternately.
+   - Example: a graph of students and courses, where an edge means "is enrolled in".
+
+   (iii) Clique
+   - A subset of vertices in which every pair is joined by an edge — that is, a complete subgraph.
+   - A clique on `n` vertices is denoted `Kₙ` and has `n(n−1)/2` edges.
+   - The clique number `ω(G)` is the size of the largest clique in `G`.
+   - Finding the maximum clique is an NP-complete problem.
 
 3. **(খ) দেখান যে, n সংখ্যক vertex এর একটি tree এর ঠিক n-1 সংখ্যক edge আছে।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+   Answer: A tree is a connected graph with no cycle. The claim is that a tree with `n` vertices has exactly `n − 1` edges. It is proved by induction on `n`.
+
+   Base case (n = 1)
+   - A tree with a single vertex has no edge.
+   - Edges `= 0 = 1 − 1`. So the statement holds.
+
+   Inductive hypothesis
+   - Assume every tree with `k` vertices has exactly `k − 1` edges.
+
+   Inductive step (n = k + 1)
+   - Every tree with at least two vertices has a leaf — a vertex of degree 1. If no such vertex existed, every vertex would have degree 2 or more, and following unvisited edges would eventually revisit a vertex, creating a cycle. That contradicts the definition of a tree.
+   - Remove one leaf `v` and its single edge from the tree `T`.
+   - The remaining graph `T'` is still connected (no path used `v` except to reach `v` itself) and still has no cycle, so `T'` is a tree with `k` vertices.
+   - By the hypothesis `T'` has `k − 1` edges.
+   - Adding `v` and its edge back gives `(k − 1) + 1 = k` edges for `k + 1` vertices.
+   - That is `(k + 1) − 1` edges, exactly as claimed.
+
+   Conclusion
+   - By induction, a tree with `n` vertices has exactly `n − 1` edges. Hence proved.
+   - The converse also holds: a connected graph with `e = v − 1` is a tree, and so is an acyclic graph with `e = v − 1`. This is why a spanning tree of a graph always has `V − 1` edges.
+
 4. **(b) Define Eulerian path. What are the necessary and sufficient conditions for the Eulerian path? Expalin.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 690 (ET: N/A)]*
+
+   Answer: An Eulerian path (or Eulerian trail) is a walk in a graph that uses every edge exactly once. Vertices may be repeated, but no edge may be. If the walk starts and ends at the same vertex, it is called an Eulerian circuit.
+
+   Necessary and sufficient conditions — undirected graph
+   - All vertices with at least one edge must belong to a single connected component.
+   - Eulerian circuit: every vertex has an even degree.
+   - Eulerian path: exactly zero or two vertices have an odd degree. If there are exactly two, every Eulerian path must start at one of them and end at the other.
+   - Any other count of odd-degree vertices means no Eulerian path exists.
+
+   Necessary and sufficient conditions — directed graph
+   - The graph must be connected when edge directions are ignored.
+   - Eulerian circuit: `in-degree = out-degree` at every vertex.
+   - Eulerian path: at most one vertex has `out-degree − in-degree = 1` (the start), at most one has `in-degree − out-degree = 1` (the end), and all others are balanced.
+
+   Explanation of why
+   - Every time the walk enters a vertex it must also leave it, consuming two edges. So an intermediate vertex must have an even degree.
+   - The only exceptions are the start vertex (one extra edge leaving) and the end vertex (one extra edge arriving), which is exactly why zero or two odd-degree vertices are allowed.
+   - The Handshaking Lemma guarantees the number of odd-degree vertices is always even, so one or three odd vertices is impossible.
+
+   - Example: the classic Seven Bridges of Königsberg has four odd-degree vertices, which is why no such walk exists.
+   - Do not confuse it with a Hamiltonian path, which visits every vertex once. Checking for an Eulerian path takes `O(V + E)`; finding a Hamiltonian path is NP-complete.
 
 5. **(c) What is a strongly connected graph?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
 
+   Answer: A directed graph is strongly connected if there is a directed path from every vertex to every other vertex. That is, for any pair `u` and `v`, both `u → v` and `v → u` must be reachable.
+
+   - The term applies only to directed graphs. For an undirected graph the equivalent term is simply "connected".
+   - Weakly connected — the graph becomes connected only if edge directions are ignored. Every strongly connected graph is weakly connected, but not the reverse.
+   - A Strongly Connected Component (SCC) is a maximal subgraph that is itself strongly connected. Every directed graph splits into one or more SCCs.
+
+   Example
+   - `A → B → C → A` is strongly connected, because the cycle lets every vertex reach every other.
+   - `A → B → C` is only weakly connected, since C cannot reach A.
+
+   - Algorithms to find SCCs: Kosaraju's algorithm (two DFS passes, the second on the transposed graph) and Tarjan's algorithm (a single DFS). Both run in `O(V + E)`.
+   - Applications: analysing web page link structure, deadlock detection, and module dependency analysis.
+
 6. **True False with explanation about Graph related (Two).** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
+
+   Answer: The two statements were not printed with the question, so two commonly asked graph statements are answered to show the method.
+
+   Statement 1: "A tree with n vertices always has n−1 edges." — True.
+   - A tree is connected and acyclic. Removing a leaf repeatedly reduces both the vertex count and the edge count by one, and a single vertex has zero edges. So the count is exactly `n − 1`. Adding one more edge to a tree always creates a cycle.
+
+   Statement 2: "DFS can be used to find the shortest path in an unweighted graph." — False.
+   - DFS follows one branch as deep as it goes, so the first path it finds to a vertex may be much longer than the shortest one. BFS is what guarantees the shortest path in an unweighted graph, because it discovers vertices in increasing order of edge count.
+
+   - The general approach for such questions: state True or False first, then give one sentence of reason, and add a counter-example when the answer is False.
 
 7. **State whether the following are True or False:** *[6 Banks & Financial Institutions Assistant Programmer 2021 (ET: N/A)]*
    a) Back edge in DAG
    b) Extra edge in DAG
    c) Strongly connected component
    d) Unique path on different weight on graph
+
+   Answer:
+
+   (a) "A DAG contains a back edge." — False.
+   - DAG stands for Directed Acyclic Graph. A back edge points to a vertex still on the current DFS recursion path, which by definition forms a cycle. Since a DAG has no cycle, it can have no back edge. This is exactly the property used to detect cycles by DFS.
+
+   (b) "Adding an extra edge to a DAG keeps it a DAG." — False.
+   - It depends on the direction. Adding an edge `u → v` where `v` already has a path to `u` closes a cycle and destroys the DAG property. It stays a DAG only if the new edge goes forward in some topological order.
+
+   (c) "Every directed graph has at least one strongly connected component." — True.
+   - Every vertex on its own is trivially strongly connected (it reaches itself). So every directed graph decomposes into one or more SCCs, and a graph with `n` vertices and no cycle has exactly `n` SCCs, one per vertex.
+
+   (d) "A graph with distinct edge weights has a unique minimum spanning tree and unique shortest paths." — True for the MST.
+   - When all edge weights are different, the MST is unique, because at every cut there is exactly one cheapest crossing edge and no tie can be broken two ways.
+   - Shortest paths are also unique when all weights are distinct and no two different paths happen to add up to the same total. Distinct edge weights alone do not force distinct path sums, so this part must be stated carefully.
 
 ## Greedy Algorithms (Fractional Knapsack) (6)
 
