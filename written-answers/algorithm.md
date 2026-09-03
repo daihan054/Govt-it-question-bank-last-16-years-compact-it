@@ -2324,21 +2324,163 @@ count++;
 
 1. **State the Principle of Optimality in Dynamic Programming. How does it distinguish Dynamic Programming from Greedy Algorithms?** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1420 (ET: E-Zone)]*
 
+   Answer: The Principle of Optimality, given by Richard Bellman, says that an optimal solution to a problem contains within it optimal solutions to all of its subproblems. In short, if a sequence of decisions is optimal, then every subsequence of it must also be optimal.
+
+   - This property is also called optimal substructure. Dynamic programming works only when it holds.
+   - Example: if the shortest path from A to C passes through B, then the A-to-B part must itself be the shortest path from A to B. If a shorter A-to-B route existed, the whole path would not have been shortest.
+
+   How it separates DP from Greedy
+   - DP applies the principle by trying every choice at each stage, solving each subproblem once, storing the result and then picking the best combination. So the final answer is always optimal.
+   - Greedy applies the greedy-choice property instead — it takes the best-looking option right now and never revisits it. It does not compare alternatives.
+   - DP looks at the whole future before deciding; greedy decides immediately and moves on.
+   - Because of this, DP guarantees the optimum whenever optimal substructure holds, while greedy guarantees it only when the greedy-choice property also holds.
+
+   Example: 0/1 Knapsack needs DP, since taking the highest value-per-weight item first can waste capacity. Fractional Knapsack works with greedy, since an item can be cut to fill the bag exactly.
+
 2. **(খ) Greedy Method ও Dynamic Algorithm এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 411 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Greedy Method | Dynamic Programming |
+   |---|---|---|
+   | Choice made | Best option at the current step only | Every option is tried, then the best is kept |
+   | Revisiting a decision | Never — no backtracking | Yes, past results are reused to decide |
+   | Optimality | Not always optimal | Always optimal when optimal substructure holds |
+   | Subproblems | Solves one chain of subproblems | Solves overlapping subproblems once and stores them |
+   | Memory | Low, `O(1)` or `O(n)` | High, needs a table of `O(n²)` or more |
+   | Speed | Faster, usually `O(n)` or `O(n log n)` | Slower, usually `O(n²)` or `O(n³)` |
+   | Style | Mostly iterative, top-down | Recursive with memoization, or bottom-up tabulation |
+   | Examples | Fractional Knapsack, Huffman coding, Prim, Kruskal, Dijkstra | 0/1 Knapsack, LCS, Floyd-Warshall, Matrix chain multiplication |
+
+   - Rule of thumb: use greedy when a local best choice provably leads to the global best; otherwise use DP.
 
 3. **Write down the difference between Divide and Conquer and Dynamic Programming.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
 
+   Answer: Both break a problem into smaller pieces, but they differ in whether those pieces overlap.
+
+   | Point | Divide and Conquer | Dynamic Programming |
+   |---|---|---|
+   | Subproblems | Independent, do not overlap | Overlapping, the same subproblem repeats |
+   | Recomputation | The same subproblem may be solved many times | Each subproblem is solved once and stored |
+   | Storage | No table is kept | Uses a memo table or a DP array |
+   | Approach | Top-down recursion | Bottom-up tabulation, or top-down with memoization |
+   | Problem type | Mostly decision or sorting problems | Optimization problems |
+   | Efficiency | Can waste work on repeated subproblems | Avoids repetition, so it is faster on such problems |
+   | Examples | Merge sort, quick sort, binary search, Strassen's matrix multiplication | 0/1 Knapsack, LCS, Fibonacci, Floyd-Warshall |
+
+   Example: computing Fibonacci by plain divide and conquer recomputes `fib(3)` many times and costs `O(2ⁿ)`. Dynamic programming stores each value once and costs `O(n)`.
+
 4. **(a) How does dynamic programming relate with divide and conquer approach?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 484 (ET: N/A)]*
+
+   Answer: Dynamic programming is an extension of divide and conquer. It keeps the same idea of breaking a problem into smaller subproblems, but adds storage so that no subproblem is ever solved twice.
+
+   What they share
+   - Both split the original problem into smaller instances of the same problem.
+   - Both solve the small instances and then combine those results.
+   - Both need optimal substructure — the best answer to the whole must be built from the best answers to the parts.
+
+   Where DP goes further
+   - Divide and conquer assumes the subproblems are independent, so it just recurses.
+   - DP is used when the subproblems overlap. It saves each answer in a table (memoization) and looks it up instead of recomputing.
+   - This turns exponential work into polynomial work.
+
+   Example: naive recursive Fibonacci is pure divide and conquer and takes `O(2ⁿ)`, because `fib(n-2)` is recomputed again and again. Storing each value turns it into DP and brings the cost down to `O(n)`.
+
+   - In one line: `Dynamic Programming = Divide and Conquer + memoization (reuse of overlapping subproblems)`.
 
 5. **(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
 
+   Answer: No. A greedy algorithm does not always give the optimal solution, because it fixes each choice on local information and never reconsiders it.
+
+   Example where greedy fails — 0/1 Knapsack
+   - Capacity 10 kg. Items: A (6 kg, Tk 60), B (5 kg, Tk 45), C (5 kg, Tk 45).
+   - Greedy by value-per-weight picks A first (Tk 10/kg), then no other item fits in the remaining 4 kg. Total = Tk 60.
+   - The optimal answer is B + C = 10 kg, Tk 90.
+
+   Another example — coin change with coins 1, 15, 25 for the amount 30
+   - Greedy takes 25 + 1 + 1 + 1 + 1 + 1 = 6 coins.
+   - Optimal is 15 + 15 = 2 coins.
+
+   When greedy does give the optimal solution
+   - The problem must have both of these properties:
+   - Greedy-choice property — a globally optimal solution can be reached by making the locally best choice at each step.
+   - Optimal substructure — the optimal answer to the whole contains optimal answers to the subproblems.
+
+   Problems where greedy is provably optimal
+   - Fractional Knapsack, Huffman coding, Prim's and Kruskal's MST, Dijkstra's shortest path (non-negative weights), activity selection problem.
+   - When these properties do not hold, dynamic programming must be used instead.
+
 6. **Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are the difference between there two techniques?** *[BCC Assistant Programmer 12.02.2021 compact it 813 (ET: BUET)]*
+
+   Answer: The real difference is what happens to the subproblems after they are created.
+
+   Divide and Conquer
+   - Subproblems are independent — solving one tells you nothing about another.
+   - Each recursive call solves its part from scratch; nothing is stored.
+   - If the same subproblem appears again, it is solved again, which wastes time.
+   - Cost is usually `O(n log n)` or `O(n²)`.
+
+   Dynamic Programming
+   - Subproblems overlap — the same subproblem reappears many times.
+   - Each answer is computed once and kept in a table, then simply looked up.
+   - Two styles: top-down with memoization, or bottom-up tabulation.
+   - Cost is usually `O(n²)` or `O(n³)`, but far better than the exponential cost of recomputing.
+
+   | Point | Divide and Conquer | Dynamic Programming |
+   |---|---|---|
+   | Subproblem overlap | None | Yes |
+   | Result storage | No | Yes, in a table |
+   | Extra memory | Little | More |
+   | Typical use | Sorting, searching | Optimization |
+   | Examples | Merge sort, quick sort, binary search | LCS, 0/1 Knapsack, Floyd-Warshall |
 
 7. **Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879-880 (ET: BUET)]*
 
+   Answer:
+   - (a) Matrix multiplication — Strassen's algorithm, which is a Divide and Conquer algorithm. It multiplies two `n × n` matrices in `O(n^2.81)` instead of the naive `O(n³)`. The related Matrix Chain Multiplication problem, which finds the cheapest order of multiplication, is a Dynamic Programming algorithm running in `O(n³)`.
+   - (b) Knapsack — 0/1 Knapsack is a Dynamic Programming algorithm, running in `O(n × W)` where `W` is the capacity. Fractional Knapsack is a Greedy algorithm, running in `O(n log n)` because the items are sorted by value-per-weight ratio.
+
 8. **Greedy algorithm উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
+   Answer: A greedy algorithm builds a solution step by step, always taking the option that looks best at that moment, and never going back to change it.
+
+   Working steps
+   - Start with an empty solution.
+   - At each step choose the locally best candidate (highest value, lowest cost, shortest edge).
+   - Check that the choice keeps the solution feasible; if yes, keep it.
+   - Repeat until the solution is complete.
+
+   Example: Fractional Knapsack
+   - Bag capacity = 20 kg. Items: A (10 kg, Tk 60), B (20 kg, Tk 100), C (30 kg, Tk 120).
+   - Step 1 — compute value per kg: A = 6, B = 5, C = 4.
+   - Step 2 — sort in decreasing ratio: A, B, C.
+   - Step 3 — take all of A (10 kg, Tk 60). Remaining capacity 10 kg.
+   - Step 4 — take half of B (10 kg, Tk 50). Bag is full.
+   - Total value = `60 + 50 = Tk 110`, which is the optimum.
+
+   - Time complexity `O(n log n)`, dominated by sorting.
+   - Other greedy algorithms: Huffman coding, Dijkstra, Prim, Kruskal, activity selection.
+   - Limitation: greedy is fast and simple, but it is optimal only when the greedy-choice property holds.
+
 9. **(খ) Greedy Algorithm কাকে বলে? দুটি এমন সমস্যা বর্ণনা করুন যা Greedy Algorithm দিয়ে সমাধান করা যায়।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088 (ET: N/A)]*
+
+   Answer: A greedy algorithm is one that constructs the answer piece by piece, always picking the choice that gives the most immediate benefit, without looking ahead and without undoing an earlier choice.
+
+   Two problems solved by the greedy approach
+
+   (a) Activity Selection Problem
+   - Given `n` activities with a start time and a finish time, select the largest number of activities that do not overlap.
+   - Greedy rule: sort the activities by finishing time, then repeatedly take the next activity whose start time is not earlier than the finish time of the last one chosen.
+   - Example: activities (1,3), (2,5), (4,7), (6,9). Sorted by finish: (1,3), (2,5), (4,7), (6,9). Pick (1,3), then (4,7). Answer = 2 activities.
+   - Time complexity `O(n log n)`. This rule is provably optimal, because finishing earliest always leaves the most room for the rest.
+
+   (b) Minimum Spanning Tree — Kruskal's algorithm
+   - Given a weighted connected graph, connect all vertices with the least total edge weight.
+   - Greedy rule: sort all edges by weight and keep adding the cheapest edge that does not form a cycle, until `V-1` edges are chosen.
+   - Example: edges B-C (1), A-C (2), D-E (2), E-F (3), B-D (5) give an MST of cost 13.
+   - Time complexity `O(E log E)`. It is provably optimal by the cut property of spanning trees.
+
+   - Other greedy problems: Huffman coding, Dijkstra's shortest path, fractional knapsack, job sequencing with deadlines.
 
 ## Graph Theory & Isomorphism (7)
 
