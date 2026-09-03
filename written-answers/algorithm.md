@@ -1291,33 +1291,364 @@
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
 
+   Answer: I would select the A* (A-star) algorithm for a pathfinding robot. If the map has no useful heuristic, Dijkstra's algorithm is the fallback.
+
+   Why A*
+   - It is an informed search — it uses the known goal position as a guide, so it expands far fewer cells than Dijkstra.
+   - `f(n) = g(n) + h(n)`, where `g(n)` is the cost already travelled and `h(n)` is the estimated cost still to go (straight-line or Manhattan distance).
+   - It is optimal as long as the heuristic never overestimates (an admissible heuristic).
+   - It handles obstacles and different terrain costs naturally.
+
+   Steps of A*
+   - Put the start cell in an open list with `g = 0` and `f = h(start)`.
+   - Take the cell with the smallest `f` out of the open list and call it current.
+   - If current is the goal, stop and rebuild the path by following parent links backwards.
+   - Move current into the closed list.
+   - For each walkable neighbour: skip it if it is in the closed list; otherwise compute `g_new = g(current) + cost(current, neighbour)`.
+   - If the neighbour is new, or `g_new` is smaller than its stored `g`, update its `g`, `f` and parent, and put it in the open list.
+   - Repeat until the goal is reached or the open list becomes empty (no path exists).
+
+   - Time complexity `O(E log V)` with a priority queue, same as Dijkstra, but the constant is much smaller in practice.
+
 2. **(a) Apply the Kruskal's algorithm for the following graph to find out the cost of the minimum spanning Tree (MST).** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
+
+   Answer: The graph figure was not printed with the question, so this weighted graph is used to show the method.
+
+   Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3` (6 vertices)
+
+   Kruskal's rule: sort all edges by weight, then add an edge only if it does not form a cycle. Stop after `V-1 = 5` edges.
+
+   | Step | Edge | Weight | Decision | Running cost |
+   |---|---|---|---|---|
+   | 1 | B-C | 1 | Take | 1 |
+   | 2 | A-C | 2 | Take | 3 |
+   | 3 | D-E | 2 | Take | 5 |
+   | 4 | E-F | 3 | Take | 8 |
+   | 5 | A-B | 4 | Skip — cycle A-B-C | 8 |
+   | 6 | B-D | 5 | Take — joins the two components | 13 |
+   | 7 | D-F, C-D, C-E | 6, 8, 10 | Skip — all form cycles | 13 |
+
+   Final answer
+   - MST edges: `B-C (1), A-C (2), D-E (2), E-F (3), B-D (5)`
+   - Cost of the minimum spanning tree = `1 + 2 + 2 + 3 + 5 = 13`
+   - The MST has `V - 1 = 5` edges, as expected.
+   - Cycle detection uses a Disjoint Set Union (union-find) structure. Time complexity `O(E log E)`, dominated by the sorting step.
 
 3. **Shortest path বের করা : Dijkstra's Algorithm** *[BTCL - JAM ( Technical) 05.04.2024 compact it 383 (ET: BUET)]*
 
+   Answer: Dijkstra's algorithm finds the shortest path from one source vertex to every other vertex in a graph with non-negative edge weights.
+
+   ```
+   Dijkstra(G, source)
+     for each vertex v      dist[v] = infinity, parent[v] = NIL
+     dist[source] = 0
+     put all vertices in a min-priority queue Q keyed by dist
+     while Q is not empty
+         u = extract-min(Q)
+         for each neighbour v of u
+             if dist[u] + weight(u, v) < dist[v]
+                 dist[v] = dist[u] + weight(u, v)     // relaxation
+                 parent[v] = u
+                 decrease-key(Q, v)
+   ```
+
+   Steps in words
+   - Set the source distance to 0 and every other distance to infinity.
+   - Pick the unvisited vertex with the smallest distance and mark it visited (its distance is now final).
+   - Relax all its edges — if going through it gives a shorter route to a neighbour, update that neighbour.
+   - Repeat until all vertices are visited.
+
+   - Time complexity `O(E log V)` with a binary heap, `O(V²)` with a simple array.
+   - It works only when all weights are non-negative. With a negative edge, a vertex marked final could still be improved later, so the result would be wrong. Use Bellman-Ford in that case.
+
 4. **Find the shortest path from following graph starts from:** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 394 (ET: BUET)]*
+
+   Answer: The graph figure was not printed with the question, so this graph is used with Dijkstra starting from A.
+
+   Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
+
+   | Step | Vertex chosen | Updated distances |
+   |---|---|---|
+   | 0 | — | A=0, rest = ∞ |
+   | 1 | A (0) | B=4, C=2 |
+   | 2 | C (2) | B = min(4, 2+1) = 3, D=10, E=12 |
+   | 3 | B (3) | D = min(10, 3+5) = 8 |
+   | 4 | D (8) | E = min(12, 8+2) = 10, F=14 |
+   | 5 | E (10) | F = min(14, 10+3) = 13 |
+   | 6 | F (13) | done |
+
+   Final answer — shortest distance and path from A
+
+   | Vertex | Distance | Path |
+   |---|---|---|
+   | A | 0 | A |
+   | B | 3 | A → C → B |
+   | C | 2 | A → C |
+   | D | 8 | A → C → B → D |
+   | E | 10 | A → C → B → D → E |
+   | F | 13 | A → C → B → D → E → F |
+
+   - Note that the direct edge A-B costs 4, but going A → C → B costs only 3, so relaxation replaced it.
 
 5. **Find the minimum spanning tree:** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 700 (ET: BUET)]*
 
+   Answer: The graph figure was not printed with the question, so this graph is used, solved by Prim's algorithm starting at A.
+
+   Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
+
+   | Step | Vertices in tree | Cheapest outgoing edge | Added | Cost |
+   |---|---|---|---|---|
+   | 1 | A | A-C (2) | C | 2 |
+   | 2 | A, C | B-C (1) | B | 1 |
+   | 3 | A, C, B | B-D (5) | D | 5 |
+   | 4 | A, C, B, D | D-E (2) | E | 2 |
+   | 5 | A, C, B, D, E | E-F (3) | F | 3 |
+
+   Final answer
+   - MST edges: `A-C (2), B-C (1), B-D (5), D-E (2), E-F (3)`
+   - Total cost = `2 + 1 + 5 + 2 + 3 = 13`
+   - The tree has `V - 1 = 5` edges and touches all 6 vertices.
+   - Prim grows one tree from a start vertex; Kruskal picks globally cheapest edges. Both give the same total cost here.
+
 6. **How to find single source shortest path from negative weighted cycle. Justify and how you find it is negative weighted graph.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
+
+   Answer: If a graph contains a negative weight cycle reachable from the source, the shortest path is not defined, because going round the cycle again and again keeps reducing the cost towards minus infinity. So the correct answer is to detect the cycle and report it, not to return a distance.
+
+   Algorithm to use — Bellman-Ford
+   - Dijkstra cannot be used, because it assumes a finalised vertex can never improve, which fails with negative edges.
+
+   ```
+   BellmanFord(G, source)
+     dist[source] = 0, all other dist[v] = infinity
+     repeat V-1 times                  // pass 1
+         for each edge (u, v, w)
+             if dist[u] + w < dist[v]
+                 dist[v] = dist[u] + w
+     for each edge (u, v, w)           // pass 2 — the check
+         if dist[u] + w < dist[v]
+             report "negative weight cycle exists"
+   ```
+
+   Justification
+   - In a graph without a negative cycle, any shortest path has at most `V-1` edges, so `V-1` rounds of relaxation are enough to settle every distance.
+   - Therefore, if any edge can still be relaxed in the `V`-th round, some path is still getting shorter — which is only possible if a negative cycle is reachable.
+
+   - Time complexity `O(V × E)`, space `O(V)`.
+   - For all-pairs shortest paths, Floyd-Warshall detects the same thing: a negative cycle exists if any `dist[i][i]` becomes negative.
 
 7. **Shortest path algorithm (Djikstra's algorithm)** *[BPDB Assistant Engineer (CSE) 2021 compact it 817 (ET: BUET)]*
 
+   Answer: Dijkstra's algorithm is a greedy single-source shortest path algorithm for graphs with non-negative edge weights.
+
+   Working principle
+   - Keep a distance value for every vertex; source = 0, others = infinity.
+   - Repeatedly pick the unvisited vertex with the smallest distance — its value is now final.
+   - Relax every edge going out of it: `if dist[u] + w(u,v) < dist[v] then dist[v] = dist[u] + w(u,v)`.
+   - Continue until every vertex is settled.
+
+   Small example — source A, edges `A-B 4, A-C 2, B-C 1, B-D 5, D-E 2`
+   - Settle A (0) → B = 4, C = 2
+   - Settle C (2) → B improves to 3
+   - Settle B (3) → D = 8
+   - Settle D (8) → E = 10
+   - Result: A=0, C=2, B=3, D=8, E=10
+
+   - Time `O(E log V)` with a min-heap, `O(V²)` with an array.
+   - Limitation: fails on negative edges. Use Bellman-Ford there.
+   - Uses: GPS navigation, IP routing (OSPF link-state routing), network delay calculation.
+
 8. **Find the Minimum Spanning Tree of the following graph using Kruskal's algorithm.** *[RAKUB Programmer (PO) 12.10.2021 compact it 847-849 (ET: N/A)]*
+
+   Answer: The graph figure was not printed with the question, so this graph is used.
+
+   Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
+
+   Step 1 - sort the edges by weight
+   - `B-C (1), A-C (2), D-E (2), E-F (3), A-B (4), B-D (5), D-F (6), C-D (8), C-E (10)`
+
+   Step 2 - add each edge unless it makes a cycle
+
+   | Edge | Weight | Cycle? | Action |
+   |---|---|---|---|
+   | B-C | 1 | No | Add |
+   | A-C | 2 | No | Add |
+   | D-E | 2 | No | Add |
+   | E-F | 3 | No | Add |
+   | A-B | 4 | Yes (A-C-B) | Reject |
+   | B-D | 5 | No | Add — 5th edge, stop |
+
+   Final answer
+   - MST edges: `B-C (1), A-C (2), D-E (2), E-F (3), B-D (5)`
+   - Total weight = `13`
+   - Cycles are detected with union-find. Time complexity `O(E log E)`.
 
 9. **Find out minimum spanning tree from a given graph using krushkal algorithm.** *[Sonali Bank Ltd. Officer IT 2021 compact it 908 (ET: N/A)]*
 
+   Answer: Kruskal's algorithm builds the MST by always taking the cheapest edge that does not create a cycle.
+
+   Algorithm
+   - Sort all edges in increasing order of weight.
+   - Create a separate set for each vertex (union-find).
+   - Take edges one by one. If the two endpoints are in different sets, add the edge and union the sets. Otherwise reject it as a cycle.
+   - Stop when `V - 1` edges have been added.
+
+   Worked example — edges `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
+   - Take B-C (1), A-C (2), D-E (2), E-F (3)
+   - Reject A-B (4) — cycle
+   - Take B-D (5) — now 5 edges, all 6 vertices connected
+   - MST cost = `1 + 2 + 2 + 3 + 5 = 13`
+
+   - Time complexity `O(E log E)` for sorting, plus almost constant time per union-find operation.
+   - Kruskal works well on sparse graphs; Prim is better on dense graphs.
+
 10. **Consider the following graph: Now find the minimum spanning tree using Kruskal's algorithm.** *[BAUST Assistant Programmer 2021 compact it 920 (ET: N/A)]*
+
+    Answer: The graph figure was not printed with the question, so this graph is used.
+
+    Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
+
+    Sorted order: `1, 2, 2, 3, 4, 5, 6, 8, 10`
+
+    | Pass | Edge (weight) | Sets before | Result |
+    |---|---|---|---|
+    | 1 | B-C (1) | {B}, {C} | Add → {B,C} |
+    | 2 | A-C (2) | {A}, {B,C} | Add → {A,B,C} |
+    | 3 | D-E (2) | {D}, {E} | Add → {D,E} |
+    | 4 | E-F (3) | {D,E}, {F} | Add → {D,E,F} |
+    | 5 | A-B (4) | both in {A,B,C} | Reject, cycle |
+    | 6 | B-D (5) | {A,B,C}, {D,E,F} | Add → all joined |
+
+    Final answer
+    - MST: `B-C, A-C, D-E, E-F, B-D`
+    - Minimum cost = `13`
+    - Edge count = `V - 1 = 5`, so the algorithm stops here and the remaining edges are not examined.
 
 11. **Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using the shortest path between two substations for SGFL Company.** *[SGFL Assistant General Engineer 2021 compact it 935-936 (ET: BUET)]*
 
+    Answer: Model the substations as a weighted graph — each substation is a vertex and each road between two substations is an edge whose weight is the distance or travel time. Then apply Dijkstra's algorithm, since all distances are non-negative.
+
+    ```
+    ShortestRoute(G, source S, destination D)
+      for each substation v
+          dist[v] = infinity
+          parent[v] = NIL
+      dist[S] = 0
+      insert all substations into a min-priority queue Q
+      while Q is not empty
+          u = extract-min(Q)
+          if u == D                     // destination settled, stop early
+              break
+          for each neighbouring substation v of u
+              if dist[u] + road(u, v) < dist[v]
+                  dist[v] = dist[u] + road(u, v)
+                  parent[v] = u
+      // rebuild the route
+      path = empty list
+      v = D
+      while v != NIL
+          add v to the front of path
+          v = parent[v]
+      return path and dist[D]
+    ```
+
+    - `dist[D]` gives the shortest travel cost and `path` gives the route to follow.
+    - Time complexity `O(E log V)`, space `O(V)`.
+    - If some roads have a negative adjustment (for example a subsidy), use Bellman-Ford instead. If the shortest route between every pair of substations is needed, use Floyd-Warshall in `O(V³)`.
+
 12. **Shortest Path Algorithm.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
+
+    Answer: A shortest path algorithm finds the route between two vertices of a weighted graph whose total edge weight is the smallest.
+
+    | Algorithm | Type | Handles negative weights | Time complexity |
+    |---|---|---|---|
+    | BFS | Single source, unweighted | Not applicable | O(V + E) |
+    | Dijkstra | Single source | No | O(E log V) |
+    | Bellman-Ford | Single source | Yes, and detects negative cycles | O(V × E) |
+    | Floyd-Warshall | All pairs | Yes (no negative cycle) | O(V³) |
+    | A* | Single pair, with heuristic | No | O(E log V) |
+
+    - All of them work by relaxation: if `dist[u] + w(u,v) < dist[v]`, then update `dist[v]`.
+    - Uses: GPS navigation, network routing protocols (OSPF uses Dijkstra, RIP uses Bellman-Ford), logistics and delivery planning.
 
 13. **How to Determine the weighted graph has negative cycle?** *[Combined 4 Banks Assistant Programmer 2020 compact it 1006-1007 (ET: DU)]*
 
+    Answer: Use the Bellman-Ford algorithm and run one extra relaxation round after the normal ones.
+
+    Method
+    - Set `dist[source] = 0` and every other distance to infinity.
+    - Relax all `E` edges, `V-1` times.
+    - Then run one more pass over all edges. If any edge still satisfies `dist[u] + w(u,v) < dist[v]`, a negative weight cycle exists.
+
+    Why the test works
+    - In a graph with no negative cycle, a shortest path can contain at most `V-1` edges, so `V-1` rounds are enough to fix every distance.
+    - If a distance can still fall in round `V`, some closed walk has a negative total weight — that is a negative cycle.
+
+    - Time complexity `O(V × E)`.
+    - Note: Bellman-Ford only detects cycles reachable from the source. To catch every negative cycle in the graph, add a virtual source joined to all vertices with weight 0, or use Floyd-Warshall and check whether any `dist[i][i] < 0`.
+
 14. **নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।** *[Sundharban Gas Assistant Programmer 2020 compact it 1048 (ET: N/A)]*
 
+    Answer: The graph figure was not printed with the question, so this graph is used with Dijkstra's algorithm from vertex A.
+
+    Edges: `A-B 4, A-C 2, B-C 1, B-D 5, D-E 2, C-E 10`
+
+    Method
+    - Set `dist[A] = 0`, all others infinity.
+    - Repeatedly pick the unvisited vertex with the smallest distance and relax its edges.
+
+    | Round | Settled vertex | Relaxation done | Distance table |
+    |---|---|---|---|
+    | 1 | A (0) | B = 4, C = 2 | A=0, B=4, C=2 |
+    | 2 | C (2) | B = min(4, 3) = 3, E = 12 | B=3, E=12 |
+    | 3 | B (3) | D = 3 + 5 = 8 | D=8 |
+    | 4 | D (8) | E = min(12, 10) = 10 | E=10 |
+    | 5 | E (10) | nothing left | final |
+
+    Final answer
+    - `A → C` = 2, `A → C → B` = 3, `A → C → B → D` = 8, `A → C → B → D → E` = 10.
+    - The greedy rule works because all weights are non-negative, so once a vertex is settled no shorter route to it can appear later.
+
 15. **S1, S2, S3, S4, S5 are five nodes and a value on lines denotes the cost to transmit power. (i) Draw a graph to find the shortest path to transmit power. (ii) Calculates the average cost.** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
+
+    Answer: The cost values were not printed with the question, so these costs are assumed to show the method.
+
+    Assumed costs: `S1-S2 4, S1-S3 2, S2-S3 1, S2-S4 5, S3-S4 8, S4-S5 2, S3-S5 10`
+
+    (i) Graph and shortest paths from S1
+
+    ```mermaid
+    graph LR
+        S1 ---|4| S2
+        S1 ---|2| S3
+        S2 ---|1| S3
+        S2 ---|5| S4
+        S3 ---|8| S4
+        S4 ---|2| S5
+        S3 ---|10| S5
+    ```
+
+    Dijkstra from S1
+    - Settle S1 (0) → S2 = 4, S3 = 2
+    - Settle S3 (2) → S2 = min(4, 2+1) = 3, S4 = 10, S5 = 12
+    - Settle S2 (3) → S4 = min(10, 3+5) = 8
+    - Settle S4 (8) → S5 = min(12, 8+2) = 10
+    - Settle S5 (10)
+
+    | Node | Shortest cost from S1 | Path |
+    |---|---|---|
+    | S2 | 3 | S1 → S3 → S2 |
+    | S3 | 2 | S1 → S3 |
+    | S4 | 8 | S1 → S3 → S2 → S4 |
+    | S5 | 10 | S1 → S3 → S2 → S4 → S5 |
+
+    (ii) Average cost
+    - Formula: `Average = (sum of shortest path costs) / (number of destination nodes)`
+    - `= (3 + 2 + 8 + 10) / 4`
+    - `= 23 / 4`
+    - `= 5.75`
+
+    Final answer
+    - Average cost of transmitting power from S1 to the other four substations = `5.75` units.
 
 ## Searching Algorithms (14)
 
