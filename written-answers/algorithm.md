@@ -3338,6 +3338,63 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Huffman encoding draw huffman tree. Given word “CONNECTION”.** *[NPCBL Executive Trainee (IT) 2022 compact it 645 (ET: BUET)]*
 
+   Answer: Huffman coding is a greedy lossless compression method. It gives short codes to frequent characters and longer codes to rare ones, and every code is a prefix code — no code is a prefix of another, so decoding is unambiguous.
+
+   Step 1 - count the character frequencies in "CONNECTION"
+
+   | Character | C | O | N | E | T | I |
+   |---|---|---|---|---|---|---|
+   | Frequency | 2 | 2 | 3 | 1 | 1 | 1 |
+
+   - Total characters = `2 + 2 + 3 + 1 + 1 + 1 = 10`
+
+   Step 2 - build the tree by repeatedly merging the two smallest frequencies
+
+   | Merge | Nodes combined | New node | Remaining nodes |
+   |---|---|---|---|
+   | 1 | E(1) + T(1) | ET(2) | I(1), C(2), O(2), ET(2), N(3) |
+   | 2 | I(1) + C(2) | IC(3) | O(2), ET(2), N(3), IC(3) |
+   | 3 | O(2) + ET(2) | OET(4) | N(3), IC(3), OET(4) |
+   | 4 | N(3) + IC(3) | NIC(6) | OET(4), NIC(6) |
+   | 5 | OET(4) + NIC(6) | Root(10) | Root only |
+
+   Step 3 - the Huffman tree (left edge = 0, right edge = 1)
+
+   ```
+                    [10]
+                   /    \
+                  0      1
+                 /        \
+             [OET 4]    [NIC 6]
+              /   \      /    \
+             0     1    0      1
+            /       \  /        \
+          O(2)   [ET 2] N(3)  [IC 3]
+                  /  \          /  \
+                 0    1        0    1
+                /      \      /      \
+              E(1)    T(1)  I(1)    C(2)
+   ```
+
+   Step 4 - read the codes from root to leaf
+
+   | Character | Frequency | Huffman code | Code length | Bits used |
+   |---|---|---|---|---|
+   | O | 2 | 00 | 2 | 4 |
+   | E | 1 | 010 | 3 | 3 |
+   | T | 1 | 011 | 3 | 3 |
+   | N | 3 | 10 | 2 | 6 |
+   | I | 1 | 110 | 3 | 3 |
+   | C | 2 | 111 | 3 | 6 |
+
+   Final answer
+   - Total bits with Huffman coding = `4 + 3 + 3 + 6 + 3 + 6 = 25 bits`
+   - With a fixed-length code, 6 distinct characters need 3 bits each, so `10 × 3 = 30 bits`.
+   - Saving = `30 − 25 = 5 bits`, about 17% compression.
+   - Encoded "CONNECTION" = `111 00 10 10 010 111 011 110 00 10`
+   - The most frequent character N received the shortest code (2 bits), which is exactly the point of the algorithm.
+   - Time complexity `O(n log n)` using a min-heap as the priority queue, where `n` is the number of distinct characters.
+
 ## NP-Completeness & Complexity Reduction (1)
 
 1. **A reduces to B Polynomial time. Which is better and why?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
