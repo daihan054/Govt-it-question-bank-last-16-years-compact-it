@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 48 / 243 done**  ·  **Questions: 496 answered, 16 skipped, 3168 total**
+**Subtopics: 49 / 243 done**  ·  **Questions: 553 answered, 18 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `c-programming.md` | IT | 9 / 9 | 260 | 10 | 270 |
 | `cloud-computing.md` | IT | 9 / 9 | 38 | 0 | 38 |
 | `compiler-and-toc.md` | IT | 5 / 5 | 24 | 1 | 25 |
-| `computer-fundamental.md` | IT | 0 / 10 | 0 | 0 | 153 |
+| `computer-fundamental.md` | IT | 1 / 10 | 57 | 2 | 153 |
 | `computer-network-security.md` | IT | 0 / 14 | 0 | 0 | 184 |
 | `computer-networks.md` | IT | 0 / 33 | 2 | 0 | 507 |
 | `data-structure.md` | IT | 0 / 8 | 0 | 0 | 97 |
@@ -51,3 +51,5 @@ Content-free or truncated entries — no answer written.
 - `c-programming.md → Output Tracing & Control Flow` — question 35
 - `c-programming.md → Output Tracing & Control Flow` — question 43
 - `compiler-and-toc.md → Grammar & Ambiguity` — question 4
+- `computer-fundamental.md → Computer Fundamentals & Acronyms` — question 1
+- `computer-fundamental.md → Computer Fundamentals & Acronyms` — question 2
