@@ -1,20 +1,20 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 173 questions
+**Table of Contents** — 12 subtopics · 177 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-42) | 42 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-22) | 22 |
-| 4 | [OS Concepts & System Software](#os-concepts--system-software-19) | 19 |
-| 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-15) | 15 |
-| 6 | [Memory Management & Paging](#memory-management--paging-13) | 13 |
+| 4 | [OS Concepts & System Software](#os-concepts--system-software-20) | 20 |
+| 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
+| 6 | [Memory Management & Paging](#memory-management--paging-14) | 14 |
 | 7 | [Process Management & Process States](#process-management--process-states-10) | 10 |
 | 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-10) | 10 |
 | 9 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
-| 10 | [Windows & System Administration](#windows--system-administration-4) | 4 |
-| 11 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
-| 12 | [File Systems & Disk Management](#file-systems--disk-management-4) | 4 |
+| 10 | [File Systems & Disk Management](#file-systems--disk-management-5) | 5 |
+| 11 | [Windows & System Administration](#windows--system-administration-4) | 4 |
+| 12 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
 
 <!-- TOC END -->
 
@@ -270,7 +270,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 22. **Four condition of deadlock in Operating System. Suppose, n processes, \text{P}_1, \text{P}_2\dots \text{P}_n share m identical esource units which can be reserved and released one at a time. The maximum resources request of process \text{P}_i is \text{S}_i, where \text{S}_i>0. Which one is sufficient condition for ensuring that deadlock doesn't occur? (Full প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
-## OS Concepts & System Software (19)
+## OS Concepts & System Software (20)
 
 1. Difference Between Firmware and OS. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -310,7 +310,9 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 19. **(খ) Time shearing operating system and Real time operating system-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
 
-## Virtual Memory & Page Replacement (Thrashing) (15)
+20. **(ক) মাল্টি প্রোগ্রামিং অপারেটিং সিস্টেম কী? সচিত্র বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1092 (ET: N/A)]*
+
+## Virtual Memory & Page Replacement (Thrashing) (16)
 
 1. Consider the following page reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1. Assuming a system with 3 page frames initially empty, calculate the number of page faults using the following page replacement algorithms: (i) FIFO (First-In, First-Out), (ii) LRU (Least Recently Used), and (iii) Optimal Page Replacement. [BSCCPL AME 21-08-2026 (BUET)]
 
@@ -342,7 +344,9 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 15. **A system uses 8 page frames to store process pages in main memory. It uses the minimum page replacement policy. Assume that all page frames are initially blank. 64 separate pages were inserted and then the pages were inserted reverse order. How many pages will be miss?** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
 
-## Memory Management & Paging (13)
+16. **(খ) Virtual Memory বলতে কী বোঝায়? এর কার্যপদ্ধতি সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1093 (ET: N/A)]*
+
+## Memory Management & Paging (14)
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
    **(i) How many pages are in logical address space?**
@@ -380,6 +384,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 12. **(a) What is demand paging?** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 821 (ET: BUET)]*
 
 13. **In the given example, let us assume the jobs and the memory requirements as the following: Job1=90k, Job2=20k, Job3=50k, Job4=200k. Let the free pace memory allocation blocks are: Block1=50k, Block2=100k, Block3=90k, Block4=200k, Block5=50k.** *[Janata Bank Assistant System Administrator 2021 compact it 939-940 (ET: N/A)]*
+
+14. **(ক) অপারেটিং সিস্টেম এর ক্ষেত্রে Swapping কী? কোন ক্ষেত্রে এটি ব্যবহৃত হয় লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
 
 ## Process Management & Process States (10)
 
@@ -500,6 +506,18 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 6. **(খ) CPU Scheduling কী? যে যে কারণে CPU Scheduling করতে হয় সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
 
+## File Systems & Disk Management (5)
+
+1. **NTFS stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
+
+2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
+
+3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
+
+4. **A file system with 300 GB uses a file descriptor with 8 direct block address, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system.** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
+
+5. **(খ) Direct or Random Access File-প্রক্রিয়াকরণ চিত্রসহ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
+
 ## Windows & System Administration (4)
 
 1. **How to check the IP address in the Windows Command Prompt?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
@@ -520,13 +538,3 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 3. **(গ) Process Synchronization এর ক্ষেত্রে Race condition ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
 
 4. **(ক) Critical Section Problem কী? ইহা কীভাবে সমাধান করা যায়?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
-
-## File Systems & Disk Management (4)
-
-1. **NTFS stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
-
-2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
-
-3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
-
-4. **A file system with 300 GB uses a file descriptor with 8 direct block address, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system.** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*

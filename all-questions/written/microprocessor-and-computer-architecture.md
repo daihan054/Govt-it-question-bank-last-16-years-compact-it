@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 112 questions
+**Table of Contents** — 11 subtopics · 113 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -9,8 +9,8 @@
 | 4 | [Cache Memory](#cache-memory-12) | 12 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
 | 6 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-6) | 6 |
-| 7 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
-| 8 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-5) | 5 |
+| 7 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-6) | 6 |
+| 8 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
 | 9 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-4) | 4 |
 | 10 | [8085 Microprocessor & Edge Computing](#8085-microprocessor--edge-computing-3) | 3 |
 | 11 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-3) | 3 |
@@ -227,19 +227,7 @@
 
 6. **How computer Architecture is characterized. What are the 5 stages of the DLX pipeline?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049-1050 (ET: BUET)]*
 
-## Multi-Core & Multi-Threading (5)
-
-1. **Core vs thread in networking?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
-
-2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
-
-3. **What is Hyper threading? What is the use of it?** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)]*
-
-4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
-
-5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
-
-## Assembly Language & Addressing Modes (5)
+## Assembly Language & Addressing Modes (6)
 
 1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
    (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -252,6 +240,20 @@ MOV AX, A534H এবং MOV AX, [A534H]
 4. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
 5. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
+
+6. **Write down four common rules of Assembly language. Write different type of hazard.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
+
+## Multi-Core & Multi-Threading (5)
+
+1. **Core vs thread in networking?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
+
+2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
+
+3. **What is Hyper threading? What is the use of it?** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)]*
+
+4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
+
+5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
 ## CPU Performance & Instruction Cycle (4)
 

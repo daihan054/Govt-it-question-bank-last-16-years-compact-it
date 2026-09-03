@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 34 questions
+**Table of Contents** — 9 subtopics · 35 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Cloud Service Models](#cloud-service-models-12) | 12 |
 | 2 | [Cloud Storage & Fundamentals](#cloud-storage--fundamentals-6) | 6 |
 | 3 | [Virtualization & Containers (VM vs Container)](#virtualization--containers-vm-vs-container-6) | 6 |
-| 4 | [Cluster, Grid & Distributed Computing](#cluster-grid--distributed-computing-3) | 3 |
+| 4 | [Cluster, Grid & Distributed Computing](#cluster-grid--distributed-computing-4) | 4 |
 | 5 | [Scalability (Horizontal & Vertical Scaling)](#scalability-horizontal--vertical-scaling-2) | 2 |
 | 6 | [Edge Computing & Fog Computing](#edge-computing--fog-computing-2) | 2 |
 | 7 | [Virtualization & Resource Allocation](#virtualization--resource-allocation-1) | 1 |
@@ -79,13 +79,15 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 6. **What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
-## Cluster, Grid & Distributed Computing (3)
+## Cluster, Grid & Distributed Computing (4)
 
 1. **(ক) উদাহরণসহ distributed এবং centralized computing -এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
 2. **Difference between cluster computing and grid computing.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
 
 3. **Imagine data in a system is green, red, yellow and blue in the system using distributed server in parallel. Design the system using reduce map.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
+
+4. **(খ) Distributed processing কী? উহার বৈশিষ্ট্য ও সুবিধাগুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
 
 ## Scalability (Horizontal & Vertical Scaling) (2)
 

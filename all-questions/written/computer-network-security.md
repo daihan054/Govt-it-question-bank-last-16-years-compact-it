@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 160 questions
+**Table of Contents** — 14 subtopics · 161 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Cryptography](#cryptography-28) | 28 |
+| 1 | [Cryptography](#cryptography-29) | 29 |
 | 2 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-26) | 26 |
 | 3 | [Web Security Vulnerabilities](#web-security-vulnerabilities-17) | 17 |
 | 4 | [Firewalls & Network Defense](#firewalls--network-defense-16) | 16 |
@@ -22,7 +22,7 @@
 
 ---
 
-## Cryptography (28)
+## Cryptography (29)
 
 1. Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026] *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)], [BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
@@ -79,6 +79,8 @@
 27. **Public key cryptography কীভাবে কাজ করে?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1020 (ET: N/A)]*
 
 28. **(গ) Plain Text and Cipher Text-এর মধ্যে মূল পার্থক্য কী? লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069 (ET: N/A)]*
+
+29. **(ক) Data encryption বলতে কী বোঝায়? বহুল ব্যবহৃত কয়েকটি encryption পদ্ধতির নাম লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
 
 ## Social Engineering & Cyber Attacks (26)
 

@@ -1,17 +1,17 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 444 questions
+**Table of Contents** — 33 subtopics · 447 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-96) | 96 |
-| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-43) | 43 |
+| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-45) | 45 |
 | 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-25) | 25 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-19) | 19 |
 | 5 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-18) | 18 |
 | 6 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
 | 7 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-17) | 17 |
 | 8 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-15) | 15 |
-| 9 | [Networking Devices](#networking-devices-14) | 14 |
+| 9 | [Networking Devices](#networking-devices-15) | 15 |
 | 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-14) | 14 |
 | 11 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-14) | 14 |
 | 12 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
@@ -276,7 +276,7 @@ ii) 211.10.15.4
 
 96. **What is private IP? List the class B private IP.** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*
 
-## OSI & TCP/IP Reference Model (43)
+## OSI & TCP/IP Reference Model (45)
 
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
@@ -370,6 +370,10 @@ ii) 211.10.15.4
 42. **(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1028 (ET: N/A)]*
 
 43. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1042-1043 (ET: DPI)]*
+
+44. **(ক) OSI Model (Layer) এর সাতটি Layer কী কী? প্রথম দুটি সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1097-1098 (ET: N/A)]*
+
+45. **(খ) TCP/IP প্রোটোকল কী কাজ করে তা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
 
 ## Networking Fundamentals & Terminology (25)
 
@@ -651,7 +655,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 15. **a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
 
-## Networking Devices (14)
+## Networking Devices (15)
 
 1. Describe the functions of a Switch and a Router and explain two key differences between these networking devices. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -680,6 +684,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 13. **হাব, সুইচ ও রাউটার এর মধ্যে পার্থক্য লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
 
 14. **(c) Briefly describe three devices using which different LANs can be connected.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030 (ET: N/A)]*
+
+15. **(ক) Hub এবং Switch কী? কোনটির ব্যবহার সুবিধাজনক সপক্ষে যুক্তি দিন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
 
 ## Communication System & Transmission Modes (14)
 

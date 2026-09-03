@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 23 questions
+**Table of Contents** — 5 subtopics · 24 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Regular Expressions & Finite Automata](#regular-expressions--finite-automata-6) | 6 |
+| 1 | [Regular Expressions & Finite Automata](#regular-expressions--finite-automata-7) | 7 |
 | 2 | [Compiler vs Interpreter](#compiler-vs-interpreter-6) | 6 |
 | 3 | [Grammar & Ambiguity](#grammar--ambiguity-5) | 5 |
 | 4 | [Lexical Analysis & Compiler Phases](#lexical-analysis--compiler-phases-5) | 5 |
@@ -13,7 +13,7 @@
 
 ---
 
-## Regular Expressions & Finite Automata (6)
+## Regular Expressions & Finite Automata (7)
 
 1. **Which one of the following regular expressions represents the language: the set of all binary strings having two consecutive 0s and two consecutive 1s?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 448 (ET: BUET)]*
    a. (0+1)^*0011(0+1)^* + (0+1)^*1100(0+1)^*
@@ -30,6 +30,8 @@
 5. **Draw the state diagram of deterministic Finite Automata (DFA), which accepts set of all strings over \{0, 1\} which interpreted as binary number is divisible by 4.** *[RAKUB Programmer (PO) 12.10.2021 compact it 851 (ET: N/A)]*
 
 6. **Design a finite automaton for an elevator. The elevator can be at one of two floors: Ground or First. There is one button that controls the elevator, and it has two values: Up or Down. Also, there are two lights in the elevator that indicate the current floor: Red for Ground and Green for First.** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
+
+7. **What are the components of finite automation model? Difference between DFA and NFA.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1103-1104 (ET: AUST)]*
 
 ## Compiler vs Interpreter (6)
 
