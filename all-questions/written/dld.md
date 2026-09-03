@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 147 questions
+**Table of Contents** — 9 subtopics · 148 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-32) | 32 |
+| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-33) | 33 |
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-26) | 26 |
 | 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
 | 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-19) | 19 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Logic Gates & Universal Gates (32)
+## Logic Gates & Universal Gates (33)
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -82,6 +82,8 @@
 31. **Describe the seven basic logic gates and show their truth table.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
 32. **Why binary logic is used for digital system?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1188 (ET: N/A)]*
+
+33. **What do you understand by universality of logic gate? Prove universality of NOR logic gate.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1280 (ET: N/A)]*
 
 ## Number Systems & Base Conversions (26)
 

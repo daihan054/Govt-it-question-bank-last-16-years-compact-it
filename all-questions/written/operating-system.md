@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 195 questions
+**Table of Contents** — 12 subtopics · 196 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-47) | 47 |
-| 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
+| 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-25) | 25 |
 | 3 | [OS Concepts & System Software](#os-concepts--system-software-24) | 24 |
 | 4 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
 | 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
@@ -153,7 +153,7 @@
    vii) nslookup
    viii) mkdir
 
-## CPU Scheduling Algorithms (24)
+## CPU Scheduling Algorithms (25)
 
 1. A CPU scheduling algorithm must choose a process from the ready queue to execute. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -245,6 +245,8 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 23. **(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026 (ET: N/A)]*
 
 24. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
+
+25. **What is turnaround time of a process? Difference between FAT32 and NTFS?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1279 (ET: N/A)]*
 
 ## OS Concepts & System Software (24)
 

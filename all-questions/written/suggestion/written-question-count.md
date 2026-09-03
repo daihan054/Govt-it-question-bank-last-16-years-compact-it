@@ -1,15 +1,15 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3165** questions.
+Sorted by count, highest first. Total **3168** questions.
 
 ## IT questions
 
-Total: **2620** questions.
+Total: **2623** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **506** |
+| **Computer Networks** | **— all subcategories —** | **507** |
 | | Subnetting & IP Addressing | 109 |
 | | OSI & TCP/IP Reference Model | 52 |
 | | Networking Fundamentals & Terminology | 32 |
@@ -36,8 +36,8 @@ Total: **2620** questions.
 | | Switching Techniques (Circuit vs Packet Switching) | 5 |
 | | WAN Technologies (SONET/SDH, ATM, WDM) | 5 |
 | | Network Layer (Packet Fragmentation & Tunneling) | 4 |
+| | Satellite Communication | 4 |
 | | Analog Modulation & Radio Receivers | 3 |
-| | Satellite Communication | 3 |
 | | Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) | 3 |
 | | Address Resolution (ARP & RARP) | 2 |
 | | Line Coding & Digital Encoding | 2 |
@@ -73,9 +73,9 @@ Total: **2620** questions.
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **195** |
+| **Operating System** | **— all subcategories —** | **196** |
 | | Linux / Unix Commands & Administration | 47 |
-| | CPU Scheduling Algorithms | 24 |
+| | CPU Scheduling Algorithms | 25 |
 | | OS Concepts & System Software | 24 |
 | | Deadlock & Resource Allocation | 23 |
 | | Memory Management & Paging | 16 |
@@ -127,8 +127,8 @@ Total: **2620** questions.
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **147** |
-| | Logic Gates & Universal Gates | 32 |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **148** |
+| | Logic Gates & Universal Gates | 33 |
 | | Number Systems & Base Conversions | 26 |
 | | Combinational Circuits (Adders, Encoders, MUX) | 23 |
 | | Boolean Algebra & De Morgan’s Theorem | 19 |

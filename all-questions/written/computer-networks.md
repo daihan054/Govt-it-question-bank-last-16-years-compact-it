@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 506 questions
+**Table of Contents** — 33 subtopics · 507 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -29,8 +29,8 @@
 | 24 | [Switching Techniques (Circuit vs Packet Switching)](#switching-techniques-circuit-vs-packet-switching-5) | 5 |
 | 25 | [WAN Technologies (SONET/SDH, ATM, WDM)](#wan-technologies-sonetsdh-atm-wdm-5) | 5 |
 | 26 | [Network Layer (Packet Fragmentation & Tunneling)](#network-layer-packet-fragmentation--tunneling-4) | 4 |
-| 27 | [Analog Modulation & Radio Receivers](#analog-modulation--radio-receivers-3) | 3 |
-| 28 | [Satellite Communication](#satellite-communication-3) | 3 |
+| 27 | [Satellite Communication](#satellite-communication-4) | 4 |
+| 28 | [Analog Modulation & Radio Receivers](#analog-modulation--radio-receivers-3) | 3 |
 | 29 | [Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS)](#spread-spectrum--multiple-access-cdma-fhss-dsss-3) | 3 |
 | 30 | [Line Coding & Digital Encoding](#line-coding--digital-encoding-2) | 2 |
 | 31 | [Address Resolution (ARP & RARP)](#address-resolution-arp--rarp-2) | 2 |
@@ -1185,6 +1185,16 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 4. **Suppose a 22-byte packet is to be transmitted through a network of \text{MTU} = 3\text{ byte}. The elementary fragment size is 1\text{ byte}. Show the segment numbering of the above packet. Packet number is 217.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
+## Satellite Communication (4)
+
+1. **(b) Difference between active and passive satellites.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
+
+2. **(c) Briefly describe different types of earth orbital satellite.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
+
+3. **Satellite ভিত্তিক যোগাযোগের একটি অসুবিধা লিখুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
+
+4. **How does mobile work? How many satellites are required to cover the earth?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1279-1280 (ET: N/A)]*
+
 ## Analog Modulation & Radio Receivers (3)
 
 1. **With appropriate figures, distinguish between homodyne and heterodyne detection processes. Draw the block diagram of a super heterodyne AM receiver.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
@@ -1192,14 +1202,6 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 2. **Difference between AM and FM. (a) Which is prefer for long distance communication? (b) Which has low distortion? (c) Which has low interference?** *[EGCB Assistant Engineer (CSE) 2022 compact it 716 (ET: BUET)]*
 
 3. **A sinusoidal modulating waveform of amplitude 5V and frequency of 2 kHz is applied to FM generator, which has a frequency sensitivity of 40Hz/volt. Calculate the frequency deviation, modulation index and bandwidth.** *[BOF Assistant Programmer 2022 compact it 734 (ET: MIST)]*
-
-## Satellite Communication (3)
-
-1. **(b) Difference between active and passive satellites.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
-
-2. **(c) Briefly describe different types of earth orbital satellite.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
-
-3. **Satellite ভিত্তিক যোগাযোগের একটি অসুবিধা লিখুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
 
 ## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (3)
 
