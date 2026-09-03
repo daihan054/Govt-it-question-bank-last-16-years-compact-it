@@ -3398,3 +3398,23 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 ## NP-Completeness & Complexity Reduction (1)
 
 1. **A reduces to B Polynomial time. Which is better and why?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
+
+   Answer: If A reduces to B in polynomial time, written `A ≤ₚ B`, then B is at least as hard as A. So B is the harder problem and A is the easier one.
+
+   What the reduction means
+   - There is a function `f`, computable in polynomial time, that converts any instance `x` of A into an instance `f(x)` of B.
+   - `x` is a YES instance of A if and only if `f(x)` is a YES instance of B.
+   - So any algorithm that solves B can be used to solve A: convert the input, run B's algorithm, and return its answer.
+
+   Which is "better"
+   - A is better in the sense of being easier — it can never be harder than B.
+   - B is better in the sense of being more powerful — solving B solves A as well, so B is the more general problem.
+
+   The two key consequences
+   - If `B ∈ P` (B is solvable in polynomial time), then `A ∈ P` too. The easiness of B flows down to A.
+   - If A is known to be hard (for example NP-complete), then B is hard as well — B must be NP-hard. The hardness of A flows up to B.
+
+   - This is exactly how NP-completeness is proved: to show a new problem B is NP-complete, reduce a known NP-complete problem A to B and also show `B ∈ NP`.
+   - Example: `3-SAT ≤ₚ Clique`. Since 3-SAT is NP-complete, Clique must be NP-hard, and because Clique is also in NP, it is NP-complete.
+   - Reduction is transitive: if `A ≤ₚ B` and `B ≤ₚ C`, then `A ≤ₚ C`.
+   - Practical use: given the choice, work on A, because a solution for A does not automatically give a solution for B.
