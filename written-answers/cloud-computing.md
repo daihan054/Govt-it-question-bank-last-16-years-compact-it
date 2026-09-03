@@ -972,6 +972,40 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.
 
+   Answer: High availability means the service keeps running even when a component fails. For DNS at a cable landing station, redundancy is needed at BOTH the server layer and the network layer — one alone is not enough.
+
+   Where VM / container technology helps
+   - **Fast failover** — DNS runs as a VM or container on two or more physical hosts. If one host fails, a clustered hypervisor (VMware HA, Proxmox HA) restarts the VM on the surviving host automatically within seconds.
+   - **Live migration** — a running VM moves to another host before planned maintenance, so patching causes zero downtime.
+   - **Identical replicas** — a container image guarantees every DNS instance is configured exactly the same, removing configuration drift as a failure cause.
+   - **Rapid scaling** — extra DNS containers start in seconds during a query flood or a DDoS attempt.
+   - **Snapshot and rollback** — a bad configuration change is undone instantly by reverting to a snapshot.
+   - **Isolation** — DNS is separated from web and database workloads, so a fault in one does not take down the others.
+
+   Where NETWORK redundancy is still required
+   - **VM technology cannot help if the network path fails.** If the single switch, single NIC or single upstream link dies, both healthy DNS servers become unreachable.
+   - **Dual NICs with bonding / LACP** on each server, connected to two different switches.
+   - **Redundant switches** in a stacked or MLAG pair, so one switch can fail.
+   - **VRRP / HSRP** to give a floating virtual IP that moves to the surviving gateway automatically.
+   - **Anycast DNS** — the same IP is advertised from multiple sites via BGP, so queries automatically route to the nearest live server. This is how real resilient DNS is built.
+   - **Diverse upstream links** — two different submarine cable paths or an alternative terrestrial route, so a single cable cut does not isolate the station.
+   - **Redundant power** — dual PSUs on separate feeds, UPS and generator.
+
+   ```mermaid
+   flowchart TD
+       C[Clients] --> A[Anycast / Virtual IP]
+       A --> S1[Switch 1]
+       A --> S2[Switch 2]
+       S1 --> H1[Host 1<br/>DNS VM primary]
+       S2 --> H2[Host 2<br/>DNS VM standby]
+       H1 -. HA cluster heartbeat .- H2
+   ```
+
+   Summary of the division of responsibility
+   - VM/container technology protects against SERVER and SOFTWARE failure.
+   - Network redundancy protects against LINK, SWITCH and PATH failure.
+   - A complete design also needs at least two geographically separate sites, so that losing the whole landing station does not stop DNS resolution.
+
 ## Cloud Security & Compliance (1)
 
 1. **How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
