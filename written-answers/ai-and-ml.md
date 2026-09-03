@@ -437,11 +437,76 @@
 
 1. **What is Machine Learning? Mention some real-life applications.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer: Machine learning is a field of Artificial Intelligence where a computer learns rules from data and improves with experience, instead of being given a fixed rule for every case.
+
+   - A learning algorithm is fed training data, it builds a model, and the model predicts results for new data.
+   - Three types: supervised (labelled data), unsupervised (unlabelled data) and reinforcement (learning from reward).
+
+   Real-life applications
+   - Banking — credit scoring, loan default prediction, card fraud detection, AML alerts.
+   - Email and messaging — spam filtering, auto-reply suggestion.
+   - E-commerce — product recommendation on Daraz or Amazon, demand forecasting.
+   - Healthcare — disease prediction, cancer detection from X-ray and MRI images.
+   - Speech and language — voice assistants, speech to text, Google Translate.
+   - Security — face recognition, fingerprint matching, intrusion detection.
+   - Transport — route and traffic prediction, self-driving cars.
+
 2. **Decisiontree model in Machine Learning.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
+
+   Answer: A decision tree is a supervised learning model shaped like a tree, where each internal node tests one feature, each branch is the result of that test, and each leaf gives the final class or value.
+
+   - Root node — the whole dataset, split first on the most useful feature.
+   - Internal node — a test on a feature, e.g. "Income > 50,000?".
+   - Branch — the outcome of the test (yes / no).
+   - Leaf node — the predicted class or number.
+
+   How it is built
+   - At every node the algorithm picks the feature that separates the classes best.
+   - Splitting measures: Information Gain and Entropy (ID3, C4.5), or Gini Index (CART).
+   - `Entropy = -Σ pi·log2(pi)`, and `Information Gain = Entropy(parent) - weighted Entropy(children)`.
+   - Splitting stops when the node is pure, when a depth limit is reached, or when too few samples remain.
+
+   Advantages and drawbacks
+   - Easy to read and explain, needs no feature scaling, handles both numeric and categorical data.
+   - Overfits easily on deep trees; it is controlled by pruning, or by using Random Forest.
 
 3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 339 (ET: BIBM)]*
 
+   Answer: Machine learning is the branch of AI in which a system learns patterns from data and improves its performance on a task without being explicitly programmed for every rule.
+
+   | Point | Supervised | Unsupervised | Reinforcement |
+   |---|---|---|---|
+   | Data | Labelled input-output pairs | Unlabelled data only | No dataset; agent explores an environment |
+   | Feedback | Correct answer given for each sample | No feedback at all | Reward or penalty after each action |
+   | Goal | Predict the label of new data | Find hidden groups or structure | Choose actions that maximise total reward |
+   | Main tasks | Classification, regression | Clustering, association, PCA | Policy learning, control |
+   | Algorithms | Decision tree, SVM, KNN, logistic regression | K-Means, DBSCAN, Apriori | Q-learning, SARSA, Deep Q-Network |
+   | Example | Predicting loan default from past records | Segmenting bank customers by behaviour | A robot learning to walk, game playing |
+
 4. **(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
+
+   Answer: A decision tree is a supervised learning model that makes a decision by asking a series of questions about the features, one at a time, until it reaches a leaf that holds the answer.
+
+   - Root node — the starting question, chosen on the most informative feature.
+   - Internal node — a test on one feature.
+   - Branch — one possible answer to that test.
+   - Leaf node — the final class or predicted value.
+
+   Example — a bank deciding whether to approve a loan:
+
+   ```mermaid
+   flowchart TD
+       A{Income > 50,000?} -->|No| B[Reject]
+       A -->|Yes| C{Credit history good?}
+       C -->|No| D[Reject]
+       C -->|Yes| E{Existing loan?}
+       E -->|Yes| F[Approve with limit]
+       E -->|No| G[Approve]
+   ```
+
+   - The tree first checks income, then credit history, then any existing loan.
+   - An applicant with income 80,000, good credit history and no existing loan follows the right-hand path and reaches "Approve".
+   - The feature at each node is chosen by Information Gain or Gini Index, so the most useful question is always asked first.
 
 ## Generative AI & Explainable AI (XAI) (4)
 
