@@ -3267,7 +3267,72 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1321 (ET: DU)]*
 
+   Answer: A min-heap is a complete binary tree in which every parent is smaller than or equal to both of its children, so the smallest value sits at the root. It is stored in an array where, for index `i`, the parent is at `(i−1)/2`, the left child at `2i+1` and the right child at `2i+2`.
+
+   Insertion rule: append the new value at the end, then sift it up by swapping with its parent while it is smaller than that parent.
+
+   | Step | Insert | Position | Sift up needed? | Array after insertion |
+   |---|---|---|---|---|
+   | 1 | 12 | index 0 | root | 12 |
+   | 2 | 29 | index 1, parent 12 | 29 > 12, no | 12, 29 |
+   | 3 | 33 | index 2, parent 12 | 33 > 12, no | 12, 29, 33 |
+   | 4 | 56 | index 3, parent 29 | 56 > 29, no | 12, 29, 33, 56 |
+   | 5 | 66 | index 4, parent 29 | 66 > 29, no | 12, 29, 33, 56, 66 |
+   | 6 | 99 | index 5, parent 33 | 99 > 33, no | 12, 29, 33, 56, 66, 99 |
+   | 7 | 100 | index 6, parent 33 | 100 > 33, no | 12, 29, 33, 56, 66, 99, 100 |
+   | 8 | 344 | index 7, parent 56 | 344 > 56, no | 12, 29, 33, 56, 66, 99, 100, 344 |
+
+   Final min-heap
+   ```
+                  12
+                /    \
+              29      33
+             /  \    /  \
+           56    66 99   100
+          /
+        344
+   ```
+
+   Array form: `12, 29, 33, 56, 66, 99, 100, 344`
+
+   - No swap was needed at any step, because the input was already in ascending order. Sorted ascending data is always a valid min-heap.
+   - Verify the property: parent 12 < children 29 and 33; parent 29 < children 56 and 66; parent 33 < children 99 and 100; parent 56 < child 344. All satisfied.
+   - Time: `O(log n)` per insertion, so `O(n log n)` for all `n` insertions. Building a heap from an array in one pass with the bottom-up method costs only `O(n)`.
+
 2. **Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 427 (ET: BIBM)]*
+
+   Answer: Insertion into a max-heap has two phases — place the item, then restore the heap property by sifting it upward.
+
+   Procedure
+   - Append the new item at the first free position, that is at the end of the array. This keeps the tree complete.
+   - Compare the new item with its parent at index `(i−1)/2`.
+   - If the item is larger than its parent, swap them.
+   - Repeat the comparison at the new position, moving up the tree, until either the item is not larger than its parent or it reaches the root.
+
+   ```
+   InsertMaxHeap(A, n, key)
+     n = n + 1
+     i = n - 1
+     A[i] = key                       // put at the end
+
+     while i > 0 and A[(i-1)/2] < A[i]
+         swap A[i] and A[(i-1)/2]
+         i = (i-1)/2                  // move up to the parent
+   ```
+
+   Example — insert 50 into the max-heap `40, 30, 20, 10, 15`
+   - Append 50 at index 5 → `40, 30, 20, 10, 15, 50`
+   - Parent of index 5 is index 2 (value 20). 50 > 20 → swap → `40, 30, 50, 10, 15, 20`
+   - Parent of index 2 is index 0 (value 40). 50 > 40 → swap → `50, 30, 40, 10, 15, 20`
+   - 50 is now the root, so stop.
+
+   Cost estimate
+   - The item travels at most from a leaf to the root, which is the height of the tree.
+   - A complete binary tree with `n` nodes has height `⌊log₂ n⌋`.
+   - Worst case: `O(log n)` comparisons and swaps — when the new item is larger than everything.
+   - Best case: `O(1)` — when the new item is not larger than its parent, so no swap happens at all.
+   - Average case: `O(1)`, because most nodes lie near the bottom of the tree and travel only a short distance.
+   - Space complexity `O(1)` — the swaps are done in place, and no extra structure is used.
 
 ## Huffman Coding & Data Compression (1)
 
