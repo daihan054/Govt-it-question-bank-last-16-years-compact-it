@@ -685,6 +685,22 @@
 
 1. **In machine learning. What will happen, when a machine is highly trained up a slight trained up?** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 395 (ET: BUET)]*
 
+   Answer: Training a model too much causes overfitting, and training it too little causes underfitting. Both give poor results on new data.
+
+   Highly trained (overfitting)
+   - The model memorises the training data, including its noise and outliers.
+   - Training accuracy is very high but test accuracy is low — a large gap between the two.
+   - The model has high variance and low bias, and fails to generalise.
+   - Remedies: stop training early, use more training data, simplify the model, apply regularization (L1/L2), dropout in neural networks, pruning in decision trees, and cross-validation.
+
+   Slightly trained (underfitting)
+   - The model has not learned the pattern at all.
+   - Both training accuracy and test accuracy are low.
+   - It has high bias and low variance — the model is too simple for the data.
+   - Remedies: train longer, use a more complex model, add better features, reduce regularization.
+
+   - The aim is the balance point in the middle, called a good fit, where training error and validation error are both low and close to each other. This trade-off is known as the bias-variance trade-off.
+
 ## Association Rule Learning (Market Basket Analysis) (1)
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1364 (ET: BUET)]*
