@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 90 questions
+**Table of Contents** — 8 subtopics · 91 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -10,7 +10,7 @@
 | 5 | [Queue](#queue-6) | 6 |
 | 6 | [Binary Search Tree (BST)](#binary-search-tree-bst-6) | 6 |
 | 7 | [Hashing & Hash Tables](#hashing--hash-tables-6) | 6 |
-| 8 | [Data Structure Fundamentals](#data-structure-fundamentals-3) | 3 |
+| 8 | [Data Structure Fundamentals](#data-structure-fundamentals-4) | 4 |
 
 <!-- TOC END -->
 
@@ -214,10 +214,16 @@ Output: Not Balanced
 
 6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
 
-## Data Structure Fundamentals (3)
+## Data Structure Fundamentals (4)
 
 1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
 
 2. **Linear Data Structure এবং Non Linear Data Structure বলতে কি বুঝায়?** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
 
 3. **What are the operations performed on a data structure? What is Prefix, Postfix and Infix operation?** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105 (ET: AUST)]*
+
+4. **(b) Implement Array List using following integer value and show operational method of the following: 52, 50, 27, 66, 82.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
+   i) Insert data into array list
+   ii) Remove 27 from array list
+   iii) Insert 99 into 2nd position
+   iv) Show array list

@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 219 questions
+**Table of Contents** — 9 subtopics · 223 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-92) | 92 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-93) | 93 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-39) | 39 |
-| 3 | [Recursion & Functions](#recursion--functions-32) | 32 |
-| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-22) | 22 |
+| 3 | [Recursion & Functions](#recursion--functions-33) | 33 |
+| 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-23) | 23 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-14) | 14 |
-| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-11) | 11 |
+| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-12) | 12 |
 | 7 | [File Handling](#file-handling-4) | 4 |
 | 8 | [Pointers](#pointers-4) | 4 |
 | 9 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs-1) | 1 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (92)
+## Basic Programs & Control Statements (93)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -358,6 +358,8 @@ return 0;
 for(a=1; a<=100; a++)
     printf("%d\n", a*a);
 ```
+
+93. **(a) Write a Java/C program to find the sum of the following series? $\frac{1}{1!} + \frac{2}{2!} + \frac{3}{3!} + \dots\dots\dots\dots + \frac{N}{N!}$** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
 ## Output Tracing & Control Flow (39)
 
@@ -824,7 +826,7 @@ void main() {
 }
 ```
 
-## Recursion & Functions (32)
+## Recursion & Functions (33)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -940,7 +942,9 @@ int main() {
 
 32. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-## Operators, Data Types & Language Concepts (22)
+33. **(a) Write down a function to compute the sum of the row an $n \times m$ matrix of integer.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
+
+## Operators, Data Types & Language Concepts (23)
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
@@ -991,6 +995,8 @@ int main() {
 
 22. **Which of the following is the correct order of evaluation?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
+23. **(c) Is it possible to convert all if-else code into switch code block? Give an example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
+
 ## Flowcharts & Algorithms (14)
 
 1. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
@@ -1021,7 +1027,7 @@ int main() {
 
 14. **Write a pesudcode that takes in one positive number only and returns the factor for that number.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
-## String Manipulation & Algorithms (11)
+## String Manipulation & Algorithms (12)
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1362 (ET: BUET)]*
 
@@ -1046,6 +1052,8 @@ int main() {
 11. **Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 923-924 (ET: CTI)]*
    Sample Input: 192.168.0.0
    Sample Output: Class C
+
+12. **(b) Write down a C function to sort a list of strings in alphabetic order.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
 
 ## File Handling (4)
 

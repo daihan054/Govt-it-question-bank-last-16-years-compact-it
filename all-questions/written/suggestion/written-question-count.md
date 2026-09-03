@@ -1,11 +1,11 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **2833** questions.
+Sorted by count, highest first. Total **2856** questions.
 
 ## IT questions
 
-Total: **2295** questions.
+Total: **2317** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -43,14 +43,14 @@ Total: **2295** questions.
 | | Line Coding & Digital Encoding | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **247** |
+| **Database** | **— all subcategories —** | **250** |
 | | SQL Queries | 75 |
-| | Keys in DBMS | 23 |
+| | Keys in DBMS | 24 |
 | | DBMS Architecture & Features | 22 |
 | | ER Diagram & Database Design | 22 |
 | | Normalization & Database Design | 19 |
+| | SQL Commands (DDL, DML, DCL, TCL) | 15 |
 | | Relational Data Model & ER Relationships | 13 |
-| | SQL Commands (DDL, DML, DCL, TCL) | 13 |
 | | Transaction Management & ACID Properties | 13 |
 | | Database Backup & Disaster Recovery | 8 |
 | | Indexing & Query Optimization (B-Tree, B+ Tree) | 8 |
@@ -63,32 +63,32 @@ Total: **2295** questions.
 | | NoSQL, NewSQL & Modern Databases | 2 |
 | | Indexing in DBMS | 1 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
-| **C Programming** | **— all subcategories —** | **219** |
-| | Basic Programs & Control Statements | 92 |
+| **C Programming** | **— all subcategories —** | **223** |
+| | Basic Programs & Control Statements | 93 |
 | | Output Tracing & Control Flow | 39 |
-| | Recursion & Functions | 32 |
-| | Operators, Data Types & Language Concepts | 22 |
+| | Recursion & Functions | 33 |
+| | Operators, Data Types & Language Concepts | 23 |
 | | Flowcharts & Algorithms | 14 |
-| | String Manipulation & Algorithms | 11 |
+| | String Manipulation & Algorithms | 12 |
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **181** |
+| **Operating System** | **— all subcategories —** | **185** |
 | | Linux / Unix Commands & Administration | 44 |
 | | CPU Scheduling Algorithms | 24 |
-| | Deadlock & Resource Allocation | 22 |
+| | Deadlock & Resource Allocation | 23 |
 | | OS Concepts & System Software | 20 |
 | | Virtual Memory & Page Replacement (Thrashing) | 16 |
 | | Memory Management & Paging | 15 |
+| | Process Management & Process States | 12 |
 | | Concurrency, Threads & Synchronization | 11 |
-| | Process Management & Process States | 10 |
 | | CPU Scheduling | 6 |
-| | File Systems & Disk Management | 5 |
+| | File Systems & Disk Management | 6 |
 | | Process Synchronization & Concurrency | 4 |
 | | Windows & System Administration | 4 |
-| **Computer & Network Security** | **— all subcategories —** | **164** |
+| **Computer & Network Security** | **— all subcategories —** | **166** |
 | | Cryptography | 29 |
-| | Social Engineering & Cyber Attacks | 27 |
+| | Social Engineering & Cyber Attacks | 29 |
 | | Firewalls & Network Defense | 17 |
 | | Web Security Vulnerabilities | 17 |
 | | Authentication & Access Control | 15 |
@@ -101,12 +101,12 @@ Total: **2295** questions.
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 2 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Software Engineering** | **— all subcategories —** | **135** |
+| **Software Engineering** | **— all subcategories —** | **136** |
 | | SDLC Phases & Models | 41 |
 | | Software Testing & Evaluation | 37 |
 | | Software Architecture & Design Patterns (MVC) | 11 |
 | | Software Requirements Engineering | 10 |
-| | UML Diagrams (Class, Use Case, Sequence) | 9 |
+| | UML Diagrams (Class, Use Case, Sequence) | 10 |
 | | Software Project Management & Organization | 7 |
 | | Software Design Principles (Coupling & Cohesion) | 5 |
 | | Software Cost Estimation & Build vs Buy Decisions | 4 |
@@ -127,6 +127,16 @@ Total: **2295** questions.
 | | Quantum Computing & Emerging Technologies | 3 |
 | | Digital Banking & Financial Inclusion | 2 |
 | | User Interfaces (CLI vs GUI) | 1 |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **130** |
+| | Logic Gates & Universal Gates | 31 |
+| | Number Systems & Base Conversions | 22 |
+| | Combinational Circuits (Adders, Encoders, MUX) | 20 |
+| | Karnaugh Map (K-Map) | 19 |
+| | Boolean Algebra & De Morgan’s Theorem | 17 |
+| | Sequential Circuits (Latches & Flip-Flops) | 12 |
+| | Logic Families (TTL vs CMOS) | 5 |
+| | 2's Complement & Binary Arithmetic | 3 |
+| | Finite State Machines (FSM) | 1 |
 | **Algorithm** | **— all subcategories —** | **128** |
 | | Sorting Algorithms & Complexity | 35 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
@@ -142,19 +152,9 @@ Total: **2295** questions.
 | | Heap & Priority Queue | 2 |
 | | Huffman Coding & Data Compression | 1 |
 | | NP-Completeness & Complexity Reduction | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **126** |
-| | Logic Gates & Universal Gates | 31 |
-| | Number Systems & Base Conversions | 21 |
-| | Combinational Circuits (Adders, Encoders, MUX) | 20 |
-| | Karnaugh Map (K-Map) | 18 |
-| | Boolean Algebra & De Morgan’s Theorem | 17 |
-| | Sequential Circuits (Latches & Flip-Flops) | 11 |
-| | Logic Families (TTL vs CMOS) | 5 |
-| | 2's Complement & Binary Arithmetic | 2 |
-| | Finite State Machines (FSM) | 1 |
-| **Microprocessor & Computer Architecture** | **— all subcategories —** | **117** |
+| **Microprocessor & Computer Architecture** | **— all subcategories —** | **118** |
 | | Microprocessor Architecture & Functions | 29 |
-| | Memory Hierarchy & Storage | 23 |
+| | Memory Hierarchy & Storage | 24 |
 | | RAID Architecture & Storage | 13 |
 | | Cache Memory | 12 |
 | | Secondary Storage (HDD vs SSD) | 10 |
@@ -164,9 +164,9 @@ Total: **2295** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **92** |
-| | OOP Concepts (Inheritance & Polymorphism) | 47 |
-| | Java Programming & Methods | 12 |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **94** |
+| | OOP Concepts (Inheritance & Polymorphism) | 48 |
+| | Java Programming & Methods | 13 |
 | | Class Design & Object-Oriented Modeling | 8 |
 | | Encapsulation & Access Modifiers | 7 |
 | | Constructors & Destructors | 5 |
@@ -174,7 +174,7 @@ Total: **2295** questions.
 | | C++ OOP Concepts & Friend Functions | 3 |
 | | Exception Handling | 3 |
 | | Interfaces & Abstract Classes | 2 |
-| **Data Structure** | **— all subcategories —** | **90** |
+| **Data Structure** | **— all subcategories —** | **91** |
 | | Tree | 27 |
 | | Stack | 19 |
 | | Linked List | 15 |
@@ -182,7 +182,7 @@ Total: **2295** questions.
 | | Binary Search Tree (BST) | 6 |
 | | Hashing & Hash Tables | 6 |
 | | Queue | 6 |
-| | Data Structure Fundamentals | 3 |
+| | Data Structure Fundamentals | 4 |
 | **Web Technology** | **— all subcategories —** | **60** |
 | | HTML & Web Fundamentals | 21 |
 | | HTTP Protocol | 10 |
@@ -240,7 +240,7 @@ Total: **2295** questions.
 
 ## General Questions
 
-Total: **538** questions.
+Total: **539** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -265,7 +265,7 @@ Total: **538** questions.
 | | Letter & Application Writing | 6 |
 | | Reading Comprehension | 5 |
 | | English Literature & Authors | 1 |
-| **Math** | **— all subcategories —** | **90** |
+| **Math** | **— all subcategories —** | **91** |
 | | Arithmetic & Algebra Problems | 16 |
 | | Set Theory & Discrete Math | 13 |
 | | Percentage, Profit & Loss, Simple & Compound Interest | 12 |
@@ -280,4 +280,4 @@ Total: **538** questions.
 | | Calculus & Integration | 2 |
 | | Comprehensive Math Problems | 2 |
 | | Numerical Methods & Root Finding | 2 |
-| | Propositional Logic & Logical Equivalence | 1 |
+| | Propositional Logic & Logical Equivalence | 2 |

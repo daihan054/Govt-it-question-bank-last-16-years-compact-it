@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 164 questions
+**Table of Contents** — 14 subtopics · 166 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Cryptography](#cryptography-29) | 29 |
-| 2 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-27) | 27 |
+| 2 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-29) | 29 |
 | 3 | [Web Security Vulnerabilities](#web-security-vulnerabilities-17) | 17 |
 | 4 | [Firewalls & Network Defense](#firewalls--network-defense-17) | 17 |
 | 5 | [Authentication & Access Control](#authentication--access-control-15) | 15 |
@@ -82,7 +82,7 @@
 
 29. **(ক) Data encryption বলতে কী বোঝায়? বহুল ব্যবহৃত কয়েকটি encryption পদ্ধতির নাম লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
 
-## Social Engineering & Cyber Attacks (27)
+## Social Engineering & Cyber Attacks (29)
 
 1. What is a phishing attack? Explain its types and discuss methods to prevent it. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -137,6 +137,10 @@
 26. **Which security attacks (given) occur on client side or server side?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
 
 27. **Write down ten name of different attack through internet.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105-1106 (ET: AUST)]*
+
+28. **(d) Explain the principle of man in the middle and session hijacking attack with appropriate diagrams.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
+
+29. **(b) What is DHCP Starvation Attack? Explain briefly.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1138 (ET: N/A)]*
 
 ## Web Security Vulnerabilities (17)
 

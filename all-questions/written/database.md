@@ -1,14 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 247 questions
+**Table of Contents** — 19 subtopics · 250 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [SQL Queries](#sql-queries-75) | 75 |
-| 2 | [Keys in DBMS](#keys-in-dbms-23) | 23 |
+| 2 | [Keys in DBMS](#keys-in-dbms-24) | 24 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-22) | 22 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-22) | 22 |
 | 5 | [Normalization & Database Design](#normalization--database-design-19) | 19 |
-| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-13) | 13 |
+| 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-15) | 15 |
 | 7 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
 | 8 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-13) | 13 |
 | 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
@@ -347,7 +347,7 @@ SELECT count (*) FROM (
 
 75. **Given two tables are employee (id, name, salary, dept_id) and department (dept_id, dept_name), write SQL to find MAX salary and average salay of specific department.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
-## Keys in DBMS (23)
+## Keys in DBMS (24)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -394,6 +394,8 @@ SELECT count (*) FROM (
 22. **What is the difference between primary key and candidate key? Explain the foreign key with an example.** *[Bangladesh Competition Commission Programmer 2019 compact it 1061-1062 (ET: DU)]*
 
 23. **(খ) Candidate key and Composite key কাকে বলে?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069 (ET: N/A)]*
+
+24. **(b) What happens when someone tries to delete an entry of a table that has referential integrity constraint? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
 
 ## DBMS Architecture & Features (22)
 
@@ -551,7 +553,7 @@ SELECT count (*) FROM (
 
 19. **What is normalization? Explain composite key with example.** *[Bangladesh Television Assistant Programmer 2019 compact it 1063 (ET: N/A)]*
 
-## SQL Commands (DDL, DML, DCL, TCL) (13)
+## SQL Commands (DDL, DML, DCL, TCL) (15)
 
 1. Example Query of DDL, DML, DCL. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -578,6 +580,10 @@ SELECT count (*) FROM (
 12. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 988-989 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 13. **How to find duplicate data in database? Explain DDL and DML.** *[RAKUB Assistant Database Administrator 2020 compact it 1017-1018 (ET: E-Zone)]*
+
+14. **(a) How can you revoke permissions from a database table? Give SQL command for it.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
+
+15. **(c) Differentiate between “delete from” and “drop table” SQL statement.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
 
 ## Relational Data Model & ER Relationships (13)
 

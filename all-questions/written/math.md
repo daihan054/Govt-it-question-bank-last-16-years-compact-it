@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 90 questions
+**Table of Contents** — 15 subtopics · 91 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -17,7 +17,7 @@
 | 12 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-2) | 2 |
 | 13 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
 | 14 | [Numerical Methods & Root Finding](#numerical-methods--root-finding-2) | 2 |
-| 15 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-1) | 1 |
+| 15 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-2) | 2 |
 
 <!-- TOC END -->
 
@@ -229,6 +229,8 @@
 
 2. **(ক) কোন একটি সমীকরণের মূল নির্ণয়ের জন্য নিউমেরিক্যাল এনালাইসিসে ব্যবহৃত বিভিন্ন পদ্ধতির নাম লিখুন এবং বাইসেকশান পদ্ধতি ব্যবহার করে সমীকরণটির মূল নির্ণয়ের পদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
 
-## Propositional Logic & Logical Equivalence (1)
+## Propositional Logic & Logical Equivalence (2)
 
 1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+2. **(d) Simplify the following expression: $\neg(\neg q \land (\neg p \lor q)) \lor \neg p$.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*

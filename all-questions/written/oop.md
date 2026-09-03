@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 92 questions
+**Table of Contents** — 9 subtopics · 94 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-47) | 47 |
-| 2 | [Java Programming & Methods](#java-programming--methods-12) | 12 |
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-48) | 48 |
+| 2 | [Java Programming & Methods](#java-programming--methods-13) | 13 |
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-8) | 8 |
 | 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
 | 5 | [Constructors & Destructors](#constructors--destructors-5) | 5 |
@@ -17,7 +17,7 @@
 
 ---
 
-## OOP Concepts (Inheritance & Polymorphism) (47)
+## OOP Concepts (Inheritance & Polymorphism) (48)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -147,7 +147,9 @@ public class main{
 
 47. **Function overloading and Operator overloading বলতে কী বুঝেন? উদাহরণ দিন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1082 (ET: N/A)]*
 
-## Java Programming & Methods (12)
+48. **(a) What is method overloading?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
+
+## Java Programming & Methods (13)
 
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
@@ -187,6 +189,8 @@ Public class class B extends class A {
 11. **Write java program for calculate electricity bill using class and object.** *[Sundharban Gas Assistant Programmer 2020 compact it 1047-1048 (ET: N/A)]*
 
 12. **What are the difference among JDK, JRE and JVM?** *[Islami Bank Bangladesh Limited Officer (Software Engineer) 2019 compact it 1098 (ET: N/A)]*
+
+13. **(c) Why Java is called platform independent language?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
 ## Class Design & Object-Oriented Modeling (8)
 
