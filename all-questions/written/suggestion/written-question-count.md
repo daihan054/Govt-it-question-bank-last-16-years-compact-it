@@ -1,25 +1,25 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3095** questions.
+Sorted by count, highest first. Total **3110** questions.
 
 ## IT questions
 
-Total: **2551** questions.
+Total: **2566** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **499** |
-| | Subnetting & IP Addressing | 108 |
-| | OSI & TCP/IP Reference Model | 51 |
+| **Computer Networks** | **— all subcategories —** | **502** |
+| | Subnetting & IP Addressing | 109 |
+| | OSI & TCP/IP Reference Model | 52 |
 | | Networking Fundamentals & Terminology | 30 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 22 |
 | | Networking Devices | 19 |
 | | Wireless Networks & IoT (mmWave) | 19 |
 | | Multiplexing & Bandwidth | 18 |
 | | Routing Protocols & Route Configuration | 18 |
+| | Communication System & Transmission Modes | 17 |
 | | Transport Layer (TCP & UDP) | 17 |
-| | Communication System & Transmission Modes | 16 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 16 |
 | | Error Detection & Data Communication (CRC, Throughput) | 14 |
 | | Network Topologies | 14 |
@@ -43,7 +43,7 @@ Total: **2551** questions.
 | | Line Coding & Digital Encoding | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **281** |
+| **Database** | **— all subcategories —** | **282** |
 | | SQL Queries | 82 |
 | | Keys in DBMS | 33 |
 | | ER Diagram & Database Design | 25 |
@@ -52,7 +52,7 @@ Total: **2551** questions.
 | | SQL Commands (DDL, DML, DCL, TCL) | 18 |
 | | Transaction Management & ACID Properties | 14 |
 | | Relational Data Model & ER Relationships | 13 |
-| | Data Warehousing, Data Mining & Business Intelligence | 8 |
+| | Data Warehousing, Data Mining & Business Intelligence | 9 |
 | | Database Backup & Disaster Recovery | 8 |
 | | Indexing & Query Optimization (B-Tree, B+ Tree) | 8 |
 | | PL/SQL & Database Triggers | 7 |
@@ -63,8 +63,8 @@ Total: **2551** questions.
 | | NoSQL, NewSQL & Modern Databases | 2 |
 | | Indexing in DBMS | 1 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
-| **C Programming** | **— all subcategories —** | **259** |
-| | Basic Programs & Control Statements | 106 |
+| **C Programming** | **— all subcategories —** | **260** |
+| | Basic Programs & Control Statements | 107 |
 | | Output Tracing & Control Flow | 51 |
 | | Recursion & Functions | 38 |
 | | Operators, Data Types & Language Concepts | 25 |
@@ -73,11 +73,11 @@ Total: **2551** questions.
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **192** |
+| **Operating System** | **— all subcategories —** | **193** |
 | | Linux / Unix Commands & Administration | 46 |
 | | CPU Scheduling Algorithms | 24 |
+| | OS Concepts & System Software | 24 |
 | | Deadlock & Resource Allocation | 23 |
-| | OS Concepts & System Software | 23 |
 | | Memory Management & Paging | 16 |
 | | Virtual Memory & Page Replacement (Thrashing) | 16 |
 | | Process Management & Process States | 12 |
@@ -86,9 +86,9 @@ Total: **2551** questions.
 | | CPU Scheduling | 6 |
 | | Process Synchronization & Concurrency | 4 |
 | | Windows & System Administration | 4 |
-| **Computer & Network Security** | **— all subcategories —** | **179** |
+| **Computer & Network Security** | **— all subcategories —** | **180** |
 | | Social Engineering & Cyber Attacks | 31 |
-| | Cryptography | 29 |
+| | Cryptography | 30 |
 | | Firewalls & Network Defense | 20 |
 | | Malware & Security Threats | 19 |
 | | Web Security Vulnerabilities | 19 |
@@ -101,8 +101,8 @@ Total: **2551** questions.
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 2 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Software Engineering** | **— all subcategories —** | **150** |
-| | SDLC Phases & Models | 44 |
+| **Software Engineering** | **— all subcategories —** | **151** |
+| | SDLC Phases & Models | 45 |
 | | Software Testing & Evaluation | 40 |
 | | Software Architecture & Design Patterns (MVC) | 13 |
 | | UML Diagrams (Class, Use Case, Sequence) | 13 |
@@ -116,8 +116,8 @@ Total: **2551** questions.
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **144** |
-| | Computer Fundamentals & Acronyms | 54 |
+| **Computer Fundamentals** | **— all subcategories —** | **145** |
+| | Computer Fundamentals & Acronyms | 55 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 22 |
 | | Software Types & Classification | 15 |
@@ -127,10 +127,10 @@ Total: **2551** questions.
 | | Quantum Computing & Emerging Technologies | 3 |
 | | Digital Banking & Financial Inclusion | 2 |
 | | User Interfaces (CLI vs GUI) | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **142** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **144** |
 | | Logic Gates & Universal Gates | 32 |
-| | Number Systems & Base Conversions | 23 |
-| | Combinational Circuits (Adders, Encoders, MUX) | 22 |
+| | Number Systems & Base Conversions | 24 |
+| | Combinational Circuits (Adders, Encoders, MUX) | 23 |
 | | Karnaugh Map (K-Map) | 19 |
 | | Boolean Algebra & De Morgan’s Theorem | 18 |
 | | Sequential Circuits (Latches & Flip-Flops) | 17 |
@@ -152,9 +152,9 @@ Total: **2551** questions.
 | | Heap & Priority Queue | 2 |
 | | Huffman Coding & Data Compression | 1 |
 | | NP-Completeness & Complexity Reduction | 1 |
-| **Microprocessor & Computer Architecture** | **— all subcategories —** | **128** |
-| | Microprocessor Architecture & Functions | 31 |
-| | Memory Hierarchy & Storage | 25 |
+| **Microprocessor & Computer Architecture** | **— all subcategories —** | **130** |
+| | Microprocessor Architecture & Functions | 32 |
+| | Memory Hierarchy & Storage | 26 |
 | | RAID Architecture & Storage | 15 |
 | | Cache Memory | 14 |
 | | Secondary Storage (HDD vs SSD) | 10 |
@@ -191,18 +191,18 @@ Total: **2551** questions.
 | | Full Stack & Backend Web Development | 7 |
 | | CSS & Styling (Inline, Internal, External) | 4 |
 | | Web Security & Browser Same-Origin Policy (Iframe) | 2 |
-| **AI & Machine Learning** | **— all subcategories —** | **41** |
+| **AI & Machine Learning** | **— all subcategories —** | **43** |
 | | Artificial Intelligence & Expert Systems | 8 |
-| | Deep Learning & Neural Networks (ANN, CNN, RNN) | 7 |
+| | Deep Learning & Neural Networks (ANN, CNN, RNN) | 8 |
 | | Machine Learning Paradigms (Supervised vs Unsupervised) | 6 |
 | | Model Evaluation & Datasets | 5 |
 | | Generative AI & Explainable AI (XAI) | 4 |
 | | Supervised Learning (Decision Trees) | 4 |
 | | Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) | 3 |
+| | Search Algorithms (Informed vs Uninformed Search) | 2 |
 | | Association Rule Learning (Market Basket Analysis) | 1 |
 | | Clustering & Unsupervised Learning (K-Means, Hierarchical) | 1 |
 | | Overfitting, Underfitting & Model Generalization | 1 |
-| | Search Algorithms (Informed vs Uninformed Search) | 1 |
 | **Electrical & Electronics** | **— all subcategories —** | **39** |
 | | Electrical Circuits & Protection Devices | 13 |
 | | Transistors (BJT & FET) | 9 |

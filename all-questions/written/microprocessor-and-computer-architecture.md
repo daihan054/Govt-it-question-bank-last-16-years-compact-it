@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 128 questions
+**Table of Contents** — 11 subtopics · 130 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-31) | 31 |
-| 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-25) | 25 |
+| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-32) | 32 |
+| 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-26) | 26 |
 | 3 | [RAID Architecture & Storage](#raid-architecture--storage-15) | 15 |
 | 4 | [Cache Memory](#cache-memory-14) | 14 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
@@ -19,7 +19,7 @@
 
 ---
 
-## Microprocessor Architecture & Functions (31)
+## Microprocessor Architecture & Functions (32)
 
 1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -91,7 +91,9 @@
 
 31. **Difference between microprocessor and micro-controller.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
 
-## Memory Hierarchy & Storage (25)
+32. **Write down the necessary components of a USB bus with block diagram.** *[ICT Ministry Assistant Programmer 2017 compact it 1237 (ET: N/A)]*
+
+## Memory Hierarchy & Storage (26)
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -142,6 +144,8 @@
 24. **(b) Difference between SRAM and DRAM.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
 
 25. **Write the Memory faster access time memory in top and lowest access time memory is below from the following memory: [Cache Memory, Register Memory, Main Memory, Magnetic Tapes and Magnetic Disks.]** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
+
+26. **Difference between ROM and RAM.** *[ICT Ministry Assistant Programmer 2017 compact it 1240-1241 (ET: N/A)]*
 
 ## RAID Architecture & Storage (15)
 

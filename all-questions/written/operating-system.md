@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 192 questions
+**Table of Contents** — 12 subtopics · 193 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-46) | 46 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
-| 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
-| 4 | [OS Concepts & System Software](#os-concepts--system-software-23) | 23 |
+| 3 | [OS Concepts & System Software](#os-concepts--system-software-24) | 24 |
+| 4 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
 | 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
 | 6 | [Memory Management & Paging](#memory-management--paging-16) | 16 |
 | 7 | [Process Management & Process States](#process-management--process-states-12) | 12 |
@@ -236,6 +236,56 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 24. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
 
+## OS Concepts & System Software (24)
+
+1. Difference Between Firmware and OS. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+
+2. **Define: Socket, Kernel, Process, Program, Multiprogramming, Context Switching; Explain Preemptive Priority Scheduling algorithm with illustration; Explain LRU and NRU Page Replacement algorithm.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 302 (ET: BIBM)]*
+
+3. **Explain how can multiprogramming be achieved on a uniprocessor system?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
+
+4. **Write the difference between shell and kernel?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
+
+5. **DOS কী? অপারেটিং সিস্টেমের কাজ ও প্রকারভেদ ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
+
+6. **Write down the difference between Multitasking and Multiprocessing.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
+
+7. **(b) What is the difference between micro kernel and macro kernel in the context of OS?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
+
+8. **অথবা, (ক) Blocking এবং Buffering OS এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
+
+9. **(গ) Real Time System বলতে কী বোঝায় ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
+
+10. **Explain context switching in Operating System.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
+
+11. **Which Operating system is considered as an Open source?** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
+
+12. **What is kernel? Write down the objectives of kernel.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
+
+13. **IBM প্রতিষ্ঠান কর্তৃক কোন Operating System প্রস্তুত করা হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
+
+14. **Explain: Kernel, Cache, Virtual Memory and RAID.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872-873 (ET: N/A)]*
+
+15. **(a) Briefly describe the function that measure the efficiency of an operating system.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1025 (ET: N/A)]*
+
+16. **What is the difference between micro kernel and macro kernel? What are the sub components of I/O manager in Windows NT?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1052-1053 (ET: BUET)]*
+
+17. **What is operating System? What are the main components of operating System?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
+
+18. **(গ) Operating System-এর সংগঠন সহ কাজ উল্লেখ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1067-1068 (ET: N/A)]*
+
+19. **(খ) Time shearing operating system and Real time operating system-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
+
+20. **(ক) মাল্টি প্রোগ্রামিং অপারেটিং সিস্টেম কী? সচিত্র বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1092 (ET: N/A)]*
+
+21. **Discuss the Operating System architecture and how it works?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
+
+22. **Difference between Multiprocessing and Multitasking.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
+
+23. **Difference between Multitasking and Multiprogramming.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
+
+24. **Explain the functionalities of operating system.** *[ICT Ministry Assistant Programmer 2017 compact it 1239-1240 (ET: N/A)]*
+
 ## Deadlock & Resource Allocation (23)
 
 1. **What is Deadlock? Given a scenery and find out the process is face deadlock sitiation?** *[IFIC Bank Officer IT 2025 compact it 1448 (ET: IFIC)]*
@@ -287,54 +337,6 @@ The content of the matrix. Need is defined to be Max – Allocation.
 22. **Four condition of deadlock in Operating System. Suppose, n processes, \text{P}_1, \text{P}_2\dots \text{P}_n share m identical esource units which can be reserved and released one at a time. The maximum resources request of process \text{P}_i is \text{S}_i, where \text{S}_i>0. Which one is sufficient condition for ensuring that deadlock doesn't occur? (Full প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
 23. **(b) What are the conditions for a deadlock situation?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130 (ET: N/A)]*
-
-## OS Concepts & System Software (23)
-
-1. Difference Between Firmware and OS. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
-
-2. **Define: Socket, Kernel, Process, Program, Multiprogramming, Context Switching; Explain Preemptive Priority Scheduling algorithm with illustration; Explain LRU and NRU Page Replacement algorithm.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 302 (ET: BIBM)]*
-
-3. **Explain how can multiprogramming be achieved on a uniprocessor system?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
-
-4. **Write the difference between shell and kernel?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
-
-5. **DOS কী? অপারেটিং সিস্টেমের কাজ ও প্রকারভেদ ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
-
-6. **Write down the difference between Multitasking and Multiprocessing.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
-
-7. **(b) What is the difference between micro kernel and macro kernel in the context of OS?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
-
-8. **অথবা, (ক) Blocking এবং Buffering OS এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
-
-9. **(গ) Real Time System বলতে কী বোঝায় ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
-
-10. **Explain context switching in Operating System.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
-
-11. **Which Operating system is considered as an Open source?** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
-
-12. **What is kernel? Write down the objectives of kernel.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
-
-13. **IBM প্রতিষ্ঠান কর্তৃক কোন Operating System প্রস্তুত করা হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
-
-14. **Explain: Kernel, Cache, Virtual Memory and RAID.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872-873 (ET: N/A)]*
-
-15. **(a) Briefly describe the function that measure the efficiency of an operating system.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1025 (ET: N/A)]*
-
-16. **What is the difference between micro kernel and macro kernel? What are the sub components of I/O manager in Windows NT?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1052-1053 (ET: BUET)]*
-
-17. **What is operating System? What are the main components of operating System?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
-
-18. **(গ) Operating System-এর সংগঠন সহ কাজ উল্লেখ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1067-1068 (ET: N/A)]*
-
-19. **(খ) Time shearing operating system and Real time operating system-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
-
-20. **(ক) মাল্টি প্রোগ্রামিং অপারেটিং সিস্টেম কী? সচিত্র বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1092 (ET: N/A)]*
-
-21. **Discuss the Operating System architecture and how it works?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
-
-22. **Difference between Multiprocessing and Multitasking.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
-
-23. **Difference between Multitasking and Multiprogramming.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
 
 ## Virtual Memory & Page Replacement (Thrashing) (16)
 

@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 499 questions
+**Table of Contents** — 33 subtopics · 502 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-108) | 108 |
-| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-51) | 51 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-109) | 109 |
+| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-52) | 52 |
 | 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-30) | 30 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-22) | 22 |
 | 5 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-19) | 19 |
@@ -12,7 +12,7 @@
 | 7 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-18) | 18 |
 | 8 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
 | 9 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-17) | 17 |
-| 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-16) | 16 |
+| 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-17) | 17 |
 | 11 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-16) | 16 |
 | 12 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-14) | 14 |
 | 13 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
@@ -41,7 +41,7 @@
 
 ---
 
-## Subnetting & IP Addressing (108)
+## Subnetting & IP Addressing (109)
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
@@ -300,7 +300,9 @@ ii) 211.10.15.4
 
 108. **Explain why subnet mask is used?** *[Multiple Ministry Assistant Programmer 2017 compact it 1232-1233 (ET: N/A)]*
 
-## OSI & TCP/IP Reference Model (51)
+109. **Given an IP address 10.2.3.20/22, Find out the number of host and subnet mask.** *[BTCL Assistant Manager (Technical) 2017 compact it 1254 (ET: N/A)]*
+
+## OSI & TCP/IP Reference Model (52)
 
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
@@ -415,6 +417,8 @@ ii) 211.10.15.4
 50. **What is OSI model? Which layers are important for data transfer and user interaction?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
 51. **Name OSI layer that transmitted bit stream to frames.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213-1214 (ET: N/A)]*
+
+52. **Explain: ISO, OSI and TCP/IP model with figure.** *[ICT Ministry Assistant Programmer 2017 compact it 1241-1242 (ET: N/A)]*
 
 ## Networking Fundamentals & Terminology (30)
 
@@ -760,7 +764,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 17. **Write down difference between TCP and UDP with write down some TCP and UDP protocols.** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160 (ET: BUET)]*
 
-## Communication System & Transmission Modes (16)
+## Communication System & Transmission Modes (17)
 
 1. What is a communication system? Describe the different types of transmission modes with examples. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
@@ -793,6 +797,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 15. **(a) Draw a general model of communication system. Discuss different modes of communications.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1141-1142 (ET: N/A)]*
 
 16. **Write down the problem of asynchronous data transmission? How to solve this Problem using synchronous data transmission?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
+
+17. **What is data communication? Define Simplex, half duplex and full duplex.** *[ICT Ministry Assistant Programmer 2017 compact it 1239 (ET: N/A)]*
 
 ## Data Rate & Channel Capacity (Nyquist, Shannon) (16)
 

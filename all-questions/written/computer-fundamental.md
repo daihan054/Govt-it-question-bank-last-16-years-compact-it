@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 144 questions
+**Table of Contents** — 10 subtopics · 145 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-54) | 54 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-55) | 55 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-22) | 22 |
 | 4 | [Software Types & Classification](#software-types--classification-15) | 15 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (54)
+## Computer Fundamentals & Acronyms (55)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -156,6 +156,8 @@
    5. POP3: Post Office Protocol version 3
 
 54. **Explain URL, FTP, ASCII and BIOS** *[Multiple Ministry Assistant Programmer 2017 compact it 1229-1230 (ET: N/A)]*
+
+55. **Describe about Firewalls, Microcontroller, COCOMO, Query Optimization, Genetic algorithm and UML.** *[ICT Ministry Assistant Programmer 2017 compact it 1241 (ET: N/A)]*
 
 ## ICT in Society & Governance (24)
 

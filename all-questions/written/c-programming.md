@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 259 questions
+**Table of Contents** — 9 subtopics · 260 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-106) | 106 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-107) | 107 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-51) | 51 |
 | 3 | [Recursion & Functions](#recursion--functions-38) | 38 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (106)
+## Basic Programs & Control Statements (107)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -393,6 +393,8 @@ for(a=1; a<=100; a++)
 105. **Write a program to read the coordinates of the end points of a line and to find its length.** *[Multiple Ministry Assistant Programmer 2017 compact it 1231 (ET: N/A)]*
 
 106. **Write a program in C++ to calculate the sum of the series: $1+(1+2)+(1+2+3)+\dots\dots+(1+2+\dots\dots+n)$.** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
+
+107. **Write a program to find out the minimum number from a series.** *[BTCL Assistant Manager (Technical) 2017 compact it 1254 (ET: N/A)]*
 
 ## Output Tracing & Control Flow (51)
 

@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 179 questions
+**Table of Contents** — 14 subtopics · 180 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-31) | 31 |
-| 2 | [Cryptography](#cryptography-29) | 29 |
+| 2 | [Cryptography](#cryptography-30) | 30 |
 | 3 | [Firewalls & Network Defense](#firewalls--network-defense-20) | 20 |
 | 4 | [Malware & Security Threats](#malware--security-threats-19) | 19 |
 | 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-19) | 19 |
@@ -86,7 +86,7 @@
 
 31. **Briefly describe about DoS, IP address spoofing and Man-in-the-middle attacks.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
 
-## Cryptography (29)
+## Cryptography (30)
 
 1. Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026] *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)], [BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
@@ -145,6 +145,8 @@
 28. **(গ) Plain Text and Cipher Text-এর মধ্যে মূল পার্থক্য কী? লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069 (ET: N/A)]*
 
 29. **(ক) Data encryption বলতে কী বোঝায়? বহুল ব্যবহৃত কয়েকটি encryption পদ্ধতির নাম লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
+
+30. **What is public key encryption? Explain digital signature with example.** *[ICT Ministry Assistant Programmer 2017 compact it 1238-1239 (ET: N/A)]*
 
 ## Firewalls & Network Defense (20)
 

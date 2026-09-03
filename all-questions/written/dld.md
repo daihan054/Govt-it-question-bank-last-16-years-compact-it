@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 142 questions
+**Table of Contents** — 9 subtopics · 144 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-32) | 32 |
-| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-23) | 23 |
-| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-22) | 22 |
+| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-24) | 24 |
+| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
 | 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-19) | 19 |
 | 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-18) | 18 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-17) | 17 |
@@ -83,7 +83,7 @@
 
 32. **Why binary logic is used for digital system?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1188 (ET: N/A)]*
 
-## Number Systems & Base Conversions (23)
+## Number Systems & Base Conversions (24)
 
 1. **(a) Convert the following number:**
    **i. Decimal number 9 to binary number.**
@@ -134,7 +134,9 @@
 
 23. **$(12345)_{10} = (?)_8$** *[Bangladesh Bank Assistant Programmer 2019 compact it 1156 (ET: DU)]*
 
-## Combinational Circuits (Adders, Encoders, MUX) (22)
+24. **Convert $(2345)_{10}$ to Hexadecimal and $(\text{ABCD})_{16}$ to octal number.** *[ICT Ministry Assistant Programmer 2017 compact it 1240 (ET: N/A)]*
+
+## Combinational Circuits (Adders, Encoders, MUX) (23)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -191,6 +193,8 @@
 21. **দুটি 1-bit full adder এর মাধ্যমে 2-bit full adder তৈরি করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
 22. **চিত্রে প্রদর্শিত 7 segment display দেওয়া আছে এখন 7 ও 2 display এর জন্য কোন LED High হবে?** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
+
+23. **Design $4\times1$ MUX with two selection line & 4 input (A,B,C,D) of the following sum of product (0,3,4,5,6,7) and CD as a selection line.** *[BTCL Assistant Manager (Technical) 2017 compact it 1253-1254 (ET: N/A)]*
 
 ## Karnaugh Map (K-Map) (19)
 

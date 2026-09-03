@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 281 questions
+**Table of Contents** — 19 subtopics · 282 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,9 +11,9 @@
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-18) | 18 |
 | 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-14) | 14 |
 | 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
-| 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
-| 10 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-8) | 8 |
-| 11 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-8) | 8 |
+| 9 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-9) | 9 |
+| 10 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
+| 11 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-8) | 8 |
 | 12 | [PL/SQL & Database Triggers](#plsql--database-triggers-7) | 7 |
 | 13 | [SQL Joins & Operations](#sql-joins--operations-6) | 6 |
 | 14 | [Distributed & Parallel Databases](#distributed--parallel-databases-5) | 5 |
@@ -723,6 +723,33 @@ SELECT count (*) FROM (
 
 13. **(খ) Relational Database Model কী? অন্যান্য মডেলের তুলনায় এর সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094-1095 (ET: N/A)]*
 
+## Data Warehousing, Data Mining & Business Intelligence (9)
+
+1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 517 (ET: MIST)]*
+
+2. **Discuss different tools and techniques to develop a Business Intelligence Dashboard for a bank. How can data be captured and aggregated from various sources within the bank to monitor the business performance?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 519 (ET: MIST)]*
+
+3. **Software scenario question- Business Intelligence Model** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
+
+4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
+
+5. **Write down different stage of data mining?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
+   a) Data Purification
+   b) Data Integration
+   c) Data Selection
+   d) Data Transformation
+   e) Data Mining (The Final Stage)
+   f) Pattern Evaluation
+   g) Knowledge Representation
+
+6. **Database tuning and database mining বলতে কী বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077 (ET: N/A)]*
+
+7. **(ক) Data Mining and Data Warehousing বলতে কী বোঝায়? এদের মধ্যে সম্পর্ক কী? এদের উপকারিতা কী?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095-1096 (ET: N/A)]*
+
+8. **What is Data warehouse? Why We Need Data Warehouse? Advantages of Data warehousing.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
+
+9. **Explain data warehouse with figure. Describe fact table and dimension table with example.** *[ICT Ministry Assistant Programmer 2017 compact it 1243-1244 (ET: N/A)]*
+
 ## Database Backup & Disaster Recovery (8)
 
 1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)]*
@@ -778,31 +805,6 @@ SELECT count (*) FROM (
 7. **(খ) Database এর ক্ষেত্রে Indexing এর কার্যকারিতা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
 
 8. **(ক) Sorting and Indexing-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
-
-## Data Warehousing, Data Mining & Business Intelligence (8)
-
-1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 517 (ET: MIST)]*
-
-2. **Discuss different tools and techniques to develop a Business Intelligence Dashboard for a bank. How can data be captured and aggregated from various sources within the bank to monitor the business performance?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 519 (ET: MIST)]*
-
-3. **Software scenario question- Business Intelligence Model** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
-
-4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
-
-5. **Write down different stage of data mining?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
-   a) Data Purification
-   b) Data Integration
-   c) Data Selection
-   d) Data Transformation
-   e) Data Mining (The Final Stage)
-   f) Pattern Evaluation
-   g) Knowledge Representation
-
-6. **Database tuning and database mining বলতে কী বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077 (ET: N/A)]*
-
-7. **(ক) Data Mining and Data Warehousing বলতে কী বোঝায়? এদের মধ্যে সম্পর্ক কী? এদের উপকারিতা কী?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095-1096 (ET: N/A)]*
-
-8. **What is Data warehouse? Why We Need Data Warehouse? Advantages of Data warehousing.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
 ## PL/SQL & Database Triggers (7)
 
