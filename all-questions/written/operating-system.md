@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 168 questions
+**Table of Contents** — 12 subtopics · 169 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-42) | 42 |
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-24) | 24 |
 | 3 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-22) | 22 |
-| 4 | [OS Concepts & System Software](#os-concepts--system-software-15) | 15 |
+| 4 | [OS Concepts & System Software](#os-concepts--system-software-16) | 16 |
 | 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-15) | 15 |
 | 6 | [Memory Management & Paging](#memory-management--paging-13) | 13 |
 | 7 | [Process Management & Process States](#process-management--process-states-10) | 10 |
@@ -270,7 +270,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 22. **Four condition of deadlock in Operating System. Suppose, n processes, \text{P}_1, \text{P}_2\dots \text{P}_n share m identical esource units which can be reserved and released one at a time. The maximum resources request of process \text{P}_i is \text{S}_i, where \text{S}_i>0. Which one is sufficient condition for ensuring that deadlock doesn't occur? (Full প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
-## OS Concepts & System Software (15)
+## OS Concepts & System Software (16)
 
 1. Difference Between Firmware and OS. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -301,6 +301,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 14. **Explain: Kernel, Cache, Virtual Memory and RAID.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872-873 (ET: N/A)]*
 
 15. **(a) Briefly describe the function that measure the efficiency of an operating system.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1025 (ET: N/A)]*
+
+16. **What is the difference between micro kernel and macro kernel? What are the sub components of I/O manager in Windows NT?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1052-1053 (ET: BUET)]*
 
 ## Virtual Memory & Page Replacement (Thrashing) (15)
 

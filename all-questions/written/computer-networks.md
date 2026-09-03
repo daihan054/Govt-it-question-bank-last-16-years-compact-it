@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 440 questions
+**Table of Contents** — 33 subtopics · 441 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-95) | 95 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-43) | 43 |
-| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-23) | 23 |
+| 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-24) | 24 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-19) | 19 |
 | 5 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-18) | 18 |
 | 6 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
@@ -369,7 +369,7 @@ ii) 211.10.15.4
 
 43. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1042-1043 (ET: DPI)]*
 
-## Networking Fundamentals & Terminology (23)
+## Networking Fundamentals & Terminology (24)
 
 1. **Define Computer Network. Describe different types of Computer Networks.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
@@ -419,6 +419,8 @@ ii) 211.10.15.4
 22. **(b) Define computer network. Sate some merits and demerits of a computer network.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1029 (ET: N/A)]*
 
 23. **b) Two IP address map to same Ethernet address. Will both of them receive packets?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+
+24. **Write short note: Node, Backbone, Router and Gateway.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049 (ET: BUET)]*
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (19)
 

@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 53 questions
+**Table of Contents** — 7 subtopics · 57 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-17) | 17 |
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-18) | 18 |
 | 2 | [HTTP Protocol](#http-protocol-10) | 10 |
-| 3 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-8) | 8 |
+| 3 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-10) | 10 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-7) | 7 |
-| 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development-5) | 5 |
+| 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development-6) | 6 |
 | 6 | [CSS & Styling (Inline, Internal, External)](#css--styling-inline-internal-external-4) | 4 |
 | 7 | [Web Security & Browser Same-Origin Policy (Iframe)](#web-security--browser-same-origin-policy-iframe-2) | 2 |
 
@@ -15,7 +15,7 @@
 
 ---
 
-## HTML & Web Fundamentals (17)
+## HTML & Web Fundamentals (18)
 
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -63,6 +63,8 @@
 
 17. **একটি Image ও একটি Web site URL HTML প্রদর্শন করার জন্য প্রয়োজনীয় code লিখুন?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
 
+18. **Write down the description of `<header>`, `<footer>`, `<section>` and `<article>` tag of new HTML5.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1057 (ET: AUST)]*
+
 ## HTTP Protocol (10)
 
 1. What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503 [SO IT 25-07-2026]
@@ -85,7 +87,7 @@
 
 10. **It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?** *[Sadharan Bima Corporation Programmer/ AP/AME 2020 compact it 1002 (ET: DU)], [BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-## JavaScript & jQuery (DOM & Validation) (8)
+## JavaScript & jQuery (DOM & Validation) (10)
 
 1. **Jquery for email validation** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -119,6 +121,10 @@
 </html>
 ```
 
+9. **Differentiate among $.ajax(), $.get() and $.load() function of jQuery with necessary example.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*
+
+10. **How do you change the value of a HTML element using HTML DOM?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*
+
 ## Web Services & APIs (SOAP vs REST) (7)
 
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1426 (ET: E-Zone)]*
@@ -135,7 +141,7 @@
 
 7. **What is API?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
 
-## Full Stack & Backend Web Development (5)
+## Full Stack & Backend Web Development (6)
 
 1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 320 (ET: N/A)]*
 
@@ -146,6 +152,8 @@
 4. **(b) What are the resources you need to access a web enabled application?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
 
 5. **Apache কোন ধরনের Server এক কথায় লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
+
+6. **Discuss the necessary of using application framework in web application development.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1053 (ET: BUET)]*
 
 ## CSS & Styling (Inline, Internal, External) (4)
 

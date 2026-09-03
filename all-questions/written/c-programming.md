@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 202 questions
+**Table of Contents** — 9 subtopics · 203 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-86) | 86 |
-| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-35) | 35 |
+| 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-36) | 36 |
 | 3 | [Recursion & Functions](#recursion--functions-32) | 32 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-17) | 17 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-12) | 12 |
@@ -343,7 +343,7 @@ return 0;
 
 86. **0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040-1041 (ET: DPI)]*
 
-## Output Tracing & Control Flow (35)
+## Output Tracing & Control Flow (36)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -756,6 +756,13 @@ int main(){
 34. **a) Using Pseudocode give an example of run time error.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035-1036 (ET: BUET)]*
 
 35. **Find the Output:** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
+
+36. **Find the error of given code** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
+```c
+Unsigned inti
+For(i=100; i<=0; --i)
+    Printf("%d",i);
+```
 
 ## Recursion & Functions (32)
 

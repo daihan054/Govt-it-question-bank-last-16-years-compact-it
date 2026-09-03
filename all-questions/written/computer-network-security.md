@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 156 questions
+**Table of Contents** — 14 subtopics · 157 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -9,7 +9,7 @@
 | 4 | [Authentication & Access Control](#authentication--access-control-15) | 15 |
 | 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-15) | 15 |
 | 6 | [Malware & Security Threats](#malware--security-threats-15) | 15 |
-| 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-11) | 11 |
+| 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
 | 8 | [Cyber Crime & Security](#cyber-crime--security-9) | 9 |
 | 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad-7) | 7 |
 | 10 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6) | 6 |
@@ -269,7 +269,7 @@
 
 15. **কম্পিউটার ভাইরাস, ওয়ার্ম এবং ট্রোজান হর্স এর মধ্যে পার্থক্য লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
 
-## Security Protocols (SSL/TLS, HTTPS) (11)
+## Security Protocols (SSL/TLS, HTTPS) (12)
 
 1. **What is SSL?** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
 
@@ -299,6 +299,8 @@
    10.0.0.1
 
 11. **HTTPs কীভাবে একটি Website-এর সুরক্ষা দেয়? ব্লক ডায়াফ্রামের মাধ্যমে উত্তর দিন।** *[40th BCS 2020 compact it 971 (ET: BPSC)]*
+
+12. **What is the difference among threat, vulnerability and risk? Explain SSL and TLS.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1050 (ET: BUET)]*
 
 ## Cyber Crime & Security (9)
 

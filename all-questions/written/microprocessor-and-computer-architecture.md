@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 107 questions
+**Table of Contents** — 11 subtopics · 108 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,9 +8,9 @@
 | 3 | [RAID Architecture & Storage](#raid-architecture--storage-13) | 13 |
 | 4 | [Cache Memory](#cache-memory-12) | 12 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
-| 6 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
-| 7 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-5) | 5 |
-| 8 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-5) | 5 |
+| 6 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-6) | 6 |
+| 7 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
+| 8 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-5) | 5 |
 | 9 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-4) | 4 |
 | 10 | [8085 Microprocessor & Edge Computing](#8085-microprocessor--edge-computing-3) | 3 |
 | 11 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-2) | 2 |
@@ -203,6 +203,24 @@
 
 10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 951 (ET: N/A)], [BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
+## Instruction Pipelining & Hazards (6)
+
+1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
+
+2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** *[BPSC (Ministry) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
+
+3. **(c) Fill in the gaps RISC or CISC:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
+   * (i) Pipelining is less efficient due to instruction complexity and variability ______
+   * (ii) Emphasis on hardware simplicity and efficiency ______
+   * (iii) Complex decoding due to variable instruction length ______
+   * (iv) Each instruction typically executes in a single clock cycle ______
+
+4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 299 (ET: BIBM)]*
+
+5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+6. **How computer Architecture is characterized. What are the 5 stages of the DLX pipeline?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049-1050 (ET: BUET)]*
+
 ## Multi-Core & Multi-Threading (5)
 
 1. **Core vs thread in networking?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
@@ -228,22 +246,6 @@ MOV AX, A534H এবং MOV AX, [A534H]
 4. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
 5. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
-
-## Instruction Pipelining & Hazards (5)
-
-1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
-
-2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** *[BPSC (Ministry) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
-
-3. **(c) Fill in the gaps RISC or CISC:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
-   * (i) Pipelining is less efficient due to instruction complexity and variability ______
-   * (ii) Emphasis on hardware simplicity and efficiency ______
-   * (iii) Complex decoding due to variable instruction length ______
-   * (iv) Each instruction typically executes in a single clock cycle ______
-
-4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 299 (ET: BIBM)]*
-
-5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
 ## CPU Performance & Instruction Cycle (4)
 

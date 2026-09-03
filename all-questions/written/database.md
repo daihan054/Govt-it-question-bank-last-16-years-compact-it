@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 229 questions
+**Table of Contents** — 19 subtopics · 232 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-71) | 71 |
+| 1 | [SQL Queries](#sql-queries-72) | 72 |
 | 2 | [DBMS Architecture & Features](#dbms-architecture--features-22) | 22 |
 | 3 | [ER Diagram & Database Design](#er-diagram--database-design-21) | 21 |
 | 4 | [Keys in DBMS](#keys-in-dbms-21) | 21 |
@@ -14,8 +14,8 @@
 | 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
 | 10 | [PL/SQL & Database Triggers](#plsql--database-triggers-6) | 6 |
 | 11 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-6) | 6 |
-| 12 | [Distributed & Parallel Databases](#distributed--parallel-databases-4) | 4 |
-| 13 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-4) | 4 |
+| 12 | [Distributed & Parallel Databases](#distributed--parallel-databases-5) | 5 |
+| 13 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-5) | 5 |
 | 14 | [Database Design & Data Types](#database-design--data-types-3) | 3 |
 | 15 | [SQL Joins & Operations](#sql-joins--operations-3) | 3 |
 | 16 | [NoSQL, NewSQL & Modern Databases](#nosql-newsql--modern-databases-2) | 2 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (71)
+## SQL Queries (72)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -338,6 +338,8 @@ SELECT count (*) FROM (
 70. **Query for retrieving UNCOMMON Name from Name column of two given tables.** *[RAKUB Assistant Database Administrator 2020 compact it 1017 (ET: E-Zone)]*
 
 71. **Employee টেবিল থেকে যেসকল Employee এর Salary 25000 থেকে 50000 এর মধ্যে এবং Designation হচ্ছে officer এবং City হচ্ছে Dhaka তাদের দেখার জন্য SQL টেবিল দেখান।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1042 (ET: DPI)]*
+
+72. **Design a database of student with the gpa of a university. Find the top 10% gpa holder from the different department of the university.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
 
 ## DBMS Architecture & Features (22)
 
@@ -679,7 +681,7 @@ SELECT count (*) FROM (
 
 6. **What is Indexing? Write down the usages of Indexing.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
 
-## Distributed & Parallel Databases (4)
+## Distributed & Parallel Databases (5)
 
 1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
 
@@ -689,7 +691,9 @@ SELECT count (*) FROM (
 
 4. **Which of the following distributed database system over centralized database system? (a) Software cost (b) Software complexity (c) Slow response (d) Modular growth** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-## Data Warehousing, Data Mining & Business Intelligence (4)
+5. **Explain the concept distributed DBMS. What are the features of DBMS?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1054 (ET: BUET)]*
+
+## Data Warehousing, Data Mining & Business Intelligence (5)
 
 1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 517 (ET: MIST)]*
 
@@ -698,6 +702,15 @@ SELECT count (*) FROM (
 3. **Software scenario question- Business Intelligence Model** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
 4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
+
+5. **Write down different stage of data mining?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
+   a) Data Purification
+   b) Data Integration
+   c) Data Selection
+   d) Data Transformation
+   e) Data Mining (The Final Stage)
+   f) Pattern Evaluation
+   g) Knowledge Representation
 
 ## Database Design & Data Types (3)
 

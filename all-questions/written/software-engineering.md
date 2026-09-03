@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 124 questions
+**Table of Contents** — 13 subtopics · 127 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [SDLC Phases & Models](#sdlc-phases--models-37) | 37 |
-| 2 | [Software Testing & Evaluation](#software-testing--evaluation-33) | 33 |
+| 2 | [Software Testing & Evaluation](#software-testing--evaluation-36) | 36 |
 | 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-11) | 11 |
 | 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-9) | 9 |
 | 5 | [Software Requirements Engineering](#software-requirements-engineering-8) | 8 |
@@ -97,7 +97,7 @@
 
 37. **What is Agile Methodology? Difference between Agile Model and Waterfall Model.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1003-1004 (ET: DU)]*
 
-## Software Testing & Evaluation (33)
+## Software Testing & Evaluation (36)
 
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]
 
@@ -174,6 +174,22 @@
 32. **Write different between Alpha and Beta testing.** *[BREB Assistant General Manager (IT) 2021 compact it 933-934 (ET: N/A)]*
 
 33. **Testing is an activity that is performed to verify correct behavior of a program. Testing should be conducted in all the stages of program development. Describe different types of tests conducted in the implementation stage.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 980 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+34. **How would you test an ATM in a banking system?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1052 (ET: BUET)]*
+   a) Withdrawing money less than the account balance
+   b) Withdrawing money greater than the account balance
+   c) Withdrawing money equal to the account balance
+   d) Withdrawing money from an ATM and from the internet at the same time
+   e) Withdrawing money when the connection to the bank's network is lost
+   f) Withdrawing money from multiple ATMs simultaneously
+   g) Check the balance available
+   h) Verify the error message by entering an incorrect PIN
+   i) Try to enter invalid pin more than 3 times and see if the account gets locked.
+   j) Verify how much time the system takes to log out.
+
+35. **Write code to test a sorting algorithm of array?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1056 (ET: AUST)]*
+
+36. **How would you test an ATM in a distributed system?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*
 
 ## Software Architecture & Design Patterns (MVC) (11)
 

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 110 questions
+**Table of Contents** — 9 subtopics · 111 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-27) | 27 |
+| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-28) | 28 |
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-19) | 19 |
 | 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-18) | 18 |
 | 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-16) | 16 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Logic Gates & Universal Gates (27)
+## Logic Gates & Universal Gates (28)
 
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -72,6 +72,8 @@
 26. **(i) Logic gate কী? মৌলিক Logic gate কয়টি ও কী কী? সত্যক সারণিসহ আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 958-959 (ET: N/A)]*
 
 27. **Design 3 input NAND gate and 2 input XOR gate using 2 input NAND gate.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
+
+28. **How will realize a AND gate and OR gate using CMOS NAND and NOR gate?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1051-1052 (ET: BUET)]*
 
 ## Number Systems & Base Conversions (19)
 
