@@ -7365,31 +7365,461 @@ int main() {
 
 1. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
+   Answer:
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[count = 0]
+       B --> C[/Read Username and Password/]
+       C --> D{Match found in database?}
+       D -->|Yes| E[Grant access]
+       E --> F[Reset count = 0]
+       F --> Z([Stop])
+       D -->|No| G[count = count + 1]
+       G --> H{count >= 3 ?}
+       H -->|Yes| I[Block the account]
+       I --> Z
+       H -->|No| J[/Show 'Invalid credentials'/]
+       J --> C
+   ```
+
+   Step-by-step description
+   - Step 1 — Start, and set the failed-attempt counter `count = 0`.
+   - Step 2 — Read the username and password from the user.
+   - Step 3 — Query the database for that username and compare the stored password.
+   - Step 4 — If they match, grant access, reset the counter to 0 and stop.
+   - Step 5 — If they do not match, increase `count` by 1.
+   - Step 6 — If `count` has reached 3, block the account and stop.
+   - Step 7 — Otherwise show an error message and go back to Step 2 for another attempt.
+
+   - In a real system the password would never be compared in plain text; a salted hash of the entered password is compared with the stored hash.
+   - The counter should be stored against the account in the database, not in memory, otherwise restarting the client resets it.
+
 2. **Draw a Flow chart for print odd number for 1 to N.** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
+
+   Answer:
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read N/]
+       B --> C[i = 1]
+       C --> D{i <= N ?}
+       D -->|No| G([Stop])
+       D -->|Yes| E[/Print i/]
+       E --> F[i = i + 2]
+       F --> D
+   ```
+
+   Explanation
+   - `i` starts at 1, the first odd number.
+   - Each pass prints `i` and then adds 2, so only odd values are ever reached — no divisibility test is needed.
+   - The loop ends as soon as `i` exceeds `N`.
+
+   - For `N = 10` the output is `1 3 5 7 9`.
+   - An alternative is `i = i + 1` with a check `if (i % 2 != 0)`, but stepping by 2 is half the work.
 
 3. **১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 381 (ET: BUET)]*
 
+   Answer:
+
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[i = 1]
+       B --> C{i <= 100 ?}
+       C -->|No| F([Stop])
+       C -->|Yes| D[/Print i/]
+       D --> E[i = i + 1]
+       E --> C
+   ```
+
+   Explanation
+   - Initialise the counter `i` to 1.
+   - Check whether `i` is still within 100. If not, stop.
+   - Print `i`, increase it by 1, and go back to the check.
+   - The loop body runs exactly 100 times.
+
+   Equivalent C code
+   ```c
+   for (i = 1; i <= 100; i++)
+       printf("%d ", i);
+   ```
+
 4. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
+
+   Answer: GCD (HCF) is found by Euclid's algorithm, which repeatedly replaces the pair `(a, b)` with `(b, a mod b)`.
+
+   Algorithm
+   ```
+   Step 1: Start
+   Step 2: Read a and b
+   Step 3: while b != 0 do
+               r = a mod b
+               a = b
+               b = r
+           end while
+   Step 4: Print a as the GCD
+   Step 5: Stop
+   ```
+
+   Flowchart
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read a and b/]
+       B --> C{b != 0 ?}
+       C -->|No| G[/Print a as GCD/]
+       G --> H([Stop])
+       C -->|Yes| D[r = a mod b]
+       D --> E[a = b]
+       E --> F[b = r]
+       F --> C
+   ```
+
+   Dry run with a = 48, b = 18
+   - `r = 48 mod 18 = 12` → a = 18, b = 12
+   - `r = 18 mod 12 = 6` → a = 12, b = 6
+   - `r = 12 mod 6 = 0` → a = 6, b = 0
+   - Loop ends, GCD = `6`.
+
+   - Euclid's rule works because `gcd(a, b) = gcd(b, a mod b)`, and the numbers shrink fast, giving `O(log(min(a,b)))`.
 
 5. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 596 (ET: N/A)]*
 
+   Answer:
+
+   Algorithm
+   ```
+   Step 1: Start
+   Step 2: Read n
+   Step 3: set i = 1
+   Step 4: while i <= n do
+               print i
+               i = i + 2
+           end while
+   Step 5: Stop
+   ```
+
+   Flowchart
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read n/]
+       B --> C[i = 1]
+       C --> D{i <= n ?}
+       D -->|No| G([Stop])
+       D -->|Yes| E[/Print i/]
+       E --> F[i = i + 2]
+       F --> D
+   ```
+
+   - Starting at 1 and stepping by 2 guarantees every value visited is odd.
+   - For `n = 9` the output is `1 3 5 7 9`.
+   - Time complexity `O(n/2)`, which simplifies to `O(n)`.
+
 6. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
+
+   Answer:
+
+   Algorithm
+   ```
+   Step 1: Start
+   Step 2: Read N
+   Step 3: set i = 1, sum = 0
+   Step 4: while i <= N do
+               sum = sum + i
+               i = i + 2
+           end while
+   Step 5: Print sum
+   Step 6: Stop
+   ```
+
+   Flowchart
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read N/]
+       B --> C[i = 1, sum = 0]
+       C --> D{i <= N ?}
+       D -->|No| G[/Print sum/]
+       G --> H([Stop])
+       D -->|Yes| E[sum = sum + i]
+       E --> F[i = i + 2]
+       F --> D
+   ```
+
+   - For `N = 9`: `1 + 3 + 5 + 7 + 9 = 25`.
+   - Useful property: the sum of the first `k` odd numbers is exactly `k²`. Here `k = 5`, so the sum is `5² = 25`.
 
 7. **Write an Algorithm to check a number is Prime or not Prime.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 656 (ET: N/A)]*
 
+   Answer:
+
+   Algorithm
+   ```
+   Step 1: Start
+   Step 2: Read n
+   Step 3: if n < 2 then
+               print "Not Prime" and go to Step 8
+   Step 4: set i = 2, flag = 1
+   Step 5: while i × i <= n do
+               if n mod i = 0 then
+                   set flag = 0
+                   break
+               i = i + 1
+           end while
+   Step 6: if flag = 1 then print "Prime"
+   Step 7: else print "Not Prime"
+   Step 8: Stop
+   ```
+
+   Flowchart
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read n/]
+       B --> C{n < 2 ?}
+       C -->|Yes| K[/Print Not Prime/]
+       C -->|No| D[i = 2, flag = 1]
+       D --> E{i*i <= n ?}
+       E -->|No| I{flag = 1 ?}
+       E -->|Yes| F{n mod i = 0 ?}
+       F -->|Yes| G[flag = 0]
+       G --> I
+       F -->|No| H[i = i + 1]
+       H --> E
+       I -->|Yes| J[/Print Prime/]
+       I -->|No| K
+       J --> L([Stop])
+       K --> L
+   ```
+
+   - Testing divisors only up to `√n` is enough, because any factor larger than `√n` must pair with a smaller one already checked.
+   - Time complexity `O(√n)`.
+
 8. **Write down the algorithm and draw the flowchart of Quadratic equation.** *[CAAB Programmer 2022 compact it 722 (ET: N/A)]*
+
+   Answer: The roots of `ax² + bx + c = 0` come from `x = (−b ± √D) / 2a` where the discriminant `D = b² − 4ac`.
+
+   Algorithm
+   ```
+   Step 1: Start
+   Step 2: Read a, b, c
+   Step 3: if a = 0 then print "Not a quadratic equation" and stop
+   Step 4: D = b² − 4ac
+   Step 5: if D > 0 then
+               x1 = (−b + √D) / (2a)
+               x2 = (−b − √D) / (2a)
+               print "Real and distinct roots", x1, x2
+   Step 6: else if D = 0 then
+               x1 = −b / (2a)
+               print "Real and equal roots", x1
+   Step 7: else
+               real = −b / (2a),  imag = √(−D) / (2a)
+               print "Complex roots", real ± imag i
+   Step 8: Stop
+   ```
+
+   Flowchart
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read a, b, c/]
+       B --> C{a = 0 ?}
+       C -->|Yes| M[/Print Not quadratic/]
+       C -->|No| D[D = b*b - 4*a*c]
+       D --> E{D > 0 ?}
+       E -->|Yes| F[/Print two real distinct roots/]
+       E -->|No| G{D = 0 ?}
+       G -->|Yes| H[/Print two real equal roots/]
+       G -->|No| I[/Print complex conjugate roots/]
+       F --> N([Stop])
+       H --> N
+       I --> N
+       M --> N
+   ```
+
+   - Example: `a=1, b=-5, c=6` gives `D = 25 − 24 = 1 > 0`, so the roots are 3 and 2.
 
 9. **Draw a flowchart and write algorithm for finding Factorial value of an integer number.** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 723 (ET: N/A)]*
 
+   Answer:
+
+   Algorithm
+   ```
+   Step 1: Start
+   Step 2: Read n
+   Step 3: if n < 0 then print "Not defined" and stop
+   Step 4: set fact = 1, i = 1
+   Step 5: while i <= n do
+               fact = fact × i
+               i = i + 1
+           end while
+   Step 6: Print fact
+   Step 7: Stop
+   ```
+
+   Flowchart
+   ```mermaid
+   flowchart TD
+       A([Start]) --> B[/Read n/]
+       B --> C{n < 0 ?}
+       C -->|Yes| I[/Print Not defined/]
+       C -->|No| D[fact = 1, i = 1]
+       D --> E{i <= n ?}
+       E -->|No| H[/Print fact/]
+       E -->|Yes| F[fact = fact * i]
+       F --> G[i = i + 1]
+       G --> E
+       H --> J([Stop])
+       I --> J
+   ```
+
+   - `fact` starts at 1 so that `0!` correctly returns 1 without a special case — the loop simply never runs.
+   - For `n = 5` the value becomes `1 × 1 × 2 × 3 × 4 × 5 = 120`.
+   - Time complexity `O(n)`.
+
 10. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
+
+    Answer:
+
+    ```mermaid
+    flowchart TD
+        A([Start]) --> B[/Read N/]
+        B --> C[i = 1, sum = 0]
+        C --> D{i <= N ?}
+        D -->|No| G[/Print sum/]
+        G --> H([Stop])
+        D -->|Yes| E[sum = sum + i]
+        E --> F[i = i + 2]
+        F --> D
+    ```
+
+    Trace for N = 7
+
+    | i | sum before | sum after | next i |
+    |---|---|---|---|
+    | 1 | 0 | 1 | 3 |
+    | 3 | 1 | 4 | 5 |
+    | 5 | 4 | 9 | 7 |
+    | 7 | 9 | 16 | 9 → loop ends |
+
+    - Result: `16`, which matches `k² = 4² = 16` for the first 4 odd numbers.
 
 11. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
+    Answer: An algorithm is a finite, ordered sequence of unambiguous steps that takes some input and produces the required output in a finite amount of time.
+
+    Properties every algorithm must have
+    - Input — zero or more inputs.
+    - Output — at least one output.
+    - Definiteness — every step is clear and unambiguous.
+    - Finiteness — it terminates after a finite number of steps.
+    - Effectiveness — every step is simple enough to be carried out.
+
+    Three methods of expressing an algorithm
+    - Natural language (step-form) — the steps written in plain English or Bangla, numbered Step 1, Step 2 and so on. Easy to read but can be imprecise.
+    - Flowchart — a diagram using standard symbols: oval for start/stop, parallelogram for input/output, rectangle for process, diamond for decision, arrows for flow. Very easy to follow visually.
+    - Pseudocode — a mix of programming structure and plain language. It is precise like code but not tied to any particular language, so it converts directly into a program.
+
 12. **Three types of control statements and their graphical presentation using flowchart or flow graph.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1037-1038 (ET: BUET)]*
+
+    Answer: Control statements decide the order in which statements execute. There are three basic types.
+
+    (a) Sequence — statements execute one after another
+    ```mermaid
+    flowchart TD
+        A[Statement 1] --> B[Statement 2]
+        B --> C[Statement 3]
+    ```
+
+    (b) Selection (branching) — one path is chosen based on a condition. In C: `if`, `if-else`, `switch`.
+    ```mermaid
+    flowchart TD
+        A{Condition} -->|True| B[Statement block 1]
+        A -->|False| C[Statement block 2]
+        B --> D[Continue]
+        C --> D
+    ```
+
+    (c) Iteration (looping) — a block repeats while a condition holds. In C: `for`, `while`, `do-while`.
+    ```mermaid
+    flowchart TD
+        A{Condition} -->|True| B[Loop body]
+        B --> A
+        A -->|False| C[Exit loop]
+    ```
+
+    - Jump statements — `break`, `continue`, `goto` and `return` — are a fourth group that transfer control unconditionally.
+    - The structured programming theorem states that any program can be written using only these three constructs, which is why `goto` is discouraged.
 
 13. **(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1084 (ET: N/A)]*
 
+    Answer: A loop is a control structure that repeats a block of statements as long as a given condition remains true. It removes the need to write the same statements many times.
+
+    Four parts of every loop
+    - Initialization — set the control variable to its starting value.
+    - Condition — tested before or after each pass; the loop continues while it is true.
+    - Body — the statements that are repeated.
+    - Update — change the control variable so the condition eventually becomes false.
+
+    Entry-controlled loop (for, while) — condition tested first
+    ```mermaid
+    flowchart TD
+        A([Start]) --> B[Initialization]
+        B --> C{Condition ?}
+        C -->|False| F([Exit])
+        C -->|True| D[Loop body]
+        D --> E[Update]
+        E --> C
+    ```
+
+    Exit-controlled loop (do-while) — body runs first
+    ```mermaid
+    flowchart TD
+        A([Start]) --> B[Initialization]
+        B --> C[Loop body]
+        C --> D[Update]
+        D --> E{Condition ?}
+        E -->|True| C
+        E -->|False| F([Exit])
+    ```
+
+    - An entry-controlled loop may run zero times; an exit-controlled loop always runs at least once.
+    - If the update step is missing or the condition never becomes false, the result is an infinite loop.
+
 14. **Write a pesudcode that takes in one positive number only and returns the factor for that number.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
+
+    Answer:
+
+    Pseudocode
+    ```
+    ALGORITHM FindFactors(n)
+    Input : a positive integer n
+    Output: all factors (divisors) of n
+
+    Step 1: Start
+    Step 2: Read n
+    Step 3: if n <= 0 then
+                print "Please enter a positive number"
+                go to Step 7
+    Step 4: set i = 1
+    Step 5: while i <= n do
+                if n mod i = 0 then
+                    print i           // i divides n exactly
+                i = i + 1
+            end while
+    Step 6: (all factors printed)
+    Step 7: Stop
+    ```
+
+    C implementation
+    ```c
+    void printFactors(int n) {
+        int i;
+        if (n <= 0) { printf("Enter a positive number\n"); return; }
+        printf("Factors of %d: ", n);
+        for (i = 1; i <= n; i++)
+            if (n % i == 0) printf("%d ", i);
+    }
+    ```
+
+    - For `n = 12` the factors are `1 2 3 4 6 12`.
+    - Time complexity `O(n)`. It can be reduced to `O(√n)` by looping to `√n` and printing both `i` and `n/i` for each divisor found.
 
 15. **Write down the psudo-code that accepts i, n is integer and value as input, store all n integers in an array, called pairs and return all pairs where the summation of individual's pair=value.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1165 (ET: N/A)]*
 
@@ -7399,7 +7829,76 @@ int main() {
 | Summation value: | 1 7 -1 5 -7 |  |
 |  | 6 |  |
 
+    Answer:
+
+    Pseudocode — brute force, `O(n²)`
+    ```
+    ALGORITHM FindPairs(n, arr[], value)
+    Input : n = number of elements, arr[] = the n integers, value = target sum
+    Output: every pair of elements whose sum equals value
+
+    Step 1: Start
+    Step 2: Read n
+    Step 3: for i = 0 to n-1
+                read arr[i]
+            end for
+    Step 4: Read value
+    Step 5: for i = 0 to n-2
+                for j = i+1 to n-1
+                    if arr[i] + arr[j] = value then
+                        print "{", arr[i], ",", arr[j], "}"
+                end for
+            end for
+    Step 6: Stop
+    ```
+
+    Verification with the sample data
+    - Array = `1, 7, -1, 5, -7`, target value = `6`
+    - `1 + 5 = 6` → pair `{1, 5}`
+    - `7 + (-1) = 6` → pair `{7, -1}`
+    - Output: `{1,5}, {7,-1}` — matching the expected output.
+
+    Faster version using a hash set, `O(n)`
+    ```
+    create an empty set S
+    for i = 0 to n-1
+        complement = value - arr[i]
+        if complement is in S then
+            print "{", complement, ",", arr[i], "}"
+        add arr[i] to S
+    end for
+    ```
+    - Each element is checked against the set once, so the whole scan is linear at the cost of `O(n)` extra memory.
+
 16. **Draw flowchart to input five positive numbers and sort them is ascending order.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1199 (ET: N/A)]*
+
+    Answer: Bubble sort is used, since it is the easiest to draw as a flowchart.
+
+    ```mermaid
+    flowchart TD
+        A([Start]) --> B[/Read 5 numbers into arr[0..4]/]
+        B --> C[i = 0]
+        C --> D{i < 4 ?}
+        D -->|No| K[/Print sorted array/]
+        K --> L([Stop])
+        D -->|Yes| E[j = 0]
+        E --> F{j < 4 - i ?}
+        F -->|No| I[i = i + 1]
+        I --> D
+        F -->|Yes| G{arr[j] > arr[j+1] ?}
+        G -->|Yes| H[Swap arr[j] and arr[j+1]]
+        H --> J[j = j + 1]
+        G -->|No| J
+        J --> F
+    ```
+
+    Explanation
+    - The outer loop runs 4 times, since 5 elements need at most `n − 1` passes.
+    - The inner loop compares each adjacent pair and swaps them when they are out of order.
+    - The bound `4 - i` shrinks each pass, because after pass `i` the largest `i` elements are already in place at the end.
+
+    - Example: `5 2 9 1 7` becomes `1 2 5 7 9`.
+    - Time complexity `O(n²)`, space `O(1)`.
 
 ## String Manipulation & Algorithms (14)
 
