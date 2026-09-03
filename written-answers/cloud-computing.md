@@ -534,15 +534,149 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer: Cloud computing is the delivery of computing services — servers, storage, databases, networking and software — over the internet on a pay-as-you-go basis, instead of owning and maintaining physical hardware.
+
+   Why it is used
+   - Removes the large upfront cost of buying servers and building a data centre.
+   - Capacity can be increased or reduced within minutes as demand changes.
+   - Accessible from anywhere on any internet-connected device.
+   - The provider handles maintenance, patching and hardware replacement.
+   - Built-in replication across data centres gives disaster recovery for free.
+   - A new environment is ready in minutes instead of weeks.
+
+   Cloud storage vs traditional storage
+
+   | Point | Cloud storage | Traditional (local) storage |
+   |---|---|---|
+   | Location | Remote data centres of the provider | On-premises hard disk, SAN or NAS |
+   | Access | Over the internet, from anywhere | Only from the local machine or LAN |
+   | Cost model | Operating cost, pay per GB per month | Capital cost, buy the hardware upfront |
+   | Scalability | Virtually unlimited, expand instantly | Limited by the hardware bought |
+   | Maintenance | Handled by the provider | Handled by the organization's IT team |
+   | Backup and redundancy | Automatic, replicated across sites | Must be arranged and paid for separately |
+   | Internet dependency | Required | Not required |
+   | Data control | Data sits with a third party | Full physical control |
+   | Examples | Google Drive, Amazon S3, Dropbox, OneDrive | Internal hard disk, USB drive, office file server |
+
+   - Cloud storage suits growing, distributed or unpredictable workloads; local storage still suits data that must never leave the premises for legal reasons.
+
 2. **What is Cloud Computing? What are its characteristics? Briefly describe the types of cloud computing.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
+
+   Answer: Cloud computing delivers computing resources — compute, storage, networking, databases and software — as an on-demand service over the internet, billed by usage.
+
+   Five essential characteristics (the NIST definition)
+   - **On-demand self-service** — a user provisions resources without contacting a person.
+   - **Broad network access** — available over the network from any standard device.
+   - **Resource pooling** — the provider's resources serve many customers, assigned and reassigned dynamically.
+   - **Rapid elasticity** — capacity scales out and back in quickly, appearing unlimited to the customer.
+   - **Measured service** — usage is metered, so billing matches consumption exactly.
+
+   Types by SERVICE MODEL
+   - **IaaS** — rents virtual machines, storage and networks. Examples: AWS EC2, Azure VMs.
+   - **PaaS** — provides a ready platform for developing and deploying applications. Examples: Google App Engine, Heroku.
+   - **SaaS** — delivers finished software over the browser. Examples: Gmail, Salesforce.
+
+   Types by DEPLOYMENT MODEL
+   - **Public cloud** — owned by a provider and shared by many customers. Cheapest and most elastic. Examples: AWS, Azure, GCP.
+   - **Private cloud** — dedicated to one organization, on-premises or hosted. Most control and security, highest cost.
+   - **Hybrid cloud** — combines public and private, keeping sensitive data private while bursting to public capacity when demand rises.
+   - **Community cloud** — shared by several organizations with common requirements, such as a group of banks or government agencies.
 
 3. **Explain cloud computing and evaluate its advantages and disadvantages.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+   Answer: Cloud computing means using computing resources — servers, storage, databases, networking and software — over the internet, provided on demand and paid for by usage, rather than owning the physical infrastructure.
+
+   Advantages
+   - **Cost efficiency** — capital expenditure on hardware becomes an operating expense; pay only for what is used.
+   - **Scalability and elasticity** — resources expand during a peak and shrink afterwards, within minutes.
+   - **Global accessibility** — reachable from anywhere, on any device with a connection.
+   - **Automatic maintenance** — patching, upgrades and hardware replacement are the provider's responsibility.
+   - **Reliability and disaster recovery** — data is replicated across regions, and major providers offer 99.9%+ availability SLAs.
+   - **Speed to market** — a full environment is ready in minutes rather than after weeks of procurement.
+   - **Collaboration** — teams work on shared data simultaneously from different locations.
+
+   Disadvantages
+   - **Internet dependency** — no connectivity means no access, a serious constraint where the network is unreliable.
+   - **Security and privacy risk** — sensitive data resides on third-party infrastructure, exposed to breaches and insider threats.
+   - **Limited control** — the customer cannot touch the hardware and, in SaaS, cannot even choose the software version.
+   - **Vendor lock-in** — proprietary services make migrating to another provider expensive and technically hard.
+   - **Downtime risk** — a provider outage affects every customer at once.
+   - **Compliance and data sovereignty** — data may be stored abroad, which some regulations prohibit.
+   - **Long-term cost** — for a steady, predictable workload, owning hardware can eventually be cheaper.
+
+   - Overall evaluation: the cloud is clearly advantageous for variable, growing or geographically distributed workloads. For stable, highly regulated workloads with predictable capacity, a private or hybrid model is usually the better fit.
+
 4. **(খ) Cloud computing কী? উহার বৈশিষ্ট্য ও সুবিধা বর্ণনা করুন ।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 616 (ET: N/A)]*
+
+   Answer: Cloud computing is the on-demand delivery of computing services — servers, storage, databases, networking, software and analytics — over the internet, charged according to usage.
+
+   Characteristics
+   - **On-demand self-service** — resources are provisioned automatically without human interaction with the provider.
+   - **Broad network access** — available over the network through standard mechanisms, from laptops, phones and tablets.
+   - **Resource pooling** — the provider's compute, storage and network serve multiple customers, dynamically assigned. The customer generally does not know the physical location.
+   - **Rapid elasticity** — capacity can be added or released quickly, and appears unlimited.
+   - **Measured service** — usage is monitored and reported, so charging is transparent and proportional.
+   - **Virtualization based** — every cloud rests on virtualization technology.
+   - **Multi-tenancy** — one instance serves many customers with logical data separation.
+
+   Advantages
+   - No large upfront investment in hardware or a data centre.
+   - Scales up during peaks and down afterwards, so no capacity is wasted.
+   - Accessible from anywhere, which supports remote and distributed teams.
+   - Maintenance, patching and upgrades are handled by the provider.
+   - Automatic backup and geographic replication give strong disaster recovery.
+   - New environments are ready in minutes, which speeds up projects.
+   - Environmentally better, since shared data centres use resources far more efficiently than many small server rooms.
 
 5. **What is Cloud Computing? Write its adventages and Disadventages?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
+   Answer: Cloud computing is the delivery of IT resources — computing power, storage, databases and software — over the internet, on demand and billed by usage, instead of owning physical servers.
+
+   Advantages
+   - Low upfront cost, since no hardware has to be purchased.
+   - Elastic scaling — capacity follows demand within minutes.
+   - Accessible from anywhere with an internet connection.
+   - Automatic updates and maintenance by the provider.
+   - Strong disaster recovery through multi-region replication.
+   - Rapid deployment of new services and environments.
+   - Easy collaboration on shared data across locations.
+
+   Disadvantages
+   - Requires a reliable internet connection at all times.
+   - Data security and privacy depend on the provider.
+   - Limited control over the infrastructure and software versions.
+   - Vendor lock-in makes switching providers costly.
+   - A provider outage takes down all its customers together.
+   - Ongoing subscription cost can exceed the cost of owning hardware over many years.
+   - Legal and compliance risk when data is stored in another country.
+
+   - Practical guidance: use the cloud for variable or fast-growing workloads, and keep highly sensitive or strictly regulated data in a private or hybrid arrangement.
+
 6. **Describe the cloud base database briefly.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
+
+   Answer: A cloud database is a database that runs on cloud infrastructure and is accessed over the internet. The provider handles the hardware, the operating system and usually the database software itself, so the customer works only with the data and the schema.
+
+   Two ways it is offered
+   - **DBaaS (Database as a Service)** — fully managed. The provider handles installation, patching, backup, replication and scaling. Examples: Amazon RDS, Azure SQL Database, Google Cloud SQL, MongoDB Atlas.
+   - **Self-managed on a cloud VM** — the customer installs MySQL or PostgreSQL on an IaaS virtual machine and manages everything except the hardware.
+
+   Types by data model
+   - **Relational (SQL)** — structured tables with ACID guarantees. Amazon RDS, Azure SQL, Cloud SQL.
+   - **NoSQL** — document, key-value, column or graph stores for unstructured and very large data. DynamoDB, MongoDB Atlas, Firebase, Cassandra.
+   - **Data warehouse** — optimised for analytics on huge datasets. Amazon Redshift, Google BigQuery, Snowflake.
+
+   Advantages
+   - No hardware to buy or maintain; storage and compute scale on demand.
+   - Automated backup, point-in-time recovery and multi-region replication.
+   - High availability through automatic failover to a standby replica.
+   - Pay only for the storage and compute actually used.
+   - Accessible from anywhere, which suits distributed applications.
+
+   Disadvantages
+   - Network latency compared with a database on the same LAN.
+   - Sensitive data resides with a third party, raising security and compliance questions.
+   - Vendor lock-in, especially with proprietary engines such as DynamoDB or BigQuery.
+   - Ongoing cost grows with data volume and query traffic.
 
 ## Cluster, Grid & Distributed Computing (4)
 
