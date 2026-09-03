@@ -147,6 +147,15 @@ Niyom:
   shoja likhe dao. Search shudhu tokhon jokhon sotti dorkar.
 
 ═══════════════════════════════════════════════════════════════════
+4. Answer writing flow ta erokom:
+═══════════════════════════════════════════════════════════════════
+1. search the question in internet
+2. pick some articles.
+3. read them
+4. Learn
+5. Now write in Geeks for geeks style
+
+═══════════════════════════════════════════════════════════════════
 ANSWER FORMAT (exact)
 ═══════════════════════════════════════════════════════════════════
 Question-er thik nicher line-e, ekta faka line diye:
@@ -340,17 +349,47 @@ Cross-check (duita number ek hote hobe, na hole count-report stale):
 
 LOOP:
 
-    SUB_TOPIC_COUNT   = <upor-er command-er output>
+SUB_TOPIC_COUNT   = <upor-er command-er output>
     subtopicCompleted = 0
 
     while (subtopicCompleted < SUB_TOPIC_COUNT) {
         subTopic = next unanswered "## section"
         writeAnswers(subTopic)                // section-er PROTITA question
-                                              // bhasha: dekho BHASHA section
         commitAndPush()                       // sathe sathe, ekhon-i
         subtopicCompleted += 1
         updateProgressFile()
     }
+
+    func writeAnswers(subTopic) {
+        for question in subTopic {
+            1. question-ta internet-e SEARCH koro
+            2. koyekta article PORO
+            3. bujhe LEARN koro
+            4. GeeksforGeeks style-e answer LIKHO
+            5. Internet-e na pele NIJE likho
+            // bhasha: dekho BHASHA section
+            // length: dekho ANSWER LENGTH section
+        }
+    }
+
+RESEARCH BAAD DEOA JABE NA:
+- Ei 5 ta step protita question-er jonno. "Ami eta jani" bole search skip
+  korba NA — eta-i shob theke boro bhul.
+- Ekoi section-e onek question ekoi topic-er hote pare. Tokhon topic-ta ekbar
+  search kore shob article pore nao, tarpor oi topic-er protita question
+  alada kore likho. Ekoi jinish barbar search korte hobe na.
+- SHUDHU ei khetre search skip: port number, full form, "X stands for" — mane
+  ek line-er fixed fact.
+
+func writeAnswers() {
+  for question in subTopic {
+   1. Search the question in the internet
+2. read several articles
+3. Learn
+4. Write the answer in geeks for geeks style
+5. If not found in internet then write by yourself
+  }
+}
 
 TRAVERSAL ORDER (deterministic rakho, jate resume kora jay):
 - File gulo alphabetical order-e, shob file: ai-and-ml.md, algorithm.md,
