@@ -6573,37 +6573,488 @@ int main() {
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
+   Answer: The difference is operator precedence and integer promotion. Assume `char c;` on a machine where `char` is 1 byte and `int` is 4 bytes.
+
+   `sizeof c + 1`
+   - `sizeof` applied to a variable does not need parentheses, and it binds tighter than `+`.
+   - So this parses as `(sizeof c) + 1` = `1 + 1` = `2`.
+   - The `+ 1` is ordinary arithmetic done AFTER the size is found.
+
+   `sizeof (c + 1)`
+   - Here the parentheses make `c + 1` the operand of `sizeof`.
+   - In C, a `char` in an arithmetic expression is promoted to `int` — this is called integer promotion.
+   - So the type of `c + 1` is `int`, and the result is `4`.
+
+   | Expression | Parsed as | Result |
+   |---|---|---|
+   | `sizeof c + 1` | `(sizeof c) + 1` | 2 |
+   | `sizeof (c + 1)` | size of an `int` expression | 4 |
+
+   - Extra point: `sizeof` never evaluates its operand at run time, so `sizeof(c++)` does not actually increment `c`. The size is decided entirely at compile time.
+
 2. **What is the difference between Null and Void?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
+
+   Answer:
+
+   | Point | NULL | void |
+   |---|---|---|
+   | What it is | A macro constant, defined as `((void*)0)` | A data type keyword |
+   | Represents | A pointer that points to nothing | The absence of any type or value |
+   | Where used | Assigned to a pointer variable | Function return type, parameter list, generic pointer |
+   | Value | A pointer value, numerically 0 | Not a value at all |
+   | Defined in | `<stddef.h>`, `<stdio.h>` and others | Built into the language |
+   | Example | `int *p = NULL;` | `void display(void) { ... }` |
+
+   - `NULL` is used to mark a pointer as "not pointing anywhere yet". Dereferencing it causes a run-time crash, so it should always be checked: `if (p != NULL)`.
+   - `void` has three uses: a function that returns nothing (`void f()`), a function that takes no parameters (`f(void)`), and a generic pointer (`void *p`) that can hold the address of any type but must be cast before dereferencing.
+   - `'\0'` is a third, different thing — the null character that terminates a C string.
 
 3. **What can be used to terminate for(;;)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+   Answer: `for(;;)` has no condition, so it is an infinite loop. It can be terminated in these ways.
+
+   - `break` — the normal way. It exits the loop immediately and control moves to the statement after the loop.
+   ```c
+   for (;;) {
+       if (condition) break;
+   }
+   ```
+   - `return` — ends the whole function, so the loop stops with it.
+   - `goto label;` — jumps to a label outside the loop. It works but is discouraged.
+   - `exit(0)` — from `<stdlib.h>`, terminates the entire program.
+
+   - `continue` does NOT terminate the loop; it only skips the rest of the current iteration and starts the next one.
+   - `for(;;)` and `while(1)` are exactly equivalent. An omitted condition in a `for` header is treated as permanently true.
+
 4. **What will occur when an array is declared without size?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+   Answer: It depends on whether an initializer is given.
+
+   Case 1 — declared without size but WITH an initializer: this is legal.
+   ```c
+   int a[] = {10, 20, 30, 40};      // size becomes 4 automatically
+   char s[] = "Hello";              // size becomes 6, including '\0'
+   ```
+   - The compiler counts the initializers and fixes the size at compile time.
+
+   Case 2 — declared without size and WITHOUT an initializer: this is a compile error.
+   ```c
+   int a[];                         // error: array size missing
+   ```
+   - The compiler cannot decide how much memory to reserve, so it rejects the declaration.
+
+   Case 3 — as a function parameter: this is legal and the size is simply ignored.
+   ```c
+   void f(int a[], int n) { ... }   // a decays to int *a
+   ```
+   - Which is exactly why the length must be passed separately as `n`.
+
+   - Note that `sizeof(a)/sizeof(a[0])` correctly gives the element count in case 1, but not inside a function, where `a` is only a pointer.
 
 5. **(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 601 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Local variable | Global variable |
+   |---|---|---|
+   | Declared | Inside a function or block | Outside all functions |
+   | Scope | Visible only inside that function or block | Visible throughout the whole program |
+   | Lifetime | Created on entry, destroyed on exit | Exists for the entire program run |
+   | Storage | Stack | Data segment |
+   | Default value | Garbage, if not initialised | Automatically 0 |
+   | Access from other functions | Not possible | Possible |
+   | Name reuse | The same name may be reused in different functions | One name for the whole program |
+   | Memory use | Freed as soon as the function ends | Occupied for the full run |
+
+   Example
+   ```c
+   #include <stdio.h>
+   int g = 10;                      // global
+
+   void show(void) {
+       int l = 20;                  // local to show()
+       printf("%d %d\n", g, l);     // both visible here
+   }
+
+   int main(void) {
+       show();
+       printf("%d\n", g);           // g visible, l is not
+       return 0;
+   }
+   ```
+
+   - If a local variable has the same name as a global one, the local shadows the global inside that block.
+   - Global variables should be used sparingly, because any function can change them, which makes bugs hard to trace.
+
 6. **(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
+
+   Answer: Yes, 32678 can be stored in an `int`, but the margin depends on the machine.
+
+   On a modern 32-bit `int` (the usual case today)
+   - Range is `−2,147,483,648` to `2,147,483,647`.
+   - 32678 is far inside that range, so there is no problem at all.
+
+   On an older 16-bit `int`
+   - Range is `−32,768` to `32,767`.
+   - 32678 is still less than 32767, so it fits — but only by 89. Any value from 32768 upward would overflow and wrap round to a negative number.
+
+   | Type | Size | Range | Can hold 32678? |
+   |---|---|---|---|
+   | short int | 2 bytes | −32,768 to 32,767 | Yes, barely |
+   | int (32-bit) | 4 bytes | −2.1 billion to 2.1 billion | Yes, easily |
+   | unsigned short | 2 bytes | 0 to 65,535 | Yes |
+
+   - Practical advice: since the C standard only guarantees `int` to be at least 16 bits, a value this close to the 16-bit limit is safer stored in a `long int`, or checked with `sizeof(int)` and `<limits.h>` first.
 
 7. **(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
+   Answer: Both add 1 to `i`. The difference is WHEN the new value becomes visible to the surrounding expression.
+
+   | Point | ++i (pre-increment) | i++ (post-increment) |
+   |---|---|---|
+   | Order | Increment first, then use the value | Use the old value first, then increment |
+   | Value of the expression | The NEW value | The OLD value |
+   | Effect on i | Same — i increases by 1 either way | Same |
+   | Speed | Marginally faster, no temporary copy needed | Needs to keep the old value |
+
+   Example
+   ```c
+   int i = 5, a, b;
+
+   a = ++i;     // i becomes 6, then a = 6   → i = 6, a = 6
+   
+   int j = 5;
+   b = j++;     // b = 5 (old value), then j becomes 6 → j = 6, b = 5
+   ```
+
+   Another common case
+   ```c
+   int i = 5;
+   printf("%d", ++i);   // prints 6
+   
+   int k = 5;
+   printf("%d", k++);   // prints 5, but k is 6 afterwards
+   ```
+
+   - When used alone as a whole statement (`i++;` or `++i;`) the two are identical, because the expression value is discarded.
+   - The difference only matters when the value is used — in an assignment, a condition, a function argument or an array subscript.
+
 8. **What is the main difference between structure and array in C programming? Explain with examples.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
+
+   Answer: The main difference is the data type of the members — an array holds elements of the SAME type, while a structure holds members of DIFFERENT types.
+
+   | Point | Array | Structure |
+   |---|---|---|
+   | Data type of members | All the same | May be different |
+   | Memory | Always contiguous | Contiguous, but padding may be inserted |
+   | Access | By index, `a[0]` | By member name, `s.name` |
+   | Declaration keyword | None needed | `struct` |
+   | Size | `elements × size of one element` | Sum of member sizes plus padding |
+   | Pointer arithmetic | Supported | Not meaningful across members |
+   | Assignment as a whole | Not allowed (`a = b` fails) | Allowed (`s1 = s2` works) |
+
+   Array example
+   ```c
+   int marks[5] = {85, 90, 78, 92, 88};
+   printf("%d", marks[2]);              // 78
+   ```
+
+   Structure example
+   ```c
+   struct Student {
+       int roll;                        // int member
+       char name[30];                   // char array member
+       float cgpa;                      // float member
+   };
+
+   struct Student s1 = {101, "Rahim", 3.75};
+   printf("%d %s %.2f", s1.roll, s1.name, s1.cgpa);
+   ```
+
+   - Use an array when many items of one kind must be stored; use a structure when one entity has several different attributes.
+   - The two combine naturally: `struct Student class[50];` is an array of structures.
 
 9. **Difference between array and structure data type.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Array | Structure |
+   |---|---|---|
+   | Definition | A collection of elements of the same data type stored contiguously | A single variable grouping members that may be of different data types |
+   | Members | Homogeneous | Heterogeneous |
+   | Accessing | Index based, `arr[i]` | Name based, using the dot operator `s.member` |
+   | Keyword | None | `struct` |
+   | Whole-object assignment | Not allowed | Allowed |
+   | Passing to a function | Passed as a pointer, so it behaves like call by reference | Passed by value by default, so a copy is made |
+   | Memory | Exactly `n × sizeof(element)` | Sum of members plus padding for alignment |
+   | Example | `int a[5];` | `struct Book { char title[50]; float price; };` |
+
+   - Padding is worth noting: `struct { char c; int i; };` often occupies 8 bytes rather than 5, because the `int` must start on a 4-byte boundary.
+   - Arrays give fast index arithmetic; structures give meaningful field names for related but differently typed data.
+
 10. **Write down the types of errors which can occur the execution of a program.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
+
+    Answer: Programming errors fall into four types.
+
+    (a) Syntax errors
+    - Violations of the language's grammar rules, caught by the compiler.
+    - Examples: missing semicolon, unbalanced brace, misspelled keyword.
+    - The program does not compile at all.
+
+    (b) Semantic errors
+    - The statement is grammatically valid but meaningless to the compiler.
+    - Examples: using an undeclared variable, assigning a string to an `int`, calling a function with the wrong argument types.
+
+    (c) Run-time errors
+    - The program compiles and starts, then fails while executing.
+    - Examples: division by zero, array index out of bounds, null pointer dereference, opening a file that does not exist, memory exhaustion.
+    - Prevented by input validation and bounds checking.
+
+    (d) Logical errors
+    - The program runs to completion but produces the wrong answer. The compiler cannot detect these at all.
+    - Examples: using `+` where `-` was meant, a loop that runs one time too many (off-by-one), wrong operator precedence.
+    - Found only by testing and careful dry runs, and fixed by debugging.
+
+    | Error type | Detected by | Program runs? | Result |
+    |---|---|---|---|
+    | Syntax | Compiler | No | Compilation fails |
+    | Semantic | Compiler | No | Compilation fails |
+    | Run-time | While executing | Starts, then crashes | Abnormal termination |
+    | Logical | Nothing automatic | Yes, fully | Wrong output |
+
+    - Logical errors are the hardest to find, because nothing warns you — only comparing the output with the expected result reveals them.
 
 11. **Write the syntax of while and do while loop.** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+    Answer:
+
+    while loop — entry controlled
+    ```c
+    while (condition) {
+        // statements
+    }
+    ```
+    - The condition is tested BEFORE the body runs.
+    - If the condition is false at the start, the body never executes — minimum 0 iterations.
+    - No semicolon after `while (condition)`.
+
+    do-while loop — exit controlled
+    ```c
+    do {
+        // statements
+    } while (condition);
+    ```
+    - The body runs FIRST, then the condition is tested.
+    - The body always executes at least once — minimum 1 iteration.
+    - A semicolon after `while (condition)` is mandatory.
+
+    Example showing the difference with `int i = 10;`
+    ```c
+    while (i < 5) { printf("A"); i++; }      // prints nothing
+    do    { printf("B"); i++; } while (i < 5);  // prints B once
+    ```
+
+    - Use `while` when the loop may not need to run at all; use `do-while` for things like a menu that must be displayed at least once.
+
 12. **What is nested structure in C programming? Explain with example.** *[SPCB Sub-Assistant Programmer 2022 compact it 741 (ET: N/A)]*
+
+    Answer: A nested structure is a structure that contains another structure as one of its members. It is used when one entity naturally contains another.
+
+    Example
+    ```c
+    #include <stdio.h>
+
+    struct Date {
+        int day;
+        int month;
+        int year;
+    };
+
+    struct Employee {
+        int id;
+        char name[30];
+        float salary;
+        struct Date joinDate;        // nested structure member
+    };
+
+    int main(void) {
+        struct Employee e = {101, "Karim", 45000.0, {15, 3, 2020}};
+
+        printf("ID: %d\n", e.id);
+        printf("Name: %s\n", e.name);
+        printf("Joined: %d/%d/%d\n",
+               e.joinDate.day, e.joinDate.month, e.joinDate.year);
+        return 0;
+    }
+    ```
+
+    Output
+    ```
+    ID: 101
+    Name: Karim
+    Joined: 15/3/2020
+    ```
+
+    - Access uses the dot operator twice: `outer.inner.member`, as in `e.joinDate.day`.
+    - The inner structure must be declared before the outer one, or defined inside it.
+    - Advantage: related fields stay grouped, so `Date` can be reused inside `Employee`, `Order`, `Invoice` and so on without repeating three fields each time.
 
 13. **(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 784 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Array | Structure |
+    |---|---|---|
+    | Member data types | All identical (homogeneous) | May differ (heterogeneous) |
+    | Keyword required | None | `struct` |
+    | Element access | By index — `a[0]`, `a[1]` | By member name — `s.roll`, `s.name` |
+    | Memory layout | Strictly contiguous, no gaps | Contiguous but padding may be added for alignment |
+    | Whole assignment | `a = b;` is illegal | `s1 = s2;` is legal |
+    | Function argument | Decays to a pointer, behaves like call by reference | Copied by value unless a pointer is passed |
+    | Size | `n × sizeof(element)` | Sum of members plus padding |
+    | Purpose | Many values of one kind | Several attributes of one entity |
+
+    Example
+    ```c
+    int marks[3] = {80, 75, 90};              // array
+
+    struct Book {                              // structure
+        char title[50];
+        char author[30];
+        float price;
+        int pages;
+    };
+    struct Book b = {"C Programming", "Ritchie", 550.0, 272};
+    ```
+
+    - The two are often combined — `struct Book library[100];` is an array of structures, which is how records are usually stored.
+
 14. **Write some default data type in C.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
+
+    Answer: The built-in (primary) data types of C are:
+
+    | Data type | Size | Range | Format specifier |
+    |---|---|---|---|
+    | `char` | 1 byte | −128 to 127 | %c |
+    | `int` | 4 bytes | −2,147,483,648 to 2,147,483,647 | %d |
+    | `float` | 4 bytes | 1.2e−38 to 3.4e+38, 6 decimal digits | %f |
+    | `double` | 8 bytes | 2.3e−308 to 1.7e+308, 15 decimal digits | %lf |
+    | `void` | 0 byte | no value | — |
+
+    With modifiers
+    - `short int` (2 bytes), `long int` (8 bytes on 64-bit Linux), `long long int` (8 bytes)
+    - `unsigned int` (0 to 4,294,967,295), `signed char`, `unsigned char` (0 to 255)
+    - `long double` (usually 12 or 16 bytes)
+
+    - These sizes are typical but not guaranteed by the standard; they depend on the compiler and architecture. Use `sizeof()` and `<limits.h>` to check.
+    - Beyond these, C provides derived types (array, pointer, function) and user-defined types (`struct`, `union`, `enum`, `typedef`).
 
 15. **Write the difference between Structure and Array.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Structure | Array |
+    |---|---|---|
+    | Members | Different data types allowed | All the same data type |
+    | Declared with | `struct` keyword | Just the type and `[]` |
+    | Accessed by | Member name and the `.` operator | Numeric index |
+    | Assignment of whole object | Allowed | Not allowed |
+    | Default passing to function | By value (a full copy) | By reference (pointer decay) |
+    | Memory | Members laid out in order, with padding | Elements packed with no gaps |
+    | Typical use | One record with several fields | A list of similar values |
+
+    Quick example
+    ```c
+    struct Student { int roll; char name[20]; float gpa; };  // structure
+    int rolls[50];                                            // array
+    ```
+
+    - A structure describes ONE thing with many properties; an array describes MANY things of one property.
+    - Note that `sizeof` on a structure can exceed the sum of its members because of alignment padding, whereas an array's size is always exact.
+
 16. **Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Control structure in C programming (vi) Stack (vii) Debugging (viii) Increment and Decrement process in C programming (ix) Object in C++ (x) Data encapsulation** *[National University Assistant Programmer 2020 compact it 978-980 (ET: DU)]*
 
+    Answer:
+
+    (i) ++i vs i++
+    - `++i` increments first and gives the new value; `i++` gives the old value and increments afterwards. Both change `i` by 1.
+
+    (ii) Overloading vs Overriding
+
+    | Point | Overloading | Overriding |
+    |---|---|---|
+    | Where | Same class | Base class and derived class |
+    | Signature | Must differ | Must be identical |
+    | Binding | Compile time (static) | Run time (dynamic) |
+    | Also called | Compile-time polymorphism | Run-time polymorphism |
+
+    (iii) Polymorphism in Java
+    - "One name, many forms." A method call takes different behaviour depending on the object.
+    - Compile-time polymorphism through method overloading; run-time polymorphism through method overriding with a base-class reference pointing to a derived object.
+
+    (iv) String variable
+    - In C, a string is a `char` array ending with the null character `'\0'`, for example `char name[20] = "Rahim";`. There is no separate string type.
+    - In Java and C++ there is a proper `String` / `std::string` class with built-in operations.
+
+    (v) Control structures in C
+    - Sequential — statements run one after another.
+    - Selection — `if`, `if-else`, nested `if`, `switch`.
+    - Iteration — `for`, `while`, `do-while`.
+    - Jump — `break`, `continue`, `goto`, `return`.
+
+    (vi) Stack
+    - A linear data structure following LIFO (Last In, First Out). Insertion and deletion both happen at one end called the top.
+    - Operations: `push`, `pop`, `peek`, `isEmpty`, each `O(1)`.
+    - Uses: function call management, expression evaluation, undo operations, backtracking.
+
+    (vii) Debugging
+    - The process of finding and removing errors from a program.
+    - Techniques: print statements, a debugger with breakpoints and step execution, code review, unit tests, dry runs.
+
+    (viii) Increment and decrement in C
+    - `++` adds 1 and `--` subtracts 1. Each has a prefix and a postfix form, which differ in the value returned to the expression.
+
+    (ix) Object in C++
+    - An instance of a class. The class is the blueprint; the object is the actual variable that occupies memory and holds real data.
+    - `Student s1;` creates an object `s1` of class `Student`.
+
+    (x) Data encapsulation
+    - Binding data and the functions that operate on it into a single unit (the class), and hiding the internal data from outside access.
+    - Achieved with `private` members and `public` getter and setter methods. It protects data integrity and is one of the four pillars of OOP.
+
 17. **নিচের if-else কে switch case এ পরিনত করুন। if(ch== 'A':: ch== 'E' :: ch== 'I' :: ch == 'O':: ch== 'U')** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
+
+    Answer: The condition checks whether `ch` is a vowel. The `::` in the printed question is a transcription of `||` (logical OR).
+
+    Original if-else form
+    ```c
+    if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+        printf("%c is a vowel\n", ch);
+    else
+        printf("%c is a consonant\n", ch);
+    ```
+
+    Converted to switch-case
+    ```c
+    switch (ch) {
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+            printf("%c is a vowel\n", ch);
+            break;
+        default:
+            printf("%c is a consonant\n", ch);
+    }
+    ```
+
+    How the conversion works
+    - Each value joined by `||` becomes its own `case` label.
+    - The first four cases have no statements and no `break`, so control falls through to the fifth. This deliberate fall-through is exactly how OR conditions are expressed in a `switch`.
+    - The `else` branch becomes `default`.
+
+    - To handle lowercase too, add `case 'a': case 'e': case 'i': case 'o': case 'u':` alongside them.
 
 18. **Answer the following question:** *[Bangladesh Competition Commission Programmer 2019 compact it 1063 (ET: DU)]*
    a. Polymorphism refers to \_\_\_\_\_\_\_?
@@ -6612,19 +7063,303 @@ int main() {
    d. The Size of the character variable in C is \_\_\_\_\_?
    e. In Java what is true about private constructor?
 
+   Answer:
+
+   (a) Polymorphism refers to the ability of one interface or name to take many forms — a single function name or operator behaving differently depending on the object or the arguments. In Greek it literally means "many forms".
+
+   (b) The simplest method is 2-colouring using BFS. Colour the starting vertex, then colour every neighbour with the opposite colour as BFS proceeds. If an edge is ever found joining two vertices of the same colour, the graph is not bipartite. Equivalently, a graph is bipartite if and only if it contains no odd-length cycle. The check runs in `O(V + E)`.
+
+   (c) All dimensions except the first must be specified:
+   ```c
+   void func(int arr[][10][20], int x);
+   // or equivalently
+   void func(int (*arr)[10][20], int x);
+   ```
+   - The first dimension may be left empty because the array decays into a pointer; the remaining dimensions are needed so the compiler can compute the address arithmetic.
+
+   (d) The size of a `char` variable in C is **1 byte** (8 bits). This is fixed by the standard — `sizeof(char)` is always exactly 1. Its range is −128 to 127 for `signed char` and 0 to 255 for `unsigned char`.
+
+   (e) A private constructor in Java means the class cannot be instantiated from outside itself. Consequences:
+   - `new ClassName()` from another class causes a compile error.
+   - The class cannot be subclassed, because a subclass constructor cannot call the private parent constructor.
+   - It is used to implement the Singleton pattern, utility classes with only static methods, and factory-method-only creation.
+
 19. **Coding এর সময় সংঘটিত ভুলসমূহ উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
+
+    Answer: Errors made while coding fall into four categories.
+
+    (a) Syntax error — breaking the grammar of the language, caught by the compiler.
+    ```c
+    int a = 10        // missing semicolon
+    printf("%d", a)   // missing semicolon
+    ```
+    - The program will not compile until fixed.
+
+    (b) Semantic error — grammatically valid but meaningless.
+    ```c
+    int a;
+    a = "Hello";      // assigning a string to an int
+    printf("%d", b);  // b was never declared
+    ```
+
+    (c) Run-time error — appears only while the program is executing.
+    ```c
+    int a = 10, b = 0;
+    printf("%d", a / b);        // division by zero, crashes
+
+    int arr[5];
+    arr[10] = 100;              // index out of bounds
+    ```
+
+    (d) Logical error — the program runs perfectly but gives a wrong result.
+    ```c
+    // intended: average of two numbers
+    average = a + b / 2;        // wrong, should be (a + b) / 2
+    
+    for (i = 1; i <= 10; i++)   // off-by-one if 1 to 9 was intended
+    ```
+    - Nothing warns the programmer; only testing against expected output reveals it.
+
+    - Prevention: compile with warnings enabled (`gcc -Wall`), validate all input, use a debugger, and dry-run the logic on paper before coding.
 
 20. **উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1082 (ET: N/A)]*
 
+    Answer:
+
+    Part 1 — i++ vs ++i
+    - `i++` (post-increment): the expression yields the OLD value, then `i` is incremented.
+    - `++i` (pre-increment): `i` is incremented first, and the expression yields the NEW value.
+
+    ```c
+    int i = 5, a;
+    a = i++;        // a = 5, i = 6
+    
+    int j = 5, b;
+    b = ++j;        // b = 6, j = 6
+    ```
+    - In both cases the variable ends up at 6. Only the value handed to the expression differs.
+    - As a standalone statement (`i++;`) the two are identical.
+
+    Part 2 — Nested if
+    - A nested `if` is an `if` statement written inside the body of another `if` or `else`. The inner condition is tested only when the outer one is true.
+
+    ```c
+    if (marks >= 40) {
+        if (marks >= 80)
+            printf("Grade A+");
+        else if (marks >= 60)
+            printf("Grade A");
+        else
+            printf("Grade B");
+    }
+    else {
+        printf("Fail");
+    }
+    ```
+
+    - Use it when a decision depends on a previous decision — here the grade is only worked out for a student who has already passed.
+    - Caution: an `else` always binds to the nearest unmatched `if`, so braces should be used to make the intent explicit.
+
 21. **(খ) C প্রোগ্রামিং ল্যাঙ্গুয়েজে Structure ও Union এর মধ্যে পার্থক্য কী? উদাহরণসহ লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1083 (ET: N/A)]*
+
+    Answer: The key difference is memory. A structure gives every member its own space, while a union makes all members share one space.
+
+    | Point | Structure | Union |
+    |---|---|---|
+    | Keyword | `struct` | `union` |
+    | Memory allocated | Sum of all members, plus padding | Size of the LARGEST member only |
+    | Members holding a value | All at the same time | Only one at a time |
+    | Writing to one member | Others are unaffected | Others are overwritten |
+    | Initialisation | All members may be initialised | Only the first member can be initialised |
+    | Use case | A record with several independent fields | Saving memory when only one field is needed at a time |
+
+    Example
+    ```c
+    #include <stdio.h>
+
+    struct S { int i; char c; float f; };
+    union  U { int i; char c; float f; };
+
+    int main(void) {
+        printf("sizeof(struct S) = %zu\n", sizeof(struct S));  // 12 (4+1+3 padding+4)
+        printf("sizeof(union U)  = %zu\n", sizeof(union U));   // 4  (largest member)
+
+        union U u;
+        u.i = 65;
+        printf("u.i = %d\n", u.i);        // 65
+        u.c = 'A';
+        printf("u.i = %d\n", u.i);        // changed — same memory was overwritten
+        return 0;
+    }
+    ```
+
+    - In the union, writing `u.c` corrupts `u.i`, because both occupy the same bytes.
+    - Unions are used in embedded systems and protocol parsing, where a field may hold one of several types depending on a separate tag.
 
 22. **Which of the following is the correct order of evaluation?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
+    Answer: The options were not printed with the question, so the standard C operator precedence order is given, from highest to lowest.
+
+    | Level | Operators | Associativity |
+    |---|---|---|
+    | 1 | `()` `[]` `->` `.` | Left to right |
+    | 2 | `!` `~` `++` `--` unary `+` `-` `*` `&` `sizeof` | Right to left |
+    | 3 | `*` `/` `%` | Left to right |
+    | 4 | `+` `-` | Left to right |
+    | 5 | `<<` `>>` | Left to right |
+    | 6 | `<` `<=` `>` `>=` | Left to right |
+    | 7 | `==` `!=` | Left to right |
+    | 8 | `&` then `^` then `\|` | Left to right |
+    | 9 | `&&` | Left to right |
+    | 10 | `\|\|` | Left to right |
+    | 11 | `?:` | Right to left |
+    | 12 | `=` `+=` `-=` and other assignments | Right to left |
+    | 13 | `,` | Left to right |
+
+    Common memory aid: **BODMAS extended** — brackets, unary, multiplicative, additive, shift, relational, equality, bitwise, logical, conditional, assignment, comma.
+
+    - Example: `a = 2 + 3 * 4` gives 14, not 20, because `*` outranks `+`.
+    - Example: `a && b || c` is `(a && b) || c`, because `&&` outranks `||`.
+    - Important caution: precedence decides how an expression is GROUPED, not the ORDER in which operands are evaluated. The evaluation order of function arguments and of most operands is unspecified in C.
+
 23. **(c) Is it possible to convert all if-else code into switch code block? Give an example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
+
+    Answer: No. Not every `if-else` can be converted into a `switch`.
+
+    Why not — the restrictions of switch
+    - The controlling expression must be of integer or character type. Floating-point values and strings are not allowed.
+    - Each `case` label must be a compile-time CONSTANT. Variables and expressions cannot be used.
+    - Only equality is tested. Ranges and relational comparisons cannot be expressed directly.
+
+    Example that CAN be converted — testing equality against constants
+    ```c
+    // if-else version
+    if (day == 1) printf("Sunday");
+    else if (day == 2) printf("Monday");
+    else if (day == 3) printf("Tuesday");
+    else printf("Invalid");
+
+    // switch version
+    switch (day) {
+        case 1: printf("Sunday");  break;
+        case 2: printf("Monday");  break;
+        case 3: printf("Tuesday"); break;
+        default: printf("Invalid");
+    }
+    ```
+
+    Example that CANNOT be converted — a range test
+    ```c
+    if (marks >= 80)      printf("A+");
+    else if (marks >= 70) printf("A");
+    else if (marks >= 60) printf("A-");
+    else                  printf("F");
+    ```
+    - A `switch` cannot express `marks >= 80`. A workaround is `switch (marks / 10)` with cases 10, 9, 8 and so on, but that only works because the ranges happen to be uniform.
+
+    Other cases that cannot be converted
+    - Conditions on `float` or `double` values.
+    - Conditions comparing two variables, such as `if (a > b)`.
+    - Conditions using `&&` or `||` between different variables.
+
+    - Rule of thumb: `switch` suits a single variable compared against a fixed set of constants; `if-else` handles everything else.
 
 24. **Using examples explain data types used in C language.** *[Multiple Ministry Assistant Programmer 2017 compact it 1231 (ET: N/A)]*
 
+    Answer: A data type tells the compiler what kind of value a variable holds and how much memory to reserve for it. C data types fall into three groups.
+
+    (a) Primary (basic) data types
+    ```c
+    char grade = 'A';           // 1 byte,  −128 to 127
+    int age = 25;               // 4 bytes, about ±2.1 billion
+    float price = 99.50;        // 4 bytes, 6 decimal digits
+    double pi = 3.14159265358;  // 8 bytes, 15 decimal digits
+    void display(void);         // no value
+    ```
+
+    (b) Derived data types
+    ```c
+    int marks[5] = {80, 75, 90, 65, 88};   // array
+    int *ptr = &age;                        // pointer
+    int add(int a, int b);                  // function
+    ```
+
+    (c) User-defined data types
+    ```c
+    struct Student { int roll; char name[30]; };   // structure
+    union Data { int i; float f; };                // union
+    enum Day { SUN, MON, TUE };                    // enumeration
+    typedef unsigned int uint;                     // type alias
+    ```
+
+    Modifiers that change size or range
+    ```c
+    short int s;        // 2 bytes
+    long int l;         // 8 bytes on 64-bit Linux
+    unsigned int u;     // 0 to 4,294,967,295
+    ```
+
+    - Actual sizes depend on the compiler and machine, so `sizeof()` should be used rather than assuming them.
+    - Choosing the right type matters: using `int` where `char` suffices wastes memory, and using `float` where `double` is needed loses precision.
+
 25. **Explain in details the different forms of looping statement in C language.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233-1235 (ET: N/A)]*
+
+    Answer: A loop repeats a block of statements while a condition holds. C provides three loop statements.
+
+    (a) for loop — used when the number of repetitions is known
+    ```c
+    for (initialization; condition; increment) {
+        // statements
+    }
+    ```
+    ```c
+    for (i = 1; i <= 5; i++)
+        printf("%d ", i);        // 1 2 3 4 5
+    ```
+    - All three parts sit in one line, which keeps counter-driven loops compact and readable.
+    - Any part may be omitted; `for(;;)` is an infinite loop.
+
+    (b) while loop — entry controlled, used when the count is not known in advance
+    ```c
+    while (condition) {
+        // statements
+    }
+    ```
+    ```c
+    i = 1;
+    while (i <= 5) { printf("%d ", i); i++; }
+    ```
+    - The condition is checked first, so the body may run zero times.
+    - The programmer must remember to update the control variable inside the body, otherwise the loop never ends.
+
+    (c) do-while loop — exit controlled, body always runs at least once
+    ```c
+    do {
+        // statements
+    } while (condition);
+    ```
+    ```c
+    i = 1;
+    do { printf("%d ", i); i++; } while (i <= 5);
+    ```
+    - Used for menus and input validation, where the prompt must appear at least once.
+    - The semicolon after the closing `while` is mandatory.
+
+    Comparison
+
+    | Point | for | while | do-while |
+    |---|---|---|---|
+    | Control | Entry | Entry | Exit |
+    | Minimum iterations | 0 | 0 | 1 |
+    | Best when | Count is known | Count is unknown | Body must run once |
+    | Init and update | In the header | Written separately | Written separately |
+
+    Loop control statements
+    - `break` — leaves the loop immediately.
+    - `continue` — skips the rest of the current iteration and starts the next.
+    - `goto` — jumps to a label; works but is discouraged.
+
+    - Nested loops are loops inside loops, used for matrices and pattern printing. The inner loop completes fully for each single pass of the outer loop.
 
 ## Flowcharts & Algorithms (16)
 
