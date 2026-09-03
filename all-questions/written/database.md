@@ -1,16 +1,16 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 275 questions
+**Table of Contents** — 19 subtopics · 279 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-81) | 81 |
-| 2 | [Keys in DBMS](#keys-in-dbms-30) | 30 |
+| 1 | [SQL Queries](#sql-queries-82) | 82 |
+| 2 | [Keys in DBMS](#keys-in-dbms-32) | 32 |
 | 3 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
 | 4 | [DBMS Architecture & Features](#dbms-architecture--features-23) | 23 |
 | 5 | [Normalization & Database Design](#normalization--database-design-21) | 21 |
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-18) | 18 |
-| 7 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
-| 8 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-13) | 13 |
+| 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-14) | 14 |
+| 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-13) | 13 |
 | 9 | [Database Backup & Disaster Recovery](#database-backup--disaster-recovery-8) | 8 |
 | 10 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-8) | 8 |
 | 11 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-8) | 8 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (81)
+## SQL Queries (82)
 
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
@@ -361,7 +361,9 @@ SELECT count (*) FROM (
 
 81. **Suppose you've two table (Employee, Department) in a Database and Employee table three cell (emp_name, dept_id, salary) also Department table two cell (dept_id, dept_name), now update the salary 10% increase value from Department table. Give the appropriate example.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
 
-## Keys in DBMS (30)
+82. **What is the SQL query for showing only the duplicate lists in student (id, name, gpa) table?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1223 (ET: N/A)]*
+
+## Keys in DBMS (32)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -422,6 +424,10 @@ SELECT count (*) FROM (
 29. **Define Super key and Primary key.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211 (ET: N/A)]*
 
 30. **What are the difference among Candidate key, Primary key and Foreign key?** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
+
+31. **Explain with examples: Candidate key, foreign key and horizontal scaling.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1223 (ET: N/A)]*
+
+32. **Write down the differences between super key and candidate key with example.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1225 (ET: N/A)]*
 
 ## ER Diagram & Database Design (25)
 
@@ -635,6 +641,36 @@ SELECT count (*) FROM (
 
 18. **What are the difference among DDL, DML and DCL?** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
 
+## Transaction Management & ACID Properties (14)
+
+1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
+
+2. **How many process of Transaction complete?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
+
+3. **ACID এর প্রোপার্টি কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
+
+4. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
+
+5. **Case Study type Database-related problem (Solve: ACID)** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
+
+6. **What are the ACID properties of transaction to ensure data reliability and integrity?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
+
+7. **(a) What is ACID mean in database system?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
+
+8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
+
+9. **What do you mean by Rollback and Roll forward?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
+
+10. **Describe ACID properties of DBMS.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 860 (ET: N/A)]*
+
+11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 984-985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+12. **Describe Database ACID properties.** *[RAKUB Assistant Database Administrator 2020 compact it 1012 (ET: E-Zone)]*
+
+13. **Describe the ACID properties in a database. When does a deadlock occur and how do you prevent it, in a database?** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1116 (ET: DU)]*
+
+14. **Describe the ACID properties of database.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
+
 ## Relational Data Model & ER Relationships (13)
 
 1. What are the different types of relationships in a relational database? Explain each with examples. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
@@ -662,34 +698,6 @@ SELECT count (*) FROM (
 12. **(ক) Relationship degree কাকে বলে? উহা কত প্রকার ও কি কি? সংক্ষেপে লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1068 (ET: N/A)]*
 
 13. **(খ) Relational Database Model কী? অন্যান্য মডেলের তুলনায় এর সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094-1095 (ET: N/A)]*
-
-## Transaction Management & ACID Properties (13)
-
-1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
-
-2. **How many process of Transaction complete?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
-
-3. **ACID এর প্রোপার্টি কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
-
-4. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
-
-5. **Case Study type Database-related problem (Solve: ACID)** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
-
-6. **What are the ACID properties of transaction to ensure data reliability and integrity?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
-
-7. **(a) What is ACID mean in database system?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
-
-8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
-
-9. **What do you mean by Rollback and Roll forward?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
-
-10. **Describe ACID properties of DBMS.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 860 (ET: N/A)]*
-
-11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 984-985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
-
-12. **Describe Database ACID properties.** *[RAKUB Assistant Database Administrator 2020 compact it 1012 (ET: E-Zone)]*
-
-13. **Describe the ACID properties in a database. When does a deadlock occur and how do you prevent it, in a database?** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1116 (ET: DU)]*
 
 ## Database Backup & Disaster Recovery (8)
 

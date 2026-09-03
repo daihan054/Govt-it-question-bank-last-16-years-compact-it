@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 491 questions
+**Table of Contents** — 33 subtopics · 493 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-105) | 105 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-106) | 106 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-51) | 51 |
 | 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-29) | 29 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-21) | 21 |
@@ -19,7 +19,7 @@
 | 14 | [Network Topologies](#network-topologies-14) | 14 |
 | 15 | [IPv6 Addressing](#ipv6-addressing-13) | 13 |
 | 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-13) | 13 |
-| 17 | [Network Address Translation (NAT)](#network-address-translation-nat-12) | 12 |
+| 17 | [Network Address Translation (NAT)](#network-address-translation-nat-13) | 13 |
 | 18 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait-11) | 11 |
 | 19 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat-10) | 10 |
 | 20 | [Digital Modulation & Signal Processing (BPSK, QPSK)](#digital-modulation--signal-processing-bpsk-qpsk-10) | 10 |
@@ -41,7 +41,7 @@
 
 ---
 
-## Subnetting & IP Addressing (105)
+## Subnetting & IP Addressing (106)
 
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
@@ -293,6 +293,8 @@ ii) 211.10.15.4
 104. **Given an IP address is 240.133.10.20/8 Find out network address, number of host and subnet mask.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1192 (ET: N/A)]*
 
 105. **Calculate subnet mask and network address from the given IP address 192.168.5.44/26.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1212 (ET: N/A)]*
+
+106. **How many subnets and hosts per subnet can you get from the network 172.20.0.0/27?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
 
 ## OSI & TCP/IP Reference Model (51)
 
@@ -971,7 +973,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 13. **From single mode fiber and multimode fiber which one is suitable for LAN?** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
 
-## Network Address Translation (NAT) (12)
+## Network Address Translation (NAT) (13)
 
 1. Network Address Translation (NAT) maps internal networks to the public internet.
    * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
@@ -998,6 +1000,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 11. **What is PAT? How does a network PAT work?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
 
 12. **What is NAT?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
+
+13. **Show the translation process of a NAT Box.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
 ## Flow Control & Data Link Layer (Stop-and-Wait) (11)
 

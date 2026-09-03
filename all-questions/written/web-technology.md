@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 70 questions
+**Table of Contents** — 7 subtopics · 76 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-26) | 26 |
-| 2 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-13) | 13 |
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-29) | 29 |
+| 2 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-16) | 16 |
 | 3 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-8) | 8 |
 | 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development-7) | 7 |
@@ -15,7 +15,7 @@
 
 ---
 
-## HTML & Web Fundamentals (26)
+## HTML & Web Fundamentals (29)
 
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -81,13 +81,19 @@
 
 23. **Write HTML5 media tags name.** *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
-24. **Write down the proper use of these semantics in HTML-`<header>`, `<footer>`, `<article>` and `<section>`.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
+24. **Write down the proper use of these semantics in HTML-`<header>`, `<footer>`, `<article>` and `<section>`.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*, *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
 25. **Write down the name of some HTML5 media tag.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
 26. **What is canvas HTML? What is difference between HTML canvas and SVG?** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
-## JavaScript & jQuery (DOM & Validation) (13)
+27. **What are the uses of `<header>`, `<article>`, `<section>` and `<footer>` in html?** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
+
+28. **What is HTML Canvas? Differentiate between canvas and SVG.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
+
+29. **What is local Storage and session Storage in HTML5?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
+
+## JavaScript & jQuery (DOM & Validation) (16)
 
 1. **Jquery for email validation** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -130,6 +136,12 @@
 12. **How to change html attribute through html DOM?** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1163 (ET: N/A)]*, *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
 13. **Suppose you've a javaScript code name as “bankScript” write the code for loading in HTML using JS.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
+
+14. **What is closure in JavaScript? Explain with an example?** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
+
+15. **Difference among $.ajax(), $.load(), $.get().** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
+
+16. **What is the working procedure of AJAX?** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1221-1222 (ET: N/A)]*
 
 ## HTTP Protocol (10)
 

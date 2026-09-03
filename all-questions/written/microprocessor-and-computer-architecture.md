@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 121 questions
+**Table of Contents** — 11 subtopics · 122 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,8 +8,8 @@
 | 3 | [RAID Architecture & Storage](#raid-architecture--storage-15) | 15 |
 | 4 | [Cache Memory](#cache-memory-12) | 12 |
 | 5 | [Secondary Storage (HDD vs SSD)](#secondary-storage-hdd-vs-ssd-10) | 10 |
-| 6 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-6) | 6 |
-| 7 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-6) | 6 |
+| 6 | [Assembly Language & Addressing Modes](#assembly-language--addressing-modes-7) | 7 |
+| 7 | [Instruction Pipelining & Hazards](#instruction-pipelining--hazards-6) | 6 |
 | 8 | [CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle-6) | 6 |
 | 9 | [Multi-Core & Multi-Threading](#multi-core--multi-threading-5) | 5 |
 | 10 | [RISC vs CISC Architecture](#risc-vs-cisc-architecture-4) | 4 |
@@ -219,6 +219,24 @@
 
 10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 951 (ET: N/A)], [BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
+## Assembly Language & Addressing Modes (7)
+
+1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
+   (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1424 (ET: E-Zone)]*
+
+3. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+MOV AX, A534H এবং MOV AX, [A534H]
+
+4. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
+
+5. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
+
+6. **Write down four common rules of Assembly language. Write different type of hazard.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
+
+7. **Describe addressing mode of 8086 microprocessors.** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1225-1226 (ET: N/A)]*
+
 ## Instruction Pipelining & Hazards (6)
 
 1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
@@ -236,22 +254,6 @@
 5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
 6. **How computer Architecture is characterized. What are the 5 stages of the DLX pipeline?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049-1050 (ET: BUET)]*
-
-## Assembly Language & Addressing Modes (6)
-
-1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
-   (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
-2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1424 (ET: E-Zone)]*
-
-3. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-MOV AX, A534H এবং MOV AX, [A534H]
-
-4. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
-
-5. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
-
-6. **Write down four common rules of Assembly language. Write different type of hazard.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
 
 ## CPU Performance & Instruction Cycle (6)
 

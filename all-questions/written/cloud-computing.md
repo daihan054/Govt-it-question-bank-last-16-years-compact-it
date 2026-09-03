@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 37 questions
+**Table of Contents** — 9 subtopics · 38 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Cloud Service Models](#cloud-service-models-13) | 13 |
-| 2 | [Virtualization & Containers (VM vs Container)](#virtualization--containers-vm-vs-container-7) | 7 |
+| 2 | [Virtualization & Containers (VM vs Container)](#virtualization--containers-vm-vs-container-8) | 8 |
 | 3 | [Cloud Storage & Fundamentals](#cloud-storage--fundamentals-6) | 6 |
 | 4 | [Cluster, Grid & Distributed Computing](#cluster-grid--distributed-computing-4) | 4 |
 | 5 | [Scalability (Horizontal & Vertical Scaling)](#scalability-horizontal--vertical-scaling-2) | 2 |
@@ -50,7 +50,7 @@
 
 13. **What is cloud computing? Mention five advantages threat of cloud computing. Describe IaaS, PaaS and SaaS.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1196 (ET: N/A)]*
 
-## Virtualization & Containers (VM vs Container) (7)
+## Virtualization & Containers (VM vs Container) (8)
 
 1. VM vs Container in Submarine Cable Network: [BSCCPL AME 21-08-2026 (BUET)] A national submarine cable landing station provides international connectivity to several organizations. The organization wants to deploy DNS, Web, Database, Monitoring, and Network Management services on a shared physical server. The network administrator is considering two approaches:
 Approach A: Deploy each service in a separate Virtual Machine.
@@ -68,6 +68,8 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 6. **What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
 7. **What is type 2 hypervisors in virtual machine?** *[Probashi Kallyan Bank Programmer 2019 compact it 1157 (ET: AUST)]*
+
+8. **Explain Type 1 and Type 2 hypervisors in virtual machine operating system with figure.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220 (ET: N/A)]*
 
 ## Cloud Storage & Fundamentals (6)
 

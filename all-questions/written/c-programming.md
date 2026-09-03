@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 252 questions
+**Table of Contents** — 9 subtopics · 254 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-103) | 103 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-104) | 104 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-51) | 51 |
-| 3 | [Recursion & Functions](#recursion--functions-36) | 36 |
+| 3 | [Recursion & Functions](#recursion--functions-37) | 37 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-23) | 23 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-16) | 16 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-14) | 14 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (103)
+## Basic Programs & Control Statements (104)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -387,6 +387,8 @@ for(a=1; a<=100; a++)
 102. **Write a program check a number is prime or not prime.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211-1212 (ET: N/A)]*
 
 103. **Suppose an array is {4,5,6,7}. Write a C program that will output like {4,5}, {4,6}, {4,7}, {5,6}, {5,7}, {6,7}.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1212-1213 (ET: N/A)]*
+
+104. **Write a program using any programming language that reads five numbers from keyboard and display the smaller, larger and average of those numbers.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217-1218 (ET: N/A)]*
 
 ## Output Tracing & Control Flow (51)
 
@@ -1002,7 +1004,7 @@ printf("%d",i);
 return 0;
 ```
 
-## Recursion & Functions (36)
+## Recursion & Functions (37)
 
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -1125,6 +1127,8 @@ int main() {
 35. **Difference between call by value and call by reference with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1166-1167 (ET: N/A)]*
 
 36. **Write Algorithm of Fibonacci series.** *[Palli Sanchay Bank Programmer 2018 compact it 1171-1172 (ET: N/A)]*
+
+37. **Write the performance of a non-recursive function which is written in recursive way.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
 ## Operators, Data Types & Language Concepts (23)
 

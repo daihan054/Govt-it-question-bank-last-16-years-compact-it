@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 113 questions
+**Table of Contents** — 9 subtopics · 115 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-52) | 52 |
-| 2 | [Java Programming & Methods](#java-programming--methods-17) | 17 |
+| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-53) | 53 |
+| 2 | [Java Programming & Methods](#java-programming--methods-18) | 18 |
 | 3 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
 | 4 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-10) | 10 |
 | 5 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
@@ -17,7 +17,7 @@
 
 ---
 
-## OOP Concepts (Inheritance & Polymorphism) (52)
+## OOP Concepts (Inheritance & Polymorphism) (53)
 
 1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -157,7 +157,9 @@ public class main{
 
 52. **Consider a base class Shape and its derived class Rectangle. Design a code inheritance code using C++.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1193 (ET: N/A)]*
 
-## Java Programming & Methods (17)
+53. **Difference between method overloading and overriding in java.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220 (ET: N/A)]*
+
+## Java Programming & Methods (18)
 
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
@@ -218,6 +220,8 @@ Public class class B extends class A {
 ```
 
 17. **Write simple Java program to convert string into camel case and display camel case string.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191-1192 (ET: N/A)]*
+
+18. **Discus architecture of Java virtual machine.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1218-1219 (ET: N/A)]*
 
 ## Output Tracing & Recursion (10)
 

@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 95 questions
+**Table of Contents** — 8 subtopics · 96 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Tree](#tree-27) | 27 |
 | 2 | [Stack](#stack-19) | 19 |
 | 3 | [Linked List](#linked-list-15) | 15 |
-| 4 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
-| 5 | [Binary Search Tree (BST)](#binary-search-tree-bst-8) | 8 |
+| 4 | [Binary Search Tree (BST)](#binary-search-tree-bst-9) | 9 |
+| 5 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
 | 6 | [Queue](#queue-6) | 6 |
 | 7 | [Hashing & Hash Tables](#hashing--hash-tables-6) | 6 |
 | 8 | [Data Structure Fundamentals](#data-structure-fundamentals-6) | 6 |
@@ -154,6 +154,26 @@ Output: Not Balanced
 
 15. **(খ) Linked list কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
 
+## Binary Search Tree (BST) (9)
+
+1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
+
+2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 590 (ET: BUET)]*
+
+3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
+
+4. **Construct a Binary Search tree, then post order, ....... (Approximate)** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
+
+5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
+
+6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
+
+7. **Write an algorithm to find a node in a binary search tree.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
+
+8. **Complexity of BST (Binary Search Tree) best and worst case.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
+
+9. **What is Binary Search Tree? Explain the complexity of BST?** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
+
 ## Priority Queues & Heaps (Min/Max Heap) (8)
 
 1. **Max heap:** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
@@ -171,24 +191,6 @@ Output: Not Balanced
 7. **Heapify the MAX heap tree.** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1043, 1045 (ET: BUET)]*
 
 8. **Draw (max/min) heap binay tree using 11 nodes.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
-
-## Binary Search Tree (BST) (8)
-
-1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
-
-2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 590 (ET: BUET)]*
-
-3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
-
-4. **Construct a Binary Search tree, then post order, ....... (Approximate)** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
-
-5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
-
-6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
-
-7. **Write an algorithm to find a node in a binary search tree.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
-
-8. **Complexity of BST (Binary Search Tree) best and worst case.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
 
 ## Queue (6)
 

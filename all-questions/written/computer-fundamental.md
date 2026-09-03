@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 141 questions
+**Table of Contents** — 10 subtopics · 142 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,7 +7,7 @@
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-22) | 22 |
 | 4 | [Software Types & Classification](#software-types--classification-14) | 14 |
-| 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-9) | 9 |
+| 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-10) | 10 |
 | 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-8) | 8 |
 | 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
 | 8 | [Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies-3) | 3 |
@@ -281,7 +281,7 @@
 
 14. **Compare between TPS and DSS.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1165-1166 (ET: N/A)]*
 
-## Data Center Infrastructure & Power Management (9)
+## Data Center Infrastructure & Power Management (10)
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 305 (ET: BIBM)]*
 
@@ -300,6 +300,8 @@
 8. **Write down the element of data center.** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1125 (ET: BREB)]*
 
 9. **Write down difference between Online UPS and Offline UPS.** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159-1160 (ET: BUET)]*
+
+10. **Explain the component of Data Center.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1222-1223 (ET: N/A)]*
 
 ## Blockchain & Emerging Technologies (8)
 

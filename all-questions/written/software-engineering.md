@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 148 questions
+**Table of Contents** — 14 subtopics · 150 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [SDLC Phases & Models](#sdlc-phases--models-44) | 44 |
-| 2 | [Software Testing & Evaluation](#software-testing--evaluation-39) | 39 |
+| 2 | [Software Testing & Evaluation](#software-testing--evaluation-40) | 40 |
 | 3 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-13) | 13 |
-| 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-12) | 12 |
+| 4 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-13) | 13 |
 | 5 | [Software Requirements Engineering](#software-requirements-engineering-10) | 10 |
 | 6 | [Software Project Management & Organization](#software-project-management--organization-9) | 9 |
 | 7 | [Software Design Principles (Coupling & Cohesion)](#software-design-principles-coupling--cohesion-5) | 5 |
@@ -112,7 +112,7 @@
 
 44. **Explain extreme programming.** *[NESCO Manager (Software) 2018 compact it 1208 (ET: N/A)]*
 
-## Software Testing & Evaluation (39)
+## Software Testing & Evaluation (40)
 
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]
 
@@ -212,6 +212,8 @@
 
 39. **Difference between black box and white box testing.** *[Palli Sanchay Bank Programmer 2018 compact it 1172 (ET: N/A)]*, *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
+40. **A program sorts an array of integer. Write down the code that tests the sorting algorithm of written** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
+
 ## Software Architecture & Design Patterns (MVC) (13)
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
@@ -240,7 +242,7 @@
 
 13. **Explain desin pattern MVC with appropriate figure.** *[NESCO Manager (Software) 2018 compact it 1209 (ET: N/A)]*
 
-## UML Diagrams (Class, Use Case, Sequence) (12)
+## UML Diagrams (Class, Use Case, Sequence) (13)
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
 
@@ -265,6 +267,8 @@
 11. **Write down the use case diagram for ATM.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162-1163 (ET: N/A)]*
 
 12. **Draw UML diagram of composite design pattern.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
+
+13. **Write the use cases of withdrawing money for ATM card.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1223-1224 (ET: N/A)]*
 
 ## Software Requirements Engineering (10)
 

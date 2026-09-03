@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 191 questions
+**Table of Contents** — 12 subtopics · 192 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,8 +11,8 @@
 | 6 | [Memory Management & Paging](#memory-management--paging-16) | 16 |
 | 7 | [Process Management & Process States](#process-management--process-states-12) | 12 |
 | 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
-| 9 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
-| 10 | [File Systems & Disk Management](#file-systems--disk-management-6) | 6 |
+| 9 | [File Systems & Disk Management](#file-systems--disk-management-7) | 7 |
+| 10 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
 | 11 | [Windows & System Administration](#windows--system-administration-4) | 4 |
 | 12 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
 
@@ -485,6 +485,22 @@ int main(int argc, char *argv[]){
 
 11. **Define thread cancellation, target thread. Enumerate the different RAID level.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1106-1107 (ET: AUST)]*
 
+## File Systems & Disk Management (7)
+
+1. **NTFS stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
+
+2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
+
+3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
+
+4. **A file system with 300 GB uses a file descriptor with 8 direct block address, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system.** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
+
+5. **(খ) Direct or Random Access File-প্রক্রিয়াকরণ চিত্রসহ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
+
+6. **(a) An I/O system with a simple disk gets an average 50 I/O requests per second and average time for a disk to server an I/O request is 10ms. Calculate the utilization of I/O system.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
+
+7. **Explain inode data structures in Linux OS.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220-1221 (ET: N/A)]*
+
 ## CPU Scheduling (6)
 
 1. A system has three processes with the following arrival times and CPU burst times:
@@ -539,20 +555,6 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 | P3 | 6 |
 
 6. **(খ) CPU Scheduling কী? যে যে কারণে CPU Scheduling করতে হয় সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
-
-## File Systems & Disk Management (6)
-
-1. **NTFS stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
-
-2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
-
-3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
-
-4. **A file system with 300 GB uses a file descriptor with 8 direct block address, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system.** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
-
-5. **(খ) Direct or Random Access File-প্রক্রিয়াকরণ চিত্রসহ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
-
-6. **(a) An I/O system with a simple disk gets an average 50 I/O requests per second and average time for a disk to server an I/O request is 10ms. Calculate the utilization of I/O system.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
 
 ## Windows & System Administration (4)
 

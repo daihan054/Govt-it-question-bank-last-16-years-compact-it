@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 38 questions
+**Table of Contents** — 9 subtopics · 39 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Electrical Circuits & Protection Devices](#electrical-circuits--protection-devices-12) | 12 |
+| 1 | [Electrical Circuits & Protection Devices](#electrical-circuits--protection-devices-13) | 13 |
 | 2 | [Transistors (BJT & FET)](#transistors-bjt--fet-9) | 9 |
 | 3 | [Semiconductor Devices & Diodes](#semiconductor-devices--diodes-4) | 4 |
 | 4 | [Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)](#digital-to-analog--analog-to-digital-converters-dacadc-4) | 4 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Electrical Circuits & Protection Devices (12)
+## Electrical Circuits & Protection Devices (13)
 
 1. Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why? *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -42,6 +42,8 @@
 11. **EEE related 3 math question.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
 
 12. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+13. **What is the difference between battery and capacitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
 
 ## Transistors (BJT & FET) (9)
 

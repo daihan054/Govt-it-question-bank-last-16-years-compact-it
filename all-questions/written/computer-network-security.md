@@ -82,7 +82,7 @@
 
 29. **(b) What is DHCP Starvation Attack? Explain briefly.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1138 (ET: N/A)]*
 
-30. **Write down the name of different attack through internet.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
+30. **Write down the name of different attack through internet.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*, *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
 
 31. **Briefly describe about DoS, IP address spoofing and Man-in-the-middle attacks.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
 
