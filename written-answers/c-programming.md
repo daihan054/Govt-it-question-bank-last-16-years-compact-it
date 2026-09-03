@@ -8746,3 +8746,48 @@ int main() {
 ## Command Line Arguments & Basic Programs (1)
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1361 (ET: BUET)]*
+
+   Answer: Command line arguments reach the program through `main(int argc, char *argv[])`. They arrive as strings, so each must be converted to an integer with `atoi()`.
+
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+
+   int main(int argc, char *argv[]) {
+       int i, sum = 0;
+
+       if (argc < 2) {
+           printf("Usage: %s num1 num2 num3 ...\n", argv[0]);
+           return 1;
+       }
+
+       for (i = 1; i < argc; i++) {       // start at 1, skip the program name
+           sum += atoi(argv[i]);
+       }
+
+       printf("Sum of %d integers = %d\n", argc - 1, sum);
+       return 0;
+   }
+   ```
+
+   Understanding the parameters
+   - `argc` — argument count, including the program name itself.
+   - `argv[]` — argument vector, an array of strings. `argv[0]` is the program name, `argv[1]` onward are the actual arguments, and `argv[argc]` is `NULL`.
+
+   Sample run
+   ```
+   $ gcc sum.c -o sum
+   $ ./sum 10 20 30 40
+   Sum of 4 integers = 100
+   ```
+   - Here `argc = 5` and `argv` holds `{"./sum", "10", "20", "30", "40", NULL}`.
+   - The loop starts at `i = 1` because `argv[0]` is the program name, not a number.
+
+   Safer version using `strtol` instead of `atoi`
+   ```c
+   char *end;
+   long v = strtol(argv[i], &end, 10);
+   if (*end != '\0') { printf("'%s' is not a valid integer\n", argv[i]); return 1; }
+   sum += (int)v;
+   ```
+   - `atoi()` silently returns 0 for invalid input such as `"abc"`, whereas `strtol()` reports where parsing stopped, so bad input can be detected.
