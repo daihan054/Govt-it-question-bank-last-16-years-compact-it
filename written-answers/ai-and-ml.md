@@ -797,24 +797,29 @@
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1364 (ET: BUET)]*
 
-   Answer: The Apriori algorithm is used for market basket analysis. It is an unsupervised association rule mining algorithm that finds which items are bought together. FP-Growth is a faster alternative for large datasets.
+   Answer: The Apriori algorithm is used for market basket analysis. It is an unsupervised association rule mining algorithm that finds which items customers buy together. FP-Growth is a faster alternative on very large datasets.
 
    Three measures used
-   - Support — how often the itemset appears: `Support(A) = (transactions containing A) / (total transactions)`
-   - Confidence — how often B is bought when A is bought: `Confidence(A→B) = Support(A ∪ B) / Support(A)`
-   - Lift — how much stronger the rule is than chance: `Lift(A→B) = Confidence(A→B) / Support(B)`. Lift > 1 means a real positive relation.
+   - Support — how often an itemset appears: `Support(X) = (transactions containing X) / (total transactions)`
+   - Confidence — how often Y is bought when X is bought: `Confidence(X → Y) = Support(X ∪ Y) / Support(X)`
+   - Lift — how much stronger the rule is than chance: `Lift(X → Y) = Confidence(X → Y) / Support(Y)`. A lift above 1 means a genuine positive association.
 
    Steps of the Apriori algorithm
-   - Step 1 — set a minimum support and a minimum confidence threshold.
-   - Step 2 — scan the transaction database and count the support of every single item (1-itemsets).
-   - Step 3 — drop the items whose support is below the minimum; the rest are frequent 1-itemsets.
-   - Step 4 — join the frequent 1-itemsets to form candidate 2-itemsets, count their support and drop the weak ones.
-   - Step 5 — repeat the join-and-prune step for 3-itemsets, 4-itemsets and so on, until no new frequent itemset is found.
-   - Step 6 — from each frequent itemset, generate association rules and keep only the rules that meet the minimum confidence.
-   - Step 7 — rank the surviving rules by lift and use the strong ones for business decisions.
+   - Step 1 — fix a minimum support and a minimum confidence threshold.
+   - Step 2 — scan the transaction database and count the support of every single item, giving the candidate 1-itemsets.
+   - Step 3 — prune the items whose support falls below the threshold. The rest are the frequent 1-itemsets.
+   - Step 4 — join the frequent 1-itemsets to form candidate 2-itemsets, count their support and prune the weak ones.
+   - Step 5 — repeat this join-and-prune step for 3-itemsets, 4-itemsets and so on, until no new frequent itemset is found.
+   - Step 6 — from each frequent itemset generate association rules, and keep only those meeting the minimum confidence.
+   - Step 7 — rank the surviving rules by lift and act on the strong ones.
 
-   - Apriori property used in pruning: if an itemset is not frequent, none of its supersets can be frequent. This cuts the search space heavily.
-   - Example: a rule `{Bread, Butter} → {Milk}` with support 8%, confidence 70% and lift 1.6 tells the shop to place milk near bread and butter, or to offer a combo discount.
+   Apriori property used for pruning
+   - If an itemset is not frequent, then no superset of it can be frequent either.
+   - This single rule removes a huge number of candidates without counting them, which is what makes the algorithm practical.
+
+   Example
+   - From 5 transactions with 50% minimum support, suppose only `{Bread, Milk}` clears the threshold among pairs.
+   - The rule `Bread → Milk` has confidence 75%, which passes a 70% threshold, so the shop places milk near bread or offers a combo discount.
 
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)
 
