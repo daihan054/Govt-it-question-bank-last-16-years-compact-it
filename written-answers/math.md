@@ -570,23 +570,114 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **একটি বৃত্তের সমীকরণ দেয়া ছিল এবং একটি বিন্দুতে স্পর্শক এর সমীকরণ চাওয়া হয়েছিল** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+   Answer:
+   - বৃত্তের সাধারণ সমীকরণ: $x^2 + y^2 + 2gx + 2fy + c = 0$
+   - বৃত্তের উপরস্থ $(x_1, y_1)$ বিন্দুতে স্পর্শকের সমীকরণ:
+     $$xx_1 + yy_1 + g(x + x_1) + f(y + y_1) + c = 0$$
+   - মূলবিন্দু $(0, 0)$ কেন্দ্রবিশিষ্ট বৃত্ত $x^2 + y^2 = r^2$ এর ক্ষেত্রে স্পর্শক:
+     $$xx_1 + yy_1 = r^2$$
+   - উদাহরণ: $x^2 + y^2 = 25$ বৃত্তের $(3, 4)$ বিন্দুতে স্পর্শক:
+     $$3x + 4y = 25$$
+
 2. **Math : Geometry** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
+
+   Answer:
+   - Standard formulas for competitive bank geometry exams:
+     - Triangle:
+       - Right triangle: $\text{Hypotenuse}^2 = \text{Base}^2 + \text{Height}^2$, $\text{Area} = \frac{1}{2} \times \text{Base} \times \text{Height}$
+       - Equilateral triangle: $\text{Area} = \frac{\sqrt{3}}{4} a^2$, $\text{Height} = \frac{\sqrt{3}}{2} a$
+       - Hero's formula: $\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}$, where $s = \frac{a+b+c}{2}$
+     - Quadrilaterals:
+       - Rectangle: $\text{Area} = L \times W$, $\text{Perimeter} = 2(L + W)$, $\text{Diagonal} = \sqrt{L^2 + W^2}$
+       - Square: $\text{Area} = a^2$, $\text{Diagonal} = a\sqrt{2}$
+       - Parallelogram: $\text{Area} = \text{Base} \times \text{Height}$
+       - Trapezium: $\text{Area} = \frac{1}{2}(a + b)h$
+     - Circle: $\text{Area} = \pi r^2$, $\text{Circumference} = 2\pi r$, $\text{Length of arc} = \frac{\theta}{360^\circ} \times 2\pi r$
 
 3. **In the figure, ABCD is a rectangle. The area of quadrilateral EBFD is one-half the area of the rectangle ABCD. Which one of the following is the value of AD?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
+   Answer:
+   - Let rectangle $ABCD$ have sides $AB = CD = x$ and $AD = BC = y$.
+   - Total area of rectangle $ABCD = x \times y = xy$.
+   - Given, $\text{Area of quadrilateral } EBFD = \frac{1}{2} xy$.
+   - Therefore, the remaining area consists of triangles $\Delta ADE$ and $\Delta BCF$:
+     $$\text{Area}(\Delta ADE) + \text{Area}(\Delta BCF) = xy - \frac{1}{2}xy = \frac{1}{2}xy$$
+   - Since $\text{Area}(\Delta ADE) = \frac{1}{2} \times AD \times AE$ and $\text{Area}(\Delta BCF) = \frac{1}{2} \times BC \times CF$:
+     $$\frac{1}{2} y(AE) + \frac{1}{2} y(CF) = \frac{1}{2} xy \implies y(AE + CF) = xy \implies AE + CF = x = AB$$
+   - Using the relation $AD = \frac{2 \times \text{Area}(\Delta ADE)}{AE}$, $AD$ is evaluated directly from the given segment lengths.
+
 4. **Two sides of a plot 32m and 24m and the angle between them a perfect right angle. The other two sides measure 25m each and the other three angles are not right angles. What is the area of the plot?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
+
+   Answer:
+   - The plot can be divided into two triangles by drawing a diagonal across the right angle:
+   - Triangle 1 (Right-angled triangle with perpendicular sides 32 m and 24 m):
+     - Hypotenuse (diagonal $d$) $= \sqrt{32^2 + 24^2} = \sqrt{1024 + 576} = \sqrt{1600} = 40\text{ m}$
+     - $\text{Area}_1 = \frac{1}{2} \times 32 \times 24 = 384\text{ m}^2$
+   - Triangle 2 (Isosceles triangle with sides 25 m, 25 m, and base $40\text{ m}$):
+     - Height ($h$) perpendicular to the $40\text{ m}$ base:
+       $$h = \sqrt{25^2 - \left(\frac{40}{2}\right)^2} = \sqrt{25^2 - 20^2} = \sqrt{625 - 400} = \sqrt{225} = 15\text{ m}$$
+     - $\text{Area}_2 = \frac{1}{2} \times \text{base} \times \text{height} = \frac{1}{2} \times 40 \times 15 = 300\text{ m}^2$
+   - Total area of the plot $= \text{Area}_1 + \text{Area}_2 = 384 + 300 = 684\text{ m}^2$
+   - Answer: $684\text{ m}^2$
 
 5. **In the given figure, PQT is a right triangle then what is the area of square QRST.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
+   Answer:
+   - In right triangle $PQT$, side $QT$ forms one side of the square $QRST$.
+   - By Pythagorean Theorem in $\Delta PQT$:
+     $$QT^2 = PQ^2 + PT^2 \quad (\text{when } \angle P = 90^\circ)$$
+   - The area of square $QRST = (\text{side})^2 = QT^2 = PQ^2 + PT^2$.
+   - For example, if $PQ = 3\text{ cm}$ and $PT = 4\text{ cm}$, $QT^2 = 3^2 + 4^2 = 25\text{ cm}^2$.
+   - Answer: $QT^2$ (or $PQ^2 + PT^2$)
+
 6. **AD is the longest side of the triangle ABD shown in the figure, what is the length of longest side of \Delta\text{ABC}?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
+
+   Answer:
+   - In any triangle, the longest side lies opposite to the largest angle.
+   - For $\Delta ABD$: Since $AD$ is the longest side, the angle opposite to it, $\angle ABD$, is the greatest angle in $\Delta ABD$.
+   - For $\Delta ABC$: 
+     - Identify the three interior angles $\angle BAC$, $\angle ABC$, and $\angle BCA$.
+     - By the Sine Rule: $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$, the side facing the maximum angle has the maximum length.
+     - The longest side is the side opposite the largest angle in $\Delta ABC$.
 
 7. **একটি সমদ্বিবাহু সমকোণী ত্রিভুজের অতিভুজ ১২ সেমি হলে, ত্রিভুজটির ক্ষেত্রফল কত বর্গ সেমি?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+   Answer:
+   - ধরি, সমদ্বিবাহু সমকোণী ত্রিভুজের সমান বাহুদ্বয়ের প্রতিটির দৈর্ঘ্য $= a\text{ সেমি}$
+   - পিথাগোরাসের উপপাদ্য অনুসারে:
+     $$a^2 + a^2 = (\text{অতিভুজ})^2 \implies 2a^2 = 12^2 = 144 \implies a^2 = 72$$
+   - ত্রিভুজটির ক্ষেত্রফল $= \frac{1}{2} \times \text{ভূমি} \times \text{উচ্চতা} = \frac{1}{2} a^2$
+   - ক্ষেত্রফল $= \frac{1}{2} \times 72 = 36\text{ বর্গ সেমি}$
+   - উত্তর: 36 বর্গ সেমি
+
 8. **বৃত্তস্থ চতুর্ভুজের একটি কোণ ৮০° হলে তার বিপরীত কোণের মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+   Answer:
+   - উপপাদ্য: বৃত্তস্থ চতুর্ভুজের যেকোনো দুটি বিপরীত কোণের সমষ্টি $180^\circ$ বা দুই সমকোণ।
+   - ধরি, একটি কোণ $= 80^\circ$
+   - অতএব, বিপরীত কোণ $= 180^\circ - 80^\circ = 100^\circ$
+   - উত্তর: $100^\circ$
 
 9. **কোন বর্গক্ষেত্রের ক্ষেত্রফল ১০০ বর্গমিটার। এর বাহুর দৈর্ঘ্য ১০% বৃদ্ধি পেলে এর ক্ষেত্রফলের শতকরা বৃদ্ধির হার কত?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
+   Answer:
+   - প্রাথমিক ক্ষেত্রফল $= 100\text{ বর্গমিটার}$
+   - প্রাথমিক বাহু $= \sqrt{100} = 10\text{ মিটার}$
+   - ১০% বৃদ্ধিতে নতুন বাহু $= 10 + \left(10 \times \frac{10}{100}\right) = 11\text{ মিটার}$
+   - নতুন ক্ষেত্রফল $= 11^2 = 121\text{ বর্গমিটার}$
+   - ক্ষেত্রফল বৃদ্ধি $= 121 - 100 = 21\text{ বর্গমিটার}$
+   - শতকরা বৃদ্ধির হার $= \frac{21}{100} \times 100\% = 21\%$
+   - উত্তর: 21%
+
 10. **৫. সমকোণী ত্রিভুজের সমকোণ সংলগ্ন দুই বাহুর মান ৩ এবং ৪ হলে। ইহার অতিভুজ এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+
+    Answer:
+    - পিথাগোরাসের উপপাদ্য অনুসারে:
+      $$\text{অতিভুজ} = \sqrt{\text{ভূমি}^2 + \text{লম্ব}^2}$$
+    - $\text{অতিভুজ} = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5$
+    - উত্তর: 5
+
+
 
 ## Permutations & Combinations (6)
 
