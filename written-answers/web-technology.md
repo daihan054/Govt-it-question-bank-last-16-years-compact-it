@@ -5626,19 +5626,703 @@
 
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1426 (ET: E-Zone)]*
 
+   Answer: What SOAP is
+   - `SOAP (Simple Object Access Protocol)` is a `protocol` for exchanging structured messages between applications. Every message is an `XML envelope` with a strictly defined format, and the service is described by a `WSDL` file.
+   ```xml
+      <?xml version="1.0"?>
+      <soap:Envelope
+          xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+          <soap:Header>
+              <auth:Credentials>...</auth:Credentials>
+          </soap:Header>
+          <soap:Body>
+              <getBalance>
+                  <accountNo>1234567890</accountNo>
+              </getBalance>
+          </soap:Body>
+      </soap:Envelope>
+   ```
+
+   What a RESTful API is
+   - `REST (Representational State Transfer)` is an `architectural style`, not a protocol. Resources are identified by `URLs`, and the standard `HTTP methods` operate on them. The data is usually `JSON`.
+   ```
+      GET    /api/accounts/1234567890            read it
+      POST   /api/accounts                       create one
+      PUT    /api/accounts/1234567890            replace it
+      PATCH  /api/accounts/1234567890            update part of it
+      DELETE /api/accounts/1234567890            delete it
+
+      Response :
+           { "accountNo": "1234567890",
+             "balance": 45000,
+             "currency": "BDT" }
+   ```
+
+   The one main difference in how they exchange data
+   ```
+      SOAP  must use XML, wrapped in a mandatory SOAP ENVELOPE with
+            a Header and a Body, and the format is fixed by the
+            WSDL contract.
+
+      REST  can use ANY format - JSON , XML , plain text , HTML -
+            and JSON is normal in practice. There is no envelope :
+            the data is sent as the plain HTTP body.
+   ```
+   - Stated in one sentence: `SOAP is XML-only inside a rigid envelope; REST sends plain data — usually JSON — in the HTTP body with no envelope at all`. That is why a REST response is a fraction of the size of the equivalent SOAP response, and why REST is the choice for mobile applications and public web APIs.
+
+   The fuller comparison
+
+   | Point | SOAP | REST |
+   |---|---|---|
+   | Nature | A `protocol`, with strict rules | An architectural `style` |
+   | Data format | `XML` only | `JSON`, XML, text — usually JSON |
+   | Envelope | `Required` | None |
+   | Message size | `Large` — verbose | `Small` |
+   | Transport | HTTP, SMTP, TCP, JMS | `HTTP only` |
+   | Contract | `WSDL` — formal and machine-readable | OpenAPI / Swagger, optional |
+   | Operations | Named methods — `getBalance()` | `HTTP verbs` on URLs |
+   | Caching | Not cacheable | `GET is cacheable` |
+   | Security | `WS-Security` — message-level, end to end | HTTPS/TLS, OAuth 2.0 — transport-level |
+   | Transactions | `Built in` — WS-AtomicTransaction | Not built in |
+   | Error reporting | A `SOAP Fault` element | `HTTP status codes` |
+   | Learning curve | `Steep` | Gentle |
+
+   Where each is used
+   ```
+      SOAP is still used where the requirements are formal :
+           BANKING and payment systems - ISO 20022 messaging
+           telecom provisioning
+           government and enterprise integration
+           anywhere ACID TRANSACTIONS, message-level security or a
+                guaranteed contract is required
+
+      REST is used almost everywhere else :
+           public web APIs , mobile application back ends ,
+           microservices , cloud services
+   ```
+   - The reason banks still run SOAP: `WS-Security` signs and encrypts the `message` rather than the connection, so it stays protected as it passes through intermediaries, and `WS-AtomicTransaction` gives a distributed two-phase commit. REST has no equivalent of either, and for a funds transfer crossing several systems those guarantees are what matter.
+
 2. **What is API?** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
+
+   Answer: What an API is
+   - `API` stands for `Application Programming Interface`. It is a defined set of rules through which `one piece of software talks to another`. It states what requests can be made, in what format, and what will come back — while `hiding how the work is actually done`.
+   ```
+      THE IDEA IS ABSTRACTION
+
+      An API is a CONTRACT. The caller needs to know only WHAT to
+      send and WHAT comes back, never HOW it is computed. The
+      provider can rewrite the internals completely, and as long as
+      the contract holds, nothing breaks.
+   ```
+
+   The analogy usually given
+   ```
+      A RESTAURANT
+
+           You (the client)  ->  the WAITER (the API)  ->  the
+           KITCHEN (the server)
+
+      You read the MENU and place an order in the expected form.
+      You do not enter the kitchen or learn the recipes. The waiter
+      carries the request in and the food back out.
+
+      Change the chef, the stove or the recipe - the menu still
+      works. That is exactly what an API guarantees.
+   ```
+
+   Kinds of API
+   ```
+      WEB API      called over HTTP, between separate systems
+           REST , SOAP , GraphQL
+      LIBRARY API  the functions a library exposes
+           printf() in C , ArrayList in Java
+      OPERATING SYSTEM API   system calls
+           open() , read() , the Win32 API
+      DATABASE API JDBC , ODBC
+      HARDWARE API a device driver interface
+   ```
+
+   Example — a REST web API
+   ```
+      REQUEST
+           GET https://api.weather.com/v1/current?city=Dhaka
+           Authorization: Bearer <api-key>
+
+      RESPONSE
+           {
+             "city": "Dhaka",
+             "temperature": 32,
+             "humidity": 78,
+             "condition": "Partly cloudy"
+           }
+
+      The application shows 32 degrees. It has no idea where the
+      satellites are, how the forecast is computed, or what
+      database holds it.
+   ```
+
+   Everyday examples
+   ```
+      GOOGLE MAPS API        a ride-sharing app shows a map without
+           drawing one
+      bKash / SSLCOMMERZ API an e-commerce site takes a payment
+           without handling card data itself
+      NID VERIFICATION API   a bank checks an applicant's NID
+           against the Election Commission's record
+      SMS GATEWAY API        an application sends an OTP
+      FACEBOOK LOGIN API     "Sign in with Facebook" - no password
+           is stored by the site
+      WEATHER , currency and stock-price APIs
+   ```
+
+   Why APIs matter
+   ```
+      REUSE          use a service someone else built, instead of
+           building it
+      ABSTRACTION    the internals can change without breaking the
+           caller
+      INTEGRATION    two systems written in different languages,
+           by different companies, can work together
+      SECURITY       only what the API exposes is reachable ; the
+           database is never touched directly
+      PARALLEL WORK  front-end and back-end teams agree the API and
+           then work at the same time
+      SCALABILITY    the provider can move, replicate or rewrite
+           the service freely
+   ```
+   - One point worth stating: an API is a `public URL`. Anyone can call it directly with `curl`, without your application. So `authentication` (an API key, `OAuth 2.0`), `authorisation`, `input validation` and `rate limiting` must all be enforced on the server — the fact that only your own app is supposed to call it proves nothing.
 
 3. **What is an API?** *[BBA Assistant Programmer 12.07.2025 compact it 1432 (ET: BUET)]*
 
+   Answer: What an API is
+   - `API` stands for `Application Programming Interface`. It is a defined set of rules through which `one piece of software communicates with another` — stating what requests may be made, in what format, and what will be returned, while `hiding how the work is done`.
+   ```
+      An API is a CONTRACT. The caller needs to know only WHAT to
+      send and WHAT comes back, never HOW it is computed. The
+      provider may rewrite the internals entirely and, as long as
+      the contract holds, nothing breaks.
+   ```
+
+   The restaurant analogy
+   ```
+      You (the client)  ->  the WAITER (the API)  ->  the KITCHEN
+                                                      (the server)
+
+      You order from the MENU in the expected form. You never enter
+      the kitchen or learn the recipes. Change the chef or the
+      stove - the menu still works.
+   ```
+
+   Example
+   ```
+      REQUEST
+           GET https://api.exchangerate.com/v1/latest?base=USD
+           Authorization: Bearer <api-key>
+
+      RESPONSE
+           {
+             "base": "USD",
+             "date": "2026-09-04",
+             "rates": { "BDT": 121.50, "EUR": 0.92 }
+           }
+
+      The application displays the rate. It has no idea which
+      markets were consulted or how the figure was derived.
+   ```
+
+   Types of API
+   ```
+      WEB API      over HTTP , between systems : REST , SOAP ,
+                   GraphQL
+      LIBRARY API  the functions a library exposes : printf() ,
+                   ArrayList
+      OS API       system calls : open() , read() , Win32
+      DATABASE API JDBC , ODBC
+      HARDWARE API a device driver interface
+   ```
+   ```
+      BY ACCESS
+        PUBLIC / OPEN    anyone may use it - Google Maps
+        PARTNER          only for approved business partners
+        PRIVATE          internal to one organisation
+        COMPOSITE        one call that combines several services
+   ```
+
+   Why APIs are used
+   ```
+      REUSE          use a service someone else built
+      ABSTRACTION    the internals can change without breaking the
+           caller
+      INTEGRATION    systems in different languages, by different
+           companies, can work together
+      SECURITY       only what the API exposes is reachable ; the
+           database is never touched directly
+      PARALLEL WORK  front-end and back-end teams agree the
+           interface first, then work simultaneously
+   ```
+
+   Everyday examples
+   ```
+      Google Maps API        a map inside another application
+      bKash / SSLCOMMERZ     taking a payment without handling card
+           data
+      NID verification API   a bank checking an applicant's NID
+      SMS gateway API        sending an OTP
+      Facebook Login         signing in without storing a password
+   ```
+   - The security point that must be stated: an API endpoint is a `public URL`. Anyone can call it directly with `curl`, without your application. So `authentication` (an API key or `OAuth 2.0`), `authorisation`, `input validation` and `rate limiting` all have to be enforced `on the server` — the fact that only your own app is meant to call it proves nothing.
+
 4. **Write difference between REST API and SOAP API.** *[BKSP Assistant Programmer 13.07.2024 compact it 1460 (ET: N/A)]*
+
+   Answer: Difference between a REST API and a SOAP API
+
+   | Point | SOAP API | REST API |
+   |---|---|---|
+   | Full form | `Simple Object Access Protocol` | `Representational State Transfer` |
+   | Nature | A `protocol` with strict rules | An architectural `style` |
+   | Data format | `XML` only | `JSON`, XML, text — usually JSON |
+   | Envelope | `Required` — Header and Body | `None` |
+   | Message size | `Large` — verbose | `Small` |
+   | Transport | HTTP, SMTP, TCP, JMS | `HTTP only` |
+   | Contract | `WSDL` — formal, machine-readable | OpenAPI / Swagger, optional |
+   | Operations | Named methods — `getBalance()` | `HTTP verbs` on resource URLs |
+   | Caching | `Not cacheable` | `GET is cacheable` |
+   | Security | `WS-Security` — message-level, end to end | HTTPS/TLS, OAuth 2.0 — transport-level |
+   | Transactions | `Built in` — WS-AtomicTransaction | Not built in |
+   | Errors reported by | A `SOAP Fault` element | `HTTP status codes` |
+   | Statelessness | Can be stateful | `Stateless` by design |
+   | Performance | Slower — XML parsing | `Faster` |
+   | Learning curve | `Steep` | Gentle |
+   | Browser-friendly | No | `Yes` — callable from JavaScript |
+
+   SOAP — a request
+   ```xml
+      POST /BankService HTTP/1.1
+      Content-Type: text/xml
+
+      <?xml version="1.0"?>
+      <soap:Envelope
+          xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+          <soap:Header>
+              <auth:Credentials>...</auth:Credentials>
+          </soap:Header>
+          <soap:Body>
+              <getBalance>
+                  <accountNo>1234567890</accountNo>
+              </getBalance>
+          </soap:Body>
+      </soap:Envelope>
+   ```
+
+   REST — the same operation
+   ```
+      GET /api/accounts/1234567890 HTTP/1.1
+      Authorization: Bearer <token>
+
+      RESPONSE
+      { "accountNo": "1234567890", "balance": 45000,
+        "currency": "BDT" }
+   ```
+   ```
+      THE FULL SET OF REST OPERATIONS
+
+      GET    /api/accounts          list them
+      GET    /api/accounts/123      read one
+      POST   /api/accounts          create one
+      PUT    /api/accounts/123      replace it
+      PATCH  /api/accounts/123      update part of it
+      DELETE /api/accounts/123      delete it
+
+      The URL names the RESOURCE ; the HTTP VERB names the action.
+      A URL such as /api/getAccount?id=123 is a common mistake -
+      it puts the verb in the URL, which is not REST.
+   ```
+
+   Where each is used
+   ```
+      SOAP is still used where the requirements are formal :
+           BANKING and payment systems - ISO 20022 messaging
+           telecom provisioning
+           government and enterprise integration
+           anywhere ACID TRANSACTIONS, message-level security or a
+                guaranteed machine-readable contract is required
+
+      REST is used almost everywhere else :
+           public web APIs , mobile back ends , microservices ,
+           cloud services , anything called from a browser
+   ```
+   - Why banks still run SOAP: `WS-Security` signs and encrypts the `message` itself rather than the connection, so it remains protected while passing through intermediaries; and `WS-AtomicTransaction` provides a distributed two-phase commit. REST has no equivalent of either, and for a funds transfer crossing several systems those guarantees are the whole point.
+   - The third option worth naming: `GraphQL`, where the client specifies exactly which fields it wants in a single request. It removes REST's problems of `over-fetching` (receiving fields you do not need) and `under-fetching` (having to make several calls), at the cost of losing simple HTTP caching.
 
 5. **What is API? Explain with example.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
+   Answer: What an API is
+   - `API` stands for `Application Programming Interface`. It is a defined set of rules through which `one piece of software talks to another` — stating what requests may be made, in what format, and what will be returned, while `hiding how the work is done`.
+   ```
+      An API is a CONTRACT. The caller needs to know only WHAT to
+      send and WHAT comes back, never HOW it is produced. The
+      provider may rewrite the internals completely and, as long as
+      the contract holds, nothing breaks.
+   ```
+
+   The analogy
+   ```
+      A RESTAURANT
+
+           You (client) -> the WAITER (API) -> the KITCHEN (server)
+
+      You order from the MENU in the expected form. You never enter
+      the kitchen or learn the recipes. Change the chef, the stove
+      or the recipe - the menu still works.
+   ```
+
+   Example 1 — a payment gateway API, the case a bank exam wants
+   ```
+      An e-commerce site must take payment by bKash. It does NOT
+      build a payment system ; it CALLS the bKash API.
+
+      REQUEST
+           POST https://api.bkash.com/v1/payment/create
+           Authorization: Bearer <token>
+           Content-Type: application/json
+
+           {
+             "amount": 1500,
+             "currency": "BDT",
+             "merchantInvoiceNumber": "INV-2026-0912"
+           }
+
+      RESPONSE
+           {
+             "paymentID": "TR0011abc456",
+             "bkashURL": "https://pay.bkash.com/TR0011abc456",
+             "status": "Initiated"
+           }
+
+      The site redirects the customer to bkashURL. The customer
+      enters their PIN ON BKASH'S OWN PAGE, so the shop never sees
+      it. When payment completes, bKash calls the shop back.
+
+      WHAT THE API GAVE
+        the shop handles NO PIN and NO card data - so it needs no
+             PCI-DSS certification for them
+        bKash can change its internal system freely
+        the shop wrote no payment logic at all
+   ```
+
+   Example 2 — a library API
+   ```java
+      // Java Collections API
+      List<String> names = new ArrayList<>();
+      names.add("Rahim");            // an API method
+      names.sort(null);              // another
+      int n = names.size();
+
+      You call add() without knowing whether an ArrayList uses an
+      array, how it grows, or how the sort is implemented. The
+      METHOD SIGNATURES are the API.
+   ```
+
+   Example 3 — a weather API
+   ```
+      REQUEST   GET https://api.weather.com/v1/current?city=Dhaka
+
+      RESPONSE  { "city": "Dhaka", "temperature": 32,
+                  "humidity": 78 }
+
+      The application shows 32 degrees. It has no idea where the
+      satellites are or how the forecast is computed.
+   ```
+
+   Types of API
+   ```
+      WEB API      over HTTP : REST , SOAP , GraphQL
+      LIBRARY API  the functions a library exposes
+      OS API       system calls : open() , read() , Win32
+      DATABASE API JDBC , ODBC
+      HARDWARE API a device driver interface
+   ```
+
+   Why APIs are used
+   ```
+      REUSE          use a service someone else built
+      ABSTRACTION    the internals may change without breaking the
+           caller
+      INTEGRATION    different languages, different companies, one
+           working system
+      SECURITY       only what the API exposes is reachable
+      PARALLEL WORK  front-end and back-end teams agree the
+           interface, then work simultaneously
+   ```
+   - The security point: an API endpoint is a `public URL`. Anyone can call it directly with `curl`, without your application, so `authentication` (an API key or `OAuth 2.0`), `authorisation`, `input validation` and `rate limiting` must all be enforced on the `server`.
+
 6. **What is the two prime advantages of RESTful API?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 756 (ET: N/A)]*
+
+   Answer: The two prime advantages of a RESTful API are `statelessness`, which gives scalability, and its `uniform interface over standard HTTP`, which gives simplicity and interoperability.
+
+   1. Statelessness — and therefore scalability
+   ```
+      Every request carries EVERYTHING the server needs. The server
+      stores NO session for the client and forgets it immediately
+      after answering.
+
+      WHY THIS IS THE PRIME ADVANTAGE
+
+           Request 1 -> may be answered by SERVER A
+           Request 2 -> may be answered by SERVER B
+           Request 3 -> may be answered by SERVER C
+
+           None of them needs to know what the others did.
+
+      CONSEQUENCES
+        a LOAD BALANCER may send any request to any server -
+             no sticky sessions, no shared session store
+        capacity is increased by simply ADDING SERVERS -
+             HORIZONTAL SCALING
+        a server crash loses NOTHING, because it held nothing
+        responses to GET are CACHEABLE, so a CDN or a proxy can
+             answer without touching the server at all
+        no memory is consumed for a client who has gone away
+
+      This is why REST underpins large-scale services. A stateful
+      design ties each user to one machine, and that is what limits
+      how far it can grow.
+   ```
+
+   2. A uniform interface over standard HTTP — simplicity and interoperability
+   ```
+      REST uses what the web already has : URLs to name resources,
+      and the standard HTTP VERBS to act on them.
+
+           GET    /api/accounts/123     read
+           POST   /api/accounts         create
+           PUT    /api/accounts/123     replace
+           PATCH  /api/accounts/123     update part
+           DELETE /api/accounts/123     delete
+
+      Plus standard HTTP STATUS CODES for the outcome :
+           200 OK , 201 Created , 400 Bad Request ,
+           401 Unauthorized , 404 Not Found , 500 Server Error
+
+      CONSEQUENCES
+        ANY client in ANY language can call it - a browser, a
+             mobile app, a Python script, curl
+        no special library and no WSDL contract is needed
+        it is testable from a browser address bar
+        JSON keeps the payload SMALL, which matters on a mobile
+             network
+        it uses HTTP CACHING, PROXIES and COMPRESSION for free,
+             because it is ordinary HTTP
+        a new developer can learn the whole API from a few example
+             URLs
+   ```
+
+   The other advantages, in brief
+   ```
+      LIGHTWEIGHT      JSON instead of a verbose XML envelope, so
+           a REST response is a fraction of the SOAP equivalent
+      LANGUAGE and PLATFORM INDEPENDENT
+      SEPARATION of CLIENT and SERVER - either may be rewritten
+           independently
+      LAYERED - a gateway, a cache or a load balancer may sit
+           between client and server without either knowing
+      EASY TO EVOLVE - a new resource is a new URL
+   ```
+
+   What REST does not provide, and should be mentioned
+   ```
+      NO BUILT-IN TRANSACTIONS   there is no equivalent of
+           WS-AtomicTransaction, so a multi-step operation
+           spanning services must be handled by the application
+      TRANSPORT-LEVEL SECURITY ONLY   HTTPS protects the
+           CONNECTION ; SOAP's WS-Security protects the MESSAGE,
+           so it stays protected through intermediaries
+      NO FORMAL CONTRACT by default - OpenAPI or Swagger has to be
+           added
+      OVER-FETCHING and UNDER-FETCHING - a fixed response may
+           return more fields than needed, or force several calls.
+           GraphQL exists to solve exactly this
+   ```
+   - If only `two` are to be named, `statelessness` and the `uniform HTTP interface` are the right answer, because every other benefit follows from them: caching, horizontal scaling and crash resilience all come from statelessness, and language independence, testability and small payloads all come from using plain HTTP and JSON.
 
 7. **What is API?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
 
+   Answer: What an API is
+   - `API` stands for `Application Programming Interface`. It is a defined set of rules through which `one piece of software communicates with another` — stating what requests may be made, in what format, and what will be returned, while `hiding how the work is done`.
+   ```
+      An API is a CONTRACT. The caller needs to know only WHAT to
+      send and WHAT comes back, never HOW it is produced. The
+      provider may rewrite the internals completely, and as long as
+      the contract holds, nothing breaks.
+   ```
+
+   The analogy
+   ```
+      You (client)  ->  the WAITER (API)  ->  the KITCHEN (server)
+
+      You order from the MENU in the expected form. You never enter
+      the kitchen. Change the chef or the recipe - the menu still
+      works.
+   ```
+
+   Example
+   ```
+      REQUEST
+           GET https://api.weather.com/v1/current?city=Dhaka
+           Authorization: Bearer <api-key>
+
+      RESPONSE
+           { "city": "Dhaka", "temperature": 32, "humidity": 78 }
+
+      The application shows 32 degrees, knowing nothing about how
+      the figure was obtained.
+   ```
+
+   Types
+   ```
+      WEB API      over HTTP , between systems : REST , SOAP ,
+                   GraphQL
+      LIBRARY API  the functions a library exposes : printf() ,
+                   ArrayList
+      OS API       system calls : open() , read() , Win32
+      DATABASE API JDBC , ODBC
+      HARDWARE API a device driver interface
+   ```
+
+   Why APIs are used
+   ```
+      REUSE          use a service someone else built
+      ABSTRACTION    the internals may change without breaking the
+           caller
+      INTEGRATION    systems in different languages, written by
+           different companies, work together
+      SECURITY       only what the API exposes is reachable ; the
+           database is never touched directly
+      PARALLEL WORK  front-end and back-end teams agree the
+           interface first, then work at the same time
+   ```
+
+   Everyday examples
+   ```
+      Google Maps API      a map inside another application
+      bKash / SSLCOMMERZ   taking a payment without handling card
+           data
+      NID verification     a bank checking an applicant's NID
+      SMS gateway          sending an OTP
+      Facebook Login       signing in without storing a password
+   ```
+   - The security point worth stating: an API endpoint is a `public URL`. Anyone can call it directly with `curl`, without your application, so `authentication` (an API key or `OAuth 2.0`), `authorisation`, `input validation` and `rate limiting` all have to be enforced on the `server`.
+
 8. **What is SOAP?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1157 (ET: DU)]*
+
+   Answer: What SOAP is
+   - `SOAP` stands for `Simple Object Access Protocol`. It is a `W3C standard protocol` for exchanging structured information between applications. Every message is an `XML document` wrapped in a mandatory `envelope`, and the service is described by a `WSDL` file.
+   ```
+      SOAP is a PROTOCOL, not a style. Its message format, error
+      format and processing rules are all fixed by the standard -
+      which is exactly why it is used where a formal, verifiable
+      contract is required.
+   ```
+
+   The message structure
+   ```xml
+      <?xml version="1.0"?>
+      <soap:Envelope
+          xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+
+          <soap:Header>
+              <auth:Credentials>
+                  <auth:Username>bankuser</auth:Username>
+                  <auth:Token>xyz789</auth:Token>
+              </auth:Credentials>
+          </soap:Header>
+
+          <soap:Body>
+              <getBalance xmlns="http://bank.example.com/">
+                  <accountNo>1234567890</accountNo>
+              </getBalance>
+          </soap:Body>
+
+      </soap:Envelope>
+   ```
+   ```
+      THE FOUR PARTS
+
+      ENVELOPE   REQUIRED. The root element. It identifies the
+           document as a SOAP message.
+      HEADER     OPTIONAL. Metadata - authentication credentials,
+           transaction IDs, routing information. This is where
+           WS-Security places its signatures.
+      BODY       REQUIRED. The actual request or response data.
+      FAULT      OPTIONAL, inside the Body. The standard error
+           format :
+                <soap:Fault>
+                    <faultcode>soap:Client</faultcode>
+                    <faultstring>Invalid account number</faultstring>
+                </soap:Fault>
+   ```
+
+   The supporting standards
+   ```
+      WSDL  Web Services Description Language
+           An XML file describing every operation, its parameters
+           and its return types. A client STUB can be GENERATED
+           automatically from it, in any language. This is SOAP's
+           real strength - a machine-readable contract.
+
+      UDDI  Universal Description, Discovery and Integration -
+           a directory of services. Largely unused now.
+
+      WS-* the extension family :
+           WS-Security          message-level signing and
+                encryption
+           WS-AtomicTransaction distributed two-phase commit
+           WS-ReliableMessaging guaranteed delivery
+           WS-Addressing        routing information
+   ```
+
+   Features
+   ```
+      PLATFORM and LANGUAGE INDEPENDENT - everything is XML
+      TRANSPORT INDEPENDENT - it can run over HTTP, SMTP, TCP or
+           JMS, unlike REST which is HTTP only
+      EXTENSIBLE through the WS-* standards
+      STRONGLY TYPED - the WSDL fixes every type
+      BUILT-IN ERROR HANDLING through SOAP Fault
+      MESSAGE-LEVEL SECURITY, not merely transport-level
+   ```
+
+   Advantages and disadvantages
+   ```
+      ADVANTAGES
+        a FORMAL, machine-readable CONTRACT (WSDL) , so client code
+             can be generated
+        WS-SECURITY signs and encrypts the MESSAGE itself, so it
+             stays protected through intermediaries - HTTPS only
+             protects the connection
+        BUILT-IN TRANSACTIONS - a genuine two-phase commit across
+             services
+        RELIABLE MESSAGING with guaranteed delivery
+        works over transports other than HTTP
+
+      DISADVANTAGES
+        VERBOSE - the XML envelope makes messages several times
+             larger than the equivalent JSON
+        SLOWER - XML must be parsed
+        COMPLEX - a steep learning curve
+        NOT CACHEABLE
+        awkward to call from a browser or a mobile app
+   ```
+
+   Where it is still used
+   ```
+      BANKING and payment systems - ISO 20022 messaging
+      telecom provisioning
+      government and large enterprise integration
+      anywhere ACID TRANSACTIONS, message-level security or a
+           guaranteed contract is mandatory
+   ```
+   - Why SOAP survives despite REST: for a funds transfer crossing several institutions, `WS-Security` and `WS-AtomicTransaction` provide guarantees REST has no equivalent of. Where those guarantees are not needed — a public web API, a mobile back end, a microservice — `REST` with JSON is smaller, faster and far simpler, which is why it has taken over everywhere else.
 
 ## Full Stack & Backend Web Development (7)
 
