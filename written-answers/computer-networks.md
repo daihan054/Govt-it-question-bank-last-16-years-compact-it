@@ -4270,47 +4270,621 @@ ii) 211.10.15.4
 
 1. [http://BSCPL.bd.gov](http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to access the [http://BSCPL.bd.gov](http://BSCPL.bd.gov) website. The network uses essential services such as DNS, DHCP, and HTTPS, each performing different functions in the communication process. Identify the roles of DNS, DHCP, and HTTPS, determine which component or configuration could be responsible for this site-specific failure, and explain the possible causes and troubleshooting steps. [BSCCPL AME 21-08-2026 (BUET)]
 
+   Answer: Other sites work but only this one site fails. That single fact narrows the problem sharply: the internet connection, DHCP and the general routing are all fine, so the fault lies in something specific to BSCPL.bd.gov.
+
+   Roles of the three services
+
+   | Service | Role in the communication | Port |
+   |---|---|---|
+   | DNS | Translates the name BSCPL.bd.gov into an IP address. Without it the browser has no address to connect to | UDP/TCP 53 |
+   | DHCP | Automatically gives each client an IP address, subnet mask, default gateway and DNS server address | UDP 67 (server), 68 (client) |
+   | HTTPS | Carries the actual web request over TCP inside a TLS-encrypted channel, and authenticates the server through its certificate | TCP 443 |
+
+   Which component is responsible
+   - `DNS is the most likely cause`, because a failure limited to one domain while every other site works is the classic signature of a name-resolution or a certificate problem for that domain. DHCP can be ruled out immediately — if DHCP were broken, nothing at all would work.
+
+   Possible causes, grouped
+
+   DNS related
+   - The authoritative DNS server for bd.gov is down or unreachable.
+   - The A record for BSCPL.bd.gov is missing, wrong or was mistyped after a change.
+   - The DNS zone or the domain registration has expired.
+   - Stale or poisoned entries in the local resolver cache still point to an old, dead IP.
+   - A split-horizon DNS view returns an internal address that outside users cannot reach.
+   - The TTL was long, so an old record is still cached widely after a genuine IP change.
+
+   HTTPS / certificate related
+   - The TLS certificate has expired, has the wrong common name, or is missing its intermediate chain — the browser then blocks the site.
+   - Only TLS 1.0/1.1 is supported, which modern browsers refuse.
+   - Port 443 is closed on the server or blocked by a firewall.
+
+   Server or network related
+   - The web server process is down, or the server is overloaded.
+   - A firewall or ACL is dropping traffic to that specific IP.
+   - Asymmetric routing or a black-holed route to that prefix at one of the multiple ISPs.
+
+   Troubleshooting steps, in order
+
+   - Step 1 — confirm it is DNS
+   ```
+   nslookup BSCPL.bd.gov
+   dig BSCPL.bd.gov +trace
+   ```
+   If no address is returned, the fault is DNS. If an address is returned, move to step 3.
+
+   - Step 2 — test with a different resolver
+   ```
+   nslookup BSCPL.bd.gov 8.8.8.8
+   ```
+   If Google's resolver answers but the local one does not, the local DNS server or its cache is at fault. Flush it with `ipconfig /flushdns` (Windows) or `systemd-resolve --flush-caches` (Linux).
+
+   - Step 3 — test reachability of the resolved IP
+   ```
+   ping <resolved IP>
+   tracert <resolved IP>
+   telnet <resolved IP> 443
+   ```
+   This separates "name resolves but host unreachable" from "host reachable but service refused".
+
+   - Step 4 — bypass DNS entirely
+   Add a temporary entry in the hosts file mapping the correct IP to the name. If the site then loads, DNS is definitively the problem.
+
+   - Step 5 — check the certificate
+   ```
+   openssl s_client -connect BSCPL.bd.gov:443 -servername BSCPL.bd.gov
+   ```
+   Look at the expiry date, the common name and the chain.
+
+   - Step 6 — check from outside
+   Use an external checking service or a mobile connection. If it works from outside but not inside, the problem is local (firewall, internal DNS view, proxy).
+
+   - Step 7 — check the server itself
+   Confirm the web service is running, review its logs, and verify the firewall allows 443.
+
+   Preventive measures
+   - Two authoritative DNS servers on separate networks.
+   - Monitoring and automatic alerts for certificate expiry and DNS record changes.
+   - Sensible TTL values — lower them before a planned IP change.
+   - DNSSEC to prevent cache poisoning, and regular external availability monitoring.
+
 2. **Write down the DNS function.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
+
+   Answer: DNS (Domain Name System) is the internet's naming service. Its main function is to translate human-readable domain names into machine-readable IP addresses.
+
+   Functions
+   - Name to IP resolution (forward lookup) — www.google.com becomes 142.250.190.78. This is the primary job, and it is why people never have to remember numbers.
+   - IP to name resolution (reverse lookup) — using PTR records in the in-addr.arpa zone. Mail servers rely on this to check that a sending IP matches its claimed name.
+   - Mail routing — MX records tell a sending mail server which host accepts mail for a domain.
+   - Load distribution — several A records for one name, or a short TTL, spread users across servers; this is how CDNs steer traffic.
+   - Service discovery — SRV records advertise which host and port provide a service.
+   - Aliasing — CNAME records point one name at another.
+   - Caching — resolvers store answers for the TTL period, which cuts traffic and speeds up later lookups.
+   - Hierarchy and delegation — the namespace is divided into zones, so no single server has to hold the whole internet.
+
+   Common record types
+
+   | Record | Purpose |
+   |---|---|
+   | A | Name to IPv4 address |
+   | AAAA | Name to IPv6 address |
+   | CNAME | Alias for another name |
+   | MX | Mail exchanger |
+   | NS | Name servers for the zone |
+   | PTR | IP to name (reverse) |
+   | SOA | Start of authority — zone parameters |
+   | TXT | Free text; used for SPF, DKIM and domain verification |
+
+   - DNS uses port 53: UDP for ordinary queries, TCP for zone transfers and for responses larger than 512 bytes.
 
 3. **Why does the Domain Name System (DNS) primarily use UDP as its transport layer protocol instead of TCP? Describe the sequence of events that take place during the DNS name resolution process when a user enters www.companybd.com into a web browser and presses Enter.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1421 (ET: E-Zone)]*
 
+   Answer:
+
+   Why DNS uses UDP rather than TCP
+   - Speed — a DNS query and its reply are a single small exchange. TCP would need a three-way handshake first, roughly tripling the delay before any answer arrives.
+   - Low overhead — a UDP header is 8 bytes against TCP's 20, and there is no connection state to set up or tear down.
+   - Small messages — a typical query and response fit inside 512 bytes, so the segmentation and reliability machinery of TCP is not needed.
+   - Server scalability — a busy resolver handles millions of queries; keeping a TCP connection open for each would exhaust memory and file descriptors. UDP is stateless, so the server just answers and forgets.
+   - Retry is cheap — if a UDP reply is lost, the resolver simply asks again, or asks a different server. That is simpler than TCP's retransmission logic for a one-shot request.
+
+   When DNS does use TCP
+   - Zone transfers (AXFR/IXFR) between primary and secondary servers, which are large and must be reliable.
+   - Any response larger than 512 bytes: the server sets the TC (truncated) flag and the resolver retries over TCP. DNSSEC and IPv6 records often exceed this.
+   - Modern encrypted variants: DoT (DNS over TLS, port 853) and DoH (DNS over HTTPS, port 443).
+
+   Sequence of events for www.companybd.com
+
+   - Step 1 — the browser checks its own cache, then the operating system cache, then the hosts file. If a valid entry exists, resolution stops here.
+   - Step 2 — if not cached, the OS sends a recursive query to the configured resolver, usually the ISP's or 8.8.8.8, on UDP port 53.
+   - Step 3 — the resolver checks its own cache. If it has the answer within its TTL, it returns it immediately.
+   - Step 4 — otherwise the resolver queries a root server. The root does not know the address, but replies with the name servers for `.com`. This is an iterative referral.
+   - Step 5 — the resolver queries the `.com` TLD server, which replies with the authoritative name servers for `companybd.com`.
+   - Step 6 — the resolver queries the authoritative server for companybd.com, which returns the A record for www with its IP address.
+   - Step 7 — the resolver caches the answer for the TTL period and returns it to the client, which also caches it.
+   - Step 8 — the browser now opens a TCP connection to that IP on port 443, completes the TLS handshake, sends the HTTP GET, and renders the page.
+
+   ```
+   Client --recursive--> Resolver --iterative--> Root (.)        "ask .com"
+                                 --iterative--> .com TLD         "ask ns1.companybd.com"
+                                 --iterative--> Authoritative     "93.184.x.x"
+   Client <---answer------ Resolver (caches it for the TTL)
+   ```
+   - Note the pattern: the client makes one recursive query; the resolver does the iterative work of walking down the hierarchy.
+
 4. **What is DHCP?** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
+
+   Answer: DHCP (Dynamic Host Configuration Protocol) is an application-layer protocol that automatically assigns IP addresses and other network settings to devices when they join a network.
+
+   What it supplies
+   - IP address, subnet mask, default gateway, DNS server addresses, and often the domain name, NTP server and lease time.
+
+   Key facts
+   - Ports: UDP 67 for the server, UDP 68 for the client.
+   - It works through the four-step `DORA` exchange: Discover, Offer, Request, Acknowledge.
+   - Addresses are leased for a limited time and must be renewed, normally at 50 percent of the lease (T1) and again at 87.5 percent (T2).
+   - A relay agent (IP helper) forwards DHCP broadcasts across a router, so one server can serve many subnets.
+
+   Advantages
+   - No manual configuration, so no typing errors and no duplicate addresses.
+   - Central management; a change to the gateway or DNS server is made once, on the server.
+   - Efficient reuse of a limited address pool as devices come and go.
+   - Essential for mobile devices that move between networks.
+
+   Disadvantages and risks
+   - No built-in authentication, so a rogue DHCP server can hand out a false gateway and intercept traffic. DHCP snooping on the switch is the defence.
+   - DHCP starvation, where an attacker requests every address in the pool. Port security limits it.
+   - If the server fails, new clients cannot obtain an address.
+
+   - Reservations tie one MAC address to one fixed IP, giving static-like stability with central management.
 
 5. **Which protocol is used by the ping tools?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: The ping tool uses `ICMP` (Internet Control Message Protocol).
+
+   - ping sends an ICMP Echo Request (Type 8) and waits for an ICMP Echo Reply (Type 0).
+   - ICMP is a Network layer (Layer 3) protocol carried directly inside IP, with protocol number 1. It uses no port numbers, because it is not a transport protocol.
+   - What ping reports: whether the host is reachable, the round-trip time in milliseconds, the TTL of the reply, and the percentage of packets lost.
+
+   Other ICMP messages
+
+   | Type | Message | Meaning |
+   |---|---|---|
+   | 0 | Echo Reply | Response to a ping |
+   | 3 | Destination Unreachable | No route, or port closed |
+   | 5 | Redirect | Use a better gateway |
+   | 8 | Echo Request | The ping itself |
+   | 11 | Time Exceeded | TTL reached zero — this is what traceroute exploits |
+
+   - Note: traceroute on Linux uses UDP with increasing TTL by default, while Windows tracert uses ICMP. Many firewalls block ICMP, so a failed ping does not always mean the host is down.
+
 6. **Which server can be used to dinamically assign IP address to the PCs is a LAN?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
+
+   Answer: A `DHCP server` (Dynamic Host Configuration Protocol server) dynamically assigns IP addresses to PCs on a LAN.
+
+   - It hands out the IP address, subnet mask, default gateway and DNS server addresses automatically, so no machine has to be configured by hand.
+   - It runs on UDP port 67, with clients on port 68, and uses the DORA exchange — Discover, Offer, Request, Acknowledge.
+   - It can be a dedicated server (Windows Server, Linux ISC DHCP), or the service built into a router or Layer 3 switch. Home routers all run one.
+   - Each address is given on a lease and returned to the pool when the lease expires, so a limited pool serves many devices over time.
+   - Reservations bind a specific MAC address to a fixed IP for printers and servers.
+   - If no DHCP server answers, a Windows client self-assigns an APIPA address from 169.254.0.0/16, which only allows local communication — that address is a clear sign the DHCP server is unreachable.
 
 7. **Explain how do DHCP work?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)], [BREB Assistant Programmer (AP) 21.02.2025 compact it 1335 (ET: N/A)]*
 
+   Answer: DHCP works through a four-step exchange known as `DORA` — Discover, Offer, Request, Acknowledge. It uses UDP port 67 (server) and 68 (client).
+
+   The four steps
+
+   - 1. DHCP DISCOVER — the client has no address, so it broadcasts to 255.255.255.255 from source 0.0.0.0, asking whether any DHCP server is present. The broadcast carries the client's MAC address.
+   - 2. DHCP OFFER — every DHCP server that hears the discover reserves a free address from its pool and replies with an offer containing that IP, the subnet mask, gateway, DNS servers and the lease time.
+   - 3. DHCP REQUEST — the client accepts one offer (normally the first that arrives) and broadcasts a request naming that server. The broadcast tells the other servers to release the addresses they had reserved.
+   - 4. DHCP ACK — the chosen server confirms the assignment, writes the binding into its database, and the client configures its interface. If the address has become unavailable it sends a DHCP NAK instead, and the client restarts from Discover.
+
+   ```
+   CLIENT                                  SERVER
+     |------- DHCP DISCOVER (broadcast) ----->|
+     |<------ DHCP OFFER  (IP proposed) ------|
+     |------- DHCP REQUEST (broadcast) ------>|
+     |<------ DHCP ACK   (confirmed) ---------|
+           client now has IP, mask, gateway, DNS
+   ```
+
+   Lease renewal
+   - T1, at 50 percent of the lease, the client unicasts a renewal request to the same server.
+   - T2, at 87.5 percent, if there was no reply, the client broadcasts to any server.
+   - If the lease expires with no reply, the client gives up the address and starts DORA again.
+   - `ipconfig /release` and `ipconfig /renew` force these steps manually.
+
+   Across subnets
+   - Routers do not forward broadcasts, so a DHCP relay agent (the `ip helper-address` command) converts the broadcast into a unicast towards the central server. That is how one server can serve many VLANs.
+
+   Security notes
+   - DHCP has no authentication. A rogue server can hand out a false gateway and become a man in the middle; DHCP snooping on the switch blocks offers from untrusted ports.
+   - DHCP starvation exhausts the pool with forged MAC addresses; port security limits the number of MACs per port.
+
 8. **SMTP, DNS, DHCP, NAT এর কাজ কি লিখ?** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
+
+   Answer: (Answered in English, as required for IT topics.)
+
+   SMTP (Simple Mail Transfer Protocol)
+   - Sends and relays email. It pushes a message from the client to its mail server, and from one mail server to the next, until it reaches the recipient's server.
+   - Ports: 25 for server-to-server relay, 587 for client submission with STARTTLS, 465 for implicit TLS.
+   - It is a push protocol and handles sending only. Retrieval is done by POP3 (port 110) or IMAP (port 143).
+
+   DNS (Domain Name System)
+   - Translates domain names into IP addresses (forward lookup) and IP addresses back into names (reverse lookup, using PTR records).
+   - Also directs mail with MX records, distributes load with multiple A records, and caches answers for the TTL period.
+   - Port 53: UDP for queries, TCP for zone transfers and large responses.
+
+   DHCP (Dynamic Host Configuration Protocol)
+   - Automatically assigns an IP address, subnet mask, default gateway and DNS servers to a client joining the network.
+   - Uses the DORA exchange over UDP ports 67 and 68; addresses are leased for a limited time and reused when returned.
+   - Removes manual configuration errors and address conflicts.
+
+   NAT (Network Address Translation)
+   - Translates private IP addresses into a public one, so many internal hosts can share a single public address. This is a major reason IPv4 has lasted so long.
+   - Types: static NAT (one-to-one), dynamic NAT (from a pool) and PAT or NAT overload (many-to-one, distinguished by port number — what home routers use).
+   - It also hides internal addressing, which gives a basic layer of security, but it breaks end-to-end connectivity and complicates protocols such as VoIP and FTP.
 
 9. **What is DNS? What is forward and reverse lookup DNS?** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 658 (ET: N/A)]*
 
+   Answer:
+
+   What is DNS
+   - The Domain Name System is the internet's distributed naming service. It translates human-readable domain names into IP addresses, so users never have to remember numbers.
+   - It is hierarchical: root servers (.) at the top, then TLD servers (.com, .org, .bd), then authoritative servers for each individual domain. Each level delegates to the level below, so no single server holds the whole internet.
+   - It runs on port 53 — UDP for ordinary queries, TCP for zone transfers and large responses — and it caches answers for the TTL period.
+
+   Forward lookup
+   - Converts a `name into an IP address`, which is the normal direction. www.example.com -> 93.184.216.34.
+   - Uses A records (IPv4) and AAAA records (IPv6).
+   - It is what happens every time a browser opens a website.
+
+   Reverse lookup
+   - Converts an `IP address into a name`. 93.184.216.34 -> www.example.com.
+   - Uses PTR records held in the special zone `in-addr.arpa` for IPv4 (or ip6.arpa for IPv6). The IP is written backwards: 34.216.184.93.in-addr.arpa.
+   - Uses: email anti-spam checks (a mail server verifies that the sending IP has a matching PTR record), logging and diagnostics that show names instead of numbers, and troubleshooting with `nslookup <IP>` or `dig -x <IP>`.
+
+   | Point | Forward lookup | Reverse lookup |
+   |---|---|---|
+   | Direction | Name -> IP | IP -> Name |
+   | Record type | A / AAAA | PTR |
+   | Zone | The normal domain zone | in-addr.arpa / ip6.arpa |
+   | Main use | Browsing, any client connection | Mail validation, logging, diagnostics |
+
 10. **What is ICMP, SMTP, POP server, Boot loader and Clustering?** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
+
+    Answer:
+
+    ICMP (Internet Control Message Protocol)
+    - A Network layer protocol carried inside IP (protocol number 1) that reports errors and carries diagnostic messages. It uses no port numbers.
+    - Messages: Echo Request/Reply (ping), Destination Unreachable, Time Exceeded (used by traceroute), Redirect, Source Quench.
+    - It does not carry user data; it exists so that hosts and routers can report problems.
+
+    SMTP (Simple Mail Transfer Protocol)
+    - The application-layer protocol that sends and relays email, from client to server and between servers. Ports 25 (relay), 587 (submission with TLS) and 465 (implicit TLS).
+    - It is a push protocol; retrieval is handled by POP3 or IMAP. Related standards SPF, DKIM and DMARC verify the sender.
+
+    POP server (Post Office Protocol)
+    - A mail server that lets a client download messages from the mailbox, on port 110 (995 with SSL).
+    - POP3 normally downloads and then deletes the message from the server, so mail lives on one device and offline access is easy.
+    - IMAP (port 143, or 993 with SSL) is the alternative: it keeps mail on the server and synchronises folders and read status across many devices, which suits modern multi-device use.
+
+    Boot loader
+    - A small program that runs when a computer is switched on and loads the operating system kernel into memory.
+    - Sequence: BIOS or UEFI performs POST, reads the MBR or the EFI system partition, and hands control to the boot loader, which then loads the kernel.
+    - Examples: GRUB and LILO on Linux, Windows Boot Manager (bootmgr) on Windows, U-Boot on embedded systems. A multi-boot loader shows a menu of installed operating systems.
+
+    Clustering
+    - Joining several computers so they behave as one system, for higher availability and performance.
+    - Types: high-availability clusters (a standby takes over if the active node fails), load-balancing clusters (work is shared among nodes), and high-performance computing clusters (many nodes compute in parallel).
+    - Benefits: no single point of failure, scalability by adding nodes, and maintenance without downtime. Components include a heartbeat link, shared storage and a virtual IP that follows the active node.
 
 11. **Write a command how to find DNS www.egcb.gov.bd and which protocol uses?** *[EGCB Assistant Engineer (CSE) 2022 compact it 716 (ET: BUET)]*
 
+    Answer:
+
+    Commands to find the DNS record
+    ```
+    nslookup www.egcb.gov.bd
+    dig www.egcb.gov.bd
+    dig www.egcb.gov.bd A +short
+    host www.egcb.gov.bd
+    ```
+    - `nslookup` works on both Windows and Linux. `dig` and `host` are the standard Linux tools and give more detail.
+    - To query a specific server: `nslookup www.egcb.gov.bd 8.8.8.8`
+    - To follow the full delegation chain from the root: `dig www.egcb.gov.bd +trace`
+    - For the reverse direction: `nslookup <IP>` or `dig -x <IP>`
+
+    Protocol used
+    - The query itself uses `DNS`, which runs on `UDP port 53`.
+    - TCP port 53 is used instead when the response is larger than 512 bytes (the server sets the TC flag and the resolver retries over TCP) and for zone transfers between name servers.
+    - Encrypted variants: DNS over TLS on port 853 and DNS over HTTPS on port 443.
+
+    Sample output shape
+    ```
+    Server:   8.8.8.8
+    Address:  8.8.8.8#53
+
+    Non-authoritative answer:
+    Name:     www.egcb.gov.bd
+    Address:  103.x.x.x
+    ```
+    - "Non-authoritative" means the answer came from a resolver's cache rather than from the domain's own authoritative server.
+
 12. **For the following description of various IP networking protocols write down the protocol name and its full form in the following table:** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
+
+    Answer: The description table was not printed with the question, so the standard IP networking protocols and their full forms are given.
+
+    | Protocol | Full form | Layer | Function |
+    |---|---|---|---|
+    | IP | Internet Protocol | Network | Logical addressing and routing of packets |
+    | TCP | Transmission Control Protocol | Transport | Reliable, connection-oriented, ordered delivery |
+    | UDP | User Datagram Protocol | Transport | Fast, connectionless delivery with no guarantee |
+    | ICMP | Internet Control Message Protocol | Network | Error reporting and diagnostics — ping, traceroute |
+    | ARP | Address Resolution Protocol | Network / Data Link | Maps a known IP address to a MAC address |
+    | RARP | Reverse Address Resolution Protocol | Network / Data Link | Maps a MAC address to an IP address (obsolete) |
+    | DHCP | Dynamic Host Configuration Protocol | Application | Automatically assigns IP, mask, gateway and DNS |
+    | DNS | Domain Name System | Application | Translates names to IP addresses and back |
+    | HTTP | HyperText Transfer Protocol | Application | Transfers web pages, TCP port 80 |
+    | HTTPS | HTTP Secure | Application | HTTP inside a TLS-encrypted channel, TCP port 443 |
+    | FTP | File Transfer Protocol | Application | File transfer, TCP ports 20 and 21 |
+    | SMTP | Simple Mail Transfer Protocol | Application | Sends and relays email, port 25/587 |
+    | POP3 | Post Office Protocol version 3 | Application | Downloads mail from the server, port 110 |
+    | IMAP | Internet Message Access Protocol | Application | Keeps and synchronises mail on the server, port 143 |
+    | SNMP | Simple Network Management Protocol | Application | Monitors and manages network devices, port 161 |
+    | Telnet | Telecommunication Network | Application | Remote login in plain text, port 23 |
+    | SSH | Secure Shell | Application | Encrypted remote login, port 22 |
+    | IGMP | Internet Group Management Protocol | Network | Multicast group membership |
+    | OSPF | Open Shortest Path First | Network | Link-state interior routing protocol |
+    | BGP | Border Gateway Protocol | Application over TCP 179 | Routing between autonomous systems |
+    | NAT | Network Address Translation | Network | Translates private addresses to public |
 
 13. **(a) How does a browser retrieve IP address from URL?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
 
+    Answer: The browser turns a URL into an IP address through DNS resolution, checking a series of caches first and only then querying the DNS hierarchy.
+
+    Step by step
+    - Step 1 — the browser parses the URL and extracts the hostname. From `https://www.example.com/page.html` the hostname is www.example.com.
+    - Step 2 — it checks its own DNS cache. Chrome keeps one; `chrome://net-internals/#dns` shows it.
+    - Step 3 — it asks the operating system, which checks the OS resolver cache (`ipconfig /displaydns` on Windows).
+    - Step 4 — the OS checks the hosts file, which overrides DNS entirely.
+    - Step 5 — if still unresolved, the OS sends a recursive query to the configured DNS resolver on UDP port 53.
+    - Step 6 — the resolver checks its own cache. If the record is present and within its TTL, it answers immediately.
+    - Step 7 — otherwise the resolver walks the hierarchy iteratively: a root server refers it to the `.com` TLD servers, the TLD servers refer it to the authoritative servers for example.com, and the authoritative server returns the A record.
+    - Step 8 — the resolver caches the answer for the TTL and returns it. The OS and the browser cache it too.
+    - Step 9 — the browser opens a TCP connection to that IP on port 443, completes the TLS handshake, sends the HTTP request and renders the response.
+
+    ```
+    Browser cache -> OS cache -> hosts file -> Resolver cache
+            -> Root (.) -> .com TLD -> Authoritative -> IP address
+    ```
+    - Caching at every level is what keeps this fast: most lookups never leave the machine, and few ever reach a root server.
+
 14. **(d) What is DNS? “TCP/IP is used in DNS”- justify the statement.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
+
+    Answer:
+
+    What is DNS
+    - The Domain Name System is the internet's distributed, hierarchical naming service. It translates domain names into IP addresses and back, using port 53.
+    - Structure: root servers, TLD servers (.com, .org, .bd), and authoritative servers for each domain, with resolvers doing the lookup work on behalf of clients and caching the results for the TTL.
+    - Records include A, AAAA, CNAME, MX, NS, PTR, SOA and TXT.
+
+    Justification — "TCP/IP is used in DNS"
+    - DNS is an application-layer protocol of the TCP/IP suite. It cannot work on its own; it relies on the lower layers of TCP/IP for every message it sends. Concretely:
+
+    - It uses `UDP` (a TCP/IP transport protocol) on port 53 for ordinary queries and responses. UDP is chosen for speed, because a query is a single small exchange and a handshake would be wasteful.
+    - It uses `TCP` on port 53 when a response exceeds 512 bytes (the server sets the TC flag and the resolver retries over TCP) and for zone transfers between primary and secondary servers, which must be reliable and are large.
+    - It uses `IP` for addressing and routing: every DNS query is carried inside an IP packet from the resolver to the name server, and it is IP addresses that DNS ultimately returns.
+    - It is defined as part of the TCP/IP application layer in RFC 1034 and RFC 1035, alongside HTTP, SMTP and FTP.
+    - The dependency is mutual in practice: DNS needs TCP/IP to carry its messages, and TCP/IP applications need DNS to turn names into the addresses they must connect to.
+
+    - Conclusion: the statement is correct. DNS is a TCP/IP application-layer service that uses both UDP and TCP over IP, which is exactly why it is described as "using TCP/IP".
 
 15. **(b) How is Hierarchical DNS resolution done in Domain Naming System? Give an example resolution for xyz.uv.gov.bd domain name.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 802 (ET: N/A)]*
 
+    Answer:
+
+    Hierarchical DNS resolution
+    - The DNS namespace is a tree. No single server holds everything; each level knows only its children and delegates the rest.
+    ```
+                        . (root)
+                        |
+          +-------+-----+-----+-------+
+         com     org    net    bd    edu        <- top-level domains
+                                |
+                              gov.bd            <- second level
+                                |
+                              uv.gov.bd         <- sub-domain
+                                |
+                            xyz.uv.gov.bd       <- host
+    ```
+    - The client sends one recursive query to its resolver; the resolver then performs iterative queries down the tree.
+
+    Example — resolving xyz.uv.gov.bd
+
+    - Step 1 — the client asks its local resolver for xyz.uv.gov.bd (recursive query).
+    - Step 2 — the resolver checks its cache. If the answer is there and still within its TTL, it stops here.
+    - Step 3 — otherwise it queries a `root server`. The root does not know the address, but it returns the name servers for `.bd`.
+    - Step 4 — it queries the `.bd` TLD server, which returns the name servers for `gov.bd`.
+    - Step 5 — it queries the `gov.bd` server, which returns the name servers for `uv.gov.bd`.
+    - Step 6 — it queries the `uv.gov.bd` authoritative server, which finally returns the A record for `xyz.uv.gov.bd`, say 203.112.x.x.
+    - Step 7 — the resolver caches every referral and the final answer for their TTLs, then returns the address to the client.
+
+    ```
+    Client --recursive--> Resolver
+                            |--iterative--> Root        -> "ask .bd servers"
+                            |--iterative--> .bd         -> "ask gov.bd servers"
+                            |--iterative--> gov.bd      -> "ask uv.gov.bd servers"
+                            |--iterative--> uv.gov.bd   -> "203.112.x.x"
+    Client <--answer-------- Resolver
+    ```
+    - Why the hierarchy matters: it distributes both the data and the load, allows each organisation to manage its own zone, and makes the system scale to billions of names. Caching means a root server is rarely troubled — most queries are answered from a cache long before that.
+
 16. **What is Web cashing? Why we use web cashing?** *[Sonali Bank Ltd. Officer IT 2021 compact it 908 (ET: N/A)]*
+
+    Answer:
+
+    What is web caching
+    - Web caching is storing a copy of a web resource — an HTML page, image, script or video segment — closer to the user, so that later requests are served from the copy instead of fetching it again from the origin server.
+    - A proxy server that does this is called a web cache or proxy cache.
+
+    Where caches exist
+    - Browser cache — on the user's own disk, private to that user.
+    - Proxy or organisational cache — one cache serving a whole office or campus.
+    - ISP cache — serving all of a provider's customers.
+    - CDN edge server — a distributed cache placed near users worldwide; this is the dominant form today.
+    - Reverse proxy — sitting in front of the origin server to protect it.
+
+    How it works
+    - The client requests a resource. If the cache holds a fresh copy (its expiry has not passed), it returns it immediately — a cache hit.
+    - If not, it forwards the request to the origin, stores the response and returns it — a cache miss.
+    - Freshness is controlled by HTTP headers: `Cache-Control: max-age`, `Expires`, `ETag` and `Last-Modified`. A conditional request (`If-None-Match`) lets the server reply `304 Not Modified` with no body, which is very cheap.
+
+    Why we use it
+    - Faster response — the content comes from nearby, so latency drops sharply. This is the single biggest reason.
+    - Less bandwidth used on the expensive upstream link, which matters greatly for an ISP or a campus.
+    - Reduced load on the origin server, so it can serve more users with the same hardware.
+    - Better availability — cached content may still be served when the origin is briefly unreachable.
+    - Lower cost, since bandwidth and server capacity are the two main expenses of a busy site.
+    - Better user experience and, indirectly, better search ranking.
+
+    Limitations
+    - Stale content if TTLs are set too long; personalised or private pages must not be cached (`Cache-Control: private, no-store`).
+    - Cache invalidation is genuinely hard — the usual solution is versioned file names such as `style.v3.css`.
 
 17. **What is DNS Resolver?** *[Sonali Bank Ltd. Officer IT 2021 compact it 908-909 (ET: N/A)]*
 
+    Answer: A DNS resolver (also called a recursive resolver or recursive name server) is the DNS server that does the actual work of looking up a name on behalf of a client.
+
+    What it does
+    - Receives a recursive query from the client — "give me the IP address for www.example.com".
+    - Checks its own cache first. If a valid record is present, it answers straight away.
+    - If not, it performs iterative queries down the hierarchy: root server -> TLD server -> authoritative server.
+    - Caches the answer for its TTL, so later clients are served instantly.
+    - Returns the final answer to the client, marked "non-authoritative" if it came from cache.
+
+    Types of resolver
+    - Stub resolver — the small piece of code inside the operating system or browser. It cannot walk the hierarchy; it just forwards the query to a recursive resolver.
+    - Recursive resolver — the full resolver, run by an ISP or a public service, that does the hierarchy walk.
+    - Forwarding resolver — passes queries to another resolver rather than resolving them itself, common on office routers.
+
+    Common public resolvers
+    - Google 8.8.8.8 and 8.8.4.4, Cloudflare 1.1.1.1, Quad9 9.9.9.9, OpenDNS 208.67.222.222.
+
+    Why it matters
+    - It is the component that makes caching effective, so most lookups never reach a root or TLD server.
+    - Its choice affects speed, privacy and filtering — some resolvers block malicious domains, and DoH/DoT encrypt the query so it cannot be read or altered in transit.
+    - A misconfigured or poisoned resolver is a serious security problem, since it can silently send users to attacker-controlled addresses. DNSSEC validation at the resolver is the defence.
+
 18. **DNS server এবং DHCP server এর কাজ কী?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 911 (ET: BUET)]*
+
+    Answer: (Answered in English, as required for IT topics.)
+
+    DNS server
+    - Translates domain names into IP addresses (forward lookup, A and AAAA records) and IP addresses back into names (reverse lookup, PTR records).
+    - Directs email using MX records, and supports aliases (CNAME), name servers (NS) and verification data (TXT, for SPF and DKIM).
+    - Works hierarchically — root, TLD, authoritative — and caches answers for the TTL period, which is what makes the whole system fast.
+    - Port 53: UDP for queries, TCP for zone transfers and large responses.
+    - Without DNS, users would have to type IP addresses for every site.
+
+    DHCP server
+    - Automatically assigns an IP address, subnet mask, default gateway and DNS server addresses to every device that joins the network.
+    - Uses the DORA exchange — Discover, Offer, Request, Acknowledge — over UDP ports 67 and 68.
+    - Addresses are leased for a limited time and returned to the pool when they expire, so a limited pool serves many devices.
+    - Reservations tie a specific MAC address to a fixed IP for printers and servers.
+    - Without DHCP, every device would need manual configuration, which is slow and causes duplicate-address errors.
+
+    How they work together
+    - DHCP tells a new client which DNS server to use. So DHCP configures the client, and DNS then lets that client find other hosts by name. A failure in DHCP stops a client getting on the network at all; a failure in DNS leaves it connected but unable to resolve names.
 
 19. **দূরবর্তী কম্পিউটার সংযোগ এর জন্য কোন প্রোটোকল ব্যবহার করা হয়?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) For connecting to a remote computer, the protocols used are:
+
+    - `SSH (Secure Shell)` — TCP port 22. The standard today. It provides an encrypted command-line session, plus secure file transfer through SCP and SFTP and port forwarding. It authenticates with a password or, better, a key pair.
+    - `Telnet` — TCP port 23. The older protocol for the same purpose, but everything including the password travels in plain text, so it must not be used over an untrusted network. SSH replaced it.
+    - `RDP (Remote Desktop Protocol)` — TCP port 3389. Microsoft's protocol for a full graphical Windows desktop, with encryption.
+    - `VNC (Virtual Network Computing)` — port 5900. A cross-platform graphical remote desktop; it should be tunnelled through SSH or a VPN, since it is weakly encrypted on its own.
+
+    | Protocol | Port | Interface | Encrypted |
+    |---|---|---|---|
+    | SSH | 22 | Command line | Yes |
+    | Telnet | 23 | Command line | No |
+    | RDP | 3389 | Graphical (Windows) | Yes |
+    | VNC | 5900 | Graphical (cross-platform) | Weak, tunnel it |
+
+    - Best practice for remote access: use SSH with key-based authentication, disable password login and root login, change the default port, and place the whole thing behind a VPN.
+
 20. **(a) Differentiate between DNS server and caches.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1142 (ET: N/A)]*
+
+    Answer: A DNS server is the machine that answers name queries; a DNS cache is the temporary store of answers it has already learned.
+
+    | Point | DNS server | DNS cache |
+    |---|---|---|
+    | What it is | A service that resolves names to IP addresses | A temporary store of previous answers |
+    | Where it lives | A dedicated server, ISP resolver or router | Inside the browser, the OS, the resolver or the router |
+    | Data held | The authoritative zone file, or the full resolution capability | Only recently used records, and only while the TTL lasts |
+    | Persistence | Permanent, administratively maintained | Temporary; entries expire with the TTL and are lost on flush |
+    | Answer type | Authoritative if it owns the zone | Always non-authoritative |
+    | Purpose | To provide resolution for the namespace it serves | To make repeated lookups fast and reduce query traffic |
+    | Failure effect | Names cannot be resolved at all | Lookups become slower, and stale entries can point to a dead address |
+
+    How they work together
+    - A resolver is a DNS server that keeps a cache. On each query it looks in the cache first; only on a miss does it walk the hierarchy from root to TLD to authoritative server, and it then caches what it learns.
+    - Caching exists at several levels — browser, operating system, router, ISP resolver — so most queries never leave the user's own machine.
+    - Cache problems are flushed with `ipconfig /flushdns` on Windows or `systemd-resolve --flush-caches` on Linux; this is the standard fix after a site's IP address has changed.
 
 21. **What is the difference between DNS server and caches? What is the importance of DNS cache in World Wide Web?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
+    Answer:
+
+    Difference between a DNS server and a cache
+
+    | Point | DNS server | DNS cache |
+    |---|---|---|
+    | Nature | A service that resolves names | A temporary store of already-resolved answers |
+    | Location | Dedicated server, ISP resolver, or router | Browser, OS, router, resolver |
+    | Contents | Zone data, or full resolution capability | Only recent records, held for their TTL |
+    | Lifetime | Permanent | Temporary, expires with the TTL |
+    | Authority | Authoritative for the zones it owns | Always non-authoritative |
+    | Purpose | To answer queries for the namespace | To answer repeat queries instantly |
+
+    Importance of the DNS cache to the World Wide Web
+    - Speed — a cached lookup takes microseconds; a full walk from root to TLD to authoritative server can take hundreds of milliseconds. Since a single modern web page may reference dozens of hostnames, caching removes a large part of page-load time.
+    - Scale — there are billions of DNS queries per second worldwide. Without caching, the 13 root server clusters and the TLD servers would be overwhelmed instantly. Caching is what makes the hierarchy survivable.
+    - Reduced bandwidth and cost, especially on expensive international links.
+    - Resilience — if an authoritative server briefly fails, cached records keep the site reachable until they expire.
+    - Better user experience, and indirectly better search ranking, because page load time is a ranking factor.
+
+    The trade-off
+    - Stale data. When a site changes its IP address, cached entries still point to the old one until the TTL expires. Administrators therefore lower the TTL before a planned migration.
+    - Cache poisoning — an attacker injects a false record so users are silently sent to a malicious server. DNSSEC, source-port randomisation and query ID randomisation are the defences.
+    - Fix for a client: `ipconfig /flushdns` on Windows, `systemd-resolve --flush-caches` on Linux.
+
 22. **Write short notes on DHCP and SMTP.** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227 (ET: N/A)]*
+
+    Answer:
+
+    DHCP (Dynamic Host Configuration Protocol)
+    - An application-layer protocol that automatically gives a device joining a network its IP address, subnet mask, default gateway, DNS servers and lease time.
+    - Ports: UDP 67 (server) and UDP 68 (client).
+    - Works through the `DORA` exchange:
+      - Discover — the client broadcasts, looking for a server.
+      - Offer — servers reply with an available address and settings.
+      - Request — the client broadcasts its acceptance of one offer.
+      - Acknowledge — the chosen server confirms and records the binding.
+    - Addresses are leased, renewed at T1 (50 percent) and T2 (87.5 percent) of the lease, and returned to the pool when they expire.
+    - A relay agent (`ip helper-address`) forwards the broadcast across a router so one server can serve many subnets.
+    - Benefits: no manual configuration, no duplicate addresses, central management, efficient reuse of a limited pool.
+    - Risks: no authentication, so rogue servers and starvation attacks are possible. DHCP snooping and port security are the defences. If no server answers, a Windows client falls back to an APIPA address in 169.254.0.0/16.
+
+    SMTP (Simple Mail Transfer Protocol)
+    - The application-layer protocol used to send and relay email — from the client to its mail server, and from one mail server to the next.
+    - Ports: 25 for server-to-server relay, 587 for client submission with STARTTLS, 465 for implicit TLS.
+    - It is a push protocol and handles sending only; retrieval uses POP3 (110) or IMAP (143).
+    - A session is a simple text dialogue: HELO/EHLO, MAIL FROM, RCPT TO, DATA, then the message ending with a single dot, then QUIT. The server replies with codes such as 250 OK and 550 Rejected.
+    - Components: the Mail User Agent (the client program), the Mail Transfer Agent (Postfix, Sendmail, Exchange) and the Mail Delivery Agent that puts the message in the mailbox.
+    - Weakness: SMTP by itself does not verify the sender, which is why spam and spoofing are possible. SPF, DKIM and DMARC were added to authenticate the sending domain.
 
 ## Wireless Networks & IoT (mmWave) (19)
 
