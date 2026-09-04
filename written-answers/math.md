@@ -920,11 +920,60 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+   Answer:
+   - সত্যক সারণী (Truth Table) তৈরি করে পাই:
+
+     | $p$ | $q$ | $p \leftrightarrow q$ | $p \land q$ | $\neg p$ | $\neg q$ | $\neg p \land \neg q$ | $(p \land q) \lor (\neg p \land \neg q)$ |
+     |---|---|---|---|---|---|---|---|
+     | T | T | T | T | F | F | F | T |
+     | T | F | F | F | F | T | F | F |
+     | F | T | F | F | T | F | F | F |
+     | F | F | T | F | T | T | T | T |
+
+   - যেহেতু $p \leftrightarrow q$ এবং $(p \land q) \lor (\neg p \land \neg q)$ কলাম দুটির প্রতি সারির মান হুবহু একই, তাই তারা Logically Equivalent। (দেখানো হলো)
+
 2. **(d) Simplify the following expression: $\neg(\neg q \land (\neg p \lor q)) \lor \neg p$.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+
+   Answer:
+   - Step 1: Apply De Morgan's Law to the negated term:
+     $$\neg(\neg q \land (\neg p \lor q)) \equiv \neg(\neg q) \lor \neg(\neg p \lor q) \equiv q \lor (p \land \neg q)$$
+   - Step 2: Simplify $q \lor (p \land \neg q)$ using Distributive Law:
+     $$q \lor (p \land \neg q) \equiv (q \lor p) \land (q \lor \neg q) \equiv (p \lor q) \land T \equiv p \lor q$$
+   - Step 3: Combine with the outer $\lor \neg p$:
+     $$(p \lor q) \lor \neg p \equiv (p \lor \neg p) \lor q \equiv T \lor q \equiv T$$
+   - The expression simplifies to $T$ (True / Tautology).
+   - Answer: $T$
 
 3. **What is tautology? Write an example of a tautology.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
 
+   Answer:
+   - Definition: A tautology is a compound propositional formula that is always true for all possible truth values of its constituent variables.
+   - Example: $p \lor \neg p$ (Law of Excluded Middle).
+   - Truth Table:
+
+     | $p$ | $\neg p$ | $p \lor \neg p$ |
+     |---|---|---|
+     | T | F | T |
+     | F | T | T |
+
+   - Since the output is $T$ in all cases, $p \lor \neg p$ is a tautology.
+
 4. **What is tautology? A statement like $[(A \rightarrow B) \land A] \rightarrow A$ was given and said to prove it is a tautology by using truth table.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
+
+   Answer:
+   - A tautology is a formula in propositional logic that evaluates to True under every possible truth assignment.
+   - Truth Table for $[(A \rightarrow B) \land A] \rightarrow A$:
+
+     | $A$ | $B$ | $A \rightarrow B$ | $(A \rightarrow B) \land A$ | $[(A \rightarrow B) \land A] \rightarrow A$ |
+     |---|---|---|---|---|
+     | T | T | T | T | T |
+     | T | F | F | F | T |
+     | F | T | T | F | T |
+     | F | F | T | F | T |
+
+   - The last column yields True ($T$) for all truth value combinations. Hence, the statement is a tautology.
+
+
 
 ## Discrete Mathematics & Recurrence Relations (3)
 
