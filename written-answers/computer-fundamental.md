@@ -2623,23 +2623,204 @@
 
 1. **What is Blockchain technology? How it works?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 324 (ET: BIBM)]*
 
+   Answer: Blockchain is a **distributed, decentralised digital ledger** that records transactions across many computers in such a way that a recorded entry cannot be altered retroactively without altering every block after it and gaining the agreement of the network.
+
+   Structure of a block
+   - **Data** — the transactions themselves: who, what, when, how much.
+   - **Hash** — a unique fingerprint of this block's contents.
+   - **Previous block's hash** — the link that chains the blocks together.
+   - **Timestamp** and **nonce**.
+
+   How it works, step by step
+   ```mermaid
+   flowchart TD
+       A[1. A transaction is requested] --> B[2. Broadcast to all nodes in the P2P network]
+       B --> C[3. Nodes validate it using a consensus algorithm]
+       C --> D{Valid?}
+       D -->|No| E[Rejected]
+       D -->|Yes| F[4. Transaction grouped into a new block]
+       F --> G[5. Block is hashed and linked to the previous block]
+       G --> H[6. Block added to every node's copy of the chain]
+       H --> I[7. Transaction complete and permanent]
+   ```
+
+   - **Step 1** — a user requests a transaction.
+   - **Step 2** — it is broadcast to every node in the peer-to-peer network.
+   - **Step 3** — nodes verify it against the rules and reach consensus (Proof of Work, Proof of Stake or similar).
+   - **Step 4** — verified transactions are grouped into a block with a timestamp.
+   - **Step 5** — the block is hashed, and the previous block's hash is stored inside it, forming the chain.
+   - **Step 6** — the new block is appended to every node's copy.
+   - **Step 7** — the record is now permanent, because changing it would require re-mining every subsequent block on a majority of nodes.
+
+   - Applications: cryptocurrency (Bitcoin, Ethereum), supply chain tracking, land registry, trade finance, digital identity, and smart contracts.
+
 2. **What is blockchain technology? Why it is more secure( Such type)** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 500 (ET: IBA)]*
+
+   Answer: Blockchain is a distributed ledger shared across a peer-to-peer network, in which transactions are grouped into cryptographically linked blocks that no single party can alter alone.
+
+   Why it is more secure than a traditional centralised database
+
+   - **Decentralisation** — there is no single server to attack. Every node holds a full copy, so destroying or compromising one machine achieves nothing.
+   - **Cryptographic hashing** — each block stores the hash of the previous block. Changing any past transaction changes that block's hash, which breaks the link to every following block, making tampering immediately visible.
+   - **Immutability** — to alter a record an attacker must re-compute the proof of work for that block AND every block after it, faster than the rest of the network combined. This is computationally infeasible on a large chain.
+   - **Consensus mechanism** — a new block is accepted only when the majority of nodes agree. A fraudulent block is rejected by the honest majority.
+   - **Digital signatures** — every transaction is signed with the sender's private key, so authenticity and non-repudiation are provable.
+   - **Transparency and auditability** — all participants see the same ledger, so a discrepancy is detected instantly.
+   - **51% attack requirement** — to rewrite history an attacker must control more than half the network's computing power, which on a large public chain costs more than the possible gain.
+
+   Limitations to state honestly
+   - Blockchain secures the LEDGER, not the endpoints. Stolen private keys, phishing and buggy smart contracts remain the real-world attack routes.
+   - Private and permissioned chains with few nodes are far easier to attack than large public ones.
+   - Scalability and energy consumption remain significant drawbacks.
 
 3. **Write about Blockchain.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 506 (ET: N/A)]*
 
+   Answer: Blockchain is a distributed, decentralised and immutable digital ledger that records transactions across a network of computers, where each record is cryptographically linked to the one before it.
+
+   Key characteristics
+   - **Decentralised** — no central authority; every node holds a copy.
+   - **Immutable** — a recorded block cannot practically be changed.
+   - **Transparent** — all participants see the same ledger.
+   - **Secure** — protected by cryptographic hashing and digital signatures.
+   - **Consensus driven** — new blocks are added only by agreement of the network.
+
+   Types of blockchain
+   - **Public** — open to everyone, fully decentralised. Bitcoin, Ethereum.
+   - **Private** — controlled by one organisation, restricted membership. Hyperledger Fabric.
+   - **Consortium** — governed by a group of organisations, common in banking.
+   - **Hybrid** — combines public and private elements.
+
+   Consensus mechanisms
+   - **Proof of Work (PoW)** — nodes solve a computational puzzle. Secure but energy-intensive.
+   - **Proof of Stake (PoS)** — validators are chosen by the stake they hold. Far more energy efficient.
+   - Others: Delegated PoS, Practical Byzantine Fault Tolerance.
+
+   Applications
+   - Cryptocurrency, supply chain traceability, land record management, trade finance and letters of credit, digital identity, healthcare records, voting systems, and smart contracts (self-executing agreements on Ethereum).
+
+   Advantages and limitations
+   - Advantages: tamper resistance, transparency, no intermediary needed, full audit trail, reduced fraud.
+   - Limitations: low transaction throughput compared with centralised systems, high energy use in PoW, complex regulation, irreversible mistakes, and the difficulty of correcting genuine errors.
+
 4. **What is Blockchain? How does work it? Mention 5 top benefits of blockchain. Write down the difference between Traditional banking and Digital banking.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 513 (ET: MIST)]*
+
+   Answer:
+
+   (a) What blockchain is
+   - A distributed digital ledger shared across a peer-to-peer network, where transactions are grouped into blocks and each block is cryptographically chained to the previous one, making the record effectively permanent.
+
+   (b) How it works
+   - A transaction is requested and broadcast to all nodes → nodes validate it by consensus → valid transactions are grouped into a block → the block is hashed and linked to the previous block's hash → the block is appended to every node's copy → the record becomes permanent.
+
+   (c) Five top benefits
+   - **Security** — cryptographic hashing plus decentralisation makes tampering computationally infeasible.
+   - **Transparency** — every participant sees the same ledger, so disputes are settled by the record itself.
+   - **Immutability and auditability** — a complete, unalterable history, which auditors and regulators can verify directly.
+   - **No intermediary needed** — parties transact directly, removing the cost and delay of a clearing house or correspondent bank.
+   - **Speed and cost in cross-border payments** — international settlement drops from days to minutes, at a fraction of the fee.
+
+   (d) Traditional banking vs digital banking
+
+   | Point | Traditional Banking | Digital Banking |
+   |---|---|---|
+   | Service channel | Physical branch, in person | Internet, mobile app, ATM |
+   | Working hours | Banking hours only | 24 hours, 7 days |
+   | Transaction speed | Slow, manual processing | Instant |
+   | Paperwork | Heavy — forms, cheques, passbooks | Minimal, mostly paperless |
+   | Cost to the bank | High — branch rent, staff | Much lower per transaction |
+   | Geographic reach | Limited by branch network | Anywhere with connectivity |
+   | Account opening | Visit a branch with documents | e-KYC online, often same day |
+   | Customer service | Face to face | Chatbot, call centre, in-app chat |
+   | Risk profile | Physical theft, forgery | Cyber fraud, phishing, account takeover |
+   | Suits | Complex advisory needs, large cash handling | Routine transactions, everyday banking |
 
 5. **A distributive ledger in a peer-to-peer network is called?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)]*
 
+   Answer: It is called a **Blockchain**.
+
+   - More generally the category is called **Distributed Ledger Technology (DLT)**. Blockchain is the best-known form of DLT, in which records are grouped into blocks and chained together by hashes.
+   - Other forms of DLT exist that are not chains — for example DAG-based ledgers such as IOTA Tangle and Hashgraph.
+   - Key properties: distributed across peers, no central authority, synchronised by consensus, cryptographically secured, and immutable once written.
+
 6. **(a) Write short note on (i) Blockchain technology (ii) Cloud Computing** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
+   Answer:
+
+   **(i) Blockchain technology**
+   - A distributed, decentralised ledger recording transactions across a peer-to-peer network, where each block stores the hash of the previous block, chaining them permanently.
+   - Characteristics: decentralised, immutable, transparent, cryptographically secure, consensus-driven.
+   - Working: transaction requested → broadcast to nodes → validated by consensus → grouped into a block → hashed and linked → appended to every node's copy.
+   - Types: public (Bitcoin, Ethereum), private (Hyperledger), consortium, hybrid.
+   - Applications: cryptocurrency, supply chain tracking, land registry, trade finance, digital identity, smart contracts.
+   - Limitations: low throughput, high energy use in Proof of Work, regulatory uncertainty.
+
+   **(ii) Cloud computing**
+   - Delivery of computing services — servers, storage, databases, networking, software — over the internet on a pay-as-you-go basis instead of owning hardware.
+   - Five essential characteristics: on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service.
+   - Service models: **IaaS** (virtual machines and storage — AWS EC2), **PaaS** (a development platform — Google App Engine), **SaaS** (finished software — Gmail).
+   - Deployment models: public, private, hybrid, community.
+   - Advantages: low upfront cost, elastic scaling, global access, automatic maintenance, built-in disaster recovery.
+   - Limitations: internet dependency, data security and sovereignty concerns, limited control, vendor lock-in.
+
 7. **Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 696 (ET: N/A)]*
+
+   Answer:
+
+   **(a) Digital Signature**
+   - A cryptographic mechanism that proves a digital message came from a specific sender and has not been altered.
+   - How it works: the sender hashes the message and encrypts the hash with their **private key** — that encrypted hash is the signature. The receiver decrypts it with the sender's **public key** and compares it with a freshly computed hash of the message. If they match, both authenticity and integrity are proven.
+   - Provides three guarantees: **authentication**, **integrity** and **non-repudiation** (the sender cannot later deny signing).
+   - Algorithms: RSA, DSA, ECDSA. Used in e-tendering, e-banking, software signing and SSL/TLS certificates.
+   - In Bangladesh, digital signatures are legally recognised under the ICT Act 2006, with licensed Certifying Authorities issuing certificates.
+
+   **(b) Cloud Computing**
+   - On-demand delivery of computing resources over the internet, billed by usage.
+   - Service models: IaaS, PaaS, SaaS. Deployment models: public, private, hybrid, community.
+   - Benefits: no capital expense, elastic scaling, anywhere access, automatic updates, disaster recovery.
+   - Drawbacks: internet dependency, security and data sovereignty concerns, vendor lock-in.
+
+   **(c) Blockchain**
+   - A distributed, immutable ledger where transactions are grouped into blocks, each carrying the hash of the previous block.
+   - Secured by cryptographic hashing, digital signatures and network consensus; changing one record would require re-computing every block after it on a majority of nodes.
+   - Applications: cryptocurrency, supply chain, land records, trade finance, smart contracts.
+
+   **(d) TOT**
+   - Most likely **Training of Trainers (ToT)** in a government and administrative context — a programme that trains selected people to become instructors, so they can then train others. It is the standard method for scaling capacity-building across a large workforce.
+   - In an engineering context TOT can also mean **Transfer of Technology**, an agreement under which technology and know-how pass from one organisation or country to another.
+   - The BPSC ICT paper most likely intends Training of Trainers.  <!-- verify -->
 
 8. **Write short note on the folloing topics** *[BPSC Assistant Programmer (ICT) 2019 compact it 1144-1145 (ET: N/A)]*
    i) AI
    ii) IoT
    iii) Big data
    iv) Robotics
+
+   Answer:
+
+   **(i) AI — Artificial Intelligence**
+   - The branch of computer science that builds machines able to perform tasks needing human intelligence: learning, reasoning, understanding language and deciding.
+   - Branches: machine learning, deep learning, natural language processing, computer vision, robotics, expert systems.
+   - Types by capability: Narrow AI (all AI today), General AI (theoretical), Super AI (hypothetical).
+   - Applications: fraud detection, medical diagnosis, chatbots, recommendation systems, self-driving cars.
+
+   **(ii) IoT — Internet of Things**
+   - A network of physical objects embedded with sensors, software and connectivity, which collect and exchange data over the internet without human intervention.
+   - Architecture: sensors/devices → connectivity (Wi-Fi, 4G, LoRa) → data processing (edge or cloud) → user interface and action.
+   - Applications: smart home, smart agriculture, smart meters, wearable health monitors, industrial IoT, smart city traffic management.
+   - Challenges: security (weak default passwords on devices), privacy, interoperability, and power for battery devices.
+
+   **(iii) Big Data**
+   - Data sets too large, too fast or too varied for traditional database tools to handle.
+   - Characterised by the **five V's**: **Volume** (scale), **Velocity** (speed of arrival), **Variety** (structured, semi-structured, unstructured), **Veracity** (reliability) and **Value** (usefulness).
+   - Technologies: Hadoop (HDFS and MapReduce), Apache Spark, NoSQL databases, data lakes and warehouses.
+   - Applications: customer analytics, fraud detection, weather prediction, healthcare research, recommendation engines.
+
+   **(iv) Robotics**
+   - The engineering field concerned with designing, building and operating robots — programmable machines that sense, decide and act in the physical world.
+   - Components: sensors (perception), actuators and motors (movement), controller (decision), power supply, and an end effector such as a gripper.
+   - Types: industrial robots (welding, assembly), service robots, medical robots (surgical), autonomous mobile robots, humanoid robots, drones.
+   - Applications: manufacturing, warehouse automation, surgery, agriculture, defence, space exploration, and hazardous environment work.
+   - It increasingly overlaps with AI: an AI-driven robot learns from experience instead of only following a fixed program.
 
 ## Server Hardware & Enterprise Systems (5)
 
