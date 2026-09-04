@@ -10414,11 +10414,507 @@ public class WhatTheOutput{
 
 1. **(b) What is exception? Explain how it can be used for debugging a program.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
 
+   Answer: What an exception is
+   - An `exception` is an `abnormal event that occurs during execution` and disrupts the normal flow of the program. It is not a syntax error — the program compiles perfectly and then fails while running.
+   ```java
+      int[] a = new int[5];
+      a[10] = 1;                  // ArrayIndexOutOfBoundsException at run time
+
+      int x = 10 / 0;             // ArithmeticException
+
+      String s = null;
+      s.length();                 // NullPointerException
+   ```
+   - In Java an exception is an `object` of a class descended from `Throwable`, carrying the type of the fault, a message and a `stack trace`.
+
+   The hierarchy
+   ```
+                    Throwable
+                   /         \
+              Error          Exception
+           (unrecoverable)   /        \
+                     Checked          RuntimeException
+                     IOException      (unchecked)
+                     SQLException     NullPointerException
+                                      ArithmeticException
+                                      ArrayIndexOutOfBounds
+   ```
+   ```
+      CHECKED   : the compiler forces you to handle or declare them
+                  IOException, SQLException, ClassNotFoundException
+
+      UNCHECKED : the compiler does not - they are programming faults
+                  NullPointerException, ArithmeticException,
+                  ArrayIndexOutOfBoundsException
+
+      ERROR     : serious JVM problems that a program should not catch
+                  OutOfMemoryError, StackOverflowError
+   ```
+
+   Handling it
+   ```java
+   try {
+       int result = 10 / 0;
+   } catch (ArithmeticException e) {
+       System.out.println("Error: " + e.getMessage());
+   } finally {
+       System.out.println("This always runs");
+   }
+   ```
+
+   How exceptions help in debugging
+
+   1. `The stack trace pinpoints the failure`
+   ```
+      Exception in thread "main" java.lang.ArithmeticException: / by zero
+           at Calculator.divide(Calculator.java:15)
+           at Calculator.compute(Calculator.java:8)
+           at Main.main(Main.java:5)
+   ```
+   - It gives the `exception type`, a `message`, the `exact line`, and the `whole chain of calls` that led there. That is usually enough to locate the bug without any debugging tools.
+
+   2. `The exception type names the category of fault`
+   ```
+      NullPointerException            -> an object reference was never assigned
+      ArrayIndexOutOfBoundsException  -> a loop bound is wrong
+      NumberFormatException           -> input was not a valid number
+      ClassCastException              -> a wrong downcast
+      FileNotFoundException           -> a path or permission problem
+   ```
+   - Reading the type alone usually tells the programmer what kind of mistake to look for.
+
+   3. `The program fails immediately, at the point of the fault`
+   - Without exceptions, a wrong value propagates silently and the symptom appears far from the cause. `Fail fast` is what makes debugging tractable.
+
+   4. `Custom exceptions carry the program's own meaning`
+   ```java
+   class InsufficientBalanceException extends Exception {
+       public InsufficientBalanceException(String msg) { super(msg); }
+   }
+
+   void withdraw(double amount) throws InsufficientBalanceException {
+       if (amount > balance)
+           throw new InsufficientBalanceException(
+               "Requested " + amount + " but balance is " + balance);
+       balance -= amount;
+   }
+   ```
+   - The message states the business fault in the developer's own words, with the actual values.
+
+   5. `Logging the exception preserves the evidence`
+   ```java
+   try {
+       processTransaction();
+   } catch (Exception e) {
+       logger.error("Transaction failed for account " + accNo, e);
+       throw e;                         // rethrow after logging
+   }
+   ```
+   - In production, where a debugger cannot be attached, the logged stack trace is the only record of what happened.
+
+   6. `finally guarantees cleanup even on failure`
+   ```java
+   try (Connection con = getConnection()) {
+       ...
+   }   // con.close() runs whether or not an exception was thrown
+   ```
+
+   7. `assert and validation catch faults early`
+   ```java
+      if (amount <= 0)
+          throw new IllegalArgumentException("Amount must be positive: " + amount);
+   ```
+   - Checking preconditions and throwing immediately turns a silent corruption into a clear, located failure.
+
+   Practices that destroy the debugging value
+   ```java
+      catch (Exception e) { }             // swallowing it - the WORST habit
+      catch (Exception e) { System.out.println("error"); }   // loses the trace
+
+      Correct :
+      catch (SpecificException e) {
+          logger.error("what was being attempted", e);       // keeps the trace
+      }
+   ```
+   - Catching `Exception` broadly, or catching and ignoring, removes exactly the information that would have identified the bug.
+
 2. **What is difference between exception and error in Java?** *[SPCB Sub-Assistant Programmer 2022 compact it 737 (ET: N/A)]*
+
+   Answer: Both `Exception` and `Error` are subclasses of `Throwable`, but they represent completely different kinds of problem.
+   ```
+                    Throwable
+                   /         \
+              Error          Exception
+        (serious, do NOT     (recoverable,
+         catch)               SHOULD handle)
+   ```
+
+   Exception
+   - An `abnormal condition that a well-written program can anticipate and recover from`.
+   - Usually caused by the application itself or by its environment — a missing file, a bad input, a dropped connection.
+   - The program `should` catch it and take sensible action.
+   ```java
+      IOException , SQLException , FileNotFoundException      (checked)
+      NullPointerException , ArithmeticException ,            (unchecked)
+      ArrayIndexOutOfBoundsException , NumberFormatException
+   ```
+   ```java
+   try {
+       FileReader f = new FileReader("data.txt");
+   } catch (FileNotFoundException e) {
+       System.out.println("File missing, using defaults instead");
+   }
+   ```
+
+   Error
+   - A `serious problem in the JVM or the environment` that an application `cannot reasonably recover from`.
+   - Caused by resource exhaustion or a broken runtime, not by ordinary program logic.
+   - The program should `not` catch it; there is normally nothing useful it could do.
+   ```java
+      OutOfMemoryError , StackOverflowError , VirtualMachineError ,
+      NoClassDefFoundError , AssertionError
+   ```
+   ```java
+      void recurse() { recurse(); }      // StackOverflowError
+      int[] a = new int[Integer.MAX_VALUE];   // OutOfMemoryError
+   ```
+
+   Difference
+
+   | Point | Exception | Error |
+   |---|---|---|
+   | Represents | A recoverable abnormal condition | A serious unrecoverable problem |
+   | Caused by | The application or its environment | The JVM or resource exhaustion |
+   | Should be caught | `Yes` | `No` |
+   | Can be recovered from | Usually yes | Usually no |
+   | Checked / unchecked | Both kinds exist | Always `unchecked` |
+   | Compiler enforces handling | For checked exceptions, yes | Never |
+   | Declared with `throws` | Yes, for checked ones | Not required |
+   | Occurs at | Run time | Run time |
+   | Examples | IOException, SQLException, NullPointerException | OutOfMemoryError, StackOverflowError |
+   | Package | `java.lang.Exception` | `java.lang.Error` |
+
+   Checked versus unchecked exceptions, since the question often follows
+   ```
+      CHECKED   : the compiler INSISTS that you either catch them or declare
+                  them with 'throws'. They represent conditions outside the
+                  program's control.
+                  IOException , SQLException , ClassNotFoundException
+
+      UNCHECKED : subclasses of RuntimeException. The compiler says nothing,
+                  because they represent PROGRAMMING FAULTS that should be
+                  prevented rather than caught.
+                  NullPointerException , ArithmeticException ,
+                  ArrayIndexOutOfBoundsException , IllegalArgumentException
+   ```
+   ```java
+      // checked - MUST be handled or declared
+      public void read() throws IOException {
+          FileReader f = new FileReader("data.txt");
+      }
+
+      // unchecked - compiles without any handling
+      public void divide() {
+          int x = 10 / 0;
+      }
+   ```
+
+   Can an Error be caught? Technically yes, practically no
+   ```java
+      try {
+          recurse();
+      } catch (StackOverflowError e) {          // LEGAL, but almost never right
+          System.out.println("stack overflow");
+      }
+   ```
+   - It compiles and runs, but the JVM may already be in an unusable state. The only defensible case is a top-level handler in a server that logs the failure before shutting down cleanly.
+
+   - The rule to state: `handle exceptions, do not handle errors`. An exception means "something went wrong that I can deal with"; an error means "the runtime itself is broken".
 
 3. **What is exception handling? Write with an example.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
 
+   Answer: `Exception handling` is the mechanism that lets a program `detect an abnormal condition at run time and respond to it`, instead of terminating abruptly.
+
+   - Without it, a single bad input crashes the whole program and any work in progress is lost.
+
+   The five keywords
+   ```
+      try     : the block of code that might throw an exception
+      catch   : handles a particular type of exception
+      finally : always runs, whether or not an exception occurred
+      throw   : raises an exception explicitly
+      throws  : declares that a method may raise a checked exception
+   ```
+
+   Basic structure
+   ```java
+   try {
+       // risky code
+   } catch (SpecificException e) {
+       // handle that type
+   } catch (AnotherException e) {
+       // handle another type
+   } finally {
+       // cleanup - ALWAYS runs
+   }
+   ```
+
+   Complete example
+   ```java
+   import java.util.Scanner;
+
+   public class ExceptionDemo {
+
+       public static void main(String[] args) {
+
+           Scanner sc = new Scanner(System.in);
+           int[] marks = {75, 82, 90, 68, 55};
+
+           try {
+               System.out.print("Enter an index (0-4): ");
+               int index = sc.nextInt();
+
+               System.out.print("Enter a divisor: ");
+               int divisor = sc.nextInt();
+
+               System.out.println("Mark    : " + marks[index]);
+               System.out.println("Divided : " + (marks[index] / divisor));
+
+           } catch (ArrayIndexOutOfBoundsException e) {
+               System.out.println("Invalid index. Please enter 0 to 4.");
+
+           } catch (ArithmeticException e) {
+               System.out.println("Cannot divide by zero.");
+
+           } catch (Exception e) {                 // the general catch, LAST
+               System.out.println("Unexpected error: " + e.getMessage());
+
+           } finally {
+               sc.close();
+               System.out.println("Scanner closed. Program continues.");
+           }
+
+           System.out.println("Program finished normally.");
+       }
+   }
+   ```
+
+   Sample runs
+   ```
+      Enter an index (0-4): 2
+      Enter a divisor: 3
+      Mark    : 90
+      Divided : 30
+      Scanner closed. Program continues.
+      Program finished normally.
+
+      ---
+
+      Enter an index (0-4): 10
+      Invalid index. Please enter 0 to 4.
+      Scanner closed. Program continues.
+      Program finished normally.
+
+      ---
+
+      Enter an index (0-4): 2
+      Enter a divisor: 0
+      Cannot divide by zero.
+      Scanner closed. Program continues.
+      Program finished normally.
+   ```
+   - In every case the program continues and closes its resources. Without the try-catch, the second and third runs would terminate with a stack trace.
+
+   Using `throw` and `throws`, with a custom exception
+   ```java
+   class InsufficientBalanceException extends Exception {
+       public InsufficientBalanceException(String msg) { super(msg); }
+   }
+
+   class Account {
+       private double balance = 5000;
+
+       // 'throws' DECLARES that this method may raise it
+       public void withdraw(double amount) throws InsufficientBalanceException {
+           if (amount > balance)
+               // 'throw' RAISES it
+               throw new InsufficientBalanceException(
+                   "Requested " + amount + " but balance is only " + balance);
+           balance -= amount;
+           System.out.println("Withdrawn " + amount);
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Account acc = new Account();
+           try {
+               acc.withdraw(10000);
+           } catch (InsufficientBalanceException e) {
+               System.out.println("Failed: " + e.getMessage());
+           }
+       }
+   }
+   ```
+   Output
+   ```
+      Failed: Requested 10000.0 but balance is only 5000.0
+   ```
+
+   try-with-resources — the modern form
+   ```java
+   try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+       System.out.println(br.readLine());
+   } catch (IOException e) {
+       System.out.println("Cannot read the file: " + e.getMessage());
+   }   // br.close() runs automatically, even if an exception is thrown
+   ```
+
+   Rules and good practice
+   ```
+      Catch the MOST SPECIFIC exception first; a general catch(Exception e)
+           must come LAST, or the specific ones become unreachable code.
+
+      finally ALWAYS runs - even after a return - so it is the right place
+           for cleanup. try-with-resources is better still.
+
+      Never swallow an exception :  catch (Exception e) { }
+           This hides the fault and destroys the stack trace.
+
+      Do not use exceptions for ordinary control flow; they are slow
+           and obscure the logic.
+
+      Log the exception OBJECT, not just its message, so the stack
+           trace is preserved.
+   ```
+
+   Benefits
+   ```
+      The program survives the fault and can clean up properly
+      Error-handling code is SEPARATED from the normal logic
+      Faults propagate up the call stack to whoever can actually handle them
+      The stack trace makes debugging far easier
+      Custom exceptions express the application's own rules
+   ```
+
 4. **Write the difference between throw and throws using Exception handling?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1172-1173 (ET: N/A)]*
+
+   Answer: `throw` and `throws` look alike but do entirely different jobs. The single letter `s` is the whole difference.
+
+   `throw` — raises an exception
+   ```
+      Used INSIDE a method body
+      Followed by an OBJECT :  throw new SomeException("message");
+      Raises exactly ONE exception
+      Execution of the method stops immediately at that point
+   ```
+   ```java
+   public void setAge(int age) {
+       if (age < 0 || age > 150)
+           throw new IllegalArgumentException("Invalid age: " + age);
+       this.age = age;
+   }
+   ```
+
+   `throws` — declares that an exception may be raised
+   ```
+      Used in the method SIGNATURE, after the parameter list
+      Followed by CLASS NAMES :  throws IOException, SQLException
+      May declare SEVERAL exceptions, separated by commas
+      Raises nothing itself - it only warns the caller
+   ```
+   ```java
+   public void readFile(String path) throws IOException, FileNotFoundException {
+       FileReader f = new FileReader(path);
+       ...
+   }
+   ```
+
+   The two used together
+   ```java
+   class InsufficientBalanceException extends Exception {
+       public InsufficientBalanceException(String msg) { super(msg); }
+   }
+
+   class Account {
+       private double balance = 5000;
+
+       //                                     'throws' DECLARES
+       public void withdraw(double amount) throws InsufficientBalanceException {
+
+           if (amount > balance)
+               //          'throw' RAISES
+               throw new InsufficientBalanceException(
+                   "Requested " + amount + " but balance is " + balance);
+
+           balance -= amount;
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Account acc = new Account();
+           try {
+               acc.withdraw(10000);
+           } catch (InsufficientBalanceException e) {
+               System.out.println("Failed: " + e.getMessage());
+           }
+       }
+   }
+   ```
+   - `throws` tells the compiler and the reader "this method can fail in this way, so be ready". `throw` is the moment it actually does.
+
+   Difference
+
+   | Point | `throw` | `throws` |
+   |---|---|---|
+   | Purpose | Raises an exception | Declares that one may be raised |
+   | Where written | Inside the method body | In the method signature |
+   | Followed by | An `object` (`new XException()`) | One or more `class names` |
+   | How many | Exactly one at a time | Several, separated by commas |
+   | Effect | Execution stops there | Nothing at run time |
+   | Checked exceptions | Must be caught or declared | Passes the duty to the caller |
+   | Used with | An instance | A class name |
+   | Syntax | `throw new IOException("msg");` | `void m() throws IOException { }` |
+
+   Why `throws` matters for checked exceptions
+   ```java
+      // WITHOUT throws - COMPILE ERROR for a checked exception
+      public void read() {
+          FileReader f = new FileReader("data.txt");   // ERROR: unhandled
+      }
+
+      // Option 1 : declare it, passing the duty upward
+      public void read() throws FileNotFoundException {
+          FileReader f = new FileReader("data.txt");
+      }
+
+      // Option 2 : handle it here
+      public void read() {
+          try {
+              FileReader f = new FileReader("data.txt");
+          } catch (FileNotFoundException e) {
+              System.out.println("File not found");
+          }
+      }
+   ```
+   - For `unchecked` exceptions — `NullPointerException`, `ArithmeticException` — `throws` is optional, because the compiler does not enforce handling.
+
+   Rules worth stating
+   ```
+      Only ONE object may be thrown at a time; it must be Throwable
+           or a subclass.
+
+      Code immediately after a throw is UNREACHABLE and will not compile.
+
+      An overriding method cannot declare a BROADER checked exception
+           than the method it overrides.
+
+      'throws' does not handle anything - it delegates. Eventually some
+           method must actually catch it, or the program terminates.
+   ```
+
+   - Memory aid: `throw` is an action taken now; `throws` is a warning about what might happen.
 
 ## C++ OOP Concepts & Friend Functions (3)
 
