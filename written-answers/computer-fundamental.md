@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 153 questions
+**Table of Contents** — 10 subtopics · 208 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-59) | 59 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-114) | 114 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
 | 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
@@ -18,11 +18,11 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (59)
+## Computer Fundamentals & Acronyms (114)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-   Answer: The question as printed is `incomplete and garbled` — the Bengali text asks for the expansion and analysis of certain acronyms, but the list of acronyms itself was not captured. The acronyms that appear in this paper are expanded below.
+Answer: The question as printed is `incomplete and garbled` — the Bengali text asks for the expansion and analysis of certain acronyms, but the list of acronyms itself was not captured. The acronyms that appear in this paper are expanded below.
 
    Computer fundamentals
    ```
@@ -139,7 +139,7 @@
 
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-   Answer: The question as printed is `incomplete and garbled`. Read as it stands, it asks for the analysis of the words `RAIN`, `FRAME`, `NAME` and `HEART`, which are not standard computing acronyms. The two readings that make sense are given below.
+Answer: The question as printed is `incomplete and garbled`. Read as it stands, it asks for the analysis of the words `RAIN`, `FRAME`, `NAME` and `HEART`, which are not standard computing acronyms. The two readings that make sense are given below.
 
    Reading 1 — they are `mnemonics`, not acronyms
    - A `mnemonic` is a memory aid in which each letter stands for an item in a list. Ordinary words are chosen deliberately, because a word is easier to remember than a random string.
@@ -213,14 +213,14 @@
 
 3. **Write the full meaning: HTTP, DVD, and SMTP?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1335 (ET: N/A)]*
 
-   Answer:
+Answer:
    - **HTTP** — HyperText Transfer Protocol. The application-layer protocol used by web browsers to fetch web pages. Port 80.
    - **DVD** — Digital Versatile Disc (originally Digital Video Disc). An optical storage disc holding 4.7 GB single layer.
    - **SMTP** — Simple Mail Transfer Protocol. Used to SEND email between mail servers. Port 25.
 
 4. **Provide the full form of the following terms: HTTP, SMTP, ASCII, DHCP, ICMP.** *[BBA Assistant Maintenance Engineer 12.07.2025 compact it 1432 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    | Term | Full form | Purpose |
    |---|---|---|
@@ -232,17 +232,17 @@
 
 5. **MOOC stands for __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: **Massive Open Online Course.**
+Answer: **Massive Open Online Course.**
    - An online course open to unlimited participants, free or low cost. Examples: Coursera, edX, Udacity, Khan Academy.
 
 6. **Write down the full form of VIRUS?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: **VIRUS — Vital Information Resources Under Seize.**
+Answer: **VIRUS — Vital Information Resources Under Seize.**
    - It is a malicious program that attaches itself to a host file and replicates when that file runs.
 
 7. **(b) What is register? What are the common register found in a basic computer?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
 
-   Answer: A register is a very small, very fast storage location inside the CPU. It holds the data, instruction or address the processor is working on at that instant. Registers are the fastest memory in the hierarchy — faster than cache and RAM.
+Answer: A register is a very small, very fast storage location inside the CPU. It holds the data, instruction or address the processor is working on at that instant. Registers are the fastest memory in the hierarchy — faster than cache and RAM.
 
    Common registers in a basic computer
 
@@ -262,7 +262,7 @@
 
 8. **1TB = কত বাইট?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)], [BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: **1 TB = 2⁴⁰ bytes = 1,099,511,627,776 bytes** (binary measure, about 1.1 trillion bytes).
+Answer: **1 TB = 2⁴⁰ bytes = 1,099,511,627,776 bytes** (binary measure, about 1.1 trillion bytes).
 
    - In powers of 1024: `1 TB = 1024 GB = 1024 × 1024 MB = 1024 × 1024 × 1024 KB`
    - Storage manufacturers use the decimal measure instead: `1 TB = 10¹² = 1,000,000,000,000 bytes`. This is why a "1 TB" disk shows as about 931 GB in Windows.
@@ -270,7 +270,7 @@
 
 9. **Write full form of NAT, DHCP, MAC and TCP-IP** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
-   Answer:
+Answer:
    - **NAT** — Network Address Translation. Maps private IP addresses to a public one so many devices share a single public IP.
    - **DHCP** — Dynamic Host Configuration Protocol. Assigns IP address, subnet mask, gateway and DNS automatically.
    - **MAC** — Media Access Control. A 48-bit hardware address burned into the network card, written as `00:1A:2B:3C:4D:5E`.
@@ -278,7 +278,7 @@
 
 10. **What is the base of 5th generation Computer?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
-    Answer: The base of the fifth generation computer is **Artificial Intelligence (AI)**, built on **ULSI (Ultra Large Scale Integration)** technology.
+Answer: The base of the fifth generation computer is **Artificial Intelligence (AI)**, built on **ULSI (Ultra Large Scale Integration)** technology.
 
     - Fifth generation runs from 1980 to the present.
     - Features: parallel processing, AI and expert systems, natural language processing, voice and image recognition, and quantum and nanotechnology research.
@@ -287,7 +287,7 @@
 
 11. **কম্পিউটার প্রজন্ম বলতে কী বোঝায়? কম্পিউটারের বিভিন্ন প্রজন্মের বৈশিষ্ট্য বর্ণনা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 405 (ET: N/A)]*
 
-    Answer: A computer generation means a stage of development in computer technology, marked by a major change in the ELECTRONIC COMPONENT used to build the processor. Each generation is faster, smaller, cheaper and more reliable than the one before it.
+Answer: A computer generation means a stage of development in computer technology, marked by a major change in the ELECTRONIC COMPONENT used to build the processor. Each generation is faster, smaller, cheaper and more reliable than the one before it.
 
     | Generation | Period | Main component | Language | Example |
     |---|---|---|---|---|
@@ -306,7 +306,7 @@
 
 12. **Write short note : SMTP, RIP, RDBMS, ITSQN** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **SMTP (Simple Mail Transfer Protocol)** — the push protocol used to SEND email from a client to a server and between mail servers. Uses port 25 (587 with authentication). It only sends; POP3 and IMAP are used to receive.
     - **RIP (Routing Information Protocol)** — a distance-vector routing protocol that uses hop count as its metric, with a maximum of 15 hops. Simple but slow to converge, so it suits only small networks. Based on the Bellman-Ford algorithm.
     - **RDBMS (Relational Database Management System)** — software that stores data in related tables of rows and columns, enforces primary and foreign keys, and supports SQL and ACID transactions. Examples: Oracle, MySQL, PostgreSQL, SQL Server.
@@ -314,7 +314,7 @@
 
 13. **Write down the Meaning: MIME, PNG, JPGE, OSPF** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **MIME** — Multipurpose Internet Mail Extensions. Extends email to carry non-text content such as images, audio and attachments, and defines content types like `text/html` and `image/png`.
     - **PNG** — Portable Network Graphics. A lossless image format supporting transparency; replaced GIF for still images.
     - **JPEG** — Joint Photographic Experts Group. A lossy compressed image format, best for photographs. (The question spells it "JPGE".)
@@ -322,11 +322,18 @@
 
 14. **Full meaning of : HTTPs** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
-    Answer: **HTTPS — HyperText Transfer Protocol Secure.**
+Answer: **HTTPS — HyperText Transfer Protocol Secure.**
     - It is HTTP running inside an SSL/TLS encrypted tunnel, using port 443 instead of 80.
     - It provides encryption (data cannot be read in transit), authentication (the server proves its identity with a certificate) and integrity (data cannot be altered undetected).
 
 15. **Here some idea in computer architecture. You fill the idea part of the table which describe the best? GUI, RAID, API, LRU** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 453 (ET: BUET)]*
+| Term | Description |
+|---|---|
+| GUI |  |
+| RAID |  |
+| API |  |
+| LRU |  |
+
 | Term | Description |
 |---|---|
 | GUI |  |
@@ -349,7 +356,7 @@
 
 16. **Image file এর extension নিচের কোনটি?** *[BTCL Junior Assistant Manager 2022 compact it 640 (ET: BUET)]*
 
-    Answer: The options were not printed. The common image file extensions are:
+Answer: The options were not printed. The common image file extensions are:
 
     - **Raster (bitmap)**: `.jpg` / `.jpeg`, `.png`, `.gif`, `.bmp`, `.tiff`, `.webp`
     - **Vector**: `.svg`, `.ai`, `.eps`
@@ -360,7 +367,7 @@
 
 17. **What is OCR? Write down the difference between OCR and OMR.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
-    Answer: **OCR (Optical Character Recognition)** is the technology that reads printed or handwritten TEXT from a scanned image and converts it into editable, machine-readable text.
+Answer: **OCR (Optical Character Recognition)** is the technology that reads printed or handwritten TEXT from a scanned image and converts it into editable, machine-readable text.
 
     | Point | OCR | OMR |
     |---|---|---|
@@ -377,7 +384,7 @@
 
 18. **১৬. পূর্ণরূপ লিখুন: HTTP, POP, ATM, PROM** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **HTTP** — HyperText Transfer Protocol
     - **POP** — Post Office Protocol (POP3 is version 3, used to download email, port 110)
     - **ATM** — Automated Teller Machine (in networking it also means Asynchronous Transfer Mode)
@@ -385,7 +392,7 @@
 
 19. **Write short notes on: (i) RAM (ii) ROM (iii) Primary key (iv) Foreign key (v) Data** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 671 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (i) RAM — Random Access Memory
     - The main working memory of a computer. The CPU reads programs and data from it while running.
@@ -413,14 +420,14 @@
 
 20. **Write down the full meaning of SMTP?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-    Answer: **SMTP — Simple Mail Transfer Protocol.**
+Answer: **SMTP — Simple Mail Transfer Protocol.**
     - An application-layer protocol used to SEND email from a client to a mail server, and between mail servers.
     - Default port 25; port 587 with authentication and port 465 for SMTPS.
     - It only pushes mail out. Receiving mail uses POP3 (port 110) or IMAP (port 143).
 
 21. **What is first programming language?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-    Answer: **FORTRAN (Formula Translation)** is regarded as the first high-level programming language. It was developed by John Backus at IBM in 1957 for scientific and engineering computation.
+Answer: **FORTRAN (Formula Translation)** is regarded as the first high-level programming language. It was developed by John Backus at IBM in 1957 for scientific and engineering computation.
 
     - The first programming language of any kind was **Plankalkül**, designed by Konrad Zuse in 1945, but it was never implemented at the time.
     - **Ada Lovelace** wrote the first algorithm intended for a machine in 1843, which is why she is called the first programmer.
@@ -429,7 +436,7 @@
 
 22. **(ক) “Computer” এবং “Computer System' এই দুটি term এর মধ্যে পার্থক্য কি?** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 703 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Computer | Computer System |
     |---|---|---|
@@ -450,7 +457,7 @@
 
 23. **Write short answer on the following: (a) Plaintext (b) HTTP (c) Gateway used in \underline{\phantom{\text{Network}}} layer. (d) VIRUS full form (e) Who is the father of Computer? (f) What is Cyber security? (g) What is Malware? (h) Write the IEEE standards WiFi and WiMax. (i) Write two HTML empty tag.** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 724 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     - **(a) Plaintext** — the original readable message before encryption. After encryption it becomes ciphertext.
     - **(b) HTTP** — HyperText Transfer Protocol; the application-layer protocol that transfers web pages, port 80. It is stateless and request-response based.
@@ -464,7 +471,7 @@
 
 24. **Write full form: DHCP, POP3, VSAT and LCD.** *[IDRA Assistant Network Administrator 2022 compact it 728 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **DHCP** — Dynamic Host Configuration Protocol. Automatically assigns IP address, subnet mask, default gateway and DNS to a host.
     - **POP3** — Post Office Protocol version 3. Downloads email from the server to the client, port 110.
     - **VSAT** — Very Small Aperture Terminal. A small satellite dish used for two-way data communication, widely used for remote bank branches and rural connectivity.
@@ -472,7 +479,7 @@
 
 25. **বিশ্বের সবচেয়ে শক্তিশালী সুপার কম্পিউটারের নাম কী?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-    Answer: As of the TOP500 list of June 2026, the world's most powerful supercomputer is **LineShine**, installed at the National Supercomputing Centre in Shenzhen, China.
+Answer: As of the TOP500 list of June 2026, the world's most powerful supercomputer is **LineShine**, installed at the National Supercomputing Centre in Shenzhen, China.
 
     - Performance: **2.198 Exaflop/s** on the High Performance Linpack (HPL) benchmark.
     - It is built on a custom Chinese processor and the "LingKun" platform.
@@ -491,7 +498,7 @@
 
 26. **“Copy and Paste” এর উদ্ভাবক কে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-    Answer: **Larry Tesler** invented cut, copy and paste.
+Answer: **Larry Tesler** invented cut, copy and paste.
 
     - He developed it with his colleague Tim Mott at **Xerox PARC in the 1970s**, while building the Gypsy word processor.
     - The idea came from the physical practice of cutting text with scissors and pasting it onto a page.
@@ -499,7 +506,7 @@
 
 27. **Difference between Data and Information.** *[SPCB Sub-Assistant Programmer 2022 compact it 739 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Data | Information |
     |---|---|---|
@@ -517,7 +524,7 @@
 
 28. **পূর্ণরূপ লিখুন: BTRC, MICR, SMTP, Virus, Wimax.** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **BTRC** — Bangladesh Telecommunication Regulatory Commission. The national regulator for telecom and internet, established in 2002.
     - **MICR** — Magnetic Ink Character Recognition. Reads characters printed in magnetic ink, used on the bottom line of bank cheques.
     - **SMTP** — Simple Mail Transfer Protocol. Sends email, port 25.
@@ -526,7 +533,7 @@
 
 29. **Internet চালু হয় কত সালে?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-    Answer: The answer depends on which milestone is meant, so all three should be stated.
+Answer: The answer depends on which milestone is meant, so all three should be stated.
 
     - **1969** — ARPANET, the ancestor of the internet, went live. The first message was sent between UCLA and Stanford on 29 October 1969. This is the usual exam answer for "when did the internet start".
     - **1 January 1983** — ARPANET switched to TCP/IP. This date is considered the official birth of the modern INTERNET, because networks could now interconnect.
@@ -536,7 +543,7 @@
 
 30. **আধুনিক Computer এর জনক কাকে বলা হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-    Answer: **Charles Babbage** is called the Father of the Computer, for designing the Analytical Engine in 1837 — the first design of a general-purpose programmable computer.
+Answer: **Charles Babbage** is called the Father of the Computer, for designing the Analytical Engine in 1837 — the first design of a general-purpose programmable computer.
 
     - **Alan Turing** is called the Father of Modern Computing and Artificial Intelligence, for the Turing machine model (1936) and the Turing Test (1950).
     - **John von Neumann** gave the stored-program architecture (1945) that all modern computers still follow.
@@ -546,7 +553,7 @@
 
 31. **Unicode এর মাধ্যমে সম্ভাব্য কতগুলো চিহ্নকে নির্দিষ্ট করা যায়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-    Answer: Unicode defines **1,114,112 code points** in total.
+Answer: Unicode defines **1,114,112 code points** in total.
 
     How that number arises
     - Unicode is organised into **17 planes**, numbered 0 to 16.
@@ -560,7 +567,7 @@
 
 32. **Computer এর IQ কত?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-    Answer: **The IQ of a computer is zero.**
+Answer: **The IQ of a computer is zero.**
 
     - A computer has no intelligence of its own. It only follows the instructions written by a programmer, exactly and without understanding.
     - It cannot think, reason, feel or make an independent judgement, so no IQ can be assigned to it.
@@ -569,7 +576,7 @@
 
 33. **Bangla font এর উদ্ভাবক কে?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-    Answer: **Mustafa Jabbar** developed the **Bijoy** Bangla keyboard and font package in 1988, and it became the standard for Bangla computing in Bangladesh for decades. He later served as Minister of Posts and Telecommunications.
+Answer: **Mustafa Jabbar** developed the **Bijoy** Bangla keyboard and font package in 1988, and it became the standard for Bangla computing in Bangladesh for decades. He later served as Minister of Posts and Telecommunications.
 
     - Before Bijoy, **Shahid Lipi** — developed by Saif ud Doula in 1985 — was the first Bangla software for computers.
     - **Avro Keyboard**, developed by Mehdi Hasan Khan in 2003, was the first free and open-source Unicode-based Bangla writing software, and is now the most widely used.
@@ -577,7 +584,7 @@
 
 34. **How many bit is use of Unicode digit? (a) 8 (b) 16 (c) 20 (d) 24** *[BCC Assistant Programmer 12.02.2021 compact it 811 (ET: BUET)]*
 
-    Answer: **(b) 16 bits.**
+Answer: **(b) 16 bits.**
 
     - The original Unicode standard used 16 bits per character, giving `2¹⁶ = 65,536` characters. This is the range now called the Basic Multilingual Plane.
     - Modern Unicode has extended beyond 16 bits to 17 planes and 1,114,112 code points, and UTF-8 uses 1 to 4 bytes per character.
@@ -585,7 +592,7 @@
 
 35. **Which year gmail is started? (a) 1998 (b) 1988 (c) 2004 (d) 2021** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-    Answer: **(c) 2004.**
+Answer: **(c) 2004.**
 
     - Gmail was launched by Google on **1 April 2004**, initially as an invitation-only beta service.
     - It offered 1 GB of free storage at a time when rivals gave 2-4 MB, which is why many people first thought the announcement was an April Fool's joke.
@@ -594,7 +601,7 @@
 
 36. **Meaning of the GPS system? (a) Global Pointing System (b) Global Positioning System (c) Global Partion System (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-    Answer: **(b) Global Positioning System.**
+Answer: **(b) Global Positioning System.**
 
     - A satellite-based navigation system operated by the United States, giving location and time anywhere on Earth.
     - It uses a constellation of at least 24 satellites. A receiver needs signals from at least 4 satellites to fix latitude, longitude, altitude and time, using a technique called trilateration.
@@ -602,7 +609,7 @@
 
 37. **Write the correct Answer: (i) If x=2+3*7\%4/2-3 compile the result x is? (ii) Which of the following algorithms are based on the divide and conquar aproach? (iii) The Internetworking protocol is known as _____. (iv) Locking protocols are used in database management system for _____. (v) File permission is given rwxrw---x, if change the permission with chmod 701 then the permission is _____. (vi) Which is the true? a. adjacency matrix is better then dense graph b. adjacency matrix is better then sparse graph c. both a and b d. none (vii) If the resources are always preempted from the same process _____ can occur. (same type) (viii) What is invoked to create an object in Java? (ix) In the architecture of a database system the external level is the _____. (x) Check sum is used in communication for _____ error detection.** *[BPDB Assistant Engineer (CSE) 2021 compact it 815-816 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     **(i) x = −1**
     - Precedence: `*`, `%` and `/` bind tighter than `+` and `−`, and they are evaluated left to right.
@@ -641,7 +648,7 @@
 
 38. **Facebook এর জনক কে?** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
-    Answer: **Mark Zuckerberg** is the founder of Facebook.
+Answer: **Mark Zuckerberg** is the founder of Facebook.
 
     - He created it in **February 2004** while a student at Harvard University, originally as "TheFacebook".
     - Co-founders: Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.
@@ -649,7 +656,7 @@
 
 39. **Write the full form of: VIRUS, BIOS, DoS attack, OSPF, DVD, WiFi.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **VIRUS** — Vital Information Resources Under Seize
     - **BIOS** — Basic Input Output System. Firmware in ROM that starts the hardware and loads the operating system.
     - **DoS attack** — Denial of Service attack. Floods a server so that legitimate users cannot reach it. DDoS is the distributed version, using many machines.
@@ -659,7 +666,7 @@
 
 40. **Write down the full meaning: DHCP, ICMP, ACNS, GARP.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 842 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **DHCP** — Dynamic Host Configuration Protocol. Automatically assigns IP address, subnet mask, gateway and DNS to hosts. Uses ports 67 and 68.
     - **ICMP** — Internet Control Message Protocol. Carries error and diagnostic messages; used by `ping` and `traceroute`.
     - **GARP** — Gratuitous ARP. An ARP message a device sends about its OWN address, unasked, to announce a changed IP or MAC or to detect an address conflict. (In switching, GARP also stands for Generic Attribute Registration Protocol, IEEE 802.1D.)
@@ -667,7 +674,7 @@
 
 41. **Write the full form: TCP/IP, DHCP, XML, PoSQL, CSMA** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 920 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **TCP/IP** — Transmission Control Protocol / Internet Protocol. The 4-layer suite the internet runs on.
     - **DHCP** — Dynamic Host Configuration Protocol.
     - **XML** — eXtensible Markup Language. A self-describing text format for storing and transporting structured data.
@@ -676,21 +683,21 @@
 
 42. **Which It company nickname is “The Big Blue”?** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-    Answer: **IBM (International Business Machines Corporation).**
+Answer: **IBM (International Business Machines Corporation).**
 
     - The nickname comes from the company's blue logo, its blue mainframe cabinets and the traditional blue suits of its salesmen.
     - IBM was founded in 1911 and is one of the oldest technology companies still operating.
 
 43. **Whose codename was Longhorn?** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-    Answer: **Windows Vista** — "Longhorn" was its development codename at Microsoft.
+Answer: **Windows Vista** — "Longhorn" was its development codename at Microsoft.
 
     - Windows Vista was released in January 2007, between Windows XP and Windows 7.
     - Other Microsoft codenames: Windows XP was "Whistler", Windows 7 was "Blackcomb" / "Vienna", and Windows Server 2003 was "Whistler Server".
 
 44. **What does COBOL stand for?** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-    Answer: **COBOL — COmmon Business Oriented Language.**
+Answer: **COBOL — COmmon Business Oriented Language.**
 
     - Developed in 1959, largely through the work of **Grace Hopper**, for business, finance and administrative data processing.
     - Its English-like syntax was designed so that non-programmers could read it.
@@ -698,7 +705,7 @@
 
 45. **১৭. কোন প্রজন্মের কম্পিউটারে VLSI (Very Large Scale Integration) চিপ ব্যবহার শুরু হয়?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-    Answer: **The fourth generation (1971-1980).**
+Answer: **The fourth generation (1971-1980).**
 
     - VLSI packed thousands of transistors onto a single chip, which made the **microprocessor** possible — the entire CPU on one chip.
     - This is what created the personal computer. The Intel 4004 (1971) was the first microprocessor.
@@ -713,14 +720,14 @@
 
 46. **JPEG and RAID full form কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 943-944 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **JPEG** — Joint Photographic Experts Group. A lossy image compression standard, best suited to photographs. File extension `.jpg` or `.jpeg`.
     - **RAID** — Redundant Array of Independent Disks (originally "Inexpensive"). Combines several physical disks into one logical unit for speed, redundancy or both.
     - Common RAID levels: RAID 0 (striping, speed only), RAID 1 (mirroring, redundancy), RAID 5 (striping with distributed parity), RAID 10 (mirror + stripe).
 
 47. **VGA, EGA এর পূর্ণ নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **VGA** — Video Graphics Array. Introduced by IBM in 1987, resolution 640 × 480 with 16 colours, or 320 × 200 with 256 colours. The blue 15-pin D-sub connector is still called a VGA port.
     - **EGA** — Enhanced Graphics Adapter. Introduced in 1984, resolution 640 × 350 with 16 colours from a 64-colour palette. It came before VGA.
 
@@ -728,7 +735,7 @@
 
 48. **পূর্ণরূপ লিখ: (a) LTE (b) IOT (c) RDBMS (d) FORTRAN** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947-948 (ET: BUET)]*
 
-    Answer:
+Answer:
     - **LTE** — Long Term Evolution. The 4G mobile broadband standard, giving high-speed data over cellular networks.
     - **IoT** — Internet of Things. A network of physical devices with sensors and software that collect and exchange data over the internet.
     - **RDBMS** — Relational Database Management System. Stores data in related tables and uses SQL; examples are Oracle, MySQL, PostgreSQL.
@@ -736,7 +743,7 @@
 
 49. **Write down the full meaning: (i) DNS (ii) TCP (iii) FTP (iv) ARP (v) UDP** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1045-1046 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     | Acronym | Full form | Function | Port |
     |---|---|---|---|
@@ -751,7 +758,7 @@
 
 50. **(ক) আকার আকৃতি ও ক্ষমতার ভিত্তিতে Digital Computer-এর প্রকারভেদ আলোচনা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1066-1067 (ET: N/A)]*
 
-    Answer: By size, capacity and processing power, digital computers are divided into four types.
+Answer: By size, capacity and processing power, digital computers are divided into four types.
 
     | Type | Size | Users | Speed / capacity | Example use |
     |---|---|---|---|---|
@@ -785,6 +792,10 @@
    b) How many bits in IPv6 address?
    c) What is used as a barrier to protect network host/computer?
 
+a) Write the abbreviation of the following terms: HTTP, GUI and ALU.
+   b) How many bits in IPv6 address?
+   c) What is used as a barrier to protect network host/computer?
+
    Answer:
 
    **(a) Abbreviations**
@@ -804,6 +815,22 @@
 
 52. **Short question:** *[BINA Assistant Programmer 2019 compact it 1154 (ET: IBA)]*
    a) What is full name of ASCII?
+   b) The short cut key to replace a data with another in an Excel sheet is \_\_\_.
+   c) What is full of USB?
+   d) Which function key is use to check spelling?
+   e) The common keyboard arrangement is called the \_\_\_.
+   f) The file system "NTFS" stands for \_\_\_.
+   g) Which of the following properties of a monitor is measured in hertz?
+   h) $(11111110)_2 = (?)_{10}$
+   i) Nibble = ?
+   j) The OSI model has \_\_\_.
+   k) VGA stands for \_\_\_.
+   l) How many bits comprise a unit of a Unicode?
+   m) The brain of any computer system is \_\_\_.
+   n) Which of the following is the save button in computer keyboard?
+   o) How long is an IPv6?
+
+a) What is full name of ASCII?
    b) The short cut key to replace a data with another in an Excel sheet is \_\_\_.
    c) What is full of USB?
    d) Which function key is use to check spelling?
@@ -855,6 +882,12 @@
    4. HTTP: Hyper Text Transfer Protocol
    5. POP3: Post Office Protocol version 3
 
+1. JPEG: Joint Photographic Experts Group
+   2. LCD: Liquid Crystal Display
+   3. NTFS: New Technology File System
+   4. HTTP: Hyper Text Transfer Protocol
+   5. POP3: Post Office Protocol version 3
+
    Answer: The full forms given in the question are all correct. Brief notes on each:
 
    - **JPEG — Joint Photographic Experts Group.** A lossy image compression standard named after the committee that created it. Best for photographs; loses quality each time it is re-saved.
@@ -865,7 +898,7 @@
 
 54. **Explain URL, FTP, ASCII and BIOS** *[Multiple Ministry Assistant Programmer 2017 compact it 1229-1230 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **URL — Uniform Resource Locator**
     - The complete address of a resource on the internet.
@@ -892,7 +925,7 @@
 
 55. **Describe about Firewalls, Microcontroller, COCOMO, Query Optimization, Genetic algorithm and UML.** *[ICT Ministry Assistant Programmer 2017 compact it 1241 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **Firewall**
     - A security barrier between a trusted internal network and an untrusted external one, filtering traffic against a rule set.
@@ -926,7 +959,7 @@
 
 56. **You have created a file containing 1 million characters. Suppose you want to save the file in ASCII format. How much memory space in MB in needed to store the file?** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1264 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Step 1 - bytes per character
     - ASCII stores each character in **1 byte** (7 bits used, stored in 8 bits).
@@ -946,7 +979,7 @@
 
 57. **Explain URL, VOIP and Broadband.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1264 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **URL — Uniform Resource Locator**
     - The address that identifies a resource on the web and tells the browser how to fetch it.
@@ -967,6 +1000,13 @@
 
 58. **c) Enter annotation (any 5)** *[Ministry of Finance Programmer 2013 compact it 1273 (ET: N/A)]*
    i. Search Engine
+   ii. Operating System
+   iii. Website
+   iv. Computer memory
+   v. ASCII code
+   vi. OCR and OMR
+
+i. Search Engine
    ii. Operating System
    iii. Website
    iv. Computer memory
@@ -1008,7 +1048,7 @@
 
 59. **What are the characteristics and elements of a computer system?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1277-1278 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Characteristics of a computer
     - **Speed** — performs millions of operations per second, measured in MIPS or FLOPS.
@@ -1040,11 +1080,544 @@
     ```
     - **Input unit** accepts data, **memory** stores it, the **ALU** computes, the **control unit** directs everything, and the **output unit** presents the result.
 
+60. **(c) Compare TTL and CMOS logic family in terms of (i) Speed (ii) Noise and (iii) Power consumption.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
+
+    Answer:
+
+    | Parameter | TTL (Transistor-Transistor Logic) | CMOS (Complementary Metal-Oxide-Semiconductor) |
+    |---|---|---|
+    | Component Technology | Bipolar Junction Transistors (BJTs) | Complementary pairs of pMOS and nMOS transistors |
+    | (i) Switching Speed | High propagation speed; typical delay is 10 ns (standard TTL) to 3 ns (Schottky) | Historically slower, but modern CMOS (74ACT) matches TTL speeds |
+    | (ii) Noise Margin | Moderate noise immunity (approx. 0.4 V noise margin) | Excellent noise immunity (approx. 30% to 45% of VDD, 1.5 V) |
+    | (iii) Power Consumption | High static and dynamic power consumption (approx. 10 mW/gate) | Extremely low static power consumption (nanowatts/gate; draws current only during state transitions) |
+    | Fan-Out | Typically 10 loads | High (typically > 50 loads at low frequency) |
+
+61. **শুদ্ধ বানান লিখ: স্বায়ত্বশাসন, ব্যাকুল, নীশিথিনী, কুসংস্কার,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
+
+    Answer:
+    - অশুদ্ধ: স্বায়ত্বশাসন -> শুদ্ধ: **স্বায়ত্তশাসন**
+    - অশুদ্ধ: ব্যাকুল -> শুদ্ধ: **ব্যাকুল** (সঠিক)
+    - অশুদ্ধ: নীশিথিনী -> শুদ্ধ: **নিশীথিনী**
+    - অশুদ্ধ: কুসংস্কার -> শুদ্ধ: **কুসংস্কার** (সঠিক)
+
+62. **বাগধারা: বিড়াল তপস্বী,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
+
+    Answer:
+    - বিড়াল তপস্বী: ভণ্ড সাধু / কপট ব্যক্তি (A hypocrite).
+    - বাক্য রচনা: লোকটির কথা বিশ্বাস করো না, সে আসলে একজন বিড়াল তপস্বী।
+
+63. **ইংরেজি -১৫** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+    Answer: English language skills cover grammar precision, correct preposition usage, vocabulary strength, sentence transformation, and comprehension.
+
+64. **Verb correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+    Answer:
+    - 1. He (go) to school yesterday. -> He **went** to school yesterday.
+    - 2. The train (leave) before we reached the station. -> The train **had left** before we reached the station.
+    - 3. If it rains, we (not go) out. -> If it rains, we **will not go** out.
+    - 4. It (rain) since morning. -> It **has been raining** since morning.
+    - 5. The boy (read) a book now. -> The boy **is reading** a book now.
+
+65. **Phrase -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+    Answer:
+    - 1. In a nutshell (সংক্ষেপে): Explain the problem in a nutshell.
+    - 2. By leaps and bounds (দ্রুত গতিতে): Technology is advancing by leaps and bounds.
+    - 3. Bread and butter (জীবিকা): Teaching is his main source of bread and butter.
+    - 4. At the eleventh hour (শেষ মুহূর্তে): He submitted his assignment at the eleventh hour.
+    - 5. Pros and cons (সুবিধা ও অসুবিধা): Consider the pros and cons before making a decision.
+
+66. **A CPU has 512 pages of each size 2 KB, and total frames = 128. Determine the length of logical address and physical address.** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+    Answer:
+
+    Given:
+    - Number of pages = $512 = 2^9$
+    - Page size = $2	ext{ KB} = 2 	imes 1024	ext{ bytes} = 2048	ext{ bytes} = 2^{11}	ext{ bytes}$
+    - Number of frames = $128 = 2^7$
+
+    1. Logical Address Calculation:
+    - Page Number bits ($p$) = $\log_2(512) = 9	ext{ bits}$
+    - Offset / Page Size bits ($d$) = $\log_2(2048) = 11	ext{ bits}$
+    - Total Logical Address Length = $p + d = 9 + 11 = 20	ext{ bits}$
+
+    2. Physical Address Calculation:
+    - Frame Number bits ($f$) = $\log_2(128) = 7	ext{ bits}$
+    - Offset bits ($d$) = $11	ext{ bits}$ (same as page offset)
+    - Total Physical Address Length = $f + d = 7 + 11 = 18	ext{ bits}$
+
+67. **Solve a memory address calculation problem given the number of pages, frames, and page size. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+68. **GK: Write short notes on the Rohingya issue — causes and current situation.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+    Answer:
+    - Background & Causes: The Rohingya are an ethnic Muslim minority from Rakhine State, Myanmar, stripped of citizenship under Myanmar's 1982 Citizenship Law. Decades of institutional disenfranchisement and military crackdowns in August 2017 caused over 750,000 Rohingya to flee to Bangladesh for humanitarian shelter.
+    - Current Situation: Bangladesh hosts over 1.2 million displaced Rohingya in Cox's Bazar and Bhasan Char. The global community, through ICJ and UN bodies, urges safe, dignified, and sustainable repatriation to Myanmar with citizenship rights restored.
+
+69. **উপসর্গ কী? কত প্রকার ও কী কী?-** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 237]]*
+
+    Answer:
+    - উপসর্গ: যেসব অর্থহীন অব্যয়সূচক শব্দাংশ মূল ধাতু বা শব্দের পূর্বে বসে নতুন অর্থবোধক শব্দ তৈরি করে, অর্থের পরিবর্তন, পরিবর্ধন বা সংকোচন ঘটায়, তাদের উপসর্গ বলে।
+    - প্রকারভেদ: বাংলা ভাষায় উপসর্গ ৩ প্রকার:
+      1. খাঁটি বাংলা উপসর্গ (২১টি: অ, অঘা, অজ, অনা, আ, আড়, আন, আব, ইতি, উন, কদ, কু, নি, পাতি, বি, ভর, রাম, স, সা, সু, হা)।
+      2. তৎসম বা সংস্কৃত উপসর্গ (২০টি: প্র, পরা, অপ, সম, নি, অনু, অব, নির্, দুর্, বি, অধি, সু, উৎ, পরি, প্রতি, অতি, অপি, অভি, উপ, আ)।
+      3. বিদেশী উপসর্গ (ফারসি, আরবি, ইংরেজি, উর্দু-হিন্দি উপসর্গ: যেমন- হেড, সাব, ফুল, হাফ, বে, গর, দর ইত্যাদি)।
+
+70. **বাক্য শুদ্ধ করো (৫টি)** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 237]]*
+
+    Answer:
+    - ১. অশুদ্ধ: সব পাখিরা উড়ে গেল। -> শুদ্ধ: **সব পাখি উড়ে গেল** (অথবা **পাখিরা উড়ে গেল**)।
+    - ২. অশুদ্ধ: তার সৌজন্যতায় মুগ্ধ হলাম। -> শুদ্ধ: **তার সৌজন্যে মুগ্ধ হলাম**।
+    - ৩. অশুদ্ধ: দৈনতা সর্বদা প্রশংসনীয় নয়। -> শুদ্ধ: **দীনতা** (বা **দৈন্য**) সর্বদা প্রশংসনীয় নয়।
+    - ৪. অশুদ্ধ: তিনি সস্ত্রীকসহ উপস্থিত ছিলেন। -> শুদ্ধ: **তিনি সস্ত্রীক উপস্থিত ছিলেন**।
+    - ৫. অশুদ্ধ: শুধুমাত্র আপনি আসবেন। -> শুদ্ধ: **মাত্র আপনি আসবেন** (অথবা **শুধু আপনি আসবেন**)।
+
+71. **Correct the spelling: neumonia** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Incorrect: neumonia
+    - Correct: **Pneumonia**
+
+72. **Make it passive: Do not close the door.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Active: Do not close the door.
+    - Passive: **Let not the door be closed.**
+
+73. **Identify the sentence type: "Though he is poor, he is honest."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Sentence Type: **Complex Sentence** (It has one principal clause "he is honest" and one subordinate adverbial clause "Though he is poor" connected by the subordinating conjunction "Though").
+
+74. **Make negative: "Everybody hates a liar."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Affirmative: Everybody hates a liar.
+    - Negative: **There is nobody but hates a liar.** (or **Nobody likes a liar.**)
+
+75. **Make negative without changing the meaning: "Man is mortal."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Affirmative: Man is mortal.
+    - Negative: **No man is immortal.**
+
+76. **BCC establishment year.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Bangladesh Computer Council (BCC) was established in **1990** (under Act No. IX of 1990).
+
+77. **দীর্ঘতম নদী?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - বিশ্বের দীর্ঘতম নদী: **নীলনদ** (Nile River, length ~6,650 km).
+    - বাংলাদেশের দীর্ঘতম নদী: **সুরমা-মেঘনা** (Surma-Meghna system).
+
+78. **ICT কার্যালয় কবে শুরু?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - তথ্য ও যোগাযোগ প্রযুক্তি (ICT) বিভাগ কার্যক্রম শুরু করে **৪ ডিসেম্বর ২০১১** তারিখে (পরবর্তীতে ২০১৪ সালে ডাক, টেলিযোগাযোগ ও তথ্যপ্রযুক্তি মন্ত্রণালয়ের অধীনে ন্যস্ত হয়)।
+
+79. **কয়টি পঞ্চবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - বাংলাদেশে এ পর্যন্ত মোট **৮টি** পঞ্চবার্ষিক পরিকল্পনা (Five-Year Plans) এবং ১টি দ্বিবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে (সর্বশেষ: ৮ম পঞ্চবার্ষিক পরিকল্পনা ২০২০-২০২৫)।
+
+80. **সার্ক দেশ কয়টি?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - সার্কভুক্ত (SAARC) সদস্য দেশ **৮টি** (বাংলাদেশ, ভারত, পাকিস্তান, শ্রীলঙ্কা, নেপাল, ভুটান, মালদ্বীপ ও আফগানিস্তান)।
+
+81. **Web 3.0 কোন প্রযুক্তির সঙ্গে সম্পর্কিত?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
+
+    Answer:
+    - Web 3.0 মূলত **ব্লকচেইন প্রযুক্তি (Blockchain Technology)**, বিকেন্দ্রীকরণ (Decentralization), স্মার্ট কন্ট্রাক্ট (Smart Contracts), কৃত্রিম বুদ্ধিমত্তা (AI) এবং ক্রিপ্টোকারেন্সির সঙ্গে সম্পর্কিত।
+
+82. **পরীক্ষায় 120 টি MCQ প্রশ্নের প্রত্যেকটি সঠিক উত্তরের জন্য 1 নম্বর প্রদান করা হয় এবং প্রত্যেকটি ভুল উত্তরের জন্য 0.25 নম্বর কাটা হয়। একজন পরীক্ষার্থী সবকটি প্রশ্নের উত্তর দিয়ে 75 নম্বর পেল। সে কতটি প্রশ্নের সঠিক উত্তর দিয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
+
+    Answer:
+    - ধরি, পরীক্ষার্থী সঠিক উত্তর দিয়েছে $x$ টি।
+    - তাহলে ভুল উত্তর দিয়েছে $(120 - x)$ টি।
+
+    প্রশ্নমতে:
+    $$1 	imes x - 0.25 	imes (120 - x) = 75$$
+    $$x - 30 + 0.25x = 75$$
+    $$1.25x = 105$$
+    $$x = rac{105}{1.25} = 84$$
+
+    - সে **৮৪টি** প্রশ্নের সঠিক উত্তর দিয়েছে (এবং ৩৬টি ভুল উত্তর দিয়েছে)।
+
+83. **Algebra Question: If 2x + 3y = 12 and x - y = 2, find the values of x and y.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
+
+    Answer:
+    Given:
+    - Equation 1: $2x + 3y = 12$
+    - Equation 2: $x - y = 2 \implies x = y + 2$
+
+    Substitute $x = y + 2$ into Equation 1:
+    $$2(y + 2) + 3y = 12$$
+    $$2y + 4 + 3y = 12$$
+    $$5y = 8 \implies y = rac{8}{5} = 1.6$$
+
+    Now find $x$:
+    $$x = 1.6 + 2 = 3.6 = rac{18}{5}$$
+
+    Result: $x = 3.6$ (or $rac{18}{5}$) and $y = 1.6$ (or $rac{8}{5}$).
+
+84. **Draw a flowchart to print odd numbers from 1 to n.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 240]]*
+
+    Answer:
+
+    ```mermaid
+    flowchart TD
+        Start([Start]) --> Input[/Read n/]
+        Input --> Init[i = 1]
+        Init --> Check{i <= n ?}
+        Check -- Yes --> Print[/Print i/]
+        Print --> Inc[i = i + 2]
+        Inc --> Check
+        Check -- No --> End([Stop])
+    ```
+
+85. **Draw State Diagram for an Online Shopping Website. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
+
+    Answer:
+
+    ```mermaid
+    stateDiagram-v2
+        [*] --> Browsing
+        Browsing --> Cart: Add Item to Cart
+        Cart --> Checkout: Proceed to Checkout
+        Checkout --> PaymentPending: Select Payment Method
+        PaymentPending --> OrderConfirmed: Payment Successful
+        PaymentPending --> PaymentFailed: Payment Declined
+        PaymentFailed --> Checkout: Retry Payment
+        OrderConfirmed --> Processing: Order Dispatched
+        Processing --> Delivered: Item Delivered
+        Delivered --> [*]
+    ```
+
+86. **এক কথায় প্রকাশ করো: (০২)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
+(ক) যা পূর্বে দেখা যায়নি- (খ) অক্ষির সমীপে-
+
+    Answer:
+    - (ক) যা পূর্বে দেখা যায়নি -> **অদৃষ্টপূর্ব**
+    - (খ) অক্ষির সমীপে -> **সমক্ষ**
+
+87. **রহিমের মাসিক বেতন ১৬ শতাংশ বৃদ্ধি পেলে তিনি প্রতি মাসে ৮১২ টাকা অতিরিক্ত পেতে পারেন। যদি তার মাসিক বেতন ২০ শতাংশ বৃদ্ধি পায় তবে তিনি প্রতি মাসে মোট কত টাকা পাবেন? (০৪)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
+
+    Answer:
+    - ১৬% বেতন বৃদ্ধি = ৮১২ টাকা।
+    - অতএব, মূল বেতন = $rac{812}{16} 	imes 100 = 50.75 	imes 100 = 5,075$ টাকা।
+    - ২০% বেতন বৃদ্ধি পেলে মোট বেতন হবে মূল বেতনের ১২০%।
+    - মোট নতুন মাসিক বেতন = $5075 	imes 1.20 = 6,090$ টাকা।
+
+88. **E-7 কী? এর সদস্য দেশ কয়টি?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
+    Answer:
+    - E-7 (Emerging 7): বিশ্বের দ্রুত বিকাশমান ও উদীয়মান সাতটি প্রধান অর্থনীতির দেশকে নিয়ে গঠিত জোট। প্রাইসওয়াটারহাউসকুপার্স (PwC) ২০০৬ সালে এই ধারণাটি প্রবর্তন করে।
+    - সদস্য দেশ ৭টি:
+      1. চীন
+      2. ভারত
+      3. ব্রাজিল
+      4. রাশিয়া
+      5. মেক্সিকো
+      6. ইন্দোনেশিয়া
+      7. তুরস্ক
+
+89. **(a) Write a short comparative note on “Static web page” and “Dynamic web page”. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
+
+    Answer:
+
+    | Feature | Static Web Page | Dynamic Web Page |
+    |---|---|---|
+    | Content Generation | Pre-built content delivered exactly as stored on server | Generated in real-time based on user request and database queries |
+    | Technologies Used | HTML, CSS, client-side JavaScript | PHP, Node.js, Python, Java, coupled with SQL/NoSQL databases |
+    | Database Dependency | Does not use a database | Interacts with databases to fetch dynamic content |
+    | Loading Speed | Extremely fast due to static caching | Slightly slower due to server-side script execution and query time |
+    | Interactivity | Low; content is fixed for all users | High; personalized user dashboards and interactive applications |
+    | Maintenance | Difficult to update large sites manually | Easy to maintain through Content Management Systems (CMS) |
+
+90. **(b) What is malware? State in short with some examples? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
+
+    Answer: Malware (short for Malicious Software) is any intrusive software specifically programmed to infiltrate, damage, exploit, or gain unauthorized access to computer systems, networks, and mobile devices without user consent.
+
+    Common Types of Malware:
+    - Virus: Attaches to legitimate executable files and replicates when the host program runs (e.g., CIH, ILOVEYOU).
+    - Worm: Self-replicating standalone malware that spreads across networks without human intervention (e.g., Stuxnet, SQL Slammer).
+    - Trojan Horse: Disguises itself as legitimate software to create backdoors for attackers (e.g., Zeus Trojan).
+    - Ransomware: Encrypts files and demands ransom payment for decryption keys (e.g., WannaCry, Locky).
+    - Spyware: Secretly monitors and captures keystrokes, passwords, and sensitive browsing history (e.g., Pegasus).
+
+91. **(c) You have been given the responsibility of identifying software requirements from a customer. Which methods would you follow to gather those requirements? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
+
+    Answer: To effectively gather and elicit comprehensive software requirements from a client, the following structured techniques are applied:
+    - 1. Interviews: Conducting one-on-one structured and unstructured interviews with key stakeholders and domain experts.
+    - 2. Surveys and Questionnaires: Distributing targeted questionnaires to collect quantitative requirements from a large user base.
+    - 3. Joint Application Development (JAD) Workshops: Facilitating collaborative intensive brainstorming sessions with users, developers, and management.
+    - 4. Prototyping: Developing interactive mockups and wireframes to help users visualize functionalities and refine expectations.
+    - 5. Document Analysis: Reviewing existing business forms, standard operating procedures (SOP), and legacy software manuals.
+    - 6. Observation (Job Shadowing): Directly observing end-users in their active work environment to understand operational workflows.
+
+92. **What are the various types of relationships in Database? Define them.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 355]]*
+
+    Answer: In Relational Database Management Systems (RDBMS), table relationships define how data in one table is logically connected to data in another.
+
+    Three Primary Types:
+    - 1. One-to-One (1:1):
+      - A record in Table A is linked to at most one record in Table B, and vice versa.
+      - Example: `User` and `PassportDetails` (One citizen has exactly one passport).
+    - 2. One-to-Many (1:N):
+      - A record in Table A can be associated with multiple records in Table B, but a record in Table B relates to only one record in Table A.
+      - Example: `Department` and `Employee` (One department has many employees, each employee belongs to one department).
+    - 3. Many-to-Many (M:N):
+      - Multiple records in Table A are linked to multiple records in Table B. Implemented via a junction/bridge table.
+      - Example: `Student` and `Course` (A student can enroll in multiple courses, and a course can have many students).
+
+93. **An instrument store gives a 10% discount to all students off the original cost of an instrument. During a back to school sale an additional 15% is taken off the discounted price. Julie, a student at the local high school, purchases a flute for $306. How much did it originally cost?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+    Answer:
+    - Let the original price of the flute be $P$.
+    - Price after 10% student discount = $P 	imes (1 - 0.10) = 0.90P$.
+    - Price after additional 15% sale discount = $0.90P 	imes (1 - 0.15) = 0.90P 	imes 0.85 = 0.765P$.
+
+    Given that Julie paid $306:
+    $$0.765 P = 306$$
+    $$P = rac{306}{0.765} = 400$$
+
+    - Final Answer: The original cost was **$400**.
+
+94. **Given a table for person income:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 371]]*
+Write a Python program to calculate the tax based on the given income slabs.
+
+    Answer:
+
+    ```python
+    def calculate_tax(income):
+        tax = 0.0
+        if income <= 350000:
+            tax = 0.0
+        elif income <= 450000:
+            tax = (income - 350000) * 0.05
+        elif income <= 750000:
+            tax = 100000 * 0.05 + (income - 450000) * 0.10
+        elif income <= 1150000:
+            tax = 100000 * 0.05 + 300000 * 0.10 + (income - 750000) * 0.15
+        elif income <= 1650000:
+            tax = 100000 * 0.05 + 300000 * 0.10 + 400000 * 0.15 + (income - 1150000) * 0.20
+        else:
+            tax = (100000 * 0.05 + 300000 * 0.10 + 400000 * 0.15 + 
+                   500000 * 0.20 + (income - 1650000) * 0.25)
+        return tax
+
+    income = float(input("Enter total annual income: "))
+    print(f"Total Income Tax Payable = BDT {calculate_tax(income):.2f}")
+    ```
+
+95. **168.0.1** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+
+    Answer:
+    - Address Class: **Class B** IPv4 Address (First octet 168 falls in the Class B range 128–191).
+    - Default Subnet Mask: `255.255.0.0` (`/16`).
+
+96. **0.0.5** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+
+    Answer:
+    - Address Scope: **Reserved / Current Network** address in IPv4 (`0.0.0.0/8` block reserved for local identification per RFC 1122).
+
+97. **0.0.1** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+
+    Answer:
+    - Address Scope: **Reserved address** within the `0.0.0.0/8` host identification block.
+
+98. **16.0.10** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+
+    Answer:
+    - Address Class: **Class A** IPv4 Public Address (First octet 16 falls in Class A range 1–126). Default subnet mask: `255.0.0.0` (`/8`).
+
+99. **Question: Matching with Definition** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
+
+    Answer:
+    - RAM: Random Access Memory (Volatile main memory for active program execution).
+    - ROM: Read-Only Memory (Non-volatile memory holding boot firmware/BIOS).
+    - Cache Memory: High-speed SRAM situated near CPU to reduce memory access latency.
+    - CPU: Central Processing Unit (The core processor executing program instructions).
+
+100. **Find roots of Quadratic equality equation ax^2+bx+c=0 in C or Any other language.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+    #include <math.h>
+
+    int main(void) {
+        double a, b, c, d, r1, r2, realPart, imagPart;
+        printf("Enter coefficients a, b, and c: ");
+        scanf("%lf %lf %lf", &a, &b, &c);
+
+        if (a == 0) {
+            printf("Invalid quadratic equation (a cannot be 0).
+");
+            return 1;
+        }
+
+        d = b * b - 4 * a * c; // Discriminant
+
+        if (d > 0) {
+            r1 = (-b + sqrt(d)) / (2 * a);
+            r2 = (-b - sqrt(d)) / (2 * a);
+            printf("Roots are real and distinct: %.2lf and %.2lf
+", r1, r2);
+        } else if (d == 0) {
+            r1 = -b / (2 * a);
+            printf("Roots are real and equal: %.2lf and %.2lf
+", r1, r1);
+        } else {
+            realPart = -b / (2 * a);
+            imagPart = sqrt(-d) / (2 * a);
+            printf("Roots are complex: %.2lf + %.2lfi and %.2lf - %.2lfi
+",
+                   realPart, imagPart, realPart, imagPart);
+        }
+        return 0;
+    }
+    ```
+
+101. **What are the data units of the Physical layer, Data Link layer, Network layer, and Transport layer?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
+
+    Answer: Protocol Data Units (PDUs) across OSI Layers:
+    - 1. Physical Layer: **Bits** (Binary 0s and 1s transmitted as electrical/optical signals).
+    - 2. Data Link Layer: **Frames** (Packets encapsulated with MAC source/destination addresses and CRC).
+    - 3. Network Layer: **Packets / Datagrams** (Data encapsulated with logical IP headers).
+    - 4. Transport Layer: **Segments** (in TCP) or **Datagrams** (in UDP).
+
+102. **Draw diagrams of Bus, Star, and Mesh network topologies.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
+
+    Answer:
+
+    1. Bus Topology (Linear Backbone):
+    ```
+    [Terminator]---+-----+-----+-----+---[Terminator]
+                   |     |     |     |
+                  Node  Node  Node  Node
+    ```
+
+    2. Star Topology (Central Switch/Hub):
+    ```
+              Node 1
+                |
+       Node 4-[HUB/SWITCH]-Node 2
+                |
+              Node 3
+    ```
+
+    3. Fully Connected Mesh Topology:
+    ```
+          (A)-------(B)
+           | \     / |
+           |   \ /   |
+           |   / \   |
+           | /     \ |
+          (D)-------(C)
+    ```
+
+103. **Write the names of three linear and three non-linear data structures. Also, mention which type of data structure a Binary Search Tree (BST) is.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+    Answer:
+    - Three Linear Data Structures:
+      1. Array
+      2. Stack
+      3. Queue (or Linked List)
+    - Three Non-Linear Data Structures:
+      1. Tree (e.g., Binary Tree, AVL Tree)
+      2. Graph
+      3. Heap
+    - Binary Search Tree (BST) Classification: A Binary Search Tree is a **Non-Linear (Hierarchical)** data structure.
+
+104. **জাতীয় গ্রিডে সংযুক্ত প্রথম সৌর বিদ্যুৎ প্রকল্প কোথায় স্থাপিত হয়?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+    Answer:
+    - জাতীয় গ্রিডে যুক্ত হওয়া বাংলাদেশের প্রথম সৌর বিদ্যুৎ কেন্দ্র (২৮ মেগাওয়াট) স্থাপিত হয় কক্সবাজারের **টেকনাফে** (২০১৮ সালে)।
+
+105. **"ভূষণ্ডির কাক" বাগধারাটির অর্থ কী?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+    Answer:
+    - "ভূষণ্ডির কাক" বাগধারাটির অর্থ: **দীর্ঘজীবী ব্যক্তি** (বা অত্যন্ত অভিজ্ঞ ও প্রবীণ ব্যক্তি)।
+
+106. **বাক্যটি কোন বাচ্যের উদাহরণ: "কোথায় যাওয়া হচ্ছে"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+    Answer:
+    - "কোথায় যাওয়া হচ্ছে?" বাক্যটি **ভাববাচ্যের** (Impersonal Voice) উদাহরণ (যে বাচ্যে ক্রিয়ার অর্থই প্রধানরূপে প্রতীয়মান হয়)।
+
+107. **Fill in the blank using correct subjunctive mood: I wish I ___ a king.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+    Answer:
+    - I wish I **were** a king. (In unreal/hypothetical wishes, the subjunctive form "were" is used for all persons).
+
+108. **Complete the sentence correctly: Where are you ___ ?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+
+    Answer:
+    - Where are you **going**? (or **Where are you from?**)
+
+109. **What is the adjective form of the noun "misery"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+
+    Answer:
+    - Adjective form of "misery" is **Miserable**.
+
+110. **If a + b + c = 15 and ab + bc + ca = 83 then what is the value of a^2 + b^2 + c^2?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+
+    Answer:
+    - Algebraic Formula:
+      $$(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)$$
+      $$a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca)$$
+
+    - Substitute given values ($a + b + c = 15$, $ab + bc + ca = 83$):
+      $$a^2 + b^2 + c^2 = (15)^2 - 2(83) = 225 - 166 = 59$$
+
+    - Final Answer: **59**.
+
+111. **A product is sold at a loss of 8%. If the product is sold at a price of 800 Taka more than it will be profit of 12%. Find the cost of the product.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+
+    Answer:
+    - Let the Cost Price (CP) of the product be $x$ Taka.
+    - Selling price at 8% loss: $SP_1 = x - 0.08x = 0.92x$
+    - Selling price at 12% profit: $SP_2 = x + 0.12x = 1.12x$
+
+    Given that the difference between the two selling prices is 800 Taka:
+    $$SP_2 - SP_1 = 800$$
+    $$1.12x - 0.92x = 800$$
+    $$0.20x = 800$$
+    $$x = rac{800}{0.20} = 4000$$
+
+    - Final Answer: The cost of the product is **4,000 Taka**.
+
+112. **Differentiate among TDM, FDM, and WDM. How does synchronous TDM work?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 514]]*
+
+    Answer:
+
+    | Feature | FDM (Frequency Division Multiplexing) | TDM (Time Division Multiplexing) | WDM (Wavelength Division Multiplexing) |
+    |---|---|---|---|
+    | Signal Type | Analog signals | Digital signals | Optical (Light) signals |
+    | Division Basis | Total channel bandwidth divided into frequency slots | Total time divided into discrete time slots | Optical fiber spectrum divided into distinct wavelengths (colors) |
+    | Guard Bands | Guard bands needed to prevent channel overlap | Guard intervals/times used to prevent slot collision | Guard bands in optical frequency spectrum |
+    | Medium | Coaxial cable, radio, wireless | Digital transmission links (T1/E1 lines) | Fiber-optic cables |
+
+    How Synchronous TDM Works:
+    - In Synchronous TDM, time is divided into equal, fixed-duration time slots.
+    - Each connected input line is pre-allocated a dedicated time slot in each output frame, regardless of whether that line has active data to transmit.
+    - If a source has no data, its allocated time slot is transmitted empty, ensuring predictable low latency.
+
+113. **Focus Writing in Bangla “কৃষি, ভূমি ও তথ্যানুযায়ী বাজারজাত”** *[compact it 523]*
+
+    Answer:
+    বাংলাদেশের অর্থনীতি ও খাদ্য নিরাপত্তার মূল ভিত্তি কৃষি ও ভূমি ব্যবস্থাপনা। আধুনিক তথ্যপ্রযুক্তির যুগে কৃষিজমি সুরক্ষা, ভূমির উর্বরতা সংরক্ষণ এবং তথ্যানুযায়ী বাজারজাতকরণ (Data-driven Agri-Marketing) টেকসই কৃষির প্রধান নিয়ামক। তথ্যের অভাব ও মধ্যস্বত্বভোগীদের দৌরাত্ম্যে প্রান্তিক কৃষকরা প্রায়শই ফসলের ন্যায্যমূল্য থেকে বঞ্চিত হন। ডিজিটাল প্ল্যাটফর্ম, স্যাটেলাইট রিমোট সেন্সিং ও মোবাইল অ্যাপের মাধ্যমে ফসলের উৎপাদন পূর্বাভাস, আধুনিক কোল্ড-স্টোরেজ ট্র্যাকিং এবং বাজারদরের রিয়েল-টাইম তথ্য কৃষকের কাছে পৌঁছালে সিন্ডিকেট দূর হবে। স্মার্ট ল্যান্ড রেকর্ড এবং তথ্যভিত্তিক আধুনিক সাপ্লাই চেইনের সমন্বয়ই কৃষকের সমৃদ্ধি ও জাতীয় খাদ্য নিরাপত্তা সুদৃঢ় করতে পারে।
+
 ## ICT in Society & Governance (24)
 
-1. Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment? [SO IT 25-07-2026]
+1. **Discuss the impact of Artificial Intelligence and Automation on the banking sector of Bangladesh. What strategies should financial institutions adopt to balance technological advancement and employment?** [SO IT 25-07-2026]
 
-   Answer:
+Answer:
 
    (a) Positive impacts on Bangladeshi banking
    - **Fraud detection** — ML models flag unusual card and MFS transactions in real time, cutting losses.
@@ -1076,7 +1649,7 @@
 
 2. **Describe the transformative power of ICT with ten innovative applications for the online banking system.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 304 (ET: BIBM)]*
 
-   Answer: ICT has changed banking from a branch-based, paper-driven business into a 24/7 digital service. Ten innovative applications:
+Answer: ICT has changed banking from a branch-based, paper-driven business into a 24/7 digital service. Ten innovative applications:
 
    - **Internet and mobile banking** — balance check, fund transfer, bill payment and statements from anywhere, removing the need to visit a branch.
    - **Mobile Financial Services (MFS)** — bKash, Nagad and Rocket bring banking to people with no bank account, driving financial inclusion in rural Bangladesh.
@@ -1096,7 +1669,7 @@
 
 3. **What do you mean by viral video? List three advantages of viral vedio.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
 
-   Answer: A viral video is a video that spreads rapidly and widely across the internet through sharing on social media, messaging apps and email, reaching a very large audience in a short time without any paid advertising push.
+Answer: A viral video is a video that spreads rapidly and widely across the internet through sharing on social media, messaging apps and email, reaching a very large audience in a short time without any paid advertising push.
 
    Why videos go viral
    - Strong emotional appeal — humour, surprise, inspiration or outrage.
@@ -1113,7 +1686,7 @@
 
 4. **(ক) IR 4.0 বলতে কি বুঝায়? IR 4.0 এর গুরুত্বপূর্ণ উপাদানগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
 
-   Answer: IR 4.0 means the Fourth Industrial Revolution — the ongoing transformation in which physical production, digital systems and biological technologies merge. Machines, products and systems are connected, exchange data and make decisions with little human intervention.
+Answer: IR 4.0 means the Fourth Industrial Revolution — the ongoing transformation in which physical production, digital systems and biological technologies merge. Machines, products and systems are connected, exchange data and make decisions with little human intervention.
 
    The four industrial revolutions
 
@@ -1141,7 +1714,7 @@
 
 5. **E-commerce ভিত্তিক ৪টি সাইটের নাম লিখুন?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-   Answer: Four e-commerce sites.
+Answer: Four e-commerce sites.
 
    Bangladeshi e-commerce sites
    - **Daraz Bangladesh** (daraz.com.bd) — the largest general marketplace.
@@ -1157,7 +1730,7 @@
 
 6. **Describe in Bangali or English on the post COVID-19 social challenge that Bangladesh may can front end the way ICT can support to overcome them.** *[BTRC Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
 
-   Answer:
+Answer:
 
    (a) Post-COVID social challenges facing Bangladesh
    - **Learning loss** — prolonged school closure widened the gap between urban and rural students.
@@ -1181,7 +1754,7 @@
 
 7. **Copyright আইন কি? এর প্রয়োজনীয়তা ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
-   Answer: Copyright law is the legal protection given to the creator of an original work — literary, artistic, musical, film or software — giving the creator the exclusive right to reproduce, distribute, adapt and publicly display that work for a fixed period.
+Answer: Copyright law is the legal protection given to the creator of an original work — literary, artistic, musical, film or software — giving the creator the exclusive right to reproduce, distribute, adapt and publicly display that work for a fixed period.
 
    In Bangladesh
    - Governed by the **Copyright Act 2000** (amended 2005), administered by the Copyright Office under the Ministry of Cultural Affairs.
@@ -1205,7 +1778,7 @@
 
 8. **Comparison between MIS and DSS. What is the roles of MIS in Banking sector?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    MIS vs DSS
 
@@ -1234,7 +1807,7 @@
 
 9. **E-commerce and F-commerce -এর মধ্যে পার্থক্য লিখুন। নারী গোষ্ঠী দ্বারা পরিচালিত F-Commerce -এর সামাজিক প্রভাব সম্বন্ধে লিখুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) E-commerce vs F-commerce
 
@@ -1269,7 +1842,7 @@
 
 10. **১৪. বাংলাদেশের প্রথম ভিডিও লাইভ শেয়ারিং অ্যাপস কোনটি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-    Answer: **Bioscope** is generally cited as Bangladesh's first live video streaming and sharing app. It was launched by Grameenphone in 2016, with the live TV and video-on-demand app following in August 2017.
+Answer: **Bioscope** is generally cited as Bangladesh's first live video streaming and sharing app. It was launched by Grameenphone in 2016, with the live TV and video-on-demand app following in August 2017.
 
     - Before it, **Bongo BD** (2013) was the country's pioneer video-on-demand platform, but it was streaming rather than live sharing.
     - Other Bangladeshi platforms that followed: Toffee (Banglalink), Hoichoi Bangladesh, Binge (Robi) and Chorki.
@@ -1277,7 +1850,7 @@
 
 11. **৯. চতুর্থ শিল্প বিপ্লব কি? ইহার সম্পর্কে ৪ লাইন লিখুন।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
-    Answer: The Fourth Industrial Revolution (IR 4.0) is the current era in which physical machines, digital systems and biological technologies merge, so that connected devices exchange data and make decisions with little human intervention.
+Answer: The Fourth Industrial Revolution (IR 4.0) is the current era in which physical machines, digital systems and biological technologies merge, so that connected devices exchange data and make decisions with little human intervention.
 
     Four lines about it
     - It is driven by Artificial Intelligence, the Internet of Things, Big Data, cloud computing, robotics, 3D printing and blockchain.
@@ -1289,7 +1862,7 @@
 
 12. **What is ERP? Write down the Implementation Challenges of ERP?** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948 (ET: N/A)]*
 
-    Answer: **ERP (Enterprise Resource Planning)** is integrated software that runs all the core business functions of an organisation — finance, HR, procurement, inventory, production, sales and customer service — on a SINGLE shared database, so every department sees the same data in real time.
+Answer: **ERP (Enterprise Resource Planning)** is integrated software that runs all the core business functions of an organisation — finance, HR, procurement, inventory, production, sales and customer service — on a SINGLE shared database, so every department sees the same data in real time.
 
     - Popular systems: SAP, Oracle ERP Cloud, Microsoft Dynamics 365, Odoo, ERPNext.
     - Main benefit: it removes data silos. Without ERP, finance, stores and production each keep their own numbers and they never agree.
@@ -1310,7 +1883,7 @@
 
 13. **বর্তমান যুগ চতুর্থ শিল্প বিপ্লবের যুগ। BREB ও সেই যুগের সাথে তালমিলিয়ে চলছে, মানুষের দ্বারপ্রান্তে বিদ্যুৎ সেবা পৌছে দেওয়ার জন্য। BREB এর এমন ৫টি পরিকল্পনা বা উদ্যোগ লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-    Answer: BREB (Bangladesh Rural Electrification Board) has taken several IR 4.0 aligned initiatives to bring electricity service to people's doorsteps.
+Answer: BREB (Bangladesh Rural Electrification Board) has taken several IR 4.0 aligned initiatives to bring electricity service to people's doorsteps.
 
     - **Prepaid and smart metering** — replacing manual meter reading with prepaid and smart meters, so consumers recharge like a mobile phone and the utility gets accurate, real-time consumption data with no meter-reader visit.
     - **Online billing and digital payment** — bills paid through bKash, Nagad, Rocket, internet banking and agent points, removing the need to travel to a Palli Bidyut office.
@@ -1328,7 +1901,7 @@
 
 14. **(ii) E-Commerce কী? E-Commerce-এর প্রকারভেদ উল্লেখ করুন। Search engine কী? এর কয়েকটি উদাহরণ দিন।** *[BPSC Assistant Network Engineer 2020 compact it 956, 958 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) E-Commerce
     - Electronic commerce means buying and selling goods and services over the internet, including the associated payment, marketing and delivery arrangements.
@@ -1353,7 +1926,7 @@
 
 15. **Make a list of banking software used in Bangladesh. List the essential features for successful Banking Software and Apps.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 986-987 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Core banking software used in Bangladesh
 
@@ -1384,7 +1957,7 @@
 
 16. **RFID has huge applications in business, especially in supply chain management and toll collection system. Show the basic working principle of RFID in brief.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 987-988 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer: **RFID (Radio Frequency Identification)** identifies and tracks objects automatically using radio waves, without contact and without line of sight.
+Answer: **RFID (Radio Frequency Identification)** identifies and tracks objects automatically using radio waves, without contact and without line of sight.
 
     Three components
     - **Tag (transponder)** — attached to the object. Contains a microchip storing a unique ID and an antenna.
@@ -1419,7 +1992,7 @@
 
 17. **a) What is E-Government? How can E-Government be implemented through the vision of Digital Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) E-Government
     - The use of ICT by government to deliver public services, share information and interact with citizens, businesses and other government offices efficiently and transparently.
@@ -1445,7 +2018,7 @@
 
 18. **b) List some factors that are needed to implement Digital Bangladesh.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
 
-    Answer: Successful implementation depends on several factors working together.
+Answer: Successful implementation depends on several factors working together.
 
     - **ICT infrastructure** — nationwide broadband and optical fibre, reliable electricity, data centres and submarine cable capacity.
     - **Affordable internet and devices** — low-cost data packages and smartphones, otherwise services reach only the well-off.
@@ -1463,7 +2036,7 @@
 
 19. **c) Mention some government entities that have taken E-Government initiatives. What initiatives are taken by the Bangladesh Public Service Commission?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Government entities with e-Government initiatives
     - **a2i (Aspire to Innovate)** — the ICT Division programme that drives most digital service innovation, including Union Digital Centres and the National Portal.
@@ -1488,7 +2061,7 @@
 
 20. **d) State the E-Government initiatives taken in health and education sectors of Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Health sector initiatives
     - **Shastho Batayon 16263** — a 24-hour national health call centre giving medical advice by phone.
@@ -1514,7 +2087,7 @@
 
 21. **(a) Differentiate between e-commerce and e-business. How does e-commerce exploit self-serviced strategy to increase the market share?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) E-commerce vs e-business
 
@@ -1543,7 +2116,7 @@
 
 22. **(b) Distinguish between traditional business planning assumption and today’s sense and response strategy.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Traditional planning ("make and sell") | Sense and response strategy |
     |---|---|---|
@@ -1565,7 +2138,7 @@
 
 23. **(c) Write down the advantages of using internet in business organization. How is legacy system included in intranet of an organization?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Advantages of the internet in a business organisation
     - **Global market reach** — a small firm can sell worldwide without opening foreign offices.
@@ -1594,7 +2167,7 @@
 
 24. **What is E-Commerce? What are the types of E-commerce?** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
-    Answer: **E-commerce (electronic commerce)** is the buying and selling of goods and services over the internet, together with the electronic payment, marketing and delivery arrangements that support it.
+Answer: **E-commerce (electronic commerce)** is the buying and selling of goods and services over the internet, together with the electronic payment, marketing and delivery arrangements that support it.
 
     Components of an e-commerce system
     - An online catalogue, a shopping cart, a payment gateway, a delivery mechanism and a customer account system.
@@ -1623,7 +2196,7 @@
 
 1. **Performance of CMOS battery?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: The CMOS battery is a small coin cell (usually CR2032, 3 V) on the motherboard. Its job is to keep the CMOS chip powered when the computer is switched off, so that BIOS settings and the real-time clock survive.
+Answer: The CMOS battery is a small coin cell (usually CR2032, 3 V) on the motherboard. Its job is to keep the CMOS chip powered when the computer is switched off, so that BIOS settings and the real-time clock survive.
 
    What the CMOS battery maintains
    - System date and time.
@@ -1645,7 +2218,7 @@
 
 2. **(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading operating system.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Role of BIOS in booting
    - BIOS is firmware stored in a ROM/flash chip on the motherboard. It is the FIRST code the CPU executes when power is applied.
@@ -1682,7 +2255,7 @@
 
 3. **Explain BIOS in Server. How does affect booting configuration in Hardware maintenance.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 552 (ET: BIBM)]*
 
-   Answer: In a server, BIOS (now almost always UEFI) does the same job as on a PC — initialise hardware, run POST and start the bootloader — but it carries additional enterprise features.
+Answer: In a server, BIOS (now almost always UEFI) does the same job as on a PC — initialise hardware, run POST and start the bootloader — but it carries additional enterprise features.
 
    Server-specific BIOS features
    - **RAID configuration** — the disk controller's RAID level (0, 1, 5, 10) is set from within BIOS setup before any OS is installed.
@@ -1705,21 +2278,20 @@
 
 4. **What is BIOS?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
-   Answer: **BIOS (Basic Input Output System)** is firmware stored in a ROM or flash chip on the motherboard. It is the first program that runs when a computer is switched on.
+Answer: **BIOS — Basic Input Output System.** It is firmware permanently stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is powered on.
 
-   Main functions
-   - **POST (Power-On Self-Test)** — checks that CPU, RAM, keyboard, display and storage are working.
-   - **Hardware initialisation** — prepares devices for use.
-   - **Bootstrap loading** — finds the boot device and loads the operating system's bootloader.
-   - **BIOS setup utility** — lets the user change boot order, enable or disable devices, set passwords and adjust clock speed. Entered with Del, F2 or F10 at startup.
-   - **Basic I/O services** — low-level routines for keyboard, display and disk, used before the OS drivers load.
+   Four main tasks
+   - **POST** — tests CPU, RAM, keyboard, display and storage before anything else runs.
+   - **Initialise hardware** — prepares devices so the operating system can use them.
+   - **Boot the OS** — finds the boot device, loads the Master Boot Record and starts the bootloader.
+   - **Provide setup** — a configuration screen (Del or F2 at startup) for boot order, device enable/disable, passwords and clock settings.
 
-   - BIOS settings are stored in CMOS memory, kept alive by a coin-cell battery.
-   - Modern machines use **UEFI** instead — faster, supports disks over 2 TB, has a graphical setup and supports Secure Boot.
+   - Settings are stored in CMOS memory and preserved by a coin-cell battery.
+   - UEFI is its modern replacement, offering faster boot, disks larger than 2 TB, a mouse-driven graphical interface and Secure Boot.
 
 5. **Write down the difference between Serial Port and Parallel Port.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
 
-   Answer:
+Answer:
 
    | Point | Serial Port | Parallel Port |
    |---|---|---|
@@ -1737,7 +2309,7 @@
 
 6. **Name and define the components of a computer system. Mention two optical input devices.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 663 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Components of a computer system
    - **Input unit** — accepts data and instructions from the user and converts them into machine-readable form. Examples: keyboard, mouse, scanner.
@@ -1763,7 +2335,7 @@
 
 7. **What are the components of a Micro computer system?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 670 (ET: N/A)]*
 
-   Answer: A microcomputer is a computer built around a single microprocessor — a desktop, laptop, tablet or smartphone.
+Answer: A microcomputer is a computer built around a single microprocessor — a desktop, laptop, tablet or smartphone.
 
    Hardware components
    - **Microprocessor (CPU)** — the single chip containing the ALU, control unit and registers. Examples: Intel Core, AMD Ryzen.
@@ -1785,7 +2357,7 @@
 
 8. **What do understand by the resolution of computer screen?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
-   Answer: Screen resolution is the total number of pixels a display shows, written as **horizontal pixels × vertical pixels**, for example 1920 × 1080.
+Answer: Screen resolution is the total number of pixels a display shows, written as **horizontal pixels × vertical pixels**, for example 1920 × 1080.
 
    - A **pixel** (picture element) is the smallest addressable dot on the screen. Every image is built from these dots.
    - A resolution of 1920 × 1080 means 1920 pixels across and 1080 down, giving `1920 × 1080 = 2,073,600` pixels in total.
@@ -1806,7 +2378,7 @@
 
 9. **What is BIOS?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-   Answer: **BIOS — Basic Input Output System.** It is firmware permanently stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is powered on.
+Answer: **BIOS — Basic Input Output System.** It is firmware permanently stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is powered on.
 
    Four main tasks
    - **POST** — tests CPU, RAM, keyboard, display and storage before anything else runs.
@@ -1819,7 +2391,7 @@
 
 10. **Pixel number 130 হলে রেজুলেশন কত হবে?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-    Answer: The question as printed is incomplete — a single number cannot give a resolution, because resolution is always expressed as **width × height**.
+Answer: The question as printed is incomplete — a single number cannot give a resolution, because resolution is always expressed as **width × height**.
 
     Two possible readings
 
@@ -1835,7 +2407,7 @@
 
 11. **(খ) Computer System এর Components গুলির সংক্ষিপ্ত বর্ণনাসহ লিখুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
-    Answer: A computer system has five elements: hardware, software, data, people and procedures.
+Answer: A computer system has five elements: hardware, software, data, people and procedures.
 
     (a) Hardware — the physical parts
     - **Input unit** — keyboard, mouse, scanner; accepts data and converts it to machine form.
@@ -1868,7 +2440,7 @@
 
 12. **(ক) কম্পিউটার সিস্টেমের কর্মক্ষমতার উপর প্রভাব রাখতে সক্ষম এরূপ ৩টি Component এর সংক্ষিপ্ত বর্ণনা দিন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
-    Answer: Three components with the greatest effect on system performance:
+Answer: Three components with the greatest effect on system performance:
 
     (a) **Processor (CPU)**
     - Decides how many instructions can be executed per second.
@@ -1890,7 +2462,7 @@
 
 13. **What is the difference between UEFI and BIOS?** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 724 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | BIOS (Legacy) | UEFI |
     |---|---|---|
@@ -1914,7 +2486,7 @@
 
 14. **Plotter কোন ধরনের Device?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-    Answer: A plotter is an **output device** — specifically a hard-copy output device.
+Answer: A plotter is an **output device** — specifically a hard-copy output device.
 
     - It draws continuous LINES using one or more pens moving across the paper, rather than printing dots like a normal printer.
     - Because it draws vectors, it produces very accurate large-format line drawings.
@@ -1934,7 +2506,7 @@
 
 15. **পিক্সেল ও রেজ্যুলেশন কি ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 827 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **Pixel**
     - Short for "picture element", the smallest addressable unit of a digital image or display.
@@ -1963,7 +2535,7 @@
 
 16. **Write the difference between BIOS and CMOS?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
-    Answer: BIOS is the PROGRAM; CMOS is the MEMORY that stores the BIOS settings. They are two different chips that work together.
+Answer: BIOS is the PROGRAM; CMOS is the MEMORY that stores the BIOS settings. They are two different chips that work together.
 
     | Point | BIOS | CMOS |
     |---|---|---|
@@ -1983,7 +2555,7 @@
 
 17. **গ্রাফিক্স কার্ড কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
-    Answer: A graphics card (also called a video card, display adapter or GPU card) is an expansion card that generates the image sent to the monitor. It takes over all graphics computation from the CPU.
+Answer: A graphics card (also called a video card, display adapter or GPU card) is an expansion card that generates the image sent to the monitor. It takes over all graphics computation from the CPU.
 
     Main parts
     - **GPU (Graphics Processing Unit)** — the processor, containing thousands of small cores designed for parallel work.
@@ -2002,7 +2574,7 @@
 
 18. **ডট মেট্রিক্স প্রিন্টারের মূল উপাদান কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
-    Answer: The main component of a dot matrix printer is the **print head containing a matrix of pins (needles)**.
+Answer: The main component of a dot matrix printer is the **print head containing a matrix of pins (needles)**.
 
     How it works
     - The print head holds a vertical column of tiny pins, usually 9 or 24.
@@ -2024,7 +2596,7 @@
 
 19. **Touch Screen কি জাতীয় ডিভাইস?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
-    Answer: A touch screen is **both an input and an output device**, so it is classified as an **input-output (I/O) device**.
+Answer: A touch screen is **both an input and an output device**, so it is classified as an **input-output (I/O) device**.
 
     - As an **output device**, it is a display that shows the image.
     - As an **input device**, it senses the position of a finger or stylus touching the surface and passes those coordinates to the computer as input.
@@ -2039,7 +2611,7 @@
 
 20. **(d) Mention and discuss some fectors that affect the processing speed a computer.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1024-1025 (ET: N/A)]*
 
-    Answer: Several hardware and software factors together decide how fast a computer runs.
+Answer: Several hardware and software factors together decide how fast a computer runs.
 
     (a) CPU clock speed
     - Measured in GHz, it is the number of cycles per second. A 3.5 GHz processor executes more cycles than a 2.0 GHz one, all else being equal.
@@ -2072,7 +2644,7 @@
 
 21. **How to solve laptop overheating problem?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
 
-    Answer: Overheating is caused by heat being generated faster than it can be removed. The fix is either to improve heat removal or to reduce heat generation.
+Answer: Overheating is caused by heat being generated faster than it can be removed. The fix is either to improve heat removal or to reduce heat generation.
 
     (a) Hardware and physical solutions
     - **Clean the vents and fan** — dust blocking the exhaust is the single most common cause. Blow out with compressed air every few months.
@@ -2094,7 +2666,7 @@
 
 22. **Difference between BIOS and EFI also BOOT loader and firmware.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     (a) BIOS vs EFI/UEFI
 
@@ -2125,7 +2697,7 @@
 
 23. **Suppose you are entering data into computer but facing some problem with your monitor. You need to buy a new monitor. What factor should you consider in case of monitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
 
-    Answer: For a data-entry workstation, eye comfort and text clarity matter more than gaming specifications.
+Answer: For a data-entry workstation, eye comfort and text clarity matter more than gaming specifications.
 
     (a) Display quality
     - **Resolution** — Full HD (1920 × 1080) minimum; text is noticeably sharper than at 1366 × 768.
@@ -2154,7 +2726,7 @@
 
 24. **Distinguish between OMR and MICR.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | OMR | MICR |
     |---|---|---|
@@ -2179,7 +2751,7 @@
 
 1. **What is the difference between System Software and Application Software?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)], [Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | System Software | Application Software |
    |---|---|---|
@@ -2198,7 +2770,7 @@
 
 2. **What is platform independent software discuss with example?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 514 (ET: MIST)]*
 
-   Answer: Platform-independent software runs on different operating systems and hardware architectures WITHOUT being rewritten or recompiled for each one. It is also called cross-platform software.
+Answer: Platform-independent software runs on different operating systems and hardware architectures WITHOUT being rewritten or recompiled for each one. It is also called cross-platform software.
 
    How platform independence is achieved
    - **Virtual machine approach** — the source is compiled to an intermediate form, and a platform-specific runtime executes it. Java compiles to bytecode which the JVM runs; there is a different JVM for Windows, Linux and macOS, but the same bytecode runs on all.
@@ -2222,7 +2794,7 @@
 
 3. **Difference between High level languages and low level language with some example?** *[SPCB Sub-Assistant Programmer 2022 compact it 739 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Low-level language | High-level language |
    |---|---|---|
@@ -2246,7 +2818,7 @@
 
 4. **Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-   Answer: **Spreadsheet software** is used for calculation work on a computer. The most common one is **Microsoft Excel**.
+Answer: **Spreadsheet software** is used for calculation work on a computer. The most common one is **Microsoft Excel**.
 
    Spreadsheet software
    - Organises data in a grid of rows and columns and performs calculations using formulas and functions.
@@ -2260,7 +2832,7 @@
 
 5. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-   Answer: The grid of many cells in a spreadsheet program is called a **worksheet** (also called a spreadsheet or sheet).
+Answer: The grid of many cells in a spreadsheet program is called a **worksheet** (also called a spreadsheet or sheet).
 
    Related terms
    - **Cell** — a single box formed by the intersection of a row and a column, addressed as `A1`, `B5`.
@@ -2275,7 +2847,7 @@
 
 6. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-   Answer: **(c) Java.**
+Answer: **(c) Java.**
 
    - Java was the official primary language for Android development from the platform's launch, and the Android SDK and framework APIs are written for it.
    - **Kotlin** has since become Google's officially preferred language (announced 2017, made preferred in 2019), but Kotlin runs on the JVM and interoperates fully with Java, so Java knowledge remains the foundation.
@@ -2284,7 +2856,7 @@
 
 7. **LOGO কি ধরনের প্রোগ্রাম?** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
-   Answer: **LOGO is an educational programming language**, designed to teach programming concepts to children.
+Answer: **LOGO is an educational programming language**, designed to teach programming concepts to children.
 
    - Developed in 1967 at MIT by Seymour Papert, Wally Feurzeig and Cynthia Solomon.
    - It is derived from LISP, so it is a functional and interpreted language.
@@ -2304,7 +2876,7 @@
 
 8. **MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 867 (ET: BUET)]*
 
-   Answer: The `IF` function tests a condition and returns one value if true and another if false.
+Answer: The `IF` function tests a condition and returns one value if true and another if false.
 
    Syntax
    ```
@@ -2335,7 +2907,7 @@
 
 9. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** *[41th BCS 2021 compact it 881 (ET: N/A)]*
 
-   Answer: **Software** is the set of programs, instructions and associated data that tells the computer hardware what to do. It has no physical existence — it can be seen and used but not touched.
+Answer: **Software** is the set of programs, instructions and associated data that tells the computer hardware what to do. It has no physical existence — it can be seen and used but not touched.
 
    (a) System Software
    - Software that runs and manages the computer hardware and provides a platform for other software to run on. It works for the MACHINE, not directly for the user.
@@ -2363,7 +2935,7 @@
 
 10. **১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-    Answer: **Email Bangla** (emailbangla.com) is a well-known service for writing email in Bangla. It provides phonetic Bangla webmail so the user can type Bangla without installing any keyboard software.
+Answer: **Email Bangla** (emailbangla.com) is a well-known service for writing email in Bangla. It provides phonetic Bangla webmail so the user can type Bangla without installing any keyboard software.
 
     - More generally, Bangla email can be written in any modern email client — Gmail, Outlook, Thunderbird — because they all support Unicode. The Bangla text is typed using a Bangla input tool such as **Avro Keyboard** or **Bijoy**, then pasted or typed into the mail.
     - **Avro Keyboard** (Mehdi Hasan Khan, 2003) is the most widely used Unicode Bangla input software, and it works inside every application including email.
@@ -2371,7 +2943,7 @@
 
 11. **Graphics Design এর চারটি Software এর নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
-    Answer: Four graphics design software:
+Answer: Four graphics design software:
 
     - **Adobe Photoshop** — raster (bitmap) editing; photo retouching, digital painting, web graphics.
     - **Adobe Illustrator** — vector graphics; logos, icons, illustrations that scale without quality loss.
@@ -2385,7 +2957,7 @@
 
 12. **Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadsheet এর একেকটা ঘরকে _____ বলে? (iv) Storage device এর মূল folder এর নাম _____? (v) Database এর data file গুলোর তালিকাকে _____ বলা হয়?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     | Part | Answer |
     |---|---|
@@ -2404,7 +2976,7 @@
 
 13. **What is DSS? Write the difference between MIS and DSS.** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: RUET)]*
 
-    Answer: **DSS (Decision Support System)** is a computer-based information system that helps managers make SEMI-STRUCTURED and UNSTRUCTURED decisions by providing analytical models, simulation and what-if analysis on both internal and external data.
+Answer: **DSS (Decision Support System)** is a computer-based information system that helps managers make SEMI-STRUCTURED and UNSTRUCTURED decisions by providing analytical models, simulation and what-if analysis on both internal and external data.
 
     Components of a DSS
     - **Database** — internal and external data.
@@ -2429,7 +3001,7 @@
 
 14. **Compare between TPS and DSS.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1165-1166 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | TPS (Transaction Processing System) | DSS (Decision Support System) |
     |---|---|---|
@@ -2451,7 +3023,7 @@
 
 15. **Differentiate between system software and application software.** *[Multiple Ministry Assistant Programmer 2017 compact it 1228-1229 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | System Software | Application Software |
     |---|---|---|
@@ -2469,7 +3041,7 @@
 
 16. **Define system software and application software with three examples of each.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **System software**
     - Software that operates and controls the computer hardware and provides an environment in which application software can run. It works for the machine rather than directly for the user.
@@ -2491,7 +3063,7 @@
 
 17. **b) What are the main differences between software and hardware? Discuss with examples.** *[Ministry of Finance Programmer 2013 compact it 1271 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Hardware | Software |
     |---|---|---|
@@ -2518,7 +3090,7 @@
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 305 (ET: BIBM)]*
 
-   Answer: For a data centre cooling load, a **diesel standby generator** is the standard and preferred choice.
+Answer: For a data centre cooling load, a **diesel standby generator** is the standard and preferred choice.
 
    Comparison by fuel type
 
@@ -2546,7 +3118,7 @@
 
 2. **Describe the most important factors of data center for banking organization.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 557 (ET: BIBM)]*
 
-   Answer: A banking data centre carries different priorities from a general one, because downtime and data loss both have legal and financial consequences.
+Answer: A banking data centre carries different priorities from a general one, because downtime and data loss both have legal and financial consequences.
 
    (a) Availability and redundancy
    - Target Tier III or Tier IV — 99.982% or 99.995% uptime.
@@ -2583,7 +3155,7 @@
 
 3. **What are the challenges in optimizing energy efficiency of data centers? Explain!** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 442 (ET: BIBM)]*
 
-   Answer: Energy efficiency is measured by **PUE (Power Usage Effectiveness) = Total facility power ÷ IT equipment power**. A PUE of 1.0 is perfect; a typical older data centre sits at 1.8-2.0, meaning almost as much power goes to cooling and losses as to the servers themselves.
+Answer: Energy efficiency is measured by **PUE (Power Usage Effectiveness) = Total facility power ÷ IT equipment power**. A PUE of 1.0 is perfect; a typical older data centre sits at 1.8-2.0, meaning almost as much power goes to cooling and losses as to the servers themselves.
 
    Main challenges
    - **Cooling dominates non-IT power** — cooling can be 35-40% of total consumption. Reducing it without risking equipment temperature is the central difficulty.
@@ -2602,7 +3174,7 @@
 
 4. **What do you mean by national data center?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
 
-   Answer: A national data centre is a centralised, government-owned facility that hosts the data, applications and IT infrastructure of the country's public sector, providing a single secure and standardised platform for e-government services.
+Answer: A national data centre is a centralised, government-owned facility that hosts the data, applications and IT infrastructure of the country's public sector, providing a single secure and standardised platform for e-government services.
 
    Purpose
    - Consolidates scattered ministry-level servers into one professionally managed facility.
@@ -2621,7 +3193,7 @@
 
 5. **What is DCIM in a data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
 
-   Answer: **DCIM (Data Center Infrastructure Management)** is software that monitors, measures and manages the physical infrastructure of a data centre — power, cooling, space and assets — and links it with the IT equipment running on top.
+Answer: **DCIM (Data Center Infrastructure Management)** is software that monitors, measures and manages the physical infrastructure of a data centre — power, cooling, space and assets — and links it with the IT equipment running on top.
 
    What DCIM monitors
    - **Power** — intelligent rack PDUs, floor PDUs, UPS status, battery health, load percentage and runtime estimates, remote power panels and busways.
@@ -2644,7 +3216,7 @@
 
 6. **What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
 
-   Answer: Data centre tiering is the classification system defined by the **Uptime Institute**, rating a facility from Tier I to Tier IV according to the redundancy of its power and cooling infrastructure, and therefore its guaranteed availability.
+Answer: Data centre tiering is the classification system defined by the **Uptime Institute**, rating a facility from Tier I to Tier IV according to the redundancy of its power and cooling infrastructure, and therefore its guaranteed availability.
 
    Comparison of the four tiers
 
@@ -2692,7 +3264,7 @@
 
 7. **What do you mean by dynamic capacity provisioning? Why it is essential for data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 751 (ET: N/A)]*
 
-   Answer: **Dynamic capacity provisioning** means automatically adding or removing computing resources — servers, VMs, containers, storage, bandwidth — in real time as the workload rises and falls, instead of keeping a fixed amount of capacity permanently allocated.
+Answer: **Dynamic capacity provisioning** means automatically adding or removing computing resources — servers, VMs, containers, storage, bandwidth — in real time as the workload rises and falls, instead of keeping a fixed amount of capacity permanently allocated.
 
    How it works
    - Monitoring agents watch metrics such as CPU utilisation, memory, request rate and queue length.
@@ -2716,7 +3288,7 @@
 
 8. **Write down the element of data center.** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1125 (ET: BREB)]*
 
-   Answer: A data centre is built from four groups of elements.
+Answer: A data centre is built from four groups of elements.
 
    (a) IT infrastructure — the equipment that does the work
    - **Servers** — rack, blade or tower servers running the applications.
@@ -2749,7 +3321,7 @@
 
 9. **Write down difference between Online UPS and Offline UPS.** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159-1160 (ET: BUET)]*
 
-   Answer: The difference is whether the load is ALWAYS fed through the inverter, or only after the mains fails.
+Answer: The difference is whether the load is ALWAYS fed through the inverter, or only after the mains fails.
 
    | Point | Online UPS (double conversion) | Offline UPS (standby) |
    |---|---|---|
@@ -2770,7 +3342,7 @@
 
 10. **Explain the component of Data Center.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1222-1223 (ET: N/A)]*
 
-    Answer: A data centre has five component groups, each essential.
+Answer: A data centre has five component groups, each essential.
 
     ```mermaid
     flowchart TD
@@ -2810,7 +3382,7 @@
 
 1. **What is Blockchain technology? How it works?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 324 (ET: BIBM)]*
 
-   Answer: Blockchain is a **distributed, decentralised digital ledger** that records transactions across many computers in such a way that a recorded entry cannot be altered retroactively without altering every block after it and gaining the agreement of the network.
+Answer: Blockchain is a **distributed, decentralised digital ledger** that records transactions across many computers in such a way that a recorded entry cannot be altered retroactively without altering every block after it and gaining the agreement of the network.
 
    Structure of a block
    - **Data** — the transactions themselves: who, what, when, how much.
@@ -2843,7 +3415,7 @@
 
 2. **What is blockchain technology? Why it is more secure( Such type)** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 500 (ET: IBA)]*
 
-   Answer: Blockchain is a distributed ledger shared across a peer-to-peer network, in which transactions are grouped into cryptographically linked blocks that no single party can alter alone.
+Answer: Blockchain is a distributed ledger shared across a peer-to-peer network, in which transactions are grouped into cryptographically linked blocks that no single party can alter alone.
 
    Why it is more secure than a traditional centralised database
 
@@ -2862,7 +3434,7 @@
 
 3. **Write about Blockchain.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 506 (ET: N/A)]*
 
-   Answer: Blockchain is a distributed, decentralised and immutable digital ledger that records transactions across a network of computers, where each record is cryptographically linked to the one before it.
+Answer: Blockchain is a distributed, decentralised and immutable digital ledger that records transactions across a network of computers, where each record is cryptographically linked to the one before it.
 
    Key characteristics
    - **Decentralised** — no central authority; every node holds a copy.
@@ -2891,7 +3463,7 @@
 
 4. **What is Blockchain? How does work it? Mention 5 top benefits of blockchain. Write down the difference between Traditional banking and Digital banking.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 513 (ET: MIST)]*
 
-   Answer:
+Answer:
 
    (a) What blockchain is
    - A distributed digital ledger shared across a peer-to-peer network, where transactions are grouped into blocks and each block is cryptographically chained to the previous one, making the record effectively permanent.
@@ -2923,7 +3495,7 @@
 
 5. **A distributive ledger in a peer-to-peer network is called?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)]*
 
-   Answer: It is called a **Blockchain**.
+Answer: It is called a **Blockchain**.
 
    - More generally the category is called **Distributed Ledger Technology (DLT)**. Blockchain is the best-known form of DLT, in which records are grouped into blocks and chained together by hashes.
    - Other forms of DLT exist that are not chains — for example DAG-based ledgers such as IOTA Tangle and Hashgraph.
@@ -2931,7 +3503,7 @@
 
 6. **(a) Write short note on (i) Blockchain technology (ii) Cloud Computing** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    **(i) Blockchain technology**
    - A distributed, decentralised ledger recording transactions across a peer-to-peer network, where each block stores the hash of the previous block, chaining them permanently.
@@ -2951,7 +3523,7 @@
 
 7. **Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 696 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    **(a) Digital Signature**
    - A cryptographic mechanism that proves a digital message came from a specific sender and has not been altered.
@@ -2978,6 +3550,11 @@
 
 8. **Write short note on the folloing topics** *[BPSC Assistant Programmer (ICT) 2019 compact it 1144-1145 (ET: N/A)]*
    i) AI
+   ii) IoT
+   iii) Big data
+   iv) Robotics
+
+i) AI
    ii) IoT
    iii) Big data
    iv) Robotics
@@ -3013,7 +3590,7 @@
 
 1. **What should be checked before buying servers?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 318 (ET: N/A)]*
 
-   Answer: Server purchase decisions should start from the WORKLOAD, then match hardware to it.
+Answer: Server purchase decisions should start from the WORKLOAD, then match hardware to it.
 
    (a) Workload and sizing
    - What will it run — database, web application, virtualization host, file server? Each stresses a different resource.
@@ -3055,7 +3632,7 @@
 
 2. **Scenario based descriptive question for server related problem ( How do you handle those problem for your company )** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
-   Answer: A structured incident-handling approach should be described, since the exact scenario varies.
+Answer: A structured incident-handling approach should be described, since the exact scenario varies.
 
    (a) Immediate response
    - **Identify and assess** — what exactly failed, which services are affected, how many users, is data at risk.
@@ -3091,7 +3668,7 @@
 
 3. **What are the key hardware components that make up a typical server, and how do they contribute to its overall performance and functionality?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 537 (ET: MIST)]*
 
-   Answer:
+Answer:
 
    | Component | Contribution to performance and functionality |
    |---|---|
@@ -3111,7 +3688,7 @@
 
 4. **Discuss server maintenance best practices, including routine tasks like cleaning, monitoring, and applying security patches. How do these practices contribute to server longevity and performance?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 540 (ET: MIST)]*
 
-   Answer:
+Answer:
 
    (a) Physical maintenance
    - **Dust cleaning** every 3-6 months — dust blocks airflow, raises temperature and shortens component life. Use compressed air, never a vacuum near boards.
@@ -3150,7 +3727,7 @@
 
 5. **Difference between SAS and SATA. Which one is best server?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | SAS (Serial Attached SCSI) | SATA (Serial ATA) |
    |---|---|---|
@@ -3179,7 +3756,7 @@
 
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-   Answer: Quantum computing uses the principles of quantum mechanics to process information. Instead of the classical **bit**, which is either 0 or 1, it uses the **qubit**, which can be 0, 1, or both at the same time.
+Answer: Quantum computing uses the principles of quantum mechanics to process information. Instead of the classical **bit**, which is either 0 or 1, it uses the **qubit**, which can be 0, 1, or both at the same time.
 
    Two principles that give it power
    - **Superposition** — a qubit can hold 0 and 1 simultaneously. `n` qubits represent `2ⁿ` states at once, so 300 qubits hold more states than there are atoms in the observable universe.
@@ -3207,7 +3784,7 @@
 
 2. **What is the name of molecular scale computer?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
-   Answer: A molecular-scale computer is called a **Molecular Computer**, also known as a **DNA computer** or **biocomputer**.
+Answer: A molecular-scale computer is called a **Molecular Computer**, also known as a **DNA computer** or **biocomputer**.
 
    - **DNA computing** was demonstrated by Leonard Adleman in 1994, who solved a small Hamiltonian path problem using DNA strands in a test tube.
    - It works by encoding data in DNA base sequences (A, T, G, C) and using biochemical reactions to perform the computation. Because billions of DNA strands react in parallel, it offers massive parallelism.
@@ -3221,7 +3798,7 @@
 
 3. **Virtual Reality বলতে কি বুঝায় ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
-   Answer: **Virtual Reality (VR)** is a computer-generated simulation of a three-dimensional environment that a user can explore and interact with as if it were real, usually through a head-mounted display that replaces the view of the physical world entirely.
+Answer: **Virtual Reality (VR)** is a computer-generated simulation of a three-dimensional environment that a user can explore and interact with as if it were real, usually through a head-mounted display that replaces the view of the physical world entirely.
 
    How it works
    - A **headset (HMD)** shows a slightly different image to each eye, producing stereoscopic depth.
@@ -3252,7 +3829,7 @@
 
 1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 554 (ET: BIBM)]*
 
-   Answer:
+Answer:
 
    (a) Digital banking
    - The delivery of banking services through digital channels — internet banking, mobile apps, ATMs, agent points and MFS — instead of requiring a visit to a branch. Every routine transaction is performed by the customer, at any time, from anywhere.
@@ -3288,7 +3865,7 @@
 
 2. **(a) Define Electronic Payment System (EPS) with necessary diagram. Name 5 types of EPS.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
 
-   Answer: An **Electronic Payment System (EPS)** is a system that allows money to be transferred from a payer to a payee electronically over a network, without exchanging physical cash or cheques.
+Answer: An **Electronic Payment System (EPS)** is a system that allows money to be transferred from a payer to a payee electronically over a network, without exchanging physical cash or cheques.
 
    Parties involved
    - **Customer (payer)**, **Merchant (payee)**, **Issuing bank** (the customer's bank), **Acquiring bank** (the merchant's bank), and the **Payment gateway / switch** that connects them.
@@ -3325,7 +3902,7 @@
 
 1. **What is CLI?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
 
-   Answer: **CLI (Command Line Interface)** is a text-based user interface in which the user types commands at a prompt and the system responds with text output. There are no windows, icons or menus.
+Answer: **CLI (Command Line Interface)** is a text-based user interface in which the user types commands at a prompt and the system responds with text output. There are no windows, icons or menus.
 
    Examples
    - Windows: Command Prompt (`cmd`), PowerShell.
