@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 135 questions
+**Table of Contents** — 11 subtopics · 136 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-35) | 35 |
+| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-36) | 36 |
 | 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-26) | 26 |
 | 3 | [RAID Architecture & Storage](#raid-architecture--storage-15) | 15 |
 | 4 | [Cache Memory](#cache-memory-14) | 14 |
@@ -19,11 +19,11 @@
 
 ---
 
-## Microprocessor Architecture & Functions (35)
+## Microprocessor Architecture & Functions (36)
 
 1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) A `microprocessor` is a single integrated circuit that contains the entire central processing unit of a computer — the ALU, the control unit and the registers. It fetches instructions from memory, decodes them and executes them.
+Answer: (Answered in English, as required for IT topics.) A `microprocessor` is a single integrated circuit that contains the entire central processing unit of a computer — the ALU, the control unit and the registers. It fetches instructions from memory, decodes them and executes them.
 
    Main functions
    - `Fetch` — read the next instruction from memory, using the address held in the program counter.
@@ -70,7 +70,7 @@
 
 2. **b) Compare and contrast between CPU and GPU.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1342 (ET: N/A)]*
 
-   Answer: A `CPU` is a general-purpose processor built to run a few complex tasks quickly, one after another. A `GPU` is built to run thousands of simple, identical tasks at the same time.
+Answer: A `CPU` is a general-purpose processor built to run a few complex tasks quickly, one after another. A `GPU` is built to run thousands of simple, identical tasks at the same time.
 
    CPU (Central Processing Unit)
    - A `few powerful cores` — typically 4 to 16 — each with a large instruction set, deep pipelines, branch prediction and out-of-order execution.
@@ -127,7 +127,7 @@
 
 3. **What exactly is a microcontroller? What distinguishes a microprocessor from a microcontroller? Mention the differences between RISC and CISC microprocessors.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 323 (ET: BIBM)]*
 
-   Answer: What a microcontroller is
+Answer: What a microcontroller is
    - A `microcontroller (MCU)` is a complete small computer on a single chip. It contains a CPU, `RAM`, `ROM/Flash`, `I/O ports`, `timers`, `ADC` and serial interfaces, all in one package.
    - It is designed for `embedded` control — running one fixed program that reads sensors and drives outputs — in washing machines, microwave ovens, cars, medical devices and IoT nodes.
    - Examples: Intel 8051, Atmel AVR (ATmega328 in Arduino), Microchip PIC, ARM Cortex-M, ESP32.
@@ -187,7 +187,7 @@
 
 4. **GPU stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
-   Answer: `GPU` stands for `Graphics Processing Unit`.
+Answer: `GPU` stands for `Graphics Processing Unit`.
 
    - It is a specialised processor built to perform many simple calculations at the same time. It was originally designed to render images, video and 3D graphics for the display.
    - A GPU has `thousands of small cores`, against a CPU's handful of powerful ones, so it excels at doing the same operation on thousands of data items simultaneously — the `SIMD` model.
@@ -212,6 +212,14 @@
    - Manufacturers: `NVIDIA` (GeForce, RTX, Tesla), `AMD` (Radeon), `Intel` (Arc, and the integrated UHD graphics).
 
 5. **Maximum three word complete this below section:** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 431 (ET: BUET)]*
+
+| Question | Answer |
+|---|---|
+| (a) Which bus transfers data between data and I/O Data Bus devices? | Data Bus |
+| (b) Which register contains the address of next instructions? | Program counter |
+| (c) Which register does the arithmetic and logical operation? | Arithmetic Logic Unit (ALU) |
+| (d) Which system connects the hardware and software? | Operating System(OS) |
+| (e) Microprocessor and other peripherals are interfaced Microcontroller, with which board? | Microcontrollers, Motherboard |
 
 | Question | Answer |
 |---|---|
@@ -266,7 +274,7 @@
 
 6. **ALU কী? এর কার্যপদ্ধতি চিত্রসহ বর্ণনা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 405 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) The `Arithmetic Logic Unit (ALU)` is the part of the CPU that actually performs all the arithmetic and logical operations. Every calculation a computer makes happens here.
+Answer: (Answered in English, as required for IT topics.) The `Arithmetic Logic Unit (ALU)` is the part of the CPU that actually performs all the arithmetic and logical operations. Every calculation a computer makes happens here.
 
    Operations it performs
    ```
@@ -346,7 +354,7 @@
 
 7. **(ক) Microprocessor এবং Microcontroller এর মাঝে দুইটি পার্থক্য লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: (Answered in English, as required for IT topics.) A `microprocessor` contains only the CPU — the ALU, control unit and registers. A `microcontroller` contains the CPU `plus` memory, I/O ports and timers, all on one chip.
+Answer: (Answered in English, as required for IT topics.) A `microprocessor` contains only the CPU — the ALU, control unit and registers. A `microcontroller` contains the CPU `plus` memory, I/O ports and timers, all on one chip.
 
    Two main differences
 
@@ -394,7 +402,7 @@
 
 8. **Discuss the factors that affect the Speed of a CPU.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 541 (ET: MIST)]*
 
-   Answer: The `speed` of a CPU is how much work it completes per second. Clock frequency alone does not decide it — several factors act together.
+Answer: The `speed` of a CPU is how much work it completes per second. Clock frequency alone does not decide it — several factors act together.
 
    1. Clock speed (frequency)
    - The number of cycles per second, measured in GHz. A 3.0 GHz processor performs three thousand million cycles a second.
@@ -446,7 +454,7 @@
 
 9. **Difference between 32 bit Microprocessor and 64 bit Microprocessor with example. What is the meaning of 2.40GHz Microprocessor? Differentiate among Core Intel i3, i5 and i7 processor. Why do you prefer SSD instead of HD?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 508 (ET: MIST)]*
 
-   Answer: 32-bit versus 64-bit microprocessor
+Answer: 32-bit versus 64-bit microprocessor
    - The number refers to the width of the `registers and the data path` — how many bits the CPU handles in one operation — and to the size of the address it can form.
    ```
       32-bit : addresses 2^32 bytes = 4 GB of RAM
@@ -501,7 +509,7 @@
 
 10. **8086 microprocessor সম্বলিত একটি ডায়াগ্রাম বা ফিগার হতে ২টি পার্ট এর নাম উল্লেখ কর?** *[BTCL Junior Assistant Manager 2022 compact it 640 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) The 8086 architecture is divided into `two independent units`. Naming these two parts is what the question asks for.
+Answer: (Answered in English, as required for IT topics.) The 8086 architecture is divided into `two independent units`. Naming these two parts is what the question asks for.
 
     The two main parts
     ```
@@ -562,7 +570,7 @@
 
 11. **Explain the necessary steps to communicate through a programmable peripheral interfacing device (8255 Microprocessor).** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 672 (ET: N/A)]*
 
-    Answer: The `8255 PPI` (Programmable Peripheral Interface) gives a microprocessor 24 programmable I/O lines, arranged as three 8-bit ports.
+Answer: The `8255 PPI` (Programmable Peripheral Interface) gives a microprocessor 24 programmable I/O lines, arranged as three 8-bit ports.
     ```
        Port A  : 8 lines  (PA0 - PA7)
        Port B  : 8 lines  (PB0 - PB7)
@@ -668,7 +676,7 @@
 
 12. **What is the function of GPU?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
-    Answer: A `GPU (Graphics Processing Unit)` is a specialised processor with thousands of small cores, built to perform many simple calculations at the same time.
+Answer: A `GPU (Graphics Processing Unit)` is a specialised processor with thousands of small cores, built to perform many simple calculations at the same time.
 
     Original function — graphics rendering
     - `Geometry processing` — transforming 3D vertex coordinates, applying rotation, scaling and perspective projection.
@@ -707,7 +715,7 @@
 
 13. **Flag Register কী? Intel 8086 Microprocessor-এর Control Flag গুলোর কাজ লিখুন।** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `flag register` is a special register in which each bit is a single-bit indicator that records something about the result of the last operation, or controls how the processor behaves. Later instructions test these bits to make decisions, which is how conditional jumps and loops work.
+Answer: (Answered in English, as required for IT topics.) A `flag register` is a special register in which each bit is a single-bit indicator that records something about the result of the last operation, or controls how the processor behaves. Later instructions test these bits to make decisions, which is how conditional jumps and loops work.
 
     The 8086 flag register is `16 bits` wide, of which `9 bits` are used — `6 status flags` and `3 control flags`. The rest are undefined.
     ```
@@ -772,7 +780,7 @@
 
 14. **What is Microprocessor?** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
-    Answer: A `microprocessor` is a single integrated circuit that contains the complete central processing unit of a computer — the arithmetic logic unit, the control unit and the registers. It fetches instructions from memory, decodes them and executes them, and it is often called the `brain` of the computer.
+Answer: A `microprocessor` is a single integrated circuit that contains the complete central processing unit of a computer — the arithmetic logic unit, the control unit and the registers. It fetches instructions from memory, decodes them and executes them, and it is often called the `brain` of the computer.
 
     - The first one was the `Intel 4004` (1971), a 4-bit chip. Modern examples are the Intel Core i7, AMD Ryzen and the ARM Cortex family.
 
@@ -820,7 +828,7 @@
 
 15. **Explain four type of register.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
 
-    Answer: A `register` is a very small, very fast storage location inside the CPU, used to hold data, addresses and instructions while they are being processed. Registers are the fastest storage in the whole machine, faster even than cache.
+Answer: A `register` is a very small, very fast storage location inside the CPU, used to hold data, addresses and instructions while they are being processed. Registers are the fastest storage in the whole machine, faster even than cache.
 
     Four main types
 
@@ -882,7 +890,7 @@
 
 16. **(খ) Typical মাইক্রোকম্পিউটারে কী কী বাস থাকে। একটি মাইক্রোপ্রসেসর এর সাথে RAM, ROM এবং I/O এর কানেকশন বাস এর মাধ্যমে দেখাও।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 777 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `bus` is a set of parallel wires that carries signals between the parts of a computer. A typical microcomputer has `three` system buses.
+Answer: (Answered in English, as required for IT topics.) A `bus` is a set of parallel wires that carries signals between the parts of a computer. A typical microcomputer has `three` system buses.
 
     The three buses
 
@@ -961,7 +969,7 @@
 
 17. **CPU এর অর্থ কি? এর কয়টি অংশ ও কি কি?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) `CPU` stands for `Central Processing Unit`. It is the part of the computer that carries out the instructions of a program — fetching them from memory, decoding them and executing them. It is called the `brain` of the computer.
+Answer: (Answered in English, as required for IT topics.) `CPU` stands for `Central Processing Unit`. It is the part of the computer that carries out the instructions of a program — fetching them from memory, decoding them and executing them. It is called the `brain` of the computer.
 
     It has `three` main parts.
 
@@ -1031,7 +1039,7 @@
 
 18. **Microprocessor কি? এর আবিষ্কারে তথ্য ও যোগাযোগ প্রযুক্তিতে কি ধরনের অগ্রগতি সাধিত হয়েছে ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 827 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) What a microprocessor is
+Answer: (Answered in English, as required for IT topics.) What a microprocessor is
     - A `microprocessor` is a single integrated circuit that contains the complete central processing unit — the ALU, the control unit and the registers. It fetches instructions from memory, decodes them and executes them.
     - The first was the `Intel 4004` in 1971: a 4-bit chip with 2,300 transistors running at 740 kHz. A modern processor has tens of billions of transistors running at several GHz.
 
@@ -1076,7 +1084,7 @@
 
 19. **8-bit microprocessor and 16-bit microprocessor write the data and address widths?** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 864 (ET: BUET)]*
 
-    Answer: The `data bus width` is how many bits the processor transfers at once. The `address bus width` decides how much memory it can address.
+Answer: The `data bus width` is how many bits the processor transfers at once. The `address bus width` decides how much memory it can address.
     ```
        Addressable memory = 2^(number of address lines)
     ```
@@ -1127,7 +1135,7 @@
 
 20. **What is Microprocessor? Explain basic component of Microprocessor.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 868-869 (ET: N/A)]*
 
-    Answer: A `microprocessor` is a single integrated circuit containing the complete central processing unit of a computer — the arithmetic logic unit, the control unit and the registers. It fetches instructions from memory, decodes them and executes them, and it is often called the brain of the computer.
+Answer: A `microprocessor` is a single integrated circuit containing the complete central processing unit of a computer — the arithmetic logic unit, the control unit and the registers. It fetches instructions from memory, decodes them and executes them, and it is often called the brain of the computer.
 
     Basic components
 
@@ -1214,29 +1222,27 @@
 
 21. **Difference between Microprocessor and Microcontroller.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 870 (ET: N/A)]*
 
-    Answer: A `microprocessor` contains only the CPU. A `microcontroller` contains the CPU together with memory, I/O ports and timers, all on one chip.
+Answer: A `microprocessor` contains only the CPU — the ALU, control unit and registers. A `microcontroller` contains the CPU together with memory, I/O ports and timers on the same chip.
 
     Microprocessor
-    - Holds the ALU, control unit and registers, and nothing else.
     - RAM, ROM, I/O ports and timers must all be added as separate chips on the board.
-    - General purpose: it runs an operating system and any program loaded into it.
-    - Examples: Intel Core i7, AMD Ryzen, Intel 8085, 8086.
+    - General purpose: it runs an operating system and any program loaded into it, so it needs large memory and a high clock speed.
+    - Examples: Intel 8085, 8086, Core i7, AMD Ryzen.
 
     Microcontroller
-    - A complete small computer on one chip — CPU, RAM, Flash/ROM, I/O ports, timers, ADC and serial interfaces.
-    - Designed for a single embedded task, running one fixed program.
-    - Examples: Intel 8051, ATmega328 (Arduino), PIC, ARM Cortex-M, ESP32.
+    - A complete small computer on one chip — CPU, RAM, Flash, I/O ports, timers, ADC and serial interfaces.
+    - Built for one dedicated embedded task, running a single fixed program.
+    - Examples: Intel 8051, ATmega328, PIC, ARM Cortex-M, ESP32.
 
     ```
        Microprocessor system              Microcontroller
-       +-------+  +-----+  +-----+        +---------------------+
-       |  CPU  |--| RAM |--| ROM |        |  CPU + RAM + ROM    |
-       +-------+  +-----+  +-----+        |  + I/O + Timer +ADC |
-           |         |        |           +---------------------+
-       +-------+  +-------+               all on ONE chip
+       +-------+  +-----+  +-----+        +----------------------+
+       |  CPU  |--| RAM |--| ROM |        | CPU + RAM + ROM      |
+       +-------+  +-----+  +-----+        | + I/O + Timer + ADC  |
+           |         |        |           +----------------------+
+       +-------+  +-------+                  all on ONE chip
        |  I/O  |  | Timer |
        +-------+  +-------+
-       several chips on a large board
     ```
 
     Difference
@@ -1249,21 +1255,20 @@
     | Board size | Large | Very small |
     | Power consumption | Watts | Milliwatts |
     | Clock speed | GHz | MHz |
-    | Memory capacity | Gigabytes | Kilobytes |
-    | Architecture | Von Neumann | Harvard (separate code and data memory) |
+    | Memory | Gigabytes | Kilobytes |
+    | Architecture | Von Neumann | Harvard |
     | Instruction set | Usually CISC | Usually RISC |
-    | Purpose | General purpose | One dedicated task |
-    | Operating system | Windows, Linux | Bare metal or an RTOS |
+    | Buses | Brought out to pins | Internal |
     | Real-time response | Not guaranteed | Precise and predictable |
-    | Bit manipulation | Limited | Strong — individual pins addressable |
+    | Operating system | Windows, Linux | Bare metal or an RTOS |
+    | Purpose | General purpose | One dedicated task |
     | Used in | PC, laptop, server | Washing machine, car ECU, IoT device |
 
-    - The clearest one-line statement: a `microprocessor is the brain alone and needs a body built around it`, while a `microcontroller is brain plus body on a single chip`.
-    - Which to choose: a microcontroller when the job is fixed, small, low-power and must respond in real time; a microprocessor when the job needs large memory, an operating system and general-purpose flexibility.
+    - The clearest one-line statement: a `microprocessor is the brain alone and needs a body built around it`; a `microcontroller is brain plus body already on a single chip`.
 
 22. **Central Processing Unit (CPU) -এর প্রধান কাজ কী? একটি চিত্রের সাহায্যে CPU-এর বিভিন্ন অংশ বর্ণনা করুন?** *[41th BCS 2021 compact it 884 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Main function of the CPU
+Answer: (Answered in English, as required for IT topics.) Main function of the CPU
     - The `Central Processing Unit` executes the instructions of a program. It repeatedly `fetches` an instruction from memory, `decodes` it, `executes` it and `stores` the result — the instruction cycle.
     ```
        FETCH  ->  DECODE  ->  EXECUTE  ->  STORE   , repeated continuously
@@ -1350,7 +1355,7 @@
 
 23. **When does the parity bit occur in the microprocessors? What does it do?** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
 
-    Answer: The `parity bit` (PF) is one of the status flags in the flag register. It reports whether the result of the last operation contains an `even` or an `odd` number of 1 bits.
+Answer: The `parity bit` (PF) is one of the status flags in the flag register. It reports whether the result of the last operation contains an `even` or an `odd` number of 1 bits.
 
     When it is set
     - After every `arithmetic or logical` operation performed by the ALU — ADD, SUB, AND, OR, XOR, CMP, INC, DEC and so on. It is not set by data-move instructions such as `MOV`.
@@ -1399,7 +1404,7 @@
 
 24. **১২. 8086 মাইক্রোপ্রসেসর এর Flag Register কত বিটের?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The flag register of the Intel 8086 is `16 bits` wide.
+Answer: (Answered in English, as required for IT topics.) The flag register of the Intel 8086 is `16 bits` wide.
 
     - Of those 16 bits, only `9` are actually used — `6 status flags` and `3 control flags`. The remaining 7 bits are undefined and reserved.
     ```
@@ -1430,7 +1435,7 @@
 
 25. **What is Register? Write down the name of 5 CPU Register.** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1018 (ET: N/A)]*
 
-    Answer: A `register` is a very small, very fast storage location inside the CPU, used to hold data, addresses and instructions while they are being processed. A register access takes about one clock cycle, against hundreds for main memory, which is why registers exist at all.
+Answer: A `register` is a very small, very fast storage location inside the CPU, used to hold data, addresses and instructions while they are being processed. A register access takes about one clock cycle, against hundreds for main memory, which is why registers exist at all.
 
     Names of five CPU registers
 
@@ -1483,7 +1488,7 @@
 
 26. **(b) What is DMA? Why it is used for high-speed I/O devices?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1025-1026 (ET: N/A)]*
 
-    Answer: What DMA is
+Answer: What DMA is
     - `DMA (Direct Memory Access)` is a technique that lets an I/O device transfer data `directly to or from main memory` without the CPU handling each byte.
     - A separate chip called the `DMA controller (DMAC)` takes over the buses and performs the transfer while the CPU gets on with other work.
 
@@ -1547,7 +1552,7 @@
 
 27. **Microcontroller এবং Microprocessor এর মধ্যে Hardware Related পার্থক্য গুলো লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.) The hardware differences all follow from one fact: a `microprocessor` is only a CPU, while a `microcontroller` has the CPU plus memory, I/O and timers on the same chip.
+Answer: (Answered in English, as required for IT topics.) The hardware differences all follow from one fact: a `microprocessor` is only a CPU, while a `microcontroller` has the CPU plus memory, I/O and timers on the same chip.
 
     1. What is inside the chip
     ```
@@ -1624,7 +1629,7 @@
 
 28. **(ক) System bus কী? বিভিন্ন প্রকার System bus সম্পর্কে সচিত্র আলোচনা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `system bus` is the set of parallel conducting lines that carries information between the CPU, memory and I/O devices. It is the shared communication path of the whole computer.
+Answer: (Answered in English, as required for IT topics.) A `system bus` is the set of parallel conducting lines that carries information between the CPU, memory and I/O devices. It is the shared communication path of the whole computer.
 
     - Only one device may drive the bus at a time, so an `arbitration` mechanism decides who gets it. All other devices keep their outputs in the high-impedance (tri-state) condition.
 
@@ -1712,7 +1717,7 @@
 
 29. **In an arithmetic operation the result has even number of 1s and for another operation the result is zero. Now write the the present status of the flag register.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120-1121 (ET: BUET)]*
 
-    Answer: The question describes `two separate operations`, so the flags must be read for each. The flag register concerned is the 8085/8086 status set.
+Answer: The question describes `two separate operations`, so the flags must be read for each. The flag register concerned is the 8085/8086 status set.
     ```
        Z  (Zero)     = 1 if the result is zero
        P  (Parity)   = 1 if the result has an EVEN number of 1 bits
@@ -1771,7 +1776,7 @@
 
 30. **Explain the functions of ALU and Control Unit of a Computer.** *[Multiple Ministry Assistant Programmer 2017 compact it 1229 (ET: N/A)]*
 
-    Answer: The `ALU` and the `control unit` are the two working parts of the CPU. The ALU does the computing; the control unit decides what is computed and when.
+Answer: The `ALU` and the `control unit` are the two working parts of the CPU. The ALU does the computing; the control unit decides what is computed and when.
 
     Functions of the Arithmetic Logic Unit (ALU)
     - `Arithmetic operations` — addition, subtraction, multiplication, division, increment and decrement. Subtraction reuses the adder, since `A - B = A + (2's complement of B)`.
@@ -1838,7 +1843,7 @@
 
 31. **Difference between microprocessor and micro-controller.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
 
-    Answer: A `microprocessor` contains only the CPU — the ALU, control unit and registers. A `microcontroller` contains the CPU together with memory, I/O ports and timers on the same chip.
+Answer: A `microprocessor` contains only the CPU — the ALU, control unit and registers. A `microcontroller` contains the CPU together with memory, I/O ports and timers on the same chip.
 
     Microprocessor
     - RAM, ROM, I/O ports and timers must all be added as separate chips on the board.
@@ -1884,7 +1889,7 @@
 
 32. **Write down the necessary components of a USB bus with block diagram.** *[ICT Ministry Assistant Programmer 2017 compact it 1237 (ET: N/A)]*
 
-    Answer: `USB` (Universal Serial Bus) is a serial interface standard for connecting peripherals to a computer. It provides both `data` and `power` over one cable and supports `hot plugging` and `plug and play`.
+Answer: `USB` (Universal Serial Bus) is a serial interface standard for connecting peripherals to a computer. It provides both `data` and `power` over one cable and supports `hot plugging` and `plug and play`.
 
     Necessary components of a USB system
 
@@ -1974,7 +1979,7 @@
 
 33. **a) Describe the central processing parts of a computer with a diagram.** *[Ministry of Finance Programmer 2013 compact it 1270 (ET: N/A)]*
 
-    Answer: The `central processing unit (CPU)` executes the instructions of a program. It has three parts: the `arithmetic logic unit`, the `control unit` and the `registers`.
+Answer: The `central processing unit (CPU)` executes the instructions of a program. It has three parts: the `arithmetic logic unit`, the `control unit` and the `registers`.
 
     Diagram
     ```
@@ -2064,7 +2069,7 @@
 
 34. **What are the difference between 8086 and 8088 microprocessors? Mention the flags of 8086 micriprocessor.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1273-1275 (ET: N/A)]*
 
-    Answer: Differences between the 8086 and 8088
+Answer: Differences between the 8086 and 8088
 
     Both were released by Intel in 1978-79 and are `software compatible` — the same machine code runs on either. The differences are all in the hardware interface.
 
@@ -2117,7 +2122,7 @@
 
 35. **What is SPI (Serial Peripheral Interface)? What are the advantages over parallel interface?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1276 (ET: N/A)]*
 
-    Answer: What SPI is
+Answer: What SPI is
     - `SPI (Serial Peripheral Interface)` is a synchronous, full-duplex serial communication protocol developed by Motorola. It connects a `master` — usually a microcontroller — to one or more `slave` devices over a short distance on the same board.
     - It uses `four` wires:
     ```
@@ -2178,11 +2183,31 @@
 
     - Compared with `I2C`: SPI is faster and full duplex but needs more pins; I2C needs only 2 wires and addresses up to 127 devices, but is slower and half duplex. SPI is used for SD cards, displays, ADCs and flash memory; I2C for slow sensors and EEPROMs.
 
+36. **(d) What is cache memory? Explain the concepts of cache memory.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 73-74]]*
+(i) Cache hit and (ii) Cache miss.
+
+Answer:
+    Cache Memory is an extremely fast, small-capacity static RAM (SRAM) memory buffer positioned directly between the CPU registers and main memory (DRAM). It exploits the Principle of Locality (Temporal and Spatial Locality) to hold frequently accessed instructions and data, minimizing CPU memory access latency.
+
+    (i) Cache Hit:
+    - Definition: Occurs when the CPU requests a memory word and that specific data block is already present in cache memory.
+    - Result: The requested data is immediately delivered to the CPU in a single clock cycle (Hit Time) without accessing the slower main memory.
+    - Metric: $\text{Hit Ratio } (H) = \frac{\text{Number of Cache Hits}}{\text{Total Memory References}}$.
+
+    (ii) Cache Miss:
+    - Definition: Occurs when the CPU requests data that is not currently stored in the cache memory.
+    - Result: The CPU stalls while the missing block is retrieved from slower main memory/DRAM and copied into the cache line. The resulting delay is termed the **Miss Penalty**.
+    - Metric: $\text{Miss Ratio } (M) = 1 - H$.
+    - Types of Cache Misses (3 Cs):
+      1. Compulsory Miss (Cold Miss): First access to a memory block.
+      2. Capacity Miss: Cache cannot contain all blocks needed during execution.
+      3. Conflict Miss (Collision): Multiple memory blocks map to the exact same cache set in direct-mapped or set-associative caches.
+
 ## Memory Hierarchy & Storage (26)
 
-1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+1. **Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: The four form a `memory hierarchy`: as you move away from the CPU, storage gets larger and cheaper but much slower.
+Answer: The four form a `memory hierarchy`: as you move away from the CPU, storage gets larger and cheaper but much slower.
    ```
            CPU
             |
@@ -2236,7 +2261,7 @@
 
 2. **Difference between SRAM & DRAM also write Differences Cache Memory vs Flash Memory.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
 
-   Answer: SRAM versus DRAM
+Answer: SRAM versus DRAM
 
    `SRAM` (Static RAM)
    - Each cell is a `flip-flop` made of `6 transistors`. It holds its value as long as power is applied, with `no refreshing`.
@@ -2289,7 +2314,7 @@
 
 3. **DRAM stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
-   Answer: `DRAM` stands for `Dynamic Random Access Memory`.
+Answer: `DRAM` stands for `Dynamic Random Access Memory`.
 
    - "Dynamic" because each cell stores its bit as `charge on a tiny capacitor`, and that charge leaks away. The memory controller must therefore `refresh` every row thousands of times a second by reading it and writing it back. Without refreshing, the data is lost in a few milliseconds.
    - "Random Access" because any location can be reached directly in the same time, without reading through what comes before it.
@@ -2318,7 +2343,7 @@
 
 4. **What is stand for EEPROM?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
-   Answer: `EEPROM` stands for `Electrically Erasable Programmable Read Only Memory`.
+Answer: `EEPROM` stands for `Electrically Erasable Programmable Read Only Memory`.
 
    - It is a `non-volatile` memory that keeps its contents with no power, but can be `erased and rewritten electrically`, byte by byte, while it stays in the circuit.
    - The bit is stored as charge trapped on a `floating gate` inside a transistor.
@@ -2354,7 +2379,7 @@
 
 5. **কম্পিউটার স্মৃতি বলতে কী বোঝায়? কম্পিউটারের স্মৃতির শ্রেণিবিভাগ আলোচনা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 405 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Computer memory
+Answer: (Answered in English, as required for IT topics.) Computer memory
    - `Memory` is the part of a computer that `stores` data, instructions and results so that they can be used by the processor. Without it a computer could hold nothing, not even the program it is running.
    - Memory is organised as a large number of `locations`, each with a unique `address`, and each holding a fixed number of bits — normally one byte.
    ```
@@ -2434,7 +2459,7 @@
 
 6. **Write down the difference between RAM and ROM.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
-   Answer: `RAM` is the computer's working memory — fast, read/write and volatile. `ROM` holds permanent firmware — non-volatile and normally read only.
+Answer: `RAM` is the computer's working memory — fast, read/write and volatile. `ROM` holds permanent firmware — non-volatile and normally read only.
 
    RAM (Random Access Memory)
    - Holds the operating system, the running programs and the data they are working on.
@@ -2468,7 +2493,7 @@
 
 7. **Differentiate among CPU register, Cache memory, Main memory and Secondary memory.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 510 (ET: MIST)]*
 
-   Answer: These four are successive levels of the `memory hierarchy`. Moving away from the CPU, storage becomes larger and cheaper but much slower.
+Answer: These four are successive levels of the `memory hierarchy`. Moving away from the CPU, storage becomes larger and cheaper but much slower.
    ```
       CPU Register  ->  Cache  ->  Main memory  ->  Secondary memory
       fastest                                         slowest
@@ -2522,7 +2547,7 @@
 
 8. **What do you mean by memory organization? Write the different between SRAM and DRAM.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 558 (ET: BIBM)]*
 
-   Answer: Memory organization
+Answer: Memory organization
    - `Memory organization` is how the memory of a computer is `structured, addressed and connected` to the processor so that data can be stored and retrieved efficiently.
 
    It covers
@@ -2574,7 +2599,7 @@
 
 9. **What is dual channel RAM? Difference between single In-Line and Dual In-Line Memory Module.** *[BITAC Assistant Programmer 27.10.2023 compact it 559 (ET: BUTEX)]*
 
-   Answer: Dual channel RAM
+Answer: Dual channel RAM
    - `Dual channel` is a memory configuration in which the memory controller uses `two independent 64-bit data paths` to the RAM at the same time, instead of one.
    - This `doubles the theoretical bandwidth` between the CPU and memory — the width becomes 128 bits per transfer.
    ```
@@ -2626,7 +2651,7 @@
 
 10. **What is the difference between Dynamic RAM and Static RAM?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
-    Answer: Both are volatile read/write memories. The difference is the `cell design`, and everything else follows from it.
+Answer: Both are volatile read/write memories. The difference is the `cell design`, and everything else follows from it.
 
     `SRAM` (Static RAM)
     - Each cell is a `flip-flop` built from `6 transistors`. It holds its value as long as power is applied.
@@ -2677,7 +2702,7 @@
 
 11. **Give classification of memory. Differentiate between RAM and ROM.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 664 (ET: N/A)]*
 
-    Answer: Classification of memory
+Answer: Classification of memory
 
     1. By position in the hierarchy
     ```
@@ -2745,7 +2770,7 @@
 
 12. **(গ) Primary Memory and Secondary Memory এর উদাহরণসহ তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 705 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Primary memory
+Answer: (Answered in English, as required for IT topics.) Primary memory
     - The memory the CPU can `address directly`. A program must be loaded here before it can run.
     - Fast, expensive per byte, and small in capacity.
     - Two kinds:
@@ -2795,7 +2820,7 @@
 
 13. **Write down the difference between SRAM and DRAM.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)]*
 
-    Answer: Both are volatile read/write memories, and every difference follows from the `cell design`.
+Answer: Both are volatile read/write memories, and every difference follows from the `cell design`.
 
     `SRAM` (Static RAM)
     - Each cell is a `flip-flop` of `6 transistors`, which holds its value as long as power is applied.
@@ -2830,7 +2855,7 @@
 
 14. **(ক) Data transfer rate এর ভিত্তিতে নিম্নোক্ত memory/storage device গুলোকে বেশী থেকে কম ক্রমানুসারে সাজান। (i) Flash drive (ii) SSD (iii) Cache memory (iv) DVD (v) RAM (vi) Magnetic HD** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 767 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Arranged from the `highest` data transfer rate to the `lowest`:
+Answer: (Answered in English, as required for IT topics.) Arranged from the `highest` data transfer rate to the `lowest`:
     ```
        1. Cache memory      (iii)
        2. RAM               (v)
@@ -2863,7 +2888,7 @@
 
 15. **Which of the following is non volatile memory? (a) SRAM (b) DRAM (c) ROM (d) HDD** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-    Answer: The non-volatile options are `(c) ROM` and `(d) HDD`.
+Answer: The non-volatile options are `(c) ROM` and `(d) HDD`.
 
     - `Non-volatile` memory keeps its contents when the power is switched off. `Volatile` memory loses everything.
 
@@ -2903,7 +2928,7 @@
 
 16. **(b) Here are given 4 types of different memory. Which memory is the faster? Write in sequence order in the following figure: Register, Hard disk, Cache, RAM.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 821 (ET: BUET)]*
 
-    Answer: In order from `fastest` to `slowest`:
+Answer: In order from `fastest` to `slowest`:
     ```
        1. Register
        2. Cache
@@ -2951,7 +2976,7 @@
 
 17. **RAM and ROM difference লিখ?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) `RAM` is the computer's working memory — fast, read/write and volatile. `ROM` holds permanent firmware — non-volatile and normally read only.
+Answer: (Answered in English, as required for IT topics.) `RAM` is the computer's working memory — fast, read/write and volatile. `ROM` holds permanent firmware — non-volatile and normally read only.
 
     RAM (Random Access Memory)
     - Holds the operating system, the running programs and the data being worked on.
@@ -2985,7 +3010,7 @@
 
 18. **(a) Write the difference between: (i) RAM and ROM (ii) Open source software and Proproetary software.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1023-1024 (ET: N/A)]*
 
-    Answer: (i) RAM and ROM
+Answer: (i) RAM and ROM
 
     `RAM` is the working memory: fast, read/write, volatile, holding the operating system and the running programs. `ROM` holds permanent firmware: non-volatile and normally read only.
 
@@ -3027,7 +3052,7 @@
 
 19. **(b) Outline the functions performed by memory. List some factors upon which memory can be classified.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1024 (ET: N/A)]*
 
-    Answer: Functions performed by memory
+Answer: Functions performed by memory
     - `Store the program` currently being executed, so the CPU can fetch its instructions.
     - `Store the data` the program is working on, and the intermediate and final results.
     - `Hold the operating system` and the firmware needed to start the machine.
@@ -3094,7 +3119,7 @@
 
 20. **(c) Given below the list of some memory devices. Identify which are semi-conductor, optical and magnetic memory. CD, RAM, Floppy Disk, Hard Disk, ROM, DVD.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1024 (ET: N/A)]*
 
-    Answer: The six devices classified by the technology that stores the data.
+Answer: The six devices classified by the technology that stores the data.
 
     Semiconductor memory
     ```
@@ -3148,7 +3173,7 @@
 
 21. **How Maximum size of memory (RAM) is needed that can be addressed by 32-bit system.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1031 (ET: BUET)]*
 
-    Answer: The amount of memory a processor can address is set by the width of its `address bus`.
+Answer: The amount of memory a processor can address is set by the width of its `address bus`.
     ```
        Addressable memory = 2^(number of address lines) x (size of one location)
     ```
@@ -3202,7 +3227,7 @@
 
 22. **What is access time and transfer time?** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*
 
-    Answer: Both describe how long a memory or storage operation takes, but they measure different parts of it.
+Answer: Both describe how long a memory or storage operation takes, but they measure different parts of it.
 
     Access time
     - The time from the moment a request is issued until the `first` item of data is available.
@@ -3263,7 +3288,7 @@
 
 23. **(ক) Memory address register and Memory buffer register কী? Primary memory and Secondary memory-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069-1070 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Memory Address Register (MAR)
+Answer: (Answered in English, as required for IT topics.) Memory Address Register (MAR)
     - A CPU register that holds the `address` of the memory location the processor is about to read from or write to.
     - Its contents are placed directly on the `address bus`, so its width equals the number of address lines. A 32-bit MAR can address 2^32 = 4 GB.
     - It is `unidirectional` — the CPU only writes into it, and the address only travels outward to memory.
@@ -3328,7 +3353,7 @@
 
 24. **(b) Difference between SRAM and DRAM.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
 
-    Answer: Both are volatile read/write memories; every difference follows from the `cell design`.
+Answer: Both are volatile read/write memories; every difference follows from the `cell design`.
 
     `SRAM` (Static RAM)
     - Each cell is a `flip-flop` of `6 transistors`, holding its value as long as power is applied.
@@ -3363,7 +3388,7 @@
 
 25. **Write the Memory faster access time memory in top and lowest access time memory is below from the following memory: [Cache Memory, Register Memory, Main Memory, Magnetic Tapes and Magnetic Disks.]** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
 
-    Answer: In order from `fastest access time` at the top to `slowest` at the bottom:
+Answer: In order from `fastest access time` at the top to `slowest` at the bottom:
     ```
        1. Register Memory
        2. Cache Memory
@@ -3414,7 +3439,7 @@
 
 26. **Difference between ROM and RAM.** *[ICT Ministry Assistant Programmer 2017 compact it 1240-1241 (ET: N/A)]*
 
-    Answer: `ROM` holds permanent firmware — non-volatile and normally read only. `RAM` is the working memory — fast, read/write and volatile.
+Answer: `ROM` holds permanent firmware — non-volatile and normally read only. `RAM` is the working memory — fast, read/write and volatile.
 
     ROM (Read Only Memory)
     - Holds what the machine needs at power-on: the BIOS/UEFI, the bootstrap loader, and the fixed program of an embedded device.
@@ -3450,7 +3475,7 @@
 
 1. **Which RAID level is best and why?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
-   Answer: There is `no single best RAID level` — the right choice depends on whether performance, capacity or safety matters most. But for general-purpose server use, `RAID 10` is usually called the best, and `RAID 5` the best value.
+Answer: There is `no single best RAID level` — the right choice depends on whether performance, capacity or safety matters most. But for general-purpose server use, `RAID 10` is usually called the best, and `RAID 5` the best value.
 
    RAID 10 (1 + 0) — the best overall
    ```
@@ -3496,7 +3521,7 @@
 
 2. **Striping with parity is done in which level of RAID.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
-   Answer: Striping with parity is done in `RAID 5`.
+Answer: Striping with parity is done in `RAID 5`.
 
    - `RAID 5` stripes the data across all the disks and also writes a `parity block` for each stripe. Crucially, the parity is `distributed` — it rotates from disk to disk, so no single drive becomes a bottleneck.
    ```
@@ -3544,7 +3569,7 @@
 
 3. **Concept of RAID, Relevance in Database, Uses in Database, is it possible?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)]*
 
-   Answer: Concept of RAID
+Answer: Concept of RAID
    - `RAID` stands for `Redundant Array of Independent Disks`. It combines several physical disks into `one logical drive`, so that the operating system sees a single volume.
    - Its three purposes are `performance`, `fault tolerance` and `capacity`, achieved by three techniques:
    ```
@@ -3597,7 +3622,7 @@
 
 4. **How to solve drive failure in RAID?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
 
-   Answer: How a drive failure is handled depends on the RAID level and on whether the array is `degraded` or has already lost its data.
+Answer: How a drive failure is handled depends on the RAID level and on whether the array is `degraded` or has already lost its data.
 
    Step 1 — detect the failure
    - The RAID controller raises an alert, an LED on the drive bay turns amber, and the management software (or a monitoring system such as Nagios or the vendor's tool) reports the array as `degraded`.
@@ -3653,7 +3678,7 @@
 
 5. **Explain the purpose of RAID.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 564 (ET: N/A)]*
 
-   Answer: `RAID` (Redundant Array of Independent Disks) combines several physical disks into one logical drive. Its purpose is to improve `performance`, `fault tolerance` and `capacity` beyond what a single disk can give.
+Answer: `RAID` (Redundant Array of Independent Disks) combines several physical disks into one logical drive. Its purpose is to improve `performance`, `fault tolerance` and `capacity` beyond what a single disk can give.
 
    1. Fault tolerance and availability
    - The main purpose. A single disk `will` fail eventually; RAID makes that failure survivable.
@@ -3697,7 +3722,7 @@
 
 6. **What do you mean by RAID? Write the difference types of RAID level.** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
 
-   Answer: What RAID is
+Answer: What RAID is
    - `RAID` stands for `Redundant Array of Independent Disks`. Several physical disks are combined into `one logical drive`, which the operating system sees as a single volume.
    - Purposes: `performance`, `fault tolerance` and larger `capacity`.
    - Three underlying techniques:
@@ -3779,7 +3804,7 @@
 
 7. **What is RAID technology? Why it's important Server in data center?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 555 (ET: BIBM)]*
 
-   Answer: What RAID technology is
+Answer: What RAID technology is
    - `RAID` (Redundant Array of Independent Disks) combines several physical disks into `one logical drive`, using three techniques:
    ```
       Striping  : data split across disks and accessed in parallel -> speed
@@ -3836,7 +3861,7 @@
 
 8. **(a) Compare RAID 1 and RAID 5 levels. Which one you prefer? Why?** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
-   Answer: Comparison of RAID 1 and RAID 5
+Answer: Comparison of RAID 1 and RAID 5
 
    `RAID 1 — mirroring`
    ```
@@ -3897,7 +3922,7 @@
 
 9. **What is RAID?** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
-   Answer: `RAID` stands for `Redundant Array of Independent Disks` (originally "Inexpensive" Disks). It is a technique that combines several physical disks into `one logical drive`, which the operating system sees as a single volume.
+Answer: `RAID` stands for `Redundant Array of Independent Disks` (originally "Inexpensive" Disks). It is a technique that combines several physical disks into `one logical drive`, which the operating system sees as a single volume.
 
    Purpose
    ```
@@ -3943,7 +3968,7 @@
 
 10. **What is RAID? What is the classification of RAIDs? Difference between RAID 1 and RAID 5 using illustration.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
 
-    Answer: What RAID is
+Answer: What RAID is
     - `RAID` (Redundant Array of Independent Disks) combines several physical disks into one logical drive, to gain `performance`, `fault tolerance` and `capacity`.
     ```
        Striping  : data split across disks, accessed in parallel -> speed
@@ -4026,7 +4051,7 @@
 
 11. **What is RAID technology? Describe about the advantages of RAID technology.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 820 (ET: BUET)]*
 
-    Answer: What RAID technology is
+Answer: What RAID technology is
     - `RAID` (Redundant Array of Independent Disks) combines several physical disks into `one logical drive` seen by the operating system as a single volume.
     - It uses three techniques:
     ```
@@ -4083,7 +4108,7 @@
 
 12. **Why necessary to use RAID? If you choose a RAID level for an organization with huge data process. Justify your answer?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 854 (ET: N/A)]*
 
-    Answer: Why RAID is necessary
+Answer: Why RAID is necessary
     - `Disks fail.` A hard disk is the only mechanical part left in a server, and it is by far the most failure-prone. In a large organisation several drives fail every month.
     - `Downtime is expensive.` For a bank, a hospital or an e-commerce site, an hour of outage costs far more than the extra disks would.
     - `A single disk is too slow.` One drive delivers 100-200 MB/s. A busy database or file server needs many times that, which only parallel disks can supply.
@@ -4162,7 +4187,7 @@
 
 13. **Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
-    Answer: In `RAID 1` every block is written to two disks, so the `usable capacity is half` the raw capacity.
+Answer: In `RAID 1` every block is written to two disks, so the `usable capacity is half` the raw capacity.
     ```
        Usable capacity = raw capacity / 2
        Raw capacity needed = usable capacity x 2
@@ -4230,7 +4255,7 @@
 
 14. **What is RAID level? Write down of RAID level 0, level 1 and level 5?** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159 (ET: BUET)]*
 
-    Answer: What a RAID level is
+Answer: What a RAID level is
     - A `RAID level` is a defined way of arranging data across the disks of an array. Each level is a different trade-off between `performance`, `capacity` and `fault tolerance`.
     - The three underlying techniques are `striping` (speed), `mirroring` (redundancy) and `parity` (redundancy at lower cost).
 
@@ -4300,7 +4325,7 @@
 
 15. **Describe RAID level.** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
 
-    Answer: A `RAID level` defines how data is arranged across the disks of an array. Each level is a different trade-off between `performance`, `capacity` and `fault tolerance`, built from three techniques: `striping`, `mirroring` and `parity`.
+Answer: A `RAID level` defines how data is arranged across the disks of an array. Each level is a different trade-off between `performance`, `capacity` and `fault tolerance`, built from three techniques: `striping`, `mirroring` and `parity`.
 
     RAID 0 — striping
     ```
@@ -4383,9 +4408,9 @@
 
 ## Cache Memory (14)
 
-1. Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory. [SO IT 25-07-2026]
+1. **Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** [SO IT 25-07-2026]
 
-   Answer: Cache misses are classified into three kinds, known as the `three C's`: compulsory, capacity and conflict.
+Answer: Cache misses are classified into three kinds, known as the `three C's`: compulsory, capacity and conflict.
 
    Compulsory miss (cold miss, first-reference miss)
    - Occurs when a block is accessed for the `very first time`. It cannot possibly be in the cache, because it has never been brought in.
@@ -4430,7 +4455,7 @@
 
 2. **(d) What is cache memory? Explain the concepts of (i) Cache hit and (ii) Cache miss.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
 
-   Answer: What cache memory is
+Answer: What cache memory is
    - `Cache memory` is a small, very fast memory placed between the CPU and main memory. It holds copies of the instructions and data that have been used most recently, so the CPU usually finds what it needs without waiting for RAM.
    - It is built from `SRAM`, which is far faster than the DRAM used for main memory, and it is managed entirely by `hardware` — the programmer never addresses it directly.
    ```
@@ -4490,7 +4515,7 @@
 
 3. **Write advantage and disadvantage of direct mapping and associative mapping between cache memory and main memory.** *[BCIC Assistant Programmer 14.02.2025 compact it 1330 (ET: BUET)]*
 
-   Answer: The `mapping function` decides where a block of main memory may be placed in the cache. The three schemes are direct, associative and set-associative.
+Answer: The `mapping function` decides where a block of main memory may be placed in the cache. The three schemes are direct, associative and set-associative.
 
    Direct mapping
    - Each main-memory block can go in `exactly one` cache line, determined by
@@ -4558,7 +4583,7 @@
 
 4. **How many total bits are required for a direct mapped cache with 16KB of data and 4-word blocks? Assuming a 32 bit address?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 421 (ET: BIBM)]*
 
-   Answer: Given
+Answer: Given
    ```
       Cache data size = 16 KB
       Block size      = 4 words
@@ -4635,7 +4660,7 @@
 
 5. **6.3 Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-   Answer: Cache misses are classified into the `three C's`: compulsory, capacity and conflict. The first two are asked here.
+Answer: Cache misses are classified into the `three C's`: compulsory, capacity and conflict. The first two are asked here.
 
    Compulsory miss (cold miss, first-reference miss)
    - Occurs when a block is accessed for the `very first time`. It cannot be in the cache, because it has never been brought in.
@@ -4678,7 +4703,7 @@
 
 6. **Write Concept of cache memory in computer. How its change performance of computer?** *[BITAC Assistant Programmer 27.10.2023 compact it 559 (ET: BUTEX)]*
 
-   Answer: Concept of cache memory
+Answer: Concept of cache memory
    - `Cache memory` is a small, very fast memory placed between the CPU and main memory, holding copies of the instructions and data that have been used most recently.
    - It exists because there is a huge `speed gap`: a CPU cycle is under a nanosecond, while a DRAM access takes 50-100 ns. Without a cache the processor would spend most of its life waiting.
    - It is built from `SRAM` and managed entirely by `hardware`; the programmer never addresses it directly.
@@ -4748,7 +4773,7 @@
 
 7. **Suppose we have a 16 KB of data in a direct mapped cache with 4 word blocks. Determine the size of the tag, index and offset fields if we are using a 32-bit architecture.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 439 (ET: BIBM)]*
 
-   Answer: Given
+Answer: Given
    ```
       Cache data size = 16 KB
       Block size      = 4 words
@@ -4831,7 +4856,7 @@
 
 8. **What is the use of cache memory?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
-   Answer: `Cache memory` is a small, very fast memory between the CPU and main memory, holding copies of the instructions and data most recently used.
+Answer: `Cache memory` is a small, very fast memory between the CPU and main memory, holding copies of the instructions and data most recently used.
 
    Uses of cache memory
 
@@ -4878,7 +4903,7 @@
 
 9. **Some of the factors determine the performance of a computer system. Cache memory is one of them. Why cache memory is one of the factors to determine the performance of a computer system?** *[BTRC Assistant Director (Technical) 2021 compact it 807 (ET: IBA)]*
 
-   Answer: Cache memory determines a large part of a computer's performance because the CPU spends most of its time `waiting for memory`, and the cache is what stops that wait.
+Answer: Cache memory determines a large part of a computer's performance because the CPU spends most of its time `waiting for memory`, and the cache is what stops that wait.
 
    1. The memory wall — the reason the cache matters at all
    ```
@@ -4939,7 +4964,7 @@
 
 10. **Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit. The average read access time in nanoseconds is ______.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 864 (ET: BUET)]*
 
-    Answer: The average access time is the weighted mean of the hit time and the miss time.
+Answer: The average access time is the weighted mean of the hit time and the miss time.
     ```
        Average access time = (hit ratio x hit time) + (miss ratio x miss time)
     ```
@@ -4994,7 +5019,7 @@
 
 11. **Cache memory কী কাজে ব্যবহৃত হয়? Compiler and Interpreater -এর মধ্যে পার্থক্য লিখুন।** *[41th BCS 2021 compact it 880-881 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Uses of cache memory
+Answer: (Answered in English, as required for IT topics.) Uses of cache memory
     - `Cache memory` is a small, very fast SRAM between the CPU and main memory, holding the instructions and data most recently used.
     - Its purpose is to `bridge the speed gap`: a CPU cycle is under a nanosecond, while a DRAM access takes 50-100 ns — about 200 cycles.
     ```
@@ -5043,7 +5068,7 @@
 
 12. **(ii) Cache Memory কী? Computer এর main memory-এর সাথে এর পার্থক্য কী?** *[BPSC Assistant Network Engineer 2020 compact it 951-952 (ET: N/A)], [BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) What cache memory is
+Answer: (Answered in English, as required for IT topics.) What cache memory is
     - `Cache memory` is a small, very fast memory placed between the CPU and main memory, holding copies of the instructions and data that have been used most recently.
     - It exists because a CPU cycle is under a nanosecond while a DRAM access takes 50-100 ns — a gap of about 200 cycles. The cache stops the processor from waiting.
     - It is built from `SRAM` and managed entirely by `hardware`; the programmer never addresses it directly.
@@ -5095,7 +5120,7 @@
 
 13. **If main memory access time is 100ns, cache access time is 50 ns, cache hit rate is 90% then what is the average time to read from memory?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1228 (ET: N/A)]*
 
-    Answer: The average access time is the weighted mean of the time taken on a hit and on a miss.
+Answer: The average access time is the weighted mean of the time taken on a hit and on a miss.
 
     Given
     ```
@@ -5165,7 +5190,7 @@
 
 14. **Explain how cache memory is used to increase the processing speed of computer.** *[Multiple Ministry Assistant Programmer 2017 compact it 1230-1231 (ET: N/A)]*
 
-    Answer: The cache increases processing speed by making sure the CPU almost never has to wait for main memory.
+Answer: The cache increases processing speed by making sure the CPU almost never has to wait for main memory.
 
     The problem it solves — the memory wall
     ```
@@ -5242,9 +5267,9 @@
 
 ## Secondary Storage (HDD vs SSD) (10)
 
-1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+1. **Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD).** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: Server A — the Core Banking Database → use `SSD` (NVMe)
+Answer: Server A — the Core Banking Database → use `SSD` (NVMe)
    Server B — 10 years of immutable archive → use `HDD`
 
    Comparison of the two technologies
@@ -5297,7 +5322,7 @@
 
 2. **a) Define the term "SSD". Briefly describe the working principle of "SSD".** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1342 (ET: N/A)]*
 
-   Answer: Definition
+Answer: Definition
    - An `SSD (Solid State Drive)` is a storage device that keeps data in `NAND flash memory` instead of on spinning magnetic platters. It has `no moving parts` at all — hence "solid state".
 
    Main components
@@ -5372,7 +5397,7 @@
 
 3. **Write two SSD characteristics?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
-   Answer: Two characteristics of an SSD
+Answer: Two characteristics of an SSD
    ```
       1. It has NO MOVING PARTS.
          Data is stored in NAND flash memory rather than on spinning platters,
@@ -5403,7 +5428,7 @@
 
 4. **How can you define SSD?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
-   Answer: An `SSD (Solid State Drive)` is a storage device that stores data in `NAND flash memory` chips instead of on spinning magnetic platters. It has `no moving parts`, which is where the name "solid state" comes from.
+Answer: An `SSD (Solid State Drive)` is a storage device that stores data in `NAND flash memory` chips instead of on spinning magnetic platters. It has `no moving parts`, which is where the name "solid state" comes from.
 
    How it stores a bit
    - Each cell is a `floating-gate transistor`. The floating gate is surrounded by insulating oxide, so charge placed on it stays there with no power at all — that is what makes the drive non-volatile.
@@ -5447,7 +5472,7 @@
 
 5. **(খ) Solid State Drives (SSD) এর কার্যপ্রণালী ও ব্যবহার লিখুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Working principle of an SSD
+Answer: (Answered in English, as required for IT topics.) Working principle of an SSD
 
    An `SSD (Solid State Drive)` stores data in `NAND flash` memory chips and has no moving parts.
 
@@ -5521,7 +5546,7 @@
 
 6. **In a solid state drive data is sarved to a pool of NAND flash. NAND itself is made up of what are called floating gate transmission. How does floating gate transmission store 0 and 1?** *[BTRC Assistant Director (Technical) 2021 compact it 808-809 (ET: IBA)]*
 
-   Answer: A `floating-gate transistor` is the storage cell of NAND flash. It is an ordinary MOSFET with a second, completely insulated gate placed between the control gate and the channel.
+Answer: A `floating-gate transistor` is the storage cell of NAND flash. It is an ordinary MOSFET with a second, completely insulated gate placed between the control gate and the channel.
 
    Structure
    ```
@@ -5596,7 +5621,7 @@
 
 7. **Which of the following is the unit of Hard Disk Drive? (a) Megaharz (b) Kiloharz (c) Gigabyte (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-   Answer: The answer is `(c) Gigabyte`.
+Answer: The answer is `(c) Gigabyte`.
 
    - The `gigabyte (GB)` is a unit of `storage capacity`, which is what a hard disk drive is measured in. Capacity is the amount of data the disk can hold.
    ```
@@ -5633,7 +5658,7 @@
 
 8. **Consider a magnetic disk consisting of 16 heads and 400 cylinders. This disk has four 100-cylinder zones with the cylinders in different zones containing 160, 200, 240. and 280 sectors, respectively. Assume that each sector contains 512 bytes, average seek time between adjacent cylinders is 1 msec, and the disk rotates at 7200 RPM. Calculate the (a) disk capacity (b) maximum data transfer rate.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
-   Answer: Given
+Answer: Given
    ```
       Heads (surfaces)      = 16
       Cylinders             = 400, divided into 4 zones of 100 cylinders
@@ -5726,7 +5751,7 @@
 
 9. **Consider a disk pack with the following specifications- 16 surfaces, 128 tracks per surface, 256 sectors per track and 512 bytes per sector. Answer the following questions: (a) What is the capacity of disk pack? (b) If the format overhead is 32 bytes per sector, what is the formatted disk space? (c) If the disk is rotating at 3600 rpm, what is the data transfer rate?** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 924-925 (ET: CTI)]*
 
-   Answer: Given
+Answer: Given
    ```
       Surfaces           = 16
       Tracks per surface = 128
@@ -5820,7 +5845,7 @@
 
 10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 951 (ET: N/A)], [BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) An `optical disc` — CD, DVD or Blu-ray — stores data as microscopic marks on a spiral track, and reads them with a `laser beam`. There are no magnetic fields and no contact with the surface.
+Answer: (Answered in English, as required for IT topics.) An `optical disc` — CD, DVD or Blu-ray — stores data as microscopic marks on a spiral track, and reads them with a `laser beam`. There are no magnetic fields and no contact with the surface.
 
     Physical structure
     ```
@@ -5904,9 +5929,9 @@
 
 ## Instruction Pipelining & Hazards (9)
 
-1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
+1. **Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** [SO IT 25-07-2026]
 
-   Answer: A `single-cycle` implementation completes one whole instruction per clock cycle. A `pipelined` implementation splits the instruction into stages and overlaps consecutive instructions, so one instruction `completes` every cycle even though each takes several cycles to pass through.
+Answer: A `single-cycle` implementation completes one whole instruction per clock cycle. A `pipelined` implementation splits the instruction into stages and overlaps consecutive instructions, so one instruction `completes` every cycle even though each takes several cycles to pass through.
 
    The problem with a single-cycle design
    - The clock period must be long enough for the `slowest` instruction to finish completely.
@@ -5987,7 +6012,7 @@
 
 2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** *[BPSC (Ministry) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
 
-   Answer: Stages of instruction pipelining
+Answer: Stages of instruction pipelining
 
    The classic `five-stage` pipeline, used in MIPS and DLX and taught as the standard model:
    ```
@@ -6094,6 +6119,11 @@
    * (iii) Complex decoding due to variable instruction length ______
    * (iv) Each instruction typically executes in a single clock cycle ______
 
+* (i) Pipelining is less efficient due to instruction complexity and variability ______
+   * (ii) Emphasis on hardware simplicity and efficiency ______
+   * (iii) Complex decoding due to variable instruction length ______
+   * (iv) Each instruction typically executes in a single clock cycle ______
+
    Answer: (i) Pipelining is less efficient due to instruction complexity and variability — `CISC`
    - CISC instructions vary in length (1 to 15 bytes in x86) and in how many cycles they take. A pipeline works best when every instruction is the same size and takes the same time, so this variability causes stalls and makes the pipeline control logic complicated.
 
@@ -6136,7 +6166,7 @@
 
 4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 299 (ET: BIBM)]*
 
-   Answer: Multiprocessor versus multicomputer system
+Answer: Multiprocessor versus multicomputer system
 
    `Multiprocessor` — several CPUs inside `one` computer, sharing the same main memory and one operating system. Communication is through `shared memory`. Also called a `tightly coupled` system.
 
@@ -6245,7 +6275,7 @@
 
 5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-   Answer: A `single-cycle` design completes one whole instruction per clock cycle, so the clock period must cover the `slowest` instruction. A `pipelined` design splits the instruction into stages and overlaps consecutive instructions, so the clock period need only cover the `slowest stage`.
+Answer: A `single-cycle` design completes one whole instruction per clock cycle, so the clock period must cover the `slowest` instruction. A `pipelined` design splits the instruction into stages and overlaps consecutive instructions, so the clock period need only cover the `slowest stage`.
 
    The problem with single-cycle
    ```
@@ -6315,7 +6345,7 @@
 
 6. **How computer Architecture is characterized. What are the 5 stages of the DLX pipeline?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049-1050 (ET: BUET)]*
 
-   Answer: How computer architecture is characterized
+Answer: How computer architecture is characterized
 
    Computer architecture is described by the following attributes.
 
@@ -6399,7 +6429,7 @@
 
 7. **“Pentium processor has a superscalar architecture.” Explain the meaning of statement.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
 
-   Answer: A `superscalar` processor can `issue and execute more than one instruction in the same clock cycle`, because it contains several parallel execution units. A plain pipelined processor completes at most one instruction per cycle; a superscalar one completes several.
+Answer: A `superscalar` processor can `issue and execute more than one instruction in the same clock cycle`, because it contains several parallel execution units. A plain pipelined processor completes at most one instruction per cycle; a superscalar one completes several.
 
    What the statement means for the Pentium
    - The original Pentium (1993) had `two integer pipelines`, called the `U pipe` and the `V pipe`, plus a separate floating-point unit.
@@ -6457,7 +6487,7 @@
 
 8. **Using pipeline calculate the value of fetch and execution cycle.** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
 
-   Answer: The question gives no specific timings, so the standard pipeline formulas are derived and applied to a worked example. The method is what carries the marks.
+Answer: The question gives no specific timings, so the standard pipeline formulas are derived and applied to a worked example. The method is what carries the marks.
 
    Non-pipelined (sequential) execution
    - Each instruction completes its fetch and execution before the next begins.
@@ -6555,7 +6585,7 @@
 
 9. **What is pipelining? What is opcode and operand in machine code? Explain snooping cache.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1277 (ET: N/A)]*
 
-   Answer: What pipelining is
+Answer: What pipelining is
    - `Pipelining` divides the execution of an instruction into stages, and overlaps consecutive instructions so that a different instruction occupies each stage at the same time. One instruction then `completes` every clock cycle, even though each takes several cycles to pass through.
    ```
       Five-stage pipeline : IF -> ID -> EX -> MEM -> WB
@@ -6646,8 +6676,10 @@
 
 ## Assembly Language & Addressing Modes (8)
 
-1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
+1. **(a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;**
    (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+(b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
    Answer: (a) Propagation delay and transmission delay
 
@@ -6739,7 +6771,7 @@
 
 2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1424 (ET: E-Zone)]*
 
-   Answer: An `addressing mode` is the way an instruction specifies where its operand is. The 8086 has several; three of them are asked here.
+Answer: An `addressing mode` is the way an instruction specifies where its operand is. The 8086 has several; three of them are asked here.
 
    Immediate addressing
    - The operand is a `constant contained in the instruction itself`. No memory access is needed beyond fetching the instruction.
@@ -6806,6 +6838,8 @@
 3. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 MOV AX, A534H এবং MOV AX, [A534H]
 
+MOV AX, A534H এবং MOV AX, [A534H]
+
    Answer: (Answered in English, as required for IT topics.) The two instructions differ only by the `square brackets`, and that changes the addressing mode completely.
 
    `MOV AX, A534H` — immediate addressing
@@ -6863,7 +6897,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 4. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
-   Answer: (i) ADC — Add with Carry
+Answer: (i) ADC — Add with Carry
    ```
       Syntax  :  ADC destination, source
 
@@ -6945,7 +6979,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 5. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
 
-   Answer: (Answered in English, as required for IT topics.) ADC — Add with Carry
+Answer: (Answered in English, as required for IT topics.) ADC — Add with Carry
    ```
       Syntax    : ADC destination, source
       Operation : destination <- destination + source + CF
@@ -7028,7 +7062,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 6. **Write down four common rules of Assembly language. Write different type of hazard.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
 
-   Answer: Four common rules of assembly language
+Answer: Four common rules of assembly language
 
    1. `One statement per line, in a fixed field format`
    ```
@@ -7129,7 +7163,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 7. **Describe addressing mode of 8086 microprocessors.** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1225-1226 (ET: N/A)]*
 
-   Answer: An `addressing mode` is the way an instruction specifies where its operand is. The 8086 supports the following modes.
+Answer: An `addressing mode` is the way an instruction specifies where its operand is. The 8086 supports the following modes.
 
    1. Immediate addressing
    - The operand is a `constant carried inside the instruction`.
@@ -7241,7 +7275,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 8. **Explain the instructions LDS, PUSHF, TEST and CLD.** *[Multiple Ministry Assistant Programmer 2017 compact it 1235 (ET: N/A)]*
 
-   Answer: LDS — Load pointer using DS
+Answer: LDS — Load pointer using DS
    ```
       Syntax    : LDS destination, source
 
@@ -7328,7 +7362,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 1. **There was a CPU cycle math** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 400 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — only "There was a CPU cycle math" was recorded, so the figures are unknown. The complete set of CPU performance formulas and worked examples is given below.
+Answer: The question is `incomplete` — only "There was a CPU cycle math" was recorded, so the figures are unknown. The complete set of CPU performance formulas and worked examples is given below.
 
    The CPU performance equation
    ```
@@ -7444,7 +7478,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 2. **(খ) Clock cycle কী? একটি মাইক্রো-প্রসেসরের speed 3.5 GHz বলতে কী বোঝায়?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: (Answered in English, as required for IT topics.) Clock cycle
+Answer: (Answered in English, as required for IT topics.) Clock cycle
    - A `clock cycle` is one complete oscillation of the processor's clock signal — one tick of the square wave that synchronises everything inside the CPU.
    ```
       CLK   __|‾‾|__|‾‾|__|‾‾|__
@@ -7497,7 +7531,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 3. **A program (or a program task) takes 1 billion instructions to execute on a processor running at 2 GHz. Suppose also that 50% of the instructions execute in 3 clock cycles, 30% execute in 4 clock cycles, and 20% execute in 5 clock cycles. What is the execution time for the program or task?** *[RAKUB Programmer (PO) 12.10.2021 compact it 847 (ET: N/A)]*
 
-   Answer: The standard CPU performance equation is
+Answer: The standard CPU performance equation is
    ```
       CPU time = Instruction count x CPI x Clock cycle time
 
@@ -7585,7 +7619,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 4. **Operating system math: clock frequency 700MHz.** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
 
-   Answer: The question is `incomplete` — only "clock frequency 700 MHz" was recorded, so the rest of the data is unknown. The calculations that a 700 MHz figure is used for are worked below.
+Answer: The question is `incomplete` — only "clock frequency 700 MHz" was recorded, so the rest of the data is unknown. The calculations that a 700 MHz figure is used for are worked below.
 
    The basic relations
    ```
@@ -7684,7 +7718,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 5. **Computer A has 3.2GHz processing speed and it has 2.0 clock speeds in a program and at the same program Computer B has 2.4 GHz processing speed with 1.2 clock speed. Which computer will run faster and how much faster?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118-1119 (ET: BUET)]*
 
-   Answer: Speed is judged by the `time taken per instruction`, not by clock frequency alone. The performance equation is
+Answer: Speed is judged by the `time taken per instruction`, not by clock frequency alone. The performance equation is
    ```
       CPU time per instruction = CPI / clock frequency
    ```
@@ -7745,7 +7779,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 6. **Write down factor of microprocessor speed?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124-1125 (ET: BREB)]*
 
-   Answer: The speed of a microprocessor is decided by several factors acting together, not by clock frequency alone.
+Answer: The speed of a microprocessor is decided by several factors acting together, not by clock frequency alone.
    ```
       Performance = Clock frequency x IPC x Number of cores
    ```
@@ -7801,7 +7835,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 1. **Core vs thread in networking?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: `Core` and `thread` are processor terms rather than networking ones, though the same words appear in networking with different meanings. Both senses are given.
+Answer: `Core` and `thread` are processor terms rather than networking ones, though the same words appear in networking with different meanings. Both senses are given.
 
    In a processor
 
@@ -7856,7 +7890,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
-   Answer: (Answered in English, as required for IT topics.) The `i5` and `i7` labels denote performance tiers within one generation. The hardware differences are these.
+Answer: (Answered in English, as required for IT topics.) The `i5` and `i7` labels denote performance tiers within one generation. The hardware differences are these.
 
    1. Number of cores and threads
    ```
@@ -7910,7 +7944,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 3. **What is Hyper threading? What is the use of it?** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)]*
 
-   Answer: What hyper-threading is
+Answer: What hyper-threading is
    - `Hyper-Threading Technology (HTT)` is Intel's implementation of `Simultaneous Multithreading (SMT)`. One `physical` core presents itself to the operating system as `two logical processors`, so it can hold and interleave two threads at once.
    - It works by duplicating only the `architectural state` — the registers, the program counter and the control registers — while the two threads `share` the core's real execution hardware: the ALUs, the FPU, the caches and the branch predictor.
    ```
@@ -7965,7 +7999,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
 
-   Answer: What hyper-threading is
+Answer: What hyper-threading is
    - `Hyper-Threading (HTT)` is Intel's implementation of `Simultaneous Multithreading (SMT)`. One `physical` core presents itself to the operating system as `two logical processors`, so it can hold and interleave two threads at once.
    - Only the `architectural state` is duplicated — the registers, the program counter and the control registers. The two threads `share` the real hardware: the ALUs, the FPU, the caches and the branch predictor.
    ```
@@ -8021,7 +8055,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) An Intel `Core i7` processor's model number identifies its generation, so a full example names both.
+Answer: (Answered in English, as required for IT topics.) An Intel `Core i7` processor's model number identifies its generation, so a full example names both.
 
    Examples by generation
    ```
@@ -8077,7 +8111,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 1. **RISC stand for __________? Write two characteristics of it's?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
-   Answer: `RISC` stands for `Reduced Instruction Set Computer`.
+Answer: `RISC` stands for `Reduced Instruction Set Computer`.
 
    Two characteristics
    ```
@@ -8128,7 +8162,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 2. **Difference between RISC and CISC.** *[NPCBL Executive Trainee (IT) 2022 compact it 644 (ET: BUET)]*
 
-   Answer: `RISC` (Reduced Instruction Set Computer) uses a small set of simple, uniform instructions. `CISC` (Complex Instruction Set Computer) uses a large set of powerful, varied instructions.
+Answer: `RISC` (Reduced Instruction Set Computer) uses a small set of simple, uniform instructions. `CISC` (Complex Instruction Set Computer) uses a large set of powerful, varied instructions.
 
    RISC
    - Few instructions, all of `fixed length`, each completing in about `one clock cycle`.
@@ -8178,7 +8212,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 3. **(ক) CISC and RISC processor বলতে কি বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) CISC processor
+Answer: (Answered in English, as required for IT topics.) CISC processor
    - `CISC` stands for `Complex Instruction Set Computer`. Its design philosophy is to make each `instruction do as much work as possible`, so that a program needs fewer of them.
    - Characteristics:
    ```
@@ -8232,7 +8266,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 4. **What is CISC and RISC?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
-   Answer: `CISC` and `RISC` are the two design philosophies for a processor's instruction set.
+Answer: `CISC` and `RISC` are the two design philosophies for a processor's instruction set.
 
    CISC — Complex Instruction Set Computer
    - Makes each `instruction do as much work as possible`, so a program needs fewer instructions.
@@ -8296,8 +8330,10 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 ## 8085 Microprocessor & Edge Computing (3)
 
-1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।
+1. **(a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।**
    (b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+(b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
    Answer: (Answered in English, as required for IT topics.) `Edge computing` is a model in which data is processed `near where it is produced` — on or beside the device itself — instead of being sent to a distant central cloud.
 
@@ -8357,7 +8393,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 2. **Intel 8085 ও Intel 8086 Microprocessor-এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি কত এবং কেন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
-   Answer: (Answered in English, as required for IT topics.) The maximum physical memory a processor can address is fixed by the width of its `address bus`.
+Answer: (Answered in English, as required for IT topics.) The maximum physical memory a processor can address is fixed by the width of its `address bus`.
    ```
       Addressable memory = 2^(number of address lines) x 1 byte
    ```
@@ -8412,7 +8448,7 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 3. **What is the difference between 8-bit (8085) and 16-bit (8086) microprocessor?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865-866 (ET: BUET)]*
 
-   Answer: The 8085 is an 8-bit processor and the 8086 a 16-bit one. The number refers to the width of the data bus and the registers.
+Answer: The 8085 is an 8-bit processor and the 8086 a 16-bit one. The number refers to the width of the data bus and the registers.
 
    Intel 8085 (1976)
    ```
