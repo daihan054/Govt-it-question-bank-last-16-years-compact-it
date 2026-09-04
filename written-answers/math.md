@@ -482,25 +482,89 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **What is the Average of 1 to 49 numbers?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+   Answer:
+   - Formula: $\text{Average} = \frac{n + 1}{2}$ (for first $n$ natural numbers)
+   - For $n = 49$:
+     $$\text{Average} = \frac{49 + 1}{2} = \frac{50}{2} = 25$$
+   - Answer: 25
+
 2. **দুইটি সংখ্যার গ.সা.গু. ১১ এবং ল.সা.গু. ৭৭০০। একটি সংখ্যা ২৭৫ হলে অপর সংখ্যাটি কত?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
+
+   Answer:
+   - সূত্র: দুইটি সংখ্যার গুণফল = গ.সা.গু. $\times$ ল.সা.গু.
+   - অপর সংখ্যা:
+     $$\text{Other Number} = \frac{\text{গ.সা.গু.} \times \text{ল.সা.গু.}}{\text{একটি সংখ্যা}} = \frac{11 \times 7700}{275} = 308$$
+   - উত্তর: 308
 
 3. **What is the largest two-digit natural number (a part of the number system, which includes all positive integers from 1 to infinity)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+   Answer: 99
+
 4. **If the average of seven consecutive even numbers is 62, then the one-fourth of twice of total of first and sixth number is?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+   Answer:
+   - Let the 7 consecutive even numbers be $x-6, x-4, x-2, x, x+2, x+4, x+6$.
+   - The middle (4th) number is the average $\implies x = 62$.
+   - The 7 numbers are: 56, 58, 60, 62, 64, 66, 68.
+   - 1st number $= 56$, 6th number $= 66$.
+   - Total of 1st and 6th numbers $= 56 + 66 = 122$.
+   - Calculation:
+     $$\text{Result} = \frac{1}{4} \times 2 \times (56 + 66) = \frac{1}{2} \times 122 = 61$$
+   - Answer: 61
 
 5. **৯৯ + ৯৮ + ৯৭ + ------+৪০ = কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+   Answer:
+   - প্রথম পদ $a = 99$, শেষ পদ $l = 40$, সাধারণ অন্তর $d = -1$
+   - পদসংখ্যা $n = \frac{\text{শেষ পদ} - \text{প্রথম পদ}}{d} + 1 = \frac{40 - 99}{-1} + 1 = 59 + 1 = 60$
+   - সমষ্টির সূত্র:
+     $$S_n = \frac{n}{2}(\text{প্রথম পদ} + \text{শেষ পদ}) = \frac{60}{2}(99 + 40) = 30 \times 139 = 4170$$
+   - উত্তর: 4170
+
 6. **কোন ক্ষুদ্রতম সংখ্যাকে ৩, ৫ এবং ৬ দ্বারা ভাগ করলে ভাগশেষ ১ হবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+   Answer:
+   - ৩, ৫ এবং ৬ এর ল.সা.গু. (LCM) $= 30$
+   - নির্ণেয় ক্ষুদ্রতম সংখ্যা $= \text{LCM} + \text{ভাগশেষ} = 30 + 1 = 31$
+   - উত্তর: 31
 
 7. **১. তিন অংকের বৃহত্তম সংখ্যা ও ক্ষুদ্রতম সংখ্যার পার্থক্য কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+   Answer:
+   - তিন অংকের বৃহত্তম সংখ্যা $= 999$
+   - তিন অংকের ক্ষুদ্রতম সংখ্যা $= 100$
+   - পার্থক্য $= 999 - 100 = 899$
+   - উত্তর: 899
+
 8. **৪. দুইটি সংখ্যার গ. সা. গু ও ল. সা. গু যথাক্রমে ১২ ও ১৫। সংখ্যা দুইটির গুনফল কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+
+   Answer:
+   - সূত্র: সংখ্যা দুইটির গুণফল = গ.সা.গু $\times$ ল.সা.গু
+   - গুণফল $= 12 \times 15 = 180$
+   - উত্তর: 180
 
 9. **১. ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা কয়টি ও কি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+   Answer:
+   - ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা মোট ১০টি।
+   - সংখ্যাগুলো হলো: ২, ৩, ৫, ৭, ১১, ১৩, ১৭, ১৯, ২৩, ২৯ (2, 3, 5, 7, 11, 13, 17, 19, 23, 29)।
+   - উত্তর: ১০টি
+
 10. **৩. একজনন ক্রিকেটারের 10 ইনিংসে রানের গড় 44.5. 11 তম ইনিংসে কত রান করে আউট হলে, সব ইনিংস মিলিয়ে তার রানের গড় 50 হবে?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+    Answer:
+    - ১০ ইনিংসে মোট রান $= 10 \times 44.5 = 445$ রান
+    - ১১ ইনিংসে মোট প্রয়োজনীয় রান $= 11 \times 50 = 550$ রান
+    - ১১তম ইনিংসে করতে হবে $= 550 - 445 = 105$ রান
+    - উত্তর: 105 রান
+
 11. **৫. দুইটি সংখ্যার গড় xy. একটি সংখ্যা x হলে অপর সংখ্যাটি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+
+    Answer:
+    - দুইটি সংখ্যার সমষ্টি $= 2 \times xy = 2xy$
+    - একটি সংখ্যা $= x$
+    - অতএব, অপর সংখ্যা $= 2xy - x = x(2y - 1)$
+    - উত্তর: $2xy - x$ (বা $x(2y - 1)$)
 
 ## Geometry & Coordinate Geometry (10)
 
